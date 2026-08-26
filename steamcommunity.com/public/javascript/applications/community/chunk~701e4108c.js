@@ -970,20 +970,22 @@
         var r;
         const { children: e, "flow-children": c, ...l } = s,
           { gamepadEvents: m } = (0, t.C7)(s);
+        let _;
         c && (l.layout = (0, n.O)(c)),
           m.onOKButton ||
-            ("onClick" in e.props && e.props.onClick && (m.onOKButton = t._K));
-        const { ref: _, node: d } = (0, t.qp)(l);
-        (0, a.Ui)(m, _);
-        const u = (0, t.BT)(d),
-          v = (0, p.Ue)(
-            _,
+            ("onClick" in e.props && e.props.onClick && (m.onOKButton = t._K)),
+          l.focusable && (_ = e.props.tabIndex || 0);
+        const { ref: d, node: u } = (0, t.qp)(l);
+        (0, a.Ui)(m, d);
+        const v = (0, t.BT)(u),
+          f = (0, p.Ue)(
+            d,
             null === (r = e.props) || void 0 === r ? void 0 : r.ref,
-            u,
+            v,
           );
         return (0, o.jsx)(t.TJ.Provider, {
-          value: d,
-          children: i.cloneElement(e, { ...e.props, ref: v }),
+          value: u,
+          children: i.cloneElement(e, { ...e.props, ref: f, tabIndex: _ }),
         });
       }
     },

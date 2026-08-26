@@ -51,18 +51,18 @@
       "use strict";
       t.d(n, { Ae: () => h, EY: () => d, U6: () => p });
       var i = t(7850),
-        s = t(55348),
-        o = t(11526),
+        o = t(55348),
+        s = t(11526),
         r = t(75659),
         a = t(64238),
         l = t.n(a),
         c = t(65274);
       function d(e) {
-        const { as: n = "span", ref: t, className: s, ...r } = e,
+        const { as: n = "span", ref: t, className: o, ...r } = e,
           a = n;
         return (0, i.jsx)(a, {
           ref: t,
-          ...(0, o.mz)({ ...r, className: l()(c.Text, s) }, h),
+          ...(0, s.mz)({ ...r, className: l()(c.Text, o) }, h),
         });
       }
       const p = [
@@ -83,7 +83,7 @@
             responsive: !0,
             cssProperty: (e, n, t) => [
               "--text-color",
-              (0, o.To)(e, (0, s.I)(n.contrast, t) ?? "body"),
+              (0, s.To)(e, (0, o.I)(n.contrast, t) ?? "body"),
             ],
           },
           {
@@ -91,7 +91,7 @@
             responsive: !0,
             cssProperty: (e, n, t) => [
               "--text-color",
-              (0, o.To)((0, s.I)(n.color, t) ?? "text-body", e),
+              (0, s.To)((0, o.I)(n.color, t) ?? "text-body", e),
             ],
           },
           { prop: "truncate", className: c.Truncate },
@@ -121,38 +121,38 @@
       "use strict";
       t.d(n, { W: () => h, Y: () => d });
       var i = t(7850),
-        s = t(50122),
-        o = t(20187),
+        o = t(50122),
+        s = t(20187),
         r = t(11526),
         a = t(45699),
         l = t(39479),
         c = t(78327);
       function d(e) {
-        const { underline: n = "auto", focusable: t, navProps: o, ...l } = e,
+        const { underline: n = "auto", focusable: t, navProps: s, ...l } = e,
           d = (0, c.Qn)(),
-          h = t ?? o?.focusable ?? !!l.href,
-          u = (0, r.mz)({ ...l, underline: n, className: s.TextLink }, p);
-        return d && (h || o)
-          ? (0, i.jsx)(a.Ii, { ...u, ...(o || {}), focusable: h })
+          h = t ?? s?.focusable ?? !!l.href,
+          u = (0, r.mz)({ ...l, underline: n, className: o.TextLink }, p);
+        return d && (h || s)
+          ? (0, i.jsx)(a.Ii, { ...u, ...(s || {}), focusable: h })
           : (0, i.jsx)("a", { ...u });
       }
       const p = [
-        ...o.Ae,
-        { prop: "underline", className: (e) => s[`Underline-${e}`] },
+        ...s.Ae,
+        { prop: "underline", className: (e) => o[`Underline-${e}`] },
       ];
       function h(e) {
-        const { underline: n = "auto", focusable: t, navProps: o, ...a } = e,
+        const { underline: n = "auto", focusable: t, navProps: s, ...a } = e,
           d = (0, c.Qn)(),
-          h = t ?? o?.focusable ?? !!a.onClick,
+          h = t ?? s?.focusable ?? !!a.onClick,
           u = (0, i.jsx)("span", {
             role: "button",
             ...(0, r.mz)(
-              { ...a, underline: n, className: s.TextLinkButton },
+              { ...a, underline: n, className: o.TextLinkButton },
               p,
             ),
           });
-        return d && (h || o)
-          ? (0, i.jsx)(l.J, { ...(o || {}), focusable: h, children: u })
+        return d && (h || s)
+          ? (0, i.jsx)(l.J, { ...(s || {}), focusable: h, children: u })
           : u;
       }
     },
@@ -160,8 +160,8 @@
       "use strict";
       t.d(n, { lS: () => h, lh: () => u, vU: () => m });
       var i = t(7850),
-        s = t(64753),
-        o = t(66418),
+        o = t(64753),
+        s = t(66418),
         r = t(78686),
         a = t(78395),
         l = t(21869),
@@ -181,71 +181,71 @@
         });
       }
       function h(e) {
-        const [n, t, o] = (0, s.uD)();
+        const [n, t, s] = (0, o.uD)();
         return {
           elDialogElement: (0, i.jsx)(l.E, {
             active: n,
-            children: (0, i.jsx)(p, { closeModal: o, strDescOverride: e }),
+            children: (0, i.jsx)(p, { closeModal: s, strDescOverride: e }),
           }),
           fnShowLogonDialog: t,
         };
       }
       function u() {
-        const e = `${o.TS.STORE_BASE_URL}login/?redir=${encodeURIComponent(window.location.href)}`;
+        const e = `${s.TS.STORE_BASE_URL}login/?redir=${encodeURIComponent(window.location.href)}`;
         window.location.href = e;
       }
       function m(e) {
         const { label: n, strDialogDesc: t } = e,
-          { elDialogElement: s, fnShowLogonDialog: o } = h(t);
+          { elDialogElement: o, fnShowLogonDialog: s } = h(t);
         return (0, i.jsxs)(i.Fragment, {
           children: [
             (0, i.jsx)(d.$, {
-              onClick: o,
+              onClick: s,
               children: n || r.Z.Localize("#Login_SignIn"),
             }),
-            s,
+            o,
           ],
         });
       }
     },
     67936: (e, n, t) => {
       "use strict";
-      t.d(n, { F5: () => o });
+      t.d(n, { F5: () => s });
       var i = t(13843);
-      const s = {};
-      (s.arabic = () => t.e(22940).then(t.t.bind(t, 22940, 19))),
-        (s.brazilian = () => t.e(59990).then(t.t.bind(t, 59990, 19))),
-        (s.bulgarian = () => t.e(38573).then(t.t.bind(t, 38573, 19))),
-        (s.czech = () => t.e(40975).then(t.t.bind(t, 40975, 19))),
-        (s.danish = () => t.e(38721).then(t.t.bind(t, 38721, 19))),
-        (s.dutch = () => t.e(354).then(t.t.bind(t, 354, 19))),
-        (s.english = () => t.e(49768).then(t.t.bind(t, 49768, 19))),
-        (s.finnish = () => t.e(12931).then(t.t.bind(t, 12931, 19))),
-        (s.french = () => t.e(6064).then(t.t.bind(t, 6064, 19))),
-        (s.german = () => t.e(62942).then(t.t.bind(t, 62942, 19))),
-        (s.greek = () => t.e(13924).then(t.t.bind(t, 13924, 19))),
-        (s.hungarian = () => t.e(99441).then(t.t.bind(t, 99441, 19))),
-        (s.indonesian = () => t.e(42584).then(t.t.bind(t, 42584, 19))),
-        (s.italian = () => t.e(97688).then(t.t.bind(t, 97688, 19))),
-        (s.japanese = () => t.e(5407).then(t.t.bind(t, 5407, 19))),
-        (s.koreana = () => t.e(65815).then(t.t.bind(t, 65815, 19))),
-        (s.latam = () => t.e(44287).then(t.t.bind(t, 44287, 19))),
-        (s.malay = () => t.e(58160).then(t.t.bind(t, 35779, 19))),
-        (s.norwegian = () => t.e(33648).then(t.t.bind(t, 33648, 19))),
-        (s.polish = () => t.e(22649).then(t.t.bind(t, 22649, 19))),
-        (s.portuguese = () => t.e(23629).then(t.t.bind(t, 23629, 19))),
-        (s.romanian = () => t.e(81555).then(t.t.bind(t, 81555, 19))),
-        (s.russian = () => t.e(11809).then(t.t.bind(t, 11809, 19))),
-        (s.schinese = () => t.e(79004).then(t.t.bind(t, 79004, 19))),
-        (s.spanish = () => t.e(97760).then(t.t.bind(t, 97760, 19))),
-        (s.swedish = () => t.e(86881).then(t.t.bind(t, 86881, 19))),
-        (s.tchinese = () => t.e(28183).then(t.t.bind(t, 28183, 19))),
-        (s.thai = () => t.e(10950).then(t.t.bind(t, 10950, 19))),
-        (s.turkish = () => t.e(22568).then(t.t.bind(t, 22568, 19))),
-        (s.ukrainian = () => t.e(17038).then(t.t.bind(t, 17038, 19))),
-        (s.vietnamese = () => t.e(62327).then(t.t.bind(t, 62327, 19)));
-      const o = (0, i.l)(async function (e) {
-        if (s[e]) return s[e]();
+      const o = {};
+      (o.arabic = () => t.e(22940).then(t.t.bind(t, 22940, 19))),
+        (o.brazilian = () => t.e(59990).then(t.t.bind(t, 59990, 19))),
+        (o.bulgarian = () => t.e(38573).then(t.t.bind(t, 38573, 19))),
+        (o.czech = () => t.e(40975).then(t.t.bind(t, 40975, 19))),
+        (o.danish = () => t.e(38721).then(t.t.bind(t, 38721, 19))),
+        (o.dutch = () => t.e(354).then(t.t.bind(t, 354, 19))),
+        (o.english = () => t.e(49768).then(t.t.bind(t, 49768, 19))),
+        (o.finnish = () => t.e(12931).then(t.t.bind(t, 12931, 19))),
+        (o.french = () => t.e(6064).then(t.t.bind(t, 6064, 19))),
+        (o.german = () => t.e(62942).then(t.t.bind(t, 62942, 19))),
+        (o.greek = () => t.e(13924).then(t.t.bind(t, 13924, 19))),
+        (o.hungarian = () => t.e(99441).then(t.t.bind(t, 99441, 19))),
+        (o.indonesian = () => t.e(42584).then(t.t.bind(t, 42584, 19))),
+        (o.italian = () => t.e(97688).then(t.t.bind(t, 97688, 19))),
+        (o.japanese = () => t.e(5407).then(t.t.bind(t, 5407, 19))),
+        (o.koreana = () => t.e(65815).then(t.t.bind(t, 65815, 19))),
+        (o.latam = () => t.e(44287).then(t.t.bind(t, 44287, 19))),
+        (o.malay = () => t.e(58160).then(t.t.bind(t, 35779, 19))),
+        (o.norwegian = () => t.e(33648).then(t.t.bind(t, 33648, 19))),
+        (o.polish = () => t.e(22649).then(t.t.bind(t, 22649, 19))),
+        (o.portuguese = () => t.e(23629).then(t.t.bind(t, 23629, 19))),
+        (o.romanian = () => t.e(81555).then(t.t.bind(t, 81555, 19))),
+        (o.russian = () => t.e(11809).then(t.t.bind(t, 11809, 19))),
+        (o.schinese = () => t.e(79004).then(t.t.bind(t, 79004, 19))),
+        (o.spanish = () => t.e(97760).then(t.t.bind(t, 97760, 19))),
+        (o.swedish = () => t.e(86881).then(t.t.bind(t, 86881, 19))),
+        (o.tchinese = () => t.e(28183).then(t.t.bind(t, 28183, 19))),
+        (o.thai = () => t.e(10950).then(t.t.bind(t, 10950, 19))),
+        (o.turkish = () => t.e(22568).then(t.t.bind(t, 22568, 19))),
+        (o.ukrainian = () => t.e(17038).then(t.t.bind(t, 17038, 19))),
+        (o.vietnamese = () => t.e(62327).then(t.t.bind(t, 62327, 19)));
+      const s = (0, i.l)(async function (e) {
+        if (o[e]) return o[e]();
       });
     },
     74568: (e, n, t) => {
@@ -262,31 +262,31 @@
         EN: () => r.E,
       });
       var i = t(7850),
-        s = t(90626),
-        o = t(56283),
+        o = t(90626),
+        s = t(56283),
         r = t(21869),
         a = t(2654);
       t(37049);
       function l(e) {
         const { labelledBy: n } = e || {},
-          [t, i] = s.useState(void 0);
+          [t, i] = o.useState(void 0);
         return {
           headerId: n || t,
-          context: s.useMemo(() => ({ setHeaderId: i }), []),
+          context: o.useMemo(() => ({ setHeaderId: i }), []),
         };
       }
       function c(e) {
         const {
             active: n,
             onDismiss: t,
-            className: s,
+            className: o,
             modalClassName: c,
             bGamepadUIScrollWithin: d,
             children: p,
             ...h
           } = e,
           { headerId: u, context: m } = l({ labelledBy: e["aria-labelledby"] });
-        return (0, i.jsx)(o.t6.Provider, {
+        return (0, i.jsx)(s.t6.Provider, {
           value: m,
           children: (0, i.jsx)(r.E, {
             active: n,
@@ -294,10 +294,10 @@
               onEscKeypress: t,
               className: c,
               bGamepadUIScrollWithin: d,
-              children: (0, i.jsx)(o.UC, {
+              children: (0, i.jsx)(s.UC, {
                 role: "dialog",
                 "aria-labelledby": u,
-                className: s,
+                className: o,
                 ...h,
                 children: p,
               }),
@@ -319,58 +319,59 @@
     },
     37049: (e, n, t) => {
       "use strict";
-      t.d(n, { w: () => _ });
+      t.d(n, { wA: () => g });
       var i = t(7850),
+        o = t(40236),
         s = t(90626),
-        o = t(72739),
-        r = t(48902),
-        a = t(60155),
-        l = t(25118),
-        c = t(84933),
+        r = t(72739),
+        a = t(13871),
+        l = t(48902),
+        c = t(60155),
         d = t(52745),
-        p = t(13871),
-        h = t(21869),
-        u = t(78327),
-        m = t(66703),
-        x = t(52038),
-        f = t(28460);
+        p = t(21869),
+        h = t(25118),
+        u = t(66703),
+        m = t(52038),
+        x = t(28460);
       function b(e) {
         const { popup: n, className: t, ...o } = e,
-          r = (0, f.GD)(n),
+          r = (0, x.GD)(n),
           a = s.useRef(null);
         return (
           s.useEffect(() => {
             const e = a.current;
-            if (e && (0, m.Fj)(n, "Window.SetResizeGrip")) {
+            if (e && (0, u.Fj)(n, "Window.SetResizeGrip")) {
               let t = 0,
                 i = 0;
-              const s = e.getBoundingClientRect(),
-                o = e.ownerDocument.defaultView;
-              s &&
-                o &&
+              const o = e.getBoundingClientRect(),
+                s = e.ownerDocument.defaultView;
+              o &&
+                s &&
                 !r &&
-                ((t = Math.ceil(o.innerWidth - s.left)),
-                (i = Math.ceil(o.innerHeight - s.top))),
+                ((t = Math.ceil(s.innerWidth - o.left)),
+                (i = Math.ceil(s.innerHeight - o.top))),
                 n.SteamClient.Window.SetResizeGrip(t, i);
             }
             return () => {
-              (0, m.Fj)(n, "Window.SetResizeGrip") &&
+              (0, u.Fj)(n, "Window.SetResizeGrip") &&
                 n.SteamClient.Window.SetResizeGrip(0, 0);
             };
           }, [n, r]),
           r
             ? null
             : (0, i.jsx)("div", {
-                className: (0, x.A)("window_resize_grip", t),
+                className: (0, m.A)("window_resize_grip", t),
                 ref: a,
                 ...o,
               })
         );
       }
-      const _ = (e) =>
+      var f = t(84933),
+        _ = t(78327);
+      const g = (e) =>
         (function (e) {
-          const n = (0, p.R7)().ownerWindow,
-            t = (0, u.Qn)(),
+          const n = (0, a.R7)().ownerWindow,
+            t = (0, _.Qn)(),
             [o, r] = s.useState(() =>
               t ||
               (!0 === e.onlyPopoutIfNeeded &&
@@ -381,106 +382,132 @@
                 : "popout",
             );
           return "inline" === o
-            ? (0, i.jsx)(h.E, { active: !0, children: e.children })
+            ? (0, i.jsx)(p.E, { active: !0, children: e.children })
             : "popout" === o
-              ? (0, i.jsx)(g, { ...e })
+              ? (0, i.jsx)(S, { ...e })
               : null;
         })({ modal: !0, ...e });
-      function g(e) {
+      function w(e) {
+        const {
+            popup: n,
+            children: t,
+            bFitToContent: r,
+            className: a,
+            ...l
+          } = e,
+          c = s.useCallback(
+            (e) => {
+              const t = Math.ceil(e.borderBoxSize[0].inlineSize),
+                i = Math.ceil(e.borderBoxSize[0].blockSize);
+              n?.SteamClient.Window.ResizeTo(t, i, !0);
+            },
+            [n],
+          ),
+          d = (0, o.wY)(c);
+        return (0, i.jsx)("div", {
+          className: (0, m.A)("PopupFullWindow", r && "FitToContent", a),
+          ref: r ? d : void 0,
+          ...l,
+          children: t,
+        });
+      }
+      function S(e) {
         const {
             strName: n,
             strTitle: t,
-            popupWidth: h,
-            popupHeight: u,
-            browserType: m,
-            onDismiss: x,
-            refPopup: f,
-            children: _,
-            titleBarClassName: g,
-            saveDimensionsKey: S,
+            popupWidth: o,
+            popupHeight: p,
+            browserType: u,
+            onDismiss: m,
+            bFitToContent: x,
+            refPopup: _,
+            children: g,
+            titleBarClassName: S,
+            saveDimensionsKey: v,
           } = e,
-          j = (0, p.R7)(),
-          v = j?.ownerWindow,
-          T = (0, d.yk)(),
-          W = { ...(0, r.h3)(S), onClose: x };
-        let B = 0;
-        e.resizable && (B |= p.Wf.Resizable),
+          T = (0, a.R7)(),
+          C = T?.ownerWindow,
+          z = (0, d.yk)(),
+          B = { ...(0, l.h3)(v), onClose: m };
+        let W = 0;
+        e.resizable && (W |= a.Wf.Resizable),
           (e.minWidth || e.minHeight) &&
-            (B |= p.Wf.ApplyBrowserScaleToDimensions),
-          e.fullscreen && (B |= p.Wf.FullScreen);
-        const C = "PopupWindow_" + (n ? `${n}_` : "") + s.useId(),
-          { popup: O, element: z } = (0, r.OJ)(
-            C,
+            (W |= a.Wf.ApplyBrowserScaleToDimensions),
+          e.fullscreen && (W |= a.Wf.FullScreen);
+        const O = "PopupWindow_" + (n ? `${n}_` : "") + s.useId(),
+          { popup: N, element: k } = (0, l.OJ)(
+            O,
             {
               title: t,
-              dimensions: { width: h, height: u },
+              dimensions: { width: o, height: p },
               html_class: "client_chat_frame fullheight ModalDialogPopup",
               body_class: "fullheight ModalDialogBody",
               popup_class: "fullheight",
-              browserType: m,
+              browserType: u,
               minWidth: e.minWidth,
               minHeight: e.minHeight,
               replace_existing_popup: !0,
-              center_on_window: T?.BCenterPopupsOnWindow() ? v : void 0,
-              eCreationFlags: B,
-              target_browser: T?.GetBrowserInfo(),
+              center_on_window: z?.BCenterPopupsOnWindow() ? C : void 0,
+              eCreationFlags: W,
+              target_browser: z?.GetBrowserInfo(),
             },
-            W,
+            B,
           );
         if (
           (s.useEffect(
-            () => ((0, c.cZ)(f, O), () => (0, c.cZ)(f, void 0)),
-            [f, O],
+            () => ((0, f.cZ)(_, N), () => (0, f.cZ)(_, void 0)),
+            [_, N],
           ),
           s.useEffect(() => {
-            O && (O.document.title = t ?? n);
-          }, [O, t, n]),
-          !z)
+            N && (N.document.title = t ?? n);
+          }, [N, t, n]),
+          !k)
         )
           return null;
         const I = e.modal ?? e.onlyPopoutIfNeeded,
-          N = !e.resizable;
+          D = !e.resizable;
         return (0, i.jsxs)(i.Fragment, {
           children: [
-            I && (0, i.jsx)(w, { popup: O }),
-            o.createPortal(
-              (0, i.jsxs)(p.kc, {
-                ownerWindow: O,
+            I && (0, i.jsx)(j, { popup: N }),
+            r.createPortal(
+              (0, i.jsxs)(a.kc, {
+                ownerWindow: N,
                 children: [
-                  (0, i.jsxs)("div", {
-                    className: "PopupFullWindow",
-                    onContextMenu: a.aE,
+                  (0, i.jsxs)(w, {
+                    popup: N,
+                    bFitToContent: x,
+                    onContextMenu: c.aE,
                     children: [
-                      (0, i.jsx)(l.c, {
-                        className: g,
-                        hideMin: N,
-                        hideMax: N,
-                        popup: O,
-                        hideActions: !x,
+                      (0, i.jsx)(h.c, {
+                        className: S,
+                        hideMin: D,
+                        hideMax: D,
+                        popup: N,
+                        hideActions: !m,
                       }),
                       (0, i.jsx)(d.EO, {
-                        bCenterPopupsOnWindow: T?.BCenterPopupsOnWindow(),
-                        browserInfo: T?.GetBrowserInfo(),
-                        children: _,
+                        bCenterPopupsOnWindow: z?.BCenterPopupsOnWindow(),
+                        browserInfo: z?.GetBrowserInfo(),
+                        children: g,
                       }),
                     ],
                   }),
-                  e.resizable && (0, i.jsx)(b, { popup: O }),
+                  e.resizable && !x && (0, i.jsx)(b, { popup: N }),
                 ],
               }),
-              z,
+              k,
             ),
           ],
         });
       }
-      function w(e) {
+      function j(e) {
         const { popup: n } = e,
           t = s.useCallback(() => {
             n?.SteamClient.Window.BringToFront();
           }, [n]);
         return (
           s.useEffect(t, [t]),
-          (0, i.jsx)(h.E, {
+          (0, i.jsx)(p.E, {
             active: !0,
             children: (0, i.jsx)("div", {
               style: {
@@ -505,13 +532,13 @@
           useOpenWebInSteamClient: () => p,
         });
       var i = t(7850),
-        s = t(90626),
-        o = t(84811),
+        o = t(90626),
+        s = t(84811),
         r = t(97824),
         a = t(78327),
         l = t(2627),
         c = t(61859);
-      const d = (0, o.Nr)(function (e) {
+      const d = (0, s.Nr)(function (e) {
         const { fnOpenInSteamClient: n } = p();
         return (0, i.jsx)("div", {
           className: r.OpenInBannerContainer,
@@ -547,7 +574,7 @@
       });
       function p() {
         return {
-          fnOpenInSteamClient: s.useCallback(() => {
+          fnOpenInSteamClient: o.useCallback(() => {
             let e = `${(0, a.yl)()}//openurl/`;
             const n = (0, l.VY)("browserid");
             if (n) {
@@ -566,8 +593,8 @@
       "use strict";
       t.r(n), t.d(n, { OpenInDesktopOrSignIn: () => j, default: () => v });
       var i = t(7850),
-        s = t(53965),
-        o = t(83392),
+        o = t(53965),
+        s = t(83392),
         r = t(20187),
         a = t(28491),
         l = t(67936),
@@ -578,22 +605,22 @@
         u = t(71009),
         m = t(32754),
         x = t(61859),
-        f = t(84933),
-        b = t(30470),
+        b = t(84933),
+        f = t(30470),
         _ = t(11131),
         g = t.n(_),
         w = t(90626),
         S = t(92724);
       const j = (0, p.Nr)(function (e) {
           const { fnOpenInSteamClient: n } = (0, u.useOpenWebInSteamClient)(),
-            [t, p, _] = (0, f.uD)();
+            [t, p, _] = (0, b.uD)();
           return (
             (0, w.use)((0, S.u)()),
             (0, i.jsxs)(i.Fragment, {
               children: [
                 (0, i.jsx)(m.Gq, {
                   toolTipContent: d.Z.Localize("#AddToWishlist_ttip"),
-                  children: (0, i.jsx)(s.$, {
+                  children: (0, i.jsx)(o.$, {
                     onClick: p,
                     children: (0, x.we)("#AddToYourWishlist"),
                   }),
@@ -607,19 +634,19 @@
                     closeModal: _,
                     bAlertDialog: !0,
                     children: [
-                      (0, i.jsxs)(o.s, {
+                      (0, i.jsxs)(s.s, {
                         direction: "row",
                         gap: "4",
                         paddingTop: "4",
                         paddingBottom: "4",
                         children: [
-                          (0, i.jsx)(s.$, {
+                          (0, i.jsx)(o.$, {
                             onClick: n,
                             children: (0, x.we)(
                               "#OpenInDesktopAppBanner_OpenAppButton",
                             ),
                           }),
-                          (0, i.jsx)(s.$, {
+                          (0, i.jsx)(o.$, {
                             color: "dull",
                             onClick: c.lh,
                             children: d.Z.Localize("#Login_SignIn"),
@@ -630,7 +657,7 @@
                         children: (0, x.oW)(
                           "#GotSteam_NeedSteam",
                           (0, i.jsx)(a.Y, {
-                            href: `${b.TS.STORE_BASE_URL}about`,
+                            href: `${f.TS.STORE_BASE_URL}about`,
                           }),
                         ),
                       }),

@@ -3698,6 +3698,7 @@ message StoreGameRating {
 	optional bool banned = 6;
 	optional bool esrb_online_music_not_rated = 7;
 	optional bool esrb_online_interactions_not_rated = 8;
+	repeated int32 survey_interactive_elements = 9 [(.description) = "enum"];
 	optional int32 required_age = 10;
 	optional bool use_age_gate = 11;
 	optional string image_url = 20;
@@ -3847,6 +3848,10 @@ message StoreItem_ExtraDetails {
 	optional bool refund_checks_ea_playtime = 12;
 	repeated .StoreItem_PageSection section = 13;
 	optional string legal_notice_bbcode = 14;
+	repeated int32 interactive_elements = 15 [(.description) = "enum"];
+	optional string content_survey_notes = 16;
+	optional string content_survey_ai_notes = 17;
+	repeated .StoreItem_PressReview press_review = 18;
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
@@ -3912,6 +3917,14 @@ message StoreItem_Platforms_VRSupport {
 message StoreItem_Playtest {
 	optional uint32 appid = 1;
 	optional bool is_open = 2;
+}
+
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+message StoreItem_PressReview {
+	optional string quote = 1;
+	optional string score = 2;
+	optional string site = 3;
+	optional string url = 4;
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist

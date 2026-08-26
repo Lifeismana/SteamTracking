@@ -8589,7 +8589,7 @@
         ar = r(63508),
         nr = r.n(ar),
         or = r(54728),
-        lr = r(40414);
+        lr = r(17267);
       class cr {
         constructor() {
           (0, m.Gn)(this);
@@ -11154,13 +11154,13 @@
           (this.bValid = e.bValid),
             (this.stream = e.stream),
             (this.name = e.name),
-            (this.appName = e.appName),
+            (this.appName = e.appName ?? ""),
             (this.appID = e.appID),
             (this.link = e.link),
             (this.linkName = e.linkName),
-            (this.tabIcon = e.tabIcon),
+            (this.tabIcon = e.tabIcon ?? ""),
             (this.offlineImage = e.offlineImage),
-            (this.gidEvent = e.gidEvent);
+            (this.gidEvent = e.gidEvent ?? "");
         }
       }
       (0, i.Cg)([s.sH], n.prototype, "bValid", void 0),
@@ -11795,8 +11795,8 @@
       class ee extends o.Component {
         m_elSettingsButton;
         m_SettingsButtonPos;
-        m_elClickListener;
-        m_elSettingsPanel;
+        m_elClickListener = null;
+        m_elSettingsPanel = null;
         m_elSubtitlesButton = o.createRef();
         m_elSubtitlesPanel = o.createRef();
         m_SubtitlesButtonPos;
@@ -11811,7 +11811,7 @@
             ]),
             (this.m_elClickListener =
               e.currentTarget.ownerDocument.defaultView),
-            this.m_elClickListener.addEventListener(
+            this.m_elClickListener?.addEventListener(
               "mouseup",
               this.OnMouseUp,
               !0,
@@ -11820,19 +11820,19 @@
         OnSubtitlesClick(e) {
           this.setState({ bSubtitlesOpen: !this.state.bSubtitlesOpen }),
             (this.m_SubtitlesButtonPos = [
-              this.m_elSubtitlesButton.current.offsetLeft,
-              this.m_elSubtitlesButton.current.offsetTop,
+              this.m_elSubtitlesButton.current?.offsetLeft,
+              this.m_elSubtitlesButton.current?.offsetTop,
             ]),
             (this.m_elClickListener =
               e.currentTarget.ownerDocument.defaultView),
-            this.m_elClickListener.addEventListener(
+            this.m_elClickListener?.addEventListener(
               "mouseup",
               this.OnMouseUp,
               !0,
             );
         }
         OnMouseUp(e) {
-          this.m_elClickListener.removeEventListener(
+          this.m_elClickListener?.removeEventListener(
             "mouseup",
             this.OnMouseUp,
             !0,
@@ -11857,7 +11857,7 @@
             t = !1;
           const { video: r, actions: i } = this.props;
           let a,
-            n,
+            n = [],
             o = 0,
             l = (0, s.jsx)(
               "div",
@@ -12102,11 +12102,11 @@
           (this.m_elSlider = t),
             (this.m_nVolumeStartOfDrag = this.props.video.GetVolume()),
             this.SetVolumeWithCoord(t, e.clientX),
-            t.ownerDocument.defaultView.addEventListener(
+            t.ownerDocument.defaultView?.addEventListener(
               "mousemove",
               this.OnMouseMove,
             ),
-            t.ownerDocument.defaultView.addEventListener(
+            t.ownerDocument.defaultView?.addEventListener(
               "mouseup",
               this.OnMouseUp,
             ),
@@ -12121,11 +12121,11 @@
           this.SetVolumeWithCoord(this.m_elSlider, e.clientX);
           let t = this.props.video;
           t.IsMuted() && t.SetVolume(this.m_nVolumeStartOfDrag),
-            this.m_elSlider.ownerDocument.defaultView.removeEventListener(
+            this.m_elSlider.ownerDocument.defaultView?.removeEventListener(
               "mousemove",
               this.OnMouseMove,
             ),
-            this.m_elSlider.ownerDocument.defaultView.removeEventListener(
+            this.m_elSlider.ownerDocument.defaultView?.removeEventListener(
               "mouseup",
               this.OnMouseUp,
             ),
@@ -12215,20 +12215,17 @@
               !this.state.video.IsPaused() &&
               this.m_schUnmountControls.Schedule(2e3, this.UmountControls),
             this.props.steamIDBroadcast !== e.steamIDBroadcast &&
-              this.BindVideoRef(this.m_elVideo),
-            !this.props.nAppIDVOD ||
-              (void 0 !== t.strInitialCapsuleImageUrl &&
-                e.nAppIDVOD == this.props.nAppIDVOD) ||
-              u.A.Get()
-                .QueueAppRequest(this.props.nAppIDVOD, {
-                  include_assets: !0,
-                  include_trailers: !0,
-                })
-                .then(() => {
-                  const e = u.A.Get().GetApp(this.props.nAppIDVOD),
-                    t = e?.GetAssets().GetMainCapsuleURL() || "";
-                  this.setState({ strInitialCapsuleImageUrl: t });
-                });
+              this.BindVideoRef(this.m_elVideo);
+          const r = this.props.nAppIDVOD;
+          !r ||
+            (void 0 !== t.strInitialCapsuleImageUrl && e.nAppIDVOD == r) ||
+            u.A.Get()
+              .QueueAppRequest(r, { include_assets: !0, include_trailers: !0 })
+              .then(() => {
+                const e = u.A.Get().GetApp(r),
+                  t = e?.GetAssets()?.GetMainCapsuleURL() || "";
+                this.setState({ strInitialCapsuleImageUrl: t });
+              });
         }
         componentWillUnmount() {
           this.m_listeners.Unregister(),
@@ -12262,7 +12259,7 @@
               ));
         }
         BindVideoRef(e) {
-          let t;
+          let t = null;
           this.StopVideo(),
             this.props.steamIDBroadcast
               ? e &&
@@ -12270,7 +12267,7 @@
                   e,
                   this.props.steamIDBroadcast,
                   this.props.watchLocation,
-                  this.props.bWebRTC,
+                  Boolean(this.props.bWebRTC),
                 ))
               : this.props.broadcastClipID
                 ? e &&
@@ -12301,14 +12298,14 @@
         OnMouseDown(e) {
           (this.m_bMouseDown = !0),
             (this.m_elMouseDown = e.currentTarget),
-            this.m_elMouseDown.ownerDocument.defaultView.addEventListener(
+            this.m_elMouseDown.ownerDocument.defaultView?.addEventListener(
               "mouseup",
               this.OnMouseUp,
             );
         }
         OnMouseUp(e) {
           (this.m_bMouseDown = !1),
-            this.m_elMouseDown.ownerDocument.defaultView.removeEventListener(
+            this.m_elMouseDown?.ownerDocument.defaultView?.removeEventListener(
               "mouseup",
               this.OnMouseUp,
             ),
@@ -12332,10 +12329,11 @@
             this.setState({ bControlsVisible: !1 });
         }
         UmountControls() {
-          this.setState((e) => {
-            if (!e.bControlsVisible && e.bMountControls)
-              return { bMountControls: !1 };
-          });
+          this.setState((e) =>
+            !e.bControlsVisible && e.bMountControls
+              ? { bMountControls: !1 }
+              : null,
+          );
         }
         ShowStatsView() {
           let e = this.state.video;
@@ -12412,7 +12410,7 @@
           this.m_elBroadcastPlayer &&
             ((0, k.ww)(this.m_elBroadcastPlayer)
               ? (0, k.MS)(this.m_elBroadcastPlayer)
-              : (0, k.tl)(this.m_elBroadcastPlayer, this.m_elVideo));
+              : (0, k.tl)(this.m_elBroadcastPlayer, this.m_elVideo ?? void 0));
         }
         OnFullscreenChange(e) {
           if (!this.m_elBroadcastPlayer) return;
@@ -12434,21 +12432,22 @@
             i = Boolean(e && e.IsReplay()),
             a = this.state.bMountControls,
             n = this.state.bControlsVisible || t,
-            o = e && e.GetUserInputNeeded(),
-            l =
+            o = Boolean(e && e.GetUserInputNeeded()),
+            l = e?.GetDASHPlayerStats(),
+            c =
               e?.IsBroadcastVOD() && o && this.state.strInitialCapsuleImageUrl;
-          let c = "videoContainer";
-          n || (c += " HidePlayerControls"),
-            t && (c += " VideoPaused"),
-            this.state.bFullscreen && (c += " fullscreenVideo"),
-            this.props.classes && (c += " " + this.props.classes);
-          let d = [];
+          let d = "videoContainer";
+          n || (d += " HidePlayerControls"),
+            t && (d += " VideoPaused"),
+            this.state.bFullscreen && (d += " fullscreenVideo"),
+            this.props.classes && (d += " " + this.props.classes);
+          let m = [];
           !this.state.bFullscreen &&
             this.props.actions &&
-            (d = d.concat(this.props.actions)),
+            (m = m.concat(this.props.actions)),
             !this.state.bFullscreen &&
               this.props.onTheaterMode &&
-              d.push(
+              m.push(
                 (0, s.jsx)(
                   "div",
                   {
@@ -12459,7 +12458,7 @@
                   "ChatPosToggle ChatTheaterToggle",
                 ),
               ),
-            d.push(
+            m.push(
               (0, s.jsx)(
                 "div",
                 {
@@ -12470,27 +12469,28 @@
                 "FullscreenToggle",
               ),
             );
-          const m = a && !this.BHideVideoControls(),
-            u = a && !this.state.bFullscreen,
-            p =
+          const u = a && !this.BHideVideoControls(),
+            p = a && !this.state.bFullscreen,
+            _ =
               this.props.fnRenderBroadcastContext &&
               this.props.fnRenderBroadcastContext();
           return (0, s.jsxs)("div", {
             ref: this.BindBroadcastPlayerRef,
-            className: c,
+            className: d,
             onMouseMove: this.OnMouseMove,
             onClick: this.OnMouseMove,
             onMouseLeave: this.OnMouseLeave,
             onContextMenu: this.OnContextMenu,
             onMouseDown: this.OnMouseDown,
             children: [
-              p &&
+              _ &&
                 (0, s.jsx)("div", {
                   className: q().BroadcastContext,
-                  children: p,
+                  children: _,
                 }),
               i && (0, s.jsx)(X, {}),
               this.props.showVideoBackgroundBlur &&
+                this.m_elVideo &&
                 (0, s.jsx)(h.m, {
                   className: "videoBlur",
                   elementRef: this.m_elVideo,
@@ -12513,12 +12513,12 @@
               this.props.linkRegions
                 ? (0, s.jsx)(ye, {
                     linkRegions: this.props.linkRegions,
-                    editMode: this.props.editMode,
+                    editMode: Boolean(this.props.editMode),
                     onSaveLinkRegions: this.props.onSaveLinkRegions,
                   })
                 : null,
               this.props.linkElement,
-              l &&
+              c &&
                 (0, s.jsx)("img", {
                   loading: "lazy",
                   className: (0, I.A)(
@@ -12527,22 +12527,21 @@
                   ),
                   src: this.state.strInitialCapsuleImageUrl,
                 }),
-              m &&
+              u &&
+                e &&
                 (0, s.jsx)(le, {
                   video: e,
-                  actions: d,
+                  actions: m,
                   onOpenLinkInNewWindow: this.props.onOpenLinkInNewWindow,
                   onShowStats: this.ToggleStatsView,
-                  bIncludeClipEditor: this.props.bIncludeClipEditor,
+                  bIncludeClipEditor: Boolean(this.props.bIncludeClipEditor),
                 }),
-              u && (0, s.jsx)(ce, { onClick: this.props.onRequestClose }),
+              p && (0, s.jsx)(ce, { onClick: this.props.onRequestClose }),
               r &&
-                (0, s.jsx)(Z, {
-                  stats: e.GetDASHPlayerStats(),
-                  closeStats: this.CloseStats,
-                }),
+                l &&
+                (0, s.jsx)(Z, { stats: l, closeStats: this.CloseStats }),
               (0, s.jsx)(J, { video: e }),
-              o && (0, s.jsx)(Y, { video: e }),
+              o && e && (0, s.jsx)(Y, { video: e }),
             ],
           });
         }
@@ -12684,7 +12683,7 @@
               "videoControlButton videoControlGoLive" +
               (t ? " isLiveEdge" : ""),
             onClick: t
-              ? null
+              ? void 0
               : (t) => {
                   e.video.JumpToLiveEdge();
                 },
@@ -12733,11 +12732,12 @@
           return void 0 !== this.GetPreviousMarkerTime();
         }
         GetPreviousMarkerTime() {
-          if (!this.video.has_markers) return;
-          let e = this.video.GetTimelineMarkers(),
-            t = this.video.GetPlaybackTime();
-          for (let r = e.length - 1; r >= 0; r--)
-            if (!(e[r].nTime >= t)) return e[r].nTime;
+          const e = this.video;
+          if (!e?.has_markers) return;
+          let t = e.GetTimelineMarkers(),
+            r = e.GetPlaybackTime();
+          for (let e = t.length - 1; e >= 0; e--)
+            if (!(t[e].nTime >= r)) return t[e].nTime;
         }
         OnJumpToPreviousMarkerClicked(e) {
           let t = this.GetPreviousMarkerTime();
@@ -12774,11 +12774,12 @@
           return void 0 !== this.GetNextMarkerTime();
         }
         GetNextMarkerTime() {
-          if (!this.video.has_markers) return;
-          let e = this.video.GetTimelineMarkers(),
-            t = this.video.GetPlaybackTime();
-          for (let r = 0; r < e.length; r++)
-            if (!(e[r].nTime <= t)) return e[r].nTime;
+          const e = this.video;
+          if (!e?.has_markers) return;
+          let t = e.GetTimelineMarkers(),
+            r = e.GetPlaybackTime();
+          for (let e = 0; e < t.length; e++)
+            if (!(t[e].nTime <= r)) return t[e].nTime;
         }
         OnJumpToNextMarkerClicked(e) {
           let t = this.GetNextMarkerTime();
@@ -12861,23 +12862,21 @@
             });
         }
         OnMouseDown(e, t) {
-          if (this.m_elSlider) {
-            e.persist(),
-              (this.m_rectSlider =
-                this.m_elSlider.current &&
-                this.m_elSlider.current.getBoundingClientRect());
-            let r = {};
+          const r = this.m_elSlider.current;
+          if (r) {
+            e.persist(), (this.m_rectSlider = r.getBoundingClientRect());
+            let i = {};
             "start" === t
-              ? ((r = { bStartMouseDown: !0 }), e.stopPropagation())
+              ? ((i = { bStartMouseDown: !0 }), e.stopPropagation())
               : "end" === t
-                ? ((r = { bEndMouseDown: !0 }), e.stopPropagation())
-                : (r = { bGrabberMouseDown: !0 }),
-              this.setState(r, () => this.AdjustSliderForClientX(e.clientX)),
-              this.m_elSlider.current.ownerDocument.defaultView.addEventListener(
+                ? ((i = { bEndMouseDown: !0 }), e.stopPropagation())
+                : (i = { bGrabberMouseDown: !0 }),
+              this.setState(i, () => this.AdjustSliderForClientX(e.clientX)),
+              r.ownerDocument.defaultView?.addEventListener(
                 "mousemove",
                 this.OnMouseMove,
               ),
-              this.m_elSlider.current.ownerDocument.defaultView.addEventListener(
+              r.ownerDocument.defaultView?.addEventListener(
                 "mouseup",
                 this.OnMouseUp,
               );
@@ -12897,11 +12896,11 @@
                   nGrabberMouseDownTime: 0,
                 })),
             this.m_elSlider.current &&
-              (this.m_elSlider.current.ownerDocument.defaultView.removeEventListener(
+              (this.m_elSlider.current.ownerDocument.defaultView?.removeEventListener(
                 "mousemove",
                 this.OnMouseMove,
               ),
-              this.m_elSlider.current.ownerDocument.defaultView.removeEventListener(
+              this.m_elSlider.current.ownerDocument.defaultView?.removeEventListener(
                 "mouseup",
                 this.OnMouseUp,
               ));
@@ -12913,19 +12912,21 @@
               (this.props.video.JumpTime(15), e.preventDefault());
         }
         AdjustSliderForClientX(e) {
-          let t = this.props.video,
-            r = t.GetTimelineStartPos(),
-            i = t.GetTimelineStartPos() + t.GetTimelineDuration(),
-            s = t.GetTimeAtMousePosition(e, this.m_rectSlider, r, i);
+          const t = this.m_rectSlider;
+          if (!t) return;
+          let r = this.props.video,
+            i = r.GetTimelineStartPos(),
+            s = r.GetTimelineStartPos() + r.GetTimelineDuration(),
+            a = r.GetTimeAtMousePosition(e, t, i, s);
           if (this.state.bStartMouseDown) {
-            const e = W.OQ(s, r, t.m_editorEndTime - 5);
-            t.m_editorStartTime = e;
+            const e = W.OQ(a, i, r.m_editorEndTime - 5);
+            r.m_editorStartTime = e;
           } else if (this.state.bEndMouseDown) {
-            const e = W.OQ(s, t.m_editorStartTime + 5, i);
-            t.m_editorEndTime = e;
+            const e = W.OQ(a, r.m_editorStartTime + 5, s);
+            r.m_editorEndTime = e;
           } else
-            s != this.state.nGrabberMouseDownTime &&
-              this.setState({ nGrabberMouseDownTime: s });
+            a != this.state.nGrabberMouseDownTime &&
+              this.setState({ nGrabberMouseDownTime: a });
         }
         OnMouseHoverMove(e) {
           this.AdjustHoverForClientX(e.clientX);
@@ -12937,10 +12938,9 @@
           let t = this.props.video,
             r = t.GetTimelineStartPos(),
             i = t.GetTimelineStartPos() + t.GetTimelineDuration();
-          this.m_rectSlider =
-            this.m_elSlider.current &&
-            this.m_elSlider.current.getBoundingClientRect();
-          t.GetTimeAtMousePosition(e, this.m_rectSlider, r, i);
+          this.m_rectSlider = this.m_elSlider.current?.getBoundingClientRect();
+          this.m_rectSlider &&
+            t.GetTimeAtMousePosition(e, this.m_rectSlider, r, i);
         }
         OnSegmentClick(e) {
           this.props.video.Seek(e);
@@ -12975,7 +12975,7 @@
             ? ((h.left = n), (c.width = n), (d.width = o), (u.width = l))
             : ((h.left = o), (d.width = o), (u.width = l));
           let p = (0, V.ap)(e.GetPlaybackTime()),
-            _ = (0, V.ap)(this.state.nHoverValue),
+            _ = (0, V.ap)(this.state.nHoverValue ?? 0),
             g = "STV_timelineContainer";
           this.state.bGrabberMouseDown && (g += " grabberDown"),
             e.IsTimelineMapActive() && (g += " minimapActive");
@@ -13166,13 +13166,10 @@
           this.state.info && m.es.StopInfo(this.state.info);
         }
         RenderStreamSwitcher() {
-          const e = this.props.steamID;
-          return U.td.stream[e]
-            ? (0, s.jsx)(Be, {
-                value: e,
-                options: U.td.stream,
-                onChange: this.props.onLocalStreamChange,
-              })
+          const e = this.props.steamID,
+            t = this.props.onLocalStreamChange;
+          return t && U.td.stream[e]
+            ? (0, s.jsx)(Be, { value: e, options: U.td.stream, onChange: t })
             : null;
         }
         render() {
@@ -13241,7 +13238,7 @@
                       className: "Actions",
                       children: (0, s.jsx)("div", {
                         onClick: (e) =>
-                          this.props.onOpenLinkInNewWindow(e, U.td.link),
+                          this.props.onOpenLinkInNewWindow?.(e, U.td.link),
                         className: "BroadcastLink",
                         children: U.td.linkName,
                       }),
@@ -13349,7 +13346,7 @@
             }),
               e.links.push(r);
           }
-          this.props.onSaveLinkRegions(e);
+          this.props.onSaveLinkRegions?.(e);
         }
         async DeleteRegion(e) {
           this.state.sizableRegion.splice(e, 1),
@@ -13616,13 +13613,13 @@
         B = r(6144),
         y = r(37085);
       class f {
-        m_elVideo = null;
+        m_elVideo;
         m_peerConnection = null;
-        m_strBroadcastSteamID = void 0;
-        m_ulWebRTCSessionID = void 0;
+        m_strBroadcastSteamID = "";
+        m_ulWebRTCSessionID = "";
         m_schCandidateTimer = new B.LU();
-        m_nHostCandidateGeneration = void 0;
-        m_nCandidateUpdateIntervalMS = void 0;
+        m_nHostCandidateGeneration = 0;
+        m_nCandidateUpdateIntervalMS = 0;
         m_listeners = new B.Ji();
         m_bFirstPlay = !0;
         m_bStatsViewVisible = !1;
@@ -13646,15 +13643,15 @@
               "resize",
               this.OnVideoResize,
             );
-          let n = {
+          const n = new RTCPeerConnection({
             iceServers: [
               { urls: ["stun:" + i] },
               { urls: ["turn:" + i], username: t, credential: r },
             ],
             iceTransportPolicy: "relay",
-          };
-          (this.m_peerConnection = new RTCPeerConnection(n)),
-            (this.m_peerConnection.oniceconnectionstatechange = ((e) => {
+          });
+          (this.m_peerConnection = n),
+            (n.oniceconnectionstatechange = ((e) => {
               this.m_peerConnection &&
                 (console.log(
                   "BroadcastWebRTC: ICE connection state changed to " +
@@ -13666,12 +13663,12 @@
                       this.m_peerConnection.iceConnectionState &&
                     this.OnWebRTCConnectionRetry());
             }).bind(this)),
-            (this.m_peerConnection.onicecandidate = ((e) => {
+            (n.onicecandidate = ((e) => {
               if (e.candidate) {
                 const t = new FormData();
                 t.append("broadcaststeamid", this.m_strBroadcastSteamID),
                   t.append("webrtc_session_id", this.m_ulWebRTCSessionID),
-                  t.append("sdp_mid", e.candidate.sdpMid),
+                  t.append("sdp_mid", String(e.candidate.sdpMid)),
                   t.append(
                     "sdp_mline_index",
                     String(e.candidate.sdpMLineIndex),
@@ -13697,50 +13694,41 @@
                     );
               }
             }).bind(this)),
-            (this.m_peerConnection.ontrack = ((e) => {
+            (n.ontrack = ((e) => {
               "video" === e.track.kind &&
-                ((this.m_elVideo.src = null),
+                ((this.m_elVideo.src = ""),
                 (this.m_elVideo.srcObject = e.streams[0]),
                 this.Play());
             }).bind(this)),
-            this.m_peerConnection
-              .setRemoteDescription({ type: "offer", sdp: s })
-              .then(async () => {
-                await this.m_peerConnection.setLocalDescription(
-                  await this.m_peerConnection.createAnswer(),
+            n.setRemoteDescription({ type: "offer", sdp: s }).then(async () => {
+              await n.setLocalDescription(await n.createAnswer());
+              const e = new FormData();
+              e.append("broadcaststeamid", this.m_strBroadcastSteamID),
+                e.append("webrtc_session_id", this.m_ulWebRTCSessionID),
+                e.append("answer", n.localDescription?.sdp ?? "");
+              try {
+                await a()
+                  .post(
+                    `${_.TS.CHAT_BASE_URL}broadcast/setbroadcastwebrtcanswer`,
+                    e,
+                  )
+                  .then((e) => {
+                    const t = e.data;
+                    if (!t.success || t.success != y.R)
+                      throw new Error(String(t.success));
+                  });
+              } catch (e) {
+                return (
+                  console.log("Failed to set the WebRTC session answer: " + e),
+                  void this.OnWebRTCConnectionRetry()
                 );
-                const e = new FormData();
-                e.append("broadcaststeamid", this.m_strBroadcastSteamID),
-                  e.append("webrtc_session_id", this.m_ulWebRTCSessionID),
-                  e.append(
-                    "answer",
-                    this.m_peerConnection.localDescription.sdp,
-                  );
-                try {
-                  await a()
-                    .post(
-                      `${_.TS.CHAT_BASE_URL}broadcast/setbroadcastwebrtcanswer`,
-                      e,
-                    )
-                    .then((e) => {
-                      const t = e.data;
-                      if (!t.success || t.success != y.R)
-                        throw new Error(String(t.success));
-                    });
-                } catch (e) {
-                  return (
-                    console.log(
-                      "Failed to set the WebRTC session answer: " + e,
-                    ),
-                    void this.OnWebRTCConnectionRetry()
-                  );
-                }
-                (this.m_nCandidateUpdateIntervalMS = 250),
-                  this.m_schCandidateTimer.Schedule(
-                    this.m_nCandidateUpdateIntervalMS,
-                    () => this.GetHostCandidates(),
-                  );
-              });
+              }
+              (this.m_nCandidateUpdateIntervalMS = 250),
+                this.m_schCandidateTimer.Schedule(
+                  this.m_nCandidateUpdateIntervalMS,
+                  () => this.GetHostCandidates(),
+                );
+            });
         }
         async GetHostCandidates() {
           const e = new FormData();
@@ -13758,19 +13746,18 @@
               )
               .then((e) => {
                 const t = e.data,
-                  r = t.data;
+                  r = t.data,
+                  i = this.m_peerConnection;
                 if (!t.success || t.success != y.R)
                   throw new Error(String(t.success));
-                r.candidate_generation > this.m_nHostCandidateGeneration
+                i && r.candidate_generation > this.m_nHostCandidateGeneration
                   ? (r.candidates.forEach((e) => {
                       const t = new RTCIceCandidate({
                         sdpMid: e.sdp_mid,
                         sdpMLineIndex: e.sdp_mline_index,
                         candidate: e.candidate,
                       });
-                      this.m_peerConnection
-                        .addIceCandidate(t)
-                        .catch((e) => console.error(e));
+                      i.addIceCandidate(t).catch((e) => console.error(e));
                     }),
                     (this.m_nHostCandidateGeneration = r.candidate_generation))
                   : this.m_nHostCandidateGeneration > 0 &&
@@ -13809,8 +13796,7 @@
               (this.m_peerConnection.close(), (this.m_peerConnection = null)),
             this.m_elVideo.pause(),
             (this.m_elVideo.srcObject = null),
-            this.m_stats &&
-              (this.m_stats.GetFPSMonitor().Close(), (this.m_stats = null)),
+            this.m_stats.GetFPSMonitor().Close(),
             (this.m_bFirstPlay = !0);
         }
         IsBuffering() {
@@ -13820,7 +13806,7 @@
           return 0;
         }
         GetLiveContentStartTime() {
-          return null;
+          return new Date(0);
         }
         GetAvailableVideoStartTime() {
           return 0;
@@ -14507,16 +14493,18 @@
             );
         }
         LoadBroadcast(e) {
-          e.m_rgVideos.findIndex((e) => e == this.m_activeVideo) >= 0 &&
-            this.m_activeVideo.StartBroadcast(e);
+          const t = this.m_activeVideo;
+          t &&
+            e.m_rgVideos.findIndex((e) => e == t) >= 0 &&
+            t.StartBroadcast(e);
         }
         LoadClip(e) {
-          e.m_rgVideos.findIndex((e) => e == this.m_activeVideo) >= 0 &&
-            this.m_activeVideo.StartClip(e);
+          const t = this.m_activeVideo;
+          t && e.m_rgVideos.findIndex((e) => e == t) >= 0 && t.StartClip(e);
         }
         LoadVOD(e) {
-          e.m_rgVideos.findIndex((e) => e == this.m_activeVideo) >= 0 &&
-            this.m_activeVideo.StartVOD(e);
+          const t = this.m_activeVideo;
+          t && e.m_rgVideos.findIndex((e) => e == t) >= 0 && t.StartVOD(e);
         }
         BroadcastDownloadFailed(e, t = !0, r = h.N_.Invalid) {
           e.Stop();
@@ -14536,7 +14524,7 @@
             !e.IsBroadcastClip() && !e.IsBroadcastVOD())
           ) {
             let t = this.m_mapBroadcasts.get(e.GetBroadcastSteamID());
-            this.GetBroadcastManifest(t, e.GetWatchLocation());
+            t && this.GetBroadcastManifest(t, e.GetWatchLocation());
           }
           e.UserInputClick();
         }
@@ -14584,16 +14572,16 @@
           (e[(e.Timeline = 1)] = "Timeline"), (e[(e.Minimap = 2)] = "Minimap");
         })(O || (O = {}));
       class L {
-        m_elVideo = null;
+        m_elVideo;
         m_player = null;
         m_listeners = new B.Ji();
         m_gameDataParser = null;
         m_eWatchLocation = M.nn.Tq;
         m_bStartWithSubtitles = !1;
-        m_steamIDBroadcast = null;
+        m_steamIDBroadcast = "";
         m_BroadcastInfo = null;
-        m_broadcastClipID = null;
-        m_nBroadcastAppIDVOD = null;
+        m_broadcastClipID = "";
+        m_nBroadcastAppIDVOD = 0;
         m_bPaused = !1;
         m_nPlaybackTime = 0;
         m_bBuffering = !1;
@@ -14638,7 +14626,7 @@
           this.m_player && this.m_player.SetStatsViewIsVisible(e);
         }
         GetDASHPlayerStats() {
-          return this.m_player.GetDASHPlayerStats();
+          return this.m_player?.GetDASHPlayerStats();
         }
         BHasDASHStats() {
           return null != this.m_player;
@@ -14647,7 +14635,7 @@
           return !1;
         }
         CanSeek() {
-          return this.m_player && this.m_player.CanSeek();
+          return this.m_player?.CanSeek() ?? !1;
         }
         IsBuffering() {
           return this.m_bBuffering;
@@ -14668,7 +14656,7 @@
           return this.m_bIsReplay;
         }
         IsBroadcastClip() {
-          return null != this.m_broadcastClipID;
+          return Boolean(this.m_broadcastClipID);
         }
         SetBroadcastClipID(e) {
           this.m_broadcastClipID = e;
@@ -14677,7 +14665,7 @@
           return this.m_broadcastClipID;
         }
         IsBroadcastVOD() {
-          return null != this.m_nBroadcastAppIDVOD;
+          return Boolean(this.m_nBroadcastAppIDVOD);
         }
         SetBroadcastAppIDVOD(e) {
           this.m_nBroadcastAppIDVOD = e;
@@ -14689,13 +14677,13 @@
           return this.m_player ? this.m_player.GetVideoRepresentations() : [];
         }
         SetVideoRepresentation(e) {
-          this.m_player.SetVideoRepresentation(e);
+          this.m_player?.SetVideoRepresentation(e);
         }
         GetBroadcastInfo() {
           return this.m_BroadcastInfo;
         }
         BHasTimedText() {
-          return this.m_player?.BHasTimedText();
+          return this.m_player?.BHasTimedText() ?? !1;
         }
         BHasPlayer() {
           return Boolean(this.m_player);
@@ -14817,8 +14805,9 @@
                 e.m_data.webrtc_offer_sdp,
               );
           }
-          this.SetVolume(this.m_nVolume), this.m_player.SetMuted(this.m_bMuted);
-          let t = this.m_player.GetDASHPlayerStats();
+          this.SetVolume(this.m_nVolume),
+            this.m_player?.SetMuted(this.m_bMuted);
+          let t = this.m_player?.GetDASHPlayerStats();
           t &&
             t.SetBroadcasterAndViewerInfo(
               this.m_steamIDBroadcast,
@@ -14835,7 +14824,7 @@
             (this.m_player = t),
             t.PlayMPD(e.m_data.clip_url),
             this.SetVolume(this.m_nVolume),
-            this.m_player.SetMuted(this.m_bMuted);
+            this.m_player?.SetMuted(this.m_bMuted);
         }
         StartVOD(e) {
           this.InitPlayer();
@@ -14845,9 +14834,9 @@
             _.iA.logged_in &&
               e.m_nAppIDVOD &&
               t.SetBookmarkAdapter(new R.M(e.m_nAppIDVOD)),
-            t.PlayMPD(e.m_manifestURL),
+            e.m_manifestURL && t.PlayMPD(e.m_manifestURL),
             this.SetVolume(this.m_nVolume),
-            this.m_player.SetMuted(this.m_bMuted);
+            this.m_player?.SetMuted(this.m_bMuted);
         }
         Stop() {
           this.m_listeners.Unregister(),
@@ -14863,17 +14852,16 @@
         }
         Play() {
           const e = this.GetBroadcastState();
-          e == z.None || this.IsBroadcastClip()
-            ? G.StartVideo(this)
-            : e == z.Ready &&
-              (G.SetActiveVideo(this),
-              this.m_player
-                ? this.m_player.Play()
-                : this.IsBroadcastVOD()
-                  ? this.StartVOD(G.GetBroadcastVOD(this.m_nBroadcastAppIDVOD))
-                  : this.StartBroadcast(
-                      G.GetBroadcast(this.m_steamIDBroadcast),
-                    ));
+          if (e == z.None || this.IsBroadcastClip()) G.StartVideo(this);
+          else if (e == z.Ready)
+            if ((G.SetActiveVideo(this), this.m_player)) this.m_player.Play();
+            else if (this.IsBroadcastVOD()) {
+              const e = G.GetBroadcastVOD(this.m_nBroadcastAppIDVOD);
+              e && this.StartVOD(e);
+            } else {
+              const e = G.GetBroadcast(this.m_steamIDBroadcast);
+              e && this.StartBroadcast(e);
+            }
         }
         Pause() {
           console.log(
@@ -14885,22 +14873,25 @@
             this.m_player && this.m_player.Pause();
         }
         JumpTime(e) {
-          this.m_player.JumpTime(e);
+          this.m_player?.JumpTime(e);
         }
         Seek(e) {
           this.m_player?.Seek(e);
         }
         SeekAndPlay(e) {
-          this.m_player.SeekAndPlay(e);
+          this.m_player?.SeekAndPlay(e);
         }
         JumpToLiveEdge() {
-          this.m_player.IsLiveContent()
-            ? this.SeekAndPlay(this.m_player.GetBufferedLiveEdgeTime())
-            : this.SeekAndPlay(this.m_player.GetAvailableVideoStartTime());
+          const e = this.m_player;
+          e &&
+            (e.IsLiveContent()
+              ? this.SeekAndPlay(e.GetBufferedLiveEdgeTime())
+              : this.SeekAndPlay(e.GetAvailableVideoStartTime()));
         }
         SetVolume(e) {
-          this.m_player && this.m_player.SetVolume(e),
-            (this.m_nVolume = this.m_player.GetVolume()),
+          this.m_player &&
+            (this.m_player.SetVolume(e),
+            (this.m_nVolume = this.m_player.GetVolume())),
             G.SaveVolumeChange(e, this.m_bMuted);
         }
         SetMute(e) {
@@ -14924,46 +14915,46 @@
           this.m_bPaused = !0;
         }
         OnVideoTimeUpdate() {
-          if (
-            (window.clearTimeout(this.m_videoEndingTimer),
-            this.IsBroadcastClip())
-          )
-            (this.m_nPlaybackTime = this.m_player.GetCurrentPlayTime()),
-              (this.m_nVideoStartPos =
-                this.m_player.GetAvailableVideoStartTime()),
-              (this.m_nVideoEndPos = this.m_player.GetBufferedLiveEdgeTime()),
-              (this.m_nTimelineDuration =
-                this.m_nVideoEndPos - this.m_nVideoStartPos),
-              (this.m_bOnLiveEdge = !1),
-              (this.m_bBuffering = this.m_player.IsBuffering());
-          else {
-            if (
-              ((this.m_nPlaybackTime = this.m_player.GetCurrentPlayTime()),
-              (this.m_nVideoStartPos =
-                this.m_player.GetAvailableVideoStartTime()),
-              (this.m_nVideoEndPos = Math.max(
-                this.m_player.GetBufferedLiveEdgeTime(),
-                this.m_nPlaybackTime,
-              )),
-              this.IsBroadcastVOD() &&
-                ((this.m_nTimelineDuration = this.m_nVideoEndPos),
-                this.m_fnOnVideoEnd &&
-                  this.m_nVideoEndPos - this.m_nPlaybackTime < h.Br))
-            ) {
-              const e = 400;
-              this.m_videoEndingTimer = window.setTimeout(() => {
-                this.m_fnOnVideoEnd();
-              }, e);
+          window.clearTimeout(this.m_videoEndingTimer);
+          const e = this.m_player;
+          if (e)
+            if (this.IsBroadcastClip())
+              (this.m_nPlaybackTime = e.GetCurrentPlayTime()),
+                (this.m_nVideoStartPos = e.GetAvailableVideoStartTime()),
+                (this.m_nVideoEndPos = e.GetBufferedLiveEdgeTime()),
+                (this.m_nTimelineDuration =
+                  this.m_nVideoEndPos - this.m_nVideoStartPos),
+                (this.m_bOnLiveEdge = !1),
+                (this.m_bBuffering = e.IsBuffering());
+            else {
+              if (
+                ((this.m_nPlaybackTime = e.GetCurrentPlayTime()),
+                (this.m_nVideoStartPos = e.GetAvailableVideoStartTime()),
+                (this.m_nVideoEndPos = Math.max(
+                  e.GetBufferedLiveEdgeTime(),
+                  this.m_nPlaybackTime,
+                )),
+                this.IsBroadcastVOD())
+              ) {
+                this.m_nTimelineDuration = this.m_nVideoEndPos;
+                const e = this.m_fnOnVideoEnd;
+                if (e && this.m_nVideoEndPos - this.m_nPlaybackTime < h.Br) {
+                  const t = 400;
+                  this.m_videoEndingTimer = window.setTimeout(() => {
+                    e();
+                  }, t);
+                }
+              }
+              (this.m_bBuffering = e.IsBuffering()),
+                (this.m_bOnLiveEdge =
+                  this.m_nVideoEndPos - this.m_nPlaybackTime < h.Br),
+                e.IsPaused() && (this.m_bOnLiveEdge = !1);
             }
-            (this.m_bBuffering = this.m_player.IsBuffering()),
-              (this.m_bOnLiveEdge =
-                this.m_nVideoEndPos - this.m_nPlaybackTime < h.Br),
-              this.m_player.IsPaused() && (this.m_bOnLiveEdge = !1);
-          }
         }
         OnVolumeUpdated() {
-          (this.m_nVolume = this.m_player.GetVolume()),
-            (this.m_bMuted = this.m_player.IsMuted());
+          const e = this.m_player;
+          e &&
+            ((this.m_nVolume = e.GetVolume()), (this.m_bMuted = e.IsMuted()));
         }
         OnGameDataUpdate(e) {
           let t = e.detail;
@@ -14971,7 +14962,7 @@
           (this.m_gameDataParser &&
             this.m_gameDataParser.GetAppID() == t.gamedata.__appid) ||
             (this.m_gameDataParser = new m(t.gamedata.__appid));
-          const r = this.m_player.GetLiveContentStartTime().getTime();
+          const r = this.m_player?.GetLiveContentStartTime().getTime() ?? 0;
           if ("timelinemarkers" in t.gamedata) {
             const e = this.m_gameDataParser.UpdateMarkers(
               t.gamedata.__timelinemarkers,
@@ -15164,37 +15155,43 @@
       let B = class extends a.Component {
         OnEmoticonClick(e) {
           const {
-            emoticonStore: t,
-            strFlairGroupID: r,
-            SetUIDisplayPref: i,
-            contextOptions: a,
-            bShowChatAddons: n,
-          } = this.props;
-          let o = null;
+              emoticonStore: t,
+              strFlairGroupID: r,
+              SetUIDisplayPref: i,
+              contextOptions: a,
+              bShowChatAddons: n,
+            } = this.props,
+            {
+              roomEffectSettings: o,
+              onRoomEffectSelected: l,
+              onStickerSelected: c,
+            } = this.props;
+          let u = null;
           if (
-            ((o = n
-              ? (0, s.jsx)(m.Q4, {
-                  emoticonStore: this.props.emoticonStore,
-                  strFlairGroupID: this.props.strFlairGroupID,
-                  onEmoticonSelected: (e) =>
-                    this.props.OnEmoticonSelected(e, !1),
-                  roomEffectSettings: this.props.roomEffectSettings,
-                  onRoomEffectSelected: this.props.onRoomEffectSelected,
-                  onStickerSelected: this.props.onStickerSelected,
-                })
-              : r && t.flair_list && t.GetFlairListByGroupID(r)?.length > 0
-                ? (0, s.jsx)(m.CE, {
+            ((u =
+              n && o && l && c
+                ? (0, s.jsx)(m.Q4, {
                     emoticonStore: this.props.emoticonStore,
                     strFlairGroupID: this.props.strFlairGroupID,
-                    OnSelected: this.props.OnEmoticonSelected,
+                    onEmoticonSelected: (e) =>
+                      this.props.OnEmoticonSelected(e, !1),
+                    roomEffectSettings: o,
+                    onRoomEffectSelected: l,
+                    onStickerSelected: c,
                   })
-                : (0, s.jsx)(m.iY, {
-                    emoticonStore: this.props.emoticonStore,
-                    strFlairGroupID: this.props.strFlairGroupID,
-                    OnSelected: this.props.OnEmoticonSelected,
-                  })),
+                : r && t.flair_list && t.GetFlairListByGroupID(r)?.length > 0
+                  ? (0, s.jsx)(m.CE, {
+                      emoticonStore: this.props.emoticonStore,
+                      strFlairGroupID: this.props.strFlairGroupID,
+                      OnSelected: this.props.OnEmoticonSelected,
+                    })
+                  : (0, s.jsx)(m.iY, {
+                      emoticonStore: this.props.emoticonStore,
+                      strFlairGroupID: this.props.strFlairGroupID,
+                      OnSelected: this.props.OnEmoticonSelected,
+                    })),
             (0, d.lX)(
-              o,
+              u,
               e,
               a || {
                 bOverlapHorizontal: !0,
@@ -15296,9 +15293,10 @@
         render() {
           const { config: e } = this.props,
             { activeIndex: t } = this.state,
-            r = e[t] && e[t].renderContent ? e[t].renderContent() : null,
-            i = e.length > 1,
-            a = i
+            r = e[t],
+            i = r ? r.renderContent() : null,
+            a = e.length > 1,
+            n = a
               ? ({ detail: { button: t } }) => {
                   t === S.pR.BUMPER_LEFT
                     ? this.setState({
@@ -15315,8 +15313,8 @@
               : void 0;
           return (0, s.jsxs)(g.Z, {
             className: b.Picker,
-            onButtonDown: a,
-            children: [i && (0, s.jsx)(y, { children: this.RenderTabs() }), r],
+            onButtonDown: n,
+            children: [a && (0, s.jsx)(y, { children: this.RenderTabs() }), i],
           });
         }
         RenderTabs() {
@@ -16020,6 +16018,7 @@
             children: [
               (0, s.jsx)("img", { style: { width: "100%" }, src: i }),
               this.state.showHover &&
+                this.m_ref.current &&
                 (0, s.jsx)(J, { target: this.m_ref.current, sticker: e }),
             ],
           });
@@ -16063,6 +16062,7 @@
             children: [
               a.renderEffectIcon(),
               this.state.showHover &&
+                this.m_ref.current &&
                 (0, s.jsx)(Z, {
                   target: this.m_ref.current,
                   effect: e,
@@ -16205,46 +16205,48 @@
         o = r(52038),
         l = r(61859),
         c = r(61336),
-        d = r(78327),
+        d = r(66418),
         m = r(15392),
-        u = r(40414),
+        u = r(17267),
         h = r(12493);
       function p(e) {
         const { gidEvent: t } = e,
-          r = (0, n.RR)(t),
-          [p, _] = (0, s.useMemo)(() => {
-            if (
-              r?.jsondata?.localized_sale_product_banner?.length > 0 &&
-              r?.jsondata?.localized_sale_product_mobile_banner?.length > 0
-            ) {
-              const e = (0, a.sfN)(d.TS.LANGUAGE),
-                t = l.NT.GetWithFallback(
-                  r.jsondata.localized_sale_product_banner,
-                  e,
-                ),
-                i = l.NT.GetWithFallback(
-                  r.jsondata.localized_sale_product_mobile_banner,
-                  e,
-                );
-              if (t?.length > 0 && i?.length > 0)
+          r = (0, n.RR)(t);
+        return r
+          ? (0, i.jsx)(_, {
+              event: r,
+              lang: (0, a.sfN)(d.TS.LANGUAGE),
+              href: (0, c.k2)((0, h.n4)(r) ?? ""),
+            })
+          : null;
+      }
+      function _(e) {
+        const { event: t, lang: r, href: a } = e,
+          [n, c] = (0, s.useMemo)(() => {
+            const e = t.jsondata.localized_sale_product_banner,
+              i = t.jsondata.localized_sale_product_mobile_banner;
+            if (e?.length && i?.length) {
+              const s = l.NT.GetWithFallback(e, r),
+                a = l.NT.GetWithFallback(i, r);
+              if (s?.length && a?.length)
                 return [
-                  u.zU.GenerateURLFromHashAndExt(r.clanSteamID, t),
-                  u.zU.GenerateURLFromHashAndExt(r.clanSteamID, i),
+                  u.zU.GenerateURLFromHashAndExt(t.clanSteamID, s),
+                  u.zU.GenerateURLFromHashAndExt(t.clanSteamID, a),
                 ];
             }
-            return [null, null];
-          }, [r]);
-        return p?.length > 0 && _?.length > 0
+            return [void 0, void 0];
+          }, [t, r]);
+        return n?.length && c?.length
           ? (0, i.jsxs)("a", {
-              href: (0, c.k2)((0, h.n4)(r)),
+              href: a,
               className: m.Link,
               children: [
                 (0, i.jsx)("img", {
-                  src: p,
+                  src: n,
                   className: (0, o.A)(m.Banner, m.Big),
                 }),
                 (0, i.jsx)("img", {
-                  src: _,
+                  src: c,
                   className: (0, o.A)(m.Banner, m.Mobile),
                 }),
               ],

@@ -3492,6 +3492,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = "100% 0px 100% 0px",
         _ = "tab",
@@ -3501,18 +3502,24 @@
       !(function (_) {
         (_.Random = "r"), (_.Personalized = "p");
       })(_ || (_ = {}));
-      const _ = 940;
+      const _ = 940,
+        _ = 1920;
       function _() {
-        return window.innerWidth >= _;
+        return window.innerWidth ?? _;
       }
       function _() {
-        const [_, _] = (0, _.useState)(window.innerWidth);
+        return _() >= _;
+      }
+      function _() {
+        (0, _._)();
+        const [_, _] = (0, _.useState)(() => _());
         return (
           (0, _.useEffect)(() => {
             const _ = () => {
-              _(window.innerWidth);
+              _(_());
             };
             return (
+              _(),
               window.addEventListener("resize", _),
               () => window.removeEventListener("resize", _)
             );

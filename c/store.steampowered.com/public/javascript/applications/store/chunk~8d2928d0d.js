@@ -5864,7 +5864,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -6083,6 +6082,7 @@
         (0, _._)([_._], _.prototype, "OnChangeDeleteForum", null);
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -6090,6 +6090,224 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            eventModel: _,
+            permissions: _,
+            bIsCreatorHomeVisible: _,
+            additionalButtons: _,
+            onDeleteRequest: _,
+            saleDayControl: _,
+            promotionPlanLinks: _,
+            testControls: _,
+            bSupportsSticky: _ = !1,
+          } = _,
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          [_, _, _, _] = (0, _._)(() => [
+            _.visibility_state,
+            _.jsondata.bSaleEnabled,
+            _.GID,
+            _.clanSteamID.GetAccountID(),
+          ]),
+          [_, _] = _.useState(_),
+          { bVisible: _, ref: _ } = (0, _._)();
+        if ((!_?.can_edit && !_?.support_user) || _)
+          return (0, _.jsx)("span", {});
+        const _ = (0, _._)(),
+          _ = "community" == _,
+          _ = "store" == _,
+          _ = Boolean(_.support_user),
+          _ = _(_),
+          _ = _ && !_,
+          _ = _.GetEventType() == _.ajI,
+          _ =
+            (_ == _._.k_EEventStateVisible || _ == _._.k_EEventStateUnlisted) &&
+            (!_ || _),
+          _ = _ == _._.k_EEventStateStaged;
+        return (0, _.jsxs)(_._, {
+          children: [
+            (0, _.jsx)("div", {
+              className: (0, _._)(
+                _().DisplayAdminPanel_TopSpacer,
+                _ && _().Sticky,
+              ),
+            }),
+            (0, _.jsxs)("div", {
+              className: (0, _._)({
+                [_().DisplayAdminPanel]: !0,
+                [_().Locked]: _,
+                [_().Sticky]: _,
+              }),
+              children: [
+                (0, _.jsx)("span", {
+                  className: _().DisplayAdminPanel_Title,
+                  children: (0, _._)("#EventDisplay_Admin_Title"),
+                }),
+                (0, _.jsxs)("div", {
+                  className: (0, _._)(
+                    _().DisplayAdminPanel_ctn,
+                    _ && _().Sticky,
+                  ),
+                  children: [
+                    _,
+                    _ &&
+                      (0, _.jsx)("span", {
+                        className: _().DisplayAdminPanel_Spacer,
+                        children: " ",
+                      }),
+                    (0, _.jsx)(_._, {
+                      eventModel: _,
+                      route: _._.k_eCommunityEdit,
+                      className: (0, _._)(_().Button, _().AdminButton),
+                      children: _
+                        ? (0, _._)("#EventEditor_Edit_Page")
+                        : (0, _._)("#EventEditor_Edit"),
+                    }),
+                    Boolean(_) &&
+                      (0, _.jsx)("span", {
+                        className: _().Button + " " + _().AdminButton,
+                        onClick: _,
+                        children: (0, _._)("#EventDisplay_DeleteEvent"),
+                      }),
+                    !_ &&
+                      (0, _.jsx)(_.Fragment, {
+                        children: (0, _.jsx)(_._, {
+                          eventModel: _,
+                          route: _._.k_eCommunityPublish,
+                          className: (0, _._)(_().Button, _().AdminButton),
+                          children: (0, _._)(
+                            _
+                              ? "#EventEditor_Publish_VisibleNow"
+                              : "#Button_Publish",
+                          ),
+                        }),
+                      }),
+                    (0, _.jsx)(_._, {
+                      eventModel: _,
+                      route: _._.k_eCommunityAdminPage,
+                      className: (0, _._)(_().Button, _().AdminButton),
+                      children: (0, _._)("#EventDisplay_Events"),
+                    }),
+                    _,
+                    Boolean(_ && _ && !_) &&
+                      (0, _.jsx)(_._, {
+                        eventModel: _,
+                        route: _._.k_eStoreSalePage,
+                        className: (0, _._)(_().Button, _().AdminButton),
+                        children: (0, _._)("#EventDisplay_SalesPage"),
+                      }),
+                    Boolean(_ && _ && _) &&
+                      (0, _.jsx)("a", {
+                        href:
+                          _._.STATS_BASE_URL +
+                          "sales/details/?gid=" +
+                          _ +
+                          "&clanid=" +
+                          _,
+                        target: _._.IN_CLIENT ? "" : "_blank",
+                        className: (0, _._)(
+                          _().Button,
+                          _().AdminButton,
+                          _().ValveOnlyBackground,
+                        ),
+                        children: (0, _._)("#EventDisplay_StatsPage"),
+                      }),
+                    Boolean(_ && _ && _ && !_) &&
+                      (0, _.jsx)("a", {
+                        href:
+                          _._.PARTNER_BASE_URL +
+                          "promotion/invitationplanner/dashboard?saleclaneventgid=" +
+                          _ +
+                          "&saleclanaccountid=" +
+                          _,
+                        target: _._.IN_CLIENT ? "" : "_blank",
+                        className: (0, _._)(
+                          _().Button,
+                          _().AdminButton,
+                          _().ValveOnlyBackground,
+                        ),
+                        children: (0, _._)(
+                          "#EventDisplay_InvitationPlannerPage",
+                        ),
+                      }),
+                    _,
+                    Boolean(_ && _ && _._ == _ && _.GetContentHubCategory()) &&
+                      (0, _.jsx)("a", {
+                        href: `${_._.PARTNER_BASE_URL}admin/store/contenthub/categories?edit=${_.GetContentHubCategory()}`,
+                        target: _._.IN_CLIENT ? "" : "_blank",
+                        className: (0, _._)(
+                          _().Button,
+                          _().AdminButton,
+                          _().ValveOnlyBackground,
+                        ),
+                        children: (0, _._)("#EventDisplay_CategoryEditor"),
+                      }),
+                    Boolean(_ && (_ || (_ && !_))) &&
+                      (0, _.jsx)(_._, {
+                        eventModel: _,
+                        route: _
+                          ? _._.k_eCommunityPreviewSale
+                          : _._.k_eCommunityView,
+                        className: (0, _._)(_().Button, _().AdminButton),
+                        children: (0, _._)(
+                          _
+                            ? "#EventDisplay_PreviewOnCommunity"
+                            : "#EventDisplay_ViewOnCommunity",
+                        ),
+                      }),
+                    Boolean(_ && _) &&
+                      (0, _.jsx)(_._, {
+                        eventModel: _,
+                        route: _._.k_eStoreView,
+                        className: (0, _._)(_().Button, _().AdminButton),
+                        children: (0, _._)("#EventDisplay_ViewOnStore"),
+                      }),
+                    _,
+                    _ &&
+                      (0, _.jsx)("div", {
+                        className: _().DisplayAdminPanelClose,
+                        onClick: () => _(!1),
+                        children: (0, _.jsx)(_._, {
+                          toolTipContent: (0, _._)(
+                            "#EventDisplay_Admin_Close_ttip",
+                          ),
+                          children: (0, _.jsx)(_._, {}),
+                        }),
+                      }),
+                    !_ &&
+                      _ &&
+                      (0, _.jsx)("div", {
+                        className: _().DisplayAdminPanelClose,
+                        onClick: () => _(!0),
+                        children: (0, _.jsx)(_._, {
+                          toolTipContent: (0, _._)(
+                            "#EventDisplay_Admin_Reopen_ttip",
+                          ),
+                          children: (0, _.jsx)(_.i3G, {
+                            angle: 0,
+                          }),
+                        }),
+                      }),
+                  ],
+                }),
+              ],
+            }),
+            (0, _.jsx)("div", {
+              className: _().DisplayAdminPanelMarker,
+              ref: _,
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        return Boolean(_?.support_user && _?.valve_admin);
+      }
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -6251,9 +6469,6 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -6263,8 +6478,6 @@
             fnOnUpdateSaleDayIndex: _,
             bSupportsSticky: _ = !1,
           } = _,
-          _ = (0, _._)(),
-          _ = (0, _._)(),
           [_, _] = _.useState(!1),
           _ = (0, _._)(() =>
             (function (_) {
@@ -6287,25 +6500,12 @@
             })(_),
           ),
           [_, _] = _.useState(_ ? _.GetDayIndexFromEventStart() : 0),
-          [_, _, _, _] = (0, _._)(() => [
-            _.visibility_state,
+          [_, _, _] = (0, _._)(() => [
             _.jsondata.bSaleEnabled,
             _.GID,
             _.clanSteamID.GetAccountID(),
           ]),
           _ = (0, _._)(_),
-          [_, _] = _.useState(_),
-          { bVisible: _, ref: _ } = (0, _._)(),
-          _ = (_) => {
-            (0, _._)(
-              (0, _.jsx)(_, {
-                eventModel: _,
-                onDeleteSuccessAndCloseDialog: () => _(!0),
-                partnerEventStore: _,
-              }),
-              (0, _._)(_),
-            );
-          },
           _ = (0, _._)(),
           { creatorHome: _ } = (0, _._)(_);
         if (_)
@@ -6313,222 +6513,64 @@
             eventModel: _,
             route: _._.k_eCommunityAdminPage,
           });
-        if ((_.can_edit || _.support_user) && !_ && !_) {
-          const _ = [];
-          if (void 0 !== _)
-            for (let _ = 0; _ <= _; ++_)
-              _.push({
-                label: (0, _._)("#SalePage_Admin_SaleEventDay", _ + 1),
-                data: _,
-              });
-          const _ = (0, _._)(),
-            _ = "community" == _,
-            _ = "store" == _,
-            _ = _._.is_support && (0, _._)(_.clanSteamID, !0),
-            _ = _ && !_,
-            _ = _.GetEventType() == _.ajI,
-            _ = _ && _?.GetLinkedEventGID() == _.GID,
-            _ =
-              (_ == _._.k_EEventStateVisible ||
-                _ == _._.k_EEventStateUnlisted) &&
-              (!_ || _),
-            _ = _ == _._.k_EEventStateStaged;
-          return (0, _.jsxs)(_._, {
+        if (_) return (0, _.jsx)("span", {});
+        const _ = [];
+        if (void 0 !== _)
+          for (let _ = 0; _ <= _; ++_)
+            _.push({
+              label: (0, _._)("#SalePage_Admin_SaleEventDay", _ + 1),
+              data: _,
+            });
+        const _ = _.GetEventType() == _.ajI;
+        return (0, _.jsx)(_, {
+          eventModel: _,
+          permissions: _,
+          bIsCreatorHomeVisible: _ && _?.GetLinkedEventGID() == _.GID,
+          additionalButtons: _,
+          onDeleteRequest: Boolean(_ && "community" == (0, _._)())
+            ? (_) => {
+                (0, _._)(
+                  (0, _.jsx)(_, {
+                    eventModel: _,
+                    onDeleteSuccessAndCloseDialog: () => _(!0),
+                    partnerEventStore: _,
+                  }),
+                  (0, _._)(_),
+                );
+              }
+            : void 0,
+          saleDayControl:
+            Boolean(void 0 !== _ && _.length > 0) &&
+            (0, _.jsx)(_._, {
+              strDropDownClassName: _.DropDownScroll,
+              rgOptions: _,
+              selectedOption: Math.min(_, _),
+              onChange: (_) => {
+                _(_.data), _(_.data);
+              },
+              bDisableMouseOverlay: !0,
+              contextMenuPositionOptions: {
+                bDisableMouseOverlay: !0,
+              },
+            }),
+          promotionPlanLinks:
+            Boolean(_ && _(_) && _) &&
+            (0, _.jsx)(_, {
+              clanAccountID: _,
+              gidClanEvent: _,
+            }),
+          testControls: (0, _.jsxs)(_.Fragment, {
             children: [
-              (0, _.jsx)("div", {
-                className: (0, _._)(
-                  _.DisplayAdminPanel_TopSpacer,
-                  _ && _.Sticky,
-                ),
+              (0, _.jsx)(_, {
+                eventModel: _,
               }),
-              (0, _.jsxs)("div", {
-                className: (0, _._)({
-                  [_.DisplayAdminPanel]: !0,
-                  [_.Locked]: _,
-                  [_.Sticky]: _,
-                }),
-                children: [
-                  (0, _.jsx)("span", {
-                    className: _.DisplayAdminPanel_Title,
-                    children: (0, _._)("#EventDisplay_Admin_Title"),
-                  }),
-                  (0, _.jsxs)("div", {
-                    className: (0, _._)(_.DisplayAdminPanel_ctn, _ && _.Sticky),
-                    children: [
-                      _,
-                      _ &&
-                        (0, _.jsx)("span", {
-                          className: _.DisplayAdminPanel_Spacer,
-                          children: " ",
-                        }),
-                      (0, _.jsx)(_._, {
-                        eventModel: _,
-                        route: _._.k_eCommunityEdit,
-                        className: (0, _._)(_.Button, _.AdminButton),
-                        children: _
-                          ? (0, _._)("#EventEditor_Edit_Page")
-                          : (0, _._)("#EventEditor_Edit"),
-                      }),
-                      Boolean(_ && "community" == (0, _._)()) &&
-                        (0, _.jsx)("span", {
-                          className: _.Button + " " + _.AdminButton,
-                          onClick: _,
-                          children: (0, _._)("#EventDisplay_DeleteEvent"),
-                        }),
-                      !_ &&
-                        (0, _.jsx)(_.Fragment, {
-                          children: (0, _.jsx)(_._, {
-                            eventModel: _,
-                            route: _._.k_eCommunityPublish,
-                            className: (0, _._)(_.Button, _.AdminButton),
-                            children: (0, _._)(
-                              _
-                                ? "#EventEditor_Publish_VisibleNow"
-                                : "#Button_Publish",
-                            ),
-                          }),
-                        }),
-                      (0, _.jsx)(_._, {
-                        eventModel: _,
-                        route: _._.k_eCommunityAdminPage,
-                        className: (0, _._)(_.Button, _.AdminButton),
-                        children: (0, _._)("#EventDisplay_Events"),
-                      }),
-                      Boolean(void 0 !== _ && _.length > 0) &&
-                        (0, _.jsx)(_._, {
-                          strDropDownClassName: _.DropDownScroll,
-                          rgOptions: _,
-                          selectedOption: Math.min(_, _),
-                          onChange: (_) => {
-                            _(_.data), _(_.data);
-                          },
-                          bDisableMouseOverlay: !0,
-                          contextMenuPositionOptions: {
-                            bDisableMouseOverlay: !0,
-                          },
-                        }),
-                      Boolean(_.jsondata.bSaleEnabled && _ && !_) &&
-                        (0, _.jsx)(_._, {
-                          eventModel: _,
-                          route: _._.k_eStoreSalePage,
-                          className: (0, _._)(_.Button, _.AdminButton),
-                          children: (0, _._)("#EventDisplay_SalesPage"),
-                        }),
-                      Boolean(_ && _._.is_support && _) &&
-                        (0, _.jsx)("a", {
-                          href:
-                            _._.STATS_BASE_URL +
-                            "sales/details/?gid=" +
-                            _ +
-                            "&clanid=" +
-                            _,
-                          target: _._.IN_CLIENT ? "" : "_blank",
-                          className: (0, _._)(
-                            _.Button,
-                            _.AdminButton,
-                            _.ValveOnlyBackground,
-                          ),
-                          children: (0, _._)("#EventDisplay_StatsPage"),
-                        }),
-                      Boolean(_ && _._.is_support && _ && !_) &&
-                        (0, _.jsx)("a", {
-                          href:
-                            _._.PARTNER_BASE_URL +
-                            "promotion/invitationplanner/dashboard?saleclaneventgid=" +
-                            _ +
-                            "&saleclanaccountid=" +
-                            _,
-                          target: _._.IN_CLIENT ? "" : "_blank",
-                          className: (0, _._)(
-                            _.Button,
-                            _.AdminButton,
-                            _.ValveOnlyBackground,
-                          ),
-                          children: (0, _._)(
-                            "#EventDisplay_InvitationPlannerPage",
-                          ),
-                        }),
-                      Boolean(_ && _ && _) &&
-                        (0, _.jsx)(_, {
-                          clanAccountID: _.clanSteamID.GetAccountID(),
-                          gidClanEvent: _,
-                        }),
-                      Boolean(
-                        _ && _ && _._ == _ && _.GetContentHubCategory(),
-                      ) &&
-                        (0, _.jsx)("a", {
-                          href: `${_._.PARTNER_BASE_URL}admin/store/contenthub/categories?edit=${_.GetContentHubCategory()}`,
-                          target: _._.IN_CLIENT ? "" : "_blank",
-                          className: (0, _._)(
-                            _.Button,
-                            _.AdminButton,
-                            _.ValveOnlyBackground,
-                          ),
-                          children: (0, _._)("#EventDisplay_CategoryEditor"),
-                        }),
-                      Boolean(_ && (_ || (_ && !_))) &&
-                        (0, _.jsx)(_._, {
-                          eventModel: _,
-                          route: _
-                            ? _._.k_eCommunityPreviewSale
-                            : _._.k_eCommunityView,
-                          className: (0, _._)(_.Button, _.AdminButton),
-                          children: (0, _._)(
-                            _
-                              ? "#EventDisplay_PreviewOnCommunity"
-                              : "#EventDisplay_ViewOnCommunity",
-                          ),
-                        }),
-                      Boolean(_ && _) &&
-                        (0, _.jsx)(_._, {
-                          eventModel: _,
-                          route: _._.k_eStoreView,
-                          className: (0, _._)(_.Button, _.AdminButton),
-                          children: (0, _._)("#EventDisplay_ViewOnStore"),
-                        }),
-                      (0, _.jsx)(_, {
-                        eventModel: _,
-                      }),
-                      (0, _.jsx)(_, {
-                        eventModel: _,
-                      }),
-                      _ &&
-                        (0, _.jsx)("div", {
-                          className: _.DisplayAdminPanelClose,
-                          onClick: () => _(!1),
-                          children: (0, _.jsx)(_._, {
-                            toolTipContent: (0, _._)(
-                              "#EventDisplay_Admin_Close_ttip",
-                            ),
-                            children: (0, _.jsx)(_._, {}),
-                          }),
-                        }),
-                      !_ &&
-                        _ &&
-                        (0, _.jsx)("div", {
-                          className: _.DisplayAdminPanelClose,
-                          onClick: () => _(!0),
-                          children: (0, _.jsx)(_._, {
-                            toolTipContent: (0, _._)(
-                              "#EventDisplay_Admin_Reopen_ttip",
-                            ),
-                            children: (0, _.jsx)(_.i3G, {
-                              angle: 0,
-                            }),
-                          }),
-                        }),
-                    ],
-                  }),
-                ],
-              }),
-              (0, _.jsx)("div", {
-                className: _.DisplayAdminPanelMarker,
-                ref: _,
+              (0, _.jsx)(_, {
+                eventModel: _,
               }),
             ],
-          });
-        }
-        return (0, _.jsx)("span", {});
+          }),
+          bSupportsSticky: _,
+        });
       }
       function _(_) {
         const { eventModel: _ } = _,
@@ -6596,43 +6638,6 @@
             })
           : null;
       }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, _) {
-        if (!_ || !_.BIsClanAccount()) return !1;
-        const _ = _._.Get().GetPartnerEventPermissions(_);
-        return !!_ && (_ ? _.valve_admin : _.valve_admin || _.support_user);
-      }
-      function _(_) {
-        const { clanSteamID: _, _: _ } = _;
-        return _(_, _.requireAdmin)
-          ? (0, _.jsx)("div", {
-              _: _,
-              className: (0, _._)(
-                _.className,
-                _.requireAdmin
-                  ? _.ValveOnlyAdminBackground
-                  : _.ValveOnlyBackground,
-              ),
-              children: _.children,
-            })
-          : null;
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      const _ =
-        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAcJJREFUeNqkUz1PAkEQfStggjESejU0GozlGqn8SGywkYIYY0IsaLCwIBTQUN5fMLGm8S8QSWwslVAYjAlUBEJDhCgWwp3nzN6eHqIVl8zN7rx5b+dm9oRt25jlmcOMj59f10JAkPcBcXIGWdECyqYn6TfGdZ9S9d4K4gQYx4WCtJzE+G/sKJudwpQABUGnGSf5vKzX60jmctL8SYzz+iCdls1mEzuplMIsLSC4iSUh1ClUlpHIZGStVkM0GsVNqVRlIJZIyG63i1AohMdKpUrZRQqXz4j7LWA7VSiR/WRSNhsNRRgOh+i02wgGg3hrtRSZelLmI6cExs7nKJGVtTX50uupMn0+H157PUWmZpYDXLoWUFPo6MC87jivx4MBFtxOWZYS11VipNdT98DWDVsPh2XQNLFIMdc4xpg9OZ3JMdIpRowSXVKt36+yuXvGxn+N0XS+3zj0kG+JSPEi261H5FCLmN9lUyNWyZ+Qag54eA6Hbfa8j1A88g+2qrlqCkKIZdovbAG7m8D5E3B5D9xR7IPsk/u7DextABd14OrBwd6J23YFligQ0IPwXE7lbedXUAPya5yHMiLuq5j1d/4SYAAj3NATBGE4PgAAAABJRU5ErkJggg==";
     },
   },
 ]);

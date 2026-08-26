@@ -4843,7 +4843,7 @@
       var oe = i(43527),
         le = i(81393),
         ce = i(51006),
-        de = i(72119),
+        de = i(30894),
         me = i(14771);
       const ue = m.TS.EUNIVERSE === ee.Rv ? 404860 : 1675200;
       function pe(e, t = !1) {
@@ -10948,8 +10948,11 @@
             for (
               ;
               this.m_mapRoomEffectQueue[t].length > 0 && !this.BIsQueueFull(t);
-            )
-              this.ActivateRoomEffect(this.m_mapRoomEffectQueue[t].shift());
+            ) {
+              const e = this.m_mapRoomEffectQueue[t].shift();
+              if (!e) break;
+              this.ActivateRoomEffect(e);
+            }
           }
         }
       }
@@ -16578,7 +16581,7 @@
         (0, J.Cg)([Fe.sH], Oe.prototype, "m_mapAuctionItems", void 0);
       var Ue = i(51006);
       var He = i(13112),
-        We = i(72119),
+        We = i(30894),
         qe = i(41872);
       class Ze extends r.Component {
         state = { bReady: !1 };

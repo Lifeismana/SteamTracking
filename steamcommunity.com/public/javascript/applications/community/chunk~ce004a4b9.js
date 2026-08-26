@@ -7828,7 +7828,7 @@
         m = t(67165),
         d = t(26161),
         g = t(29197),
-        B = t(82429),
+        B = t(28210),
         y = t(33951),
         p = t(63340);
       const b = new WeakSet();
@@ -9413,8 +9413,8 @@
       }
       (0, O.V)("g_CreatorHomeStore", E);
     },
-    82429: (e, r, t) => {
-      t.d(r, { Ec: () => f, KN: () => M, Nh: () => i });
+    28210: (e, r, t) => {
+      t.d(r, { KN: () => M, Nh: () => i, Ec: () => f });
       var i,
         n = t(34629),
         a = t(37085),
@@ -9430,6 +9430,11 @@
         y = t(81393),
         p = t(68797),
         b = t(78327);
+      !(function (e) {
+        (e[(e.k_ENotifyFlagNone = 0)] = "k_ENotifyFlagNone"),
+          (e[(e.k_ENotifyFlagByEmail = 1)] = "k_ENotifyFlagByEmail"),
+          (e[(e.k_ENotifyFlagByPush = 2)] = "k_ENotifyFlagByPush");
+      })(i || (i = {}));
       class _ {
         constructor(e) {
           (this.clanid = void 0),
@@ -9457,12 +9462,7 @@
         (0, n.Cg)([m.sH], _.prototype, "limited_user", void 0),
         (0, n.Cg)([m.sH], _.prototype, "event_ignored", void 0),
         (0, n.Cg)([m.sH], _.prototype, "event_followed", void 0),
-        (0, n.Cg)([m.sH], _.prototype, "event_followed_flags", void 0),
-        (function (e) {
-          (e[(e.k_ENotifyFlagNone = 0)] = "k_ENotifyFlagNone"),
-            (e[(e.k_ENotifyFlagByEmail = 1)] = "k_ENotifyFlagByEmail"),
-            (e[(e.k_ENotifyFlagByPush = 2)] = "k_ENotifyFlagByPush");
-        })(i || (i = {}));
+        (0, n.Cg)([m.sH], _.prototype, "event_followed_flags", void 0);
       class M {
         constructor() {
           (this.m_mapClanToUserPermissions = new Map()),

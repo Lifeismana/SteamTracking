@@ -2341,7 +2341,15 @@
                     className: _().MessageHeader,
                     children: [
                       (0, _.jsx)("h1", {
-                        children: "Tax Information Is Out Of Date",
+                        children: "Tax Information Is About To Expire",
+                      }),
+                      (0, _.jsx)("div", {
+                        className: (0, _._)(
+                          _().SectionBody,
+                          _().DocumentProcessingNotice,
+                        ),
+                        children:
+                          "If you are not currently receiving payments or expecting to receive payments in the near future, you can dismiss this notification and ignore this request.",
                       }),
                       (0, _.jsx)("div", {
                         className: _().MessageSubject,

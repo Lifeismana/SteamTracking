@@ -51,6 +51,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
@@ -62,12 +64,12 @@
           [_, _] = _.useState(""),
           [_, _] = _.useState(!1);
         _.useEffect(
-          () => () =>
-            _.current &&
-            _.current("ShareEventOnFriendsActivityFeed: unmounting"),
+          () => () => {
+            _.current?.("ShareEventOnFriendsActivityFeed: unmounting");
+          },
           [],
         );
-        const _ = _ ? _.avatar_url : null,
+        const _ = _?.avatar_url,
           _ = _._.InitFromAccountID(_._.accountid),
           _ = async () => {
             _.current &&
@@ -215,9 +217,11 @@
                       (0, _.jsx)("div", {
                         className: _().ShareLink,
                         children: (0, _.jsx)(_._, {
-                          text: _,
-                          event: null,
-                          partnerEventStore: _.partnerEventStore,
+                          linkWidgets: (0, _._)(),
+                          children: (0, _.jsx)(_._, {
+                            text: _,
+                            partnerEventStore: _.partnerEventStore,
+                          }),
                         }),
                       }),
                     ],
@@ -232,9 +236,11 @@
         const _ = _.createRef(),
           [_, _] = _.useState(""),
           _ = _.createRef(),
-          _ = (_) => {
+          _ = () => {
+            const _ = _.current?.ownerDocument.defaultView;
             _.current &&
-              _.current.ownerDocument.defaultView.navigator.clipboard
+              _ &&
+              _.navigator.clipboard
                 .writeText(_.current.value)
                 .then((_) => {
                   _((0, _._)("#EventDisplay_Share_CopiedToClipboard"));

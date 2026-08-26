@@ -18,6 +18,7 @@ message CPartnerEmailAndName {
 message CPartnerMeetSteam_EmailInvitees_Request {
 	optional fixed64 clan_event_gid = 1;
 	optional fixed64 steamid = 2;
+	repeated uint32 accountids = 3;
 }
 
 message CPartnerMeetSteam_EmailInvitees_Response {

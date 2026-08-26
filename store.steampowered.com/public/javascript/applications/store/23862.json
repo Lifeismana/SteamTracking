@@ -307,5 +307,8 @@
     "AppPage_RecommendationReason_FriendsOwned_Software": "<1>%1$s amigo</1> já tem este software:",
     "AppPage_RecommendationReason_FriendsOwned_Software_Plural": "<1>%1$s amigos</1> já têm este software:",
     "AppPage_RecommendationReason_FriendsOwned_Video": "<1>%1$s amigo</1> já tem este vídeo:",
-    "AppPage_RecommendationReason_FriendsOwned_Video_Plural": "<1>%1$s amigos</1> já têm este vídeo:"
+    "AppPage_RecommendationReason_FriendsOwned_Video_Plural": "<1>%1$s amigos</1> já têm este vídeo:",
+    "AppPage_PageSectionBanner_Workshop": "Steam Workshop",
+    "AppPage_PageSectionBanner_Follow": "Seguir este jogo",
+    "AppPage_PageSectionBanner_MachineController": "Steam Machine e Steam Controller"
 }

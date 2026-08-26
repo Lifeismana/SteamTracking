@@ -17,29 +17,33 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, _, _ = 0) {
-        return _(_, _, _);
+        _ = __webpack_require__("chunkid"),
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
+      function _(_, _) {
+        return `${_}/${_}`;
       }
+      const _ = _.createContext({});
+      new RegExp(
+        `${_._.replace(/[{}]/g, "\\$&")}/(\\d+)/([0-9a-f]+\\.[a-z0-9]+)`,
+        "gi",
+      );
       function _(_, _, _ = 0) {
+        return _(_, _, _, _.useContext(_));
+      }
+      function _(_, _, _ = 0, _) {
         if (!_ || 0 == _.length) return null;
         if (_?.startsWith(_._)) return _.ReplacementTokenToClanImageURL(_);
         if (_?.startsWith(_._)) {
-          const _ = new Array(),
-            _ = _.GetBaseURL(),
+          const _ = _.GetBaseURL(),
             _ = _.substring(_._.length + 1),
             _ = parseInt(_.substring(0, _.indexOf("/"))),
             _ = _.substring(_.indexOf("/") + 1),
-            _ = _.GetHashFromHashAndExt(_),
-            _ = _.GetExtStringFromHashAndExt(_);
-          if (null != _) {
-            let _ = (0, _.LgB)(_);
-            _.push(_ + _ + "/" + _ + "/" + _ + _ + "?t=" + _),
-              _ == _.Pn1 &&
-                ((_ = (0, _.x6o)((0, _.LgB)(_))),
-                _.push(_ + _ + "/" + _ + "/" + _ + _ + "?t=" + _));
-          }
-          return _.push(_.GenerateURLFromHashAndExt(_, _)), _;
+            _ = _.GenerateURLFromHashAndExt(_, _);
+          if (!1 === _?.[_(_, _)]) return _;
+          const _ = _.GetLocalizedClanImageFileNames(_, _).map(
+            (_) => _ + _ + "/" + _ + "?t=" + _,
+          );
+          return _.push(_), _;
         }
         return _;
       }
@@ -74,6 +78,15 @@
           return _.substring(0, _.length - _.length);
         },
         GetExtStringFromHashAndExt: (_) => _.substring(_.lastIndexOf(".")),
+        GetLocalizedClanImageFileNames(_, _) {
+          if (null == _) return [];
+          const _ = this.GetHashFromHashAndExt(_),
+            _ = this.GetExtStringFromHashAndExt(_),
+            _ = [_ + "/" + (0, _.LgB)(_) + _];
+          return (
+            _ == _.Pn1 && _.push(_ + "/" + (0, _.x6o)((0, _.LgB)(_)) + _), _
+          );
+        },
         GenerateURLFromHashAndExt(_, _, _ = _._.full) {
           return this.GenerateURLFromHashAndExtAndLang(_, _, _, _.xPp, void 0);
         },

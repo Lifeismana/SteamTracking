@@ -357,7 +357,7 @@
       t.d(r, { C0: () => n, Ck: () => f, mj: () => m });
       var n,
         s = t(7850),
-        l = t(76119),
+        l = t(91297),
         i = t(66418),
         a = t(39777),
         o = t(64238),
@@ -938,17 +938,17 @@
             children: h,
             ...p
           } = e,
-          [m, f] = s.useState({
-            bRenderChildren: !1,
+          m = s.useContext(a),
+          [f, _] = s.useState(() => ({
+            bRenderChildren: !m.enabled,
             nPrevRenderHeight: 0,
             nPrevRenderWidth: 0,
-          }),
-          _ = s.useContext(a),
+          })),
           g = s.useRef(null),
-          S = "LoadAndUnload" === u && _.enabled,
+          S = "LoadAndUnload" === u && m.enabled,
           v = s.useCallback(
             (e) => {
-              f((r) => {
+              _((r) => {
                 if (r.bRenderChildren === e || (r.bRenderChildren && !S))
                   return r;
                 let t = 0,
@@ -970,12 +970,12 @@
             [S, c],
           );
         s.useEffect(() => {
-          _.enabled || v(!0);
-        }, [_.enabled, v]);
+          m.enabled || v(!0);
+        }, [m.enabled, v]);
         let b = d;
-        if (!m.bRenderChildren) {
-          const e = m.nPrevRenderWidth || r,
-            n = m.nPrevRenderHeight || t;
+        if (!f.bRenderChildren) {
+          const e = f.nPrevRenderWidth || r,
+            n = f.nPrevRenderHeight || t;
           (void 0 === n && void 0 === e) ||
             (b = { ...d, minHeight: n, minWidth: e });
         }
@@ -986,7 +986,7 @@
           ...p,
           onVisibilityChange: v,
           trigger: w,
-          children: m.bRenderChildren && h,
+          children: f.bRenderChildren && h,
         });
         return (
           o &&

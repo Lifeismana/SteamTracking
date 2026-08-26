@@ -3,6 +3,26 @@
   {
     chunkid: (module) => {
       module.exports = {
+        "Variant-basic": "xqG5GdDEeYauX2ots2DLl",
+        "Size-3": "_1K_Ve980-qBq8l1-cZJdw1",
+        "Variant-inset": "_2Z-Zr4UW8-jHrU5olM_rpn",
+        "Variant-inset-focus": "_2RYWJyn7v0tvoY5cR63QuI",
+        Focusable: "_1cd-wdIp5lIWsydAxII-vY",
+        "Variant-inset-glass": "_32JdL4FubsmwHfHXm6OB9I",
+        "Variant-underline": "yV_Aq5WutzzittgbOJ1R-",
+        "Variant-dim": "_2qQgKJgeeqc9lEI-i7HdsM",
+        "Variant-highlight": "EFvA4gLIikUE06LDGCqg5",
+        "Variant-bare": "_3vxqpebgJYIYNTcigTXx21",
+        ControlBox: "_2gL71Yq-HzVI9oOGyWu3jH",
+        Hoverable: "_8JNTStqpIYaMWQJx6g6hK",
+        Clickable: "_1KONo9A0HE0_NOK2F6uvXy",
+        Disabled: "_2I6xXve3oCxh8fra7SWTnq",
+        "Size-1": "_2e1xlPghh48rkP13ydQOPb",
+        "Size-2": "B7HtDxiiORArIRcBR9kVB",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         SegmentedControlBox: "_3tuJ3SHrhBu16Q7GZBtKyt",
         Indicator: "_2OvUYpkiij1e7K-4vW8i9W",
         SegmentedControl: "_3XFGk1-WmLNC9KlGi7IYtN",
@@ -24,6 +44,25 @@
         SliderTrack: "_32V6MAuLhIp8s5_OPJxur1",
         SliderRange: "_1S38a0lsWaX1bdlroIEyXQ",
         SliderHandle: "_1VoJsIZhjVss7lO_vZxCFC",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        Text: "f6hU22EA7Z8peFWZVBJU",
+        Truncate: "_2tXpWMxzSX3lf_9_EFUzmJ",
+        "TextSize-1": "NUSSU36hkPXb7VdM8HFef",
+        "TextSize-2": "_1HTEiDPVrmM0RUnp3DzkXW",
+        "TextSize-3": "_1maNP9UvDekHzld1kwwQnw",
+        "TextSize-4": "mGlMCg85s0ULA8kYCZzMB",
+        "TextSize-5": "_2MGI1O3WXMHKcWkSFCf6Bz",
+        "TextSize-6": "_3kpvs1OYmjREjAE9RONmZm",
+        "TextSize-7": "_3RzzHMo4NUK3RIl__o-aYU",
+        "TextSize-8": "_3KRhxZU1kR1ArBuZyY_ib3",
+        "TextSize-9": "_3O17p9mMWHcy_sU-_IPM6R",
+        TextWeight: "_3KfHV-wUo5sKXQAsJZO5Uw",
+        TextAlign: "_310d_LkZp2K-i9ZY8r2B_c",
+        LineClamp: "_3z4FSJhGOOHIOqRI6ZqJ_H",
+        WhiteSpace: "FYJ4NYxpWeIha0N1-jUcm",
       };
     },
     chunkid: (module) => {
@@ -377,6 +416,84 @@
           );
         });
       });
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            children: _,
+            beforeContent: _,
+            afterContent: _,
+            hasValue: _,
+            ..._
+          } = _,
+          _ = (function (_) {
+            const {
+                variant: _ = "basic",
+                size: _ = "2",
+                radius: _,
+                focusable: _ = !0,
+                hoverable: _ = !0,
+                clickable: _ = !0,
+                disabled: _,
+                className: _,
+                status: _,
+                ..._
+              } = _,
+              _ = "underline" === _ ? "none" : _;
+            return (0, _._)(
+              {
+                ..._,
+                radius: _,
+                "data-status": _,
+                className: _()(
+                  _.ControlBox,
+                  _ && !_ && _.Focusable,
+                  _ && !_ && _.Hoverable,
+                  _ && !_ && _.Clickable,
+                  _ && _.Disabled,
+                  _[`Variant-${_}`],
+                  _[`Size-${_}`],
+                  _,
+                ),
+              },
+              _._,
+            );
+          })(_);
+        return (0, _.jsxs)(_._, {
+          ..._,
+          align: "center",
+          "data-has-value": !!_,
+          children: [
+            _ &&
+              (0, _.jsx)(_._, {
+                paddingRight: "2",
+                children: _,
+              }),
+            (0, _.jsx)(_._, {
+              flexGrow: "1",
+              minWidth: "0",
+              children: _,
+            }),
+            _ &&
+              (0, _.jsx)(_._, {
+                paddingLeft: "2",
+                children: _,
+              }),
+          ],
+        });
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -860,6 +977,20 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      function _(_, _, _) {
+        return "function" == typeof _ ? _(_, _) : _.cloneElement(_, _);
+      }
+      function _(_, _, _, _) {
+        return _(_ || _, _, _);
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
@@ -867,99 +998,76 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid");
       function _(_) {
-        if (_) {
-          if ("appid" in _) return "app";
-          if ("bundleid" in _) return "bundle";
-          if ("packageid" in _) return "sub";
-        }
-      }
-      function _(_) {
-        const {
-            _: _,
-            hoverClassName: _,
-            fnGetIDOverride: _,
-            fnHoverState: _,
-            disableScreenshots: _,
-            children: _,
-          } = _,
-          _ = _.useRef(null),
-          _ = _.useCallback(
-            (_) => {
-              const _ = _(_);
-              _ &&
-                (_ && _(!0),
-                window.GameHover &&
-                  (_.current &&
-                    _ &&
-                    (_.current.dataset.hoverDisableScreenshots = "true"),
-                  window.GameHover(_ ? _() : _.current, _, "global_hover", {
-                    type: _,
-                    _: (0, _._)(_)._,
-                    _: 1,
-                  })));
-            },
-            [_, _, _, _],
-          ),
-          _ = _.useCallback(
-            (_) => {
-              _(_) &&
-                (_ && _.relatedTarget && _(!1),
-                window.HideGameHover &&
-                  window.HideGameHover(_ ? _() : _.current, _, "global_hover"));
-            },
-            [_, _, _],
-          );
-        return (0, _.jsx)("div", {
-          ref: _,
-          className: _,
-          onMouseEnter: _,
-          onMouseLeave: _,
-          onFocus: _,
-          onBlur: _,
-          children: _,
-        });
-      }
-      function _(_) {
-        const {
-            _: _,
-            strExtraParams: _,
-            fnOnClickOverride: _,
-            strOverrideURL: _,
-          } = _,
-          _ = (0, _._)(),
-          _ = (0, _._)(),
-          _ = (0, _._)(
-            _ ||
-              (_ && "creatorid" in _
-                ? (0, _._)(
-                    `${_._.STORE_BASE_URL}curator/${((0, _._))(_)._}${_ ? `?${_}` : ""}`,
-                    _,
-                    _,
-                  )
-                : (0, _._)(
-                    `${_._.STORE_BASE_URL}${_(_)}/${((0, _._))(_)._}${_ ? `?${_}` : ""}`,
-                    _,
-                    _,
-                  )),
-          );
+        const { _: _ = "span", ref: _, className: _, ..._ } = _,
+          _ = _;
         return (0, _.jsx)(_, {
-          ..._,
-          children: (0, _.jsx)(_._, {
-            className: _.className,
-            href: _ ? void 0 : _,
-            target: _._.IN_CLIENT || _ ? void 0 : "_blank",
-            rel: "noopener noreferrer",
-            onClick: _,
-            children: _.children,
-          }),
+          ref: _,
+          ...(0, _._)(
+            {
+              ..._,
+              className: _()(_.Text, _),
+            },
+            _,
+          ),
         });
       }
+      const _ = [
+          {
+            prop: "weight",
+            responsive: !0,
+            className: _.TextWeight,
+            cssProperty: (_) => ["--text-weight", `var(--font-weight-${_})`],
+          },
+          {
+            prop: "align",
+            responsive: !0,
+            className: _.TextAlign,
+            cssProperty: "--text-align",
+          },
+          {
+            prop: "color",
+            responsive: !0,
+            cssProperty: (_, _, _) => [
+              "--text-color",
+              (0, _._)(_, (0, _._)(_.contrast, _) ?? "body"),
+            ],
+          },
+          {
+            prop: "contrast",
+            responsive: !0,
+            cssProperty: (_, _, _) => [
+              "--text-color",
+              (0, _._)((0, _._)(_.color, _) ?? "text-body", _),
+            ],
+          },
+          {
+            prop: "truncate",
+            className: _.Truncate,
+          },
+          {
+            prop: "lineClamp",
+            responsive: !0,
+            className: _.LineClamp,
+            cssProperty: "--line-clamp",
+          },
+          {
+            prop: "whiteSpace",
+            className: _.WhiteSpace,
+            cssProperty: "--white-space",
+          },
+        ],
+        _ = [
+          ..._,
+          ..._._,
+          {
+            prop: "size",
+            responsive: !0,
+            className: (_) => _[`TextSize-${_}`],
+          },
+        ];
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -1578,90 +1686,15 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-        _: () => _,
-        _: () => _,
       });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        return (0, _.jsx)(_._, {
-          onEscKeypress: _.closeModal,
-          bDisableBackgroundDismiss: !0,
-          children: (0, _.jsx)(_, {
-            redirectURL: _.redirectURL,
-            guestOption: _.guestOption,
-          }),
-        });
-      }
-      function _(_) {
-        const { redirectURL: _ = window.location.href } = _;
-        return (0, _.jsx)(_._, {
-          active: !0,
-          children: (0, _.jsx)(_, {
-            redirectURL: _,
-          }),
-        });
-      }
-      function _() {
-        (0, _._)(
-          (0, _.jsx)(_, {
-            ownerWin: window,
-            redirectURL: window.location.href,
-          }),
-          window,
-          {
-            strTitle: (0, _._)("#Login_SignInTitle"),
-          },
-        );
-      }
+      var _ = __webpack_require__("chunkid");
       function _(_, _) {
-        (0, _._)(
-          (0, _.jsx)(_, {
-            ownerWin: window,
-            redirectURL: _,
-            guestOption: _,
-          }),
-          window,
-          {
-            strTitle: (0, _._)("#Login_SignInTitle"),
-          },
-        );
-      }
-      function _(_) {
-        const { redirectURL: _, guestOption: _ } = _,
-          [_] = (0, _.useState)(
-            new _._(_._.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
-          ),
-          [_, _] = (0, _.useState)(!1);
-        return (0, _.jsx)("div", {
-          children: _
-            ? (0, _.jsx)(_._, {})
-            : (0, _.jsx)(_._, {
-                autoFocus: !0,
-                transport: _,
-                platform: _._._,
-                onComplete: (_) => {
-                  _ == _._.k_PrimaryDomainFail
-                    ? _(!0)
-                    : window.location.assign(_);
-                },
-                redirectUrl: _,
-                theme: "modal",
-                children:
-                  _ &&
-                  (0, _.jsx)(_._, {
-                    redirectURL: _,
-                  }),
-              }),
-        });
+        if (_?.asset_url_format && _[_])
+          return (
+            _._.BASE_URL_SHARED_CDN +
+            "/store_item_assets/" +
+            _.asset_url_format.replace("${FILENAME}", _[_])
+          );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

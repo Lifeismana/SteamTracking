@@ -307,5 +307,8 @@
     "AppPage_RecommendationReason_FriendsOwned_Software": "<1>เพื่อน %1$s คน</1>เป็นเจ้าของซอฟต์แวร์นี้แล้ว:",
     "AppPage_RecommendationReason_FriendsOwned_Software_Plural": "<1>เพื่อน %1$s คน</1>เป็นเจ้าของซอฟต์แวร์นี้แล้ว:",
     "AppPage_RecommendationReason_FriendsOwned_Video": "<1>เพื่อน %1$s คน</1>เป็นเจ้าของวิดีโอนี้แล้ว:",
-    "AppPage_RecommendationReason_FriendsOwned_Video_Plural": "<1>เพื่อน %1$s คน</1>เป็นเจ้าของวิดีโอนี้แล้ว:"
+    "AppPage_RecommendationReason_FriendsOwned_Video_Plural": "<1>เพื่อน %1$s คน</1>เป็นเจ้าของวิดีโอนี้แล้ว:",
+    "AppPage_PageSectionBanner_Workshop": "เวิร์กชอป Steam",
+    "AppPage_PageSectionBanner_Follow": "ติดตามเกมนี้",
+    "AppPage_PageSectionBanner_MachineController": "Steam Machine และ Steam Controller"
 }

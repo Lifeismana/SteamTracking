@@ -307,5 +307,8 @@
     "AppPage_RecommendationReason_FriendsOwned_Software": "<1>%1$s vriend</1> heeft deze software al:",
     "AppPage_RecommendationReason_FriendsOwned_Software_Plural": "<1>%1$s vrienden</1> hebben deze software al:",
     "AppPage_RecommendationReason_FriendsOwned_Video": "<1>%1$s vriend</1> heeft deze video al:",
-    "AppPage_RecommendationReason_FriendsOwned_Video_Plural": "<1>%1$s vrienden</1> hebben deze video al:"
+    "AppPage_RecommendationReason_FriendsOwned_Video_Plural": "<1>%1$s vrienden</1> hebben deze video al:",
+    "AppPage_PageSectionBanner_Workshop": "Steam Workshop",
+    "AppPage_PageSectionBanner_Follow": "Dit spel volgen",
+    "AppPage_PageSectionBanner_MachineController": "Steam Machines en de Steam Controller"
 }

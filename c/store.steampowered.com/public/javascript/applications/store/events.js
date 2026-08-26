@@ -614,13 +614,73 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { events: _, clanAccountID: _, onViewAll: _, children: _ } = _,
+          { data: _ } = (0, _._)(_);
+        return _.length && _
+          ? (0, _.jsx)(_._, {
+              children: (0, _.jsxs)("div", {
+                className: (0, _._)(_().OtherEventsCtn, "OtherEventsCtn"),
+                children: [
+                  (0, _.jsxs)("div", {
+                    className: _().EventSectionTitleCtn,
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: (0, _._)(
+                          _().EventSectionTitle,
+                          "EventSectionTitle",
+                        ),
+                        children: (0, _._)(
+                          "#EventBrowse_MoreEventsTitle",
+                          _.group_name,
+                        ),
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _().EventSectionSpacer,
+                        children: " ",
+                      }),
+                      _
+                        ? (0, _.jsx)("div", {
+                            className: _().EventSectionMoreBtn,
+                            onClick: _,
+                            children: (0, _._)("#EventBrowse_MoreEventsBtn"),
+                          })
+                        : (0, _.jsx)(_._, {
+                            eventModel: _[0],
+                            route: _._.k_eViewWebSiteHub,
+                            className: _().EventSectionMoreBtn,
+                            children: (0, _._)("#EventBrowse_MoreEventsBtn"),
+                          }),
+                    ],
+                  }),
+                  (0, _.jsx)(_._, {
+                    className: _().OtherEvents,
+                    "flow-children": "row",
+                    navEntryPreferPosition: _._.PREFERRED_CHILD,
+                    children: _.map((_) =>
+                      (0, _.jsx)(
+                        _._,
+                        {
+                          event: _,
+                        },
+                        _.AnnouncementGID,
+                      ),
+                    ),
+                  }),
+                  _,
+                ],
+              }),
+            })
+          : null;
+      }
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
         const {
@@ -635,15 +695,14 @@
           [_, _] = (0, _.useState)([]),
           [_, _] = (0, _.useState)(!0),
           [_, _] = (0, _.useState)(!1);
-        if (
-          ((0, _.useEffect)(
+        return (
+          (0, _.useEffect)(
             () => (
               (async () => {
                 _.current && _.current("PartnerEventRow Initializng new mount");
                 const _ = _().CancelToken.source();
                 _.current = _.cancel;
                 const _ = _._.InitFromClanID(_);
-                await _._.LoadClanInfoForClanSteamID(_);
                 let _ = await _.LoadAdjacentPartnerEventsByAnnouncement(
                   _,
                   _,
@@ -698,74 +757,26 @@
             ),
             [_, _, _, _],
           ),
-          _)
-        )
-          return (0, _.jsx)(_._, {
-            position: "center",
-            size: "medium",
-          });
-        if (0 == _.length) return (0, _.jsx)("div", {});
-        const _ = _._.GetClanInfoByClanAccountID(_);
-        return (0, _.jsx)(_._, {
-          children: (0, _.jsxs)("div", {
-            className: (0, _._)(_().OtherEventsCtn, "OtherEventsCtn"),
-            children: [
-              (0, _.jsxs)("div", {
-                className: _().EventSectionTitleCtn,
-                children: [
-                  (0, _.jsxs)("div", {
-                    className: (0, _._)(
-                      _().EventSectionTitle,
-                      "EventSectionTitle",
-                    ),
-                    children: [
-                      (0, _._)("#EventBrowse_MoreEventsTitle", _.group_name),
-                      " ",
-                    ],
+          _
+            ? (0, _.jsx)(_._, {
+                position: "center",
+                size: "medium",
+              })
+            : (0, _.jsx)(_, {
+                events: _,
+                clanAccountID: _,
+                onViewAll: _ ? () => _(!0) : void 0,
+                children:
+                  Boolean(_ && _.length) &&
+                  (0, _.jsx)(_._, {
+                    appid: _[0].appid,
+                    clanSteamID: _,
+                    announcementGID: _[0].AnnouncementGID,
+                    closeModal: () => _(!1),
+                    partnerEventStore: _,
                   }),
-                  (0, _.jsx)("div", {
-                    className: _().EventSectionSpacer,
-                    children: " ",
-                  }),
-                  _
-                    ? (0, _.jsx)("div", {
-                        className: _().EventSectionMoreBtn,
-                        onClick: () => _(!0),
-                        children: (0, _._)("#EventBrowse_MoreEventsBtn"),
-                      })
-                    : (0, _.jsx)(_._, {
-                        eventModel: _[0],
-                        route: _._.k_eViewWebSiteHub,
-                        className: _().EventSectionMoreBtn,
-                        children: (0, _._)("#EventBrowse_MoreEventsBtn"),
-                      }),
-                ],
-              }),
-              (0, _.jsx)(_._, {
-                className: _().OtherEvents,
-                "flow-children": "row",
-                navEntryPreferPosition: _._.PREFERRED_CHILD,
-                children: _.map((_) =>
-                  (0, _.jsx)(
-                    _._,
-                    {
-                      event: _,
-                    },
-                    _.AnnouncementGID,
-                  ),
-                ),
-              }),
-              Boolean(_) &&
-                (0, _.jsx)(_._, {
-                  appid: _[0].appid,
-                  clanSteamID: _,
-                  announcementGID: _[0].AnnouncementGID,
-                  closeModal: () => _(!1),
-                  partnerEventStore: _,
-                }),
-            ],
-          }),
-        });
+              })
+        );
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3786,8 +3797,8 @@
             component: (_, _, _) =>
               (0, _.jsx)(_, {
                 largeHeader: _,
-                titleToken: _.strHeaderTitle ?? "",
-                subtitleToken: _.strHeaderSubtitle,
+                titleToken: _?.strHeaderTitle ?? "",
+                subtitleToken: _?.strHeaderSubtitle,
                 headerImg: _,
                 headerURL: _,
               }),

@@ -4,45 +4,49 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [5289],
   {
-    40414: (e, t, n) => {
-      n.d(t, { z5: () => m, zU: () => _ });
+    17267: (e, t, n) => {
+      n.d(t, { zU: () => b, z5: () => _ });
       var r = n(12611),
         s = n(7221),
         i = n(22837),
         o = n(37085),
         a = n(3577),
         l = n(34214),
-        d = n(17720),
-        u = n(81393),
+        u = n(17720),
+        d = n(81393),
         c = n(68797),
         g = n(82817),
-        h = n(66418);
-      function m(e, t, n = 0) {
-        return p(e, t, n);
+        h = n(66418),
+        m = (n(7850), n(90626));
+      function p(e, t) {
+        return `${e}/${t}`;
       }
-      function p(e, t, n = 0) {
+      const f = m.createContext({});
+      new RegExp(
+        `${r.eg.replace(/[{}]/g, "\\$&")}/(\\d+)/([0-9a-f]+\\.[a-z0-9]+)`,
+        "gi",
+      );
+      function _(e, t, n = 0) {
+        return x(e, t, n, m.useContext(f));
+      }
+      function x(e, t, n = 0, s) {
         if (!e || 0 == e.length) return null;
-        if (e?.startsWith(r.lw)) return _.ReplacementTokenToClanImageURL(e);
+        if (e?.startsWith(r.lw)) return b.ReplacementTokenToClanImageURL(e);
         if (e?.startsWith(r.eg)) {
-          const s = new Array(),
-            o = _.GetBaseURL(),
-            a = e.substring(r.eg.length + 1),
-            l = parseInt(a.substring(0, a.indexOf("/"))),
-            d = a.substring(a.indexOf("/") + 1),
-            u = _.GetHashFromHashAndExt(d),
-            c = _.GetExtStringFromHashAndExt(d);
-          if (null != t) {
-            let e = (0, i.LgB)(t);
-            s.push(o + l + "/" + u + "/" + e + c + "?t=" + n),
-              t == i.Pn1 &&
-                ((e = (0, i.x6o)((0, i.LgB)(t))),
-                s.push(o + l + "/" + u + "/" + e + c + "?t=" + n));
-          }
-          return s.push(_.GenerateURLFromHashAndExt(l, d)), s;
+          const i = b.GetBaseURL(),
+            o = e.substring(r.eg.length + 1),
+            a = parseInt(o.substring(0, o.indexOf("/"))),
+            l = o.substring(o.indexOf("/") + 1),
+            u = b.GenerateURLFromHashAndExt(a, l);
+          if (!1 === s?.[p(a, l)]) return u;
+          const d = b
+            .GetLocalizedClanImageFileNames(l, t)
+            .map((e) => i + a + "/" + e + "?t=" + n);
+          return d.push(u), d;
         }
         return e;
       }
-      const _ = {
+      const b = {
         GetBaseURL: () => `${h.TS.CLAN_CDN_ASSET_URL}images/`,
         GetBaseURLV2: () => `${h.TS.CLAN_CDN_ASSET_URL}locimages/`,
         ReplacementTokenToClanImageURL(e) {
@@ -73,19 +77,28 @@
           return e.substring(0, e.length - t.length);
         },
         GetExtStringFromHashAndExt: (e) => e.substring(e.lastIndexOf(".")),
+        GetLocalizedClanImageFileNames(e, t) {
+          if (null == t) return [];
+          const n = this.GetHashFromHashAndExt(e),
+            r = this.GetExtStringFromHashAndExt(e),
+            s = [n + "/" + (0, i.LgB)(t) + r];
+          return (
+            t == i.Pn1 && s.push(n + "/" + (0, i.x6o)((0, i.LgB)(t)) + r), s
+          );
+        },
         GenerateURLFromHashAndExt(e, t, n = s.wI.full) {
           return this.GenerateURLFromHashAndExtAndLang(e, t, n, i.xPp, void 0);
         },
         GenerateURLFromHashAndExtAndLang(e, t, n = s.wI.full, r, o) {
-          e instanceof d.b && (e = e.GetAccountID());
+          e instanceof u.b && (e = e.GetAccountID());
           let a = this.GetBaseURL();
           const l = null != r && r != i.xPp;
           if (n != s.wI.full || l) {
             let s = t.substring(t.lastIndexOf(".")),
-              d = t.substring(0, t.length - s.length);
+              u = t.substring(0, t.length - s.length);
             return l && r != i.Bhc && "localized_image_group" == o
-              ? a + e + "/" + d + "/" + (0, i.x6o)((0, i.LgB)(r)) + s
-              : a + e + "/" + d + n + s;
+              ? a + e + "/" + u + "/" + (0, i.x6o)((0, i.LgB)(r)) + s
+              : a + e + "/" + u + n + s;
           }
           return a + e + "/" + t;
         },
@@ -137,7 +150,7 @@
                 !(i.width > 0 && i.height > 0))
               )
                 return (
-                  (0, u.wT)(
+                  (0, d.wT)(
                     !1,
                     "unexpected image resolution discovered for strURL: " + e,
                   ),
@@ -155,15 +168,15 @@
           const l = new Promise((e, t) => {
             s = setTimeout(() => t(), 1e4);
           });
-          let d;
+          let u;
           try {
-            d = await Promise.race([l, r.promise]);
+            u = await Promise.race([l, r.promise]);
           } catch {
-            d = { success: o._3, err_msg: "We timed out processing images" };
+            u = { success: o._3, err_msg: "We timed out processing images" };
           } finally {
             clearTimeout(s);
           }
-          return d;
+          return u;
         },
         BIsClanImageVideo: (e) =>
           e.file_type == l.bg.nn || e.file_type == l.bg.pJ,
@@ -212,8 +225,8 @@
       n.d(t, {
         EG: () => o,
         II: () => g,
-        Uz: () => u,
-        aL: () => d,
+        Uz: () => d,
+        aL: () => u,
         ab: () => i,
         zB: () => c,
       });
@@ -286,10 +299,10 @@
           t.promise
         );
       }
-      function d(e) {
+      function u(e) {
         return e.startsWith("image/");
       }
-      function u(e) {
+      function d(e) {
         return e.startsWith("video/");
       }
       async function c(e, t) {

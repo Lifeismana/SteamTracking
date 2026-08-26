@@ -367,6 +367,11 @@
     },
     chunkid: (module) => {
       module.exports = {
+        DialogCtn: "e7i0Hs6j09gCdPXXjl7Lk",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         ApprovalRequiredCtn: "_2pKjCSfT0Aa7Wx8_VoNJzc",
         PendingApproval: "_27C9CXtP6vYFYNpAhDJciM",
         Approved: "_2W3o61eSl990XjaneBlzaE",
@@ -505,6 +510,253 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      const _ = {
+        include_basic_info: !0,
+      };
+      function _(_) {
+        const { clanInfo: _, closeModal: _ } = _,
+          [_] = (0, _._)(_.appid, _),
+          [_, _] = _.useState(!0),
+          [_, _] = _.useState(!0),
+          _ = 1063339200,
+          _ = _._.GetTimeNowWithOverride(),
+          [_, _] = _.useState(_ - _._.PerMonth),
+          [_, _] = _.useState(_),
+          [_, _] = _.useState(-1),
+          _ = _ >= 0;
+        return (0, _.jsx)(_._, {
+          strTitle: (0, _._)("#EventDashboard_Stats_title"),
+          strDescription: (0, _._)("#EventDashboard_Stats_desc"),
+          closeModal: _,
+          bDisableBackgroundDismiss: !0,
+          bOKDisabled: _,
+          onOK: () =>
+            (async function (_, _, _, _, _) {
+              const _ = new Array(),
+                _ = _().CancelToken.source();
+              let _ = 0;
+              _(_);
+              const _ = 100;
+              let _,
+                _ = 0,
+                _ = new Array();
+              const _ = (0, _.sfN)(_._.LANGUAGE);
+              do {
+                if (
+                  ((_ += 1),
+                  (_ = await _._.LoadAdjacentPartnerEvents(
+                    _,
+                    _.clanSteamID,
+                    void 0,
+                    0,
+                    _,
+                    {
+                      rtime_oldestevent: _,
+                      only_summaries: !0,
+                    },
+                    _,
+                  )),
+                  (null == _ ? void 0 : _.length) > 0)
+                ) {
+                  (_ += _.length), _(_), (_ = _[_.length - 1].GID);
+                  const _ = _.filter(
+                    (_) => _.startTime <= _ && _.BIsVisibleEvent(),
+                  ).map((_) => _.GID);
+                  _.length > 0 &&
+                    (await _._.LoadStatsForEvents(_.clanSteamID, _, _),
+                    (_ += _.length),
+                    _(_),
+                    __webpack_require__.forEach((_) => {
+                      const _ = _._.GetStatsFor(_.clanSteamID, _),
+                        _ = _._.GetClanEventModel(_),
+                        _ = _.GetStartTimeAndDateUnixSeconds(),
+                        _ = _.GetEndTimeAndDateUnixSeconds();
+                      _.push({
+                        appid: _.appid,
+                        app_name: (null == _ ? void 0 : _.GetName()) || "",
+                        event_name: _.GetNameWithFallback(_),
+                        event_type: _.GetEventTypeAsString(),
+                        event_start_date: (0, _._)(_) + " @ " + (0, _._)(_),
+                        event_end_date: (0, _._)(_) + " @ " + (0, _._)(_),
+                        ..._.m_stats,
+                        event_gid: "'" + _,
+                      });
+                    }));
+                }
+              } while (_.length == _ && _ < 100);
+              return (
+                _._.WriteCSVToFile(
+                  _,
+                  "event_stats_" +
+                    _.group_name.toLocaleLowerCase().replace(/\s/g, "_") +
+                    ".csv",
+                ),
+                !0
+              );
+            })(_, _, _ ? _ : _, _ ? Number.MAX_SAFE_INTEGER : _, _).then(() =>
+              __webpack_require__(),
+            ),
+          children: Boolean(_.appid && !_)
+            ? (0, _.jsx)(_._, {
+                string: (0, _._)("#Loading"),
+                position: "center",
+                size: "medium",
+              })
+            : (0, _.jsxs)("div", {
+                className: _().DialogCtn,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: "DialogLabel",
+                    children: (0, _._)("#EventDashboard_Stats_Oldest_Title"),
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: "_DialogInputContainer _DialogLayout",
+                    children: [
+                      (0, _.jsx)(_._, {
+                        label: (0, _._)("#EventDashboard_Stats_Oldest"),
+                        onChange: _,
+                        checked: _,
+                        disabled: _,
+                      }),
+                      !_ &&
+                        (0, _.jsxs)("div", {
+                          children: [
+                            (0, _._)("#EventDashboard_Stats_Oldest_Override"),
+                            (0, _.jsx)(_._, {
+                              nEarliestTime: _,
+                              nLatestTime: _ ? void 0 : _,
+                              bShowTimeZone: !0,
+                              fnGetTimeToUpdate: () => _,
+                              fnSetTimeToUpdate: _,
+                              disabled: _,
+                            }),
+                          ],
+                        }),
+                    ],
+                  }),
+                  (0, _.jsx)("div", {
+                    className: "DialogLabel",
+                    children: (0, _._)("#EventDashboard_Stats_Newest_Title"),
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: "_DialogInputContainer _DialogLayout",
+                    children: [
+                      (0, _.jsx)(_._, {
+                        label: (0, _._)("#EventDashboard_Stats_Newest"),
+                        onChange: _,
+                        checked: _,
+                        disabled: _,
+                      }),
+                      !_ &&
+                        (0, _.jsxs)("div", {
+                          children: [
+                            (0, _._)("#EventDashboard_Stats_Newest_Override"),
+                            (0, _.jsx)(_._, {
+                              nEarliestTime: _ ? _ : _,
+                              bShowTimeZone: !0,
+                              fnGetTimeToUpdate: () => _,
+                              fnSetTimeToUpdate: _,
+                              disabled: _,
+                            }),
+                          ],
+                        }),
+                    ],
+                  }),
+                  _ &&
+                    (0, _.jsx)(_._, {
+                      position: "center",
+                      size: "medium",
+                      string: (0, _._)("#EventDashboard_Stats_Progress", _),
+                    }),
+                ],
+              }),
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            summary: _,
+            clanSteamID: _,
+            bEventIsInModerationQueue: _,
+            bIsAllowedInLibrary: _,
+            bCompact: _,
+          } = _,
+          [_] = (0, _._)("expanded", !1),
+          [_, _] = _.useState(!!_ || _),
+          _ = _._.GetClanInfoByClanAccountID(
+            __webpack_require__.GetAccountID(),
+          );
+        return (0, _.jsx)(_._, {
+          summary: _,
+          bCompact: _,
+          bExpanded: _,
+          bIsAllowedInLibrary: _,
+          bEventIsInModerationQueue: _,
+          header: _
+            ? void 0
+            : (0, _.jsxs)("div", {
+                className: _.StatsCtnTitle,
+                children: [
+                  (0, _.jsxs)("div", {
+                    className: _.StatTitle,
+                    children: [
+                      (0, _._)("#EventDashBoard_SummaryStats_Title"),
+                      (0, _.jsx)(_._, {
+                        tooltip: (0, _._)("#EventDashBoard_SummaryStats_Desc"),
+                      }),
+                    ],
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: _.StatsActionRow,
+                    children: [
+                      (0, _.jsx)(_._, {
+                        onClick: (_) =>
+                          (0, _._)(
+                            _,
+                            `${_._.PARTNER_BASE_URL}/doc/marketing/event_tools/stats`,
+                          ),
+                        children: (0, _._)(
+                          "#EventDashBoard_SummaryStats_AboutStats",
+                        ),
+                      }),
+                      (0, _.jsx)(_._, {
+                        onClick: (_) =>
+                          (0, _._)(
+                            (0, _.jsx)(_, {
+                              clanInfo: _,
+                            }),
+                            (0, _._)(_),
+                          ),
+                        children: (0, _._)(
+                          "#EventDashBoard_SummaryStats_Export",
+                        ),
+                      }),
+                    ],
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _.StatsActionRow,
+                    children: (0, _.jsx)(_._, {
+                      onClick: () => _(!_),
+                      children: (0, _._)(
+                        "#EventDashBoard_SummaryStats_Details",
+                      ),
+                    }),
+                  }),
+                ],
+              }),
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -618,7 +870,7 @@
                 children: "Failed to load events stats",
               }),
             Boolean(_) &&
-              (0, _.jsx)(_._, {
+              (0, _.jsx)(_, {
                 summary: _,
                 clanSteamID: _,
                 bCompact: !0,
@@ -2927,7 +3179,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -4121,7 +4372,7 @@
               }),
               (0, _.jsx)("div", {
                 className: _().EventDashboardStatsCtn,
-                children: (0, _.jsx)(_._, {
+                children: (0, _.jsx)(_, {
                   summary: _.m_stats,
                   clanSteamID: _,
                   bIsAllowedInLibrary: null == _ ? void 0 : _.is_ogg,
@@ -4250,7 +4501,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -7570,7 +7820,6 @@
         ]),
         (_.MapPubRights = _.ConstructPubRightsMap());
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { editModel: _ } = _,
@@ -8532,9 +8781,8 @@
               }),
             ],
           });
-        });
-      var _ = __webpack_require__("chunkid");
-      const _ = (0, _._)((_) => {
+        }),
+        _ = (0, _._)((_) => {
           var _, _;
           const { editModel: _, fnOnOKCallback: _ } = _,
             _ = _.GetEventModel(),
@@ -8810,7 +9058,6 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -12578,7 +12825,6 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         return _.BHasSaleEnabled() && (0, _._)(_).bVisible;
@@ -12722,6 +12968,7 @@
           _ = _.GetClanAccountID(),
           _ = (0, _.useCallback)(
             (_) => {
+              var _;
               const _ = (function (_, _, _) {
                 var _, _;
                 return null !==
@@ -12732,7 +12979,13 @@
                   ? _
                   : null;
               })(_, _.type, _);
-              return _ ? (0, _._)(_, _.image) : null;
+              return _
+                ? (function (_, _) {
+                    return _
+                      ? `${_._.STORE_ITEM_BASE_URL}steam/clans/${_}/${_}`
+                      : void 0;
+                  })(_, null !== (_ = _.image_2x) && void 0 !== _ ? _ : _.image)
+                : null;
             },
             [_, _.type, _],
           ),
@@ -16993,6 +17246,8 @@
             _.GetEventModel().jsondata.country_restriction,
           ]);
         if (!_.valve_admin) return null;
+        const _ =
+          _.GetAppID() == _._ ? "Deck" : _.GetAppID() == _._ ? "Frame" : void 0;
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)("div", {
@@ -17190,7 +17445,7 @@
                     description:
                       "Add the 'steam_best_of_year' tag to this post. This allows the Steam Best of Year to pull the official best of year events into those pages.",
                   }),
-                Boolean(_.GetAppID() == _._) &&
+                Boolean(_) &&
                   (0, _.jsxs)("div", {
                     children: [
                       (0, _.jsx)("p", {
@@ -17199,24 +17454,21 @@
                       }),
                       (0, _.jsx)(_._, {
                         onChange: (_) => _.SetTag("stablechannel", _),
-                        label: "(VO) Steam Deck Stable Channel",
+                        label: `(VO) Steam ${_} Stable Channel`,
                         checked: _.GetEventModel().BHasTag("stablechannel"),
-                        description:
-                          "Surface this to user who are subscribed to Steam Deck Stable Build. Only include Stable Steam Deck Client or Stable SteamOS notes.",
+                        description: `Surface this to users who are subscribed to Steam ${_} Stable Build. Only include Stable Steam ${_} Client or Stable SteamOS notes.`,
                       }),
                       (0, _.jsx)(_._, {
                         onChange: (_) => _.SetTag("betachannel", _),
-                        label: "(VO) Steam Deck Beta Channel",
+                        label: `(VO) Steam ${_} Beta Channel`,
                         checked: _.GetEventModel().BHasTag("betachannel"),
-                        description:
-                          "Surface this to user who are subscribed to Steam Deck Beta Build. Only include Beta Steam Deck Client or Stable SteamOS notes.",
+                        description: `Surface this to users who are subscribed to Steam ${_} Beta Build. Only include Beta Steam ${_} Client or Stable SteamOS notes.`,
                       }),
                       (0, _.jsx)(_._, {
                         onChange: (_) => _.SetTag("previewchannel", _),
-                        label: "(VO) Steam Deck Preview Channel",
+                        label: `(VO) Steam ${_} Preview Channel`,
                         checked: _.GetEventModel().BHasTag("previewchannel"),
-                        description:
-                          "Surface this to user who are subscribed to SteamDeck Preview Build. Only include Beta Steam Deck Client or Beta SteamOS notes.",
+                        description: `Surface this to users who are subscribed to Steam ${_} Preview Build. Only include Beta Steam ${_} Client or Beta SteamOS notes.`,
                       }),
                     ],
                   }),
@@ -19432,7 +19684,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         GetCounts() {
@@ -19596,47 +19847,9 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_) {
-        const { appid: _, color: _, bgcolor: _ } = _,
-          _ = (0, _._)(),
-          _ = (0, _._)(_),
-          _ = (0, _._)(_);
-        return (0, _.jsx)("div", {
-          className: _().WishlistHoverCtn,
-          children: (0, _.jsx)(_._, {
-            snr: _,
-            _: _,
-            classOverride: (0, _._)(
-              _().WishlistButtonNotTop,
-              _().BBCodeWishlistButton,
-              "WishlistButton",
-            ),
-            styleOverride: {
-              color: _,
-              backgroundColor: _,
-            },
-            bShowInGamepadUI: !0,
-          }),
-        });
-      }
-      function _(_) {
-        const _ = Number(_.args.appid);
-        if (!_) return null;
-        const _ = (0, _._)(_.args.color, "black"),
-          _ = (0, _._)(_.args.bgcolor, "white");
-        return (0, _.jsx)(_, {
-          appid: _,
-          color: _,
-          bgcolor: _,
-        });
-      }
-      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -19701,6 +19914,82 @@
           bgcolor: _,
         });
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { clanAccountID: _, color: _, bgcolor: _ } = _;
+        (0, _._)();
+        const [_, _] = _.useState(!1);
+        return (0, _.jsx)("div", {
+          className: (0, _._)(_().BBCodeFollowButton, _ && _().isHovered),
+          onMouseEnter: () => _(!0),
+          onMouseLeave: () => _(!1),
+          children: (0, _.jsx)(_._, {
+            nCreatorAccountID: _,
+            classOverride: _().FollowGameButtonNotTop,
+            styleOverride: {
+              color: _,
+              backgroundColor: _,
+            },
+            followType: "group",
+          }),
+        });
+      }
+      function _(_) {
+        const { event: _ } = _.context,
+          _ =
+            Number(_.args.groupid) ||
+            (null == _ ? void 0 : _.clanSteamID.GetAccountID());
+        if (!_) return null;
+        const _ = (0, _._)(_.args.color, "black"),
+          _ = (0, _._)(_.args.bgcolor, "white");
+        return (0, _.jsx)(_, {
+          clanAccountID: _,
+          color: _,
+          bgcolor: _,
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const { appid: _, color: _, bgcolor: _ } = _,
+          _ = (0, _._)(),
+          _ = (0, _._)(_),
+          _ = (0, _._)(_);
+        return (0, _.jsx)("div", {
+          className: _().WishlistHoverCtn,
+          children: (0, _.jsx)(_._, {
+            snr: _,
+            _: _,
+            classOverride: (0, _._)(
+              _().WishlistButtonNotTop,
+              _().BBCodeWishlistButton,
+              "WishlistButton",
+            ),
+            styleOverride: {
+              color: _,
+              backgroundColor: _,
+            },
+            bShowInGamepadUI: !0,
+          }),
+        });
+      }
+      function _(_) {
+        const _ = Number(_.args.appid);
+        if (!_) return null;
+        const _ = (0, _._)(_.args.color, "black"),
+          _ = (0, _._)(_.args.bgcolor, "white");
+        return (0, _.jsx)(_, {
+          appid: _,
+          color: _,
+          bgcolor: _,
+        });
+      }
+      let _ = null;
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -19932,40 +20221,6 @@
             });
         }
         return null;
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { clanAccountID: _, color: _, bgcolor: _ } = _;
-        (0, _._)();
-        const [_, _] = _.useState(!1);
-        return (0, _.jsx)("div", {
-          className: (0, _._)(_().BBCodeFollowButton, _ && _().isHovered),
-          onMouseEnter: () => _(!0),
-          onMouseLeave: () => _(!1),
-          children: (0, _.jsx)(_._, {
-            nCreatorAccountID: _,
-            classOverride: _().FollowGameButtonNotTop,
-            styleOverride: {
-              color: _,
-              backgroundColor: _,
-            },
-            followType: "group",
-          }),
-        });
-      }
-      function _(_) {
-        const { event: _ } = _.context,
-          _ = Number(_.args.groupid) || _.clanSteamID.GetAccountID();
-        if (!_) return null;
-        const _ = (0, _._)(_.args.color, "black"),
-          _ = (0, _._)(_.args.bgcolor, "white");
-        return (0, _.jsx)(_, {
-          clanAccountID: _,
-          color: _,
-          bgcolor: _,
-        });
       }
       let _ = null;
       function _(_) {
@@ -20247,6 +20502,26 @@
                   dictionary:
                     (null == _ &&
                       (_ = new Map([
+                        ...Array.from(
+                          (null == _ &&
+                            (_ = new Map([
+                              [
+                                "wishlist",
+                                {
+                                  Constructor: _,
+                                  autocloses: !1,
+                                },
+                              ],
+                              [
+                                "followgroup",
+                                {
+                                  Constructor: _,
+                                  autocloses: !1,
+                                },
+                              ],
+                            ])),
+                          _).entries(),
+                        ),
                         [
                           "itemdef",
                           {
@@ -20257,21 +20532,7 @@
                           },
                         ],
                         [
-                          "wishlist",
-                          {
-                            Constructor: _,
-                            autocloses: !1,
-                          },
-                        ],
-                        [
                           "followgame",
-                          {
-                            Constructor: _,
-                            autocloses: !1,
-                          },
-                        ],
-                        [
-                          "followgroup",
                           {
                             Constructor: _,
                             autocloses: !1,
@@ -20944,81 +21205,6 @@
         (0, _._)([_._], _.prototype, "ClearCountDown", null),
         (0, _._)([_._], _.prototype, "SetupRefreshDataInterval", null),
         (0, _._)([_._], _.prototype, "SetupCountDown", null);
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = (_) => {
-        const _ = _.createRef(),
-          [_, _] = _.useState(""),
-          _ = _.createRef(),
-          _ = (_) => {
-            _.current &&
-              _.current.ownerDocument.defaultView.navigator.clipboard
-                .writeText(_.current.value)
-                .then((_) => {
-                  _((0, _._)("#EventDisplay_Share_CopiedToClipboard"));
-                })
-                .catch((_) => {
-                  _((0, _._)("#EventDisplay_Share_FailedToCopyToClipboard")),
-                    console.error("Failed to copy link to clipboard:", _);
-                });
-          };
-        return (0, _.jsxs)("div", {
-          children: [
-            (0, _.jsxs)("div", {
-              className: (0, _._)(_().FlexRowContainer, _().linkField),
-              onClick: _,
-              children: [
-                (0, _.jsx)("span", {
-                  className: _().LinkInputLabel,
-                  children: (0, _._)(
-                    _.labelOverride
-                      ? _.labelOverride
-                      : "#EventDisplay_Share_Link",
-                  ),
-                }),
-                (0, _.jsx)("input", {
-                  className: _().LinkInput,
-                  ref: _,
-                  value: _.eventLink,
-                  readOnly: !0,
-                }),
-                document.queryCommandSupported("copy") &&
-                  (0, _.jsx)(_._, {
-                    className: (0, _._)(_().Button, _().Icon, _().LinkButton),
-                    onActivate: _,
-                    children: (0, _.jsx)(_._, {
-                      toolTipContent: (0, _._)("#ToolTip_CopyLinkToClipboard"),
-                      children: (0, _.jsx)("img", {
-                        className: _().ClipboardIcon,
-                        src: _._,
-                      }),
-                    }),
-                  }),
-              ],
-            }),
-            (0, _.jsx)("div", {
-              ref: _,
-              className: _().ClipboardText,
-              children: _,
-            }),
-          ],
-        });
-      };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -22043,14 +22229,6 @@
       });
       const _ =
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NzcyREYxMUExREVBMTFFOUJFQTREQjZGQTJEQ0UzOTMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NzcyREYxMUIxREVBMTFFOUJFQTREQjZGQTJEQ0UzOTMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo3NzJERjExODFERUExMUU5QkVBNERCNkZBMkRDRTM5MyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo3NzJERjExOTFERUExMUU5QkVBNERCNkZBMkRDRTM5MyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pmk/vzIAAAFiSURBVHjaYnz79i0DCDAB8X8gVgUIIEaoSBmIIQRkvAMIIBADJMUIxBVArI0sAAYAAQTTAwNlTEgcXZDpLFDOHCC+A8Sd6FoEAAIIJBAOZKxAEoTZmAPEKSxQSZitFVCz10D5O1iQdE4AYgsouwOKBUBWvAEyRKF+RQa+QLwFIIDQHYUM/gAxC8hfb6C6QTgLKvkaiGtAikBuUAHiD0g6QZJzob5gYUEz9jXUPU+AWAYWETDwG+o9mGQGLLAFoFbcBGJFIGaDagDHCrIV6ti8ArLCFoc3wf4HCDB84YANVEC9HwPEU4B4EiycQKEqgAUjx+F3INYHYkOoZh6YC0CeEUQLS2Qbi4HYCYgvQ8P8AhC3QOMaJRjRNf4C4m3QcP8ODd4QqM0dyIGEDgKgCtmgUf8dypeBamSERoEALi8sAuUnID4AxIegbHQA18OCRTKOlGgBeSECmuH+E4nfQPWAXQwAHbJ3VkYR2TIAAAAASUVORK5CYII=";
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      const _ =
-        "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHdpZHRoPSIxNDAwcHgiIGhlaWdodD0iMTQwOXB4IiB2aWV3Qm94PSIwIDE4MDEuNSAxNDAwIDE0MDkiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAxODAxLjUgMTQwMCAxNDA5IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBhdGggaWQ9Imljb25tb25zdHItbGluay0xXzFfIiBmaWxsPSIjRkZGRkZGIiBkPSJNMzYyLjM1MywyMzEwLjU4OGMxNDguMjM1LTE0OC4yMzUsMzg3LjA2LTE0OC4yMzUsNTI3LjA2LDAKCWMxNi40NzEsMTYuNDcxLDMyLjk0MSw0MS4xNzcsNDkuNDExLDU3LjY0N0w4MDcuMDU5LDI1MDBjLTQxLjE3Ni04Mi4zNTMtMTMxLjc2NS0xMzEuNzY1LTIyMi4zNTMtMTE1LjI5NAoJYy00MS4xNzcsOC4yMzUtNzQuMTE4LDI0LjcwNi05OC44MjMsNDkuNDExbC0yNDcuMDU5LDI0Ny4wNmMtNzQuMTE4LDc0LjExNy03NC4xMTgsMTk3LjY0NiwwLDI4MAoJYzc0LjExOCw3NC4xMTcsMTk3LjY0Nyw3NC4xMTcsMjgwLDBsMCwwbDc0LjExOC03NC4xMThjNzQuMTE3LDI0LjcwNiwxNDguMjM1LDQxLjE3NywyMjIuMzUzLDMyLjk0MWwtMTcyLjk0LDE3Mi45NDEKCWMtMTQ4LjIzNSwxNDguMjM1LTM4Ny4wNiwxNDguMjM1LTUyNy4wNiwwcy0xNDguMjM1LTM4Ny4wNTksMC01MjcuMDU5QzEwNy4wNTksMjU1Ny42NDcsMzYyLjM1MywyMzEwLjU4OCwzNjIuMzUzLDIzMTAuNTg4egoJIE03NTcuNjQ2LDE5MDcuMDU5TDU5Mi45NDEsMjA4MGM3NC4xMTctOC4yMzUsMTQ4LjIzNSw4LjIzNSwyMTQuMTE3LDMyLjk0MWw3NC4xMTgtNzQuMTE4Yzc0LjExNy03NC4xMTcsMTk3LjY0Ni03NC4xMTcsMjgwLDAKCWM4Mi4zNTMsNzQuMTE4LDc0LjExNywxOTcuNjQ3LDAsMjgwbC0yNTUuMjk0LDI0Ny4wNmMtNzQuMTE4LDc0LjExNy0xOTcuNjQ3LDc0LjExNy0yODAsMAoJYy04LjIzNS0xNi40NzEtMjQuNzA2LTQxLjE3Ny0zMi45NDEtNjUuODgzbC0xMzEuNzY1LDEzMS43NjVjMTYuNDcxLDI0LjcwNiwzMi45NCw0MS4xNzcsNDkuNDExLDU3LjY0NwoJYzE0OC4yMzUsMTQ4LjIzNSwzODcuMDU5LDE0OC4yMzUsNTI3LjA2LDBsMCwwbDI0Ny4wNTktMjQ3LjA2YzE0OC4yMzUtMTQ4LjIzNSwxNDguMjM1LTM4Ny4wNTksMC01MjcuMDU5CglTOTA1Ljg4MywxNzY3LjA1OSw3NTcuNjQ2LDE5MDcuMDU5TDc1Ny42NDYsMTkwNy4wNTlMNzU3LjY0NiwxOTA3LjA1OXoiLz4KPC9zdmc+Cg==";
     },
   },
 ]);

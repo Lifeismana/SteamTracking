@@ -2787,7 +2787,7 @@
       const _ = (_) => {
         const { href: _, ..._ } = _;
         let _,
-          _ = (0, _._)(_);
+          _ = (0, _._)(null != _ ? _ : "");
         (0, _._)(_)
           ? ((_ =
               (_._.IN_CLIENT ? "steam://openurl_external/" : "") + (0, _._)(_)),
@@ -2883,9 +2883,11 @@
           (0, _.jsx)(_, {
             className: (0, _._)(_().TableCell, "td" == _ && "BB_TableData"),
             ..._,
-            style: _ && {
-              width: _,
-            },
+            style: _
+              ? {
+                  width: _,
+                }
+              : void 0,
             children: _.children,
           })
         );
@@ -3449,72 +3451,72 @@
             (0, _._)(this);
         }
         async LoadYouTubeDynamicData(_, _) {
+          var _;
           let _ = new Array(),
             _ = "";
           if (
             (_.forEach((_, _) => {
-              this.m_mapYouTubeVideo.has(_)
-                ? __webpack_require__.push(this.m_mapYouTubeVideo.get(_))
-                : (_.length > 0 && (_ += ","), (_ += _));
+              const _ = this.m_mapYouTubeVideo.get(_);
+              _ ? _.push(_) : (_.length > 0 && (_ += ","), (_ += _));
             }),
             0 == _.length)
           )
             return _;
           let _ = {
-              youtubevideoids: _,
-            },
-            _ = null;
-          return (
-            (_ = await _().get(
+            youtubevideoids: _,
+          };
+          const _ = await _().get(
               _._.STORE_BASE_URL + "/events/ajaxgetdynamiceventmetadata",
               {
                 params: _,
                 cancelToken: _.token,
               },
-            )),
+            ),
+            _ =
+              null === (_ = null == _ ? void 0 : _.data) || void 0 === _
+                ? void 0
+                : _.youtube;
+          return (
             _ &&
-              _.data &&
-              _.data.youtube &&
               (0, _._)(() => {
-                _.data.youtube.forEach((_, _) => {
-                  this.m_mapYouTubeVideo.set(_.videoid, _),
-                    __webpack_require__.push(_);
+                _.forEach((_, _) => {
+                  this.m_mapYouTubeVideo.set(_.videoid, _), _.push(_);
                 });
               }),
             _
           );
         }
         async LoadSharedFileDynamicData(_, _) {
+          var _;
           let _ = new Array(),
             _ = "";
           if (
             (_.forEach((_, _) => {
-              this.m_mapSharedFile.has(_)
-                ? __webpack_require__.push(this.m_mapSharedFile.get(_))
-                : (_.length > 0 && (_ += ","), (_ += _));
+              const _ = this.m_mapSharedFile.get(_);
+              _ ? _.push(_) : (_.length > 0 && (_ += ","), (_ += _));
             }),
             0 == _.length)
           )
             return _;
           let _ = {
-              sharedfileids: _,
-            },
-            _ = null;
-          return (
-            (_ = await _().get(
+            sharedfileids: _,
+          };
+          const _ = await _().get(
               _._.STORE_BASE_URL + "/events/ajaxgetdynamiceventmetadata",
               {
                 params: _,
                 cancelToken: _.token,
               },
-            )),
+            ),
+            _ =
+              null === (_ = null == _ ? void 0 : _.data) || void 0 === _
+                ? void 0
+                : _.sharedfiles;
+          return (
             _ &&
-              _.data &&
-              _.data.sharedfiles &&
               (0, _._)(() => {
-                _.data.sharedfiles.forEach((_, _) => {
-                  this.m_mapSharedFile.set(_.sharedfileid, _),
-                    __webpack_require__.push(_);
+                _.forEach((_, _) => {
+                  this.m_mapSharedFile.set(_.sharedfileid, _), _.push(_);
                 });
               }),
             _
@@ -3754,6 +3756,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         return new _._(new _._());
@@ -3761,7 +3764,11 @@
       function _(_) {
         const { text: _, languageOverride: _ } = _,
           [_] = (0, _.useState)(
-            new _._(new Map([...Array.from(_._.entries())]), _, _),
+            new _._(
+              new Map([...Array.from(_._.entries())]),
+              _,
+              null != _ ? _ : _._.LANGUAGE,
+            ),
           );
         return (0, _.jsx)(_.Fragment, {
           children: _.ParseBBCode(_, {}),
@@ -3981,41 +3988,47 @@
         OnEmoticonClick(_) {
           var _;
           const {
-            emoticonStore: _,
-            strFlairGroupID: _,
-            SetUIDisplayPref: _,
-            contextOptions: _,
-            bShowChatAddons: _,
-          } = this.props;
+              emoticonStore: _,
+              strFlairGroupID: _,
+              SetUIDisplayPref: _,
+              contextOptions: _,
+              bShowChatAddons: _,
+            } = this.props,
+            {
+              roomEffectSettings: _,
+              onRoomEffectSelected: _,
+              onStickerSelected: _,
+            } = this.props;
           let _ = null;
           if (
-            ((_ = _
-              ? (0, _.jsx)(_._, {
-                  emoticonStore: this.props.emoticonStore,
-                  strFlairGroupID: this.props.strFlairGroupID,
-                  onEmoticonSelected: (_) =>
-                    this.props.OnEmoticonSelected(_, !1),
-                  roomEffectSettings: this.props.roomEffectSettings,
-                  onRoomEffectSelected: this.props.onRoomEffectSelected,
-                  onStickerSelected: this.props.onStickerSelected,
-                })
-              : _ &&
-                  _.flair_list &&
-                  (null ===
-                    (_ = __webpack_require__.GetFlairListByGroupID(_)) ||
-                  void 0 === _
-                    ? void 0
-                    : _.length) > 0
+            ((_ =
+              _ && _ && _ && _
                 ? (0, _.jsx)(_._, {
                     emoticonStore: this.props.emoticonStore,
                     strFlairGroupID: this.props.strFlairGroupID,
-                    OnSelected: this.props.OnEmoticonSelected,
+                    onEmoticonSelected: (_) =>
+                      this.props.OnEmoticonSelected(_, !1),
+                    roomEffectSettings: _,
+                    onRoomEffectSelected: _,
+                    onStickerSelected: _,
                   })
-                : (0, _.jsx)(_._, {
-                    emoticonStore: this.props.emoticonStore,
-                    strFlairGroupID: this.props.strFlairGroupID,
-                    OnSelected: this.props.OnEmoticonSelected,
-                  })),
+                : _ &&
+                    _.flair_list &&
+                    (null ===
+                      (_ = __webpack_require__.GetFlairListByGroupID(_)) ||
+                    void 0 === _
+                      ? void 0
+                      : _.length) > 0
+                  ? (0, _.jsx)(_._, {
+                      emoticonStore: this.props.emoticonStore,
+                      strFlairGroupID: this.props.strFlairGroupID,
+                      OnSelected: this.props.OnEmoticonSelected,
+                    })
+                  : (0, _.jsx)(_._, {
+                      emoticonStore: this.props.emoticonStore,
+                      strFlairGroupID: this.props.strFlairGroupID,
+                      OnSelected: this.props.OnEmoticonSelected,
+                    })),
             (0, _._)(
               _,
               _,
@@ -4127,7 +4140,8 @@
         render() {
           const { config: _ } = this.props,
             { activeIndex: _ } = this.state,
-            _ = _[_] && _[_].renderContent ? _[_].renderContent() : null,
+            _ = _[_],
+            _ = _ ? __webpack_require__.renderContent() : null,
             _ = _.length > 1,
             _ = _
               ? ({ detail: { button: _ } }) => {
@@ -4983,6 +4997,7 @@
                 src: _,
               }),
               this.state.showHover &&
+                this.m_ref.current &&
                 (0, _.jsx)(_, {
                   target: this.m_ref.current,
                   sticker: _,
@@ -5046,6 +5061,7 @@
             children: [
               _.renderEffectIcon(),
               this.state.showHover &&
+                this.m_ref.current &&
                 (0, _.jsx)(_, {
                   target: this.m_ref.current,
                   effect: _,
@@ -5342,6 +5358,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         constructor() {
@@ -5368,107 +5385,113 @@
       (0, _._)([_._], _.prototype, "BUserHasVolumePreference", null),
         (0, _._)([_._], _.prototype, "SetVolumePreference", null);
       const _ = (0, _.forwardRef)(function (_, _) {
-        const {
-            video: _,
-            bAutoPlay: _,
-            bControls: _,
-            bLoop: _,
-            bMuted: _,
-            className: _,
-            mediaScale: _,
-            onClick: _,
-            altText: _,
-          } = _,
-          _ = (0, _.useMemo)(() => {
-            var _;
-            return Boolean(
-              null === (_ = _.rgVideoTracks) || void 0 === _
-                ? void 0
-                : _.some(
-                    (_) => "subtitles" == _.sKind || "captions" == _.sKind,
-                  ),
+          const {
+              video: _,
+              bAutoPlay: _,
+              bControls: _,
+              bLoop: _,
+              bMuted: _,
+              className: _,
+              mediaScale: _,
+              onClick: _,
+              altText: _,
+            } = _,
+            _ = (0, _.useMemo)(() => {
+              var _;
+              return Boolean(
+                null === (_ = _.rgVideoTracks) || void 0 === _
+                  ? void 0
+                  : _.some(
+                      (_) => "subtitles" == _.sKind || "captions" == _.sKind,
+                    ),
+              );
+            }, [_.rgVideoTracks]),
+            [_, _] = _.useState(!1),
+            _ = _();
+          if (!_.rgVideoSources || !_.rgVideoSources.length) return null;
+          const _ = (function (_) {
+            return !(
+              !(0, _._)(_.sPoster) ||
+              (_.rgVideoSources &&
+                _.rgVideoSources.some((_) => !(0, _._)(_.sURL))) ||
+              (_.rgVideoTracks &&
+                _.rgVideoTracks.some((_) => !(0, _._)(_.sURL)))
             );
-          }, [_.rgVideoTracks]),
-          [_, _] = _.useState(!1);
-        if (!_.rgVideoSources || !_.rgVideoSources.length) return null;
-        const _ = (function (_) {
-          return !(
-            !(0, _._)(_.sPoster) ||
-            (_.rgVideoSources &&
-              _.rgVideoSources.some((_) => !(0, _._)(_.sURL))) ||
-            (_.rgVideoTracks && _.rgVideoTracks.some((_) => !(0, _._)(_.sURL)))
-          );
-        })(_);
-        let _;
-        (!_ || (_ && "public" == _._.WEB_UNIVERSE)) && (_ = "anonymous");
-        const _ = _ || (_ && _.Get().BVolumePreferenceMuted()),
-          _ = _.sPoster ? _(_.sPoster) : "";
-        return (0, _.jsxs)("video", {
-          width: "100%",
-          height: "auto",
-          autoPlay: _,
-          muted: _,
-          playsInline: !0,
-          controls: _,
-          poster: _,
-          loop: _,
-          crossOrigin: _,
-          onVolumeChange: (_) => {
-            const _ = _.target,
-              _ = _.muted ? 0 : _.volume;
-            _ && _.Get().SetVolumePreference(_);
-          },
-          onPlay: (_) => {
-            const _ = _.target,
-              _ = 0 == _.currentTime,
-              _ = _.Get().BUserHasVolumePreference();
-            if ((_(!0), _))
-              if (_ || _)
-                _ &&
-                  ((_.volume = _.Get().GetVolumePreference()),
-                  (_.muted = _.Get().BVolumePreferenceMuted()));
-              else {
-                const _ = _.muted ? 0 : _.volume;
-                _.Get().SetVolumePreference(_);
-              }
-          },
-          ref: _,
-          className: _,
-          onClick: _,
-          "aria-label": _,
-          style: {
-            width: _ && _ >= 1 && _ < 100 ? `${_}%` : void 0,
-          },
-          children: [
-            (0, _.jsx)(_, {
-              rgVideoSources: _.rgVideoSources,
-            }),
-            (0, _.jsx)(_, {
-              rgVideoTracks: _.rgVideoTracks,
-            }),
-          ],
-        });
-      });
-      function _(_) {
+          })(_);
+          let _;
+          (!_ || (_ && _._.EUNIVERSE == _.wLO)) && (_ = "anonymous");
+          const _ = _ || (_ && _.Get().BVolumePreferenceMuted()),
+            _ = _.sPoster ? _(_.sPoster, _) : "";
+          return (0, _.jsxs)("video", {
+            width: "100%",
+            height: "auto",
+            autoPlay: _,
+            muted: _,
+            playsInline: !0,
+            controls: _,
+            poster: _,
+            loop: _,
+            crossOrigin: _,
+            onVolumeChange: (_) => {
+              const _ = _.target,
+                _ = _.muted ? 0 : _.volume;
+              _ && _.Get().SetVolumePreference(_);
+            },
+            onPlay: (_) => {
+              const _ = _.target,
+                _ = 0 == _.currentTime,
+                _ = _.Get().BUserHasVolumePreference();
+              if ((_(!0), _))
+                if (_ || _)
+                  _ &&
+                    ((_.volume = _.Get().GetVolumePreference()),
+                    (_.muted = _.Get().BVolumePreferenceMuted()));
+                else {
+                  const _ = _.muted ? 0 : _.volume;
+                  _.Get().SetVolumePreference(_);
+                }
+            },
+            ref: _,
+            className: _,
+            onClick: _,
+            "aria-label": _,
+            style: {
+              width: _ && _ >= 1 && _ < 100 ? `${_}%` : void 0,
+            },
+            children: [
+              (0, _.jsx)(_, {
+                rgVideoSources: _.rgVideoSources,
+              }),
+              (0, _.jsx)(_, {
+                rgVideoTracks: _.rgVideoTracks,
+              }),
+            ],
+          });
+        }),
+        _ = _.createContext(void 0);
+      function _() {
+        return _.useContext(_) || (0, _._)();
+      }
+      function _(_, _) {
         if (_)
           try {
             const _ = new URL(_);
             return (
-              (_.search =
-                (_.search ? _.search + "&" : "?") + "origin=" + (0, _._)()),
-              _.toString()
+              (_.search = (_.search ? _.search + "&" : "?") + "origin=" + _),
+              __webpack_require__.toString()
             );
           } catch {
             return _;
           }
       }
       function _(_) {
-        const { rgVideoSources: _ } = _;
+        const { rgVideoSources: _ } = _,
+          _ = _();
         return _.filter((_) => Boolean(_.sURL)).map((_) =>
           (0, _.jsx)(
             "source",
             {
-              src: _(_.sURL),
+              src: _(_.sURL, _),
               type: _.sFormat,
             },
             _.sURL,
@@ -5491,9 +5514,10 @@
           : null;
       }
       function _(_) {
-        const { track: _, rgVideoTracks: _ } = _;
+        const { track: _, rgVideoTracks: _ } = _,
+          _ = _();
         let _ = _.eLanguage;
-        if ((0, _._)())
+        if (_._.EREALM == _._.k_ESteamRealmChina)
           if (_._.IsELanguageValidInRealm(_, _._.k_ESteamRealmChina))
             _ = _._.GetELanguageFallback(_);
           else {
@@ -5508,7 +5532,7 @@
         else if (!_._.IsELanguageValidInRealm(_, _._.k_ESteamRealmGlobal))
           return null;
         return (0, _.jsx)("track", {
-          src: _(_.sURL),
+          src: _(_.sURL, _),
           kind: _.sKind,
           default: _.bDefault,
           srcLang: (0, _.wwZ)(_),
@@ -5627,12 +5651,13 @@
       let _ = _.NotLoaded,
         _ = [];
       function _(_) {
+        var _;
         if (_ != _.Loaded) {
           if (_ == _.NotLoaded) {
             let _ = document.createElement("script");
             _.src = "https://www.youtube.com/iframe_api";
             let _ = document.getElementsByTagName("script")[0];
-            _.parentNode.insertBefore(_, _),
+            null === (_ = _.parentNode) || void 0 === _ || _.insertBefore(_, _),
               (window.onYouTubeIframeAPIReady = _);
           }
           _ && (_.includes(_) || _.push(_));
@@ -5681,10 +5706,13 @@
               _.forcePause != _.forcePause);
         }
         componentDidUpdate(_) {
+          var _, _;
           _.forcePause != this.props.forcePause &&
             (this.props.forcePause
-              ? this.m_player.pauseVideo()
-              : this.m_player.playVideo());
+              ? null === (_ = this.m_player) || void 0 === _ || _.pauseVideo()
+              : null === (_ = this.m_player) ||
+                void 0 === _ ||
+                __webpack_require__.playVideo());
         }
         DestroyPlayer() {
           if (this.m_player)
@@ -5739,7 +5767,11 @@
           (this.m_bPlayerReady = !1), (this.m_player = new _.Player(_, _));
         }
         OnPlayerReady(_) {
-          if (((this.m_bPlayerReady = !0), this.props.onVideoInfoChanged)) {
+          var _, _;
+          if (
+            ((this.m_bPlayerReady = !0),
+            this.props.onVideoInfoChanged && this.m_player)
+          ) {
             let _ = this.m_player.getVideoData(),
               _ = {
                 strAuthor: "",
@@ -5753,8 +5785,13 @@
           }
           this.props.width &&
             this.props.height &&
-            this.m_player.setSize(this.props.width, this.props.height),
-            this.props.autoplay && this.m_player.playVideo(),
+            (null === (_ = this.m_player) ||
+              void 0 === _ ||
+              _.setSize(this.props.width, this.props.height)),
+            this.props.autoplay &&
+              (null === (_ = this.m_player) ||
+                void 0 === _ ||
+                __webpack_require__.playVideo()),
             this.props.onPlayerReady && this.props.onPlayerReady();
         }
         OnPlayerStateChange(_) {

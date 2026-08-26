@@ -3291,6 +3291,8 @@
         const {
             virtualizer: _,
             bDynamic: _,
+            scrollAlign: _,
+            bNativeScrollIntoView: _,
             idx: _,
             rowGap: _,
             renderItem: _,
@@ -3298,17 +3300,17 @@
           _ = _.useCallback(
             (_, _, _) => (
               _.scrollToIndex(_, {
-                align: "center",
+                align: _,
               }),
               !0
             ),
-            [_, _],
+            [_, _, _],
           );
         return (0, _.jsx)(_._, {
           ref: _ ? _.measureElement : void 0,
           navKey: `VirtualizedListIndex-${_}`,
           "data-index": _,
-          fnScrollIntoViewHandler: _,
+          fnScrollIntoViewHandler: _ ? void 0 : _,
           scrollIntoViewWhenChildFocused: "force",
           style: {
             width: "100%",
@@ -3317,6 +3319,12 @@
           children: _(_),
         });
       });
+      function _(_, _) {
+        const _ = _.getBoundingClientRect().top;
+        return _
+          ? _ - _.getBoundingClientRect().top - _.clientTop + _.scrollTop
+          : _ + (_.ownerDocument.defaultView?.scrollY ?? 0);
+      }
       _.forwardRef(function (_, _) {
         const {
             nRows: _,
@@ -3329,6 +3337,8 @@
             className: _,
             forceVirtualizeType: _,
             hintVirtualizeType: _,
+            scrollAlign: _,
+            bNativeScrollIntoView: _,
             initialOffset: _,
             onOffsetChange: _,
             ..._
@@ -3340,10 +3350,11 @@
           _ = _.useCallback(
             (_) => {
               if (!_) return;
-              const _ = (0, _._)(_, "y");
+              const _ = (0, _._)(_, "y"),
+                _ = _(_, "window" == _ ? null : _);
               (0, _.startTransition)(() => {
                 "window" != _ && _(_ || void 0),
-                  _(_.offsetTop),
+                  _(_),
                   _ || _(_ ? "element" : "window");
               });
             },
@@ -3351,10 +3362,11 @@
           ),
           _ =
             ((_ = (_) => {
-              _.current &&
-                (0, _.startTransition)(() => {
-                  _.current && _(_.current?.offsetTop);
-                });
+              if (!_.current) return;
+              const _ = _(_.current, _);
+              (0, _.startTransition)(() => {
+                _(_);
+              });
             }),
             (0, _._)(
               (_) => {
@@ -3388,6 +3400,8 @@
             measureElement: _,
             forceVirtualizeType: _,
             hintVirtualizeType: _,
+            scrollAlign: _,
+            bNativeScrollIntoView: _,
             initialOffset: _,
             onOffsetChange: _,
           };
@@ -3412,6 +3426,14 @@
           }),
         });
       });
+      function _(_, _, _) {
+        _.useEffect(() => {
+          _ ||
+            (0, _.startTransition)(() => {
+              _.measure();
+            });
+        }, [_, _, _]);
+      }
       function _(_) {
         const {
             nScrollMargin: _,
@@ -3422,6 +3444,7 @@
             initialOffset: _,
             onOffsetChange: _,
             measureElement: _,
+            bDynamic: _,
           } = _,
           _ = ((0, _._)(), _ + _),
           _ = (0, _._)({
@@ -3441,11 +3464,7 @@
         return (
           (_.shouldAdjustScrollPositionOnItemSizeChange = (_) =>
             void 0 !== _ && _.start < (_.scrollOffset ?? 0)),
-          _.useEffect(() => {
-            (0, _.startTransition)(() => {
-              _.measure();
-            });
-          }, [_, _]),
+          _(_, _, _),
           (0, _.jsx)(_, {
             ..._,
             virtualizer: _,
@@ -3463,13 +3482,20 @@
             initialOffset: _,
             onOffsetChange: _,
             measureElement: _,
+            bDynamic: _,
           } = _,
           _ = _ + _,
           _ = (0, _._)(),
           _ = (0, _._)({
             count: _,
-            scrollMargin: _ - (_?.offsetTop || 0),
-            getScrollElement: () => _,
+            scrollMargin: _,
+            getScrollElement: () => (
+              _ &&
+                _.scrollElement !== _ &&
+                void 0 === _ &&
+                (_.scrollOffset = _.scrollTop),
+              _ ?? null
+            ),
             estimateSize: _.useCallback(() => _, [_]),
             measureElement: _,
             overscan: _,
@@ -3487,11 +3513,9 @@
             },
           });
         return (
-          _.useEffect(() => {
-            (0, _.startTransition)(() => {
-              _.measure();
-            });
-          }, [_, _]),
+          (_.shouldAdjustScrollPositionOnItemSizeChange = (_) =>
+            void 0 !== _ && _.start < (_.scrollOffset ?? 0)),
+          _(_, _, _),
           (0, _.jsx)(_, {
             ..._,
             virtualizer: _,
@@ -3499,7 +3523,14 @@
         );
       }
       function _(_) {
-        const { virtualizer: _, nRowGap: _, renderItem: _, bDynamic: _ } = _,
+        const {
+            virtualizer: _,
+            nRowGap: _,
+            renderItem: _,
+            bDynamic: _,
+            scrollAlign: _ = "center",
+            bNativeScrollIntoView: _,
+          } = _,
           _ = _.getVirtualItems(),
           _ = _.length ? _[0].start - _.options.scrollMargin : 0,
           _ = Math.max(0, _.getTotalSize());
@@ -3525,6 +3556,8 @@
                 {
                   virtualizer: _,
                   bDynamic: _,
+                  scrollAlign: _,
+                  bNativeScrollIntoView: _,
                   idx: _.index,
                   rowGap: _,
                   renderItem: _,

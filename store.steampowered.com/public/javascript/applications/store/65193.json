@@ -169,7 +169,7 @@
     "ReviewSummary_CSGODisclaimer": "As análises escritas antes de %1$s são para o CS:GO, o antecessor do %2$s.",
     "ReviewSummary_OverallReviews": "Análises em geral:",
     "ReviewSummary_YourLanguagesReviews": "Análises nos seus idiomas:",
-    "ReviewSummary_LanguageReviews": "Análises em PT-BR:",
+    "ReviewSummary_LanguageReviews": "Análises em %1$s:",
     "ReviewSummary_RecentReviews": "Análises recentes:",
     "ReviewSummary_ReviewCount": "(%1$s análises)",
     "ReviewSummary_OutlierAllReviews": "Análises em todos os idiomas: %1$s %2$s",

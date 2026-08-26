@@ -1062,9 +1062,11 @@
       function _(_) {
         const { children: _, "flow-children": _, ..._ } = _,
           { gamepadEvents: _ } = (0, _._)(_);
+        let _;
         _ && (_.layout = (0, _._)(_)),
           _.onOKButton ||
-            ("onClick" in _.props && _.props.onClick && (_.onOKButton = _._));
+            ("onClick" in _.props && _.props.onClick && (_.onOKButton = _._)),
+          _.focusable && (_ = _.props.tabIndex || 0);
         const { ref: _, node: _ } = (0, _._)(_);
         (0, _._)(_, _);
         const _ = (0, _._)(_),
@@ -1074,6 +1076,7 @@
           children: _.cloneElement(_, {
             ..._.props,
             ref: _,
+            tabIndex: _,
           }),
         });
       }

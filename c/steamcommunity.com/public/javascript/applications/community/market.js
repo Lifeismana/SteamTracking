@@ -2868,10 +2868,12 @@
               });
             },
             Suggestions: function (_) {
-              return (0, _.jsx)(_._.Positioner, {
-                ..._,
-                returnFocus: !1,
-              });
+              return 0 === _.Children.toArray(_.children).length
+                ? null
+                : (0, _.jsx)(_._.Positioner, {
+                    ..._,
+                    returnFocus: !1,
+                  });
             },
             Suggestion: function (_) {
               const { value: _, children: _, ..._ } = _,

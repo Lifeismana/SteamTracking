@@ -236,6 +236,204 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      async function _(_) {
+        const _ = await fetch(_, {
+          method: "GET",
+        });
+        if (404 == _.status) return null;
+        if (!_._) throw new Error(`Server returned ${_.status}`);
+        const _ = await _.json();
+        return _.success != _._ ? null : _;
+      }
+      function _() {
+        return "undefined" != typeof window && "undefined" != typeof self
+          ? self.origin
+          : "ssr_server";
+      }
+      function _(_) {
+        return ["clantoclaninfo", _];
+      }
+      function _(_) {
+        return ["apptoclanid", _];
+      }
+      function _(_, _ = "group") {
+        return ["vanitytoclanid", _, _?.toLocaleLowerCase()];
+      }
+      function _(_) {
+        const _ = _?.[0];
+        return (
+          "clantoclaninfo" == _ || "apptoclanid" == _ || "vanitytoclanid" == _
+        );
+      }
+      const _ = new WeakSet();
+      function _(_) {
+        if (!_.has(_)) {
+          _.add(_);
+          for (const _ of [
+            ["clantoclaninfo"],
+            ["apptoclanid"],
+            ["vanitytoclanid"],
+          ])
+            _.setQueryDefaults(_, {
+              staleTime: 1 / 0,
+              gcTime: 1 / 0,
+              retry: !1,
+            });
+        }
+      }
+      const _ = new WeakMap();
+      function _(_) {
+        if (!_) return null;
+        let _ = _.get(_);
+        return (
+          _ ||
+            ((_ = {
+              ..._,
+              clanSteamID: _.clanSteamIDString
+                ? new _._(_.clanSteamIDString)
+                : _._.InitFromClanID(_.clanAccountID),
+            }),
+            _.set(_, _)),
+          _
+        );
+      }
+      function _(_, _) {
+        if (!_) return null;
+        _(_);
+        const _ = (function (_) {
+          const { msg: _, success: _, ..._ } = _;
+          return {
+            ..._,
+            rss_language: _.rss_language ? _.rss_language : _.Bhc,
+          };
+        })(_);
+        return (
+          _.setQueryData(_(_.clanAccountID), _),
+          _.appid && _.setQueryData(_(_.appid), _.clanAccountID),
+          _.vanity_url &&
+            _.setQueryData(_(_.vanity_url, "group"), _.clanAccountID),
+          _
+        );
+      }
+      function _(_, _) {
+        for (const _ of _) _(_, _);
+      }
+      function _(_) {
+        const _ = (0, _._)();
+        return (0, _._)(_(_, _));
+      }
+      function _(_, _) {
+        return (
+          _(_),
+          {
+            queryKey: _(_ ?? null),
+            queryFn: async () =>
+              _
+                ? _(
+                    _,
+                    await (async function (_) {
+                      const _ = _._.InitFromClanID(_);
+                      return _(
+                        `${_._.COMMUNITY_BASE_URL}gid/${_.ConvertTo64BitString()}/ajaxgetvanityandclanid/?origin=${_()}`,
+                      );
+                    })(_),
+                  )
+                : null,
+            enabled: void 0 !== _,
+            select: _,
+          }
+        );
+      }
+      function _(_, _) {
+        return (
+          _(_),
+          {
+            queryKey: _(_),
+            queryFn: async () =>
+              _(
+                _,
+                await (async function (_) {
+                  return _(
+                    `${_._.COMMUNITY_BASE_URL}ogg/${_}/ajaxgetvanityandclanid/?origin=${_()}`,
+                  );
+                })(_),
+              )?.clanAccountID ?? null,
+            enabled: !!_,
+          }
+        );
+      }
+      function _(_, _, _ = "group") {
+        return (
+          _(_),
+          {
+            queryKey: _(_, _),
+            queryFn: async () => {
+              if ("store" == _) {
+                const _ = _.getQueryData(_(_, "group"));
+                if (_) return _;
+              }
+              const _ =
+                "store" == _
+                  ? await (async function (_) {
+                      return _(
+                        `${_._.COMMUNITY_BASE_URL}games/${_}/ajaxgetvanityandclanid/?origin=${_()}`,
+                      );
+                    })(_)
+                  : await (async function (_) {
+                      return _(
+                        `${_._.COMMUNITY_BASE_URL}groups/${_}/ajaxgetvanityandclanid/?origin=${_()}`,
+                      );
+                    })(_);
+              return _(_, _)?.clanAccountID ?? null;
+            },
+            enabled: !!_,
+          }
+        );
+      }
+      function _(_, _) {
+        if (_) return _(_.getQueryData(_(_))) ?? void 0;
+      }
+      function _(_, _) {
+        if (_) return _(_.getQueryData(_(_)), _);
+      }
+      function _(_, _, _) {
+        if (!_) return;
+        const _ = _ ? [_] : ["store", "group"];
+        for (const _ of _) {
+          const _ = _(_.getQueryData(_(_, _)), _);
+          if (_) return _;
+        }
+      }
+      async function _(_, _) {
+        return _ ? _(await _.fetchQuery(_(_, _))) : null;
+      }
+      async function _(_, _) {
+        return _ ? _(await _.fetchQuery(_(_, _)), _) : null;
+      }
+      async function _(_, _, _ = "group") {
+        return _ ? _(await _.fetchQuery(_(_, _, _)), _) : null;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -784,6 +982,192 @@
           _
         );
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ =
+          (__webpack_require__("chunkid"),
+          __webpack_require__("chunkid"),
+          __webpack_require__("chunkid"),
+          __webpack_require__("chunkid")),
+        _ = __webpack_require__("chunkid");
+      const _ = new WeakSet();
+      function _(_ = _._) {
+        if ("undefined" == typeof window) return;
+        if (_.has(_)) return;
+        const _ = (0, _._)("groupvanityinfo", "application_config");
+        (void 0 === _ && "complete" != document.readyState) ||
+          (_.add(_), _(_) && (0, _._)(_, _));
+      }
+      function _(_) {
+        const _ = _;
+        return (
+          !!(
+            _ &&
+            Array.isArray(_) &&
+            _.length > 0 &&
+            "object" == typeof _[0]
+          ) &&
+          "number" == typeof _[0].clanAccountID &&
+          ("number" == typeof _[0].appid || "string" == typeof _[0].vanity_url)
+        );
+      }
+      function _(_) {
+        return "string" == typeof _ ? parseInt(_) : _;
+      }
+      function _(_) {
+        return "string" == typeof _ ? Number.parseInt(_) : _;
+      }
+      const _ = new (class {
+        m_queryClient = _._;
+        m_boxCacheVersion = _._.box(0);
+        m_bWatchingCache = !1;
+        m_bBumpScheduled = !1;
+        Init() {
+          this.LazyInit();
+        }
+        LazyInit() {
+          _(this.m_queryClient),
+            this.m_bWatchingCache ||
+              ((this.m_bWatchingCache = !0),
+              this.m_queryClient.getQueryCache().subscribe((_) => {
+                ("added" != _?.type &&
+                  "updated" != _?.type &&
+                  "removed" != _?.type) ||
+                  ((0, _._)(_.query?.queryKey) &&
+                    this.ScheduleCacheVersionBump());
+              }));
+        }
+        ScheduleCacheVersionBump() {
+          this.m_bBumpScheduled ||
+            ((this.m_bBumpScheduled = !0),
+            queueMicrotask(() => {
+              (this.m_bBumpScheduled = !1),
+                (0, _._)(() =>
+                  this.m_boxCacheVersion.set(this.m_boxCacheVersion.get() + 1),
+                );
+            }));
+        }
+        ReadCache() {
+          return (
+            this.LazyInit(), this.m_boxCacheVersion.get(), this.m_queryClient
+          );
+        }
+        AddGroupVanities(_) {
+          this.LazyInit(), _(_) && (0, _._)(this.m_queryClient, _);
+        }
+        BHasClanInfoLoaded(_) {
+          return (
+            (0, _._)(_.BIsValid(), "Clan SteamID is not valid when ClanInfo"),
+            (0, _._)(
+              _.BIsClanAccount(),
+              "Clan SteamID is not a clan account id when requesting clan info ",
+            ),
+            this.BHasClanInfoLoadedByAccountID(_.GetAccountID())
+          );
+        }
+        BHasClanInfoLoadedByAccountID(_) {
+          return Boolean((0, _._)(_(_), this.ReadCache()));
+        }
+        RegisterClanData(_) {
+          this.LazyInit(), (0, _._)(this.m_queryClient, _);
+        }
+        async LoadOGGClanInfoForAppID(_) {
+          return (
+            this.LazyInit(),
+            (_ = _(_)),
+            (0, _._)(
+              0 != _,
+              "LoadOGGClanInfoForAppID called with appid of zero",
+            ),
+            0 == _ ? null : (0, _._)(_, this.m_queryClient).catch(() => null)
+          );
+        }
+        async LoadOGGClanInfoForIdentifier(_) {
+          return this.LazyInit(), (0, _._)(_, this.m_queryClient, "store");
+        }
+        async LoadOGGClanInfoForGroupVanity(_) {
+          return this.LazyInit(), (0, _._)(_, this.m_queryClient, "group");
+        }
+        async LoadClanInfoForClanSteamID(_) {
+          return this.LoadClanInfoForClanAccountID(_.GetAccountID());
+        }
+        async LoadClanInfoForClanAccountID(_) {
+          return this.LazyInit(), (0, _._)(_(_), this.m_queryClient);
+        }
+        GetOGGClanInfo(_) {
+          const _ = this.ReadCache();
+          return "string" == typeof _ ? (0, _._)(_, _) : (0, _._)(_, _);
+        }
+        GetClanSteamIDForAppID(_) {
+          const _ = (0, _._)(_(_), this.ReadCache());
+          return _ ? _._.InitFromClanID(_.clanAccountID) : void 0;
+        }
+        GetClanVanityForAppID(_) {
+          return (0, _._)(_(_), this.ReadCache())?.vanity_url;
+        }
+        GetClanVanityForClanSteamID(_) {
+          return (0, _._)(_.GetAccountID(), this.ReadCache())?.vanity_url;
+        }
+        HasLoadedClanAccountID(_) {
+          return this.BHasClanInfoLoadedByAccountID(_);
+        }
+        GetClanMemberCount(_) {
+          return (0, _._)(_(_), this.ReadCache())?.member_count ?? 0;
+        }
+        GetClanInfoByClanAccountID(_) {
+          return (
+            (0, _._)(
+              !!_,
+              "Unepxected clanid when requesting information. GetClanInfoByClanAccountID ",
+            ),
+            (0, _._)(_(_), this.ReadCache())
+          );
+        }
+        GetCreatorStoreURL(_) {
+          let _ = _._.GetCreatorHome(_);
+          if (_) return _.GetCreatorHomeURL("developer");
+          let _ = this.GetClanInfoByClanAccountID(_.GetAccountID());
+          return (
+            _._.COMMUNITY_BASE_URL +
+            (_.vanity_url
+              ? "groups/" + _.vanity_url
+              : "gid/" + _.ConvertTo64BitString())
+          );
+        }
+      })();
+      function _() {
+        const _ = (0, _._)();
+        return _(_), _;
+      }
+      function _(_) {
+        _();
+        const { data: _, isPending: _ } = (0, _._)(_ ? _(_) : void 0);
+        return [Boolean(_) && _, _ ?? void 0];
+      }
+      function _(_) {
+        const _ = _();
+        (0, _.useEffect)(() => {
+          _ &&
+            (0, _._)(_(_), _).catch((_) =>
+              console.error(`Failed to hint load clan info ${_}`, _),
+            );
+        }, [_, _]);
+      }
+      (0, _._)("g_ClanStore", _);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

@@ -56,6 +56,13 @@ message ContentDescriptorSurvey {
 	optional .ContentSurveyDisclosure disclosure = 16;
 	optional uint64 inherited_surveyid = 17;
 	optional bool started_from_scratch = 18;
+	optional .ContentSurveyAuxData survey_aux_data = 19;
+	optional int32 source = 20 [(.description) = "enum"];
+}
+
+message ContentSurveyAuxData {
+	optional .ContentSurveyDisclosure disclosure = 1;
+	repeated int32 interactive_elements = 2 [(.description) = "enum"];
 }
 
 message ContentSurveyDisclosure {

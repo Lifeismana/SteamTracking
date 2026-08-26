@@ -2287,25 +2287,6 @@ function ReparentPurchaseOptionsForGamepad( idPurchaseOptions )
 }
 
 
-// Popup for customers to optin/out of the new mobile UX
-var g_newMobileUXPopup = null;
-function ShowUseNewMobileUXPopup()
-{
-	var $ModalContent = $J('#popupNewMobileUX');
-	if ( 0 == $ModalContent.length )
-		return;
-
-	g_newMobileUXPopup = new CModal( $ModalContent );
-	g_newMobileUXPopup.Show();
-}
-
-// check if customer selection for viewing the new mobile UX has changed
-function OnNewMobileUXPopupClosed()
-{
-	if ( typeof g_newMobileUXPopup !== 'undefined' )
-		g_newMobileUXPopup.Dismiss();
-}
-
 // called by Mobile UX to show a settings dialog with Review filters
 var g_reviewSettingsPopup = null;
 function ShowReviewSettingsModal()

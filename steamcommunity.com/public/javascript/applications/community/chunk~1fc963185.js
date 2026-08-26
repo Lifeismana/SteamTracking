@@ -333,7 +333,7 @@
     },
     44165: (e, s, t) => {
       "use strict";
-      t.d(s, { HD: () => c, P_: () => m, f1: () => D, sB: () => v });
+      t.d(s, { HD: () => c, P_: () => m, f1: () => g, sB: () => v });
       var n = t(19367),
         i = t.n(n),
         a = t(90626),
@@ -406,23 +406,35 @@
         );
       }
       (0, d.V)("g_EventCalendarDevFeatures", c);
-      const j = new Date(),
-        u = Math.floor(j.getTime() / 1e3);
+      const u = new Date(),
+        j = Math.floor(u.getTime() / 1e3);
       function h() {
         const e = Math.floor(Date.now() / 1e3);
-        return c.nOverrideDateNow ? c.nOverrideDateNow + (e - u) : e;
+        return c.nOverrideDateNow ? c.nOverrideDateNow + (e - j) : e;
       }
       function v() {
         var e;
-        return null !== (e = c.nOverrideDateNow) && void 0 !== e ? e : u;
+        return null !== (e = c.nOverrideDateNow) && void 0 !== e ? e : j;
       }
-      function D() {
+      function g() {
         return a.useMemo(() => v(), []);
+      }
+    },
+    48593: (e, s, t) => {
+      "use strict";
+      t.d(s, { n: () => r });
+      t(7850);
+      var n = t(90626),
+        i = t(83085);
+      const a = n.createContext(void 0);
+      function r() {
+        var e;
+        return null !== (e = n.useContext(a)) && void 0 !== e ? e : (0, i.Gw)();
       }
     },
     82477: (e, s, t) => {
       "use strict";
-      t.d(s, { vg: () => u });
+      t.d(s, { vg: () => j });
       var n = t(7850),
         i = t(90626),
         a = t(738),
@@ -433,7 +445,7 @@
         c = t(96059),
         m = t(28240);
       t(9154);
-      function j(e) {
+      function u(e) {
         return (0, n.jsx)(a.x_, {
           onEscKeypress: e.closeModal,
           bDisableBackgroundDismiss: !0,
@@ -443,9 +455,9 @@
           }),
         });
       }
-      function u() {
+      function j() {
         (0, a.pg)(
-          (0, n.jsx)(j, {
+          (0, n.jsx)(u, {
             ownerWin: window,
             redirectURL: window.location.href,
           }),
@@ -458,7 +470,7 @@
           [a] = (0, i.useState)(
             new c.D(l.TS.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
           ),
-          [r, j] = (0, i.useState)(!1);
+          [r, u] = (0, i.useState)(!1);
         return (0, n.jsx)("div", {
           children: r
             ? (0, n.jsx)(o.Fn, {})
@@ -468,7 +480,7 @@
                 platform: d.SS.tS,
                 onComplete: (e) => {
                   e == m.wI.k_PrimaryDomainFail
-                    ? j(!0)
+                    ? u(!0)
                     : window.location.assign(s);
                 },
                 redirectUrl: s,
@@ -478,50 +490,69 @@
         });
       }
     },
-    76684: (e, s, t) => {
+    34121: (e, s, t) => {
       "use strict";
       t.d(s, {
-        K4: () => p,
-        X0: () => x,
-        gS: () => T,
-        pg: () => D,
-        u1: () => y,
-        v9: () => w,
-        yi: () => g,
+        K4: () => k,
+        v9: () => S,
+        X0: () => z,
+        u1: () => A,
+        yi: () => x,
+        pg: () => f,
+        gS: () => E,
       });
-      var n = t(34629),
-        i = t(7850),
-        a = t(90626),
-        r = t(32754),
-        l = t(61859),
-        o = t(75844),
-        d = t(52038),
-        c = t(14771),
-        m = t(55351),
-        j = t.n(m),
+      var n = t(7850),
+        i = t(90626),
+        a = t(32754),
+        r = t(61859),
+        l = t(75844),
+        o = t(52038),
+        d = t(14771),
+        c = t(55351),
+        m = t.n(c),
         u = t(44165),
-        h = t(87937),
-        v = t.n(h);
-      function D(e) {
-        const s = v().tz.guess(),
-          t = v().unix(e).tz(s),
-          n = (0, l.l4)();
-        return n && t.locale(n), t.format("LT");
+        j = t(48593);
+      const h = (0, i.createContext)(!1);
+      var v;
+      const g = Intl.DateTimeFormat().resolvedOptions().timeZone,
+        D =
+          "document" in globalThis
+            ? null ===
+                (v = document.cookie
+                  .split(";")
+                  .find((e) => e.trim().startsWith("timezoneName"))) ||
+              void 0 === v
+              ? void 0
+              : v.split("=")[1]
+            : void 0,
+        T = D && decodeURIComponent(D);
+      function p() {
+        return (0, i.useContext)(h) ? g : null != T ? T : g;
       }
-      function g(e, s) {
-        const t = v().tz.guess(),
-          n = v().unix(e).tz(t),
-          o = (0, l.l4)();
+      "document" in globalThis &&
+        (document.cookie = `timezoneName=${g};expires=${new Date(Date.now() + 31536e6).toUTCString()};path=/;Secure;SameSite=None;`);
+      var y = t(87937),
+        w = t.n(y);
+      function f(e, s) {
+        const t = null != s ? s : w().tz.guess(),
+          n = w().unix(e).tz(t),
+          i = (0, r.l4)();
+        return i && n.locale(i), n.format("LT");
+      }
+      function x(e, s, t) {
+        const l = null != t ? t : w().tz.guess(),
+          o = w().unix(e).tz(l),
+          d = (0, r.l4)();
         return (
-          o && n.locale(o),
-          (0, i.jsxs)(a.Fragment, {
+          d && o.locale(d),
+          (0, n.jsxs)(i.Fragment, {
             children: [
-              n.format("LT"),
+              o.format("LT"),
               s
-                ? (0, i.jsx)(r.Gq, {
-                    toolTipContent: n.format("Z") + ", " + t,
-                    children: (0, i.jsxs)("span", {
-                      children: [" ", n.zoneAbbr()],
+                ? (0, n.jsx)(a.Gq, {
+                    toolTipContent: o.format("Z") + ", " + l,
+                    children: (0, n.jsxs)("span", {
+                      children: [" ", o.zoneAbbr()],
                     }),
                   })
                 : null,
@@ -529,305 +560,304 @@
           })
         );
       }
-      const p = (0, o.PA)((e) => {
+      function N(e, s, t) {
+        return (0, r.TW)(e, {
+          weekday: "short",
+          year: t ? void 0 : "numeric",
+          timeZone: s,
+        });
+      }
+      function b(e, s, t, n) {
+        return w().unix(e).tz(t).isSame(w().unix(s).tz(t), n);
+      }
+      const k = (0, l.PA)((e) => {
           const {
               dateAndTime: s,
               bSingleLine: t,
-              bOnlyTime: n,
+              bOnlyTime: i,
               bOnlyDate: a,
             } = e,
-            r = !n && Boolean(s),
-            o = !a && Boolean(s),
-            d = r && (0, l.TW)(s),
-            c = e.stylesmodule ? { ...j(), ...e.stylesmodule } : j();
+            l = p(),
+            o = !i && Boolean(s),
+            d = !a && Boolean(s),
+            c = o && N(s, l),
+            u = e.stylesmodule ? { ...m(), ...e.stylesmodule } : m();
           return t
-            ? (0, i.jsxs)("span", {
-                className: n || a ? c.DateAndTimeInline : c.DateAndTime,
+            ? (0, n.jsxs)("span", {
+                className: i || a ? u.DateAndTimeInline : u.DateAndTime,
                 children: [
-                  r && d,
-                  r && o ? (0, i.jsx)("span", { children: " " }) : void 0,
-                  Boolean(s && o) && g(s, o),
+                  o && c,
+                  o && d ? (0, n.jsx)("span", { children: " " }) : void 0,
+                  Boolean(s && d) && x(s, d, l),
                 ],
               })
-            : (0, i.jsxs)("div", {
-                className: c.DateAndTime,
+            : (0, n.jsxs)("div", {
+                className: u.DateAndTime,
                 children: [
-                  r &&
-                    (0, i.jsxs)(i.Fragment, {
+                  o &&
+                    (0, n.jsxs)(n.Fragment, {
                       children: [
-                        (0, i.jsx)("div", {
-                          className: c.LocalizedDate,
-                          children: d,
+                        (0, n.jsx)("div", {
+                          className: u.LocalizedDate,
+                          children: c,
                         }),
                         " ",
-                        (0, i.jsx)("span", {
-                          className: c.At,
-                          children: (0, l.we)(
+                        (0, n.jsx)("span", {
+                          className: u.At,
+                          children: (0, r.we)(
                             "#EventDisplay_DateAndTimeCombiner",
                           ),
                         }),
                       ],
                     }),
-                  (0, i.jsx)("div", {
-                    className: c.LocalizedTime,
-                    children: Boolean(s && o) && g(s, o),
+                  (0, n.jsx)("div", {
+                    className: u.LocalizedTime,
+                    children: Boolean(s && d) && x(s, d, l),
                   }),
                 ],
               });
         }),
-        T = (e) => {
+        E = (e) => {
           var s;
-          const t = (0, i.jsx)("div", {
+          const t = (0, n.jsx)("div", {
             className:
               null === (s = e.stylesmodule) || void 0 === s
                 ? void 0
                 : s.DateToolTip,
-            children: (0, i.jsx)(p, {
+            children: (0, n.jsx)(k, {
               dateAndTime: e.rtFullDate,
               bSingleLine: !0,
               stylesmodule: e.stylesmodule,
             }),
           });
-          return (0, i.jsx)(r.m9, {
+          return (0, n.jsx)(a.m9, {
             toolTipContent: t,
             direction: "top",
             className: e.className,
             bTopmost: !0,
             children: e.children,
           });
-        };
-      let w = class extends a.Component {
-        render() {
-          const { startDateAndTime: e, endDateAndTime: s = 0 } = this.props,
-            t = this.props.stylesmodule
-              ? { ...j(), ...this.props.stylesmodule }
-              : j();
-          let n =
-            this.props.bHideEndTime ||
-            null == this.props.endDateAndTime ||
-            this.props.endDateAndTime < 1;
-          if (null == e || 0 == e)
-            return (0, i.jsxs)("div", {
-              className: t.DateAndTime,
+        },
+        S = (0, l.PA)((e) => {
+          const { startDateAndTime: s, endDateAndTime: t = 0 } = e,
+            i = e.stylesmodule ? { ...m(), ...e.stylesmodule } : m(),
+            a = p(),
+            l = (0, j.n)(),
+            d =
+              e.bHideEndTime ||
+              null == e.endDateAndTime ||
+              e.endDateAndTime < 1;
+          if (null == s || 0 == s)
+            return (0, n.jsxs)("div", {
+              className: i.DateAndTime,
               children: [
-                (0, i.jsx)("span", {
-                  className: t.RightSideTitles,
-                  children: (0, l.we)("#EventDisplay_TimeRange"),
+                (0, n.jsx)("span", {
+                  className: i.RightSideTitles,
+                  children: (0, r.we)("#EventDisplay_TimeRange"),
                 }),
-                (0, l.we)("#EventDisplay_TimeDisplayNone"),
+                (0, r.we)("#EventDisplay_TimeDisplayNone"),
               ],
             });
-          let a = u.HD.GetTimeNowWithOverride();
-          if (n)
-            return (0, i.jsxs)("div", {
-              className: t.StartDate,
+          if (d)
+            return (0, n.jsxs)("div", {
+              className: i.StartDate,
               children: [
-                (0, i.jsxs)("div", {
-                  className: t.RightSideTitles,
+                (0, n.jsxs)("div", {
+                  className: i.RightSideTitles,
                   children: [
-                    (0, l.we)(
-                      e < a
+                    (0, r.we)(
+                      s < l
                         ? "#EventDisplay_TimeInPast"
                         : "#EventDisplay_TimeUpcoming",
                     ),
                     " ",
                   ],
                 }),
-                (0, i.jsx)(p, { stylesmodule: t, dateAndTime: e }),
+                (0, n.jsx)(k, { stylesmodule: i, dateAndTime: s }),
               ],
             });
-          let r = e <= a && a <= s;
-          const o = (0, c.JD)(new Date(1e3 * e), new Date(1e3 * s));
-          return (0, i.jsxs)("div", {
-            className: t.MultiDateAndTime,
+          const c = s <= l && l <= t,
+            u = b(s, t, a, "day");
+          return (0, n.jsxs)("div", {
+            className: i.MultiDateAndTime,
             children: [
-              (0, i.jsxs)("div", {
-                className: t.StartDate,
+              (0, n.jsxs)("div", {
+                className: i.StartDate,
                 children: [
-                  (0, i.jsx)("span", {
-                    className: t.RightSideTitles,
-                    children: (0, l.we)(
-                      e >= a
+                  (0, n.jsx)("span", {
+                    className: i.RightSideTitles,
+                    children: (0, r.we)(
+                      s >= l
                         ? "#EventDisplay_TimeBeginsOn"
-                        : s >= a
+                        : t >= l
                           ? "#EventDisplay_TimeBeginsOn_Past"
                           : "#EventDisplay_TimeBeginsOn_StartAndEnd_Past",
                     ),
                   }),
-                  (0, i.jsx)(p, {
-                    stylesmodule: t,
+                  (0, n.jsx)(k, {
+                    stylesmodule: i,
                     bSingleLine: !0,
-                    dateAndTime: e,
-                  }),
-                ],
-              }),
-              (0, i.jsxs)("div", {
-                className: t.EndDate,
-                children: [
-                  (0, i.jsx)("span", {
-                    className: t.RightSideTitles,
-                    children: (0, l.we)(
-                      s < a
-                        ? "#EventDisplay_TimeEndsOn_Past"
-                        : "#EventDisplay_TimeEndsOn",
-                    ),
-                  }),
-                  (0, i.jsx)(p, {
-                    stylesmodule: t,
-                    bSingleLine: !0,
-                    bOnlyTime: o,
                     dateAndTime: s,
                   }),
                 ],
               }),
-              r &&
-                (0, i.jsx)("span", {
-                  className: t.ActiveEvent,
-                  children: (0, i.jsx)("span", {
-                    className: (0, d.A)(
-                      t.RightSideTitles,
-                      t.ActiveEventCallOut,
+              (0, n.jsxs)("div", {
+                className: i.EndDate,
+                children: [
+                  (0, n.jsx)("span", {
+                    className: i.RightSideTitles,
+                    children: (0, r.we)(
+                      t < l
+                        ? "#EventDisplay_TimeEndsOn_Past"
+                        : "#EventDisplay_TimeEndsOn",
                     ),
-                    children: (0, l.we)("#Time_Now"),
+                  }),
+                  (0, n.jsx)(k, {
+                    stylesmodule: i,
+                    bSingleLine: !0,
+                    bOnlyTime: u,
+                    dateAndTime: t,
+                  }),
+                ],
+              }),
+              c &&
+                (0, n.jsx)("span", {
+                  className: i.ActiveEvent,
+                  children: (0, n.jsx)("span", {
+                    className: (0, o.A)(
+                      i.RightSideTitles,
+                      i.ActiveEventCallOut,
+                    ),
+                    children: (0, r.we)("#Time_Now"),
                   }),
                 }),
             ],
           });
-        }
-      };
-      w = (0, n.Cg)([o.PA], w);
-      let y = class extends a.Component {
-        render() {
-          const {
-              startDateAndTime: e,
-              endDateAndTime: s,
-              bHideEndTime: t,
-            } = this.props,
-            n = this.props.stylesmodule
-              ? { ...j(), ...this.props.stylesmodule }
-              : j();
-          if (null == e || 0 == e)
-            return (0, i.jsxs)("div", {
-              className: n.DateAndTime,
+        }),
+        A = (0, l.PA)((e) => {
+          const { startDateAndTime: s, endDateAndTime: t, bHideEndTime: a } = e,
+            l = e.stylesmodule ? { ...m(), ...e.stylesmodule } : m(),
+            o = p(),
+            c = (0, j.n)();
+          if (null == s || 0 == s)
+            return (0, n.jsxs)("div", {
+              className: l.DateAndTime,
               children: [
-                (0, i.jsx)("span", {
-                  className: n.RightSideTitles,
-                  children: (0, l.we)("#EventDisplay_TimeRange"),
+                (0, n.jsx)("span", {
+                  className: l.RightSideTitles,
+                  children: (0, r.we)("#EventDisplay_TimeRange"),
                 }),
-                (0, l.we)("#EventDisplay_TimeDisplayNone"),
+                (0, r.we)("#EventDisplay_TimeDisplayNone"),
               ],
             });
-          const r = u.HD.GetTimeNowWithOverrideAsDate(),
-            o = u.HD.GetTimeNowWithOverride(),
-            d = (0, c.Ct)(new Date(1e3 * e), r),
-            m = (0, i.jsx)("div", {
-              className: n.ShortDateAndTime,
-              children: (0, l.TW)(e, d),
+          const u = b(s, c, o, "year"),
+            h = (0, n.jsx)("div", {
+              className: l.ShortDateAndTime,
+              children: N(s, o, u),
             });
-          let h = (0, i.jsxs)(T, {
-            rtFullDate: e,
-            stylesmodule: n,
+          let v = (0, n.jsxs)(E, {
+            rtFullDate: s,
+            stylesmodule: l,
             children: [
-              (0, i.jsx)("div", {
-                className: n.RightSideTitles,
-                children: (0, l.we)(
-                  e < o
+              (0, n.jsx)("div", {
+                className: l.RightSideTitles,
+                children: (0, r.we)(
+                  s < c
                     ? "#EventDisplay_TimeInPast"
                     : "#EventDisplay_TimeUpcoming",
                 ),
               }),
-              m,
+              h,
             ],
           });
           if (
-            (o < e &&
-              e < o + c.Kp.PerWeek &&
-              (h = (0, i.jsx)(T, {
-                rtFullDate: e,
-                stylesmodule: n,
-                children: (0, i.jsx)("div", {
-                  className: n.RightSideTitles,
-                  children: (0, l.PP)(
+            (c < s &&
+              s < c + d.Kp.PerWeek &&
+              (v = (0, n.jsx)(E, {
+                rtFullDate: s,
+                stylesmodule: l,
+                children: (0, n.jsx)("div", {
+                  className: l.RightSideTitles,
+                  children: (0, r.PP)(
                     "#EventDisplay_EventUpcoming_WithDateAndTime",
-                    m,
-                    (0, i.jsxs)("div", {
-                      className: n.ShortDateAndTime,
-                      children: [g(e), " "],
+                    h,
+                    (0, n.jsxs)("div", {
+                      className: l.ShortDateAndTime,
+                      children: [x(s, !1, o), " "],
                     }),
                   ),
                 }),
               })),
-            t || null == s || s < 1)
+            a || null == t || t < 1)
           )
-            return h;
-          const v = e <= o && o <= s;
-          v &&
-            (h = (0, i.jsx)(T, {
-              rtFullDate: e,
-              className: n.ActiveEvent,
-              stylesmodule: n,
-              children: (0, i.jsx)("span", {
-                className: n.ActiveEventCallOut,
-                children: (0, l.we)("#Time_Now"),
+            return v;
+          const g = s <= c && c <= t;
+          g &&
+            (v = (0, n.jsx)(E, {
+              rtFullDate: s,
+              className: l.ActiveEvent,
+              stylesmodule: l,
+              children: (0, n.jsx)("span", {
+                className: l.ActiveEventCallOut,
+                children: (0, r.we)("#Time_Now"),
               }),
             }));
           let D = null;
-          const p = v ? s - o : s - e;
-          if (p <= c.Kp.PerDay) {
-            const e = (0, i.jsx)("div", {
-              className: n.ShortDateAndTime,
-              children: (0, l.Hq)(p, !0),
+          const T = g ? t - c : t - s;
+          if (T <= d.Kp.PerDay) {
+            const e = (0, n.jsx)("div", {
+              className: l.ShortDateAndTime,
+              children: (0, r.Hq)(T, !0),
             });
             D =
-              s < o
-                ? (0, i.jsxs)("div", {
-                    className: n.RightSideTitles,
-                    children: [(0, l.we)("#EventDisplay_TimeEndsOn_Ran"), e],
+              t < c
+                ? (0, n.jsxs)("div", {
+                    className: l.RightSideTitles,
+                    children: [(0, r.we)("#EventDisplay_TimeEndsOn_Ran"), e],
                   })
-                : (0, i.jsx)("div", {
-                    className: n.RightSideTitles,
-                    children: (0, l.PP)(
-                      v
+                : (0, n.jsx)("div", {
+                    className: l.RightSideTitles,
+                    children: (0, r.PP)(
+                      g
                         ? "#EventDisplay_TimeLeft"
                         : "#EventDisplay_RunsForDuration",
                       e,
                     ),
                   });
           } else {
-            const e = r.getFullYear() == new Date(1e3 * s).getFullYear();
-            D = (0, i.jsxs)(a.Fragment, {
+            const e = b(t, c, o, "year");
+            D = (0, n.jsxs)(i.Fragment, {
               children: [
-                (0, i.jsx)("div", {
-                  className: n.RightSideTitles,
-                  children: (0, l.we)(
-                    s < o
+                (0, n.jsx)("div", {
+                  className: l.RightSideTitles,
+                  children: (0, r.we)(
+                    t < c
                       ? "#EventDisplay_TimeEndsOn_Past"
                       : "#EventDisplay_TimeEndsOn",
                   ),
                 }),
-                (0, i.jsx)("div", {
-                  className: n.ShortDateAndTime,
-                  children: (0, l.TW)(s, e),
+                (0, n.jsx)("div", {
+                  className: l.ShortDateAndTime,
+                  children: N(t, o, e),
                 }),
               ],
             });
           }
-          const w = (0, i.jsx)(T, {
-            rtFullDate: s,
-            stylesmodule: n,
+          const y = (0, n.jsx)(E, {
+            rtFullDate: t,
+            stylesmodule: l,
             children: D,
           });
-          return (0, i.jsxs)("div", {
-            className: n.ShortDateRange,
-            children: [h, w],
+          return (0, n.jsxs)("div", {
+            className: l.ShortDateRange,
+            children: [v, y],
           });
-        }
-      };
-      function f(e, s, t) {
+        });
+      function _(e, s, t) {
         const n = u.HD.GetTimeNowWithOverrideAsDate(),
           i = new Date(1e3 * e),
           a = new Date(1e3 * s),
-          r = n.getFullYear() == i.getFullYear(),
+          l = n.getFullYear() == i.getFullYear(),
           o = n.getFullYear() == a.getFullYear(),
           d = i.getFullYear() == a.getFullYear(),
           c = d && i.getMonth() == a.getMonth(),
@@ -835,9 +865,9 @@
           j = {
             day: "numeric",
             month: null != t ? t : "long",
-            year: r ? void 0 : "numeric",
+            year: l ? void 0 : "numeric",
           },
-          h = i.toLocaleDateString(l.pf.GetPreferredLocales(), j);
+          h = i.toLocaleDateString(r.pf.GetPreferredLocales(), j);
         if (m) return h;
         {
           const e = {
@@ -846,23 +876,22 @@
             year: d ? void 0 : "numeric",
           };
           return (
-            h + " - " + a.toLocaleDateString(l.pf.GetPreferredLocales(), e)
+            h + " - " + a.toLocaleDateString(r.pf.GetPreferredLocales(), e)
           );
         }
       }
-      function x(e) {
+      function z(e) {
         const {
           rtStartDate: s,
           rtEndDate: t,
-          strMonthFormat: n,
+          strMonthFormat: i,
           className: a,
         } = e;
-        return (0, i.jsxs)("div", {
+        return (0, n.jsxs)("div", {
           className: a,
-          children: [f(s, t, n), " "],
+          children: [_(s, t, i), " "],
         });
       }
-      y = (0, n.Cg)([o.PA], y);
     },
   },
 ]);

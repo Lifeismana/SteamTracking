@@ -281,11 +281,11 @@
             { ..._, className: a()(o.Box, (0, m.T)(), s.className) },
             d,
           ),
-          y = r ?? i?.focusable ?? !!_.onClick,
-          x = (0, p.jsx)(e, { ref: c, ...f });
-        return u && (y || i)
-          ? (0, p.jsx)(t.J, { ...(i || {}), focusable: y, children: x })
-          : x;
+          x = r ?? i?.focusable ?? !!_.onClick,
+          y = (0, p.jsx)(e, { ref: c, ...f });
+        return u && (x || i)
+          ? (0, p.jsx)(t.J, { ...(i || {}), focusable: x, children: y })
+          : y;
       }
       const d = c.h;
       function u(s) {
@@ -308,17 +308,17 @@
         const { as: e = "div", focusable: r, navProps: t, ref: c, ..._ } = s,
           u = (0, l.Qn)(),
           f = (0, a.mz)({ ..._, className: i()(s.className, m.Flex) }, d),
-          y = r ?? t?.focusable ?? !!_.onClick,
-          x = (0, p.jsx)(e, { ref: c, ...f }),
+          x = r ?? t?.focusable ?? !!_.onClick,
+          y = (0, p.jsx)(e, { ref: c, ...f }),
           v = (0, n.n)(_.direction ?? "row");
         return u
           ? (0, p.jsx)(o.J, {
               ...(t || {}),
-              focusable: y,
+              focusable: x,
               "flow-children": v,
-              children: x,
+              children: y,
             })
-          : x;
+          : y;
       }
       const d = [
         ...c.h,
@@ -853,16 +853,18 @@
       function c(s) {
         const { children: e, "flow-children": r, ...c } = s,
           { gamepadEvents: m } = (0, a.C7)(s);
+        let l;
         r && (c.layout = (0, i.O)(r)),
           m.onOKButton ||
-            ("onClick" in e.props && e.props.onClick && (m.onOKButton = a._K));
-        const { ref: l, node: _ } = (0, a.qp)(c);
-        (0, n.Ui)(m, l);
-        const d = (0, a.BT)(_),
-          u = (0, o.Ue)(l, e.props?.ref, d);
+            ("onClick" in e.props && e.props.onClick && (m.onOKButton = a._K)),
+          c.focusable && (l = e.props.tabIndex || 0);
+        const { ref: _, node: d } = (0, a.qp)(c);
+        (0, n.Ui)(m, _);
+        const u = (0, a.BT)(d),
+          f = (0, o.Ue)(_, e.props?.ref, u);
         return (0, p.jsx)(a.TJ.Provider, {
-          value: _,
-          children: t.cloneElement(e, { ...e.props, ref: u }),
+          value: d,
+          children: t.cloneElement(e, { ...e.props, ref: f, tabIndex: l }),
         });
       }
     },

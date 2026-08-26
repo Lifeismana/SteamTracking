@@ -10244,6 +10244,11 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      !(function (_) {
+        (_[(_.k_ENotifyFlagNone = 0)] = "k_ENotifyFlagNone"),
+          (_[(_.k_ENotifyFlagByEmail = 1)] = "k_ENotifyFlagByEmail"),
+          (_[(_.k_ENotifyFlagByPush = 2)] = "k_ENotifyFlagByPush");
+      })(_ || (_ = {}));
       class _ {
         constructor(_) {
           (this.clanid = void 0),
@@ -10271,12 +10276,7 @@
         (0, _._)([_._], _.prototype, "limited_user", void 0),
         (0, _._)([_._], _.prototype, "event_ignored", void 0),
         (0, _._)([_._], _.prototype, "event_followed", void 0),
-        (0, _._)([_._], _.prototype, "event_followed_flags", void 0),
-        (function (_) {
-          (_[(_.k_ENotifyFlagNone = 0)] = "k_ENotifyFlagNone"),
-            (_[(_.k_ENotifyFlagByEmail = 1)] = "k_ENotifyFlagByEmail"),
-            (_[(_.k_ENotifyFlagByPush = 2)] = "k_ENotifyFlagByPush");
-        })(_ || (_ = {}));
+        (0, _._)([_._], _.prototype, "event_followed_flags", void 0);
       class _ {
         constructor() {
           (this.m_mapClanToUserPermissions = new Map()),

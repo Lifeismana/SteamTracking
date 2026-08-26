@@ -514,49 +514,10 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { appid: _, color: _, bgcolor: _ } = _,
-          _ = (0, _._)(),
-          _ = (0, _._)(_),
-          _ = (0, _._)(_);
-        return (0, _.jsx)("div", {
-          className: _().WishlistHoverCtn,
-          children: (0, _.jsx)(_._, {
-            snr: _,
-            _: _,
-            classOverride: (0, _._)(
-              _().WishlistButtonNotTop,
-              _().BBCodeWishlistButton,
-              "WishlistButton",
-            ),
-            styleOverride: {
-              color: _,
-              backgroundColor: _,
-            },
-            bShowInGamepadUI: !0,
-          }),
-        });
-      }
-      function _(_) {
-        const _ = Number(_.args.appid);
-        if (!_) return null;
-        const _ = (0, _._)(_.args.color, "black"),
-          _ = (0, _._)(_.args.bgcolor, "white");
-        return (0, _.jsx)(_, {
-          appid: _,
-          color: _,
-          bgcolor: _,
-        });
-      }
-      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -623,6 +584,81 @@
           bgcolor: _,
         });
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { clanAccountID: _, color: _, bgcolor: _ } = _;
+        (0, _._)();
+        const [_, _] = _.useState(!1);
+        return (0, _.jsx)("div", {
+          className: (0, _._)(_().BBCodeFollowButton, _ && _().isHovered),
+          onMouseEnter: () => _(!0),
+          onMouseLeave: () => _(!1),
+          children: (0, _.jsx)(_._, {
+            nCreatorAccountID: _,
+            classOverride: _().FollowGameButtonNotTop,
+            styleOverride: {
+              color: _,
+              backgroundColor: _,
+            },
+            followType: "group",
+          }),
+        });
+      }
+      function _(_) {
+        const { event: _ } = _.context,
+          _ = Number(_.args.groupid) || _?.clanSteamID.GetAccountID();
+        if (!_) return null;
+        const _ = (0, _._)(_.args.color, "black"),
+          _ = (0, _._)(_.args.bgcolor, "white");
+        return (0, _.jsx)(_, {
+          clanAccountID: _,
+          color: _,
+          bgcolor: _,
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { appid: _, color: _, bgcolor: _ } = _,
+          _ = (0, _._)(),
+          _ = (0, _._)(_),
+          _ = (0, _._)(_);
+        return (0, _.jsx)("div", {
+          className: _().WishlistHoverCtn,
+          children: (0, _.jsx)(_._, {
+            snr: _,
+            _: _,
+            classOverride: (0, _._)(
+              _().WishlistButtonNotTop,
+              _().BBCodeWishlistButton,
+              "WishlistButton",
+            ),
+            styleOverride: {
+              color: _,
+              backgroundColor: _,
+            },
+            bShowInGamepadUI: !0,
+          }),
+        });
+      }
+      function _(_) {
+        const _ = Number(_.args.appid);
+        if (!_) return null;
+        const _ = (0, _._)(_.args.color, "black"),
+          _ = (0, _._)(_.args.bgcolor, "white");
+        return (0, _.jsx)(_, {
+          appid: _,
+          color: _,
+          bgcolor: _,
+        });
+      }
+      let _ = null;
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -850,41 +886,6 @@
         }
         return null;
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { clanAccountID: _, color: _, bgcolor: _ } = _;
-        (0, _._)();
-        const [_, _] = _.useState(!1);
-        return (0, _.jsx)("div", {
-          className: (0, _._)(_().BBCodeFollowButton, _ && _().isHovered),
-          onMouseEnter: () => _(!0),
-          onMouseLeave: () => _(!1),
-          children: (0, _.jsx)(_._, {
-            nCreatorAccountID: _,
-            classOverride: _().FollowGameButtonNotTop,
-            styleOverride: {
-              color: _,
-              backgroundColor: _,
-            },
-            followType: "group",
-          }),
-        });
-      }
-      function _(_) {
-        const { event: _ } = _.context,
-          _ = Number(_.args.groupid) || _.clanSteamID.GetAccountID();
-        if (!_) return null;
-        const _ = (0, _._)(_.args.color, "black"),
-          _ = (0, _._)(_.args.bgcolor, "white");
-        return (0, _.jsx)(_, {
-          clanAccountID: _,
-          color: _,
-          bgcolor: _,
-        });
-      }
       let _ = null;
       function _(_) {
         const { event: _ } = _.context,
@@ -1076,6 +1077,26 @@
                   dictionary:
                     (null == _ &&
                       (_ = new Map([
+                        ...Array.from(
+                          (null == _ &&
+                            (_ = new Map([
+                              [
+                                "wishlist",
+                                {
+                                  Constructor: _,
+                                  autocloses: !1,
+                                },
+                              ],
+                              [
+                                "followgroup",
+                                {
+                                  Constructor: _,
+                                  autocloses: !1,
+                                },
+                              ],
+                            ])),
+                          _).entries(),
+                        ),
                         [
                           "itemdef",
                           {
@@ -1086,21 +1107,7 @@
                           },
                         ],
                         [
-                          "wishlist",
-                          {
-                            Constructor: _,
-                            autocloses: !1,
-                          },
-                        ],
-                        [
                           "followgame",
-                          {
-                            Constructor: _,
-                            autocloses: !1,
-                          },
-                        ],
-                        [
-                          "followgroup",
                           {
                             Constructor: _,
                             autocloses: !1,

@@ -74,15 +74,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        ImagesOuterContainer: "_3A8RGZO2pwg1yKDAdFqp9r",
-        Hilight: "_1v_zQLXgFsvon1SwxrWjE-",
-        ImageContainer: "_2ti3yMwzfkGoiW68FuNjTG",
-        Image: "y902_9A0Wj5bTshbt4xRb",
-        ImageFilename: "_2jzLZXXxgDMMcA9X0QDSdg",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         ColorCtn: "Sf6uEgb-RsQVL8-DaDtRl",
       };
     },
@@ -415,77 +406,6 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ {
-        m_eCurLang = (0, _.sfN)(_._.LANGUAGE);
-        m_rgHasData = (0, _._)([], _.bP9, !1);
-        m_bHasLocalizationContext = !1;
-        m_callback = new _._();
-        GetCallback() {
-          return this.m_callback;
-        }
-        GetCurEditLanguage() {
-          return this.m_eCurLang;
-        }
-        SetCurEditLanguage(_) {
-          return (
-            this.m_eCurLang != _ &&
-            ((this.m_eCurLang = _), this.GetCallback().Dispatch(_), !0)
-          );
-        }
-        SetHasLanguage(_) {
-          _.forEach((_, _) => {
-            this.m_rgHasData[_] != _ && (this.m_rgHasData[_] = _);
-          });
-        }
-        BHasLanguageData(_) {
-          return this.m_rgHasData[_];
-        }
-        GetHasLocalizationContext() {
-          return this.m_bHasLocalizationContext;
-        }
-        SetHasLocalizationContext(_) {
-          _ != this.m_bHasLocalizationContext &&
-            (this.m_bHasLocalizationContext = _);
-        }
-        static s_globalSingletonStore;
-        static Get() {
-          return (
-            _.s_globalSingletonStore ||
-              ((_.s_globalSingletonStore = new _()),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.DUS = _.s_globalSingletonStore)),
-            _.s_globalSingletonStore
-          );
-        }
-        constructor() {
-          (0, _._)(this);
-        }
-      }
-      function _() {
-        return (0, _._)(() => _.Get().GetCurEditLanguage());
-      }
-      (0, _._)([_._], _.prototype, "m_eCurLang", void 0),
-        (0, _._)([_._], _.prototype, "m_rgHasData", void 0),
-        (0, _._)([_._], _.prototype, "m_bHasLocalizationContext", void 0),
-        (0, _._)([_._], _.prototype, "GetCurEditLanguage", null),
-        (0, _._)([_._], _.prototype, "SetCurEditLanguage", null),
-        (0, _._)([_._.bound], _.prototype, "SetHasLanguage", null),
-        (0, _._)([_._], _.prototype, "BHasLanguageData", null);
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
         _: () => _,
         _: () => _,
       });
@@ -570,303 +490,6 @@
           _
         );
       }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = (_) => {
-          const { clanSteamID: _, fnImageSelectCallBack: _ } = _,
-            [_, _] = (0, _.useState)(""),
-            _ = (0, _._)(_.clanSteamID.GetAccountID()),
-            _ = () => _.closeModal && _.closeModal(),
-            _ = _._.GetFilteredClanImages(_, _),
-            _ = (_) => {
-              __webpack_require__(_), _();
-            };
-          return (0, _.jsx)(_._, {
-            children: (0, _.jsx)(_._, {
-              onEscKeypress: _,
-              children: (0, _.jsxs)(_._, {
-                children: [
-                  (0, _.jsx)(_._, {
-                    children: (0, _._)("#ClanImageChooser_Title"),
-                  }),
-                  (0, _.jsx)(_._, {
-                    children: (0, _.jsxs)(_._, {
-                      children: [
-                        (0, _.jsx)("p", {
-                          children: (0, _._)("#ClanImageChooser_Desc"),
-                        }),
-                        (0, _.jsx)(_._, {
-                          placeholder: (0, _._)("#ClanImageChooser_Search"),
-                          value: _,
-                          onChange: (_) => _(_.currentTarget.value),
-                        }),
-                        (0, _.jsx)("div", {
-                          className: _.ImagesOuterContainer,
-                          children: _
-                            ? (0, _.jsx)(_._, {
-                                size: "medium",
-                                string: (0, _._)("#Loading"),
-                              })
-                            : Boolean(_.length > 0)
-                              ? _.map((_) =>
-                                  (0, _.jsx)(
-                                    _,
-                                    {
-                                      clanImage: _,
-                                      searchStringHilight: _,
-                                      fnImageClick: _,
-                                    },
-                                    "ci" + _.image_hash,
-                                  ),
-                                )
-                              : Boolean(0 == _.trim().length)
-                                ? (0, _.jsx)("div", {
-                                    children: (0, _._)(
-                                      "#ClanImageChooser_None",
-                                    ),
-                                  })
-                                : (0, _.jsx)("div", {
-                                    children: (0, _._)(
-                                      "#EventCalendar_GameSearch_NoneFound",
-                                    ),
-                                  }),
-                        }),
-                      ],
-                    }),
-                  }),
-                  (0, _.jsx)(_._, {
-                    children: (0, _.jsx)(_._, {
-                      onClick: _,
-                      children: (0, _._)("#Button_Cancel"),
-                    }),
-                  }),
-                ],
-              }),
-            }),
-          });
-        },
-        _ = (_) => {
-          const { clanImage: _, searchStringHilight: _, fnImageClick: _ } = _;
-          let _ = _.file_name ? _.file_name : "",
-            _ = _(_, _, String(_.imageid), _.Hilight);
-          return (0, _.jsxs)("div", {
-            className: _.ImageContainer,
-            children: [
-              (0, _.jsx)("div", {
-                className: _.Image,
-                style: {
-                  backgroundImage: `url( '${_.thumb_url}' )`,
-                },
-                onDoubleClick: () => _(_),
-              }),
-              (0, _.jsx)("div", {
-                className: _.ImageFilename,
-                title: _,
-                children: _,
-              }),
-            ],
-          });
-        };
-      function _(_, _, _, _) {
-        let _ = [];
-        if (_.length > 0) {
-          let _ = _.toLocaleLowerCase();
-          for (let _ = 0; _ < _.length; ) {
-            let _ = _.indexOf(_, _);
-            if (_ < 0) {
-              _.push(
-                (0, _.jsx)(
-                  "span",
-                  {
-                    children: _.substring(_),
-                  },
-                  _ + "_" + String(_),
-                ),
-              );
-              break;
-            }
-            _ < _ &&
-              _.push(
-                (0, _.jsx)(
-                  "span",
-                  {
-                    children: _.substring(_, _),
-                  },
-                  _ + "_" + String(_),
-                ),
-              ),
-              _.push(
-                (0, _.jsx)(
-                  "span",
-                  {
-                    className: _,
-                    children: _.substr(_, _.length),
-                  },
-                  _ + "_" + String(_),
-                ),
-              ),
-              (_ = _ + _.length);
-          }
-        } else
-          _.push(
-            (0, _.jsx)(
-              "span",
-              {
-                children: _,
-              },
-              _ + "_null",
-            ),
-          );
-        return _;
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      let _ = class extends _.Component {
-        GenerateLanguageOptions() {
-          let _ = [];
-          const {
-            fnFilterLanguage: _,
-            fnLangHasData: _,
-            fnLastUpdateRTime: _,
-            fnIsLangSupported: _,
-          } = this.props;
-          this.props.bAllowUnsetOption &&
-            _.push(
-              (0, _.jsx)(
-                "option",
-                {
-                  value: _.xPp,
-                  children: (0, _._)("#language_selection_none"),
-                },
-                "langpicker_unset",
-              ),
-            );
-          let _ = new Array();
-          const _ = this.props.realms || [_._.k_ESteamRealmGlobal];
-          for (const _ of _._.GetLanguageListForRealms(_)) {
-            if (_ && !_(_)) continue;
-            const _ = (0, _.LgB)(_),
-              _ = (0, _._)("#Language_" + _),
-              _ = !(!_ || !_(_));
-            _.push({
-              eLang: _,
-              sLocName: _,
-              bSupported: _,
-            });
-          }
-          _.sort((_, _) =>
-            _.bSupported != _.bSupported
-              ? _.bSupported
-                ? -1
-                : 1
-              : _.sLocName.localeCompare(_.sLocName),
-          );
-          let _ = !1;
-          for (const _ of _) {
-            _.bSupported != _ &&
-              (_.push(
-                (0, _.jsx)(
-                  "option",
-                  {
-                    className: _().SupportedGroupLabel,
-                    disabled: !0,
-                    children: (0, _._)(
-                      _.bSupported
-                        ? "#LanguageGroup_Supported"
-                        : "#LanguageGroup_Unsupported",
-                    ),
-                  },
-                  _.bSupported ? "SupportedGroup" : "UnsupportedGroup",
-                ),
-              ),
-              (_ = _.bSupported));
-            const _ = _ && __webpack_require__(_.eLang),
-              _ = _ && _(_.eLang);
-            let _ = _.sLocName;
-            _ &&
-              0 !== _ &&
-              ((_ += " "),
-              (_ += (0, _._)(
-                "#Language_Last_Update",
-                (0, _._)(_) +
-                  " @ " +
-                  (0, _._)(_, {
-                    bForce24HourClock: !1,
-                  }),
-              ))),
-              _.push(
-                (0, _.jsx)(
-                  "option",
-                  {
-                    value: _.eLang,
-                    className: (0, _._)(
-                      {
-                        [_().LanguageWithContent]: _,
-                      },
-                      _.bSupported
-                        ? _().SupportedLanguage
-                        : _().UnsupportedLanguage,
-                    ),
-                    children: _,
-                  },
-                  "langpicker" + _.eLang + (_ ? "_hasdata" : ""),
-                ),
-              );
-          }
-          return _;
-        }
-        OnLanguageChange(_) {
-          const { fnOnLanguageChanged: _, selectedLang: _ } = this.props;
-          let _ = Number.parseInt(_.currentTarget.value);
-          _ != _ && _ && _(_);
-        }
-        render() {
-          const { selectedLang: _, bDisabled: _, strTooltip: _ } = this.props;
-          let _ = this.GenerateLanguageOptions();
-          return (0, _.jsx)(_._, {
-            toolTipContent: _,
-            children: (0, _.jsx)("select", {
-              value: _,
-              onChange: this.OnLanguageChange,
-              disabled: _,
-              children: _,
-            }),
-          });
-        }
-      };
-      (0, _._)([_._], _.prototype, "OnLanguageChange", null),
-        (_ = (0, _._)([_._], _));
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -1524,8 +1147,28 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        if (!_ || !_.BIsClanAccount()) return !1;
+        const _ = _._.Get().GetPartnerEventPermissions(_);
+        return !!_ && (_ ? _.valve_admin : _.valve_admin || _.support_user);
+      }
+      function _(_) {
+        const { clanSteamID: _, _: _ } = _;
+        return _(_, _.requireAdmin)
+          ? (0, _.jsx)("div", {
+              _: _,
+              className: (0, _._)(
+                _.className,
+                _.requireAdmin
+                  ? _.ValveOnlyAdminBackground
+                  : _.ValveOnlyBackground,
+              ),
+              children: _.children,
+            })
+          : null;
+      }
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2267,7 +1910,6 @@
           (_[(_.k_eInsertVideo = 4)] = "k_eInsertVideo");
       })(_ || (_ = {}));
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
@@ -4516,7 +4158,7 @@
                 }),
               ],
             }),
-            (0, _.jsx)(_._, {
+            (0, _.jsx)(_, {
               clanSteamID: _.clanSteamID,
               children: (0, _.jsx)(_._, {
                 checked: !!_,
@@ -5199,7 +4841,7 @@
                 : _._.EPreviewMode_Enabled
               : _._.EPreviewMode_Disabled,
             _ = _ || __webpack_require__.GetEventType() != _.ajI,
-            _ = (0, _._)(_.clanSteamID),
+            _ = _(_.clanSteamID),
             _ = _ ? _._.NoTransform : _._.NoTransformSparseContent,
             _ = (0, _._)(
               _().SaleOuterContainer,
@@ -5872,6 +5514,14 @@
           children: _,
         });
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      const _ =
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAcJJREFUeNqkUz1PAkEQfStggjESejU0GozlGqn8SGywkYIYY0IsaLCwIBTQUN5fMLGm8S8QSWwslVAYjAlUBEJDhCgWwp3nzN6eHqIVl8zN7rx5b+dm9oRt25jlmcOMj59f10JAkPcBcXIGWdECyqYn6TfGdZ9S9d4K4gQYx4WCtJzE+G/sKJudwpQABUGnGSf5vKzX60jmctL8SYzz+iCdls1mEzuplMIsLSC4iSUh1ClUlpHIZGStVkM0GsVNqVRlIJZIyG63i1AohMdKpUrZRQqXz4j7LWA7VSiR/WRSNhsNRRgOh+i02wgGg3hrtRSZelLmI6cExs7nKJGVtTX50uupMn0+H157PUWmZpYDXLoWUFPo6MC87jivx4MBFtxOWZYS11VipNdT98DWDVsPh2XQNLFIMdc4xpg9OZ3JMdIpRowSXVKt36+yuXvGxn+N0XS+3zj0kG+JSPEi261H5FCLmN9lUyNWyZ+Qag54eA6Hbfa8j1A88g+2qrlqCkKIZdovbAG7m8D5E3B5D9xR7IPsk/u7DextABd14OrBwd6J23YFligQ0IPwXE7lbedXUAPya5yHMiLuq5j1d/4SYAAj3NATBGE4PgAAAABJRU5ErkJggg==";
     },
   },
 ]);

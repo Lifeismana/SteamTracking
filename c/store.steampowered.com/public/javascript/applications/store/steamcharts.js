@@ -81,15 +81,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        ImagesOuterContainer: "_3A8RGZO2pwg1yKDAdFqp9r",
-        Hilight: "_1v_zQLXgFsvon1SwxrWjE-",
-        ImageContainer: "_2ti3yMwzfkGoiW68FuNjTG",
-        Image: "y902_9A0Wj5bTshbt4xRb",
-        ImageFilename: "_2jzLZXXxgDMMcA9X0QDSdg",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         ColorCtn: "Sf6uEgb-RsQVL8-DaDtRl",
       };
     },
@@ -288,56 +279,8 @@
     },
     chunkid: (module) => {
       module.exports = {
-        PageSection: "_3JAzRcSUiSPCKW2Jiexp_E",
-        SectionTitle: "f7CCwSS2I4NYoGB4wG2TA",
         ChartPage: "_1A7NagdRz58_o8HPHMa3eE",
-        Placeholder: "_3XI-CAps_XOBY4D5L-KYLK",
-        GhostShine: "_1NHk0m80j5yOZhsPNvNh2t",
         NoticeBox: "Wz_vOPow_bEtEb4cgCPEi",
-        ChartTable: "_37mz_pxwuHG8BN4GUhxjz_",
-        ColumnHeaders: "WgKS9JzWbUHUdUaxAkVyq",
-        HoverCell: "_2-85msRUZlh9lpwsunR7GZ",
-        Rank: "_2-OCRGbF9FZtfD3sGgLVh4",
-        Game: "_1qyeHZiM3mmbo0imr68dMz",
-        Price: "_1JgiWYMTfTwaQ2HJEMyY-Y",
-        Change: "_3hclDX7-WLUsWJuYR_oXUr",
-        Concurrent: "_2k9G_tjU3m_yCndUPB8Vxs",
-        Weeks: "UuiGaH84yY06Q47lU9lp9",
-        PeakInGame: "_1selfCx1P9F5HDvT0uOwLw",
-        RightCell: "_3eIfqcXQHr4FKPcN1v2v6k",
-        TableRow: "_1e_ncYHkPNaZ3hco_QyRuD",
-        CapsuleCell: "GdWJO09fEv96lffYqSCTD",
-        Banner: "_1y4IQJgl-Jm3fy9XW-WGfi",
-        BannerText: "_2xCtgVHxn4YjOvd45SCa-9",
-        HoverSource: "ueQE3FBjRAzpAC3w7ctAa",
-        HoverMask: "_23Aj18GeEMdrEFmQn56P6b",
-        RankCell: "_22FqHiBtqazXeqPBBGNE3t",
-        PriceCell: "vqWZah9F9q2fxDWpRc09q",
-        ConcurrentCell: "_23DBGybtilOiZO0CaLvzi",
-        WeeksCell: "_1yNbVdpUyYd6KdwaudPdZV",
-        Tooltip: "_21PHmTWxuLnZX8sNtfCGhJ",
-        PeakInGameCell: "_1cfHFhTt_LjOgNdWvDg2oF",
-        Unavailable: "_2GDqaPnDNWFIHQ9JQjeSle",
-        TopChartItem: "_1Ijc93oftWwc5TP2IX5e5Z",
-        GameName: "_2_W75fRP5diDoCLTI8lVUZ",
-        CapsuleArt: "_10KmYuzW6Xl9aHSW-PwtEO",
-        ExpandedImage: "_30CvPRiOtj-wBKvttJwqxp",
-        ExpandedMedia: "_1TFZaRvl265bi1fRQH6mZ5",
-        ExpandedButtons: "_24pnIohScWPZiQmmQhS7t6",
-        CartButton: "_29c7H2hUjzfNTWZHDAB3mI",
-        GameInfo: "_7ffoOUacbrw7ISIwHkv95",
-        GameUnavailable: "eEqFiN9LU_ZeLVOFeD08m",
-        ChangeCell: "_5XCIfYrMrb9F-9RyAd5HC",
-        ListWeeksDebut: "_2MncBw552vxKbkM9arCywZ",
-        ListWeeksReturning: "_1aZmrNWUBvB33x3h8za9bF",
-        TopSectionFlex: "_2bKWdV5U2BrfG3oLiJtjxp",
-        SteamDeckChartDropdown: "_1N8CP2dzq0c62RNm-MTTek",
-        SteamDeckBanner: "_1cbTAisove0MJRamLa2SpQ",
-        SteamDeckBannerWords: "E83jGEMUS1yGii53esbcf",
-        SteamDeckBannerTitle: "_3dna9-Ja8UALHZrp-pACoL",
-        SteamDeckBannerDesc: "_1BY2vugkNlWaYquJZTLt7k",
-        DeckChartDateRange: "_1CFdSGWj6eAXRM57divHxc",
-        ChartTopGameBackground: "_3MEzYHzsg_CYYpgZCFCqhX",
       };
     },
     chunkid: (module) => {
@@ -361,48 +304,6 @@
         SilverSection: "_2KzJEuTfwQGu9Qw4v4HY7R",
         BronzeSection: "aAu4zZKXrAiL6gzPT_bZG",
         AllTiers: "_3MBqFIUsuhw30AtrWEE_mX",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        ChartContainerPlaceholder: "_2XkUVIIrP51qhPwOneciZ7",
-        ChartContainer: "FpMH38j765H86InvUXI5T",
-        Chart: "Rv-Tnx--KwCDgFsmHA7Zz",
-        Stats: "_3ZiPuQhQ0Lw1S4fNC5ARyq",
-        StatsTitle: "TY7Qbq7FuibkQDpXGPxsj",
-        StatSubtitle: "_20FBRckrXi0EjrMvjWq5HF",
-        Concurrent: "_1kVRthVYe6HB6ezBCivTmn",
-        Now: "_2j4oL1dtp5TAyU6zyFilbm",
-        CurrentStats: "_3uEBRDFiG3dxKoRzhAmwWt",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        PageContainer: "ACgX0o9I42_zqWZHyiIhX",
-        ChartItemsCtn: "_3BNYFDMfEzv1suZ5vOElzP",
-        ChartMoreBtn: "_2HZLNwzzD55tTBYgo1DBPf",
-        PageSubtitle: "PEIn3GTol3TSEIpsId62R",
-        SideBySideCharts: "_2nroVb7AfBh6rPGe_2rL7c",
-        OverviewChart: "_13C_Z85ObQf8U0_-3euyjs",
-        Chart: "_3r75ht9iFN1q6tgtUsm9tT",
-        TopItem: "_3rNNliu33MNHlKu6Qb2gzl",
-        Capsule: "_1hnd3zhzDjsO5OvWyMyHAb",
-        ItemRow: "WAvlEQBfIc3xcH69uozUp",
-        Rank: "_2Y06IOh6M8eYD74smDwmFc",
-        ItemNameCtn: "_33Kj2Qx_9z4VyvlKulpay8",
-        ItemDesc: "_27OhqiS6skOPPWCddDkw1n",
-        AddDataCtn: "_3hcZip826q0Brc4izWaCHq",
-        AddDataDesc: "_2AWprPMkYtG9qA05X_PnBi",
-        ImageButtonCtn: "_11u1MRqFV4IB3t8XVzUnNv",
-        ImageButtonLink: "_9BzHAji4VzoMjs7kR24hE",
-        ImageGridCtn: "tSK7MWoDk93B4YlVKwROO",
-        Monthly: "_3N9ubTzZmbUOJXz1YxzF9P",
-        MoreLinksCtn: "_2ZaAF6Kb40APdlPG6f13LH",
-        OverviewChartPlaceholder: "rGp5AAoogQGX2-mxkhg4F",
-        BestOfYearButton: "_3Qf-XadcjXMDgnu95-quHx",
-        ImageGrid: "_1TQ3wB-ILmLeAqnUKAadcw",
-        Headline: "_2TEWmnx8AyVWR6eUSiFGUq",
-        Subtitle: "_3xyiO9oYDNEFLZEzIwb6x",
       };
     },
     chunkid: (module) => {
@@ -437,97 +338,6 @@
         Disabled: "_2VVBwS-S1js1QLzT90jv1S",
         ChartNavPrev: "PFs4U4cBAxm-GI1zMSV7q",
         ChartNavNext: "_27ASBphHd61RCZhLfsKIZ5",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        HelpRequestChartContainer: "_1dbAlGjgeRG0IF7LxVGlNU",
-        CategoryBlock: "_34D_U3jAxOl1YKYVkhrnEo",
-        Placeholder: "_3r4Y8_eL-4yZQdCwm0BJtN",
-        Category: "_1hxGIZRl9M4O881-LMqI-j",
-        Submitted24h: "N_TWxHk1W6om7IZLwZXNY",
-        ResponseTimes: "_34kNEqvIhwIMhrIwHUUrM0",
-        TableRow: "_1tiKSf64fh09TzalIvs_v",
-        NumberCol: "_1GPA-utJD48wTHb18r7rg2",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        "duration-app-launch": "800ms",
-        narrowWidth: "500px",
-        PageSection: "_2zGFBNA2sjyPFRzONZhG5T",
-        SectionTitle: "_1tl1EVPXDe0Ga87Od2OapL",
-        ChartPage: "_2txZN03Rksb3SHqYeOt75B",
-        Placeholder: "_13Wagx1HQxyCivWU2ZGU5o",
-        GhostShine: "_3n0N_c3fIHBhVJ2Cye5zs9",
-        NoticeBox: "_14G9est1e3x547GzVNbIpr",
-        ChartTable: "_3arZn0BMPzyhcYNADe193m",
-        ColumnHeaders: "_3eKiI5Uhn6pLBSBqg3LbBz",
-        HoverCell: "_3JiuzqNZfzcK2EB06XAMv8",
-        Rank: "_2BuNWG4dJy40ZhU9u51gYq",
-        Game: "_3fOO4LOvNmuF5xvR0NTfzI",
-        Price: "amGaROSLVVh48h1bqp40a",
-        Change: "_150QPa7Ul5lH8rPbsAMn-8",
-        Concurrent: "grXsMMqaVa6d2XxKiu5zU",
-        Weeks: "_1ODmeBQGexjb68QaWkQay2",
-        PeakInGame: "_1zxLzk_ggCuBLTlQW5HB7S",
-        RightCell: "_iRXB-jnm1HdyuH-mHN_h",
-        TableRow: "_2-RN6nWOY56sNmcDHu069P",
-        CapsuleCell: "_18kGHKeOavDDdJVs9FVhpo",
-        Banner: "_24xXqJoM1vk2jNIc6fU-LD",
-        BannerText: "UFtgo0Nvdp450rdx5uGU1",
-        HoverSource: "_1oW6QnWPKl-KPfufAnKapF",
-        HoverMask: "N8w56WjrQPSB3M6hVSXDx",
-        RankCell: "_34h48M_x9S-9Q2FFPX_CcU",
-        PriceCell: "_3IyfUchPbsYMEaGjJU3GOP",
-        ConcurrentCell: "_3L0CDDIUaOKTGfqdpqmjcy",
-        WeeksCell: "xm7JpnZElM9XGF4ruu0Z-",
-        Tooltip: "_2OA1JW-4H-f01kM7myTUuu",
-        PeakInGameCell: "yJB7DYKsuTG2AYhJdWTIk",
-        Unavailable: "mqJv4GSlMIBGszsRy4Hjo",
-        TopChartItem: "_2C5PJOUH6RqyuBNEwaCE9X",
-        GameName: "_1n_4-zvf0n4aqGEksbgW9N",
-        CapsuleArt: "_2dODJrHKWs6F9v9QpgzihO",
-        ExpandedImage: "_3gRecW1JhKNGlsPfQ6wKdX",
-        ExpandedMedia: "_3WcY4_82ul4e5YnaMs4yzH",
-        ExpandedButtons: "_3-yfbNsFBZ0lZMgB3XZeDH",
-        CartButton: "HYru8hN_4hAuafLhM5W7i",
-        GameInfo: "_3fbErup_8zjbknEuj8QEOd",
-        GameUnavailable: "_1VpmUWOpL8QFhgJE9-wTWg",
-        ChangeCell: "_1ZdIh_OWh9DUr5O4OCypQn",
-        ListWeeksDebut: "_3VOg1Au8rs5wnnu2fXny0M",
-        ListWeeksReturning: "CQijl-dgrfQHKUydm9c2F",
-        TopSectionFlex: "_2FYj4SNQUSjh_Q6gsQ8YX8",
-        SteamDeckChartDropdown: "IqoCNSPPuJngiwqCn1Yio",
-        SteamDeckBanner: "_2ukfIQbMBHCDkpsiFfK2go",
-        SteamDeckBannerWords: "AtbS6Suu1__tuuK5r43oa",
-        SteamDeckBannerTitle: "_2ll5irwHKJ6i4VUArLyaOo",
-        SteamDeckBannerDesc: "_3hT5aJvGLEBs1ZQ_nXE4mq",
-        DeckChartDateRange: "_3Im7owFsdI0Lt9cu4eU65T",
-        ChartTopGameBackground: "_2CWs7VvX3QlGs_Z0cdqg4y",
-        WeekBrowseLink: "DOEXqWm8o_z-orpDgJhRO",
-        CountryControl: "_14L3rO6n7CWRUvU7kGlWdr",
-        DropDownContainer: "cuSpV3QmWAyfy5jEL_lAD",
-        MostPlayedOptionsControl: "JNIDkAylV2PzV6WgyGipX",
-        BrowseTopSellersButton: "_2S1tSckzLEd0oOcVZVwSn1",
-        CapsuleDecorator: "_1zTJhHtTtlupkl5JAkDjkj",
-        LinesImg: "_3LfjgYqtcKMR_OPGPuSINb",
-        ChartPlaceholder: "_3sJkwsBQuiAc_i3VOWX4tv",
-        WeeklyFooterControls: "_3qtwdu9UZOm9MR75OdIDhh",
-        PriceWidget: "_30rPOgtyETKSFTmKGlL7LD",
-        TopReleasesContainer: "HVGCLhckX_TdvWBLa5LW5",
-        BackgroundAnimation: "_381HkrQhV6Lg3mgTY7Q_aG",
-        "ItemFocusAnim-darkerGrey-nocolor": "_1_o2AzHjaHltPqLasuq2hz",
-        "ItemFocusAnim-darkerGrey": "_15Az566INJGVUgpVKMveq1",
-        "ItemFocusAnim-darkGreySettings": "NFsFIO8pohH2lMmwPLykV",
-        "ItemFocusAnim-darkGrey": "zIYdXHBWjHJJqX5MgGBi-",
-        "ItemFocusAnim-grey": "_2jf5IFobUAcTIqNNYkxqGO",
-        "ItemFocusAnim-translucent-white-10": "_3qS-5Wr4obWbVcOmlYbuEQ",
-        "ItemFocusAnim-translucent-white-20": "_1CBJEATC-mlKIkaqp_wB2D",
-        "ItemFocusAnimBorder-darkGrey": "_393vQLYklCNEiD35yMQte2",
-        "ItemFocusAnim-green": "_2nij1jKkqHSth1lOGfa8fr",
-        focusAnimation: "sDuHk4PmW_ASzz2btQ6sO",
-        hoverAnimation: "_3JGfPhH3xy0ul02XM-aW3S",
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -821,77 +631,6 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ {
-        m_eCurLang = (0, _.sfN)(_._.LANGUAGE);
-        m_rgHasData = (0, _._)([], _.bP9, !1);
-        m_bHasLocalizationContext = !1;
-        m_callback = new _._();
-        GetCallback() {
-          return this.m_callback;
-        }
-        GetCurEditLanguage() {
-          return this.m_eCurLang;
-        }
-        SetCurEditLanguage(_) {
-          return (
-            this.m_eCurLang != _ &&
-            ((this.m_eCurLang = _), this.GetCallback().Dispatch(_), !0)
-          );
-        }
-        SetHasLanguage(_) {
-          _.forEach((_, _) => {
-            this.m_rgHasData[_] != _ && (this.m_rgHasData[_] = _);
-          });
-        }
-        BHasLanguageData(_) {
-          return this.m_rgHasData[_];
-        }
-        GetHasLocalizationContext() {
-          return this.m_bHasLocalizationContext;
-        }
-        SetHasLocalizationContext(_) {
-          _ != this.m_bHasLocalizationContext &&
-            (this.m_bHasLocalizationContext = _);
-        }
-        static s_globalSingletonStore;
-        static Get() {
-          return (
-            _.s_globalSingletonStore ||
-              ((_.s_globalSingletonStore = new _()),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.DUS = _.s_globalSingletonStore)),
-            _.s_globalSingletonStore
-          );
-        }
-        constructor() {
-          (0, _._)(this);
-        }
-      }
-      function _() {
-        return (0, _._)(() => _.Get().GetCurEditLanguage());
-      }
-      (0, _._)([_._], _.prototype, "m_eCurLang", void 0),
-        (0, _._)([_._], _.prototype, "m_rgHasData", void 0),
-        (0, _._)([_._], _.prototype, "m_bHasLocalizationContext", void 0),
-        (0, _._)([_._], _.prototype, "GetCurEditLanguage", null),
-        (0, _._)([_._], _.prototype, "SetCurEditLanguage", null),
-        (0, _._)([_._.bound], _.prototype, "SetHasLanguage", null),
-        (0, _._)([_._], _.prototype, "BHasLanguageData", null);
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
         _: () => _,
         _: () => _,
       });
@@ -976,333 +715,6 @@
           _
         );
       }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const _ = _._.Get().BIsLoaded() && _._.Get();
-        return _.useMemo(
-          () =>
-            (function (_, _) {
-              if (!_) return !1;
-              if (!_) return !1;
-              if (_.BExcludesContentDescriptor(_.GetContentDescriptorIDs()))
-                return !0;
-              switch (_.GetStoreItemType()) {
-                case _._._:
-                  if (_.BIsGameIgnored(_.GetID())) return !0;
-                  break;
-                case _._._:
-                  if (_.BIsPackageIgnored(_.GetID())) return !0;
-              }
-              return !1;
-            })(_, _),
-          [_, _],
-        );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = (_) => {
-          const { clanSteamID: _, fnImageSelectCallBack: _ } = _,
-            [_, _] = (0, _.useState)(""),
-            _ = (0, _._)(_.clanSteamID.GetAccountID()),
-            _ = () => _.closeModal && _.closeModal(),
-            _ = _._.GetFilteredClanImages(_, _),
-            _ = (_) => {
-              __webpack_require__(_), _();
-            };
-          return (0, _.jsx)(_._, {
-            children: (0, _.jsx)(_._, {
-              onEscKeypress: _,
-              children: (0, _.jsxs)(_._, {
-                children: [
-                  (0, _.jsx)(_._, {
-                    children: (0, _._)("#ClanImageChooser_Title"),
-                  }),
-                  (0, _.jsx)(_._, {
-                    children: (0, _.jsxs)(_._, {
-                      children: [
-                        (0, _.jsx)("p", {
-                          children: (0, _._)("#ClanImageChooser_Desc"),
-                        }),
-                        (0, _.jsx)(_._, {
-                          placeholder: (0, _._)("#ClanImageChooser_Search"),
-                          value: _,
-                          onChange: (_) => _(_.currentTarget.value),
-                        }),
-                        (0, _.jsx)("div", {
-                          className: _.ImagesOuterContainer,
-                          children: _
-                            ? (0, _.jsx)(_._, {
-                                size: "medium",
-                                string: (0, _._)("#Loading"),
-                              })
-                            : Boolean(_.length > 0)
-                              ? _.map((_) =>
-                                  (0, _.jsx)(
-                                    _,
-                                    {
-                                      clanImage: _,
-                                      searchStringHilight: _,
-                                      fnImageClick: _,
-                                    },
-                                    "ci" + _.image_hash,
-                                  ),
-                                )
-                              : Boolean(0 == _.trim().length)
-                                ? (0, _.jsx)("div", {
-                                    children: (0, _._)(
-                                      "#ClanImageChooser_None",
-                                    ),
-                                  })
-                                : (0, _.jsx)("div", {
-                                    children: (0, _._)(
-                                      "#EventCalendar_GameSearch_NoneFound",
-                                    ),
-                                  }),
-                        }),
-                      ],
-                    }),
-                  }),
-                  (0, _.jsx)(_._, {
-                    children: (0, _.jsx)(_._, {
-                      onClick: _,
-                      children: (0, _._)("#Button_Cancel"),
-                    }),
-                  }),
-                ],
-              }),
-            }),
-          });
-        },
-        _ = (_) => {
-          const { clanImage: _, searchStringHilight: _, fnImageClick: _ } = _;
-          let _ = _.file_name ? _.file_name : "",
-            _ = _(_, _, String(_.imageid), _.Hilight);
-          return (0, _.jsxs)("div", {
-            className: _.ImageContainer,
-            children: [
-              (0, _.jsx)("div", {
-                className: _.Image,
-                style: {
-                  backgroundImage: `url( '${_.thumb_url}' )`,
-                },
-                onDoubleClick: () => _(_),
-              }),
-              (0, _.jsx)("div", {
-                className: _.ImageFilename,
-                title: _,
-                children: _,
-              }),
-            ],
-          });
-        };
-      function _(_, _, _, _) {
-        let _ = [];
-        if (_.length > 0) {
-          let _ = _.toLocaleLowerCase();
-          for (let _ = 0; _ < _.length; ) {
-            let _ = _.indexOf(_, _);
-            if (_ < 0) {
-              _.push(
-                (0, _.jsx)(
-                  "span",
-                  {
-                    children: _.substring(_),
-                  },
-                  _ + "_" + String(_),
-                ),
-              );
-              break;
-            }
-            _ < _ &&
-              _.push(
-                (0, _.jsx)(
-                  "span",
-                  {
-                    children: _.substring(_, _),
-                  },
-                  _ + "_" + String(_),
-                ),
-              ),
-              _.push(
-                (0, _.jsx)(
-                  "span",
-                  {
-                    className: _,
-                    children: _.substr(_, _.length),
-                  },
-                  _ + "_" + String(_),
-                ),
-              ),
-              (_ = _ + _.length);
-          }
-        } else
-          _.push(
-            (0, _.jsx)(
-              "span",
-              {
-                children: _,
-              },
-              _ + "_null",
-            ),
-          );
-        return _;
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      let _ = class extends _.Component {
-        GenerateLanguageOptions() {
-          let _ = [];
-          const {
-            fnFilterLanguage: _,
-            fnLangHasData: _,
-            fnLastUpdateRTime: _,
-            fnIsLangSupported: _,
-          } = this.props;
-          this.props.bAllowUnsetOption &&
-            _.push(
-              (0, _.jsx)(
-                "option",
-                {
-                  value: _.xPp,
-                  children: (0, _._)("#language_selection_none"),
-                },
-                "langpicker_unset",
-              ),
-            );
-          let _ = new Array();
-          const _ = this.props.realms || [_._.k_ESteamRealmGlobal];
-          for (const _ of _._.GetLanguageListForRealms(_)) {
-            if (_ && !_(_)) continue;
-            const _ = (0, _.LgB)(_),
-              _ = (0, _._)("#Language_" + _),
-              _ = !(!_ || !_(_));
-            _.push({
-              eLang: _,
-              sLocName: _,
-              bSupported: _,
-            });
-          }
-          _.sort((_, _) =>
-            _.bSupported != _.bSupported
-              ? _.bSupported
-                ? -1
-                : 1
-              : _.sLocName.localeCompare(_.sLocName),
-          );
-          let _ = !1;
-          for (const _ of _) {
-            _.bSupported != _ &&
-              (_.push(
-                (0, _.jsx)(
-                  "option",
-                  {
-                    className: _().SupportedGroupLabel,
-                    disabled: !0,
-                    children: (0, _._)(
-                      _.bSupported
-                        ? "#LanguageGroup_Supported"
-                        : "#LanguageGroup_Unsupported",
-                    ),
-                  },
-                  _.bSupported ? "SupportedGroup" : "UnsupportedGroup",
-                ),
-              ),
-              (_ = _.bSupported));
-            const _ = _ && __webpack_require__(_.eLang),
-              _ = _ && _(_.eLang);
-            let _ = _.sLocName;
-            _ &&
-              0 !== _ &&
-              ((_ += " "),
-              (_ += (0, _._)(
-                "#Language_Last_Update",
-                (0, _._)(_) +
-                  " @ " +
-                  (0, _._)(_, {
-                    bForce24HourClock: !1,
-                  }),
-              ))),
-              _.push(
-                (0, _.jsx)(
-                  "option",
-                  {
-                    value: _.eLang,
-                    className: (0, _._)(
-                      {
-                        [_().LanguageWithContent]: _,
-                      },
-                      _.bSupported
-                        ? _().SupportedLanguage
-                        : _().UnsupportedLanguage,
-                    ),
-                    children: _,
-                  },
-                  "langpicker" + _.eLang + (_ ? "_hasdata" : ""),
-                ),
-              );
-          }
-          return _;
-        }
-        OnLanguageChange(_) {
-          const { fnOnLanguageChanged: _, selectedLang: _ } = this.props;
-          let _ = Number.parseInt(_.currentTarget.value);
-          _ != _ && _ && _(_);
-        }
-        render() {
-          const { selectedLang: _, bDisabled: _, strTooltip: _ } = this.props;
-          let _ = this.GenerateLanguageOptions();
-          return (0, _.jsx)(_._, {
-            toolTipContent: _,
-            children: (0, _.jsx)("select", {
-              value: _,
-              onChange: this.OnLanguageChange,
-              disabled: _,
-              children: _,
-            }),
-          });
-        }
-      };
-      (0, _._)([_._], _.prototype, "OnLanguageChange", null),
-        (_ = (0, _._)([_._], _));
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -1960,8 +1372,28 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        if (!_ || !_.BIsClanAccount()) return !1;
+        const _ = _._.Get().GetPartnerEventPermissions(_);
+        return !!_ && (_ ? _.valve_admin : _.valve_admin || _.support_user);
+      }
+      function _(_) {
+        const { clanSteamID: _, _: _ } = _;
+        return _(_, _.requireAdmin)
+          ? (0, _.jsx)("div", {
+              _: _,
+              className: (0, _._)(
+                _.className,
+                _.requireAdmin
+                  ? _.ValveOnlyAdminBackground
+                  : _.ValveOnlyBackground,
+              ),
+              children: _.children,
+            })
+          : null;
+      }
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2703,7 +2135,6 @@
           (_[(_.k_eInsertVideo = 4)] = "k_eInsertVideo");
       })(_ || (_ = {}));
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
@@ -4952,7 +4383,7 @@
                 }),
               ],
             }),
-            (0, _.jsx)(_._, {
+            (0, _.jsx)(_, {
               clanSteamID: _.clanSteamID,
               children: (0, _.jsx)(_._, {
                 checked: !!_,
@@ -5635,7 +5066,7 @@
                 : _._.EPreviewMode_Enabled
               : _._.EPreviewMode_Disabled,
             _ = _ || __webpack_require__.GetEventType() != _.ajI,
-            _ = (0, _._)(_.clanSteamID),
+            _ = _(_.clanSteamID),
             _ = _ ? _._.NoTransform : _._.NoTransformSparseContent,
             _ = (0, _._)(
               _().SaleOuterContainer,
@@ -6129,66 +5560,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { component: _ = "a" } = _,
-          _ = (function (_) {
-            const {
-                item: _,
-                feature: _,
-                depth: _,
-                noImpressionTracking: _,
-                ..._
-              } = _,
-              _ = _.useRef(0),
-              _ = _ && _.GetStoreItemType() == _._._ ? _.GetAppID() : null,
-              _ = (0, _._)(),
-              _ = _.useMemo(
-                () =>
-                  _._.GetLinkParam(
-                    {
-                      ..._,
-                      feature: _ || _.feature,
-                    },
-                    _,
-                  ),
-                [_, _, _],
-              ),
-              _ = _.useMemo(() => _._.GetCuratorClanIDParam(_), [_]),
-              _ = _.useMemo(
-                () => _._.AddNavParamToURL(_ ? _.GetStorePageURL() : "", _, _),
-                [_, _, _],
-              ),
-              _ = (0, _._)(),
-              _ = _.useCallback(() => {
-                _ && _.current != _ && (_.AddImpression(_, _), (_.current = _));
-              }, [_, _, _, _]),
-              _ = (0, _._)({
-                onEnter: _,
-              });
-            return {
-              ..._,
-              href: _,
-              ref: _ && !_ ? _ : void 0,
-            };
-          })(_);
-        return (0, _.jsx)(_, {
-          ..._,
-        });
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -6271,25 +5642,8 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { title: _, bodyClassName: _, children: _ } = _;
-        return (
-          _.useEffect(() => {
-            const _ = document.title;
-            return (
-              (document.title = _),
-              () => {
-                document.title = _;
-              }
-            );
-          }, [_]),
-          _(_),
-          _
-        );
-      }
       function _(_) {
         _.useEffect(() => {
           if (!_) return;
@@ -6313,90 +5667,6 @@
       var _,
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      !(function (_) {
-        (_.DailyActiveUsers = "DailyActiveUsers"),
-          (_.ConcurrentUsers = "ConcurrentUsers");
-      })(_ || (_ = {}));
-      class _ {
-        m_WebAPI;
-        constructor(_) {
-          this.m_WebAPI = _;
-        }
-        async LoadMostPlayedByDAU() {
-          let _ = _._.Init(_._);
-          (0, _._)(_), (0, _._)(_, _);
-          let _ = await _._.GetMostPlayedGames(
-            this.m_WebAPI.GetAnonymousServiceTransport(),
-            _,
-          );
-          if (_.GetEResult() != _._) throw "error loading most played by dau";
-          return {
-            rgRanks: this.ReadMostPlayedByDAU(
-              _,
-              _.Body().data_request().toObject(),
-            ),
-          };
-        }
-        async LoadMostPlayedByConcurrent() {
-          let _ = _._.Init(_._);
-          (0, _._)(_), (0, _._)(_, _);
-          let _ = await _._.GetGamesByConcurrentPlayers(
-            this.m_WebAPI.GetAnonymousServiceTransport(),
-            _,
-          );
-          if (_.GetEResult() != _._)
-            throw "error loading most played by concurrent";
-          return {
-            rgRanks: this.ReadMostPlayedByConcurrent(
-              _,
-              _.Body().data_request().toObject(),
-            ),
-          };
-        }
-        ReadMostPlayedByDAU(_, _) {
-          let _ = [];
-          if (_.Body().ranks().length > 0)
-            for (let _ of _.Body().ranks())
-              __webpack_require__.push({
-                nRank: _.rank(),
-                Item: _._.Get().ReadItem(_.item(), _),
-                nRankLastWeek: _.last_week_rank(),
-                nPeakInGame: _.peak_in_game(),
-              });
-          return _;
-        }
-        ReadMostPlayedByConcurrent(_, _) {
-          let _ = [];
-          if (_.Body().ranks().length > 0)
-            for (let _ of _.Body().ranks())
-              __webpack_require__.push({
-                nRank: _.rank(),
-                Item: _._.Get().ReadItem(_.item(), _),
-                nConcurrentInGame: _.concurrent_in_game(),
-                nPeakInGame: _.peak_in_game(),
-              });
-          return _;
-        }
-      }
-      const _ = "MostPlayedDAU",
-        _ = "MostPlayedByConcurrent";
-      function _(_) {
-        return (0, _._)({
-          queryKey: [_],
-          queryFn: () => _.LoadMostPlayedByConcurrent(),
-          staleTime: 3e5,
-        });
-      }
-      var _,
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -6857,8 +6127,8 @@
           });
       })(_ || (_ = {}));
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = 20;
       class _ {
         m_WebAPI;
         m_Storage;
@@ -6866,14 +6136,6 @@
         m_rtCurrentWeek;
         constructor(_, _) {
           (this.m_WebAPI = _), (this.m_Storage = _);
-        }
-        GetDefaultTopSellersFilters() {
-          return {
-            type_filters: {
-              include_apps: !0,
-              include_hardware: !1,
-            },
-          };
         }
         async Initialize(_) {
           return (
@@ -6883,9 +6145,9 @@
                 (_._.EUNIVERSE != _._ && _._.EUNIVERSE != _.CII) ||
                   (_ = 1539068400),
                   this.LoadCountryList()
-                    .then((_) =>
-                      this.LoadTopSellersForWeek(_, _, _).then((_) => {
-                        (this.m_rtCurrentWeek = _.rtWeekStart), _(_);
+                    .then(() =>
+                      this.LoadCurrentWeekStart(_, _).then((_) => {
+                        (this.m_rtCurrentWeek = _), _();
                       }),
                     )
                     .catch(_);
@@ -6936,14 +6198,6 @@
           }
           return this.m_rgCountryList;
         }
-        GetCountryList() {
-          return this.m_rgCountryList?.rgCountryCodes || [];
-        }
-        BIsCountryListLoaded() {
-          return (
-            this.m_rgCountryList && this.m_rgCountryList.rgCountryCodes.length
-          );
-        }
         BIsValidTopSellersCountry(_) {
           return !!this.ValidateCountryCode(_);
         }
@@ -6961,115 +6215,25 @@
         GetCurrentWeek() {
           return this.m_rtCurrentWeek;
         }
-        GetPreviousWeek() {
-          return this.m_rtCurrentWeek ? this.m_rtCurrentWeek - 604800 : void 0;
-        }
-        async LoadTopSellersForWeek(_, _, _) {
+        async LoadCurrentWeekStart(_, _) {
           const _ = this.ValidateCountryCode(_);
           let _ = _._.Init(_);
           (0, _._)(_),
             (0, _._)(_, _),
             _ && _.Body().set_country_code(_),
             _ && _.Body().set_start_date(_),
-            _.Body().set_page_count(_);
+            _.Body().set_page_count(20);
           let _ = await _.GetWeeklyTopSellers(
             this.m_WebAPI.GetAnonymousServiceTransport(),
             _,
           );
           if (_.GetEResult() != _._) throw "error loading top sellers";
-          return {
-            strCountryCode: _,
-            rtWeekStart: _.Body().start_date(),
-            rgRanks: this.ReadTopSellers(_, _.Body().data_request().toObject()),
-          };
-        }
-        ReadTopSellers(_, _) {
-          let _ = [];
-          if (_.Body().ranks().length > 0)
-            for (let _ of _.Body().ranks())
-              __webpack_require__.push({
-                nRank: _.rank(),
-                Item: _._.Get().ReadItem(_.item(), _),
-                nRankLastWeek: _.last_week_rank(),
-                nConsecutiveWeeks: _.consecutive_weeks(),
-                bFirstTop100: _.first_top100(),
-              });
-          return _;
+          return _.Body().start_date();
         }
       }
       const _ = "TopSellers";
-      function _(_, _) {
-        const _ = (0, _._)(),
-          { data: _ } = (0, _._)({
-            queryKey: [_, "Initialization"],
-            queryFn: () =>
-              _.Initialize(_).then((_) => {
-                const _ = {
-                  rtWeekStart: _.rtWeekStart,
-                  strCountryCode: _.strCountryCode,
-                  cListSize: _,
-                };
-                return (
-                  __webpack_require__.setQueryData([_, "Weekly", _], _),
-                  {
-                    rtCurrentWeek: _.GetCurrentWeek(),
-                    bCountryListInitialized: !0,
-                  }
-                );
-              }),
-            staleTime: 1 / 0,
-          });
-        return (
-          _ || {
-            rtCurrentWeek: void 0,
-            bCountryListInitialized: !1,
-          }
-        );
-      }
-      function _(_, _, _ = !1) {
-        return _ ? "error" : _ || _ ? "loading" : "loaded";
-      }
-      function _(_, _, _, _, _ = _, _ = !0) {
-        const _ = {
-            rtWeekStart: _,
-            strCountryCode: _.BIsCountryListLoaded()
-              ? _.ValidateCountryCode(_)
-              : "",
-            cListSize: _,
-          },
-          _ = (0, _.useRef)(void 0),
-          _ = _.current;
-        let _ = !1;
-        _ &&
-          _.rtWeekStart === _.rtWeekStart &&
-          _.strCountryCode === _.strCountryCode &&
-          (_ = !0);
-        const {
-          isLoading: _,
-          isPlaceholderData: _,
-          error: _,
-          data: _,
-        } = (0, _._)({
-          queryKey: [_, "Weekly", _],
-          queryFn: () =>
-            _.LoadTopSellersForWeek(_.rtWeekStart, _.strCountryCode, _),
-          enabled: !!_ && _,
-          staleTime: _ == _ ? 36e5 : 1 / 0,
-          placeholderData: _ ? _._ : void 0,
-        });
-        return (
-          !_ && _ && (_.current = _),
-          {
-            TopSellers: _ ? _ : null,
-            status: _(_, _, _),
-          }
-        );
-      }
-      function _(_, _, _, _ = _, _ = !0) {
-        const { rtCurrentWeek: _ } = _(_, _);
-        return _(_, _, _, _, _, _);
-      }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         let _ = 50;
         return (
@@ -7106,39 +6270,6 @@
         }
       }
       const _ = "useMonthlyTopRelease";
-      class _ {
-        m_WebAPI;
-        constructor(_) {
-          this.m_WebAPI = _;
-        }
-        ReadMostPlayedOnDeck(_, _) {
-          let _ = [];
-          if (_.Body().ranks().length > 0)
-            for (let _ of _.Body().ranks())
-              __webpack_require__.push({
-                nRank: _.rank(),
-                Item: _._.Get().ReadItem(_.item(), _),
-                nRankLastPeriod: _.last_period_rank(),
-              });
-          return _;
-        }
-        async LoadMostPlayedOnSteamDeck(_) {
-          let _ = _._.Init(_._);
-          (0, _._)(_), (0, _._)(_, _), _.Body().set_top_played_period(_);
-          let _ = await _._.GetMostPlayedSteamDeckGames(
-            this.m_WebAPI.GetAnonymousServiceTransport(),
-            _,
-          );
-          if (__webpack_require__.GetEResult() != _._)
-            throw "error loading most played on Steam Deck";
-          return {
-            rgRanks: this.ReadMostPlayedOnDeck(
-              _,
-              _.Body().data_request().toObject(),
-            ),
-          };
-        }
-      }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
@@ -7252,26 +6383,15 @@
         }
       }
       const _ = "useYearlyTopRelease";
-      function _(_, _) {
-        const { data: _ } = (0, _._)({
-          queryKey: [_, _],
-          queryFn: () => _.LoadTopYearlyReleases(_),
-        });
-        return _;
-      }
       class _ {
         m_DynamicUserStore;
         m_TopSellersStore;
-        m_MostPlayedStore;
-        m_MostPlayedOnSteamDeckStore;
         m_TopMonthlyReleasesStore;
         m_TopYearlyReleasesStore;
         m_WebAPI;
         async Initialize(_, _) {
           (this.m_WebAPI = _),
             (this.m_TopSellersStore = new _(this.m_WebAPI, _)),
-            (this.m_MostPlayedStore = new _(this.m_WebAPI)),
-            (this.m_MostPlayedOnSteamDeckStore = new _(this.m_WebAPI)),
             (this.m_TopMonthlyReleasesStore = new _(this.m_WebAPI)),
             (this.m_TopYearlyReleasesStore = new _(this.m_WebAPI)),
             (this.m_DynamicUserStore = await _._.Get().HintLoad());
@@ -7279,92 +6399,15 @@
         get TopSellersStore() {
           return this.m_TopSellersStore;
         }
-        get MostPlayedStore() {
-          return this.m_MostPlayedStore;
-        }
-        get MostPlayedOnSteamDeckStore() {
-          return this.m_MostPlayedOnSteamDeckStore;
-        }
-        get SteamInterface() {
-          return this.m_WebAPI;
-        }
         get TopMonthlyReleasesStore() {
           return this.m_TopMonthlyReleasesStore;
         }
         get TopYearlyReleasesStore() {
           return this.m_TopYearlyReleasesStore;
         }
-        static overview_data_request = {
-          include_basic_info: !0,
-          include_assets: !0,
-        };
-        GetRealTimeTopSellersQuery() {
-          return [
-            "SteamCharts Overview Top Sellers",
-            {
-              sort: _._._,
-              start: 0,
-              count: 5,
-              filters: this.m_TopSellersStore.GetDefaultTopSellersFilters(),
-            },
-            _.overview_data_request,
-          ];
-        }
-        GetRealTimeMostPlayedQuery() {
-          return [
-            "SteamCharts Overview Most Played",
-            {
-              sort: _._._,
-              start: 0,
-              count: 5,
-              filters: {
-                type_filters: {
-                  include_apps: !0,
-                  include_dlc: !1,
-                  include_video: !1,
-                  include_series: !1,
-                },
-              },
-            },
-            _.overview_data_request,
-          ];
-        }
         get DynamicUserStore() {
           return this.m_DynamicUserStore;
         }
-      }
-      function _() {
-        return (0, _._)({
-          queryKey: ["OnlineUserCount"],
-          queryFn: () =>
-            (async function () {
-              const _ = await _().get(
-                  `${_._.STORE_BASE_URL}stats/userdata.json?days_back=3`,
-                ),
-                _ = _.data && _.data[0]?.data;
-              if (!_) throw "Failed to load";
-              let _,
-                _,
-                _ = [];
-              for (let [_, _] of _) {
-                const _ = 18e5,
-                  _ = Math.floor(_ / _) * _;
-                _ != _ &&
-                  (_.push({
-                    date: new Date(_),
-                    users: _,
-                  }),
-                  (_ = _),
-                  (!_ || _ > _) && (_ = _));
-              }
-              return {
-                history: _,
-                peak: _,
-                current: _.length ? _[_.length - 1].users : 0,
-              };
-            })(),
-          staleTime: 6e5,
-        });
       }
       const _ = {
         include_basic_info: !0,
@@ -7380,6 +6423,8 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -8296,6 +7341,15 @@
           })
         );
       }
+      function _(_) {
+        if (!_) return "";
+        const _ = new Date(1e3 * _);
+        return `${_.getUTCFullYear()}-${_.getUTCMonth() + 1}-${_.getUTCDate()}`;
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = 2,
         _ = 60,
         _ = 2022;
@@ -8331,736 +7385,10 @@
           (_ != _ || (_ && _._.is_support && _(_, _)) || _(_, _))
         );
       }
-      function _(_, _) {
-        const _ = [];
-        for (
-          let _ = new Date().getUTCFullYear(), _ = 0;
-          _ >= _ && _ < _;
-          _--, _++
-        )
-          _(_, _, !1) ? __webpack_require__.push(_) : _--;
-        return _;
-      }
-      const _ = 1079395200;
-      function _(_) {
-        return (0, _._)(
-          "#SteamCharts_TopSellers_WeeklyRange",
-          (0, _._)(_, {
-            timeZone: "UTC",
-          }),
-          (0, _._)(_ + 604800, {
-            timeZone: "UTC",
-          }),
-        );
-      }
-      function _(_) {
-        return (0, _._)(
-          "#SteamCharts_TopSellers_WeeklyRangeShort",
-          (0, _._)(_, {
-            timeZone: "UTC",
-          }),
-        );
-      }
-      function _(_) {
-        if (!_) return "";
-        const _ = new Date(1e3 * _);
-        return `${_.getUTCFullYear()}-${_.getUTCMonth() + 1}-${_.getUTCDate()}`;
-      }
-      function _(_) {
-        return _ || "global";
-      }
-      function _(_) {
-        return "global" == _ ? "" : _;
-      }
-      function _(_, _) {
-        let _ = "",
-          _ = "";
-        return (
-          _ > _ ? ((_ = "Up"), (_ = "▲")) : _ < _ && ((_ = "Down"), (_ = "▼")),
-          {
-            direction: _,
-            symbol: _,
-          }
-        );
-      }
-      function _(_, _, _, _) {
-        const _ = _();
-        return (
-          _.useEffect(() => {
-            if (
-              _ &&
-              !("global" == _ || (_ && _.BIsValidTopSellersCountry(_)))
-            ) {
-              let _ = "";
-              (_ = _.BIsValidTopSellersCountry(_._.COUNTRY)
-                ? _._.COUNTRY
-                : "global"),
-                _(_(_(_)), {
-                  bReplace: !0,
-                });
-            }
-          }, [_, _, _, _, _]),
-          _ && ("global" == _ || _.BIsValidTopSellersCountry(_))
-        );
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = _.memo((_) => {
-          const _ = _();
-          return _.isLoading
-            ? (0, _.jsx)("div", {
-                className: (0, _._)(
-                  _().ChartContainerPlaceholder,
-                  _().Placeholder,
-                ),
-              })
-            : _.data
-              ? (0, _.jsxs)("div", {
-                  className: _().ChartContainer,
-                  children: [
-                    (0, _.jsx)("div", {
-                      className: _().Chart,
-                      children: (0, _.jsx)(_._, {
-                        children: (0, _.jsx)(_, {
-                          Data: _.data,
-                        }),
-                      }),
-                    }),
-                    (0, _.jsxs)("div", {
-                      className: _().Stats,
-                      children: [
-                        (0, _.jsxs)("div", {
-                          className: _().PeakStats,
-                          children: [
-                            (0, _.jsx)("div", {
-                              className: _().StatsTitle,
-                              children: (0, _._)(_.data.peak),
-                            }),
-                            (0, _.jsx)("div", {
-                              className: _().StatSubtitle,
-                              children: (0, _.jsx)("span", {
-                                className: _().Concurrent,
-                                children: (0, _._)(
-                                  "#SteamCharts_Graph_PeakConcurrent",
-                                ),
-                              }),
-                            }),
-                          ],
-                        }),
-                        (0, _.jsxs)("div", {
-                          className: _().CurrentStats,
-                          children: [
-                            (0, _.jsx)("div", {
-                              className: _().StatsTitle,
-                              children: (0, _._)(_.data.current),
-                            }),
-                            (0, _.jsx)("div", {
-                              className: _().StatSubtitle,
-                              children: (0, _.jsx)("span", {
-                                className: _().Now,
-                                children: (0, _._)(
-                                  "#SteamCharts_Graph_OnlineNow",
-                                ),
-                              }),
-                            }),
-                          ],
-                        }),
-                      ],
-                    }),
-                  ],
-                })
-              : null;
-        }),
-        _ = _.memo((_) => {
-          const { Data: _ } = _;
-          return (0, _.jsx)(_._, {
-            width: "100%",
-            height: "100%",
-            children: (0, _.jsxs)(_._, {
-              data: _.history,
-              margin: {
-                top: 25,
-                left: 0,
-                right: 0,
-                bottom: 0,
-              },
-              barGap: 10,
-              children: [
-                (0, _.jsx)("defs", {
-                  children: (0, _.jsxs)("linearGradient", {
-                    _: "bar_linear",
-                    _: "0",
-                    _: "0",
-                    _: "0",
-                    _: "1",
-                    children: [
-                      (0, _.jsx)("stop", {
-                        stopColor: "#1A9FFF",
-                      }),
-                      (0, _.jsx)("stop", {
-                        offset: "0.01",
-                        stopColor: "#1A9FFF",
-                      }),
-                      (0, _.jsx)("stop", {
-                        offset: "0.0101",
-                        stopColor: "#1A9FFF",
-                        stopOpacity: "0.5",
-                      }),
-                      (0, _.jsx)("stop", {
-                        offset: "1",
-                        stopColor: "#30363D",
-                        stopOpacity: "0.5",
-                      }),
-                    ],
-                  }),
-                }),
-                (0, _.jsx)(_._, {
-                  vertical: !1,
-                  stroke: "#a0aab6",
-                }),
-                (0, _.jsx)(_._, {
-                  tickFormatter: _._,
-                  tick: {
-                    fill: "white",
-                  },
-                  axisLine: !1,
-                }),
-                (0, _.jsx)(_._, {
-                  content: (0, _.jsx)(_, {}),
-                }),
-                (0, _.jsx)(_._, {
-                  dataKey: "users",
-                  barSize: 2,
-                  fill: "url( #bar_linear )",
-                }),
-                (0, _.jsx)(_._, {
-                  _: _.peak,
-                  stroke: "#82FF01",
-                  strokeDasharray: "6",
-                }),
-              ],
-            }),
-          });
-        });
-      function _({ active: _, payload: _ }) {
-        if (_ && _ && _.length) {
-          const _ = _[0].payload;
-          return (0, _.jsx)(_._, {
-            children: (0, _._)(
-              "#SteamCharts_OverviewGraph_Tooltip_OnlineAt",
-              (0, _.jsx)("b", {
-                children: (0, _._)(_.users),
-              }),
-              _.date.toLocaleString((0, _._)()),
-            ),
-          });
-        }
-        return null;
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_) {
-        const { SteamCharts: _ } = _;
-        return (0, _.jsx)(_._, {
-          title: (0, _._)(
-            "#SteamCharts_Menu_SteamCharts",
-            (0, _._)("#SteamCharts_Menu_Charts"),
-          ),
-          children: (0, _.jsxs)(_._, {
-            className: _().PageContainer,
-            children: [
-              (0, _.jsx)("div", {
-                className: (0, _._)(_().HeaderCtn, _().WithSubtitle),
-                children: (0, _.jsx)("h1", {
-                  children: (0, _._)("#SteamCharts_PageTitle_Overview"),
-                }),
-              }),
-              (0, _.jsx)("div", {
-                className: _().PageSubtitle,
-                children: (0, _._)("#SteamCharts_PageSubTitle_Overview"),
-              }),
-              (0, _.jsxs)(_._, {
-                className: _().PageSection,
-                children: [
-                  (0, _.jsx)("div", {
-                    className: _().SectionTitle,
-                    children: (0, _._)(
-                      "#SteamCharts_OverviewGraph_Title_PlayersOnline",
-                    ),
-                  }),
-                  (0, _.jsx)(_._, {
-                    children: (0, _.jsx)(_, {}),
-                  }),
-                ],
-              }),
-              (0, _.jsxs)(_._, {
-                className: (0, _._)(_().PageSection, _().SideBySideCharts),
-                children: [
-                  (0, _.jsx)("div", {
-                    className: _().Chart,
-                    children: (0, _.jsx)(_._, {
-                      children: (0, _.jsx)(_._, {
-                        feature: "topsellers",
-                        children: (0, _.jsx)(_, {
-                          SteamCharts: _,
-                          name: (0, _._)(
-                            "#SteamCharts_OverviewGraph_Title_TopSellers",
-                          ),
-                          strTopItemDesc: (0, _._)(
-                            "#SteamCharts_OverviewGraph_Desc_TopSelling",
-                          ),
-                          children: (0, _.jsx)(_, {
-                            className: _().ChartMoreBtn,
-                            _: _.TopSelling(_._.COUNTRY),
-                            children: (0, _._)(
-                              "#SteamCharts_OverviewGraph_Button_TopSelling",
-                            ),
-                          }),
-                        }),
-                      }),
-                    }),
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _().Chart,
-                    children: (0, _.jsx)(_._, {
-                      children: (0, _.jsx)(_._, {
-                        feature: "mostplayed",
-                        children: (0, _.jsx)(_, {
-                          SteamCharts: _,
-                          name: (0, _._)(
-                            "#SteamCharts_OverviewGraph_Title_MostPlayed",
-                          ),
-                          strTopItemDesc: (0, _._)(
-                            "#SteamCharts_OverviewGraph_Desc_MostPlayed",
-                          ),
-                          children: (0, _.jsx)(_, {
-                            className: _().ChartMoreBtn,
-                            _: _.MostPlayed(),
-                            children: (0, _._)(
-                              "#SteamCharts_OverviewGraph_Button_MostPlayed",
-                            ),
-                          }),
-                        }),
-                      }),
-                    }),
-                  }),
-                ],
-              }),
-              (0, _.jsxs)(_._, {
-                className: (0, _._)(_().PageSection, _().SideBySideCharts),
-                children: [
-                  (0, _.jsx)("div", {
-                    className: _().Chart,
-                    children: (0, _.jsx)(_._, {
-                      children: (0, _.jsx)(_, {
-                        TopSellersStore: _.TopSellersStore,
-                      }),
-                    }),
-                  }),
-                  (0, _.jsx)("div", {
-                    className: (0, _._)(_().Chart, _().Monthly),
-                    children: (0, _.jsx)(_._, {
-                      children: (0, _.jsx)(_, {
-                        TopMonthlyReleasesStore: _.TopMonthlyReleasesStore,
-                      }),
-                    }),
-                  }),
-                ],
-              }),
-              (0, _.jsx)(_._, {
-                children: (0, _.jsx)(_._, {
-                  children: (0, _.jsx)(_, {
-                    TopYearlyReleasesStore: _.TopYearlyReleasesStore,
-                  }),
-                }),
-              }),
-              (0, _.jsxs)(_._, {
-                className: _().PageSection,
-                children: [
-                  (0, _.jsx)("div", {
-                    className: _().SectionTitle,
-                    children: (0, _.jsx)("b", {
-                      children: (0, _._)("#SteamCharts_Overview_Title_More"),
-                    }),
-                  }),
-                  (0, _.jsxs)(_._, {
-                    className: _().MoreLinksCtn,
-                    children: [
-                      (0, _.jsx)(_._, {
-                        href: `${_._.STORE_BASE_URL}hwsurvey/`,
-                        children: (0, _._)(
-                          "#SteamCharts_Overview_Link_Hardware",
-                        ),
-                      }),
-                      (0, _.jsx)(_._, {
-                        href: `${_._.STORE_BASE_URL}stats/content/`,
-                        children: (0, _._)(
-                          "#SteamCharts_Overview_Link_Download",
-                        ),
-                      }),
-                      (0, _.jsx)(_._, {
-                        href: `${_._.STORE_BASE_URL}stats/support/`,
-                        children: (0, _._)(
-                          "#SteamCharts_Overview_Link_Support",
-                        ),
-                      }),
-                    ],
-                  }),
-                ],
-              }),
-            ],
-          }),
-        });
-      }
-      function _(_) {
-        const { SteamCharts: _, name: _, strTopItemDesc: _, children: _ } = _,
-          { data: _ } = (0, _._)(..._.GetRealTimeTopSellersQuery());
-        if (!_ || !_.GetItems().length)
-          return (0, _.jsx)("div", {
-            className: (0, _._)(_().OverviewChartPlaceholder, _().Placeholder),
-          });
-        const [_, ..._] = _.GetItems();
-        return (0, _.jsxs)(_._, {
-          children: [
-            (0, _.jsxs)("div", {
-              className: _().SectionTitle,
-              children: [" ", _],
-            }),
-            (0, _.jsxs)(_._, {
-              className: _().ChartItemsCtn,
-              children: [
-                (0, _.jsxs)("div", {
-                  className: _().TopItem,
-                  children: [
-                    (0, _.jsx)(_._, {
-                      item: _,
-                      children: (0, _.jsx)("img", {
-                        className: _().Capsule,
-                        src: _.GetAssets().GetMainCapsuleURL(),
-                      }),
-                    }),
-                    (0, _.jsx)(_, {
-                      rank: 1,
-                      item: _,
-                      itemDesc: _,
-                    }),
-                  ],
-                }),
-                _.slice(0, 4).map((_, _) =>
-                  (0, _.jsx)(
-                    _,
-                    {
-                      rank: _ + 2,
-                      item: _,
-                    },
-                    _.GetUniqueID(),
-                  ),
-                ),
-                _,
-              ],
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const { SteamCharts: _, name: _, strTopItemDesc: _, children: _ } = _,
-          _ = _(_.MostPlayedStore);
-        if (!_ || _.isLoading)
-          return (0, _.jsx)("div", {
-            className: (0, _._)(_().OverviewChartPlaceholder, _().Placeholder),
-          });
-        const [_, ..._] = _.data.rgRanks;
-        return (0, _.jsxs)(_._, {
-          children: [
-            (0, _.jsxs)("div", {
-              className: _().SectionTitle,
-              children: [" ", _],
-            }),
-            (0, _.jsxs)(_._, {
-              className: _().ChartItemsCtn,
-              children: [
-                (0, _.jsxs)("div", {
-                  className: _().TopItem,
-                  children: [
-                    (0, _.jsx)(_._, {
-                      item: _.Item,
-                      children: (0, _.jsx)("img", {
-                        className: _().Capsule,
-                        src: _.Item.GetAssets().GetMainCapsuleURL(),
-                      }),
-                    }),
-                    (0, _.jsx)(_, {
-                      rank: 1,
-                      item: _.Item,
-                      itemDesc: _,
-                      addData: (0, _._)(_.nConcurrentInGame),
-                      addDataDesc: (0, _._)(
-                        "#SteamCharts_OverviewGraph_Desc_InGame",
-                      ),
-                    }),
-                  ],
-                }),
-                _.slice(0, 4).map((_, _) =>
-                  (0, _.jsx)(
-                    _,
-                    {
-                      rank: _ + 2,
-                      item: _.Item,
-                      addData: (0, _._)(_.nConcurrentInGame),
-                    },
-                    _.Item.GetUniqueID(),
-                  ),
-                ),
-                _,
-              ],
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const { rank: _, item: _, itemDesc: _, addData: _, addDataDesc: _ } = _;
-        return (0, _.jsxs)(
-          _._,
-          {
-            className: _().ItemRow,
-            item: _,
-            depth: _,
-            component: _._,
-            children: [
-              (0, _.jsx)("div", {
-                className: _().Rank,
-                children: _,
-              }),
-              (0, _.jsxs)("div", {
-                className: _().ItemNameCtn,
-                children: [
-                  (0, _.jsx)("div", {
-                    className: _().ItemName,
-                    children: __webpack_require__.GetName(),
-                  }),
-                  _ &&
-                    (0, _.jsx)("div", {
-                      className: _().ItemDesc,
-                      children: _,
-                    }),
-                ],
-              }),
-              (0, _.jsxs)("div", {
-                className: _().TopReason,
-                children: [
-                  _ &&
-                    (0, _.jsx)("div", {
-                      className: _().AddData,
-                      children: _,
-                    }),
-                  _ &&
-                    (0, _.jsx)("div", {
-                      className: _().AddDataDesc,
-                      children: _,
-                    }),
-                ],
-              }),
-            ],
-          },
-          __webpack_require__.GetUniqueID(),
-        );
-      }
-      function _(_) {
-        const { TopSellersStore: _ } = _,
-          { TopSellers: _ } = (function (_, _, _ = _) {
-            const { rtCurrentWeek: _ } = _(_, _);
-            return _(_, _, _, _, _);
-          })(_, _._.COUNTRY);
-        return (0, _.jsx)(_, {
-          name: _ ? (0, _._)(_.rtWeekStart) : "",
-          range: (0, _._)("#SteamCharts_Overview_Title_Weekly"),
-          rgItems: _?.rgRanks.map((_) => _.Item),
-          renderLink: () =>
-            (0, _.jsx)(_, {
-              className: _().ImageButtonLink,
-              _: _.TopSellers(_(_._.COUNTRY), _(_.GetCurrentWeek())),
-              children: (0, _._)("#SteamCharts_TopSellers_PageTitle"),
-            }),
-        });
-      }
-      function _(_) {
-        const { TopMonthlyReleasesStore: _ } = _,
-          _ = _((0, _._)()),
-          _ = new Date(1e3 * _),
-          _ = _(_.getFullYear(), _.getMonth()),
-          _ = _.TopNewReleases(_),
-          { rgFilteredCombinedAppsAndDLC: _, loadState: _ } = _(
-            _,
-            _.getFullYear(),
-            _.getMonth(),
-          ),
-          _ = (0, _.useMemo)(
-            () => (_ ? _.map((_) => _._.Get().GetApp(_)).filter(Boolean) : []),
-            [_],
-          );
-        return (0, _.jsx)(_, {
-          name: (0, _._)(_),
-          range: (0, _._)("#SteamCharts_Overview_Title_Monthly"),
-          rgItems: _,
-          renderLink: () =>
-            (0, _.jsx)(_, {
-              className: _().ImageButtonLink,
-              _: _,
-              children: (0, _._)("#SteamCharts_Overview_Title_MonthlyTop"),
-            }),
-        });
-      }
-      const _ = 9;
-      function _(_) {
-        const { name: _, range: _, rgItems: _, renderLink: _ } = _,
-          _ = _.useMemo(() => {
-            const _ = _?.slice(0, _) || [];
-            for (; _.length < _; ) _.push(void 0);
-            return [
-              _[5],
-              _[2],
-              _[7],
-              _[4],
-              _[0],
-              _[1],
-              _[8],
-              _[6],
-              _[3],
-              _[5],
-              _[7],
-              _[5],
-            ];
-          }, [_]);
-        return (0, _.jsxs)("div", {
-          children: [
-            (0, _.jsxs)("div", {
-              className: _().SectionTitle,
-              children: [
-                (0, _.jsx)("b", {
-                  children: _,
-                }),
-                " ",
-                _,
-              ],
-            }),
-            (0, _.jsxs)("div", {
-              className: _().ImageButtonCtn,
-              children: [
-                (0, _.jsx)("div", {
-                  className: _().ImageGridCtn,
-                  children: _.map(
-                    (_, _) =>
-                      _ &&
-                      (0, _.jsx)(
-                        "img",
-                        {
-                          src: _.GetAssets().GetHeaderURL(),
-                        },
-                        `${_.GetUniqueID()}-${_}`,
-                      ),
-                  ),
-                }),
-                _(),
-              ],
-            }),
-          ],
-        });
-      }
-      const _ = {
-        include_assets: !0,
-        apply_user_filters: !0,
-      };
-      function _(_) {
-        const { TopYearlyReleasesStore: _ } = _,
-          _ = _((0, _._)(), 1)[0],
-          _ = _(_, _),
-          _ = (0, _.useMemo)(
-            () =>
-              _?.top_combined_app_and_dlc_releases
-                ?.slice(0, 30)
-                .map((_) => _.appid),
-            [_],
-          ),
-          _ = (0, _._)(_, _);
-        return _ &&
-          _.top_combined_app_and_dlc_releases &&
-          0 != _.top_combined_app_and_dlc_releases.length &&
-          _ == _._
-          ? (0, _.jsxs)("div", {
-              className: _().PageSection,
-              children: [
-                (0, _.jsxs)("div", {
-                  className: _().SectionTitle,
-                  children: [
-                    (0, _.jsx)("b", {
-                      children: (0, _._)("#SteamCharts_Overview_Title_Yearly"),
-                    }),
-                    " ",
-                    _,
-                  ],
-                }),
-                (0, _.jsxs)(_, {
-                  _: _.BestOfYear("" + _),
-                  className: _().BestOfYearButton,
-                  children: [
-                    (0, _.jsx)(_, {
-                      rgAppIDs: _,
-                    }),
-                    (0, _.jsx)("div", {
-                      className: _().Headline,
-                      children: (0, _._)("#SteamCharts_Yearly_Title", _),
-                    }),
-                    (0, _.jsx)("div", {
-                      className: _().Subtitle,
-                      children: (0, _._)("#SteamCharts_Yearly_BannerDesc"),
-                    }),
-                  ],
-                }),
-              ],
-            })
-          : null;
-      }
-      function _(_) {
-        const { rgAppIDs: _ } = _,
-          _ = (0, _.useMemo)(
-            () => _.map((_) => _._.Get().GetApp(_)).filter(Boolean),
-            [_],
-          );
-        return (0, _.jsx)("div", {
-          className: _().ImageGrid,
-          children: __webpack_require__.slice(0, 20).map((_, _) =>
-            _ && _.GetAssets().GetHeroCapsuleURL()?.trim().length > 0
-              ? (0, _.jsx)(
-                  "img",
-                  {
-                    src: _.GetAssets().GetHeroCapsuleURL(),
-                  },
-                  `${_.GetUniqueID()}-${_}`,
-                )
-              : "",
-          ),
-        });
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         const {
           TopSellersStore: _,
-          SteamInterface: _,
           TopMonthlyReleasesStore: _,
           DynamicUserStore: _,
           children: _,
@@ -9190,15 +7518,27 @@
       }
       function _(_) {
         const { TopSellersStore: _ } = _,
-          _ = (0, _._)(_.TopSellers(":country", ":week?"));
-        let _ = _._.COUNTRY;
-        _ && _.params && _.params.country && (_ = _(_.params.country));
-        const { rtCurrentWeek: _, bCountryListInitialized: _ } = _(
-          _,
-          _._.COUNTRY,
-        );
+          { rtCurrentWeek: _, bCountryListInitialized: _ } = (function (_, _) {
+            const { data: _ } = (0, _._)({
+              queryKey: [_, "Initialization"],
+              queryFn: () =>
+                _.Initialize(_).then(() => ({
+                  rtCurrentWeek: _.GetCurrentWeek(),
+                  bCountryListInitialized: !0,
+                })),
+              staleTime: 1 / 0,
+            });
+            return (
+              _ || {
+                rtCurrentWeek: void 0,
+                bCountryListInitialized: !1,
+              }
+            );
+          })(_, _._.COUNTRY);
         if (!_ || !_) return null;
-        const _ = _(_.BIsValidTopSellersCountry(_) ? _ : "");
+        const _ =
+          (_.BIsValidTopSellersCountry(_._.COUNTRY) ? _._.COUNTRY : "") ||
+          "global";
         let _ = [];
         for (let _ = 0; _ < 3; _++) {
           const _ = _ - 60 * _ * 60 * 24 * 7;
@@ -9281,7 +7621,20 @@
       }
       function _(_) {
         const _ = (0, _._)(),
-          _ = (0, _.useMemo)(() => _(_, 3), [_]);
+          _ = (0, _.useMemo)(
+            () =>
+              (function (_, _) {
+                const _ = [];
+                for (
+                  let _ = new Date().getUTCFullYear(), _ = 0;
+                  _ >= _ && _ < _;
+                  _--, _++
+                )
+                  _(_, _, !1) ? __webpack_require__.push(_) : _--;
+                return _;
+              })(_, 3),
+            [_],
+          );
         return (0, _.jsxs)(_._, {
           className: (0, _._)(_().MenuGroup, _().Monthly),
           children: [
@@ -9318,1772 +7671,8 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = (0, _._)({
-          chartName: "LineChart",
-          GraphicalChild: _._,
-          axisComponents: [
-            {
-              axisType: "xAxis",
-              AxisComp: _._,
-            },
-            {
-              axisType: "yAxis",
-              AxisComp: _._,
-            },
-          ],
-          formatAxisMap: _._,
-        }),
-        _ = __webpack_require__("chunkid");
-      function _() {
-        const _ = (0, _._)({
-          queryKey: ["SupportStatsPage"],
-          queryFn: async () => {
-            const _ = await _().get(
-              `${_._.STORE_BASE_URL}stats/support?json=1`,
-            );
-            if ("string" == typeof _.data) throw "Error loading release status";
-            return _.data;
-          },
-          staleTime: 9e5,
-        });
-        return (0, _.jsx)(_._, {
-          title: (0, _._)("#SteamCharts_SupportStats"),
-          children: (0, _.jsxs)("div", {
-            className: _().ChartPage,
-            children: [
-              (0, _.jsx)("div", {
-                className: (0, _._)(_().HeaderCtn, _().WithSubtitle),
-                children: (0, _.jsx)("h1", {
-                  children: (0, _._)("#SteamCharts_SupportStats"),
-                }),
-              }),
-              (0, _.jsx)("div", {
-                className: _().PageSubtitle,
-                children: (0, _.jsx)(_, {
-                  rtLastUpdated: _.data?.rtLastUpdated,
-                }),
-              }),
-              (0, _.jsx)("div", {
-                className: _().PageSection,
-                children: (0, _.jsx)("p", {
-                  children: (0, _._)(
-                    "#SupportStats_Header_Desc",
-                    (0, _.jsx)("a", {
-                      href: "http://steamcommunity.com/games/593110/announcements/detail/1301948399251160549",
-                    }),
-                  ),
-                }),
-              }),
-              (0, _.jsx)("div", {
-                className: (0, _._)(_().PageSection),
-                children: (0, _.jsxs)("div", {
-                  className: (0, _._)(_().SectionTitle),
-                  children: [
-                    (0, _.jsx)("b", {
-                      children: (0, _._)(
-                        "#SupportStats_RequestsAndBacklog_Title",
-                      ),
-                    }),
-                    " ",
-                    (0, _._)("#SuportStats_MostRecent90Days"),
-                    (0, _.jsx)(_._, {
-                      children: (0, _.jsx)(_, {}),
-                    }),
-                  ],
-                }),
-              }),
-              (0, _.jsxs)("div", {
-                className: (0, _._)(_().PageSection),
-                children: [
-                  (0, _.jsx)("div", {
-                    className: (0, _._)(_().SectionTitle),
-                    children: (0, _.jsx)("b", {
-                      children: (0, _._)(
-                        "#SupportStats_RecentSupportActivity_Title",
-                      ),
-                    }),
-                  }),
-                  (0, _.jsx)("div", {
-                    className: (0, _._)(_().CategoryBlock),
-                    children: (0, _.jsx)(_._, {
-                      children: (0, _.jsx)(_, {
-                        SupportStats: _.data,
-                      }),
-                    }),
-                  }),
-                ],
-              }),
-            ],
-          }),
-        });
-      }
-      const _ = _.memo(function (_) {
-        const _ = new Date(1e3 * _.rtLastUpdated);
-        return (0, _.jsx)("span", {
-          children: (0, _._)(
-            "#SupportStats_Header_Title_Updated",
-            _.rtLastUpdated
-              ? _.toLocaleString(_._.GetPreferredLocales(), {
-                  day: "numeric",
-                  month: "long",
-                  year: "numeric",
-                  hour: "numeric",
-                  minute: "numeric",
-                  timeZoneName: "short",
-                })
-              : "",
-          ),
-        });
-      });
-      function _() {
-        const _ = (0, _._)({
-          queryKey: ["HelpRequestChartData"],
-          queryFn: async () => {
-            const _ = await _().get(
-              `${_._.STORE_BASE_URL}stats/supportdata.json`,
-            );
-            if ("string" == typeof _.data) throw "Error loading release status";
-            const _ = new Map(),
-              _ = [],
-              _ = [];
-            for (const _ of _.data) {
-              __webpack_require__.push({
-                dataKey: _.label,
-                color: _.color,
-              });
-              for (const _ of _.data) {
-                if (!_.has(_[0])) {
-                  const _ = {
-                    date: new Date(_[0]),
-                  };
-                  _.set(_[0], _), _.push(_);
-                }
-                _.get(_[0])[_.label] = _[1];
-              }
-            }
-            return {
-              rgSeries: _,
-              data: _,
-            };
-          },
-          staleTime: 216e5,
-        });
-        return (0, _.jsx)("div", {
-          className: (0, _._)(
-            _().HelpRequestChartContainer,
-            !_.data && _().Placeholder,
-          ),
-          children:
-            _.data &&
-            (0, _.jsx)(_, {
-              ChartData: _.data,
-            }),
-        });
-      }
-      const _ = _.memo(function (_) {
-        const { ChartData: _ } = _,
-          { rgSeries: _, data: _ } = _;
-        return (0, _.jsx)(_._, {
-          width: "100%",
-          height: "100%",
-          children: (0, _.jsxs)(_, {
-            data: _,
-            margin: {
-              top: 20,
-              left: 30,
-              right: 30,
-              bottom: 0,
-            },
-            children: [
-              (0, _.jsx)(_._, {
-                dataKey: "date",
-                tickFormatter: _,
-                interval: 7,
-              }),
-              (0, _.jsx)(_._, {
-                type: "number",
-                tickFormatter: _._,
-              }),
-              (0, _.jsx)(_._, {
-                content: (0, _.jsx)(_, {}),
-              }),
-              (0, _.jsx)(_._, {}),
-              __webpack_require__.map((_) =>
-                (0, _.jsx)(
-                  _._,
-                  {
-                    type: "monotone",
-                    dataKey: _.dataKey,
-                    stroke: _.color,
-                    dot: !1,
-                  },
-                  _.dataKey,
-                ),
-              ),
-            ],
-          }),
-        });
-      });
-      function _(_) {
-        const { active: _, payload: _ } = _;
-        if (_ && _ && _.length) {
-          const { date: _, ..._ } = _[0].payload;
-          return (0, _.jsxs)(_._, {
-            children: [
-              (0, _.jsxs)("div", {
-                children: [_(_), ":"],
-              }),
-              Object.keys(_).map((_) =>
-                (0, _.jsxs)(
-                  "div",
-                  {
-                    children: [_, ": ", (0, _._)(_[_])],
-                  },
-                  _,
-                ),
-              ),
-            ],
-          });
-        }
-        return null;
-      }
-      function _(_) {
-        return _.toLocaleString(_._.GetPreferredLocales(), {
-          month: "short",
-          day: "numeric",
-        });
-      }
-      function _(_) {
-        const _ = _.SupportStats?.rgReportData;
-        return _
-          ? (0, _.jsxs)("table", {
-              className: _().ChartTable,
-              children: [
-                (0, _.jsx)("thead", {
-                  className: _().ColumnHeaders,
-                  children: (0, _.jsxs)("tr", {
-                    children: [
-                      (0, _.jsx)("th", {
-                        className: _().Category,
-                        children: (0, _.jsx)("span", {
-                          children: (0, _._)("#SupportStats_TicketsByCategory"),
-                        }),
-                      }),
-                      (0, _.jsx)("th", {
-                        className: _().Submitted24h,
-                        children: (0, _.jsx)("span", {
-                          children: (0, _._)(
-                            "#SupportStats_TicketsLast24Hours",
-                          ),
-                        }),
-                      }),
-                      (0, _.jsx)("th", {
-                        className: _().ResponseTimes,
-                        children: (0, _.jsx)("span", {
-                          children: (0, _._)("#SupportStats_TimeToResponse"),
-                        }),
-                      }),
-                    ],
-                  }),
-                }),
-                (0, _.jsx)("tbody", {
-                  children: _.map((_) =>
-                    (0, _.jsx)(
-                      _,
-                      {
-                        row: _,
-                      },
-                      _.name,
-                    ),
-                  ),
-                }),
-              ],
-            })
-          : (0, _.jsx)("div", {
-              className: (0, _._)(_().Placeholder, _().Placeholder),
-            });
-      }
-      function _(_) {
-        const { row: _ } = _;
-        return (0, _.jsxs)("tr", {
-          className: (0, _._)(_().TableRow, _().TableRow),
-          children: [
-            (0, _.jsx)("td", {
-              className: _().Category,
-              children: _.name,
-            }),
-            (0, _.jsx)("td", {
-              className: _().Submitted24h,
-              children: (0, _._)(_.last24),
-            }),
-            (0, _.jsx)("td", {
-              className: _().ResponseTimes,
-              children: (0, _._)(
-                "#SupportStats_RecentWaitTimeData",
-                _(_["30pct"]),
-                _(_["90pct"]),
-              ),
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        return (0, _._)(_, {
-          eSuffix: _._.None,
-          bAllowDecimal: !0,
-        });
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_) {
-        const { Item: _ } = _,
-          _ = (0, _._)(_),
-          _ = _.BIsVisible() && !_;
-        return (0, _.jsx)(_._, {
-          item: _,
-          feature: "topchartlist",
-          className: _().TopChartItem,
-          component: _._,
-          children: _
-            ? (0, _.jsx)(_, {
-                Item: _,
-              })
-            : (0, _.jsx)(_, {
-                strName: _.GetName(),
-                bExcludedByPreferences: _,
-              }),
-        });
-      }
-      function _(_) {
-        const { Item: _ } = _,
-          _ = _.GetAppID(),
-          _ = (0, _._)(_),
-          { bIsOwned: _ } = (0, _._)(_),
-          _ = (0, _._)(_);
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            (_ || _) &&
-              (0, _.jsx)("div", {
-                className: _().CapsuleDecorator,
-                children: (0, _.jsxs)("span", {
-                  className: (0, _._)(_().Banner),
-                  children: [
-                    _
-                      ? (0, _.jsx)(_.oQr, {
-                          className: _().LinesImg,
-                        })
-                      : (0, _.jsx)(_.qnF, {
-                          className: _().LinesImg,
-                        }),
-                    (0, _.jsx)("div", {
-                      className: _().BannerText,
-                      children: (0, _._)(
-                        _ ? "#Sale_InLibrary" : "#Sale_OnWishlist",
-                      ),
-                    }),
-                  ],
-                }),
-              }),
-            (0, _.jsx)("img", {
-              className: _().CapsuleArt,
-              src: _.GetAssets().GetSmallCapsuleURL(),
-            }),
-            (0, _.jsx)("div", {
-              className: _().GameName,
-              children: _.GetName(),
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const { strName: _, bExcludedByPreferences: _ } = _;
-        return (0, _.jsxs)("div", {
-          className: _().GameName,
-          children: [
-            _ || (0, _._)("#SteamCharts_UnknownGameTitle"),
-            (0, _.jsx)("span", {
-              className: _().GameUnavailable,
-              children: _
-                ? (0, _._)("#SteamCharts_BlockedByPreferences")
-                : (0, _._)("#SteamCharts_UnavailableCountryRestriction"),
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const { children: _, mostPlayedOption: _ } = _;
-        return (0, _.jsxs)("table", {
-          className: _().ChartTable,
-          children: [
-            (0, _.jsx)("thead", {
-              className: _().ColumnHeaders,
-              children: (0, _.jsxs)("tr", {
-                children: [
-                  (0, _.jsx)("th", {
-                    className: _().HoverCell,
-                  }),
-                  (0, _.jsx)("th", {
-                    className: _().Rank,
-                    colSpan: 2,
-                    children: (0, _.jsx)("span", {
-                      children: (0, _._)("#SteamCharts_TopSellers_TableRank"),
-                    }),
-                  }),
-                  (0, _.jsx)("th", {
-                    className: (0, _._)(_().RightCell, _().Price),
-                    children: (0, _._)("#SteamCharts_TopSellers_TablePrice"),
-                  }),
-                  (0, _.jsx)(_, {
-                    mostPlayedOption: _,
-                  }),
-                  (0, _.jsx)("th", {
-                    className: (0, _._)(_().RightCell, _().PeakInGame),
-                    children: (0, _.jsxs)(_._, {
-                      className: _().Tooltip,
-                      toolTipContent: (0, _._)(
-                        "#SteamCharts_TopSellers_TablePeakInGame_Tooltip",
-                      ),
-                      direction: "top",
-                      children: [
-                        (0, _._)("#SteamCharts_TopSellers_TablePeakInGame"),
-                        " ",
-                        (0, _.jsx)(_._VW, {}),
-                      ],
-                    }),
-                  }),
-                ],
-              }),
-            }),
-            (0, _.jsx)("tbody", {
-              className: _().ListRowsCtn,
-              children: _,
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        return _.mostPlayedOption === _.DailyActiveUsers
-          ? (0, _.jsx)("th", {
-              className: _().Change,
-              align: "right",
-              children: (0, _.jsxs)(_._, {
-                className: _().Tooltip,
-                toolTipContent: (0, _._)(
-                  "#SteamCharts_TopSellers_TableChangeTooltip",
-                ),
-                direction: "top",
-                children: [
-                  (0, _.jsx)("span", {
-                    children: (0, _._)("#SteamCharts_TopSellers_TableChange"),
-                  }),
-                  " ",
-                  (0, _.jsx)(_._VW, {}),
-                ],
-              }),
-            })
-          : (0, _.jsx)("th", {
-              className: (0, _._)(_().RightCell, _().Concurrent),
-              children: (0, _.jsxs)(_._, {
-                className: _().Tooltip,
-                toolTipContent: (0, _._)(
-                  "#SteamCharts_TopSellers_TableCurrentPlayersTooltip",
-                ),
-                direction: "top",
-                children: [
-                  (0, _._)("#SteamCharts_TopSellers_TableCurrentPlayers"),
-                  " ",
-                  (0, _.jsx)(_._VW, {}),
-                ],
-              }),
-            });
-      }
-      function _(_) {
-        const {
-            nRank: _,
-            Item: _,
-            strPeakInGame: _,
-            renderOptionBasedCell: _,
-          } = _,
-          _ = (0, _._)(_),
-          _ = (0, _._)(_);
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            (0, _.jsx)("td", {
-              className: _().HoverCell,
-              children:
-                !_ &&
-                (0, _.jsx)(_._, {
-                  className: _().HoverSource,
-                  _: _,
-                  hoverProps: {
-                    direction: "right",
-                    nBodyAlignment: 0,
-                    nBodyDistance: 0,
-                    style: {
-                      width: "400px",
-                      height: "250px",
-                    },
-                  },
-                  children: (0, _.jsx)("div", {
-                    className: _().HoverMask,
-                  }),
-                }),
-            }),
-            (0, _.jsx)("td", {
-              className: _().RankCell,
-              children: _,
-            }),
-            (0, _.jsx)("td", {
-              className: (0, _._)(
-                _().CapsuleCell,
-                !__webpack_require__.BIsVisible() && _().Unavailable,
-              ),
-              children: (0, _.jsx)(_, {
-                Item: _,
-              }),
-            }),
-            (0, _.jsx)("td", {
-              className: _().PriceCell,
-              children: (0, _.jsx)("div", {
-                className: _().PriceWidget,
-                children: (0, _.jsx)(_._, {
-                  _: _,
-                }),
-              }),
-            }),
-            _(),
-            (0, _.jsx)("td", {
-              className: _().PeakInGameCell,
-              children: _,
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const { rank: _ } = _,
-          { nRank: _, Item: _, nRankLastWeek: _, nPeakInGame: _ } = _,
-          _ = (0, _._)(_),
-          _ = (0, _._)(),
-          _ = (0, _._)(_.GetStorePageURL(), _);
-        return (0, _.jsx)("tr", {
-          onClick: () => (window.location.href = _),
-          className: _().TableRow,
-          children: (0, _.jsx)(_, {
-            nRank: _,
-            Item: _,
-            strPeakInGame: _,
-            renderOptionBasedCell: () =>
-              (0, _.jsx)(_, {
-                nRank: _,
-                nRankLastWeek: _,
-              }),
-          }),
-        });
-      }
-      function _(_) {
-        const { nRank: _, nRankLastWeek: _ } = _,
-          { direction: _, symbol: _ } = _(_, _);
-        return (0, _.jsx)("td", {
-          className: (0, _._)(_().ChangeCell, _),
-          children: (0, _.jsx)(_._, {
-            className: _().Tooltip,
-            toolTipContent: (0, _._)("#SteamCharts_TopSellers_ChangeTooltip"),
-            direction: "top",
-            children:
-              _ && _ > 0 && _ <= 100
-                ? `${_} ${Math.abs(_ - _)}`
-                : (0, _.jsx)("span", {
-                    className: _().ListWeeksDebut,
-                    children: (0, _._)("#SteamCharts_TopSellers_TableNew"),
-                  }),
-          }),
-        });
-      }
-      function _(_) {
-        const { rank: _ } = _,
-          { nRank: _, Item: _, nConcurrentInGame: _, nPeakInGame: _ } = _,
-          _ = (0, _._)(_),
-          _ = (0, _._)(_),
-          _ = (0, _._)(),
-          _ = (0, _._)(_.GetStorePageURL(), _);
-        return (0, _.jsx)("tr", {
-          onClick: () => (window.location.href = _),
-          className: _().TableRow,
-          children: (0, _.jsx)(_, {
-            nRank: _,
-            Item: _,
-            strPeakInGame: _,
-            renderOptionBasedCell: () =>
-              (0, _.jsx)("td", {
-                className: (0, _._)(_().ConcurrentCell),
-                children: _,
-              }),
-          }),
-        });
-      }
-      var _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { src: _ } = _;
-        return (0, _.jsx)("img", {
-          src: _,
-          className: _().ChartTopGameBackground,
-        });
-      }
-      function _(_) {
-        const { MostPlayedStore: _ } = _,
-          [_, _] = _.useState(_.ConcurrentUsers);
-        return (0, _.jsx)(_._, {
-          title: (0, _._)("#SteamCharts_Menu_MostPlayed"),
-          children: (0, _.jsxs)(_._, {
-            className: _().ChartPage,
-            children: [
-              (0, _.jsx)("div", {
-                className: (0, _._)(_().HeaderCtn, _().WithSubtitle),
-                children: (0, _.jsx)("h1", {
-                  children: (0, _._)("#SteamCharts_Menu_MostPlayed"),
-                }),
-              }),
-              (0, _.jsxs)("div", {
-                className: _().PageSubtitle,
-                children: [
-                  (0, _._)("#SteamCharts_Menu_MostPlayed_Subtitle"),
-                  (0, _.jsx)(_, {
-                    selected: _,
-                    setOptionState: _,
-                  }),
-                ],
-              }),
-              (0, _.jsx)(_._, {
-                className: _().ChartPlaceholder,
-                children:
-                  _ === _.DailyActiveUsers
-                    ? (0, _.jsx)(_, {
-                        MostPlayedStore: _,
-                      })
-                    : (0, _.jsx)(_, {
-                        MostPlayedStore: _,
-                      }),
-              }),
-            ],
-          }),
-        });
-      }
-      function _(_) {
-        const { selected: _, setOptionState: _ } = _,
-          _ = [
-            {
-              data: _.ConcurrentUsers,
-              label: (0, _._)("#SteamCharts_Menu_ByConcurrentPlayersSubtitle"),
-            },
-            {
-              data: _.DailyActiveUsers,
-              label: (0, _._)("#SteamCharts_Menu_ByDailyActiveUsersSubtitle"),
-            },
-          ];
-        return (0, _.jsx)("div", {
-          className: _().MostPlayedOptionsControl,
-          children: (0, _.jsx)("div", {
-            className: _().DropDownContainer,
-            children: (0, _.jsx)(_._, {
-              rgOptions: _,
-              selectedOption: _,
-              onChange: (_) => {
-                __webpack_require__(_.data);
-              },
-            }),
-          }),
-        });
-      }
-      function _(_) {
-        const { MostPlayedStore: _ } = _,
-          _ = (function (_) {
-            return (0, _._)({
-              queryKey: [_],
-              queryFn: () => _.LoadMostPlayedByDAU(),
-              staleTime: 36e5,
-            });
-          })(_);
-        if (_.isLoading)
-          return (0, _.jsx)(_._, {
-            position: "center",
-          });
-        if (_.isError)
-          return (0, _.jsx)("div", {
-            children: (0, _.jsx)("h3", {
-              children: "Error loading  most played",
-            }),
-          });
-        if (!_.data) return null;
-        const _ = _.data.rgRanks[0]?.Item;
-        let _;
-        return (
-          _ &&
-            (_ =
-              _.GetAssets().GetLibraryHeroURL()?.trim().length > 0
-                ? _.GetAssets().GetLibraryHeroURL()
-                : _.GetAssets().GetPageBackgroundURL()),
-          (0, _.jsxs)(_.Fragment, {
-            children: [
-              (0, _.jsx)(_, {
-                src: _,
-              }),
-              (0, _.jsx)(_, {
-                mostPlayedOption: _.DailyActiveUsers,
-                children: _.data.rgRanks.map((_, _) =>
-                  (0, _.jsx)(
-                    _,
-                    {
-                      rank: {
-                        nRank: _ + 1,
-                        Item: _.Item,
-                        nRankLastWeek: _.nRankLastWeek,
-                        nPeakInGame: _.nPeakInGame,
-                      },
-                    },
-                    _.Item?.GetUniqueID() || _,
-                  ),
-                ),
-              }),
-            ],
-          })
-        );
-      }
-      function _(_) {
-        const { MostPlayedStore: _ } = _,
-          _ = _(_);
-        if (_.isLoading)
-          return (0, _.jsx)(_._, {
-            position: "center",
-          });
-        if (_.isError)
-          return (0, _.jsx)("div", {
-            children: (0, _.jsx)("h3", {
-              children: "Error loading most played",
-            }),
-          });
-        if (!_.data) return null;
-        const _ = _.data.rgRanks[0]?.Item;
-        let _;
-        return (
-          _ &&
-            (_ =
-              _.GetAssets().GetLibraryHeroURL()?.trim().length > 0
-                ? _.GetAssets().GetLibraryHeroURL()
-                : _.GetAssets().GetPageBackgroundURL()),
-          (0, _.jsxs)(_.Fragment, {
-            children: [
-              (0, _.jsx)(_, {
-                src: _,
-              }),
-              (0, _.jsx)(_, {
-                mostPlayedOption: _.ConcurrentUsers,
-                children: _.data.rgRanks.map((_, _) =>
-                  (0, _.jsx)(
-                    _,
-                    {
-                      rank: {
-                        nRank: _ + 1,
-                        Item: _.Item,
-                        nConcurrentInGame: _.nConcurrentInGame,
-                        nPeakInGame: _.nPeakInGame,
-                      },
-                    },
-                    _.Item?.GetUniqueID() || _,
-                  ),
-                ),
-              }),
-            ],
-          })
-        );
-      }
-      function _(_) {
-        const { children: _ } = _;
-        return (0, _.jsxs)("table", {
-          className: _().ChartTable,
-          children: [
-            (0, _.jsx)("thead", {
-              className: _().ColumnHeaders,
-              children: (0, _.jsxs)("tr", {
-                children: [
-                  (0, _.jsx)("th", {
-                    className: _().HoverCell,
-                  }),
-                  (0, _.jsx)("th", {
-                    className: _().Rank,
-                    colSpan: 2,
-                    children: (0, _.jsx)("span", {
-                      children: (0, _._)("#SteamCharts_TopSellers_TableRank"),
-                    }),
-                  }),
-                  (0, _.jsx)("th", {
-                    className: (0, _._)(_().RightCell, _().Price),
-                    children: (0, _.jsxs)(_._, {
-                      className: _().Tooltip,
-                      toolTipContent: (0, _._)(
-                        "#SteamCharts_TopSellers_TablePriceTooltip",
-                      ),
-                      direction: "top",
-                      children: [
-                        (0, _._)("#SteamCharts_TopSellers_TablePrice"),
-                        " ",
-                        (0, _.jsx)(_._VW, {}),
-                      ],
-                    }),
-                  }),
-                  (0, _.jsx)("th", {
-                    className: _().Change,
-                    align: "right",
-                    children: (0, _.jsxs)(_._, {
-                      className: _().Tooltip,
-                      toolTipContent: (0, _._)(
-                        "#SteamCharts_TopSellers_TableChangeTooltip",
-                      ),
-                      direction: "top",
-                      children: [
-                        (0, _.jsx)("span", {
-                          children: (0, _._)(
-                            "#SteamCharts_TopSellers_TableChange",
-                          ),
-                        }),
-                        " ",
-                        (0, _.jsx)(_._VW, {}),
-                      ],
-                    }),
-                  }),
-                  (0, _.jsx)("th", {
-                    className: _().Weeks,
-                    align: "right",
-                    children: (0, _.jsxs)(_._, {
-                      className: _().Tooltip,
-                      toolTipContent: (0, _._)(
-                        "#SteamCharts_TopSellers_TableWeeksTooltip",
-                      ),
-                      direction: "top",
-                      children: [
-                        (0, _._)("#SteamCharts_TopSellers_TableWeeks"),
-                        " ",
-                        (0, _.jsx)(_._VW, {}),
-                      ],
-                    }),
-                  }),
-                ],
-              }),
-            }),
-            (0, _.jsx)("tbody", {
-              className: _().ListRowsCtn,
-              children: _,
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const { rank: _ } = _,
-          { nRank: _, Item: _, nRankLastWeek: _, nConsecutiveWeeks: _ } = _,
-          _ = (0, _._)(_),
-          _ = (0, _._)(),
-          _ = (0, _._)(_.GetStorePageURL(), _),
-          _ = (0, _._)(_),
-          _ = _.GetBestPurchaseOption();
-        let _ = "";
-        _.BIsFree()
-          ? (_ = (0, _._)("#SteamCharts_TopSellers_TableFree"))
-          : _ && (_ = _.formatted_final_price);
-        const _ = (0, _._)(_);
-        return (0, _.jsxs)("tr", {
-          className: _().TableRow,
-          onClick: () => (window.location.href = _),
-          children: [
-            (0, _.jsx)("td", {
-              className: _().HoverCell,
-              children:
-                !_ &&
-                (0, _.jsx)(_._, {
-                  className: _().HoverSource,
-                  _: _,
-                  hoverProps: {
-                    direction: "right",
-                    nBodyAlignment: 0,
-                    nBodyDistance: 0,
-                    style: {
-                      width: "400px",
-                      height: "250px",
-                    },
-                  },
-                  children: (0, _.jsx)("div", {
-                    className: _().HoverMask,
-                  }),
-                }),
-            }),
-            (0, _.jsx)("td", {
-              className: _().RankCell,
-              children: _,
-            }),
-            (0, _.jsx)("td", {
-              className: (0, _._)(
-                _().CapsuleCell,
-                !_.BIsVisible() && _().Unavailable,
-              ),
-              children: (0, _.jsx)(_, {
-                Item: _,
-              }),
-            }),
-            (0, _.jsx)("td", {
-              className: _().PriceCell,
-              children: (0, _.jsx)("div", {
-                className: _().PriceWidget,
-                children: (0, _.jsx)(_._, {
-                  _: _,
-                }),
-              }),
-            }),
-            (0, _.jsx)(_, {
-              rank: _,
-            }),
-            (0, _.jsx)("td", {
-              className: _().WeeksCell,
-              children: (0, _.jsx)(_._, {
-                className: _().Tooltip,
-                toolTipContent: (0, _._)("#SteamCharts_TopSellers_NumTooltip"),
-                direction: "top",
-                children: _,
-              }),
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const { rank: _ } = _,
-          { nRank: _, nRankLastWeek: _, bFirstTop100: _ } = _,
-          { direction: _, symbol: _ } = _(_, _);
-        let _;
-        return (
-          (_ =
-            _ && _ <= 100
-              ? `${_} ${Math.abs(_ - _)}`
-              : _
-                ? (0, _.jsx)("span", {
-                    className: _().ListWeeksDebut,
-                    children: (0, _._)("#SteamCharts_TopSellers_TableNew"),
-                  })
-                : (0, _.jsx)("span", {
-                    className: _().ListWeeksReturning,
-                    children: (0, _._)(
-                      "#SteamCharts_TopSellers_TableReturning",
-                    ),
-                  })),
-          (0, _.jsx)("td", {
-            className: (0, _._)(_().ChangeCell, _),
-            children: (0, _.jsx)(_._, {
-              className: _().Tooltip,
-              toolTipContent: (0, _._)("#SteamCharts_TopSellers_ChangeTooltip"),
-              direction: "top",
-              children: _,
-            }),
-          })
-        );
-      }
-      function _(_) {
-        const {
-            TopSellersStore: _,
-            strCountryCode: _,
-            onCountryCodeChanged: _,
-          } = _,
-          _ = _.GetCountryList(),
-          _ = _.useMemo(
-            () => [
-              {
-                data: "",
-                label: (0, _._)("#SteamCharts_TopSellers_GlobalTopSellers"),
-              },
-              ..._.map(({ country_code: _, name: _ }) => ({
-                data: _,
-                label: _,
-              })),
-            ],
-            [_],
-          );
-        return (0, _.jsx)("div", {
-          className: _().CountryControl,
-          children: (0, _.jsx)("div", {
-            className: _().DropDownContainer,
-            children: (0, _.jsx)(_._, {
-              rgOptions: _,
-              selectedOption: _,
-              onChange: _,
-            }),
-          }),
-        });
-      }
-      function _(_) {
-        const { TopSellersStore: _, overrideCountry: _ } = _,
-          _ = _(_),
-          _ = _(),
-          _ = _.useCallback(
-            (_) => {
-              const _ = _.data;
-              _(_.TopSelling(_(_)), {
-                bReplace: !0,
-              });
-            },
-            [_],
-          ),
-          { rtCurrentWeek: _, bCountryListInitialized: _ } = _(_, _._.COUNTRY),
-          _ = _(_, _, _, _.TopSelling);
-        return (0, _.jsx)(_._, {
-          title: (0, _._)("#SteamCharts_Menu_TopSelling"),
-          children: (0, _.jsxs)(_._, {
-            className: _().ChartPage,
-            children: [
-              (0, _.jsxs)("div", {
-                className: (0, _._)(_().HeaderCtn, _().WithSubtitle),
-                children: [
-                  (0, _.jsx)("h1", {
-                    children: (0, _._)("#SteamCharts_Menu_TopSelling"),
-                  }),
-                  (0, _.jsx)(_._, {
-                    children: (0, _.jsx)(_, {
-                      TopSellersStore: _,
-                      strCountryCode: _,
-                      onCountryCodeChanged: _,
-                    }),
-                  }),
-                ],
-              }),
-              (0, _.jsx)("div", {
-                className: _().PageSubtitle,
-                children: (0, _._)("#SteamCharts_Menu_TopSelling_Subtitle"),
-              }),
-              (0, _.jsx)(_._, {
-                className: _().ChartPlaceholder,
-                children: (0, _.jsx)(_._, {
-                  children:
-                    _ &&
-                    _ &&
-                    (0, _.jsx)(_, {
-                      TopSellersStore: _,
-                      overrideCountry: _,
-                    }),
-                }),
-              }),
-            ],
-          }),
-        });
-      }
-      function _(_) {
-        const { TopSellersStore: _, overrideCountry: _ } = _,
-          { TopSellers: _, status: _ } = _(_, _.GetPreviousWeek(), _, 100),
-          _ = (0, _._)(
-            "SteamCharts Live Top Sellers",
-            {
-              sort: _ ? _._._ : _._._,
-              start: 0,
-              count: 100,
-            },
-            _,
-            {
-              override_country_code: _,
-              content_descriptors_excluded: [],
-            },
-          ),
-          _ = _.useMemo(
-            () =>
-              _ && _.data
-                ? (function (_, _) {
-                    const _ = new Map();
-                    for (const _ of _.rgRanks)
-                      __webpack_require__.set(_.Item.GetUniqueID(), _);
-                    return _.map((_, _) => {
-                      const _ = __webpack_require__.get(_.GetUniqueID());
-                      return {
-                        nRank: _ + 1,
-                        Item: _,
-                        nRankLastWeek: _?.nRank,
-                        nConsecutiveWeeks: _ ? _.nConsecutiveWeeks + 1 : 1,
-                        bFirstTop100: !_,
-                      };
-                    });
-                  })(_, _.data.GetItems())
-                : null,
-            [_, _],
-          );
-        if (!_)
-          return "loading" === _ || _.isLoading
-            ? (0, _.jsx)(_._, {
-                position: "center",
-              })
-            : null;
-        const _ = _[0]?.Item;
-        let _;
-        return (
-          _ &&
-            (_ =
-              _.GetAssets().GetLibraryHeroURL()?.trim().length > 0
-                ? _.GetAssets().GetLibraryHeroURL()
-                : _.GetAssets().GetPageBackgroundURL()),
-          (0, _.jsxs)(_.Fragment, {
-            children: [
-              (0, _.jsx)(_, {
-                src: _,
-              }),
-              (0, _.jsx)(_, {
-                children: _.map((_) =>
-                  (0, _.jsx)(
-                    _._,
-                    {
-                      children: (0, _.jsx)(_, {
-                        rank: _,
-                      }),
-                    },
-                    _.nRank,
-                  ),
-                ),
-              }),
-              (0, _.jsx)("div", {
-                className: _().BrowseTopSellersButton,
-                children: (0, _.jsx)(_._, {
-                  onClick: () => {
-                    window.location.href = `${_._.STORE_BASE_URL}search/?filter=${_ ? "topsellers" : "globaltopsellers"}`;
-                  },
-                  children: (0, _._)("#SteamCharts_TopSellers_Browse"),
-                }),
-              }),
-            ],
-          })
-        );
-      }
-      var _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { TopSellersStore: _, week: _, country: _ } = _;
-        let _ = (function (_) {
-            if (_) {
-              const _ = _.match(/(\d+)-(\d+)-(\d+)/);
-              if (_) {
-                let _ = new Date(
-                  Date.UTC(
-                    Number(_[1]),
-                    Number(_[2]) - 1,
-                    Number(_[3]),
-                    0,
-                    0,
-                    0,
-                    0,
-                  ),
-                );
-                for (; 2 != _.getUTCDay(); ) _ = new Date(_.getTime() - 864e5);
-                return _.getTime() / 1e3;
-              }
-            }
-          })(_),
-          _ = _(_);
-        const { rtCurrentWeek: _, bCountryListInitialized: _ } = _(_, _);
-        _ && (!_ || _ > _) && (_ = _), _ < _ && (_ = _);
-        const _ = _.useCallback((_) => _.TopSellers(_, _(_)), [_]),
-          _ = _(_, _, _, _),
-          _ = _(),
-          _ = _ && _(_) == _;
-        return (
-          (0, _.useEffect)(() => {
-            _ &&
-              !_ &&
-              _(_.TopSellers(_, _(_)), {
-                bReplace: !0,
-              });
-          }, [_, _, _, _, _]),
-          _ && _ && _
-            ? (0, _.jsx)(_._, {
-                title:
-                  (0, _._)("#SteamCharts_TopSellers_PageTitle") + " - " + _(_),
-                children: (0, _.jsxs)(_._, {
-                  className: _().ChartPage,
-                  children: [
-                    (0, _.jsxs)("div", {
-                      className: (0, _._)(_().HeaderCtn, _().WithSubtitle),
-                      children: [
-                        (0, _.jsx)("h1", {
-                          children: (0, _._)(
-                            "#SteamCharts_TopSellers_PageTitle",
-                          ),
-                        }),
-                        (0, _.jsx)(_._, {
-                          children: (0, _.jsx)(_, {
-                            TopSellersStore: _,
-                            rtWeekStart: _,
-                            strCountryCode: _,
-                          }),
-                        }),
-                      ],
-                    }),
-                    (0, _.jsxs)("div", {
-                      className: _().PageSubtitle,
-                      children: [
-                        (0, _._)("#SteamCharts_TopSellers_PageSubTitle"),
-                        " ",
-                        (0, _.jsx)("span", {
-                          children: (0, _._)(
-                            "#SteamCharts_TopSellers_PageSubTitle_subtext",
-                          ),
-                        }),
-                      ],
-                    }),
-                    (0, _.jsx)(_._, {
-                      children: (0, _.jsx)(_, {
-                        rtWeekStart: _,
-                        strCountryCode: _,
-                        rtMaxWeekStart: _.GetCurrentWeek(),
-                      }),
-                    }),
-                    (0, _.jsx)(_._, {
-                      className: _().ChartPlaceholder,
-                      children: (0, _.jsx)(_._, {
-                        children: (0, _.jsx)(_, {
-                          TopSellersStore: _,
-                          rtWeekStart: _,
-                          strCountryCode: _,
-                        }),
-                      }),
-                    }),
-                  ],
-                }),
-              })
-            : null
-        );
-      }
-      function _(_) {
-        const { rtWeekStart: _, strCountryCode: _, rtMaxWeekStart: _ } = _,
-          _ = 604800;
-        let _, _;
-        return (
-          (_ = _ - _ < _ ? void 0 : _.TopSellers(_(_), _(_ - _))),
-          (_ = _ >= _ ? void 0 : _.TopSellers(_(_), _(_ + _))),
-          (0, _.jsxs)(_._, {
-            className: _().ChartRangeCtn,
-            children: [
-              (0, _.jsx)(_, {
-                strLink: _,
-                children: (0, _.jsx)("div", {
-                  className: _().ChartNavPrev,
-                  children: " ",
-                }),
-              }),
-              (0, _.jsx)(_, {
-                strLink: _,
-                children: (0, _.jsx)("div", {
-                  className: _().ChartNavNext,
-                  children: " ",
-                }),
-              }),
-              (0, _.jsx)("div", {
-                className: (0, _._)(_().ChartRangeText, _().LongDate),
-                children: _(_),
-              }),
-              (0, _.jsx)("div", {
-                className: (0, _._)(_().ChartRangeText, _().ShortDate),
-                children: _(_),
-              }),
-            ],
-          })
-        );
-      }
-      function _(_) {
-        const { strLink: _, children: _ } = _;
-        return (0, _.jsx)("div", {
-          className: (0, _._)(_().ChartNavCtn, _ ? "" : _().Disabled),
-          children: (0, _.jsx)(_, {
-            _: _ ?? _.Overview(),
-            onClick: _ ? void 0 : (_) => _.preventDefault(),
-            className: _().ChartNavHitArea,
-            children: _,
-          }),
-        });
-      }
-      function _(_) {
-        const { TopSellersStore: _, strCountryCode: _, rtWeekStart: _ } = _,
-          _ = _.GetCountryList(),
-          _ = _(),
-          _ = (0, _._)(),
-          _ = _.useMemo(
-            () => [
-              {
-                data: "",
-                label: (0, _._)("#SteamCharts_TopSellers_GlobalTopSellers"),
-              },
-              ..._.map(({ country_code: _, name: _ }) => ({
-                data: _,
-                label: _,
-              })),
-            ],
-            [_],
-          ),
-          _ = _.useCallback(
-            (_) => {
-              const _ = _.data;
-              _(_.TopSellers(_(_), _(_)), {
-                bReplace: !0,
-                state: _.location.state,
-              });
-            },
-            [_, _, _],
-          );
-        return (0, _.jsx)("div", {
-          className: _().CountryControl,
-          children: (0, _.jsx)("div", {
-            className: _().DropDownContainer,
-            children: (0, _.jsx)(_._, {
-              rgOptions: _,
-              selectedOption: _,
-              onChange: _,
-            }),
-          }),
-        });
-      }
-      function _(_) {
-        const { TopSellersStore: _, rtWeekStart: _, strCountryCode: _ } = _,
-          [_, _] = (0, _._)("TopSellersExpanded", !1),
-          { TopSellers: _, status: _ } = _(_, _, _, _ ? 100 : 20),
-          _ = _.useCallback(() => _(!0), [_]);
-        return "error" === _
-          ? (0, _.jsx)("div", {
-              children: (0, _.jsx)("h3", {
-                children: "Error loading top sellers",
-              }),
-            })
-          : (0, _.jsxs)(_.Fragment, {
-              children: [
-                (0, _.jsx)(_, {
-                  TopSellers: _,
-                }),
-                _ &&
-                  (0, _.jsx)(_, {
-                    children: _.rgRanks.map((_) =>
-                      (0, _.jsx)(
-                        _._,
-                        {
-                          children: (0, _.jsx)(_, {
-                            rank: _,
-                          }),
-                        },
-                        _.nRank,
-                      ),
-                    ),
-                  }),
-                20 === _?.rgRanks?.length &&
-                  (0, _.jsx)("div", {
-                    className: _().WeeklyFooterControls,
-                    children:
-                      ((!_ && "loaded" == _) || (_ && "loading" == _)) &&
-                      (0, _.jsx)(_._, {
-                        onClick: _,
-                        disabled: "loading" == _,
-                        children: (0, _._)(
-                          "#SteamCharts_TopSellers_SeeAllNTopSellers",
-                          100,
-                        ),
-                      }),
-                  }),
-                "loading" == _ &&
-                  (0, _.jsx)(_._, {
-                    position: "center",
-                  }),
-              ],
-            });
-      }
-      const _ = _.memo((_) => {
-        const { TopSellers: _ } = _,
-          _ = _.useRef(void 0);
-        if (_ && _.rgRanks.length) {
-          const _ = _.rgRanks;
-          let _ = _.find((_) => 1 === _.nConsecutiveWeeks);
-          _ || (_ = _[0]),
-            (_.current =
-              _.Item.GetAssets().GetLibraryHeroURL()?.trim().length > 0
-                ? _.Item.GetAssets().GetLibraryHeroURL()
-                : _.Item.GetAssets().GetPageBackgroundURL());
-        }
-        return _.current
-          ? (0, _.jsx)(_, {
-              src: _.current,
-            })
-          : null;
-      });
-      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { MostPlayedOnDeckStore: _, strTimePeriod: _ } = _,
-          { topPlayedPeriod: _, dateRangeString: _ } = _.useMemo(() => {
-            let _ = _._._;
-            const _ = new Date().getTime() / 1e3,
-              _ = _ - 518400,
-              _ = _ - 2505600,
-              _ = _ - 31449600;
-            let _ = (0, _._)(_, _);
-            if (_)
-              switch (__webpack_require__.toLowerCase()) {
-                case "pastmonth":
-                  (_ = _._._), (_ = (0, _._)(_, _));
-                  break;
-                case "pastyear":
-                  (_ = _._._), (_ = (0, _._)(_, _));
-                  break;
-                case "pastweek":
-                  (_ = _._._), (_ = (0, _._)(_, _));
-              }
-            return {
-              topPlayedPeriod: _,
-              dateRangeString: _,
-            };
-          }, [_]),
-          _ = (0, _._)(1, 13),
-          _ =
-            _._.BASE_URL_STORE_CDN_ASSETS +
-            `steamdeck/steamdeck_promo_0${_}.png?v=4`;
-        return (0, _.jsx)(_._, {
-          title: (0, _._)("#SteamCharts_MostPlayedDeck_Title"),
-          children: (0, _.jsxs)(_._, {
-            className: _().ChartPage,
-            children: [
-              (0, _.jsxs)("div", {
-                className: _().TopSectionFlex,
-                children: [
-                  (0, _.jsxs)("div", {
-                    className: _().TopSectionCol,
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: (0, _._)(_().HeaderCtn, _().WithSubtitle),
-                        children: (0, _.jsx)("h1", {
-                          children: (0, _._)(
-                            "#SteamCharts_MostPlayedDeck_Title",
-                          ),
-                        }),
-                      }),
-                      (0, _.jsxs)("div", {
-                        className: (0, _._)(
-                          _().PageSubtitle,
-                          _().TopDeckSubtitle,
-                        ),
-                        children: [
-                          (0, _._)("#SteamCharts_MostPlayedDeck_Subtitle"),
-                          (0, _.jsx)("div", {
-                            className: _().SteamDeckChartDropdown,
-                            children: (0, _.jsx)(_, {
-                              selected: _,
-                            }),
-                          }),
-                        ],
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _().DeckChartDateRange,
-                        children: _,
-                      }),
-                    ],
-                  }),
-                  (0, _.jsx)("a", {
-                    href: "https://store.steampowered.com/app/1675200/Steam_Deck/?utm_source=steamdeckcharts",
-                    children: (0, _.jsxs)("div", {
-                      className: (0, _._)(
-                        _().SteamDeckBanner,
-                        _().TopSectionCol,
-                      ),
-                      children: [
-                        (0, _.jsx)("div", {
-                          className: (0, _._)(
-                            _().SteamDeckImage,
-                            _().TopSectionCol,
-                          ),
-                          children: (0, _.jsx)("img", {
-                            src: _,
-                          }),
-                        }),
-                        (0, _.jsxs)("div", {
-                          className: _().SteamDeckBannerWords,
-                          children: [
-                            (0, _.jsx)("div", {
-                              className: _().SteamDeckBannerTitle,
-                              children: (0, _._)(
-                                "#SteamCharts_SteamDeckPromo_Title",
-                              ),
-                            }),
-                            (0, _.jsx)("div", {
-                              className: _().SteamDeckBannerDesc,
-                              children: (0, _._)(
-                                "#SteamCharts_SteamDeckPromo_Desc",
-                              ),
-                            }),
-                          ],
-                        }),
-                      ],
-                    }),
-                  }),
-                ],
-              }),
-              (0, _.jsx)(_._, {
-                className: _().ChartPlaceholder,
-                children: (0, _.jsx)(_, {
-                  MostPlayedOnDeckStore: _,
-                  eTopPlayedPeriod: _,
-                }),
-              }),
-            ],
-          }),
-        });
-      }
-      function _(_) {
-        const { selected: _ } = _,
-          _ = _(),
-          _ = [
-            {
-              data: "pastweek",
-              label: (0, _._)("#SteamCharts_MostPlayedDeck_Option_PastWeek"),
-            },
-            {
-              data: "pastmonth",
-              label: (0, _._)("#SteamCharts_MostPlayedDeck_Option_PastMonth"),
-            },
-            {
-              data: "pastyear",
-              label: (0, _._)("#SteamCharts_MostPlayedDeck_Option_PastYear"),
-            },
-          ],
-          _ = _.useCallback(
-            (_) => {
-              __webpack_require__(_.MostPlayedOnSteamDeck(_.data));
-            },
-            [_],
-          );
-        return (0, _.jsx)("div", {
-          className: _().MostPlayedOptionsControl,
-          children: (0, _.jsx)("div", {
-            className: _().DropDownContainer,
-            children: (0, _.jsx)(_._, {
-              rgOptions: _,
-              selectedOption: _ ?? "pastweek",
-              onChange: _,
-            }),
-          }),
-        });
-      }
-      function _(_) {
-        const { MostPlayedOnDeckStore: _, eTopPlayedPeriod: _ } = _,
-          _ = (function (_, _) {
-            return (0, _._)({
-              queryKey: ["MostPlayedSteamDeckGames_" + _],
-              queryFn: () => _.LoadMostPlayedOnSteamDeck(_),
-              staleTime: 36e5,
-            });
-          })(_, _);
-        if (_.isLoading)
-          return (0, _.jsx)(_._, {
-            position: "center",
-          });
-        if (_.isError)
-          return (0, _.jsx)("div", {
-            children: (0, _.jsx)("h3", {
-              children: "Error loading  most played on Steam Deck",
-            }),
-          });
-        if (!_.data) return null;
-        const _ = _.data.rgRanks[0]?.Item;
-        let _;
-        return (
-          _ &&
-            (_ =
-              _.GetAssets().GetLibraryHeroURL()?.trim().length > 0
-                ? _.GetAssets().GetLibraryHeroURL()
-                : _.GetAssets().GetPageBackgroundURL()),
-          (0, _.jsxs)(_.Fragment, {
-            children: [
-              (0, _.jsx)(_, {
-                src: _,
-              }),
-              (0, _.jsx)(_, {
-                eTopPlayedPeriod: _,
-                children: _.data.rgRanks.map((_, _) =>
-                  (0, _.jsx)(
-                    _,
-                    {
-                      rank: {
-                        nRank: _ + 1,
-                        Item: _.Item,
-                        nRankLastPeriod: _.nRankLastPeriod,
-                      },
-                    },
-                    _.Item?.GetUniqueID() || _,
-                  ),
-                ),
-              }),
-            ],
-          })
-        );
-      }
-      function _(_) {
-        const { children: _, eTopPlayedPeriod: _ } = _;
-        let _ = (0, _._)("#SteamCharts_MostPlayedDeck_TableChangeWeek_Tooltip");
-        switch (_) {
-          case _._._:
-            _ = (0, _._)(
-              "#SteamCharts_MostPlayedDeck_TableChangeMonth_Tooltip",
-            );
-            break;
-          case _._._:
-            _ = (0, _._)("#SteamCharts_MostPlayedDeck_TableChangeYear_Tooltip");
-        }
-        return (0, _.jsxs)("table", {
-          className: _().ChartTable,
-          children: [
-            (0, _.jsx)("thead", {
-              className: _().ColumnHeaders,
-              children: (0, _.jsxs)("tr", {
-                children: [
-                  (0, _.jsx)("th", {
-                    className: _().HoverCell,
-                  }),
-                  (0, _.jsx)("th", {
-                    className: _().Rank,
-                    colSpan: 2,
-                    children: (0, _.jsx)("span", {
-                      children: (0, _._)("#SteamCharts_TopSellers_TableRank"),
-                    }),
-                  }),
-                  (0, _.jsx)("th", {
-                    className: (0, _._)(_().RightCell, _().Price),
-                    children: (0, _._)("#SteamCharts_TopSellers_TablePrice"),
-                  }),
-                  (0, _.jsx)("th", {
-                    className: _().Change,
-                    align: "right",
-                    children: (0, _.jsxs)(_._, {
-                      className: _().Tooltip,
-                      toolTipContent: _,
-                      direction: "top",
-                      children: [
-                        (0, _.jsx)("span", {
-                          children: (0, _._)(
-                            "#SteamCharts_TopSellers_TableChange",
-                          ),
-                        }),
-                        " ",
-                        (0, _.jsx)(_._VW, {}),
-                      ],
-                    }),
-                  }),
-                  (0, _.jsx)("th", {
-                    className: _().Change,
-                    align: "right",
-                    children: (0, _.jsxs)(_._, {
-                      className: _().Tooltip,
-                      toolTipContent: (0, _._)(
-                        "#SteamCharts_MostPlayedDeck_TableDeckVerified_Tooltip",
-                      ),
-                      direction: "top",
-                      children: [
-                        (0, _._)(
-                          "#SteamCharts_MostPlayedDeck_TableDeckVerified",
-                        ),
-                        " ",
-                        (0, _.jsx)(_._VW, {}),
-                      ],
-                    }),
-                  }),
-                ],
-              }),
-            }),
-            (0, _.jsx)("tbody", {
-              className: _().ListRowsCtn,
-              children: _,
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const { rank: _ } = _,
-          _ = (0, _._)(),
-          _ = (0, _._)(_.Item.GetStorePageURL(), _);
-        return (0, _.jsx)("tr", {
-          onClick: () => (window.location.href = _),
-          className: _().TableRow,
-          children: (0, _.jsx)(_, {
-            rank: _,
-          }),
-        });
-      }
-      function _(_) {
-        const { rank: _ } = _,
-          _ = _.Item,
-          _ = (0, _._)(_),
-          _ = (0, _._)(_),
-          _ = (0, _._)(
-            __webpack_require__.GetPlatforms().steam_deck_compat_category,
-          );
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            (0, _.jsx)("td", {
-              className: _().HoverCell,
-              children:
-                !_ &&
-                (0, _.jsx)(_._, {
-                  className: _().HoverSource,
-                  _: _,
-                  hoverProps: {
-                    direction: "right",
-                    nBodyAlignment: 0,
-                    nBodyDistance: 0,
-                    style: {
-                      width: "400px",
-                      height: "250px",
-                    },
-                  },
-                  children: (0, _.jsx)("div", {
-                    className: _().HoverMask,
-                  }),
-                }),
-            }),
-            (0, _.jsx)("td", {
-              className: _().RankCell,
-              children: _.nRank,
-            }),
-            (0, _.jsx)("td", {
-              className: (0, _._)(
-                _().CapsuleCell,
-                !__webpack_require__.BIsVisible() && _().Unavailable,
-              ),
-              children: (0, _.jsx)(_, {
-                Item: _,
-              }),
-            }),
-            (0, _.jsx)("td", {
-              className: _().PriceCell,
-              children: (0, _.jsx)("div", {
-                className: _().PriceWidget,
-                children: (0, _.jsx)(_._, {
-                  _: _,
-                }),
-              }),
-            }),
-            (0, _.jsx)(_, {
-              nRank: _.nRank,
-              nRankLastWeek: _.nRankLastPeriod,
-            }),
-            (0, _.jsx)("td", {
-              className: _().ChangeCell,
-              children: (0, _.jsx)(_, {}),
-            }),
-          ],
-        });
-      }
-      var _ = __webpack_require__("chunkid");
       function _(_, _, _) {
         const { data: _ } = (0, _._)({
           queryKey: ["useYearEventModel", _],
@@ -11299,6 +7888,122 @@
           );
         return Math.floor(_ / 1e3);
       }
+      function _(_, _, _) {
+        const _ = (0, _._)(),
+          _ = _ < _(_, 1),
+          _ = _ < _(_, 15),
+          _ = (function (_, _) {
+            const { data: _ } = (0, _._)({
+              queryKey: [_, _],
+              queryFn: () => _.LoadTopYearlyReleases(_),
+            });
+            return _;
+          })(_, _),
+          _ = (0, _.useMemo)(
+            () =>
+              _
+                ? Array.from(
+                    new Set([
+                      ...(_.top_dlc_releases?.map((_) => _.appid) || []),
+                      ...(_.top_combined_app_and_dlc_releases?.map(
+                        (_) => _.appid,
+                      ) || []),
+                      ...(_.top_app_list?.map((_) => _.appid) || []),
+                    ]),
+                  )
+                : (_ && __webpack_require__(null), []),
+            [_, _],
+          ),
+          _ = (0, _._)(_, _),
+          _ = (0, _.useMemo)(() => {
+            if (!_ || _ == _._) return [];
+            const _ = [],
+              _ = (_?.top_combined_app_and_dlc_releases || [])
+                .filter((_) => !_._.Get().BIsAppMissing(_.appid))
+                .map((_) => {
+                  let _ = _.app_release_rank;
+                  return (
+                    _ == _._._ && (_ = 0),
+                    _[_] || (_[_] = []),
+                    _[_].push(_.appid),
+                    _.appid
+                  );
+                });
+            let _ = [
+                {
+                  strTabTitleToken: "#SteamCharts_Yearly_Tab_NewReleases",
+                  strTabSubTitleToken: _
+                    ? "#SteamCharts_Yearly_Tab_NewReleases_desc_pre"
+                    : "#SteamCharts_Yearly_Tab_NewReleases_desc",
+                  rgFilteredDLCsAppIDs:
+                    _.top_dlc_releases
+                      ?.filter((_) => !_._.Get().BIsAppMissing(_.appid))
+                      .map((_) => _.appid) || [],
+                  rgFilteredCombinedAppsAndDLC: _,
+                  rgFilteredAppIDByTier: _,
+                },
+              ],
+              _ = _(
+                _._._,
+                "#SteamCharts_Yearly_Tab_TopSellers",
+                _
+                  ? "#SteamCharts_Yearly_Tab_TopSellers_desc_pre"
+                  : "#SteamCharts_Yearly_Tab_TopSellers_desc",
+                _.top_app_list,
+              );
+            return (
+              _.rgFilteredCombinedAppsAndDLC?.length > 0 &&
+                __webpack_require__.push(_),
+              (_ = _(
+                _._._,
+                "#SteamCharts_Yearly_Tab_MostPlayed",
+                "#SteamCharts_Yearly_Tab_MostPlayed_desc",
+                _.top_app_list,
+              )),
+              _.rgFilteredCombinedAppsAndDLC?.length > 0 &&
+                __webpack_require__.push(_),
+              (_ = _(
+                _._._,
+                "#SteamCharts_Yearly_Tab_SteamDeck",
+                "#SteamCharts_Yearly_Tab_SteamDeck_desc",
+                _.top_app_list,
+              )),
+              _.rgFilteredCombinedAppsAndDLC?.length > 0 &&
+                ((_.bShowDeckCompat = !0), __webpack_require__.push(_)),
+              (_ = _(
+                _._._,
+                "#SteamCharts_Yearly_Tab_Controller",
+                "#SteamCharts_Yearly_Tab_Controller_desc",
+                _.top_app_list,
+              )),
+              _.rgFilteredCombinedAppsAndDLC?.length > 0 &&
+                __webpack_require__.push(_),
+              (_ = _(
+                _._._,
+                "#SteamCharts_Yearly_Tab_VR",
+                "#SteamCharts_Yearly_Tab_VR_desc",
+                _.top_app_list,
+              )),
+              _.rgFilteredCombinedAppsAndDLC?.length > 0 &&
+                __webpack_require__.push(_),
+              (_ = _(
+                _._._,
+                "#SteamCharts_Yearly_Tab_Demo",
+                "#SteamCharts_Yearly_Tab_Demo_desc",
+                _.top_app_list,
+              )),
+              _.rgFilteredCombinedAppsAndDLC?.length > 0 &&
+                ((_.bShowDemoInfo = !0), __webpack_require__.push(_)),
+              _
+            );
+          }, [_, _, _, _]);
+        return {
+          rgAppIDs: _,
+          rgYearlyReleases: _,
+          rgTabsData: _,
+          loadState: _,
+        };
+      }
       function _(_) {
         const { nYear: _, TopYearlyReleasesStore: _ } = _,
           [_, _] = (0, _.useState)(null),
@@ -11308,116 +8013,7 @@
             rgYearlyReleases: _,
             rgTabsData: _,
             loadState: _,
-          } = (function (_, _, _) {
-            const _ = (0, _._)(),
-              _ = _ < _(_, 1),
-              _ = _ < _(_, 15),
-              _ = _(_, _),
-              _ = (0, _.useMemo)(
-                () =>
-                  _
-                    ? Array.from(
-                        new Set([
-                          ...(_.top_dlc_releases?.map((_) => _.appid) || []),
-                          ...(_.top_combined_app_and_dlc_releases?.map(
-                            (_) => _.appid,
-                          ) || []),
-                          ...(_.top_app_list?.map((_) => _.appid) || []),
-                        ]),
-                      )
-                    : (_ && __webpack_require__(null), []),
-                [_, _],
-              ),
-              _ = (0, _._)(_, _),
-              _ = (0, _.useMemo)(() => {
-                if (!_ || _ == _._) return [];
-                const _ = [],
-                  _ = (_?.top_combined_app_and_dlc_releases || [])
-                    .filter((_) => !_._.Get().BIsAppMissing(_.appid))
-                    .map((_) => {
-                      let _ = _.app_release_rank;
-                      return (
-                        _ == _._._ && (_ = 0),
-                        _[_] || (_[_] = []),
-                        _[_].push(_.appid),
-                        _.appid
-                      );
-                    });
-                let _ = [
-                    {
-                      strTabTitleToken: "#SteamCharts_Yearly_Tab_NewReleases",
-                      strTabSubTitleToken: _
-                        ? "#SteamCharts_Yearly_Tab_NewReleases_desc_pre"
-                        : "#SteamCharts_Yearly_Tab_NewReleases_desc",
-                      rgFilteredDLCsAppIDs:
-                        _.top_dlc_releases
-                          ?.filter((_) => !_._.Get().BIsAppMissing(_.appid))
-                          .map((_) => _.appid) || [],
-                      rgFilteredCombinedAppsAndDLC: _,
-                      rgFilteredAppIDByTier: _,
-                    },
-                  ],
-                  _ = _(
-                    _._._,
-                    "#SteamCharts_Yearly_Tab_TopSellers",
-                    _
-                      ? "#SteamCharts_Yearly_Tab_TopSellers_desc_pre"
-                      : "#SteamCharts_Yearly_Tab_TopSellers_desc",
-                    _.top_app_list,
-                  );
-                return (
-                  _.rgFilteredCombinedAppsAndDLC?.length > 0 &&
-                    __webpack_require__.push(_),
-                  (_ = _(
-                    _._._,
-                    "#SteamCharts_Yearly_Tab_MostPlayed",
-                    "#SteamCharts_Yearly_Tab_MostPlayed_desc",
-                    _.top_app_list,
-                  )),
-                  _.rgFilteredCombinedAppsAndDLC?.length > 0 &&
-                    __webpack_require__.push(_),
-                  (_ = _(
-                    _._._,
-                    "#SteamCharts_Yearly_Tab_SteamDeck",
-                    "#SteamCharts_Yearly_Tab_SteamDeck_desc",
-                    _.top_app_list,
-                  )),
-                  _.rgFilteredCombinedAppsAndDLC?.length > 0 &&
-                    ((_.bShowDeckCompat = !0), __webpack_require__.push(_)),
-                  (_ = _(
-                    _._._,
-                    "#SteamCharts_Yearly_Tab_Controller",
-                    "#SteamCharts_Yearly_Tab_Controller_desc",
-                    _.top_app_list,
-                  )),
-                  _.rgFilteredCombinedAppsAndDLC?.length > 0 &&
-                    __webpack_require__.push(_),
-                  (_ = _(
-                    _._._,
-                    "#SteamCharts_Yearly_Tab_VR",
-                    "#SteamCharts_Yearly_Tab_VR_desc",
-                    _.top_app_list,
-                  )),
-                  _.rgFilteredCombinedAppsAndDLC?.length > 0 &&
-                    __webpack_require__.push(_),
-                  (_ = _(
-                    _._._,
-                    "#SteamCharts_Yearly_Tab_Demo",
-                    "#SteamCharts_Yearly_Tab_Demo_desc",
-                    _.top_app_list,
-                  )),
-                  _.rgFilteredCombinedAppsAndDLC?.length > 0 &&
-                    ((_.bShowDemoInfo = !0), __webpack_require__.push(_)),
-                  _
-                );
-              }, [_, _, _, _]);
-            return {
-              rgAppIDs: _,
-              rgYearlyReleases: _,
-              rgTabsData: _,
-              loadState: _,
-            };
-          })(_, _);
+          } = _(_, _);
         return (
           (0, _.useEffect)(() => {
             _ ||
@@ -11593,7 +8189,6 @@
         TopSellers: (_, _) =>
           `${_._.SteamCharts()}topsellers/${_}${_ ? "/" + _ : ""}`,
         TopNewReleases: (_) => `${_._.SteamCharts()}topnewreleases/${_}`,
-        SupportStats: () => `${_._.SteamCharts()}support/`,
         BestOfYear: (_) => `${_._.SteamCharts()}bestofyear/${_}`,
       };
       function _(_) {
@@ -11613,16 +8208,12 @@
         const _ = _,
           {
             TopSellersStore: _,
-            MostPlayedStore: _,
-            SteamInterface: _,
             DynamicUserStore: _,
-            MostPlayedOnSteamDeckStore: _,
             TopMonthlyReleasesStore: _,
             TopYearlyReleasesStore: _,
           } = _;
         return (0, _.jsxs)(_, {
           TopSellersStore: _,
-          SteamInterface: _,
           DynamicUserStore: _,
           TopMonthlyReleasesStore: _,
           children: [
@@ -11634,65 +8225,6 @@
                 fallback: null,
                 children: (0, _.jsxs)(_._, {
                   children: [
-                    (0, _.jsx)(_._, {
-                      path: `${_.MostPlayed()}`,
-                      children: (0, _.jsx)(_._, {
-                        method: "mostplayed",
-                        children: (0, _.jsx)(_._, {
-                          children: (0, _.jsx)(_, {
-                            MostPlayedStore: _,
-                          }),
-                        }),
-                      }),
-                    }),
-                    (0, _.jsx)(_._, {
-                      path: `${_.TopSelling(":country?")}`,
-                      render: (_) =>
-                        (0, _.jsx)(_._, {
-                          method: "topselling",
-                          children: (0, _.jsx)(_._, {
-                            children: (0, _.jsx)(_, {
-                              TopSellersStore: _,
-                              overrideCountry: _.match.params.country,
-                            }),
-                          }),
-                        }),
-                    }),
-                    (0, _.jsx)(_._, {
-                      path: `${_.TopSellers(":country?", ":week?")}`,
-                      render: (_) =>
-                        (0, _.jsx)(_._, {
-                          method: "weeklytopsellers",
-                          children: (0, _.jsx)(_._, {
-                            children: (0, _.jsx)(_, {
-                              TopSellersStore: _,
-                              week: _.match.params.week,
-                              country: _.match.params.country,
-                            }),
-                          }),
-                        }),
-                    }),
-                    (0, _.jsx)(_._, {
-                      path: `${_.Overview()}`,
-                      exact: !0,
-                      children: (0, _.jsx)(_._, {
-                        method: "overview",
-                        children: (0, _.jsx)(_._, {
-                          children: (0, _.jsx)(_, {
-                            SteamCharts: _,
-                          }),
-                        }),
-                      }),
-                    }),
-                    (0, _.jsx)(_._, {
-                      path: `${_.SupportStats()}`,
-                      children: (0, _.jsx)(_._, {
-                        method: "supportstats",
-                        children: (0, _.jsx)(_._, {
-                          children: (0, _.jsx)(_, {}),
-                        }),
-                      }),
-                    }),
                     (0, _.jsx)(_._, {
                       path: `${_.TopNewReleases(":salePagename")}`,
                       render: (_) => {
@@ -11732,31 +8264,7 @@
                       },
                     }),
                     (0, _.jsx)(_._, {
-                      path: `${_.MostPlayedOnSteamDeck(":timeperiod?")}`,
-                      render: (_) => {
-                        const {
-                          match: {
-                            params: { timeperiod: _ },
-                          },
-                        } = _;
-                        return (0, _.jsx)(_._, {
-                          method: "mostplayedondeck",
-                          children: (0, _.jsx)(_._, {
-                            children: (0, _.jsx)(_, {
-                              MostPlayedOnDeckStore: _,
-                              strTimePeriod: _,
-                            }),
-                          }),
-                        });
-                      },
-                    }),
-                    (0, _.jsx)(_._, {
-                      children:
-                        "dev" == _._.WEB_UNIVERSE
-                          ? (0, _.jsx)(_._, {})
-                          : (0, _.jsx)(_._, {
-                              _: `${_.Overview()}`,
-                            }),
+                      children: (0, _.jsx)(_._, {}),
                     }),
                   ],
                 }),
@@ -11776,6 +8284,14 @@
           null
         );
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      const _ =
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAcJJREFUeNqkUz1PAkEQfStggjESejU0GozlGqn8SGywkYIYY0IsaLCwIBTQUN5fMLGm8S8QSWwslVAYjAlUBEJDhCgWwp3nzN6eHqIVl8zN7rx5b+dm9oRt25jlmcOMj59f10JAkPcBcXIGWdECyqYn6TfGdZ9S9d4K4gQYx4WCtJzE+G/sKJudwpQABUGnGSf5vKzX60jmctL8SYzz+iCdls1mEzuplMIsLSC4iSUh1ClUlpHIZGStVkM0GsVNqVRlIJZIyG63i1AohMdKpUrZRQqXz4j7LWA7VSiR/WRSNhsNRRgOh+i02wgGg3hrtRSZelLmI6cExs7nKJGVtTX50uupMn0+H157PUWmZpYDXLoWUFPo6MC87jivx4MBFtxOWZYS11VipNdT98DWDVsPh2XQNLFIMdc4xpg9OZ3JMdIpRowSXVKt36+yuXvGxn+N0XS+3zj0kG+JSPEi261H5FCLmN9lUyNWyZ+Qag54eA6Hbfa8j1A88g+2qrlqCkKIZdovbAG7m8D5E3B5D9xR7IPsk/u7DextABd14OrBwd6J23YFligQ0IPwXE7lbedXUAPya5yHMiLuq5j1d/4SYAAj3NATBGE4PgAAAABJRU5ErkJggg==";
     },
   },
 ]);

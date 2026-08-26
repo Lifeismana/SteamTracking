@@ -4805,8 +4805,11 @@ var CLSTAMP = "steamdb";
                 ;
                 this.m_mapRoomEffectQueue[_].length > 0 &&
                 !this.BIsQueueFull(_);
-              )
-                this.ActivateRoomEffect(this.m_mapRoomEffectQueue[_].shift());
+              ) {
+                const _ = this.m_mapRoomEffectQueue[_].shift();
+                if (!_) break;
+                this.ActivateRoomEffect(_);
+              }
             }
           }
         }
@@ -18363,7 +18366,7 @@ var CLSTAMP = "steamdb";
           (_.english = () =>
             __webpack_require__._("chunkid").then(_._.bind(_, 35617, 19))),
           (_.finnish = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 13008, 19))),
+            __webpack_require__._("chunkid").then(_._.bind(_, 68246, 19))),
           (_.french = () =>
             __webpack_require__._("chunkid").then(_._.bind(_, 74295, 19))),
           (_.german = () =>
@@ -68853,29 +68856,33 @@ var CLSTAMP = "steamdb";
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
-        var _ = __webpack_require__("chunkid");
-        function _(_, _, _ = 0) {
-          return _(_, _, _);
+        var _ = __webpack_require__("chunkid"),
+          _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
+        function _(_, _) {
+          return `${_}/${_}`;
         }
+        const _ = _.createContext({});
+        new RegExp(
+          `${_.replace(/[{}]/g, "\\$&")}/(\\d+)/([0-9a-f]+\\.[a-z0-9]+)`,
+          "gi",
+        );
         function _(_, _, _ = 0) {
+          return _(_, _, _, _.useContext(_));
+        }
+        function _(_, _, _ = 0, _) {
           if (!_ || 0 == _.length) return null;
           if (_?.startsWith(_)) return _.ReplacementTokenToClanImageURL(_);
           if (_?.startsWith(_)) {
-            const _ = new Array(),
-              _ = _.GetBaseURL(),
+            const _ = _.GetBaseURL(),
               _ = _.substring(_.length + 1),
               _ = parseInt(_.substring(0, _.indexOf("/"))),
               _ = _.substring(_.indexOf("/") + 1),
-              _ = _.GetHashFromHashAndExt(_),
-              _ = _.GetExtStringFromHashAndExt(_);
-            if (null != _) {
-              let _ = (0, _.LgB)(_);
-              _.push(_ + _ + "/" + _ + "/" + _ + _ + "?t=" + _),
-                _ == _.Pn1 &&
-                  ((_ = (0, _.x6o)((0, _.LgB)(_))),
-                  _.push(_ + _ + "/" + _ + "/" + _ + _ + "?t=" + _));
-            }
-            return _.push(_.GenerateURLFromHashAndExt(_, _)), _;
+              _ = _.GenerateURLFromHashAndExt(_, _);
+            if (!1 === _?.[_(_, _)]) return _;
+            const _ = _.GetLocalizedClanImageFileNames(_, _).map(
+              (_) => _ + _ + "/" + _ + "?t=" + _,
+            );
+            return _.push(_), _;
           }
           return _;
         }
@@ -68931,6 +68938,15 @@ var CLSTAMP = "steamdb";
             return _.substring(0, _.length - _.length);
           },
           GetExtStringFromHashAndExt: (_) => _.substring(_.lastIndexOf(".")),
+          GetLocalizedClanImageFileNames(_, _) {
+            if (null == _) return [];
+            const _ = this.GetHashFromHashAndExt(_),
+              _ = this.GetExtStringFromHashAndExt(_),
+              _ = [_ + "/" + (0, _.LgB)(_) + _];
+            return (
+              _ == _.Pn1 && _.push(_ + "/" + (0, _.x6o)((0, _.LgB)(_)) + _), _
+            );
+          },
           GenerateURLFromHashAndExt(_, _, _ = _._.full) {
             return this.GenerateURLFromHashAndExtAndLang(
               _,
@@ -69180,7 +69196,6 @@ var CLSTAMP = "steamdb";
           QT4: () => _,
           RhO: () => _,
           Rhn: () => _,
-          _: () => _,
           S$u: () => _,
           SRb: () => _,
           TQt: () => _,
@@ -69406,7 +69421,6 @@ var CLSTAMP = "steamdb";
           })(_ || (_ = {}));
         const _ = 0,
           _ = 1,
-          _ = 2,
           _ = 4,
           _ = 5,
           _ = 0,
@@ -74699,7 +74713,9 @@ var CLSTAMP = "steamdb";
               (_) => {
                 (document.hasFocus() || document.activeElement != _.current) &&
                   (_.currentTarget == _.current
-                    ? (_.BIsActive() || _.bInVR) && _.DelayHideVirtualKeyboard()
+                    ? _.detail.focusedNode?.Element != _.current &&
+                      (_.BIsActive() || _.bInVR) &&
+                      _.DelayHideVirtualKeyboard()
                     : console.warn(
                         "keyboard got blur event, but it's not the active element",
                       ));
@@ -87369,107 +87385,112 @@ var CLSTAMP = "steamdb";
         (0, _._)([_._], _.prototype, "BUserHasVolumePreference", null),
           (0, _._)([_._], _.prototype, "SetVolumePreference", null);
         const _ = (0, _.forwardRef)(function (_, _) {
-          const {
-              video: _,
-              bAutoPlay: _,
-              bControls: _,
-              bLoop: _,
-              bMuted: _,
-              className: _,
-              mediaScale: _,
-              onClick: _,
-              altText: _,
-            } = _,
-            _ = (0, _.useMemo)(
-              () =>
-                Boolean(
-                  _.rgVideoTracks?.some(
-                    (_) => "subtitles" == _.sKind || "captions" == _.sKind,
+            const {
+                video: _,
+                bAutoPlay: _,
+                bControls: _,
+                bLoop: _,
+                bMuted: _,
+                className: _,
+                mediaScale: _,
+                onClick: _,
+                altText: _,
+              } = _,
+              _ = (0, _.useMemo)(
+                () =>
+                  Boolean(
+                    _.rgVideoTracks?.some(
+                      (_) => "subtitles" == _.sKind || "captions" == _.sKind,
+                    ),
                   ),
-                ),
-              [_.rgVideoTracks],
-            ),
-            [_, _] = _.useState(!1);
-          if (!_.rgVideoSources || !_.rgVideoSources.length) return null;
-          const _ = (function (_) {
-            return !(
-              !(0, _._)(_.sPoster) ||
-              (_.rgVideoSources &&
-                _.rgVideoSources.some((_) => !(0, _._)(_.sURL))) ||
-              (_.rgVideoTracks &&
-                _.rgVideoTracks.some((_) => !(0, _._)(_.sURL)))
-            );
-          })(_);
-          let _;
-          (!_ || (_ && "public" == _._.WEB_UNIVERSE)) && (_ = "anonymous");
-          const _ = _ || (_ && _.Get().BVolumePreferenceMuted()),
-            _ = _.sPoster ? _(_.sPoster) : "";
-          return (0, _.jsxs)("video", {
-            width: "100%",
-            height: "auto",
-            autoPlay: _,
-            muted: _,
-            playsInline: !0,
-            controls: _,
-            poster: _,
-            loop: _,
-            crossOrigin: _,
-            onVolumeChange: (_) => {
-              const _ = _.target,
-                _ = _.muted ? 0 : _.volume;
-              _ && _.Get().SetVolumePreference(_);
-            },
-            onPlay: (_) => {
-              const _ = _.target,
-                _ = 0 == _.currentTime,
-                _ = _.Get().BUserHasVolumePreference();
-              if ((_(!0), _))
-                if (_ || _)
-                  _ &&
-                    ((_.volume = _.Get().GetVolumePreference()),
-                    (_.muted = _.Get().BVolumePreferenceMuted()));
-                else {
-                  const _ = _.muted ? 0 : _.volume;
-                  _.Get().SetVolumePreference(_);
-                }
-            },
-            ref: _,
-            className: _,
-            onClick: _,
-            "aria-label": _,
-            style: {
-              width: _ && _ >= 1 && _ < 100 ? `${_}%` : void 0,
-            },
-            children: [
-              (0, _.jsx)(_, {
-                rgVideoSources: _.rgVideoSources,
-              }),
-              (0, _.jsx)(_, {
-                rgVideoTracks: _.rgVideoTracks,
-              }),
-            ],
-          });
-        });
-        function _(_) {
+                [_.rgVideoTracks],
+              ),
+              [_, _] = _.useState(!1),
+              _ = _();
+            if (!_.rgVideoSources || !_.rgVideoSources.length) return null;
+            const _ = (function (_) {
+              return !(
+                !(0, _._)(_.sPoster) ||
+                (_.rgVideoSources &&
+                  _.rgVideoSources.some((_) => !(0, _._)(_.sURL))) ||
+                (_.rgVideoTracks &&
+                  _.rgVideoTracks.some((_) => !(0, _._)(_.sURL)))
+              );
+            })(_);
+            let _;
+            (!_ || (_ && _._.EUNIVERSE == _.wLO)) && (_ = "anonymous");
+            const _ = _ || (_ && _.Get().BVolumePreferenceMuted()),
+              _ = _.sPoster ? _(_.sPoster, _) : "";
+            return (0, _.jsxs)("video", {
+              width: "100%",
+              height: "auto",
+              autoPlay: _,
+              muted: _,
+              playsInline: !0,
+              controls: _,
+              poster: _,
+              loop: _,
+              crossOrigin: _,
+              onVolumeChange: (_) => {
+                const _ = _.target,
+                  _ = _.muted ? 0 : _.volume;
+                _ && _.Get().SetVolumePreference(_);
+              },
+              onPlay: (_) => {
+                const _ = _.target,
+                  _ = 0 == _.currentTime,
+                  _ = _.Get().BUserHasVolumePreference();
+                if ((_(!0), _))
+                  if (_ || _)
+                    _ &&
+                      ((_.volume = _.Get().GetVolumePreference()),
+                      (_.muted = _.Get().BVolumePreferenceMuted()));
+                  else {
+                    const _ = _.muted ? 0 : _.volume;
+                    _.Get().SetVolumePreference(_);
+                  }
+              },
+              ref: _,
+              className: _,
+              onClick: _,
+              "aria-label": _,
+              style: {
+                width: _ && _ >= 1 && _ < 100 ? `${_}%` : void 0,
+              },
+              children: [
+                (0, _.jsx)(_, {
+                  rgVideoSources: _.rgVideoSources,
+                }),
+                (0, _.jsx)(_, {
+                  rgVideoTracks: _.rgVideoTracks,
+                }),
+              ],
+            });
+          }),
+          _ = _.createContext(void 0);
+        function _() {
+          return _.useContext(_) || (0, _._)();
+        }
+        function _(_, _) {
           if (_)
             try {
               const _ = new URL(_);
               return (
-                (_.search =
-                  (_.search ? _.search + "&" : "?") + "origin=" + (0, _._)()),
-                _.toString()
+                (_.search = (_.search ? _.search + "&" : "?") + "origin=" + _),
+                __webpack_require__.toString()
               );
             } catch {
               return _;
             }
         }
         function _(_) {
-          const { rgVideoSources: _ } = _;
+          const { rgVideoSources: _ } = _,
+            _ = _();
           return _.filter((_) => Boolean(_.sURL)).map((_) =>
             (0, _.jsx)(
               "source",
               {
-                src: _(_.sURL),
+                src: _(_.sURL, _),
                 type: _.sFormat,
               },
               _.sURL,
@@ -87492,9 +87513,10 @@ var CLSTAMP = "steamdb";
             : null;
         }
         function _(_) {
-          const { track: _, rgVideoTracks: _ } = _;
+          const { track: _, rgVideoTracks: _ } = _,
+            _ = _();
           let _ = _.eLanguage;
-          if ((0, _._)())
+          if (_._.EREALM == _._.k_ESteamRealmChina)
             if (_._.IsELanguageValidInRealm(_, _._.k_ESteamRealmChina))
               _ = _._.GetELanguageFallback(_);
             else {
@@ -87509,7 +87531,7 @@ var CLSTAMP = "steamdb";
           else if (!_._.IsELanguageValidInRealm(_, _._.k_ESteamRealmGlobal))
             return null;
           return (0, _.jsx)("track", {
-            src: _(_.sURL),
+            src: _(_.sURL, _),
             kind: _.sKind,
             default: _.bDefault,
             srcLang: (0, _.wwZ)(_),
@@ -87595,30 +87617,29 @@ var CLSTAMP = "steamdb";
               _ = "";
             if (
               (_.forEach((_, _) => {
-                this.m_mapYouTubeVideo.has(_)
-                  ? __webpack_require__.push(this.m_mapYouTubeVideo.get(_))
+                const _ = this.m_mapYouTubeVideo.get(_);
+                _
+                  ? __webpack_require__.push(_)
                   : (_.length > 0 && (_ += ","), (_ += _));
               }),
               0 == _.length)
             )
               return _;
             let _ = {
-                youtubevideoids: _,
-              },
-              _ = null;
-            return (
-              (_ = await _().get(
+              youtubevideoids: _,
+            };
+            const _ = await _().get(
                 _._.STORE_BASE_URL + "/events/ajaxgetdynamiceventmetadata",
                 {
                   params: _,
                   cancelToken: _.token,
                 },
-              )),
+              ),
+              _ = _?.data?.youtube;
+            return (
               _ &&
-                _.data &&
-                _.data.youtube &&
                 (0, _._)(() => {
-                  _.data.youtube.forEach((_, _) => {
+                  _.forEach((_, _) => {
                     this.m_mapYouTubeVideo.set(_.videoid, _),
                       __webpack_require__.push(_);
                   });
@@ -87631,30 +87652,29 @@ var CLSTAMP = "steamdb";
               _ = "";
             if (
               (_.forEach((_, _) => {
-                this.m_mapSharedFile.has(_)
-                  ? __webpack_require__.push(this.m_mapSharedFile.get(_))
+                const _ = this.m_mapSharedFile.get(_);
+                _
+                  ? __webpack_require__.push(_)
                   : (_.length > 0 && (_ += ","), (_ += _));
               }),
               0 == _.length)
             )
               return _;
             let _ = {
-                sharedfileids: _,
-              },
-              _ = null;
-            return (
-              (_ = await _().get(
+              sharedfileids: _,
+            };
+            const _ = await _().get(
                 _._.STORE_BASE_URL + "/events/ajaxgetdynamiceventmetadata",
                 {
                   params: _,
                   cancelToken: _.token,
                 },
-              )),
+              ),
+              _ = _?.data?.sharedfiles;
+            return (
               _ &&
-                _.data &&
-                _.data.sharedfiles &&
                 (0, _._)(() => {
-                  _.data.sharedfiles.forEach((_, _) => {
+                  _.forEach((_, _) => {
                     this.m_mapSharedFile.set(_.sharedfileid, _),
                       __webpack_require__.push(_);
                   });
@@ -88550,7 +88570,7 @@ var CLSTAMP = "steamdb";
         const _ = (_) => {
           const { href: _, ..._ } = _;
           let _,
-            _ = (0, _._)(_);
+            _ = (0, _._)(_ ?? "");
           (0, _._)(_)
             ? ((_ =
                 (_._.IN_CLIENT ? "steam://openurl_external/" : "") +
@@ -88600,9 +88620,11 @@ var CLSTAMP = "steamdb";
             (0, _.jsx)(_, {
               className: (0, _._)(_().TableCell, "td" == _ && "BB_TableData"),
               ..._,
-              style: _ && {
-                width: _,
-              },
+              style: _
+                ? {
+                    width: _,
+                  }
+                : void 0,
               children: _.children,
             })
           );
@@ -88613,7 +88635,11 @@ var CLSTAMP = "steamdb";
         function _(_) {
           const { text: _, languageOverride: _ } = _,
             [_] = (0, _.useState)(
-              new _(new Map([...Array.from(_.entries())]), _, _),
+              new _(
+                new Map([...Array.from(_.entries())]),
+                _,
+                _ ?? _._.LANGUAGE,
+              ),
             );
           return (0, _.jsx)(_.Fragment, {
             children: _.ParseBBCode(_, {}),
@@ -88623,7 +88649,7 @@ var CLSTAMP = "steamdb";
           _ = __webpack_require__._(_);
         const _ = (0, _._)((_) => {
           const _ = (0, _._)(_.photo, (0, _.sfN)(_._.LANGUAGE)),
-            _ = _ ? ("string" == typeof _ ? _ : _[1]) : null,
+            _ = _ ? ("string" == typeof _ ? _ : _[1]) : void 0,
             _ = Boolean(_.title),
             _ = Boolean(_.company);
           return (0, _.jsxs)("div", {
@@ -88685,8 +88711,8 @@ var CLSTAMP = "steamdb";
             "presenter-hover-source-elements",
           );
           m_refAnchor = _.createRef();
-          m_fnHidePopup;
-          m_nScrollPosAtHoverStart;
+          m_fnHidePopup = null;
+          m_nScrollPosAtHoverStart = 0;
           ClosePopup() {
             (0, _._)() ||
               (this.m_fnHidePopup &&
@@ -89875,13 +89901,13 @@ var CLSTAMP = "steamdb";
             (this.bValid = _.bValid),
               (this.stream = _.stream),
               (this.name = _.name),
-              (this.appName = _.appName),
+              (this.appName = _.appName ?? ""),
               (this.appID = _.appID),
               (this.link = _.link),
               (this.linkName = _.linkName),
-              (this.tabIcon = _.tabIcon),
+              (this.tabIcon = _.tabIcon ?? ""),
               (this.offlineImage = _.offlineImage),
-              (this.gidEvent = _.gidEvent);
+              (this.gidEvent = _.gidEvent ?? "");
           }
         }
         (0, _._)([_._], _.prototype, "bValid", void 0),
@@ -94921,13 +94947,13 @@ var CLSTAMP = "steamdb";
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         class _ {
-          m_elVideo = null;
+          m_elVideo;
           m_peerConnection = null;
-          m_strBroadcastSteamID = void 0;
-          m_ulWebRTCSessionID = void 0;
+          m_strBroadcastSteamID = "";
+          m_ulWebRTCSessionID = "";
           m_schCandidateTimer = new _._();
-          m_nHostCandidateGeneration = void 0;
-          m_nCandidateUpdateIntervalMS = void 0;
+          m_nHostCandidateGeneration = 0;
+          m_nCandidateUpdateIntervalMS = 0;
           m_listeners = new _._();
           m_bFirstPlay = !0;
           m_bStatsViewVisible = !1;
@@ -94951,7 +94977,7 @@ var CLSTAMP = "steamdb";
                 "resize",
                 this.OnVideoResize,
               );
-            let _ = {
+            const _ = new RTCPeerConnection({
               iceServers: [
                 {
                   urls: ["stun:" + _],
@@ -94963,9 +94989,9 @@ var CLSTAMP = "steamdb";
                 },
               ],
               iceTransportPolicy: "relay",
-            };
-            (this.m_peerConnection = new RTCPeerConnection(_)),
-              (this.m_peerConnection.oniceconnectionstatechange = ((_) => {
+            });
+            (this.m_peerConnection = _),
+              (_.oniceconnectionstatechange = ((_) => {
                 this.m_peerConnection &&
                   (console.log(
                     "BroadcastWebRTC: ICE connection state changed to " +
@@ -94977,12 +95003,12 @@ var CLSTAMP = "steamdb";
                         this.m_peerConnection.iceConnectionState &&
                       this.OnWebRTCConnectionRetry());
               }).bind(this)),
-              (this.m_peerConnection.onicecandidate = ((_) => {
+              (_.onicecandidate = ((_) => {
                 if (_.candidate) {
                   const _ = new FormData();
                   _.append("broadcaststeamid", this.m_strBroadcastSteamID),
                     _.append("webrtc_session_id", this.m_ulWebRTCSessionID),
-                    _.append("sdp_mid", _.candidate.sdpMid),
+                    _.append("sdp_mid", String(_.candidate.sdpMid)),
                     _.append(
                       "sdp_mline_index",
                       String(_.candidate.sdpMLineIndex),
@@ -95008,53 +95034,46 @@ var CLSTAMP = "steamdb";
                       );
                 }
               }).bind(this)),
-              (this.m_peerConnection.ontrack = ((_) => {
+              (_.ontrack = ((_) => {
                 "video" === _.track.kind &&
-                  ((this.m_elVideo.src = null),
+                  ((this.m_elVideo.src = ""),
                   (this.m_elVideo.srcObject = _.streams[0]),
                   this.Play());
               }).bind(this)),
-              this.m_peerConnection
-                .setRemoteDescription({
-                  type: "offer",
-                  sdp: _,
-                })
-                .then(async () => {
-                  await this.m_peerConnection.setLocalDescription(
-                    await this.m_peerConnection.createAnswer(),
+              _.setRemoteDescription({
+                type: "offer",
+                sdp: _,
+              }).then(async () => {
+                await _.setLocalDescription(await _.createAnswer());
+                const _ = new FormData();
+                _.append("broadcaststeamid", this.m_strBroadcastSteamID),
+                  _.append("webrtc_session_id", this.m_ulWebRTCSessionID),
+                  _.append("answer", _.localDescription?.sdp ?? "");
+                try {
+                  await _()
+                    .post(
+                      `${_._.CHAT_BASE_URL}broadcast/setbroadcastwebrtcanswer`,
+                      _,
+                    )
+                    .then((_) => {
+                      const _ = _.data;
+                      if (!_.success || _.success != _._)
+                        throw new Error(String(_.success));
+                    });
+                } catch (_) {
+                  return (
+                    console.log(
+                      "Failed to set the WebRTC session answer: " + _,
+                    ),
+                    void this.OnWebRTCConnectionRetry()
                   );
-                  const _ = new FormData();
-                  _.append("broadcaststeamid", this.m_strBroadcastSteamID),
-                    _.append("webrtc_session_id", this.m_ulWebRTCSessionID),
-                    _.append(
-                      "answer",
-                      this.m_peerConnection.localDescription.sdp,
-                    );
-                  try {
-                    await _()
-                      .post(
-                        `${_._.CHAT_BASE_URL}broadcast/setbroadcastwebrtcanswer`,
-                        _,
-                      )
-                      .then((_) => {
-                        const _ = _.data;
-                        if (!_.success || _.success != _._)
-                          throw new Error(String(_.success));
-                      });
-                  } catch (_) {
-                    return (
-                      console.log(
-                        "Failed to set the WebRTC session answer: " + _,
-                      ),
-                      void this.OnWebRTCConnectionRetry()
-                    );
-                  }
-                  (this.m_nCandidateUpdateIntervalMS = 250),
-                    this.m_schCandidateTimer.Schedule(
-                      this.m_nCandidateUpdateIntervalMS,
-                      () => this.GetHostCandidates(),
-                    );
-                });
+                }
+                (this.m_nCandidateUpdateIntervalMS = 250),
+                  this.m_schCandidateTimer.Schedule(
+                    this.m_nCandidateUpdateIntervalMS,
+                    () => this.GetHostCandidates(),
+                  );
+              });
           }
           async GetHostCandidates() {
             const _ = new FormData();
@@ -95072,19 +95091,18 @@ var CLSTAMP = "steamdb";
                 )
                 .then((_) => {
                   const _ = _.data,
-                    _ = _.data;
+                    _ = _.data,
+                    _ = this.m_peerConnection;
                   if (!_.success || _.success != _._)
                     throw new Error(String(_.success));
-                  _.candidate_generation > this.m_nHostCandidateGeneration
+                  _ && _.candidate_generation > this.m_nHostCandidateGeneration
                     ? (_.candidates.forEach((_) => {
                         const _ = new RTCIceCandidate({
                           sdpMid: _.sdp_mid,
                           sdpMLineIndex: _.sdp_mline_index,
                           candidate: _.candidate,
                         });
-                        this.m_peerConnection
-                          .addIceCandidate(_)
-                          .catch((_) => console.error(_));
+                        _.addIceCandidate(_).catch((_) => console.error(_));
                       }),
                       (this.m_nHostCandidateGeneration =
                         _.candidate_generation))
@@ -95124,8 +95142,7 @@ var CLSTAMP = "steamdb";
                 (this.m_peerConnection.close(), (this.m_peerConnection = null)),
               this.m_elVideo.pause(),
               (this.m_elVideo.srcObject = null),
-              this.m_stats &&
-                (this.m_stats.GetFPSMonitor().Close(), (this.m_stats = null)),
+              this.m_stats.GetFPSMonitor().Close(),
               (this.m_bFirstPlay = !0);
           }
           IsBuffering() {
@@ -95135,7 +95152,7 @@ var CLSTAMP = "steamdb";
             return 0;
           }
           GetLiveContentStartTime() {
-            return null;
+            return new Date(0);
           }
           GetAvailableVideoStartTime() {
             return 0;
@@ -95398,7 +95415,7 @@ var CLSTAMP = "steamdb";
                 withCredentials: !0,
                 cancelToken: _ ? _.token : void 0,
               });
-              if (_ && _.token.reason) return null;
+              if (_ && _.token.reason) return;
               if (
                 _ &&
                 200 == _.status &&
@@ -95425,7 +95442,6 @@ var CLSTAMP = "steamdb";
                 _,
               );
             }
-            return null;
           }
           static Get() {
             return (
@@ -96021,16 +96037,18 @@ var CLSTAMP = "steamdb";
               );
           }
           LoadBroadcast(_) {
-            _.m_rgVideos.findIndex((_) => _ == this.m_activeVideo) >= 0 &&
-              this.m_activeVideo.StartBroadcast(_);
+            const _ = this.m_activeVideo;
+            _ &&
+              _.m_rgVideos.findIndex((_) => _ == _) >= 0 &&
+              _.StartBroadcast(_);
           }
           LoadClip(_) {
-            _.m_rgVideos.findIndex((_) => _ == this.m_activeVideo) >= 0 &&
-              this.m_activeVideo.StartClip(_);
+            const _ = this.m_activeVideo;
+            _ && _.m_rgVideos.findIndex((_) => _ == _) >= 0 && _.StartClip(_);
           }
           LoadVOD(_) {
-            _.m_rgVideos.findIndex((_) => _ == this.m_activeVideo) >= 0 &&
-              this.m_activeVideo.StartVOD(_);
+            const _ = this.m_activeVideo;
+            _ && _.m_rgVideos.findIndex((_) => _ == _) >= 0 && _.StartVOD(_);
           }
           BroadcastDownloadFailed(_, _ = !0, _ = _._.Invalid) {
             _.Stop();
@@ -96050,7 +96068,7 @@ var CLSTAMP = "steamdb";
               !_.IsBroadcastClip() && !_.IsBroadcastVOD())
             ) {
               let _ = this.m_mapBroadcasts.get(_.GetBroadcastSteamID());
-              this.GetBroadcastManifest(_, _.GetWatchLocation());
+              _ && this.GetBroadcastManifest(_, _.GetWatchLocation());
             }
             _.UserInputClick();
           }
@@ -96099,16 +96117,16 @@ var CLSTAMP = "steamdb";
               (_[(_.Minimap = 2)] = "Minimap");
           })(_ || (_ = {}));
         class _ {
-          m_elVideo = null;
+          m_elVideo;
           m_player = null;
           m_listeners = new _._();
           m_gameDataParser = null;
           m_eWatchLocation = _._._;
           m_bStartWithSubtitles = !1;
-          m_steamIDBroadcast = null;
+          m_steamIDBroadcast = "";
           m_BroadcastInfo = null;
-          m_broadcastClipID = null;
-          m_nBroadcastAppIDVOD = null;
+          m_broadcastClipID = "";
+          m_nBroadcastAppIDVOD = 0;
           m_bPaused = !1;
           m_nPlaybackTime = 0;
           m_bBuffering = !1;
@@ -96153,7 +96171,7 @@ var CLSTAMP = "steamdb";
             this.m_player && this.m_player.SetStatsViewIsVisible(_);
           }
           GetDASHPlayerStats() {
-            return this.m_player.GetDASHPlayerStats();
+            return this.m_player?.GetDASHPlayerStats();
           }
           BHasDASHStats() {
             return null != this.m_player;
@@ -96162,7 +96180,7 @@ var CLSTAMP = "steamdb";
             return !1;
           }
           CanSeek() {
-            return this.m_player && this.m_player.CanSeek();
+            return this.m_player?.CanSeek() ?? !1;
           }
           IsBuffering() {
             return this.m_bBuffering;
@@ -96183,7 +96201,7 @@ var CLSTAMP = "steamdb";
             return this.m_bIsReplay;
           }
           IsBroadcastClip() {
-            return null != this.m_broadcastClipID;
+            return Boolean(this.m_broadcastClipID);
           }
           SetBroadcastClipID(_) {
             this.m_broadcastClipID = _;
@@ -96192,7 +96210,7 @@ var CLSTAMP = "steamdb";
             return this.m_broadcastClipID;
           }
           IsBroadcastVOD() {
-            return null != this.m_nBroadcastAppIDVOD;
+            return Boolean(this.m_nBroadcastAppIDVOD);
           }
           SetBroadcastAppIDVOD(_) {
             this.m_nBroadcastAppIDVOD = _;
@@ -96204,13 +96222,13 @@ var CLSTAMP = "steamdb";
             return this.m_player ? this.m_player.GetVideoRepresentations() : [];
           }
           SetVideoRepresentation(_) {
-            this.m_player.SetVideoRepresentation(_);
+            this.m_player?.SetVideoRepresentation(_);
           }
           GetBroadcastInfo() {
             return this.m_BroadcastInfo;
           }
           BHasTimedText() {
-            return this.m_player?.BHasTimedText();
+            return this.m_player?.BHasTimedText() ?? !1;
           }
           BHasPlayer() {
             return Boolean(this.m_player);
@@ -96333,8 +96351,8 @@ var CLSTAMP = "steamdb";
                 );
             }
             this.SetVolume(this.m_nVolume),
-              this.m_player.SetMuted(this.m_bMuted);
-            let _ = this.m_player.GetDASHPlayerStats();
+              this.m_player?.SetMuted(this.m_bMuted);
+            let _ = this.m_player?.GetDASHPlayerStats();
             _ &&
               _.SetBroadcasterAndViewerInfo(
                 this.m_steamIDBroadcast,
@@ -96351,7 +96369,7 @@ var CLSTAMP = "steamdb";
               (this.m_player = _),
               _.PlayMPD(_.m_data.clip_url),
               this.SetVolume(this.m_nVolume),
-              this.m_player.SetMuted(this.m_bMuted);
+              this.m_player?.SetMuted(this.m_bMuted);
           }
           StartVOD(_) {
             this.InitPlayer();
@@ -96361,9 +96379,9 @@ var CLSTAMP = "steamdb";
               _._.logged_in &&
                 _.m_nAppIDVOD &&
                 _.SetBookmarkAdapter(new _(_.m_nAppIDVOD)),
-              _.PlayMPD(_.m_manifestURL),
+              _.m_manifestURL && _.PlayMPD(_.m_manifestURL),
               this.SetVolume(this.m_nVolume),
-              this.m_player.SetMuted(this.m_bMuted);
+              this.m_player?.SetMuted(this.m_bMuted);
           }
           Stop() {
             this.m_listeners.Unregister(),
@@ -96380,19 +96398,16 @@ var CLSTAMP = "steamdb";
           }
           Play() {
             const _ = this.GetBroadcastState();
-            _ == _.None || this.IsBroadcastClip()
-              ? _.StartVideo(this)
-              : _ == _.Ready &&
-                (_.SetActiveVideo(this),
-                this.m_player
-                  ? this.m_player.Play()
-                  : this.IsBroadcastVOD()
-                    ? this.StartVOD(
-                        _.GetBroadcastVOD(this.m_nBroadcastAppIDVOD),
-                      )
-                    : this.StartBroadcast(
-                        _.GetBroadcast(this.m_steamIDBroadcast),
-                      ));
+            if (_ == _.None || this.IsBroadcastClip()) _.StartVideo(this);
+            else if (_ == _.Ready)
+              if ((_.SetActiveVideo(this), this.m_player)) this.m_player.Play();
+              else if (this.IsBroadcastVOD()) {
+                const _ = _.GetBroadcastVOD(this.m_nBroadcastAppIDVOD);
+                _ && this.StartVOD(_);
+              } else {
+                const _ = _.GetBroadcast(this.m_steamIDBroadcast);
+                _ && this.StartBroadcast(_);
+              }
           }
           Pause() {
             console.log(
@@ -96404,22 +96419,25 @@ var CLSTAMP = "steamdb";
               this.m_player && this.m_player.Pause();
           }
           JumpTime(_) {
-            this.m_player.JumpTime(_);
+            this.m_player?.JumpTime(_);
           }
           Seek(_) {
             this.m_player?.Seek(_);
           }
           SeekAndPlay(_) {
-            this.m_player.SeekAndPlay(_);
+            this.m_player?.SeekAndPlay(_);
           }
           JumpToLiveEdge() {
-            this.m_player.IsLiveContent()
-              ? this.SeekAndPlay(this.m_player.GetBufferedLiveEdgeTime())
-              : this.SeekAndPlay(this.m_player.GetAvailableVideoStartTime());
+            const _ = this.m_player;
+            _ &&
+              (_.IsLiveContent()
+                ? this.SeekAndPlay(_.GetBufferedLiveEdgeTime())
+                : this.SeekAndPlay(_.GetAvailableVideoStartTime()));
           }
           SetVolume(_) {
-            this.m_player && this.m_player.SetVolume(_),
-              (this.m_nVolume = this.m_player.GetVolume()),
+            this.m_player &&
+              (this.m_player.SetVolume(_),
+              (this.m_nVolume = this.m_player.GetVolume())),
               _.SaveVolumeChange(_, this.m_bMuted);
           }
           SetMute(_) {
@@ -96443,46 +96461,46 @@ var CLSTAMP = "steamdb";
             this.m_bPaused = !0;
           }
           OnVideoTimeUpdate() {
-            if (
-              (window.clearTimeout(this.m_videoEndingTimer),
-              this.IsBroadcastClip())
-            )
-              (this.m_nPlaybackTime = this.m_player.GetCurrentPlayTime()),
-                (this.m_nVideoStartPos =
-                  this.m_player.GetAvailableVideoStartTime()),
-                (this.m_nVideoEndPos = this.m_player.GetBufferedLiveEdgeTime()),
-                (this.m_nTimelineDuration =
-                  this.m_nVideoEndPos - this.m_nVideoStartPos),
-                (this.m_bOnLiveEdge = !1),
-                (this.m_bBuffering = this.m_player.IsBuffering());
-            else {
-              if (
-                ((this.m_nPlaybackTime = this.m_player.GetCurrentPlayTime()),
-                (this.m_nVideoStartPos =
-                  this.m_player.GetAvailableVideoStartTime()),
-                (this.m_nVideoEndPos = Math.max(
-                  this.m_player.GetBufferedLiveEdgeTime(),
-                  this.m_nPlaybackTime,
-                )),
-                this.IsBroadcastVOD() &&
-                  ((this.m_nTimelineDuration = this.m_nVideoEndPos),
-                  this.m_fnOnVideoEnd &&
-                    this.m_nVideoEndPos - this.m_nPlaybackTime < _._))
-              ) {
-                const _ = 400;
-                this.m_videoEndingTimer = window.setTimeout(() => {
-                  this.m_fnOnVideoEnd();
-                }, _);
+            window.clearTimeout(this.m_videoEndingTimer);
+            const _ = this.m_player;
+            if (_)
+              if (this.IsBroadcastClip())
+                (this.m_nPlaybackTime = _.GetCurrentPlayTime()),
+                  (this.m_nVideoStartPos = _.GetAvailableVideoStartTime()),
+                  (this.m_nVideoEndPos = _.GetBufferedLiveEdgeTime()),
+                  (this.m_nTimelineDuration =
+                    this.m_nVideoEndPos - this.m_nVideoStartPos),
+                  (this.m_bOnLiveEdge = !1),
+                  (this.m_bBuffering = _.IsBuffering());
+              else {
+                if (
+                  ((this.m_nPlaybackTime = _.GetCurrentPlayTime()),
+                  (this.m_nVideoStartPos = _.GetAvailableVideoStartTime()),
+                  (this.m_nVideoEndPos = Math.max(
+                    _.GetBufferedLiveEdgeTime(),
+                    this.m_nPlaybackTime,
+                  )),
+                  this.IsBroadcastVOD())
+                ) {
+                  this.m_nTimelineDuration = this.m_nVideoEndPos;
+                  const _ = this.m_fnOnVideoEnd;
+                  if (_ && this.m_nVideoEndPos - this.m_nPlaybackTime < _._) {
+                    const _ = 400;
+                    this.m_videoEndingTimer = window.setTimeout(() => {
+                      _();
+                    }, _);
+                  }
+                }
+                (this.m_bBuffering = _.IsBuffering()),
+                  (this.m_bOnLiveEdge =
+                    this.m_nVideoEndPos - this.m_nPlaybackTime < _._),
+                  _.IsPaused() && (this.m_bOnLiveEdge = !1);
               }
-              (this.m_bBuffering = this.m_player.IsBuffering()),
-                (this.m_bOnLiveEdge =
-                  this.m_nVideoEndPos - this.m_nPlaybackTime < _._),
-                this.m_player.IsPaused() && (this.m_bOnLiveEdge = !1);
-            }
           }
           OnVolumeUpdated() {
-            (this.m_nVolume = this.m_player.GetVolume()),
-              (this.m_bMuted = this.m_player.IsMuted());
+            const _ = this.m_player;
+            _ &&
+              ((this.m_nVolume = _.GetVolume()), (this.m_bMuted = _.IsMuted()));
           }
           OnGameDataUpdate(_) {
             let _ = _.detail;
@@ -96490,7 +96508,7 @@ var CLSTAMP = "steamdb";
             (this.m_gameDataParser &&
               this.m_gameDataParser.GetAppID() == _.gamedata.__appid) ||
               (this.m_gameDataParser = new _(_.gamedata.__appid));
-            const _ = this.m_player.GetLiveContentStartTime().getTime();
+            const _ = this.m_player?.GetLiveContentStartTime().getTime() ?? 0;
             if ("timelinemarkers" in _.gamedata) {
               const _ = this.m_gameDataParser.UpdateMarkers(
                 _.gamedata.__timelinemarkers,
@@ -97141,9 +97159,9 @@ var CLSTAMP = "steamdb";
           m_rgEmoticons = [];
           m_setEmoticonOwned = new Set();
           m_rgFlairs = [];
-          m_rgRecentEmoticons;
+          m_rgRecentEmoticons = void 0;
           m_rgStickers = [];
-          m_rgRecentStickers;
+          m_rgRecentStickers = void 0;
           m_rgEffects = [];
           m_rtLastStickerOrEffect = Number.MIN_SAFE_INTEGER;
           m_emoticonTrackerCallback = null;
@@ -97253,16 +97271,10 @@ var CLSTAMP = "steamdb";
             return this.m_rgFlairs.filter((_) => _.flairGroupID === _);
           }
           get recent_emoticons() {
-            return (
-              this.m_rgRecentEmoticons || this.BuildRecentEmoticonList(),
-              this.m_rgRecentEmoticons
-            );
+            return this.m_rgRecentEmoticons ?? this.BuildRecentEmoticonList();
           }
           get recent_stickers() {
-            return (
-              this.m_rgRecentStickers || this.BuildRecentStickerList(),
-              this.m_rgRecentStickers
-            );
+            return this.m_rgRecentStickers ?? this.BuildRecentStickerList();
           }
           SetEmoticonTrackerCallback(_) {
             this.m_emoticonTrackerCallback = _;
@@ -97284,20 +97296,24 @@ var CLSTAMP = "steamdb";
             let _ = !1;
             if (_.size) {
               if (void 0 !== this.m_rgRecentEmoticons)
-                for (let _ of this.m_rgRecentEmoticons)
-                  _.has(_.name) &&
+                for (let _ of this.m_rgRecentEmoticons) {
+                  const _ = _.get(_.name);
+                  void 0 !== _ &&
                     ((_.last_used = _),
-                    (_.use_count += _.get(_.name)),
+                    (_.use_count = (_.use_count ?? 0) + _),
                     _.delete(_.name),
                     _.time_received && ((_ = !0), delete _.time_received));
+                }
               if (_.size)
-                for (let _ of this.m_rgEmoticons)
-                  _.has(_.name) &&
+                for (let _ of this.m_rgEmoticons) {
+                  const _ = _.get(_.name);
+                  void 0 !== _ &&
                     ((_.last_used = _),
-                    (_.use_count += _.get(_.name)),
+                    (_.use_count = (_.use_count ?? 0) + _),
                     delete _.time_received,
                     void 0 !== this.m_rgRecentEmoticons &&
                       this.m_rgRecentEmoticons.push(_));
+                }
               if (
                 void 0 !== this.m_rgRecentEmoticons &&
                 (this.BuildRecentEmoticonList(), _)
@@ -97317,10 +97333,11 @@ var CLSTAMP = "steamdb";
             this.m_stickerTrackerCallback &&
               this.m_stickerTrackerCallback(_, _);
             const _ = this.m_rgStickers.find(({ name: _ }) => _ === _);
-            (_.last_used = _),
-              (_.use_count += 1),
+            _ &&
+              ((_.last_used = _),
+              (_.use_count = (_.use_count ?? 0) + 1),
               delete _.time_received,
-              this.BuildRecentStickerList();
+              this.BuildRecentStickerList());
           }
           RequestEmoticonList() {
             !this.m_bEmoticonListRequested &&
@@ -97329,10 +97346,20 @@ var CLSTAMP = "steamdb";
               this.RequestEmoticonListInternal());
           }
           BuildRecentEmoticonList() {
-            this.m_rgRecentEmoticons = this.BuildRecentList(this.m_rgEmoticons);
+            return (
+              (this.m_rgRecentEmoticons = this.BuildRecentList(
+                this.m_rgEmoticons,
+              )),
+              this.m_rgRecentEmoticons
+            );
           }
           BuildRecentStickerList() {
-            this.m_rgRecentStickers = this.BuildRecentList(this.m_rgStickers);
+            return (
+              (this.m_rgRecentStickers = this.BuildRecentList(
+                this.m_rgStickers,
+              )),
+              this.m_rgRecentStickers
+            );
           }
           BuildRecentList(_) {
             const _ = this.GetServerTime() - _,
@@ -97342,8 +97369,8 @@ var CLSTAMP = "steamdb";
             return (
               __webpack_require__.sort(
                 (_, _) =>
-                  (_.last_used || _.time_received) -
-                  (_.last_used || _.time_received),
+                  (_.last_used || _.time_received || 0) -
+                  (_.last_used || _.time_received || 0),
               ),
               __webpack_require__.slice(0, 50)
             );
@@ -97356,17 +97383,24 @@ var CLSTAMP = "steamdb";
             let _ = this.GetServerTime() - _;
             for (let _ of _) {
               let _ = _.name;
-              _.startsWith("^")
-                ? this.m_rgFlairs.push({
-                    name: _.match(new RegExp(/:(.*):/))[1],
-                    flairGroupID: _.match(new RegExp(/\^(.*)\^/))[1],
-                  })
-                : (!_.last_used && _.time_received > _
-                    ? (!this.m_rtMostRecentEmoticon ||
-                        _.time_received > this.m_rtMostRecentEmoticon) &&
-                      (this.m_rtMostRecentEmoticon = _.time_received)
-                    : delete _.time_received,
-                  this.m_rgEmoticons.push(_));
+              if (_.startsWith("^")) {
+                const _ = _.match(new RegExp(/:(.*):/)),
+                  _ = _.match(new RegExp(/\^(.*)\^/));
+                _ &&
+                  _ &&
+                  this.m_rgFlairs.push({
+                    name: _[1],
+                    flairGroupID: _[1],
+                  });
+              } else {
+                const _ = _.time_received;
+                !_.last_used && _ && _ > _
+                  ? (!this.m_rtMostRecentEmoticon ||
+                      _ > this.m_rtMostRecentEmoticon) &&
+                    (this.m_rtMostRecentEmoticon = _)
+                  : delete _.time_received,
+                  this.m_rgEmoticons.push(_);
+              }
             }
             (this.m_setEmoticonOwned = new Set(
               this.m_rgEmoticons.map((_) => _.name_normalized || _.name),
@@ -99773,23 +99807,29 @@ var CLSTAMP = "steamdb";
                   params: _,
                   withCredentials: !1,
                 });
-            let _ = (await _().get(_, _)).data.event,
-              _ = _(_);
-            if (
-              !this.m_mapExistingEvents.has(_) ||
-              (this.m_mapExistingEvents.get(_).rtime32_last_modified ?? 0) <
-                (_.rtime32_last_modified ?? 0) ||
-              (this.m_mapExistingEvents.get(_).rtime32_moderator_reviewed ??
-                0) < (_.rtime_mod_reviewed ?? 0)
-            ) {
-              (0, _._)(
-                _.clan_steamid,
-                "ClanSteamID is missing from data we received",
-              );
-              let _ = new _._(_.clan_steamid);
-              this.InsertEventModelFromClanEventData(_, _);
+            try {
+              let _ = await _().get(_, _);
+              if (_.data.success !== _._) return;
+              let _ = _.data.event,
+                _ = _(_);
+              if (
+                !this.m_mapExistingEvents.has(_) ||
+                (this.m_mapExistingEvents.get(_).rtime32_last_modified ?? 0) <
+                  (_.rtime32_last_modified ?? 0) ||
+                (this.m_mapExistingEvents.get(_).rtime32_moderator_reviewed ??
+                  0) < (_.rtime_mod_reviewed ?? 0)
+              ) {
+                (0, _._)(
+                  _.clan_steamid,
+                  "ClanSteamID is missing from data we received",
+                );
+                let _ = new _._(_.clan_steamid);
+                this.InsertEventModelFromClanEventData(_, _);
+              }
+              return this.m_mapExistingEvents.get(_);
+            } catch (_) {
+              return;
             }
-            return this.m_mapExistingEvents.get(_);
           }
           async InternalLoadPartnerEventFromClanEventOrClanAnnouncementGIDCached(
             _,
@@ -108789,15 +108829,16 @@ var CLSTAMP = "steamdb";
               (_[(_.ControllerPairing = 1)] = "ControllerPairing"),
               (_[(_.WelcomeToSteamFrame = 2)] = "WelcomeToSteamFrame"),
               (_[(_.PlayspaceSetup = 3)] = "PlayspaceSetup"),
-              (_[(_.SystemButtonHideDashboard = 4)] =
+              (_[(_.LaserMouse = 4)] = "LaserMouse"),
+              (_[(_.SystemButtonHideDashboard = 5)] =
                 "SystemButtonHideDashboard"),
-              (_[(_.SystemButtonDashboardHidden = 5)] =
+              (_[(_.SystemButtonDashboardHidden = 6)] =
                 "SystemButtonDashboardHidden"),
-              (_[(_.SystemButtonShowDashboard = 6)] =
+              (_[(_.SystemButtonShowDashboard = 7)] =
                 "SystemButtonShowDashboard"),
-              (_[(_.PairWifiDongle = 7)] = "PairWifiDongle"),
-              (_[(_.TourSendOff = 8)] = "TourSendOff"),
-              (_[(_.SteamGuidedTourFinished = 9)] = "SteamGuidedTourFinished");
+              (_[(_.PairWifiDongle = 8)] = "PairWifiDongle"),
+              (_[(_.TourSendOff = 9)] = "TourSendOff"),
+              (_[(_.SteamGuidedTourFinished = 10)] = "SteamGuidedTourFinished");
           })(_ || (_ = {})),
           (function (_) {
             (_[(_.None = 0)] = "None"),
@@ -110043,35 +110084,41 @@ var CLSTAMP = "steamdb";
         let _ = class extends _.Component {
           OnEmoticonClick(_) {
             const {
-              emoticonStore: _,
-              strFlairGroupID: _,
-              SetUIDisplayPref: _,
-              contextOptions: _,
-              bShowChatAddons: _,
-            } = this.props;
+                emoticonStore: _,
+                strFlairGroupID: _,
+                SetUIDisplayPref: _,
+                contextOptions: _,
+                bShowChatAddons: _,
+              } = this.props,
+              {
+                roomEffectSettings: _,
+                onRoomEffectSelected: _,
+                onStickerSelected: _,
+              } = this.props;
             let _ = null;
             if (
-              ((_ = _
-                ? (0, _.jsx)(_._, {
-                    emoticonStore: this.props.emoticonStore,
-                    strFlairGroupID: this.props.strFlairGroupID,
-                    onEmoticonSelected: (_) =>
-                      this.props.OnEmoticonSelected(_, !1),
-                    roomEffectSettings: this.props.roomEffectSettings,
-                    onRoomEffectSelected: this.props.onRoomEffectSelected,
-                    onStickerSelected: this.props.onStickerSelected,
-                  })
-                : _ && _.flair_list && _.GetFlairListByGroupID(_)?.length > 0
+              ((_ =
+                _ && _ && _ && _
                   ? (0, _.jsx)(_._, {
                       emoticonStore: this.props.emoticonStore,
                       strFlairGroupID: this.props.strFlairGroupID,
-                      OnSelected: this.props.OnEmoticonSelected,
+                      onEmoticonSelected: (_) =>
+                        this.props.OnEmoticonSelected(_, !1),
+                      roomEffectSettings: _,
+                      onRoomEffectSelected: _,
+                      onStickerSelected: _,
                     })
-                  : (0, _.jsx)(_._, {
-                      emoticonStore: this.props.emoticonStore,
-                      strFlairGroupID: this.props.strFlairGroupID,
-                      OnSelected: this.props.OnEmoticonSelected,
-                    })),
+                  : _ && _.flair_list && _.GetFlairListByGroupID(_)?.length > 0
+                    ? (0, _.jsx)(_._, {
+                        emoticonStore: this.props.emoticonStore,
+                        strFlairGroupID: this.props.strFlairGroupID,
+                        OnSelected: this.props.OnEmoticonSelected,
+                      })
+                    : (0, _.jsx)(_._, {
+                        emoticonStore: this.props.emoticonStore,
+                        strFlairGroupID: this.props.strFlairGroupID,
+                        OnSelected: this.props.OnEmoticonSelected,
+                      })),
               (0, _._)(
                 _,
                 _,
@@ -110194,7 +110241,8 @@ var CLSTAMP = "steamdb";
           render() {
             const { config: _ } = this.props,
               { activeIndex: _ } = this.state,
-              _ = _[_] && _[_].renderContent ? _[_].renderContent() : null,
+              _ = _[_],
+              _ = _ ? __webpack_require__.renderContent() : null,
               _ = _.length > 1,
               _ = _
                 ? ({ detail: { button: _ } }) => {
@@ -111044,6 +111092,7 @@ var CLSTAMP = "steamdb";
                   src: _,
                 }),
                 this.state.showHover &&
+                  this.m_ref.current &&
                   (0, _.jsx)(_, {
                     target: this.m_ref.current,
                     sticker: _,
@@ -111104,6 +111153,7 @@ var CLSTAMP = "steamdb";
               children: [
                 _.renderEffectIcon(),
                 this.state.showHover &&
+                  this.m_ref.current &&
                   (0, _.jsx)(_, {
                     target: this.m_ref.current,
                     effect: _,
@@ -126323,7 +126373,7 @@ var CLSTAMP = "steamdb";
               let _ = document.createElement("script");
               _.src = "https://www.youtube.com/iframe_api";
               let _ = document.getElementsByTagName("script")[0];
-              _.parentNode.insertBefore(_, _),
+              _.parentNode?.insertBefore(_, _),
                 (window.onYouTubeIframeAPIReady = _);
             }
             _ && (_.includes(_) || _.push(_));
@@ -126375,8 +126425,8 @@ var CLSTAMP = "steamdb";
           componentDidUpdate(_) {
             _.forcePause != this.props.forcePause &&
               (this.props.forcePause
-                ? this.m_player.pauseVideo()
-                : this.m_player.playVideo());
+                ? this.m_player?.pauseVideo()
+                : this.m_player?.playVideo());
           }
           DestroyPlayer() {
             if (this.m_player)
@@ -126431,7 +126481,10 @@ var CLSTAMP = "steamdb";
             (this.m_bPlayerReady = !1), (this.m_player = new _.Player(_, _));
           }
           OnPlayerReady(_) {
-            if (((this.m_bPlayerReady = !0), this.props.onVideoInfoChanged)) {
+            if (
+              ((this.m_bPlayerReady = !0),
+              this.props.onVideoInfoChanged && this.m_player)
+            ) {
               let _ = this.m_player.getVideoData(),
                 _ = {
                   strAuthor: "",
@@ -126445,8 +126498,8 @@ var CLSTAMP = "steamdb";
             }
             this.props.width &&
               this.props.height &&
-              this.m_player.setSize(this.props.width, this.props.height),
-              this.props.autoplay && this.m_player.playVideo(),
+              this.m_player?.setSize(this.props.width, this.props.height),
+              this.props.autoplay && this.m_player?.playVideo(),
               this.props.onPlayerReady && this.props.onPlayerReady();
           }
           OnPlayerStateChange(_) {
@@ -128833,6 +128886,7 @@ var CLSTAMP = "steamdb";
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
         function _(_) {
           if (void 0 === _)
@@ -130201,7 +130255,6 @@ var CLSTAMP = "steamdb";
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
         __webpack_require__._(_, {
-          _: () => _._,
           _: () => _,
           _: () => _._,
           _: () => _._,
@@ -130211,7 +130264,6 @@ var CLSTAMP = "steamdb";
           _: () => _,
           _: () => _,
           _: () => _,
-          _: () => _._,
           _: () => _._,
           _: () => _._,
           _: () => _._,
@@ -130495,7 +130547,6 @@ var CLSTAMP = "steamdb";
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
         __webpack_require__._(_, {
-          _: () => _,
           _: () => _._,
           _: () => _,
           _: () => _._,
@@ -130528,7 +130579,13 @@ var CLSTAMP = "steamdb";
           _ &&
             (Object.assign(_._, _),
             (_.userConfig = !0),
-            _._.is_support && _() && (_._.is_support = !1));
+            _._.is_support &&
+              (function () {
+                let _ = null;
+                (0, _._)() && (_ = (0, _._)(_));
+                return Boolean(_ && 1 === Number.parseInt(_));
+              })() &&
+              (_._.is_support = !1));
           const _ = (0, _._)("broadcast", _);
           _ && (Object.assign(_._, _), (_.broadcastConfig = !0));
           const _ = (0, _._)("community", _);
@@ -130551,13 +130608,6 @@ var CLSTAMP = "steamdb";
               });
         }
         const _ = "presentation_mode";
-        function _() {
-          let _ = null;
-          return (
-            (0, _._)() && (_ = (0, _._)(_)),
-            Boolean(_ && 1 === Number.parseInt(_))
-          );
-        }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -131919,24 +131969,23 @@ var CLSTAMP = "steamdb";
         43: "8170f2c895e19202cd65",
         133: "82545716ea1a8b82e4d9",
         191: "2f44a701276dca278b19",
-        200: "97d6b91f251d530583ca",
-        243: "4149b00deb1074b58699",
+        200: "cfd1378a55afe1089add",
         277: "a5843aa6d5b4f2aac940",
-        295: "f7b5346af4c9748e7713",
+        295: "64a5aae7cba430984eff",
         316: "b4a4125ab8550ef83a0b",
         382: "416dc2c22c72ab0b0084",
         474: "6a9d0b4e2892dded462e",
         496: "fb606fd9941402c4c9fd",
-        559: "1d22d9eb5f270dbceb86",
+        559: "953f1cf690b4e5511a43",
         684: "93eb01f9afd9f045929e",
         762: "989dc3b4eff679fe5ec9",
-        815: "2a4bb53c1fe590458db2",
+        815: "a50f176b1671bac69ef2",
         898: "b6a64c82dc169d24fab2",
         902: "11f5eb21d0207a89d13a",
         947: "77123a0d43c051462d19",
         975: "3a1c568c77dec2962779",
         1087: "1b1e874fa0b17e33bd93",
-        1136: "4e4da813c110e065dacc",
+        1136: "e2d73c7fe82fd7d5d8c9",
         1144: "896ffa5dbc529d9c48a5",
         1158: "20c08adf29ac06b096f3",
         1224: "8cf7b28930c7b7c56321",
@@ -131946,19 +131995,19 @@ var CLSTAMP = "steamdb";
         1571: "301c37a370bcf304422d",
         1639: "48a7008667f0f9b1d559",
         1849: "c211a47bad2b684320fd",
-        1864: "fb474b692ff5a3a7b978",
+        1864: "ed913ddb58093a5035ba",
         1954: "0e55356fd7b14be54c0b",
         1990: "f85ce9a0d9c8bd0dcdf2",
         2116: "9caf93966dc0a0c7202f",
         2177: "77c78758e314a85bc85e",
-        2269: "021fa72192e6af3ee4b9",
+        2269: "ac5e1a56f80c6b5ed0bd",
         2281: "6496f3d7e4ce6308483c",
         2292: "2648171bbf7a4e541935",
         2506: "3995fb6cb9c524d2af74",
         2520: "1f392503c94a20f48720",
         2532: "81f6c1f1d6e42e913450",
         2687: "fe042a69cfd5cbb58cc1",
-        2889: "c4bff9e981ee19b8099e",
+        2889: "f81c4d6eab4de38e52fa",
         2945: "f36eb722d1197b9ccc69",
         2993: "e6827764a5e82e106259",
         3e3: "a020a8a0239eaddd4347",
@@ -131974,79 +132023,78 @@ var CLSTAMP = "steamdb";
         3723: "325ca6fc0ceca5503b85",
         3778: "167dead89774a69d53cc",
         3789: "8c81812abc11a5169e5b",
-        3800: "2d1d2bc9065b30317066",
+        3800: "3d5c040d35d601e722b7",
         3810: "e5049fe30dd9a6434d81",
         3875: "f4eb6016a7ef30ff0ad4",
         3898: "90846a9e84c0e34eca45",
-        3907: "9831fc2c8061997a120e",
+        3907: "0e58a2bdb279b72b2874",
         4006: "6603ebe760f65431a358",
         4154: "da950d2a24eca80bf91a",
         4227: "b9f7e2337d2bec4eff82",
-        4230: "c754e42acf5b62d9864f",
-        4289: "7165ad723758272236ac",
+        4230: "4674837e8d11091922a8",
+        4289: "6b05def3339c199bca35",
         4295: "e2c54df00cd7fc6e55c9",
         4302: "6777319b6735c96a6a98",
         4352: "de92a58e851fd1f40a2a",
-        4419: "2960803dc8add8035fa5",
+        4419: "ea191040f4f90be94106",
         4421: "58fab8f46777762af7e8",
         4434: "06de5f0d3ba8406dd2d0",
         4473: "4f453826b91d887757e2",
         4488: "8dd091f616bb836b799e",
-        4625: "0c085f23233161b6967c",
-        4750: "68ef05a294eac730031a",
+        4625: "fc88adb95307e0d78e66",
+        4750: "cd9bc952747a7b90909c",
         4776: "0ff0003552979744c3ee",
         4777: "040c37a660c26d77931d",
         4779: "909f21776039059914ce",
         4787: "ab118cafd413ef8db5d3",
-        4792: "8afa4089111384fd8fd8",
+        4792: "9f7f6d4443d3e4cd8dbe",
         4844: "9b0a060abc338b33c9ea",
         4976: "11dc50e1825c3ea78b66",
-        4978: "129bbbea251f001e5217",
-        5040: "5bb81e685060aa4cb72e",
+        4978: "4a3b3c80ecf51d25d196",
+        5040: "52a4710fd9eaa39d7bd5",
         5094: "d15c06f400812c0725f0",
         5136: "d873a49dcff7475852a5",
-        5191: "4101ad929f40adda52cd",
-        5233: "deea4292298564390360",
+        5191: "ae29012edb65c0412283",
+        5233: "5546b6402f5765dc5239",
         5341: "0050d1d3444cdf99610b",
         5358: "46677bfee5caf20bc8de",
-        5436: "dfaf7667a2137111d5f1",
+        5436: "246e6374c9e4e5de1fe3",
         5480: "819bcdfa36698211a731",
         5522: "43ef07153506837b9ad7",
         5536: "67277551d20afcb0ab7a",
         5617: "6d58f25bd9f169dac32a",
         5725: "188fd09b6944f1d69b65",
-        5777: "c13935ed6e44c943448c",
+        5777: "54438807c65eb1c2484c",
         5893: "91f5b813d41dc544101d",
-        5914: "28db15f708af760740ce",
         6059: "e0d80564c1174fd84376",
         6127: "658afba6cdc2a25013d4",
-        6170: "6ac0cee5f5bbb0edb8ee",
+        6170: "2dda688d7f55217ec17d",
         6196: "19444056df361c8ef94a",
         6305: "10b03bb6a5af6137fa3d",
         6385: "641291b44bff14d6f0d7",
         6447: "6571327308708b9cb4a5",
-        6512: "0b430f99536d62213824",
+        6512: "0a59a4a9340578701937",
         6518: "dc5f6ae58364d09cceda",
         6609: "58380bc6920b369df4a7",
         6637: "bee05b6c76a9dd2fe06d",
-        6736: "039a2ae091edc9de5b4b",
+        6736: "cbf0722fb2a9d3fb8bfc",
         6888: "b1d82792ec48c0c9f838",
         6905: "d9316fc5a220e6b4c416",
         6920: "073d861c6b381e481b8f",
         6950: "ec0c8b0d665699ce915b",
         6971: "8bfca381100e06a3c16d",
-        7246: "775446676728b8b935f4",
+        7246: "734ad76f5986901f4de5",
         7247: "7021b7a5aaf6d7ee9806",
-        7263: "49cbbe96eb3e47dccfa2",
+        7263: "8bee25587608c97b575c",
         7279: "4fa8dad9d6bcde1d380b",
         7365: "bb74e03060db6e6f780a",
         7418: "7680875bb68efceaf698",
-        7462: "15eb1f686b7c17b4ca2f",
+        7462: "cda717020b69d3faa1a2",
         7464: "d527671518fba684fd01",
         7468: "53e0875c52dff3de164a",
         7487: "49d81d8d15ad6c6cb411",
         7637: "4d32b59b329ef468b7d5",
-        7653: "c947374da67889a4e971",
+        7653: "48362d097308af8a0530",
         7673: "065a311d75b3213d4f15",
         7788: "d010383f4ccc1c1b6efb",
         7861: "7b73403c160be056831f",
@@ -132055,7 +132103,7 @@ var CLSTAMP = "steamdb";
         8106: "9e5de4171728b3824d1d",
         8191: "7c71b0175a3b35434ec8",
         8194: "cee76cc3439b0428bedd",
-        8246: "4947c8de6e1af98f950c",
+        8246: "d8dd4a47668b5bf225ab",
         8311: "410eff68de4d1e8b26d0",
         8366: "fbd35ad496eb7892a424",
         8476: "094339eefcf15105c427",
@@ -132068,14 +132116,16 @@ var CLSTAMP = "steamdb";
         8855: "f6463721cab65712879d",
         8871: "db91511bbe45c67ef042",
         8930: "25153545da6040645366",
+        8943: "af93bf694b32feed7244",
         9273: "702b2119e94a4b56417e",
         9401: "0c0cd9c24baf6ebde222",
+        9419: "6d3010aafad4fa52c252",
         9457: "29fc2a26fae6d38d2a96",
-        9574: "b06958ce8157e1ca49e0",
-        9668: "ff1ba593ee8ffe24db1f",
+        9574: "545cb7f78522f0b92438",
+        9668: "a4cfb18de81aad6185bf",
         9746: "2cfaacb3359ab5b9bd3c",
         9808: "21bf92301f1b8edb7b62",
-        9863: "623f14a66142e7451d8d",
+        9863: "d116b8109d4800eb4c20",
         9925: "77586f22def2595b9c64",
         9930: "f92544de12d0462e95d3",
         9947: "46317ab7a7ca29c36168",
@@ -132089,7 +132139,7 @@ var CLSTAMP = "steamdb";
       ".css?contenthash=" +
       {
         7462: "72980633e3cf3969529a",
-        7653: "4f90cd488ec7d0bbdf54",
+        7653: "7693ac702df2d8c63b77",
       }[_]),
     (_._ = (function () {
       if ("object" == typeof globalThis) return globalThis;
@@ -132323,6 +132373,6 @@ var CLSTAMP = "steamdb";
       __webpack_require__.forEach(_.bind(null, 0)),
         (_.push = _.bind(null, _.push.bind(_)));
     })();
-  var _ = _._(void 0, [3987, 9489, 1068], () => _(77156));
+  var _ = _._(void 0, [3987, 9489, 1068], () => _(72336));
   _ = _._(_);
 })();

@@ -19291,10 +19291,21 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { href: _, children: _, bAllowFocuseableAnchor: _, ..._ } = _;
-        return (0, _._)()
+        return _._.EREALM === _._.k_ESteamRealmChina
           ? (0, _.jsx)("div", {
               ..._,
               children: _,
@@ -19313,15 +19324,144 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+          strURL: _,
+          strName: _,
+          strAvatarURL: _,
+          nFollowers: _,
+          strCreatorType: _,
+          strTagLine: _,
+          strMemberListURL: _,
+          followButton: _,
+          bSmallFormat: _,
+          bMinimalDisplay: _,
+        } = _;
+        return (0, _.jsx)(_._, {
+          feature: "salecreatorhome",
+          children: (0, _.jsxs)(_._, {
+            className: (0, _._)(
+              _().DevSummaryCtn,
+              _ ? _().SmallFormat : _().LargeFormat,
+              _ ? _().MinimalDisplay : "",
+            ),
+            "flow-children": "row",
+            children: [
+              Boolean(_) &&
+                (0, _.jsx)("span", {
+                  className: _().Title,
+                  children: _,
+                }),
+              (0, _.jsxs)("div", {
+                className: _().DevSummaryWidgetCtn,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _().DevSummaryBackground,
+                    style: {
+                      backgroundImage: `url(${_} )`,
+                    },
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: (0, _._)(_().DevSummaryContent),
+                    children: [
+                      (0, _.jsxs)("div", {
+                        className: _().FlexRowContainer,
+                        children: [
+                          (0, _.jsx)(_, {
+                            href: (0, _._)(_),
+                            className: _().AvatarLink,
+                            bAllowFocuseableAnchor: !0,
+                            children: (0, _.jsx)("img", {
+                              className: (0, _._)(_().Avatar, "Avatar_Trgt"),
+                              src: _,
+                            }),
+                          }),
+                          (0, _.jsxs)("div", {
+                            className: (0, _._)(
+                              _().FlexColumnContainer,
+                              _().CreatorDescCtn,
+                            ),
+                            children: [
+                              (0, _.jsxs)("div", {
+                                className: (0, _._)(
+                                  _().CreatorTitleCtn,
+                                  _().FlexColumnContainer,
+                                ),
+                                children: [
+                                  (0, _.jsx)(_, {
+                                    href: (0, _._)(_),
+                                    className: _().CreatorNameName,
+                                    children: _,
+                                  }),
+                                  Boolean(_) &&
+                                    (0, _.jsx)("div", {
+                                      className: (0, _._)(
+                                        _().FlexColumnContainer,
+                                        _().CreatorTagline,
+                                      ),
+                                      children: _,
+                                    }),
+                                ],
+                              }),
+                              (0, _.jsx)("div", {
+                                className: (0, _._)({
+                                  [_().FlexColumnContainer]: _,
+                                  [_().FlexRowContainer]: !_,
+                                  [_().SocialFollowersCtn]: !0,
+                                }),
+                                children: (0, _.jsxs)("div", {
+                                  className: (0, _._)(_().FollowBtnCtn),
+                                  children: [
+                                    _,
+                                    (0, _.jsxs)("div", {
+                                      className: (0, _._)({
+                                        [_().Followers]: !0,
+                                      }),
+                                      children: [
+                                        (0, _.jsx)("span", {
+                                          children: (0, _._)(
+                                            "#CreatorHome_JustFollowers",
+                                          ),
+                                        }),
+                                        (0, _.jsx)("span", {
+                                          className: _().FollowerCount,
+                                          children: (0, _._)(_),
+                                        }),
+                                      ],
+                                    }),
+                                  ],
+                                }),
+                              }),
+                            ],
+                          }),
+                        ],
+                      }),
+                      Boolean(_) &&
+                        (0, _.jsx)("a", {
+                          href: _,
+                          target: "_blank",
+                          className: _().MembersListLink,
+                          children: (0, _._)("#ClanMembershipList"),
+                        }),
+                    ],
+                  }),
+                ],
+              }),
+            ],
+          }),
+        });
+      }
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        switch (_) {
+          case "publisher":
+            return (0, _._)("#CreatorHome_PublishedBy");
+          case "franchise":
+            return (0, _._)("#CreatorHome_InFranchise");
+        }
+        return (0, _._)("#CreatorHome_DevelopedBy");
+      }
       function _(_) {
         const {
             creatorID: _,
@@ -19334,147 +19474,39 @@
           } = _,
           { creatorHome: _ } = (0, _._)(_.clan_account_id),
           [_] = (0, _._)();
-        if (_ || !_)
-          return (0, _.jsx)("div", {
-            className: _.DevSummaryWidgetCtn,
-            children: (0, _.jsx)(_._, {
-              string: (0, _._)("#Loading"),
-              size: "medium",
-              position: "center",
-            }),
-          });
-        const _ = _.type,
-          _ =
-            "developer" == _.type
-              ? (0, _._)("#CreatorHome_DevelopedBy")
-              : "publisher" == _.type
-                ? (0, _._)("#CreatorHome_PublishedBy")
-                : (0, _._)("#CreatorHome_InFranchise"),
-          _ = _.GetCreatorHomeURL(_),
-          _ = _.GetNumFollowers();
-        return (0, _.jsx)(_._, {
-          children: (0, _.jsx)(_._, {
-            feature: "salecreatorhome",
-            children: (0, _.jsxs)(_._, {
-              className: (0, _._)(
-                _.DevSummaryCtn,
-                _ ? _.SmallFormat : _.LargeFormat,
-                _ ? _.MinimalDisplay : "",
-              ),
-              "flow-children": "row",
-              children: [
-                !_ &&
-                  (0, _.jsx)("span", {
-                    className: _.Title,
-                    children: _,
-                  }),
-                (0, _.jsxs)("div", {
-                  className: _.DevSummaryWidgetCtn,
-                  children: [
-                    (0, _.jsx)("div", {
-                      className: _.DevSummaryBackground,
-                      style: {
-                        backgroundImage: `url(${_.GetAvatarURLFullSize()} )`,
-                      },
+        return _ || !_
+          ? (0, _.jsx)("div", {
+              className: _.DevSummaryWidgetCtn,
+              children: (0, _.jsx)(_._, {
+                string: (0, _._)("#Loading"),
+                size: "medium",
+                position: "center",
+              }),
+            })
+          : (0, _.jsx)(_._, {
+              children: (0, _.jsx)(_, {
+                strURL: _.GetCreatorHomeURL(_.type),
+                strName: _.GetName(),
+                strAvatarURL: _.GetAvatarURLFullSize(),
+                nFollowers: _.GetNumFollowers(),
+                strCreatorType: _ ? void 0 : _(_.type),
+                strTagLine: _ ? _.GetTagLine() : void 0,
+                strMemberListURL: _
+                  ? _._.COMMUNITY_BASE_URL +
+                    "gid/" +
+                    _.GetClanSteamID().ConvertTo64BitString() +
+                    "/members/"
+                  : void 0,
+                followButton: _
+                  ? void 0
+                  : (0, _.jsx)(_._, {
+                      clanAccountID: _.clan_account_id,
+                      creatorID: _,
                     }),
-                    (0, _.jsxs)("div", {
-                      className: (0, _._)(_.DevSummaryContent),
-                      children: [
-                        (0, _.jsxs)("div", {
-                          className: _.FlexRowContainer,
-                          children: [
-                            (0, _.jsx)(_, {
-                              href: (0, _._)(_),
-                              className: _.AvatarLink,
-                              bAllowFocuseableAnchor: !0,
-                              children: (0, _.jsx)("img", {
-                                className: (0, _._)(_.Avatar, "Avatar_Trgt"),
-                                src: _.GetAvatarURLFullSize(),
-                              }),
-                            }),
-                            (0, _.jsxs)("div", {
-                              className: (0, _._)(
-                                _.FlexColumnContainer,
-                                _.CreatorDescCtn,
-                              ),
-                              children: [
-                                (0, _.jsxs)("div", {
-                                  className: (0, _._)(
-                                    _.CreatorTitleCtn,
-                                    _.FlexColumnContainer,
-                                  ),
-                                  children: [
-                                    (0, _.jsx)(_, {
-                                      href: (0, _._)(_),
-                                      className: _.CreatorNameName,
-                                      children: _.GetName(),
-                                    }),
-                                    Boolean(_) &&
-                                      (0, _.jsx)("div", {
-                                        className: (0, _._)(
-                                          _.FlexColumnContainer,
-                                          _.CreatorTagline,
-                                        ),
-                                        children: _.GetTagLine(),
-                                      }),
-                                  ],
-                                }),
-                                (0, _.jsx)("div", {
-                                  className: (0, _._)({
-                                    [_.FlexColumnContainer]: _,
-                                    [_.FlexRowContainer]: !_,
-                                    [_.SocialFollowersCtn]: !0,
-                                  }),
-                                  children: (0, _.jsxs)("div", {
-                                    className: (0, _._)(_.FollowBtnCtn),
-                                    children: [
-                                      Boolean(!_) &&
-                                        (0, _.jsx)(_._, {
-                                          clanAccountID: _.clan_account_id,
-                                          creatorID: _,
-                                        }),
-                                      (0, _.jsxs)("div", {
-                                        className: (0, _._)({
-                                          [_.Followers]: !0,
-                                        }),
-                                        children: [
-                                          (0, _.jsx)("span", {
-                                            children: (0, _._)(
-                                              "#CreatorHome_JustFollowers",
-                                            ),
-                                          }),
-                                          (0, _.jsx)("span", {
-                                            className: _.FollowerCount,
-                                            children: (0, _._)(_),
-                                          }),
-                                        ],
-                                      }),
-                                    ],
-                                  }),
-                                }),
-                              ],
-                            }),
-                          ],
-                        }),
-                        Boolean(_) &&
-                          (0, _.jsx)("a", {
-                            href:
-                              _._.COMMUNITY_BASE_URL +
-                              "gid/" +
-                              _.GetClanSteamID().ConvertTo64BitString() +
-                              "/members/",
-                            target: "_blank",
-                            className: _.MembersListLink,
-                            children: (0, _._)("#ClanMembershipList"),
-                          }),
-                      ],
-                    }),
-                  ],
-                }),
-              ],
-            }),
-          }),
-        });
+                bSmallFormat: _,
+                bMinimalDisplay: _,
+              }),
+            });
       }
       function _(_) {
         const { clanInfo: _, bAddLinkToMemberList: _ } = _;

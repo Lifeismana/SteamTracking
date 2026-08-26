@@ -511,253 +511,6 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = {
-        include_assets: !0,
-        include_release: !0,
-        include_platforms: !0,
-        include_tag_count: 20,
-        include_basic_info: !0,
-        include_trailers: !0,
-        include_reviews: !0,
-        include_screenshots: !0,
-        include_supported_languages: !0,
-      };
-      class _ {
-        m_setAlreadyAdded = new Set();
-        Reset() {
-          this.m_setAlreadyAdded = new Set();
-        }
-        BHasAppID(_) {
-          return this.m_setAlreadyAdded.has("a" + _);
-        }
-        BHasPackageID(_) {
-          return this.m_setAlreadyAdded.has("s" + _);
-        }
-        BHasBundleID(_) {
-          return this.m_setAlreadyAdded.has("b" + _);
-        }
-        BHasStoreItemKey(_) {
-          return this.m_setAlreadyAdded.has(
-            this.ConvertStoreItemKeyToUniqueKey(_),
-          );
-        }
-        AddStoreItemKey(_) {
-          this.m_setAlreadyAdded.add(this.ConvertStoreItemKeyToUniqueKey(_));
-        }
-        ConvertStoreItemKeyToUniqueKey(_) {
-          switch (_.item_type) {
-            default:
-            case "app":
-              return "a" + _._;
-            case "sub":
-              return "s" + _._;
-            case "bundle":
-              return "b" + _._;
-          }
-        }
-      }
-      const _ = 4;
-      function _(_, _, _, _, _, _) {
-        const _ = new Array(),
-          _ = new Array(),
-          _ = new Array(),
-          _ = new Array();
-        if (!_ || 0 == _.length) return _;
-        const _ = [
-          _._.k_RejectSupportedLanguage,
-          _._.k_RejectAlreadyDisplayed,
-          _._.k_RejectNoTrailer,
-        ];
-        for (let _ of _) {
-          let _ = _._,
-            _ = _._.k_NotRejected;
-          switch (_.item_type) {
-            case "sub":
-              const _ = _._.Get().GetPackage(_);
-              if (1 !== _?.GetIncludedAppIDs()?.length) {
-                _ = _(_, _, _, !0);
-                break;
-              }
-              _ = _.GetIncludedAppIDs()[0];
-            case "app":
-              _ = _(_, _, _, _, !0);
-              break;
-            case "bundle":
-              _ = _(_, _, _, !0);
-          }
-          if (
-            (_ == _._.k_NotRejected
-              ? ((_.rejected = _._.k_NotRejected),
-                _.push({
-                  ..._,
-                  priority: 1,
-                }))
-              : _.includes(_)
-                ? ((_.rejected = _._.k_NotRejected), _.push(_))
-                : ((_.rejected = _),
-                  _ == _._.k_RejectIgnoredGame ? _.push(_) : _.push(_)),
-            _.length > _)
-          )
-            break;
-        }
-        return (
-          _.length < _ &&
-            (_(_, _, _, 2),
-            _.length < _ &&
-              _.enforce_minimum &&
-              (_(_, _, _, 3), _(_, _, _, _))),
-          _
-        );
-      }
-      function _(_, _, _, _) {
-        for (let _ = 0; _.length < _ && _ < _.length; ++_)
-          _.push({
-            ..._[_],
-            priority: _,
-          });
-      }
-      function _(_, _) {
-        const _ = _._.Get();
-        if (
-          _.only_current_platform &&
-          __webpack_require__.BHasPlatformPreferenceSet()
-        ) {
-          if (
-            !(
-              (_.GetPlatforms()?.windows &&
-                __webpack_require__.BIsPreferredPlatform("win")) ||
-              (_.GetPlatforms()?.mac &&
-                __webpack_require__.BIsPreferredPlatform("mac")) ||
-              (_.GetPlatforms()?.steamos_linux &&
-                __webpack_require__.BIsPreferredPlatform("linux"))
-            )
-          )
-            return _._.k_RejectWrongPlatform;
-        }
-        if (!_.prepurchase && _.BIsComingSoon())
-          return _._.k_RejectNoComingSoon;
-        const _ = _.GetPlatforms();
-        return !_.virtual_reality &&
-          _ &&
-          _.vr_support &&
-          _.vr_support.vrhmd_only
-          ? _._.k_RejectNoVR
-          : _.GetAllCreatorClanIDs()?.some((_) =>
-                __webpack_require__.BIsIgnoringCurator(_),
-              )
-            ? _._.k_RejectCreatorClan
-            : _._.k_NotRejected;
-      }
-      function _(_, _) {
-        if (_.localized) {
-          const _ = (0, _.sfN)(_._.LANGUAGE);
-          if (!_.GetAllLanguagesWithSomeSupport()?.includes(_))
-            return _._.k_RejectSupportedLanguage;
-        }
-        return _._.k_NotRejected;
-      }
-      function _(_, _, _, _, _) {
-        const _ = _._.Get().GetApp(_);
-        if (!_) return _._.k_RejectNotLoaded;
-        const _ = _(_, _);
-        if (_ != _._.k_NotRejected) return _;
-        const _ = _._.Get();
-        if (_.BIsGameIgnored(_)) return _._.k_RejectIgnoredGame;
-        if (_.BExcludeTagIDs(_.GetTagIDs())) return _._.k_RejectIgnoreGameTags;
-        if (_.BExcludesContentDescriptor(_.GetContentDescriptorIDs()))
-          return _._.k_RejectIgnoreContentDescriptors;
-        if (!_.early_access && _.BIsEarlyAccess())
-          return _._.k_RejectEarlyAccess;
-        const _ = _.GetAppType();
-        if (!_.software && _ == _._._) return _._.k_RejectSoftware;
-        if (_.games_already_in_library && _.BIsGameOwned(_))
-          return _._.k_RejectInLibrary;
-        if (_.games_not_in_library && !_.BIsGameOwned(_))
-          return _._.k_RejectNotInLibrary;
-        if (!_.video && [_._._, _._._, _._._].includes(_))
-          return _._.k_RejectVideo;
-        if (_.has_discount) {
-          const _ = _.GetBestPurchaseOption();
-          if (!_ || !_.discount_pct) return _._.k_RejectNoDiscount;
-        }
-        return "adultonly" != _ &&
-          _.no_ao_content &&
-          (_.HasContentDescriptorID(_._) || _.HasContentDescriptorID(_._))
-          ? _._.k_RejectAO
-          : _ == _._._ &&
-              _.games_already_in_library &&
-              _.BIsGameOwned(_.GetParentAppID() || 0)
-            ? _._.k_RejectInLibrary
-            : _
-              ? (_ == _._._ && _.BHasAppID(_.GetParentAppID() || 0)) ||
-                _.BHasAppID(_)
-                ? _._.k_RejectAlreadyDisplayed
-                : _.has_trailer && !_.BHasTrailers(!1)
-                  ? _._.k_RejectNoTrailer
-                  : _(_, _)
-              : _._.k_NotRejected;
-      }
-      function _(_, _) {
-        const _ = _._.Get();
-        let _ = !1;
-        for (let _ of _) {
-          if (__webpack_require__.BIsGameIgnored(_))
-            return _._.k_RejectIgnoredGame;
-          __webpack_require__.BIsGameOwned(_) && (_ = !0);
-        }
-        return _.games_not_in_library && _
-          ? _._.k_RejectInLibrary
-          : _.games_not_in_library && !_
-            ? _._.k_RejectNotInLibrary
-            : _._.k_NotRejected;
-      }
-      function _(_, _, _, _) {
-        const _ = _._.Get().GetPackage(_);
-        if (!_) return _._.k_RejectNotLoaded;
-        const _ = _(_, _);
-        if (_ != _._.k_NotRejected) return _;
-        const _ = _(_.GetIncludedAppIDs(), _);
-        if (_ != _._.k_NotRejected) return _;
-        const _ = _._.Get();
-        return _.games_already_in_library && _.BOwnsPackage(_)
-          ? _._.k_RejectInLibrary
-          : _.BIsPackageIgnored(_)
-            ? _._.k_RejectIgnoredGame
-            : _
-              ? __webpack_require__.BHasPackageID(_)
-                ? _._.k_RejectAlreadyDisplayed
-                : _(_, _)
-              : _._.k_NotRejected;
-      }
-      function _(_, _, _, _) {
-        const _ = _._.Get().GetBundle(_);
-        if (!_) return _._.k_RejectNotLoaded;
-        const _ = _(_, _);
-        if (_ != _._.k_NotRejected) return _;
-        const _ = _(_.GetIncludedAppIDs(), _);
-        return _ != _._.k_NotRejected
-          ? _
-          : _
-            ? __webpack_require__.BHasBundleID(_)
-              ? _._.k_RejectAlreadyDisplayed
-              : _(_, _)
-            : _._.k_NotRejected;
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
       });
       const _ = 20,
         _ = /^.*youtube[^v]+v=(.{11}).*/,
@@ -805,6 +558,191 @@
         _: () => _,
         _: () => _,
       });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ =
+          (__webpack_require__("chunkid"),
+          __webpack_require__("chunkid"),
+          __webpack_require__("chunkid"),
+          __webpack_require__("chunkid")),
+        _ = __webpack_require__("chunkid");
+      const _ = new WeakSet();
+      function _(_ = _._) {
+        if ("undefined" == typeof window) return;
+        if (_.has(_)) return;
+        const _ = (0, _._)("groupvanityinfo", "application_config");
+        (void 0 === _ && "complete" != document.readyState) ||
+          (_.add(_), _(_) && (0, _._)(_, _));
+      }
+      function _(_) {
+        const _ = _;
+        return (
+          !!(
+            _ &&
+            Array.isArray(_) &&
+            _.length > 0 &&
+            "object" == typeof _[0]
+          ) &&
+          "number" == typeof _[0].clanAccountID &&
+          ("number" == typeof _[0].appid || "string" == typeof _[0].vanity_url)
+        );
+      }
+      function _(_) {
+        return "string" == typeof _ ? parseInt(_) : _;
+      }
+      function _(_) {
+        return "string" == typeof _ ? Number.parseInt(_) : _;
+      }
+      const _ = new (class {
+        m_queryClient = _._;
+        m_boxCacheVersion = _._.box(0);
+        m_bWatchingCache = !1;
+        m_bBumpScheduled = !1;
+        Init() {
+          this.LazyInit();
+        }
+        LazyInit() {
+          _(this.m_queryClient),
+            this.m_bWatchingCache ||
+              ((this.m_bWatchingCache = !0),
+              this.m_queryClient.getQueryCache().subscribe((_) => {
+                ("added" != _?.type &&
+                  "updated" != _?.type &&
+                  "removed" != _?.type) ||
+                  ((0, _._)(_.query?.queryKey) &&
+                    this.ScheduleCacheVersionBump());
+              }));
+        }
+        ScheduleCacheVersionBump() {
+          this.m_bBumpScheduled ||
+            ((this.m_bBumpScheduled = !0),
+            queueMicrotask(() => {
+              (this.m_bBumpScheduled = !1),
+                (0, _._)(() =>
+                  this.m_boxCacheVersion.set(this.m_boxCacheVersion.get() + 1),
+                );
+            }));
+        }
+        ReadCache() {
+          return (
+            this.LazyInit(), this.m_boxCacheVersion.get(), this.m_queryClient
+          );
+        }
+        AddGroupVanities(_) {
+          this.LazyInit(), _(_) && (0, _._)(this.m_queryClient, _);
+        }
+        BHasClanInfoLoaded(_) {
+          return (
+            (0, _._)(_.BIsValid(), "Clan SteamID is not valid when ClanInfo"),
+            (0, _._)(
+              _.BIsClanAccount(),
+              "Clan SteamID is not a clan account id when requesting clan info ",
+            ),
+            this.BHasClanInfoLoadedByAccountID(_.GetAccountID())
+          );
+        }
+        BHasClanInfoLoadedByAccountID(_) {
+          return Boolean((0, _._)(_(_), this.ReadCache()));
+        }
+        RegisterClanData(_) {
+          this.LazyInit(), (0, _._)(this.m_queryClient, _);
+        }
+        async LoadOGGClanInfoForAppID(_) {
+          return (
+            this.LazyInit(),
+            (_ = _(_)),
+            (0, _._)(
+              0 != _,
+              "LoadOGGClanInfoForAppID called with appid of zero",
+            ),
+            0 == _ ? null : (0, _._)(_, this.m_queryClient).catch(() => null)
+          );
+        }
+        async LoadOGGClanInfoForIdentifier(_) {
+          return this.LazyInit(), (0, _._)(_, this.m_queryClient, "store");
+        }
+        async LoadOGGClanInfoForGroupVanity(_) {
+          return this.LazyInit(), (0, _._)(_, this.m_queryClient, "group");
+        }
+        async LoadClanInfoForClanSteamID(_) {
+          return this.LoadClanInfoForClanAccountID(_.GetAccountID());
+        }
+        async LoadClanInfoForClanAccountID(_) {
+          return this.LazyInit(), (0, _._)(_(_), this.m_queryClient);
+        }
+        GetOGGClanInfo(_) {
+          const _ = this.ReadCache();
+          return "string" == typeof _ ? (0, _._)(_, _) : (0, _._)(_, _);
+        }
+        GetClanSteamIDForAppID(_) {
+          const _ = (0, _._)(_(_), this.ReadCache());
+          return _ ? _._.InitFromClanID(_.clanAccountID) : void 0;
+        }
+        GetClanVanityForAppID(_) {
+          return (0, _._)(_(_), this.ReadCache())?.vanity_url;
+        }
+        GetClanVanityForClanSteamID(_) {
+          return (0, _._)(_.GetAccountID(), this.ReadCache())?.vanity_url;
+        }
+        HasLoadedClanAccountID(_) {
+          return this.BHasClanInfoLoadedByAccountID(_);
+        }
+        GetClanMemberCount(_) {
+          return (0, _._)(_(_), this.ReadCache())?.member_count ?? 0;
+        }
+        GetClanInfoByClanAccountID(_) {
+          return (
+            (0, _._)(
+              !!_,
+              "Unepxected clanid when requesting information. GetClanInfoByClanAccountID ",
+            ),
+            (0, _._)(_(_), this.ReadCache())
+          );
+        }
+        GetCreatorStoreURL(_) {
+          let _ = _._.GetCreatorHome(_);
+          if (_) return _.GetCreatorHomeURL("developer");
+          let _ = this.GetClanInfoByClanAccountID(_.GetAccountID());
+          return (
+            _._.COMMUNITY_BASE_URL +
+            (_.vanity_url
+              ? "groups/" + _.vanity_url
+              : "gid/" + _.ConvertTo64BitString())
+          );
+        }
+      })();
+      function _() {
+        const _ = (0, _._)();
+        return _(_), _;
+      }
+      function _(_) {
+        _();
+        const { data: _, isPending: _ } = (0, _._)(_ ? _(_) : void 0);
+        return [Boolean(_) && _, _ ?? void 0];
+      }
+      function _(_) {
+        const _ = _();
+        (0, _.useEffect)(() => {
+          _ &&
+            (0, _._)(_(_), _).catch((_) =>
+              console.error(`Failed to hint load clan info ${_}`, _),
+            );
+        }, [_, _]);
+      }
+      (0, _._)("g_ClanStore", _);
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
       var _,
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -829,7 +767,7 @@
             let _ = document.createElement("script");
             _.src = "https://www.youtube.com/iframe_api";
             let _ = document.getElementsByTagName("script")[0];
-            _.parentNode.insertBefore(_, _),
+            _.parentNode?.insertBefore(_, _),
               (window.onYouTubeIframeAPIReady = _);
           }
           _ && (_.includes(_) || _.push(_));
@@ -881,8 +819,8 @@
         componentDidUpdate(_) {
           _.forcePause != this.props.forcePause &&
             (this.props.forcePause
-              ? this.m_player.pauseVideo()
-              : this.m_player.playVideo());
+              ? this.m_player?.pauseVideo()
+              : this.m_player?.playVideo());
         }
         DestroyPlayer() {
           if (this.m_player)
@@ -937,7 +875,10 @@
           (this.m_bPlayerReady = !1), (this.m_player = new _.Player(_, _));
         }
         OnPlayerReady(_) {
-          if (((this.m_bPlayerReady = !0), this.props.onVideoInfoChanged)) {
+          if (
+            ((this.m_bPlayerReady = !0),
+            this.props.onVideoInfoChanged && this.m_player)
+          ) {
             let _ = this.m_player.getVideoData(),
               _ = {
                 strAuthor: "",
@@ -951,8 +892,8 @@
           }
           this.props.width &&
             this.props.height &&
-            this.m_player.setSize(this.props.width, this.props.height),
-            this.props.autoplay && this.m_player.playVideo(),
+            this.m_player?.setSize(this.props.width, this.props.height),
+            this.props.autoplay && this.m_player?.playVideo(),
             this.props.onPlayerReady && this.props.onPlayerReady();
         }
         OnPlayerStateChange(_) {

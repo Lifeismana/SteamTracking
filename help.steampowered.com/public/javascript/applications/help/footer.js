@@ -362,16 +362,18 @@
       function l(e) {
         const { children: s, "flow-children": r, ...l } = e,
           { gamepadEvents: p } = (0, a.C7)(e);
+        let h;
         r && (l.layout = (0, i.O)(r)),
           p.onOKButton ||
-            ("onClick" in s.props && s.props.onClick && (p.onOKButton = a._K));
-        const { ref: h, node: d } = (0, a.qp)(l);
-        (0, c.Ui)(p, h);
-        const C = (0, a.BT)(d),
-          m = (0, n.Ue)(h, s.props?.ref, C);
+            ("onClick" in s.props && s.props.onClick && (p.onOKButton = a._K)),
+          l.focusable && (h = s.props.tabIndex || 0);
+        const { ref: d, node: C } = (0, a.qp)(l);
+        (0, c.Ui)(p, d);
+        const m = (0, a.BT)(C),
+          _ = (0, n.Ue)(d, s.props?.ref, m);
         return (0, t.jsx)(a.TJ.Provider, {
-          value: d,
-          children: o.cloneElement(s, { ...s.props, ref: m }),
+          value: C,
+          children: o.cloneElement(s, { ...s.props, ref: _, tabIndex: h }),
         });
       }
       var p = r(4238),
@@ -909,11 +911,11 @@
       ];
       var W = r(9041),
         O = r(3406),
-        G = r(4041);
-      function I(e) {
+        I = r(4041);
+      function G(e) {
         const { as: s = "div", focusable: r, navProps: n, ref: o, ...i } = e,
           a = (0, w.Qn)(),
-          c = f({ ...i, className: h()(G.Box, k(), e.className) }, D),
+          c = f({ ...i, className: h()(I.Box, k(), e.className) }, D),
           p = r ?? n?.focusable ?? !!i.onClick,
           d = (0, t.jsx)(s, { ref: o, ...c });
         return a && (p || n)
@@ -933,7 +935,7 @@
           } = e,
           c = (0, K.f)("LoadingSpinner", i);
         return n || !r
-          ? (0, t.jsxs)(I, {
+          ? (0, t.jsxs)(G, {
               position: "relative",
               ...a,
               width: "fit-content",
@@ -1444,7 +1446,7 @@
           children: [
             (0, t.jsx)(be.Anchor, { children: s }),
             (0, t.jsx)(be.Positioner, {
-              children: (0, t.jsx)(I, { children: r }),
+              children: (0, t.jsx)(G, { children: r }),
             }),
           ],
         });
@@ -1554,7 +1556,7 @@
           ? null
           : (0, t.jsx)("footer", {
               className: h()(Ve().SteamChinaFooter, e.className),
-              children: (0, t.jsxs)(I, {
+              children: (0, t.jsxs)(G, {
                 className: Ve().FooterContent,
                 children: [
                   (0, t.jsxs)(b, {
@@ -1565,7 +1567,7 @@
                         href: he.TS.STORE_BASE_URL,
                         children: (0, t.jsx)(Ne, {}),
                       }),
-                      (0, t.jsxs)(I, {
+                      (0, t.jsxs)(G, {
                         className: Ve().NavLinks,
                         children: [
                           (0, t.jsx)(Me, {
@@ -1687,7 +1689,7 @@
                     justify: "between",
                     marginTop: "5",
                     children: [
-                      (0, t.jsxs)(I, {
+                      (0, t.jsxs)(G, {
                         children: [
                           "© ",
                           new Date().getFullYear(),
@@ -1696,7 +1698,7 @@
                           "所有商标均属于其在美国或其他国家的拥有者。",
                         ],
                       }),
-                      (0, t.jsxs)(I, {
+                      (0, t.jsxs)(G, {
                         children: [
                           "© 完美世界征奇(上海)多媒体科技有限公司 版权所有。",
                           (0, t.jsx)("br", {}),
@@ -1881,7 +1883,7 @@
       function Oe(e) {
         return (0, t.jsx)(b, { direction: "column", gap: "4", ...e });
       }
-      function Ge(e) {
+      function Ie(e) {
         return (0, t.jsx)(A, {
           level: "3",
           color: "dull-12",
@@ -1890,7 +1892,7 @@
           ...e,
         });
       }
-      function Ie(e) {
+      function Ge(e) {
         let { href: s, ...r } = e;
         const n = (0, de.n9)();
         return (
@@ -1916,11 +1918,11 @@
               gap: "6",
               align: "center",
               children: [
-                (0, t.jsx)(Ie, {
+                (0, t.jsx)(Ge, {
                   href: he.TS.STORE_BASE_URL,
                   children: (0, t.jsx)(Ee, {}),
                 }),
-                (0, t.jsx)(Ie, {
+                (0, t.jsx)(Ge, {
                   href: "https://valvesoftware.com",
                   children: (0, t.jsx)(Ze, {}),
                 }),
@@ -1939,19 +1941,19 @@
               align: "center",
               className: Ce.LogoLinks,
               children: [
-                (0, t.jsx)(Ie, {
+                (0, t.jsx)(Ge, {
                   href: "https://www.youtube.com/@Steam",
                   children: (0, t.jsx)(Fe, {}),
                 }),
-                (0, t.jsx)(Ie, {
+                (0, t.jsx)(Ge, {
                   href: "https://bsky.app/profile/steampowered.com",
                   children: (0, t.jsx)(Ue, {}),
                 }),
-                (0, t.jsx)(Ie, {
+                (0, t.jsx)(Ge, {
                   href: "https://facebook.com/steam",
                   children: (0, t.jsx)(Be, {}),
                 }),
-                (0, t.jsx)(Ie, {
+                (0, t.jsx)(Ge, {
                   href: "https://twitter.com/steam",
                   children: (0, t.jsx)(We, {}),
                 }),
@@ -2006,26 +2008,26 @@
                 (0, t.jsxs)(Oe, {
                   gridArea: "steam",
                   children: [
-                    (0, t.jsx)(Ge, {
+                    (0, t.jsx)(Ie, {
                       children: Ae.Localize("#footer_link_header_steam"),
                     }),
-                    (0, t.jsx)(Ie, {
+                    (0, t.jsx)(Ge, {
                       href: he.TS.STORE_BASE_URL + "about/",
                       children: Ae.Localize("#footer_link_about_steam"),
                     }),
-                    (0, t.jsx)(Ie, {
+                    (0, t.jsx)(Ge, {
                       href: he.TS.STORE_BASE_URL + "subscriber_agreement/",
                       children: Ae.Localize("#footer_link_steam_ssa"),
                     }),
-                    (0, t.jsx)(Ie, {
+                    (0, t.jsx)(Ge, {
                       href: he.TS.PARTNER_BASE_URL,
                       children: Ae.Localize("#footer_link_steamworks"),
                     }),
-                    (0, t.jsx)(Ie, {
+                    (0, t.jsx)(Ge, {
                       href: he.TS.PARTNER_BASE_URL + "steamdirect",
                       children: Ae.Localize("#footer_link_steam_distribution"),
                     }),
-                    (0, t.jsx)(Ie, {
+                    (0, t.jsx)(Ge, {
                       href: he.TS.STORE_BASE_URL + "digitalgiftcards/",
                       children: Ae.Localize("#footer_link_gift_cards"),
                     }),
@@ -2034,22 +2036,22 @@
                 (0, t.jsxs)(Oe, {
                   gridArea: "valve",
                   children: [
-                    (0, t.jsx)(Ge, {
+                    (0, t.jsx)(Ie, {
                       children: Ae.Localize("#footer_link_header_valve"),
                     }),
-                    (0, t.jsx)(Ie, {
+                    (0, t.jsx)(Ge, {
                       href: "https://valvesoftware.com/about",
                       children: Ae.Localize("#footer_link_about_valve"),
                     }),
-                    (0, t.jsx)(Ie, {
+                    (0, t.jsx)(Ge, {
                       href: "https://valvesoftware.com/",
                       children: Ae.Localize("#footer_link_jobs"),
                     }),
-                    (0, t.jsx)(Ie, {
+                    (0, t.jsx)(Ge, {
                       href: he.TS.STORE_BASE_URL + "hardware/",
                       children: Ae.Localize("#footer_link_hardware"),
                     }),
-                    (0, t.jsx)(Ie, {
+                    (0, t.jsx)(Ge, {
                       href: he.TS.STORE_BASE_URL + "hardware_recycling/",
                       children: Ae.Localize("#footer_link_recycling"),
                     }),
@@ -2058,28 +2060,28 @@
                 (0, t.jsxs)(Oe, {
                   gridArea: "legal",
                   children: [
-                    (0, t.jsx)(Ge, {
+                    (0, t.jsx)(Ie, {
                       children: Ae.Localize("#footer_link_header_legal"),
                     }),
-                    (0, t.jsx)(Ie, {
+                    (0, t.jsx)(Ge, {
                       href: he.TS.STORE_BASE_URL + "privacy_agreement/",
                       children: Ae.Localize("#footer_link_privacy"),
                     }),
-                    (0, t.jsx)(Ie, {
+                    (0, t.jsx)(Ge, {
                       href: "https://help.steampowered.com/faqs/view/10BB-D27A-6378-4436",
                       children: Ae.Localize("#footer_link_accessibility"),
                     }),
-                    (0, t.jsx)(Ie, {
+                    (0, t.jsx)(Ge, {
                       href: he.TS.STORE_BASE_URL + "legal/",
                       children: Ae.Localize(
                         "#footer_link_notices_and_policies",
                       ),
                     }),
-                    (0, t.jsx)(Ie, {
+                    (0, t.jsx)(Ge, {
                       href: he.TS.STORE_BASE_URL + "account/cookiepreferences/",
                       children: Ae.Localize("#footer_link_cookies"),
                     }),
-                    (0, t.jsx)(Ie, {
+                    (0, t.jsx)(Ge, {
                       href: he.TS.STORE_BASE_URL + "steam_refunds/",
                       children: Ae.Localize("#footer_link_refunds"),
                     }),
@@ -2088,22 +2090,22 @@
                 (0, t.jsxs)(Oe, {
                   gridArea: "more",
                   children: [
-                    (0, t.jsx)(Ge, {
+                    (0, t.jsx)(Ie, {
                       children: Ae.Localize("#footer_link_header_more"),
                     }),
-                    (0, t.jsx)(Ie, {
+                    (0, t.jsx)(Ge, {
                       href: he.TS.STORE_BASE_URL + "about/",
                       children: Ae.Localize("#footer_link_get_steam"),
                     }),
-                    (0, t.jsx)(Ie, {
+                    (0, t.jsx)(Ge, {
                       href: he.TS.STORE_BASE_URL + "mobile/",
                       children: Ae.Localize("#footer_link_get_mobile_apps"),
                     }),
-                    (0, t.jsx)(Ie, {
+                    (0, t.jsx)(Ge, {
                       href: he.TS.HELP_BASE_URL,
                       children: Ae.Localize("#footer_link_get_support"),
                     }),
-                    (0, t.jsx)(Ie, {
+                    (0, t.jsx)(Ge, {
                       href: he.TS.STORE_BASE_URL + "account/",
                       children: Ae.Localize("#footer_link_my_account"),
                     }),

@@ -307,5 +307,8 @@
     "AppPage_RecommendationReason_FriendsOwned_Software": "<1>%1$s kaveri</1> omistaa jo tämän ohjelmiston:",
     "AppPage_RecommendationReason_FriendsOwned_Software_Plural": "<%1$s> kaveria</> omistaa jo tämän ohjelmiston:",
     "AppPage_RecommendationReason_FriendsOwned_Video": "<1>%1$s kaveri</1> omistaa jo tämän videon:",
-    "AppPage_RecommendationReason_FriendsOwned_Video_Plural": "<%1$s> kaveria</> omistaa jo tämän videon:"
+    "AppPage_RecommendationReason_FriendsOwned_Video_Plural": "<%1$s> kaveria</> omistaa jo tämän videon:",
+    "AppPage_PageSectionBanner_Workshop": "Steam Workshop",
+    "AppPage_PageSectionBanner_Follow": "Seuraa tätä peliä",
+    "AppPage_PageSectionBanner_MachineController": "Steam Machine ja Steam Controller"
 }

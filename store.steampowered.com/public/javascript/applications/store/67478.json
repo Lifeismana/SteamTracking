@@ -307,5 +307,8 @@
     "AppPage_RecommendationReason_FriendsOwned_Software": "<1>Přátelé (%1$s)</1> již vlastní tento software:",
     "AppPage_RecommendationReason_FriendsOwned_Software_Plural": "<1>Přátelé (%1$s)</1> již vlastní tento software:",
     "AppPage_RecommendationReason_FriendsOwned_Video": "<1>Přátelé (%1$s)</1> již vlastní toto video:",
-    "AppPage_RecommendationReason_FriendsOwned_Video_Plural": "<1>Přátelé (%1$s)</1> již vlastní toto video:"
+    "AppPage_RecommendationReason_FriendsOwned_Video_Plural": "<1>Přátelé (%1$s)</1> již vlastní toto video:",
+    "AppPage_PageSectionBanner_Workshop": "Workshop",
+    "AppPage_PageSectionBanner_Follow": "Sledovat tento produkt",
+    "AppPage_PageSectionBanner_MachineController": "Steam Machine a Steam Controller"
 }

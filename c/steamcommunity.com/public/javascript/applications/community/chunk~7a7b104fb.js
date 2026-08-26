@@ -1686,6 +1686,8 @@
       class _ extends _.Component {
         constructor(_) {
           super(_),
+            (this.m_elClickListener = null),
+            (this.m_elSettingsPanel = null),
             (this.m_elSubtitlesButton = _.createRef()),
             (this.m_elSubtitlesPanel = _.createRef()),
             (this.state = {
@@ -1694,6 +1696,7 @@
             });
         }
         OnVideoControlClick(_) {
+          var _;
           this.setState({
             bSettingsOpen: !this.state.bSettingsOpen,
           }),
@@ -1703,34 +1706,34 @@
             ]),
             (this.m_elClickListener =
               _.currentTarget.ownerDocument.defaultView),
-            this.m_elClickListener.addEventListener(
-              "mouseup",
-              this.OnMouseUp,
-              !0,
-            );
+            null === (_ = this.m_elClickListener) ||
+              void 0 === _ ||
+              _.addEventListener("mouseup", this.OnMouseUp, !0);
         }
         OnSubtitlesClick(_) {
+          var _, _, _;
           this.setState({
             bSubtitlesOpen: !this.state.bSubtitlesOpen,
           }),
             (this.m_SubtitlesButtonPos = [
-              this.m_elSubtitlesButton.current.offsetLeft,
-              this.m_elSubtitlesButton.current.offsetTop,
+              null === (_ = this.m_elSubtitlesButton.current) || void 0 === _
+                ? void 0
+                : _.offsetLeft,
+              null === (_ = this.m_elSubtitlesButton.current) || void 0 === _
+                ? void 0
+                : _.offsetTop,
             ]),
             (this.m_elClickListener =
               _.currentTarget.ownerDocument.defaultView),
-            this.m_elClickListener.addEventListener(
-              "mouseup",
-              this.OnMouseUp,
-              !0,
-            );
+            null === (_ = this.m_elClickListener) ||
+              void 0 === _ ||
+              _.addEventListener("mouseup", this.OnMouseUp, !0);
         }
         OnMouseUp(_) {
-          this.m_elClickListener.removeEventListener(
-            "mouseup",
-            this.OnMouseUp,
-            !0,
-          ),
+          var _;
+          null === (_ = this.m_elClickListener) ||
+            void 0 === _ ||
+            _.removeEventListener("mouseup", this.OnMouseUp, !0),
             (0, _._)(this.m_elSettingsPanel, _.target) ||
               this.setState({
                 bSettingsOpen: !1,
@@ -1757,7 +1760,7 @@
             _ = !1;
           const { video: _, actions: _ } = this.props;
           let _,
-            _,
+            _ = [],
             _ = 0,
             _ = (0, _.jsx)(
               "div",
@@ -2007,18 +2010,17 @@
             (0, _._)(this);
         }
         OnMouseDown(_) {
+          var _, _;
           let _ = _.currentTarget;
           (this.m_elSlider = _),
             (this.m_nVolumeStartOfDrag = this.props.video.GetVolume()),
             this.SetVolumeWithCoord(_, _.clientX),
-            _.ownerDocument.defaultView.addEventListener(
-              "mousemove",
-              this.OnMouseMove,
-            ),
-            _.ownerDocument.defaultView.addEventListener(
-              "mouseup",
-              this.OnMouseUp,
-            ),
+            null === (_ = _.ownerDocument.defaultView) ||
+              void 0 === _ ||
+              _.addEventListener("mousemove", this.OnMouseMove),
+            null === (_ = _.ownerDocument.defaultView) ||
+              void 0 === _ ||
+              __webpack_require__.addEventListener("mouseup", this.OnMouseUp),
             this.props.onDrag(!0);
         }
         OnMouseMove(_) {
@@ -2026,18 +2028,20 @@
             this.SetVolumeWithCoord(this.m_elSlider, _.clientX);
         }
         OnMouseUp(_) {
+          var _, _;
           if (!this.m_elSlider) return;
           this.SetVolumeWithCoord(this.m_elSlider, _.clientX);
           let _ = this.props.video;
           _.IsMuted() && _.SetVolume(this.m_nVolumeStartOfDrag),
-            this.m_elSlider.ownerDocument.defaultView.removeEventListener(
-              "mousemove",
-              this.OnMouseMove,
-            ),
-            this.m_elSlider.ownerDocument.defaultView.removeEventListener(
-              "mouseup",
-              this.OnMouseUp,
-            ),
+            null === (_ = this.m_elSlider.ownerDocument.defaultView) ||
+              void 0 === _ ||
+              _.removeEventListener("mousemove", this.OnMouseMove),
+            null === (_ = this.m_elSlider.ownerDocument.defaultView) ||
+              void 0 === _ ||
+              __webpack_require__.removeEventListener(
+                "mouseup",
+                this.OnMouseUp,
+              ),
             (this.m_nVolumeStartOfDrag = 0),
             (this.m_elSlider = null),
             this.props.onDrag(!1);
@@ -2137,25 +2141,27 @@
               !this.state.video.IsPaused() &&
               this.m_schUnmountControls.Schedule(2e3, this.UmountControls),
             this.props.steamIDBroadcast !== _.steamIDBroadcast &&
-              this.BindVideoRef(this.m_elVideo),
-            !this.props.nAppIDVOD ||
-              (void 0 !== _.strInitialCapsuleImageUrl &&
-                _.nAppIDVOD == this.props.nAppIDVOD) ||
-              _._.Get()
-                .QueueAppRequest(this.props.nAppIDVOD, {
-                  include_assets: !0,
-                  include_trailers: !0,
-                })
-                .then(() => {
-                  const _ = _._.Get().GetApp(this.props.nAppIDVOD),
-                    _ =
-                      (null == _
-                        ? void 0
-                        : _.GetAssets().GetMainCapsuleURL()) || "";
-                  this.setState({
-                    strInitialCapsuleImageUrl: _,
-                  });
+              this.BindVideoRef(this.m_elVideo);
+          const _ = this.props.nAppIDVOD;
+          !_ ||
+            (void 0 !== _.strInitialCapsuleImageUrl && _.nAppIDVOD == _) ||
+            _._.Get()
+              .QueueAppRequest(_, {
+                include_assets: !0,
+                include_trailers: !0,
+              })
+              .then(() => {
+                var _;
+                const _ = _._.Get().GetApp(_),
+                  _ =
+                    (null === (_ = null == _ ? void 0 : _.GetAssets()) ||
+                    void 0 === _
+                      ? void 0
+                      : _.GetMainCapsuleURL()) || "";
+                this.setState({
+                  strInitialCapsuleImageUrl: _,
                 });
+              });
         }
         componentWillUnmount() {
           this.m_listeners.Unregister(),
@@ -2190,7 +2196,7 @@
         }
         BindVideoRef(_) {
           var _, _;
-          let _;
+          let _ = null;
           this.StopVideo(),
             this.props.steamIDBroadcast
               ? _ &&
@@ -2198,7 +2204,7 @@
                   _,
                   this.props.steamIDBroadcast,
                   this.props.watchLocation,
-                  this.props.bWebRTC,
+                  Boolean(this.props.bWebRTC),
                 ))
               : this.props.broadcastClipID
                 ? _ &&
@@ -2231,19 +2237,26 @@
             (this.m_elVideo = _);
         }
         OnMouseDown(_) {
+          var _;
           (this.m_bMouseDown = !0),
             (this.m_elMouseDown = _.currentTarget),
-            this.m_elMouseDown.ownerDocument.defaultView.addEventListener(
-              "mouseup",
-              this.OnMouseUp,
-            );
+            null === (_ = this.m_elMouseDown.ownerDocument.defaultView) ||
+              void 0 === _ ||
+              _.addEventListener("mouseup", this.OnMouseUp);
         }
         OnMouseUp(_) {
+          var _, _;
           (this.m_bMouseDown = !1),
-            this.m_elMouseDown.ownerDocument.defaultView.removeEventListener(
-              "mouseup",
-              this.OnMouseUp,
-            ),
+            null ===
+              (_ =
+                null === (_ = this.m_elMouseDown) || void 0 === _
+                  ? void 0
+                  : _.ownerDocument.defaultView) ||
+              void 0 === _ ||
+              __webpack_require__.removeEventListener(
+                "mouseup",
+                this.OnMouseUp,
+              ),
             this.m_schHideControls.Schedule(3200, this.HideControls);
         }
         OnMouseMove(_) {
@@ -2270,12 +2283,13 @@
             });
         }
         UmountControls() {
-          this.setState((_) => {
-            if (!_.bControlsVisible && _.bMountControls)
-              return {
-                bMountControls: !1,
-              };
-          });
+          this.setState((_) =>
+            !_.bControlsVisible && _.bMountControls
+              ? {
+                  bMountControls: !1,
+                }
+              : null,
+          );
         }
         ShowStatsView() {
           let _ = this.state.video;
@@ -2359,10 +2373,14 @@
             _.SetStatsViewIsVisible(!1));
         }
         OnToggleFullscreen() {
+          var _;
           this.m_elBroadcastPlayer &&
             ((0, _._)(this.m_elBroadcastPlayer)
               ? (0, _._)(this.m_elBroadcastPlayer)
-              : (0, _._)(this.m_elBroadcastPlayer, this.m_elVideo));
+              : (0, _._)(
+                  this.m_elBroadcastPlayer,
+                  null !== (_ = this.m_elVideo) && void 0 !== _ ? _ : void 0,
+                ));
         }
         OnFullscreenChange(_) {
           if (!this.m_elBroadcastPlayer) return;
@@ -2387,7 +2405,8 @@
             _ = Boolean(_ && _.IsReplay()),
             _ = this.state.bMountControls,
             _ = this.state.bControlsVisible || _,
-            _ = _ && _.GetUserInputNeeded(),
+            _ = Boolean(_ && _.GetUserInputNeeded()),
+            _ = null == _ ? void 0 : _.GetDASHPlayerStats(),
             _ =
               (null == _ ? void 0 : _.IsBroadcastVOD()) &&
               _ &&
@@ -2446,6 +2465,7 @@
                 }),
               _ && (0, _.jsx)(_, {}),
               this.props.showVideoBackgroundBlur &&
+                this.m_elVideo &&
                 (0, _.jsx)(_, {
                   className: "videoBlur",
                   elementRef: this.m_elVideo,
@@ -2468,7 +2488,7 @@
               this.props.linkRegions
                 ? (0, _.jsx)(_, {
                     linkRegions: this.props.linkRegions,
-                    editMode: this.props.editMode,
+                    editMode: Boolean(this.props.editMode),
                     onSaveLinkRegions: this.props.onSaveLinkRegions,
                   })
                 : null,
@@ -2483,26 +2503,29 @@
                   src: this.state.strInitialCapsuleImageUrl,
                 }),
               _ &&
+                _ &&
                 (0, _.jsx)(_, {
                   video: _,
                   actions: _,
                   onOpenLinkInNewWindow: this.props.onOpenLinkInNewWindow,
                   onShowStats: this.ToggleStatsView,
-                  bIncludeClipEditor: this.props.bIncludeClipEditor,
+                  bIncludeClipEditor: Boolean(this.props.bIncludeClipEditor),
                 }),
               _ &&
                 (0, _.jsx)(_, {
                   onClick: this.props.onRequestClose,
                 }),
               _ &&
+                _ &&
                 (0, _.jsx)(_, {
-                  stats: _.GetDASHPlayerStats(),
+                  stats: _,
                   closeStats: this.CloseStats,
                 }),
               (0, _.jsx)(_, {
                 video: _,
               }),
               _ &&
+                _ &&
                 (0, _.jsx)(_, {
                   video: _,
                 }),
@@ -2658,7 +2681,7 @@
               "videoControlButton videoControlGoLive" +
               (_ ? " isLiveEdge" : ""),
             onClick: _
-              ? null
+              ? void 0
               : (_) => {
                   _.video.JumpToLiveEdge();
                 },
@@ -2709,9 +2732,10 @@
           return void 0 !== this.GetPreviousMarkerTime();
         }
         GetPreviousMarkerTime() {
-          if (!this.video.has_markers) return;
-          let _ = this.video.GetTimelineMarkers(),
-            _ = this.video.GetPlaybackTime();
+          const _ = this.video;
+          if (!(null == _ ? void 0 : _.has_markers)) return;
+          let _ = _.GetTimelineMarkers(),
+            _ = _.GetPlaybackTime();
           for (let _ = _.length - 1; _ >= 0; _--)
             if (!(_[_].nTime >= _)) return _[_].nTime;
         }
@@ -2752,9 +2776,10 @@
           return void 0 !== this.GetNextMarkerTime();
         }
         GetNextMarkerTime() {
-          if (!this.video.has_markers) return;
-          let _ = this.video.GetTimelineMarkers(),
-            _ = this.video.GetPlaybackTime();
+          const _ = this.video;
+          if (!(null == _ ? void 0 : _.has_markers)) return;
+          let _ = _.GetTimelineMarkers(),
+            _ = _.GetPlaybackTime();
           for (let _ = 0; _ < _.length; _++)
             if (!(_[_].nTime <= _)) return _[_].nTime;
         }
@@ -2851,11 +2876,10 @@
             });
         }
         OnMouseDown(_, _) {
-          if (this.m_elSlider) {
-            _.persist(),
-              (this.m_rectSlider =
-                this.m_elSlider.current &&
-                this.m_elSlider.current.getBoundingClientRect());
+          var _, _;
+          const _ = this.m_elSlider.current;
+          if (_) {
+            _.persist(), (this.m_rectSlider = _.getBoundingClientRect());
             let _ = {};
             "start" === _
               ? ((_ = {
@@ -2871,20 +2895,22 @@
                     bGrabberMouseDown: !0,
                   }),
               this.setState(_, () => this.AdjustSliderForClientX(_.clientX)),
-              this.m_elSlider.current.ownerDocument.defaultView.addEventListener(
-                "mousemove",
-                this.OnMouseMove,
-              ),
-              this.m_elSlider.current.ownerDocument.defaultView.addEventListener(
-                "mouseup",
-                this.OnMouseUp,
-              );
+              null === (_ = _.ownerDocument.defaultView) ||
+                void 0 === _ ||
+                __webpack_require__.addEventListener(
+                  "mousemove",
+                  this.OnMouseMove,
+                ),
+              null === (_ = _.ownerDocument.defaultView) ||
+                void 0 === _ ||
+                _.addEventListener("mouseup", this.OnMouseUp);
           }
         }
         OnMouseMove(_) {
           this.AdjustSliderForClientX(_.clientX);
         }
         OnMouseUp(_) {
+          var _, _;
           this.state.bStartMouseDown
             ? this.setState({
                 bStartMouseDown: !1,
@@ -2899,14 +2925,17 @@
                   nGrabberMouseDownTime: 0,
                 })),
             this.m_elSlider.current &&
-              (this.m_elSlider.current.ownerDocument.defaultView.removeEventListener(
-                "mousemove",
-                this.OnMouseMove,
-              ),
-              this.m_elSlider.current.ownerDocument.defaultView.removeEventListener(
-                "mouseup",
-                this.OnMouseUp,
-              ));
+              (null ===
+                (_ = this.m_elSlider.current.ownerDocument.defaultView) ||
+                void 0 === _ ||
+                _.removeEventListener("mousemove", this.OnMouseMove),
+              null ===
+                (_ = this.m_elSlider.current.ownerDocument.defaultView) ||
+                void 0 === _ ||
+                __webpack_require__.removeEventListener(
+                  "mouseup",
+                  this.OnMouseUp,
+                ));
         }
         OnKeyDown(_) {
           _.keyCode == _._
@@ -2915,10 +2944,14 @@
               (this.props.video.JumpTime(15), _.preventDefault());
         }
         AdjustSliderForClientX(_) {
+          const _ = this.m_rectSlider;
+          if (!_) return;
           let _ = this.props.video,
-            _ = _.GetTimelineStartPos(),
-            _ = _.GetTimelineStartPos() + _.GetTimelineDuration(),
-            _ = _.GetTimeAtMousePosition(_, this.m_rectSlider, _, _);
+            _ = __webpack_require__.GetTimelineStartPos(),
+            _ =
+              __webpack_require__.GetTimelineStartPos() +
+              __webpack_require__.GetTimelineDuration(),
+            _ = __webpack_require__.GetTimeAtMousePosition(_, _, _, _);
           if (this.state.bStartMouseDown) {
             const _ = _._(_, _, _.m_editorEndTime - 5);
             _.m_editorStartTime = _;
@@ -2940,13 +2973,23 @@
           });
         }
         AdjustHoverForClientX(_) {
+          var _;
           let _ = this.props.video,
-            _ = _.GetTimelineStartPos(),
-            _ = _.GetTimelineStartPos() + _.GetTimelineDuration();
+            _ = __webpack_require__.GetTimelineStartPos(),
+            _ =
+              __webpack_require__.GetTimelineStartPos() +
+              __webpack_require__.GetTimelineDuration();
           this.m_rectSlider =
-            this.m_elSlider.current &&
-            this.m_elSlider.current.getBoundingClientRect();
-          _.GetTimeAtMousePosition(_, this.m_rectSlider, _, _);
+            null === (_ = this.m_elSlider.current) || void 0 === _
+              ? void 0
+              : _.getBoundingClientRect();
+          this.m_rectSlider &&
+            __webpack_require__.GetTimeAtMousePosition(
+              _,
+              this.m_rectSlider,
+              _,
+              _,
+            );
         }
         OnSegmentClick(_) {
           this.props.video.Seek(_);
@@ -2962,6 +3005,7 @@
           });
         }
         render() {
+          var _;
           let _ = this.props.video,
             _ = this.state.bGrabberMouseDown,
             _ = _.GetPercentOffsetFromTime(
@@ -2985,7 +3029,9 @@
             ? ((_.left = _), (_.width = _), (_.width = _), (_.width = _))
             : ((_.left = _), (_.width = _), (_.width = _));
           let _ = (0, _._)(_.GetPlaybackTime()),
-            _ = (0, _._)(this.state.nHoverValue),
+            _ = (0, _._)(
+              null !== (_ = this.state.nHoverValue) && void 0 !== _ ? _ : 0,
+            ),
             _ = "STV_timelineContainer";
           this.state.bGrabberMouseDown && (_ += " grabberDown"),
             _.IsTimelineMapActive() && (_ += " minimapActive");
@@ -3188,12 +3234,13 @@
           this.state.info && _._.StopInfo(this.state.info);
         }
         RenderStreamSwitcher() {
-          const _ = this.props.steamID;
-          return _._.stream[_]
+          const _ = this.props.steamID,
+            _ = this.props.onLocalStreamChange;
+          return _ && _._.stream[_]
             ? (0, _.jsx)(_, {
                 value: _,
                 options: _._.stream,
-                onChange: this.props.onLocalStreamChange,
+                onChange: _,
               })
             : null;
         }
@@ -3261,8 +3308,14 @@
                     (0, _.jsx)("div", {
                       className: "Actions",
                       children: (0, _.jsx)("div", {
-                        onClick: (_) =>
-                          this.props.onOpenLinkInNewWindow(_, _._.link),
+                        onClick: (_) => {
+                          var _, _;
+                          return null ===
+                            (_ = (_ = this.props).onOpenLinkInNewWindow) ||
+                            void 0 === _
+                            ? void 0
+                            : __webpack_require__.call(_, _, _._.link);
+                        },
                         className: "BroadcastLink",
                         children: _._.linkName,
                       }),
@@ -3371,6 +3424,7 @@
             });
         }
         OnSaveRegions() {
+          var _, _;
           let _;
           _ = {
             links: [],
@@ -3388,7 +3442,9 @@
             }),
               _.links.push(_);
           }
-          this.props.onSaveLinkRegions(_);
+          null === (_ = (_ = this.props).onSaveLinkRegions) ||
+            void 0 === _ ||
+            _.call(_, _);
         }
         async DeleteRegion(_) {
           this.state.sizableRegion.splice(_, 1),

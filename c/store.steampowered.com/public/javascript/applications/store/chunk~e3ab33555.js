@@ -65,30 +65,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        EventTimeSection: "_3HyTVTASSmLacvaM964sgu",
-        EventTimeTitle: "_2lG5hFYhu9PGPn6RoFeQOL",
-        EventVisibilityItem: "_1she-lvNiCP3ASjTnl4q7x",
-        EventEditorInputPaneContainer: "_1fCy4cz5Hyj9wDivcVseuc",
-        TimeWidth: "_3JGsBe8Ou5QGqfihv0OPed",
-        EventPublishTimeCtn: "_2QIVvn2p9gUwsAlifi-nkM",
-        DateWidth: "_2P2kw0vHZogg7Ny7cAjQBo",
-        PacificTimeHint: "_18FxDrpsfO5Tt8EFui49hV",
-        TimeZone: "-x3Rw6W2fJfWRMs7vKr1I",
-        ClearButton: "TzhaDn0jN2ILks403xqXQ",
-        InputBorder: "_1_H1sN2GVTzxSaz55gv03s",
-        TimeBlock: "_2xLBsAMYVDoygyWbl2YIzI",
-        TimeRowContainer: "BWmgg29ZeDbO6oj7Z1U7T",
-        TimeRowDropDown: "_3ECiyuGLUqPzuS1hKCdfDm",
-        EndDateAmountCtn: "_1BIlZEGSO_4tw5Lmc1Kkbf",
-        EndRound: "jwuNowbLB28M6nkqFkF_C",
-        VisibilityItemList: "_3B0QM3cOEqER2AD2Y85NFy",
-        VisibilityItems: "_1WleIEEiF-9nJ57tLWkRmS",
-        EventEditorVisibilityCtn: "_4gWwydbAbp2t1NCeW9LLV",
-        DateErrorCtn: "_1Ao_g72kBAdoOo0lGUG7Mr",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         DashboardView: "_1QwMyGKe9F8g1QnNoMz1JP",
         HeaderCtn: "_3KXER7qT57ii-dLNJO926C",
         TotalsCtn: "FQKvUJASJ1JVJ28HSbIt-",
@@ -110,10 +86,160 @@
         DisabledStats: "_2Zp-jzTV09Qjj3uTxcFLN3",
       };
     },
-    chunkid: (module) => {
-      module.exports = {
-        DialogCtn: "e7i0Hs6j09gCdPXXjl7Lk",
-      };
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      _.Component;
+      _.Component;
+      var _ = function (_, _) {
+          return "function" == typeof _ ? _(_) : _;
+        },
+        _ = function (_, _) {
+          return "string" == typeof _ ? (0, _._)(_, null, null, _) : _;
+        },
+        _ = function (_) {
+          return _;
+        },
+        _ = _.forwardRef;
+      void 0 === _ && (_ = _);
+      var _ = _(function (_, _) {
+        var _ = _.innerRef,
+          _ = _.navigate,
+          _ = _.onClick,
+          _ = (0, _._)(_, ["innerRef", "navigate", "onClick"]),
+          _ = _.target,
+          _ = (0, _._)({}, _, {
+            onClick: function (_) {
+              try {
+                _ && _(_);
+              } catch (_) {
+                throw (_.preventDefault(), _);
+              }
+              _.defaultPrevented ||
+                0 !== _.button ||
+                (_ && "_self" !== _) ||
+                (function (_) {
+                  return !!(_.metaKey || _.altKey || _.ctrlKey || _.shiftKey);
+                })(_) ||
+                (_.preventDefault(), _());
+            },
+          });
+        return (_.ref = (_ !== _ && _) || _), _.createElement("a", _);
+      });
+      var _ = _(function (_, _) {
+          var _ = _.component,
+            _ = void 0 === _ ? _ : _,
+            _ = _.replace,
+            _ = _._,
+            _ = _.innerRef,
+            _ = (0, _._)(_, ["component", "replace", "to", "innerRef"]);
+          return _.createElement(_._.Consumer, null, function (_) {
+            _ || (0, _._)(!1);
+            var _ = _.history,
+              _ = _(_(_, _.location), _.location),
+              _ = _ ? __webpack_require__.createHref(_) : "",
+              _ = (0, _._)({}, _, {
+                href: _,
+                navigate: function () {
+                  var _ = _(_, _.location),
+                    _ = (0, _._)(_.location) === (0, _._)(_(_));
+                  (_ || _ ? _.replace : _.push)(_);
+                },
+              });
+            return (
+              _ !== _ ? (_.ref = _ || _) : (_.innerRef = _),
+              _.createElement(_, _)
+            );
+          });
+        }),
+        _ = function (_) {
+          return _;
+        },
+        _ = _.forwardRef;
+      void 0 === _ && (_ = _);
+      var _ = _(function (_, _) {
+        var _ = _["aria-current"],
+          _ = void 0 === _ ? "page" : _,
+          _ = _.activeClassName,
+          _ = void 0 === _ ? "active" : _,
+          _ = _.activeStyle,
+          _ = _.className,
+          _ = _.exact,
+          _ = _.isActive,
+          _ = _.location,
+          _ = _.sensitive,
+          _ = _.strict,
+          _ = _.style,
+          _ = _._,
+          _ = _.innerRef,
+          _ = (0, _._)(_, [
+            "aria-current",
+            "activeClassName",
+            "activeStyle",
+            "className",
+            "exact",
+            "isActive",
+            "location",
+            "sensitive",
+            "strict",
+            "style",
+            "to",
+            "innerRef",
+          ]);
+        return _.createElement(_._.Consumer, null, function (_) {
+          _ || (0, _._)(!1);
+          var _ = _ || _.location,
+            _ = _(_(_, _), _),
+            _ = _.pathname,
+            _ = _ && _.replace(/([.+*?=^!:${}()[\]|/\\])/g, "\\$1"),
+            _ = _
+              ? (0, _._)(_.pathname, {
+                  path: _,
+                  exact: _,
+                  sensitive: _,
+                  strict: _,
+                })
+              : null,
+            _ = !!(_ ? _(_, _) : _),
+            _ = "function" == typeof _ ? _(_) : _,
+            _ = "function" == typeof _ ? _(_) : _;
+          _ &&
+            ((_ = (function () {
+              for (
+                var _ = arguments.length, _ = new Array(_), _ = 0;
+                _ < _;
+                _++
+              )
+                _[_] = arguments[_];
+              return _.filter(function (_) {
+                return _;
+              }).join(" ");
+            })(_, _)),
+            (_ = (0, _._)({}, _, _)));
+          var _ = (0, _._)(
+            {
+              "aria-current": (_ && _) || null,
+              className: _,
+              style: _,
+              _: _,
+            },
+            _,
+          );
+          return (
+            _ !== _ ? (_.ref = _ || _) : (_.innerRef = _), _.createElement(_, _)
+          );
+        });
+      });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -196,10 +322,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -416,270 +539,53 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      class _ {
-        static ParseCSVFile(_, _) {
-          return new Promise((_, _) => {
-            const _ = {
-              header: !0,
-              skipEmptyLines: "greedy",
-              complete: _,
-              error: (_) =>
-                _({
-                  errors: [_],
-                }),
-              transformHeader: _,
-            };
-            _().parse(_, _);
-          });
-        }
-        static ReadFile(_) {
-          return new Promise((_, _) => {
-            const _ = new FileReader();
-            (_.onload = (_) => _(_.result)), _.readAsText(_);
-          });
-        }
-        static WriteFile(_, _) {
-          let _ = document.createElement("a");
-          if (navigator.msSaveBlob) navigator.msSaveBlob(_, _);
-          else {
-            const _ = window.URL.createObjectURL(_);
-            _.href = _;
-          }
-          __webpack_require__.setAttribute("download", _),
-            __webpack_require__.click();
-          try {
-            document.removeChild(_);
-          } catch (_) {}
-        }
-        static WriteCSVToFile(_, _, _, _) {
-          const _ = _
-              ? _().unparse(
-                  {
-                    fields: _,
-                    data: _,
-                  },
-                  {
-                    header: !0,
-                  },
-                )
-              : _().unparse(_, {
-                  header: !0,
-                }),
-            _ = 1 == _ ? ["\ufeff" + _] : [_];
-          _.WriteFile(
-            new Blob(_, {
-              type: "text/csv:charset=utf-8;",
-            }),
-            _,
-          );
-        }
-        static m_DummyValueForQuestionHack = 0;
-        static WriteXMLToFile(_, _) {
-          const _ = () =>
-            this.m_DummyValueForQuestionHack ? "never returned" : "?";
-          let _ =
-            "<" +
-            __webpack_require__() +
-            'xml version="1.0" encoding="UTF-8" ' +
-            __webpack_require__() +
-            ">\n";
-          (_ += new XMLSerializer().serializeToString(_)),
-            _.WriteFile(
-              new Blob([_], {
-                type: "application/xml:charset=utf-8;",
-              }),
-              _,
-            );
-        }
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      const _ = {
-        include_basic_info: !0,
-      };
+        _ = __webpack_require__("chunkid");
       function _(_) {
-        const { clanInfo: _, closeModal: _ } = _,
-          [_] = (0, _._)(_.appid, _),
-          [_, _] = _.useState(!0),
-          [_, _] = _.useState(!0),
-          _ = 1063339200,
-          _ = _._.GetTimeNowWithOverride(),
-          [_, _] = _.useState(_ - _._.PerMonth),
-          [_, _] = _.useState(_),
-          [_, _] = _.useState(-1),
-          _ = _ >= 0;
-        return (0, _.jsx)(_._, {
-          strTitle: (0, _._)("#EventDashboard_Stats_title"),
-          strDescription: (0, _._)("#EventDashboard_Stats_desc"),
-          closeModal: _,
-          bDisableBackgroundDismiss: !0,
-          bOKDisabled: _,
-          onOK: () =>
-            (async function (_, _, _, _, _) {
-              const _ = new Array(),
-                _ = _().CancelToken.source();
-              let _ = 0;
-              _(_);
-              const _ = 100;
-              let _,
-                _ = 0,
-                _ = new Array();
-              const _ = (0, _.sfN)(_._.LANGUAGE);
-              do {
-                if (
-                  ((_ += 1),
-                  (_ = await _._.LoadAdjacentPartnerEvents(
-                    _,
-                    _.clanSteamID,
-                    void 0,
-                    0,
-                    _,
-                    {
-                      rtime_oldestevent: _,
-                      only_summaries: !0,
-                    },
-                    _,
-                  )),
-                  _?.length > 0)
-                ) {
-                  (_ += _.length), _(_), (_ = _[_.length - 1].GID);
-                  const _ = _.filter(
-                    (_) => _.startTime <= _ && _.BIsVisibleEvent(),
-                  ).map((_) => _.GID);
-                  _.length > 0 &&
-                    (await _.LoadStatsForEvents(_.clanSteamID, _, _),
-                    (_ += _.length),
-                    _(_),
-                    __webpack_require__.forEach((_) => {
-                      const _ = _.GetStatsFor(_.clanSteamID, _),
-                        _ = _._.GetClanEventModel(_),
-                        _ = _.GetStartTimeAndDateUnixSeconds(),
-                        _ = _.GetEndTimeAndDateUnixSeconds();
-                      _.push({
-                        appid: _.appid,
-                        app_name: _?.GetName() || "",
-                        event_name: _.GetNameWithFallback(_),
-                        event_type: _.GetEventTypeAsString(),
-                        event_start_date: (0, _._)(_) + " @ " + (0, _._)(_),
-                        event_end_date: (0, _._)(_) + " @ " + (0, _._)(_),
-                        ..._.m_stats,
-                        event_gid: "'" + _,
-                      });
-                    }));
-                }
-              } while (_.length == _ && _ < 100);
-              return (
-                _.WriteCSVToFile(
-                  _,
-                  "event_stats_" +
-                    _.group_name.toLocaleLowerCase().replace(/\s/g, "_") +
-                    ".csv",
-                ),
-                !0
-              );
-            })(_, _, _ ? _ : _, _ ? Number.MAX_SAFE_INTEGER : _, _).then(() =>
-              __webpack_require__(),
-            ),
-          children: Boolean(_.appid && !_)
-            ? (0, _.jsx)(_._, {
-                string: (0, _._)("#Loading"),
-                position: "center",
-                size: "medium",
-              })
-            : (0, _.jsxs)("div", {
-                className: _().DialogCtn,
-                children: [
-                  (0, _.jsx)("div", {
-                    className: "DialogLabel",
-                    children: (0, _._)("#EventDashboard_Stats_Oldest_Title"),
-                  }),
-                  (0, _.jsxs)("div", {
-                    className: "_DialogInputContainer _DialogLayout",
-                    children: [
-                      (0, _.jsx)(_._, {
-                        label: (0, _._)("#EventDashboard_Stats_Oldest"),
-                        onChange: _,
-                        checked: _,
-                        disabled: _,
-                      }),
-                      !_ &&
-                        (0, _.jsxs)("div", {
-                          children: [
-                            (0, _._)("#EventDashboard_Stats_Oldest_Override"),
-                            (0, _.jsx)(_._, {
-                              nEarliestTime: _,
-                              nLatestTime: _ ? void 0 : _,
-                              bShowTimeZone: !0,
-                              fnGetTimeToUpdate: () => _,
-                              fnSetTimeToUpdate: _,
-                              disabled: _,
-                            }),
-                          ],
-                        }),
-                    ],
-                  }),
-                  (0, _.jsx)("div", {
-                    className: "DialogLabel",
-                    children: (0, _._)("#EventDashboard_Stats_Newest_Title"),
-                  }),
-                  (0, _.jsxs)("div", {
-                    className: "_DialogInputContainer _DialogLayout",
-                    children: [
-                      (0, _.jsx)(_._, {
-                        label: (0, _._)("#EventDashboard_Stats_Newest"),
-                        onChange: _,
-                        checked: _,
-                        disabled: _,
-                      }),
-                      !_ &&
-                        (0, _.jsxs)("div", {
-                          children: [
-                            (0, _._)("#EventDashboard_Stats_Newest_Override"),
-                            (0, _.jsx)(_._, {
-                              nEarliestTime: _ ? _ : _,
-                              bShowTimeZone: !0,
-                              fnGetTimeToUpdate: () => _,
-                              fnSetTimeToUpdate: _,
-                              disabled: _,
-                            }),
-                          ],
-                        }),
-                    ],
-                  }),
-                  _ &&
-                    (0, _.jsx)(_._, {
-                      position: "center",
-                      size: "medium",
-                      string: (0, _._)("#EventDashboard_Stats_Progress", _),
-                    }),
-                ],
+        const { appid: _, creatorHome: _ } = _;
+        return (0, _.jsx)("div", {
+          className: _().AppSummaryCtn,
+          children: (0, _.jsxs)("div", {
+            className: _().EventBodyPosition,
+            children: [
+              _
+                ? (0, _.jsx)(_, {
+                    appid: _,
+                  })
+                : null,
+              _,
+            ],
+          }),
+        });
+      }
+      function _(_) {
+        const { appid: _ } = _,
+          { data: _ } = (0, _._)({
+            appid: _,
+          });
+        if (!_) return null;
+        const _ = (0, _._)(_.type ?? _._._);
+        return (0, _.jsxs)("div", {
+          className: _().AppSummaryWidgetTitleCtn,
+          children: [
+            (0, _.jsx)("span", {
+              className: _().Title,
+              children: (0, _._)("#CreatorHome_ThisGame"),
+            }),
+            (0, _.jsx)("div", {
+              className: (0, _._)(
+                _().AppSummaryWidgetCtn,
+                "AppSummaryWidgetCtn",
+              ),
+              children: (0, _.jsx)(_._, {
+                _: _,
+                type: _,
+                bPreferAssetWithoutOverride: !1,
               }),
+            }),
+          ],
         });
       }
       var _ = __webpack_require__("chunkid"),
@@ -689,383 +595,569 @@
       function _(_) {
         const {
             summary: _,
-            clanSteamID: _,
             bEventIsInModerationQueue: _,
             bIsAllowedInLibrary: _,
             bCompact: _,
+            bExpanded: _,
+            header: _,
           } = _,
-          _ = _.total_read + _.total_showm,
-          [_] = (0, _._)("expanded", !1),
-          [_, _] = _.useState(!!_ || _);
-        if (0 == _) return null;
-        const _ = _._.GetClanInfoByClanAccountID(
-          __webpack_require__.GetAccountID(),
-        );
-        return (0, _.jsxs)("div", {
-          className: (0, _._)(_ ? _.EventDetailView : _.DashboardView),
-          children: [
-            (0, _.jsxs)("div", {
-              className: (0, _._)(_.HeaderCtn),
+          {
+            total_showm: _ = 0,
+            total_read: _ = 0,
+            library_overview_shown: _ = 0,
+            library_overview_read: _ = 0,
+            app_details_spotlight_shown: _ = 0,
+            app_details_spotlight_read: _ = 0,
+            app_details_activity_shown: _ = 0,
+            app_details_activity_read: _ = 0,
+            store_app_page_shown: _ = 0,
+            store_app_page_read: _ = 0,
+            community_hub_shown: _ = 0,
+            community_hub_read: _ = 0,
+            news_hub_shown: _ = 0,
+            news_hub_read: _ = 0,
+          } = _;
+        return _ + _ == 0
+          ? null
+          : (0, _.jsxs)("div", {
+              className: (0, _._)(_ ? _.EventDetailView : _.DashboardView),
               children: [
-                !_ &&
-                  (0, _.jsxs)("div", {
-                    className: _.StatsCtnTitle,
-                    children: [
-                      (0, _.jsxs)("div", {
-                        className: _.StatTitle,
-                        children: [
-                          (0, _._)("#EventDashBoard_SummaryStats_Title"),
-                          (0, _.jsx)(_._, {
-                            tooltip: (0, _._)(
-                              "#EventDashBoard_SummaryStats_Desc",
-                            ),
-                          }),
-                        ],
-                      }),
-                      (0, _.jsxs)("div", {
-                        className: _.StatsActionRow,
-                        children: [
-                          (0, _.jsx)(_._, {
-                            onClick: (_) =>
-                              (0, _._)(
-                                _,
-                                `${_._.PARTNER_BASE_URL}/doc/marketing/event_tools/stats`,
-                              ),
-                            children: (0, _._)(
-                              "#EventDashBoard_SummaryStats_AboutStats",
-                            ),
-                          }),
-                          (0, _.jsx)(_._, {
-                            onClick: (_) =>
-                              (0, _._)(
-                                (0, _.jsx)(_, {
-                                  clanInfo: _,
-                                }),
-                                (0, _._)(_),
-                              ),
-                            children: (0, _._)(
-                              "#EventDashBoard_SummaryStats_Export",
-                            ),
-                          }),
-                        ],
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _.StatsActionRow,
-                        children: (0, _.jsx)(_._, {
-                          onClick: () => _(!_),
-                          children: (0, _._)(
-                            "#EventDashBoard_SummaryStats_Details",
-                          ),
-                        }),
-                      }),
-                    ],
-                  }),
                 (0, _.jsxs)("div", {
-                  className: _.TotalsCtn,
+                  className: (0, _._)(_.HeaderCtn),
                   children: [
+                    _,
                     (0, _.jsxs)("div", {
-                      className: _.HeaderStat,
+                      className: _.TotalsCtn,
                       children: [
-                        (0, _.jsx)("span", {
-                          className: _.StatDescription,
-                          children: (0, _._)(
-                            "#EventDashBoard_SummaryStats_TotalImpressions",
-                          ),
+                        (0, _.jsxs)("div", {
+                          className: _.HeaderStat,
+                          children: [
+                            (0, _.jsx)("span", {
+                              className: _.StatDescription,
+                              children: (0, _._)(
+                                "#EventDashBoard_SummaryStats_TotalImpressions",
+                              ),
+                            }),
+                            (0, _.jsx)("span", {
+                              className: _.StatFigure,
+                              children: (0, _._)(_),
+                            }),
+                          ],
                         }),
-                        (0, _.jsx)("span", {
-                          className: _.StatFigure,
-                          children: (0, _._)(_.total_showm),
-                        }),
-                      ],
-                    }),
-                    (0, _.jsxs)("div", {
-                      className: _.HeaderStat,
-                      children: [
-                        (0, _.jsx)("span", {
-                          className: _.StatDescription,
-                          children: (0, _._)(
-                            "#EventDashBoard_SummaryStats_TotalViews",
-                          ),
-                        }),
-                        (0, _.jsx)("span", {
-                          className: _.StatFigure,
-                          children: (0, _._)(_.total_read),
+                        (0, _.jsxs)("div", {
+                          className: _.HeaderStat,
+                          children: [
+                            (0, _.jsx)("span", {
+                              className: _.StatDescription,
+                              children: (0, _._)(
+                                "#EventDashBoard_SummaryStats_TotalViews",
+                              ),
+                            }),
+                            (0, _.jsx)("span", {
+                              className: _.StatFigure,
+                              children: (0, _._)(_),
+                            }),
+                          ],
                         }),
                       ],
                     }),
                   ],
                 }),
-              ],
-            }),
-            Boolean(_ && _) &&
-              (0, _.jsxs)("div", {
-                className: _.ModerationWarningCtn,
-                children: [
-                  (0, _.jsx)("div", {
-                    className: _.ModerationWarning,
-                    children: (0, _._)(
-                      "#EventDashBoard_ModerationQueueWarning",
-                    ),
+                Boolean(_ && _) &&
+                  (0, _.jsxs)("div", {
+                    className: _.ModerationWarningCtn,
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _.ModerationWarning,
+                        children: (0, _._)(
+                          "#EventDashBoard_ModerationQueueWarning",
+                        ),
+                      }),
+                      (0, _.jsx)("a", {
+                        href:
+                          _._.PARTNER_BASE_URL +
+                          "doc/marketing/event_tools/moderation",
+                        children: (0, _._)(
+                          "#EventDashBoard_Location_ModerationTitle",
+                        ),
+                      }),
+                    ],
                   }),
-                  (0, _.jsx)("a", {
-                    href:
-                      _._.PARTNER_BASE_URL +
-                      "doc/marketing/event_tools/moderation",
-                    children: (0, _._)(
-                      "#EventDashBoard_Location_ModerationTitle",
-                    ),
-                  }),
-                ],
-              }),
-            _ &&
-              (0, _.jsxs)("div", {
-                className: (0, _._)(_.StatsCtn),
-                children: [
-                  _ &&
-                    (0, _.jsxs)("div", {
-                      className: (0, _._)(
-                        _.StatsLeftSection,
-                        _ && _.DisabledStats,
-                      ),
-                      children: [
+                _ &&
+                  (0, _.jsxs)("div", {
+                    className: (0, _._)(_.StatsCtn),
+                    children: [
+                      _ &&
                         (0, _.jsxs)("div", {
-                          className: _.StatsTitle_ctn,
+                          className: (0, _._)(
+                            _.StatsLeftSection,
+                            _ && _.DisabledStats,
+                          ),
                           children: [
-                            (0, _.jsx)("span", {
-                              children: (0, _._)(
-                                "#EventDashBoard_Location_LibraryHome",
-                              ),
-                            }),
-                            (0, _.jsxs)("span", {
-                              className: _.ModerationNote,
+                            (0, _.jsxs)("div", {
+                              className: _.StatsTitle_ctn,
                               children: [
-                                "( ",
-                                (0, _._)(
-                                  "#EventDashBoard_Location_WaitingModeraion",
-                                ),
-                                " )",
+                                (0, _.jsx)("span", {
+                                  children: (0, _._)(
+                                    "#EventDashBoard_Location_LibraryHome",
+                                  ),
+                                }),
+                                (0, _.jsxs)("span", {
+                                  className: _.ModerationNote,
+                                  children: [
+                                    "( ",
+                                    (0, _._)(
+                                      "#EventDashBoard_Location_WaitingModeraion",
+                                    ),
+                                    " )",
+                                  ],
+                                }),
                               ],
                             }),
-                          ],
-                        }),
-                        (0, _.jsxs)("div", {
-                          className: _.StatsTitle,
-                          children: [
-                            (0, _.jsx)("span", {
-                              children: (0, _._)(
-                                "#EventDashBoard_Summary_LibraryHome_Shown",
-                              ),
-                            }),
-                            (0, _.jsx)("span", {
-                              children: (0, _._)(_.library_overview_shown),
-                            }),
-                          ],
-                        }),
-                        (0, _.jsxs)("div", {
-                          className: _.StatsTitle,
-                          children: [
-                            (0, _.jsx)("span", {
-                              children: (0, _._)(
-                                "#EventDashBoard_Summary_LibraryHome_Read",
-                              ),
-                            }),
-                            (0, _.jsx)("span", {
-                              children: (0, _._)(_.library_overview_read),
-                            }),
-                          ],
-                        }),
-                        (0, _.jsxs)("div", {
-                          className: _.StatsTitle_ctn,
-                          children: [
-                            (0, _.jsx)("span", {
-                              children: (0, _._)(
-                                "#EventDashBoard_Location_LibraryDetail",
-                              ),
-                            }),
-                            (0, _.jsxs)("span", {
-                              className: _.ModerationNote,
+                            (0, _.jsxs)("div", {
+                              className: _.StatsTitle,
                               children: [
-                                "( ",
-                                (0, _._)(
-                                  "#EventDashBoard_Location_WaitingModeraion",
-                                ),
-                                " )",
+                                (0, _.jsx)("span", {
+                                  children: (0, _._)(
+                                    "#EventDashBoard_Summary_LibraryHome_Shown",
+                                  ),
+                                }),
+                                (0, _.jsx)("span", {
+                                  children: (0, _._)(_),
+                                }),
                               ],
                             }),
-                          ],
-                        }),
-                        _.app_details_spotlight_shown > 0 &&
-                          (0, _.jsxs)(_.Fragment, {
-                            children: [
-                              (0, _.jsxs)("div", {
-                                className: _.StatsTitle,
+                            (0, _.jsxs)("div", {
+                              className: _.StatsTitle,
+                              children: [
+                                (0, _.jsx)("span", {
+                                  children: (0, _._)(
+                                    "#EventDashBoard_Summary_LibraryHome_Read",
+                                  ),
+                                }),
+                                (0, _.jsx)("span", {
+                                  children: (0, _._)(_),
+                                }),
+                              ],
+                            }),
+                            (0, _.jsxs)("div", {
+                              className: _.StatsTitle_ctn,
+                              children: [
+                                (0, _.jsx)("span", {
+                                  children: (0, _._)(
+                                    "#EventDashBoard_Location_LibraryDetail",
+                                  ),
+                                }),
+                                (0, _.jsxs)("span", {
+                                  className: _.ModerationNote,
+                                  children: [
+                                    "( ",
+                                    (0, _._)(
+                                      "#EventDashBoard_Location_WaitingModeraion",
+                                    ),
+                                    " )",
+                                  ],
+                                }),
+                              ],
+                            }),
+                            _ > 0 &&
+                              (0, _.jsxs)(_.Fragment, {
                                 children: [
-                                  (0, _.jsx)("span", {
-                                    children: (0, _._)(
-                                      "#EventDashBoard_Summary_AppDetailSpotlight_Shown",
-                                    ),
+                                  (0, _.jsxs)("div", {
+                                    className: _.StatsTitle,
+                                    children: [
+                                      (0, _.jsx)("span", {
+                                        children: (0, _._)(
+                                          "#EventDashBoard_Summary_AppDetailSpotlight_Shown",
+                                        ),
+                                      }),
+                                      (0, _.jsx)("span", {
+                                        children: (0, _._)(_),
+                                      }),
+                                    ],
                                   }),
-                                  (0, _.jsx)("span", {
-                                    children: (0, _._)(
-                                      _.app_details_spotlight_shown,
-                                    ),
+                                  (0, _.jsxs)("div", {
+                                    className: _.StatsTitle,
+                                    children: [
+                                      (0, _.jsx)("span", {
+                                        children: (0, _._)(
+                                          "#EventDashBoard_Summary_AppDetailSpotlight_Read",
+                                        ),
+                                      }),
+                                      (0, _.jsx)("span", {
+                                        children: (0, _._)(_),
+                                      }),
+                                    ],
                                   }),
                                 ],
                               }),
-                              (0, _.jsxs)("div", {
-                                className: _.StatsTitle,
-                                children: [
-                                  (0, _.jsx)("span", {
-                                    children: (0, _._)(
-                                      "#EventDashBoard_Summary_AppDetailSpotlight_Read",
-                                    ),
-                                  }),
-                                  (0, _.jsx)("span", {
-                                    children: (0, _._)(
-                                      _.app_details_spotlight_read,
-                                    ),
-                                  }),
-                                ],
+                            (0, _.jsxs)("div", {
+                              className: _.StatsTitle,
+                              children: [
+                                (0, _.jsx)("span", {
+                                  children: (0, _._)(
+                                    "#EventDashBoard_Summary_AppDetailActivity_Shown",
+                                  ),
+                                }),
+                                (0, _.jsx)("span", {
+                                  children: (0, _._)(_),
+                                }),
+                              ],
+                            }),
+                            (0, _.jsxs)("div", {
+                              className: _.StatsTitle,
+                              children: [
+                                (0, _.jsx)("span", {
+                                  children: (0, _._)(
+                                    "#EventDashBoard_Summary_AppDetailActivity_Read",
+                                  ),
+                                }),
+                                (0, _.jsx)("span", {
+                                  children: (0, _._)(_),
+                                }),
+                              ],
+                            }),
+                          ],
+                        }),
+                      (0, _.jsxs)("div", {
+                        className: _.StatsRightSection,
+                        children: [
+                          (0, _.jsx)("div", {
+                            className: _.StatsTitle_ctn,
+                            children: (0, _.jsx)("span", {
+                              children: (0, _._)(
+                                "#EventDashBoard_Location_StoreDetail",
+                              ),
+                            }),
+                          }),
+                          (0, _.jsxs)("div", {
+                            className: _.StatsTitle,
+                            children: [
+                              (0, _.jsx)("span", {
+                                children: (0, _._)(
+                                  "#EventDashBoard_Summary_StoreAppPage_Shown",
+                                ),
+                              }),
+                              (0, _.jsx)("span", {
+                                children: (0, _._)(_),
                               }),
                             ],
                           }),
-                        (0, _.jsxs)("div", {
-                          className: _.StatsTitle,
-                          children: [
-                            (0, _.jsx)("span", {
+                          (0, _.jsxs)("div", {
+                            className: _.StatsTitle,
+                            children: [
+                              (0, _.jsx)("span", {
+                                children: (0, _._)(
+                                  "#EventDashBoard_Summary_StoreAppPage_Read",
+                                ),
+                              }),
+                              (0, _.jsx)("span", {
+                                children: (0, _._)(_),
+                              }),
+                            ],
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _.StatsTitle_ctn,
+                            children: (0, _.jsx)("span", {
                               children: (0, _._)(
-                                "#EventDashBoard_Summary_AppDetailActivity_Shown",
+                                "#EventDashBoard_Location_CommunityDetail",
                               ),
                             }),
-                            (0, _.jsx)("span", {
-                              children: (0, _._)(_.app_details_activity_shown),
-                            }),
-                          ],
-                        }),
-                        (0, _.jsxs)("div", {
-                          className: _.StatsTitle,
-                          children: [
-                            (0, _.jsx)("span", {
+                          }),
+                          (0, _.jsxs)("div", {
+                            className: _.StatsTitle,
+                            children: [
+                              (0, _.jsx)("span", {
+                                children: (0, _._)(
+                                  "#EventDashBoard_Summary_Community_Shown",
+                                ),
+                              }),
+                              (0, _.jsx)("span", {
+                                children: (0, _._)(_),
+                              }),
+                            ],
+                          }),
+                          (0, _.jsxs)("div", {
+                            className: _.StatsTitle,
+                            children: [
+                              (0, _.jsx)("span", {
+                                children: (0, _._)(
+                                  "#EventDashBoard_Summary_Community_Read",
+                                ),
+                              }),
+                              (0, _.jsx)("span", {
+                                children: (0, _._)(_),
+                              }),
+                            ],
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _.StatsTitle_ctn,
+                            children: (0, _.jsx)("span", {
                               children: (0, _._)(
-                                "#EventDashBoard_Summary_AppDetailActivity_Read",
+                                "#EventDashBoard_Location_NewsHubDetail",
                               ),
                             }),
-                            (0, _.jsx)("span", {
-                              children: (0, _._)(_.app_details_activity_read),
-                            }),
-                          ],
-                        }),
-                      ],
-                    }),
-                  (0, _.jsxs)("div", {
-                    className: _.StatsRightSection,
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: _.StatsTitle_ctn,
-                        children: (0, _.jsx)("span", {
-                          children: (0, _._)(
-                            "#EventDashBoard_Location_StoreDetail",
-                          ),
-                        }),
-                      }),
-                      (0, _.jsxs)("div", {
-                        className: _.StatsTitle,
-                        children: [
-                          (0, _.jsx)("span", {
-                            children: (0, _._)(
-                              "#EventDashBoard_Summary_StoreAppPage_Shown",
-                            ),
                           }),
-                          (0, _.jsx)("span", {
-                            children: (0, _._)(_.store_app_page_shown),
+                          (0, _.jsxs)("div", {
+                            className: _.StatsTitle,
+                            children: [
+                              (0, _.jsx)("span", {
+                                children: (0, _._)(
+                                  "#EventDashBoard_Summary_NewsHub_Shown",
+                                ),
+                              }),
+                              (0, _.jsx)("span", {
+                                children: (0, _._)(_),
+                              }),
+                            ],
                           }),
-                        ],
-                      }),
-                      (0, _.jsxs)("div", {
-                        className: _.StatsTitle,
-                        children: [
-                          (0, _.jsx)("span", {
-                            children: (0, _._)(
-                              "#EventDashBoard_Summary_StoreAppPage_Read",
-                            ),
-                          }),
-                          (0, _.jsx)("span", {
-                            children: (0, _._)(_.store_app_page_read),
-                          }),
-                        ],
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _.StatsTitle_ctn,
-                        children: (0, _.jsx)("span", {
-                          children: (0, _._)(
-                            "#EventDashBoard_Location_CommunityDetail",
-                          ),
-                        }),
-                      }),
-                      (0, _.jsxs)("div", {
-                        className: _.StatsTitle,
-                        children: [
-                          (0, _.jsx)("span", {
-                            children: (0, _._)(
-                              "#EventDashBoard_Summary_Community_Shown",
-                            ),
-                          }),
-                          (0, _.jsx)("span", {
-                            children: (0, _._)(_.community_hub_shown),
-                          }),
-                        ],
-                      }),
-                      (0, _.jsxs)("div", {
-                        className: _.StatsTitle,
-                        children: [
-                          (0, _.jsx)("span", {
-                            children: (0, _._)(
-                              "#EventDashBoard_Summary_Community_Read",
-                            ),
-                          }),
-                          (0, _.jsx)("span", {
-                            children: (0, _._)(_.community_hub_read),
-                          }),
-                        ],
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _.StatsTitle_ctn,
-                        children: (0, _.jsx)("span", {
-                          children: (0, _._)(
-                            "#EventDashBoard_Location_NewsHubDetail",
-                          ),
-                        }),
-                      }),
-                      (0, _.jsxs)("div", {
-                        className: _.StatsTitle,
-                        children: [
-                          (0, _.jsx)("span", {
-                            children: (0, _._)(
-                              "#EventDashBoard_Summary_NewsHub_Shown",
-                            ),
-                          }),
-                          (0, _.jsx)("span", {
-                            children: (0, _._)(_.news_hub_shown),
-                          }),
-                        ],
-                      }),
-                      (0, _.jsxs)("div", {
-                        className: _.StatsTitle,
-                        children: [
-                          (0, _.jsx)("span", {
-                            children: (0, _._)(
-                              "#EventDashBoard_Summary_NewsHub_Read",
-                            ),
-                          }),
-                          (0, _.jsx)("span", {
-                            children: (0, _._)(_.news_hub_read),
+                          (0, _.jsxs)("div", {
+                            className: _.StatsTitle,
+                            children: [
+                              (0, _.jsx)("span", {
+                                children: (0, _._)(
+                                  "#EventDashBoard_Summary_NewsHub_Read",
+                                ),
+                              }),
+                              (0, _.jsx)("span", {
+                                children: (0, _._)(_),
+                              }),
+                            ],
                           }),
                         ],
                       }),
                     ],
                   }),
+              ],
+            });
+      }
+      const _ = (0, _._)(function (_) {
+        const { event: _, bIsOGG: _, summary: _ } = _,
+          _ = (0, _._)();
+        return (0, _.jsxs)(_._, {
+          children: [
+            (0, _.jsxs)("div", {
+              className: _().EditorStatsCtn,
+              children: [
+                (0, _.jsxs)("div", {
+                  className: _().EditorStatsRow,
+                  children: [
+                    (0, _.jsx)("span", {
+                      children: (0, _._)("#EventEditor_Comments"),
+                    }),
+                    (0, _.jsx)("span", {
+                      children: (0, _._)(_.nCommentCount),
+                    }),
+                  ],
+                }),
+                (0, _.jsxs)("div", {
+                  className: _().EditorStatsRow,
+                  children: [
+                    (0, _.jsx)("span", {
+                      children: (0, _._)("#EventEditor_UpVotes"),
+                    }),
+                    (0, _.jsx)("span", {
+                      children: _.nVotesUp ? (0, _._)(_.nVotesUp) : 0,
+                    }),
+                  ],
+                }),
+                (0, _.jsxs)("div", {
+                  className: _().EditorStatsRow,
+                  children: [
+                    (0, _.jsx)("span", {
+                      children: (0, _._)("#EventEditor_DownVotes"),
+                    }),
+                    (0, _.jsx)("span", {
+                      children: _.nVotesDown ? (0, _._)(_.nVotesDown) : 0,
+                    }),
+                  ],
+                }),
+              ],
+            }),
+            _ &&
+              (0, _.jsxs)("div", {
+                className: _().EditorStatsCtn,
+                children: [
+                  (0, _._)("#EventDashBoard_SummaryStats_Admin_Title"),
+                  (0, _.jsx)(_, {
+                    summary: _,
+                    bIsAllowedInLibrary: _,
+                    bEventIsInModerationQueue: (0, _._)(_, _),
+                    bCompact: !0,
+                    bExpanded: !0,
+                  }),
                 ],
               }),
+          ],
+        });
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = (0, _._)((_) => {
+        const {
+            event: _,
+            lang: _,
+            nOverrideStartTime: _,
+            nOverrideEndTime: _,
+            reminder: _,
+            editorInfo: _,
+            meetSteamInfo: _,
+          } = _,
+          _ = (0, _._)(),
+          _ = _.appid,
+          _ = _.clanSteamID,
+          _ = _ || _.GetStartTimeAndDateUnixSeconds(),
+          { data: _ } = (0, _._)(
+            _
+              ? {
+                  appid: _,
+                }
+              : void 0,
+          ),
+          { data: _ } = (0, _._)(_.GetAccountID());
+        return _
+          ? _ && !_
+            ? null
+            : (0, _.jsx)("div", {
+                className: _().EventDetailTitleDesc,
+                children: (0, _.jsxs)("div", {
+                  className: _().EventDetailsSticky,
+                  children: [
+                    _.is_ogg
+                      ? (0, _.jsx)(_, {
+                          appid: _.appid,
+                        })
+                      : (0, _.jsx)(_, {
+                          clanSteamID: _,
+                        }),
+                    (0, _.jsx)(_._, {
+                      event: _,
+                      nOverrideEndTime: _,
+                      nOverrideStartTime: _,
+                    }),
+                    _ &&
+                      _.type !== _.uYK &&
+                      _ < _ &&
+                      (0, _.jsx)("div", {
+                        className: _().EventDetailTimeInfo,
+                        children: _,
+                      }),
+                    (0, _.jsxs)("div", {
+                      className: _().EventDetailUserType,
+                      children: [
+                        (0, _.jsx)("div", {
+                          className: _().RightSideTitles,
+                          children: (0, _._)(
+                            "#EventDisplay_RightColumnTitle_EventType",
+                          ),
+                        }),
+                        (0, _.jsxs)("div", {
+                          className: _().EventDetailsType,
+                          children: [_.GetCategoryAsString(), " "],
+                        }),
+                      ],
+                    }),
+                    _,
+                    Boolean(_.jsondata.meet_steam_groups) && _,
+                  ],
+                }),
+              })
+          : ((0, _._)(
+              _,
+              "EventDetailsRightColumn - clan info (" +
+                _.GetAccountID() +
+                ") is missing",
+            ),
+            null);
+      });
+      function _(_) {
+        const { appid: _ } = _;
+        (0, _._)(_ && 0 != _, "Expected Appid In Game Info Section");
+        const { data: _ } = (0, _._)(
+          _
+            ? {
+                appid: _,
+              }
+            : void 0,
+        );
+        return (0, _.jsxs)("div", {
+          className: _().EventDetailGameCallToAction,
+          children: [
+            (0, _.jsx)("div", {
+              className: _().RightSideTitles,
+              children: _._.some((_) => _ === _)
+                ? (0, _._)("#EventDisplay_RightColumnTitle_Blog")
+                : (0, _._)("#EventDisplay_RightColumnTitle_Game"),
+            }),
+            (0, _.jsx)(_._, {
+              imageType: "header",
+              capsule: {
+                _: _,
+                type: "game",
+              },
+              bHidePriceIfOwned: !0,
+              bHideStatusBanners: !0,
+              bPreferAssetWithoutOverride: !1,
+            }),
+            (0, _.jsx)("div", {
+              className: (0, _._)(_().GameActions),
+              children: _
+                ? (0, _.jsx)(_._, {
+                    appid: _,
+                    bIsFree: Boolean(_.is_free),
+                    bIsComingSoon: Boolean(_.is_coming_soon),
+                    className: _().ActionButton,
+                  })
+                : (0, _.jsx)(_._, {
+                    size: "small",
+                    position: "center",
+                  }),
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const { clanSteamID: _ } = _,
+          _ = _.GetAccountID(),
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_);
+        if (!_)
+          return (
+            (0, _._)(
+              _,
+              "EventDetailsRightCreatorInfo - clan info (" + _ + ") is missing",
+            ),
+            null
+          );
+        const _ = _
+          ? (0, _._)(_, "developer")
+          : _._.COMMUNITY_BASE_URL +
+            (_.vanity_url
+              ? "groups/" + _.vanity_url
+              : "gid/" + _.ConvertTo64BitString());
+        return (0, _.jsxs)("div", {
+          className: _().EventDetailGameCallToAction,
+          children: [
+            (0, _.jsx)("div", {
+              className: _().RightSideTitles,
+              children: _.group_name,
+            }),
+            (0, _.jsx)(_._, {
+              href: (0, _._)(_),
+              children: (0, _.jsx)("div", {
+                className: _().EventDetailsAvatar,
+                style: {
+                  backgroundImage: `url(${_.avatar_full_url})`,
+                },
+              }),
+            }),
           ],
         });
       }
@@ -1074,8 +1166,12 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1310,7 +1406,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = (0, _._)((_) => {
@@ -1522,6 +1617,18 @@
                         lang: _,
                         nOverrideStartTime: _,
                         nOverrideEndTime: _,
+                        reminder: (0, _.jsx)(_._, {
+                          eventModel: _,
+                          lang: _,
+                        }),
+                        editorInfo: (0, _.jsx)(_, {
+                          event: _,
+                          bIsOGG: _.is_ogg,
+                        }),
+                        meetSteamInfo: (0, _.jsx)(_, {
+                          event: _,
+                          lang: _,
+                        }),
                       }),
                     }),
                   ],
@@ -1536,214 +1643,15 @@
             postbody: (0, _.jsxs)(_._, {
               children: [_, _],
             }),
-            footer: (0, _.jsx)(_._, {
-              children: (0, _.jsx)("div", {
-                className: _().AppSummaryCtn,
-                children: (0, _.jsxs)("div", {
-                  className: _().EventBodyPosition,
-                  children: [
-                    Boolean(_) &&
-                      (0, _.jsxs)("div", {
-                        className: _().AppSummaryWidgetTitleCtn,
-                        children: [
-                          (0, _.jsx)("span", {
-                            className: _().Title,
-                            children: (0, _._)("#CreatorHome_ThisGame"),
-                          }),
-                          (0, _.jsx)("div", {
-                            className: (0, _._)(
-                              _().AppSummaryWidgetCtn,
-                              "AppSummaryWidgetCtn",
-                            ),
-                            children: (0, _.jsx)(_._, {
-                              _: _.appid,
-                              type: (0, _._)(_.type),
-                              bPreferAssetWithoutOverride: !1,
-                            }),
-                          }),
-                        ],
-                      }),
-                    (0, _.jsx)(_._, {
-                      appid: _.appid,
-                      bSmallFormat: !0,
-                    }),
-                  ],
-                }),
+            footer: (0, _.jsx)(_, {
+              appid: _.appid,
+              creatorHome: (0, _.jsx)(_._, {
+                appid: _.appid,
+                bSmallFormat: !0,
               }),
             }),
           });
         });
-      function _(_) {
-        const {
-            event: _,
-            lang: _,
-            nOverrideStartTime: _,
-            nOverrideEndTime: _,
-          } = _,
-          _ = (0, _._)(),
-          [_, _, _, _, _] = (0, _._)(() => [
-            _.appid,
-            _.clanSteamID,
-            _ || _.GetStartTimeAndDateUnixSeconds(),
-            _.GetCategoryAsString(),
-            _.type,
-          ]),
-          { data: _ } = (0, _._)(
-            _
-              ? {
-                  appid: _,
-                }
-              : void 0,
-          ),
-          { data: _ } = (0, _._)(_.GetAccountID());
-        return _
-          ? _.appid && !_
-            ? null
-            : (0, _.jsx)("div", {
-                className: _().EventDetailTitleDesc,
-                children: (0, _.jsxs)("div", {
-                  className: _().EventDetailsSticky,
-                  children: [
-                    _.is_ogg
-                      ? (0, _.jsx)(_, {
-                          appid: _.appid,
-                        })
-                      : (0, _.jsx)(_, {
-                          clanSteamID: _,
-                        }),
-                    (0, _.jsx)(_._, {
-                      event: _,
-                      nOverrideEndTime: _,
-                      nOverrideStartTime: _,
-                    }),
-                    _ !== _.uYK &&
-                      _ < _ &&
-                      (0, _.jsx)("div", {
-                        className: _().EventDetailTimeInfo,
-                        children: (0, _.jsx)(_._, {
-                          eventModel: _,
-                          lang: _,
-                        }),
-                      }),
-                    (0, _.jsxs)("div", {
-                      className: _().EventDetailUserType,
-                      children: [
-                        (0, _.jsx)("div", {
-                          className: _().RightSideTitles,
-                          children: (0, _._)(
-                            "#EventDisplay_RightColumnTitle_EventType",
-                          ),
-                        }),
-                        (0, _.jsxs)("div", {
-                          className: _().EventDetailsType,
-                          children: [_, " "],
-                        }),
-                      ],
-                    }),
-                    (0, _.jsx)(_, {
-                      event: _,
-                      bIsOGG: _.is_ogg,
-                    }),
-                    Boolean(_.jsondata.meet_steam_groups) &&
-                      (0, _.jsx)(_, {
-                        event: _,
-                        lang: _,
-                      }),
-                  ],
-                }),
-              })
-          : ((0, _._)(
-              _,
-              "EventDetailsRightColumn - clan info (" +
-                _.GetAccountID() +
-                ") is missing",
-            ),
-            null);
-      }
-      function _(_) {
-        const { appid: _ } = _;
-        (0, _._)(_ && 0 != _, "Expected Appid In Game Info Section");
-        const { data: _ } = (0, _._)(
-          _
-            ? {
-                appid: _,
-              }
-            : void 0,
-        );
-        return (0, _.jsxs)("div", {
-          className: _().EventDetailGameCallToAction,
-          children: [
-            (0, _.jsx)("div", {
-              className: _().RightSideTitles,
-              children: _._.some((_) => _ === _)
-                ? (0, _._)("#EventDisplay_RightColumnTitle_Blog")
-                : (0, _._)("#EventDisplay_RightColumnTitle_Game"),
-            }),
-            (0, _.jsx)(_._, {
-              imageType: "header",
-              capsule: {
-                _: _,
-                type: "game",
-              },
-              bHidePriceIfOwned: !0,
-              bHideStatusBanners: !0,
-              bPreferAssetWithoutOverride: !1,
-            }),
-            (0, _.jsx)("div", {
-              className: (0, _._)(_().GameActions),
-              children: _
-                ? (0, _.jsx)(_._, {
-                    appid: _,
-                    bIsFree: _.is_free,
-                    bIsComingSoon: _.is_coming_soon,
-                    className: _().ActionButton,
-                  })
-                : (0, _.jsx)(_._, {
-                    size: "small",
-                    position: "center",
-                  }),
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const { clanSteamID: _ } = _,
-          _ = _.GetAccountID(),
-          { data: _ } = (0, _._)(_),
-          { data: _ } = (0, _._)(_);
-        if (!_)
-          return (
-            (0, _._)(
-              _,
-              "EventDetailsRightCreatorInfo - clan info (" + _ + ") is missing",
-            ),
-            null
-          );
-        const _ = _
-          ? (0, _._)(_, "developer")
-          : _._.COMMUNITY_BASE_URL +
-            (_.vanity_url
-              ? "groups/" + _.vanity_url
-              : "gid/" + _.ConvertTo64BitString());
-        return (0, _.jsxs)("div", {
-          className: _().EventDetailGameCallToAction,
-          children: [
-            (0, _.jsx)("div", {
-              className: _().RightSideTitles,
-              children: _.group_name,
-            }),
-            (0, _.jsx)(_._, {
-              href: (0, _._)(_),
-              children: (0, _.jsx)("div", {
-                className: _().EventDetailsAvatar,
-                style: {
-                  backgroundImage: `url(${_.avatar_full_url})`,
-                },
-              }),
-            }),
-          ],
-        });
-      }
       function _(_) {
         const { event: _, bIsOGG: _ } = _,
           _ = (0, _._)(),
@@ -1760,405 +1668,14 @@
             () => _.cancel("EventDisplayEditorInfo cancelled")
           );
         }, [_, _, _]);
-        const [_, _, _, _] = (0, _._)(() => [
-          _ && _.GetStatsFor(_, _),
-          _.nCommentCount,
-          _.nVotesUp,
-          _.nVotesDown,
-        ]);
+        const _ = (0, _._)(() => _ && _.GetStatsFor(_, _));
         return _
-          ? (0, _.jsxs)(_._, {
-              children: [
-                (0, _.jsxs)("div", {
-                  className: _().EditorStatsCtn,
-                  children: [
-                    (0, _.jsxs)("div", {
-                      className: _().EditorStatsRow,
-                      children: [
-                        (0, _.jsx)("span", {
-                          children: (0, _._)("#EventEditor_Comments"),
-                        }),
-                        (0, _.jsx)("span", {
-                          children: (0, _._)(_),
-                        }),
-                      ],
-                    }),
-                    (0, _.jsxs)("div", {
-                      className: _().EditorStatsRow,
-                      children: [
-                        (0, _.jsx)("span", {
-                          children: (0, _._)("#EventEditor_UpVotes"),
-                        }),
-                        (0, _.jsx)("span", {
-                          children: _ ? (0, _._)(_) : 0,
-                        }),
-                      ],
-                    }),
-                    (0, _.jsxs)("div", {
-                      className: _().EditorStatsRow,
-                      children: [
-                        (0, _.jsx)("span", {
-                          children: (0, _._)("#EventEditor_DownVotes"),
-                        }),
-                        (0, _.jsx)("span", {
-                          children: _ ? (0, _._)(_) : 0,
-                        }),
-                      ],
-                    }),
-                  ],
-                }),
-                Boolean(_) &&
-                  (0, _.jsxs)("div", {
-                    className: _().EditorStatsCtn,
-                    children: [
-                      (0, _._)("#EventDashBoard_SummaryStats_Admin_Title"),
-                      (0, _.jsx)(_, {
-                        summary: _.m_stats,
-                        clanSteamID: _,
-                        bIsAllowedInLibrary: _,
-                        bEventIsInModerationQueue: (0, _._)(_, _),
-                        bCompact: !0,
-                      }),
-                    ],
-                  }),
-              ],
+          ? (0, _.jsx)(_, {
+              event: _,
+              bIsOGG: _,
+              summary: _ ? _.m_stats : void 0,
             })
           : null;
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      const _ = "hh:mm a",
-        _ = "HH:mm";
-      function _(_) {
-        const {
-          nLatestTime: _,
-          nEarliestTime: _,
-          fnGetTimeToUpdate: _,
-          onError: _,
-          strAlsoShowTimeZone: _,
-          disabled: _,
-          bNoDefaultDate: _,
-          className: _,
-          strDescToolTip: _,
-          strDescription: _,
-          bShowTimeZone: _,
-          strInvalidDateTimeLocalizedMsg: _,
-          fnIsValidDateTime: _,
-          bWeekdaysOnly: _,
-          fnSetTimeToUpdate: _,
-          bForce24HourFormat: _,
-          bAllowClear: _,
-        } = _;
-        let _ =
-          (function () {
-            const _ = _()("2025-01-14T13:00:00");
-            return _.format("LT").toLowerCase().includes("13");
-          })() || _
-            ? _
-            : _;
-        const _ = _(),
-          [_, _] = _.useState(_ > 0 ? _()(1e3 * _) : null),
-          [_, _] = _.useState(0),
-          [_, _] = _.useState(),
-          [_, _] = _.useState(),
-          _ = (function (_, _, _, _, _) {
-            const _ = _ && _(),
-              _ = _ && !_(_).isValid(),
-              _ = _ && !_(_).isValid();
-            let _ = null;
-            (_ || _ || "string" == typeof _ || !1 === _) &&
-              ((_ = (0, _._)(_ || "#DateTimePicker_Fallback_Invalid_DateTime")),
-              _
-                ? (_ = (0, _._)("#DateTimePicker_Time_CannotParse"))
-                : _
-                  ? (_ = (0, _._)("#DateTimePicker_Date_CannotParse"))
-                  : "string" == typeof _ && (_ = _));
-            return (
-              _.useEffect(() => {
-                _ && _(_);
-              }, [_, _]),
-              _
-            );
-          })(_, _, _, _, _),
-          _ = !_ && _;
-        let _, _;
-        if (_ && _ && _ == _ && _ > _._.GetTimeNowWithOverride()) {
-          const _ = _().unix(_);
-          (_ = {
-            hours: {
-              max: _.hour(),
-              min: _.hour(),
-              step: 0,
-            },
-            minutes: {
-              max: _.minute(),
-              min: _.minute(),
-              step: 0,
-            },
-            seconds: {
-              max: _.seconds(),
-              min: _.seconds(),
-              step: 0,
-            },
-            milliseconds: {
-              max: 0,
-              min: 0,
-              step: 0,
-            },
-          }),
-            (_ = _);
-        }
-        _ || !_ || _ || (_ = _().unix(_));
-        const _ = _()._.guess(),
-          _ = _().unix(_)._(_),
-          _ = !!_ && _ != _ && _().unix(_)._(_),
-          {
-            fnOnInput: _,
-            fnOnInputBlur: _,
-            fnOnChange: _,
-          } = _(
-            _,
-            (_) => {
-              if (_) return;
-              _(null);
-              const _ = _(),
-                _ = _().unix(_ || _._.GetTimeNowWithOverride());
-              (_ = _.clone()).hour(__webpack_require__.hour()),
-                _.minute(__webpack_require__.minute()),
-                _.second(0),
-                _(_.unix()),
-                _(_);
-            },
-            _,
-          ),
-          {
-            fnOnInput: _,
-            fnOnInputBlur: _,
-            fnOnChange: _,
-          } = _(
-            _,
-            (_) => {
-              if (_) return;
-              _(null);
-              let _ = _(),
-                _ = 0;
-              if (_) {
-                const _ = _().unix(_);
-                (_ = _.clone()).year(__webpack_require__.year()),
-                  _.month(__webpack_require__.month()),
-                  _.date(__webpack_require__.date()),
-                  (_ = _.unix());
-              } else {
-                _ =
-                  _().unix(_).hour(0).second(0).minutes(0).unix() +
-                  3600 * _.hour() +
-                  60 * _.minutes();
-              }
-              _(_), _(_().unix(_));
-            },
-            _,
-          ),
-          _ = _ && !_ && _ > 0;
-        return (0, _.jsxs)("div", {
-          className: (0, _._)(_().EventTimeSection, _),
-          children: [
-            (0, _.jsxs)("div", {
-              className: (0, _._)(_().EventTimeTitle, "DialogLabel"),
-              children: [
-                (0, _.jsx)(_._, {
-                  toolTipContent: _,
-                  direction: "top",
-                  children:
-                    Boolean(_) &&
-                    (0, _.jsx)("span", {
-                      children: _,
-                    }),
-                }),
-                _ &&
-                  (0, _.jsxs)("span", {
-                    className: _().DateErrorCtn,
-                    children: [
-                      (0, _.jsx)("img", {
-                        src: _._,
-                      }),
-                      _,
-                    ],
-                  }),
-              ],
-            }),
-            (0, _.jsxs)("div", {
-              className: _().FlexRowContainer,
-              children: [
-                (0, _.jsxs)("div", {
-                  className: (0, _._)(_().InputBorder, _().TimeBlock),
-                  children: [
-                    (0, _.jsx)(
-                      _(),
-                      {
-                        onChange: _,
-                        timeFormat: !1,
-                        value: null != _ ? _ : _,
-                        isValidDate: (_) =>
-                          !_ &&
-                          (function (_, _, _, _) {
-                            const _ = _().unix(_).hour(0).seconds(0).minute(0);
-                            let _ = _.unix() >= _.unix();
-                            if (_ && _ && _ >= _) {
-                              const _ = _()
-                                .unix(_)
-                                .hour(23)
-                                .minute(59)
-                                .seconds(59);
-                              _ = _.unix() <= _.unix();
-                            }
-                            _ &&
-                              _ &&
-                              ((0 != _.weekday() && 6 != _.weekday()) ||
-                                (_ = !1));
-                            return _;
-                          })(_, _, _, _),
-                        initialValue: _,
-                        inputProps: {
-                          placeholder: (0, _._)("#DateTimePicker_Enter_Date"),
-                          className: (0, _._)(
-                            _().DateWidth,
-                            "DialogInput",
-                            "DialogTextInputBase",
-                          ),
-                          disabled: _,
-                          onChange: (_) => _(_.currentTarget.value),
-                          onBlur: (_) => _(_.currentTarget.value),
-                        },
-                      },
-                      "date" + _,
-                    ),
-                    !!_ &&
-                      (0, _.jsx)("div", {
-                        className: _().PacificTimeHint,
-                        children: _.format("L"),
-                      }),
-                  ],
-                }),
-                (0, _.jsxs)("div", {
-                  className: (0, _._)(_().InputBorder, _().TimeBlock),
-                  children: [
-                    (0, _.jsx)(
-                      _(),
-                      {
-                        onChange: _,
-                        dateFormat: !1,
-                        timeFormat: _,
-                        timeConstraints: _,
-                        value: null != _ ? _ : _,
-                        inputProps: {
-                          placeholder: (0, _._)("#DateTimePicker_Enter_Time"),
-                          className: (0, _._)(
-                            _().TimeWidth,
-                            "DialogInput",
-                            "DialogTextInputBase",
-                          ),
-                          disabled: _,
-                          onChange: (_) => _(_.currentTarget.value),
-                          onBlur: (_) => _(_.currentTarget.value),
-                        },
-                      },
-                      "time" + _,
-                    ),
-                    !!_ &&
-                      (0, _.jsx)("div", {
-                        className: _().PacificTimeHint,
-                        children: _.format("LT"),
-                      }),
-                  ],
-                }),
-                _ &&
-                  (0, _.jsxs)("div", {
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: _().TimeZone,
-                        children: _.zoneAbbr(),
-                      }),
-                      !!_ &&
-                        (0, _.jsx)("div", {
-                          className: _().TimeZone,
-                          children: _.zoneAbbr(),
-                        }),
-                    ],
-                  }),
-                _ &&
-                  (0, _.jsx)("button", {
-                    type: "button",
-                    className: _().ClearButton,
-                    onClick: () => {
-                      _ || (_(0), _(null), _(null), _(null), _((_) => _ + 1));
-                    },
-                    children: (0, _._)("#Button_Clear"),
-                  }),
-              ],
-            }),
-            Boolean(_) &&
-              (0, _.jsx)("div", {
-                children: (0, _._)("#DateTimePicker_DateTime_Fixed"),
-              }),
-          ],
-        });
-      }
-      function _(_, _, _) {
-        const [_, _] = _.useState(!1);
-        return {
-          fnOnInput: (_) => {
-            __webpack_require__(_), _(!0);
-          },
-          fnOnInputBlur: (_) => {
-            if (_) {
-              const _ = _(_);
-              _.isValid() && _(_);
-            }
-            _(!1);
-          },
-          fnOnChange: (_) => {
-            if (!_)
-              if ("string" == typeof _) {
-                const _ = _(_);
-                _.isValid() && _(_);
-              } else _(_);
-          },
-        };
-      }
-      function _(_) {
-        return _()(
-          _,
-          (function () {
-            const _ = _()("2025-01-14").format("L").split(/[-/.]/),
-              _ = _.indexOf("14");
-            return _.indexOf("01") < _;
-          })()
-            ? "M/D/YYYY"
-            : "D/M/YYYY",
-          !1,
-        );
-      }
-      function _(_) {
-        return _()(_, [_, _], !1);
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

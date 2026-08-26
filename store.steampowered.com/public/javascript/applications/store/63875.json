@@ -307,5 +307,8 @@
     "AppPage_RecommendationReason_FriendsOwned_Software": "<1>%1$s 名好友</1>已拥有此软件：",
     "AppPage_RecommendationReason_FriendsOwned_Software_Plural": "<1>%1$s 名好友</1>已拥有此软件：",
     "AppPage_RecommendationReason_FriendsOwned_Video": "<1>%1$s 名好友</1>已拥有此视频：",
-    "AppPage_RecommendationReason_FriendsOwned_Video_Plural": "<1>%1$s 名好友</1>已拥有此视频："
+    "AppPage_RecommendationReason_FriendsOwned_Video_Plural": "<1>%1$s 名好友</1>已拥有此视频：",
+    "AppPage_PageSectionBanner_Workshop": "Steam 创意工坊",
+    "AppPage_PageSectionBanner_Follow": "关注此游戏",
+    "AppPage_PageSectionBanner_MachineController": "Steam Machines 和 Steam Controller"
 }

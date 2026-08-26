@@ -915,7 +915,7 @@
           o = !1,
         ) {
           let r = (0, A.hE)(o ? l.Bhc : (0, l.sfN)(g.TS.LANGUAGE)),
-            d = {
+            m = {
               appid: t,
               clan_accountid: e ? e.GetAccountID() : void 0,
               announcement_gid: a,
@@ -926,40 +926,46 @@
               for_edit: o,
               only_summary: this.m_bOnlySummary,
             },
-            m = null,
-            _ = null;
+            _ = null,
+            u = null;
           if (o) {
             const n = (0, g.yK)();
             "community" === n
-              ? ((_ = g.TS.COMMUNITY_BASE_URL),
-                (_ += e ? "gid/" + e.ConvertTo64BitString() : "ogg/" + t),
-                (_ += "/"))
-              : (_ =
+              ? ((u = g.TS.COMMUNITY_BASE_URL),
+                (u += e ? "gid/" + e.ConvertTo64BitString() : "ogg/" + t),
+                (u += "/"))
+              : (u =
                   "partnerweb" === n
                     ? g.TS.PARTNER_BASE_URL + "sales/"
                     : g.TS.STORE_BASE_URL + "events/"),
-              (_ += "ajaxgetpartnereventforedit"),
-              (m = { params: d, withCredentials: !0 });
+              (u += "ajaxgetpartnereventforedit"),
+              (_ = { params: m, withCredentials: !0 });
           } else
-            (_ = g.TS.STORE_BASE_URL + "events/ajaxgetpartnerevent"),
-              (m = { params: d, withCredentials: !1 });
-          let u = (await i().get(_, m)).data.event,
-            v = D(u);
-          if (
-            !this.m_mapExistingEvents.has(v) ||
-            (this.m_mapExistingEvents.get(v).rtime32_last_modified ?? 0) <
-              (u.rtime32_last_modified ?? 0) ||
-            (this.m_mapExistingEvents.get(v).rtime32_moderator_reviewed ?? 0) <
-              (u.rtime_mod_reviewed ?? 0)
-          ) {
-            (0, p.wT)(
-              u.clan_steamid,
-              "ClanSteamID is missing from data we received",
-            );
-            let e = new c.b(u.clan_steamid);
-            this.InsertEventModelFromClanEventData(e, u);
+            (u = g.TS.STORE_BASE_URL + "events/ajaxgetpartnerevent"),
+              (_ = { params: m, withCredentials: !1 });
+          try {
+            let e = await i().get(u, _);
+            if (e.data.success !== d.R) return;
+            let t = e.data.event,
+              n = D(t);
+            if (
+              !this.m_mapExistingEvents.has(n) ||
+              (this.m_mapExistingEvents.get(n).rtime32_last_modified ?? 0) <
+                (t.rtime32_last_modified ?? 0) ||
+              (this.m_mapExistingEvents.get(n).rtime32_moderator_reviewed ??
+                0) < (t.rtime_mod_reviewed ?? 0)
+            ) {
+              (0, p.wT)(
+                t.clan_steamid,
+                "ClanSteamID is missing from data we received",
+              );
+              let e = new c.b(t.clan_steamid);
+              this.InsertEventModelFromClanEventData(e, t);
+            }
+            return this.m_mapExistingEvents.get(n);
+          } catch (e) {
+            return;
           }
-          return this.m_mapExistingEvents.get(v);
         }
         async InternalLoadPartnerEventFromClanEventOrClanAnnouncementGIDCached(
           e,

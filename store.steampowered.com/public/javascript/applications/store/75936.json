@@ -307,5 +307,8 @@
     "AppPage_RecommendationReason_FriendsOwned_Software": "<1>%1$s приятел</1> вече притежава този софтуер:",
     "AppPage_RecommendationReason_FriendsOwned_Software_Plural": "<1>%1$s приятели</1> вече притежават този софтуер:",
     "AppPage_RecommendationReason_FriendsOwned_Video": "<1>%1$s приятел</1> вече притежава това видео:",
-    "AppPage_RecommendationReason_FriendsOwned_Video_Plural": "<1>%1$s приятели</1> вече притежават това видео:"
+    "AppPage_RecommendationReason_FriendsOwned_Video_Plural": "<1>%1$s приятели</1> вече притежават това видео:",
+    "AppPage_PageSectionBanner_Workshop": "Steam работилница",
+    "AppPage_PageSectionBanner_Follow": "Следвайте тази игра",
+    "AppPage_PageSectionBanner_MachineController": "Steam машини и Steam контролерът"
 }

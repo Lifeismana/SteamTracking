@@ -990,23 +990,29 @@
                 params: _,
                 withCredentials: !1,
               });
-          let _ = (await _().get(_, _)).data.event,
-            _ = _(_);
-          if (
-            !this.m_mapExistingEvents.has(_) ||
-            (this.m_mapExistingEvents.get(_).rtime32_last_modified ?? 0) <
-              (_.rtime32_last_modified ?? 0) ||
-            (this.m_mapExistingEvents.get(_).rtime32_moderator_reviewed ?? 0) <
-              (_.rtime_mod_reviewed ?? 0)
-          ) {
-            (0, _._)(
-              _.clan_steamid,
-              "ClanSteamID is missing from data we received",
-            );
-            let _ = new _._(_.clan_steamid);
-            this.InsertEventModelFromClanEventData(_, _);
+          try {
+            let _ = await _().get(_, _);
+            if (_.data.success !== _._) return;
+            let _ = _.data.event,
+              _ = _(_);
+            if (
+              !this.m_mapExistingEvents.has(_) ||
+              (this.m_mapExistingEvents.get(_).rtime32_last_modified ?? 0) <
+                (_.rtime32_last_modified ?? 0) ||
+              (this.m_mapExistingEvents.get(_).rtime32_moderator_reviewed ??
+                0) < (_.rtime_mod_reviewed ?? 0)
+            ) {
+              (0, _._)(
+                _.clan_steamid,
+                "ClanSteamID is missing from data we received",
+              );
+              let _ = new _._(_.clan_steamid);
+              this.InsertEventModelFromClanEventData(_, _);
+            }
+            return this.m_mapExistingEvents.get(_);
+          } catch (_) {
+            return;
           }
-          return this.m_mapExistingEvents.get(_);
         }
         async InternalLoadPartnerEventFromClanEventOrClanAnnouncementGIDCached(
           _,

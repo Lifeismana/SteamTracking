@@ -1135,10 +1135,7 @@
           item_movie_webm: _,
           item_title: _,
         } = _;
-        if (
-          (null == _ ? void 0 : _.length) > 0 &&
-          (null == _ ? void 0 : _.length) > 0
-        ) {
+        if (_ && _) {
           const _ = `${_._.MEDIA_CDN_COMMUNITY_URL}images/items/${_}/${_}`,
             _ = `${_._.MEDIA_CDN_COMMUNITY_URL}images/items/${_}/${_}`,
             _ = `${_._.MEDIA_CDN_COMMUNITY_URL}images/items/${_}/${_}`;
@@ -1201,8 +1198,12 @@
             });
       }
       function _(_) {
+        var _, _, _, _;
         const { section: _, rewardDef: _, language: _ } = _,
-          _ = (0, _._)(_.appid, _.community_item_type),
+          _ = (0, _._)(
+            null !== (_ = _.appid) && void 0 !== _ ? _ : 0,
+            null !== (_ = _.community_item_type) && void 0 !== _ ? _ : 0,
+          ),
           [_] = (0, _._)(() => {
             var _;
             return [
@@ -1236,8 +1237,9 @@
           href: _,
           children: [
             (0, _.jsx)(_, {
-              appid: null == _ ? void 0 : _.appid,
-              community_item_type: null == _ ? void 0 : _.community_item_type,
+              appid: null !== (_ = _.appid) && void 0 !== _ ? _ : 0,
+              community_item_type:
+                null !== (_ = _.community_item_type) && void 0 !== _ ? _ : 0,
             }),
             Boolean(_) &&
               (0, _.jsx)("span", {

@@ -2092,94 +2092,12 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
           Promise.all([
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -2227,6 +2145,92 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
@@ -2248,6 +2252,7 @@
         ),
         _ = _.lazy(() =>
           Promise.all([
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -2343,87 +2348,11 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
           Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -2473,6 +2402,85 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
@@ -2518,21 +2526,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
@@ -2545,10 +2538,27 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
           Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
@@ -12936,7 +12946,9 @@
             (_) => {
               (document.hasFocus() || document.activeElement != _.current) &&
                 (_.currentTarget == _.current
-                  ? (_.BIsActive() || _.bInVR) && _.DelayHideVirtualKeyboard()
+                  ? _.detail.focusedNode?.Element != _.current &&
+                    (_.BIsActive() || _.bInVR) &&
+                    _.DelayHideVirtualKeyboard()
                   : console.warn(
                       "keyboard got blur event, but it's not the active element",
                     ));
@@ -25372,7 +25384,7 @@
         constructor(_ = null) {
           super(),
             _.prototype.type || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [3], null);
+            _.Message.initialize(this, _, 0, -1, [3, 9], null);
         }
         static sm_m;
         static sm_mbf;
@@ -25423,6 +25435,14 @@
                     _: 8,
                     _: _._.readBool,
                     _: _._.writeBool,
+                  },
+                  survey_interactive_elements: {
+                    _: 9,
+                    _: !0,
+                    _: !0,
+                    _: _._.readEnum,
+                    pbr: _._.readPackedEnum,
+                    _: _._.writeRepeatedEnum,
                   },
                   required_age: {
                     _: 10,
@@ -28455,8 +28475,83 @@
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
           super(),
+            _.prototype.quote || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  quote: {
+                    _: 1,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  score: {
+                    _: 2,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  site: {
+                    _: 3,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  url: {
+                    _: 4,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "StoreItem_PressReview";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
             _.prototype.steam_award || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1, 10, 13], null);
+            _.Message.initialize(this, _, 0, -1, [1, 10, 13, 15, 18], null);
         }
         static sm_m;
         static sm_mbf;
@@ -28536,6 +28631,30 @@
                     _: 14,
                     _: _._.readString,
                     _: _._.writeString,
+                  },
+                  interactive_elements: {
+                    _: 15,
+                    _: !0,
+                    _: !0,
+                    _: _._.readEnum,
+                    pbr: _._.readPackedEnum,
+                    _: _._.writeRepeatedEnum,
+                  },
+                  content_survey_notes: {
+                    _: 16,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  content_survey_ai_notes: {
+                    _: 17,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  press_review: {
+                    _: 18,
+                    _: _,
+                    _: !0,
+                    _: !0,
                   },
                 },
               }),
@@ -33803,6 +33922,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -33938,6 +34058,14 @@
       function _(_) {
         const _ = (0, _._)();
         return (0, _._)(_(_, _));
+      }
+      function _(_) {
+        const _ = (0, _._)();
+        return (0, _._)(
+          (function (_, _) {
+            return _(_, _, "apply_user_filters", "user_filter_failure");
+          })(_, _),
+        );
       }
       function _(_, _) {
         return _(_, _, "include_assets", "assets");
@@ -36966,9 +37094,9 @@
         m_rgEmoticons = [];
         m_setEmoticonOwned = new Set();
         m_rgFlairs = [];
-        m_rgRecentEmoticons;
+        m_rgRecentEmoticons = void 0;
         m_rgStickers = [];
-        m_rgRecentStickers;
+        m_rgRecentStickers = void 0;
         m_rgEffects = [];
         m_rtLastStickerOrEffect = Number.MIN_SAFE_INTEGER;
         m_emoticonTrackerCallback = null;
@@ -37074,16 +37202,10 @@
           return this.m_rgFlairs.filter((_) => _.flairGroupID === _);
         }
         get recent_emoticons() {
-          return (
-            this.m_rgRecentEmoticons || this.BuildRecentEmoticonList(),
-            this.m_rgRecentEmoticons
-          );
+          return this.m_rgRecentEmoticons ?? this.BuildRecentEmoticonList();
         }
         get recent_stickers() {
-          return (
-            this.m_rgRecentStickers || this.BuildRecentStickerList(),
-            this.m_rgRecentStickers
-          );
+          return this.m_rgRecentStickers ?? this.BuildRecentStickerList();
         }
         SetEmoticonTrackerCallback(_) {
           this.m_emoticonTrackerCallback = _;
@@ -37105,20 +37227,24 @@
           let _ = !1;
           if (_.size) {
             if (void 0 !== this.m_rgRecentEmoticons)
-              for (let _ of this.m_rgRecentEmoticons)
-                _.has(_.name) &&
+              for (let _ of this.m_rgRecentEmoticons) {
+                const _ = _.get(_.name);
+                void 0 !== _ &&
                   ((_.last_used = _),
-                  (_.use_count += _.get(_.name)),
+                  (_.use_count = (_.use_count ?? 0) + _),
                   _.delete(_.name),
                   _.time_received && ((_ = !0), delete _.time_received));
+              }
             if (_.size)
-              for (let _ of this.m_rgEmoticons)
-                _.has(_.name) &&
+              for (let _ of this.m_rgEmoticons) {
+                const _ = _.get(_.name);
+                void 0 !== _ &&
                   ((_.last_used = _),
-                  (_.use_count += _.get(_.name)),
+                  (_.use_count = (_.use_count ?? 0) + _),
                   delete _.time_received,
                   void 0 !== this.m_rgRecentEmoticons &&
                     this.m_rgRecentEmoticons.push(_));
+              }
             if (
               void 0 !== this.m_rgRecentEmoticons &&
               (this.BuildRecentEmoticonList(), _)
@@ -37137,10 +37263,11 @@
           if (!this.m_bInitialized) return;
           this.m_stickerTrackerCallback && this.m_stickerTrackerCallback(_, _);
           const _ = this.m_rgStickers.find(({ name: _ }) => _ === _);
-          (_.last_used = _),
-            (_.use_count += 1),
+          _ &&
+            ((_.last_used = _),
+            (_.use_count = (_.use_count ?? 0) + 1),
             delete _.time_received,
-            this.BuildRecentStickerList();
+            this.BuildRecentStickerList());
         }
         RequestEmoticonList() {
           !this.m_bEmoticonListRequested &&
@@ -37149,10 +37276,18 @@
             this.RequestEmoticonListInternal());
         }
         BuildRecentEmoticonList() {
-          this.m_rgRecentEmoticons = this.BuildRecentList(this.m_rgEmoticons);
+          return (
+            (this.m_rgRecentEmoticons = this.BuildRecentList(
+              this.m_rgEmoticons,
+            )),
+            this.m_rgRecentEmoticons
+          );
         }
         BuildRecentStickerList() {
-          this.m_rgRecentStickers = this.BuildRecentList(this.m_rgStickers);
+          return (
+            (this.m_rgRecentStickers = this.BuildRecentList(this.m_rgStickers)),
+            this.m_rgRecentStickers
+          );
         }
         BuildRecentList(_) {
           const _ = this.GetServerTime() - _,
@@ -37162,8 +37297,8 @@
           return (
             __webpack_require__.sort(
               (_, _) =>
-                (_.last_used || _.time_received) -
-                (_.last_used || _.time_received),
+                (_.last_used || _.time_received || 0) -
+                (_.last_used || _.time_received || 0),
             ),
             __webpack_require__.slice(0, 50)
           );
@@ -37176,17 +37311,24 @@
           let _ = this.GetServerTime() - _;
           for (let _ of _) {
             let _ = _.name;
-            _.startsWith("^")
-              ? this.m_rgFlairs.push({
-                  name: _.match(new RegExp(/:(.*):/))[1],
-                  flairGroupID: _.match(new RegExp(/\^(.*)\^/))[1],
-                })
-              : (!_.last_used && _.time_received > _
-                  ? (!this.m_rtMostRecentEmoticon ||
-                      _.time_received > this.m_rtMostRecentEmoticon) &&
-                    (this.m_rtMostRecentEmoticon = _.time_received)
-                  : delete _.time_received,
-                this.m_rgEmoticons.push(_));
+            if (_.startsWith("^")) {
+              const _ = _.match(new RegExp(/:(.*):/)),
+                _ = _.match(new RegExp(/\^(.*)\^/));
+              _ &&
+                _ &&
+                this.m_rgFlairs.push({
+                  name: _[1],
+                  flairGroupID: _[1],
+                });
+            } else {
+              const _ = _.time_received;
+              !_.last_used && _ && _ > _
+                ? (!this.m_rtMostRecentEmoticon ||
+                    _ > this.m_rtMostRecentEmoticon) &&
+                  (this.m_rtMostRecentEmoticon = _)
+                : delete _.time_received,
+                this.m_rgEmoticons.push(_);
+            }
           }
           (this.m_setEmoticonOwned = new Set(
             this.m_rgEmoticons.map((_) => _.name_normalized || _.name),
@@ -37228,22 +37370,23 @@
             if (_.data.emoticons)
               for (let _ of _.data.emoticons) {
                 let _ = _.name;
-                if (_.startsWith("^"))
-                  _.push({
-                    name: _,
-                  });
-                else {
-                  let _ = {
-                      name: _.substr(1, _.length - 2),
-                    },
-                    _ = _.name.toLowerCase();
-                  _ != _.name && (_.name_normalized = _),
-                    _.time_last_used && (_.last_used = _.time_last_used),
-                    _.use_count && (_.use_count = _.use_count),
-                    _.time_received && (_.time_received = _.time_received),
-                    _.appid && (_.appid = _.appid),
-                    _.push(_);
-                }
+                if (_)
+                  if (_.startsWith("^"))
+                    _.push({
+                      name: _,
+                    });
+                  else {
+                    let _ = {
+                        name: _.substr(1, _.length - 2),
+                      },
+                      _ = _.name.toLowerCase();
+                    _ != _.name && (_.name_normalized = _),
+                      _.time_last_used && (_.last_used = _.time_last_used),
+                      _.use_count && (_.use_count = _.use_count),
+                      _.time_received && (_.time_received = _.time_received),
+                      _.appid && (_.appid = _.appid),
+                      _.push(_);
+                  }
               }
           } catch (_) {
             console.error("error loading emoticon list", _);
@@ -42719,15 +42862,16 @@
             (_[(_.ControllerPairing = 1)] = "ControllerPairing"),
             (_[(_.WelcomeToSteamFrame = 2)] = "WelcomeToSteamFrame"),
             (_[(_.PlayspaceSetup = 3)] = "PlayspaceSetup"),
-            (_[(_.SystemButtonHideDashboard = 4)] =
+            (_[(_.LaserMouse = 4)] = "LaserMouse"),
+            (_[(_.SystemButtonHideDashboard = 5)] =
               "SystemButtonHideDashboard"),
-            (_[(_.SystemButtonDashboardHidden = 5)] =
+            (_[(_.SystemButtonDashboardHidden = 6)] =
               "SystemButtonDashboardHidden"),
-            (_[(_.SystemButtonShowDashboard = 6)] =
+            (_[(_.SystemButtonShowDashboard = 7)] =
               "SystemButtonShowDashboard"),
-            (_[(_.PairWifiDongle = 7)] = "PairWifiDongle"),
-            (_[(_.TourSendOff = 8)] = "TourSendOff"),
-            (_[(_.SteamGuidedTourFinished = 9)] = "SteamGuidedTourFinished");
+            (_[(_.PairWifiDongle = 8)] = "PairWifiDongle"),
+            (_[(_.TourSendOff = 9)] = "TourSendOff"),
+            (_[(_.SteamGuidedTourFinished = 10)] = "SteamGuidedTourFinished");
         })(_ || (_ = {})),
         (function (_) {
           (_[(_.None = 0)] = "None"),
@@ -45922,12 +46066,12 @@
             children: _,
             ..._
           } = _,
-          [_, _] = _.useState({
-            bRenderChildren: !1,
+          _ = _.useContext(_),
+          [_, _] = _.useState(() => ({
+            bRenderChildren: !_.enabled,
             nPrevRenderHeight: 0,
             nPrevRenderWidth: 0,
-          }),
-          _ = _.useContext(_),
+          })),
           _ = _.useRef(null),
           _ = "LoadAndUnload" === _ && _.enabled,
           _ = _.useCallback(
@@ -46006,9 +46150,8 @@
         __webpack_require__("chunkid"),
         __webpack_require__("chunkid"),
         __webpack_require__("chunkid"),
-        __webpack_require__("chunkid"),
-        __webpack_require__("chunkid"),
         __webpack_require__("chunkid");
+      __webpack_require__("chunkid"), __webpack_require__("chunkid");
       function _(_) {
         const { labelledBy: _ } = _ || {},
           [_, _] = _.useState(void 0);
@@ -54016,7 +54159,6 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
       });
       const _ = {
         PerYear: 31536e3,
@@ -54026,13 +54168,6 @@
         PerHour: 3600,
         PerMinute: 60,
       };
-      function _(_, _) {
-        return (
-          _.getFullYear() == _.getFullYear() &&
-          _.getMonth() == _.getMonth() &&
-          _.getDate() == _.getDate()
-        );
-      }
       function _(_, _) {
         return _.getFullYear() == _.getFullYear();
       }
@@ -54063,6 +54198,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");

@@ -15,7 +15,6 @@ ${BASE_URL_STORE_CDN_ASSETS}promo/steamawards2024/backgrounds/${internal_name}.j
 ${BASE_URL_STORE_CDN_ASSETS}promo/steamawards2024/backgrounds/${}.jpg?v=3
 ${BASE_URL_STORE_CDN_ASSETS}promo/steamawards2025/level_0${}.webp
 ${BASE_URL_STORE_CDN_ASSETS}rewards/howtoawards/${LANGUAGE}.png
-${BASE_URL_STORE_CDN_ASSETS}steamdeck/steamdeck_promo_0${}.png?v=4
 ${BASE_URL}${patch_website}
 ${BASE_URL}${}
 ${BASE_URL}${}/checkforshortfilmownership/
@@ -1118,6 +1117,7 @@ ${PARTNER_BASE_URL}marketing/message/${gid}
 ${PARTNER_BASE_URL}marketingmessages/messagepreview/${gid}/?cc=${}&l=${}&bForceSteamChina=${}&low_bandwidth=${}&timezone=${_ ? _ : ""}&locale=${}&dlc_override=${_ ? _ : ""}
 ${PARTNER_BASE_URL}marketingmessages/messagepreview/${}/?cc=${}&l=${language}
 ${PARTNER_BASE_URL}meetsteam
+${PARTNER_BASE_URL}meetsteam/admin/ajaxgetpartnersforaccount?accountid=${}
 ${PARTNER_BASE_URL}meetsteam/admin/ajaxgetregistrations
 ${PARTNER_BASE_URL}meetsteam/ajaxbatchgetuseremails
 ${PARTNER_BASE_URL}meetsteam/ajaxregisterinterest
@@ -1396,6 +1396,7 @@ ${STORE_BASE_URL}actions/ajaxgetwatchvodtoken
 ${STORE_BASE_URL}actions/ajaxresolvepackages
 ${STORE_BASE_URL}actions/ajaxresolvesubscriptions
 ${STORE_BASE_URL}ajaxappreviews/${}?${}
+${STORE_BASE_URL}ajaxmanagereviewanomalies/${}/
 ${STORE_BASE_URL}ajaxreportproductaction/${}/
 ${STORE_BASE_URL}api/${_ ? "addtowishlist" : "removefromwishlist"}
 ${STORE_BASE_URL}api/addtowishlist
@@ -1532,9 +1533,9 @@ ${STORE_BASE_URL}gameexplorer/exploreplayedlist
 ${STORE_BASE_URL}genre/Early%20Access/
 ${STORE_BASE_URL}genre/Free%20to%20Play/
 ${STORE_BASE_URL}greatondeck
+${STORE_BASE_URL}handlereviewanomaly/${}/
 ${STORE_BASE_URL}hardware/
 ${STORE_BASE_URL}hardware_recycling/
-${STORE_BASE_URL}hwsurvey/
 ${STORE_BASE_URL}itemstore/${nAppID}/
 ${STORE_BASE_URL}itemstore/${nAppID}/detail/${nItemDefID}
 ${STORE_BASE_URL}itemstore/${}
@@ -1582,6 +1583,7 @@ ${STORE_BASE_URL}news/app/${}/view/${event_gid}
 ${STORE_BASE_URL}news/app/${}/view/${}
 ${STORE_BASE_URL}news/app/1675200
 ${STORE_BASE_URL}news/app/250820
+${STORE_BASE_URL}news/app/4165890
 ${STORE_BASE_URL}news/app/593110
 ${STORE_BASE_URL}news/app/593110/view/4326355263805583415
 ${STORE_BASE_URL}news/collection/sales/
@@ -1667,17 +1669,11 @@ ${STORE_BASE_URL}search/?${}
 ${STORE_BASE_URL}search/?${}=${name}
 ${STORE_BASE_URL}search/?controllersupport=${strCategory}
 ${STORE_BASE_URL}search/?controllersupport=${strCategory}%2C${strSecondaryCategory}
-${STORE_BASE_URL}search/?filter=${_ ? "topsellers" : "globaltopsellers"}
 ${STORE_BASE_URL}search/results/?${}
 ${STORE_BASE_URL}search/suggest
 ${STORE_BASE_URL}sitemap
 ${STORE_BASE_URL}sitemap/#genres
 ${STORE_BASE_URL}specials/
-${STORE_BASE_URL}stats/content/
-${STORE_BASE_URL}stats/support/
-${STORE_BASE_URL}stats/support?json=1
-${STORE_BASE_URL}stats/supportdata.json
-${STORE_BASE_URL}stats/userdata.json?days_back=3
 ${STORE_BASE_URL}steam_refunds
 ${STORE_BASE_URL}steam_refunds/
 ${STORE_BASE_URL}steamawards/
@@ -1711,6 +1707,7 @@ ${STORE_BASE_URL}userreviews/ajaxgetvotes/
 ${STORE_BASE_URL}userreviews/rate/${}
 ${STORE_BASE_URL}userreviews/votetag/${}
 ${STORE_BASE_URL}video/details/${}/0
+${STORE_BASE_URL}vr/
 ${STORE_BASE_URL}vtt/video/${}
 ${STORE_BASE_URL}widget/${appid}/?${}
 ${STORE_BASE_URL}wishlist
@@ -1754,6 +1751,7 @@ ${STORE_ITEM_BASE_URL}${filename}
 ${STORE_ITEM_BASE_URL}${}
 ${STORE_ITEM_BASE_URL}steam/apps/${}/header.jpg
 ${STORE_ITEM_BASE_URL}steam/apps/${}/portrait.png
+${STORE_ITEM_BASE_URL}steam/clans/${}/${}
 ${STORE_ITEM_BASE_URL}steam/clusters/${}/${}/${}${}
 ${STORE_ITEM_BASE_URL}steam/spotlights/${}/${}${}
 ${STORE_URL}app/${DOTA_APP_ID}/Dota_2/
@@ -1762,6 +1760,7 @@ ${STORE_URL}app/730/CounterStrike_2/
 ${SUPPORT_BASE_URL}account/activity/${}
 ${SUPPORT_BASE_URL}account/chatsessions/${}?refID=moderation_${type}-${group_id}
 ${SUPPORT_BASE_URL}account/community/${steamid}
+${SUPPORT_BASE_URL}account/overview/${}
 ${SUPPORT_BASE_URL}wizard/HelpWithPublishing?issueid=915
 ${URL}${URL}
 ${URL}${}
@@ -2151,7 +2150,6 @@ http://help.steampowered.com/
 http://json-schema.org/draft-04/schema#
 http://json-schema.org/draft-07/schema#
 http://proxy
-http://steamcommunity.com/games/593110/announcements/detail/1301948399251160549
 http://steamconnecttest.com
 http://steamloopback.host
 http://store-tc.k.steam.net/graph
@@ -2983,7 +2981,6 @@ https://store.steampowered.com/app/${appid}?announce_gid=${announcementid}
 https://store.steampowered.com/app/${appid}?snr=${g_SNR}
 https://store.steampowered.com/app/${unAppID}/
 https://store.steampowered.com/app/${unAppID}/${url_name}/
-https://store.steampowered.com/app/1675200/Steam_Deck/?utm_source=steamdeckcharts
 https://store.steampowered.com/app/570/Dota_2/
 https://store.steampowered.com/app/730/CounterStrike_2/
 https://store.steampowered.com/appreport/${nAppId}/report/

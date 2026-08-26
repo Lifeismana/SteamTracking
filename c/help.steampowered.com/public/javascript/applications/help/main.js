@@ -12777,15 +12777,16 @@
             (_[(_.ControllerPairing = 1)] = "ControllerPairing"),
             (_[(_.WelcomeToSteamFrame = 2)] = "WelcomeToSteamFrame"),
             (_[(_.PlayspaceSetup = 3)] = "PlayspaceSetup"),
-            (_[(_.SystemButtonHideDashboard = 4)] =
+            (_[(_.LaserMouse = 4)] = "LaserMouse"),
+            (_[(_.SystemButtonHideDashboard = 5)] =
               "SystemButtonHideDashboard"),
-            (_[(_.SystemButtonDashboardHidden = 5)] =
+            (_[(_.SystemButtonDashboardHidden = 6)] =
               "SystemButtonDashboardHidden"),
-            (_[(_.SystemButtonShowDashboard = 6)] =
+            (_[(_.SystemButtonShowDashboard = 7)] =
               "SystemButtonShowDashboard"),
-            (_[(_.PairWifiDongle = 7)] = "PairWifiDongle"),
-            (_[(_.TourSendOff = 8)] = "TourSendOff"),
-            (_[(_.SteamGuidedTourFinished = 9)] = "SteamGuidedTourFinished");
+            (_[(_.PairWifiDongle = 8)] = "PairWifiDongle"),
+            (_[(_.TourSendOff = 9)] = "TourSendOff"),
+            (_[(_.SteamGuidedTourFinished = 10)] = "SteamGuidedTourFinished");
         })(_ || (_ = {})),
         (function (_) {
           (_[(_.None = 0)] = "None"),
@@ -14320,106 +14321,112 @@
       (0, _._)([_._], _.prototype, "BUserHasVolumePreference", null),
         (0, _._)([_._], _.prototype, "SetVolumePreference", null);
       const _ = (0, _.forwardRef)(function (_, _) {
-        const {
-            video: _,
-            bAutoPlay: _,
-            bControls: _,
-            bLoop: _,
-            bMuted: _,
-            className: _,
-            mediaScale: _,
-            onClick: _,
-            altText: _,
-          } = _,
-          _ = (0, _.useMemo)(
-            () =>
-              Boolean(
-                _.rgVideoTracks?.some(
-                  (_) => "subtitles" == _.sKind || "captions" == _.sKind,
+          const {
+              video: _,
+              bAutoPlay: _,
+              bControls: _,
+              bLoop: _,
+              bMuted: _,
+              className: _,
+              mediaScale: _,
+              onClick: _,
+              altText: _,
+            } = _,
+            _ = (0, _.useMemo)(
+              () =>
+                Boolean(
+                  _.rgVideoTracks?.some(
+                    (_) => "subtitles" == _.sKind || "captions" == _.sKind,
+                  ),
                 ),
-              ),
-            [_.rgVideoTracks],
-          ),
-          [_, _] = _.useState(!1);
-        if (!_.rgVideoSources || !_.rgVideoSources.length) return null;
-        const _ = (function (_) {
-          return !(
-            !(0, _._)(_.sPoster) ||
-            (_.rgVideoSources &&
-              _.rgVideoSources.some((_) => !(0, _._)(_.sURL))) ||
-            (_.rgVideoTracks && _.rgVideoTracks.some((_) => !(0, _._)(_.sURL)))
-          );
-        })(_);
-        let _;
-        (!_ || (_ && "public" == _._.WEB_UNIVERSE)) && (_ = "anonymous");
-        const _ = _ || (_ && _.Get().BVolumePreferenceMuted()),
-          _ = _.sPoster ? _(_.sPoster) : "";
-        return (0, _.jsxs)("video", {
-          width: "100%",
-          height: "auto",
-          autoPlay: _,
-          muted: _,
-          playsInline: !0,
-          controls: _,
-          poster: _,
-          loop: _,
-          crossOrigin: _,
-          onVolumeChange: (_) => {
-            const _ = _.target,
-              _ = _.muted ? 0 : _.volume;
-            _ && _.Get().SetVolumePreference(_);
-          },
-          onPlay: (_) => {
-            const _ = _.target,
-              _ = 0 == _.currentTime,
-              _ = _.Get().BUserHasVolumePreference();
-            if ((_(!0), _))
-              if (_ || _)
-                _ &&
-                  ((_.volume = _.Get().GetVolumePreference()),
-                  (_.muted = _.Get().BVolumePreferenceMuted()));
-              else {
-                const _ = _.muted ? 0 : _.volume;
-                _.Get().SetVolumePreference(_);
-              }
-          },
-          ref: _,
-          className: _,
-          onClick: _,
-          "aria-label": _,
-          style: {
-            width: _ && _ >= 1 && _ < 100 ? `${_}%` : void 0,
-          },
-          children: [
-            (0, _.jsx)(_, {
-              rgVideoSources: _.rgVideoSources,
-            }),
-            (0, _.jsx)(_, {
-              rgVideoTracks: _.rgVideoTracks,
-            }),
-          ],
-        });
-      });
-      function _(_) {
+              [_.rgVideoTracks],
+            ),
+            [_, _] = _.useState(!1),
+            _ = _();
+          if (!_.rgVideoSources || !_.rgVideoSources.length) return null;
+          const _ = (function (_) {
+            return !(
+              !(0, _._)(_.sPoster) ||
+              (_.rgVideoSources &&
+                _.rgVideoSources.some((_) => !(0, _._)(_.sURL))) ||
+              (_.rgVideoTracks &&
+                _.rgVideoTracks.some((_) => !(0, _._)(_.sURL)))
+            );
+          })(_);
+          let _;
+          (!_ || (_ && _._.EUNIVERSE == _.wLO)) && (_ = "anonymous");
+          const _ = _ || (_ && _.Get().BVolumePreferenceMuted()),
+            _ = _.sPoster ? _(_.sPoster, _) : "";
+          return (0, _.jsxs)("video", {
+            width: "100%",
+            height: "auto",
+            autoPlay: _,
+            muted: _,
+            playsInline: !0,
+            controls: _,
+            poster: _,
+            loop: _,
+            crossOrigin: _,
+            onVolumeChange: (_) => {
+              const _ = _.target,
+                _ = _.muted ? 0 : _.volume;
+              _ && _.Get().SetVolumePreference(_);
+            },
+            onPlay: (_) => {
+              const _ = _.target,
+                _ = 0 == _.currentTime,
+                _ = _.Get().BUserHasVolumePreference();
+              if ((_(!0), _))
+                if (_ || _)
+                  _ &&
+                    ((_.volume = _.Get().GetVolumePreference()),
+                    (_.muted = _.Get().BVolumePreferenceMuted()));
+                else {
+                  const _ = _.muted ? 0 : _.volume;
+                  _.Get().SetVolumePreference(_);
+                }
+            },
+            ref: _,
+            className: _,
+            onClick: _,
+            "aria-label": _,
+            style: {
+              width: _ && _ >= 1 && _ < 100 ? `${_}%` : void 0,
+            },
+            children: [
+              (0, _.jsx)(_, {
+                rgVideoSources: _.rgVideoSources,
+              }),
+              (0, _.jsx)(_, {
+                rgVideoTracks: _.rgVideoTracks,
+              }),
+            ],
+          });
+        }),
+        _ = _.createContext(void 0);
+      function _() {
+        return _.useContext(_) || (0, _._)();
+      }
+      function _(_, _) {
         if (_)
           try {
             const _ = new URL(_);
             return (
-              (_.search =
-                (_.search ? _.search + "&" : "?") + "origin=" + (0, _._)()),
-              _.toString()
+              (_.search = (_.search ? _.search + "&" : "?") + "origin=" + _),
+              __webpack_require__.toString()
             );
           } catch {
             return _;
           }
       }
       function _(_) {
-        const { rgVideoSources: _ } = _;
+        const { rgVideoSources: _ } = _,
+          _ = _();
         return _.filter((_) => Boolean(_.sURL)).map((_) =>
           (0, _.jsx)(
             "source",
             {
-              src: _(_.sURL),
+              src: _(_.sURL, _),
               type: _.sFormat,
             },
             _.sURL,
@@ -14442,9 +14449,10 @@
           : null;
       }
       function _(_) {
-        const { track: _, rgVideoTracks: _ } = _;
+        const { track: _, rgVideoTracks: _ } = _,
+          _ = _();
         let _ = _.eLanguage;
-        if ((0, _._)())
+        if (_._.EREALM == _._.k_ESteamRealmChina)
           if (_._.IsELanguageValidInRealm(_, _._.k_ESteamRealmChina))
             _ = _._.GetELanguageFallback(_);
           else {
@@ -14459,7 +14467,7 @@
         else if (!_._.IsELanguageValidInRealm(_, _._.k_ESteamRealmGlobal))
           return null;
         return (0, _.jsx)("track", {
-          src: _(_.sURL),
+          src: _(_.sURL, _),
           kind: _.sKind,
           default: _.bDefault,
           srcLang: (0, _.wwZ)(_),
@@ -14544,30 +14552,29 @@
             _ = "";
           if (
             (_.forEach((_, _) => {
-              this.m_mapYouTubeVideo.has(_)
-                ? __webpack_require__.push(this.m_mapYouTubeVideo.get(_))
+              const _ = this.m_mapYouTubeVideo.get(_);
+              _
+                ? __webpack_require__.push(_)
                 : (_.length > 0 && (_ += ","), (_ += _));
             }),
             0 == _.length)
           )
             return _;
           let _ = {
-              youtubevideoids: _,
-            },
-            _ = null;
-          return (
-            (_ = await _().get(
+            youtubevideoids: _,
+          };
+          const _ = await _().get(
               _._.STORE_BASE_URL + "/events/ajaxgetdynamiceventmetadata",
               {
                 params: _,
                 cancelToken: _.token,
               },
-            )),
+            ),
+            _ = _?.data?.youtube;
+          return (
             _ &&
-              _.data &&
-              _.data.youtube &&
               (0, _._)(() => {
-                _.data.youtube.forEach((_, _) => {
+                _.forEach((_, _) => {
                   this.m_mapYouTubeVideo.set(_.videoid, _),
                     __webpack_require__.push(_);
                 });
@@ -14580,30 +14587,29 @@
             _ = "";
           if (
             (_.forEach((_, _) => {
-              this.m_mapSharedFile.has(_)
-                ? __webpack_require__.push(this.m_mapSharedFile.get(_))
+              const _ = this.m_mapSharedFile.get(_);
+              _
+                ? __webpack_require__.push(_)
                 : (_.length > 0 && (_ += ","), (_ += _));
             }),
             0 == _.length)
           )
             return _;
           let _ = {
-              sharedfileids: _,
-            },
-            _ = null;
-          return (
-            (_ = await _().get(
+            sharedfileids: _,
+          };
+          const _ = await _().get(
               _._.STORE_BASE_URL + "/events/ajaxgetdynamiceventmetadata",
               {
                 params: _,
                 cancelToken: _.token,
               },
-            )),
+            ),
+            _ = _?.data?.sharedfiles;
+          return (
             _ &&
-              _.data &&
-              _.data.sharedfiles &&
               (0, _._)(() => {
-                _.data.sharedfiles.forEach((_, _) => {
+                _.forEach((_, _) => {
                   this.m_mapSharedFile.set(_.sharedfileid, _),
                     __webpack_require__.push(_);
                 });
@@ -15445,7 +15451,7 @@
             let _ = document.createElement("script");
             _.src = "https://www.youtube.com/iframe_api";
             let _ = document.getElementsByTagName("script")[0];
-            _.parentNode.insertBefore(_, _),
+            _.parentNode?.insertBefore(_, _),
               (window.onYouTubeIframeAPIReady = _);
           }
           _ && (_.includes(_) || _.push(_));
@@ -15491,8 +15497,8 @@
         componentDidUpdate(_) {
           _.forcePause != this.props.forcePause &&
             (this.props.forcePause
-              ? this.m_player.pauseVideo()
-              : this.m_player.playVideo());
+              ? this.m_player?.pauseVideo()
+              : this.m_player?.playVideo());
         }
         DestroyPlayer() {
           if (this.m_player)
@@ -15547,7 +15553,10 @@
           (this.m_bPlayerReady = !1), (this.m_player = new _.Player(_, _));
         }
         OnPlayerReady(_) {
-          if (((this.m_bPlayerReady = !0), this.props.onVideoInfoChanged)) {
+          if (
+            ((this.m_bPlayerReady = !0),
+            this.props.onVideoInfoChanged && this.m_player)
+          ) {
             let _ = this.m_player.getVideoData(),
               _ = {
                 strAuthor: "",
@@ -15561,8 +15570,8 @@
           }
           this.props.width &&
             this.props.height &&
-            this.m_player.setSize(this.props.width, this.props.height),
-            this.props.autoplay && this.m_player.playVideo(),
+            this.m_player?.setSize(this.props.width, this.props.height),
+            this.props.autoplay && this.m_player?.playVideo(),
             this.props.onPlayerReady && this.props.onPlayerReady();
         }
         OnPlayerStateChange(_) {
@@ -16580,7 +16589,7 @@
       const _ = (_) => {
         const { href: _, ..._ } = _;
         let _,
-          _ = (0, _._)(_);
+          _ = (0, _._)(_ ?? "");
         _(_)
           ? ((_ = (_._.IN_CLIENT ? "steam://openurl_external/" : "") + _(_)),
             (_ = "noopener nofollow"))
@@ -16628,9 +16637,11 @@
           (0, _.jsx)(_, {
             className: (0, _._)(_().TableCell, "td" == _ && "BB_TableData"),
             ..._,
-            style: _ && {
-              width: _,
-            },
+            style: _
+              ? {
+                  width: _,
+                }
+              : void 0,
             children: _.children,
           })
         );
@@ -16766,25 +16777,31 @@
       })(_ || (_ = {}));
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        return `${_}/${_}`;
+      }
+      const _ = _.createContext({});
+      new RegExp(
+        `${_.replace(/[{}]/g, "\\$&")}/(\\d+)/([0-9a-f]+\\.[a-z0-9]+)`,
+        "gi",
+      );
       function _(_, _, _ = 0) {
+        return _(_, _, _, _.useContext(_));
+      }
+      function _(_, _, _ = 0, _) {
         if (!_ || 0 == _.length) return null;
         if (_?.startsWith(_)) return _.ReplacementTokenToClanImageURL(_);
         if (_?.startsWith(_)) {
-          const _ = new Array(),
-            _ = _.GetBaseURL(),
+          const _ = _.GetBaseURL(),
             _ = _.substring(23),
             _ = parseInt(_.substring(0, _.indexOf("/"))),
             _ = _.substring(_.indexOf("/") + 1),
-            _ = _.GetHashFromHashAndExt(_),
-            _ = _.GetExtStringFromHashAndExt(_);
-          if (null != _) {
-            let _ = (0, _.LgB)(_);
-            _.push(_ + _ + "/" + _ + "/" + _ + _ + "?t=" + _),
-              _ == _.Pn1 &&
-                ((_ = (0, _.x6o)((0, _.LgB)(_))),
-                _.push(_ + _ + "/" + _ + "/" + _ + _ + "?t=" + _));
-          }
-          return _.push(_.GenerateURLFromHashAndExt(_, _)), _;
+            _ = _.GenerateURLFromHashAndExt(_, _);
+          if (!1 === _?.[_(_, _)]) return _;
+          const _ = _.GetLocalizedClanImageFileNames(_, _).map(
+            (_) => _ + _ + "/" + _ + "?t=" + _,
+          );
+          return _.push(_), _;
         }
         return _;
       }
@@ -16840,6 +16857,15 @@
             return _.substring(0, _.length - _.length);
           },
           GetExtStringFromHashAndExt: (_) => _.substring(_.lastIndexOf(".")),
+          GetLocalizedClanImageFileNames(_, _) {
+            if (null == _) return [];
+            const _ = this.GetHashFromHashAndExt(_),
+              _ = this.GetExtStringFromHashAndExt(_),
+              _ = [_ + "/" + (0, _.LgB)(_) + _];
+            return (
+              _ == _.Pn1 && _.push(_ + "/" + (0, _.x6o)((0, _.LgB)(_)) + _), _
+            );
+          },
           GenerateURLFromHashAndExt(_, _, _ = _.full) {
             return this.GenerateURLFromHashAndExtAndLang(
               _,
@@ -17021,9 +17047,7 @@
                 (null != _ && null != _ && 0 != _.length) ||
                   (_ = _?.args?.[""]);
                 const _ = _?.args?.alt,
-                  _ = (function (_, _, _ = 0) {
-                    return _(_, _, _);
-                  })(_, _.language, Number.parseInt(_));
+                  _ = _(_, _.language, Number.parseInt(_));
                 return null == _
                   ? null
                   : "string" == typeof _
@@ -27690,7 +27714,9 @@
             (_) => {
               (document.hasFocus() || document.activeElement != _.current) &&
                 (_.currentTarget == _.current
-                  ? (_.BIsActive() || _.bInVR) && _.DelayHideVirtualKeyboard()
+                  ? _.detail.focusedNode?.Element != _.current &&
+                    (_.BIsActive() || _.bInVR) &&
+                    _.DelayHideVirtualKeyboard()
                   : console.warn(
                       "keyboard got blur event, but it's not the active element",
                     ));
@@ -53744,7 +53770,7 @@
         constructor(_ = null) {
           super(),
             _.prototype.type || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [3], null);
+            _.Message.initialize(this, _, 0, -1, [3, 9], null);
         }
         static sm_m;
         static sm_mbf;
@@ -53795,6 +53821,14 @@
                     _: 8,
                     _: _._.readBool,
                     _: _._.writeBool,
+                  },
+                  survey_interactive_elements: {
+                    _: 9,
+                    _: !0,
+                    _: !0,
+                    _: _._.readEnum,
+                    pbr: _._.readPackedEnum,
+                    _: _._.writeRepeatedEnum,
                   },
                   required_age: {
                     _: 10,
@@ -56827,8 +56861,83 @@
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
           super(),
+            _.prototype.quote || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  quote: {
+                    _: 1,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  score: {
+                    _: 2,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  site: {
+                    _: 3,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  url: {
+                    _: 4,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "StoreItem_PressReview";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
             _.prototype.steam_award || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1, 10, 13], null);
+            _.Message.initialize(this, _, 0, -1, [1, 10, 13, 15, 18], null);
         }
         static sm_m;
         static sm_mbf;
@@ -56908,6 +57017,30 @@
                     _: 14,
                     _: _._.readString,
                     _: _._.writeString,
+                  },
+                  interactive_elements: {
+                    _: 15,
+                    _: !0,
+                    _: !0,
+                    _: _._.readEnum,
+                    pbr: _._.readPackedEnum,
+                    _: _._.writeRepeatedEnum,
+                  },
+                  content_survey_notes: {
+                    _: 16,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  content_survey_ai_notes: {
+                    _: 17,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  press_review: {
+                    _: 18,
+                    _: _,
+                    _: !0,
+                    _: !0,
                   },
                 },
               }),
@@ -61486,7 +61619,7 @@
         (_.schinese = () =>
           __webpack_require__._("chunkid").then(_._.bind(_, 9965, 19))),
         (_.spanish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 1812, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 9431, 19))),
         (_.swedish = () =>
           __webpack_require__._("chunkid").then(_._.bind(_, 7046, 19))),
         (_.tchinese = () =>
@@ -72829,6 +72962,7 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
       function _(_) {
         if (void 0 === _)
@@ -73283,7 +73417,7 @@
   },
   (_) => {
     _._(0, [8997], () => {
-      return (_ = 3846), _((_._ = _));
+      return (_ = 9810), _((_._ = _));
       var _;
     });
     _._();

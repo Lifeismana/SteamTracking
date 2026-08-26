@@ -24,6 +24,13 @@
     chunkid: (module) => {
       module.exports = {
         ImportButtonLabel: "_1QCMW1MwEkiLeTlmhMvSs_",
+        AccountSummary: "_3ASk__24cRSvf749cMDwat",
+        AccountAvatar: "_2xoRnY-a7zMtF4eXy564LW",
+        AccountPersonaName: "_13y5R1N5OAhnGi8UjBv9ZK",
+        PartnerList: "_EdCW3WiSPTQsVts-RIeJ",
+        PartnerListHeader: "_4TErK934px6TrK1V9JGoD",
+        PartnerListRow: "CZqR_ufpzWTsB5Z6N9Zut",
+        PartnerListRowSelected: "_2d0ftwVO6CThilpy0rp1mx",
       };
     },
     chunkid: (module) => {
@@ -1491,6 +1498,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         m_steamInterface;
@@ -1513,16 +1521,83 @@
       function _() {
         return _.Get().GetSaleFeatureTransport().GetServiceTransport();
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        return (0, _._)({
+          queryKey: ["MeetSteamPartnersForAccount", _],
+          queryFn: () =>
+            (async function (_) {
+              const _ = `${_._.PARTNER_BASE_URL}meetsteam/admin/ajaxgetpartnersforaccount?accountid=${_}`,
+                _ = await fetch(_);
+              if (!_._)
+                throw new Error(
+                  `Failed to read the partner list for account ${_}`,
+                );
+              const _ = await __webpack_require__.json();
+              if (_.success != _._)
+                throw new Error(
+                  `Failed to read the partner list for account ${_}: ${_.msg}`,
+                );
+              return _.partners ?? [];
+            })(_),
+          enabled: _ > 0,
+        });
+      }
+      function _(_, _ = {}) {
+        const {
+            nTimeoutMS: _ = 350,
+            nTimeoutExtensionMS: _ = 125,
+            nMaxTimeoutExtensions: _ = 3,
+          } = _,
+          [_, _] = _.useState(_),
+          _ = _.useRef(void 0);
+        return (
+          _.useEffect(() => {
+            const _ = performance.now();
+            _.current
+              ? _ - _.current.tsLastChange < _ * _ &&
+                (_.current.tsScheduledTimeout = Math.max(
+                  performance.now() + _,
+                  _.current.tsScheduledTimeout,
+                ))
+              : (_.current = {
+                  tsLastChange: _,
+                  tsScheduledTimeout: performance.now() + _,
+                });
+            const _ = _.current.tsScheduledTimeout - performance.now(),
+              _ = window.setTimeout(() => {
+                (_.current = void 0), _(_);
+              }, _);
+            return () => window.clearTimeout(_);
+          }, [_, _, _, _]),
+          _
+        );
+      }
       function _(_) {
         const { hideModal: _, gid: _ } = _,
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(null),
-          [_, _] = _.useState(0),
+          [_, _] = _.useState(""),
           [_, _] = _.useState(""),
           [_, _] = _.useState(""),
           [_, _] = _.useState(!1),
+          _ = _(_),
+          _ = (function (_) {
+            const _ = _.trim();
+            if (!/^\d+$/.test(_)) return 0;
+            if (Number(_) > 4294967295) {
+              const _ = new _._(_);
+              return _.BIsValid() && _.BIsIndividualAccount()
+                ? _.GetAccountID()
+                : 0;
+            }
+            return Number(_);
+          })(_),
+          _ = Boolean(_.trim()) && !_,
           _ = _(),
+          _ = _(_),
+          _ = _.data,
           _ = (0, _._)({
             queryKey: ["MeetSteamInviteDirectDialog", _, _],
             queryFn: async () => {
@@ -1539,12 +1614,13 @@
             enabled: Boolean(_) && _ > 0,
           });
         _.useEffect(() => {
-          _.isLoading ||
-            (_.isSuccess &&
-              (_(_.data.partner_id ? _.data.partner_id.toString() : ""),
+          if (!_.isLoading && _.isSuccess) {
+            const _ = 1 == _?.length ? _[0].partnerid.toString() : "";
+            _(_.data.partner_id ? _.data.partner_id.toString() : _),
               _(_.data.email_override ?? ""),
-              _(_.data.allow_registration_if_full ?? !1)));
-        }, [_.isLoading, _.isSuccess, _.data]);
+              _(_.data.allow_registration_if_full ?? !1);
+          }
+        }, [_.isLoading, _.isSuccess, _.data, _]);
         return (0, _.jsxs)(_._, {
           strTitle: "Invite User",
           bOKDisabled: !_ || _ || _.isLoading,
@@ -1579,12 +1655,27 @@
             !_ &&
               (0, _.jsxs)(_.Fragment, {
                 children: [
+                  (0, _.jsx)("div", {
+                    children:
+                      "Saving sends an invitation email to this account only, and only if it has not been sent one for this event already. It does not send the invitation emails queued for anyone else. Use the Invitation And Registration Status dialog for those.",
+                  }),
                   (0, _.jsx)(_._, {
-                    type: "number",
-                    label: "Account ID",
-                    onChange: (_) => _(Number.parseInt(_.currentTarget.value)),
+                    type: "text",
+                    label: "Account ID or Steam ID",
+                    description:
+                      "Accepts either the 32-bit account id or the 64-bit steam id",
+                    onChange: (_) => _(_.currentTarget.value),
                     value: _,
                   }),
+                  _ &&
+                    (0, _.jsx)("div", {
+                      className: _.ErrorStylesWithIcon,
+                      children: "That is not a valid account id or steam id.",
+                    }),
+                  0 != _ &&
+                    (0, _.jsx)(_, {
+                      nAccountID: _,
+                    }),
                   0 != _ &&
                     !_.isLoading &&
                     (0, _.jsxs)(_.Fragment, {
@@ -1594,6 +1685,13 @@
                           label: "Partner ID (optional)",
                           onChange: (_) => _(_.currentTarget.value),
                           value: _,
+                        }),
+                        (0, _.jsx)(_, {
+                          rgPartners: _,
+                          bLoading: _.isLoading,
+                          bFailed: _.isError,
+                          strPartnerID: _,
+                          SetPartnerID: _,
                         }),
                         (0, _.jsx)(_._, {
                           type: "text",
@@ -1625,6 +1723,99 @@
               }),
           ],
         });
+      }
+      function _(_) {
+        const { nAccountID: _ } = _,
+          [_, _] = (0, _._)(_);
+        if (_)
+          return (0, _.jsx)(_._, {
+            size: "small",
+            position: "center",
+            string: (0, _._)("#Loading"),
+          });
+        if (!_)
+          return (0, _.jsx)("div", {
+            className: _.ErrorStylesWithIcon,
+            children: `We could not find an account for ${_}.`,
+          });
+        const _ = _._.InitFromAccountID(_).ConvertTo64BitString();
+        return (0, _.jsxs)("div", {
+          className: _().AccountSummary,
+          children: [
+            (0, _.jsx)("img", {
+              className: _().AccountAvatar,
+              src: _.avatar_url?.replace(/\.jpg$/, "_medium.jpg"),
+            }),
+            (0, _.jsxs)("div", {
+              children: [
+                (0, _.jsx)("div", {
+                  className: _().AccountPersonaName,
+                  children: _.persona_name,
+                }),
+                (0, _.jsx)("a", {
+                  href: `${_._.SUPPORT_BASE_URL}account/overview/${_}`,
+                  target: "_blank",
+                  rel: "noopener noreferrer",
+                  children: `Account ${_} / SteamID ${_}`,
+                }),
+              ],
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const {
+          rgPartners: _,
+          bLoading: _,
+          bFailed: _,
+          strPartnerID: _,
+          SetPartnerID: _,
+        } = _;
+        return _
+          ? (0, _.jsx)(_._, {
+              size: "small",
+              position: "center",
+              string: "Looking up partner membership",
+            })
+          : _
+            ? (0, _.jsx)("div", {
+                className: _().PartnerListHeader,
+                children:
+                  "We could not look up partner membership, enter the partner id above.",
+              })
+            : _ && 0 != _.length
+              ? (0, _.jsxs)("div", {
+                  className: _().PartnerList,
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _().PartnerListHeader,
+                      children: "Member of, click to use:",
+                    }),
+                    _.map((_) =>
+                      (0, _.jsxs)(
+                        "a",
+                        {
+                          href: "#",
+                          className: (0, _._)(
+                            _().PartnerListRow,
+                            _.partnerid.toString() == _
+                              ? _().PartnerListRowSelected
+                              : "",
+                          ),
+                          onClick: (_) => {
+                            _.preventDefault(), _(_.partnerid.toString());
+                          },
+                          children: [_.partner_name, " (", _.partnerid, ")"],
+                        },
+                        _.partnerid,
+                      ),
+                    ),
+                  ],
+                })
+              : (0, _.jsx)("div", {
+                  className: _().PartnerListHeader,
+                  children: "This account is not a member of any partner.",
+                });
       }
       function _(_) {
         const { hideModal: _, gid: _ } = _,
@@ -1669,6 +1860,10 @@
                 position: "center",
                 string: (0, _._)("#Saving"),
               }),
+            (0, _.jsx)("div", {
+              children:
+                "Saving sends an invitation email to the accounts imported here that have not been sent one for this event already. It does not send the invitation emails queued for anyone else on the event.",
+            }),
             null == _
               ? (0, _.jsx)(_, {
                   setInvites: _,
@@ -2269,7 +2464,14 @@
           [_, _] = (0, _.useMemo)(
             () =>
               _
-                ? [_.length, _.filter((_) => !_.invitation_emailed).length]
+                ? [
+                    _.length,
+                    _.filter(
+                      (_) =>
+                        !_.invitation_emailed &&
+                        !_.invite_registration_auto_create,
+                    ).length,
+                  ]
                 : [0, 0],
             [_],
           );
@@ -2279,7 +2481,7 @@
           bDisableBackgroundDismiss: !0,
           closeModal: _,
           strDescription:
-            "This will show the users we have invited and their status. As well as individual who were just sent the registration page on their own.",
+            "Every account with an invitation or a registration on this event, and where each one is. Rows with no invite are people who registered themselves from the registration link; they are never sent an invitation email.",
           strTitle: "Invitation And Registration Status",
           children: [
             !_ &&
@@ -2292,7 +2494,11 @@
               (0, _.jsxs)(_.Fragment, {
                 children: [
                   (0, _.jsxs)("div", {
-                    children: ["There are ", _, " registrations."],
+                    children: [
+                      "There are ",
+                      _,
+                      " invitation/registration records.",
+                    ],
                   }),
                   _ > 0 &&
                     (0, _.jsxs)(_._, {
@@ -2332,7 +2538,10 @@
                           return null;
                         })(_, _);
                       },
-                      children: [_, " Invites To Sent. Send now?"],
+                      children: [
+                        _,
+                        " invitation emails are queued for this event. Send them all now?",
+                      ],
                     }),
                   (0, _.jsxs)("table", {
                     children: [
@@ -2639,7 +2848,6 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         return (0, _._)({
@@ -5073,8 +5281,7 @@
               ],
             });
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = (function () {
             const [_] = (0, _.useState)(
@@ -5359,6 +5566,8 @@
         const {
             virtualizer: _,
             bDynamic: _,
+            scrollAlign: _,
+            bNativeScrollIntoView: _,
             idx: _,
             rowGap: _,
             renderItem: _,
@@ -5366,17 +5575,17 @@
           _ = _.useCallback(
             (_, _, _) => (
               _.scrollToIndex(_, {
-                align: "center",
+                align: _,
               }),
               !0
             ),
-            [_, _],
+            [_, _, _],
           );
         return (0, _.jsx)(_._, {
           ref: _ ? _.measureElement : void 0,
           navKey: `VirtualizedListIndex-${_}`,
           "data-index": _,
-          fnScrollIntoViewHandler: _,
+          fnScrollIntoViewHandler: _ ? void 0 : _,
           scrollIntoViewWhenChildFocused: "force",
           style: {
             width: "100%",
@@ -5385,6 +5594,12 @@
           children: _(_),
         });
       });
+      function _(_, _) {
+        const _ = _.getBoundingClientRect().top;
+        return _
+          ? _ - _.getBoundingClientRect().top - _.clientTop + _.scrollTop
+          : _ + (_.ownerDocument.defaultView?.scrollY ?? 0);
+      }
       _.forwardRef(function (_, _) {
         const {
             nRows: _,
@@ -5397,6 +5612,8 @@
             className: _,
             forceVirtualizeType: _,
             hintVirtualizeType: _,
+            scrollAlign: _,
+            bNativeScrollIntoView: _,
             initialOffset: _,
             onOffsetChange: _,
             ..._
@@ -5408,10 +5625,11 @@
           _ = _.useCallback(
             (_) => {
               if (!_) return;
-              const _ = (0, _._)(_, "y");
+              const _ = (0, _._)(_, "y"),
+                _ = _(_, "window" == _ ? null : _);
               (0, _.startTransition)(() => {
                 "window" != _ && _(_ || void 0),
-                  _(_.offsetTop),
+                  _(_),
                   _ || _(_ ? "element" : "window");
               });
             },
@@ -5419,10 +5637,11 @@
           ),
           _ =
             ((_ = (_) => {
-              _.current &&
-                (0, _.startTransition)(() => {
-                  _.current && _(_.current?.offsetTop);
-                });
+              if (!_.current) return;
+              const _ = _(_.current, _);
+              (0, _.startTransition)(() => {
+                _(_);
+              });
             }),
             (0, _._)(
               (_) => {
@@ -5456,6 +5675,8 @@
             measureElement: _,
             forceVirtualizeType: _,
             hintVirtualizeType: _,
+            scrollAlign: _,
+            bNativeScrollIntoView: _,
             initialOffset: _,
             onOffsetChange: _,
           };
@@ -5480,6 +5701,14 @@
           }),
         });
       });
+      function _(_, _, _) {
+        _.useEffect(() => {
+          _ ||
+            (0, _.startTransition)(() => {
+              _.measure();
+            });
+        }, [_, _, _]);
+      }
       function _(_) {
         const {
             nScrollMargin: _,
@@ -5490,6 +5719,7 @@
             initialOffset: _,
             onOffsetChange: _,
             measureElement: _,
+            bDynamic: _,
           } = _,
           _ = ((0, _._)(), _ + _),
           _ = (0, _._)({
@@ -5509,11 +5739,7 @@
         return (
           (_.shouldAdjustScrollPositionOnItemSizeChange = (_) =>
             void 0 !== _ && _.start < (_.scrollOffset ?? 0)),
-          _.useEffect(() => {
-            (0, _.startTransition)(() => {
-              _.measure();
-            });
-          }, [_, _]),
+          _(_, _, _),
           (0, _.jsx)(_, {
             ..._,
             virtualizer: _,
@@ -5531,13 +5757,20 @@
             initialOffset: _,
             onOffsetChange: _,
             measureElement: _,
+            bDynamic: _,
           } = _,
           _ = _ + _,
           _ = (0, _._)(),
           _ = (0, _._)({
             count: _,
-            scrollMargin: _ - (_?.offsetTop || 0),
-            getScrollElement: () => _,
+            scrollMargin: _,
+            getScrollElement: () => (
+              _ &&
+                _.scrollElement !== _ &&
+                void 0 === _ &&
+                (_.scrollOffset = _.scrollTop),
+              _ ?? null
+            ),
             estimateSize: _.useCallback(() => _, [_]),
             measureElement: _,
             overscan: _,
@@ -5555,11 +5788,9 @@
             },
           });
         return (
-          _.useEffect(() => {
-            (0, _.startTransition)(() => {
-              _.measure();
-            });
-          }, [_, _]),
+          (_.shouldAdjustScrollPositionOnItemSizeChange = (_) =>
+            void 0 !== _ && _.start < (_.scrollOffset ?? 0)),
+          _(_, _, _),
           (0, _.jsx)(_, {
             ..._,
             virtualizer: _,
@@ -5567,7 +5798,14 @@
         );
       }
       function _(_) {
-        const { virtualizer: _, nRowGap: _, renderItem: _, bDynamic: _ } = _,
+        const {
+            virtualizer: _,
+            nRowGap: _,
+            renderItem: _,
+            bDynamic: _,
+            scrollAlign: _ = "center",
+            bNativeScrollIntoView: _,
+          } = _,
           _ = _.getVirtualItems(),
           _ = _.length ? _[0].start - _.options.scrollMargin : 0,
           _ = Math.max(0, _.getTotalSize());
@@ -5593,6 +5831,8 @@
                 {
                   virtualizer: _,
                   bDynamic: _,
+                  scrollAlign: _,
+                  bNativeScrollIntoView: _,
                   idx: _.index,
                   rowGap: _,
                   renderItem: _,

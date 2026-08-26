@@ -433,6 +433,20 @@
       __webpack_require__._(module_exports, {
         _: () => _,
       });
+      __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = _.createContext(void 0);
+      function _() {
+        var _;
+        return null !== (_ = _.useContext(_)) && void 0 !== _ ? _ : (0, _._)();
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -513,21 +527,38 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = (0, _.createContext)(!1);
+      var _;
+      const _ = Intl.DateTimeFormat().resolvedOptions().timeZone,
+        _ =
+          "document" in globalThis
+            ? null ===
+                (_ = document.cookie
+                  .split(";")
+                  .find((_) => _.trim().startsWith("timezoneName"))) ||
+              void 0 === _
+              ? void 0
+              : _.split("=")[1]
+            : void 0,
+        _ = _ && decodeURIComponent(_);
+      function _() {
+        return (0, _.useContext)(_) ? _ : null != _ ? _ : _;
+      }
+      "document" in globalThis &&
+        (document.cookie = `timezoneName=${_};expires=${new Date(Date.now() + 31536e6).toUTCString()};path=/;Secure;SameSite=None;`);
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
-      function _(_) {
-        const _ = _()._.guess(),
+      function _(_, _) {
+        const _ = null != _ ? _ : _()._.guess(),
           _ = _().unix(_)._(_),
           _ = (0, _._)();
-        return (
-          _ && __webpack_require__.locale(_), __webpack_require__.format("LT")
-        );
+        return _ && _.locale(_), _.format("LT");
       }
-      function _(_, _) {
-        const _ = _()._.guess(),
+      function _(_, _, _) {
+        const _ = null != _ ? _ : _()._.guess(),
           _ = _().unix(_)._(_),
           _ = (0, _._)();
         return (
@@ -547,6 +578,16 @@
           })
         );
       }
+      function _(_, _, _) {
+        return (0, _._)(_, {
+          weekday: "short",
+          year: _ ? void 0 : "numeric",
+          timeZone: _,
+        });
+      }
+      function _(_, _, _, _) {
+        return _().unix(_)._(_).isSame(_().unix(_)._(_), _);
+      }
       const _ = (0, _._)((_) => {
           const {
               dateAndTime: _,
@@ -554,9 +595,10 @@
               bOnlyTime: _,
               bOnlyDate: _,
             } = _,
+            _ = _(),
             _ = !_ && Boolean(_),
             _ = !_ && Boolean(_),
-            _ = _ && (0, _._)(_),
+            _ = _ && _(_, _),
             _ = _.stylesmodule
               ? {
                   ..._(),
@@ -573,7 +615,7 @@
                         children: " ",
                       })
                     : void 0,
-                  Boolean(_ && _) && _(_, _),
+                  Boolean(_ && _) && _(_, _, _),
                 ],
               })
             : (0, _.jsxs)("div", {
@@ -597,7 +639,7 @@
                     }),
                   (0, _.jsx)("div", {
                     className: _.LocalizedTime,
-                    children: Boolean(_ && _) && _(_, _),
+                    children: Boolean(_ && _) && _(_, _, _),
                   }),
                 ],
               });
@@ -622,20 +664,21 @@
             bTopmost: !0,
             children: _.children,
           });
-        };
-      let _ = class extends _.Component {
-        render() {
-          const { startDateAndTime: _, endDateAndTime: _ = 0 } = this.props,
-            _ = this.props.stylesmodule
+        },
+        _ = (0, _._)((_) => {
+          const { startDateAndTime: _, endDateAndTime: _ = 0 } = _,
+            _ = _.stylesmodule
               ? {
                   ..._(),
-                  ...this.props.stylesmodule,
+                  ..._.stylesmodule,
                 }
-              : _();
-          let _ =
-            this.props.bHideEndTime ||
-            null == this.props.endDateAndTime ||
-            this.props.endDateAndTime < 1;
+              : _(),
+            _ = _(),
+            _ = (0, _._)(),
+            _ =
+              _.bHideEndTime ||
+              null == _.endDateAndTime ||
+              _.endDateAndTime < 1;
           if (null == _ || 0 == _)
             return (0, _.jsxs)("div", {
               className: _.DateAndTime,
@@ -647,7 +690,6 @@
                 (0, _._)("#EventDisplay_TimeDisplayNone"),
               ],
             });
-          let _ = _._.GetTimeNowWithOverride();
           if (_)
             return (0, _.jsxs)("div", {
               className: _.StartDate,
@@ -669,8 +711,8 @@
                 }),
               ],
             });
-          let _ = _ <= _ && _ <= _;
-          const _ = (0, _._)(new Date(1e3 * _), new Date(1e3 * _));
+          const _ = _ <= _ && _ <= _,
+            _ = _(_, _, _, "day");
           return (0, _.jsxs)("div", {
             className: _.MultiDateAndTime,
             children: [
@@ -726,22 +768,17 @@
                 }),
             ],
           });
-        }
-      };
-      _ = (0, _._)([_._], _);
-      let _ = class extends _.Component {
-        render() {
-          const {
-              startDateAndTime: _,
-              endDateAndTime: _,
-              bHideEndTime: _,
-            } = this.props,
-            _ = this.props.stylesmodule
+        }),
+        _ = (0, _._)((_) => {
+          const { startDateAndTime: _, endDateAndTime: _, bHideEndTime: _ } = _,
+            _ = _.stylesmodule
               ? {
                   ..._(),
-                  ...this.props.stylesmodule,
+                  ..._.stylesmodule,
                 }
-              : _();
+              : _(),
+            _ = _(),
+            _ = (0, _._)();
           if (null == _ || 0 == _)
             return (0, _.jsxs)("div", {
               className: _.DateAndTime,
@@ -753,12 +790,10 @@
                 (0, _._)("#EventDisplay_TimeDisplayNone"),
               ],
             });
-          const _ = _._.GetTimeNowWithOverrideAsDate(),
-            _ = _._.GetTimeNowWithOverride(),
-            _ = (0, _._)(new Date(1e3 * _), _),
+          const _ = _(_, _, _, "year"),
             _ = (0, _.jsx)("div", {
               className: _.ShortDateAndTime,
-              children: (0, _._)(_, _),
+              children: _(_, _, _),
             });
           let _ = (0, _.jsxs)(_, {
             rtFullDate: _,
@@ -788,7 +823,7 @@
                     _,
                     (0, _.jsxs)("div", {
                       className: _.ShortDateAndTime,
-                      children: [_(_), " "],
+                      children: [_(_, !1, _), " "],
                     }),
                   ),
                 }),
@@ -830,7 +865,7 @@
                     ),
                   });
           } else {
-            const _ = _.getFullYear() == new Date(1e3 * _).getFullYear();
+            const _ = _(_, _, _, "year");
             _ = (0, _.jsxs)(_.Fragment, {
               children: [
                 (0, _.jsx)("div", {
@@ -843,7 +878,7 @@
                 }),
                 (0, _.jsx)("div", {
                   className: _.ShortDateAndTime,
-                  children: (0, _._)(_, _),
+                  children: _(_, _, _),
                 }),
               ],
             });
@@ -857,8 +892,7 @@
             className: _.ShortDateRange,
             children: [_, _],
           });
-        }
-      };
+        });
       function _(_, _, _) {
         const _ = _._.GetTimeNowWithOverrideAsDate(),
           _ = new Date(1e3 * _),
@@ -896,7 +930,6 @@
           children: [_(_, _, _), " "],
         });
       }
-      _ = (0, _._)([_._], _);
     },
   },
 ]);

@@ -1746,7 +1746,7 @@
         broadcast_whitelist: [],
       };
       var d = r(17720),
-        m = r(40414),
+        m = r(17267),
         u = r(7221),
         _ = r(27939),
         p = r(83085),
@@ -2488,18 +2488,18 @@
         GetForumTopicURL(e) {
           return this.BHasForumTopicGID()
             ? this.appid
-              ? S.TS.COMMUNITY_BASE_URL +
+              ? T.TS.COMMUNITY_BASE_URL +
                 "app/" +
                 this.appid +
                 "/eventcomments/" +
                 this.forumTopicGID
               : e
-                ? S.TS.COMMUNITY_BASE_URL +
+                ? T.TS.COMMUNITY_BASE_URL +
                   "groups/" +
                   e +
                   "/eventcomments/" +
                   this.forumTopicGID
-                : S.TS.COMMUNITY_BASE_URL +
+                : T.TS.COMMUNITY_BASE_URL +
                   "gid/" +
                   this.clanSteamID.ConvertTo64BitString() +
                   "/eventcomments/" +
@@ -2773,12 +2773,12 @@
           if (!this.jsondata.bSaleEnabled) return null;
           if (this.jsondata.sale_update_landing_page_vanity_id)
             return (
-              S.TS.STORE_BASE_URL +
+              T.TS.STORE_BASE_URL +
               `app${this.appid}/landing/${this.jsondata.sale_update_landing_page_vanity_id}`
             );
           if (!Boolean(this.jsondata.sale_vanity_id))
             return (
-              S.TS.STORE_BASE_URL +
+              T.TS.STORE_BASE_URL +
               "newshub/" +
               (this.appid
                 ? "app/" + this.appid
@@ -2790,27 +2790,27 @@
             const e = this.jsondata.source_content_hub;
             return e
               ? "string" == typeof e
-                ? S.TS.STORE_BASE_URL + "category/" + e
+                ? T.TS.STORE_BASE_URL + "category/" + e
                 : "category" == e.type
-                  ? S.TS.STORE_BASE_URL + "category/" + e.category
+                  ? T.TS.STORE_BASE_URL + "category/" + e.category
                   : "tags" == e.type
-                    ? S.TS.STORE_BASE_URL +
+                    ? T.TS.STORE_BASE_URL +
                       "tags/" +
                       ((0, h.l4)() || "en") +
                       "/" +
                       e.tagid
                     : "freetoplay" == e.type
-                      ? S.TS.STORE_BASE_URL + "genre/Free%20to%20Play/"
+                      ? T.TS.STORE_BASE_URL + "genre/Free%20to%20Play/"
                       : "earlyaccess" == e.type
-                        ? S.TS.STORE_BASE_URL + "genre/Early%20Access/"
-                        : S.TS.STORE_BASE_URL + e.type
-              : S.TS.STORE_BASE_URL + "sale/" + this.jsondata.sale_vanity_id;
+                        ? T.TS.STORE_BASE_URL + "genre/Early%20Access/"
+                        : T.TS.STORE_BASE_URL + e.type
+              : T.TS.STORE_BASE_URL + "sale/" + this.jsondata.sale_vanity_id;
           }
           return this.jsondata.sale_vanity_id_valve_approved_for_sale_subpath
-            ? S.TS.STORE_BASE_URL + "sale/" + this.jsondata.sale_vanity_id
+            ? T.TS.STORE_BASE_URL + "sale/" + this.jsondata.sale_vanity_id
             : e
               ? e + "sale/" + this.jsondata.sale_vanity_id
-              : S.TS.STORE_BASE_URL +
+              : T.TS.STORE_BASE_URL +
                 "curator/" +
                 this.clanSteamID.GetAccountID() +
                 "/sale/" +
@@ -3267,44 +3267,51 @@
     },
     75933: (e, t, r) => {
       r.d(t, {
-        $m: () => o,
-        ML: () => p,
-        QS: () => d,
-        Sn: () => b,
-        Wn: () => u,
-        ZI: () => B,
-        a4: () => g,
-        f_: () => h,
-        jD: () => l,
-        jn: () => y,
-        mj: () => c,
-        rp: () => _,
-        sQ: () => m,
+        $m: () => l,
+        ML: () => b,
+        QS: () => m,
+        Sn: () => f,
+        Wn: () => _,
+        ZI: () => w,
+        a4: () => y,
+        f_: () => B,
+        jD: () => c,
+        jn: () => S,
+        mj: () => d,
+        rp: () => h,
+        sQ: () => u,
       });
-      var i = r(22837),
-        a = r(62641),
-        s = r(90626),
-        n = r(24864);
-      const o = "100% 0px 100% 0px",
-        l = "tab",
-        c = "SaleSection_",
-        d = "exploration";
-      var m;
+      var i = r(9646),
+        a = r(22837),
+        s = r(62641),
+        n = r(90626),
+        o = r(24864);
+      const l = "100% 0px 100% 0px",
+        c = "tab",
+        d = "SaleSection_",
+        m = "exploration";
+      var u;
       !(function (e) {
         (e.Random = "r"), (e.Personalized = "p");
-      })(m || (m = {}));
-      const u = 940;
-      function _() {
-        return window.innerWidth >= u;
+      })(u || (u = {}));
+      const _ = 940,
+        p = 1920;
+      function g() {
+        return window.innerWidth ?? p;
       }
-      function p() {
-        const [e, t] = (0, s.useState)(window.innerWidth);
+      function h() {
+        return g() >= _;
+      }
+      function b() {
+        (0, i.d)();
+        const [e, t] = (0, n.useState)(() => g());
         return (
-          (0, s.useEffect)(() => {
+          (0, n.useEffect)(() => {
             const e = () => {
-              t(window.innerWidth);
+              t(g());
             };
             return (
+              e(),
               window.addEventListener("resize", e),
               () => window.removeEventListener("resize", e)
             );
@@ -3312,12 +3319,12 @@
           e
         );
       }
-      function g(e = u) {
-        return p() >= e;
+      function y(e = _) {
+        return b() >= e;
       }
-      function h(e) {
-        const t = g(u),
-          r = (0, a._B)(e);
+      function B(e) {
+        const t = y(_),
+          r = (0, s._B)(e);
         return t
           ? { nMaxCapsulesPerRow: r.nMaxItemsPerRow, bScreenIsWide: t }
           : {
@@ -3331,37 +3338,37 @@
               bScreenIsWide: t,
             };
       }
-      function b(e) {
-        const t = (0, a._B)(e);
-        return _()
+      function f(e) {
+        const t = (0, s._B)(e);
+        return h()
           ? t.nMaxItemsPerRow
           : Math.min(
               Math.max(Math.floor(window.innerWidth / t.nItemMinimumWidth), 1),
               t.nMaxItemsPerRow,
             );
       }
-      function y(e) {
+      function S(e) {
         switch (e) {
-          case n.Oh:
-            return i.mv5;
-          case n._X:
-            return i.KH9;
-          case n.HD:
-            return i.hmR;
-          case n.rb:
-            return i.R2g;
+          case o.Oh:
+            return a.mv5;
+          case o._X:
+            return a.KH9;
+          case o.HD:
+            return a.hmR;
+          case o.rb:
+            return a.R2g;
           default:
             return;
         }
       }
-      function B(e) {
+      function w(e) {
         switch (e) {
-          case i.mv5:
-            return n.Oh;
-          case i.KH9:
-            return n._X;
-          case i.hmR:
-            return n.HD;
+          case a.mv5:
+            return o.Oh;
+          case a.KH9:
+            return o._X;
+          case a.hmR:
+            return o.HD;
           default:
             return;
         }

@@ -1082,10 +1082,7 @@
           item_movie_webm: o,
           item_title: c,
         } = e;
-        if (
-          (null == n ? void 0 : n.length) > 0 &&
-          (null == o ? void 0 : o.length) > 0
-        ) {
+        if (n && o) {
           const r = `${a.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${s}`,
             c = `${a.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${o}`,
             l = `${a.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${n}`;
@@ -1128,47 +1125,52 @@
           : (0, i.jsx)(c.t, { size: "small", string: (0, l.we)("#Loading") });
       }
       function _(e) {
-        const { section: t, rewardDef: s, language: c } = e,
-          l = (0, o.d2)(s.appid, s.community_item_type),
-          [d] = (0, r.q3)(() => {
+        var t, s, c, l;
+        const { section: d, rewardDef: m, language: _ } = e,
+          f = (0, o.d2)(
+            null !== (t = m.appid) && void 0 !== t ? t : 0,
+            null !== (s = m.community_item_type) && void 0 !== s ? s : 0,
+          ),
+          [p] = (0, r.q3)(() => {
             var e;
             return [
               Boolean(
-                null === (e = t.rewards) || void 0 === e
+                null === (e = d.rewards) || void 0 === e
                   ? void 0
                   : e.show_reward_item_name,
               ),
             ];
           });
-        let m;
-        switch (s.community_class) {
+        let h;
+        switch (m.community_class) {
           case n.xi:
           case n.xw:
-            m = `${a.TS.COMMUNITY_BASE_URL}my/edit/avatar`;
+            h = `${a.TS.COMMUNITY_BASE_URL}my/edit/avatar`;
             break;
           case n.u8:
-            m = `${a.TS.COMMUNITY_BASE_URL}my/edit/favoritebadge`;
+            h = `${a.TS.COMMUNITY_BASE_URL}my/edit/favoritebadge`;
             break;
           case n.sU:
           case n.jE:
-            m = `${a.TS.COMMUNITY_BASE_URL}my/edit/background`;
+            h = `${a.TS.COMMUNITY_BASE_URL}my/edit/background`;
             break;
           case n.zs:
-            m = `${a.TS.COMMUNITY_BASE_URL}my/edit/miniprofile`;
+            h = `${a.TS.COMMUNITY_BASE_URL}my/edit/miniprofile`;
             break;
           case n.Ed:
-            m = `${a.TS.COMMUNITY_BASE_URL}chat`;
+            h = `${a.TS.COMMUNITY_BASE_URL}chat`;
         }
         return (0, i.jsxs)("a", {
-          href: m,
+          href: h,
           children: [
             (0, i.jsx)(u, {
-              appid: null == s ? void 0 : s.appid,
-              community_item_type: null == s ? void 0 : s.community_item_type,
+              appid: null !== (c = m.appid) && void 0 !== c ? c : 0,
+              community_item_type:
+                null !== (l = m.community_item_type) && void 0 !== l ? l : 0,
             }),
-            Boolean(d) &&
+            Boolean(p) &&
               (0, i.jsx)("span", {
-                children: null == l ? void 0 : l.item_name,
+                children: null == f ? void 0 : f.item_name,
               }),
           ],
         });

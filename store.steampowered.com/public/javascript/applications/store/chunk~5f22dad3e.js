@@ -4,10 +4,10 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [68904],
   {
-    81886: (e, a, t) => {
-      t.d(a, { fp: () => n, vm: () => i });
-      var r = t(76119);
-      function n(e) {
+    81886: (e, a, n) => {
+      n.d(a, { fp: () => i, vm: () => r });
+      var t = n(91297);
+      function i(e) {
         return (
           !!e &&
           ("game" === e ||
@@ -23,69 +23,69 @@
             "advertising" === e)
         );
       }
-      function i(e) {
+      function r(e) {
         return (
           null != e &&
-          (e == r.uE.HT ||
-            e == r.uE._i ||
-            e == r.uE.Sv ||
-            e == r.uE.Ov ||
-            e == r.uE.ue ||
-            e == r.uE.Hk ||
-            e == r.uE.RA ||
-            e == r.uE.Wz ||
-            e == r.uE.Vi ||
-            e == r.uE.pl)
+          (e == t.uE.HT ||
+            e == t.uE._i ||
+            e == t.uE.Sv ||
+            e == t.uE.Ov ||
+            e == t.uE.ue ||
+            e == t.uE.Hk ||
+            e == t.uE.RA ||
+            e == t.uE.Wz ||
+            e == t.uE.Vi ||
+            e == t.uE.pl)
         );
       }
     },
-    23338: (e, a, t) => {
-      t.d(a, { Y: () => s, j: () => l });
-      var r = t(7850),
-        n = t(90626),
-        i = t(40236),
-        o = t(8871);
+    23338: (e, a, n) => {
+      n.d(a, { Y: () => s, j: () => l });
+      var t = n(7850),
+        i = n(90626),
+        r = n(40236),
+        o = n(8871);
       function s(e) {
-        const a = (0, i.OO)(e, e.options);
-        return (0, r.jsx)("span", { ref: a, style: { fontSize: 0 } });
+        const a = (0, r.OO)(e, e.options);
+        return (0, t.jsx)("span", { ref: a, style: { fontSize: 0 } });
       }
-      const l = n.forwardRef(function (e, a) {
-        const { onLeave: t, onEnter: n, options: s, ...l } = e,
-          u = (0, i.OO)(e, e.options),
+      const l = i.forwardRef(function (e, a) {
+        const { onLeave: n, onEnter: i, options: s, ...l } = e,
+          u = (0, r.OO)(e, e.options),
           d = (0, o.Ue)(u, a);
-        return (0, r.jsx)("div", { ref: d, ...l });
+        return (0, t.jsx)("div", { ref: d, ...l });
       });
     },
-    98735: (e, a, t) => {
-      t.d(a, { Ey: () => p, Rp: () => y });
-      const r = JSON.parse(
+    98735: (e, a, n) => {
+      n.d(a, { Ey: () => y, Rp: () => h });
+      const t = JSON.parse(
         '{"h":{"countries":{"AF":"Afghanistan","AX":"Aland Islands","AL":"Albania","DZ":"Algeria","AS":"American Samoa","AD":"Andorra","AO":"Angola","AI":"Anguilla","AQ":"Antarctica","AG":"Antigua and Barbuda","AR":"Argentina","AM":"Armenia","AW":"Aruba","AU":"Australia","AT":"Austria","AZ":"Azerbaijan","BS":"Bahamas","BH":"Bahrain","BD":"Bangladesh","BB":"Barbados","BY":"Belarus","BE":"Belgium","BZ":"Belize","BJ":"Benin","BM":"Bermuda","BT":"Bhutan","BO":"Bolivia","BA":"Bosnia and Herzegovina","BW":"Botswana","BV":"Bouvet Island","BR":"Brazil","IO":"British Indian Ocean Territory","BN":"Brunei Darussalam","BG":"Bulgaria","BF":"Burkina Faso","BI":"Burundi","KH":"Cambodia","CM":"Cameroon","CA":"Canada","CV":"Cabo Verde","KY":"Cayman Islands","CF":"Central African Republic","TD":"Chad","CL":"Chile","CN":"China","XC":"China","CX":"Christmas Island","CC":"Cocos (Keeling) Islands","CO":"Colombia","KM":"Comoros","CG":"Congo","CD":"Congo, the Democratic Republic of the","CK":"Cook Islands","CR":"Costa Rica","CI":"Cote d\'Ivoire","HR":"Croatia","CY":"Cyprus","CZ":"Czech Republic","DK":"Denmark","DJ":"Djibouti","DM":"Dominica","DO":"Dominican Republic","EC":"Ecuador","EG":"Egypt","SV":"El Salvador","GQ":"Equatorial Guinea","ER":"Eritrea","EE":"Estonia","ET":"Ethiopia","FK":"Falkland Islands (Malvinas)","FO":"Faroe Islands","FJ":"Fiji","FI":"Finland","FR":"France","GF":"French Guiana","PF":"French Polynesia","TF":"French Southern Territories","GA":"Gabon","GM":"Gambia","GE":"Georgia","DE":"Germany","GH":"Ghana","GI":"Gibraltar","GR":"Greece","GL":"Greenland","GD":"Grenada","GP":"Guadeloupe","GU":"Guam","GT":"Guatemala","GN":"Guinea","GW":"Guinea-Bissau","GG":"Guernsey","GY":"Guyana","HT":"Haiti","HM":"Heard and Mc Donald Islands","VA":"Holy See(Vatican City State)","HN":"Honduras","HK":"Hong Kong","HU":"Hungary","IS":"Iceland","IN":"India","ID":"Indonesia","IQ":"Iraq","IE":"Ireland","IM":"Isle of Man","IL":"Israel","IT":"Italy","JM":"Jamaica","JP":"Japan","JE":"Jersey","JO":"Jordan","KZ":"Kazakhstan","KE":"Kenya","KI":"Kiribati","KR":"Korea, Republic of","KW":"Kuwait","KG":"Kyrgyzstan","LA":"Lao People\'s Democratic Republic","LV":"Latvia","LB":"Lebanon","LS":"Lesotho","LR":"Liberia","LI":"Liechtenstein","LT":"Lithuania","LU":"Luxembourg","LY":"Libya","MO":"Macau","MK":"North Macedonia, Republic of","MG":"Madagascar","MW":"Malawi","MY":"Malaysia","MV":"Maldives","ML":"Mali","MT":"Malta","MH":"Marshall Islands","MQ":"Martinique","MR":"Mauritania","MU":"Mauritius","YT":"Mayotte","MX":"Mexico","FM":"Micronesia, Federated States of","MD":"Moldova, Republic of","MC":"Monaco","MN":"Mongolia","ME":"Montenegro","MS":"Montserrat","MA":"Morocco","MZ":"Mozambique","MM":"Myanmar","NA":"Namibia","NR":"Nauru","NP":"Nepal","NL":"Netherlands","AN":"Netherlands Antilles","NC":"New Caledonia","NZ":"New Zealand","NI":"Nicaragua","NE":"Niger","NG":"Nigeria","NU":"Niue","NF":"Norfolk Island","MP":"Northern Mariana Islands","NO":"Norway","OM":"Oman","PK":"Pakistan","PW":"Palau","PS":"Palestinian Territory, Occupied","PA":"Panama","PG":"Papua New Guinea","PY":"Paraguay","PE":"Peru","PH":"Philippines","PN":"Pitcairn","PL":"Poland","PT":"Portugal","PR":"Puerto Rico","QA":"Qatar","RE":"Reunion","RO":"Romania","RU":"Russian Federation","RW":"Rwanda","SH":"Saint Helena","KN":"Saint Kitts and Nevis","LC":"Saint Lucia","PM":"Saint Pierre and Miquelon","VC":"Saint Vincent and the Grenadines","WS":"Samoa","SM":"San Marino","ST":"Sao Tome and Principe","SA":"Saudi Arabia","SN":"Senegal","RS":"Serbia","SC":"Seychelles","SL":"Sierra Leone","SG":"Singapore","SK":"Slovakia","SI":"Slovenia","SB":"Solomon Islands","SO":"Somalia","ZA":"South Africa","GS":"South Georgia and the South Sandwich Islands","ES":"Spain","LK":"Sri Lanka","SD":"Sudan","SR":"Suriname","SJ":"Svalbard and Jan Mayen","SY":"Syria","SZ":"Eswatini","SE":"Sweden","CH":"Switzerland","TW":"Taiwan","TJ":"Tajikistan","TZ":"Tanzania, United Republic of","TH":"Thailand","TL":"Timor-Leste","TG":"Togo","TK":"Tokelau","TO":"Tonga","TT":"Trinidad and Tobago","TN":"Tunisia","TR":"Turkey","TM":"Turkmenistan","TC":"Turks and Caicos Islands","TV":"Tuvalu","UG":"Uganda","UA":"Ukraine","AE":"United Arab Emirates","GB":"United Kingdom","US":"United States","UM":"United States Minor Outlying Islands","UY":"Uruguay","UZ":"Uzbekistan","VU":"Vanuatu","VE":"Venezuela","VN":"Viet Nam","VG":"Virgin Islands, British","VI":"Virgin Islands, U.S.","WF":"Wallis and Futuna","EH":"Western Sahara","YE":"Yemen","ZM":"Zambia","ZW":"Zimbabwe"},"eucountries":{"AT":"Austria","BE":"Belgium","BG":"Bulgaria","HR":"Croatia","CY":"Cyprus","CZ":"Czech Republic","DK":"Denmark","EE":"Estonia","FI":"Finland","FR":"France","DE":"Germany","GR":"Greece","HU":"Hungary","IE":"Ireland","IT":"Italy","LV":"Latvia","LT":"Lithuania","LU":"Luxembourg","MT":"Malta","NL":"Netherlands","PL":"Poland","PT":"Portugal","RO":"Romania","SK":"Slovakia","SI":"Slovenia","ES":"Spain","SE":"Sweden","GB":"United Kingdom"},"eeacountries":{"NO":"Norway","IS":"Iceland","LI":"Liechtenstein"},"usstates":{"AL":"Alabama","AK":"Alaska","AS":"American Samoa","AZ":"Arizona","AR":"Arkansas","CA":"California","CO":"Colorado","CT":"Connecticut","DE":"Delaware","DC":"District of Columbia","FM":"Federated States of Micronesia","FL":"Florida","GA":"Georgia","GU":"Guam","HI":"Hawaii","ID":"Idaho","IL":"Illinois","IN":"Indiana","IA":"Iowa","KS":"Kansas","KY":"Kentucky","LA":"Louisiana","ME":"Maine","MH":"Marshall Islands","MD":"Maryland","MA":"Massachusetts","MI":"Michigan","MN":"Minnesota","MS":"Mississippi","MO":"Missouri","MT":"Montana","NE":"Nebraska","NV":"Nevada","NH":"New Hampshire","NJ":"New Jersey","NM":"New Mexico","NY":"New York","NC":"North Carolina","ND":"North Dakota","MP":"Northern Mariana Islands","OH":"Ohio","OK":"Oklahoma","OR":"Oregon","PW":"Palau","PA":"Pennsylvania","PR":"Puerto Rico","RI":"Rhode Island","SC":"South Carolina","SD":"South Dakota","TN":"Tennessee","TX":"Texas","UT":"Utah","VT":"Vermont","VI":"U.S. Virgin Islands","VA":"Virginia","WA":"Washington","WV":"West Virginia","WI":"Wisconsin","WY":"Wyoming","AA":"Armed Forces Americas","AE":"Armed Forces","AP":"Armed Forces Pacific"}}}',
       ).h;
-      var n = t(98841),
-        i = t(38861),
-        o = t(91933);
-      async function s(e, a, t, s) {
-        if (s) return { version: n.ie.mO, preference_state: n.CY.__ };
+      var i = n(98841),
+        r = n(38861),
+        o = n(91933);
+      async function s(e, a, n, s) {
+        if (s) return { version: i.ie.mO, preference_state: i.CY.__ };
         if (a) {
-          const a = (await n.T4.GetCookiePreferences(e, {}))
+          const a = (await i.T4.GetCookiePreferences(e, {}))
             .Body()
             .toObject().preferences;
-          if (a && void 0 !== a.version && a.version != n.ie.CL) return a;
+          if (a && void 0 !== a.version && a.version != i.ie.CL) return a;
         }
         try {
-          const e = (0, o.j_)(i.J_);
+          const e = (0, o.j_)(r.J_);
           if (e) {
             const a = JSON.parse(e);
-            if (a && void 0 !== a.version && a.version != n.ie.CL) return a;
+            if (a && void 0 !== a.version && a.version != i.ie.CL) return a;
           }
         } catch (e) {}
-        return t in r.eucountries || t in r.eeacountries || "CH" === t
-          ? { version: n.ie.mO, preference_state: n.CY._H }
-          : { version: n.ie.mO, preference_state: n.CY.__ };
+        return n in t.eucountries || n in t.eeacountries || "CH" === n
+          ? { version: i.ie.mO, preference_state: i.CY._H }
+          : { version: i.ie.mO, preference_state: i.CY.__ };
       }
-      var l = t(80902),
-        u = t(23809),
-        d = t(66418);
+      var l = n(80902),
+        u = n(23809),
+        d = n(66418);
       function c() {
         const e = (0, u.KV)();
         return (0, l.I)(
@@ -97,17 +97,17 @@
           })(e),
         );
       }
-      function y(e) {
+      function h(e) {
         const { data: a } = c();
         return a
           ? (function (e, a) {
               switch (e.preference_state) {
-                case n.CY.__:
-                case n.CY.PK:
+                case i.CY.__:
+                case i.CY.PK:
                   return !0;
-                case n.CY.rE:
+                case i.CY.rE:
                   return !1;
-                case n.CY.UI:
+                case i.CY.UI:
                 default:
                   switch (a) {
                     case "youtube":
@@ -123,13 +123,13 @@
             })(a, e)
           : void 0;
       }
-      function p() {
+      function y() {
         const { data: e } = c();
         return e
           ? !(function (e) {
               switch (e.preference_state) {
-                case n.CY.__:
-                case n.CY.PK:
+                case i.CY.__:
+                case i.CY.PK:
                   return !1;
                 default:
                   return !0;
@@ -138,239 +138,11 @@
           : void 0;
       }
     },
-    57876: (e, a, t) => {
-      t.d(a, { Xh: () => d, cU: () => c, tf: () => p, wl: () => y });
-      var r = t(22837),
-        n = t(71150),
-        i = t(76119),
-        o = t(72119),
-        s = t(16021),
-        l = t(62792),
-        u = t(78327);
-      const d = {
-        include_assets: !0,
-        include_release: !0,
-        include_platforms: !0,
-        include_tag_count: 20,
-        include_basic_info: !0,
-        include_trailers: !0,
-        include_reviews: !0,
-        include_screenshots: !0,
-        include_supported_languages: !0,
-      };
-      class c {
-        m_setAlreadyAdded = new Set();
-        Reset() {
-          this.m_setAlreadyAdded = new Set();
-        }
-        BHasAppID(e) {
-          return this.m_setAlreadyAdded.has("a" + e);
-        }
-        BHasPackageID(e) {
-          return this.m_setAlreadyAdded.has("s" + e);
-        }
-        BHasBundleID(e) {
-          return this.m_setAlreadyAdded.has("b" + e);
-        }
-        BHasStoreItemKey(e) {
-          return this.m_setAlreadyAdded.has(
-            this.ConvertStoreItemKeyToUniqueKey(e),
-          );
-        }
-        AddStoreItemKey(e) {
-          this.m_setAlreadyAdded.add(this.ConvertStoreItemKeyToUniqueKey(e));
-        }
-        ConvertStoreItemKeyToUniqueKey(e) {
-          switch (e.item_type) {
-            default:
-            case "app":
-              return "a" + e.id;
-            case "sub":
-              return "s" + e.id;
-            case "bundle":
-              return "b" + e.id;
-          }
-        }
-      }
-      const y = 4;
-      function p(e, a, t, r, n, i) {
-        const o = new Array(),
-          u = new Array(),
-          d = new Array(),
-          c = new Array();
-        if (!e || 0 == e.length) return o;
-        const p = [
-          l.by.k_RejectSupportedLanguage,
-          l.by.k_RejectAlreadyDisplayed,
-          l.by.k_RejectNoTrailer,
-        ];
-        for (let i of e) {
-          let e = i.id,
-            y = l.by.k_NotRejected;
-          switch (i.item_type) {
-            case "sub":
-              const n = s.A.Get().GetPackage(e);
-              if (1 !== n?.GetIncludedAppIDs()?.length) {
-                y = b(e, a, r, !0);
-                break;
-              }
-              e = n.GetIncludedAppIDs()[0];
-            case "app":
-              y = I(e, a, t, r, !0);
-              break;
-            case "bundle":
-              y = g(e, a, r, !0);
-          }
-          if (
-            (y == l.by.k_NotRejected
-              ? ((i.rejected = l.by.k_NotRejected),
-                o.push({ ...i, priority: 1 }))
-              : p.includes(y)
-                ? ((i.rejected = l.by.k_NotRejected), u.push(i))
-                : ((i.rejected = y),
-                  y == l.by.k_RejectIgnoredGame ? d.push(i) : c.push(i)),
-            o.length > n)
-          )
-            break;
-        }
-        return (
-          o.length < n &&
-            (h(o, u, i, 2),
-            o.length < i &&
-              a.enforce_minimum &&
-              (h(o, d, i, 3), h(o, c, i, y))),
-          o
-        );
-      }
-      function h(e, a, t, r) {
-        for (let n = 0; e.length < t && n < a.length; ++n)
-          e.push({ ...a[n], priority: r });
-      }
-      function m(e, a) {
-        const t = o.Fm.Get();
-        if (a.only_current_platform && t.BHasPlatformPreferenceSet()) {
-          if (
-            !(
-              (e.GetPlatforms()?.windows && t.BIsPreferredPlatform("win")) ||
-              (e.GetPlatforms()?.mac && t.BIsPreferredPlatform("mac")) ||
-              (e.GetPlatforms()?.steamos_linux &&
-                t.BIsPreferredPlatform("linux"))
-            )
-          )
-            return l.by.k_RejectWrongPlatform;
-        }
-        if (!a.prepurchase && e.BIsComingSoon())
-          return l.by.k_RejectNoComingSoon;
-        const r = e.GetPlatforms();
-        return !a.virtual_reality &&
-          r &&
-          r.vr_support &&
-          r.vr_support.vrhmd_only
-          ? l.by.k_RejectNoVR
-          : e.GetAllCreatorClanIDs()?.some((e) => t.BIsIgnoringCurator(e))
-            ? l.by.k_RejectCreatorClan
-            : l.by.k_NotRejected;
-      }
-      function _(e, a) {
-        if (a.localized) {
-          const a = (0, r.sfN)(u.TS.LANGUAGE);
-          if (!e.GetAllLanguagesWithSomeSupport()?.includes(a))
-            return l.by.k_RejectSupportedLanguage;
-        }
-        return l.by.k_NotRejected;
-      }
-      function I(e, a, t, r, u) {
-        const d = s.A.Get().GetApp(e);
-        if (!d) return l.by.k_RejectNotLoaded;
-        const c = m(d, a);
-        if (c != l.by.k_NotRejected) return c;
-        const y = o.Fm.Get();
-        if (y.BIsGameIgnored(e)) return l.by.k_RejectIgnoredGame;
-        if (y.BExcludeTagIDs(d.GetTagIDs())) return l.by.k_RejectIgnoreGameTags;
-        if (y.BExcludesContentDescriptor(d.GetContentDescriptorIDs()))
-          return l.by.k_RejectIgnoreContentDescriptors;
-        if (!a.early_access && d.BIsEarlyAccess())
-          return l.by.k_RejectEarlyAccess;
-        const p = d.GetAppType();
-        if (!a.software && p == i.uE.Sv) return l.by.k_RejectSoftware;
-        if (a.games_already_in_library && y.BIsGameOwned(e))
-          return l.by.k_RejectInLibrary;
-        if (a.games_not_in_library && !y.BIsGameOwned(e))
-          return l.by.k_RejectNotInLibrary;
-        if (!a.video && [i.uE.Wz, i.uE.gQ, i.uE.ID].includes(p))
-          return l.by.k_RejectVideo;
-        if (a.has_discount) {
-          const e = d.GetBestPurchaseOption();
-          if (!e || !e.discount_pct) return l.by.k_RejectNoDiscount;
-        }
-        return "adultonly" != t &&
-          a.no_ao_content &&
-          (d.HasContentDescriptorID(n.u7) || d.HasContentDescriptorID(n.T4))
-          ? l.by.k_RejectAO
-          : p == i.uE.ue &&
-              a.games_already_in_library &&
-              y.BIsGameOwned(d.GetParentAppID() || 0)
-            ? l.by.k_RejectInLibrary
-            : u
-              ? (p == i.uE.ue && r.BHasAppID(d.GetParentAppID() || 0)) ||
-                r.BHasAppID(e)
-                ? l.by.k_RejectAlreadyDisplayed
-                : a.has_trailer && !d.BHasTrailers(!1)
-                  ? l.by.k_RejectNoTrailer
-                  : _(d, a)
-              : l.by.k_NotRejected;
-      }
-      function f(e, a) {
-        const t = o.Fm.Get();
-        let r = !1;
-        for (let a of e) {
-          if (t.BIsGameIgnored(a)) return l.by.k_RejectIgnoredGame;
-          t.BIsGameOwned(a) && (r = !0);
-        }
-        return a.games_not_in_library && r
-          ? l.by.k_RejectInLibrary
-          : a.games_not_in_library && !r
-            ? l.by.k_RejectNotInLibrary
-            : l.by.k_NotRejected;
-      }
-      function b(e, a, t, r) {
-        const n = s.A.Get().GetPackage(e);
-        if (!n) return l.by.k_RejectNotLoaded;
-        const i = m(n, a);
-        if (i != l.by.k_NotRejected) return i;
-        const u = f(n.GetIncludedAppIDs(), a);
-        if (u != l.by.k_NotRejected) return u;
-        const d = o.Fm.Get();
-        return a.games_already_in_library && d.BOwnsPackage(e)
-          ? l.by.k_RejectInLibrary
-          : d.BIsPackageIgnored(e)
-            ? l.by.k_RejectIgnoredGame
-            : r
-              ? t.BHasPackageID(e)
-                ? l.by.k_RejectAlreadyDisplayed
-                : _(n, a)
-              : l.by.k_NotRejected;
-      }
-      function g(e, a, t, r) {
-        const n = s.A.Get().GetBundle(e);
-        if (!n) return l.by.k_RejectNotLoaded;
-        const i = m(n, a);
-        if (i != l.by.k_NotRejected) return i;
-        const o = f(n.GetIncludedAppIDs(), a);
-        return o != l.by.k_NotRejected
-          ? o
-          : r
-            ? t.BHasBundleID(e)
-              ? l.by.k_RejectAlreadyDisplayed
-              : _(n, a)
-            : l.by.k_NotRejected;
-      }
-    },
-    70995: (e, a, t) => {
-      t.d(a, { Lg: () => u, XU: () => c });
-      const r = 20,
-        n = /^.*youtube[^v]+v=(.{11}).*/,
-        i = /^.*youtu\.be\/(.{11}).*/,
+    70995: (e, a, n) => {
+      n.d(a, { Lg: () => u, XU: () => c });
+      const t = 20,
+        i = /^.*youtube[^v]+v=(.{11}).*/,
+        r = /^.*youtu\.be\/(.{11}).*/,
         o = /^.*youtube.*\/embed\/(.{11}).*/,
         s = /^.*[?&]t=([^&]+)(?:&|$)/,
         l = /^(?:(?:([\d]+)h)?(?:([\d]+)m)?(?:([\d]+)s)?|([\d]+))$/;
@@ -378,77 +150,254 @@
         return !!d(e);
       }
       function d(e) {
-        const a = e?.length < r ? void 0 : n.exec(e) || i.exec(e) || o.exec(e);
+        const a = e?.length < t ? void 0 : i.exec(e) || r.exec(e) || o.exec(e);
         return a?.[1];
       }
       function c(e) {
         const a = d(e);
         if (!a) return;
-        const t = (function (e) {
+        const n = (function (e) {
             const a = s.exec(e);
             return a?.[1];
           })(e),
-          r = t
+          t = n
             ? (function (e) {
                 const a = l.exec(e);
                 if (!(a?.[1] || a?.[2] || a?.[3] || a?.[4])) return;
                 if (a?.[4]) return parseInt(a?.[4]);
-                let t = 0;
+                let n = 0;
                 return (
-                  a?.[1] && (t += 3600 * parseInt(a[1])),
-                  a?.[2] && (t += 60 * parseInt(a[2])),
-                  a?.[3] && (t += parseInt(a[3])),
-                  t
+                  a?.[1] && (n += 3600 * parseInt(a[1])),
+                  a?.[2] && (n += 60 * parseInt(a[2])),
+                  a?.[3] && (n += parseInt(a[3])),
+                  n
                 );
-              })(t)
+              })(n)
             : void 0;
-        return { strVideoID: a, nStartSeconds: r };
+        return { strVideoID: a, nStartSeconds: t };
       }
     },
-    48211: (e, a, t) => {
-      t.d(a, { N1: () => b, VC: () => I, gZ: () => g });
-      var r,
-        n = t(34629),
-        i = t(7850),
-        o = t(90626),
-        s = t(62490),
-        l = t(84933),
-        u = t(52038),
-        d = t(22797),
-        c = t(98735),
-        y = t(61859),
-        p = t(23338);
+    4796: (e, a, n) => {
+      n.d(a, { $5: () => A, TB: () => g, ac: () => f });
+      var t = n(7860),
+        i = n(75233),
+        r = n(14947),
+        o = n(90626),
+        s = n(17720),
+        l = n(81393),
+        u = n(78327),
+        d = n(67165),
+        c = (n(26161), n(29197), n(28210), n(33951)),
+        h = n(63340);
+      const y = new WeakSet();
+      function p(e = t.L) {
+        if ("undefined" == typeof window) return;
+        if (y.has(e)) return;
+        const a = (0, u.Fd)("groupvanityinfo", "application_config");
+        (void 0 === a && "complete" != document.readyState) ||
+          (y.add(e), C(a) && (0, c.aA)(e, a));
+      }
+      function C(e) {
+        const a = e;
+        return (
+          !!(
+            a &&
+            Array.isArray(a) &&
+            a.length > 0 &&
+            "object" == typeof a[0]
+          ) &&
+          "number" == typeof a[0].clanAccountID &&
+          ("number" == typeof a[0].appid || "string" == typeof a[0].vanity_url)
+        );
+      }
+      function m(e) {
+        return "string" == typeof e ? parseInt(e) : e;
+      }
+      function I(e) {
+        return "string" == typeof e ? Number.parseInt(e) : e;
+      }
+      const f = new (class {
+        m_queryClient = t.L;
+        m_boxCacheVersion = r.sH.box(0);
+        m_bWatchingCache = !1;
+        m_bBumpScheduled = !1;
+        Init() {
+          this.LazyInit();
+        }
+        LazyInit() {
+          p(this.m_queryClient),
+            this.m_bWatchingCache ||
+              ((this.m_bWatchingCache = !0),
+              this.m_queryClient.getQueryCache().subscribe((e) => {
+                ("added" != e?.type &&
+                  "updated" != e?.type &&
+                  "removed" != e?.type) ||
+                  ((0, c.yT)(e.query?.queryKey) &&
+                    this.ScheduleCacheVersionBump());
+              }));
+        }
+        ScheduleCacheVersionBump() {
+          this.m_bBumpScheduled ||
+            ((this.m_bBumpScheduled = !0),
+            queueMicrotask(() => {
+              (this.m_bBumpScheduled = !1),
+                (0, r.h5)(() =>
+                  this.m_boxCacheVersion.set(this.m_boxCacheVersion.get() + 1),
+                );
+            }));
+        }
+        ReadCache() {
+          return (
+            this.LazyInit(), this.m_boxCacheVersion.get(), this.m_queryClient
+          );
+        }
+        AddGroupVanities(e) {
+          this.LazyInit(), C(e) && (0, c.aA)(this.m_queryClient, e);
+        }
+        BHasClanInfoLoaded(e) {
+          return (
+            (0, l.wT)(e.BIsValid(), "Clan SteamID is not valid when ClanInfo"),
+            (0, l.wT)(
+              e.BIsClanAccount(),
+              "Clan SteamID is not a clan account id when requesting clan info ",
+            ),
+            this.BHasClanInfoLoadedByAccountID(e.GetAccountID())
+          );
+        }
+        BHasClanInfoLoadedByAccountID(e) {
+          return Boolean((0, c.Gt)(I(e), this.ReadCache()));
+        }
+        RegisterClanData(e) {
+          this.LazyInit(), (0, c.aA)(this.m_queryClient, e);
+        }
+        async LoadOGGClanInfoForAppID(e) {
+          return (
+            this.LazyInit(),
+            (e = m(e)),
+            (0, l.wT)(
+              0 != e,
+              "LoadOGGClanInfoForAppID called with appid of zero",
+            ),
+            0 == e ? null : (0, c.AB)(e, this.m_queryClient).catch(() => null)
+          );
+        }
+        async LoadOGGClanInfoForIdentifier(e) {
+          return this.LazyInit(), (0, c.Rc)(e, this.m_queryClient, "store");
+        }
+        async LoadOGGClanInfoForGroupVanity(e) {
+          return this.LazyInit(), (0, c.Rc)(e, this.m_queryClient, "group");
+        }
+        async LoadClanInfoForClanSteamID(e) {
+          return this.LoadClanInfoForClanAccountID(e.GetAccountID());
+        }
+        async LoadClanInfoForClanAccountID(e) {
+          return this.LazyInit(), (0, c.MR)(I(e), this.m_queryClient);
+        }
+        GetOGGClanInfo(e) {
+          const a = this.ReadCache();
+          return "string" == typeof e ? (0, c.fy)(e, a) : (0, c.ko)(e, a);
+        }
+        GetClanSteamIDForAppID(e) {
+          const a = (0, c.ko)(m(e), this.ReadCache());
+          return a ? s.b.InitFromClanID(a.clanAccountID) : void 0;
+        }
+        GetClanVanityForAppID(e) {
+          return (0, c.ko)(m(e), this.ReadCache())?.vanity_url;
+        }
+        GetClanVanityForClanSteamID(e) {
+          return (0, c.Gt)(e.GetAccountID(), this.ReadCache())?.vanity_url;
+        }
+        HasLoadedClanAccountID(e) {
+          return this.BHasClanInfoLoadedByAccountID(e);
+        }
+        GetClanMemberCount(e) {
+          return (0, c.ko)(m(e), this.ReadCache())?.member_count ?? 0;
+        }
+        GetClanInfoByClanAccountID(e) {
+          return (
+            (0, l.wT)(
+              !!e,
+              "Unepxected clanid when requesting information. GetClanInfoByClanAccountID ",
+            ),
+            (0, c.Gt)(I(e), this.ReadCache())
+          );
+        }
+        GetCreatorStoreURL(e) {
+          let a = d.pF.GetCreatorHome(e);
+          if (a) return a.GetCreatorHomeURL("developer");
+          let n = this.GetClanInfoByClanAccountID(e.GetAccountID());
+          return (
+            u.TS.COMMUNITY_BASE_URL +
+            (n.vanity_url
+              ? "groups/" + n.vanity_url
+              : "gid/" + e.ConvertTo64BitString())
+          );
+        }
+      })();
+      function S() {
+        const e = (0, i.jE)();
+        return p(e), e;
+      }
+      function g(e) {
+        S();
+        const { data: a, isPending: n } = (0, c.TB)(e ? I(e) : void 0);
+        return [Boolean(e) && n, a ?? void 0];
+      }
+      function A(e) {
+        const a = S();
+        (0, o.useEffect)(() => {
+          e &&
+            (0, c.MR)(I(e), a).catch((a) =>
+              console.error(`Failed to hint load clan info ${e}`, a),
+            );
+        }, [e, a]);
+      }
+      (0, h.V)("g_ClanStore", f);
+    },
+    48211: (e, a, n) => {
+      n.d(a, { N1: () => S, VC: () => I, gZ: () => g });
+      var t,
+        i = n(34629),
+        r = n(7850),
+        o = n(90626),
+        s = n(62490),
+        l = n(84933),
+        u = n(52038),
+        d = n(22797),
+        c = n(98735),
+        h = n(61859),
+        y = n(23338);
       !(function (e) {
         (e[(e.NotLoaded = 0)] = "NotLoaded"),
           (e[(e.Loading = 1)] = "Loading"),
           (e[(e.Loaded = 2)] = "Loaded");
-      })(r || (r = {}));
-      let h = r.NotLoaded,
-        m = [];
-      function _(e) {
-        if (h != r.Loaded) {
-          if (h == r.NotLoaded) {
+      })(t || (t = {}));
+      let p = t.NotLoaded,
+        C = [];
+      function m(e) {
+        if (p != t.Loaded) {
+          if (p == t.NotLoaded) {
             let e = document.createElement("script");
             e.src = "https://www.youtube.com/iframe_api";
             let a = document.getElementsByTagName("script")[0];
-            a.parentNode.insertBefore(e, a),
+            a.parentNode?.insertBefore(e, a),
               (window.onYouTubeIframeAPIReady = f);
           }
-          e && (m.includes(e) || m.push(e));
+          e && (C.includes(e) || C.push(e));
         } else e && e();
       }
       function I(e = !0) {
         const a = (0, c.Rp)("youtube");
         (0, o.useEffect)(() => {
-          a && e && _();
+          a && e && m();
         }, [a, e]);
       }
       function f() {
-        h = r.Loaded;
-        for (let e of m) e();
-        m = [];
+        p = t.Loaded;
+        for (let e of C) e();
+        C = [];
       }
-      class b extends o.Component {
+      class S extends o.Component {
         m_strPlayerID = "";
         m_player = null;
         m_playerContainer = null;
@@ -456,33 +405,33 @@
         static s_nPlayerIndex = 0;
         constructor(e) {
           super(e),
-            (this.m_strPlayerID = "YoutubePlayer_" + b.s_nPlayerIndex++),
+            (this.m_strPlayerID = "YoutubePlayer_" + S.s_nPlayerIndex++),
             (this.state = { bYoutubeLoaded: !1 });
         }
         componentWillUnmount() {
           var e;
-          this.DestroyPlayer(), (e = this.OnYoutubeScriptsReady), s.x9(m, e);
+          this.DestroyPlayer(), (e = this.OnYoutubeScriptsReady), s.x9(C, e);
         }
         shouldComponentUpdate(e, a) {
           if (!this.m_player) return !1;
-          const t = this.props;
-          return t.autoplay != e.autoplay ||
-            t.controls != e.controls ||
-            t.showInfo != e.showInfo ||
-            t.video != e.video
+          const n = this.props;
+          return n.autoplay != e.autoplay ||
+            n.controls != e.controls ||
+            n.showInfo != e.showInfo ||
+            n.video != e.video
             ? (this.CreatePlayer(e), !1)
-            : ((t.width == e.width && t.height == e.height) ||
+            : ((n.width == e.width && n.height == e.height) ||
                 (this.m_bPlayerReady &&
                   e.width &&
                   e.height &&
                   this.m_player.setSize(e.width, e.height)),
-              t.forcePause != e.forcePause);
+              n.forcePause != e.forcePause);
         }
         componentDidUpdate(e) {
           e.forcePause != this.props.forcePause &&
             (this.props.forcePause
-              ? this.m_player.pauseVideo()
-              : this.m_player.playVideo());
+              ? this.m_player?.pauseVideo()
+              : this.m_player?.playVideo());
         }
         DestroyPlayer() {
           if (this.m_player)
@@ -498,7 +447,7 @@
           this.m_playerContainer != e &&
             ((this.m_playerContainer = e),
             this.DestroyPlayer(),
-            this.m_playerContainer && _(this.OnYoutubeScriptsReady));
+            this.m_playerContainer && m(this.OnYoutubeScriptsReady));
         }
         OnYoutubeScriptsReady() {
           this.CreatePlayer(this.props);
@@ -506,10 +455,10 @@
         CreatePlayer(e) {
           if ((this.DestroyPlayer(), !this.m_playerContainer)) return;
           const a = !1 === e.autoplay ? 0 : 1,
-            t = !0 === e.showInfo ? 1 : 0,
-            r = !0 === e.controls ? 1 : 0,
-            n = !0 === e.showFullscreenBtn ? 1 : 0,
-            i = !0 === e.playsInline ? 1 : 0;
+            n = !0 === e.showInfo ? 1 : 0,
+            t = !0 === e.controls ? 1 : 0,
+            i = !0 === e.showFullscreenBtn ? 1 : 0,
+            r = !0 === e.playsInline ? 1 : 0;
           let o = {
               width: void 0 !== e.width ? String(e.width) : void 0,
               height: void 0 !== e.height ? String(e.height) : void 0,
@@ -517,14 +466,14 @@
               host: "https://www.youtube-nocookie.com",
               playerVars: {
                 autoplay: a,
-                showinfo: t,
+                showinfo: n,
                 autohide: 1,
-                fs: n,
+                fs: i,
                 modestbranding: 1,
                 rel: 0,
-                playsinline: i,
+                playsinline: r,
                 iv_load_policy: 3,
-                controls: r,
+                controls: t,
                 start: e.startSeconds,
               },
               events: {
@@ -537,7 +486,10 @@
           (this.m_bPlayerReady = !1), (this.m_player = new YT.Player(s, o));
         }
         OnPlayerReady(e) {
-          if (((this.m_bPlayerReady = !0), this.props.onVideoInfoChanged)) {
+          if (
+            ((this.m_bPlayerReady = !0),
+            this.props.onVideoInfoChanged && this.m_player)
+          ) {
             let e = this.m_player.getVideoData(),
               a = { strAuthor: "", strTitle: "", strVideoID: "" };
             e.author && (a.strAuthor = e.author),
@@ -547,8 +499,8 @@
           }
           this.props.width &&
             this.props.height &&
-            this.m_player.setSize(this.props.width, this.props.height),
-            this.props.autoplay && this.m_player.playVideo(),
+            this.m_player?.setSize(this.props.width, this.props.height),
+            this.props.autoplay && this.m_player?.playVideo(),
             this.props.onPlayerReady && this.props.onPlayerReady();
         }
         OnPlayerStateChange(e) {
@@ -584,15 +536,15 @@
             (e && this.m_player.seekTo(0, !0), this.m_player.playVideo());
         }
         render() {
-          return (0, i.jsx)(g, {
+          return (0, r.jsx)(g, {
             video: this.props.video,
-            children: (0, i.jsx)(
-              p.j,
+            children: (0, r.jsx)(
+              y.j,
               {
                 onLeave: this.props.autopause ? this.OnPlayerLeftView : void 0,
                 ref: this.BindPlayerContainer,
                 className: (0, u.A)("YoutubePlayer", this.props.classnames),
-                children: (0, i.jsx)(d.t, {
+                children: (0, r.jsx)(d.t, {
                   className: "YoutubePlayerThrobber",
                 }),
               },
@@ -602,22 +554,22 @@
         }
       }
       function g(e) {
-        const { video: a, children: t } = e;
+        const { video: a, children: n } = e;
         return (0, c.Rp)("youtube")
-          ? t
-          : (0, i.jsx)("a", {
+          ? n
+          : (0, r.jsx)("a", {
               href: `https://www.youtube.com/watch?v=${a}`,
-              children: (0, y.we)("#EventCalendar_WatchYouTubeVideo"),
+              children: (0, h.we)("#EventCalendar_WatchYouTubeVideo"),
             });
       }
-      (0, n.Cg)([l.oI], b.prototype, "BindPlayerContainer", null),
-        (0, n.Cg)([l.oI], b.prototype, "OnYoutubeScriptsReady", null),
-        (0, n.Cg)([l.oI], b.prototype, "CreatePlayer", null),
-        (0, n.Cg)([l.oI], b.prototype, "OnPlayerReady", null),
-        (0, n.Cg)([l.oI], b.prototype, "OnPlayerStateChange", null),
-        (0, n.Cg)([l.oI], b.prototype, "OnError", null),
-        (0, n.Cg)([l.oI], b.prototype, "OnPlayerLeftView", null),
-        (0, n.Cg)([l.oI], b.prototype, "PlayVideo", null);
+      (0, i.Cg)([l.oI], S.prototype, "BindPlayerContainer", null),
+        (0, i.Cg)([l.oI], S.prototype, "OnYoutubeScriptsReady", null),
+        (0, i.Cg)([l.oI], S.prototype, "CreatePlayer", null),
+        (0, i.Cg)([l.oI], S.prototype, "OnPlayerReady", null),
+        (0, i.Cg)([l.oI], S.prototype, "OnPlayerStateChange", null),
+        (0, i.Cg)([l.oI], S.prototype, "OnError", null),
+        (0, i.Cg)([l.oI], S.prototype, "OnPlayerLeftView", null),
+        (0, i.Cg)([l.oI], S.prototype, "PlayVideo", null);
     },
   },
 ]);

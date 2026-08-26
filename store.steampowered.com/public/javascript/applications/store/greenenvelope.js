@@ -231,18 +231,214 @@
     87910: (e) => {
       e.exports = { WebPinnedNotification: "_34nLZDNirxRHssbsjB_dJf" };
     },
-    11333: (e, t, i) => {
+    33951: (e, t, n) => {
       "use strict";
-      i.d(t, { L: () => c, c: () => r });
-      var n = i(42457),
-        o = i(49845),
-        a = i(58632),
-        s = i.n(a);
+      n.d(t, {
+        yT: () => p,
+        MR: () => b,
+        AB: () => C,
+        Rc: () => L,
+        Gt: () => w,
+        ko: () => T,
+        fy: () => j,
+        ec: () => v,
+        aA: () => I,
+        TB: () => N,
+      });
+      var i = n(22837),
+        o = n(17720),
+        a = n(75233),
+        s = n(80902),
+        r = n(37085),
+        c = n(66418);
+      async function l(e) {
+        const t = await fetch(e, { method: "GET" });
+        if (404 == t.status) return null;
+        if (!t.ok) throw new Error(`Server returned ${t.status}`);
+        const n = await t.json();
+        return n.success != r.R ? null : n;
+      }
+      function m() {
+        return "undefined" != typeof window && "undefined" != typeof self
+          ? self.origin
+          : "ssr_server";
+      }
+      function d(e) {
+        return ["clantoclaninfo", e];
+      }
+      function u(e) {
+        return ["apptoclanid", e];
+      }
+      function _(e, t = "group") {
+        return ["vanitytoclanid", t, e?.toLocaleLowerCase()];
+      }
+      function p(e) {
+        const t = e?.[0];
+        return (
+          "clantoclaninfo" == t || "apptoclanid" == t || "vanitytoclanid" == t
+        );
+      }
+      const f = new WeakSet();
+      function h(e) {
+        if (!f.has(e)) {
+          f.add(e);
+          for (const t of [
+            ["clantoclaninfo"],
+            ["apptoclanid"],
+            ["vanitytoclanid"],
+          ])
+            e.setQueryDefaults(t, {
+              staleTime: 1 / 0,
+              gcTime: 1 / 0,
+              retry: !1,
+            });
+        }
+      }
+      const g = new WeakMap();
+      function y(e) {
+        if (!e) return null;
+        let t = g.get(e);
+        return (
+          t ||
+            ((t = {
+              ...e,
+              clanSteamID: e.clanSteamIDString
+                ? new o.b(e.clanSteamIDString)
+                : o.b.InitFromClanID(e.clanAccountID),
+            }),
+            g.set(e, t)),
+          t
+        );
+      }
+      function S(e, t) {
+        if (!t) return null;
+        h(e);
+        const n = (function (e) {
+          const { msg: t, success: n, ...o } = e;
+          return {
+            ...o,
+            rss_language: e.rss_language ? e.rss_language : i.Bhc,
+          };
+        })(t);
+        return (
+          e.setQueryData(d(n.clanAccountID), n),
+          n.appid && e.setQueryData(u(n.appid), n.clanAccountID),
+          n.vanity_url &&
+            e.setQueryData(_(n.vanity_url, "group"), n.clanAccountID),
+          n
+        );
+      }
+      function I(e, t) {
+        for (const n of t) S(e, n);
+      }
+      function N(e) {
+        const t = (0, a.jE)();
+        return (0, s.I)(v(e, t));
+      }
+      function v(e, t) {
+        return (
+          h(t),
+          {
+            queryKey: d(e ?? null),
+            queryFn: async () =>
+              e
+                ? S(
+                    t,
+                    await (async function (e) {
+                      const t = o.b.InitFromClanID(e);
+                      return l(
+                        `${c.TS.COMMUNITY_BASE_URL}gid/${t.ConvertTo64BitString()}/ajaxgetvanityandclanid/?origin=${m()}`,
+                      );
+                    })(e),
+                  )
+                : null,
+            enabled: void 0 !== e,
+            select: y,
+          }
+        );
+      }
+      function A(e, t) {
+        return (
+          h(t),
+          {
+            queryKey: u(e),
+            queryFn: async () =>
+              S(
+                t,
+                await (async function (e) {
+                  return l(
+                    `${c.TS.COMMUNITY_BASE_URL}ogg/${e}/ajaxgetvanityandclanid/?origin=${m()}`,
+                  );
+                })(e),
+              )?.clanAccountID ?? null,
+            enabled: !!e,
+          }
+        );
+      }
+      function x(e, t, n = "group") {
+        return (
+          h(t),
+          {
+            queryKey: _(e, n),
+            queryFn: async () => {
+              if ("store" == n) {
+                const n = t.getQueryData(_(e, "group"));
+                if (n) return n;
+              }
+              const i =
+                "store" == n
+                  ? await (async function (e) {
+                      return l(
+                        `${c.TS.COMMUNITY_BASE_URL}games/${e}/ajaxgetvanityandclanid/?origin=${m()}`,
+                      );
+                    })(e)
+                  : await (async function (e) {
+                      return l(
+                        `${c.TS.COMMUNITY_BASE_URL}groups/${e}/ajaxgetvanityandclanid/?origin=${m()}`,
+                      );
+                    })(e);
+              return S(t, i)?.clanAccountID ?? null;
+            },
+            enabled: !!e,
+          }
+        );
+      }
+      function w(e, t) {
+        if (e) return y(t.getQueryData(d(e))) ?? void 0;
+      }
+      function T(e, t) {
+        if (e) return w(t.getQueryData(u(e)), t);
+      }
+      function j(e, t, n) {
+        if (!e) return;
+        const i = n ? [n] : ["store", "group"];
+        for (const n of i) {
+          const i = w(t.getQueryData(_(e, n)), t);
+          if (i) return i;
+        }
+      }
+      async function b(e, t) {
+        return e ? y(await t.fetchQuery(v(e, t))) : null;
+      }
+      async function C(e, t) {
+        return e ? b(await t.fetchQuery(A(e, t)), t) : null;
+      }
+      async function L(e, t, n = "group") {
+        return e ? b(await t.fetchQuery(x(e, t, n)), t) : null;
+      }
+    },
+    11333: (e, t, n) => {
+      "use strict";
+      n.d(t, { L: () => c, c: () => r });
+      var i = n(42457),
+        o = n(49845),
+        a = n(58632),
+        s = n.n(a);
       function r(e, t) {
         return new (s())(
           async (t) => {
-            const i = [...t],
-              o = await n.xtC.GetPlayerLinkDetails(e, { steamids: i }),
+            const n = [...t],
+              o = await i.xtC.GetPlayerLinkDetails(e, { steamids: n }),
               a = new Map();
             return (
               o
@@ -252,7 +448,7 @@
                   const t = e.toObject();
                   a.set(t.public_data.steamid, t);
                 }),
-              i.map((e) => a.get(e) ?? null)
+              n.map((e) => a.get(e) ?? null)
             );
           },
           { maxBatchSize: 100, cache: !1, ...t },
@@ -262,47 +458,47 @@
         return (0, o.V)("PlayerLinkDetails", () => r(e));
       }
     },
-    38924: (e, t, i) => {
+    38924: (e, t, n) => {
       "use strict";
-      i.d(t, {
-        Fj: () => n,
+      n.d(t, {
+        Fj: () => i,
         R$: () => s,
         Zx: () => o,
         hs: () => c,
         o5: () => a,
         sr: () => r,
       });
-      const n = 2,
+      const i = 2,
         o = 4,
         a = 8,
         s = 512,
         r = 1024,
         c = 2048;
     },
-    45334: (e, t, i) => {
+    45334: (e, t, n) => {
       "use strict";
-      i.d(t, { $e: () => n, B7: () => a, Pe: () => s, Pv: () => o });
-      const n = 1,
+      n.d(t, { $e: () => i, B7: () => a, Pe: () => s, Pv: () => o });
+      const i = 1,
         o = 2,
         a = 4,
         s = 1073741824;
     },
-    49845: (e, t, i) => {
+    49845: (e, t, n) => {
       "use strict";
-      function n(e) {
+      function i(e) {
         return "[object Object]" === Object.prototype.toString.call(e);
       }
       function o(...e) {
         return JSON.stringify(e, (e, t) => {
           if (
             (function (e) {
-              if (!n(e)) return !1;
+              if (!i(e)) return !1;
               const t = e.constructor;
               if (void 0 === t) return !0;
-              const i = t.prototype;
+              const n = t.prototype;
               return (
-                !!n(i) &&
-                !!Object.prototype.hasOwnProperty.call(i, "isPrototypeOf")
+                !!i(n) &&
+                !!Object.prototype.hasOwnProperty.call(n, "isPrototypeOf")
               );
             })(t)
           ) {
@@ -310,8 +506,8 @@
             return (
               Object.keys(t)
                 .sort()
-                .forEach((i) => {
-                  e[i] = t[i];
+                .forEach((n) => {
+                  e[n] = t[n];
                 }),
               e
             );
@@ -319,30 +515,30 @@
           return t;
         });
       }
-      i.d(t, { V: () => r });
-      var a = i(90626);
-      i(7850);
+      n.d(t, { V: () => r });
+      var a = n(90626);
+      n(7850);
       const s = (0, a.createContext)({ instances: {}, factories: {} });
       function r(e, t) {
-        const i = (0, a.useContext)(s),
-          n = "string" == typeof e ? e : o(...e);
-        let r = i;
+        const n = (0, a.useContext)(s),
+          i = "string" == typeof e ? e : o(...e);
+        let r = n;
         for (; r; ) {
-          if (n in r.instances) return r.instances[n];
-          if (n in r.factories) break;
+          if (i in r.instances) return r.instances[i];
+          if (i in r.factories) break;
           r = r.parent;
         }
-        const c = (r?.factories[n] ?? t)();
-        return ((r ?? i).instances[n] = c), c;
+        const c = (r?.factories[i] ?? t)();
+        return ((r ?? n).instances[i] = c), c;
       }
     },
-    17690: (e, t, i) => {
+    17690: (e, t, n) => {
       "use strict";
-      i.d(t, { IU: () => l, by: () => m, sc: () => r });
-      var n = i(78327),
-        o = i(85044),
-        a = i(81393),
-        s = i(45334);
+      n.d(t, { IU: () => l, by: () => m, sc: () => r });
+      var i = n(78327),
+        o = n(85044),
+        a = n(81393),
+        s = n(45334);
       const r = 0,
         c = "061818254b2c99ac49e6626adb128ed1282a392f",
         l = 120;
@@ -385,7 +581,7 @@
         }
         BuildAppURL(e, t) {
           return e
-            ? n.TS.MEDIA_CDN_COMMUNITY_URL +
+            ? i.TS.MEDIA_CDN_COMMUNITY_URL +
                 "images/apps/" +
                 this.appid +
                 "/" +
@@ -436,19 +632,19 @@
         }
       }
     },
-    10622: (e, t, i) => {
+    10622: (e, t, n) => {
       "use strict";
-      i.d(t, { Z: () => u, dV: () => d.d, rO: () => _ });
-      var n = i(34629),
-        o = i(14947),
-        a = i(31561),
-        s = i(51006),
-        r = i(61859),
-        c = i(22837),
-        l = i(38924),
-        m = i(78327),
-        d = i(85044);
-      function _(e) {
+      n.d(t, { Z: () => _, dV: () => d.d, rO: () => u });
+      var i = n(34629),
+        o = n(14947),
+        a = n(31561),
+        s = n(51006),
+        r = n(61859),
+        c = n(22837),
+        l = n(38924),
+        m = n(78327),
+        d = n(85044);
+      function u(e) {
         let t = "offline";
         return (
           e &&
@@ -461,7 +657,7 @@
           t
         );
       }
-      class u {
+      class _ {
         m_steamid;
         m_bInitialized = !1;
         m_ePersonaState = c.cU3;
@@ -613,8 +809,8 @@
           if (0 == this.last_seen_online) return 3e4;
           const e = 3600;
           let t = 1e3;
-          const i = s.Vw.CMInterface.GetServerRTime32() - this.last_seen_online;
-          return (t *= i > 86400 ? e : i > 7200 ? 60 : 15), t;
+          const n = s.Vw.CMInterface.GetServerRTime32() - this.last_seen_online;
+          return (t *= n > 86400 ? e : n > 7200 ? 60 : 15), t;
         }
         GetOfflineStatusTime() {
           if (0 == this.last_seen_online)
@@ -683,26 +879,26 @@
         get avatar_url_full() {
           return (0, d.t)(this.m_strAvatarHash, "full");
         }
-        static SortStatusComparator(e, t, i) {
+        static SortStatusComparator(e, t, n) {
           if (t.has_public_party_beacon) {
-            if (!i.has_public_party_beacon) return -1;
+            if (!n.has_public_party_beacon) return -1;
           } else {
-            if (i.has_public_party_beacon) return 1;
+            if (n.has_public_party_beacon) return 1;
             if (t.is_ingame) {
-              if (!i.is_ingame) return -1;
+              if (!n.is_ingame) return -1;
               if (!e) return 0;
               if (t.is_awayOrSnooze) {
-                if (!i.is_awayOrSnooze) return 1;
-              } else if (i.is_awayOrSnooze) return -1;
-            } else if (i.is_ingame) return 1;
+                if (!n.is_awayOrSnooze) return 1;
+              } else if (n.is_awayOrSnooze) return -1;
+            } else if (n.is_ingame) return 1;
           }
           if (t.is_online) {
-            if (!i.is_online) return -1;
-          } else if (i.is_online) return 1;
+            if (!n.is_online) return -1;
+          } else if (n.is_online) return 1;
           if (e)
             if (t.is_awayOrSnooze) {
-              if (!i.is_awayOrSnooze) return 1;
-            } else if (i.is_awayOrSnooze) return -1;
+              if (!n.is_awayOrSnooze) return 1;
+            } else if (n.is_awayOrSnooze) return -1;
           return 0;
         }
         GetCommunityProfileURL() {
@@ -711,180 +907,358 @@
             : `${m.TS.COMMUNITY_BASE_URL}profiles/${this.m_steamid.ConvertTo64BitString()}/`;
         }
       }
-      (0, n.Cg)([o.sH], u.prototype, "m_bInitialized", void 0),
-        (0, n.Cg)([o.sH], u.prototype, "m_ePersonaState", void 0),
-        (0, n.Cg)([o.sH], u.prototype, "m_unGamePlayedAppID", void 0),
-        (0, n.Cg)([o.sH], u.prototype, "m_gameid", void 0),
-        (0, n.Cg)([o.sH], u.prototype, "m_unPersonaStateFlags", void 0),
-        (0, n.Cg)([o.sH], u.prototype, "m_strPlayerName", void 0),
-        (0, n.Cg)([o.sH], u.prototype, "m_strAvatarHash", void 0),
-        (0, n.Cg)([o.sH], u.prototype, "m_strAccountName", void 0),
-        (0, n.Cg)([o.sH], u.prototype, "m_rtLastSeenOnline", void 0),
-        (0, n.Cg)([o.sH], u.prototype, "m_strGameExtraInfo", void 0),
-        (0, n.Cg)([o.sH], u.prototype, "m_unGameServerIP", void 0),
-        (0, n.Cg)([o.sH], u.prototype, "m_unGameServerPort", void 0),
-        (0, n.Cg)([o.sH], u.prototype, "m_game_lobby_id", void 0),
-        (0, n.Cg)([o.sH], u.prototype, "m_bPlayerNamePending", void 0),
-        (0, n.Cg)([o.sH], u.prototype, "m_bAvatarPending", void 0),
-        (0, n.Cg)([o.sH], u.prototype, "m_broadcastId", void 0),
-        (0, n.Cg)([o.sH], u.prototype, "m_broadcastAccountId", void 0),
-        (0, n.Cg)([o.sH], u.prototype, "m_broadcastAppId", void 0),
-        (0, n.Cg)([o.sH], u.prototype, "m_broadcastViewerCount", void 0),
-        (0, n.Cg)([o.sH], u.prototype, "m_strBroadcastTitle", void 0),
-        (0, n.Cg)([o.sH], u.prototype, "m_bCommunityBanned", void 0),
-        (0, n.Cg)([o.sH], u.prototype, "m_eGamingDeviceType", void 0),
-        (0, n.Cg)([o.sH], u.prototype, "m_bNameInitialized", void 0);
+      (0, i.Cg)([o.sH], _.prototype, "m_bInitialized", void 0),
+        (0, i.Cg)([o.sH], _.prototype, "m_ePersonaState", void 0),
+        (0, i.Cg)([o.sH], _.prototype, "m_unGamePlayedAppID", void 0),
+        (0, i.Cg)([o.sH], _.prototype, "m_gameid", void 0),
+        (0, i.Cg)([o.sH], _.prototype, "m_unPersonaStateFlags", void 0),
+        (0, i.Cg)([o.sH], _.prototype, "m_strPlayerName", void 0),
+        (0, i.Cg)([o.sH], _.prototype, "m_strAvatarHash", void 0),
+        (0, i.Cg)([o.sH], _.prototype, "m_strAccountName", void 0),
+        (0, i.Cg)([o.sH], _.prototype, "m_rtLastSeenOnline", void 0),
+        (0, i.Cg)([o.sH], _.prototype, "m_strGameExtraInfo", void 0),
+        (0, i.Cg)([o.sH], _.prototype, "m_unGameServerIP", void 0),
+        (0, i.Cg)([o.sH], _.prototype, "m_unGameServerPort", void 0),
+        (0, i.Cg)([o.sH], _.prototype, "m_game_lobby_id", void 0),
+        (0, i.Cg)([o.sH], _.prototype, "m_bPlayerNamePending", void 0),
+        (0, i.Cg)([o.sH], _.prototype, "m_bAvatarPending", void 0),
+        (0, i.Cg)([o.sH], _.prototype, "m_broadcastId", void 0),
+        (0, i.Cg)([o.sH], _.prototype, "m_broadcastAccountId", void 0),
+        (0, i.Cg)([o.sH], _.prototype, "m_broadcastAppId", void 0),
+        (0, i.Cg)([o.sH], _.prototype, "m_broadcastViewerCount", void 0),
+        (0, i.Cg)([o.sH], _.prototype, "m_strBroadcastTitle", void 0),
+        (0, i.Cg)([o.sH], _.prototype, "m_bCommunityBanned", void 0),
+        (0, i.Cg)([o.sH], _.prototype, "m_eGamingDeviceType", void 0),
+        (0, i.Cg)([o.sH], _.prototype, "m_bNameInitialized", void 0);
     },
-    85044: (e, t, i) => {
+    85044: (e, t, n) => {
       "use strict";
-      i.d(t, { d: () => o, t: () => a });
-      var n = i(78327);
+      n.d(t, { d: () => o, t: () => a });
+      var i = n(78327);
       const o = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
       function a(e, t) {
-        let i = ".jpg";
+        let n = ".jpg";
         (e && "0000000000000000000000000000000000000000" !== e) || (e = o),
-          44 == e.length && ((i = e.substr(-4)), (e = e.substr(0, 40)));
-        let a = n.TS.AVATAR_BASE_URL;
+          44 == e.length && ((n = e.substr(-4)), (e = e.substr(0, 40)));
+        let a = i.TS.AVATAR_BASE_URL;
         return (
           a ||
-            ((a = n.TS.MEDIA_CDN_COMMUNITY_URL + "images/avatars/"),
+            ((a = i.TS.MEDIA_CDN_COMMUNITY_URL + "images/avatars/"),
             (a += e.substr(0, 2) + "/")),
           (a += e),
           t && "small" != t && (a += "_" + t),
-          (a += i),
+          (a += n),
           a
         );
       }
     },
-    41471: (e, t, i) => {
+    4796: (e, t, n) => {
       "use strict";
-      i.d(t, { DW: () => u, js: () => _, mK: () => h, tb: () => f });
-      var n = i(90626),
-        o = i(80902),
-        a = i(54806),
-        s = i(22837),
-        r = i(23809),
-        c = i(44654),
-        l = i(10622),
-        m = i(17720),
-        d = i(11333);
-      function _(e) {
-        const t = (0, r.KV)(),
-          i = n.useContext(p);
-        return (0, o.I)(h(i, t, e));
+      n.d(t, { $5: () => N, TB: () => I, ac: () => y });
+      var i = n(7860),
+        o = n(75233),
+        a = n(14947),
+        s = n(90626),
+        r = n(17720),
+        c = n(81393),
+        l = n(78327),
+        m = n(67165),
+        d = (n(26161), n(29197), n(28210), n(33951)),
+        u = n(63340);
+      const _ = new WeakSet();
+      function p(e = i.L) {
+        if ("undefined" == typeof window) return;
+        if (_.has(e)) return;
+        const t = (0, l.Fd)("groupvanityinfo", "application_config");
+        (void 0 === t && "complete" != document.readyState) ||
+          (_.add(e), f(t) && (0, d.aA)(e, t));
       }
+      function f(e) {
+        const t = e;
+        return (
+          !!(
+            t &&
+            Array.isArray(t) &&
+            t.length > 0 &&
+            "object" == typeof t[0]
+          ) &&
+          "number" == typeof t[0].clanAccountID &&
+          ("number" == typeof t[0].appid || "string" == typeof t[0].vanity_url)
+        );
+      }
+      function h(e) {
+        return "string" == typeof e ? parseInt(e) : e;
+      }
+      function g(e) {
+        return "string" == typeof e ? Number.parseInt(e) : e;
+      }
+      const y = new (class {
+        m_queryClient = i.L;
+        m_boxCacheVersion = a.sH.box(0);
+        m_bWatchingCache = !1;
+        m_bBumpScheduled = !1;
+        Init() {
+          this.LazyInit();
+        }
+        LazyInit() {
+          p(this.m_queryClient),
+            this.m_bWatchingCache ||
+              ((this.m_bWatchingCache = !0),
+              this.m_queryClient.getQueryCache().subscribe((e) => {
+                ("added" != e?.type &&
+                  "updated" != e?.type &&
+                  "removed" != e?.type) ||
+                  ((0, d.yT)(e.query?.queryKey) &&
+                    this.ScheduleCacheVersionBump());
+              }));
+        }
+        ScheduleCacheVersionBump() {
+          this.m_bBumpScheduled ||
+            ((this.m_bBumpScheduled = !0),
+            queueMicrotask(() => {
+              (this.m_bBumpScheduled = !1),
+                (0, a.h5)(() =>
+                  this.m_boxCacheVersion.set(this.m_boxCacheVersion.get() + 1),
+                );
+            }));
+        }
+        ReadCache() {
+          return (
+            this.LazyInit(), this.m_boxCacheVersion.get(), this.m_queryClient
+          );
+        }
+        AddGroupVanities(e) {
+          this.LazyInit(), f(e) && (0, d.aA)(this.m_queryClient, e);
+        }
+        BHasClanInfoLoaded(e) {
+          return (
+            (0, c.wT)(e.BIsValid(), "Clan SteamID is not valid when ClanInfo"),
+            (0, c.wT)(
+              e.BIsClanAccount(),
+              "Clan SteamID is not a clan account id when requesting clan info ",
+            ),
+            this.BHasClanInfoLoadedByAccountID(e.GetAccountID())
+          );
+        }
+        BHasClanInfoLoadedByAccountID(e) {
+          return Boolean((0, d.Gt)(g(e), this.ReadCache()));
+        }
+        RegisterClanData(e) {
+          this.LazyInit(), (0, d.aA)(this.m_queryClient, e);
+        }
+        async LoadOGGClanInfoForAppID(e) {
+          return (
+            this.LazyInit(),
+            (e = h(e)),
+            (0, c.wT)(
+              0 != e,
+              "LoadOGGClanInfoForAppID called with appid of zero",
+            ),
+            0 == e ? null : (0, d.AB)(e, this.m_queryClient).catch(() => null)
+          );
+        }
+        async LoadOGGClanInfoForIdentifier(e) {
+          return this.LazyInit(), (0, d.Rc)(e, this.m_queryClient, "store");
+        }
+        async LoadOGGClanInfoForGroupVanity(e) {
+          return this.LazyInit(), (0, d.Rc)(e, this.m_queryClient, "group");
+        }
+        async LoadClanInfoForClanSteamID(e) {
+          return this.LoadClanInfoForClanAccountID(e.GetAccountID());
+        }
+        async LoadClanInfoForClanAccountID(e) {
+          return this.LazyInit(), (0, d.MR)(g(e), this.m_queryClient);
+        }
+        GetOGGClanInfo(e) {
+          const t = this.ReadCache();
+          return "string" == typeof e ? (0, d.fy)(e, t) : (0, d.ko)(e, t);
+        }
+        GetClanSteamIDForAppID(e) {
+          const t = (0, d.ko)(h(e), this.ReadCache());
+          return t ? r.b.InitFromClanID(t.clanAccountID) : void 0;
+        }
+        GetClanVanityForAppID(e) {
+          return (0, d.ko)(h(e), this.ReadCache())?.vanity_url;
+        }
+        GetClanVanityForClanSteamID(e) {
+          return (0, d.Gt)(e.GetAccountID(), this.ReadCache())?.vanity_url;
+        }
+        HasLoadedClanAccountID(e) {
+          return this.BHasClanInfoLoadedByAccountID(e);
+        }
+        GetClanMemberCount(e) {
+          return (0, d.ko)(h(e), this.ReadCache())?.member_count ?? 0;
+        }
+        GetClanInfoByClanAccountID(e) {
+          return (
+            (0, c.wT)(
+              !!e,
+              "Unepxected clanid when requesting information. GetClanInfoByClanAccountID ",
+            ),
+            (0, d.Gt)(g(e), this.ReadCache())
+          );
+        }
+        GetCreatorStoreURL(e) {
+          let t = m.pF.GetCreatorHome(e);
+          if (t) return t.GetCreatorHomeURL("developer");
+          let n = this.GetClanInfoByClanAccountID(e.GetAccountID());
+          return (
+            l.TS.COMMUNITY_BASE_URL +
+            (n.vanity_url
+              ? "groups/" + n.vanity_url
+              : "gid/" + e.ConvertTo64BitString())
+          );
+        }
+      })();
+      function S() {
+        const e = (0, o.jE)();
+        return p(e), e;
+      }
+      function I(e) {
+        S();
+        const { data: t, isPending: n } = (0, d.TB)(e ? g(e) : void 0);
+        return [Boolean(e) && n, t ?? void 0];
+      }
+      function N(e) {
+        const t = S();
+        (0, s.useEffect)(() => {
+          e &&
+            (0, d.MR)(g(e), t).catch((t) =>
+              console.error(`Failed to hint load clan info ${e}`, t),
+            );
+        }, [e, t]);
+      }
+      (0, u.V)("g_ClanStore", y);
+    },
+    41471: (e, t, n) => {
+      "use strict";
+      n.d(t, { DW: () => _, js: () => u, mK: () => h, tb: () => f });
+      var i = n(90626),
+        o = n(80902),
+        a = n(54806),
+        s = n(22837),
+        r = n(23809),
+        c = n(44654),
+        l = n(10622),
+        m = n(17720),
+        d = n(11333);
       function u(e) {
         const t = (0, r.KV)(),
-          i = n.useContext(p);
-        return (0, a.E)({ queries: e.map((e) => h(i, t, e)) });
+          n = i.useContext(p);
+        return (0, o.I)(h(n, t, e));
       }
-      const p = n.createContext({
+      function _(e) {
+        const t = (0, r.KV)(),
+          n = i.useContext(p);
+        return (0, a.E)({ queries: e.map((e) => h(n, t, e)) });
+      }
+      const p = i.createContext({
         loadPersonaState: async (e, t) => {
           if (null == e) return null;
-          const i = await (function (e) {
+          const n = await (function (e) {
             return (g ??= (0, d.c)(e));
           })(t).load(m.b.InitFromAccountID(e).ConvertTo64BitString());
           return (function (e, t) {
-            let i = new l.Z(e);
-            const n = t?.public_data,
+            let n = new l.Z(e);
+            const i = t?.public_data,
               o = t?.private_data;
-            (i.m_bInitialized = !!t),
-              (i.m_ePersonaState = o?.persona_state ?? s.cU3),
-              (i.m_strAvatarHash = n?.sha_digest_avatar
-                ? (0, c.Kx)(n.sha_digest_avatar)
+            (n.m_bInitialized = !!t),
+              (n.m_ePersonaState = o?.persona_state ?? s.cU3),
+              (n.m_strAvatarHash = i?.sha_digest_avatar
+                ? (0, c.Kx)(i.sha_digest_avatar)
                 : l.dV),
-              (i.m_strPlayerName = n?.persona_name ?? e.ConvertTo64BitString()),
-              (i.m_strAccountName = o?.account_name),
+              (n.m_strPlayerName = i?.persona_name ?? e.ConvertTo64BitString()),
+              (n.m_strAccountName = o?.account_name),
               o?.persona_state_flags &&
-                (i.m_unPersonaStateFlags = o?.persona_state_flags);
-            o?.game_id && (i.m_gameid = o?.game_id);
+                (n.m_unPersonaStateFlags = o?.persona_state_flags);
+            o?.game_id && (n.m_gameid = o?.game_id);
             o?.game_server_ip_address &&
-              (i.m_unGameServerIP = o?.game_server_ip_address);
-            o?.lobby_steam_id && (i.m_game_lobby_id = o?.lobby_steam_id);
-            o?.game_extra_info && (i.m_strGameExtraInfo = o?.game_extra_info);
-            n?.profile_url && (i.m_strProfileURL = n.profile_url);
-            return i;
-          })(m.b.InitFromAccountID(e), i);
+              (n.m_unGameServerIP = o?.game_server_ip_address);
+            o?.lobby_steam_id && (n.m_game_lobby_id = o?.lobby_steam_id);
+            o?.game_extra_info && (n.m_strGameExtraInfo = o?.game_extra_info);
+            i?.profile_url && (n.m_strProfileURL = i.profile_url);
+            return n;
+          })(m.b.InitFromAccountID(e), n);
         },
       });
       function f() {
-        return n.useContext(p);
+        return i.useContext(p);
       }
-      function h(e, t, i) {
-        const n = "string" == typeof i ? new m.b(i).GetAccountID() : i;
+      function h(e, t, n) {
+        const i = "string" == typeof n ? new m.b(n).GetAccountID() : n;
         return {
-          queryKey: ["PlayerSummary", n],
-          queryFn: () => e.loadPersonaState(n, t),
-          enabled: !!n,
+          queryKey: ["PlayerSummary", i],
+          queryFn: () => e.loadPersonaState(i, t),
+          enabled: !!i,
         };
       }
       let g;
     },
-    98425: (e, t, i) => {
+    98425: (e, t, n) => {
       "use strict";
-      i.r(t),
-        i.d(t, {
-          GreenEnvelope: () => Ce,
+      n.r(t),
+        n.d(t, {
+          GreenEnvelope: () => De,
           default: () => ze,
-          useSteamNotifications: () => Re,
+          useSteamNotifications: () => Ue,
         });
-      var n = i(7850),
-        o = i(22837),
-        a = i(9344),
-        s = i(65946),
-        r = i(90626),
-        c = i(68950),
-        l = i(15419),
-        m = i(23809),
-        d = i(88997),
-        _ = i(46120),
-        u = i(4869),
-        p = i(12155),
-        f = i(52038),
-        h = i(61859),
-        g = i(30470),
-        y = i(84811),
-        N = i(29553),
-        S = i.n(N),
-        v = i(37340),
-        x = i(17720);
-      function I(e) {
+      var i = n(7850),
+        o = n(22837),
+        a = n(9344),
+        s = n(65946),
+        r = n(90626),
+        c = n(68950),
+        l = n(15419),
+        m = n(23809),
+        d = n(88997),
+        u = n(46120),
+        _ = n(4869),
+        p = n(12155),
+        f = n(52038),
+        h = n(61859),
+        g = n(30470),
+        y = n(84811),
+        S = n(29553),
+        I = n.n(S),
+        N = n(37340),
+        v = n(17720);
+      function A(e) {
         if (!e) return;
         const t = "string" == typeof e ? e : e.locString,
-          i = "string" == typeof e ? [] : e.params || [];
-        return t ? ("#" !== t[0] ? t : (0, h.we)(t, ...i)) : void 0;
+          n = "string" == typeof e ? [] : e.params || [];
+        return t ? ("#" !== t[0] ? t : (0, h.we)(t, ...n)) : void 0;
       }
-      function A(e) {
-        return r.useMemo(() => ((0, _.V4)(e.type) ? (0, _.bP)(e) : null), [e]);
+      function x(e) {
+        return r.useMemo(() => ((0, u.V4)(e.type) ? (0, u.bP)(e) : null), [e]);
       }
-      var j = i(87910),
-        T = i.n(j),
-        w = i(32630),
-        b = i(60014),
-        P = i(41471),
-        L = i(76217),
-        U = i(91675),
-        C = i(14771),
-        R = i(93761),
-        H = i.n(R);
+      var w = n(87910),
+        T = n.n(w),
+        j = n(32630),
+        b = n(60014),
+        C = n(41471),
+        L = n(76217),
+        P = n(91675),
+        D = n(14771),
+        U = n(93761),
+        R = n.n(U);
       function B(e) {
-        let { onActivate: t, icon: i, body: a, eUIMode: s, classNames: r } = e,
+        let { onActivate: t, icon: n, body: a, eUIMode: s, classNames: r } = e,
           c = t,
-          l = H().PinnedTemplate;
+          l = R().PinnedTemplate;
         return (
           s == o.ogI
-            ? (l = H().PinnedTemplateDesktop)
-            : s == o.yrU && (l = H().PinnedTemplateWeb),
+            ? (l = R().PinnedTemplateDesktop)
+            : s == o.yrU && (l = R().PinnedTemplateWeb),
           (l = (0, f.A)(l, r)),
-          (0, n.jsx)(L.Z, {
+          (0, i.jsx)(L.Z, {
             className: l,
             onActivate: c,
-            children: (0, n.jsx)("div", {
-              className: H().Content,
-              children: (0, n.jsxs)("div", {
-                className: H().PinnedBody,
+            children: (0, i.jsx)("div", {
+              className: R().Content,
+              children: (0, i.jsxs)("div", {
+                className: R().PinnedBody,
                 children: [
-                  (0, n.jsx)("span", { className: H().Icon, children: i }),
+                  (0, i.jsx)("span", { className: R().Icon, children: n }),
                   a,
                 ],
               }),
@@ -892,10 +1266,10 @@
           })
         );
       }
-      function D(e) {
+      function G(e) {
         const {
           count: t,
-          icon: i,
+          icon: n,
           onActivate: o,
           strLocToken: a,
           bAlwaysShow: s,
@@ -905,8 +1279,8 @@
         } = e;
         if (!t && !s) return null;
         const m = (0, h.Yp)(a, t);
-        return (0, n.jsx)(B, {
-          icon: i,
+        return (0, i.jsx)(B, {
+          icon: n,
           body: m,
           onActivate: o,
           eUIMode: r,
@@ -914,94 +1288,94 @@
           visible: l,
         });
       }
-      var G;
+      var H;
       function M(e) {
         let {
           nUnread: t,
-          location: i,
+          location: n,
           eUIMode: a,
           bLoading: s,
           footer: c,
           bNewIndicator: l,
         } = e;
-        const [m, d] = r.useState(s ? G.loadingActive : G.none),
-          [_, u] = r.useState(void 0);
+        const [m, d] = r.useState(s ? H.loadingActive : H.none),
+          [u, _] = r.useState(void 0);
         r.useEffect(() => {
-          m != G.loadingActive || s
-            ? m == G.loadingComplete && s && d(G.loadingActive)
-            : d(G.loadingComplete);
+          m != H.loadingActive || s
+            ? m == H.loadingComplete && s && d(H.loadingActive)
+            : d(H.loadingComplete);
         }, [m, s]),
           r.useEffect(() => {
             let e =
-              parseInt(H().loadinganimationiterationcount) *
-              parseInt(H().loadinganimationduration) *
+              parseInt(R().loadinganimationiterationcount) *
+              parseInt(R().loadinganimationduration) *
               1e3;
-            const t = window.setTimeout(() => d(G.none), e);
+            const t = window.setTimeout(() => d(H.none), e);
             return () => window.clearTimeout(t);
           }, []),
           r.useEffect(() => {
-            t && t > 0 && _ !== H().Unread && i != o.miK && i != o.PN1
-              ? u(H().Unread)
-              : t || _ != H().Unread || u(H().MarkedRead);
-          }, [t, i, _]);
+            t && t > 0 && u !== R().Unread && n != o.miK && n != o.PN1
+              ? _(R().Unread)
+              : t || u != R().Unread || _(R().MarkedRead);
+          }, [t, n, u]);
         let p = e.onActivate;
         p || (p = () => console.log("Missing activate function")),
-          m == G.loadingActive && (p = void 0);
-        let h = H().StandardTemplate;
-        i == o.oYe
-          ? (h = H().AllNotificationsTemplate)
-          : i == o.miK
-            ? (h = H().DesktopToastTemplate)
-            : (a != o.ogI && a != o.yrU) || (h = H().StandardTemplateDesktop);
+          m == H.loadingActive && (p = void 0);
+        let h = R().StandardTemplate;
+        n == o.oYe
+          ? (h = R().AllNotificationsTemplate)
+          : n == o.miK
+            ? (h = R().DesktopToastTemplate)
+            : (a != o.ogI && a != o.yrU) || (h = R().StandardTemplateDesktop);
         let g = null;
-        if (m != G.none && i != o.miK && i != o.PN1) {
-          let e = m == G.loadingComplete ? H().Hide : null;
-          g = (0, n.jsxs)("div", {
-            className: (0, f.A)(H().LoadingTemplate, e),
+        if (m != H.none && n != o.miK && n != o.PN1) {
+          let e = m == H.loadingComplete ? R().Hide : null;
+          g = (0, i.jsxs)("div", {
+            className: (0, f.A)(R().LoadingTemplate, e),
             children: [
-              (0, n.jsx)("div", {
+              (0, i.jsx)("div", {
                 className: (0, f.A)(
-                  H().StandardLogoDimensions,
-                  H().ShimmerLogo,
+                  R().StandardLogoDimensions,
+                  R().ShimmerLogo,
                 ),
               }),
-              (0, n.jsxs)("div", {
-                className: H().Content,
+              (0, i.jsxs)("div", {
+                className: R().Content,
                 children: [
-                  (0, n.jsx)("div", {
-                    className: (0, f.A)(H().Header, H().ShimmerHeader),
+                  (0, i.jsx)("div", {
+                    className: (0, f.A)(R().Header, R().ShimmerHeader),
                   }),
-                  (0, n.jsx)("div", {
-                    className: (0, f.A)(H().Body, H().ShimmerBody),
+                  (0, i.jsx)("div", {
+                    className: (0, f.A)(R().Body, R().ShimmerBody),
                   }),
                 ],
               }),
             ],
           });
         }
-        return (0, n.jsxs)(L.Z, {
+        return (0, i.jsxs)(L.Z, {
           onActivate: p,
-          className: H().StandardTemplateContainer,
+          className: R().StandardTemplateContainer,
           onOptionsButton: e.onOptionsButton,
           onOptionsActionDescription: e.onOptionsButtonDesc,
           children: [
-            (0, n.jsxs)("div", {
-              className: (0, f.A)(h, _),
+            (0, i.jsxs)("div", {
+              className: (0, f.A)(h, u),
               children: [
-                (0, n.jsx)("div", {
-                  className: H().StandardLogoDimensions,
+                (0, i.jsx)("div", {
+                  className: R().StandardLogoDimensions,
                   children: e.logo,
                 }),
                 e.personaStatus &&
-                  (0, n.jsx)("div", {
-                    className: (0, f.A)(H().AvatarStatus, e.personaStatus),
+                  (0, i.jsx)("div", {
+                    className: (0, f.A)(R().AvatarStatus, e.personaStatus),
                   }),
-                (0, n.jsx)("div", {
-                  className: H().Content,
+                (0, i.jsx)("div", {
+                  className: R().Content,
                   children: e.children,
                 }),
                 g,
-                l && (0, n.jsx)(k, { location: i }),
+                l && (0, i.jsx)(k, { location: n }),
               ],
             }),
             c || null,
@@ -1012,15 +1386,15 @@
         const { location: t } = e;
         return t != o.B3I
           ? null
-          : (0, n.jsx)("div", {
-              className: H().NewIndicator,
-              children: (0, n.jsx)(p.jlt, {}),
+          : (0, i.jsx)("div", {
+              className: R().NewIndicator,
+              children: (0, i.jsx)(p.jlt, {}),
             });
       }
       function F(e) {
         let {
           icon: t,
-          title: i,
+          title: n,
           timestamp: a,
           location: s,
           fnRenderTimestamp: r,
@@ -1028,79 +1402,79 @@
         const c = !!a && (s == o.B3I || s == o.oYe);
         let l;
         return (
-          (l = s == o.oYe ? Y : (r ?? V)),
-          (0, n.jsxs)("div", {
-            className: H().Header,
+          (l = s == o.oYe ? q : (r ?? V)),
+          (0, i.jsxs)("div", {
+            className: R().Header,
             children: [
-              (0, n.jsx)(O, { icon: t }),
-              !!i && (0, n.jsx)(E, { title: i }),
+              (0, i.jsx)(O, { icon: t }),
+              !!n && (0, i.jsx)(E, { title: n }),
               c && l({ timestamp: a }),
             ],
           })
         );
       }
       function O(e) {
-        return (0, n.jsxs)(n.Fragment, {
+        return (0, i.jsxs)(i.Fragment, {
           children: [
             !!e.icon &&
-              (0, n.jsx)("div", { className: H().Icon, children: e.icon }),
+              (0, i.jsx)("div", { className: R().Icon, children: e.icon }),
             " ",
           ],
         });
       }
       function E(e) {
-        return (0, n.jsx)("div", { className: H().Title, children: e.title });
+        return (0, i.jsx)("div", { className: R().Title, children: e.title });
       }
       function W(e) {
         let t = (0, f.A)(
-          H().StandardNotificationDescription,
-          e.multiline && H().Multiline,
+          R().StandardNotificationDescription,
+          e.multiline && R().Multiline,
         );
-        return (0, n.jsx)("div", { className: t, children: e.children });
+        return (0, i.jsx)("div", { className: t, children: e.children });
       }
       function z(e) {
         let t = (0, f.A)(
-          H().StandardNotificationSubText,
-          e.multiline && H().Multiline,
+          R().StandardNotificationSubText,
+          e.multiline && R().Multiline,
         );
-        return (0, n.jsx)("div", { className: t, children: e.children });
+        return (0, i.jsx)("div", { className: t, children: e.children });
       }
-      function Y(e) {
+      function q(e) {
         if (void 0 === e.timestamp) return null;
         let t = new Date(),
-          i = new Date(1e3 * e.timestamp),
-          o = (0, U.KC)(e.timestamp);
+          n = new Date(1e3 * e.timestamp),
+          o = (0, P.KC)(e.timestamp);
         return (
-          (0, C.JD)(t, i) || (o = (0, U._l)(e.timestamp, !1, !1, !1) + " " + o),
-          (0, n.jsx)("div", { className: H().Timestamp, children: o })
+          (0, D.JD)(t, n) || (o = (0, P._l)(e.timestamp, !1, !1, !1) + " " + o),
+          (0, i.jsx)("div", { className: R().Timestamp, children: o })
         );
       }
       function V(e) {
         if (void 0 === e.timestamp) return null;
         let t = new Date(),
-          i = new Date(1e3 * e.timestamp),
-          o = (0, C.JD)(t, i)
-            ? (0, U.KC)(e.timestamp)
-            : (0, U._l)(e.timestamp, !1, !1, !1);
-        return (0, n.jsx)("div", { className: H().Timestamp, children: o });
+          n = new Date(1e3 * e.timestamp),
+          o = (0, D.JD)(t, n)
+            ? (0, P.KC)(e.timestamp)
+            : (0, P._l)(e.timestamp, !1, !1, !1);
+        return (0, i.jsx)("div", { className: R().Timestamp, children: o });
       }
       !(function (e) {
         (e[(e.none = 0)] = "none"),
           (e[(e.loadingActive = 1)] = "loadingActive"),
           (e[(e.loadingComplete = 2)] = "loadingComplete");
-      })(G || (G = {}));
-      var q = i(96305),
-        K = i(37226),
-        Q = i(78327);
+      })(H || (H = {}));
+      var Y = n(96305),
+        Q = n(37226),
+        K = n(78327);
       function X(e) {
         return e == o.PN1;
       }
-      var Z = i(97786),
-        J = i.n(Z);
-      function $(e) {
+      var Z = n(97786),
+        $ = n.n(Z);
+      function J(e) {
         let {
             onActivate: t,
-            onDismiss: i,
+            onDismiss: n,
             logo: o,
             icon: a,
             title: s,
@@ -1108,109 +1482,109 @@
             personaStatus: l,
             className: m,
             singleLineOnly: d,
-            fullWidth: _,
+            fullWidth: u,
           } = e,
-          u = (function (e, t) {
+          _ = (function (e, t) {
             return r.useCallback(
-              (i) => {
-                e && e(i), t && t();
+              (n) => {
+                e && e(n), t && t();
               },
               [e, t],
             );
-          })(t, i);
-        return (0, n.jsxs)(L.Z, {
-          className: (0, f.A)(J().ShortTemplate, !d && J().TwoLine, m),
-          onActivate: u,
+          })(t, n);
+        return (0, i.jsxs)(L.Z, {
+          className: (0, f.A)($().ShortTemplate, !d && $().TwoLine, m),
+          onActivate: _,
           onMouseDown: (e) => {
-            1 == e.button && i && i();
+            1 == e.button && n && n();
           },
           children: [
-            (0, n.jsx)("div", {
-              className: J().ShortLogoDimensions,
+            (0, i.jsx)("div", {
+              className: $().ShortLogoDimensions,
               children: o,
             }),
             e.personaStatus &&
-              (0, n.jsx)("div", { className: (0, f.A)(J().AvatarStatus, l) }),
-            (0, n.jsxs)("div", {
-              className: (0, f.A)(J().Content, _ && J().FullWidth),
+              (0, i.jsx)("div", { className: (0, f.A)($().AvatarStatus, l) }),
+            (0, i.jsxs)("div", {
+              className: (0, f.A)($().Content, u && $().FullWidth),
               children: [
-                (0, n.jsxs)("div", {
-                  className: J().Header,
+                (0, i.jsxs)("div", {
+                  className: $().Header,
                   children: [
                     !!a &&
-                      (0, n.jsx)("div", { className: J().Icon, children: a }),
-                    (0, n.jsx)("div", { className: J().Title, children: s }),
+                      (0, i.jsx)("div", { className: $().Icon, children: a }),
+                    (0, i.jsx)("div", { className: $().Title, children: s }),
                   ],
                 }),
-                (0, n.jsx)("div", { className: J().Body, children: c }),
+                (0, i.jsx)("div", { className: $().Body, children: c }),
               ],
             }),
           ],
         });
       }
-      var ee = i(92012),
-        te = i.n(ee),
-        ie = i(4796),
-        ne = i(39777),
-        oe = i(42834);
+      var ee = n(92012),
+        te = n.n(ee),
+        ne = n(4796),
+        ie = n(39777),
+        oe = n(42834);
       function ae(e) {
         switch (e) {
-          case v.Vv.wp:
-            return (0, n.jsx)(p.ilR, {});
-          case v.Vv.wY:
-            return (0, n.jsx)(p.Cv4, {});
+          case N.Vv.wp:
+            return (0, i.jsx)(p.ilR, {});
+          case N.Vv.wY:
+            return (0, i.jsx)(p.Cv4, {});
           default:
-            return (0, n.jsx)(p.Qte, {});
+            return (0, i.jsx)(p.Qte, {});
         }
       }
       function se(e) {
         let {
           fallbackLogo: t,
-          data: i,
+          data: n,
           location: o,
           icon: a,
           timestamp: s,
           fnRenderTimestamp: c,
           onHide: l,
         } = e;
-        const m = "number" == typeof i?.image,
-          d = m ? { appid: i.image } : void 0,
-          { data: _ } = (0, ne.J$)(d),
-          { data: u } = (0, ne.lv)(d),
-          p = i?.display_name ?? "",
-          f = i?.title ?? i?.body,
-          h = i?.title ? i.body : null,
+        const m = "number" == typeof n?.image,
+          d = m ? { appid: n.image } : void 0,
+          { data: u } = (0, ie.J$)(d),
+          { data: _ } = (0, ie.lv)(d),
+          p = n?.display_name ?? "",
+          f = n?.title ?? n?.body,
+          h = n?.title ? n.body : null,
           g = X(o),
-          y = d && (!_ || !u),
-          [N, S] = r.useState(!1),
-          v = () => S(!0);
-        let x = null;
-        if (m) x = he(u, t, g);
+          y = d && (!u || !_),
+          [S, I] = r.useState(!1),
+          N = () => I(!0);
+        let v = null;
+        if (m) v = he(_, t, g);
         else {
           const e = g ? te().ShortLogoDimensions : te().StandardLogoDimensions;
-          x =
-            i?.image && !N
-              ? (0, n.jsx)("img", { className: e, src: i.image, onError: v })
+          v =
+            n?.image && !S
+              ? (0, i.jsx)("img", { className: e, src: n.image, onError: N })
               : t;
         }
         return g
-          ? (0, n.jsx)($, { ...e, logo: x, icon: a, title: p, body: f })
-          : (0, n.jsx)(ye, {
-              children: (0, n.jsxs)(M, {
-                logo: x,
+          ? (0, i.jsx)(J, { ...e, logo: v, icon: a, title: p, body: f })
+          : (0, i.jsx)(ye, {
+              children: (0, i.jsxs)(M, {
+                logo: v,
                 bLoading: y,
                 ...e,
                 children: [
-                  (0, n.jsx)(F, {
+                  (0, i.jsx)(F, {
                     icon: a,
                     title: p,
                     timestamp: s,
                     location: o,
                     fnRenderTimestamp: c,
                   }),
-                  (0, n.jsx)(W, { multiline: !h, children: f }),
-                  !!h && (0, n.jsx)(z, { children: h }),
-                  l ? (0, n.jsx)(ge, { onHide: l }) : null,
+                  (0, i.jsx)(W, { multiline: !h, children: f }),
+                  !!h && (0, i.jsx)(z, { children: h }),
+                  l ? (0, i.jsx)(ge, { onHide: l }) : null,
                 ],
               }),
             });
@@ -1218,42 +1592,42 @@
       function re(e) {
         let {
           displayName: t,
-          location: i,
+          location: n,
           icon: o,
           timestamp: a,
           fnRenderTimestamp: s,
           onHide: r,
         } = e;
-        const c = X(i),
+        const c = X(n),
           l = (0, h.we)("#SteamNotifications_TradeOffer_Title"),
           m = c
             ? (0, h.we)("#SteamNotifications_TradeOffer_Body_Short", t ?? "")
             : (0, h.we)("#SteamNotifications_TradeOffer_Body"),
           d = (0, h.we)("#SteamNotifications_TradeOffer_Description", t ?? ""),
-          _ = !t;
+          u = !t;
         return c
-          ? (0, n.jsx)($, {
+          ? (0, i.jsx)(J, {
               ...e,
               logo: e.logo,
               icon: e.icon,
               title: l,
               body: m,
             })
-          : (0, n.jsx)(ye, {
-              children: (0, n.jsxs)(M, {
-                bLoading: _,
+          : (0, i.jsx)(ye, {
+              children: (0, i.jsxs)(M, {
+                bLoading: u,
                 ...e,
                 children: [
-                  (0, n.jsx)(F, {
+                  (0, i.jsx)(F, {
                     icon: o,
                     title: l,
                     timestamp: a,
-                    location: i,
+                    location: n,
                     fnRenderTimestamp: s,
                   }),
-                  (0, n.jsx)(W, { children: m }),
-                  (0, n.jsx)(z, { children: d }),
-                  r ? (0, n.jsx)(ge, { onHide: r }) : null,
+                  (0, i.jsx)(W, { children: m }),
+                  (0, i.jsx)(z, { children: d }),
+                  r ? (0, i.jsx)(ge, { onHide: r }) : null,
                 ],
               }),
             });
@@ -1261,7 +1635,7 @@
       const ce = (e) => {
         let {
           location: t,
-          icon: i,
+          icon: n,
           timestamp: o,
           fnRenderTimestamp: a,
           onHide: s,
@@ -1273,27 +1647,27 @@
             : (0, h.we)("#SteamNotifications_TradeReversal_Body"),
           m = (0, h.we)("#SteamNotifications_TradeReversal_Description");
         return r
-          ? (0, n.jsx)($, {
+          ? (0, i.jsx)(J, {
               ...e,
               logo: e.logo,
               icon: e.icon,
               title: c,
               body: l,
             })
-          : (0, n.jsx)(ye, {
-              children: (0, n.jsxs)(M, {
+          : (0, i.jsx)(ye, {
+              children: (0, i.jsxs)(M, {
                 ...e,
                 children: [
-                  (0, n.jsx)(F, {
-                    icon: i,
+                  (0, i.jsx)(F, {
+                    icon: n,
                     title: c,
                     timestamp: o,
                     location: t,
                     fnRenderTimestamp: a,
                   }),
-                  (0, n.jsx)(W, { children: l }),
-                  (0, n.jsx)(z, { children: m }),
-                  s ? (0, n.jsx)(ge, { onHide: s }) : null,
+                  (0, i.jsx)(W, { children: l }),
+                  (0, i.jsx)(z, { children: m }),
+                  s ? (0, i.jsx)(ge, { onHide: s }) : null,
                 ],
               }),
             });
@@ -1301,42 +1675,42 @@
       function le(e) {
         let {
           senderName: t,
-          location: i,
+          location: n,
           icon: o,
           timestamp: a,
           fnRenderTimestamp: s,
           onHide: r,
         } = e;
-        const c = X(i),
+        const c = X(n),
           l = c
             ? (0, h.we)("#Notification_GiftReceived_Body_Short", t ?? "")
             : (0, h.we)("#Notification_GiftReceived_Body"),
           m = t ? (0, h.we)("#Notification_GiftReceived_Description", t) : null,
           d = (0, h.we)("#Notification_GiftReceived_Title"),
-          _ = !t;
+          u = !t;
         return c
-          ? (0, n.jsx)($, {
+          ? (0, i.jsx)(J, {
               ...e,
               logo: e.logo,
               icon: e.icon,
               title: d,
               body: l,
             })
-          : (0, n.jsx)(ye, {
-              children: (0, n.jsxs)(M, {
-                bLoading: _,
+          : (0, i.jsx)(ye, {
+              children: (0, i.jsxs)(M, {
+                bLoading: u,
                 ...e,
                 children: [
-                  (0, n.jsx)(F, {
+                  (0, i.jsx)(F, {
                     icon: o,
                     title: d,
                     timestamp: a,
-                    location: i,
+                    location: n,
                     fnRenderTimestamp: s,
                   }),
-                  (0, n.jsx)(W, { multiline: !m, children: l }),
-                  !!m && (0, n.jsx)(z, { children: m }),
-                  r ? (0, n.jsx)(ge, { onHide: r }) : null,
+                  (0, i.jsx)(W, { multiline: !m, children: l }),
+                  !!m && (0, i.jsx)(z, { children: m }),
+                  r ? (0, i.jsx)(ge, { onHide: r }) : null,
                 ],
               }),
             });
@@ -1344,16 +1718,16 @@
       function me(e) {
         let {
           requestorName: t,
-          requestorAvatarURL: i,
+          requestorAvatarURL: n,
           fallbackLogo: a,
           data: s,
           location: c,
           icon: l,
           timestamp: m,
           fnRenderTimestamp: d,
-          onHide: _,
+          onHide: u,
         } = e;
-        const u = X(c);
+        const _ = X(c);
         let f = "";
         t && s.state == o.UXi
           ? (f = (0, h.we)(
@@ -1366,46 +1740,46 @@
             : t &&
               (f = (0, h.we)("#SteamNotifications_FriendInvite_Description"));
         const [g, y] = r.useState(!1),
-          N = () => y(!0);
-        let S = a;
-        if (i && !g) {
+          S = () => y(!0);
+        let I = a;
+        if (n && !g) {
           const e = s.state == o._UC && c != o.PN1,
-            t = u ? te().ShortLogoDimensions : te().StandardLogoDimensions;
-          S = (0, n.jsxs)(L.Z, {
+            t = _ ? te().ShortLogoDimensions : te().StandardLogoDimensions;
+          I = (0, i.jsxs)(L.Z, {
             style: { position: "relative" },
             children: [
-              e && (0, n.jsx)(p.GSe, { className: te().FriendIndicator }),
-              (0, n.jsx)("img", { className: t, src: i, onError: N }),
+              e && (0, i.jsx)(p.GSe, { className: te().FriendIndicator }),
+              (0, i.jsx)("img", { className: t, src: n, onError: S }),
             ],
           });
         }
-        const v =
+        const N =
             t || (0, h.we)("#SteamNotifications_FriendInvite_Body_Generic"),
-          x = !t;
-        return u
-          ? (0, n.jsx)($, {
+          v = !t;
+        return _
+          ? (0, i.jsx)(J, {
               ...e,
-              logo: S,
+              logo: I,
               icon: e.icon,
               title: (0, h.we)("#Notification_FriendInvite_Title"),
-              body: v,
+              body: N,
             })
-          : (0, n.jsx)(ye, {
-              children: (0, n.jsxs)(M, {
-                logo: S,
-                bLoading: x,
+          : (0, i.jsx)(ye, {
+              children: (0, i.jsxs)(M, {
+                logo: I,
+                bLoading: v,
                 ...e,
                 children: [
-                  (0, n.jsx)(F, {
+                  (0, i.jsx)(F, {
                     icon: l,
                     title: (0, h.we)("#Notification_FriendInvite_Title"),
                     timestamp: m,
                     location: c,
                     fnRenderTimestamp: d,
                   }),
-                  (0, n.jsx)(W, { multiline: !f, children: v }),
-                  !!f && (0, n.jsx)(z, { children: f }),
-                  _ ? (0, n.jsx)(ge, { onHide: _ }) : null,
+                  (0, i.jsx)(W, { multiline: !f, children: N }),
+                  !!f && (0, i.jsx)(z, { children: f }),
+                  u ? (0, i.jsx)(ge, { onHide: u }) : null,
                 ],
               }),
             });
@@ -1413,7 +1787,7 @@
       function de(e) {
         let {
           itemState: t,
-          fallbackLogo: i,
+          fallbackLogo: n,
           data: o,
           location: a,
           icon: s,
@@ -1422,31 +1796,31 @@
           nUnread: m,
           onHide: d,
         } = e;
-        const [_, u] = r.useState(!1),
-          p = () => u(!0),
+        const [u, _] = r.useState(!1),
+          p = () => _(!0),
           f = X(a);
-        let g = i;
-        if (t?.item_data?.icon_url && !_) {
-          let e = `${Q.TS.COMMUNITY_CDN_URL}economy/image/${t.item_data.icon_url}`,
-            i = t.item_data.background_color
+        let g = n;
+        if (t?.item_data?.icon_url && !u) {
+          let e = `${K.TS.COMMUNITY_CDN_URL}economy/image/${t.item_data.icon_url}`,
+            n = t.item_data.background_color
               ? "#" + t.item_data.background_color
               : null;
           const o = f ? te().ShortLogoDimensions : te().StandardLogoDimensions;
-          g = (0, n.jsx)(L.Z, {
+          g = (0, i.jsx)(L.Z, {
             style: { position: "relative" },
-            children: (0, n.jsx)("img", {
+            children: (0, i.jsx)("img", {
               className: o,
-              style: { backgroundColor: i ?? void 0, justifyContent: "center" },
+              style: { backgroundColor: n ?? void 0, justifyContent: "center" },
               src: e,
               onError: p,
             }),
           });
         }
         const y = 753 == parseInt(o.appid);
-        let N = null;
+        let S = null;
         if (void 0 !== m && m > 1) {
           const e = m - 1;
-          N = y
+          S = y
             ? (0, h.we)("#Notification_Item_RollupMore_Steam", e)
             : t?.app_name
               ? (0, h.we)(
@@ -1457,54 +1831,54 @@
               : (0, h.we)("#Notification_Item_RollupMore", e);
         } else
           t?.app_name &&
-            (N = y
+            (S = y
               ? t.app_name
               : (0, h.we)("#Notification_Item_Single_GameName", t.app_name));
-        const S = t?.item_data?.name
+        const I = t?.item_data?.name
             ? t.item_data.name
             : (0, h.we)("#Notification_Item_Body_Generic"),
-          v = !t || !t.item_data;
+          N = !t || !t.item_data;
         if (f) {
-          let i = "";
+          let n = "";
           return (
-            (i = t?.app_name
+            (n = t?.app_name
               ? m > 1
                 ? (0, h.we)("#Notification_Item_Body_Short_Plural", t?.app_name)
                 : (0, h.we)("#Notification_Item_Body_Short", t?.app_name)
               : (0, h.we)("#Notification_Item_Body_Generic")),
-            (0, n.jsx)($, {
+            (0, i.jsx)(J, {
               ...e,
               logo: g,
               icon: e.icon,
               title: (0, h.we)("#Notification_ItemAnnouncement_Body"),
-              body: i,
+              body: n,
             })
           );
         }
-        return (0, n.jsx)(ye, {
-          children: (0, n.jsxs)(M, {
+        return (0, i.jsx)(ye, {
+          children: (0, i.jsxs)(M, {
             logo: g,
-            bLoading: v,
+            bLoading: N,
             ...e,
             children: [
-              (0, n.jsx)(F, {
+              (0, i.jsx)(F, {
                 icon: s,
                 title: (0, h.we)("#Notification_ItemAnnouncement_TitleLong"),
                 timestamp: c,
                 location: a,
                 fnRenderTimestamp: l,
               }),
-              (0, n.jsx)(W, { multiline: !N, children: S }),
-              !!N && (0, n.jsx)(z, { children: N }),
-              d ? (0, n.jsx)(ge, { onHide: d }) : null,
+              (0, i.jsx)(W, { multiline: !S, children: I }),
+              !!S && (0, i.jsx)(z, { children: S }),
+              d ? (0, i.jsx)(ge, { onHide: d }) : null,
             ],
           }),
         });
       }
-      function _e(e) {
+      function ue(e) {
         let {
           fallbackLogo: t,
-          data: i,
+          data: n,
           location: o,
           icon: a,
           timestamp: s,
@@ -1512,14 +1886,14 @@
           onHide: c,
         } = e;
         const l = X(o),
-          m = i.appid ? { appid: i.appid } : void 0,
-          { data: d } = (0, ne.J$)(m),
-          { data: _ } = (0, ne.lv)(m),
-          u = he(_, t, l),
-          p = m && (!d || !_);
+          m = n.appid ? { appid: n.appid } : void 0,
+          { data: d } = (0, ie.J$)(m),
+          { data: u } = (0, ie.lv)(m),
+          _ = he(u, t, l),
+          p = m && (!d || !u);
         let f = "";
         return (
-          i.state == q.GO
+          n.state == Y.GO
             ? (f =
                 l && d?.name
                   ? (0, h.we)(
@@ -1527,44 +1901,44 @@
                       d.name,
                     )
                   : (0, h.we)("#SteamNotification_AsyncGame_Action"))
-            : i.state == q.cf &&
+            : n.state == Y.cf &&
               (f =
                 l && d?.name
                   ? (0, h.we)("#SteamNotification_AsyncGame_Done_Short", d.name)
                   : (0, h.we)("#SteamNotification_AsyncGame_Done")),
           l
-            ? (0, n.jsx)($, {
+            ? (0, i.jsx)(J, {
                 ...e,
-                logo: u,
+                logo: _,
                 icon: e.icon,
                 title: (0, h.we)("#SteamNotification_AsyncGame_Title"),
                 body: f,
               })
-            : (0, n.jsx)(ye, {
-                children: (0, n.jsxs)(M, {
-                  logo: u,
+            : (0, i.jsx)(ye, {
+                children: (0, i.jsxs)(M, {
+                  logo: _,
                   bLoading: p,
                   ...e,
                   children: [
-                    (0, n.jsx)(F, {
+                    (0, i.jsx)(F, {
                       icon: a,
                       title: (0, h.we)("#SteamNotification_AsyncGame_Title"),
                       timestamp: s,
                       location: o,
                       fnRenderTimestamp: r,
                     }),
-                    (0, n.jsx)(W, { children: f }),
-                    (0, n.jsx)(z, { children: d?.name }),
-                    c ? (0, n.jsx)(ge, { onHide: c }) : null,
+                    (0, i.jsx)(W, { children: f }),
+                    (0, i.jsx)(z, { children: d?.name }),
+                    c ? (0, i.jsx)(ge, { onHide: c }) : null,
                   ],
                 }),
               })
         );
       }
-      function ue(e) {
+      function _e(e) {
         const {
             title: t,
-            body: i,
+            body: n,
             logoUrl: o,
             bDataLoading: a,
             icon: s,
@@ -1573,44 +1947,44 @@
             timestamp: l,
             fnRenderTimestamp: m,
             onActivate: d,
-            personaStatus: _,
+            personaStatus: u,
           } = e,
-          u = X(c),
-          p = u ? te().ShortLogoDimensions : te().StandardLogoDimensions,
-          f = (0, n.jsx)(L.Z, {
+          _ = X(c),
+          p = _ ? te().ShortLogoDimensions : te().StandardLogoDimensions,
+          f = (0, i.jsx)(L.Z, {
             style: { position: "relative" },
-            children: (0, n.jsx)("img", {
+            children: (0, i.jsx)("img", {
               className: p,
               style: { justifyContent: "center" },
               src: o,
             }),
           });
-        return u
-          ? (0, n.jsx)($, {
+        return _
+          ? (0, i.jsx)(J, {
               logo: f,
               icon: e.icon,
               title: t,
-              body: i,
+              body: n,
               onActivate: d,
-              personaStatus: _,
+              personaStatus: u,
             })
-          : (0, n.jsx)(ye, {
-              children: (0, n.jsxs)(M, {
+          : (0, i.jsx)(ye, {
+              children: (0, i.jsxs)(M, {
                 logo: f,
                 bLoading: a,
                 onActivate: d,
-                personaStatus: _,
+                personaStatus: u,
                 ...e,
                 children: [
-                  (0, n.jsx)(F, {
+                  (0, i.jsx)(F, {
                     icon: s,
                     title: t,
                     timestamp: l,
                     location: c,
                     fnRenderTimestamp: m,
                   }),
-                  (0, n.jsx)(W, { multiline: !0, children: i }),
-                  r ? (0, n.jsx)(ge, { onHide: r }) : null,
+                  (0, i.jsx)(W, { multiline: !0, children: n }),
+                  r ? (0, i.jsx)(ge, { onHide: r }) : null,
                 ],
               }),
             });
@@ -1618,47 +1992,47 @@
       function pe(e) {
         let {
             currentUserSteamID: t,
-            fallbackLogo: i,
+            fallbackLogo: n,
             postedByDisplayName: a,
             postedByAvatarURL: s,
             ownerDisplayName: c,
             data: l,
             location: m,
             icon: d,
-            timestamp: u,
+            timestamp: _,
             fnRenderTimestamp: f,
             nUnread: g,
             appName: y,
-            onHide: N,
-            commentTitle: S,
-            commentBody: v,
+            onHide: S,
+            commentTitle: I,
+            commentBody: N,
           } = e,
-          x = S;
-        const I = X(m),
-          [A, j] = r.useState(!1),
-          T = () => j(!0),
-          [w, b] = (0, ie.TB)(
+          v = I;
+        const A = X(m),
+          [x, w] = r.useState(!1),
+          T = () => w(!0),
+          [j, b] = (0, ne.TB)(
             l.bclan_account ? l.owner_steam_id?.GetAccountID() : void 0,
           ),
-          P = (0, _.hr)(l) ? a : null,
-          L = (0, _.T4)(l) ? c : null;
-        l.comment_type == K.Yd
-          ? (x =
+          C = (0, u.hr)(l) ? a : null,
+          L = (0, u.T4)(l) ? c : null;
+        l.comment_type == Q.Yd
+          ? (v =
               l.owner_steam_id?.ConvertTo64BitString() == t
-                ? m == o.oYe && P
-                  ? (0, h.we)("#SteamNotifications_Comment_Your_Profile_By", P)
+                ? m == o.oYe && C
+                  ? (0, h.we)("#SteamNotifications_Comment_Your_Profile_By", C)
                   : (0, h.we)("#SteamNotifications_Comment_Your_Profile")
                 : L
-                  ? m == o.oYe && P
+                  ? m == o.oYe && C
                     ? (0, h.we)(
                         "#SteamNotifications_Comment_Player_Profile_By",
-                        P,
+                        C,
                         L,
                       )
                     : (0, h.we)("#SteamNotifications_Comment_Player_Profile", L)
                   : (0, h.we)("#SteamNotifications_Comment_Profile"))
-          : l.comment_type == K.Dq && l.json_data?.file_type == o.pmA
-            ? (x =
+          : l.comment_type == Q.Dq && l.json_data?.file_type == o.pmA
+            ? (v =
                 l.owner_steam_id?.ConvertTo64BitString() == t
                   ? y
                     ? (0, h.we)(
@@ -1672,66 +2046,66 @@
                         y,
                       )
                     : (0, h.we)("#SteamNotifications_Comment_Screenshot"))
-            : !x && l.json_data?.title && (x = l.json_data.title);
-        let U = null;
-        U =
-          l.comment_type == K.Bv && l.bis_forum && v
-            ? (0, n.jsx)(z, {
+            : !v && l.json_data?.title && (v = l.json_data.title);
+        let P = null;
+        P =
+          l.comment_type == Q.Bv && l.bis_forum && N
+            ? (0, i.jsx)(z, {
                 children: (0, h.we)(
                   "#SteamNotifications_Comment_NewDiscussion",
-                  v,
+                  N,
                 ),
               })
-            : (0, n.jsxs)(z, { children: ['"', v, '"'] });
-        let C = (0, h.we)("#SteamNotifications_Comment"),
-          R = null;
+            : (0, i.jsxs)(z, { children: ['"', N, '"'] });
+        let D = (0, h.we)("#SteamNotifications_Comment"),
+          U = null;
         if (void 0 !== g && g > 1) {
           const e = "+" + (g - 1);
           m == o.oYe
-            ? (R = (0, n.jsx)("div", {
+            ? (U = (0, i.jsx)("div", {
                 className: te().AllNotificationsCommentPlus,
                 children: e,
               }))
-            : (C = C + " " + e);
+            : (D = D + " " + e);
         }
-        let H = i;
-        if (!A) {
-          const e = I ? te().ShortLogoDimensions : te().StandardLogoDimensions;
-          if (s && (0, _.n8)(l)) {
+        let R = n;
+        if (!x) {
+          const e = A ? te().ShortLogoDimensions : te().StandardLogoDimensions;
+          if (s && (0, u.n8)(l)) {
             const t = l.bhas_friend && m != o.PN1;
-            H = (0, n.jsxs)("div", {
+            R = (0, i.jsxs)("div", {
               style: { position: "relative" },
               children: [
-                t && (0, n.jsx)(p.GSe, { className: te().FriendIndicator }),
-                (0, n.jsx)("img", { className: e, src: s, onError: T }),
+                t && (0, i.jsx)(p.GSe, { className: te().FriendIndicator }),
+                (0, i.jsx)("img", { className: e, src: s, onError: T }),
               ],
             });
           } else
             b?.avatar_medium_url &&
-              (H = (0, n.jsx)("img", {
+              (R = (0, i.jsx)("img", {
                 className: e,
                 src: b.avatar_medium_url,
                 onError: T,
               }));
         }
-        return I
-          ? (0, n.jsx)($, { ...e, logo: H, icon: e.icon, title: C, body: x })
-          : (0, n.jsx)(ye, {
-              children: (0, n.jsxs)(M, {
-                logo: H,
+        return A
+          ? (0, i.jsx)(J, { ...e, logo: R, icon: e.icon, title: D, body: v })
+          : (0, i.jsx)(ye, {
+              children: (0, i.jsxs)(M, {
+                logo: R,
                 ...e,
                 children: [
-                  (0, n.jsx)(F, {
+                  (0, i.jsx)(F, {
                     icon: d,
-                    title: C,
-                    timestamp: u,
+                    title: D,
+                    timestamp: _,
                     location: m,
                     fnRenderTimestamp: f,
                   }),
-                  (0, n.jsx)(W, { children: x }),
+                  (0, i.jsx)(W, { children: v }),
+                  P,
                   U,
-                  R,
-                  N ? (0, n.jsx)(ge, { onHide: N }) : null,
+                  S ? (0, i.jsx)(ge, { onHide: S }) : null,
                 ],
               }),
             });
@@ -1739,7 +2113,7 @@
       function fe(e) {
         let {
           fallbackLogo: t,
-          data: i,
+          data: n,
           location: o,
           icon: a,
           timestamp: s,
@@ -1747,35 +2121,35 @@
           onHide: c,
         } = e;
         const l = X(o),
-          m = i.appid ? { appid: i.appid } : void 0,
-          { data: d } = (0, ne.J$)(m),
-          { data: _ } = (0, ne.lv)(m),
-          { data: u } = (0, ne.Q_)(m),
-          p = he(_, t, l),
-          f = m && (!d || !_ || !u);
+          m = n.appid ? { appid: n.appid } : void 0,
+          { data: d } = (0, ie.J$)(m),
+          { data: u } = (0, ie.lv)(m),
+          { data: _ } = (0, ie.Q_)(m),
+          p = he(u, t, l),
+          f = m && (!d || !u || !_);
         let g = "",
           y = null;
         if (d) {
           const e = d.name ?? "";
           (g = e),
-            1 == i.count
+            1 == n.count
               ? l
                 ? (g = (0, h.PP)(
                     "#SteamNotifications_Wishlist_OnSale_Single_Short",
-                    (0, n.jsx)("span", { children: e }),
-                    (0, n.jsx)("span", {
+                    (0, i.jsx)("span", { children: e }),
+                    (0, i.jsx)("span", {
                       style: { color: "#FFFFFF" },
-                      children: u?.formatted_final_price,
+                      children: _?.formatted_final_price,
                     }),
                   ))
                 : (y = (0, h.PP)(
                     "#SteamNotifications_Wishlist_OnSale_Single",
-                    (0, n.jsx)("span", {
+                    (0, i.jsx)("span", {
                       style: { color: "#FFFFFF" },
-                      children: u?.formatted_final_price,
+                      children: _?.formatted_final_price,
                     }),
                   ))
-              : 2 == i.count
+              : 2 == n.count
                 ? l
                   ? (g = (0, h.we)(
                       "#SteamNotifications_Wishlist_OnSale_PlusOne_Short",
@@ -1788,68 +2162,68 @@
                   ? (g = (0, h.we)(
                       "#SteamNotifications_Wishlist_OnSale_PlusMany_Short",
                       e,
-                      i.count - 1,
+                      n.count - 1,
                     ))
                   : (y = (0, h.we)(
                       "#SteamNotifications_Wishlist_OnSale_PlusMany",
-                      i.count - 1,
+                      n.count - 1,
                     ));
         } else g = (0, h.we)("#SteamNotifications_Wishlist_Generic");
         return l
-          ? (0, n.jsx)($, {
+          ? (0, i.jsx)(J, {
               ...e,
               logo: p,
               icon: e.icon,
               title: (0, h.we)("#SteamNotifications_Wishlist"),
               body: g,
             })
-          : (0, n.jsx)(ye, {
-              children: (0, n.jsxs)(M, {
+          : (0, i.jsx)(ye, {
+              children: (0, i.jsxs)(M, {
                 logo: p,
                 bLoading: f,
                 ...e,
                 children: [
-                  (0, n.jsx)(F, {
+                  (0, i.jsx)(F, {
                     icon: a,
                     title: (0, h.we)("#SteamNotifications_Wishlist"),
                     timestamp: s,
                     location: o,
                     fnRenderTimestamp: r,
                   }),
-                  (0, n.jsx)(W, { multiline: !y, children: g }),
-                  !!y && (0, n.jsx)(z, { children: y }),
-                  c ? (0, n.jsx)(ge, { onHide: c }) : null,
+                  (0, i.jsx)(W, { multiline: !y, children: g }),
+                  !!y && (0, i.jsx)(z, { children: y }),
+                  c ? (0, i.jsx)(ge, { onHide: c }) : null,
                 ],
               }),
             });
       }
-      function he(e, t, i = !1) {
+      function he(e, t, n = !1) {
         const [o, a] = r.useState(!1),
           s = () => a(!0);
         if (!e || o)
-          return (0, n.jsx)(L.Z, {
+          return (0, i.jsx)(L.Z, {
             style: { position: "relative" },
             children: t,
           });
         const c = (0, oe.b0)(e, "community_icon");
-        return i
-          ? (0, n.jsx)(L.Z, {
+        return n
+          ? (0, i.jsx)(L.Z, {
               style: { position: "relative" },
-              children: (0, n.jsx)("img", {
+              children: (0, i.jsx)("img", {
                 src: c,
                 className: te().ShortLogoDimensions,
                 onError: s,
               }),
             })
-          : (0, n.jsxs)(L.Z, {
+          : (0, i.jsxs)(L.Z, {
               style: { position: "relative" },
               children: [
-                (0, n.jsx)("img", {
+                (0, i.jsx)("img", {
                   className: (0, f.A)(te().WishlistBlurImage),
                   src: c,
                   onError: s,
                 }),
-                (0, n.jsx)("img", {
+                (0, i.jsx)("img", {
                   src: c,
                   onError: s,
                   style: {
@@ -1864,7 +2238,7 @@
             });
       }
       function ge(e) {
-        return (0, n.jsx)("div", {
+        return (0, i.jsx)("div", {
           className: te().HideButton,
           onClick: (t) => {
             e.onHide(), t.stopPropagation(), t.preventDefault();
@@ -1872,59 +2246,59 @@
           onMouseDown: (e) => {
             e.stopPropagation(), e.preventDefault();
           },
-          children: (0, n.jsx)(p.zHo, {}),
+          children: (0, i.jsx)(p.zHo, {}),
         });
       }
       function ye(e) {
-        return (0, n.jsx)("div", {
+        return (0, i.jsx)("div", {
           className: te().SteamNotificationWrapper,
           children: e.children,
         });
       }
-      var Ne = i(49820);
-      let Se = null,
-        ve = !1;
-      function xe() {
+      var Se = n(49820);
+      let Ie = null,
+        Ne = !1;
+      function ve() {
         const e = (0, m.KV)(),
           t = (0, m.rX)(),
-          i = (0, s.q3)(
+          n = (0, s.q3)(
             () =>
-              (Se || (Se = new Ne.s({ BIsFriend: (0, Ne.Q)() })), Se)
+              (Ie || (Ie = new Se.s({ BIsFriend: (0, Se.Q)() })), Ie)
                 .m_bInitialized,
           );
         return (
-          i ||
-            ve ||
-            ((ve = !0), Se.Init(Q.iA.accountid, e, t).finally(() => (ve = !1))),
-          [i, Se]
+          n ||
+            Ne ||
+            ((Ne = !0), Ie.Init(K.iA.accountid, e, t).finally(() => (Ne = !1))),
+          [n, Ie]
         );
       }
-      function Ie(e) {
-        const { rollup: t, uimode: i, location: a } = e,
+      function Ae(e) {
+        const { rollup: t, uimode: n, location: a } = e,
           s = (function (e) {
             let t = null;
             return (
-              (0, _.sR)(e)
+              (0, u.sR)(e)
                 ? (t = Te)
-                : (0, _.IC)(e)
-                  ? (t = Ae)
-                  : Pe[e] && (t = Pe[e]),
+                : (0, u.IC)(e)
+                  ? (t = xe)
+                  : Ce[e] && (t = Ce[e]),
               t
             );
           })(t.type);
         return s
-          ? (0, n.jsx)(w.Ay, {
+          ? (0, i.jsx)(j.Ay, {
               controller: "notification",
-              method: (0, o.fLp)(i),
+              method: (0, o.fLp)(n),
               submethod: (0, o.ey3)(a),
-              children: (0, n.jsx)(s, { ...e }),
+              children: (0, i.jsx)(s, { ...e }),
             })
           : null;
       }
-      function Ae(e) {
+      function xe(e) {
         const {
             rollup: t,
-            onNotificationClick: i,
+            onNotificationClick: n,
             location: o,
             uimode: a,
             onHide: s,
@@ -1934,14 +2308,14 @@
             (m = t.item.body_data),
             r.useMemo(() => {
               if (void 0 === l) return null;
-              let e = (0, _.K9)(l);
-              const t = (0, _.u5)(m);
+              let e = (0, u.K9)(l);
+              const t = (0, u.u5)(m);
               if (!e || !t) return null;
-              const i =
+              const n =
                   "function" != typeof e.displayNameLoc
                     ? { locString: e.displayNameLoc }
                     : e.displayNameLoc(t),
-                n =
+                i =
                   "function" != typeof e.titleLoc
                     ? { locString: e.titleLoc }
                     : e.titleLoc(t),
@@ -1952,42 +2326,42 @@
                 a = "function" != typeof e.image ? e.image : e.image(t),
                 s = "function" != typeof e.link ? e.link : e.link(t);
               return {
-                display_name: I(i),
-                title: I(n),
-                body: I(o),
+                display_name: A(n),
+                title: A(i),
+                body: A(o),
                 image: a,
                 link: s,
               };
             }, [m, l]));
         var l, m;
-        const d = (0, v.p$)(t.type)
+        const d = (0, N.p$)(t.type)
             .replace("k_ESteamNotificationType_", "")
             ?.toLowerCase(),
-          u = (0, b.aL)(c?.link ?? "#", d);
-        return (0, n.jsx)("a", {
-          href: c?.link ? u : "#",
-          onMouseDown: (e) => i(() => {}, t.item, e),
-          children: (0, n.jsx)(se, {
+          _ = (0, b.aL)(c?.link ?? "#", d);
+        return (0, i.jsx)("a", {
+          href: c?.link ? _ : "#",
+          onMouseDown: (e) => n(() => {}, t.item, e),
+          children: (0, i.jsx)(se, {
             icon: ae(t.type),
             onActivate: () =>
-              i(() => {
-                c?.link && u && window.location.assign(u);
+              n(() => {
+                c?.link && _ && window.location.assign(_);
               }, t.item),
-            fallbackLogo: (0, n.jsx)(p.Qte, {}),
+            fallbackLogo: (0, i.jsx)(p.Qte, {}),
             location: o,
             eUIMode: a,
             data: c,
             timestamp: t.timestamp,
             nUnread: t.rgunread.length,
-            bNewIndicator: (0, _.Rl)(t.item),
+            bNewIndicator: (0, u.Rl)(t.item),
             onHide: s,
           }),
         });
       }
-      function je(e) {
+      function we(e) {
         const {
             steamid: t,
-            url: i,
+            url: n,
             strTitleLoc: o,
             strBodyLoc: a,
             rollup: s,
@@ -1996,59 +2370,59 @@
             uimode: l,
             onHide: m,
           } = e,
-          { data: d } = (0, P.js)(t);
+          { data: d } = (0, C.js)(t);
         if (!a) return null;
-        const u = !d,
+        const _ = !d,
           f = (0, h.we)(o, d?.m_strPlayerName ?? ""),
           g = (0, h.we)(a, d?.m_strPlayerName ?? "");
-        return (0, n.jsx)("a", {
-          href: i,
+        return (0, i.jsx)("a", {
+          href: n,
           onMouseDown: (e) => r(() => {}, s.item, e),
-          children: (0, n.jsx)(ue, {
+          children: (0, i.jsx)(_e, {
             title: f,
             body: g,
-            bDataLoading: u,
+            bDataLoading: _,
             logoUrl: d?.avatar_url_medium,
-            icon: (0, n.jsx)(p.Qte, {}),
-            onActivate: () => r(() => window.location.assign(i), s.item),
+            icon: (0, i.jsx)(p.Qte, {}),
+            onActivate: () => r(() => window.location.assign(n), s.item),
             location: c,
             eUIMode: l,
             timestamp: s.timestamp,
             nUnread: s.rgunread.length,
-            bNewIndicator: (0, _.Rl)(s.item),
+            bNewIndicator: (0, u.Rl)(s.item),
             onHide: m,
           }),
         });
       }
       function Te(e) {
         const t =
-          ((i = e.rollup.type),
+          ((n = e.rollup.type),
           (o = e.rollup.item.body_data),
           r.useMemo(() => {
-            const e = i,
-              t = (0, _.aq)(e),
-              n = (0, _.u5)(o);
+            const e = n,
+              t = (0, u.aq)(e),
+              i = (0, u.u5)(o);
             if (!t) return null;
             const a =
-                "string" == typeof t.titleLoc ? t.titleLoc : t.titleLoc(n),
-              s = "string" == typeof t.bodyLoc ? t.bodyLoc : t.bodyLoc(n),
-              r = "string" == typeof t.url ? t.url : t.url(n),
+                "string" == typeof t.titleLoc ? t.titleLoc : t.titleLoc(i),
+              s = "string" == typeof t.bodyLoc ? t.bodyLoc : t.bodyLoc(i),
+              r = "string" == typeof t.url ? t.url : t.url(i),
               c =
                 "string" == typeof t.steamidAttribute
                   ? t.steamidAttribute
-                  : t.steamidAttribute(n);
+                  : t.steamidAttribute(i);
             return {
               strTitleLoc: a,
               strBodyLoc: s,
               strUrl: r,
-              steamid: n && n[c],
+              steamid: i && i[c],
             };
-          }, [o, i]));
-        var i, o;
+          }, [o, n]));
+        var n, o;
         if (!t) return null;
         const { strTitleLoc: a, strBodyLoc: s, strUrl: c, steamid: l } = t;
         return l && a && s
-          ? (0, n.jsx)(je, {
+          ? (0, i.jsx)(we, {
               steamid: l,
               url: c,
               strTitleLoc: a,
@@ -2057,43 +2431,43 @@
             })
           : null;
       }
-      const we = (e) => {
+      const je = (e) => {
         const {
             rollup: t,
-            onNotificationClick: i,
+            onNotificationClick: n,
             location: o,
             uimode: a,
             onHide: s,
           } = e,
           r = `${g.TS.COMMUNITY_BASE_URL}my/tradehistory`;
-        return (0, n.jsx)("a", {
+        return (0, i.jsx)("a", {
           href: r,
-          onMouseDown: (e) => i(() => {}, t.item, e),
-          children: (0, n.jsx)(ce, {
-            logo: (0, n.jsx)(p.Qte, {}),
-            icon: (0, n.jsx)(p.h20, {}),
-            onActivate: () => i(() => window.location.assign(r), t.item),
+          onMouseDown: (e) => n(() => {}, t.item, e),
+          children: (0, i.jsx)(ce, {
+            logo: (0, i.jsx)(p.Qte, {}),
+            icon: (0, i.jsx)(p.h20, {}),
+            onActivate: () => n(() => window.location.assign(r), t.item),
             location: o,
             eUIMode: a,
             timestamp: t.timestamp,
             nUnread: t.rgunread.length,
-            bNewIndicator: (0, _.Rl)(t.item),
+            bNewIndicator: (0, u.Rl)(t.item),
             onHide: s,
           }),
         });
       };
       function be(e) {
-        const { url: t, count: i, icon: a, strLocToken: s, eFeature: r } = e,
+        const { url: t, count: n, icon: a, strLocToken: s, eFeature: r } = e,
           c = (0, l.Hw)(r);
-        return i
+        return n
           ? c
             ? null
-            : (0, n.jsx)("a", {
+            : (0, i.jsx)("a", {
                 href: t,
                 className: T().WebPinnedNotification,
-                children: (0, n.jsx)(D, {
-                  icon: (0, n.jsx)(a, {}),
-                  count: i,
+                children: (0, i.jsx)(G, {
+                  icon: (0, i.jsx)(a, {}),
+                  count: n,
                   onActivate: () => window.location.assign(t),
                   strLocToken: s,
                   eUIMode: o.yrU,
@@ -2102,121 +2476,121 @@
               })
           : null;
       }
-      const Pe = {
-        [v.Vv.v_]: function (e) {
+      const Ce = {
+        [N.Vv.v_]: function (e) {
           const {
               rollup: t,
-              onNotificationClick: i,
+              onNotificationClick: n,
               location: o,
               uimode: a,
               onHide: s,
             } = e,
-            r = A(t),
+            r = x(t),
             l = (0, c.LH)(),
             m = g.TS.COMMUNITY_BASE_URL + t.url,
-            d = (0, _.iO)(r) ? r?.account_steam_id?.GetAccountID() : null,
-            { data: u } = (0, P.js)(d),
-            f = (0, _.OT)(r) ? r?.owner_steam_id?.GetAccountID() : null,
-            { data: h } = (0, P.js)(f),
+            d = (0, u.iO)(r) ? r?.account_steam_id?.GetAccountID() : null,
+            { data: _ } = (0, C.js)(d),
+            f = (0, u.OT)(r) ? r?.owner_steam_id?.GetAccountID() : null,
+            { data: h } = (0, C.js)(f),
             y = r.json_data?.app_id ? { appid: r.json_data?.app_id } : void 0,
-            { data: N } = (0, ne.J$)(y),
-            [S, v] = xe(),
-            x = S
-              ? v.FilterText(r.account_steam_id.GetAccountID(), r.title)
+            { data: S } = (0, ie.J$)(y),
+            [I, N] = ve(),
+            v = I
+              ? N.FilterText(r.account_steam_id.GetAccountID(), r.title)
               : "",
-            I = S
-              ? v.FilterText(r.account_steam_id.GetAccountID(), r.comment)
+            A = I
+              ? N.FilterText(r.account_steam_id.GetAccountID(), r.comment)
               : "";
-          return (0, n.jsx)("a", {
+          return (0, i.jsx)("a", {
             href: m,
             onMouseDown: (e) => {
-              i(() => {}, t.item, e);
+              n(() => {}, t.item, e);
             },
-            children: (0, n.jsx)(pe, {
-              fallbackLogo: (0, n.jsx)(p.Qte, {}),
-              icon: (0, n.jsx)(p.MwB, {}),
-              onActivate: () => i(() => window.location.assign(m), t.item),
+            children: (0, i.jsx)(pe, {
+              fallbackLogo: (0, i.jsx)(p.Qte, {}),
+              icon: (0, i.jsx)(p.MwB, {}),
+              onActivate: () => n(() => window.location.assign(m), t.item),
               location: o,
               currentUserSteamID: l,
               eUIMode: a,
               data: r,
               timestamp: t.timestamp,
               nUnread: t.rgunread.length,
-              postedByAvatarURL: u?.avatar_url_medium,
-              postedByDisplayName: u?.m_strPlayerName,
+              postedByAvatarURL: _?.avatar_url_medium,
+              postedByDisplayName: _?.m_strPlayerName,
               ownerDisplayName: h?.m_strPlayerName,
-              bNewIndicator: (0, _.Rl)(t.item),
-              appName: N?.name,
+              bNewIndicator: (0, u.Rl)(t.item),
+              appName: S?.name,
               onHide: s,
-              commentTitle: x,
-              commentBody: I,
-              bLoading: !S,
+              commentTitle: v,
+              commentBody: A,
+              bLoading: !I,
             }),
           });
         },
-        [v.Vv.XJ]: function (e) {
+        [N.Vv.XJ]: function (e) {
           const {
               rollup: t,
-              onNotificationClick: i,
+              onNotificationClick: n,
               location: o,
               uimode: a,
               onHide: s,
             } = e,
-            l = A(t),
-            { data: m } = (0, ne.J$)({ appid: l.appid }),
-            [d, u] = (0, r.useState)(""),
+            l = x(t),
+            { data: m } = (0, ie.J$)({ appid: l.appid }),
+            [d, _] = (0, r.useState)(""),
             f = (0, c.LH)();
           return (
             (0, r.useEffect)(() => {
               if (l.count > 1 && l.appids?.length)
-                return u(
+                return _(
                   g.TS.STORE_BASE_URL +
                     `wishlist/profiles/${f}/?wng=${l.appids.toString()}#sort=discount`,
                 );
-              if (m) return u(g.TS.STORE_BASE_URL + m.store_url_path);
+              if (m) return _(g.TS.STORE_BASE_URL + m.store_url_path);
               const e = l.appid ? `?appid=${l.appid}` : "";
-              u(
+              _(
                 g.TS.STORE_BASE_URL +
                   `wishlist/profiles/${f}/${e}#sort=discount`,
               );
             }, [l, m, f]),
-            (0, n.jsx)("a", {
+            (0, i.jsx)("a", {
               href: d,
-              onMouseDown: (e) => i(() => {}, t.item, e),
-              children: (0, n.jsx)(fe, {
-                fallbackLogo: (0, n.jsx)(p.Qte, {}),
-                icon: (0, n.jsx)(p.ilR, {}),
-                onActivate: () => i(() => window.location.assign(d), t.item),
+              onMouseDown: (e) => n(() => {}, t.item, e),
+              children: (0, i.jsx)(fe, {
+                fallbackLogo: (0, i.jsx)(p.Qte, {}),
+                icon: (0, i.jsx)(p.ilR, {}),
+                onActivate: () => n(() => window.location.assign(d), t.item),
                 location: o,
                 data: l,
                 timestamp: t.timestamp,
                 nUnread: t.rgunread.length,
                 eUIMode: a,
-                bNewIndicator: (0, _.Rl)(t.item),
+                bNewIndicator: (0, u.Rl)(t.item),
                 onHide: s,
               }),
             })
           );
         },
-        [v.Vv.pZ]: function (e) {
+        [N.Vv.pZ]: function (e) {
           const {
               rollup: t,
-              onNotificationClick: i,
+              onNotificationClick: n,
               location: o,
               uimode: a,
               onHide: s,
             } = e,
             r = (0, c.LH)(),
             l = `${g.TS.COMMUNITY_BASE_URL}profiles/${r}/friends/pending`,
-            m = A(t),
-            { data: d } = (0, P.js)(m.requestorID);
-          return (0, n.jsx)("a", {
+            m = x(t),
+            { data: d } = (0, C.js)(m.requestorID);
+          return (0, i.jsx)("a", {
             href: l,
-            onMouseDown: (e) => i(() => {}, t.item, e),
-            children: (0, n.jsx)(me, {
-              fallbackLogo: (0, n.jsx)(p.Gv$, {}),
-              icon: (0, n.jsx)(p.sdo, {}),
-              onActivate: () => i(() => window.location.assign(l), t.item),
+            onMouseDown: (e) => n(() => {}, t.item, e),
+            children: (0, i.jsx)(me, {
+              fallbackLogo: (0, i.jsx)(p.Gv$, {}),
+              icon: (0, i.jsx)(p.sdo, {}),
+              onActivate: () => n(() => window.location.assign(l), t.item),
               location: o,
               eUIMode: a,
               data: m,
@@ -2224,190 +2598,190 @@
               nUnread: t.rgunread.length,
               requestorAvatarURL: d?.avatar_url_medium,
               requestorName: d?.m_strPlayerName,
-              bNewIndicator: (0, _.Rl)(t.item),
+              bNewIndicator: (0, u.Rl)(t.item),
               onHide: s,
             }),
           });
         },
-        [v.Vv.hW]: function (e) {
+        [N.Vv.hW]: function (e) {
           const {
               rollup: t,
-              onNotificationClick: i,
+              onNotificationClick: n,
               location: o,
               uimode: a,
               onHide: s,
             } = e,
             r = (0, c.LH)(),
             l = (0, m.KV)(),
-            d = (0, _.IL)(t.item, r, l),
-            u = A(t),
+            d = (0, u.IL)(t.item, r, l),
+            _ = x(t),
             f = `${g.TS.COMMUNITY_BASE_URL}profiles/${r}/inventory`;
-          return (0, n.jsx)("a", {
+          return (0, i.jsx)("a", {
             href: f,
-            onMouseDown: (e) => i(() => {}, t.item, e),
-            children: (0, n.jsx)(de, {
-              icon: (0, n.jsx)(p.rI_, {}),
-              fallbackLogo: (0, n.jsx)(p.Qte, {}),
-              onActivate: () => i(() => window.location.assign(f), t.item),
+            onMouseDown: (e) => n(() => {}, t.item, e),
+            children: (0, i.jsx)(de, {
+              icon: (0, i.jsx)(p.rI_, {}),
+              fallbackLogo: (0, i.jsx)(p.Qte, {}),
+              onActivate: () => n(() => window.location.assign(f), t.item),
               location: o,
               eUIMode: a,
-              data: u,
+              data: _,
               timestamp: t.timestamp,
               nUnread: t.rgunread.length,
               itemState: d,
-              bNewIndicator: (0, _.Rl)(t.item),
+              bNewIndicator: (0, u.Rl)(t.item),
               onHide: s,
             }),
           });
         },
-        [v.Vv.K]: function (e) {
+        [N.Vv.K]: function (e) {
           const {
               rollup: t,
-              onNotificationClick: i,
+              onNotificationClick: n,
               location: o,
               uimode: a,
               onHide: s,
             } = e,
             r = (0, c.LH)(),
             l = `${g.TS.COMMUNITY_BASE_URL}profiles/${r}/inventory/#pending_gifts`,
-            m = A(t),
-            d = x.b.InitFromAccountID(m),
-            { data: u } = (0, P.js)(d.GetAccountID());
-          return (0, n.jsx)("a", {
+            m = x(t),
+            d = v.b.InitFromAccountID(m),
+            { data: _ } = (0, C.js)(d.GetAccountID());
+          return (0, i.jsx)("a", {
             href: l,
-            onMouseDown: (e) => i(() => {}, t.item, e),
-            children: (0, n.jsx)(le, {
-              logo: (0, n.jsx)(p.Qte, {}),
-              icon: (0, n.jsx)(p.pD, {}),
-              onActivate: () => i(() => window.location.assign(l), t.item),
+            onMouseDown: (e) => n(() => {}, t.item, e),
+            children: (0, i.jsx)(le, {
+              logo: (0, i.jsx)(p.Qte, {}),
+              icon: (0, i.jsx)(p.pD, {}),
+              onActivate: () => n(() => window.location.assign(l), t.item),
               location: o,
               eUIMode: a,
               timestamp: t.timestamp,
               nUnread: t.rgunread.length,
-              senderName: u?.m_strPlayerName,
-              bNewIndicator: (0, _.Rl)(t.item),
+              senderName: _?.m_strPlayerName,
+              bNewIndicator: (0, u.Rl)(t.item),
               onHide: s,
             }),
           });
         },
-        [v.Vv.an]: function (e) {
+        [N.Vv.an]: function (e) {
           const {
               rollup: t,
-              onNotificationClick: i,
+              onNotificationClick: n,
               location: o,
               uimode: a,
               onHide: s,
             } = e,
             r = (0, c.LH)(),
-            l = A(t),
+            l = x(t),
             m = `${g.TS.COMMUNITY_BASE_URL}profiles/${r}/tradeoffers`,
-            d = x.b.InitFromAccountID(l),
-            { data: u } = (0, P.js)(d.GetAccountID());
-          return (0, n.jsx)("a", {
+            d = v.b.InitFromAccountID(l),
+            { data: _ } = (0, C.js)(d.GetAccountID());
+          return (0, i.jsx)("a", {
             href: m,
-            onMouseDown: (e) => i(() => {}, t.item, e),
-            children: (0, n.jsx)(re, {
-              logo: (0, n.jsx)(p.Qte, {}),
-              icon: (0, n.jsx)(p.h20, {}),
-              onActivate: () => i(() => window.location.assign(m), t.item),
+            onMouseDown: (e) => n(() => {}, t.item, e),
+            children: (0, i.jsx)(re, {
+              logo: (0, i.jsx)(p.Qte, {}),
+              icon: (0, i.jsx)(p.h20, {}),
+              onActivate: () => n(() => window.location.assign(m), t.item),
               location: o,
               eUIMode: a,
               timestamp: t.timestamp,
               nUnread: t.rgunread.length,
-              displayName: u?.m_strPlayerName,
-              bNewIndicator: (0, _.Rl)(t.item),
+              displayName: _?.m_strPlayerName,
+              bNewIndicator: (0, u.Rl)(t.item),
               onHide: s,
             }),
           });
         },
-        [v.Vv.Y9]: function (e) {
+        [N.Vv.Y9]: function (e) {
           const {
               rollup: t,
-              onNotificationClick: i,
+              onNotificationClick: n,
               location: o,
               uimode: a,
               onHide: s,
             } = e,
             r = `${g.TS.COMMUNITY_BASE_URL}my/gamenotifications/`,
-            c = A(t);
-          return (0, n.jsx)("a", {
+            c = x(t);
+          return (0, i.jsx)("a", {
             href: r,
-            onMouseDown: (e) => i(() => {}, t.item, e),
-            children: (0, n.jsx)(_e, {
-              icon: (0, n.jsx)(p.Qte, {}),
-              fallbackLogo: (0, n.jsx)(p.wC1, {}),
-              onActivate: () => i(() => window.location.assign(r), t.item),
+            onMouseDown: (e) => n(() => {}, t.item, e),
+            children: (0, i.jsx)(ue, {
+              icon: (0, i.jsx)(p.Qte, {}),
+              fallbackLogo: (0, i.jsx)(p.wC1, {}),
+              onActivate: () => n(() => window.location.assign(r), t.item),
               location: o,
               eUIMode: a,
               data: c,
               timestamp: t.timestamp,
               nUnread: t.rgunread.length,
-              bNewIndicator: (0, _.Rl)(t.item),
+              bNewIndicator: (0, u.Rl)(t.item),
               onHide: s,
             }),
           });
         },
-        [v.Vv.YE]: function (e) {
+        [N.Vv.YE]: function (e) {
           const {
               rollup: t,
-              onNotificationClick: i,
+              onNotificationClick: n,
               location: o,
               uimode: a,
               onHide: s,
             } = e,
-            r = A(t),
-            { data: c } = (0, P.js)(r.responder_steamid),
+            r = x(t),
+            { data: c } = (0, C.js)(r.responder_steamid),
             l =
               r.package_id > 0
                 ? { packageid: r.package_id }
                 : { bundleid: r.bundle_id },
-            { data: m } = (0, ne.U2)(l),
+            { data: m } = (0, ie.U2)(l),
             d = m ? `app/${m.appid}` : "",
-            u = `${g.TS.STORE_BASE_URL}${d}`,
+            _ = `${g.TS.STORE_BASE_URL}${d}`,
             f = !c || !m,
             y = (0, h.we)("#SteamNotifications_RequestedGameAddedTitle"),
-            N = m
+            S = m
               ? (0, h.we)(
                   "#SteamNotifications_RequestedGameAddedBody",
                   m.name ?? "",
                 )
               : "";
-          return (0, n.jsx)("a", {
-            href: u,
-            onMouseDown: (e) => i(() => {}, t.item, e),
-            children: (0, n.jsx)(ue, {
+          return (0, i.jsx)("a", {
+            href: _,
+            onMouseDown: (e) => n(() => {}, t.item, e),
+            children: (0, i.jsx)(_e, {
               title: y,
-              body: N,
+              body: S,
               bDataLoading: f,
               logoUrl: c?.avatar_url_medium,
-              icon: (0, n.jsx)(p.Qte, {}),
-              onActivate: () => i(() => window.location.assign(u), t.item),
+              icon: (0, i.jsx)(p.Qte, {}),
+              onActivate: () => n(() => window.location.assign(_), t.item),
               location: o,
               eUIMode: a,
               timestamp: t.timestamp,
               nUnread: t.rgunread.length,
-              bNewIndicator: (0, _.Rl)(t.item),
+              bNewIndicator: (0, u.Rl)(t.item),
               onHide: s,
             }),
           });
         },
-        [v.Vv.mr]: we,
+        [N.Vv.mr]: je,
       };
-      var Le = i(60383);
-      const Ue = new _.cE(),
-        Ce = (0, y.Nr)(function (e) {
-          const { bResponsiveHeader: t, notifications: i } = e;
+      var Le = n(60383);
+      const Pe = new u.cE(),
+        De = (0, y.Nr)(function (e) {
+          const { bResponsiveHeader: t, notifications: n } = e;
           r.useEffect(() => {
-            i && !Ue.m_bLoaded && Ue.ProcessNewNotificationPayload(i);
-          }, [i]);
+            n && !Pe.m_bLoaded && Pe.ProcessNewNotificationPayload(n);
+          }, [n]);
           const a = (0, m.KV)();
           (0, r.useEffect)(() => {
-            Ue.setTransport(a),
+            Pe.setTransport(a),
               (window.RefreshSteamNotifications = () =>
                 (async function (e) {
                   let t = null;
                   try {
-                    t = await (0, _.tM)(
+                    t = await (0, u.tM)(
                       e,
                       g.iA.steamid,
                       (0, o.sfN)(g.TS.LANGUAGE),
@@ -2416,43 +2790,43 @@
                       !1,
                     );
                   } catch (e) {}
-                  t && Ue.ProcessNewNotificationPayload(t);
+                  t && Pe.ProcessNewNotificationPayload(t);
                 })(a));
           }, [a]);
-          const s = Re();
+          const s = Ue();
           return t
-            ? (0, n.jsxs)(n.Fragment, {
-                children: [(0, n.jsx)(Ee, {}), (0, n.jsx)(Me, {})],
+            ? (0, i.jsxs)(i.Fragment, {
+                children: [(0, i.jsx)(Ee, {}), (0, i.jsx)(Me, {})],
               })
-            : (0, n.jsx)(Be, { nTotalUnviewed: s.nUnviewed });
+            : (0, i.jsx)(Be, { nTotalUnviewed: s.nUnviewed });
         });
-      function Re() {
+      function Ue() {
         return (0, s.q3)(() => ({
-          notifications: Ue.m_rgNotificationRollups,
-          summary: Ue.m_summary,
-          loaded: Ue.m_bLoaded,
-          nUnviewed: Ue.m_nUnviewed,
+          notifications: Pe.m_rgNotificationRollups,
+          summary: Pe.m_summary,
+          loaded: Pe.m_bLoaded,
+          nUnviewed: Pe.m_nUnviewed,
         }));
       }
-      function He() {
-        const e = Re(),
+      function Re() {
+        const e = Ue(),
           t = (0, c.LH)(),
-          { data: i } = (0, l.S0)(t),
-          n = (0, l.BM)(),
-          o = i?.settings;
+          { data: n } = (0, l.S0)(t),
+          i = (0, l.BM)(),
+          o = n?.settings;
         return e.notifications.filter(
-          (e) => !(0, _.jb)(e.type, o, n) && !(0, _.XT)(e.item),
+          (e) => !(0, u.jb)(e.type, o, i) && !(0, u.XT)(e.item),
         );
       }
       function Be(e) {
         const { nTotalUnviewed: t } = e,
-          i = r.useRef(null),
-          o = He(),
-          [a, s] = r.useState(S().AnimateBell);
+          n = r.useRef(null),
+          o = Re(),
+          [a, s] = r.useState(I().AnimateBell);
         r.useEffect(() => {
-          i.current ||
-            ((i.current = (0, d.lX)(
-              (0, n.jsx)(De, { popupRef: i }),
+          n.current ||
+            ((n.current = (0, d.lX)(
+              (0, i.jsx)(Ge, { popupRef: n }),
               document.getElementById("green_envelope_menu_root"),
               {
                 bPreferPopLeft: !0,
@@ -2460,82 +2834,82 @@
                 strClassName: "GreenEnvelopeMenu",
               },
             )),
-            i.current.Hide());
+            n.current.Hide());
           const e = document.getElementById("header_notification_link");
           e && (e.style.cssText = "background-color: rgba(0,0,0,0)"),
             window.setTimeout(() => s(null), 2e3);
         }, []);
         const c = r.useCallback(
           (e) => {
-            !e && i.current?.visible && i.current.Hide();
+            !e && n.current?.visible && n.current.Hide();
           },
-          [i],
+          [n],
         );
-        return (0, n.jsx)(Le.J, {
+        return (0, i.jsx)(Le.J, {
           trigger: "repeated",
           onVisibilityChange: c,
-          children: (0, n.jsx)("button", {
+          children: (0, i.jsx)("button", {
             onClick: () => {
-              if (!i.current?.visible) {
-                i.current?.Show();
+              if (!n.current?.visible) {
+                n.current?.Show();
                 -1 != o.findIndex((e) => !e.item.viewed) &&
-                  Ue.MarkAllItemsViewed();
+                  Pe.MarkAllItemsViewed();
               }
             },
             id: "green_envelope_menu_root",
             className: (0, f.A)(
-              S().NotificationsButton,
-              t ? S().Green : S().Grey,
+              I().NotificationsButton,
+              t ? I().Green : I().Grey,
               a,
             ),
-            children: (0, n.jsx)(u.$0s, {
-              className: S().SVGNotifications,
+            children: (0, i.jsx)(_.$0s, {
+              className: I().SVGNotifications,
               "aria-label": (0, h.we)("#NotificationsMenu_Title"),
             }),
           }),
         });
       }
-      const De = (e) => {
+      const Ge = (e) => {
           const { popupRef: t } = e,
-            i = r.useRef(null),
+            n = r.useRef(null),
             [o, a] = r.useState(!1);
           r.useEffect(() => {
             a(
-              null != i.current &&
-                i.current?.scrollHeight > i.current?.clientHeight,
+              null != n.current &&
+                n.current?.scrollHeight > n.current?.clientHeight,
             );
-          }, [i.current?.scrollHeight, o]);
-          const s = o ? void 0 : S().MenuScrollbarHidden;
-          return (0, n.jsxs)("div", {
-            className: S().NotificationsMenu,
+          }, [n.current?.scrollHeight, o]);
+          const s = o ? void 0 : I().MenuScrollbarHidden;
+          return (0, i.jsxs)("div", {
+            className: I().NotificationsMenu,
             onClick: () => t?.current?.Hide(),
             children: [
-              (0, n.jsx)(Ge, {}),
-              (0, n.jsxs)("div", {
-                className: (0, f.A)(S().NotificationsMenuScrollable, s),
-                ref: i,
+              (0, i.jsx)(He, {}),
+              (0, i.jsxs)("div", {
+                className: (0, f.A)(I().NotificationsMenuScrollable, s),
+                ref: n,
                 children: [
-                  (0, n.jsx)(Ee, {}),
-                  (0, n.jsx)(Fe, {}),
-                  (0, n.jsx)(We, {}),
+                  (0, i.jsx)(Ee, {}),
+                  (0, i.jsx)(Fe, {}),
+                  (0, i.jsx)(We, {}),
                 ],
               }),
             ],
           });
         },
-        Ge = () => {
+        He = () => {
           const e = `${g.TS.COMMUNITY_BASE_URL}profiles/${g.iA.steamid}/notifications`;
-          return (0, n.jsxs)("div", {
-            className: (0, f.A)(S().NotificationHeader),
+          return (0, i.jsxs)("div", {
+            className: (0, f.A)(I().NotificationHeader),
             children: [
-              (0, n.jsx)("div", {
-                className: S().AllNotificationsTitle,
+              (0, i.jsx)("div", {
+                className: I().AllNotificationsTitle,
                 children: (0, h.we)("#NotificationsMenu_Title"),
               }),
-              (0, n.jsx)("a", {
+              (0, i.jsx)("a", {
                 href: e,
-                children: (0, n.jsx)("div", {
-                  className: S().AllNotificationsButton,
+                children: (0, i.jsx)("div", {
+                  className: I().AllNotificationsButton,
                   children: (0, h.we)("#NotificationsMenu_ViewAll"),
                 }),
               }),
@@ -2544,33 +2918,33 @@
         },
         Me = () => {
           const e = `${g.TS.COMMUNITY_BASE_URL}profiles/${g.iA.steamid}/notifications`;
-          return (0, n.jsx)("div", {
-            className: (0, f.A)(S().NotificationHeader, S().ResponsiveViewAll),
-            children: (0, n.jsx)("a", {
+          return (0, i.jsx)("div", {
+            className: (0, f.A)(I().NotificationHeader, I().ResponsiveViewAll),
+            children: (0, i.jsx)("a", {
               href: e,
-              children: (0, n.jsx)("div", {
-                className: S().AllNotificationsButton,
+              children: (0, i.jsx)("div", {
+                className: I().AllNotificationsButton,
                 children: (0, h.we)("#NotificationsMenu_ViewAll"),
               }),
             }),
           });
         };
-      function ke(e, t, i) {
+      function ke(e, t, n) {
         t.read ||
-          (i && 0 != i.button && 1 != i.button) ||
+          (n && 0 != n.button && 1 != n.button) ||
           !t.notification_id ||
-          Ue.MarkItemRead(t.notification_id),
+          Pe.MarkItemRead(t.notification_id),
           e();
       }
       function Fe() {
-        const e = He();
+        const e = Re();
         return 0 == e.length
           ? null
-          : (0, n.jsx)("div", {
-              className: S().NotificationsMenuEntriesContainer,
+          : (0, i.jsx)("div", {
+              className: I().NotificationsMenuEntriesContainer,
               children: e.map((e, t) =>
-                (0, n.jsx)(
-                  Ie,
+                (0, i.jsx)(
+                  Ae,
                   {
                     rollup: e,
                     onNotificationClick: ke,
@@ -2633,7 +3007,7 @@
         {
           fnUrl: () => `${g.TS.COMMUNITY_BASE_URL}my/moderatormessages`,
           countItem: "moderator_messages",
-          icon: u.hJ4,
+          icon: _.hJ4,
           strLocToken: "#Notification_NewModeratorMessagePinned_Body",
           feature: a.qR,
         },
@@ -2652,10 +3026,10 @@
         },
       ];
       function Ee() {
-        const e = Re();
-        return (0, n.jsx)(n.Fragment, {
+        const e = Ue();
+        return (0, i.jsx)(i.Fragment, {
           children: Oe.map((t) =>
-            (0, n.jsx)(
+            (0, i.jsx)(
               be,
               {
                 url: t.fnUrl(),
@@ -2670,21 +3044,21 @@
         });
       }
       function We() {
-        return (0, n.jsxs)("div", {
-          className: S().EmptyNotificationsCtn,
+        return (0, i.jsxs)("div", {
+          className: I().EmptyNotificationsCtn,
           children: [
-            (0, n.jsx)("div", {
-              className: S().EmptyNotificationsTitle,
+            (0, i.jsx)("div", {
+              className: I().EmptyNotificationsTitle,
               children: (0, h.we)("#NotificationsList_EmptyTitle_New"),
             }),
-            (0, n.jsx)("div", {
-              className: S().EmptyNotificationsBody,
+            (0, i.jsx)("div", {
+              className: I().EmptyNotificationsBody,
               children: (0, h.we)("#NotificationsList_EmptyBody"),
             }),
           ],
         });
       }
-      const ze = Ce;
+      const ze = De;
     },
   },
 ]);

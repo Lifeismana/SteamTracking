@@ -307,5 +307,8 @@
     "AppPage_RecommendationReason_FriendsOwned_Software": "<1>%1$s друг</1> уже має цю програму:",
     "AppPage_RecommendationReason_FriendsOwned_Software_Plural": "<1>Друзі (%1$s)</1> уже мають цю програму:",
     "AppPage_RecommendationReason_FriendsOwned_Video": "<1>%1$s друг</1> уже має це відео:",
-    "AppPage_RecommendationReason_FriendsOwned_Video_Plural": "<1>Друзі (%1$s)</1> уже мають це відео:"
+    "AppPage_RecommendationReason_FriendsOwned_Video_Plural": "<1>Друзі (%1$s)</1> уже мають це відео:",
+    "AppPage_PageSectionBanner_Workshop": "Майстерня Steam",
+    "AppPage_PageSectionBanner_Follow": "Відстежувати цю гру",
+    "AppPage_PageSectionBanner_MachineController": "Steam Machine та Steam Controller"
 }

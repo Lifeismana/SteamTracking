@@ -2460,7 +2460,9 @@
               });
             },
             Suggestions: function (t) {
-              return (0, e.jsx)(g.k.Positioner, { ...t, returnFocus: !1 });
+              return 0 === l.Children.toArray(t.children).length
+                ? null
+                : (0, e.jsx)(g.k.Positioner, { ...t, returnFocus: !1 });
             },
             Suggestion: function (t) {
               const { value: c, children: n, ...l } = t,

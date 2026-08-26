@@ -966,6 +966,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -987,6 +988,7 @@
             nSummaryMaxLength: _,
           } = _,
           _ = (0, _._)(_.appid),
+          _ = (0, _._)(),
           _ = _ || (0, _.sfN)(_._.LANGUAGE),
           _ =
             null !==
@@ -1026,8 +1028,7 @@
           return (0, _.jsx)("div", {
             className: _().OtherEvents_EventCtn,
           });
-        const _ = _._.NOW,
-          _ = _ ? _.GetStartTimeAndDateUnixSeconds() : 0;
+        const _ = _ ? _.GetStartTimeAndDateUnixSeconds() : 0;
         let _ = _;
         return (
           _ && (_.length > _ || _.length > _) && (_ = void 0),
@@ -4209,6 +4210,90 @@
             })
           : null;
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      class _ {
+        static ParseCSVFile(_, _) {
+          return new Promise((_, _) => {
+            const _ = {
+              header: !0,
+              skipEmptyLines: "greedy",
+              complete: _,
+              error: (_) =>
+                _({
+                  errors: [_],
+                }),
+              transformHeader: _,
+            };
+            _().parse(_, _);
+          });
+        }
+        static ReadFile(_) {
+          return new Promise((_, _) => {
+            const _ = new FileReader();
+            (_.onload = (_) => _(_.result)), _.readAsText(_);
+          });
+        }
+        static WriteFile(_, _) {
+          let _ = document.createElement("a");
+          if (navigator.msSaveBlob) navigator.msSaveBlob(_, _);
+          else {
+            const _ = window.URL.createObjectURL(_);
+            _.href = _;
+          }
+          __webpack_require__.setAttribute("download", _),
+            __webpack_require__.click();
+          try {
+            document.removeChild(_);
+          } catch (_) {}
+        }
+        static WriteCSVToFile(_, _, _, _) {
+          const _ = _
+              ? _().unparse(
+                  {
+                    fields: _,
+                    data: _,
+                  },
+                  {
+                    header: !0,
+                  },
+                )
+              : _().unparse(_, {
+                  header: !0,
+                }),
+            _ = 1 == _ ? ["\ufeff" + _] : [_];
+          _.WriteFile(
+            new Blob(_, {
+              type: "text/csv:charset=utf-8;",
+            }),
+            _,
+          );
+        }
+        static WriteXMLToFile(_, _) {
+          const _ = () =>
+            this.m_DummyValueForQuestionHack ? "never returned" : "?";
+          let _ =
+            "<" +
+            __webpack_require__() +
+            'xml version="1.0" encoding="UTF-8" ' +
+            __webpack_require__() +
+            ">\n";
+          (_ += new XMLSerializer().serializeToString(_)),
+            _.WriteFile(
+              new Blob([_], {
+                type: "application/xml:charset=utf-8;",
+              }),
+              _,
+            );
+        }
+      }
+      _.m_DummyValueForQuestionHack = 0;
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

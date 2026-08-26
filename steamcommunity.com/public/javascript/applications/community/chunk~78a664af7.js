@@ -1813,7 +1813,7 @@
               e.time_dispute_resolved && b++;
         const B = void 0 !== c && !c.owner_dispute_time && c.resolved === o.S6,
           f = void 0 !== c && !!c.owner_dispute_time;
-        return (0, s.jsx)(_e.w, {
+        return (0, s.jsx)(_e.wA, {
           onlyPopoutIfNeeded: !0,
           popupHeight: 340,
           popupWidth: 640,

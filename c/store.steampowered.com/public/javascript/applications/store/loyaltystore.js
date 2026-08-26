@@ -12089,8 +12089,11 @@
             for (
               ;
               this.m_mapRoomEffectQueue[_].length > 0 && !this.BIsQueueFull(_);
-            )
-              this.ActivateRoomEffect(this.m_mapRoomEffectQueue[_].shift());
+            ) {
+              const _ = this.m_mapRoomEffectQueue[_].shift();
+              if (!_) break;
+              this.ActivateRoomEffect(_);
+            }
           }
         }
       }

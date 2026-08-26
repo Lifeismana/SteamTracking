@@ -103,7 +103,7 @@
         Fj: () => g,
         Ho: () => p,
         Kf: () => r,
-        N_: () => x,
+        N_: () => v,
         XY: () => C,
         dM: () => a,
         qj: () => n,
@@ -436,9 +436,9 @@
         );
       }
       function _(e, t) {
-        return t.filter((t) => x(e, t));
+        return t.filter((t) => v(e, t));
       }
-      function x(e, t) {
+      function v(e, t) {
         return g[t].rgAcceptableTypes.includes(e);
       }
     },
@@ -493,7 +493,7 @@
     },
     28954: (e, t, s) => {
       "use strict";
-      s.d(t, { M0: () => S, VE: () => w, vN: () => y, zO: () => A });
+      s.d(t, { M0: () => S, VE: () => T, vN: () => y, zO: () => A });
       var i = s(34629),
         n = s(22837),
         a = s(81393),
@@ -510,10 +510,10 @@
         I = s(61859),
         C = s(78327),
         _ = s(82817),
-        x = s(40414),
+        v = s(17267),
         f = s(64953),
-        b = s(69343);
-      function v(e, t, s) {
+        x = s(69343);
+      function b(e, t, s) {
         const i = (0, c.Kf)(t.width, s),
           n = (0, c.Kf)(t.height, s);
         return {
@@ -540,17 +540,17 @@
                 ((0, a.wT)(Boolean(t), `Artwork Type not in Map ${e}`),
                 "number" == typeof t.width && "number" == typeof t.height)
               )
-                return [v(e, t)];
+                return [b(e, t)];
               {
                 let s = Math.max(
                   Array.isArray(t.width) ? t.width.length : 1,
                   Array.isArray(t.height) ? t.height.length : 1,
                 );
-                return Array.from({ length: s }, (s, i) => v(e, t, i));
+                return Array.from({ length: s }, (s, i) => b(e, t, i));
               }
             });
       }
-      class T extends b.Vr {
+      class w extends x.Vr {
         constructor(e, t, s, i) {
           super(),
             (this.m_filesToUpload = h.sH.array()),
@@ -566,7 +566,7 @@
           return this.m_clanSteamID;
         }
         async AddImage(e, t = n.Bhc) {
-          const { language: s } = (0, b.jj)(e.name, t);
+          const { language: s } = (0, x.jj)(e.name, t);
           return this.AddImageForLanguage(e, s);
         }
         async AddImageForLanguage(e, t) {
@@ -587,9 +587,9 @@
           return (this.m_filesToUpload = [...this.m_filesToUpload, i]), !0;
         }
         async AddExistingClanImage(e, t = n.Bhc) {
-          const s = x.zU.GetHashAndExt(e);
+          const s = v.zU.GetHashAndExt(e);
           if (!s) return !1;
-          const i = x.zU.GenerateEditableURLFromHashAndExt(
+          const i = v.zU.GenerateEditableURLFromHashAndExt(
               this.m_clanSteamID,
               s,
             ),
@@ -710,20 +710,20 @@
           );
         }
       }
-      (0, i.Cg)([h.sH], T.prototype, "m_filesToUpload", void 0),
-        (0, i.Cg)([h.sH], T.prototype, "m_filesCompleted", void 0),
-        (0, i.Cg)([h.sH], T.prototype, "m_lastError", void 0),
-        (0, i.Cg)([u.o], T.prototype, "AddImage", null),
-        (0, i.Cg)([u.o], T.prototype, "AddExistingClanImage", null),
-        (0, i.Cg)([u.o], T.prototype, "DeleteUploadImageByIndex", null),
-        (0, i.Cg)([u.o], T.prototype, "DeleteUploadImage", null),
-        (0, i.Cg)([u.o], T.prototype, "ClearImages", null);
-      class w extends T {
+      (0, i.Cg)([h.sH], w.prototype, "m_filesToUpload", void 0),
+        (0, i.Cg)([h.sH], w.prototype, "m_filesCompleted", void 0),
+        (0, i.Cg)([h.sH], w.prototype, "m_lastError", void 0),
+        (0, i.Cg)([u.o], w.prototype, "AddImage", null),
+        (0, i.Cg)([u.o], w.prototype, "AddExistingClanImage", null),
+        (0, i.Cg)([u.o], w.prototype, "DeleteUploadImageByIndex", null),
+        (0, i.Cg)([u.o], w.prototype, "DeleteUploadImage", null),
+        (0, i.Cg)([u.o], w.prototype, "ClearImages", null);
+      class T extends w {
         constructor(e, t, s) {
           super(e, t, s, !1);
         }
       }
-      class y extends T {
+      class y extends w {
         constructor(e, t, s) {
           super(e, t, s, !0);
         }
@@ -731,7 +731,7 @@
       function A(e, t, s) {
         const i = (0, r.wm)(t instanceof Array ? t : [t]),
           n = e.ConvertTo64BitString();
-        return p.useMemo(() => new w(e, i, s), [n, i]);
+        return p.useMemo(() => new T(e, i, s), [n, i]);
       }
     },
     64953: (e, t, s) => {
@@ -792,7 +792,7 @@
             I = Boolean((0, l.t)(this.fileType));
           let C,
             _ = "",
-            x = !1;
+            v = !1;
           return (
             c
               ? m
@@ -810,7 +810,7 @@
                             (0, a.qj)(n),
                             (0, a.qj)(o),
                           )),
-                          (x = !0))
+                          (v = !0))
                         : ((Array.isArray(n) && this.width != (0, a.qj)(n)) ||
                             (Array.isArray(o) &&
                               this.height != (0, a.qj)(o))) &&
@@ -836,7 +836,7 @@
             {
               error: _,
               warnings: C,
-              needsCrop: x,
+              needsCrop: v,
               match: this.GetCurrentImageOption(),
             }
           );
@@ -1451,23 +1451,23 @@
         p = s(88997),
         c = s(70995),
         d = s(17720),
-        g = s(40414),
+        g = s(17267),
         u = s(86355),
         m = s(73745),
         I = s(86328),
         C = s(81962),
         _ = s(10820),
-        x = s(14947),
+        v = s(14947),
         f = s(77700),
-        b = s.n(f),
-        v = s(52038);
+        x = s.n(f),
+        b = s(52038);
       class S extends l.Component {
         constructor(e) {
           super(e),
             (this.m_rgCurrentMatches = []),
             (this.m_mapMatchByKey = new Map()),
             (this.containerRef = l.createRef()),
-            (this.m_hMobxSearchDisposer = (0, x.fm)(async () => {
+            (this.m_hMobxSearchDisposer = (0, v.fm)(async () => {
               await this.UpdateSearchResults(this.props.strSearch),
                 this.forceUpdate();
             })),
@@ -1614,7 +1614,7 @@
                 a = s === this.state.selectedIndex;
               e.push(
                 (0, n.jsx)(
-                  T,
+                  w,
                   {
                     matchKey: i,
                     fnOnClick: this.OnClickSuggestion,
@@ -1639,10 +1639,10 @@
             e.push(t);
           }
           return (0, n.jsx)("div", {
-            className: b().mentionDialogPosition,
+            className: x().mentionDialogPosition,
             ref: this.containerRef,
             children: (0, n.jsxs)("div", {
-              className: b().mentionDialog,
+              className: x().mentionDialog,
               tabIndex: 0,
               onKeyDown: this.OnKeyDown,
               children: [this.renderHeader(), e],
@@ -1654,7 +1654,7 @@
         (0, i.Cg)([m.oI], S.prototype, "OnClickSuggestion", null),
         (0, i.Cg)([m.oI], S.prototype, "OnMouseOverSuggestion", null),
         (0, i.Cg)([m.oI], S.prototype, "BindSelectedElement", null);
-      class T extends l.PureComponent {
+      class w extends l.PureComponent {
         constructor() {
           super(...arguments), (this.containerRef = l.createRef());
         }
@@ -1666,10 +1666,10 @@
         }
         render() {
           return (0, n.jsx)("div", {
-            className: (0, v.A)(
-              b().suggestOption,
-              b().mentionSearchOption,
-              this.props.bIsSelected ? b().selected : "",
+            className: (0, b.A)(
+              x().suggestOption,
+              x().mentionSearchOption,
+              this.props.bIsSelected ? x().selected : "",
             ),
             onMouseEnter: this.OnMouseOver,
             onClick: this.OnClick,
@@ -1678,12 +1678,12 @@
           });
         }
       }
-      (0, i.Cg)([m.oI], T.prototype, "OnMouseOver", null),
-        (0, i.Cg)([m.oI], T.prototype, "OnClick", null);
-      const w = S;
+      (0, i.Cg)([m.oI], w.prototype, "OnMouseOver", null),
+        (0, i.Cg)([m.oI], w.prototype, "OnClick", null);
+      const T = S;
       var y = s(79786),
         A = s.n(y);
-      const D = class extends w {
+      const D = class extends T {
         performSearch(e) {
           return this.props.emoticonStore.SearchEmoticons(e, 10, !1);
         }
@@ -1695,7 +1695,7 @@
         }
         renderMatch(e) {
           return (0, n.jsxs)("div", {
-            className: (0, v.A)(
+            className: (0, b.A)(
               A().EmoticonSuggestion,
               e.recent ? "Recent" : "",
             ),
@@ -1729,7 +1729,7 @@
       var L = s(34510),
         E = s.n(L),
         j = s(61859);
-      class M extends w {
+      class M extends T {
         performSearch(e) {
           let t = Array();
           return (
@@ -1749,7 +1749,7 @@
           return (0, n.jsxs)(
             "div",
             {
-              className: (0, v.A)(E().BBCodeSuggestion),
+              className: (0, b.A)(E().BBCodeSuggestion),
               children: [
                 (0, n.jsx)("div", { className: E().BBCode, children: e.name }),
                 "[",
@@ -1766,7 +1766,7 @@
           return (0, n.jsx)(
             "div",
             {
-              className: (0, v.A)(b().mentionSearchOption, b().noMatches),
+              className: (0, b.A)(x().mentionSearchOption, x().noMatches),
               children: (0, j.we)("#Bbcode_No_Match"),
             },
             "nomatches",
@@ -1793,7 +1793,7 @@
             });
         }
         BindMentionDialog(e) {
-          this.m_MentionDialog = e;
+          this.m_MentionDialog = null != e ? e : void 0;
         }
         OnKeyDown(e) {
           this.state.activeSuggestSearchType &&
@@ -1812,21 +1812,21 @@
           }
         }
         ReplaceSuggestedText(e, t) {
-          let s = this.descTextAreaRef.current.selectionStart,
-            i = this.descTextAreaRef.current.value,
-            n = this.FindMatchOpener(e, i, s);
+          const s = this.descTextAreaRef.current;
+          if (!s) return;
+          let i = s.selectionStart,
+            n = s.value,
+            a = this.FindMatchOpener(e, n, i);
           if (
-            (void 0 === n && "@" == e && (n = this.FindMatchOpener("＠", i, s)),
-            void 0 !== n)
+            (void 0 === a && "@" == e && (a = this.FindMatchOpener("＠", n, i)),
+            void 0 !== a)
           ) {
-            let e = i.substr(0, n);
-            (e += t), (s >= i.length || " " != i[s]) && (e += " ");
-            let a = e.length;
-            (e += i.substr(s)),
-              (this.descTextAreaRef.current.value = e),
-              (this.descTextAreaRef.current.selectionStart =
-                this.descTextAreaRef.current.selectionEnd =
-                  a),
+            let e = n.substr(0, a);
+            (e += t), (i >= n.length || " " != n[i]) && (e += " ");
+            let r = e.length;
+            (e += n.substr(i)),
+              (s.value = e),
+              (s.selectionStart = s.selectionEnd = r),
               this.props.fnSetText(e),
               this.FocusTextInput();
           }
@@ -1915,13 +1915,14 @@
             } = this.props;
           switch (this.state.activeSuggestSearchType) {
             case "Emoticon":
-              e = (0, n.jsx)(D, {
-                emoticonStore: t,
-                strSearch: this.state.mentionSearch,
-                nMinimumSearchLengthBeforeAutoSelection: 2,
-                onSuggestionSelected: this.OnEmoticonSuggestionSelected,
-                ref: this.BindMentionDialog,
-              });
+              t &&
+                (e = (0, n.jsx)(D, {
+                  emoticonStore: t,
+                  strSearch: this.state.mentionSearch,
+                  nMinimumSearchLengthBeforeAutoSelection: 2,
+                  onSuggestionSelected: this.OnEmoticonSuggestionSelected,
+                  ref: this.BindMentionDialog,
+                }));
               break;
             case "BBCode":
               e = (0, n.jsx)(M, {
@@ -1957,8 +1958,8 @@
         (0, i.Cg)([m.oI], O.prototype, "FocusTextInput", null),
         (0, i.Cg)([m.oI], O.prototype, "GetTextAreaRef", null),
         (0, i.Cg)([m.oI], O.prototype, "GetTextAreaCurrent", null);
-      var B = s(68255),
-        k = s(283),
+      var k = s(68255),
+        B = s(283),
         U = s(95695),
         R = s.n(U),
         H = s(9154),
@@ -2016,13 +2017,13 @@
         l.useEffect(() => {
           _(s);
         }, [_, s]);
-        let x,
+        let v,
           f = "",
-          b = !1;
+          x = !1;
         if (C && C.GetFilesToUpload().length > 0) {
-          x = C.GetUploadImages()[0];
-          const e = x.IsValidAssetType(o);
-          (f = e.error), (b = e.needsCrop);
+          v = C.GetUploadImages()[0];
+          const e = v.IsValidAssetType(o);
+          (f = e.error), (x = e.needsCrop);
         }
         return (0, n.jsxs)(n.Fragment, {
           children: [
@@ -2031,40 +2032,43 @@
                   size: "medium",
                   string: (0, j.we)("#Loading"),
                 })
-              : Boolean(h) &&
+              : h &&
                 (0, n.jsx)("div", {
                   className: ne.Image,
                   style: {
-                    backgroundImage: `url( '${x ? x.dataUrl : h.url}' )`,
+                    backgroundImage: `url( '${v ? v.dataUrl : h.url}' )`,
                     height: `${a}px`,
                     width: `${i}px`,
                   },
                 }),
             Boolean(f) && (0, n.jsx)("p", { children: f }),
-            b &&
-              (0, n.jsx)(B.$n, {
+            x &&
+              (0, n.jsx)(k.$n, {
                 onClick: (e) => {
-                  const t = (0, P.uX)(e);
-                  let s = C.GetUploadImages()[0];
+                  var t;
+                  const s =
+                    null !== (t = (0, P.uX)(e)) && void 0 !== t ? t : window;
+                  let r = C.GetUploadImages()[0];
                   (0, G.pg)(
                     (0, n.jsx)(se.q, {
-                      ownerWin: t,
-                      uploadFile: s,
+                      ownerWin: s,
+                      uploadFile: r,
                       forceResolution: { width: i, height: a },
                       fileType: ee.bg.dU,
                     }),
-                    t,
+                    s,
                   );
                 },
                 children: (0, j.we)("#BBCode_ResizeImage"),
               }),
-            Boolean(x && x.bCropped) &&
+            v &&
+              v.bCropped &&
               (0, n.jsxs)(n.Fragment, {
                 children: [
                   (0, n.jsx)("div", {
                     children: (0, j.we)(
                       "#ClanImagePickAndResize_UploadStatus",
-                      x.status,
+                      v.status,
                     ),
                   }),
                   m
@@ -2072,43 +2076,46 @@
                         string: (0, j.we)("#Uploading"),
                         size: "small",
                       })
-                    : (0, n.jsx)(B.$n, {
+                    : (0, n.jsx)(k.$n, {
                         onClick: async () => {
                           I(!0);
                           try {
                             const e = await C.UploadAllImages(o),
                               s = Object.values(e);
-                            if (
-                              s &&
-                              s.length > 0 &&
-                              ((0, te.wT)(
+                            if (s && s.length > 0) {
+                              (0, te.wT)(
                                 1 == s.length,
                                 "ClanImagePickForCertainSize expected size 1, got " +
                                   s.length,
-                              ),
-                              s[0].bSuccess)
-                            ) {
-                              const e = s[0].uploadResult,
-                                i = g.zU.GenerateURLFromHashAndExt(
-                                  t,
-                                  g.zU.GetHashAndExt(e),
-                                ),
-                                n = g.zU.GenerateURLFromHashAndExt(
-                                  t,
-                                  g.zU.GetThumbHashAndExt(e),
-                                ),
-                                a = {
-                                  imageid: -11231412,
-                                  image_hash: e.image_hash,
-                                  thumbnail_hash: e.thumbnail_hash,
-                                  file_type: e.file_type,
-                                  file_name: e.file_name,
-                                  clanAccountID: t.GetAccountID(),
-                                  url: i,
-                                  thumb_url: n,
-                                  uploaded_time: Date.now() / 1e3,
-                                };
-                              p(a), r(a);
+                              );
+                              const e = s[0].bSuccess
+                                  ? s[0].uploadResult
+                                  : void 0,
+                                i = g.zU.GetHashAndExt(null != e ? e : null),
+                                n = g.zU.GetThumbHashAndExt(
+                                  null != e ? e : null,
+                                );
+                              if (
+                                (null == e ? void 0 : e.image_hash) &&
+                                void 0 !== e.file_type &&
+                                i &&
+                                n
+                              ) {
+                                const s = g.zU.GenerateURLFromHashAndExt(t, i),
+                                  a = g.zU.GenerateURLFromHashAndExt(t, n),
+                                  o = {
+                                    imageid: -11231412,
+                                    image_hash: e.image_hash,
+                                    thumbnail_hash: e.thumbnail_hash,
+                                    file_type: e.file_type,
+                                    file_name: e.file_name,
+                                    clanAccountID: t.GetAccountID(),
+                                    url: s,
+                                    thumb_url: a,
+                                    uploaded_time: Date.now() / 1e3,
+                                  };
+                                p(o), r(o);
+                              }
                             }
                           } finally {
                             I(!1);
@@ -2120,15 +2127,16 @@
                       }),
                 ],
               }),
-            (0, n.jsx)(B.$n, {
+            (0, n.jsx)(k.$n, {
               onClick: (e) => {
-                const t = new d.b(z.UF.CLANSTEAMID);
+                var t;
+                const s = new d.b(z.UF.CLANSTEAMID);
                 (0, G.pg)(
                   (0, n.jsx)(ie.z, {
-                    clanSteamID: t,
+                    clanSteamID: s,
                     fnImageSelectCallBack: (e) => _(e),
                   }),
-                  (0, P.uX)(e),
+                  null !== (t = (0, P.uX)(e)) && void 0 !== t ? t : window,
                 );
               },
               children: (0, j.we)("#BBCode_ChooseImage", i, a),
@@ -2140,13 +2148,16 @@
         le = s(68797);
       let he = (oe = class extends l.Component {
         constructor(e) {
+          var t;
           super(e),
             (this.m_cancelSignal = r().CancelToken.source()),
             (this.state = {
               formattingHelp: {
-                __html: oe.s_formattingHelp.has(e.formatType)
-                  ? oe.s_formattingHelp.get(e.formatType)
-                  : "",
+                __html:
+                  null !== (t = oe.s_formattingHelp.get(e.formatType)) &&
+                  void 0 !== t
+                    ? t
+                    : "",
               },
             });
         }
@@ -2233,28 +2244,41 @@
           e && e.target.select();
         }
         InsertText(e) {
-          me.replaceSelection(this.GetTextAreaRef().current, e);
+          var t;
+          me.replaceSelection(
+            null === (t = this.GetTextAreaRef()) || void 0 === t
+              ? void 0
+              : t.current,
+            e,
+          );
         }
         OnTextAreaDropListener(e) {
+          var t;
           if (
             (e.preventDefault(),
             e.stopPropagation(),
             e.dataTransfer.items && e.dataTransfer.items[0])
           ) {
-            let t = e.dataTransfer.getData("text");
-            if (t && t.length > 0)
+            let s = e.dataTransfer.getData("text");
+            if (s && s.length > 0)
               for (let e of [g.zU.GetBaseURL(), g.zU.GetBaseURLV2()])
-                if (t.startsWith(e)) {
-                  let s = "[img]" + ce.lw + "/" + t.substr(e.length) + "[/img]";
-                  me.replaceSelection(this.GetTextAreaRef().current, s);
+                if (s.startsWith(e)) {
+                  let i = "[img]" + ce.lw + "/" + s.substr(e.length) + "[/img]";
+                  me.replaceSelection(
+                    null === (t = this.GetTextAreaRef()) || void 0 === t
+                      ? void 0
+                      : t.current,
+                    i,
+                  );
                   break;
                 }
           }
         }
         GetTextAreaRef() {
-          return this.descAutoTextAreaRef && this.descAutoTextAreaRef.current
-            ? this.descAutoTextAreaRef.current.GetTextAreaRef()
-            : void 0;
+          var e;
+          return null === (e = this.descAutoTextAreaRef.current) || void 0 === e
+            ? void 0
+            : e.GetTextAreaRef();
         }
         render() {
           return (0, n.jsxs)(l.Fragment, {
@@ -2273,7 +2297,7 @@
                 clanSteamID: this.props.clanSteamID,
               }),
               (0, n.jsx)("div", {
-                className: (0, v.A)(
+                className: (0, b.A)(
                   q().DescriptionCtn,
                   q().BBCodeEditorInputStyles,
                   this.state.bShowDragTarget ? q().DragTarget : "",
@@ -2283,7 +2307,7 @@
                   cols: 90,
                   rows: this.props.nOverridesRows || 22,
                   maxLength: 64e3,
-                  className: (0, v.A)(
+                  className: (0, b.A)(
                     q().DefaultEditor,
                     this.props.classNameForTextArea
                       ? this.props.classNameForTextArea
@@ -2319,18 +2343,22 @@
           );
         }
         static replaceSelection(e, t) {
+          if (!e) return;
           let s = e.selectionStart;
           e.focus(),
             me.InsertTextAtSelect(t, e),
             e.setSelectionRange(s, s + t.length);
         }
         static getSelectedString(e) {
-          return e.value.substr(
-            e.selectionStart,
-            e.selectionEnd - e.selectionStart,
-          );
+          return e
+            ? e.value.substr(
+                e.selectionStart,
+                e.selectionEnd - e.selectionStart,
+              )
+            : "";
         }
         static wrapBBCode(e, t, s) {
+          if (!s) return;
           let i = me.getSelectedString(s),
             n = "";
           (n =
@@ -2382,29 +2410,74 @@
           super(...arguments), (this.m_linkPopupRef = l.createRef());
         }
         onBold() {
-          me.wrapBBCode("[b]", "[/b]", this.props.fnTextareaRef().current);
+          var e;
+          me.wrapBBCode(
+            "[b]",
+            "[/b]",
+            null === (e = this.props.fnTextareaRef()) || void 0 === e
+              ? void 0
+              : e.current,
+          );
         }
         onItalics() {
-          me.wrapBBCode("[i]", "[/i]", this.props.fnTextareaRef().current);
+          var e;
+          me.wrapBBCode(
+            "[i]",
+            "[/i]",
+            null === (e = this.props.fnTextareaRef()) || void 0 === e
+              ? void 0
+              : e.current,
+          );
         }
         onUnderline() {
-          me.wrapBBCode("[u]", "[/u]", this.props.fnTextareaRef().current);
+          var e;
+          me.wrapBBCode(
+            "[u]",
+            "[/u]",
+            null === (e = this.props.fnTextareaRef()) || void 0 === e
+              ? void 0
+              : e.current,
+          );
         }
         onStrikeThrough() {
+          var e;
           me.wrapBBCode(
             "[strike]",
             "[/strike]",
-            this.props.fnTextareaRef().current,
+            null === (e = this.props.fnTextareaRef()) || void 0 === e
+              ? void 0
+              : e.current,
           );
         }
         onHeader() {
-          me.wrapBBCode("[h1]", "[/h1]", this.props.fnTextareaRef().current);
+          var e;
+          me.wrapBBCode(
+            "[h1]",
+            "[/h1]",
+            null === (e = this.props.fnTextareaRef()) || void 0 === e
+              ? void 0
+              : e.current,
+          );
         }
         onHeader2() {
-          me.wrapBBCode("[h2]", "[/h2]", this.props.fnTextareaRef().current);
+          var e;
+          me.wrapBBCode(
+            "[h2]",
+            "[/h2]",
+            null === (e = this.props.fnTextareaRef()) || void 0 === e
+              ? void 0
+              : e.current,
+          );
         }
         onHeader3() {
-          me.wrapBBCode("[h3]", "[/h3]", this.props.fnTextareaRef().current);
+          var e;
+          me.wrapBBCode(
+            "[h3]",
+            "[/h3]",
+            null === (e = this.props.fnTextareaRef()) || void 0 === e
+              ? void 0
+              : e.current,
+          );
         }
         onUnorderedList() {
           this.handleList("list");
@@ -2413,76 +2486,99 @@
           this.handleList("olist");
         }
         handleList(e) {
-          let t = this.props.fnTextareaRef().current,
-            s = "[" + e + "]\n",
-            i = "[/" + e + "]";
-          if (t.selectionStart == t.selectionEnd)
-            me.wrapBBCode(s + "[*]", "\n" + i, t);
+          var t;
+          let s =
+            null === (t = this.props.fnTextareaRef()) || void 0 === t
+              ? void 0
+              : t.current;
+          if (!s) return;
+          let i = "[" + e + "]\n",
+            n = "[/" + e + "]";
+          if (s.selectionStart == s.selectionEnd)
+            me.wrapBBCode(i + "[*]", "\n" + n, s);
           else {
             let e =
-              s +
+              i +
               me
-                .getSelectedString(t)
+                .getSelectedString(s)
                 .split("\n")
                 .map((e) => (e.match(/\*+\s/) ? "[*]" : "[*] ") + e)
                 .join("\n") +
               "\n" +
-              i;
-            me.replaceSelection(t, e);
+              n;
+            me.replaceSelection(s, e);
           }
         }
         OnAddLink(e) {
-          (0, G.HT)(
-            (0, n.jsx)(xe, { textareaRef: this.props.fnTextareaRef() }),
-            (0, P.uX)(e),
-          );
+          var t;
+          const s = this.props.fnTextareaRef();
+          s &&
+            (0, G.HT)(
+              (0, n.jsx)(ve, { textareaRef: s }),
+              null !== (t = (0, P.uX)(e)) && void 0 !== t ? t : window,
+            );
         }
         ShowHelpDialog(e) {
+          var t;
           this.props.showFormatHelp &&
             (0, G.HT)(
               (0, n.jsx)(he, { formatType: this.props.showFormatHelp }),
-              (0, P.uX)(e),
+              null !== (t = (0, P.uX)(e)) && void 0 !== t ? t : window,
             );
         }
         OnConvertHTMLToBBCodeDialog(e) {
-          const t = (0, P.uX)(e);
-          (0, G.HT)(
-            (0, n.jsx)(Te, {
-              ownerWindow: t,
-              textareaRef: this.props.fnTextareaRef(),
-            }),
-            t,
-          );
+          var t;
+          const s = this.props.fnTextareaRef();
+          if (!s) return;
+          const i = null !== (t = (0, P.uX)(e)) && void 0 !== t ? t : window;
+          (0, G.HT)((0, n.jsx)(we, { ownerWindow: i, textareaRef: s }), i);
         }
         OnOpenYoutubeDialog(e) {
-          let t = z.TS.IMG_URL + "applications/community/";
+          var t;
+          const s = this.props.fnTextareaRef();
+          if (!s) return;
+          let i = z.TS.IMG_URL + "applications/community/";
           (0, G.HT)(
-            (0, n.jsx)(_e, {
-              textareaRef: this.props.fnTextareaRef(),
-              pathToImages: t,
-            }),
-            (0, P.uX)(e),
+            (0, n.jsx)(_e, { textareaRef: s, pathToImages: i }),
+            null !== (t = (0, P.uX)(e)) && void 0 !== t ? t : window,
           );
         }
         OnOpenImageDialog(e) {
-          (0, G.HT)(
-            (0, n.jsx)(fe, { textareaRef: this.props.fnTextareaRef() }),
-            (0, P.uX)(e),
-          );
+          var t;
+          const s = this.props.fnTextareaRef();
+          s &&
+            (0, G.HT)(
+              (0, n.jsx)(fe, { textareaRef: s }),
+              null !== (t = (0, P.uX)(e)) && void 0 !== t ? t : window,
+            );
         }
         OnOpenSpeakerDialog(e) {
-          (0, G.pg)(
-            (0, n.jsx)(be, {
-              clanSteamID: this.props.clanSteamID,
-              textareaRef: this.props.fnTextareaRef(),
-            }),
-            (0, P.uX)(e),
-          );
+          var t;
+          const s = this.props.fnTextareaRef(),
+            i = this.props.clanSteamID;
+          s &&
+            i &&
+            (0, G.pg)(
+              (0, n.jsx)(xe, { clanSteamID: i, textareaRef: s }),
+              null !== (t = (0, P.uX)(e)) && void 0 !== t ? t : window,
+            );
         }
         OnEmoticonSelected(e, t = !1) {
-          let s = `ː${e}ː`;
-          me.replaceSelection(this.props.fnTextareaRef().current, s),
-            this.props.fnTextareaRef().current.focus();
+          var s, i, n;
+          let a = `ː${e}ː`;
+          me.replaceSelection(
+            null === (s = this.props.fnTextareaRef()) || void 0 === s
+              ? void 0
+              : s.current,
+            a,
+          ),
+            null ===
+              (n =
+                null === (i = this.props.fnTextareaRef()) || void 0 === i
+                  ? void 0
+                  : i.current) ||
+              void 0 === n ||
+              n.focus();
         }
         BSupports(e) {
           return this.props.supportBBCodes.findIndex((t) => t == e) >= 0;
@@ -2499,13 +2595,13 @@
             e &&
               (a = t
                 ? (0, n.jsx)("span", {
-                    className: (0, v.A)("ttip", q().ActionGetHelp),
+                    className: (0, b.A)("ttip", q().ActionGetHelp),
                     children: (0, n.jsx)(J.he, {
                       toolTipContent: (0, j.we)(
                         "#EventEditor_FormattingHelp_GetHelpLink",
                       ),
                       children: (0, n.jsxs)("a", {
-                        href: he.GetHelpURL(this.props.showFormatHelp, !1),
+                        href: he.GetHelpURL(e, !1),
                         target: z.TS.IN_CLIENT ? void 0 : "_blank",
                         children: [
                           (0, n.jsx)("img", { src: i + "/action_help.png" }),
@@ -2517,7 +2613,7 @@
                   })
                 : (0, n.jsx)("span", {
                     onClick: this.ShowHelpDialog,
-                    className: (0, v.A)("ttip", q().ActionGetHelp),
+                    className: (0, b.A)("ttip", q().ActionGetHelp),
                     children: (0, n.jsxs)(J.he, {
                       toolTipContent: (0, j.we)(
                         "#EventEditor_FormattingHelp_GetHelpLink",
@@ -2604,9 +2700,9 @@
                     this.props.emoticonStore &&
                     (0, n.jsx)(J.he, {
                       toolTipContent: (0, j.we)("#Editor_Emoticon"),
-                      children: (0, n.jsx)(k.A, {
+                      children: (0, n.jsx)(B.A, {
                         title: " ",
-                        className: (0, v.A)(q().EmoteOuter),
+                        className: (0, b.A)(q().EmoteOuter),
                         disabled: !1,
                         OnEmoticonSelected: this.OnEmoticonSelected,
                         rtLastAckedNewEmoticons: Number.MAX_VALUE,
@@ -2751,7 +2847,9 @@
                         className: "DialogInput_Wrapper",
                         children: (0, n.jsx)("input", {
                           className: "DialogInput DialogTextInputBase",
-                          ref: (e) => e && e.focus(),
+                          ref: (e) => {
+                            null == e || e.focus();
+                          },
                           type: "text",
                           value: this.state.youtubeInput,
                           onChange: this.OnUrlChange,
@@ -2875,7 +2973,7 @@
         (0, i.Cg)([m.oI], _e.prototype, "OnSummarySelected", null),
         (0, i.Cg)([m.oI], _e.prototype, "OnOuterDivClickPassDown", null),
         (_e = (0, i.Cg)([o.PA], _e));
-      let xe = (pe = class extends l.Component {
+      let ve = (pe = class extends l.Component {
         constructor() {
           super(...arguments), (this.state = { textToDisplay: "", strURL: "" });
         }
@@ -2960,17 +3058,22 @@
           });
         }
       });
-      (xe.m_regExp = new RegExp(/\[url=([^\]]*)\]([^\[\]]+)\[\/url\]/i)),
-        (0, i.Cg)([m.oI], xe.prototype, "onLinkTitleUpdate", null),
-        (0, i.Cg)([m.oI], xe.prototype, "onLinkURLUpdate", null),
-        (0, i.Cg)([m.oI], xe.prototype, "onInsertLink", null),
-        (xe = pe = (0, i.Cg)([o.PA], xe));
+      (ve.m_regExp = new RegExp(/\[url=([^\]]*)\]([^\[\]]+)\[\/url\]/i)),
+        (0, i.Cg)([m.oI], ve.prototype, "onLinkTitleUpdate", null),
+        (0, i.Cg)([m.oI], ve.prototype, "onLinkURLUpdate", null),
+        (0, i.Cg)([m.oI], ve.prototype, "onInsertLink", null),
+        (ve = pe = (0, i.Cg)([o.PA], ve));
       let fe = class extends l.Component {
         constructor() {
-          super(...arguments), (this.state = { imgURL: "", anchorURL: "" });
+          super(...arguments),
+            (this.refFirstInput = l.createRef()),
+            (this.state = { imgURL: "", anchorURL: "" });
         }
         componentDidMount() {
-          this.refFirstInput && this.refFirstInput.current.focus();
+          var e;
+          null === (e = this.refFirstInput.current) ||
+            void 0 === e ||
+            e.focus();
         }
         OnImageInsert() {
           const { anchorURL: e, imgURL: t } = this.state;
@@ -3061,7 +3164,7 @@
         (0, i.Cg)([m.oI], fe.prototype, "OnImageURLChange", null),
         (0, i.Cg)([m.oI], fe.prototype, "OnAnchorURLChange", null),
         (fe = (0, i.Cg)([o.PA], fe));
-      const be = (e) => {
+      const xe = (e) => {
         const [t, s] = l.useState(""),
           [i, a] = l.useState(""),
           [r, o] = l.useState(""),
@@ -3069,16 +3172,16 @@
           [u, m] = l.useState(void 0),
           [I, C] = l.useState(void 0),
           { data: _ } = (0, K.Dv)(),
-          { isLoading: x, data: f } = (0, V.js)(
+          { isLoading: v, data: f } = (0, V.js)(
             null == I ? void 0 : I.GetAccountID(),
           ),
-          b = 0 != t.trim().length && 0 != h.trim().length;
+          x = 0 != t.trim().length && 0 != h.trim().length;
         return (0, n.jsx)(H.o0, {
           strTitle: (0, j.we)("#EventEditor_AddSpeaker"),
           strDescription: (0, j.we)("#EventEditor_AddSpeaker_Desc"),
           closeModal: e.closeModal,
           onCancel: e.closeModal,
-          bOKDisabled: !b,
+          bOKDisabled: !x,
           onOK: () => {
             let s = `[speaker name="${t.trim()}"`;
             if (
@@ -3096,7 +3199,7 @@
           children: (0, n.jsxs)("div", {
             className: q().InsertSpeakerCtn,
             children: [
-              (0, n.jsx)(B.pd, {
+              (0, n.jsx)(k.pd, {
                 type: "text",
                 label: (0, j.we)("#EventEditor_AddSpeaker_Name"),
                 value: t,
@@ -3106,13 +3209,13 @@
               (0, n.jsxs)("div", {
                 className: q().TitleGroup,
                 children: [
-                  (0, n.jsx)(B.pd, {
+                  (0, n.jsx)(k.pd, {
                     type: "text",
                     label: (0, j.we)("#EventEditor_AddSpeaker_Title"),
                     value: i,
                     onChange: (e) => a(e.target.value),
                   }),
-                  (0, n.jsx)(B.pd, {
+                  (0, n.jsx)(k.pd, {
                     type: "text",
                     label: (0, j.we)("#EventEditor_AddSpeaker_Company"),
                     value: r,
@@ -3134,12 +3237,13 @@
               }),
               (0, n.jsxs)("div", {
                 children: [
-                  x &&
+                  v &&
                     (0, n.jsx)(Z.t, {
                       string: (0, j.we)("#Loading"),
                       size: "small",
                     }),
-                  Boolean(f) &&
+                  I &&
+                    f &&
                     (0, n.jsxs)("a", {
                       href:
                         z.TS.COMMUNITY_BASE_URL +
@@ -3159,21 +3263,24 @@
                   (0, n.jsxs)("div", {
                     className: q().AssociateRowCtn,
                     children: [
-                      (0, n.jsx)(B.$n, {
+                      (0, n.jsx)(k.$n, {
                         onClick: () => C(new d.b(z.iA.steamid)),
                         children: (0, j.we)("#EventEditor_SteamAccount_addme"),
                       }),
-                      (0, n.jsx)(B.$n, {
+                      (0, n.jsx)(k.$n, {
                         onClick: (e) =>
                           (0, p.lX)(
-                            (0, n.jsx)(ve, { friends: _, setSteamID: C }),
+                            (0, n.jsx)(be, {
+                              friends: null != _ ? _ : [],
+                              setSteamID: C,
+                            }),
                             e,
                           ),
                         children: (0, j.we)(
                           "#EventEditor_SteamAccount_addfriend",
                         ),
                       }),
-                      (0, n.jsx)(B.$n, {
+                      (0, n.jsx)(k.$n, {
                         onClick: () => C(void 0),
                         children: (0, j.we)("#EventEditor_SteamAccount_clear"),
                       }),
@@ -3204,7 +3311,7 @@
                     className: "DialogLabel",
                     children: (0, j.we)("#EventEditor_AddSpeaker_About"),
                   }),
-                  (0, n.jsx)(B.Cl, {
+                  (0, n.jsx)(k.Cl, {
                     value: h,
                     onChange: (e) => c(e.target.value),
                     rows: 8,
@@ -3236,7 +3343,7 @@
           }),
         });
       };
-      function ve(e) {
+      function be(e) {
         const { friends: t, setSteamID: s } = e;
         return (0, n.jsx)("div", {
           className: q().DropDownScroll,
@@ -3263,7 +3370,7 @@
           }),
         });
       }
-      let Te = class extends l.Component {
+      let we = class extends l.Component {
         constructor(e) {
           super(e),
             (this.m_isMounted = !1),
@@ -3285,14 +3392,12 @@
         async ConvertHtmlToBBCode(e, t) {
           let s = new URLSearchParams();
           s.append("content", e), s.append("preserve_newlines", t ? "1" : "0");
-          let i = null;
           return (
-            (i = await r().post(
+            await r().post(
               z.TS.COMMUNITY_BASE_URL + "/actions/ConvertHTMLToBBCode",
               s,
-            )),
-            i.data.content
-          );
+            )
+          ).data.content;
         }
         ConvertBBCode() {
           this.setState({ bConverting: !0 }),
@@ -3361,11 +3466,11 @@
                   onOK: this.OnConvertAndOverriteHTML,
                   onCancel: e,
                   className: q().BBCodeEditorInputStyles,
-                  children: (0, n.jsxs)(B.nB, {
+                  children: (0, n.jsxs)(k.nB, {
                     children: [
-                      (0, n.jsx)(B.a3, {
+                      (0, n.jsx)(k.a3, {
                         children: (0, n.jsxs)("div", {
-                          className: (0, v.A)(
+                          className: (0, b.A)(
                             R().FlexColumnContainer,
                             q().ImportHTMLCtn,
                           ),
@@ -3390,7 +3495,9 @@
                               ),
                               className: q().ImportHTMLTextArea,
                               onChange: this.OnTextAreaChange,
-                              ref: (e) => e && e.focus(),
+                              ref: (e) => {
+                                null == e || e.focus();
+                              },
                             }),
                             (0, n.jsxs)("div", {
                               className: q().ImportHTMLCheckBoxLine,
@@ -3424,9 +3531,9 @@
                           ],
                         }),
                       }),
-                      (0, n.jsx)(B.wi, {
-                        children: (0, n.jsx)(B.VQ, {
-                          onCancel: e,
+                      (0, n.jsx)(k.wi, {
+                        children: (0, n.jsx)(k.VQ, {
+                          onCancel: () => (null == e ? void 0 : e()),
                           strOKText: (0, j.we)("#Button_Overwrite"),
                           onUpdate: this.OnConvertAndAppendHTML,
                           strUpdateText: (0, j.we)("#Button_Append"),
@@ -3437,11 +3544,11 @@
                 });
         }
       };
-      (0, i.Cg)([m.oI], Te.prototype, "OnConvertAndOverriteHTML", null),
-        (0, i.Cg)([m.oI], Te.prototype, "OnConvertAndAppendHTML", null),
-        (0, i.Cg)([m.oI], Te.prototype, "OnCheckboxChange", null),
-        (0, i.Cg)([m.oI], Te.prototype, "OnTextAreaChange", null),
-        (Te = (0, i.Cg)([o.PA], Te));
+      (0, i.Cg)([m.oI], we.prototype, "OnConvertAndOverriteHTML", null),
+        (0, i.Cg)([m.oI], we.prototype, "OnConvertAndAppendHTML", null),
+        (0, i.Cg)([m.oI], we.prototype, "OnCheckboxChange", null),
+        (0, i.Cg)([m.oI], we.prototype, "OnTextAreaChange", null),
+        (we = (0, i.Cg)([o.PA], we));
     },
     29347: (e, t, s) => {
       "use strict";

@@ -3,6 +3,84 @@
   {
     chunkid: (module) => {
       module.exports = {
+        narrowWidth: "500px",
+        SnoozeContainer: "_1DsumfIa3MlkzUV9EXY5W9",
+        SnoozeZ: "_2n0EiKMGRP-r_BI5tDtttu",
+        none: "T3Fb5KTXwIHM2B-ThTvEs",
+        Medium: "_1iYPlsChibPe7Ga9B3c5Wm",
+        Large: "_3BESV4eFnr4EnaSaJSdk6T",
+        Dim: "rpZ9bKyFXYvNQvgtKn5GV",
+        _: "_2hnF3M_l4xdIdQ4CkN7LYB",
+        _: "VmQTOrz5MPOWte5C9K7YS",
+        _: "_29mtadjX8N6pRn5TX1nA0o",
+        hoverParent: "_3-8cByP2koYzHwgZqjvFA",
+        animating: "_2rXc7hLg6bohWZ-JpRcYEB",
+        Snoring: "_38wIVgo1WjvGqL5ZsmpmiX",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        "duration-app-launch": "800ms",
+        narrowWidth: "500px",
+        statusAndName: "_4ZTzGZ5TTgFyfw1DcXLXS",
+        threeLines: "_1oYSXGjBe7QctQ1ikLpCMm",
+        blocked: "VTxPkslK1CSpKNFMgKg7d",
+        richPresenceLabel: "_2Ri005Wg_uXDTa71kdRbcN",
+        playerName: "nOdcT-MoOaXGePXLyPe0H",
+        playerNickname: "_2saJTAocZ9TnYXTGvnqUMC",
+        EllipsisName: "_1valFgvEGxquAi_2IrAKqO",
+        DisableColoring: "_3oDmKGyTBBm7i4DULjwYcC",
+        playerNicknameBracket: "_3XEmWmfQy7gbYJ4KJ1N9tp",
+        richPresenceContainer: "_3sxE7F1LV2IcSX68YsH9dI",
+        gameName: "_1cB0qtF0paHWWyj1XNcnbG",
+        dropPadding: "_3tEPYJ6xjX0d6akU-hhrs4",
+        NoMask: "_2dAj6KfWRAxoYPr6tgXd6t",
+        twoLine: "_1BbOegz8bYL7iPzgYpOgQI",
+        DNDContainer: "_3IswZMeeD6ORStUjgv6Xh8",
+        partyBeaconJoin: "_3BnDsXrefFJrt_8frF2wvB",
+        hidePersona: "_3ZJkOzmqed_i-p74uF3hus",
+        compactView: "_3bbRZyUiK-bfc5Qov6xukI",
+        noContextMenu: "_1JE5G7_FNm2SRDEEnOWMVv",
+        gameIsPrivateIcon: "_2gBKQXiTBLjeVVaqvc5QVh",
+        PendingPersona: "_2sxXnGfkPxNgR6Lk1-SmfQ",
+        BackgroundAnimation: "_2hlRK2hm0pHy1YSxwknFCj",
+        "ItemFocusAnim-darkerGrey-nocolor": "_3Ye-Lgym31_-ibnmbFywrn",
+        "ItemFocusAnim-darkerGrey": "_1klcEk0V0JFATe7imIRZ1C",
+        "ItemFocusAnim-darkGreySettings": "_1o29CI_yDNVtgTV1cxDqGZ",
+        "ItemFocusAnim-darkGrey": "_2BtPOA0wSbFULgc-Zh-0_x",
+        "ItemFocusAnim-grey": "_24LF-yODOtVFSuejuQ_xu2",
+        "ItemFocusAnim-translucent-white-10": "uTNXVgYo8JPxZgJyTl9LQ",
+        "ItemFocusAnim-translucent-white-20": "ItJlj151fY2eNJEBeWVOA",
+        "ItemFocusAnimBorder-darkGrey": "_2blFzc6unV1uJG63OhTkyP",
+        "ItemFocusAnim-green": "_3CaU0PXdB2ThLG-Q0foVrK",
+        focusAnimation: "_1EZdMwnQzoxjAOoFpXHuZ_",
+        hoverAnimation: "kfeP_UGfxsZwzWvFD4ytm",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        "duration-app-launch": "800ms",
+        narrowWidth: "500px",
+        PersonaStatusIcon: "KxAI_M9gWx3OnKSshHOs6",
+        MobilePhoneIcon: "_1iRFj5lJrMqMnRb3GZYPSw",
+        SteamDeckIcon: "_2oLqcfqHHKKAK0WfzjXMg_",
+        VRIcon: "_368tz9TSOLGiG2mNMLScMz",
+        BackgroundAnimation: "_3EMAF_7GAyPW8G7OSt8s0z",
+        "ItemFocusAnim-darkerGrey-nocolor": "_3fWOpZpfDmwOCKEdw8xcqf",
+        "ItemFocusAnim-darkerGrey": "_2Tvf1f8cUg1eYlQg027B3W",
+        "ItemFocusAnim-darkGreySettings": "_1tKhhjTYPWAz5_eQe91O1A",
+        "ItemFocusAnim-darkGrey": "_1l7IyrCH5ez4PBO7R4h8RT",
+        "ItemFocusAnim-grey": "_3X7_M9NEYzjKEgQRMQevkQ",
+        "ItemFocusAnim-translucent-white-10": "_3YCxpOEfjLuLbB1hut87fZ",
+        "ItemFocusAnim-translucent-white-20": "_2kvhksXgWA4vxGz5Oy1tV1",
+        "ItemFocusAnimBorder-darkGrey": "_3N1wGZIJ5QySTBWgyBavuM",
+        "ItemFocusAnim-green": "Vgab6fHUHvZ-iWKRJwy8h",
+        focusAnimation: "GvE_FaPqTf1D0HASx1C_0",
+        hoverAnimation: "_88lGefJsUDJUpRFJ3pUq7",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         Main: "_1Zn_5pvuMbqr57ws1eJKe",
       };
     },
@@ -272,340 +350,6 @@
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
-      var _ = {
-        "./af": 30911,
-        "./af.js": 30911,
-        "./ar": 63595,
-        "./ar-dz": 99358,
-        "./ar-dz.js": 99358,
-        "./ar-kw": 46830,
-        "./ar-kw.js": 46830,
-        "./ar-ly": 26067,
-        "./ar-ly.js": 26067,
-        "./ar-ma": 64154,
-        "./ar-ma.js": 64154,
-        "./ar-ps": 90753,
-        "./ar-ps.js": 90753,
-        "./ar-sa": 53616,
-        "./ar-sa.js": 53616,
-        "./ar-tn": 19026,
-        "./ar-tn.js": 19026,
-        "./ar.js": 63595,
-        "./az": 87043,
-        "./az.js": 87043,
-        "./be": 28437,
-        "./be.js": 28437,
-        "./bg": 29843,
-        "./bg.js": 29843,
-        "./bm": 39421,
-        "./bm.js": 39421,
-        "./bn": 41300,
-        "./bn-bd": 54487,
-        "./bn-bd.js": 54487,
-        "./bn.js": 41300,
-        "./bo": 40827,
-        "./bo.js": 40827,
-        "./br": 35120,
-        "./br.js": 35120,
-        "./bs": 41991,
-        "./bs.js": 41991,
-        "./ca": 47504,
-        "./ca.js": 47504,
-        "./cs": 98346,
-        "./cs.js": 98346,
-        "./cv": 17525,
-        "./cv.js": 17525,
-        "./cy": 80872,
-        "./cy.js": 80872,
-        "./da": 48787,
-        "./da.js": 48787,
-        "./de": 30199,
-        "./de-at": 33461,
-        "./de-at.js": 33461,
-        "./de-ch": 97995,
-        "./de-ch.js": 97995,
-        "./de.js": 30199,
-        "./dv": 14682,
-        "./dv.js": 14682,
-        "./el": 52549,
-        "./el.js": 52549,
-        "./en-au": 5706,
-        "./en-au.js": 5706,
-        "./en-ca": 50584,
-        "./en-ca.js": 50584,
-        "./en-gb": 41685,
-        "./en-gb.js": 41685,
-        "./en-ie": 32050,
-        "./en-ie.js": 32050,
-        "./en-il": 35545,
-        "./en-il.js": 35545,
-        "./en-in": 42551,
-        "./en-in.js": 42551,
-        "./en-nz": 10620,
-        "./en-nz.js": 10620,
-        "./en-sg": 16222,
-        "./en-sg.js": 16222,
-        "./eo": 88124,
-        "./eo.js": 88124,
-        "./es": 59784,
-        "./es-do": 30300,
-        "./es-do.js": 30300,
-        "./es-mx": 47292,
-        "./es-mx.js": 47292,
-        "./es-us": 36469,
-        "./es-us.js": 36469,
-        "./es.js": 59784,
-        "./et": 56349,
-        "./et.js": 56349,
-        "./eu": 6782,
-        "./eu.js": 6782,
-        "./fa": 86749,
-        "./fa.js": 86749,
-        "./fi": 52469,
-        "./fi.js": 52469,
-        "./fil": 2989,
-        "./fil.js": 2989,
-        "./fo": 50743,
-        "./fo.js": 50743,
-        "./fr": 34916,
-        "./fr-ca": 96853,
-        "./fr-ca.js": 96853,
-        "./fr-ch": 81566,
-        "./fr-ch.js": 81566,
-        "./fr.js": 34916,
-        "./fy": 82949,
-        "./fy.js": 82949,
-        "./ga": 80932,
-        "./ga.js": 80932,
-        "./gd": 82671,
-        "./gd.js": 82671,
-        "./gl": 95687,
-        "./gl.js": 95687,
-        "./gom-deva": 67330,
-        "./gom-deva.js": 67330,
-        "./gom-latn": 7021,
-        "./gom-latn.js": 7021,
-        "./gu": 78728,
-        "./gu.js": 78728,
-        "./he": 28211,
-        "./he.js": 28211,
-        "./hi": 15487,
-        "./hi.js": 15487,
-        "./hr": 94106,
-        "./hr.js": 94106,
-        "./hu": 14147,
-        "./hu.js": 14147,
-        "./hy-am": 23862,
-        "./hy-am.js": 23862,
-        "./id": 78825,
-        "./id.js": 78825,
-        "./is": 57612,
-        "./is.js": 57612,
-        "./it": 9497,
-        "./it-ch": 75653,
-        "./it-ch.js": 75653,
-        "./it.js": 9497,
-        "./ja": 2209,
-        "./ja.js": 2209,
-        "./jv": 85668,
-        "./jv.js": 85668,
-        "./ka": 6904,
-        "./ka.js": 6904,
-        "./kk": 2138,
-        "./kk.js": 2138,
-        "./km": 81660,
-        "./km.js": 81660,
-        "./kn": 88613,
-        "./kn.js": 88613,
-        "./ko": 57894,
-        "./ko.js": 57894,
-        "./ku": 28468,
-        "./ku-kmr": 57123,
-        "./ku-kmr.js": 57123,
-        "./ku.js": 28468,
-        "./ky": 91808,
-        "./ky.js": 91808,
-        "./lb": 47070,
-        "./lb.js": 47070,
-        "./lo": 56505,
-        "./lo.js": 56505,
-        "./lt": 53656,
-        "./lt.js": 53656,
-        "./lv": 83746,
-        "./lv.js": 83746,
-        "./me": 42486,
-        "./me.js": 42486,
-        "./mi": 82,
-        "./mi.js": 82,
-        "./mk": 14792,
-        "./mk.js": 14792,
-        "./ml": 10845,
-        "./ml.js": 10845,
-        "./mn": 46939,
-        "./mn.js": 46939,
-        "./mr": 5575,
-        "./mr.js": 5575,
-        "./ms": 81424,
-        "./ms-my": 43179,
-        "./ms-my.js": 43179,
-        "./ms.js": 81424,
-        "./mt": 30341,
-        "./mt.js": 30341,
-        "./my": 72834,
-        "./my.js": 72834,
-        "./nb": 75292,
-        "./nb.js": 75292,
-        "./ne": 23753,
-        "./ne.js": 23753,
-        "./nl": 53922,
-        "./nl-be": 77542,
-        "./nl-be.js": 77542,
-        "./nl.js": 53922,
-        "./nn": 81304,
-        "./nn.js": 81304,
-        "./oc-lnc": 41156,
-        "./oc-lnc.js": 41156,
-        "./pa-in": 17851,
-        "./pa-in.js": 17851,
-        "./pl": 66636,
-        "./pl.js": 66636,
-        "./pt": 13252,
-        "./pt-br": 95189,
-        "./pt-br.js": 95189,
-        "./pt.js": 13252,
-        "./ro": 5451,
-        "./ro.js": 5451,
-        "./ru": 981,
-        "./ru.js": 981,
-        "./sd": 49139,
-        "./sd.js": 49139,
-        "./se": 24684,
-        "./se.js": 24684,
-        "./si": 85448,
-        "./si.js": 85448,
-        "./sk": 61682,
-        "./sk.js": 61682,
-        "./sl": 17595,
-        "./sl.js": 17595,
-        "./sq": 61360,
-        "./sq.js": 61360,
-        "./sr": 45897,
-        "./sr-cyrl": 80616,
-        "./sr-cyrl.js": 80616,
-        "./sr.js": 45897,
-        "./ss": 15034,
-        "./ss.js": 15034,
-        "./sv": 78213,
-        "./sv.js": 78213,
-        "./sw": 47494,
-        "./sw.js": 47494,
-        "./ta": 48387,
-        "./ta.js": 48387,
-        "./te": 90951,
-        "./te.js": 90951,
-        "./tet": 83675,
-        "./tet.js": 83675,
-        "./tg": 99753,
-        "./tg.js": 99753,
-        "./th": 59844,
-        "./th.js": 59844,
-        "./tk": 84429,
-        "./tk.js": 84429,
-        "./tl-ph": 54645,
-        "./tl-ph.js": 54645,
-        "./tlh": 56946,
-        "./tlh.js": 56946,
-        "./tr": 8630,
-        "./tr.js": 8630,
-        "./tzl": 79480,
-        "./tzl.js": 79480,
-        "./tzm": 13839,
-        "./tzm-latn": 36313,
-        "./tzm-latn.js": 36313,
-        "./tzm.js": 13839,
-        "./ug-cn": 26648,
-        "./ug-cn.js": 26648,
-        "./uk": 24192,
-        "./uk.js": 24192,
-        "./ur": 8335,
-        "./ur.js": 8335,
-        "./uz": 21351,
-        "./uz-latn": 60785,
-        "./uz-latn.js": 60785,
-        "./uz.js": 21351,
-        "./vi": 9541,
-        "./vi.js": 9541,
-        "./x-pseudo": 309,
-        "./x-pseudo.js": 309,
-        "./yo": 21512,
-        "./yo.js": 21512,
-        "./zh-cn": 98562,
-        "./zh-cn.js": 98562,
-        "./zh-hk": 7374,
-        "./zh-hk.js": 7374,
-        "./zh-mo": 87107,
-        "./zh-mo.js": 87107,
-        "./zh-tw": 34518,
-        "./zh-tw.js": 34518,
-      };
-      function _(_) {
-        var _ = _(_);
-        return __webpack_require__(_);
-      }
-      function _(_) {
-        if (!__webpack_require__._(_, _)) {
-          var _ = new Error("Cannot find module '" + _ + "'");
-          throw ((_.code = "MODULE_NOT_FOUND"), _);
-        }
-        return _[_];
-      }
-      (_.keys = function () {
-        return Object.keys(_);
-      }),
-        (_.resolve = _),
-        (module.exports = _),
-        (_._ = 61738);
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_, _) {
-        return new (_())(
-          async (_) => {
-            const _ = [..._],
-              _ = await _.xtC.GetPlayerLinkDetails(_, {
-                steamids: _,
-              }),
-              _ = new Map();
-            return (
-              _.Body()
-                .accounts()
-                .forEach((_) => {
-                  const _ = _.toObject();
-                  _.set(_.public_data.steamid, _);
-                }),
-              __webpack_require__.map((_) => _.get(_) ?? null)
-            );
-          },
-          {
-            maxBatchSize: 100,
-            cache: !1,
-            ..._,
-          },
-        );
-      }
-      function _(_) {
-        return (0, _._)("PlayerLinkDetails", () => _(_));
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
@@ -631,6 +375,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
@@ -652,6 +397,7 @@
             nSummaryMaxLength: _,
           } = _,
           _ = (0, _._)(_.appid),
+          _ = (0, _._)(),
           _ = _ || (0, _.sfN)(_._.LANGUAGE),
           _ =
             (0, _._)(
@@ -679,8 +425,7 @@
           return (0, _.jsx)("div", {
             className: _().OtherEvents_EventCtn,
           });
-        const _ = _._.NOW,
-          _ = _ ? _.GetStartTimeAndDateUnixSeconds() : 0;
+        const _ = _ ? _.GetStartTimeAndDateUnixSeconds() : 0;
         let _ = _;
         return (
           _ && (_.length > _ || _.length > _) && (_ = void 0),
@@ -878,221 +623,350 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid");
-      function _(_) {
-        if (_) {
-          if ("appid" in _) return "app";
-          if ("bundleid" in _) return "bundle";
-          if ("packageid" in _) return "sub";
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      let _ = class extends _.Component {
+        static get hoverClass() {
+          return _().hoverParent;
         }
-      }
-      function _(_) {
-        const {
-            _: _,
-            hoverClassName: _,
-            fnGetIDOverride: _,
-            fnHoverState: _,
-            disableScreenshots: _,
-            children: _,
-          } = _,
-          _ = _.useRef(null),
-          _ = _.useCallback(
-            (_) => {
-              const _ = _(_);
-              _ &&
-                (_ && _(!0),
-                window.GameHover &&
-                  (_.current &&
-                    _ &&
-                    (_.current.dataset.hoverDisableScreenshots = "true"),
-                  window.GameHover(_ ? _() : _.current, _, "global_hover", {
-                    type: _,
-                    _: (0, _._)(_)._,
-                    _: 1,
-                  })));
-            },
-            [_, _, _, _],
-          ),
-          _ = _.useCallback(
-            (_) => {
-              _(_) &&
-                (_ && _.relatedTarget && _(!1),
-                window.HideGameHover &&
-                  window.HideGameHover(_ ? _() : _.current, _, "global_hover"));
-            },
-            [_, _, _],
-          );
-        return (0, _.jsx)("div", {
-          ref: _,
-          className: _,
-          onMouseEnter: _,
-          onMouseLeave: _,
-          onFocus: _,
-          onBlur: _,
-          children: _,
-        });
-      }
-      function _(_) {
-        const {
-            _: _,
-            strExtraParams: _,
-            fnOnClickOverride: _,
-            strOverrideURL: _,
-          } = _,
-          _ = (0, _._)(),
-          _ = (0, _._)(),
-          _ = (0, _._)(
-            _ ||
-              (_ && "creatorid" in _
-                ? (0, _._)(
-                    `${_._.STORE_BASE_URL}curator/${((0, _._))(_)._}${_ ? `?${_}` : ""}`,
-                    _,
-                    _,
-                  )
-                : (0, _._)(
-                    `${_._.STORE_BASE_URL}${_(_)}/${((0, _._))(_)._}${_ ? `?${_}` : ""}`,
-                    _,
-                    _,
-                  )),
-          );
-        return (0, _.jsx)(_, {
-          ..._,
-          children: (0, _.jsx)(_._, {
-            className: _.className,
-            href: _ ? void 0 : _,
-            target: _._.IN_CLIENT || _ ? void 0 : "_blank",
-            rel: "noopener noreferrer",
-            onClick: _,
-            children: _.children,
-          }),
-        });
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      function _(_) {
-        return "[object Object]" === Object.prototype.toString.call(_);
-      }
-      function _(..._) {
-        return JSON.stringify(_, (_, _) => {
-          if (
-            (function (_) {
-              if (!_(_)) return !1;
-              const _ = _.constructor;
-              if (void 0 === _) return !0;
-              const _ = _.prototype;
-              return (
-                !!_(_) &&
-                !!Object.prototype.hasOwnProperty.call(_, "isPrototypeOf")
-              );
-            })(_)
-          ) {
-            const _ = {};
-            return (
-              Object.keys(_)
-                .sort()
-                .forEach((_) => {
-                  _[_] = _[_];
+        render() {
+          const {
+            persona: _,
+            animating: _,
+            className: _,
+            size: _,
+            dim: _,
+            ..._
+          } = this.props;
+          let _ = "";
+          return (
+            "medium" == _ ? (_ = _().Medium) : "large" == _ && (_ = _().Large),
+            (0, _.jsxs)("div", {
+              className: (0, _._)(
+                _().SnoozeContainer,
+                _.online_state,
+                _,
+                _ && _().animating,
+                _,
+                _ && _().Dim,
+              ),
+              ..._,
+              children: [
+                (0, _.jsx)("div", {
+                  "data-text": "Z",
+                  className: (0, _._)(_().SnoozeZ, _()._),
+                  children: "Z",
                 }),
-              _
-            );
-          }
-          return _;
-        });
-      }
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid");
-      const _ = (0, _.createContext)({
-        instances: {},
-        factories: {},
-      });
-      function _(_, _) {
-        const _ = (0, _.useContext)(_),
-          _ = "string" == typeof _ ? _ : _(..._);
-        let _ = _;
-        for (; _; ) {
-          if (_ in _.instances) return _.instances[_];
-          if (_ in _.factories) break;
-          _ = _.parent;
+                (0, _.jsx)("div", {
+                  "data-text": "Z",
+                  className: (0, _._)(_().SnoozeZ, _()._),
+                  children: "Z",
+                }),
+                (0, _.jsx)("div", {
+                  "data-text": "Z",
+                  className: (0, _._)(_().SnoozeZ, _()._),
+                  children: "Z",
+                }),
+              ],
+            })
+          );
         }
-        const _ = (_?.factories[_] ?? _)();
-        return ((_ ?? _).instances[_] = _), _;
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
+      };
+      _ = (0, _._)([_._], _);
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      const _ = (0, _._)((_) => {
+        const { persona: _, className: _, ..._ } = _;
+        if (!_) return null;
+        if (!_.is_online) return null;
+        const _ = _.HasStateFlag(_._),
+          _ = _.HasStateFlag(_._),
+          _ = _.m_eGamingDeviceType == _.LS$,
+          _ = _.m_eGamingDeviceType == _.ppM,
+          _ = !_ && !_ && !_ && _.HasStateFlag(_._);
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            _ &&
+              (0, _.jsx)("div", {
+                className: (0, _._)(
+                  _,
+                  _().PersonaStatusIcon,
+                  _().MobilePhoneIcon,
+                  (0, _._)(_),
+                ),
+                title: (0, _._)("#Platform_Hint_Mobile"),
+                ..._,
+                children: (0, _.jsx)(_._, {}),
+              }),
+            _ &&
+              (0, _.jsx)("div", {
+                className: (0, _._)(
+                  _,
+                  _().PersonaStatusIcon,
+                  _().VRIcon,
+                  (0, _._)(_),
+                ),
+                title: (0, _._)("#Platform_Hint_VR"),
+                ..._,
+                children: (0, _.jsx)(_.MUh, {}),
+              }),
+            _ &&
+              (0, _.jsx)("div", {
+                className: (0, _._)(
+                  _,
+                  _().PersonaStatusIcon,
+                  _().BigPictureIcon,
+                  (0, _._)(_),
+                ),
+                title: (0, _._)("#Platform_Hint_BigPicture"),
+                ..._,
+                children: (0, _.jsx)(_.bPr, {}),
+              }),
+            _ &&
+              (0, _.jsx)("div", {
+                className: (0, _._)(
+                  _,
+                  _().PersonaStatusIcon,
+                  _().SteamDeckIcon,
+                  (0, _._)(_),
+                ),
+                title: (0, _._)("#Platform_Hint_SteamDeck"),
+                ..._,
+                children: (0, _.jsx)(_.DQe, {}),
+              }),
+            _ &&
+              (0, _.jsx)("div", {
+                className: (0, _._)(
+                  _,
+                  _().PersonaStatusIcon,
+                  _().SteamDeckIcon,
+                  (0, _._)(_),
+                ),
+                title: (0, _._)("#Platform_Hint_LegionGoS"),
+                ..._,
+                children: (0, _.jsx)(_.DQe, {}),
+              }),
+          ],
+        });
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
         _ = __webpack_require__("chunkid");
-      const _ = new (class {
-        bIncludeFeaturedAsGameSource = !0;
-        get nOverrideDateNow() {
-          return (0, _._)();
-        }
-        set nOverrideDateNow(_) {
-          (0, _._)(_);
-        }
-        get bRequireAllEventsLoadedInTimeBlock() {
-          return !1;
-        }
-        get bIncludeCurators() {
-          return !0;
-        }
-        GetTimeNowWithOverride() {
-          return (0, _._)();
-        }
-        GetTimeNowWithOverrideAsDate() {
-          return (0, _._)();
-        }
-        BHasTimeOverride() {
-          return Boolean((0, _._)());
-        }
-        ParseDevOverrides(_) {
-          if (!_ || 0 == _.length) return;
-          const _ = new URLSearchParams("?" == _[0] ? _.substring(1) : _);
-          if (
-            _.has("t") &&
-            ("dev" == _._.WEB_UNIVERSE || "beta" == _._.WEB_UNIVERSE)
-          ) {
-            const _ = _.get("t");
-            let _ = /^\d+$/.test(_ ?? "")
-              ? _().unix(Number.parseInt(_ ?? "0"))
-              : _()(_);
-            (this.nOverrideDateNow = Math.floor(__webpack_require__.unix())),
-              console.log(
-                "CEventCalendarDevFeatures overriding partner event time: " +
-                  this.nOverrideDateNow +
-                  " " +
-                  __webpack_require__.format(),
-              );
-          }
-        }
-      })();
-      (0, _._)("g_EventCalendarDevFeatures", _);
-      const _ = new Date(),
-        _ = Math.floor(_.getTime() / 1e3);
-      function _() {
-        return _.nOverrideDateNow ?? _;
+      function _(_) {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)("span", {
+              className: _().partyBeaconJoin,
+              children: (0, _._)("#User_WantsToPlay"),
+            }),
+            " – ",
+            _.persona.GetCurrentGameName(),
+          ],
+        });
       }
-      function _() {
-        return _.useMemo(() => _(), []);
-      }
-      function _() {
-        return _.useMemo(() => _.GetTimeNowWithOverrideAsDate(), []);
-      }
+      let _ = class extends _.Component {
+        render() {
+          const {
+            className: _,
+            onContextMenu: _,
+            persona: _,
+            eFriendRelationship: _,
+            bIsSelf: _,
+            bParenthesizeNicknames: _,
+            strNickname: _,
+            bCompactView: _,
+            bHideGameName: _,
+            bHideEnhancedRichPresenceLabel: _,
+            bHideSnooze: _,
+            bHideStatus: _,
+            renderStatus: _,
+            renderRichPresence: _,
+            bHidePersona: _,
+            bDNDSet: _,
+            bHasPartyBeacon: _,
+            bHasGamePrivacy: _,
+            bNoMask: _,
+            bEllipsisName: _,
+            bDropPadding: _,
+            ..._
+          } = this.props;
+          let _ = null,
+            _ = null,
+            _ = null,
+            _ = [
+              _,
+              _().personaNameAndStatusLabel,
+              (0, _._)(_),
+              _ ? _().compactView : void 0,
+              _ ? _().NoMask : void 0,
+            ];
+          _ || _.has_public_party_beacon
+            ? (_ = (0, _.jsx)(_, {
+                persona: _,
+              }))
+            : (0, _.aPS)(_)
+              ? ((_ = (0, _._)("#PersonaStateBlocked")), _.push(_().blocked))
+              : _.is_ingame
+                ? ((_ =
+                    !_.is_in_nonsteam_game || _ || (0, _.S$u)(_)
+                      ? __webpack_require__.GetCurrentGameName()
+                      : (0, _._)("#PersonaStateInNonSteamGame")),
+                  _ || _
+                    ? _ &&
+                      _.is_awayOrSnooze &&
+                      (_ = (0, _._)("#PersonaStateAway"))
+                    : (_ = __webpack_require__.GetCurrentGameRichPresence()))
+                : _.m_broadcastAccountId &&
+                  (_ = (0, _._)("#PersonaStateWatchingBroadcast")),
+            _ || (_ = __webpack_require__.GetLocalizedOnlineStatus()),
+            _ && (_ = _());
+          let _ = !_ && !_;
+          !1 === _ && (_ = !0),
+            _.is_awayOrSnooze &&
+              _ &&
+              (_ = (0, _.jsx)(_, {
+                persona: _,
+              }));
+          let _ = (0, _.jsx)(_.Fragment, {});
+          _
+            ? (_ = (0, _.jsx)("div", {
+                className: "ContextMenuButton",
+                onClick: _,
+                children: (0, _.jsx)(_.GB9, {}),
+              }))
+            : _.push(_().noContextMenu),
+            _ && _.push(_().hidePersona),
+            _ && (_ = _()),
+            (!_ && _) || _.push(_().twoLine);
+          const _ = !_.is_ingame && !_,
+            _ = !_ && _,
+            _ = _ && (!_ || !_),
+            _ = (0, _.IDH)(_._.LAUNCHER_TYPE);
+          let _ = _ && !_,
+            _ = _ ? _ : _.m_strPlayerName,
+            _ = !_ && (_ || _) && _;
+          return (0, _.jsxs)("div", {
+            ..._,
+            className: (0, _._)(..._),
+            onContextMenu: _,
+            children: [
+              (0, _.jsxs)("div", {
+                className: (0, _._)(
+                  _().statusAndName,
+                  _ ? _().threeLines : void 0,
+                ),
+                children: [
+                  (0, _.jsxs)("div", {
+                    className: (0, _._)(
+                      _().playerName,
+                      _ ? _().EllipsisName : void 0,
+                    ),
+                    children: [
+                      _ || " ",
+                      _ &&
+                        _ &&
+                        (0, _.jsxs)("span", {
+                          className: _().playerNickname,
+                          children: ["(", _, ")"],
+                        }),
+                    ],
+                  }),
+                  _ &&
+                    (0, _.jsx)("div", {
+                      className: _().DNDContainer,
+                      title: (0, _._)("#User_ToggleDoNotDisturb"),
+                      children: (0, _.jsx)(_.Aj0, {}),
+                    }),
+                  _ &&
+                    (0, _.jsx)("span", {
+                      className: _().playerNicknameBracket,
+                      title: (0, _._)("#isNickname"),
+                      children: " *",
+                    }),
+                  (0, _.jsx)(_, {
+                    persona: _,
+                  }),
+                  _,
+                  (_.m_bPlayerNamePending || _.m_bAvatarPending) &&
+                    _ &&
+                    (0, _.jsx)("div", {
+                      className: _().PendingPersona,
+                      title: (0, _._)("#SteamChina_PendingPersonaName"),
+                      children: (0, _.jsx)(_.zD7, {}),
+                    }),
+                  _,
+                ],
+              }),
+              !_ &&
+                (0, _.jsxs)("div", {
+                  className: _().richPresenceContainer,
+                  children: [
+                    (_ || _) &&
+                      (0, _.jsxs)("div", {
+                        className: (0, _._)(
+                          _().gameName,
+                          _ ? _().threeLines : void 0,
+                          _().richPresenceLabel,
+                          _ && _().dropPadding,
+                          "no-drag",
+                        ),
+                        children: [
+                          _ &&
+                            (0, _.jsx)("div", {
+                              className: _().gameIsPrivateIcon,
+                              title: (0, _._)("#User_GameInfoHidden"),
+                              children: (0, _.jsx)(_.jZl, {}),
+                            }),
+                          _,
+                        ],
+                      }),
+                    _ &&
+                      (0, _.jsxs)("div", {
+                        className: (0, _._)(
+                          _().richPresenceLabel,
+                          _ && _().dropPadding,
+                          "no-drag",
+                        ),
+                        children: [_, " "],
+                      }),
+                  ],
+                }),
+            ],
+          });
+        }
+      };
+      _ = (0, _._)([_._], _);
+      const _ = (0, _._)((_) => {
+        const {
+          persona: _,
+          bParenthesizeNicknames: _,
+          strNickname: _,
+          bIgnorePersonaStatus: _,
+          bDisableColoring: _,
+          className: _,
+          ..._
+        } = _;
+        let _ = _ && !_ ? _ : _.m_strPlayerName;
+        return (0, _.jsx)("span", {
+          ..._,
+          className: (0, _._)(_, _ && _().DisableColoring, !_ && (0, _._)(_)),
+          children: (0, _.jsxs)("span", {
+            className: _().playerName,
+            children: [
+              _ || " ",
+              _ &&
+                _ &&
+                (0, _.jsxs)("span", {
+                  className: _().playerNickname,
+                  children: ["(", _, ")"],
+                }),
+            ],
+          }),
+        });
+      });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -1135,77 +1009,6 @@
           );
         }
       }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const _ = (0, _._)(),
-          _ = _.useContext(_);
-        return (0, _._)(_(_, _, _));
-      }
-      function _(_) {
-        const _ = (0, _._)(),
-          _ = _.useContext(_);
-        return (0, _._)({
-          queries: _.map((_) => _(_, _, _)),
-        });
-      }
-      const _ = _.createContext({
-        loadPersonaState: async (_, _) => {
-          if (null == _) return null;
-          const _ = await (function (_) {
-            return (_ ??= (0, _._)(_));
-          })(_).load(_._.InitFromAccountID(_).ConvertTo64BitString());
-          return (function (_, _) {
-            let _ = new _._(_);
-            const _ = _?.public_data,
-              _ = _?.private_data;
-            (_.m_bInitialized = !!_),
-              (_.m_ePersonaState = _?.persona_state ?? _.cU3),
-              (_.m_strAvatarHash = _?.sha_digest_avatar
-                ? (0, _._)(_.sha_digest_avatar)
-                : _._),
-              (_.m_strPlayerName = _?.persona_name ?? _.ConvertTo64BitString()),
-              (_.m_strAccountName = _?.account_name),
-              _?.persona_state_flags &&
-                (_.m_unPersonaStateFlags = _?.persona_state_flags);
-            _?.game_id && (_.m_gameid = _?.game_id);
-            _?.game_server_ip_address &&
-              (_.m_unGameServerIP = _?.game_server_ip_address);
-            _?.lobby_steam_id && (_.m_game_lobby_id = _?.lobby_steam_id);
-            _?.game_extra_info && (_.m_strGameExtraInfo = _?.game_extra_info);
-            _?.profile_url && (_.m_strProfileURL = _.profile_url);
-            return _;
-          })(_._.InitFromAccountID(_), _);
-        },
-      });
-      function _() {
-        return _.useContext(_);
-      }
-      function _(_, _, _) {
-        const _ = "string" == typeof _ ? new _._(_).GetAccountID() : _;
-        return {
-          queryKey: ["PlayerSummary", _],
-          queryFn: () => _.loadPersonaState(_, _),
-          enabled: !!_,
-        };
-      }
-      let _;
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -1276,7 +1079,6 @@
         _ = __webpack_require__("chunkid");
       const _ = _.lazy(() =>
         Promise.all([
-          __webpack_require__._("chunkid"),
           __webpack_require__._("chunkid"),
           __webpack_require__._("chunkid"),
           __webpack_require__._("chunkid"),
@@ -2161,96 +1963,6 @@
       (0, _._)([_._], _.prototype, "escFunction", null),
         (0, _._)([_._], _.prototype, "OnBackgroundClick", null),
         (_ = (0, _._)([_._], _));
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        return (0, _.jsx)(_._, {
-          onEscKeypress: _.closeModal,
-          bDisableBackgroundDismiss: !0,
-          children: (0, _.jsx)(_, {
-            redirectURL: _.redirectURL,
-            guestOption: _.guestOption,
-          }),
-        });
-      }
-      function _(_) {
-        const { redirectURL: _ = window.location.href } = _;
-        return (0, _.jsx)(_._, {
-          active: !0,
-          children: (0, _.jsx)(_, {
-            redirectURL: _,
-          }),
-        });
-      }
-      function _() {
-        (0, _._)(
-          (0, _.jsx)(_, {
-            ownerWin: window,
-            redirectURL: window.location.href,
-          }),
-          window,
-          {
-            strTitle: (0, _._)("#Login_SignInTitle"),
-          },
-        );
-      }
-      function _(_, _) {
-        (0, _._)(
-          (0, _.jsx)(_, {
-            ownerWin: window,
-            redirectURL: _,
-            guestOption: _,
-          }),
-          window,
-          {
-            strTitle: (0, _._)("#Login_SignInTitle"),
-          },
-        );
-      }
-      function _(_) {
-        const { redirectURL: _, guestOption: _ } = _,
-          [_] = (0, _.useState)(
-            new _._(_._.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
-          ),
-          [_, _] = (0, _.useState)(!1);
-        return (0, _.jsx)("div", {
-          children: _
-            ? (0, _.jsx)(_._, {})
-            : (0, _.jsx)(_._, {
-                autoFocus: !0,
-                transport: _,
-                platform: _._._,
-                onComplete: (_) => {
-                  _ == _._.k_PrimaryDomainFail
-                    ? _(!0)
-                    : window.location.assign(_);
-                },
-                redirectUrl: _,
-                theme: "modal",
-                children:
-                  _ &&
-                  (0, _.jsx)(_._, {
-                    redirectURL: _,
-                  }),
-              }),
-        });
-      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

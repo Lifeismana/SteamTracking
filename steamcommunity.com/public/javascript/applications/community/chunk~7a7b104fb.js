@@ -173,9 +173,9 @@
         z = r(52038),
         R = r(61859),
         T = r(73745),
-        I = r(78327),
-        j = r(63508),
-        x = r.n(j),
+        j = r(78327),
+        I = r(63508),
+        x = r.n(I),
         F = r(29268),
         O = r(4299),
         W = r(32754);
@@ -196,7 +196,7 @@
                 bioString: i.bio,
                 children: (0, s.jsx)("a", {
                   className: (0, z.A)(x().MessageName, x().MessagePresenter),
-                  href: I.TS.COMMUNITY_BASE_URL + "profiles/" + r.steamid,
+                  href: j.TS.COMMUNITY_BASE_URL + "profiles/" + r.steamid,
                   target: "_blank",
                   rel: "noopener noreferrer",
                   children: r.persona_name,
@@ -212,7 +212,7 @@
               (0, s.jsx)("span", {
                 children: (0, s.jsx)("a", {
                   className: (0, z.A)(x().MessageName, e),
-                  href: I.TS.COMMUNITY_BASE_URL + "profiles/" + r.steamid,
+                  href: j.TS.COMMUNITY_BASE_URL + "profiles/" + r.steamid,
                   "data-miniprofile": "s" + r.steamid,
                   target: "_blank",
                   rel: "noopener noreferrer",
@@ -336,7 +336,7 @@
               this.m_chat.GetUserSteamID(),
             );
           if (
-            ((I.iA && I.iA.is_support) || i || a
+            ((j.iA && j.iA.is_support) || i || a
               ? r.push(
                   (0, s.jsx)(
                     g.kt,
@@ -456,7 +456,7 @@
                       "muteuser",
                     ),
                   ),
-            ((I.iA && I.iA.is_support) ||
+            ((j.iA && j.iA.is_support) ||
               this.m_chat.IsUserBroadcaster(this.m_chat.GetUserSteamID())) &&
               t.steamid)
           ) {
@@ -631,11 +631,11 @@
       function V(e) {
         const { oChat: t, emoticonStore: r, bPartnerMemberOnlyChat: i } = e;
         return !i ||
-          ((null === I.iA || void 0 === I.iA ? void 0 : I.iA.logged_in) &&
-            (null === I.iA || void 0 === I.iA
+          ((null === j.iA || void 0 === j.iA ? void 0 : j.iA.logged_in) &&
+            (null === j.iA || void 0 === j.iA
               ? void 0
-              : I.iA.is_partner_member))
-          ? (null === I.iA || void 0 === I.iA ? void 0 : I.iA.logged_in)
+              : j.iA.is_partner_member))
+          ? (null === j.iA || void 0 === j.iA ? void 0 : j.iA.logged_in)
             ? (0, s.jsx)(A, { oChat: t, emoticonStore: r })
             : null
           : (0, s.jsx)(L, {});
@@ -776,7 +776,7 @@
               className: x().LogInPrompt,
               children: (0, R.we)("#Broadcast_PartnerChat_Login"),
             }),
-            !I.iA.logged_in &&
+            !j.iA.logged_in &&
               (0, s.jsx)(_.$n, {
                 onClick: S.vg,
                 className: (0, z.A)(x().SignInButton),
@@ -794,7 +794,7 @@
         a = r(90626),
         n = r(43104),
         o = r(54728),
-        l = r(40414),
+        l = r(17267),
         c = r(94057),
         d = r(73022),
         m = r(51272),
@@ -1212,14 +1212,14 @@
         });
       const R = z;
       var T = r(63741),
-        I = r(52038);
-      const j = 500;
+        j = r(52038);
+      const I = 500;
       class x extends o.Component {
         render() {
           let {
             keyExtractor: e,
             style: t,
-            duration: r = j,
+            duration: r = I,
             className: i,
             children: a,
             childRef: n,
@@ -1228,7 +1228,7 @@
           const l = { ...(t || {}), transitionDuration: r / 1e3 + "s" };
           return (0, s.jsx)(R, {
             ...o,
-            className: (0, I.A)("crossfade", i),
+            className: (0, j.A)("crossfade", i),
             children: (0, s.jsx)(
               T.A,
               {
@@ -1611,11 +1611,14 @@
       class ee extends o.Component {
         constructor(e) {
           super(e),
+            (this.m_elClickListener = null),
+            (this.m_elSettingsPanel = null),
             (this.m_elSubtitlesButton = o.createRef()),
             (this.m_elSubtitlesPanel = o.createRef()),
             (this.state = { bSettingsOpen: !1, bSubtitlesOpen: !1 });
         }
         OnVideoControlClick(e) {
+          var t;
           this.setState({ bSettingsOpen: !this.state.bSettingsOpen }),
             (this.m_SettingsButtonPos = [
               this.m_elSettingsButton.offsetLeft,
@@ -1623,32 +1626,32 @@
             ]),
             (this.m_elClickListener =
               e.currentTarget.ownerDocument.defaultView),
-            this.m_elClickListener.addEventListener(
-              "mouseup",
-              this.OnMouseUp,
-              !0,
-            );
+            null === (t = this.m_elClickListener) ||
+              void 0 === t ||
+              t.addEventListener("mouseup", this.OnMouseUp, !0);
         }
         OnSubtitlesClick(e) {
+          var t, r, i;
           this.setState({ bSubtitlesOpen: !this.state.bSubtitlesOpen }),
             (this.m_SubtitlesButtonPos = [
-              this.m_elSubtitlesButton.current.offsetLeft,
-              this.m_elSubtitlesButton.current.offsetTop,
+              null === (t = this.m_elSubtitlesButton.current) || void 0 === t
+                ? void 0
+                : t.offsetLeft,
+              null === (r = this.m_elSubtitlesButton.current) || void 0 === r
+                ? void 0
+                : r.offsetTop,
             ]),
             (this.m_elClickListener =
               e.currentTarget.ownerDocument.defaultView),
-            this.m_elClickListener.addEventListener(
-              "mouseup",
-              this.OnMouseUp,
-              !0,
-            );
+            null === (i = this.m_elClickListener) ||
+              void 0 === i ||
+              i.addEventListener("mouseup", this.OnMouseUp, !0);
         }
         OnMouseUp(e) {
-          this.m_elClickListener.removeEventListener(
-            "mouseup",
-            this.OnMouseUp,
-            !0,
-          ),
+          var t;
+          null === (t = this.m_elClickListener) ||
+            void 0 === t ||
+            t.removeEventListener("mouseup", this.OnMouseUp, !0),
             (0, N.id)(this.m_elSettingsPanel, e.target) ||
               this.setState({ bSettingsOpen: !1 }),
             (0, N.id)(this.m_elSubtitlesPanel.current, e.target) ||
@@ -1669,7 +1672,7 @@
             t = !1;
           const { video: r, actions: i } = this.props;
           let a,
-            n,
+            n = [],
             o = 0,
             l = (0, s.jsx)(
               "div",
@@ -1912,18 +1915,17 @@
             (0, a.Gn)(this);
         }
         OnMouseDown(e) {
-          let t = e.currentTarget;
-          (this.m_elSlider = t),
+          var t, r;
+          let i = e.currentTarget;
+          (this.m_elSlider = i),
             (this.m_nVolumeStartOfDrag = this.props.video.GetVolume()),
-            this.SetVolumeWithCoord(t, e.clientX),
-            t.ownerDocument.defaultView.addEventListener(
-              "mousemove",
-              this.OnMouseMove,
-            ),
-            t.ownerDocument.defaultView.addEventListener(
-              "mouseup",
-              this.OnMouseUp,
-            ),
+            this.SetVolumeWithCoord(i, e.clientX),
+            null === (t = i.ownerDocument.defaultView) ||
+              void 0 === t ||
+              t.addEventListener("mousemove", this.OnMouseMove),
+            null === (r = i.ownerDocument.defaultView) ||
+              void 0 === r ||
+              r.addEventListener("mouseup", this.OnMouseUp),
             this.props.onDrag(!0);
         }
         OnMouseMove(e) {
@@ -1931,18 +1933,17 @@
             this.SetVolumeWithCoord(this.m_elSlider, e.clientX);
         }
         OnMouseUp(e) {
+          var t, r;
           if (!this.m_elSlider) return;
           this.SetVolumeWithCoord(this.m_elSlider, e.clientX);
-          let t = this.props.video;
-          t.IsMuted() && t.SetVolume(this.m_nVolumeStartOfDrag),
-            this.m_elSlider.ownerDocument.defaultView.removeEventListener(
-              "mousemove",
-              this.OnMouseMove,
-            ),
-            this.m_elSlider.ownerDocument.defaultView.removeEventListener(
-              "mouseup",
-              this.OnMouseUp,
-            ),
+          let i = this.props.video;
+          i.IsMuted() && i.SetVolume(this.m_nVolumeStartOfDrag),
+            null === (t = this.m_elSlider.ownerDocument.defaultView) ||
+              void 0 === t ||
+              t.removeEventListener("mousemove", this.OnMouseMove),
+            null === (r = this.m_elSlider.ownerDocument.defaultView) ||
+              void 0 === r ||
+              r.removeEventListener("mouseup", this.OnMouseUp),
             (this.m_nVolumeStartOfDrag = 0),
             (this.m_elSlider = null),
             this.props.onDrag(!1);
@@ -2032,23 +2033,22 @@
               !this.state.video.IsPaused() &&
               this.m_schUnmountControls.Schedule(2e3, this.UmountControls),
             this.props.steamIDBroadcast !== e.steamIDBroadcast &&
-              this.BindVideoRef(this.m_elVideo),
-            !this.props.nAppIDVOD ||
-              (void 0 !== t.strInitialCapsuleImageUrl &&
-                e.nAppIDVOD == this.props.nAppIDVOD) ||
-              u.A.Get()
-                .QueueAppRequest(this.props.nAppIDVOD, {
-                  include_assets: !0,
-                  include_trailers: !0,
-                })
-                .then(() => {
-                  const e = u.A.Get().GetApp(this.props.nAppIDVOD),
-                    t =
-                      (null == e
-                        ? void 0
-                        : e.GetAssets().GetMainCapsuleURL()) || "";
-                  this.setState({ strInitialCapsuleImageUrl: t });
-                });
+              this.BindVideoRef(this.m_elVideo);
+          const r = this.props.nAppIDVOD;
+          !r ||
+            (void 0 !== t.strInitialCapsuleImageUrl && e.nAppIDVOD == r) ||
+            u.A.Get()
+              .QueueAppRequest(r, { include_assets: !0, include_trailers: !0 })
+              .then(() => {
+                var e;
+                const t = u.A.Get().GetApp(r),
+                  i =
+                    (null === (e = null == t ? void 0 : t.GetAssets()) ||
+                    void 0 === e
+                      ? void 0
+                      : e.GetMainCapsuleURL()) || "";
+                this.setState({ strInitialCapsuleImageUrl: i });
+              });
         }
         componentWillUnmount() {
           this.m_listeners.Unregister(),
@@ -2083,7 +2083,7 @@
         }
         BindVideoRef(e) {
           var t, r;
-          let i;
+          let i = null;
           this.StopVideo(),
             this.props.steamIDBroadcast
               ? e &&
@@ -2091,7 +2091,7 @@
                   e,
                   this.props.steamIDBroadcast,
                   this.props.watchLocation,
-                  this.props.bWebRTC,
+                  Boolean(this.props.bWebRTC),
                 ))
               : this.props.broadcastClipID
                 ? e &&
@@ -2122,19 +2122,23 @@
             (this.m_elVideo = e);
         }
         OnMouseDown(e) {
+          var t;
           (this.m_bMouseDown = !0),
             (this.m_elMouseDown = e.currentTarget),
-            this.m_elMouseDown.ownerDocument.defaultView.addEventListener(
-              "mouseup",
-              this.OnMouseUp,
-            );
+            null === (t = this.m_elMouseDown.ownerDocument.defaultView) ||
+              void 0 === t ||
+              t.addEventListener("mouseup", this.OnMouseUp);
         }
         OnMouseUp(e) {
+          var t, r;
           (this.m_bMouseDown = !1),
-            this.m_elMouseDown.ownerDocument.defaultView.removeEventListener(
-              "mouseup",
-              this.OnMouseUp,
-            ),
+            null ===
+              (r =
+                null === (t = this.m_elMouseDown) || void 0 === t
+                  ? void 0
+                  : t.ownerDocument.defaultView) ||
+              void 0 === r ||
+              r.removeEventListener("mouseup", this.OnMouseUp),
             this.m_schHideControls.Schedule(3200, this.HideControls);
         }
         OnMouseMove(e) {
@@ -2155,10 +2159,11 @@
             this.setState({ bControlsVisible: !1 });
         }
         UmountControls() {
-          this.setState((e) => {
-            if (!e.bControlsVisible && e.bMountControls)
-              return { bMountControls: !1 };
-          });
+          this.setState((e) =>
+            !e.bControlsVisible && e.bMountControls
+              ? { bMountControls: !1 }
+              : null,
+          );
         }
         ShowStatsView() {
           let e = this.state.video;
@@ -2232,10 +2237,14 @@
             (this.setState({ bShowStats: !1 }), e.SetStatsViewIsVisible(!1));
         }
         OnToggleFullscreen() {
+          var e;
           this.m_elBroadcastPlayer &&
             ((0, N.ww)(this.m_elBroadcastPlayer)
               ? (0, N.MS)(this.m_elBroadcastPlayer)
-              : (0, N.tl)(this.m_elBroadcastPlayer, this.m_elVideo));
+              : (0, N.tl)(
+                  this.m_elBroadcastPlayer,
+                  null !== (e = this.m_elVideo) && void 0 !== e ? e : void 0,
+                ));
         }
         OnFullscreenChange(e) {
           if (!this.m_elBroadcastPlayer) return;
@@ -2258,23 +2267,24 @@
             a = Boolean(t && t.IsReplay()),
             n = this.state.bMountControls,
             o = this.state.bControlsVisible || r,
-            l = t && t.GetUserInputNeeded(),
-            c =
+            l = Boolean(t && t.GetUserInputNeeded()),
+            c = null == t ? void 0 : t.GetDASHPlayerStats(),
+            d =
               (null == t ? void 0 : t.IsBroadcastVOD()) &&
               l &&
               this.state.strInitialCapsuleImageUrl;
-          let d = "videoContainer";
-          o || (d += " HidePlayerControls"),
-            r && (d += " VideoPaused"),
-            this.state.bFullscreen && (d += " fullscreenVideo"),
-            this.props.classes && (d += " " + this.props.classes);
-          let m = [];
+          let m = "videoContainer";
+          o || (m += " HidePlayerControls"),
+            r && (m += " VideoPaused"),
+            this.state.bFullscreen && (m += " fullscreenVideo"),
+            this.props.classes && (m += " " + this.props.classes);
+          let u = [];
           !this.state.bFullscreen &&
             this.props.actions &&
-            (m = m.concat(this.props.actions)),
+            (u = u.concat(this.props.actions)),
             !this.state.bFullscreen &&
               this.props.onTheaterMode &&
-              m.push(
+              u.push(
                 (0, s.jsx)(
                   "div",
                   {
@@ -2285,7 +2295,7 @@
                   "ChatPosToggle ChatTheaterToggle",
                 ),
               ),
-            m.push(
+            u.push(
               (0, s.jsx)(
                 "div",
                 {
@@ -2296,27 +2306,28 @@
                 "FullscreenToggle",
               ),
             );
-          const u = n && !this.BHideVideoControls(),
-            h = n && !this.state.bFullscreen,
-            p =
+          const h = n && !this.BHideVideoControls(),
+            p = n && !this.state.bFullscreen,
+            _ =
               this.props.fnRenderBroadcastContext &&
               this.props.fnRenderBroadcastContext();
           return (0, s.jsxs)("div", {
             ref: this.BindBroadcastPlayerRef,
-            className: d,
+            className: m,
             onMouseMove: this.OnMouseMove,
             onClick: this.OnMouseMove,
             onMouseLeave: this.OnMouseLeave,
             onContextMenu: this.OnContextMenu,
             onMouseDown: this.OnMouseDown,
             children: [
-              p &&
+              _ &&
                 (0, s.jsx)("div", {
                   className: H().BroadcastContext,
-                  children: p,
+                  children: _,
                 }),
               a && (0, s.jsx)(X, {}),
               this.props.showVideoBackgroundBlur &&
+                this.m_elVideo &&
                 (0, s.jsx)(g, {
                   className: "videoBlur",
                   elementRef: this.m_elVideo,
@@ -2339,36 +2350,35 @@
               this.props.linkRegions
                 ? (0, s.jsx)(ye, {
                     linkRegions: this.props.linkRegions,
-                    editMode: this.props.editMode,
+                    editMode: Boolean(this.props.editMode),
                     onSaveLinkRegions: this.props.onSaveLinkRegions,
                   })
                 : null,
               this.props.linkElement,
-              c &&
+              d &&
                 (0, s.jsx)("img", {
                   loading: "lazy",
-                  className: (0, I.A)(
+                  className: (0, j.A)(
                     H().BroadcastPlaceholderImg,
                     "BroadcastPlaceholderImg",
                   ),
                   src: this.state.strInitialCapsuleImageUrl,
                 }),
-              u &&
+              h &&
+                t &&
                 (0, s.jsx)(le, {
                   video: t,
-                  actions: m,
+                  actions: u,
                   onOpenLinkInNewWindow: this.props.onOpenLinkInNewWindow,
                   onShowStats: this.ToggleStatsView,
-                  bIncludeClipEditor: this.props.bIncludeClipEditor,
+                  bIncludeClipEditor: Boolean(this.props.bIncludeClipEditor),
                 }),
-              h && (0, s.jsx)(ce, { onClick: this.props.onRequestClose }),
+              p && (0, s.jsx)(ce, { onClick: this.props.onRequestClose }),
               i &&
-                (0, s.jsx)(Y, {
-                  stats: t.GetDASHPlayerStats(),
-                  closeStats: this.CloseStats,
-                }),
+                c &&
+                (0, s.jsx)(Y, { stats: c, closeStats: this.CloseStats }),
               (0, s.jsx)(J, { video: t }),
-              l && (0, s.jsx)($, { video: t }),
+              l && t && (0, s.jsx)($, { video: t }),
             ],
           });
         }
@@ -2510,7 +2520,7 @@
               "videoControlButton videoControlGoLive" +
               (t ? " isLiveEdge" : ""),
             onClick: t
-              ? null
+              ? void 0
               : (t) => {
                   e.video.JumpToLiveEdge();
                 },
@@ -2561,11 +2571,12 @@
           return void 0 !== this.GetPreviousMarkerTime();
         }
         GetPreviousMarkerTime() {
-          if (!this.video.has_markers) return;
-          let e = this.video.GetTimelineMarkers(),
-            t = this.video.GetPlaybackTime();
-          for (let r = e.length - 1; r >= 0; r--)
-            if (!(e[r].nTime >= t)) return e[r].nTime;
+          const e = this.video;
+          if (!(null == e ? void 0 : e.has_markers)) return;
+          let t = e.GetTimelineMarkers(),
+            r = e.GetPlaybackTime();
+          for (let e = t.length - 1; e >= 0; e--)
+            if (!(t[e].nTime >= r)) return t[e].nTime;
         }
         OnJumpToPreviousMarkerClicked(e) {
           let t = this.GetPreviousMarkerTime();
@@ -2604,11 +2615,12 @@
           return void 0 !== this.GetNextMarkerTime();
         }
         GetNextMarkerTime() {
-          if (!this.video.has_markers) return;
-          let e = this.video.GetTimelineMarkers(),
-            t = this.video.GetPlaybackTime();
-          for (let r = 0; r < e.length; r++)
-            if (!(e[r].nTime <= t)) return e[r].nTime;
+          const e = this.video;
+          if (!(null == e ? void 0 : e.has_markers)) return;
+          let t = e.GetTimelineMarkers(),
+            r = e.GetPlaybackTime();
+          for (let e = 0; e < t.length; e++)
+            if (!(t[e].nTime <= r)) return t[e].nTime;
         }
         OnJumpToNextMarkerClicked(e) {
           let t = this.GetNextMarkerTime();
@@ -2691,32 +2703,30 @@
             });
         }
         OnMouseDown(e, t) {
-          if (this.m_elSlider) {
-            e.persist(),
-              (this.m_rectSlider =
-                this.m_elSlider.current &&
-                this.m_elSlider.current.getBoundingClientRect());
-            let r = {};
+          var r, i;
+          const s = this.m_elSlider.current;
+          if (s) {
+            e.persist(), (this.m_rectSlider = s.getBoundingClientRect());
+            let a = {};
             "start" === t
-              ? ((r = { bStartMouseDown: !0 }), e.stopPropagation())
+              ? ((a = { bStartMouseDown: !0 }), e.stopPropagation())
               : "end" === t
-                ? ((r = { bEndMouseDown: !0 }), e.stopPropagation())
-                : (r = { bGrabberMouseDown: !0 }),
-              this.setState(r, () => this.AdjustSliderForClientX(e.clientX)),
-              this.m_elSlider.current.ownerDocument.defaultView.addEventListener(
-                "mousemove",
-                this.OnMouseMove,
-              ),
-              this.m_elSlider.current.ownerDocument.defaultView.addEventListener(
-                "mouseup",
-                this.OnMouseUp,
-              );
+                ? ((a = { bEndMouseDown: !0 }), e.stopPropagation())
+                : (a = { bGrabberMouseDown: !0 }),
+              this.setState(a, () => this.AdjustSliderForClientX(e.clientX)),
+              null === (r = s.ownerDocument.defaultView) ||
+                void 0 === r ||
+                r.addEventListener("mousemove", this.OnMouseMove),
+              null === (i = s.ownerDocument.defaultView) ||
+                void 0 === i ||
+                i.addEventListener("mouseup", this.OnMouseUp);
           }
         }
         OnMouseMove(e) {
           this.AdjustSliderForClientX(e.clientX);
         }
         OnMouseUp(e) {
+          var t, r;
           this.state.bStartMouseDown
             ? this.setState({ bStartMouseDown: !1 })
             : this.state.bEndMouseDown
@@ -2727,14 +2737,14 @@
                   nGrabberMouseDownTime: 0,
                 })),
             this.m_elSlider.current &&
-              (this.m_elSlider.current.ownerDocument.defaultView.removeEventListener(
-                "mousemove",
-                this.OnMouseMove,
-              ),
-              this.m_elSlider.current.ownerDocument.defaultView.removeEventListener(
-                "mouseup",
-                this.OnMouseUp,
-              ));
+              (null ===
+                (t = this.m_elSlider.current.ownerDocument.defaultView) ||
+                void 0 === t ||
+                t.removeEventListener("mousemove", this.OnMouseMove),
+              null ===
+                (r = this.m_elSlider.current.ownerDocument.defaultView) ||
+                void 0 === r ||
+                r.removeEventListener("mouseup", this.OnMouseUp));
         }
         OnKeyDown(e) {
           e.keyCode == c.ek
@@ -2743,19 +2753,21 @@
               (this.props.video.JumpTime(15), e.preventDefault());
         }
         AdjustSliderForClientX(e) {
-          let t = this.props.video,
-            r = t.GetTimelineStartPos(),
-            i = t.GetTimelineStartPos() + t.GetTimelineDuration(),
-            s = t.GetTimeAtMousePosition(e, this.m_rectSlider, r, i);
+          const t = this.m_rectSlider;
+          if (!t) return;
+          let r = this.props.video,
+            i = r.GetTimelineStartPos(),
+            s = r.GetTimelineStartPos() + r.GetTimelineDuration(),
+            a = r.GetTimeAtMousePosition(e, t, i, s);
           if (this.state.bStartMouseDown) {
-            const e = A.OQ(s, r, t.m_editorEndTime - 5);
-            t.m_editorStartTime = e;
+            const e = A.OQ(a, i, r.m_editorEndTime - 5);
+            r.m_editorStartTime = e;
           } else if (this.state.bEndMouseDown) {
-            const e = A.OQ(s, t.m_editorStartTime + 5, i);
-            t.m_editorEndTime = e;
+            const e = A.OQ(a, r.m_editorStartTime + 5, s);
+            r.m_editorEndTime = e;
           } else
-            s != this.state.nGrabberMouseDownTime &&
-              this.setState({ nGrabberMouseDownTime: s });
+            a != this.state.nGrabberMouseDownTime &&
+              this.setState({ nGrabberMouseDownTime: a });
         }
         OnMouseHoverMove(e) {
           this.AdjustHoverForClientX(e.clientX);
@@ -2764,13 +2776,16 @@
           this.setState({ hoverX: 0 });
         }
         AdjustHoverForClientX(e) {
-          let t = this.props.video,
-            r = t.GetTimelineStartPos(),
-            i = t.GetTimelineStartPos() + t.GetTimelineDuration();
+          var t;
+          let r = this.props.video,
+            i = r.GetTimelineStartPos(),
+            s = r.GetTimelineStartPos() + r.GetTimelineDuration();
           this.m_rectSlider =
-            this.m_elSlider.current &&
-            this.m_elSlider.current.getBoundingClientRect();
-          t.GetTimeAtMousePosition(e, this.m_rectSlider, r, i);
+            null === (t = this.m_elSlider.current) || void 0 === t
+              ? void 0
+              : t.getBoundingClientRect();
+          this.m_rectSlider &&
+            r.GetTimeAtMousePosition(e, this.m_rectSlider, i, s);
         }
         OnSegmentClick(e) {
           this.props.video.Seek(e);
@@ -2782,49 +2797,52 @@
           this.setState({ nHoverValue: void 0 });
         }
         render() {
-          let e = this.props.video,
-            t = this.state.bGrabberMouseDown,
-            r = e.GetPercentOffsetFromTime(
+          var e;
+          let t = this.props.video,
+            r = this.state.bGrabberMouseDown,
+            i = t.GetPercentOffsetFromTime(
               this.state.nGrabberMouseDownTime,
               m.a0.Timeline,
             ),
-            i = e.GetPercentOffsetFromTime(e.GetPlaybackTime(), m.a0.Timeline),
-            a = e.GetPercentOffsetFromTime(
-              e.GetVideoAvailableStartTime(),
+            a = t.GetPercentOffsetFromTime(t.GetPlaybackTime(), m.a0.Timeline),
+            n = t.GetPercentOffsetFromTime(
+              t.GetVideoAvailableStartTime(),
               m.a0.Timeline,
             );
-          a < 0.05 && (a = 0);
-          let n = A.OQ(r, 0, 100).toFixed(1) + "%",
-            o = A.OQ(i, 0, 100).toFixed(1) + "%",
+          n < 0.05 && (n = 0);
+          let o = A.OQ(i, 0, 100).toFixed(1) + "%",
             l = A.OQ(a, 0, 100).toFixed(1) + "%",
-            c = {},
+            c = A.OQ(n, 0, 100).toFixed(1) + "%",
             d = {},
             u = {},
-            h = {};
-          t
-            ? ((h.left = n), (c.width = n), (d.width = o), (u.width = l))
-            : ((h.left = o), (d.width = o), (u.width = l));
-          let p = (0, L.ap)(e.GetPlaybackTime()),
-            g = (0, L.ap)(this.state.nHoverValue),
-            _ = "STV_timelineContainer";
-          this.state.bGrabberMouseDown && (_ += " grabberDown"),
-            e.IsTimelineMapActive() && (_ += " minimapActive");
-          let B = "";
-          (r = t ? r : i),
-            r > 100
-              ? (B = " grabberOffScreenRight grabberOffscreen")
-              : r < 0 && (B = " grabberOffScreenLeft grabberOffscreen");
-          let b = [];
-          e.GetTimelineMarkers().forEach((t, r) => {
-            let i = e.GetPercentOffsetFromTime(t.nTime, m.a0.Timeline);
+            h = {},
+            p = {};
+          r
+            ? ((p.left = o), (d.width = o), (u.width = l), (h.width = c))
+            : ((p.left = l), (u.width = l), (h.width = c));
+          let g = (0, L.ap)(t.GetPlaybackTime()),
+            _ = (0, L.ap)(
+              null !== (e = this.state.nHoverValue) && void 0 !== e ? e : 0,
+            ),
+            B = "STV_timelineContainer";
+          this.state.bGrabberMouseDown && (B += " grabberDown"),
+            t.IsTimelineMapActive() && (B += " minimapActive");
+          let b = "";
+          (i = r ? i : a),
+            i > 100
+              ? (b = " grabberOffScreenRight grabberOffscreen")
+              : i < 0 && (b = " grabberOffScreenLeft grabberOffscreen");
+          let S = [];
+          t.GetTimelineMarkers().forEach((e, r) => {
+            let i = t.GetPercentOffsetFromTime(e.nTime, m.a0.Timeline);
             i < 0 ||
               i > 100 ||
-              b.push(
+              S.push(
                 (0, s.jsx)(
                   ge,
                   {
                     pos: i,
-                    label: t.strTemplateName,
+                    label: e.strTemplateName,
                     onMouseEnter: this.OnMarkerMouseEnter,
                     onMouseLeave: this.OnMarkerMouseLeave,
                   },
@@ -2832,37 +2850,37 @@
                 ),
               );
           });
-          let S = [];
-          e.GetTimelineSegments().forEach((t, r) => {
-            let i = e.GetPercentOffsetFromTime(t.nTimeStart, m.a0.Timeline);
+          let y = [];
+          t.GetTimelineSegments().forEach((e, r) => {
+            let i = t.GetPercentOffsetFromTime(e.nTimeStart, m.a0.Timeline);
             if (i > 100) return;
-            let a = e.GetPercentOffsetFromTime(t.nTimeEnd, m.a0.Timeline);
+            let a = t.GetPercentOffsetFromTime(e.nTimeEnd, m.a0.Timeline);
             a < 0 ||
-              S.push(
+              y.push(
                 (0, s.jsx)(
                   _e,
                   {
                     startPos: i,
                     endPos: a,
-                    label: t.strTemplateName,
-                    color: t.color,
-                    onClick: (e) => this.OnSegmentClick(t.nTimeStart),
+                    label: e.strTemplateName,
+                    color: e.color,
+                    onClick: (t) => this.OnSegmentClick(e.nTimeStart),
                   },
                   r,
                 ),
               );
           });
-          const y = e.GetPercentOffsetFromTime(
-              e.m_editorStartTime,
+          const M = t.GetPercentOffsetFromTime(
+              t.m_editorStartTime,
               m.a0.Timeline,
             ),
-            M = e.GetPercentOffsetFromTime(e.m_editorEndTime, m.a0.Timeline),
-            w = this.props.bIncludeClipEditor
+            w = t.GetPercentOffsetFromTime(t.m_editorEndTime, m.a0.Timeline),
+            f = this.props.bIncludeClipEditor
               ? [
                   (0, s.jsx)(
                     ge,
                     {
-                      pos: y,
+                      pos: M,
                       label: (0, P.we)("#DASHPlayerControls_Start"),
                       onMouseEnter: this.OnMarkerMouseEnter,
                       onMouseLeave: this.OnMarkerMouseLeave,
@@ -2873,7 +2891,7 @@
                   (0, s.jsx)(
                     ge,
                     {
-                      pos: M,
+                      pos: w,
                       label: (0, P.we)("#DASHPlayerControls_End"),
                       onMouseEnter: this.OnMarkerMouseEnter,
                       onMouseLeave: this.OnMarkerMouseLeave,
@@ -2888,12 +2906,12 @@
             tabIndex: 0,
             onKeyDown: this.OnKeyDown,
             children: (0, s.jsxs)("div", {
-              className: _,
+              className: B,
               children: [
-                (0, s.jsx)("div", { className: "DialogLabel", children: p }),
+                (0, s.jsx)("div", { className: "DialogLabel", children: g }),
                 (0, s.jsx)("div", {
                   className: "STV_timelineSegmentsContainer",
-                  children: S,
+                  children: y,
                 }),
                 (0, s.jsx)("div", {
                   onMouseDown: this.OnMouseDown,
@@ -2905,18 +2923,18 @@
                     children: [
                       (0, s.jsx)("div", {
                         className: "STV_timelineValue",
-                        style: c,
-                      }),
-                      (0, s.jsx)("div", {
-                        className: "STV_timelineGhostValue",
                         style: d,
                       }),
                       (0, s.jsx)("div", {
-                        className: "STV_timelineNoVideo",
+                        className: "STV_timelineGhostValue",
                         style: u,
                       }),
-                      b,
-                      w,
+                      (0, s.jsx)("div", {
+                        className: "STV_timelineNoVideo",
+                        style: h,
+                      }),
+                      S,
+                      f,
                       Boolean(this.state.hoverX) &&
                         (0, s.jsx)(
                           "div",
@@ -2944,7 +2962,7 @@
                                     position: "absolute",
                                     bottom: "4px",
                                   },
-                                  children: g,
+                                  children: _,
                                 }),
                               ],
                             }),
@@ -2953,9 +2971,9 @@
                         ),
                       (0, s.jsx)("div", {
                         className: "STV_timelineGrabber_Wrapper",
-                        style: h,
+                        style: p,
                         children: (0, s.jsx)("div", {
-                          className: "STV_timelineGrabber" + B,
+                          className: "STV_timelineGrabber" + b,
                           children: (0, s.jsx)("div", {
                             className: "STV_timelineGrabberArrow",
                             children: (0, s.jsx)(q.apU, {}),
@@ -2998,13 +3016,10 @@
           this.state.info && m.es.StopInfo(this.state.info);
         }
         RenderStreamSwitcher() {
-          const e = this.props.steamID;
-          return k.td.stream[e]
-            ? (0, s.jsx)(Se, {
-                value: e,
-                options: k.td.stream,
-                onChange: this.props.onLocalStreamChange,
-              })
+          const e = this.props.steamID,
+            t = this.props.onLocalStreamChange;
+          return t && k.td.stream[e]
+            ? (0, s.jsx)(Se, { value: e, options: k.td.stream, onChange: t })
             : null;
         }
         render() {
@@ -3072,8 +3087,14 @@
                     (0, s.jsx)("div", {
                       className: "Actions",
                       children: (0, s.jsx)("div", {
-                        onClick: (e) =>
-                          this.props.onOpenLinkInNewWindow(e, k.td.link),
+                        onClick: (e) => {
+                          var t, r;
+                          return null ===
+                            (r = (t = this.props).onOpenLinkInNewWindow) ||
+                            void 0 === r
+                            ? void 0
+                            : r.call(t, e, k.td.link);
+                        },
                         className: "BroadcastLink",
                         children: k.td.linkName,
                       }),
@@ -3166,22 +3187,25 @@
             await this.setState({ sizableRegion: this.state.sizableRegion });
         }
         OnSaveRegions() {
-          let e;
-          e = { links: [] };
-          for (let t = 0; t < this.state.sizableRegion.length; t++) {
-            let r;
-            (r = {
-              left: Math.floor(100 * this.state.sizableRegion[t].xPosPct),
-              top: Math.floor(100 * this.state.sizableRegion[t].yPosPct),
-              width: Math.floor(100 * this.state.sizableRegion[t].widthPct),
-              height: Math.floor(100 * this.state.sizableRegion[t].heightPct),
-              url: this.state.sizableRegion[t].link_url,
-              link_description: this.state.sizableRegion[t].link_description,
-              link_index: t,
+          var e, t;
+          let r;
+          r = { links: [] };
+          for (let e = 0; e < this.state.sizableRegion.length; e++) {
+            let t;
+            (t = {
+              left: Math.floor(100 * this.state.sizableRegion[e].xPosPct),
+              top: Math.floor(100 * this.state.sizableRegion[e].yPosPct),
+              width: Math.floor(100 * this.state.sizableRegion[e].widthPct),
+              height: Math.floor(100 * this.state.sizableRegion[e].heightPct),
+              url: this.state.sizableRegion[e].link_url,
+              link_description: this.state.sizableRegion[e].link_description,
+              link_index: e,
             }),
-              e.links.push(r);
+              r.links.push(t);
           }
-          this.props.onSaveLinkRegions(e);
+          null === (t = (e = this.props).onSaveLinkRegions) ||
+            void 0 === t ||
+            t.call(e, r);
         }
         async DeleteRegion(e) {
           this.state.sizableRegion.splice(e, 1),
@@ -3984,83 +4008,19 @@
           return "CSteamTV_GetBroadcastChannelImages_Request";
         }
       }
-      class I extends g.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            I.prototype.images || B.Sg(I.M()),
-            g.Message.initialize(this, e, 0, -1, [1], null);
-        }
-        static M() {
-          return (
-            I.sm_m ||
-              (I.sm_m = {
-                proto: I,
-                fields: { images: { n: 1, c: j, r: !0, q: !0 } },
-              }),
-            I.sm_m
-          );
-        }
-        static MBF() {
-          return I.sm_mbf || (I.sm_mbf = B.w0(I.M())), I.sm_mbf;
-        }
-        toObject(e = !1) {
-          return I.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return B.BT(I.M(), e, t);
-        }
-        static fromObject(e) {
-          return B.Uq(I.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (_().BinaryReader)(e),
-            r = new I();
-          return I.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return B.zj(I.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (_().BinaryWriter)();
-          return I.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          B.i0(I.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (_().BinaryWriter)();
-          return I.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamTV_GetBroadcastChannelImages_Response";
-        }
-      }
       class j extends g.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            j.prototype.image_type || B.Sg(j.M()),
-            g.Message.initialize(this, e, 0, -1, void 0, null);
+            j.prototype.images || B.Sg(j.M()),
+            g.Message.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
             j.sm_m ||
               (j.sm_m = {
                 proto: j,
-                fields: {
-                  image_type: { n: 1, br: B.qM.readEnum, bw: B.gp.writeEnum },
-                  image_path: {
-                    n: 2,
-                    br: B.qM.readString,
-                    bw: B.gp.writeString,
-                  },
-                  image_index: {
-                    n: 3,
-                    br: B.qM.readUint32,
-                    bw: B.gp.writeUint32,
-                  },
-                },
+                fields: { images: { n: 1, c: I, r: !0, q: !0 } },
               }),
             j.sm_m
           );
@@ -4095,6 +4055,70 @@
         serializeBase64String() {
           var e = new (_().BinaryWriter)();
           return j.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CSteamTV_GetBroadcastChannelImages_Response";
+        }
+      }
+      class I extends g.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            I.prototype.image_type || B.Sg(I.M()),
+            g.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            I.sm_m ||
+              (I.sm_m = {
+                proto: I,
+                fields: {
+                  image_type: { n: 1, br: B.qM.readEnum, bw: B.gp.writeEnum },
+                  image_path: {
+                    n: 2,
+                    br: B.qM.readString,
+                    bw: B.gp.writeString,
+                  },
+                  image_index: {
+                    n: 3,
+                    br: B.qM.readUint32,
+                    bw: B.gp.writeUint32,
+                  },
+                },
+              }),
+            I.sm_m
+          );
+        }
+        static MBF() {
+          return I.sm_mbf || (I.sm_mbf = B.w0(I.M())), I.sm_mbf;
+        }
+        toObject(e = !1) {
+          return I.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return B.BT(I.M(), e, t);
+        }
+        static fromObject(e) {
+          return B.Uq(I.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (_().BinaryReader)(e),
+            r = new I();
+          return I.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return B.zj(I.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (_().BinaryWriter)();
+          return I.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          B.i0(I.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (_().BinaryWriter)();
+          return I.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CSteamTV_GetBroadcastChannelImages_Response_Images";
@@ -7023,63 +7047,11 @@
           return "CSteamTV_GetMyBroadcastChannels_Request";
         }
       }
-      class Ie extends g.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            Ie.prototype.results || B.Sg(Ie.M()),
-            g.Message.initialize(this, e, 0, -1, [1], null);
-        }
-        static M() {
-          return (
-            Ie.sm_m ||
-              (Ie.sm_m = {
-                proto: Ie,
-                fields: { results: { n: 1, c: P, r: !0, q: !0 } },
-              }),
-            Ie.sm_m
-          );
-        }
-        static MBF() {
-          return Ie.sm_mbf || (Ie.sm_mbf = B.w0(Ie.M())), Ie.sm_mbf;
-        }
-        toObject(e = !1) {
-          return Ie.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return B.BT(Ie.M(), e, t);
-        }
-        static fromObject(e) {
-          return B.Uq(Ie.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (_().BinaryReader)(e),
-            r = new Ie();
-          return Ie.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return B.zj(Ie.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (_().BinaryWriter)();
-          return Ie.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          B.i0(Ie.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (_().BinaryWriter)();
-          return Ie.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamTV_GetMyBroadcastChannels_Response";
-        }
-      }
       class je extends g.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            je.prototype.broadcasts || B.Sg(je.M()),
+            je.prototype.results || B.Sg(je.M()),
             g.Message.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
@@ -7087,7 +7059,7 @@
             je.sm_m ||
               (je.sm_m = {
                 proto: je,
-                fields: { broadcasts: { n: 1, c: P, r: !0, q: !0 } },
+                fields: { results: { n: 1, c: P, r: !0, q: !0 } },
               }),
             je.sm_m
           );
@@ -7122,6 +7094,58 @@
         serializeBase64String() {
           var e = new (_().BinaryWriter)();
           return je.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CSteamTV_GetMyBroadcastChannels_Response";
+        }
+      }
+      class Ie extends g.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            Ie.prototype.broadcasts || B.Sg(Ie.M()),
+            g.Message.initialize(this, e, 0, -1, [1], null);
+        }
+        static M() {
+          return (
+            Ie.sm_m ||
+              (Ie.sm_m = {
+                proto: Ie,
+                fields: { broadcasts: { n: 1, c: P, r: !0, q: !0 } },
+              }),
+            Ie.sm_m
+          );
+        }
+        static MBF() {
+          return Ie.sm_mbf || (Ie.sm_mbf = B.w0(Ie.M())), Ie.sm_mbf;
+        }
+        toObject(e = !1) {
+          return Ie.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return B.BT(Ie.M(), e, t);
+        }
+        static fromObject(e) {
+          return B.Uq(Ie.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (_().BinaryReader)(e),
+            r = new Ie();
+          return Ie.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return B.zj(Ie.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (_().BinaryWriter)();
+          return Ie.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          B.i0(Ie.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (_().BinaryWriter)();
+          return Ie.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CSteamTV_HomePageTemplate_Takeover";
@@ -7595,7 +7619,7 @@
                     br: B.qM.readEnum,
                     bw: B.gp.writeEnum,
                   },
-                  takeover: { n: 2, c: je },
+                  takeover: { n: 2, c: Ie },
                   single_game: { n: 3, c: xe },
                   game_list: { n: 4, c: Oe },
                   quick_explore: { n: 5, c: We },
@@ -8167,7 +8191,7 @@
             return e.SendMsg(
               "SteamTV.GetBroadcastChannelImages#1",
               (0, d.I8)(T, t, r),
-              I,
+              j,
               { bConstMethod: !0, ePrivilege: 0 },
             );
           }),
@@ -8347,7 +8371,7 @@
             return e.SendMsg(
               "SteamTV.GetMyBroadcastChannels#1",
               (0, d.I8)(Te, t, r),
-              Ie,
+              je,
               { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
           }),

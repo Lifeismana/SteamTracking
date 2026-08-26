@@ -9870,6 +9870,10 @@ button.DialogButton::-moz-focus-inner {
 .PopupFullWindow {
   height: 100%;
 }
+.PopupFullWindow.FitToContent {
+  width: fit-content;
+  height: fit-content;
+}
 .FullModalOverlay {
   position: fixed;
   top: 0;

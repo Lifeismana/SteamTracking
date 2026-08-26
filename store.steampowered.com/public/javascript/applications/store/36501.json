@@ -307,5 +307,8 @@
     "AppPage_RecommendationReason_FriendsOwned_Software": "<1>%1$s φίλος</1> έχει ήδη αυτό το λογισμικό:",
     "AppPage_RecommendationReason_FriendsOwned_Software_Plural": "<1>%1$s φίλοι</1> έχουν ήδη αυτό το λογισμικό:",
     "AppPage_RecommendationReason_FriendsOwned_Video": "<1>%1$s φίλος</1> έχει ήδη αυτό το βίντεο:",
-    "AppPage_RecommendationReason_FriendsOwned_Video_Plural": "<1>%1$s φίλοι</1> έχουν ήδη αυτό το βίντεο:"
+    "AppPage_RecommendationReason_FriendsOwned_Video_Plural": "<1>%1$s φίλοι</1> έχουν ήδη αυτό το βίντεο:",
+    "AppPage_PageSectionBanner_Workshop": "Εργαστήρι Steam",
+    "AppPage_PageSectionBanner_Follow": "Ακολούθηση παιχνιδιού",
+    "AppPage_PageSectionBanner_MachineController": "Steam Machine και Steam Controller"
 }

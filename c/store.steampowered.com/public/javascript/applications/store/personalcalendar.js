@@ -1039,12 +1039,12 @@
             children: _,
             ..._
           } = _,
-          [_, _] = _.useState({
-            bRenderChildren: !1,
+          _ = _.useContext(_),
+          [_, _] = _.useState(() => ({
+            bRenderChildren: !_.enabled,
             nPrevRenderHeight: 0,
             nPrevRenderWidth: 0,
-          }),
-          _ = _.useContext(_),
+          })),
           _ = _.useRef(null),
           _ = "LoadAndUnload" === _ && _.enabled,
           _ = _.useCallback(

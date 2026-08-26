@@ -282,7 +282,7 @@
     },
     97780: (e, a, n) => {
       "use strict";
-      n.d(a, { G: () => U });
+      n.d(a, { G: () => T });
       var t = n(7850),
         l = n(22837),
         r = n(41735),
@@ -411,7 +411,7 @@
       var N = n(33561),
         y = n(86355);
       let R = 1;
-      const U = (0, i.PA)((e) => {
+      const T = (0, i.PA)((e) => {
         const {
             clanSteamID: a,
             appid: n,
@@ -424,26 +424,26 @@
             fnLangHasData: L,
             fnGetImageHash: k,
           } = e,
-          [U, B] = c.useState(""),
-          [M, O] = c.useState(0),
-          [P, F] = c.useState(),
+          [T, B] = c.useState(""),
+          [M, F] = c.useState(0),
+          [O, P] = c.useState(),
           [H, z] = c.useState(void 0),
           [V, W] = c.useState(!y.pU.BHasLoadedClanImages(a)),
           [Y, q] = c.useState(void 0),
-          Z = (0, S.YR)(() => s().CancelToken.source());
+          Q = (0, S.YR)(() => s().CancelToken.source());
         c.useEffect(
-          () => () => Z.cancel("ClanImagePicker component unmounted"),
-          [Z],
+          () => () => Q.cancel("ClanImagePicker component unmounted"),
+          [Q],
         );
-        const Q = (0, S.YR)(() => new Map()),
+        const Z = (0, S.YR)(() => new Map()),
           [J, X] = (0, c.useState)(null),
           { bClanImagesV2: K } = (0, N.sK)(),
           $ = a.GetAccountID(),
-          ee = c.useCallback(() => y.pU.LoadClanImages(a, !1, Z.token), [Z, $]),
+          ee = c.useCallback(() => y.pU.LoadClanImages(a, !1, Q.token), [Q, $]),
           ae = c.useCallback(async () => {
-            if (!Q.has(a.GetAccountID()))
+            if (!Z.has(a.GetAccountID()))
               try {
-                await ee(), Z.token.reason || W(!1);
+                await ee(), Q.token.reason || W(!1);
               } catch (e) {
                 let n = (0, C.H)(e);
                 console.error(
@@ -452,10 +452,10 @@
                     " errCode: " +
                     n.strErrorMsg,
                 ),
-                  Q.set(a.GetAccountID(), n.strErrorMsg),
-                  Z.token.reason || (W(!1), q(n.strErrorMsg));
+                  Z.set(a.GetAccountID(), n.strErrorMsg),
+                  Q.token.reason || (W(!1), q(n.strErrorMsg));
               }
-          }, [Z, a, Q, ee]);
+          }, [Q, a, Z, ee]);
         c.useEffect(() => {
           V && ae();
         }, [ae, V]);
@@ -470,11 +470,11 @@
           te || ne();
         }, [te, ne]);
         const le = () => {
-            F(void 0), z(void 0);
+            P(void 0), z(void 0);
           },
           re = (e) => {
-            if (null != P) {
-              const a = H[P];
+            if (null != O) {
+              const a = H[O];
               le(),
                 requestAnimationFrame(() => {
                   r(a, e);
@@ -507,16 +507,16 @@
               className: h().ImagesContainer,
               children: (0, t.jsx)(u.GF, {
                 clanAccountID: a.GetAccountID(),
-                fileNameSearch: U,
+                fileNameSearch: T,
                 imageInsertCallBack: r,
                 fnOnExpandImage: (e) => {
                   if (e && d) {
                     let n = y.pU.GetFilteredClanImages(
                         a,
-                        U.trim().toLowerCase(),
+                        T.trim().toLowerCase(),
                       ),
                       t = n.findIndex((a, n, t) => e.imageid == a.imageid);
-                    t >= 0 && (F(t), z(n));
+                    t >= 0 && (P(t), z(n));
                   }
                 },
                 InternalOpenLocalizeImageGroup: (e) => {
@@ -542,7 +542,7 @@
                 {
                   uploader: J,
                   onDismiss: () => {
-                    B(U), O(null);
+                    B(T), F(null);
                   },
                 },
                 "clanimageuploaderview" + M,
@@ -575,19 +575,19 @@
                             window,
                           ));
                     }
-                    return r && (B(""), O(++R), n.UploadAllImages()), r;
+                    return r && (B(""), F(++R), n.UploadAllImages()), r;
                   }
                   return !1;
                 },
               }),
-            null != P &&
+            null != O &&
               (0, t.jsx)(D, {
-                mainSrc: se[P].url,
-                imageTitle: se[P].file_name,
-                nextSrc: P < se.length - 1 ? se[P + 1].url : void 0,
-                prevSrc: P > 0 ? se[P - 1].url : void 0,
-                onMoveNextRequest: () => F(P + 1),
-                onMovePrevRequest: () => F(P - 1),
+                mainSrc: se[O].url,
+                imageTitle: se[O].file_name,
+                nextSrc: O < se.length - 1 ? se[O + 1].url : void 0,
+                prevSrc: O > 0 ? se[O - 1].url : void 0,
+                onMoveNextRequest: () => P(O + 1),
+                onMovePrevRequest: () => P(O - 1),
                 onCloseRequest: le,
                 toolbarButtons: [
                   (0, t.jsx)(
@@ -614,11 +614,11 @@
                   ),
                 ],
               }),
-            (0, t.jsx)(T, {}),
+            (0, t.jsx)(U, {}),
           ],
         });
       });
-      function T(e) {
+      function U(e) {
         const {
           bClanImagesV2: a,
           bClanImagesV2Allowed: n,
@@ -729,7 +729,7 @@
         w = n(56692),
         f = n(26408),
         C = n(82817),
-        A = n(40414);
+        A = n(17267);
       const E = (0, i.PA)((e) => {
         const {
             closeModal: a,
@@ -744,11 +744,11 @@
           } = e,
           [k, D] = o.useState(),
           [N, y] = o.useState(!0),
-          [R, U] = o.useState(),
-          T = (0, j.YR)(() => s().CancelToken.source());
+          [R, T] = o.useState(),
+          U = (0, j.YR)(() => s().CancelToken.source());
         o.useEffect(
-          () => () => T.cancel("LocalizedImageDialog component unmounted"),
-          [T],
+          () => () => U.cancel("LocalizedImageDialog component unmounted"),
+          [U],
         );
         const G = o.useCallback(async () => {
             var e;
@@ -758,44 +758,44 @@
                   a,
                   i.image_hash,
                   i.file_type,
-                  T,
+                  U,
                   !1,
                 );
-              if (T.token.reason) return;
+              if (U.token.reason) return;
               if (n.success != l.R || !n.width || !n.height)
                 return (
                   console.error(
                     "LocalizedImageDialog : failed to determine the primary image resolution. " +
                       (null !== (e = n.err_msg) && void 0 !== e ? e : ""),
                   ),
-                  void U({ strMsg: n.err_msg })
+                  void T({ strMsg: n.err_msg })
                 );
-              U(void 0), D(n);
+              T(void 0), D(n);
             } catch (e) {
               let a = (0, x.H)(e);
               console.error("LocalizedImageDialog : " + a.strErrorMsg, a),
-                U({ strMsg: a.strErrorMsg });
+                T({ strMsg: a.strErrorMsg });
             }
-          }, [T, i.clanAccountID, i.file_type, i.image_hash]),
+          }, [U, i.clanAccountID, i.file_type, i.image_hash]),
           B = o.useCallback(async () => {
             try {
-              await d.R.DetermineAvailableLocalizationForGroup(T),
-                T.token.reason || y(!1);
+              await d.R.DetermineAvailableLocalizationForGroup(U),
+                U.token.reason || y(!1);
             } catch (e) {
               let a = (0, x.H)(e);
               console.error("LocalizedImageDialog : " + a.strErrorMsg, a);
             }
-          }, [T]),
+          }, [U]),
           M = o.useCallback(() => G().then(B), [B, G]),
-          O = o.useCallback(() => {
-            U(void 0), M();
+          F = o.useCallback(() => {
+            T(void 0), M();
           }, [M]);
         o.useEffect(() => {
           a &&
             (d.R.SetPrimaryImageForImageGroup(i, "localized_image_group"), M());
         }, [a, M, i]);
-        const P = !N && k,
-          F = k ? ` - ${k.width}x${k.height}` : "",
+        const O = !N && k,
+          P = k ? ` - ${k.width}x${k.height}` : "",
           H = (0, C.EG)(i.file_type).slice(1),
           z =
             (null == k ? void 0 : k.width) && (null == k ? void 0 : k.height)
@@ -825,7 +825,7 @@
                       }),
                       (0, t.jsx)("img", { className: m.TitleImg, src: V }),
                       (0, t.jsx)("div", {
-                        children: i.file_name + F + " - " + H,
+                        children: i.file_name + P + " - " + H,
                       }),
                     ],
                   }),
@@ -840,18 +840,18 @@
                         (0, t.jsx)("div", { children: R.strMsg }),
                       (0, t.jsx)("div", {
                         className: h().Button,
-                        onClick: O,
+                        onClick: F,
                         children: (0, I.we)("#Button_Retry"),
                       }),
                     ],
                   }),
-                !P &&
+                !O &&
                   !R &&
                   (0, t.jsx)(v.t, {
                     position: "center",
                     string: (0, I.we)("#Loading"),
                   }),
-                P &&
+                O &&
                   (0, t.jsxs)(o.Fragment, {
                     children: [
                       (0, t.jsx)(u.t, {
@@ -888,7 +888,7 @@
     },
     50433: (e, a, n) => {
       "use strict";
-      n.d(a, { u: () => y, z: () => R });
+      n.d(a, { u: () => R, z: () => T });
       var t = n(7850),
         l = n(7221),
         r = n(22837),
@@ -909,16 +909,17 @@
         j = n(35380),
         w = n(33924),
         f = n.n(w),
-        C = n(18654),
-        A = n.n(C),
-        E = n(72860),
-        S = n(76684),
-        b = n(3088),
-        L = n(12155),
-        k = n(52038),
-        D = n(78327);
-      const N = 30;
-      function y(e) {
+        C = n(48593),
+        A = n(18654),
+        E = n.n(A),
+        S = n(72860),
+        b = n(34121),
+        L = n(3088),
+        k = n(12155),
+        D = n(52038),
+        N = n(78327);
+      const y = 30;
+      function R(e) {
         var a, n;
         const {
             event: s,
@@ -926,80 +927,80 @@
             bShowAssociatedApp: m,
             langOverride: p,
             onClick: w,
-            eEventRount: C,
-            bHidePrices: A,
-            nSummaryMaxLength: E,
+            eEventRount: A,
+            bHidePrices: E,
+            nSummaryMaxLength: S,
           } = e,
-          L = (0, h.Zj)(s.appid),
-          D = p || (0, r.sfN)(c.TS.LANGUAGE),
-          y =
+          k = (0, h.Zj)(s.appid),
+          N = (0, C.n)(),
+          R = p || (0, r.sfN)(c.TS.LANGUAGE),
+          U =
             null !==
               (a = (0, i.m0)(
                 void 0 !== d ? void 0 : s,
                 "capsule",
-                D,
+                R,
                 l.wI.capsule_main,
               )) && void 0 !== a
               ? a
               : d,
-          U =
+          G =
             null !==
               (n = (0, i.m0)(
                 void 0 !== d ? void 0 : s,
                 "capsule",
-                D,
+                R,
                 l.wI.full,
               )) && void 0 !== n
               ? n
               : d,
-          [T, G, B, M] = (0, _.q3)(() => [
-            s.GetNameWithFallback(D) || "",
+          [B, M, F, O] = (0, _.q3)(() => [
+            s.GetNameWithFallback(R) || "",
             s.GetCategoryAsString(),
-            s.GetSummaryWithFallback(D, E),
-            s.GetSubTitleWithLanguageFallback(D) || "",
+            s.GetSummaryWithFallback(R, S),
+            s.GetSubTitleWithLanguageFallback(R) || "",
           ]),
-          O = (0, j.$5)(s.appid),
-          { data: P } = (0, u.lv)(O),
-          F = [];
-        if ((y && F.push(y), U && U !== y && F.push(U), P)) {
-          const e = (0, g.b0)(P, "main_capsule");
-          e && F.push(e);
+          P = (0, j.$5)(s.appid),
+          { data: H } = (0, u.lv)(P),
+          z = [];
+        if ((U && z.push(U), G && G !== U && z.push(G), H)) {
+          const e = (0, g.b0)(H, "main_capsule");
+          e && z.push(e);
         }
-        const [H, z] = (0, x.useState)(y);
+        const [V, W] = (0, x.useState)(U);
         if (!s)
           return (0, t.jsx)("div", { className: f().OtherEvents_EventCtn });
-        const V = c.TS.NOW,
-          W = s ? s.GetStartTimeAndDateUnixSeconds() : 0;
-        let Y = M;
+        const Y = s ? s.GetStartTimeAndDateUnixSeconds() : 0;
+        let q = O;
         return (
-          M && (M.length > N || T.length > N) && (Y = void 0),
+          O && (O.length > y || B.length > y) && (q = void 0),
           (0, t.jsxs)("div", {
             className: f().EventSizer,
             children: [
               (0, t.jsxs)(o.tj, {
-                className: (0, k.A)(
+                className: (0, D.A)(
                   f().OtherEvents_EventCtn,
                   "OtherEvents_EventCtn",
                   f().HoversEnabled,
                 ),
                 eventModel: s,
-                route: C || o.PH.k_eView,
+                route: A || o.PH.k_eView,
                 onClick: w,
                 preferredFocus: !0,
                 children: [
                   (0, t.jsxs)("div", {
-                    className: (0, k.A)(
+                    className: (0, D.A)(
                       f().EventSummaryContainer,
                       f().HideInWideMode,
                     ),
                     children: [
                       (0, t.jsx)("div", {
                         className: f().EventSummaryType,
-                        children: G,
+                        children: M,
                       }),
                       (0, t.jsx)("div", {
                         className: f().EventSummaryText,
-                        children: B,
+                        children: F,
                       }),
                     ],
                   }),
@@ -1007,21 +1008,21 @@
                     className: f().OtherEvents_BGImage,
                     style: {
                       backgroundColor: "#ffffff",
-                      backgroundImage: H ? `url(${(0, I.j3)(H)})` : "none",
+                      backgroundImage: V ? `url(${(0, I.j3)(V)})` : "none",
                     },
                   }),
                   (0, t.jsxs)("div", {
                     className: f().OtherEvents_ContentCtn,
                     children: [
                       (0, t.jsx)("div", {
-                        className: (0, k.A)(
+                        className: (0, D.A)(
                           f().OtherEvents_MainImageCtn,
-                          L && f().MaskImages,
+                          k && f().MaskImages,
                         ),
-                        children: (0, t.jsx)(b.c, {
-                          rgSources: F,
+                        children: (0, t.jsx)(L.c, {
+                          rgSources: z,
                           onIncrementalError: (e, a, n) => {
-                            n >= F.length && z(void 0), z(F[n + 1]);
+                            n >= z.length && W(void 0), W(z[n + 1]);
                           },
                           className: f().OtherEvents_MainImage,
                           alt: "",
@@ -1032,12 +1033,12 @@
                         children: [
                           (0, t.jsx)("div", {
                             className: f().OtherEvents_TextTitle,
-                            children: T,
+                            children: B,
                           }),
-                          Boolean(Y) &&
+                          Boolean(q) &&
                             (0, t.jsx)("div", {
                               className: f().OtherEvents_SubTitle,
-                              children: Y,
+                              children: q,
                             }),
                           (0, t.jsxs)(v.s, {
                             direction: "row",
@@ -1045,25 +1046,25 @@
                             align: "center",
                             children: [
                               (0, t.jsx)("div", {
-                                className: (0, k.A)(
+                                className: (0, D.A)(
                                   f().EventType,
                                   f().ShowInWideMode,
                                 ),
-                                children: G,
+                                children: M,
                               }),
-                              Boolean(W > V)
+                              Boolean(Y > N)
                                 ? (0, t.jsx)("div", {
-                                    className: (0, k.A)(
+                                    className: (0, D.A)(
                                       f().UpcomingCtn,
                                       "UpcomingCtn",
                                     ),
-                                    children: (0, t.jsx)(S.K4, {
+                                    children: (0, t.jsx)(b.K4, {
                                       bSingleLine: !0,
                                       dateAndTime:
                                         s.GetStartTimeAndDateUnixSeconds(),
                                     }),
                                   })
-                                : (0, t.jsx)(S.K4, {
+                                : (0, t.jsx)(b.K4, {
                                     bSingleLine: !0,
                                     bOnlyDate: !0,
                                     dateAndTime:
@@ -1072,11 +1073,11 @@
                             ],
                           }),
                           (0, t.jsx)("div", {
-                            className: (0, k.A)(
+                            className: (0, D.A)(
                               f().EventSummaryText,
                               f().ShowInWideMode,
                             ),
-                            children: B,
+                            children: F,
                           }),
                         ],
                       }),
@@ -1085,26 +1086,26 @@
                 ],
               }),
               Boolean(m && s.appid) &&
-                (0, t.jsx)(R, { appid: s.appid, bHidePrice: A }),
+                (0, t.jsx)(T, { appid: s.appid, bHidePrice: E }),
             ],
           })
         );
       }
-      function R(e) {
+      function T(e) {
         const { appid: a, bHidePrice: n } = e,
           l = (0, j.$5)(a),
           { data: r } = (0, u.J$)(l),
           { data: i } = (0, u.lv)(l),
           { data: o } = (0, u.Q_)(l),
           c = (0, p.n9)(),
-          h = (0, D.Qn)();
+          h = (0, N.Qn)();
         if (!i || !r) return null;
         const _ = o && o.hide_discount_pct_for_compliance;
         return (0, t.jsx)(m.A, {
           appID: a,
           children: (0, t.jsxs)(s.Z, {
-            className: (0, k.A)(f().AppCapsuleCtn, "AppCapsuleCtn"),
-            ...(0, E.S)(r, c, h, !1),
+            className: (0, D.A)(f().AppCapsuleCtn, "AppCapsuleCtn"),
+            ...(0, S.S)(r, c, h, !1),
             children: [
               (0, t.jsx)(d.Q, {
                 id: l,
@@ -1113,34 +1114,34 @@
                   style: { minWidth: "320px" },
                 },
                 children: (0, t.jsx)("img", {
-                  className: (0, k.A)(f().AppCapsuleImage, f().CapsuleShadow),
+                  className: (0, D.A)(f().AppCapsuleImage, f().CapsuleShadow),
                   src: (0, g.b0)(i, "small_capsule"),
                   alt: r.name,
                 }),
               }),
               Boolean(!n && !r.is_free) &&
                 (0, t.jsxs)("span", {
-                  className: (0, k.A)(
+                  className: (0, D.A)(
                     f().AppCapsulePrice,
                     Boolean(null == o ? void 0 : o.discount_pct)
-                      ? A().Discounted
+                      ? E().Discounted
                       : "",
                   ),
                   children: [
                     Boolean((null == o ? void 0 : o.discount_pct) && _) &&
                       (0, t.jsx)("div", {
-                        className: A().DiscountIconCtn,
-                        children: (0, t.jsx)(L.XH_, {}),
+                        className: E().DiscountIconCtn,
+                        children: (0, t.jsx)(k.XH_, {}),
                       }),
                     Boolean((null == o ? void 0 : o.discount_pct) && !_) &&
                       (0, t.jsx)("span", {
-                        className: A().StoreSaleDiscountBox,
+                        className: E().StoreSaleDiscountBox,
                         children: `-${null == o ? void 0 : o.discount_pct}%`,
                       }),
                     o &&
                       o.final_price_in_cents &&
                       (0, t.jsx)("span", {
-                        className: A().StoreSalePriceBox,
+                        className: E().StoreSalePriceBox,
                         children: o.formatted_final_price,
                       }),
                   ],
@@ -1156,7 +1157,7 @@
       var t,
         l = n(43261),
         r = n(12611),
-        s = n(40414);
+        s = n(17267);
       function i(e, a = !1) {
         return a
           ? `${r.lw}/${e.clanAccountID}/${s.zU.GetThumbHashAndExt(e)}`
@@ -1197,7 +1198,7 @@
         d = n(62490),
         g = n(78327),
         m = n(7221),
-        u = n(40414);
+        u = n(17267);
       class p {
         constructor() {
           (this.m_curLocImageGroup = null),
@@ -1473,7 +1474,7 @@
         i = n(81047),
         o = n(17720),
         c = n(86355),
-        d = n(82429),
+        d = n(28210),
         g = n(29347),
         m = n(95695),
         u = n.n(m),
@@ -1490,7 +1491,7 @@
         A = n(71647),
         E = n.n(A),
         S = n(36509),
-        b = n(40414);
+        b = n(17267);
       const L = s.memo(function (e) {
         const {
           fileNameSearch: a,
@@ -1575,7 +1576,7 @@
               className: C().ClanImageGrid,
               children: e.map((e) =>
                 (0, t.jsx)(
-                  U,
+                  T,
                   { clanImage: e, selected: e == r, onImageSelected: l },
                   e.imageid,
                 ),
@@ -1622,8 +1623,8 @@
           k = a.file_name ? a.file_name : "",
           D = (0, g.r)(n, k, String(a.imageid), C().Hilight),
           N = b.zU.BIsClanImageVideo(a),
-          U = m && !I && !N,
           T = m && !I && !N,
+          U = m && !I && !N,
           G = m && !I && N,
           B = m && !I && !N;
         return (0, t.jsx)(p.K, {
@@ -1659,7 +1660,7 @@
                   className: C().VideoBackground,
                 }),
               }),
-              U &&
+              T &&
                 (0, t.jsx)("span", {
                   className: C().Full,
                   onClick: A,
@@ -1670,7 +1671,7 @@
                   size: "medium",
                   className: C().FloatingThrobber,
                 }),
-              T &&
+              U &&
                 (0, t.jsx)("span", {
                   className: C().Thumb,
                   onClick: () => r(a, i._o.k_eInsertThumbnail),
@@ -1763,7 +1764,7 @@
             })
           : null;
       }
-      function U(e) {
+      function T(e) {
         const { clanImage: a, onImageSelected: n, selected: l } = e;
         return (0, t.jsxs)("div", {
           className: (0, I.A)(C().ClanImageGridItem, l && C().Selected),
@@ -1781,7 +1782,7 @@
           ],
         });
       }
-      function T(e) {
+      function U(e) {
         const { clanSteamID: a, closeModal: n, OnClanImageSelected: l } = e,
           r = s.useCallback(
             (e, a) => {
@@ -1831,7 +1832,7 @@
               onClick: (e) => {
                 var l;
                 (0, _.pg)(
-                  (0, t.jsx)(T, { clanSteamID: a, OnClanImageSelected: n }),
+                  (0, t.jsx)(U, { clanSteamID: a, OnClanImageSelected: n }),
                   null !== (l = (0, j.uX)(e)) && void 0 !== l ? l : window,
                 );
               },
@@ -2039,7 +2040,7 @@
                 className: k().UploadPreviewCtn,
                 children: d.map((e) =>
                   (0, t.jsx)(
-                    U,
+                    T,
                     {
                       asset: e,
                       forceResolution: i,
@@ -2098,7 +2099,7 @@
           e.GetUploadImages().forEach((i) => {
             s.push(
               (0, t.jsx)(
-                U,
+                T,
                 {
                   asset: i,
                   forceResolution: n,
@@ -2113,7 +2114,7 @@
           s
         );
       }
-      const U = (0, r.PA)(function (e) {
+      const T = (0, r.PA)(function (e) {
         var a, n, l, r, s;
         const { asset: g, fnOnRemove: m, languageRealms: p } = e,
           h =
@@ -2191,7 +2192,7 @@
               onClick: () => m(g),
               children: (0, t.jsx)(w.sED, {}),
             }),
-            (0, t.jsx)(T, { asset: g }),
+            (0, t.jsx)(U, { asset: g }),
             I &&
               (0, t.jsx)(u.m, {
                 strDropDownClassName: _().DropDownScroll,
@@ -2282,7 +2283,7 @@
           ],
         });
       });
-      function T(e) {
+      function U(e) {
         const { asset: a } = e;
         return a.BIsVideo()
           ? (0, t.jsxs)("div", {
@@ -2359,18 +2360,18 @@
         b = n(73745),
         L = n(78327),
         k = n(66033),
-        D = n(40414),
+        D = n(17267),
         N = n(68359),
         y = n(7221),
         R = n(65606),
-        U = n(55294),
-        T = n(11260),
+        T = n(55294),
+        U = n(47887),
         G = n(50433),
         B = n(9709),
         M = n(45832),
-        O = n(76217),
-        P = n(3088),
-        F = n(10224),
+        F = n(76217),
+        O = n(3088),
+        P = n(10224),
         H = n(15496),
         z = n.n(H),
         V = n(4703);
@@ -2384,7 +2385,7 @@
             fnFilterImageURLsForKnownFailures: d,
             langOverride: g,
           } = e,
-          m = (0, F.c5)(),
+          m = (0, P.c5)(),
           u = c.useCallback(
             (e) => {
               e.preventDefault(), s && s(n);
@@ -2417,7 +2418,7 @@
           children: (0, l.jsx)("div", {
             className: z().MajorEvent_Ctn,
             ref: e.containerRef,
-            children: (0, l.jsxs)(O.Z, {
+            children: (0, l.jsxs)(F.Z, {
               className: (0, A.A)(
                 z().AppDetailsSpotlightContainer,
                 z().MajorEventContainer,
@@ -2427,7 +2428,7 @@
               children: [
                 (0, l.jsx)("div", {
                   className: z().MajorEventBackground,
-                  children: (0, l.jsx)(P.c, {
+                  children: (0, l.jsx)(O.c, {
                     className: z().MajorEventImageBackgroundBlur,
                     rgSources: j,
                     onIncrementalError: (e, a, n) => o && o(a),
@@ -2436,7 +2437,7 @@
                 (0, l.jsxs)("div", {
                   className: z().MajorEventImageContainer,
                   children: [
-                    (0, l.jsx)(P.c, {
+                    (0, l.jsx)(O.c, {
                       className: z().MajorEventImage,
                       rgSources: j,
                       onIncrementalError: (e, a, n) => o && o(a),
@@ -2451,7 +2452,7 @@
                         (0, l.jsxs)("div", {
                           className: z().MajorEventContent,
                           children: [
-                            (0, l.jsx)(P.c, {
+                            (0, l.jsx)(O.c, {
                               className: z().MajorEventSpotlightBackground,
                               rgSources: j,
                               onIncrementalError: (e, a, n) => o && o(a),
@@ -2482,7 +2483,7 @@
       }
       var Y = n(79949),
         q = n.n(Y);
-      function Z(e) {
+      function Q(e) {
         var a;
         const {
             langOverride: n,
@@ -2527,7 +2528,7 @@
                     "localized_store_app_spotlight_mobile",
                   ].includes(t),
                 ) &&
-                  (0, l.jsx)(Q, {
+                  (0, l.jsx)(Z, {
                     langOverride: n,
                     artworkType: t,
                     eventModel: o,
@@ -2596,7 +2597,7 @@
               ],
             });
       }
-      function Q(e) {
+      function Z(e) {
         const { artworkType: a, langOverride: n, eventModel: t } = e,
           r = d.Fj[a],
           s = c.useMemo(
@@ -2669,7 +2670,7 @@
             n.AnnouncementGID,
           ]);
         let h = d
-          ? (0, l.jsx)(T.fh, {
+          ? (0, l.jsx)(U.fh, {
               text: d || "",
               partnerEventStore: t,
               showErrorInfo: !1,
@@ -2735,7 +2736,7 @@
                     children: (0, l.jsx)("div", {
                       className: q().DetailExample2,
                       children: (0, l.jsx)(
-                        U.He,
+                        T.He,
                         {
                           event: n,
                           emoticonStore: s,
@@ -2860,9 +2861,9 @@
                 style: { color: "#D7BC86" },
                 children: (0, S.we)("#EventEditor_Requested"),
               }));
-        let U = null;
+        let T = null;
         "capsule" === t
-          ? (U = y
+          ? (T = y
               ? (0, l.jsxs)(l.Fragment, {
                   children: [
                     (0, l.jsxs)("p", {
@@ -2923,7 +2924,7 @@
                   ],
                 }))
           : "background" === t
-            ? (U = (0, l.jsx)(l.Fragment, {
+            ? (T = (0, l.jsx)(l.Fragment, {
                 children: (0, l.jsxs)("p", {
                   children: [
                     (0, l.jsx)("strong", {
@@ -2935,7 +2936,7 @@
                 }),
               }))
             : "spotlight" === t || "localized_store_app_spotlight" === t
-              ? (U = (0, l.jsx)(l.Fragment, {
+              ? (T = (0, l.jsx)(l.Fragment, {
                   children: (0, l.jsxs)("p", {
                     children: [
                       (0, l.jsx)("strong", {
@@ -2947,7 +2948,7 @@
                   }),
                 }))
               : "localized_store_app_spotlight_mobile" === t
-                ? (U = (0, l.jsx)(l.Fragment, {
+                ? (T = (0, l.jsx)(l.Fragment, {
                     children: (0, l.jsxs)("p", {
                       children: [
                         (0, l.jsx)("strong", {
@@ -2959,13 +2960,13 @@
                     }),
                   }))
                 : "broadcast_left" === t || "broadcast_right" === t
-                  ? (U = (0, l.jsx)(l.Fragment, {
+                  ? (T = (0, l.jsx)(l.Fragment, {
                       children: (0, l.jsx)("p", {
                         children: (0, S.we)("#selectimage_tip_broadcast_1"),
                       }),
                     }))
                   : "sale_header" === t
-                    ? (U = (0, l.jsxs)(l.Fragment, {
+                    ? (T = (0, l.jsxs)(l.Fragment, {
                         children: [
                           (0, l.jsx)("div", {
                             className: I().EventElementRequired,
@@ -3021,7 +3022,7 @@
                       }))
                     : "hero" === t
                       ? k &&
-                        (U = (0, l.jsxs)(l.Fragment, {
+                        (T = (0, l.jsxs)(l.Fragment, {
                           children: [
                             (0, l.jsx)("p", {
                               children: (0, S.we)("#selectimage_tip_hero_1"),
@@ -3039,7 +3040,7 @@
                               }),
                           ],
                         }))
-                      : (U =
+                      : (T =
                           "localized_image_group" === t ||
                           "link_capsule" === t ||
                           "sale_section_title" === t ||
@@ -3203,7 +3204,7 @@
                                           }),
                                         ],
                                       }));
-        const T = d.Fj[e.artworkType].width,
+        const U = d.Fj[e.artworkType].width,
           G = d.Fj[e.artworkType].height;
         return (0, l.jsxs)("div", {
           id: e.id,
@@ -3237,8 +3238,8 @@
               (0, l.jsxs)("div", {
                 className: (0, A.A)(h().SelectImageBlock, h().Tips),
                 children: [
-                  U,
-                  Boolean(T && G) &&
+                  T,
+                  Boolean(U && G) &&
                     (0, l.jsxs)("p", {
                       children: [
                         (0, l.jsx)("b", {
@@ -3249,7 +3250,7 @@
                         ": ",
                         (0, S.PP)(
                           "#selectimage_tip1",
-                          (0, d.qj)(T),
+                          (0, d.qj)(U),
                           (0, d.qj)(G),
                         ),
                       ],
@@ -3376,7 +3377,7 @@
                       h().SelectImageBlock,
                       h().MainPreviewBlock,
                     ),
-                    children: (0, l.jsx)(Z, {
+                    children: (0, l.jsx)(Q, {
                       eventModel: d,
                       clanSteamID: t,
                       fnOnLanguagePreviewChange: (e) => {
@@ -3482,7 +3483,7 @@
         d = n(44894);
       const g =
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NzcyREYxMUExREVBMTFFOUJFQTREQjZGQTJEQ0UzOTMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NzcyREYxMUIxREVBMTFFOUJFQTREQjZGQTJEQ0UzOTMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo3NzJERjExODFERUExMUU5QkVBNERCNkZBMkRDRTM5MyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo3NzJERjExOTFERUExMUU5QkVBNERCNkZBMkRDRTM5MyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pmk/vzIAAAFiSURBVHjaYnz79i0DCDAB8X8gVgUIIEaoSBmIIQRkvAMIIBADJMUIxBVArI0sAAYAAQTTAwNlTEgcXZDpLFDOHCC+A8Sd6FoEAAIIJBAOZKxAEoTZmAPEKSxQSZitFVCz10D5O1iQdE4AYgsouwOKBUBWvAEyRKF+RQa+QLwFIIDQHYUM/gAxC8hfb6C6QTgLKvkaiGtAikBuUAHiD0g6QZJzob5gYUEz9jXUPU+AWAYWETDwG+o9mGQGLLAFoFbcBGJFIGaDagDHCrIV6ti8ArLCFoc3wf4HCDB84YANVEC9HwPEU4B4EiycQKEqgAUjx+F3INYHYkOoZh6YC0CeEUQLS2Qbi4HYCYgvQ8P8AhC3QOMaJRjRNf4C4m3QcP8ODd4QqM0dyIGEDgKgCtmgUf8dypeBamSERoEALi8sAuUnID4AxIegbHQA18OCRTKOlGgBeSECmuH+E4nfQPWAXQwAHbJ3VkYR2TIAAAAASUVORK5CYII=";
-      var m = n(40414),
+      var m = n(17267),
         u = n(7221),
         p = n(86355),
         h = n(25359),
@@ -3716,7 +3717,7 @@
         m = n(61859),
         u = n(25359),
         p = n.n(u),
-        h = n(40414);
+        h = n(17267);
       function _(e) {
         const {
             clanImage: a,
@@ -3897,7 +3898,7 @@
       "use strict";
       n.d(a, { E: () => o, m: () => i });
       var t = n(7850),
-        l = n(82429),
+        l = n(28210),
         r = n(95695),
         s = n(52038);
       function i(e, a) {
@@ -3920,6 +3921,63 @@
             })
           : null;
       }
+    },
+    9161: (e, a, n) => {
+      "use strict";
+      n.d(a, { g: () => r });
+      var t = n(40323),
+        l = n.n(t);
+      class r {
+        static ParseCSVFile(e, a) {
+          return new Promise((n, t) => {
+            const r = {
+              header: !0,
+              skipEmptyLines: "greedy",
+              complete: n,
+              error: (e) => t({ errors: [e] }),
+              transformHeader: a,
+            };
+            l().parse(e, r);
+          });
+        }
+        static ReadFile(e) {
+          return new Promise((a, n) => {
+            const t = new FileReader();
+            (t.onload = (e) => a(t.result)), t.readAsText(e);
+          });
+        }
+        static WriteFile(e, a) {
+          let n = document.createElement("a");
+          if (navigator.msSaveBlob) navigator.msSaveBlob(e, a);
+          else {
+            const a = window.URL.createObjectURL(e);
+            n.href = a;
+          }
+          n.setAttribute("download", a), n.click();
+          try {
+            document.removeChild(n);
+          } catch (e) {}
+        }
+        static WriteCSVToFile(e, a, n, t) {
+          const s = t
+              ? l().unparse({ fields: t, data: e }, { header: !0 })
+              : l().unparse(e, { header: !0 }),
+            i = 1 == n ? ["\ufeff" + s] : [s];
+          r.WriteFile(new Blob(i, { type: "text/csv:charset=utf-8;" }), a);
+        }
+        static WriteXMLToFile(e, a) {
+          const n = () =>
+            this.m_DummyValueForQuestionHack ? "never returned" : "?";
+          let t =
+            "<" + n() + 'xml version="1.0" encoding="UTF-8" ' + n() + ">\n";
+          (t += new XMLSerializer().serializeToString(e)),
+            r.WriteFile(
+              new Blob([t], { type: "application/xml:charset=utf-8;" }),
+              a,
+            );
+        }
+      }
+      r.m_DummyValueForQuestionHack = 0;
     },
     27650: (e, a, n) => {
       "use strict";

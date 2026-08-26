@@ -231,7 +231,7 @@
     7910: (e) => {
       e.exports = { WebPinnedNotification: "_34nLZDNirxRHssbsjB_dJf" };
     },
-    9431: (e, t, r) => {
+    9267: (e, t, r) => {
       "use strict";
       r.r(t),
         r.d(t, {
@@ -20837,8 +20837,14 @@
               this.m_schUpload.Schedule(6e4, this.UploadPendingData));
         }
       }
-      (0, Be.Cg)([_o.o], Bo.prototype, "UploadPendingData", null);
-      class yo {
+      var yo;
+      (0, Be.Cg)([_o.o], Bo.prototype, "UploadPendingData", null),
+        (function (e) {
+          (e[(e.k_ENotifyFlagNone = 0)] = "k_ENotifyFlagNone"),
+            (e[(e.k_ENotifyFlagByEmail = 1)] = "k_ENotifyFlagByEmail"),
+            (e[(e.k_ENotifyFlagByPush = 2)] = "k_ENotifyFlagByPush");
+        })(yo || (yo = {}));
+      class bo {
         clanid = void 0;
         appid = 0;
         can_edit = !1;
@@ -20854,23 +20860,17 @@
           (0, Tt.Gn)(this), (this.clanid = e);
         }
       }
-      var bo;
-      (0, Be.Cg)([Tt.sH], yo.prototype, "clanid", void 0),
-        (0, Be.Cg)([Tt.sH], yo.prototype, "appid", void 0),
-        (0, Be.Cg)([Tt.sH], yo.prototype, "can_edit", void 0),
-        (0, Be.Cg)([Tt.sH], yo.prototype, "owns_app", void 0),
-        (0, Be.Cg)([Tt.sH], yo.prototype, "follows_app", void 0),
-        (0, Be.Cg)([Tt.sH], yo.prototype, "support_user", void 0),
-        (0, Be.Cg)([Tt.sH], yo.prototype, "valve_admin", void 0),
-        (0, Be.Cg)([Tt.sH], yo.prototype, "limited_user", void 0),
-        (0, Be.Cg)([Tt.sH], yo.prototype, "event_ignored", void 0),
-        (0, Be.Cg)([Tt.sH], yo.prototype, "event_followed", void 0),
-        (0, Be.Cg)([Tt.sH], yo.prototype, "event_followed_flags", void 0),
-        (function (e) {
-          (e[(e.k_ENotifyFlagNone = 0)] = "k_ENotifyFlagNone"),
-            (e[(e.k_ENotifyFlagByEmail = 1)] = "k_ENotifyFlagByEmail"),
-            (e[(e.k_ENotifyFlagByPush = 2)] = "k_ENotifyFlagByPush");
-        })(bo || (bo = {}));
+      (0, Be.Cg)([Tt.sH], bo.prototype, "clanid", void 0),
+        (0, Be.Cg)([Tt.sH], bo.prototype, "appid", void 0),
+        (0, Be.Cg)([Tt.sH], bo.prototype, "can_edit", void 0),
+        (0, Be.Cg)([Tt.sH], bo.prototype, "owns_app", void 0),
+        (0, Be.Cg)([Tt.sH], bo.prototype, "follows_app", void 0),
+        (0, Be.Cg)([Tt.sH], bo.prototype, "support_user", void 0),
+        (0, Be.Cg)([Tt.sH], bo.prototype, "valve_admin", void 0),
+        (0, Be.Cg)([Tt.sH], bo.prototype, "limited_user", void 0),
+        (0, Be.Cg)([Tt.sH], bo.prototype, "event_ignored", void 0),
+        (0, Be.Cg)([Tt.sH], bo.prototype, "event_followed", void 0),
+        (0, Be.Cg)([Tt.sH], bo.prototype, "event_followed_flags", void 0);
       class fo {
         constructor() {
           (0, Tt.Gn)(this);
@@ -20911,7 +20911,7 @@
           this.ValidateStoreDefault(t) &&
             ((0, Tt.h5)(() => {
               t.forEach((e) => {
-                let t = new yo(e.clanid),
+                let t = new bo(e.clanid),
                   r = { result: t, promise: fo.RemapToPromise(t), bLoaded: !0 };
                 this.CopyFromResponseToTrack(r, e),
                   this.m_mapClanToUserPermissions.set(e.clanid, r);
@@ -20989,7 +20989,7 @@
           );
         }
         GetPartnerEventPermissions(e) {
-          if (!e || !e.BIsValid()) return new yo(0);
+          if (!e || !e.BIsValid()) return new bo(0);
           const t = e.GetAccountID();
           this.m_mapClanToUserPermissions.has(t) ||
             this.LoadSingleAppEventPermissions(e);
@@ -21017,7 +21017,7 @@
             r ||
               ((r = {
                 promise: this.InternalLoadSingleAppEventPermissions(e),
-                result: new yo(t),
+                result: new bo(t),
                 bLoaded: !1,
               }),
               this.m_mapClanToUserPermissions.set(t, r)),
@@ -21047,7 +21047,7 @@
             r = e.GetAccountID(),
             i = !Boolean(ae.iA.logged_in);
           if (!this.m_mapClanToUserPermissions.has(r)) {
-            let t = new yo(e.GetAccountID());
+            let t = new bo(e.GetAccountID());
             this.m_mapClanToUserPermissions.set(r, {
               result: t,
               promise: fo.RemapToPromise(t),

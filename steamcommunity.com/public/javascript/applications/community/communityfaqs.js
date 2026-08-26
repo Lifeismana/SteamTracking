@@ -801,13 +801,13 @@ License: MIT
               for (
                 var D = o.indexOf(t, h),
                   y = o.indexOf(n, h),
-                  T = new RegExp(g(u) + g(c), "g"),
-                  I = o.indexOf(c, h);
+                  I = new RegExp(g(u) + g(c), "g"),
+                  N = o.indexOf(c, h);
                 ;
               )
                 if (o[h] === c)
-                  for (I = h, h++; ; ) {
-                    if (-1 === (I = o.indexOf(c, I + 1)))
+                  for (N = h, h++; ; ) {
+                    if (-1 === (N = o.indexOf(c, N + 1)))
                       return (
                         f ||
                           b.push({
@@ -819,32 +819,32 @@ License: MIT
                           }),
                         R()
                       );
-                    if (I === p - 1) return R(o.substring(h, I).replace(T, c));
-                    if (c === u && o[I + 1] === u) I++;
-                    else if (c === u || 0 === I || o[I - 1] !== u) {
-                      -1 !== D && D < I + 1 && (D = o.indexOf(t, I + 1));
-                      var N = Q(
+                    if (N === p - 1) return R(o.substring(h, N).replace(I, c));
+                    if (c === u && o[N + 1] === u) N++;
+                    else if (c === u || 0 === N || o[N - 1] !== u) {
+                      -1 !== D && D < N + 1 && (D = o.indexOf(t, N + 1));
+                      var T = Q(
                         -1 ===
-                          (y = -1 !== y && y < I + 1 ? o.indexOf(n, I + 1) : y)
+                          (y = -1 !== y && y < N + 1 ? o.indexOf(n, N + 1) : y)
                           ? D
                           : Math.min(D, y),
                       );
-                      if (o.substr(I + 1 + N, x) === t) {
-                        E.push(o.substring(h, I).replace(T, c)),
-                          o[(h = I + 1 + N + x)] !== c && (I = o.indexOf(c, h)),
+                      if (o.substr(N + 1 + T, x) === t) {
+                        E.push(o.substring(h, N).replace(I, c)),
+                          o[(h = N + 1 + T + x)] !== c && (N = o.indexOf(c, h)),
                           (D = o.indexOf(t, h)),
                           (y = o.indexOf(n, h));
                         break;
                       }
                       if (
-                        ((N = Q(y)),
-                        o.substring(I + 1 + N, I + 1 + N + v) === n)
+                        ((T = Q(y)),
+                        o.substring(N + 1 + T, N + 1 + T + v) === n)
                       ) {
                         if (
-                          (E.push(o.substring(h, I).replace(T, c)),
-                          B(I + 1 + N + v),
+                          (E.push(o.substring(h, N).replace(I, c)),
+                          B(N + 1 + T + v),
                           (D = o.indexOf(t, h)),
-                          (I = o.indexOf(c, h)),
+                          (N = o.indexOf(c, h)),
                           C && (P(), m))
                         )
                           return G();
@@ -858,7 +858,7 @@ License: MIT
                         row: j.length,
                         index: h,
                       }),
-                        I++;
+                        N++;
                     }
                   }
                 else if (i && 0 === E.length && o.substring(h, h + w) === i) {
@@ -879,7 +879,7 @@ License: MIT
               function Q(e) {
                 var t = 0;
                 return -1 !== e &&
-                  (e = o.substring(I + 1, e)) &&
+                  (e = o.substring(N + 1, e)) &&
                   "" === e.trim()
                   ? e.length
                   : t;
@@ -1492,9 +1492,9 @@ License: MIT
         F = n.n(S),
         D = n(17720),
         y = n(95695),
-        T = n.n(y),
-        I = n(25228),
-        N = n(4434),
+        I = n.n(y),
+        N = n(25228),
+        T = n(4434),
         k = n(56011),
         Q = n(91675),
         R = n(87669),
@@ -1508,7 +1508,7 @@ License: MIT
             className: y.FlexRowContainer,
             children: [
               (0, a.jsx)(z, { draft: t, eLanguage: n }),
-              (0, a.jsx)(I.t3, {
+              (0, a.jsx)(N.t3, {
                 strToolTip: (0, A.we)("#FAQEditor_Loc_Import_ttip"),
                 strLabel: (0, A.we)("#EventEditor_Loc_Import_Short"),
                 fnOnImportLocData: (e, n) =>
@@ -1542,7 +1542,7 @@ License: MIT
             ],
           });
         },
-        U = (e) => {
+        O = (e) => {
           const { draft: t } = e;
           return (0, a.jsxs)("div", {
             className: y.FlexRowContainer,
@@ -1551,7 +1551,7 @@ License: MIT
                 className: y.EditPreviewButton,
                 onClick: (e) => {
                   (0, f.pg)(
-                    (0, a.jsx)(O, {
+                    (0, a.jsx)(U, {
                       direction: "export",
                       draft: t,
                       children: " ",
@@ -1565,7 +1565,7 @@ License: MIT
                 className: y.EditPreviewButton,
                 onClick: (e) => {
                   (0, f.pg)(
-                    (0, a.jsx)(O, {
+                    (0, a.jsx)(U, {
                       direction: "import",
                       draft: t,
                       children: " ",
@@ -1578,7 +1578,7 @@ License: MIT
             ],
           });
         },
-        O = (e) => {
+        U = (e) => {
           const { closeModal: t, direction: n, draft: i } = e,
             [s, o] = r.useState(!1),
             [d, c] = r.useState(new Array()),
@@ -1636,7 +1636,7 @@ License: MIT
                   (0, a.jsx)(_.o0, {
                     strTitle: (0, A.we)("#EventEditor_Loc_Export"),
                     bAlertDialog: !0,
-                    children: (0, a.jsx)(I.Yg, {
+                    children: (0, a.jsx)(N.Yg, {
                       fnGetLocData: () =>
                         (function (e, t) {
                           var n, i;
@@ -1817,7 +1817,7 @@ License: MIT
           [c, u] = r.useState(!1),
           [h, m] = r.useState(!1),
           [g, f] = r.useState(null),
-          p = (0, N.m)("CrowdinImportDialog"),
+          p = (0, T.m)("CrowdinImportDialog"),
           x = r.useRef([]);
         if (g)
           return (0, a.jsx)(_.o0, {
@@ -1982,7 +1982,7 @@ License: MIT
           ],
         });
       }
-      var X = n(76684),
+      var X = n(34121),
         $ = n(55351),
         ee = n.n($),
         te = n(3063),
@@ -2666,9 +2666,9 @@ License: MIT
           );
         };
       var ye = n(35707),
-        Te = (n(42519), n(23809)),
-        Ie = n(61739),
-        Ne = n(88942),
+        Ie = (n(42519), n(23809)),
+        Ne = n(61739),
+        Te = n(88942),
         ke = n(56545);
       const Qe = (0, s.PA)((e) => {
           var t, n, i, s, r;
@@ -2818,7 +2818,7 @@ License: MIT
                             "#EventEditor_Loc_CrowdinIntegration_Desc",
                           ),
                         }),
-                        (0, a.jsx)(U, { draft: d }),
+                        (0, a.jsx)(O, { draft: d }),
                       ],
                     }),
                   ],
@@ -2867,8 +2867,8 @@ License: MIT
           const { draft: t } = e,
             n =
               ((function (e) {
-                const t = (0, Te.KV)();
-                (0, Ie.n)({
+                const t = (0, Ie.KV)();
+                (0, Ne.n)({
                   mutationKey: ["fetch_faq_translation", e],
                   mutationFn: async (n) => {
                     const i = ke.w.Init(Ce.PS);
@@ -2882,8 +2882,8 @@ License: MIT
                 });
               })(t.GetFAQID()),
               (function (e, t) {
-                const n = (0, Te.KV)();
-                return (0, Ne.I)({
+                const n = (0, Ie.KV)();
+                return (0, Te.I)({
                   queryKey: ["get_faq_crowdin_metadata", e, t],
                   queryFn: async () => {
                     const i = ke.w.Init(Ce.lk);
@@ -2932,8 +2932,8 @@ License: MIT
         Pe = n(1909),
         Me = n(26759),
         Ve = n(54736),
-        Ue = n(59461),
-        Oe = n(51520);
+        Oe = n(59461),
+        Ue = n(51520);
       const ze = (0, s.PA)((e) => {
           const { draft: t } = e,
             n = t.BNeedsSaving();
@@ -2944,7 +2944,7 @@ License: MIT
             children: (0, a.jsxs)("span", {
               children: [
                 !n &&
-                  (0, a.jsx)("img", { className: Oe.SavedImage, src: Ue.A }),
+                  (0, a.jsx)("img", { className: Ue.SavedImage, src: Oe.A }),
                 (0, A.we)(n ? "#Button_Save" : "#Button_Saved"),
               ],
             }),
@@ -3040,7 +3040,7 @@ License: MIT
                 (0, a.jsx)(m, {
                   route: n ? i.k_eCommunityEdit : i.k_eCommunityDashboard,
                   faqid: t.GetFAQID(),
-                  className: T().EditPreviewButton,
+                  className: I().EditPreviewButton,
                   children: (0, A.we)(
                     n ? "#FAQEditor_EditFAQ" : "#EventDisplay_EventsDashBtn",
                   ),
@@ -3072,7 +3072,7 @@ License: MIT
                   ],
                 }),
                 (0, a.jsxs)("div", {
-                  className: T().EventOptions,
+                  className: I().EventOptions,
                   children: [
                     (0, a.jsx)(Pe.Ng, {
                       selectedLang: fe.O.Get().GetCurEditLanguage(),
@@ -3089,7 +3089,7 @@ License: MIT
                       (0, a.jsx)(m, {
                         route: i.k_eCommunityPreview,
                         faqid: t.GetFAQID(),
-                        className: T().EditPreviewButton,
+                        className: I().EditPreviewButton,
                         children: (0, A.we)("#Button_Preview"),
                       }),
                   ],
@@ -3179,15 +3179,15 @@ License: MIT
               !!(null == o ? void 0 : o.last_publish_timestamp);
           return (0, a.jsx)(xe.tH, {
             children: (0, a.jsx)("div", {
-              className: (0, w.A)(T().SaveBackground),
+              className: (0, w.A)(I().SaveBackground),
               children: (0, a.jsxs)("div", {
-                className: T().FlexRowWrapFlexStartContainer,
+                className: I().FlexRowWrapFlexStartContainer,
                 style: { width: "unset", justifyContent: "center" },
                 children: [
                   (0, a.jsx)(ze, { draft: t }),
                   Boolean(d) &&
                     (0, a.jsx)("div", {
-                      className: T().EditPreviewButton,
+                      className: I().EditPreviewButton,
                       children: (0, a.jsx)("a", {
                         href: h.TS.HELP_BASE_URL + "faqs/view/" + s.url_code,
                         children: (0, A.we)("#FAQEditir_ViewLiveFAQ"),
@@ -3229,10 +3229,10 @@ License: MIT
                     children: (0, a.jsx)("div", {
                       className: Ae().FAQEditor,
                       children: (0, a.jsxs)("div", {
-                        className: (0, w.A)(T().Columns, Ae().Columns),
+                        className: (0, w.A)(I().Columns, Ae().Columns),
                         children: [
                           (0, a.jsxs)("div", {
-                            className: (0, w.A)(T().LeftCol, Ae().LeftCol),
+                            className: (0, w.A)(I().LeftCol, Ae().LeftCol),
                             children: [
                               (0, a.jsx)(et, { draft: n, eLanguage: o }),
                               (0, a.jsx)(tt, {
@@ -3245,7 +3245,7 @@ License: MIT
                           (0, a.jsx)($e, {
                             draft: n,
                             bbcodeEditorRef: s,
-                            className: (0, w.A)(T().RightCol, Ae().RightCol),
+                            className: (0, w.A)(I().RightCol, Ae().RightCol),
                           }),
                         ],
                       }),
@@ -3662,7 +3662,7 @@ License: MIT
                 }),
               });
         });
-      var xt = n(82429),
+      var xt = n(28210),
         vt = n(6813),
         wt = n(97058);
       const At = {
@@ -4133,63 +4133,6 @@ License: MIT
             }),
           });
         };
-    },
-    9161: (e, t, n) => {
-      "use strict";
-      n.d(t, { g: () => s });
-      var i = n(40323),
-        a = n.n(i);
-      class s {
-        static ParseCSVFile(e, t) {
-          return new Promise((n, i) => {
-            const s = {
-              header: !0,
-              skipEmptyLines: "greedy",
-              complete: n,
-              error: (e) => i({ errors: [e] }),
-              transformHeader: t,
-            };
-            a().parse(e, s);
-          });
-        }
-        static ReadFile(e) {
-          return new Promise((t, n) => {
-            const i = new FileReader();
-            (i.onload = (e) => t(i.result)), i.readAsText(e);
-          });
-        }
-        static WriteFile(e, t) {
-          let n = document.createElement("a");
-          if (navigator.msSaveBlob) navigator.msSaveBlob(e, t);
-          else {
-            const t = window.URL.createObjectURL(e);
-            n.href = t;
-          }
-          n.setAttribute("download", t), n.click();
-          try {
-            document.removeChild(n);
-          } catch (e) {}
-        }
-        static WriteCSVToFile(e, t, n, i) {
-          const r = i
-              ? a().unparse({ fields: i, data: e }, { header: !0 })
-              : a().unparse(e, { header: !0 }),
-            o = 1 == n ? ["\ufeff" + r] : [r];
-          s.WriteFile(new Blob(o, { type: "text/csv:charset=utf-8;" }), t);
-        }
-        static WriteXMLToFile(e, t) {
-          const n = () =>
-            this.m_DummyValueForQuestionHack ? "never returned" : "?";
-          let i =
-            "<" + n() + 'xml version="1.0" encoding="UTF-8" ' + n() + ">\n";
-          (i += new XMLSerializer().serializeToString(e)),
-            s.WriteFile(
-              new Blob([i], { type: "application/xml:charset=utf-8;" }),
-              t,
-            );
-        }
-      }
-      s.m_DummyValueForQuestionHack = 0;
     },
     87669: (e, t, n) => {
       "use strict";

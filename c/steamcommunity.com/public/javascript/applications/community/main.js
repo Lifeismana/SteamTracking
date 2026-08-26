@@ -14882,9 +14882,14 @@
         const _ = _(_.current),
           _ = _.useCallback(
             (_) => {
+              var _;
               (document.hasFocus() || document.activeElement != _.current) &&
                 (_.currentTarget == _.current
-                  ? (_.BIsActive() || _.bInVR) && _.DelayHideVirtualKeyboard()
+                  ? (null === (_ = _.detail.focusedNode) || void 0 === _
+                      ? void 0
+                      : _.Element) != _.current &&
+                    (_.BIsActive() || _.bInVR) &&
+                    _.DelayHideVirtualKeyboard()
                   : console.warn(
                       "keyboard got blur event, but it's not the active element",
                     ));
@@ -47223,7 +47228,7 @@
         constructor(_ = null) {
           super(),
             _.prototype.type || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [3], null);
+            _.Message.initialize(this, _, 0, -1, [3, 9], null);
         }
         static M() {
           return (
@@ -47272,6 +47277,14 @@
                     _: 8,
                     _: _._.readBool,
                     _: _._.writeBool,
+                  },
+                  survey_interactive_elements: {
+                    _: 9,
+                    _: !0,
+                    _: !0,
+                    _: _._.readEnum,
+                    pbr: _._.readPackedEnum,
+                    _: _._.writeRepeatedEnum,
                   },
                   required_age: {
                     _: 10,
@@ -50238,8 +50251,81 @@
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
           super(),
+            _.prototype.quote || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  quote: {
+                    _: 1,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  score: {
+                    _: 2,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  site: {
+                    _: 3,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  url: {
+                    _: 4,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "StoreItem_PressReview";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
             _.prototype.steam_award || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1, 10, 13], null);
+            _.Message.initialize(this, _, 0, -1, [1, 10, 13, 15, 18], null);
         }
         static M() {
           return (
@@ -50317,6 +50403,30 @@
                     _: 14,
                     _: _._.readString,
                     _: _._.writeString,
+                  },
+                  interactive_elements: {
+                    _: 15,
+                    _: !0,
+                    _: !0,
+                    _: _._.readEnum,
+                    pbr: _._.readPackedEnum,
+                    _: _._.writeRepeatedEnum,
+                  },
+                  content_survey_notes: {
+                    _: 16,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  content_survey_ai_notes: {
+                    _: 17,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  press_review: {
+                    _: 18,
+                    _: _,
+                    _: !0,
+                    _: !0,
                   },
                 },
               }),
@@ -54962,6 +55072,66 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        return (0, _._)(
+          (_) => {
+            if (!_) return;
+            const _ = _(_.ownerDocument.defaultView, (_) => {
+              _(_[0]);
+            });
+            return _.observe(_), () => _.unobserve(_);
+          },
+          [_, _],
+        );
+      }
+      function _(_) {
+        return _(
+          _,
+          _.useCallback(
+            (_, _) =>
+              _.ResizeObserver
+                ? new _.ResizeObserver(_)
+                : ((0, _._)(!1, "ResizeObserver is not available"),
+                  {
+                    observe: () => {},
+                    unobserve: () => {},
+                    disconnect: () => {},
+                  }),
+            [],
+          ),
+        );
+      }
+      function _(_, _) {
+        const _ = _.useRef(void 0);
+        return (function (_, _) {
+          return _(
+            _,
+            _.useCallback((_, _) => new _.IntersectionObserver(_, _), [_]),
+          );
+        })((_) => {
+          var _, _, _;
+          !_.current &&
+            _.isIntersecting &&
+            (null === (_ = _.onEnter) || void 0 === _ || _.call(_, _)),
+            _.current &&
+              !_.isIntersecting &&
+              (null === (_ = _.onLeave) || void 0 === _ || _.call(_, _)),
+            null === (_ = _.onIntersectionChange) ||
+              void 0 === _ ||
+              _.call(_, _),
+            (_.current = _.isIntersecting);
+        }, _);
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
         _: () => _,
         _: () => _,
       });
@@ -55860,6 +56030,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -56003,6 +56174,14 @@
       function _(_) {
         const _ = (0, _._)();
         return (0, _._)(_(_, _));
+      }
+      function _(_) {
+        const _ = (0, _._)();
+        return (0, _._)(
+          (function (_, _) {
+            return _(_, _, "apply_user_filters", "user_filter_failure");
+          })(_, _),
+        );
       }
       function _(_, _) {
         return _(_, _, "include_full_description", "full_description_bbcode");
@@ -63088,7 +63267,9 @@
             (this.m_rgEmoticons = []),
             (this.m_setEmoticonOwned = new Set()),
             (this.m_rgFlairs = []),
+            (this.m_rgRecentEmoticons = void 0),
             (this.m_rgStickers = []),
+            (this.m_rgRecentStickers = void 0),
             (this.m_rgEffects = []),
             (this.m_rtLastStickerOrEffect = Number.MIN_SAFE_INTEGER),
             (this.m_emoticonTrackerCallback = null),
@@ -63196,16 +63377,16 @@
           return this.m_rgFlairs.filter((_) => _.flairGroupID === _);
         }
         get recent_emoticons() {
-          return (
-            this.m_rgRecentEmoticons || this.BuildRecentEmoticonList(),
-            this.m_rgRecentEmoticons
-          );
+          var _;
+          return null !== (_ = this.m_rgRecentEmoticons) && void 0 !== _
+            ? _
+            : this.BuildRecentEmoticonList();
         }
         get recent_stickers() {
-          return (
-            this.m_rgRecentStickers || this.BuildRecentStickerList(),
-            this.m_rgRecentStickers
-          );
+          var _;
+          return null !== (_ = this.m_rgRecentStickers) && void 0 !== _
+            ? _
+            : this.BuildRecentStickerList();
         }
         SetEmoticonTrackerCallback(_) {
           this.m_emoticonTrackerCallback = _;
@@ -63214,6 +63395,7 @@
           this.m_stickerTrackerCallback = _;
         }
         TrackEmoticonUsage(_, _) {
+          var _, _;
           if (!this.m_bInitialized) return;
           this.m_emoticonTrackerCallback &&
             this.m_emoticonTrackerCallback(_, _);
@@ -63227,20 +63409,26 @@
           let _ = !1;
           if (_.size) {
             if (void 0 !== this.m_rgRecentEmoticons)
-              for (let _ of this.m_rgRecentEmoticons)
-                _.has(_.name) &&
+              for (let _ of this.m_rgRecentEmoticons) {
+                const _ = _.get(_.name);
+                void 0 !== _ &&
                   ((_.last_used = _),
-                  (_.use_count += _.get(_.name)),
+                  (_.use_count =
+                    (null !== (_ = _.use_count) && void 0 !== _ ? _ : 0) + _),
                   _.delete(_.name),
                   _.time_received && ((_ = !0), delete _.time_received));
+              }
             if (_.size)
-              for (let _ of this.m_rgEmoticons)
-                _.has(_.name) &&
+              for (let _ of this.m_rgEmoticons) {
+                const _ = _.get(_.name);
+                void 0 !== _ &&
                   ((_.last_used = _),
-                  (_.use_count += _.get(_.name)),
+                  (_.use_count =
+                    (null !== (_ = _.use_count) && void 0 !== _ ? _ : 0) + _),
                   delete _.time_received,
                   void 0 !== this.m_rgRecentEmoticons &&
                     this.m_rgRecentEmoticons.push(_));
+              }
             if (
               void 0 !== this.m_rgRecentEmoticons &&
               (this.BuildRecentEmoticonList(), _)
@@ -63256,13 +63444,16 @@
           }
         }
         TrackStickerUsage(_, _) {
+          var _;
           if (!this.m_bInitialized) return;
           this.m_stickerTrackerCallback && this.m_stickerTrackerCallback(_, _);
           const _ = this.m_rgStickers.find(({ name: _ }) => _ === _);
-          (_.last_used = _),
-            (_.use_count += 1),
+          _ &&
+            ((_.last_used = _),
+            (_.use_count =
+              (null !== (_ = _.use_count) && void 0 !== _ ? _ : 0) + 1),
             delete _.time_received,
-            this.BuildRecentStickerList();
+            this.BuildRecentStickerList());
         }
         RequestEmoticonList() {
           !this.m_bEmoticonListRequested &&
@@ -63271,10 +63462,18 @@
             this.RequestEmoticonListInternal());
         }
         BuildRecentEmoticonList() {
-          this.m_rgRecentEmoticons = this.BuildRecentList(this.m_rgEmoticons);
+          return (
+            (this.m_rgRecentEmoticons = this.BuildRecentList(
+              this.m_rgEmoticons,
+            )),
+            this.m_rgRecentEmoticons
+          );
         }
         BuildRecentStickerList() {
-          this.m_rgRecentStickers = this.BuildRecentList(this.m_rgStickers);
+          return (
+            (this.m_rgRecentStickers = this.BuildRecentList(this.m_rgStickers)),
+            this.m_rgRecentStickers
+          );
         }
         BuildRecentList(_) {
           const _ = this.GetServerTime() - _,
@@ -63284,8 +63483,8 @@
           return (
             __webpack_require__.sort(
               (_, _) =>
-                (_.last_used || _.time_received) -
-                (_.last_used || _.time_received),
+                (_.last_used || _.time_received || 0) -
+                (_.last_used || _.time_received || 0),
             ),
             __webpack_require__.slice(0, 50)
           );
@@ -63298,17 +63497,24 @@
           let _ = this.GetServerTime() - _;
           for (let _ of _) {
             let _ = _.name;
-            _.startsWith("^")
-              ? this.m_rgFlairs.push({
-                  name: _.match(new RegExp(/:(.*):/))[1],
-                  flairGroupID: _.match(new RegExp(/\^(.*)\^/))[1],
-                })
-              : (!_.last_used && _.time_received > _
-                  ? (!this.m_rtMostRecentEmoticon ||
-                      _.time_received > this.m_rtMostRecentEmoticon) &&
-                    (this.m_rtMostRecentEmoticon = _.time_received)
-                  : delete _.time_received,
-                this.m_rgEmoticons.push(_));
+            if (_.startsWith("^")) {
+              const _ = _.match(new RegExp(/:(.*):/)),
+                _ = _.match(new RegExp(/\^(.*)\^/));
+              _ &&
+                _ &&
+                this.m_rgFlairs.push({
+                  name: _[1],
+                  flairGroupID: _[1],
+                });
+            } else {
+              const _ = _.time_received;
+              !_.last_used && _ && _ > _
+                ? (!this.m_rtMostRecentEmoticon ||
+                    _ > this.m_rtMostRecentEmoticon) &&
+                  (this.m_rtMostRecentEmoticon = _)
+                : delete _.time_received,
+                this.m_rgEmoticons.push(_);
+            }
           }
           (this.m_setEmoticonOwned = new Set(
             this.m_rgEmoticons.map((_) => _.name_normalized || _.name),
@@ -63364,22 +63570,23 @@
             if (_.data.emoticons)
               for (let _ of _.data.emoticons) {
                 let _ = _.name;
-                if (_.startsWith("^"))
-                  _.push({
-                    name: _,
-                  });
-                else {
-                  let _ = {
-                      name: _.substr(1, _.length - 2),
-                    },
-                    _ = _.name.toLowerCase();
-                  _ != _.name && (_.name_normalized = _),
-                    _.time_last_used && (_.last_used = _.time_last_used),
-                    _.use_count && (_.use_count = _.use_count),
-                    _.time_received && (_.time_received = _.time_received),
-                    _.appid && (_.appid = _.appid),
-                    _.push(_);
-                }
+                if (_)
+                  if (_.startsWith("^"))
+                    _.push({
+                      name: _,
+                    });
+                  else {
+                    let _ = {
+                        name: _.substr(1, _.length - 2),
+                      },
+                      _ = _.name.toLowerCase();
+                    _ != _.name && (_.name_normalized = _),
+                      _.time_last_used && (_.last_used = _.time_last_used),
+                      _.use_count && (_.use_count = _.use_count),
+                      _.time_received && (_.time_received = _.time_received),
+                      _.appid && (_.appid = _.appid),
+                      _.push(_);
+                  }
               }
           } catch (_) {
             console.error("error loading emoticon list", _);
@@ -87021,15 +87228,16 @@
             (_[(_.ControllerPairing = 1)] = "ControllerPairing"),
             (_[(_.WelcomeToSteamFrame = 2)] = "WelcomeToSteamFrame"),
             (_[(_.PlayspaceSetup = 3)] = "PlayspaceSetup"),
-            (_[(_.SystemButtonHideDashboard = 4)] =
+            (_[(_.LaserMouse = 4)] = "LaserMouse"),
+            (_[(_.SystemButtonHideDashboard = 5)] =
               "SystemButtonHideDashboard"),
-            (_[(_.SystemButtonDashboardHidden = 5)] =
+            (_[(_.SystemButtonDashboardHidden = 6)] =
               "SystemButtonDashboardHidden"),
-            (_[(_.SystemButtonShowDashboard = 6)] =
+            (_[(_.SystemButtonShowDashboard = 7)] =
               "SystemButtonShowDashboard"),
-            (_[(_.PairWifiDongle = 7)] = "PairWifiDongle"),
-            (_[(_.TourSendOff = 8)] = "TourSendOff"),
-            (_[(_.SteamGuidedTourFinished = 9)] = "SteamGuidedTourFinished");
+            (_[(_.PairWifiDongle = 8)] = "PairWifiDongle"),
+            (_[(_.TourSendOff = 9)] = "TourSendOff"),
+            (_[(_.SteamGuidedTourFinished = 10)] = "SteamGuidedTourFinished");
         })(_ || (_ = {})),
         (function (_) {
           (_[(_.None = 0)] = "None"),
@@ -88213,6 +88421,7 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         switch (_) {
@@ -88292,7 +88501,7 @@
           { data: _ } = (0, _._)({
             appid: _,
           });
-        return _ && 0 != _.length && _._.IMG_URL
+        return _ && 0 != _.length
           ? (0, _.jsxs)(_.Fragment, {
               children: [
                 (0, _.jsx)("div", {
@@ -88331,7 +88540,7 @@
               [_],
             );
           })(_);
-        return _ && 0 != _.length && _._.IMG_URL
+        return _ && 0 != _.length
           ? (0, _.jsxs)(_.Fragment, {
               children: [
                 (0, _.jsx)("div", {
@@ -88354,7 +88563,7 @@
       const _ = [_._._, _._._, _._._, _._._, _._._, _._._, _._._];
       function _(_) {
         const { _: _, rgSocialMedia: _, className: _ } = _,
-          _ = (0, _._)();
+          _ = _._.EREALM === _._.k_ESteamRealmChina;
         return (0, _.jsx)("div", {
           className: (0, _._)(_().AppSocialLinks, _),
           children: __webpack_require__
@@ -93008,7 +93217,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { popup: _, className: _, ..._ } = _,
@@ -93043,6 +93251,8 @@
               })
         );
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = (_) =>
         (function (_) {
           const _ = (0, _._)().ownerWindow,
@@ -93071,6 +93281,30 @@
           ..._,
         });
       function _(_) {
+        const {
+            popup: _,
+            children: _,
+            bFitToContent: _,
+            className: _,
+            ..._
+          } = _,
+          _ = _.useCallback(
+            (_) => {
+              const _ = Math.ceil(_.borderBoxSize[0].inlineSize),
+                _ = Math.ceil(_.borderBoxSize[0].blockSize);
+              null == _ || _.SteamClient.Window.ResizeTo(_, _, !0);
+            },
+            [_],
+          ),
+          _ = (0, _._)(_);
+        return (0, _.jsx)("div", {
+          className: (0, _._)("PopupFullWindow", _ && "FitToContent", _),
+          ref: _ ? _ : void 0,
+          ..._,
+          children: _,
+        });
+      }
+      function _(_) {
         var _;
         const {
             strName: _,
@@ -93079,6 +93313,7 @@
             popupHeight: _,
             browserType: _,
             onDismiss: _,
+            bFitToContent: _,
             refPopup: _,
             children: _,
             titleBarClassName: _,
@@ -93144,8 +93379,9 @@
               (0, _.jsxs)(_._, {
                 ownerWindow: _,
                 children: [
-                  (0, _.jsxs)("div", {
-                    className: "PopupFullWindow",
+                  (0, _.jsxs)(_, {
+                    popup: _,
+                    bFitToContent: _,
                     onContextMenu: _._,
                     children: [
                       (0, _.jsx)(_._, {
@@ -93164,6 +93400,7 @@
                     ],
                   }),
                   _.resizable &&
+                    !_ &&
                     (0, _.jsx)(_, {
                       popup: _,
                     }),
@@ -95726,172 +95963,178 @@
         });
       }
       function _(_) {
-        const { fullcolor: _, gradient: _ = !1, inset: _ = !1, ..._ } = _,
-          [_, _] = (0, _._)(),
-          [_, _] = (0, _._)(),
+        const {
+            shape: _ = "full",
+            fullcolor: _,
+            gradient: _ = !1,
+            inset: _ = !1,
+            ..._
+          } = _,
           [_, _] = (0, _._)(),
           [_, _] = (0, _._)(),
           [_, _] = (0, _._)();
-        return _
-          ? (0, _.jsxs)("svg", {
-              xmlns: "http://www.w3.org/2000/svg",
-              viewBox: "0 0 36 36",
-              fill: "none",
-              ..._,
-              children: [
-                (0, _.jsx)("path", {
-                  stroke: _,
-                  fill: _,
-                  _: "M10.1777 10.0258L10.3929 9.80693V9.49999V5.52777H14.2857H14.6001L14.8205 5.30358L18 2.06976L21.1795 5.30358L21.3999 5.52777H21.7143H25.6071V9.50001V9.80696L25.8223 10.0258L28.5553 12.8055L25.8223 15.5853L25.6071 15.8041V16.1111V20.0833H21.7143H21.3999L21.1795 20.3075L18 23.5413L14.8205 20.3075L14.6001 20.0833H14.2857H10.3929V16.1111V15.8042L10.1777 15.5853L7.44464 12.8055L10.1777 10.0258ZM14.7399 28.0317L11.56 33.4221L9.85164 29.9469L9.6456 29.5278H9.17857H6.29474L8.68445 25.3611H12.1142L14.7399 28.0317ZM26.8214 29.5278H26.3544L26.1484 29.9469L24.44 33.4221L21.2601 28.0317L23.8858 25.3611H27.3155L29.7053 29.5278H26.8214Z",
-                  strokeWidth: "1.5",
-                }),
-                (0, _.jsx)("circle", {
-                  stroke: "#FFAB2C",
-                  fill: "#FFC82C",
-                  _: "18",
-                  _: "13",
-                  _: "5.5",
-                }),
-                (0, _.jsxs)("defs", {
-                  children: [
-                    (0, _.jsxs)("linearGradient", {
+        if (_)
+          return (0, _.jsxs)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            ..._,
+            children: [
+              (0, _.jsx)("path", {
+                stroke: _,
+                fill: _,
+                _: "M10.1777 10.0258L10.3929 9.80693V9.49999V5.52777H14.2857H14.6001L14.8205 5.30358L18 2.06976L21.1795 5.30358L21.3999 5.52777H21.7143H25.6071V9.50001V9.80696L25.8223 10.0258L28.5553 12.8055L25.8223 15.5853L25.6071 15.8041V16.1111V20.0833H21.7143H21.3999L21.1795 20.3075L18 23.5413L14.8205 20.3075L14.6001 20.0833H14.2857H10.3929V16.1111V15.8042L10.1777 15.5853L7.44464 12.8055L10.1777 10.0258ZM14.7399 28.0317L11.56 33.4221L9.85164 29.9469L9.6456 29.5278H9.17857H6.29474L8.68445 25.3611H12.1142L14.7399 28.0317ZM26.8214 29.5278H26.3544L26.1484 29.9469L24.44 33.4221L21.2601 28.0317L23.8858 25.3611H27.3155L29.7053 29.5278H26.8214Z",
+                strokeWidth: "1.5",
+              }),
+              (0, _.jsx)("circle", {
+                stroke: "#FFAB2C",
+                fill: "#FFC82C",
+                _: "18",
+                _: "13",
+                _: "5.5",
+              }),
+              (0, _.jsxs)("defs", {
+                children: [
+                  (0, _.jsxs)("linearGradient", {
+                    _: _,
+                    _: "7.08",
+                    _: "3.72",
+                    _: "33.6694",
+                    _: "25.0697",
+                    gradientUnits: "userSpaceOnUse",
+                    children: [
+                      (0, _.jsx)("stop", {
+                        stopColor: "#0056D6",
+                      }),
+                      (0, _.jsx)("stop", {
+                        offset: "1",
+                        stopColor: "#1A9FFF",
+                      }),
+                    ],
+                  }),
+                  (0, _.jsxs)("linearGradient", {
+                    _: _,
+                    _: "7.08",
+                    _: "3.72",
+                    _: "33.6694",
+                    _: "25.0697",
+                    gradientUnits: "userSpaceOnUse",
+                    children: [
+                      (0, _.jsx)("stop", {
+                        stopColor: "#0056D6",
+                      }),
+                      (0, _.jsx)("stop", {
+                        offset: "1",
+                        stopColor: "#1A9FFF",
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+            ],
+          });
+        {
+          const _ = "full" == _ ? "0 0 36 36" : "0 0 10 22",
+            _ =
+              "full" == _
+                ? (0, _.jsxs)(_.Fragment, {
+                    children: [
+                      (0, _.jsx)("path", {
+                        _: "M9.64304 9.49988L6.39294 12.8055L9.64304 16.1112V20.8333H14.2858L18.0001 24.6111L21.7143 20.8333H26.3573V16.111L29.6072 12.8055L26.3573 9.50012V4.77777H21.7143L18.0001 1L14.2858 4.77777H9.64304V9.49988ZM22.6432 12.8056C22.6432 15.4136 20.5645 17.5278 18.0004 17.5278C15.4362 17.5278 13.3575 15.4136 13.3575 12.8056C13.3575 10.1976 15.4362 8.08334 18.0004 8.08334C20.5645 8.08334 22.6432 10.1976 22.6432 12.8056Z",
+                      }),
+                      (0, _.jsx)("path", {
+                        _: "M5 30.2778L8.25 24.6111H12.4286L15.6786 27.9167L11.5 35L9.17857 30.2778H5Z",
+                      }),
+                      (0, _.jsx)("path", {
+                        _: "M30.9999 30.2778L27.7499 24.6111H23.5713L20.3213 27.9167L24.4999 35L26.8213 30.2778H30.9999Z",
+                      }),
+                    ],
+                  })
+                : (0, _.jsx)(_.Fragment, {
+                    children: (0, _.jsx)("path", {
+                      _: "M9.96973 19.25H7.21973L5.84473 22L3.16992 17.5449L5.08887 15.6885L7.83887 15.6475L9.96973 19.25ZM3.9541 2.16602L7.06836 2.21387L7.11621 5.32812L9.28223 7.5625L7.11621 9.79688L7.06836 12.9111L3.9541 12.959L1.71973 15.125L0.285156 13.7344L0 13.2549L0.046875 10.1631C0.545723 10.484 1.12582 10.6562 1.71973 10.6562C2.12609 10.6572 2.52867 10.5779 2.9043 10.4229C3.28006 10.2677 3.62172 10.0394 3.90918 9.75195C4.19664 9.46449 4.42492 9.12283 4.58008 8.74707C4.73511 8.37144 4.81438 7.96887 4.81348 7.5625C4.81348 6.95061 4.63194 6.35251 4.29199 5.84375C3.95205 5.33499 3.46862 4.93826 2.90332 4.7041C2.33811 4.47006 1.71621 4.40898 1.11621 4.52832C0.832866 4.58468 0.560859 4.68094 0.306641 4.81152L0.0517578 4.54785L0.0078125 1.65918L1.71973 0L3.9541 2.16602Z",
+                    }),
+                  });
+          return (0, _.jsxs)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            preserveAspectRatio: "meet",
+            viewBox: _,
+            fill: "none",
+            ..._,
+            children: [
+              (0, _.jsxs)("defs", {
+                children: [
+                  _ &&
+                    (0, _.jsxs)("filter", {
                       _: _,
-                      _: "7.08",
-                      _: "3.72",
-                      _: "33.6694",
-                      _: "25.0697",
-                      gradientUnits: "userSpaceOnUse",
                       children: [
-                        (0, _.jsx)("stop", {
-                          stopColor: "#0056D6",
+                        (0, _.jsx)("feGaussianBlur", {
+                          _: "SourceAlpha",
+                          stdDeviation: "0.5",
+                          result: "blur",
                         }),
-                        (0, _.jsx)("stop", {
-                          offset: "1",
-                          stopColor: "#1A9FFF",
+                        (0, _.jsx)("feOffset", {
+                          _: "1",
+                          _: "1",
+                          result: "offset",
+                        }),
+                        (0, _.jsx)("feComposite", {
+                          operator: "out",
+                          _: "SourceAlpha",
+                          in2: "offset",
+                          result: "inverse",
+                        }),
+                        (0, _.jsx)("feFlood", {
+                          floodColor: "#000000",
+                          floodOpacity: "0.6",
+                          result: "color",
+                        }),
+                        (0, _.jsx)("feComposite", {
+                          operator: "in",
+                          _: "color",
+                          in2: "inverse",
+                          result: "shadow",
+                        }),
+                        (0, _.jsx)("feComposite", {
+                          operator: "in",
+                          _: "shadow",
+                          in2: "SourceAlpha",
                         }),
                       ],
                     }),
+                  _ &&
                     (0, _.jsxs)("linearGradient", {
                       _: _,
-                      _: "7.08",
-                      _: "3.72",
-                      _: "33.6694",
-                      _: "25.0697",
-                      gradientUnits: "userSpaceOnUse",
+                      _: "0",
+                      _: "1",
+                      _: "0",
+                      _: "0",
                       children: [
                         (0, _.jsx)("stop", {
-                          stopColor: "#0056D6",
+                          offset: "0%",
+                          stopColor: "var(--gradient-from, black)",
                         }),
                         (0, _.jsx)("stop", {
-                          offset: "1",
-                          stopColor: "#1A9FFF",
+                          offset: "100%",
+                          stopColor: "var(--gradient-to, white)",
                         }),
                       ],
                     }),
-                  ],
+                ],
+              }),
+              (0, _.jsx)("g", {
+                fill: _ ? _ : "currentColor",
+                children: _,
+              }),
+              _ &&
+                (0, _.jsx)("g", {
+                  fill: "#000000",
+                  filter: _,
+                  children: _,
                 }),
-              ],
-            })
-          : (0, _.jsxs)("svg", {
-              xmlns: "http://www.w3.org/2000/svg",
-              viewBox: "0 0 36 36",
-              fill: "none",
-              ..._,
-              children: [
-                (0, _.jsxs)("defs", {
-                  children: [
-                    _ &&
-                      (0, _.jsx)(_.Fragment, {
-                        children: (0, _.jsxs)("filter", {
-                          _: _,
-                          children: [
-                            (0, _.jsx)("feGaussianBlur", {
-                              _: "SourceAlpha",
-                              stdDeviation: "0.5",
-                              result: "blur",
-                            }),
-                            (0, _.jsx)("feOffset", {
-                              _: "1",
-                              _: "1",
-                              result: "offset",
-                            }),
-                            (0, _.jsx)("feComposite", {
-                              operator: "out",
-                              _: "SourceAlpha",
-                              in2: "offset",
-                              result: "inverse",
-                            }),
-                            (0, _.jsx)("feFlood", {
-                              "flood-color": "#000000",
-                              "flood-opacity": "0.6",
-                              result: "color",
-                            }),
-                            (0, _.jsx)("feComposite", {
-                              operator: "in",
-                              _: "color",
-                              in2: "inverse",
-                              result: "shadow",
-                            }),
-                            (0, _.jsx)("feComposite", {
-                              operator: "in",
-                              _: "shadow",
-                              in2: "SourceAlpha",
-                              result: "finalShadow",
-                            }),
-                            (0, _.jsxs)("feMerge", {
-                              children: [
-                                (0, _.jsx)("feMergeNode", {
-                                  _: "SourceGraphic",
-                                }),
-                                (0, _.jsx)("feMergeNode", {
-                                  _: "finalShadow",
-                                }),
-                              ],
-                            }),
-                          ],
-                        }),
-                      }),
-                    _ &&
-                      (0, _.jsxs)("linearGradient", {
-                        _: _,
-                        _: "0",
-                        _: "1",
-                        _: "0",
-                        _: "0",
-                        children: [
-                          (0, _.jsx)("stop", {
-                            offset: "0%",
-                            "stop-color": "var(--gradient-from, black)",
-                          }),
-                          (0, _.jsx)("stop", {
-                            offset: "100%",
-                            "stop-color": "var(--gradient-to, white)",
-                          }),
-                        ],
-                      }),
-                  ],
-                }),
-                (0, _.jsxs)("g", {
-                  filter: _ ? _ : void 0,
-                  children: [
-                    (0, _.jsx)("path", {
-                      fill: _ ? _ : "currentColor",
-                      fillRule: "evenodd",
-                      clipRule: "evenodd",
-                      _: "M9.64304 9.49988L6.39294 12.8055L9.64304 16.1112V20.8333H14.2858L18.0001 24.6111L21.7143 20.8333H26.3573V16.111L29.6072 12.8055L26.3573 9.50012V4.77777H21.7143L18.0001 1L14.2858 4.77777H9.64304V9.49988ZM22.6432 12.8056C22.6432 15.4136 20.5645 17.5278 18.0004 17.5278C15.4362 17.5278 13.3575 15.4136 13.3575 12.8056C13.3575 10.1976 15.4362 8.08334 18.0004 8.08334C20.5645 8.08334 22.6432 10.1976 22.6432 12.8056Z",
-                    }),
-                    (0, _.jsx)("path", {
-                      fill: _ ? _ : "currentColor",
-                      _: "M5 30.2778L8.25 24.6111H12.4286L15.6786 27.9167L11.5 35L9.17857 30.2778H5Z",
-                    }),
-                    (0, _.jsx)("path", {
-                      fill: _ ? _ : "currentColor",
-                      _: "M30.9999 30.2778L27.7499 24.6111H23.5713L20.3213 27.9167L24.4999 35L26.8213 30.2778H30.9999Z",
-                    }),
-                  ],
-                }),
-              ],
-            });
+            ],
+          });
+        }
       }
       function _() {
         return (0, _.jsx)("svg", {
@@ -101438,6 +101681,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
       function _(_) {

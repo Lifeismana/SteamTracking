@@ -28,16 +28,18 @@
             this.init(_);
         }
         init(_) {
+          var _, _, _;
           (this.bValid = _.bValid),
             (this.stream = _.stream),
             (this.name = _.name),
-            (this.appName = _.appName),
+            (this.appName = null !== (_ = _.appName) && void 0 !== _ ? _ : ""),
             (this.appID = _.appID),
             (this.link = _.link),
             (this.linkName = _.linkName),
-            (this.tabIcon = _.tabIcon),
+            (this.tabIcon = null !== (_ = _.tabIcon) && void 0 !== _ ? _ : ""),
             (this.offlineImage = _.offlineImage),
-            (this.gidEvent = _.gidEvent);
+            (this.gidEvent =
+              null !== (_ = _.gidEvent) && void 0 !== _ ? _ : "");
         }
       }
       (0, _._)([_._], _.prototype, "bValid", void 0),
@@ -978,13 +980,12 @@
         _ = __webpack_require__("chunkid");
       class _ {
         constructor(_) {
-          (this.m_elVideo = null),
-            (this.m_peerConnection = null),
-            (this.m_strBroadcastSteamID = void 0),
-            (this.m_ulWebRTCSessionID = void 0),
+          (this.m_peerConnection = null),
+            (this.m_strBroadcastSteamID = ""),
+            (this.m_ulWebRTCSessionID = ""),
             (this.m_schCandidateTimer = new _._()),
-            (this.m_nHostCandidateGeneration = void 0),
-            (this.m_nCandidateUpdateIntervalMS = void 0),
+            (this.m_nHostCandidateGeneration = 0),
+            (this.m_nCandidateUpdateIntervalMS = 0),
             (this.m_listeners = new _._()),
             (this.m_bFirstPlay = !0),
             (this.m_bStatsViewVisible = !1),
@@ -1008,7 +1009,7 @@
               "resize",
               this.OnVideoResize,
             );
-          let _ = {
+          const _ = new RTCPeerConnection({
             iceServers: [
               {
                 urls: ["stun:" + _],
@@ -1020,9 +1021,9 @@
               },
             ],
             iceTransportPolicy: "relay",
-          };
-          (this.m_peerConnection = new RTCPeerConnection(_)),
-            (this.m_peerConnection.oniceconnectionstatechange = ((_) => {
+          });
+          (this.m_peerConnection = _),
+            (_.oniceconnectionstatechange = ((_) => {
               this.m_peerConnection &&
                 (console.log(
                   "BroadcastWebRTC: ICE connection state changed to " +
@@ -1034,12 +1035,12 @@
                       this.m_peerConnection.iceConnectionState &&
                     this.OnWebRTCConnectionRetry());
             }).bind(this)),
-            (this.m_peerConnection.onicecandidate = ((_) => {
+            (_.onicecandidate = ((_) => {
               if (_.candidate) {
                 const _ = new FormData();
                 _.append("broadcaststeamid", this.m_strBroadcastSteamID),
                   _.append("webrtc_session_id", this.m_ulWebRTCSessionID),
-                  _.append("sdp_mid", _.candidate.sdpMid),
+                  _.append("sdp_mid", String(_.candidate.sdpMid)),
                   _.append(
                     "sdp_mline_index",
                     String(_.candidate.sdpMLineIndex),
@@ -1065,53 +1066,60 @@
                     );
               }
             }).bind(this)),
-            (this.m_peerConnection.ontrack = ((_) => {
+            (_.ontrack = ((_) => {
               "video" === _.track.kind &&
-                ((this.m_elVideo.src = null),
+                ((this.m_elVideo.src = ""),
                 (this.m_elVideo.srcObject = _.streams[0]),
                 this.Play());
             }).bind(this)),
-            this.m_peerConnection
-              .setRemoteDescription({
-                type: "offer",
-                sdp: _,
-              })
-              .then(async () => {
-                await this.m_peerConnection.setLocalDescription(
-                  await this.m_peerConnection.createAnswer(),
+            _.setRemoteDescription({
+              type: "offer",
+              sdp: _,
+            }).then(async () => {
+              var _, _;
+              await _.setLocalDescription(await _.createAnswer());
+              const _ = new FormData();
+              __webpack_require__.append(
+                "broadcaststeamid",
+                this.m_strBroadcastSteamID,
+              ),
+                __webpack_require__.append(
+                  "webrtc_session_id",
+                  this.m_ulWebRTCSessionID,
+                ),
+                __webpack_require__.append(
+                  "answer",
+                  null !==
+                    (_ =
+                      null === (_ = _.localDescription) || void 0 === _
+                        ? void 0
+                        : _.sdp) && void 0 !== _
+                    ? _
+                    : "",
                 );
-                const _ = new FormData();
-                _.append("broadcaststeamid", this.m_strBroadcastSteamID),
-                  _.append("webrtc_session_id", this.m_ulWebRTCSessionID),
-                  _.append(
-                    "answer",
-                    this.m_peerConnection.localDescription.sdp,
-                  );
-                try {
-                  await _()
-                    .post(
-                      `${_._.CHAT_BASE_URL}broadcast/setbroadcastwebrtcanswer`,
-                      _,
-                    )
-                    .then((_) => {
-                      const _ = _.data;
-                      if (!_.success || _.success != _._)
-                        throw new Error(String(_.success));
-                    });
-                } catch (_) {
-                  return (
-                    console.log(
-                      "Failed to set the WebRTC session answer: " + _,
-                    ),
-                    void this.OnWebRTCConnectionRetry()
-                  );
-                }
-                (this.m_nCandidateUpdateIntervalMS = 250),
-                  this.m_schCandidateTimer.Schedule(
-                    this.m_nCandidateUpdateIntervalMS,
-                    () => this.GetHostCandidates(),
-                  );
-              });
+              try {
+                await _()
+                  .post(
+                    `${_._.CHAT_BASE_URL}broadcast/setbroadcastwebrtcanswer`,
+                    _,
+                  )
+                  .then((_) => {
+                    const _ = _.data;
+                    if (!_.success || _.success != _._)
+                      throw new Error(String(_.success));
+                  });
+              } catch (_) {
+                return (
+                  console.log("Failed to set the WebRTC session answer: " + _),
+                  void this.OnWebRTCConnectionRetry()
+                );
+              }
+              (this.m_nCandidateUpdateIntervalMS = 250),
+                this.m_schCandidateTimer.Schedule(
+                  this.m_nCandidateUpdateIntervalMS,
+                  () => this.GetHostCandidates(),
+                );
+            });
         }
         async GetHostCandidates() {
           const _ = new FormData();
@@ -1129,19 +1137,18 @@
               )
               .then((_) => {
                 const _ = _.data,
-                  _ = _.data;
+                  _ = _.data,
+                  _ = this.m_peerConnection;
                 if (!_.success || _.success != _._)
                   throw new Error(String(_.success));
-                _.candidate_generation > this.m_nHostCandidateGeneration
+                _ && _.candidate_generation > this.m_nHostCandidateGeneration
                   ? (_.candidates.forEach((_) => {
                       const _ = new RTCIceCandidate({
                         sdpMid: _.sdp_mid,
                         sdpMLineIndex: _.sdp_mline_index,
                         candidate: _.candidate,
                       });
-                      this.m_peerConnection
-                        .addIceCandidate(_)
-                        .catch((_) => console.error(_));
+                      _.addIceCandidate(_).catch((_) => console.error(_));
                     }),
                     (this.m_nHostCandidateGeneration = _.candidate_generation))
                   : this.m_nHostCandidateGeneration > 0 &&
@@ -1180,8 +1187,7 @@
               (this.m_peerConnection.close(), (this.m_peerConnection = null)),
             this.m_elVideo.pause(),
             (this.m_elVideo.srcObject = null),
-            this.m_stats &&
-              (this.m_stats.GetFPSMonitor().Close(), (this.m_stats = null)),
+            this.m_stats.GetFPSMonitor().Close(),
             (this.m_bFirstPlay = !0);
         }
         IsBuffering() {
@@ -1191,7 +1197,7 @@
           return 0;
         }
         GetLiveContentStartTime() {
-          return null;
+          return new Date(0);
         }
         GetAvailableVideoStartTime() {
           return 0;
@@ -1889,16 +1895,18 @@
             );
         }
         LoadBroadcast(_) {
-          _.m_rgVideos.findIndex((_) => _ == this.m_activeVideo) >= 0 &&
-            this.m_activeVideo.StartBroadcast(_);
+          const _ = this.m_activeVideo;
+          _ &&
+            _.m_rgVideos.findIndex((_) => _ == _) >= 0 &&
+            _.StartBroadcast(_);
         }
         LoadClip(_) {
-          _.m_rgVideos.findIndex((_) => _ == this.m_activeVideo) >= 0 &&
-            this.m_activeVideo.StartClip(_);
+          const _ = this.m_activeVideo;
+          _ && _.m_rgVideos.findIndex((_) => _ == _) >= 0 && _.StartClip(_);
         }
         LoadVOD(_) {
-          _.m_rgVideos.findIndex((_) => _ == this.m_activeVideo) >= 0 &&
-            this.m_activeVideo.StartVOD(_);
+          const _ = this.m_activeVideo;
+          _ && _.m_rgVideos.findIndex((_) => _ == _) >= 0 && _.StartVOD(_);
         }
         BroadcastDownloadFailed(_, _ = !0, _ = _._.Invalid) {
           _.Stop();
@@ -1918,7 +1926,7 @@
             !_.IsBroadcastClip() && !_.IsBroadcastVOD())
           ) {
             let _ = this.m_mapBroadcasts.get(_.GetBroadcastSteamID());
-            this.GetBroadcastManifest(_, _.GetWatchLocation());
+            _ && this.GetBroadcastManifest(_, _.GetWatchLocation());
           }
           _.UserInputClick();
         }
@@ -1967,16 +1975,15 @@
         })(_ || (_ = {}));
       class _ {
         constructor(_, _, _, _) {
-          (this.m_elVideo = null),
-            (this.m_player = null),
+          (this.m_player = null),
             (this.m_listeners = new _._()),
             (this.m_gameDataParser = null),
             (this.m_eWatchLocation = _._._),
             (this.m_bStartWithSubtitles = !1),
-            (this.m_steamIDBroadcast = null),
+            (this.m_steamIDBroadcast = ""),
             (this.m_BroadcastInfo = null),
-            (this.m_broadcastClipID = null),
-            (this.m_nBroadcastAppIDVOD = null),
+            (this.m_broadcastClipID = ""),
+            (this.m_nBroadcastAppIDVOD = 0),
             (this.m_bPaused = !1),
             (this.m_nPlaybackTime = 0),
             (this.m_bBuffering = !1),
@@ -2018,7 +2025,10 @@
           this.m_player && this.m_player.SetStatsViewIsVisible(_);
         }
         GetDASHPlayerStats() {
-          return this.m_player.GetDASHPlayerStats();
+          var _;
+          return null === (_ = this.m_player) || void 0 === _
+            ? void 0
+            : _.GetDASHPlayerStats();
         }
         BHasDASHStats() {
           return null != this.m_player;
@@ -2027,7 +2037,16 @@
           return !1;
         }
         CanSeek() {
-          return this.m_player && this.m_player.CanSeek();
+          var _, _;
+          return (
+            null !==
+              (_ =
+                null === (_ = this.m_player) || void 0 === _
+                  ? void 0
+                  : _.CanSeek()) &&
+            void 0 !== _ &&
+            _
+          );
         }
         IsBuffering() {
           return this.m_bBuffering;
@@ -2048,7 +2067,7 @@
           return this.m_bIsReplay;
         }
         IsBroadcastClip() {
-          return null != this.m_broadcastClipID;
+          return Boolean(this.m_broadcastClipID);
         }
         SetBroadcastClipID(_) {
           this.m_broadcastClipID = _;
@@ -2057,7 +2076,7 @@
           return this.m_broadcastClipID;
         }
         IsBroadcastVOD() {
-          return null != this.m_nBroadcastAppIDVOD;
+          return Boolean(this.m_nBroadcastAppIDVOD);
         }
         SetBroadcastAppIDVOD(_) {
           this.m_nBroadcastAppIDVOD = _;
@@ -2069,16 +2088,25 @@
           return this.m_player ? this.m_player.GetVideoRepresentations() : [];
         }
         SetVideoRepresentation(_) {
-          this.m_player.SetVideoRepresentation(_);
+          var _;
+          null === (_ = this.m_player) ||
+            void 0 === _ ||
+            _.SetVideoRepresentation(_);
         }
         GetBroadcastInfo() {
           return this.m_BroadcastInfo;
         }
         BHasTimedText() {
-          var _;
-          return null === (_ = this.m_player) || void 0 === _
-            ? void 0
-            : _.BHasTimedText();
+          var _, _;
+          return (
+            null !==
+              (_ =
+                null === (_ = this.m_player) || void 0 === _
+                  ? void 0
+                  : _.BHasTimedText()) &&
+            void 0 !== _ &&
+            _
+          );
         }
         BHasPlayer() {
           return Boolean(this.m_player);
@@ -2179,6 +2207,7 @@
             this.Play();
         }
         StartBroadcast(_) {
+          var _, _;
           if ((this.InitPlayer(), _.m_data.url)) {
             let _ = new _._(this.m_elVideo);
             _.SetAlwaysStartWithSubtitles(this.m_bStartWithSubtitles),
@@ -2200,8 +2229,14 @@
                 _.m_data.webrtc_offer_sdp,
               );
           }
-          this.SetVolume(this.m_nVolume), this.m_player.SetMuted(this.m_bMuted);
-          let _ = this.m_player.GetDASHPlayerStats();
+          this.SetVolume(this.m_nVolume),
+            null === (_ = this.m_player) ||
+              void 0 === _ ||
+              _.SetMuted(this.m_bMuted);
+          let _ =
+            null === (_ = this.m_player) || void 0 === _
+              ? void 0
+              : __webpack_require__.GetDASHPlayerStats();
           _ &&
             _.SetBroadcasterAndViewerInfo(
               this.m_steamIDBroadcast,
@@ -2212,25 +2247,35 @@
             (this.m_BroadcastInfo = _.StartInfo(this.m_steamIDBroadcast));
         }
         StartClip(_) {
+          var _;
           this.InitPlayer();
           let _ = new _._(this.m_elVideo);
-          _.SetAlwaysStartWithSubtitles(this.m_bStartWithSubtitles),
+          __webpack_require__.SetAlwaysStartWithSubtitles(
+            this.m_bStartWithSubtitles,
+          ),
             (this.m_player = _),
-            _.PlayMPD(_.m_data.clip_url),
+            __webpack_require__.PlayMPD(_.m_data.clip_url),
             this.SetVolume(this.m_nVolume),
-            this.m_player.SetMuted(this.m_bMuted);
+            null === (_ = this.m_player) ||
+              void 0 === _ ||
+              _.SetMuted(this.m_bMuted);
         }
         StartVOD(_) {
+          var _;
           this.InitPlayer();
           let _ = new _._(this.m_elVideo);
-          _.SetAlwaysStartWithSubtitles(this.m_bStartWithSubtitles),
+          __webpack_require__.SetAlwaysStartWithSubtitles(
+            this.m_bStartWithSubtitles,
+          ),
             (this.m_player = _),
             _._.logged_in &&
               _.m_nAppIDVOD &&
-              _.SetBookmarkAdapter(new _._(_.m_nAppIDVOD)),
-            _.PlayMPD(_.m_manifestURL),
+              __webpack_require__.SetBookmarkAdapter(new _._(_.m_nAppIDVOD)),
+            _.m_manifestURL && __webpack_require__.PlayMPD(_.m_manifestURL),
             this.SetVolume(this.m_nVolume),
-            this.m_player.SetMuted(this.m_bMuted);
+            null === (_ = this.m_player) ||
+              void 0 === _ ||
+              _.SetMuted(this.m_bMuted);
         }
         Stop() {
           this.m_listeners.Unregister(),
@@ -2246,17 +2291,16 @@
         }
         Play() {
           const _ = this.GetBroadcastState();
-          _ == _.None || this.IsBroadcastClip()
-            ? _.StartVideo(this)
-            : _ == _.Ready &&
-              (_.SetActiveVideo(this),
-              this.m_player
-                ? this.m_player.Play()
-                : this.IsBroadcastVOD()
-                  ? this.StartVOD(_.GetBroadcastVOD(this.m_nBroadcastAppIDVOD))
-                  : this.StartBroadcast(
-                      _.GetBroadcast(this.m_steamIDBroadcast),
-                    ));
+          if (_ == _.None || this.IsBroadcastClip()) _.StartVideo(this);
+          else if (_ == _.Ready)
+            if ((_.SetActiveVideo(this), this.m_player)) this.m_player.Play();
+            else if (this.IsBroadcastVOD()) {
+              const _ = _.GetBroadcastVOD(this.m_nBroadcastAppIDVOD);
+              _ && this.StartVOD(_);
+            } else {
+              const _ = _.GetBroadcast(this.m_steamIDBroadcast);
+              _ && this.StartBroadcast(_);
+            }
         }
         Pause() {
           console.log(
@@ -2268,23 +2312,28 @@
             this.m_player && this.m_player.Pause();
         }
         JumpTime(_) {
-          this.m_player.JumpTime(_);
+          var _;
+          null === (_ = this.m_player) || void 0 === _ || _.JumpTime(_);
         }
         Seek(_) {
           var _;
           null === (_ = this.m_player) || void 0 === _ || _.Seek(_);
         }
         SeekAndPlay(_) {
-          this.m_player.SeekAndPlay(_);
+          var _;
+          null === (_ = this.m_player) || void 0 === _ || _.SeekAndPlay(_);
         }
         JumpToLiveEdge() {
-          this.m_player.IsLiveContent()
-            ? this.SeekAndPlay(this.m_player.GetBufferedLiveEdgeTime())
-            : this.SeekAndPlay(this.m_player.GetAvailableVideoStartTime());
+          const _ = this.m_player;
+          _ &&
+            (_.IsLiveContent()
+              ? this.SeekAndPlay(_.GetBufferedLiveEdgeTime())
+              : this.SeekAndPlay(_.GetAvailableVideoStartTime()));
         }
         SetVolume(_) {
-          this.m_player && this.m_player.SetVolume(_),
-            (this.m_nVolume = this.m_player.GetVolume()),
+          this.m_player &&
+            (this.m_player.SetVolume(_),
+            (this.m_nVolume = this.m_player.GetVolume())),
             _.SaveVolumeChange(_, this.m_bMuted);
         }
         SetMute(_) {
@@ -2308,54 +2357,62 @@
           this.m_bPaused = !0;
         }
         OnVideoTimeUpdate() {
-          if (
-            (window.clearTimeout(this.m_videoEndingTimer),
-            this.IsBroadcastClip())
-          )
-            (this.m_nPlaybackTime = this.m_player.GetCurrentPlayTime()),
-              (this.m_nVideoStartPos =
-                this.m_player.GetAvailableVideoStartTime()),
-              (this.m_nVideoEndPos = this.m_player.GetBufferedLiveEdgeTime()),
-              (this.m_nTimelineDuration =
-                this.m_nVideoEndPos - this.m_nVideoStartPos),
-              (this.m_bOnLiveEdge = !1),
-              (this.m_bBuffering = this.m_player.IsBuffering());
-          else {
-            if (
-              ((this.m_nPlaybackTime = this.m_player.GetCurrentPlayTime()),
-              (this.m_nVideoStartPos =
-                this.m_player.GetAvailableVideoStartTime()),
-              (this.m_nVideoEndPos = Math.max(
-                this.m_player.GetBufferedLiveEdgeTime(),
-                this.m_nPlaybackTime,
-              )),
-              this.IsBroadcastVOD() &&
-                ((this.m_nTimelineDuration = this.m_nVideoEndPos),
-                this.m_fnOnVideoEnd &&
-                  this.m_nVideoEndPos - this.m_nPlaybackTime < _._))
-            ) {
-              const _ = 400;
-              this.m_videoEndingTimer = window.setTimeout(() => {
-                this.m_fnOnVideoEnd();
-              }, _);
+          window.clearTimeout(this.m_videoEndingTimer);
+          const _ = this.m_player;
+          if (_)
+            if (this.IsBroadcastClip())
+              (this.m_nPlaybackTime = _.GetCurrentPlayTime()),
+                (this.m_nVideoStartPos = _.GetAvailableVideoStartTime()),
+                (this.m_nVideoEndPos = _.GetBufferedLiveEdgeTime()),
+                (this.m_nTimelineDuration =
+                  this.m_nVideoEndPos - this.m_nVideoStartPos),
+                (this.m_bOnLiveEdge = !1),
+                (this.m_bBuffering = _.IsBuffering());
+            else {
+              if (
+                ((this.m_nPlaybackTime = _.GetCurrentPlayTime()),
+                (this.m_nVideoStartPos = _.GetAvailableVideoStartTime()),
+                (this.m_nVideoEndPos = Math.max(
+                  _.GetBufferedLiveEdgeTime(),
+                  this.m_nPlaybackTime,
+                )),
+                this.IsBroadcastVOD())
+              ) {
+                this.m_nTimelineDuration = this.m_nVideoEndPos;
+                const _ = this.m_fnOnVideoEnd;
+                if (_ && this.m_nVideoEndPos - this.m_nPlaybackTime < _._) {
+                  const _ = 400;
+                  this.m_videoEndingTimer = window.setTimeout(() => {
+                    _();
+                  }, _);
+                }
+              }
+              (this.m_bBuffering = _.IsBuffering()),
+                (this.m_bOnLiveEdge =
+                  this.m_nVideoEndPos - this.m_nPlaybackTime < _._),
+                _.IsPaused() && (this.m_bOnLiveEdge = !1);
             }
-            (this.m_bBuffering = this.m_player.IsBuffering()),
-              (this.m_bOnLiveEdge =
-                this.m_nVideoEndPos - this.m_nPlaybackTime < _._),
-              this.m_player.IsPaused() && (this.m_bOnLiveEdge = !1);
-          }
         }
         OnVolumeUpdated() {
-          (this.m_nVolume = this.m_player.GetVolume()),
-            (this.m_bMuted = this.m_player.IsMuted());
+          const _ = this.m_player;
+          _ &&
+            ((this.m_nVolume = _.GetVolume()), (this.m_bMuted = _.IsMuted()));
         }
         OnGameDataUpdate(_) {
+          var _, _;
           let _ = _.detail;
           if (!_ || "object" != typeof _.gamedata) return;
           (this.m_gameDataParser &&
             this.m_gameDataParser.GetAppID() == _.gamedata.__appid) ||
             (this.m_gameDataParser = new _(_.gamedata.__appid));
-          const _ = this.m_player.GetLiveContentStartTime().getTime();
+          const _ =
+            null !==
+              (_ =
+                null === (_ = this.m_player) || void 0 === _
+                  ? void 0
+                  : _.GetLiveContentStartTime().getTime()) && void 0 !== _
+              ? _
+              : 0;
           if ("timelinemarkers" in _.gamedata) {
             const _ = this.m_gameDataParser.UpdateMarkers(
               _.gamedata.__timelinemarkers,

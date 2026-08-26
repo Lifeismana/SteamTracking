@@ -37748,6 +37748,7 @@ Error generating stack: ` +
     StoreItem_Eula,
     StoreItem_AIGeneratedContentService,
     StoreItem_PageSection,
+    StoreItem_PressReview,
     StoreItem_ExtraDetails,
     StoreBrowseItemDataRequest,
     StoreBrowseContext,
@@ -37793,7 +37794,7 @@ Error generating stack: ` +
                 _,
                 0,
                 -1,
-                [3],
+                [3, 9],
                 null,
               );
           }
@@ -37845,6 +37846,14 @@ Error generating stack: ` +
                     _: 8,
                     _: ReaderProto.readBool,
                     _: WriterProto.writeBool,
+                  },
+                  survey_interactive_elements: {
+                    _: 9,
+                    _: !0,
+                    _: !0,
+                    _: ReaderProto.readEnum,
+                    pbr: ReaderProto.readPackedEnum,
+                    _: WriterProto.writeRepeatedEnum,
                   },
                   required_age: {
                     _: 10,
@@ -41180,6 +41189,91 @@ Error generating stack: ` +
             return `StoreItem_PageSection`;
           }
         }),
+        (StoreItem_PressReview = class _ extends (
+          import_google_protobuf$1.Message
+        ) {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.quote || AddAccessors(_._()),
+              import_google_protobuf$1.Message.initialize(
+                this,
+                _,
+                0,
+                -1,
+                void 0,
+                null,
+              );
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              (_.sm_m ||= {
+                proto: _,
+                fields: {
+                  quote: {
+                    _: 1,
+                    _: ReaderProto.readString,
+                    _: WriterProto.writeString,
+                  },
+                  score: {
+                    _: 2,
+                    _: ReaderProto.readString,
+                    _: WriterProto.writeString,
+                  },
+                  site: {
+                    _: 3,
+                    _: ReaderProto.readString,
+                    _: WriterProto.writeString,
+                  },
+                  url: {
+                    _: 4,
+                    _: ReaderProto.readString,
+                    _: WriterProto.writeString,
+                  },
+                },
+              }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return ToObject(_._(), _, _);
+          }
+          static fromObject(_) {
+            return FromObject(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new import_google_protobuf$1.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return DeserializeBinary(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new import_google_protobuf$1.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            SerializeBinary(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new import_google_protobuf$1.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return `StoreItem_PressReview`;
+          }
+        }),
         (StoreItem_ExtraDetails = class _ extends (
           import_google_protobuf$1.Message
         ) {
@@ -41192,7 +41286,7 @@ Error generating stack: ` +
                 _,
                 0,
                 -1,
-                [1, 10, 13],
+                [1, 10, 13, 15, 18],
                 null,
               );
           }
@@ -41273,6 +41367,30 @@ Error generating stack: ` +
                     _: 14,
                     _: ReaderProto.readString,
                     _: WriterProto.writeString,
+                  },
+                  interactive_elements: {
+                    _: 15,
+                    _: !0,
+                    _: !0,
+                    _: ReaderProto.readEnum,
+                    pbr: ReaderProto.readPackedEnum,
+                    _: WriterProto.writeRepeatedEnum,
+                  },
+                  content_survey_notes: {
+                    _: 16,
+                    _: ReaderProto.readString,
+                    _: WriterProto.writeString,
+                  },
+                  content_survey_ai_notes: {
+                    _: 17,
+                    _: ReaderProto.readString,
+                    _: WriterProto.writeString,
+                  },
+                  press_review: {
+                    _: 18,
+                    _: StoreItem_PressReview,
+                    _: !0,
+                    _: !0,
                   },
                 },
               }),
@@ -49780,7 +49898,8 @@ Error generating stack: ` +
               );
               return;
             }
-            (!_.BIsActive() && !_.bInVR) || _.DelayHideVirtualKeyboard();
+            _.detail.focusedNode?.Element != _.current &&
+              ((!_.BIsActive() && !_.bInVR) || _.DelayHideVirtualKeyboard());
           }
         },
         [_],
@@ -53984,6 +54103,7 @@ Error generating stack: ` +
       Header_Global_News: () => Header_Global_News$24,
       Header_Global_News_Steam: () => Header_Global_News_Steam$24,
       Header_Global_News_SteamDeck: () => Header_Global_News_SteamDeck$24,
+      Header_Global_News_SteamFrame: () => Header_Global_News_SteamFrame,
       Header_Global_News_SteamVR: () => Header_Global_News_SteamVR$24,
       Header_Global_News_Steamworks: () => Header_Global_News_Steamworks$24,
       Header_Global_Resources: () => Header_Global_Resources$24,
@@ -54124,6 +54244,7 @@ Error generating stack: ` +
     Header_Global_News_Steam$24,
     Header_Global_News_SteamVR$24,
     Header_Global_News_SteamDeck$24,
+    Header_Global_News_SteamFrame,
     Steamworks_Logo_Label$24,
     global_menu_language$55,
     global_menu_change_language$55,
@@ -54247,6 +54368,7 @@ Error generating stack: ` +
         (Header_Global_News_Steam$24 = `Steam Blog`),
         (Header_Global_News_SteamVR$24 = `Steam VR Blog`),
         (Header_Global_News_SteamDeck$24 = `Steam Deck Blog`),
+        (Header_Global_News_SteamFrame = `Steam Frame Blog`),
         (Steamworks_Logo_Label$24 = `Steamworks`),
         (global_menu_language$55 = `language`),
         (global_menu_change_language$55 = `Change language`),
@@ -54378,6 +54500,7 @@ Error generating stack: ` +
           Header_Global_News_Steam: Header_Global_News_Steam$24,
           Header_Global_News_SteamVR: Header_Global_News_SteamVR$24,
           Header_Global_News_SteamDeck: Header_Global_News_SteamDeck$24,
+          Header_Global_News_SteamFrame,
           Steamworks_Logo_Label: Steamworks_Logo_Label$24,
           global_menu_language: global_menu_language$55,
           global_menu_change_language: global_menu_change_language$55,

@@ -307,5 +307,8 @@
     "AppPage_RecommendationReason_FriendsOwned_Software": "<1>%1$s人のフレンド</1>がすでにこのソフトウェアを所有しています：",
     "AppPage_RecommendationReason_FriendsOwned_Software_Plural": "<1>%1$s人のフレンド</1>がすでにこのソフトウェアを所有しています：",
     "AppPage_RecommendationReason_FriendsOwned_Video": "<1>%1$s人のフレンド</1>がすでにこの動画を所有しています：",
-    "AppPage_RecommendationReason_FriendsOwned_Video_Plural": "<1>%1$s人のフレンド</1>がすでにこの動画を所有しています："
+    "AppPage_RecommendationReason_FriendsOwned_Video_Plural": "<1>%1$s人のフレンド</1>がすでにこの動画を所有しています：",
+    "AppPage_PageSectionBanner_Workshop": "Steamワークショップ",
+    "AppPage_PageSectionBanner_Follow": "このゲームをフォロー",
+    "AppPage_PageSectionBanner_MachineController": "Steam MachineおよびSteam Controller"
 }

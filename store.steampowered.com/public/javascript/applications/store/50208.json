@@ -307,5 +307,8 @@
     "AppPage_RecommendationReason_FriendsOwned_Software": "<1>Друзей</1> с этой программой: %1$s",
     "AppPage_RecommendationReason_FriendsOwned_Software_Plural": "<1>Друзей</1> с этой программой: %1$s",
     "AppPage_RecommendationReason_FriendsOwned_Video": "<1>Друзей</1> с этим видео: %1$s",
-    "AppPage_RecommendationReason_FriendsOwned_Video_Plural": "<1>Друзей</1> с этим видео: %1$s"
+    "AppPage_RecommendationReason_FriendsOwned_Video_Plural": "<1>Друзей</1> с этим видео: %1$s",
+    "AppPage_PageSectionBanner_Workshop": "Мастерская Steam",
+    "AppPage_PageSectionBanner_Follow": "Подписаться на эту игру",
+    "AppPage_PageSectionBanner_MachineController": "Устройства Steam Machine и Steam Controller"
 }

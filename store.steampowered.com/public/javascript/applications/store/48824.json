@@ -77,7 +77,7 @@
     "About_This_Software": "Despre acest software",
     "About_This_Hardware": "Despre acest hardware",
     "About_This_Video": "Despre acest conținut video",
-    "About_This_Series": "Despre această serie",
+    "About_This_Series": "Despre acest serial",
     "About_This_Guide": "Despre acest ghid",
     "btn_read_more": "CITEȘTE MAI MULTE",
     "btn_read_less": "AFIȘEAZĂ MAI PUȚINE",
@@ -269,7 +269,7 @@
     "AppPage_RecommendationReason_Header_Demo": "ACEST DEMO ESTE RELEVANT PENTRU TINE?",
     "AppPage_RecommendationReason_Header_Music": "ACEASTĂ COLOANĂ SONORĂ ESTE RELEVANTĂ PENTRU TINE?",
     "AppPage_RecommendationReason_Header_Hardware": "ACEST HARDWARE ESTE RELEVANT PENTRU TINE?",
-    "AppPage_RecommendationReason_Header_Series": "ACEASTĂ SERIE ESTE RELEVANTĂ PENTRU TINE?",
+    "AppPage_RecommendationReason_Header_Series": "ACEST SERIAL ESTE RELEVANT PENTRU TINE?",
     "AppPage_RecommendationReason_Header_DLC": "ACEST DLC ESTE RELEVANT PENTRU TINE?",
     "AppPage_RecommendationReason_Playtime": "%1$s ore jucate",
     "AppPage_RecommendationReason_InLibrary": "În bibliotecă",
@@ -307,5 +307,8 @@
     "AppPage_RecommendationReason_FriendsOwned_Software": "<1>%1$s prieten</1> deține deja acest software:",
     "AppPage_RecommendationReason_FriendsOwned_Software_Plural": "<1>%1$s prieteni</1> dețin deja acest software:",
     "AppPage_RecommendationReason_FriendsOwned_Video": "<1>%1$s prieten</1> deține deja acest conținut video:",
-    "AppPage_RecommendationReason_FriendsOwned_Video_Plural": "<1>%1$s prieteni</1> dețin deja acest conținut video:"
+    "AppPage_RecommendationReason_FriendsOwned_Video_Plural": "<1>%1$s prieteni</1> dețin deja acest conținut video:",
+    "AppPage_PageSectionBanner_Workshop": "Atelierul Steam",
+    "AppPage_PageSectionBanner_Follow": "Urmărește acest joc",
+    "AppPage_PageSectionBanner_MachineController": "Steam Machine și Steam Controller"
 }

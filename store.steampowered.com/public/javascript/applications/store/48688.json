@@ -307,5 +307,8 @@
     "AppPage_RecommendationReason_FriendsOwned_Software": "<1>%1$s 位好友</1>已擁有此軟體：",
     "AppPage_RecommendationReason_FriendsOwned_Software_Plural": "<1>%1$s 位好友</1>已擁有此軟體：",
     "AppPage_RecommendationReason_FriendsOwned_Video": "<1>%1$s 位好友</1>已擁有此影片：",
-    "AppPage_RecommendationReason_FriendsOwned_Video_Plural": "<1>%1$s 位好友</1>已擁有此影片："
+    "AppPage_RecommendationReason_FriendsOwned_Video_Plural": "<1>%1$s 位好友</1>已擁有此影片：",
+    "AppPage_PageSectionBanner_Workshop": "Steam 工作坊",
+    "AppPage_PageSectionBanner_Follow": "關注此遊戲",
+    "AppPage_PageSectionBanner_MachineController": "Steam Machine 和 Steam Controller"
 }

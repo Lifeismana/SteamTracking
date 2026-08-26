@@ -22741,7 +22741,13 @@
               this.m_schUpload.Schedule(6e4, this.UploadPendingData));
         }
       }
-      (0, _._)([_._], _.prototype, "UploadPendingData", null);
+      var _;
+      (0, _._)([_._], _.prototype, "UploadPendingData", null),
+        (function (_) {
+          (_[(_.k_ENotifyFlagNone = 0)] = "k_ENotifyFlagNone"),
+            (_[(_.k_ENotifyFlagByEmail = 1)] = "k_ENotifyFlagByEmail"),
+            (_[(_.k_ENotifyFlagByPush = 2)] = "k_ENotifyFlagByPush");
+        })(_ || (_ = {}));
       class _ {
         clanid = void 0;
         appid = 0;
@@ -22758,7 +22764,6 @@
           (0, _._)(this), (this.clanid = _);
         }
       }
-      var _;
       (0, _._)([_._], _.prototype, "clanid", void 0),
         (0, _._)([_._], _.prototype, "appid", void 0),
         (0, _._)([_._], _.prototype, "can_edit", void 0),
@@ -22769,12 +22774,7 @@
         (0, _._)([_._], _.prototype, "limited_user", void 0),
         (0, _._)([_._], _.prototype, "event_ignored", void 0),
         (0, _._)([_._], _.prototype, "event_followed", void 0),
-        (0, _._)([_._], _.prototype, "event_followed_flags", void 0),
-        (function (_) {
-          (_[(_.k_ENotifyFlagNone = 0)] = "k_ENotifyFlagNone"),
-            (_[(_.k_ENotifyFlagByEmail = 1)] = "k_ENotifyFlagByEmail"),
-            (_[(_.k_ENotifyFlagByPush = 2)] = "k_ENotifyFlagByPush");
-        })(_ || (_ = {}));
+        (0, _._)([_._], _.prototype, "event_followed_flags", void 0);
       class _ {
         constructor() {
           (0, _._)(this);

@@ -17,6 +17,274 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = {
+        include_assets: !0,
+        include_release: !0,
+        include_platforms: !0,
+        include_tag_count: 20,
+        include_basic_info: !0,
+        include_trailers: !0,
+        include_reviews: !0,
+        include_screenshots: !0,
+        include_supported_languages: !0,
+      };
+      class _ {
+        constructor() {
+          this.m_setAlreadyAdded = new Set();
+        }
+        Reset() {
+          this.m_setAlreadyAdded = new Set();
+        }
+        BHasAppID(_) {
+          return this.m_setAlreadyAdded.has("a" + _);
+        }
+        BHasPackageID(_) {
+          return this.m_setAlreadyAdded.has("s" + _);
+        }
+        BHasBundleID(_) {
+          return this.m_setAlreadyAdded.has("b" + _);
+        }
+        BHasStoreItemKey(_) {
+          return this.m_setAlreadyAdded.has(
+            this.ConvertStoreItemKeyToUniqueKey(_),
+          );
+        }
+        AddStoreItemKey(_) {
+          this.m_setAlreadyAdded.add(this.ConvertStoreItemKeyToUniqueKey(_));
+        }
+        ConvertStoreItemKeyToUniqueKey(_) {
+          switch (_.item_type) {
+            default:
+            case "app":
+              return "a" + _._;
+            case "sub":
+              return "s" + _._;
+            case "bundle":
+              return "b" + _._;
+          }
+        }
+      }
+      const _ = 4;
+      function _(_, _, _, _, _, _) {
+        var _;
+        const _ = new Array(),
+          _ = new Array(),
+          _ = new Array(),
+          _ = new Array();
+        if (!_ || 0 == _.length) return _;
+        const _ = [
+          _._.k_RejectSupportedLanguage,
+          _._.k_RejectAlreadyDisplayed,
+          _._.k_RejectNoTrailer,
+        ];
+        for (let _ of _) {
+          let _ = _._,
+            _ = _._.k_NotRejected;
+          switch (_.item_type) {
+            case "sub":
+              const _ = _._.Get().GetPackage(_);
+              if (
+                1 !==
+                (null === (_ = null == _ ? void 0 : _.GetIncludedAppIDs()) ||
+                void 0 === _
+                  ? void 0
+                  : _.length)
+              ) {
+                _ = _(_, _, _, !0);
+                break;
+              }
+              _ = _.GetIncludedAppIDs()[0];
+            case "app":
+              _ = _(_, _, _, _, !0);
+              break;
+            case "bundle":
+              _ = _(_, _, _, !0);
+          }
+          if (
+            (_ == _._.k_NotRejected
+              ? ((_.rejected = _._.k_NotRejected),
+                _.push({
+                  ..._,
+                  priority: 1,
+                }))
+              : _.includes(_)
+                ? ((_.rejected = _._.k_NotRejected), _.push(_))
+                : ((_.rejected = _),
+                  _ == _._.k_RejectIgnoredGame ? _.push(_) : _.push(_)),
+            _.length > _)
+          )
+            break;
+        }
+        return (
+          _.length < _ &&
+            (_(_, _, _, 2),
+            _.length < _ &&
+              _.enforce_minimum &&
+              (_(_, _, _, 3), _(_, _, _, _))),
+          _
+        );
+      }
+      function _(_, _, _, _) {
+        for (let _ = 0; _.length < _ && _ < _.length; ++_)
+          _.push({
+            ..._[_],
+            priority: _,
+          });
+      }
+      function _(_, _) {
+        var _, _, _, _;
+        const _ = _._.Get();
+        if (_.only_current_platform && _.BHasPlatformPreferenceSet()) {
+          if (
+            !(
+              ((null === (_ = _.GetPlatforms()) || void 0 === _
+                ? void 0
+                : _.windows) &&
+                _.BIsPreferredPlatform("win")) ||
+              ((null === (_ = _.GetPlatforms()) || void 0 === _
+                ? void 0
+                : _.mac) &&
+                _.BIsPreferredPlatform("mac")) ||
+              ((null === (_ = _.GetPlatforms()) || void 0 === _
+                ? void 0
+                : _.steamos_linux) &&
+                _.BIsPreferredPlatform("linux"))
+            )
+          )
+            return _._.k_RejectWrongPlatform;
+        }
+        if (!_.prepurchase && _.BIsComingSoon())
+          return _._.k_RejectNoComingSoon;
+        const _ = _.GetPlatforms();
+        return !_.virtual_reality &&
+          _ &&
+          _.vr_support &&
+          _.vr_support.vrhmd_only
+          ? _._.k_RejectNoVR
+          : (
+                null === (_ = _.GetAllCreatorClanIDs()) || void 0 === _
+                  ? void 0
+                  : _.some((_) => _.BIsIgnoringCurator(_))
+              )
+            ? _._.k_RejectCreatorClan
+            : _._.k_NotRejected;
+      }
+      function _(_, _) {
+        var _;
+        if (_.localized) {
+          const _ = (0, _.sfN)(_._.LANGUAGE);
+          if (
+            !(null === (_ = _.GetAllLanguagesWithSomeSupport()) || void 0 === _
+              ? void 0
+              : __webpack_require__.includes(_))
+          )
+            return _._.k_RejectSupportedLanguage;
+        }
+        return _._.k_NotRejected;
+      }
+      function _(_, _, _, _, _) {
+        const _ = _._.Get().GetApp(_);
+        if (!_) return _._.k_RejectNotLoaded;
+        const _ = _(_, _);
+        if (_ != _._.k_NotRejected) return _;
+        const _ = _._.Get();
+        if (_.BIsGameIgnored(_)) return _._.k_RejectIgnoredGame;
+        if (_.BExcludeTagIDs(_.GetTagIDs())) return _._.k_RejectIgnoreGameTags;
+        if (_.BExcludesContentDescriptor(_.GetContentDescriptorIDs()))
+          return _._.k_RejectIgnoreContentDescriptors;
+        if (!_.early_access && _.BIsEarlyAccess())
+          return _._.k_RejectEarlyAccess;
+        const _ = _.GetAppType();
+        if (!_.software && _ == _._._) return _._.k_RejectSoftware;
+        if (_.games_already_in_library && _.BIsGameOwned(_))
+          return _._.k_RejectInLibrary;
+        if (_.games_not_in_library && !_.BIsGameOwned(_))
+          return _._.k_RejectNotInLibrary;
+        if (!_.video && [_._._, _._._, _._._].includes(_))
+          return _._.k_RejectVideo;
+        if (_.has_discount) {
+          const _ = _.GetBestPurchaseOption();
+          if (!_ || !_.discount_pct) return _._.k_RejectNoDiscount;
+        }
+        return "adultonly" != _ &&
+          _.no_ao_content &&
+          (_.HasContentDescriptorID(_._) || _.HasContentDescriptorID(_._))
+          ? _._.k_RejectAO
+          : _ == _._._ &&
+              _.games_already_in_library &&
+              _.BIsGameOwned(_.GetParentAppID() || 0)
+            ? _._.k_RejectInLibrary
+            : _
+              ? (_ == _._._ && _.BHasAppID(_.GetParentAppID() || 0)) ||
+                _.BHasAppID(_)
+                ? _._.k_RejectAlreadyDisplayed
+                : _.has_trailer && !_.BHasTrailers(!1)
+                  ? _._.k_RejectNoTrailer
+                  : _(_, _)
+              : _._.k_NotRejected;
+      }
+      function _(_, _) {
+        const _ = _._.Get();
+        let _ = !1;
+        for (let _ of _) {
+          if (__webpack_require__.BIsGameIgnored(_))
+            return _._.k_RejectIgnoredGame;
+          __webpack_require__.BIsGameOwned(_) && (_ = !0);
+        }
+        return _.games_not_in_library && _
+          ? _._.k_RejectInLibrary
+          : _.games_not_in_library && !_
+            ? _._.k_RejectNotInLibrary
+            : _._.k_NotRejected;
+      }
+      function _(_, _, _, _) {
+        const _ = _._.Get().GetPackage(_);
+        if (!_) return _._.k_RejectNotLoaded;
+        const _ = _(_, _);
+        if (_ != _._.k_NotRejected) return _;
+        const _ = _(_.GetIncludedAppIDs(), _);
+        if (_ != _._.k_NotRejected) return _;
+        const _ = _._.Get();
+        return _.games_already_in_library && _.BOwnsPackage(_)
+          ? _._.k_RejectInLibrary
+          : _.BIsPackageIgnored(_)
+            ? _._.k_RejectIgnoredGame
+            : _
+              ? __webpack_require__.BHasPackageID(_)
+                ? _._.k_RejectAlreadyDisplayed
+                : _(_, _)
+              : _._.k_NotRejected;
+      }
+      function _(_, _, _, _) {
+        const _ = _._.Get().GetBundle(_);
+        if (!_) return _._.k_RejectNotLoaded;
+        const _ = _(_, _);
+        if (_ != _._.k_NotRejected) return _;
+        const _ = _(_.GetIncludedAppIDs(), _);
+        return _ != _._.k_NotRejected
+          ? _
+          : _
+            ? __webpack_require__.BHasBundleID(_)
+              ? _._.k_RejectAlreadyDisplayed
+              : _(_, _)
+            : _._.k_NotRejected;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid");
@@ -149,11 +417,13 @@
             (this.m_mapCalendarClansByID = new Map()),
             (this.m_mapCalendarEventsByGid = new Map()),
             (this.m_rgSortedCalendarEvents = new Array()),
-            (this.m_currentView = _._.box(null)),
+            (this.m_currentView = _._.box(void 0)),
             (this.m_bFinishedSearchingForward = !1),
             (this.m_bFinishedSearchingBackward = !1),
             (this.m_rgCalendarSections = []),
             (this.m_rgFutureSections = []),
+            (this.m_forwardRequestInFlight = null),
+            (this.m_backwardRequestInFlight = null),
             (this.m_collectionMetaData = void 0),
             (0, _._)(this),
             (this.m_key = _),
@@ -188,19 +458,26 @@
           return this.m_key;
         }
         BEventMatchCalendarSingleSource(_) {
+          var _, _;
           return (
-            (this.BIsSingleAppCalendar() && this.m_key.appids[0] == _.appid) ||
+            (this.BIsSingleAppCalendar() &&
+              (null === (_ = this.m_key.appids) || void 0 === _
+                ? void 0
+                : _[0]) == _.appid) ||
             (this.BIsSingleGroupCalendar() &&
-              this.m_key.clanaccountids[0] == _.clanid)
+              (null === (_ = this.m_key.clanaccountids) || void 0 === _
+                ? void 0
+                : _[0]) == _.clanid)
           );
         }
         BIsSingleSourceMuted() {
-          return (
-            !!this.BIsSingleSourceCalendar() &&
-            (this.BIsSingleAppCalendar()
-              ? _._.Get().BIsMutedAppID(this.GetSingleAppID())
-              : _._.Get().BIsMutedClanID(this.GetSingleGroupID()))
-          );
+          if (!this.BIsSingleSourceCalendar()) return !1;
+          if (this.BIsSingleAppCalendar()) {
+            const _ = this.GetSingleAppID();
+            return void 0 !== _ && _._.Get().BIsMutedAppID(_);
+          }
+          const _ = this.GetSingleGroupID();
+          return void 0 !== _ && _._.Get().BIsMutedClanID(_);
         }
         BIsSingleGroupCalendar() {
           return Boolean(
@@ -208,13 +485,19 @@
           );
         }
         GetSingleGroupID() {
-          return this.m_key.clanaccountids[0];
+          var _;
+          return null === (_ = this.m_key.clanaccountids) || void 0 === _
+            ? void 0
+            : _[0];
         }
         BIsSingleAppCalendar() {
           return Boolean(this.m_key.appids && 1 == this.m_key.appids.length);
         }
         GetSingleAppID() {
-          return this.m_key.appids[0];
+          var _;
+          return null === (_ = this.m_key.appids) || void 0 === _
+            ? void 0
+            : _[0];
         }
         BIsCollectionCalendar() {
           return !!this.m_key.collectionid;
@@ -245,13 +528,13 @@
         }
         ValidateCollectionMetadata(_) {
           const _ = _;
-          return (
+          return Boolean(
             _ &&
-            "object" == typeof _ &&
-            _.clanid &&
-            "number" == typeof _.clanid &&
-            _.clan_event_gid &&
-            "string" == typeof _.clan_event_gid
+              "object" == typeof _ &&
+              _.clanid &&
+              "number" == typeof _.clanid &&
+              _.clan_event_gid &&
+              "string" == typeof _.clan_event_gid,
           );
         }
         SetFilteredView(_, _) {
@@ -263,7 +546,7 @@
               this.LoadAdditionalEvents,
               this.BHitEventHorizon,
               _,
-              _,
+              Boolean(_),
               _,
             );
           this.m_currentView.set(_);
@@ -291,10 +574,18 @@
             : (console.error("calendar view not yet initialized"), []);
         }
         GetCurrentlyLoadedEventCount(_, _) {
-          var _;
-          return null === (_ = this.m_currentView.get()) || void 0 === _
-            ? void 0
-            : __webpack_require__.GetCurrentlyLoadedEventCount(_, _);
+          var _, _;
+          return null !==
+            (_ =
+              null === (_ = this.m_currentView.get()) || void 0 === _
+                ? void 0
+                : __webpack_require__.GetCurrentlyLoadedEventCount(_, _)) &&
+            void 0 !== _
+            ? _
+            : {
+                nCount: 0,
+                bIsComplete: !1,
+              };
         }
         GetCurrentlyLoadedItemsForStats() {
           var _;
@@ -369,9 +660,7 @@
             _ = [];
           let _;
           this.m_key.rtCalendarEnd && (_ = this.m_key.rtCalendarEnd);
-          const _ =
-            this.m_rgSortedCalendarEvents.length > 0 &&
-            this.m_rgSortedCalendarEvents[0];
+          const _ = this.m_rgSortedCalendarEvents[0];
           _ && (_ = _.start_time), _ || (_ = _.getTime() / 1e3);
           const _ = _.getTime() / 1e3,
             _ = new Date(_);
@@ -454,12 +743,25 @@
         async RegisterCalendarEventsAndModels(_) {
           await _._.Get().HintLoad(),
             (0, _._)(() => {
-              this.RegisterCalendarApps(_.apps),
-                this.RegisterCalendarClans(_.clans),
-                this.RegisterCalendarEvents(_.documents),
-                _._.RegisterClanEvents(_.events),
-                this.RegisterReadEvents(_.events_read),
-                this.RegisterEventVotes(_.event_votes),
+              var _, _, _, _, _, _;
+              this.RegisterCalendarApps(
+                null !== (_ = _.apps) && void 0 !== _ ? _ : [],
+              ),
+                this.RegisterCalendarClans(
+                  null !== (_ = _.clans) && void 0 !== _ ? _ : [],
+                ),
+                this.RegisterCalendarEvents(
+                  null !== (_ = _.documents) && void 0 !== _ ? _ : [],
+                ),
+                _._.RegisterClanEvents(
+                  null !== (_ = _.events) && void 0 !== _ ? _ : [],
+                ),
+                this.RegisterReadEvents(
+                  null !== (_ = _.events_read) && void 0 !== _ ? _ : [],
+                ),
+                this.RegisterEventVotes(
+                  null !== (_ = _.event_votes) && void 0 !== _ ? _ : [],
+                ),
                 _.forwardComplete && (this.m_bFinishedSearchingForward = !0),
                 _.backwardComplete && (this.m_bFinishedSearchingBackward = !0),
                 this.InitCalendarSections(),
@@ -467,7 +769,7 @@
                 this.SetCollectionMetaData(
                   this.ValidateCollectionMetadata(_.metadatainfo)
                     ? _.metadatainfo
-                    : null,
+                    : void 0,
                 );
             });
         }
@@ -567,6 +869,7 @@
               : (this.m_backwardRequestInFlight = _);
         }
         async LoadAdditionalEvents(_, _) {
+          var _, _, _;
           if (this.BHitEventHorizon(_)) return _._;
           let _ = this.GetRequestInFlight(_);
           if (_) return _;
@@ -579,7 +882,11 @@
             _ = _ < 3 ? _ : 0,
             _ = _ >= 3 ? 1 : 0,
             _ = ("dev" === _._.WEB_UNIVERSE ? 50 : 250) + 50 * _,
-            _ = this.GetTimeEdgeForDirection(_, _._.GetTimeNowWithOverride()),
+            _ = _._.GetTimeNowWithOverride(),
+            _ =
+              null !== (_ = this.GetTimeEdgeForDirection(_, _)) && void 0 !== _
+                ? _
+                : _,
             _ = {
               minTime: 0,
               maxTime: 0,
@@ -590,14 +897,17 @@
               eventTypes: Array.from(
                 this.m_visibilityStore.enabledEventTypeSet,
               ).join(","),
-              appIdFilter: Boolean(
-                this.m_key.appids && this.m_key.appids.length > 0,
+              appIdFilter: (
+                null === (_ = this.m_key.appids) || void 0 === _
+                  ? void 0
+                  : _.length
               )
                 ? this.m_key.appids.sort().join(",")
                 : void 0,
-              clanIdFilter: Boolean(
-                this.m_key.clanaccountids &&
-                  this.m_key.clanaccountids.length > 0,
+              clanIdFilter: (
+                null === (_ = this.m_key.clanaccountids) || void 0 === _
+                  ? void 0
+                  : _.length
               )
                 ? this.m_key.clanaccountids.sort().join(",")
                 : void 0,
@@ -690,7 +1000,7 @@
           );
         }
         async UpdateEventBlockFromCalendarEvent(_, _) {
-          let _ = _.appInfo ? _.appid : void 0,
+          const _ = _.appInfo ? _.appid : void 0,
             _ = _.clanInfo ? _.clanInfo.clanid : void 0;
           null != _ || null != _
             ? (await _._.Get().UpdateCommunicationSetting(_, _, _),
@@ -793,8 +1103,8 @@
           if (this.m_fnBHitEventHorizon(_)) return !0;
           const _ = this.m_fnGetUnfilteredEvents();
           return "forward" === _
-            ? _ && _.length > 0 && _[0].start_time > _
-            : _.length > 0 && _[_.length - 1].start_time < _;
+            ? !!_ && _.length > 0 && _[0].start_time > _
+            : void 0 !== _ && _.length > 0 && _[_.length - 1].start_time < _;
         }
         async EnsureRangeIsLoaded(_, _) {
           for (
@@ -844,11 +1154,9 @@
           return this.filteredAndCheckedEvents
             .map((_) => _._.GetClanEventModel(_.unique_id))
             .filter((_) => {
-              if (_) {
-                const _ = _.endTime || _.startTime + 3600;
-                return _ >= _.startTime && _ < _;
-              }
-              return !1;
+              if (!_ || void 0 === _.startTime) return !1;
+              const _ = _.endTime || _.startTime + 3600;
+              return _ >= _.startTime && _ < _;
             });
         }
       }
@@ -885,7 +1193,8 @@
         );
       }
       function _() {
-        return null == _.get() && _({}), _.get(_.get());
+        let _ = _.get();
+        return null == _ && (_ = _({})), _.get(_);
       }
       function _() {
         return null !== _.get();
@@ -1430,16 +1739,17 @@
         );
       }
       function _(_) {
-        var _;
+        var _, _;
         const _ = _._.Get().GetStoreItem(_._, (0, _._)(_.type));
         return (
-          (null ===
+          (null !==
             (_ =
-              null == _
+              null === (_ = null == _ ? void 0 : _.GetBestPurchaseOption()) ||
+              void 0 === _
                 ? void 0
-                : __webpack_require__.GetBestPurchaseOption()) || void 0 === _
-            ? void 0
-            : _.discount_pct) > 0
+                : _.discount_pct) && void 0 !== _
+            ? _
+            : 0) > 0
         );
       }
       function _(_) {
@@ -1451,8 +1761,11 @@
         )
           return !0;
         const _ = _._.Get().GetStoreItem(_._, (0, _._)(_.type));
-        return _._.Get().BIsAnyLanguageEnabled(
-          __webpack_require__.GetAllLanguagesWithSomeSupport(),
+        return (
+          !_ ||
+          _._.Get().BIsAnyLanguageEnabled(
+            __webpack_require__.GetAllLanguagesWithSomeSupport(),
+          )
         );
       }
       async function _(_, _, _) {
@@ -1490,12 +1803,11 @@
         ) {
           const _ = Array.from(_)
             .map((_) => {
-              const _ = _._.Get().GetApp(_);
-              return (null == _ ? void 0 : _.GetParentAppID())
-                ? (_.add(_.GetParentAppID()), _.GetParentAppID())
-                : null;
+              const _ = _._.Get().GetApp(_),
+                _ = null == _ ? void 0 : _.GetParentAppID();
+              return _ ? (_.add(_), _) : null;
             })
-            .filter(Boolean)
+            .filter((_) => null !== _)
             .filter((_) => !_._.Get().BHasApp(_, _));
           _.length > 0 && (await _._.Get().QueueMultipleAppRequests(_, _));
         }
@@ -1511,33 +1823,49 @@
       };
       function _(_) {
         var _;
+        if (!_) return !0;
         const _ = _._.Get();
-        (0, _._)(__webpack_require__.BIsLoaded(), "Dynamic Store not loaded");
-        const _ =
-            (null == _ ? void 0 : _.GetAllLanguagesWithSomeSupport()) || [],
-          _ =
-            null === (_ = _._.Get().GetHomeView()) || void 0 === _
-              ? void 0
-              : _.localized;
-        return (
-          !_ ||
-          (_.GetStoreItemType() == _._._ &&
-            (__webpack_require__.BIsGameIgnored(_.GetAppID()) ||
-              __webpack_require__.BIsGameIgnored(_.GetParentAppID()))) ||
+        if (
+          ((0, _._)(
+            __webpack_require__.BIsLoaded(),
+            "Dynamic Store not loaded",
+          ),
+          _.GetStoreItemType() == _._._)
+        ) {
+          const _ = _.GetParentAppID();
+          if (
+            __webpack_require__.BIsGameIgnored(_.GetAppID()) ||
+            (void 0 !== _ && __webpack_require__.BIsGameIgnored(_))
+          )
+            return !0;
+        }
+        if (
           __webpack_require__.BExcludesContentDescriptor(
             _.GetContentDescriptorIDs(),
-          ) ||
-          __webpack_require__.BExcludeTagIDs(_.GetTagIDs()) ||
+          )
+        )
+          return !0;
+        if (__webpack_require__.BExcludeTagIDs(_.GetTagIDs())) return !0;
+        if (
           _.GetAllCreatorClanIDs().some((_) =>
             __webpack_require__.BIsIgnoringCurator(_),
-          ) ||
-          (_ &&
-            !(
-              0 == _.length ||
-              _.BHasSomeLanguageSupport(_.Bhc) ||
-              __webpack_require__.BIsAnyLanguageEnabled(_)
-            ))
-        );
+          )
+        )
+          return !0;
+        if (
+          null === (_ = _._.Get().GetHomeView()) || void 0 === _
+            ? void 0
+            : _.localized
+        ) {
+          const _ = _.GetAllLanguagesWithSomeSupport();
+          if (
+            _.length > 0 &&
+            !_.BHasSomeLanguageSupport(_.Bhc) &&
+            !__webpack_require__.BIsAnyLanguageEnabled(_)
+          )
+            return !0;
+        }
+        return !1;
       }
       async function _(_, _, _, _) {
         let _ = 0,
@@ -1552,12 +1880,14 @@
           }
           const _ = _.GetIncludedAppIDs()
             .map((_) => _._.Get().GetApp(_))
-            .filter(Boolean);
+            .filter((_) => Boolean(_));
           if ((_.push(_), _)) {
-            const _ = new Set(_.map((_) => _.GetParentAppID()).filter(Boolean)),
+            const _ = new Set(
+                _.map((_) => _.GetParentAppID()).filter((_) => Boolean(_)),
+              ),
               _ = Array.from(_)
                 .map((_) => _._.Get().GetApp(_))
-                .filter(Boolean);
+                .filter((_) => Boolean(_));
             _ && _.push(..._);
           }
           _.some(_ || _)

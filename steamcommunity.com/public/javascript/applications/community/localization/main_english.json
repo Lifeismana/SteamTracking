@@ -1631,6 +1631,7 @@
     "Sale_Tabs_Background_title": "Background Tab Select Image (optional)",
     "Sale_Tabs_Background_desc": "Allows setting a per tab background image that appears when the tab is selected.  It stretches across the tab bar on the top of the screen.",
     "Sale_Tabs_Editor_Deck": "Note: Filters will automatically add the 'show Deck compatibility' dialog to capsules on hover",
+    "Sale_Tabs_Editor_Frame": "Note: Filters will automatically add the 'show Frame compatibility' dialog to capsules on hover",
     "Sale_Tabs_Editor_Demo": "Note: Filters will automatically add the 'play demo' action to capsules on hover",
     "Sale_Tabs_Editor_AO": "Note: Filters will automatically hide this tab from customers who do not permit Steam showing them AO content",
     "Sale_Tabs_Editor_Upcoming": "Note: Filter will automatically remove non-upcoming related tabs from the Item Browser",

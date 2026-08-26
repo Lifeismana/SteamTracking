@@ -531,9 +531,9 @@
         G7: () => B,
         Iy: () => S,
         O4: () => E,
-        _q: () => P,
+        _q: () => C,
         dN: () => I,
-        es: () => C,
+        es: () => P,
         fw: () => k,
         k: () => y,
         kJ: () => M,
@@ -1184,13 +1184,13 @@
         );
         return (0, f.hL)(w.Get().GetSingleAppRegistrationChange(t, e), n), i;
       }
-      function P(t, e) {
+      function C(t, e) {
         const [i, n] = (0, o.useState)(
           w.Get().GetExistingOptInRegistartion(t, e),
         );
         return (0, f.hL)(w.Get().GetSingleAppRegistrationChange(t, e), n), i;
       }
-      function C() {
+      function P() {
         return {
           fnUpdateOptInRegistrationJson: w.Get().UpdateOptInRegistrationJson,
         };
@@ -1234,9 +1234,9 @@
         XA: () => z,
         XL: () => L,
         a8: () => R,
-        aU: () => C,
+        aU: () => P,
         gr: () => E,
-        hC: () => P,
+        hC: () => C,
         iI: () => y,
         qN: () => S,
         qT: () => _,
@@ -1651,7 +1651,7 @@
           Array.from(t.map((t) => [t, h.Get().GetDiscountByID(t)])),
         );
       }
-      function P(t) {
+      function C(t) {
         const e = (0, o.f1)(),
           [i, n] = a.useState(h.Get().GetAllDiscountsForPackage(t));
         return (
@@ -1672,7 +1672,7 @@
           }, [t, e, i])
         );
       }
-      function C(t) {
+      function P(t) {
         const e = (0, o.f1)();
         if (!t) return null;
         let i = null;
@@ -1785,15 +1785,15 @@
         Be: () => R,
         C5: () => it,
         Gq: () => et,
-        NK: () => C,
-        QD: () => H,
+        NK: () => P,
+        QD: () => V,
         T1: () => G,
         UZ: () => w,
         WV: () => W,
         ZM: () => q,
         _9: () => Q,
         bA: () => x,
-        ew: () => V,
+        ew: () => H,
         gr: () => Z,
         h5: () => I,
         hk: () => D,
@@ -1808,7 +1808,7 @@
         wF: () => X,
         we: () => S,
         wk: () => tt,
-        wn: () => P,
+        wn: () => C,
         zP: () => $,
         zU: () => y,
       });
@@ -1838,8 +1838,8 @@
         I = 7,
         E = 8,
         R = 9,
-        P = 10,
-        C = 11;
+        C = 10,
+        P = 11;
       function k(t, e) {
         return (
           !!t == !!e &&
@@ -2058,7 +2058,7 @@
               const t = a.opt_in_name && l?.get(a.opt_in_name);
               t && (n.optInReg = t);
             } else {
-              if (((n.eState = B), j(a, i))) n.eState = P;
+              if (((n.eState = B), j(a, i))) n.eState = C;
               else if (a.opt_in_name) {
                 const { ePackageDiscountState: t, optInRegistration: e } = T(
                   a.opt_in_name,
@@ -2069,7 +2069,7 @@
                 );
                 (n.eState = t), (n.optInReg = e);
               }
-              if (n.eState != P && n.eState != y && n.eState != v) {
+              if (n.eState != C && n.eState != y && n.eState != v) {
                 const e = F(t, a, p);
                 e.ePackageDiscountState != B &&
                   ((n.eState = e.ePackageDiscountState),
@@ -2090,7 +2090,7 @@
         }
         GetAvailableDiscountEventsInRange(t, e, i) {
           const n = this.m_mapPackageStateForDiscountEvents.get(t),
-            r = new Set([B, C, D, S]);
+            r = new Set([B, P, D, S]);
           return (0, b.E1)()
             .filter(
               (t) =>
@@ -2276,7 +2276,7 @@
             .filter(Boolean);
           t.some((t) => t.opt_in)
             ? (o = B)
-            : t.some((t) => !t.restricted && !t.pruned) && (o = C);
+            : t.some((t) => !t.restricted && !t.pruned) && (o = P);
         }
         return { ePackageDiscountState: o, optInRegistration: s };
       }
@@ -2332,13 +2332,13 @@
           [],
         );
       }
-      function H() {
+      function V() {
         return u.useCallback(
           (t, e) => L.Get().OptInRegistrationUpdatedForApp(t, e),
           [],
         );
       }
-      function V() {
+      function H() {
         return u.useCallback(
           (t, e) => L.Get().DiscardLocalPackageDiscountOverride(t, e),
           [],
@@ -2427,7 +2427,7 @@
               break;
             case y:
             case v:
-            case P:
+            case C:
               i.ineligibile.add(t.packageID);
           }
         return i;
@@ -2756,12 +2756,12 @@
       i.d(e, {
         HA: () => B,
         IR: () => G,
-        NP: () => C,
+        NP: () => P,
         Xr: () => O,
         ZN: () => z,
         mE: () => R,
         rK: () => D,
-        sF: () => P,
+        sF: () => C,
         uv: () => I,
       });
       var n = i(7850),
@@ -2937,10 +2937,10 @@
           [t],
         );
       }
-      function P() {
+      function C() {
         return r.useMemo(() => ({ accessorKey: "appids" }), []);
       }
-      function C() {
+      function P() {
         return r.useMemo(
           () => ({
             accessorKey: "packageType",
@@ -3120,7 +3120,7 @@
     },
     66051: (t, e, i) => {
       "use strict";
-      i.d(e, { k: () => P });
+      i.d(e, { k: () => k });
       var n = i(7850),
         r = i(8871),
         a = i(67796),
@@ -3140,24 +3140,32 @@
         const {
             virtualizer: e,
             bDynamic: i,
-            idx: r,
-            rowGap: a,
-            renderItem: s,
+            scrollAlign: r,
+            bNativeScrollIntoView: a,
+            idx: s,
+            rowGap: o,
+            renderItem: c,
           } = t,
-          o = d.useCallback(
-            (t, i, n) => (e.scrollToIndex(r, { align: "center" }), !0),
-            [e, r],
+          l = d.useCallback(
+            (t, i, n) => (e.scrollToIndex(s, { align: r }), !0),
+            [e, s, r],
           );
         return (0, n.jsx)(g.Z, {
           ref: i ? e.measureElement : void 0,
-          navKey: `VirtualizedListIndex-${r}`,
-          "data-index": r,
-          fnScrollIntoViewHandler: o,
+          navKey: `VirtualizedListIndex-${s}`,
+          "data-index": s,
+          fnScrollIntoViewHandler: a ? void 0 : l,
           scrollIntoViewWhenChildFocused: "force",
-          style: { width: "100%", paddingBottom: a },
-          children: s(r),
+          style: { width: "100%", paddingBottom: o },
+          children: c(s),
         });
       });
+      function w(t, e) {
+        const i = t.getBoundingClientRect().top;
+        return e
+          ? i - e.getBoundingClientRect().top - e.clientTop + e.scrollTop
+          : i + (t.ownerDocument.defaultView?.scrollY ?? 0);
+      }
       d.forwardRef(function (t, e) {
         const {
             nRows: i,
@@ -3170,39 +3178,43 @@
             className: m,
             forceVirtualizeType: p,
             hintVirtualizeType: _,
-            initialOffset: h,
-            onOffsetChange: b,
-            ...D
+            scrollAlign: h,
+            bNativeScrollIntoView: b,
+            initialOffset: B,
+            onOffsetChange: y,
+            ...v
           } = t,
-          [S, y] = (0, d.useState)(p ?? _),
-          [v, M] = d.useState(),
-          [I, E] = d.useState(),
-          R = d.useRef(null),
-          P = d.useCallback(
+          [M, I] = (0, d.useState)(p ?? _),
+          [E, R] = d.useState(),
+          [C, P] = d.useState(),
+          k = d.useRef(null),
+          z = d.useCallback(
             (t) => {
               if (!t) return;
-              const e = (0, f._f)(t, "y");
+              const e = (0, f._f)(t, "y"),
+                i = w(t, "window" == p ? null : e);
               (0, d.startTransition)(() => {
-                "window" != p && M(e || void 0),
-                  E(t.offsetTop),
-                  p || y(e ? "element" : "window");
+                "window" != p && R(e || void 0),
+                  P(i),
+                  p || I(e ? "element" : "window");
               });
             },
             [p],
           ),
-          C =
-            ((k = (t) => {
-              R.current &&
-                (0, d.startTransition)(() => {
-                  R.current && E(R.current?.offsetTop);
-                });
+          G =
+            ((O = (t) => {
+              if (!k.current) return;
+              const e = w(k.current, E);
+              (0, d.startTransition)(() => {
+                P(e);
+              });
             }),
             (0, r.QS)(
               (t) => {
                 if (!t) return;
                 const e = new t.ownerDocument.defaultView.ResizeObserver(
                   (t) => {
-                    k(t[0]);
+                    O(t[0]);
                   },
                 );
                 let i = [],
@@ -3213,11 +3225,11 @@
                   i.forEach((t) => e.unobserve(t));
                 };
               },
-              [k],
+              [O],
             ));
-        var k;
-        const z = (0, r.Ue)(P, R, C, e),
-          G = {
+        var O;
+        const A = (0, r.Ue)(z, k, G, e),
+          L = {
             nRows: i,
             nItemHeight: a,
             nRowGap: s,
@@ -3227,23 +3239,33 @@
             measureElement: u,
             forceVirtualizeType: p,
             hintVirtualizeType: _,
-            initialOffset: h,
-            onOffsetChange: b,
+            scrollAlign: h,
+            bNativeScrollIntoView: b,
+            initialOffset: B,
+            onOffsetChange: y,
           };
         return (0, n.jsx)(g.Z, {
           className: m,
-          ref: z,
-          ...D,
+          ref: A,
+          ...v,
           children: (0, n.jsxs)(d.Suspense, {
             children: [
-              "element" === S &&
-                (0, n.jsx)(B, { ...G, nScrollMargin: I || 0, elScrollable: v }),
-              "window" === S && (0, n.jsx)(w, { ...G, nScrollMargin: I }),
+              "element" === M &&
+                (0, n.jsx)(S, { ...L, nScrollMargin: C || 0, elScrollable: E }),
+              "window" === M && (0, n.jsx)(D, { ...L, nScrollMargin: C }),
             ],
           }),
         });
       });
-      function w(t) {
+      function B(t, e, i) {
+        d.useEffect(() => {
+          i ||
+            (0, d.startTransition)(() => {
+              t.measure();
+            });
+        }, [t, e, i]);
+      }
+      function D(t) {
         const {
             nScrollMargin: e,
             nRows: i,
@@ -3253,34 +3275,31 @@
             initialOffset: c,
             onOffsetChange: l,
             measureElement: u,
+            bDynamic: m,
           } = t,
-          m = ((0, h.d)(), r + a),
-          p = (0, o.XW)({
+          p = ((0, h.d)(), r + a),
+          g = (0, o.XW)({
             count: i,
             scrollMargin: e,
-            estimateSize: d.useCallback(() => m, [m]),
+            estimateSize: d.useCallback(() => p, [p]),
             measureElement: u,
             overscan: s,
             initialOffset: c ?? (() => window.scrollY),
             initialRect: void 0,
-            observeElementOffset: y,
-            observeElementRect: v,
+            observeElementOffset: M,
+            observeElementRect: I,
             onChange(t, e) {
               l?.(t.scrollOffset);
             },
           });
         return (
-          (p.shouldAdjustScrollPositionOnItemSizeChange = (t) =>
-            void 0 !== e && t.start < (p.scrollOffset ?? 0)),
-          d.useEffect(() => {
-            (0, d.startTransition)(() => {
-              p.measure();
-            });
-          }, [p, m]),
-          (0, n.jsx)(D, { ...t, virtualizer: p })
+          (g.shouldAdjustScrollPositionOnItemSizeChange = (t) =>
+            void 0 !== e && t.start < (g.scrollOffset ?? 0)),
+          B(g, p, m),
+          (0, n.jsx)(y, { ...t, virtualizer: g })
         );
       }
-      function B(t) {
+      function S(t) {
         const {
             nRows: e,
             nScrollMargin: i,
@@ -3291,61 +3310,75 @@
             initialOffset: l,
             onOffsetChange: u,
             measureElement: m,
+            bDynamic: p,
           } = t,
-          p = a + s,
-          g = (0, h.d)(),
-          _ = (0, o.Te)({
+          g = a + s,
+          _ = (0, h.d)(),
+          f = (0, o.Te)({
             count: e,
-            scrollMargin: i - (r?.offsetTop || 0),
-            getScrollElement: () => r,
-            estimateSize: d.useCallback(() => p, [p]),
+            scrollMargin: i,
+            getScrollElement: () => (
+              r &&
+                f.scrollElement !== r &&
+                void 0 === l &&
+                (f.scrollOffset = r.scrollTop),
+              r ?? null
+            ),
+            estimateSize: d.useCallback(() => g, [g]),
             measureElement: m,
             overscan: c,
             initialRect: r
               ? void 0
               : {
-                  height: g.viewportHeight?.value ?? 1e3,
-                  width: g.viewportWidth?.value ?? 1e3,
+                  height: _.viewportHeight?.value ?? 1e3,
+                  width: _.viewportWidth?.value ?? 1e3,
                 },
             initialOffset: l,
-            observeElementOffset: y,
-            observeElementRect: M,
+            observeElementOffset: M,
+            observeElementRect: E,
             onChange(t, e) {
               u?.(t.scrollOffset);
             },
           });
         return (
-          d.useEffect(() => {
-            (0, d.startTransition)(() => {
-              _.measure();
-            });
-          }, [_, p]),
-          (0, n.jsx)(D, { ...t, virtualizer: _ })
+          (f.shouldAdjustScrollPositionOnItemSizeChange = (t) =>
+            void 0 !== r && t.start < (f.scrollOffset ?? 0)),
+          B(f, g, p),
+          (0, n.jsx)(y, { ...t, virtualizer: f })
         );
       }
-      function D(t) {
-        const { virtualizer: e, nRowGap: i, renderItem: r, bDynamic: a } = t,
-          s = e.getVirtualItems(),
-          o = s.length ? s[0].start - e.options.scrollMargin : 0,
-          c = Math.max(0, e.getTotalSize());
+      function y(t) {
+        const {
+            virtualizer: e,
+            nRowGap: i,
+            renderItem: r,
+            bDynamic: a,
+            scrollAlign: s = "center",
+            bNativeScrollIntoView: o,
+          } = t,
+          c = e.getVirtualItems(),
+          l = c.length ? c[0].start - e.options.scrollMargin : 0,
+          u = Math.max(0, e.getTotalSize());
         return (0, n.jsx)(g.Z, {
           "flow-children": "column",
           navEntryPreferPosition: _.iU.MAINTAIN_Y,
-          style: { height: `${c}px`, width: "100%", position: "relative" },
+          style: { height: `${u}px`, width: "100%", position: "relative" },
           children: (0, n.jsx)("div", {
             style: {
               position: "absolute",
               top: 0,
               left: 0,
               width: "100%",
-              transform: `translateY( ${o}px )`,
+              transform: `translateY( ${l}px )`,
             },
-            children: s.map((t) =>
+            children: c.map((t) =>
               (0, n.jsx)(
                 b,
                 {
                   virtualizer: e,
                   bDynamic: a,
+                  scrollAlign: s,
+                  bNativeScrollIntoView: o,
                   idx: t.index,
                   rowGap: i,
                   renderItem: r,
@@ -3356,7 +3389,7 @@
           }),
         });
       }
-      function S(t) {
+      function v(t) {
         return (...e) => {
           queueMicrotask(() => {
             (0, d.startTransition)(() => {
@@ -3365,11 +3398,11 @@
           });
         };
       }
-      function y(t, e) {
+      function M(t, e) {
         const i = t.scrollElement;
         if (!i) return;
         let n;
-        n = S(
+        n = v(
           "scrollX" in i
             ? (n) => e(i[t.options.horizontal ? "scrollX" : "scrollY"], n)
             : (n) => e(i[t.options.horizontal ? "scrollLeft" : "scrollTop"], n),
@@ -3386,10 +3419,10 @@
           }
         );
       }
-      function v(t, e) {
+      function I(t, e) {
         const i = t.scrollElement;
         if (!i) return;
-        const n = S(() => e({ width: i.innerWidth, height: i.innerHeight }));
+        const n = v(() => e({ width: i.innerWidth, height: i.innerHeight }));
         return (
           n(),
           i.addEventListener("resize", n, { passive: !0 }),
@@ -3398,10 +3431,10 @@
           }
         );
       }
-      function M(t, e) {
+      function E(t, e) {
         const i = t.scrollElement;
         if (!i) return;
-        const n = S((t) =>
+        const n = v((t) =>
           e({ width: Math.round(t.width), height: Math.round(t.height) }),
         );
         n(i.getBoundingClientRect());
@@ -3422,9 +3455,9 @@
           }
         );
       }
-      var I = i(26408);
-      const E = d.createContext(void 0);
-      function R(t) {
+      var R = i(26408);
+      const C = d.createContext(void 0);
+      function P(t) {
         const { table: e, setColumnSizeOverride: i } = t,
           r = (0, d.useRef)(e);
         r.current = e;
@@ -3432,9 +3465,9 @@
           () => ({ table: r.current, setColumnSizeOverride: i }),
           [i],
         );
-        return (0, n.jsx)(E.Provider, { value: a, children: t.children });
+        return (0, n.jsx)(C.Provider, { value: a, children: t.children });
       }
-      const P = d.forwardRef(function (t, e) {
+      const k = d.forwardRef(function (t, e) {
         const {
             data: i,
             columns: r,
@@ -3451,12 +3484,12 @@
             initialColumnFilters: B,
             initialGrouping: D,
             initialExpanded: S,
-            initialColumnPinning: I,
-            initialColumnVisibility: E,
-            onGroupingChange: P,
+            initialColumnPinning: y,
+            initialColumnVisibility: v,
+            onGroupingChange: R,
             onVisibleRowsChange: C,
-            renderGroup: G,
-            virtualizeType: O = "element",
+            renderGroup: k,
+            virtualizeType: z = "element",
           } = t,
           A = (0, d.useRef)(null),
           [L, F] = (0, d.useState)({}),
@@ -3482,9 +3515,9 @@
               sorting: w,
               grouping: D ?? [],
               expanded: S,
-              columnPinning: I ?? {},
+              columnPinning: y ?? {},
               columnFilters: B,
-              columnVisibility: E,
+              columnVisibility: v,
             },
             getCoreRowModel: (0, s.HT)(),
             getSortedRowModel: (0, s.h5)(),
@@ -3493,30 +3526,30 @@
             columnResizeMode: "onChange",
           }),
           { rows: q, flatRows: N } = W.getRowModel(),
-          H = q.flatMap((t) => (t.getIsExpanded() ? [t, ...t.subRows] : t)),
-          V = W.getState().grouping;
+          V = q.flatMap((t) => (t.getIsExpanded() ? [t, ...t.subRows] : t)),
+          H = W.getState().grouping;
         (0, d.useEffect)(() => {
-          P?.(V);
-        }, [P, V]),
+          R?.(H);
+        }, [R, H]),
           (0, d.useEffect)(() => {
-            C?.(H);
-          }, [C, H.length]);
+            C?.(V);
+          }, [C, V.length]);
         const K = (0, o.Te)({
-            count: H.length,
+            count: V.length,
             scrollMargin: p,
             getScrollElement: d.useCallback(
-              () => ("element" === O ? tt.current : window),
-              [O],
+              () => ("element" === z ? tt.current : window),
+              [z],
             ),
             scrollToFn: (t, e, i) =>
-              "window" === O ? (0, c.e8)(t, e, i) : (0, c.Ox)(t, e, i),
+              "window" === z ? (0, c.e8)(t, e, i) : (0, c.Ox)(t, e, i),
             estimateSize: d.useCallback(() => g, [g]),
             overscan: f,
             initialRect: void 0,
-            observeElementOffset: y,
-            observeElementRect: (t, e) => ("window" === O ? v(t, e) : M(t, e)),
+            observeElementOffset: M,
+            observeElementRect: (t, e) => ("window" === z ? I(t, e) : E(t, e)),
             getItemKey(t) {
-              const e = H[t];
+              const e = V[t];
               return `${e.parentId ?? ""}${b(t, e.original)}`;
             },
           }),
@@ -3541,18 +3574,18 @@
           Y = K.getTotalSize(),
           Q = (0, o.Te)({
             estimateSize: (t) =>
-              H[0]?.getVisibleCells()[t].column.getSize() ?? 0,
-            count: H[0]?.getVisibleCells().length ?? 0,
+              V[0]?.getVisibleCells()[t].column.getSize() ?? 0,
+            count: V[0]?.getVisibleCells().length ?? 0,
             overscan: 6,
             horizontal: !0,
             getScrollElement: d.useCallback(
-              () => ("element" === O ? tt.current : window),
-              [O],
+              () => ("element" === z ? tt.current : window),
+              [z],
             ),
             scrollToFn: (t, e, i) =>
-              "window" === O ? (0, c.e8)(t, e, i) : (0, c.Ox)(t, e, i),
+              "window" === z ? (0, c.e8)(t, e, i) : (0, c.Ox)(t, e, i),
             rangeExtractor(t) {
-              const e = H[0]?.getVisibleCells() ?? [],
+              const e = V[0]?.getVisibleCells() ?? [],
                 i = new Set((0, c.vp)(t));
               return (
                 e.forEach((t, e) => {
@@ -3561,8 +3594,8 @@
                 Array.from(i).sort((t, e) => t - e)
               );
             },
-            observeElementOffset: y,
-            observeElementRect: (t, e) => ("window" === O ? v(t, e) : M(t, e)),
+            observeElementOffset: M,
+            observeElementRect: (t, e) => ("window" === z ? I(t, e) : E(t, e)),
           });
         (0, d.useEffect)(() => {
           Q.measure();
@@ -3571,7 +3604,7 @@
             e,
             () => ({
               getData: () => N.map((t) => t.original),
-              getVisibleRows: () => H,
+              getVisibleRows: () => V,
               getState: W.getState,
               getColumns: W.getAllColumns,
               getColumnDefs: () => U,
@@ -3587,7 +3620,7 @@
             }),
             [
               N,
-              H,
+              V,
               W.setColumnFilters,
               W.resetColumnFilters,
               W.getState,
@@ -3600,14 +3633,14 @@
         const tt = (0, d.useRef)(null),
           et = h ? (_ ?? 0) : 0;
         let it = 0;
-        const nt = H[0]?.getVisibleCells(),
+        const nt = V[0]?.getVisibleCells(),
           rt = Q.getVirtualItems(),
           at = rt[rt.length - 1]?.end;
         for (const t of rt) {
           const e = nt[t.index];
           e?.column.getIsPinned() && (it += t.size);
         }
-        return (0, n.jsx)(R, {
+        return (0, n.jsx)(P, {
           table: W,
           setColumnSizeOverride: j,
           children: (0, n.jsx)("div", {
@@ -3616,7 +3649,7 @@
             style: {
               width: u,
               height: m,
-              overflow: "element" === O ? "auto" : void 0,
+              overflow: "element" === z ? "auto" : void 0,
               maxWidth: "fit-content",
               scrollPadding: `${et}px 0 0 ${it}px`,
             },
@@ -3633,23 +3666,23 @@
               children: [
                 W.getHeaderGroups().map((t) =>
                   (0, n.jsx)(
-                    k,
+                    G,
                     { group: t, sticky: h, nHeaderHeight: _ },
                     t.id,
                   ),
                 ),
                 Z.map((t) =>
                   (0, n.jsx)(
-                    z,
+                    O,
                     {
-                      row: H[t.index],
+                      row: V[t.index],
                       size: t.size,
                       rowVirtualizer: Q,
                       index: t.index,
                       measureRef: K.measureElement,
                       scrollContainerRef: tt,
                       nItemHeight: g,
-                      renderGroup: G,
+                      renderGroup: k,
                       rowEnd: at,
                     },
                     t.key,
@@ -3660,7 +3693,7 @@
           }),
         });
       });
-      function C(t) {
+      function z(t) {
         const e = t.getIsPinned();
         return {
           borderRight:
@@ -3678,7 +3711,7 @@
           zIndex: e ? 1 : 0,
         };
       }
-      function k(t) {
+      function G(t) {
         const { group: e, sticky: i, nHeaderHeight: r } = t;
         return (0, n.jsx)("div", {
           role: "row",
@@ -3701,7 +3734,7 @@
                 ((c = "button"),
                 (s.onClick = t.column.getToggleSortingHandler())),
               (0, n.jsx)(
-                A,
+                F,
                 {
                   header: t,
                   prevHeader: a,
@@ -3717,7 +3750,7 @@
           }),
         });
       }
-      const z = d.memo(function (t) {
+      const O = d.memo(function (t) {
         const {
           row: e,
           size: i,
@@ -3740,7 +3773,7 @@
           "data-even": s % 2 == 0,
           "data-index": s,
           ref: a,
-          children: (0, n.jsx)(G, {
+          children: (0, n.jsx)(A, {
             row: e,
             rowVirtualizer: r,
             nItemHeight: o,
@@ -3748,7 +3781,7 @@
           }),
         });
       });
-      function G(t) {
+      function A(t) {
         const { row: e, rowVirtualizer: i, renderGroup: r } = t;
         if (e.getCanExpand()) {
           const t = r ?? (() => e.groupingValue);
@@ -3773,7 +3806,7 @@
             return (
               r ? (c += t.size) : void 0 === o && (o = t.start),
               (0, n.jsx)(
-                L,
+                T,
                 {
                   cell: e,
                   rowVirtualizer: i,
@@ -3786,8 +3819,8 @@
           }),
         });
       }
-      function O(t, e) {
-        const i = (0, d.useContext)(E),
+      function L(t, e) {
+        const i = (0, d.useContext)(C),
           n = t.columnDef.meta?.bGrowToFit,
           r = t.id,
           a = n ? t.getSize() : 0,
@@ -3814,7 +3847,7 @@
             i.setColumnSizeOverride((t) => (t[r] > c ? t : { ...t, [r]: c }));
         }, [n, r, i, a, e, s]);
       }
-      function A(t) {
+      function F(t) {
         const {
             header: e,
             prevHeader: i,
@@ -3826,7 +3859,7 @@
           } = t,
           m = (0, d.useRef)(null);
         return (
-          O(e.column, m),
+          L(e.column, m),
           (0, n.jsxs)(
             r,
             {
@@ -3841,7 +3874,7 @@
               style: {
                 width: `var(--header-${e.id}-size)`,
                 height: void 0 !== s ? `${s}px` : void 0,
-                ...C(e.column),
+                ...z(e.column),
               },
               ...l,
               children: [
@@ -3857,7 +3890,7 @@
                 e.isPlaceholder
                   ? null
                   : (0, a.Kv)(e.column.columnDef.header, e.getContext()),
-                c && (0, n.jsx)(I.o, { tooltip: c }),
+                c && (0, n.jsx)(R.o, { tooltip: c }),
                 o &&
                   !e.column.columnDef.meta?.bDisableSortButton &&
                   (0, n.jsx)("div", { className: p().SortIndicator }),
@@ -3879,12 +3912,12 @@
           )
         );
       }
-      function L(t) {
+      function T(t) {
         const { cell: e, rowVirtualizer: i, index: a, transform: s } = t,
           o = d.useRef(null),
           c = (0, r.XB)(o, i.measure);
         return (
-          O(e.column, o),
+          L(e.column, o),
           (0, n.jsx)("div", {
             className: u()(
               p().FancyTableCell,
@@ -3896,16 +3929,16 @@
             style: {
               width: `var(--col-${e.column.id}-size)`,
               transform: s,
-              ...C(e.column),
+              ...z(e.column),
             },
-            children: (0, n.jsx)(F, {
+            children: (0, n.jsx)(j, {
               CellComponent: e.column.columnDef.cell,
               context: e.getContext(),
             }),
           })
         );
       }
-      const F = d.memo(
+      const j = d.memo(
         function (t) {
           return (0, a.Kv)(t.CellComponent, t.context);
         },
@@ -3920,7 +3953,7 @@
         hp: () => gt,
         xE: () => it,
         mQ: () => J,
-        vt: () => V,
+        vt: () => H,
         lr: () => ot,
         tY: () => Q,
         KQ: () => q,
@@ -3953,13 +3986,13 @@
           RM: () => v,
           dk: () => A,
           Ng: () => O,
-          Mc: () => C,
+          Mc: () => P,
           pF: () => y,
           EE: () => E,
           nT: () => R,
           CI: () => M,
           _j: () => k,
-          UM: () => P,
+          UM: () => C,
           K2: () => I,
           E0: () => F,
           iY: () => z,
@@ -3988,8 +4021,8 @@
         I = 4,
         E = 8,
         R = 16,
-        P = 128,
-        C = 256,
+        C = 128,
+        P = 256,
         k = 512,
         z = 1024,
         G = 2048,
@@ -4454,20 +4487,20 @@
           return "CPublishing_UpdatePartnerAppOptInEmail_Response";
         }
       }
-      class H extends o.Message {
+      class V extends o.Message {
         static ImplementsStaticInterface() {}
         constructor(t = null) {
           super(),
-            H.prototype.accounts_examined || l.Sg(H.M()),
+            V.prototype.accounts_examined || l.Sg(V.M()),
             o.Message.initialize(this, t, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            H.sm_m ||
-              (H.sm_m = {
-                proto: H,
+            V.sm_m ||
+              (V.sm_m = {
+                proto: V,
                 fields: {
                   accounts_examined: {
                     n: 1,
@@ -4495,67 +4528,6 @@
                     br: l.qM.readUint32,
                     bw: l.gp.writeUint32,
                   },
-                },
-              }),
-            H.sm_m
-          );
-        }
-        static MBF() {
-          return H.sm_mbf || (H.sm_mbf = l.w0(H.M())), H.sm_mbf;
-        }
-        toObject(t = !1) {
-          return H.toObject(t, this);
-        }
-        static toObject(t, e) {
-          return l.BT(H.M(), t, e);
-        }
-        static fromObject(t) {
-          return l.Uq(H.M(), t);
-        }
-        static deserializeBinary(t) {
-          let e = new (c().BinaryReader)(t),
-            i = new H();
-          return H.deserializeBinaryFromReader(i, e);
-        }
-        static deserializeBinaryFromReader(t, e) {
-          return l.zj(H.MBF(), t, e);
-        }
-        serializeBinary() {
-          var t = new (c().BinaryWriter)();
-          return H.serializeBinaryToWriter(this, t), t.getResultBuffer();
-        }
-        static serializeBinaryToWriter(t, e) {
-          l.i0(H.M(), t, e);
-        }
-        serializeBase64String() {
-          var t = new (c().BinaryWriter)();
-          return H.serializeBinaryToWriter(this, t), t.getResultBase64String();
-        }
-        getClassName() {
-          return "CPartnerAppOptInEmailStats";
-        }
-      }
-      class V extends o.Message {
-        static ImplementsStaticInterface() {}
-        constructor(t = null) {
-          super(),
-            V.prototype.email_def_id || l.Sg(V.M()),
-            o.Message.initialize(this, t, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            V.sm_m ||
-              (V.sm_m = {
-                proto: V,
-                fields: {
-                  email_def_id: {
-                    n: 1,
-                    br: l.qM.readFixed64String,
-                    bw: l.gp.writeFixed64String,
-                  },
-                  force_resend: { n: 2, br: l.qM.readBool, bw: l.gp.writeBool },
                 },
               }),
             V.sm_m
@@ -4593,6 +4565,67 @@
           return V.serializeBinaryToWriter(this, t), t.getResultBase64String();
         }
         getClassName() {
+          return "CPartnerAppOptInEmailStats";
+        }
+      }
+      class H extends o.Message {
+        static ImplementsStaticInterface() {}
+        constructor(t = null) {
+          super(),
+            H.prototype.email_def_id || l.Sg(H.M()),
+            o.Message.initialize(this, t, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            H.sm_m ||
+              (H.sm_m = {
+                proto: H,
+                fields: {
+                  email_def_id: {
+                    n: 1,
+                    br: l.qM.readFixed64String,
+                    bw: l.gp.writeFixed64String,
+                  },
+                  force_resend: { n: 2, br: l.qM.readBool, bw: l.gp.writeBool },
+                },
+              }),
+            H.sm_m
+          );
+        }
+        static MBF() {
+          return H.sm_mbf || (H.sm_mbf = l.w0(H.M())), H.sm_mbf;
+        }
+        toObject(t = !1) {
+          return H.toObject(t, this);
+        }
+        static toObject(t, e) {
+          return l.BT(H.M(), t, e);
+        }
+        static fromObject(t) {
+          return l.Uq(H.M(), t);
+        }
+        static deserializeBinary(t) {
+          let e = new (c().BinaryReader)(t),
+            i = new H();
+          return H.deserializeBinaryFromReader(i, e);
+        }
+        static deserializeBinaryFromReader(t, e) {
+          return l.zj(H.MBF(), t, e);
+        }
+        serializeBinary() {
+          var t = new (c().BinaryWriter)();
+          return H.serializeBinaryToWriter(this, t), t.getResultBuffer();
+        }
+        static serializeBinaryToWriter(t, e) {
+          l.i0(H.M(), t, e);
+        }
+        serializeBase64String() {
+          var t = new (c().BinaryWriter)();
+          return H.serializeBinaryToWriter(this, t), t.getResultBase64String();
+        }
+        getClassName() {
           return "CPublishing_SendPartnerAppOptInEmailAndWait_Request";
         }
       }
@@ -4608,7 +4641,7 @@
         static M() {
           return (
             K.sm_m ||
-              (K.sm_m = { proto: K, fields: { results: { n: 1, c: H } } }),
+              (K.sm_m = { proto: K, fields: { results: { n: 1, c: V } } }),
             K.sm_m
           );
         }
@@ -4692,7 +4725,7 @@
                     br: l.qM.readUint32,
                     bw: l.gp.writeUint32,
                   },
-                  stats: { n: 7, c: H },
+                  stats: { n: 7, c: V },
                   creator_accountid: {
                     n: 8,
                     br: l.qM.readUint32,
@@ -4943,7 +4976,7 @@
         static M() {
           return (
             Y.sm_m ||
-              (Y.sm_m = { proto: Y, fields: { stats: { n: 1, c: H } } }),
+              (Y.sm_m = { proto: Y, fields: { stats: { n: 1, c: V } } }),
             Y.sm_m
           );
         }
@@ -6535,7 +6568,7 @@
           (t.SendPartnerOptInEmailAndWait = function (t, e, i) {
             return t.SendMsg(
               "Publishing.SendPartnerOptInEmailAndWait#1",
-              (0, u.I8)(V, e, i),
+              (0, u.I8)(H, e, i),
               K,
               { ePrivilege: 1 },
             );

@@ -307,5 +307,8 @@
     "AppPage_RecommendationReason_FriendsOwned_Software": "<1>%1$s ven</1> ejer allerede denne software:",
     "AppPage_RecommendationReason_FriendsOwned_Software_Plural": "<1>%1$s venner</1> ejer allerede denne software:",
     "AppPage_RecommendationReason_FriendsOwned_Video": "<1>%1$s ven</1> ejer allerede denne video:",
-    "AppPage_RecommendationReason_FriendsOwned_Video_Plural": "<1>%1$s venner</1> ejer allerede denne video:"
+    "AppPage_RecommendationReason_FriendsOwned_Video_Plural": "<1>%1$s venner</1> ejer allerede denne video:",
+    "AppPage_PageSectionBanner_Workshop": "Steam-værksted",
+    "AppPage_PageSectionBanner_Follow": "Følg dette spil",
+    "AppPage_PageSectionBanner_MachineController": "Steam Machine og Steam Controller"
 }

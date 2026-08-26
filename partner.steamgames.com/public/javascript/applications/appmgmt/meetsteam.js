@@ -24,7 +24,16 @@
       };
     },
     34283: (e) => {
-      e.exports = { ImportButtonLabel: "_1QCMW1MwEkiLeTlmhMvSs_" };
+      e.exports = {
+        ImportButtonLabel: "_1QCMW1MwEkiLeTlmhMvSs_",
+        AccountSummary: "_3ASk__24cRSvf749cMDwat",
+        AccountAvatar: "_2xoRnY-a7zMtF4eXy564LW",
+        AccountPersonaName: "_13y5R1N5OAhnGi8UjBv9ZK",
+        PartnerList: "_EdCW3WiSPTQsVts-RIeJ",
+        PartnerListHeader: "_4TErK934px6TrK1V9JGoD",
+        PartnerListRow: "CZqR_ufpzWTsB5Z6N9Zut",
+        PartnerListRowSelected: "_2d0ftwVO6CThilpy0rp1mx",
+      };
     },
     85761: (e) => {
       e.exports = {
@@ -101,7 +110,7 @@ License: MIT
               (this.isFirstChunk = !0),
               (this._completeResults = { data: [], errors: [], meta: {} }),
               function (e) {
-                var t = v(e);
+                var t = _(e);
                 (t.chunkSize = parseInt(t.chunkSize)),
                   e.step || e.chunk || (t.chunkSize = null),
                   (this._handle = new m(t)),
@@ -388,15 +397,15 @@ License: MIT
               m = !1,
               f = !1,
               x = [],
-              _ = { data: [], errors: [], meta: {} };
+              v = { data: [], errors: [], meta: {} };
             function j(t) {
               return "greedy" === e.skipEmptyLines
                 ? "" === t.join("").trim()
                 : 1 === t.length && 0 === t[0].length;
             }
-            function y() {
+            function w() {
               if (
-                (_ &&
+                (v &&
                   s &&
                   (b(
                     "Delimiter",
@@ -407,17 +416,17 @@ License: MIT
                   ),
                   (s = !1)),
                 e.skipEmptyLines &&
-                  (_.data = _.data.filter(function (e) {
+                  (v.data = v.data.filter(function (e) {
                     return !j(e);
                   })),
-                w())
+                y())
               ) {
-                if (_)
-                  if (Array.isArray(_.data[0])) {
-                    for (var t = 0; w() && t < _.data.length; t++)
-                      _.data[t].forEach(n);
-                    _.data.splice(0, 1);
-                  } else _.data.forEach(n);
+                if (v)
+                  if (Array.isArray(v.data[0])) {
+                    for (var t = 0; y() && t < v.data.length; t++)
+                      v.data[t].forEach(n);
+                    v.data.splice(0, 1);
+                  } else v.data.forEach(n);
                 function n(t, n) {
                   S(e.transformHeader) && (t = e.transformHeader(t, n)),
                     x.push(t);
@@ -489,35 +498,35 @@ License: MIT
                 );
               }
               var d;
-              _ &&
+              v &&
                 (e.header || e.dynamicTyping || e.transform) &&
                 ((d = 1),
-                !_.data.length || Array.isArray(_.data[0])
-                  ? ((_.data = _.data.map(r)), (d = _.data.length))
-                  : (_.data = r(_.data, 0)),
-                e.header && _.meta && (_.meta.fields = x),
+                !v.data.length || Array.isArray(v.data[0])
+                  ? ((v.data = v.data.map(r)), (d = v.data.length))
+                  : (v.data = r(v.data, 0)),
+                e.header && v.meta && (v.meta.fields = x),
                 (h += d));
             }
-            function w() {
+            function y() {
               return e.header && 0 === x.length;
             }
             function b(e, t, n, s) {
               (e = { type: e, code: t, message: n }),
                 void 0 !== s && (e.row = s),
-                _.errors.push(e);
+                v.errors.push(e);
             }
             S(e.step) &&
               ((r = e.step),
               (e.step = function (t) {
-                (_ = t),
-                  w()
-                    ? y()
-                    : (y(),
-                      0 !== _.data.length &&
+                (v = t),
+                  y()
+                    ? w()
+                    : (w(),
+                      0 !== v.data.length &&
                         ((u += t.data.length),
                         e.preview && u > e.preview
                           ? n.abort()
-                          : ((_.data = _.data[0]), r(_, d))));
+                          : ((v.data = v.data[0]), r(v, d))));
               })),
               (this.parse = function (r, i, a) {
                 var l = e.quoteChar || '"';
@@ -527,7 +536,7 @@ License: MIT
                   e.delimiter
                     ? S(e.delimiter) &&
                       ((e.delimiter = e.delimiter(r)),
-                      (_.meta.delimiter = e.delimiter))
+                      (v.meta.delimiter = e.delimiter))
                     : ((l = ((t, n, s, r, i) => {
                         var a, l, c, d;
                         i = i || [
@@ -545,7 +554,7 @@ License: MIT
                               g = 0,
                               f = 0,
                               x = 0,
-                              _ =
+                              v =
                                 ((c = void 0),
                                 new p({
                                   comments: r,
@@ -553,17 +562,17 @@ License: MIT
                                   newline: n,
                                   preview: 10,
                                 }).parse(t)),
-                              v = 0;
-                            v < _.data.length;
-                            v++
+                              _ = 0;
+                            _ < v.data.length;
+                            _++
                           )
-                            s && j(_.data[v])
+                            s && j(v.data[_])
                               ? x++
-                              : ((f += h = _.data[v].length),
+                              : ((f += h = v.data[_].length),
                                 void 0 === c
                                   ? (c = h)
                                   : 0 < h && ((g += Math.abs(h - c)), (c = h)));
-                          0 < _.data.length && (f /= _.data.length - x),
+                          0 < v.data.length && (f /= v.data.length - x),
                             (void 0 === l || g <= l) &&
                               (void 0 === d || d < f) &&
                               1.99 < f &&
@@ -582,14 +591,14 @@ License: MIT
                       )).successful
                         ? (e.delimiter = l.bestDelimiter)
                         : ((s = !0), (e.delimiter = o.DefaultDelimiter)),
-                      (_.meta.delimiter = e.delimiter)),
-                  (l = v(e)),
+                      (v.meta.delimiter = e.delimiter)),
+                  (l = _(e)),
                   e.preview && e.header && l.preview++,
                   (t = r),
                   (n = new p(l)),
-                  (_ = n.parse(t, i, a)),
-                  y(),
-                  m ? { meta: { paused: !0 } } : _ || { meta: { paused: !1 } }
+                  (v = n.parse(t, i, a)),
+                  w(),
+                  m ? { meta: { paused: !0 } } : v || { meta: { paused: !1 } }
                 );
               }),
               (this.paused = function () {
@@ -611,8 +620,8 @@ License: MIT
               (this.abort = function () {
                 (f = !0),
                   n.abort(),
-                  (_.meta.aborted = !0),
-                  S(e.complete) && e.complete(_),
+                  (v.meta.aborted = !0),
+                  S(e.complete) && e.complete(v),
                   (t = "");
               }),
               (this.guessLineEndings = function (e, t) {
@@ -663,28 +672,28 @@ License: MIT
               if ("string" != typeof o)
                 throw new Error("Input must be a string");
               var x = o.length,
-                _ = t.length,
-                v = n.length,
+                v = t.length,
+                _ = n.length,
                 j = s.length,
-                y = S(r),
-                w = [],
+                w = S(r),
+                y = [],
                 b = [],
                 E = [],
                 C = (h = 0);
-              if (!o) return O();
+              if (!o) return F();
               if (a || (!1 !== a && -1 === o.indexOf(d))) {
                 for (var I = o.split(n), D = 0; D < I.length; D++) {
                   if (((E = I[D]), (h += E.length), D !== I.length - 1))
                     h += n.length;
-                  else if (f) return O();
+                  else if (f) return F();
                   if (!s || E.substring(0, j) !== s) {
-                    if (y) {
-                      if (((w = []), N(E.split(t)), P(), m)) return O();
+                    if (w) {
+                      if (((y = []), N(E.split(t)), z(), m)) return F();
                     } else N(E.split(t));
-                    if (i && i <= D) return (w = w.slice(0, i)), O(!0);
+                    if (i && i <= D) return (y = y.slice(0, i)), F(!0);
                   }
                 }
-                return O();
+                return F();
               }
               for (
                 var R = o.indexOf(t, h),
@@ -702,12 +711,12 @@ License: MIT
                             type: "Quotes",
                             code: "MissingQuotes",
                             message: "Quoted field unterminated",
-                            row: w.length,
+                            row: y.length,
                             index: h,
                           }),
-                        z()
+                        P()
                       );
-                    if (k === x - 1) return z(o.substring(h, k).replace(T, d));
+                    if (k === x - 1) return P(o.substring(h, k).replace(T, d));
                     if (d === u && o[k + 1] === u) k++;
                     else if (d === u || 0 === k || o[k - 1] !== u) {
                       -1 !== R && R < k + 1 && (R = o.indexOf(t, k + 1));
@@ -717,52 +726,52 @@ License: MIT
                           ? R
                           : Math.min(R, A),
                       );
-                      if (o.substr(k + 1 + M, _) === t) {
+                      if (o.substr(k + 1 + M, v) === t) {
                         E.push(o.substring(h, k).replace(T, d)),
-                          o[(h = k + 1 + M + _)] !== d && (k = o.indexOf(d, h)),
+                          o[(h = k + 1 + M + v)] !== d && (k = o.indexOf(d, h)),
                           (R = o.indexOf(t, h)),
                           (A = o.indexOf(n, h));
                         break;
                       }
                       if (
                         ((M = B(A)),
-                        o.substring(k + 1 + M, k + 1 + M + v) === n)
+                        o.substring(k + 1 + M, k + 1 + M + _) === n)
                       ) {
                         if (
                           (E.push(o.substring(h, k).replace(T, d)),
-                          F(k + 1 + M + v),
+                          L(k + 1 + M + _),
                           (R = o.indexOf(t, h)),
                           (k = o.indexOf(d, h)),
-                          y && (P(), m))
+                          w && (z(), m))
                         )
-                          return O();
-                        if (i && w.length >= i) return O(!0);
+                          return F();
+                        if (i && y.length >= i) return F(!0);
                         break;
                       }
                       b.push({
                         type: "Quotes",
                         code: "InvalidQuotes",
                         message: "Trailing quote on quoted field is malformed",
-                        row: w.length,
+                        row: y.length,
                         index: h,
                       }),
                         k++;
                     }
                   }
                 else if (s && 0 === E.length && o.substring(h, h + j) === s) {
-                  if (-1 === A) return O();
-                  (h = A + v), (A = o.indexOf(n, h)), (R = o.indexOf(t, h));
+                  if (-1 === A) return F();
+                  (h = A + _), (A = o.indexOf(n, h)), (R = o.indexOf(t, h));
                 } else if (-1 !== R && (R < A || -1 === A))
-                  E.push(o.substring(h, R)), (h = R + _), (R = o.indexOf(t, h));
+                  E.push(o.substring(h, R)), (h = R + v), (R = o.indexOf(t, h));
                 else {
                   if (-1 === A) break;
-                  if ((E.push(o.substring(h, A)), F(A + v), y && (P(), m)))
-                    return O();
-                  if (i && w.length >= i) return O(!0);
+                  if ((E.push(o.substring(h, A)), L(A + _), w && (z(), m)))
+                    return F();
+                  if (i && y.length >= i) return F(!0);
                 }
-              return z();
+              return P();
               function N(e) {
-                w.push(e), (C = h);
+                y.push(e), (C = h);
               }
               function B(e) {
                 var t = 0;
@@ -772,23 +781,23 @@ License: MIT
                   ? e.length
                   : t;
               }
-              function z(e) {
+              function P(e) {
                 return (
                   f ||
                     (void 0 === e && (e = o.substring(h)),
                     E.push(e),
                     (h = x),
                     N(E),
-                    y && P()),
-                  O()
+                    w && z()),
+                  F()
                 );
               }
-              function F(e) {
+              function L(e) {
                 (h = e), N(E), (E = []), (A = o.indexOf(n, h));
               }
-              function O(s) {
-                if (e.header && !p && w.length && !c) {
-                  var r = w[0],
+              function F(s) {
+                if (e.header && !p && y.length && !c) {
+                  var r = y[0],
                     i = Object.create(null),
                     a = new Set(r);
                   let t = !1;
@@ -814,7 +823,7 @@ License: MIT
                     (c = !0);
                 }
                 return {
-                  data: w,
+                  data: y,
                   errors: b,
                   meta: {
                     delimiter: t,
@@ -826,8 +835,8 @@ License: MIT
                   },
                 };
               }
-              function P() {
-                r(O()), (w = []), (b = []);
+              function z() {
+                r(F()), (y = []), (b = []);
               }
             }),
               (this.abort = function () {
@@ -852,8 +861,8 @@ License: MIT
                       meta: { aborted: !0 },
                     });
                 },
-                pause: _,
-                resume: _,
+                pause: v,
+                resume: v,
               };
               if (S(n.userStep)) {
                 for (
@@ -881,14 +890,14 @@ License: MIT
             var n = i[e];
             S(n.userComplete) && n.userComplete(t), n.terminate(), delete i[e];
           }
-          function _() {
+          function v() {
             throw new Error("Not implemented.");
           }
-          function v(e) {
+          function _(e) {
             if ("object" != typeof e || null === e) return e;
             var t,
               n = Array.isArray(e) ? [] : {};
-            for (t in e) n[t] = v(e[t]);
+            for (t in e) n[t] = _(e[t]);
             return n;
           }
           function j(e, t) {
@@ -1058,10 +1067,10 @@ License: MIT
                     h = "" === g.join("").trim();
                   }
                   if (!h) {
-                    for (var _ = 0; _ < u; _++) {
-                      0 < _ && !m && (a += r);
-                      var v = o && l ? e[_] : _;
-                      a += p(t[d][v], _);
+                    for (var v = 0; v < u; v++) {
+                      0 < v && !m && (a += r);
+                      var _ = o && l ? e[v] : v;
+                      a += p(t[d][_], v);
                     }
                     d < t.length - 1 && (!n || (0 < u && !m)) && (a += i);
                   }
@@ -1203,9 +1212,9 @@ License: MIT
         void 0 === (r = "function" == typeof n ? n.apply(t, s) : n) ||
           (e.exports = r);
     },
-    53822: (e, t, n) => {
+    70252: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { MeetSteamRoutes: () => wn, default: () => bn });
+      n.r(t), n.d(t, { MeetSteamRoutes: () => In, default: () => Dn });
       var s = n(7850),
         r = n(43527),
         i = n(90626),
@@ -1221,12 +1230,12 @@ License: MIT
         p = n(45737),
         f = n.n(p),
         x = n(24484),
-        _ = n(22837),
-        v = n(37085),
+        v = n(22837),
+        _ = n(37085),
         j = n(56545),
         S = n(85737),
-        y = n(64753),
-        w = n(20194),
+        w = n(64753),
+        y = n(20194),
         b = n(75233),
         E = n(41735),
         C = n.n(E),
@@ -1281,11 +1290,11 @@ License: MIT
           s = await C().get(t, { params: n });
         return s?.data?.data;
       }
-      function z(e, t) {
+      function P(e, t) {
         return e.getQueryData(["usePartnerRevAndBestAppSlow", t]);
       }
-      function F(e, t, n) {
-        return (0, w.I)({
+      function L(e, t, n) {
+        return (0, y.I)({
           queryKey: ["useMeetSteamGetAllRegistration", t, n],
           queryFn: async () => {
             const n = j.w.Init(S.q3);
@@ -1301,9 +1310,9 @@ License: MIT
           enabled: null != t && 0 != n,
         });
       }
-      var O = n(19367),
-        P = n.n(O),
-        L = n(38390),
+      var F = n(19367),
+        z = n.n(F),
+        O = n(38390),
         G = n(50304),
         $ = n(96001),
         H = n(16676),
@@ -1429,9 +1438,10 @@ License: MIT
         ue = n(68797),
         he = n(9161),
         me = n(41403),
-        ge = n(81393),
-        pe = n(96059);
-      class fe {
+        ge = n(27144),
+        pe = n(81393),
+        fe = n(96059);
+      class xe {
         m_steamInterface;
         GetSaleFeatureTransport() {
           return this.m_steamInterface;
@@ -1439,63 +1449,131 @@ License: MIT
         static s_Singleton;
         static Get() {
           return (
-            fe.s_Singleton ||
-              ((fe.s_Singleton = new fe()), fe.s_Singleton.Init()),
-            fe.s_Singleton
+            xe.s_Singleton ||
+              ((xe.s_Singleton = new xe()), xe.s_Singleton.Init()),
+            xe.s_Singleton
           );
         }
         Init() {
           const e = (0, x.Tc)("store_feature_token", "application_config");
-          (0, ge.wT)(Boolean(e), "require store_feature_token"),
-            (this.m_steamInterface = new pe.D(ee.TS.WEBAPI_BASE_URL, e));
+          (0, pe.wT)(Boolean(e), "require store_feature_token"),
+            (this.m_steamInterface = new fe.D(ee.TS.WEBAPI_BASE_URL, e));
         }
       }
-      function xe() {
-        return fe.Get().GetSaleFeatureTransport().GetServiceTransport();
+      function ve() {
+        return xe.Get().GetSaleFeatureTransport().GetServiceTransport();
       }
-      var _e = n(6083);
-      function ve(e) {
+      var _e = n(6083),
+        je = n(66418);
+      function Se(e) {
+        return (0, y.I)({
+          queryKey: ["MeetSteamPartnersForAccount", e],
+          queryFn: () =>
+            (async function (e) {
+              const t = `${je.TS.PARTNER_BASE_URL}meetsteam/admin/ajaxgetpartnersforaccount?accountid=${e}`,
+                n = await fetch(t);
+              if (!n.ok)
+                throw new Error(
+                  `Failed to read the partner list for account ${e}`,
+                );
+              const s = await n.json();
+              if (s.success != _.R)
+                throw new Error(
+                  `Failed to read the partner list for account ${e}: ${s.msg}`,
+                );
+              return s.partners ?? [];
+            })(e),
+          enabled: e > 0,
+        });
+      }
+      function we(e, t = {}) {
+        const {
+            nTimeoutMS: n = 350,
+            nTimeoutExtensionMS: s = 125,
+            nMaxTimeoutExtensions: r = 3,
+          } = t,
+          [a, o] = i.useState(e),
+          l = i.useRef(void 0);
+        return (
+          i.useEffect(() => {
+            const t = performance.now();
+            l.current
+              ? t - l.current.tsLastChange < r * n &&
+                (l.current.tsScheduledTimeout = Math.max(
+                  performance.now() + s,
+                  l.current.tsScheduledTimeout,
+                ))
+              : (l.current = {
+                  tsLastChange: t,
+                  tsScheduledTimeout: performance.now() + n,
+                });
+            const i = l.current.tsScheduledTimeout - performance.now(),
+              a = window.setTimeout(() => {
+                (l.current = void 0), o(e);
+              }, i);
+            return () => window.clearTimeout(a);
+          }, [e, n, s, r]),
+          a
+        );
+      }
+      function ye(e) {
         const { hideModal: t, gid: n } = e,
           [r, a] = (0, i.useState)(!1),
           [o, l] = (0, i.useState)(null),
-          [c, d] = i.useState(0),
+          [c, d] = i.useState(""),
           [u, m] = i.useState(""),
           [g, p] = i.useState(""),
           [f, x] = i.useState(!1),
-          _ = xe(),
-          j = (0, w.I)({
-            queryKey: ["MeetSteamInviteDirectDialog", n, c],
+          v = we(c),
+          j = (function (e) {
+            const t = e.trim();
+            if (!/^\d+$/.test(t)) return 0;
+            if (Number(t) > 4294967295) {
+              const e = new I.b(t);
+              return e.BIsValid() && e.BIsIndividualAccount()
+                ? e.GetAccountID()
+                : 0;
+            }
+            return Number(t);
+          })(v),
+          S = Boolean(v.trim()) && !j,
+          w = ve(),
+          b = Se(j),
+          E = b.data,
+          C = (0, y.I)({
+            queryKey: ["MeetSteamInviteDirectDialog", n, j],
             queryFn: async () => {
               const e = {
-                  steamid: I.b.InitFromAccountID(c).ConvertTo64BitString(),
+                  steamid: I.b.InitFromAccountID(j).ConvertTo64BitString(),
                   gid: n,
                   type: me.Dk.rV,
                 },
-                t = await me.Nl.GetUserActionData(_, e);
+                t = await me.Nl.GetUserActionData(w, e);
               return t.BSuccess() && t.Body().jsondata()
                 ? JSON.parse(t.Body().jsondata())
                 : {};
             },
-            enabled: Boolean(n) && c > 0,
+            enabled: Boolean(n) && j > 0,
           });
         i.useEffect(() => {
-          j.isLoading ||
-            (j.isSuccess &&
-              (m(j.data.partner_id ? j.data.partner_id.toString() : ""),
-              p(j.data.email_override ?? ""),
-              x(j.data.allow_registration_if_full ?? !1)));
-        }, [j.isLoading, j.isSuccess, j.data]);
+          if (!C.isLoading && C.isSuccess) {
+            const e = 1 == E?.length ? E[0].partnerid.toString() : "";
+            m(C.data.partner_id ? C.data.partner_id.toString() : e),
+              p(C.data.email_override ?? ""),
+              x(C.data.allow_registration_if_full ?? !1);
+          }
+        }, [C.isLoading, C.isSuccess, C.data, E]);
         return (0, s.jsxs)(q.o0, {
           strTitle: "Invite User",
-          bOKDisabled: !c || r || j.isLoading,
+          bOKDisabled: !j || r || C.isLoading,
           onOK: async () => {
             a(!0);
             const e = Number.parseInt(u) > 0 ? Number.parseInt(u) : 0,
-              s = await we(
+              s = await Re(
                 n,
                 [
                   {
-                    nAccountID: c,
+                    nAccountID: j,
                     nPartnerID: e,
                     strEmailOverride: g,
                     bAllowRegistrationIfFull: f,
@@ -1503,10 +1581,10 @@ License: MIT
                 ],
                 !0,
               ),
-              r = s && s.success == v.R;
+              r = s && s.success == _.R;
             r || l("We hit error during invite, check console: " + s?.msg),
               a(!1),
-              j.refetch(),
+              C.refetch(),
               r && t();
           },
           onCancel: t,
@@ -1519,14 +1597,26 @@ License: MIT
             !r &&
               (0, s.jsxs)(s.Fragment, {
                 children: [
+                  (0, s.jsx)("div", {
+                    children:
+                      "Saving sends an invitation email to this account only, and only if it has not been sent one for this event already. It does not send the invitation emails queued for anyone else. Use the Invitation And Registration Status dialog for those.",
+                  }),
                   (0, s.jsx)(H.pd, {
-                    type: "number",
-                    label: "Account ID",
-                    onChange: (e) => d(Number.parseInt(e.currentTarget.value)),
+                    type: "text",
+                    label: "Account ID or Steam ID",
+                    description:
+                      "Accepts either the 32-bit account id or the 64-bit steam id",
+                    onChange: (e) => d(e.currentTarget.value),
                     value: c,
                   }),
-                  0 != c &&
-                    !j.isLoading &&
+                  S &&
+                    (0, s.jsx)("div", {
+                      className: h.ErrorStylesWithIcon,
+                      children: "That is not a valid account id or steam id.",
+                    }),
+                  0 != j && (0, s.jsx)(be, { nAccountID: j }),
+                  0 != j &&
+                    !C.isLoading &&
                     (0, s.jsxs)(s.Fragment, {
                       children: [
                         (0, s.jsx)(H.pd, {
@@ -1534,6 +1624,13 @@ License: MIT
                           label: "Partner ID (optional)",
                           onChange: (e) => m(e.currentTarget.value),
                           value: u,
+                        }),
+                        (0, s.jsx)(Ee, {
+                          rgPartners: E,
+                          bLoading: b.isLoading,
+                          bFailed: b.isError,
+                          strPartnerID: u,
+                          SetPartnerID: m,
                         }),
                         (0, s.jsx)(H.pd, {
                           type: "text",
@@ -1557,7 +1654,7 @@ License: MIT
                 position: "center",
                 string: (0, Z.we)("#Saving"),
               }),
-            j.isLoading &&
+            C.isLoading &&
               (0, s.jsx)(W.t, {
                 size: "small",
                 position: "center",
@@ -1566,7 +1663,100 @@ License: MIT
           ],
         });
       }
-      function je(e) {
+      function be(e) {
+        const { nAccountID: t } = e,
+          [n, r] = (0, ge.KT)(t);
+        if (r)
+          return (0, s.jsx)(W.t, {
+            size: "small",
+            position: "center",
+            string: (0, Z.we)("#Loading"),
+          });
+        if (!n)
+          return (0, s.jsx)("div", {
+            className: h.ErrorStylesWithIcon,
+            children: `We could not find an account for ${t}.`,
+          });
+        const i = I.b.InitFromAccountID(t).ConvertTo64BitString();
+        return (0, s.jsxs)("div", {
+          className: de().AccountSummary,
+          children: [
+            (0, s.jsx)("img", {
+              className: de().AccountAvatar,
+              src: n.avatar_url?.replace(/\.jpg$/, "_medium.jpg"),
+            }),
+            (0, s.jsxs)("div", {
+              children: [
+                (0, s.jsx)("div", {
+                  className: de().AccountPersonaName,
+                  children: n.persona_name,
+                }),
+                (0, s.jsx)("a", {
+                  href: `${ee.TS.SUPPORT_BASE_URL}account/overview/${i}`,
+                  target: "_blank",
+                  rel: "noopener noreferrer",
+                  children: `Account ${t} / SteamID ${i}`,
+                }),
+              ],
+            }),
+          ],
+        });
+      }
+      function Ee(e) {
+        const {
+          rgPartners: t,
+          bLoading: n,
+          bFailed: r,
+          strPartnerID: i,
+          SetPartnerID: a,
+        } = e;
+        return n
+          ? (0, s.jsx)(W.t, {
+              size: "small",
+              position: "center",
+              string: "Looking up partner membership",
+            })
+          : r
+            ? (0, s.jsx)("div", {
+                className: de().PartnerListHeader,
+                children:
+                  "We could not look up partner membership, enter the partner id above.",
+              })
+            : t && 0 != t.length
+              ? (0, s.jsxs)("div", {
+                  className: de().PartnerList,
+                  children: [
+                    (0, s.jsx)("div", {
+                      className: de().PartnerListHeader,
+                      children: "Member of, click to use:",
+                    }),
+                    t.map((e) =>
+                      (0, s.jsxs)(
+                        "a",
+                        {
+                          href: "#",
+                          className: (0, J.A)(
+                            de().PartnerListRow,
+                            e.partnerid.toString() == i
+                              ? de().PartnerListRowSelected
+                              : "",
+                          ),
+                          onClick: (t) => {
+                            t.preventDefault(), a(e.partnerid.toString());
+                          },
+                          children: [e.partner_name, " (", e.partnerid, ")"],
+                        },
+                        e.partnerid,
+                      ),
+                    ),
+                  ],
+                })
+              : (0, s.jsx)("div", {
+                  className: de().PartnerListHeader,
+                  children: "This account is not a member of any partner.",
+                });
+      }
+      function Ce(e) {
         const { hideModal: t, gid: n } = e,
           [r, a] = (0, i.useState)(null),
           [o, l] = (0, i.useState)(!1),
@@ -1579,8 +1769,8 @@ License: MIT
           strCancelButtonText: null !== u ? "Close" : "Cancel",
           onOK: async () => {
             l(!0);
-            const e = await we(n, r, !1);
-            e?.success == v.R
+            const e = await Re(n, r, !1);
+            e?.success == _.R
               ? (m(e.rgInvitedAccounts.length), p(e.rgSkippedAccounts.length))
               : d("We hit error during invite, check console: " + e?.msg),
               l(!1);
@@ -1609,13 +1799,17 @@ License: MIT
                 position: "center",
                 string: (0, Z.we)("#Saving"),
               }),
+            (0, s.jsx)("div", {
+              children:
+                "Saving sends an invitation email to the accounts imported here that have not been sent one for this event already. It does not send the invitation emails queued for anyone else on the event.",
+            }),
             null == r
-              ? (0, s.jsx)(ye, { setInvites: a })
-              : (0, s.jsx)(Se, { rgInvites: r }),
+              ? (0, s.jsx)(De, { setInvites: a })
+              : (0, s.jsx)(Ie, { rgInvites: r }),
           ],
         });
       }
-      function Se(e) {
+      function Ie(e) {
         const { rgInvites: t } = e;
         return (0, s.jsxs)(s.Fragment, {
           children: [
@@ -1653,7 +1847,7 @@ License: MIT
           ],
         });
       }
-      function ye(e) {
+      function De(e) {
         const { setInvites: t } = e;
         return (0, s.jsxs)(s.Fragment, {
           children: [
@@ -1735,7 +1929,7 @@ License: MIT
           ],
         });
       }
-      async function we(e, t, n) {
+      async function Re(e, t, n) {
         const s = t.map((e) => e.nAccountID).join(","),
           r = t.map((e) => e.nPartnerID).join(","),
           i = t.map((e) => e.strEmailOverride).join(","),
@@ -1751,7 +1945,7 @@ License: MIT
         const l = `${ee.TS.PARTNER_BASE_URL}/meetsteam/ajaxinviteusers`;
         try {
           const e = await C().post(l, o, { withCredentials: !0 });
-          if (e?.data?.success != v.R) {
+          if (e?.data?.success != _.R) {
             let t = (0, ue.H)(e);
             console.error("DisplayPartnerEventRow error: " + t.strErrorMsg, t);
           }
@@ -1762,27 +1956,27 @@ License: MIT
         }
         return null;
       }
-      var be = n(16666),
-        Ee = n(66051),
-        Ce = n(54806),
-        Ie = n(58632),
-        De = n.n(Ie);
-      function Re(e) {
-        const t = xe(),
-          n = i.useContext(Te),
-          s = (0, w.I)(ke(n, t, e));
+      var Ae = n(16666),
+        Te = n(66051),
+        ke = n(54806),
+        Me = n(58632),
+        Ne = n.n(Me);
+      function Be(e) {
+        const t = ve(),
+          n = i.useContext(Le),
+          s = (0, y.I)(Fe(n, t, e));
         return s.isLoading ? null : s.data;
       }
-      function Ae(e) {
-        const t = xe(),
-          n = i.useContext(Te);
-        return (0, Ce.E)({ queries: e.map((e) => ke(n, t, e)) });
+      function Pe(e) {
+        const t = ve(),
+          n = i.useContext(Le);
+        return (0, ke.E)({ queries: e.map((e) => Fe(n, t, e)) });
       }
-      const Te = i.createContext({
+      const Le = i.createContext({
         loadMeetSteamAllRegistration: async (e, t) =>
           await (function (e) {
-            Me ||
-              (Me = new (De())(
+            ze ||
+              (ze = new (Ne())(
                 async (t) => {
                   const n = j.w.Init(me.j3);
                   n.Body().set_gids([...t]), n.Body().set_type(me.Dk.rV);
@@ -1815,32 +2009,32 @@ License: MIT
                 },
                 { maxBatchSize: 5 },
               ));
-            return Me;
+            return ze;
           })(e).load(t),
       });
-      function ke(e, t, n) {
+      function Fe(e, t, n) {
         return {
           queryKey: ["MeetSteamAllRegistrationStatus", n],
           queryFn: () => e.loadMeetSteamAllRegistration(t, n),
           enabled: !!n,
         };
       }
-      let Me;
-      var Ne = n(7860);
-      function Be(e, t) {
+      let ze;
+      var Oe = n(7860);
+      function Ge(e, t) {
         const n = (0, $.a)(),
-          s = i.useContext(Fe),
-          r = (0, w.I)(Oe(s, n, e, t));
+          s = i.useContext(He),
+          r = (0, y.I)(Ue(s, n, e, t));
         return r.isLoading ? null : r.data;
       }
-      function ze(e, t) {
-        return Ne.L.getQueryData(["PartnerEmailAndName", e, t]);
+      function $e(e, t) {
+        return Oe.L.getQueryData(["PartnerEmailAndName", e, t]);
       }
-      const Fe = i.createContext({
+      const He = i.createContext({
         loadPartnerEmailAndName: async (e, t, n) =>
           await (function (e) {
-            Pe ||
-              (Pe = new (De())(
+            Ve ||
+              (Ve = new (Ne())(
                 async (t) => {
                   const n = j.w.Init(S.g9);
                   n.Body().set_accountids(t.map((e) => e.accountID)),
@@ -1864,20 +2058,20 @@ License: MIT
                 },
                 { maxBatchSize: 100 },
               ));
-            return Pe;
+            return Ve;
           })(e).load({ accountID: t, partnerID: n }),
       });
-      function Oe(e, t, n, s) {
+      function Ue(e, t, n, s) {
         return {
           queryKey: ["PartnerEmailAndName", n, s],
           queryFn: () => e.loadPartnerEmailAndName(t, n, s),
           enabled: !!n || !!s,
         };
       }
-      let Pe;
-      function Le(e) {
+      let Ve;
+      function qe(e) {
         const { rgEventGIDs: t } = e,
-          [n, r, a] = (0, y.uD)(),
+          [n, r, a] = (0, w.uD)(),
           [o, l] = (0, i.useState)(null);
         return (0, s.jsxs)(s.Fragment, {
           children: [
@@ -1897,10 +2091,10 @@ License: MIT
                   bAllowFullSize: !0,
                   bDisableBackgroundDismiss: !0,
                   children: Boolean(null == o)
-                    ? (0, s.jsx)(qe, { rgEventGIDs: t, fnSelectedEvents: l })
+                    ? (0, s.jsx)(Ze, { rgEventGIDs: t, fnSelectedEvents: l })
                     : (0, s.jsxs)(s.Fragment, {
                         children: [
-                          (0, s.jsx)(Ve, { rgGidMeetSteamEvents: o }),
+                          (0, s.jsx)(Qe, { rgGidMeetSteamEvents: o }),
                           (0, s.jsx)(H.$n, {
                             onClick: () => l(null),
                             children: "Reset Selection",
@@ -1913,8 +2107,8 @@ License: MIT
           ],
         });
       }
-      const Ge = (0, be.FB)();
-      function $e(e) {
+      const Ke = (0, Ae.FB)();
+      function We(e) {
         return (
           (e = e?.filter(
             (t, n) =>
@@ -1924,17 +2118,17 @@ License: MIT
             ?.map(
               (e) =>
                 e.name ||
-                ze(e.accountid, e.partner_id)?.realname ||
+                $e(e.accountid, e.partner_id)?.realname ||
                 e.accountid,
             )
             .join(",") || ""
         );
       }
-      function He(e) {
-        return $e(e.cell.getValue());
+      function Ye(e) {
+        return We(e.cell.getValue());
       }
-      function Ue(e, t) {
-        const n = Ae(t),
+      function Je(e, t) {
+        const n = Pe(t),
           [s, r, a] = (0, i.useMemo)(() => {
             if (n.filter((e) => !e.isLoading).length != n.length)
               return [null, [], []];
@@ -1963,12 +2157,12 @@ License: MIT
           }, [n, e]),
           o = (function (e, t) {
             const n = (0, $.a)(),
-              s = i.useContext(Fe);
-            return (0, Ce.E)({ queries: e.map((e, r) => Oe(s, n, e, t[r])) });
+              s = i.useContext(He);
+            return (0, ke.E)({ queries: e.map((e, r) => Ue(s, n, e, t[r])) });
           })(r, a);
         return o.filter((e) => !e.isLoading).length == o.length ? s : null;
       }
-      function Ve(e) {
+      function Qe(e) {
         const { rgGidMeetSteamEvents: t } = e,
           n = (function () {
             const [e] = (0, i.useState)(() =>
@@ -1977,7 +2171,7 @@ License: MIT
             return e;
           })(),
           r = (0, R.vh)(n),
-          a = Ue(n, t),
+          a = Je(n, t),
           o = (0, i.useMemo)(() => {
             if (!r || !a) return null;
             const e = [];
@@ -2008,19 +2202,19 @@ License: MIT
           }, [r, a, n]),
           l = (0, i.useMemo)(
             () => [
-              Ge.accessor("partner_id", { header: "Partner ID", size: 100 }),
-              Ge.accessor("partner_name", {
+              Ke.accessor("partner_id", { header: "Partner ID", size: 100 }),
+              Ke.accessor("partner_name", {
                 header: "Partner Name",
                 size: 300,
               }),
-              Ge.accessor("invitations", {
+              Ke.accessor("invitations", {
                 header: "Invitations",
-                cell: He,
+                cell: Ye,
                 size: 300,
               }),
-              Ge.accessor("registrations", {
+              Ke.accessor("registrations", {
                 header: "Registered to Attend",
-                cell: He,
+                cell: Ye,
                 size: 300,
               }),
             ],
@@ -2038,7 +2232,7 @@ License: MIT
               n.push(
                 "invitations" == e.accessorKey ||
                   "registrations" == e.accessorKey
-                  ? $e(s)
+                  ? We(s)
                   : s.toString(),
               );
             }
@@ -2058,7 +2252,7 @@ License: MIT
                       style: { width: "120px" },
                       children: "Download CSV",
                     }),
-                    (0, s.jsx)(Ee.k, {
+                    (0, s.jsx)(Te.k, {
                       columns: l,
                       data: o,
                       getRowKey: (e) => e,
@@ -2082,11 +2276,11 @@ License: MIT
           ],
         });
       }
-      function qe(e) {
+      function Ze(e) {
         const { rgEventGIDs: t, fnSelectedEvents: n } = e,
           [r, a] = (0, i.useState)([]),
           { bShowArchived: o, setShowArchived: l } = le(),
-          { bIsLoading: c, events: d } = (0, L.PB)(t),
+          { bIsLoading: c, events: d } = (0, O.PB)(t),
           u = (0, i.useMemo)(() => {
             const e = Math.floor(new Date().getTime() / 1e3);
             return o && d ? [...d] : d?.filter((t) => t.endTime >= e);
@@ -2103,7 +2297,7 @@ License: MIT
                 (0, s.jsx)(H.JU, { children: "Choose Events" }),
                 u.map((e) =>
                   (0, s.jsx)(
-                    Ke,
+                    Xe,
                     { gidClanEvent: e.GID, rgSelected: r, fnSetSelected: a },
                     e.GID,
                   ),
@@ -2116,9 +2310,9 @@ License: MIT
               ],
             });
       }
-      function Ke(e) {
+      function Xe(e) {
         const { gidClanEvent: t, rgSelected: n, fnSetSelected: r } = e,
-          i = (0, L.RR)(t).GetNameWithFallback(_.Bhc);
+          i = (0, O.RR)(t).GetNameWithFallback(v.Bhc);
         return (0, s.jsx)(H.Yh, {
           label: i,
           checked: n.includes(t),
@@ -2131,18 +2325,25 @@ License: MIT
           },
         });
       }
-      var We = n(39832),
-        Ye = n(29233),
-        Je = n(30603),
-        Qe = n.n(Je);
-      function Ze(e) {
+      var et = n(39832),
+        tt = n(29233),
+        nt = n(30603),
+        st = n.n(nt);
+      function rt(e) {
         const { hideModal: t, gid: n } = e,
-          r = Re(n),
+          r = Be(n),
           a = (0, b.jE)(),
           [o, l] = (0, i.useMemo)(
             () =>
               r
-                ? [r.length, r.filter((e) => !e.invitation_emailed).length]
+                ? [
+                    r.length,
+                    r.filter(
+                      (e) =>
+                        !e.invitation_emailed &&
+                        !e.invite_registration_auto_create,
+                    ).length,
+                  ]
                 : [0, 0],
             [r],
           );
@@ -2152,7 +2353,7 @@ License: MIT
           bDisableBackgroundDismiss: !0,
           closeModal: t,
           strDescription:
-            "This will show the users we have invited and their status. As well as individual who were just sent the registration page on their own.",
+            "Every account with an invitation or a registration on this event, and where each one is. Rows with no invite are people who registered themselves from the registration link; they are never sent an invitation email.",
           strTitle: "Invitation And Registration Status",
           children: [
             !r &&
@@ -2165,7 +2366,11 @@ License: MIT
               (0, s.jsxs)(s.Fragment, {
                 children: [
                   (0, s.jsxs)("div", {
-                    children: ["There are ", o, " registrations."],
+                    children: [
+                      "There are ",
+                      o,
+                      " invitation/registration records.",
+                    ],
                   }),
                   l > 0 &&
                     (0, s.jsxs)(H.$n, {
@@ -2179,7 +2384,7 @@ License: MIT
                             const r = await C().post(s, n, {
                               withCredentials: !0,
                             });
-                            if (r?.data?.success != v.R) {
+                            if (r?.data?.success != _.R) {
                               let e = (0, ue.H)(r);
                               console.error(
                                 "AsyncSendInviteEmails error: " + e.strErrorMsg,
@@ -2205,7 +2410,10 @@ License: MIT
                           return null;
                         })(a, n);
                       },
-                      children: [l, " Invites To Sent. Send now?"],
+                      children: [
+                        l,
+                        " invitation emails are queued for this event. Send them all now?",
+                      ],
                     }),
                   (0, s.jsxs)("table", {
                     children: [
@@ -2223,7 +2431,7 @@ License: MIT
                       }),
                       (0, s.jsx)("tbody", {
                         children: r?.map((e) =>
-                          (0, s.jsx)(Xe, { reg: e }, "regentry_" + e.steamid),
+                          (0, s.jsx)(it, { reg: e }, "regentry_" + e.steamid),
                         ),
                       }),
                     ],
@@ -2233,7 +2441,7 @@ License: MIT
           ],
         });
       }
-      function Xe(e) {
+      function it(e) {
         const { reg: t } = e,
           [n] = (0, R.UA)(t.partner_id);
         return (0, s.jsxs)("tr", {
@@ -2249,18 +2457,18 @@ License: MIT
           ],
         });
       }
-      function et(e) {
+      function at(e) {
         const { hideModal: t, gid: n, title: r, group: a, session: o } = e,
           l = (0, $.a)(),
-          c = Re(n),
-          d = F(l, n, a?.group_id),
+          c = Be(n),
+          d = L(l, n, a?.group_id),
           [u, h] = (0, i.useMemo)(() => {
             const e = d?.data?.filter((e) => e.session_id == o.id),
               t = new Map(),
               n = new Map();
             return (
               e?.forEach((e) => {
-                const s = new Ye.b2(e.steamid).GetAccountID();
+                const s = new tt.b2(e.steamid).GetAccountID();
                 if ((t.set(s, e), e.jsondata)) {
                   const t = JSON.parse(e.jsondata);
                   t.pre_event_partner_questions &&
@@ -2270,7 +2478,7 @@ License: MIT
               [t, n]
             );
           }, [o, d]),
-          m = c?.filter((e) => u.has(new Ye.b2(e.steamid).GetAccountID()));
+          m = c?.filter((e) => u.has(new tt.b2(e.steamid).GetAccountID()));
         return (0, s.jsxs)(q.o0, {
           bAlertDialog: !0,
           bAllowFullSize: !0,
@@ -2280,7 +2488,7 @@ License: MIT
           strTitle: "Session Registration",
           children: [
             (0, s.jsx)("div", {
-              className: Qe().ExportToCSV,
+              className: st().ExportToCSV,
               children: (0, s.jsx)("a", {
                 onClick: () =>
                   (function (e, t, n, s, r, i) {
@@ -2312,9 +2520,9 @@ License: MIT
                                 ? t.guests_registered - 1
                                 : 0),
                           );
-                        const o = new Ye.b2(t.steamid);
+                        const o = new tt.b2(t.steamid);
                         if (r.has(o.GetAccountID())) {
-                          const e = tt(r.get(o.GetAccountID()), t);
+                          const e = ot(r.get(o.GetAccountID()), t);
                           if (e) {
                             const t = new Date(1e3 * e)
                               .toISOString()
@@ -2338,7 +2546,7 @@ License: MIT
                         }
                       });
                     const l =
-                      `meetsteam_${n}_${(0, Z.TW)(t.rtime_start)}_at_${(0, We.KC)(t.rtime_start)}.csv`.replace(
+                      `meetsteam_${n}_${(0, Z.TW)(t.rtime_start)}_at_${(0, et.KC)(t.rtime_start)}.csv`.replace(
                         /[ <>:"/\\|?*\x00-\x1F]/g,
                         "_",
                       );
@@ -2348,7 +2556,7 @@ License: MIT
               }),
             }),
             (0, s.jsxs)("table", {
-              className: Qe().Table,
+              className: st().Table,
               children: [
                 (0, s.jsx)("thead", {
                   children: (0, s.jsxs)("tr", {
@@ -2376,10 +2584,10 @@ License: MIT
                 }),
                 (0, s.jsx)("tbody", {
                   children: m?.flatMap((e) => {
-                    const t = new Ye.b2(e.steamid).GetAccountID(),
+                    const t = new tt.b2(e.steamid).GetAccountID(),
                       n = [
                         (0, s.jsx)(
-                          nt,
+                          lt,
                           {
                             group: a,
                             regInfo: u.get(t),
@@ -2392,7 +2600,7 @@ License: MIT
                     for (let t = 0; t < e.guest_names?.length; t++)
                       n.push(
                         (0, s.jsx)(
-                          st,
+                          ct,
                           { guestName: e.guest_names[t] },
                           "regguestrow" + e.steamid + "_" + t,
                         ),
@@ -2405,15 +2613,15 @@ License: MIT
           ],
         });
       }
-      function tt(e, t) {
+      function ot(e, t) {
         const n = `registration_emailed_${e.group_id}_${e.session_id}`;
         let s = null;
         return n in t && (s = t[n]), s;
       }
-      function nt(e) {
+      function lt(e) {
         const { inviteInfo: t, regInfo: n, group: r, preRegQuestions: i } = e,
           [a] = (0, R.UA)(t.partner_id),
-          o = tt(n, t);
+          o = ot(n, t);
         return (0, s.jsxs)("tr", {
           children: [
             (0, s.jsx)("td", { children: t.steamid }),
@@ -2434,7 +2642,7 @@ License: MIT
           ],
         });
       }
-      function st(e) {
+      function ct(e) {
         const { guestName: t } = e;
         return (0, s.jsxs)("tr", {
           children: [
@@ -2443,16 +2651,15 @@ License: MIT
           ],
         });
       }
-      var rt = n(2516),
-        it = n(98019),
-        at = n(66418);
-      function ot(e) {
-        return (0, w.I)({
+      var dt = n(2516),
+        ut = n(98019);
+      function ht(e) {
+        return (0, y.I)({
           queryKey: [],
           queryFn: async () =>
             await (async function (e) {
               const t = { sessionid: (0, x.KC)(), gids: e },
-                n = `${at.TS.PARTNER_BASE_URL}meetsteam/admin/ajaxgetregistrations`,
+                n = `${je.TS.PARTNER_BASE_URL}meetsteam/admin/ajaxgetregistrations`,
                 s = await fetch(n, {
                   method: "POST",
                   headers: { "Content-Type": "application/json" },
@@ -2463,7 +2670,7 @@ License: MIT
                   `Failed to read registrations for gids ${e.join(",")}`,
                 );
               const r = await s.json();
-              if (r.success != v.R)
+              if (r.success != _.R)
                 throw new Error(
                   `Failed to read registrations for gids ${e.join(",")}: ${r.msg}`,
                 );
@@ -2472,9 +2679,9 @@ License: MIT
           enabled: e && e.length > 0,
         });
       }
-      function lt(e) {
+      function mt(e) {
         const { rgEventGIDs: t } = e,
-          [n, r, a] = (0, y.uD)(),
+          [n, r, a] = (0, w.uD)(),
           [o, l] = (0, i.useState)(null);
         return (0, s.jsxs)(s.Fragment, {
           children: [
@@ -2494,10 +2701,10 @@ License: MIT
                   bAllowFullSize: !0,
                   bDisableBackgroundDismiss: !0,
                   children: Boolean(null == o)
-                    ? (0, s.jsx)(qe, { rgEventGIDs: t, fnSelectedEvents: l })
+                    ? (0, s.jsx)(Ze, { rgEventGIDs: t, fnSelectedEvents: l })
                     : (0, s.jsxs)(s.Fragment, {
                         children: [
-                          (0, s.jsx)(dt, { rgGidMeetSteamEvents: o }),
+                          (0, s.jsx)(pt, { rgGidMeetSteamEvents: o }),
                           (0, s.jsx)(H.$n, {
                             onClick: () => l(null),
                             children: "Reset Selection",
@@ -2510,8 +2717,8 @@ License: MIT
           ],
         });
       }
-      const ct = (0, be.FB)();
-      function dt(e) {
+      const gt = (0, Ae.FB)();
+      function pt(e) {
         const { rgGidMeetSteamEvents: t } = e,
           {
             rgAllRegistrations: n,
@@ -2519,10 +2726,10 @@ License: MIT
             rgValveAccounts: a,
             rgMapAccountToSessionTimes: o,
           } = (function (e) {
-            const t = Ae(e),
-              n = (0, it.qh)(),
-              { bIsLoading: s, events: r } = (0, L.PB)(e),
-              { data: a } = ot(e),
+            const t = Pe(e),
+              n = (0, ut.qh)(),
+              { bIsLoading: s, events: r } = (0, O.PB)(e),
+              { data: a } = ht(e),
               [o, l, c] = (0, i.useMemo)(() => {
                 if (
                   s ||
@@ -2547,7 +2754,7 @@ License: MIT
                       t.sessions?.forEach((n) => {
                         o.set(
                           `${e.GID}_${t.group_id}_${n.id}`,
-                          `${t.localized_session_title[_.Bhc]}@${(0, We.TW)(n.rtime_start)} ${(0, We.KC)(n.rtime_start)}`,
+                          `${t.localized_session_title[v.Bhc]}@${(0, et.TW)(n.rtime_start)} ${(0, et.KC)(n.rtime_start)}`,
                         );
                       });
                     });
@@ -2615,7 +2822,7 @@ License: MIT
               t
             );
           }, [l, n, a, o]),
-          d = ut();
+          d = ft();
         return l && r && c
           ? (0, s.jsxs)(s.Fragment, {
               children: [
@@ -2623,8 +2830,8 @@ License: MIT
                 Boolean(c)
                   ? (0, s.jsxs)(u.tH, {
                       children: [
-                        (0, s.jsx)(ht, { rgData: c }),
-                        (0, s.jsx)(Ee.k, {
+                        (0, s.jsx)(xt, { rgData: c }),
+                        (0, s.jsx)(Te.k, {
                           columns: d,
                           data: c,
                           getRowKey: (e) => e,
@@ -2633,7 +2840,7 @@ License: MIT
                           overscan: r.length,
                         }),
                         (0, s.jsx)("br", {}),
-                        (0, s.jsx)(ht, { rgData: c }),
+                        (0, s.jsx)(xt, { rgData: c }),
                       ],
                     })
                   : (0, s.jsx)(W.t, {
@@ -2644,36 +2851,36 @@ License: MIT
             })
           : (0, s.jsx)(W.t, { string: (0, Z.we)("#Loading") });
       }
-      function ut() {
+      function ft() {
         return (0, i.useMemo)(
           () => [
-            ct.accessor("name", { header: "Name", size: 200 }),
-            ct.accessor("accountid", { header: "Account ID", size: 150 }),
-            ct.accessor("email", { header: "Email", size: 150 }),
-            ct.accessor("guest_registrated", {
+            gt.accessor("name", { header: "Name", size: 200 }),
+            gt.accessor("accountid", { header: "Account ID", size: 150 }),
+            gt.accessor("email", { header: "Email", size: 150 }),
+            gt.accessor("guest_registrated", {
               header: "Guest Count",
               size: 100,
             }),
-            ct.accessor("guest_names", { header: "Guest's Names", size: 100 }),
-            ct.accessor("partner_id", { header: "Partner ID", size: 100 }),
-            ct.accessor("partner_name", { header: "Partner Name", size: 300 }),
-            ct.accessor("game", { header: "Game Name", size: 150 }),
-            ct.accessor("business_contact", {
+            gt.accessor("guest_names", { header: "Guest's Names", size: 100 }),
+            gt.accessor("partner_id", { header: "Partner ID", size: 100 }),
+            gt.accessor("partner_name", { header: "Partner Name", size: 300 }),
+            gt.accessor("game", { header: "Game Name", size: 150 }),
+            gt.accessor("business_contact", {
               header: "Business Contact",
               size: 150,
             }),
-            ct.accessor("sessions", { header: "Sessions", size: 150 }),
+            gt.accessor("sessions", { header: "Sessions", size: 150 }),
           ],
           [],
         );
       }
-      function ht(e) {
+      function xt(e) {
         const { rgData: t } = e,
-          n = ut();
+          n = ft();
         return (0, s.jsx)(H.$n, {
           id: "download-csv",
           onClick: () =>
-            (0, rt.K)(
+            (0, dt.K)(
               "registrationdump.csv",
               t,
               n.map((e) => ({
@@ -2688,8 +2895,8 @@ License: MIT
           children: "Download CSV",
         });
       }
-      const mt = i.createContext(void 0);
-      function gt(e) {
+      const vt = i.createContext(void 0);
+      function _t(e) {
         const { children: t } = e,
           [n, r] = ie("search", ""),
           [a, o] = (0, i.useState)(() => n || ""),
@@ -2700,19 +2907,19 @@ License: MIT
             [r],
           ),
           c = (0, i.useMemo)(() => ({ strSearch: a, setSearch: l }), [a, l]);
-        return (0, s.jsx)(mt.Provider, { value: c, children: t });
+        return (0, s.jsx)(vt.Provider, { value: c, children: t });
       }
-      const pt = () => {
-        const e = (0, i.useContext)(mt);
+      const jt = () => {
+        const e = (0, i.useContext)(vt);
         if (!e)
           throw new Error(
             "useMeetSteamSearch must be used within MeetSteamSearchProvider",
           );
         return e;
       };
-      function ft(e) {
+      function St(e) {
         const { text: t } = e,
-          { strSearch: n } = pt(),
+          { strSearch: n } = jt(),
           r = (0, i.useMemo)(
             () =>
               (function (e, t) {
@@ -2743,7 +2950,7 @@ License: MIT
           ),
         });
       }
-      function xt(e) {
+      function wt(e) {
         const t = I.b.InitFromClanID((0, V.H)()),
           n = (function () {
             const [e] = (0, i.useState)(() =>
@@ -2752,8 +2959,8 @@ License: MIT
             return e;
           })(),
           { bShowArchived: r, setShowArchived: a } = le(),
-          { strSearch: o, setSearch: l } = pt(),
-          { bIsLoading: c, events: d } = (0, L.PB)(n),
+          { strSearch: o, setSearch: l } = jt(),
+          { bIsLoading: c, events: d } = (0, O.PB)(n),
           {
             rgEventsByMonth: u,
             cEvents: h,
@@ -2770,28 +2977,28 @@ License: MIT
                   if (!t?.trim()) return !0;
                   const n = [
                     e.GID,
-                    e.GetNameWithFallback(_.Bhc),
-                    e.GetDescriptionWithFallback(_.Bhc),
+                    e.GetNameWithFallback(v.Bhc),
+                    e.GetDescriptionWithFallback(v.Bhc),
                   ];
                   return (
                     e.jsondata.meet_steam_groups?.forEach((e) => {
                       n.push(
-                        Z.NT.GetWithFallback(e.localized_session_title, _.Bhc),
+                        Z.NT.GetWithFallback(e.localized_session_title, v.Bhc),
                       ),
                         n.push(
                           Z.NT.GetWithFallback(
                             e.localized_session_description,
-                            _.Bhc,
+                            v.Bhc,
                           ),
                         ),
                         n.push(
                           Z.NT.GetWithFallback(
                             e.localized_intended_audience,
-                            _.Bhc,
+                            v.Bhc,
                           ),
                         ),
                         n.push(
-                          Z.NT.GetWithFallback(e.localized_sesssion_faq, _.Bhc),
+                          Z.NT.GetWithFallback(e.localized_sesssion_faq, v.Bhc),
                         );
                     }),
                     n.some((e) =>
@@ -2828,8 +3035,8 @@ License: MIT
                         href: `${ee.TS.COMMUNITY_BASE_URL}gid/${t.ConvertTo64BitString()}/partnerevents/`,
                         children: "Open Meet Steam Event Dashboard",
                       }),
-                      (0, s.jsx)(Le, { rgEventGIDs: n }),
-                      (0, s.jsx)(lt, { rgEventGIDs: n }),
+                      (0, s.jsx)(qe, { rgEventGIDs: n }),
+                      (0, s.jsx)(mt, { rgEventGIDs: n }),
                     ],
                   }),
                   (0, s.jsx)(H.Yh, {
@@ -2871,7 +3078,7 @@ License: MIT
                   (0, s.jsx)("hr", {}),
                   u.map((e) =>
                     (0, s.jsx)(
-                      _t,
+                      yt,
                       { month: new Date(1e3 * e[0]), events: e[1] },
                       e[0],
                     ),
@@ -2880,7 +3087,7 @@ License: MIT
               })
             : null;
       }
-      function _t(e) {
+      function yt(e) {
         const { month: t, events: n } = e,
           r = i.useMemo(() => [...n].sort((e) => -e.startTime), [n]),
           a = new Intl.DateTimeFormat(navigator.language, {
@@ -2892,19 +3099,19 @@ License: MIT
             (0, s.jsx)("div", { className: ne().MonthTitle, children: a }),
             (0, s.jsx)("div", {
               className: ne().MonthEvents,
-              children: r.map((e) => (0, s.jsx)(vt, { oEvent: e }, e.GID)),
+              children: r.map((e) => (0, s.jsx)(bt, { oEvent: e }, e.GID)),
             }),
           ],
         });
       }
-      function vt(e) {
+      function bt(e) {
         const { oEvent: t } = e,
           n = t.GID,
           r = I.b.InitFromClanID((0, V.H)()),
           a = (0, $.a)(),
           o = (0, G.my)(a, (0, V.H)(), n),
           l = o.isSuccess ? o.data : null,
-          c = t.GetNameWithFallback(_.Bhc),
+          c = t.GetNameWithFallback(v.Bhc),
           d = (0, i.useMemo)(() => {
             const e = new Array();
             return (
@@ -2927,7 +3134,7 @@ License: MIT
                   children: [
                     (0, s.jsx)("div", {
                       className: ne().Title,
-                      children: (0, s.jsx)(ft, { text: c }),
+                      children: (0, s.jsx)(St, { text: c }),
                     }),
                     (0, s.jsx)("div", {
                       className: ne().StartDate,
@@ -2959,7 +3166,7 @@ License: MIT
                     ) &&
                       (0, s.jsxs)(s.Fragment, {
                         children: [
-                          (0, s.jsx)(bt, { gid: n }),
+                          (0, s.jsx)(Rt, { gid: n }),
                           " | ",
                           (0, s.jsx)("a", {
                             href: `${ee.TS.STORE_BASE_URL}meetsteam/attendance?gid=${n}&accountid=${ee.iA.accountid}`,
@@ -2970,10 +3177,10 @@ License: MIT
                             href: `${ee.TS.STORE_BASE_URL}meetsteam/attendeelist?gid=${n}`,
                             children: "Attendance List",
                           }),
-                          (0, s.jsx)(jt, { gid: n }),
-                          (0, s.jsx)(yt, { gid: n }),
-                          (0, s.jsx)(St, { gid: n }),
-                          (0, s.jsx)(wt, { gid: n }),
+                          (0, s.jsx)(Et, { gid: n }),
+                          (0, s.jsx)(It, { gid: n }),
+                          (0, s.jsx)(Ct, { gid: n }),
+                          (0, s.jsx)(Dt, { gid: n }),
                         ],
                       }),
                   ],
@@ -3012,7 +3219,7 @@ License: MIT
                         children: [
                           Boolean(d.length > 0)
                             ? (0, s.jsx)(
-                                Ct,
+                                Tt,
                                 {
                                   gid: n,
                                   group: d[0].group,
@@ -3050,7 +3257,7 @@ License: MIT
                           (0, s.jsx)(
                             "tr",
                             {
-                              children: (0, s.jsx)(Ct, {
+                              children: (0, s.jsx)(Tt, {
                                 group: e.group,
                                 gid: n,
                                 session: e.session,
@@ -3069,7 +3276,7 @@ License: MIT
           ],
         });
       }
-      function jt(e) {
+      function Et(e) {
         const { gid: t } = e,
           n = re();
         return Array.from(n.keys()).includes(t)
@@ -3084,9 +3291,9 @@ License: MIT
             })
           : null;
       }
-      function St(e) {
+      function Ct(e) {
         const { gid: t } = e,
-          [n, r, i] = (0, y.uD)();
+          [n, r, i] = (0, w.uD)();
         return (0, s.jsxs)("div", {
           children: [
             " | ",
@@ -3106,15 +3313,15 @@ License: MIT
             (0, s.jsx)(u.tH, {
               children: (0, s.jsx)(K.E, {
                 active: n,
-                children: (0, s.jsx)(je, { hideModal: i, gid: t }),
+                children: (0, s.jsx)(Ce, { hideModal: i, gid: t }),
               }),
             }),
           ],
         });
       }
-      function yt(e) {
+      function It(e) {
         const { gid: t } = e,
-          [n, r, i] = (0, y.uD)();
+          [n, r, i] = (0, w.uD)();
         return (0, s.jsxs)("div", {
           children: [
             " | ",
@@ -3128,15 +3335,15 @@ License: MIT
             (0, s.jsx)(u.tH, {
               children: (0, s.jsx)(K.E, {
                 active: n,
-                children: (0, s.jsx)(ve, { hideModal: i, gid: t }),
+                children: (0, s.jsx)(ye, { hideModal: i, gid: t }),
               }),
             }),
           ],
         });
       }
-      function wt(e) {
+      function Dt(e) {
         const { gid: t } = e,
-          [n, r, i] = (0, y.uD)();
+          [n, r, i] = (0, w.uD)();
         return (0, s.jsxs)("div", {
           children: [
             " | ",
@@ -3150,13 +3357,13 @@ License: MIT
             (0, s.jsx)(u.tH, {
               children: (0, s.jsx)(K.E, {
                 active: n,
-                children: (0, s.jsx)(Ze, { hideModal: i, gid: t }),
+                children: (0, s.jsx)(rt, { hideModal: i, gid: t }),
               }),
             }),
           ],
         });
       }
-      function bt(e) {
+      function Rt(e) {
         const { gid: t } = e,
           n = (0, $.a)(),
           [r, a] = (0, i.useState)(!1),
@@ -3195,9 +3402,9 @@ License: MIT
                   }),
                   Boolean(null == o) &&
                     (0, s.jsx)(W.t, { string: (0, Z.we)("#Loading") }),
-                  Boolean(o == v.R) &&
+                  Boolean(o == _.R) &&
                     (0, s.jsx)("div", { children: "Test Emails Sent" }),
-                  Boolean(o && o != v.R) &&
+                  Boolean(o && o != _.R) &&
                     (0, s.jsx)("div", {
                       children: "Email Failed to Send. Check console",
                     }),
@@ -3207,15 +3414,15 @@ License: MIT
           ],
         });
       }
-      function Et(e, t) {
-        const n = P().unix(e),
-          s = P().unix(e).tz(t),
+      function At(e, t) {
+        const n = z().unix(e),
+          s = z().unix(e).tz(t),
           r = s.utcOffset() - n.utcOffset(),
           i = new Date(1e3 * (e + 60 * r)),
           a = new Date();
         return `${i.getFullYear() == a.getFullYear() ? ((0, X.$w))(i, !1, !1) : ((0, X._9))(i, !1, !1)} ${(0, X.KC)(e + 60 * r)} ${s.format("z")}`;
       }
-      function Ct(e) {
+      function Tt(e) {
         const {
             gid: t,
             group: n,
@@ -3223,15 +3430,15 @@ License: MIT
             session: i,
             firstSession: a = !0,
           } = e,
-          o = Z.NT.GetWithFallback(n?.localized_session_title, _.Bhc),
-          l = Z.NT.GetWithFallback(n?.localized_session_description, _.Bhc),
-          c = Z.NT.GetWithFallback(n?.localized_intended_audience, _.Bhc),
+          o = Z.NT.GetWithFallback(n?.localized_session_title, v.Bhc),
+          l = Z.NT.GetWithFallback(n?.localized_session_description, v.Bhc),
+          c = Z.NT.GetWithFallback(n?.localized_intended_audience, v.Bhc),
           d = r?.find((e) => e.group_id == n.group_id && e.session_id == i.id),
-          [h, m, g] = (0, y.uD)(),
-          p = F((0, $.a)(), t, n?.group_id);
+          [h, m, g] = (0, w.uD)(),
+          p = L((0, $.a)(), t, n?.group_id);
         let f = Math.min((d?.guest_count / i.max_capacity) * 100, 100),
           x = d?.guest_count > 0 ? `${f}%` : "0%",
-          v = d?.guest_count >= i.max_capacity;
+          _ = d?.guest_count >= i.max_capacity;
         const j = Intl.DateTimeFormat().resolvedOptions().timeZone,
           S =
             "in_person" === i.location_type
@@ -3242,17 +3449,17 @@ License: MIT
             a && Boolean(n)
               ? (0, s.jsxs)("td", {
                   children: [
-                    (0, s.jsx)(ft, { text: o }),
+                    (0, s.jsx)(St, { text: o }),
                     (0, s.jsx)(Y.o, { tooltip: l }),
                     Boolean(c) &&
                       (0, s.jsx)("div", {
-                        children: (0, s.jsx)(ft, { text: c }),
+                        children: (0, s.jsx)(St, { text: c }),
                       }),
                   ],
                 })
               : (0, s.jsx)("td", {}),
             (0, s.jsx)("td", {
-              children: (0, s.jsx)("span", { children: Et(i.rtime_start, S) }),
+              children: (0, s.jsx)("span", { children: At(i.rtime_start, S) }),
             }),
             (0, s.jsx)("td", {
               children: (0, X.IH)(i.rtime_end - i.rtime_start),
@@ -3268,7 +3475,7 @@ License: MIT
                   children: (0, s.jsx)("div", {
                     className: (0, J.A)(
                       ne().CapacityBarCurrent,
-                      v ? ne().Full : "",
+                      _ ? ne().Full : "",
                     ),
                     style: { width: x },
                   }),
@@ -3297,7 +3504,7 @@ License: MIT
                 (0, s.jsx)(u.tH, {
                   children: (0, s.jsx)(K.E, {
                     active: h,
-                    children: (0, s.jsx)(et, {
+                    children: (0, s.jsx)(at, {
                       gid: t,
                       title: o,
                       group: n,
@@ -3311,13 +3518,13 @@ License: MIT
           ],
         });
       }
-      var It = n(39777),
-        Dt = n(35380),
-        Rt = n(14336),
-        At = n(16021),
-        Tt = n(65522),
-        kt = n(48479);
-      function Mt(e) {
+      var kt = n(39777),
+        Mt = n(35380),
+        Nt = n(14336),
+        Bt = n(16021),
+        Pt = n(65522),
+        Lt = n(48479);
+      function Ft(e) {
         const { rgEvents: t } = M(),
           n = (function () {
             const [e] = (0, i.useState)(() =>
@@ -3365,7 +3572,7 @@ License: MIT
               )
               .map((e) =>
                 (0, s.jsx)(
-                  Nt,
+                  zt,
                   {
                     conf: e,
                     nInterestCount: l.get(e.id) ?? 0,
@@ -3374,19 +3581,19 @@ License: MIT
                   e.id,
                 ),
               ),
-            (0, s.jsx)($t, { rgSurveyInterest: n }),
+            (0, s.jsx)(Kt, { rgSurveyInterest: n }),
           ],
         });
       }
-      function Nt(e) {
+      function zt(e) {
         const { conf: t, nInterestCount: n, rgSurveyInterest: r } = e;
-        return (0, s.jsx)(kt.qx, {
+        return (0, s.jsx)(Lt.qx, {
           title: `${t.name} in ${t.place} around ${t.time}: Interest: ${(0, _e.D)(n)}`,
           bStartMinimized: !0,
-          children: (0, s.jsx)(zt, { conf: t, rgSurveyInterest: r }),
+          children: (0, s.jsx)(Gt, { conf: t, rgSurveyInterest: r }),
         });
       }
-      function Bt(e) {
+      function Ot(e) {
         if ("number" == typeof e) return e;
         const t = e.slice(-1).toUpperCase(),
           n = parseFloat(e.slice(0, -1));
@@ -3401,13 +3608,13 @@ License: MIT
             return parseFloat(e);
         }
       }
-      function zt(e) {
+      function Gt(e) {
         const { conf: t, rgSurveyInterest: n } = e,
           r = (0, i.useMemo)(
             () => n.filter((e) => e.results?.attending?.includes(t.id)),
             [t, n],
           ),
-          a = (0, it.qh)(),
+          a = (0, ut.qh)(),
           { bComplete: o, nCount: l } = (function (e) {
             const [t, n] = (0, i.useState)(!1),
               [s, r] = (0, i.useState)(0),
@@ -3439,7 +3646,7 @@ License: MIT
         return o
           ? a?.length
             ? r && 0 != r.length
-              ? (0, s.jsx)(Ft, { conf: t, rgSurveyInterest: r })
+              ? (0, s.jsx)($t, { conf: t, rgSurveyInterest: r })
               : (0, s.jsx)("div", { children: "No users with interest" })
             : (0, s.jsx)(W.t, {
                 position: "center",
@@ -3450,7 +3657,7 @@ License: MIT
               string: `Loading ${l} of ${r.length}`,
             });
       }
-      function Ft(e) {
+      function $t(e) {
         const { conf: t, rgSurveyInterest: n } = e,
           r = (0, b.jE)();
         return (0, s.jsxs)("div", {
@@ -3478,19 +3685,19 @@ License: MIT
                 ]),
                   n.forEach((t) => {
                     const n = [],
-                      s = new Ye.b2(t.steamid);
+                      s = new tt.b2(t.steamid);
                     n.push("" + s.GetAccountID());
-                    const i = (0, Rt.z0)(s.GetAccountID()),
+                    const i = (0, Nt.z0)(s.GetAccountID()),
                       a = t.results.partner_id;
                     n.push("" + a);
                     const o = (0, A.N6)(a).map(
-                      (e) => (0, it.YA)(r, e)?.displayName || "" + e,
+                      (e) => (0, ut.YA)(r, e)?.displayName || "" + e,
                     );
                     n.push(o.join("|"));
                     const l = t.results.email_override || "";
                     n.push("" + l),
                       n.push(i?.m_strPlayerName ? i.m_strPlayerName : "");
-                    const c = ze(s.GetAccountID(), a);
+                    const c = $e(s.GetAccountID(), a);
                     if (
                       (n.push(c ? c.realname : ""),
                       n.push(t.results.have_you_met_steam ? "yes" : "no"),
@@ -3507,16 +3714,16 @@ License: MIT
                       n.push(t.results.country_code),
                       n.push(
                         t.results.preferred_language
-                          ? (0, _.LgB)(t.results.preferred_language)
+                          ? (0, v.LgB)(t.results.preferred_language)
                           : "",
                       );
                     const d = (0, R.Yd)(a);
                     n.push(d ? d.name : "");
-                    const u = z(r, a);
+                    const u = P(r, a);
                     u
-                      ? (n.push("" + Bt(u.strGrossUSD)),
+                      ? (n.push("" + Ot(u.strGrossUSD)),
                         n.push("" + u.nBestAppID),
-                        n.push(At.A.Get().GetApp(u.nBestAppID)?.GetName()),
+                        n.push(Bt.A.Get().GetApp(u.nBestAppID)?.GetName()),
                         n.push("" + u.nBestAppLongTermSalesRank))
                       : (n.push(""), n.push(""), n.push(""), n.push("")),
                       e.push(n);
@@ -3549,7 +3756,7 @@ License: MIT
                 (0, s.jsx)("tbody", {
                   children: n.map((e) =>
                     (0, s.jsx)(
-                      Ot,
+                      Ht,
                       {
                         strsteamid: e.steamid,
                         partnerID: e.results.partner_id,
@@ -3564,18 +3771,18 @@ License: MIT
           ],
         });
       }
-      function Ot(e) {
+      function Ht(e) {
         const { partnerID: t, registration: n } = e;
         return (0, s.jsxs)("tr", {
           children: [
-            (0, s.jsx)("td", { children: (0, s.jsx)(Pt, { ...e }) }),
+            (0, s.jsx)("td", { children: (0, s.jsx)(Ut, { ...e }) }),
             (0, s.jsx)("td", { children: n.have_you_met_steam ? "" : "NO" }),
-            (0, s.jsx)(Lt, { nPartnerID: t }),
+            (0, s.jsx)(Vt, { nPartnerID: t }),
             (0, s.jsx)("td", { children: n.attending.length }),
             (0, s.jsx)("td", {
               children:
                 n.english_not_good && n.preferred_language
-                  ? (0, _.LgB)(n.preferred_language)
+                  ? (0, v.LgB)(n.preferred_language)
                   : "",
             }),
             (0, s.jsx)("td", { children: n.country_code }),
@@ -3583,10 +3790,10 @@ License: MIT
           ],
         });
       }
-      function Pt(e) {
+      function Ut(e) {
         const { strsteamid: t, partnerID: n, registration: r } = e,
-          i = (0, Rt.hW)(t),
-          a = Be(new Ye.b2(t).GetAccountID(), n),
+          i = (0, Nt.hW)(t),
+          a = Ge(new tt.b2(t).GetAccountID(), n),
           o = a?.realname || i.data?.m_strPlayerName;
         return (0, s.jsxs)(s.Fragment, {
           children: [
@@ -3596,11 +3803,11 @@ License: MIT
           ],
         });
       }
-      function Lt(e) {
+      function Vt(e) {
         const { nPartnerID: t } = e,
           [n] = (0, R.UA)(t),
           r = (function (e) {
-            const t = (0, w.I)({
+            const t = (0, y.I)({
               queryKey: N(e),
               queryFn: async () => B(e),
               enabled: Boolean(e),
@@ -3614,34 +3821,34 @@ License: MIT
             (0, s.jsx)("td", { children: n ? n?.name + ` (${t})` : t }),
             (0, s.jsx)("td", {
               children: i
-                ?.map((e) => (0, it.YA)(a, e)?.displayName || "" + e)
+                ?.map((e) => (0, ut.YA)(a, e)?.displayName || "" + e)
                 .join(","),
             }),
             (0, s.jsxs)("td", { children: ["$", r?.strGrossUSD] }),
             (0, s.jsx)("td", {
               children:
                 r?.nBestAppID > 0
-                  ? (0, s.jsx)(Gt, { appid: r?.nBestAppID })
+                  ? (0, s.jsx)(qt, { appid: r?.nBestAppID })
                   : "N/A",
             }),
             (0, s.jsx)("td", { children: r?.nBestAppLongTermSalesRank }),
           ],
         });
       }
-      function Gt(e) {
+      function qt(e) {
         const { appid: t } = e,
-          n = (0, Dt.$5)(t),
-          { data: r } = (0, It.J$)(n);
-        return (0, s.jsx)(Tt.Q, {
+          n = (0, Mt.$5)(t),
+          { data: r } = (0, kt.J$)(n);
+        return (0, s.jsx)(Pt.Q, {
           id: n,
           children: (0, s.jsx)("span", { children: r?.name || t }),
         });
       }
-      function $t(e) {
+      function Kt(e) {
         const { rgSurveyInterest: t } = e,
           n = (0, b.jE)(),
           r =
-            ((0, it.qh)(),
+            ((0, ut.qh)(),
             (0, i.useMemo)(
               () =>
                 t.filter((e) =>
@@ -3649,7 +3856,7 @@ License: MIT
                 ),
               [t],
             ));
-        return (0, s.jsxs)(kt.qx, {
+        return (0, s.jsxs)(Lt.qx, {
           title: `Alternative Suggestions (${r.length})`,
           bStartMinimized: !0,
           children: [
@@ -3673,28 +3880,28 @@ License: MIT
                 ]),
                   r.forEach((t) => {
                     const s = [],
-                      r = new Ye.b2(t.steamid);
+                      r = new tt.b2(t.steamid);
                     s.push("" + r.GetAccountID());
-                    const i = (0, Rt.z0)(r.GetAccountID()),
+                    const i = (0, Nt.z0)(r.GetAccountID()),
                       a = t.results.partner_id;
                     s.push("" + a);
                     const o = t.results.email_override || "";
                     s.push("" + o),
                       s.push(i?.m_strPlayerName ? i.m_strPlayerName : "");
-                    const l = ze(r.GetAccountID(), a);
+                    const l = $e(r.GetAccountID(), a);
                     s.push(l ? l.realname : ""),
                       s.push("" + t.results.attending?.length),
                       s.push(t.results.country_code),
                       s.push(
                         t.results.preferred_language
-                          ? (0, _.LgB)(t.results.preferred_language)
+                          ? (0, v.LgB)(t.results.preferred_language)
                           : "",
                       );
                     const c = (0, R.Yd)(a);
                     s.push(c ? c.name : "");
-                    const d = z(n, a);
+                    const d = P(n, a);
                     d
-                      ? (s.push("" + Bt(d.strGrossUSD)),
+                      ? (s.push("" + Ot(d.strGrossUSD)),
                         s.push("" + d.nBestAppID),
                         s.push("" + d.nBestAppLongTermSalesRank))
                       : (s.push(""), s.push(""), s.push("")),
@@ -3723,7 +3930,7 @@ License: MIT
                 }),
                 (0, s.jsx)("tbody", {
                   children: r.map((e) =>
-                    (0, s.jsx)(Ht, { survey: e }, "suggested" + e.steamid),
+                    (0, s.jsx)(Wt, { survey: e }, "suggested" + e.steamid),
                   ),
                 }),
               ],
@@ -3731,33 +3938,33 @@ License: MIT
           ],
         });
       }
-      function Ht(e) {
+      function Wt(e) {
         const { survey: t } = e;
-        new Ye.b2(t.steamid);
+        new tt.b2(t.steamid);
         return (0, s.jsxs)("tr", {
           children: [
             (0, s.jsx)("td", {
-              children: (0, s.jsx)(Pt, {
+              children: (0, s.jsx)(Ut, {
                 strsteamid: t.steamid,
                 partnerID: t.results.partner_id,
                 registration: t.results,
               }),
             }),
-            (0, s.jsx)(Lt, { nPartnerID: t.results.partner_id }),
+            (0, s.jsx)(Vt, { nPartnerID: t.results.partner_id }),
             (0, s.jsx)("td", { children: t.results.suggestion.trim() }),
           ],
         });
       }
-      const Ut = i.createContext({
+      const Yt = i.createContext({
         loadUserEmailAndLangs: async (e) =>
           await (function () {
-            qt ||
-              (qt = new (De())(
+            Qt ||
+              (Qt = new (Ne())(
                 async (e) => {
                   const t = `${D.TS.PARTNER_BASE_URL}meetsteam/ajaxbatchgetuseremails`,
                     n = { sessionid: (0, D.KC)(), strAccountIDs: e.join(",") },
                     s = await C().get(t, { params: n, withCredentials: !0 });
-                  if (!s || 200 != s?.status || s?.data?.success != v.R)
+                  if (!s || 200 != s?.status || s?.data?.success != _.R)
                     throw `Failed to load app to user email and langs: ${((0, ue.H))(s).strErrorMsg}`;
                   const r = new Map();
                   return (
@@ -3770,24 +3977,24 @@ License: MIT
                 },
                 { maxBatchSize: 100 },
               ));
-            return qt;
+            return Qt;
           })().load(e),
       });
-      function Vt(e, t) {
+      function Jt(e, t) {
         return {
           queryKey: ["UserEmailAndLangs", t],
           queryFn: () => e.loadUserEmailAndLangs(t),
           enabled: !!t,
         };
       }
-      let qt;
-      var Kt = n(73745),
-        Wt = n(3049);
-      function Yt(e) {
+      let Qt;
+      var Zt = n(73745),
+        Xt = n(3049);
+      function en(e) {
         const t = (0, $.a)(),
-          n = (0, it.qh)(),
+          n = (0, ut.qh)(),
           r = (function (e) {
-            const t = (0, w.I)({
+            const t = (0, y.I)({
               queryKey: ["useMeetSteamSaleOperators"],
               queryFn: async () => {
                 const t = j.w.Init(S.Rl),
@@ -3822,16 +4029,16 @@ License: MIT
                     const e = [];
                     e.push(["User Name", "account id", "Email", "Event Count"]),
                       a.forEach((t) => {
-                        const n = (0, Rt.z0)(t.accountid),
+                        const n = (0, Nt.z0)(t.accountid),
                           s =
                             ((r = t.accountid),
-                            Ne.L.getQueryData(["UserEmailAndLangs", r]));
+                            Oe.L.getQueryData(["UserEmailAndLangs", r]));
                         var r;
                         e.push([
                           n?.m_strPlayerName || "",
                           "" + t.accountid,
                           s?.email_address || "",
-                          t.clan_event_gids?.length.toLocaleString((0, Wt.J)()),
+                          t.clan_event_gids?.length.toLocaleString((0, Xt.J)()),
                         ]);
                       });
                     he.g.WriteCSVToFile(e, "sale_operators.csv");
@@ -3857,7 +4064,7 @@ License: MIT
                     }),
                     (0, s.jsx)("tbody", {
                       children: a.map((e) =>
-                        (0, s.jsx)(Jt, { organizer: e }, e.accountid),
+                        (0, s.jsx)(tn, { organizer: e }, e.accountid),
                       ),
                     }),
                   ],
@@ -3866,16 +4073,16 @@ License: MIT
             })
           : (0, s.jsx)(W.t, { string: (0, Z.we)("#Loading"), size: "medium" });
       }
-      function Jt(e) {
+      function tn(e) {
         const { organizer: t } = e,
           n = (0, i.useMemo)(
             () => I.b.InitFromAccountID(t.accountid).ConvertTo64BitString(),
             [t],
           ),
-          r = (0, Rt.hW)(n),
+          r = (0, Nt.hW)(n),
           a = (function (e) {
-            const t = i.useContext(Ut);
-            return (0, w.I)(Vt(t, e));
+            const t = i.useContext(Yt);
+            return (0, y.I)(Jt(t, e));
           })(t.accountid),
           o = r.data?.m_strPlayerName || "";
         return (0, s.jsxs)("tr", {
@@ -3883,7 +4090,7 @@ License: MIT
             (0, s.jsxs)("td", { children: [o, " (", t.accountid, ")"] }),
             (0, s.jsx)("td", { children: a?.data?.email_address }),
             (0, s.jsx)("td", {
-              children: (0, s.jsx)(Qt, {
+              children: (0, s.jsx)(nn, {
                 name: o,
                 rgClanEventGIDs: t.clan_event_gids,
               }),
@@ -3891,9 +4098,9 @@ License: MIT
           ],
         });
       }
-      function Qt(e) {
+      function nn(e) {
         const { name: t, rgClanEventGIDs: n } = e,
-          [r, i, a] = (0, Kt.uD)();
+          [r, i, a] = (0, Zt.uD)();
         return (0, s.jsxs)(s.Fragment, {
           children: [
             (0, s.jsxs)(H.$n, {
@@ -3906,46 +4113,46 @@ License: MIT
                 bAlertDialog: !0,
                 closeModal: a,
                 strTitle: `${t}'s Events`,
-                children: n.map((e) => (0, s.jsx)(Zt, { gid: e }, e)),
+                children: n.map((e) => (0, s.jsx)(sn, { gid: e }, e)),
               }),
             }),
           ],
         });
       }
-      function Zt(e) {
+      function sn(e) {
         const { gid: t } = e,
-          n = (0, L.RR)(t);
+          n = (0, O.RR)(t);
         return n
           ? (0, s.jsxs)("a", {
               href: `${ee.TS.COMMUNITY_BASE_URL}gid/${n.clanSteamID.ConvertTo64BitString()}/partnerevents/edit/${t}`,
               target: "_blank",
               children: [
-                (0, s.jsx)("div", { children: n.GetNameWithFallback(_.Bhc) }),
-                (0, s.jsx)("img", { src: n.GetImageURL("capsule", _.Bhc) }),
+                (0, s.jsx)("div", { children: n.GetNameWithFallback(v.Bhc) }),
+                (0, s.jsx)("img", { src: n.GetImageURL("capsule", v.Bhc) }),
               ],
             })
           : (0, s.jsxs)("div", { children: ["Loading ", t] });
       }
-      function Xt(e) {
+      function rn(e) {
         const t = (e) =>
             window.sessionStorage.setItem("meetsteamadmin", `?tab=${e.key}`),
           n = [
             {
               name: "Interest Survey Results",
               key: "survey",
-              contents: (0, s.jsx)(u.tH, { children: (0, s.jsx)(Mt, {}) }),
+              contents: (0, s.jsx)(u.tH, { children: (0, s.jsx)(Ft, {}) }),
               onClick: t,
             },
             {
               name: "Event Management",
               key: "event",
-              contents: (0, s.jsx)(u.tH, { children: (0, s.jsx)(xt, {}) }),
+              contents: (0, s.jsx)(u.tH, { children: (0, s.jsx)(wt, {}) }),
               onClick: t,
             },
             {
               name: "Sale Operators",
               key: "saleops",
-              contents: (0, s.jsx)(u.tH, { children: (0, s.jsx)(Yt, {}) }),
+              contents: (0, s.jsx)(u.tH, { children: (0, s.jsx)(en, {}) }),
               onClick: t,
             },
             {
@@ -3956,7 +4163,7 @@ License: MIT
             },
           ];
         return (0, s.jsx)(oe, {
-          children: (0, s.jsx)(gt, {
+          children: (0, s.jsx)(_t, {
             children: (0, s.jsxs)("div", {
               className: f().AdminPageCtn,
               children: [
@@ -3976,13 +4183,13 @@ License: MIT
           }),
         });
       }
-      var en = n(65946),
-        tn = n(79645),
-        nn = n(1909),
-        sn = n(56330),
-        rn = n(85761),
-        an = n.n(rn);
-      function on(e) {
+      var an = n(65946),
+        on = n(79645),
+        ln = n(1909),
+        cn = n(56330),
+        dn = n(85761),
+        un = n.n(dn);
+      function hn(e) {
         const t = (function () {
             const [e] = (0, i.useState)(() =>
               (0, D.Tc)("registration_open", "application_config"),
@@ -3995,7 +4202,7 @@ License: MIT
             );
             return e;
           })(),
-          { data: r } = (0, Rt.js)(D.iA.accountid),
+          { data: r } = (0, Nt.js)(D.iA.accountid),
           [a, o] = (0, i.useState)(!1),
           [l, c] = (0, i.useState)(!1),
           [d, u] = (0, i.useState)(!1),
@@ -4008,7 +4215,7 @@ License: MIT
                 string: (0, Z.we)("#Loading"),
               })
             : (0, s.jsxs)("div", {
-                className: (0, J.A)(f().AdminPageCtn, an().Ctn),
+                className: (0, J.A)(f().AdminPageCtn, un().Ctn),
                 children: [
                   (0, s.jsx)("div", {
                     className: f().PageTitle,
@@ -4041,14 +4248,14 @@ License: MIT
                         }),
                         (0, s.jsx)("div", {
                           className: f().SectionCtn,
-                          children: (0, s.jsx)(un, {
+                          children: (0, s.jsx)(fn, {
                             oRegistration: h,
                             fnSetRegistration: m,
                           }),
                         }),
                         (0, s.jsx)("div", {
                           className: f().SectionCtn,
-                          children: (0, s.jsx)(ln, {
+                          children: (0, s.jsx)(mn, {
                             oRegistration: h,
                             fnSetRegistration: m,
                           }),
@@ -4070,7 +4277,7 @@ License: MIT
                                   const n = await C().post(e, t, {
                                     withCredentials: !0,
                                   });
-                                  n.data.success != v.R
+                                  n.data.success != _.R
                                     ? (console.error(
                                         "MeetSteamLanding failed " +
                                           n.data.success,
@@ -4099,7 +4306,7 @@ License: MIT
                               }),
                             a &&
                               (0, s.jsx)("div", {
-                                className: sn.ErrorStylesWithIcon,
+                                className: cn.ErrorStylesWithIcon,
                                 children: (0, Z.we)(
                                   "#Error_ErrorCommunicatingWithNetwork",
                                 ),
@@ -4112,11 +4319,11 @@ License: MIT
                 ],
               })
           : (0, s.jsx)("div", {
-              className: an().Ctn,
+              className: un().Ctn,
               children: (0, Z.we)("#MeetSteam_closed"),
             });
       }
-      function ln(e) {
+      function mn(e) {
         const { oRegistration: t, fnSetRegistration: n } = e,
           { rgEvents: r, rgOldEvents: i, selectConference: a } = M();
         return (0, s.jsxs)(s.Fragment, {
@@ -4133,7 +4340,7 @@ License: MIT
             (0, s.jsxs)("p", {
               children: [
                 (0, s.jsx)("span", {
-                  className: an().Indicator,
+                  className: un().Indicator,
                   children: "*",
                 }),
                 " ",
@@ -4147,7 +4354,7 @@ License: MIT
                   (0, s.jsx)("p", {
                     children: (0, Z.we)("#MeetSteam_ConferenceOrg"),
                   }),
-                  (0, s.jsx)(cn, { ...e, rgConference: [a] }),
+                  (0, s.jsx)(gn, { ...e, rgConference: [a] }),
                   (0, s.jsx)("br", {}),
                   (0, s.jsx)("br", {}),
                   (0, s.jsx)("hr", {}),
@@ -4156,7 +4363,7 @@ License: MIT
                   }),
                 ],
               }),
-            (0, s.jsx)(cn, { ...e, rgConference: r }),
+            (0, s.jsx)(gn, { ...e, rgConference: r }),
             (0, s.jsx)("br", {}),
             (0, s.jsx)(H.pd, {
               type: "text",
@@ -4165,15 +4372,15 @@ License: MIT
               label: (0, Z.we)("#MeetSteam_others"),
             }),
             Boolean(i?.length > 0) &&
-              (0, s.jsx)(kt.qx, {
+              (0, s.jsx)(Lt.qx, {
                 bStartMinimized: !0,
                 title: (0, Z.we)("#MeetSteam_PastEvents", i.length),
-                children: (0, s.jsx)(cn, { ...e, rgConference: i }),
+                children: (0, s.jsx)(gn, { ...e, rgConference: i }),
               }),
           ],
         });
       }
-      function cn(e) {
+      function gn(e) {
         const { rgConference: t } = e;
         return (0, s.jsxs)("table", {
           children: [
@@ -4196,7 +4403,7 @@ License: MIT
                       (0, s.jsx)("td", {
                         children: t.attending
                           ? (0, s.jsx)("span", {
-                              className: an().Indicator,
+                              className: un().Indicator,
                               children: "*",
                             })
                           : "",
@@ -4211,7 +4418,7 @@ License: MIT
                         children: (0, s.jsx)("div", { children: t.time }),
                       }),
                       (0, s.jsx)("td", {
-                        children: (0, s.jsx)(dn, { ...e, conf: t }),
+                        children: (0, s.jsx)(pn, { ...e, conf: t }),
                       }),
                     ],
                   },
@@ -4222,7 +4429,7 @@ License: MIT
           ],
         });
       }
-      function dn(e) {
+      function pn(e) {
         const { oRegistration: t, fnSetRegistration: n, conf: r } = e;
         return (0, s.jsx)(H.Yh, {
           checked: t.attending?.includes(r.id),
@@ -4237,9 +4444,9 @@ License: MIT
           tooltip: (0, Z.we)("#MeetSteam_attend_ttip"),
         });
       }
-      function un(e) {
+      function fn(e) {
         const { oRegistration: t, fnSetRegistration: n } = e,
-          r = (0, Rt.js)(D.iA.accountid),
+          r = (0, Nt.js)(D.iA.accountid),
           a = (function (e) {
             const t = (function () {
                 const [e] = (0, i.useState)(
@@ -4254,13 +4461,13 @@ License: MIT
                 );
                 return e;
               })(),
-              s = Be(D.iA.accountid, e != n ? e : null);
+              s = Ge(D.iA.accountid, e != n ? e : null);
             return e == n ? t : s?.email;
           })(t?.partner_id),
           [o, l] = (0, i.useState)(() =>
             Boolean((t.email_override && t.email_override != a) || !a),
           ),
-          [c, d, u] = (0, en.q3)(() => [
+          [c, d, u] = (0, an.q3)(() => [
             !Boolean(t.have_you_met_steam),
             Boolean(t.english_not_good),
             t.preferred_language,
@@ -4270,16 +4477,16 @@ License: MIT
               children: [
                 (0, s.jsx)("h1", { children: (0, Z.we)("#MeetSteam_You") }),
                 (0, s.jsx)("p", { children: (0, Z.we)("#MeetSteam_You_Desc") }),
-                (0, s.jsx)(hn, {
+                (0, s.jsx)(xn, {
                   nPartnerID: t.partner_id,
                   label: (0, Z.we)("#MeetSteam_You_Company"),
                   setPartnerID: (e) => n({ ...t, partner_id: e }),
                 }),
                 (0, s.jsxs)("div", {
-                  className: an().EmailInfoRow,
+                  className: un().EmailInfoRow,
                   children: [
                     (0, s.jsx)("div", {
-                      className: an().EmailField,
+                      className: un().EmailField,
                       children: (0, s.jsx)(H.pd, {
                         type: "string",
                         label: (0, Z.we)("#MeetSteam_You_Email"),
@@ -4312,10 +4519,10 @@ License: MIT
                   children: (0, Z.we)("#MeetSteam_CapabableEnglish"),
                 }),
                 (0, s.jsxs)("div", {
-                  className: an().RadioButtonCtn,
+                  className: un().RadioButtonCtn,
                   children: [
                     (0, s.jsx)(H.Od, {
-                      className: an().RadioButtons,
+                      className: un().RadioButtons,
                       checked: !d,
                       onChange: (e) =>
                         e &&
@@ -4327,14 +4534,14 @@ License: MIT
                       label: (0, Z.we)("#MeetSteam_CapabableEnglish_Yes"),
                     }),
                     (0, s.jsx)(H.Od, {
-                      className: an().RadioButtons,
+                      className: un().RadioButtons,
                       checked: d,
                       onChange: (e) =>
                         e &&
                         n({
                           ...t,
                           english_not_good: !0,
-                          preferred_language: (0, _.sfN)(D.TS.LANGUAGE),
+                          preferred_language: (0, v.sfN)(D.TS.LANGUAGE),
                         }),
                       label: (0, Z.we)("#MeetSteam_CapabableEnglish_No"),
                     }),
@@ -4347,7 +4554,7 @@ License: MIT
                       (0, s.jsx)(H.JU, {
                         children: (0, Z.we)("#MeetSteam_LanguagePref"),
                       }),
-                      (0, s.jsx)(nn.Ng, {
+                      (0, s.jsx)(ln.Ng, {
                         selectedLang: u,
                         bAllowUnsetOption: !1,
                         strTooltip: (0, Z.we)("#MeetSteam_LanguagePref_ttip"),
@@ -4364,9 +4571,9 @@ License: MIT
               string: (0, Z.we)("#Loading"),
             });
       }
-      function hn(e) {
+      function xn(e) {
         const { nPartnerID: t, setPartnerID: n, label: r } = e,
-          i = (0, tn.c)(D.iA.accountid);
+          i = (0, on.c)(D.iA.accountid);
         if (!i)
           return (0, s.jsx)(W.t, {
             size: "small",
@@ -4390,11 +4597,11 @@ License: MIT
           })
         );
       }
-      var mn = n(20587),
-        gn = n(13038),
-        pn = n.n(gn);
-      function fn(e) {
-        const { data: t } = (0, Rt.js)(D.iA.accountid),
+      var vn = n(20587),
+        _n = n(13038),
+        jn = n.n(_n);
+      function Sn(e) {
+        const { data: t } = (0, Nt.js)(D.iA.accountid),
           n = (function () {
             const [e] = (0, i.useState)(
               () => (0, D.Tc)("survey_event_name", "application_config") || "",
@@ -4419,7 +4626,7 @@ License: MIT
               string: (0, Z.we)("#Loading"),
             })
           : (0, s.jsxs)("div", {
-              className: (0, J.A)(f().AdminPageCtn, pn().Ctn),
+              className: (0, J.A)(f().AdminPageCtn, jn().Ctn),
               children: [
                 (0, s.jsx)("div", {
                   className: f().PageTitle,
@@ -4469,7 +4676,7 @@ License: MIT
                                 const n = await C().post(e, t, {
                                   withCredentials: !0,
                                 });
-                                n.data.success != v.R
+                                n.data.success != _.R
                                   ? (console.error(
                                       "MeetSteamLanding failed " +
                                         n.data.success,
@@ -4498,7 +4705,7 @@ License: MIT
                             }),
                           d &&
                             (0, s.jsx)("div", {
-                              className: sn.ErrorStylesWithIcon,
+                              className: cn.ErrorStylesWithIcon,
                               children: (0, Z.we)(
                                 "#Error_ErrorCommunicatingWithNetwork",
                               ),
@@ -4511,9 +4718,8 @@ License: MIT
               ],
             });
       }
-      var xn = n(27144),
-        _n = n(5695);
-      function vn(e) {
+      var wn = n(5695);
+      function yn(e) {
         const t = (function () {
             const [e] = (0, i.useState)(
               () => (0, D.Tc)("event_gids", "application_config") || [],
@@ -4557,7 +4763,7 @@ License: MIT
             }, [e]);
           })(),
           { surveyGID: a } = (0, o.g)(),
-          { bIsLoading: l, events: c } = (0, L.PB)(t),
+          { bIsLoading: l, events: c } = (0, O.PB)(t),
           [d, u] = (0, i.useMemo)(
             () => [
               n
@@ -4575,17 +4781,17 @@ License: MIT
             [r, n],
           ),
           h = (0, R.vh)(d),
-          m = (0, xn.B3)(u);
+          m = (0, ge.B3)(u);
         return !l && h && m
-          ? (0, s.jsx)(Sn, {
+          ? (0, s.jsx)(En, {
               rgSurveyResults: n,
               mapAccountsToReg: r,
               meetSteamEvents: c,
             })
           : (0, s.jsx)(W.t, { string: "Loading Event, Partner and User Info" });
       }
-      const jn = (0, be.FB)();
-      function Sn(e) {
+      const bn = (0, Ae.FB)();
+      function En(e) {
         const {
             rgSurveyResults: t,
             mapAccountsToReg: n,
@@ -4618,13 +4824,13 @@ License: MIT
                       if (n) {
                         const e = n.jsondata.meet_steam_groups.find(
                           (e) => e.group_id === t.group_id,
-                        ).localized_session_title[_.Bhc];
+                        ).localized_session_title[v.Bhc];
                         a.registrations.length > 0 && (a.registrations += "|"),
                           (a.registrations += e);
                       }
                     });
                 } else {
-                  const e = (0, xn.CF)(i.GetAccountID());
+                  const e = (0, ge.CF)(i.GetAccountID());
                   e && (a.name = e.persona_name);
                 }
                 s.push(a);
@@ -4634,20 +4840,20 @@ License: MIT
           }, [n, r, t]),
           o = (0, i.useMemo)(
             () => [
-              jn.accessor("name", { header: "Name", size: 150 }),
-              jn.accessor("feedback", {
+              bn.accessor("name", { header: "Name", size: 150 }),
+              bn.accessor("feedback", {
                 header: "Feedback",
                 size: 500,
-                cell: _n.Gb,
+                cell: wn.Gb,
               }),
-              jn.accessor("registrations", {
+              bn.accessor("registrations", {
                 header: "Sessions",
                 size: 200,
-                cell: yn,
+                cell: Cn,
               }),
-              jn.accessor("accountid", { header: "Account ID", size: 150 }),
-              jn.accessor("email", { header: "Email", size: 150 }),
-              jn.accessor("partner_name", {
+              bn.accessor("accountid", { header: "Account ID", size: 150 }),
+              bn.accessor("email", { header: "Email", size: 150 }),
+              bn.accessor("partner_name", {
                 header: "Partner Name",
                 size: 200,
               }),
@@ -4667,7 +4873,7 @@ License: MIT
                   (0, s.jsx)(H.$n, {
                     id: "download-csv",
                     onClick: () =>
-                      (0, rt.K)(
+                      (0, dt.K)(
                         "meetsteam_survey_results.csv",
                         a,
                         o.map((e) => ({
@@ -4682,7 +4888,7 @@ License: MIT
                     children: "Download CSV",
                   }),
                   (0, s.jsx)("br", {}),
-                  (0, s.jsx)(Ee.k, {
+                  (0, s.jsx)(Te.k, {
                     columns: o,
                     data: a,
                     getRowKey: (e) => e,
@@ -4695,22 +4901,22 @@ License: MIT
             })
           : (0, s.jsx)(W.t, { string: (0, Z.we)("#Loading") });
       }
-      function yn(e) {
+      function Cn(e) {
         const t = e.getValue();
         return t?.length > 0
-          ? (0, s.jsx)(_n.DP, { text: e.getValue(), regExp: /\|/ })
+          ? (0, s.jsx)(wn.DP, { text: e.getValue(), regExp: /\|/ })
           : "";
       }
-      const wn = {
+      const In = {
         YearlySurvery: (e = ":year") => `/${e}`,
         PostEventSurvey: (e = ":surveyGID") => `/survey/${e}`,
         AdminDashboard: () => "/admin",
         PostEventSurveyResults: (e = ":surveyGID") => `/surveyresults/${e}`,
       };
-      function bn(e) {
+      function Dn(e) {
         return (
           (0, i.useEffect)(() => {
-            mn.O3.Init();
+            vn.O3.Init();
           }, []),
           (0, s.jsx)(l.m, {
             children: (0, s.jsx)(a.Kd, {
@@ -4728,23 +4934,23 @@ License: MIT
                   }),
                   (0, s.jsx)(o.qh, {
                     exact: !0,
-                    path: wn.AdminDashboard(),
-                    component: Xt,
+                    path: In.AdminDashboard(),
+                    component: rn,
                   }),
                   (0, s.jsx)(o.qh, {
                     exact: !0,
-                    path: wn.YearlySurvery(":year(\\d+)"),
-                    component: on,
+                    path: In.YearlySurvery(":year(\\d+)"),
+                    component: hn,
                   }),
                   (0, s.jsx)(o.qh, {
                     exact: !0,
-                    path: wn.PostEventSurvey(":surveyGID(\\d+)"),
-                    component: fn,
+                    path: In.PostEventSurvey(":surveyGID(\\d+)"),
+                    component: Sn,
                   }),
                   (0, s.jsx)(o.qh, {
                     exact: !0,
-                    path: wn.PostEventSurveyResults(":surveyGID(\\d+)"),
-                    component: vn,
+                    path: In.PostEventSurveyResults(":surveyGID(\\d+)"),
+                    component: yn,
                   }),
                   (0, s.jsx)(o.qh, { component: d.a }),
                 ],
@@ -4756,7 +4962,7 @@ License: MIT
     },
     66051: (e, t, n) => {
       "use strict";
-      n.d(t, { k: () => R });
+      n.d(t, { k: () => T });
       var s = n(7850),
         r = n(8871),
         i = n(67796),
@@ -4772,28 +4978,36 @@ License: MIT
         p = n(23310),
         f = n(94104),
         x = n(9646);
-      const _ = u.memo(function (e) {
+      const v = u.memo(function (e) {
         const {
             virtualizer: t,
             bDynamic: n,
-            idx: r,
-            rowGap: i,
-            renderItem: a,
+            scrollAlign: r,
+            bNativeScrollIntoView: i,
+            idx: a,
+            rowGap: o,
+            renderItem: l,
           } = e,
-          o = u.useCallback(
-            (e, n, s) => (t.scrollToIndex(r, { align: "center" }), !0),
-            [t, r],
+          c = u.useCallback(
+            (e, n, s) => (t.scrollToIndex(a, { align: r }), !0),
+            [t, a, r],
           );
         return (0, s.jsx)(g.Z, {
           ref: n ? t.measureElement : void 0,
-          navKey: `VirtualizedListIndex-${r}`,
-          "data-index": r,
-          fnScrollIntoViewHandler: o,
+          navKey: `VirtualizedListIndex-${a}`,
+          "data-index": a,
+          fnScrollIntoViewHandler: i ? void 0 : c,
           scrollIntoViewWhenChildFocused: "force",
-          style: { width: "100%", paddingBottom: i },
-          children: a(r),
+          style: { width: "100%", paddingBottom: o },
+          children: l(a),
         });
       });
+      function _(e, t) {
+        const n = e.getBoundingClientRect().top;
+        return t
+          ? n - t.getBoundingClientRect().top - t.clientTop + t.scrollTop
+          : n + (e.ownerDocument.defaultView?.scrollY ?? 0);
+      }
       u.forwardRef(function (e, t) {
         const {
             nRows: n,
@@ -4806,39 +5020,43 @@ License: MIT
             className: h,
             forceVirtualizeType: m,
             hintVirtualizeType: p,
-            initialOffset: x,
-            onOffsetChange: _,
-            ...S
+            scrollAlign: x,
+            bNativeScrollIntoView: v,
+            initialOffset: j,
+            onOffsetChange: y,
+            ...b
           } = e,
-          [y, w] = (0, u.useState)(m ?? p),
-          [b, E] = u.useState(),
-          [C, I] = u.useState(),
-          D = u.useRef(null),
-          R = u.useCallback(
+          [E, C] = (0, u.useState)(m ?? p),
+          [I, D] = u.useState(),
+          [R, A] = u.useState(),
+          T = u.useRef(null),
+          k = u.useCallback(
             (e) => {
               if (!e) return;
-              const t = (0, f._f)(e, "y");
+              const t = (0, f._f)(e, "y"),
+                n = _(e, "window" == m ? null : t);
               (0, u.startTransition)(() => {
-                "window" != m && E(t || void 0),
-                  I(e.offsetTop),
-                  m || w(t ? "element" : "window");
+                "window" != m && D(t || void 0),
+                  A(n),
+                  m || C(t ? "element" : "window");
               });
             },
             [m],
           ),
-          A =
-            ((T = (e) => {
-              D.current &&
-                (0, u.startTransition)(() => {
-                  D.current && I(D.current?.offsetTop);
-                });
+          M =
+            ((N = (e) => {
+              if (!T.current) return;
+              const t = _(T.current, I);
+              (0, u.startTransition)(() => {
+                A(t);
+              });
             }),
             (0, r.QS)(
               (e) => {
                 if (!e) return;
                 const t = new e.ownerDocument.defaultView.ResizeObserver(
                   (e) => {
-                    T(e[0]);
+                    N(e[0]);
                   },
                 );
                 let n = [],
@@ -4849,11 +5067,11 @@ License: MIT
                   n.forEach((e) => t.unobserve(e));
                 };
               },
-              [T],
+              [N],
             ));
-        var T;
-        const k = (0, r.Ue)(R, D, A, t),
-          M = {
+        var N;
+        const B = (0, r.Ue)(k, T, M, t),
+          P = {
             nRows: n,
             nItemHeight: i,
             nRowGap: a,
@@ -4863,23 +5081,33 @@ License: MIT
             measureElement: d,
             forceVirtualizeType: m,
             hintVirtualizeType: p,
-            initialOffset: x,
-            onOffsetChange: _,
+            scrollAlign: x,
+            bNativeScrollIntoView: v,
+            initialOffset: j,
+            onOffsetChange: y,
           };
         return (0, s.jsx)(g.Z, {
           className: h,
-          ref: k,
-          ...S,
+          ref: B,
+          ...b,
           children: (0, s.jsxs)(u.Suspense, {
             children: [
-              "element" === y &&
-                (0, s.jsx)(j, { ...M, nScrollMargin: C || 0, elScrollable: b }),
-              "window" === y && (0, s.jsx)(v, { ...M, nScrollMargin: C }),
+              "element" === E &&
+                (0, s.jsx)(w, { ...P, nScrollMargin: R || 0, elScrollable: I }),
+              "window" === E && (0, s.jsx)(S, { ...P, nScrollMargin: R }),
             ],
           }),
         });
       });
-      function v(e) {
+      function j(e, t, n) {
+        u.useEffect(() => {
+          n ||
+            (0, u.startTransition)(() => {
+              e.measure();
+            });
+        }, [e, t, n]);
+      }
+      function S(e) {
         const {
             nScrollMargin: t,
             nRows: n,
@@ -4889,34 +5117,31 @@ License: MIT
             initialOffset: l,
             onOffsetChange: c,
             measureElement: d,
+            bDynamic: h,
           } = e,
-          h = ((0, x.d)(), r + i),
-          m = (0, o.XW)({
+          m = ((0, x.d)(), r + i),
+          g = (0, o.XW)({
             count: n,
             scrollMargin: t,
-            estimateSize: u.useCallback(() => h, [h]),
+            estimateSize: u.useCallback(() => m, [m]),
             measureElement: d,
             overscan: a,
             initialOffset: l ?? (() => window.scrollY),
             initialRect: void 0,
-            observeElementOffset: w,
-            observeElementRect: b,
+            observeElementOffset: E,
+            observeElementRect: C,
             onChange(e, t) {
               c?.(e.scrollOffset);
             },
           });
         return (
-          (m.shouldAdjustScrollPositionOnItemSizeChange = (e) =>
-            void 0 !== t && e.start < (m.scrollOffset ?? 0)),
-          u.useEffect(() => {
-            (0, u.startTransition)(() => {
-              m.measure();
-            });
-          }, [m, h]),
-          (0, s.jsx)(S, { ...e, virtualizer: m })
+          (g.shouldAdjustScrollPositionOnItemSizeChange = (e) =>
+            void 0 !== t && e.start < (g.scrollOffset ?? 0)),
+          j(g, m, h),
+          (0, s.jsx)(y, { ...e, virtualizer: g })
         );
       }
-      function j(e) {
+      function w(e) {
         const {
             nRows: t,
             nScrollMargin: n,
@@ -4927,61 +5152,75 @@ License: MIT
             initialOffset: c,
             onOffsetChange: d,
             measureElement: h,
+            bDynamic: m,
           } = e,
-          m = i + a,
-          g = (0, x.d)(),
-          p = (0, o.Te)({
+          g = i + a,
+          p = (0, x.d)(),
+          f = (0, o.Te)({
             count: t,
-            scrollMargin: n - (r?.offsetTop || 0),
-            getScrollElement: () => r,
-            estimateSize: u.useCallback(() => m, [m]),
+            scrollMargin: n,
+            getScrollElement: () => (
+              r &&
+                f.scrollElement !== r &&
+                void 0 === c &&
+                (f.scrollOffset = r.scrollTop),
+              r ?? null
+            ),
+            estimateSize: u.useCallback(() => g, [g]),
             measureElement: h,
             overscan: l,
             initialRect: r
               ? void 0
               : {
-                  height: g.viewportHeight?.value ?? 1e3,
-                  width: g.viewportWidth?.value ?? 1e3,
+                  height: p.viewportHeight?.value ?? 1e3,
+                  width: p.viewportWidth?.value ?? 1e3,
                 },
             initialOffset: c,
-            observeElementOffset: w,
-            observeElementRect: E,
+            observeElementOffset: E,
+            observeElementRect: I,
             onChange(e, t) {
               d?.(e.scrollOffset);
             },
           });
         return (
-          u.useEffect(() => {
-            (0, u.startTransition)(() => {
-              p.measure();
-            });
-          }, [p, m]),
-          (0, s.jsx)(S, { ...e, virtualizer: p })
+          (f.shouldAdjustScrollPositionOnItemSizeChange = (e) =>
+            void 0 !== r && e.start < (f.scrollOffset ?? 0)),
+          j(f, g, m),
+          (0, s.jsx)(y, { ...e, virtualizer: f })
         );
       }
-      function S(e) {
-        const { virtualizer: t, nRowGap: n, renderItem: r, bDynamic: i } = e,
-          a = t.getVirtualItems(),
-          o = a.length ? a[0].start - t.options.scrollMargin : 0,
-          l = Math.max(0, t.getTotalSize());
+      function y(e) {
+        const {
+            virtualizer: t,
+            nRowGap: n,
+            renderItem: r,
+            bDynamic: i,
+            scrollAlign: a = "center",
+            bNativeScrollIntoView: o,
+          } = e,
+          l = t.getVirtualItems(),
+          c = l.length ? l[0].start - t.options.scrollMargin : 0,
+          d = Math.max(0, t.getTotalSize());
         return (0, s.jsx)(g.Z, {
           "flow-children": "column",
           navEntryPreferPosition: p.iU.MAINTAIN_Y,
-          style: { height: `${l}px`, width: "100%", position: "relative" },
+          style: { height: `${d}px`, width: "100%", position: "relative" },
           children: (0, s.jsx)("div", {
             style: {
               position: "absolute",
               top: 0,
               left: 0,
               width: "100%",
-              transform: `translateY( ${o}px )`,
+              transform: `translateY( ${c}px )`,
             },
-            children: a.map((e) =>
+            children: l.map((e) =>
               (0, s.jsx)(
-                _,
+                v,
                 {
                   virtualizer: t,
                   bDynamic: i,
+                  scrollAlign: a,
+                  bNativeScrollIntoView: o,
                   idx: e.index,
                   rowGap: n,
                   renderItem: r,
@@ -4992,7 +5231,7 @@ License: MIT
           }),
         });
       }
-      function y(e) {
+      function b(e) {
         return (...t) => {
           queueMicrotask(() => {
             (0, u.startTransition)(() => {
@@ -5001,11 +5240,11 @@ License: MIT
           });
         };
       }
-      function w(e, t) {
+      function E(e, t) {
         const n = e.scrollElement;
         if (!n) return;
         let s;
-        s = y(
+        s = b(
           "scrollX" in n
             ? (s) => t(n[e.options.horizontal ? "scrollX" : "scrollY"], s)
             : (s) => t(n[e.options.horizontal ? "scrollLeft" : "scrollTop"], s),
@@ -5022,10 +5261,10 @@ License: MIT
           }
         );
       }
-      function b(e, t) {
+      function C(e, t) {
         const n = e.scrollElement;
         if (!n) return;
-        const s = y(() => t({ width: n.innerWidth, height: n.innerHeight }));
+        const s = b(() => t({ width: n.innerWidth, height: n.innerHeight }));
         return (
           s(),
           n.addEventListener("resize", s, { passive: !0 }),
@@ -5034,10 +5273,10 @@ License: MIT
           }
         );
       }
-      function E(e, t) {
+      function I(e, t) {
         const n = e.scrollElement;
         if (!n) return;
-        const s = y((e) =>
+        const s = b((e) =>
           t({ width: Math.round(e.width), height: Math.round(e.height) }),
         );
         s(n.getBoundingClientRect());
@@ -5058,9 +5297,9 @@ License: MIT
           }
         );
       }
-      var C = n(26408);
-      const I = u.createContext(void 0);
-      function D(e) {
+      var D = n(26408);
+      const R = u.createContext(void 0);
+      function A(e) {
         const { table: t, setColumnSizeOverride: n } = e,
           r = (0, u.useRef)(t);
         r.current = t;
@@ -5068,9 +5307,9 @@ License: MIT
           () => ({ table: r.current, setColumnSizeOverride: n }),
           [n],
         );
-        return (0, s.jsx)(I.Provider, { value: i, children: e.children });
+        return (0, s.jsx)(R.Provider, { value: i, children: e.children });
       }
-      const R = u.forwardRef(function (e, t) {
+      const T = u.forwardRef(function (e, t) {
         const {
             data: n,
             columns: r,
@@ -5082,30 +5321,30 @@ License: MIT
             nHeaderHeight: p,
             overscan: f = 6,
             stickyHeader: x,
-            getRowKey: _,
-            initialSorting: v,
+            getRowKey: v,
+            initialSorting: _,
             initialColumnFilters: j,
             initialGrouping: S,
-            initialExpanded: y,
-            initialColumnPinning: C,
-            initialColumnVisibility: I,
-            onGroupingChange: R,
-            onVisibleRowsChange: A,
-            renderGroup: M,
-            virtualizeType: N = "element",
+            initialExpanded: w,
+            initialColumnPinning: y,
+            initialColumnVisibility: b,
+            onGroupingChange: D,
+            onVisibleRowsChange: R,
+            renderGroup: T,
+            virtualizeType: k = "element",
           } = e,
           B = (0, u.useRef)(null),
-          [z, F] = (0, u.useState)({}),
-          [O, P] = (0, u.useState)({}),
-          L = r.map((e) =>
+          [P, L] = (0, u.useState)({}),
+          [F, z] = (0, u.useState)({}),
+          O = r.map((e) =>
             "accessorKey" in e
-              ? { ...e, filterFn: z[e.accessorKey] ?? e.filterFn }
+              ? { ...e, filterFn: P[e.accessorKey] ?? e.filterFn }
               : e,
           ),
-          G = L.map((e) => {
-            let t = O[e.id];
+          G = O.map((e) => {
+            let t = F[e.id];
             return (
-              void 0 === t && "accessorKey" in e && (t = O[e.accessorKey]),
+              void 0 === t && "accessorKey" in e && (t = F[e.accessorKey]),
               (t ??= e.size),
               { ...e, size: t }
             );
@@ -5115,12 +5354,12 @@ License: MIT
             columns: G,
             defaultColumn: { minSize: 60, maxSize: 800 },
             initialState: {
-              sorting: v,
+              sorting: _,
               grouping: S ?? [],
-              expanded: y,
-              columnPinning: C ?? {},
+              expanded: w,
+              columnPinning: y ?? {},
               columnFilters: j,
-              columnVisibility: I,
+              columnVisibility: b,
             },
             getCoreRowModel: (0, a.HT)(),
             getSortedRowModel: (0, a.h5)(),
@@ -5132,28 +5371,28 @@ License: MIT
           V = H.flatMap((e) => (e.getIsExpanded() ? [e, ...e.subRows] : e)),
           q = $.getState().grouping;
         (0, u.useEffect)(() => {
-          R?.(q);
-        }, [R, q]),
+          D?.(q);
+        }, [D, q]),
           (0, u.useEffect)(() => {
-            A?.(V);
-          }, [A, V.length]);
+            R?.(V);
+          }, [R, V.length]);
         const K = (0, o.Te)({
             count: V.length,
             scrollMargin: m,
             getScrollElement: u.useCallback(
-              () => ("element" === N ? ee.current : window),
-              [N],
+              () => ("element" === k ? ee.current : window),
+              [k],
             ),
             scrollToFn: (e, t, n) =>
-              "window" === N ? (0, l.e8)(e, t, n) : (0, l.Ox)(e, t, n),
+              "window" === k ? (0, l.e8)(e, t, n) : (0, l.Ox)(e, t, n),
             estimateSize: u.useCallback(() => g, [g]),
             overscan: f,
             initialRect: void 0,
-            observeElementOffset: w,
-            observeElementRect: (e, t) => ("window" === N ? b(e, t) : E(e, t)),
+            observeElementOffset: E,
+            observeElementRect: (e, t) => ("window" === k ? C(e, t) : I(e, t)),
             getItemKey(e) {
               const t = V[e];
-              return `${t.parentId ?? ""}${_(e, t.original)}`;
+              return `${t.parentId ?? ""}${v(e, t.original)}`;
             },
           }),
           W = (0, u.useRef)(0),
@@ -5182,11 +5421,11 @@ License: MIT
             overscan: 6,
             horizontal: !0,
             getScrollElement: u.useCallback(
-              () => ("element" === N ? ee.current : window),
-              [N],
+              () => ("element" === k ? ee.current : window),
+              [k],
             ),
             scrollToFn: (e, t, n) =>
-              "window" === N ? (0, l.e8)(e, t, n) : (0, l.Ox)(e, t, n),
+              "window" === k ? (0, l.e8)(e, t, n) : (0, l.Ox)(e, t, n),
             rangeExtractor(e) {
               const t = V[0]?.getVisibleCells() ?? [],
                 n = new Set((0, l.vp)(e));
@@ -5197,8 +5436,8 @@ License: MIT
                 Array.from(n).sort((e, t) => e - t)
               );
             },
-            observeElementOffset: w,
-            observeElementRect: (e, t) => ("window" === N ? b(e, t) : E(e, t)),
+            observeElementOffset: E,
+            observeElementRect: (e, t) => ("window" === k ? C(e, t) : I(e, t)),
           });
         (0, u.useEffect)(() => {
           X.measure();
@@ -5210,11 +5449,11 @@ License: MIT
               getVisibleRows: () => V,
               getState: $.getState,
               getColumns: $.getAllColumns,
-              getColumnDefs: () => L,
+              getColumnDefs: () => O,
               setColumnFilters: $.setColumnFilters,
               resetColumnFilters: $.resetColumnFilters,
-              setColumnFilterFnOverride: F,
-              getColumnFilterFnOverride: () => z,
+              setColumnFilterFnOverride: L,
+              getColumnFilterFnOverride: () => P,
               getContainerElement: () => ee.current,
               getTableElement: () => B.current,
               scrollToColumn(e, t) {
@@ -5228,8 +5467,8 @@ License: MIT
               $.resetColumnFilters,
               $.getState,
               $.getAllColumns,
-              z,
-              L,
+              P,
+              O,
               X,
             ],
           );
@@ -5243,16 +5482,16 @@ License: MIT
           const t = se[e.index];
           t?.column.getIsPinned() && (ne += e.size);
         }
-        return (0, s.jsx)(D, {
+        return (0, s.jsx)(A, {
           table: $,
-          setColumnSizeOverride: P,
+          setColumnSizeOverride: z,
           children: (0, s.jsx)("div", {
             className: c,
             ref: ee,
             style: {
               width: d,
               height: h,
-              overflow: "element" === N ? "auto" : void 0,
+              overflow: "element" === k ? "auto" : void 0,
               maxWidth: "fit-content",
               scrollPadding: `${te}px 0 0 ${ne}px`,
             },
@@ -5269,14 +5508,14 @@ License: MIT
               children: [
                 $.getHeaderGroups().map((e) =>
                   (0, s.jsx)(
-                    T,
+                    M,
                     { group: e, sticky: x, nHeaderHeight: p },
                     e.id,
                   ),
                 ),
                 J.map((e) =>
                   (0, s.jsx)(
-                    k,
+                    N,
                     {
                       row: V[e.index],
                       size: e.size,
@@ -5285,7 +5524,7 @@ License: MIT
                       measureRef: K.measureElement,
                       scrollContainerRef: ee,
                       nItemHeight: g,
-                      renderGroup: M,
+                      renderGroup: T,
                       rowEnd: ie,
                     },
                     e.key,
@@ -5296,7 +5535,7 @@ License: MIT
           }),
         });
       });
-      function A(e) {
+      function k(e) {
         const t = e.getIsPinned();
         return {
           borderRight:
@@ -5314,7 +5553,7 @@ License: MIT
           zIndex: t ? 1 : 0,
         };
       }
-      function T(e) {
+      function M(e) {
         const { group: t, sticky: n, nHeaderHeight: r } = e;
         return (0, s.jsx)("div", {
           role: "row",
@@ -5337,7 +5576,7 @@ License: MIT
                 ((l = "button"),
                 (a.onClick = e.column.getToggleSortingHandler())),
               (0, s.jsx)(
-                B,
+                L,
                 {
                   header: e,
                   prevHeader: i,
@@ -5353,7 +5592,7 @@ License: MIT
           }),
         });
       }
-      const k = u.memo(function (e) {
+      const N = u.memo(function (e) {
         const {
           row: t,
           size: n,
@@ -5376,7 +5615,7 @@ License: MIT
           "data-even": a % 2 == 0,
           "data-index": a,
           ref: i,
-          children: (0, s.jsx)(M, {
+          children: (0, s.jsx)(B, {
             row: t,
             rowVirtualizer: r,
             nItemHeight: o,
@@ -5384,7 +5623,7 @@ License: MIT
           }),
         });
       });
-      function M(e) {
+      function B(e) {
         const { row: t, rowVirtualizer: n, renderGroup: r } = e;
         if (t.getCanExpand()) {
           const e = r ?? (() => t.groupingValue);
@@ -5409,7 +5648,7 @@ License: MIT
             return (
               r ? (l += e.size) : void 0 === o && (o = e.start),
               (0, s.jsx)(
-                z,
+                F,
                 {
                   cell: t,
                   rowVirtualizer: n,
@@ -5422,8 +5661,8 @@ License: MIT
           }),
         });
       }
-      function N(e, t) {
-        const n = (0, u.useContext)(I),
+      function P(e, t) {
+        const n = (0, u.useContext)(R),
           s = e.columnDef.meta?.bGrowToFit,
           r = e.id,
           i = s ? e.getSize() : 0,
@@ -5450,7 +5689,7 @@ License: MIT
             n.setColumnSizeOverride((e) => (e[r] > l ? e : { ...e, [r]: l }));
         }, [s, r, n, i, t, a]);
       }
-      function B(e) {
+      function L(e) {
         const {
             header: t,
             prevHeader: n,
@@ -5462,7 +5701,7 @@ License: MIT
           } = e,
           h = (0, u.useRef)(null);
         return (
-          N(t.column, h),
+          P(t.column, h),
           (0, s.jsxs)(
             r,
             {
@@ -5477,7 +5716,7 @@ License: MIT
               style: {
                 width: `var(--header-${t.id}-size)`,
                 height: void 0 !== a ? `${a}px` : void 0,
-                ...A(t.column),
+                ...k(t.column),
               },
               ...c,
               children: [
@@ -5493,7 +5732,7 @@ License: MIT
                 t.isPlaceholder
                   ? null
                   : (0, i.Kv)(t.column.columnDef.header, t.getContext()),
-                l && (0, s.jsx)(C.o, { tooltip: l }),
+                l && (0, s.jsx)(D.o, { tooltip: l }),
                 o &&
                   !t.column.columnDef.meta?.bDisableSortButton &&
                   (0, s.jsx)("div", { className: m().SortIndicator }),
@@ -5515,12 +5754,12 @@ License: MIT
           )
         );
       }
-      function z(e) {
+      function F(e) {
         const { cell: t, rowVirtualizer: n, index: i, transform: a } = e,
           o = u.useRef(null),
           l = (0, r.XB)(o, n.measure);
         return (
-          N(t.column, o),
+          P(t.column, o),
           (0, s.jsx)("div", {
             className: d()(
               m().FancyTableCell,
@@ -5532,16 +5771,16 @@ License: MIT
             style: {
               width: `var(--col-${t.column.id}-size)`,
               transform: a,
-              ...A(t.column),
+              ...k(t.column),
             },
-            children: (0, s.jsx)(F, {
+            children: (0, s.jsx)(z, {
               CellComponent: t.column.columnDef.cell,
               context: t.getContext(),
             }),
           })
         );
       }
-      const F = u.memo(
+      const z = u.memo(
         function (e) {
           return (0, i.Kv)(e.CellComponent, e.context);
         },

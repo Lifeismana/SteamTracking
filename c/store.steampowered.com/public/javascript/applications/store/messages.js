@@ -3324,25 +3324,8 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { title: _, bodyClassName: _, children: _ } = _;
-        return (
-          _.useEffect(() => {
-            const _ = document.title;
-            return (
-              (document.title = _),
-              () => {
-                document.title = _;
-              }
-            );
-          }, [_]),
-          _(_),
-          _
-        );
-      }
       function _(_) {
         _.useEffect(() => {
           if (!_) return;
@@ -3422,8 +3405,13 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3491,6 +3479,14 @@
             [_, _, _, _, _],
           )
         );
+      }
+      function _(_, _, _) {
+        const _ = (0, _._)({
+            item_type: (0, _._)(_),
+            _: _,
+          }),
+          { data: _ } = (0, _._)(_);
+        return _((0, _._)(_) ?? _._.STORE_BASE_URL, _);
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -3579,6 +3575,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3851,6 +3849,30 @@
               },
             });
       }
+      function _(_) {
+        const { _: _, type: _, eClickLocation: _ } = _,
+          _ = (0, _._)(_, _, _);
+        return (0, _.jsx)(_._, {
+          _: _,
+          type: _,
+          fnOnClickOverride: _,
+          bIsMarketingMessage: !0,
+          bPreferAssetWithoutOverride: !1,
+        });
+      }
+      function _(_) {
+        const { capsule: _, imageType: _ } = _;
+        return (
+          (_.overrideNavigation = (0, _._)(_._, _.type, _._._)),
+          (0, _.jsx)(_._, {
+            capsule: _,
+            imageType: _,
+            bShowParentApp: !1,
+            bHideStoreHover: !0,
+            bPreferAssetWithoutOverride: !1,
+          })
+        );
+      }
       var _ = __webpack_require__("chunkid");
       function _(_) {
         const { bPreview: _, bUseAnimated: _ } = _,
@@ -3960,7 +3982,6 @@
         return (0, _._)(_, _, !0);
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3992,10 +4013,7 @@
         });
         return _ || _ ? null : _;
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         const { bPreview: _ } = _,
           _ = _(),
@@ -4101,6 +4119,7 @@
                     children: (0, _.jsx)(_, {
                       _: _[0]._,
                       type: _[0].type,
+                      eClickLocation: _._._,
                     }),
                   }),
                   (0, _.jsx)(_, {
@@ -4121,6 +4140,7 @@
                       children: (0, _.jsx)(_, {
                         _: _[0]._,
                         type: _[0].type,
+                        eClickLocation: _._._,
                       }),
                     }),
                     (0, _.jsx)("div", {
@@ -4128,6 +4148,7 @@
                       children: (0, _.jsx)(_, {
                         _: _[1]._,
                         type: _[1].type,
+                        eClickLocation: _._._,
                       }),
                     }),
                   ],
@@ -4171,38 +4192,6 @@
               }),
             }),
           ],
-        });
-      }
-      function _(_, _) {
-        const _ = (0, _._)({
-            item_type: (0, _._)(_),
-            _: _,
-          }),
-          { data: _ } = (0, _._)(_);
-        return (0, _._)((0, _._)(_) ?? _._.STORE_BASE_URL, _._._);
-      }
-      function _(_) {
-        const { capsule: _, imageType: _ } = _;
-        return (
-          (_.overrideNavigation = _(_._, _.type)),
-          (0, _.jsx)(_._, {
-            capsule: _,
-            imageType: _,
-            bShowParentApp: !1,
-            bHideStoreHover: !0,
-            bPreferAssetWithoutOverride: !1,
-          })
-        );
-      }
-      function _(_) {
-        const { _: _, type: _ } = _,
-          _ = _(_, _);
-        return (0, _.jsx)(_._, {
-          _: _,
-          type: _,
-          fnOnClickOverride: _,
-          bIsMarketingMessage: !0,
-          bPreferAssetWithoutOverride: !1,
         });
       }
       var _ = __webpack_require__("chunkid"),
@@ -4472,9 +4461,10 @@
         );
       }
       const _ = _.lazy(() =>
-        __webpack_require__
-          ._("chunkid")
-          .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        Promise.all([
+          __webpack_require__._("chunkid"),
+          __webpack_require__._("chunkid"),
+        ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
       );
       function _(_) {
         const { message: _, active: _, preview: _ } = _,

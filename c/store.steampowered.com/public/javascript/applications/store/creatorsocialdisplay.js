@@ -151,6 +151,7 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         switch (_) {
@@ -230,7 +231,7 @@
           { data: _ } = (0, _._)({
             appid: _,
           });
-        return _ && 0 != _.length && _._.IMG_URL
+        return _ && 0 != _.length
           ? (0, _.jsxs)(_.Fragment, {
               children: [
                 (0, _.jsx)("div", {
@@ -270,7 +271,7 @@
       function _(_) {
         const { gidClanEvent: _, rgSocial: _, bIsCreatorHomeEvent: _ } = _,
           _ = _(_);
-        return _ && 0 != _.length && _._.IMG_URL
+        return _ && 0 != _.length
           ? (0, _.jsxs)(_.Fragment, {
               children: [
                 (0, _.jsx)("div", {
@@ -293,7 +294,7 @@
       const _ = [_._._, _._._, _._._, _._._, _._._, _._._, _._._];
       function _(_) {
         const { _: _, rgSocialMedia: _, className: _ } = _,
-          _ = (0, _._)();
+          _ = _._.EREALM === _._.k_ESteamRealmChina;
         return (0, _.jsx)("div", {
           className: (0, _._)(_().AppSocialLinks, _),
           children: __webpack_require__

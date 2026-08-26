@@ -295,7 +295,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { popup: _, className: _, ..._ } = _,
@@ -330,6 +329,8 @@
               })
         );
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = (_) =>
         (function (_) {
           const _ = (0, _._)().ownerWindow,
@@ -359,12 +360,37 @@
         });
       function _(_) {
         const {
+            popup: _,
+            children: _,
+            bFitToContent: _,
+            className: _,
+            ..._
+          } = _,
+          _ = _.useCallback(
+            (_) => {
+              const _ = Math.ceil(_.borderBoxSize[0].inlineSize),
+                _ = Math.ceil(_.borderBoxSize[0].blockSize);
+              _?.SteamClient.Window.ResizeTo(_, _, !0);
+            },
+            [_],
+          ),
+          _ = (0, _._)(_);
+        return (0, _.jsx)("div", {
+          className: (0, _._)("PopupFullWindow", _ && "FitToContent", _),
+          ref: _ ? _ : void 0,
+          ..._,
+          children: _,
+        });
+      }
+      function _(_) {
+        const {
             strName: _,
             strTitle: _,
             popupWidth: _,
             popupHeight: _,
             browserType: _,
             onDismiss: _,
+            bFitToContent: _,
             refPopup: _,
             children: _,
             titleBarClassName: _,
@@ -427,8 +453,9 @@
               (0, _.jsxs)(_._, {
                 ownerWindow: _,
                 children: [
-                  (0, _.jsxs)("div", {
-                    className: "PopupFullWindow",
+                  (0, _.jsxs)(_, {
+                    popup: _,
+                    bFitToContent: _,
                     onContextMenu: _._,
                     children: [
                       (0, _.jsx)(_._, {
@@ -446,6 +473,7 @@
                     ],
                   }),
                   _.resizable &&
+                    !_ &&
                     (0, _.jsx)(_, {
                       popup: _,
                     }),

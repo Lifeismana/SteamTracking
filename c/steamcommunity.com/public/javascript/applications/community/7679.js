@@ -1935,7 +1935,7 @@
             });
         }
         BindMentionDialog(_) {
-          this.m_MentionDialog = _;
+          this.m_MentionDialog = null != _ ? _ : void 0;
         }
         OnKeyDown(_) {
           this.state.activeSuggestSearchType &&
@@ -1954,8 +1954,10 @@
           }
         }
         ReplaceSuggestedText(_, _) {
-          let _ = this.descTextAreaRef.current.selectionStart,
-            _ = this.descTextAreaRef.current.value,
+          const _ = this.descTextAreaRef.current;
+          if (!_) return;
+          let _ = _.selectionStart,
+            _ = _.value,
             _ = this.FindMatchOpener(_, _, _);
           if (
             (void 0 === _ && "@" == _ && (_ = this.FindMatchOpener("＠", _, _)),
@@ -1965,10 +1967,8 @@
             (_ += _), (_ >= _.length || " " != _[_]) && (_ += " ");
             let _ = _.length;
             (_ += _.substr(_)),
-              (this.descTextAreaRef.current.value = _),
-              (this.descTextAreaRef.current.selectionStart =
-                this.descTextAreaRef.current.selectionEnd =
-                  _),
+              (_.value = _),
+              (_.selectionStart = _.selectionEnd = _),
               this.props.fnSetText(_),
               this.FocusTextInput();
           }
@@ -2060,13 +2060,14 @@
             } = this.props;
           switch (this.state.activeSuggestSearchType) {
             case "Emoticon":
-              _ = (0, _.jsx)(_, {
-                emoticonStore: _,
-                strSearch: this.state.mentionSearch,
-                nMinimumSearchLengthBeforeAutoSelection: 2,
-                onSuggestionSelected: this.OnEmoticonSuggestionSelected,
-                ref: this.BindMentionDialog,
-              });
+              _ &&
+                (_ = (0, _.jsx)(_, {
+                  emoticonStore: _,
+                  strSearch: this.state.mentionSearch,
+                  nMinimumSearchLengthBeforeAutoSelection: 2,
+                  onSuggestionSelected: this.OnEmoticonSuggestionSelected,
+                  ref: this.BindMentionDialog,
+                }));
               break;
             case "BBCode":
               _ = (0, _.jsx)(_, {
@@ -2182,7 +2183,7 @@
                   size: "medium",
                   string: (0, _._)("#Loading"),
                 })
-              : Boolean(_) &&
+              : _ &&
                 (0, _.jsx)("div", {
                   className: _.Image,
                   style: {
@@ -2198,7 +2199,9 @@
             _ &&
               (0, _.jsx)(_._, {
                 onClick: (_) => {
-                  const _ = (0, _._)(_);
+                  var _;
+                  const _ =
+                    null !== (_ = (0, _._)(_)) && void 0 !== _ ? _ : window;
                   let _ = _.GetUploadImages()[0];
                   (0, _._)(
                     (0, _.jsx)(_._, {
@@ -2215,7 +2218,8 @@
                 },
                 children: (0, _._)("#BBCode_ResizeImage"),
               }),
-            Boolean(_ && _.bCropped) &&
+            _ &&
+              _.bCropped &&
               (0, _.jsxs)(_.Fragment, {
                 children: [
                   (0, _.jsx)("div", {
@@ -2235,37 +2239,40 @@
                           try {
                             const _ = await _.UploadAllImages(_),
                               _ = Object.values(_);
-                            if (
-                              _ &&
-                              _.length > 0 &&
-                              ((0, _._)(
+                            if (_ && _.length > 0) {
+                              (0, _._)(
                                 1 == _.length,
                                 "ClanImagePickForCertainSize expected size 1, got " +
                                   _.length,
-                              ),
-                              _[0].bSuccess)
-                            ) {
-                              const _ = _[0].uploadResult,
-                                _ = _._.GenerateURLFromHashAndExt(
-                                  _,
-                                  _._.GetHashAndExt(_),
-                                ),
-                                _ = _._.GenerateURLFromHashAndExt(
-                                  _,
-                                  _._.GetThumbHashAndExt(_),
-                                ),
-                                _ = {
-                                  imageid: -11231412,
-                                  image_hash: _.image_hash,
-                                  thumbnail_hash: _.thumbnail_hash,
-                                  file_type: _.file_type,
-                                  file_name: _.file_name,
-                                  clanAccountID: _.GetAccountID(),
-                                  url: _,
-                                  thumb_url: _,
-                                  uploaded_time: Date.now() / 1e3,
-                                };
-                              _(_), _(_);
+                              );
+                              const _ = _[0].bSuccess
+                                  ? _[0].uploadResult
+                                  : void 0,
+                                _ = _._.GetHashAndExt(null != _ ? _ : null),
+                                _ = _._.GetThumbHashAndExt(
+                                  null != _ ? _ : null,
+                                );
+                              if (
+                                (null == _ ? void 0 : _.image_hash) &&
+                                void 0 !== _.file_type &&
+                                _ &&
+                                _
+                              ) {
+                                const _ = _._.GenerateURLFromHashAndExt(_, _),
+                                  _ = _._.GenerateURLFromHashAndExt(_, _),
+                                  _ = {
+                                    imageid: -11231412,
+                                    image_hash: _.image_hash,
+                                    thumbnail_hash: _.thumbnail_hash,
+                                    file_type: _.file_type,
+                                    file_name: _.file_name,
+                                    clanAccountID: _.GetAccountID(),
+                                    url: _,
+                                    thumb_url: _,
+                                    uploaded_time: Date.now() / 1e3,
+                                  };
+                                _(_), _(_);
+                              }
                             }
                           } finally {
                             _(!1);
@@ -2279,13 +2286,14 @@
               }),
             (0, _.jsx)(_._, {
               onClick: (_) => {
+                var _;
                 const _ = new _._(_._.CLANSTEAMID);
                 (0, _._)(
                   (0, _.jsx)(_._, {
                     clanSteamID: _,
                     fnImageSelectCallBack: (_) => _(_),
                   }),
-                  (0, _._)(_),
+                  null !== (_ = (0, _._)(_)) && void 0 !== _ ? _ : window,
                 );
               },
               children: (0, _._)("#BBCode_ChooseImage", _, _),
@@ -2297,13 +2305,16 @@
         _ = __webpack_require__("chunkid");
       let _ = (_ = class extends _.Component {
         constructor(_) {
+          var _;
           super(_),
             (this.m_cancelSignal = _().CancelToken.source()),
             (this.state = {
               formattingHelp: {
-                __html: _.s_formattingHelp.has(_.formatType)
-                  ? _.s_formattingHelp.get(_.formatType)
-                  : "",
+                __html:
+                  null !== (_ = _.s_formattingHelp.get(_.formatType)) &&
+                  void 0 !== _
+                    ? _
+                    : "",
               },
             });
         }
@@ -2398,9 +2409,16 @@
           _ && _.target.select();
         }
         InsertText(_) {
-          _.replaceSelection(this.GetTextAreaRef().current, _);
+          var _;
+          _.replaceSelection(
+            null === (_ = this.GetTextAreaRef()) || void 0 === _
+              ? void 0
+              : _.current,
+            _,
+          );
         }
         OnTextAreaDropListener(_) {
+          var _;
           if (
             (_.preventDefault(),
             _.stopPropagation(),
@@ -2409,17 +2427,28 @@
             let _ = _.dataTransfer.getData("text");
             if (_ && _.length > 0)
               for (let _ of [_._.GetBaseURL(), _._.GetBaseURLV2()])
-                if (_.startsWith(_)) {
-                  let _ = "[img]" + _._ + "/" + _.substr(_.length) + "[/img]";
-                  _.replaceSelection(this.GetTextAreaRef().current, _);
+                if (__webpack_require__.startsWith(_)) {
+                  let _ =
+                    "[img]" +
+                    _._ +
+                    "/" +
+                    __webpack_require__.substr(_.length) +
+                    "[/img]";
+                  _.replaceSelection(
+                    null === (_ = this.GetTextAreaRef()) || void 0 === _
+                      ? void 0
+                      : _.current,
+                    _,
+                  );
                   break;
                 }
           }
         }
         GetTextAreaRef() {
-          return this.descAutoTextAreaRef && this.descAutoTextAreaRef.current
-            ? this.descAutoTextAreaRef.current.GetTextAreaRef()
-            : void 0;
+          var _;
+          return null === (_ = this.descAutoTextAreaRef.current) || void 0 === _
+            ? void 0
+            : _.GetTextAreaRef();
         }
         render() {
           return (0, _.jsxs)(_.Fragment, {
@@ -2484,18 +2513,22 @@
           );
         }
         static replaceSelection(_, _) {
+          if (!_) return;
           let _ = _.selectionStart;
           _.focus(),
             _.InsertTextAtSelect(_, _),
             _.setSelectionRange(_, _ + _.length);
         }
         static getSelectedString(_) {
-          return _.value.substr(
-            _.selectionStart,
-            _.selectionEnd - _.selectionStart,
-          );
+          return _
+            ? _.value.substr(
+                _.selectionStart,
+                _.selectionEnd - _.selectionStart,
+              )
+            : "";
         }
         static wrapBBCode(_, _, _) {
+          if (!_) return;
           let _ = _.getSelectedString(_),
             _ = "";
           (_ =
@@ -2551,29 +2584,74 @@
           super(...arguments), (this.m_linkPopupRef = _.createRef());
         }
         onBold() {
-          _.wrapBBCode("[b]", "[/b]", this.props.fnTextareaRef().current);
+          var _;
+          _.wrapBBCode(
+            "[b]",
+            "[/b]",
+            null === (_ = this.props.fnTextareaRef()) || void 0 === _
+              ? void 0
+              : _.current,
+          );
         }
         onItalics() {
-          _.wrapBBCode("[i]", "[/i]", this.props.fnTextareaRef().current);
+          var _;
+          _.wrapBBCode(
+            "[i]",
+            "[/i]",
+            null === (_ = this.props.fnTextareaRef()) || void 0 === _
+              ? void 0
+              : _.current,
+          );
         }
         onUnderline() {
-          _.wrapBBCode("[u]", "[/u]", this.props.fnTextareaRef().current);
+          var _;
+          _.wrapBBCode(
+            "[u]",
+            "[/u]",
+            null === (_ = this.props.fnTextareaRef()) || void 0 === _
+              ? void 0
+              : _.current,
+          );
         }
         onStrikeThrough() {
+          var _;
           _.wrapBBCode(
             "[strike]",
             "[/strike]",
-            this.props.fnTextareaRef().current,
+            null === (_ = this.props.fnTextareaRef()) || void 0 === _
+              ? void 0
+              : _.current,
           );
         }
         onHeader() {
-          _.wrapBBCode("[h1]", "[/h1]", this.props.fnTextareaRef().current);
+          var _;
+          _.wrapBBCode(
+            "[h1]",
+            "[/h1]",
+            null === (_ = this.props.fnTextareaRef()) || void 0 === _
+              ? void 0
+              : _.current,
+          );
         }
         onHeader2() {
-          _.wrapBBCode("[h2]", "[/h2]", this.props.fnTextareaRef().current);
+          var _;
+          _.wrapBBCode(
+            "[h2]",
+            "[/h2]",
+            null === (_ = this.props.fnTextareaRef()) || void 0 === _
+              ? void 0
+              : _.current,
+          );
         }
         onHeader3() {
-          _.wrapBBCode("[h3]", "[/h3]", this.props.fnTextareaRef().current);
+          var _;
+          _.wrapBBCode(
+            "[h3]",
+            "[/h3]",
+            null === (_ = this.props.fnTextareaRef()) || void 0 === _
+              ? void 0
+              : _.current,
+          );
         }
         onUnorderedList() {
           this.handleList("list");
@@ -2582,8 +2660,13 @@
           this.handleList("olist");
         }
         handleList(_) {
-          let _ = this.props.fnTextareaRef().current,
-            _ = "[" + _ + "]\n",
+          var _;
+          let _ =
+            null === (_ = this.props.fnTextareaRef()) || void 0 === _
+              ? void 0
+              : _.current;
+          if (!_) return;
+          let _ = "[" + _ + "]\n",
             _ = "[/" + _ + "]";
           if (_.selectionStart == _.selectionEnd)
             _.wrapBBCode(_ + "[*]", "\n" + _, _);
@@ -2600,63 +2683,93 @@
           }
         }
         OnAddLink(_) {
-          (0, _._)(
-            (0, _.jsx)(_, {
-              textareaRef: this.props.fnTextareaRef(),
-            }),
-            (0, _._)(_),
-          );
+          var _;
+          const _ = this.props.fnTextareaRef();
+          _ &&
+            (0, _._)(
+              (0, _.jsx)(_, {
+                textareaRef: _,
+              }),
+              null !== (_ = (0, _._)(_)) && void 0 !== _ ? _ : window,
+            );
         }
         ShowHelpDialog(_) {
+          var _;
           this.props.showFormatHelp &&
             (0, _._)(
               (0, _.jsx)(_, {
                 formatType: this.props.showFormatHelp,
               }),
-              (0, _._)(_),
+              null !== (_ = (0, _._)(_)) && void 0 !== _ ? _ : window,
             );
         }
         OnConvertHTMLToBBCodeDialog(_) {
-          const _ = (0, _._)(_);
+          var _;
+          const _ = this.props.fnTextareaRef();
+          if (!_) return;
+          const _ = null !== (_ = (0, _._)(_)) && void 0 !== _ ? _ : window;
           (0, _._)(
             (0, _.jsx)(_, {
               ownerWindow: _,
-              textareaRef: this.props.fnTextareaRef(),
+              textareaRef: _,
             }),
             _,
           );
         }
         OnOpenYoutubeDialog(_) {
+          var _;
+          const _ = this.props.fnTextareaRef();
+          if (!_) return;
           let _ = _._.IMG_URL + "applications/community/";
           (0, _._)(
             (0, _.jsx)(_, {
-              textareaRef: this.props.fnTextareaRef(),
+              textareaRef: _,
               pathToImages: _,
             }),
-            (0, _._)(_),
+            null !== (_ = (0, _._)(_)) && void 0 !== _ ? _ : window,
           );
         }
         OnOpenImageDialog(_) {
-          (0, _._)(
-            (0, _.jsx)(_, {
-              textareaRef: this.props.fnTextareaRef(),
-            }),
-            (0, _._)(_),
-          );
+          var _;
+          const _ = this.props.fnTextareaRef();
+          _ &&
+            (0, _._)(
+              (0, _.jsx)(_, {
+                textareaRef: _,
+              }),
+              null !== (_ = (0, _._)(_)) && void 0 !== _ ? _ : window,
+            );
         }
         OnOpenSpeakerDialog(_) {
-          (0, _._)(
-            (0, _.jsx)(_, {
-              clanSteamID: this.props.clanSteamID,
-              textareaRef: this.props.fnTextareaRef(),
-            }),
-            (0, _._)(_),
-          );
+          var _;
+          const _ = this.props.fnTextareaRef(),
+            _ = this.props.clanSteamID;
+          _ &&
+            _ &&
+            (0, _._)(
+              (0, _.jsx)(_, {
+                clanSteamID: _,
+                textareaRef: _,
+              }),
+              null !== (_ = (0, _._)(_)) && void 0 !== _ ? _ : window,
+            );
         }
         OnEmoticonSelected(_, _ = !1) {
+          var _, _, _;
           let _ = `ː${_}ː`;
-          _.replaceSelection(this.props.fnTextareaRef().current, _),
-            this.props.fnTextareaRef().current.focus();
+          _.replaceSelection(
+            null === (_ = this.props.fnTextareaRef()) || void 0 === _
+              ? void 0
+              : _.current,
+            _,
+          ),
+            null ===
+              (_ =
+                null === (_ = this.props.fnTextareaRef()) || void 0 === _
+                  ? void 0
+                  : _.current) ||
+              void 0 === _ ||
+              _.focus();
         }
         BSupports(_) {
           return this.props.supportBBCodes.findIndex((_) => _ == _) >= 0;
@@ -2679,7 +2792,7 @@
                         "#EventEditor_FormattingHelp_GetHelpLink",
                       ),
                       children: (0, _.jsxs)("a", {
-                        href: _.GetHelpURL(this.props.showFormatHelp, !1),
+                        href: _.GetHelpURL(_, !1),
                         target: _._.IN_CLIENT ? void 0 : "_blank",
                         children: [
                           (0, _.jsx)("img", {
@@ -2948,7 +3061,9 @@
                         className: "DialogInput_Wrapper",
                         children: (0, _.jsx)("input", {
                           className: "DialogInput DialogTextInputBase",
-                          ref: (_) => _ && _.focus(),
+                          ref: (_) => {
+                            null == _ || _.focus();
+                          },
                           type: "text",
                           value: this.state.youtubeInput,
                           onChange: this.OnUrlChange,
@@ -3176,13 +3291,17 @@
       let _ = class extends _.Component {
         constructor() {
           super(...arguments),
+            (this.refFirstInput = _.createRef()),
             (this.state = {
               imgURL: "",
               anchorURL: "",
             });
         }
         componentDidMount() {
-          this.refFirstInput && this.refFirstInput.current.focus();
+          var _;
+          null === (_ = this.refFirstInput.current) ||
+            void 0 === _ ||
+            _.focus();
         }
         OnImageInsert() {
           const { anchorURL: _, imgURL: _ } = this.state;
@@ -3355,7 +3474,8 @@
                       string: (0, _._)("#Loading"),
                       size: "small",
                     }),
-                  Boolean(_) &&
+                  _ &&
+                    _ &&
                     (0, _.jsxs)("a", {
                       href:
                         _._.COMMUNITY_BASE_URL +
@@ -3385,7 +3505,7 @@
                         onClick: (_) =>
                           (0, _._)(
                             (0, _.jsx)(_, {
-                              friends: _,
+                              friends: null != _ ? _ : [],
                               setSteamID: _,
                             }),
                             _,
@@ -3520,14 +3640,12 @@
           let _ = new URLSearchParams();
           __webpack_require__.append("content", _),
             __webpack_require__.append("preserve_newlines", _ ? "1" : "0");
-          let _ = null;
           return (
-            (_ = await _().post(
+            await _().post(
               _._.COMMUNITY_BASE_URL + "/actions/ConvertHTMLToBBCode",
               _,
-            )),
-            _.data.content
-          );
+            )
+          ).data.content;
         }
         ConvertBBCode() {
           this.setState({
@@ -3636,7 +3754,9 @@
                               ),
                               className: _().ImportHTMLTextArea,
                               onChange: this.OnTextAreaChange,
-                              ref: (_) => _ && _.focus(),
+                              ref: (_) => {
+                                null == _ || _.focus();
+                              },
                             }),
                             (0, _.jsxs)("div", {
                               className: _().ImportHTMLCheckBoxLine,
@@ -3672,7 +3792,7 @@
                       }),
                       (0, _.jsx)(_._, {
                         children: (0, _.jsx)(_._, {
-                          onCancel: _,
+                          onCancel: () => (null == _ ? void 0 : _()),
                           strOKText: (0, _._)("#Button_Overwrite"),
                           onUpdate: this.OnConvertAndAppendHTML,
                           strUpdateText: (0, _._)("#Button_Append"),

@@ -109,6 +109,11 @@
     },
     chunkid: (module) => {
       module.exports = {
+        LegalNotice: "_2bOEuokOOajSeGl2yZEcPh",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         narrowWidth: "500px",
         TrackListContainer: "_1B94J6blto63JooX8xE8x2",
         DiscTabs: "_1f6LeASDnCawGhXbVgpGbN",
@@ -149,6 +154,14 @@
     chunkid: (module) => {
       module.exports = {
         MenuItem: "_3VWkkleXCrqxmjyoSCylnk",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        PageSections: "_1_PU6_24UNZMD-aymVilmB",
+        PageSection: "_2WpiheNBkhzJpmxQ4Arawu",
+        Header: "y5728HUyiI5XdCDBm5D7A",
+        Banner: "_3hkPxq8NpEEOtbG7MPXNUy",
       };
     },
     chunkid: (module) => {
@@ -1829,6 +1842,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _() {
         const _ = new URL(window.location.href),
@@ -1838,6 +1852,8 @@
         return `${_._.STORE_ICON_BASE_URL}${_}/`;
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -1858,34 +1874,59 @@
         });
       }
       function _(_) {
-        const { text: _, languageOverride: _ } = _,
+        let _ = (0, _._)(_._(_.args));
+        return (
+          !_ &&
+            "string" == typeof _.children &&
+            (0, _._)(_.children) &&
+            (_ = (0, _._)(_.children)),
+          _
+            ? (0, _.jsx)(_._, {
+                href: _,
+                children: _.children,
+              })
+            : _.children || ""
+        );
+      }
+      function _(_) {
+        const { text: _, languageOverride: _, bBypassLinkFilter: _ } = _,
           [_] = (0, _.useState)(
             new _._(
-              new Map([
-                ...Array.from(_._.entries()),
-                [
-                  "img",
-                  {
-                    Constructor: _,
-                    autocloses: !1,
-                  },
-                ],
-                [
-                  "sup",
-                  {
-                    Constructor: _,
-                    autocloses: !1,
-                  },
-                ],
-                [
-                  "h6",
-                  {
-                    Constructor: _,
-                    autocloses: !1,
-                    skipFollowingNewline: !0,
-                  },
-                ],
-              ]),
+              (function (_) {
+                const _ = new Map([
+                  ...Array.from(_._.entries()),
+                  [
+                    "img",
+                    {
+                      Constructor: _,
+                      autocloses: !1,
+                    },
+                  ],
+                  [
+                    "sup",
+                    {
+                      Constructor: _,
+                      autocloses: !1,
+                    },
+                  ],
+                  [
+                    "h6",
+                    {
+                      Constructor: _,
+                      autocloses: !1,
+                      skipFollowingNewline: !0,
+                    },
+                  ],
+                ]);
+                return (
+                  _ &&
+                    _.set("url", {
+                      Constructor: _,
+                      autocloses: !1,
+                    }),
+                  _
+                );
+              })(_),
               _,
               _ || _.Bhc,
             ),
@@ -1908,7 +1949,7 @@
           _ = (0, _._)("store_page_extra_assets_url", "application_config"),
           _ = (0, _._)("store_page_extra_assets_map", "application_config");
         if (_ && __webpack_require__.startsWith(_._ + "/")) {
-          const _ = __webpack_require__.replace(_._ + "/", ""),
+          const _ = __webpack_require__.replace(_._ + "/", "").toLowerCase(),
             _ = _[_];
           if (_) {
             const _ = [];
@@ -8901,7 +8942,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        const { children: _, className: _ } = _,
+        const { children: _, className: _, wrapperComponent: _ = _._ } = _,
           [_, _] = _.useState(!1),
           [_, _] = _.useState(!1),
           _ = _.useRef(null),
@@ -8928,7 +8969,7 @@
           }, [_]),
           (0, _.jsx)("div", {
             className: _().FocusBar,
-            children: (0, _.jsx)(_._, {
+            children: (0, _.jsx)(_, {
               ref: _,
               className: (0, _._)(_().AutoCollapsePanel, _),
               focusableIfEmpty: !0,
@@ -8985,6 +9026,100 @@
                     text: _,
                   }),
                 ],
+              })
+            : null
+        );
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const { appid: _ } = _,
+          { data: _ } = (0, _._)({
+            appid: _,
+          });
+        _.use(_.Ready());
+        const _ = _?.section;
+        return _?.length
+          ? (0, _.jsx)("div", {
+              className: _().PageSections,
+              children: _.map((_, _) =>
+                (0, _.jsx)(
+                  _,
+                  {
+                    section: _,
+                  },
+                  _,
+                ),
+              ),
+            })
+          : null;
+      }
+      function _(_) {
+        const { label: _, content_bbcode: _, banner: _ } = _.section;
+        return (0, _.jsxs)(_, {
+          className: _().PageSection,
+          "flow-children": "column",
+          children: [
+            _ &&
+              (0, _.jsx)("h2", {
+                className: _().Header,
+                children: _,
+              }),
+            null != _ &&
+              (0, _.jsx)(_, {
+                banner: _,
+              }),
+            _ &&
+              (0, _.jsx)(_._, {
+                text: _,
+              }),
+          ],
+        });
+      }
+      function _(_) {
+        switch (_) {
+          case _._._:
+            return _.Localize("#AppPage_PageSectionBanner_Workshop");
+          case _._._:
+            return _.Localize("#AppPage_PageSectionBanner_Follow");
+          case _._._:
+            return _.Localize("#AppPage_PageSectionBanner_MachineController");
+        }
+        return "";
+      }
+      function _(_) {
+        const _ = (0, _._)("page_section_banners", "application_config"),
+          _ = _?.[_.banner];
+        if (!_?.image) return null;
+        const _ = (0, _.jsx)("img", {
+          className: _().Banner,
+          src: _.image,
+          alt: _(_.banner),
+        });
+        return _.link
+          ? (0, _.jsx)(_._, {
+              href: _.link,
+              children: _,
+            })
+          : _;
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const { appid: _ } = _,
+          { data: _ } = (0, _._)({
+            appid: _,
+          });
+        return (
+          _.use(_.Ready()),
+          _?.legal_notice_bbcode
+            ? (0, _.jsx)(_, {
+                className: _().LegalNotice,
+                wrapperComponent: _._,
+                children: (0, _.jsx)(_._, {
+                  text: _.legal_notice_bbcode,
+                  bBypassLinkFilter: !0,
+                }),
               })
             : null
         );
@@ -11288,31 +11423,31 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
           Promise.all([
             __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -11464,6 +11599,14 @@
                       appid: _,
                     }),
                   "about-this-game": () =>
+                    (0, _.jsx)(_, {
+                      appid: _,
+                    }),
+                  "page-sections": () =>
+                    (0, _.jsx)(_, {
+                      appid: _,
+                    }),
+                  "legal-notice": () =>
                     (0, _.jsx)(_, {
                       appid: _,
                     }),

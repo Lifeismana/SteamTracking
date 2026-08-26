@@ -307,5 +307,8 @@
     "AppPage_RecommendationReason_FriendsOwned_Software": "이 소프트웨어를 소유한 친구: <1>%1$s명</1>",
     "AppPage_RecommendationReason_FriendsOwned_Software_Plural": "이 소프트웨어를 소유한 친구: <1>%1$s명</1>",
     "AppPage_RecommendationReason_FriendsOwned_Video": "이 동영상을 소유한 친구: <1>%1$s명</1>",
-    "AppPage_RecommendationReason_FriendsOwned_Video_Plural": "이 동영상을 소유한 친구: <1>%1$s명</1>"
+    "AppPage_RecommendationReason_FriendsOwned_Video_Plural": "이 동영상을 소유한 친구: <1>%1$s명</1>",
+    "AppPage_PageSectionBanner_Workshop": "Steam 창작마당",
+    "AppPage_PageSectionBanner_Follow": "게임 팔로우",
+    "AppPage_PageSectionBanner_MachineController": "Steam Machine 및 Steam Controller"
 }

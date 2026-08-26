@@ -5567,6 +5567,11 @@ img._1ZQW1wV5cNj3sDpibfbUqs._20l1z3ShpHQ9njRDYgy1I5 {
   color: #95a6b2;
   margin-bottom: 4px;
 }
+._1-2t1NI3qbO2JgWmCss7AW {
+  flex-grow: 2;
+  flex-basis: 0;
+  margin-bottom: 12px;
+}
 .NLpQmAPIbG71U6eWdaOa1,
 .T3A9t1mjAR00ljJGlBapl {
   top: unset;
@@ -6157,11 +6162,6 @@ img._1ZQW1wV5cNj3sDpibfbUqs._20l1z3ShpHQ9njRDYgy1I5 {
   width: 100px;
   height: auto;
   pointer-events: none;
-}
-._1-2t1NI3qbO2JgWmCss7AW {
-  flex-grow: 2;
-  flex-basis: 0;
-  margin-bottom: 12px;
 }
 ._2g5oNomwd2lv8wL2qlsLVA {
   display: flex;

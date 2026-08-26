@@ -307,5 +307,8 @@
     "AppPage_RecommendationReason_FriendsOwned_Software": "<1>%1$s barátodnak</1> már megvan ez a szoftver:",
     "AppPage_RecommendationReason_FriendsOwned_Software_Plural": "<1>%1$s barátodnak</1> már megvan ez a szoftver:",
     "AppPage_RecommendationReason_FriendsOwned_Video": "<1>%1$s barátodnak</1> már megvan ez a videó:",
-    "AppPage_RecommendationReason_FriendsOwned_Video_Plural": "<1>%1$s barátodnak</1> már megvan ez a videó:"
+    "AppPage_RecommendationReason_FriendsOwned_Video_Plural": "<1>%1$s barátodnak</1> már megvan ez a videó:",
+    "AppPage_PageSectionBanner_Workshop": "Steam Műhely",
+    "AppPage_PageSectionBanner_Follow": "Kövesd ezt a játékot",
+    "AppPage_PageSectionBanner_MachineController": "Steam Machine és Steam Controller"
 }

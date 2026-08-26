@@ -224,9 +224,9 @@
             children: p,
             ...h
           } = e,
-          { headerId: f, context: u } = l({ labelledBy: e["aria-labelledby"] });
+          { headerId: u, context: f } = l({ labelledBy: e["aria-labelledby"] });
         return (0, s.jsx)(c.t6.Provider, {
-          value: u,
+          value: f,
           children: (0, s.jsx)(o.E, {
             active: t,
             children: (0, s.jsx)(n.x_, {
@@ -235,7 +235,7 @@
               bGamepadUIScrollWithin: d,
               children: (0, s.jsx)(c.UC, {
                 role: "dialog",
-                "aria-labelledby": f,
+                "aria-labelledby": u,
                 className: i,
                 ...h,
                 children: p,
@@ -258,27 +258,26 @@
     },
     37049: (e, t, r) => {
       "use strict";
-      r.d(t, { w: () => k });
+      r.d(t, { wA: () => x });
       var s = r(7850),
-        i = r(90626),
-        c = r(72739),
-        o = r(48902),
-        n = r(60155),
-        l = r(25118),
-        a = r(84933),
+        i = r(40236),
+        c = r(90626),
+        o = r(72739),
+        n = r(13871),
+        l = r(48902),
+        a = r(60155),
         d = r(52745),
-        p = r(13871),
-        h = r(21869),
-        f = r(78327),
+        p = r(21869),
+        h = r(25118),
         u = r(66703),
-        m = r(52038),
-        b = r(28460);
-      function _(e) {
-        const { popup: t, className: r, ...c } = e,
-          o = (0, b.GD)(t),
-          n = i.useRef(null);
+        f = r(52038),
+        m = r(28460);
+      function b(e) {
+        const { popup: t, className: r, ...i } = e,
+          o = (0, m.GD)(t),
+          n = c.useRef(null);
         return (
-          i.useEffect(() => {
+          c.useEffect(() => {
             const e = n.current;
             if (e && (0, u.Fj)(t, "Window.SetResizeGrip")) {
               let r = 0,
@@ -300,17 +299,19 @@
           o
             ? null
             : (0, s.jsx)("div", {
-                className: (0, m.A)("window_resize_grip", r),
+                className: (0, f.A)("window_resize_grip", r),
                 ref: n,
-                ...c,
+                ...i,
               })
         );
       }
-      const k = (e) =>
+      var _ = r(84933),
+        k = r(78327);
+      const x = (e) =>
         (function (e) {
-          const t = (0, p.R7)().ownerWindow,
-            r = (0, f.Qn)(),
-            [c, o] = i.useState(() =>
+          const t = (0, n.R7)().ownerWindow,
+            r = (0, k.Qn)(),
+            [i, o] = c.useState(() =>
               r ||
               (!0 === e.onlyPopoutIfNeeded &&
                 e.popupHeight < 0.9 * t.innerHeight &&
@@ -319,40 +320,65 @@
                 ? "inline"
                 : "popout",
             );
-          return "inline" === c
-            ? (0, s.jsx)(h.E, { active: !0, children: e.children })
-            : "popout" === c
-              ? (0, s.jsx)(x, { ...e })
+          return "inline" === i
+            ? (0, s.jsx)(p.E, { active: !0, children: e.children })
+            : "popout" === i
+              ? (0, s.jsx)(j, { ...e })
               : null;
         })({ modal: !0, ...e });
-      function x(e) {
+      function T(e) {
+        const {
+            popup: t,
+            children: r,
+            bFitToContent: o,
+            className: n,
+            ...l
+          } = e,
+          a = c.useCallback(
+            (e) => {
+              const r = Math.ceil(e.borderBoxSize[0].inlineSize),
+                s = Math.ceil(e.borderBoxSize[0].blockSize);
+              t?.SteamClient.Window.ResizeTo(r, s, !0);
+            },
+            [t],
+          ),
+          d = (0, i.wY)(a);
+        return (0, s.jsx)("div", {
+          className: (0, f.A)("PopupFullWindow", o && "FitToContent", n),
+          ref: o ? d : void 0,
+          ...l,
+          children: r,
+        });
+      }
+      function j(e) {
         const {
             strName: t,
             strTitle: r,
-            popupWidth: h,
-            popupHeight: f,
+            popupWidth: i,
+            popupHeight: p,
             browserType: u,
-            onDismiss: m,
-            refPopup: b,
-            children: k,
-            titleBarClassName: x,
-            saveDimensionsKey: T,
+            onDismiss: f,
+            bFitToContent: m,
+            refPopup: k,
+            children: x,
+            titleBarClassName: j,
+            saveDimensionsKey: g,
           } = e,
-          N = (0, p.R7)(),
-          g = N?.ownerWindow,
-          L = (0, d.yk)(),
-          v = { ...(0, o.h3)(T), onClose: m };
-        let S = 0;
-        e.resizable && (S |= p.Wf.Resizable),
+          S = (0, n.R7)(),
+          L = S?.ownerWindow,
+          v = (0, d.yk)(),
+          M = { ...(0, l.h3)(g), onClose: f };
+        let w = 0;
+        e.resizable && (w |= n.Wf.Resizable),
           (e.minWidth || e.minHeight) &&
-            (S |= p.Wf.ApplyBrowserScaleToDimensions),
-          e.fullscreen && (S |= p.Wf.FullScreen);
-        const M = "PopupWindow_" + (t ? `${t}_` : "") + i.useId(),
-          { popup: w, element: I } = (0, o.OJ)(
-            M,
+            (w |= n.Wf.ApplyBrowserScaleToDimensions),
+          e.fullscreen && (w |= n.Wf.FullScreen);
+        const z = "PopupWindow_" + (t ? `${t}_` : "") + c.useId(),
+          { popup: I, element: W } = (0, l.OJ)(
+            z,
             {
               title: r,
-              dimensions: { width: h, height: f },
+              dimensions: { width: i, height: p },
               html_class: "client_chat_frame fullheight ModalDialogPopup",
               body_class: "fullheight ModalDialogBody",
               popup_class: "fullheight",
@@ -360,66 +386,67 @@
               minWidth: e.minWidth,
               minHeight: e.minHeight,
               replace_existing_popup: !0,
-              center_on_window: L?.BCenterPopupsOnWindow() ? g : void 0,
-              eCreationFlags: S,
-              target_browser: L?.GetBrowserInfo(),
+              center_on_window: v?.BCenterPopupsOnWindow() ? L : void 0,
+              eCreationFlags: w,
+              target_browser: v?.GetBrowserInfo(),
             },
-            v,
+            M,
           );
         if (
-          (i.useEffect(
-            () => ((0, a.cZ)(b, w), () => (0, a.cZ)(b, void 0)),
-            [b, w],
+          (c.useEffect(
+            () => ((0, _.cZ)(k, I), () => (0, _.cZ)(k, void 0)),
+            [k, I],
           ),
-          i.useEffect(() => {
-            w && (w.document.title = r ?? t);
-          }, [w, r, t]),
-          !I)
+          c.useEffect(() => {
+            I && (I.document.title = r ?? t);
+          }, [I, r, t]),
+          !W)
         )
           return null;
-        const z = e.modal ?? e.onlyPopoutIfNeeded,
-          W = !e.resizable;
+        const y = e.modal ?? e.onlyPopoutIfNeeded,
+          C = !e.resizable;
         return (0, s.jsxs)(s.Fragment, {
           children: [
-            z && (0, s.jsx)(j, { popup: w }),
-            c.createPortal(
-              (0, s.jsxs)(p.kc, {
-                ownerWindow: w,
+            y && (0, s.jsx)(N, { popup: I }),
+            o.createPortal(
+              (0, s.jsxs)(n.kc, {
+                ownerWindow: I,
                 children: [
-                  (0, s.jsxs)("div", {
-                    className: "PopupFullWindow",
-                    onContextMenu: n.aE,
+                  (0, s.jsxs)(T, {
+                    popup: I,
+                    bFitToContent: m,
+                    onContextMenu: a.aE,
                     children: [
-                      (0, s.jsx)(l.c, {
-                        className: x,
-                        hideMin: W,
-                        hideMax: W,
-                        popup: w,
-                        hideActions: !m,
+                      (0, s.jsx)(h.c, {
+                        className: j,
+                        hideMin: C,
+                        hideMax: C,
+                        popup: I,
+                        hideActions: !f,
                       }),
                       (0, s.jsx)(d.EO, {
-                        bCenterPopupsOnWindow: L?.BCenterPopupsOnWindow(),
-                        browserInfo: L?.GetBrowserInfo(),
-                        children: k,
+                        bCenterPopupsOnWindow: v?.BCenterPopupsOnWindow(),
+                        browserInfo: v?.GetBrowserInfo(),
+                        children: x,
                       }),
                     ],
                   }),
-                  e.resizable && (0, s.jsx)(_, { popup: w }),
+                  e.resizable && !m && (0, s.jsx)(b, { popup: I }),
                 ],
               }),
-              I,
+              W,
             ),
           ],
         });
       }
-      function j(e) {
+      function N(e) {
         const { popup: t } = e,
-          r = i.useCallback(() => {
+          r = c.useCallback(() => {
             t?.SteamClient.Window.BringToFront();
           }, [t]);
         return (
-          i.useEffect(r, [r]),
-          (0, s.jsx)(h.E, {
+          c.useEffect(r, [r]),
+          (0, s.jsx)(p.E, {
             active: !0,
             children: (0, s.jsx)("div", {
               style: {
@@ -454,25 +481,25 @@
           size: r,
           string: o,
           position: p,
-          static: f,
-          msDelayAppear: u,
+          static: u,
+          msDelayAppear: f,
         } = e;
         let m = [n().LoadingWrapper, "SteamLogoThrobber", h(r)];
-        const [b, _] = i.useState(!u),
+        const [b, _] = i.useState(!f),
           k = !(0, a.q)();
         return (
           (0, i.useEffect)(() => {
             if (b) return;
-            const e = setTimeout(() => _(!0), u);
+            const e = setTimeout(() => _(!0), f);
             return () => clearTimeout(e);
-          }, [u, b]),
+          }, [f, b]),
           void 0 === o && m.push(n().noString),
           t && m.push(t),
-          f && m.push(n().Static),
+          u && m.push(n().Static),
           (0, s.jsxs)("div", {
             className: (0, c.A)(
               "center" == p && n().throbber_center_wrapper,
-              !!u && n().ThrobberDelayAppear,
+              !!f && n().ThrobberDelayAppear,
               b && n().Visible,
             ),
             children: [
@@ -501,13 +528,13 @@
           msDelayAppear: d,
         } = e;
         let p = [n().LoadingWrapper, "SteamLogoThrobber", h(r)];
-        const [u, m] = i.useState(!d);
+        const [f, m] = i.useState(!d);
         return (
           (0, i.useEffect)(() => {
-            if (u) return;
+            if (f) return;
             const e = setTimeout(() => m(!0), d);
             return () => clearTimeout(e);
-          }, [d, u]),
+          }, [d, f]),
           void 0 === o && p.push(n().noString),
           t && p.push(t),
           a && p.push(n().Static),
@@ -515,17 +542,17 @@
             className: (0, c.A)(
               "center" == l && n().throbber_center_wrapper,
               !!d && n().ThrobberDelayAppear,
-              u && n().Visible,
+              f && n().Visible,
             ),
             children: [
-              u &&
+              f &&
                 (0, s.jsx)("div", {
                   className: p.join(" "),
                   children: (0, s.jsxs)("div", {
                     className: n().Throbber,
                     children: [
-                      (0, s.jsx)(f, { className: n().base }),
-                      (0, s.jsx)(f, { className: n().blur }),
+                      (0, s.jsx)(u, { className: n().base }),
+                      (0, s.jsx)(u, { className: n().blur }),
                     ],
                   }),
                 }),
@@ -549,7 +576,7 @@
             return n().throbber_large;
         }
       }
-      function f(e) {
+      function u(e) {
         let t = "SVGIcon_Button SVGIcon_Throbber ";
         return (
           e.className && (t += e.className),
