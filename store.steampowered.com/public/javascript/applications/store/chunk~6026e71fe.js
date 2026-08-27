@@ -10962,22 +10962,26 @@
             () => (s.data ?? []).map((e) => (0, i.LgB)(e)),
             [s.data],
           );
-        return n && !n.bHasAnyReviews
-          ? (0, a.jsx)(at.S.Provider, {
-              value: e,
-              children: (0, a.jsx)(rs, {
-                nLinkAppID: m(e),
-                bHasOwnReview: n.bHasOwnReview,
-              }),
-            })
-          : (0, a.jsxs)(at.S.Provider, {
-              value: e,
-              children: [
-                n && (0, a.jsx)($r, { options: n }),
-                o.length > 0 &&
-                  (0, a.jsx)(ls, { rgLanguagePreferences: o, options: t }),
-              ],
-            });
+        return (
+          r.use(Oe.Ready()),
+          r.use(Z.Z.Ready()),
+          n && !n.bHasAnyReviews
+            ? (0, a.jsx)(at.S.Provider, {
+                value: e,
+                children: (0, a.jsx)(rs, {
+                  nLinkAppID: m(e),
+                  bHasOwnReview: n.bHasOwnReview,
+                }),
+              })
+            : (0, a.jsxs)(at.S.Provider, {
+                value: e,
+                children: [
+                  n && (0, a.jsx)($r, { options: n }),
+                  o.length > 0 &&
+                    (0, a.jsx)(ls, { rgLanguagePreferences: o, options: t }),
+                ],
+              })
+        );
       }
     },
     75821: (e, t, n) => {

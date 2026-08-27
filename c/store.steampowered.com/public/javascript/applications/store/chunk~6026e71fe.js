@@ -12108,28 +12108,32 @@
             () => (_.data ?? []).map((_) => (0, _.LgB)(_)),
             [_.data],
           );
-        return _ && !_.bHasAnyReviews
-          ? (0, _.jsx)(_._.Provider, {
-              value: _,
-              children: (0, _.jsx)(_, {
-                nLinkAppID: _(_),
-                bHasOwnReview: _.bHasOwnReview,
-              }),
-            })
-          : (0, _.jsxs)(_._.Provider, {
-              value: _,
-              children: [
-                _ &&
-                  (0, _.jsx)(_, {
-                    options: _,
-                  }),
-                _.length > 0 &&
-                  (0, _.jsx)(_, {
-                    rgLanguagePreferences: _,
-                    options: _,
-                  }),
-              ],
-            });
+        return (
+          _.use(_.Ready()),
+          _.use(_._.Ready()),
+          _ && !_.bHasAnyReviews
+            ? (0, _.jsx)(_._.Provider, {
+                value: _,
+                children: (0, _.jsx)(_, {
+                  nLinkAppID: _(_),
+                  bHasOwnReview: _.bHasOwnReview,
+                }),
+              })
+            : (0, _.jsxs)(_._.Provider, {
+                value: _,
+                children: [
+                  _ &&
+                    (0, _.jsx)(_, {
+                      options: _,
+                    }),
+                  _.length > 0 &&
+                    (0, _.jsx)(_, {
+                      rgLanguagePreferences: _,
+                      options: _,
+                    }),
+                ],
+              })
+        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
