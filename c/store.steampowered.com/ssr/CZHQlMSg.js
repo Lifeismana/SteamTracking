@@ -52,7 +52,7 @@ async function _() {
   if (window.SSR?.reactRoot) return;
   _().Init(
     `store SSR`,
-    `10940579`,
+    `10942055`,
     new _(_.WEBAPI_BASE_URL).GetServiceTransport(),
     {
       fnGetReportTags: _,

@@ -97,7 +97,7 @@
     "Cart_Error_TooManyInCart": "You have exceeded the maximum quantity of this item allowed in your cart.",
     "Cart_Error_CommercialLicenseRestricted_FootNote": "Your cart contains an item that is unavailable for purchase.",
     "Cart_Error_CommercialLicenseRestricted_LineItem": "Unavailable for purchase",
-    "Cart_Error_GiftRecipientInvalid": "The selected reipcient cannot receive this gift purchased from your region.",
+    "Cart_Error_GiftRecipientInvalid": "The selected recipient cannot receive this gift purchased from your region.",
     "Cart_Error_MissingMustOwnApps_LineItem": "Purchasing this item requires you own the following items:",
     "Cart_Error_MissingMustOwnApps_GiftLineItem": "This item requires the gift recipient own the following items:",
     "Cart_Error_MissingMustOwnApps_FootNote": "Your account doesn't own some items that are required for purchasing the items in your cart.  You can add the missing items or adjust the contents of your cart to continue.",
