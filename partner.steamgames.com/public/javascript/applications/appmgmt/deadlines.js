@@ -23,8 +23,6 @@
         NotificationContainer: "mXFFZGFLLywwiNBr7ouAn",
         header_container: "_1sufRvqysxjE-xyRrrKL5U",
         header_label: "_36r9iRM8nCGkZBkqJOFd7G",
-        ContactTaxIdentityDialog: "LTwcmHx1UIevNTkOF3lqS",
-        ContactTaxIdentityBody: "_2voSrDaE8HNs1oOZdGnAnw",
         MessageDate: "_3o-Tl2KWzVGK4YHEgfwWLP",
         TaskCompleted: "_3h_ArCyEssKna4ulmgRnLu",
         DocumentProcessingNotice: "_1g1PXMANzYwlWDNpKVMpgk",
@@ -403,7 +401,7 @@
     },
     92513: (e, t, i) => {
       "use strict";
-      i.r(t), i.d(t, { default: () => q, usePartnerDeadlines: () => F });
+      i.r(t), i.d(t, { default: () => D, usePartnerDeadlines: () => F });
       var n = i(7850),
         a = i(3285),
         s = i(90626),
@@ -607,7 +605,7 @@
         });
       }
       var A = i(39700);
-      function k() {
+      function P() {
         const [e, t] = s.useState(0),
           i = F(a.Qo.RO, e),
           o = s.useRef(0);
@@ -685,7 +683,7 @@
                         Array.from(r?.values()).map((e, t) =>
                           e.length > 0
                             ? (0, n.jsx)(
-                                P,
+                                k,
                                 { actionID: e[0].gid, rgDeadlines: e },
                                 "aid_" + t,
                               )
@@ -705,7 +703,7 @@
           ],
         });
       }
-      function P(e) {
+      function k(e) {
         const { actionID: t, rgDeadlines: i } = e;
         return i.length
           ? (0, n.jsxs)(n.Fragment, {
@@ -714,13 +712,13 @@
                   children: (0, n.jsx)("td", { children: t }),
                 }),
                 i.map((e, t) =>
-                  (0, n.jsx)(D, { deadline: e }, e.gid + "_" + t),
+                  (0, n.jsx)(q, { deadline: e }, e.gid + "_" + t),
                 ),
               ],
             })
           : null;
       }
-      function D(e) {
+      function q(e) {
         const { deadline: t } = e,
           i = JSON.parse(t.description_jsondata),
           a = new Date(i.CreatedOn).toUTCString();
@@ -737,7 +735,7 @@
           ],
         });
       }
-      function q(e) {
+      function D(e) {
         const [t, i] = s.useState(a.Qo.Jg.toString()),
           r = [
             { label: "Season Pass Milestone", data: a.Qo.Jg.toString() },
@@ -746,7 +744,7 @@
         let c = null;
         switch (t) {
           case a.Qo.RO.toString():
-            c = (0, n.jsx)(k, {});
+            c = (0, n.jsx)(P, {});
             break;
           case a.Qo.Jg.toString():
             c = (0, n.jsx)(B, {});
@@ -806,11 +804,7 @@
     2203: (e, t, i) => {
       "use strict";
       i.r(t),
-        i.d(t, {
-          ContactTaxIdentityDialog: () => q,
-          default: () => F,
-          k_rgTemplateNameOptionsList: () => k,
-        });
+        i.d(t, { default: () => P, k_rgTemplateNameOptionsList: () => B });
       var n = i(7850),
         a = i(90626),
         s = i(24484),
@@ -977,10 +971,7 @@
           ? "Until your tax information has been verified, you will not be able to receive any further payments."
           : "You will be unable to distribute your product via Steam until we receive valid KYC and tax information from you.";
       }
-      var B = i(738),
-        R = i(56011),
-        A = i(78395);
-      const k = [
+      const B = [
           "AddressCorrection",
           "DocReq-KYC-Docs",
           "DocReq-KYC-Entity-FR",
@@ -1009,7 +1000,7 @@
           "Renewal-W8-Initial",
           "Renewal-W8-Partner-Urgent",
         ],
-        P = {
+        R = {
           AddressCorrection: {
             component: function (e) {
               return (0, n.jsxs)("div", {
@@ -2305,7 +2296,7 @@
             },
           },
         };
-      function D() {
+      function A() {
         const [e] = (0, a.useState)(
             (0, s.Tc)("deadlines", "application_config"),
           ),
@@ -2323,59 +2314,9 @@
           );
         return [e, n, t, i, o];
       }
-      function q(e) {
-        const { closeModal: t, subject: i, publisherid: s } = e,
-          [o, r] = a.useState(""),
-          [d, c] = a.useState("");
-        return (0, n.jsx)(A.o0, {
-          strTitle: "Contact TaxIdentity",
-          strDescription: d
-            ? ""
-            : "Enter a message to send to TaxIdentity regarding this tax requirement.  Responses will be sent to your Steam account's email address.",
-          onOK: d
-            ? t
-            : async () => {
-                const e = new FormData();
-                e.append("sessionid", (0, f.KC)()),
-                  e.append("publisherid", "" + s),
-                  e.append("subject", i),
-                  e.append("message", o);
-                const t = `${f.TS.PARTNER_BASE_URL}taxrequirement/ajaxcontacttaxidentity`,
-                  n = await v().post(t, e);
-                200 == n?.status && n.data?.success == j.R
-                  ? c(
-                      `Your message has been sent.  You should receive an email acknowledgement from TaxIdentity to your Steam account's email address: ${n.data.msg}.`,
-                    )
-                  : c(
-                      "There was an error sending your message.  Please try again later or create a support ticket.",
-                    );
-              },
-          strOKButtonText: d ? "Close" : "Send Message",
-          bOKDisabled: 0 == o.trim().length,
-          onCancel: t,
-          className: l().ContactTaxIdentityDialog,
-          children: (0, n.jsxs)("div", {
-            className: l().ContactTaxIdentityBody,
-            children: [
-              !d &&
-                (0, n.jsx)("textarea", {
-                  cols: 80,
-                  rows: 10,
-                  onChange: (e) => r(e.currentTarget.value),
-                  value: o,
-                  autoFocus: !0,
-                }),
-              (0, n.jsx)("div", {
-                className: l().ContactTaxIdentityResult,
-                children: d,
-              }),
-            ],
-          }),
-        });
-      }
-      function F(e) {
-        const [t, i, d, c, h] = D(),
-          [x, y] = (function () {
+      function P(e) {
+        const [t, i, d, c, h] = A(),
+          [p, x] = (function () {
             const [e] = (0, a.useState)(
                 (0, s.Tc)("testpage", "application_config"),
               ),
@@ -2384,7 +2325,7 @@
               );
             return [e, t];
           })(),
-          [v, j] = a.useMemo(() => {
+          [f, y] = a.useMemo(() => {
             const e = [...t];
             e.sort((e, t) => {
               const i = new Date(
@@ -2411,14 +2352,7 @@
                 ),
               );
             return [e, i];
-          }, [t]),
-          g =
-            ("dev" == f.TS.WEB_UNIVERSE || "beta" == f.TS.WEB_UNIVERSE
-              ? "TEST:"
-              : "") +
-            (v.length > 0
-              ? JSON.parse(v[0]?.data.description_jsondata)?.Subject
-              : "");
+          }, [t]);
         return (0, n.jsx)(o.tH, {
           children: (0, n.jsx)("div", {
             className: u().AdminPageCtn,
@@ -2438,19 +2372,19 @@
                         }),
                       ],
                     }),
-                    !j &&
+                    !y &&
                       (0, n.jsx)("div", {
                         className: l().TaskCompleted,
                         children: "This tax requirement is closed",
                       }),
                     (0, n.jsxs)(n.Fragment, {
                       children: [
-                        x && (0, n.jsx)(E, { strTemplate: y }),
-                        j &&
-                          v.length > 0 &&
-                          v.map((e, t) =>
+                        p && (0, n.jsx)(k, { strTemplate: x }),
+                        y &&
+                          f.length > 0 &&
+                          f.map((e, t) =>
                             (0, n.jsx)(
-                              L,
+                              q,
                               {
                                 requirement: {
                                   deadline: e,
@@ -2499,27 +2433,6 @@
                         }),
                       ],
                     }),
-                    (0, n.jsxs)("div", {
-                      className: u().SectionCtn,
-                      children: [
-                        (0, n.jsx)("h1", { children: "Have Questions?" }),
-                        (0, n.jsx)("p", {
-                          children:
-                            "Our tax and identity veritication partner, TaxIdentity, can help answer questions about this process or necessary documents. Tax information support can only be provided in English language.",
-                        }),
-                        (0, n.jsx)("p", {
-                          children: (0, n.jsx)(p.jn, {
-                            onClick: (e) =>
-                              (0, B.pg)(
-                                (0, n.jsx)(q, { subject: g, publisherid: c }),
-                                (0, R.uX)(e),
-                              ),
-                            className: l().NotificationButton,
-                            children: "Contact TaxIdentity",
-                          }),
-                        }),
-                      ],
-                    }),
                   ],
                 }),
               ],
@@ -2527,11 +2440,11 @@
           }),
         });
       }
-      function E(e) {
+      function k(e) {
         const { strTemplate: t } = e,
           [i, s] = a.useState(t || "Renewal-W8-Initial"),
           [o, r] = a.useState(!0),
-          d = k.map((e) => ({ label: e, data: e })),
+          d = B.map((e) => ({ label: e, data: e })),
           l = Date.now(),
           c = {},
           u = new Intl.DateTimeFormat(navigator.language).format(l);
@@ -2563,7 +2476,7 @@
                 ],
               }),
               (0, n.jsx)("br", {}),
-              (0, n.jsx)(L, {
+              (0, n.jsx)(q, {
                 requirement: {
                   deadline: c,
                   index: 0,
@@ -2575,13 +2488,13 @@
           })
         );
       }
-      function L(e) {
+      function q(e) {
         const { requirement: t } = e,
           i = JSON.parse(t.deadline.data.description_jsondata),
-          [, a] = D(),
+          [, a] = A(),
           s = new Date(i?.CreatedOn);
         if ("ActionComplete" == i.TemplateName) return null;
-        if (!P[i.TemplateName])
+        if (!R[i.TemplateName])
           return (0, n.jsxs)("div", {
             className: (0, m.A)(l().NotificationContainer, u().SectionCtn),
             children: [
@@ -2592,7 +2505,7 @@
               (0, n.jsx)("div", { children: "Message Not Available" }),
             ],
           });
-        const o = P[i.TemplateName].component;
+        const o = R[i.TemplateName].component;
         return (0, n.jsxs)(n.Fragment, {
           children: [
             (0, n.jsx)("div", {
@@ -2650,8 +2563,8 @@
             include_included_items: B,
             include_assets_without_overrides: R,
             apply_user_filters: A,
-            include_links: k,
-            include_extra_details: P,
+            include_links: P,
+            include_extra_details: k,
           } = i;
         if (
           ((0, s.useEffect)(() => {
@@ -2671,8 +2584,8 @@
               include_included_items: B,
               include_assets_without_overrides: R,
               apply_user_filters: A,
-              include_links: k,
-              include_extra_details: P,
+              include_links: P,
+              include_extra_details: k,
             };
             let s = null;
             return (
@@ -2709,8 +2622,8 @@
             B,
             R,
             A,
-            k,
             P,
+            k,
             p,
           ]),
           !e)
@@ -2719,8 +2632,8 @@
         if (!1 === x) return [void 0, u];
         if (l.A.Get().BIsStoreItemMissing(e, t)) return [void 0, u];
         if (!l.A.Get().BHasStoreItem(e, t, i)) return [void 0, c];
-        const D = l.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
-        return D ? [D, h] : [null, u];
+        const q = l.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
+        return q ? [q, h] : [null, u];
       }
       function p(e, t, i) {
         return m(e, r.c6.qI, t, i);

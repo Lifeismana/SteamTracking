@@ -21,8 +21,6 @@
         NotificationContainer: "mXFFZGFLLywwiNBr7ouAn",
         header_container: "_1sufRvqysxjE-xyRrrKL5U",
         header_label: "_36r9iRM8nCGkZBkqJOFd7G",
-        ContactTaxIdentityDialog: "LTwcmHx1UIevNTkOF3lqS",
-        ContactTaxIdentityBody: "_2voSrDaE8HNs1oOZdGnAnw",
         MessageDate: "_3o-Tl2KWzVGK4YHEgfwWLP",
         TaskCompleted: "_3h_ArCyEssKna4ulmgRnLu",
         DocumentProcessingNotice: "_1g1PXMANzYwlWDNpKVMpgk",
@@ -890,7 +888,6 @@
       "use strict";
       __webpack_require__._(module_exports),
         __webpack_require__._(module_exports, {
-          ContactTaxIdentityDialog: () => _,
           default: () => _,
           k_rgTemplateNameOptionsList: () => _,
         });
@@ -1077,9 +1074,6 @@
           ? "Until your tax information has been verified, you will not be able to receive any further payments."
           : "You will be unable to distribute your product via Steam until we receive valid KYC and tax information from you.";
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
       const _ = [
           "AddressCorrection",
           "DocReq-KYC-Docs",
@@ -2490,56 +2484,6 @@
         return [_, _, _, _, _];
       }
       function _(_) {
-        const { closeModal: _, subject: _, publisherid: _ } = _,
-          [_, _] = _.useState(""),
-          [_, _] = _.useState("");
-        return (0, _.jsx)(_._, {
-          strTitle: "Contact TaxIdentity",
-          strDescription: _
-            ? ""
-            : "Enter a message to send to TaxIdentity regarding this tax requirement.  Responses will be sent to your Steam account's email address.",
-          onOK: _
-            ? _
-            : async () => {
-                const _ = new FormData();
-                _.append("sessionid", (0, _._)()),
-                  _.append("publisherid", "" + _),
-                  _.append("subject", _),
-                  _.append("message", _);
-                const _ = `${_._.PARTNER_BASE_URL}taxrequirement/ajaxcontacttaxidentity`,
-                  _ = await _().post(_, _);
-                200 == _?.status && _.data?.success == _._
-                  ? _(
-                      `Your message has been sent.  You should receive an email acknowledgement from TaxIdentity to your Steam account's email address: ${_.data.msg}.`,
-                    )
-                  : _(
-                      "There was an error sending your message.  Please try again later or create a support ticket.",
-                    );
-              },
-          strOKButtonText: _ ? "Close" : "Send Message",
-          bOKDisabled: 0 == _.trim().length,
-          onCancel: _,
-          className: _().ContactTaxIdentityDialog,
-          children: (0, _.jsxs)("div", {
-            className: _().ContactTaxIdentityBody,
-            children: [
-              !_ &&
-                (0, _.jsx)("textarea", {
-                  cols: 80,
-                  rows: 10,
-                  onChange: (_) => _(_.currentTarget.value),
-                  value: _,
-                  autoFocus: !0,
-                }),
-              (0, _.jsx)("div", {
-                className: _().ContactTaxIdentityResult,
-                children: _,
-              }),
-            ],
-          }),
-        });
-      }
-      function _(_) {
         const [_, _, _, _, _] = _(),
           [_, _] = (function () {
             const [_] = (0, _.useState)(
@@ -2577,14 +2521,7 @@
                 ),
               );
             return [_, _];
-          }, [_]),
-          _ =
-            ("dev" == _._.WEB_UNIVERSE || "beta" == _._.WEB_UNIVERSE
-              ? "TEST:"
-              : "") +
-            (_.length > 0
-              ? JSON.parse(_[0]?.data.description_jsondata)?.Subject
-              : "");
+          }, [_]);
         return (0, _.jsx)(_._, {
           children: (0, _.jsx)("div", {
             className: _().AdminPageCtn,
@@ -2665,32 +2602,6 @@
                           className: _().Body,
                           children:
                             "Valve uses a service called TaxIdentity provided by a third-party company called Lilaham for many services related to tax information collection, verification, and end-of-year statements.",
-                        }),
-                      ],
-                    }),
-                    (0, _.jsxs)("div", {
-                      className: _().SectionCtn,
-                      children: [
-                        (0, _.jsx)("h1", {
-                          children: "Have Questions?",
-                        }),
-                        (0, _.jsx)("p", {
-                          children:
-                            "Our tax and identity veritication partner, TaxIdentity, can help answer questions about this process or necessary documents. Tax information support can only be provided in English language.",
-                        }),
-                        (0, _.jsx)("p", {
-                          children: (0, _.jsx)(_._, {
-                            onClick: (_) =>
-                              (0, _._)(
-                                (0, _.jsx)(_, {
-                                  subject: _,
-                                  publisherid: _,
-                                }),
-                                (0, _._)(_),
-                              ),
-                            className: _().NotificationButton,
-                            children: "Contact TaxIdentity",
-                          }),
                         }),
                       ],
                     }),

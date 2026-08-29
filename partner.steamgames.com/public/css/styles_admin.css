@@ -4831,3 +4831,11 @@ select#package_included_app_list > option[disabled] {
 .image_preview_badge.warning {
 	background: #e67122;
 }
+
+.tax_pending li {
+	list-style-type: square;
+}
+
+.tax_button {
+	margin-top: 5px;	
+}
