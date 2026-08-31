@@ -1658,7 +1658,6 @@ $ffn
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
-07:51:38
 08bX
 0?0L
 0A/8
@@ -2066,6 +2065,7 @@ $ffn
 16IKeyValuesSystem
 16ITCPHostCallback
 16JobStatsBucket_t
+17:30:42
 17CCrossProcessPipe
 17CDebugStatsSystem
 17CDummyCnxCallback
@@ -2346,6 +2346,7 @@ $ffn
 5000
 50CWebSocketConnectionDelayedCloseConnectionWorkItem
 50UserContentDescriptorPreferences_ContentDescriptor
+524288
 52F*
 55Ly
 55j_WW
@@ -2366,9 +2367,11 @@ $ffn
 6#6165676;6M6O6S6Y6a6k6m6
 6*Fc7
 6-nn
+60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 6144
 64CK\vH
+65536
 666666666666666666666666666666666666666666666666\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\`
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
@@ -2421,9 +2424,6 @@ $ffn
 8/A0
 8000
 8192
-65536
-524288
-60000000
 82\n:XPH
 88n|
 88pH
@@ -2992,7 +2992,7 @@ Attempting to purchase same app in different packages
 AttribCapabilityGroup
 Audio Behind
 Audio Init Failed
-Aug 24 2026
+Aug 31 2026
 August
 Aura
 AuthANY
@@ -8350,6 +8350,7 @@ Symbol name "
 Symbol table grew beyond limit. Time to upgrade to a larger specialization of CUtlSymbolBase, or look for unnecessary spam in the tables.
 Synthetic oneofs must be after all other oneofs
 System
+S|DG
 T*8U
 T0.S
 T00`P

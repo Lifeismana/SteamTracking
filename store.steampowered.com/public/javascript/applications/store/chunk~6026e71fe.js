@@ -20309,6 +20309,7 @@
               i = await r().get(`${s.TS.STORE_BASE_URL}personalcalendardata`, {
                 params: a,
                 timeout: 2e4,
+                withCredentials: !0,
               });
             return {
               arrAppInfos: i.data.arrAppInfos,

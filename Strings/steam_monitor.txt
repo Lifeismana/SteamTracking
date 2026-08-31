@@ -231,10 +231,10 @@ $ORIGIN
 /tmp/steam_monitor.log.last
 0123456789ABCDEF
 0123456789abcdef
-07:51:38
-07:51:40
 12CStdMemAlloc
 16CAdHocValidation
+17:30:42
+17:30:44
 18CUtlCharConversion
 19CUtlNoEscConversion
 21CUtlCStringConversion
@@ -251,7 +251,7 @@ Assertion Failed: stack%2d: %s (%d): %s
 Assertion Failed: stack%2d: 0x%llX
 Assertion failed: length > k_cchMaxString
 Attempting to create a named event with a null name
-Aug 24 2026
+Aug 31 2026
 Average %.2f fps, %.2f ms per frame\n
 Bad thread local: Get\n
 Bad thread local: Set\n
@@ -399,7 +399,6 @@ Total bytes allocated counted: %s\n
 TracerPid:
 Tracked allocs currently in use. %d Total %d\n
 Tried to create a thread that has already been created!
-U)@QZ
 USER
 Unaccounted
 Unmatched %s\n

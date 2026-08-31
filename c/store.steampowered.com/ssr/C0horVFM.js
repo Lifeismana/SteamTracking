@@ -13,7 +13,7 @@ const __vite__mapDeps = (
 var _ = _(_(), 1),
   _ = _(),
   _ = _.lazy(() =>
-    _(() => import(`./CecVYAAU.js`), __vite__mapDeps([0]), import.meta.url),
+    _(() => import(`./vz7IFnGP.js`), __vite__mapDeps([0]), import.meta.url),
   );
 function _(_) {
   return _().metrics

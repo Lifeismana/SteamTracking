@@ -21976,6 +21976,7 @@
               _ = await _().get(`${_._.STORE_BASE_URL}personalcalendardata`, {
                 params: _,
                 timeout: 2e4,
+                withCredentials: !0,
               });
             return {
               arrAppInfos: _.data.arrAppInfos,
