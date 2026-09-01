@@ -556,7 +556,8 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 				$this->ETags[ $HashPath ] = $Hash;
 
 				// Extract json so it gets pretty printed from the json.parse
-				if( str_ends_with( $File, 'english-json.js' ) && preg_match( "/exports=JSON\.parse\('(.+)'\)}}]\);$/", $Data, $Matches ) )
+				// keep old format for compatibility with cs blog
+				if( str_ends_with( $File, 'english-json.js' ) && ( preg_match( "/exports=JSON\.parse\('(.+)'\)}}]\);$/", $Data, $Matches ) || preg_match( "/exports=JSON\.parse\(`(.*)`\)/", $Data, $Matches ) ) )
 				{
 					$Data = stripcslashes( $Matches[ 1 ] );
 					$Data = json_decode( $Data, true );
@@ -568,9 +569,10 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 				}
 
 				// Extract json from numeric localization chunks
-				if( preg_match( '/[0-9]+\.js$/', $File ) && preg_match( "/exports=JSON\.parse\('(.+)'\)}}]\);$/", $Data, $Matches ) )
+				if( preg_match( '/[0-9]+\.js$/', $File ) && ( preg_match( "/exports=JSON\.parse\(`(.*)`\)/", $Data, $Matches ) || preg_match( "/exports=JSON\.parse\('(.*)'\)/", $Data, $Matches ) ) )
 				{
-					$JsonData = stripcslashes( $Matches[ 1 ] );
+					$JsonData = preg_replace( '/\\\\x([0-9A-Fa-f]{2})/', '\\\\u00$1', $Matches[ 1 ] );
+					$JsonData = stripcslashes( $JsonData );
 					$JsonData = json_decode( $JsonData, true );
 
 					if( $JsonData !== null )
