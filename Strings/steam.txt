@@ -2368,10 +2368,6 @@ $ffn
 172.16
 172.16.3.31
 172.16.3.39
-17:30:42
-17:30:54
-17:30:58
-17:30:59
 17CBootstrapLogFile
 17CClientWalletInfo
 17CDebugStatsSystem
@@ -2501,6 +2497,10 @@ $ffn
 22CEC25519PrivateKeyBase
 22CFutureSharedStateBase
 22ISSLConnectionCallback
+23:15:28
+23:15:44
+23:15:49
+23:15:50
 23CActivationCodeItemInfo
 23CClanEventUserNewsTuple
 23CDummyWebSocketCallback
@@ -2673,7 +2673,6 @@ $ffn
 5000
 50CWebSocketConnectionDelayedCloseConnectionWorkItem
 50UserContentDescriptorPreferences_ContentDescriptor
-524288
 52F*
 55Ly
 55j_WW
@@ -2694,11 +2693,12 @@ $ffn
 6#6165676;6M6O6S6Y6a6k6m6
 6*Fc7
 6-nn
-6144
-60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
+6144
 64CK\vH
 65536
+524288
+60000000
 666666666666666666666666666666666666666666666666\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\`
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
@@ -9217,7 +9217,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Aug 31 2026 17:30:52
+Startup - updater built Aug 31 2026 23:15:44
 State
 StaticFileWriterThread()
 Steam

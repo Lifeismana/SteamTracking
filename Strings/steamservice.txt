@@ -2065,7 +2065,6 @@ $ffn
 16IKeyValuesSystem
 16ITCPHostCallback
 16JobStatsBucket_t
-17:30:42
 17CCrossProcessPipe
 17CDebugStatsSystem
 17CDummyCnxCallback
@@ -2194,6 +2193,7 @@ $ffn
 22CFutureSharedStateBase
 22IPCServerMapAndMutex_t
 22ISSLConnectionCallback
+23:15:28
 23CClanEventUserNewsTuple
 23CDummyWebSocketCallback
 23GamePerformanceSettings
@@ -2367,11 +2367,13 @@ $ffn
 6#6165676;6M6O6S6Y6a6k6m6
 6*Fc7
 6-nn
+6144
+8000
+8192
+65536
 60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
-6144
 64CK\vH
-65536
 666666666666666666666666666666666666666666666666\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\`
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
@@ -2422,8 +2424,6 @@ $ffn
 7~8A
 8.K%G
 8/A0
-8000
-8192
 82\n:XPH
 88n|
 88pH
@@ -8350,7 +8350,6 @@ Symbol name "
 Symbol table grew beyond limit. Time to upgrade to a larger specialization of CUtlSymbolBase, or look for unnecessary spam in the tables.
 Synthetic oneofs must be after all other oneofs
 System
-S|DG
 T*8U
 T0.S
 T00`P
