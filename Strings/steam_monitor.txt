@@ -229,6 +229,8 @@ $ORIGIN
 /tmp/.steam-sem-names
 /tmp/steam_monitor.log
 /tmp/steam_monitor.log.last
+00:43:50
+00:43:53
 0123456789ABCDEF
 0123456789abcdef
 12CStdMemAlloc
@@ -236,8 +238,6 @@ $ORIGIN
 18CUtlCharConversion
 19CUtlNoEscConversion
 21CUtlCStringConversion
-23:15:28
-23:15:31
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
 </script>
@@ -251,7 +251,6 @@ Assertion Failed: stack%2d: %s (%d): %s
 Assertion Failed: stack%2d: 0x%llX
 Assertion failed: length > k_cchMaxString
 Attempting to create a named event with a null name
-Aug 31 2026
 Average %.2f fps, %.2f ms per frame\n
 Bad thread local: Get\n
 Bad thread local: Set\n
@@ -362,6 +361,7 @@ SDL_GetError
 SDL_SetCurrentThreadPriority
 STEAM_DESKTOP_APP_AFFINITY_LIST
 Semaphore name (%s) is longer than POSIX can handle, truncating.
+Sep  1 2026
 ServerMain
 Size
 Sleeping

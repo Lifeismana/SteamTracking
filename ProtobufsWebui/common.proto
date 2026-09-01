@@ -569,6 +569,9 @@ message CClientNotificationPlaytimeWarning {
 	optional uint32 playtime_remaining = 2;
 }
 
+message CClientNotificationRedeemFramePromo {
+}
+
 message CClientNotificationRemoteClientConnection {
 	optional string machine = 1;
 	optional bool connected = 2;

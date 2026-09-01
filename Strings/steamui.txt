@@ -2139,6 +2139,7 @@ ${LANGUAGE}
 %s%s.vdf
 %s%s[%d]: -> %s\n
 %s%s_full.jpg
+%s%sbin%svrclient%s.%s
 %s%u%02u%02u_%02u%02u%02u
 %s%u%02u%02u_%02u%02u%02u_%u
 %s&client=1&id=%i
@@ -3429,6 +3430,7 @@ ${LANGUAGE}
 (\t"$\n"CPartnerApps_FinishUpload_Response"
 (\t"%\n#CBroadcast_WebRTCSetAnswer_Response";\n)CBroadcast_WebRTCLookupTURNServer_Request
 (\t"%\n#CChatRoom_DeleteInviteLink_Response"
+(\t"%\n#CClientNotificationRedeemFramePromo*
 (\t"&\n$CChatRoom_SaveChatRoomGroup_Response"L\n%CChatRoom_RenameChatRoomGroup_Request
 (\t"&\n$CPlayer_PostStatusToFriends_Response"B\n
 (\t"&\n$CSteamTV_GetFollowedChannels_Request"
@@ -3453,7 +3455,7 @@ ${LANGUAGE}
 (\t"/\n-CAccountHardware_ManageSavedHardware_Response"@\n-CAccountHardware_GetSavedHardwareList_Request
 (\t"/\n-CUserAccount_RedeemFriendInviteToken_Response"D\n,CUserAccount_RevokeFriendInviteToken_Request
 (\t"/\n-CUserAccount_RevokeFriendInviteToken_Response">\n'CUserAccount_RegisterCompatTool_Request
-(\t"0\n.CAccountHardware_RegisterSteamMachine_Response*
+(\t"0\n.CAccountHardware_RegisterSteamMachine_Response"e\n:CAccountHardwarePromotions_RedeemFramePromoPackage_Request
 (\t"0\n.CBroadcast_SendBroadcastStateToServer_Response"O\n7CBroadcast_NotifyBroadcastSessionHeartbeat_Notification
 (\t"1\n/CFamilyGroups_ModifyFamilyGroupDetails_Response"
 (\t"1\n/CGameRecording_UserRemoveTimelineEntry_Response"J\n6CGameRecording_ManuallyDeleteRecordingsForApps_Request
@@ -3485,6 +3487,7 @@ ${LANGUAGE}
 (\t";\n9CSteamInputService_ControllerAccessibilityStrings_Request"n\n:CSteamInputService_ControllerAccessibilityStrings_Response
 (\t"<\n,CTransportValidation_NotifyText_Notification
 (\t"=\n.CEcon_ClientGetItemShopOverlayAuthURL_Response
+(\t"=\n;CAccountHardwarePromotions_RedeemFramePromoPackage_Response*
 (\t"?\n"CBroadcast_StartBuildClip_Response
 (\t"?\n&CGameRecording_TakeScreenshot_Response
 (\t"?\n*CAuthentication_GetAuthSessionInfo_Request
@@ -6695,6 +6698,7 @@ ${LANGUAGE}
 .\n*k_EClientNotificationType_CloudSyncFailure
 .\n*k_EClientNotificationType_GroupChatMessage
 .\n*k_EClientNotificationType_ItemAnnouncement
+.\n*k_EClientNotificationType_RedeemFramePromo
 .\n*k_ECommentThreadTypeWorkshopAccount_Public
 .\n*k_ECompromiseDetectionType_MaliciousRefund
 .\n*k_EContentDescriptor_NudityOrSexualContent
@@ -7133,6 +7137,7 @@ ${LANGUAGE}
 /data/src/common/vgui/chartpanel.cpp
 /data/src/common/vgui/vgui_console.cpp
 /data/src/common/vgui/vprofpanel.cpp
+/data/src/common/vr/vrcommon.cpp
 /data/src/common/websocket.cpp
 /data/src/common/websocket.h
 /data/src/common/workthreadpool.cpp
@@ -9696,6 +9701,7 @@ ${LANGUAGE}
 20CJSMethodCallHandlerI20CSteamUIVRControllerJPKc9CSmartPtrI18CJSCallbackPromiseEEE
 20CJSMethodCallHandlerI20CSteamUIVRControllerJPKcEE
 20CJSMethodCallHandlerI20CSteamUIVRControllerJPKcS2_9CSmartPtrI18CJSCallbackPromiseEEE
+20CJSMethodCallHandlerI20CSteamUIVRControllerJPKcS2_EE
 20CJSMethodCallHandlerI20CSteamUIVRControllerJPKcS2_j9CSmartPtrI18CJSCallbackPromiseEEE
 20CJSMethodCallHandlerI20CSteamUIVRControllerJPKcb9CSmartPtrI18CJSCallbackPromiseEEE
 20CJSMethodCallHandlerI20CSteamUIVRControllerJPKcd9CSmartPtrI18CJSCallbackPromiseEEE
@@ -10342,6 +10348,7 @@ ${LANGUAGE}
 256 Kbps
 256K
 258EAFA5-E914-47DA-95CA-C5AB0DC85B11
+25AccountHardwarePromotions
 25CAuthenticationRequestMsg
 25CChatRoomGroupHeaderState
 25CCloud_ShareFile_Response
@@ -10835,6 +10842,7 @@ ${LANGUAGE}
 3072
 30000
 30>9
+30AccountHardwarePromotions_Stub
 30CAchievements_GetInfo_Response
 30CAudio_SupportsHdmiCec_Request
 30CBluetoothManager_Pair_Request
@@ -11274,6 +11282,7 @@ ${LANGUAGE}
 35CClientNotificationCloudSyncFailure
 35CClientNotificationGroupChatMessage
 35CClientNotificationItemAnnouncement
+35CClientNotificationRedeemFramePromo
 35CCloud_AppExitSyncDone_Notification
 35CCloud_BeginAppUploadBatch_Response
 35CCloud_GetAppFileChangelist_Request
@@ -12843,6 +12852,7 @@ ${LANGUAGE}
 57CSteamInputService_ControllerAxesStateChange_Notification
 57CUserAccount_GetAvailableValveDiscountPromotions_Response
 5863c90b-8ac4-4915-95a5-fdb2d4133bde
+58CAccountHardwarePromotions_RedeemFramePromoPackage_Request
 58CAccountHardware_SteamControllerGetConfig_ControllerConfig
 58CAccountHardware_SteamControllerSetConfig_ControllerConfig
 58CAuthenticationSupport_QueryRefreshTokensByAccount_Request
@@ -12863,6 +12873,7 @@ ${LANGUAGE}
 58CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request
 58CVideo_GameRecordingGetNextBatchOfSegmentsToUpload_Request
 5953-QTIO-1764
+59CAccountHardwarePromotions_RedeemFramePromoPackage_Response
 59CAuthenticationSupport_QueryRefreshTokensByAccount_Response
 59CAuthentication_UpdateAuthSessionWithSteamGuardCode_Request
 59CChatUsability_ClientUsabilityMetrics_Notification_Settings
@@ -13556,6 +13567,7 @@ ${LANGUAGE}
 ;!;#;-;9;E;S;Y;_;q;{;
 ;"lY7
 ;%rlNP\n
+;.CAccountHardwarePromotions_RedeemFramePromoPackage_Request
 ;.CAuthenticationSupport_QueryRefreshTokensByAccount_Request
 ;.CChatRoom_NotifyShouldRejoinChatRoomVoiceChat_Notification
 ;.CClientMetrics_ContentDownloadResponse_Counts_Notification
@@ -13593,6 +13605,7 @@ ${LANGUAGE}
 <%jsXA
 <)<5<C<O<S<[<e<k<q<
 <-loopback>
+<.CAccountHardwarePromotions_RedeemFramePromoPackage_Response"
 <.CAuthenticationSupport_QueryRefreshTokensByAccount_Response"
 <.CAuthentication_UpdateAuthSessionWithSteamGuardCode_Request
 <.CDataPublisher_SetVRDeviceInfoAggregationReference_Response"
@@ -14497,6 +14510,7 @@ Account: %s \n
 AccountHardware
 AccountHardware.RegisterSteamMachine#1
 AccountHardware.UpdateControllerUsageReport#1
+AccountHardwarePromotions
 AccountIDCreator
 AccountIDLastUpdated
 AccountName
@@ -14925,7 +14939,6 @@ AudioChannelConfiguration
 AudioDeviceDescription
 AudioSinkAvailabilityChanged: %d
 AudioSinkList
-Aug 31 2026 23:15:58
 August
 Aura
 Australia/Adelaide
@@ -18876,6 +18889,7 @@ ConfirmInviteToFamilyGroup
 ConfirmJoinFamilyGroup
 Conflict
 Connect
+Connect to VR Server Failed (301)
 ConnectByIPAddress failed\n
 ConnectP2PCustomSignaling failed, cannot do SDR streaming transport\n
 ConnectProfile
@@ -19673,6 +19687,9 @@ DraggableRects
 Draws html perf data
 Drive
 DriveType
+Driver Failed (200)
+Driver Not Known (201)
+Driver Not Loaded (202)
 Driver deadlock in hardware accelerated desktop capture, aborting
 Driver deadlock in hardware accelerated desktop capture, restarting\n
 DriverDate
@@ -20872,6 +20889,7 @@ F\n\vInspectItem
 F\n\vQueryStatus
 F^vn
 Facebook query returned an error
+Factory Function Not Found (104)
 Factory reset: finished: %d
 Factory reset: starting
 Failed
@@ -21110,6 +21128,7 @@ File %d for App %d: '%s', size = %d, root = %d
 File IO Error %u
 File Locked
 File Not Found
+File Not Found (103)
 File already exists in database:
 File appears to be in generated pool but wasn't registered:
 File change notification for %s but no file contents changed based on hash\n
@@ -21233,6 +21252,9 @@ FrameBRGripPanel
 FrameButton
 FrameCloseButton
 FrameEnd: capture=%3llu, convert=%3llu, encode=%3llu, pts=%lld, dts=%lld, size=%d %s\n
+FrameHLAlyxPromoIgnoreRegistrationPrompt
+FrameHLAlyxPromoRegisteredSerialNumber
+FrameHLAlyxPromoRegisteredSteamID
 FrameMaximizeButton
 FrameMinimizeButton
 FrameRestoreButton
@@ -22782,6 +22804,7 @@ HMAC GOST 34.11-94
 HMAC routines
 HMAC-MD5
 HMAC-SHA1
+HMD Not Known (201)
 HOME
 HOMETEST_DESKTOP_SESSION
 HOMETEST_DESKTOP_USER
@@ -23008,6 +23031,8 @@ Hiragana
 HistoryGames
 Hit absolute maximum emit event queue size -- NOT adding this event
 Hit destructor inside a HTTP2 callback from nghttp2 - not safe
+Hmd Not Found (108)
+HmdSystemFactory
 Hold Instruction Call Issuer
 Hold Instruction Code
 Hold Instruction None
@@ -23265,6 +23290,7 @@ ITc[
 ITsn=
 IVALIDATE001
 IVRApplications_007
+IVRClientCore_003
 IVRCompositor_027
 IVRHeadsetView_001
 IVRInput_010
@@ -23574,6 +23600,8 @@ InstallFolder.SetFolderLabel
 InstallLinuxIcons
 InstallPath: %s \n
 Installation
+Installation Corrupt (101)
+Installation Not Found (100)
 Installed
 Installing
 Installs.CancelInstall
@@ -23617,6 +23645,7 @@ IntegratedGuides
 Intel
 Intel ANV
 Interac
+Interface Not Found (105)
 Interlace handling should be turned on when using png_read_image
 Internal
 Internal Error
@@ -23652,6 +23681,7 @@ Invalid HTTP header field was received
 Invalid HTTP header field was received: frame type: %u, stream: %d, name: [%.*s], value: [%.*s]
 Invalid Handle
 Invalid IHDR data
+Invalid Interface (106)
 Invalid JPEG file structure: SOS before SOF
 Invalid JPEG file structure: missing SOS marker
 Invalid JPEG file structure: two SOF markers
@@ -25427,6 +25457,7 @@ Method RateCommentThread() not implemented.
 Method ReArmMuraCalibration() not implemented.
 Method RecordDisconnectedPlaytime() not implemented.
 Method RecordPlaytime() not implemented.
+Method RedeemFramePromoPackage() not implemented.
 Method RedeemFriendInviteToken() not implemented.
 Method RefreshScreenReaderAutoLocale() not implemented.
 Method RefreshVotingQueue() not implemented.
@@ -26989,6 +27020,7 @@ No Connection
 No Content
 No Detail
 No Error
+No Error (0)
 No IClientMatchmaking
 No IClientMatchmaking?
 No IClientMatchmakingServers
@@ -27068,6 +27100,7 @@ Not Before:
 Not Extended
 Not Found
 Not Implemented
+Not Initialized (109)
 Not Logged On
 Not Modified
 Not Supported
@@ -27534,9 +27567,11 @@ OpenVR.DeviceProperties.GetInt32DeviceProperty
 OpenVR.DeviceProperties.GetStringDeviceProperty
 OpenVR.DeviceProperties.RegisterForDevicePropertyChange
 OpenVR.ExtendActivityTimeout
+OpenVR.GetFrameHLAlyxPromoRegistration
 OpenVR.GetMutualCapabilities
 OpenVR.GetWebSecret
 OpenVR.GetWebServerAddress
+OpenVR.IgnoreFrameHLAlyxPromo
 OpenVR.InstallVR
 OpenVR.Keyboard.RegisterForStatus
 OpenVR.Keyboard.SendText
@@ -27554,12 +27589,14 @@ OpenVR.PathProperties.SetStringPathProperty
 OpenVR.QuitAllVR
 OpenVR.RegisterForButtonPress
 OpenVR.RegisterForHMDActivityLevelChanged
+OpenVR.RegisterForHMDSerialDetails
 OpenVR.RegisterForInstallDialog
 OpenVR.RegisterForStartupErrors
 OpenVR.RegisterForVRHardwareDetected
 OpenVR.RegisterForVRModeChange
 OpenVR.RegisterForVRSceneAppChange
 OpenVR.RegisterForVRTrackedDevices
+OpenVR.SetRegisteredFrameHLAlyxPromo
 OpenVR.StartVR
 OpenVR.VRNotifications.HideCustomNotification
 OpenVR.VRNotifications.ShowCustomNotification
@@ -28809,6 +28846,7 @@ RecvMsgDirect
 RecvPlaintext
 Red Pagos
 RedCompra
+RedeemFramePromoPackage
 RedeemFriendInviteToken
 RedoSorting
 Refresh client configuration
@@ -29993,6 +30031,7 @@ Sent ping with MTU %d, increment = %d\n
 SentenceMode
 SentenceModeMenu
 Sentiment
+Sep  1 2026 00:44:13
 September
 Serbian
 Serial
@@ -30297,6 +30336,7 @@ SetupAgent
 SetupByUID
 Shader
 Sharada
+Shared IPC State Init Failed (302)
 Shared Only
 Shared library locked
 SharedConnection.AllocateSharedConnection
@@ -32280,6 +32320,7 @@ UnInhibit
 UnThrottle
 Unable to apply SDR network config!  %s\n
 Unable to capture video: %s\n
+Unable to connect to Oculus Runtime (1000)
 Unable to create clip directory
 Unable to create directories for downloaded clip: %s
 Unable to decrement IOCP eventfd, error %d
@@ -32388,6 +32429,7 @@ Unknown custom filter method
 Unknown device support flow %d
 Unknown enumeration value of "
 Unknown error
+Unknown error (%d)
 Unknown error code
 Unknown field type %s in field "%s"
 Unknown filter method in IHDR
@@ -32554,6 +32596,7 @@ Use other payment method
 Use the OpenGL render for the UI
 Use the full screen OpenGL render for the UI
 User
+User Config Directory Invalid (107)
 User Token 2
 User already has an existing billing agreement for a package in this transaction
 User cannot complete purchase with provider because the amount is not supported
@@ -32686,6 +32729,7 @@ VProfInternalGetProfileForCurrentThread
 VR API not loaded (%d)
 VR OpenGL NV12
 VR OpenGL RGB
+VR Server Init Failed (300)
 VR Stream Thread
 VR capture behind
 VR frame captured
@@ -37007,6 +37051,7 @@ bSaveAccountCredentials
 bSaveMode
 bSecure
 bSelected
+bSerialRegistered
 bShortcutIsVR
 bShowCDKeyInMenus
 bShowControllerConfig
@@ -38185,6 +38230,7 @@ compression_method
 compute_file_sha
 compute_key
 computed
+computed_serial
 computer
 conditional group contains more than two branches
 config
@@ -39660,6 +39706,7 @@ eClientBetaState
 eCloudStatus
 eCloudSync
 eCmd > 0 && eCmd < eHTMLCommands_None
+eComponentType
 eConfig
 eConnectionMode == k_EConnectionModeClient
 eConnectivityTestResult
@@ -47965,6 +48012,7 @@ lifetime_followers
 lifetime_playtime
 lifetime_playtime_sessions
 lifetime_subscriptions
+lighthouse
 like
 lilium__hdr_analysis.fx
 limit
@@ -49368,6 +49416,7 @@ m_vecUnlockPromise
 m_vecUserProxyExcludedHosts
 m_vecUsers
 m_vecUsers.IsEmpty()
+m_vecVRHMDSerialDetailsChanged
 m_vecVRHardwareDetected
 m_vecVRModeChange
 m_vecVRSceneAppChange
@@ -51015,6 +51064,7 @@ pDecodedData
 pDefaultValue
 pDesc->m_vecObjects.Count() <= V_ARRAYSIZE( objects )
 pDesc->m_vecPlanes.Count() <= V_ARRAYSIZE( bo_handles )
+pDetails
 pEnd <= pubMsgBytes + cubBuffer
 pEnd == m_ReplacementBody.Base() + m_ReplacementBody.Count()
 pEndingDelim && pEndingDelim[0]
@@ -54722,6 +54772,7 @@ strCompatExperiment
 strCompatTool
 strCompatToolDisplayName
 strCompatToolName
+strComponentCode
 strConnectString
 strDesc
 strDescription
@@ -54769,6 +54820,7 @@ strMasterSubAppName
 strMasterSubIncludedWith
 strMasterSubNotificationIcon
 strMessage
+strMfgSerialNumber
 strMovieURL
 strMsg
 strName
@@ -56845,6 +56897,7 @@ vr_overlay_key
 vr_show_perf_graph_in_hmd
 vractive
 vram_size_bytes
+vrclient Shared Lib Not Found (102)
 vrerror
 vrhmd
 vrlink
