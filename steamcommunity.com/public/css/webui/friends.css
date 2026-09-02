@@ -11832,16 +11832,22 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   display: inline;
   font-style: italic;
 }
-p.bbcodes_Paragraph_3lnqG {
+p.bbcodes_Paragraph_3lnqG,
+div.bbcodes_Paragraph_3lnqG {
   margin: 0.5em 0;
 }
 .bbcodes_TemplateMediaTitle__DE_6 p.bbcodes_Paragraph_3lnqG,
 .bbcodes_Question_2Hj1t p.bbcodes_Paragraph_3lnqG,
-.bbcodes_Answer_syKgz p.bbcodes_Paragraph_3lnqG {
+.bbcodes_Answer_syKgz p.bbcodes_Paragraph_3lnqG,
+.bbcodes_TemplateMediaTitle__DE_6 div.bbcodes_Paragraph_3lnqG,
+.bbcodes_Question_2Hj1t div.bbcodes_Paragraph_3lnqG,
+.bbcodes_Answer_syKgz div.bbcodes_Paragraph_3lnqG {
   margin: 0;
 }
 th > p.bbcodes_Paragraph_3lnqG:first-child,
-td > p.bbcodes_Paragraph_3lnqG:first-child {
+td > p.bbcodes_Paragraph_3lnqG:first-child,
+th > div.bbcodes_Paragraph_3lnqG:first-child,
+td > div.bbcodes_Paragraph_3lnqG:first-child {
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -16891,6 +16897,173 @@ a.dynamiclinkcard_DynamicLinkBox_3OFDU:hover {
 .reactions_ReactionHover_12Ox3 .reactions_ReactionName_2bwkm {
   font-weight: 600;
 }
+.chatnotice_ChatNoticeCtn_3MakJ {
+  width: 100%;
+  box-shadow: 0px 4px 8px #000;
+  z-index: 2;
+  position: relative;
+}
+.chatnotice_ChatNoticeBody_2sTqA {
+  display: flex;
+  flex-direction: row;
+  background-color: #261c1a;
+}
+.chatnotice_ChatNoticeBody_2sTqA .chatnotice_Icon_2l_uD {
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  flex-grow: 2;
+  max-width: 64px;
+}
+.chatnotice_DangerIcon_2J7ac .SVGIcon_Caution .exclamation path {
+  fill: #f34c2b;
+}
+.chatnotice_DangerIcon_2J7ac svg line,
+.chatnotice_DangerIcon_2J7ac svg path {
+  stroke: #f34c2b;
+  fill: rgba(243, 76, 43, 0.267);
+}
+.chatnotice_ChatNoticeBody_2sTqA .chatnotice_Explanation_3rhEC {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 12px 0px;
+  flex: 1;
+}
+.chatnotice_ChatNoticeBody_2sTqA .chatnotice_Explanation_3rhEC div {
+  margin-bottom: 6px;
+  user-select: none;
+}
+.chatnotice_ChatNoticeBody_2sTqA .chatnotice_Buttons_1MuKX {
+  display: flex;
+  flex-direction: column;
+  margin-inline-start: 15px;
+  margin-inline-end: 15px;
+  justify-content: center;
+  gap: 6px;
+}
+.DialogButton.chatnotice_ChatNoticeActionButton_3uFJX {
+  padding-inline-start: 8px;
+  padding-inline-end: 8px;
+  width: fit-content;
+}
+.chatnotice_ChatNoticeBody_2sTqA .chatnotice_ExplanationHeader_17ZEb {
+  font-size: 14px;
+  color: #f34c2b;
+}
+.chatnotice_ChatNoticeBody_2sTqA .chatnotice_ExplanationBody_1Z7xU {
+  font-size: 12px;
+  color: #bb887e;
+}
+.chatnotice_ChatNoticeBody_2sTqA .chatnotice_ExplanationLinkCtn_1dEmZ {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.chatnotice_ChatNoticeBody_2sTqA .chatnotice_ExplanationLinkCtn_1dEmZ a {
+  align-self: flex-start;
+  font-size: 10px;
+  color: #e0b3aa;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-bottom: 1px dotted rgba(187, 136, 126, 0.5);
+}
+.chatnotice_ChatNoticeBody_2sTqA .chatnotice_ExplanationLinkCtn_1dEmZ a:hover,
+.chatnotice_ChatNoticeBody_2sTqA .chatnotice_ExplanationLinkCtn_1dEmZ a:focus {
+  color: #f3dcd7;
+  border-bottom: 1px dotted #bb887e;
+}
+.chatnotice_DismissButton_2_0Bf {
+  width: 14px;
+  height: 14px;
+  margin-inline-start: 8px;
+  margin-inline-end: 8px;
+  margin-top: 8px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.chatnotice_DismissButton_2_0Bf .SVGIcon_X_Line line {
+  stroke: #71767f;
+  stroke-width: 30px;
+}
+.chatnotice_DismissButton_2_0Bf:hover .SVGIcon_X_Line line,
+.chatnotice_DismissButton_2_0Bf:focus .SVGIcon_X_Line line {
+  stroke: #fff;
+  stroke-width: 30px;
+}
+.chatnotice_DisconnectBlocker_3RYtb {
+  display: none;
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  pointer-events: all;
+}
+.errorDisconnected .chatnotice_DisconnectBlocker_3RYtb {
+  display: block;
+}
+.chatnotice_SuspiciousSenderNotice_OATln {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 8px;
+  border-radius: 3px;
+  user-select: none;
+  text-decoration: none;
+  background-color: rgba(243, 76, 43, 0.12);
+  margin: 0 calc(-1 * var(--suspicious-sender-horiz-padding, 6px));
+}
+.chatnotice_SuspiciousSenderNotice_OATln:hover,
+.chatnotice_SuspiciousSenderNotice_OATln:focus,
+.chatnotice_SuspiciousSenderNotice_OATln.gpfocus {
+  background-color: #4a2620;
+}
+.chatnotice_SuspiciousSenderNotice_OATln:hover
+  .chatnotice_SuspiciousSenderAction_3Hkm9,
+.chatnotice_SuspiciousSenderNotice_OATln:focus
+  .chatnotice_SuspiciousSenderAction_3Hkm9,
+.chatnotice_SuspiciousSenderNotice_OATln.gpfocus
+  .chatnotice_SuspiciousSenderAction_3Hkm9 {
+  color: #f3dcd7;
+}
+.chatnotice_SuspiciousSenderNotice_OATln
+  .chatnotice_SuspiciousSenderText_u4o42 {
+  flex: 1;
+  font-size: 12px;
+  color: #f34c2b;
+}
+.chatnotice_SuspiciousSenderNotice_OATln
+  .chatnotice_SuspiciousSenderAction_3Hkm9 {
+  font-size: 10px;
+  color: #bb887e;
+}
+.chatnotice_SuspiciousSenderNotice_OATln
+  .chatnotice_SuspiciousSenderIcon_3vp1r {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  align-self: baseline;
+}
+.chatnotice_SuspiciousSenderDialog_3WO87 .chatnotice_PersonaName_8WiEF {
+  color: #b3dfff;
+  font-weight: 500;
+}
+.chatnotice_SuspiciousSenderDescriptionCtn_3LWXO {
+  margin-top: 10px;
+}
+.chatnotice_SuspiciousSenderDialogButtons_2ENtE {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 0px;
+}
+.chatnotice_SuspiciousSenderDialogButtons_2ENtE .chatnotice_BlockButton_2hOPn {
+  padding-inline-start: 10px;
+  padding-inline-end: 10px;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
 @keyframes quickaccessvoicecontrolssteamdeck_BackgroundAnimation_23GbG {
   from {
     background-position: 0 100%;
@@ -20761,120 +20934,6 @@ a.dynamiclinkcard_DynamicLinkBox_3OFDU:hover {
   background-color: #ff0;
   border-radius: 50%;
   overflow: hidden;
-}
-.chatnotice_ChatNoticeCtn_3MakJ {
-  width: 100%;
-  box-shadow: 0px 4px 8px #000;
-  z-index: 2;
-  position: relative;
-}
-.chatnotice_ChatNoticeBody_2sTqA {
-  display: flex;
-  flex-direction: row;
-  background-color: #261c1a;
-}
-.chatnotice_ChatNoticeBody_2sTqA .chatnotice_Icon_2l_uD {
-  width: 64px;
-  height: 64px;
-  margin: 8px;
-  flex-grow: 2;
-  max-width: 64px;
-}
-.chatnotice_ChatNoticeBody_2sTqA
-  .chatnotice_Icon_2l_uD.chatnotice_Danger_2FDiq
-  .SVGIcon_Caution
-  .exclamation
-  path {
-  fill: #f34c2b;
-}
-.chatnotice_ChatNoticeBody_2sTqA
-  .chatnotice_Icon_2l_uD.chatnotice_Danger_2FDiq
-  svg
-  line,
-.chatnotice_ChatNoticeBody_2sTqA
-  .chatnotice_Icon_2l_uD.chatnotice_Danger_2FDiq
-  svg
-  path {
-  stroke: #f34c2b;
-  fill: rgba(243, 76, 43, 0.267);
-}
-.chatnotice_ChatNoticeBody_2sTqA .chatnotice_Explanation_3rhEC {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  margin: 12px 0px;
-  flex: 1;
-}
-.chatnotice_ChatNoticeBody_2sTqA .chatnotice_Explanation_3rhEC div {
-  margin-bottom: 6px;
-  user-select: none;
-}
-.chatnotice_ChatNoticeBody_2sTqA .chatnotice_Buttons_1MuKX {
-  display: flex;
-  flex-direction: column;
-  margin-inline-start: 15px;
-  margin-inline-end: 15px;
-  justify-content: center;
-  gap: 6px;
-}
-.DialogButton.chatnotice_ChatNoticeActionButton_3uFJX {
-  padding-inline-start: 8px;
-  padding-inline-end: 8px;
-  width: fit-content;
-}
-.chatnotice_ChatNoticeBody_2sTqA .chatnotice_ExplanationHeader_17ZEb {
-  font-size: 14px;
-  color: #f34c2b;
-}
-.chatnotice_ChatNoticeBody_2sTqA .chatnotice_ExplanationBody_1Z7xU {
-  font-size: 12px;
-  color: #bb887e;
-}
-.chatnotice_ChatNoticeBody_2sTqA .chatnotice_ExplanationLinkCtn_1dEmZ {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-}
-.chatnotice_ChatNoticeBody_2sTqA .chatnotice_ExplanationLinkCtn_1dEmZ a {
-  align-self: flex-start;
-  font-size: 10px;
-  color: #e0b3aa;
-  text-decoration: none;
-  text-transform: uppercase;
-  border-bottom: 1px dotted rgba(187, 136, 126, 0.5);
-}
-.chatnotice_ChatNoticeBody_2sTqA .chatnotice_ExplanationLinkCtn_1dEmZ a:hover,
-.chatnotice_ChatNoticeBody_2sTqA .chatnotice_ExplanationLinkCtn_1dEmZ a:focus {
-  color: #f3dcd7;
-  border-bottom: 1px dotted #bb887e;
-}
-.chatnotice_DismissButton_2_0Bf {
-  width: 14px;
-  height: 14px;
-  margin-inline-start: 8px;
-  margin-inline-end: 8px;
-  margin-top: 8px;
-  flex-shrink: 0;
-  cursor: pointer;
-}
-.chatnotice_DismissButton_2_0Bf .SVGIcon_X_Line line {
-  stroke: #71767f;
-  stroke-width: 30px;
-}
-.chatnotice_DismissButton_2_0Bf:hover .SVGIcon_X_Line line,
-.chatnotice_DismissButton_2_0Bf:focus .SVGIcon_X_Line line {
-  stroke: #fff;
-  stroke-width: 30px;
-}
-.chatnotice_DisconnectBlocker_3RYtb {
-  display: none;
-  position: absolute;
-  inset: 0;
-  z-index: 4;
-  pointer-events: all;
-}
-.errorDisconnected .chatnotice_DisconnectBlocker_3RYtb {
-  display: block;
 }
 .gamepadicons_PillShapedIcon_Jz6GF {
   height: 30px;
@@ -48336,6 +48395,15 @@ html.web_chat_frame .perf_timing_area {
 }
 .ChatMessageBlock {
   position: relative;
+}
+.ChatMessageBlock_SuspiciousSender {
+  --suspicious-sender-horiz-padding: 6px;
+  background: rgba(243, 76, 43, 0.06);
+  border-inline-start: 2px solid rgba(243, 76, 43, 0.6);
+  border-radius: 3px;
+  padding: 0px var(--suspicious-sender-horiz-padding) 4px
+    var(--suspicious-sender-horiz-padding);
+  margin-top: 4px;
 }
 .ChatMessageBlock_HighlightDelete .ChatSpeaker,
 .ChatMessageBlock_HighlightDelete .msg {

@@ -6,14 +6,14 @@
     "SellOnMarket_Volume": "Menge: %1$s in den letzten 24 Stunden verkauft",
     "SellOnMarket_SellThisItem": "Verkaufen",
     "ItemDescription_Tags": "Tags: ",
-    "ItemDescription_TradeProtected": "Handelsgeschützt",
-    "ItemDescription_TradeProtectedTooltip": "Handelsgeschützte Gegenstände können nicht verändert, verbraucht oder transferiert werden.",
+    "ItemDescription_TradeProtected": "Handelsgeschu00FCtzt",
+    "ItemDescription_TradeProtectedTooltip": "Handelsgeschu00FCtzte Gegenstu00E4nde ku00F6nnen nicht veru00E4ndert, verbraucht oder transferiert werden.",
     "ItemDescription_AssetPropertyLabelColonValue": "%1$s: %2$s",
     "ItemDescription_ListedItem": "Auf dem Markt",
-    "ItemDescription_ListedItemTooltip": "Während dieser Gegenstand zum Verkauf steht, kann er nicht verändert oder verbraucht werden.",
+    "ItemDescription_ListedItemTooltip": "Wu00E4hrend dieser Gegenstand zum Verkauf steht, kann er nicht veru00E4ndert oder verbraucht werden.",
     "ItemDescription_ThisItemIsWorthGems": "Gegenstandswert: %1$s",
     "ItemDescription_XGems": "%1$s Edelsteine",
-    "ItemDescription_TurnIntoGemsButton": "In Edelsteine umwandeln …",
-    "ItemDescription_GemDescription": "Dieser Gegenstand kann in Edelsteine umgewandelt werden, die dann zur Herstellung von Booster-Packs genutzt werden können>. <1>Mehr erfahren</1>.",
-    "ItemDescription_AccessoriesList_Title": "Zubehör"
+    "ItemDescription_TurnIntoGemsButton": "In Edelsteine umwandelnu00A0u2026",
+    "ItemDescription_GemDescription": "Dieser Gegenstand kann in Edelsteine umgewandelt werden, die dann zur Herstellung von Booster-Packs genutzt werden ku00F6nnen>. <1>Mehr erfahren</1>.",
+    "ItemDescription_AccessoriesList_Title": "Zubehu00F6r"
 }

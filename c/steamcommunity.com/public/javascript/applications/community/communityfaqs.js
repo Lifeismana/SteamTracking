@@ -1,194 +1,3608 @@
-(self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-  [3781],
-  {
-    chunkid: (module) => {
-      module.exports = {
-        FAQDashboardPage: "_59oO6wefB3rQ2vFht_b50",
-        FAQDashboard: "tIxuPSrF_izJyj_xSBAu",
-        DashboardHeader: "_1fVLwDLknGBvNqXvbz5ieq",
-        DashboardHeaderTitle: "_14k5Nx2pbJlfrumOKYilwb",
-        DashboardHeaderButtonCtn: "MuQkNExZZvUGyooMU1W63",
-        DashboardCreateFAQButton: "_3VW3jphjSrFsWyh8CQ7qkl",
-        CreateFAQDialog: "_2053etsNH77sMt0UGZ7Gkf",
-        NameInput: "_3qsK9sWwA8-5XRJijxOyAq",
-        ErrorMsg: "_1MkpMd3IngFLh9Lj1YdVaZ",
-        DashboardListHeaderRow: "_1m9z-QOtKB83PPSMvFp2qj",
-        EntryColumn: "_29DifZl5OcFsMPwjVeSKul",
-        NameCol: "_1fuClf4BBhhdkGW2AiR9xz",
-        DataCol: "_31hg_XZCfqD4KpN77UoWpB",
-        ClickableHeader: "_2dUdD5Bxvl5g7AXm74jlY-",
-        DownArrow: "_30b5IzshpNjcRcDjnbiHHV",
-        Selected: "_3_SL2rzskqZJldo0NVDRPy",
-        BadCount: "_1kNWcaTgntfwrNOrNOdLEs",
-        Visible: "pbhW7T1VOciPsM4805I5i",
-        Hidden: "_2sNUoEB66JUcm-Y3kKrdL8",
-        GoodCount: "M3TAP-1MxenvBQsT-eXlR",
-        DateToolTip: "Q8C5pKiJQWiQxpeE9g5A0",
-        DashboardEntry: "kcPTyksATgiPUcmwAwGOe",
-        EntryInternalName: "_1sL5ykMb1b1-WfHxwf8L1K",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        FAQEditPage: "_2QALaQ13bEoS_oLFjL1prx",
-        FAQMenuCtn: "_1DISv1JGZ0pxbGtYHeBsJU",
-        FAQEditorCtn: "sjpl-ow0jbdSysRG8jsFA",
-        FAQEditor: "_3YIwjQZlP_YdCZH2DIj5f7",
-        Columns: "_2O3puXm5doASD7CnAby6Uh",
-        LeftCol: "_3TyuR_ycmrQIlt-wuVBtaD",
-        RightCol: "_33CjP7i4tMRCeZEcf-utD8",
-        EditorSaveButton: "_22iwdea7XXbiuZrrLZUU11",
-        EditorLabel: "_3jk92bsX5BdG6dMFNGNNKa",
-        EditorTitleField: "_37R-2WttVdEqucotluEzW_",
-        EditorTitleFieldInput: "_2A5OEhQlo5sJWuhIqlkEJL",
-        TextPaneContainer: "X8FYVDc-yIJ2Vmr_KQW2b",
-        EditorPane: "B4ngKzLlL1gvAnj9Vdbt4",
-        EditorPaneTextArea: "_1g6voAO3uBDdj9W9WjBB8z",
-        ErrorCtn: "_1l94et1-5wPLcAMJ3Bx8qq",
-        ErrorMsg: "_1LIvQOeIKBZzearuGAM7FW",
-        EscapeLink: "_3tlrRmfmxrdkbJRk48aZDb",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        LanguageListDialog: "vp5PFufZdDer7tZRg3jrX",
-        ChecklistHeader: "_1VzmzM94XEt-kbk5N0Xcwm",
-        ChecklistRows: "_3qgdWDwppIPmVUI3_-IoWg",
-        CheckAll: "_1I_jAq3MJfhGnx3-H9fkRc",
-        LanguageCheckbox: "_1llVI6GfKRzbQRSS7bS9sI",
-        LanguageCheckboxLabel: "_2S_PZcuwqHb1BUGrd6Xvnk",
-        Language: "_13DIWnUBOf_d2HSzZWW_72",
-        Warning: "hGncGWqE9kTLXhxQe4SJ2",
-        ImportProgressBar: "_1s2UZCHSCadxdeXsd6fbj6",
-        ProgressMarker: "_2q-TdYLM1Zgn9tPZ3_1wCx",
-        CurrentFAQ: "_1MsSLkJk0mX4ITyxy8mpEJ",
-        LanguageList: "_28hYlCdWipXh9xN8jgf8ZT",
-        ImportResults: "_2FKxIYwCCRBm_BH0BsKyem",
-        ImportResultLabel: "_1_icUC7cNPpNZvq_qgQ33D",
-        ImportResult: "_3h1LkNfeVLc44BAuHSBudK",
-        UrlCode: "MxoxU6nWqZvCxgOlJxTvE",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        LeftMenu: "_1txmemUH3rosQe71mZfr0q",
-        Section: "_2j-hhYTlI8Ntg1JrTWINdL",
-        SectionContents: "_3lz4JUNpNDnahEyzj1eZkK",
-        SectionDescription: "_3L68i4ZAokqaCqqk7yhIau",
-        SectionTitle: "_23FTZuq9MQrukHrWgZMKrp",
-        VisibilityCtn: "_16zchT5YPTg-YRcLmO7T1N",
-        StatusRow: "_272D2JP0YHWH_sY_IP2MJQ",
-        Global: "_1DcbV58-8H0QRtU4wmimaO",
-        China: "_2cUtBQSP-uCM363ee58k-t",
-        StatusBtnCtn: "HJUHTdNtL70vwUqYSh-FD",
-        PublishCtn: "_2syC3PimmI-5viillwUd6d",
-        PublishStatus: "uvzu3hbcsBlAoiPdATNbf",
-        PublishBtn: "_3P52vp7DdW5ZKRbKrEsr64",
-        FaqStatusTable: "pCBfTw19y3z1htRCTD7Sk",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        Never: "_8rlUGGeBnYbuZpSoMtPGY",
-        Warning: "pZM2L30-1FOU9cbzqy1AQ",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        FAQUnPublished: "erZyIOjQA9q0Wv28vQPiN",
-        FAQPublished: "_13Wz0jEDJuyCYIYT-3Nk8X",
-        EditorInternalNameLabel: "_3fAcXrEhyNYZKLFAviS1gi",
-        EditorInternalName: "_3A9ciQBxaVrGEWI6kD4zod",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        ErrorCtn: "_2Dpwh3MWbH9ND0PlNK8G7M",
-        ErrorMsg: "_2dTNxR8PrLvqBwSUnhUVh5",
-        EscapeLink: "_19BjjT3X_AZgLiL1pFYCDG",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        DisplayAdminPanel_Spacer: "_3TzVFi3VdHXUk1AerBpZc-",
-        EventEditorTopBarContainer: "_1Afx7wzva3-ghxcAy6EQhs",
-        EventEditorBottomBar: "_1noS58WsfHN3KuGVDzlv9r",
-        EventPublished: "_3zTXCKuKmaCdEoxSBTzPAa",
-        EventUnPublished: "pjxnm0P9LLWFXCwsaDKUa",
-        AdditionalContent: "_2fUl5vCnrlT9P7kskRIiWx",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        SavedImage: "_1y3QVgsz4daj3E3S5wzwt-",
-        SaveButtonCtn: "_2Edwnbc-tjinTT_s7zIKTd",
-        SaveButton: "_2hloqzkRkAWkw50l4XPN-N",
-        HaventSavedInAShortTime: "_3xoBR2gVk2F0Bmejh20Yhl",
-        HaventSavedInALongTime: "_1bg505mDp3agK0eHP0NoxI",
-        Pulse: "_3oWE-wt1PQ7Rv2IJ0vCmO",
-        SaveSuccessNotification: "_1gabCN13JTZzv2A2fXqGve",
-        SaveSuccessTitle: "_1d5GXYH4AY9WFkoszJVzsQ",
-        slideIn: "_2kGhkRiew8we__yyM1878e",
-        slideOut: "_2oAIIbl5uoREv1Es4TZkUQ",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        ValveCrowdInSyncCtn: "_8MIrt7rQXkA0xE5sAjOee",
-        ValveCrowdInSyncLabel: "_22b0C1Xi03QNdTFKsYypHR",
-        SyncPanelError: "yn_yu2EaUigYFm9QQAD7o",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        FAQViewPage: "Ya530FSNxJ-2gfv0qDZYH",
-        SupportTitle: "_2BcDfuiFQ7l7yWM5Sa57S0",
-        Columns: "HGDD29L4B7rnyrKITC09v",
-        LeftCol: "o2y9UpxW9WmUMsLua3flf",
-        TopColorBar: "_2n5PMCTXeqy_BxVZeg6Avp",
-        RightCol: "_2Ta3cow-y-8kUgXcCrCP97",
-        SectionCtn: "_2wa31Vkjhr311VBcF_ynDO",
-        FAQTopicCtn: "_38QJomTcPqyUVRdLpfVjGA",
-        FAQTitle: "_3aInU3KIhHHBWOSOjNvcVa",
-        FAQContent: "_2dSVnHyS9mTV4jJctbYCcy",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        InfoRow: "_3AG-7BbBE7Sw0efJrEb417",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        Section: "_3S-XzUnd8sYIE7sDuLmpPo",
-        CommunityHelp: "_2TGFIDdCmMB614_-hieBc7",
-        NeedHelp: "_1DywXfNVrbQvDpTJXgd18z",
-        LeftCol: "_3gfCnqvp6FV0m9PqL9XMq",
-        TopicHeader: "_3X6huZLPQI8y6LirxSv4Gy",
-        CenterButtonCtn: "_3sZ58WE85Tqs8Bv8g-quYc",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        Label: "_1LhItwhLHspVcQdfcbd2Sg",
-        ImportLocSampleButtonCtn: "D-1dlROLVuva-sb6tFgwU",
-        SampleTitle: "_9189ilzQ3YES-a-6DyBhR",
-        ImportButton: "WyfyxbGrKQq8cKMK5kfxE",
-      };
-    },
-    chunkid: function (_, _) {
-      var _, _, _;
-      (_ = []),
-        (_ = function _() {
-          var _,
+(() => {
+  (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
+    [3781],
+    {
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        function _(_) {
+          const _ = (0, _._)(),
+            _ = (0, _._)({
+              queryKey: _.queryKey,
+              queryFn: async () => _.queryFn(_, ..._.args),
+            });
+          return _.children(_);
+        }
+        function _(_, _) {
+          const _ = (0, _._)();
+          return (0, _._)({
+            queryKey: [
+              "crowdin_metadata_for_clan_event",
+              _.ConvertTo64BitString(),
+              _,
+            ],
+            queryFn: async () => {
+              const _ = _._.Init(_._);
+              _.Body().set_steamid(_.ConvertTo64BitString()),
+                _.Body().set_itemid(_);
+              const _ = await _._.GetClanEventCrowdInMetadata(_, _);
+              return _.GetEResult() != _._ ? null : _.Body().toObject();
+            },
+          });
+        }
+        async function _(_, _) {
+          const _ = _._.Init(_._);
+          _.Body().set_steamid(_);
+          const _ = await _._.GetClanCrowdInMetadata(_, _);
+          if (_.GetEResult() === _._)
+            return {
+              crowdin_project_id: null,
+              crowdin_directory_id: null,
+              push_by_default: !1,
+            };
+          if (_.GetEResult() !== _._) throw _.GetEResult();
+          return _.Body().toObject();
+        }
+        function _(_) {
+          const _ = (0, _._)();
+          return (0, _._)({
+            queryKey: ["clan_crowdin_mapping", _],
+            queryFn: async () => await _(_, _),
+          });
+        }
+        function _(_) {
+          return _({
+            queryKey: ["clan_crowdin_mapping", _.clanSteamId],
+            queryFn: _,
+            args: [_.clanSteamId],
+            children: _.children,
+          });
+        }
+        const _ = (0, _.createContext)(null);
+        function _(_) {
+          const _ = _(_.clanInfo.clanSteamID.ConvertTo64BitString());
+          let _ = !1;
+          return (
+            _.isSuccess && (_ = _.data.push_by_default),
+            (0, _.jsx)(_.Provider, {
+              value: {
+                clanSteamId: _.clanInfo.clanSteamID,
+                bPushToCrowdInByDefault: _,
+              },
+              children: _.children,
+            })
+          );
+        }
+        async function _(_, _, _, _) {
+          const _ = _._.Init(_._);
+          _.Body().set_language(_),
+            _.Body().set_steamid(_),
+            _.Body().set_itemid(_);
+          const _ = await _._.FetchTranslationFromCrowdIn(_, _);
+          if (_.GetEResult() != _._)
+            throw new Error(
+              `Error from FetchLocalizationForClanEventFromCrowdIn: ${_.GetErrorMessage()} (${_.GetEResult()})`,
+            );
+          return _.Body().toObject();
+        }
+        function _(_, _, _) {
+          const _ = (0, _._)();
+          return (0, _._)({
+            mutationKey: ["fetch_translation_for_clan_event", _, _, _],
+            mutationFn: async function () {
+              return await _(_, _, _, _);
+            },
+            retry: !1,
+          });
+        }
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports),
+          __webpack_require__._(module_exports, {
+            FAQRoutes: () => _,
+            default: () => _,
+          });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = ((_) => (
+            (_.k_eView = "view"),
+            (_.k_eCommunityView = "communityview"),
+            (_.k_eCommunityEdit = "edit"),
+            (_.k_eCommunityDashboard = "dashboard"),
+            (_.k_eCommunityPreview = "preview"),
+            _
+          ))(_ || {});
+        const _ = (_) => {
+          const { route: _, faqid: _ } = _,
+            _ = _(_, _);
+          return _.bForceRedirect
+            ? (0, _.jsx)(_._, {
+                push: !0,
+                _: _,
+              })
+            : _.bForceAnchor
+              ? (0, _.jsx)("a", {
+                  href: _._.COMMUNITY_BASE_URL.slice(0, -1) + _,
+                  className: _.className,
+                  children: _.children,
+                })
+              : (0, _.jsx)(_._, {
+                  _: _,
+                  className: _.className,
+                  children: _.children,
+                });
+        };
+        function _(_, _) {
+          let _ = "/faqs/" + _._.VANITY_ID + "/";
+          switch (_) {
+            case "view":
+            case "communityview":
+              _ += "view/" + (0, _._)(_);
+              break;
+            case "edit":
+              _ += "edit/" + (0, _._)(_);
+              break;
+            case "dashboard":
+              _ += "dashboard";
+              break;
+            case "preview":
+              _ += "preview/" + (0, _._)(_);
+              break;
+          }
+          return _;
+        }
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        const _ = "title",
+          _ = "content";
+        function _(_, _) {
+          var _, _;
+          let _ = new _._();
+          for (let _ = _.Bhc; _ < _.bP9; ++_)
+            (_.BHasSomeTextForLanguage(_) || _.Bhc == _) &&
+              (_.SetLocalization(
+                _,
+                _,
+                (_ = _.GetDraftTitle(_)) != null ? _ : "",
+              ),
+              _.SetLocalization(
+                _,
+                _,
+                (_ = _.GetDraftContent(_)) != null ? _ : "",
+              ));
+          return _;
+        }
+        function _(_, _, _) {
+          const _ = new Set(),
+            _ = _.GetSortedTokenList();
+          return (
+            (0, _._)(() => {
+              _.forEach((_) => {
+                let _ = !1;
+                _.forEach((_) => {
+                  const _ = _.GetLocalization(_, _) || "";
+                  if (_ === _) {
+                    const _ = _.GetDraftTitle(_);
+                    (_ || (_ && _.length > 0)) &&
+                      (_.SetDraftTitle(_, _), (_ = !0));
+                  }
+                  if (_ === _) {
+                    const _ = _.GetDraftContent(_);
+                    (_ || (_ && _.length > 0)) &&
+                      (_.SetDraftContent(_, _), (_ = !0));
+                  }
+                }),
+                  _.add(_);
+              });
+            }),
+            Array.from(_)
+          );
+        }
+        const _ = (_) => {
+            const { draft: _, eLanguage: _ } = _;
+            return (0, _.jsxs)("div", {
+              className: _.FlexRowContainer,
+              children: [
+                (0, _.jsx)(_, {
+                  draft: _,
+                  eLanguage: _,
+                }),
+                (0, _.jsx)(_._, {
+                  strToolTip: (0, _._)("#FAQEditor_Loc_Import_ttip"),
+                  strLabel: (0, _._)("#EventEditor_Loc_Import_Short"),
+                  fnOnImportLocData: (_, _) => _(_, _, _),
+                }),
+              ],
+            });
+          },
+          _ = (_) => {
+            const { draft: _ } = _;
+            return (0, _.jsxs)("div", {
+              className: _.FlexRowContainer,
+              children: [
+                (0, _.jsx)("div", {
+                  className: _.EditPreviewButton,
+                  onClick: (_) => {
+                    (0, _._)(
+                      (0, _.jsx)(_, {
+                        direction: "export",
+                        draft: _,
+                        children: " ",
+                      }),
+                      (0, _._)(_),
+                    );
+                  },
+                  children: (0, _._)("#EventEditor_Loc_Export_Short"),
+                }),
+                (0, _.jsx)("div", {
+                  className: _.EditPreviewButton,
+                  onClick: (_) => {
+                    (0, _._)(
+                      (0, _.jsx)(_, {
+                        direction: "import",
+                        draft: _,
+                        children: " ",
+                      }),
+                      (0, _._)(_),
+                    );
+                  },
+                  children: (0, _._)("#EventEditor_Loc_Import_Short"),
+                }),
+              ],
+            });
+          },
+          _ = (_) => {
+            const { closeModal: _, direction: _, draft: _ } = _,
+              [_, _] = _.useState(!1),
+              [_, _] = _.useState(new Array()),
+              _ = _ || _.length == 0,
+              _ = async () => {
+                _(!0);
+                try {
+                  _ == "import"
+                    ? await _._.Get().ImportNonEnglishDraftsFromCrowdin(
+                        _.GetFAQID(),
+                        _,
+                      )
+                    : await _._.Get().ExportEnglishDraftToCrowdin(_.GetFAQID());
+                } catch (_) {
+                  console.error(_);
+                }
+                _(!1);
+              },
+              _ = (0, _._)(
+                _ == "import"
+                  ? "#EventEditor_Loc_CrowdinIntegration_ImportTitle"
+                  : "#EventEditor_Loc_CrowdinIntegration_ExportTitle",
+              ),
+              _ = (0, _._)(
+                _ == "import"
+                  ? "#EventEditor_Loc_Import_Crowdin_Confirm"
+                  : "#EventEditor_Loc_Export_Crowdin_Confirm",
+              ),
+              _ =
+                _ == "import"
+                  ? (0, _.jsx)(_, {
+                      draft: _,
+                      rgAllLanguages: _,
+                      rgLanguagesSelected: _,
+                      fnSelectLanguages: _,
+                    })
+                  : null;
+            return (0, _.jsx)(_._, {
+              className: _.LanguageListDialog,
+              closeModal: _,
+              strTitle: _,
+              strDescription: _,
+              onOK: _,
+              bOKDisabled: _,
+              children: _
+                ? (0, _.jsx)(_._, {
+                    position: "center",
+                  })
+                : _,
+            });
+          },
+          _ = (_) => {
+            const { draft: _, eLanguage: _ } = _;
+            return (0, _.jsx)(_._, {
+              toolTipContent: (0, _._)("#FAQEditor_Loc_Export_ttip"),
+              children: (0, _.jsx)("div", {
+                className: _.EditPreviewButton,
+                onClick: (_) => {
+                  (0, _._)(
+                    (0, _.jsx)(_._, {
+                      strTitle: (0, _._)("#EventEditor_Loc_Export"),
+                      bAlertDialog: !0,
+                      children: (0, _.jsx)(_._, {
+                        fnGetLocData: () => _(_, _),
+                        bShowXML: !0,
+                        bShowCSV: !0,
+                        strFileNamePrefix: "faq",
+                        lang: _,
+                      }),
+                    }),
+                    (0, _._)(_),
+                  );
+                },
+                children: (0, _._)("#EventEditor_Loc_Export_Short"),
+              }),
+            });
+          },
+          _ = [
+            0, 9, 8, 12, 14, 21, 2, 3, 20, 24, 13, 17, 16, 5, 6, 7, 15, 23, 11,
+            4, 19, 25, 18, 1, 10, 28, 26, 22, 27, 29, 30, 31,
+          ],
+          _ = [
+            _.Uu1,
+            _.NFp,
+            _.A4L,
+            _.m2$,
+            _.iQT,
+            _.L3y,
+            _.egf,
+            _.xcz,
+            _.FH6,
+            _.dZ5,
+            _.K91,
+            _.dFE,
+            _.OFl,
+            _.Pn1,
+            _.JBx,
+            _._Q1,
+            _.QT4,
+            _.Lzz,
+            _.kG6,
+            _.GXE,
+            _.HkE,
+            _.FHN,
+            _.wWt,
+            _.$ys,
+            _.RhO,
+            _.JOj,
+            _.kSD,
+            _.Ze9,
+            _.Vlm,
+          ],
+          _ = (_) => {
+            const {
+                draft: _,
+                rgAllLanguages: _,
+                rgLanguagesSelected: _,
+                fnSelectLanguages: _,
+              } = _,
+              _ = (_, _) => {
+                const _ = _.includes(_);
+                if (_ && !_) {
+                  const _ = _.slice();
+                  _.push(_), _(_);
+                } else if (!_ && _) {
+                  const _ = _.filter((_) => _ !== _);
+                  _(_);
+                }
+              },
+              _ = (_) => {
+                _(_ ? _.slice() : []);
+              },
+              _ = _.sort((_, _) => _[_] - _[_]).map((_) =>
+                (0, _.jsx)(
+                  _,
+                  {
+                    draft: _,
+                    eLang: _,
+                    bInitialState: _.includes(_),
+                    fnOnChecked: _,
+                  },
+                  "langrow" + _ + _.GetFAQID(),
+                ),
+              );
+            return (0, _.jsxs)(_.Fragment, {
+              children: [
+                (0, _.jsxs)("div", {
+                  className: _.ChecklistHeader,
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _.Language,
+                      children: (0, _._)("#FAQCrowdin_LanguageHeader"),
+                    }),
+                    (0, _.jsx)("div", {
+                      className: _.Timestamp,
+                      children: (0, _._)("#FAQCrowdin_DraftTimestampHeader"),
+                    }),
+                  ],
+                }),
+                (0, _.jsx)(_._, {
+                  className: _.CheckAll,
+                  label: (0, _._)("#FAQCrowdin_SelectAllCheckboxes"),
+                  onChange: _,
+                }),
+                (0, _.jsx)("div", {
+                  className: _.ChecklistRows,
+                  children:
+                    _ != null
+                      ? _
+                      : (0, _.jsx)("div", {
+                          children: (0, _._)("#FAQCrowdin_NoDraftFound"),
+                        }),
+                }),
+              ],
+            });
+          },
+          _ = (_) => {
+            var _;
+            const { draft: _, eLang: _, bInitialState: _, fnOnChecked: _ } = _,
+              _ = _.GetLastSavedDraftVersion(_),
+              _ = _
+                ? _._.InitFromAccountID(Number.parseInt(_.author_account_id))
+                : null,
+              { data: _ } = (0, _._)(_ == null ? void 0 : _.GetAccountID()),
+              _ = _
+                ? (0, _._)(
+                    "#FAQCrowdin_SavedAtTimeByAuthor",
+                    (0, _._)(_.timestamp) +
+                      " @ " +
+                      (0, _._)(_.timestamp, {
+                        bForce24HourClock: !1,
+                      }),
+                    (_ = _ == null ? void 0 : _.m_strPlayerName) != null
+                      ? _
+                      : _.author_account_id,
+                  )
+                : (0, _._)("#FAQCrowdin_NoDraftFound"),
+              _ = (0, _.jsxs)("div", {
+                className: _.LanguageCheckboxLabel,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _.Language,
+                    children: (0, _._)("#Language_" + (0, _.LgB)(_)),
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _.Timestamp,
+                    children: _,
+                  }),
+                ],
+              });
+            return (0, _.jsx)(_._, {
+              className: _.LanguageCheckbox,
+              label: _,
+              checked: _,
+              onChange: (_) => _(_, _),
+            });
+          };
+        function _(_) {
+          const [_, _] = (0, _._)(),
+            [_, _] = _.useState(0),
+            [_, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
+            [_, _] = _.useState(null),
+            _ = (0, _._)("CrowdinImportDialog"),
+            _ = _.useRef([]),
+            _ = async () => {
+              _(!0);
+              for (let _ = 0; _ < _.length; _++) {
+                _(_);
+                const _ = _[_],
+                  _ = [],
+                  _ = 5;
+                for (let _ = 0; _ < _.length; _ += _) {
+                  const _ = _.slice(_, _ + _);
+                  _.push(
+                    _._.Get().ImportNonEnglishDraftsFromCrowdin(_.faq_id, _, _),
+                  );
+                }
+                await Promise.all(_),
+                  _._.Get().BHasLiveEnglishVersion(_.faq_id)
+                    ? ((_.current[_] = _._.Get().GetNonEnglishDraftsToPublish(
+                        _.faq_id,
+                      )),
+                      console.log(
+                        "Going to publish FAQ",
+                        _.faq_id,
+                        _.current[_].map((_) => (0, _.LgB)(_)),
+                      ))
+                    : console.log("No live english version for:", _.faq_id);
+              }
+              for (let _ = 0; _ < _.current.length; _++) {
+                const _ = _[_],
+                  _ = _.current[_];
+                if ((_ == null ? void 0 : _.length) > 0) {
+                  _(_);
+                  const _ = await _._.Get().PublishDraftByLanguage(_.faq_id, _);
+                  if (_.token.reason) return;
+                  if (_ != _._) {
+                    _((0, _._)("#FAQDashboard_PublishFailed"));
+                    return;
+                  }
+                }
+              }
+              _(!0), _(!1);
+            };
+          if (_)
+            return (0, _.jsx)(_._, {
+              strTitle: (0, _._)("#FAQDashboard_CrowdinToolTitle"),
+              strDescription: _,
+              bAlertDialog: !0,
+              bDestructiveWarning: !0,
+              closeModal: _.closeModal,
+            });
+          if (_)
+            return (0, _.jsx)(_._, {
+              strTitle: (0, _._)("#FAQDashboard_CrowdinToolTitle"),
+              strDescription: (0, _._)("#FAQDashboard_PublishComplete"),
+              bAlertDialog: !0,
+              closeModal: _.closeModal,
+            });
+          const _ = (100 * (_ + 0.5)) / _.length,
+            _ = _[_].internal_name;
+          return (0, _.jsx)(_._, {
+            title: (0, _._)("#FAQDashboard_CrowdinToolTitle"),
+            ..._,
+            onCancel: () => _.cancel("CrowdinImportDialog cancelled"),
+            children: (0, _.jsxs)(_._, {
+              children: [
+                (0, _.jsxs)(_._, {
+                  children: [
+                    (0, _._)(
+                      "#FAQDashboard_CrowdinToolInstructionsWithCount",
+                      _.length,
+                    ),
+                    (0, _.jsx)("div", {
+                      className: _.Warning,
+                      children: (0, _._)("#FAQDashboard_CrowdinToolWarning"),
+                    }),
+                  ],
+                }),
+                (0, _.jsxs)(_._, {
+                  children: [
+                    (0, _.jsx)(_._, {
+                      onClick: _,
+                      disabled: _,
+                      children: (0, _._)("#FAQDashboard_UpdateAllFAQsButton"),
+                    }),
+                    _ &&
+                      (0, _.jsx)(_, {
+                        nProgressPct: _,
+                        strCurrentLabel: _,
+                      }),
+                    _.current.length > 0 &&
+                      (0, _.jsx)(_, {
+                        rgUpdatedLanguagesForAllFAQs: _.current,
+                      }),
+                  ],
+                }),
+              ],
+            }),
+          });
+        }
+        function _(_) {
+          const { nProgressPct: _, strCurrentLabel: _ } = _;
+          return (0, _.jsxs)("div", {
+            children: [
+              (0, _.jsx)("div", {
+                className: _.ImportProgressBar,
+                children: (0, _.jsx)("div", {
+                  className: _.ProgressMarker,
+                  style: {
+                    width: _ + "%",
+                  },
+                }),
+              }),
+              (0, _.jsx)("div", {
+                className: _.CurrentFAQ,
+                children: (0, _._)("#FAQDashboard_CrowdinToolProgress", _),
+              }),
+            ],
+          });
+        }
+        function _(_) {
+          const { rgUpdatedLanguagesForAllFAQs: _ } = _,
+            [_, _] = (0, _._)();
+          return (0, _.jsxs)("div", {
+            className: _.ImportResults,
+            children: [
+              (0, _.jsx)("div", {
+                className: _.ImportResultLabel,
+                children: (0, _._)("#FAQDashboard_CrowdinToolResultsLabel"),
+              }),
+              _.map((_, _) => {
+                const _ = _[_];
+                if (_.length == 0) return null;
+                const _ = _.map((_) => (0, _.wwZ)(_)).join(",");
+                return (0, _.jsx)(
+                  "div",
+                  {
+                    children: (0, _.jsxs)("div", {
+                      className: _.ImportResult,
+                      children: [
+                        (0, _.jsx)(_._, {
+                          toolTipContent: _.internal_name,
+                          strTooltipClassname: _().HoverAboveModal,
+                          nAllowOffscreenPx: 4e4,
+                          className: _.UrlCode,
+                          children: _.url_code + ": ",
+                        }),
+                        (0, _.jsx)(_._, {
+                          toolTipContent: _,
+                          strTooltipClassname: _().HoverAboveModal,
+                          nAllowOffscreenPx: 4e4,
+                          direction: "left",
+                          className: _.LanguageList,
+                          children: _,
+                        }),
+                      ],
+                    }),
+                  },
+                  _.faq_id,
+                );
+              }),
+            ],
+          });
+        }
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_);
+        const _ = (_) => {
+          const { rtTimestamp: _, bShowAsWarning: _ } = _;
+          if (!_)
+            return (0, _.jsx)("div", {
+              className: _().Never,
+              children: (0, _._)("#FAQDashboard_TimeNever"),
+            });
+          const _ = Date.now() / 1e3 - _,
+            _ = _ < 24 * 3600 ? (0, _._)(_, !1, !0) : (0, _._)(_);
+          return (0, _.jsx)(_._, {
+            className: _ && _().Warning,
+            rtFullDate: _,
+            stylesmodule: _(),
+            children: _,
+          });
+        };
+        var _ = ((_) => (
+          (_[(_.k_EFaqID = 0)] = "k_EFaqID"),
+          (_[(_.k_EName = 1)] = "k_EName"),
+          (_[(_.k_EDraftTimestamp = 2)] = "k_EDraftTimestamp"),
+          (_[(_.k_EUpdatedDrafts = 3)] = "k_EUpdatedDrafts"),
+          (_[(_.k_EStaleDrafts = 4)] = "k_EStaleDrafts"),
+          (_[(_.k_EPublished = 5)] = "k_EPublished"),
+          (_[(_.k_ENeedPublish = 6)] = "k_ENeedPublish"),
+          (_[(_.k_EGlobalVisible = 7)] = "k_EGlobalVisible"),
+          (_[(_.k_ESteamChinaVisible = 8)] = "k_ESteamChinaVisible"),
+          _
+        ))(_ || {});
+        const _ = (0, _._)((_) => {
+            const [_, _] = (0, _._)(),
+              [_, _] = _.useState(1),
+              _ = _.map((_) => {
+                const _ = _.per_language_info.find((_) => _.language == _.Bhc),
+                  _ = (_ == null ? void 0 : _.last_update_timestamp) || 0,
+                  _ = Array.from(
+                    _.per_language_info.filter(
+                      (_) =>
+                        _.language != _.Bhc && _.last_update_timestamp >= _,
+                    ),
+                  ).length,
+                  _ = Array.from(
+                    _.per_language_info.filter(
+                      (_) => _.last_update_timestamp < _,
+                    ),
+                  ).length,
+                  _ = Array.from(
+                    _.per_language_info.filter(
+                      (_) =>
+                        _.last_publish_timestamp >= _.last_update_timestamp,
+                    ),
+                  ).length,
+                  _ = Array.from(
+                    _.per_language_info.filter(
+                      (_) => _.last_publish_timestamp < _.last_update_timestamp,
+                    ),
+                  ).length;
+                return [
+                  _.faq_id,
+                  _.internal_name,
+                  _,
+                  _,
+                  _,
+                  _,
+                  _,
+                  _.visible_in_global_realm,
+                  _.visible_in_china_realm,
+                ];
+              }).sort((_, _) => (_ == 1 ? (0, _._)(_[1], _[1]) : _[_] - _[_]));
+            return (
+              (0, _.useEffect)(() => {
+                _._.Get().RemoveAllDirtyDrafts();
+              }, []),
+              (0, _.jsx)("div", {
+                className: _().FAQDashboardPage,
+                children: (0, _.jsxs)("div", {
+                  className: _().FAQDashboard,
+                  children: [
+                    (0, _.jsx)(_, {}),
+                    (0, _.jsx)(_, {
+                      eCurrentSortColumn: _,
+                      SetSortColumn: _,
+                    }),
+                    _.length == 0 &&
+                      (0, _.jsx)("div", {
+                        className: _().ErrorMsg,
+                        children: (0, _._)("#FAQDashboard_Empty"),
+                      }),
+                    _.map((_) =>
+                      (0, _.jsx)(
+                        _,
+                        {
+                          rgColumns: _,
+                        },
+                        _[0],
+                      ),
+                    ),
+                    !_ &&
+                      (0, _.jsx)(_._, {
+                        position: "center",
+                        size: "xlarge",
+                      }),
+                  ],
+                }),
+              })
+            );
+          }),
+          _ = (_) => {
+            const _ = _.useCallback(
+                () =>
+                  (0, _._)((0, _.jsx)(_, {}), window, {
+                    strTitle: (0, _._)("#FAQDashboard_CreateFAQButton"),
+                  }),
+                [],
+              ),
+              _ = _.useCallback(
+                () =>
+                  (0, _._)(
+                    (0, _.jsx)(_, {
+                      bDisableBackgroundDismiss: !0,
+                    }),
+                    window,
+                    {
+                      strTitle: (0, _._)("#FAQDashboard_CrowdinToolTitle"),
+                    },
+                  ),
+                [],
+              );
+            return (0, _.jsxs)("div", {
+              className: _().DashboardHeader,
+              children: [
+                (0, _.jsx)("div", {
+                  className: _().DashboardHeaderTitle,
+                  children: (0, _._)("#FAQDashboard_Header"),
+                }),
+                (0, _.jsxs)("div", {
+                  className: _().DashboardHeaderButtonCtn,
+                  children: [
+                    (0, _.jsx)(_._, {
+                      onClick: _,
+                      children: (0, _._)("#FAQDashboard_CrowdinToolButton"),
+                    }),
+                    (0, _.jsx)(_._, {
+                      onClick: _,
+                      children: (0, _._)("#FAQDashboard_CreateFAQButton"),
+                    }),
+                  ],
+                }),
+              ],
+            });
+          },
+          _ = (_) => {
+            const [_, _] = _.useState("");
+            return (0, _.jsxs)(_._, {
+              onOK: () => {
+                _._.Get().CreateFAQ(_);
+              },
+              bOKDisabled: _.length == 0,
+              closeModal: _.closeModal,
+              className: _().CreateFAQDialog,
+              children: [
+                (0, _.jsx)(_._, {
+                  children: (0, _._)("#FAQDashboard_CreateFAQButton"),
+                }),
+                (0, _.jsx)(_._, {
+                  children: (0, _.jsxs)(_._, {
+                    children: [
+                      (0, _._)("#FAQDashboard_CreateFAQInstructions"),
+                      (0, _.jsx)("input", {
+                        type: "text",
+                        className: _().NameInput,
+                        value: _,
+                        placeholder: (0, _._)("#FAQDashboard_NamePlaceHolder"),
+                        onFocus: (_) => _.target.select(),
+                        onChange: (_) => _(_.currentTarget.value),
+                        maxLength: 120,
+                      }),
+                    ],
+                  }),
+                }),
+              ],
+            });
+          },
+          _ = (_) =>
+            (0, _.jsxs)("div", {
+              className: _().DashboardListHeaderRow,
+              children: [
+                (0, _.jsx)(_, {
+                  strLabelLocToken: "#FAQDashboard_NameColumn",
+                  bIsNameColumn: !0,
+                  eThisColumn: 1,
+                  ..._,
+                }),
+                (0, _.jsx)(_, {
+                  strLabelLocToken: "#FAQDashboard_DraftTimetampColumn",
+                  eThisColumn: 2,
+                  ..._,
+                }),
+                (0, _.jsx)(_, {
+                  strLabelLocToken: "#FAQDashboard_UpdatedLanguagesColumn",
+                  eThisColumn: 3,
+                  ..._,
+                }),
+                (0, _.jsx)(_, {
+                  strLabelLocToken: "#FAQDashboard_StaleLanguagesColumn",
+                  eThisColumn: 4,
+                  ..._,
+                }),
+                (0, _.jsx)(_, {
+                  strLabelLocToken: "#FAQDashboard_PublishedLanguagesColumn",
+                  eThisColumn: 5,
+                  ..._,
+                }),
+                (0, _.jsx)(_, {
+                  strLabelLocToken: "#FAQDashboard_NeedPublishColumn",
+                  eThisColumn: 6,
+                  ..._,
+                }),
+                (0, _.jsx)(_, {
+                  strLabelLocToken: "#FAQDashboard_VisibilityColumn",
+                  eThisColumn: 7,
+                  ..._,
+                }),
+                (0, _.jsx)(_, {
+                  strLabelLocToken: "#FAQDashboard_SteamChinaVisibilityColumn",
+                  eThisColumn: 8,
+                  ..._,
+                }),
+              ],
+            }),
+          _ = (_) => {
+            const {
+                strLabelLocToken: _,
+                bIsNameColumn: _,
+                eThisColumn: _,
+                eCurrentSortColumn: _,
+                SetSortColumn: _,
+              } = _,
+              _ = (0, _._)(
+                _().EntryColumn,
+                _().ClickableHeader,
+                _ ? _().NameCol : _().DataCol,
+                _ == _ && _().Selected,
+              );
+            return (0, _.jsxs)(_._, {
+              toolTipContent: (0, _._)(_ + "_ttip"),
+              direction: "top",
+              className: _,
+              onClick: () => _(_),
+              children: [
+                (0, _._)(_),
+                (0, _.jsx)("div", {
+                  className: _().DownArrow,
+                  children: (0, _.jsx)(_.GB9, {}),
+                }),
+              ],
+            });
+          },
+          _ = (_) => {
+            const { nCount: _, nTotal: _, nGoal: _ } = _;
+            return (0, _.jsx)("div", {
+              className: _ == _ ? _().GoodCount : _().BadCount,
+              children: _ + " / " + _,
+            });
+          },
+          _ = (_) => {
+            const { bIsVisible: _ } = _;
+            return (0, _.jsx)("div", {
+              className: _ ? _().Visible : _().Hidden,
+              children: (0, _._)(
+                _ ? "#FAQDashboard_Visible" : "#FAQDashboard_Invisible",
+              ),
+            });
+          },
+          _ = (_) => {
+            const [_, _, _, _, _, _, _, _, _] = _.rgColumns,
+              _ = _ + _,
+              _ = _ + _;
+            return (0, _.jsxs)(_, {
+              route: _.k_eCommunityEdit,
+              faqid: _,
+              className: _().DashboardEntry,
+              children: [
+                (0, _.jsx)("div", {
+                  className: (0, _._)(_().EntryColumn, _().NameCol),
+                  children: (0, _.jsx)("div", {
+                    className: _().EntryInternalName,
+                    children: _,
+                  }),
+                }),
+                (0, _.jsx)("div", {
+                  className: (0, _._)(_().EntryColumn, _().DataCol),
+                  children: (0, _.jsx)(_, {
+                    rtTimestamp: _,
+                  }),
+                }),
+                (0, _.jsx)("div", {
+                  className: (0, _._)(_().EntryColumn, _().DataCol),
+                  children: (0, _.jsx)(_, {
+                    nCount: _,
+                    nTotal: _,
+                    nGoal: _,
+                  }),
+                }),
+                (0, _.jsx)("div", {
+                  className: (0, _._)(_().EntryColumn, _().DataCol),
+                  children: (0, _.jsx)(_, {
+                    nCount: _,
+                    nTotal: _,
+                    nGoal: 0,
+                  }),
+                }),
+                (0, _.jsx)("div", {
+                  className: (0, _._)(_().EntryColumn, _().DataCol),
+                  children: (0, _.jsx)(_, {
+                    nCount: _,
+                    nTotal: _,
+                    nGoal: _,
+                  }),
+                }),
+                (0, _.jsx)("div", {
+                  className: (0, _._)(_().EntryColumn, _().DataCol),
+                  children: (0, _.jsx)(_, {
+                    nCount: _,
+                    nTotal: _,
+                    nGoal: 0,
+                  }),
+                }),
+                (0, _.jsx)("div", {
+                  className: (0, _._)(_().EntryColumn, _().DataCol),
+                  children: (0, _.jsx)(_, {
+                    bIsVisible: _,
+                  }),
+                }),
+                (0, _.jsx)("div", {
+                  className: (0, _._)(_().EntryColumn, _().DataCol),
+                  children: (0, _.jsx)(_, {
+                    bIsVisible: _,
+                  }),
+                }),
+              ],
+            });
+          },
+          _ = (_) => {
+            _.useEffect(
+              () => (
+                (window.onbeforeunload = () => {
+                  var _;
+                  const _ = _._.Get().GetLoadedDraftObjs();
+                  return ((_ =
+                    _ == null ? void 0 : _.filter((_) => _.BNeedsSaving())) ==
+                  null
+                    ? void 0
+                    : _.length) > 0
+                    ? (0, _._)("#EventEditor_UnsavedChanges")
+                    : null;
+                }),
+                () => {
+                  window.onbeforeunload = () => {};
+                }
+              ),
+              [],
+            );
+            const _ = (_) => {
+              var _, _;
+              const _ = _._.Get().GetLoadedDraftObjs();
+              return ((_ =
+                _ == null ? void 0 : _.filter((_) => _.BNeedsSaving())) == null
+                ? void 0
+                : _.length) > 0 &&
+                (_.pathname == _.DashboardFAQ(_._.VANITY_ID) ||
+                  ((_ = _.pathname) != null &&
+                    _.startsWith(_.ViewFAQ(_._.VANITY_ID, "").slice(0, -1))))
+                ? (0, _._)("#EventEditor_UnsavedChanges")
+                : !0;
+            };
+            return (0, _.jsx)(_._, {
+              message: _,
+            });
+          };
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        const _ = (_) => {
+            const _ = (_) => {
+              (0, _._)(
+                (0, _.jsx)(_, {
+                  draft: _.draft,
+                }),
+                (0, _._)(_),
+              );
+            };
+            return (0, _.jsx)(_._, {
+              toolTipContent: (0, _._)("#FAQEditor_DeleteAction_ttip"),
+              children: (0, _.jsx)("div", {
+                className: (0, _._)(_.EditPreviewButton, _.Delete),
+                onClick: _,
+                children: (0, _._)("#FAQEditor_DeleteAction"),
+              }),
+            });
+          },
+          _ = (_) => {
+            const { draft: _ } = _,
+              _ = () => _.closeModal && _.closeModal(),
+              [_, _] = _.useState(!1),
+              [_, _] = _.useState(void 0);
+            let _ = (0, _.jsx)("div", {
+              children: (0, _._)("#FAQEditor_DeleteDesc"),
+            });
+            return (
+              _
+                ? (_ = (0, _.jsx)(_._, {
+                    position: "center",
+                    size: "medium",
+                    string: (0, _._)("#FAQEditor_DeletingInProgress"),
+                  }))
+                : _ &&
+                  (_ = (0, _.jsx)("div", {
+                    children: (0, _._)(
+                      "Error_Description",
+                      _,
+                      (0, _._)("#Error_GenericFailureDescription"),
+                    ),
+                  })),
+              (0, _.jsx)(_._, {
+                children: (0, _.jsx)(_._, {
+                  onEscKeypress: _,
+                  children: (0, _.jsxs)(_._, {
+                    children: [
+                      (0, _.jsx)(_._, {
+                        children: (0, _._)("#FAQEditor_DeleteAction"),
+                      }),
+                      (0, _.jsx)(_._, {
+                        children: (0, _.jsx)(_._, {
+                          children: _,
+                        }),
+                      }),
+                      (0, _.jsx)(_._, {
+                        children: (0, _.jsx)(_._, {
+                          onCancel: _,
+                          bOKDisabled: !!(_ || _),
+                          strOKText: (0, _._)("#FAQEditor_DeleteAction"),
+                          strCancelText:
+                            _ || _ ? (0, _._)("#Button_OK") : void 0,
+                          onOK: async () => {
+                            _(!0),
+                              _._.Get()
+                                .DeleteFAQ(_.GetFAQID())
+                                .then((_) => {
+                                  if (_ == _._) {
+                                    const _ =
+                                      _._.COMMUNITY_BASE_URL.substr(
+                                        0,
+                                        _._.COMMUNITY_BASE_URL.length - 1,
+                                      ) + _(_.k_eCommunityDashboard);
+                                    window.location.href = _;
+                                  }
+                                  _(_);
+                                })
+                                .catch((_) => {
+                                  const _ = (0, _._)(_);
+                                  console.error(
+                                    "FAQDeleteDialog: hit error: " +
+                                      _.strErrorMsg,
+                                    _,
+                                  ),
+                                    _(_._);
+                                })
+                                .finally(() => _(!1));
+                          },
+                        }),
+                      }),
+                    ],
+                  }),
+                }),
+              })
+            );
+          },
+          _ = (0, _._)((_) => {
+            const { draft: _, bDisabled: _ } = _,
+              _ = _.BNeedsSaving(),
+              _ = (_) => {
+                _ ||
+                  (0, _._)(
+                    _
+                      ? (0, _.jsx)(_._, {
+                          strDescription: (0, _._)(
+                            "#FAQPublish_SaveRequire_ttip",
+                          ),
+                        })
+                      : (0, _.jsx)(_, {
+                          draft: _.draft,
+                        }),
+                    (0, _._)(_),
+                  );
+              };
+            return (0, _.jsx)(_._, {
+              toolTipContent: (0, _._)(
+                _ ? "#FAQPublish_SaveRequire_ttip" : "#FAQPublish_Publish_ttip",
+              ),
+              children: (0, _.jsx)("div", {
+                className: (0, _._)(_.EditPreviewButton, _ && _.Disabled),
+                onClick: _,
+                children: (0, _._)("#FAQPublish_Publish"),
+              }),
+            });
+          }),
+          _ = (_) => {
+            var _;
+            const { draft: _ } = _,
+              _ = () => _.closeModal && _.closeModal(),
+              [_, _] = _.useState(!1),
+              [_, _] = _.useState(void 0),
+              [_, _] = _.useState(void 0),
+              [_, _] = (0, _._)(_.GetFAQID()),
+              [_, _] = _.useState(new Array());
+            let _ = null;
+            if (!_)
+              _ = (0, _.jsx)(_._, {
+                size: "small",
+                position: "center",
+                string: (0, _._)("#FAQPublish_PublishWait"),
+              });
+            else if (_)
+              _ = (0, _.jsx)(_._, {
+                position: "center",
+                size: "medium",
+                string: (0, _._)("#FAQPublish_Publishing"),
+              });
+            else if (_)
+              _ = (0, _.jsx)("div", {
+                children: (0, _._)("#FAQPublish_Success"),
+              });
+            else if (_)
+              _ = (0, _.jsx)("div", {
+                children: (0, _._)(
+                  "#Error_Description",
+                  _,
+                  (0, _._)("#Error_GenericFailureDescription"),
+                ),
+              });
+            else if (!_)
+              _ = (0, _.jsx)("div", {
+                children: (0, _._)("#FAQPublish_LoadError"),
+              });
+            else {
+              const _ =
+                (_ = _.per_language_info) == null
+                  ? void 0
+                  : _.filter(
+                      (_) => _.last_publish_timestamp < _.last_update_timestamp,
+                    ).map((_) => _.language);
+              _ = (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)("div", {
+                    children: (0, _._)("#FAQPublish_Desc"),
+                  }),
+                  (0, _.jsx)("br", {}),
+                  (0, _.jsx)("div", {
+                    children: (0, _._)("#FAQPublish_Desc2"),
+                  }),
+                  (0, _.jsx)("br", {}),
+                  (0, _.jsx)(_, {
+                    draft: _,
+                    rgAllLanguages: _,
+                    rgLanguagesSelected: _,
+                    fnSelectLanguages: _,
+                  }),
+                ],
+              });
+            }
+            return (0, _.jsx)(_._, {
+              children: (0, _.jsx)(_._, {
+                onEscKeypress: _,
+                children: (0, _.jsxs)(_._, {
+                  className: _.LanguageListDialog,
+                  children: [
+                    (0, _.jsx)(_._, {
+                      children: (0, _._)("#FAQPublish_Publish"),
+                    }),
+                    (0, _.jsx)(_._, {
+                      children: (0, _.jsx)(_._, {
+                        children: _,
+                      }),
+                    }),
+                    (0, _.jsx)(_._, {
+                      children: (0, _.jsx)(_._, {
+                        onCancel: _,
+                        bOKDisabled: !!(_ || _ || _ || _.length == 0),
+                        strOKText: (0, _._)("#FAQPublish_Publish"),
+                        strCancelText:
+                          _ || _ || _ ? (0, _._)("#Button_OK") : void 0,
+                        onOK: async () => {
+                          _(!0),
+                            _._.Get()
+                              .PublishDraftByLanguage(_.GetFAQID(), _)
+                              .then((_) => {
+                                _ == _._ && _(!0), _(_);
+                              })
+                              .catch((_) => {
+                                const _ = (0, _._)(_);
+                                console.error(
+                                  "FAQPublishDialog: hit error: " +
+                                    _.strErrorMsg,
+                                  _,
+                                ),
+                                  _(_._);
+                              })
+                              .finally(() => _(!1));
+                        },
+                      }),
+                    }),
+                  ],
+                }),
+              }),
+            });
+          },
+          _ = (_) => {
+            const _ = (_) => {
+              (0, _._)(
+                (0, _.jsx)(_, {
+                  draft: _.draft,
+                }),
+                (0, _._)(_),
+              );
+            };
+            return (0, _.jsx)(_._, {
+              toolTipContent: (0, _._)("#FAQEditor_ChangeVisible_ttip"),
+              children: (0, _.jsx)("div", {
+                className: _.EditPreviewButton,
+                onClick: _,
+                children: (0, _._)("#FAQEditor_EditVisible"),
+              }),
+            });
+          },
+          _ = (_) => {
+            const { draft: _ } = _,
+              _ = () => _.closeModal && _.closeModal(),
+              [_, _] = _.useState(!1),
+              [_, _] = _.useState(void 0),
+              [_, _] = _.useState(void 0),
+              _ = _._.Get().GetFAQArticleSummary(_.GetFAQID()),
+              [_, _] = _.useState(_.visible_in_global_realm),
+              [_, _] = _.useState(_.visible_in_china_realm);
+            let _ = (0, _.jsxs)(_.Fragment, {
+              children: [
+                (0, _.jsx)("div", {
+                  children: (0, _._)("#FAQEditor_ChangeVisible_Desc"),
+                }),
+                (0, _.jsx)(_._, {
+                  label: (0, _._)("#FAQEditor_VisibleInGlobal"),
+                  checked: _,
+                  onChange: (_) => _(_),
+                }),
+                (0, _.jsx)(_._, {
+                  label: (0, _._)("#FAQEditor_VisibleInChina"),
+                  checked: _,
+                  tooltip: (0, _._)("#FAQEditor_VisibleInChina_ttip"),
+                  onChange: (_) => _(_),
+                }),
+              ],
+            });
+            return (
+              _
+                ? (_ = (0, _.jsx)(_._, {
+                    position: "center",
+                    size: "medium",
+                    string: (0, _._)("#FAQEditor_ChangeVisible_InProgress"),
+                  }))
+                : _
+                  ? (_ = (0, _.jsx)("div", {
+                      children: (0, _._)("#FAQEditor_ChangeVisible_Success"),
+                    }))
+                  : _ &&
+                    (_ = (0, _.jsx)("div", {
+                      children: (0, _._)(
+                        "Error_Description",
+                        _,
+                        (0, _._)("#Error_GenericFailureDescription"),
+                      ),
+                    })),
+              (0, _.jsx)(_._, {
+                children: (0, _.jsx)(_._, {
+                  onEscKeypress: _,
+                  children: (0, _.jsxs)(_._, {
+                    children: [
+                      (0, _.jsx)(_._, {
+                        children: (0, _._)("#FAQEditor_ChangeVisible"),
+                      }),
+                      (0, _.jsx)(_._, {
+                        children: (0, _.jsx)(_._, {
+                          children: _,
+                        }),
+                      }),
+                      (0, _.jsx)(_._, {
+                        children: (0, _.jsx)(_._, {
+                          onCancel: _,
+                          bOKDisabled: !!(_ || _ || _),
+                          strOKText: (0, _._)("#FAQEditor_ChangeVisible"),
+                          strCancelText:
+                            _ || _ || _ ? (0, _._)("#Button_OK") : void 0,
+                          onOK: async () => {
+                            _(!0),
+                              _._.Get()
+                                .UpdateVisibility(_.GetFAQID(), _, _)
+                                .then((_) => {
+                                  _ == _._ && _(!0), _(_);
+                                })
+                                .catch((_) => {
+                                  const _ = (0, _._)(_);
+                                  console.error(
+                                    "FAQChangeVisibilityDialog: hit error: " +
+                                      _.strErrorMsg,
+                                    _,
+                                  ),
+                                    _(_._);
+                                })
+                                .finally(() => _(!1));
+                          },
+                        }),
+                      }),
+                    ],
+                  }),
+                }),
+              })
+            );
+          };
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        const _ = (0, _._)((_) => {
+            var _, _, _, _, _;
+            const { draft: _, eLanguage: _ } = _,
+              _ = _.GetFAQID(),
+              [_, _] = (0, _._)(_);
+            if (!_) return null;
+            const _ =
+                (_ =
+                  (_ = _ == null ? void 0 : _.per_language_info) == null
+                    ? void 0
+                    : _.find((_) => _.language == _.Bhc)) == null
+                  ? void 0
+                  : _.last_update_timestamp,
+              _ =
+                (_ = _ == null ? void 0 : _.per_language_info) == null
+                  ? void 0
+                  : _.some(
+                      (_) => _.last_publish_timestamp < _.last_update_timestamp,
+                    ),
+              _ =
+                (_ =
+                  (_ = _ == null ? void 0 : _.per_language_info) == null
+                    ? void 0
+                    : _.slice().sort(
+                        (_, _) => _[_.language] - _[_.language],
+                      )) == null
+                  ? void 0
+                  : _.map((_) =>
+                      (0, _.jsx)(
+                        _,
+                        {
+                          info: _,
+                          rtEnglishUpdateTime: _,
+                        },
+                        _.language,
+                      ),
+                    );
+            return (0, _.jsx)(_._, {
+              children: (0, _.jsxs)("div", {
+                className: _.LeftMenu,
+                children: [
+                  (0, _.jsxs)("div", {
+                    className: _.Section,
+                    children: [
+                      (0, _.jsxs)("div", {
+                        className: _.SectionTitle,
+                        children: [
+                          (0, _._)("#FAQDashboard_VisibilityColumn"),
+                          " ",
+                        ],
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: _.SectionContents,
+                        children: [
+                          (0, _.jsxs)("div", {
+                            className: _.VisibilityCtn,
+                            children: [
+                              (0, _.jsxs)("div", {
+                                className: (0, _._)(_.StatusRow, _.Global),
+                                children: [
+                                  (0, _._)(
+                                    "#FAQDashboard_VisibleInGlobalRealmLabel",
+                                  ),
+                                  "\xA0",
+                                  (0, _.jsx)(_, {
+                                    bIsVisible: _.visible_in_global_realm,
+                                  }),
+                                ],
+                              }),
+                              (0, _.jsxs)("div", {
+                                className: (0, _._)(_.StatusRow, _.China),
+                                children: [
+                                  (0, _._)(
+                                    "#FAQDashboard_VisibleInChinaRealmLabel",
+                                  ),
+                                  "\xA0",
+                                  (0, _.jsx)(_, {
+                                    bIsVisible: _.visible_in_china_realm,
+                                  }),
+                                ],
+                              }),
+                              (0, _.jsx)("div", {
+                                className: _.StatusBtnCtn,
+                                children: (0, _.jsx)(_, {
+                                  draft: _,
+                                }),
+                              }),
+                            ],
+                          }),
+                          (0, _.jsxs)("div", {
+                            className: _.PublishCtn,
+                            children: [
+                              _
+                                ? (0, _.jsx)("div", {
+                                    className: _.PublishStatus,
+                                    children: (0, _._)(
+                                      "#FAQStatus_DraftVersionsDesc",
+                                    ),
+                                  })
+                                : (0, _.jsx)("div", {
+                                    className: _.PublishStatus,
+                                    children: (0, _._)(
+                                      "#FAQStatus_NothingToPublish",
+                                    ),
+                                  }),
+                              (0, _.jsx)("div", {
+                                className: _.PublishBtn,
+                                children: (0, _.jsx)(_, {
+                                  draft: _,
+                                  bDisabled: !_,
+                                }),
+                              }),
+                            ],
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: _.Section,
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _.SectionTitle,
+                        children: (0, _._)("#FAQDashboard_LocalizationSection"),
+                      }),
+                      _._.is_support &&
+                        (0, _.jsx)(_, {
+                          draft: _,
+                        }),
+                      (0, _.jsxs)("div", {
+                        className: _.SectionContents,
+                        children: [
+                          (0, _.jsx)("div", {
+                            className: _.SectionDescription,
+                            children: (0, _._)(
+                              "#FAQDashboard_LocalizationSectionDesc",
+                            ),
+                          }),
+                          (0, _.jsx)(_, {
+                            draft: _,
+                            eLanguage: _,
+                          }),
+                        ],
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: _.SectionContents,
+                        children: [
+                          (0, _.jsx)("div", {
+                            className: _.SectionDescription,
+                            children: (0, _._)(
+                              "#EventEditor_Loc_CrowdinIntegration_Desc",
+                            ),
+                          }),
+                          (0, _.jsx)(_, {
+                            draft: _,
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: _.Section,
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _.SectionTitle,
+                        children: (0, _._)(
+                          "#FAQStatus_LocalizedVersionStatusHeader",
+                        ),
+                      }),
+                      (0, _.jsxs)("table", {
+                        className: _.FaqStatusTable,
+                        children: [
+                          (0, _.jsx)("thead", {
+                            children: (0, _.jsxs)("tr", {
+                              children: [
+                                (0, _.jsx)("th", {
+                                  children: (0, _._)("#LanguageTitle"),
+                                }),
+                                (0, _.jsx)("th", {
+                                  children: (0, _._)("#FAQStatus_LastUpdated"),
+                                }),
+                                (0, _.jsx)("th", {
+                                  children: (0, _._)(
+                                    "#FAQStatus_LastPublished",
+                                  ),
+                                }),
+                              ],
+                            }),
+                          }),
+                          (0, _.jsx)("tbody", {
+                            children: _,
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _.Section,
+                    children: (0, _.jsx)(_, {
+                      draft: _,
+                    }),
+                  }),
+                ],
+              }),
+            });
+          }),
+          _ = (0, _._)((_) => {
+            const { draft: _ } = _,
+              _ = _(_.GetFAQID()),
+              _ = _(_._.CLANSTEAMID, _.GetFAQID()),
+              [_, _] = (0, _.useState)(_.xPp),
+              [_, _] = (0, _.useState)(!1),
+              _ = (_) => {
+                const _ = _.target.value;
+                if (_ === "all") _(_.xPp);
+                else {
+                  const _ = (0, _.sfN)(_);
+                  _(_);
+                }
+              },
+              _ = async (_) => {
+                const _ = _.GetJsonData();
+                let _;
+                _.length === 0 ? (_ = {}) : (_ = JSON.parse(_)),
+                  (_.pushToCrowdIn = _.target.checked),
+                  await _.UpdateJsonData(_);
+              },
+              _ = async (_) => {
+                const _ = _.GetJsonData();
+                let _;
+                _.length === 0 ? (_ = {}) : (_ = JSON.parse(_)),
+                  (_.localizeDraft = _.target.checked),
+                  await _.UpdateJsonData(_);
+              },
+              _ = async () => {
+                _(!0), await _.mutateAsync(_), _(!1), window.location.reload();
+              };
+            let _ = "";
+            return (
+              _.isSuccess &&
+                _.data.crowdin_file_id &&
+                (_ = `https://valve.crowdin.com/editor/${_.data.crowdin_project_id}/${_.data.crowdin_file_id}`),
+              null
+            );
+            return (0, _.jsxs)("div", {
+              className: _.SectionContents,
+              children: [
+                !1,
+                (0, _.jsxs)("div", {
+                  children: [
+                    (0, _.jsx)("input", {
+                      type: "checkbox",
+                      _: "localize_draft",
+                      checked: _.BLocalizeDraft(),
+                      onChange: _,
+                    }),
+                    (0, _.jsx)("label", {
+                      htmlFor: "localize_draft",
+                      children: (0, _._)("#FAQDashboard_CrowdIn_LocalizeDraft"),
+                    }),
+                  ],
+                }),
+                (0, _.jsxs)("div", {
+                  children: [
+                    (0, _.jsx)("input", {
+                      type: "checkbox",
+                      _: "push_to_crowdin",
+                      checked: _.BPushToCrowdIn(),
+                      onChange: _,
+                    }),
+                    (0, _.jsx)("label", {
+                      htmlFor: "push_to_crowdin",
+                      children: (0, _._)(
+                        _.BLocalizeDraft()
+                          ? "#FAQDashboard_CrowdIn_PushOnSave"
+                          : "#FAQDashboard_CrowdIn_PushOnPublish",
+                      ),
+                    }),
+                  ],
+                }),
+                (0, _.jsxs)("div", {
+                  children: [
+                    _.length > 0 &&
+                      (0, _.jsx)("a", {
+                        href: _,
+                        target: "_blank",
+                        children: _,
+                      }),
+                    _.length === 0 &&
+                      (0, _.jsx)(_.Fragment, {
+                        children: "(Not yet pushed to CrowdIn)",
+                      }),
+                  ],
+                }),
+                (0, _.jsxs)("div", {
+                  children: [
+                    (0, _.jsx)(_._, {
+                      onChange: _,
+                    }),
+                    "\xA0",
+                    !_ &&
+                      (0, _.jsx)("button", {
+                        onClick: _,
+                        children: (0, _._)("#FAQDashboard_CrowdIn_Fetch"),
+                      }),
+                    _ &&
+                      (0, _.jsx)(_._, {
+                        size: "small",
+                      }),
+                  ],
+                }),
+              ],
+            });
+          }),
+          _ = (0, _._)((_) => {
+            const { info: _, rtEnglishUpdateTime: _ } = _,
+              _ = !!_ && _ > _.last_update_timestamp,
+              _ = _.last_update_timestamp > _.last_publish_timestamp;
+            return (0, _.jsxs)("tr", {
+              children: [
+                (0, _.jsx)("td", {
+                  children: (0, _._)("#Language_" + (0, _.LgB)(_.language)),
+                }),
+                (0, _.jsx)("td", {
+                  children: (0, _.jsx)(_, {
+                    rtTimestamp: _.last_update_timestamp,
+                    bShowAsWarning: _,
+                  }),
+                }),
+                (0, _.jsx)("td", {
+                  children: (0, _.jsx)(_, {
+                    rtTimestamp: _.last_publish_timestamp,
+                    bShowAsWarning: _,
+                  }),
+                }),
+              ],
+            });
+          });
+        function _(_) {
+          const _ = (0, _._)();
+          return (0, _._)({
+            mutationKey: ["fetch_faq_translation", _],
+            mutationFn: async (_) => {
+              const _ = _._.Init(_._);
+              return (
+                _.Body().set_faq_id(_),
+                _.Body().set_language(_),
+                _.Body().set_steamid(_._.CLANSTEAMID),
+                (await _._.FetchLocalizationFromCrowdIn(_, _)).GetEResult()
+              );
+            },
+          });
+        }
+        function _(_, _) {
+          const _ = (0, _._)();
+          return (0, _._)({
+            queryKey: ["get_faq_crowdin_metadata", _, _],
+            queryFn: async () => {
+              const _ = _._.Init(_._);
+              return (
+                _.Body().set_faq_id(_),
+                _.Body().set_steamid(_),
+                (await _._.GetCrowdInMetadata(_, _)).Body().toObject()
+              );
+            },
+          });
+        }
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        const _ = (0, _._)((_) => {
+            const { draft: _ } = _,
+              _ = _.BNeedsSaving();
+            return (0, _.jsx)("div", {
+              className: "btn_green_steamui btn_medium",
+              onClick: (_) =>
+                (0, _._)(
+                  (0, _.jsx)(_, {
+                    draft: _.draft,
+                  }),
+                  (0, _._)(_),
+                ),
+              children: (0, _.jsxs)("span", {
+                children: [
+                  !_ &&
+                    (0, _.jsx)("img", {
+                      className: _.SavedImage,
+                      src: _._,
+                    }),
+                  (0, _._)(_ ? "#Button_Save" : "#Button_Saved"),
+                ],
+              }),
+            });
+          }),
+          _ = (_) => {
+            const { draft: _, closeModal: _ } = _,
+              [_, _] = _.useState(!0),
+              [_, _] = _.useState(void 0);
+            _.useEffect(() => {
+              (async () => {
+                _(!0);
+                try {
+                  const _ = await _.SaveDrafts();
+                  _(_);
+                } catch (_) {
+                  _(_._),
+                    console.log(
+                      "FAQSaveProgressDialog hit exception " +
+                        (0, _._)(_).strErrorMsg,
+                    );
+                } finally {
+                  _(!1);
+                }
+              })();
+            }, [_]);
+            const _ = _.useId();
+            return (0, _.jsxs)(_._, {
+              "aria-labelledby": _,
+              bAllowFullSize: !0,
+              onCancel: _,
+              closeModal: _,
+              children: [
+                (0, _.jsx)(_._, {
+                  _: _,
+                  children: _
+                    ? (0, _.jsx)("div", {
+                        children: (0, _._)("#FAQSave_Saving"),
+                      })
+                    : (0, _.jsxs)("div", {
+                        children: [
+                          (0, _._)(
+                            _ == _._
+                              ? "#FAQSave_SaveSuccess"
+                              : "#FAQSave_Error",
+                          ),
+                          " ",
+                        ],
+                      }),
+                }),
+                (0, _.jsx)(_._, {
+                  children: _
+                    ? (0, _.jsx)(_._, {
+                        size: "medium",
+                        position: "center",
+                      })
+                    : (0, _.jsx)("div", {
+                        children:
+                          _ == _._
+                            ? (0, _.jsx)("div", {
+                                children: (0, _._)("#FAQSave_SaveSuccess_desc"),
+                              })
+                            : (0, _.jsx)("div", {
+                                children: (0, _._)(
+                                  "#Error_Description",
+                                  _,
+                                  (0, _._)("#Error_GenericFailureDescription"),
+                                ),
+                              }),
+                      }),
+                }),
+                (0, _.jsx)(_._, {
+                  children:
+                    !_ &&
+                    (0, _.jsx)(_._, {
+                      onClick: _,
+                      children: (0, _._)("#Button_OK"),
+                    }),
+                }),
+              ],
+            });
+          };
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_);
+        const _ = (0, _._)((_) => {
+            const { draft: _, bPreview: _ } = _,
+              _ = _.BHasPublished();
+            return (0, _.jsx)(_._, {
+              children: (0, _.jsxs)("div", {
+                className: (0, _._)({
+                  [_.EventEditorTopBarContainer]: !0,
+                  [_.EventUnPublished]: !_ && !_,
+                  [_.EventPublished]: !_ && _,
+                  [_().FAQPreview]: _,
+                }),
+                children: [
+                  (0, _.jsx)(_, {
+                    route: _ ? _.k_eCommunityEdit : _.k_eCommunityDashboard,
+                    faqid: _.GetFAQID(),
+                    className: _().EditPreviewButton,
+                    children: (0, _._)(
+                      _ ? "#FAQEditor_EditFAQ" : "#EventDisplay_EventsDashBtn",
+                    ),
+                  }),
+                  (0, _.jsxs)("div", {
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _().EditorInternalNameLabel,
+                        children: (0, _._)(
+                          _
+                            ? "#FAQEditor_InternalName_Preview"
+                            : "#FAQEditor_InternalName",
+                        ),
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: _().EditorInternalName,
+                        children: [
+                          _.GetFAQInternalName(),
+                          (0, _.jsx)("img", {
+                            src: _._,
+                            onClick: (_) =>
+                              (0, _._)(
+                                (0, _.jsx)(_, {
+                                  draft: _,
+                                }),
+                                (0, _._)(_),
+                              ),
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: _().EventOptions,
+                    children: [
+                      (0, _.jsx)(_._, {
+                        selectedLang: _._.Get().GetCurEditLanguage(),
+                        fnOnLanguageChanged: _._.Get().SetCurEditLanguage,
+                        fnLangHasData: _.BHasSomeTextForLanguage,
+                        fnIsLangSupported: (_) => !0,
+                        fnLastUpdateRTime: _.GetLastTimeLanguageUpdated,
+                        realms: [
+                          _._.k_ESteamRealmGlobal,
+                          _._.k_ESteamRealmChina,
+                        ],
+                      }),
+                      !_ &&
+                        (0, _.jsx)(_, {
+                          route: _.k_eCommunityPreview,
+                          faqid: _.GetFAQID(),
+                          className: _().EditPreviewButton,
+                          children: (0, _._)("#Button_Preview"),
+                        }),
+                    ],
+                  }),
+                ],
+              }),
+            });
+          }),
+          _ = (_) => {
+            const { closeModal: _, draft: _ } = _,
+              [_, _] = _.useState(_.GetFAQInternalName() || ""),
+              [_, _] = _.useState(!1),
+              [_, _] = _.useState(_._),
+              [_, _] = _.useState(!1),
+              _ = async () => {
+                _(!0),
+                  _._.Get()
+                    .UpdateInternalName(_.GetFAQID(), _)
+                    .then((_) => _(_))
+                    .finally(() => {
+                      _(!0);
+                    });
+              };
+            return (0, _.jsxs)(_._, {
+              title: (0, _._)("#FAQEditor_ChangeInternalName"),
+              bAllowFullSize: !0,
+              onCancel: _,
+              closeModal: _,
+              children: [
+                (0, _.jsxs)(_._, {
+                  children: [
+                    (0, _.jsx)("div", {
+                      children: (0, _._)("#FAQEditor_ChangeInternalName_desc"),
+                    }),
+                    (0, _.jsx)("input", {
+                      type: "text",
+                      value: _,
+                      placeholder: (0, _._)("#FAQEditor_ChangeInternalName"),
+                      onFocus: (_) => _.target.select(),
+                      onChange: (_) => _(_.currentTarget.value),
+                      maxLength: 240,
+                      disabled: _,
+                    }),
+                    !!(_ && !_) &&
+                      (0, _.jsx)(_._, {
+                        string: (0, _._)("#Updating"),
+                        position: "center",
+                        size: "medium",
+                      }),
+                    _ &&
+                      (0, _.jsx)("span", {
+                        children:
+                          _ == _._
+                            ? (0, _._)("#EventDisplay_Share_Success")
+                            : (0, _._)(
+                                "#Error_Description",
+                                _,
+                                (0, _._)("#Error_GenericFailureDescription"),
+                              ),
+                      }),
+                  ],
+                }),
+                (0, _.jsx)(_._, {
+                  children: (0, _.jsx)(_._, {
+                    bOKDisabled: _.trim().length == 0 || _,
+                    onCancel: _,
+                    strCancelText: _
+                      ? (0, _._)("#Button_Close")
+                      : (0, _._)("#Button_Cancel"),
+                    onOK: _,
+                  }),
+                }),
+              ],
+            });
+          },
+          _ = (0, _._)((_) => {
+            const { draft: _, eLanguage: _ } = _,
+              _ = _.GetFAQID(),
+              [_, _] = (0, _._)(_),
+              _ = _ && _.per_language_info.find((_) => _.language == _),
+              _ =
+                _ &&
+                ((_._.EREALM == _._.k_ESteamRealmGlobal &&
+                  _.visible_in_global_realm) ||
+                  (_._.EREALM == _._.k_ESteamRealmChina &&
+                    _.visible_in_china_realm)) &&
+                !!(_ != null && _.last_publish_timestamp);
+            return (0, _.jsx)(_._, {
+              children: (0, _.jsx)("div", {
+                className: (0, _._)(_().SaveBackground),
+                children: (0, _.jsxs)("div", {
+                  className: _().FlexRowWrapFlexStartContainer,
+                  style: {
+                    width: "unset",
+                    justifyContent: "center",
+                  },
+                  children: [
+                    (0, _.jsx)(_, {
+                      draft: _,
+                    }),
+                    !!_ &&
+                      (0, _.jsx)("div", {
+                        className: _().EditPreviewButton,
+                        children: (0, _.jsx)("a", {
+                          href: _._.HELP_BASE_URL + "faqs/view/" + _.url_code,
+                          children: (0, _._)("#FAQEditir_ViewLiveFAQ"),
+                        }),
+                      }),
+                  ],
+                }),
+              }),
+            });
+          });
+        var _ = __webpack_require__("chunkid");
+        const _ = (0, _._)((_) => {
+            const { faqid: _ } = _,
+              [_, _] = (0, _._)(_),
+              _ = _.useRef(void 0);
+            if (_) {
+              if (!_)
+                return (0, _.jsx)(_, {
+                  strError: (0, _._)("#FAQEditor_NoFAQFound"),
+                });
+            } else
+              return (0, _.jsx)(_._, {
+                position: "center",
+                size: "xlarge",
+                string: (0, _._)("#Loading"),
+              });
+            const _ = _._.Get().GetCurEditLanguage();
+            return (0, _.jsxs)("div", {
+              children: [
+                (0, _.jsx)(_, {
+                  draft: _,
+                }),
+                (0, _.jsxs)("div", {
+                  className: _().FAQEditPage,
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _().FAQMenuCtn,
+                      children: (0, _.jsx)(_, {
+                        draft: _,
+                        eLanguage: _,
+                      }),
+                    }),
+                    (0, _.jsx)("div", {
+                      className: _().FAQEditorCtn,
+                      children: (0, _.jsx)("div", {
+                        className: _().FAQEditor,
+                        children: (0, _.jsxs)("div", {
+                          className: (0, _._)(_().Columns, _().Columns),
+                          children: [
+                            (0, _.jsxs)("div", {
+                              className: (0, _._)(_().LeftCol, _().LeftCol),
+                              children: [
+                                (0, _.jsx)(_, {
+                                  draft: _,
+                                  eLanguage: _,
+                                }),
+                                (0, _.jsx)(_, {
+                                  bbcodeEditorRef: _,
+                                  draft: _,
+                                  eLanguage: _,
+                                }),
+                              ],
+                            }),
+                            (0, _.jsx)(_, {
+                              draft: _,
+                              bbcodeEditorRef: _,
+                              className: (0, _._)(_().RightCol, _().RightCol),
+                            }),
+                          ],
+                        }),
+                      }),
+                    }),
+                  ],
+                }),
+                (0, _.jsx)(_, {
+                  draft: _,
+                  eLanguage: _,
+                }),
+              ],
+            });
+          }),
+          _ = (_) => {
+            const _ = (0, _.useMemo)(() => new _._(_._.CLANSTEAMID), []);
+            if (!_._.CAN_UPLOAD_IMAGES) return null;
+            const { draft: _, bbcodeEditorRef: _ } = _;
+            return (0, _.jsx)(_._, {
+              children: (0, _.jsxs)("div", {
+                className: _.className,
+                children: [
+                  (0, _.jsx)("div", {
+                    children: (0, _._)("#FAQEditor_ImageTitle"),
+                  }),
+                  (0, _.jsx)(_._, {
+                    bShowLightBox: !0,
+                    appid: void 0,
+                    clanSteamID: _,
+                    imageInsertCallBack: (_, _) =>
+                      _.current &&
+                      (0, _._)(_ == null ? void 0 : _.current, _, _),
+                    fnSetImageURL: () => {},
+                    rgRealmList: _.GetIncludedRealmList(),
+                    fnLangHasData: _.BHasSomeTextForLanguage,
+                    fnGetImageHash: (_, _) => {
+                      if (_._.includes(_)) {
+                        const _ = _._.GetAllLocalizedGroupImages();
+                        return _ && _.length > _ && _[_] != null ? _[_] : null;
+                      }
+                      return null;
+                    },
+                    partnerEventStore: _._,
+                  }),
+                ],
+              }),
+            });
+          },
+          _ = (0, _._)((_) => {
+            const { draft: _, eLanguage: _ } = _;
+            return (0, _.jsxs)("div", {
+              className: _().EditorTitleField,
+              children: [
+                (0, _.jsx)("div", {
+                  className: _().EditorLabel,
+                  children: (0, _._)("#FAQEditor_TitleLabel"),
+                }),
+                (0, _.jsx)("input", {
+                  type: "text",
+                  className: _().EditorTitleFieldInput,
+                  value: _.GetDraftTitle(_) || "",
+                  placeholder: (0, _._)("#FAQEditor_TitlePlaceHolder"),
+                  onFocus: (_) => _.target.select(),
+                  onChange: (_) => _.SetDraftTitle(_, _.currentTarget.value),
+                  maxLength: 120,
+                }),
+              ],
+            });
+          }),
+          _ = (0, _._)((_) => {
+            const { draft: _, eLanguage: _, bbcodeEditorRef: _ } = _;
+            return (0, _.jsxs)("div", {
+              className: _().EditorPane,
+              children: [
+                (0, _.jsx)("div", {
+                  className: _().EditorLabel,
+                  children: (0, _._)("#FAQEditor_ContentLabel"),
+                }),
+                (0, _.jsx)(_._, {
+                  ref: _,
+                  fnGetCurText: () => _.GetDraftContent(_) || "",
+                  fnOnTextChange: (_) =>
+                    _.SetDraftContent(_, _.currentTarget.value),
+                  fnSetText: (_) => _.SetDraftContent(_, _),
+                  strPlaceholder: (0, _._)("#FAQEditor_ContentPlaceHolder"),
+                  bSupportHTMLImport: !0,
+                  showFormatHelp: "PartnerEvents",
+                  className: _().TextPaneContainer,
+                  classNameForTextArea: _().EditorPaneTextArea,
+                }),
+              ],
+            });
+          }),
+          _ = (_) =>
+            (0, _.jsxs)("div", {
+              className: _().ErrorCtn,
+              children: [
+                (0, _.jsx)("div", {
+                  className: _().ErrorMsg,
+                  children: _.strError,
+                }),
+                (0, _.jsx)(_, {
+                  route: _.k_eCommunityDashboard,
+                  className: _().EscapeLink,
+                  children: (0, _._)("#FAQEditor_GoToDashboard"),
+                }),
+              ],
+            });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        const _ = (_) => {
+            const {
+                title: _,
+                content: _,
+                bIsPreview: _,
+                elSideBars: _,
+                version: _,
+              } = _,
+              _ = (0, _._)();
+            return (
+              _.useEffect(() => {
+                var _, _, _;
+                const _ =
+                  (_ = _ == null ? void 0 : _.hash) == null
+                    ? void 0
+                    : _.substr(
+                        ((_ = _ == null ? void 0 : _.hash) == null
+                          ? void 0
+                          : _.substr(0, 1)) === "#"
+                          ? 1
+                          : 0,
+                      );
+                _ &&
+                  ((_ = document.getElementById(_)) == null ||
+                    _.scrollIntoView({
+                      block: "start",
+                      behavior: "smooth",
+                    }));
+              }, [_]),
+              (0, _.jsxs)("div", {
+                className: (0, _._)(_.FAQViewPage, _._.LANGUAGE),
+                children: [
+                  (0, _.jsx)("a", {
+                    className: _.SupportTitle,
+                    href: `${_._.HELP_BASE_URL}`,
+                    children: (0, _._)("#FAQViewer_SteamSupport"),
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: _.Columns,
+                    children: [
+                      (0, _.jsxs)("div", {
+                        className: (0, _._)(_.LeftCol),
+                        children: [
+                          (0, _.jsx)("div", {
+                            className: _.TopColorBar,
+                          }),
+                          (0, _.jsxs)("div", {
+                            className: _.FAQTopicCtn,
+                            children: [
+                              (0, _.jsx)("div", {
+                                className: _.FAQTitle,
+                                role: "heading",
+                                "aria-level": 1,
+                                children: _,
+                              }),
+                              (0, _.jsx)("div", {
+                                className: _.FAQContent,
+                                children: (0, _.jsx)(_._, {
+                                  text: _,
+                                  bShowErrorInfo: _,
+                                  version: _ || "0",
+                                }),
+                              }),
+                            ],
+                          }),
+                        ],
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _.RightCol,
+                        children: (0, _.jsx)("div", {
+                          className: _.SectionCtn,
+                          children: _,
+                        }),
+                      }),
+                    ],
+                  }),
+                ],
+              })
+            );
+          },
+          _ = (_) =>
+            (0, _.jsx)("div", {
+              className: _.FAQViewPage,
+              children: _.children,
+            });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        const _ = (_) => {
+            const { faqContent: _ } = _,
+              [_, _] = (0, _._)(_.faq_id, _.version, _.language);
+            return _._.Get().BHasFAQEdit()
+              ? (0, _.jsxs)("div", {
+                  className: (0, _._)(_.Section, _.ValveOnlyBackground),
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _.TopicHeader,
+                      children: (0, _._)("#FAQViewer_AdminLinks"),
+                    }),
+                    (0, _.jsx)("div", {
+                      className: _.InfoRow,
+                      children: (0, _._)(
+                        "#FAQViewer_Admin_LastUpdate",
+                        _ != null && _.author_account_id
+                          ? (0, _.jsx)(_._, {
+                              accountID: Number.parseInt(_.author_account_id),
+                            })
+                          : (0, _._)("#FAQViewer_UnknownUser"),
+                        (0, _.jsx)("span", {
+                          children:
+                            (0, _._)(_.timestamp) +
+                            "@" +
+                            (0, _._)(_.timestamp, {
+                              bForce24HourClock: !1,
+                            }),
+                        }),
+                      ),
+                    }),
+                    (0, _.jsx)(_, {
+                      faqContent: _,
+                    }),
+                    (0, _.jsx)(_, {
+                      faqid: _.faq_id,
+                      route: _.k_eCommunityEdit,
+                      bForceAnchor: !0,
+                      children: (0, _._)("#FAQViewer_GotoEditor"),
+                    }),
+                  ],
+                })
+              : null;
+          },
+          _ = (_) => {
+            const { faqContent: _ } = _,
+              [_, _] = (0, _._)(_.faq_id);
+            if (
+              !_ ||
+              !_ ||
+              _.GetLastTimeLanguageUpdated(_.language) <= _.timestamp
+            )
+              return null;
+            const _ = _.GetLastSavedDraftVersion(_.language);
+            return (0, _.jsx)("div", {
+              className: _.InfoRow,
+              children: (0, _._)(
+                "#FAQViewer_DraftNewer",
+                (0, _.jsx)(_._, {
+                  accountID: Number.parseInt(_.author_account_id),
+                }),
+                (0, _.jsx)("span", {
+                  children:
+                    (0, _._)(_.timestamp) +
+                    "@" +
+                    (0, _._)(_.timestamp, {
+                      bForce24HourClock: !1,
+                    }),
+                }),
+              ),
+            });
+          },
+          _ = (_) =>
+            (0, _.jsxs)(_.Fragment, {
+              children: [
+                (0, _.jsxs)("div", {
+                  className: (0, _._)(_.Section, _.NeedHelp),
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _.LeftCol,
+                      children: (0, _.jsx)(_._VW, {
+                        role: "presentation",
+                      }),
+                    }),
+                    (0, _.jsxs)("div", {
+                      className: _.RightCol,
+                      children: [
+                        (0, _.jsx)("div", {
+                          className: _.TopicHeader,
+                          children: (0, _._)(
+                            "#FAQViewer_SideBar_ProblemWithSteam_Title",
+                          ),
+                        }),
+                        (0, _.jsx)("div", {
+                          children: (0, _._)(
+                            "#FAQViewer_SideBar_ProblemWithSteam_Desc",
+                          ),
+                        }),
+                        (0, _.jsx)("div", {
+                          className: _.CenterButtonCtn,
+                          children: (0, _.jsx)("a", {
+                            href: _._.HELP_BASE_URL,
+                            className: _.EditPreviewButton,
+                            children: (0, _._)(
+                              "#FAQViewer_SideBar_ProblemWithSteam_Link",
+                            ),
+                          }),
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+                !(0, _._)() &&
+                  (0, _.jsxs)("div", {
+                    className: (0, _._)(_.Section, _.CommunityHelp),
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _.LeftCol,
+                        children: (0, _.jsx)(_.ROZ, {
+                          role: "presentation",
+                        }),
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: _.RightCol,
+                        children: [
+                          (0, _.jsx)("div", {
+                            className: _.TopicHeader,
+                            children: (0, _._)(
+                              "#FAQViewer_SideBar_CommunityHelp_Title",
+                            ),
+                          }),
+                          (0, _.jsx)("div", {
+                            children: (0, _._)(
+                              "#FAQViewer_SideBar_CommunityHelp_Desc",
+                            ),
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _.CenterButtonCtn,
+                            children: (0, _.jsx)("a", {
+                              href: _._.COMMUNITY_BASE_URL + "discussions",
+                              className: _.EditPreviewButton,
+                              children: (0, _._)(
+                                "#FAQViewer_SideBar_CommunityHelp_Link",
+                              ),
+                            }),
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+              ],
+            });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_);
+        const _ = (_) => {
+            const { faqid: _ } = _,
+              [_, _] = (0, _._)(_, (0, _.sfN)(_._.LANGUAGE));
+            if (_) {
+              if (!_)
+                return (0, _.jsx)(_, {
+                  children: (0, _.jsx)(_, {
+                    strError: (0, _._)("#FAQViewer_NoFAQFound"),
+                  }),
+                });
+            } else
+              return (0, _.jsx)(_, {
+                children: (0, _.jsx)(_._, {
+                  position: "center",
+                  size: "xlarge",
+                  string: (0, _._)("#Loading"),
+                }),
+              });
+            return (0, _.jsx)(_, {
+              title: _.title,
+              content: _.content,
+              version: _.version,
+              elSideBars: [
+                (0, _.jsx)(
+                  _,
+                  {
+                    faqContent: _,
+                  },
+                  "sidebar",
+                ),
+                (0, _.jsx)(
+                  _,
+                  {
+                    faqContent: _,
+                  },
+                  "adminbar",
+                ),
+              ],
+            });
+          },
+          _ = (_) => {
+            var _;
+            const _ =
+              _._.COMMUNITY_BASE_URL +
+              (_._.APPID
+                ? "app/" + ((_ = _._.VANITY_ID) != null ? _ : _._.APPID)
+                : "gid/" + _._.CLANSTEAMID);
+            return (0, _.jsxs)("div", {
+              className: _().ErrorCtn,
+              children: [
+                (0, _.jsx)("div", {
+                  className: _().ErrorMsg,
+                  children: _.strError,
+                }),
+                (0, _.jsx)("a", {
+                  className: _().EscapeLink,
+                  href: _,
+                  children: (0, _._)("#FAQViewer_GoToHomepage"),
+                }),
+              ],
+            });
+          },
+          _ = (0, _._)((_) => {
+            const { faqid: _ } = _,
+              [_, _] = (0, _._)(_),
+              _ = _._.Get().GetCurEditLanguage();
+            if (_) {
+              if (!_)
+                return (0, _.jsx)(_, {
+                  children: (0, _.jsx)(_, {
+                    strError: (0, _._)("#FAQViewer_NoFAQFound"),
+                  }),
+                });
+            } else
+              return (0, _.jsx)(_, {
+                children: (0, _.jsx)(_._, {
+                  position: "center",
+                  size: "xlarge",
+                  string: (0, _._)("#Loading"),
+                }),
+              });
+            return (0, _.jsxs)(_.Fragment, {
+              children: [
+                (0, _.jsx)(_, {
+                  draft: _,
+                  bPreview: !0,
+                }),
+                (0, _.jsx)(_, {
+                  title: _.GetDraftTitleWithFallback(_, _._.EREALM),
+                  content: _.GetDraftContentWithFallback(_, _._.EREALM),
+                  version: "" + _.GetLastTimeLanguageUpdated(_),
+                }),
+                (0, _.jsx)(_, {
+                  draft: _,
+                  eLanguage: _,
+                }),
+              ],
+            });
+          });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        const _ = {
+            ViewFAQ: (_, _) => `/faqs/${_}/view/${_}*`,
+            EditFAQ: (_, _) => `/faqs/${_}/edit/${_}*`,
+            DashboardFAQ: (_) => `/faqs/${_}/dashboard`,
+            PreviewFAQ: (_, _) => `/faqs/${_}/preview/${_}*`,
+          },
+          _ = (0, _._)((_) => {
+            const [_, _] = _.useState(!0);
+            return (
+              _.useEffect(() => {
+                (async () => (await _._.InitGlobal(), _(!1)))();
+              }, []),
+              _
+                ? (0, _.jsx)(_._, {
+                    position: "center",
+                    size: "medium",
+                    string: (0, _._)("#Loading"),
+                  })
+                : (0, _.jsxs)(_.Fragment, {
+                    children: [
+                      (0, _.jsx)(_, {}),
+                      (0, _.jsxs)(_._, {
+                        children: [
+                          (0, _.jsx)(_._, {
+                            path: _.ViewFAQ(":vanity_str", ":faqid"),
+                            render: (_) =>
+                              (0, _.jsx)(_._, {
+                                config: {
+                                  "faqs-root": () => {
+                                    const { faqid: _ } = _.match.params,
+                                      _ = (0, _._)(_);
+                                    return (0, _.jsx)(_, {
+                                      faqid: _,
+                                    });
+                                  },
+                                },
+                              }),
+                          }),
+                          (0, _.jsx)(_._, {
+                            path: _.EditFAQ(":vanity_str", ":faqid"),
+                            render: (_) =>
+                              (0, _.jsx)(_._, {
+                                config: {
+                                  "faqs-root": () => {
+                                    const { faqid: _ } = _.match.params;
+                                    if (_) {
+                                      const _ = (0, _._)(_);
+                                      return _
+                                        ? (0, _.jsx)(_, {
+                                            faqid: _,
+                                          })
+                                        : (0, _.jsx)(_._, {
+                                            push: !0,
+                                            _: _(_.k_eCommunityDashboard),
+                                          });
+                                    } else return (0, _.jsx)(_, {});
+                                  },
+                                },
+                              }),
+                          }),
+                          (0, _.jsx)(_._, {
+                            path: _.DashboardFAQ(":vanity_str"),
+                            render: (_) =>
+                              (0, _.jsx)(_._, {
+                                config: {
+                                  "faqs-root": () => (0, _.jsx)(_, {}),
+                                },
+                              }),
+                          }),
+                          (0, _.jsx)(_._, {
+                            path: _.PreviewFAQ(":vanity_str", ":faqid"),
+                            render: (_) =>
+                              (0, _.jsx)(_._, {
+                                config: {
+                                  "faqs-root": () => {
+                                    const { faqid: _ } = _.match.params,
+                                      _ = (0, _._)(_);
+                                    return (0, _.jsx)(_, {
+                                      faqid: _,
+                                    });
+                                  },
+                                },
+                              }),
+                          }),
+                          (0, _.jsx)(_._, {
+                            component: _._,
+                          }),
+                        ],
+                      }),
+                    ],
+                  })
+            );
+          });
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        function _(_) {
+          var _, _;
+          const { editModel: _ } = _,
+            [_, _] = _.useState(_.xPp),
+            [_, _] = _.useState(!1),
+            [_, _] = _.useState(null),
+            _ = (_) => {
+              const _ = _.target.value;
+              if (_ === "all") _(_.xPp);
+              else {
+                const _ = (0, _.sfN)(_);
+                _(_);
+              }
+            },
+            _ = _.GetClanSteamID(),
+            _ = _.GetGID(),
+            _ = (0, _._)(_, _),
+            [, _] = _.useReducer((_) => _ + 1, 0),
             _ =
-              "undefined" != typeof self
+              _.isSuccess &&
+              (_ = _.data) != null &&
+              _.crowdin_project_id &&
+              (_ = _.data) != null &&
+              _.crowdin_file_id
+                ? `https://valve.crowdin.com/editor/${_.data.crowdin_project_id}/${_.data.crowdin_file_id}`
+                : null,
+            _ = (_) => {
+              _.SetPushSourceToCrowdInAutomatically(_), _();
+            },
+            _ = (0, _._)(_.ConvertTo64BitString(), _, _),
+            _ = () => {
+              _(!0),
+                _.mutateAsync()
+                  .then(() => window.location.reload())
+                  .catch((_) => {
+                    _(_.toString()), _(!1);
+                  })
+                  .then(() => {
+                    _(null);
+                  });
+            };
+          return _.isLoading
+            ? null
+            : (0, _.jsxs)(_._, {
+                clanSteamID: _.editModel.GetClanSteamID(),
+                children: [
+                  (0, _.jsx)(_._, {
+                    active: _,
+                    children: (0, _.jsx)(_._, {}),
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: _().ValveCrowdInSyncCtn,
+                    children: [
+                      (0, _.jsx)(_._, {
+                        value: _.BPushUpdatesToCrowdInAutomatically(),
+                        onChange: _,
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: _().ValveCrowdInSyncLabel,
+                        children: [
+                          (0, _._)(
+                            "#EventEditor_Localization_AutomaticallyPushChangesToCrowdIn",
+                          ),
+                          "\xA0(",
+                          _
+                            ? (0, _.jsx)("a", {
+                                href: _,
+                                children: _,
+                              })
+                            : (0, _._)(
+                                "#EventEditor_Localization_NotMappedToCrowdIn",
+                              ),
+                          ")",
+                          (0, _.jsx)(_._, {
+                            tooltip: (0, _._)(
+                              "#EventEditor_Localization_Tooltip",
+                            ),
+                            className: _.tooltip_Ctn,
+                          }),
+                          (0, _.jsx)("br", {}),
+                          (0, _.jsx)("span", {
+                            children: (0, _._)(
+                              "#EventEditor_Localization_RememberToSave",
+                            ),
+                          }),
+                        ],
+                      }),
+                      (0, _.jsx)(_, {
+                        onChange: _,
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _().EditPreviewButton,
+                        onClick: _,
+                        children: (0, _._)(
+                          "#EventEditor_Localization_FetchLocalization",
+                        ),
+                      }),
+                    ],
+                  }),
+                  _ &&
+                    (0, _.jsx)(_.Fragment, {
+                      children: (0, _.jsxs)("div", {
+                        className: _().SyncPanelError,
+                        children: [(0, _.jsx)(_._, {}), " ", _],
+                      }),
+                    }),
+                ],
+              });
+        }
+        function _(_) {
+          const _ = (0, _._)(!1);
+          let _ = Array.from(_.entries());
+          _.sort((_, _) => _[1].localeCompare(_[1]));
+          const _ = _.map(([_, _]) =>
+            _ !== "english"
+              ? (0, _.jsx)(
+                  "option",
+                  {
+                    value: _,
+                    children: _,
+                  },
+                  _,
+                )
+              : "",
+          );
+          return (0, _.jsxs)("select", {
+            onChange: _.onChange,
+            children: [
+              (0, _.jsx)("option", {
+                value: "all",
+                children: (0, _._)("#EventEditor_Localization_AllLanguages"),
+              }),
+              _,
+            ],
+          });
+        }
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_);
+        const _ = (_) => {
+            const _ = (_, _) => {
+              _.preventDefault();
+              const {
+                  fnGetLocData: _,
+                  closeModal: _,
+                  strFileNamePrefix: _,
+                  lang: _,
+                } = _,
+                _ = _(),
+                _ = new _._();
+              let _ = _ ? _ + "_localization" : "localization";
+              switch (_) {
+                case "csv_row":
+                  _.WriteLocalizationData_CSV_LanguageRows(_, _ + ".csv");
+                  break;
+                case "csv_column":
+                  _.WriteLocalizationData_CSV_LanguageColumns(_, _ + ".csv");
+                  break;
+                case "csv_token":
+                  _.WriteLocalizationData_CSV_TokenAndLanguageColumns(
+                    _,
+                    _ + ".csv",
+                  );
+                  break;
+                case "xml":
+                  _.WriteLocalizationData_XML_SingleLanguage(
+                    _,
+                    _,
+                    _ + "_" + (0, _.x6o)((0, _.LgB)(_)) + ".xml",
+                  );
+                  break;
+              }
+              _ && _();
+            };
+            return (0, _.jsxs)(_.Fragment, {
+              children: [
+                !!_.bShowCSV &&
+                  (0, _.jsxs)(_.Fragment, {
+                    children: [
+                      (0, _.jsx)(_._, {
+                        onClick: (_) => _(_, "csv_row"),
+                        children: (0, _._)(
+                          "#Localization_Export_Btn_RowLanguages",
+                        ),
+                      }),
+                      (0, _.jsx)(_._, {
+                        onClick: (_) => _(_, "csv_column"),
+                        children: (0, _._)(
+                          "#Localization_Export_Btn_ColumnLanguages",
+                        ),
+                      }),
+                      (0, _.jsx)(_._, {
+                        onClick: (_) => _(_, "csv_token"),
+                        children: (0, _._)(
+                          "#Localization_Export_Btn_TokenLanguages",
+                        ),
+                      }),
+                    ],
+                  }),
+                !!_.bShowXML &&
+                  (0, _.jsx)(_._, {
+                    onClick: (_) => _(_, "xml"),
+                    children: (0, _._)("#Localization_Export_Btn_XML"),
+                  }),
+              ],
+            });
+          },
+          _ = (_) => {
+            const [_, _] = (0, _.useState)(!1),
+              _ = (_, _) => {
+                _(!1),
+                  console.log(
+                    "ImportLocalizationAction: On Handle Parse error: " +
+                      _.message,
+                    _,
+                  ),
+                  (0, _._)(
+                    (0, _.jsx)(_._, {
+                      children: (0, _.jsxs)("div", {
+                        children: [
+                          (0, _.jsx)("p", {
+                            children: (0, _._)("#Localization_Error_Input"),
+                          }),
+                          (0, _.jsx)("p", {
+                            children: _.message,
+                          }),
+                        ],
+                      }),
+                    }),
+                    window,
+                  );
+              },
+              _ = (_) => {
+                _(!1);
+                let _ = "";
+                _.forEach((_) => {
+                  _.length > 0 && (_ += ", "),
+                    (_ += (0, _._)("#Language_" + (0, _.LgB)(_)));
+                }),
+                  (0, _._)(
+                    (0, _.jsx)(_._, {
+                      strTitle: (0, _._)("#EventDisplay_Share_Success"),
+                      bAlertDialog: !0,
+                      children: (0, _.jsx)("div", {
+                        children:
+                          _.length == 0
+                            ? (0, _._)(
+                                "#Localization_Success_ImportComplete_NoChange",
+                              )
+                            : (0, _._)(
+                                "#Localization_Success_ImportComplete",
+                                _,
+                              ),
+                      }),
+                    }),
+                    window,
+                  );
+              },
+              _ = async (_) => {
+                let _ = _.target.files;
+                if (_ && _.length > 0) {
+                  _(!0);
+                  let _ = new Array(),
+                    _ = new _._();
+                  for (let _ = 0; _ < _.length; ++_)
+                    if (_[_])
+                      if (_[_].name.toLocaleLowerCase().endsWith(".csv")) {
+                        _().parse(_[0], {
+                          header: !0,
+                          complete: (_) => {
+                            let _ = new _._().DetectAndFormatCSV(_);
+                            if (!_) {
+                              _({
+                                code: "",
+                                message: "",
+                                row: 0,
+                                type: "filenameerror",
+                              });
+                              return;
+                            }
+                            const _ = _._.GetLanguageListForRealms([
+                                _._.k_ESteamRealmGlobal,
+                              ]),
+                              _ = _.fnOnImportLocData(_, _);
+                            _(_);
+                          },
+                          error: _,
+                        });
+                        return;
+                      } else if (
+                        _[_].name.toLocaleLowerCase().endsWith(".xml")
+                      ) {
+                        let { language: _ } = (0, _._)(_[_].name, _.xPp);
+                        if (_ == null || _ == _.xPp) {
+                          _({
+                            code: "",
+                            message: (0, _._)(
+                              "#Localization_Error_FileLangauage",
+                              _[_].name,
+                            ),
+                            row: 0,
+                            type: "filenameerror",
+                          });
+                          return;
+                        }
+                        try {
+                          const _ =
+                            await _.ReadLocalizationData_XML_SingleLanguage(
+                              _[_],
+                              _,
+                            );
+                          _.fnOnImportLocData(_, [_]).forEach((_) => {
+                            _.indexOf(_) == -1 && _.push(_);
+                          });
+                        } catch (_) {
+                          let _ = (0, _._)(_);
+                          _({
+                            code: "",
+                            message: (0, _._)(
+                              "#Localization_Error_XMLParseError",
+                              _.strErrorMsg,
+                            ),
+                            row: 0,
+                            type: "parseerror",
+                          });
+                          return;
+                        }
+                      } else
+                        _({
+                          code: "",
+                          message: (0, _._)(
+                            "#Localization_Error_FileExtention",
+                            _[_].name,
+                          ),
+                          row: 0,
+                          type: "filenameerror",
+                        });
+                  _(_);
+                }
+              };
+            return (0, _.jsx)(_._, {
+              className: (0, _._)(
+                _.className ? _.className : _.EditPreviewButton,
+              ),
+              toolTipContent: _.strToolTip,
+              children: (0, _.jsxs)("label", {
+                className: _.ImportButton,
+                htmlFor: "importlocalization",
+                children: [
+                  _ &&
+                    (0, _.jsx)(_._, {
+                      size: "small",
+                    }),
+                  (0, _.jsx)("div", {
+                    className: _.Label,
+                    children: (0, _._)(
+                      _.strLabel ? _.strLabel : "#Localization_Import_Btn",
+                    ),
+                  }),
+                  (0, _.jsx)("input", {
+                    _: "importlocalization",
+                    className: _.ImportButton,
+                    style: {
+                      display: "none",
+                    },
+                    type: "file",
+                    onSubmit: _,
+                    onChange: _,
+                    multiple: !0,
+                  }),
+                ],
+              }),
+            });
+          },
+          _ = (_) => {
+            const {
+                fnOnImportLocData: _,
+                closeModal: _,
+                sampleLocData: _,
+                sampleFilename: _,
+              } = _,
+              _ = (_, _) => {
+                const _ = _(_, _);
+                return _(), _;
+              },
+              _ = new CLocalizationImportExport();
+            return jsxs(GenericDialog, {
+              title: Localize("#ImportLoc_Title"),
+              onCancel: _,
+              closeModal: _,
+              children: [
+                jsxs(Dialog.Body, {
+                  children: [
+                    jsx("div", {
+                      children: Localize("#ImportLoc_Description"),
+                    }),
+                    jsxs("div", {
+                      className: locstyles.ImportLocSampleButtonCtn,
+                      children: [
+                        jsx("div", {
+                          className: locstyles.SampleTitle,
+                          children: Localize("#ImportLoc_SampleTitle"),
+                        }),
+                        jsx(Dialog.Button, {
+                          onClick: () =>
+                            _.WriteLocalizationData_CSV_LanguageRows(
+                              _,
+                              _ + "_row.csv",
+                            ),
+                          children: Localize("#ImportLoc_CSVLangPerRow"),
+                        }),
+                        jsx(Dialog.Button, {
+                          onClick: () =>
+                            _.WriteLocalizationData_CSV_LanguageColumns(
+                              _,
+                              _ + "_col.csv",
+                            ),
+                          children: Localize("#ImportLoc_CSVLangPerCol"),
+                        }),
+                        jsx(Dialog.Button, {
+                          onClick: () =>
+                            _.WriteLocalizationData_CSV_TokenAndLanguageColumns(
+                              _,
+                              _ + "_token.csv",
+                            ),
+                          children: Localize("#ImportLoc_CSVTokenLang"),
+                        }),
+                        jsx(Dialog.Button, {
+                          onClick: () =>
+                            _.WriteLocalizationData_XML_SingleLanguage(
+                              _,
+                              k_ELanguage_English,
+                              _ + "xml",
+                            ),
+                          children: Localize("#ImportLoc_XML"),
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+                jsx(Dialog.Footer, {
+                  children: jsx(_, {
+                    strLabel: Localize("#BuildNotes_ImportLocalization"),
+                    fnOnImportLocData: _,
+                  }),
+                }),
+              ],
+            });
+          };
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = Object.defineProperty,
+          _ = (_, _, _) =>
+            _ in _
+              ? _(_, _, {
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+                  value: _,
+                })
+              : (_[_] = _),
+          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+        class _ {
+          constructor() {
+            _(this, "m_mapTokens", new Map());
+          }
+          GetLocalization(_, _) {
+            const _ = this.m_mapTokens.get(_);
+            if (!(!_ || !_[_])) return _[_];
+          }
+          SetLocalization(_, _, _) {
+            let _ = this.m_mapTokens.get(_);
+            _ || ((_ = (0, _._)([], _.bP9, null)), this.m_mapTokens.set(_, _)),
+              (_[_] = _);
+          }
+          GetSortedTokenList() {
+            let _ = [];
+            return (
+              this.m_mapTokens.forEach((_, _) => _.push(_)),
+              _.sort((_, _) => _.localeCompare(_)),
+              _
+            );
+          }
+          GetLanguagesWithTokens() {
+            let _ = new Map();
+            this.m_mapTokens.forEach((_) => {
+              for (let _ = 0; _ < _.length; ++_)
+                !_.has(_) &&
+                  _[_] !== null &&
+                  _[_] !== void 0 &&
+                  _[_].trim().length > 0 &&
+                  _.set(_, !0);
+            });
+            let _ = new Array();
+            return (
+              _.forEach((_, _) => {
+                _ && _.push(_);
+              }),
+              _
+            );
+          }
+          ClearLanguagesTokens(_) {
+            _.forEach((_) => {
+              this.m_mapTokens.forEach((_, _) => {
+                _ < _.length && _[_] !== null && (_[_] = null);
+              });
+            });
+          }
+          DebugPrintData() {
+            const _ = new Array();
+            return (
+              this.m_mapTokens.forEach((_, _) => _.push(`${_}=${_.join(",")}`)),
+              _.join(`
+`)
+            );
+          }
+        }
+        class _ {
+          DetectAndFormatCSV(_) {
+            var _, _, _, _, _, _;
+            let _ = null;
+            return (
+              ((_ =
+                (_ = _ == null ? void 0 : _.meta) == null
+                  ? void 0
+                  : _.fields) == null
+                ? void 0
+                : _.length) >= 3 &&
+              _.meta.fields[0] === "field" &&
+              _.meta.fields[1] === "language" &&
+              _.meta.fields[2] === "value"
+                ? (_ = this.ReadLocalizationData_CSV_TokenLanguageList(_))
+                : ((_ =
+                      (_ = _ == null ? void 0 : _.meta) == null
+                        ? void 0
+                        : _.fields) == null
+                      ? void 0
+                      : _.length) >= 2 &&
+                    _.meta.fields[0] === "field" &&
+                    (0, _.sfN)(_.meta.fields[1], _.xPp) != _.xPp
+                  ? (_ = this.ReadLocalizationData_CSV_LanguageColumns(_))
+                  : ((_ =
+                      (_ = _ == null ? void 0 : _.meta) == null
+                        ? void 0
+                        : _.fields) == null
+                      ? void 0
+                      : _.length) >= 2 &&
+                    _.meta.fields[0] === "language" &&
+                    (_ = this.ReadLocalizationData_CSV_LanguageRows(_)),
+              _
+            );
+          }
+          async ReadLocalizationData_XML_SingleLanguage(_, _) {
+            let _ = new _(),
+              _ = new DOMParser(),
+              _ = await _._.ReadFile(_),
+              _ = _.parseFromString(_.toString(), "application/xml");
+            for (let _ = 0; _ < _.documentElement.children.length; ++_) {
+              const _ = _.documentElement.children.item(_);
+              if (!_.getAttribute("id"))
+                throw "Can not find id for element. Probably malformed XML";
+              const _ = _.getAttribute("id").toLocaleLowerCase(),
+                _ = _.textContent;
+              _.SetLocalization(_, _, _);
+            }
+            return _;
+          }
+          ReadLocalizationData_CSV_TokenLanguageList(_) {
+            const _ = new _();
+            return (
+              _.data.forEach((_) => {
+                const _ = _.field,
+                  _ = (0, _.sfN)(_.language);
+                _.SetLocalization(_, _, _.value);
+              }),
+              _
+            );
+          }
+          ReadLocalizationData_CSV_LanguageColumns(_) {
+            const _ = new _();
+            return (
+              _.data.forEach((_) => {
+                const _ = _.field;
+                for (let _ = _.Bhc; _ < _.bP9; ++_) {
+                  const _ = (0, _.x6o)((0, _.LgB)(_));
+                  _.SetLocalization(_, _, _[_]);
+                }
+              }),
+              _
+            );
+          }
+          ReadLocalizationData_CSV_LanguageRows(_) {
+            const _ = new _();
+            return (
+              _.data.forEach((_) => {
+                const _ = (0, _.sfN)(_.language, _.bP9);
+                if (_ !== _.bP9)
+                  for (const [_, _] of Object.entries(_))
+                    _ === "language" ||
+                      typeof _ != "string" ||
+                      _.SetLocalization(_, _, _);
+              }),
+              _
+            );
+          }
+          GetExportLanguages() {
+            return _._.GetLanguageListForRealms([_._.k_ESteamRealmGlobal]);
+          }
+          WriteLocalizationData_CSV_TokenAndLanguageColumns(_, _) {
+            let _ = new Array();
+            _.GetSortedTokenList().forEach((_) => {
+              for (const _ of this.GetExportLanguages()) {
+                let _ = {
+                  field: _,
+                };
+                (_.language = (0, _.x6o)((0, _.LgB)(_))),
+                  (_.value = _.GetLocalization(_, _)),
+                  _.push(_);
+              }
+            }),
+              _._.WriteCSVToFile(_, _);
+          }
+          WriteLocalizationData_CSV_LanguageColumns(_, _) {
+            let _ = new Array();
+            _.GetSortedTokenList().forEach((_) => {
+              let _ = {
+                field: _,
+              };
+              for (const _ of this.GetExportLanguages())
+                _[(0, _.x6o)((0, _.LgB)(_))] = _.GetLocalization(_, _);
+              _.push(_);
+            }),
+              _._.WriteCSVToFile(_, _);
+          }
+          WriteLocalizationData_CSV_LanguageRows(_, _) {
+            let _ = new Array();
+            for (const _ of this.GetExportLanguages())
+              _.length <= _ - 1 &&
+                _.push({
+                  language: "",
+                }),
+                _.push({
+                  language: (0, _.x6o)((0, _.LgB)(_)),
+                });
+            _.GetSortedTokenList().forEach((_) => {
+              for (const _ of this.GetExportLanguages()) {
+                const _ = _.GetLocalization(_, _);
+                _[_][_] = _;
+              }
+            }),
+              _._.WriteCSVToFile(_, _);
+          }
+          WriteLocalizationData_XML_SingleLanguage(_, _, _) {
+            let _ = document.implementation.createDocument(
+              null,
+              "content",
+              null,
+            );
+            _.GetSortedTokenList().forEach((_) => {
+              let _ = _.createElement("string");
+              _.setAttribute("id", _),
+                _.appendChild(_.createTextNode(_.GetLocalization(_, _) || "")),
+                _.documentElement.append(_);
+            }),
+              _._.WriteXMLToFile(_, _);
+          }
+        }
+      },
+      chunkid: (module) => {
+        module.exports = {
+          FAQDashboardPage: "_59oO6wefB3rQ2vFht_b50",
+          FAQDashboard: "tIxuPSrF_izJyj_xSBAu",
+          DashboardHeader: "_1fVLwDLknGBvNqXvbz5ieq",
+          DashboardHeaderTitle: "_14k5Nx2pbJlfrumOKYilwb",
+          DashboardHeaderButtonCtn: "MuQkNExZZvUGyooMU1W63",
+          DashboardCreateFAQButton: "_3VW3jphjSrFsWyh8CQ7qkl",
+          CreateFAQDialog: "_2053etsNH77sMt0UGZ7Gkf",
+          NameInput: "_3qsK9sWwA8-5XRJijxOyAq",
+          ErrorMsg: "_1MkpMd3IngFLh9Lj1YdVaZ",
+          DashboardListHeaderRow: "_1m9z-QOtKB83PPSMvFp2qj",
+          EntryColumn: "_29DifZl5OcFsMPwjVeSKul",
+          NameCol: "_1fuClf4BBhhdkGW2AiR9xz",
+          DataCol: "_31hg_XZCfqD4KpN77UoWpB",
+          ClickableHeader: "_2dUdD5Bxvl5g7AXm74jlY-",
+          DownArrow: "_30b5IzshpNjcRcDjnbiHHV",
+          Selected: "_3_SL2rzskqZJldo0NVDRPy",
+          BadCount: "_1kNWcaTgntfwrNOrNOdLEs",
+          Visible: "pbhW7T1VOciPsM4805I5i",
+          Hidden: "_2sNUoEB66JUcm-Y3kKrdL8",
+          GoodCount: "M3TAP-1MxenvBQsT-eXlR",
+          DateToolTip: "Q8C5pKiJQWiQxpeE9g5A0",
+          DashboardEntry: "kcPTyksATgiPUcmwAwGOe",
+          EntryInternalName: "_1sL5ykMb1b1-WfHxwf8L1K",
+        };
+      },
+      chunkid: (module) => {
+        module.exports = {
+          FAQEditPage: "_2QALaQ13bEoS_oLFjL1prx",
+          FAQMenuCtn: "_1DISv1JGZ0pxbGtYHeBsJU",
+          FAQEditorCtn: "sjpl-ow0jbdSysRG8jsFA",
+          FAQEditor: "_3YIwjQZlP_YdCZH2DIj5f7",
+          Columns: "_2O3puXm5doASD7CnAby6Uh",
+          LeftCol: "_3TyuR_ycmrQIlt-wuVBtaD",
+          RightCol: "_33CjP7i4tMRCeZEcf-utD8",
+          EditorSaveButton: "_22iwdea7XXbiuZrrLZUU11",
+          EditorLabel: "_3jk92bsX5BdG6dMFNGNNKa",
+          EditorTitleField: "_37R-2WttVdEqucotluEzW_",
+          EditorTitleFieldInput: "_2A5OEhQlo5sJWuhIqlkEJL",
+          TextPaneContainer: "X8FYVDc-yIJ2Vmr_KQW2b",
+          EditorPane: "B4ngKzLlL1gvAnj9Vdbt4",
+          EditorPaneTextArea: "_1g6voAO3uBDdj9W9WjBB8z",
+          ErrorCtn: "_1l94et1-5wPLcAMJ3Bx8qq",
+          ErrorMsg: "_1LIvQOeIKBZzearuGAM7FW",
+          EscapeLink: "_3tlrRmfmxrdkbJRk48aZDb",
+        };
+      },
+      chunkid: (module) => {
+        module.exports = {
+          LanguageListDialog: "vp5PFufZdDer7tZRg3jrX",
+          ChecklistHeader: "_1VzmzM94XEt-kbk5N0Xcwm",
+          ChecklistRows: "_3qgdWDwppIPmVUI3_-IoWg",
+          CheckAll: "_1I_jAq3MJfhGnx3-H9fkRc",
+          LanguageCheckbox: "_1llVI6GfKRzbQRSS7bS9sI",
+          LanguageCheckboxLabel: "_2S_PZcuwqHb1BUGrd6Xvnk",
+          Language: "_13DIWnUBOf_d2HSzZWW_72",
+          Warning: "hGncGWqE9kTLXhxQe4SJ2",
+          ImportProgressBar: "_1s2UZCHSCadxdeXsd6fbj6",
+          ProgressMarker: "_2q-TdYLM1Zgn9tPZ3_1wCx",
+          CurrentFAQ: "_1MsSLkJk0mX4ITyxy8mpEJ",
+          LanguageList: "_28hYlCdWipXh9xN8jgf8ZT",
+          ImportResults: "_2FKxIYwCCRBm_BH0BsKyem",
+          ImportResultLabel: "_1_icUC7cNPpNZvq_qgQ33D",
+          ImportResult: "_3h1LkNfeVLc44BAuHSBudK",
+          UrlCode: "MxoxU6nWqZvCxgOlJxTvE",
+        };
+      },
+      chunkid: (module) => {
+        module.exports = {
+          LeftMenu: "_1txmemUH3rosQe71mZfr0q",
+          Section: "_2j-hhYTlI8Ntg1JrTWINdL",
+          SectionContents: "_3lz4JUNpNDnahEyzj1eZkK",
+          SectionDescription: "_3L68i4ZAokqaCqqk7yhIau",
+          SectionTitle: "_23FTZuq9MQrukHrWgZMKrp",
+          VisibilityCtn: "_16zchT5YPTg-YRcLmO7T1N",
+          StatusRow: "_272D2JP0YHWH_sY_IP2MJQ",
+          Global: "_1DcbV58-8H0QRtU4wmimaO",
+          China: "_2cUtBQSP-uCM363ee58k-t",
+          StatusBtnCtn: "HJUHTdNtL70vwUqYSh-FD",
+          PublishCtn: "_2syC3PimmI-5viillwUd6d",
+          PublishStatus: "uvzu3hbcsBlAoiPdATNbf",
+          PublishBtn: "_3P52vp7DdW5ZKRbKrEsr64",
+          FaqStatusTable: "pCBfTw19y3z1htRCTD7Sk",
+        };
+      },
+      chunkid: (module) => {
+        module.exports = {
+          Never: "_8rlUGGeBnYbuZpSoMtPGY",
+          Warning: "pZM2L30-1FOU9cbzqy1AQ",
+        };
+      },
+      chunkid: (module) => {
+        module.exports = {
+          FAQUnPublished: "erZyIOjQA9q0Wv28vQPiN",
+          FAQPublished: "_13Wz0jEDJuyCYIYT-3Nk8X",
+          EditorInternalNameLabel: "_3fAcXrEhyNYZKLFAviS1gi",
+          EditorInternalName: "_3A9ciQBxaVrGEWI6kD4zod",
+        };
+      },
+      chunkid: (module) => {
+        module.exports = {
+          ErrorCtn: "_2Dpwh3MWbH9ND0PlNK8G7M",
+          ErrorMsg: "_2dTNxR8PrLvqBwSUnhUVh5",
+          EscapeLink: "_19BjjT3X_AZgLiL1pFYCDG",
+        };
+      },
+      chunkid: (module) => {
+        module.exports = {
+          DisplayAdminPanel_Spacer: "_3TzVFi3VdHXUk1AerBpZc-",
+          EventEditorTopBarContainer: "_1Afx7wzva3-ghxcAy6EQhs",
+          EventEditorBottomBar: "_1noS58WsfHN3KuGVDzlv9r",
+          EventPublished: "_3zTXCKuKmaCdEoxSBTzPAa",
+          EventUnPublished: "pjxnm0P9LLWFXCwsaDKUa",
+          AdditionalContent: "_2fUl5vCnrlT9P7kskRIiWx",
+        };
+      },
+      chunkid: (module) => {
+        module.exports = {
+          SavedImage: "_1y3QVgsz4daj3E3S5wzwt-",
+          SaveButtonCtn: "_2Edwnbc-tjinTT_s7zIKTd",
+          SaveButton: "_2hloqzkRkAWkw50l4XPN-N",
+          HaventSavedInAShortTime: "_3xoBR2gVk2F0Bmejh20Yhl",
+          HaventSavedInALongTime: "_1bg505mDp3agK0eHP0NoxI",
+          Pulse: "_3oWE-wt1PQ7Rv2IJ0vCmO",
+          SaveSuccessNotification: "_1gabCN13JTZzv2A2fXqGve",
+          SaveSuccessTitle: "_1d5GXYH4AY9WFkoszJVzsQ",
+          slideIn: "_2kGhkRiew8we__yyM1878e",
+          slideOut: "_2oAIIbl5uoREv1Es4TZkUQ",
+        };
+      },
+      chunkid: (module) => {
+        module.exports = {
+          ValveCrowdInSyncCtn: "_8MIrt7rQXkA0xE5sAjOee",
+          ValveCrowdInSyncLabel: "_22b0C1Xi03QNdTFKsYypHR",
+          SyncPanelError: "yn_yu2EaUigYFm9QQAD7o",
+        };
+      },
+      chunkid: (module) => {
+        module.exports = {
+          FAQViewPage: "Ya530FSNxJ-2gfv0qDZYH",
+          SupportTitle: "_2BcDfuiFQ7l7yWM5Sa57S0",
+          Columns: "HGDD29L4B7rnyrKITC09v",
+          LeftCol: "o2y9UpxW9WmUMsLua3flf",
+          TopColorBar: "_2n5PMCTXeqy_BxVZeg6Avp",
+          RightCol: "_2Ta3cow-y-8kUgXcCrCP97",
+          SectionCtn: "_2wa31Vkjhr311VBcF_ynDO",
+          FAQTopicCtn: "_38QJomTcPqyUVRdLpfVjGA",
+          FAQTitle: "_3aInU3KIhHHBWOSOjNvcVa",
+          FAQContent: "_2dSVnHyS9mTV4jJctbYCcy",
+        };
+      },
+      chunkid: (module) => {
+        module.exports = {
+          InfoRow: "_3AG-7BbBE7Sw0efJrEb417",
+        };
+      },
+      chunkid: (module) => {
+        module.exports = {
+          Section: "_3S-XzUnd8sYIE7sDuLmpPo",
+          CommunityHelp: "_2TGFIDdCmMB614_-hieBc7",
+          NeedHelp: "_1DywXfNVrbQvDpTJXgd18z",
+          LeftCol: "_3gfCnqvp6FV0m9PqL9XMq",
+          TopicHeader: "_3X6huZLPQI8y6LirxSv4Gy",
+          CenterButtonCtn: "_3sZ58WE85Tqs8Bv8g-quYc",
+        };
+      },
+      chunkid: (module) => {
+        module.exports = {
+          Label: "_1LhItwhLHspVcQdfcbd2Sg",
+          ImportLocSampleButtonCtn: "D-1dlROLVuva-sb6tFgwU",
+          SampleTitle: "_9189ilzQ3YES-a-6DyBhR",
+          ImportButton: "WyfyxbGrKQq8cKMK5kfxE",
+        };
+      },
+      chunkid: function (_, _) {
+        var _, _, _;
+        ((_, _) => {
+          (_ = []),
+            (_ = _),
+            (_ = typeof _ == "function" ? __webpack_require__.apply(_, _) : _),
+            _ !== void 0 && (_.exports = _);
+        })(this, function _() {
+          var _ =
+              typeof self != "undefined"
                 ? self
-                : "undefined" != typeof window
+                : typeof window != "undefined"
                   ? window
-                  : void 0 !== _
+                  : _ !== void 0
                     ? _
                     : {},
+            _,
             _ = !_.document && !!_.postMessage,
             _ = _.IS_PAPA_WORKER || !1,
             _ = {},
@@ -229,28 +3643,28 @@
                 }
                 this.isFirstChunk &&
                   _(this._config.beforeFirstChunk) &&
-                  void 0 !== (_ = this._config.beforeFirstChunk(_)) &&
+                  (_ = this._config.beforeFirstChunk(_)) !== void 0 &&
                   (_ = _),
                   (this.isFirstChunk = !1),
-                  (this._halted = !1),
-                  (_ = this._partialLine + _);
-                var _ =
-                  ((this._partialLine = ""),
-                  this._handle.parse(_, this._baseIndex, !this._finished));
+                  (this._halted = !1);
+                var _ = this._partialLine + _,
+                  _ =
+                    ((this._partialLine = ""),
+                    this._handle.parse(_, this._baseIndex, !this._finished));
                 if (!this._handle.paused() && !this._handle.aborted()) {
                   if (
                     ((_ = _.meta.cursor),
-                    this._finished ||
-                      ((this._partialLine = _.substring(_ - this._baseIndex)),
-                      (this._baseIndex = _)),
-                    _ && _.data && (this._rowCount += _.data.length),
                     (_ =
+                      (this._finished ||
+                        ((this._partialLine = _.substring(_ - this._baseIndex)),
+                        (this._baseIndex = _)),
+                      _ && _.data && (this._rowCount += _.data.length),
                       this._finished ||
-                      (this._config.preview &&
-                        this._rowCount >= this._config.preview)),
+                        (this._config.preview &&
+                          this._rowCount >= this._config.preview))),
                     _)
                   )
-                    __webpack_require__.postMessage({
+                    _.postMessage({
                       results: _,
                       workerId: _.WORKER_ID,
                       finished: _,
@@ -291,7 +3705,7 @@
                   ? this._config.error(_)
                   : _ &&
                     this._config.error &&
-                    __webpack_require__.postMessage({
+                    _.postMessage({
                       workerId: _.WORKER_ID,
                       error: _,
                       finished: !1,
@@ -345,11 +3759,11 @@
                   } catch (_) {
                     this._chunkError(_.message);
                   }
-                  _ && 0 === _.status && this._chunkError();
+                  _ && _.status === 0 && this._chunkError();
                 }
               }),
               (this._chunkLoaded = function () {
-                4 === _.readyState &&
+                _.readyState === 4 &&
                   (_.status < 200 || 400 <= _.status
                     ? this._chunkError()
                     : ((this._start +=
@@ -358,7 +3772,7 @@
                         !this._config.chunkSize ||
                         this._start >=
                           ((_) =>
-                            null !== (_ = _.getResponseHeader("Content-Range"))
+                            (_ = _.getResponseHeader("Content-Range")) !== null
                               ? parseInt(_.substring(_.lastIndexOf("/") + 1))
                               : -1)(_)),
                       this.parseChunk(_.responseText)));
@@ -372,7 +3786,7 @@
               _.call(this, _);
             var _,
               _,
-              _ = "undefined" != typeof FileReader;
+              _ = typeof FileReader != "undefined";
             (this.stream = function (_) {
               (this._input = _),
                 (_ = _.slice || _.webkitSlice || _.mozSlice),
@@ -399,7 +3813,7 @@
                         this._start + this._config.chunkSize,
                         this._input.size,
                       )),
-                      (_ = __webpack_require__.call(_, this._start, _))),
+                      (_ = _.call(_, this._start, _))),
                     _.readAsText(_, this._config.encoding));
                 _ ||
                   this._chunkLoaded({
@@ -455,7 +3869,7 @@
                   this._input._("error", this._streamError);
               }),
               (this._checkIsFinished = function () {
-                _ && 1 === _.length && (this._finished = !0);
+                _ && _.length === 1 && (this._finished = !0);
               }),
               (this._nextChunk = function () {
                 this._checkIsFinished(),
@@ -464,7 +3878,7 @@
               (this._streamData = _(function (_) {
                 try {
                   _.push(
-                    "string" == typeof _
+                    typeof _ == "string"
                       ? _
                       : _.toString(this._config.encoding),
                   ),
@@ -510,9 +3924,9 @@
                 meta: {},
               };
             function _(_) {
-              return "greedy" === _.skipEmptyLines
-                ? "" === _.join("").trim()
-                : 1 === _.length && 0 === _[0].length;
+              return _.skipEmptyLines === "greedy"
+                ? _.join("").trim() === ""
+                : _.length === 1 && _[0].length === 0;
             }
             function _() {
               if (
@@ -532,56 +3946,57 @@
                   })),
                 _())
               ) {
+                let _ = function (_, _) {
+                  _(_.transformHeader) && (_ = _.transformHeader(_, _)),
+                    _.push(_);
+                };
+                var _ = _;
                 if (_)
                   if (Array.isArray(_.data[0])) {
                     for (var _ = 0; _() && _ < _.data.length; _++)
                       _.data[_].forEach(_);
                     _.data.splice(0, 1);
                   } else _.data.forEach(_);
-                function _(_, _) {
-                  _(_.transformHeader) && (_ = _.transformHeader(_, _)),
-                    _.push(_);
-                }
               }
               function _(_, _) {
                 for (var _ = _.header ? {} : [], _ = 0; _ < _.length; _++) {
                   var _ = _,
-                    _ = _[_];
-                  (_ = ((_, _) =>
-                    ((_) => (
-                      _.dynamicTypingFunction &&
-                        void 0 === _.dynamicTyping[_] &&
-                        (_.dynamicTyping[_] = _.dynamicTypingFunction(_)),
-                      !0 === (_.dynamicTyping[_] || _.dynamicTyping)
-                    ))(_)
-                      ? "true" === _ ||
-                        "TRUE" === _ ||
-                        ("false" !== _ &&
-                          "FALSE" !== _ &&
-                          (((_) => {
-                            if (
-                              _.test(_) &&
-                              ((_ = parseFloat(_)), _ < _ && _ < _)
-                            )
-                              return 1;
-                          })(_)
-                            ? parseFloat(_)
-                            : _.test(_)
-                              ? new Date(_)
-                              : "" === _
-                                ? null
-                                : _))
-                      : _)(
-                    (_ = _.header
-                      ? _ >= _.length
-                        ? "__parsed_extra"
-                        : _[_]
-                      : _),
-                    (_ = _.transform ? _.transform(_, _) : _),
-                  )),
-                    "__parsed_extra" === _
-                      ? ((_[_] = _[_] || []), _[_].push(_))
-                      : (_[_] = _);
+                    _ = _[_],
+                    _ = ((_, _) =>
+                      ((_) => (
+                        _.dynamicTypingFunction &&
+                          _.dynamicTyping[_] === void 0 &&
+                          (_.dynamicTyping[_] = _.dynamicTypingFunction(_)),
+                        (_.dynamicTyping[_] || _.dynamicTyping) === !0
+                      ))(_)
+                        ? _ === "true" ||
+                          _ === "TRUE" ||
+                          (_ !== "false" &&
+                            _ !== "FALSE" &&
+                            (((_) => {
+                              if (
+                                _.test(_) &&
+                                ((_ = parseFloat(_)), _ < _ && _ < _)
+                              )
+                                return 1;
+                            })(_)
+                              ? parseFloat(_)
+                              : _.test(_)
+                                ? new Date(_)
+                                : _ === ""
+                                  ? null
+                                  : _))
+                        : _)(
+                      (_ = _.header
+                        ? _ >= _.length
+                          ? "__parsed_extra"
+                          : _[_]
+                        : _),
+                      (_ = _.transform ? _.transform(_, _) : _),
+                    );
+                  _ === "__parsed_extra"
+                    ? ((_[_] = _[_] || []), _[_].push(_))
+                    : (_[_] = _);
                 }
                 return (
                   _.header &&
@@ -619,7 +4034,7 @@
                 (_ += _));
             }
             function _() {
-              return _.header && 0 === _.length;
+              return _.header && _.length === 0;
             }
             function _(_, _, _, _) {
               (_ = {
@@ -627,7 +4042,7 @@
                 code: _,
                 message: _,
               }),
-                void 0 !== _ && (_.row = _),
+                _ !== void 0 && (_.row = _),
                 _.errors.push(_);
             }
             _(_.step) &&
@@ -637,81 +4052,84 @@
                   _()
                     ? _()
                     : (_(),
-                      0 !== _.data.length &&
+                      _.data.length !== 0 &&
                         ((_ += _.data.length),
                         _.preview && _ > _.preview
-                          ? __webpack_require__.abort()
+                          ? _.abort()
                           : ((_.data = _.data[0]), _(_, _))));
               })),
               (this.parse = function (_, _, _) {
-                var _ = _.quoteChar || '"';
+                var _ = _.quoteChar || '"',
+                  _ =
+                    (_.newline || (_.newline = this.guessLineEndings(_, _)),
+                    (_ = !1),
+                    _.delimiter
+                      ? _(_.delimiter) &&
+                        ((_.delimiter = _.delimiter(_)),
+                        (_.meta.delimiter = _.delimiter))
+                      : ((_ = ((_, _, _, _, _) => {
+                          var _, _, _, _;
+                          _ = _ || [
+                            ",",
+                            "	",
+                            "|",
+                            ";",
+                            _.RECORD_SEP,
+                            _.UNIT_SEP,
+                          ];
+                          for (var _ = 0; _ < _.length; _++) {
+                            for (
+                              var _,
+                                _ = _[_],
+                                _ = 0,
+                                _ = 0,
+                                _ = 0,
+                                _ =
+                                  ((_ = void 0),
+                                  new _({
+                                    comments: _,
+                                    delimiter: _,
+                                    newline: _,
+                                    preview: 10,
+                                  }).parse(_)),
+                                _ = 0;
+                              _ < _.data.length;
+                              _++
+                            )
+                              _ && _(_.data[_])
+                                ? _++
+                                : ((_ = _.data[_].length),
+                                  (_ += _),
+                                  _ === void 0
+                                    ? (_ = _)
+                                    : 0 < _ &&
+                                      ((_ += Math.abs(_ - _)), (_ = _)));
+                            0 < _.data.length && (_ /= _.data.length - _),
+                              (_ === void 0 || _ <= _) &&
+                                (_ === void 0 || _ < _) &&
+                                1.99 < _ &&
+                                ((_ = _), (_ = _), (_ = _));
+                          }
+                          return {
+                            successful: !!(_.delimiter = _),
+                            bestDelimiter: _,
+                          };
+                        })(
+                          _,
+                          _.newline,
+                          _.skipEmptyLines,
+                          _.comments,
+                          _.delimitersToGuess,
+                        )).successful
+                          ? (_.delimiter = _.bestDelimiter)
+                          : ((_ = !0), (_.delimiter = _.DefaultDelimiter)),
+                        (_.meta.delimiter = _.delimiter)),
+                    _(_));
                 return (
-                  _.newline || (_.newline = this.guessLineEndings(_, _)),
-                  (_ = !1),
-                  _.delimiter
-                    ? _(_.delimiter) &&
-                      ((_.delimiter = _.delimiter(_)),
-                      (_.meta.delimiter = _.delimiter))
-                    : ((_ = ((_, _, _, _, _) => {
-                        var _, _, _, _;
-                        _ = _ || [
-                          ",",
-                          "\t",
-                          "|",
-                          ";",
-                          _.RECORD_SEP,
-                          _.UNIT_SEP,
-                        ];
-                        for (var _ = 0; _ < _.length; _++) {
-                          for (
-                            var _,
-                              _ = _[_],
-                              _ = 0,
-                              _ = 0,
-                              _ = 0,
-                              _ =
-                                ((_ = void 0),
-                                new _({
-                                  comments: _,
-                                  delimiter: _,
-                                  newline: _,
-                                  preview: 10,
-                                }).parse(_)),
-                              _ = 0;
-                            _ < _.data.length;
-                            _++
-                          )
-                            _ && _(_.data[_])
-                              ? _++
-                              : ((_ += _ = _.data[_].length),
-                                void 0 === _
-                                  ? (_ = _)
-                                  : 0 < _ && ((_ += Math.abs(_ - _)), (_ = _)));
-                          0 < _.data.length && (_ /= _.data.length - _),
-                            (void 0 === _ || _ <= _) &&
-                              (void 0 === _ || _ < _) &&
-                              1.99 < _ &&
-                              ((_ = _), (_ = _), (_ = _));
-                        }
-                        return {
-                          successful: !!(_.delimiter = _),
-                          bestDelimiter: _,
-                        };
-                      })(
-                        _,
-                        _.newline,
-                        _.skipEmptyLines,
-                        _.comments,
-                        _.delimitersToGuess,
-                      )).successful
-                        ? (_.delimiter = _.bestDelimiter)
-                        : ((_ = !0), (_.delimiter = _.DefaultDelimiter)),
-                      (_.meta.delimiter = _.delimiter)),
-                  (_ = _(_)),
                   _.preview && _.header && _.preview++,
                   (_ = _),
                   (_ = new _(_)),
-                  (_ = __webpack_require__.parse(_, _, _)),
+                  (_ = _.parse(_, _, _)),
                   _(),
                   _
                     ? {
@@ -731,10 +4149,8 @@
               }),
               (this.pause = function () {
                 (_ = !0),
-                  __webpack_require__.abort(),
-                  (_ = _(_.chunk)
-                    ? ""
-                    : _.substring(__webpack_require__.getCharIndex()));
+                  _.abort(),
+                  (_ = _(_.chunk) ? "" : _.substring(_.getCharIndex()));
               }),
               (this.resume = function () {
                 _.streamer._halted
@@ -746,25 +4162,29 @@
               }),
               (this.abort = function () {
                 (_ = !0),
-                  __webpack_require__.abort(),
+                  _.abort(),
                   (_.meta.aborted = !0),
                   _(_.complete) && _.complete(_),
                   (_ = "");
               }),
               (this.guessLineEndings = function (_, _) {
-                (_ = _.substring(0, 1048576)),
-                  (_ = new RegExp(_(_) + "([^]*?)" + _(_), "gm"));
-                var _ = (_ = _.replace(_, "")).split("\r");
-                if (
-                  ((_ =
-                    1 < (_ = _.split("\n")).length &&
-                    _[0].length < _[0].length),
-                  1 === _.length || _)
-                )
-                  return "\n";
+                _ = _.substring(0, 1048576);
+                var _ = new RegExp(_(_) + "([^]*?)" + _(_), "gm"),
+                  _ = (_ = _.replace(_, "")).split("\r"),
+                  _ = _.split(`
+`),
+                  _ = 1 < _.length && _[0].length < _[0].length;
+                if (_.length === 1 || _)
+                  return `
+`;
                 for (var _ = 0, _ = 0; _ < _.length; _++)
-                  "\n" === _[_][0] && _++;
-                return _ >= _.length / 2 ? "\r\n" : "\r";
+                  _[_][0] ===
+                    `
+` && _++;
+                return _ >= _.length / 2
+                  ? `\r
+`
+                  : "\r";
               });
           }
           function _(_) {
@@ -779,24 +4199,32 @@
               _ = _.fastMode,
               _ = null,
               _ = !1,
-              _ = null == _.quoteChar ? '"' : _.quoteChar,
+              _ = _.quoteChar == null ? '"' : _.quoteChar,
               _ = _;
             if (
-              (void 0 !== _.escapeChar && (_ = _.escapeChar),
-              ("string" != typeof _ || -1 < _.BAD_DELIMITERS.indexOf(_)) &&
+              (_.escapeChar !== void 0 && (_ = _.escapeChar),
+              (typeof _ != "string" || -1 < _.BAD_DELIMITERS.indexOf(_)) &&
                 (_ = ","),
               _ === _)
             )
               throw new Error("Comment character same as delimiter");
-            !0 === _
+            _ === !0
               ? (_ = "#")
-              : ("string" != typeof _ || -1 < _.BAD_DELIMITERS.indexOf(_)) &&
+              : (typeof _ != "string" || -1 < _.BAD_DELIMITERS.indexOf(_)) &&
                 (_ = !1),
-              "\n" !== _ && "\r" !== _ && "\r\n" !== _ && (_ = "\n");
+              _ !==
+                `
+` &&
+                _ !== "\r" &&
+                _ !==
+                  `\r
+` &&
+                (_ = `
+`);
             var _ = 0,
               _ = !1;
             (this.parse = function (_, _, _) {
-              if ("string" != typeof _)
+              if (typeof _ != "string")
                 throw new Error("Input must be a string");
               var _ = _.length,
                 _ = _.length,
@@ -808,7 +4236,7 @@
                 _ = [],
                 _ = (_ = 0);
               if (!_) return _();
-              if (_ || (!1 !== _ && -1 === _.indexOf(_))) {
+              if (_ || (_ !== !1 && _.indexOf(_) === -1)) {
                 for (var _ = _.split(_), _ = 0; _ < _.length; _++) {
                   if (((_ = _[_]), (_ += _.length), _ !== _.length - 1))
                     _ += _.length;
@@ -831,7 +4259,7 @@
               )
                 if (_[_] === _)
                   for (_ = _, _++; ; ) {
-                    if (-1 === (_ = _.indexOf(_, _ + 1)))
+                    if ((_ = _.indexOf(_, _ + 1)) === -1)
                       return (
                         _ ||
                           _.push({
@@ -845,11 +4273,12 @@
                       );
                     if (_ === _ - 1) return _(_.substring(_, _).replace(_, _));
                     if (_ === _ && _[_ + 1] === _) _++;
-                    else if (_ === _ || 0 === _ || _[_ - 1] !== _) {
-                      -1 !== _ && _ < _ + 1 && (_ = _.indexOf(_, _ + 1));
+                    else if (_ === _ || _ === 0 || _[_ - 1] !== _) {
+                      _ !== -1 && _ < _ + 1 && (_ = _.indexOf(_, _ + 1));
                       var _ = _(
-                        -1 ===
-                          (_ = -1 !== _ && _ < _ + 1 ? _.indexOf(_, _ + 1) : _)
+                        (_ =
+                          _ !== -1 && _ < _ + 1 ? _.indexOf(_, _ + 1) : _) ===
+                          -1
                           ? _
                           : Math.min(_, _),
                       );
@@ -885,13 +4314,13 @@
                         _++;
                     }
                   }
-                else if (_ && 0 === _.length && _.substring(_, _ + _) === _) {
-                  if (-1 === _) return _();
+                else if (_ && _.length === 0 && _.substring(_, _ + _) === _) {
+                  if (_ === -1) return _();
                   (_ = _ + _), (_ = _.indexOf(_, _)), (_ = _.indexOf(_, _));
-                } else if (-1 !== _ && (_ < _ || -1 === _))
+                } else if (_ !== -1 && (_ < _ || _ === -1))
                   _.push(_.substring(_, _)), (_ = _ + _), (_ = _.indexOf(_, _));
                 else {
-                  if (-1 === _) break;
+                  if (_ === -1) break;
                   if ((_.push(_.substring(_, _)), _(_ + _), _ && (_(), _)))
                     return _();
                   if (_ && _.length >= _) return _(!0);
@@ -902,16 +4331,15 @@
               }
               function _(_) {
                 var _ = 0;
-                return -1 !== _ &&
-                  (_ = _.substring(_ + 1, _)) &&
-                  "" === _.trim()
-                  ? _.length
-                  : _;
+                return (_ =
+                  _ !== -1 && (_ = _.substring(_ + 1, _)) && _.trim() === ""
+                    ? _.length
+                    : _);
               }
               function _(_) {
                 return (
                   _ ||
-                    (void 0 === _ && (_ = _.substring(_)),
+                    (_ === void 0 && (_ = _.substring(_)),
                     _.push(_),
                     (_ = _),
                     _(_),
@@ -942,7 +4370,7 @@
                         (_[_] = _),
                         _[_]++,
                         (_ = !0),
-                        ((_ = null === _ ? {} : _)[_] = _);
+                        ((_ = _ === null ? {} : _)[_] = _);
                     } else (_[_] = 1), (_[_] = _);
                     _.add(_);
                   }
@@ -977,7 +4405,7 @@
             var _ = _.data,
               _ = _[_.workerId],
               _ = !1;
-            if (_.error) __webpack_require__.userError(_.error, _.file);
+            if (_.error) _.userError(_.error, _.file);
             else if (_.results && _.results.data) {
               var _ = {
                 abort: function () {
@@ -997,7 +4425,7 @@
                 for (
                   var _ = 0;
                   _ < _.results.data.length &&
-                  (__webpack_require__.userStep(
+                  (_.userStep(
                     {
                       data: _.results.data[_],
                       errors: _.results.errors,
@@ -1011,22 +4439,19 @@
                 delete _.results;
               } else
                 _(_.userChunk) &&
-                  (__webpack_require__.userChunk(_.results, _, _.file),
-                  delete _.results);
+                  (_.userChunk(_.results, _, _.file), delete _.results);
             }
             _.finished && !_ && _(_.workerId, _.results);
           }
           function _(_, _) {
             var _ = _[_];
-            _(_.userComplete) && __webpack_require__.userComplete(_),
-              __webpack_require__.terminate(),
-              delete _[_];
+            _(_.userComplete) && _.userComplete(_), _.terminate(), delete _[_];
           }
           function _() {
             throw new Error("Not implemented.");
           }
           function _(_) {
-            if ("object" != typeof _ || null === _) return _;
+            if (typeof _ != "object" || _ === null) return _;
             var _,
               _ = Array.isArray(_) ? [] : {};
             for (_ in _) _[_] = _(_[_]);
@@ -1038,7 +4463,7 @@
             };
           }
           function _(_) {
-            return "function" == typeof _;
+            return typeof _ == "function";
           }
           return (
             (_.parse = function (_, _) {
@@ -1052,11 +4477,11 @@
                 return (
                   (_ = null),
                   _.NODE_STREAM_INPUT,
-                  "string" == typeof _
+                  typeof _ == "string"
                     ? ((_ = ((_) =>
-                        65279 !== _.charCodeAt(0) ? _ : _.slice(1))(_)),
+                        _.charCodeAt(0) !== 65279 ? _ : _.slice(1))(_)),
                       (_ = new (_.download ? _ : _)(_)))
-                    : !0 === _.readable && _(_.read) && _(_._)
+                    : _.readable === !0 && _(_.read) && _(_._)
                       ? (_ = new _(_))
                       : ((_.File && _ instanceof File) ||
                           _ instanceof Object) &&
@@ -1110,7 +4535,8 @@
               var _ = !1,
                 _ = !0,
                 _ = ",",
-                _ = "\r\n",
+                _ = `\r
+`,
                 _ = '"',
                 _ = _ + _,
                 _ = !1,
@@ -1118,57 +4544,57 @@
                 _ = !1,
                 _ =
                   ((() => {
-                    if ("object" == typeof _) {
+                    if (typeof _ == "object") {
                       if (
-                        ("string" != typeof _.delimiter ||
+                        (typeof _.delimiter != "string" ||
                           _.BAD_DELIMITERS.filter(function (_) {
-                            return -1 !== _.delimiter.indexOf(_);
+                            return _.delimiter.indexOf(_) !== -1;
                           }).length ||
                           (_ = _.delimiter),
-                        ("boolean" != typeof _.quotes &&
-                          "function" != typeof _.quotes &&
+                        (typeof _.quotes != "boolean" &&
+                          typeof _.quotes != "function" &&
                           !Array.isArray(_.quotes)) ||
                           (_ = _.quotes),
-                        ("boolean" != typeof _.skipEmptyLines &&
-                          "string" != typeof _.skipEmptyLines) ||
+                        (typeof _.skipEmptyLines != "boolean" &&
+                          typeof _.skipEmptyLines != "string") ||
                           (_ = _.skipEmptyLines),
-                        "string" == typeof _.newline && (_ = _.newline),
-                        "string" == typeof _.quoteChar && (_ = _.quoteChar),
-                        "boolean" == typeof _.header && (_ = _.header),
+                        typeof _.newline == "string" && (_ = _.newline),
+                        typeof _.quoteChar == "string" && (_ = _.quoteChar),
+                        typeof _.header == "boolean" && (_ = _.header),
                         Array.isArray(_.columns))
                       ) {
-                        if (0 === _.columns.length)
+                        if (_.columns.length === 0)
                           throw new Error("Option columns is empty");
                         _ = _.columns;
                       }
-                      void 0 !== _.escapeChar && (_ = _.escapeChar + _),
+                      _.escapeChar !== void 0 && (_ = _.escapeChar + _),
                         _.escapeFormulae instanceof RegExp
                           ? (_ = _.escapeFormulae)
-                          : "boolean" == typeof _.escapeFormulae &&
+                          : typeof _.escapeFormulae == "boolean" &&
                             _.escapeFormulae &&
                             (_ = /^[=+\-@\t\r].*$/);
                     }
                   })(),
                   new RegExp(_(_), "g"));
               if (
-                ("string" == typeof _ && (_ = JSON.parse(_)), Array.isArray(_))
+                (typeof _ == "string" && (_ = JSON.parse(_)), Array.isArray(_))
               ) {
                 if (!_.length || Array.isArray(_[0])) return _(null, _, _);
-                if ("object" == typeof _[0])
+                if (typeof _[0] == "object")
                   return _(_ || Object.keys(_[0]), _, _);
-              } else if ("object" == typeof _)
+              } else if (typeof _ == "object")
                 return (
-                  "string" == typeof _.data && (_.data = JSON.parse(_.data)),
+                  typeof _.data == "string" && (_.data = JSON.parse(_.data)),
                   Array.isArray(_.data) &&
                     (_.fields || (_.fields = (_.meta && _.meta.fields) || _),
                     _.fields ||
                       (_.fields = Array.isArray(_.data[0])
                         ? _.fields
-                        : "object" == typeof _.data[0]
+                        : typeof _.data[0] == "object"
                           ? Object.keys(_.data[0])
                           : []),
                     Array.isArray(_.data[0]) ||
-                      "object" == typeof _.data[0] ||
+                      typeof _.data[0] == "object" ||
                       (_.data = [_.data])),
                   _(_.fields || [], _.data || [], _)
                 );
@@ -1176,8 +4602,8 @@
               function _(_, _, _) {
                 var _ = "",
                   _ =
-                    ("string" == typeof _ && (_ = JSON.parse(_)),
-                    "string" == typeof _ && (_ = JSON.parse(_)),
+                    (typeof _ == "string" && (_ = JSON.parse(_)),
+                    typeof _ == "string" && (_ = JSON.parse(_)),
                     Array.isArray(_) && 0 < _.length),
                   _ = !Array.isArray(_[0]);
                 if (_ && _) {
@@ -1188,21 +4614,21 @@
                 for (var _ = 0; _ < _.length; _++) {
                   var _ = (_ ? _ : _[_]).length,
                     _ = !1,
-                    _ = _ ? 0 === Object.keys(_[_]).length : 0 === _[_].length;
+                    _ = _ ? Object.keys(_[_]).length === 0 : _[_].length === 0;
                   if (
                     (_ &&
                       !_ &&
                       (_ =
-                        "greedy" === _
-                          ? "" === _[_].join("").trim()
-                          : 1 === _[_].length && 0 === _[_][0].length),
-                    "greedy" === _ && _)
+                        _ === "greedy"
+                          ? _[_].join("").trim() === ""
+                          : _[_].length === 1 && _[_][0].length === 0),
+                    _ === "greedy" && _)
                   ) {
                     for (var _ = [], _ = 0; _ < _; _++) {
                       var _ = _ ? _[_] : _;
                       _.push(_[_][_]);
                     }
-                    _ = "" === _.join("").trim();
+                    _ = _.join("").trim() === "";
                   }
                   if (!_) {
                     for (var _ = 0; _ < _; _++) {
@@ -1217,20 +4643,20 @@
               }
               function _(_, _) {
                 var _, _;
-                return null == _
+                return _ == null
                   ? ""
                   : _.constructor === Date
                     ? JSON.stringify(_).slice(1, 25)
                     : ((_ = !1),
                       _ &&
-                        "string" == typeof _ &&
+                        typeof _ == "string" &&
                         _.test(_) &&
                         ((_ = "'" + _), (_ = !0)),
                       (_ = _.toString().replace(_, _)),
                       (_ =
                         _ ||
-                        !0 === _ ||
-                        ("function" == typeof _ && __webpack_require__(_, _)) ||
+                        _ === !0 ||
+                        (typeof _ == "function" && _(_, _)) ||
                         (Array.isArray(_) && _[_]) ||
                         ((_, _) => {
                           for (var _ = 0; _ < _.length; _++)
@@ -1238,16 +4664,22 @@
                           return !1;
                         })(_, _.BAD_DELIMITERS) ||
                         -1 < _.indexOf(_) ||
-                        " " === _.charAt(0) ||
-                        " " === _.charAt(_.length - 1))
+                        _.charAt(0) === " " ||
+                        _.charAt(_.length - 1) === " ")
                         ? _ + _ + _
                         : _);
               }
             }),
-            (_.RECORD_SEP = String.fromCharCode(30)),
-            (_.UNIT_SEP = String.fromCharCode(31)),
-            (_.BYTE_ORDER_MARK = "\ufeff"),
-            (_.BAD_DELIMITERS = ["\r", "\n", '"', _.BYTE_ORDER_MARK]),
+            (_.RECORD_SEP = ""),
+            (_.UNIT_SEP = ""),
+            (_.BYTE_ORDER_MARK = "\uFEFF"),
+            (_.BAD_DELIMITERS = [
+              "\r",
+              `
+`,
+              '"',
+              _.BYTE_ORDER_MARK,
+            ]),
             (_.WORKERS_SUPPORTED = !_ && !!_.Worker),
             (_.NODE_STREAM_INPUT = 1),
             (_.LocalChunkSize = 10485760),
@@ -1266,11 +4698,13 @@
                 return (
                   this.each(function (_) {
                     if (
-                      "INPUT" !== _(this).prop("tagName").toUpperCase() ||
-                      "file" !== _(this).attr("type").toLowerCase() ||
-                      !_.FileReader ||
+                      !(
+                        _(this).prop("tagName").toUpperCase() === "INPUT" &&
+                        _(this).attr("type").toLowerCase() === "file" &&
+                        _.FileReader
+                      ) ||
                       !this.files ||
-                      0 === this.files.length
+                      this.files.length === 0
                     )
                       return !0;
                     for (var _ = 0; _ < this.files.length; _++)
@@ -1284,7 +4718,7 @@
                   this
                 );
                 function _() {
-                  if (0 === _.length) _(_.complete) && _.complete();
+                  if (_.length === 0) _(_.complete) && _.complete();
                   else {
                     var _,
                       _,
@@ -1293,8 +4727,8 @@
                       _ = _[0];
                     if (_(_.before)) {
                       var _ = _.before(_.file, _.inputElem);
-                      if ("object" == typeof _) {
-                        if ("abort" === _.action)
+                      if (typeof _ == "object") {
+                        if (_.action === "abort")
                           return (
                             (_ = "AbortError"),
                             (_ = _.file),
@@ -1312,13 +4746,13 @@
                               )
                             )
                           );
-                        if ("skip" === _.action) return void _();
-                        "object" == typeof _.config &&
+                        if (_.action === "skip") return void _();
+                        typeof _.config == "object" &&
                           (_.instanceConfig = _.extend(
                             _.instanceConfig,
                             _.config,
                           ));
-                      } else if ("skip" === _) return void _();
+                      } else if (_ === "skip") return void _();
                     }
                     var _ = _.instanceConfig.complete;
                     (_.instanceConfig.complete = function (_) {
@@ -1334,9 +4768,9 @@
             _ &&
               (_.onmessage = function (_) {
                 (_ = _.data),
-                  void 0 === _.WORKER_ID && _ && (_.WORKER_ID = _.workerId),
-                  "string" == typeof _.input
-                    ? __webpack_require__.postMessage({
+                  _.WORKER_ID === void 0 && _ && (_.WORKER_ID = _.workerId),
+                  typeof _.input == "string"
+                    ? _.postMessage({
                         workerId: _.WORKER_ID,
                         results: _.parse(_.input, _.config),
                         finished: !0,
@@ -1344,7 +4778,7 @@
                     : ((_.File && _.input instanceof File) ||
                         _.input instanceof Object) &&
                       (_ = _.parse(_.input, _.config)) &&
-                      __webpack_require__.postMessage({
+                      _.postMessage({
                         workerId: _.WORKER_ID,
                         results: _,
                         finished: !0,
@@ -1356,3254 +4790,24 @@
             ((_.prototype = Object.create(_.prototype)).constructor = _),
             _
           );
-        }),
-        void 0 ===
-          (_ = "function" == typeof _ ? __webpack_require__.apply(_, _) : _) ||
-          (_.exports = _);
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, _) {
-        const _ = (0, _._)();
-        return (0, _._)({
-          queryKey: [
-            "crowdin_metadata_for_clan_event",
-            _.ConvertTo64BitString(),
-            _,
-          ],
-          queryFn: async () => {
-            const _ = _._.Init(_._);
-            _.Body().set_steamid(_.ConvertTo64BitString()),
-              _.Body().set_itemid(_);
-            const _ = await _._.GetClanEventCrowdInMetadata(_, _);
-            return _.GetEResult() != _._ ? null : _.Body().toObject();
-          },
         });
-      }
-      async function _(_, _) {
-        const _ = _._.Init(_._);
-        __webpack_require__.Body().set_steamid(_);
-        const _ = await _._.GetClanCrowdInMetadata(_, _);
-        if (_.GetEResult() === _._)
-          return {
-            crowdin_project_id: null,
-            crowdin_directory_id: null,
-            push_by_default: !1,
-          };
-        if (_.GetEResult() !== _._) throw _.GetEResult();
-        return _.Body().toObject();
-      }
-      function _(_) {
-        const _ = (0, _._)();
-        return (0, _._)({
-          queryKey: ["clan_crowdin_mapping", _],
-          queryFn: async () => await _(_, _),
-        });
-      }
-      function _(_) {
-        return (function (_) {
-          const _ = (0, _._)(),
-            _ = (0, _._)({
-              queryKey: _.queryKey,
-              queryFn: async () => _.queryFn(_, ..._.args),
-            });
-          return _.children(_);
-        })({
-          queryKey: ["clan_crowdin_mapping", _.clanSteamId],
-          queryFn: _,
-          args: [_.clanSteamId],
-          children: _.children,
-        });
-      }
-      const _ = (0, __webpack_require__("chunkid").createContext)(null);
-      function _(_) {
-        const _ = _(_.clanInfo.clanSteamID.ConvertTo64BitString());
-        let _ = !1;
-        return (
-          _.isSuccess && (_ = _.data.push_by_default),
-          (0, _.jsx)(_.Provider, {
-            value: {
-              clanSteamId: _.clanInfo.clanSteamID,
-              bPushToCrowdInByDefault: _,
-            },
-            children: _.children,
-          })
-        );
-      }
-      function _(_, _, _) {
-        const _ = (0, _._)();
-        return (0, _._)({
-          mutationKey: ["fetch_translation_for_clan_event", _, _, _],
-          mutationFn: async function () {
-            return await (async function (_, _, _, _) {
-              const _ = _._.Init(_._);
-              _.Body().set_language(_),
-                _.Body().set_steamid(_),
-                _.Body().set_itemid(_);
-              const _ = await _._.FetchTranslationFromCrowdIn(_, _);
-              if (_.GetEResult() != _._)
-                throw new Error(
-                  `Error from FetchLocalizationForClanEventFromCrowdIn: ${_.GetErrorMessage()} (${_.GetEResult()})`,
-                );
-              return _.Body().toObject();
-            })(_, _, _, _);
-          },
-          retry: !1,
-        });
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports),
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
         __webpack_require__._(module_exports, {
-          FAQRoutes: () => _,
-          default: () => _,
+          _: () => _,
         });
-      var _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      !(function (_) {
-        (_.k_eView = "view"),
-          (_.k_eCommunityView = "communityview"),
-          (_.k_eCommunityEdit = "edit"),
-          (_.k_eCommunityDashboard = "dashboard"),
-          (_.k_eCommunityPreview = "preview");
-      })(_ || (_ = {}));
-      const _ = (_) => {
-        const { route: _, faqid: _ } = _,
-          _ = _(_, _);
-        return _.bForceRedirect
-          ? (0, _.jsx)(_._, {
-              push: !0,
-              _: _,
-            })
-          : _.bForceAnchor
-            ? (0, _.jsx)("a", {
-                href: _._.COMMUNITY_BASE_URL.slice(0, -1) + _,
-                className: _.className,
-                children: _.children,
-              })
-            : (0, _.jsx)(_._, {
-                _: _,
-                className: _.className,
-                children: _.children,
-              });
-      };
-      function _(_, _) {
-        let _ = "/faqs/" + _._.VANITY_ID + "/";
-        switch (_) {
-          case _.k_eView:
-          case _.k_eCommunityView:
-            _ += "view/" + (0, _._)(_);
-            break;
-          case _.k_eCommunityEdit:
-            _ += "edit/" + (0, _._)(_);
-            break;
-          case _.k_eCommunityDashboard:
-            _ += "dashboard";
-            break;
-          case _.k_eCommunityPreview:
-            _ += "preview/" + (0, _._)(_);
-        }
-        return _;
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = "title",
-        _ = "content";
-      const _ = (_) => {
-          const { draft: _, eLanguage: _ } = _;
-          return (0, _.jsxs)("div", {
-            className: _.FlexRowContainer,
-            children: [
-              (0, _.jsx)(_, {
-                draft: _,
-                eLanguage: _,
-              }),
-              (0, _.jsx)(_._, {
-                strToolTip: (0, _._)("#FAQEditor_Loc_Import_ttip"),
-                strLabel: (0, _._)("#EventEditor_Loc_Import_Short"),
-                fnOnImportLocData: (_, _) =>
-                  (function (_, _, _) {
-                    const _ = new Set(),
-                      _ = _.GetSortedTokenList();
-                    return (
-                      (0, _._)(() => {
-                        __webpack_require__.forEach((_) => {
-                          let _ = !1;
-                          _.forEach((_) => {
-                            const _ = _.GetLocalization(_, _) || "";
-                            if (_ === _) {
-                              const _ = _.GetDraftTitle(_);
-                              (_ || (_ && _.length > 0)) &&
-                                (_.SetDraftTitle(_, _), (_ = !0));
-                            }
-                            if (_ === _) {
-                              const _ = _.GetDraftContent(_);
-                              (_ || (_ && _.length > 0)) &&
-                                (_.SetDraftContent(_, _), (_ = !0));
-                            }
-                          }),
-                            _.add(_);
-                        });
-                      }),
-                      Array.from(_)
-                    );
-                  })(_, _, _),
-              }),
-            ],
-          });
-        },
-        _ = (_) => {
-          const { draft: _ } = _;
-          return (0, _.jsxs)("div", {
-            className: _.FlexRowContainer,
-            children: [
-              (0, _.jsx)("div", {
-                className: _.EditPreviewButton,
-                onClick: (_) => {
-                  (0, _._)(
-                    (0, _.jsx)(_, {
-                      direction: "export",
-                      draft: _,
-                      children: " ",
-                    }),
-                    (0, _._)(_),
-                  );
-                },
-                children: (0, _._)("#EventEditor_Loc_Export_Short"),
-              }),
-              (0, _.jsx)("div", {
-                className: _.EditPreviewButton,
-                onClick: (_) => {
-                  (0, _._)(
-                    (0, _.jsx)(_, {
-                      direction: "import",
-                      draft: _,
-                      children: " ",
-                    }),
-                    (0, _._)(_),
-                  );
-                },
-                children: (0, _._)("#EventEditor_Loc_Import_Short"),
-              }),
-            ],
-          });
-        },
-        _ = (_) => {
-          const { closeModal: _, direction: _, draft: _ } = _,
-            [_, _] = _.useState(!1),
-            [_, _] = _.useState(new Array()),
-            _ =
-              (_ || _.length,
-              (0, _._)(
-                "import" == _
-                  ? "#EventEditor_Loc_CrowdinIntegration_ImportTitle"
-                  : "#EventEditor_Loc_CrowdinIntegration_ExportTitle",
-              )),
-            _ = (0, _._)(
-              "import" == _
-                ? "#EventEditor_Loc_Import_Crowdin_Confirm"
-                : "#EventEditor_Loc_Export_Crowdin_Confirm",
-            ),
-            _ =
-              "import" == _
-                ? (0, _.jsx)(_, {
-                    draft: _,
-                    rgAllLanguages: _,
-                    rgLanguagesSelected: _,
-                    fnSelectLanguages: _,
-                  })
-                : null;
-          return (0, _.jsx)(_._, {
-            className: _.LanguageListDialog,
-            closeModal: _,
-            strTitle: _,
-            strDescription: _,
-            onOK: async () => {
-              _(!0);
-              try {
-                "import" == _
-                  ? await _._.Get().ImportNonEnglishDraftsFromCrowdin(
-                      _.GetFAQID(),
-                      _,
-                    )
-                  : await _._.Get().ExportEnglishDraftToCrowdin(_.GetFAQID());
-              } catch (_) {
-                console.error(_);
-              }
-              _(!1);
-            },
-            bOKDisabled: _,
-            children: _
-              ? (0, _.jsx)(_._, {
-                  position: "center",
-                })
-              : _,
-          });
-        },
-        _ = (_) => {
-          const { draft: _, eLanguage: _ } = _;
-          return (0, _.jsx)(_._, {
-            toolTipContent: (0, _._)("#FAQEditor_Loc_Export_ttip"),
-            children: (0, _.jsx)("div", {
-              className: _.EditPreviewButton,
-              onClick: (_) => {
-                (0, _._)(
-                  (0, _.jsx)(_._, {
-                    strTitle: (0, _._)("#EventEditor_Loc_Export"),
-                    bAlertDialog: !0,
-                    children: (0, _.jsx)(_._, {
-                      fnGetLocData: () =>
-                        (function (_, _) {
-                          var _, _;
-                          let _ = new _._();
-                          for (let _ = _.Bhc; _ < _.bP9; ++_)
-                            (_.BHasSomeTextForLanguage(_) || _.Bhc == _) &&
-                              (_.SetLocalization(
-                                _,
-                                _,
-                                null !== (_ = _.GetDraftTitle(_)) &&
-                                  void 0 !== _
-                                  ? _
-                                  : "",
-                              ),
-                              _.SetLocalization(
-                                _,
-                                _,
-                                null !== (_ = _.GetDraftContent(_)) &&
-                                  void 0 !== _
-                                  ? _
-                                  : "",
-                              ));
-                          return _;
-                        })(_, _),
-                      bShowXML: !0,
-                      bShowCSV: !0,
-                      strFileNamePrefix: "faq",
-                      lang: _,
-                    }),
-                  }),
-                  (0, _._)(_),
-                );
-              },
-              children: (0, _._)("#EventEditor_Loc_Export_Short"),
-            }),
-          });
-        },
-        _ = [
-          0, 9, 8, 12, 14, 21, 2, 3, 20, 24, 13, 17, 16, 5, 6, 7, 15, 23, 11, 4,
-          19, 25, 18, 1, 10, 28, 26, 22, 27, 29, 30, 31,
-        ],
-        _ = [
-          _.Uu1,
-          _.NFp,
-          _.A4L,
-          _.m2$,
-          _.iQT,
-          _.L3y,
-          _.egf,
-          _.xcz,
-          _.FH6,
-          _.dZ5,
-          _.K91,
-          _.dFE,
-          _.OFl,
-          _.Pn1,
-          _.JBx,
-          _._Q1,
-          _.QT4,
-          _.Lzz,
-          _.kG6,
-          _.GXE,
-          _.HkE,
-          _.FHN,
-          _.wWt,
-          _.$ys,
-          _.RhO,
-          _.JOj,
-          _.kSD,
-          _.Ze9,
-          _.Vlm,
-        ],
-        _ = (_) => {
-          const {
-              draft: _,
-              rgAllLanguages: _,
-              rgLanguagesSelected: _,
-              fnSelectLanguages: _,
-            } = _,
-            _ = (_, _) => {
-              const _ = _.includes(_);
-              if (_ && !_) {
-                const _ = _.slice();
-                _.push(_), _(_);
-              } else if (!_ && _) {
-                const _ = _.filter((_) => _ !== _);
-                _(_);
-              }
-            },
-            _ = __webpack_require__
-              .sort((_, _) => _[_] - _[_])
-              .map((_) =>
-                (0, _.jsx)(
-                  _,
-                  {
-                    draft: _,
-                    eLang: _,
-                    bInitialState: _.includes(_),
-                    fnOnChecked: _,
-                  },
-                  "langrow" + _ + _.GetFAQID(),
-                ),
-              );
-          return (0, _.jsxs)(_.Fragment, {
-            children: [
-              (0, _.jsxs)("div", {
-                className: _.ChecklistHeader,
-                children: [
-                  (0, _.jsx)("div", {
-                    className: _.Language,
-                    children: (0, _._)("#FAQCrowdin_LanguageHeader"),
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _.Timestamp,
-                    children: (0, _._)("#FAQCrowdin_DraftTimestampHeader"),
-                  }),
-                ],
-              }),
-              (0, _.jsx)(_._, {
-                className: _.CheckAll,
-                label: (0, _._)("#FAQCrowdin_SelectAllCheckboxes"),
-                onChange: (_) => {
-                  _(_ ? __webpack_require__.slice() : []);
-                },
-              }),
-              (0, _.jsx)("div", {
-                className: _.ChecklistRows,
-                children:
-                  null != _
-                    ? _
-                    : (0, _.jsx)("div", {
-                        children: (0, _._)("#FAQCrowdin_NoDraftFound"),
-                      }),
-              }),
-            ],
-          });
-        },
-        _ = (_) => {
-          var _;
-          const { draft: _, eLang: _, bInitialState: _, fnOnChecked: _ } = _,
-            _ = __webpack_require__.GetLastSavedDraftVersion(_),
-            _ = _
-              ? _._.InitFromAccountID(Number.parseInt(_.author_account_id))
-              : null,
-            { data: _ } = (0, _._)(null == _ ? void 0 : _.GetAccountID()),
-            _ = _
-              ? (0, _._)(
-                  "#FAQCrowdin_SavedAtTimeByAuthor",
-                  (0, _._)(_.timestamp) +
-                    " @ " +
-                    (0, _._)(_.timestamp, {
-                      bForce24HourClock: !1,
-                    }),
-                  null !== (_ = null == _ ? void 0 : _.m_strPlayerName) &&
-                    void 0 !== _
-                    ? _
-                    : _.author_account_id,
-                )
-              : (0, _._)("#FAQCrowdin_NoDraftFound"),
-            _ = (0, _.jsxs)("div", {
-              className: _.LanguageCheckboxLabel,
-              children: [
-                (0, _.jsx)("div", {
-                  className: _.Language,
-                  children: (0, _._)("#Language_" + (0, _.LgB)(_)),
-                }),
-                (0, _.jsx)("div", {
-                  className: _.Timestamp,
-                  children: _,
-                }),
-              ],
-            });
-          return (0, _.jsx)(_._, {
-            className: _.LanguageCheckbox,
-            label: _,
-            checked: _,
-            onChange: (_) => _(_, _),
-          });
-        };
-      function _(_) {
-        const [_, _] = (0, _._)(),
-          [_, _] = _.useState(0),
-          [_, _] = _.useState(!1),
-          [_, _] = _.useState(!1),
-          [_, _] = _.useState(null),
-          _ = (0, _._)("CrowdinImportDialog"),
-          _ = _.useRef([]);
-        if (_)
-          return (0, _.jsx)(_._, {
-            strTitle: (0, _._)("#FAQDashboard_CrowdinToolTitle"),
-            strDescription: _,
-            bAlertDialog: !0,
-            bDestructiveWarning: !0,
-            closeModal: _.closeModal,
-          });
-        if (_)
-          return (0, _.jsx)(_._, {
-            strTitle: (0, _._)("#FAQDashboard_CrowdinToolTitle"),
-            strDescription: (0, _._)("#FAQDashboard_PublishComplete"),
-            bAlertDialog: !0,
-            closeModal: _.closeModal,
-          });
-        const _ = (100 * (_ + 0.5)) / _.length,
-          _ = _[_].internal_name;
-        return (0, _.jsx)(_._, {
-          title: (0, _._)("#FAQDashboard_CrowdinToolTitle"),
-          ..._,
-          onCancel: () => _.cancel("CrowdinImportDialog cancelled"),
-          children: (0, _.jsxs)(_._, {
-            children: [
-              (0, _.jsxs)(_._, {
-                children: [
-                  (0, _._)(
-                    "#FAQDashboard_CrowdinToolInstructionsWithCount",
-                    _.length,
-                  ),
-                  (0, _.jsx)("div", {
-                    className: _.Warning,
-                    children: (0, _._)("#FAQDashboard_CrowdinToolWarning"),
-                  }),
-                ],
-              }),
-              (0, _.jsxs)(_._, {
-                children: [
-                  (0, _.jsx)(_._, {
-                    onClick: async () => {
-                      _(!0);
-                      for (let _ = 0; _ < _.length; _++) {
-                        _(_);
-                        const _ = _[_],
-                          _ = [],
-                          _ = 5;
-                        for (let _ = 0; _ < _.length; _ += _) {
-                          const _ = _.slice(_, _ + _);
-                          _.push(
-                            _._.Get().ImportNonEnglishDraftsFromCrowdin(
-                              _.faq_id,
-                              _,
-                              _,
-                            ),
-                          );
-                        }
-                        await Promise.all(_),
-                          _._.Get().BHasLiveEnglishVersion(_.faq_id)
-                            ? ((_.current[_] =
-                                _._.Get().GetNonEnglishDraftsToPublish(
-                                  _.faq_id,
-                                )),
-                              console.log(
-                                "Going to publish FAQ",
-                                _.faq_id,
-                                _.current[_].map((_) => (0, _.LgB)(_)),
-                              ))
-                            : console.log(
-                                "No live english version for:",
-                                _.faq_id,
-                              );
-                      }
-                      for (let _ = 0; _ < _.current.length; _++) {
-                        const _ = _[_],
-                          _ = _.current[_];
-                        if ((null == _ ? void 0 : _.length) > 0) {
-                          _(_);
-                          const _ = await _._.Get().PublishDraftByLanguage(
-                            _.faq_id,
-                            _,
-                          );
-                          if (_.token.reason) return;
-                          if (_ != _._)
-                            return void _(
-                              (0, _._)("#FAQDashboard_PublishFailed"),
-                            );
-                        }
-                      }
-                      _(!0), _(!1);
-                    },
-                    disabled: _,
-                    children: (0, _._)("#FAQDashboard_UpdateAllFAQsButton"),
-                  }),
-                  _ &&
-                    (0, _.jsx)(_, {
-                      nProgressPct: _,
-                      strCurrentLabel: _,
-                    }),
-                  _.current.length > 0 &&
-                    (0, _.jsx)(_, {
-                      rgUpdatedLanguagesForAllFAQs: _.current,
-                    }),
-                ],
-              }),
-            ],
-          }),
+        const _ =
+          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MEFERTQyQ0E1Q0EyMTFFNTgwMzNBQUE0RTk3QjgyMDkiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MEFERTQyQ0I1Q0EyMTFFNTgwMzNBQUE0RTk3QjgyMDkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowQURFNDJDODVDQTIxMUU1ODAzM0FBQTRFOTdCODIwOSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDowQURFNDJDOTVDQTIxMUU1ODAzM0FBQTRFOTdCODIwOSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Prxq/1gAAAGJSURBVHjaYvz//z/DQAImhgEG9HTASiDeiiEKigI64Pj/CLAJiBlhcvSwXPc/JjgLxIIgeUYaJ0JBIL4NxMJY5B4BcTitHXAeiA3wyL+kZSJcQMByEEimVbxn/ScM8mmVCK2IsHwhTD2104AwNHFx4VFzAYgNaVUQ7SFg+Q8gdqZVSTifiEQHsvwdvpKQGYiDyIj3HCLiPRubXnSBBVDFE2iV6PA5IAlN0woiLJcG4h8ELD+PzwwYwxiH5sNALIzHgNsELH8DxEKEHCAGxB/xGPIEiNWwaF5PRNDrEQpFEHGZCIO+ArEjksZKIvTEE5OGQEQyEP/7TxwAJThDItRNIjYRwxgGQPz2P3XAEVKyMHJRLAvEu4FYnYLC6D3UnK/ktAkfA7EeEB+kwAEOpFiOr024mIygjyWn9sQn2UOC5VPJrb4JKcglwvLDlLQfiFHkDcR/cVj+CIjZaO0AfNlUidIWFCmKZYD4GpLlgdRowpHaJGMH4v1AfBGIM6nRiqF1v2Dw944BAgwAsWqnpJAiSOIAAAAASUVORK5CYII=";
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
         });
-      }
-      function _(_) {
-        const { nProgressPct: _, strCurrentLabel: _ } = _;
-        return (0, _.jsxs)("div", {
-          children: [
-            (0, _.jsx)("div", {
-              className: _.ImportProgressBar,
-              children: (0, _.jsx)("div", {
-                className: _.ProgressMarker,
-                style: {
-                  width: _ + "%",
-                },
-              }),
-            }),
-            (0, _.jsx)("div", {
-              className: _.CurrentFAQ,
-              children: (0, _._)("#FAQDashboard_CrowdinToolProgress", _),
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const { rgUpdatedLanguagesForAllFAQs: _ } = _,
-          [_, _] = (0, _._)();
-        return (0, _.jsxs)("div", {
-          className: _.ImportResults,
-          children: [
-            (0, _.jsx)("div", {
-              className: _.ImportResultLabel,
-              children: (0, _._)("#FAQDashboard_CrowdinToolResultsLabel"),
-            }),
-            _.map((_, _) => {
-              const _ = _[_];
-              if (0 == _.length) return null;
-              const _ = _.map((_) => (0, _.wwZ)(_)).join(",");
-              return (0, _.jsx)(
-                "div",
-                {
-                  children: (0, _.jsxs)("div", {
-                    className: _.ImportResult,
-                    children: [
-                      (0, _.jsx)(_._, {
-                        toolTipContent: _.internal_name,
-                        strTooltipClassname: _().HoverAboveModal,
-                        nAllowOffscreenPx: 4e4,
-                        className: _.UrlCode,
-                        children: _.url_code + ": ",
-                      }),
-                      (0, _.jsx)(_._, {
-                        toolTipContent: _,
-                        strTooltipClassname: _().HoverAboveModal,
-                        nAllowOffscreenPx: 4e4,
-                        direction: "left",
-                        className: _.LanguageList,
-                        children: _,
-                      }),
-                    ],
-                  }),
-                },
-                _.faq_id,
-              );
-            }),
-          ],
-        });
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      const _ = (_) => {
-          const { rtTimestamp: _, bShowAsWarning: _ } = _;
-          if (!_)
-            return (0, _.jsx)("div", {
-              className: _().Never,
-              children: (0, _._)("#FAQDashboard_TimeNever"),
-            });
-          const _ = Date.now() / 1e3 - _,
-            _ = _ < 86400 ? (0, _._)(_, !1, !0) : (0, _._)(_);
-          return (0, _.jsx)(_._, {
-            className: _ && _().Warning,
-            rtFullDate: _,
-            stylesmodule: _(),
-            children: _,
-          });
-        },
-        _ = (0, _._)((_) => {
-          const [_, _] = (0, _._)(),
-            [_, _] = _.useState(1),
-            _ = _.map((_) => {
-              const _ = _.per_language_info.find((_) => _.language == _.Bhc),
-                _ = (null == _ ? void 0 : _.last_update_timestamp) || 0,
-                _ = Array.from(
-                  _.per_language_info.filter(
-                    (_) => _.language != _.Bhc && _.last_update_timestamp >= _,
-                  ),
-                ).length,
-                _ = Array.from(
-                  _.per_language_info.filter(
-                    (_) => _.last_update_timestamp < _,
-                  ),
-                ).length,
-                _ = Array.from(
-                  _.per_language_info.filter(
-                    (_) => _.last_publish_timestamp >= _.last_update_timestamp,
-                  ),
-                ).length,
-                _ = Array.from(
-                  _.per_language_info.filter(
-                    (_) => _.last_publish_timestamp < _.last_update_timestamp,
-                  ),
-                ).length;
-              return [
-                _.faq_id,
-                _.internal_name,
-                _,
-                _,
-                _,
-                _,
-                _,
-                _.visible_in_global_realm,
-                _.visible_in_china_realm,
-              ];
-            }).sort((_, _) => (1 == _ ? (0, _._)(_[1], _[1]) : _[_] - _[_]));
-          return (
-            (0, _.useEffect)(() => {
-              _._.Get().RemoveAllDirtyDrafts();
-            }, []),
-            (0, _.jsx)("div", {
-              className: _().FAQDashboardPage,
-              children: (0, _.jsxs)("div", {
-                className: _().FAQDashboard,
-                children: [
-                  (0, _.jsx)(_, {}),
-                  (0, _.jsx)(_, {
-                    eCurrentSortColumn: _,
-                    SetSortColumn: _,
-                  }),
-                  0 == _.length &&
-                    (0, _.jsx)("div", {
-                      className: _().ErrorMsg,
-                      children: (0, _._)("#FAQDashboard_Empty"),
-                    }),
-                  _.map((_) =>
-                    (0, _.jsx)(
-                      _,
-                      {
-                        rgColumns: _,
-                      },
-                      _[0],
-                    ),
-                  ),
-                  !_ &&
-                    (0, _.jsx)(_._, {
-                      position: "center",
-                      size: "xlarge",
-                    }),
-                ],
-              }),
-            })
-          );
-        }),
-        _ = (_) => {
-          const _ = _.useCallback(
-              () =>
-                (0, _._)((0, _.jsx)(_, {}), window, {
-                  strTitle: (0, _._)("#FAQDashboard_CreateFAQButton"),
-                }),
-              [],
-            ),
-            _ = _.useCallback(
-              () =>
-                (0, _._)(
-                  (0, _.jsx)(_, {
-                    bDisableBackgroundDismiss: !0,
-                  }),
-                  window,
-                  {
-                    strTitle: (0, _._)("#FAQDashboard_CrowdinToolTitle"),
-                  },
-                ),
-              [],
-            );
-          return (0, _.jsxs)("div", {
-            className: _().DashboardHeader,
-            children: [
-              (0, _.jsx)("div", {
-                className: _().DashboardHeaderTitle,
-                children: (0, _._)("#FAQDashboard_Header"),
-              }),
-              (0, _.jsxs)("div", {
-                className: _().DashboardHeaderButtonCtn,
-                children: [
-                  (0, _.jsx)(_._, {
-                    onClick: _,
-                    children: (0, _._)("#FAQDashboard_CrowdinToolButton"),
-                  }),
-                  (0, _.jsx)(_._, {
-                    onClick: _,
-                    children: (0, _._)("#FAQDashboard_CreateFAQButton"),
-                  }),
-                ],
-              }),
-            ],
-          });
-        },
-        _ = (_) => {
-          const [_, _] = _.useState("");
-          return (0, _.jsxs)(_._, {
-            onOK: () => {
-              _._.Get().CreateFAQ(_);
-            },
-            bOKDisabled: 0 == _.length,
-            closeModal: _.closeModal,
-            className: _().CreateFAQDialog,
-            children: [
-              (0, _.jsx)(_._, {
-                children: (0, _._)("#FAQDashboard_CreateFAQButton"),
-              }),
-              (0, _.jsx)(_._, {
-                children: (0, _.jsxs)(_._, {
-                  children: [
-                    (0, _._)("#FAQDashboard_CreateFAQInstructions"),
-                    (0, _.jsx)("input", {
-                      type: "text",
-                      className: _().NameInput,
-                      value: _,
-                      placeholder: (0, _._)("#FAQDashboard_NamePlaceHolder"),
-                      onFocus: (_) => _.target.select(),
-                      onChange: (_) =>
-                        __webpack_require__(_.currentTarget.value),
-                      maxLength: 120,
-                    }),
-                  ],
-                }),
-              }),
-            ],
-          });
-        },
-        _ = (_) =>
-          (0, _.jsxs)("div", {
-            className: _().DashboardListHeaderRow,
-            children: [
-              (0, _.jsx)(_, {
-                strLabelLocToken: "#FAQDashboard_NameColumn",
-                bIsNameColumn: !0,
-                eThisColumn: 1,
-                ..._,
-              }),
-              (0, _.jsx)(_, {
-                strLabelLocToken: "#FAQDashboard_DraftTimetampColumn",
-                eThisColumn: 2,
-                ..._,
-              }),
-              (0, _.jsx)(_, {
-                strLabelLocToken: "#FAQDashboard_UpdatedLanguagesColumn",
-                eThisColumn: 3,
-                ..._,
-              }),
-              (0, _.jsx)(_, {
-                strLabelLocToken: "#FAQDashboard_StaleLanguagesColumn",
-                eThisColumn: 4,
-                ..._,
-              }),
-              (0, _.jsx)(_, {
-                strLabelLocToken: "#FAQDashboard_PublishedLanguagesColumn",
-                eThisColumn: 5,
-                ..._,
-              }),
-              (0, _.jsx)(_, {
-                strLabelLocToken: "#FAQDashboard_NeedPublishColumn",
-                eThisColumn: 6,
-                ..._,
-              }),
-              (0, _.jsx)(_, {
-                strLabelLocToken: "#FAQDashboard_VisibilityColumn",
-                eThisColumn: 7,
-                ..._,
-              }),
-              (0, _.jsx)(_, {
-                strLabelLocToken: "#FAQDashboard_SteamChinaVisibilityColumn",
-                eThisColumn: 8,
-                ..._,
-              }),
-            ],
-          }),
-        _ = (_) => {
-          const {
-              strLabelLocToken: _,
-              bIsNameColumn: _,
-              eThisColumn: _,
-              eCurrentSortColumn: _,
-              SetSortColumn: _,
-            } = _,
-            _ = (0, _._)(
-              _().EntryColumn,
-              _().ClickableHeader,
-              _ ? _().NameCol : _().DataCol,
-              _ == _ && _().Selected,
-            );
-          return (0, _.jsxs)(_._, {
-            toolTipContent: (0, _._)(_ + "_ttip"),
-            direction: "top",
-            className: _,
-            onClick: () => _(_),
-            children: [
-              (0, _._)(_),
-              (0, _.jsx)("div", {
-                className: _().DownArrow,
-                children: (0, _.jsx)(_.GB9, {}),
-              }),
-            ],
-          });
-        },
-        _ = (_) => {
-          const { nCount: _, nTotal: _, nGoal: _ } = _;
-          return (0, _.jsx)("div", {
-            className: _ == _ ? _().GoodCount : _().BadCount,
-            children: _ + " / " + _,
-          });
-        },
-        _ = (_) => {
-          const { bIsVisible: _ } = _;
-          return (0, _.jsx)("div", {
-            className: _ ? _().Visible : _().Hidden,
-            children: (0, _._)(
-              _ ? "#FAQDashboard_Visible" : "#FAQDashboard_Invisible",
-            ),
-          });
-        },
-        _ = (_) => {
-          const [_, _, _, _, _, _, _, _, _] = _.rgColumns,
-            _ = _ + _,
-            _ = _ + _;
-          return (0, _.jsxs)(_, {
-            route: _.k_eCommunityEdit,
-            faqid: _,
-            className: _().DashboardEntry,
-            children: [
-              (0, _.jsx)("div", {
-                className: (0, _._)(_().EntryColumn, _().NameCol),
-                children: (0, _.jsx)("div", {
-                  className: _().EntryInternalName,
-                  children: _,
-                }),
-              }),
-              (0, _.jsx)("div", {
-                className: (0, _._)(_().EntryColumn, _().DataCol),
-                children: (0, _.jsx)(_, {
-                  rtTimestamp: _,
-                }),
-              }),
-              (0, _.jsx)("div", {
-                className: (0, _._)(_().EntryColumn, _().DataCol),
-                children: (0, _.jsx)(_, {
-                  nCount: _,
-                  nTotal: _,
-                  nGoal: _,
-                }),
-              }),
-              (0, _.jsx)("div", {
-                className: (0, _._)(_().EntryColumn, _().DataCol),
-                children: (0, _.jsx)(_, {
-                  nCount: _,
-                  nTotal: _,
-                  nGoal: 0,
-                }),
-              }),
-              (0, _.jsx)("div", {
-                className: (0, _._)(_().EntryColumn, _().DataCol),
-                children: (0, _.jsx)(_, {
-                  nCount: _,
-                  nTotal: _,
-                  nGoal: _,
-                }),
-              }),
-              (0, _.jsx)("div", {
-                className: (0, _._)(_().EntryColumn, _().DataCol),
-                children: (0, _.jsx)(_, {
-                  nCount: _,
-                  nTotal: _,
-                  nGoal: 0,
-                }),
-              }),
-              (0, _.jsx)("div", {
-                className: (0, _._)(_().EntryColumn, _().DataCol),
-                children: (0, _.jsx)(_, {
-                  bIsVisible: _,
-                }),
-              }),
-              (0, _.jsx)("div", {
-                className: (0, _._)(_().EntryColumn, _().DataCol),
-                children: (0, _.jsx)(_, {
-                  bIsVisible: _,
-                }),
-              }),
-            ],
-          });
-        },
-        _ = (_) => {
-          _.useEffect(
-            () => (
-              (window.onbeforeunload = () => {
-                var _;
-                const _ = _._.Get().GetLoadedDraftObjs();
-                return Boolean(
-                  (null ===
-                    (_ =
-                      null == _ ? void 0 : _.filter((_) => _.BNeedsSaving())) ||
-                  void 0 === _
-                    ? void 0
-                    : _.length) > 0,
-                )
-                  ? (0, _._)("#EventEditor_UnsavedChanges")
-                  : null;
-              }),
-              () => {
-                window.onbeforeunload = () => {};
-              }
-            ),
-            [],
-          );
-          return (0, _.jsx)(_._, {
-            message: (_) => {
-              var _, _;
-              const _ = _._.Get().GetLoadedDraftObjs();
-              return (
-                !Boolean(
-                  (null ===
-                    (_ =
-                      null == _ ? void 0 : _.filter((_) => _.BNeedsSaving())) ||
-                  void 0 === _
-                    ? void 0
-                    : _.length) > 0,
-                ) ||
-                (_.pathname != _.DashboardFAQ(_._.VANITY_ID) &&
-                  !(null === (_ = _.pathname) || void 0 === _
-                    ? void 0
-                    : __webpack_require__.startsWith(
-                        _.ViewFAQ(_._.VANITY_ID, "").slice(0, -1),
-                      ))) ||
-                (0, _._)("#EventEditor_UnsavedChanges")
-              );
-            },
-          });
-        };
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = (_) =>
-          (0, _.jsx)(_._, {
-            toolTipContent: (0, _._)("#FAQEditor_DeleteAction_ttip"),
-            children: (0, _.jsx)("div", {
-              className: (0, _._)(_.EditPreviewButton, _.Delete),
-              onClick: (_) => {
-                (0, _._)(
-                  (0, _.jsx)(_, {
-                    draft: _.draft,
-                  }),
-                  (0, _._)(_),
-                );
-              },
-              children: (0, _._)("#FAQEditor_DeleteAction"),
-            }),
-          }),
-        _ = (_) => {
-          const { draft: _ } = _,
-            _ = () => _.closeModal && _.closeModal(),
-            [_, _] = _.useState(!1),
-            [_, _] = _.useState(void 0);
-          let _ = (0, _.jsx)("div", {
-            children: (0, _._)("#FAQEditor_DeleteDesc"),
-          });
-          return (
-            _
-              ? (_ = (0, _.jsx)(_._, {
-                  position: "center",
-                  size: "medium",
-                  string: (0, _._)("#FAQEditor_DeletingInProgress"),
-                }))
-              : _ &&
-                (_ = (0, _.jsx)("div", {
-                  children: (0, _._)(
-                    "Error_Description",
-                    _,
-                    (0, _._)("#Error_GenericFailureDescription"),
-                  ),
-                })),
-            (0, _.jsx)(_._, {
-              children: (0, _.jsx)(_._, {
-                onEscKeypress: _,
-                children: (0, _.jsxs)(_._, {
-                  children: [
-                    (0, _.jsx)(_._, {
-                      children: (0, _._)("#FAQEditor_DeleteAction"),
-                    }),
-                    (0, _.jsx)(_._, {
-                      children: (0, _.jsx)(_._, {
-                        children: _,
-                      }),
-                    }),
-                    (0, _.jsx)(_._, {
-                      children: (0, _.jsx)(_._, {
-                        onCancel: _,
-                        bOKDisabled: Boolean(_ || _),
-                        strOKText: (0, _._)("#FAQEditor_DeleteAction"),
-                        strCancelText: Boolean(_ || _)
-                          ? (0, _._)("#Button_OK")
-                          : void 0,
-                        onOK: async () => {
-                          _(!0),
-                            _._.Get()
-                              .DeleteFAQ(_.GetFAQID())
-                              .then((_) => {
-                                if (_ == _._) {
-                                  const _ =
-                                    _._.COMMUNITY_BASE_URL.substr(
-                                      0,
-                                      _._.COMMUNITY_BASE_URL.length - 1,
-                                    ) + _(_.k_eCommunityDashboard);
-                                  window.location.href = _;
-                                }
-                                _(_);
-                              })
-                              .catch((_) => {
-                                const _ = (0, _._)(_);
-                                console.error(
-                                  "FAQDeleteDialog: hit error: " +
-                                    _.strErrorMsg,
-                                  _,
-                                ),
-                                  _(_._);
-                              })
-                              .finally(() => _(!1));
-                        },
-                      }),
-                    }),
-                  ],
-                }),
-              }),
-            })
-          );
-        },
-        _ = (0, _._)((_) => {
-          const { draft: _, bDisabled: _ } = _,
-            _ = _.BNeedsSaving();
-          return (0, _.jsx)(_._, {
-            toolTipContent: (0, _._)(
-              _ ? "#FAQPublish_SaveRequire_ttip" : "#FAQPublish_Publish_ttip",
-            ),
-            children: (0, _.jsx)("div", {
-              className: (0, _._)(_.EditPreviewButton, _ && _.Disabled),
-              onClick: (_) => {
-                _ ||
-                  (0, _._)(
-                    _
-                      ? (0, _.jsx)(_._, {
-                          strDescription: (0, _._)(
-                            "#FAQPublish_SaveRequire_ttip",
-                          ),
-                        })
-                      : (0, _.jsx)(_, {
-                          draft: _.draft,
-                        }),
-                    (0, _._)(_),
-                  );
-              },
-              children: (0, _._)("#FAQPublish_Publish"),
-            }),
-          });
-        }),
-        _ = (_) => {
-          var _;
-          const { draft: _ } = _,
-            _ = () => _.closeModal && _.closeModal(),
-            [_, _] = _.useState(!1),
-            [_, _] = _.useState(void 0),
-            [_, _] = _.useState(void 0),
-            [_, _] = (0, _._)(__webpack_require__.GetFAQID()),
-            [_, _] = _.useState(new Array());
-          let _ = null;
-          if (_)
-            if (_)
-              _ = (0, _.jsx)(_._, {
-                position: "center",
-                size: "medium",
-                string: (0, _._)("#FAQPublish_Publishing"),
-              });
-            else if (_)
-              _ = (0, _.jsx)("div", {
-                children: (0, _._)("#FAQPublish_Success"),
-              });
-            else if (_)
-              _ = (0, _.jsx)("div", {
-                children: (0, _._)(
-                  "#Error_Description",
-                  _,
-                  (0, _._)("#Error_GenericFailureDescription"),
-                ),
-              });
-            else if (_) {
-              const _ =
-                null === (_ = _.per_language_info) || void 0 === _
-                  ? void 0
-                  : _.filter(
-                      (_) => _.last_publish_timestamp < _.last_update_timestamp,
-                    ).map((_) => _.language);
-              _ = (0, _.jsxs)(_.Fragment, {
-                children: [
-                  (0, _.jsx)("div", {
-                    children: (0, _._)("#FAQPublish_Desc"),
-                  }),
-                  (0, _.jsx)("br", {}),
-                  (0, _.jsx)("div", {
-                    children: (0, _._)("#FAQPublish_Desc2"),
-                  }),
-                  (0, _.jsx)("br", {}),
-                  (0, _.jsx)(_, {
-                    draft: _,
-                    rgAllLanguages: _,
-                    rgLanguagesSelected: _,
-                    fnSelectLanguages: _,
-                  }),
-                ],
-              });
-            } else
-              _ = (0, _.jsx)("div", {
-                children: (0, _._)("#FAQPublish_LoadError"),
-              });
-          else
-            _ = (0, _.jsx)(_._, {
-              size: "small",
-              position: "center",
-              string: (0, _._)("#FAQPublish_PublishWait"),
-            });
-          return (0, _.jsx)(_._, {
-            children: (0, _.jsx)(_._, {
-              onEscKeypress: _,
-              children: (0, _.jsxs)(_._, {
-                className: _.LanguageListDialog,
-                children: [
-                  (0, _.jsx)(_._, {
-                    children: (0, _._)("#FAQPublish_Publish"),
-                  }),
-                  (0, _.jsx)(_._, {
-                    children: (0, _.jsx)(_._, {
-                      children: _,
-                    }),
-                  }),
-                  (0, _.jsx)(_._, {
-                    children: (0, _.jsx)(_._, {
-                      onCancel: _,
-                      bOKDisabled: Boolean(_ || _ || _ || 0 == _.length),
-                      strOKText: (0, _._)("#FAQPublish_Publish"),
-                      strCancelText: Boolean(_ || _ || _)
-                        ? (0, _._)("#Button_OK")
-                        : void 0,
-                      onOK: async () => {
-                        _(!0),
-                          _._.Get()
-                            .PublishDraftByLanguage(
-                              __webpack_require__.GetFAQID(),
-                              _,
-                            )
-                            .then((_) => {
-                              _ == _._ && _(!0), _(_);
-                            })
-                            .catch((_) => {
-                              const _ = (0, _._)(_);
-                              console.error(
-                                "FAQPublishDialog: hit error: " + _.strErrorMsg,
-                                _,
-                              ),
-                                _(_._);
-                            })
-                            .finally(() => _(!1));
-                      },
-                    }),
-                  }),
-                ],
-              }),
-            }),
-          });
-        },
-        _ = (_) =>
-          (0, _.jsx)(_._, {
-            toolTipContent: (0, _._)("#FAQEditor_ChangeVisible_ttip"),
-            children: (0, _.jsx)("div", {
-              className: _.EditPreviewButton,
-              onClick: (_) => {
-                (0, _._)(
-                  (0, _.jsx)(_, {
-                    draft: _.draft,
-                  }),
-                  (0, _._)(_),
-                );
-              },
-              children: (0, _._)("#FAQEditor_EditVisible"),
-            }),
-          }),
-        _ = (_) => {
-          const { draft: _ } = _,
-            _ = () => _.closeModal && _.closeModal(),
-            [_, _] = _.useState(!1),
-            [_, _] = _.useState(void 0),
-            [_, _] = _.useState(void 0),
-            _ = _._.Get().GetFAQArticleSummary(_.GetFAQID()),
-            [_, _] = _.useState(_.visible_in_global_realm),
-            [_, _] = _.useState(_.visible_in_china_realm);
-          let _ = (0, _.jsxs)(_.Fragment, {
-            children: [
-              (0, _.jsx)("div", {
-                children: (0, _._)("#FAQEditor_ChangeVisible_Desc"),
-              }),
-              (0, _.jsx)(_._, {
-                label: (0, _._)("#FAQEditor_VisibleInGlobal"),
-                checked: _,
-                onChange: (_) => _(_),
-              }),
-              (0, _.jsx)(_._, {
-                label: (0, _._)("#FAQEditor_VisibleInChina"),
-                checked: _,
-                tooltip: (0, _._)("#FAQEditor_VisibleInChina_ttip"),
-                onChange: (_) => _(_),
-              }),
-            ],
-          });
-          return (
-            _
-              ? (_ = (0, _.jsx)(_._, {
-                  position: "center",
-                  size: "medium",
-                  string: (0, _._)("#FAQEditor_ChangeVisible_InProgress"),
-                }))
-              : _
-                ? (_ = (0, _.jsx)("div", {
-                    children: (0, _._)("#FAQEditor_ChangeVisible_Success"),
-                  }))
-                : _ &&
-                  (_ = (0, _.jsx)("div", {
-                    children: (0, _._)(
-                      "Error_Description",
-                      _,
-                      (0, _._)("#Error_GenericFailureDescription"),
-                    ),
-                  })),
-            (0, _.jsx)(_._, {
-              children: (0, _.jsx)(_._, {
-                onEscKeypress: _,
-                children: (0, _.jsxs)(_._, {
-                  children: [
-                    (0, _.jsx)(_._, {
-                      children: (0, _._)("#FAQEditor_ChangeVisible"),
-                    }),
-                    (0, _.jsx)(_._, {
-                      children: (0, _.jsx)(_._, {
-                        children: _,
-                      }),
-                    }),
-                    (0, _.jsx)(_._, {
-                      children: (0, _.jsx)(_._, {
-                        onCancel: _,
-                        bOKDisabled: Boolean(_ || _ || _),
-                        strOKText: (0, _._)("#FAQEditor_ChangeVisible"),
-                        strCancelText: Boolean(_ || _ || _)
-                          ? (0, _._)("#Button_OK")
-                          : void 0,
-                        onOK: async () => {
-                          _(!0),
-                            _._.Get()
-                              .UpdateVisibility(_.GetFAQID(), _, _)
-                              .then((_) => {
-                                _ == _._ && _(!0), _(_);
-                              })
-                              .catch((_) => {
-                                const _ = (0, _._)(_);
-                                console.error(
-                                  "FAQChangeVisibilityDialog: hit error: " +
-                                    _.strErrorMsg,
-                                  _,
-                                ),
-                                  _(_._);
-                              })
-                              .finally(() => _(!1));
-                        },
-                      }),
-                    }),
-                  ],
-                }),
-              }),
-            })
-          );
-        };
-      var _ = __webpack_require__("chunkid"),
-        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = (0, _._)((_) => {
-          var _, _, _, _, _;
-          const { draft: _, eLanguage: _ } = _,
-            _ = _.GetFAQID(),
-            [_, _] = (0, _._)(_);
-          if (!_) return null;
-          const _ =
-              null ===
-                (_ =
-                  null === (_ = null == _ ? void 0 : _.per_language_info) ||
-                  void 0 === _
-                    ? void 0
-                    : _.find((_) => _.language == _.Bhc)) || void 0 === _
-                ? void 0
-                : _.last_update_timestamp,
-            _ =
-              null === (_ = null == _ ? void 0 : _.per_language_info) ||
-              void 0 === _
-                ? void 0
-                : _.some(
-                    (_) => _.last_publish_timestamp < _.last_update_timestamp,
-                  ),
-            _ =
-              null ===
-                (_ =
-                  null === (_ = null == _ ? void 0 : _.per_language_info) ||
-                  void 0 === _
-                    ? void 0
-                    : _.slice().sort(
-                        (_, _) => _[_.language] - _[_.language],
-                      )) || void 0 === _
-                ? void 0
-                : _.map((_) =>
-                    (0, _.jsx)(
-                      _,
-                      {
-                        info: _,
-                        rtEnglishUpdateTime: _,
-                      },
-                      _.language,
-                    ),
-                  );
-          return (0, _.jsx)(_._, {
-            children: (0, _.jsxs)("div", {
-              className: _.LeftMenu,
-              children: [
-                (0, _.jsxs)("div", {
-                  className: _.Section,
-                  children: [
-                    (0, _.jsxs)("div", {
-                      className: _.SectionTitle,
-                      children: [
-                        (0, _._)("#FAQDashboard_VisibilityColumn"),
-                        " ",
-                      ],
-                    }),
-                    (0, _.jsxs)("div", {
-                      className: _.SectionContents,
-                      children: [
-                        (0, _.jsxs)("div", {
-                          className: _.VisibilityCtn,
-                          children: [
-                            (0, _.jsxs)("div", {
-                              className: (0, _._)(_.StatusRow, _.Global),
-                              children: [
-                                (0, _._)(
-                                  "#FAQDashboard_VisibleInGlobalRealmLabel",
-                                ),
-                                " ",
-                                (0, _.jsx)(_, {
-                                  bIsVisible: _.visible_in_global_realm,
-                                }),
-                              ],
-                            }),
-                            (0, _.jsxs)("div", {
-                              className: (0, _._)(_.StatusRow, _.China),
-                              children: [
-                                (0, _._)(
-                                  "#FAQDashboard_VisibleInChinaRealmLabel",
-                                ),
-                                " ",
-                                (0, _.jsx)(_, {
-                                  bIsVisible: _.visible_in_china_realm,
-                                }),
-                              ],
-                            }),
-                            (0, _.jsx)("div", {
-                              className: _.StatusBtnCtn,
-                              children: (0, _.jsx)(_, {
-                                draft: _,
-                              }),
-                            }),
-                          ],
-                        }),
-                        (0, _.jsxs)("div", {
-                          className: _.PublishCtn,
-                          children: [
-                            _
-                              ? (0, _.jsx)("div", {
-                                  className: _.PublishStatus,
-                                  children: (0, _._)(
-                                    "#FAQStatus_DraftVersionsDesc",
-                                  ),
-                                })
-                              : (0, _.jsx)("div", {
-                                  className: _.PublishStatus,
-                                  children: (0, _._)(
-                                    "#FAQStatus_NothingToPublish",
-                                  ),
-                                }),
-                            (0, _.jsx)("div", {
-                              className: _.PublishBtn,
-                              children: (0, _.jsx)(_, {
-                                draft: _,
-                                bDisabled: !_,
-                              }),
-                            }),
-                          ],
-                        }),
-                      ],
-                    }),
-                  ],
-                }),
-                (0, _.jsxs)("div", {
-                  className: _.Section,
-                  children: [
-                    (0, _.jsx)("div", {
-                      className: _.SectionTitle,
-                      children: (0, _._)("#FAQDashboard_LocalizationSection"),
-                    }),
-                    _._.is_support &&
-                      (0, _.jsx)(_, {
-                        draft: _,
-                      }),
-                    (0, _.jsxs)("div", {
-                      className: _.SectionContents,
-                      children: [
-                        (0, _.jsx)("div", {
-                          className: _.SectionDescription,
-                          children: (0, _._)(
-                            "#FAQDashboard_LocalizationSectionDesc",
-                          ),
-                        }),
-                        (0, _.jsx)(_, {
-                          draft: _,
-                          eLanguage: _,
-                        }),
-                      ],
-                    }),
-                    (0, _.jsxs)("div", {
-                      className: _.SectionContents,
-                      children: [
-                        (0, _.jsx)("div", {
-                          className: _.SectionDescription,
-                          children: (0, _._)(
-                            "#EventEditor_Loc_CrowdinIntegration_Desc",
-                          ),
-                        }),
-                        (0, _.jsx)(_, {
-                          draft: _,
-                        }),
-                      ],
-                    }),
-                  ],
-                }),
-                (0, _.jsxs)("div", {
-                  className: _.Section,
-                  children: [
-                    (0, _.jsx)("div", {
-                      className: _.SectionTitle,
-                      children: (0, _._)(
-                        "#FAQStatus_LocalizedVersionStatusHeader",
-                      ),
-                    }),
-                    (0, _.jsxs)("table", {
-                      className: _.FaqStatusTable,
-                      children: [
-                        (0, _.jsx)("thead", {
-                          children: (0, _.jsxs)("tr", {
-                            children: [
-                              (0, _.jsx)("th", {
-                                children: (0, _._)("#LanguageTitle"),
-                              }),
-                              (0, _.jsx)("th", {
-                                children: (0, _._)("#FAQStatus_LastUpdated"),
-                              }),
-                              (0, _.jsx)("th", {
-                                children: (0, _._)("#FAQStatus_LastPublished"),
-                              }),
-                            ],
-                          }),
-                        }),
-                        (0, _.jsx)("tbody", {
-                          children: _,
-                        }),
-                      ],
-                    }),
-                  ],
-                }),
-                (0, _.jsx)("div", {
-                  className: _.Section,
-                  children: (0, _.jsx)(_, {
-                    draft: _,
-                  }),
-                }),
-              ],
-            }),
-          });
-        }),
-        _ = (0, _._)((_) => {
-          const { draft: _ } = _,
-            _ =
-              ((function (_) {
-                const _ = (0, _._)();
-                (0, _._)({
-                  mutationKey: ["fetch_faq_translation", _],
-                  mutationFn: async (_) => {
-                    const _ = _._.Init(_._);
-                    _.Body().set_faq_id(_),
-                      _.Body().set_language(_),
-                      _.Body().set_steamid(_._.CLANSTEAMID);
-                    return (
-                      await _._.FetchLocalizationFromCrowdIn(_, _)
-                    ).GetEResult();
-                  },
-                });
-              })(_.GetFAQID()),
-              (function (_, _) {
-                const _ = (0, _._)();
-                return (0, _._)({
-                  queryKey: ["get_faq_crowdin_metadata", _, _],
-                  queryFn: async () => {
-                    const _ = _._.Init(_._);
-                    _.Body().set_faq_id(_), _.Body().set_steamid(_);
-                    return (await _._.GetCrowdInMetadata(_, _))
-                      .Body()
-                      .toObject();
-                  },
-                });
-              })(_._.CLANSTEAMID, _.GetFAQID())),
-            [_, _] = (0, _.useState)(_.xPp),
-            [_, _] = (0, _.useState)(!1);
-          let _ = "";
-          return (
-            _.isSuccess &&
-              _.data.crowdin_file_id &&
-              (_ = `https://valve.crowdin.com/editor/${_.data.crowdin_project_id}/${_.data.crowdin_file_id}`),
-            null
-          );
-        }),
-        _ = (0, _._)((_) => {
-          const { info: _, rtEnglishUpdateTime: _ } = _,
-            _ = !!_ && _ > _.last_update_timestamp,
-            _ = _.last_update_timestamp > _.last_publish_timestamp;
-          return (0, _.jsxs)("tr", {
-            children: [
-              (0, _.jsx)("td", {
-                children: (0, _._)("#Language_" + (0, _.LgB)(_.language)),
-              }),
-              (0, _.jsx)("td", {
-                children: (0, _.jsx)(_, {
-                  rtTimestamp: _.last_update_timestamp,
-                  bShowAsWarning: _,
-                }),
-              }),
-              (0, _.jsx)("td", {
-                children: (0, _.jsx)(_, {
-                  rtTimestamp: _.last_publish_timestamp,
-                  bShowAsWarning: _,
-                }),
-              }),
-            ],
-          });
-        });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = (0, _._)((_) => {
-          const { draft: _ } = _,
-            _ = _.BNeedsSaving();
-          return (0, _.jsx)("div", {
-            className: "btn_green_steamui btn_medium",
-            onClick: (_) =>
-              (0, _._)(
-                (0, _.jsx)(_, {
-                  draft: _.draft,
-                }),
-                (0, _._)(_),
-              ),
-            children: (0, _.jsxs)("span", {
-              children: [
-                !_ &&
-                  (0, _.jsx)("img", {
-                    className: _.SavedImage,
-                    src: _._,
-                  }),
-                (0, _._)(_ ? "#Button_Save" : "#Button_Saved"),
-              ],
-            }),
-          });
-        }),
-        _ = (_) => {
-          const { draft: _, closeModal: _ } = _,
-            [_, _] = _.useState(!0),
-            [_, _] = _.useState(void 0);
-          _.useEffect(() => {
-            (async () => {
-              _(!0);
-              try {
-                const _ = await _.SaveDrafts();
-                _(_);
-              } catch (_) {
-                _(_._),
-                  console.log(
-                    "FAQSaveProgressDialog hit exception " +
-                      (0, _._)(_).strErrorMsg,
-                  );
-              } finally {
-                _(!1);
-              }
-            })();
-          }, [_]);
-          const _ = _.useId();
-          return (0, _.jsxs)(_._, {
-            "aria-labelledby": _,
-            bAllowFullSize: !0,
-            onCancel: _,
-            closeModal: _,
-            children: [
-              (0, _.jsx)(_._, {
-                _: _,
-                children: _
-                  ? (0, _.jsx)("div", {
-                      children: (0, _._)("#FAQSave_Saving"),
-                    })
-                  : (0, _.jsxs)("div", {
-                      children: [
-                        (0, _._)(
-                          Boolean(_ == _._)
-                            ? "#FAQSave_SaveSuccess"
-                            : "#FAQSave_Error",
-                        ),
-                        " ",
-                      ],
-                    }),
-              }),
-              (0, _.jsx)(_._, {
-                children: _
-                  ? (0, _.jsx)(_._, {
-                      size: "medium",
-                      position: "center",
-                    })
-                  : (0, _.jsx)("div", {
-                      children: Boolean(_ == _._)
-                        ? (0, _.jsx)("div", {
-                            children: (0, _._)("#FAQSave_SaveSuccess_desc"),
-                          })
-                        : (0, _.jsx)("div", {
-                            children: (0, _._)(
-                              "#Error_Description",
-                              _,
-                              (0, _._)("#Error_GenericFailureDescription"),
-                            ),
-                          }),
-                    }),
-              }),
-              (0, _.jsx)(_._, {
-                children:
-                  !_ &&
-                  (0, _.jsx)(_._, {
-                    onClick: _,
-                    children: (0, _._)("#Button_OK"),
-                  }),
-              }),
-            ],
-          });
-        };
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      const _ = (0, _._)((_) => {
-          const { draft: _, bPreview: _ } = _,
-            _ = _.BHasPublished();
-          return (0, _.jsx)(_._, {
-            children: (0, _.jsxs)("div", {
-              className: (0, _._)({
-                [_.EventEditorTopBarContainer]: !0,
-                [_.EventUnPublished]: !_ && !_,
-                [_.EventPublished]: !_ && _,
-                [_().FAQPreview]: _,
-              }),
-              children: [
-                (0, _.jsx)(_, {
-                  route: _ ? _.k_eCommunityEdit : _.k_eCommunityDashboard,
-                  faqid: _.GetFAQID(),
-                  className: _().EditPreviewButton,
-                  children: (0, _._)(
-                    _ ? "#FAQEditor_EditFAQ" : "#EventDisplay_EventsDashBtn",
-                  ),
-                }),
-                (0, _.jsxs)("div", {
-                  children: [
-                    (0, _.jsx)("div", {
-                      className: _().EditorInternalNameLabel,
-                      children: (0, _._)(
-                        _
-                          ? "#FAQEditor_InternalName_Preview"
-                          : "#FAQEditor_InternalName",
-                      ),
-                    }),
-                    (0, _.jsxs)("div", {
-                      className: _().EditorInternalName,
-                      children: [
-                        _.GetFAQInternalName(),
-                        (0, _.jsx)("img", {
-                          src: _._,
-                          onClick: (_) =>
-                            (0, _._)(
-                              (0, _.jsx)(_, {
-                                draft: _,
-                              }),
-                              (0, _._)(_),
-                            ),
-                        }),
-                      ],
-                    }),
-                  ],
-                }),
-                (0, _.jsxs)("div", {
-                  className: _().EventOptions,
-                  children: [
-                    (0, _.jsx)(_._, {
-                      selectedLang: _._.Get().GetCurEditLanguage(),
-                      fnOnLanguageChanged: _._.Get().SetCurEditLanguage,
-                      fnLangHasData: _.BHasSomeTextForLanguage,
-                      fnIsLangSupported: (_) => !0,
-                      fnLastUpdateRTime: _.GetLastTimeLanguageUpdated,
-                      realms: [_._.k_ESteamRealmGlobal, _._.k_ESteamRealmChina],
-                    }),
-                    !_ &&
-                      (0, _.jsx)(_, {
-                        route: _.k_eCommunityPreview,
-                        faqid: _.GetFAQID(),
-                        className: _().EditPreviewButton,
-                        children: (0, _._)("#Button_Preview"),
-                      }),
-                  ],
-                }),
-              ],
-            }),
-          });
-        }),
-        _ = (_) => {
-          const { closeModal: _, draft: _ } = _,
-            [_, _] = _.useState(__webpack_require__.GetFAQInternalName() || ""),
-            [_, _] = _.useState(!1),
-            [_, _] = _.useState(_._),
-            [_, _] = _.useState(!1);
-          return (0, _.jsxs)(_._, {
-            title: (0, _._)("#FAQEditor_ChangeInternalName"),
-            bAllowFullSize: !0,
-            onCancel: _,
-            closeModal: _,
-            children: [
-              (0, _.jsxs)(_._, {
-                children: [
-                  (0, _.jsx)("div", {
-                    children: (0, _._)("#FAQEditor_ChangeInternalName_desc"),
-                  }),
-                  (0, _.jsx)("input", {
-                    type: "text",
-                    value: _,
-                    placeholder: (0, _._)("#FAQEditor_ChangeInternalName"),
-                    onFocus: (_) => _.target.select(),
-                    onChange: (_) => _(_.currentTarget.value),
-                    maxLength: 240,
-                    disabled: _,
-                  }),
-                  Boolean(_ && !_) &&
-                    (0, _.jsx)(_._, {
-                      string: (0, _._)("#Updating"),
-                      position: "center",
-                      size: "medium",
-                    }),
-                  _ &&
-                    (0, _.jsx)("span", {
-                      children:
-                        _ == _._
-                          ? (0, _._)("#EventDisplay_Share_Success")
-                          : (0, _._)(
-                              "#Error_Description",
-                              _,
-                              (0, _._)("#Error_GenericFailureDescription"),
-                            ),
-                    }),
-                ],
-              }),
-              (0, _.jsx)(_._, {
-                children: (0, _.jsx)(_._, {
-                  bOKDisabled: 0 == _.trim().length || _,
-                  onCancel: _,
-                  strCancelText: _
-                    ? (0, _._)("#Button_Close")
-                    : (0, _._)("#Button_Cancel"),
-                  onOK: async () => {
-                    _(!0),
-                      _._.Get()
-                        .UpdateInternalName(__webpack_require__.GetFAQID(), _)
-                        .then((_) => _(_))
-                        .finally(() => {
-                          _(!0);
-                        });
-                  },
-                }),
-              }),
-            ],
-          });
-        },
-        _ = (0, _._)((_) => {
-          const { draft: _, eLanguage: _ } = _,
-            _ = _.GetFAQID(),
-            [_, _] = (0, _._)(_),
-            _ = _ && _.per_language_info.find((_) => _.language == _),
-            _ =
-              _ &&
-              ((_._.EREALM == _._.k_ESteamRealmGlobal &&
-                _.visible_in_global_realm) ||
-                (_._.EREALM == _._.k_ESteamRealmChina &&
-                  _.visible_in_china_realm)) &&
-              !!(null == _ ? void 0 : _.last_publish_timestamp);
-          return (0, _.jsx)(_._, {
-            children: (0, _.jsx)("div", {
-              className: (0, _._)(_().SaveBackground),
-              children: (0, _.jsxs)("div", {
-                className: _().FlexRowWrapFlexStartContainer,
-                style: {
-                  width: "unset",
-                  justifyContent: "center",
-                },
-                children: [
-                  (0, _.jsx)(_, {
-                    draft: _,
-                  }),
-                  Boolean(_) &&
-                    (0, _.jsx)("div", {
-                      className: _().EditPreviewButton,
-                      children: (0, _.jsx)("a", {
-                        href: _._.HELP_BASE_URL + "faqs/view/" + _.url_code,
-                        children: (0, _._)("#FAQEditir_ViewLiveFAQ"),
-                      }),
-                    }),
-                ],
-              }),
-            }),
-          });
-        });
-      var _ = __webpack_require__("chunkid");
-      const _ = (0, _._)((_) => {
-          const { faqid: _ } = _,
-            [_, _] = (0, _._)(_),
-            _ = _.useRef(void 0);
-          if (!_)
-            return (0, _.jsx)(_._, {
-              position: "center",
-              size: "xlarge",
-              string: (0, _._)("#Loading"),
-            });
-          if (!_)
-            return (0, _.jsx)(_, {
-              strError: (0, _._)("#FAQEditor_NoFAQFound"),
-            });
-          const _ = _._.Get().GetCurEditLanguage();
-          return (0, _.jsxs)("div", {
-            children: [
-              (0, _.jsx)(_, {
-                draft: _,
-              }),
-              (0, _.jsxs)("div", {
-                className: _().FAQEditPage,
-                children: [
-                  (0, _.jsx)("div", {
-                    className: _().FAQMenuCtn,
-                    children: (0, _.jsx)(_, {
-                      draft: _,
-                      eLanguage: _,
-                    }),
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _().FAQEditorCtn,
-                    children: (0, _.jsx)("div", {
-                      className: _().FAQEditor,
-                      children: (0, _.jsxs)("div", {
-                        className: (0, _._)(_().Columns, _().Columns),
-                        children: [
-                          (0, _.jsxs)("div", {
-                            className: (0, _._)(_().LeftCol, _().LeftCol),
-                            children: [
-                              (0, _.jsx)(_, {
-                                draft: _,
-                                eLanguage: _,
-                              }),
-                              (0, _.jsx)(_, {
-                                bbcodeEditorRef: _,
-                                draft: _,
-                                eLanguage: _,
-                              }),
-                            ],
-                          }),
-                          (0, _.jsx)(_, {
-                            draft: _,
-                            bbcodeEditorRef: _,
-                            className: (0, _._)(_().RightCol, _().RightCol),
-                          }),
-                        ],
-                      }),
-                    }),
-                  }),
-                ],
-              }),
-              (0, _.jsx)(_, {
-                draft: _,
-                eLanguage: _,
-              }),
-            ],
-          });
-        }),
-        _ = (_) => {
-          const _ = (0, _.useMemo)(() => new _._(_._.CLANSTEAMID), []);
-          if (!Boolean(_._.CAN_UPLOAD_IMAGES)) return null;
-          const { draft: _, bbcodeEditorRef: _ } = _;
-          return (0, _.jsx)(_._, {
-            children: (0, _.jsxs)("div", {
-              className: _.className,
-              children: [
-                (0, _.jsx)("div", {
-                  children: (0, _._)("#FAQEditor_ImageTitle"),
-                }),
-                (0, _.jsx)(_._, {
-                  bShowLightBox: !0,
-                  appid: void 0,
-                  clanSteamID: _,
-                  imageInsertCallBack: (_, _) =>
-                    _.current && (0, _._)(null == _ ? void 0 : _.current, _, _),
-                  fnSetImageURL: () => {},
-                  rgRealmList: __webpack_require__.GetIncludedRealmList(),
-                  fnLangHasData: _.BHasSomeTextForLanguage,
-                  fnGetImageHash: (_, _) => {
-                    if (_._.includes(_)) {
-                      const _ = _._.GetAllLocalizedGroupImages();
-                      return _ && _.length > _ && null != _[_] ? _[_] : null;
-                    }
-                    return null;
-                  },
-                  partnerEventStore: _._,
-                }),
-              ],
-            }),
-          });
-        },
-        _ = (0, _._)((_) => {
-          const { draft: _, eLanguage: _ } = _;
-          return (0, _.jsxs)("div", {
-            className: _().EditorTitleField,
-            children: [
-              (0, _.jsx)("div", {
-                className: _().EditorLabel,
-                children: (0, _._)("#FAQEditor_TitleLabel"),
-              }),
-              (0, _.jsx)("input", {
-                type: "text",
-                className: _().EditorTitleFieldInput,
-                value: _.GetDraftTitle(_) || "",
-                placeholder: (0, _._)("#FAQEditor_TitlePlaceHolder"),
-                onFocus: (_) => _.target.select(),
-                onChange: (_) => _.SetDraftTitle(_, _.currentTarget.value),
-                maxLength: 120,
-              }),
-            ],
-          });
-        }),
-        _ = (0, _._)((_) => {
-          const { draft: _, eLanguage: _, bbcodeEditorRef: _ } = _;
-          return (0, _.jsxs)("div", {
-            className: _().EditorPane,
-            children: [
-              (0, _.jsx)("div", {
-                className: _().EditorLabel,
-                children: (0, _._)("#FAQEditor_ContentLabel"),
-              }),
-              (0, _.jsx)(_._, {
-                ref: _,
-                fnGetCurText: () => _.GetDraftContent(_) || "",
-                fnOnTextChange: (_) =>
-                  _.SetDraftContent(_, _.currentTarget.value),
-                fnSetText: (_) => _.SetDraftContent(_, _),
-                strPlaceholder: (0, _._)("#FAQEditor_ContentPlaceHolder"),
-                bSupportHTMLImport: !0,
-                showFormatHelp: "PartnerEvents",
-                className: _().TextPaneContainer,
-                classNameForTextArea: _().EditorPaneTextArea,
-              }),
-            ],
-          });
-        }),
-        _ = (_) =>
-          (0, _.jsxs)("div", {
-            className: _().ErrorCtn,
-            children: [
-              (0, _.jsx)("div", {
-                className: _().ErrorMsg,
-                children: _.strError,
-              }),
-              (0, _.jsx)(_, {
-                route: _.k_eCommunityDashboard,
-                className: _().EscapeLink,
-                children: (0, _._)("#FAQEditor_GoToDashboard"),
-              }),
-            ],
-          });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = (_) => {
-          const {
-              title: _,
-              content: _,
-              bIsPreview: _,
-              elSideBars: _,
-              version: _,
-            } = _,
-            _ = (0, _._)();
-          return (
-            _.useEffect(() => {
-              var _, _, _;
-              const _ =
-                null === (_ = null == _ ? void 0 : _.hash) || void 0 === _
-                  ? void 0
-                  : _.substr(
-                      "#" ===
-                        (null === (_ = null == _ ? void 0 : _.hash) ||
-                        void 0 === _
-                          ? void 0
-                          : _.substr(0, 1))
-                        ? 1
-                        : 0,
-                    );
-              _ &&
-                (null === (_ = document.getElementById(_)) ||
-                  void 0 === _ ||
-                  __webpack_require__.scrollIntoView({
-                    block: "start",
-                    behavior: "smooth",
-                  }));
-            }, [_]),
-            (0, _.jsxs)("div", {
-              className: (0, _._)(_.FAQViewPage, _._.LANGUAGE),
-              children: [
-                (0, _.jsx)("a", {
-                  className: _.SupportTitle,
-                  href: `${_._.HELP_BASE_URL}`,
-                  children: (0, _._)("#FAQViewer_SteamSupport"),
-                }),
-                (0, _.jsxs)("div", {
-                  className: _.Columns,
-                  children: [
-                    (0, _.jsxs)("div", {
-                      className: (0, _._)(_.LeftCol),
-                      children: [
-                        (0, _.jsx)("div", {
-                          className: _.TopColorBar,
-                        }),
-                        (0, _.jsxs)("div", {
-                          className: _.FAQTopicCtn,
-                          children: [
-                            (0, _.jsx)("div", {
-                              className: _.FAQTitle,
-                              role: "heading",
-                              "aria-level": 1,
-                              children: _,
-                            }),
-                            (0, _.jsx)("div", {
-                              className: _.FAQContent,
-                              children: (0, _.jsx)(_._, {
-                                text: _,
-                                bShowErrorInfo: _,
-                                version: _ || "0",
-                              }),
-                            }),
-                          ],
-                        }),
-                      ],
-                    }),
-                    (0, _.jsx)("div", {
-                      className: _.RightCol,
-                      children: (0, _.jsx)("div", {
-                        className: _.SectionCtn,
-                        children: _,
-                      }),
-                    }),
-                  ],
-                }),
-              ],
-            })
-          );
-        },
-        _ = (_) =>
-          (0, _.jsx)("div", {
-            className: _.FAQViewPage,
-            children: _.children,
-          });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = (_) => {
-          const { faqContent: _ } = _,
-            [_, _] = (0, _._)(_.faq_id, _.version, _.language);
-          return _._.Get().BHasFAQEdit()
-            ? (0, _.jsxs)("div", {
-                className: (0, _._)(_.Section, _.ValveOnlyBackground),
-                children: [
-                  (0, _.jsx)("div", {
-                    className: _.TopicHeader,
-                    children: (0, _._)("#FAQViewer_AdminLinks"),
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _.InfoRow,
-                    children: (0, _._)(
-                      "#FAQViewer_Admin_LastUpdate",
-                      (null == _ ? void 0 : _.author_account_id)
-                        ? (0, _.jsx)(_._, {
-                            accountID: Number.parseInt(_.author_account_id),
-                          })
-                        : (0, _._)("#FAQViewer_UnknownUser"),
-                      (0, _.jsx)("span", {
-                        children:
-                          (0, _._)(_.timestamp) +
-                          "@" +
-                          (0, _._)(_.timestamp, {
-                            bForce24HourClock: !1,
-                          }),
-                      }),
-                    ),
-                  }),
-                  (0, _.jsx)(_, {
-                    faqContent: _,
-                  }),
-                  (0, _.jsx)(_, {
-                    faqid: _.faq_id,
-                    route: _.k_eCommunityEdit,
-                    bForceAnchor: !0,
-                    children: (0, _._)("#FAQViewer_GotoEditor"),
-                  }),
-                ],
-              })
-            : null;
-        },
-        _ = (_) => {
-          const { faqContent: _ } = _,
-            [_, _] = (0, _._)(_.faq_id);
-          if (
-            !_ ||
-            !_ ||
-            __webpack_require__.GetLastTimeLanguageUpdated(_.language) <=
-              _.timestamp
-          )
-            return null;
-          const _ = __webpack_require__.GetLastSavedDraftVersion(_.language);
-          return (0, _.jsx)("div", {
-            className: _.InfoRow,
-            children: (0, _._)(
-              "#FAQViewer_DraftNewer",
-              (0, _.jsx)(_._, {
-                accountID: Number.parseInt(_.author_account_id),
-              }),
-              (0, _.jsx)("span", {
-                children:
-                  (0, _._)(_.timestamp) +
-                  "@" +
-                  (0, _._)(_.timestamp, {
-                    bForce24HourClock: !1,
-                  }),
-              }),
-            ),
-          });
-        },
-        _ = (_) =>
-          (0, _.jsxs)(_.Fragment, {
-            children: [
-              (0, _.jsxs)("div", {
-                className: (0, _._)(_.Section, _.NeedHelp),
-                children: [
-                  (0, _.jsx)("div", {
-                    className: _.LeftCol,
-                    children: (0, _.jsx)(_._VW, {
-                      role: "presentation",
-                    }),
-                  }),
-                  (0, _.jsxs)("div", {
-                    className: _.RightCol,
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: _.TopicHeader,
-                        children: (0, _._)(
-                          "#FAQViewer_SideBar_ProblemWithSteam_Title",
-                        ),
-                      }),
-                      (0, _.jsx)("div", {
-                        children: (0, _._)(
-                          "#FAQViewer_SideBar_ProblemWithSteam_Desc",
-                        ),
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _.CenterButtonCtn,
-                        children: (0, _.jsx)("a", {
-                          href: _._.HELP_BASE_URL,
-                          className: _.EditPreviewButton,
-                          children: (0, _._)(
-                            "#FAQViewer_SideBar_ProblemWithSteam_Link",
-                          ),
-                        }),
-                      }),
-                    ],
-                  }),
-                ],
-              }),
-              !(0, _._)() &&
-                (0, _.jsxs)("div", {
-                  className: (0, _._)(_.Section, _.CommunityHelp),
-                  children: [
-                    (0, _.jsx)("div", {
-                      className: _.LeftCol,
-                      children: (0, _.jsx)(_.ROZ, {
-                        role: "presentation",
-                      }),
-                    }),
-                    (0, _.jsxs)("div", {
-                      className: _.RightCol,
-                      children: [
-                        (0, _.jsx)("div", {
-                          className: _.TopicHeader,
-                          children: (0, _._)(
-                            "#FAQViewer_SideBar_CommunityHelp_Title",
-                          ),
-                        }),
-                        (0, _.jsx)("div", {
-                          children: (0, _._)(
-                            "#FAQViewer_SideBar_CommunityHelp_Desc",
-                          ),
-                        }),
-                        (0, _.jsx)("div", {
-                          className: _.CenterButtonCtn,
-                          children: (0, _.jsx)("a", {
-                            href: _._.COMMUNITY_BASE_URL + "discussions",
-                            className: _.EditPreviewButton,
-                            children: (0, _._)(
-                              "#FAQViewer_SideBar_CommunityHelp_Link",
-                            ),
-                          }),
-                        }),
-                      ],
-                    }),
-                  ],
-                }),
-            ],
-          });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      const _ = (_) => {
-          const { faqid: _ } = _,
-            [_, _] = (0, _._)(_, (0, _.sfN)(_._.LANGUAGE));
-          return _
-            ? _
-              ? (0, _.jsx)(_, {
-                  title: _.title,
-                  content: _.content,
-                  version: _.version,
-                  elSideBars: [
-                    (0, _.jsx)(
-                      _,
-                      {
-                        faqContent: _,
-                      },
-                      "sidebar",
-                    ),
-                    (0, _.jsx)(
-                      _,
-                      {
-                        faqContent: _,
-                      },
-                      "adminbar",
-                    ),
-                  ],
-                })
-              : (0, _.jsx)(_, {
-                  children: (0, _.jsx)(_, {
-                    strError: (0, _._)("#FAQViewer_NoFAQFound"),
-                  }),
-                })
-            : (0, _.jsx)(_, {
-                children: (0, _.jsx)(_._, {
-                  position: "center",
-                  size: "xlarge",
-                  string: (0, _._)("#Loading"),
-                }),
-              });
-        },
-        _ = (_) => {
-          var _;
-          const _ =
-            _._.COMMUNITY_BASE_URL +
-            (_._.APPID
-              ? "app/" +
-                (null !== (_ = _._.VANITY_ID) && void 0 !== _ ? _ : _._.APPID)
-              : "gid/" + _._.CLANSTEAMID);
-          return (0, _.jsxs)("div", {
-            className: _().ErrorCtn,
-            children: [
-              (0, _.jsx)("div", {
-                className: _().ErrorMsg,
-                children: _.strError,
-              }),
-              (0, _.jsx)("a", {
-                className: _().EscapeLink,
-                href: _,
-                children: (0, _._)("#FAQViewer_GoToHomepage"),
-              }),
-            ],
-          });
-        },
-        _ = (0, _._)((_) => {
-          const { faqid: _ } = _,
-            [_, _] = (0, _._)(_),
-            _ = _._.Get().GetCurEditLanguage();
-          return _
-            ? _
-              ? (0, _.jsxs)(_.Fragment, {
-                  children: [
-                    (0, _.jsx)(_, {
-                      draft: _,
-                      bPreview: !0,
-                    }),
-                    (0, _.jsx)(_, {
-                      title: __webpack_require__.GetDraftTitleWithFallback(
-                        _,
-                        _._.EREALM,
-                      ),
-                      content: __webpack_require__.GetDraftContentWithFallback(
-                        _,
-                        _._.EREALM,
-                      ),
-                      version:
-                        "" + __webpack_require__.GetLastTimeLanguageUpdated(_),
-                    }),
-                    (0, _.jsx)(_, {
-                      draft: _,
-                      eLanguage: _,
-                    }),
-                  ],
-                })
-              : (0, _.jsx)(_, {
-                  children: (0, _.jsx)(_, {
-                    strError: (0, _._)("#FAQViewer_NoFAQFound"),
-                  }),
-                })
-            : (0, _.jsx)(_, {
-                children: (0, _.jsx)(_._, {
-                  position: "center",
-                  size: "xlarge",
-                  string: (0, _._)("#Loading"),
-                }),
-              });
-        });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = {
-          ViewFAQ: (_, _) => `/faqs/${_}/view/${_}*`,
-          EditFAQ: (_, _) => `/faqs/${_}/edit/${_}*`,
-          DashboardFAQ: (_) => `/faqs/${_}/dashboard`,
-          PreviewFAQ: (_, _) => `/faqs/${_}/preview/${_}*`,
-        },
-        _ = (0, _._)((_) => {
-          const [_, _] = _.useState(!0);
-          return (
-            _.useEffect(() => {
-              (async () => {
-                await _._.InitGlobal(), __webpack_require__(!1);
-              })();
-            }, []),
-            _
-              ? (0, _.jsx)(_._, {
-                  position: "center",
-                  size: "medium",
-                  string: (0, _._)("#Loading"),
-                })
-              : (0, _.jsxs)(_.Fragment, {
-                  children: [
-                    (0, _.jsx)(_, {}),
-                    (0, _.jsxs)(_._, {
-                      children: [
-                        (0, _.jsx)(_._, {
-                          path: _.ViewFAQ(":vanity_str", ":faqid"),
-                          render: (_) =>
-                            (0, _.jsx)(_._, {
-                              config: {
-                                "faqs-root": () => {
-                                  const { faqid: _ } = _.match.params,
-                                    _ = (0, _._)(_);
-                                  return (0, _.jsx)(_, {
-                                    faqid: _,
-                                  });
-                                },
-                              },
-                            }),
-                        }),
-                        (0, _.jsx)(_._, {
-                          path: _.EditFAQ(":vanity_str", ":faqid"),
-                          render: (_) =>
-                            (0, _.jsx)(_._, {
-                              config: {
-                                "faqs-root": () => {
-                                  const { faqid: _ } = _.match.params;
-                                  if (_) {
-                                    const _ = (0, _._)(_);
-                                    return _
-                                      ? (0, _.jsx)(_, {
-                                          faqid: _,
-                                        })
-                                      : (0, _.jsx)(_._, {
-                                          push: !0,
-                                          _: _(_.k_eCommunityDashboard),
-                                        });
-                                  }
-                                  return (0, _.jsx)(_, {});
-                                },
-                              },
-                            }),
-                        }),
-                        (0, _.jsx)(_._, {
-                          path: _.DashboardFAQ(":vanity_str"),
-                          render: (_) =>
-                            (0, _.jsx)(_._, {
-                              config: {
-                                "faqs-root": () => (0, _.jsx)(_, {}),
-                              },
-                            }),
-                        }),
-                        (0, _.jsx)(_._, {
-                          path: _.PreviewFAQ(":vanity_str", ":faqid"),
-                          render: (_) =>
-                            (0, _.jsx)(_._, {
-                              config: {
-                                "faqs-root": () => {
-                                  const { faqid: _ } = _.match.params,
-                                    _ = (0, _._)(_);
-                                  return (0, _.jsx)(_, {
-                                    faqid: _,
-                                  });
-                                },
-                              },
-                            }),
-                        }),
-                        (0, _.jsx)(_._, {
-                          component: _._,
-                        }),
-                      ],
-                    }),
-                  ],
-                })
-          );
-        });
+        const _ =
+          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NzcyREYxMUExREVBMTFFOUJFQTREQjZGQTJEQ0UzOTMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NzcyREYxMUIxREVBMTFFOUJFQTREQjZGQTJEQ0UzOTMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo3NzJERjExODFERUExMUU5QkVBNERCNkZBMkRDRTM5MyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo3NzJERjExOTFERUExMUU5QkVBNERCNkZBMkRDRTM5MyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pmk/vzIAAAFiSURBVHjaYnz79i0DCDAB8X8gVgUIIEaoSBmIIQRkvAMIIBADJMUIxBVArI0sAAYAAQTTAwNlTEgcXZDpLFDOHCC+A8Sd6FoEAAIIJBAOZKxAEoTZmAPEKSxQSZitFVCz10D5O1iQdE4AYgsouwOKBUBWvAEyRKF+RQa+QLwFIIDQHYUM/gAxC8hfb6C6QTgLKvkaiGtAikBuUAHiD0g6QZJzob5gYUEz9jXUPU+AWAYWETDwG+o9mGQGLLAFoFbcBGJFIGaDagDHCrIV6ti8ArLCFoc3wf4HCDB84YANVEC9HwPEU4B4EiycQKEqgAUjx+F3INYHYkOoZh6YC0CeEUQLS2Qbi4HYCYgvQ8P8AhC3QOMaJRjRNf4C4m3QcP8ODd4QqM0dyIGEDgKgCtmgUf8dypeBamSERoEALi8sAuUnID4AxIegbHQA18OCRTKOlGgBeSECmuH+E4nfQPWAXQwAHbJ3VkYR2TIAAAAASUVORK5CYII=";
+      },
     },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        var _, _;
-        const { editModel: _ } = _,
-          [_, _] = _.useState(_.xPp),
-          [_, _] = _.useState(!1),
-          [_, _] = _.useState(null),
-          _ = _.GetClanSteamID(),
-          _ = _.GetGID(),
-          _ = (0, _._)(_, _),
-          [, _] = _.useReducer((_) => _ + 1, 0),
-          _ =
-            _.isSuccess &&
-            (null === (_ = _.data) || void 0 === _
-              ? void 0
-              : _.crowdin_project_id) &&
-            (null === (_ = _.data) || void 0 === _ ? void 0 : _.crowdin_file_id)
-              ? `https://valve.crowdin.com/editor/${_.data.crowdin_project_id}/${_.data.crowdin_file_id}`
-              : null,
-          _ = (0, _._)(_.ConvertTo64BitString(), _, _);
-        return _.isLoading
-          ? null
-          : (0, _.jsxs)(_._, {
-              clanSteamID: _.editModel.GetClanSteamID(),
-              children: [
-                (0, _.jsx)(_._, {
-                  active: _,
-                  children: (0, _.jsx)(_._, {}),
-                }),
-                (0, _.jsxs)("div", {
-                  className: _().ValveCrowdInSyncCtn,
-                  children: [
-                    (0, _.jsx)(_._, {
-                      value: _.BPushUpdatesToCrowdInAutomatically(),
-                      onChange: (_) => {
-                        _.SetPushSourceToCrowdInAutomatically(_), _();
-                      },
-                    }),
-                    (0, _.jsxs)("div", {
-                      className: _().ValveCrowdInSyncLabel,
-                      children: [
-                        (0, _._)(
-                          "#EventEditor_Localization_AutomaticallyPushChangesToCrowdIn",
-                        ),
-                        " (",
-                        _
-                          ? (0, _.jsx)("a", {
-                              href: _,
-                              children: _,
-                            })
-                          : (0, _._)(
-                              "#EventEditor_Localization_NotMappedToCrowdIn",
-                            ),
-                        ")",
-                        (0, _.jsx)(_._, {
-                          tooltip: (0, _._)(
-                            "#EventEditor_Localization_Tooltip",
-                          ),
-                          className: _.tooltip_Ctn,
-                        }),
-                        (0, _.jsx)("br", {}),
-                        (0, _.jsx)("span", {
-                          children: (0, _._)(
-                            "#EventEditor_Localization_RememberToSave",
-                          ),
-                        }),
-                      ],
-                    }),
-                    (0, _.jsx)(_, {
-                      onChange: (_) => {
-                        const _ = _.target.value;
-                        if ("all" === _) _(_.xPp);
-                        else {
-                          const _ = (0, _.sfN)(_);
-                          _(_);
-                        }
-                      },
-                    }),
-                    (0, _.jsx)("div", {
-                      className: _().EditPreviewButton,
-                      onClick: () => {
-                        _(!0),
-                          _.mutateAsync()
-                            .then(() => window.location.reload())
-                            .catch((_) => {
-                              _(_.toString()), _(!1);
-                            })
-                            .then(() => {
-                              _(null);
-                            });
-                      },
-                      children: (0, _._)(
-                        "#EventEditor_Localization_FetchLocalization",
-                      ),
-                    }),
-                  ],
-                }),
-                _ &&
-                  (0, _.jsx)(_.Fragment, {
-                    children: (0, _.jsxs)("div", {
-                      className: _().SyncPanelError,
-                      children: [(0, _.jsx)(_._, {}), " ", _],
-                    }),
-                  }),
-              ],
-            });
-      }
-      function _(_) {
-        const _ = (0, _._)(!1);
-        let _ = Array.from(_.entries());
-        __webpack_require__.sort((_, _) => _[1].localeCompare(_[1]));
-        const _ = __webpack_require__.map(([_, _]) =>
-          "english" !== _
-            ? (0, _.jsx)(
-                "option",
-                {
-                  value: _,
-                  children: _,
-                },
-                _,
-              )
-            : "",
-        );
-        return (0, _.jsxs)("select", {
-          onChange: _.onChange,
-          children: [
-            (0, _.jsx)("option", {
-              value: "all",
-              children: (0, _._)("#EventEditor_Localization_AllLanguages"),
-            }),
-            _,
-          ],
-        });
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = (_) => {
-          const _ = (_, _) => {
-            _.preventDefault();
-            const {
-                fnGetLocData: _,
-                closeModal: _,
-                strFileNamePrefix: _,
-                lang: _,
-              } = _,
-              _ = _(),
-              _ = new _._();
-            let _ = _ ? _ + "_localization" : "localization";
-            switch (_) {
-              case "csv_row":
-                _.WriteLocalizationData_CSV_LanguageRows(_, _ + ".csv");
-                break;
-              case "csv_column":
-                _.WriteLocalizationData_CSV_LanguageColumns(_, _ + ".csv");
-                break;
-              case "csv_token":
-                _.WriteLocalizationData_CSV_TokenAndLanguageColumns(
-                  _,
-                  _ + ".csv",
-                );
-                break;
-              case "xml":
-                _.WriteLocalizationData_XML_SingleLanguage(
-                  _,
-                  _,
-                  _ + "_" + (0, _.x6o)((0, _.LgB)(_)) + ".xml",
-                );
-            }
-            _ && _();
-          };
-          return (0, _.jsxs)(_.Fragment, {
-            children: [
-              Boolean(_.bShowCSV) &&
-                (0, _.jsxs)(_.Fragment, {
-                  children: [
-                    (0, _.jsx)(_._, {
-                      onClick: (_) => _(_, "csv_row"),
-                      children: (0, _._)(
-                        "#Localization_Export_Btn_RowLanguages",
-                      ),
-                    }),
-                    (0, _.jsx)(_._, {
-                      onClick: (_) => _(_, "csv_column"),
-                      children: (0, _._)(
-                        "#Localization_Export_Btn_ColumnLanguages",
-                      ),
-                    }),
-                    (0, _.jsx)(_._, {
-                      onClick: (_) => _(_, "csv_token"),
-                      children: (0, _._)(
-                        "#Localization_Export_Btn_TokenLanguages",
-                      ),
-                    }),
-                  ],
-                }),
-              Boolean(_.bShowXML) &&
-                (0, _.jsx)(_._, {
-                  onClick: (_) => _(_, "xml"),
-                  children: (0, _._)("#Localization_Export_Btn_XML"),
-                }),
-            ],
-          });
-        },
-        _ = (_) => {
-          const [_, _] = (0, _.useState)(!1),
-            _ = (_, _) => {
-              __webpack_require__(!1),
-                console.log(
-                  "ImportLocalizationAction: On Handle Parse error: " +
-                    _.message,
-                  _,
-                ),
-                (0, _._)(
-                  (0, _.jsx)(_._, {
-                    children: (0, _.jsxs)("div", {
-                      children: [
-                        (0, _.jsx)("p", {
-                          children: (0, _._)("#Localization_Error_Input"),
-                        }),
-                        (0, _.jsx)("p", {
-                          children: _.message,
-                        }),
-                      ],
-                    }),
-                  }),
-                  window,
-                );
-            },
-            _ = (_) => {
-              __webpack_require__(!1);
-              let _ = "";
-              _.forEach((_) => {
-                _.length > 0 && (_ += ", "),
-                  (_ += (0, _._)("#Language_" + (0, _.LgB)(_)));
-              }),
-                (0, _._)(
-                  (0, _.jsx)(_._, {
-                    strTitle: (0, _._)("#EventDisplay_Share_Success"),
-                    bAlertDialog: !0,
-                    children: (0, _.jsx)("div", {
-                      children:
-                        0 == _.length
-                          ? (0, _._)(
-                              "#Localization_Success_ImportComplete_NoChange",
-                            )
-                          : (0, _._)("#Localization_Success_ImportComplete", _),
-                    }),
-                  }),
-                  window,
-                );
-            },
-            _ = async (_) => {
-              let _ = _.target.files;
-              if (_ && _.length > 0) {
-                __webpack_require__(!0);
-                let _ = new Array(),
-                  _ = new _._();
-                for (let _ = 0; _ < _.length; ++_)
-                  if (_[_]) {
-                    if (_[_].name.toLocaleLowerCase().endsWith(".csv"))
-                      return void _().parse(_[0], {
-                        header: !0,
-                        complete: (_) => {
-                          let _ = new _._().DetectAndFormatCSV(_);
-                          if (!_)
-                            return void _({
-                              code: "",
-                              message: "",
-                              row: 0,
-                              type: "filenameerror",
-                            });
-                          const _ = _._.GetLanguageListForRealms([
-                              _._.k_ESteamRealmGlobal,
-                            ]),
-                            _ = _.fnOnImportLocData(_, _);
-                          _(_);
-                        },
-                        error: _,
-                      });
-                    if (_[_].name.toLocaleLowerCase().endsWith(".xml")) {
-                      let { language: _ } = (0, _._)(_[_].name, _.xPp);
-                      if (null == _ || _ == _.xPp)
-                        return void _({
-                          code: "",
-                          message: (0, _._)(
-                            "#Localization_Error_FileLangauage",
-                            _[_].name,
-                          ),
-                          row: 0,
-                          type: "filenameerror",
-                        });
-                      try {
-                        const _ =
-                          await _.ReadLocalizationData_XML_SingleLanguage(
-                            _[_],
-                            _,
-                          );
-                        _.fnOnImportLocData(_, [_]).forEach((_) => {
-                          -1 == _.indexOf(_) && _.push(_);
-                        });
-                      } catch (_) {
-                        let _ = (0, _._)(_);
-                        return void _({
-                          code: "",
-                          message: (0, _._)(
-                            "#Localization_Error_XMLParseError",
-                            _.strErrorMsg,
-                          ),
-                          row: 0,
-                          type: "parseerror",
-                        });
-                      }
-                    } else
-                      _({
-                        code: "",
-                        message: (0, _._)(
-                          "#Localization_Error_FileExtention",
-                          _[_].name,
-                        ),
-                        row: 0,
-                        type: "filenameerror",
-                      });
-                  }
-                _(_);
-              }
-            };
-          return (0, _.jsx)(_._, {
-            className: (0, _._)(
-              _.className ? _.className : _.EditPreviewButton,
-            ),
-            toolTipContent: _.strToolTip,
-            children: (0, _.jsxs)("label", {
-              className: _.ImportButton,
-              htmlFor: "importlocalization",
-              children: [
-                _ &&
-                  (0, _.jsx)(_._, {
-                    size: "small",
-                  }),
-                (0, _.jsx)("div", {
-                  className: _.Label,
-                  children: (0, _._)(
-                    _.strLabel ? _.strLabel : "#Localization_Import_Btn",
-                  ),
-                }),
-                (0, _.jsx)("input", {
-                  _: "importlocalization",
-                  className: _.ImportButton,
-                  style: {
-                    display: "none",
-                  },
-                  type: "file",
-                  onSubmit: _,
-                  onChange: _,
-                  multiple: !0,
-                }),
-              ],
-            }),
-          });
-        };
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ {
-        constructor() {
-          this.m_mapTokens = new Map();
-        }
-        GetLocalization(_, _) {
-          const _ = this.m_mapTokens.get(_);
-          if (_ && _[_]) return _[_];
-        }
-        SetLocalization(_, _, _) {
-          let _ = this.m_mapTokens.get(_);
-          _ || ((_ = (0, _._)([], _.bP9, null)), this.m_mapTokens.set(_, _)),
-            (_[_] = _);
-        }
-        GetSortedTokenList() {
-          let _ = [];
-          return (
-            this.m_mapTokens.forEach((_, _) => _.push(_)),
-            _.sort((_, _) => _.localeCompare(_)),
-            _
-          );
-        }
-        GetLanguagesWithTokens() {
-          let _ = new Map();
-          this.m_mapTokens.forEach((_) => {
-            for (let _ = 0; _ < _.length; ++_)
-              !_.has(_) &&
-                null !== _[_] &&
-                void 0 !== _[_] &&
-                _[_].trim().length > 0 &&
-                _.set(_, !0);
-          });
-          let _ = new Array();
-          return (
-            _.forEach((_, _) => {
-              _ && _.push(_);
-            }),
-            _
-          );
-        }
-        ClearLanguagesTokens(_) {
-          _.forEach((_) => {
-            this.m_mapTokens.forEach((_, _) => {
-              _ < _.length && null !== _[_] && (_[_] = null);
-            });
-          });
-        }
-        DebugPrintData() {
-          const _ = new Array();
-          return (
-            this.m_mapTokens.forEach((_, _) => _.push(`${_}=${_.join(",")}`)),
-            _.join("\n")
-          );
-        }
-      }
-      class _ {
-        DetectAndFormatCSV(_) {
-          var _, _, _, _, _, _;
-          let _ = null;
-          return (
-            (null ===
-              (_ =
-                null === (_ = null == _ ? void 0 : _.meta) || void 0 === _
-                  ? void 0
-                  : _.fields) || void 0 === _
-              ? void 0
-              : _.length) >= 3 &&
-            "field" === _.meta.fields[0] &&
-            "language" === _.meta.fields[1] &&
-            "value" === _.meta.fields[2]
-              ? (_ = this.ReadLocalizationData_CSV_TokenLanguageList(_))
-              : (null ===
-                    (_ =
-                      null === (_ = null == _ ? void 0 : _.meta) || void 0 === _
-                        ? void 0
-                        : _.fields) || void 0 === _
-                    ? void 0
-                    : _.length) >= 2 &&
-                  "field" === _.meta.fields[0] &&
-                  (0, _.sfN)(_.meta.fields[1], _.xPp) != _.xPp
-                ? (_ = this.ReadLocalizationData_CSV_LanguageColumns(_))
-                : (null ===
-                    (_ =
-                      null === (_ = null == _ ? void 0 : _.meta) || void 0 === _
-                        ? void 0
-                        : _.fields) || void 0 === _
-                    ? void 0
-                    : _.length) >= 2 &&
-                  "language" === _.meta.fields[0] &&
-                  (_ = this.ReadLocalizationData_CSV_LanguageRows(_)),
-            _
-          );
-        }
-        async ReadLocalizationData_XML_SingleLanguage(_, _) {
-          let _ = new _(),
-            _ = new DOMParser(),
-            _ = await _._.ReadFile(_),
-            _ = _.parseFromString(_.toString(), "application/xml");
-          for (let _ = 0; _ < _.documentElement.children.length; ++_) {
-            const _ = _.documentElement.children.item(_);
-            if (!_.getAttribute("id"))
-              throw "Can not find id for element. Probably malformed XML";
-            const _ = _.getAttribute("id").toLocaleLowerCase(),
-              _ = _.textContent;
-            __webpack_require__.SetLocalization(_, _, _);
-          }
-          return _;
-        }
-        ReadLocalizationData_CSV_TokenLanguageList(_) {
-          const _ = new _();
-          return (
-            _.data.forEach((_) => {
-              const _ = _.field,
-                _ = (0, _.sfN)(_.language);
-              _.SetLocalization(_, _, _.value);
-            }),
-            _
-          );
-        }
-        ReadLocalizationData_CSV_LanguageColumns(_) {
-          const _ = new _();
-          return (
-            _.data.forEach((_) => {
-              const _ = _.field;
-              for (let _ = _.Bhc; _ < _.bP9; ++_) {
-                const _ = (0, _.x6o)((0, _.LgB)(_));
-                _.SetLocalization(_, _, _[_]);
-              }
-            }),
-            _
-          );
-        }
-        ReadLocalizationData_CSV_LanguageRows(_) {
-          const _ = new _();
-          return (
-            _.data.forEach((_) => {
-              const _ = (0, _.sfN)(_.language, _.bP9);
-              if (_ !== _.bP9)
-                for (const [_, _] of Object.entries(_))
-                  "language" !== _ &&
-                    "string" == typeof _ &&
-                    _.SetLocalization(_, _, _);
-            }),
-            _
-          );
-        }
-        GetExportLanguages() {
-          return _._.GetLanguageListForRealms([_._.k_ESteamRealmGlobal]);
-        }
-        WriteLocalizationData_CSV_TokenAndLanguageColumns(_, _) {
-          let _ = new Array();
-          _.GetSortedTokenList().forEach((_) => {
-            for (const _ of this.GetExportLanguages()) {
-              let _ = {
-                field: _,
-              };
-              (_.language = (0, _.x6o)((0, _.LgB)(_))),
-                (_.value = _.GetLocalization(_, _)),
-                __webpack_require__.push(_);
-            }
-          }),
-            _._.WriteCSVToFile(_, _);
-        }
-        WriteLocalizationData_CSV_LanguageColumns(_, _) {
-          let _ = new Array();
-          _.GetSortedTokenList().forEach((_) => {
-            let _ = {
-              field: _,
-            };
-            for (const _ of this.GetExportLanguages())
-              _[(0, _.x6o)((0, _.LgB)(_))] = _.GetLocalization(_, _);
-            __webpack_require__.push(_);
-          }),
-            _._.WriteCSVToFile(_, _);
-        }
-        WriteLocalizationData_CSV_LanguageRows(_, _) {
-          let _ = new Array();
-          for (const _ of this.GetExportLanguages())
-            _.length <= _ - 1 &&
-              __webpack_require__.push({
-                language: "",
-              }),
-              __webpack_require__.push({
-                language: (0, _.x6o)((0, _.LgB)(_)),
-              });
-          _.GetSortedTokenList().forEach((_) => {
-            for (const _ of this.GetExportLanguages()) {
-              const _ = _.GetLocalization(_, _);
-              _[_][_] = _;
-            }
-          }),
-            _._.WriteCSVToFile(_, _);
-        }
-        WriteLocalizationData_XML_SingleLanguage(_, _, _) {
-          let _ = document.implementation.createDocument(null, "content", null);
-          _.GetSortedTokenList().forEach((_) => {
-            let _ = _.createElement("string");
-            _.setAttribute("id", _),
-              _.appendChild(_.createTextNode(_.GetLocalization(_, _) || "")),
-              _.documentElement.append(_);
-          }),
-            _._.WriteXMLToFile(_, _);
-        }
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      const _ =
-        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MEFERTQyQ0E1Q0EyMTFFNTgwMzNBQUE0RTk3QjgyMDkiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MEFERTQyQ0I1Q0EyMTFFNTgwMzNBQUE0RTk3QjgyMDkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowQURFNDJDODVDQTIxMUU1ODAzM0FBQTRFOTdCODIwOSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDowQURFNDJDOTVDQTIxMUU1ODAzM0FBQTRFOTdCODIwOSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Prxq/1gAAAGJSURBVHjaYvz//z/DQAImhgEG9HTASiDeiiEKigI64Pj/CLAJiBlhcvSwXPc/JjgLxIIgeUYaJ0JBIL4NxMJY5B4BcTitHXAeiA3wyL+kZSJcQMByEEimVbxn/ScM8mmVCK2IsHwhTD2104AwNHFx4VFzAYgNaVUQ7SFg+Q8gdqZVSTifiEQHsvwdvpKQGYiDyIj3HCLiPRubXnSBBVDFE2iV6PA5IAlN0woiLJcG4h8ELD+PzwwYwxiH5sNALIzHgNsELH8DxEKEHCAGxB/xGPIEiNWwaF5PRNDrEQpFEHGZCIO+ArEjksZKIvTEE5OGQEQyEP/7TxwAJThDItRNIjYRwxgGQPz2P3XAEVKyMHJRLAvEu4FYnYLC6D3UnK/ktAkfA7EeEB+kwAEOpFiOr024mIygjyWn9sQn2UOC5VPJrb4JKcglwvLDlLQfiFHkDcR/cVj+CIjZaO0AfNlUidIWFCmKZYD4GpLlgdRowpHaJGMH4v1AfBGIM6nRiqF1v2Dw944BAgwAsWqnpJAiSOIAAAAASUVORK5CYII=";
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      const _ =
-        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NzcyREYxMUExREVBMTFFOUJFQTREQjZGQTJEQ0UzOTMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NzcyREYxMUIxREVBMTFFOUJFQTREQjZGQTJEQ0UzOTMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo3NzJERjExODFERUExMUU5QkVBNERCNkZBMkRDRTM5MyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo3NzJERjExOTFERUExMUU5QkVBNERCNkZBMkRDRTM5MyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pmk/vzIAAAFiSURBVHjaYnz79i0DCDAB8X8gVgUIIEaoSBmIIQRkvAMIIBADJMUIxBVArI0sAAYAAQTTAwNlTEgcXZDpLFDOHCC+A8Sd6FoEAAIIJBAOZKxAEoTZmAPEKSxQSZitFVCz10D5O1iQdE4AYgsouwOKBUBWvAEyRKF+RQa+QLwFIIDQHYUM/gAxC8hfb6C6QTgLKvkaiGtAikBuUAHiD0g6QZJzob5gYUEz9jXUPU+AWAYWETDwG+o9mGQGLLAFoFbcBGJFIGaDagDHCrIV6ti8ArLCFoc3wf4HCDB84YANVEC9HwPEU4B4EiycQKEqgAUjx+F3INYHYkOoZh6YC0CeEUQLS2Qbi4HYCYgvQ8P8AhC3QOMaJRjRNf4C4m3QcP8ODd4QqM0dyIGEDgKgCtmgUf8dypeBamSERoEALi8sAuUnID4AxIegbHQA18OCRTKOlGgBeSECmuH+E4nfQPWAXQwAHbJ3VkYR2TIAAAAASUVORK5CYII=";
-    },
-  },
-]);
+  ]);
+})();

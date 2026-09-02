@@ -306,6 +306,15 @@ message CContentModeration_ReleaseSubjects_Request {
 message CContentModeration_ReleaseSubjects_Response {
 }
 
+message CContentModeration_ReporterDisputeModeration_Request {
+	optional uint64 reported_content_id = 1;
+	optional uint64 report_id = 2;
+	optional string dispute_details = 3;
+}
+
+message CContentModeration_ReporterDisputeModeration_Response {
+}
+
 message CContentModeration_ResolveDisputedSubject_Request {
 	optional int32 subject_type = 1 [(.description) = "enum"];
 	optional uint64 subject_group_id = 2;
@@ -555,6 +564,8 @@ service ContentModeration {
 	rpc ReleaseSubject (.CContentModeration_ReleaseSubject_Request) returns (.CContentModeration_ReleaseSubject_Response);
 	// ePrivilege=5
 	rpc ReleaseSubjects (.CContentModeration_ReleaseSubjects_Request) returns (.CContentModeration_ReleaseSubjects_Response);
+	// ePrivilege=1
+	rpc ReporterDisputeModeration (.CContentModeration_ReporterDisputeModeration_Request) returns (.CContentModeration_ReporterDisputeModeration_Response);
 	// ePrivilege=5
 	rpc ResolveDisputedSubject (.CContentModeration_ResolveDisputedSubject_Request) returns (.CContentModeration_ResolveDisputedSubject_Response);
 	// ePrivilege=5

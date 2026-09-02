@@ -1,12 +1,12 @@
 {
     "language": "schinese",
-    "Menu_Popover_SteamCharts": "蒸汽平台榜单",
-    "Menu_Section_Browse_NewReleases_Desc": "探索蒸汽平台上的新内容",
-    "Menu_Section_Recommendations_SteamCurators": "蒸汽平台鉴赏家",
-    "Menu_Section_Recommendations_DiscoveryQueue_Description": "让蒸汽平台量身为您推荐一组游戏",
-    "Menu_Section_Hardware_Family": "蒸汽平台硬件",
-    "Menu_Section_SpecialSections_NextFest": "蒸汽平台新品节",
-    "Menu_Section_SpecialSections_SteamAwards": "蒸汽平台大奖",
-    "Menu_Section_SpecialSections_SteamReplay": "蒸汽平台回顾",
-    "Menu_Section_SpecialSections_SteamLabs": "蒸汽平台实验室"
+    "Menu_Popover_SteamCharts": "u84B8u6C7Du5E73u53F0u699Cu5355",
+    "Menu_Section_Browse_NewReleases_Desc": "u63A2u7D22u84B8u6C7Du5E73u53F0u4E0Au7684u65B0u5185u5BB9",
+    "Menu_Section_Recommendations_SteamCurators": "u84B8u6C7Du5E73u53F0u9274u8D4Fu5BB6",
+    "Menu_Section_Recommendations_DiscoveryQueue_Description": "u8BA9u84B8u6C7Du5E73u53F0u91CFu8EABu4E3Au60A8u63A8u8350u4E00u7EC4u6E38u620F",
+    "Menu_Section_Hardware_Family": "u84B8u6C7Du5E73u53F0u786Cu4EF6",
+    "Menu_Section_SpecialSections_NextFest": "u84B8u6C7Du5E73u53F0u65B0u54C1u8282",
+    "Menu_Section_SpecialSections_SteamAwards": "u84B8u6C7Du5E73u53F0u5927u5956",
+    "Menu_Section_SpecialSections_SteamReplay": "u84B8u6C7Du5E73u53F0u56DEu987E",
+    "Menu_Section_SpecialSections_SteamLabs": "u84B8u6C7Du5E73u53F0u5B9Eu9A8Cu5BA4"
 }

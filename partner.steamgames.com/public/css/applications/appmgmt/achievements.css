@@ -3543,6 +3543,15 @@ div._323hRrta7M4brbA6-T-FxA {
   flex-direction: row;
 }
 ._9oQFplYy1CtRPv1h4400D {
+  --color-released: var(--color-green-10);
+  --color-releasing: var(--color-orange-10);
+  --color-unreleased: var(--color-purple-11);
+  --color-group-dark: var(--color-dull-7);
+  --color-group-light: var(--color-dull-8);
+  --color-ok: var(--color-green-10);
+  --color-warning: var(--color-yellow-9);
+  --color-error: var(--color-red-9);
+  --color-important: var(--color-orange-9);
   display: flex;
   flex-direction: column;
   gap: var(--spacing-2);

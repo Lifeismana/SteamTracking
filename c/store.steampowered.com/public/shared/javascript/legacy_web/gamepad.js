@@ -7342,6 +7342,7 @@
           "/.millennium/Dist",
           "Millennium internal",
           "millenium",
+          "millennium",
           "Refused unauthorized RPC command",
         ];
       function _() {

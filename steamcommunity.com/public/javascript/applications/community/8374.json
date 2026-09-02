@@ -1,19 +1,19 @@
 {
     "language": "portuguese",
     "SellOnMarket_View": "Ver no Mercado da Comunidade",
-    "SellOnMarket_ViewListing": "Ver o meu anúncio",
+    "SellOnMarket_ViewListing": "Ver o meu anu00FAncio",
     "SellOnMarket_LowestPrice": "A partir de: %1$s",
-    "SellOnMarket_Volume": "Volume: %1$s vendido(s) nas últimas 24 horas",
+    "SellOnMarket_Volume": "Volume: %1$s vendido(s) nas u00FAltimas 24 horas",
     "SellOnMarket_SellThisItem": "Vender",
     "ItemDescription_Tags": "Marcadores: ",
     "ItemDescription_TradeProtected": "Protegido contra troca",
-    "ItemDescription_TradeProtectedTooltip": "Itens protegidos contra troca não podem ser modificados, consumidos nem transferidos.",
+    "ItemDescription_TradeProtectedTooltip": "Itens protegidos contra troca nu00E3o podem ser modificados, consumidos nem transferidos.",
     "ItemDescription_AssetPropertyLabelColonValue": "%1$s: %2$s",
     "ItemDescription_ListedItem": "No Mercado",
-    "ItemDescription_ListedItemTooltip": "Enquanto este item estiver à venda, não podes modificá-lo nem consumi-lo.",
+    "ItemDescription_ListedItemTooltip": "Enquanto este item estiver u00E0 venda, nu00E3o podes modificu00E1-lo nem consumi-lo.",
     "ItemDescription_ThisItemIsWorthGems": "Este item vale: %1$s",
     "ItemDescription_XGems": "%1$s Gemas",
     "ItemDescription_TurnIntoGemsButton": "Transformar em Gemas...",
-    "ItemDescription_GemDescription": "Este item pode ser transformado em Gemas, que podem ser usadas para criar Boosters.  <1>Mais informações...</1>",
-    "ItemDescription_AccessoriesList_Title": "Acessórios"
+    "ItemDescription_GemDescription": "Este item pode ser transformado em Gemas, que podem ser usadas para criar Boosters.  <1>Mais informau00E7u00F5es...</1>",
+    "ItemDescription_AccessoriesList_Title": "Acessu00F3rios"
 }
