@@ -407,17 +407,7 @@
             this.m_onLoadContextCall.has(_))
           ) {
             const _ = this.m_onLoadContextCall.get(_);
-            _
-              ? ("dev" == _._.WEB_UNIVERSE &&
-                  console.log(
-                    "CBroadcastEmbeddableStore initialized after caller using callback to " +
-                      _.name,
-                  ),
-                _.fnCallback())
-              : "dev" == _._.WEB_UNIVERSE &&
-                console.log(
-                  "CBroadcastEmbeddableStore initialized after caller, however callback is since cleared",
-                );
+            _ && _.fnCallback();
           }
           const _ = this.GetStreams(_);
           return await this.AutoStartVideoStream(_, _), _;
@@ -574,10 +564,7 @@
         static Get() {
           return (
             _.s_GlobalStore ||
-              ((_.s_GlobalStore = new _()),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_BroadcastEmbeddableStore = _.s_GlobalStore),
-              _.s_GlobalStore.Init()),
+              ((_.s_GlobalStore = new _()), _.s_GlobalStore.Init()),
             _.s_GlobalStore
           );
         }

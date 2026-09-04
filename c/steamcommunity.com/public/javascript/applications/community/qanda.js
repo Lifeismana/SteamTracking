@@ -154,6 +154,72 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid");
+      function _(_) {
+        return (0, _.jsx)(_._, {
+          onEscKeypress: _.closeModal,
+          bDisableBackgroundDismiss: !0,
+          children: (0, _.jsx)(_, {
+            redirectURL: _.redirectURL,
+            guestOption: _.guestOption,
+          }),
+        });
+      }
+      function _() {
+        (0, _._)(
+          (0, _.jsx)(_, {
+            ownerWin: window,
+            redirectURL: window.location.href,
+          }),
+          window,
+          {
+            strTitle: (0, _._)("#Login_SignInTitle"),
+          },
+        );
+      }
+      function _(_) {
+        const { redirectURL: _, guestOption: _ } = _,
+          [_] = (0, _.useState)(
+            new _._(_._.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
+          ),
+          [_, _] = (0, _.useState)(!1);
+        return (0, _.jsx)("div", {
+          children: _
+            ? (0, _.jsx)(_._, {})
+            : (0, _.jsx)(_._, {
+                autoFocus: !0,
+                transport: _,
+                platform: _._._,
+                onComplete: (_) => {
+                  _ == _._.k_PrimaryDomainFail
+                    ? _(!0)
+                    : window.location.assign(_);
+                },
+                redirectUrl: _,
+                theme: "modal",
+                children:
+                  _ &&
+                  (0, _.jsx)(_._, {
+                    redirectURL: _,
+                  }),
+              }),
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ =
         __webpack_require__._ +

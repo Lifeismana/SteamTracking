@@ -2522,7 +2522,7 @@
     "Platform_Linux": "Linux / SteamOS",
     "Platform_Mac": "macOS",
     "Platform_VR": "Thực tế ảo",
-    "ContentDescriptor": "Trình mô tả nội dung",
+    "ContentDescriptor": "Chú giải nội dung",
     "ContentDescriptor_GeneralMatureContent": "Nội dung mang yếu tố trưởng thành nói chung",
     "ContentDescriptor_GeneralMatureContent_Description": "Chủ đề mang yếu tố trưởng thành có thể không phù hợp với tất cả đối tượng.",
     "ContentDescriptor_FrequentViolenceOrGore": "Thường có bạo lực hoặc máu me",
@@ -4154,5 +4154,6 @@
     "GamePerformance_Reason": "Lý do",
     "GamePerformance_NumResponses": "Số lượng phản hồi",
     "NewToolTitleSuffix_Beta": "BETA",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "SteamMachine_TestResult_MultiWindowAppAutomaticallySetsFocus": "Trò chơi sử dụng nhiều cửa sổ và có thể yêu cầu bạn nhắm chọn thủ công các cửa sổ thích hợp thông qua lớp phủ Steam"
 }

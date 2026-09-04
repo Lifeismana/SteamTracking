@@ -4154,5 +4154,6 @@
     "GamePerformance_Reason": "สาเหตุ",
     "GamePerformance_NumResponses": "# การตอบกลับ",
     "NewToolTitleSuffix_Beta": "เบต้า",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "SteamMachine_TestResult_MultiWindowAppAutomaticallySetsFocus": "เกมนี้ใช้หน้าต่างจำนวนมาก และอาจกำหนดให้คุณเลือกโฟกัสหน้าต่างที่เหมาะสมด้วยตัวเองโดยใช้โอเวอร์เลย์ Steam"
 }

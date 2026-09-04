@@ -961,8 +961,8 @@
     "Bbcode_No_Match": "No hay coincidencias con el BBCode admitido",
     "Bbcode_Expand_ShowMore_Collapsed": "Mostrar más",
     "Bbcode_Expand_ShowMore_Expanded": "Mostrar menos",
-    "Bbcode_Expand_Spoiler_Collapsed": "Mostrar texto",
-    "Bbcode_Expand_Spoiler_Expanded": "Ocultar texto",
+    "Bbcode_Expand_Spoiler_Collapsed": "Mostrar espóileres",
+    "Bbcode_Expand_Spoiler_Expanded": "Ocultar espóileres",
     "Bbcode_Expand_Details_Collapsed": "Mostrar detalles",
     "Bbcode_Expand_Details_Expanded": "Ocultar detalles",
     "Bbcode_Spoiler_Hide": "Ocultar espóiler",
@@ -4154,5 +4154,6 @@
     "GamePerformance_Reason": "Razón",
     "GamePerformance_NumResponses": "N.º de respuestas",
     "NewToolTitleSuffix_Beta": "BETA",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "SteamMachine_TestResult_MultiWindowAppAutomaticallySetsFocus": "Este juego utiliza varias ventanas y puede que tengas que enfocar las ventanas adecuadas de forma manual a través de la interfaz superpuesta de Steam."
 }

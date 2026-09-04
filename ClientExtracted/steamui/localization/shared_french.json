@@ -2800,7 +2800,7 @@
     "SteamDeckVerified_Category_Unsupported": "Non pris en charge",
     "SteamDeckVerified_Category_Unknown": "Indéterminé",
     "SteamOSCompatibility_DescriptionHeader": "D'après nos tests basés sur la vérification de compatibilité avec Steam Deck, l'état de ce titre est %1$s sur SteamOS. %2$s",
-    "SteamOSCompatibility_DescriptionHeader_WithAppName": "D'après nos tests basés sur la vérification de compatibilité avec Steam Deck, l'état de ce titre est %1$s avec les appareils sous SteamOS. %2$s",
+    "SteamOSCompatibility_DescriptionHeader_WithAppName": "D'après nos tests basés sur la vérification de compatibilité avec Steam Deck, l'état de ce titre est %2$s avec les appareils sous SteamOS. %3$s",
     "SteamOSCompatibility_DescriptionHeader_Unknown": "Valve est encore en train de tester ce titre. Nous ne disposons pour le moment d'aucune information supplémentaire concernant sa compatibilité avec SteamOS.",
     "SteamOSCompatibility_DescriptionHeader_Unknown_WithAppName": "Valve est encore en train de tester %1$s. Nous ne disposons pour le moment d'aucune information supplémentaire concernant sa compatibilité avec SteamOS.",
     "SteamOSCompatibility_DescriptionHeader_Compatible": "La compatibilité de l'entrée et les performances peuvent varier selon votre matériel.",
@@ -3734,7 +3734,7 @@
     "ClipExport_ExportFailedHeader": "L'exportation de l'enregistrement a échoué",
     "ClipExport_Bitrate_Label": "Débit",
     "ClipExport_Bitrate_Kbps": "%1$s Ko/s",
-    "ClipExport_Bitrate_Mbps": "%1$s Mo/s",
+    "ClipExport_Bitrate_Mbps": "%1$s Mb/s",
     "ClipExport_Bitrate_Native": "(Original)",
     "ClipExport_Bitrate_Ultra": "Ultra",
     "ClipExport_Bitrate_High": "Élevé",
@@ -4154,5 +4154,6 @@
     "GamePerformance_Reason": "Motif",
     "GamePerformance_NumResponses": "Nbre de réponses",
     "NewToolTitleSuffix_Beta": "BÊTA",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "SteamMachine_TestResult_MultiWindowAppAutomaticallySetsFocus": "Ce jeu a recours à plusieurs fenêtres : vous devrez peut-être utiliser l'overlay Steam pour changer manuellement de fenêtre."
 }

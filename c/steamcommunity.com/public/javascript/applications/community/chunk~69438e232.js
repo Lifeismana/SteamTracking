@@ -158,6 +158,13 @@
     },
     chunkid: (module) => {
       module.exports = {
+        narrowWidth: "500px",
+        ExpandRowButton: "r6FhuuUn6dvEsEckchXo5",
+        Selected: "wOEL5nQgChVeJX_0DwcXg",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         CapsuleMicroTrailer: "_2aMRbzoT83AkFGYSmCvnRe",
         GrowOnHoverImplicit: "_23t3208XMavZer6IZIxzSb",
         GrowOnHoverMedium: "_2aYdrHuuHZHrhgAJh-eZX3",
@@ -290,24 +297,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        narrowWidth: "500px",
-        RoleIcon: "_1uvKF_UbD6VhnVdaRkXhbu",
-        ProfileLink: "_2oSTSohQ1CZIgVn7E6_0Ft",
-        MeBadge: "_2W_HQa5Rhf-hHITgV5H0bu",
-        PlayerName: "AdQYbMq7HHJ3Jgljib9UX",
-        RoleAndIcon: "_3VzCnvA_1SxskuCqmZkkHA",
-        RoleName: "_3C9nRrwzQk9qHlJx6NaXDI",
-        FamilyErrorDisplay: "egC2pffk2Ff-wvlnEHOqf",
-        FamilyMemberStatus: "bMHOg1F_hCL_s5erx4pWC",
-        FamilyMemberRow: "_2LyGIHuQ8SFKb5T262YUvg",
-        InfoRow: "_3TgL3aJ2hUdLP2stFZ2wZv",
-        InvitePending: "_1IeeH6Qo58UdaFJ3hkLMzs",
-        ExpandRowButton: "_3Qa1urRRWR4tjkBSNaO8Wi",
-        Selected: "r0ToHd0tmv46GM00Lr0a_",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         GotSteamDialog: "_2Qusm1gosCAtAqLKo5hioQ",
         DownloadSteamUrl: "_10lP7BWsYbhm_AclLUpjRi",
         GameName: "_1_uzwF-1oILlCEkcaApC-n",
@@ -318,45 +307,6 @@
         ActionText: "_2s5NsgqEDdI6nKvz-9YFa4",
         Footer: "_3OKQsxzgQZkt2GtKz9679g",
         Logo: "_2AEA_k1tEcjAtTL7-Bnitk",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        "duration-app-launch": "800ms",
-        narrowWidth: "500px",
-        statusAndName: "_4ZTzGZ5TTgFyfw1DcXLXS",
-        threeLines: "_1oYSXGjBe7QctQ1ikLpCMm",
-        blocked: "VTxPkslK1CSpKNFMgKg7d",
-        richPresenceLabel: "_2Ri005Wg_uXDTa71kdRbcN",
-        playerName: "nOdcT-MoOaXGePXLyPe0H",
-        playerNickname: "_2saJTAocZ9TnYXTGvnqUMC",
-        EllipsisName: "_1valFgvEGxquAi_2IrAKqO",
-        DisableColoring: "_3oDmKGyTBBm7i4DULjwYcC",
-        playerNicknameBracket: "_3XEmWmfQy7gbYJ4KJ1N9tp",
-        richPresenceContainer: "_3sxE7F1LV2IcSX68YsH9dI",
-        gameName: "_1cB0qtF0paHWWyj1XNcnbG",
-        dropPadding: "_3tEPYJ6xjX0d6akU-hhrs4",
-        NoMask: "_2dAj6KfWRAxoYPr6tgXd6t",
-        twoLine: "_1BbOegz8bYL7iPzgYpOgQI",
-        DNDContainer: "_3IswZMeeD6ORStUjgv6Xh8",
-        partyBeaconJoin: "_3BnDsXrefFJrt_8frF2wvB",
-        hidePersona: "_3ZJkOzmqed_i-p74uF3hus",
-        compactView: "_3bbRZyUiK-bfc5Qov6xukI",
-        noContextMenu: "_1JE5G7_FNm2SRDEEnOWMVv",
-        gameIsPrivateIcon: "_2gBKQXiTBLjeVVaqvc5QVh",
-        PendingPersona: "_2sxXnGfkPxNgR6Lk1-SmfQ",
-        BackgroundAnimation: "_2hlRK2hm0pHy1YSxwknFCj",
-        "ItemFocusAnim-darkerGrey-nocolor": "_3Ye-Lgym31_-ibnmbFywrn",
-        "ItemFocusAnim-darkerGrey": "_1klcEk0V0JFATe7imIRZ1C",
-        "ItemFocusAnim-darkGreySettings": "_1o29CI_yDNVtgTV1cxDqGZ",
-        "ItemFocusAnim-darkGrey": "_2BtPOA0wSbFULgc-Zh-0_x",
-        "ItemFocusAnim-grey": "_24LF-yODOtVFSuejuQ_xu2",
-        "ItemFocusAnim-translucent-white-10": "uTNXVgYo8JPxZgJyTl9LQ",
-        "ItemFocusAnim-translucent-white-20": "ItJlj151fY2eNJEBeWVOA",
-        "ItemFocusAnimBorder-darkGrey": "_2blFzc6unV1uJG63OhTkyP",
-        "ItemFocusAnim-green": "_3CaU0PXdB2ThLG-Q0foVrK",
-        focusAnimation: "_1EZdMwnQzoxjAOoFpXHuZ_",
-        hoverAnimation: "kfeP_UGfxsZwzWvFD4ytm",
       };
     },
     chunkid: (module) => {
@@ -804,6 +754,9 @@
       module.exports = {
         narrowWidth: "500px",
         EventDetailsPageContainer: "_2Ptras-ZC31rwdT6pD-t0a",
+        EventNotPublicBar: "_214UHKV-VeP2IhhsZ2LVcn",
+        EventNotPublicBarTitle: "acDtTp9VueGVdAapPDLxy",
+        EventNotPublicBarDetail: "_1fbHYCMO42X_XiaPzyCcQk",
         EventBackgroundBlurCtn: "_32nPM5nI8cmMdkvRnsUcq",
         EventBackgroundBlur: "stsss-bTNuazY8FYtvTOX",
         DetailArtworkAgeAppropriate: "_1p_lsRZvAYiGSonqGbCnrp",
@@ -1800,6 +1753,93 @@
         _: () => _,
         _: () => _,
       });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      async function _(_, _, _) {
+        const _ = (0, _._)("partnereventpermissions", "application_config");
+        if (
+          (function (_) {
+            const _ = _;
+            if (
+              _ &&
+              Array.isArray(_) &&
+              _.length > 0 &&
+              "object" == typeof _[0]
+            )
+              return (
+                "number" == typeof _[0].clanid && "number" == typeof _[0].appid
+              );
+            return !1;
+          })(_)
+        ) {
+          const _ = _.find((_) => _.clanid == _);
+          if (_) {
+            let { success: _, warn_msg: _, err_msg: _, ..._ } = _;
+            return _;
+          }
+        }
+        if (_._.logged_in) {
+          const _ = _._.InitFromClanID(_);
+          let _ = `${_._.COMMUNITY_BASE_URL}gid/${_.ConvertTo64BitString()}/ajaxgetpartnereventpermissions/`;
+          "partnerweb" == (0, _._)()
+            ? (_ = `${_._.PARTNER_BASE_URL}partnerevents/ajaxgetpartnereventpermissions?clanaccountid=${_}`)
+            : "store" == (0, _._)() &&
+              (_ = `${_._.STORE_BASE_URL}events/ajaxgetpartnereventpermissions?clanaccountid=${_}`);
+          const _ = await fetch(_, {
+            method: "GET",
+            credentials: "include",
+          });
+          if (200 == _.status) {
+            const _ = await _.json();
+            if (_) {
+              let { success: _, warn_msg: _, err_msg: _, ..._ } = _;
+              return _;
+            }
+          }
+        }
+        return (function (_, _) {
+          return {
+            clanid: _,
+            appid: _,
+            can_edit: !1,
+            owns_app: !1,
+            event_followed: [],
+            event_followed_flags: [],
+            event_ignored: [],
+            follows_app: !1,
+            valve_admin: !1,
+            support_user: !1,
+            limited_user: !0,
+          };
+        })(_, void 0);
+      }
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        const _ = (0, _._)(),
+          _ = (0, _._)();
+        return (0, _._)(_(_, _, _));
+      }
+      function _(_, _, _) {
+        return {
+          queryKey: _(_),
+          queryFn: async () => await _(_),
+          enabled: !!_,
+        };
+      }
+      function _(_) {
+        return ["useEventUserPermissions", _._.accountid, _];
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
       var _ = __webpack_require__("chunkid");
       function _(_) {
         return (
@@ -2399,6 +2439,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _,
         _ = __webpack_require__("chunkid"),
@@ -2440,18 +2481,14 @@
         /(?:steampowered\.com|community\.\S+\.steam\.dev|store\.\S+\.steam\.dev|valve\.org\/store|steam\.dev\/store|\.steamchina\.com|steamcommunity\.com|valve\.org\/community|steam\.dev\/community)\/(\w+)(\/|$)/i;
       function _(_, _) {
         if (!_) return !1;
-        const _ = "store" === (0, _._)(),
-          _ = (function (_) {
+        const _ = (function (_) {
             const _ = _.match(_);
             return null == _ ? void 0 : _[1];
           })(window.location.href),
-          _ = _ && "news" == _,
+          _ = !1,
           _ = _.GetEventType() == _.ajI,
-          _ = "community" === (0, _._)(),
-          _ = _.appid ? "games" : "groups",
           _ =
-            _ &&
-            _ == _ &&
+            (_.appid ? "games" : "groups") == _ &&
             ((_.appid && _.appid === _._.APPID) ||
               (!_.appid && _.clanSteamID.GetAccountID() === _._.CLANACCOUNTID));
         switch (_) {
@@ -2511,6 +2548,9 @@
       function _() {
         return "news";
       }
+      function _() {
+        return !1;
+      }
       function _(_, _, _) {
         const { data: _ } = (0, _._)(
           (null == _ ? void 0 : _.appid)
@@ -2523,13 +2563,11 @@
       }
       function _(_, _, _, _) {
         const _ = "relative" === _,
-          _ = "community" === (0, _._)(),
           _ = _ ? "/" : _._.STORE_BASE_URL,
           _ = _(_.appid, _.clanSteamID, _);
         _ === _.k_eView
-          ? (_ = _ ? _.k_eCommunityView : _.k_eStoreView)
-          : _ === _.k_eViewWebSiteHub &&
-            (_ = _ ? _.k_eCommunityAnnouncementHub : _.k_eStoreNewsHub);
+          ? (_ = _.k_eCommunityView)
+          : _ === _.k_eViewWebSiteHub && (_ = _.k_eCommunityAnnouncementHub);
         const _ = _.GID ? _.GID : "",
           _ = _.AnnouncementGID ? _.AnnouncementGID : "",
           _ =
@@ -2617,7 +2655,10 @@
             if (_)
               return `${(0, _._)(_)}/${_.GetSaleUpdateLandingPageVanity()}`;
             if (_) return `${_}curator/${_.clanSteamID.GetAccountID()}`;
-            return `${_}news/${_.appid ? `app/${_.appid}` : `group/${_.clanSteamID.GetAccountID()}`}/${_.bOldAnnouncement ? `old_view/${_}` : `view/${_}`}`;
+            {
+              const _ = "view";
+              return `${_}news/${_.appid ? `app/${_.appid}` : `group/${_.clanSteamID.GetAccountID()}`}/${_.bOldAnnouncement ? `old_view/${_}` : `${_}/${_}`}`;
+            }
           case _.k_eStoreUsersNewsHub:
             return `${_}news/`;
           default:
@@ -2938,6 +2979,213 @@
       }
       function _(_) {
         return ["useFallbackArtworkScreenshot", null == _ ? void 0 : _.GID];
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = "notificationaction/usercontactmethods";
+      async function _() {
+        const _ = _._.STORE_BASE_URL + _,
+          _ = await fetch(_, {
+            credentials: "include",
+          });
+        if (!_._) throw new Error(`${_} answered ${_.status}`);
+        return await _.json();
+      }
+      const _ = {
+        bHasValidatedEmail: !1,
+        bHasPushNotification: !1,
+      };
+      function _() {
+        const { data: _ } = (0, _._)({
+          queryKey: _(_._.accountid),
+          queryFn: _,
+          enabled: Boolean(_._.logged_in),
+          initialData: () => {
+            const _ = (0, _._)("notificationstore", "application_config");
+            return (function (_) {
+              const _ = _;
+              return (
+                Boolean(_) &&
+                "object" == typeof _ &&
+                "number" == typeof _.mobile_device_count
+              );
+            })(_)
+              ? (function (_) {
+                  var _;
+                  return {
+                    bHasValidatedEmail: Boolean(_.email_validated),
+                    bHasPushNotification:
+                      (null !== (_ = _.mobile_device_count) && void 0 !== _
+                        ? _
+                        : 0) > 0,
+                  };
+                })(_)
+              : void 0;
+          },
+        });
+        return null != _ ? _ : _;
+      }
+      function _(_) {
+        return ["useUserContactMethods", _];
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = 4147080,
+        _ = 2025,
+        _ = 1764005400,
+        _ = 1764612e3,
+        _ = "store/promo/steamawards2025/",
+        _ = "#173471",
+        _ = "#ee6c5d",
+        _ = "#FFFFFF";
+      function _(_, _, _, _) {
+        const _ = (function (_) {
+            return _._.EUNIVERSE != _.wLO || (_ >= _ && _ < _);
+          })(_),
+          _ = _(_, _),
+          _ = _(_, _);
+        if (_.length || _.length)
+          return {
+            nomination: _.length
+              ? {
+                  rgCategories: _,
+                  bNominationsLive: _,
+                }
+              : void 0,
+            vote: _.length
+              ? {
+                  rgCategories: _,
+                  bNominationsLive: _,
+                }
+              : void 0,
+          };
+      }
+      function _(_) {
+        return _ > 0;
+      }
+      function _(_, _) {
+        var _, _;
+        const _ = [];
+        for (const _ of _.filter(_)) {
+          const _ = _.find((_) => _.voteid == _);
+          (null === (_ = null == _ ? void 0 : _.localization) || void 0 === _
+            ? void 0
+            : _.title) &&
+            _.push({
+              eCategoryID: _,
+              strTitle: _.localization.title,
+              strDescription:
+                null !== (_ = _.localization.award_description) && void 0 !== _
+                  ? _
+                  : "",
+              bLaborOfLove: _.flag == _._._,
+            });
+        }
+        return _;
+      }
+      function _(_, _) {
+        var _;
+        const _ = (0, _._)(),
+          _ = ["SteamAwards.GetUserNominations", _._.accountid];
+        const { data: _ } = (0, _._)({
+            queryKey: _,
+            queryFn: async () => await _.GetMySteamAwardNominations(),
+            enabled: Boolean(_._.accountid),
+          }),
+          { mutate: _ } = (0, _._)({
+            mutationFn: async (_) => {
+              const _ = await _.NominateForSteamAward(_, _);
+              if (_ != _._)
+                throw new Error(`SteamAwards.Nominate failed with ${_}`);
+            },
+            onMutate: (_) =>
+              _.setQueryData(_, (_) => [
+                ...(null != _ ? _ : []).filter((_) => _.category_id != _),
+                {
+                  category_id: _,
+                  appid: _,
+                },
+              ]),
+            onError: () =>
+              _.invalidateQueries({
+                queryKey: _,
+              }),
+          });
+        return {
+          unNominatedAppID:
+            null ===
+              (_ = null == _ ? void 0 : _.find((_) => _.category_id == _)) ||
+            void 0 === _
+              ? void 0
+              : _.appid,
+          bAnswered: null != _ || !_._.accountid,
+          Nominate: _,
+        };
+      }
+      function _(_, _) {
+        var _;
+        const _ = (0, _._)(),
+          _ = ["StoreSales.GetUserVotes", _._.accountid, _];
+        const { data: _ } = (0, _._)({
+            queryKey: _,
+            queryFn: async () => await _.GetMySteamAwardVotes(),
+            enabled: Boolean(_._.accountid),
+          }),
+          { mutate: _ } = (0, _._)({
+            mutationFn: async (_) => {
+              const _ = await _.SetSteamAwardVote(_, _);
+              if (_ != _._)
+                throw new Error(`StoreSales.SetVote failed with ${_}`);
+            },
+            onMutate: (_) =>
+              _.setQueryData(_, (_) => [
+                ...(null != _ ? _ : []).filter((_) => _.voteid != _),
+                {
+                  voteid: _,
+                  appid: _,
+                },
+              ]),
+            onError: () =>
+              _.invalidateQueries({
+                queryKey: _,
+              }),
+          });
+        return {
+          unVotedAppID:
+            null === (_ = null == _ ? void 0 : _.find((_) => _.voteid == _)) ||
+            void 0 === _
+              ? void 0
+              : _.appid,
+          bAnswered: null != _ || !_._.accountid,
+          Vote: _,
+        };
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -8965,8 +9213,8 @@
                   },
                   gidshoppingcart: {
                     _: 1,
-                    _: _._.readInt64String,
-                    _: _._.writeInt64String,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
                   },
                   gidreplayoftransid: {
                     _: 5,
@@ -10161,9 +10409,6 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -17114,6 +17359,8 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = {};
       __webpack_require__._(_),
@@ -17140,7 +17387,7 @@
         _ = 1,
         _ = 2,
         _ = 3,
-        _ = 0;
+        _ = 4;
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -19003,11 +19250,7 @@
           onCancel: _,
           strOKButtonText: _._.Localize("#Button_OK"),
           onOK: () => {
-            !(function () {
-              const _ = `${_._.STORE_BASE_URL}login/?redir=${encodeURIComponent(window.location.href)}`;
-              window.location.href = _;
-            })(),
-              _();
+            (0, _._)(), _();
           },
         });
       }
@@ -19106,12 +19349,12 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ =
         __webpack_require__._ +
         "images/applications/community/defaultappheader.png?v=valveisgoodatcaching";
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -19218,16 +19461,7 @@
                   const _ = _(_, _);
                   _ && _.push(_);
                 }
-                return (
-                  !_ ||
-                    0 != _.length ||
-                    ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-                    console.error(
-                      "DEV ONLY OUTPUT: GameHoverImages for id/type no images: (might be not age safe screenshots)",
-                      (0, _._)(_),
-                    ),
-                  _
-                );
+                return _ && _.length, _;
               })(_, _, _, _, _),
             [_, _, _, _, _],
           );
@@ -19263,12 +19497,7 @@
                 const _ = _ - ((null == _ ? void 0 : _.length) || 0);
                 return (
                   _ > 0 && _ && _.length > 0 && _.push(..._(_, _.name, _, _)),
-                  ((_ && 0 == _.length && "dev" == _._.WEB_UNIVERSE) ||
-                    "beta" == _._.WEB_UNIVERSE) &&
-                    console.error(
-                      "DEV ONLY OUTPUT: Demo GameHoverImages for id/type no images: (might be not age safe screenshots)",
-                      (0, _._)(_),
-                    ),
+                  _ && _.length,
                   _
                 );
               })(_, _, _, _, _, _),
@@ -20340,6 +20569,599 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid");
+      function _(_) {
+        return (0, _.useMemo)(
+          () =>
+            (function (_) {
+              if (!_ || !_._) return;
+              if (!_.type)
+                return {
+                  appid: _._,
+                };
+              switch (_.type) {
+                case "sub":
+                  return {
+                    packageid: _._,
+                  };
+                case "bundle":
+                  return {
+                    bundleid: _._,
+                  };
+                default:
+                  return {
+                    appid: _._,
+                  };
+              }
+            })(_),
+          [null == _ ? void 0 : _._, null == _ ? void 0 : _.type],
+        );
+      }
+      function _(_, _) {
+        return (0, _.useMemo)(
+          () =>
+            (function (_, _) {
+              switch (_) {
+                case "sub":
+                  return {
+                    packageid: _,
+                  };
+                case "bundle":
+                  return {
+                    bundleid: _,
+                  };
+                default:
+                  return {
+                    appid: _,
+                  };
+              }
+            })(_, _),
+          [_, _],
+        );
+      }
+      function _(_, _) {
+        return (0, _.useMemo)(() => _(_, _), [_, _]);
+      }
+      function _(_, _) {
+        switch (_) {
+          case "sub":
+            return {
+              packageid: _,
+            };
+          case "bundle":
+            return {
+              bundleid: _,
+            };
+          default:
+            return {
+              appid: _,
+            };
+        }
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      let _;
+      async function _(_) {
+        return (async function (_, _) {
+          var _;
+          const { rgDefIDs: _, strCategory: _, itemClass: _ } = _,
+            _ = await _._.QueryRewardItems(_, {
+              definitionids: _,
+              community_item_classes: _ ? [_] : void 0,
+              filter_match_any_category_tags: _ ? [_] : void 0,
+            });
+          if (!_.BSuccess())
+            throw new Error(
+              "LoyaltyRewards.QueryRewardItems answered " + _.GetEResult(),
+            );
+          return null !== (_ = _.Body().toObject().definitions) && void 0 !== _
+            ? _
+            : [];
+        })(
+          (_ || (_ = new _._(_._.WEBAPI_BASE_URL)), _.GetServiceTransport()),
+          _,
+        );
+      }
+      const _ = 36e5;
+      function _(_) {
+        return ["LoyaltyRewardDef", _];
+      }
+      function _(_, _) {
+        return ["LoyaltyRewardDefsByCategoryAndClass", _, _];
+      }
+      function _(_) {
+        const { data: _ } = (0, _._)(
+          (function (_) {
+            return {
+              queryKey: _(_),
+              queryFn: async () => {
+                const _ = await _({
+                    rgDefIDs: [_],
+                  }),
+                  _ = 1 == _.length ? _[0] : void 0;
+                if (!_)
+                  throw new Error(
+                    `Asked for point shop item ${_} and got ${_.length} items back, wanted exactly one.`,
+                  );
+                return _;
+              },
+              enabled: _ > 0,
+              staleTime: _,
+              retry: !1,
+            };
+          })(_),
+        );
+        return _;
+      }
+      function _(_, _) {
+        const _ = (0, _._)(),
+          { data: _ } = (0, _._)(
+            (function (_, _) {
+              return {
+                queryKey: _(_, _),
+                queryFn: () =>
+                  _({
+                    strCategory: _,
+                    itemClass: _,
+                  }),
+                enabled: Boolean(_ && _),
+                staleTime: _,
+                retry: !1,
+              };
+            })(_, _),
+          );
+        return (
+          (0, _.useEffect)(() => {
+            null == _ ||
+              _.forEach((_) => {
+                void 0 !== _.defid &&
+                  __webpack_require__.setQueryData(_(_.defid), _);
+              });
+          }, [_, _]),
+          _
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = "minigamev2/itemdefs",
+        _ = "appid",
+        _ = "editor";
+      async function _(_, _) {
+        if (!_) return [];
+        const _ = new URLSearchParams({
+          [_]: String(_),
+          _: _._.LANGUAGE,
+        });
+        _ && __webpack_require__.set(_, "1");
+        const _ = `${("undefined" != typeof self ? self.origin + "/" : "") === _._.STORE_BASE_URL ? _._.STORE_BASE_URL : _._.COMMUNITY_BASE_URL}${_}?${_}`,
+          _ = await fetch(_, {
+            credentials: _ ? "include" : "same-origin",
+          });
+        if (!_._) throw new Error(`${_} answered ${_.status}`);
+        const _ = await _.json();
+        if ((null == _ ? void 0 : _.success) == _._ && _.item_definitions)
+          return _.item_definitions;
+        throw new Error(
+          "Community item definitions for app " +
+            _ +
+            " answered " +
+            (null == _ ? void 0 : _.success),
+        );
+      }
+      function _(_, _) {
+        return ["MinigameCommunityItemDefs", _, Boolean(_)];
+      }
+      function _(_, _) {
+        const { data: _ } = (0, _._)(
+          (function (_, _) {
+            return {
+              queryKey: _(_, _),
+              queryFn: () => _(_, _),
+              enabled: Boolean(_),
+              retry: !1,
+            };
+          })(_, _),
+        );
+        return _;
+      }
+      function _(_, _, _) {
+        const _ = _(_, _);
+        return (0, _.useMemo)(
+          () =>
+            null == _
+              ? void 0
+              : _.find(
+                  (_) => (_ || _.active) && _.appid == _ && _.item_type == _,
+                ),
+          [_, _, _, _],
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      let _;
+      async function _(_) {
+        return (async function (_, _) {
+          var _;
+          const _ = await _._.GetCommunityInventory(_, {
+            filter_appids: [_],
+          });
+          if (_.GetEResult() != _._)
+            throw new Error(
+              "Quest.GetCommunityInventory on app " +
+                _ +
+                " answered " +
+                _.GetEResult(),
+            );
+          return null !== (_ = _.Body().toObject().items) && void 0 !== _
+            ? _
+            : [];
+        })(
+          (function () {
+            if (!_) {
+              const _ = (0, _._)("read_inventory_token", "application_config");
+              _ = _ ? new _._(_._.WEBAPI_BASE_URL, _) : (0, _._)();
+            }
+            return _.GetServiceTransport();
+          })(),
+          _,
+        );
+      }
+      const _ = 3e3,
+        _ = 5e3,
+        _ = 15e3;
+      function _(_) {
+        return ["QuestCommunityInventory", _];
+      }
+      function _(_) {
+        const { data: _ } = (0, _._)(
+          (function (_) {
+            return {
+              queryKey: _(_),
+              queryFn: () => _(_),
+              enabled: Boolean(_),
+              staleTime: 1 / 0,
+              retry: !1,
+            };
+          })(_),
+        );
+        return _;
+      }
+      function _(_, _) {
+        const _ = _(_);
+        return {
+          communityItem: (0, _.useMemo)(
+            () =>
+              null == _
+                ? void 0
+                : __webpack_require__.find(
+                    (_) => _.appid == _ && _.item_type == _,
+                  ),
+            [_, _, _],
+          ),
+          bLoaded: null != _,
+        };
+      }
+      function _() {
+        const _ = (0, _._)();
+        return (0, _._)({
+          mutationFn: (_) =>
+            (function (_, _, _) {
+              var _;
+              if (!_) return Promise.resolve();
+              if (
+                __webpack_require__(
+                  null !== (_ = _.getQueryData(_(_))) && void 0 !== _ ? _ : [],
+                )
+              )
+                return Promise.resolve();
+              let _ = _.get(_);
+              _ || ((_ = new Map()), _.set(_, _));
+              let _ = _.get(_);
+              _ ||
+                ((_ = (async function (_, _, _) {
+                  const _ = [0, _, _()];
+                  for (const _ of _) {
+                    let _;
+                    _ > 0 && (await _(_));
+                    try {
+                      (_ = await _(_)), _.setQueryData(_(_), _);
+                    } catch (_) {
+                      console.error(
+                        "Re-reading the community inventory for app " +
+                          _ +
+                          " failed",
+                        _,
+                      );
+                    }
+                    if (__webpack_require__(null != _ ? _ : [])) return;
+                  }
+                })(_, _, _).finally(() => (null == _ ? void 0 : _.delete(_)))),
+                _.set(_, _));
+              return _;
+            })(_, _.appid, _.fnBHasExpectedItems),
+        });
+      }
+      const _ = new WeakMap();
+      function _() {
+        return _ + Math.floor(Math.random() * (_ - _));
+      }
+      function _(_) {
+        return new Promise((_) => setTimeout(_, _));
+      }
+      function _(_, _, _) {
+        _.setQueryData(_(_), _);
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = {
+        bCanClaimNewItem: !1,
+        bAlreadyClaimedCurrentItem: !1,
+      };
+      async function _(_, _) {
+        var _, _;
+        const _ = await _._.CanClaimItem(_, {
+          language: _,
+        });
+        if (_.GetEResult() != _._)
+          throw new Error(
+            "SaleItemRewards.CanClaimItem answered " + _.GetEResult(),
+          );
+        const _ = _.Body().toObject(),
+          _ = (null === (_ = _.reward_item) || void 0 === _ ? void 0 : _.defid)
+            ? _.reward_item
+            : void 0;
+        return {
+          bCanClaimNewItem: Boolean(_.can_claim),
+          bAlreadyClaimedCurrentItem: Boolean(_),
+          appid: null == _ ? void 0 : _.appid,
+          community_item_type: null == _ ? void 0 : _.community_item_type,
+          community_item_class: null == _ ? void 0 : _.community_item_class,
+          rtNextClaimTime:
+            (null !== (_ = _.next_claim_time) && void 0 !== _ ? _ : 0) > 0
+              ? _.next_claim_time
+              : void 0,
+        };
+      }
+      let _;
+      function _() {
+        if (!_) {
+          const _ = (0, _._)("loyalty_webapi_token", "application_config");
+          _ = _ ? new _._(_._.WEBAPI_BASE_URL, _) : (0, _._)();
+        }
+        return _.GetServiceTransport();
+      }
+      async function _(_) {
+        return (async function (_, _) {
+          var _;
+          const _ = await _._.ClaimItem(_, {
+            language: _,
+          });
+          if (_.GetEResult() == _._) return _(_, _);
+          if (_.GetEResult() != _._)
+            throw new Error(
+              "SaleItemRewards.ClaimItem answered " + _.GetEResult(),
+            );
+          const _ = _.Body().toObject().reward_item;
+          return {
+            bCanClaimNewItem: !1,
+            bAlreadyClaimedCurrentItem: !0,
+            appid: null == _ ? void 0 : _.appid,
+            community_item_type: null == _ ? void 0 : _.community_item_type,
+            community_item_class: null == _ ? void 0 : _.community_item_class,
+            rtNextClaimTime:
+              (null !== (_ = _.Body().next_claim_time()) && void 0 !== _
+                ? _
+                : 0) > 0
+                ? _.Body().next_claim_time()
+                : void 0,
+          };
+        })(_(), _);
+      }
+      async function _(_) {
+        return (async function (_, _) {
+          const _ = await _._.ActivateProfileModifierItem(_, {
+            communityitemid: _.communityitemid,
+            appid: _.appid,
+            activate: !0,
+          });
+          if (__webpack_require__.GetEResult() != _._)
+            throw new Error(
+              "Quest.ActivateProfileModifierItem answered " +
+                __webpack_require__.GetEResult(),
+            );
+          return __webpack_require__.GetEResult();
+        })(_(), _);
+      }
+      const _ = 3e5;
+      let _ = !1,
+        _ = null;
+      const _ = {
+        appid: 2243810,
+        community_item_type: 2,
+        community_item_class: _._,
+      };
+      function _(_) {
+        return ["SaleItemCanClaim", _];
+      }
+      function _(_) {
+        return {
+          queryKey: _(_),
+          queryFn: () =>
+            (async function (_) {
+              return _(_(), _);
+            })(_),
+          enabled: !_,
+          staleTime: 1 / 0,
+          retry: !1,
+        };
+      }
+      function _() {
+        const _ = _._.LANGUAGE,
+          _ = (0, _._)(),
+          { data: _, isLoading: _ } = (0, _._)(_(_)),
+          _ = null == _ ? void 0 : _.rtNextClaimTime;
+        return (
+          (0, _.useEffect)(() => {
+            let _ = 0;
+            if (_) {
+              const _ = () => {
+                const _ = 1e3 * _ - Date.now();
+                _ <= 0
+                  ? _.invalidateQueries({
+                      queryKey: _(_),
+                    })
+                  : (_ = window.setTimeout(_, _ > _ ? _ / 2 : _));
+              };
+              _();
+            }
+            return () => window.clearTimeout(_);
+          }, [_, _, _]),
+          {
+            ...(null != _ ? _ : _),
+            bLoading: _,
+          }
+        );
+      }
+      function _() {
+        const _ = (0, _._)(),
+          { mutateAsync: _ } = (0, _._)({
+            mutationFn: () => {
+              var _;
+              if (_) {
+                const _ = _;
+                return (_ = null), Promise.resolve(_);
+              }
+              return _
+                ? Promise.resolve(
+                    null !== (_ = _.getQueryData(_(_._.LANGUAGE))) &&
+                      void 0 !== _
+                      ? _
+                      : _,
+                  )
+                : _(_._.LANGUAGE);
+            },
+            onSuccess: (_) => _.setQueryData(_(_._.LANGUAGE), _),
+          });
+        return {
+          fnClaimItem: (0, _.useCallback)(() => _(), [_]),
+        };
+      }
+      function _() {
+        return (0, _._)({
+          mutationFn: (_) => _(_),
+        });
+      }
+      function _() {
+        const _ = (0, _._)();
+        return {
+          fnSetClaimState: (0, _.useCallback)(
+            (_) => {
+              (_ = !0),
+                (_ = _.bCanClaimNewItem
+                  ? {
+                      bAlreadyClaimedCurrentItem: !0,
+                      bCanClaimNewItem: !1,
+                      rtNextClaimTime: Math.floor(Date.now() / 1e3) + 3600,
+                      ..._,
+                    }
+                  : null),
+                _.setQueryData(_(_._.LANGUAGE), _);
+            },
+            [_],
+          ),
+        };
+      }
+      function _(_, _, _) {
+        return ["SaleRewardsGetDefinition", _, _, _];
+      }
+      function _(_, _, _, _) {
+        return {
+          queryKey: _(_, _, _),
+          queryFn: () =>
+            (async function (_, _, _, _) {
+              return (
+                await _._.GetCurrentDefinition(_, {
+                  sale_def_type: _,
+                  language: _,
+                  include_community_item_def: _,
+                })
+              )
+                .Body()
+                .toObject();
+            })(_, _, _, _),
+          staleTime: 1 / 0,
+        };
+      }
+      function _(_, _, _) {
+        const _ = (0, _._)();
+        return (0, _._)(_(_, _, _, _));
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -20351,6 +21173,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -20484,7 +21307,6 @@
           (_[(_.k_EPlatformTypeMax = 14)] = "k_EPlatformTypeMax");
       })(_ || (_ = {}));
       var _,
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -23410,7 +24232,7 @@
         _ = __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
+        _ = __webpack_require__("chunkid");
       function _() {
         return (0, _._)({
           queryKey: ["BroadcastApps"],
@@ -24704,6 +25526,7 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -24712,6 +25535,9 @@
           return _ && (0, _._)(_)
             ? `${_._.STORE_BASE_URL}app/${((0, _._))(_)[0]}`
             : `${_._.STORE_BASE_URL}${_.store_url_path}`;
+      }
+      function _() {
+        window.location.href = `${_._.STORE_BASE_URL}login/?redir=${encodeURIComponent(window.location.href)}`;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -24843,6 +25669,8 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -24872,6 +25700,28 @@
               appid: _.related_items.parent_appid,
             };
         }, [_]);
+      }
+      function _(_) {
+        return (0, _.useMemo)(
+          () =>
+            _
+              ? {
+                  appid: _,
+                }
+              : void 0,
+          [_],
+        );
+      }
+      function _(_) {
+        return (0, _.useMemo)(
+          () =>
+            _
+              ? {
+                  packageid: _,
+                }
+              : void 0,
+          [_],
+        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -28624,7 +29474,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       (0, _._)(
         [_._],
@@ -30026,17 +30875,12 @@
           if (!this.jsondata.sale_sections) return new Set();
           const _ = new Set(_),
             _ = new Set();
-          if (
-            ((0, _._)(
+          return (
+            (0, _._)(
               !this.jsondata.bOptimizedForSize,
               "Cannot find all items in optimized json",
             ),
-            this.jsondata.bOptimizedForSize && "dev" == _._.WEB_UNIVERSE)
-          )
-            throw new Error(
-              "GetSaleOfItemType called on a truncated jsondata.",
-            );
-          return (
+            this.jsondata.bOptimizedForSize,
             null === (_ = this.jsondata.tagged_items) ||
               void 0 === _ ||
               __webpack_require__.forEach((_) => {
@@ -30996,103 +31840,6 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid");
-      function _(_) {
-        return (0, _.useMemo)(
-          () =>
-            (function (_) {
-              if (!_ || !_._) return;
-              if (!_.type)
-                return {
-                  appid: _._,
-                };
-              switch (_.type) {
-                case "sub":
-                  return {
-                    packageid: _._,
-                  };
-                case "bundle":
-                  return {
-                    bundleid: _._,
-                  };
-                default:
-                  return {
-                    appid: _._,
-                  };
-              }
-            })(_),
-          [null == _ ? void 0 : _._, null == _ ? void 0 : _.type],
-        );
-      }
-      function _(_, _) {
-        return (0, _.useMemo)(
-          () =>
-            (function (_, _) {
-              switch (_) {
-                case "sub":
-                  return {
-                    packageid: _,
-                  };
-                case "bundle":
-                  return {
-                    bundleid: _,
-                  };
-                default:
-                  return {
-                    appid: _,
-                  };
-              }
-            })(_, _),
-          [_, _],
-        );
-      }
-      function _(_, _) {
-        return (0, _.useMemo)(() => _(_, _), [_, _]);
-      }
-      function _(_, _) {
-        switch (_) {
-          case "sub":
-            return {
-              packageid: _,
-            };
-          case "bundle":
-            return {
-              bundleid: _,
-            };
-          default:
-            return {
-              appid: _,
-            };
-        }
-      }
-      function _(_) {
-        return (0, _.useMemo)(() => {
-          if (null != _ && _ != _._)
-            return {
-              appid: _,
-            };
-        }, [_]);
-      }
-      function _(_) {
-        return (0, _.useMemo)(() => {
-          if (null != _ && _ != _._)
-            return {
-              packageid: _,
-            };
-        }, [_]);
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid");
       const _ = ["user_poll_background"];
@@ -31246,7 +31993,6 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -31517,10 +32263,7 @@
         }
         static Get() {
           return (
-            _.s_globalSingletonStore ||
-              ((_.s_globalSingletonStore = new _()),
-              "dev" == _._.WEB_UNIVERSE &&
-                (0, _._)("DUS", _.s_globalSingletonStore)),
+            _.s_globalSingletonStore || (_.s_globalSingletonStore = new _()),
             _.s_globalSingletonStore
           );
         }
@@ -31542,212 +32285,6 @@
       function _() {
         const { isPending: _ } = (0, _._)();
         return [_, _.Get()];
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ {
-        GetItem(_) {
-          return this.m_mapDefIDtoDefinition.get(_);
-        }
-        GetItemChangeCallback(_) {
-          return (
-            this.m_defChangeCallback.has(_) ||
-              this.m_defChangeCallback.set(_, new _._()),
-            this.m_defChangeCallback.get(_)
-          );
-        }
-        GetKeyCategoryAndClass(_, _) {
-          return _ + "_" + _;
-        }
-        GetItemsByCategoryAndClass(_, _) {
-          const _ = this.GetKeyCategoryAndClass(_, _);
-          return this.m_mapCategoryAndClassToItems.get(_);
-        }
-        GetItemsByCategoryAndClassCallback(_, _) {
-          const _ = this.GetKeyCategoryAndClass(_, _);
-          return (
-            this.m_defCategoryAndClassToChangeCallback.has(_) ||
-              this.m_defCategoryAndClassToChangeCallback.set(_, new _._()),
-            this.m_defCategoryAndClassToChangeCallback.get(_)
-          );
-        }
-        async LoadRewardDefinition(_) {
-          return (
-            this.m_mapDefIDToPromise.has(_) ||
-              this.m_mapDefIDToPromise.set(
-                _,
-                this.InternalLoadRewardDefinition(_),
-              ),
-            this.m_mapDefIDToPromise.get(_)
-          );
-        }
-        async InternalLoadRewardDefinition(_) {
-          var _, _, _;
-          if (this.m_mapDefIDtoDefinition.has(_))
-            return this.m_mapDefIDtoDefinition.get(_);
-          const _ = _._.Init(_._);
-          _.Body().set_definitionids([_]);
-          let _ = null;
-          try {
-            const _ = await _._.QueryRewardItems(
-              this.m_SteamInterface.GetServiceTransport(),
-              _,
-            );
-            if (
-              _.GetEResult() == _._ &&
-              (null === (_ = _.Body().definitions()) || void 0 === _
-                ? void 0
-                : _.length) > 0
-            ) {
-              (0, _._)(
-                1 ==
-                  (null === (_ = _.Body().definitions()) || void 0 === _
-                    ? void 0
-                    : _.length),
-                `Requested definition ID ${_} and receive # ${null === (_ = _.Body().definitions()) || void 0 === _ ? void 0 : _.length}, expecting exactly one.`,
-              );
-              const _ = _.Body().definitions()[0].toObject();
-              return (
-                this.m_mapDefIDtoDefinition.set(_, _),
-                this.GetItemChangeCallback(_).Dispatch(_),
-                _
-              );
-            }
-            _ = (0, _._)(_);
-          } catch (_) {
-            _ = (0, _._)(_);
-          }
-          return (
-            console.error(
-              "CLoyaltyRewardDefinitionStore.LoadRewardDefinition failed: " +
-                (null == _ ? void 0 : _.strErrorMsg),
-              _,
-            ),
-            null
-          );
-        }
-        async LoadRewardDefinitionByCategoryAndClass(_, _) {
-          const _ = this.GetKeyCategoryAndClass(_, _);
-          return (
-            this.m_mapCategoryAndClassToPromise.has(_) ||
-              this.m_mapCategoryAndClassToPromise.set(
-                _,
-                this.InternalLoadRewardDefinitionByCategoryAndClass(_, _),
-              ),
-            this.m_mapCategoryAndClassToPromise.get(_)
-          );
-        }
-        async InternalLoadRewardDefinitionByCategoryAndClass(_, _) {
-          var _;
-          const _ = this.GetKeyCategoryAndClass(_, _);
-          if (this.m_mapCategoryAndClassToItems.has(_))
-            return this.m_mapCategoryAndClassToItems.get(_);
-          const _ = _._.Init(_._);
-          _.Body().set_community_item_classes([_]),
-            _.Body().set_filter_match_any_category_tags([_]);
-          let _ = null;
-          try {
-            const _ = await _._.QueryRewardItems(
-              this.m_SteamInterface.GetServiceTransport(),
-              _,
-            );
-            if (
-              _.GetEResult() == _._ &&
-              (null === (_ = _.Body().definitions()) || void 0 === _
-                ? void 0
-                : _.length) > 0
-            ) {
-              const _ = _.Body()
-                .definitions()
-                .map((_) => _.toObject());
-              return (
-                __webpack_require__.forEach((_) => {
-                  this.m_mapDefIDtoDefinition.has(_.defid) ||
-                    (this.m_mapDefIDtoDefinition.set(_.defid, _),
-                    this.GetItemChangeCallback(_.defid).Dispatch(_));
-                }),
-                this.m_mapCategoryAndClassToItems.set(_, _),
-                this.GetItemsByCategoryAndClassCallback(_, _).Dispatch(_),
-                ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-                  console.log(
-                    "CLoyaltyRewardDefinitionStore.LoadRewardDefinitionByCategoryAndClass loaded " +
-                      _.length,
-                  ),
-                _
-              );
-            }
-            _ = (0, _._)(_);
-          } catch (_) {
-            _ = (0, _._)(_);
-          }
-          return (
-            console.error(
-              "CLoyaltyRewardDefinitionStore.LoadRewardDefinitionByCategoryAndClass failed: " +
-                (null == _ ? void 0 : _.strErrorMsg),
-              _,
-            ),
-            null
-          );
-        }
-        static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              _.s_Singleton.Init(),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_LoyaltyRewardDefinitionStore = _.s_Singleton)),
-            _.s_Singleton
-          );
-        }
-        constructor() {
-          (this.m_mapDefIDtoDefinition = new Map()),
-            (this.m_mapDefIDToPromise = new Map()),
-            (this.m_defChangeCallback = new Map()),
-            (this.m_mapCategoryAndClassToItems = new Map()),
-            (this.m_mapCategoryAndClassToPromise = new Map()),
-            (this.m_defCategoryAndClassToChangeCallback = new Map()),
-            (this.m_SteamInterface = null);
-        }
-        Init() {
-          this.m_SteamInterface = new _._(_._.WEBAPI_BASE_URL);
-        }
-      }
-      function _(_) {
-        const [_, _] = (0, _.useState)(_.Get().GetItem(_));
-        return (
-          (0, _.useEffect)(() => {
-            _ || _.Get().LoadRewardDefinition(_);
-          }, [_, _]),
-          (0, _._)(_.Get().GetItemChangeCallback(_), _),
-          _
-        );
-      }
-      function _(_, _) {
-        const [_, _] = (0, _.useState)(
-          _.Get().GetItemsByCategoryAndClass(_, _),
-        );
-        return (
-          (0, _.useEffect)(() => {
-            _ || _.Get().LoadRewardDefinitionByCategoryAndClass(_, _).then(_);
-          }, [_, _, _]),
-          (0, _._)(_.Get().GetItemsByCategoryAndClassCallback(_, _), _),
-          _
-        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -32198,696 +32735,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-      });
-      var _,
-        _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.groupid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [3], null);
-        }
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  groupid: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  name: {
-                    _: 2,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  accountid_members: {
-                    _: 3,
-                    _: !0,
-                    _: !0,
-                    _: _._.readUint32,
-                    pbr: _._.readPackedUint32,
-                    _: _._.writeRepeatedUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CFriendsListCategory";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _
-            ? {
-                $jspbMessageInstance: _,
-              }
-            : {};
-        }
-        static fromObject(_) {
-          return new _();
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _;
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {}
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CFriendsList_GetCategories_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.categories || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  categories: {
-                    _: 1,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CFriendsList_GetCategories_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.accountid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  accountid: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  clanid: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  chat_group_id: {
-                    _: 3,
-                    _: _._.readUint64String,
-                    _: _._.writeUint64String,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CFriendsListFavoriteEntry";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _
-            ? {
-                $jspbMessageInstance: _,
-              }
-            : {};
-        }
-        static fromObject(_) {
-          return new _();
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _;
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {}
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CFriendsList_GetFavorites_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.favorites || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  favorites: {
-                    _: 1,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CFriendsList_GetFavorites_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.favorites || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  favorites: {
-                    _: 1,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CFriendsList_SetFavorites_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _
-            ? {
-                $jspbMessageInstance: _,
-              }
-            : {};
-        }
-        static fromObject(_) {
-          return new _();
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _;
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {}
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CFriendsList_SetFavorites_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.favorites || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  favorites: {
-                    _: 1,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CFriendsList_FavoritesChanged_Notification";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _
-            ? {
-                $jspbMessageInstance: _,
-              }
-            : {};
-        }
-        static fromObject(_) {
-          return new _();
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _;
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {}
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CFriendsList_GetFriendsList_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.friendslist || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  friendslist: {
-                    _: 1,
-                    _: _._,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CFriendsList_GetFriendsList_Response";
-        }
-      }
-      !(function (_) {
-        (_.GetCategories = function (_, _, _) {
-          return _.SendMsg(
-            "FriendsList.GetCategories#1",
-            (0, _._)(_, _, _),
-            _,
-            {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            },
-          );
-        }),
-          (_.GetFriendsList = function (_, _, _) {
-            return _.SendMsg(
-              "FriendsList.GetFriendsList#1",
-              (0, _._)(_, _, _),
-              _,
-              {
-                bConstMethod: !0,
-                ePrivilege: 1,
-              },
-            );
-          }),
-          (_.GetFavorites = function (_, _, _) {
-            return _.SendMsg(
-              "FriendsList.GetFavorites#1",
-              (0, _._)(_, _, _),
-              _,
-              {
-                bConstMethod: !0,
-                ePrivilege: 1,
-              },
-            );
-          }),
-          (_.SetFavorites = function (_, _, _) {
-            return _.SendMsg(
-              "FriendsList.SetFavorites#1",
-              (0, _._)(_, _, _),
-              _,
-              {
-                ePrivilege: 1,
-              },
-            );
-          });
-      })(_ || (_ = {})),
-        (function (_) {
-          _.FavoritesChangedHandler = {
-            name: "FriendsListClient.FavoritesChanged#1",
-            request: _,
-          };
-        })(_ || (_ = {}));
-      __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid");
-      function _() {
-        const _ = (0, _._)(),
-          _ = (0, _._)();
-        return (0, _._)(_(_, _));
-      }
-      function _(_, _) {
-        return {
-          queryKey: ["GetFriendsList", _],
-          queryFn: async () => {
-            var _, _;
-            const _ = _._.Init(_),
-              _ = await _.GetFriendsList(_, _),
-              _ = [];
-            for (const _ of null !==
-              (_ =
-                null === (_ = _.Body().friendslist()) || void 0 === _
-                  ? void 0
-                  : _.friends()) && void 0 !== _
-              ? _
-              : []) {
-              const _ = _.ulfriendid();
-              _ &&
-                ((_.efriendrelationship() != _._UC &&
-                  _.efriendrelationship() != _.Ec7) ||
-                  !new _._(_).BIsIndividualAccount() ||
-                  _.push(_));
-            }
-            return _;
-          },
-        };
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
@@ -32975,25 +32822,13 @@
               });
             let _ = (0, _._)("partnereventadjacents", "application_config");
             this.ValidateAdjacentEvent(_) &&
-              (("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-                console.log(
-                  "DEV_DEBUG: CPartnerEventStore loading adjacents gids payload: " +
-                    _.length,
-                ),
               __webpack_require__.forEach((_) => {
                 _ &&
                   this.m_mapAdjacentAnnouncementGIDs.set(
                     _.announcementGID,
                     _.adjacents,
                   );
-              })),
-              "dev" == _._.WEB_UNIVERSE &&
-                console.log(
-                  "PartnerEventStore Loaded events: " +
-                    this.m_mapExistingEvents.size +
-                    " with adjacent info: " +
-                    this.m_mapExistingEvents.size,
-                ),
+              }),
               (this.m_bLoadedFromConfig = !0);
           }
         }
@@ -33948,862 +33783,86 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      class _ {
-        GetRegistration(_) {
-          return this.m_mapRegistrations.get(_);
-        }
-        GetRegistrationChangeCallback(_) {
-          return (
-            this.m_listChangeCallback.has(_) ||
-              this.m_listChangeCallback.set(_, new _._()),
-            this.m_listChangeCallback.get(_)
-          );
-        }
-        async LoadRegistration(_) {
-          return (
-            this.m_mapLoadPromises.has(_) ||
-              this.m_mapLoadPromises.set(_, this.InternalLoadRegistration(_)),
-            this.m_mapLoadPromises.get(_)
-          );
-        }
-        async InternalLoadRegistration(_) {
-          var _, _, _, _, _;
-          let _ = null;
-          try {
-            const _ =
-                _._.STORE_BASE_URL +
-                "saleaction/ajaxgetusergiveawayregistration",
-              _ = {
-                giveaway_name: _,
-                sessionid: (0, _._)(),
-              },
-              _ = await _().get(_, {
-                params: _,
-                withCredentials: !0,
-              });
-            if (
-              200 == (null == _ ? void 0 : _.status) &&
-              (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
-                ? void 0
-                : _.success) == _._ &&
-              (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
-                ? void 0
-                : _.registration)
-            )
-              return (
-                this.m_mapRegistrations.set(
-                  _,
-                  null === (_ = null == _ ? void 0 : _.data) || void 0 === _
-                    ? void 0
-                    : _.registration,
-                ),
-                this.GetRegistrationChangeCallback(_).Dispatch(
-                  null === (_ = null == _ ? void 0 : _.data) || void 0 === _
-                    ? void 0
-                    : _.registration,
-                ),
-                null === (_ = null == _ ? void 0 : _.data) || void 0 === _
-                  ? void 0
-                  : _.registration
-              );
-            _ = (0, _._)(_);
-          } catch (_) {
-            _ = (0, _._)(_);
-          }
-          return (
-            console.error(
-              "CGiveawayRegistrationStore.InternalLoadRegistration failed: on giveawayName " +
-                _ +
-                " error: " +
-                (null == _ ? void 0 : _.strErrorMsg),
-              _,
-            ),
-            {
-              registered: !1,
-            }
-          );
-        }
-        CreateRegistration(_) {
-          return (
-            this.m_mapCreatePromises.has(_) ||
-              this.m_mapCreatePromises.set(
-                _,
-                this.InternalCreateRegistration(_),
-              ),
-            this.m_mapCreatePromises.get(_)
-          );
-        }
-        async InternalCreateRegistration(_) {
-          var _, _, _, _, _;
-          let _ = null;
-          try {
-            const _ =
-                _._.STORE_BASE_URL +
-                "saleaction/ajaxupdateusergiveawayregistration",
-              _ = {
-                giveaway_name: _,
-                sessionid: (0, _._)(),
-              },
-              _ = await _().get(_, {
-                params: _,
-                withCredentials: !0,
-              });
-            if (
-              200 == (null == _ ? void 0 : _.status) &&
-              (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
-                ? void 0
-                : _.success) == _._ &&
-              (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
-                ? void 0
-                : _.registration)
-            )
-              return (
-                this.m_mapRegistrations.set(
-                  _,
-                  null === (_ = null == _ ? void 0 : _.data) || void 0 === _
-                    ? void 0
-                    : _.registration,
-                ),
-                this.GetRegistrationChangeCallback(_).Dispatch(
-                  null === (_ = null == _ ? void 0 : _.data) || void 0 === _
-                    ? void 0
-                    : _.registration,
-                ),
-                null === (_ = null == _ ? void 0 : _.data) || void 0 === _
-                  ? void 0
-                  : _.registration
-              );
-            _ = (0, _._)(_);
-          } catch (_) {
-            _ = (0, _._)(_);
-          }
-          return (
-            console.error(
-              "CGiveawayRegistrationStore.InternalCreateRegistration failed: on giveawayName " +
-                _ +
-                " error: " +
-                (null == _ ? void 0 : _.strErrorMsg),
-              _,
-            ),
-            {
-              registered: !1,
-            }
-          );
-        }
-        static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              _.s_Singleton.Init(),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_SaleMiniGameItemDefStore = _.s_Singleton)),
-            _.s_Singleton
-          );
-        }
-        constructor() {
-          (this.m_mapRegistrations = new Map()),
-            (this.m_mapLoadPromises = new Map()),
-            (this.m_mapCreatePromises = new Map()),
-            (this.m_listChangeCallback = new Map());
-        }
-        Init() {}
-      }
+      const _ = {
+        registered: !1,
+      };
       function _(_) {
-        const [_, _] = (0, _.useState)(_.Get().GetRegistration(_));
-        return (
-          (0, _.useEffect)(() => {
-            void 0 === _ && _.Get().LoadRegistration(_).then(_);
-          }, [_, _]),
-          (0, _._)(_.Get().GetRegistrationChangeCallback(_), _),
-          _
-        );
-      }
-      function _() {
         return {
-          fnCreateRegistration: _.Get().CreateRegistration,
+          queryKey: ["sale", "giveawayregistration", _, _._.accountid],
+          queryFn: () =>
+            (async function (_) {
+              const _ =
+                  _._.STORE_BASE_URL + _ + "?name=" + encodeURIComponent(_),
+                _ = await fetch(_, {
+                  credentials: "include",
+                });
+              return await _("GetUserGiveawayRegistration", _, _, _);
+            })(_),
+          enabled: Boolean(_),
+          retry: !1,
         };
       }
-      (0, _._)([_._], _.prototype, "CreateRegistration", null);
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ {
-        GetInventoryForApp(_) {
-          return this.m_mapInventoryByApp.get(_);
-        }
-        GetItemDefsChangeForAppID(_) {
-          return (
-            this.m_listChangeCallback.has(_) ||
-              this.m_listChangeCallback.set(_, new _._()),
-            this.m_listChangeCallback.get(_)
-          );
-        }
-        BHasLoadedDef(_) {
-          return this.m_mapPromises.has(_);
-        }
-        SetTestAppCommunityItems(_, _) {
-          this.m_mapInventoryByApp.set(_, _),
-            this.GetItemDefsChangeForAppID(_).Dispatch(_),
-            this.m_mapPromises.set(_, Promise.resolve(_._));
-        }
-        async LoadCommunityInventory(_) {
-          return _
-            ? (this.m_mapPromises.has(_) ||
-                this.m_mapPromises.set(
-                  _,
-                  this.InternalLoadCommunityInventory(_),
-                ),
-              this.m_mapPromises.get(_))
-            : _._;
-        }
-        async ReloadCommunityInventory(_) {
-          if (!_) return _._;
-          let _ = this.m_mapReloadPromises.get(_);
-          if (!_) {
-            (_ = this.InternalLoadCommunityInventory(_)),
-              this.m_mapReloadPromises.set(_, _),
-              this.m_mapPromises.set(_, _);
-            const _ = _;
-            _.finally(() => {
-              this.m_mapReloadPromises.get(_) == _ &&
-                this.m_mapReloadPromises.delete(_);
-            });
-          }
-          return _;
-        }
-        async RefreshInventoryAfterGrant(_, _) {
-          if (_ && !this.m_setRefreshInProgress.has(_)) {
-            this.m_setRefreshInProgress.add(_);
-            try {
-              const _ = [0, 3e3, 5e3 + Math.floor(1e4 * Math.random())];
-              for (const _ of _)
-                if (
-                  (_ > 0 && (await (0, _._)(_)),
-                  await this.ReloadCommunityInventory(_),
-                  _(this.GetInventoryForApp(_)))
-                )
-                  return;
-            } finally {
-              this.m_setRefreshInProgress.delete(_);
-            }
-          }
-        }
-        async InternalLoadCommunityInventory(_) {
-          const _ = _._.Init(_._);
-          _.Body().set_filter_appids([_]);
-          let _ = null;
-          try {
-            const _ = await _._.GetCommunityInventory(
-              this.m_SteamInterface.GetServiceTransport(),
-              _,
-            );
-            if (_.GetEResult() == _._) {
-              const _ = new Array();
-              return (
-                _.Body()
-                  .items()
-                  .forEach((_) => _.push(_.toObject())),
-                this.m_mapInventoryByApp.set(_, _),
-                this.GetItemDefsChangeForAppID(_).Dispatch(_),
-                _._
-              );
-            }
-            _ = (0, _._)(_);
-          } catch (_) {
-            _ = (0, _._)(_);
-          }
-          return (
-            console.error(
-              "CQuestCommunityInventoryStore.InternalLoadCommunityInventory failed: on appid " +
-                _ +
-                " error: " +
-                (null == _ ? void 0 : _.strErrorMsg),
-              _,
-            ),
-            _._
-          );
-        }
-        static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              _.s_Singleton.Init(),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_QuestCommunityInventoryStore = _.s_Singleton)),
-            _.s_Singleton
-          );
-        }
-        constructor() {
-          (this.m_mapInventoryByApp = new Map()),
-            (this.m_mapPromises = new Map()),
-            (this.m_mapReloadPromises = new Map()),
-            (this.m_setRefreshInProgress = new Set()),
-            (this.m_listChangeCallback = new Map()),
-            (this.m_SteamInterface = null);
-        }
-        Init() {
-          const _ = (0, _._)("read_inventory_token", "application_config");
-          (0, _._)(
-            _,
-            "CQuestCommunityInventoryStore: missing read_inventory:steam oauth permission",
-          ),
-            (this.m_SteamInterface = new _._(_._.WEBAPI_BASE_URL, _));
-        }
-      }
-      function _(_, _) {
-        return _.Get().RefreshInventoryAfterGrant(_, _);
-      }
       function _(_) {
-        return _.Get().GetInventoryForApp(_);
+        const { data: _, isError: _ } = (0, _._)(_(_));
+        return _ ? _ : _;
       }
-      function _(_) {
-        const [_, _] = (0, _.useState)(_.Get().GetInventoryForApp(_));
-        return (
-          (0, _.useEffect)(() => {
-            _ && !_.Get().BHasLoadedDef(_) && _.Get().LoadCommunityInventory(_);
-          }, [_]),
-          (0, _._)(_.Get().GetItemDefsChangeForAppID(_), _),
-          _
-        );
-      }
-      function _(_, _) {
-        const _ = _(_),
-          [_, _] = (0, _.useState)(null),
-          [_, _] = (0, _.useState)(!1);
-        return (
-          (0, _.useEffect)(() => {
-            if (_ && _) {
-              const _ = __webpack_require__.find(
-                (_) => _.appid == _ && _.item_type == _,
-              );
-              _ != _ && _(_), _(!0);
-            }
-          }, [_, _, _, _]),
-          {
-            communityItem: _,
-            bLoaded: _,
-          }
-        );
-      }
-      function _(_, _) {
-        _.Get().SetTestAppCommunityItems(_, _);
-      }
-      (0, _._)([_._], _.prototype, "SetTestAppCommunityItems", null);
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ {
-        GetClaimItemState() {
-          return this.m_claimState;
-        }
-        GetClaimStateChangeCallback() {
-          return this.m_claimStateChangeCallback;
-        }
-        GetClaimedSaleRewardItemDef() {
-          return this.m_claimedFreeItemDef;
-        }
-        GetNextClaimTime() {
-          if (!this.m_rtNextClaimTime) return null;
-          return new Date(1e3 * this.m_rtNextClaimTime);
-        }
-        TEST_OverrideClaimState(_) {
-          (this.m_bInTestMode = !0),
-            (this.m_canClaimPromise = null),
-            (this.m_claimPromise = null),
-            _.bCanClaimNewItem
-              ? (this.m_testNextClaimFakeResponse = {
-                  bAlreadyClaimedCurrentItem: !0,
-                  bCanClaimNewItem: !1,
-                  rtNextClaimTime: Math.floor(Date.now() / 1e3) + 3600,
-                  appid: 2243810,
-                  community_item_type: 2,
-                  community_item_class: _._,
-                })
-              : (this.m_testNextClaimFakeResponse = null),
-            (this.m_claimState = _),
-            this.GetClaimStateChangeCallback().Dispatch(this.m_claimState);
-        }
-        async ActivateProfileModifier(_) {
-          const _ = _._.Init(_._);
-          _.Body().set_communityitemid(_.communityitemid),
-            _.Body().set_appid(_.appid),
-            _.Body().set_activate(!0);
-          const _ = await _._.ActivateProfileModifierItem(
-            this.m_SteamInterface.GetServiceTransport(),
-            _,
-          );
-          return (
-            __webpack_require__.GetEResult() != _._ &&
-              console.error(
-                `Error when calling QuestService.ActivateProfileModifierItem: EResult=${__webpack_require__.GetEResult()}`,
-              ),
-            __webpack_require__.GetEResult()
-          );
-        }
-        async LoadCanUserClaimItem() {
-          return this.m_bInTestMode
-            ? this.m_claimState
-            : (this.m_canClaimPromise ||
-                (this.m_canClaimPromise = this.InternalLoadCanUserClaimItem()),
-              this.m_canClaimPromise);
-        }
-        async InternalLoadCanUserClaimItem() {
-          var _, _, _, _, _, _;
-          (0, _._)(
-            _._.logged_in,
-            "User must be logged to use CSaleItemClaimableRewardsStore",
-          );
-          const _ = _._.Init(_._);
-          _.Body().set_language(_._.LANGUAGE);
-          let _ = null;
-          try {
-            const _ = await _._.CanClaimItem(
-              this.m_SteamInterface.GetServiceTransport(),
-              _,
-            );
-            if (_.GetEResult() == _._)
-              return (
-                (this.m_claimedFreeItemDef = Boolean(
-                  null === (_ = _.Body().reward_item()) || void 0 === _
-                    ? void 0
-                    : _.defid(),
-                )
-                  ? null === (_ = _.Body().reward_item()) || void 0 === _
-                    ? void 0
-                    : _.toObject()
-                  : null),
-                (this.m_claimState = {
-                  bCanClaimNewItem: !!_.Body().can_claim(),
-                  bAlreadyClaimedCurrentItem: Boolean(
-                    this.m_claimedFreeItemDef,
-                  ),
-                  appid:
-                    null === (_ = this.m_claimedFreeItemDef) || void 0 === _
-                      ? void 0
-                      : _.appid,
-                  community_item_type:
-                    null === (_ = this.m_claimedFreeItemDef) || void 0 === _
-                      ? void 0
-                      : _.community_item_type,
-                  community_item_class:
-                    null === (_ = this.m_claimedFreeItemDef) || void 0 === _
-                      ? void 0
-                      : _.community_item_class,
-                  rtNextClaimTime:
-                    (null !== (_ = _.Body().next_claim_time()) && void 0 !== _
-                      ? _
-                      : 0) > 0
-                      ? _.Body().next_claim_time()
-                      : void 0,
-                }),
-                (this.m_rtNextClaimTime = _.Body().next_claim_time()),
-                this.SetClaimTimer(),
-                this.GetClaimStateChangeCallback().Dispatch(this.m_claimState),
-                this.m_claimState
-              );
-            _ = (0, _._)(_);
-          } catch (_) {
-            _ = (0, _._)(_);
-          }
-          return (
-            console.error(
-              "CSaleItemClaimableRewardsStore.InternalLoadCanUserClaimItem failed: error: " +
-                (null == _ ? void 0 : _.strErrorMsg),
-              _,
-            ),
-            {
-              bCanClaimNewItem: !1,
-              bAlreadyClaimedCurrentItem: !1,
-            }
-          );
-        }
-        async UserClaimItem() {
-          return (
-            this.m_testNextClaimFakeResponse &&
-              (console.log(
-                "CSaleItemClaimableRewardsStore - testing, pretending claim action succeeded",
-                (0, _._)(this.m_testNextClaimFakeResponse),
-              ),
-              (this.m_claimState = this.m_testNextClaimFakeResponse),
-              this.GetClaimStateChangeCallback().Dispatch(this.m_claimState),
-              (this.m_rtNextClaimTime = this.m_claimState.rtNextClaimTime),
-              this.SetClaimTimer(),
-              (this.m_testNextClaimFakeResponse = null)),
-            this.m_bInTestMode
-              ? this.m_claimState
-              : (this.m_claimPromise ||
-                  (this.m_claimPromise = this.InternalUserClaimItem()),
-                this.m_claimPromise)
-          );
-        }
-        async InternalUserClaimItem() {
-          var _, _, _;
-          (0, _._)(
-            _._.logged_in,
-            "User must be logged to use CSaleItemClaimableRewardsStore",
-          ),
-            (0, _._)(
-              this.m_claimState.bCanClaimNewItem,
-              "Only should be called when we previously verified you can claim something. ",
-            );
-          const _ = _._.Init(_._);
-          _.Body().set_language(_._.LANGUAGE);
-          let _ = null;
-          try {
-            const _ = await _._.ClaimItem(
-              this.m_SteamInterface.GetServiceTransport(),
-              _,
-            );
-            if (_.GetEResult() == _._)
-              return (
-                (this.m_claimedFreeItemDef =
-                  null !==
-                    (_ =
-                      null === (_ = _.Body().reward_item()) || void 0 === _
-                        ? void 0
-                        : _.toObject()) && void 0 !== _
-                    ? _
-                    : {}),
-                (this.m_claimState = {
-                  bCanClaimNewItem: !1,
-                  bAlreadyClaimedCurrentItem: Boolean(
-                    this.m_claimedFreeItemDef,
-                  ),
-                  appid: this.m_claimedFreeItemDef.appid,
-                  community_item_type:
-                    this.m_claimedFreeItemDef.community_item_type,
-                  community_item_class:
-                    this.m_claimedFreeItemDef.community_item_class,
-                  rtNextClaimTime:
-                    (null !== (_ = _.Body().next_claim_time()) && void 0 !== _
-                      ? _
-                      : 0) > 0
-                      ? _.Body().next_claim_time()
-                      : void 0,
-                }),
-                this.GetClaimStateChangeCallback().Dispatch(this.m_claimState),
-                (this.m_rtNextClaimTime = _.Body().next_claim_time()),
-                this.SetClaimTimer(),
-                this.m_claimState
-              );
-            if (_.GetEResult() == _._)
-              return (
-                (this.m_canClaimPromise = this.InternalLoadCanUserClaimItem()),
-                this.m_canClaimPromise
-              );
-            _ = (0, _._)(_);
-          } catch (_) {
-            _ = (0, _._)(_);
-          }
-          return (
-            console.error(
-              "CSaleItemClaimableRewardsStore.InternalUserClaimItem failed: error: " +
-                (null == _ ? void 0 : _.strErrorMsg),
-              _,
-            ),
-            {
-              bCanClaimNewItem: !1,
-              bAlreadyClaimedCurrentItem: !1,
-            }
-          );
-        }
-        SetClaimTimer() {
-          if (this.m_claimTimer) return;
-          if (!this.m_rtNextClaimTime) return;
-          const _ = Date.now();
-          let _ = new Date(1e3 * this.m_rtNextClaimTime);
-          const _ = Math.max(0, Math.min(1, _.getTime() - _));
-          this.m_claimTimer = window.setTimeout(
-            () => {
-              (this.m_claimTimer = void 0),
-                Date.now() > _.getTime()
-                  ? ((this.m_canClaimPromise = null),
-                    (this.m_claimPromise = null),
-                    (this.m_claimedFreeItemDef = null),
-                    (this.m_claimState = {
-                      bCanClaimNewItem: !0,
-                      bAlreadyClaimedCurrentItem: !1,
-                      rtNextClaimTime: void 0,
-                    }),
-                    this.GetClaimStateChangeCallback().Dispatch(
-                      this.m_claimState,
-                    ))
-                  : this.SetClaimTimer();
+      function _() {
+        const _ = (0, _._)(),
+          { mutateAsync: _ } = (0, _._)({
+            mutationFn: _,
+            onSuccess: (_, _) => _.setQueryData(_(_).queryKey, _),
+          });
+        return {
+          fnCreateRegistration: _.useCallback(
+            async (_) => {
+              try {
+                return await _(_);
+              } catch (_) {
+                return (
+                  console.error("Registering for giveaway " + _ + " failed", _),
+                  _
+                );
+              }
             },
-            _ > 3e5 ? _ / 2 : _,
-          );
-        }
-        static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              _.s_Singleton.Init(),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_SaleItemClaimableRewardsStore = _.s_Singleton)),
-            _.s_Singleton
-          );
-        }
-        constructor() {
-          (this.m_claimState = {
-            bCanClaimNewItem: !1,
-            bAlreadyClaimedCurrentItem: !1,
-          }),
-            (this.m_SteamInterface = null),
-            (this.m_canClaimPromise = null),
-            (this.m_claimPromise = null),
-            (this.m_claimStateChangeCallback = new _._()),
-            (this.m_testNextClaimFakeResponse = null),
-            (this.m_bInTestMode = !1);
-        }
-        Init() {
-          const _ = (0, _._)("loyalty_webapi_token", "application_config");
-          (0, _._)(
-            _,
-            "CQuestCommunityInventoryStore: missing loyalty_webapi_token oauth permission",
+            [_],
           ),
-            (this.m_SteamInterface = new _._(_._.WEBAPI_BASE_URL, _));
-        }
+        };
       }
-      function _() {
-        const [_, _] = (0, _.useState)(_.Get().GetClaimItemState()),
-          [_, _] = (0, _.useState)(!0);
-        return (
-          (0, _.useEffect)(() => {
-            _.Get()
-              .LoadCanUserClaimItem()
-              .then(_)
-              .finally(() => _(!1));
-          }, []),
-          (0, _._)(_.Get().GetClaimStateChangeCallback(), _),
-          {
-            ..._,
-            bLoading: _,
-          }
+      const _ = "saleaction/giveawayregistration",
+        _ = "saleaction/creategiveawayregistration";
+      async function _(_) {
+        const _ = _._.STORE_BASE_URL + _,
+          _ = await fetch(_, {
+            method: "POST",
+            credentials: "include",
+            headers: {
+              "content-type": "application/json",
+            },
+            body: JSON.stringify({
+              name: _,
+            }),
+          });
+        return await _("UpdateUserGiveawayRegistration", _, _, _);
+      }
+      async function _(_, _, _, _) {
+        if (!_._) throw new Error(_ + " answered " + _.status);
+        const _ = await _.json();
+        if ((null == _ ? void 0 : _.success) == _._ && _.registration)
+          return _.registration;
+        throw new Error(
+          _ + " on " + _ + " answered " + (null == _ ? void 0 : _.success),
         );
       }
-      function _() {
-        return {
-          fnClaimItem: _.Get().UserClaimItem,
-        };
-      }
-      function _() {
-        return {
-          fnSetClaimState: _.Get().TEST_OverrideClaimState,
-        };
-      }
-      async function _(_) {
-        return _.Get().ActivateProfileModifier(_);
-      }
-      function _(_, _, _) {
-        const _ = (0, _._)();
-        return (0, _._)({
-          queryKey: [`SaleRewardsGetDefinition_${_}_${_}_${_}`],
-          queryFn: async () =>
-            (async function (_, _, _, _) {
-              const _ = _._.Init(_._);
-              return (
-                _.Body().set_sale_def_type(_),
-                _.Body().set_language(_),
-                _.Body().set_include_community_item_def(_),
-                (await _._.GetCurrentDefinition(_, _)).Body().toObject()
-              );
-            })(_, _, _, _),
-          staleTime: 1 / 0,
-        });
-      }
-      (0, _._)([_._], _.prototype, "TEST_OverrideClaimState", null),
-        (0, _._)([_._], _.prototype, "UserClaimItem", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ {
-        GetItemDefForAppID(_) {
-          return this.m_mapAppToDefs.get(_);
-        }
-        GetItemDefsChangeForEventID(_) {
-          return (
-            this.m_listChangeCallback.has(_) ||
-              this.m_listChangeCallback.set(_, new _._()),
-            this.m_listChangeCallback.get(_)
-          );
-        }
-        BHasLoadedDef(_) {
-          return this.m_mapPromises.has(_);
-        }
-        SetTestItemDefs(_, _) {
-          this.m_mapAppToDefs.set(_, _),
-            this.GetItemDefsChangeForEventID(_).Dispatch(_),
-            this.m_mapPromises.set(_, Promise.resolve(_._));
-        }
-        async LoadAppCommunityItems(_, _) {
-          return _
-            ? (this.m_mapPromises.has(_) ||
-                this.m_mapPromises.set(
-                  _,
-                  this.InternalLoadAppCommunityItems(_, _),
-                ),
-              this.m_mapPromises.get(_))
-            : _._;
-        }
-        async InternalLoadAppCommunityItems(_, _) {
-          var _, _;
-          let _ = null;
-          try {
-            const _ =
-                _._.COMMUNITY_BASE_URL +
-                (_
-                  ? "minigame/ajaxgetgameitemdefsforeditor"
-                  : "minigame/ajaxgetgameitemdefs"),
-              _ = {
-                appid: _,
-                origin: self.origin,
-                _: _._.LANGUAGE,
-                sessionid: _ ? (0, _._)() : void 0,
-              },
-              _ = await _().get(_, {
-                params: _,
-                withCredentials: _,
-              });
-            if (
-              200 == (null == _ ? void 0 : _.status) &&
-              (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
-                ? void 0
-                : _.success) == _._ &&
-              (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
-                ? void 0
-                : _.item_definitions)
-            )
-              return (
-                this.m_mapAppToDefs.set(_, _.data.item_definitions),
-                this.GetItemDefsChangeForEventID(_).Dispatch(
-                  _.data.item_definitions,
-                ),
-                _._
-              );
-            _ = (0, _._)(_);
-          } catch (_) {
-            _ = (0, _._)(_);
-          }
-          return (
-            console.error(
-              "CSaleMiniGameItemDefStore.InternalLoadAppCommunityItems failed: on appid " +
-                _ +
-                " edit? " +
-                _ +
-                " error: " +
-                (null == _ ? void 0 : _.strErrorMsg),
-              _,
-            ),
-            _._
-          );
-        }
-        static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              _.s_Singleton.Init(),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_SaleMiniGameItemDefStore = _.s_Singleton)),
-            _.s_Singleton
-          );
-        }
-        constructor() {
-          (this.m_mapAppToDefs = new Map()),
-            (this.m_mapPromises = new Map()),
-            (this.m_listChangeCallback = new Map());
-        }
-        Init() {}
-      }
-      function _(_, _, _) {
-        const _ = (function (_, _) {
-            const [_, _] = (0, _.useState)(_.Get().GetItemDefForAppID(_));
-            return (
-              (0, _.useEffect)(() => {
-                _ &&
-                  !_.Get().BHasLoadedDef(_) &&
-                  _.Get().LoadAppCommunityItems(_, _);
-              }, [_, _]),
-              (0, _._)(_.Get().GetItemDefsChangeForEventID(_), _),
-              _
-            );
-          })(_, _),
-          [_, _] = (0, _.useState)(null);
-        return (
-          (0, _.useEffect)(() => {
-            if (_ && _ && null == _) {
-              const _ = _.find(
-                (_) => (_ || _.active) && _.appid == _ && _.item_type == _,
-              );
-              _ && _(_);
-            }
-          }, [_, _, _, _, _]),
-          _
-        );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -34816,14 +33875,12 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ =
           (__webpack_require__("chunkid"),
           __webpack_require__("chunkid"),
           __webpack_require__("chunkid"));
       __webpack_require__("chunkid");
-      const _ = 4147080;
+      const _ = _._;
       let _;
       function _() {
         return (
@@ -34848,86 +33905,57 @@
           enabled: _ > 0,
         });
       }
-      function _() {
-        const _ = (0, _._)();
-        return (0, _._)({
-          queryKey: [`SteamAwardNominations_${_._.accountid}`],
-          queryFn: async () => {
-            var _;
-            const _ = _._.Init(_._);
-            return null ===
+      async function _(_) {
+        var _, _;
+        const _ = _._.Init(_._);
+        return null !==
+          (_ =
+            null ===
               (_ = (await _._.GetUserNominations(_, _)).Body().toObject()) ||
-              void 0 === _
+            void 0 === _
               ? void 0
-              : _.nominations;
-          },
-          initialData: () => {
-            var _, _;
-            return null ===
-              (_ =
-                null === (_ = _()) || void 0 === _
-                  ? void 0
-                  : _.user_nominations) || void 0 === _
-              ? void 0
-              : _.nominations;
-          },
-          enabled: _._.logged_in,
-        });
+              : _.nominations) && void 0 !== _
+          ? _
+          : [];
       }
-      function _(_) {
+      async function _(_, _, _, _) {
+        const _ = _._.Init(_._);
+        _.Body().set_category_id(_),
+          _.Body().set_source(_),
+          _.Body().set_nominated_id(_);
+        const _ = await _._.Nominate(_, _);
+        return (
+          _.BSuccess() ||
+            console.warn(`Failed to nominate app: ${_.GetEResult()}`),
+          [_.GetEResult(), _.Body().toObject()]
+        );
+      }
+      async function _(_, _, _, _) {
+        const _ = _._.Init(_._);
+        _.Body().set_voteid(_),
+          _.Body().set_appid(_),
+          _.Body().set_sale_appid(_);
+        const _ = await _._.SetVote(_, _);
+        return (
+          _.BSuccess() ||
+            console.warn(
+              `Failed to set vote for app (${_}): ${_.GetEResult()}`,
+            ),
+          [_.GetEResult(), _.Body().toObject()]
+        );
+      }
+      async function _(_, _) {
         var _;
-        const _ = _();
-        return _.isLoading
-          ? {
-              bLoadingNominationForCategory: !0,
-            }
-          : {
-              currentNomination:
-                null === (_ = _.data) || void 0 === _
-                  ? void 0
-                  : _.find((_) => _.category_id == _),
-              bLoadingNominationForCategory: !1,
-            };
-      }
-      function _() {
-        return [`SteamAwardBadgeProgress_${_._.accountid}`];
-      }
-      function _(_, _, _, _, _) {
-        const _ = (0, _._)(),
-          _ = (0, _._)();
-        return (0, _._)({
-          mutationFn: () =>
-            (async function (_, _, _, _) {
-              const _ = _._.Init(_._);
-              _.Body().set_category_id(_),
-                _.Body().set_source(_),
-                _.Body().set_nominated_id(_);
-              const _ = await _._.Nominate(_, _);
-              return (
-                _.BSuccess() ||
-                  console.warn(`Failed to nominate app: ${_.GetEResult()}`),
-                [_.GetEResult(), _.Body().toObject()]
-              );
-            })(_, _, _, _),
-          onSuccess: ([_, _]) => {
-            _ == _._
-              ? (!(function (_, _) {
-                  _.setQueryData([`SteamAwardNominations_${_._.accountid}`], _);
-                })(_, _.nominations),
-                window.setTimeout(
-                  () =>
-                    _.invalidateQueries({
-                      queryKey: _(),
-                    }),
-                  1e3,
-                ),
-                _ && _())
-              : _ && _(_);
-          },
-          onError: () => {
-            _ && _();
-          },
-        });
+        const _ = _._.Init(_._);
+        _.Body().set_sale_appid(_);
+        const _ = await _._.GetUserVotes(_, _);
+        return (
+          _.BSuccess() ||
+            console.warn(`Failed to get votes for user: ${_.GetEResult()}`),
+          null === (_ = _.Body().toObject()) || void 0 === _
+            ? void 0
+            : _.user_votes
+        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -35085,84 +34113,6 @@
             (_[_.name] = _.value);
         return _;
       }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      class _ {
-        constructor() {
-          (this.m_bValidatedEmail = !1),
-            (this.m_nMobileDeviceCount = 0),
-            (this.m_bIsLoaded = !1),
-            (this.m_bLoadedFromConfig = !1),
-            (0, _._)(this);
-        }
-        LazyInit() {
-          if (!this.m_bLoadedFromConfig) {
-            let _ = (0, _._)("notificationstore", "application_config");
-            this.ValidateStoreDefault(_) &&
-              (0, _._)(() => {
-                (this.m_bIsLoaded = !0),
-                  (this.m_bValidatedEmail = _.email_validated),
-                  (this.m_nMobileDeviceCount = _.mobile_device_count);
-              }),
-              (this.m_bLoadedFromConfig = !0);
-          }
-        }
-        ValidateStoreDefault(_) {
-          return (
-            _ &&
-            "object" == typeof _ &&
-            "number" == typeof _.mobile_device_count
-          );
-        }
-        BIsLoaded() {
-          return this.m_bIsLoaded;
-        }
-        BHasValidatedEmail() {
-          return this.m_bValidatedEmail;
-        }
-        BHasPushNotification() {
-          return this.m_nMobileDeviceCount > 0;
-        }
-        async HintLoad() {
-          return (
-            this.LazyInit(),
-            this.m_bIsLoaded
-              ? _._
-              : _._.logged_in
-                ? (this.m_promise || (this.m_promise = this.InternalLoad()),
-                  this.m_promise)
-                : _._
-          );
-        }
-        async InternalLoad() {
-          const _ = _._.STORE_BASE_URL + "notification/ajaxusersettings",
-            _ = await _().get(_, {
-              withCredentials: !0,
-            });
-          return (
-            _.data.success == _._ &&
-              (0, _._)(() => {
-                (this.m_bIsLoaded = !0),
-                  (this.m_bValidatedEmail = _.data.email_validated),
-                  (this.m_nMobileDeviceCount = _.data.mobile_device_count);
-              }),
-            _.data.success
-          );
-        }
-      }
-      (0, _._)([_._], _.prototype, "m_bValidatedEmail", void 0),
-        (0, _._)([_._], _.prototype, "m_nMobileDeviceCount", void 0);
-      let _ = new _();
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -36794,13 +35744,7 @@
           );
         }
         static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-                (window.g_DeckVerifiedDetailStores = _.s_Singleton)),
-            _.s_Singleton
-          );
+          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
         }
         constructor() {
           if (
@@ -36810,13 +35754,7 @@
             document.getElementById("application_config"))
           ) {
             let _ = (0, _._)("hardwarecompatibility", "application_config");
-            _.ValidateCompatabilityResult(_) &&
-              (this.AddCompatabilityResult(_),
-              "dev" == _._.WEB_UNIVERSE &&
-                console.log(
-                  "CDeckCompatibilityDetailsStore compatability loaded: ",
-                  _,
-                ));
+            _.ValidateCompatabilityResult(_) && this.AddCompatabilityResult(_);
           }
         }
         static ValidateCompatabilityResult(_) {
@@ -37751,13 +36689,7 @@
               className: _().CompatibilityDetailsResultIcon,
             });
           case _:
-            return (
-              "dev" == _._.WEB_UNIVERSE &&
-                console.error(
-                  "deck verified banner shouldn't try to display the information display type for appid",
-                ),
-              null
-            );
+            return null;
         }
       }
       function _(_) {
@@ -38144,8 +37076,11 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        return !!_;
+      }
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -38153,9 +37088,6 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         return "account" === _.type;
-      }
-      function _(_) {
-        return !!_;
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -39678,7 +38610,7 @@
         _ &&
           (1 === _.length
             ? _.set("subid", _[0].toString())
-            : _.forEach((_) => _.set("subid[]", _.toString()))),
+            : _.forEach((_) => _.append("subid[]", _.toString()))),
           _ && _.set("bundleid", __webpack_require__.toString()),
           (_ || _) &&
             (_.set("isgift", "1"), _ && _.set("gifteeaccountid", _.toString())),
@@ -39827,90 +38759,111 @@
         _.setQueryData(_(_), _), _(_);
       }
       function _(_, _, _, _, _) {
-        const _ = _(),
-          _ = (0, _._)(),
-          _ = (0, _._)(),
-          { storeBrowseContext: _, dataLoader: _ } = (0, _._)(),
-          { country: _ } = _,
-          _ = (0, _._)(_);
-        return (0, _._)({
-          mutationFn: async () => {
-            var _, _;
-            if (!_ && !_) throw "nPackageID or nBundleID must be passed.";
-            let _;
-            if (_(_)) {
-              const _ = {
-                  packageid: _,
-                  bundleid: _,
-                  bIsGift: _,
-                  nAccountIDGiftee: _,
-                },
-                [_, _] = await (async function (_, _, _, _) {
-                  return _(_, _, [_], _);
-                })(_, _, _, _);
-              if (_ != _._) throw `AddToAccountCart failed with ${_}`;
-              (_ = _.line_item_ids), _(_, _, _.cart);
-            } else {
-              if (
-                !(function (_) {
-                  return "anonymous" === _.type;
-                })(_)
-              )
-                throw "Invalid cart type";
-              {
-                const [_, _] = await _(0, _ ? [_] : void 0, _, _, _);
-                if (_ != _._ || !_)
-                  throw `AddItemsToAnonymousCart failed with ${_}`;
+        return (function (_, _) {
+          const _ = _(),
+            _ = (0, _._)(),
+            _ = (0, _._)(),
+            { storeBrowseContext: _, dataLoader: _ } = (0, _._)(),
+            { country: _ } = _,
+            _ = (0, _._)(_);
+          return (0, _._)({
+            mutationFn: async () => {
+              var _, _;
+              if (0 == _.length || !_.every((_) => _.packageid || _.bundleid))
+                throw "Every item must have a valid package or bundle id";
+              let _;
+              if (_(_)) {
+                const [_, _] = await _(_, _, _, _);
+                if (_ != _._) throw `AddItemsToAccountCart failed with ${_}`;
+                (_ = _.line_item_ids), _(_, _, _.cart);
+              } else {
+                if (
+                  !(function (_) {
+                    return "anonymous" === _.type;
+                  })(_)
+                )
+                  throw "Invalid cart type";
                 {
-                  const _ = _
-                    ? null === (_ = _.lineitems) || void 0 === _
+                  const _ = _.map((_) => _.packageid).filter(_),
+                    _ = _.map((_) => _.bundleid).filter(_);
+                  if (_.length > 1)
+                    throw "The anonymous cart can only take one bundle per call";
+                  const [_, _] = await _(
+                    0,
+                    _.length > 0 ? _ : void 0,
+                    _[0],
+                    _.some((_) => _.bIsGift),
+                    null === (_ = _.find((_) => _.nAccountIDGiftee)) ||
+                      void 0 === _
                       ? void 0
-                      : _.filter(
-                          (_) =>
-                            _.package_item &&
-                            _.package_item.packageid == _ &&
-                            !_.package_item.gidbundle,
-                        )
-                    : null === (_ = _.lineitems) || void 0 === _
-                      ? void 0
-                      : _.filter(
-                          (_) => _.bundle_item && _.bundle_item.bundleid == _,
-                        );
-                  (_ =
-                    (null == _
-                      ? void 0
-                      : __webpack_require__.map((_) => _.gidlineitem)) || []),
-                    _(_, _, _(_));
+                      : _.nAccountIDGiftee,
+                  );
+                  if (_ != _._ || !_)
+                    throw `AddItemsToAnonymousCart failed with ${_}`;
+                  {
+                    const _ = new Set(_),
+                      _ = new Set(_),
+                      _ =
+                        null === (_ = _.lineitems) || void 0 === _
+                          ? void 0
+                          : _.filter(
+                              (_) =>
+                                (_.package_item &&
+                                  !_.package_item.gidbundle &&
+                                  _.has(_.package_item.packageid)) ||
+                                (_.bundle_item &&
+                                  _.has(_.bundle_item.bundleid)),
+                            );
+                    (_ =
+                      (null == _ ? void 0 : _.map((_) => _.gidlineitem)) || []),
+                      _(_, _, _(_));
+                  }
                 }
               }
-            }
-            return _;
-          },
-          onMutate: () => {
-            const _ = _
-              ? {
-                  packageid: _,
-                }
-              : {
-                  bundleid: _,
-                };
-            (async () => {
-              var _;
-              const _ = await _.fetchQuery((0, _._)(_, _)),
-                _ =
-                  1 ==
-                  (null === (_ = null == _ ? void 0 : _.included_appids) ||
-                  void 0 === _
-                    ? void 0
-                    : _.length)
+              return _;
+            },
+            onMutate: () => {
+              (async () => {
+                const _ = _.map((_) =>
+                  _.packageid
                     ? {
-                        appid: _.included_appids[0],
+                        packageid: _.packageid,
                       }
-                    : _;
-              _.prefetchQuery((0, _._)(_, _)), _.prefetchQuery((0, _._)(_, _));
-            })();
-          },
-        });
+                    : {
+                        bundleid: _.bundleid,
+                      },
+                );
+                (
+                  await Promise.all(_.map((_) => _.fetchQuery((0, _._)(_, _))))
+                ).forEach((_, _) => {
+                  var _;
+                  const _ =
+                    1 ==
+                    (null === (_ = null == _ ? void 0 : _.included_appids) ||
+                    void 0 === _
+                      ? void 0
+                      : _.length)
+                      ? {
+                          appid: _.included_appids[0],
+                        }
+                      : _[_];
+                  _.prefetchQuery((0, _._)(_, _)),
+                    _.prefetchQuery((0, _._)(_, _));
+                });
+              })();
+            },
+          });
+        })(
+          [
+            {
+              packageid: _,
+              bundleid: _,
+              bIsGift: _,
+              nAccountIDGiftee: _,
+            },
+          ],
+          _,
+        );
       }
       var _,
         _ = __webpack_require__("chunkid"),
@@ -40266,7 +39219,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -40286,6 +39238,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -40301,6 +39254,8 @@
         _ = __webpack_require__("chunkid");
       const _ = _.lazy(() =>
         Promise.all([
+          __webpack_require__._("chunkid"),
+          __webpack_require__._("chunkid"),
           __webpack_require__._("chunkid"),
           __webpack_require__._("chunkid"),
           __webpack_require__._("chunkid"),
@@ -40696,13 +39651,15 @@
             [_, _] = (0, _._)(_.event.appid, {
               include_assets: !0,
             }),
-            _ = (0, _._)(_.event.appid);
+            _ = (0, _._)(_.event.appid),
+            _ = (0, _._)();
           return (0, _.jsx)(_, {
             ref: _,
             ..._,
             bInGamepadUI: _,
             bShouldMaskImages: _,
             storeItem: _,
+            tracker: _,
           });
         });
       let _ = class extends _.Component {
@@ -40715,7 +39672,7 @@
         OnEnterVisible() {
           if (this.m_bSentRead || this.m_sendReadInfo.IsScheduled()) return;
           this.m_sendReadInfo.Schedule(750, () => {
-            _._.Get().RecordEventRead(this.props.event, _._._),
+            this.props.tracker.RecordEventRead(this.props.event, _._._),
               (this.m_bSentRead = !0);
           });
         }
@@ -41119,243 +40076,14 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
-        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
-        _ =
-          (__webpack_require__("chunkid"),
-          __webpack_require__("chunkid"),
-          __webpack_require__("chunkid"),
-          __webpack_require__("chunkid")),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_) {
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            (0, _.jsx)("span", {
-              className: _().partyBeaconJoin,
-              children: (0, _._)("#User_WantsToPlay"),
-            }),
-            " – ",
-            _.persona.GetCurrentGameName(),
-          ],
-        });
-      }
-      let _ = class extends _.Component {
-        render() {
-          const {
-            className: _,
-            onContextMenu: _,
-            persona: _,
-            eFriendRelationship: _,
-            bIsSelf: _,
-            bParenthesizeNicknames: _,
-            strNickname: _,
-            bCompactView: _,
-            bHideGameName: _,
-            bHideEnhancedRichPresenceLabel: _,
-            bHideSnooze: _,
-            bHideStatus: _,
-            renderStatus: _,
-            renderRichPresence: _,
-            bHidePersona: _,
-            bDNDSet: _,
-            bHasPartyBeacon: _,
-            bHasGamePrivacy: _,
-            bNoMask: _,
-            bEllipsisName: _,
-            bDropPadding: _,
-            ..._
-          } = this.props;
-          let _ = null,
-            _ = null,
-            _ = null,
-            _ = [
-              _,
-              _().personaNameAndStatusLabel,
-              (0, _._)(_),
-              _ ? _().compactView : void 0,
-              _ ? _().NoMask : void 0,
-            ];
-          _ || _.has_public_party_beacon
-            ? (_ = (0, _.jsx)(_, {
-                persona: _,
-              }))
-            : (0, _.aPS)(_)
-              ? ((_ = (0, _._)("#PersonaStateBlocked")), _.push(_().blocked))
-              : _.is_ingame
-                ? ((_ =
-                    !_.is_in_nonsteam_game || _ || (0, _.S$u)(_)
-                      ? __webpack_require__.GetCurrentGameName()
-                      : (0, _._)("#PersonaStateInNonSteamGame")),
-                  _ || _
-                    ? _ &&
-                      _.is_awayOrSnooze &&
-                      (_ = (0, _._)("#PersonaStateAway"))
-                    : (_ = __webpack_require__.GetCurrentGameRichPresence()))
-                : _.m_broadcastAccountId &&
-                  (_ = (0, _._)("#PersonaStateWatchingBroadcast")),
-            _ || (_ = __webpack_require__.GetLocalizedOnlineStatus()),
-            _ && (_ = _());
-          let _ = !_ && !_;
-          !1 === _ && (_ = !0),
-            _.is_awayOrSnooze &&
-              _ &&
-              (_ = (0, _.jsx)(_._, {
-                persona: _,
-              }));
-          let _ = (0, _.jsx)(_.Fragment, {});
-          _
-            ? (_ = (0, _.jsx)("div", {
-                className: "ContextMenuButton",
-                onClick: _,
-                children: (0, _.jsx)(_.GB9, {}),
-              }))
-            : _.push(_().noContextMenu),
-            _ && _.push(_().hidePersona),
-            _ && (_ = _()),
-            (!_ && _) || _.push(_().twoLine);
-          const _ = !_.is_ingame && !_,
-            _ = !_ && _,
-            _ = _ && (!_ || !_),
-            _ = (0, _.IDH)(_._.LAUNCHER_TYPE);
-          let _ = _ && !_,
-            _ = _ ? _ : _.m_strPlayerName,
-            _ = !_ && (_ || _) && _;
-          return (0, _.jsxs)("div", {
-            ..._,
-            className: (0, _._)(..._),
-            onContextMenu: _,
-            children: [
-              (0, _.jsxs)("div", {
-                className: (0, _._)(
-                  _().statusAndName,
-                  _ ? _().threeLines : void 0,
-                ),
-                children: [
-                  (0, _.jsxs)("div", {
-                    className: (0, _._)(
-                      _().playerName,
-                      _ ? _().EllipsisName : void 0,
-                    ),
-                    children: [
-                      _ || " ",
-                      _ &&
-                        _ &&
-                        (0, _.jsxs)("span", {
-                          className: _().playerNickname,
-                          children: ["(", _, ")"],
-                        }),
-                    ],
-                  }),
-                  _ &&
-                    (0, _.jsx)("div", {
-                      className: _().DNDContainer,
-                      title: (0, _._)("#User_ToggleDoNotDisturb"),
-                      children: (0, _.jsx)(_.Aj0, {}),
-                    }),
-                  _ &&
-                    (0, _.jsx)("span", {
-                      className: _().playerNicknameBracket,
-                      title: (0, _._)("#isNickname"),
-                      children: " *",
-                    }),
-                  (0, _.jsx)(_._, {
-                    persona: _,
-                  }),
-                  _,
-                  (_.m_bPlayerNamePending || _.m_bAvatarPending) &&
-                    _ &&
-                    (0, _.jsx)("div", {
-                      className: _().PendingPersona,
-                      title: (0, _._)("#SteamChina_PendingPersonaName"),
-                      children: (0, _.jsx)(_.zD7, {}),
-                    }),
-                  _,
-                ],
-              }),
-              !_ &&
-                (0, _.jsxs)("div", {
-                  className: _().richPresenceContainer,
-                  children: [
-                    (_ || _) &&
-                      (0, _.jsxs)("div", {
-                        className: (0, _._)(
-                          _().gameName,
-                          _ ? _().threeLines : void 0,
-                          _().richPresenceLabel,
-                          _ && _().dropPadding,
-                          "no-drag",
-                        ),
-                        children: [
-                          _ &&
-                            (0, _.jsx)("div", {
-                              className: _().gameIsPrivateIcon,
-                              title: (0, _._)("#User_GameInfoHidden"),
-                              children: (0, _.jsx)(_.jZl, {}),
-                            }),
-                          _,
-                        ],
-                      }),
-                    _ &&
-                      (0, _.jsxs)("div", {
-                        className: (0, _._)(
-                          _().richPresenceLabel,
-                          _ && _().dropPadding,
-                          "no-drag",
-                        ),
-                        children: [_, " "],
-                      }),
-                  ],
-                }),
-            ],
-          });
-        }
-      };
-      _ = (0, _._)([_._], _);
-      (0, _._)((_) => {
-        const {
-          persona: _,
-          bParenthesizeNicknames: _,
-          strNickname: _,
-          bIgnorePersonaStatus: _,
-          bDisableColoring: _,
-          className: _,
-          ..._
-        } = _;
-        let _ = _ && !_ ? _ : _.m_strPlayerName;
-        return (0, _.jsx)("span", {
-          ..._,
-          className: (0, _._)(_, _ && _().DisableColoring, !_ && (0, _._)(_)),
-          children: (0, _.jsxs)("span", {
-            className: _().playerName,
-            children: [
-              _ || " ",
-              _ &&
-                _ &&
-                (0, _.jsxs)("span", {
-                  className: _().playerNickname,
-                  children: ["(", _, ")"],
-                }),
-            ],
-          }),
-        });
-      });
-      var _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid");
-      __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid");
       function _(_) {
         const { bExpanded: _, setExpanded: _ } = _;
         return (0, _.jsx)(_._, {
-          className: (0, _._)(_.ExpandRowButton, _ && _.Selected),
+          className: _()(_.ExpandRowButton, _ && _.Selected),
           onClick: () => __webpack_require__(!_),
           children: (0, _.jsx)(_.b8_, {
             direction: "down",
@@ -41363,6 +40091,7 @@
         });
       }
       var _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -46551,6 +45280,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _, _) {
         return (0, _._)({
@@ -46627,7 +45357,8 @@
           (0, _._)(_ + 60 * _, _ + 60 * _, !0) + (_ ? "" : " " + _.format("z"))
         );
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = 0,
         _ = 1,
         _ = 2,
@@ -46810,6 +45541,9 @@
         (0, _._)([_._], _.prototype, "m_selections", void 0),
         (0, _._)([_._.bound], _.prototype, "SetSelection", null);
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -48393,9 +47127,10 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+        _ =
+          (__webpack_require__("chunkid"),
+          __webpack_require__("chunkid"),
+          __webpack_require__("chunkid")),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -48522,36 +47257,27 @@
             _
           );
         })(_, _, _);
-        return (
-          "dev" == _._.WEB_UNIVERSE &&
-            "store" == (0, _._)() &&
-            "store.steampowered.com" == (0, _._)(_) &&
-            (_ = _.replace(
-              "https://store.steampowered.com/",
-              _._.STORE_BASE_URL,
-            )),
-          "string" == typeof _ && _.length > 0 && "#" == _[0]
+        return "string" == typeof _ && _.length > 0 && "#" == _[0]
+          ? (0, _.jsx)(_._, {
+              className: _,
+              href: _,
+              style: _,
+              children: _.children,
+            })
+          : "steam://settings/account" == _
             ? (0, _.jsx)(_._, {
                 className: _,
-                href: _,
-                style: _,
+                href: "steam://settings/account",
                 children: _.children,
               })
-            : "steam://settings/account" == _
-              ? (0, _.jsx)(_._, {
-                  className: _,
-                  href: "steam://settings/account",
-                  children: _.children,
-                })
-              : (0, _.jsx)(_._, {
-                  className: _,
-                  url: _,
-                  event: _.context.event,
-                  _: _,
-                  style: _,
-                  children: _.children,
-                })
-        );
+            : (0, _.jsx)(_._, {
+                className: _,
+                url: _,
+                event: _.context.event,
+                _: _,
+                style: _,
+                children: _.children,
+              });
       }
       function _(_) {
         const _ = (0, _._)(_.args, "href"),
@@ -48638,8 +47364,7 @@
         return ["usePartnerEventUserPoll", _.ConvertTo64BitString(), _];
       }
       function _(_, _, _) {
-        const _ = `${_._.COMMUNITY_BASE_URL}partnerevents/${_.ConvertTo64BitString()}/userpoll/${_}/${_ ? "ajaxcastvote" : "ajaxloaddata"}/?origin=${(0, _._)()}`;
-        return "dev" == _._.WEB_UNIVERSE ? _ + "&debug=1" : _;
+        return `${_._.COMMUNITY_BASE_URL}partnerevents/${_.ConvertTo64BitString()}/userpoll/${_}/${_ ? "ajaxcastvote" : "ajaxloaddata"}/?origin=${(0, _._)()}`;
       }
       const _ = 86400;
       function _(_, _) {
@@ -49714,6 +48439,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = (0, _._)(),
@@ -49732,7 +48458,6 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -49841,6 +48566,14 @@
                   Constructor: _._,
                   autocloses: !0,
                   skipInternalNewline: !0,
+                },
+              ],
+              [
+                "p",
+                {
+                  Constructor: _._,
+                  autocloses: !1,
+                  skipFollowingNewline: !0,
                 },
               ],
               [
@@ -50513,9 +49246,15 @@
           (this.exportFn = void 0),
             (this.file = void 0),
             (this.dataURL = void 0),
+            (this.uploadFileName = ""),
+            (this.displayFileName = void 0),
+            (this.sha1 = ""),
+            (this.hmac = ""),
             (this.timestamp = 0),
             (this.imageWidth = 0),
             (this.imageHeight = 0),
+            (this.fileInfo = void 0),
+            (this.uploadInfo = void 0),
             (this.eUploadState = _),
             (this.uploadProgress = 0),
             (this.strErrorDescription = void 0),
@@ -50551,7 +49290,7 @@
         SetUploadFileError(_, _) {
           (this.m_fileUploadProps.eUploadState = _),
             (this.m_fileUploadProps.strErrorDescription = _),
-            (this.m_fileUploadProps.displayFileName = null);
+            (this.m_fileUploadProps.displayFileName = void 0);
         }
         async StartFileExportToUpload(_, _ = {}) {
           const { displayFilename: _, info: _, onComplete: _ } = _;
@@ -50563,9 +49302,9 @@
             (this.m_fileUploadProps.displayFileName = _);
         }
         async SetImageFileToUpload(_, _ = {}) {
-          var _, _, _;
+          var _, _, _, _, _;
           const { processor: _ = _, info: _ } = _;
-          if (!_) return void this.SetFileToUpload(null);
+          if (!_) return void this.SetFileToUpload(void 0);
           this.m_fileUploadProps.fileInfo = _;
           const _ =
             null !==
@@ -50585,7 +49324,14 @@
                 this.m_Callbacks.GetMaxFileSizeMB(),
               ),
             );
-          let _ = _.name.split(".").pop().toLowerCase();
+          let _ =
+            null !==
+              (_ =
+                null === (_ = _.name.split(".").pop()) || void 0 === _
+                  ? void 0
+                  : _.toLowerCase()) && void 0 !== _
+              ? _
+              : "";
           if (
             -1 ==
             [
@@ -50617,8 +49363,8 @@
             (this.m_fileUploadProps.imageWidth = _.width);
         }
         async SetOtherFileToUpload(_, _ = {}) {
-          var _, _, _;
-          if (!_) return void this.SetFileToUpload(null);
+          var _, _, _, _, _;
+          if (!_) return void this.SetFileToUpload(void 0);
           this.m_fileUploadProps.fileInfo = _.info;
           const _ =
             null !==
@@ -50638,7 +49384,14 @@
                 this.m_Callbacks.GetMaxFileSizeMB(),
               ),
             );
-          let _ = _.name.split(".").pop().toLowerCase();
+          let _ =
+            null !==
+              (_ =
+                null === (_ = _.name.split(".").pop()) || void 0 === _
+                  ? void 0
+                  : _.toLowerCase()) && void 0 !== _
+              ? _
+              : "";
           if (-1 == ["zip"].indexOf(_)) {
             let _ = _ || _;
             return void this.SetUploadFileError(
@@ -50650,23 +49403,23 @@
         }
         SetFileToUpload(_) {
           if (
-            ((this.m_fileUploadProps.file = null),
-            (this.m_fileUploadProps.dataURL = null),
-            (this.m_fileUploadProps.hmac = null),
-            (this.m_fileUploadProps.sha1 = null),
+            ((this.m_fileUploadProps.file = void 0),
+            (this.m_fileUploadProps.dataURL = void 0),
+            (this.m_fileUploadProps.hmac = ""),
+            (this.m_fileUploadProps.sha1 = ""),
             (this.m_fileUploadProps.imageWidth = 0),
             (this.m_fileUploadProps.imageHeight = 0),
-            (this.m_fileUploadProps.displayFileName = null),
+            (this.m_fileUploadProps.displayFileName = void 0),
             !_)
           )
             return void (this.m_fileUploadProps.eUploadState = _);
           let _ = "";
           if ("function" == typeof _)
-            (this.m_fileUploadProps.file = null),
+            (this.m_fileUploadProps.file = void 0),
               (this.m_fileUploadProps.exportFn = _);
           else {
             (this.m_fileUploadProps.file = _),
-              (this.m_fileUploadProps.exportFn = null);
+              (this.m_fileUploadProps.exportFn = void 0);
             try {
               _ = URL.createObjectURL(_);
             } catch (_) {
@@ -50764,7 +49517,7 @@
               _ = await _.json();
             } catch (_) {}
             if (!_._) {
-              let _ = null;
+              let _ = "";
               throw (
                 ((0, _._)(() => {
                   (this.m_fileUploadProps.eUploadState = _),
@@ -50786,7 +49539,7 @@
             return (
               (this.m_fileUploadProps.timestamp = _.timestamp),
               (this.m_fileUploadProps.hmac = _.hmac),
-              this.DoFileUpload(_.result)
+              this.DoFileUpload(_.result, _)
             );
           } catch (_) {
             let _ = _ || (0, _._)("#ConnectionTrouble_FailedToConnect");
@@ -50802,10 +49555,14 @@
             );
           }
         }
-        async DoFileUpload(_) {
-          let _ = this.m_fileUploadProps.file,
-            _ = _.use_https ? "https://" : "http://";
+        async DoFileUpload(_, _) {
+          let _ = _.use_https ? "https://" : "http://";
           _ += _.url_host + _.url_path;
+          const _ = {};
+          for (const _ of _.request_headers)
+            "Content-Length" != _.name &&
+              "Host" != _.name &&
+              (_[_.name] = _.value);
           let _ = {
             onUploadProgress: (_) => {
               const _ = !!this.m_fileUploadProps.exportFn,
@@ -50816,17 +49573,13 @@
                   this.m_fileUploadProps.uploadProgress = _;
                 });
             },
-            headers: {},
+            headers: _,
             transformRequest: [(_) => _],
           };
-          for (let _ = 0; _ < _.request_headers.length; ++_) {
-            let _ = _.request_headers[_];
-            "Content-Length" != _.name &&
-              "Host" != _.name &&
-              (_.headers[_.name] = _.value);
-          }
           try {
-            return await _().put(_, _, _), this.CommitFileUpload(!0, _.ugcid);
+            return (
+              await _().put(_, _, _), this.CommitFileUpload(!0, _.ugcid, _)
+            );
           } catch (_) {
             throw (
               (this.LogFileUploadMessage(_.response),
@@ -50837,14 +49590,13 @@
                   (this.m_fileUploadProps.eUploadState = _),
                   (this.m_fileUploadProps.uploadProgress = 0);
               }),
-              this.CommitFileUpload(!1, _.ugcid),
+              this.CommitFileUpload(!1, _.ugcid, _),
               this.m_fileUploadProps.strErrorDescription)
             );
           }
         }
-        async CommitFileUpload(_, _) {
-          let _ = this.m_fileUploadProps.file,
-            _ = this.m_fileUploadProps.sha1,
+        async CommitFileUpload(_, _, _) {
+          let _ = this.m_fileUploadProps.sha1,
             _ = new FormData();
           _.append("sessionid", (0, _._)()),
             _.append("l", _._.LANGUAGE),
@@ -50884,8 +49636,8 @@
               _
             );
           } catch (_) {
-            if (!_) return null;
-            let _ = null;
+            if (!_) return;
+            let _ = "";
             throw (
               ((0, _._)(() => {
                 if (
@@ -50914,7 +49666,7 @@
             this.Reset();
         }
         Reset() {
-          this.SetFileToUpload(null);
+          this.SetFileToUpload(void 0);
         }
       }
       function _(_) {
@@ -51021,6 +49773,8 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = (_) => {
@@ -51081,10 +49835,11 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { fileUploadManager: _ } = _,
-          _ = (0, _.useRef)(void 0);
+          _ = (0, _.useRef)(null);
         return (0, _.jsxs)("div", {
           className: _.Ctn,
           children: [
@@ -51097,23 +49852,21 @@
               name: "fileupload",
               ref: _,
               onChange: (_) => {
-                var _, _;
-                (null ===
-                  (_ =
-                    null === (_ = _.currentTarget) || void 0 === _
-                      ? void 0
-                      : _.files) || void 0 === _
-                  ? void 0
-                  : _.length) > 0 &&
-                  (_.SetImageFileToUpload(_.currentTarget.files[0]),
-                  (_.currentTarget.value = ""));
+                const _ = _.currentTarget.files;
+                (null == _ ? void 0 : _.length) &&
+                  (_.SetImageFileToUpload(_[0]), (_.currentTarget.value = ""));
               },
             }),
             (0, _.jsx)(_._, {
               type: "button",
               title: (0, _._)("#Button_Upload"),
               onOKActionDescription: (0, _._)("#Button_Upload"),
-              onClick: () => _.current.click(),
+              onClick: () => {
+                var _;
+                return null === (_ = _.current) || void 0 === _
+                  ? void 0
+                  : _.click();
+              },
               children: (0, _.jsx)(_.xv8, {}),
             }),
           ],
@@ -51142,33 +49895,35 @@
       function _(_) {
         const { fileUploadManager: _ } = _,
           _ = _.file;
-        return (0, _.jsxs)("div", {
-          className: _.UploadPreviewContainer,
-          children: [
-            Boolean(-1 != _.type.indexOf("image")) &&
-              (0, _.jsx)("img", {
-                className: _.UploadPreview,
-                src: _.file_upload_data_url,
-              }),
-            Boolean(-1 != _.type.indexOf("video")) && (0, _.jsx)(_.CeX, {}),
-            (0, _.jsxs)("div", {
-              className: _.FileUploadFileName,
-              children: ["'", _.name, "'"],
-            }),
-            (0, _.jsx)("div", {
-              className: _.FileUploadCancel,
-              onClick: () => _.Reset(),
-              children: (0, _.jsx)(_.sED, {}),
-            }),
-            (0, _.jsx)(_._, {
-              className: _.FileUploadBtn,
-              onClick: async () => {
-                await _.BeginFileUpload(), _.Reset();
-              },
-              children: (0, _._)("#Button_Upload"),
-            }),
-          ],
-        });
+        return _
+          ? (0, _.jsxs)("div", {
+              className: _.UploadPreviewContainer,
+              children: [
+                Boolean(-1 != _.type.indexOf("image")) &&
+                  (0, _.jsx)("img", {
+                    className: _.UploadPreview,
+                    src: _.file_upload_data_url,
+                  }),
+                Boolean(-1 != _.type.indexOf("video")) && (0, _.jsx)(_.CeX, {}),
+                (0, _.jsxs)("div", {
+                  className: _.FileUploadFileName,
+                  children: ["'", _.name, "'"],
+                }),
+                (0, _.jsx)("div", {
+                  className: _.FileUploadCancel,
+                  onClick: () => _.Reset(),
+                  children: (0, _.jsx)(_.sED, {}),
+                }),
+                (0, _.jsx)(_._, {
+                  className: _.FileUploadBtn,
+                  onClick: async () => {
+                    await _.BeginFileUpload(), _.Reset();
+                  },
+                  children: (0, _._)("#Button_Upload"),
+                }),
+              ],
+            })
+          : null;
       }
       function _(_) {
         const { fileUploadManager: _ } = _,
@@ -51177,7 +49932,7 @@
             _.file_upload_props.displayFileName,
             _.file_upload_props.uploadProgress,
           ]),
-          _ = _ ? (0, _._)("#Uploading_Item", _) : "",
+          _ = _ ? (0, _._)("#Uploading_Item", null != _ ? _ : "") : "",
           _ = {
             width: _ + "%",
           };
@@ -51274,7 +50029,6 @@
         ],
       ]);
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       let _ = null;
       function _() {
@@ -51372,12 +50126,18 @@
           : null;
       }
       function _(_) {
-        const _ = Boolean(_.context.showErrorInfo);
+        const _ = Boolean(_.context.showErrorInfo),
+          { elDialogElement: _, fnShowLogonDialog: _ } = (0, _._)();
         if (!_._.logged_in)
-          return (0, _.jsx)(_._, {
-            onClick: _._,
-            className: "CSSClaimItemLoginButton",
-            children: (0, _._)("#Sale_ClaimableReward_Login"),
+          return (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)(_._, {
+                onClick: _,
+                className: "CSSClaimItemLoginButton",
+                children: (0, _._)("#Sale_ClaimableReward_Login"),
+              }),
+              _,
+            ],
           });
         const _ = (0, _._)(_.args, "type");
         let _;
@@ -51448,7 +50208,8 @@
           _ = (0, _._)(_.args, "initialToken"),
           _ = (0, _._)(_.args, "successToken"),
           _ = (0, _._)(_.args, "failToken"),
-          _ = _(_);
+          _ = _(_),
+          { elDialogElement: _, fnShowLogonDialog: _ } = (0, _._)();
         if (!(_ && _ && _ && _)) {
           return _.context.showErrorInfo
             ? (0, _.jsx)("div", {
@@ -51479,10 +50240,15 @@
                 Boolean(_.bFailedState) && (0, _._)(_),
               ],
             })
-          : (0, _.jsx)(_._, {
-              className: "CSSActionDialogButton",
-              onClick: _._,
-              children: (0, _._)("#Login_SignIn"),
+          : (0, _.jsxs)(_.Fragment, {
+              children: [
+                (0, _.jsx)(_._, {
+                  className: "CSSActionDialogButton",
+                  onClick: _,
+                  children: (0, _._)("#Login_SignIn"),
+                }),
+                _,
+              ],
             });
       }
       function _(_) {
@@ -51495,9 +50261,12 @@
             strFailToken: _,
           } = _,
           _ = _(_),
-          [_, _] = _.useState(Boolean(_.fnAction));
+          [_, _] = _.useState(Boolean(_.fnAction)),
+          _ = _.useRef(!1);
         _.useEffect(() => {
-          _.fnAction && (_(!0), _.fnAction().finally(() => _(!1)));
+          _.fnAction &&
+            !_.current &&
+            ((_.current = !0), _(!0), _.fnAction().finally(() => _(!1)));
         }, [_]);
         const _ = _.useId();
         return (0, _.jsxs)(_._, {
@@ -51619,21 +50388,28 @@
         _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
         _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
       const _ =
-        /(?:steampowered\.com|valve\.org\/store|store\.[\w.-]+\.steam\.dev|store\.steamchina\.com)\/(app|bundle|sub)\/(\d+)/i;
+          /(?:steampowered\.com|store\.steamchina\.com|store[\w-]*\.(?:[\w.-]+\.)?(?:steam\.dev|valve\.org)|valve\.org\/store)\/(app|bundle|sub)\/(\d+)/i,
+        _ = ["store.steampowered.com", "store.steamchina.com"],
+        _ = ["steampowered.com", "steamcommunity.com"],
+        _ = ["steamchina.com"],
+        _ = ["steam.dev", "valve.org"];
+      function _(_, _) {
+        return _.some((_) => _ == _ || _.endsWith(`.${_}`));
+      }
       function _(_) {
         const _ = (0, _._)(_).toLocaleLowerCase(),
           _ = (0, _._)(_._.STORE_BASE_URL).toLocaleLowerCase(),
           _ = (0, _._)(_._.COMMUNITY_BASE_URL).toLocaleLowerCase();
-        if (_ == _ || _ == _) return !0;
         return (
-          !("store.steampowered.com" == _ || "store.steamchina.com" == _) &&
-          (_.endsWith("steampowered.com") ||
-            _.endsWith("steamcommunity.com") ||
-            _.endsWith("steamchina.com"))
+          _ == _ ||
+          _ == _ ||
+          (_.includes(_) ? _(_, _(_, _) ? _ : _) : _(_, [..._, ..._, ..._]))
         );
       }
       function _(_) {
-        if (!_(_)) return;
+        if (_(_)) return _(_);
+      }
+      function _(_) {
         const _ = new RegExp(_).exec(_);
         if (!_ || _.length <= 2) return;
         const _ = _[1].toLowerCase(),
@@ -51862,7 +50638,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         const { defid: _, url: _ } = _,
@@ -51871,20 +50646,16 @@
         const _ = _.appid,
           _ = _.community_item_data.item_image_large,
           _ = `${_._.MEDIA_CDN_COMMUNITY_URL}images/items/${_}/${_}`;
-        return (
-          "dev" == _._.WEB_UNIVERSE &&
-            console.log("reward itemdef", (0, _._)(_)),
-          (0, _.jsx)("div", {
-            className: _().Ctn,
-            children: (0, _.jsx)(_._, {
-              toolTipContent: _.community_item_data.item_description,
-              children: (0, _.jsx)("img", {
-                src: _,
-                alt: _.community_item_data.item_title,
-              }),
+        return (0, _.jsx)("div", {
+          className: _().Ctn,
+          children: (0, _.jsx)(_._, {
+            toolTipContent: _.community_item_data.item_description,
+            children: (0, _.jsx)("img", {
+              src: _,
+              alt: _.community_item_data.item_title,
             }),
-          })
-        );
+          }),
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -52596,10 +51367,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -52943,33 +51710,110 @@
         });
       }
       function _(_) {
-        return _.unix(_).utc().format("YYYYMMDD[T]HHmmss[Z]");
+        return new Date(1e3 * _)
+          .toISOString()
+          .replace(/[-:]/g, "")
+          .replace(/\.\d{3}Z$/, "Z");
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        const _ = (0, _._)(),
+          _ = (0, _._)(),
+          { data: _ } = (0, _._)((0, _._)(_, _, _)),
+          _ = (0, _._)(),
+          _ = _(_, _);
+        return {
+          bHasVerifiedEmail: _.bHasValidatedEmail,
+          bHasPushNotification: _.bHasPushNotification,
+          bFollowsByEmail: 0 != (_ & _._.k_ENotifyFlagByEmail),
+          bFollowsByPush: 0 != (_ & _._.k_ENotifyFlagByPush),
+        };
+      }
+      function _(_, _) {
+        const _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = (0, _._)(_, _, _);
+        return async (_, _) => {
+          if (!_) return;
+          const _ = __webpack_require__.getQueryData(_.queryKey),
+            _ =
+              "email" == _ ? _._.k_ENotifyFlagByEmail : _._.k_ENotifyFlagByPush,
+            _ = _(_, _),
+            _ = _ ? _ | _ : _ & ~_;
+          await (async function (_, _, _) {
+            const _ = 0 == _,
+              _ = `${_._.COMMUNITY_BASE_URL}gid/${_._.InitFromClanID(_).ConvertTo64BitString()}/`,
+              _ = `${_}${_ ? "unfolloworunignoreevent" : "followorignoreevent"}`,
+              _ = new URLSearchParams();
+            _.append("sessionid", (0, _._)()),
+              _.append("ignore", "false"),
+              _.append("gid", _),
+              _.append("notification_flag", "" + _),
+              _.append("clan_accountid", "" + _);
+            const _ = await fetch(_, {
+              method: "POST",
+              body: _,
+              credentials: "include",
+            });
+            if (!_._) throw new Error(`${_} answered ${_.status}`);
+          })(_, _, _),
+            await __webpack_require__.invalidateQueries({
+              queryKey: _.queryKey,
+            });
+        };
+      }
+      function _(_, _) {
+        var _, _, _, _;
+        const _ =
+          _ &&
+          null !==
+            (_ =
+              null === (_ = null == _ ? void 0 : _.event_followed) ||
+              void 0 === _
+                ? void 0
+                : __webpack_require__.indexOf(_)) &&
+          void 0 !== _
+            ? _
+            : -1;
+        return -1 == _
+          ? 0
+          : null !==
+                (_ =
+                  null === (_ = null == _ ? void 0 : _.event_followed_flags) ||
+                  void 0 === _
+                    ? void 0
+                    : _[_]) && void 0 !== _
+            ? _
+            : 0;
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
           const {
-            eventModel: _,
-            lang: _,
-            bShowStartTime: _,
-            bExpandLeft: _,
-            bOnlyShowIcon: _,
-          } = _;
+              eventModel: _,
+              lang: _,
+              bShowStartTime: _,
+              bExpandLeft: _,
+              bOnlyShowIcon: _,
+            } = _,
+            _ = _(_.clanSteamID.GetAccountID(), _.GID);
           _.useEffect(() => {
-            _._.HintLoad().catch((_) => {
-              console.error(
-                "EventReminderWidget load fail: " + (0, _._)(_).strErrorMsg,
-              );
-            }),
-              !_.appid &&
-                _.clanSteamID &&
-                _._.LoadClanInfoForClanSteamID(_.clanSteamID);
+            !_.appid &&
+              _.clanSteamID &&
+              _._.LoadClanInfoForClanSteamID(_.clanSteamID);
           }, [_]);
           const _ = _._.Get().BIsUserLoggedIn();
           return (0, _.jsx)(_, {
             eventModel: _,
             rtNow: (0, _._)(),
-            notifyState: _(_),
+            notifyState: _,
             bOnlyShowIcon: _,
             bSignedIn: _ || _._.IN_CLIENT,
             onRequestSignIn: () => {
@@ -52999,53 +51843,30 @@
         }),
         _ = (0, _._)((_) => {
           const {
-            eventModel: _,
-            lang: _,
-            bShowStartTime: _,
-            bExpandLeft: _,
-            bOnlyShowIcon: _,
-            fnHidePanel: _,
-          } = _;
+              eventModel: _,
+              lang: _,
+              bShowStartTime: _,
+              bExpandLeft: _,
+              bOnlyShowIcon: _,
+              fnHidePanel: _,
+            } = _,
+            _ = _.clanSteamID.GetAccountID(),
+            _ = _(_, _.GID),
+            _ = _(_, _.GID);
           return (0, _.jsx)(_, {
             eventModel: _,
             lang: _,
             rtNow: (0, _._)(),
-            notifyState: _(_),
+            notifyState: _,
             bShowStartTime: _,
             bExpandLeft: _,
             bOnlyShowIcon: _,
             strCalendarEventTitle: _(_, _),
-            onChangeNotify: async (_, _) => {
-              const _ = _.GID;
-              if (void 0 === _) return;
-              const _ =
-                "email" == _
-                  ? _._.k_ENotifyFlagByEmail
-                  : _._.k_ENotifyFlagByPush;
-              await _._.Get().SetFollowOrUnfollowEvent(
-                !_,
-                !1,
-                _.clanSteamID,
-                _,
-                _,
-              );
-            },
+            onChangeNotify: _,
             onTrack: (_) => _(_, _),
             fnHidePanel: _,
           });
         });
-      function _(_) {
-        const _ = _._.Get(),
-          _ = _.GID,
-          _ = (_) =>
-            void 0 !== _ && _.BFollowsEventAndNotifiedBy(_.clanSteamID, _, _);
-        return {
-          bHasVerifiedEmail: _._.BHasValidatedEmail(),
-          bHasPushNotification: _._.BHasPushNotification(),
-          bFollowsByEmail: _(_._.k_ENotifyFlagByEmail),
-          bFollowsByPush: _(_._.k_ENotifyFlagByPush),
-        };
-      }
       function _(_, _) {
         var _;
         const _ =
@@ -53100,8 +51921,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -53563,24 +52384,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -53589,123 +52392,27 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        return _._.logged_in
-          ? !_._.is_limited ||
-              ((0, _._)(
-                (0, _.jsx)(_._, {
-                  strTokenOverride: _
-                    ? "#SteamAward_Vote_LimitedAccount"
-                    : "#SteamAward_Nominate_LimitedAccount",
-                }),
-                window,
-              ),
-              !1)
-          : ((0, _._)(
-              (0, _.jsx)(_._, {
-                strTitle: (0, _._)("#EventDisplay_Share_NotLoggedIn"),
-                strDescription: (0, _._)(
-                  "#EventDisplay_Share_NotLoggedIn_Description",
-                ),
-                strOKButtonText: (0, _._)("#MobileLogin_SignIn"),
-                onOK: _._,
-              }),
-              window,
-            ),
-            !1);
+        return `${_._.MEDIA_CDN_URL}${_._}${_}`;
       }
-      async function _(_, _) {
-        var _, _;
-        const _ =
-            _._.STORE_BASE_URL + "steamawards/ajaxgetsteamawardeventdetails",
-          _ = {
-            rgCategories: _,
-            _:
-              ((_ = (0, _._)()),
-              new Date(1e3 * _).toISOString().slice(0, 19).replace("T", " ")),
-          };
-        var _;
-        try {
-          const _ = await _().get(_, {
-            params: _,
-            withCredentials: !1,
-            cancelToken: _.token,
-          });
-          if (_.token.reason) return null;
-          if (
-            (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
-              ? void 0
-              : _.success) == _._ &&
-            (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
-              ? void 0
-              : _.event_details)
-          )
-            return _.data.event_details;
-        } catch (_) {
-          const _ = (0, _._)(_);
-          console.error(
-            "Could not fetch award event details:" + _.strErrorMsg,
-            _,
-          );
-        }
-        return null;
-      }
-      const _ = {
-          include_assets: !0,
-        },
-        _ = {
-          include_basic_info: !0,
-        };
       function _(_) {
-        var _, _, _, _, _;
-        const { event: _, previewMode: _ } = _,
-          [_] = (0, _._)(() => [_.GetSteamAwardCategory()]),
-          _ = (0, _._)("EventDisplaySteamAwardNomination"),
-          _ = (0, _._)(),
-          [_] = (0, _._)(_.appid, _),
-          [_, _] = (0, _.useState)(null),
-          { currentNomination: _, bLoadingNominationForCategory: _ } = (0, _._)(
-            _,
-          );
-        if (
-          ((0, _.useEffect)(() => {
-            _([_], _).then((_) => {
-              _(_);
-            });
-          }, [_, _]),
-          !_ ||
-            !(null === (_ = _.rgAwardCategoryDetails) || void 0 === _
-              ? void 0
-              : _.length) ||
-            _)
-        )
-          return (0, _.jsx)(_._, {
-            className: _().SteamAwardContainer,
-            size: "medium",
-            position: "center",
-            string: (0, _._)("#Loading"),
-          });
-        if (!_ && !_.bIsAutumnSaleActive) return null;
-        let _ = {};
-        (null === (_ = _.strBackgroundCSS) || void 0 === _
-          ? void 0
-          : _.length) && (_.backgroundColor = _.strBackgroundCSS),
-          (null === (_ = _.strBackgroundImage) || void 0 === _
-            ? void 0
-            : _.length) &&
-            (_.backgroundImage = `url( ${_.strBackgroundImage} )`),
-          (null === (_ = _.strTextColor) || void 0 === _ ? void 0 : _.length) &&
-            (_.color = _.strTextColor);
-        const _ =
-            1 ==
-            (null === (_ = _.rgAwardCategoryDetails) || void 0 === _
-              ? void 0
-              : _.length),
-          _ =
-            _.BIsEventActionEnabled(_) ||
-            _ < _.GetStartTimeAndDateUnixSeconds(),
-          _ = new Date().getFullYear();
+        const {
+            strMainTitle: _,
+            subtitle: _,
+            headerText: _,
+            headerContent: _,
+            children: _,
+            footer: _,
+          } = _,
+          _ = {
+            backgroundColor: _._,
+            backgroundImage: `url( ${_("header_notrophy.webp")} )`,
+            color: _._,
+          };
         return (0, _.jsxs)("div", {
           style: _,
           className: (0, _._)(_().SteamAwardContainer, _().PartnerEventFont),
@@ -53715,127 +52422,244 @@
               children: [
                 (0, _.jsx)("img", {
                   className: _().SteamAwardHeaderImage,
-                  src: `${_.strTrophyImg}`,
+                  src: _("trophy_220.png?v=1"),
+                  alt: "",
                 }),
                 (0, _.jsxs)("div", {
                   className: _().SteamAwardMainCtn,
                   children: [
                     (0, _.jsx)("div", {
                       className: _().SteamAwardMainTitle,
-                      children: (0, _._)("#SteamAwards_EventMainTitle"),
+                      children: _,
                     }),
-                    (0, _.jsxs)("div", {
-                      className: _().SteamAwardSubTitle,
-                      children: [
-                        _
-                          ? (0, _._)("#SteamAwards_EventCallToAction")
-                          : (0, _._)("#SteamAwards_EventVotingDateTeaser", _),
-                        _ &&
-                          (0, _.jsxs)("a", {
-                            href: (0, _._)(
-                              _._.STORE_BASE_URL + "steamawards/nominations/",
-                            ),
-                            className: _().SteamAwardLearnMore,
-                            children: [
-                              "(",
-                              (0, _._)("#EventDisplay_CallToAction_LearnMore"),
-                              ")",
-                            ],
-                          }),
-                      ],
-                    }),
+                    _,
                     (0, _.jsx)("div", {
                       className: _().SteamAwardHeaderText,
-                      children: _
-                        ? _
-                          ? (0, _._)(
-                              "#SteamAwards_EventNominateGamePrompt_Long",
-                              null == _ ? void 0 : _.GetName(),
-                            )
-                          : (0, _.jsx)("a", {
-                              className: _().LinkText,
-                              href: (0, _._)(
-                                _._.STORE_BASE_URL + "steamawards/nominations/",
-                              ),
-                              children: (0, _._)(
-                                "#SteamAwards_EventNominateGamePrompt_NoCategory",
-                                null == _ ? void 0 : _.GetName(),
-                              ),
-                            })
-                        : (0, _._)("#SteamAwards_Event_NominationsClosed"),
+                      children: _,
                     }),
+                    _,
                   ],
                 }),
               ],
             }),
-            (0, _.jsx)(_, {
-              event: _,
-              nominationEventDetails: _,
-              currentNomination: _,
-            }),
+            _,
+            Boolean(_) &&
+              (0, _.jsx)("div", {
+                className: _().SteamAwardLinkToNominationPage,
+                children: _,
+              }),
           ],
         });
       }
       function _(_) {
-        var _;
-        const { event: _, nominationEventDetails: _, currentNomination: _ } = _,
-          [_, _] = (0, _._)(() => [
-            __webpack_require__.GetSteamAwardCategory(),
-            _.appid,
-          ]),
-          _ = (0, _._)(),
-          _ = null == _ ? void 0 : _.appid,
-          _ = (0, _._)(_, _, _._._),
-          _ = Boolean(
-            (null == _ ? void 0 : _.appid) == _ &&
-              (null == _ ? void 0 : _.category_id) == _,
+        return `${_._.STORE_BASE_URL}steamawards/${_ ? "nominations/" : ""}`;
+      }
+      function _() {
+        return (0, _.jsx)(_._, {
+          className: _().SteamAwardContainer,
+          size: "medium",
+          position: "center",
+          string: _._.Localize("#Loading"),
+        });
+      }
+      function _(_) {
+        const { elDialogElement: _, fnShowLogonDialog: _ } = (0, _._)(),
+          [_, _, _] = (0, _._)();
+        return {
+          elDialogElement: (0, _.jsxs)(_.Fragment, {
+            children: [
+              _,
+              (0, _.jsx)(_._, {
+                active: _,
+                children: (0, _.jsx)(_, {
+                  bVote: _,
+                  closeModal: _,
+                }),
+              }),
+            ],
+          }),
+          BCanTakeAction: () =>
+            _._.logged_in
+              ? !_._.is_limited || (_(), !1)
+              : (__webpack_require__(), !1),
+        };
+      }
+      function _(_) {
+        const { bVote: _, closeModal: _ } = _;
+        return (0, _.jsx)(_._, {
+          strTitle: _._.Localize("#Informational_Message"),
+          onCancel: _,
+          onOK: _,
+          bAlertDialog: !0,
+          children: (0, _.jsx)("div", {
+            children: _._.LocalizeReact(
+              _
+                ? "#SteamAward_Vote_LimitedAccount"
+                : "#SteamAward_Nominate_LimitedAccount",
+              (0, _.jsx)("a", {
+                href: `${_._.HELP_BASE_URL}wizard/HelpWithLimitedAccount`,
+                target: _._.IN_CLIENT ? void 0 : "_blank",
+                rel: "noreferrer",
+                children: _._.Localize("#User_LimitedAccount_UrlInfo"),
+              }),
+            ),
+          }),
+        });
+      }
+      function _(_) {
+        const {
+            strLocTokenInfix: _,
+            unCurrentAppID: _,
+            unNewAppID: _,
+            fnOnConfirm: _,
+            closeModal: _,
+          } = _,
+          { data: _ } = (0, _._)({
+            appid: _,
+          }),
+          { data: _ } = (0, _._)({
+            appid: _,
+          }),
+          { data: _ } = (0, _._)({
+            appid: _,
+          }),
+          { data: _ } = (0, _._)({
+            appid: _,
+          }),
+          _ = _ ? (0, _._)(_, "small_capsule") : void 0,
+          _ = _ ? (0, _._)(_, "small_capsule") : void 0;
+        return (0, _.jsx)(_._, {
+          modalClassName: _().SteamAwardConflictModal,
+          strTitle: _._.Localize(
+            "Vote" == _
+              ? "#SteamAward_VoteConflictWarning_Title"
+              : "#SteamAward_NominationConflictWarning_Title",
           ),
-          _ = (0, _.useCallback)(
-            async (_) => {
-              if (!_)
-                return void console.log(
-                  "EventDisplaySteamAwardNomination: ignore turning off the checkbox",
-                );
-              if (!_(!1))
-                return void console.log(
-                  "EventDisplaySteamAwardNomination: UserEligibleToNominateOrVote failed",
-                );
-              _ && _ != _
-                ? (0, _._)(
-                    (0, _.jsx)(_, {
-                      strLocTokenInfix: "Nomination",
-                      newAppID: _,
-                      curNominatedAppID: _,
-                      fnOnConfirm: _.mutate,
-                    }),
-                    window,
-                  )
-                : _.mutate();
-            },
-            [_, _, _],
-          ),
-          _ =
-            1 ==
-            (null === (_ = _.rgAwardCategoryDetails) || void 0 === _
-              ? void 0
-              : _.length),
-          _ =
-            __webpack_require__.BIsEventActionEnabled(_) ||
-            _ < __webpack_require__.GetStartTimeAndDateUnixSeconds();
-        return _ && (_ || _)
-          ? (0, _.jsxs)("div", {
-              className: (0, _._)(
-                _().SteamAwardNominationWidget,
-                _().SteamAwardVoteWidget,
+          closeModal: _,
+          onOK: _,
+          onCancel: _,
+          children: (0, _.jsxs)("div", {
+            className: _().ConflictBody,
+            children: [
+              _._.LocalizeReact(
+                "Vote" == _
+                  ? "#SteamAward_VoteConflictWarning_Explanation"
+                  : "#SteamAward_NominationConflictWarning_Explanation",
+                (0, _.jsx)("span", {
+                  className: _().SteamAwardModalGameTitle,
+                  children: null == _ ? void 0 : _.name,
+                }),
+                (0, _.jsx)("span", {
+                  className: _().SteamAwardModalGameTitle,
+                  children: null == _ ? void 0 : _.name,
+                }),
               ),
-              children: [
-                (0, _.jsxs)("div", {
+              _ && _
+                ? (0, _.jsxs)("div", {
+                    className: _().NominationSwitchCtn,
+                    children: [
+                      (0, _.jsx)("img", {
+                        src: _,
+                        alt: "",
+                      }),
+                      "→",
+                      (0, _.jsx)("img", {
+                        src: _,
+                        alt: "",
+                      }),
+                    ],
+                  })
+                : (0, _.jsx)(_._, {
+                    size: "small",
+                    position: "center",
+                    string: _._.Localize("#Loading"),
+                  }),
+            ],
+          }),
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        var _, _;
+        const { unAppID: _, widget: _, actions: _, bNominationsOpen: _ } = _,
+          _ = _.rgCategories[0],
+          { data: _ } = (0, _._)({
+            appid: _,
+          }),
+          {
+            unNominatedAppID: _,
+            bAnswered: _,
+            Nominate: _,
+          } = (0, _._)(_.eCategoryID, _),
+          { elDialogElement: _, BCanTakeAction: _ } = _(!1),
+          [_, _, _] = (0, _._)();
+        if (!_.bNominationsLive) return null;
+        if (!_) return (0, _.jsx)(_, {});
+        const _ = (0, _._)(_(!0)),
+          _ = _ == _,
+          _ = 1 == _.rgCategories.length,
+          _ = _ && !_.bLaborOfLove;
+        return (0, _.jsxs)(_, {
+          strMainTitle: _._.Localize("#SteamAwards_EventMainTitle"),
+          subtitle: (0, _.jsxs)("div", {
+            className: _().SteamAwardSubTitle,
+            children: [
+              _
+                ? _._.Localize("#SteamAwards_EventCallToAction")
+                : _._.Localize("#SteamAwards_EventVotingDateTeaser", _._),
+              _ &&
+                (0, _.jsxs)("a", {
+                  href: _,
+                  className: _().SteamAwardLearnMore,
+                  children: [
+                    "(",
+                    _._.Localize("#EventDisplay_CallToAction_LearnMore"),
+                    ")",
+                  ],
+                }),
+            ],
+          }),
+          headerText: _
+            ? _
+              ? _._.Localize(
+                  "#SteamAwards_EventNominateGamePrompt_Long",
+                  null !== (_ = null == _ ? void 0 : _.name) && void 0 !== _
+                    ? _
+                    : "",
+                )
+              : (0, _.jsx)("a", {
+                  className: _().LinkText,
+                  href: _,
+                  children: _._.Localize(
+                    "#SteamAwards_EventNominateGamePrompt_NoCategory",
+                    null !== (_ = null == _ ? void 0 : _.name) && void 0 !== _
+                      ? _
+                      : "",
+                  ),
+                })
+            : _._.Localize("#SteamAwards_Event_NominationsClosed"),
+          footer:
+            _ &&
+            (0, _.jsx)("a", {
+              href: _,
+              children: _._.Localize(
+                "#SteamAwards_EventNominationAlternativeLinkText",
+              ),
+            }),
+          children: [
+            Boolean(_ && (_ || _)) &&
+              (0, _.jsx)("div", {
+                className: (0, _._)(
+                  _().SteamAwardNominationWidget,
+                  _().SteamAwardVoteWidget,
+                ),
+                children: (0, _.jsxs)("div", {
                   className: _().NominateCtn,
                   children: [
                     (0, _.jsx)("div", {
                       style: {
-                        background:
-                          null == _ ? void 0 : _.strNominateButtonBGColor,
+                        background: _._,
                       },
                       className: (0, _._)(
                         _().SteamAwardNominateButton,
@@ -53848,429 +52672,274 @@
                           _ && _().Nominated,
                         ),
                         checked: _,
-                        onChange: _,
+                        onChange: (_) => {
+                          _ && _() && (_ && _ != _ ? _() : _(_));
+                        },
                         disabled: _,
                         color: "#FFFFFF",
                         highlightColor: "white",
-                        label: (0, _.jsx)(_.Fragment, {
-                          children: (0, _.jsx)("div", {
-                            className: _().SteamAwardCategoryTitle,
-                            children: _
-                              ? (0, _._)(
-                                  "#SteamAwards_NominateWidget_CTA_PastTense",
-                                  _.rgAwardCategoryDetails[0]
-                                    .strSuggestedCategoryTitle,
-                                )
-                              : (0, _._)(
-                                  "#SteamAwards_NominateWidget_CTA",
-                                  _.rgAwardCategoryDetails[0]
-                                    .strSuggestedCategoryTitle,
-                                ),
-                          }),
+                        label: (0, _.jsx)("div", {
+                          className: _().SteamAwardCategoryTitle,
+                          children: _._.Localize(
+                            _
+                              ? "#SteamAwards_NominateWidget_CTA_PastTense"
+                              : "#SteamAwards_NominateWidget_CTA",
+                            _.strTitle,
+                          ),
                         }),
                       }),
                     }),
                     (0, _.jsx)("div", {
                       className: _().SteamAwardCategoryDesc,
-                      children:
-                        _.rgAwardCategoryDetails[0].strSuggestedCategoryDesc,
+                      children: _.strDescription,
                     }),
                   ],
                 }),
-                Boolean(_ && _ != _.eLaborOfLove) &&
-                  (0, _.jsx)("div", {
-                    className: _().SteamAwardLinkToNominationPage,
-                    children: (0, _.jsx)("a", {
-                      href: (0, _._)(
-                        _._.STORE_BASE_URL + "steamawards/nominations/",
-                      ),
-                      children: (0, _._)(
-                        "#SteamAwards_EventNominationAlternativeLinkText",
-                      ),
-                    }),
-                  }),
-              ],
-            })
-          : null;
+              }),
+            _,
+            (0, _.jsx)(_._, {
+              active: _,
+              children: (0, _.jsx)(_, {
+                strLocTokenInfix: "Nomination",
+                unCurrentAppID: _,
+                unNewAppID: _,
+                fnOnConfirm: () => _(_),
+                closeModal: _,
+              }),
+            }),
+          ],
+        });
       }
       function _(_) {
+        var _;
         const {
-            curNominatedAppID: _,
-            newAppID: _,
-            strLocTokenInfix: _,
-            fnOnConfirm: _,
-            fnOnCancel: _,
-            closeModal: _,
+            unAppID: _,
+            widget: _,
+            actions: _,
+            bVotesOpen: _,
+            bHideCategoryDescriptions: _,
           } = _,
-          [_] = (0, _._)(_, _),
-          [_] = (0, _._)(_, _);
-        return (0, _.jsx)(_._, {
-          modalClassName: _().SteamAwardConflictModal,
-          strTitle: (0, _._)(`#SteamAward_${_}ConflictWarning_Title`),
-          closeModal: _,
-          onOK: _,
-          onCancel: _,
-          children: (0, _.jsxs)("div", {
-            className: _().ConflictBody,
-            children: [
-              (0, _._)(
-                `#SteamAward_${_.strLocTokenInfix}ConflictWarning_Explanation`,
-                (0, _.jsx)("span", {
-                  className: _().SteamAwardModalGameTitle,
-                  children: null == _ ? void 0 : _.GetName(),
-                }),
-                (0, _.jsx)("span", {
-                  className: _().SteamAwardModalGameTitle,
-                  children: null == _ ? void 0 : _.GetName(),
-                }),
+          { data: _ } = (0, _._)({
+            appid: _,
+          }),
+          _ = (0, _._)(_(!1));
+        return (0, _.jsx)(_, {
+          strMainTitle: _._.Localize("#SteamAwards_EventMainTitleCombined"),
+          headerText: _
+            ? _._.Localize(
+                "#SteamAwards_EventVoteForGamePrompt",
+                null !== (_ = null == _ ? void 0 : _.name) && void 0 !== _
+                  ? _
+                  : "",
+              )
+            : (0, _.jsx)("a", {
+                href: _,
+                className: _().LinkText,
+                children: _._.Localize("#SteamAwards_Event_VotesClosed"),
+              }),
+          headerContent: (0, _.jsx)("div", {
+            className: _().AwardCategoriesCtn,
+            children: _.rgCategories.map((_) =>
+              (0, _.jsx)(
+                _,
+                {
+                  unAppID: _,
+                  category: _,
+                  actions: _,
+                  bVotesOpen: _,
+                  bHideDescription: _,
+                },
+                _.eCategoryID,
               ),
-              Boolean(!_ || !_)
-                ? (0, _.jsx)(_._, {
-                    size: "small",
-                    position: "center",
-                    string: (0, _._)("#Loading"),
-                  })
-                : (0, _.jsxs)("div", {
-                    className: _().NominationSwitchCtn,
-                    children: [
-                      (0, _.jsx)("img", {
-                        src: _.GetAssets().GetSmallCapsuleURL(),
-                      }),
-                      "→",
-                      (0, _.jsx)("img", {
-                        src: _.GetAssets().GetSmallCapsuleURL(),
-                      }),
-                    ],
-                  }),
-            ],
+            ),
+          }),
+          footer: (0, _.jsx)("a", {
+            href: _,
+            children: _._.Localize("#EventDisplay_CallToAction_LearnMore"),
           }),
         });
       }
-      let _ = class extends _.Component {
-        constructor(_) {
-          super(_),
-            (this.state = {
-              eCategoryLoaded: null,
-              votedForAppID: null,
-            }),
-            (this.m_strPreviousVotedForAppTitle = null),
-            (this.m_cancelSignal = _().CancelToken.source()),
-            (0, _._)(this);
-        }
-        componentDidMount() {
-          this.FetchVoteState();
-        }
-        componentDidUpdate() {
-          this.props.eVoteCategory != this.state.eCategoryLoaded &&
-            this.FetchVoteState();
-        }
-        componentWillUnmount() {
-          this.m_cancelSignal.cancel(
-            "EventDisplaySteamAwardVote is being unmounted",
-          );
-        }
-        async FetchVoteState() {
-          var _;
-          const _ = _._.STORE_BASE_URL + "steamawards/ajaxgetuservotes";
-          if (_._.logged_in)
-            try {
-              const _ = await _().get(_, {
-                withCredentials: !0,
-                cancelToken: this.m_cancelSignal.token,
-              });
-              if (this.m_cancelSignal.token.reason) return;
-              (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
-                ? void 0
-                : _.success) == _._ &&
-                _.data.votes &&
-                this.UpdateVoteState(_.data.votes);
-            } catch (_) {
-              const _ = (0, _._)(_);
-              console.error(
-                "Could not fetch previous votes:" + _.strErrorMsg,
-                _,
-              );
-            }
-          else this.UpdateVoteState([]);
-        }
-        async UpdateVoteState(_) {
-          var _;
-          const _ = this.props.eVoteCategory,
-            _ = _[_];
-          if (
-            (this.setState({
-              eCategoryLoaded: _,
-              votedForAppID: _,
-            }),
-            _ && _ != this.props.appID)
-          ) {
-            if (
-              (await _._.Get().QueueAppRequest(_, {}),
-              this.m_cancelSignal.token.reason)
-            )
-              return;
-            this.props.eVoteCategory == _ &&
-              (this.m_strPreviousVotedForAppTitle =
-                null === (_ = _._.Get().GetApp(_)) || void 0 === _
-                  ? void 0
-                  : _.GetName());
-          }
-        }
-        async OnVoteClick() {
-          const _ = this.props.eVoteCategory;
-          if (_ != this.state.eCategoryLoaded) return;
-          if (!_(!0)) return;
-          const _ = this.props.appID;
-          this.state.votedForAppID && this.state.votedForAppID != _
-            ? this.HandleConflict(() => this.SaveVote(_, _))
-            : this.SaveVote(_, _);
-        }
-        HandleConflict(_) {
-          const _ = _._.Get().GetApp(this.props.appID);
-          (0, _._)(
-            (0, _.jsx)(_, {
-              strLocTokenInfix: "Vote",
-              newAppID: null == _ ? void 0 : _.GetAppID(),
-              curNominatedAppID: this.state.votedForAppID,
-              fnOnConfirm: _,
-              fnOnCancel: () => {},
-            }),
-            window,
-          );
-        }
-        async SaveVote(_, _) {
-          if (
-            (this.setState({
-              eCategoryLoaded: _,
-              votedForAppID: _,
-            }),
-            this.props.previewMode && _._.EUNIVERSE == _.wLO)
-          )
-            return;
-          const _ = _._.STORE_BASE_URL + "steamawards/ajaxvoteforgame",
-            _ = new URLSearchParams();
-          _.append("sessionid", (0, _._)()),
-            _.append("categoryid", _.toString()),
-            _.append("appid", _.toString());
-          try {
-            const _ = await _().post(_, _, {
-              withCredentials: !0,
-              cancelToken: this.m_cancelSignal.token,
-            });
-            if (this.m_cancelSignal.token.reason) return;
-            (_ && 200 == _.status && _.data.success == _._) ||
-              console.error("Vote request failed.", _ && (0, _._)(_));
-          } catch (_) {
-            const _ = (0, _._)(_);
-            console.error("SaveVote failed: " + _.strErrorMsg, _);
-          }
-        }
-        render() {
-          const _ = this.props.eVoteCategory,
-            _ =
-              this.state.eCategoryLoaded == _ &&
-              this.state.votedForAppID == this.props.appID,
-            _ = this.props.bIsEventActionEnabled || this.props.previewMode || _;
-          let _ = {};
-          return (
-            this.props.strBackgroundColor.length &&
-              (_.backgroundColor = this.props.strBackgroundColor),
-            _
-              ? (0, _.jsx)("div", {
-                  style: _,
-                  className: (0, _._)(_().SteamAwardVoteWidget),
-                  children: (0, _.jsxs)("div", {
-                    className: _().SteamAwardVoteButtonArea,
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: (0, _._)(
-                          _().SteamAwardCategoryTitle,
-                          _().VotingTitle,
-                        ),
-                        children: this.props.strCategoryTitle,
-                      }),
-                      !this.props.bRenderFromStorePage &&
-                        (0, _.jsx)("div", {
-                          className: _().SteamAwardCategoryDesc,
-                          children: this.props.strCategoryDesc,
-                        }),
-                      _
-                        ? (0, _.jsx)("button", {
-                            className: _().SteamAwardVoteButtonSubmitted,
-                            children: (0, _.jsx)("span", {
-                              className: _().SteamAwardVoteButtonText,
-                              children: (0, _._)(
-                                "#SteamAward_VoteButton_VotedText",
-                              ),
-                            }),
-                          })
-                        : (0, _.jsx)("button", {
-                            className: _().SteamAwardVoteButton,
-                            onClick: this.OnVoteClick,
-                            children: (0, _.jsx)("span", {
-                              className: _().SteamAwardVoteButtonText,
-                              children: (0, _._)(
-                                "#SteamAward_VoteButton_PromptText",
-                              ),
-                            }),
-                          }),
-                    ],
-                  }),
-                })
-              : null
-          );
-        }
-      };
-      (0, _._)([_._], _.prototype, "m_strPreviousVotedForAppTitle", void 0),
-        (0, _._)([_._], _.prototype, "OnVoteClick", null),
-        (0, _._)([_._], _.prototype, "SaveVote", null),
-        (_ = (0, _._)([_._], _));
-      _.Component;
-      let _ = class extends _.Component {
-        constructor(_) {
-          super(_),
-            (this.m_cancelSignal = _().CancelToken.source()),
-            (this.m_awardEventDetails = null),
-            (0, _._)(this),
-            (this.state = {
-              bAppInfoLoaded: !1,
-            });
-        }
-        componentDidMount() {
-          _._.Get()
-            .QueueAppRequest(this.props.appID, {})
-            .then(() => {
-              _._.Get().BHasApp(this.props.appID) &&
-                this.setState({
-                  bAppInfoLoaded: !0,
-                });
-            }),
-            _(this.props.voteCategories, this.m_cancelSignal).then((_) => {
-              this.m_awardEventDetails = _;
-            });
-        }
-        componentWillUnmount() {
-          this.m_cancelSignal.cancel(
-            "WinterSaleSteamAwardVoteWrapper is being unmounted",
-          );
-        }
-        GetNominatedAwardCategories() {
-          var _;
-          let _ = [];
-          return (
-            null === (_ = this.m_awardEventDetails.rgAwardCategoryDetails) ||
-              void 0 === _ ||
-              _.forEach((_) => {
-                _.push(
-                  (0, _.jsx)(
-                    _,
-                    {
-                      eVoteCategory: _.eSteamAwardCategoryID,
-                      strCategoryDesc: _.strSuggestedCategoryDesc,
-                      strCategoryTitle: _.strSuggestedCategoryTitle,
-                      strBackgroundColor:
-                        this.m_awardEventDetails.strNominateButtonBGColor,
-                      ...this.props,
-                    },
-                    _.eSteamAwardCategoryID,
-                  ),
-                );
-              }),
-            _
-          );
-        }
-        render() {
-          var _, _, _, _;
-          if (!this.state.bAppInfoLoaded || !this.props.voteCategories)
-            return null;
-          if (!this.m_awardEventDetails) return null;
-          let _ = {};
-          return (
-            (null === (_ = this.m_awardEventDetails.strBackgroundCSS) ||
-            void 0 === _
-              ? void 0
-              : _.length) &&
-              (_.backgroundColor = this.m_awardEventDetails.strBackgroundCSS),
-            (null === (_ = this.m_awardEventDetails.strBackgroundImage) ||
-            void 0 === _
-              ? void 0
-              : _.length) &&
-              (_.backgroundImage = `url( ${this.m_awardEventDetails.strBackgroundImage} )`),
-            (null === (_ = this.m_awardEventDetails.strTextColor) ||
-            void 0 === _
-              ? void 0
-              : _.length) && (_.color = this.m_awardEventDetails.strTextColor),
+      function _(_) {
+        const {
+            unAppID: _,
+            category: _,
+            actions: _,
+            bVotesOpen: _,
+            bHideDescription: _,
+          } = _,
+          {
+            unVotedAppID: _,
+            bAnswered: _,
+            Vote: _,
+          } = (0, _._)(_.eCategoryID, _),
+          { elDialogElement: _, BCanTakeAction: _ } = _(!0),
+          [_, _, _] = (0, _._)(),
+          _ = _ == _;
+        if (!_ && !_) return null;
+        return (0, _.jsxs)("div", {
+          style: {
+            backgroundColor: _._,
+          },
+          className: _().SteamAwardVoteWidget,
+          children: [
             (0, _.jsxs)("div", {
-              style: _,
-              className: (0, _._)(
-                _().SteamAwardContainer,
-                _().PartnerEventFont,
-              ),
+              className: _().SteamAwardVoteButtonArea,
               children: [
-                (0, _.jsxs)("div", {
-                  className: _().SteamAwardHeader,
-                  children: [
-                    (0, _.jsx)("img", {
-                      className: _().SteamAwardHeaderImage,
-                      src: this.m_awardEventDetails.strTrophyImg,
-                      role: "presentation",
-                    }),
-                    (0, _.jsxs)("div", {
-                      className: _().SteamAwardMainCtn,
-                      children: [
-                        (0, _.jsxs)("div", {
-                          className: _().SteamAwardMainTitle,
-                          children: [
-                            " ",
-                            (0, _._)("#SteamAwards_EventMainTitleCombined"),
-                            " ",
-                          ],
-                        }),
-                        (0, _.jsx)("div", {
-                          className: _().SteamAwardHeaderText,
-                          children: this.props.bIsEventActionEnabled
-                            ? (0, _.jsx)(_.Fragment, {
-                                children: (0, _._)(
-                                  "#SteamAwards_EventVoteForGamePrompt",
-                                  null ===
-                                    (_ = _._.Get().GetApp(this.props.appID)) ||
-                                    void 0 === _
-                                    ? void 0
-                                    : _.GetName(),
-                                ),
-                              })
-                            : (0, _.jsx)("a", {
-                                href: (0, _._)(
-                                  _._.STORE_BASE_URL + "steamawards/",
-                                ),
-                                className: _().LinkText,
-                                children: (0, _._)(
-                                  "#SteamAwards_Event_VotesClosed",
-                                ),
-                              }),
-                        }),
-                        (0, _.jsx)("div", {
-                          className: _().AwardCategoriesCtn,
-                          children: this.GetNominatedAwardCategories(),
-                        }),
-                      ],
-                    }),
-                  ],
-                }),
                 (0, _.jsx)("div", {
-                  className: _().SteamAwardLinkToNominationPage,
-                  children: (0, _.jsx)("a", {
-                    href: (0, _._)(_._.STORE_BASE_URL + "steamawards/"),
-                    children: (0, _._)("#EventDisplay_CallToAction_LearnMore"),
-                  }),
+                  className: (0, _._)(
+                    _().SteamAwardCategoryTitle,
+                    _().VotingTitle,
+                  ),
+                  children: _.strTitle,
                 }),
+                !_ &&
+                  (0, _.jsx)("div", {
+                    className: _().SteamAwardCategoryDesc,
+                    children: _.strDescription,
+                  }),
+                _
+                  ? (0, _.jsx)("button", {
+                      className: _().SteamAwardVoteButtonSubmitted,
+                      children: (0, _.jsx)("span", {
+                        className: _().SteamAwardVoteButtonText,
+                        children: _._.Localize(
+                          "#SteamAward_VoteButton_VotedText",
+                        ),
+                      }),
+                    })
+                  : (0, _.jsx)("button", {
+                      className: _().SteamAwardVoteButton,
+                      onClick: () => {
+                        _ && _() && (_ && _ != _ ? _() : _(_));
+                      },
+                      children: (0, _.jsx)("span", {
+                        className: _().SteamAwardVoteButtonText,
+                        children: _._.Localize(
+                          "#SteamAward_VoteButton_PromptText",
+                        ),
+                      }),
+                    }),
               ],
-            })
-          );
-        }
-      };
-      (0, _._)([_._], _.prototype, "m_awardEventDetails", void 0),
-        (_ = (0, _._)([_._], _));
+            }),
+            _,
+            (0, _.jsx)(_._, {
+              active: _,
+              children: (0, _.jsx)(_, {
+                strLocTokenInfix: "Vote",
+                unCurrentAppID: _,
+                unNewAppID: _,
+                fnOnConfirm: () => _(_),
+                closeModal: _,
+              }),
+            }),
+          ],
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
+      __webpack_require__("chunkid"),
+        __webpack_require__("chunkid"),
+        __webpack_require__("chunkid");
+      function _(_) {
+        const _ = (0, _._)();
+        return (0, _.useMemo)(
+          () => ({
+            GetMySteamAwardNominations: () => (0, _._)(_),
+            NominateForSteamAward: async (_, _) => {
+              if (_) return _._;
+              const [_] = await (0, _._)(_, _, _, _._._);
+              return _;
+            },
+            GetMySteamAwardVotes: () => (0, _._)(_, _._),
+            SetSteamAwardVote: async (_, _) => {
+              if (_) return _._;
+              const [_] = await (0, _._)(_, _, _, _._);
+              return _;
+            },
+          }),
+          [_, _],
+        );
+      }
+      const _ = [];
+      function _(_, _, _) {
+        var _;
+        const _ = _.some(_._) || _.some(_._),
+          _ = (0, _._)(_ ? _._ : void 0);
+        return _
+          ? _.data
+            ? {
+                widgets: (0, _._)(
+                  null !== (_ = _.data.votes) && void 0 !== _ ? _ : [],
+                  _,
+                  _,
+                  _,
+                ),
+                bLoading: !1,
+              }
+            : {
+                bLoading: !0,
+              }
+          : {
+              bLoading: !1,
+            };
+      }
+      function _(_) {
+        return Boolean(_) && _._.EUNIVERSE == _.wLO;
+      }
+      function _(_) {
+        const { event: _, previewMode: _ } = _,
+          [_, _] = (0, _._)(() => [_.GetSteamAwardCategory(), _.appid]),
+          _ = (0, _._)(),
+          { widgets: _, bLoading: _ } = _([_], _, _),
+          _ = _(_(_));
+        if (_) return (0, _.jsx)(_, {});
+        if (!(null == _ ? void 0 : _.nomination)) return null;
+        const _ =
+          _.BIsEventActionEnabled(_) || _ < _.GetStartTimeAndDateUnixSeconds();
+        return (0, _.jsx)(_, {
+          unAppID: _,
+          actions: _,
+          widget:
+            ((_ = _.nomination),
+            (_ = Boolean(_)),
+            _
+              ? {
+                  ..._,
+                  bNominationsLive: !0,
+                }
+              : _),
+          bNominationsOpen: _,
+        });
+        var _, _;
+      }
+      function _(_) {
+        const {
+            appID: _,
+            voteCategories: _,
+            bIsEventActionEnabled: _,
+            previewMode: _,
+            bRenderFromStorePage: _,
+          } = _,
+          _ = (0, _._)(),
+          { widgets: _, bLoading: _ } = _(_, null != _ ? _ : _, _),
+          _ = _(_(_));
+        return _
+          ? (0, _.jsx)(_, {})
+          : (null == _ ? void 0 : _.vote)
+            ? (0, _.jsx)(_, {
+                unAppID: _,
+                widget: _.vote,
+                actions: _,
+                bVotesOpen: _ || Boolean(_),
+                bHideCategoryDescriptions: _,
+              })
+            : null;
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -55142,6 +53811,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -55202,6 +53873,7 @@
           : null;
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -55292,9 +53964,6 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -55667,7 +54336,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = (0, _._)(),
@@ -55684,9 +54352,7 @@
                   }),
                   null !== (_ = (0, _._)(_)) && void 0 !== _ ? _ : window,
                 )
-              : ("dev" == _._.WEB_UNIVERSE ||
-                  "beta" == _._.WEB_UNIVERSE ||
-                  _) &&
+              : _ &&
                 ((0, _._)(
                   (0, _.jsx)(_, {
                     rewardType: _,
@@ -55829,7 +54495,7 @@
       function _(_) {
         const { appid: _, community_item_type: _ } = _,
           _ = (0, _._)(_),
-          [_, _] = _.useState(!1);
+          { mutate: _, isSuccess: _ } = (0, _._)();
         if (!_) return null;
         const _ = _.find((_) => _.item_type == _);
         return _
@@ -55843,11 +54509,7 @@
                       ),
                     })
                   : (0, _.jsx)(_._, {
-                      onClick: (_) => {
-                        (0, _._)(_).then((_) => {
-                          _ == _._ && _(!0);
-                        });
-                      },
+                      onClick: () => _(_),
                       children: (0, _._)(
                         "#Sale_ClaimableReward_profilemodifier_apply",
                       ),

@@ -240,17 +240,16 @@
     },
     33561: (e, a, n) => {
       "use strict";
-      n.d(a, { A4: () => d, LU: () => g, sK: () => m });
+      n.d(a, { A4: () => o, LU: () => c, sK: () => d });
       var t = n(7850),
         l = n(90626),
-        r = n(60860),
-        s = n(22837),
-        i = n(78327);
-      const o = { editModel: null, bClanImagesV2: !1, setClanImagesV2: void 0 },
-        c = l.createContext(o);
-      function d(e) {
+        r = n(60860);
+      n(78327);
+      const s = { editModel: null, bClanImagesV2: !1, setClanImagesV2: void 0 },
+        i = l.createContext(s);
+      function o(e) {
         const { children: a, editModel: n } = e,
-          { bClanImagesV2: s, setClanImagesV2: i } = (function () {
+          { bClanImagesV2: o, setClanImagesV2: c } = (function () {
             const e = "storeUseClanImagesV2",
               [a, n] = l.useState(() => !!localStorage.getItem(e)),
               t = l.useCallback((a) => {
@@ -259,20 +258,17 @@
               }, []);
             return { bClanImagesV2: a, setClanImagesV2: t };
           })();
-        return (0, t.jsx)(c.Provider, {
-          value: { ...o, editModel: n, bClanImagesV2: s, setClanImagesV2: i },
+        return (0, t.jsx)(i.Provider, {
+          value: { ...s, editModel: n, bClanImagesV2: o, setClanImagesV2: c },
           children: (0, t.jsx)(r.Cs, { location: r.uF, children: a }),
         });
       }
-      function g() {
-        return l.useContext(c).editModel;
+      function c() {
+        return l.useContext(i).editModel;
       }
-      function m() {
-        const e = l.useContext(c),
-          a =
-            ("dev" == i.TS.WEB_UNIVERSE || "beta" == i.TS.WEB_UNIVERSE) &&
-            i.TS.EUNIVERSE == s.Rv &&
-            i.iA.is_support;
+      function d() {
+        const e = l.useContext(i),
+          a = !1;
         return {
           bClanImagesV2: e.bClanImagesV2 && a,
           bClanImagesV2Allowed: a,
@@ -899,14 +895,14 @@
         d = n(94734),
         g = n(42834),
         m = n(84518),
-        u = n(39777),
-        p = n(60014),
-        h = n(38535),
-        _ = n(65946),
-        v = n(83392),
-        x = n(90626),
-        I = n(70078),
-        j = n(35380),
+        u = n(14987),
+        p = n(39777),
+        h = n(60014),
+        _ = n(38535),
+        v = n(65946),
+        x = n(83392),
+        I = n(90626),
+        j = n(70078),
         w = n(33924),
         f = n.n(w),
         C = n(48593),
@@ -925,15 +921,15 @@
             event: s,
             imageURLOverride: d,
             bShowAssociatedApp: m,
-            langOverride: p,
+            langOverride: h,
             onClick: w,
             eEventRount: A,
             bHidePrices: E,
             nSummaryMaxLength: S,
           } = e,
-          k = (0, h.Zj)(s.appid),
+          k = (0, _.Zj)(s.appid),
           N = (0, C.n)(),
-          R = p || (0, r.sfN)(c.TS.LANGUAGE),
+          R = h || (0, r.sfN)(c.TS.LANGUAGE),
           U =
             null !==
               (a = (0, i.m0)(
@@ -954,20 +950,20 @@
               )) && void 0 !== n
               ? n
               : d,
-          [B, M, F, O] = (0, _.q3)(() => [
+          [B, M, F, O] = (0, v.q3)(() => [
             s.GetNameWithFallback(R) || "",
             s.GetCategoryAsString(),
             s.GetSummaryWithFallback(R, S),
             s.GetSubTitleWithLanguageFallback(R) || "",
           ]),
-          P = (0, j.$5)(s.appid),
-          { data: H } = (0, u.lv)(P),
+          P = (0, u.$5)(s.appid),
+          { data: H } = (0, p.lv)(P),
           z = [];
         if ((U && z.push(U), G && G !== U && z.push(G), H)) {
           const e = (0, g.b0)(H, "main_capsule");
           e && z.push(e);
         }
-        const [V, W] = (0, x.useState)(U);
+        const [V, W] = (0, I.useState)(U);
         if (!s)
           return (0, t.jsx)("div", { className: f().OtherEvents_EventCtn });
         const Y = s ? s.GetStartTimeAndDateUnixSeconds() : 0;
@@ -1008,7 +1004,7 @@
                     className: f().OtherEvents_BGImage,
                     style: {
                       backgroundColor: "#ffffff",
-                      backgroundImage: V ? `url(${(0, I.j3)(V)})` : "none",
+                      backgroundImage: V ? `url(${(0, j.j3)(V)})` : "none",
                     },
                   }),
                   (0, t.jsxs)("div", {
@@ -1040,7 +1036,7 @@
                               className: f().OtherEvents_SubTitle,
                               children: q,
                             }),
-                          (0, t.jsxs)(v.s, {
+                          (0, t.jsxs)(x.s, {
                             direction: "row",
                             gap: "3",
                             align: "center",
@@ -1093,19 +1089,19 @@
       }
       function T(e) {
         const { appid: a, bHidePrice: n } = e,
-          l = (0, j.$5)(a),
-          { data: r } = (0, u.J$)(l),
-          { data: i } = (0, u.lv)(l),
-          { data: o } = (0, u.Q_)(l),
-          c = (0, p.n9)(),
-          h = (0, N.Qn)();
+          l = (0, u.$5)(a),
+          { data: r } = (0, p.J$)(l),
+          { data: i } = (0, p.lv)(l),
+          { data: o } = (0, p.Q_)(l),
+          c = (0, h.n9)(),
+          _ = (0, N.Qn)();
         if (!i || !r) return null;
-        const _ = o && o.hide_discount_pct_for_compliance;
+        const v = o && o.hide_discount_pct_for_compliance;
         return (0, t.jsx)(m.A, {
           appID: a,
           children: (0, t.jsxs)(s.Z, {
             className: (0, D.A)(f().AppCapsuleCtn, "AppCapsuleCtn"),
-            ...(0, S.S)(r, c, h, !1),
+            ...(0, S.S)(r, c, _, !1),
             children: [
               (0, t.jsx)(d.Q, {
                 id: l,
@@ -1128,12 +1124,12 @@
                       : "",
                   ),
                   children: [
-                    Boolean((null == o ? void 0 : o.discount_pct) && _) &&
+                    Boolean((null == o ? void 0 : o.discount_pct) && v) &&
                       (0, t.jsx)("div", {
                         className: E().DiscountIconCtn,
                         children: (0, t.jsx)(k.XH_, {}),
                       }),
-                    Boolean((null == o ? void 0 : o.discount_pct) && !_) &&
+                    Boolean((null == o ? void 0 : o.discount_pct) && !v) &&
                       (0, t.jsx)("span", {
                         className: E().StoreSaleDiscountBox,
                         children: `-${null == o ? void 0 : o.discount_pct}%`,
@@ -1203,8 +1199,7 @@
         constructor() {
           (this.m_curLocImageGroup = null),
             (this.m_curLocImageGroupType = null),
-            (0, o.Gn)(this),
-            "dev" == g.TS.WEB_UNIVERSE && (window.g_ClanImageStore = this);
+            (0, o.Gn)(this);
         }
         static async BDoesClanImageFileExistsOnCDNOrOrigin(e, a, n, t) {
           let r =
@@ -1474,7 +1469,7 @@
         i = n(81047),
         o = n(17720),
         c = n(86355),
-        d = n(28210),
+        d = n(82429),
         g = n(29347),
         m = n(95695),
         u = n.n(m),
@@ -3898,7 +3893,7 @@
       "use strict";
       n.d(a, { E: () => o, m: () => i });
       var t = n(7850),
-        l = n(28210),
+        l = n(82429),
         r = n(95695),
         s = n(52038);
       function i(e, a) {

@@ -47,5 +47,9 @@
     "Economy_Market_TopLevelTooltip_SteamGuardRecentlyEnabled": "您必须等待蒸汽平台令牌在您的帐户中启用满 15 天。蒸汽平台客服无法移除此限制。",
     "Economy_Market_TopLevelReason_NoSteamGuard": "您的帐户必须已受蒸汽平台令牌保护至少 %1$s 天。",
     "Economy_Market_TopLevelTooltip_SteamGuardDisabled": "您必须在您的帐户中启用蒸汽平台令牌。请确保您已验证过电子邮件，且在启用蒸汽平台令牌后已登录帐户两次。",
-    "Economy_Market_HeaderTip_NoSteamGuard": "您的帐户必须已受蒸汽平台令牌保护至少 %1$s 天。"
+    "Economy_Market_HeaderTip_NoSteamGuard": "您的帐户必须已受蒸汽平台令牌保护至少 %1$s 天。",
+    "MySellListings_PendingPriceChange": "您请求变更此上架物品的价格。请查看蒸汽平台手机应用或电子邮件以批准变更。",
+    "PendingPriceChange_Dialog_Explanation": "您请求变更此上架物品的价格。请查看蒸汽平台手机应用或电子邮件以批准变更。",
+    "RepriceListing_Dialog_ConfirmOnPhone": "在蒸汽平台手机应用中查看并批准价格变更请求。",
+    "RepriceListing_Dialog_WalletLimit": "新价格会使您蒸汽平台钱包的余额超出其所能容纳的上限。请尝试一个较低的价格，或先用掉一些余额。"
 }

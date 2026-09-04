@@ -4154,5 +4154,6 @@
     "GamePerformance_Reason": "Причина",
     "GamePerformance_NumResponses": "Кількість відповідей",
     "NewToolTitleSuffix_Beta": "БЕТА",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "SteamMachine_TestResult_MultiWindowAppAutomaticallySetsFocus": "У цій грі використовується кілька вікон, і вам, можливо, знадобиться вручну вибрати потрібні через оверлей Steam."
 }

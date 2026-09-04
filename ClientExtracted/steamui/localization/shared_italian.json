@@ -173,7 +173,7 @@
     "VoiceTransmisionThreshold": "Soglia di trasmissione vocale",
     "VoiceTransmissionThresholdExplainer": "Quando il microfono è acceso, il rumore non sarà trasmesso al di sotto di questa soglia:",
     "VoiceTransmissionThresholdOff": "Disattivata",
-    "VoiceTransmissionThresholdMedium": "Medium",
+    "VoiceTransmissionThresholdMedium": "Media",
     "VoiceTransmissionThresholdHigh": "Alta",
     "VoiceTransmissionThresholdRecommended": "(Consigliata)",
     "VoiceAdvancedSettings": "Impostazioni avanzate",
@@ -2800,7 +2800,7 @@
     "SteamDeckVerified_Category_Unsupported": "Non supportato",
     "SteamDeckVerified_Category_Unknown": "Sconosciuto",
     "SteamOSCompatibility_DescriptionHeader": "In base ai risultati della verifica di Steam Deck, i nostri test indicano che questo titolo è %1$s su SteamOS. %2$s",
-    "SteamOSCompatibility_DescriptionHeader_WithAppName": "In base ai risultati della verifica di Steam Deck, i nostri test indicano che %1$s è %1$s con dispositivi che eseguono SteamOS. %3$s",
+    "SteamOSCompatibility_DescriptionHeader_WithAppName": "In base ai risultati della verifica di Steam Deck, i nostri test indicano che %1$s è %2$s con dispositivi che eseguono SteamOS. %3$s",
     "SteamOSCompatibility_DescriptionHeader_Unknown": "Valve sta ancora verificando questo titolo. Al momento non abbiamo ulteriori informazioni sulla compatibilità di questo gioco con SteamOS.",
     "SteamOSCompatibility_DescriptionHeader_Unknown_WithAppName": "Valve sta ancora verificando %1$s. Al momento non abbiamo ulteriori informazioni sulla compatibilità di questo gioco con SteamOS.",
     "SteamOSCompatibility_DescriptionHeader_Compatible": "La tua esperienza in termini di prestazioni e input potrebbe variare a seconda dell'hardware.",
@@ -4154,5 +4154,6 @@
     "GamePerformance_Reason": "Motivo",
     "GamePerformance_NumResponses": "Numero di risposte",
     "NewToolTitleSuffix_Beta": "BETA",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "SteamMachine_TestResult_MultiWindowAppAutomaticallySetsFocus": "Questo gioco usa finestre multiple e potrebbe richiederti di selezionare la finestra appropriata manualmente tramite l'Overlay di Steam."
 }

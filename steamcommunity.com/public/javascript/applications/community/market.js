@@ -6914,7 +6914,7 @@
               .replace(/\?.*$/, "");
             return `${e.TS.MEDIA_CDN_COMMUNITY_URL}${n}`;
           }
-          {
+          if ("string" == typeof t[c]) {
             const n = t.asset_url_format.replace("${FILENAME}", t[c]);
             return `${e.TS.STORE_ITEM_BASE_URL}${n}`;
           }

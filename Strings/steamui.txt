@@ -5148,10 +5148,9 @@ ${LANGUAGE}
 +(#\v&dbF:xrJ'$#
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNGSY
+++CCUNG>a
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
-++CCUNG~a
 +.CAudio_GetBluetoothAudioPreference_Request
 +.CAudio_SetBluetoothAudioPreference_Request
 +.CAuthenticationSupport_RevokeToken_Request
@@ -7569,6 +7568,7 @@ ${LANGUAGE}
 0 Umv
 0"W\n+CCommunity_GetUserPartnerEventNews_Response
 0(`xPH
+0.15
 0.CAccountHardware_GetPersonalizationFile_Request
 0.CAccountHardware_GetSteamDeckComponents_Request
 0.CAccountHardware_SetPersonalizationFile_Request
@@ -7613,7 +7613,6 @@ ${LANGUAGE}
 0000
 00000000
 0000000000000000000000000000000000000000
-0.15
 00003333
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
@@ -15084,7 +15083,6 @@ AudioChannelConfiguration
 AudioDeviceDescription
 AudioSinkAvailabilityChanged: %d
 AudioSinkList
-Aug 28 2026 22:09:05
 August
 Aura
 Australia/Adelaide
@@ -16263,6 +16261,7 @@ CDesktopCapturePipeWire: PipeWire stream state error: %s\n
 CDesktopCapturePipeWire: Start request was rejected. Deleting our session token to allow a clean run next time; try rebooting and see if the permissions dialog shows up.\n
 CDesktopCapturePipeWire: Start signal received.\n
 CDesktopCapturePipeWire: Stopping capture session
+CDesktopCapturePipeWire: Tried to renegotiate format after stream was closed??
 CDesktopCapturePipeWire: Unknown buffer type: %d\n
 CDesktopCapturePipeWire: Unknown pixel format %d\n
 CDesktopCapturePipeWire: Video frame size does not match provided data!\n
@@ -29853,6 +29852,7 @@ Sent ping with MTU %d, increment = %d\n
 SentenceMode
 SentenceModeMenu
 Sentiment
+Sep  2 2026 22:49:48
 September
 Serbian
 Serial
@@ -40883,6 +40883,7 @@ fG;P^
 fNt7
 fP[J@8OLz
 fP~V
+fYM'
 f\n\rFilterOptions
 f\n\rSearchForGame
 fabs( flXDelta ) > 0

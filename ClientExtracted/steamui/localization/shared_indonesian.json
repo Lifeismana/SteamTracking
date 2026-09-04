@@ -2522,7 +2522,7 @@
     "Platform_Linux": "Linux / SteamOS",
     "Platform_Mac": "macOS",
     "Platform_VR": "VR",
-    "ContentDescriptor": "Deskripsi Konten",
+    "ContentDescriptor": "Deskriptor Konten",
     "ContentDescriptor_GeneralMatureContent": "Konten Dewasa Umum",
     "ContentDescriptor_GeneralMatureContent_Description": "Topik dewasa yang mungkin tidak sesuai untuk semua umur.",
     "ContentDescriptor_FrequentViolenceOrGore": "Sering Ada Kekerasan atau Gore",
@@ -4154,5 +4154,6 @@
     "GamePerformance_Reason": "Alasan",
     "GamePerformance_NumResponses": "# Respons",
     "NewToolTitleSuffix_Beta": "BETA",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "SteamMachine_TestResult_MultiWindowAppAutomaticallySetsFocus": "Game ini menggunakan banyak jendela dan kamu mungkin perlu memfokuskan jendela yang diinginkan secara manual via overlay Steam"
 }

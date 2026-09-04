@@ -46,7 +46,7 @@
       var c = t(92757),
         d = t(96059),
         p = t(51006),
-        u = t(28210),
+        u = t(82429),
         m = t(91254),
         v = t(16180),
         h = (t(64641), t(97058)),
@@ -271,13 +271,14 @@
                           (0, o.jsx)("div", {
                             className: B.EventsSummariesCtn,
                             children: t.slice(0, p).map((e) => {
-                              const n = a
-                                ? (n) => {
-                                    a(e),
-                                      n.stopPropagation(),
-                                      n.preventDefault();
-                                  }
-                                : void 0;
+                              const n =
+                                a && !(0, H.sY)()
+                                  ? (n) => {
+                                      a(e),
+                                        n.stopPropagation(),
+                                        n.preventDefault();
+                                    }
+                                  : void 0;
                               return (0, o.jsx)(
                                 M.u,
                                 { event: e, onClick: n, nSummaryMaxLength: r },
@@ -304,7 +305,7 @@
           [s, r, l] = (0, f.uD)(),
           [c, d] = (0, a.useState)(null),
           [p, u] = (0, a.useState)(void 0),
-          v = (0, j.YN)(),
+          v = (0, j.Y)(),
           h = (0, a.useCallback)(() => {
             d(null), l();
           }, [l]),
@@ -331,7 +332,7 @@
               } = e,
               [r, l] = (0, a.useState)(null),
               [c, d] = (0, a.useState)(null),
-              p = (0, j.YN)(),
+              p = (0, j.Y)(),
               [u] = (0, b.Q)("emgid", void 0),
               [v] = (0, b.Q)("announce_gid", void 0);
             return (

@@ -371,15 +371,14 @@ $ORIGIN
 19CUtlNoEscConversion
 20CUniformRandomStream
 20IUniformRandomStream
-21:52:03
 21CUtlCStringConversion
+22:49:40
 24CDirWatcherPollingThread
 31CAdHocValidation_SimpleCallback
 64 >= identifier_length
 7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE
 7CUtlMapI10CUtlStringli8CDefLessE
 9IMemAlloc
-;4jX
 <empty>
 <family %u, %u bytes>
 <no address info>
@@ -393,7 +392,6 @@ Assertion Failed: stack%2d: %s (%d): %s
 Assertion Failed: stack%2d: 0x%llX
 Assertion failed: length > k_cchMaxString
 Attempting to create a named event with a null name
-Aug 27 2026
 Average %.2f fps, %.2f ms per frame\n
 BCreateDirectory
 BEnsureDiskSpaceAvailable: available:%llu needed:%llu\n
@@ -638,6 +636,7 @@ Seeking to a position which is not sector aligned will break unbuffered io
 Semaphore name (%s) is longer than POSIX can handle, truncating.
 SendCrashReport
 SendExistingMinidump
+Sep  2 2026
 SetAppID
 SetComment
 SetSteamID

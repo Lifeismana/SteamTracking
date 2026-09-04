@@ -2990,7 +2990,6 @@
             (this.m_bHasFAQEdit = !1),
             (this.m_steamInterface = null),
             (0, _._)(this),
-            "dev" == _._.WEB_UNIVERSE && (window.g_FAQStore = this),
             _._.IN_STEAMUI ||
               (this.ReadInitialPayload(), this.SetUpWebAPIInterface());
         }
@@ -3001,11 +3000,7 @@
         }
         ReadInitialPayload() {
           const _ = (0, _._)("faqstore", "application_config");
-          if (
-            (("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-              console.log("DEV_DEBUG: CFAQStore loading payload: ", _),
-            this.BIsConfigValid(_))
-          ) {
+          if (this.BIsConfigValid(_)) {
             if (_.faqs)
               for (const _ in _.faqs) {
                 const _ = _.faqs[_];
@@ -3033,9 +3028,7 @@
                   (this.m_mapFAQSummaries.has(_.faq_id) ||
                     this.m_mapFAQSummaries.set(_.faq_id, _));
             this.m_bHasFAQEdit = Boolean(_.has_faq_edit);
-          } else
-            "dev" == _._.WEB_UNIVERSE &&
-              console.error("CFAQStore Invalid payload");
+          } else 0;
         }
         BIsConfigValid(_) {
           const _ = _;

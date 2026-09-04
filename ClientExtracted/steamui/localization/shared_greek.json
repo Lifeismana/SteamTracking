@@ -4154,5 +4154,6 @@
     "GamePerformance_Reason": "Λόγος",
     "GamePerformance_NumResponses": "# Απαντήσεις",
     "NewToolTitleSuffix_Beta": "ΒΗΤΑ",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "SteamMachine_TestResult_MultiWindowAppAutomaticallySetsFocus": "Αυτό το παιχνίδι χρησιμοποιεί πολλά παράθυρα και ίσως χρειαστεί να εστιάσετε εσείς στα κατάλληλα παράθυρα μέσω της επικάλυψης Steam."
 }

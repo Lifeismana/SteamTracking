@@ -4154,5 +4154,6 @@
     "GamePerformance_Reason": "理由",
     "GamePerformance_NumResponses": "回答数",
     "NewToolTitleSuffix_Beta": "ベータ",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "SteamMachine_TestResult_MultiWindowAppAutomaticallySetsFocus": "このゲームは複数のウィンドウを使用するため、Steamオーバーレイから手動で適切なウィンドウにフォーカスする必要がある場合があります"
 }

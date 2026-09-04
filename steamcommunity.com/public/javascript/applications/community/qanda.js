@@ -131,9 +131,67 @@
         return c.TS.IN_CLIENT && (0, s.DOG)(c.TS.LAUNCHER_TYPE);
       }
     },
+    82477: (e, r, t) => {
+      "use strict";
+      t.d(r, { vg: () => h });
+      var c = t(7850),
+        s = t(90626),
+        o = t(738),
+        i = t(61859),
+        n = t(78327),
+        l = t(97436),
+        a = t(99532),
+        d = t(96059),
+        f = t(28240);
+      t(9154);
+      function u(e) {
+        return (0, c.jsx)(o.x_, {
+          onEscKeypress: e.closeModal,
+          bDisableBackgroundDismiss: !0,
+          children: (0, c.jsx)(b, {
+            redirectURL: e.redirectURL,
+            guestOption: e.guestOption,
+          }),
+        });
+      }
+      function h() {
+        (0, o.pg)(
+          (0, c.jsx)(u, {
+            ownerWin: window,
+            redirectURL: window.location.href,
+          }),
+          window,
+          { strTitle: (0, i.we)("#Login_SignInTitle") },
+        );
+      }
+      function b(e) {
+        const { redirectURL: r, guestOption: t } = e,
+          [o] = (0, s.useState)(
+            new d.D(n.TS.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
+          ),
+          [i, u] = (0, s.useState)(!1);
+        return (0, c.jsx)("div", {
+          children: i
+            ? (0, c.jsx)(l.Fn, {})
+            : (0, c.jsx)(l.YN, {
+                autoFocus: !0,
+                transport: o,
+                platform: a.SS.tS,
+                onComplete: (e) => {
+                  e == f.wI.k_PrimaryDomainFail
+                    ? u(!0)
+                    : window.location.assign(r);
+                },
+                redirectUrl: r,
+                theme: "modal",
+                children: t && (0, c.jsx)(l.Mk, { redirectURL: r }),
+              }),
+        });
+      }
+    },
     22797: (e, r, t) => {
       "use strict";
-      t.d(r, { t: () => d });
+      t.d(r, { t: () => f });
       var c = t(7850),
         s = t(90626),
         o = t(52038),
@@ -143,42 +201,42 @@
         t.p +
         "images/applications/community/steam_spinner.png?v=valveisgoodatcaching";
       var a = t(42248),
-        f = t(66418);
-      const d = s.memo(function (e) {
+        d = t(66418);
+      const f = s.memo(function (e) {
         const {
           className: r,
           size: t,
           string: i,
-          position: d,
-          static: b,
-          msDelayAppear: h,
+          position: f,
+          static: h,
+          msDelayAppear: b,
         } = e;
         let m = [n().LoadingWrapper, "SteamLogoThrobber", u(t)];
-        const [p, k] = s.useState(!h),
-          x = !(0, a.q)();
+        const [p, x] = s.useState(!b),
+          k = !(0, a.q)();
         return (
           (0, s.useEffect)(() => {
             if (p) return;
-            const e = setTimeout(() => k(!0), h);
+            const e = setTimeout(() => x(!0), b);
             return () => clearTimeout(e);
-          }, [h, p]),
+          }, [b, p]),
           void 0 === i && m.push(n().noString),
           r && m.push(r),
-          b && m.push(n().Static),
+          h && m.push(n().Static),
           (0, c.jsxs)("div", {
             className: (0, o.A)(
-              "center" == d && n().throbber_center_wrapper,
-              !!h && n().ThrobberDelayAppear,
+              "center" == f && n().throbber_center_wrapper,
+              !!b && n().ThrobberDelayAppear,
               p && n().Visible,
             ),
             children: [
               p &&
-                x &&
+                k &&
                 (0, c.jsx)("div", {
                   className: m.join(" "),
                   children: (0, c.jsx)("div", {
                     className: n().NewThrobber,
-                    children: (0, c.jsx)("img", { src: (0, f.YJ)(l) }),
+                    children: (0, c.jsx)("img", { src: (0, d.YJ)(l) }),
                   }),
                 }),
               Boolean(i) &&
@@ -194,34 +252,34 @@
           string: i,
           position: l,
           static: a,
-          msDelayAppear: f,
+          msDelayAppear: d,
         } = e;
-        let d = [n().LoadingWrapper, "SteamLogoThrobber", u(t)];
-        const [h, m] = s.useState(!f);
+        let f = [n().LoadingWrapper, "SteamLogoThrobber", u(t)];
+        const [b, m] = s.useState(!d);
         return (
           (0, s.useEffect)(() => {
-            if (h) return;
-            const e = setTimeout(() => m(!0), f);
+            if (b) return;
+            const e = setTimeout(() => m(!0), d);
             return () => clearTimeout(e);
-          }, [f, h]),
-          void 0 === i && d.push(n().noString),
-          r && d.push(r),
-          a && d.push(n().Static),
+          }, [d, b]),
+          void 0 === i && f.push(n().noString),
+          r && f.push(r),
+          a && f.push(n().Static),
           (0, c.jsxs)("div", {
             className: (0, o.A)(
               "center" == l && n().throbber_center_wrapper,
-              !!f && n().ThrobberDelayAppear,
-              h && n().Visible,
+              !!d && n().ThrobberDelayAppear,
+              b && n().Visible,
             ),
             children: [
-              h &&
+              b &&
                 (0, c.jsx)("div", {
-                  className: d.join(" "),
+                  className: f.join(" "),
                   children: (0, c.jsxs)("div", {
                     className: n().Throbber,
                     children: [
-                      (0, c.jsx)(b, { className: n().base }),
-                      (0, c.jsx)(b, { className: n().blur }),
+                      (0, c.jsx)(h, { className: n().base }),
+                      (0, c.jsx)(h, { className: n().blur }),
                     ],
                   }),
                 }),
@@ -245,7 +303,7 @@
             return n().throbber_large;
         }
       }
-      function b(e) {
+      function h(e) {
         let r = "SVGIcon_Button SVGIcon_Throbber ";
         return (
           e.className && (r += e.className),
@@ -472,7 +530,7 @@
     },
     48479: (e, r, t) => {
       "use strict";
-      t.d(r, { AQ: () => h, pn: () => p, qx: () => m });
+      t.d(r, { AQ: () => b, pn: () => p, qx: () => m });
       var c = t(7850),
         s = t(68255),
         o = t(61859),
@@ -480,11 +538,11 @@
         n = t(90626),
         l = t(52038),
         a = t(95695),
-        f = t(84811),
-        d = t(64734),
+        d = t(84811),
+        f = t(64734),
         u = t(65946),
-        b = t(26408);
-      function h(e) {
+        h = t(26408);
+      function b(e) {
         const {
             title: r,
             tooltip: t,
@@ -492,7 +550,7 @@
             toggleMinimized: o,
             className: i,
             children: n,
-            elAdditionalButtons: h,
+            elAdditionalButtons: b,
           } = e,
           m = (0, u.q3)(() => s());
         return (0, c.jsxs)(c.Fragment, {
@@ -500,8 +558,8 @@
             (0, c.jsxs)("div", {
               className: (0, l.A)(
                 i,
-                d.SectionTitleHeader,
-                d.required_title,
+                f.SectionTitleHeader,
+                f.required_title,
                 "SectionTitleHeader",
               ),
               children: [
@@ -510,24 +568,24 @@
                     a.CollapsableSectionTitle,
                     "EventEditorTextTitle",
                   ),
-                  children: [r, Boolean(t) && (0, c.jsx)(b.o, { tooltip: t })],
+                  children: [r, Boolean(t) && (0, c.jsx)(h.o, { tooltip: t })],
                 }),
                 (0, c.jsxs)("div", {
-                  className: d.SectionTitleButtons,
+                  className: f.SectionTitleButtons,
                   children: [
-                    h,
+                    b,
                     (0, c.jsx)(p, { bIsMinimized: m, fnToggleMinimize: o }),
                   ],
                 }),
               ],
             }),
-            !m && (0, c.jsx)(f.tH, { children: n }),
+            !m && (0, c.jsx)(d.tH, { children: n }),
           ],
         });
       }
       function m(e) {
         const [r, t] = n.useState(Boolean(e.bStartMinimized));
-        return (0, c.jsx)(h, {
+        return (0, c.jsx)(b, {
           ...e,
           getMinimized: () => r,
           toggleMinimized: () => t(!r),

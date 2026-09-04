@@ -2792,8 +2792,8 @@
     "SteamDeckVerified_Store_CompatSectionHeader_GamepadUI": "Steam Deck-kompatibilitet",
     "SteamDeckVerified_Store_CompatSection_LearnMore": "Les mer",
     "SteamDeckVerified_Store_CompatSection_DeveloperComments": "Kommentarer fra utvikler",
-    "SteamOSCompatibility_Store_CompatSectionHeader_GamepadUI": "Kompatibilitet med SteamOS",
-    "SteamMachineCompatibility_Store_CompatSectionHeader_GamepadUI": "Kompatibilitet med Steam Machine",
+    "SteamOSCompatibility_Store_CompatSectionHeader_GamepadUI": "SteamOS-kompatibilitet",
+    "SteamMachineCompatibility_Store_CompatSectionHeader_GamepadUI": "Steam Machine-kompatibilitet",
     "SteamFrameCompatibility_Store_CompatSectionHeader_GamepadUI": "Steam Frame-kompatibilitet",
     "SteamDeckVerified_Category_Verified": "Verifisert",
     "SteamDeckVerified_Category_Playable": "Spillbart",
@@ -2806,7 +2806,7 @@
     "SteamOSCompatibility_DescriptionHeader_Compatible": "Opplevelsen når det gjelder ytelse og inndata kan variere avhengig av maskinvaren du har.",
     "SteamOSCompatibility_DescriptionHeader_Unsupported": "Deler av dette spillet eller hele spillet fungerer for øyeblikket ikke på SteamOS.",
     "SteamOSCompatibility_Category_Compatible": "Kompatibelt",
-    "SteamOSCompatibility_Category_Unsupported": "Ikke støttet",
+    "SteamOSCompatibility_Category_Unsupported": "Støttes ikke",
     "SteamOSCompatibility_Category_Unknown": "Ukjent",
     "SteamFrame_TestResult_UnsupportedAntiCheatConfiguration": "Spillets antijuks er ikke konfigurert for å fungere på Steam Frame.",
     "SteamFrame_TestResult_UnsupportedAntiCheat_Other": "Spillet støttes ikke på Steam Frame på grunn av bruk av et antijuksprogram eller en flerspillertjeneste som ikke støttes.",
@@ -4154,5 +4154,6 @@
     "GamePerformance_Reason": "Årsak",
     "GamePerformance_NumResponses": "Antall svar",
     "NewToolTitleSuffix_Beta": "BETA",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "SteamMachine_TestResult_MultiWindowAppAutomaticallySetsFocus": "Spillet bruker flere vinduer, og du må muligens bringe aktuelle vinduer i fokus manuelt via Steam-overlegget."
 }

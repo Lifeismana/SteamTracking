@@ -4154,5 +4154,6 @@
     "GamePerformance_Reason": "Powód",
     "GamePerformance_NumResponses": "Liczba odpowiedzi",
     "NewToolTitleSuffix_Beta": "BETA",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "SteamMachine_TestResult_MultiWindowAppAutomaticallySetsFocus": "Ta gra używa wielu okien i może wymagać ręcznego ustawienia odpowiednich aktywnych okien za pomocą nakładki Steam."
 }

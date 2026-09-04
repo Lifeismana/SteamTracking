@@ -247,9 +247,8 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid");
       const _ = {
           editModel: null,
           bClanImagesV2: !1,
@@ -288,10 +287,7 @@
       }
       function _() {
         const _ = _.useContext(_),
-          _ =
-            ("dev" == _._.WEB_UNIVERSE || "beta" == _._.WEB_UNIVERSE) &&
-            _._.EUNIVERSE == _._ &&
-            _._.is_support;
+          _ = !1;
         return {
           bClanImagesV2: _.bClanImagesV2 && _,
           bClanImagesV2Allowed: _,
@@ -1272,8 +1268,7 @@
         constructor() {
           (this.m_curLocImageGroup = null),
             (this.m_curLocImageGroupType = null),
-            (0, _._)(this),
-            "dev" == _._.WEB_UNIVERSE && (window.g_ClanImageStore = this);
+            (0, _._)(this);
         }
         static async BDoesClanImageFileExistsOnCDNOrOrigin(_, _, _, _) {
           let _ =

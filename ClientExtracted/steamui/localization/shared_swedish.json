@@ -4154,5 +4154,6 @@
     "GamePerformance_Reason": "Orsak",
     "GamePerformance_NumResponses": "Antal svar",
     "NewToolTitleSuffix_Beta": "BETA",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "SteamMachine_TestResult_MultiWindowAppAutomaticallySetsFocus": "Det här spelet använder flera fönster och kan kräva att du manuellt för fram relevanta fönster via Steam-överlägget."
 }

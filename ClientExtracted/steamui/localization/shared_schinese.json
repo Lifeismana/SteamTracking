@@ -997,7 +997,7 @@
     "EventEditor_InsertYouTube": "插入 YouTube™ 视频",
     "EventEditor_InsertYouTube_Left": "左对齐",
     "EventEditor_InsertYouTube_Right": "右对齐",
-    "EventEditor_InsertYouTube_Full": "完整宽度",
+    "EventEditor_InsertYouTube_Full": "全宽",
     "EventEditor_InsertYouTube_URL": "完整 URL",
     "EventEditor_InsertYouTube_Position": "位置",
     "EventEditor_InsertYouTube_Placholder": "输入 YouTube™ URL",
@@ -1609,7 +1609,7 @@
     "Sale_SmartPlaceHolder": "预览模式：此自动填充栏目中没有适合您的应用。如果为空，整个栏目及其标题均不会出现在用户页面上。",
     "Sale_SectionDisabled": "我们遇到了一点技术问题。请稍后再来。",
     "Sale_PersonalizedCarousel_Section_title": "%1$s游戏",
-    "Sale_PersonalizedCarousel_Section_subtitle": "因为您玩过了标有下列标签的游戏：%1$s",
+    "Sale_PersonalizedCarousel_Section_subtitle": "因为您玩过有以下标签的游戏：%1$s",
     "Sale_Minigame_FoundIt": "你找到了！",
     "Sale_Minigame_FoundIt_1": "你找到了！",
     "Sale_Minigame_FoundIt_2": "恭喜！",
@@ -4154,5 +4154,6 @@
     "GamePerformance_Reason": "原因",
     "GamePerformance_NumResponses": "回复数量",
     "NewToolTitleSuffix_Beta": "测试版",
-    "shared_dummy": ""
+    "shared_dummy": "",
+    "SteamMachine_TestResult_MultiWindowAppAutomaticallySetsFocus": "此游戏使用多个窗口，可能需要您通过 Steam 叠加界面手动聚焦到正确窗口"
 }

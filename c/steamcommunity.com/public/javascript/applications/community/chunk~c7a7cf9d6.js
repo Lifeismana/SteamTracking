@@ -304,15 +304,12 @@
             _.s_globalSingletonStore ||
               ((_ = "CHomeViewStore.s_globalSingletonStore"),
               (0, _._)(!0, "Unexpected code running in SSR Server: " + _),
-              (_.s_globalSingletonStore = new _()),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_HomeViewSetting = _.s_globalSingletonStore)),
+              (_.s_globalSingletonStore = new _())),
             _.s_globalSingletonStore
           );
         }
         constructor() {
-          (this.m_HomeView = void 0),
-            "dev" === _._.WEB_UNIVERSE && (window.g_HomeViewStore = this);
+          this.m_HomeView = void 0;
           const _ = (0, _._)("home_view_setting", "application_config");
           this.ValidateHomeViewData(_) && this.SetHomeViewSetting(_);
           const _ = (0, _._)(
@@ -369,6 +366,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -801,9 +799,7 @@
               }
         }
         RegisterReadEvents(_) {
-          if (!_) return;
-          const _ = _._.Get();
-          for (const _ of _) _.SetEventAsRead(_);
+          _ && (0, _._)(_);
         }
         RegisterEventVotes(_) {
           if (!_) return;
@@ -879,9 +875,8 @@
               "forward" === _
                 ? this.m_nForwardStuckCount
                 : this.m_nBackwardStuckCount,
-            _ = _ < 3 ? _ : 0,
             _ = _ >= 3 ? 1 : 0,
-            _ = ("dev" === _._.WEB_UNIVERSE ? 50 : 250) + 50 * _,
+            _ = 250 + 50 * (_ < 3 ? _ : 0),
             _ = _._.GetTimeNowWithOverride(),
             _ =
               null !== (_ = this.GetTimeEdgeForDirection(_, _)) && void 0 !== _
@@ -1031,7 +1026,6 @@
         (0, _._)([_._], _.prototype, "RegisterCalendarEventsAndModels", null),
         (0, _._)([_._], _.prototype, "RegisterCalendarApps", null),
         (0, _._)([_._], _.prototype, "RegisterCalendarClans", null),
-        (0, _._)([_._], _.prototype, "RegisterReadEvents", null),
         (0, _._)([_._], _.prototype, "RegisterEventVotes", null),
         (0, _._)([_._], _.prototype, "RegisterCalendarEvents", null),
         (0, _._)([_._], _.prototype, "BHitEventHorizon", null),
@@ -1274,12 +1268,7 @@
         Init() {
           const _ = (0, _._)("mutedcomminfo", "application_config");
           this.ValidateStoreDefault(_) &&
-            (("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-              console.log(
-                "DEV_DEBUG: CMutedCommunicationStore loading bundles payload: " +
-                  JSON.stringify(_),
-              ),
-            _.appids &&
+            (_.appids &&
               _.appids.forEach((_) => this.m_mapBlockedAppIds.set(_, !0)),
             _.clanids &&
               _.clanids.forEach((_) => this.m_mapBlockedClanIds.set(_, !0)));
@@ -1464,7 +1453,7 @@
             const _ = this.m_mapEvents.get(_.GID);
             return !_ || !_.m_bHasBeenTracked;
           }
-          StartTracking(_, _) {
+          StartTracking(_, _, _) {
             if (_.bOldAnnouncement) return;
             let _ = this.m_mapEvents.get(_.GID);
             _ || ((_ = new _()), this.m_mapEvents.set(_.GID, _)),
@@ -1473,15 +1462,15 @@
                 ((_.m_fnSubmit = new _._()),
                 _.m_fnSubmit.Schedule(
                   this.m_nImpressionDelayMS,
-                  this.ReportImpression.bind(this, _, _),
+                  this.ReportImpression.bind(this, _, _, _),
                 ));
           }
           StopTracking(_) {
             const _ = this.m_mapEvents.get(_.GID);
             _ && _.m_fnSubmit && (_.m_fnSubmit.Cancel(), (_.m_fnSubmit = null));
           }
-          ReportImpression(_, _) {
-            _._.Get().RecordEventShown(_, _._._),
+          ReportImpression(_, _, _) {
+            __webpack_require__.RecordEventShown(_, _._._),
               _ && _._.RecordViewedEvent((0, _._)(), _.GID);
             const _ = this.m_mapEvents.get(_.GID);
             _ &&
@@ -1491,9 +1480,10 @@
           }
         })(),
         _ = (_) => {
-          const { event: _ } = _;
+          const { event: _ } = _,
+            _ = (0, _._)();
           if (_.ShouldTrack(_)) {
-            const _ = () => _.StartTracking(_, _.recordNewsHubStats || !1),
+            const _ = () => _.StartTracking(_, _.recordNewsHubStats || !1, _),
               _ = () => _.StopTracking(_);
             return (0, _.jsx)(_._, {
               onEnter: _,
@@ -1530,11 +1520,13 @@
         _ = __webpack_require__("chunkid");
       const _ = (_) => {
         let { bShowOnlyInitialEvent: _ } = _;
-        const _ = (0, _._)();
+        const _ = (0, _._)(),
+          _ = (0, _._)();
         return (0, _.jsx)(_._, {
           children: (0, _.jsx)(_, {
             ..._,
             bShowOnlyInitialEvent: _ || _,
+            tracker: _,
           }),
         });
       };
@@ -1617,13 +1609,11 @@
         }
         async HandleReadEvent() {
           const { eventModel: _ } = this.state,
-            { trackingLocation: _ } = this.props;
+            { trackingLocation: _, tracker: _ } = this.props;
           _ &&
             _.BIsPartnerEvent() &&
-            _._.Get()
-              .GetTracker()
-              .MarkEventRead(_.GID, _.clanSteamID.GetAccountID(), _) &&
-            _._.Get().GetTracker().Flush();
+            (__webpack_require__.RecordEventRead(_, _),
+            __webpack_require__.Flush());
         }
         render() {
           const { bShowOnlyInitialEvent: _ } = this.props,
@@ -1699,7 +1689,6 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1868,14 +1857,12 @@
         return !1;
       }
       async function _(_, _, _, _) {
-        let _ = 0,
-          _ = 0;
         const _ = [];
         await _(_, _._, _);
         for (const _ of _) {
           const _ = _._.Get().GetStoreItem(_._, (0, _._)(_.type));
           if (!_) {
-            _++;
+            0;
             continue;
           }
           const _ = _.GetIncludedAppIDs()
@@ -1891,23 +1878,11 @@
             _ && _.push(..._);
           }
           _.some(_ || _)
-            ? (_++,
-              _ &&
-                (_._.Get().BIsStoreItemOwned(_) || __webpack_require__.push(_)))
+            ? _ &&
+              (_._.Get().BIsStoreItemOwned(_) || __webpack_require__.push(_))
             : _.push(_);
         }
-        return (
-          "dev" === _._.WEB_UNIVERSE &&
-            0 === _.length &&
-            console.log(
-              "ApplyStorePreferenceFilters: " +
-                _ +
-                " failed to load, " +
-                _ +
-                " hidden by user filter.",
-            ),
-          _
-        );
+        return _;
       }
       async function _(_, _, _, _, _, _, _) {
         let _ = await _(

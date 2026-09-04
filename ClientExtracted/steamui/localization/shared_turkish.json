@@ -4154,5 +4154,6 @@
     "GamePerformance_Reason": "Sebep",
     "GamePerformance_NumResponses": "Yanıt Sayısı",
     "NewToolTitleSuffix_Beta": "BETA",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "SteamMachine_TestResult_MultiWindowAppAutomaticallySetsFocus": "Bu oyun birden fazla pencere kullanıyor ve Steam arayüzü aracılığıyla pencerelere manuel olarak bağlanmanızı gerektirebilir."
 }

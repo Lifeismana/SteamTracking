@@ -2690,44 +2690,7 @@
         (0, _._)([_._], _.prototype, "OnVideoWaiting", null),
         (0, _._)([_._], _.prototype, "UserInputReceived", null);
       const _ = 4;
-      var _,
-        _,
-        _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _() {
-        const _ = _(_().GetGameID());
-        return _ === _.NotRecording || _ === _.NotRunning
-          ? null
-          : (0, _.jsx)(_, {});
-      }
-      function _(_) {
-        const _ = _(),
-          _ = (0, _._)(() => _.GetIsLiveEdge() && !_.GetHidePlayer()),
-          _ = _.useCallback(() => {
-            _.SetHidePlayer(!1), _.GetGameRecordingVideo().Play();
-            const _ = _.GetLiveEdgeMS();
-            _.SetPlaytimeFromGlobalMS(_), _.FocusGlobalMS(_);
-          }, [_]);
-        return (0, _.jsx)(_._, {
-          className: _.GoLiveButtonCtn,
-          toolTipContent: (0, _._)(
-            _ ? "#Playback_AtLatest" : "#Playback_JumpToLatest",
-          ),
-          direction: "bottom",
-          children: (0, _.jsx)(_._, {
-            onClick: _,
-            className: (0, _._)(_.GoLiveButton, _ && _.IsLive),
-            children: (0, _.jsx)(_._, {
-              className: (0, _._)(_.JumpToEndIcon),
-            }),
-          }),
-        });
-      }
+      var _, _, _;
       function _(_) {
         const { app: _ } = _(_);
         if (!_) return _.NotRecording;
@@ -2746,8 +2709,7 @@
         (_.NotRunning = "NotRunning"),
           (_.NotRecording = "NotRecording"),
           (_.ManualRecording = "ManualRecording"),
-          (_.BackgroundRecording = "BackgroundRecording"),
-          (_.ForeverRecording = "ForeverRecording");
+          (_.BackgroundRecording = "BackgroundRecording");
       })(_ || (_ = {})),
         (function (_) {
           (_.Overlay = "Overlay"),
@@ -3764,6 +3726,7 @@
         return (0, _.useContext)(_).timelinePlaybackCoordinator;
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -4017,13 +3980,7 @@
           return !1;
         }
         static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_ThumbnailCache = _.s_Singleton)),
-            _.s_Singleton
-          );
+          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
         }
       }
       function _(_, _, _, _, _, _, _) {
@@ -4067,6 +4024,7 @@
       }
       (0, _._)([_._], _.prototype, "m_mapThumbnailImages", void 0);
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = {
           nBeforeMS: 0,
@@ -4990,7 +4948,8 @@
       function _() {
         return (0, _.useContext)(_);
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = (0, _.createContext)({});
       function _() {
         return (0, _.useContext)(_);
@@ -5632,11 +5591,7 @@
         }
         static Get() {
           return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              _.s_Singleton.Init(),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_SteamTimelineMarker = _.s_Singleton)),
+            _.s_Singleton || ((_.s_Singleton = new _()), _.s_Singleton.Init()),
             _.s_Singleton
           );
         }
@@ -6045,6 +6000,8 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
@@ -9019,7 +8976,37 @@
             style: _,
           });
         });
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _() {
+        const _ = _(_().GetGameID());
+        return _ === _.NotRecording || _ === _.NotRunning
+          ? null
+          : (0, _.jsx)(_, {});
+      }
+      function _(_) {
+        const _ = _(),
+          _ = (0, _._)(() => _.GetIsLiveEdge() && !_.GetHidePlayer()),
+          _ = _.useCallback(() => {
+            _.SetHidePlayer(!1), _.GetGameRecordingVideo().Play();
+            const _ = _.GetLiveEdgeMS();
+            _.SetPlaytimeFromGlobalMS(_), _.FocusGlobalMS(_);
+          }, [_]);
+        return (0, _.jsx)(_._, {
+          className: _.GoLiveButtonCtn,
+          toolTipContent: (0, _._)(
+            _ ? "#Playback_AtLatest" : "#Playback_JumpToLatest",
+          ),
+          direction: "bottom",
+          children: (0, _.jsx)(_._, {
+            onClick: _,
+            className: (0, _._)(_.GoLiveButton, _ && _.IsLive),
+            children: (0, _.jsx)(_._, {
+              className: (0, _._)(_.JumpToEndIcon),
+            }),
+          }),
+        });
+      }
       const _ = (0, _.forwardRef)(function (_, _) {
           const _ = _();
           return (0, _._)(() => !__webpack_require__.BEmpty())
@@ -19425,103 +19412,6 @@
         static InitFromShortcutID(_) {
           return new _(_.Rhn.k_EGameIDTypeShortcut, 0, _);
         }
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const _ = _.useRef(_().CancelToken.source());
-        return (
-          _.useEffect(() => {
-            const _ = _.current;
-            return () =>
-              __webpack_require__.cancel(_ ? `${_}: unmounting` : "unmounting");
-          }, [_]),
-          _.current
-        );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, _, _, _) {
-        let _ = _;
-        _ =
-          "number" == typeof _
-            ? {
-                nDigitsAfterDecimal: _,
-                bUseBinary1K: _ || void 0 === _,
-                bValueIsInBytes: !_,
-                bValueIsRate: _,
-                nMinimumDigitsAfterDecimal: 0,
-              }
-            : {
-                nDigitsAfterDecimal: 2,
-                bUseBinary1K: !0,
-                bValueIsInBytes: !0,
-                bValueIsRate: !1,
-                nMinimumDigitsAfterDecimal: 0,
-                ..._,
-              };
-        const { nNum: _, strPrefix: _ } = (function (_, _) {
-            const _ = _.bUseBinary1K ? 1024 : 1e3,
-              _ = _ * _,
-              _ = _ * _,
-              _ = _ * _;
-            return _ > _
-              ? {
-                  nNum: _ / _,
-                  strPrefix: "Tera",
-                }
-              : _ > _
-                ? {
-                    nNum: _ / _,
-                    strPrefix: "Giga",
-                  }
-                : _ > _
-                  ? {
-                      nNum: _ / _,
-                      strPrefix: "Mega",
-                    }
-                  : _ > _
-                    ? {
-                        nNum: _ / _,
-                        strPrefix: "Kilo",
-                      }
-                    : {
-                        nNum: _,
-                        strPrefix: "",
-                      };
-          })(_, _),
-          _ = `#${_}${_.bValueIsInBytes ? "bytes" : "bits"}${_.bValueIsRate ? "_PerSecond" : ""}`;
-        return _._.Localize(
-          _,
-          _.toLocaleString((0, _._)(), {
-            minimumFractionDigits: _.nMinimumDigitsAfterDecimal,
-            maximumFractionDigits: _.nDigitsAfterDecimal,
-          }),
-        );
-      }
-      function _(_, _ = 0) {
-        let _;
-        return (
-          _ &&
-            (_ = {
-              maximumFractionDigits: _,
-            }),
-          _ ? _.toLocaleString((0, _._)(), _) : "" + _
-        );
       }
     },
   },

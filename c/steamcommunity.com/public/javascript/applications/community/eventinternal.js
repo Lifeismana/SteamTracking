@@ -602,13 +602,7 @@
           return [];
         }
         static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-                (window.g_MigrateSaleStore = _.s_Singleton)),
-            _.s_Singleton
-          );
+          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
         }
         constructor() {
           (this.m_mapSaleIDToInfo = new Map()),

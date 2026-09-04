@@ -640,6 +640,17 @@
     },
     chunkid: (module) => {
       module.exports = {
+        StoreSalePriceWidget: "_2-McVXIMf_N62bUl92jzfB",
+        StoreSaleDiscountedPriceCtn: "_1_P7Dmzd6trtJ9KdCsm-Nk",
+        StoreSalePriceBox: "_2Ddt9rJYO847UxQG9pUQiI",
+        StoreSaleReservationPriceBox: "_2EisNLmBrsT1g7ArYp9HU6",
+        StoreSaleDiscountBox: "_1W5KL6SFFSmWCA-_9poz6t",
+        FromCoupon: "_2GpdhLpPsPUodknhaYhTa3",
+        StoreOriginalPrice: "_2z2Ba4q2zi5jWk2QF17G2c",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         SeeMoreButtonGamepad: "_3LB60XV--dXt2yYQ6dF5aT",
         Focused: "_3NISN-t8MP65UYQ4p5bNgh",
       };
@@ -740,17 +751,6 @@
       module.exports = {
         SearchResults: "_1ZSuk1trnTRF3290XhOiiv",
         SmallText: "_3KfJIWWHAYunAZwOr895l-",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        StoreSalePriceWidget: "NIRD8Bn9II9OQY1KDrAZv",
-        StoreSaleDiscountedPriceCtn: "_2M2uuGKI-mqASr4K5BRefp",
-        StoreSalePriceBox: "pk-LoKoNmmPK4GBiC9DR8",
-        StoreSaleReservationPriceBox: "_2KER4-iUzYJ7IYSjvQaG8T",
-        StoreSaleDiscountBox: "XMxkarW3W_NNebjelsgAY",
-        FromCoupon: "_3rH5bNCtORkBasSH4z6zfz",
-        StoreOriginalPrice: "_3-o3G9jt3lqcvbRXt8epsn",
       };
     },
     chunkid: (module) => {
@@ -2693,12 +2693,23 @@
               _.capsules.some((_) => !Boolean(_)) &&
               (_.capsules = _.capsules.filter((_) => Boolean(_)));
         }
+        BTagsNeedResync() {
+          var _;
+          return Boolean(
+            null === (_ = this.m_curModel.jsondata) || void 0 === _
+              ? void 0
+              : _.bResyncableTagsStripped,
+          );
+        }
+        OnStrippedTagsResynced() {
+          this.m_curModel.jsondata.bResyncableTagsStripped = void 0;
+        }
         OnPreSave() {
           this.RemoveNullCapsules(),
             this.PreSaveEventTimeAssignment(),
             this.FixupTabVisibilitySettings(),
             this.FixupMediaRowUniqueID(),
-            (0, _._)(this);
+            this.BTagsNeedResync() || (0, _._)(this);
         }
         FixupMediaRowUniqueID() {
           for (const _ of this.GetSaleSections())
@@ -2819,7 +2830,7 @@
         }
         ConstructJSONData() {
           return this.m_curModel.jsondata
-            ? JSON.stringify(this.m_curModel.jsondata)
+            ? JSON.stringify((0, _._)(this.m_curModel.jsondata))
             : "";
         }
         SetImageURL(_, _, _ = _.Bhc) {
@@ -3826,6 +3837,8 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -4079,6 +4092,49 @@
           _
         );
       }
+      const _ = [_._.Store, _._.Feature, _._.OptIn, _._.AppType, _._.Auto];
+      const _ = 2e3;
+      function _(_) {
+        return !_.tagged_items || _.tagged_items.length <= _
+          ? _
+          : {
+              ..._,
+              bResyncableTagsStripped: !0,
+              tagged_items: _.tagged_items.map((_) => {
+                var _;
+                return {
+                  ..._,
+                  tags: (null !== (_ = _.tags) && void 0 !== _ ? _ : []).filter(
+                    (_) =>
+                      !(function (_) {
+                        const _ = (0, _._)(_);
+                        return Boolean(_) && _.includes(_);
+                      })(_) || _(_.toLocaleLowerCase(), _.manually_added_tags),
+                  ),
+                };
+              }),
+            };
+      }
+      async function _(_, _) {
+        const _ = _.GetEventModel().GetTaggedItems();
+        await _(_, _, {
+          bUpdateStore: !0,
+          bUpdateFeatures: !0,
+          bUpdateAppTypes: !0,
+          bUpdateOptIn: !0,
+          bSyncTop20StoreTags: !0,
+        }),
+          _.OnStrippedTagsResynced();
+        return __webpack_require__
+          .map((_) => _.capsule)
+          .filter((_) => {
+            const _ = _._.Get().GetStoreItem(_._, (0, _._)(_.type));
+            return (
+              !_ ||
+              _.GetIncludedAppIDsOrSelf().some((_) => !_._.Get().GetApp(_))
+            );
+          });
+      }
       function _(_) {
         var _;
         if (
@@ -4291,7 +4347,7 @@
           };
         }
         constructor() {
-          "dev" === _._.WEB_UNIVERSE && (window.g_ContentHubNamesStore = this);
+          0;
         }
         static Get() {
           return _.s_singleton || (_.s_singleton = new _()), _.s_singleton;
@@ -4653,13 +4709,7 @@
         }
         constructor() {}
         static Get() {
-          return (
-            _.s_singleton ||
-              ((_.s_singleton = new _()),
-              "dev" === _._.WEB_UNIVERSE &&
-                (window.g_OptInListStore = _.s_singleton)),
-            _.s_singleton
-          );
+          return _.s_singleton || (_.s_singleton = new _()), _.s_singleton;
         }
       }
       function _() {
@@ -5548,6 +5598,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -5982,6 +6033,15 @@
               ),
             );
           });
+        const _ = (0, _._)(_.GetEventModel().jsondata),
+          _ = (_) => (JSON.stringify(_) || "").length,
+          _ = new Map(
+            Object.entries(_.GetEventModel().jsondata).map(([_, _]) => [
+              _,
+              _(_),
+            ]),
+          ),
+          _ = new Map(Object.entries(_).map(([_, _]) => [_, _(_)]));
         let _ = _.GetEventModel().jsondata;
         _ && (_ = _(_)),
           _
@@ -6327,6 +6387,9 @@
                     JSON.stringify(_.GetEventModel().jsondata).length,
                   ],
                 }),
+                (0, _.jsxs)("div", {
+                  children: ["Json size (stored): ", JSON.stringify(_).length],
+                }),
                 (0, _.jsx)(_._, {
                   data: _,
                 }),
@@ -6350,16 +6413,23 @@
                         (0, _.jsx)("h1", {
                           children: "Json size: event json properties",
                         }),
-                        Object.entries(_.GetEventModel().jsondata).map(
-                          ([_, _]) =>
-                            (0, _.jsx)(
+                        Array.from(_.entries())
+                          .sort((_, _) => _[1] - _[1])
+                          .map(([_, _]) => {
+                            var _;
+                            const _ =
+                              null !== (_ = _.get(_)) && void 0 !== _ ? _ : _;
+                            return (0, _.jsx)(
                               "div",
                               {
-                                children: `${_.toString()}: ${JSON.stringify(_).length}`,
+                                children:
+                                  _ === _
+                                    ? `${_}: ${_}`
+                                    : `${_}: ${_} (stored ${_})`,
                               },
-                              _.toString(),
-                            ),
-                        ),
+                              _,
+                            );
+                          }),
                       ],
                     })
                   : (0, _.jsx)(_._, {
@@ -8240,7 +8310,6 @@
       __webpack_require__._(module_exports, {
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid");
       const _ = "2x",
         _ = "_2x";
       function _(_, _) {
@@ -8254,14 +8323,7 @@
               const _ = _.substring(0, _);
               if ("poster" == _) _ = _.substring(_ + 1);
               else {
-                if (_ != _)
-                  return (
-                    "dev" == _._.WEB_UNIVERSE &&
-                      console.error(
-                        `TemplateMediaUploader unexpected purpose provided: ${_} `,
-                      ),
-                    null
-                  );
+                if (_ != _) return null;
                 _.image_2x = `${_}${_}.${_.substring(_ + 1)}`;
               }
             } else
@@ -8277,13 +8339,7 @@
                   _.video_webm_src = `${_}.${_}`;
                   break;
                 default:
-                  return (
-                    "dev" == _._.WEB_UNIVERSE &&
-                      console.error(
-                        `TemplateMediaUploader unexpected extension provided: ${_} `,
-                      ),
-                    null
-                  );
+                  return null;
               }
           }),
           _ && !_.image && (_.image = `${_}.${_}`),
@@ -9544,8 +9600,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -17704,13 +17760,7 @@
           );
         }
         static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_OptInSpecialEventStore = _.s_Singleton)),
-            _.s_Singleton
-          );
+          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
         }
         constructor() {
           (this.m_mapOptInSpecialEventDef = new Map()),
@@ -18784,18 +18834,7 @@
                           ))
                     );
                   })(_, _.event_schedule_categories, _.event_schedule_tracks);
-                return (
-                  _ ||
-                    "dev" != _._.WEB_UNIVERSE ||
-                    console.log(
-                      "fnBIsValidEventForSchedule: not valid",
-                      null == _ ? void 0 : _.startTime,
-                      null == _ ? void 0 : _.endTime,
-                      _.event_schedule_rtime_start,
-                      _.event_schedule_rtime_end,
-                    ),
-                  _
-                );
+                return _;
               },
               strLocalizedInvalidTooltip: (0, _._)(
                 "#Sale_EventInvalid_Schedule_ttip",
@@ -21213,7 +21252,7 @@
       function _(_) {
         var _;
         const { itemDefSetting: _, editModel: _ } = _,
-          _ = (0, _._)(_.nAppID, _.nItemDefID),
+          _ = (0, _._)(_.nAppID, _.nItemDefID, !0),
           [_, _, _, _] = (0, _._)(() => [
             _.GetEventModel(),
             _.GetIncludedRealmList(),
@@ -22829,13 +22868,7 @@
           );
         }
         static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_PartnerContactStore = _.s_Singleton)),
-            _.s_Singleton
-          );
+          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
         }
         constructor() {
           (this.m_mapAppToItems = new Map()),
@@ -23005,11 +23038,7 @@
         }
         static Get() {
           return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              _.s_Singleton.Init(),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_VirtualItemRewardDefStore = _.s_Singleton)),
+            _.s_Singleton || ((_.s_Singleton = new _()), _.s_Singleton.Init()),
             _.s_Singleton
           );
         }
@@ -23164,11 +23193,7 @@
         }
         static Get() {
           return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_SaleItemRewardDefStore = _.s_Singleton),
-              _.s_Singleton.Init()),
+            _.s_Singleton || ((_.s_Singleton = new _()), _.s_Singleton.Init()),
             _.s_Singleton
           );
         }
@@ -28258,8 +28283,23 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = _.lazy(() =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _
+          ? function (_) {
+              return (0, _.jsx)(_.Suspense, {
+                fallback: null,
+                children: (0, _.jsx)(_, {
+                  ..._,
+                }),
+              });
+            }
+          : (_) => null;
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -28394,22 +28434,8 @@
           ],
         });
       }
-      var _ = __webpack_require__("chunkid");
-      const _ = _.lazy(() =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _
-          ? function (_) {
-              return (0, _.jsx)(_.Suspense, {
-                fallback: null,
-                children: (0, _.jsx)(_, {
-                  ..._,
-                }),
-              });
-            }
-          : (_) => null;
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const { fnOnDirty: _, saleSection: _, event: _ } = _,
           [_, _, _, _] = (0, _._)(() => {
@@ -31587,9 +31613,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -35903,6 +35929,133 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        return `${_._.STORE_BASE_URL}itemstore/${_}/${_}`;
+      }
+      async function _(_, _, _) {
+        const _ = _,
+          _ = new URLSearchParams({
+            strItemDefIDs: _.join(","),
+            _: _._.LANGUAGE,
+            _: _._.COUNTRY,
+          }),
+          _ = "undefined" != typeof self ? self.origin : void 0;
+        !_ && _ && _.set("origin", _);
+        const _ = _
+          ? "ajaxgetauthedmultipleitemdefsbyid"
+          : "ajaxgetmultipleitemdefsbyid";
+        return await _(`${_(_, _)}?${_}`);
+      }
+      async function _(_) {
+        var _;
+        const _ = await fetch(_, {
+          credentials: "include",
+        });
+        if (!_._) throw new Error(`${_} answered ${_.status}`);
+        const _ = await __webpack_require__.json();
+        if ((null == _ ? void 0 : _.success) != _._)
+          throw new Error(
+            `${_} answered EResult ${null == _ ? void 0 : _.success}`,
+          );
+        return null !== (_ = _.matches) && void 0 !== _ ? _ : [];
+      }
+      let _;
+      function _() {
+        if (!_) {
+          const _ = (0, _._)("itemdefs", "application_config");
+          _ = (function (_) {
+            if (!Array.isArray(_) || 0 == _.length) return !1;
+            const _ = _[0];
+            return (
+              "number" == typeof _.nAppID &&
+              "number" == typeof _.nItemDefID &&
+              "string" == typeof _.strName
+            );
+          })(_)
+            ? _
+            : [];
+        }
+        return _;
+      }
+      function _(_, _) {
+        return _().find((_) => _.nAppID == _ && _.nItemDefID == _);
+      }
+      const _ = 3e5;
+      function _(_, _, _) {
+        return ["ItemDef", _, _, _];
+      }
+      function _(_, _, _) {
+        return ["ItemDefList", _, _, _];
+      }
+      function _(_, _, _, _) {
+        return {
+          queryKey: _(_, _, _),
+          queryFn: async () => {
+            const _ = await _(_, _, _);
+            return (
+              _.forEach((_) => {
+                _.nItemDefID && _.setQueryData(_(_, _.nItemDefID, _), _);
+              }),
+              _
+            );
+          },
+          initialData: () =>
+            (function (_, _) {
+              const _ = _.map((_) => _(_, _));
+              return __webpack_require__.every((_) => Boolean(_)) ? _ : void 0;
+            })(_, _),
+          enabled: Boolean(_ && _.length > 0),
+          staleTime: _,
+          retry: !1,
+        };
+      }
+      function _(_, _, _) {
+        const { data: _ } = (0, _._)(
+          (function (_, _, _) {
+            return {
+              queryKey: _(_, _, _),
+              queryFn: async () => {
+                const _ = (await _(_, [_], _)).find((_) => _.nItemDefID == _);
+                if (!_)
+                  throw new Error(
+                    `Item store did not return item def ${_}/${_}`,
+                  );
+                return _;
+              },
+              initialData: () => _(_, _),
+              enabled: Boolean(_ && _),
+              staleTime: _,
+              retry: !1,
+            };
+          })(_, _, _),
+        );
+        return _;
+      }
+      function _(_, _, _) {
+        const _ = (0, _._)(),
+          _ = (0, _.useMemo)(
+            () =>
+              _.map((_) => _.nItemDefID)
+                .filter((_) => Boolean(_))
+                .sort((_, _) => _ - _),
+            [_],
+          ),
+          { data: _ } = (0, _._)(_(_, _, _, _));
+        return _;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid");
@@ -36026,6 +36179,163 @@
         _: () => _,
         _: () => _,
       });
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      !(function (_) {
+        (_.k_eBlock = "block"),
+          (_.k_eFinal = "final"),
+          (_.k_eOriginal = "original"),
+          (_.k_eReservation = "reservation");
+      })(_ || (_ = {}));
+      const _ = Object.values(_);
+      function _(_) {
+        return _.find((_) => _ === _);
+      }
+      function _(_) {
+        var _;
+        switch (_.display_style) {
+          case _.k_eFinal:
+            return _.formatted_final_price
+              ? (0, _.jsx)("span", {
+                  children: _.formatted_final_price,
+                })
+              : null;
+          case _.k_eOriginal: {
+            const _ = _.formatted_orig_price || _.formatted_final_price;
+            return _
+              ? (0, _.jsx)("span", {
+                  children: _,
+                })
+              : null;
+          }
+        }
+        const _ = _.display_style == _.k_eReservation,
+          _ = _.bHideDiscountPercentForCompliance,
+          _ = "bbcode_price" == _.className;
+        return (0, _.jsxs)("span", {
+          className: (0, _._)({
+            [_().StoreSalePriceWidget]: !0,
+            [null !== (_ = _.className) && void 0 !== _ ? _ : ""]: Boolean(
+              _.className,
+            ),
+            [_().StoreSaleReservationPrice]: _,
+          }),
+          children: [
+            Boolean(_.discount_percent && !_) &&
+              (0, _.jsx)("span", {
+                className: (0, _._)(
+                  _().StoreSaleDiscountBox,
+                  "StoreSaleDiscountBox",
+                  _.bDiscountFromCoupon && _().FromCoupon,
+                ),
+                children: `-${_.discount_percent}%`,
+              }),
+            Boolean(_.discount_percent && _) &&
+              (0, _.jsx)("div", {
+                className: (0, _._)({
+                  [_().DiscountIconCtn]: !0,
+                  bbcode_price_discount: _,
+                }),
+                children: (0, _.jsx)(_.XH_, {}),
+              }),
+            Boolean(_.formatted_final_price) &&
+              (Boolean(_.discount_percent && _.formatted_orig_price)
+                ? (0, _.jsxs)("div", {
+                    className: (0, _._)({
+                      [_().StoreSaleDiscountedPriceCtn]: !0,
+                      bbcode_price_ctn: _,
+                    }),
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: (0, _._)({
+                          [_().StoreOriginalPrice]: !0,
+                          StoreOriginalPrice: !0,
+                          bbcode_price_orig: _,
+                        }),
+                        children: _.formatted_orig_price,
+                      }),
+                      (0, _.jsx)("div", {
+                        className: (0, _._)({
+                          [_().StoreSalePriceBox]: !0,
+                          bbcode_price_box: _,
+                          [_().StoreSaleReservationPriceBox]: _,
+                          bbcode_price_final: _,
+                        }),
+                        children: _.formatted_final_price,
+                      }),
+                    ],
+                  })
+                : (0, _.jsx)("div", {
+                    className: (0, _._)({
+                      [_().StoreSalePriceBox]: !0,
+                      bbcode_price_box: _,
+                      [_().StoreSaleReservationPriceBox]: _,
+                      bbcode_price_final: _,
+                    }),
+                    children: _.formatted_final_price,
+                  })),
+          ],
+        });
+      }
+      function _(_) {
+        const { data: _ } = (0, _._)({
+          packageid: _.packageID,
+        });
+        return _
+          ? (0, _.jsx)(_, {
+              formatted_final_price: _.formatted_final_price,
+              formatted_orig_price: _.formatted_original_price,
+              discount_percent: _.discount_pct,
+              bHideDiscountPercentForCompliance:
+                _.hide_discount_pct_for_compliance,
+              display_style: _.display_style,
+              className: "bbcode_price",
+            })
+          : null;
+      }
+      function _(_) {
+        const { data: _ } = (0, _._)({
+            packageid: _.packageID,
+          }),
+          { data: _ } = (0, _._)({
+            packageid: _.compareID,
+          }),
+          _ = (function (_, _) {
+            if (
+              !(null == _ ? void 0 : _.final_price_in_cents) ||
+              !(null == _ ? void 0 : _.final_price_in_cents)
+            )
+              return;
+            return (
+              (
+                100 *
+                (1 -
+                  Number.parseInt(_.final_price_in_cents) /
+                    Number.parseInt(_.final_price_in_cents))
+              ).toFixed(0) + "%"
+            );
+          })(_, _);
+        return void 0 === _
+          ? null
+          : (0, _.jsx)("span", {
+              className: _().StorePriceSavings,
+              children: _,
+            });
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -37229,7 +37539,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _._ {
         constructor(_, _, _, _, _) {
@@ -37312,12 +37621,6 @@
                   new _._(_, _.name, _, this.m_rgImageOptions),
                 ]),
                 !0
-              );
-            "dev" == _._.WEB_UNIVERSE &&
-              console.error(
-                "CCloudImageUploader failed to determine file type, not image, video or subtitle",
-                _,
-                _.type,
               );
           }
           return !1;
@@ -37760,25 +38063,18 @@
           (this.m_mapList = new Map()),
             (this.m_mapEventGIDToLists = new Map()),
             (this.m_mapListIDToClanAccount = new Map()),
-            (0, _._)(this),
-            "dev" == _._.WEB_UNIVERSE && (window.g_curatorListStore = this);
+            (0, _._)(this);
           let _ = (0, _._)("curatorlistdata", "application_config");
-          ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-            console.log(
-              "DEV_DEBUG: CCuratorListStore loading list payload: " +
-                (null == _ ? void 0 : _.length),
-              _,
-            ),
-            this.ValidateStoreDefault(_) &&
-              (0, _._)(() => {
-                _.forEach((_) => {
-                  _.multi_detail_lists.forEach((_) => {
-                    _(_),
-                      _(_.curation_language, _),
-                      this.m_mapList.set(_.listid, _);
-                  });
+          this.ValidateStoreDefault(_) &&
+            (0, _._)(() => {
+              _.forEach((_) => {
+                _.multi_detail_lists.forEach((_) => {
+                  _(_),
+                    _(_.curation_language, _),
+                    this.m_mapList.set(_.listid, _);
                 });
               });
+            });
         }
         ValidateStoreDefault(_) {
           const _ = _;
@@ -38166,13 +38462,7 @@
           return this.m_mapBadgeInfo.set(_, _), _;
         }
         static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_UserBadgeForEventStore = _.s_Singleton)),
-            _.s_Singleton
-          );
+          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
         }
         constructor() {
           (this.m_mapBadgeInfo = new Map()),
@@ -38212,293 +38502,6 @@
           _
         );
       }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ {
-        GetItemDef(_, _) {
-          var _;
-          return null === (_ = this.m_mapAppItemDefs.get(_)) || void 0 === _
-            ? void 0
-            : __webpack_require__.get(_);
-        }
-        BHasItemDef(_, _) {
-          return Boolean(this.GetItemDef(_, _));
-        }
-        BHasAllItemDef(_, _) {
-          return _.filter((_) => !this.BHasItemDef(_, _)).length > 0;
-        }
-        GetAllItemDefForApp(_) {
-          var _, _;
-          return this.m_mapAppItemDefs.has(_)
-            ? Array.from(
-                null !==
-                  (_ =
-                    null === (_ = this.m_mapAppItemDefs.get(_)) || void 0 === _
-                      ? void 0
-                      : _.values()) && void 0 !== _
-                  ? _
-                  : [],
-              )
-            : [];
-        }
-        GetCallbackForAppList(_) {
-          let _ = this.m_mapAppCallbackList.get(_);
-          return (
-            _ ||
-              (this.m_mapAppCallbackList.set(_, new _._()),
-              (_ = this.m_mapAppCallbackList.get(_))),
-            _
-          );
-        }
-        async SearchItemDefs(_, _) {
-          var _, _;
-          let _ = null;
-          try {
-            const _ = {
-                start: 0,
-                count: 12,
-                searchtext: _,
-                _: _._.LANGUAGE,
-                _: _._.COUNTRY,
-              },
-              _ = _._.STORE_BASE_URL + `itemstore/${_}/ajaxgetitemdefs`,
-              _ = await _().get(_, {
-                params: _,
-                withCredentials: !0,
-              });
-            if (
-              200 == (null == _ ? void 0 : _.status) &&
-              (null === (_ = _.data) || void 0 === _ ? void 0 : _.success) ==
-                _._ &&
-              (null === (_ = _.data) || void 0 === _ ? void 0 : _.matches)
-            )
-              return this.AddItemDefs(_.data.matches), _.data.matches || [];
-            _ = (0, _._)(_);
-          } catch (_) {
-            _ = (0, _._)(_);
-          }
-          return (
-            console.error(
-              "CItemDefStore.SearchForItemDefs failed: " +
-                (null == _ ? void 0 : _.strErrorMsg),
-              _,
-            ),
-            []
-          );
-        }
-        async LoadItemDef(_) {
-          if (!_.nAppID || !_.nItemDefID) return !1;
-          let _ = this.m_mapAppItemDefPromises.get(_.nAppID);
-          _ ||
-            (this.m_mapAppItemDefPromises.set(_.nAppID, new Map()),
-            (_ = this.m_mapAppItemDefPromises.get(_.nAppID)));
-          let _ = _.get(_.nItemDefID);
-          return (
-            _ || ((_ = this.InternalLoadItemDef([_])), _.set(_.nItemDefID, _)),
-            _
-          );
-        }
-        async LoadAllItemDefForSingleApp(_, _) {
-          if (
-            0 ==
-            (_ = _.filter(
-              (_) => _.nItemDefID && !this.BHasItemDef(_, _.nItemDefID),
-            )).length
-          )
-            return !0;
-          this.m_mapAppItemDefPromises.has(_) ||
-            this.m_mapAppItemDefPromises.set(_, new Map());
-          const _ = _.filter((_) => {
-              var _;
-              return !(null === (_ = this.m_mapAppItemDefPromises.get(_)) ||
-              void 0 === _
-                ? void 0
-                : __webpack_require__.get(_.nItemDefID));
-            }),
-            _ = _.map((_) => {
-              var _;
-              return null === (_ = this.m_mapAppItemDefPromises.get(_)) ||
-                void 0 === _
-                ? void 0
-                : __webpack_require__.get(_.nItemDefID);
-            }).filter(Boolean);
-          if (_.length > 0) {
-            const _ = this.InternalLoadItemDef(_);
-            __webpack_require__.forEach((_) => {
-              var _;
-              return null === (_ = this.m_mapAppItemDefPromises.get(_)) ||
-                void 0 === _
-                ? void 0
-                : _.set(_.nItemDefID, _);
-            }),
-              _.push(_);
-          }
-          return await Promise.all(_), !0;
-        }
-        async InternalLoadItemDef(_) {
-          var _, _;
-          let _ = null;
-          try {
-            const _ = {
-              strItemDefIDs: _.map((_) => _.nItemDefID).join(","),
-              _: _._.LANGUAGE,
-              _: _._.COUNTRY,
-            };
-            let _ = _._.STORE_BASE_URL + `itemstore/${_[0].nAppID}/`;
-            "community" == (0, _._)()
-              ? (_ += "ajaxgetauthedmultipleitemdefsbyid")
-              : (_ += "ajaxgetmultipleitemdefsbyid");
-            const _ = await _().get(_, {
-              params: _,
-              withCredentials: !0,
-            });
-            if (
-              200 == (null == _ ? void 0 : _.status) &&
-              (null === (_ = _.data) || void 0 === _ ? void 0 : _.success) ==
-                _._ &&
-              (null === (_ = _.data) || void 0 === _ ? void 0 : _.matches)
-            )
-              return this.AddItemDefs(_.data.matches), !0;
-            _ = (0, _._)(_);
-          } catch (_) {
-            _ = (0, _._)(_);
-          }
-          return (
-            console.error(
-              "CItemDefStore.SearchForItemDefs failed: " +
-                (null == _ ? void 0 : _.strErrorMsg),
-              _,
-            ),
-            !1
-          );
-        }
-        static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-                (window.g_ItemDefStore = _.s_Singleton)),
-            _.s_Singleton
-          );
-        }
-        AddItemDefs(_) {
-          const _ = new Set();
-          _.forEach((_) => {
-            if (!_.nAppID || !_.nItemDefID) return;
-            let _ = this.m_mapAppItemDefs.get(_.nAppID);
-            _ ||
-              (this.m_mapAppItemDefs.set(_.nAppID, new Map()),
-              (_ = this.m_mapAppItemDefs.get(_.nAppID))),
-              __webpack_require__.set(_.nItemDefID, _),
-              _.add(_.nAppID);
-          }),
-            _.forEach((_) => {
-              var _, _;
-              return this.GetCallbackForAppList(_).Dispatch(
-                Array.from(
-                  null !==
-                    (_ =
-                      null === (_ = this.m_mapAppItemDefs.get(_)) ||
-                      void 0 === _
-                        ? void 0
-                        : _.values()) && void 0 !== _
-                    ? _
-                    : [],
-                ),
-              );
-            });
-        }
-        constructor() {
-          if (
-            ((this.m_mapAppItemDefs = new Map()),
-            (this.m_mapAppCallbackList = new Map()),
-            (this.m_mapAppItemDefPromises = new Map()),
-            document.getElementById("application_config"))
-          ) {
-            let _ = (0, _._)("itemdefs", "application_config");
-            _.ValidateItemDef(_) &&
-              (this.AddItemDefs(_),
-              "dev" == _._.WEB_UNIVERSE &&
-                console.log("CItemDefStore loaded item defs: " + _.length, _));
-          }
-        }
-        static ValidateItemDef(_) {
-          const _ = _;
-          return (
-            !!(_ && Array.isArray(_) && _.length > 0) &&
-            "number" == typeof _[0].nAppID &&
-              "number" == typeof _[0].nItemDefID &&
-            "string" == typeof _[0].strName
-          );
-        }
-      }
-      function _(_, _) {
-        const [_, _] = _.useState(_.Get().GetItemDef(_, _));
-        return (
-          (0, _._)(_.Get().GetCallbackForAppList(_), (_) => {
-            _(_.Get().GetItemDef(_, _));
-          }),
-          _.useEffect(() => {
-            _.Get().BHasItemDef(_, _) ||
-              _.Get()
-                .LoadItemDef({
-                  nAppID: _,
-                  nItemDefID: _,
-                })
-                .then(() => _(_.Get().GetItemDef(_, _)));
-          }, [_, _]),
-          _
-        );
-      }
-      function _(_, _) {
-        const _ = _.map((_) => _.nItemDefID),
-          [_, _] = _.useState(
-            _.Get()
-              .GetAllItemDefForApp(_)
-              .filter((_) => __webpack_require__.includes(_.nItemDefID)),
-          );
-        return (
-          (0, _._)(_.Get().GetCallbackForAppList(_), (_) => {
-            _(_.filter((_) => __webpack_require__.includes(_.nItemDefID)));
-          }),
-          _.useEffect(() => {
-            const _ = _._(_.map((_) => _.nItemDefID));
-            _.Get().BHasAllItemDef(_, _) ||
-              _.Get()
-                .LoadAllItemDefForSingleApp(_, _)
-                .then(() =>
-                  _(
-                    _.Get()
-                      .GetAllItemDefForApp(_)
-                      .filter(
-                        (_) =>
-                          _.nItemDefID &&
-                          __webpack_require__.includes(_.nItemDefID),
-                      ),
-                  ),
-                );
-          }, [_, _]),
-          _
-        );
-      }
-      (0, _._)([_._], _.prototype, "SearchItemDefs", null),
-        (0, _._)([_._], _.prototype, "LoadItemDef", null),
-        (0, _._)([_._], _.prototype, "LoadAllItemDefForSingleApp", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -38793,11 +38796,7 @@
         }
         static Get() {
           return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              _.s_Singleton.Init(),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_PartnerEventPrivateDataStore = _.s_Singleton)),
+            _.s_Singleton || ((_.s_Singleton = new _()), _.s_Singleton.Init()),
             _.s_Singleton
           );
         }
@@ -39693,13 +39692,7 @@
                 : void 0;
         }
         static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-                (window.g_PersonalizedCarouselStore = _.s_Singleton)),
-            _.s_Singleton
-          );
+          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
         }
       }
       (0, _._)([_._], _.prototype, "m_mapLoadedData", void 0);
@@ -41113,6 +41106,7 @@
             bViewAllShowInfiniteScroll: _,
           } = _,
           _ = _._.InitFromClanID(_),
+          _ = (0, _._)(),
           _ = (0, _.useRef)(null),
           [_, _] = (0, _.useState)([]),
           [_, _] = (0, _.useState)(!0),
@@ -41146,27 +41140,17 @@
                     .map((_) => _.GetClanEventFromAnnouncementGID(_))
                     .filter((_) => !!_);
                   if ((_(_), _(!1), _)) {
-                    let _ = _._.Get().GetTracker(),
-                      _ = !1;
+                    let _ = !1;
                     if (_.BHasClanAnnouncementGID(_)) {
                       let _ = _.GetClanEventFromAnnouncementGID(_);
                       _ &&
                         _.BIsPartnerEvent() &&
                         _.BIsVisibleEvent() &&
-                        (_.MarkEventRead(
-                          _.GID,
-                          _.clanSteamID.GetAccountID(),
-                          _,
-                        ),
-                        (_ = !0));
+                        (_.RecordEventRead(_, _), (_ = !0));
                     }
                     _.length > 0 &&
                       (_.filter((_) => _.BIsPartnerEvent()).forEach((_) =>
-                        _.MarkEventShown(
-                          _.GID,
-                          _.clanSteamID.GetAccountID(),
-                          _,
-                        ),
+                        _.RecordEventShown(_, _),
                       ),
                       (_ = !0)),
                       _ && _.Flush();
@@ -41177,7 +41161,7 @@
                 _.current && _.current("PartnerEventRow: unmounting");
               }
             ),
-            [_, _, _, _],
+            [_, _, _, _, _],
           ),
           _
             ? (0, _.jsx)(_._, {
@@ -41402,181 +41386,6 @@
             }),
           ],
         });
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      !(function (_) {
-        (_.k_eBlock = "block"),
-          (_.k_eFinal = "final"),
-          (_.k_eOriginal = "original"),
-          (_.k_eReservation = "reservation");
-      })(_ || (_ = {}));
-      const _ = (_) => {
-        switch (_.display_style) {
-          case _.k_eFinal:
-            return (
-              Boolean(_.formatted_final_price) &&
-              (0, _.jsx)("span", {
-                children: _.formatted_final_price,
-              })
-            );
-          case _.k_eOriginal:
-            const _ = _.formatted_orig_price || _.formatted_final_price;
-            return (
-              Boolean(_) &&
-              (0, _.jsx)("span", {
-                children: _,
-              })
-            );
-        }
-        const _ = "reservation" == _.display_style,
-          _ = _.bHideDiscountPercentForCompliance,
-          _ = "bbcode_price" == _.className;
-        return (0, _.jsxs)("span", {
-          className: (0, _._)({
-            [_.StoreSalePriceWidget]: !0,
-            ["" + _.className]: Boolean(_.className),
-            [_.StoreSaleReservationPrice]: _,
-          }),
-          children: [
-            Boolean(_.discount_percent && !_) &&
-              (0, _.jsx)("span", {
-                className: (0, _._)(
-                  _.StoreSaleDiscountBox,
-                  "StoreSaleDiscountBox",
-                  _.bDiscountFromCoupon && _.FromCoupon,
-                ),
-                children: `-${_.discount_percent}%`,
-              }),
-            Boolean(_.discount_percent && _) &&
-              (0, _.jsx)("div", {
-                className: (0, _._)({
-                  [_.DiscountIconCtn]: !0,
-                  bbcode_price_discount: _,
-                }),
-                children: (0, _.jsx)(_.XH_, {}),
-              }),
-            Boolean(_.formatted_final_price) &&
-              (Boolean(_.discount_percent && _.formatted_orig_price)
-                ? (0, _.jsxs)("div", {
-                    className: (0, _._)({
-                      [_.StoreSaleDiscountedPriceCtn]: !0,
-                      bbcode_price_ctn: _,
-                    }),
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: (0, _._)({
-                          [_.StoreOriginalPrice]: !0,
-                          StoreOriginalPrice: !0,
-                          bbcode_price_orig: _,
-                        }),
-                        children: _.formatted_orig_price,
-                      }),
-                      (0, _.jsx)("div", {
-                        className: (0, _._)({
-                          [_.StoreSalePriceBox]: !0,
-                          bbcode_price_box: _,
-                          [_.StoreSaleReservationPriceBox]: _,
-                          bbcode_price_final: _,
-                        }),
-                        children: _.formatted_final_price,
-                      }),
-                    ],
-                  })
-                : (0, _.jsx)("div", {
-                    className: (0, _._)({
-                      [_.StoreSalePriceBox]: !0,
-                      bbcode_price_box: _,
-                      [_.StoreSaleReservationPriceBox]: _,
-                      bbcode_price_final: _,
-                    }),
-                    children: _.formatted_final_price,
-                  })),
-          ],
-        });
-      };
-      function _(_) {
-        const [_] = (0, _._)(_.packageID, {});
-        if (_) {
-          const _ = _.GetBestPurchaseOption();
-          return (0, _.jsx)(_, {
-            formatted_final_price: _.formatted_final_price,
-            formatted_orig_price: _.formatted_original_price,
-            discount_percent: _.discount_pct,
-            bHideDiscountPercentForCompliance:
-              _.hide_discount_pct_for_compliance,
-            display_style: _.display_style,
-            className: "bbcode_price",
-          });
-        }
-        return null;
-      }
-      function _(_) {
-        const _ = Number(_.args.packageid);
-        if (!_) return null;
-        const _ = _.args.display;
-        return (0, _.jsx)(_, {
-          packageID: _,
-          display_style: _,
-        });
-      }
-      function _(_) {
-        const [_] = (0, _._)(_.packageID, {}),
-          [_] = (0, _._)(_.compareID, {});
-        if (!_ || !_) return null;
-        const _ = (function (_, _) {
-          var _;
-          if (
-            !(null == _
-              ? void 0
-              : _.GetBestPurchaseOption().final_price_in_cents) ||
-            !(null === (_ = null == _ ? void 0 : _.GetBestPurchaseOption()) ||
-            void 0 === _
-              ? void 0
-              : _.final_price_in_cents)
-          )
-            return;
-          return (
-            (
-              100 *
-              (1 -
-                Number.parseInt(
-                  _.GetBestPurchaseOption().final_price_in_cents,
-                ) /
-                  Number.parseInt(
-                    _.GetBestPurchaseOption().final_price_in_cents,
-                  ))
-            ).toFixed(0) + "%"
-          );
-        })(_, _);
-        return void 0 === _
-          ? null
-          : (0, _.jsx)("span", {
-              className: _.StorePriceSavings,
-              children: _,
-            });
-      }
-      function _(_) {
-        const _ = Number(_.args.packageid),
-          _ = Number(_.args.compareid);
-        return _ && _
-          ? (0, _.jsx)(_, {
-              packageID: _,
-              compareID: _,
-            })
-          : null;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -41927,17 +41736,10 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_PartnerSaleLivePreviewServer = _.s_Singleton)),
-            _.s_Singleton
-          );
+          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
         }
         constructor() {
           (this.m_bReceivedClientReady = !1),
@@ -42402,7 +42204,7 @@
                           : _[_.Bhc],
                       ),
                       _ = (_) => {
-                        _._.Get().RecordEventRead(_, _._._),
+                        (0, _._)().RecordEventRead(_, _._._),
                           (0, _._)(_, _._(_)),
                           _.stopPropagation(),
                           _.preventDefault();
@@ -42892,11 +42694,11 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -42914,7 +42716,7 @@
       function _(_) {
         const { event: _, activeTab: _, section: _ } = _,
           [_, _] = _.useState(null),
-          _ = (0, _._)(_.itemdefs[0].nAppID, _.itemdefs);
+          _ = (0, _._)(_.itemdefs[0].nAppID, _.itemdefs, !1);
         return (
           _.useEffect(
             () =>
@@ -42994,7 +42796,7 @@
             clanAccountID: _,
             strCallToAction: _,
           } = _,
-          _ = (0, _._)(_.nAppID, _.nItemDefID),
+          _ = (0, _._)(_.nAppID, _.nItemDefID, !1),
           [_, _] = _.useState(1),
           _ = (0, _._)();
         if (!_) return null;
@@ -44059,6 +43861,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -44116,15 +43919,21 @@
             }),
             (0, _.jsxs)(_._, {
               className: _().SaleSectionLoginPrompt,
-              children: [
-                (0, _._)("#SalePage_LoginPrompt"),
-                (0, _.jsx)("button", {
-                  onClick: _._,
-                  className: _().LoginButton,
-                  children: (0, _._)("#Login_SignIn"),
-                }),
-              ],
+              children: [(0, _._)("#SalePage_LoginPrompt"), (0, _.jsx)(_, {})],
             }),
+          ],
+        });
+      }
+      function _() {
+        const { elDialogElement: _, fnShowLogonDialog: _ } = (0, _._)();
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)("button", {
+              onClick: _,
+              className: _().LoginButton,
+              children: (0, _._)("#Login_SignIn"),
+            }),
+            _,
           ],
         });
       }
@@ -45178,8 +44987,11 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -45326,10 +45138,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = "capsule_index_";

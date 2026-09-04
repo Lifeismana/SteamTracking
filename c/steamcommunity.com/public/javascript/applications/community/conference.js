@@ -179,11 +179,7 @@
         }
         static Get() {
           return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              _.s_Singleton.Init(),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_ConferenceStore = _.s_Singleton)),
+            _.s_Singleton || ((_.s_Singleton = new _()), _.s_Singleton.Init()),
             _.s_Singleton
           );
         }
@@ -299,27 +295,10 @@
               ],
             });
       }
-      var _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid");
       function _(_) {
         const { conferenceInfo: _ } = _;
-        return "dev" != _._.WEB_UNIVERSE
-          ? null
-          : (0, _.jsxs)("div", {
-              children: [
-                (0, _.jsx)("h1", {
-                  children: "Conference Data",
-                }),
-                (0, _.jsx)(_._, {
-                  data: _,
-                }),
-                (0, _.jsx)("h1", {
-                  children: "Config Data",
-                }),
-                (0, _.jsx)(_._, {
-                  strConfigID: "application_config",
-                }),
-              ],
-            });
+        return null;
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -345,13 +324,7 @@
             });
           const _ = (0, _._)(),
             _ = (0, _._)("conference_calendar", "application_config");
-          _ &&
-            ("dev" == _._.WEB_UNIVERSE &&
-              console.log(
-                "Conference LandingPage loading initial events: " + _.length,
-                _,
-              ),
-            await __webpack_require__.RegisterCalendarEventsAndModels(_)),
+          _ && (await __webpack_require__.RegisterCalendarEventsAndModels(_)),
             __webpack_require__.SetFilteredView((_) => !0);
         }
         static Get() {
@@ -671,6 +644,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       const _ = (_) => {
@@ -772,8 +746,7 @@
         (0, _._)(_);
         const _ = (0, _._)(_);
         (0, _._)(null === (_ = _.clanInfo) || void 0 === _ ? void 0 : _.clanid);
-        const _ = _._.Get(),
-          _ = (0, _.sfN)(_._.LANGUAGE),
+        const _ = (0, _.sfN)(_._.LANGUAGE),
           _ = "capsule",
           [_, _, _, _, _, _, _, _, _, _, _] = (0, _._)(() => [
             _.has_live_stream,
@@ -798,6 +771,7 @@
               ? _
               : _,
           _ = _(_, _),
+          _ = (0, _._)(_),
           _ = _()[`EventType${_}`],
           _ = _.map((_) => _()[`Tag-${_}`]),
           _ = (0, _._)(
@@ -807,7 +781,7 @@
             _ ? _().DisableHovers : _().EnableHovers,
             _ && _().VideoPlayerReady,
             _ && _().HasVideo,
-            _.HasEventBeenRead(_) && _().HasBeenRead,
+            _ && _().HasBeenRead,
             "wide" === _ && _().WideMode,
             "carousel" === _ && _().CarouselMode,
             "upcoming" === _ && _().UpcomingMode,
@@ -869,9 +843,8 @@
                 className: _().Tile,
                 onClick: (_) => {
                   _._.RecordAppInteractionEvent(_.appid, _._.k_eClickThrough),
-                    _(_),
-                    _.stopPropagation(),
-                    _.preventDefault();
+                    (0, _._)() ||
+                      (_(_), _.stopPropagation(), _.preventDefault());
                 },
                 children: [
                   _ === _.zeJ &&
@@ -2021,9 +1994,9 @@
             onClick: _,
           }),
           _.push({
-            name: "(VO/WebUniveser=Dev) Debug",
+            name: "(VO/Internal) Debug",
             key: "debug",
-            hidden: "dev" != _._.WEB_UNIVERSE,
+            hidden: !0,
             contents: (0, _.jsx)(_._, {
               children: (0, _.jsx)(_, {
                 conferenceInfo: _,

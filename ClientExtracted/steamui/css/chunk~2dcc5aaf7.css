@@ -80109,6 +80109,7 @@ div._1IsPTEXf7ua_4XbMa3sXyW svg {
   animation-duration: 1s;
   animation-iteration-count: 1;
   animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
   z-index: 9999;
 }
 @keyframes _3nfC3h6b3ggmMPL1nP37YZ {

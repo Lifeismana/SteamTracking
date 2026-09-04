@@ -4154,5 +4154,6 @@
     "GamePerformance_Reason": "原因",
     "GamePerformance_NumResponses": "回覆數量",
     "NewToolTitleSuffix_Beta": "測試版",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "SteamMachine_TestResult_MultiWindowAppAutomaticallySetsFocus": "這款遊戲使用多個視窗，可能需要您透過 Steam 內嵌介面手動聚焦於適當的視窗"
 }

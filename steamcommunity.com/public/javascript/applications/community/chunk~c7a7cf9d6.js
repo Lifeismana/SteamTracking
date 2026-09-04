@@ -290,15 +290,12 @@
             r.s_globalSingletonStore ||
               ((e = "CHomeViewStore.s_globalSingletonStore"),
               (0, i.wT)(!0, "Unexpected code running in SSR Server: " + e),
-              (r.s_globalSingletonStore = new r()),
-              "dev" == s.TS.WEB_UNIVERSE &&
-                (window.g_HomeViewSetting = r.s_globalSingletonStore)),
+              (r.s_globalSingletonStore = new r())),
             r.s_globalSingletonStore
           );
         }
         constructor() {
-          (this.m_HomeView = void 0),
-            "dev" === s.TS.WEB_UNIVERSE && (window.g_HomeViewStore = this);
+          this.m_HomeView = void 0;
           const e = (0, s.Tc)("home_view_setting", "application_config");
           this.ValidateHomeViewData(e) && this.SetHomeViewSetting(e);
           const t = (0, s.Tc)(
@@ -343,7 +340,7 @@
     },
     46067: (e, t, n) => {
       "use strict";
-      n.d(t, { dP: () => H, v0: () => F, Zr: () => R });
+      n.d(t, { dP: () => j, v0: () => H, Zr: () => F });
       var i,
         s = n(34629),
         r = n(41735),
@@ -353,19 +350,20 @@
         d = n.n(l),
         c = n(37085),
         u = n(47822),
-        m = n(17720),
-        p = n(28210),
-        h = n(91254),
-        g = n(16021),
-        _ = n(99032),
-        v = n(81393),
-        I = n(68797),
-        y = n(6419),
-        f = n(61859),
-        S = n(78327),
-        C = n(30894),
-        w = n(81477),
-        E = n(46910);
+        m = n(67718),
+        p = n(17720),
+        h = n(82429),
+        g = n(91254),
+        _ = n(16021),
+        v = n(99032),
+        I = n(81393),
+        y = n(68797),
+        f = n(6419),
+        S = n(61859),
+        C = n(78327),
+        w = n(30894),
+        A = n(81477),
+        B = n(46910);
       !(function (e) {
         (e.Default = "default"),
           (e.Upcoming = "upcoming"),
@@ -378,9 +376,9 @@
           (e.Dev_AssociatedPress = "associated_press");
       })(i || (i = {}));
       new Map();
-      var A = n(44165),
-        B = n(1059);
-      function G(e, t, n, i) {
+      var G = n(44165),
+        k = n(1059);
+      function E(e, t, n, i) {
         return {
           strId: "section-" + t,
           strSectionLabel: t,
@@ -391,7 +389,7 @@
           nTopOffset: 0,
         };
       }
-      class k {
+      class b {
         constructor(e, t) {
           (this.m_nForwardStuckCount = 0),
             (this.m_nBackwardStuckCount = 0),
@@ -409,8 +407,8 @@
             (this.m_collectionMetaData = void 0),
             (0, o.Gn)(this),
             (this.m_key = e),
-            (this.m_visibilityStore = new E.vJ(t)),
-            C.Fm.Get().HintLoad();
+            (this.m_visibilityStore = new B.vJ(t)),
+            w.Fm.Get().HintLoad();
         }
         GetNumEventsLoaded() {
           return this.m_mapCalendarEventsByGid.size;
@@ -426,7 +424,7 @@
         BIsShowingFeaturedFeed() {
           return Boolean(
             this.GetCollectionID() === i.Featured ||
-              (this.BIsGlobalCalendar() && !S.iA.accountid),
+              (this.BIsGlobalCalendar() && !C.iA.accountid),
           );
         }
         BIsSingleSourceCalendar() {
@@ -456,10 +454,10 @@
           if (!this.BIsSingleSourceCalendar()) return !1;
           if (this.BIsSingleAppCalendar()) {
             const e = this.GetSingleAppID();
-            return void 0 !== e && B.S.Get().BIsMutedAppID(e);
+            return void 0 !== e && k.S.Get().BIsMutedAppID(e);
           }
           const e = this.GetSingleGroupID();
-          return void 0 !== e && B.S.Get().BIsMutedClanID(e);
+          return void 0 !== e && k.S.Get().BIsMutedClanID(e);
         }
         BIsSingleGroupCalendar() {
           return Boolean(
@@ -523,7 +521,7 @@
           const n = this.m_currentView.get();
           n && n.dispose();
           const i = this.BIsSingleSourceMuted(),
-            s = new b(
+            s = new D(
               () => this.m_rgSortedCalendarEvents,
               this.LoadAdditionalEvents,
               this.BHitEventHorizon,
@@ -576,7 +574,7 @@
         GetStoreInitializationTimestamp() {
           return (
             this.m_dtInitTime ||
-              (this.m_dtInitTime = A.HD.GetTimeNowWithOverrideAsDate()),
+              (this.m_dtInitTime = G.HD.GetTimeNowWithOverrideAsDate()),
             this.m_dtInitTime
           );
         }
@@ -584,15 +582,15 @@
           const e = this.GetStoreInitializationTimestamp(),
             t = [],
             n = e.getTime() / 1e3;
-          t.push(G(n, (0, f.we)("#EventCalendar_FutureEventsHeader"), n));
+          t.push(E(n, (0, S.we)("#EventCalendar_FutureEventsHeader"), n));
           const i = new Date(e);
           i.setHours(0, 0, 0, 1);
           let s = i.getTime() / 1e3;
-          t.push(G(n, (0, f.we)("#Time_Today"), s, n)),
+          t.push(E(n, (0, S.we)("#Time_Today"), s, n)),
             i.setDate(i.getDate() - 1);
           let r = s;
           (s = i.getTime() / 1e3),
-            t.push(G(n, (0, f.we)("#Time_Yesterday"), s, r));
+            t.push(E(n, (0, S.we)("#Time_Yesterday"), s, r));
           const a =
               this.m_rgSortedCalendarEvents[
                 this.m_rgSortedCalendarEvents.length - 1
@@ -603,14 +601,14 @@
             i.setDate(i.getDate() - 1),
               (r = s),
               (s = i.getTime() / 1e3),
-              t.push(G(n, (0, f.cc)(i), s, r)),
+              t.push(E(n, (0, S.cc)(i), s, r)),
               (l = o > s);
           const d = new Date(i);
           let c = s;
           for (; d.getMonth() == e.getMonth() && 1 != d.getDate() && !l; ) {
             d.setDate(d.getDate() - 7);
             const e = d.getTime() / 1e3;
-            t.push(G(n, (0, f.lQ)(c - 1), e, c)), (l = o > e), (c = e);
+            t.push(E(n, (0, S.lQ)(c - 1), e, c)), (l = o > e), (c = e);
           }
           const u = new Date(e);
           u.setHours(0, 0, 0, 1), u.setDate(1);
@@ -619,7 +617,7 @@
             const s = new Date(u);
             s.setMonth(e.getMonth() - i, 1);
             const r = s.getTime() / 1e3;
-            t.push(G(n, (0, f.lQ)(r), r, m)), (l = o > r), (m = r);
+            t.push(E(n, (0, S.lQ)(r), r, m)), (l = o > r), (m = r);
           }
           this.m_rgCalendarSections.length > t.length
             ? this.m_rgCalendarSections.splice(
@@ -642,9 +640,9 @@
           r.setHours(24, 0, 0, 0);
           let a = r.getTime() / 1e3;
           t.push(
-            G(
+            E(
               s,
-              (0, f.we)(
+              (0, S.we)(
                 this.m_key.bSectionByDay ? "#Time_UpNext" : "#Time_Today",
               ),
               s,
@@ -655,24 +653,24 @@
             l = a;
           r.setDate(r.getDate() + 1),
             (a = r.getTime() / 1e3),
-            o || t.push(G(s, (0, f.we)("#Time_Tomorrow"), l, a)),
+            o || t.push(E(s, (0, S.we)("#Time_Tomorrow"), l, a)),
             (o = n <= a);
           const c = 6 - d()(e).weekday();
           for (let e = 2; e <= c && !o; e++) {
             l = a;
-            const e = (0, f.cc)(r);
+            const e = (0, S.cc)(r);
             r.setDate(r.getDate() + 1),
               (a = r.getTime() / 1e3),
-              t.push(G(s, e, l, a)),
+              t.push(E(s, e, l, a)),
               (o = n <= a);
           }
           if (this.m_key.bSectionByDay)
             for (; !o; ) {
               l = a;
-              const e = (0, f.$w)(r);
+              const e = (0, S.$w)(r);
               r.setDate(r.getDate() + 1),
                 (a = r.getTime() / 1e3),
-                t.push(G(s, e, l, a)),
+                t.push(E(s, e, l, a)),
                 (o = n <= a);
             }
           else {
@@ -682,7 +680,7 @@
             if (i.getMonth() == e.getMonth() && i.getDate() != c && !o) {
               i.setDate(i.getDate() + 7);
               const e = i.getTime() / 1e3;
-              t.push(G(s, (0, f.we)("#EventCalendar_NextWeek"), l, e)),
+              t.push(E(s, (0, S.we)("#EventCalendar_NextWeek"), l, e)),
                 (o = n <= e),
                 (l = e);
             }
@@ -695,7 +693,7 @@
               i < u && !o)
             ) {
               const e = u.getTime() / 1e3;
-              t.push(G(s, (0, f.we)("#EventCalendar_LaterThisMonth"), l, e)),
+              t.push(E(s, (0, S.we)("#EventCalendar_LaterThisMonth"), l, e)),
                 (o = n <= e),
                 (m = e);
             } else m = l;
@@ -703,7 +701,7 @@
               const r = new Date(u);
               r.setMonth(e.getMonth() + i);
               const a = r.getTime() / 1e3;
-              t.push(G(s, (0, f.lQ)(m), m, a)), (o = n <= a), (m = a);
+              t.push(E(s, (0, S.lQ)(m), m, a)), (o = n <= a), (m = a);
             }
           }
           this.m_rgFutureSections.length > t.length
@@ -716,7 +714,7 @@
                 .forEach((e) => this.m_rgFutureSections.push(e));
         }
         async RegisterCalendarEventsAndModels(e) {
-          await C.Fm.Get().HintLoad(),
+          await w.Fm.Get().HintLoad(),
             (0, o.h5)(() => {
               var t, n, i, s, r, a;
               this.RegisterCalendarApps(
@@ -728,7 +726,7 @@
                 this.RegisterCalendarEvents(
                   null !== (i = e.documents) && void 0 !== i ? i : [],
                 ),
-                h.O3.RegisterClanEvents(
+                g.O3.RegisterClanEvents(
                   null !== (s = e.events) && void 0 !== s ? s : [],
                 ),
                 this.RegisterReadEvents(
@@ -776,13 +774,11 @@
               }
         }
         RegisterReadEvents(e) {
-          if (!e) return;
-          const t = p.KN.Get();
-          for (const n of e) t.SetEventAsRead(n);
+          e && (0, m.No)(e);
         }
         RegisterEventVotes(e) {
           if (!e) return;
-          const t = p.KN.Get();
+          const t = h.KN.Get();
           for (const n of e) {
             const e = void 0 === n.vote ? void 0 : Boolean(n.vote);
             t.SetVote(n.id, e);
@@ -834,7 +830,7 @@
             : this.m_backwardRequestInFlight;
         }
         SetRequestInFlight(e, t) {
-          (0, v.wT)(
+          (0, I.wT)(
             !t || !this.GetRequestInFlight(e),
             "Already have a request in flight for",
             e,
@@ -849,24 +845,23 @@
           let r = this.GetRequestInFlight(e);
           if (r) return r;
           const o =
-              S.TS.STORE_BASE_URL + "events/ajaxgetusereventcalendarrange/",
+              C.TS.STORE_BASE_URL + "events/ajaxgetusereventcalendarrange/",
             l =
               "forward" === e
                 ? this.m_nForwardStuckCount
                 : this.m_nBackwardStuckCount,
-            d = l < 3 ? l : 0,
-            u = l >= 3 ? 1 : 0,
-            m = ("dev" === S.TS.WEB_UNIVERSE ? 50 : 250) + 50 * d,
-            p = A.HD.GetTimeNowWithOverride(),
-            h =
-              null !== (n = this.GetTimeEdgeForDirection(e, p)) && void 0 !== n
+            d = l >= 3 ? 1 : 0,
+            u = 250 + 50 * (l < 3 ? l : 0),
+            m = G.HD.GetTimeNowWithOverride(),
+            p =
+              null !== (n = this.GetTimeEdgeForDirection(e, m)) && void 0 !== n
                 ? n
-                : p,
-            g = {
+                : m,
+            h = {
               minTime: 0,
               maxTime: 0,
               ascending: !0,
-              maxResults: m,
+              maxResults: u,
               populateEvents: 15,
               appTypes: this.m_visibilityStore.GetGameSources().join(","),
               eventTypes: Array.from(
@@ -896,12 +891,12 @@
                 : void 0,
             };
           "forward" === e
-            ? ((g.minTime = Math.floor(h + u)), (g.ascending = !0))
-            : ((g.maxTime = Math.floor(h - u)), (g.ascending = !1));
+            ? ((h.minTime = Math.floor(p + d)), (h.ascending = !0))
+            : ((h.maxTime = Math.floor(p - d)), (h.ascending = !1));
           return (
             (r = a()
               .get(o, {
-                params: g,
+                params: h,
                 cancelToken: t ? t.token : void 0,
                 withCredentials: !0,
               })
@@ -909,7 +904,7 @@
                 if ((this.SetRequestInFlight(e, null), n.data.success == c.R)) {
                   if (
                     (await this.RegisterCalendarEventsAndModels(n.data),
-                    this.UpdateStuckCounters(e, h))
+                    this.UpdateStuckCounters(e, p))
                   )
                     return this.LoadAdditionalEvents(e, t);
                 } else
@@ -920,7 +915,7 @@
               })
               .catch((t) => {
                 this.SetRequestInFlight(e, null);
-                let n = (0, I.H)(t);
+                let n = (0, y.H)(t);
                 return (
                   console.error(
                     "LoadAdditionalEvents hit error " + n.strErrorMsg,
@@ -939,7 +934,7 @@
         BInternalInsertCalendarEventItem(e) {
           if (!e.unique_id)
             return (
-              (0, v.wT)(
+              (0, I.wT)(
                 !1,
                 "Attmpted to register a calendar event item with an invalid unique id!",
               ),
@@ -978,9 +973,9 @@
           const n = e.appInfo ? e.appid : void 0,
             i = e.clanInfo ? e.clanInfo.clanid : void 0;
           null != n || null != i
-            ? (await B.S.Get().UpdateCommunicationSetting(t, n, i),
-              w.V.RecordAppInteractionEvent(n, w.E.k_eMuted))
-            : (0, v.wT)(
+            ? (await k.S.Get().UpdateCommunicationSetting(t, n, i),
+              A.V.RecordAppInteractionEvent(n, A.E.k_eMuted))
+            : (0, I.wT)(
                 !1,
                 "Both clan id and account id are missing, cannot change communication status",
               );
@@ -992,32 +987,31 @@
           return Array.from(this.m_mapCalendarAppsByID.keys());
         }
       }
-      (0, s.Cg)([o.sH], k.prototype, "m_mapCalendarAppsByID", void 0),
-        (0, s.Cg)([o.sH], k.prototype, "m_mapCalendarClansByID", void 0),
-        (0, s.Cg)([o.sH], k.prototype, "m_mapCalendarEventsByGid", void 0),
-        (0, s.Cg)([o.sH], k.prototype, "m_rgSortedCalendarEvents", void 0),
-        (0, s.Cg)([o.sH], k.prototype, "m_bFinishedSearchingForward", void 0),
-        (0, s.Cg)([o.sH], k.prototype, "m_bFinishedSearchingBackward", void 0),
-        (0, s.Cg)([o.sH], k.prototype, "m_rgCalendarSections", void 0),
-        (0, s.Cg)([o.sH], k.prototype, "m_rgFutureSections", void 0),
-        (0, s.Cg)([o.sH], k.prototype, "m_collectionMetaData", void 0),
-        (0, s.Cg)([o.XI], k.prototype, "InitCalendarSections", null),
-        (0, s.Cg)([o.XI], k.prototype, "InitFutureCalendarSections", null),
-        (0, s.Cg)([o.XI], k.prototype, "RegisterCalendarEventsAndModels", null),
-        (0, s.Cg)([o.XI], k.prototype, "RegisterCalendarApps", null),
-        (0, s.Cg)([o.XI], k.prototype, "RegisterCalendarClans", null),
-        (0, s.Cg)([o.XI], k.prototype, "RegisterReadEvents", null),
-        (0, s.Cg)([o.XI], k.prototype, "RegisterEventVotes", null),
-        (0, s.Cg)([o.XI], k.prototype, "RegisterCalendarEvents", null),
-        (0, s.Cg)([y.o], k.prototype, "BHitEventHorizon", null),
-        (0, s.Cg)([o.XI.bound], k.prototype, "LoadAdditionalEvents", null),
+      (0, s.Cg)([o.sH], b.prototype, "m_mapCalendarAppsByID", void 0),
+        (0, s.Cg)([o.sH], b.prototype, "m_mapCalendarClansByID", void 0),
+        (0, s.Cg)([o.sH], b.prototype, "m_mapCalendarEventsByGid", void 0),
+        (0, s.Cg)([o.sH], b.prototype, "m_rgSortedCalendarEvents", void 0),
+        (0, s.Cg)([o.sH], b.prototype, "m_bFinishedSearchingForward", void 0),
+        (0, s.Cg)([o.sH], b.prototype, "m_bFinishedSearchingBackward", void 0),
+        (0, s.Cg)([o.sH], b.prototype, "m_rgCalendarSections", void 0),
+        (0, s.Cg)([o.sH], b.prototype, "m_rgFutureSections", void 0),
+        (0, s.Cg)([o.sH], b.prototype, "m_collectionMetaData", void 0),
+        (0, s.Cg)([o.XI], b.prototype, "InitCalendarSections", null),
+        (0, s.Cg)([o.XI], b.prototype, "InitFutureCalendarSections", null),
+        (0, s.Cg)([o.XI], b.prototype, "RegisterCalendarEventsAndModels", null),
+        (0, s.Cg)([o.XI], b.prototype, "RegisterCalendarApps", null),
+        (0, s.Cg)([o.XI], b.prototype, "RegisterCalendarClans", null),
+        (0, s.Cg)([o.XI], b.prototype, "RegisterEventVotes", null),
+        (0, s.Cg)([o.XI], b.prototype, "RegisterCalendarEvents", null),
+        (0, s.Cg)([f.o], b.prototype, "BHitEventHorizon", null),
+        (0, s.Cg)([o.XI.bound], b.prototype, "LoadAdditionalEvents", null),
         (0, s.Cg)(
           [o.XI],
-          k.prototype,
+          b.prototype,
           "UpdateEventBlockFromCalendarEvent",
           null,
         );
-      class b {
+      class D {
         constructor(e, t, n, i, s, r) {
           (this.m_rgLoadedEventsBox = o.sH.box([])),
             (this.m_lastLoadLatch = null),
@@ -1036,8 +1030,8 @@
                 ).sort();
                 if (
                   ((this.m_lastLoadLatch = e),
-                  await g.A.Get().QueueMultipleAppRequests(t, {
-                    ..._.jy,
+                  await _.A.Get().QueueMultipleAppRequests(t, {
+                    ...v.jy,
                     include_assets: !0,
                   }),
                   this.m_lastLoadLatch != e)
@@ -1061,19 +1055,19 @@
             if (e.appid) {
               if (
                 !this.m_bAllowMutedAndIgnoredSources &&
-                (B.S.Get().BIsMutedAppID(e.appid) ||
-                  C.Fm.Get().BIsGameIgnored(e.appid))
+                (k.S.Get().BIsMutedAppID(e.appid) ||
+                  w.Fm.Get().BIsGameIgnored(e.appid))
               )
                 return !1;
               if (
                 !this.m_bSkipStorePreferenceCheck &&
-                (0, _.Li)(g.A.Get().GetApp(e.appid))
+                (0, v.Li)(_.A.Get().GetApp(e.appid))
               )
                 return !1;
             } else if (
               !this.m_bAllowMutedAndIgnoredSources &&
-              (B.S.Get().BIsMutedClanID(e.clanid) ||
-                C.Fm.Get().BIsIgnoringCurator(m.b.InitFromClanID(e.clanid)))
+              (k.S.Get().BIsMutedClanID(e.clanid) ||
+                w.Fm.Get().BIsIgnoringCurator(p.b.InitFromClanID(e.clanid)))
             )
               return !1;
             return !0;
@@ -1126,7 +1120,7 @@
         }
         GetActiveEventsAt(e) {
           return this.filteredAndCheckedEvents
-            .map((e) => h.O3.GetClanEventModel(e.unique_id))
+            .map((e) => g.O3.GetClanEventModel(e.unique_id))
             .filter((t) => {
               if (!t || void 0 === t.startTime) return !1;
               const n = t.endTime || t.startTime + 3600;
@@ -1134,11 +1128,11 @@
             });
         }
       }
-      (0, s.Cg)([o.EW.struct], b.prototype, "viewFilteredEvents", null),
-        (0, s.Cg)([o.EW.struct], b.prototype, "filteredAndCheckedEvents", null);
-      const D = o.sH.box(null),
-        T = new Map();
-      function R(e, t) {
+      (0, s.Cg)([o.EW.struct], D.prototype, "viewFilteredEvents", null),
+        (0, s.Cg)([o.EW.struct], D.prototype, "filteredAndCheckedEvents", null);
+      const T = o.sH.box(null),
+        R = new Map();
+      function F(e, t) {
         let n = "";
         return (
           e.appids &&
@@ -1162,18 +1156,18 @@
               e.category_or_language +
               "_" +
               e.tag_name),
-          D.get() !== n && (D.set(n), T.has(n) || T.set(n, new k(e, t))),
+          T.get() !== n && (T.set(n), R.has(n) || R.set(n, new b(e, t))),
           n
         );
       }
-      function F() {
-        let e = D.get();
-        return null == e && (e = R({})), T.get(e);
-      }
       function H() {
-        return null !== D.get();
+        let e = T.get();
+        return null == e && (e = F({})), R.get(e);
       }
-      window.g_EventCalendarMap = T;
+      function j() {
+        return null !== T.get();
+      }
+      window.g_EventCalendarMap = R;
     },
     73964: (e, t, n) => {
       "use strict";
@@ -1244,12 +1238,7 @@
         Init() {
           const e = (0, c.Tc)("mutedcomminfo", "application_config");
           this.ValidateStoreDefault(e) &&
-            (("dev" != c.TS.WEB_UNIVERSE && "beta" != c.TS.WEB_UNIVERSE) ||
-              console.log(
-                "DEV_DEBUG: CMutedCommunicationStore loading bundles payload: " +
-                  JSON.stringify(e),
-              ),
-            e.appids &&
+            (e.appids &&
               e.appids.forEach((e) => this.m_mapBlockedAppIds.set(e, !0)),
             e.clanids &&
               e.clanids.forEach((e) => this.m_mapBlockedClanIds.set(e, !0)));
@@ -1406,7 +1395,7 @@
       n.d(t, { C: () => m });
       var i = n(7850),
         s = n(6144),
-        r = n(28210),
+        r = n(87652),
         a = n(43261),
         o = n(46067),
         l = n(81477),
@@ -1425,38 +1414,39 @@
             const t = this.m_mapEvents.get(e.GID);
             return !t || !t.m_bHasBeenTracked;
           }
-          StartTracking(e, t) {
+          StartTracking(e, t, n) {
             if (e.bOldAnnouncement) return;
-            let n = this.m_mapEvents.get(e.GID);
-            n || ((n = new c()), this.m_mapEvents.set(e.GID, n)),
-              n.m_bHasBeenTracked ||
-                n.m_fnSubmit ||
-                ((n.m_fnSubmit = new s.LU()),
-                n.m_fnSubmit.Schedule(
+            let i = this.m_mapEvents.get(e.GID);
+            i || ((i = new c()), this.m_mapEvents.set(e.GID, i)),
+              i.m_bHasBeenTracked ||
+                i.m_fnSubmit ||
+                ((i.m_fnSubmit = new s.LU()),
+                i.m_fnSubmit.Schedule(
                   this.m_nImpressionDelayMS,
-                  this.ReportImpression.bind(this, e, t),
+                  this.ReportImpression.bind(this, e, t, n),
                 ));
           }
           StopTracking(e) {
             const t = this.m_mapEvents.get(e.GID);
             t && t.m_fnSubmit && (t.m_fnSubmit.Cancel(), (t.m_fnSubmit = null));
           }
-          ReportImpression(e, t) {
-            r.KN.Get().RecordEventShown(e, a.Tc.qC),
+          ReportImpression(e, t, n) {
+            n.RecordEventShown(e, a.Tc.qC),
               t && l.V.RecordViewedEvent((0, o.v0)(), e.GID);
-            const n = this.m_mapEvents.get(e.GID);
-            n &&
-              ((n.m_bHasBeenTracked = !0),
-              n.m_fnSubmit.Cancel(),
-              (n.m_fnSubmit = null));
+            const i = this.m_mapEvents.get(e.GID);
+            i &&
+              ((i.m_bHasBeenTracked = !0),
+              i.m_fnSubmit.Cancel(),
+              (i.m_fnSubmit = null));
           }
         })(),
         m = (e) => {
-          const { event: t } = e;
+          const { event: t } = e,
+            n = (0, r.Y)();
           if (u.ShouldTrack(t)) {
-            const n = () => u.StartTracking(t, e.recordNewsHubStats || !1),
-              s = () => u.StopTracking(t);
-            return (0, i.jsx)(d.Y, { onEnter: n, onLeave: s });
+            const s = () => u.StartTracking(t, e.recordNewsHubStats || !1, n),
+              r = () => u.StopTracking(t);
+            return (0, i.jsx)(d.Y, { onEnter: s, onLeave: r });
           }
           return null;
         };
@@ -1470,7 +1460,7 @@
         a = n.n(r),
         o = n(75844),
         l = n(90626),
-        d = n(28210),
+        d = n(87652),
         c = n(65606),
         u = n(55294),
         m = n(9154),
@@ -1486,12 +1476,17 @@
         C = n(84811);
       const w = (e) => {
         let { bShowOnlyInitialEvent: t } = e;
-        const n = (0, I.Qn)();
+        const n = (0, I.Qn)(),
+          i = (0, d.Y)();
         return (0, s.jsx)(C.tH, {
-          children: (0, s.jsx)(E, { ...e, bShowOnlyInitialEvent: t || n }),
+          children: (0, s.jsx)(A, {
+            ...e,
+            bShowOnlyInitialEvent: t || n,
+            tracker: i,
+          }),
         });
       };
-      let E = class extends l.Component {
+      let A = class extends l.Component {
         constructor() {
           super(...arguments),
             (this.state = { bLoading: !1, eventModel: this.props.eventModel }),
@@ -1555,13 +1550,8 @@
         }
         async HandleReadEvent() {
           const { eventModel: e } = this.state,
-            { trackingLocation: t } = this.props;
-          e &&
-            e.BIsPartnerEvent() &&
-            d.KN.Get()
-              .GetTracker()
-              .MarkEventRead(e.GID, e.clanSteamID.GetAccountID(), t) &&
-            d.KN.Get().GetTracker().Flush();
+            { trackingLocation: t, tracker: n } = this.props;
+          e && e.BIsPartnerEvent() && (n.RecordEventRead(e, t), n.Flush());
         }
         render() {
           const { bShowOnlyInitialEvent: e } = this.props,
@@ -1617,20 +1607,20 @@
               });
         }
       };
-      E = (0, i.Cg)([o.PA], E);
+      A = (0, i.Cg)([o.PA], A);
     },
     99032: (e, t, n) => {
       "use strict";
       n.d(t, {
-        AX: () => f,
-        H2: () => v,
-        Li: () => y,
-        S7: () => h,
-        a9: () => S,
-        jy: () => I,
-        nt: () => _,
-        sd: () => p,
-        tJ: () => g,
+        AX: () => y,
+        H2: () => _,
+        Li: () => I,
+        S7: () => p,
+        a9: () => f,
+        jy: () => v,
+        nt: () => g,
+        sd: () => m,
+        tJ: () => h,
       });
       var i = n(57876),
         s = n(97471),
@@ -1639,13 +1629,12 @@
         o = n(6824),
         l = n(30894),
         d = n(16021),
-        c = n(78327),
-        u = n(62734),
-        m = n(81393);
-      function p(e) {
+        c = n(62734),
+        u = n(81393);
+      function m(e) {
         return d.A.Get().BIsStoreItemMissing(e.id, (0, s.SW)(e.type));
       }
-      function h(e, t, n) {
+      function p(e, t, n) {
         const i = new Array();
         return (
           null == e || e.forEach((e) => i.push({ id: e, type: "game" })),
@@ -1654,7 +1643,7 @@
           i
         );
       }
-      function g(e) {
+      function h(e) {
         var t, n;
         const i = d.A.Get().GetStoreItem(e.id, (0, s.SW)(e.type));
         return (
@@ -1668,10 +1657,10 @@
             : 0) > 0
         );
       }
-      function _(e) {
+      function g(e) {
         var t;
         if (
-          !(null === (t = u.f.Get().GetHomeView()) || void 0 === t
+          !(null === (t = c.f.Get().GetHomeView()) || void 0 === t
             ? void 0
             : t.localized)
         )
@@ -1682,7 +1671,7 @@
           l.Fm.Get().BIsAnyLanguageEnabled(n.GetAllLanguagesWithSomeSupport())
         );
       }
-      async function v(e, t, n) {
+      async function _(e, t, n) {
         if (!e || 0 == e.length) return [];
         const i = e.filter((e) => (0, r.fp)(e.type)).map((e) => e.id),
           s = e.filter((e) => "sub" === e.type).map((e) => e.id),
@@ -1730,17 +1719,17 @@
           return t && !t.GetParentAppID();
         });
       }
-      const I = {
+      const v = {
         include_tag_count: 20,
         include_basic_info: !0,
         include_supported_languages: !0,
       };
-      function y(e) {
+      function I(e) {
         var t;
         if (!e) return !0;
         const n = l.Fm.Get();
         if (
-          ((0, m.wT)(n.BIsLoaded(), "Dynamic Store not loaded"),
+          ((0, u.wT)(n.BIsLoaded(), "Dynamic Store not loaded"),
           e.GetStoreItemType() == o.c6.qI)
         ) {
           const t = e.GetParentAppID();
@@ -1756,7 +1745,7 @@
         if (e.GetAllCreatorClanIDs().some((e) => n.BIsIgnoringCurator(e)))
           return !0;
         if (
-          null === (t = u.f.Get().GetHomeView()) || void 0 === t
+          null === (t = c.f.Get().GetHomeView()) || void 0 === t
             ? void 0
             : t.localized
         ) {
@@ -1770,49 +1759,36 @@
         }
         return !1;
       }
-      async function f(e, t, n, r) {
-        let a = 0,
-          o = 0;
-        const u = [];
-        await v(e, i.Xh, t);
+      async function y(e, t, n, r) {
+        const a = [];
+        await _(e, i.Xh, t);
         for (const i of e) {
           const e = d.A.Get().GetStoreItem(i.id, (0, s.SW)(i.type));
           if (!e) {
-            a++;
+            0;
             continue;
           }
-          const c = e
+          const o = e
             .GetIncludedAppIDs()
             .map((e) => d.A.Get().GetApp(e))
             .filter((e) => Boolean(e));
-          if ((c.push(e), t)) {
+          if ((o.push(e), t)) {
             const e = new Set(
-                c.map((e) => e.GetParentAppID()).filter((e) => Boolean(e)),
+                o.map((e) => e.GetParentAppID()).filter((e) => Boolean(e)),
               ),
               t = Array.from(e)
                 .map((e) => d.A.Get().GetApp(e))
                 .filter((e) => Boolean(e));
-            t && c.push(...t);
+            t && o.push(...t);
           }
-          c.some(r || y)
-            ? (o++, n && (l.Fm.Get().BIsStoreItemOwned(e) || n.push(i)))
-            : u.push(i);
+          o.some(r || I)
+            ? n && (l.Fm.Get().BIsStoreItemOwned(e) || n.push(i))
+            : a.push(i);
         }
-        return (
-          "dev" === c.TS.WEB_UNIVERSE &&
-            0 === u.length &&
-            console.log(
-              "ApplyStorePreferenceFilters: " +
-                a +
-                " failed to load, " +
-                o +
-                " hidden by user filter.",
-            ),
-          u
-        );
+        return a;
       }
-      async function S(e, t, n, i, r, a, o) {
-        let c = await f(
+      async function f(e, t, n, i, r, a, o) {
+        let c = await y(
           e,
           t,
           o,
@@ -1823,7 +1799,7 @@
                   e.GetContentDescriptorIDs(),
                 ) ||
                 l.Fm.Get().BExcludeTagIDs(e.GetTagIDs())
-            : y,
+            : I,
         );
         const u = [];
         for (const e of c) {

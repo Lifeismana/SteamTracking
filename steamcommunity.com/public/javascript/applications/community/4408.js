@@ -124,7 +124,7 @@
                 })
               : (0, t.jsx)("div", {
                   className: (0, u.A)(d.reserverow),
-                  children: (0, t.jsx)(g.vU, {
+                  children: (0, t.jsx)(g.v, {
                     label: m.F5.Localize("#Reservation_Pool_NotSignedIn"),
                     strDialogDesc: m.F5.Localize(
                       "#Reservation_Pool_NotSignedIn_Desc",

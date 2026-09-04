@@ -515,7 +515,7 @@
     "EventDisplay_Share_OnMyStatus_Placeholder": "Popište tento odkaz svým přátelům...",
     "EventDisplay_Share_OnSteam": "Sdílet v komunitě služby Steam jako status",
     "EventDisplay_Share_OnFaceBook": "Sdílet na Facebooku",
-    "EventDisplay_Share_OnTwitter": "Sdílet na Twitteru",
+    "EventDisplay_Share_OnTwitter": "Sdílet na platformě X (Twitter)",
     "EventDisplay_Share_OnReddit": "Sdílet na Redditu",
     "EventDisplay_Share_Success": "Povedlo se!",
     "EventDisplay_Share_Failure": "Došlo k následující chybě: ",
@@ -4154,5 +4154,6 @@
     "GamePerformance_Reason": "Důvod",
     "GamePerformance_NumResponses": "Počet odpovědí",
     "NewToolTitleSuffix_Beta": "BETA",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "SteamMachine_TestResult_MultiWindowAppAutomaticallySetsFocus": "Produkt využívá více oken a může vyžadovat ruční přepínání mezi nimi skrze překrytí služby Steam."
 }

@@ -45,18 +45,18 @@
         g = a(17720),
         m = a(6626),
         p = a(68255),
-        _ = a(9154),
-        S = a(738),
-        v = a(12155),
+        v = a(9154),
+        _ = a(738),
+        S = a(12155),
         f = a(22797),
         C = a(56011),
         x = a(61859),
         I = a(68797),
         j = a(78327),
         A = a(22517),
-        E = a(88997),
-        b = a(67165),
-        M = a(60155),
+        b = a(88997),
+        M = a(67165),
+        E = a(60155),
         w = a(84811),
         T = a(64641),
         D = a(41338),
@@ -91,10 +91,10 @@
                   const e = l().CancelToken.source();
                   o.current = e.cancel;
                   try {
-                    const a = await b.pF.SearchCreatorHomeStore(t, r, e);
+                    const a = await M.pF.SearchCreatorHomeStore(t, r, e);
                     if (e.token.reason) return;
-                    i.current = (0, E.lX)(
-                      (0, n.jsx)(N, { list: a, fnSetCurator: s }),
+                    i.current = (0, b.lX)(
+                      (0, n.jsx)(G, { list: a, fnSetCurator: s }),
                       d.current.element,
                       {
                         bOverlapHorizontal: !0,
@@ -130,13 +130,13 @@
             }),
           });
         },
-        N = (e) => {
+        G = (e) => {
           const { list: t, fnSetCurator: a } = e;
-          return (0, n.jsx)(M.tz, {
+          return (0, n.jsx)(E.tz, {
             className: L.SearchResults,
             children: t.map((e) =>
               (0, n.jsx)(
-                M.kt,
+                E.kt,
                 {
                   onSelected: () => a(e),
                   children: (0, n.jsxs)("div", {
@@ -158,8 +158,8 @@
             ),
           });
         };
-      var R = a(94333);
-      const G = (0, d.PA)((e) => {
+      var N = a(94333);
+      const R = (0, d.PA)((e) => {
           const t = (function () {
             const [e, t] = u.useState(!k.Get().BHasLoadCompleted());
             return (
@@ -229,7 +229,7 @@
                   (0, n.jsx)("span", { children: " " }),
                   (0, n.jsx)(p.$n, {
                     onClick: () => o(!r),
-                    children: r ? (0, n.jsx)(v.hz4, {}) : (0, n.jsx)(v.Xjb, {}),
+                    children: r ? (0, n.jsx)(S.hz4, {}) : (0, n.jsx)(S.Xjb, {}),
                   }),
                 ],
               }),
@@ -292,7 +292,7 @@
                   Boolean(!t.gid_clan_event || (t.hidden && !t.published)) &&
                     (0, n.jsx)(p.$n, {
                       onClick: (e) =>
-                        (0, S.pg)((0, n.jsx)(P, { record: t }), (0, C.uX)(e)),
+                        (0, _.pg)((0, n.jsx)(P, { record: t }), (0, C.uX)(e)),
                       children: "Migrate Sale Page",
                     }),
                 ],
@@ -308,8 +308,8 @@
             [l, c] = (0, u.useState)(void 0),
             [d, h] = (0, u.useState)(!1),
             [m, p] = (0, u.useState)(t.gid_clan_event),
-            [S, v] = (0, u.useState)(null);
-          return (0, n.jsxs)(_.o0, {
+            [_, S] = (0, u.useState)(null);
+          return (0, n.jsxs)(v.o0, {
             strTitle: "Migrate Sale page",
             strDescription: `Will migrate the sale page ${t.vanity} to the below clan `,
             bOKDisabled: !s || o,
@@ -348,10 +348,10 @@
                         strToolTip:
                           "Partner Event sales must belong to a creator home (which is a curator with games associated to it from the partner site)",
                         fnSetCurator: (e) => {
-                          r(e.GetClanAccountID()), v(e);
+                          r(e.GetClanAccountID()), S(e);
                         },
                       }),
-                      Boolean(S) && (0, n.jsx)(O, { creatorHome: S }),
+                      Boolean(_) && (0, n.jsx)(O, { creatorHome: _ }),
                     ],
                   }),
               Boolean(o && !l) &&
@@ -418,7 +418,7 @@
                         }),
                       ],
                     }),
-                  (0, n.jsx)(R.hA, {
+                  (0, n.jsx)(N.hA, {
                     creatorID: t.GetCreatorHomeIdentifier(),
                     bHideCreatorType: !0,
                   }),
@@ -558,13 +558,7 @@
           return [];
         }
         static Get() {
-          return (
-            k.s_Singleton ||
-              ((k.s_Singleton = new k()),
-              ("dev" != j.TS.WEB_UNIVERSE && "beta" != j.TS.WEB_UNIVERSE) ||
-                (window.g_MigrateSaleStore = k.s_Singleton)),
-            k.s_Singleton
-          );
+          return k.s_Singleton || (k.s_Singleton = new k()), k.s_Singleton;
         }
         constructor() {
           (this.m_mapSaleIDToInfo = new Map()),
@@ -576,8 +570,8 @@
       }
       (0, o.Cg)([c.sH], k.prototype, "m_mapSaleIDToInfo", void 0),
         (0, o.Cg)([c.sH], k.prototype, "m_listSaleState", void 0);
-      var U = a(4796),
-        F = a(28210),
+      var F = a(4796),
+        U = a(82429),
         z = a(95034);
       class q {
         constructor() {
@@ -703,29 +697,29 @@
       var Y = a(6503),
         $ = a(80778),
         Q = a.n($),
-        V = a(22837);
-      const K = (0, d.PA)((e) => {
+        K = a(22837);
+      const V = (0, d.PA)((e) => {
           const [t, a] = (0, u.useState)(!0);
           (0, u.useEffect)(() => {
-            Promise.all([F.KN.InitGlobal(), r.mh.Init()]).then(() => a(!1));
+            Promise.all([U.KN.InitGlobal(), r.mh.Init()]).then(() => a(!1));
           }, []);
           const [s, o] = (0, z.QD)("start", 0),
             [i, l] = (0, z.QD)("start_appid", 0),
             [c, d] = (0, z.QD)("count", 10),
             [h, g] = (0, z.QD)("autoload", !0),
             [m, p] = (0, z.QD)("batch_size", 1),
-            [_, S] = (0, z.QD)("automigrate", !1),
-            [v, C] = (0, u.useState)(!1),
+            [v, _] = (0, z.QD)("automigrate", !1),
+            [S, C] = (0, u.useState)(!1),
             [x, I] = (0, z.QD)("rolling", 0),
             [j, A] = (0, u.useState)(new Set()),
-            E = (0, u.useRef)(0),
-            b = q.Get().GetApps(s, c, i),
-            M = 0 == x ? b : b.filter((e) => !j.has(Number(e.id))).slice(0, x),
+            b = (0, u.useRef)(0),
+            M = q.Get().GetApps(s, c, i),
+            E = 0 == x ? M : M.filter((e) => !j.has(Number(e.id))).slice(0, x),
             w = (e, t) => {
               j.has(e) ||
                 (console.log("completed: ", e, t),
                 j.add(e),
-                (E.current += t),
+                (b.current += t),
                 A(new Set(j)));
             };
           return (0, n.jsxs)("div", {
@@ -735,13 +729,13 @@
                 className: Q().ToolHeader,
                 children: "Partner Events Migration Tools",
               }),
-              M.map((e) =>
+              E.map((e) =>
                 (0, n.jsx)(
                   W,
                   {
                     app: e,
                     bAutoLoad: h,
-                    bAutoMigrate: _ || v,
+                    bAutoMigrate: v || S,
                     nMigrateBatchSize: m,
                     fnOnCompletion: w,
                   },
@@ -754,7 +748,7 @@
                   position: "center",
                   string: "initializing",
                 }),
-              !b.length &&
+              !M.length &&
                 (0, n.jsx)(f.t, {
                   size: "xlarge",
                   position: "center",
@@ -767,7 +761,7 @@
                 },
                 children: "LOAD NEXT PAGE",
               }),
-              !_ &&
+              !v &&
                 (0, n.jsx)("div", {
                   className: Q().LoadEventsButton,
                   onClick: () => C(!0),
@@ -778,9 +772,9 @@
                 children:
                   j.size +
                   " OF " +
-                  b.length +
+                  M.length +
                   " APPS COMPLETE. #EVENTS: " +
-                  E.current,
+                  b.current,
               }),
             ],
           });
@@ -793,7 +787,7 @@
             d = (0, u.useRef)(new Set()),
             h = (0, u.useRef)(0);
           (0, u.useEffect)(() => {
-            U.ac.LoadOGGClanInfoForAppID(t).then((e) => {
+            F.ac.LoadOGGClanInfoForAppID(t).then((e) => {
               var a;
               return console.log(
                 "Loaded app",
@@ -806,36 +800,36 @@
               );
             });
           }, [t]);
-          const g = U.ac.GetOGGClanInfo(t),
+          const g = F.ac.GetOGGClanInfo(t),
             m = g ? g.group_name : e.app.name,
             p = `${j.TS.COMMUNITY_BASE_URL}games/${g ? g.vanity_url : t}/partnerevents/`,
-            _ = o.length,
-            S = a == _,
-            v = o.filter((e) => e.BIsVisibleEvent()),
-            C = v.length,
-            x = v.filter(
+            v = o.length,
+            _ = a == v,
+            S = o.filter((e) => e.BIsVisibleEvent()),
+            C = S.length,
+            x = S.filter(
               (e) =>
                 e.bOldAnnouncement &&
                 g &&
                 g.clanAccountID != e.announcementClanSteamID.GetAccountID(),
             ).length,
-            A = v.filter(
+            A = S.filter(
               (e) =>
                 e.bOldAnnouncement &&
                 !d.current.has(e.AnnouncementGID) &&
                 (!g ||
                   g.clanAccountID == e.announcementClanSteamID.GetAccountID()),
             ),
-            E = A.length,
-            b = !S && E > 0 && (null == g ? void 0 : g.clanSteamID),
-            M = async () => {
+            b = A.length,
+            M = !_ && b > 0 && (null == g ? void 0 : g.clanSteamID),
+            E = async () => {
               const e = a;
               s(a + 50), c(!0);
               const n = await r.mh.LoadPartnerEventsPageable(void 0, t, e, 50);
               i(o.concat(n)), c(!1);
             };
           (0, u.useEffect)(() => {
-            e.bAutoLoad && S && !l && M();
+            e.bAutoLoad && _ && !l && E();
           });
           const w = (e, t) => {
               t ? (h.current += 1) : d.current.add(e);
@@ -848,7 +842,7 @@
                       "Migrating",
                       a,
                       o.AnnouncementGID,
-                      o.GetNameWithFallback(V.Bhc),
+                      o.GetNameWithFallback(K.Bhc),
                       o,
                     );
                     try {
@@ -878,10 +872,10 @@
             };
           return (
             (0, u.useEffect)(() => {
-              e.bAutoMigrate && b && !l && T();
+              e.bAutoMigrate && M && !l && T();
             }),
             (0, u.useEffect)(() => {
-              S || b || l || e.fnOnCompletion(t, h.current);
+              _ || M || l || e.fnOnCompletion(t, h.current);
             }),
             (0, n.jsxs)("div", {
               className: Q().ClanRow,
@@ -895,7 +889,7 @@
                 (0, n.jsxs)("div", {
                   className: Q().Counts,
                   children: [
-                    `Loaded: ${_}\tVisible: ${C}\tOld: ${E}`,
+                    `Loaded: ${v}\tVisible: ${C}\tOld: ${b}`,
                     x > 0 &&
                       (0, n.jsx)("span", {
                         className: Q().LinkedAnnouncements,
@@ -903,15 +897,15 @@
                       }),
                   ],
                 }),
-                S
+                _
                   ? (0, n.jsx)("div", {
                       className: Q().LoadEventsButton,
-                      onClick: M,
+                      onClick: E,
                       children: "LOAD EVENTS",
                     })
                   : l
                     ? (0, n.jsx)(f.t, { size: "small" })
-                    : b
+                    : M
                       ? (0, n.jsx)("div", {
                           className: Q().MigrateEventsButton,
                           onClick: T,
@@ -940,11 +934,11 @@
                 children: [
                   (0, n.jsx)(X.qh, {
                     path: s.mQ.MigrateSaleEvents(),
-                    component: G,
+                    component: R,
                   }),
                   (0, n.jsx)(X.qh, {
                     path: s.mQ.MigrateEvents(),
-                    component: K,
+                    component: V,
                   }),
                   (0, n.jsx)(X.qh, { component: J.a }),
                 ],

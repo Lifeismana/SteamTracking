@@ -4154,5 +4154,6 @@
     "GamePerformance_Reason": "Begrundelse",
     "GamePerformance_NumResponses": "Svar",
     "NewToolTitleSuffix_Beta": "BETA",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "SteamMachine_TestResult_MultiWindowAppAutomaticallySetsFocus": "Dette spil bruger flere vinduer, og du skal muligvis manuelt bringe relevante vinduer i fokus via Steam-overlayet"
 }

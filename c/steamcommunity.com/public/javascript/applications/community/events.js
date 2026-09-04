@@ -289,13 +289,14 @@
                             children: __webpack_require__
                               .slice(0, _)
                               .map((_) => {
-                                const _ = _
-                                  ? (_) => {
-                                      _(_),
-                                        _.stopPropagation(),
-                                        _.preventDefault();
-                                    }
-                                  : void 0;
+                                const _ =
+                                  _ && !(0, _._)()
+                                    ? (_) => {
+                                        _(_),
+                                          _.stopPropagation(),
+                                          _.preventDefault();
+                                      }
+                                    : void 0;
                                 return (0, _.jsx)(
                                   _._,
                                   {

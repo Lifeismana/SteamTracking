@@ -4154,5 +4154,6 @@
     "GamePerformance_Reason": "Syy",
     "GamePerformance_NumResponses": "Vastausten lukumäärä",
     "NewToolTitleSuffix_Beta": "BETA",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "SteamMachine_TestResult_MultiWindowAppAutomaticallySetsFocus": "Peli käyttää useampaa ikkunaa, ja saatat joutua tarkentamaan ikkunat manuaalisesti Steam-yhteisönäkymän avulla."
 }

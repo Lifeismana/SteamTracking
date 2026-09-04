@@ -4154,5 +4154,6 @@
     "GamePerformance_Reason": "Motivo",
     "GamePerformance_NumResponses": "Nº de respostas",
     "NewToolTitleSuffix_Beta": "BETA",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "SteamMachine_TestResult_MultiWindowAppAutomaticallySetsFocus": "O jogo usa múltiplas janelas e pode ser necessário trocar para a janela apropriada manualmente usando o Painel Steam."
 }

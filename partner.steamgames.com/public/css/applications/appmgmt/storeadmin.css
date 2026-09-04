@@ -1566,16 +1566,22 @@ video._1W2-3_i4cuGzBmocT-ZAk5.QRTy6qng-IEOMiXMxwVtY {
   display: inline;
   font-style: italic;
 }
-p._3lnqGBzYap-Z2T81XBiBUU {
+p._3lnqGBzYap-Z2T81XBiBUU,
+div._3lnqGBzYap-Z2T81XBiBUU {
   margin: 0.5em 0;
 }
 ._DE_6XhnSqABczbJ55rNJ p._3lnqGBzYap-Z2T81XBiBUU,
 ._2Hj1tfDjpLvBVTHTqAVcYB p._3lnqGBzYap-Z2T81XBiBUU,
-.syKgzmlrcUIJHIBfWsn4h p._3lnqGBzYap-Z2T81XBiBUU {
+.syKgzmlrcUIJHIBfWsn4h p._3lnqGBzYap-Z2T81XBiBUU,
+._DE_6XhnSqABczbJ55rNJ div._3lnqGBzYap-Z2T81XBiBUU,
+._2Hj1tfDjpLvBVTHTqAVcYB div._3lnqGBzYap-Z2T81XBiBUU,
+.syKgzmlrcUIJHIBfWsn4h div._3lnqGBzYap-Z2T81XBiBUU {
   margin: 0;
 }
 th > p._3lnqGBzYap-Z2T81XBiBUU:first-child,
-td > p._3lnqGBzYap-Z2T81XBiBUU:first-child {
+td > p._3lnqGBzYap-Z2T81XBiBUU:first-child,
+th > div._3lnqGBzYap-Z2T81XBiBUU:first-child,
+td > div._3lnqGBzYap-Z2T81XBiBUU:first-child {
   margin-top: 0;
   margin-bottom: 0;
 }

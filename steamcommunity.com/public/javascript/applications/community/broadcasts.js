@@ -49,28 +49,38 @@
         NameAndProps: "_3PljhCwFW7qZ0qu22k7frk",
       };
     },
-    35261: (e, t, s) => {
+    43047: (e) => {
+      e.exports = {
+        narrowWidth: "500px",
+        avatarHolder: "nibodjvvrm86uCfnnAn4g",
+        avatarStatus: "_3xUpb5DWXPFNcHHIcv-9pe",
+        avatar: "_3h-QRJGxnVOIExtHD1R0f2",
+        avatarFrame: "X_mJE4BYV5StDPwZhSiAu",
+        avatarFrameImg: "_3fM0F85j3aWVzr4RJM9-eu",
+      };
+    },
+    35261: (e, t, a) => {
       "use strict";
-      s.r(t), s.d(t, { default: () => Ce });
-      var a = s(7850),
-        n = (s(64641), s(90626)),
-        r = s(92757),
-        i = s(97058),
-        o = s(41735),
-        d = s.n(o),
-        c = s(34629),
-        l = s(14947),
-        u = s(37085),
-        m = s(17720),
-        h = s(54728),
-        _ = s(68797),
-        p = s(78327);
-      class v {
+      a.r(t), a.d(t, { default: () => xe });
+      var s = a(7850),
+        r = (a(64641), a(90626)),
+        n = a(92757),
+        i = a(97058),
+        o = a(41735),
+        l = a.n(o),
+        d = a(34629),
+        c = a(14947),
+        m = a(37085),
+        u = a(17720),
+        h = a(54728),
+        p = a(68797),
+        A = a(78327);
+      class _ {
         constructor() {
           (this.m_bShowOnlyVideo = !1),
             (this.m_bShowOnlyChat = !1),
             (this.m_curDebugInfo = null),
-            (0, l.Gn)(this);
+            (0, c.Gn)(this);
         }
         GetBroadcasterSteamID() {
           return this.m_steamid;
@@ -88,55 +98,55 @@
           return this.m_bShowOnlyChat || this.m_bShowOnlyVideo;
         }
         async LoadBroadcastDebugInfo(e) {
-          let t = p.TS.COMMUNITY_BASE_URL + "broadcast/broadcastdebuginfo",
-            s = {
+          let t = A.TS.COMMUNITY_BASE_URL + "broadcast/broadcastdebuginfo",
+            a = {
               steamid: this.m_steamid.ConvertTo64BitString(),
               origin: self.origin,
             };
           try {
-            let a = await d().get(t, {
-              params: s,
+            let s = await l().get(t, {
+              params: a,
               withCredentials: !0,
               cancelToken: e ? e.token : void 0,
             });
             if (e && e.token.reason) return null;
-            if (a && 200 == a.status && a.data && a.data.success == u.R)
-              return (this.m_curDebugInfo = a.data), this.m_curDebugInfo;
+            if (s && 200 == s.status && s.data && s.data.success == m.R)
+              return (this.m_curDebugInfo = s.data), this.m_curDebugInfo;
           } catch (e) {
-            let t = (0, _.H)(e);
+            let t = (0, p.H)(e);
             console.error("LoadBroadcastDebugInfo: Failed " + t.strErrorMsg, t);
           }
           return null;
         }
-        async UpdateBroadcastSettings(e, t, s) {
-          let a = p.TS.COMMUNITY_BASE_URL + "broadcast/updatebroadcastsettings",
-            n = {
+        async UpdateBroadcastSettings(e, t, a) {
+          let s = A.TS.COMMUNITY_BASE_URL + "broadcast/updatebroadcastsettings",
+            r = {
               steamid: this.m_steamid.ConvertTo64BitString(),
               matchid: e,
               title: t,
-              sessionid: (0, p.KC)(),
+              sessionid: (0, A.KC)(),
             };
           try {
-            let e = await d().get(a, {
-              params: n,
+            let e = await l().get(s, {
+              params: r,
               withCredentials: !0,
-              cancelToken: s ? s.token : void 0,
+              cancelToken: a ? a.token : void 0,
             });
-            if (s && s.token.reason) return !1;
-            if (e && 200 == e.status && e.data && e.data.success == u.R) {
+            if (a && a.token.reason) return !1;
+            if (e && 200 == e.status && e.data && e.data.success == m.R) {
               const e = h.es.GetOrCreateBroadcastInfo(
                 this.m_steamid.ConvertTo64BitString(),
               );
               return (
                 e &&
-                  (0, l.h5)(() => {
+                  (0, c.h5)(() => {
                     e.m_strTitle = t;
                   }),
                 !0
               );
             }
           } catch (e) {
-            let t = (0, _.H)(e);
+            let t = (0, p.H)(e);
             console.error(
               "UpdateBroadcastSettings: Failed " + t.strErrorMsg,
               t,
@@ -146,100 +156,100 @@
         }
         async StopBroadcast(e) {
           const t = this.m_steamid.ConvertTo64BitString(),
-            s = h.es.GetBroadcast(t);
-          let a = p.TS.COMMUNITY_BASE_URL + "broadcast/stopbroadcast",
-            n = {
+            a = h.es.GetBroadcast(t);
+          let s = A.TS.COMMUNITY_BASE_URL + "broadcast/stopbroadcast",
+            r = {
               steamid: t,
-              broadcastid: s ? s.m_ulBroadcastID : null,
-              sessionid: (0, p.KC)(),
+              broadcastid: a ? a.m_ulBroadcastID : null,
+              sessionid: (0, A.KC)(),
             };
           return await this.InternalSendSimpleGetRequest(
             "StopBroadcast",
-            a,
-            n,
+            s,
+            r,
             e,
           );
         }
-        async SetBroadcasterRestrictions(e, t, s) {
-          const a = this.m_steamid.ConvertTo64BitString(),
-            n = h.es.GetBroadcast(a);
-          let r = p.TS.COMMUNITY_BASE_URL + "broadcast/setbroadcastrestriction",
+        async SetBroadcasterRestrictions(e, t, a) {
+          const s = this.m_steamid.ConvertTo64BitString(),
+            r = h.es.GetBroadcast(s);
+          let n = A.TS.COMMUNITY_BASE_URL + "broadcast/setbroadcastrestriction",
             i = {
-              steamid: a,
-              broadcastid: n ? n.m_ulBroadcastID : null,
+              steamid: s,
+              broadcastid: r ? r.m_ulBroadcastID : null,
               type: e,
               days: t,
-              sessionid: (0, p.KC)(),
+              sessionid: (0, A.KC)(),
             };
           return await this.InternalSendSimpleGetRequest(
             "SetBroadcasterRestrictions",
-            r,
+            n,
             i,
-            s,
+            a,
           );
         }
         async SetUnBannable(e) {
           const t = this.m_steamid.ConvertTo64BitString(),
-            s = h.es.GetBroadcast(t);
-          let a = p.TS.COMMUNITY_BASE_URL + "broadcast/unban",
-            n = {
+            a = h.es.GetBroadcast(t);
+          let s = A.TS.COMMUNITY_BASE_URL + "broadcast/unban",
+            r = {
               steamid: t,
-              broadcastid: s ? s.m_ulBroadcastID : null,
-              sessionid: (0, p.KC)(),
+              broadcastid: a ? a.m_ulBroadcastID : null,
+              sessionid: (0, A.KC)(),
             };
           return await this.InternalSendSimpleGetRequest(
             "SetUnBannable",
-            a,
-            n,
+            s,
+            r,
             e,
           );
         }
         async SendUserReportOnBroadcast(e) {
           const t = this.m_steamid.ConvertTo64BitString(),
-            s = h.es.GetBroadcast(t);
-          let a = p.TS.COMMUNITY_BASE_URL + "broadcast/report",
-            n = {
+            a = h.es.GetBroadcast(t);
+          let s = A.TS.COMMUNITY_BASE_URL + "broadcast/report",
+            r = {
               steamid: t,
-              broadcastid: s ? s.m_ulBroadcastID : null,
+              broadcastid: a ? a.m_ulBroadcastID : null,
               description: e,
-              sessionid: (0, p.KC)(),
+              sessionid: (0, A.KC)(),
             };
           return await this.InternalSendSimpleGetRequest(
             "SendUserReportOnBroadcast",
-            a,
-            n,
+            s,
+            r,
             null,
           );
         }
-        async InternalSendSimpleGetRequest(e, t, s, a) {
+        async InternalSendSimpleGetRequest(e, t, a, s) {
           try {
-            let e = await d().get(t, {
-              params: s,
+            let e = await l().get(t, {
+              params: a,
               withCredentials: !0,
-              cancelToken: a ? a.token : void 0,
+              cancelToken: s ? s.token : void 0,
             });
-            if (a && a.token.reason) return !1;
-            if (e && 200 == e.status && e.data && e.data.success == u.R)
+            if (s && s.token.reason) return !1;
+            if (e && 200 == e.status && e.data && e.data.success == m.R)
               return !0;
           } catch (t) {
-            let s = (0, _.H)(t);
+            let a = (0, p.H)(t);
             console.error(
-              `CCommunityBroadcastStore:${e}: Failed ` + s.strErrorMsg,
-              s,
+              `CCommunityBroadcastStore:${e}: Failed ` + a.strErrorMsg,
+              a,
             );
           }
           return !1;
         }
         static Get() {
           return (
-            v.s_Singleton || ((v.s_Singleton = new v()), v.s_Singleton.Init()),
-            v.s_Singleton
+            _.s_Singleton || ((_.s_Singleton = new _()), _.s_Singleton.Init()),
+            _.s_Singleton
           );
         }
         Init() {
-          let e = (0, p.Tc)("broadcastsinfo", "application_config");
+          let e = (0, A.Tc)("broadcastsinfo", "application_config");
           this.ValidateStoreDefault(e) &&
-            ((this.m_steamid = new m.b(e.steamid)),
+            ((this.m_steamid = new u.b(e.steamid)),
             (this.m_bShowOnlyChat = Boolean(e.show_only_chat)),
             (this.m_bShowOnlyVideo = Boolean(e.show_only_video)));
         }
@@ -247,233 +257,233 @@
           return !(!e || "object" != typeof e) && "string" == typeof e.steamid;
         }
       }
-      (0, c.Cg)([l.sH], v.prototype, "m_curDebugInfo", void 0);
-      var x = s(75844),
-        S = s(39606),
-        j = s(67397),
-        g = s(53120),
-        C = s.n(g),
-        B = s(55815),
-        b = s(43261),
-        f = s(34010),
-        w = s(4796),
-        I = s(68255),
-        y = s(84811),
-        D = s(87057),
-        T = s(95034),
-        A = s(95695),
-        N = s.n(A),
-        k = s(41399),
-        G = s(9154),
-        O = s(738),
-        R = s(52038),
-        U = s(56011),
-        E = s(61859),
-        M = s(14932),
-        H = s(34121),
-        P = s(82227),
-        V = s(17337);
-      const L = (e) => {
-          const t = (0, n.useRef)(null),
-            [s, r] = (0, n.useState)(null);
+      (0, d.Cg)([c.sH], _.prototype, "m_curDebugInfo", void 0);
+      var B = a(75844),
+        v = a(39606),
+        S = a(67397),
+        g = a(53120),
+        x = a.n(g),
+        j = a(55815),
+        C = a(43261),
+        f = a(34010),
+        b = a(4796),
+        w = a(68255),
+        I = a(84811),
+        D = a(87057),
+        T = a(95034),
+        E = a(95695),
+        N = a.n(E),
+        y = a(41399),
+        Q = a(9154),
+        U = a(738),
+        R = a(52038),
+        k = a(56011),
+        G = a(61859),
+        H = a(14932),
+        M = a(34121),
+        O = a(82227),
+        P = a(17337);
+      const F = (e) => {
+          const t = (0, r.useRef)(null),
+            [a, n] = (0, r.useState)(null);
           return (
-            (0, n.useEffect)(
+            (0, r.useEffect)(
               () => () => {
                 t.current && t.current("BroadcastDebugSection: unmounting");
               },
               [],
             ),
-            (0, a.jsx)(y.tH, {
-              children: (0, a.jsxs)("div", {
-                className: (0, R.A)(V.Container),
+            (0, s.jsx)(I.tH, {
+              children: (0, s.jsxs)("div", {
+                className: (0, R.A)(P.Container),
                 children: [
-                  (0, a.jsx)("div", {
-                    className: V.Controls,
-                    children: (0, a.jsx)(I.$n, {
+                  (0, s.jsx)("div", {
+                    className: P.Controls,
+                    children: (0, s.jsx)(w.$n, {
                       onClick: async () => {
                         t.current && t.current();
-                        const e = d().CancelToken.source();
+                        const e = l().CancelToken.source();
                         (t.current = e.cancel),
-                          r(await v.Get().LoadBroadcastDebugInfo(e));
+                          n(await _.Get().LoadBroadcastDebugInfo(e));
                       },
                       children: "(VO) Load Debug Info",
                     }),
                   }),
-                  (0, a.jsx)(y.tH, { children: (0, a.jsx)(q, { info: s }) }),
+                  (0, s.jsx)(I.tH, { children: (0, s.jsx)(L, { info: a }) }),
                 ],
               }),
             })
           );
         },
-        q = (e) => {
+        L = (e) => {
           var t;
-          const { info: s } = e,
-            [r, i] = (0, n.useState)(!1);
-          if (!s) return null;
-          const o = v.Get().GetBroadcasterSteamID().ConvertTo64BitString(),
-            d = h.es.GetBroadcast(o);
-          return (0, a.jsxs)("div", {
-            className: V.DisplaySection,
+          const { info: a } = e,
+            [n, i] = (0, r.useState)(!1);
+          if (!a) return null;
+          const o = _.Get().GetBroadcasterSteamID().ConvertTo64BitString(),
+            l = h.es.GetBroadcast(o);
+          return (0, s.jsxs)("div", {
+            className: P.DisplaySection,
             children: [
-              Boolean(s.last_error_result && s.last_error_result != u.R) &&
-                (0, a.jsxs)("div", {
-                  className: V.SubSection,
+              Boolean(a.last_error_result && a.last_error_result != m.R) &&
+                (0, s.jsxs)("div", {
+                  className: P.SubSection,
                   children: [
-                    (0, a.jsx)("div", {
-                      className: V.Header,
+                    (0, s.jsx)("div", {
+                      className: P.Header,
                       children: "Error",
                     }),
-                    (0, a.jsxs)("div", {
+                    (0, s.jsxs)("div", {
                       children: [
                         "EResult: ",
-                        s.last_error_result,
+                        a.last_error_result,
                         ", occurred ",
-                        s.last_error_time,
+                        a.last_error_time,
                         " - ",
-                        (0, a.jsx)(H.K4, {
-                          dateAndTime: s.last_error_time,
+                        (0, s.jsx)(M.K4, {
+                          dateAndTime: a.last_error_time,
                           bSingleLine: !0,
                         }),
                       ],
                     }),
                   ],
                 }),
-              (0, a.jsxs)("div", {
-                className: V.SubSection,
+              (0, s.jsxs)("div", {
+                className: P.SubSection,
                 children: [
-                  (0, a.jsx)("div", {
-                    className: V.Header,
+                  (0, s.jsx)("div", {
+                    className: P.Header,
                     children: "Broadcast Setup",
                   }),
-                  (0, a.jsxs)("div", {
-                    children: ["Broadcaster: ", s.steam_id, ", SteamID: ", o],
+                  (0, s.jsxs)("div", {
+                    children: ["Broadcaster: ", a.steam_id, ", SteamID: ", o],
                   }),
-                  (0, a.jsxs)("div", {
+                  (0, s.jsxs)("div", {
                     children: [
                       "Directory Server: ",
-                      s.directory_server,
+                      a.directory_server,
                       ", SessionID: ",
-                      s.broadcast_id,
+                      a.broadcast_id,
                     ],
                   }),
-                  (0, a.jsxs)("div", {
+                  (0, s.jsxs)("div", {
                     children: [
                       "Ingester Server: ",
-                      s.relay_server,
+                      a.relay_server,
                       ", UploadID: ",
-                      s.upload_id,
+                      a.upload_id,
                     ],
                   }),
-                  (0, a.jsxs)("div", {
-                    children: ["Origin Server: ", s.origin_server],
+                  (0, s.jsxs)("div", {
+                    children: ["Origin Server: ", a.origin_server],
                   }),
-                  (0, a.jsxs)("div", {
+                  (0, s.jsxs)("div", {
                     children: [
                       "Chat Server: ",
-                      s.chat_server,
+                      a.chat_server,
                       ", chat_id: ",
-                      s.chat_id,
+                      a.chat_id,
                     ],
                   }),
-                  (0, a.jsxs)("div", {
-                    children: ["Transcoder Server : ", s.transcode_server],
+                  (0, s.jsxs)("div", {
+                    children: ["Transcoder Server : ", a.transcode_server],
                   }),
                 ],
               }),
-              (0, a.jsxs)("div", {
-                className: V.SubSection,
+              (0, s.jsxs)("div", {
+                className: P.SubSection,
                 children: [
-                  (0, a.jsx)("div", {
-                    className: V.Header,
+                  (0, s.jsx)("div", {
+                    className: P.Header,
                     children: "Ingester Info",
                   }),
-                  (0, a.jsxs)("div", {
+                  (0, s.jsxs)("div", {
                     children: [
                       "Client: ",
-                      s.remote_address,
+                      a.remote_address,
                       " ",
-                      Boolean(s.is_rtmp) ? "(RTMP)" : "(STEAM CLIENT)",
+                      Boolean(a.is_rtmp) ? "(RTMP)" : "(STEAM CLIENT)",
                     ],
                   }),
-                  (0, a.jsxs)("div", {
+                  (0, s.jsxs)("div", {
                     children: [
                       "Video Config: ",
-                      s.upload_height,
+                      a.upload_height,
                       "x",
-                      s.upload_width,
+                      a.upload_width,
                       "@",
-                      s.upload_fps,
+                      a.upload_fps,
                       ", ",
-                      s.upload_bandwidth,
+                      a.upload_bandwidth,
                       " kbps ",
                     ],
                   }),
-                  (0, a.jsxs)("div", {
+                  (0, s.jsxs)("div", {
                     children: [
                       "Audio Config: ",
-                      s.upload_audio_channels,
+                      a.upload_audio_channels,
                       "x",
-                      s.upload_audio_samplerate,
+                      a.upload_audio_samplerate,
                       "Hz, ",
-                      s.upload_audio_bitrate / 1e3,
+                      a.upload_audio_bitrate / 1e3,
                       " kbps ",
                     ],
                   }),
-                  (0, a.jsxs)("div", {
+                  (0, s.jsxs)("div", {
                     children: [
                       "Upload Stats: ",
-                      s.upload_avg_fps,
+                      a.upload_avg_fps,
                       " FPS, ",
-                      s.upload_avg_bandwidth,
+                      a.upload_avg_bandwidth,
                       " kbps, ",
-                      s.upload_avg_key_interval,
+                      a.upload_avg_key_interval,
                       " msec key frame interval",
                     ],
                   }),
-                  (0, a.jsxs)("div", {
+                  (0, s.jsxs)("div", {
                     children: [
                       "Upload Totals: ",
-                      s.upload_total_frames_received,
+                      a.upload_total_frames_received,
                       " video frames,  ",
                       Math.round(
-                        (s.upload_current_video_pts -
-                          s.upload_first_video_pts) /
-                          s.upload_video_timescale,
+                        (a.upload_current_video_pts -
+                          a.upload_first_video_pts) /
+                          a.upload_video_timescale,
                       ),
                       " seconds ( ",
-                      (0, P.dm)(s.upload_total_bytes_uploaded || 0, 1),
+                      (0, O.dm)(a.upload_total_bytes_uploaded || 0, 1),
                       " ) ",
                     ],
                   }),
                 ],
               }),
-              Boolean(s.transcode_server) &&
-                (0, a.jsxs)("div", {
-                  className: V.SubSection,
+              Boolean(a.transcode_server) &&
+                (0, s.jsxs)("div", {
+                  className: P.SubSection,
                   children: [
-                    (0, a.jsx)("div", {
-                      className: V.Header,
+                    (0, s.jsx)("div", {
+                      className: P.Header,
                       children: "Transcoder Info",
                     }),
-                    (0, a.jsxs)("div", {
+                    (0, s.jsxs)("div", {
                       children: [
                         "Decoder ( ",
-                        s.upload_height,
+                        a.upload_height,
                         "x",
-                        s.upload_width,
+                        a.upload_width,
                         "@",
-                        s.upload_fps,
+                        a.upload_fps,
                         ", ",
-                        s.upload_bandwidth,
+                        a.upload_bandwidth,
                         " kbps ) :  ",
-                        s.transcoder_frames_to_decode,
+                        a.transcoder_frames_to_decode,
                         " queued,  ",
-                        s.transcoder_frames_total_decoded,
+                        a.transcoder_frames_total_decoded,
                         " decoded",
                       ],
                     }),
-                    s.transcoder_streams.map((e) =>
-                      (0, a.jsxs)(
+                    a.transcoder_streams.map((e) =>
+                      (0, s.jsxs)(
                         "div",
                         {
                           children: [
@@ -499,18 +509,18 @@
                     ),
                   ],
                 }),
-              (0, a.jsxs)("div", {
-                className: V.SubSection,
+              (0, s.jsxs)("div", {
+                className: P.SubSection,
                 children: [
-                  (0, a.jsx)("div", {
-                    className: V.Header,
+                  (0, s.jsx)("div", {
+                    className: P.Header,
                     children: "Origin Info",
                   }),
-                  null === (t = null == s ? void 0 : s.origin_video_streams) ||
+                  null === (t = null == a ? void 0 : a.origin_video_streams) ||
                   void 0 === t
                     ? void 0
                     : t.map((e) =>
-                        (0, a.jsxs)(
+                        (0, s.jsxs)(
                           "div",
                           {
                             children: [
@@ -531,7 +541,7 @@
                               " segments received,  ",
                               2 * e.num_segments_cached,
                               " seconds cached ( ",
-                              (0, P.dm)(e.memory_used, 2),
+                              (0, O.dm)(e.memory_used, 2),
                               " )",
                             ],
                           },
@@ -539,160 +549,160 @@
                         ),
                       ),
                   "Audio Stream ",
-                  s.origin_audio_stream.representation_id,
+                  a.origin_audio_stream.representation_id,
                   " ( ",
-                  s.upload_audio_channels,
+                  a.upload_audio_channels,
                   "x",
-                  s.upload_audio_samplerate,
+                  a.upload_audio_samplerate,
                   "Hz, ",
-                  s.upload_audio_bitrate / 1e3,
+                  a.upload_audio_bitrate / 1e3,
                   " kbps ) :  ",
-                  s.origin_audio_stream.num_frames_queued,
+                  a.origin_audio_stream.num_frames_queued,
                   " frames queued,  ",
-                  s.origin_audio_stream.num_segments_received,
+                  a.origin_audio_stream.num_segments_received,
                   " segments received,  ",
-                  2 * s.origin_audio_stream.num_segments_cached,
+                  2 * a.origin_audio_stream.num_segments_cached,
                   " seconds cached ( ",
-                  (0, P.dm)(s.origin_audio_stream.memory_used, 2),
+                  (0, O.dm)(a.origin_audio_stream.memory_used, 2),
                   " )",
                 ],
               }),
-              (0, a.jsxs)("div", {
-                className: V.SubSection,
+              (0, s.jsxs)("div", {
+                className: P.SubSection,
                 children: [
-                  (0, a.jsx)("div", {
-                    className: V.Header,
+                  (0, s.jsx)("div", {
+                    className: P.Header,
                     children: "Viewer Info",
                   }),
-                  (0, a.jsxs)("div", {
+                  (0, s.jsxs)("div", {
                     children: [
                       "Viewers: ",
-                      s.current_viewers,
+                      a.current_viewers,
                       " current (",
-                      s.current_anon_viewers,
+                      a.current_anon_viewers,
                       " anonymous), ",
-                      s.total_unique_viewers,
+                      a.total_unique_viewers,
                       " total unique, ",
-                      s.max_concurrent_viewers,
+                      a.max_concurrent_viewers,
                       " max concurrent",
                     ],
                   }),
-                  (0, a.jsxs)("div", {
+                  (0, s.jsxs)("div", {
                     children: [
                       "Average time watched: ",
-                      s.average_watch_duration,
+                      a.average_watch_duration,
                       " seconds",
                     ],
                   }),
-                  (0, a.jsxs)("div", {
+                  (0, s.jsxs)("div", {
                     children: [
                       "Last Minute: ",
-                      s.added_viewers_last_minute,
+                      a.added_viewers_last_minute,
                       " watch requests, ",
-                      s.rejected_viewers_last_minute,
+                      a.rejected_viewers_last_minute,
                       " rejected",
                     ],
                   }),
-                  (0, a.jsxs)("div", {
-                    children: ["Restrictions: ", s.restriction],
+                  (0, s.jsxs)("div", {
+                    children: ["Restrictions: ", a.restriction],
                   }),
-                  (0, a.jsx)("div", { children: s.extra_viewer_info }),
+                  (0, s.jsx)("div", { children: a.extra_viewer_info }),
                 ],
               }),
-              (0, a.jsxs)("div", {
-                className: V.SubSection,
+              (0, s.jsxs)("div", {
+                className: P.SubSection,
                 children: [
-                  (0, a.jsx)("div", {
-                    className: V.Header,
+                  (0, s.jsx)("div", {
+                    className: P.Header,
                     children: "Settings",
                   }),
-                  (0, a.jsxs)("div", {
-                    children: ["is replay? ", s.is_replay],
+                  (0, s.jsxs)("div", {
+                    children: ["is replay? ", a.is_replay],
                   }),
-                  (0, a.jsxs)("div", {
+                  (0, s.jsxs)("div", {
                     children: [
                       "is replay local file? ",
-                      s.is_replay_local_file,
+                      a.is_replay_local_file,
                     ],
                   }),
-                  (0, a.jsxs)("div", {
-                    children: ["is replay clip? ", s.is_replay_clip],
+                  (0, s.jsxs)("div", {
+                    children: ["is replay clip? ", a.is_replay_clip],
                   }),
-                  (0, a.jsxs)("div", {
-                    children: ["is capturing VOD? ", s.is_capturing_vod],
+                  (0, s.jsxs)("div", {
+                    children: ["is capturing VOD? ", a.is_capturing_vod],
                   }),
-                  (0, a.jsxs)("div", {
+                  (0, s.jsxs)("div", {
                     children: [
                       "is white listed for store streaming? ",
-                      s.is_whitelisted,
+                      a.is_whitelisted,
                     ],
                   }),
                 ],
               }),
-              (0, a.jsxs)("div", {
-                className: V.SubSection,
+              (0, s.jsxs)("div", {
+                className: P.SubSection,
                 children: [
-                  (0, a.jsx)("div", {
-                    className: V.Header,
+                  (0, s.jsx)("div", {
+                    className: P.Header,
                     children: "App Info",
                   }),
-                  (0, a.jsxs)("div", { children: ["appid: ", s.app_id] }),
-                  (0, a.jsxs)("div", { children: ["app name: ", s.app_name] }),
-                  (0, a.jsxs)("div", {
-                    children: ["broadcast title: ", s.title],
+                  (0, s.jsxs)("div", { children: ["appid: ", a.app_id] }),
+                  (0, s.jsxs)("div", { children: ["app name: ", a.app_name] }),
+                  (0, s.jsxs)("div", {
+                    children: ["broadcast title: ", a.title],
                   }),
-                  (0, a.jsxs)("div", {
-                    children: ["thumbnail: ", s.thumbnail_url],
+                  (0, s.jsxs)("div", {
+                    children: ["thumbnail: ", a.thumbnail_url],
                   }),
-                  Boolean(s.thumbnail_url) &&
-                    (0, a.jsx)("img", { src: s.thumbnail_url }),
-                  Boolean(s.app_id && s.app_id > 0) &&
-                    (0, a.jsx)("div", {
-                      className: V.AppSummaryWidgetCtn,
-                      children: (0, a.jsx)(k.p, {
-                        id: s.app_id,
+                  Boolean(a.thumbnail_url) &&
+                    (0, s.jsx)("img", { src: a.thumbnail_url }),
+                  Boolean(a.app_id && a.app_id > 0) &&
+                    (0, s.jsx)("div", {
+                      className: P.AppSummaryWidgetCtn,
+                      children: (0, s.jsx)(y.p, {
+                        id: a.app_id,
                         type: "game",
                         bPreferAssetWithoutOverride: !1,
                       }),
                     }),
                 ],
               }),
-              (0, a.jsxs)("div", {
-                className: V.SubSection,
+              (0, s.jsxs)("div", {
+                className: P.SubSection,
                 children: [
-                  (0, a.jsx)("div", {
-                    className: V.Header,
+                  (0, s.jsx)("div", {
+                    className: P.Header,
                     children: "Manifest Information",
                   }),
-                  (0, a.jsxs)("div", {
+                  (0, s.jsxs)("div", {
                     children: [
                       "Heartbeat Interval: ",
-                      d.m_data.heartbeat_interval,
+                      l.m_data.heartbeat_interval,
                     ],
                   }),
-                  (0, a.jsxs)("div", {
-                    children: ["DASH MPEG Url: ", d.m_data.url],
+                  (0, s.jsxs)("div", {
+                    children: ["DASH MPEG Url: ", l.m_data.url],
                   }),
-                  (0, a.jsxs)("div", {
-                    children: ["HLS Url: ", d.m_data.hls_url],
+                  (0, s.jsxs)("div", {
+                    children: ["HLS Url: ", l.m_data.hls_url],
                   }),
                 ],
               }),
-              (0, a.jsx)(I.$n, {
-                onClick: () => i(!r),
+              (0, s.jsx)(w.$n, {
+                onClick: () => i(!n),
                 children: "Toggle Raw Data",
               }),
-              Boolean(r) &&
-                (0, a.jsxs)(a.Fragment, {
+              Boolean(n) &&
+                (0, s.jsxs)(s.Fragment, {
                   children: [
-                    (0, a.jsx)("div", {
-                      className: V.SubSection,
-                      children: (0, a.jsx)(M.G, { data: s }),
+                    (0, s.jsx)("div", {
+                      className: P.SubSection,
+                      children: (0, s.jsx)(H.G, { data: a }),
                     }),
-                    (0, a.jsx)("div", {
-                      className: V.SubSection,
-                      children: (0, a.jsx)(M.G, {
-                        data: (null == d ? void 0 : d.m_data) || "",
+                    (0, s.jsx)("div", {
+                      className: P.SubSection,
+                      children: (0, s.jsx)(H.G, {
+                        data: (null == l ? void 0 : l.m_data) || "",
                       }),
                     }),
                   ],
@@ -700,33 +710,33 @@
             ],
           });
         };
-      var F = s(98371),
-        Y = s(1035),
-        K = s(41471),
-        X = s(16971);
-      const W = (e) => {
+      var K = a(98371),
+        V = a(1035),
+        J = a(41471),
+        W = a(16971);
+      const q = (e) => {
         const t = e.steamid.GetAccountID(),
-          { data: s } = (0, K.hW)(t);
-        return (0, a.jsxs)("div", {
-          className: X.AvatarCtn,
+          { data: a } = (0, J.hW)(t);
+        return (0, s.jsxs)("div", {
+          className: W.AvatarCtn,
           children: [
-            (0, a.jsx)("a", {
-              href: s.GetCommunityProfileURL(),
+            (0, s.jsx)("a", {
+              href: a.GetCommunityProfileURL(),
               "data-miniprofile": "s" + e.steamid.ConvertTo64BitString(),
-              children: (0, a.jsx)(Y.i8, {
-                persona: s,
+              children: (0, s.jsx)(V.i8, {
+                persona: a,
                 size: e.size,
                 statusPosition: "bottom",
               }),
             }),
-            (0, a.jsxs)("div", {
-              className: X.NameAndProps,
+            (0, s.jsxs)("div", {
+              className: W.NameAndProps,
               children: [
                 Boolean(e.bShowName) &&
-                  (0, a.jsx)("a", {
-                    href: s.GetCommunityProfileURL(),
+                  (0, s.jsx)("a", {
+                    href: a.GetCommunityProfileURL(),
                     "data-miniprofile": "s" + e.steamid.ConvertTo64BitString(),
-                    children: s.m_strProfileURL,
+                    children: a.m_strProfileURL,
                   }),
                 e.children,
               ],
@@ -734,242 +744,242 @@
           ],
         });
       };
-      var $ = s(65946),
-        z = s(55263),
-        J = s(82477),
-        Q = s(12155),
-        Z = s(51272),
-        ee = s(61336),
-        te = s(46699),
-        se = s(32754),
-        ae = s(6083);
-      function ne(e) {
+      var X = a(65946),
+        Y = a(55263),
+        Z = a(82477),
+        z = a(12155),
+        $ = a(51272),
+        ee = a(61336),
+        te = a(46699),
+        ae = a(32754),
+        se = a(6083);
+      function re(e) {
         const { broadcasterSteamID: t } = e,
-          s = t.ConvertTo64BitString(),
-          [n, r] = (0, $.q3)(() => {
-            const e = h.es.GetOrCreateBroadcastInfo(s);
+          a = t.ConvertTo64BitString(),
+          [r, n] = (0, X.q3)(() => {
+            const e = h.es.GetOrCreateBroadcastInfo(a);
             let t = e.m_nAppID != h.fO ? e.m_nAppID : 0;
             return [e.m_nViewerCount, t];
           }),
-          [i] = (0, z.t7)(r, { include_assets: !0 });
+          [i] = (0, Y.t7)(n, { include_assets: !0 });
         let o = null == i ? void 0 : i.GetAssets().GetMainCapsuleURL(),
-          d = o && o.length > 0;
-        return (0, a.jsx)(y.tH, {
-          children: (0, a.jsxs)("div", {
+          l = o && o.length > 0;
+        return (0, s.jsx)(I.tH, {
+          children: (0, s.jsxs)("div", {
             className: te.ProfileCtn,
             children: [
-              d &&
-                (0, a.jsx)("a", {
+              l &&
+                (0, s.jsx)("a", {
                   className: te.GameCapsule,
                   href: (0, ee.k2)(
                     (null == i ? void 0 : i.GetStorePageURL()) ||
-                      p.TS.STORE_BASE_URL + "app/" + r,
+                      A.TS.STORE_BASE_URL + "app/" + n,
                   ),
-                  children: (0, a.jsx)("img", { src: o }),
+                  children: (0, s.jsx)("img", { src: o }),
                 }),
-              (0, a.jsxs)("div", {
+              (0, s.jsxs)("div", {
                 className: te.StreamDetailsCtn,
                 children: [
-                  (0, a.jsxs)("div", {
+                  (0, s.jsxs)("div", {
                     className: te.GameAndOptionsCtn,
                     children: [
-                      (0, a.jsxs)("div", {
+                      (0, s.jsxs)("div", {
                         className: te.GameAndViewersCtn,
                         children: [
-                          (0, a.jsx)(re, { broadcasterSteamID: t }),
-                          (0, a.jsx)("div", {
+                          (0, s.jsx)(ne, { broadcasterSteamID: t }),
+                          (0, s.jsx)("div", {
                             className: te.ViewerCount,
-                            children: (0, E.Yp)(
+                            children: (0, G.Yp)(
                               "#Broadcast_ViewerCount",
-                              (0, ae.D)(n),
+                              (0, se.D)(r),
                             ),
                           }),
                         ],
                       }),
-                      (0, a.jsx)(ie, { broadcasterSteamID: t }),
+                      (0, s.jsx)(ie, { broadcasterSteamID: t }),
                     ],
                   }),
-                  (0, a.jsx)(W, { steamid: t, size: "Medium", bShowName: !0 }),
+                  (0, s.jsx)(q, { steamid: t, size: "Medium", bShowName: !0 }),
                 ],
               }),
             ],
           }),
         });
       }
-      const re = (0, x.PA)((e) => {
+      const ne = (0, B.PA)((e) => {
           const { broadcasterSteamID: t } = e,
-            s = t.ConvertTo64BitString(),
-            [n, r] = (0, $.q3)(() => {
-              const e = h.es.GetOrCreateBroadcastInfo(s);
+            a = t.ConvertTo64BitString(),
+            [r, n] = (0, X.q3)(() => {
+              const e = h.es.GetOrCreateBroadcastInfo(a);
               let t = e.m_nAppID != h.fO ? e.m_nAppID : 0;
               return [e.m_strAppTitle, t];
             }),
-            [i] = (0, z.t7)(r, { include_assets: !0 });
-          return (0, a.jsxs)("div", {
+            [i] = (0, Y.t7)(n, { include_assets: !0 });
+          return (0, s.jsxs)("div", {
             className: te.BroadcastTitleCtn,
             children: [
-              (0, E.we)("#Broadcast_Playing"),
-              (0, a.jsx)("a", {
+              (0, G.we)("#Broadcast_Playing"),
+              (0, s.jsx)("a", {
                 href: (0, ee.k2)(
                   (null == i ? void 0 : i.GetStorePageURL()) ||
-                    p.TS.STORE_BASE_URL + "app/" + r,
+                    A.TS.STORE_BASE_URL + "app/" + n,
                 ),
-                children: Boolean(n) ? n : null == i ? void 0 : i.GetName(),
+                children: Boolean(r) ? r : null == i ? void 0 : i.GetName(),
               }),
-              Boolean((null == n ? void 0 : n.length) > 0) &&
-                (0, a.jsxs)("span", { children: [" - ", n] }),
+              Boolean((null == r ? void 0 : r.length) > 0) &&
+                (0, s.jsxs)("span", { children: [" - ", r] }),
             ],
           });
         }),
-        ie = (0, x.PA)((e) => {
+        ie = (0, B.PA)((e) => {
           const { broadcasterSteamID: t } = e;
           t.ConvertTo64BitString();
-          return (0, a.jsxs)("div", {
+          return (0, s.jsxs)("div", {
             className: te.BroadcastUserActionsCtn,
             children: [
               Boolean(
-                p.iA.steamid != e.broadcasterSteamID.ConvertTo64BitString(),
+                A.iA.steamid != e.broadcasterSteamID.ConvertTo64BitString(),
               ) &&
-                (0, a.jsx)(I.$n, {
+                (0, s.jsx)(w.$n, {
                   onClick: (e) => {
-                    p.iA.logged_in
-                      ? (0, O.pg)(
-                          (0, a.jsx)(oe, { broadcasterSteamID: t }),
-                          (0, U.uX)(e),
+                    A.iA.logged_in
+                      ? (0, U.pg)(
+                          (0, s.jsx)(oe, { broadcasterSteamID: t }),
+                          (0, k.uX)(e),
                         )
-                      : (0, O.pg)(
-                          (0, a.jsx)(G.o0, {
-                            strTitle: (0, E.we)(
+                      : (0, U.pg)(
+                          (0, s.jsx)(Q.o0, {
+                            strTitle: (0, G.we)(
                               "#EventDisplay_Share_NotLoggedIn",
                             ),
-                            strDescription: (0, E.we)(
+                            strDescription: (0, G.we)(
                               "#EventDisplay_Share_NotLoggedIn_Description",
                             ),
-                            strOKButtonText: (0, E.we)("#MobileLogin_SignIn"),
-                            onOK: () => (0, J.vg)(),
+                            strOKButtonText: (0, G.we)("#MobileLogin_SignIn"),
+                            onOK: () => (0, Z.vg)(),
                           }),
-                          (0, U.uX)(e),
+                          (0, k.uX)(e),
                         );
                   },
-                  children: (0, a.jsx)(se.he, {
-                    toolTipContent: (0, E.we)("#Broadcast_User_Report_ttip"),
-                    children: (0, a.jsx)(Q.lNU, {}),
+                  children: (0, s.jsx)(ae.he, {
+                    toolTipContent: (0, G.we)("#Broadcast_User_Report_ttip"),
+                    children: (0, s.jsx)(z.lNU, {}),
                   }),
                 }),
-              (0, a.jsx)(I.$n, {
+              (0, s.jsx)(w.$n, {
                 onClick: (e) =>
-                  (0, Z.EP)(
+                  (0, $.EP)(
                     e,
                     "https://help.steampowered.com/faqs/view/548F-BC55-89EB-1BC8",
                   ),
-                children: (0, a.jsx)(se.he, {
-                  toolTipContent: (0, E.we)("#Broadcast_User_FAQ_ttip"),
-                  children: (0, a.jsx)(Q.$$j, {}),
+                children: (0, s.jsx)(ae.he, {
+                  toolTipContent: (0, G.we)("#Broadcast_User_FAQ_ttip"),
+                  children: (0, s.jsx)(z.$$j, {}),
                 }),
               }),
             ],
           });
         }),
         oe = (e) => {
-          const [t, s] = (0, n.useState)("");
-          return (0, a.jsx)(G.o0, {
-            strTitle: (0, E.we)("#Broadcast_ReportItem_Title"),
-            strDescription: (0, E.we)("#Broadcast_ReportItem_Description"),
+          const [t, a] = (0, r.useState)("");
+          return (0, s.jsx)(Q.o0, {
+            strTitle: (0, G.we)("#Broadcast_ReportItem_Title"),
+            strDescription: (0, G.we)("#Broadcast_ReportItem_Description"),
             onCancel: e.closeModal,
             bOKDisabled: 0 == t.trim().length,
             onOK: async () => {
-              await v.Get().SendUserReportOnBroadcast(t),
+              await _.Get().SendUserReportOnBroadcast(t),
                 e.closeModal && e.closeModal();
             },
-            children: (0, a.jsx)("textarea", {
+            children: (0, s.jsx)("textarea", {
               value: t,
-              onChange: (e) => s(e.currentTarget.value),
+              onChange: (e) => a(e.currentTarget.value),
               rows: 10,
               cols: 80,
             }),
           });
         };
-      var de = s(30593),
-        ce = s(22797);
-      const le = (e) => {
-          if (!p.iA.is_support) return null;
-          const t = (t, s) => {
-              (0, O.pg)(
-                (0, a.jsx)(ue, {
+      var le = a(30593),
+        de = a(22797);
+      const ce = (e) => {
+          if (!A.iA.is_support) return null;
+          const t = (t, a) => {
+              (0, U.pg)(
+                (0, s.jsx)(me, {
                   broadcastSteamID: e.broadcastSteamID,
-                  strAction: s,
+                  strAction: a,
                 }),
-                (0, U.uX)(t),
+                (0, k.uX)(t),
               );
             },
-            s =
+            a =
               "https://steamsupport.valvesoftware.com/account/overview/" +
               e.broadcastSteamID.ConvertTo64BitString();
-          return (0, a.jsxs)("div", {
-            className: (0, R.A)(de.AdminControls, N().ValveOnlyBackground),
+          return (0, s.jsxs)("div", {
+            className: (0, R.A)(le.AdminControls, N().ValveOnlyBackground),
             children: [
-              (0, a.jsx)("div", { children: "(VO) Support Tools" }),
-              (0, a.jsx)(I.$n, {
+              (0, s.jsx)("div", { children: "(VO) Support Tools" }),
+              (0, s.jsx)(w.$n, {
                 onClick: (e) => t(e, "frontpage"),
                 children: "Remove from Front Page",
               }),
-              (0, a.jsx)(I.$n, {
+              (0, s.jsx)(w.$n, {
                 onClick: (e) => t(e, "ban"),
                 children: "Ban from Broadcasting",
               }),
-              (0, a.jsx)(I.$n, {
+              (0, s.jsx)(w.$n, {
                 onClick: (t) => {
-                  (0, O.pg)(
-                    (0, a.jsx)(me, { steamid: e.broadcastSteamID }),
-                    (0, U.uX)(t),
+                  (0, U.pg)(
+                    (0, s.jsx)(ue, { steamid: e.broadcastSteamID }),
+                    (0, k.uX)(t),
                   );
                 },
                 children: "Make Unbannable",
               }),
-              (0, a.jsx)(I.$n, {
-                onClick: (e) => (0, Z.EP)(e, s),
+              (0, s.jsx)(w.$n, {
+                onClick: (e) => (0, $.EP)(e, a),
                 children: "Go to Support Page",
               }),
             ],
           });
         },
-        ue = (0, x.PA)((e) => {
-          const { broadcastSteamID: t, strAction: s } = e,
-            [r, i] = (0, n.useState)(1),
-            [o, c] = (0, n.useState)(!1),
-            [l, u] = (0, n.useState)(!1),
-            [m, h] = (0, n.useState)(!1),
-            _ = (0, n.useRef)(null);
-          (0, n.useEffect)(
+        me = (0, B.PA)((e) => {
+          const { broadcastSteamID: t, strAction: a } = e,
+            [n, i] = (0, r.useState)(1),
+            [o, d] = (0, r.useState)(!1),
+            [c, m] = (0, r.useState)(!1),
+            [u, h] = (0, r.useState)(!1),
+            p = (0, r.useRef)(null);
+          (0, r.useEffect)(
             () => () => {
-              _.current && _.current("BroadcastConfirmBanAction: unmounting");
+              p.current && p.current("BroadcastConfirmBanAction: unmounting");
             },
             [],
           );
-          const p = () => e.closeModal && e.closeModal();
-          return (0, a.jsx)(y.tH, {
-            children: (0, a.jsx)(G.x_, {
-              onEscKeypress: p,
-              children: (0, a.jsxs)(I.UC, {
+          const A = () => e.closeModal && e.closeModal();
+          return (0, s.jsx)(I.tH, {
+            children: (0, s.jsx)(Q.x_, {
+              onEscKeypress: A,
+              children: (0, s.jsxs)(w.UC, {
                 children: [
-                  (0, a.jsx)(I.Y9, {
+                  (0, s.jsx)(w.Y9, {
                     children:
-                      "frontpage" == s
+                      "frontpage" == a
                         ? "Remove Broadcast From Front Page"
                         : "Ban from Broadcasting",
                   }),
-                  (0, a.jsx)(I.nB, {
-                    children: (0, a.jsxs)(I.a3, {
+                  (0, s.jsx)(w.nB, {
+                    children: (0, s.jsxs)(w.a3, {
                       children: [
-                        (0, a.jsx)("p", {
+                        (0, s.jsx)("p", {
                           children:
-                            "frontpage" == s
+                            "frontpage" == a
                               ? "How long should we prevent the broadcast from appearing in community or store?"
                               : "How long should we prevent the user from Broadcast at all on Steam?",
                         }),
-                        (0, a.jsxs)("div", {
+                        (0, s.jsxs)("div", {
                           children: [
-                            (0, a.jsx)(I.m, {
+                            (0, s.jsx)(w.m, {
                               rgOptions: [
                                 { label: "1 Day", data: 1 },
                                 { label: "1 Week", data: 7 },
@@ -977,13 +987,13 @@
                                 { label: "6 Months", data: 180 },
                                 { label: "1 Year", data: 365 },
                               ],
-                              selectedOption: r,
+                              selectedOption: n,
                               onChange: (e) => i(e.data),
                             }),
-                            Boolean(o) && (0, a.jsx)(ce.t, {}),
-                            Boolean(l) &&
-                              (0, a.jsx)("div", {
-                                children: m
+                            Boolean(o) && (0, s.jsx)(de.t, {}),
+                            Boolean(c) &&
+                              (0, s.jsx)("div", {
+                                children: u
                                   ? "Successfully Completed Request"
                                   : "Failed to complete request, check browser console and/or try again later",
                               }),
@@ -992,34 +1002,37 @@
                       ],
                     }),
                   }),
-                  (0, a.jsx)(I.wi, {
-                    children: l
-                      ? (0, a.jsx)(I.jn, {
-                          onClick: p,
-                          children: (0, E.we)("#Button_Dismiss"),
+                  (0, s.jsx)(w.wi, {
+                    children: c
+                      ? (0, s.jsx)(w.jn, {
+                          onClick: A,
+                          children: (0, G.we)("#Button_Dismiss"),
                         })
-                      : (0, a.jsxs)(I.dR, {
+                      : (0, s.jsxs)(w.dR, {
                           children: [
-                            (0, a.jsx)(I.$n, {
-                              onClick: p,
-                              children: (0, E.we)("#Button_Cancel"),
+                            (0, s.jsx)(w.$n, {
+                              onClick: A,
+                              children: (0, G.we)("#Button_Cancel"),
                             }),
-                            (0, a.jsx)(I.jn, {
+                            (0, s.jsx)(w.jn, {
                               onClick: async () => {
-                                c(!0);
+                                d(!0);
                                 try {
-                                  _.current && _.current();
-                                  const e = d().CancelToken.source();
-                                  _.current = e.cancel;
-                                  let t = await v
-                                    .Get()
-                                    .SetBroadcasterRestrictions(s, r, e);
+                                  p.current && p.current();
+                                  const e = l().CancelToken.source();
+                                  p.current = e.cancel;
+                                  let t =
+                                    await _.Get().SetBroadcasterRestrictions(
+                                      a,
+                                      n,
+                                      e,
+                                    );
                                   e.token.reason || (t = !0);
                                 } finally {
-                                  c(!1), u(!0), h(false);
+                                  d(!1), m(!0), h(false);
                                 }
                               },
-                              children: (0, E.we)("#Button_Confirm"),
+                              children: (0, G.we)("#Button_Confirm"),
                             }),
                           ],
                         }),
@@ -1029,36 +1042,36 @@
             }),
           });
         }),
-        me = (e) => {
-          const [t, s] = (0, n.useState)(!1),
-            [r, i] = (0, n.useState)(!1),
-            [o, c] = (0, n.useState)(!1),
-            l = (0, n.useRef)(null);
-          (0, n.useEffect)(
+        ue = (e) => {
+          const [t, a] = (0, r.useState)(!1),
+            [n, i] = (0, r.useState)(!1),
+            [o, d] = (0, r.useState)(!1),
+            c = (0, r.useRef)(null);
+          (0, r.useEffect)(
             () => () => {
-              l.current && l.current("BroadcastMakeUnbannable: unmounting");
+              c.current && c.current("BroadcastMakeUnbannable: unmounting");
             },
             [],
           );
-          const u = () => e.closeModal && e.closeModal();
-          return (0, a.jsx)(y.tH, {
-            children: (0, a.jsx)(G.x_, {
-              onEscKeypress: u,
-              children: (0, a.jsxs)(I.UC, {
+          const m = () => e.closeModal && e.closeModal();
+          return (0, s.jsx)(I.tH, {
+            children: (0, s.jsx)(Q.x_, {
+              onEscKeypress: m,
+              children: (0, s.jsxs)(w.UC, {
                 children: [
-                  (0, a.jsx)(I.Y9, { children: "Make Broadcast Unbannable" }),
-                  (0, a.jsx)(I.nB, {
-                    children: (0, a.jsxs)(I.a3, {
+                  (0, s.jsx)(w.Y9, { children: "Make Broadcast Unbannable" }),
+                  (0, s.jsx)(w.nB, {
+                    children: (0, s.jsxs)(w.a3, {
                       children: [
-                        (0, a.jsx)("p", {
+                        (0, s.jsx)("p", {
                           children:
                             "Prevent automatic, report based banning changes to this strema visibility the stream for 1 week?",
                         }),
-                        (0, a.jsxs)("div", {
+                        (0, s.jsxs)("div", {
                           children: [
-                            Boolean(t) && (0, a.jsx)(ce.t, {}),
-                            Boolean(r) &&
-                              (0, a.jsx)("div", {
+                            Boolean(t) && (0, s.jsx)(de.t, {}),
+                            Boolean(n) &&
+                              (0, s.jsx)("div", {
                                 children: o
                                   ? "Successfully Set Unbannable"
                                   : "Failed to make Unbannable",
@@ -1068,32 +1081,32 @@
                       ],
                     }),
                   }),
-                  (0, a.jsx)(I.wi, {
-                    children: r
-                      ? (0, a.jsx)(I.jn, {
-                          onClick: u,
-                          children: (0, E.we)("#Button_Dismiss"),
+                  (0, s.jsx)(w.wi, {
+                    children: n
+                      ? (0, s.jsx)(w.jn, {
+                          onClick: m,
+                          children: (0, G.we)("#Button_Dismiss"),
                         })
-                      : (0, a.jsxs)(I.dR, {
+                      : (0, s.jsxs)(w.dR, {
                           children: [
-                            (0, a.jsx)(I.$n, {
-                              onClick: u,
-                              children: (0, E.we)("#Button_Cancel"),
+                            (0, s.jsx)(w.$n, {
+                              onClick: m,
+                              children: (0, G.we)("#Button_Cancel"),
                             }),
-                            (0, a.jsx)(I.jn, {
+                            (0, s.jsx)(w.jn, {
                               onClick: async () => {
-                                s(!0);
+                                a(!0);
                                 let e = !1;
                                 try {
-                                  l.current && l.current();
-                                  const t = d().CancelToken.source();
-                                  (l.current = t.cancel),
-                                    (e = await v.Get().SetUnBannable(t));
+                                  c.current && c.current();
+                                  const t = l().CancelToken.source();
+                                  (c.current = t.cancel),
+                                    (e = await _.Get().SetUnBannable(t));
                                 } finally {
-                                  s(!1), i(!0), c(e);
+                                  a(!1), i(!0), d(e);
                                 }
                               },
-                              children: (0, E.we)("#Button_Confirm"),
+                              children: (0, G.we)("#Button_Confirm"),
                             }),
                           ],
                         }),
@@ -1103,45 +1116,45 @@
             }),
           });
         };
-      var he = s(26408),
-        _e = s(25888);
-      const pe = (0, x.PA)((e) => {
-        const t = v.Get().GetBroadcasterSteamID(),
-          s = null == t ? void 0 : t.ConvertTo64BitString(),
-          r = (function () {
-            const [e] = (0, n.useState)(
+      var he = a(26408),
+        pe = a(25888);
+      const Ae = (0, B.PA)((e) => {
+        const t = _.Get().GetBroadcasterSteamID(),
+          a = null == t ? void 0 : t.ConvertTo64BitString(),
+          n = (function () {
+            const [e] = (0, r.useState)(
               () =>
-                (0, p.Tc)("ewatchlocation", "application_config") || B.nn.CJ,
+                (0, A.Tc)("ewatchlocation", "application_config") || j.nn.CJ,
             );
             return e;
           })(),
           [i, o] = (0, T.QD)("muted", !0),
-          d = h.es.GetBroadcast(s),
-          c = h.es.GetOrCreateBroadcastInfo(s);
-        return s
-          ? (0, a.jsx)(a.Fragment, {
-              children: (0, a.jsxs)("div", {
-                className: (0, R.A)(F.BroadcastPage),
+          l = h.es.GetBroadcast(a),
+          d = h.es.GetOrCreateBroadcastInfo(a);
+        return a
+          ? (0, s.jsx)(s.Fragment, {
+              children: (0, s.jsxs)("div", {
+                className: (0, R.A)(K.BroadcastPage),
                 children: [
-                  (0, a.jsxs)("div", {
-                    className: (0, R.A)(C().BroadcastAndChat),
+                  (0, s.jsxs)("div", {
+                    className: (0, R.A)(x().BroadcastAndChat),
                     children: [
-                      Boolean(!v.Get().BShowOnlyChat()) &&
-                        (0, a.jsx)(y.tH, {
-                          children: (0, a.jsx)("div", {
-                            className: (0, R.A)(C().wrapper),
-                            children: (0, a.jsx)("div", {
+                      Boolean(!_.Get().BShowOnlyChat()) &&
+                        (0, s.jsx)(I.tH, {
+                          children: (0, s.jsx)("div", {
+                            className: (0, R.A)(x().wrapper),
+                            children: (0, s.jsx)("div", {
                               className: (0, R.A)({
-                                [C().video_placeholder]: !0,
+                                [x().video_placeholder]: !0,
                                 video_placeholder_trgt: !0,
-                                [C().NoChat]: v.Get().BShowOnlyVideo(),
+                                [x().NoChat]: _.Get().BShowOnlyVideo(),
                               }),
-                              children: (0, a.jsx)("div", {
-                                className: C().BroadcastPlayerContainer,
-                                children: (0, a.jsx)(y.tH, {
-                                  children: (0, a.jsx)(j.default, {
-                                    steamIDBroadcast: s,
-                                    watchLocation: r,
+                              children: (0, s.jsx)("div", {
+                                className: x().BroadcastPlayerContainer,
+                                children: (0, s.jsx)(I.tH, {
+                                  children: (0, s.jsx)(S.default, {
+                                    steamIDBroadcast: a,
+                                    watchLocation: n,
                                     bStartMuted: i,
                                   }),
                                 }),
@@ -1149,100 +1162,100 @@
                             }),
                           }),
                         }),
-                      Boolean(!v.Get().BShowOnlyVideo()) &&
-                        (0, a.jsx)("div", {
-                          className: C().detail_chat_ctn,
-                          children: (0, a.jsx)("div", {
-                            className: C().ChatContainer,
-                            children: (0, a.jsx)(y.tH, {
-                              children: (0, a.jsx)(S.I, {
+                      Boolean(!_.Get().BShowOnlyVideo()) &&
+                        (0, s.jsx)("div", {
+                          className: x().detail_chat_ctn,
+                          children: (0, s.jsx)("div", {
+                            className: x().ChatContainer,
+                            children: (0, s.jsx)(I.tH, {
+                              children: (0, s.jsx)(v.I, {
                                 emoticonStore: f.MX,
-                                watchLocation: B.nn.fe,
-                                steamID: s,
-                                broadcastID: d ? d.m_ulBroadcastID : void 0,
+                                watchLocation: j.nn.fe,
+                                steamID: a,
+                                broadcastID: l ? l.m_ulBroadcastID : void 0,
                               }),
                             }),
                           }),
                         }),
                     ],
                   }),
-                  Boolean(!v.Get().BShowInIframe()) &&
-                    (0, a.jsx)(xe, { broadcasterSteamID: t, broadcastInfo: c }),
+                  Boolean(!_.Get().BShowInIframe()) &&
+                    (0, s.jsx)(Be, { broadcasterSteamID: t, broadcastInfo: d }),
                 ],
               }),
             })
           : null;
       });
-      function ve(e) {
+      function _e(e) {
         return 0 != e && e != h.fO;
       }
-      const xe = (0, x.PA)((e) => {
-          const { broadcasterSteamID: t, broadcastInfo: s } = e,
-            [r, i] = (0, n.useState)(null);
-          let o = s.m_nAppID;
+      const Be = (0, B.PA)((e) => {
+          const { broadcasterSteamID: t, broadcastInfo: a } = e,
+            [n, i] = (0, r.useState)(null);
+          let o = a.m_nAppID;
           return (
-            (0, n.useEffect)(() => {
-              ve(o) &&
+            (0, r.useEffect)(() => {
+              _e(o) &&
                 (async () => {
-                  let e = await w.ac.LoadOGGClanInfoForAppID(o);
+                  let e = await b.ac.LoadOGGClanInfoForAppID(o);
                   i(e);
                 })();
             }, [o]),
-            (0, a.jsxs)(a.Fragment, {
+            (0, s.jsxs)(s.Fragment, {
               children: [
-                (0, a.jsx)(ne, { broadcasterSteamID: t }),
-                (0, a.jsx)(Se, { steamid: t }),
-                Boolean(p.iA.is_support) &&
-                  (0, a.jsxs)("div", {
+                (0, s.jsx)(re, { broadcasterSteamID: t }),
+                (0, s.jsx)(ve, { steamid: t }),
+                Boolean(A.iA.is_support) &&
+                  (0, s.jsxs)("div", {
                     children: [
-                      (0, a.jsx)(le, { broadcastSteamID: t }),
-                      (0, a.jsx)("div", {
+                      (0, s.jsx)(ce, { broadcastSteamID: t }),
+                      (0, s.jsx)("div", {
                         className: (0, R.A)(
                           N().ValveOnlyBackground,
-                          F.DebugCtn,
+                          K.DebugCtn,
                         ),
-                        children: (0, a.jsx)(L, {}),
+                        children: (0, s.jsx)(F, {}),
                       }),
                     ],
                   }),
-                ve(o) &&
-                  (0, a.jsxs)("div", {
-                    className: F.GameInfoCtn,
+                _e(o) &&
+                  (0, s.jsxs)("div", {
+                    className: K.GameInfoCtn,
                     children: [
-                      (0, a.jsxs)("div", {
-                        className: F.GameAboutTitleCtn,
+                      (0, s.jsxs)("div", {
+                        className: K.GameAboutTitleCtn,
                         children: [
-                          (0, a.jsxs)("div", {
-                            className: F.GameAboutTitle,
+                          (0, s.jsxs)("div", {
+                            className: K.GameAboutTitle,
                             children: [
                               " ",
-                              (0, E.we)("#Broadcast_About_Game"),
+                              (0, G.we)("#Broadcast_About_Game"),
                               " ",
                             ],
                           }),
-                          (0, a.jsx)("div", {
+                          (0, s.jsx)("div", {
                             className: N().EventSectionSpacer,
                             children: " ",
                           }),
                         ],
                       }),
-                      (0, a.jsx)("div", {
-                        className: F.GameInfo,
-                        children: (0, a.jsx)(k.p, {
-                          id: Number.parseInt(s.m_strAppId),
+                      (0, s.jsx)("div", {
+                        className: K.GameInfo,
+                        children: (0, s.jsx)(y.p, {
+                          id: Number.parseInt(a.m_strAppId),
                           type: "game",
                           bPreferAssetWithoutOverride: !1,
                         }),
                       }),
                     ],
                   }),
-                Boolean(r) &&
-                  (0, a.jsx)("div", {
-                    className: F.RelatedEvents,
-                    children: (0, a.jsx)(D.r, {
-                      clanAccountID: r.clanAccountID,
-                      trackingLocation: b.Tc.My,
-                      partnerEventStore: _e.Av,
+                Boolean(n) &&
+                  (0, s.jsx)("div", {
+                    className: K.RelatedEvents,
+                    children: (0, s.jsx)(D.r, {
+                      clanAccountID: n.clanAccountID,
+                      trackingLocation: C.Tc.My,
+                      partnerEventStore: pe.Av,
                       bViewAllShowInfiniteScroll: !0,
                     }),
                   }),
@@ -1250,113 +1263,115 @@
             })
           );
         }),
-        Se = (0, x.PA)((e) => {
-          const t = (0, n.useRef)(null);
-          let s = h.es.GetOrCreateBroadcastInfo(
+        ve = (0, B.PA)((e) => {
+          const t = (0, r.useRef)(null);
+          let a = h.es.GetOrCreateBroadcastInfo(
             e.steamid.ConvertTo64BitString(),
           );
-          const [r, i] = (0, n.useState)(s.m_strTitle),
-            [o, c] = (0, n.useState)(""),
-            [l, u] = (0, n.useState)(null);
+          const [n, i] = (0, r.useState)(a.m_strTitle),
+            [o, d] = (0, r.useState)(""),
+            [c, m] = (0, r.useState)(null);
           if (
-            ((0, n.useEffect)(
+            ((0, r.useEffect)(
               () => (
-                i(s.m_strTitle),
+                i(a.m_strTitle),
                 () => {
                   t.current && t.current("BroadcastControls: unmounting");
                 }
               ),
-              [s.m_strTitle],
+              [a.m_strTitle],
             ),
-            p.iA.accountid != e.steamid.GetAccountID())
+            A.iA.accountid != e.steamid.GetAccountID())
           )
             return null;
-          return (0, a.jsxs)("div", {
-            className: F.ControlCtn,
+          return (0, s.jsxs)("div", {
+            className: K.ControlCtn,
             children: [
-              (0, a.jsx)("div", {
-                className: F.ControlsTitle,
-                children: (0, E.we)("#Broadcaster_Control_title"),
+              (0, s.jsx)("div", {
+                className: K.ControlsTitle,
+                children: (0, G.we)("#Broadcaster_Control_title"),
               }),
-              (0, a.jsxs)("div", {
-                className: F.TitleInput,
+              (0, s.jsxs)("div", {
+                className: K.TitleInput,
                 children: [
-                  (0, a.jsxs)("div", {
-                    className: F.Options,
+                  (0, s.jsxs)("div", {
+                    className: K.Options,
                     children: [
-                      (0, a.jsx)(I.pd, {
+                      (0, s.jsx)(w.pd, {
                         type: "text",
-                        label: (0, E.we)("#Broadcast_title_title"),
+                        label: (0, G.we)("#Broadcast_title_title"),
                         onChange: (e) => i(e.currentTarget.value || ""),
-                        placeholder: (0, E.we)("#Broadcast_title_placeholder"),
-                        value: r,
+                        placeholder: (0, G.we)("#Broadcast_title_placeholder"),
+                        value: n,
                       }),
-                      (0, a.jsx)(I.pd, {
+                      (0, s.jsx)(w.pd, {
                         type: "text",
-                        label: (0, E.we)("#Broadcast_Control_matchid"),
-                        onChange: (e) => c(e.currentTarget.value || ""),
+                        label: (0, G.we)("#Broadcast_Control_matchid"),
+                        onChange: (e) => d(e.currentTarget.value || ""),
                         value: o,
                       }),
-                      (0, a.jsxs)(I.$n, {
+                      (0, s.jsxs)(w.$n, {
                         onClick: async () => {
                           t.current && t.current();
-                          const e = d().CancelToken.source();
+                          const e = l().CancelToken.source();
                           t.current = e.cancel;
-                          let s = await v
-                            .Get()
-                            .UpdateBroadcastSettings(o, r, e);
+                          let a = await _.Get().UpdateBroadcastSettings(
+                            o,
+                            n,
+                            e,
+                          );
                           e.token.reason ||
-                            u(
-                              (0, E.we)(
-                                s
+                            m(
+                              (0, G.we)(
+                                a
                                   ? "#Broadcast_Control_Success"
                                   : "#Broadcast_Control_Failure",
                               ),
                             );
                         },
                         children: [
-                          (0, E.we)("#Broadcast_save_changes"),
-                          (0, a.jsx)(he.o, {
-                            tooltip: (0, E.we)("#Broadcast_save_title_ttip"),
+                          (0, G.we)("#Broadcast_save_changes"),
+                          (0, s.jsx)(he.o, {
+                            tooltip: (0, G.we)("#Broadcast_save_title_ttip"),
                           }),
                         ],
                       }),
                     ],
                   }),
-                  (0, a.jsxs)("div", {
-                    className: F.StopCtn,
+                  (0, s.jsxs)("div", {
+                    className: K.StopCtn,
                     children: [
-                      (0, a.jsx)(I.$n, {
+                      (0, s.jsx)(w.$n, {
                         onClick: (e) => {
-                          (0, O.pg)(
-                            (0, a.jsx)(G.o0, {
-                              strTitle: (0, E.we)(
+                          (0, U.pg)(
+                            (0, s.jsx)(Q.o0, {
+                              strTitle: (0, G.we)(
                                 "#Broadcast_Control_StopBroadcast",
                               ),
-                              strDescription: (0, E.we)(
+                              strDescription: (0, G.we)(
                                 "#EventEditor_GenericAreYouSure",
                               ),
                               onOK: async () => {
                                 t.current && t.current();
-                                const e = d().CancelToken.source();
+                                const e = l().CancelToken.source();
                                 t.current = e.cancel;
-                                let s = await v.Get().StopBroadcast(e);
+                                let a = await _.Get().StopBroadcast(e);
                                 e.token.reason ||
-                                  u(
-                                    (0, E.we)(
-                                      s
+                                  m(
+                                    (0, G.we)(
+                                      a
                                         ? "#Broadcast_Control_StopSuccess"
                                         : "#Broadcast_Control_StopFailure",
                                     ),
                                   );
                               },
                             }),
-                            (0, U.uX)(e),
+                            (0, k.uX)(e),
                           );
                         },
-                        children: (0, E.we)("#Broadcast_Control_StopBroadcast"),
+                        children: (0, G.we)("#Broadcast_Control_StopBroadcast"),
                       }),
-                      Boolean(l) && (0, a.jsx)("div", { children: l }),
+                      Boolean(c) && (0, s.jsx)("div", { children: c }),
                     ],
                   }),
                 ],
@@ -1364,36 +1379,248 @@
             ],
           });
         });
-      var je = s(28210);
+      var Se = a(82429);
       let ge = { BroadcastWatch: (e) => `/broadcast/(watch|watchnew)/${e}` };
-      function Ce(e) {
-        const [t, s] = n.useState(!0);
+      function xe(e) {
+        const [t, a] = r.useState(!0);
         return (
-          (0, n.useEffect)(() => {
-            t && je.KN.InitGlobal().then(() => s(!1));
+          (0, r.useEffect)(() => {
+            t && Se.KN.InitGlobal().then(() => a(!1));
           }, [t]),
           t
-            ? (0, a.jsx)(ce.t, {
-                string: (0, E.we)("#Loading"),
+            ? (0, s.jsx)(de.t, {
+                string: (0, G.we)("#Loading"),
                 position: "center",
                 size: "medium",
               })
-            : (0, a.jsx)(a.Fragment, {
-                children: (0, a.jsxs)(r.dO, {
+            : (0, s.jsx)(s.Fragment, {
+                children: (0, s.jsxs)(n.dO, {
                   children: [
-                    (0, a.jsx)(r.qh, {
+                    (0, s.jsx)(n.qh, {
                       path: ge.BroadcastWatch(":steamid_or_user_vanity"),
                       render: (e) =>
-                        (0, a.jsx)(pe, {
+                        (0, s.jsx)(Ae, {
                           strSteamID: e.match.params.steamid_or_user_vanity,
                         }),
                     }),
-                    (0, a.jsx)(r.qh, { component: i.a }),
+                    (0, s.jsx)(n.qh, { component: i.a }),
                   ],
                 }),
               })
         );
       }
+    },
+    1035: (e, t, a) => {
+      "use strict";
+      a.d(t, { Ul: () => _, i8: () => B });
+      var s = a(34629),
+        r = a(7850),
+        n = a(90626),
+        i = a(75844),
+        o = a(10622),
+        l = a(52038),
+        d = a(78327),
+        c = a(3088);
+      const m =
+          "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gODAK/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsICMmJykqKRkfLTAtKDAlKCko/9sAQwEHBwcKCAoTCgoTKBoWGigoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgo/8AAEQgAQABAAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A8Inmk8+T94/3j/EfWmedJ/z0f/vo0T/6+T/eP86ZQA/zpP8Ano//AH0aPOk/56P/AN9GmVo6Loeq65M0Wj6ddXrr94QRF9v1I6fjQBR86T/no/8A30aPOk/56P8A99GtHW/Dus6GV/tjS7yyD8K00RVW+h6GsugB/nSf89H/AO+jT4JpPPj/AHj/AHh/EfWoafB/r4/94fzoAJ/9fJ/vH+dMp8/+vk/3j/OmUAXdE099W1mw06Jgsl3PHApPYswUH9a+qPF3iHSPhF4S0+003TxK0hMcEAbZvIA3SO2OvIz6k18nW88ttcRz28jxTRMHSRGKsrA5BBHQg1b1TWdT1fy/7V1G8vfLzs+0TNJtz1xknHQUAfUXw+8c6Z8UdN1HS9V0xIpUTM1s7eYkiE43KcAgg/lxg180+NtEHhzxZqmkqxdLWcojHqUPK598EV9CfBbwpF4G8J3fiLxA4trm5hEsnmceRCOQD/tHqR9B1r568a63/wAJH4r1TVghRLqYuinqE6KD74AoAxafB/r4/wDeH86ZT4P9fH/vD+dABP8A6+T/AHj/ADplPn/18n+8f50ygArt/gtpltq/xK0e2vYxJArPMUYZDFEZhn2yBXEV0/w203VNX8YWdloOoHTtQkWQx3IZl2gISeV55AI/GgD1H9pvxPdi/s/DcDGOz8pbqfHWRizBQfYbc/U+1eD12PxW0fWtE8Tpa+I9UOqXpt0cTl2bCEthctz1B/OuOoAKfB/r4/8AeH86ZT4P9fH/ALw/nQAT/wCvk/3j/OmVNPDJ58n7t/vH+E+tM8mT/nm//fJoAZV7Q9Xv9C1KLUNJuGtryMEJIoBIyCD1BHQmqnkyf883/wC+TR5Mn/PN/wDvk0AaHiHXtT8RX4vdau2u7oIIxIygHaCSBwB6msyn+TJ/zzf/AL5NHkyf883/AO+TQAynwf6+P/eH86PJk/55v/3yafBDJ58f7t/vD+E+tAH/2Q==",
+        u =
+          a.p +
+          "images/applications/community/avatar_default_full.jpg?v=valveisgoodatcaching";
+      var h = a(43047),
+        p = a.n(h),
+        A = a(81393);
+      const _ = n.memo(function (e) {
+        const {
+            strAvatarURL: t,
+            size: a = "Medium",
+            className: s,
+            statusStyle: i,
+            statusPosition: o,
+            children: d,
+            ...h
+          } = e,
+          _ = n.useMemo(() => {
+            const e = [];
+            return (
+              t && e.push(t),
+              e.push(
+                (function (e) {
+                  switch (e) {
+                    case "X-Small":
+                    case "Small":
+                      return "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gOTAK/9sAQwADAgIDAgIDAwMDBAMDBAUIBQUEBAUKBwcGCAwKDAwLCgsLDQ4SEA0OEQ4LCxAWEBETFBUVFQwPFxgWFBgSFBUU/9sAQwEDBAQFBAUJBQUJFA0LDRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQU/8AAEQgAIAAgAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A/P4mW5nmllmeSR3LMzMSSc1a07R73V72KzsILi9u5TiOC2RpJHPoFGSarQ/ef6n+de4fAn9oaL4D+DfGX9i6Uf8AhO9XSKDT9eZY3WxiDZcBGByTkn0JCZBxQB41qeiX+iXslnqNtdWF3H9+3uo2jkX6q2CKpgy208MsUzxyI4ZWViCDmvsr9rrUdT1j9nb4T6h8RBbH4qXUs0zMsSxXJ04hivnKoAU5MPGBg7uM7q+NpvvJ9R/OgAh+8/1P867T4POI/iz4Mc6U+u7NZtG/suPbuu8TKfKG4hct93njnmuKIltp5opYXjkRyrKykEHNWbDVbvSr63vbKaezvLeRZYbi3ZkkidTlWVhyCCMgjpQB6l+1F411nx58dPFWpa5a3mnXaXP2ZNOvXVpLKNBhYflJUY5PB5JJ6k15LN95PqP51a1PWr7WtQnvtRuLm/vrhzJNc3TtJLIx6lmbJJ9zVQCW5nhiiheSR3CqqqSSc0Af/9k=";
+                    case "Medium":
+                    case "MediumLarge":
+                      return m;
+                    case "Large":
+                    case "X-Large":
+                    case "FillArea":
+                      return u;
+                    default:
+                      return (0, A.z_)(e, `Unhandled size ${e}`), m;
+                  }
+                })(a),
+              ),
+              e
+            );
+          }, [t, a]);
+        return (0, r.jsxs)("div", {
+          className: (0, l.A)(
+            p().avatarHolder,
+            "avatarHolder",
+            "no-drag",
+            a,
+            s,
+          ),
+          ...h,
+          children: [
+            (0, r.jsx)("div", {
+              className: (0, l.A)(p().avatarStatus, "avatarStatus", o),
+              style: i,
+            }),
+            (0, r.jsx)(c.c, {
+              className: (0, l.A)(p().avatar, "avatar"),
+              rgSources: _,
+              draggable: !1,
+            }),
+            d,
+          ],
+        });
+      });
+      let B = class extends n.Component {
+        render() {
+          const {
+            persona: e,
+            size: t = "Medium",
+            animatedAvatar: a,
+            className: s,
+            strBackupAvatarURL: n,
+            ...i
+          } = this.props;
+          let c = "";
+          return (
+            a && a.image_small && 0 != a.image_small.length
+              ? (c = d.TS.MEDIA_CDN_COMMUNITY_URL + "images/" + a.image_small)
+              : e
+                ? ((c = e.avatar_url_medium),
+                  "Small" == t || "X-Small" == t
+                    ? (c = e.avatar_url)
+                    : ("Large" != t && "X-Large" != t && "FillArea" != t) ||
+                      (c = e.avatar_url_full))
+                : n && (c = n),
+            (0, r.jsx)(_, {
+              strAvatarURL: c,
+              size: t,
+              className: (0, l.A)((0, o.rO)(e), s),
+              ...i,
+            })
+          );
+        }
+      };
+      B = (0, s.Cg)([i.PA], B);
+      const v = (0, i.PA)((e) => {
+        const { profileItem: t, className: a, bDisableAnimation: s, ...n } = e;
+        if (!t || !t.image_small || 0 == t.image_small.length) return null;
+        let i = s ? t.image_large : t.image_small;
+        return (
+          i || (i = t.image_small),
+          i.startsWith("https://") ||
+            (i = d.TS.MEDIA_CDN_COMMUNITY_URL + "images/" + i),
+          (0, r.jsx)("div", {
+            className: (0, l.A)(p().avatarFrame, a, "avatarFrame"),
+            ...n,
+            children: (0, r.jsx)("img", {
+              className: p().avatarFrameImg,
+              src: i,
+            }),
+          })
+        );
+      });
+      let S = class extends n.Component {
+        constructor(e) {
+          super(e),
+            (this.state = { bAnimate: "None" != this.props.loopDuration }),
+            (this.m_timer = 0);
+        }
+        componentDidMount() {
+          this.props.bParentHovered || this.SetupAnimationTimer();
+        }
+        SetupAnimationTimer() {
+          let e = 0;
+          switch (this.props.loopDuration) {
+            case "Short":
+              e = 2500;
+              break;
+            case "Medium":
+              e = 5e3;
+              break;
+            case "Long":
+              e = 1e4;
+          }
+          0 != e &&
+            (this.setState({ bAnimate: "None" != this.props.loopDuration }),
+            (this.m_timer = window.setTimeout(
+              () => this.setState({ bAnimate: !1 }),
+              e,
+            )));
+        }
+        StopAnimationTimer() {
+          this.m_timer &&
+            (window.clearTimeout(this.m_timer), (this.m_timer = 0));
+        }
+        onHover() {
+          this.SetupAnimationTimer();
+        }
+        componentWillUnmount() {
+          this.StopAnimationTimer();
+        }
+        componentDidUpdate(e) {
+          this.props.loopDuration != e.loopDuration &&
+            ("None" == this.props.loopDuration
+              ? (this.setState({ bAnimate: !1 }), this.StopAnimationTimer())
+              : "Infinite" == this.props.loopDuration
+                ? (this.setState({ bAnimate: !0 }), this.StopAnimationTimer())
+                : (this.setState({ bAnimate: !0 }),
+                  this.SetupAnimationTimer())),
+            this.props.bParentHovered != e.bParentHovered &&
+              (this.props.bParentHovered &&
+              "None" != this.props.loopDuration &&
+              "Infinite" != this.props.loopDuration
+                ? (this.setState({ bAnimate: !0 }), this.StopAnimationTimer())
+                : this.state.bAnimate && this.SetupAnimationTimer());
+        }
+        render() {
+          let {
+            loopDuration: e,
+            animatedAvatar: t,
+            avatarFrame: a,
+            children: s,
+            style: n,
+            bLimitProfileFrameAnimationTime: i,
+            bParentHovered: o,
+            ...l
+          } = this.props;
+          l.onClick && (n = { ...n, cursor: "pointer" });
+          const d = this.state.bAnimate && null != t ? t : void 0;
+          return (0, r.jsx)("div", {
+            onMouseEnter: () =>
+              this.setState({ bAnimate: "None" != this.props.loopDuration }),
+            onMouseLeave: () => this.SetupAnimationTimer(),
+            children: (0, r.jsxs)(B, {
+              animatedAvatar: d,
+              ...l,
+              children: [
+                s,
+                (0, r.jsx)(v, {
+                  profileItem: null != a ? a : null,
+                  bDisableAnimation: i && !this.state.bAnimate,
+                }),
+              ],
+            }),
+          });
+        }
+      };
+      S = (0, s.Cg)([i.PA], S);
     },
   },
 ]);

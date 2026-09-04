@@ -1019,6 +1019,8 @@
       class _ extends _.Component {
         constructor() {
           super(...arguments),
+            (this.m_elCanvas = null),
+            (this.m_Context = null),
             (this.m_schUpdate = new _._()),
             (this.m_bSetupComplete = !1);
         }
@@ -1035,6 +1037,7 @@
           this.m_elCanvas = _;
         }
         updateCanvas() {
+          var _;
           if (
             null == this.props.elementRef ||
             null == this.m_elCanvas ||
@@ -1044,7 +1047,9 @@
           let _ = this.props.scaleFactor || [1, 1],
             _ = this.props.elementRef,
             _ = this.props.updateRate;
-          this.m_Context = this.m_elCanvas.getContext("2d");
+          const _ = this.m_elCanvas.getContext("2d");
+          if (!_) return;
+          this.m_Context = _;
           let _ = Math.floor(
               this.m_elCanvas.clientWidth / this.props.reductionFactor,
             ),
@@ -1053,10 +1058,10 @@
             );
           (this.m_elCanvas.width = _),
             (this.m_elCanvas.height = _),
-            this.props.blurAmount > 0 &&
-              (this.m_Context.filter = "blur(" + this.props.blurAmount + "px)");
+            (null !== (_ = this.props.blurAmount) && void 0 !== _ ? _ : 0) >
+              0 && (_.filter = "blur(" + this.props.blurAmount + "px)");
           let _ = () => {
-            this.m_Context.drawImage(_, 0, 0, _ * _[0], _ * _[1]),
+            _.drawImage(_, 0, 0, _ * _[0], _ * _[1]),
               _ > 0 && this.m_schUpdate.Schedule(_, _);
           };
           _(), (this.m_bSetupComplete = !0);
@@ -9229,13 +9234,7 @@
           return _ || ((_ = new _()), this.m_mapChats.set(_ || _, _)), _;
         }
         static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_BroadcastChatStore = _.s_Singleton)),
-            _.s_Singleton
-          );
+          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
         }
         constructor() {
           (this.m_mapChats = new Map()), (0, _._)(this);
@@ -10035,11 +10034,7 @@
         }
         static Get() {
           return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              _.s_Singleton.Init(),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_GiveawayStore = _.s_Singleton)),
+            _.s_Singleton || ((_.s_Singleton = new _()), _.s_Singleton.Init()),
             _.s_Singleton
           );
         }
@@ -10145,6 +10140,72 @@
         (0, _._)([_._], _.prototype, "ClearCountDown", null),
         (0, _._)([_._], _.prototype, "SetupRefreshDataInterval", null),
         (0, _._)([_._], _.prototype, "SetupCountDown", null);
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid");
+      function _(_) {
+        return (0, _.jsx)(_._, {
+          onEscKeypress: _.closeModal,
+          bDisableBackgroundDismiss: !0,
+          children: (0, _.jsx)(_, {
+            redirectURL: _.redirectURL,
+            guestOption: _.guestOption,
+          }),
+        });
+      }
+      function _() {
+        (0, _._)(
+          (0, _.jsx)(_, {
+            ownerWin: window,
+            redirectURL: window.location.href,
+          }),
+          window,
+          {
+            strTitle: (0, _._)("#Login_SignInTitle"),
+          },
+        );
+      }
+      function _(_) {
+        const { redirectURL: _, guestOption: _ } = _,
+          [_] = (0, _.useState)(
+            new _._(_._.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
+          ),
+          [_, _] = (0, _.useState)(!1);
+        return (0, _.jsx)("div", {
+          children: _
+            ? (0, _.jsx)(_._, {})
+            : (0, _.jsx)(_._, {
+                autoFocus: !0,
+                transport: _,
+                platform: _._._,
+                onComplete: (_) => {
+                  _ == _._.k_PrimaryDomainFail
+                    ? _(!0)
+                    : window.location.assign(_);
+                },
+                redirectUrl: _,
+                theme: "modal",
+                children:
+                  _ &&
+                  (0, _.jsx)(_._, {
+                    redirectURL: _,
+                  }),
+              }),
+        });
+      }
     },
   },
 ]);

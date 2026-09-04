@@ -4498,9 +4498,14 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -7072,7 +7077,6 @@
             });
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -13107,23 +13111,18 @@
         }
         DeleteWhiteListAccount(_) {
           let _ = this.GetJSONData().broadcast_whitelist.indexOf(_);
-          _ < 0
-            ? "dev" == _._.WEB_UNIVERSE &&
-              console.log(
-                `EventBroadcastEditModel: Failed to find account to  ${_} in `,
-                this.GetJSONData().broadcast_whitelist,
-              )
-            : (this.GetJSONData().broadcast_whitelist.splice(_, 1),
-              this.GetJSONData().broadcast_language &&
-                this.GetJSONData().broadcast_language.length > _ &&
-                this.GetJSONData().broadcast_language.splice(_, 1),
-              this.GetJSONData().broadcast_priority &&
-                this.GetJSONData().broadcast_priority.length > _ &&
-                this.GetJSONData().broadcast_priority.splice(_, 1),
-              (this.GetJSONData().broadcast_whitelist = [
-                ...this.GetJSONData().broadcast_whitelist,
-              ]),
-              this.m_editModel.SetDirty(_._.jsondata_broadcast));
+          _ < 0 ||
+            (this.GetJSONData().broadcast_whitelist.splice(_, 1),
+            this.GetJSONData().broadcast_language &&
+              this.GetJSONData().broadcast_language.length > _ &&
+              this.GetJSONData().broadcast_language.splice(_, 1),
+            this.GetJSONData().broadcast_priority &&
+              this.GetJSONData().broadcast_priority.length > _ &&
+              this.GetJSONData().broadcast_priority.splice(_, 1),
+            (this.GetJSONData().broadcast_whitelist = [
+              ...this.GetJSONData().broadcast_whitelist,
+            ]),
+            this.m_editModel.SetDirty(_._.jsondata_broadcast));
         }
         SetWhiteListAccountLanguage(_, _) {
           let _ = this.GetJSONData().broadcast_whitelist.indexOf(_);
@@ -13322,13 +13321,7 @@
           );
         }
         static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-                (window.g_DynamicRevealStore = _.s_Singleton)),
-            _.s_Singleton
-          );
+          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
         }
         constructor() {
           this.m_rgFriendsList = null;
@@ -13337,8 +13330,6 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
@@ -14284,7 +14275,8 @@
         (0, _._)([_._], _.prototype, "OnOpenGradientInnerColor", null),
         (0, _._)([_._], _.prototype, "OnOpenGradientOuterColor", null),
         (_ = (0, _._)([_._], _));
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       class _ {
         GetDLCForAppID(_) {
           return this.m_mapAppIDToDLCs.get(_);
@@ -14359,13 +14351,7 @@
           };
         }
         static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_StoreTagCache = _.s_Singleton)),
-            _.s_Singleton
-          );
+          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
         }
         constructor() {
           (this.m_mapAppIDToDLCs = new Map()),
@@ -15629,7 +15615,6 @@
         (0, _._)([_._], _.prototype, "ShowTargets", null),
         (0, _._)([_._], _.prototype, "ClearTargets", null),
         (_ = (0, _._)([_._], _));
-      var _ = __webpack_require__("chunkid");
       const _ = (_) => {
         const [_, _] = (0, _.useState)(!!_ && void 0);
         return (
@@ -15731,10 +15716,8 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
-          const { editModel: _ } = _;
-          _.useEffect(() => {
-            _._.HintLoad();
-          }, []);
+          const { editModel: _ } = _,
+            { bHasValidatedEmail: _ } = (0, _._)();
           if (!_._.Get().BShowEmailEditorTab(_.GetEventModel())) return null;
           const _ = (0, _._)() !== _.GetClanAccountID();
           return (0, _.jsxs)(_.Fragment, {
@@ -15794,6 +15777,7 @@
                       (0, _.jsx)(_._, {
                         children: (0, _.jsx)(_, {
                           editModel: _,
+                          bHasValidatedEmail: _,
                         }),
                       }),
                     (0, _.jsx)(_._, {
@@ -15886,7 +15870,7 @@
         OnTestEmail(_) {
           const { editModel: _ } = this.props;
           _.preventDefault(),
-            _._.BHasValidatedEmail() && !_.BIsDirtyType(_._.jsondata_email)
+            this.props.bHasValidatedEmail && !_.BIsDirtyType(_._.jsondata_email)
               ? (0, _._)(
                   (0, _.jsx)(_._, {
                     strTitle: (0, _._)("#EventEmail_Test_Email"),
@@ -17976,11 +17960,7 @@
         }
         static Get() {
           return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              _.s_Singleton.Init(),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_VisibilityRoundsStore = _.s_Singleton)),
+            _.s_Singleton || ((_.s_Singleton = new _()), _.s_Singleton.Init()),
             _.s_Singleton
           );
         }
@@ -17995,7 +17975,6 @@
         Init() {}
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         var _;
@@ -19395,22 +19374,75 @@
           ],
         });
       }
-      let _ = class extends _.Component {
-        constructor() {
-          super(...arguments), (this.m_clanSteamID = new _._(_._.CLANSTEAMID));
-        }
-        render() {
-          return (0, _.jsx)(_, {
-            appid_or_vanity_str: this.props.match.params.appid_or_vanity_str,
-            appid: _._.APPID,
-            gid: this.props.match.params.gid,
-            clanSteamID: this.m_clanSteamID,
-            bInitiatePublishDialog: this.props.bInitiatePublishDialog,
-          });
-        }
-      };
-      _ = (0, _._)([_._], _);
-      const _ = (0, _._)(_);
+      const _ = (0, _._)(function (_) {
+          const _ = (0, _.useMemo)(() => new _._(_._.CLANSTEAMID), []),
+            { bResyncing: _, bFailed: _ } = (function () {
+              const _ = (0, _._)(),
+                _ = _._.GetEditModel(),
+                [_, _] = (0, _.useState)(!1);
+              return (
+                (0, _.useEffect)(() => {
+                  if (!(null == _ ? void 0 : _.BTagsNeedResync())) return;
+                  let _ = !1;
+                  return (
+                    (0, _._)(_, _)
+                      .then((_) => {
+                        !_ &&
+                          _.length > 0 &&
+                          (0, _._)(
+                            (0, _._)(
+                              "#EventEditor_TagResyncIncomplete",
+                              _.length,
+                              _.slice(0, 10)
+                                .map((_) => _.type + " " + _._)
+                                .join(", "),
+                            ),
+                            window,
+                          );
+                      })
+                      .catch((_) => {
+                        console.error(
+                          "Failed to rebuild the stripped tags for this event",
+                          _,
+                        ),
+                          _ || _(!0);
+                      }),
+                    () => {
+                      _ = !0;
+                    }
+                  );
+                }, [_, _]),
+                {
+                  bResyncing:
+                    Boolean(null == _ ? void 0 : _.BTagsNeedResync()) && !_,
+                  bFailed: _,
+                }
+              );
+            })();
+          return _
+            ? (0, _.jsxs)("div", {
+                className: _().FlexCenter,
+                children: [
+                  (0, _.jsx)(_._, {}),
+                  (0, _.jsx)("div", {
+                    children: (0, _._)("#EventEditor_TagResyncProgress"),
+                  }),
+                ],
+              })
+            : _
+              ? (0, _.jsx)(_._, {
+                  strErrorMsg: (0, _._)("#EventEditor_TagResyncFailed"),
+                  appid_or_vanity_str: _.match.params.appid_or_vanity_str,
+                })
+              : (0, _.jsx)(_, {
+                  appid_or_vanity_str: _.match.params.appid_or_vanity_str,
+                  appid: _._.APPID,
+                  gid: _.match.params.gid,
+                  clanSteamID: _,
+                  bInitiatePublishDialog: _.bInitiatePublishDialog,
+                });
+        }),
+        _ = (0, _._)(_);
       class _ extends _.Component {
         constructor(_) {
           super(_),
@@ -19683,71 +19715,39 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      class _ {
-        GetCounts() {
-          return this.m_counts;
-        }
-        async LoadCounts() {
-          return Boolean(this.m_counts)
-            ? this.m_counts
-            : (this.m_promise || (this.m_promise = this.LoadInternalCount()),
-              this.m_promise);
-        }
-        async LoadInternalCount() {
-          var _, _;
-          let _ = null;
-          try {
-            const _ =
-                _._.STORE_BASE_URL + "saleaction/ajaxgetuserdeckcompatcounts",
-              _ = await _().get(_, {});
-            if (
-              200 == (null == _ ? void 0 : _.status) &&
-              (null === (_ = _.data) || void 0 === _ ? void 0 : _.success) ==
-                _._ &&
-              (null === (_ = _.data) || void 0 === _ ? void 0 : _.counts)
-            )
-              return (this.m_counts = _.data.counts), this.m_counts;
-            _ = (0, _._)(_);
-          } catch (_) {
-            _ = (0, _._)(_);
-          }
-          return (
-            console.error(
-              "CDeckCompCountStore.LoadInternalCount failed: " +
-                (null == _ ? void 0 : _.strErrorMsg),
-              _,
-            ),
-            null
+      async function _() {
+        const _ = new URLSearchParams(),
+          _ = "undefined" != typeof self ? self.origin : "community";
+        _ && _.set("origin", _);
+        const _ = `${_._.STORE_BASE_URL}saleaction/ajaxgetuserdeckcompatcounts?${_}`,
+          _ = await fetch(_);
+        if (!_._) throw new Error(`${_} answered ${_.status}`);
+        const _ = await _.json();
+        if ((null == _ ? void 0 : _.success) != _._ || !_.counts)
+          throw new Error(
+            `${_} answered EResult ${null == _ ? void 0 : _.success}`,
           );
-        }
-        static Get() {
-          return (
-            _.s_globalSingletonStore ||
-              ((_.s_globalSingletonStore = new _()),
-              ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-                (window.g_DeckCompatCountStores = _.s_globalSingletonStore)),
-            _.s_globalSingletonStore
-          );
-        }
-        constructor() {
-          if (
-            ((this.m_counts = null),
-            document.getElementById("application_config"))
-          ) {
-            let _ = (0, _._)("deckcompatcount", "application_config");
-            _.ValidateListCompat(_) && (this.m_counts = _);
-          }
-        }
-        static ValidateListCompat(_) {
-          const _ = _;
-          return (
-            _ &&
-            "number" == typeof _.verified &&
-            "number" == typeof _.unsupported &&
-            "number" == typeof _.playable
-          );
+        return _.counts;
+      }
+      const _ = 3e5;
+      function _() {
+        const { data: _ } = (0, _._)({
+          queryKey: ["DeckCompatCounts"],
+          queryFn: () => _(),
+          staleTime: _,
+          retry: !1,
+        });
+        return _;
+      }
+      function _(_, _) {
+        switch (_) {
+          case _._:
+            return null == _ ? void 0 : _.playable;
+          case _._:
+            return null == _ ? void 0 : _.unsupported;
+          default:
+            return null == _ ? void 0 : _.verified;
         }
       }
       var _ = __webpack_require__("chunkid"),
@@ -20069,8 +20069,27 @@
               ],
             });
       }
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        const _ = Number(_.args.packageid);
+        return _
+          ? (0, _.jsx)(_._, {
+              packageID: _,
+              display_style: (0, _._)(_.args.display),
+            })
+          : null;
+      }
+      function _(_) {
+        const _ = Number(_.args.packageid),
+          _ = Number(_.args.compareid);
+        return _ && _
+          ? (0, _.jsx)(_._, {
+              packageID: _,
+              compareID: _,
+            })
+          : null;
+      }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -20141,36 +20160,42 @@
           _ = (0, _._)(_),
           { fnOpenDoor: _ } = (0, _._)(),
           [_, _] = _.useState(!1),
-          [_, _] = _.useState(!1);
-        return (0, _.jsx)(_._, {
-          disabled: _,
-          onClick: (_) => {
-            _ ||
-              (_._.logged_in
-                ? (_(!0),
-                  _(_, !0, null, !1)
-                    .then((_) => {
-                      _ || _(!0), _(!1);
-                    })
-                    .catch(() => {
-                      _(!0), _(!1);
-                    }))
-                : (0, _._)());
-          },
-          children: Boolean(_)
-            ? (0, _.jsx)("div", {
-                children: (0, _._)("#GrantAwardError_Busy"),
-              })
-            : (0, _.jsxs)(_.Fragment, {
-                children: [
-                  Boolean(_) &&
-                    (0, _.jsx)(_._, {
-                      size: "small",
-                    }),
-                  Boolean(_) && (0, _.jsx)(_.Jlk, {}),
-                  _,
-                ],
-              }),
+          [_, _] = _.useState(!1),
+          { elDialogElement: _, fnShowLogonDialog: _ } = (0, _._)();
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
+              disabled: _,
+              onClick: (_) => {
+                _ ||
+                  (_._.logged_in
+                    ? (_(!0),
+                      _(_, !0, null, !1)
+                        .then((_) => {
+                          _ || _(!0), _(!1);
+                        })
+                        .catch(() => {
+                          _(!0), _(!1);
+                        }))
+                    : _());
+              },
+              children: Boolean(_)
+                ? (0, _.jsx)("div", {
+                    children: (0, _._)("#GrantAwardError_Busy"),
+                  })
+                : (0, _.jsxs)(_.Fragment, {
+                    children: [
+                      Boolean(_) &&
+                        (0, _.jsx)(_._, {
+                          size: "small",
+                        }),
+                      Boolean(_) && (0, _.jsx)(_.Jlk, {}),
+                      _,
+                    ],
+                  }),
+            }),
+            _,
+          ],
         });
       }
       function _(_) {
@@ -20229,7 +20254,7 @@
           _ = Number.parseInt((0, _._)(_.args, "itemdefid")),
           _ = Number.parseInt((0, _._)(_.args, "maxquantity")),
           _ = (0, _._)(_.args, "calltoaction");
-        return (0, _._)(_, _)
+        return (0, _._)(_, _, !1) && _
           ? (0, _.jsx)(_._, {
               language: _.language,
               clanAccountID: _.clanSteamID.GetAccountID(),
@@ -20247,30 +20272,14 @@
             });
       }
       function _(_) {
-        const _ = (function () {
-          const [_, _] = _.useState(_.Get().GetCounts());
-          return (
-            _.useEffect(() => {
-              _ || _.Get().LoadCounts().then(_);
-            }, []),
-            _
-          );
-        })();
+        const _ = _();
         if (!_)
           return (0, _.jsx)(_._, {
             size: "small",
           });
         const _ = Number.parseInt((0, _._)(_.args));
-        let _ = _.verified;
-        switch (_) {
-          case _._:
-            _ = _.playable;
-            break;
-          case _._:
-            _ = _.unsupported;
-        }
         return (0, _.jsx)("span", {
-          children: (0, _._)(Number(_)),
+          children: (0, _._)(Number(_(_, _))),
         });
       }
       function _(_) {
@@ -20375,22 +20384,24 @@
           _ = Number.parseInt((0, _._)(_.args)),
           _ = _.useMemo(() => {
             var _;
-            return null === (_ = _.jsondata.sale_sections) || void 0 === _
-              ? void 0
-              : _.find((_) => {
-                  var _, _;
-                  return (
-                    "vo_internal" == _.section_type &&
-                    ("reservation_widget" ==
-                      (null === (_ = _.internal_section_data) || void 0 === _
-                        ? void 0
-                        : _.internal_type) ||
-                      "while_supplies_last" ==
+            if (_)
+              return null === (_ = _.jsondata.sale_sections) || void 0 === _
+                ? void 0
+                : _.find((_) => {
+                    var _, _;
+                    return (
+                      "vo_internal" == _.section_type &&
+                      ("reservation_widget" ==
                         (null === (_ = _.internal_section_data) || void 0 === _
                           ? void 0
-                          : _.internal_type))
-                  );
-                });
+                          : _.internal_type) ||
+                        "while_supplies_last" ==
+                          (null === (_ = _.internal_section_data) ||
+                          void 0 === _
+                            ? void 0
+                            : _.internal_type))
+                    );
+                  });
           }, [_]);
         if (_ && _) {
           const _ = Number.parseInt((0, _._)(_.args, "depositpackageid")),
@@ -20562,14 +20573,14 @@
                         [
                           "price",
                           {
-                            Constructor: _._,
+                            Constructor: _,
                             autocloses: !1,
                           },
                         ],
                         [
                           "pricesavings",
                           {
-                            Constructor: _._,
+                            Constructor: _,
                             autocloses: !1,
                           },
                         ],
@@ -21095,11 +21106,7 @@
         }
         static Get() {
           return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              _.s_Singleton.Init(),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_GiveawayStore = _.s_Singleton)),
+            _.s_Singleton || ((_.s_Singleton = new _()), _.s_Singleton.Init()),
             _.s_Singleton
           );
         }

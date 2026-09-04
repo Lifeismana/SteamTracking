@@ -4154,5 +4154,6 @@
     "GamePerformance_Reason": "Ok",
     "GamePerformance_NumResponses": "Válaszok száma",
     "NewToolTitleSuffix_Beta": "BÉTA",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "SteamMachine_TestResult_MultiWindowAppAutomaticallySetsFocus": "Ez a játék több ablakot használ, és lehet, hogy kézzel kell a megfelelő ablakra fókuszálnod a Steam Átfedésen keresztül."
 }

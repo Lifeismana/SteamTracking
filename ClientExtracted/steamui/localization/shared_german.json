@@ -4154,5 +4154,6 @@
     "GamePerformance_Reason": "Begründung",
     "GamePerformance_NumResponses": "Anzahl der Antworten",
     "NewToolTitleSuffix_Beta": "BETA",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "SteamMachine_TestResult_MultiWindowAppAutomaticallySetsFocus": "Dieses Spiel nutzt mehrere Fenster und Sie müssen ggf. die gewünschten Fenster manuell über das Steam-Overlay fokussieren."
 }

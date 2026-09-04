@@ -69,55 +69,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        narrowWidth: "500px",
-        SnoozeContainer: "_1DsumfIa3MlkzUV9EXY5W9",
-        SnoozeZ: "_2n0EiKMGRP-r_BI5tDtttu",
-        none: "T3Fb5KTXwIHM2B-ThTvEs",
-        Medium: "_1iYPlsChibPe7Ga9B3c5Wm",
-        Large: "_3BESV4eFnr4EnaSaJSdk6T",
-        Dim: "rpZ9bKyFXYvNQvgtKn5GV",
-        _: "_2hnF3M_l4xdIdQ4CkN7LYB",
-        _: "VmQTOrz5MPOWte5C9K7YS",
-        _: "_29mtadjX8N6pRn5TX1nA0o",
-        hoverParent: "_3-8cByP2koYzHwgZqjvFA",
-        animating: "_2rXc7hLg6bohWZ-JpRcYEB",
-        Snoring: "_38wIVgo1WjvGqL5ZsmpmiX",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        "duration-app-launch": "800ms",
-        narrowWidth: "500px",
-        PersonaStatusIcon: "KxAI_M9gWx3OnKSshHOs6",
-        MobilePhoneIcon: "_1iRFj5lJrMqMnRb3GZYPSw",
-        SteamDeckIcon: "_2oLqcfqHHKKAK0WfzjXMg_",
-        VRIcon: "_368tz9TSOLGiG2mNMLScMz",
-        BackgroundAnimation: "_3EMAF_7GAyPW8G7OSt8s0z",
-        "ItemFocusAnim-darkerGrey-nocolor": "_3fWOpZpfDmwOCKEdw8xcqf",
-        "ItemFocusAnim-darkerGrey": "_2Tvf1f8cUg1eYlQg027B3W",
-        "ItemFocusAnim-darkGreySettings": "_1tKhhjTYPWAz5_eQe91O1A",
-        "ItemFocusAnim-darkGrey": "_1l7IyrCH5ez4PBO7R4h8RT",
-        "ItemFocusAnim-grey": "_3X7_M9NEYzjKEgQRMQevkQ",
-        "ItemFocusAnim-translucent-white-10": "_3YCxpOEfjLuLbB1hut87fZ",
-        "ItemFocusAnim-translucent-white-20": "_2kvhksXgWA4vxGz5Oy1tV1",
-        "ItemFocusAnimBorder-darkGrey": "_3N1wGZIJ5QySTBWgyBavuM",
-        "ItemFocusAnim-green": "Vgab6fHUHvZ-iWKRJwy8h",
-        focusAnimation: "GvE_FaPqTf1D0HASx1C_0",
-        hoverAnimation: "_88lGefJsUDJUpRFJ3pUq7",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        narrowWidth: "500px",
-        avatarHolder: "nibodjvvrm86uCfnnAn4g",
-        avatarStatus: "_3xUpb5DWXPFNcHHIcv-9pe",
-        avatar: "_3h-QRJGxnVOIExtHD1R0f2",
-        avatarFrame: "X_mJE4BYV5StDPwZhSiAu",
-        avatarFrameImg: "_3fM0F85j3aWVzr4RJM9-eu",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         "duration-app-launch": "800ms",
         Picker: "tid_OE5NJWCCVJQP1PfRc",
         Tabs: "_1yVkTX9Mo_7qb2sxWhM0Cr",
@@ -286,7 +237,6 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
-        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -1641,6 +1591,7 @@
         _: () => _,
         _: () => _,
       });
+      var _ = __webpack_require__("chunkid");
       const _ = JSON.parse(`{
 	"h": {
 		"countries": {
@@ -1992,7 +1943,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       async function _(_, _, _, _) {
-        if (_)
+        if ((0, _._)(_))
           return {
             version: _._._,
             preference_state: _._._,
@@ -2088,6 +2039,7 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -2759,6 +2711,13 @@
             className: _,
           });
       }
+      function _(_) {
+        return (0, _.jsxs)("div", {
+          className: _().Paragraph,
+          role: "paragraph",
+          children: [_.children, (0, _.jsx)("wbr", {})],
+        });
+      }
       function _(_, _, _) {
         let _ = _(_.args, "id");
         return (
@@ -3041,398 +3000,6 @@
           nStartSeconds: _,
         };
       }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      let _ = class extends _.Component {
-        static get hoverClass() {
-          return _().hoverParent;
-        }
-        render() {
-          const {
-            persona: _,
-            animating: _,
-            className: _,
-            size: _,
-            dim: _,
-            ..._
-          } = this.props;
-          let _ = "";
-          return (
-            "medium" == _ ? (_ = _().Medium) : "large" == _ && (_ = _().Large),
-            (0, _.jsxs)("div", {
-              className: (0, _._)(
-                _().SnoozeContainer,
-                _.online_state,
-                _,
-                _ && _().animating,
-                _,
-                _ && _().Dim,
-              ),
-              ..._,
-              children: [
-                (0, _.jsx)("div", {
-                  "data-text": "Z",
-                  className: (0, _._)(_().SnoozeZ, _()._),
-                  children: "Z",
-                }),
-                (0, _.jsx)("div", {
-                  "data-text": "Z",
-                  className: (0, _._)(_().SnoozeZ, _()._),
-                  children: "Z",
-                }),
-                (0, _.jsx)("div", {
-                  "data-text": "Z",
-                  className: (0, _._)(_().SnoozeZ, _()._),
-                  children: "Z",
-                }),
-              ],
-            })
-          );
-        }
-      };
-      _ = (0, _._)([_._], _);
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = (0, _._)((_) => {
-        const { persona: _, className: _, ..._ } = _;
-        if (!_) return null;
-        if (!_.is_online) return null;
-        const _ = _.HasStateFlag(_._),
-          _ = _.HasStateFlag(_._),
-          _ = _.m_eGamingDeviceType == _.LS$,
-          _ = _.m_eGamingDeviceType == _.ppM,
-          _ = !_ && !_ && !_ && _.HasStateFlag(_._);
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            _ &&
-              (0, _.jsx)("div", {
-                className: (0, _._)(
-                  _,
-                  _().PersonaStatusIcon,
-                  _().MobilePhoneIcon,
-                  (0, _._)(_),
-                ),
-                title: (0, _._)("#Platform_Hint_Mobile"),
-                ..._,
-                children: (0, _.jsx)(_._, {}),
-              }),
-            _ &&
-              (0, _.jsx)("div", {
-                className: (0, _._)(
-                  _,
-                  _().PersonaStatusIcon,
-                  _().VRIcon,
-                  (0, _._)(_),
-                ),
-                title: (0, _._)("#Platform_Hint_VR"),
-                ..._,
-                children: (0, _.jsx)(_.MUh, {}),
-              }),
-            _ &&
-              (0, _.jsx)("div", {
-                className: (0, _._)(
-                  _,
-                  _().PersonaStatusIcon,
-                  _().BigPictureIcon,
-                  (0, _._)(_),
-                ),
-                title: (0, _._)("#Platform_Hint_BigPicture"),
-                ..._,
-                children: (0, _.jsx)(_.bPr, {}),
-              }),
-            _ &&
-              (0, _.jsx)("div", {
-                className: (0, _._)(
-                  _,
-                  _().PersonaStatusIcon,
-                  _().SteamDeckIcon,
-                  (0, _._)(_),
-                ),
-                title: (0, _._)("#Platform_Hint_SteamDeck"),
-                ..._,
-                children: (0, _.jsx)(_.DQe, {}),
-              }),
-            _ &&
-              (0, _.jsx)("div", {
-                className: (0, _._)(
-                  _,
-                  _().PersonaStatusIcon,
-                  _().SteamDeckIcon,
-                  (0, _._)(_),
-                ),
-                title: (0, _._)("#Platform_Hint_LegionGoS"),
-                ..._,
-                children: (0, _.jsx)(_.DQe, {}),
-              }),
-          ],
-        });
-      });
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ =
-          "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gODAK/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsICMmJykqKRkfLTAtKDAlKCko/9sAQwEHBwcKCAoTCgoTKBoWGigoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgo/8AAEQgAQABAAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A8Inmk8+T94/3j/EfWmedJ/z0f/vo0T/6+T/eP86ZQA/zpP8Ano//AH0aPOk/56P/AN9GmVo6Loeq65M0Wj6ddXrr94QRF9v1I6fjQBR86T/no/8A30aPOk/56P8A99GtHW/Dus6GV/tjS7yyD8K00RVW+h6GsugB/nSf89H/AO+jT4JpPPj/AHj/AHh/EfWoafB/r4/94fzoAJ/9fJ/vH+dMp8/+vk/3j/OmUAXdE099W1mw06Jgsl3PHApPYswUH9a+qPF3iHSPhF4S0+003TxK0hMcEAbZvIA3SO2OvIz6k18nW88ttcRz28jxTRMHSRGKsrA5BBHQg1b1TWdT1fy/7V1G8vfLzs+0TNJtz1xknHQUAfUXw+8c6Z8UdN1HS9V0xIpUTM1s7eYkiE43KcAgg/lxg180+NtEHhzxZqmkqxdLWcojHqUPK598EV9CfBbwpF4G8J3fiLxA4trm5hEsnmceRCOQD/tHqR9B1r568a63/wAJH4r1TVghRLqYuinqE6KD74AoAxafB/r4/wDeH86ZT4P9fH/vD+dABP8A6+T/AHj/ADplPn/18n+8f50ygArt/gtpltq/xK0e2vYxJArPMUYZDFEZhn2yBXEV0/w203VNX8YWdloOoHTtQkWQx3IZl2gISeV55AI/GgD1H9pvxPdi/s/DcDGOz8pbqfHWRizBQfYbc/U+1eD12PxW0fWtE8Tpa+I9UOqXpt0cTl2bCEthctz1B/OuOoAKfB/r4/8AeH86ZT4P9fH/ALw/nQAT/wCvk/3j/OmVNPDJ58n7t/vH+E+tM8mT/nm//fJoAZV7Q9Xv9C1KLUNJuGtryMEJIoBIyCD1BHQmqnkyf883/wC+TR5Mn/PN/wDvk0AaHiHXtT8RX4vdau2u7oIIxIygHaCSBwB6msyn+TJ/zzf/AL5NHkyf883/AO+TQAynwf6+P/eH86PJk/55v/3yafBDJ58f7t/vD+E+tAH/2Q==",
-        _ =
-          __webpack_require__._ +
-          "images/applications/community/avatar_default_full.jpg?v=valveisgoodatcaching";
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      const _ = _.memo(function (_) {
-        const {
-            strAvatarURL: _,
-            size: _ = "Medium",
-            className: _,
-            statusStyle: _,
-            statusPosition: _,
-            children: _,
-            ..._
-          } = _,
-          _ = _.useMemo(() => {
-            const _ = [];
-            return (
-              _ && _.push(_),
-              _.push(
-                (function (_) {
-                  switch (_) {
-                    case "X-Small":
-                    case "Small":
-                      return "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gOTAK/9sAQwADAgIDAgIDAwMDBAMDBAUIBQUEBAUKBwcGCAwKDAwLCgsLDQ4SEA0OEQ4LCxAWEBETFBUVFQwPFxgWFBgSFBUU/9sAQwEDBAQFBAUJBQUJFA0LDRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQU/8AAEQgAIAAgAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A/P4mW5nmllmeSR3LMzMSSc1a07R73V72KzsILi9u5TiOC2RpJHPoFGSarQ/ef6n+de4fAn9oaL4D+DfGX9i6Uf8AhO9XSKDT9eZY3WxiDZcBGByTkn0JCZBxQB41qeiX+iXslnqNtdWF3H9+3uo2jkX6q2CKpgy208MsUzxyI4ZWViCDmvsr9rrUdT1j9nb4T6h8RBbH4qXUs0zMsSxXJ04hivnKoAU5MPGBg7uM7q+NpvvJ9R/OgAh+8/1P867T4POI/iz4Mc6U+u7NZtG/suPbuu8TKfKG4hct93njnmuKIltp5opYXjkRyrKykEHNWbDVbvSr63vbKaezvLeRZYbi3ZkkidTlWVhyCCMgjpQB6l+1F411nx58dPFWpa5a3mnXaXP2ZNOvXVpLKNBhYflJUY5PB5JJ6k15LN95PqP51a1PWr7WtQnvtRuLm/vrhzJNc3TtJLIx6lmbJJ9zVQCW5nhiiheSR3CqqqSSc0Af/9k=";
-                    case "Medium":
-                    case "MediumLarge":
-                      return _;
-                    case "Large":
-                    case "X-Large":
-                    case "FillArea":
-                      return _;
-                    default:
-                      return (0, _._)(_, `Unhandled size ${_}`), _;
-                  }
-                })(_),
-              ),
-              _
-            );
-          }, [_, _]);
-        return (0, _.jsxs)("div", {
-          className: (0, _._)(
-            _().avatarHolder,
-            "avatarHolder",
-            "no-drag",
-            _,
-            _,
-          ),
-          ..._,
-          children: [
-            (0, _.jsx)("div", {
-              className: (0, _._)(_().avatarStatus, "avatarStatus", _),
-              style: _,
-            }),
-            (0, _.jsx)(_._, {
-              className: (0, _._)(_().avatar, "avatar"),
-              rgSources: _,
-              draggable: !1,
-            }),
-            _,
-          ],
-        });
-      });
-      let _ = class extends _.Component {
-        render() {
-          const {
-            persona: _,
-            size: _ = "Medium",
-            animatedAvatar: _,
-            className: _,
-            strBackupAvatarURL: _,
-            ..._
-          } = this.props;
-          let _ = "";
-          return (
-            _ && _.image_small && 0 != _.image_small.length
-              ? (_ = _._.MEDIA_CDN_COMMUNITY_URL + "images/" + _.image_small)
-              : _
-                ? ((_ = _.avatar_url_medium),
-                  "Small" == _ || "X-Small" == _
-                    ? (_ = _.avatar_url)
-                    : ("Large" != _ && "X-Large" != _ && "FillArea" != _) ||
-                      (_ = _.avatar_url_full))
-                : _ && (_ = _),
-            (0, _.jsx)(_, {
-              strAvatarURL: _,
-              size: _,
-              className: (0, _._)((0, _._)(_), _),
-              ..._,
-            })
-          );
-        }
-      };
-      _ = (0, _._)([_._], _);
-      const _ = (0, _._)((_) => {
-        const { profileItem: _, className: _, bDisableAnimation: _, ..._ } = _;
-        if (!_ || !_.image_small || 0 == _.image_small.length) return null;
-        let _ = _ ? _.image_large : _.image_small;
-        return (
-          _ || (_ = _.image_small),
-          _.startsWith("https://") ||
-            (_ = _._.MEDIA_CDN_COMMUNITY_URL + "images/" + _),
-          (0, _.jsx)("div", {
-            className: (0, _._)(_().avatarFrame, _, "avatarFrame"),
-            ..._,
-            children: (0, _.jsx)("img", {
-              className: _().avatarFrameImg,
-              src: _,
-            }),
-          })
-        );
-      });
-      let _ = class extends _.Component {
-        constructor(_) {
-          super(_),
-            (this.state = {
-              bAnimate: "None" != this.props.loopDuration,
-            }),
-            (this.m_timer = 0);
-        }
-        componentDidMount() {
-          this.props.bParentHovered || this.SetupAnimationTimer();
-        }
-        SetupAnimationTimer() {
-          let _ = 0;
-          switch (this.props.loopDuration) {
-            case "Short":
-              _ = 2500;
-              break;
-            case "Medium":
-              _ = 5e3;
-              break;
-            case "Long":
-              _ = 1e4;
-          }
-          0 != _ &&
-            (this.setState({
-              bAnimate: "None" != this.props.loopDuration,
-            }),
-            (this.m_timer = window.setTimeout(
-              () =>
-                this.setState({
-                  bAnimate: !1,
-                }),
-              _,
-            )));
-        }
-        StopAnimationTimer() {
-          this.m_timer &&
-            (window.clearTimeout(this.m_timer), (this.m_timer = 0));
-        }
-        onHover() {
-          this.SetupAnimationTimer();
-        }
-        componentWillUnmount() {
-          this.StopAnimationTimer();
-        }
-        componentDidUpdate(_) {
-          this.props.loopDuration != _.loopDuration &&
-            ("None" == this.props.loopDuration
-              ? (this.setState({
-                  bAnimate: !1,
-                }),
-                this.StopAnimationTimer())
-              : "Infinite" == this.props.loopDuration
-                ? (this.setState({
-                    bAnimate: !0,
-                  }),
-                  this.StopAnimationTimer())
-                : (this.setState({
-                    bAnimate: !0,
-                  }),
-                  this.SetupAnimationTimer())),
-            this.props.bParentHovered != _.bParentHovered &&
-              (this.props.bParentHovered &&
-              "None" != this.props.loopDuration &&
-              "Infinite" != this.props.loopDuration
-                ? (this.setState({
-                    bAnimate: !0,
-                  }),
-                  this.StopAnimationTimer())
-                : this.state.bAnimate && this.SetupAnimationTimer());
-        }
-        render() {
-          let {
-            loopDuration: _,
-            animatedAvatar: _,
-            avatarFrame: _,
-            children: _,
-            style: _,
-            bLimitProfileFrameAnimationTime: _,
-            bParentHovered: _,
-            ..._
-          } = this.props;
-          _.onClick &&
-            (_ = {
-              ..._,
-              cursor: "pointer",
-            });
-          const _ = this.state.bAnimate && null != _ ? _ : null;
-          return (0, _.jsx)("div", {
-            onMouseEnter: () =>
-              this.setState({
-                bAnimate: "None" != this.props.loopDuration,
-              }),
-            onMouseLeave: () => this.SetupAnimationTimer(),
-            children: (0, _.jsxs)(_, {
-              animatedAvatar: _,
-              ..._,
-              children: [
-                _,
-                (0, _.jsx)(_, {
-                  profileItem: _,
-                  bDisableAnimation: _ && !this.state.bAnimate,
-                }),
-              ],
-            }),
-          });
-        }
-      };
-      _ = (0, _._)([_._], _);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -3791,7 +3358,11 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _() {
+        return _._.EREALM === _._.k_ESteamRealmChina;
+      }
       function _(_) {
         return {
           sizeStr: _ == _.full ? _.sizeFull : _.sizeThumb,
@@ -3799,7 +3370,7 @@
         };
       }
       function _(_) {
-        if ((0, _._)()) return null;
+        if (_()) return null;
         let _ = (0, _._)(_.args);
         if (_) {
           let _ = _.split(";");
@@ -3818,7 +3389,7 @@
         return (0, _.jsx)(_.Fragment, {});
       }
       function _(_) {
-        if ((0, _._)()) return null;
+        if (_()) return null;
         const _ = (0, _._)(_);
         return void 0 !== (null == _ ? void 0 : _.strVideoID)
           ? (0, _.jsx)(_._, {
@@ -3831,8 +3402,7 @@
           : _;
       }
       function _(_) {
-        if ((0, _._)() || "CN" == _._.COUNTRY.toLocaleUpperCase())
-          return (0, _._)(_);
+        if (_() || "CN" == _._.COUNTRY.toLocaleUpperCase()) return (0, _._)(_);
         const _ = (0, _._)(_.args, "youtubeid"),
           _ = (0, _._)(_.args, "size"),
           _ = (0, _._)(_.args, "seconds"),
@@ -3889,19 +3459,21 @@
             videoid: _,
             views: "0",
           });
-        (0, _.useEffect)(() => {
-          _ &&
-            _._.LoadYouTubeDynamicData([_], _)
-              .then((_) => {
-                !_.token.reason && _.length > 0 && (_(_[0]), _(!0));
-              })
-              .catch((_) =>
-                console.error(
-                  "YouTubeInlineSnippet: " + (0, _._)(_).strErrorMsg,
-                ),
-              );
-        }, [_, _, _]);
-        if (((0, _._)(_ && !0), _)) {
+        if (
+          ((0, _.useEffect)(() => {
+            _ &&
+              _._.LoadYouTubeDynamicData([_], _)
+                .then((_) => {
+                  !_.token.reason && _.length > 0 && (_(_[0]), _(!0));
+                })
+                .catch((_) =>
+                  console.error(
+                    "YouTubeInlineSnippet: " + (0, _._)(_).strErrorMsg,
+                  ),
+                );
+          }, [_, _, _]),
+          _)
+        ) {
           const _ = _.title,
             _ = _.views,
             _ = _.description;
@@ -5631,8 +5203,11 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -5669,6 +5244,9 @@
           _ && _ && _();
         }, [_, _]);
       }
+      function _(_) {
+        _._(_, _);
+      }
       function _() {
         _ = _.Loaded;
         for (let _ of _) _();
@@ -5687,8 +5265,7 @@
             });
         }
         componentWillUnmount() {
-          var _;
-          this.DestroyPlayer(), (_ = this.OnYoutubeScriptsReady), _._(_, _);
+          this.DestroyPlayer(), _(this.OnYoutubeScriptsReady);
         }
         shouldComponentUpdate(_, _) {
           if (!this.m_player) return !1;
@@ -5853,6 +5430,59 @@
               children: (0, _._)("#EventCalendar_WatchYouTubeVideo"),
             });
       }
+      function _(_) {
+        const _ = new URLSearchParams({
+          autoplay: _.autoplay ? "1" : "0",
+          controls: _.controls ? "1" : "0",
+          _: _.showFullscreenBtn ? "1" : "0",
+          playsinline: _.playsInline ? "1" : "0",
+          rel: "0",
+          iv_load_policy: "3",
+          modestbranding: "1",
+          enablejsapi: "1",
+        });
+        return (
+          _.startSeconds && _.set("start", String(_.startSeconds)),
+          `https://www.youtube-nocookie.com/embed/${encodeURIComponent(_.video)}?${_.toString()}`
+        );
+      }
+      function _(_) {
+        const { video: _, autopause: _, className: _ } = _,
+          _ = _.useRef(null),
+          _ = _.useRef(null),
+          _ = _.useCallback(() => {
+            var _;
+            return null === (_ = _.current) || void 0 === _
+              ? void 0
+              : _.pauseVideo();
+          }, []),
+          _ = (0, _._)({
+            onLeave: _ ? _ : void 0,
+          }),
+          _ = (0, _._)(_, _);
+        return (
+          _.useEffect(() => {
+            const _ = () => {
+              _.current && (_.current = new _.Player(_.current, {}));
+            };
+            return (
+              _ && _(_),
+              () => {
+                _(_), (_.current = null);
+              }
+            );
+          }, [_]),
+          (0, _.jsx)("iframe", {
+            ref: _,
+            className: _,
+            src: _(_),
+            title: _,
+            allow: "autoplay; encrypted-media; picture-in-picture; web-share",
+            allowFullScreen: !0,
+            frameBorder: 0,
+          })
+        );
+      }
       (_.s_nPlayerIndex = 0),
         (0, _._)([_._], _.prototype, "BindPlayerContainer", null),
         (0, _._)([_._], _.prototype, "OnYoutubeScriptsReady", null),
@@ -5862,103 +5492,6 @@
         (0, _._)([_._], _.prototype, "OnError", null),
         (0, _._)([_._], _.prototype, "OnPlayerLeftView", null),
         (0, _._)([_._], _.prototype, "PlayVideo", null);
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const _ = _.useRef(_().CancelToken.source());
-        return (
-          _.useEffect(() => {
-            const _ = _.current;
-            return () =>
-              __webpack_require__.cancel(_ ? `${_}: unmounting` : "unmounting");
-          }, [_]),
-          _.current
-        );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, _, _, _) {
-        let _ = _;
-        _ =
-          "number" == typeof _
-            ? {
-                nDigitsAfterDecimal: _,
-                bUseBinary1K: _ || void 0 === _,
-                bValueIsInBytes: !_,
-                bValueIsRate: _,
-                nMinimumDigitsAfterDecimal: 0,
-              }
-            : {
-                nDigitsAfterDecimal: 2,
-                bUseBinary1K: !0,
-                bValueIsInBytes: !0,
-                bValueIsRate: !1,
-                nMinimumDigitsAfterDecimal: 0,
-                ..._,
-              };
-        const { nNum: _, strPrefix: _ } = (function (_, _) {
-            const _ = _.bUseBinary1K ? 1024 : 1e3,
-              _ = _ * _,
-              _ = _ * _,
-              _ = _ * _;
-            return _ > _
-              ? {
-                  nNum: _ / _,
-                  strPrefix: "Tera",
-                }
-              : _ > _
-                ? {
-                    nNum: _ / _,
-                    strPrefix: "Giga",
-                  }
-                : _ > _
-                  ? {
-                      nNum: _ / _,
-                      strPrefix: "Mega",
-                    }
-                  : _ > _
-                    ? {
-                        nNum: _ / _,
-                        strPrefix: "Kilo",
-                      }
-                    : {
-                        nNum: _,
-                        strPrefix: "",
-                      };
-          })(_, _),
-          _ = `#${_}${_.bValueIsInBytes ? "bytes" : "bits"}${_.bValueIsRate ? "_PerSecond" : ""}`;
-        return _._.Localize(
-          _,
-          _.toLocaleString((0, _._)(), {
-            minimumFractionDigits: _.nMinimumDigitsAfterDecimal,
-            maximumFractionDigits: _.nDigitsAfterDecimal,
-          }),
-        );
-      }
-      function _(_, _ = 0) {
-        let _;
-        return (
-          _ &&
-            (_ = {
-              maximumFractionDigits: _,
-            }),
-          _ ? _.toLocaleString((0, _._)(), _) : "" + _
-        );
-      }
     },
   },
 ]);

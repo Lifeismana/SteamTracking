@@ -2194,7 +2194,7 @@
     "SalePresented_By_ClearPresenters": "이벤트 주최사 이름 전체 삭제",
     "SalePresented_By_Instructions": "할인 이벤트 주최사에 대한 설명을 반드시 입력해야 합니다.",
     "ContentHub_Recommendation_Curator": "추천한 큐레이터: %1$s",
-    "ContentHub_Recommendation_Curators": "내가 팔로우하는 큐레이터가 추천",
+    "ContentHub_Recommendation_Curators": "내가 팔로우하는 큐레이터의 추천작",
     "ContentHub_Recommendation_FollowedDeveloper": "개발사: %1$s",
     "ContentHub_Recommendation_FollowedPublisher": "배급사: %1$s",
     "ContentHub_Recommendation_FollowedFranchise": "%1$s 프랜차이즈의 일부",
@@ -4154,5 +4154,6 @@
     "GamePerformance_Reason": "이유",
     "GamePerformance_NumResponses": "응답 수",
     "NewToolTitleSuffix_Beta": "베타",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "SteamMachine_TestResult_MultiWindowAppAutomaticallySetsFocus": "해당 게임은 여러 창을 사용하므로 Steam 오버레이를 통해 적절한 창을 직접 선택해야 할 수도 있습니다."
 }

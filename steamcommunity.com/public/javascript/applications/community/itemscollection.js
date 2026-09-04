@@ -116,62 +116,62 @@
     },
     36424: (e, t, s) => {
       "use strict";
-      s.r(t), s.d(t, { default: () => P });
-      var i = s(7850),
-        r = s(45699),
+      s.r(t), s.d(t, { default: () => D });
+      var r = s(7850),
+        i = s(45699),
         n = s(76217),
-        o = s(37788),
-        c = s(84143),
+        c = s(37788),
+        o = s(84143),
         l = s(37621),
         a = s(66418),
         d = s(84518),
-        m = s(60014),
-        u = s(90626),
+        u = s(60014),
+        m = s(90626),
         _ = s(24484);
       var f = s(55263),
         p = s(25706),
         h = s(52038),
-        g = s(40594);
-      function b({ nPercent: e, indeterminate: t, animate: s, className: r }) {
-        return (0, i.jsx)("div", {
+        b = s(40594);
+      function g({ nPercent: e, indeterminate: t, animate: s, className: i }) {
+        return (0, r.jsx)("div", {
           className: (0, h.A)(
-            g.ProgressBar,
-            s && g.AnimateProgress,
-            t && g.Indeterminate,
-            r,
+            b.ProgressBar,
+            s && b.AnimateProgress,
+            t && b.Indeterminate,
+            i,
           ),
           style: { "--percent": e / 100 },
         });
       }
       const I = ({ nPercent: e, size: t = 120, strokeWidth: s = 20 }) => {
-        const r = (t - s) / 2,
-          n = 2 * Math.PI * r,
-          o = n - (e / 100) * n,
-          c = 100 == e;
-        return (0, i.jsx)("div", {
-          className: (0, h.A)({ [g.Circular]: !0, [g.Full]: c }),
-          children: (0, i.jsxs)("svg", {
+        const i = (t - s) / 2,
+          n = 2 * Math.PI * i,
+          c = n - (e / 100) * n,
+          o = 100 == e;
+        return (0, r.jsx)("div", {
+          className: (0, h.A)({ [b.Circular]: !0, [b.Full]: o }),
+          children: (0, r.jsxs)("svg", {
             width: t,
             height: t,
             style: { transform: "rotate(-90deg)" },
             children: [
-              (0, i.jsx)("circle", {
+              (0, r.jsx)("circle", {
                 cx: t / 2,
                 cy: t / 2,
-                r,
+                r: i,
                 stroke: "#0c131d",
                 strokeWidth: s,
                 fill: "none",
               }),
-              (0, i.jsx)("circle", {
+              (0, r.jsx)("circle", {
                 cx: t / 2,
                 cy: t / 2,
-                r,
+                r: i,
                 stroke: "#1a9fff",
                 strokeWidth: s,
                 fill: "none",
                 strokeDasharray: n,
-                strokeDashoffset: o,
+                strokeDashoffset: c,
                 style: { transition: "stroke-dashoffset 0.3s ease-in-out" },
               }),
             ],
@@ -179,22 +179,22 @@
         });
       };
       var x = s(61859),
-        v = s(91675),
-        S = s(73745),
-        k = s(49395),
-        j = s.n(k),
+        k = s(91675),
+        v = s(73745),
+        S = s(49395),
+        j = s.n(S),
         N = s(85427),
-        T = s.n(N),
-        y = s(62490);
+        y = s.n(N),
+        T = s(62490);
       function w(e) {
         const {
             oRewardDefinition: t,
             rgRewardItems: s,
             rgUserItemRewarded: l,
             rgCommunityItemDefs: d,
-            bViewingOwnProfile: m,
+            bViewingOwnProfile: u,
           } = e,
-          _ = (0, u.useMemo)(() => {
+          _ = (0, m.useMemo)(() => {
             const e = new Set();
             null == l ||
               l.forEach((t) => {
@@ -206,56 +206,56 @@
             s.forEach((e) => {
               t.add(`${e.appid}_${e.community_item_type}`);
             });
-            const i = new Map();
+            const r = new Map();
             return (
               d
                 .filter((e) => e.active)
                 .filter((e) => t.has(`${e.appid}_${e.item_type}`))
                 .sort((t, s) => {
-                  const i = e.has(`${t.appid}_${t.item_type}`),
-                    r = e.has(`${s.appid}_${s.item_type}`);
-                  return (i && r) || (!i && !r)
+                  const r = e.has(`${t.appid}_${t.item_type}`),
+                    i = e.has(`${s.appid}_${s.item_type}`);
+                  return (r && i) || (!r && !i)
                     ? s.item_type - t.item_type
-                    : i
+                    : r
                       ? -1
                       : 1;
                 })
                 .forEach((t) => {
                   const s = e.has(`${t.appid}_${t.item_type}`);
-                  i.has(t.item_class) || i.set(t.item_class, []),
-                    i.get(t.item_class).push({ ...t, user_has_item: s });
+                  r.has(t.item_class) || r.set(t.item_class, []),
+                    r.get(t.item_class).push({ ...t, user_has_item: s });
                 }),
-              i
+              r
             );
           }, [s, l, d]);
-        return (0, i.jsxs)(o.YZ, {
-          navEntryPreferPosition: c.iU.LAST,
+        return (0, r.jsxs)(c.YZ, {
+          navEntryPreferPosition: o.iU.LAST,
           preferredFocus: !0,
-          className: T().FreeQuestCtn,
+          className: y().FreeQuestCtn,
           children: [
-            (0, i.jsx)("div", {
-              className: T().HowToGet,
+            (0, r.jsx)("div", {
+              className: y().HowToGet,
               children: (0, x.we)("#ItemCollection_ForFree_Title"),
             }),
-            (0, i.jsxs)(n.Z, {
+            (0, r.jsxs)(n.Z, {
               children: [
-                (0, i.jsxs)("div", {
-                  className: T().QuestInstructions,
+                (0, r.jsxs)("div", {
+                  className: y().QuestInstructions,
                   children: [
-                    (0, i.jsx)("div", {
-                      className: T().QuestName,
+                    (0, r.jsx)("div", {
+                      className: y().QuestName,
                       children: (0, x.we)("#ItemCollection_ForFree_Discovery"),
                     }),
-                    (0, i.jsx)("p", {
-                      children: (0, v.nR)(t.rtime_start_time, t.rtime_end_time),
+                    (0, r.jsx)("p", {
+                      children: (0, k.nR)(t.rtime_start_time, t.rtime_end_time),
                     }),
-                    (0, i.jsxs)("p", {
+                    (0, r.jsxs)("p", {
                       children: [
                         (0, x.we)("#ItemCollection_ForFree_Discovery_desc"),
-                        (0, i.jsx)("br", {}),
+                        (0, r.jsx)("br", {}),
                         (0, x.oW)(
                           "#ItemCollection_ForFree_Discovery_desc2",
-                          (0, i.jsx)(r.Ii, {
+                          (0, r.jsx)(i.Ii, {
                             href: `${a.TS.STORE_BASE_URL}explore?dq=widget`,
                           }),
                         ),
@@ -264,10 +264,10 @@
                   ],
                 }),
                 Array.from(_.keys()).map((e) =>
-                  (0, i.jsx)(
-                    C,
+                  (0, r.jsx)(
+                    M,
                     {
-                      bViewingOwnProfile: m,
+                      bViewingOwnProfile: u,
                       nAppID: t.appid,
                       itemClass: e,
                       rgItems: _.get(e),
@@ -281,71 +281,71 @@
           ],
         });
       }
-      function C(e) {
+      function M(e) {
         const {
             rgItems: t,
             itemClass: s,
-            nAppID: r,
+            nAppID: i,
             bViewingOwnProfile: l,
           } = e,
-          a = (0, u.useMemo)(
+          a = (0, m.useMemo)(
             () => t.filter((e) => e.user_has_item).length,
             [t],
           ),
           d = t.length ? Math.floor((100 * a) / t.length) : 0;
-        return (0, i.jsxs)(o.YZ, {
-          navEntryPreferPosition: c.iU.LAST,
+        return (0, r.jsxs)(c.YZ, {
+          navEntryPreferPosition: o.iU.LAST,
           preferredFocus: !0,
-          className: (0, h.A)(T().ItemSection),
+          className: (0, h.A)(y().ItemSection),
           children: [
-            (0, i.jsx)(M, { ...e }),
-            (0, i.jsxs)(n.Z, {
-              className: T().ItemCategoryCtn,
+            (0, r.jsx)(C, { ...e }),
+            (0, r.jsxs)(n.Z, {
+              className: y().ItemCategoryCtn,
               children: [
-                (0, i.jsx)(n.Z, {
-                  className: T().CategoryName,
+                (0, r.jsx)(n.Z, {
+                  className: y().CategoryName,
                   children: (0, x.we)("#Sale_Section_PointShop_class_" + s),
                 }),
-                (0, i.jsx)("div", { className: T().SectionLine }),
-                (0, i.jsx)(L, { ...e }),
+                (0, r.jsx)("div", { className: y().SectionLine }),
+                (0, r.jsx)(L, { ...e }),
               ],
             }),
-            (0, i.jsxs)(n.Z, {
-              className: T().ItemCtn,
+            (0, r.jsxs)(n.Z, {
+              className: y().ItemCtn,
               children: [
-                (0, i.jsxs)(n.Z, {
-                  className: T().ProgressIndicationCtn,
+                (0, r.jsxs)(n.Z, {
+                  className: y().ProgressIndicationCtn,
                   children: [
-                    (0, i.jsx)(I, { nPercent: d }),
-                    (0, i.jsxs)("div", {
-                      className: T().ProgressText,
+                    (0, r.jsx)(I, { nPercent: d }),
+                    (0, r.jsxs)("div", {
+                      className: y().ProgressText,
                       children: [
-                        (0, i.jsx)("div", {
+                        (0, r.jsx)("div", {
                           children: (0, x.we)(
                             "#ItemCollection_Collected_Item",
                             a,
                             t.length,
                           ),
                         }),
-                        (0, i.jsx)("div", {
+                        (0, r.jsx)("div", {
                           children: (0, x.we)("#ItemCollection_Collected_Line"),
                         }),
                       ],
                     }),
                   ],
                 }),
-                t.map((e) => (0, i.jsx)(D, { item: e }, "item_" + e.item_type)),
+                t.map((e) => (0, r.jsx)(A, { item: e }, "item_" + e.item_type)),
               ],
             }),
           ],
         });
       }
-      function M(e) {
+      function C(e) {
         const { itemClass: t, nAppID: s } = e;
         return t !== l.Ve
           ? null
-          : (0, i.jsx)(n.Z, {
-              className: T().HowToGet,
+          : (0, r.jsx)(n.Z, {
+              className: y().HowToGet,
               children: (0, x.we)("#ItemCollection_GameCards_Title"),
             });
       }
@@ -354,73 +354,73 @@
           itemClass: t,
           nAppID: s,
           bViewingOwnProfile: n,
-          bHideItemStore: o,
+          bHideItemStore: c,
         } = e;
         return t == l.Ve && n
-          ? (0, i.jsx)(r.Ii, {
+          ? (0, r.jsx)(i.Ii, {
               href: `${a.TS.COMMUNITY_BASE_URL}my/gamecards/${s}`,
-              className: T().PointShopLink,
+              className: y().PointShopLink,
               children: (0, x.we)("#ItemCollection_Visit_Badge"),
             })
-          : o
+          : c
             ? null
-            : (0, i.jsx)(r.Ii, {
+            : (0, r.jsx)(i.Ii, {
                 href: `${a.TS.STORE_BASE_URL}points/shop/app/${s}`,
-                className: T().PointShopLink,
+                className: y().PointShopLink,
                 children: (0, x.we)("#ItemCollection_Visit"),
               });
       }
-      function D(e) {
+      function A(e) {
         const { item: t } = e,
-          [s, r] = (0, S.OP)(),
-          o = t.user_has_item || s,
-          c = !o,
+          [s, i] = (0, v.OP)(),
+          c = t.user_has_item || s,
+          o = !c,
           a =
-            (!o && t.item_class != l.Ve && t.item_class != l.jE) ||
+            (!c && t.item_class != l.Ve && t.item_class != l.jE) ||
             t.item_class == l.J4
               ? void 0
               : t.item_image_small;
-        return (0, i.jsx)(n.Z, {
-          ...r,
-          onFocus: () => r.onPointerEnter(),
-          onBlur: () => r.onPointerLeave(),
+        return (0, r.jsx)(n.Z, {
+          ...i,
+          onFocus: () => i.onPointerEnter(),
+          onBlur: () => i.onPointerLeave(),
           focusable: !0,
-          className: T().ItemBackground,
-          children: (0, i.jsx)(p.Qc, {
+          className: y().ItemBackground,
+          children: (0, r.jsx)(p.Qc, {
             appid: t.appid,
             item_image_large: t.item_image_large,
             item_image_small: a,
             item_title: t.item_title,
-            item_movie_mp4: o ? t.item_movie_mp4_small : void 0,
-            item_movie_webm: o ? t.item_movie_webm_small : void 0,
-            className: (0, h.A)({ [T().ImgCtn]: !0, [T().ImgGrey]: c }),
-            videoClassName: T().ImgCtn,
+            item_movie_mp4: c ? t.item_movie_mp4_small : void 0,
+            item_movie_webm: c ? t.item_movie_webm_small : void 0,
+            className: (0, h.A)({ [y().ImgCtn]: !0, [y().ImgGrey]: o }),
+            videoClassName: y().ImgCtn,
           }),
         });
       }
-      const A = { include_assets: !0 };
-      function E(e) {
+      const E = { include_assets: !0 };
+      function P(e) {
         const { nAppID: t } = e,
-          [s] = (0, f.t7)(t, A);
+          [s] = (0, f.t7)(t, E);
         return s
-          ? (0, i.jsx)(n.Z, {
-              className: T().AppHeaderCtn,
-              children: (0, i.jsxs)(n.Z, {
+          ? (0, r.jsx)(n.Z, {
+              className: y().AppHeaderCtn,
+              children: (0, r.jsxs)(n.Z, {
                 children: [
-                  (0, i.jsxs)(n.Z, {
-                    className: T().AppHeaderRow,
+                  (0, r.jsxs)(n.Z, {
+                    className: y().AppHeaderRow,
                     children: [
-                      (0, i.jsx)(n.Z, {
-                        className: T().AppName,
+                      (0, r.jsx)(n.Z, {
+                        className: y().AppName,
                         children: s.GetName(),
                       }),
-                      (0, i.jsx)(n.Z, {
-                        className: T().PageName,
+                      (0, r.jsx)(n.Z, {
+                        className: y().PageName,
                         children: (0, x.we)("#ItemCollection_Title"),
                       }),
                     ],
                   }),
-                  (0, i.jsx)(n.Z, {
+                  (0, r.jsx)(n.Z, {
                     children: (0, x.we)("#ItemCollection_EventSubTitle"),
                   }),
                 ],
@@ -428,26 +428,26 @@
             })
           : null;
       }
-      const P = function (e) {
+      const D = function (e) {
         const {
             strProfileName: t,
             strSteamId: s,
-            bViewingOwnProfile: r,
-            rgCommunityItemDefs: o,
-            rgUserCommunityItems: c,
+            bViewingOwnProfile: i,
+            rgCommunityItemDefs: c,
+            rgUserCommunityItems: o,
             nAppID: f,
             rgRewardItems: p,
-            rgUserItemRewarded: g,
+            rgUserItemRewarded: b,
             oRewardDefinition: I,
           } = (function () {
-            const [e, t] = (0, u.useState)(() =>
+            const [e, t] = (0, m.useState)(() =>
               (0, _.Tc)("profile-itemcollection", "itemcollection_config"),
             );
             return e;
           })(),
-          v = (0, u.useMemo)(() => {
+          k = (0, m.useMemo)(() => {
             const e = new Set();
-            c.forEach((t) => {
+            o.forEach((t) => {
               e.add(`${t.appid}_${t.item_type}`);
             });
             const t = new Set();
@@ -457,7 +457,7 @@
               });
             const s = new Map();
             return (
-              o
+              c
                 .filter(
                   (e) =>
                     e.active &&
@@ -466,11 +466,11 @@
                     e.item_class != l.u8,
                 )
                 .sort((t, s) => {
-                  const i = e.has(`${t.appid}_${t.item_type}`),
-                    r = e.has(`${s.appid}_${s.item_type}`);
-                  return (i && r) || (!i && !r)
+                  const r = e.has(`${t.appid}_${t.item_type}`),
+                    i = e.has(`${s.appid}_${s.item_type}`);
+                  return (r && i) || (!r && !i)
                     ? s.item_type - t.item_type
-                    : i
+                    : r
                       ? -1
                       : 1;
                 })
@@ -485,120 +485,120 @@
                 }),
               s
             );
-          }, [o, p, c]),
-          S = (0, u.useMemo)(() => {
-            if (v.has(l.sU)) {
-              const e = v.get(l.sU).filter((e) => {
+          }, [c, p, o]),
+          v = (0, m.useMemo)(() => {
+            if (k.has(l.sU)) {
+              const e = k.get(l.sU).filter((e) => {
                 JSON.parse(e.item_key_values);
                 return e.item_movie_webm && e.item_movie_mp4;
               });
-              if (e.length) return (0, y.fW)(e), e[0];
+              if (e.length) return (0, T.fW)(e), e[0];
             }
             return null;
-          }, [v]),
-          k = (0, u.useMemo)(() => {
+          }, [k]),
+          S = (0, m.useMemo)(() => {
             let e = new Map();
             return (
-              o.forEach((t) => {
+              c.forEach((t) => {
                 e.set(t.item_type, t);
               }),
               e
             );
-          }, [o]),
-          N = (0, u.useMemo)(
-            () => Array.from(v.keys()).sort((e, t) => t - e),
-            [v],
+          }, [c]),
+          N = (0, m.useMemo)(
+            () => Array.from(k.keys()).sort((e, t) => t - e),
+            [k],
           ),
-          [M, L, D] = u.useMemo(() => {
+          [C, L, A] = m.useMemo(() => {
             const e =
-                null == c
+                null == o
                   ? void 0
-                  : c.filter((e) => {
-                      const t = k.get(e.item_type);
+                  : o.filter((e) => {
+                      const t = S.get(e.item_type);
                       return (
                         !t || (t.item_class != l.Ve && t.item_class != l.u8)
                       );
                     }),
-              t = o.filter((e) => e.item_class != l.Ve && e.item_class != l.u8),
+              t = c.filter((e) => e.item_class != l.Ve && e.item_class != l.u8),
               s = e.length || 0,
-              i = t.length || 0;
-            return [i ? Math.floor((100 * s) / i) : 0, i, s];
-          }, [k, o, c]);
-        return (0, i.jsx)(m.nn, {
+              r = t.length || 0;
+            return [r ? Math.floor((100 * s) / r) : 0, r, s];
+          }, [S, c, o]);
+        return (0, r.jsx)(u.nn, {
           feature: "itemcollections",
-          children: (0, i.jsx)(d.A, {
+          children: (0, r.jsx)(d.A, {
             appID: f,
-            children: (0, i.jsxs)(n.Z, {
+            children: (0, r.jsxs)(n.Z, {
               className: j().ProfileSubPageContainer,
               children: [
-                S &&
-                  (0, i.jsx)("div", {
-                    className: T().PageBackground,
-                    children: (0, i.jsxs)("video", {
+                v &&
+                  (0, r.jsx)("div", {
+                    className: y().PageBackground,
+                    children: (0, r.jsxs)("video", {
                       preload: "auto",
                       playsInline: !0,
                       muted: !0,
                       autoPlay: !0,
                       loop: !0,
-                      poster: `${a.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${f}/${S.item_image_large}`,
+                      poster: `${a.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${f}/${v.item_image_large}`,
                       children: [
-                        (0, i.jsx)("source", {
-                          src: `${a.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${f}/${S.item_movie_webm}`,
+                        (0, r.jsx)("source", {
+                          src: `${a.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${f}/${v.item_movie_webm}`,
                           type: "video/webm",
                         }),
                         Boolean(!a.TS.IN_CLIENT) &&
-                          (0, i.jsx)("source", {
-                            src: `${a.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${f}/${S.item_movie_mp4}`,
+                          (0, r.jsx)("source", {
+                            src: `${a.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${f}/${v.item_movie_mp4}`,
                             type: "video/mp4",
                           }),
                       ],
                     }),
                   }),
-                (0, i.jsx)(E, { nAppID: f }),
-                (0, i.jsxs)("div", {
-                  className: T().PageSection,
+                (0, r.jsx)(P, { nAppID: f }),
+                (0, r.jsxs)("div", {
+                  className: y().PageSection,
                   children: [
-                    (0, i.jsx)("span", {
-                      children: (0, x.we)("#ItemCollection_Collected", D, L),
+                    (0, r.jsx)("span", {
+                      children: (0, x.we)("#ItemCollection_Collected", A, L),
                     }),
-                    (0, i.jsx)(b, {
-                      className: T().ProgressBar,
+                    (0, r.jsx)(g, {
+                      className: y().ProgressBar,
                       animate: !0,
-                      nPercent: M,
+                      nPercent: C,
                       indeterminate: !1,
                     }),
                   ],
                 }),
                 Boolean(I) &&
-                  (0, i.jsx)("div", {
+                  (0, r.jsx)("div", {
                     className: (0, h.A)(
-                      T().PageSection,
-                      T().BackgroundGradient,
-                      T().Highlight,
+                      y().PageSection,
+                      y().BackgroundGradient,
+                      y().Highlight,
                     ),
-                    children: (0, i.jsx)(w, {
+                    children: (0, r.jsx)(w, {
                       oRewardDefinition: I,
-                      bViewingOwnProfile: r,
+                      bViewingOwnProfile: i,
                       rgRewardItems: p,
-                      rgUserItemRewarded: g,
-                      rgCommunityItemDefs: o,
+                      rgUserItemRewarded: b,
+                      rgCommunityItemDefs: c,
                     }),
                   }),
-                (0, i.jsxs)("div", {
-                  className: (0, h.A)(T().PageSection, T().BackgroundGradient),
+                (0, r.jsxs)("div", {
+                  className: (0, h.A)(y().PageSection, y().BackgroundGradient),
                   children: [
-                    (0, i.jsx)("div", {
-                      className: T().HowToGet,
+                    (0, r.jsx)("div", {
+                      className: y().HowToGet,
                       children: (0, x.we)("#ItemCollection_ForPoints_Title"),
                     }),
                     N.map((e) =>
-                      (0, i.jsx)(
-                        C,
+                      (0, r.jsx)(
+                        M,
                         {
                           nAppID: f,
                           itemClass: e,
-                          rgItems: v.get(e),
-                          bViewingOwnProfile: r,
+                          rgItems: k.get(e),
+                          bViewingOwnProfile: i,
                           bHideItemStore: e == l.Ve,
                         },
                         "item_class_" + e,
@@ -615,56 +615,112 @@
     37621: (e, t, s) => {
       "use strict";
       s.d(t, {
-        EL: () => i,
+        EL: () => r,
         Ed: () => f,
-        J4: () => c,
+        J4: () => o,
         Qw: () => d,
         ST: () => a,
         Ve: () => n,
-        XY: () => u,
+        XY: () => m,
         iV: () => _,
-        jE: () => m,
+        jE: () => u,
         oW: () => l,
-        sU: () => o,
-        u8: () => r,
+        sU: () => c,
+        u8: () => i,
         wK: () => p,
-        xi: () => g,
-        xw: () => b,
+        xi: () => b,
+        xw: () => g,
         yZ: () => I,
         zs: () => h,
       });
-      const i = 0,
-        r = 1,
+      const r = 0,
+        i = 1,
         n = 2,
-        o = 3,
-        c = 4,
+        c = 3,
+        o = 4,
         l = 5,
         a = 6,
         d = 7,
-        m = 8,
-        u = 9,
+        u = 8,
+        m = 9,
         _ = 10,
         f = 11,
         p = 12,
         h = 13,
-        g = 14,
-        b = 15,
+        b = 14,
+        g = 15,
         I = 16;
+    },
+    20376: (e, t, s) => {
+      "use strict";
+      s.d(t, { d2: () => _ });
+      var r = s(88942),
+        i = s(90626),
+        n = s(37085),
+        c = s(66418);
+      const o = "minigamev2/itemdefs",
+        l = "appid",
+        a = "editor";
+      async function d(e, t) {
+        if (!e) return [];
+        const s = new URLSearchParams({ [l]: String(e), l: c.TS.LANGUAGE });
+        t && s.set(a, "1");
+        const r = `${("undefined" != typeof self ? self.origin + "/" : "") === c.TS.STORE_BASE_URL ? c.TS.STORE_BASE_URL : c.TS.COMMUNITY_BASE_URL}${o}?${s}`,
+          i = await fetch(r, { credentials: t ? "include" : "same-origin" });
+        if (!i.ok) throw new Error(`${r} answered ${i.status}`);
+        const d = await i.json();
+        if ((null == d ? void 0 : d.success) == n.R && d.item_definitions)
+          return d.item_definitions;
+        throw new Error(
+          "Community item definitions for app " +
+            e +
+            " answered " +
+            (null == d ? void 0 : d.success),
+        );
+      }
+      function u(e, t) {
+        return ["MinigameCommunityItemDefs", e, Boolean(t)];
+      }
+      function m(e, t) {
+        const { data: s } = (0, r.I)(
+          (function (e, t) {
+            return {
+              queryKey: u(e, t),
+              queryFn: () => d(e, t),
+              enabled: Boolean(e),
+              retry: !1,
+            };
+          })(e, t),
+        );
+        return s;
+      }
+      function _(e, t, s) {
+        const r = m(e, s);
+        return (0, i.useMemo)(
+          () =>
+            null == r
+              ? void 0
+              : r.find(
+                  (r) => (s || r.active) && r.appid == e && r.item_type == t,
+                ),
+          [r, e, t, s],
+        );
+      }
     },
     84518: (e, t, s) => {
       "use strict";
       s.d(t, { A: () => l });
-      var i = s(60014),
-        r = s(90626),
+      var r = s(60014),
+        i = s(90626),
         n = s(62093),
-        o = s(30600),
-        c = s(8871);
+        c = s(30600),
+        o = s(8871);
       function l(e) {
         const { appID: t, feature: s, depth: l, children: a } = e,
-          d = (0, i.ru)(s, l),
-          m = (0, n.b)(),
-          [u, _] = r.useState(void 0),
-          f = r.useCallback(
+          d = (0, r.ru)(s, l),
+          u = (0, n.b)(),
+          [m, _] = i.useState(void 0),
+          f = i.useCallback(
             (e) => {
               e.isIntersecting &&
                 _((e) =>
@@ -676,170 +732,37 @@
             },
             [t, d],
           );
-        (0, r.useEffect)(() => {
-          u && null != u.appID && m.AddImpression(u.appID, u.snr);
-        }, [m, u]);
-        const p = (0, o.BL)(f),
-          h = t && (!u || (u.appID != t && u.snr != d)),
-          g = (0, c.Ue)(a.props.ref, h ? p : void 0);
-        return r.cloneElement(a, { ref: g });
+        (0, i.useEffect)(() => {
+          m && null != m.appID && u.AddImpression(m.appID, m.snr);
+        }, [u, m]);
+        const p = (0, c.BL)(f),
+          h = t && (!m || (m.appID != t && m.snr != d)),
+          b = (0, o.Ue)(a.props.ref, h ? p : void 0);
+        return i.cloneElement(a, { ref: b });
       }
     },
     62093: (e, t, s) => {
       "use strict";
       s.d(t, { b: () => n });
       s(7850);
-      var i = s(90626);
-      const r = i.createContext({
+      var r = s(90626);
+      const i = r.createContext({
         AddImpression: () => {
           console.log("Impression Tracking not enabled");
         },
         BIsValid: () => !1,
       });
       function n() {
-        return i.useContext(r);
+        return r.useContext(i);
       }
     },
     42248: (e, t, s) => {
       "use strict";
       s.d(t, { q: () => n });
-      var i = s(78327),
-        r = s(22837);
+      var r = s(78327),
+        i = s(22837);
       function n() {
-        return i.TS.IN_CLIENT && (0, r.DOG)(i.TS.LAUNCHER_TYPE);
-      }
-    },
-    24216: (e, t, s) => {
-      "use strict";
-      s.d(t, { d2: () => u });
-      var i = s(41735),
-        r = s.n(i),
-        n = s(90626),
-        o = s(37085),
-        c = s(68797),
-        l = s(6144),
-        a = s(73745),
-        d = s(78327);
-      class m {
-        GetItemDefForAppID(e) {
-          return this.m_mapAppToDefs.get(e);
-        }
-        GetItemDefsChangeForEventID(e) {
-          return (
-            this.m_listChangeCallback.has(e) ||
-              this.m_listChangeCallback.set(e, new l.lu()),
-            this.m_listChangeCallback.get(e)
-          );
-        }
-        BHasLoadedDef(e) {
-          return this.m_mapPromises.has(e);
-        }
-        SetTestItemDefs(e, t) {
-          this.m_mapAppToDefs.set(e, t),
-            this.GetItemDefsChangeForEventID(e).Dispatch(t),
-            this.m_mapPromises.set(e, Promise.resolve(o.R));
-        }
-        async LoadAppCommunityItems(e, t) {
-          return e
-            ? (this.m_mapPromises.has(e) ||
-                this.m_mapPromises.set(
-                  e,
-                  this.InternalLoadAppCommunityItems(e, t),
-                ),
-              this.m_mapPromises.get(e))
-            : o.zi;
-        }
-        async InternalLoadAppCommunityItems(e, t) {
-          var s, i;
-          let n = null;
-          try {
-            const l =
-                d.TS.COMMUNITY_BASE_URL +
-                (t
-                  ? "minigame/ajaxgetgameitemdefsforeditor"
-                  : "minigame/ajaxgetgameitemdefs"),
-              a = {
-                appid: e,
-                origin: self.origin,
-                l: d.TS.LANGUAGE,
-                sessionid: t ? (0, d.KC)() : void 0,
-              },
-              m = await r().get(l, { params: a, withCredentials: t });
-            if (
-              200 == (null == m ? void 0 : m.status) &&
-              (null === (s = null == m ? void 0 : m.data) || void 0 === s
-                ? void 0
-                : s.success) == o.R &&
-              (null === (i = null == m ? void 0 : m.data) || void 0 === i
-                ? void 0
-                : i.item_definitions)
-            )
-              return (
-                this.m_mapAppToDefs.set(e, m.data.item_definitions),
-                this.GetItemDefsChangeForEventID(e).Dispatch(
-                  m.data.item_definitions,
-                ),
-                o.R
-              );
-            n = (0, c.H)(m);
-          } catch (e) {
-            n = (0, c.H)(e);
-          }
-          return (
-            console.error(
-              "CSaleMiniGameItemDefStore.InternalLoadAppCommunityItems failed: on appid " +
-                e +
-                " edit? " +
-                t +
-                " error: " +
-                (null == n ? void 0 : n.strErrorMsg),
-              n,
-            ),
-            o.zi
-          );
-        }
-        static Get() {
-          return (
-            m.s_Singleton ||
-              ((m.s_Singleton = new m()),
-              m.s_Singleton.Init(),
-              "dev" == d.TS.WEB_UNIVERSE &&
-                (window.g_SaleMiniGameItemDefStore = m.s_Singleton)),
-            m.s_Singleton
-          );
-        }
-        constructor() {
-          (this.m_mapAppToDefs = new Map()),
-            (this.m_mapPromises = new Map()),
-            (this.m_listChangeCallback = new Map());
-        }
-        Init() {}
-      }
-      function u(e, t, s) {
-        const i = (function (e, t) {
-            const [s, i] = (0, n.useState)(m.Get().GetItemDefForAppID(e));
-            return (
-              (0, n.useEffect)(() => {
-                e &&
-                  !m.Get().BHasLoadedDef(e) &&
-                  m.Get().LoadAppCommunityItems(e, t);
-              }, [e, t]),
-              (0, a.hL)(m.Get().GetItemDefsChangeForEventID(e), i),
-              s
-            );
-          })(e, s),
-          [r, o] = (0, n.useState)(null);
-        return (
-          (0, n.useEffect)(() => {
-            if (e && i && null == r) {
-              const r = i.find(
-                (i) => (s || i.active) && i.appid == e && i.item_type == t,
-              );
-              r && o(r);
-            }
-          }, [r, i, e, t, s]),
-          r
-        );
+        return r.TS.IN_CLIENT && (0, i.DOG)(r.TS.LAUNCHER_TYPE);
       }
     },
     55263: (e, t, s) => {
@@ -848,82 +771,82 @@
         G6: () => _,
         Gg: () => p,
         Sq: () => d,
-        eR: () => m,
-        ik: () => u,
+        eR: () => u,
+        ik: () => m,
         mZ: () => h,
         t7: () => f,
-        zX: () => b,
+        zX: () => g,
       });
-      var i = s(41735),
-        r = s.n(i),
+      var r = s(41735),
+        i = s.n(r),
         n = s(90626),
-        o = s(37085),
-        c = s(6824),
+        c = s(37085),
+        o = s(6824),
         l = s(73745),
         a = s(16021);
       const d = 1,
-        m = 2,
-        u = 3;
-      function _(e, t, s, i) {
-        const c = (0, n.useRef)(void 0),
+        u = 2,
+        m = 3;
+      function _(e, t, s, r) {
+        const o = (0, n.useRef)(void 0),
           _ = (0, n.useRef)(void 0),
           f = (0, l.CH)();
-        c.current = e;
+        o.current = e;
         const [p, h] = (0, n.useState)(void 0),
           {
-            include_assets: g,
-            include_release: b,
+            include_assets: b,
+            include_release: g,
             include_platforms: I,
             include_all_purchase_options: x,
-            include_screenshots: v,
-            include_trailers: S,
-            include_ratings: k,
+            include_screenshots: k,
+            include_trailers: v,
+            include_ratings: S,
             include_tag_count: j,
             include_reviews: N,
-            include_basic_info: T,
-            include_supported_languages: y,
+            include_basic_info: y,
+            include_supported_languages: T,
             include_full_description: w,
-            include_included_items: C,
-            include_assets_without_overrides: M,
+            include_included_items: M,
+            include_assets_without_overrides: C,
             apply_user_filters: L,
-            include_links: D,
-            include_extra_details: A,
+            include_links: A,
+            include_extra_details: E,
           } = s;
         if (
           ((0, n.useEffect)(() => {
             const s = {
-              include_assets: g,
-              include_release: b,
+              include_assets: b,
+              include_release: g,
               include_platforms: I,
               include_all_purchase_options: x,
-              include_screenshots: v,
-              include_trailers: S,
-              include_ratings: k,
+              include_screenshots: k,
+              include_trailers: v,
+              include_ratings: S,
               include_tag_count: j,
               include_reviews: N,
-              include_basic_info: T,
-              include_supported_languages: y,
+              include_basic_info: y,
+              include_supported_languages: T,
               include_full_description: w,
-              include_included_items: C,
-              include_assets_without_overrides: M,
+              include_included_items: M,
+              include_assets_without_overrides: C,
               apply_user_filters: L,
-              include_links: D,
-              include_extra_details: A,
+              include_links: A,
+              include_extra_details: E,
             };
             let n = null;
             return (
               !e ||
                 e < 0 ||
                 a.A.Get().BHasStoreItem(e, t, s) ||
-                (void 0 !== p && i && i == _.current) ||
-                (i !== _.current && (h(void 0), (_.current = i)),
-                (n = r().CancelToken.source()),
+                (void 0 !== p && r && r == _.current) ||
+                (r !== _.current && (h(void 0), (_.current = r)),
+                (n = i().CancelToken.source()),
                 a.A.Get()
                   .QueueStoreItemRequest(e, t, s)
                   .then((t) => {
                     (null == n ? void 0 : n.token.reason) ||
-                      c.current !== e ||
-                      h(t == o.R),
+                      o.current !== e ||
+                      h(t == c.R),
                       f();
                   })),
               () =>
@@ -932,118 +855,118 @@
           }, [
             e,
             t,
-            i,
+            r,
             p,
-            g,
             b,
+            g,
             I,
             x,
+            k,
             v,
             S,
-            k,
             j,
             N,
-            T,
             y,
+            T,
             w,
-            C,
             M,
+            C,
             L,
-            D,
             A,
+            E,
             f,
           ]),
           !e)
         )
-          return [null, m];
-        if (!1 === p) return [void 0, m];
-        if (a.A.Get().BIsStoreItemMissing(e, t)) return [void 0, m];
+          return [null, u];
+        if (!1 === p) return [void 0, u];
+        if (a.A.Get().BIsStoreItemMissing(e, t)) return [void 0, u];
         if (!a.A.Get().BHasStoreItem(e, t, s)) return [void 0, d];
-        const E = a.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
-        return E ? [E, u] : [null, m];
+        const P = a.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
+        return P ? [P, m] : [null, u];
       }
       function f(e, t, s) {
-        return _(e, c.c6.qI, t, s);
+        return _(e, o.c6.qI, t, s);
       }
       function p(e, t, s) {
-        return _(e, c.c6.RD, t, s);
+        return _(e, o.c6.RD, t, s);
       }
       function h(e, t, s) {
-        var i;
-        const [r, n] = _(e, t, s);
-        let o;
-        (null == r ? void 0 : r.GetStoreItemType()) != c.c6.RD ||
-          (null === (i = r.GetAssets()) || void 0 === i
+        var r;
+        const [i, n] = _(e, t, s);
+        let c;
+        (null == i ? void 0 : i.GetStoreItemType()) != o.c6.RD ||
+          (null === (r = i.GetAssets()) || void 0 === r
             ? void 0
-            : i.GetHeaderURL()) ||
-          1 != (null == r ? void 0 : r.GetIncludedAppIDs().length) ||
-          (o = r.GetIncludedAppIDs()[0]);
-        const [l, a] = f(o, s);
-        return o && (null == l ? void 0 : l.BIsVisible()) ? [l, a] : [r, n];
+            : r.GetHeaderURL()) ||
+          1 != (null == i ? void 0 : i.GetIncludedAppIDs().length) ||
+          (c = i.GetIncludedAppIDs()[0]);
+        const [l, a] = f(c, s);
+        return c && (null == l ? void 0 : l.BIsVisible()) ? [l, a] : [i, n];
       }
-      function g(e, t, s, i) {
-        const o = (0, l.CH)(),
+      function b(e, t, s, r) {
+        const c = (0, l.CH)(),
           {
-            include_assets: c,
+            include_assets: o,
             include_release: _,
             include_platforms: f,
             include_all_purchase_options: p,
             include_screenshots: h,
-            include_trailers: g,
-            include_ratings: b,
+            include_trailers: b,
+            include_ratings: g,
             include_tag_count: I,
             include_reviews: x,
-            include_basic_info: v,
-            include_supported_languages: S,
-            include_full_description: k,
+            include_basic_info: k,
+            include_supported_languages: v,
+            include_full_description: S,
             include_included_items: j,
             include_assets_without_overrides: N,
-            apply_user_filters: T,
-            include_links: y,
+            apply_user_filters: y,
+            include_links: T,
             include_extra_details: w,
           } = s;
         if (
           ((0, n.useEffect)(() => {
             if (!e || 0 == e.length) return;
             const s = {
-                include_assets: c,
+                include_assets: o,
                 include_release: _,
                 include_platforms: f,
                 include_all_purchase_options: p,
                 include_screenshots: h,
-                include_trailers: g,
-                include_ratings: b,
+                include_trailers: b,
+                include_ratings: g,
                 include_tag_count: I,
                 include_reviews: x,
-                include_basic_info: v,
-                include_supported_languages: S,
-                include_full_description: k,
+                include_basic_info: k,
+                include_supported_languages: v,
+                include_full_description: S,
                 include_included_items: j,
                 include_assets_without_overrides: N,
-                apply_user_filters: T,
-                include_links: y,
+                apply_user_filters: y,
+                include_links: T,
                 include_extra_details: w,
               },
-              i = e.filter(
+              r = e.filter(
                 (e) =>
                   !(
                     a.A.Get().BHasStoreItem(e, t, s) ||
                     a.A.Get().BIsStoreItemMissing(e, t)
                   ),
               );
-            if (0 == i.length) return;
-            const n = r().CancelToken.source(),
-              l = i.map((e) => a.A.Get().QueueStoreItemRequest(e, t, s));
+            if (0 == r.length) return;
+            const n = i().CancelToken.source(),
+              l = r.map((e) => a.A.Get().QueueStoreItemRequest(e, t, s));
             return (
               Promise.all(l).then(() => {
-                n.token.reason || o();
+                n.token.reason || c();
               }),
               () => n.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, i, o, c, _, f, p, h, g, b, I, x, v, S, k, j, N, T, y, w]),
+          }, [e, t, r, c, o, _, f, p, h, b, g, I, x, k, v, S, j, N, y, T, w]),
           !e)
         )
-          return m;
+          return u;
         if (
           !e.every(
             (e) =>
@@ -1055,65 +978,65 @@
         return e.every((e) =>
           a.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t),
         )
-          ? u
-          : m;
+          ? m
+          : u;
       }
-      function b(e, t, s) {
-        return g(e, c.c6.qI, t, s);
+      function g(e, t, s) {
+        return b(e, o.c6.qI, t, s);
       }
     },
     25706: (e, t, s) => {
       "use strict";
-      s.d(t, { Qc: () => m, Zx: () => _, f8: () => u });
-      var i = s(7850),
-        r = s(65946),
+      s.d(t, { Qc: () => u, Zx: () => _, f8: () => m });
+      var r = s(7850),
+        i = s(65946),
         n = s(37621),
-        o = s(24216),
-        c = s(22797),
+        c = s(20376),
+        o = s(22797),
         l = s(61859),
         a = s(78327),
         d = s(56330);
-      function m(e) {
+      function u(e) {
         const {
           appid: t,
           item_image_small: s,
-          item_image_large: r,
+          item_image_large: i,
           item_movie_mp4: n,
-          item_movie_webm: o,
-          item_title: c,
+          item_movie_webm: c,
+          item_title: o,
         } = e;
-        if (n && o) {
-          const r = `${a.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${s}`,
-            c = `${a.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${o}`,
+        if (n && c) {
+          const i = `${a.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${s}`,
+            o = `${a.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${c}`,
             l = `${a.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${n}`;
-          return (0, i.jsx)(i.Fragment, {
-            children: (0, i.jsxs)("video", {
+          return (0, r.jsx)(r.Fragment, {
+            children: (0, r.jsxs)("video", {
               muted: !0,
               controls: !1,
               autoPlay: !0,
               loop: !0,
-              poster: r,
+              poster: i,
               playsInline: !0,
               className: e.videoClassName,
               children: [
-                (0, i.jsx)("source", { src: c, type: "video/webm" }),
+                (0, r.jsx)("source", { src: o, type: "video/webm" }),
                 Boolean(!a.TS.IN_CLIENT) &&
-                  (0, i.jsx)("source", { src: l, type: "video/mp4" }),
+                  (0, r.jsx)("source", { src: l, type: "video/mp4" }),
               ],
             }),
           });
         }
         {
-          const n = `${a.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${s || r}`;
-          return (0, i.jsx)("img", { className: e.className, src: n, alt: c });
+          const n = `${a.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${s || i}`;
+          return (0, r.jsx)("img", { className: e.className, src: n, alt: o });
         }
       }
-      function u(e) {
-        const { appid: t, community_item_type: s, bForEdit: r } = e,
-          n = (0, o.d2)(t, s, r),
+      function m(e) {
+        const { appid: t, community_item_type: s, bForEdit: i } = e,
+          n = (0, c.d2)(t, s, i),
           a =
             n && !n.active
-              ? (0, i.jsx)("div", {
+              ? (0, r.jsx)("div", {
                   className: d.WarningStylesBackground,
                   children: (0, l.we)(
                     "#Sale_Section_RewardShelf_ItemInActiveWarning",
@@ -1121,17 +1044,17 @@
                 })
               : void 0;
         return n
-          ? (0, i.jsxs)(i.Fragment, { children: [(0, i.jsx)(m, { ...n }), a] })
-          : (0, i.jsx)(c.t, { size: "small", string: (0, l.we)("#Loading") });
+          ? (0, r.jsxs)(r.Fragment, { children: [(0, r.jsx)(u, { ...n }), a] })
+          : (0, r.jsx)(o.t, { size: "small", string: (0, l.we)("#Loading") });
       }
       function _(e) {
-        var t, s, c, l;
-        const { section: d, rewardDef: m, language: _ } = e,
-          f = (0, o.d2)(
-            null !== (t = m.appid) && void 0 !== t ? t : 0,
-            null !== (s = m.community_item_type) && void 0 !== s ? s : 0,
+        var t, s, o, l;
+        const { section: d, rewardDef: u, language: _ } = e,
+          f = (0, c.d2)(
+            null !== (t = u.appid) && void 0 !== t ? t : 0,
+            null !== (s = u.community_item_type) && void 0 !== s ? s : 0,
           ),
-          [p] = (0, r.q3)(() => {
+          [p] = (0, i.q3)(() => {
             var e;
             return [
               Boolean(
@@ -1142,7 +1065,7 @@
             ];
           });
         let h;
-        switch (m.community_class) {
+        switch (u.community_class) {
           case n.xi:
           case n.xw:
             h = `${a.TS.COMMUNITY_BASE_URL}my/edit/avatar`;
@@ -1160,16 +1083,16 @@
           case n.Ed:
             h = `${a.TS.COMMUNITY_BASE_URL}chat`;
         }
-        return (0, i.jsxs)("a", {
+        return (0, r.jsxs)("a", {
           href: h,
           children: [
-            (0, i.jsx)(u, {
-              appid: null !== (c = m.appid) && void 0 !== c ? c : 0,
+            (0, r.jsx)(m, {
+              appid: null !== (o = u.appid) && void 0 !== o ? o : 0,
               community_item_type:
-                null !== (l = m.community_item_type) && void 0 !== l ? l : 0,
+                null !== (l = u.community_item_type) && void 0 !== l ? l : 0,
             }),
             Boolean(p) &&
-              (0, i.jsx)("span", {
+              (0, r.jsx)("span", {
                 children: null == f ? void 0 : f.item_name,
               }),
           ],
@@ -1178,123 +1101,123 @@
     },
     22797: (e, t, s) => {
       "use strict";
-      s.d(t, { t: () => m });
-      var i = s(7850),
-        r = s(90626),
+      s.d(t, { t: () => u });
+      var r = s(7850),
+        i = s(90626),
         n = s(52038),
-        o = s(20978),
-        c = s.n(o);
+        c = s(20978),
+        o = s.n(c);
       const l =
         s.p +
         "images/applications/community/steam_spinner.png?v=valveisgoodatcaching";
       var a = s(42248),
         d = s(66418);
-      const m = r.memo(function (e) {
+      const u = i.memo(function (e) {
         const {
           className: t,
           size: s,
-          string: o,
-          position: m,
+          string: c,
+          position: u,
           static: _,
           msDelayAppear: f,
         } = e;
-        let p = [c().LoadingWrapper, "SteamLogoThrobber", u(s)];
-        const [h, g] = r.useState(!f),
-          b = !(0, a.q)();
+        let p = [o().LoadingWrapper, "SteamLogoThrobber", m(s)];
+        const [h, b] = i.useState(!f),
+          g = !(0, a.q)();
         return (
-          (0, r.useEffect)(() => {
+          (0, i.useEffect)(() => {
             if (h) return;
-            const e = setTimeout(() => g(!0), f);
+            const e = setTimeout(() => b(!0), f);
             return () => clearTimeout(e);
           }, [f, h]),
-          void 0 === o && p.push(c().noString),
+          void 0 === c && p.push(o().noString),
           t && p.push(t),
-          _ && p.push(c().Static),
-          (0, i.jsxs)("div", {
+          _ && p.push(o().Static),
+          (0, r.jsxs)("div", {
             className: (0, n.A)(
-              "center" == m && c().throbber_center_wrapper,
-              !!f && c().ThrobberDelayAppear,
-              h && c().Visible,
+              "center" == u && o().throbber_center_wrapper,
+              !!f && o().ThrobberDelayAppear,
+              h && o().Visible,
             ),
             children: [
               h &&
-                b &&
-                (0, i.jsx)("div", {
+                g &&
+                (0, r.jsx)("div", {
                   className: p.join(" "),
-                  children: (0, i.jsx)("div", {
-                    className: c().NewThrobber,
-                    children: (0, i.jsx)("img", { src: (0, d.YJ)(l) }),
+                  children: (0, r.jsx)("div", {
+                    className: o().NewThrobber,
+                    children: (0, r.jsx)("img", { src: (0, d.YJ)(l) }),
                   }),
                 }),
-              Boolean(o) &&
-                (0, i.jsx)("div", { className: c().ThrobberText, children: o }),
+              Boolean(c) &&
+                (0, r.jsx)("div", { className: o().ThrobberText, children: c }),
             ],
           })
         );
       });
-      r.memo(function (e) {
+      i.memo(function (e) {
         const {
           className: t,
           size: s,
-          string: o,
+          string: c,
           position: l,
           static: a,
           msDelayAppear: d,
         } = e;
-        let m = [c().LoadingWrapper, "SteamLogoThrobber", u(s)];
-        const [f, p] = r.useState(!d);
+        let u = [o().LoadingWrapper, "SteamLogoThrobber", m(s)];
+        const [f, p] = i.useState(!d);
         return (
-          (0, r.useEffect)(() => {
+          (0, i.useEffect)(() => {
             if (f) return;
             const e = setTimeout(() => p(!0), d);
             return () => clearTimeout(e);
           }, [d, f]),
-          void 0 === o && m.push(c().noString),
-          t && m.push(t),
-          a && m.push(c().Static),
-          (0, i.jsxs)("div", {
+          void 0 === c && u.push(o().noString),
+          t && u.push(t),
+          a && u.push(o().Static),
+          (0, r.jsxs)("div", {
             className: (0, n.A)(
-              "center" == l && c().throbber_center_wrapper,
-              !!d && c().ThrobberDelayAppear,
-              f && c().Visible,
+              "center" == l && o().throbber_center_wrapper,
+              !!d && o().ThrobberDelayAppear,
+              f && o().Visible,
             ),
             children: [
               f &&
-                (0, i.jsx)("div", {
-                  className: m.join(" "),
-                  children: (0, i.jsxs)("div", {
-                    className: c().Throbber,
+                (0, r.jsx)("div", {
+                  className: u.join(" "),
+                  children: (0, r.jsxs)("div", {
+                    className: o().Throbber,
                     children: [
-                      (0, i.jsx)(_, { className: c().base }),
-                      (0, i.jsx)(_, { className: c().blur }),
+                      (0, r.jsx)(_, { className: o().base }),
+                      (0, r.jsx)(_, { className: o().blur }),
                     ],
                   }),
                 }),
-              Boolean(o) &&
-                (0, i.jsx)("div", { className: c().ThrobberText, children: o }),
+              Boolean(c) &&
+                (0, r.jsx)("div", { className: o().ThrobberText, children: c }),
             ],
           })
         );
       });
-      function u(e) {
+      function m(e) {
         switch (e) {
           case "small":
-            return c().throbber_small;
+            return o().throbber_small;
           case "medium":
-            return c().throbber_medium;
+            return o().throbber_medium;
           case "xlarge":
-            return c().throbber_xlarge;
+            return o().throbber_xlarge;
           case "xxlarge":
-            return c().throbber_xxlarge;
+            return o().throbber_xxlarge;
           default:
-            return c().throbber_large;
+            return o().throbber_large;
         }
       }
       function _(e) {
         let t = "SVGIcon_Button SVGIcon_Throbber ";
         return (
           e.className && (t += e.className),
-          (0, i.jsxs)("svg", {
+          (0, r.jsxs)("svg", {
             version: "1.1",
             id: "base",
             xmlns: "http://www.w3.org/2000/svg",
@@ -1305,27 +1228,27 @@
             height: "256px",
             viewBox: "0 0 256 256",
             children: [
-              (0, i.jsxs)("g", {
-                className: c().partCircle,
+              (0, r.jsxs)("g", {
+                className: o().partCircle,
                 children: [
-                  (0, i.jsx)("path", {
-                    className: c().roundOuter,
+                  (0, r.jsx)("path", {
+                    className: o().roundOuter,
                     fill: "none",
                     stroke: "#ffffff",
                     strokeWidth: "6",
                     strokeMiterlimit: "10",
                     d: "M27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895",
                   }),
-                  (0, i.jsx)("path", {
-                    className: c().roundOuter,
+                  (0, r.jsx)("path", {
+                    className: o().roundOuter,
                     fill: "none",
                     stroke: "#ffffff",
                     strokeWidth: "6",
                     strokeMiterlimit: "10",
                     d: "M201.432,101.166",
                   }),
-                  (0, i.jsx)("path", {
-                    className: c().roundOuter,
+                  (0, r.jsx)("path", {
+                    className: o().roundOuter,
                     fill: "none",
                     stroke: "#ffffff",
                     strokeWidth: "6",
@@ -1334,19 +1257,19 @@
                   }),
                 ],
               }),
-              (0, i.jsxs)("g", {
-                className: c().mainOutline,
+              (0, r.jsxs)("g", {
+                className: o().mainOutline,
                 children: [
-                  (0, i.jsx)("path", {
-                    className: c().roundFill,
+                  (0, r.jsx)("path", {
+                    className: o().roundFill,
                     fill: "none",
                     stroke: "#ffffff",
                     strokeWidth: "6",
                     strokeMiterlimit: "10",
                     d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
                   }),
-                  (0, i.jsx)("path", {
-                    className: c().roundOuterOutline,
+                  (0, r.jsx)("path", {
+                    className: o().roundOuterOutline,
                     strokeLinecap: "butt",
                     fill: "none",
                     stroke: "#ffffff",
@@ -1354,8 +1277,8 @@
                     strokeMiterlimit: "10",
                     d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
                   }),
-                  (0, i.jsx)("path", {
-                    className: c().roundThrobber01,
+                  (0, r.jsx)("path", {
+                    className: o().roundThrobber01,
                     strokeLinecap: "butt",
                     fill: "none",
                     stroke: "#ffffff",
@@ -1363,8 +1286,8 @@
                     strokeMiterlimit: "10",
                     d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
                   }),
-                  (0, i.jsx)("path", {
-                    className: c().roundThrobber02,
+                  (0, r.jsx)("path", {
+                    className: o().roundThrobber02,
                     strokeLinecap: "butt",
                     fill: "none",
                     stroke: "#ffffff",
@@ -1372,8 +1295,8 @@
                     strokeMiterlimit: "10",
                     d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
                   }),
-                  (0, i.jsx)("path", {
-                    className: c().roundThrobber03,
+                  (0, r.jsx)("path", {
+                    className: o().roundThrobber03,
                     strokeLinecap: "butt",
                     fill: "none",
                     stroke: "#ffffff",
@@ -1381,8 +1304,8 @@
                     strokeMiterlimit: "10",
                     d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
                   }),
-                  (0, i.jsx)("path", {
-                    className: c().roundThrobber04,
+                  (0, r.jsx)("path", {
+                    className: o().roundThrobber04,
                     strokeLinecap: "butt",
                     fill: "none",
                     stroke: "#ffffff",
@@ -1390,8 +1313,8 @@
                     strokeMiterlimit: "10",
                     d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
                   }),
-                  (0, i.jsx)("path", {
-                    className: c().roundThrobber05,
+                  (0, r.jsx)("path", {
+                    className: o().roundThrobber05,
                     strokeLinecap: "butt",
                     fill: "none",
                     stroke: "#ffffff",
@@ -1399,8 +1322,8 @@
                     strokeMiterlimit: "10",
                     d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
                   }),
-                  (0, i.jsx)("path", {
-                    className: c().roundThrobber06,
+                  (0, r.jsx)("path", {
+                    className: o().roundThrobber06,
                     strokeLinecap: "butt",
                     fill: "none",
                     stroke: "#ffffff",
@@ -1408,8 +1331,8 @@
                     strokeMiterlimit: "10",
                     d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
                   }),
-                  (0, i.jsx)("path", {
-                    className: c().roundThrobber07,
+                  (0, r.jsx)("path", {
+                    className: o().roundThrobber07,
                     strokeLinecap: "butt",
                     fill: "none",
                     stroke: "#ffffff",
@@ -1417,8 +1340,8 @@
                     strokeMiterlimit: "10",
                     d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
                   }),
-                  (0, i.jsx)("path", {
-                    className: c().roundThrobber08,
+                  (0, r.jsx)("path", {
+                    className: o().roundThrobber08,
                     strokeLinecap: "butt",
                     fill: "none",
                     stroke: "#ffffff",
@@ -1426,8 +1349,8 @@
                     strokeMiterlimit: "10",
                     d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
                   }),
-                  (0, i.jsx)("path", {
-                    className: c().roundThrobber09,
+                  (0, r.jsx)("path", {
+                    className: o().roundThrobber09,
                     strokeLinecap: "butt",
                     fill: "none",
                     stroke: "#ffffff",
@@ -1435,8 +1358,8 @@
                     strokeMiterlimit: "10",
                     d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
                   }),
-                  (0, i.jsx)("path", {
-                    className: c().roundThrobber10,
+                  (0, r.jsx)("path", {
+                    className: o().roundThrobber10,
                     strokeLinecap: "butt",
                     fill: "none",
                     stroke: "#ffffff",
@@ -1444,8 +1367,8 @@
                     strokeMiterlimit: "10",
                     d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
                   }),
-                  (0, i.jsx)("path", {
-                    className: c().roundThrobber11,
+                  (0, r.jsx)("path", {
+                    className: o().roundThrobber11,
                     strokeLinecap: "butt",
                     fill: "none",
                     stroke: "#ffffff",
@@ -1453,8 +1376,8 @@
                     strokeMiterlimit: "10",
                     d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
                   }),
-                  (0, i.jsx)("path", {
-                    className: c().roundThrobber12,
+                  (0, r.jsx)("path", {
+                    className: o().roundThrobber12,
                     strokeLinecap: "butt",
                     fill: "none",
                     stroke: "#ffffff",
@@ -1462,8 +1385,8 @@
                     strokeMiterlimit: "10",
                     d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
                   }),
-                  (0, i.jsx)("path", {
-                    className: c().roundThrobber13,
+                  (0, r.jsx)("path", {
+                    className: o().roundThrobber13,
                     strokeLinecap: "butt",
                     fill: "none",
                     stroke: "#ffffff",
@@ -1471,8 +1394,8 @@
                     strokeMiterlimit: "10",
                     d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
                   }),
-                  (0, i.jsx)("path", {
-                    className: c().roundThrobber14,
+                  (0, r.jsx)("path", {
+                    className: o().roundThrobber14,
                     strokeLinecap: "butt",
                     fill: "none",
                     stroke: "#ffffff",
@@ -1480,8 +1403,8 @@
                     strokeMiterlimit: "10",
                     d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
                   }),
-                  (0, i.jsx)("path", {
-                    className: c().roundThrobber15,
+                  (0, r.jsx)("path", {
+                    className: o().roundThrobber15,
                     strokeLinecap: "butt",
                     fill: "none",
                     stroke: "#ffffff",
@@ -1491,16 +1414,16 @@
                   }),
                 ],
               }),
-              (0, i.jsx)("g", {
-                className: c().bottomCircle,
-                children: (0, i.jsx)("path", {
+              (0, r.jsx)("g", {
+                className: o().bottomCircle,
+                children: (0, r.jsx)("path", {
                   fill: "#ffffff",
                   d: "M89.226,181.579L76.5,176.321c2.256,4.696,6.159,8.628,11.339,10.786 c11.197,4.668,24.11-0.647,28.779-11.854c2.259-5.425,2.274-11.405,0.033-16.841c-2.237-5.436-6.46-9.675-11.886-11.938 c-5.384-2.24-11.151-2.156-16.22-0.244l13.146,5.436c8.261,3.443,12.166,12.93,8.725,21.189 C106.976,181.115,97.486,185.022,89.226,181.579",
                 }),
               }),
-              (0, i.jsx)("g", {
-                className: c().topCircle,
-                children: (0, i.jsx)("circle", {
+              (0, r.jsx)("g", {
+                className: o().topCircle,
+                children: (0, r.jsx)("circle", {
                   fill: "none",
                   stroke: "#ffffff",
                   strokeWidth: "6",

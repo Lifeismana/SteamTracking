@@ -647,7 +647,7 @@
     "SuspiciousSender_MessageWarning": "Disse beskeder ser mistænkelige ud",
     "SuspiciousSender_ViewOptions": "Klik for muligheder...",
     "SuspiciousSender_Dialog_Title": "Mistænkelige beskeder",
-    "SuspiciousSender_Dialog_Description1": "Do not sign into any account, including Steam, from links in these messages. Steam representatives will NEVER contact you via chat or external programs. <1>Learn more</1> about Steam Security Recommendations.",
+    "SuspiciousSender_Dialog_Description1": "Log ikke ind på nogen konto (inklusive Steam) fra links i disse beskeder. Repræsentanter fra Steam vil ALDRIG kontakte dig via chat eller eksterne programmer. <1>Læs mere</1> om Steams sikkerhedsanbefalinger.",
     "SuspiciousSender_Dialog_Description2": "Links fra denne bruger vil være deaktiverede i denne gruppe, indtil du afviser denne advarsel.",
     "SuspiciousSender_Dialog_Description3": "Indberetning af disse beskeder hjælper Steam med at tage handling og opdage denne type indhold i fremtiden.",
     "SuspiciousSender_Dialog_Dismiss": "Afvis advarsel",
