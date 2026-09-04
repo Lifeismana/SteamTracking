@@ -1,627 +1,603 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-(() => {
-  (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-    [6893],
-    {
-      29914: (T, A, r) => {
-        "use strict";
-        r.r(A), r.d(A, { default: () => lt });
-        var s = r(7850),
-          u = r(90626),
-          l = r(48453),
-          y = r(80862),
-          B = r(3166),
-          M = r(98609),
-          O = r(36118),
-          v = r(99412),
-          P = r(68312),
-          g = r(19316),
-          c = r(18210),
-          k = r(68e3),
-          o = r.n(k),
-          x = r(14947),
-          F = r(65946),
-          w = r(42993),
-          U = r(13854),
-          b = r(3692),
-          X = Object.defineProperty,
-          G = Object.getOwnPropertyDescriptor,
-          L = (i, t, e, n) => {
-            for (
-              var a = n > 1 ? void 0 : n ? G(t, e) : t, d = i.length - 1, m;
-              d >= 0;
-              d--
-            )
-              (m = i[d]) && (a = (n ? m(t, e, a) : m(a)) || a);
-            return n && a && X(t, e, a), a;
-          },
-          Y = ((i) => (
-            (i[(i.k_All = 0)] = "k_All"),
-            (i[(i.k_Owned = 1)] = "k_Owned"),
-            (i[(i.k_Subscribed = 2)] = "k_Subscribed"),
-            i
-          ))(Y || {});
-        class S {
-          constructor() {
-            (this.rgFilterState = new Map()),
-              (this.commentFilter = {
-                type: 0,
-                setItemTypes: new Set([]),
+(self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
+  [6893],
+  {
+    68e3: (t) => {
+      t.exports = {
+        narrowWidth: "500px",
+        notificationRowHeight: "72px",
+        NotificationPageCtn: "_2DCeN21MQJGwVpPCXcT2QJ",
+        NotificationsBody: "_35hlMprL--UdgfHJGuGnJR",
+        NotificationsHeader: "_1bLYafVT6_4DisbgdimwXc",
+        NotificationsHeaderTitle: "_39iFFMnPRQXd5IL6PGoOcn",
+        NotificationsHeaderUnread: "_3iXuG9K_6ttnP8gOhOR7Iv",
+        NotificationListCtn: "_1cj-7JmCC_IQ4ZdxxUo43Q",
+        NotificationsList: "KG3qM6Y1DpK-afn15yeaT",
+        AllNotificationsRowCtn: "_3Y-y3pAcXpqgpuUTLQkz86",
+        NotificationFiltersCtn: "_1uSw_aqus0W7yb3vT9_-22",
+        EmptyNotifications: "_3t24BJeKfB-KBIct4_UuX8",
+        EmptyNotificationsTitle: "_uGFLI7t_2emsn37l93hZ",
+        EmptyNotificationsBody: "_3Iomc0Ep9lyBB_QNlE8p4n",
+        SettingsButtons: "_3B7mJdJw-FhqV6l5q-IFO_",
+        SettingsTooltip: "_3ZlbZ5ev0L-hcx-z4JItgd",
+        MarkAllReadButton: "_37UjwIEFODwKdnz3d90mdF",
+        SettingsButton: "T8q00Eg6Sx2u-N2ySzMrg",
+        SettingsImg: "_1XXJX0-wXgz7O3Bd0qimBX",
+        SettingsFiltersTitle: "_4T-jWhXP-AWt4AatyamIk",
+        SettingsFilters: "_1YDIAzUAWf7ueOLgHLbGeF",
+        FilterCheckbox: "_2C4dM9ELcMmtBLz8SavLK4",
+        ResetButton: "_3Z8otCycVht4XocANv_EPb",
+        CommentIcon: "o_I3vYqgbLhw7c8iXVwb3",
+        CommentFilterCtn: "-GWy_nsP_d9rJnCNgx8NK",
+        AdvancedCommentFilters: "irq6koPKVmtQ5H7U8EAoA",
+        Expanded: "_2hRRl_cNi9X4Veh7FeK-F4",
+        CommentRadioGroup: "_2_xVHbSZ7fCv3LUz-THkR5",
+        Expander: "MjW-ILAVK028V2xI8eCfW",
+        NotificationActions: "_3R-McPl3j1ANvRa0U9reMV",
+      };
+    },
+    32664: (t, e, i) => {
+      "use strict";
+      i.r(e), i.d(e, { default: () => Z });
+      var s,
+        n = i(7850),
+        o = i(90626),
+        r = i(37340),
+        a = i(26512),
+        c = i(78327),
+        l = i(30470),
+        d = i(12155),
+        m = i(22837),
+        h = i(23809),
+        p = i(68255),
+        f = i(61859),
+        u = i(68e3),
+        y = i.n(u),
+        _ = i(34629),
+        N = i(14947),
+        F = i(65946),
+        g = i(68950),
+        x = i(25489),
+        v = i(60011);
+      !(function (t) {
+        (t[(t.k_All = 0)] = "k_All"),
+          (t[(t.k_Owned = 1)] = "k_Owned"),
+          (t[(t.k_Subscribed = 2)] = "k_Subscribed");
+      })(s || (s = {}));
+      class C {
+        constructor() {
+          (this.rgFilterState = new Map()),
+            (this.commentFilter = {
+              type: s.k_All,
+              setItemTypes: new Set([]),
+              fnFilter: () => !0,
+            }),
+            (this.k_rgFilterCheckboxes = [
+              {
+                type: r.Vv.v_,
+                display: (0, f.we)("#NotificationsFilters_Comments"),
+                hash: "comments",
+              },
+              {
+                type: r.Vv.XJ,
+                display: (0, f.we)("#NotificationsFilters_Wishlist"),
+                hash: "wishlist",
+              },
+              {
+                type: r.Vv.pZ,
+                display: (0, f.we)("#NotificationsFilters_FriendRequest"),
+                hash: "invites",
+              },
+              {
+                type: r.Vv.K,
+                display: (0, f.we)("#NotificationsFilters_Gifts"),
+                hash: "gifts",
+              },
+              {
+                type: r.Vv.hW,
+                display: (0, f.we)("#NotificationsFilters_Inventory"),
+                hash: "inventory",
+              },
+              {
+                type: r.Vv.Y9,
+                display: (0, f.we)("#NotificationsFilters_AsyncGame"),
+                hash: "asyncgame",
+              },
+              {
+                type: r.Vv.wY,
+                display: (0, f.we)("#NotificationsFilters_HelpRequest"),
+                hash: "help",
+              },
+              {
+                type: r.Vv.an,
+                display: (0, f.we)("#NotificationsFilters_TradeOffer"),
+                hash: "trade",
+              },
+              {
+                type: r.Vv.e9,
+                display: (0, f.we)("#NotificationsFilters_General"),
+                hash: "general",
+              },
+            ]),
+            (this.k_rgCommentFilters = [
+              {
+                type: s.k_All,
+                display: (0, f.we)("#NotificationsList_CommentFilters_All"),
                 fnFilter: () => !0,
-              }),
-              (this.k_rgFilterCheckboxes = [
-                {
-                  type: l.Vv.v_,
-                  display: (0, c.we)("#NotificationsFilters_Comments"),
-                  hash: "comments",
-                },
-                {
-                  type: l.Vv.XJ,
-                  display: (0, c.we)("#NotificationsFilters_Wishlist"),
-                  hash: "wishlist",
-                },
-                {
-                  type: l.Vv.pZ,
-                  display: (0, c.we)("#NotificationsFilters_FriendRequest"),
-                  hash: "invites",
-                },
-                {
-                  type: l.Vv.K,
-                  display: (0, c.we)("#NotificationsFilters_Gifts"),
-                  hash: "gifts",
-                },
-                {
-                  type: l.Vv.hW,
-                  display: (0, c.we)("#NotificationsFilters_Inventory"),
-                  hash: "inventory",
-                },
-                {
-                  type: l.Vv.Y9,
-                  display: (0, c.we)("#NotificationsFilters_AsyncGame"),
-                  hash: "asyncgame",
-                },
-                {
-                  type: l.Vv.wY,
-                  display: (0, c.we)("#NotificationsFilters_HelpRequest"),
-                  hash: "help",
-                },
-                {
-                  type: l.Vv.an,
-                  display: (0, c.we)("#NotificationsFilters_TradeOffer"),
-                  hash: "trade",
-                },
-                {
-                  type: l.Vv.e9,
-                  display: (0, c.we)("#NotificationsFilters_General"),
-                  hash: "general",
-                },
-              ]),
-              (this.k_rgCommentFilters = [
-                {
-                  type: 0,
-                  display: (0, c.we)("#NotificationsList_CommentFilters_All"),
-                  fnFilter: () => !0,
-                },
-                {
-                  type: 1,
-                  display: (0, c.we)(
-                    "#NotificationsList_CommentFilters_YourItems",
-                  ),
-                  fnFilter: this.IsCommentOwned,
-                },
-                {
-                  type: 2,
-                  display: (0, c.we)(
-                    "#NotificationsList_CommentFilters_Subscribed",
-                  ),
-                  fnFilter: this.IsCommentSubscribed,
-                },
-              ]),
-              (0, x.Gn)(this);
-          }
-          IsCommentOwned(t, e) {
-            return t.bis_owner || t.owner_steam_id.ConvertTo64BitString() == e;
-          }
-          IsCommentSubscribed(t, e) {
-            return t.bsubscribed;
-          }
-          ProcessHash(t) {
-            this.rgFilterState.clear(),
-              this.commentFilter.setItemTypes.clear(),
-              t &&
-                t.split(",").forEach((n) => {
-                  const a = this.k_rgFilterCheckboxes.findIndex(
-                    (d) => d.hash == n,
-                  );
-                  a !== -1
-                    ? this.rgFilterState.set(
-                        this.k_rgFilterCheckboxes[a].type,
-                        !0,
-                      )
-                    : (0, U.TG)(n) &&
-                      this.rgFilterState.has(l.Vv.v_) &&
-                      this.commentFilter.setItemTypes.add(parseInt(n));
-                });
-          }
-          SetFilter(t, e, n) {
-            n &&
-              (this.rgFilterState.clear(),
-              this.commentFilter.setItemTypes.clear()),
-              t &&
-                (this.rgFilterState.set(t, e),
-                t == l.Vv.v_ && !e && this.commentFilter.setItemTypes.clear()),
-              this.UpdateLocationHash();
-          }
-          SetCommentFilter(t) {
-            var e;
-            (this.commentFilter = t),
-              (this.commentFilter.fnFilter =
-                (e = this.k_rgCommentFilters.find((n) => n.type == t.type)) ==
-                null
-                  ? void 0
-                  : e.fnFilter),
-              this.UpdateLocationHash();
-          }
-          UpdateLocationHash() {
-            let t = "";
-            this.rgFilterState.forEach((e, n) => {
-              var a;
-              e &&
-                (t +=
-                  (t ? "," : "") +
-                  ((a = this.k_rgFilterCheckboxes.find((d) => d.type == n)) ==
-                  null
-                    ? void 0
-                    : a.hash));
-            }),
-              this.rgFilterState.has(l.Vv.v_) &&
-                this.commentFilter.setItemTypes.forEach(
-                  (e) => (t += (t ? "," : "") + e),
+              },
+              {
+                type: s.k_Owned,
+                display: (0, f.we)(
+                  "#NotificationsList_CommentFilters_YourItems",
                 ),
-              window.history.pushState(
-                {},
-                null,
-                window.location.pathname + (t ? "#" + t : ""),
-              );
+                fnFilter: this.IsCommentOwned,
+              },
+              {
+                type: s.k_Subscribed,
+                display: (0, f.we)(
+                  "#NotificationsList_CommentFilters_Subscribed",
+                ),
+                fnFilter: this.IsCommentSubscribed,
+              },
+            ]),
+            (0, N.Gn)(this);
+        }
+        IsCommentOwned(t, e) {
+          return t.bis_owner || t.owner_steam_id.ConvertTo64BitString() == e;
+        }
+        IsCommentSubscribed(t, e) {
+          return t.bsubscribed;
+        }
+        ProcessHash(t) {
+          if (
+            (this.rgFilterState.clear(),
+            this.commentFilter.setItemTypes.clear(),
+            t)
+          ) {
+            t.split(",").forEach((t) => {
+              const e = this.k_rgFilterCheckboxes.findIndex((e) => e.hash == t);
+              -1 !== e
+                ? this.rgFilterState.set(this.k_rgFilterCheckboxes[e].type, !0)
+                : (0, x.TG)(t) &&
+                  this.rgFilterState.has(r.Vv.v_) &&
+                  this.commentFilter.setItemTypes.add(parseInt(t));
+            });
           }
         }
-        L([x.sH], S.prototype, "rgFilterState", 2),
-          L([x.sH], S.prototype, "commentFilter", 2);
-        function R() {
-          (0, F.q3)(() => [...h.rgFilterState]);
-          let i = 0;
-          return (
-            h.rgFilterState.forEach((t) => {
-              i += t ? 1 : 0;
-            }),
-            { numActive: i, filters: h.rgFilterState }
-          );
+        SetFilter(t, e, i) {
+          i &&
+            (this.rgFilterState.clear(),
+            this.commentFilter.setItemTypes.clear()),
+            t &&
+              (this.rgFilterState.set(t, e),
+              t != r.Vv.v_ || e || this.commentFilter.setItemTypes.clear()),
+            this.UpdateLocationHash();
         }
-        function z() {
-          const i = j(),
-            t = (0, y.V8)();
-          return (
-            i.map((e) => {
-              var n;
-              e.item.hidden ||
-                (0, y.kE)(
-                  t,
-                  e.type,
-                  (n = e.rgunread) == null ? void 0 : n.length,
-                );
-            }),
-            (0, y.PI)(t)
-          );
+        SetCommentFilter(t) {
+          var e;
+          (this.commentFilter = t),
+            (this.commentFilter.fnFilter =
+              null ===
+                (e = this.k_rgCommentFilters.find((e) => e.type == t.type)) ||
+              void 0 === e
+                ? void 0
+                : e.fnFilter),
+            this.UpdateLocationHash();
         }
-        function V() {
-          return (0, F.q3)(() => h.commentFilter);
-        }
-        function K() {
-          return u.useMemo(() => {
-            const i = new Map();
-            for (const t of f.m_rgNotificationRollups)
-              i.set(t.type, 1 + (i.get(t.type) || 0));
-            return i;
-          }, []);
-        }
-        function J() {
-          const i = (0, w.LH)();
-          return u.useMemo(() => {
-            const t = new Map();
-            for (const e of h.k_rgCommentFilters)
-              for (const n of f.m_rgNotificationRollups.filter(
-                (a) => a.type == l.Vv.v_,
-              )) {
-                const a = (0, y.bP)(n);
-                e.fnFilter(a, i) && t.set(e.type, 1 + (t.get(e.type) || 0));
-              }
-            return t;
-          }, [i]);
-        }
-        function H() {
-          return u.useMemo(() => {
-            const i = new Map();
-            for (const t of f.m_rgNotificationRollups.filter(
-              (e) => e.type == l.Vv.v_,
-            )) {
-              const e = (0, y.bP)(t);
-              i.set(e.comment_type, 1 + (i.get(e.comment_type) || 0));
-            }
-            return i;
-          }, []);
-        }
-        function j() {
-          const { numActive: i, filters: t } = R(),
-            e = V(),
-            n = (0, w.LH)(),
-            { settings: a } = (0, b.S0)(n).data,
-            d = (0, b.BM)();
-          return (
-            (0, F.q3)(() => (0, y.PI)(f.m_summary)),
-            f.m_rgNotificationRollups.filter((m) => {
-              if ((i && !t.get(m.type)) || (0, y.jb)(m.type, a, d)) return !1;
-              if (
-                i &&
-                m.type == l.Vv.v_ &&
-                (e.type != 0 || e.setItemTypes.size > 0)
-              ) {
-                const p = (0, y.bP)(m);
-                let N = !e.fnFilter || e.fnFilter(p, n);
-                return (
-                  e.setItemTypes.size > 0 &&
-                    !e.setItemTypes.has(p.comment_type) &&
-                    (N = !1),
-                  N
-                );
-              }
-              return !0;
-            })
-          );
-        }
-        function ft() {
-          return f.m_summary;
-        }
-        const h = new S(),
-          f = new y.cE();
-        var C = r(19298),
-          E = r(54963),
-          I = r(36707),
-          Z = r(90297),
-          W = r(51079),
-          D = r(24660);
-        function Q(i) {
-          const { hash: t } = i;
-          (0, u.useEffect)(() => {
-            h.ProcessHash(t);
-          }, [t]);
-          const e = (0, P.KV)();
-          (0, u.useEffect)(() => {
-            f.setTransport(e), f.m_nUnviewed > 0 && f.MarkAllItemsViewed();
-          }, [e]);
-          const n = (0, B.Tc)("notifications", "application_config");
-          return (
-            f.ProcessNewNotificationPayload(n),
-            f.m_rgNotificationRollups.length
-              ? (0, s.jsx)(s.Fragment, {
-                  children: (0, s.jsxs)("div", {
-                    className: o().NotificationPageCtn,
-                    children: [
-                      (0, s.jsxs)("div", {
-                        className: o().NotificationsHeader,
-                        children: [
-                          (0, s.jsx)("span", {
-                            className: o().NotificationsHeaderTitle,
-                            children: (0, c.we)("#NotificationsList_Header"),
-                          }),
-                          (0, s.jsx)($, {}),
-                        ],
-                      }),
-                      (0, s.jsxs)("div", {
-                        className: o().NotificationsBody,
-                        children: [
-                          (0, s.jsx)("div", {
-                            className: o().NotificationListCtn,
-                            children: (0, s.jsx)(_, {}),
-                          }),
-                          (0, s.jsxs)("div", {
-                            className: o().NotificationFiltersCtn,
-                            children: [
-                              (0, s.jsx)(tt, {}),
-                              (0, s.jsx)("div", {
-                                className: o().NotificationActions,
-                                children: (0, s.jsx)(D.Ii, {
-                                  href: "/my/moderatormessages",
-                                  children: (0, c.we)("#CommunityActivity"),
-                                }),
-                              }),
-                            ],
-                          }),
-                        ],
-                      }),
-                    ],
-                  }),
-                })
-              : (0, s.jsx)("div", {
-                  className: o().NotificationPageCtn,
-                  children: (0, s.jsx)(q, {}),
-                })
-          );
-        }
-        function $() {
-          const i = z(),
-            t = (0, c.we)("#NotificationsList_Unread", i);
-          return (0, s.jsx)("span", {
-            className: o().NotificationsHeaderUnread,
-            children: t,
-          });
-        }
-        function _() {
-          const i = j();
-          return (0, s.jsx)(C.Z, {
-            className: o().NotificationsList,
-            children: i.map((t, e) => (0, s.jsx)(rt, { rollup: t }, e)),
-          });
-        }
-        function q() {
-          return (0, s.jsxs)(C.Z, {
-            className: o().EmptyNotifications,
-            children: [
-              (0, s.jsx)(C.Z, {
-                className: o().EmptyNotificationsTitle,
-                children: (0, c.we)("#NotificationsList_EmptyTitle"),
-              }),
-              (0, s.jsx)(C.Z, {
-                className: o().EmptyNotificationsBody,
-                children: (0, c.we)("#NotificationsList_EmptyBody"),
-              }),
-            ],
-          });
-        }
-        function tt() {
-          const i = j(),
-            t = K(),
-            e = () =>
-              window.location.assign(
-                `${M.TS.STORE_BASE_URL}account/notificationsettings`,
-              );
-          return (0, s.jsxs)("div", {
-            className: o().NotificationsFilterCtn,
-            children: [
-              (0, s.jsxs)("div", {
-                className: o().SettingsButtons,
-                children: [
-                  (0, s.jsx)("div", {
-                    className: o().SettingsTooltip,
-                    children: (0, s.jsx)(g.$n, {
-                      className: o().MarkAllReadButton,
-                      onClick: () => f.MarkAllItemsRead(i),
-                      children: (0, c.we)("#NotificationsList_MarkAllRead"),
-                    }),
-                  }),
-                  (0, s.jsxs)(g.$n, {
-                    className: o().SettingsButton,
-                    onClick: e,
-                    children: [
-                      (0, s.jsx)(O.wB_, { className: o().SettingsImg }),
-                      (0, c.we)("#NotificationsList_Settings"),
-                    ],
-                  }),
-                ],
-              }),
-              (0, s.jsx)("div", {
-                className: o().SettingsFiltersTitle,
-                children: (0, c.we)("#NotificationsList_FilterTo"),
-              }),
-              (0, s.jsx)("div", {
-                className: o().SettingsFilters,
-                children: h.k_rgFilterCheckboxes
-                  .filter((n) => t.has(n.type))
-                  .map((n) => (0, s.jsx)(et, { filterOptions: n }, n.type)),
-              }),
-              (0, s.jsx)(g.$n, {
-                className: o().ResetButton,
-                onClick: () => h.SetFilter(null, !1, !0),
-                children: (0, c.we)("#NotificationsList_Reset"),
-              }),
-            ],
-          });
-        }
-        function et(i) {
-          const { filterOptions: t } = i,
-            { filters: e } = R();
-          return t.type == l.Vv.v_
-            ? (0, s.jsx)(ot, { filterOptions: t, checked: e.get(t.type) })
-            : (0, s.jsx)(
-                g.Yh,
-                {
-                  className: o().FilterCheckbox,
-                  label: t.display,
-                  checked: e.get(t.type),
-                  onChange: (n) => h.SetFilter(t.type, n),
-                },
-                t.type,
-              );
-        }
-        function it(i) {
-          const { threadType: t } = i,
-            e = V(),
-            n = (a) => {
-              a
-                ? (e.setItemTypes.add(Number(t)),
-                  h.SetCommentFilter({
-                    type: e.type,
-                    setItemTypes: e.setItemTypes,
-                  }))
-                : (e.setItemTypes.delete(Number(t)),
-                  h.SetCommentFilter({
-                    type: e.type,
-                    setItemTypes: e.setItemTypes,
-                  }));
-            };
-          return (0, s.jsx)(g.Yh, {
-            className: o().AdvancedCommentFilterCheckbox,
-            label: (0, c.we)("#CommentThreadType_" + t),
-            checked: e.setItemTypes.has(t),
-            onChange: n,
-          });
-        }
-        function st(i) {
-          const { className: t } = i,
-            e = H();
-          return (0, s.jsx)("div", {
-            className: (0, I.A)(o().AdvancedCommentFilters, t),
-            children: Array.from(e.keys()).map((n) =>
-              (0, s.jsx)(it, { threadType: n }, n),
-            ),
-          });
-        }
-        function nt(i) {
-          const { expanded: t, children: e } = i,
-            [n, a] = (0, u.useState)(void 0),
-            d = (p) => {
-              const N = p.target;
-              a(N.scrollHeight);
-            },
-            m = (0, E.wY)(d);
-          return (0, s.jsx)("div", {
-            className: (0, I.A)(o().Expander, o().Expanded),
-            style: { height: t ? n : 0 },
-            children: (0, s.jsx)("div", { ref: m, children: e }),
-          });
-        }
-        function ot(i) {
-          const { filterOptions: t, checked: e } = i,
-            n = J(),
-            a = H(),
-            d = (dt) => {
-              h.SetFilter(t.type, dt);
-            },
-            m = !1,
-            p = m || n.size > 2,
-            N = m || a.size > 1,
-            mt = p || N;
-          return (0, s.jsxs)(s.Fragment, {
-            children: [
-              (0, s.jsx)(
-                g.Yh,
-                {
-                  className: o().FilterCheckbox,
-                  label: t.display,
-                  checked: e,
-                  onChange: d,
-                },
-                t.type,
+        UpdateLocationHash() {
+          let t = "";
+          this.rgFilterState.forEach((e, i) => {
+            var s;
+            e &&
+              (t +=
+                (t ? "," : "") +
+                (null ===
+                  (s = this.k_rgFilterCheckboxes.find((t) => t.type == i)) ||
+                void 0 === s
+                  ? void 0
+                  : s.hash));
+          }),
+            this.rgFilterState.has(r.Vv.v_) &&
+              this.commentFilter.setItemTypes.forEach(
+                (e) => (t += (t ? "," : "") + e),
               ),
-              mt &&
-                (0, s.jsx)("div", {
-                  className: (0, I.A)(o().CommentFilterCtn, e && o().Expanded),
-                  children: (0, s.jsx)(nt, {
-                    expanded: e,
-                    children: (0, s.jsx)("div", {
-                      className: o().CommentFilters,
-                      children:
-                        N && (0, s.jsx)(st, { className: o().Expanded }),
-                    }),
-                  }),
-                }),
-            ],
-          });
+            window.history.pushState(
+              {},
+              null,
+              window.location.pathname + (t ? "#" + t : ""),
+            );
         }
-        function at(i, t, e) {
-          !t.read &&
-            (!e || e.button == 0 || e.button == 1) &&
-            f.MarkItemRead(t.notification_id),
-            i();
-        }
-        function rt(i) {
-          const { rollup: t } = i;
-          (0, F.q3)(() => t.item.hidden);
-          const [e, n] = u.useState(!1),
-            a = (0, E.BL)(
-              (0, u.useCallback)((p) => {
-                p.isIntersecting && n(!0);
-              }, []),
-              { rootMargin: "600px" },
-            ),
-            d = (0, u.useCallback)(() => {
-              f.MarkItemHidden(t.item.notification_id);
-            }, [t.item.notification_id]);
-          if (t.item.hidden) return null;
-          if (t.item.hidden && t.type == l.Vv.pZ) {
-            const p = (0, y.bP)(t);
-            if ((0, v.aPS)(p.state) || p.state == v.Yjh) return null;
+      }
+      function w() {
+        (0, F.q3)(() => [...b.rgFilterState]);
+        let t = 0;
+        return (
+          b.rgFilterState.forEach((e) => {
+            t += e ? 1 : 0;
+          }),
+          { numActive: t, filters: b.rgFilterState }
+        );
+      }
+      function k() {
+        return (0, F.q3)(() => b.commentFilter);
+      }
+      function j() {
+        return o.useMemo(() => {
+          const t = new Map();
+          for (const e of I.m_rgNotificationRollups.filter(
+            (t) => t.type == r.Vv.v_,
+          )) {
+            const i = (0, a.bP)(e);
+            t.set(i.comment_type, 1 + (t.get(i.comment_type) || 0));
           }
-          const m = (0, Z.Rd)(t.type);
-          return m
-            ? (0, s.jsx)(W.Ay, {
-                controller: "notification",
-                method: (0, v.fLp)(v.yrU),
-                submethod: (0, v.ey3)(v.oYe),
-                children: (0, s.jsx)(ct, {
-                  ref: a,
-                  children:
-                    e &&
-                    (0, s.jsx)(m, {
-                      rollup: t,
-                      onNotificationClick: at,
-                      onHide: d,
-                      location: v.oYe,
-                      uimode: v.yrU,
+          return t;
+        }, []);
+      }
+      function S() {
+        const { numActive: t, filters: e } = w(),
+          i = k(),
+          n = (0, g.LH)(),
+          { settings: o } = (0, v.S0)(n).data,
+          c = (0, v.BM)();
+        return (
+          (0, F.q3)(() => (0, a.PI)(I.m_summary)),
+          I.m_rgNotificationRollups.filter((l) => {
+            if (t && !e.get(l.type)) return !1;
+            if ((0, a.jb)(l.type, o, c)) return !1;
+            if (
+              t &&
+              l.type == r.Vv.v_ &&
+              (i.type != s.k_All || i.setItemTypes.size > 0)
+            ) {
+              const t = (0, a.bP)(l);
+              let e = !i.fnFilter || i.fnFilter(t, n);
+              return (
+                i.setItemTypes.size > 0 &&
+                  !i.setItemTypes.has(t.comment_type) &&
+                  (e = !1),
+                e
+              );
+            }
+            return !0;
+          })
+        );
+      }
+      (0, _.Cg)([N.sH], C.prototype, "rgFilterState", void 0),
+        (0, _.Cg)([N.sH], C.prototype, "commentFilter", void 0);
+      const b = new C(),
+        I = new a.cE();
+      var T = i(76217),
+        A = i(73745),
+        L = i(52038),
+        E = i(16264),
+        R = i(32630),
+        V = i(45699);
+      function B(t) {
+        const { hash: e } = t;
+        (0, o.useEffect)(() => {
+          b.ProcessHash(e);
+        }, [e]);
+        const i = (0, h.KV)();
+        (0, o.useEffect)(() => {
+          I.setTransport(i), I.m_nUnviewed > 0 && I.MarkAllItemsViewed();
+        }, [i]);
+        const s = (0, c.Tc)("notifications", "application_config");
+        return (
+          I.ProcessNewNotificationPayload(s),
+          I.m_rgNotificationRollups.length
+            ? (0, n.jsx)(n.Fragment, {
+                children: (0, n.jsxs)("div", {
+                  className: y().NotificationPageCtn,
+                  children: [
+                    (0, n.jsxs)("div", {
+                      className: y().NotificationsHeader,
+                      children: [
+                        (0, n.jsx)("span", {
+                          className: y().NotificationsHeaderTitle,
+                          children: (0, f.we)("#NotificationsList_Header"),
+                        }),
+                        (0, n.jsx)(H, {}),
+                      ],
                     }),
+                    (0, n.jsxs)("div", {
+                      className: y().NotificationsBody,
+                      children: [
+                        (0, n.jsx)("div", {
+                          className: y().NotificationListCtn,
+                          children: (0, n.jsx)(M, {}),
+                        }),
+                        (0, n.jsxs)("div", {
+                          className: y().NotificationFiltersCtn,
+                          children: [
+                            (0, n.jsx)(U, {}),
+                            (0, n.jsx)("div", {
+                              className: y().NotificationActions,
+                              children: (0, n.jsx)(V.Ii, {
+                                href: "/my/moderatormessages",
+                                children: (0, f.we)("#CommunityActivity"),
+                              }),
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
+                  ],
                 }),
               })
-            : null;
-        }
-        const ct = u.forwardRef((i, t) =>
-          (0, s.jsx)("div", {
-            className: o().AllNotificationsRowCtn,
-            ref: t,
-            children: i.children,
-          }),
+            : (0, n.jsx)("div", {
+                className: y().NotificationPageCtn,
+                children: (0, n.jsx)(P, {}),
+              })
         );
-        function lt(i) {
-          let t = i.location.hash;
-          return (
-            t && t.startsWith("#") && (t = t.slice(1)),
-            (0, s.jsx)(Q, { hash: t })
-          );
+      }
+      function H() {
+        const t = (function () {
+            const t = S(),
+              e = (0, a.V8)();
+            return (
+              t.map((t) => {
+                var i;
+                t.item.hidden ||
+                  (0, a.kE)(
+                    e,
+                    t.type,
+                    null === (i = t.rgunread) || void 0 === i
+                      ? void 0
+                      : i.length,
+                  );
+              }),
+              (0, a.PI)(e)
+            );
+          })(),
+          e = (0, f.we)("#NotificationsList_Unread", t);
+        return (0, n.jsx)("span", {
+          className: y().NotificationsHeaderUnread,
+          children: e,
+        });
+      }
+      function M() {
+        const t = S();
+        return (0, n.jsx)(T.Z, {
+          className: y().NotificationsList,
+          children: t.map((t, e) => (0, n.jsx)(z, { rollup: t }, e)),
+        });
+      }
+      function P() {
+        return (0, n.jsxs)(T.Z, {
+          className: y().EmptyNotifications,
+          children: [
+            (0, n.jsx)(T.Z, {
+              className: y().EmptyNotificationsTitle,
+              children: (0, f.we)("#NotificationsList_EmptyTitle"),
+            }),
+            (0, n.jsx)(T.Z, {
+              className: y().EmptyNotificationsBody,
+              children: (0, f.we)("#NotificationsList_EmptyBody"),
+            }),
+          ],
+        });
+      }
+      function U() {
+        const t = S(),
+          e = o.useMemo(() => {
+            const t = new Map();
+            for (const e of I.m_rgNotificationRollups)
+              t.set(e.type, 1 + (t.get(e.type) || 0));
+            return t;
+          }, []);
+        return (0, n.jsxs)("div", {
+          className: y().NotificationsFilterCtn,
+          children: [
+            (0, n.jsxs)("div", {
+              className: y().SettingsButtons,
+              children: [
+                (0, n.jsx)("div", {
+                  className: y().SettingsTooltip,
+                  children: (0, n.jsx)(p.$n, {
+                    className: y().MarkAllReadButton,
+                    onClick: () => I.MarkAllItemsRead(t),
+                    children: (0, f.we)("#NotificationsList_MarkAllRead"),
+                  }),
+                }),
+                (0, n.jsxs)(p.$n, {
+                  className: y().SettingsButton,
+                  onClick: () =>
+                    window.location.assign(
+                      `${l.TS.STORE_BASE_URL}account/notificationsettings`,
+                    ),
+                  children: [
+                    (0, n.jsx)(d.wB_, { className: y().SettingsImg }),
+                    (0, f.we)("#NotificationsList_Settings"),
+                  ],
+                }),
+              ],
+            }),
+            (0, n.jsx)("div", {
+              className: y().SettingsFiltersTitle,
+              children: (0, f.we)("#NotificationsList_FilterTo"),
+            }),
+            (0, n.jsx)("div", {
+              className: y().SettingsFilters,
+              children: b.k_rgFilterCheckboxes
+                .filter((t) => e.has(t.type))
+                .map((t) => (0, n.jsx)(O, { filterOptions: t }, t.type)),
+            }),
+            (0, n.jsx)(p.$n, {
+              className: y().ResetButton,
+              onClick: () => b.SetFilter(null, !1, !0),
+              children: (0, f.we)("#NotificationsList_Reset"),
+            }),
+          ],
+        });
+      }
+      function O(t) {
+        const { filterOptions: e } = t,
+          { filters: i } = w();
+        return e.type == r.Vv.v_
+          ? (0, n.jsx)(Y, { filterOptions: e, checked: i.get(e.type) })
+          : (0, n.jsx)(
+              p.Yh,
+              {
+                className: y().FilterCheckbox,
+                label: e.display,
+                checked: i.get(e.type),
+                onChange: (t) => b.SetFilter(e.type, t),
+              },
+              e.type,
+            );
+      }
+      function X(t) {
+        const { threadType: e } = t,
+          i = k();
+        return (0, n.jsx)(p.Yh, {
+          className: y().AdvancedCommentFilterCheckbox,
+          label: (0, f.we)("#CommentThreadType_" + e),
+          checked: i.setItemTypes.has(e),
+          onChange: (t) => {
+            t
+              ? (i.setItemTypes.add(Number(e)),
+                b.SetCommentFilter({
+                  type: i.type,
+                  setItemTypes: i.setItemTypes,
+                }))
+              : (i.setItemTypes.delete(Number(e)),
+                b.SetCommentFilter({
+                  type: i.type,
+                  setItemTypes: i.setItemTypes,
+                }));
+          },
+        });
+      }
+      function q(t) {
+        const { className: e } = t,
+          i = j();
+        return (0, n.jsx)("div", {
+          className: (0, L.A)(y().AdvancedCommentFilters, e),
+          children: Array.from(i.keys()).map((t) =>
+            (0, n.jsx)(X, { threadType: t }, t),
+          ),
+        });
+      }
+      function G(t) {
+        const { expanded: e, children: i } = t,
+          [s, r] = (0, o.useState)(void 0),
+          a = (0, A.wY)((t) => {
+            const e = t.target;
+            r(e.scrollHeight);
+          });
+        return (0, n.jsx)("div", {
+          className: (0, L.A)(y().Expander, y().Expanded),
+          style: { height: e ? s : 0 },
+          children: (0, n.jsx)("div", { ref: a, children: i }),
+        });
+      }
+      function Y(t) {
+        const { filterOptions: e, checked: i } = t,
+          s = (function () {
+            const t = (0, g.LH)();
+            return o.useMemo(() => {
+              const e = new Map();
+              for (const i of b.k_rgCommentFilters)
+                for (const s of I.m_rgNotificationRollups.filter(
+                  (t) => t.type == r.Vv.v_,
+                )) {
+                  const n = (0, a.bP)(s);
+                  i.fnFilter(n, t) && e.set(i.type, 1 + (e.get(i.type) || 0));
+                }
+              return e;
+            }, [t]);
+          })(),
+          c = j(),
+          l = s.size > 2,
+          d = c.size > 1,
+          m = l || d;
+        return (0, n.jsxs)(n.Fragment, {
+          children: [
+            (0, n.jsx)(
+              p.Yh,
+              {
+                className: y().FilterCheckbox,
+                label: e.display,
+                checked: i,
+                onChange: (t) => {
+                  b.SetFilter(e.type, t);
+                },
+              },
+              e.type,
+            ),
+            m &&
+              (0, n.jsx)("div", {
+                className: (0, L.A)(y().CommentFilterCtn, i && y().Expanded),
+                children: (0, n.jsx)(G, {
+                  expanded: i,
+                  children: (0, n.jsx)("div", {
+                    className: y().CommentFilters,
+                    children: d && (0, n.jsx)(q, { className: y().Expanded }),
+                  }),
+                }),
+              }),
+          ],
+        });
+      }
+      function K(t, e, i) {
+        e.read ||
+          (i && 0 != i.button && 1 != i.button) ||
+          I.MarkItemRead(e.notification_id),
+          t();
+      }
+      function z(t) {
+        const { rollup: e } = t;
+        (0, F.q3)(() => e.item.hidden);
+        const [i, s] = o.useState(!1),
+          c = (0, A.BL)(
+            (0, o.useCallback)((t) => {
+              t.isIntersecting && s(!0);
+            }, []),
+            { rootMargin: "600px" },
+          ),
+          l = (0, o.useCallback)(() => {
+            I.MarkItemHidden(e.item.notification_id);
+          }, [e.item.notification_id]);
+        if (e.item.hidden) return null;
+        if (e.item.hidden && e.type == r.Vv.pZ) {
+          const t = (0, a.bP)(e);
+          if ((0, m.aPS)(t.state) || t.state == m.Yjh) return null;
         }
-      },
-      68e3: (T) => {
-        T.exports = {
-          narrowWidth: "500px",
-          notificationRowHeight: "72px",
-          NotificationPageCtn: "_2DCeN21MQJGwVpPCXcT2QJ",
-          NotificationsBody: "_35hlMprL--UdgfHJGuGnJR",
-          NotificationsHeader: "_1bLYafVT6_4DisbgdimwXc",
-          NotificationsHeaderTitle: "_39iFFMnPRQXd5IL6PGoOcn",
-          NotificationsHeaderUnread: "_3iXuG9K_6ttnP8gOhOR7Iv",
-          NotificationListCtn: "_1cj-7JmCC_IQ4ZdxxUo43Q",
-          NotificationsList: "KG3qM6Y1DpK-afn15yeaT",
-          AllNotificationsRowCtn: "_3Y-y3pAcXpqgpuUTLQkz86",
-          NotificationFiltersCtn: "_1uSw_aqus0W7yb3vT9_-22",
-          EmptyNotifications: "_3t24BJeKfB-KBIct4_UuX8",
-          EmptyNotificationsTitle: "_uGFLI7t_2emsn37l93hZ",
-          EmptyNotificationsBody: "_3Iomc0Ep9lyBB_QNlE8p4n",
-          SettingsButtons: "_3B7mJdJw-FhqV6l5q-IFO_",
-          SettingsTooltip: "_3ZlbZ5ev0L-hcx-z4JItgd",
-          MarkAllReadButton: "_37UjwIEFODwKdnz3d90mdF",
-          SettingsButton: "T8q00Eg6Sx2u-N2ySzMrg",
-          SettingsImg: "_1XXJX0-wXgz7O3Bd0qimBX",
-          SettingsFiltersTitle: "_4T-jWhXP-AWt4AatyamIk",
-          SettingsFilters: "_1YDIAzUAWf7ueOLgHLbGeF",
-          FilterCheckbox: "_2C4dM9ELcMmtBLz8SavLK4",
-          ResetButton: "_3Z8otCycVht4XocANv_EPb",
-          CommentIcon: "o_I3vYqgbLhw7c8iXVwb3",
-          CommentFilterCtn: "-GWy_nsP_d9rJnCNgx8NK",
-          AdvancedCommentFilters: "irq6koPKVmtQ5H7U8EAoA",
-          Expanded: "_2hRRl_cNi9X4Veh7FeK-F4",
-          CommentRadioGroup: "_2_xVHbSZ7fCv3LUz-THkR5",
-          Expander: "MjW-ILAVK028V2xI8eCfW",
-          NotificationActions: "_3R-McPl3j1ANvRa0U9reMV",
-        };
-      },
+        const d = (0, E.Rd)(e.type);
+        return d
+          ? (0, n.jsx)(R.Ay, {
+              controller: "notification",
+              method: (0, m.fLp)(m.yrU),
+              submethod: (0, m.ey3)(m.oYe),
+              children: (0, n.jsx)(J, {
+                ref: c,
+                children:
+                  i &&
+                  (0, n.jsx)(d, {
+                    rollup: e,
+                    onNotificationClick: K,
+                    onHide: l,
+                    location: m.oYe,
+                    uimode: m.yrU,
+                  }),
+              }),
+            })
+          : null;
+      }
+      const J = o.forwardRef((t, e) =>
+        (0, n.jsx)("div", {
+          className: y().AllNotificationsRowCtn,
+          ref: e,
+          children: t.children,
+        }),
+      );
+      function Z(t) {
+        let e = t.location.hash;
+        return (
+          e && e.startsWith("#") && (e = e.slice(1)), (0, n.jsx)(B, { hash: e })
+        );
+      }
     },
-  ]);
-})();
+  },
+]);

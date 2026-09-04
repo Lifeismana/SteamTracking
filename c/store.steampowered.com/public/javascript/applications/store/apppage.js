@@ -10085,11 +10085,14 @@
             { data: _ } = (0, _._)();
           if (!_) return null;
           if (!_ || (!_.supported && !_.subtitles && !_.full_audio)) {
-            const _ = _.preferences?.primary_language ?? _.Bhc;
-            return (0, _.jsx)(_._, {
-              color: "blue-8",
-              children: (0, _._)("#Language_" + (0, _.LgB)(_)),
-            });
+            let _ = _.preferences?.primary_language ?? _.Bhc;
+            return (
+              (_ == _.xPp || _ >= _.bP9) && (_ = _.Bhc),
+              (0, _.jsx)(_._, {
+                color: "blue-8",
+                children: (0, _._)("#Language_" + (0, _.LgB)(_)),
+              })
+            );
           } else {
             let _;
             return (

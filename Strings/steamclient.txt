@@ -8185,12 +8185,12 @@ $steammessages_parental_objects.proto"
 0000000000000000000000000000000000000000
 00000001
 00003333
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 00|000
 01/01/00
 0123456789.
 0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -11747,11 +11747,11 @@ $steammessages_parental_objects.proto"
 20.StoreItem.PackageGroup.EPackageGroupDisplayType
 200 Mbps
 2000
-200M
 2019
 2048
 20000
 2000000
+200M
 208.64.200.0/22
 208.78.164.0/22
 20AccountHardware_Stub
@@ -16076,6 +16076,9 @@ $steammessages_parental_objects.proto"
 6.CSteamNotification_NotificationsReceived_Notification
 6.CSteamOSManager_RefreshScreenReaderAutoLocale_Request
 6.CTransportValidation_RequestLargeNotification_Request
+6144
+7200
+65536
 60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 60CAccountHardware_CompleteSteamControllerRegistration_Request
@@ -16090,7 +16093,6 @@ $steammessages_parental_objects.proto"
 60CPlayer_GetPurchasedAndUpgradedProfileCustomizations_Request
 60CSiteLicenseClientJob_SiteManagerClient_ExpectIncomingClient
 60CSteamInputService_ControllerButtonStateChanged_Notification
-6144
 61CAccountHardware_CompleteSteamControllerRegistration_Response
 61CEcon_GetInventoryItemsWithDescriptions_Request_FilterOptions
 61CFamilyGroupsClient_NotifyRunningApps_Notification_RunningApp
@@ -16120,7 +16122,6 @@ $steammessages_parental_objects.proto"
 64CMarketingMessages_GetMarketingMessagesViewerRangeStats_Response
 64CSiteLicenseClientJob_SiteManagerClient_SeatCheckoutNotification
 64CSteamInputService_WaitInitialControllerStateEnumerated_Response
-65536
 65CChatRoom_SetUserChatGroupPreferences_Request_ChatRoomPreferences
 65CMsgCREGetUserPublishedItemVoteDetailsResponse_UserItemVoteDetail
 666666666666666666666666666666666666666666666666
@@ -16199,7 +16200,6 @@ $steammessages_parental_objects.proto"
 70CChatRoomClient_MemberListViewUpdated_Notification_MemberListViewEntry
 71CAuthentication_RefreshToken_Enumerate_Response_RefreshTokenDescription
 71CFriendsMessages_GetActiveMessageSessions_Response_FriendMessageSession
-7200
 72CFriendMessages_GetRecentMessages_Response_FriendMessage_MessageReaction
 72CMsgClientAMGetPersonaNameHistoryResponse_NameTableInstance_NameInstance
 72CMsgClientUCMEnumeratePublishedFilesByUserActionResponse_PublishedFileId
@@ -53246,7 +53246,6 @@ l.m_cbCurrentSendMessageSent < pNextMsg->m_cbSize
 l2_half
 l2_soft
 l4d.com
-l5|Zr
 l6qnk
 l97\v
 lDa>
@@ -61476,7 +61475,7 @@ stderr
 stdin
 stdout
 steam
-steam Aug 27 2026 21:52:08
+steam Sep  2 2026 22:49:45
 steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
 steam-runtime-launch-client --alongside-steam -- /usr/bin/steamos-polkit-helpers/jupiter-biosupdate

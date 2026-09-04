@@ -111,7 +111,7 @@
     "PurchaseDialog_SSA_Link": "I agree to the terms of the %1$s (last updated %2$s)",
     "PurchaseDialog_SSA_Link_Title": "Steam Subscriber Agreement",
     "PurchaseDialog_SSA_Fail": "You must agree to the terms of the Steam Subscriber Agreement to complete this transaction.",
-    "PurchaseDialog_EU_SSA": "By clicking \"Purchase\" you agree that you are being provided with immediate access to this digital content and that therefore any possibility of a withdrawal from this purchase ends u2013 the purchase is final.",
+    "PurchaseDialog_EU_SSA": "By clicking \"Purchase\" you agree that you are being provided with immediate access to this digital content and that therefore any possibility of a withdrawal from this purchase ends – the purchase is final.",
     "PurchaseDialog_Error_ServerGeneric": "There was a problem purchasing your item. The listing may have been removed. Refresh the page and try again.",
     "PurchaseDialog_Error_NoConfirmation": "There was a problem purchasing your item. Something went wrong while waiting for you to confirm this action. Refresh the page and try again.",
     "PurchaseDialog_Error_MissingRequired": "The following fields are required:",

@@ -210,7 +210,6 @@ ${COMMUNITY_BASE_URL}chat/
 ${COMMUNITY_BASE_URL}chat/invite/${}
 ${COMMUNITY_BASE_URL}comment/${}/formattinghelp${_ ? "?ajax=1" : ""}
 ${COMMUNITY_BASE_URL}creatorhome/${}/ajaxadmingetapps
-${COMMUNITY_BASE_URL}demos/ajaxensuredemohasogg
 ${COMMUNITY_BASE_URL}demos/ajaxgetappdemoinfo
 ${COMMUNITY_BASE_URL}discussions
 ${COMMUNITY_BASE_URL}dmca/create/${publishedfileid}
@@ -956,6 +955,7 @@ ${MEDIA_CDN_COMMUNITY_URL}images/items/${}/${item_image_small}
 ${MEDIA_CDN_COMMUNITY_URL}images/items/${}/${item_movie_mp4}
 ${MEDIA_CDN_COMMUNITY_URL}images/items/${}/${item_movie_webm}
 ${MEDIA_CDN_COMMUNITY_URL}images/items/${}/${}
+${MEDIA_CDN_COMMUNITY_URL}images/items/1658760/${item_image_small}
 ${MEDIA_CDN_COMMUNITY_URL}images/steamtv/${}/${}
 ${MEDIA_CDN_COMMUNITY_URL}images/steamworks_docs/${LANGUAGE}/${}
 ${MEDIA_CDN_COMMUNITY_URL}images/steamworks_docs/english/${}
@@ -1357,7 +1357,6 @@ ${STORE_BASE_URL}
 ${STORE_BASE_URL}${_ ? "events/ajaxgeteventdetailsforedit/" : "events/ajaxgeteventdetails/"}
 ${STORE_BASE_URL}${_ ? "saleaction/ajaxpreviewgetsaledynamicappqueryforuser" : "saleaction/ajaxgetsaledynamicappqueryforuser"}
 ${STORE_BASE_URL}${_ ? "saleaction/ajaxpreviewsaledynamicappquery" : "saleaction/ajaxgetsaledynamicappquery"}
-${STORE_BASE_URL}${_ ? _ : _}
 ${STORE_BASE_URL}${image_url}
 ${STORE_BASE_URL}${m_strStoreURLPath}
 ${STORE_BASE_URL}${newshubUrl}

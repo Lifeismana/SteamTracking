@@ -1,5 +1,5 @@
 {
-    "footer_legal_notice": "u00A9 %1$s Valve Corporation. Tutti i diritti sono riservati. Tutti i marchi registrati appartengono ai rispettivi proprietari negli Stati Uniti e in altri Paesi.<br>Tutti i prezzi sono IVA inclusa, dove applicabile.",
+    "footer_legal_notice": "© %1$s Valve Corporation. Tutti i diritti sono riservati. Tutti i marchi registrati appartengono ai rispettivi proprietari negli Stati Uniti e in altri Paesi.<br>Tutti i prezzi sono IVA inclusa, dove applicabile.",
     "footer_link_header_steam": "STEAM",
     "footer_link_header_valve": "VALVE",
     "footer_link_header_legal": "TERMINI LEGALI",
@@ -14,7 +14,7 @@
     "footer_link_hardware": "Hardware",
     "footer_link_recycling": "Riciclaggio",
     "footer_link_privacy": "Privacy",
-    "footer_link_accessibility": "Accessibilitu00E0",
+    "footer_link_accessibility": "Accessibilità",
     "footer_link_notices_and_policies": "Avvisi e politiche",
     "footer_link_cookies": "Cookie",
     "footer_link_refunds": "Rimborsi",

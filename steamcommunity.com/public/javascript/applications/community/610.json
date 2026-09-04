@@ -1,19 +1,19 @@
 {
     "language": "finnish",
-    "SellOnMarket_View": "Katso yhteisu00F6n kauppapaikalla",
-    "SellOnMarket_ViewListing": "Nu00E4ytu00E4 oma listaus",
+    "SellOnMarket_View": "Katso yhteisön kauppapaikalla",
+    "SellOnMarket_ViewListing": "Näytä oma listaus",
     "SellOnMarket_LowestPrice": "Alkaen %1$s",
     "SellOnMarket_Volume": "%1$s myyty viimeisen 24 tunnin aikana",
     "SellOnMarket_SellThisItem": "Myy",
     "ItemDescription_Tags": "Tunnisteet: ",
     "ItemDescription_TradeProtected": "Suojattu vaihdoilta",
-    "ItemDescription_TradeProtectedTooltip": "Vaihdoilta suojattuja esineitu00E4 ei voi muokata, ku00E4yttu00E4u00E4 eiku00E4 vaihtaa.",
+    "ItemDescription_TradeProtectedTooltip": "Vaihdoilta suojattuja esineitä ei voi muokata, käyttää eikä vaihtaa.",
     "ItemDescription_AssetPropertyLabelColonValue": "%1$s: %2$s",
     "ItemDescription_ListedItem": "Kauppapaikalla",
-    "ItemDescription_ListedItemTooltip": "Tuotetta ei voi muokata tai kuluttaa, kun se on listattu myytu00E4vu00E4ksi.",
+    "ItemDescription_ListedItemTooltip": "Tuotetta ei voi muokata tai kuluttaa, kun se on listattu myytäväksi.",
     "ItemDescription_ThisItemIsWorthGems": "Esineen arvo: %1$s",
-    "ItemDescription_XGems": "%1$s jalokiveu00E4",
+    "ItemDescription_XGems": "%1$s jalokiveä",
     "ItemDescription_TurnIntoGemsButton": "Muunna jalokiviksi",
-    "ItemDescription_GemDescription": "Esineen voi muuntaa jalokiviksi lisu00E4korttipakkojen luomista varten. <1>Lisu00E4tietoa lu00F6ytyy tu00E4u00E4ltu00E4</1>.",
-    "ItemDescription_AccessoriesList_Title": "Lisu00E4varusteet"
+    "ItemDescription_GemDescription": "Esineen voi muuntaa jalokiviksi lisäkorttipakkojen luomista varten. <1>Lisätietoa löytyy täältä</1>.",
+    "ItemDescription_AccessoriesList_Title": "Lisävarusteet"
 }

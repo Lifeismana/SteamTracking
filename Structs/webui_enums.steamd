@@ -140,6 +140,25 @@ enum EAllowShareIP
 	k_EAllowShareIP_Anyone = 3;
 }
 
+enum EAM
+{
+	k_EAMFindAccountTypeInvalid = 0;
+	k_EAMFindAccountTypeAccountName = 1;
+	k_EAMFindAccountTypeEmail = 2;
+	k_EAMFindAccountTypePersonaName = 3;
+	k_EAMFindAccountTypeURL = 4;
+	k_EAMFindAccountTypeAllOnline_Obsolete = 5;
+	k_EAMFindAccountTypeAll = 6;
+	k_EAMFindClanTypeClanName = 7;
+	k_EAMFindClanTypeURL = 8;
+	k_EAMFindClanTypeOfficialURL = 9;
+	k_EAMFindClanTypeAppID = 10;
+	k_EAMFindCheckAccountNameInUse = 11;
+	k_EAMFindCheckEmailAddressInUse = 12;
+	k_EAMNotFindCreateAccount = 13;
+	k_EAMFindClanTypeCreatorVanity = 14;
+}
+
 enum EAppReleaseState
 {
 	k_EAppReleaseState_Unknown = 0;
@@ -228,6 +247,18 @@ enum EChatFontSize
 	k_EChatFontSizeSmall = 1;
 	k_EChatFontSizeDefault = 2;
 	k_EChatFontSizeLarge = 3;
+}
+
+enum EClanAccountType
+{
+	k_EClanAccountTypePrivate = 0;
+	k_EClanAccountTypePublic = 1;
+	k_EClanAccountTypeLocked = 2;
+	k_EClanAccountTypeDisabled = 3;
+	k_EClanAccountTypeOfficial = 4;
+	k_EClanAccountTypeDeleted = 5;
+	k_EClanAccountTypeValveOfficial = 6;
+	k_EClanAccountTypeInviteOnly = 7;
 }
 
 enum EClientUINotification
@@ -752,6 +783,24 @@ enum EPosition
 	k_EPositionBottomRight = 3;
 }
 
+enum EPreviewMode
+{
+	EPreviewMode_Disabled = 1;
+	EPreviewMode_Enabled = 2;
+	EPreviewMode_EditBackground = 3;
+}
+
+enum EPurchaseReservationState
+{
+	k_EPurchaseReservationState_NotReserved = 0;
+	k_EPurchaseReservationState_Reserved = 1;
+	k_EPurchaseReservationState_Cancelled = 2;
+	k_EPurchaseReservationState_Allocated = 3;
+	k_EPurchaseReservationState_Consumed = 4;
+	k_EPurchaseReservationState_CancelPendingRefund = 5;
+	k_EPurchaseReservationState_UnavailableRegion = 6;
+}
+
 enum ERaiseGameWindowResult
 {
 	k_ERaiseGameWindowResult_NotRunning = 1;
@@ -868,6 +917,13 @@ enum ETwoFactorTokenSteamguardScheme
 	k_ETwoFactorTokenSteamguardScheme_None = 0;
 	k_ETwoFactorTokenSteamguardScheme_Email = 1;
 	k_ETwoFactorTokenSteamguardScheme_TwoFactor = 2;
+}
+
+enum EURLSite
+{
+	k_EURLSite_None = 0;
+	k_EURLSite_Store = 1;
+	k_EURLSite_Community = 2;
 }
 
 enum EVoiceCallState
@@ -1137,6 +1193,13 @@ enum LEAGUE_TIER
 	LEAGUE_TIER_DPC_LEAGUE_QUALIFIER = 7;
 	LEAGUE_TIER_DPC_LEAGUE = 8;
 	LEAGUE_TIER_DPC_LEAGUE_FINALS = 9;
+}
+
+enum Load
+{
+	k_Loading = 0;
+	k_LoadSuccess = 1;
+	k_LoadFailure = 2;
 }
 
 enum Notification
@@ -1448,6 +1511,12 @@ enum UnnamedEnum103c46b6e6314ec9
 	k_ECompleted = 11;
 }
 
+enum UnnamedEnum11b0fa7d9ee589b2
+{
+	TemplateFAQDisplayColumn = 1;
+	TemplateFAQDisplaySimpleRow = 2;
+}
+
 enum UnnamedEnum12487a88f7459bbf
 {
 	Line = 1;
@@ -1705,6 +1774,18 @@ enum UnnamedEnum183417f294ffc34a
 	None = 0;
 	StartupAnimation = 1;
 	LoadingSpinner = 2;
+}
+
+enum UnnamedEnum184ae5e9b907d5cb
+{
+	k_eNone = 0;
+	k_eSecond = 1;
+	k_eMinute = 2;
+	k_eHour = 3;
+	k_eDay = 4;
+	k_eWeek = 5;
+	k_eMonth = 6;
+	k_eYear = 7;
 }
 
 enum UnnamedEnum1a595e4880050966
@@ -2505,6 +2586,14 @@ enum UnnamedEnum5341f659b7352c78
 	OncePerGame = 2;
 }
 
+enum UnnamedEnum54915c93076f4b25
+{
+	k_eInsertThumbnail = 1;
+	k_eInsertFullImage = 2;
+	k_eShowImageGroup = 3;
+	k_eInsertVideo = 4;
+}
+
 enum UnnamedEnum5492f48161b9f221
 {
 	Off = 0;
@@ -2903,6 +2992,13 @@ enum UnnamedEnum6dc1117c55eed9d3
 	k_EDisplayList = 4;
 }
 
+enum UnnamedEnum6efedda866715356
+{
+	None = 0;
+	Header = 1;
+	Fallback = 2;
+}
+
 enum UnnamedEnum702e80796a2bbcdf
 {
 	PRESERVE = 0;
@@ -2915,6 +3011,13 @@ enum UnnamedEnum71321e1d7c5f7a14
 	Modal = 2;
 	ShowArrowKeys = 4;
 	HideDoneKey = 8;
+}
+
+enum UnnamedEnum71adb9c1860a40e0
+{
+	k_All = 0;
+	k_Owned = 1;
+	k_Subscribed = 2;
 }
 
 enum UnnamedEnum71b9103fd51688b6
@@ -2974,6 +3077,18 @@ enum UnnamedEnum798f930648f1159b
 {
 	Digital = 0;
 	Cursor = 1;
+}
+
+enum UnnamedEnum7a6400810d0c9c17
+{
+	k_MediaTitleDesc = 1;
+	k_TitleMediaDesc = 2;
+	k_TitleDescMedia = 3;
+	k_HorizontalMediaFirst = 4;
+	k_HorizontalTextFirst = 5;
+	k_TitleDescOnly = 6;
+	k_OverlayMedia = 7;
+	k_MediaOnly = 8;
 }
 
 enum UnnamedEnum7c4ccc7e7f11da9c
@@ -3290,6 +3405,13 @@ enum UnnamedEnum8eccbf4cda33fab9
 	Explicit = 1;
 }
 
+enum UnnamedEnum8edc8c3ef547367c
+{
+	k_EStorePage = 0;
+	k_EEventPage = 1;
+	k_ESalesPage = 2;
+}
+
 enum UnnamedEnum8ef72a4728e00658
 {
 	Invoke = 1;
@@ -3378,6 +3500,12 @@ enum UnnamedEnum9744fddc6b9fcf31
 	EEU = 4;
 	CN = 5;
 	SEA = 6;
+}
+
+enum UnnamedEnum974b960088059bdc
+{
+	k_SubMenu = 0;
+	k_JumpList = 1;
 }
 
 enum UnnamedEnum9880fadc8e5d89b8
@@ -3543,6 +3671,13 @@ enum UnnamedEnuma8a8b1f6cea505e4
 	LibraryHome = 2;
 }
 
+enum UnnamedEnuma8be968d191e67f1
+{
+	ShowIncludedItems = 0;
+	ShowAllItems = 1;
+	ShowFilteredOutItems = 2;
+}
+
 enum UnnamedEnuma9dc642d225a4850
 {
 	Large = 3;
@@ -3578,6 +3713,14 @@ enum UnnamedEnumabea9075e9266653
 	Default = 0;
 	ReviseQuery = 1;
 	ReviseEdit = 2;
+}
+
+enum UnnamedEnumac9ccfed4f769533
+{
+	k_None = 0;
+	k_Suggested = 1;
+	k_Required = 2;
+	k_Requested = 3;
 }
 
 enum UnnamedEnumacc9a67b80433cd5
@@ -3659,6 +3802,20 @@ enum UnnamedEnumb306264d8508f790
 	SHOWMATCH = 7;
 	GSL = 8;
 	PLACEMENT = 9;
+}
+
+enum UnnamedEnumb4157bc080bb8fb9
+{
+	k_ModReviewed = 0;
+	k_ModUnreviewed = 1;
+	k_ChangeEventType = 2;
+	k_UpdateSeasonTags = 3;
+	k_ModReReviewed = 4;
+	k_ModRemovedFromSteamChina = 5;
+	k_ModFlagAdultOnlyContent = 6;
+	k_ModRemoveAdultOnlyContent = 7;
+	k_ModFlagHalloweenEvent = 8;
+	k_ModRemoveHalloweenEvent = 9;
 }
 
 enum UnnamedEnumb4bfafc0603a7b5b
@@ -4008,6 +4165,13 @@ enum UnnamedEnumd5afec5988542538
 	Other = 3;
 }
 
+enum UnnamedEnumd6a84333206e5390
+{
+	immediate = 0;
+	event_start = 1;
+	specified_time = 2;
+}
+
 enum UnnamedEnumd754cec457ef65e8
 {
 	Hover = 0;
@@ -4240,6 +4404,22 @@ enum UnnamedEnumf0865f3c163d92e3
 	Single = 0;
 	MultiPrimary = 1;
 	MultiSecondary = 2;
+}
+
+enum UnnamedEnumf126cd872c06e76e
+{
+	None = 0;
+	type = 1;
+	name = 2;
+	description = 4;
+	time = 8;
+	visibility = 16;
+	jsondata_other = 32;
+	jsondata_image = 64;
+	jsondata_email = 128;
+	jsondata_broadcast = 256;
+	jsondata_sales = 512;
+	jsondata_schedule = 1024;
 }
 
 enum UnnamedEnumf26944e1770e4a69

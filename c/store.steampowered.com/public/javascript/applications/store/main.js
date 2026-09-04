@@ -18007,8 +18007,12 @@
             );
           }
           const _ = _();
-          let _ = !1;
-          _.then(() => (_ = !0)), (0, _._)(_);
+          let _ = !1,
+            _ = !1;
+          _.then(() => (_ = !0)).catch((_) => {
+            console.error("LoadStrings error", _), (_ = !0);
+          }),
+            (0, _._)(_);
           function _(_, _) {
             const [_, ..._] = _,
               _ =
@@ -18016,6 +18020,13 @@
                 _.get((0, _._)(_.strLanguage) ?? "english")?.get(_);
             if (_ !== void 0) return _;
             if (_.length === 0) {
+              if (_)
+                return (
+                  console.warn(
+                    `Couldn't find localization key ${_} after erroring loading strings`,
+                  ),
+                  _
+                );
               if (!_) throw _;
               return (
                 (0, _._)().ReportError(
@@ -128248,6 +128259,7 @@ Status Code:` +
           _: () => _._,
           _: () => _._,
           _: () => _,
+          _: () => _,
           _: () => _._,
           _: () => _,
           _: () => _,
@@ -128643,6 +128655,15 @@ Status Code:` +
         }
         function _(_) {
           return _[_];
+        }
+        async function _(_, _) {
+          let _ = await _;
+          if (
+            (_?.default && Object.keys(_).length === 1 && (_ = _.default),
+            !_ || Object.keys(_).length === 0)
+          )
+            throw new Error(`Empty localization file for ${_}`);
+          return _;
         }
         function _(_) {
           let _,
@@ -141406,16 +141427,41 @@ Status Code:` +
           _ || (_ = _(_._.LANGUAGE)), await _;
         }
         _(), _._(_);
+        function _() {}
         async function _(_) {
           const _ = _._.GetLanguageFallback(_),
             _ = _ === _,
             [_, _, _, _, _, _] = await (0, _._)([
-              __webpack_require__("chunkid")(`./sales_${_}.json`),
-              __webpack_require__("chunkid")(`./main_${_}.json`),
-              __webpack_require__("chunkid")(`./marketing_${_}.json`),
-              _ ? {} : __webpack_require__("chunkid")(`./sales_${_}.json`),
-              _ ? {} : __webpack_require__("chunkid")(`./main_${_}.json`),
-              _ ? {} : __webpack_require__("chunkid")(`./marketing_${_}.json`),
+              (0, _._)(
+                __webpack_require__("chunkid")(`./sales_${_}.json`),
+                `sales_${_}`,
+              ),
+              (0, _._)(
+                __webpack_require__("chunkid")(`./main_${_}.json`),
+                `main_${_}`,
+              ),
+              (0, _._)(
+                __webpack_require__("chunkid")(`./marketing_${_}.json`),
+                `marketing_${_}`,
+              ),
+              _
+                ? {}
+                : (0, _._)(
+                    __webpack_require__("chunkid")(`./sales_${_}.json`),
+                    `sales_${_}`,
+                  ),
+              _
+                ? {}
+                : (0, _._)(
+                    __webpack_require__("chunkid")(`./main_${_}.json`),
+                    `main_${_}`,
+                  ),
+              _
+                ? {}
+                : (0, _._)(
+                    __webpack_require__("chunkid")(`./marketing_${_}.json`),
+                    `marketing_${_}`,
+                  ),
               _._.Ready(),
               _.Ready(),
               _._.Ready(),

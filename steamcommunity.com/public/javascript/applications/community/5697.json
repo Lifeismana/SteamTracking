@@ -1,6 +1,6 @@
 {
     "language": "brazilian",
-    "TrailerPlayer_Settings_Tooltip": "Configurau00E7u00F5es",
+    "TrailerPlayer_Settings_Tooltip": "Configurações",
     "TrailerPlayer_Captions_Tooltip": "Legendas e legendas ocultas (CC)",
     "TrailerPlayer_Play_Tooltip": "Reproduzir",
     "TrailerPlayer_Pause_Tooltip": "Pausar",
@@ -10,15 +10,15 @@
     "TrailerPlayer_ExitFullScreen_Tooltip": "Sair da tela cheia",
     "TrailerPlayer_EnterTheater_Tooltip": "Entrar no modo cinema",
     "TrailerPlayer_ExitTheater_Tooltip": "Sair do modo cinema",
-    "TrailerPlayer_Quality_Auto": "Automu00E1tica",
-    "TrailerPlayer_Error_Playback": "Ocorreu um erro ao reproduzir este vu00EDdeo",
-    "TrailerPlayer_Error_UnsupportedCodec": "Formato de vu00EDdeo incompatu00EDvel com este dispositivo",
-    "StoreTrailer_AutoPlayVideos": "Reproduzir vu00EDdeos automaticamente",
+    "TrailerPlayer_Quality_Auto": "Automática",
+    "TrailerPlayer_Error_Playback": "Ocorreu um erro ao reproduzir este vídeo",
+    "TrailerPlayer_Error_UnsupportedCodec": "Formato de vídeo incompatível com este dispositivo",
+    "StoreTrailer_AutoPlayVideos": "Reproduzir vídeos automaticamente",
     "StoreTrailer_Title_Category_Unknown": "Trailer",
     "StoreTrailer_Title_Category_Gameplay": "Jogabilidade",
     "StoreTrailer_Title_Category_Teaser": "Teaser",
-    "StoreTrailer_Title_Category_Cinematic": "Geral/cinematogru00E1fico",
-    "StoreTrailer_Title_Category_Update": "Atualizau00E7u00E3o/expansu00E3o/temporada",
+    "StoreTrailer_Title_Category_Cinematic": "Geral/cinematográfico",
+    "StoreTrailer_Title_Category_Update": "Atualização/expansão/temporada",
     "StoreTrailer_Title_Category_Accolades": "Honrarias",
-    "StoreTrailer_Title_Category_Interview": "Entrevista/diu00E1rio de desenvolvimento"
+    "StoreTrailer_Title_Category_Interview": "Entrevista/diário de desenvolvimento"
 }

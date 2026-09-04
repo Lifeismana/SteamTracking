@@ -111,7 +111,7 @@
     "PurchaseDialog_SSA_Link": "Saya bersetuju dengan terma %1$s (kemas kini terakhir pada %2$s)",
     "PurchaseDialog_SSA_Link_Title": "Perjanjian Pelanggan Steam",
     "PurchaseDialog_SSA_Fail": "Anda mesti bersetuju dengan terma Perjanjian Pelanggan Steam untuk melengkapkan transaksi ini.",
-    "PurchaseDialog_EU_SSA": "By clicking \"Purchase\" you agree that you are being provided with immediate access to this digital content and that therefore any possibility of a withdrawal from this purchase ends u2013 the purchase is final.",
+    "PurchaseDialog_EU_SSA": "By clicking \"Purchase\" you agree that you are being provided with immediate access to this digital content and that therefore any possibility of a withdrawal from this purchase ends – the purchase is final.",
     "PurchaseDialog_Error_ServerGeneric": "There was a problem purchasing your item. The listing may have been removed. Refresh the page and try again.",
     "PurchaseDialog_Error_NoConfirmation": "There was a problem purchasing your item. Something went wrong while waiting for you to confirm this action. Refresh the page and try again.",
     "PurchaseDialog_Error_MissingRequired": "Medan berikut diperlukan:",

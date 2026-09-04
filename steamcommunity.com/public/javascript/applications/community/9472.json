@@ -1,7 +1,7 @@
 {
     "language": "latam",
     "TrailerPlayer_Settings_Tooltip": "Configuraciones",
-    "TrailerPlayer_Captions_Tooltip": "Subtu00EDtulos / Subtu00EDtulos ocultos",
+    "TrailerPlayer_Captions_Tooltip": "Subtítulos / Subtítulos ocultos",
     "TrailerPlayer_Play_Tooltip": "Reproducir",
     "TrailerPlayer_Pause_Tooltip": "Pausar",
     "TrailerPlayer_Mute_Tooltip": "Silenciar",
@@ -10,15 +10,15 @@
     "TrailerPlayer_ExitFullScreen_Tooltip": "Salir de la pantalla completa",
     "TrailerPlayer_EnterTheater_Tooltip": "Entrar al modo cine",
     "TrailerPlayer_ExitTheater_Tooltip": "Salir del modo cine",
-    "TrailerPlayer_Quality_Auto": "Automu00E1tico",
+    "TrailerPlayer_Quality_Auto": "Automático",
     "TrailerPlayer_Error_Playback": "Se produjo un error al reproducir este video.",
     "TrailerPlayer_Error_UnsupportedCodec": "Formato de video no compatible con este dispositivo.",
-    "StoreTrailer_AutoPlayVideos": "Reproducir videos automu00E1ticamente",
+    "StoreTrailer_AutoPlayVideos": "Reproducir videos automáticamente",
     "StoreTrailer_Title_Category_Unknown": "Avance",
     "StoreTrailer_Title_Category_Gameplay": "Jugabilidad",
     "StoreTrailer_Title_Category_Teaser": "Avance",
-    "StoreTrailer_Title_Category_Cinematic": "General / Cinematogru00E1ficos",
-    "StoreTrailer_Title_Category_Update": "Actualizaciu00F3n / Expansiu00F3n / Temporada",
+    "StoreTrailer_Title_Category_Cinematic": "General / Cinematográficos",
+    "StoreTrailer_Title_Category_Update": "Actualización / Expansión / Temporada",
     "StoreTrailer_Title_Category_Accolades": "Premios",
     "StoreTrailer_Title_Category_Interview": "Entrevista / Diario de desarrollo"
 }

@@ -7,13 +7,13 @@
     "SellOnMarket_SellThisItem": "Selg",
     "ItemDescription_Tags": "Merkelapper: ",
     "ItemDescription_TradeProtected": "Byttebeskyttet",
-    "ItemDescription_TradeProtectedTooltip": "Byttebeskyttede gjenstander kan ikke endres, brukes opp eller overfu00F8res.",
+    "ItemDescription_TradeProtectedTooltip": "Byttebeskyttede gjenstander kan ikke endres, brukes opp eller overføres.",
     "ItemDescription_AssetPropertyLabelColonValue": "%1$s: %2$s",
-    "ItemDescription_ListedItem": "Pu00E5 markedet",
-    "ItemDescription_ListedItemTooltip": "Du kan ikke endre eller forbruke denne gjenstanden su00E5 lenge den er annonsert for salg.",
+    "ItemDescription_ListedItem": "På markedet",
+    "ItemDescription_ListedItemTooltip": "Du kan ikke endre eller forbruke denne gjenstanden så lenge den er annonsert for salg.",
     "ItemDescription_ThisItemIsWorthGems": "Denne gjenstanden er verdt %1$s",
     "ItemDescription_XGems": "%1$s edelsteiner",
-    "ItemDescription_TurnIntoGemsButton": "Gju00F8r om til edelsteiner u2026",
-    "ItemDescription_GemDescription": "Denne gjenstanden kan brytes ned til edelsteiner for u00E5 bruke til u00E5 lage booster-pakker.   <1>Finn ut mer her</1>.",
-    "ItemDescription_AccessoriesList_Title": "Tilbehu00F8r"
+    "ItemDescription_TurnIntoGemsButton": "Gjør om til edelsteiner …",
+    "ItemDescription_GemDescription": "Denne gjenstanden kan brytes ned til edelsteiner for å bruke til å lage booster-pakker.   <1>Finn ut mer her</1>.",
+    "ItemDescription_AccessoriesList_Title": "Tilbehør"
 }
