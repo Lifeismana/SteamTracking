@@ -1544,7 +1544,6 @@ ${STORE_BASE_URL}explore/followgame/
 ${STORE_BASE_URL}explore/new/
 ${STORE_BASE_URL}explore/next/${}
 ${STORE_BASE_URL}explore/next/0
-${STORE_BASE_URL}explore/next/3
 ${STORE_BASE_URL}explore/upcoming
 ${STORE_BASE_URL}explore?dq=widget
 ${STORE_BASE_URL}feeds/${}${_ ? _ : _}/?cc=${COUNTRY}&l=${LANGUAGE}
@@ -1667,7 +1666,6 @@ ${STORE_BASE_URL}sale/${strVanity}
 ${STORE_BASE_URL}sale/${vanity}
 ${STORE_BASE_URL}sale/${}
 ${STORE_BASE_URL}sale/nextfest/
-${STORE_BASE_URL}sale/steamawards/
 ${STORE_BASE_URL}saleaction/
 ${STORE_BASE_URL}saleaction/ajaxbeginfileupload
 ${STORE_BASE_URL}saleaction/ajaxclosealldoor
@@ -1700,7 +1698,6 @@ ${STORE_BASE_URL}search/results/?${}
 ${STORE_BASE_URL}search/suggest
 ${STORE_BASE_URL}sitemap
 ${STORE_BASE_URL}sitemap/#genres
-${STORE_BASE_URL}specials/
 ${STORE_BASE_URL}steam_refunds
 ${STORE_BASE_URL}steam_refunds/
 ${STORE_BASE_URL}steamaccount/addfunds?marketlisting=${listingid}&returnurl=${}
@@ -1754,10 +1751,6 @@ ${STORE_CDN_URL}/public/shared/images/footer/wechat_logo.svg?v=1
 ${STORE_CDN_URL}/public/shared/images/footer/weibo_logo.svg?v=1
 ${STORE_CDN_URL}/public/shared/images/responsive/logo_valve_footer.png
 ${STORE_CDN_URL}categories/image/
-${STORE_CDN_URL}categories/image/category/${handle}?cc=${COUNTRY}&l=${LANGUAGE}
-${STORE_CDN_URL}categories/image/category/${}?cc=${COUNTRY}&l=${LANGUAGE}
-${STORE_CDN_URL}categories/image/creator/${}?cc=${COUNTRY}&l=${LANGUAGE}
-${STORE_CDN_URL}categories/image/tags/${}?cc=${COUNTRY}&l=${LANGUAGE}
 ${STORE_CDN_URL}categories/searchsuggestionsimage/
 ${STORE_CDN_URL}images/storepagebackground/${}
 ${STORE_CDN_URL}public/cdn/email/general/logo_med.png
