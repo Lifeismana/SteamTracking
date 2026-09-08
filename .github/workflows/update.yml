@@ -13,6 +13,11 @@ on:
         required: false
         type: boolean
         default: false
+      clean-run:
+        description: 'Clean run (delete all committed files before running)'
+        required: false
+        type: boolean
+        default: false
 
 concurrency:
   group: update
@@ -33,6 +38,12 @@ jobs:
         with:
           submodules: true
           fetch-depth: 1
+      
+      - name: Clean run
+        if: inputs.clean-run == true
+        run: |
+              git rm -rf checkout.steampowered.com/ store.steampowered.com/ partner.steamgames.com/ steamcommunity.com/ ClientExtracted/ help.steampowered.com/ Protobufs/ ProtobufsWebui/ Random/ Strings/ www.counter-strike.net/ www.dota2.com/ www.playdeadlock.com/
+              mkdir checkout.steampowered.com/ store.steampowered.com/ partner.steamgames.com/ steamcommunity.com/ ClientExtracted/ help.steampowered.com/ Protobufs/ ProtobufsWebui/ Random/ Strings/ www.counter-strike.net/ www.dota2.com/ www.playdeadlock.com/
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
@@ -66,7 +77,7 @@ jobs:
 
       - name: Restore cache
         uses: actions/cache/restore@v5
-        if: inputs.force != true
+        if: inputs.force != true && inputs.clean-run != true
         with:
           path: |
             .support
@@ -79,7 +90,7 @@ jobs:
 
       - name: Restore etags cache
         uses: actions/cache/restore@v5
-        if: inputs.force != true
+        if: inputs.force != true && inputs.clean-run != true
         with:
           path: .support/etags.json
           key: etags-
@@ -94,7 +105,7 @@ jobs:
           BEFORE=$(git rev-parse HEAD)
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          bash update.sh ${{ inputs.force == true && 'force' || '' }}
+          bash update.sh ${{ ( inputs.force == true || inputs.clean-run == true ) && 'force' || '' }}
           if [[ "$(git rev-parse HEAD)" != "$BEFORE" ]]; then
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
