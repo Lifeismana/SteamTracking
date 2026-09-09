@@ -37,7 +37,7 @@
               ? (0, s.jsx)(w, { hardwareDetail: a, reservedHardwareDetail: _ })
               : (0, s.jsx)("div", {
                   className: (0, n.A)(i.reserverow),
-                  children: (0, s.jsx)(c.vU, {
+                  children: (0, s.jsx)(c.v, {
                     label: o.F5.Localize("#Reservation_Waitlist_NotSignedIn"),
                     strDialogDesc: o.F5.Localize(
                       "#Reservation_Waitlist_NotSignedIn_Desc",

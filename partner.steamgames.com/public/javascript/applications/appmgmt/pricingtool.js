@@ -425,7 +425,7 @@ License: MIT
                 ? "" === t.join("").trim()
                 : 1 === t.length && 0 === t[0].length;
             }
-            function v() {
+            function y() {
               if (
                 (b &&
                   n &&
@@ -441,11 +441,11 @@ License: MIT
                   (b.data = b.data.filter(function (e) {
                     return !k(e);
                   })),
-                y())
+                v())
               ) {
                 if (b)
                   if (Array.isArray(b.data[0])) {
-                    for (var t = 0; y() && t < b.data.length; t++)
+                    for (var t = 0; v() && t < b.data.length; t++)
                       b.data[t].forEach(r);
                     b.data.splice(0, 1);
                   } else b.data.forEach(r);
@@ -529,7 +529,7 @@ License: MIT
                 e.header && b.meta && (b.meta.fields = _),
                 (h += d));
             }
-            function y() {
+            function v() {
               return e.header && 0 === _.length;
             }
             function C(e, t, r, n) {
@@ -541,9 +541,9 @@ License: MIT
               ((i = e.step),
               (e.step = function (t) {
                 (b = t),
-                  y()
-                    ? v()
-                    : (v(),
+                  v()
+                    ? y()
+                    : (y(),
                       0 !== b.data.length &&
                         ((u += t.data.length),
                         e.preview && u > e.preview
@@ -619,7 +619,7 @@ License: MIT
                   (t = i),
                   (r = new g(c)),
                   (b = r.parse(t, s, a)),
-                  v(),
+                  y(),
                   p ? { meta: { paused: !0 } } : b || { meta: { paused: !1 } }
                 );
               }),
@@ -697,30 +697,30 @@ License: MIT
                 b = t.length,
                 w = r.length,
                 k = n.length,
-                v = x(i),
-                y = [],
+                y = x(i),
+                v = [],
                 C = [],
-                E = [],
-                D = (h = 0);
+                D = [],
+                E = (h = 0);
               if (!o) return L();
               if (a || (!1 !== a && -1 === o.indexOf(d))) {
-                for (var S = o.split(r), P = 0; P < S.length; P++) {
-                  if (((E = S[P]), (h += E.length), P !== S.length - 1))
+                for (var P = o.split(r), S = 0; S < P.length; S++) {
+                  if (((D = P[S]), (h += D.length), S !== P.length - 1))
                     h += r.length;
                   else if (m) return L();
-                  if (!n || E.substring(0, k) !== n) {
-                    if (v) {
-                      if (((y = []), N(E.split(t)), M(), p)) return L();
-                    } else N(E.split(t));
-                    if (s && s <= P) return (y = y.slice(0, s)), L(!0);
+                  if (!n || D.substring(0, k) !== n) {
+                    if (y) {
+                      if (((v = []), N(D.split(t)), M(), p)) return L();
+                    } else N(D.split(t));
+                    if (s && s <= S) return (v = v.slice(0, s)), L(!0);
                   }
                 }
                 return L();
               }
               for (
                 var R = o.indexOf(t, h),
-                  T = o.indexOf(r, h),
-                  j = new RegExp(f(u) + f(d), "g"),
+                  j = o.indexOf(r, h),
+                  T = new RegExp(f(u) + f(d), "g"),
                   I = o.indexOf(d, h);
                 ;
               )
@@ -733,69 +733,69 @@ License: MIT
                             type: "Quotes",
                             code: "MissingQuotes",
                             message: "Quoted field unterminated",
-                            row: y.length,
+                            row: v.length,
                             index: h,
                           }),
-                        F()
+                        A()
                       );
-                    if (I === _ - 1) return F(o.substring(h, I).replace(j, d));
+                    if (I === _ - 1) return A(o.substring(h, I).replace(T, d));
                     if (d === u && o[I + 1] === u) I++;
                     else if (d === u || 0 === I || o[I - 1] !== u) {
                       -1 !== R && R < I + 1 && (R = o.indexOf(t, I + 1));
-                      var O = A(
+                      var O = F(
                         -1 ===
-                          (T = -1 !== T && T < I + 1 ? o.indexOf(r, I + 1) : T)
+                          (j = -1 !== j && j < I + 1 ? o.indexOf(r, I + 1) : j)
                           ? R
-                          : Math.min(R, T),
+                          : Math.min(R, j),
                       );
                       if (o.substr(I + 1 + O, b) === t) {
-                        E.push(o.substring(h, I).replace(j, d)),
+                        D.push(o.substring(h, I).replace(T, d)),
                           o[(h = I + 1 + O + b)] !== d && (I = o.indexOf(d, h)),
                           (R = o.indexOf(t, h)),
-                          (T = o.indexOf(r, h));
+                          (j = o.indexOf(r, h));
                         break;
                       }
                       if (
-                        ((O = A(T)),
+                        ((O = F(j)),
                         o.substring(I + 1 + O, I + 1 + O + w) === r)
                       ) {
                         if (
-                          (E.push(o.substring(h, I).replace(j, d)),
+                          (D.push(o.substring(h, I).replace(T, d)),
                           B(I + 1 + O + w),
                           (R = o.indexOf(t, h)),
                           (I = o.indexOf(d, h)),
-                          v && (M(), p))
+                          y && (M(), p))
                         )
                           return L();
-                        if (s && y.length >= s) return L(!0);
+                        if (s && v.length >= s) return L(!0);
                         break;
                       }
                       C.push({
                         type: "Quotes",
                         code: "InvalidQuotes",
                         message: "Trailing quote on quoted field is malformed",
-                        row: y.length,
+                        row: v.length,
                         index: h,
                       }),
                         I++;
                     }
                   }
-                else if (n && 0 === E.length && o.substring(h, h + k) === n) {
-                  if (-1 === T) return L();
-                  (h = T + w), (T = o.indexOf(r, h)), (R = o.indexOf(t, h));
-                } else if (-1 !== R && (R < T || -1 === T))
-                  E.push(o.substring(h, R)), (h = R + b), (R = o.indexOf(t, h));
+                else if (n && 0 === D.length && o.substring(h, h + k) === n) {
+                  if (-1 === j) return L();
+                  (h = j + w), (j = o.indexOf(r, h)), (R = o.indexOf(t, h));
+                } else if (-1 !== R && (R < j || -1 === j))
+                  D.push(o.substring(h, R)), (h = R + b), (R = o.indexOf(t, h));
                 else {
-                  if (-1 === T) break;
-                  if ((E.push(o.substring(h, T)), B(T + w), v && (M(), p)))
+                  if (-1 === j) break;
+                  if ((D.push(o.substring(h, j)), B(j + w), y && (M(), p)))
                     return L();
-                  if (s && y.length >= s) return L(!0);
+                  if (s && v.length >= s) return L(!0);
                 }
-              return F();
+              return A();
               function N(e) {
-                y.push(e), (D = h);
+                v.push(e), (E = h);
               }
-              function A(e) {
+              function F(e) {
                 var t = 0;
                 return -1 !== e &&
                   (e = o.substring(I + 1, e)) &&
@@ -803,23 +803,23 @@ License: MIT
                   ? e.length
                   : t;
               }
-              function F(e) {
+              function A(e) {
                 return (
                   m ||
                     (void 0 === e && (e = o.substring(h)),
-                    E.push(e),
+                    D.push(e),
                     (h = _),
-                    N(E),
-                    v && M()),
+                    N(D),
+                    y && M()),
                   L()
                 );
               }
               function B(e) {
-                (h = e), N(E), (E = []), (T = o.indexOf(r, h));
+                (h = e), N(D), (D = []), (j = o.indexOf(r, h));
               }
               function L(n) {
-                if (e.header && !g && y.length && !l) {
-                  var i = y[0],
+                if (e.header && !g && v.length && !l) {
+                  var i = v[0],
                     s = Object.create(null),
                     a = new Set(i);
                   let t = !1;
@@ -845,20 +845,20 @@ License: MIT
                     (l = !0);
                 }
                 return {
-                  data: y,
+                  data: v,
                   errors: C,
                   meta: {
                     delimiter: t,
                     linebreak: r,
                     aborted: p,
                     truncated: !!n,
-                    cursor: D + (g || 0),
+                    cursor: E + (g || 0),
                     renamedHeaders: c,
                   },
                 };
               }
               function M() {
-                i(L()), (y = []), (C = []);
+                i(L()), (v = []), (C = []);
               }
             }),
               (this.abort = function () {
@@ -1247,7 +1247,7 @@ License: MIT
         d = r(69423),
         u = r(87641),
         h = r(90626),
-        p = r(14336),
+        p = r(44419),
         f = r(16676),
         g = r(738),
         m = r(51272),
@@ -1256,21 +1256,21 @@ License: MIT
         w = r(78327),
         k = r(14578),
         x = r.n(k),
-        v = r(84811),
-        y = r(32754),
+        y = r(84811),
+        v = r(32754),
         C = r(52038),
-        E = r(33299),
-        D = r(74267),
-        S = r(22886),
-        P = r.n(S),
+        D = r(33299),
+        E = r(74267),
+        P = r(22886),
+        S = r.n(P),
         R = r(10754),
-        T = r(96434),
-        j = r.n(T),
+        j = r(96434),
+        T = r.n(j),
         I = r(40818),
         O = r(16666),
         N = r(66051),
-        A = r(64238),
-        F = r.n(A),
+        F = r(64238),
+        A = r.n(F),
         B = r(95034),
         L = (r(64641), r(42691), r(40441), r(83800)),
         M = r(64753),
@@ -1325,18 +1325,18 @@ License: MIT
           ),
           [g, m, _] = (0, M.uD)();
         return (0, n.jsxs)("div", {
-          className: P().GridHeaderButtons,
+          className: S().GridHeaderButtons,
           children: [
             (0, n.jsx)(f.ZU, {
               rgOptions: p,
               selectedOption: s,
-              strDropDownClassName: P().Test,
+              strDropDownClassName: S().Test,
               onChange: u,
               contextMenuPositionOptions: { bMatchWidth: !1 },
             }),
             Boolean(l || o) &&
               (0, n.jsx)("div", {
-                className: (0, C.A)(P().OptionCtn, P().PriceLowOption),
+                className: (0, C.A)(S().OptionCtn, S().PriceLowOption),
                 children: (0, n.jsx)(f.Yh, {
                   checked: o,
                   onChange: c,
@@ -1344,7 +1344,7 @@ License: MIT
                 }),
               }),
             (0, n.jsx)("div", {
-              className: (0, C.A)(P().OptionCtn, P().CompactOption),
+              className: (0, C.A)(S().OptionCtn, S().CompactOption),
               children: (0, n.jsx)(f.Yh, {
                 checked: t,
                 onChange: r,
@@ -1354,11 +1354,11 @@ License: MIT
               }),
             }),
             (0, n.jsx)("div", {
-              className: (0, C.A)(P().OptionCtn),
+              className: (0, C.A)(S().OptionCtn),
               children: (0, n.jsx)(L.J, {}),
             }),
             (0, n.jsxs)("div", {
-              className: (0, C.A)(P().OptionCtn),
+              className: (0, C.A)(S().OptionCtn),
               children: [
                 (0, n.jsx)(f.jn, {
                   onClick: m,
@@ -1375,8 +1375,8 @@ License: MIT
           ],
         });
       }
-      var W = r(86762);
-      function K(e) {
+      var K = r(86762);
+      function H(e) {
         return e.contains_game && e.contains_dlc
           ? "BOTH"
           : e.contains_game
@@ -1385,34 +1385,34 @@ License: MIT
               ? "DLC"
               : null;
       }
-      function H(e) {
+      function W(e) {
         const { column: t } = e,
           r = t.id,
           i = (0, d.XK)(r),
           s = (0, d.YB)(r);
         return (0, n.jsxs)("div", {
-          className: P().CurrencyHeader,
+          className: S().CurrencyHeader,
           children: [
-            (0, n.jsx)(y.he, {
+            (0, n.jsx)(v.he, {
               toolTipContent: i,
               direction: "top",
-              className: P().CurrencyAbbreviation,
-              strTooltipClassname: P().HoverToolTip,
+              className: S().CurrencyAbbreviation,
+              strTooltipClassname: S().HoverToolTip,
               children: (0, n.jsxs)("div", {
-                className: P().CurrencyNameCtn,
+                className: S().CurrencyNameCtn,
                 children: [
                   r,
                   (0, n.jsx)("span", {
-                    className: P().CurrencyName,
+                    className: S().CurrencyName,
                     children: i,
                   }),
                 ],
               }),
             }),
             s > 0 &&
-              (0, n.jsx)(D.O, {
+              (0, n.jsx)(E.O, {
                 hoverKey: r,
-                className: P().CurrencyMore,
+                className: S().CurrencyMore,
                 renderHover: () => (0, n.jsx)(Q, { priceKey: r }),
               }),
           ],
@@ -1420,17 +1420,17 @@ License: MIT
       }
       function V(e) {
         const { row: t } = e;
-        return (0, n.jsx)(W.m2, {
+        return (0, n.jsx)(K.m2, {
           packageID: t.original.packageID,
           bShowCancel: !0,
         });
       }
       function q(e) {
-        const t = (0, E.sF)(),
-          r = (0, E.uv)(),
-          n = (0, E.NP)(),
-          i = (0, E.ZN)(),
-          s = (0, E.mE)(!1),
+        const t = (0, D.sF)(),
+          r = (0, D.uv)(),
+          n = (0, D.NP)(),
+          i = (0, D.ZN)(),
+          s = (0, D.mE)(!1),
           a = h.useMemo(
             () =>
               (0, O.FB)().accessor("proposalState", {
@@ -1456,7 +1456,7 @@ License: MIT
               accessorKey: t,
               size: e ? 72 : 200,
               enableSorting: !1,
-              header: H,
+              header: W,
               cell: R.sh,
             });
           return c;
@@ -1466,7 +1466,7 @@ License: MIT
         const t = (0, d.Ci)(),
           r = t?.length ?? 0;
         return (0, n.jsx)("div", {
-          className: (0, C.A)(P().PricingGridCtn, r > 0 && "PendingVisible"),
+          className: (0, C.A)(S().PricingGridCtn, r > 0 && "PendingVisible"),
           children: (0, n.jsx)(Y, { ...e }),
         });
       }
@@ -1475,7 +1475,6 @@ License: MIT
           [r, i] = h.useState(!1),
           s = h.useRef(null),
           [a, o] = (0, B.QD)("filter", "released");
-        "dev" == w.TS.WEB_UNIVERSE && (window.g_PricingGridTableRef = s);
         const [c, u] = (0, B.QD)("filter_below_min_price", !1),
           p = new URLSearchParams(window.location.search),
           f = p.has(l.xi) ? decodeURIComponent(p.get(l.xi)) : "",
@@ -1515,7 +1514,7 @@ License: MIT
                   appName: a,
                   packageID: s.packageid,
                   packageName: s.package_name || "",
-                  packageType: K(s),
+                  packageType: H(s),
                   released: s.released,
                 };
                 for (const e of n) o[e] = e;
@@ -1528,88 +1527,82 @@ License: MIT
             strSearchStringFromURL: f,
           }),
           _ = (0, l.pV)(),
-          k = () => _(s.current),
-          x = (0, d.Zz)(),
-          y = (0, I.cK)();
-        return (
-          ("dev" != w.TS.WEB_UNIVERSE && "beta" != w.TS.WEB_UNIVERSE) ||
-            console.log("Rendering grid", g),
-          (0, n.jsxs)(n.Fragment, {
-            children: [
-              (0, n.jsx)(z, {
-                bCompactMode: r,
-                setCompactMode: i,
-                rgGridData: m,
-                strPackageFilter: a,
-                setPackageFilter: o,
-                bFilterToBelowMinPrice: c,
-                setFilterToBelowMinPrice: u,
-              }),
-              (0, n.jsx)("div", {
-                className: P().PricingGridWrapper,
-                children: (0, n.jsx)("div", {
-                  className: (0, C.A)(P().PricingGrid, r && "CompactMode"),
-                  children: (0, n.jsxs)(v.tH, {
-                    children: [
-                      (0, n.jsx)(E.rK, {
-                        fnBLocalChangesExist: x,
-                        fnWarnUser: y,
-                        children: (0, n.jsx)(N.k, {
-                          ref: s,
-                          className: F()(
-                            P().PricingGridTable,
-                            "noGlobalButtonStyle",
-                          ),
-                          columns: g,
-                          data: m,
-                          getRowKey: (e, t) => t.packageID,
-                          stickyHeader: !0,
-                          nItemHeight: 43,
-                          nHeaderHeight: 63,
-                          overscan: 12,
-                          initialExpanded: !0,
-                          initialSorting: [{ id: "appName", desc: !1 }],
-                          initialColumnFilters: [
-                            { id: "packageName", value: f },
+          w = () => _(s.current),
+          k = (0, d.Zz)(),
+          x = (0, I.cK)();
+        return (0, n.jsxs)(n.Fragment, {
+          children: [
+            (0, n.jsx)(z, {
+              bCompactMode: r,
+              setCompactMode: i,
+              rgGridData: m,
+              strPackageFilter: a,
+              setPackageFilter: o,
+              bFilterToBelowMinPrice: c,
+              setFilterToBelowMinPrice: u,
+            }),
+            (0, n.jsx)("div", {
+              className: S().PricingGridWrapper,
+              children: (0, n.jsx)("div", {
+                className: (0, C.A)(S().PricingGrid, r && "CompactMode"),
+                children: (0, n.jsxs)(y.tH, {
+                  children: [
+                    (0, n.jsx)(D.rK, {
+                      fnBLocalChangesExist: k,
+                      fnWarnUser: x,
+                      children: (0, n.jsx)(N.k, {
+                        ref: s,
+                        className: A()(
+                          S().PricingGridTable,
+                          "noGlobalButtonStyle",
+                        ),
+                        columns: g,
+                        data: m,
+                        getRowKey: (e, t) => t.packageID,
+                        stickyHeader: !0,
+                        nItemHeight: 43,
+                        nHeaderHeight: 63,
+                        overscan: 12,
+                        initialExpanded: !0,
+                        initialSorting: [{ id: "appName", desc: !1 }],
+                        initialColumnFilters: [{ id: "packageName", value: f }],
+                        initialGrouping: ["appName"],
+                        initialColumnVisibility: {
+                          packageType: !1,
+                          appids: !1,
+                        },
+                        initialColumnPinning: {
+                          left: [
+                            "packageID",
+                            "appName",
+                            "packageName",
+                            "proposalState",
+                            "USD",
                           ],
-                          initialGrouping: ["appName"],
-                          initialColumnVisibility: {
-                            packageType: !1,
-                            appids: !1,
-                          },
-                          initialColumnPinning: {
-                            left: [
-                              "packageID",
-                              "appName",
-                              "packageName",
-                              "proposalState",
-                              "USD",
-                            ],
-                          },
-                          onGroupingChange: k,
-                          onVisibleRowsChange: k,
-                          renderGroup: E.IR,
-                        }),
+                        },
+                        onGroupingChange: w,
+                        onVisibleRowsChange: w,
+                        renderGroup: D.IR,
                       }),
-                      (0, n.jsx)("br", {}),
-                    ],
-                  }),
+                    }),
+                    (0, n.jsx)("br", {}),
+                  ],
                 }),
               }),
-            ],
-          })
-        );
+            }),
+          ],
+        });
       });
       function Q(e) {
         const { priceKey: t } = e,
           r = (0, d.XK)(t);
         let i = (0, d.mP)(t);
         return (0, n.jsx)("div", {
-          className: j().PricePopout,
+          className: T().PricePopout,
           children: (0, n.jsx)("div", {
-            className: j().DetailRow,
+            className: T().DetailRow,
             children: (0, n.jsx)("div", {
-              className: j().DetailLabel,
+              className: T().DetailLabel,
               onClick: i,
               children: (0, b.we)("#PricingDashboard_RevertAllCurrency", r),
             }),
@@ -2046,15 +2039,7 @@ License: MIT
       function u() {
         const e = (0, o.Tc)("partnerbrowse_webapi_token", "application_config");
         (0, a.wT)(Boolean(e), "require partnerbrowse_webapi_token");
-        const t = new i.D(o.TS.WEBAPI_BASE_URL, e);
-        return (
-          ("dev" != o.TS.WEB_UNIVERSE && "beta" != o.TS.WEB_UNIVERSE) ||
-            console.log(
-              "DEV_DEBUG: Constructing partner store-browse WebAPI interface with access token",
-              e,
-            ),
-          t
-        );
+        return new i.D(o.TS.WEBAPI_BASE_URL, e);
       }
     },
     9161: (e, t, r) => {

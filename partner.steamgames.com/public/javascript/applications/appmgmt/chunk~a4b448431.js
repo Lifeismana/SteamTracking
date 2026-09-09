@@ -45,10 +45,10 @@
           RV: () => F,
           OD: () => M,
           T9: () => y,
-          k6: () => O,
+          k6: () => j,
           IT: () => B,
           QY: () => b,
-          eH: () => j,
+          eH: () => O,
           W8: () => z,
           QJ: () => h,
         });
@@ -91,17 +91,17 @@
         r.d(u, {
           H: () => pe,
           k2: () => _e,
-          GS: () => ge,
+          GS: () => de,
           CT: () => me,
           BA: () => oe,
-          TO: () => de,
+          TO: () => ge,
           q1: () => ue,
         });
       var o = r(80613),
         m = r.n(o),
         _ = r(89068),
-        d = r(56545),
-        g = r(6824);
+        g = r(56545),
+        d = r(30570);
       const p = 0,
         M = 1,
         h = 2,
@@ -117,8 +117,8 @@
         T = 12,
         k = 13,
         C = 14,
-        j = 15,
-        O = 16,
+        O = 15,
+        j = 16,
         F = 17,
         v = 0,
         W = 1,
@@ -154,8 +154,8 @@
         oe = 1,
         me = 3,
         _e = 4,
-        de = 5,
-        ge = 6,
+        ge = 5,
+        de = 6,
         pe = 7;
       class Me extends o.Message {
         static ImplementsStaticInterface() {}
@@ -322,7 +322,7 @@
         constructor(e = null) {
           super(),
             he.prototype.gid || _.Sg(he.M()),
-            o.Message.initialize(this, e, 0, -1, void 0, null);
+            o.Message.initialize(this, e, 0, -1, [12], null);
         }
         static sm_m;
         static sm_mbf;
@@ -339,8 +339,8 @@
                   },
                   title: { n: 2, br: _.qM.readString, bw: _.gp.writeString },
                   type: { n: 3, br: _.qM.readEnum, bw: _.gp.writeEnum },
-                  associated_item_id: { n: 4, c: g.O4 },
-                  associated_item: { n: 5, c: g.vB },
+                  associated_item_id: { n: 4, c: d.O4 },
+                  associated_item: { n: 5, c: d.vB },
                   associated_name: {
                     n: 6,
                     br: _.qM.readString,
@@ -356,6 +356,7 @@
                     br: _.qM.readString,
                     bw: _.gp.writeString,
                   },
+                  recommended_items: { n: 12, c: d.O4, r: !0, q: !0 },
                 },
               }),
             he.sm_m
@@ -673,8 +674,8 @@
                     br: _.qM.readInt32,
                     bw: _.gp.writeInt32,
                   },
-                  context: { n: 6, c: g.TS },
-                  data_request: { n: 7, c: g.gn },
+                  context: { n: 6, c: d.TS },
+                  data_request: { n: 7, c: d.gn },
                 },
               }),
             Re.sm_m
@@ -982,8 +983,8 @@
                     br: _.qM.readFixed64String,
                     bw: _.gp.writeFixed64String,
                   },
-                  context: { n: 2, c: g.TS },
-                  data_request: { n: 3, c: g.gn },
+                  context: { n: 2, c: d.TS },
+                  data_request: { n: 3, c: d.gn },
                 },
               }),
             Te.sm_m
@@ -1147,20 +1148,20 @@
           return "CMarketingMessages_MarkMessageSeen_Notification";
         }
       }
-      class je extends o.Message {
+      class Oe extends o.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            je.prototype.gid || _.Sg(je.M()),
+            Oe.prototype.gid || _.Sg(Oe.M()),
             o.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            je.sm_m ||
-              (je.sm_m = {
-                proto: je,
+            Oe.sm_m ||
+              (Oe.sm_m = {
+                proto: Oe,
                 fields: {
                   gid: {
                     n: 1,
@@ -1184,66 +1185,6 @@
                     d: 0,
                     br: _.qM.readEnum,
                     bw: _.gp.writeEnum,
-                  },
-                },
-              }),
-            je.sm_m
-          );
-        }
-        static MBF() {
-          return je.sm_mbf || (je.sm_mbf = _.w0(je.M())), je.sm_mbf;
-        }
-        toObject(e = !1) {
-          return je.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return _.BT(je.M(), e, t);
-        }
-        static fromObject(e) {
-          return _.Uq(je.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (m().BinaryReader)(e),
-            r = new je();
-          return je.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return _.zj(je.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (m().BinaryWriter)();
-          return je.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          _.i0(je.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (m().BinaryWriter)();
-          return je.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CMarketingMessages_MarkMessageClicked_Notification";
-        }
-      }
-      class Oe extends o.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            Oe.prototype.gid || _.Sg(Oe.M()),
-            o.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            Oe.sm_m ||
-              (Oe.sm_m = {
-                proto: Oe,
-                fields: {
-                  gid: {
-                    n: 1,
-                    br: _.qM.readFixed64String,
-                    bw: _.gp.writeFixed64String,
                   },
                 },
               }),
@@ -1280,6 +1221,66 @@
         serializeBase64String() {
           var e = new (m().BinaryWriter)();
           return Oe.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CMarketingMessages_MarkMessageClicked_Notification";
+        }
+      }
+      class je extends o.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            je.prototype.gid || _.Sg(je.M()),
+            o.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            je.sm_m ||
+              (je.sm_m = {
+                proto: je,
+                fields: {
+                  gid: {
+                    n: 1,
+                    br: _.qM.readFixed64String,
+                    bw: _.gp.writeFixed64String,
+                  },
+                },
+              }),
+            je.sm_m
+          );
+        }
+        static MBF() {
+          return je.sm_mbf || (je.sm_mbf = _.w0(je.M())), je.sm_mbf;
+        }
+        toObject(e = !1) {
+          return je.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return _.BT(je.M(), e, t);
+        }
+        static fromObject(e) {
+          return _.Uq(je.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (m().BinaryReader)(e),
+            r = new je();
+          return je.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return _.zj(je.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (m().BinaryWriter)();
+          return je.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          _.i0(je.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (m().BinaryWriter)();
+          return je.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CMarketingMessages_GetMarketingMessage_Request";
@@ -2846,7 +2847,7 @@
         (e.GetActiveMarketingMessages = function (e, t, r) {
           return e.SendMsg(
             "MarketingMessages.GetActiveMarketingMessages#1",
-            (0, d.I8)(Be, t, r),
+            (0, g.I8)(Be, t, r),
             ye,
             { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
           );
@@ -2854,7 +2855,7 @@
           (e.GetPastMarketingMessages = function (e, t, r) {
             return e.SendMsg(
               "MarketingMessages.GetPastMarketingMessages#1",
-              (0, d.I8)(be, t, r),
+              (0, g.I8)(be, t, r),
               fe,
               { bConstMethod: !0, ePrivilege: 4 },
             );
@@ -2862,7 +2863,7 @@
           (e.GetMarketingMessagesForUser = function (e, t, r) {
             return e.SendMsg(
               "MarketingMessages.GetMarketingMessagesForUser#1",
-              (0, d.I8)(Re, t, r),
+              (0, g.I8)(Re, t, r),
               we,
               { bConstMethod: !0, ePrivilege: 1 },
             );
@@ -2870,7 +2871,7 @@
           (e.DoesUserHavePendingMarketingMessages = function (e, t, r) {
             return e.SendMsg(
               "MarketingMessages.DoesUserHavePendingMarketingMessages#1",
-              (0, d.I8)(ze, t, r),
+              (0, g.I8)(ze, t, r),
               Ie,
               { bConstMethod: !0, ePrivilege: 1 },
             );
@@ -2878,7 +2879,7 @@
           (e.GetDisplayMarketingMessage = function (e, t, r) {
             return e.SendMsg(
               "MarketingMessages.GetDisplayMarketingMessage#1",
-              (0, d.I8)(Te, t, r),
+              (0, g.I8)(Te, t, r),
               ke,
               { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
@@ -2886,7 +2887,7 @@
           (e.GetDisplayMarketingMessageForUser = function (e, t, r) {
             return e.SendMsg(
               "MarketingMessages.GetDisplayMarketingMessageForUser#1",
-              (0, d.I8)(Te, t, r),
+              (0, g.I8)(Te, t, r),
               ke,
               { bConstMethod: !0, ePrivilege: 1 },
             );
@@ -2894,7 +2895,7 @@
           (e.GetDisplayMarketingMessageAdmin = function (e, t, r) {
             return e.SendMsg(
               "MarketingMessages.GetDisplayMarketingMessageAdmin#1",
-              (0, d.I8)(Te, t, r),
+              (0, g.I8)(Te, t, r),
               ke,
               { bConstMethod: !0, ePrivilege: 4 },
             );
@@ -2902,21 +2903,21 @@
           (e.MarkMessageSeen = function (e, t) {
             return e.SendNotification(
               "MarketingMessages.MarkMessageSeen#1",
-              (0, d.I8)(Ce, t),
+              (0, g.I8)(Ce, t),
               { ePrivilege: 1 },
             );
           }),
           (e.MarkMessageClicked = function (e, t) {
             return e.SendNotification(
               "MarketingMessages.MarkMessageClicked#1",
-              (0, d.I8)(je, t),
+              (0, g.I8)(Oe, t),
               { ePrivilege: 1 },
             );
           }),
           (e.GetMarketingMessage = function (e, t, r) {
             return e.SendMsg(
               "MarketingMessages.GetMarketingMessage#1",
-              (0, d.I8)(Oe, t, r),
+              (0, g.I8)(je, t, r),
               Fe,
               { ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );
@@ -2924,7 +2925,7 @@
           (e.CreateMarketingMessage = function (e, t, r) {
             return e.SendMsg(
               "MarketingMessages.CreateMarketingMessage#1",
-              (0, d.I8)(qe, t, r),
+              (0, g.I8)(qe, t, r),
               Ue,
               { ePrivilege: 4 },
             );
@@ -2932,7 +2933,7 @@
           (e.UpdateMarketingMessage = function (e, t, r) {
             return e.SendMsg(
               "MarketingMessages.UpdateMarketingMessage#1",
-              (0, d.I8)(De, t, r),
+              (0, g.I8)(De, t, r),
               Ge,
               { ePrivilege: 5 },
             );
@@ -2940,7 +2941,7 @@
           (e.DeleteMarketingMessage = function (e, t, r) {
             return e.SendMsg(
               "MarketingMessages.DeleteMarketingMessage#1",
-              (0, d.I8)(Ae, t, r),
+              (0, g.I8)(Ae, t, r),
               Pe,
               { ePrivilege: 4 },
             );
@@ -2948,7 +2949,7 @@
           (e.FindMarketingMessages = function (e, t, r) {
             return e.SendMsg(
               "MarketingMessages.FindMarketingMessages#1",
-              (0, d.I8)(ve, t, r),
+              (0, g.I8)(ve, t, r),
               We,
               { ePrivilege: 5 },
             );
@@ -2956,7 +2957,7 @@
           (e.GetMarketingMessageViewerStats = function (e, t, r) {
             return e.SendMsg(
               "MarketingMessages.GetMarketingMessageViewerStats#1",
-              (0, d.I8)(Le, t, r),
+              (0, g.I8)(Le, t, r),
               Ne,
               { ePrivilege: 4 },
             );
@@ -2964,7 +2965,7 @@
           (e.GetMarketingMessagesViewerRangeStats = function (e, t, r) {
             return e.SendMsg(
               "MarketingMessages.GetMarketingMessagesViewerRangeStats#1",
-              (0, d.I8)(Ee, t, r),
+              (0, g.I8)(Ee, t, r),
               $e,
               { ePrivilege: 4 },
             );
@@ -2972,7 +2973,7 @@
           (e.GetMarketingMessageClickedStats = function (e, t, r) {
             return e.SendMsg(
               "MarketingMessages.GetMarketingMessageClickedStats#1",
-              (0, d.I8)(Ve, t, r),
+              (0, g.I8)(Ve, t, r),
               Ke,
               { ePrivilege: 4 },
             );
@@ -2980,7 +2981,7 @@
           (e.GetPartnerReadyToPublishMessages = function (e, t, r) {
             return e.SendMsg(
               "MarketingMessages.GetPartnerReadyToPublishMessages#1",
-              (0, d.I8)(Ye, t, r),
+              (0, g.I8)(Ye, t, r),
               Qe,
               { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
@@ -2988,7 +2989,7 @@
           (e.PublishPartnerMessage = function (e, t, r) {
             return e.SendMsg(
               "MarketingMessages.PublishPartnerMessage#1",
-              (0, d.I8)(Je, t, r),
+              (0, g.I8)(Je, t, r),
               Ze,
               { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
@@ -2996,7 +2997,7 @@
           (e.GetPartnerMessagePreview = function (e, t, r) {
             return e.SendMsg(
               "MarketingMessages.GetPartnerMessagePreview#1",
-              (0, d.I8)(Xe, t, r),
+              (0, g.I8)(Xe, t, r),
               et,
               { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
@@ -3004,7 +3005,7 @@
           (e.GetMarketingMessagesForPartner = function (e, t, r) {
             return e.SendMsg(
               "MarketingMessages.GetMarketingMessagesForPartner#1",
-              (0, d.I8)(it, t, r),
+              (0, g.I8)(it, t, r),
               st,
               { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
@@ -3012,7 +3013,7 @@
           (e.GetMarketingMessagesForApps = function (e, t, r) {
             return e.SendMsg(
               "MarketingMessages.GetMarketingMessagesForApps#1",
-              (0, d.I8)(tt, t, r),
+              (0, g.I8)(tt, t, r),
               rt,
               { ePrivilege: 4 },
             );
@@ -3103,8 +3104,8 @@
           t = (function () {
             const { data: e } = (0, c.I)({
               queryKey: ["AOWarningCookie"],
-              queryFn: () => g(),
-              placeholderData: () => g(),
+              queryFn: () => d(),
+              placeholderData: () => d(),
               staleTime: 0,
             });
             return e && e > Date.now() / 1e3;
@@ -3127,10 +3128,10 @@
       function _() {
         return "allowed" != m();
       }
-      const d = "bDisableAOWarning";
+      const g = "bDisableAOWarning";
       n.Kp.PerDay;
-      function g() {
-        const e = (0, l.VY)(d),
+      function d() {
+        const e = (0, l.VY)(g),
           t = e ? parseInt(e) : 0;
         return 0 != t ? t : null;
       }
@@ -3146,17 +3147,16 @@
       }
     },
     75279: (e, t, r) => {
-      r.d(t, { Ay: () => _, DJ: () => B, QO: () => y });
-      var i = r(6824),
-        s = r(62792),
-        a = r(81393),
-        n = r(61859),
-        l = r(91675),
-        c = r(78327),
-        u = r(63369),
-        o = r(62490),
-        m = r(52471);
-      class _ {
+      r.d(t, { Ay: () => m, DJ: () => h, QO: () => B });
+      var i = r(30570),
+        s = (r(62792), r(61859)),
+        a = r(91675),
+        n = r(78327),
+        l = r(63369),
+        c = r(62490),
+        u = r(81393),
+        o = r(52471);
+      class m {
         m_eItemType;
         m_unID;
         m_bVisible = !1;
@@ -3250,11 +3250,11 @@
               (this.m_DataRequested.include_all_purchase_options = !0)),
             t.include_screenshots &&
               !this.m_Screenshots &&
-              ((this.m_Screenshots = new h(e.screenshots())),
+              ((this.m_Screenshots = new M(e.screenshots())),
               (this.m_DataRequested.include_screenshots = !0)),
             t.include_trailers &&
               !this.m_Trailers &&
-              ((this.m_Trailers = new p(e.trailers())),
+              ((this.m_Trailers = new d(e.trailers())),
               (this.m_DataRequested.include_trailers = !0)),
             t.include_tag_count &&
               t.include_tag_count > this.m_rgStoreTags.length &&
@@ -3315,19 +3315,13 @@
           );
         }
         BContainDataRequest(e) {
-          return _.BDataRequestContainsOtherDataRequest(
+          return m.BDataRequestContainsOtherDataRequest(
             this.m_DataRequested,
             e,
           );
         }
         BCheckDataRequestIncluded(e) {
-          ("dev" != c.TS.WEB_UNIVERSE && "beta" != c.TS.WEB_UNIVERSE) ||
-            (0, a.wT)(
-              this.BContainDataRequest(e),
-              `Requested data without for ${(0, s.Rz)(this.m_eItemType)} @ ${this.m_unID}`,
-              e,
-              this.m_DataRequested,
-            );
+          0;
         }
         GetStoreItemType() {
           return this.m_eItemType;
@@ -3346,10 +3340,10 @@
         }
         GetStorePageURL(e = !1) {
           return e && this.HasDemoStandaloneStorePage()
-            ? c.TS.STORE_BASE_URL +
+            ? n.TS.STORE_BASE_URL +
                 "app/" +
                 this.GetDemoStandaloneStorePageAppIDs()[0]
-            : c.TS.STORE_BASE_URL + this.m_strStoreURLPath;
+            : n.TS.STORE_BASE_URL + this.m_strStoreURLPath;
         }
         GetStorePageURLWithOverride() {
           return this.m_strStoreURLPathOverride &&
@@ -3362,12 +3356,12 @@
         }
         GetCommunityPageURL() {
           return this.GetAppID()
-            ? c.TS.COMMUNITY_BASE_URL + "app/" + this.GetAppID()
+            ? n.TS.COMMUNITY_BASE_URL + "app/" + this.GetAppID()
             : null;
         }
         GetCommunityDiscussionForumsURL() {
           return this.GetAppID()
-            ? c.TS.COMMUNITY_BASE_URL +
+            ? n.TS.COMMUNITY_BASE_URL +
                 "app/" +
                 this.GetAppID() +
                 "/discussions/"
@@ -3532,7 +3526,7 @@
           return (
             this.BCheckDataRequestIncluded({ include_basic_info: !0 }),
             this.m_BasicInfo
-              ? d([
+              ? _([
                   ...this.m_BasicInfo.developers,
                   ...this.m_BasicInfo.publishers,
                   ...this.m_BasicInfo.franchises,
@@ -3543,19 +3537,19 @@
         GetAllPublisherCreatorClans() {
           return (
             this.BCheckDataRequestIncluded({ include_basic_info: !0 }),
-            this.m_BasicInfo ? d(this.m_BasicInfo.publishers) : []
+            this.m_BasicInfo ? _(this.m_BasicInfo.publishers) : []
           );
         }
         GetAllDeveloperCreatorClans() {
           return (
             this.BCheckDataRequestIncluded({ include_basic_info: !0 }),
-            this.m_BasicInfo ? d(this.m_BasicInfo.developers) : []
+            this.m_BasicInfo ? _(this.m_BasicInfo.developers) : []
           );
         }
         GetAllFranchiseCreatorClans() {
           return (
             this.BCheckDataRequestIncluded({ include_basic_info: !0 }),
-            this.m_BasicInfo ? d(this.m_BasicInfo.franchises) : []
+            this.m_BasicInfo ? _(this.m_BasicInfo.franchises) : []
           );
         }
         GetCapsuleHeadline() {
@@ -3616,18 +3610,18 @@
             this.m_ReleaseInfo?.is_coming_soon)
           ) {
             if (this.m_ReleaseInfo?.coming_soon_display)
-              return (0, u.d)(this.m_ReleaseInfo);
+              return (0, l.d)(this.m_ReleaseInfo);
             if (this.m_ReleaseInfo?.custom_release_date_message)
               return this.m_ReleaseInfo.custom_release_date_message;
             const e = this.m_ReleaseInfo?.steam_release_date;
             return e
               ? this.m_ReleaseInfo?.is_abridged_release_date
-                ? (0, l.sq)(new Date(1e3 * e))
-                : (0, n.$z)(e)
+                ? (0, a.sq)(new Date(1e3 * e))
+                : (0, s.$z)(e)
               : "";
           }
           const e = this.GetReleaseDateRTime();
-          return e ? (0, n.$z)(e) : "";
+          return e ? (0, s.$z)(e) : "";
         }
         BIsComingSoon() {
           return this.m_bIsComingSoon;
@@ -3781,7 +3775,7 @@
           return this.m_strInternalName;
         }
       }
-      function d(e) {
+      function _(e) {
         if (!e?.length) return [];
         const t = e.map((e) => e.creator_clan_account_id).filter((e) => !!e);
         return Array.from(new Set(t));
@@ -3857,10 +3851,10 @@
                 e.library_hero_2x(),
               ))),
             e.community_icon() &&
-              ((this.m_strCommunityIcon = `${c.TS.MEDIA_CDN_COMMUNITY_URL}images/apps/${t}/${e.community_icon()}.jpg`),
-              (this.m_strCommunityIcon_Full = `${c.TS.MEDIA_CDN_COMMUNITY_URL}images/apps/${t}/${e.community_icon()}_full.jpg`)),
+              ((this.m_strCommunityIcon = `${n.TS.MEDIA_CDN_COMMUNITY_URL}images/apps/${t}/${e.community_icon()}.jpg`),
+              (this.m_strCommunityIcon_Full = `${n.TS.MEDIA_CDN_COMMUNITY_URL}images/apps/${t}/${e.community_icon()}_full.jpg`)),
             e.page_background_path() &&
-              (this.m_strPageBackgroundURL = `${c.TS.STORE_CDN_URL}images/storepagebackground/${e.page_background_path()}`);
+              (this.m_strPageBackgroundURL = `${n.TS.STORE_CDN_URL}images/storepagebackground/${e.page_background_path()}`);
         }
         GetMainCapsuleURL() {
           return this.m_strMainCapsuleURL;
@@ -3900,7 +3894,7 @@
         }
         ConstructAssetURL(e, t) {
           return (
-            c.TS.BASE_URL_SHARED_CDN +
+            n.TS.BASE_URL_SHARED_CDN +
             "/store_item_assets/" +
             e.replace("${FILENAME}", t)
           );
@@ -3912,7 +3906,7 @@
           return this.m_strCommunityIcon_Full;
         }
       }
-      class p {
+      class d {
         m_mapTrailer;
         m_highlightTrailers;
         m_highlightTrailersAllAges;
@@ -3920,12 +3914,12 @@
         m_otherTrailersAllAges;
         constructor(e) {
           (this.m_highlightTrailers =
-            e.highlights()?.map((e) => new M(e)) ?? []),
+            e.highlights()?.map((e) => new p(e)) ?? []),
             (this.m_highlightTrailersAllAges = this.m_highlightTrailers.filter(
               (e) => e.BIsAllAges(),
             )),
             (this.m_otherTrailers =
-              e.other_trailers()?.map((e) => new M(e)) ?? []),
+              e.other_trailers()?.map((e) => new p(e)) ?? []),
             (this.m_otherTrailersAllAges = this.m_otherTrailers.filter((e) =>
               e.BIsAllAges(),
             )),
@@ -3955,7 +3949,7 @@
           return this.m_mapTrailer.get(e);
         }
       }
-      class M {
+      class p {
         m_strTrailerName;
         m_eTrailerCategory;
         m_nBaseID;
@@ -3998,7 +3992,7 @@
             t.length > 0 && (this.m_rgHlsTrailer = t[0]);
           }
           (this.m_bIsAllAges = e.all_ages() ?? !0),
-            (this.m_strCaptionManifest = (0, m.Wv)(e));
+            (this.m_strCaptionManifest = (0, o.Wv)(e));
         }
         GetName() {
           return this.m_strTrailerName;
@@ -4048,33 +4042,33 @@
             ),
             s = i.findIndex((e) => e.encoding().endsWith("_av1"));
           return (
-            s > 0 && o.yY(i, s, 0),
+            s > 0 && c.yY(i, s, 0),
             i.map((e) => this.ConstructAssetURL(e.cdn_path(), ""))
           );
         }
         ConstructScreenshotURL(e, t) {
           return (
-            c.TS.BASE_URL_SHARED_CDN +
+            n.TS.BASE_URL_SHARED_CDN +
             "/store_item_assets/" +
             e.replace("${FILENAME}", t)
           );
         }
         ConstructAssetURL(e, t) {
           return (
-            c.TS.VIDEO_CDN_URL +
+            n.TS.VIDEO_CDN_URL +
             "/store_trailers/" +
             e.replace("${FILENAME}", t)
           );
         }
       }
-      class h {
+      class M {
         m_rgAllScreenshots;
         m_rgOnlyAllAgesScreenshots;
         constructor(e) {
           const t = e.all_ages_screenshots() || [],
             r = e.mature_content_screenshots() || [],
             i = (e) =>
-              c.TS.BASE_URL_SHARED_CDN + "/store_item_assets/" + e.filename();
+              n.TS.BASE_URL_SHARED_CDN + "/store_item_assets/" + e.filename();
           (this.m_rgOnlyAllAgesScreenshots = t.map(i)),
             (this.m_rgAllScreenshots = [...t, ...r]
               .sort((e, t) => e.ordinal() - t.ordinal())
@@ -4087,7 +4081,7 @@
           return this.m_rgOnlyAllAgesScreenshots;
         }
       }
-      function B(e) {
+      function h(e) {
         if (e)
           switch (e.GetStoreItemType()) {
             case i.c6.qI:
@@ -4107,13 +4101,13 @@
             case i.c6.Ep:
               return;
             default:
-              return void (0, a.z_)(
+              return void (0, u.z_)(
                 e.GetStoreItemType(),
                 `Unknown EStoreItemType ${e.GetStoreItemType()} ${(0, i.md)(e.GetStoreItemType())} `,
               );
           }
       }
-      function y(e) {
+      function B(e) {
         if (e)
           switch (e.item_type) {
             case i.c6.qI:
@@ -4134,7 +4128,7 @@
             case i.c6.Ep:
               return;
             default:
-              return void (0, a.z_)(
+              return void (0, u.z_)(
                 e.item_type,
                 `Unknown EStoreItemType ${e.item_type} ${(0, i.md)(e.item_type)} `,
               );
@@ -4143,7 +4137,7 @@
     },
     62792: (e, t, r) => {
       r.d(t, {
-        Di: () => g,
+        Di: () => d,
         FT: () => y,
         JK: () => l,
         Je: () => h,
@@ -4163,11 +4157,11 @@
         s9: () => I,
         vo: () => M,
         wD: () => B,
-        wR: () => d,
+        wR: () => g,
       });
       var i,
         s = r(6330),
-        a = r(6824);
+        a = r(30570);
       !(function (e) {
         (e[(e.k_NotRejected = -1)] = "k_NotRejected"),
           (e[(e.k_RejectNoMainCap = 0)] = "k_RejectNoMainCap"),
@@ -4247,14 +4241,14 @@
             return "app";
         }
       }
-      function d(e, t, r) {
+      function g(e, t, r) {
         return e
           ? { id: e, item_type: "app" }
           : t
             ? { id: t, item_type: "sub" }
             : { id: r, item_type: "bundle" };
       }
-      function g(e) {
+      function d(e) {
         return "app" == e?.item_type
           ? { appid: e.id }
           : "sub" == e?.item_type
@@ -4442,12 +4436,6 @@
             return "";
         }
       }
-    },
-    63340: (e, t, r) => {
-      function i(e, t) {
-        "undefined" != typeof window && (window[e] = t);
-      }
-      r.d(t, { V: () => i });
     },
   },
 ]);

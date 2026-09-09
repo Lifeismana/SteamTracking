@@ -1,5 +1,5 @@
-import "common_base.proto";
 import "common.proto";
+import "common_base.proto";
 
 message CStoreAppSimilarity_IdentifyClustersFromPlaytime_Request {
 	optional fixed64 steamid = 1;

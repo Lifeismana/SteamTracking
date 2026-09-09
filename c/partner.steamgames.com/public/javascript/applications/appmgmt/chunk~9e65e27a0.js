@@ -203,10 +203,6 @@
             (this.m_rtEndTime = _ - 86400),
               (this.m_rtStartTime = _ - 24 * (_ + 1) * 60 * 60);
           }
-          "dev" == _._.WEB_UNIVERSE &&
-            console.log(
-              `CAppSaleSummary initializing to ${this.m_rtStartTime} to ${this.m_rtEndTime}`,
-            );
         }
       }
     },
@@ -417,8 +413,7 @@
       }
       class _ {
         constructor() {
-          (0, _._)(this),
-            "dev" === _._.WEB_UNIVERSE && (window.g_StoreTagStore = this);
+          (0, _._)(this);
         }
         m_rgTags;
         m_rgCategories;
@@ -479,17 +474,8 @@
                   this.m_mapStoreTags.set(_.tagid, _),
                 ),
                 (this.m_mapStoreCategories = new Map()),
-                this.m_rgCategories.forEach((_) =>
+                void this.m_rgCategories.forEach((_) =>
                   this.m_mapStoreCategories.set(_.categoryid, _),
-                ),
-                void (
-                  "dev" === _._.WEB_UNIVERSE &&
-                  console.log(
-                    "tags " +
-                      this.m_rgTags.length +
-                      ", categories " +
-                      this.m_rgCategories.length,
-                  )
                 )
               );
             (this.m_promise = null), (_ = (0, _._)(_));
@@ -778,13 +764,7 @@
         }
         static s_Singleton;
         static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_ThemeEventStore = _.s_Singleton)),
-            _.s_Singleton
-          );
+          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
         }
       }
       function _(_) {

@@ -112,7 +112,6 @@ var CLSTAMP = "steamdb";
           _ = __webpack_require__("chunkid");
         const _ = {
             EUNIVERSE: 0,
-            WEB_UNIVERSE: "",
             LANGUAGE: "english",
             SUPPORTED_LANGUAGES: [],
             COUNTRY: "",
@@ -1105,7 +1104,10 @@ var CLSTAMP = "steamdb";
               return Promise.all(
                 Array.from(_).map((_) =>
                   _(_).then((_) => {
-                    if (!_) return;
+                    if (!_)
+                      return void console.error(
+                        `Project loc failed to load language ${_}, got ${_}`,
+                      );
                     const _ = new Map();
                     for (const [_, _] of Object.entries(_)) _.set("#" + _, _);
                     _.set(_, _);
@@ -1113,24 +1115,46 @@ var CLSTAMP = "steamdb";
                 ),
               );
             })();
-          let _ = !1;
+          let _ = !1,
+            _ = !1;
           var _;
           function _(_, _) {
             const [_, ..._] = _,
               _ =
                 _.get(_.strLanguage)?.get(_) ??
                 _.get(_(_.strLanguage) ?? "english")?.get(_);
-            return void 0 !== _
-              ? _
-              : 0 === _.length
-                ? (console.error("Couldn't find localization key", _), _)
-                : _(_, _);
+            if (void 0 !== _) return _;
+            if (0 === _.length) {
+              if (_)
+                return (
+                  console.warn(
+                    `Couldn't find localization key ${_} after erroring loading strings`,
+                  ),
+                  _
+                );
+              if (!_) throw _;
+              return (
+                (0, _._)().ReportError(
+                  new Error(`Couldn't find localization key ${_}`),
+                  {
+                    bIncludeMessageInIdentifier: !0,
+                  },
+                ),
+                console.warn(`Couldn't find localization key ${_}`),
+                _
+              );
+            }
+            return _(_, _);
           }
           function _(_, ..._) {
             return _(_(_, _().languages), ..._);
           }
           return (
-            __webpack_require__.then(() => (_ = !0)),
+            __webpack_require__
+              .then(() => (_ = !0))
+              .catch((_) => {
+                console.error("LoadStrings error", _), (_ = !0);
+              }),
             (_ = _),
             (_ ??= new Set()),
             _.add(_),
@@ -1226,6 +1250,7 @@ var CLSTAMP = "steamdb";
           m_cbkTokensChanged = new _();
           m_rgLocalesToUse;
           m_bReportIndividualMissingTokens = !0;
+          m_bReady = !1;
           static GetLanguageFallback(_) {
             return "sc_schinese" === _ ? "schinese" : "english";
           }
@@ -1258,6 +1283,9 @@ var CLSTAMP = "steamdb";
               this.m_mapFallbackTokens.clear(),
               this.AddTokens(_, _),
               this.m_cbkTokensChanged.Dispatch();
+          }
+          SetReady(_) {
+            this.m_bReady = _;
           }
           AddTokens(_, _) {
             Object.keys(_).forEach((_) => {
@@ -1312,13 +1340,13 @@ var CLSTAMP = "steamdb";
                 : void (0 === this.m_mapTokens.size
                     ? _(
                         !1,
-                        `Attempting to localize token '${_}' with no tokens in our map.`,
+                        `Attempting to localize token '${_}' with no tokens in our map for language '${_.LANGUAGE}'. SharedLoc ready: ${_.IsReady()}. site has inited: ${this.m_bReady}`,
                       )
                     : !_ &&
                       this.m_bReportIndividualMissingTokens &&
                       (0, _._)().ReportError(
                         new Error(
-                          `Unable to find localization token '${_}' for language '${_.LANGUAGE}', ${this.m_mapTokens.size} tokens in map`,
+                          `Unable to find localization token '${_}' for language '${_.LANGUAGE}', ${this.m_mapTokens.size} tokens in map. SharedLoc ready: ${_.IsReady()}. site has inited: ${this.m_bReady}`,
                         ),
                         {
                           bIncludeMessageInIdentifier: !0,
@@ -1420,12 +1448,8 @@ var CLSTAMP = "steamdb";
           }
           GetURL() {
             return this.m_strInviteCode
-              ? ((_ = this.m_strInviteCode),
-                "public" == _.WEB_UNIVERSE
-                  ? `https://s.team/chat/${_}`
-                  : `${_.COMMUNITY_BASE_URL}chat/invite/${_}`)
+              ? `https://s.team/chat/${this.m_strInviteCode}`
               : null;
-            var _;
           }
           BIsUserBanned() {
             return this.m_bIsBanned;
@@ -1955,6 +1979,7 @@ var CLSTAMP = "steamdb";
             "/.millennium/Dist",
             "Millennium internal",
             "millenium",
+            "millennium",
             "Refused unauthorized RPC command",
           ];
         function _() {
@@ -2874,70 +2899,70 @@ var CLSTAMP = "steamdb";
       }[_] || _) +
       ".js?contenthash=" +
       {
-        43: "8170f2c895e19202cd65",
-        200: "cfd1378a55afe1089add",
-        295: "64a5aae7cba430984eff",
-        559: "953f1cf690b4e5511a43",
-        762: "989dc3b4eff679fe5ec9",
-        815: "a50f176b1671bac69ef2",
-        1136: "e2d73c7fe82fd7d5d8c9",
-        1499: "63ac62860d966e5978a9",
-        1864: "ed913ddb58093a5035ba",
-        2269: "ac5e1a56f80c6b5ed0bd",
-        2532: "81f6c1f1d6e42e913450",
-        2889: "f81c4d6eab4de38e52fa",
-        2945: "f36eb722d1197b9ccc69",
-        3e3: "a020a8a0239eaddd4347",
-        3016: "1e84930d3e0b90c7a6b5",
-        3232: "74edce7d52daf7c1e927",
-        3415: "afd36ff1abc6e8d3a800",
-        3485: "d45be7f2f2c9a5c0f02d",
-        3723: "325ca6fc0ceca5503b85",
-        3789: "8c81812abc11a5169e5b",
-        3800: "3d5c040d35d601e722b7",
-        3907: "0e58a2bdb279b72b2874",
-        4154: "da950d2a24eca80bf91a",
-        4230: "4674837e8d11091922a8",
-        4289: "6b05def3339c199bca35",
-        4302: "6777319b6735c96a6a98",
-        4419: "ea191040f4f90be94106",
-        4434: "06de5f0d3ba8406dd2d0",
-        4488: "8dd091f616bb836b799e",
-        4625: "fc88adb95307e0d78e66",
-        4750: "cd9bc952747a7b90909c",
-        4776: "0ff0003552979744c3ee",
-        4787: "ab118cafd413ef8db5d3",
-        4792: "9f7f6d4443d3e4cd8dbe",
-        4978: "4a3b3c80ecf51d25d196",
-        5040: "52a4710fd9eaa39d7bd5",
-        5191: "ae29012edb65c0412283",
-        5233: "5546b6402f5765dc5239",
-        5341: "0050d1d3444cdf99610b",
-        5436: "246e6374c9e4e5de1fe3",
-        5480: "819bcdfa36698211a731",
-        5777: "54438807c65eb1c2484c",
-        6127: "658afba6cdc2a25013d4",
-        6170: "2dda688d7f55217ec17d",
-        6385: "641291b44bff14d6f0d7",
-        6512: "0a59a4a9340578701937",
-        6518: "dc5f6ae58364d09cceda",
-        6609: "58380bc6920b369df4a7",
-        6736: "cbf0722fb2a9d3fb8bfc",
-        6888: "b1d82792ec48c0c9f838",
-        6971: "8bfca381100e06a3c16d",
-        7246: "734ad76f5986901f4de5",
-        7263: "8bee25587608c97b575c",
-        7487: "49d81d8d15ad6c6cb411",
-        7861: "7b73403c160be056831f",
-        8194: "cee76cc3439b0428bedd",
-        8476: "094339eefcf15105c427",
-        8759: "c5da3a31f5e1a781a6b1",
-        8766: "99861106e88eb68fe3ec",
-        9574: "545cb7f78522f0b92438",
-        9668: "a4cfb18de81aad6185bf",
-        9746: "2cfaacb3359ab5b9bd3c",
-        9808: "21bf92301f1b8edb7b62",
-        9863: "d116b8109d4800eb4c20",
+        43: "b98e0f420add57691fc2",
+        200: "f70dc77df2b44c5b6c28",
+        295: "30a1b0feb050dde520dd",
+        559: "e8fd6d4fe87221a119fa",
+        762: "6381bf741535ad65d4e3",
+        815: "c7a18e80878daf8f54e1",
+        1136: "5f832a08c3bef135c68e",
+        1499: "016609b438b84fcc275a",
+        1864: "f2b9178068767b40d428",
+        2269: "913b2ce129ee42bef5df",
+        2532: "a9d9f49d622113e7237a",
+        2889: "7370f87b7e9e453eb0eb",
+        2945: "b1bb49c86e94db92dee9",
+        3e3: "1b03996604202ef27322",
+        3016: "ca85786390010cceefc4",
+        3232: "506a59c269184fbbf9b5",
+        3415: "f27b27ba4a24ffe3357b",
+        3485: "08349ebcf15f4d7c2342",
+        3723: "a69634b2de1f3fa5dba5",
+        3789: "7576118cdc2ea612c555",
+        3800: "29f495d97b5169da720b",
+        3907: "3dea78f6a4155105eeaa",
+        4154: "ab85015c1182c53c2a07",
+        4230: "163b24575a8590b5dd57",
+        4289: "b1ffb8ea3b089c182e85",
+        4302: "127bac547ebe35debb6e",
+        4419: "a0af6463f1a69b1adf58",
+        4434: "7042d1e1cb05e782371a",
+        4488: "ecc72b7e73d0d3a37046",
+        4625: "b3f0a685e298e07970f2",
+        4750: "2f714d699e60e9e5441a",
+        4776: "642916fbd7a977b50de9",
+        4787: "ef50a874abefeb603b11",
+        4792: "f9a55c905cc523f64b44",
+        4978: "4253d6570728d8675048",
+        5040: "f96790d344ca1985baf6",
+        5191: "8aa4a92e8e0301626e83",
+        5233: "536bb318dfdd1d48eca4",
+        5341: "d01dc36adbf1ed0dc168",
+        5436: "7a51987a0662bd324382",
+        5480: "aa8842d2e7d72dad67c5",
+        5777: "a0cbe768cbe83f6a2a8d",
+        6127: "4882c58af191aaf74128",
+        6170: "0a707b61824222356e7e",
+        6385: "e5f8cfa9b62ae2ae5efe",
+        6512: "91ee6858d882af1c5e62",
+        6518: "1367c553cc7eccd07bc4",
+        6609: "fc94f8d39971c6671379",
+        6736: "17e2509232d2db22d939",
+        6888: "c50f7606409776b647a0",
+        6971: "e7f4af03b6ba3a7fa534",
+        7246: "167c8393e8c49711acd7",
+        7263: "99f6d1aa488039ff2230",
+        7487: "8efea89904c72e8440e5",
+        7861: "5edde2f8fc8a9ec95168",
+        8194: "7b692387d3a77ce31c7b",
+        8476: "1ddeaaa684b3b1ffb95c",
+        8759: "73a7657685d5198e1a73",
+        8766: "0447dd79b31a8fe64ce1",
+        9574: "a1c254a386aa01497b75",
+        9668: "67e32057588ddc9e6d12",
+        9746: "3679c8e2ce76e34b2ccf",
+        9808: "51bb932b4ac14b5211d4",
+        9863: "e0e594dbfb4435361da5",
       }[_]),
     (_.miniCssF = (_) => {}),
     (_._ = (function () {
@@ -3083,6 +3108,6 @@ var CLSTAMP = "steamdb";
       __webpack_require__.forEach(_.bind(null, 0)),
         (_.push = _.bind(null, _.push.bind(_)));
     })();
-  var _ = _._(void 0, [3987, 9489, 1068], () => _(2901));
+  var _ = _._(void 0, [3987, 9489, 1068], () => _(92611));
   _ = _._(_);
 })();

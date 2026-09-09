@@ -6,94 +6,10 @@
       __webpack_require__._(module_exports, {
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      async function _(_, _, _) {
-        const _ = (0, _._)("partnereventpermissions", "application_config");
-        if (
-          (function (_) {
-            const _ = _;
-            if (
-              _ &&
-              Array.isArray(_) &&
-              _.length > 0 &&
-              "object" == typeof _[0]
-            )
-              return (
-                "number" == typeof _[0].clanid && "number" == typeof _[0].appid
-              );
-            return !1;
-          })(_)
-        ) {
-          const _ = _.find((_) => (_.clanid = _));
-          if (_) {
-            let { success: _, warn_msg: _, err_msg: _, ..._ } = _;
-            return _;
-          }
-        }
-        if (_._.logged_in) {
-          const _ = _._.InitFromClanID(_);
-          let _ = `${_._.COMMUNITY_BASE_URL}gid/${_.ConvertTo64BitString()}/ajaxgetpartnereventpermissions/`;
-          "partnerweb" == (0, _._)()
-            ? (_ = `${_._.PARTNER_BASE_URL}partnerevents/ajaxgetpartnereventpermissions?clanaccountid=${_}`)
-            : "store" == (0, _._)() &&
-              (_ = `${_._.STORE_BASE_URL}events/ajaxgetpartnereventpermissions?clanaccountid=${_}`);
-          const _ = await fetch(_, {
-            method: "GET",
-            credentials: "include",
-          });
-          if (200 == _.status) {
-            const _ = await _.json();
-            if (_) {
-              let { success: _, warn_msg: _, err_msg: _, ..._ } = _;
-              return _;
-            }
-          }
-        }
-        return (function (_, _) {
-          return {
-            clanid: _,
-            appid: _,
-            can_edit: !1,
-            owns_app: !1,
-            event_followed: [],
-            event_followed_flags: [],
-            event_ignored: [],
-            follows_app: !1,
-            valve_admin: !1,
-            support_user: !1,
-            limited_user: !0,
-          };
-        })(_, void 0);
-      }
-      var _ = __webpack_require__("chunkid");
-      function _(_) {
-        (0, _._)(), (0, _._)();
-        return (0, _._)(
-          (function (_) {
-            return {
-              queryKey: _(_),
-              queryFn: async () => await _(_),
-              enabled: !!_,
-            };
-          })(_),
-        );
-      }
-      function _(_) {
-        return ["useEventUserPermissions", _._.accountid, _];
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
       var _,
         _,
         _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1563,142 +1479,6 @@
         }
         getClassName() {
           return "CPromotionPlanning_GetAllPlansForApps_Response_CAppIncludedInSales";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.partnerid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  partnerid: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  start_date: {
-                    _: 5,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  end_date: {
-                    _: 6,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  show_hidden: {
-                    _: 4,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CPromotionPlanning_GetAllPlansForPartner_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.plans || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  plans: {
-                    _: 1,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CPromotionPlanning_GetAllPlansForPartner_Response";
         }
       }
       class _ extends _.Message {
@@ -5597,18 +5377,6 @@
               },
             );
           }),
-          (_.GetAllPlansForPartner = function (_, _, _) {
-            return _.SendMsg(
-              "PromotionPlanning.GetAllPlansForPartner#1",
-              (0, _._)(_, _, _),
-              _,
-              {
-                bConstMethod: !0,
-                ePrivilege: 2,
-                eWebAPIKeyRequirement: 1,
-              },
-            );
-          }),
           (_.GetPlanByInputAccessKey = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.GetPlanByInputAccessKey#1",
@@ -5858,7 +5626,6 @@
         }).data;
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -6310,6 +6077,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { eventModel: _ } = _,
@@ -6334,6 +6102,7 @@
       function _(_) {
         const { eventModel: _ } = _,
           [_, _] = (0, _.useState)(!1),
+          _ = (0, _._)(),
           _ = (0, _._)();
         if (
           ((0, _.useEffect)(() => {
@@ -6346,6 +6115,7 @@
           return null;
         const _ = _.GetSaleSectionsByType("quiz"),
           _ = [],
+          _ = _?.length > 0 ? _[0].unique_id : void 0,
           _ =
             1 == _?.length &&
             ("scenario" == _[0].quiz.quiz_type ||
@@ -6404,11 +6174,7 @@
                 const _ = new Array();
                 if (_)
                   (0, _._)(() => {
-                    if (
-                      ((0, _._)(-1),
-                      _._.Get().ClearAnswersAndCategories(),
-                      -1 != _.data)
-                    ) {
+                    if (((0, _._)(-1), (0, _._)(_, _), -1 != _.data)) {
                       const _ = _[0].quiz.answer_categories.find(
                         (_) => _.door_index == _.data,
                       );
@@ -6420,11 +6186,8 @@
                               _.category_ids?.includes(_.category_id),
                             );
                             _ < 0 && (_ = 0),
-                              _._.Get().SetAnswerCategory(
-                                _,
-                                _.answers[_].category_ids,
-                              ),
-                              _._.Get().SetAnswer(_, _.answers[_]);
+                              (0, _._)(_, _, _, _.answers[_].category_ids),
+                              (0, _._)(_, _, _, _.answers[_]);
                           }),
                         _.label.toString().startsWith(_) ||
                           ((0, _._)(0, !0),
@@ -6461,7 +6224,7 @@
                     ).filter(Boolean),
                     _ = new Array();
                   _.forEach((_) => __webpack_require__.push(..._)),
-                    (0, _._)(_.rewards?.reward_items[0].appid, _);
+                    (0, _._)(_, _.rewards?.reward_items[0].appid, _);
                 }
               },
             }),
@@ -6505,7 +6268,7 @@
             _.GID,
             _.clanSteamID.GetAccountID(),
           ]),
-          _ = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
           _ = (0, _._)(),
           { creatorHome: _ } = (0, _._)(_);
         if (_)

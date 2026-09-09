@@ -277,8 +277,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       function _(_) {
         const { closeCart: _, lineItemIDs: _, replacedPackageIDs: _ } = _,
           _ = (0, _._)(),
@@ -296,6 +296,7 @@
         return (0, _.jsx)(_._, {
           validateCart: _,
           eDisplayType: _._.k_ECartDisplayType_Modal,
+          ItemLink: _._,
           children: (0, _.jsxs)(_._, {
             active: !0,
             className: _().ShoppingCartModal,

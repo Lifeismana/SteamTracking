@@ -22,7 +22,7 @@
         N = s(76217),
         o = s(95695),
         r = s.n(o),
-        c = s(82477),
+        c = s(71420),
         l = s(52038),
         L = s(61859),
         j = s(73745),
@@ -45,7 +45,7 @@
         p = s(51006),
         U = s(17720),
         k = s(76176),
-        O = s(6205),
+        O = s(83309),
         v = s(68797),
         B = s(22797),
         b = s(69131),
@@ -53,7 +53,7 @@
         Y = s(72967),
         F = s(86244),
         Z = s.n(F),
-        J = s(14336);
+        J = s(44419);
       const R = (0, E.PA)((e) => {
         const { appid: t, eventLink: s } = e,
           n = i.useRef(null),
@@ -312,7 +312,7 @@
                 ),
                 strOKButtonText: (0, L.we)("#MobileLogin_SignIn"),
                 onCancel: this.props.closeModal,
-                onOK: () => (0, c.vg)(),
+                onOK: () => (0, c.l)(),
               })
             : this.state.bShareOnSteamDialog
               ? (0, M.jsx)(R, {

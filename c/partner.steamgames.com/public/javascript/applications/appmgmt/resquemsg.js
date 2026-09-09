@@ -572,11 +572,7 @@
         static s_Singleton;
         static Get() {
           return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              _.s_Singleton.Init(),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_ReservationMessagingStore = _.s_Singleton)),
+            _.s_Singleton || ((_.s_Singleton = new _()), _.s_Singleton.Init()),
             _.s_Singleton
           );
         }
@@ -584,11 +580,6 @@
         Init() {
           const _ = (0, _._)("promotion_operation_token", "application_config");
           (0, _._)(Boolean(_), "require promotion_operation_token"),
-            "dev" == _._.WEB_UNIVERSE &&
-              console.log(
-                "DEV_DEBUG Initializing CReservationMessagingStore with access token ",
-                _,
-              ),
             (this.m_steamInterface = new _._(_._.WEBAPI_BASE_URL, _));
           const _ = (0, _._)(
             "reservation_queue_position_messages",
@@ -1366,10 +1357,8 @@
         _: () => _,
         _: () => _,
       });
+      __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -1398,23 +1387,7 @@
         }
         ParseDevOverrides(_) {
           if (!_ || 0 == _.length) return;
-          const _ = new URLSearchParams("?" == _[0] ? _.substring(1) : _);
-          if (
-            _.has("t") &&
-            ("dev" == _._.WEB_UNIVERSE || "beta" == _._.WEB_UNIVERSE)
-          ) {
-            const _ = _.get("t");
-            let _ = /^\d+$/.test(_ ?? "")
-              ? _().unix(Number.parseInt(_ ?? "0"))
-              : _()(_);
-            (this.nOverrideDateNow = Math.floor(__webpack_require__.unix())),
-              console.log(
-                "CEventCalendarDevFeatures overriding partner event time: " +
-                  this.nOverrideDateNow +
-                  " " +
-                  __webpack_require__.format(),
-              );
-          }
+          new URLSearchParams("?" == _[0] ? _.substring(1) : _).has("t");
         }
       })();
       function _(_ = 1) {

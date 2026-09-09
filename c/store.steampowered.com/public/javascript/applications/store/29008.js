@@ -638,41 +638,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const _ = (0, _._)(),
-          _ = (0, _._)();
-        return (0, _._)({
-          mutationFn: () =>
-            (async function (_, _) {
-              const _ = _._.Init(_._);
-              __webpack_require__.Body().set_item_id(_._.fromObject(_));
-              const _ = await _._.AddFreeLicense(_, _);
-              return [_.GetEResult(), _.Body().toObject()];
-            })(_, _),
-          onSuccess(_) {
-            const [
-              _,
-              {
-                packageids_added: _,
-                appids_added: _,
-                purchase_result_detail: _,
-              },
-            ] = _;
-            _ && __webpack_require__(_);
-          },
-        });
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
@@ -685,8 +650,22 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _, _, _, _) {
+        return _(
+          [
+            {
+              packageid: _,
+              bundleid: _,
+              bIsGift: _,
+              nAccountIDGiftee: _,
+            },
+          ],
+          _,
+        );
+      }
+      function _(_, _) {
         const _ = (0, _._)(),
           _ = (0, _._)(),
           _ = (0, _._)(),
@@ -695,36 +674,40 @@
           _ = (0, _._)(_);
         return (0, _._)({
           mutationFn: async () => {
-            if (!_ && !_) throw "nPackageID or nBundleID must be passed.";
+            if (0 == _.length || !_.every((_) => _.packageid || _.bundleid))
+              throw "Every item must have a valid package or bundle id";
             let _;
             if ((0, _._)(_)) {
-              const _ = {
-                  packageid: _,
-                  bundleid: _,
-                  bIsGift: _,
-                  nAccountIDGiftee: _,
-                },
-                [_, _] = await (0, _._)(_, _, _, _);
-              if (_ != _._) throw `AddToAccountCart failed with ${_}`;
+              const [_, _] = await (0, _._)(_, _, _, _);
+              if (_ != _._) throw `AddItemsToAccountCart failed with ${_}`;
               (_ = _.line_item_ids), (0, _._)(_, _, _.cart);
             } else {
               if (!(0, _._)(_)) throw "Invalid cart type";
               {
-                const [_, _] = await (0, _._)(_, _ ? [_] : void 0, _, _, _);
+                const _ = _.map((_) => _.packageid).filter(_._),
+                  _ = _.map((_) => _.bundleid).filter(_._);
+                if (_.length > 1)
+                  throw "The anonymous cart can only take one bundle per call";
+                const [_, _] = await (0, _._)(
+                  _,
+                  _.length > 0 ? _ : void 0,
+                  _[0],
+                  _.some((_) => _.bIsGift),
+                  _.find((_) => _.nAccountIDGiftee)?.nAccountIDGiftee,
+                );
                 if (_ != _._ || !_)
                   throw `AddItemsToAnonymousCart failed with ${_}`;
                 {
-                  const _ = _
-                    ? _.lineitems?.filter(
-                        (_) =>
-                          _.package_item &&
-                          _.package_item.packageid == _ &&
-                          !_.package_item.gidbundle,
-                      )
-                    : _.lineitems?.filter(
-                        (_) => _.bundle_item && _.bundle_item.bundleid == _,
-                      );
-                  (_ = __webpack_require__?.map((_) => _.gidlineitem) || []),
+                  const _ = new Set(_),
+                    _ = new Set(_),
+                    _ = _.lineitems?.filter(
+                      (_) =>
+                        (_.package_item &&
+                          !_.package_item.gidbundle &&
+                          _.has(_.package_item.packageid)) ||
+                        (_.bundle_item && _.has(_.bundle_item.bundleid)),
+                    );
+                  (_ = _?.map((_) => _.gidlineitem) || []),
                     (0, _._)(_, _, (0, _._)(_));
                 }
               }
@@ -732,22 +715,28 @@
             return _;
           },
           onMutate: () => {
-            const _ = _
-              ? {
-                  packageid: _,
-                }
-              : {
-                  bundleid: _,
-                };
             (async () => {
-              const _ = await _.fetchQuery((0, _._)(_, _)),
-                _ =
+              const _ = _.map((_) =>
+                _.packageid
+                  ? {
+                      packageid: _.packageid,
+                    }
+                  : {
+                      bundleid: _.bundleid,
+                    },
+              );
+              (
+                await Promise.all(_.map((_) => _.fetchQuery((0, _._)(_, _))))
+              ).forEach((_, _) => {
+                const _ =
                   1 == _?.included_appids?.length
                     ? {
                         appid: _.included_appids[0],
                       }
-                    : _;
-              _.prefetchQuery((0, _._)(_, _)), _.prefetchQuery((0, _._)(_, _));
+                    : _[_];
+                _.prefetchQuery((0, _._)(_, _)),
+                  _.prefetchQuery((0, _._)(_, _));
+              });
             })();
           },
         });
@@ -1718,6 +1707,8 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid");
       const _ = {};
@@ -1790,6 +1781,76 @@
       });
       var _,
         _ = __webpack_require__("chunkid");
+      function _(_, _, _) {
+        let _;
+        if ("boolean" == typeof _) {
+          _ = {
+            eSuffix: _ ? _.None : _.Ago,
+            bForceSingleUnits: _,
+            bHighGranularity: !1,
+          };
+        } else
+          _ = {
+            eSuffix: _.Ago,
+            bForceSingleUnits: !1,
+            bHighGranularity: !1,
+            ..._,
+          };
+        let _ = "TimeInterval_";
+        _.eSuffix == _.Ago
+          ? (_ = "TimeSince_")
+          : _.eSuffix == _.Remaining && (_ = "TimeRemaining_");
+        let _ = (_) => Math.floor(_);
+        if (
+          (_.bAllowDecimal && (_ = (_) => Math.round(10 * _) / 10),
+          _ >= 2 * _._.PerYear)
+        )
+          return _.Localize(`#${_}XYears`, _(_ / _._.PerYear));
+        if (_ >= _._.PerYear)
+          return (_ -= _._.PerYear) >= 2 * _._.PerMonth && !_.bForceSingleUnits
+            ? _.Localize(`#${_}1YearXMonths`, _(_ / _._.PerMonth))
+            : _.Localize(`#${_}1Year`);
+        if (_ >= 2 * _._.PerMonth)
+          return _.Localize(`#${_}XMonths`, _(_ / _._.PerMonth));
+        if (_ >= 2 * _._.PerWeek)
+          return _.Localize(`#${_}XWeeks`, _(_ / _._.PerWeek));
+        if (_ >= _._.PerWeek)
+          return _.Localize(`#${_}1Week`, _(_ / _._.PerWeek));
+        if (_ >= 2 * _._.PerDay)
+          return _.Localize(`#${_}XDays`, _(_ / _._.PerDay));
+        if (_ >= _._.PerDay)
+          return (_ -= _._.PerDay) >= 2 * _._.PerHour && !_.bForceSingleUnits
+            ? _.Localize(`#${_}1DayXHours`, _(_ / _._.PerHour))
+            : _.Localize(`#${_}1Day`);
+        if (_ >= 2 * _._.PerHour)
+          return _.Localize(`#${_}XHours`, _(_ / _._.PerHour));
+        if (_ >= _._.PerHour)
+          return (_ -= _._.PerHour) >= 2 * _._.PerMinute && !_.bForceSingleUnits
+            ? _.Localize(`#${_}1HourXMinutes`, _(_ / _._.PerMinute))
+            : _.Localize(`#${_}1Hour`);
+        if (_ >= 2 * _._.PerMinute) {
+          const _ = Math.floor(_ / _._.PerMinute),
+            _ = _ % _._.PerMinute;
+          return _.bHighGranularity && 0 != _
+            ? 1 == _
+              ? _.Localize(`#${_}XMinutes1Second`, _)
+              : _.Localize(`#${_}XMinutesXSeconds`, _, _)
+            : _.Localize(`#${_}XMinutes`, _(_ / _._.PerMinute));
+        }
+        if (_ >= _._.PerMinute) {
+          const _ = _ % _._.PerMinute;
+          return _.bHighGranularity && 0 != _
+            ? 1 == _
+              ? _.Localize(`#${_}1Minute1Second`)
+              : _.Localize(`#${_}1MinuteXSeconds`, _)
+            : _.Localize(`#${_}1Minute`);
+        }
+        return _.bHighGranularity
+          ? 1 == _
+            ? _.Localize(`#${_}1Second`)
+            : _.Localize(`#${_}XSeconds`, _)
+          : _.Localize(`#${_}LessThanAMinute`);
+      }
       function _(_, _, _) {
         let _;
         _ =
@@ -1974,7 +2035,6 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1993,7 +2053,7 @@
           onCancel: _,
           strOKButtonText: _._.Localize("#Button_OK"),
           onOK: () => {
-            _(), _();
+            (0, _._)(), _();
           },
         });
       }
@@ -2009,10 +2069,6 @@
           }),
           fnShowLogonDialog: _,
         };
-      }
-      function _() {
-        const _ = `${_._.STORE_BASE_URL}login/?redir=${encodeURIComponent(window.location.href)}`;
-        window.location.href = _;
       }
       function _(_) {
         const { label: _, strDialogDesc: _ } = _,
@@ -2206,16 +2262,7 @@
                   const _ = _(_, _);
                   _ && _.push(_);
                 }
-                return (
-                  !_ ||
-                    0 != _.length ||
-                    ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-                    console.error(
-                      "DEV ONLY OUTPUT: GameHoverImages for id/type no images: (might be not age safe screenshots)",
-                      (0, _._)(_),
-                    ),
-                  _
-                );
+                return _ && _.length, _;
               })(_, _, _, _, _),
             [_, _, _, _, _],
           );
@@ -2251,12 +2298,7 @@
                 const _ = _ - (_?.length || 0);
                 return (
                   _ > 0 && _ && _.length > 0 && _.push(..._(_, _.name, _, _)),
-                  ((_ && 0 == _.length && "dev" == _._.WEB_UNIVERSE) ||
-                    "beta" == _._.WEB_UNIVERSE) &&
-                    console.error(
-                      "DEV ONLY OUTPUT: Demo GameHoverImages for id/type no images: (might be not age safe screenshots)",
-                      (0, _._)(_),
-                    ),
+                  _ && _.length,
                   _
                 );
               })(_, _, _, _, _, _),
@@ -4068,6 +4110,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -4088,6 +4131,16 @@
         return (0, _.jsx)(_._, {
           className: _.BlueButton,
           type: "button",
+          ..._,
+          children: (0, _.jsx)("span", {
+            children: _,
+          }),
+        });
+      }
+      function _(_) {
+        const { children: _, ..._ } = _;
+        return (0, _.jsx)(_._, {
+          className: _.BlueButton,
           ..._,
           children: (0, _.jsx)("span", {
             children: _,
@@ -4237,7 +4290,7 @@
           ? (function (_, _, _) {
               switch (_) {
                 case "date_full":
-                  return _(_);
+                  return (0, _._)(_);
                 case "date_month":
                   return _(new Date(1e3 * _));
                 case "date_quarter":
@@ -4288,11 +4341,10 @@
               _.custom_release_date_message,
             )
           : _?.steam_release_date
-            ? _(_.steam_release_date)
+            ? ((_ = _.steam_release_date),
+              new Date(1e3 * _).toLocaleDateString((0, _._)()))
             : "";
-      }
-      function _(_) {
-        return new Date(1e3 * _).toLocaleDateString((0, _._)());
+        var _;
       }
       function _(_) {
         return _.toLocaleDateString((0, _._)(), {
@@ -4343,6 +4395,7 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -4352,10 +4405,15 @@
             ? `${_._.STORE_BASE_URL}app/${((0, _._))(_)[0]}`
             : `${_._.STORE_BASE_URL}${_.store_url_path}`;
       }
+      function _() {
+        window.location.href = `${_._.STORE_BASE_URL}login/?redir=${encodeURIComponent(window.location.href)}`;
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -4388,6 +4446,28 @@
               appid: _.related_items.parent_appid,
             };
         }, [_]);
+      }
+      function _(_) {
+        return (0, _.useMemo)(
+          () =>
+            _
+              ? {
+                  appid: _,
+                }
+              : void 0,
+          [_],
+        );
+      }
+      function _(_) {
+        return (0, _.useMemo)(
+          () =>
+            _
+              ? {
+                  packageid: _,
+                }
+              : void 0,
+          [_],
+        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -4585,6 +4665,42 @@
           },
           onSuccess: () => {
             (0, _._)();
+          },
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const _ = (0, _._)(),
+          _ = (0, _._)();
+        return (0, _._)({
+          mutationFn: () =>
+            (async function (_, _) {
+              const _ = _._.Init(_._);
+              __webpack_require__.Body().set_item_id(_._.fromObject(_));
+              const _ = await _._.AddFreeLicense(_, _);
+              return [_.GetEResult(), _.Body().toObject()];
+            })(_, _),
+          onSuccess(_) {
+            const [
+              _,
+              {
+                packageids_added: _,
+                appids_added: _,
+                purchase_result_detail: _,
+              },
+            ] = _;
+            _ && __webpack_require__(_);
           },
         });
       }
@@ -4981,103 +5097,6 @@
           }),
         });
       };
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid");
-      function _(_) {
-        return (0, _.useMemo)(
-          () =>
-            (function (_) {
-              if (!_ || !_._) return;
-              if (!_.type)
-                return {
-                  appid: _._,
-                };
-              switch (_.type) {
-                case "sub":
-                  return {
-                    packageid: _._,
-                  };
-                case "bundle":
-                  return {
-                    bundleid: _._,
-                  };
-                default:
-                  return {
-                    appid: _._,
-                  };
-              }
-            })(_),
-          [_?._, _?.type],
-        );
-      }
-      function _(_, _) {
-        return (0, _.useMemo)(
-          () =>
-            (function (_, _) {
-              switch (_) {
-                case "sub":
-                  return {
-                    packageid: _,
-                  };
-                case "bundle":
-                  return {
-                    bundleid: _,
-                  };
-                default:
-                  return {
-                    appid: _,
-                  };
-              }
-            })(_, _),
-          [_, _],
-        );
-      }
-      function _(_, _) {
-        return (0, _.useMemo)(() => _(_, _), [_, _]);
-      }
-      function _(_, _) {
-        switch (_) {
-          case "sub":
-            return {
-              packageid: _,
-            };
-          case "bundle":
-            return {
-              bundleid: _,
-            };
-          default:
-            return {
-              appid: _,
-            };
-        }
-      }
-      function _(_) {
-        return (0, _.useMemo)(() => {
-          if (null != _ && _ != _._)
-            return {
-              appid: _,
-            };
-        }, [_]);
-      }
-      function _(_) {
-        return (0, _.useMemo)(() => {
-          if (null != _ && _ != _._)
-            return {
-              packageid: _,
-            };
-        }, [_]);
-      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -5559,24 +5578,12 @@
         }
         static s_Singleton;
         static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-                (window.g_DeckVerifiedDetailStores = _.s_Singleton)),
-            _.s_Singleton
-          );
+          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
         }
         constructor() {
           if (document.getElementById("application_config")) {
             let _ = (0, _._)("hardwarecompatibility", "application_config");
-            _.ValidateCompatabilityResult(_) &&
-              (this.AddCompatabilityResult(_),
-              "dev" == _._.WEB_UNIVERSE &&
-                console.log(
-                  "CDeckCompatibilityDetailsStore compatability loaded: ",
-                  _,
-                ));
+            _.ValidateCompatabilityResult(_) && this.AddCompatabilityResult(_);
           }
         }
         static ValidateCompatabilityResult(_) {
@@ -5614,7 +5621,9 @@
               category: _,
             }),
             (0, _.jsx)(_._, {
-              onClick: _,
+              onClick: (_) => {
+                _.preventDefault(), _();
+              },
               children: (0, _.jsx)("span", {
                 className: _().LearnMorePC,
                 children: _._.Localize(
@@ -8959,13 +8968,7 @@
               className: _().CompatibilityDetailsResultIcon,
             });
           case _:
-            return (
-              "dev" == _._.WEB_UNIVERSE &&
-                console.error(
-                  "deck verified banner shouldn't try to display the information display type for appid",
-                ),
-              null
-            );
+            return null;
         }
       }
       function _(_) {

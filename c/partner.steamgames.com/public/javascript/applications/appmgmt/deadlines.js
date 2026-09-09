@@ -327,22 +327,14 @@
         }
         static s_Singleton;
         static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-                (window.g_PartnerInfoStore = _.s_Singleton)),
-            _.s_Singleton
-          );
+          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
         }
         constructor() {
           let _ = JSON.parse(
             JSON.stringify((0, _._)("partner_info", "application_config")),
           );
           this.ValidateStoreDefault(_) &&
-            (_.forEach((_) => this.m_mapOptInToPartners.set(_.partnerid, _)),
-            "dev" == _._.WEB_UNIVERSE &&
-              console.log("DEV_DEUBG: CPartnerInfoStore::constructor", _));
+            _.forEach((_) => this.m_mapOptInToPartners.set(_.partnerid, _));
         }
         ValidateStoreDefault(_) {
           const _ = _;
@@ -1005,7 +997,7 @@
                 (0, _.jsx)("span", {
                   className: _().DocumentProcessingNotice,
                   children:
-                    "Please note that this action item will remain active and on your dashboard until our tax vendor has reviewed and approved your documents. The document approval process typically takes 2 to 7 days.",
+                    "Please note that this action item will remain active and on your dashboard until our tax vendor has reviewed and approved your documents. The document approval process takes up to 10 days.",
                 }),
               ],
             }),
@@ -1102,6 +1094,13 @@
           "Notify-NoTINTreaty-Partner",
           "Renewal-W8-Initial",
           "Renewal-W8-Partner-Urgent",
+          "DocReq-PhotoId-10Years",
+          "DocReq-PhotoId-FrontBack",
+          "DocRec-NameTranslation",
+          "DocReq-Entity-CN-NECIPS",
+          "DocReq-ProofOfAddress",
+          "DocReq-TaxResidency",
+          "DocReq-Entity-TR-Gazetesi",
         ],
         _ = {
           AddressCorrection: {
@@ -1346,7 +1345,7 @@
                               (0, _.jsxs)("div", {
                                 className: _().SectionBody,
                                 children: [
-                                  "Please provide one of the following:",
+                                  "Please provide one of the following, issued within the last 10 years:",
                                   (0, _.jsxs)("ol", {
                                     children: [
                                       (0, _.jsx)("li", {
@@ -1497,7 +1496,7 @@
                       (0, _.jsx)("div", {
                         className: _().MessageSubject,
                         children:
-                          "Please provide a selfie of you holding your identity document.",
+                          "Please provide both a selfie of yourself holding your photo identification and a separate, clear image of the same identification document (front and back if the identification is a card style ID). Both images must show the exact same, valid (unexpired) photo ID, issued within the past 10 years.",
                       }),
                     ],
                   }),
@@ -1508,7 +1507,7 @@
                   (0, _.jsx)("div", {
                     className: _().SectionBody,
                     children:
-                      "Show your full face, and you holding the same Identification document that you have previously provided. Please remove all hats, glasses, and other facial obstructions",
+                      "Show your full face, and you holding the same Identification document that you have previously provided. Please remove all hats, glasses, and other facial obstructions. The ID itself must be clear and legible and all four corners and edges must be visible.",
                   }),
                   (0, _.jsx)(_, {
                     ..._,
@@ -2456,6 +2455,331 @@
                     className: _().SectionBody,
                     children:
                       "In order for us to pay monthly royalties, we must have valid tax and banking information on file. Therefore, please retake the tax interview as soon as possible to avoid interruptions in payments.",
+                  }),
+                  (0, _.jsx)(_, {
+                    ..._,
+                  }),
+                ],
+              });
+            },
+          },
+          "DocReq-PhotoId-10Years": {
+            component: function (_) {
+              return (0, _.jsxs)("div", {
+                className: (0, _._)(_().NotificationContainer, _().SectionCtn),
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _().MessageHeader,
+                    children: (0, _.jsx)("h1", {
+                      children: "Identity verification required",
+                    }),
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: _().SectionBody,
+                    children: [
+                      "Please provide a valid form of photo identification that has been issued within the past 10 years (front and back if the identification is a card style ID).",
+                      (0, _.jsx)("p", {}),
+                      "Note: while we understand your ID may be valid beyond 10 years, our requirement is that the ID is issued within the last 10 years.",
+                    ],
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _().SectionTitle,
+                    children: "Image Requirements",
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _().SectionBody,
+                    children: (0, _.jsx)("div", {
+                      className: _().RequiredDocumentList,
+                      children: (0, _.jsxs)("ol", {
+                        children: [
+                          (0, _.jsx)("li", {
+                            children:
+                              "Please ensure the images are high quality, in color and are clear and in focus. Do not crop the images. The four corners and edges of the card must be clearly visible.",
+                          }),
+                          (0, _.jsx)("li", {
+                            children:
+                              "Please send the images as a JPEG / Image file",
+                          }),
+                        ],
+                      }),
+                    }),
+                  }),
+                  (0, _.jsx)(_, {
+                    ..._,
+                  }),
+                ],
+              });
+            },
+          },
+          "DocReq-PhotoId-FrontBack": {
+            component: function (_) {
+              return (0, _.jsxs)("div", {
+                className: (0, _._)(_().NotificationContainer, _().SectionCtn),
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _().MessageHeader,
+                    children: (0, _.jsx)("h1", {
+                      children: "Identity verification required",
+                    }),
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _().SectionBody,
+                    children:
+                      "Please provide an image of both the front and back of your photo identification document so that we can validate your account.",
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _().SectionTitle,
+                    children: "Image Requirements",
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _().SectionBody,
+                    children: (0, _.jsx)("div", {
+                      className: _().RequiredDocumentList,
+                      children: (0, _.jsxs)("ol", {
+                        children: [
+                          (0, _.jsx)("li", {
+                            children:
+                              "Please ensure the images are high quality, in color and are clear and in focus. Do not crop the images. The four corners and edges of the card must be clearly visible.",
+                          }),
+                          (0, _.jsx)("li", {
+                            children:
+                              "Please send the images as a JPEG / Image file",
+                          }),
+                        ],
+                      }),
+                    }),
+                  }),
+                  (0, _.jsx)(_, {
+                    ..._,
+                  }),
+                ],
+              });
+            },
+          },
+          "DocRec-NameTranslation": {
+            component: function (_) {
+              return (0, _.jsxs)("div", {
+                className: (0, _._)(_().NotificationContainer, _().SectionCtn),
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _().MessageHeader,
+                    children: (0, _.jsx)("h1", {
+                      children: "Identity verification required",
+                    }),
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _().SectionBody,
+                    children:
+                      "Please provide a document that shows your full legal name in English such as an international passport.  You may also provide a picture of a bank card or credit card (with the numbers masked) that presents your name in English.",
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _().SectionBody,
+                    children:
+                      "When we translate the legal name on the document you provided, it does not match the name you provided when you signed up for an account with Steam. We are unable to validate your account until we can confirm the legal name in English.",
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _().SectionTitle,
+                    children: "Image Requirements",
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _().SectionBody,
+                    children: (0, _.jsx)("div", {
+                      className: _().RequiredDocumentList,
+                      children: (0, _.jsxs)("ol", {
+                        children: [
+                          (0, _.jsx)("li", {
+                            children:
+                              "Please ensure the images are high quality, in color and are clear and in focus. Do not crop the images. The four corners and edges of the card must be clearly visible.",
+                          }),
+                          (0, _.jsx)("li", {
+                            children:
+                              "Please send the images as a JPEG / Image file",
+                          }),
+                        ],
+                      }),
+                    }),
+                  }),
+                  (0, _.jsx)(_, {
+                    ..._,
+                  }),
+                ],
+              });
+            },
+          },
+          "DocReq-Entity-CN-NECIPS": {
+            component: function (_) {
+              return (0, _.jsxs)("div", {
+                className: (0, _._)(_().NotificationContainer, _().SectionCtn),
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _().MessageHeader,
+                    children: (0, _.jsx)("h1", {
+                      children: "Identity verification required",
+                    }),
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: _().SectionBody,
+                    children: [
+                      "In order for us to validate your account, we need to verify the company is not only legally registered but also in good operational standing. Please provide us with a copy of the following from the NECIPS platform:",
+                      (0, _.jsx)("div", {
+                        className: _().RequiredDocumentList,
+                        children: (0, _.jsxs)("ol", {
+                          children: [
+                            (0, _.jsx)("li", {
+                              children: "Business License (营业执照)",
+                            }),
+                            (0, _.jsx)("li", {
+                              children: "Articles of Association (公司章程)",
+                            }),
+                            (0, _.jsx)("li", {
+                              children: "Operational Continuity (经营状态)",
+                            }),
+                          ],
+                        }),
+                      }),
+                      (0, _.jsx)("b", {
+                        children:
+                          "We are unable to validate your account without each of these required documents.",
+                      }),
+                    ],
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _().SectionBody,
+                    children:
+                      "Please send documents as pdf files. Do not send screenshots of these documents. We require the full pdf document.",
+                  }),
+                  (0, _.jsx)(_, {
+                    ..._,
+                  }),
+                ],
+              });
+            },
+          },
+          "DocReq-ProofOfAddress": {
+            component: function (_) {
+              return (0, _.jsxs)("div", {
+                className: (0, _._)(_().NotificationContainer, _().SectionCtn),
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _().MessageHeader,
+                    children: (0, _.jsx)("h1", {
+                      children: "Identity verification required",
+                    }),
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _().SectionBody,
+                    children:
+                      "At this time, we are unable to validate your Steam account. This is because the permanent and / or mailing address you entered in the tax interview cannot be verified.",
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _().SectionBody,
+                    children: (0, _.jsx)("b", {
+                      children:
+                        "Please upload a proof of address document (such as a bank statement or utility bill) that clearly shows both your name and the same mailing and permanent address you entered in your tax interview.",
+                    }),
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: _().SectionBody,
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _().SectionTitle,
+                        children: "Document Requirements",
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _().RequiredDocumentList,
+                        children: (0, _.jsxs)("ul", {
+                          children: [
+                            (0, _.jsx)("li", {
+                              children:
+                                "Please highlight or indicate where the address appears on the document so it can be easily identified during review.",
+                            }),
+                            (0, _.jsx)("li", {
+                              children:
+                                "The address must be translated into English and include any Building / Apartment numbers.",
+                            }),
+                            (0, _.jsx)("li", {
+                              children:
+                                "The address must also include the correct postcode / zip if your country uses them.",
+                            }),
+                            (0, _.jsxs)("li", {
+                              children: [
+                                "Please ",
+                                (0, _.jsx)("b", {
+                                  children: "do not",
+                                }),
+                                " give us the address of your bank or utility company.",
+                              ],
+                            }),
+                            (0, _.jsx)("li", {
+                              children:
+                                "Your account will not be validated until we can make an exact match of the address you entered.",
+                            }),
+                          ],
+                        }),
+                      }),
+                    ],
+                  }),
+                  (0, _.jsx)(_, {
+                    ..._,
+                  }),
+                ],
+              });
+            },
+          },
+          "DocReq-TaxResidency": {
+            component: function (_) {
+              const { requirement: _ } = _,
+                _ = JSON.parse(_.deadline.data.description_jsondata),
+                _ = _.bTestDisplay ? "Sweden" : _?.Parameters?.Country;
+              return (0, _.jsxs)("div", {
+                className: (0, _._)(_().NotificationContainer, _().SectionCtn),
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _().MessageHeader,
+                    children: (0, _.jsx)("h1", {
+                      children: "Identity verification required",
+                    }),
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: _().SectionBody,
+                    children: [
+                      "Please provide a copy of your tax residency certificate for ",
+                      _,
+                      " so we can validate your account.",
+                    ],
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _().SectionBody,
+                    children:
+                      "Please send the document as a pdf file. Do not send a screenshot of the document. We require the full pdf document.",
+                  }),
+                  (0, _.jsx)(_, {
+                    ..._,
+                  }),
+                ],
+              });
+            },
+          },
+          "DocReq-Entity-TR-Gazetesi": {
+            component: function (_) {
+              return (0, _.jsxs)("div", {
+                className: (0, _._)(_().NotificationContainer, _().SectionCtn),
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _().MessageHeader,
+                    children: (0, _.jsx)("h1", {
+                      children: "Identity verification required",
+                    }),
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _().SectionBody,
+                    children:
+                      "Please provide an extract from Turkiye Ticaret Sicili Gazetesi showing your entity's legal name.",
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _().SectionBody,
+                    children:
+                      "Please send the document as a pdf file. Do not send a screenshot of the document. We require the full pdf document.",
                   }),
                   (0, _.jsx)(_, {
                     ..._,

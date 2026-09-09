@@ -2993,7 +2993,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
@@ -7734,6 +7733,11 @@
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
+                  published_file_id: {
+                    _: 13,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
                 },
               }),
             _.sm_m
@@ -7772,6 +7776,115 @@
         }
         getClassName() {
           return "ReportedContentCoordinates";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.reported_content_id || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  reported_content_id: {
+                    _: 1,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  report_id: {
+                    _: 2,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  dispute_details: {
+                    _: 3,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CContentModeration_ReporterDisputeModeration_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _
+            ? {
+                $jspbMessageInstance: _,
+              }
+            : {};
+        }
+        static fromObject(_) {
+          return new _();
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _;
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {}
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CContentModeration_ReporterDisputeModeration_Response";
         }
       }
       var _;
@@ -7846,7 +7959,7 @@
               _,
               {
                 bConstMethod: !0,
-                ePrivilege: 1,
+                ePrivilege: 5,
               },
             );
           }),
@@ -7956,7 +8069,7 @@
               (0, _._)(_, _, _),
               _,
               {
-                ePrivilege: 1,
+                ePrivilege: 5,
               },
             );
           }),
@@ -8063,6 +8176,16 @@
               {
                 bConstMethod: !0,
                 ePrivilege: 5,
+              },
+            );
+          }),
+          (_.ReporterDisputeModeration = function (_, _, _) {
+            return _.SendMsg(
+              "ContentModeration.ReporterDisputeModeration#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
               },
             );
           });
@@ -8648,10 +8771,6 @@
                       ? _.rgread.push(_.notification_id)
                       : _.rgunread.push(_.notification_id);
                 }
-                _.json_data?.app_id &&
-                  _._.Get().QueueAppRequest(_.json_data.app_id, {
-                    include_assets: !0,
-                  });
               }
               break;
             case _._._:
@@ -8701,12 +8820,6 @@
                     : _.rgunread.push(_.notification_id);
               }
               break;
-            case _._._:
-              const _ = _(_)?.appid;
-              _ &&
-                _._.Get().QueueAppRequest(_, {
-                  include_assets: !0,
-                });
             default:
               _.push({
                 type: _,
@@ -8743,9 +8856,6 @@
                 ? _.rgread.push(_.notification_id)
                 : _.rgunread.push(_.notification_id);
           }
-          _._.Get().QueueAppRequest(parseInt(_), {
-            include_assets: !0,
-          });
         }
       }
       async function _(_, _, _, _, _, _ = !0, _ = !1) {
@@ -8800,24 +8910,13 @@
               _.add_assetids(_.assetid),
                 __webpack_require__.Body().set_filters(_);
               const _ = await _.GetInventoryItemsWithDescriptions(_, _);
-              if (_.GetEResult() !== _._)
-                return (
-                  _(
+              return _.GetEResult() !== _._
+                ? (_(
                     "Request for steam item metadata did not succeed",
                     _.GetEResult(),
                   ),
-                  null
-                );
-              let _ = "";
-              const _ = await _._.Get().QueueAppRequest(parseInt(_.appid), {});
-              if (_ == _._) {
-                const _ = _._.Get().GetApp(parseInt(_.appid));
-                _ = _?.GetName();
-              } else _("Failed getting app info", _);
-              return {
-                app_name: _,
-                item_data: _.Body().toObject().descriptions[0],
-              };
+                  null)
+                : (_.Body().toObject().descriptions[0] ?? null);
             })(_, _),
           staleTime: 1 / 0,
         });

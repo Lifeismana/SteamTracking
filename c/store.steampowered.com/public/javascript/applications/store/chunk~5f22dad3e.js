@@ -7,44 +7,6 @@
         _: () => _,
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid");
-      function _(_) {
-        return (
-          !!_ &&
-          ("game" === _ ||
-            "dlc" === _ ||
-            "software" === _ ||
-            "music" === _ ||
-            "application" === _ ||
-            "demo" === _ ||
-            "hardware" === _ ||
-            "mod" === _ ||
-            "video" == _ ||
-            "beta" === _ ||
-            "advertising" === _)
-        );
-      }
-      function _(_) {
-        return (
-          null != _ &&
-          (_ == _._._ ||
-            _ == _._._ ||
-            _ == _._._ ||
-            _ == _._._ ||
-            _ == _._._ ||
-            _ == _._._ ||
-            _ == _._._ ||
-            _ == _._._ ||
-            _ == _._._ ||
-            _ == _._._)
-        );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -73,6 +35,7 @@
         _: () => _,
         _: () => _,
       });
+      var _ = __webpack_require__("chunkid");
       const _ = JSON.parse(`{
 	"h": {
 		"countries": {
@@ -424,7 +387,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       async function _(_, _, _, _) {
-        if (_)
+        if ((0, _._)(_))
           return {
             version: _._._,
             preference_state: _._._,
@@ -568,7 +531,6 @@
         _ = __webpack_require__("chunkid"),
         _ =
           (__webpack_require__("chunkid"),
-          __webpack_require__("chunkid"),
           __webpack_require__("chunkid"),
           __webpack_require__("chunkid")),
         _ = __webpack_require__("chunkid");
@@ -740,10 +702,21 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       __webpack_require__._(module_exports, {
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = () => (_._.EUNIVERSE === _._ ? 2581 : 45267781);
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
         _: () => _,
         _: () => _,
       });
       var _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -779,6 +752,9 @@
           _ && _ && _();
         }, [_, _]);
       }
+      function _(_) {
+        _._(_, _);
+      }
       function _() {
         _ = _.Loaded;
         for (let _ of _) _();
@@ -798,8 +774,7 @@
             });
         }
         componentWillUnmount() {
-          var _;
-          this.DestroyPlayer(), (_ = this.OnYoutubeScriptsReady), _._(_, _);
+          this.DestroyPlayer(), _(this.OnYoutubeScriptsReady);
         }
         shouldComponentUpdate(_, _) {
           if (!this.m_player) return !1;
@@ -817,10 +792,16 @@
               _.forcePause != _.forcePause);
         }
         componentDidUpdate(_) {
-          _.forcePause != this.props.forcePause &&
+          _.forcePause != this.props.forcePause && this.ApplyForcePause();
+        }
+        ApplyForcePause() {
+          this.m_player &&
+            this.m_bPlayerReady &&
             (this.props.forcePause
-              ? this.m_player?.pauseVideo()
-              : this.m_player?.playVideo());
+              ? "function" == typeof this.m_player.pauseVideo &&
+                this.m_player.pauseVideo()
+              : "function" == typeof this.m_player.playVideo &&
+                this.m_player.playVideo());
         }
         DestroyPlayer() {
           if (this.m_player)
@@ -833,10 +814,11 @@
             }
         }
         BindPlayerContainer(_) {
-          this.m_playerContainer != _ &&
+          _ &&
+            this.m_playerContainer != _ &&
             ((this.m_playerContainer = _),
             this.DestroyPlayer(),
-            this.m_playerContainer && _(this.OnYoutubeScriptsReady));
+            _(this.OnYoutubeScriptsReady));
         }
         OnYoutubeScriptsReady() {
           this.CreatePlayer(this.props);
@@ -893,7 +875,9 @@
           this.props.width &&
             this.props.height &&
             this.m_player?.setSize(this.props.width, this.props.height),
-            this.props.autoplay && this.m_player?.playVideo(),
+            this.props.forcePause
+              ? this.ApplyForcePause()
+              : this.props.autoplay && this.m_player?.playVideo(),
             this.props.onPlayerReady && this.props.onPlayerReady();
         }
         OnPlayerStateChange(_) {
@@ -954,6 +938,54 @@
               href: `https://www.youtube.com/watch?v=${_}`,
               children: (0, _._)("#EventCalendar_WatchYouTubeVideo"),
             });
+      }
+      function _(_) {
+        const _ = new URLSearchParams({
+          autoplay: _.autoplay ? "1" : "0",
+          controls: _.controls ? "1" : "0",
+          _: _.showFullscreenBtn ? "1" : "0",
+          playsinline: _.playsInline ? "1" : "0",
+          rel: "0",
+          iv_load_policy: "3",
+          modestbranding: "1",
+          enablejsapi: "1",
+        });
+        return (
+          _.startSeconds && _.set("start", String(_.startSeconds)),
+          `https://www.youtube-nocookie.com/embed/${encodeURIComponent(_.video)}?${_.toString()}`
+        );
+      }
+      function _(_) {
+        const { video: _, autopause: _, className: _ } = _,
+          _ = _.useRef(null),
+          _ = _.useRef(null),
+          _ = _.useCallback(() => _.current?.pauseVideo(), []),
+          _ = (0, _._)({
+            onLeave: _ ? _ : void 0,
+          }),
+          _ = (0, _._)(_, _);
+        return (
+          _.useEffect(() => {
+            const _ = () => {
+              _.current && (_.current = new _.Player(_.current, {}));
+            };
+            return (
+              _ && _(_),
+              () => {
+                _(_), (_.current = null);
+              }
+            );
+          }, [_]),
+          (0, _.jsx)("iframe", {
+            ref: _,
+            className: _,
+            src: _(_),
+            title: _,
+            allow: "autoplay; encrypted-media; picture-in-picture; web-share",
+            allowFullScreen: !0,
+            frameBorder: 0,
+          })
+        );
       }
       (0, _._)([_._], _.prototype, "BindPlayerContainer", null),
         (0, _._)([_._], _.prototype, "OnYoutubeScriptsReady", null),

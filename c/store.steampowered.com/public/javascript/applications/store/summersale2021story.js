@@ -75,8 +75,7 @@
           return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
         }
         constructor() {
-          (0, _._)(this),
-            "dev" == _._.WEB_UNIVERSE && (window.g_SummerSale2021Store = this);
+          (0, _._)(this);
           const _ = (0, _._)("summerstory", "application_config");
           if (_) {
             if (_.story_choices) {

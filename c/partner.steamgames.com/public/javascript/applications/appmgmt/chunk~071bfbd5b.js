@@ -304,23 +304,6 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      const _ = 2,
-        _ = 4,
-        _ = 8,
-        _ = 512,
-        _ = 1024,
-        _ = 2048;
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid");
       const _ = _._.box(void 0);
@@ -343,7 +326,81 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-        _: () => _._,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = new (class {
+        bIncludeFeaturedAsGameSource = !0;
+        get nOverrideDateNow() {
+          return (0, _._)();
+        }
+        set nOverrideDateNow(_) {
+          (0, _._)(_);
+        }
+        get bRequireAllEventsLoadedInTimeBlock() {
+          return !1;
+        }
+        get bIncludeCurators() {
+          return !0;
+        }
+        GetTimeNowWithOverride() {
+          return (0, _._)();
+        }
+        GetTimeNowWithOverrideAsDate() {
+          return (0, _._)();
+        }
+        BHasTimeOverride() {
+          return Boolean((0, _._)());
+        }
+        ParseDevOverrides(_) {
+          if (!_ || 0 == _.length) return;
+          new URLSearchParams("?" == _[0] ? _.substring(1) : _).has("t");
+        }
+      })();
+      function _(_ = 1) {
+        const [_, _] = _.useState(() => _()),
+          _ = (0, _._)("useTimeNowWithOverride"),
+          _ = _.useCallback(() => {
+            _.token.reason || __webpack_require__(_());
+          }, []);
+        return (
+          _.useEffect(() => {
+            const _ = 1e3 * _,
+              _ = _ - (Date.now() % _),
+              _ = window.setTimeout(_, _);
+            return () => {
+              window.clearTimeout(_);
+            };
+          }, [_, _, _]),
+          _
+        );
+      }
+      (0, _._)("g_EventCalendarDevFeatures", _);
+      const _ = new Date(),
+        _ = Math.floor(_.getTime() / 1e3);
+      function _() {
+        const _ = Math.floor(Date.now() / 1e3);
+        return _.nOverrideDateNow ? _.nOverrideDateNow + (_ - _) : _;
+      }
+      function _() {
+        return _.nOverrideDateNow ?? _;
+      }
+      function _() {
+        return _.useMemo(() => _(), []);
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
@@ -354,20 +411,11 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_) {
-        let _ = "offline";
-        return (
-          _ &&
-            (_.is_ingame
-              ? (_ = "ingame")
-              : _.m_broadcastAccountId
-                ? (_ = "watchingbroadcast")
-                : _.is_online && (_ = "online"),
-            _.is_awayOrSnooze && (_ += " awayOrSnooze")),
-          _
-        );
-      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       class _ {
         m_steamid;
         m_bInitialized = !1;
@@ -444,7 +492,7 @@
           );
         }
         get has_joinable_game_flag() {
-          return 0 != ((this.m_unPersonaStateFlags ?? 0) & _._);
+          return !!(2 & (this.m_unPersonaStateFlags ?? 0));
         }
         get connect_string() {
           return this.m_mapRichPresence.get("connect");
@@ -468,7 +516,7 @@
           this.m_ePersonaState != _.cU3 && this.Reset();
         }
         get is_golden() {
-          return this.HasStateFlag(_._);
+          return this.HasStateFlag(4);
         }
         GetCurrentGameName() {
           return this.m_strGameExtraInfo
@@ -505,7 +553,7 @@
               let _ = this.m_mapRichPresence.get("steam_display");
               return _.Localize(_, this.m_mapRichPresence);
             }
-          } else if (this.HasStateFlag(_._))
+          } else if (this.HasStateFlag(8))
             return (0, _._)("#PersonaStateRemotePlayTogether");
           return "";
         }
@@ -641,114 +689,7 @@
         (0, _._)([_._], _.prototype, "m_bCommunityBanned", void 0),
         (0, _._)([_._], _.prototype, "m_eGamingDeviceType", void 0),
         (0, _._)([_._], _.prototype, "m_bNameInitialized", void 0);
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = new (class {
-        bIncludeFeaturedAsGameSource = !0;
-        get nOverrideDateNow() {
-          return (0, _._)();
-        }
-        set nOverrideDateNow(_) {
-          (0, _._)(_);
-        }
-        get bRequireAllEventsLoadedInTimeBlock() {
-          return !1;
-        }
-        get bIncludeCurators() {
-          return !0;
-        }
-        GetTimeNowWithOverride() {
-          return (0, _._)();
-        }
-        GetTimeNowWithOverrideAsDate() {
-          return (0, _._)();
-        }
-        BHasTimeOverride() {
-          return Boolean((0, _._)());
-        }
-        ParseDevOverrides(_) {
-          if (!_ || 0 == _.length) return;
-          const _ = new URLSearchParams("?" == _[0] ? _.substring(1) : _);
-          if (
-            _.has("t") &&
-            ("dev" == _._.WEB_UNIVERSE || "beta" == _._.WEB_UNIVERSE)
-          ) {
-            const _ = _.get("t");
-            let _ = /^\d+$/.test(_ ?? "")
-              ? _().unix(Number.parseInt(_ ?? "0"))
-              : _()(_);
-            (this.nOverrideDateNow = Math.floor(__webpack_require__.unix())),
-              console.log(
-                "CEventCalendarDevFeatures overriding partner event time: " +
-                  this.nOverrideDateNow +
-                  " " +
-                  __webpack_require__.format(),
-              );
-          }
-        }
-      })();
-      function _(_ = 1) {
-        const [_, _] = _.useState(() => _()),
-          _ = (0, _._)("useTimeNowWithOverride"),
-          _ = _.useCallback(() => {
-            _.token.reason || __webpack_require__(_());
-          }, []);
-        return (
-          _.useEffect(() => {
-            const _ = 1e3 * _,
-              _ = _ - (Date.now() % _),
-              _ = window.setTimeout(_, _);
-            return () => {
-              window.clearTimeout(_);
-            };
-          }, [_, _, _]),
-          _
-        );
-      }
-      (0, _._)("g_EventCalendarDevFeatures", _);
-      const _ = new Date(),
-        _ = Math.floor(_.getTime() / 1e3);
-      function _() {
-        const _ = Math.floor(Date.now() / 1e3);
-        return _.nOverrideDateNow ? _.nOverrideDateNow + (_ - _) : _;
-      }
-      function _() {
-        return _.nOverrideDateNow ?? _;
-      }
-      function _() {
-        return _.useMemo(() => _(), []);
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -789,7 +730,7 @@
         return _.data
           ? _
           : (_.current ||
-              (_.current = new _._(
+              (_.current = new _(
                 "string" == typeof _ ? new _._(_) : _._.InitFromAccountID(_),
               )),
             {
@@ -814,7 +755,7 @@
             return (_ ??= _(_));
           })(_).load(_._.InitFromAccountID(_).ConvertTo64BitString());
           return (function (_, _) {
-            let _ = new _._(_);
+            let _ = new _(_);
             const _ = _?.public_data,
               _ = _?.private_data;
             (_.m_bInitialized = !!_),

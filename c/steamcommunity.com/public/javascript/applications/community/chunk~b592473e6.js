@@ -2389,7 +2389,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
         const [_, _] = _.useState(void 0),
@@ -2510,25 +2509,8 @@
             : (0, _._)("#FormattingToolbar_InsertLink");
         return (0, _.jsxs)(_._, {
           onOK: () => {
-            var _, _, _, _, _;
+            var _;
             let _ = _.state._;
-            if (
-              !(
-                "dev" != _._.WEB_UNIVERSE ||
-                (_ &&
-                  null != _ &&
-                  null != _ &&
-                  (null === (_ = null == _ ? void 0 : _.marks) || void 0 === _
-                    ? void 0
-                    : _.link))
-              )
-            )
-              return void console.warn("Missing required data in insertLink", {
-                view: _,
-                from: _,
-                _: _,
-                schema: _,
-              });
             const _ = {
               href: _,
             };
@@ -2536,38 +2518,11 @@
             const _ =
               null === (_ = _.marks.link) || void 0 === _
                 ? void 0
-                : __webpack_require__.create(_);
-            if ("dev" == _._.WEB_UNIVERSE && !_)
-              return void console.error(
-                "Failed to create link mark with attrs",
-                _,
-              );
+                : _.create(_);
             const _ = _.text(_ || _, [_]);
-            "dev" == _._.WEB_UNIVERSE &&
-              (console.log(
-                "Replacement node:",
-                (null === (_ = _.toJSON) || void 0 === _
-                  ? void 0
-                  : _.call(_)) || _,
-              ),
-              console.log("Transaction range from-to:", {
-                from: _,
-                _: _,
-              }),
-              console.log(
-                "Document slice at range:",
-                (null ===
-                  (_ =
-                    null === (_ = _.state.doc.slice(_, _).content) ||
-                    void 0 === _
-                      ? void 0
-                      : _.toJSON) || void 0 === _
-                  ? void 0
-                  : _.call(_)) || _.state.doc.slice(_, _),
-              ));
             try {
-              (_ = _.replaceRangeWith(_, _, _)),
-                (_ = _.setSelection(
+              (_ = __webpack_require__.replaceRangeWith(_, _, _)),
+                (_ = __webpack_require__.setSelection(
                   _._.create(_.doc, _ + _.nodeSize, _ + _.nodeSize),
                 )),
                 _.dispatch(_);

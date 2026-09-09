@@ -168,7 +168,7 @@
               (0, _.jsx)("circle", {
                 _: _ / 2,
                 _: _ / 2,
-                _,
+                _: _,
                 stroke: "#0c131d",
                 strokeWidth: _,
                 fill: "none",
@@ -176,7 +176,7 @@
               (0, _.jsx)("circle", {
                 _: _ / 2,
                 _: _ / 2,
-                _,
+                _: _,
                 stroke: "#1a9fff",
                 strokeWidth: _,
                 fill: "none",
@@ -692,6 +692,69 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = "minigamev2/itemdefs",
+        _ = "appid",
+        _ = "editor";
+      async function _(_, _) {
+        if (!_) return [];
+        const _ = new URLSearchParams({
+          [_]: String(_),
+          _: _._.LANGUAGE,
+        });
+        _ && __webpack_require__.set(_, "1");
+        const _ = `${("undefined" != typeof self ? self.origin + "/" : "") === _._.STORE_BASE_URL ? _._.STORE_BASE_URL : _._.COMMUNITY_BASE_URL}${_}?${_}`,
+          _ = await fetch(_, {
+            credentials: _ ? "include" : "same-origin",
+          });
+        if (!_._) throw new Error(`${_} answered ${_.status}`);
+        const _ = await _.json();
+        if ((null == _ ? void 0 : _.success) == _._ && _.item_definitions)
+          return _.item_definitions;
+        throw new Error(
+          "Community item definitions for app " +
+            _ +
+            " answered " +
+            (null == _ ? void 0 : _.success),
+        );
+      }
+      function _(_, _) {
+        return ["MinigameCommunityItemDefs", _, Boolean(_)];
+      }
+      function _(_, _) {
+        const { data: _ } = (0, _._)(
+          (function (_, _) {
+            return {
+              queryKey: _(_, _),
+              queryFn: () => _(_, _),
+              enabled: Boolean(_),
+              retry: !1,
+            };
+          })(_, _),
+        );
+        return _;
+      }
+      function _(_, _, _) {
+        const _ = _(_, _);
+        return (0, _.useMemo)(
+          () =>
+            null == _
+              ? void 0
+              : _.find(
+                  (_) => (_ || _.active) && _.appid == _ && _.item_type == _,
+                ),
+          [_, _, _, _],
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -751,144 +814,6 @@
         _ = __webpack_require__("chunkid");
       function _() {
         return _._.IN_CLIENT && (0, _.DOG)(_._.LAUNCHER_TYPE);
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ {
-        GetItemDefForAppID(_) {
-          return this.m_mapAppToDefs.get(_);
-        }
-        GetItemDefsChangeForEventID(_) {
-          return (
-            this.m_listChangeCallback.has(_) ||
-              this.m_listChangeCallback.set(_, new _._()),
-            this.m_listChangeCallback.get(_)
-          );
-        }
-        BHasLoadedDef(_) {
-          return this.m_mapPromises.has(_);
-        }
-        SetTestItemDefs(_, _) {
-          this.m_mapAppToDefs.set(_, _),
-            this.GetItemDefsChangeForEventID(_).Dispatch(_),
-            this.m_mapPromises.set(_, Promise.resolve(_._));
-        }
-        async LoadAppCommunityItems(_, _) {
-          return _
-            ? (this.m_mapPromises.has(_) ||
-                this.m_mapPromises.set(
-                  _,
-                  this.InternalLoadAppCommunityItems(_, _),
-                ),
-              this.m_mapPromises.get(_))
-            : _._;
-        }
-        async InternalLoadAppCommunityItems(_, _) {
-          var _, _;
-          let _ = null;
-          try {
-            const _ =
-                _._.COMMUNITY_BASE_URL +
-                (_
-                  ? "minigame/ajaxgetgameitemdefsforeditor"
-                  : "minigame/ajaxgetgameitemdefs"),
-              _ = {
-                appid: _,
-                origin: self.origin,
-                _: _._.LANGUAGE,
-                sessionid: _ ? (0, _._)() : void 0,
-              },
-              _ = await _().get(_, {
-                params: _,
-                withCredentials: _,
-              });
-            if (
-              200 == (null == _ ? void 0 : _.status) &&
-              (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
-                ? void 0
-                : _.success) == _._ &&
-              (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
-                ? void 0
-                : _.item_definitions)
-            )
-              return (
-                this.m_mapAppToDefs.set(_, _.data.item_definitions),
-                this.GetItemDefsChangeForEventID(_).Dispatch(
-                  _.data.item_definitions,
-                ),
-                _._
-              );
-            _ = (0, _._)(_);
-          } catch (_) {
-            _ = (0, _._)(_);
-          }
-          return (
-            console.error(
-              "CSaleMiniGameItemDefStore.InternalLoadAppCommunityItems failed: on appid " +
-                _ +
-                " edit? " +
-                _ +
-                " error: " +
-                (null == _ ? void 0 : _.strErrorMsg),
-              _,
-            ),
-            _._
-          );
-        }
-        static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              _.s_Singleton.Init(),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_SaleMiniGameItemDefStore = _.s_Singleton)),
-            _.s_Singleton
-          );
-        }
-        constructor() {
-          (this.m_mapAppToDefs = new Map()),
-            (this.m_mapPromises = new Map()),
-            (this.m_listChangeCallback = new Map());
-        }
-        Init() {}
-      }
-      function _(_, _, _) {
-        const _ = (function (_, _) {
-            const [_, _] = (0, _.useState)(_.Get().GetItemDefForAppID(_));
-            return (
-              (0, _.useEffect)(() => {
-                _ &&
-                  !_.Get().BHasLoadedDef(_) &&
-                  _.Get().LoadAppCommunityItems(_, _);
-              }, [_, _]),
-              (0, _._)(_.Get().GetItemDefsChangeForEventID(_), _),
-              _
-            );
-          })(_, _),
-          [_, _] = (0, _.useState)(null);
-        return (
-          (0, _.useEffect)(() => {
-            if (_ && _ && null == _) {
-              const _ = _.find(
-                (_) => (_ || _.active) && _.appid == _ && _.item_type == _,
-              );
-              _ && _(_);
-            }
-          }, [_, _, _, _, _]),
-          _
-        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

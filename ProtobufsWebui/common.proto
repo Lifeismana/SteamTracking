@@ -375,6 +375,7 @@ message CClientMetrics_GamePerformance_Notification_FrameRate {
 	optional int32 session_seconds = 3;
 	optional uint32 framegen_frame_rate = 4;
 	optional .GamePerformanceSettings game_settings = 5;
+	optional uint32 seconds_since_active = 6;
 }
 
 message CClientMetrics_IPv6Connectivity_Notification {
@@ -466,6 +467,7 @@ message CClientNotificationDockUnsupportedFirmware {
 message CClientNotificationDownloadCompleted {
 	optional uint32 appid = 1;
 	optional uint32 dlc_appid = 2;
+	optional string remote_client_name = 3;
 }
 
 message CClientNotificationFamilySharingStopPlaying {
@@ -792,6 +794,12 @@ message CGameRecording_AudioSessionsChanged_Notification_Session {
 	optional bool is_game = 8;
 	optional bool is_steam = 9;
 	optional bool is_saved = 10;
+}
+
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreCuration, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+message CLocalizationToken {
+	optional uint32 language = 1;
+	optional string localized_string = 2;
 }
 
 message CMDSAdmin_DepotIngestChunkStorageFailure_Notification {
@@ -2522,6 +2530,33 @@ message CRemotePlay_SessionStopped_Notification {
 	optional bool used_hevc = 4;
 }
 
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+message CSeasonPass {
+	optional uint32 appid = 1;
+	repeated .CSeasonPassMilestone milestones = 2;
+}
+
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+message CSeasonPassDateAndDisplay {
+	optional uint32 rtime = 1;
+	optional string coming_soon_display_type = 2;
+}
+
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+message CSeasonPassMilestone {
+	optional int32 milestone_id = 1;
+	repeated .CLocalizationToken title = 2;
+	optional uint32 appid = 3;
+	optional fixed64 event_gid = 4;
+	repeated .CSeasonPassDateAndDisplay dates = 5;
+	optional bool shipped = 6;
+	optional uint32 rtime_complete = 7;
+	repeated .CLocalizationToken milestone_desc = 9;
+	repeated .CLocalizationToken image = 10;
+	optional bool backfilled_release = 11;
+	optional uint32 coming_soon_appid = 12;
+}
+
 message CSteamVR_AudioSettings_ChangeSettings_Request {
 	optional .CSteamVR_AudioSettings_Settings settings = 1;
 }
@@ -3286,6 +3321,20 @@ message CVRGamepadUI_Message_SetHMDSettings_Request {
 message CVRGamepadUI_Message_SetHMDSettings_Response {
 }
 
+message CVRGamepadUI_Message_SetSpatializeEnabled_Request {
+	optional bool enabled = 1;
+}
+
+message CVRGamepadUI_Message_SetSpatializeEnabled_Response {
+}
+
+message CVRGamepadUI_Message_SetSpatializeSurroundEnabled_Request {
+	optional bool enabled = 1;
+}
+
+message CVRGamepadUI_Message_SetSpatializeSurroundEnabled_Response {
+}
+
 message CVRGamepadUI_Message_ShowDashboardPopup_Request {
 	optional uint32 dashboard_popup_id = 1;
 	optional string popup_overlay_key = 2;
@@ -3717,6 +3766,7 @@ message StoreItem {
 	optional bool unvailable_for_country_restriction = 5;
 	optional string name = 6;
 	optional string store_url_path = 7;
+	optional string store_url_slug = 8;
 	optional uint32 appid = 9;
 	optional int32 type = 10 [(.description) = "enum"];
 	repeated int32 included_types = 11 [(.description) = "enum"];
@@ -3798,6 +3848,7 @@ message StoreItem_Assets {
 	optional string main_capsule_2x = 18;
 	optional string small_capsule_2x = 19;
 	optional string header_2x = 20;
+	optional uint32 last_modified = 21;
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
@@ -3846,15 +3897,70 @@ message StoreItem_ExtraDetails {
 	optional string user_account_third_party = 7;
 	optional bool user_account_third_party_link_to_steam = 8;
 	optional .StoreItem_Anticheat anticheat = 9;
+	//optional .StoreItem_ExtraDetails_Anticheat anticheat = 9;
 	repeated .StoreItem_Eula eula = 10;
+	//repeated .StoreItem_ExtraDetails_Eula eula = 10;
 	optional .StoreItem_AIGeneratedContentService ai_generation_service = 11;
+	//optional .StoreItem_ExtraDetails_AIGeneratedContentService ai_generation_service = 11;
 	optional bool refund_checks_ea_playtime = 12;
-	repeated .StoreItem_PageSection section = 13;
+	repeated .StoreItem_ExtraDetails_PageSection section = 13;
+	//repeated .StoreItem_PageSection section = 13;
 	optional string legal_notice_bbcode = 14;
 	repeated int32 interactive_elements = 15 [(.description) = "enum"];
 	optional string content_survey_notes = 16;
 	optional string content_survey_ai_notes = 17;
-	repeated .StoreItem_PressReview press_review = 18;
+	repeated .StoreItem_ExtraDetails_PressReview press_review = 18;
+	optional string partner_awards_bbcode = 19;
+	optional .StoreItem_ExtraDetails_EarlyAccess early_access = 20;
+	optional .CSeasonPass season_pass = 21;
+}
+
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+message StoreItem_ExtraDetails_AIGeneratedContentService {
+	optional string name = 1;
+	optional string url = 2;
+}
+
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+message StoreItem_ExtraDetails_Anticheat {
+	optional bool kernel_mode = 1;
+	optional bool uninstall_completely = 2;
+	optional bool boot_protection = 3;
+	optional string boot_protection_name = 4;
+	optional string name = 5;
+	optional string name_loc = 6;
+}
+
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+message StoreItem_ExtraDetails_EarlyAccess {
+	optional string why_bbcode = 1;
+	optional string how_long_bbcode = 2;
+	optional string full_version_bbcode = 3;
+	optional string current_state_bbcode = 4;
+	optional string pricing_bbcode = 5;
+	optional string community_bbcode = 6;
+	optional string description_bbcode = 7;
+}
+
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+message StoreItem_ExtraDetails_Eula {
+	optional string name = 1;
+	optional string url = 2;
+}
+
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+message StoreItem_ExtraDetails_PageSection {
+	optional string label = 1;
+	optional string content_bbcode = 2;
+	optional int32 banner = 3 [(.description) = "enum"];
+}
+
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+message StoreItem_ExtraDetails_PressReview {
+	optional string quote = 1;
+	optional string score = 2;
+	optional string site = 3;
+	optional string url = 4;
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
@@ -3862,6 +3968,7 @@ message StoreItem_FreeWeekend {
 	optional uint32 start_time = 1;
 	optional uint32 end_time = 2;
 	optional string text = 3;
+	optional uint32 appid = 4;
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
@@ -3920,14 +4027,6 @@ message StoreItem_Platforms_VRSupport {
 message StoreItem_Playtest {
 	optional uint32 appid = 1;
 	optional bool is_open = 2;
-}
-
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
-message StoreItem_PressReview {
-	optional string quote = 1;
-	optional string score = 2;
-	optional string site = 3;
-	optional string url = 4;
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist

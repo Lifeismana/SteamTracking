@@ -1532,7 +1532,6 @@
           [_, _] = _.useState(!1),
           _ = _.useRef(null),
           [_, _] = (0, _._)("filter", "released");
-        "dev" == _._.WEB_UNIVERSE && (window.g_PricingGridTableRef = _);
         const [_, _] = (0, _._)("filter_below_min_price", !1),
           _ = new URLSearchParams(window.location.search),
           _ = _.has(_._) ? decodeURIComponent(_.get(_._)) : "",
@@ -1588,82 +1587,78 @@
           _ = () => _(_.current),
           _ = (0, _._)(),
           _ = (0, _._)();
-        return (
-          ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-            console.log("Rendering grid", _),
-          (0, _.jsxs)(_.Fragment, {
-            children: [
-              (0, _.jsx)(_, {
-                bCompactMode: _,
-                setCompactMode: _,
-                rgGridData: _,
-                strPackageFilter: _,
-                setPackageFilter: _,
-                bFilterToBelowMinPrice: _,
-                setFilterToBelowMinPrice: _,
-              }),
-              (0, _.jsx)("div", {
-                className: _().PricingGridWrapper,
-                children: (0, _.jsx)("div", {
-                  className: (0, _._)(_().PricingGrid, _ && "CompactMode"),
-                  children: (0, _.jsxs)(_._, {
-                    children: [
-                      (0, _.jsx)(_._, {
-                        fnBLocalChangesExist: _,
-                        fnWarnUser: _,
-                        children: (0, _.jsx)(_._, {
-                          ref: _,
-                          className: _()(
-                            _().PricingGridTable,
-                            "noGlobalButtonStyle",
-                          ),
-                          columns: _,
-                          data: _,
-                          getRowKey: (_, _) => _.packageID,
-                          stickyHeader: !0,
-                          nItemHeight: 43,
-                          nHeaderHeight: 63,
-                          overscan: 12,
-                          initialExpanded: !0,
-                          initialSorting: [
-                            {
-                              _: "appName",
-                              desc: !1,
-                            },
-                          ],
-                          initialColumnFilters: [
-                            {
-                              _: "packageName",
-                              value: _,
-                            },
-                          ],
-                          initialGrouping: ["appName"],
-                          initialColumnVisibility: {
-                            packageType: !1,
-                            appids: !1,
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_, {
+              bCompactMode: _,
+              setCompactMode: _,
+              rgGridData: _,
+              strPackageFilter: _,
+              setPackageFilter: _,
+              bFilterToBelowMinPrice: _,
+              setFilterToBelowMinPrice: _,
+            }),
+            (0, _.jsx)("div", {
+              className: _().PricingGridWrapper,
+              children: (0, _.jsx)("div", {
+                className: (0, _._)(_().PricingGrid, _ && "CompactMode"),
+                children: (0, _.jsxs)(_._, {
+                  children: [
+                    (0, _.jsx)(_._, {
+                      fnBLocalChangesExist: _,
+                      fnWarnUser: _,
+                      children: (0, _.jsx)(_._, {
+                        ref: _,
+                        className: _()(
+                          _().PricingGridTable,
+                          "noGlobalButtonStyle",
+                        ),
+                        columns: _,
+                        data: _,
+                        getRowKey: (_, _) => _.packageID,
+                        stickyHeader: !0,
+                        nItemHeight: 43,
+                        nHeaderHeight: 63,
+                        overscan: 12,
+                        initialExpanded: !0,
+                        initialSorting: [
+                          {
+                            _: "appName",
+                            desc: !1,
                           },
-                          initialColumnPinning: {
-                            left: [
-                              "packageID",
-                              "appName",
-                              "packageName",
-                              "proposalState",
-                              "USD",
-                            ],
+                        ],
+                        initialColumnFilters: [
+                          {
+                            _: "packageName",
+                            value: _,
                           },
-                          onGroupingChange: _,
-                          onVisibleRowsChange: _,
-                          renderGroup: _._,
-                        }),
+                        ],
+                        initialGrouping: ["appName"],
+                        initialColumnVisibility: {
+                          packageType: !1,
+                          appids: !1,
+                        },
+                        initialColumnPinning: {
+                          left: [
+                            "packageID",
+                            "appName",
+                            "packageName",
+                            "proposalState",
+                            "USD",
+                          ],
+                        },
+                        onGroupingChange: _,
+                        onVisibleRowsChange: _,
+                        renderGroup: _._,
                       }),
-                      (0, _.jsx)("br", {}),
-                    ],
-                  }),
+                    }),
+                    (0, _.jsx)("br", {}),
+                  ],
                 }),
               }),
-            ],
-          })
-        );
+            }),
+          ],
+        });
       });
       function _(_) {
         const { priceKey: _ } = _,
@@ -2130,15 +2125,7 @@
       function _() {
         const _ = (0, _._)("partnerbrowse_webapi_token", "application_config");
         (0, _._)(Boolean(_), "require partnerbrowse_webapi_token");
-        const _ = new _._(_._.WEBAPI_BASE_URL, _);
-        return (
-          ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-            console.log(
-              "DEV_DEBUG: Constructing partner store-browse WebAPI interface with access token",
-              _,
-            ),
-          _
-        );
+        return new _._(_._.WEBAPI_BASE_URL, _);
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

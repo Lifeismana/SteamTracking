@@ -161,6 +161,16 @@
     },
     chunkid: (module) => {
       module.exports = {
+        narrowWidth: "500px",
+        avatarHolder: "nibodjvvrm86uCfnnAn4g",
+        avatarStatus: "_3xUpb5DWXPFNcHHIcv-9pe",
+        avatar: "_3h-QRJGxnVOIExtHD1R0f2",
+        avatarFrame: "X_mJE4BYV5StDPwZhSiAu",
+        avatarFrameImg: "_3fM0F85j3aWVzr4RJM9-eu",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         ProgressBar: "_3szjUMH5QeRwtXAsLRcWt9",
         AnimateProgress: "_3DjdoQj5NoknowwV5t5JPN",
         loadingBarAnim: "_2SA1xV5w3BGirkDWosGYoX",
@@ -308,13 +318,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        strMaxMobileWidth: "700px",
-        strMaxResponsiveWidth: "910px",
-        strMaxTabletWidth: "1080px",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         "duration-app-launch": "800ms",
         DiscoveryQueueWidgetCtn: "_1LXqxVtAL8Lmy7J7rLSVit",
         WidgetText: "co4IP1iV1813n9UgG3h5f",
@@ -334,45 +337,6 @@
         focusAnimation: "_2VIlPFJOxlK-lazFTkek7v",
         hoverAnimation: "I3jGaAXmpxTOQldGALnOQ",
       };
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_, _) {
-        return new (_())(
-          async (_) => {
-            const _ = [..._],
-              _ = await _.xtC.GetPlayerLinkDetails(_, {
-                steamids: _,
-              }),
-              _ = new Map();
-            return (
-              _.Body()
-                .accounts()
-                .forEach((_) => {
-                  const _ = _.toObject();
-                  _.set(_.public_data.steamid, _);
-                }),
-              __webpack_require__.map((_) => _.get(_) ?? null)
-            );
-          },
-          {
-            maxBatchSize: 100,
-            cache: !1,
-            ..._,
-          },
-        );
-      }
-      function _(_) {
-        return (0, _._)("PlayerLinkDetails", () => _(_));
-      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -1556,6 +1520,246 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = {
+        bCanClaimNewItem: !1,
+        bAlreadyClaimedCurrentItem: !1,
+      };
+      async function _(_, _) {
+        const _ = await _._.CanClaimItem(_, {
+          language: _,
+        });
+        if (__webpack_require__.GetEResult() != _._)
+          throw new Error(
+            "SaleItemRewards.CanClaimItem answered " +
+              __webpack_require__.GetEResult(),
+          );
+        const _ = __webpack_require__.Body().toObject(),
+          _ = _.reward_item?.defid ? _.reward_item : void 0;
+        return {
+          bCanClaimNewItem: Boolean(_.can_claim),
+          bAlreadyClaimedCurrentItem: Boolean(_),
+          appid: _?.appid,
+          community_item_type: _?.community_item_type,
+          community_item_class: _?.community_item_class,
+          rtNextClaimTime:
+            (_.next_claim_time ?? 0) > 0 ? _.next_claim_time : void 0,
+        };
+      }
+      let _;
+      function _() {
+        if (!_) {
+          const _ = (0, _._)("loyalty_webapi_token", "application_config");
+          _ = _ ? new _._(_._.WEBAPI_BASE_URL, _) : (0, _._)();
+        }
+        return _.GetServiceTransport();
+      }
+      async function _(_) {
+        return (async function (_, _) {
+          const _ = await _._.ClaimItem(_, {
+            language: _,
+          });
+          if (__webpack_require__.GetEResult() == _._) return _(_, _);
+          if (__webpack_require__.GetEResult() != _._)
+            throw new Error(
+              "SaleItemRewards.ClaimItem answered " +
+                __webpack_require__.GetEResult(),
+            );
+          const _ = __webpack_require__.Body().toObject().reward_item;
+          return {
+            bCanClaimNewItem: !1,
+            bAlreadyClaimedCurrentItem: !0,
+            appid: _?.appid,
+            community_item_type: _?.community_item_type,
+            community_item_class: _?.community_item_class,
+            rtNextClaimTime:
+              (__webpack_require__.Body().next_claim_time() ?? 0) > 0
+                ? __webpack_require__.Body().next_claim_time()
+                : void 0,
+          };
+        })(_(), _);
+      }
+      async function _(_) {
+        return (async function (_, _) {
+          const _ = await _._.ActivateProfileModifierItem(_, {
+            communityitemid: _.communityitemid,
+            appid: _.appid,
+            activate: !0,
+          });
+          if (__webpack_require__.GetEResult() != _._)
+            throw new Error(
+              "Quest.ActivateProfileModifierItem answered " +
+                __webpack_require__.GetEResult(),
+            );
+          return __webpack_require__.GetEResult();
+        })(_(), _);
+      }
+      const _ = 3e5;
+      let _ = !1,
+        _ = null;
+      const _ = {
+        appid: 2243810,
+        community_item_type: 2,
+        community_item_class: _._,
+      };
+      function _(_) {
+        return ["SaleItemCanClaim", _];
+      }
+      function _(_) {
+        return {
+          queryKey: _(_),
+          queryFn: () =>
+            (async function (_) {
+              return _(_(), _);
+            })(_),
+          enabled: !_,
+          staleTime: 1 / 0,
+          retry: !1,
+        };
+      }
+      function _() {
+        const _ = _._.LANGUAGE,
+          _ = (0, _._)(),
+          { data: _, isLoading: _ } = (0, _._)(_(_)),
+          _ = _?.rtNextClaimTime;
+        return (
+          (0, _.useEffect)(() => {
+            let _ = 0;
+            if (_) {
+              const _ = () => {
+                const _ = 1e3 * _ - Date.now();
+                _ <= 0
+                  ? _.invalidateQueries({
+                      queryKey: _(_),
+                    })
+                  : (_ = window.setTimeout(_, _ > _ ? _ / 2 : _));
+              };
+              _();
+            }
+            return () => window.clearTimeout(_);
+          }, [_, _, _]),
+          {
+            ...(_ ?? _),
+            bLoading: _,
+          }
+        );
+      }
+      function _() {
+        const _ = (0, _._)(),
+          { mutateAsync: _ } = (0, _._)({
+            mutationFn: () => {
+              if (_) {
+                const _ = _;
+                return (_ = null), Promise.resolve(_);
+              }
+              return _
+                ? Promise.resolve(_.getQueryData(_(_._.LANGUAGE)) ?? _)
+                : _(_._.LANGUAGE);
+            },
+            onSuccess: (_) => _.setQueryData(_(_._.LANGUAGE), _),
+          });
+        return {
+          fnClaimItem: (0, _.useCallback)(() => _(), [_]),
+        };
+      }
+      function _() {
+        return (0, _._)({
+          mutationFn: (_) => _(_),
+        });
+      }
+      function _() {
+        const _ = (0, _._)();
+        return {
+          fnSetClaimState: (0, _.useCallback)(
+            (_) => {
+              (_ = !0),
+                (_ = _.bCanClaimNewItem
+                  ? {
+                      bAlreadyClaimedCurrentItem: !0,
+                      bCanClaimNewItem: !1,
+                      rtNextClaimTime: Math.floor(Date.now() / 1e3) + 3600,
+                      ..._,
+                    }
+                  : null),
+                _.setQueryData(_(_._.LANGUAGE), _);
+            },
+            [_],
+          ),
+        };
+      }
+      function _(_, _, _) {
+        return ["SaleRewardsGetDefinition", _, _, _];
+      }
+      function _(_, _, _, _) {
+        return {
+          queryKey: _(_, _, _),
+          queryFn: () =>
+            (async function (_, _, _, _) {
+              return (
+                await _._.GetCurrentDefinition(_, {
+                  sale_def_type: _,
+                  language: _,
+                  include_community_item_def: _,
+                })
+              )
+                .Body()
+                .toObject();
+            })(_, _, _, _),
+          staleTime: 1 / 0,
+        };
+      }
+      function _(_, _, _) {
+        const _ = (0, _._)();
+        return (0, _._)(_(_, _, _, _));
+      }
+      function _(_, _, _, _) {
+        return ["GetClaimedSaleRewards", _, _, Boolean(_), _];
+      }
+      function _(_, _, _, _, _) {
+        return {
+          queryKey: _(_, _, _, _),
+          queryFn: () =>
+            (async function (_, _, _, _) {
+              return (
+                await _._.GetClaimedSaleRewards(_, {
+                  sale_def_type: _,
+                  language: _,
+                  include_community_item_def: _,
+                })
+              )
+                .Body()
+                .toObject();
+            })(_, _, _, _),
+          staleTime: 1 / 0,
+        };
+      }
+      function _(_, _, _, _) {
+        const _ = (0, _._)();
+        return (0, _._)(_(_, _, _, _, _));
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1640,6 +1844,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _() {
         (0, _._)();
@@ -1676,7 +1881,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2206,410 +2410,6 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
-      function _(_) {
-        return "[object Object]" === Object.prototype.toString.call(_);
-      }
-      function _(..._) {
-        return JSON.stringify(_, (_, _) => {
-          if (
-            (function (_) {
-              if (!_(_)) return !1;
-              const _ = _.constructor;
-              if (void 0 === _) return !0;
-              const _ = _.prototype;
-              return (
-                !!_(_) &&
-                !!Object.prototype.hasOwnProperty.call(_, "isPrototypeOf")
-              );
-            })(_)
-          ) {
-            const _ = {};
-            return (
-              Object.keys(_)
-                .sort()
-                .forEach((_) => {
-                  _[_] = _[_];
-                }),
-              _
-            );
-          }
-          return _;
-        });
-      }
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid");
-      const _ = (0, _.createContext)({
-        instances: {},
-        factories: {},
-      });
-      function _(_, _) {
-        const _ = (0, _.useContext)(_),
-          _ = "string" == typeof _ ? _ : _(..._);
-        let _ = _;
-        for (; _; ) {
-          if (_ in _.instances) return _.instances[_];
-          if (_ in _.factories) break;
-          _ = _.parent;
-        }
-        const _ = (_?.factories[_] ?? _)();
-        return ((_ ?? _).instances[_] = _), _;
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      const _ = -700,
-        _ = -600,
-        _ = -599,
-        _ = -598,
-        _ = -597,
-        _ = -596,
-        _ = -595,
-        _ = -594,
-        _ = -593,
-        _ = -592,
-        _ = -591,
-        _ = -590,
-        _ = -589,
-        _ = -588,
-        _ = -587,
-        _ = -586,
-        _ = -585,
-        _ = -584,
-        _ = -583,
-        _ = -582,
-        _ = -581,
-        _ = -580,
-        _ = -579,
-        _ = -578,
-        _ = -577,
-        _ = -576,
-        _ = -575,
-        _ = -574,
-        _ = -573,
-        _ = -572,
-        _ = -571,
-        _ = -500,
-        _ = -499,
-        _ = -498,
-        _ = -497,
-        _ = -496,
-        _ = -300,
-        _ = -203,
-        _ = -202,
-        _ = -201,
-        _ = -200,
-        _ = -199,
-        _ = -198,
-        _ = -197,
-        _ = -196,
-        _ = -195,
-        _ = -194,
-        _ = -193,
-        _ = -192,
-        _ = -191,
-        _ = -190,
-        _ = -189,
-        _ = -188,
-        _ = -187,
-        _ = -186,
-        _ = -185,
-        _ = -184,
-        _ = -183,
-        _ = -182,
-        _ = -102,
-        _ = -101,
-        _ = -100,
-        _ = -99,
-        _ = -95,
-        _ = -94,
-        _ = -93,
-        _ = -92,
-        _ = -90,
-        _ = -89,
-        _ = -88,
-        _ = -87,
-        _ = -86,
-        _ = -85,
-        _ = -84,
-        _ = -83,
-        _ = -82,
-        _ = -81,
-        _ = -80,
-        _ = -79,
-        _ = -75,
-        _ = -74,
-        _ = -70,
-        _ = -69,
-        _ = -68,
-        _ = -67,
-        _ = 0,
-        _ = 1,
-        _ = 2,
-        _ = 3,
-        _ = 4,
-        _ = 5,
-        _ = 6,
-        _ = 7,
-        _ = 8,
-        _ = 9,
-        _ = 10,
-        _ = 11,
-        _ = 12,
-        _ = 13,
-        _ = 14,
-        _ = 15,
-        _ = 16,
-        _ = 17,
-        _ = 18,
-        _ = 19,
-        _ = 20;
-      function _(_) {
-        switch (_) {
-          case _:
-            return "Windows";
-          case _:
-            return "Windows 3.11";
-          case _:
-            return "Windows 95";
-          case _:
-            return "Windows 98";
-          case _:
-            return "Windows ME";
-          case _:
-            return "Windows NT";
-          case _:
-            return "Windows 2000";
-          case _:
-            return "Windows XP";
-          case _:
-            return "Windows 2003";
-          case _:
-            return "Windows Vista";
-          case _:
-            return "Windows 7";
-          case _:
-            return "Windows 2008";
-          case _:
-            return "Windows 2012";
-          case _:
-            return "Windows 2012 R2";
-          case _:
-            return "Windows 8";
-          case _:
-            return "Windows 8.1";
-          case _:
-            return "Windows 10";
-          case _:
-            return "Windows 2016";
-          case _:
-            return "Windows 2019";
-          case _:
-            return "Windows 2022";
-          case _:
-            return "Windows 11";
-          case _:
-            return "Mac OS";
-          case _:
-            return "MacOS 10.4";
-          case _:
-            return "MacOS 10.5";
-          case _:
-            return "MacOS 10.5.8";
-          case _:
-            return "MacOS 10.6";
-          case _:
-            return "MacOS 10.6.3";
-          case _:
-            return "MacOS 10.6.4 with Apple's Snow Leopard Graphics Update";
-          case _:
-            return "MacOS 10.6.7";
-          case _:
-            return "MacOS 10.7";
-          case _:
-            return "MacOS 10.8";
-          case _:
-            return "MacOS 10.9";
-          case _:
-            return "MacOS 10.10";
-          case _:
-            return "MacOS 10.11";
-          case _:
-            return "MacOS 10.12";
-          case _:
-            return "MacOS 10.13";
-          case _:
-            return "MacOS 10.14";
-          case _:
-            return "MacOS 10.15";
-          case _:
-            return "MacOS 11 (as 10.16)";
-          case _:
-            return "MacOS 12 (as 10.17)";
-          case _:
-            return "MacOS 13 (as 10.18)";
-          case _:
-            return "MacOS 11";
-          case _:
-            return "MacOS 11.1";
-          case _:
-            return "MacOS 12";
-          case _:
-            return "MacOS 13";
-          case _:
-            return "MacOS 14";
-          case _:
-            return "MacOS 15";
-          case _:
-            return "Linux";
-          case _:
-            return "Linux 2.2";
-          case _:
-            return "Linux 2.4";
-          case _:
-            return "Linux 2.6";
-          case _:
-            return "Linux 3.2";
-          case _:
-            return "Linux 3.5";
-          case _:
-            return "Linux 3.6";
-          case _:
-            return "Linux 3.10";
-          case _:
-            return "Linux 3.16";
-          case _:
-            return "Linux 3.18";
-          case _:
-            return "Linux 3.x";
-          case _:
-            return "Linux 4.1";
-          case _:
-            return "Linux 4.4";
-          case _:
-            return "Linux 4.9";
-          case _:
-            return "Linux 4.14";
-          case _:
-            return "Linux 4.19";
-          case _:
-            return "Linux 4.x";
-          case _:
-            return "Linux 5.x";
-          case _:
-            return "Linux 5.4";
-          case _:
-            return "Linux 6.x";
-          case _:
-            return "Linux 7.x";
-          case _:
-            return "Linux 5.10";
-          case _:
-            return "PS3";
-          case _:
-            return "Web Client";
-          case _:
-            return "Android";
-          case _:
-            return "Android 6.x";
-          case _:
-            return "Android 7.x";
-          case _:
-            return "Android 8.x";
-          case _:
-            return "Android 9.x";
-          case _:
-            return "iOS";
-          case _:
-            return "iOS 1";
-          case _:
-            return "iOS 2";
-          case _:
-            return "iOS 3";
-          case _:
-            return "iOS 4";
-          case _:
-            return "iOS 5";
-          case _:
-            return "iOS 6";
-          case _:
-            return "iOS 6.1";
-          case _:
-            return "iOS 7";
-          case _:
-            return "iOS 7.1";
-          case _:
-            return "iOS 8";
-          case _:
-            return "iOS 8.1";
-          case _:
-            return "iOS 8.2";
-          case _:
-            return "iOS 8.3";
-          case _:
-            return "iOS 8.4";
-          case _:
-            return "iOS 9";
-          case _:
-            return "iOS 9.1";
-          case _:
-            return "iOS 9.2";
-          case _:
-            return "iOS 9_.3";
-          case _:
-            return "iOS 10";
-          case _:
-            return "iOS 10.1";
-          case _:
-            return "iOS 10.2";
-          case _:
-            return "iOS 10.3";
-          case _:
-            return "iOS 11";
-          case _:
-            return "iOS 11.1";
-          case _:
-            return "iOS 11.2";
-          case _:
-            return "iOS 11.3";
-          case _:
-            return "iOS 11.4";
-          case _:
-            return "iOS 12";
-          case _:
-            return "iOS 12.1";
-          default:
-            return "Unknown";
-        }
-      }
-      var _;
-      !(function (_) {
-        (_[(_.k_EPlatformTypeUnknown = 0)] = "k_EPlatformTypeUnknown"),
-          (_[(_.k_EPlatformTypeWin32 = 1)] = "k_EPlatformTypeWin32"),
-          (_[(_.k_EPlatformTypeWin64 = 2)] = "k_EPlatformTypeWin64"),
-          (_[(_.k_EPlatformTypeLinux64 = 3)] = "k_EPlatformTypeLinux64"),
-          (_[(_.k_EPlatformTypeOSX = 4)] = "k_EPlatformTypeOSX"),
-          (_[(_.k_EPlatformTypePS3 = 5)] = "k_EPlatformTypePS3"),
-          (_[(_.k_EPlatformTypeLinux32 = 6)] = "k_EPlatformTypeLinux32"),
-          (_[(_.k_EPlatformTypeAndroid32 = 7)] = "k_EPlatformTypeAndroid32"),
-          (_[(_.k_EPlatformTypeAndroid64 = 8)] = "k_EPlatformTypeAndroid64"),
-          (_[(_.k_EPlatformTypeIOS32 = 9)] = "k_EPlatformTypeIOS32"),
-          (_[(_.k_EPlatformTypeIOS64 = 10)] = "k_EPlatformTypeIOS64"),
-          (_[(_.k_EPlatformTypeTVOS = 11)] = "k_EPlatformTypeTVOS"),
-          (_[(_.k_EPlatformTypeEmbeddedClient = 12)] =
-            "k_EPlatformTypeEmbeddedClient"),
-          (_[(_.k_EPlatformTypeBrowser = 13)] = "k_EPlatformTypeBrowser"),
-          (_[(_.k_EPlatformTypeMax = 14)] = "k_EPlatformTypeMax");
-      })(_ || (_ = {}));
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
       });
@@ -2990,6 +2790,248 @@
         _: () => _,
         _: () => _,
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ =
+          "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gODAK/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsICMmJykqKRkfLTAtKDAlKCko/9sAQwEHBwcKCAoTCgoTKBoWGigoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgo/8AAEQgAQABAAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A8Inmk8+T94/3j/EfWmedJ/z0f/vo0T/6+T/eP86ZQA/zpP8Ano//AH0aPOk/56P/AN9GmVo6Loeq65M0Wj6ddXrr94QRF9v1I6fjQBR86T/no/8A30aPOk/56P8A99GtHW/Dus6GV/tjS7yyD8K00RVW+h6GsugB/nSf89H/AO+jT4JpPPj/AHj/AHh/EfWoafB/r4/94fzoAJ/9fJ/vH+dMp8/+vk/3j/OmUAXdE099W1mw06Jgsl3PHApPYswUH9a+qPF3iHSPhF4S0+003TxK0hMcEAbZvIA3SO2OvIz6k18nW88ttcRz28jxTRMHSRGKsrA5BBHQg1b1TWdT1fy/7V1G8vfLzs+0TNJtz1xknHQUAfUXw+8c6Z8UdN1HS9V0xIpUTM1s7eYkiE43KcAgg/lxg180+NtEHhzxZqmkqxdLWcojHqUPK598EV9CfBbwpF4G8J3fiLxA4trm5hEsnmceRCOQD/tHqR9B1r568a63/wAJH4r1TVghRLqYuinqE6KD74AoAxafB/r4/wDeH86ZT4P9fH/vD+dABP8A6+T/AHj/ADplPn/18n+8f50ygArt/gtpltq/xK0e2vYxJArPMUYZDFEZhn2yBXEV0/w203VNX8YWdloOoHTtQkWQx3IZl2gISeV55AI/GgD1H9pvxPdi/s/DcDGOz8pbqfHWRizBQfYbc/U+1eD12PxW0fWtE8Tpa+I9UOqXpt0cTl2bCEthctz1B/OuOoAKfB/r4/8AeH86ZT4P9fH/ALw/nQAT/wCvk/3j/OmVNPDJ58n7t/vH+E+tM8mT/nm//fJoAZV7Q9Xv9C1KLUNJuGtryMEJIoBIyCD1BHQmqnkyf883/wC+TR5Mn/PN/wDvk0AaHiHXtT8RX4vdau2u7oIIxIygHaCSBwB6msyn+TJ/zzf/AL5NHkyf883/AO+TQAynwf6+P/eH86PJk/55v/3yafBDJ58f7t/vD+E+tAH/2Q==",
+        _ =
+          __webpack_require__._ +
+          "images/applications/store/avatar_default_full.jpg?v=valveisgoodatcaching";
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      const _ = _.memo(function (_) {
+        const {
+            strAvatarURL: _,
+            size: _ = "Medium",
+            className: _,
+            statusStyle: _,
+            statusPosition: _,
+            children: _,
+            ..._
+          } = _,
+          _ = _.useMemo(() => {
+            const _ = [];
+            return (
+              _ && _.push(_),
+              _.push(
+                (function (_) {
+                  switch (_) {
+                    case "X-Small":
+                    case "Small":
+                      return "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gOTAK/9sAQwADAgIDAgIDAwMDBAMDBAUIBQUEBAUKBwcGCAwKDAwLCgsLDQ4SEA0OEQ4LCxAWEBETFBUVFQwPFxgWFBgSFBUU/9sAQwEDBAQFBAUJBQUJFA0LDRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQU/8AAEQgAIAAgAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A/P4mW5nmllmeSR3LMzMSSc1a07R73V72KzsILi9u5TiOC2RpJHPoFGSarQ/ef6n+de4fAn9oaL4D+DfGX9i6Uf8AhO9XSKDT9eZY3WxiDZcBGByTkn0JCZBxQB41qeiX+iXslnqNtdWF3H9+3uo2jkX6q2CKpgy208MsUzxyI4ZWViCDmvsr9rrUdT1j9nb4T6h8RBbH4qXUs0zMsSxXJ04hivnKoAU5MPGBg7uM7q+NpvvJ9R/OgAh+8/1P867T4POI/iz4Mc6U+u7NZtG/suPbuu8TKfKG4hct93njnmuKIltp5opYXjkRyrKykEHNWbDVbvSr63vbKaezvLeRZYbi3ZkkidTlWVhyCCMgjpQB6l+1F411nx58dPFWpa5a3mnXaXP2ZNOvXVpLKNBhYflJUY5PB5JJ6k15LN95PqP51a1PWr7WtQnvtRuLm/vrhzJNc3TtJLIx6lmbJJ9zVQCW5nhiiheSR3CqqqSSc0Af/9k=";
+                    case "Medium":
+                    case "MediumLarge":
+                      return _;
+                    case "Large":
+                    case "X-Large":
+                    case "FillArea":
+                      return _;
+                    default:
+                      return (0, _._)(_, `Unhandled size ${_}`), _;
+                  }
+                })(_),
+              ),
+              _
+            );
+          }, [_, _]);
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(
+            _().avatarHolder,
+            "avatarHolder",
+            "no-drag",
+            _,
+            _,
+          ),
+          ..._,
+          children: [
+            (0, _.jsx)("div", {
+              className: (0, _._)(_().avatarStatus, "avatarStatus", _),
+              style: _,
+            }),
+            (0, _.jsx)(_._, {
+              className: (0, _._)(_().avatar, "avatar"),
+              rgSources: _,
+              draggable: !1,
+            }),
+            _,
+          ],
+        });
+      });
+      let _ = class extends _.Component {
+        render() {
+          const {
+            persona: _,
+            size: _ = "Medium",
+            animatedAvatar: _,
+            className: _,
+            strBackupAvatarURL: _,
+            ..._
+          } = this.props;
+          let _ = "";
+          return (
+            _ && _.image_small && 0 != _.image_small.length
+              ? (_ = _._.MEDIA_CDN_COMMUNITY_URL + "images/" + _.image_small)
+              : _
+                ? ((_ = _.avatar_url_medium),
+                  "Small" == _ || "X-Small" == _
+                    ? (_ = _.avatar_url)
+                    : ("Large" != _ && "X-Large" != _ && "FillArea" != _) ||
+                      (_ = _.avatar_url_full))
+                : _ && (_ = _),
+            (0, _.jsx)(_, {
+              strAvatarURL: _,
+              size: _,
+              className: (0, _._)((0, _._)(_), _),
+              ..._,
+            })
+          );
+        }
+      };
+      _ = (0, _._)([_._], _);
+      const _ = (0, _._)((_) => {
+        const { profileItem: _, className: _, bDisableAnimation: _, ..._ } = _;
+        if (!_ || !_.image_small || 0 == _.image_small.length) return null;
+        let _ = _ ? _.image_large : _.image_small;
+        return (
+          _ || (_ = _.image_small),
+          _.startsWith("https://") ||
+            (_ = _._.MEDIA_CDN_COMMUNITY_URL + "images/" + _),
+          (0, _.jsx)("div", {
+            className: (0, _._)(_().avatarFrame, _, "avatarFrame"),
+            ..._,
+            children: (0, _.jsx)("img", {
+              className: _().avatarFrameImg,
+              src: _,
+            }),
+          })
+        );
+      });
+      let _ = class extends _.Component {
+        m_timer;
+        constructor(_) {
+          super(_),
+            (this.state = {
+              bAnimate: "None" != this.props.loopDuration,
+            }),
+            (this.m_timer = 0);
+        }
+        componentDidMount() {
+          this.props.bParentHovered || this.SetupAnimationTimer();
+        }
+        SetupAnimationTimer() {
+          let _ = 0;
+          switch (this.props.loopDuration) {
+            case "Short":
+              _ = 2500;
+              break;
+            case "Medium":
+              _ = 5e3;
+              break;
+            case "Long":
+              _ = 1e4;
+          }
+          0 != _ &&
+            (this.setState({
+              bAnimate: "None" != this.props.loopDuration,
+            }),
+            (this.m_timer = window.setTimeout(
+              () =>
+                this.setState({
+                  bAnimate: !1,
+                }),
+              _,
+            )));
+        }
+        StopAnimationTimer() {
+          this.m_timer &&
+            (window.clearTimeout(this.m_timer), (this.m_timer = 0));
+        }
+        onHover() {
+          this.SetupAnimationTimer();
+        }
+        componentWillUnmount() {
+          this.StopAnimationTimer();
+        }
+        componentDidUpdate(_) {
+          this.props.loopDuration != _.loopDuration &&
+            ("None" == this.props.loopDuration
+              ? (this.setState({
+                  bAnimate: !1,
+                }),
+                this.StopAnimationTimer())
+              : "Infinite" == this.props.loopDuration
+                ? (this.setState({
+                    bAnimate: !0,
+                  }),
+                  this.StopAnimationTimer())
+                : (this.setState({
+                    bAnimate: !0,
+                  }),
+                  this.SetupAnimationTimer())),
+            this.props.bParentHovered != _.bParentHovered &&
+              (this.props.bParentHovered &&
+              "None" != this.props.loopDuration &&
+              "Infinite" != this.props.loopDuration
+                ? (this.setState({
+                    bAnimate: !0,
+                  }),
+                  this.StopAnimationTimer())
+                : this.state.bAnimate && this.SetupAnimationTimer());
+        }
+        render() {
+          let {
+            loopDuration: _,
+            animatedAvatar: _,
+            avatarFrame: _,
+            children: _,
+            style: _,
+            bLimitProfileFrameAnimationTime: _,
+            bParentHovered: _,
+            ..._
+          } = this.props;
+          _.onClick &&
+            (_ = {
+              ..._,
+              cursor: "pointer",
+            });
+          const _ = this.state.bAnimate ? (_ ?? void 0) : void 0;
+          return (0, _.jsx)("div", {
+            onMouseEnter: () =>
+              this.setState({
+                bAnimate: "None" != this.props.loopDuration,
+              }),
+            onMouseLeave: () => this.SetupAnimationTimer(),
+            children: (0, _.jsxs)(_, {
+              animatedAvatar: _,
+              ..._,
+              children: [
+                _,
+                (0, _.jsx)(_, {
+                  profileItem: _ ?? null,
+                  bDisableAnimation: _ && !this.state.bAnimate,
+                }),
+              ],
+            }),
+          });
+        }
+      };
+      _ = (0, _._)([_._], _);
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
@@ -3098,7 +3140,6 @@
         _ = __webpack_require__("chunkid"),
         _ =
           (__webpack_require__("chunkid"),
-          __webpack_require__("chunkid"),
           __webpack_require__("chunkid"),
           __webpack_require__("chunkid")),
         _ = __webpack_require__("chunkid");
@@ -3531,73 +3572,6 @@
         _: () => _,
         _: () => _,
         _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const _ = (0, _._)(),
-          _ = _.useContext(_);
-        return (0, _._)(_(_, _, _));
-      }
-      function _(_) {
-        const _ = (0, _._)(),
-          _ = _.useContext(_);
-        return (0, _._)({
-          queries: _.map((_) => _(_, _, _)),
-        });
-      }
-      const _ = _.createContext({
-        loadPersonaState: async (_, _) => {
-          if (null == _) return null;
-          const _ = await (function (_) {
-            return (_ ??= (0, _._)(_));
-          })(_).load(_._.InitFromAccountID(_).ConvertTo64BitString());
-          return (function (_, _) {
-            let _ = new _._(_);
-            const _ = _?.public_data,
-              _ = _?.private_data;
-            (_.m_bInitialized = !!_),
-              (_.m_ePersonaState = _?.persona_state ?? _.cU3),
-              (_.m_strAvatarHash = _?.sha_digest_avatar
-                ? (0, _._)(_.sha_digest_avatar)
-                : _._),
-              (_.m_strPlayerName = _?.persona_name ?? _.ConvertTo64BitString()),
-              (_.m_strAccountName = _?.account_name),
-              _?.persona_state_flags &&
-                (_.m_unPersonaStateFlags = _?.persona_state_flags);
-            _?.game_id && (_.m_gameid = _?.game_id);
-            _?.game_server_ip_address &&
-              (_.m_unGameServerIP = _?.game_server_ip_address);
-            _?.lobby_steam_id && (_.m_game_lobby_id = _?.lobby_steam_id);
-            _?.game_extra_info && (_.m_strGameExtraInfo = _?.game_extra_info);
-            _?.profile_url && (_.m_strProfileURL = _.profile_url);
-            return _;
-          })(_._.InitFromAccountID(_), _);
-        },
-      });
-      function _() {
-        return _.useContext(_);
-      }
-      function _(_, _, _) {
-        const _ = "string" == typeof _ ? new _._(_).GetAccountID() : _;
-        return {
-          queryKey: ["PlayerSummary", _],
-          queryFn: () => _.loadPersonaState(_, _),
-          enabled: !!_,
-        };
-      }
-      let _;
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
         _: () => _,
@@ -3606,343 +3580,217 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      class _ {
-        m_claimState = {
-          bCanClaimNewItem: !1,
-          bAlreadyClaimedCurrentItem: !1,
-        };
-        m_claimedFreeItemDef;
-        m_rtNextClaimTime;
-        m_claimTimer;
-        m_SteamInterface = null;
-        m_canClaimPromise = null;
-        m_claimPromise = null;
-        m_claimStateChangeCallback = new _._();
-        m_testNextClaimFakeResponse = null;
-        m_bInTestMode = !1;
-        GetClaimItemState() {
-          return this.m_claimState;
-        }
-        GetClaimStateChangeCallback() {
-          return this.m_claimStateChangeCallback;
-        }
-        GetClaimedSaleRewardItemDef() {
-          return this.m_claimedFreeItemDef;
-        }
-        GetNextClaimTime() {
-          if (!this.m_rtNextClaimTime) return null;
-          return new Date(1e3 * this.m_rtNextClaimTime);
-        }
-        TEST_OverrideClaimState(_) {
-          (this.m_bInTestMode = !0),
-            (this.m_canClaimPromise = null),
-            (this.m_claimPromise = null),
-            _.bCanClaimNewItem
-              ? (this.m_testNextClaimFakeResponse = {
-                  bAlreadyClaimedCurrentItem: !0,
-                  bCanClaimNewItem: !1,
-                  rtNextClaimTime: Math.floor(Date.now() / 1e3) + 3600,
-                  appid: 2243810,
-                  community_item_type: 2,
-                  community_item_class: _._,
-                })
-              : (this.m_testNextClaimFakeResponse = null),
-            (this.m_claimState = _),
-            this.GetClaimStateChangeCallback().Dispatch(this.m_claimState);
-        }
-        async ActivateProfileModifier(_) {
-          const _ = _._.Init(_._);
-          _.Body().set_communityitemid(_.communityitemid),
-            _.Body().set_appid(_.appid),
-            _.Body().set_activate(!0);
-          const _ = await _._.ActivateProfileModifierItem(
-            this.m_SteamInterface.GetServiceTransport(),
-            _,
-          );
-          return (
-            __webpack_require__.GetEResult() != _._ &&
-              console.error(
-                `Error when calling QuestService.ActivateProfileModifierItem: EResult=${__webpack_require__.GetEResult()}`,
-              ),
-            __webpack_require__.GetEResult()
-          );
-        }
-        async LoadCanUserClaimItem() {
-          return this.m_bInTestMode
-            ? this.m_claimState
-            : (this.m_canClaimPromise ||
-                (this.m_canClaimPromise = this.InternalLoadCanUserClaimItem()),
-              this.m_canClaimPromise);
-        }
-        async InternalLoadCanUserClaimItem() {
-          (0, _._)(
-            _._.logged_in,
-            "User must be logged to use CSaleItemClaimableRewardsStore",
-          );
-          const _ = _._.Init(_._);
-          _.Body().set_language(_._.LANGUAGE);
-          let _ = null;
-          try {
-            const _ = await _._.CanClaimItem(
-              this.m_SteamInterface.GetServiceTransport(),
-              _,
-            );
-            if (__webpack_require__.GetEResult() == _._)
-              return (
-                (this.m_claimedFreeItemDef = Boolean(
-                  __webpack_require__.Body().reward_item()?.defid(),
-                )
-                  ? __webpack_require__.Body().reward_item()?.toObject()
-                  : null),
-                (this.m_claimState = {
-                  bCanClaimNewItem: !!__webpack_require__.Body().can_claim(),
-                  bAlreadyClaimedCurrentItem: Boolean(
-                    this.m_claimedFreeItemDef,
-                  ),
-                  appid: this.m_claimedFreeItemDef?.appid,
-                  community_item_type:
-                    this.m_claimedFreeItemDef?.community_item_type,
-                  community_item_class:
-                    this.m_claimedFreeItemDef?.community_item_class,
-                  rtNextClaimTime:
-                    (__webpack_require__.Body().next_claim_time() ?? 0) > 0
-                      ? __webpack_require__.Body().next_claim_time()
-                      : void 0,
-                }),
-                (this.m_rtNextClaimTime = __webpack_require__
-                  .Body()
-                  .next_claim_time()),
-                this.SetClaimTimer(),
-                this.GetClaimStateChangeCallback().Dispatch(this.m_claimState),
-                this.m_claimState
-              );
-            _ = (0, _._)(_);
-          } catch (_) {
-            _ = (0, _._)(_);
-          }
-          return (
-            console.error(
-              "CSaleItemClaimableRewardsStore.InternalLoadCanUserClaimItem failed: error: " +
-                _?.strErrorMsg,
-              _,
-            ),
-            {
-              bCanClaimNewItem: !1,
-              bAlreadyClaimedCurrentItem: !1,
-            }
-          );
-        }
-        async UserClaimItem() {
-          return (
-            this.m_testNextClaimFakeResponse &&
-              (console.log(
-                "CSaleItemClaimableRewardsStore - testing, pretending claim action succeeded",
-                (0, _._)(this.m_testNextClaimFakeResponse),
-              ),
-              (this.m_claimState = this.m_testNextClaimFakeResponse),
-              this.GetClaimStateChangeCallback().Dispatch(this.m_claimState),
-              (this.m_rtNextClaimTime = this.m_claimState.rtNextClaimTime),
-              this.SetClaimTimer(),
-              (this.m_testNextClaimFakeResponse = null)),
-            this.m_bInTestMode
-              ? this.m_claimState
-              : (this.m_claimPromise ||
-                  (this.m_claimPromise = this.InternalUserClaimItem()),
-                this.m_claimPromise)
-          );
-        }
-        async InternalUserClaimItem() {
-          (0, _._)(
-            _._.logged_in,
-            "User must be logged to use CSaleItemClaimableRewardsStore",
-          ),
-            (0, _._)(
-              this.m_claimState.bCanClaimNewItem,
-              "Only should be called when we previously verified you can claim something. ",
-            );
-          const _ = _._.Init(_._);
-          _.Body().set_language(_._.LANGUAGE);
-          let _ = null;
-          try {
-            const _ = await _._.ClaimItem(
-              this.m_SteamInterface.GetServiceTransport(),
-              _,
-            );
-            if (__webpack_require__.GetEResult() == _._)
-              return (
-                (this.m_claimedFreeItemDef =
-                  __webpack_require__.Body().reward_item()?.toObject() ?? {}),
-                (this.m_claimState = {
-                  bCanClaimNewItem: !1,
-                  bAlreadyClaimedCurrentItem: Boolean(
-                    this.m_claimedFreeItemDef,
-                  ),
-                  appid: this.m_claimedFreeItemDef.appid,
-                  community_item_type:
-                    this.m_claimedFreeItemDef.community_item_type,
-                  community_item_class:
-                    this.m_claimedFreeItemDef.community_item_class,
-                  rtNextClaimTime:
-                    (__webpack_require__.Body().next_claim_time() ?? 0) > 0
-                      ? __webpack_require__.Body().next_claim_time()
-                      : void 0,
-                }),
-                this.GetClaimStateChangeCallback().Dispatch(this.m_claimState),
-                (this.m_rtNextClaimTime = __webpack_require__
-                  .Body()
-                  .next_claim_time()),
-                this.SetClaimTimer(),
-                this.m_claimState
-              );
-            if (__webpack_require__.GetEResult() == _._)
-              return (
-                (this.m_canClaimPromise = this.InternalLoadCanUserClaimItem()),
-                this.m_canClaimPromise
-              );
-            _ = (0, _._)(_);
-          } catch (_) {
-            _ = (0, _._)(_);
-          }
-          return (
-            console.error(
-              "CSaleItemClaimableRewardsStore.InternalUserClaimItem failed: error: " +
-                _?.strErrorMsg,
-              _,
-            ),
-            {
-              bCanClaimNewItem: !1,
-              bAlreadyClaimedCurrentItem: !1,
-            }
-          );
-        }
-        SetClaimTimer() {
-          if (this.m_claimTimer) return;
-          if (!this.m_rtNextClaimTime) return;
-          const _ = Date.now();
-          let _ = new Date(1e3 * this.m_rtNextClaimTime);
-          const _ = Math.max(0, Math.min(1, _.getTime() - _));
-          this.m_claimTimer = window.setTimeout(
-            () => {
-              (this.m_claimTimer = void 0),
-                Date.now() > _.getTime()
-                  ? ((this.m_canClaimPromise = null),
-                    (this.m_claimPromise = null),
-                    (this.m_claimedFreeItemDef = null),
-                    (this.m_claimState = {
-                      bCanClaimNewItem: !0,
-                      bAlreadyClaimedCurrentItem: !1,
-                      rtNextClaimTime: void 0,
-                    }),
-                    this.GetClaimStateChangeCallback().Dispatch(
-                      this.m_claimState,
-                    ))
-                  : this.SetClaimTimer();
-            },
-            _ > 3e5 ? _ / 2 : _,
-          );
-        }
-        static s_Singleton;
-        static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              _.s_Singleton.Init(),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_SaleItemClaimableRewardsStore = _.s_Singleton)),
-            _.s_Singleton
-          );
-        }
-        constructor() {}
-        Init() {
-          const _ = (0, _._)("loyalty_webapi_token", "application_config");
-          (0, _._)(
-            _,
-            "CQuestCommunityInventoryStore: missing loyalty_webapi_token oauth permission",
-          ),
-            (this.m_SteamInterface = new _._(_._.WEBAPI_BASE_URL, _));
-        }
-      }
-      function _() {
-        const [_, _] = (0, _.useState)(_.Get().GetClaimItemState()),
-          [_, _] = (0, _.useState)(!0);
-        return (
-          (0, _.useEffect)(() => {
-            _.Get()
-              .LoadCanUserClaimItem()
-              .then(_)
-              .finally(() => _(!1));
-          }, []),
-          (0, _._)(_.Get().GetClaimStateChangeCallback(), _),
+      const _ = 1,
+        _ = 2,
+        _ = 3;
+      function _(_, _, _, _) {
+        const _ = (0, _.useRef)(void 0),
+          _ = (0, _.useRef)(void 0),
+          _ = (0, _._)();
+        _.current = _;
+        const [_, _] = (0, _.useState)(void 0),
           {
-            ..._,
-            bLoading: _,
-          }
-        );
-      }
-      function _() {
-        return {
-          fnClaimItem: _.Get().UserClaimItem,
-        };
-      }
-      function _() {
-        return {
-          fnSetClaimState: _.Get().TEST_OverrideClaimState,
-        };
-      }
-      async function _(_) {
-        return _.Get().ActivateProfileModifier(_);
+            include_assets: _,
+            include_release: _,
+            include_platforms: _,
+            include_all_purchase_options: _,
+            include_screenshots: _,
+            include_trailers: _,
+            include_ratings: _,
+            include_tag_count: _,
+            include_reviews: _,
+            include_basic_info: _,
+            include_supported_languages: _,
+            include_full_description: _,
+            include_included_items: _,
+            include_assets_without_overrides: _,
+            apply_user_filters: _,
+            include_links: _,
+            include_extra_details: _,
+          } = _;
+        if (
+          ((0, _.useEffect)(() => {
+            const _ = {
+              include_assets: _,
+              include_release: _,
+              include_platforms: _,
+              include_all_purchase_options: _,
+              include_screenshots: _,
+              include_trailers: _,
+              include_ratings: _,
+              include_tag_count: _,
+              include_reviews: _,
+              include_basic_info: _,
+              include_supported_languages: _,
+              include_full_description: _,
+              include_included_items: _,
+              include_assets_without_overrides: _,
+              apply_user_filters: _,
+              include_links: _,
+              include_extra_details: _,
+            };
+            let _ = null;
+            return (
+              !_ ||
+                _ < 0 ||
+                _._.Get().BHasStoreItem(_, _, _) ||
+                (void 0 !== _ && _ && _ == _.current) ||
+                (_ !== _.current && (_(void 0), (_.current = _)),
+                (_ = _().CancelToken.source()),
+                _._.Get()
+                  .QueueStoreItemRequest(_, _, _)
+                  .then((_) => {
+                    _?.token.reason || _.current !== _ || _(_ == _._), _();
+                  })),
+              () => _?.cancel("useStoreItemCache: unmounting")
+            );
+          }, [
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+          ]),
+          !_)
+        )
+          return [null, _];
+        if (!1 === _) return [void 0, _];
+        if (_._.Get().BIsStoreItemMissing(_, _)) return [void 0, _];
+        if (!_._.Get().BHasStoreItem(_, _, _)) return [void 0, _];
+        const _ = _._.Get().GetStoreItemWithLegacyVisibilityCheck(_, _);
+        return _ ? [_, _] : [null, _];
       }
       function _(_, _, _) {
-        const _ = (0, _._)();
-        return (0, _._)({
-          queryKey: [`SaleRewardsGetDefinition_${_}_${_}_${_}`],
-          queryFn: async () =>
-            (async function (_, _, _, _) {
-              const _ = _._.Init(_._);
-              return (
-                _.Body().set_sale_def_type(_),
-                _.Body().set_language(_),
-                _.Body().set_include_community_item_def(_),
-                (await _._.GetCurrentDefinition(_, _)).Body().toObject()
-              );
-            })(_, _, _, _),
-          staleTime: 1 / 0,
-        });
+        return _(_, _._._, _, _);
+      }
+      function _(_, _, _) {
+        return _(_, _._._, _, _);
+      }
+      function _(_, _, _) {
+        return _(_, _._._, _, _);
+      }
+      function _(_, _, _) {
+        const [_, _] = _(_, _, _);
+        let _;
+        _?.GetStoreItemType() != _._._ ||
+          _.GetAssets()?.GetHeaderURL() ||
+          1 != _?.GetIncludedAppIDs().length ||
+          (_ = _.GetIncludedAppIDs()[0]);
+        const [_, _] = _(_, _);
+        return _ && _?.BIsVisible() ? [_, _] : [_, _];
       }
       function _(_, _, _, _) {
-        const _ = (0, _._)();
-        return (0, _._)({
-          queryKey: [`GetClaimedSaleRewards_${_}_${_}_${_}_${_}`],
-          queryFn: async () =>
-            (async function (_, _, _, _) {
-              const _ = _._.Init(_._);
-              return (
-                _.Body().set_sale_def_type(_),
-                _.Body().set_language(_),
-                _.Body().set_include_community_item_def(_),
-                (await _._.GetClaimedSaleRewards(_, _)).Body().toObject()
+        const _ = (0, _._)(),
+          {
+            include_assets: _,
+            include_release: _,
+            include_platforms: _,
+            include_all_purchase_options: _,
+            include_screenshots: _,
+            include_trailers: _,
+            include_ratings: _,
+            include_tag_count: _,
+            include_reviews: _,
+            include_basic_info: _,
+            include_supported_languages: _,
+            include_full_description: _,
+            include_included_items: _,
+            include_assets_without_overrides: _,
+            apply_user_filters: _,
+            include_links: _,
+            include_extra_details: _,
+          } = _;
+        if (
+          ((0, _.useEffect)(() => {
+            if (!_ || 0 == _.length) return;
+            const _ = {
+                include_assets: _,
+                include_release: _,
+                include_platforms: _,
+                include_all_purchase_options: _,
+                include_screenshots: _,
+                include_trailers: _,
+                include_ratings: _,
+                include_tag_count: _,
+                include_reviews: _,
+                include_basic_info: _,
+                include_supported_languages: _,
+                include_full_description: _,
+                include_included_items: _,
+                include_assets_without_overrides: _,
+                apply_user_filters: _,
+                include_links: _,
+                include_extra_details: _,
+              },
+              _ = _.filter(
+                (_) =>
+                  !(
+                    _._.Get().BHasStoreItem(_, _, _) ||
+                    _._.Get().BIsStoreItemMissing(_, _)
+                  ),
               );
-            })(_, _, _, _),
-          staleTime: 1 / 0,
-        });
+            if (0 == _.length) return;
+            const _ = _().CancelToken.source(),
+              _ = _.map((_) => _._.Get().QueueStoreItemRequest(_, _, _));
+            return (
+              Promise.all(_).then(() => {
+                _.token.reason || _();
+              }),
+              () => _.cancel("useStoreItemCacheMultiplePackages: unmounting")
+            );
+          }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]),
+          !_)
+        )
+          return _;
+        if (
+          !_.every(
+            (_) =>
+              _._.Get().BHasStoreItem(_, _, _) ||
+              _._.Get().BIsStoreItemMissing(_, _),
+          )
+        )
+          return _;
+        return _.every((_) =>
+          _._.Get().GetStoreItemWithLegacyVisibilityCheck(_, _),
+        )
+          ? _
+          : _;
       }
-      (0, _._)([_._], _.prototype, "TEST_OverrideClaimState", null),
-        (0, _._)([_._], _.prototype, "UserClaimItem", null);
+      function _(_, _, _) {
+        return _(_, _._._, _, _);
+      }
+      function _() {
+        _.useEffect(
+          () => (
+            _._.Get().SetReturnUnavailableItems(!0),
+            () => _._.Get().SetReturnUnavailableItems(!1)
+          ),
+          [],
+        );
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -4062,6 +3910,15 @@
           this.m_metadata = _.Body().metadata().toObject();
         }
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = () => (_._.EUNIVERSE === _._ ? 2581 : 45267781);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -4684,6 +4541,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -4817,7 +4676,7 @@
         let _ = [];
         _.isSuccess &&
           _.data.arrSimilarPlayedApps &&
-          _.data.arrSimilarPlayedApps.forEach((_) => {
+          _.data.arrSimilarPlayedApps.slice(0, 2).forEach((_) => {
             const _ = _._.Get().GetApp(_.appid);
             _
               ? _.push(
@@ -5133,8 +4992,6 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       new _._("DiscoveryQueueApp").Debug;
       function _(_) {
@@ -6187,53 +6044,6 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      function _() {
-        return window.innerWidth < parseInt(_().strMaxMobileWidth);
-      }
-      function _() {
-        const _ = (0, _._)();
-        return (
-          _.useEffect(
-            () => (
-              window.addEventListener("resize", _),
-              () => window.removeEventListener("resize", _)
-            ),
-            [_],
-          ),
-          window.innerWidth < parseInt(_().strMaxMobileWidth)
-        );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid");
-      function _(_, _, _, _) {
-        _.useEffect(() => {
-          const _ = (_) => {
-            _.key === _ &&
-              (_(_), _ && _.preventDefault(), _ && _.stopPropagation());
-          };
-          return (
-            document.addEventListener("keydown", _),
-            () => document.removeEventListener("keydown", _)
-          );
-        }, [_, _, _, _]);
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
       __webpack_require__._(module_exports),
         __webpack_require__._(module_exports, {
           default: () => _,
@@ -6388,15 +6198,6 @@
               children: " ",
             });
       }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      const _ =
-        __webpack_require__._ +
-        "images/applications/store/defaultappheader.png?v=valveisgoodatcaching";
     },
   },
 ]);

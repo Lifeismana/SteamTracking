@@ -221,11 +221,7 @@
         static s_Singleton;
         static Get() {
           return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              _.s_Singleton.Init(),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_GiveawayStore = _.s_Singleton)),
+            _.s_Singleton || ((_.s_Singleton = new _()), _.s_Singleton.Init()),
             _.s_Singleton
           );
         }
@@ -350,70 +346,40 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      class _ {
-        m_counts = null;
-        m_promise;
-        GetCounts() {
-          return this.m_counts;
-        }
-        async LoadCounts() {
-          return Boolean(this.m_counts)
-            ? this.m_counts
-            : (this.m_promise || (this.m_promise = this.LoadInternalCount()),
-              this.m_promise);
-        }
-        async LoadInternalCount() {
-          let _ = null;
-          try {
-            const _ =
-                _._.STORE_BASE_URL + "saleaction/ajaxgetuserdeckcompatcounts",
-              _ = await _().get(_, {});
-            if (200 == _?.status && _.data?.success == _._ && _.data?.counts)
-              return (this.m_counts = _.data.counts), this.m_counts;
-            _ = (0, _._)(_);
-          } catch (_) {
-            _ = (0, _._)(_);
-          }
-          return (
-            console.error(
-              "CDeckCompCountStore.LoadInternalCount failed: " + _?.strErrorMsg,
-              _,
-            ),
-            null
-          );
-        }
-        static s_globalSingletonStore;
-        static Get() {
-          return (
-            _.s_globalSingletonStore ||
-              ((_.s_globalSingletonStore = new _()),
-              ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-                (window.g_DeckCompatCountStores = _.s_globalSingletonStore)),
-            _.s_globalSingletonStore
-          );
-        }
-        constructor() {
-          if (document.getElementById("application_config")) {
-            let _ = (0, _._)("deckcompatcount", "application_config");
-            _.ValidateListCompat(_) && (this.m_counts = _);
-          }
-        }
-        static ValidateListCompat(_) {
-          const _ = _;
-          return (
-            _ &&
-            "number" == typeof _.verified &&
-            "number" == typeof _.unsupported &&
-            "number" == typeof _.playable
-          );
+      async function _() {
+        const _ = new URLSearchParams(),
+          _ = "undefined" != typeof self ? self.origin : "store";
+        _ && _.set("origin", _);
+        const _ = `${_._.STORE_BASE_URL}saleaction/ajaxgetuserdeckcompatcounts?${_}`,
+          _ = await fetch(_);
+        if (!_._) throw new Error(`${_} answered ${_.status}`);
+        const _ = await _.json();
+        if (_?.success != _._ || !_.counts)
+          throw new Error(`${_} answered EResult ${_?.success}`);
+        return _.counts;
+      }
+      const _ = 3e5;
+      function _() {
+        const { data: _ } = (0, _._)({
+          queryKey: ["DeckCompatCounts"],
+          queryFn: () => _(),
+          staleTime: _,
+          retry: !1,
+        });
+        return _;
+      }
+      function _(_, _) {
+        switch (_) {
+          case _._:
+            return _?.playable;
+          case _._:
+            return _?.unsupported;
+          default:
+            return _?.verified;
         }
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -739,8 +705,27 @@
               ],
             });
       }
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        const _ = Number(_.args.packageid);
+        return _
+          ? (0, _.jsx)(_._, {
+              packageID: _,
+              display_style: (0, _._)(_.args.display),
+            })
+          : null;
+      }
+      function _(_) {
+        const _ = Number(_.args.packageid),
+          _ = Number(_.args.compareid);
+        return _ && _
+          ? (0, _.jsx)(_._, {
+              packageID: _,
+              compareID: _,
+            })
+          : null;
+      }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -811,36 +796,42 @@
           _ = (0, _._)(_),
           { fnOpenDoor: _ } = (0, _._)(),
           [_, _] = _.useState(!1),
-          [_, _] = _.useState(!1);
-        return (0, _.jsx)(_._, {
-          disabled: _,
-          onClick: (_) => {
-            _ ||
-              (_._.logged_in
-                ? (_(!0),
-                  _(_, !0, null, !1)
-                    .then((_) => {
-                      _ || _(!0), _(!1);
-                    })
-                    .catch(() => {
-                      _(!0), _(!1);
-                    }))
-                : (0, _._)());
-          },
-          children: Boolean(_)
-            ? (0, _.jsx)("div", {
-                children: (0, _._)("#GrantAwardError_Busy"),
-              })
-            : (0, _.jsxs)(_.Fragment, {
-                children: [
-                  Boolean(_) &&
-                    (0, _.jsx)(_._, {
-                      size: "small",
-                    }),
-                  Boolean(_) && (0, _.jsx)(_.Jlk, {}),
-                  _,
-                ],
-              }),
+          [_, _] = _.useState(!1),
+          { elDialogElement: _, fnShowLogonDialog: _ } = (0, _._)();
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
+              disabled: _,
+              onClick: (_) => {
+                _ ||
+                  (_._.logged_in
+                    ? (_(!0),
+                      _(_, !0, null, !1)
+                        .then((_) => {
+                          _ || _(!0), _(!1);
+                        })
+                        .catch(() => {
+                          _(!0), _(!1);
+                        }))
+                    : _());
+              },
+              children: Boolean(_)
+                ? (0, _.jsx)("div", {
+                    children: (0, _._)("#GrantAwardError_Busy"),
+                  })
+                : (0, _.jsxs)(_.Fragment, {
+                    children: [
+                      Boolean(_) &&
+                        (0, _.jsx)(_._, {
+                          size: "small",
+                        }),
+                      Boolean(_) && (0, _.jsx)(_.Jlk, {}),
+                      _,
+                    ],
+                  }),
+            }),
+            _,
+          ],
         });
       }
       function _(_) {
@@ -893,7 +884,7 @@
           _ = Number.parseInt((0, _._)(_.args, "itemdefid")),
           _ = Number.parseInt((0, _._)(_.args, "maxquantity")),
           _ = (0, _._)(_.args, "calltoaction");
-        return (0, _._)(_, _)
+        return (0, _._)(_, _, !1) && _
           ? (0, _.jsx)(_._, {
               language: _.language,
               clanAccountID: _.clanSteamID.GetAccountID(),
@@ -911,30 +902,14 @@
             });
       }
       function _(_) {
-        const _ = (function () {
-          const [_, _] = _.useState(_.Get().GetCounts());
-          return (
-            _.useEffect(() => {
-              _ || _.Get().LoadCounts().then(_);
-            }, []),
-            _
-          );
-        })();
+        const _ = _();
         if (!_)
           return (0, _.jsx)(_._, {
             size: "small",
           });
         const _ = Number.parseInt((0, _._)(_.args));
-        let _ = _.verified;
-        switch (_) {
-          case _._:
-            _ = _.playable;
-            break;
-          case _._:
-            _ = _.unsupported;
-        }
         return (0, _.jsx)("span", {
-          children: (0, _._)(Number(_)),
+          children: (0, _._)(Number(_(_, _))),
         });
       }
       function _(_) {
@@ -1025,18 +1000,17 @@
       function _(_) {
         const { showErrorInfo: _, event: _ } = _.context,
           _ = Number.parseInt((0, _._)(_.args)),
-          _ = _.useMemo(
-            () =>
-              _.jsondata.sale_sections?.find(
+          _ = _.useMemo(() => {
+            if (_)
+              return _.jsondata.sale_sections?.find(
                 (_) =>
                   "vo_internal" == _.section_type &&
                   ("reservation_widget" ==
                     _.internal_section_data?.internal_type ||
                     "while_supplies_last" ==
                       _.internal_section_data?.internal_type),
-              ),
-            [_],
-          );
+              );
+          }, [_]);
         if (_ && _) {
           const _ = Number.parseInt((0, _._)(_.args, "depositpackageid")),
             _ = Number.parseInt((0, _._)(_.args, "psulesspackageid")),
@@ -1059,13 +1033,11 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { bSalePage: _ } = _,
-          [_, _] = _.useState(_._.IsInitialized());
+          [_, _] = _.useState(!1);
         return (
           (0, _._)(_, _),
           _.useEffect(() => {
-            _._.Init(new _._(_._.WEBAPI_BASE_URL)),
-              _._.Init(),
-              _._.InitGlobal().then(() => _(!0));
+            _._.Init(new _._(_._.WEBAPI_BASE_URL)), _._.Init(), _(!0);
           }, []),
           _.useEffect(() => {
             const _ = (0, _._)();
@@ -1137,14 +1109,14 @@
                         [
                           "price",
                           {
-                            Constructor: _._,
+                            Constructor: _,
                             autocloses: !1,
                           },
                         ],
                         [
                           "pricesavings",
                           {
-                            Constructor: _._,
+                            Constructor: _,
                             autocloses: !1,
                           },
                         ],

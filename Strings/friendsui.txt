@@ -563,11 +563,11 @@ $\nY8O
 (\t"6\n\vCMsgJSAlert
 (\t"8\n\rCMsgJSConfirm
 (\t":\n\rCLogUploadMsg
-(\t"H\n$CClientNotificationDownloadCompleted
 (\t"N\n2CClientNotificationCannotReadControllerGuideButton
 (\t"O\n)CClientNotificationRemoteClientConnection
 (\t"Y\n#CClientNotificationItemAnnouncement
 (\t"\v\n\tCPauseMsg"\f\n\nCResumeMsg"
+(\t"d\n$CClientNotificationDownloadCompleted
 (\t"v\n,CClientNotificationStreamingClientConnection
 (\v2 .google.protobuf.DescriptorProto
 (\v2!.google.protobuf.EnumValueOptions"
@@ -8129,6 +8129,7 @@ reject
 relative
 release_space %llu
 reload
+remote_client_name
 remoteplay/connect/
 remove
 rename

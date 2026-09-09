@@ -1698,7 +1698,7 @@
     },
     23352: (e, t, o) => {
       "use strict";
-      o.d(t, { J: () => S });
+      o.d(t, { J: () => M });
       var r = o(7850),
         s = o(37834),
         n = o(52893),
@@ -1843,7 +1843,7 @@
       }
       var T = o(9154),
         A = o(61859);
-      function S(e, t, o) {
+      function M(e, t, o) {
         const [n, l] = a.useState(void 0),
           i = a.useRef(null),
           c = a.useCallback(
@@ -1906,7 +1906,7 @@
           n &&
             (0, r.jsx)(T.EN, {
               active: !0,
-              children: (0, r.jsx)(M, {
+              children: (0, r.jsx)(S, {
                 schema: e,
                 bColor: t,
                 closeModal: d,
@@ -1915,7 +1915,7 @@
             }),
         ];
       }
-      const M = a.memo(function (e) {
+      const S = a.memo(function (e) {
         const {
             schema: t,
             strColor: o,
@@ -2017,7 +2017,7 @@
     },
     17558: (e, t, o) => {
       "use strict";
-      o.d(t, { E: () => h });
+      o.d(t, { E: () => u });
       var r = o(7850),
         s = o(37834),
         n = o(52893),
@@ -2025,9 +2025,8 @@
         l = o(68255),
         i = o(9154),
         c = o(72421),
-        d = o(61859),
-        u = o(30470);
-      function h(e, t) {
+        d = o(61859);
+      function u(e, t) {
         const [o, n] = a.useState(void 0),
           l = a.useCallback(
             (o) => {
@@ -2087,34 +2086,34 @@
           o &&
             (0, r.jsx)(i.EN, {
               active: !0,
-              children: (0, r.jsx)(m, { schema: e, closeModal: d, ...o }),
+              children: (0, r.jsx)(h, { schema: e, closeModal: d, ...o }),
             }),
         ];
       }
-      const m = a.memo(function (e) {
+      const h = a.memo(function (e) {
         const {
             schema: t,
             strLinkText: o,
             strLinkHref: s,
             bIsUpdate: i,
-            addtlAttrs: h,
-            addtlAttrsValues: m,
-            closeModal: g,
-            view: f,
-            from: b,
-            to: v,
+            addtlAttrs: u,
+            addtlAttrsValues: h,
+            closeModal: p,
+            view: g,
+            from: f,
+            to: b,
           } = e,
-          [C, _] = a.useState(o),
-          [k, w] = a.useState(s),
+          [v, C] = a.useState(o),
+          [_, k] = a.useState(s),
+          w = a.useRef(null),
           x = a.useRef(null),
-          y = a.useRef(null),
-          [B, T] = a.useState(m);
+          [y, B] = a.useState(h);
         a.useLayoutEffect(() => {
           var e, t, o, r, s;
           (
             null ===
               (t =
-                null === (e = x.current) || void 0 === e ? void 0 : e.value) ||
+                null === (e = w.current) || void 0 === e ? void 0 : e.value) ||
             void 0 === t
               ? void 0
               : t.length
@@ -2122,114 +2121,73 @@
             ? (
                 null ===
                   (r =
-                    null === (o = y.current) || void 0 === o
+                    null === (o = x.current) || void 0 === o
                       ? void 0
                       : o.value) || void 0 === r
                   ? void 0
                   : r.length
               )
-              ? (x.current.Focus(), x.current.element.select())
-              : y.current.Focus()
-            : null === (s = x.current) || void 0 === s || s.Focus();
+              ? (w.current.Focus(), w.current.element.select())
+              : x.current.Focus()
+            : null === (s = w.current) || void 0 === s || s.Focus();
         }, []);
-        const A = i
+        const T = i
             ? (0, d.we)("#FormattingToolbar_EditLink")
             : (0, d.we)("#FormattingToolbar_InsertLink"),
-          S = i
+          A = i
             ? (0, d.we)("#Button_Save")
             : (0, d.we)("#FormattingToolbar_InsertLink");
         return (0, r.jsxs)(c._, {
           onOK: () => {
-            var e, o, r, s, a;
-            let l = f.state.tr;
-            if (
-              !(
-                "dev" != u.TS.WEB_UNIVERSE ||
-                (f &&
-                  null != b &&
-                  null != v &&
-                  (null === (e = null == t ? void 0 : t.marks) || void 0 === e
-                    ? void 0
-                    : e.link))
-              )
-            )
-              return void console.warn("Missing required data in insertLink", {
-                view: f,
-                from: b,
-                to: v,
-                schema: t,
-              });
-            const i = { href: k };
-            for (const e in B) i[e] = B[e];
-            const c =
-              null === (o = t.marks.link) || void 0 === o
+            var e;
+            let o = g.state.tr;
+            const r = { href: _ };
+            for (const e in y) r[e] = y[e];
+            const s =
+              null === (e = t.marks.link) || void 0 === e
                 ? void 0
-                : o.create(i);
-            if ("dev" == u.TS.WEB_UNIVERSE && !c)
-              return void console.error(
-                "Failed to create link mark with attrs",
-                i,
-              );
-            const d = t.text(C || k, [c]);
-            "dev" == u.TS.WEB_UNIVERSE &&
-              (console.log(
-                "Replacement node:",
-                (null === (r = d.toJSON) || void 0 === r
-                  ? void 0
-                  : r.call(d)) || d,
-              ),
-              console.log("Transaction range from-to:", { from: b, to: v }),
-              console.log(
-                "Document slice at range:",
-                (null ===
-                  (a =
-                    null === (s = f.state.doc.slice(b, v).content) ||
-                    void 0 === s
-                      ? void 0
-                      : s.toJSON) || void 0 === a
-                  ? void 0
-                  : a.call(s)) || f.state.doc.slice(b, v),
-              ));
+                : e.create(r);
+            const a = t.text(v || _, [s]);
             try {
-              (l = l.replaceRangeWith(b, v, d)),
-                (l = l.setSelection(
-                  n.U3.create(l.doc, b + d.nodeSize, b + d.nodeSize),
+              (o = o.replaceRangeWith(f, b, a)),
+                (o = o.setSelection(
+                  n.U3.create(o.doc, f + a.nodeSize, f + a.nodeSize),
                 )),
-                f.dispatch(l);
+                g.dispatch(o);
             } catch (e) {
               console.error("Error during link insertion", e);
             }
-            g();
+            p();
           },
-          closeModal: g,
-          strTitle: A,
-          strOKText: S,
-          bOKDisabled: 0 == k.length,
+          closeModal: p,
+          strTitle: T,
+          strOKText: A,
+          bOKDisabled: 0 == _.length,
           children: [
             (0, r.jsx)(l.pd, {
-              ref: x,
-              value: C,
-              onChange: (e) => _(e.currentTarget.value),
+              ref: w,
+              value: v,
+              onChange: (e) => C(e.currentTarget.value),
               label: (0, d.we)("#FormattingToolbar_LinkText"),
             }),
             (0, r.jsx)(l.pd, {
-              ref: y,
-              value: k,
+              ref: x,
+              value: _,
               placeholder: "https://",
-              onChange: (e) => w(e.currentTarget.value),
+              onChange: (e) => k(e.currentTarget.value),
               label: (0, d.we)("#FormattingToolbar_LinkAddress"),
               mustBeURL: !0,
             }),
-            h && (0, r.jsx)(p, { addtlAttrs: h, values: B, setValues: T }),
+            u && (0, r.jsx)(m, { addtlAttrs: u, values: y, setValues: B }),
           ],
         });
       });
-      function p(e) {
+      function m(e) {
         const { addtlAttrs: t, values: o, setValues: s } = e;
         return (0, r.jsx)(r.Fragment, {
           children: Object.keys(t).map((e) =>
             (0, r.jsx)(
-              g,
+              p,
               {
                 attrName: e,
                 fnRender: t[e].fnRenderEditor,
@@ -2241,7 +2199,7 @@
           ),
         });
       }
-      const g = a.memo(function (e) {
+      const p = a.memo(function (e) {
         const { attrName: t, fnRender: o, value: r, setValues: s } = e;
         return o(
           r,
@@ -2778,8 +2736,8 @@
           (0, w.D5)(u, y);
         const {
             refDiv: A,
-            onActivate: S,
-            onGamepadDirection: M,
+            onActivate: M,
+            onGamepadDirection: S,
           } = (function (e) {
             const t = h.useRef(null),
               o = (0, a.FN)(),
@@ -2830,9 +2788,9 @@
                 ref: j,
                 spellCheck: m,
                 focusable: !0,
-                onActivate: S,
+                onActivate: M,
                 onOKActionDescription: (0, k.we)("#UserGameNotes_Edit"),
-                onGamepadDirection: M,
+                onGamepadDirection: S,
                 ...g,
               },
               `editordiv_${m}`,
@@ -3314,12 +3272,12 @@
               children: "string" == typeof t ? (0, h.we)(t) : t,
             }),
             (0, r.jsx)("div", {
-              children: (0, r.jsx)(S, { keyboardShortcut: o }),
+              children: (0, r.jsx)(M, { keyboardShortcut: o }),
             }),
           ],
         });
       }
-      function S(e) {
+      function M(e) {
         var t;
         const { keyboardShortcut: o } = e,
           s = o.split("-"),
@@ -3331,18 +3289,18 @@
                 l.Fragment,
                 {
                   children: [
-                    (0, r.jsx)(M, { children: (0, r.jsx)(j, { modifier: e }) }),
+                    (0, r.jsx)(S, { children: (0, r.jsx)(j, { modifier: e }) }),
                     " + ",
                   ],
                 },
                 t,
               ),
             ),
-            (0, r.jsx)(M, { children: n.toUpperCase() }),
+            (0, r.jsx)(S, { children: n.toUpperCase() }),
           ],
         });
       }
-      function M(e) {
+      function S(e) {
         return (0, r.jsx)("span", {
           className: g.KeyCap,
           children: e.children,

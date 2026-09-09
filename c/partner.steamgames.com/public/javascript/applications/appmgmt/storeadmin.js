@@ -393,11 +393,10 @@
         Missing: "_1Prze41qAKK3Yf2ywGaP4x",
         Outside: "gYYAD-UX0KTtpP8A7wose",
         CustomUsd: "Ru7OVKpEg2-4T6i2fJPVP",
-        AboveAutoPublish: "_18NNA8ajB8j6lCIlkk8_uk",
         MissingCurrency: "_1aHJaADVcfWKEoJd3rHyzS",
         Title: "_3vH34cEyQM0jTB1rtzMc19",
         CurrencyWarningsCtn: "_2H_McBAV-1DEhfPhYqmTG8",
-        AutoPublishCeiling: "_1x66lPK7LljczLFs4Z0w2Y",
+        AboveAutoPublish: "_18NNA8ajB8j6lCIlkk8_uk",
         ThresholdMiniTable: "_1Qz3SUdF4Z2HAIlSWPA08n",
         WarningTitle: "_1jnFS4SBVwvvKVzrE6v9ly",
         WarningAbove: "_2QdKNR-tKnTQ9LEnQ8bVV-",
@@ -889,13 +888,7 @@
         }
         static s_Singleton;
         static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_DailyDealEditStore = _.s_Singleton)),
-            _.s_Singleton
-          );
+          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
         }
         constructor() {}
       }
@@ -1236,67 +1229,58 @@
             [_],
           ),
           _ = _?.find((_) => _.gid === _);
-        return (
-          "dev" == _._.WEB_UNIVERSE &&
-            console.log(
-              `AssetRequestSelectPartnerEvent: selectedEventGID=${_} === selected?.gid=${_?.gid}`,
-              _,
-              _,
-              _?.gid,
-            ),
-          _ || (!_ && !_?.appid)
-            ? _ && 0 != _.length
-              ? (0, _.jsxs)(_.Fragment, {
-                  children: [
-                    Boolean(_) &&
-                      (0, _.jsx)("a", {
-                        href: _,
-                        target: "_blank",
-                        style: {
-                          float: "right",
-                        },
-                        children: (0, _._)(
-                          "#DiscountDashboard_DetailView_BatchDiscount_MaxDiscountDocumentationLink",
-                        ),
-                      }),
-                    (0, _.jsx)(_._, {
-                      label: _,
-                      tooltip: _,
-                      selectedOption: _,
-                      onChange: (_) => _(_.clanAccountID, _.data.gid),
-                      rgOptions: _,
-                    }),
-                  ],
-                })
-              : (0, _.jsxs)(_.Fragment, {
-                  children: [
-                    (0, _.jsxs)(_._, {
-                      children: [
-                        _,
-                        " ",
-                        (0, _.jsx)(_._, {
-                          tooltip: _,
-                        }),
-                      ],
-                    }),
-                    (0, _.jsx)("div", {
-                      className: (0, _._)(_.ErrorStylesWithIcon, "ErrorCtn"),
+        return _ || (!_ && !_?.appid)
+          ? _ && 0 != _.length
+            ? (0, _.jsxs)(_.Fragment, {
+                children: [
+                  Boolean(_) &&
+                    (0, _.jsx)("a", {
+                      href: _,
+                      target: "_blank",
+                      style: {
+                        float: "right",
+                      },
                       children: (0, _._)(
-                        "#EventDropDown_NoEventFound",
-                        (0, _.jsx)("a", {
-                          href: `${_._.COMMUNITY_BASE_URL}ogg/${_}/partnerevents`,
-                          target: "_blank",
-                        }),
+                        "#DiscountDashboard_DetailView_BatchDiscount_MaxDiscountDocumentationLink",
                       ),
                     }),
-                  ],
-                })
-            : (0, _.jsx)(_._, {
-                string: (0, _._)("#Loading"),
-                size: "small",
-                position: "center",
+                  (0, _.jsx)(_._, {
+                    label: _,
+                    tooltip: _,
+                    selectedOption: _,
+                    onChange: (_) => _(_.clanAccountID, _.data.gid),
+                    rgOptions: _,
+                  }),
+                ],
               })
-        );
+            : (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsxs)(_._, {
+                    children: [
+                      _,
+                      " ",
+                      (0, _.jsx)(_._, {
+                        tooltip: _,
+                      }),
+                    ],
+                  }),
+                  (0, _.jsx)("div", {
+                    className: (0, _._)(_.ErrorStylesWithIcon, "ErrorCtn"),
+                    children: (0, _._)(
+                      "#EventDropDown_NoEventFound",
+                      (0, _.jsx)("a", {
+                        href: `${_._.COMMUNITY_BASE_URL}ogg/${_}/partnerevents`,
+                        target: "_blank",
+                      }),
+                    ),
+                  }),
+                ],
+              })
+          : (0, _.jsx)(_._, {
+              string: (0, _._)("#Loading"),
+              size: "small",
+              position: "center",
+            });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -4664,7 +4648,6 @@
           }),
         });
       }
-      var _ = __webpack_require__("chunkid");
       _.memo(function (_) {
         const {
             schema: _,
@@ -4699,40 +4682,12 @@
         return (0, _.jsxs)(_, {
           onOK: () => {
             let _ = _.state._;
-            if (
-              !(
-                "dev" != _._.WEB_UNIVERSE ||
-                (_ && null != _ && null != _ && _?.marks?.link)
-              )
-            )
-              return void console.warn("Missing required data in insertLink", {
-                view: _,
-                from: _,
-                _: _,
-                schema: _,
-              });
             const _ = {
               href: _,
             };
             for (const _ in _) _[_] = _[_];
             const _ = _.marks.link?.create(_);
-            if ("dev" == _._.WEB_UNIVERSE && !_)
-              return void console.error(
-                "Failed to create link mark with attrs",
-                _,
-              );
             const _ = _.text(_ || _, [_]);
-            "dev" == _._.WEB_UNIVERSE &&
-              (console.log("Replacement node:", _.toJSON?.() || _),
-              console.log("Transaction range from-to:", {
-                from: _,
-                _: _,
-              }),
-              console.log(
-                "Document slice at range:",
-                _.state.doc.slice(_, _).content?.toJSON?.() ||
-                  _.state.doc.slice(_, _),
-              ));
             try {
               (_ = _.replaceRangeWith(_, _, _)),
                 (_ = _.setSelection(
@@ -4805,6 +4760,7 @@
       });
       var _ = __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
         _ = __webpack_require__._(_),
@@ -9032,11 +8988,15 @@
               string: (0, _._)("#Loading"),
             });
       }
-      var _,
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = 1,
+        _ = 2,
+        _ = 3,
+        _ = 4,
+        _ = 5;
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { rgDLC: _, parentappid: _ } = _,
@@ -9264,23 +9224,23 @@
               },
               {
                 label: (0, _._)("#StoreAdmin_Highlight_New"),
-                data: _.New,
+                data: _,
               },
               {
                 label: (0, _._)("#StoreAdmin_Highlight_ComingSoon"),
-                data: _.ComingSoon,
+                data: _,
               },
               {
                 label: (0, _._)("#StoreAdmin_Highlight_PlayerFavorite"),
-                data: _.PlayerFavorite,
+                data: _,
               },
               {
                 label: (0, _._)("#StoreAdmin_Highlight_Recommended"),
-                data: _.Recommended,
+                data: _,
               },
               {
                 label: (0, _._)("#StoreAdmin_Highlight_NewPlayer"),
-                data: _.NewPlayers,
+                data: _,
               },
             ],
             [],
@@ -9346,13 +9306,6 @@
           ],
         });
       }
-      !(function (_) {
-        (_[(_.New = 1)] = "New"),
-          (_[(_.ComingSoon = 2)] = "ComingSoon"),
-          (_[(_.PlayerFavorite = 3)] = "PlayerFavorite"),
-          (_[(_.Recommended = 4)] = "Recommended"),
-          (_[(_.NewPlayers = 5)] = "NewPlayers");
-      })(_ || (_ = {}));
       var _ = __webpack_require__("chunkid");
       function _(_) {
         const { rgPinnedBundles: _, rgEnabledBundles: _ } = _,
@@ -9691,13 +9644,7 @@
         }
         static s_Singleton;
         static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_PriceProposalReviewRequiredStore = _.s_Singleton)),
-            _.s_Singleton
-          );
+          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
         }
         constructor() {
           const _ = (0, _._)("proposed_prices", "application_config");
@@ -11383,7 +11330,7 @@
                     (0, _.jsx)("li", {
                       className: _.Outside,
                       children:
-                        "Outside of acceptable threshold (above 100% or below 50% of guideline)",
+                        "Outside of acceptable threshold (more than 125% above or 50% below the guideline)",
                     }),
                     (0, _.jsx)("li", {
                       className: _.CustomUsd,
@@ -11726,66 +11673,53 @@
           );
         if (_.length > 0 || _.length > 0) {
           const _ = _(_);
-          return (0, _.jsxs)(_.Fragment, {
+          return (0, _.jsxs)("div", {
+            className: _.CurrencyWarningsCtn,
             children: [
-              Boolean(_ > _) &&
-                (0, _.jsxs)("div", {
-                  className: _.AutoPublishCeiling,
+              Boolean(_.length > 0) &&
+                (0, _.jsxs)("table", {
+                  className: _.ThresholdMiniTable,
                   children: [
-                    "USD price $",
-                    _(_),
-                    " is above the auto-publish threshold of $80 USD",
+                    (0, _.jsx)(_, {
+                      strGuidanceMessage: `${_.length} currencies above guidance threshold for USD $ ${_}`,
+                      strDirection: "above",
+                    }),
+                    (0, _.jsx)("tbody", {
+                      children: _.map((_) =>
+                        (0, _.jsx)(
+                          _,
+                          {
+                            thresholdData: _,
+                            strDirection: "▲",
+                          },
+                          _.packageid + "_" + _.strCurrency,
+                        ),
+                      ),
+                    }),
                   ],
                 }),
-              (0, _.jsxs)("div", {
-                className: _.CurrencyWarningsCtn,
-                children: [
-                  Boolean(_.length > 0) &&
-                    (0, _.jsxs)("table", {
-                      className: _.ThresholdMiniTable,
-                      children: [
-                        (0, _.jsx)(_, {
-                          strGuidanceMessage: `${_.length} currencies above guidance threshold for USD $ ${_}`,
-                          strDirection: "above",
-                        }),
-                        (0, _.jsx)("tbody", {
-                          children: _.map((_) =>
-                            (0, _.jsx)(
-                              _,
-                              {
-                                thresholdData: _,
-                                strDirection: "▲",
-                              },
-                              _.packageid + "_" + _.strCurrency,
-                            ),
-                          ),
-                        }),
-                      ],
+              Boolean(_.length > 0) &&
+                (0, _.jsxs)("table", {
+                  className: _.ThresholdMiniTable,
+                  children: [
+                    (0, _.jsx)(_, {
+                      strGuidanceMessage: `${_.length} currencies below guidance threshold for USD $ ${_}`,
+                      strDirection: "below",
                     }),
-                  Boolean(_.length > 0) &&
-                    (0, _.jsxs)("table", {
-                      className: _.ThresholdMiniTable,
-                      children: [
-                        (0, _.jsx)(_, {
-                          strGuidanceMessage: `${_.length} currencies below guidance threshold for USD $ ${_}`,
-                          strDirection: "below",
-                        }),
-                        (0, _.jsx)("tbody", {
-                          children: _.map((_) =>
-                            (0, _.jsx)(
-                              _,
-                              {
-                                thresholdData: _,
-                                strDirection: "▼",
-                              },
-                              _.packageid + "_" + _.strCurrency,
-                            ),
-                          ),
-                        }),
-                      ],
+                    (0, _.jsx)("tbody", {
+                      children: _.map((_) =>
+                        (0, _.jsx)(
+                          _,
+                          {
+                            thresholdData: _,
+                            strDirection: "▼",
+                          },
+                          _.packageid + "_" + _.strCurrency,
+                        ),
+                      ),
                     }),
-                ],
-              }),
+                  ],
+                }),
             ],
           });
         }
@@ -13169,13 +13103,7 @@
         }
         static s_Singleton;
         static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_StoreTagCache = _.s_Singleton)),
-            _.s_Singleton
-          );
+          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
         }
         constructor() {
           (0, _._)(this);
@@ -19546,8 +19474,11 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
@@ -19738,10 +19669,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = "capsule_index_";

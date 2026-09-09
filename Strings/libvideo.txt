@@ -1081,6 +1081,7 @@ $ffn
 )\n$k_EMsgGCHAccountTradeBanStatusChange
 )\n$k_EMsgGMShellAndServerAddressUpdates
 )\n$k_EMsgProductInfoChangedNotification
+)\n$k_EMsgRemoteClientInstallAppResponse
 )\n$k_EMsgRemoteClientPairWifiAPResponse
 )\n$k_EMsgUCMPublishedFileContentUpdated
 )\n$k_EMsgUCMUpdatePublishedFileResponse
@@ -1654,7 +1655,6 @@ $ffn
 0.15
 000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798990123456789abcdef
 00:00:00
-00:43:50
 01/01/00
 0123456789
 0123456789.
@@ -2169,6 +2169,7 @@ $ffn
 2048
 208.64.200.0/22
 208.78.164.0/22
+20:48:08
 20CAlignedYUV420Buffer
 20CCDDBAppDetailCommon
 20CNetFilterEncryption
@@ -2343,9 +2344,9 @@ $ffn
 6*Fc7
 6-nn
 6144
+64CK\vH
 65536
 60000000
-64CK\vH
 666666666666666666666666666666666666666666666666\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\`
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
@@ -8867,7 +8868,7 @@ Sending msg of type '%s' with timeout=0.  Receiver won't have any time to servic
 Sending of an email failed
 Sending up to %u queued request(s) for %s\n
 Sent message: %s - %u bytes\n
-Sep  1 2026
+Sep  7 2026
 September
 Serbian
 Server
@@ -15458,6 +15459,8 @@ k_EMsgRemoteClientAuthorizationResponse
 k_EMsgRemoteClientBase
 k_EMsgRemoteClientGetControllerConfig
 k_EMsgRemoteClientGetControllerConfigResponse
+k_EMsgRemoteClientInstallApp
+k_EMsgRemoteClientInstallAppResponse
 k_EMsgRemoteClientPairWifiAP
 k_EMsgRemoteClientPing
 k_EMsgRemoteClientPingResponse

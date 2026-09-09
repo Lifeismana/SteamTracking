@@ -46,35 +46,36 @@
     32803: (e, t, n) => {
       "use strict";
       n.d(t, {
-        Bw: () => L,
-        EX: () => y,
-        Hx: () => T,
-        JP: () => C,
-        LJ: () => f,
-        OG: () => x,
+        Bw: () => T,
+        EX: () => f,
+        Hx: () => x,
+        JP: () => k,
+        LJ: () => D,
+        OG: () => U,
         PH: () => r,
-        T7: () => I,
+        T7: () => y,
+        sY: () => A,
         tj: () => H,
-        yh: () => A,
+        yh: () => j,
       });
       var r,
-        o = n(7850),
-        a = n(27939),
-        s = n(22837),
-        i = n(45699),
+        i = n(7850),
+        s = n(27939),
+        a = n(22837),
+        o = n(45699),
         c = n(60014),
         l = n(90626),
         u = n(92757),
         d = n(55963),
         m = n(26161),
         _ = n(16180),
-        S = n(81393),
-        p = n(61336),
-        v = n(78327),
-        w = n(71420),
-        h = n(39777),
-        k = n(66418),
-        E = n(78686);
+        p = n(81393),
+        S = n(61336),
+        h = n(78327),
+        v = n(66418),
+        w = n(78686),
+        b = n(71420),
+        g = n(39777);
       !(function (e) {
         (e.k_eView = "view"),
           (e.k_eViewWebSiteHub = "websitehub"),
@@ -93,28 +94,20 @@
           (e.k_eStoreSalePage = "sale"),
           (e.k_eStoreUsersNewsHub = "usernewshub");
       })(r || (r = {}));
-      const g =
+      const E =
         /(?:steampowered\.com|community\.\S+\.steam\.dev|store\.\S+\.steam\.dev|valve\.org\/store|steam\.dev\/store|\.steamchina\.com|steamcommunity\.com|valve\.org\/community|steam\.dev\/community)\/(\w+)(\/|$)/i;
-      function b(e, t) {
+      function I(e, t) {
         if (!t) return !1;
-        const n = "store" === (0, v.yK)(),
-          o = (function (e) {
-            const t = e.match(g);
+        const n = (function (e) {
+            const t = e.match(E);
             return t?.[1];
           })(window.location.href),
-          a = n && "news" == o,
-          i = t.GetEventType() == s.ajI,
-          c = "community" === (0, v.yK)(),
-          l = t.appid ? "games" : "groups",
-          u =
-            c &&
-            l == o &&
-            ((t.appid && t.appid === v.UF.APPID) ||
-              (!t.appid &&
-                t.clanSteamID.GetAccountID() === v.UF.CLANACCOUNTID));
+          i = "news" == n,
+          s = t.GetEventType() == a.ajI,
+          o = (t.appid, !1);
         switch (e) {
           case r.k_eView:
-            return u || a;
+            return i && !0;
           case r.k_eCommunityView:
           case r.k_eCommunityEdit:
           case r.k_eCommunityEditBroadcast:
@@ -123,25 +116,26 @@
           case r.k_eCommunityPreview:
           case r.k_eCommunityPreviewSale:
           case r.k_eCommunityAnnouncementHub:
-            return u;
+            return o;
           case r.k_eCommunityAdminPage:
-            return !i && u;
+            return !s && o;
           case r.k_eViewWebSiteHub:
-            return u || a;
+            return i;
           case r.k_eStoreView:
+            return i && !0;
           case r.k_eStoreNewsHub:
           case r.k_eStoreOwnerPage:
           case r.k_eStoreUsersNewsHub:
-            return a;
+            return i;
           case r.k_eStoreSalePage:
             return !1;
           default:
-            return (0, S.wT)(!1, "Unknown route specified for link: " + e), !1;
+            return (0, p.wT)(!1, "Unknown route specified for link: " + e), !1;
         }
       }
-      function C(e) {
+      function k(e) {
         const t =
-          k.TS.COMMUNITY_BASE_URL +
+          v.TS.COMMUNITY_BASE_URL +
           "gid/" +
           e.clanSteamID.ConvertTo64BitString() +
           "/announcements/share/" +
@@ -152,107 +146,108 @@
           strRedditUrl: t + "?site=reddit",
         };
       }
+      function f(e) {
+        return L(e, r.k_eStoreSalePage, "absolute");
+      }
       function y(e) {
-        return j(e, r.k_eStoreSalePage, "absolute");
+        return L(e, r.k_eStoreView, "absolute");
       }
-      function I(e) {
-        return j(e, r.k_eStoreView, "absolute");
-      }
-      function D(e, t, n) {
+      function C(e, t, n) {
         if (n)
           return (
-            (e ? "/games/" + v.UF.VANITY_ID : "/groups/" + v.UF.VANITY_ID) + "/"
+            (e ? "/games/" + h.UF.VANITY_ID : "/groups/" + h.UF.VANITY_ID) + "/"
           );
         const r = e ? "ogg/" + e : "gid/" + t.ConvertTo64BitString();
-        return k.TS.COMMUNITY_BASE_URL + r + "/";
+        return v.TS.COMMUNITY_BASE_URL + r + "/";
       }
-      function f() {
+      function D() {
         return "news";
       }
-      function j(e, t, n) {
-        const { data: r } = (0, h.J$)(e?.appid ? { appid: e.appid } : void 0);
-        if (e) return A(e, r, t, n);
+      function A() {
+        return !1;
       }
-      function A(e, t, n, o) {
-        const i = "relative" === o,
-          c = "community" === (0, v.yK)(),
-          l = i ? "/" : k.TS.STORE_BASE_URL,
-          u = D(e.appid, e.clanSteamID, i);
+      function L(e, t, n) {
+        const { data: r } = (0, g.J$)(e?.appid ? { appid: e.appid } : void 0);
+        if (e) return j(e, r, t, n);
+      }
+      function j(e, t, n, i) {
+        const o = "relative" === i,
+          c = o ? "/" : v.TS.STORE_BASE_URL,
+          l = C(e.appid, e.clanSteamID, o);
         n === r.k_eView
-          ? (n = c ? r.k_eCommunityView : r.k_eStoreView)
-          : n === r.k_eViewWebSiteHub &&
-            (n = c ? r.k_eCommunityAnnouncementHub : r.k_eStoreNewsHub);
-        const d = e.GID ? e.GID : "",
-          _ = e.AnnouncementGID ? e.AnnouncementGID : "",
-          p =
+          ? (n = r.k_eStoreView)
+          : n === r.k_eViewWebSiteHub && (n = r.k_eStoreNewsHub);
+        const u = e.GID ? e.GID : "",
+          d = e.AnnouncementGID ? e.AnnouncementGID : "",
+          _ =
             e.BIsOGGEvent() &&
             e.appid &&
             t &&
             e.BHasSaleUpdateLandingPageVanity(),
-          h = e.GetEventType() == s.ajI;
+          S = e.GetEventType() == a.ajI;
         switch (n) {
           case r.k_eCommunityPublish:
             return (
-              u +
+              l +
               (e.bOldAnnouncement
-                ? "partnerevents/migrate_announcement/" + _
-                : "partnerevents/publish/" + d + "?tab=publishing")
+                ? "partnerevents/migrate_announcement/" + d
+                : "partnerevents/publish/" + u + "?tab=publishing")
             );
           case r.k_eCommunityEdit:
             return (
-              u +
+              l +
               (e.bOldAnnouncement
-                ? "partnerevents/migrate_announcement/" + _
-                : "partnerevents/edit/" + d)
+                ? "partnerevents/migrate_announcement/" + d
+                : "partnerevents/edit/" + u)
             );
           case r.k_eCommunityEditBroadcast:
             return (
-              u +
+              l +
               (e.bOldAnnouncement
-                ? "partnerevents/migrate_announcement/" + _
-                : "partnerevents/edit/" + d) +
+                ? "partnerevents/migrate_announcement/" + d
+                : "partnerevents/edit/" + u) +
               "?tab=broadcast"
             );
           case r.k_eCommunityMigrate:
-            return u + "partnerevents/migrate_announcement/" + _;
+            return l + "partnerevents/migrate_announcement/" + d;
           case r.k_eCommunityPreview:
-            return h
-              ? u + "partnerevents/previewsale/" + d
-              : u +
+            return S
+              ? l + "partnerevents/previewsale/" + u
+              : l +
                   (e.bOldAnnouncement
-                    ? "partnerevents/preview_old_announcement/" + _
-                    : "partnerevents/preview/" + d);
+                    ? "partnerevents/preview_old_announcement/" + d
+                    : "partnerevents/preview/" + u);
           case r.k_eCommunityPreviewSale:
-            return u + "partnerevents/previewsale/" + d;
+            return l + "partnerevents/previewsale/" + u;
           case r.k_eCommunityAdminPage:
-            return h
-              ? `${l}curator/${e.clanSteamID.GetAccountID()}/admin/creatorhome_link`
-              : u + "partnerevents";
+            return S
+              ? `${c}curator/${e.clanSteamID.GetAccountID()}/admin/creatorhome_link`
+              : l + "partnerevents";
           case r.k_eCommunityAnnouncementHub:
-            return u + "announcements";
+            return l + "announcements";
           case r.k_eStoreNewsHub:
             return (
-              l +
+              c +
               `news/${e.appid ? `app/${e.appid}` : `group/${e.clanSteamID.GetAccountID()}`}`
             );
           case r.k_eStoreOwnerPage:
             return (
-              l +
+              c +
               (e.appid
                 ? "app/" + e.appid
                 : "curator/" + e.clanSteamID.GetAccountID())
             );
           case r.k_eStoreSalePage:
             return e.jsondata.bSaleEnabled
-              ? e.clanSteamID.GetAccountID() == a.wv
-                ? `${l}charts/topnewreleases/${e.jsondata.sale_vanity_id}`
-                : e.clanSteamID.GetAccountID() == a.yT
-                  ? `${l}charts/bestofyear/${e.jsondata.sale_vanity_id}`
-                  : p
-                    ? `${(0, w._)(t)}/${e.GetSaleUpdateLandingPageVanity()}`
-                    : h
-                      ? `${l}curator/${e.clanSteamID.GetAccountID()}`
-                      : l +
+              ? e.clanSteamID.GetAccountID() == s.wv
+                ? `${c}charts/topnewreleases/${e.jsondata.sale_vanity_id}`
+                : e.clanSteamID.GetAccountID() == s.yT
+                  ? `${c}charts/bestofyear/${e.jsondata.sale_vanity_id}`
+                  : _
+                    ? `${(0, b._)(t)}/${e.GetSaleUpdateLandingPageVanity()}`
+                    : S
+                      ? `${c}curator/${e.clanSteamID.GetAccountID()}`
+                      : c +
                         (e.jsondata
                           .sale_vanity_id_valve_approved_for_sale_subpath
                           ? "sale/"
@@ -260,86 +255,97 @@
                             e.clanSteamID.GetAccountID() +
                             "/sale/") +
                         e.jsondata.sale_vanity_id
-              : l;
+              : c;
           case r.k_eCommunityView:
-            return u + "announcements/detail/" + _;
+            return l + "announcements/detail/" + d;
           case r.k_eStoreView:
             if (e.clanSteamID.GetAccountID() == (0, m.H)())
-              return `${k.TS.STORE_BASE_URL}meetsteam/${d}`;
-            if (p)
-              return `${(0, w._)(t)}/${e.GetSaleUpdateLandingPageVanity()}`;
-            if (h) return `${l}curator/${e.clanSteamID.GetAccountID()}`;
-            return `${l}news/${e.appid ? `app/${e.appid}` : `group/${e.clanSteamID.GetAccountID()}`}/${e.bOldAnnouncement ? `old_view/${_}` : `view/${d}`}`;
+              return `${v.TS.STORE_BASE_URL}meetsteam/${u}`;
+            if (_)
+              return `${(0, b._)(t)}/${e.GetSaleUpdateLandingPageVanity()}`;
+            if (S) return `${c}curator/${e.clanSteamID.GetAccountID()}`;
+            {
+              const t = "view";
+              return `${c}news/${e.appid ? `app/${e.appid}` : `group/${e.clanSteamID.GetAccountID()}`}/${e.bOldAnnouncement ? `old_view/${d}` : `${t}/${u}`}`;
+            }
           case r.k_eStoreUsersNewsHub:
-            return `${l}news/`;
+            return `${c}news/`;
           default:
-            return (0, S.wT)(!1, "Unknown route specified for link"), "";
+            return (0, p.wT)(!1, "Unknown route specified for link"), "";
         }
       }
-      function L(e, t, n) {
-        return j(
+      function T(e, t, n) {
+        return L(
           e,
           t,
-          "forceAbsolute" === n || !b(t, e) ? "absolute" : "relative",
+          "forceAbsolute" === n || !I(t, e) ? "absolute" : "relative",
         );
       }
-      function x(e) {
+      function U(e) {
         const { eventModel: t, route: n, bPopup: r = !0 } = e,
-          a = b(n, t),
-          s = j(t, n, a ? "relative" : "absolute");
+          s = I(n, t),
+          a = L(t, n, s ? "relative" : "absolute");
         return (
           l.useEffect(() => {
-            s && (r ? window.open(s) : window.location.assign(s));
-          }, [r, s]),
-          a && s ? (0, o.jsx)(u.rd, { push: !0, to: s }) : null
+            a && (r ? window.open(a) : window.location.assign(a));
+          }, [r, a]),
+          s && a ? (0, i.jsx)(u.rd, { push: !0, to: a }) : null
         );
       }
-      function T(e, t, n) {
-        const r = D(e, t, !1);
+      function x(e, t, n) {
+        const r = C(e, t, !1);
         return "admin" === n ? r + "partnerevents" : "";
       }
       function H(e) {
         const { eventModel: t, preferredFocus: n } = e,
-          { bCanUseLink: a } = l.useContext(_.I),
-          s = (0, c.n9)(),
+          { bCanUseLink: s } = l.useContext(_.I),
+          a = (0, c.n9)(),
           m = (0, u.W6)(),
-          S = a && b(e.route, t),
-          v = j(t, e.route, S ? "relative" : "absolute"),
-          w = !S && v ? (0, p.NT)(v) : v,
-          h = S || !w ? w : (0, d.wJ)(w, s),
-          k = j(t, r.k_eViewWebSiteHub, "absolute"),
-          g = Boolean(e.route != r.k_eViewWebSiteHub)
-            ? E.Z.Localize("#EventBrowse_MoreEventsBtn")
+          p = s && I(e.route, t),
+          h = L(t, e.route, p ? "relative" : "absolute"),
+          v = !p && h ? (0, S.NT)(h) : h,
+          b = p || !v ? v : (0, d.wJ)(v, a),
+          g = L(t, r.k_eViewWebSiteHub, "absolute"),
+          E = Boolean(e.route != r.k_eViewWebSiteHub)
+            ? w.Z.Localize("#EventBrowse_MoreEventsBtn")
             : "",
-          C = l.useCallback(() => {
-            k && window.location.assign(k);
-          }, [k]);
+          k = l.useCallback(() => {
+            g && window.location.assign(g);
+          }, [g]);
         return t
-          ? S
-            ? (0, o.jsx)(i.Ii, {
+          ? p
+            ? (0, i.jsx)(o.Ii, {
                 style: e.style,
                 className: e.className,
-                href: m.createHref({ pathname: h }),
+                href: m.createHref({ pathname: b }),
                 onClick: (t) => {
-                  h && (e.onClick?.(t), m.push(h), t.preventDefault());
+                  b && (e.onClick?.(t), m.push(b), t.preventDefault());
                 },
-                onOptionsActionDescription: g,
-                onOptionsButton: g ? C : void 0,
+                onOptionsActionDescription: E,
+                onOptionsButton: E ? k : void 0,
                 preferredFocus: n,
                 children: e.children,
               })
-            : (0, o.jsx)(i.Ii, {
-                href: h,
+            : (0, i.jsx)(o.Ii, {
+                href: b,
                 style: e.style,
                 className: e.className,
                 onClick: e.onClick,
                 preferredFocus: n,
-                onOptionsActionDescription: g,
-                onOptionsButton: g ? C : void 0,
+                onOptionsActionDescription: E,
+                onOptionsButton: E ? k : void 0,
                 children: e.children,
               })
           : null;
       }
+    },
+    45334: (e, t, n) => {
+      "use strict";
+      n.d(t, { $e: () => r, B7: () => s, Pe: () => a, Pv: () => i });
+      const r = 1,
+        i = 2,
+        s = 4,
+        a = 1073741824;
     },
     62349: (e, t, n) => {
       "use strict";
@@ -354,67 +360,191 @@
           )
         );
       }
-      function o(e) {
+      function i(e) {
         return e && e.related_items?.standalone_demo_appid
           ? e.related_items?.standalone_demo_appid
           : [];
       }
-      n.d(t, { J: () => r, S: () => o });
+      n.d(t, { J: () => r, S: () => i });
     },
     71420: (e, t, n) => {
       "use strict";
-      n.d(t, { _: () => a });
+      n.d(t, { _: () => s, l: () => a });
       var r = n(66418),
-        o = n(62349);
-      function a(e, t = !1) {
+        i = n(62349);
+      function s(e, t = !1) {
         if (e)
-          return t && (0, o.J)(e)
-            ? `${r.TS.STORE_BASE_URL}app/${((0, o.S))(e)[0]}`
+          return t && (0, i.J)(e)
+            ? `${r.TS.STORE_BASE_URL}app/${((0, i.S))(e)[0]}`
             : `${r.TS.STORE_BASE_URL}${e.store_url_path}`;
+      }
+      function a() {
+        window.location.href = `${r.TS.STORE_BASE_URL}login/?redir=${encodeURIComponent(window.location.href)}`;
+      }
+    },
+    17690: (e, t, n) => {
+      "use strict";
+      n.d(t, { IU: () => l, by: () => u, sc: () => o });
+      var r = n(78327),
+        i = n(85044),
+        s = n(81393),
+        a = n(45334);
+      const o = 0,
+        c = "061818254b2c99ac49e6626adb128ed1282a392f",
+        l = 120;
+      class u {
+        m_unAppID;
+        m_bInitialized = !1;
+        m_strName;
+        m_strIconURL;
+        m_dtUpdatedFromServer;
+        m_eAppType;
+        constructor(e) {
+          this.m_unAppID = e;
+        }
+        get appid() {
+          return this.m_unAppID;
+        }
+        get is_initialized() {
+          return this.m_bInitialized;
+        }
+        get is_valid() {
+          return this.m_bInitialized && !!this.m_strName;
+        }
+        get name() {
+          return this.m_strName;
+        }
+        get icon_url_no_default() {
+          return this.m_strIconURL && this.BuildAppURL(this.m_strIconURL, c);
+        }
+        get icon_url() {
+          return this.BuildAppURL(this.m_strIconURL, c);
+        }
+        get time_updated_from_server() {
+          return this.m_dtUpdatedFromServer;
+        }
+        get apptype() {
+          return this.m_eAppType;
+        }
+        BIsApplicationOrTool() {
+          return this.apptype == a.B7 || this.apptype == a.Pv;
+        }
+        BuildAppURL(e, t) {
+          return e
+            ? r.TS.MEDIA_CDN_COMMUNITY_URL +
+                "images/apps/" +
+                this.appid +
+                "/" +
+                e +
+                ".jpg"
+            : (0, i.t)(t);
+        }
+        DeserializeFromMessage(e) {
+          (this.m_bInitialized = !0),
+            (this.m_strName = e.name()),
+            (this.m_strIconURL = e.icon()),
+            (this.m_dtUpdatedFromServer = new Date()),
+            (this.m_eAppType = e.app_type());
+        }
+        DeserializeFromAppOverview(e) {
+          e.icon_hash() && e.app_type() != a.Pe
+            ? ((this.m_bInitialized = !0),
+              (this.m_strName = e.display_name()),
+              (this.m_strIconURL = e.icon_hash()),
+              (this.m_dtUpdatedFromServer = new Date()),
+              (this.m_eAppType = e.app_type()))
+            : (this.m_bInitialized = !1);
+        }
+        DeserializeFromCacheObject(e) {
+          try {
+            (this.m_strName = e.strName),
+              (this.m_strIconURL = e.strIconURL),
+              (this.m_dtUpdatedFromServer = new Date(e.strUpdatedFromServer)),
+              (this.m_eAppType = e.eAppType),
+              (this.m_bInitialized = !0);
+          } catch {}
+        }
+        SerializeToCacheObject() {
+          return (
+            (0, s.wT)(
+              this.m_bInitialized,
+              "Attempting to serialize an uninitialized AppInfo object for caching!",
+            ),
+            this.m_bInitialized
+              ? {
+                  strName: this.m_strName,
+                  strIconURL: this.m_strIconURL,
+                  strUpdatedFromServer: this.m_dtUpdatedFromServer.toJSON(),
+                  eAppType: this.m_eAppType,
+                }
+              : null
+          );
+        }
+      }
+    },
+    85044: (e, t, n) => {
+      "use strict";
+      n.d(t, { d: () => i, t: () => s });
+      var r = n(78327);
+      const i = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
+      function s(e, t) {
+        let n = ".jpg";
+        (e && "0000000000000000000000000000000000000000" !== e) || (e = i),
+          44 == e.length && ((n = e.substr(-4)), (e = e.substr(0, 40)));
+        let s = r.TS.AVATAR_BASE_URL;
+        return (
+          s ||
+            ((s = r.TS.MEDIA_CDN_COMMUNITY_URL + "images/avatars/"),
+            (s += e.substr(0, 2) + "/")),
+          (s += e),
+          t && "small" != t && (s += "_" + t),
+          (s += n),
+          s
+        );
       }
     },
     71298: (e, t, n) => {
       "use strict";
       n.d(t, { Hh: () => u, vs: () => l });
       var r = n(7850),
-        o = n(90626),
-        a = n(74568),
-        s = n(56330),
-        i = n(61859),
+        i = n(90626),
+        s = n(74568),
+        a = n(56330),
+        o = n(61859),
         c = n(22797);
       function l(e) {
-        const [t, n] = (0, o.useState)(() => Boolean(e)),
-          [r, a] = (0, o.useState)(!1),
-          [s, i] = (0, o.useState)(!1),
-          [c, l] = (0, o.useState)(null),
-          [u, d] = (0, o.useState)(null),
-          [m, _] = (0, o.useState)(null),
-          [S, p] = (0, o.useState)(null),
-          [v, w] = (0, o.useState)(null);
+        const [t, n] = (0, i.useState)(() => Boolean(e)),
+          [r, s] = (0, i.useState)(!1),
+          [a, o] = (0, i.useState)(!1),
+          [c, l] = (0, i.useState)(null),
+          [u, d] = (0, i.useState)(null),
+          [m, _] = (0, i.useState)(null),
+          [p, S] = (0, i.useState)(null),
+          [h, v] = (0, i.useState)(null);
         return {
           bLoading: t,
           bError: r,
-          bSuccess: s,
+          bSuccess: a,
           strError: c,
           strSuccess: u,
-          elSuccess: S,
+          elSuccess: p,
           elError: m,
-          strThrobber: v,
+          strThrobber: h,
           fnSetLoading: n,
-          fnSetError: a,
-          fnSetSuccess: i,
+          fnSetError: s,
+          fnSetSuccess: o,
           fnSetStrError: l,
           fnSetStrSuccess: d,
-          fnSetElSuccess: p,
+          fnSetElSuccess: S,
           fnSetElError: _,
-          fnSetThrobber: w,
+          fnSetThrobber: v,
         };
       }
       function u(e) {
         const {
             strDialogTitle: t,
             state: n,
-            closeModal: o,
+            closeModal: i,
             strThrobber: l,
           } = e,
           {
@@ -422,43 +552,43 @@
             bError: d,
             bSuccess: m,
             strError: _,
-            strSuccess: S,
-            elSuccess: p,
-            elError: v,
-            strThrobber: w,
+            strSuccess: p,
+            elSuccess: S,
+            elError: h,
+            strThrobber: v,
           } = n;
-        return d || _ || v
-          ? (0, r.jsxs)(a.o0, {
+        return d || _ || h
+          ? (0, r.jsxs)(s.o0, {
               strTitle: t,
               bAlertDialog: !0,
-              closeModal: o,
-              className: s.SuccessErrorDialog,
+              closeModal: i,
+              className: a.SuccessErrorDialog,
               children: [
                 Boolean(_) &&
                   (0, r.jsx)("div", {
-                    className: s.ErrorStylesWithIcon,
+                    className: a.ErrorStylesWithIcon,
                     children:
-                      _ || (0, i.we)("#Error_ErrorCommunicatingWithNetwork"),
+                      _ || (0, o.we)("#Error_ErrorCommunicatingWithNetwork"),
                   }),
-                Boolean(v) && v,
+                Boolean(h) && h,
               ],
             })
-          : m || S || p
-            ? (0, r.jsx)(a.o0, {
+          : m || p || S
+            ? (0, r.jsx)(s.o0, {
                 strTitle: t,
-                strDescription: S || (0, i.we)("#EventDisplay_Share_Success"),
+                strDescription: p || (0, o.we)("#EventDisplay_Share_Success"),
                 bAlertDialog: !0,
-                closeModal: o,
-                className: s.SuccessErrorDialog,
-                children: (0, r.jsx)(r.Fragment, { children: Boolean(p) && p }),
+                closeModal: i,
+                className: a.SuccessErrorDialog,
+                children: (0, r.jsx)(r.Fragment, { children: Boolean(S) && S }),
               })
-            : (0, r.jsx)(a.o0, {
+            : (0, r.jsx)(s.o0, {
                 strTitle: t,
-                className: s.SuccessErrorDialog,
+                className: a.SuccessErrorDialog,
                 bProgressDialog: !0,
                 closeModal: () => {},
                 children: (0, r.jsx)(c.t, {
-                  string: l || w || (0, i.we)("#Loading"),
+                  string: l || v || (0, o.we)("#Loading"),
                   size: "medium",
                   position: "center",
                 }),
@@ -467,46 +597,63 @@
     },
     26161: (e, t, n) => {
       "use strict";
-      n.d(t, { H: () => a });
+      n.d(t, { H: () => s });
       var r = n(22837),
-        o = n(30470);
-      const a = () => (o.TS.EUNIVERSE === r.Rv ? 2581 : 45267781);
+        i = n(30470);
+      const s = () => (i.TS.EUNIVERSE === r.Rv ? 2581 : 45267781);
+    },
+    4434: (e, t, n) => {
+      "use strict";
+      n.d(t, { m: () => a });
+      var r = n(41735),
+        i = n.n(r),
+        s = n(90626);
+      function a(e) {
+        const t = s.useRef(i().CancelToken.source());
+        return (
+          s.useEffect(() => {
+            const n = t.current;
+            return () => n.cancel(e ? `${e}: unmounting` : "unmounting");
+          }, [e]),
+          t.current
+        );
+      }
     },
     87731: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => L });
+      n.r(t), n.d(t, { default: () => j });
       var r = n(7850),
-        o = n(90626),
-        a = n(78327),
-        s = n(41735),
-        i = n.n(s),
+        i = n(90626),
+        s = n(78327),
+        a = n(41735),
+        o = n.n(a),
         c = n(61859),
         l = n(22837),
         u = n(37085),
         d = n(17720),
         m = n(80902),
         _ = n(51614),
-        S = n(6379),
-        p = n(84933),
-        v = n(22797),
-        w = n(93474),
-        h = n.n(w),
-        k = n(32803),
-        E = n(12155),
-        g = n(81393),
-        b = n(32754),
-        C = n(56283),
-        y = n(78395),
-        I = n(71298),
-        D = n(21869),
-        f = n(67165),
-        j = n(52038),
-        A = n(26408);
-      function L(e) {
+        p = n(6379),
+        S = n(84933),
+        h = n(22797),
+        v = n(93474),
+        w = n.n(v),
+        b = n(32803),
+        g = n(12155),
+        E = n(81393),
+        I = n(32754),
+        k = n(56283),
+        f = n(78395),
+        y = n(71298),
+        C = n(21869),
+        D = n(67165),
+        A = n(52038),
+        L = n(26408);
+      function j(e) {
         const { clanAccountID: t } = e,
-          n = (0, p.YR)(() => new d.b(t, a.TS.EUNIVERSE, l.P3F, 0)),
+          n = (0, S.YR)(() => new d.b(t, s.TS.EUNIVERSE, l.P3F, 0)),
           {
-            bIsFetching: s,
+            bIsFetching: a,
             rgEventModels: u,
             fnRefetch: _,
           } = (function (e) {
@@ -521,46 +668,46 @@
               ],
               queryFn: async () => {
                 const t =
-                    a.TS.STORE_BASE_URL +
+                    s.TS.STORE_BASE_URL +
                     "/curator/" +
                     e.GetAccountID() +
                     "/admin/ajaxgetcreatorhomeevents",
-                  n = { l: a.TS.LANGUAGE },
-                  r = await i()
+                  n = { l: s.TS.LANGUAGE },
+                  r = await o()
                     .get(t, { params: n })
                     .catch(() => {}),
-                  o = new Array();
-                o.push(
+                  i = new Array();
+                i.push(
                   ...r.data.creatorhome_event_gids.map((t) =>
-                    S.MX.LoadHiddenPartnerEvent(e, t),
+                    p.MX.LoadHiddenPartnerEvent(e, t),
                   ),
                 );
-                return await Promise.all(o);
+                return await Promise.all(i);
               },
             });
             return { bIsFetching: n, rgEventModels: t, fnRefetch: r };
           })(n),
-          w = `${a.TS.COMMUNITY_BASE_URL}gid/${n.ConvertTo64BitString()}/partnerevents/create?type=creatorhome`,
-          { creatorHome: k, isFetching: E, refetch: g } = (0, f.FV)(t),
-          y = k?.GetLinkedEventGID(),
-          I = y && u?.some((e) => y == e.GID),
-          D = s || E,
-          j = () => {
-            _(), g();
+          v = `${s.TS.COMMUNITY_BASE_URL}gid/${n.ConvertTo64BitString()}/partnerevents/create?type=creatorhome`,
+          { creatorHome: b, isFetching: g, refetch: E } = (0, D.FV)(t),
+          f = b?.GetLinkedEventGID(),
+          y = f && u?.some((e) => f == e.GID),
+          C = a || g,
+          A = () => {
+            _(), E();
           },
-          A = o.useMemo(
+          L = i.useMemo(
             () => [...(u ?? [])].sort((e, t) => t.startTime - e.startTime),
             [u],
           ),
-          L = A.filter((e) => y && y == e.GID),
-          T = A.filter((e) => !y || y != e.GID);
+          j = L.filter((e) => f && f == e.GID),
+          U = L.filter((e) => !f || f != e.GID);
         return (0, r.jsxs)(r.Fragment, {
           children: [
-            (0, r.jsx)(b.he, {
+            (0, r.jsx)(I.he, {
               toolTipContent: (0, c.we)("#CreatorHome_EventLink_Create_ttip"),
               style: { width: "25%" },
-              children: (0, r.jsx)(C.jn, {
-                onClick: () => window.location.assign(w),
+              children: (0, r.jsx)(k.jn, {
+                onClick: () => window.location.assign(v),
                 children: (0, c.we)("#CreatorHome_EventLink_Create"),
               }),
             }),
@@ -572,9 +719,9 @@
             }),
             (0, r.jsx)("br", {}),
             (0, r.jsxs)("div", {
-              className: h().ListsCtn,
+              className: w().ListsCtn,
               children: [
-                !I &&
+                !y &&
                   (0, r.jsxs)(r.Fragment, {
                     children: [
                       (0, r.jsx)("h5", {
@@ -589,11 +736,11 @@
                       }),
                     ],
                   }),
-                D && (0, r.jsx)(v.t, {}),
-                !D &&
+                C && (0, r.jsx)(h.t, {}),
+                !C &&
                   (0, r.jsxs)(r.Fragment, {
                     children: [
-                      L.length > 0 &&
+                      j.length > 0 &&
                         (0, r.jsxs)(r.Fragment, {
                           children: [
                             (0, r.jsx)("h5", {
@@ -602,15 +749,15 @@
                               ),
                             }),
                             (0, r.jsx)("div", {
-                              className: h().EntryList,
-                              children: L.map((e) =>
+                              className: w().EntryList,
+                              children: j.map((e) =>
                                 (0, r.jsx)(
-                                  x,
+                                  T,
                                   {
-                                    creatorHome: k,
+                                    creatorHome: b,
                                     clanSteamID: n,
                                     eventModel: e,
-                                    refetch: j,
+                                    refetch: A,
                                   },
                                   e.GID,
                                 ),
@@ -618,7 +765,7 @@
                             }),
                           ],
                         }),
-                      T.length > 0 &&
+                      U.length > 0 &&
                         (0, r.jsxs)(r.Fragment, {
                           children: [
                             (0, r.jsx)("h5", {
@@ -627,15 +774,15 @@
                               ),
                             }),
                             (0, r.jsx)("div", {
-                              className: h().EntryList,
-                              children: T.map((e) =>
+                              className: w().EntryList,
+                              children: U.map((e) =>
                                 (0, r.jsx)(
-                                  x,
+                                  T,
                                   {
-                                    creatorHome: k,
+                                    creatorHome: b,
                                     clanSteamID: n,
                                     eventModel: e,
-                                    refetch: j,
+                                    refetch: A,
                                   },
                                   e.GID,
                                 ),
@@ -650,48 +797,48 @@
           ],
         });
       }
-      function x(e) {
-        const { clanSteamID: t, creatorHome: n, eventModel: s, refetch: d } = e,
-          [m, S] = o.useState(!1),
-          p = (0, _.n)({
+      function T(e) {
+        const { clanSteamID: t, creatorHome: n, eventModel: a, refetch: d } = e,
+          [m, p] = i.useState(!1),
+          S = (0, _.n)({
             mutationFn: async (e) => {
               const t =
-                  a.TS.STORE_BASE_URL +
+                  s.TS.STORE_BASE_URL +
                   "/curator/" +
                   e.clanSteamID.GetAccountID() +
                   "/admin/ajaxdeletecreatorhomeevent",
                 n = new FormData();
-              n.append("sessionid", (0, a.KC)()), n.append("gid", e.gid);
-              const r = await i().post(t, n, { withCredentials: !0 });
+              n.append("sessionid", (0, s.KC)()), n.append("gid", e.gid);
+              const r = await o().post(t, n, { withCredentials: !0 });
               return r?.data?.success == u.R;
             },
           }),
-          [v, w] = o.useState(!1),
-          [g, b] = o.useState(!1),
-          C = (0, _.n)({
+          [h, v] = i.useState(!1),
+          [E, I] = i.useState(!1),
+          k = (0, _.n)({
             mutationFn: async (e) => {
               const t =
-                  a.TS.STORE_BASE_URL +
+                  s.TS.STORE_BASE_URL +
                   "/curator/" +
                   e.clanSteamID.GetAccountID() +
                   "/admin/ajaxselectcreatorhome",
                 n = new FormData();
-              n.append("sessionid", (0, a.KC)()), n.append("gid", e.gid);
-              const r = await i().post(t, n, { withCredentials: !0 });
+              n.append("sessionid", (0, s.KC)()), n.append("gid", e.gid);
+              const r = await o().post(t, n, { withCredentials: !0 });
               return r?.data?.success == u.R;
             },
           }),
-          y = n?.GetLinkedEventGID(),
-          I = y && y == s.GID,
-          D = !I && s.BIsVisibleEvent(),
-          f = `${a.TS.COMMUNITY_BASE_URL}gid/${t.ConvertTo64BitString()}/partnerevents/clone/${s.GID}?redir=${window.location.href}`;
+          f = n?.GetLinkedEventGID(),
+          y = f && f == a.GID,
+          C = !y && a.BIsVisibleEvent(),
+          D = `${s.TS.COMMUNITY_BASE_URL}gid/${t.ConvertTo64BitString()}/partnerevents/clone/${a.GID}?redir=${window.location.href}`;
         return (0, r.jsxs)(r.Fragment, {
           children: [
-            (0, r.jsx)(T, {
+            (0, r.jsx)(U, {
               active: m,
-              mutateAsync: () => p.mutateAsync({ clanSteamID: t, gid: s.GID }),
+              mutateAsync: () => S.mutateAsync({ clanSteamID: t, gid: a.GID }),
               onClose: (e) => {
-                S(!1), e && d();
+                p(!1), e && d();
               },
               strTitle: (0, c.we)("#Button_Delete"),
               strDescription: (0, c.we)(
@@ -699,11 +846,11 @@
               ),
               strError: (0, c.we)("#CreatorHome_EventLink_Delete_Dialog_Error"),
             }),
-            (0, r.jsx)(T, {
-              active: v,
-              mutateAsync: () => C.mutateAsync({ clanSteamID: t, gid: s.GID }),
+            (0, r.jsx)(U, {
+              active: h,
+              mutateAsync: () => k.mutateAsync({ clanSteamID: t, gid: a.GID }),
               onClose: (e) => {
-                w(!1), e && d();
+                v(!1), e && d();
               },
               strTitle: (0, c.we)("#CreatorHome_EventLink_Select"),
               strDescription: (0, c.we)(
@@ -711,11 +858,11 @@
               ),
               strError: (0, c.we)("#CreatorHome_EventLink_Select_Dialog_Error"),
             }),
-            (0, r.jsx)(T, {
-              active: g,
-              mutateAsync: () => C.mutateAsync({ clanSteamID: t, gid: "0" }),
+            (0, r.jsx)(U, {
+              active: E,
+              mutateAsync: () => k.mutateAsync({ clanSteamID: t, gid: "0" }),
               onClose: (e) => {
-                b(!1), e && d();
+                I(!1), e && d();
               },
               strTitle: (0, c.we)("#CreatorHome_EventLink_Clear"),
               strDescription: (0, c.we)(
@@ -724,27 +871,27 @@
               strError: (0, c.we)("#CreatorHome_EventLink_Clear_Dialog_Error"),
             }),
             (0, r.jsxs)("div", {
-              className: (0, j.A)(h().Entry, I && h().Active),
+              className: (0, A.A)(w().Entry, y && w().Active),
               children: [
                 (0, r.jsxs)("div", {
-                  className: h().HeaderRow,
+                  className: w().HeaderRow,
                   children: [
                     (0, r.jsx)("span", {
-                      className: h().Label,
-                      children: s.GetNameWithFallback(
-                        (0, l.sfN)(a.TS.LANGUAGE),
+                      className: w().Label,
+                      children: a.GetNameWithFallback(
+                        (0, l.sfN)(s.TS.LANGUAGE),
                       ),
                     }),
-                    !s.BIsVisibleEvent() &&
+                    !a.BIsVisibleEvent() &&
                       (0, r.jsxs)("span", {
-                        className: h().UnpublishedState,
+                        className: w().UnpublishedState,
                         children: [
                           (0, r.jsx)("span", {
                             children: (0, c.we)(
                               "#CreatorHome_EventLink_Unpublished",
                             ),
                           }),
-                          (0, r.jsx)(A.o, {
+                          (0, r.jsx)(L.o, {
                             tooltip: (0, c.we)(
                               "#CreatorHome_EventLink_Unpublished_ttip",
                             ),
@@ -752,17 +899,17 @@
                           }),
                         ],
                       }),
-                    s.BIsVisibleEvent() &&
-                      !I &&
+                    a.BIsVisibleEvent() &&
+                      !y &&
                       (0, r.jsxs)("span", {
-                        className: h().PublishedAndNotSelectedState,
+                        className: w().PublishedAndNotSelectedState,
                         children: [
                           (0, r.jsx)("span", {
                             children: (0, c.we)(
                               "#CreatorHome_EventLink_PublishedAndNotSelected",
                             ),
                           }),
-                          (0, r.jsx)(A.o, {
+                          (0, r.jsx)(L.o, {
                             tooltip: (0, c.we)(
                               "#CreatorHome_EventLink_PublishedAndNotSelected_ttip",
                             ),
@@ -770,22 +917,22 @@
                           }),
                         ],
                       }),
-                    D
-                      ? (0, r.jsx)(H, {
-                          eventModel: s,
+                    C
+                      ? (0, r.jsx)(x, {
+                          eventModel: a,
                           label: (0, c.we)("#CreatorHome_EventLink_Select"),
-                          icon: (0, r.jsx)(E.FEq, {}),
-                          onClick: () => w(!0),
+                          icon: (0, r.jsx)(g.FEq, {}),
+                          onClick: () => v(!0),
                           tooltip: (0, c.we)(
                             "#CreatorHome_EventLink_Select_ttip",
                           ),
                         })
-                      : !I &&
+                      : !y &&
                         (0, r.jsxs)("div", {
-                          className: h().MustPublish,
+                          className: w().MustPublish,
                           children: [
                             (0, c.we)("#CreatorHome_EventLink_MustPublish"),
-                            (0, r.jsx)(A.o, {
+                            (0, r.jsx)(L.o, {
                               tooltip: (0, c.we)(
                                 "#CreatorHome_EventLink_MustPublish_ttip",
                               ),
@@ -793,43 +940,43 @@
                             }),
                           ],
                         }),
-                    I &&
-                      (0, r.jsx)(H, {
-                        eventModel: s,
+                    y &&
+                      (0, r.jsx)(x, {
+                        eventModel: a,
                         label: (0, c.we)("#CreatorHome_EventLink_Clear"),
-                        icon: (0, r.jsx)(E.FEq, { filled: !0 }),
-                        onClick: () => b(!0),
+                        icon: (0, r.jsx)(g.FEq, { filled: !0 }),
+                        onClick: () => I(!0),
                         tooltip: (0, c.we)("#CreatorHome_EventLink_Clear_ttip"),
                       }),
                   ],
                 }),
                 (0, r.jsxs)("div", {
-                  className: h().ActionsRow,
+                  className: w().ActionsRow,
                   children: [
-                    (0, r.jsx)(H, {
-                      eventModel: s,
+                    (0, r.jsx)(x, {
+                      eventModel: a,
                       label: (0, c.we)("#Button_Edit"),
-                      icon: (0, r.jsx)(E.ffu, {}),
-                      route: k.PH.k_eCommunityEdit,
+                      icon: (0, r.jsx)(g.ffu, {}),
+                      route: b.PH.k_eCommunityEdit,
                     }),
-                    (0, r.jsx)(H, {
-                      eventModel: s,
+                    (0, r.jsx)(x, {
+                      eventModel: a,
                       label: (0, c.we)("#Button_Preview"),
-                      icon: (0, r.jsx)(E.Exy, {}),
-                      route: k.PH.k_eCommunityPreviewSale,
+                      icon: (0, r.jsx)(g.Exy, {}),
+                      route: b.PH.k_eCommunityPreviewSale,
                     }),
-                    (0, r.jsx)(H, {
-                      eventModel: s,
+                    (0, r.jsx)(x, {
+                      eventModel: a,
                       label: (0, c.we)("#Button_Clone"),
-                      icon: (0, r.jsx)(E.rI_, {}),
-                      onClick: () => window.location.assign(f),
+                      icon: (0, r.jsx)(g.rI_, {}),
+                      onClick: () => window.location.assign(D),
                     }),
-                    !I &&
-                      (0, r.jsx)(H, {
-                        eventModel: s,
+                    !y &&
+                      (0, r.jsx)(x, {
+                        eventModel: a,
                         label: (0, c.we)("#Button_Delete"),
-                        icon: (0, r.jsx)(E.lMJ, {}),
-                        onClick: () => S(!0),
+                        icon: (0, r.jsx)(g.lMJ, {}),
+                        onClick: () => p(!0),
                       }),
                   ],
                 }),
@@ -838,63 +985,63 @@
           ],
         });
       }
-      function T(e) {
+      function U(e) {
         const {
             active: t,
             mutateAsync: n,
-            onClose: o,
-            strTitle: a,
-            strDescription: s,
-            strError: i,
+            onClose: i,
+            strTitle: s,
+            strDescription: a,
+            strError: o,
           } = e,
-          c = (0, I.vs)();
+          c = (0, y.vs)();
         if (t)
           return c.bLoading
-            ? (0, r.jsx)(D.E, {
+            ? (0, r.jsx)(C.E, {
                 active: !0,
-                children: (0, r.jsx)(I.Hh, { state: c, strDialogTitle: a }),
+                children: (0, r.jsx)(y.Hh, { state: c, strDialogTitle: s }),
               })
-            : (0, r.jsx)(D.E, {
+            : (0, r.jsx)(C.E, {
                 active: !0,
-                children: (0, r.jsx)(y.o0, {
-                  strTitle: a,
-                  strDescription: s,
-                  onCancel: () => o(!1),
+                children: (0, r.jsx)(f.o0, {
+                  strTitle: s,
+                  strDescription: a,
+                  onCancel: () => i(!1),
                   bOKDisabled: c.bLoading,
                   onOK: async () => {
                     c.fnSetLoading(!0);
                     try {
-                      (await n()) ? o(!0) : c.fnSetElError(i);
+                      (await n()) ? i(!0) : c.fnSetElError(o);
                     } catch (e) {
-                      c.fnSetElError(i);
+                      c.fnSetElError(o);
                     }
                   },
                 }),
               });
       }
-      function H(e) {
+      function x(e) {
         const {
           eventModel: t,
           label: n,
-          tooltip: o,
-          icon: a,
-          route: s,
-          onClick: i,
+          tooltip: i,
+          icon: s,
+          route: a,
+          onClick: o,
         } = e;
-        (0, g.wT)(s || i, "Must specify route or onClick");
+        (0, E.wT)(a || o, "Must specify route or onClick");
         const c =
-          i ||
+          o ||
           (() => {
-            const e = s ? (0, k.yh)(t, null, s, "absolute") : void 0;
+            const e = a ? (0, b.yh)(t, null, a, "absolute") : void 0;
             window.location.assign(e);
           });
         return (0, r.jsxs)("div", {
-          className: h().ManageButton,
+          className: w().ManageButton,
           onClick: c,
           children: [
-            (0, r.jsx)("div", { className: h().SVGIcon, children: a }),
+            (0, r.jsx)("div", { className: w().SVGIcon, children: s }),
             n,
-            o && (0, r.jsx)(A.o, { tooltip: o, small: !0 }),
+            i && (0, r.jsx)(L.o, { tooltip: i, small: !0 }),
           ],
         });
       }

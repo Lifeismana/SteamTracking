@@ -4440,14 +4440,12 @@ ${FILENAME}
 0+f|D
 0,PQ
 0-AD
+0000000000000000000000000000000000000000
 0.06
 0/bu^U
 0/gge
-0000000000000000000000000000000000000000
 00000001
 000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798990123456789abcdef
-00:43:50
-00:43:58
 00\fo
 01%3
 01%6
@@ -4838,7 +4836,11 @@ ${FILENAME}
 14IStreamDecoder
 14StoreItem_Demo
 14StoreItem_Link
+2.75
+198
 1536
+0123456789
+0123456789.
 156q
 157F
 15;o
@@ -4898,6 +4900,7 @@ ${FILENAME}
 17CSystemSuspendMsg
 17CUtlPriorityQueueIPN25SteamNetworkingSocketsLib8IThinkerENS0_11ThinkerLessENS0_15ThinkerSetIndexEE
 17StoreItem_Reviews
+18446744073709551615
 18CControllerOverlay
 18CFrameStatsListMsg
 18CGetCursorImageMsg
@@ -4932,7 +4935,6 @@ ${FILENAME}
 18StoreItem_Playtest
 18StoreItem_Trailers
 196?
-198
 19CActivationCodeInfo
 19CClientHandshakeMsg
 19CClientMicroTxnInfo
@@ -5050,6 +5052,7 @@ ${FILENAME}
 1\n-k_EPublishedFileInappropriateProvider_Invalid
 1\n-k_ERemoteClientBroadcastMsgClientIDDeconflict
 1\n-k_ERemoteClientBroadcastMsgPairingExclusivity
+1\n-k_ERemoteClientServiceRemoteInstallWithoutPin
 1\n-k_ESteamDatagramMsg_SetSecondaryAddressResult
 1\n-k_ESteamDeckCompatibilityCategory_Unsupported
 1\n-k_ESteamDeckCompatibilityTestResult_FailMinor
@@ -5156,7 +5159,6 @@ ${FILENAME}
 2-finger pinch/slide
 2-finger tap
 2. makr
-2.75
 2/.google.protobuf.MethodOptions.IdempotencyLevel:
 2/N5P
 2/YDc~-0
@@ -5164,16 +5166,9 @@ ${FILENAME}
 20.GamePerformanceSettings.EGamePerformanceSetting
 20.StoreItem.PackageGroup.EPackageGroupDisplayType
 20/33001
-467.
-663
-754.
 2048
-2168
-2677
-26754.
-0123456789
-0123456789.
-18446744073709551615
+20:48:08
+20:48:17
 20CCDDBAppDetailCommon
 20CCaptureFailedDialog
 20CControllerConfigMsg
@@ -5200,6 +5195,7 @@ ${FILENAME}
 20StoreItem_Categories
 20StoreItem_RelatedF2P
 214P&
+2168
 21AES_ECB_CipherContext
 21AES_GCM_CipherContext
 21CClanAnnouncementInfo
@@ -5307,6 +5303,8 @@ ${FILENAME}
 267!
 2675#"
 26754&#"
+2677
+26754.
 26CActivationCodePackageInfo
 26CAuthenticationResponseMsg
 26CFrameStatAccumulatedValue
@@ -5589,6 +5587,8 @@ ${FILENAME}
 32654'#
 32654'#536
 32654''3254&##c
+3267
+3267.
 32654.
 32655
 32655&
@@ -5599,12 +5599,10 @@ ${FILENAME}
 326554&##
 326554&'
 326654&&#"
-3267
 3267!
 3267!5!&
 3267!5!&&#"
 3267&'^7l
-3267.
 32675
 32675#5!
 32675&&#"
@@ -5995,6 +5993,7 @@ ${FILENAME}
 45CStoreBrowse_GetPriceStops_Response_PriceStop
 45rq
 46$a
+467.
 4632
 46632
 467&&54632
@@ -6222,6 +6221,7 @@ ${FILENAME}
 52{M
 52|{k
 531lo
+532654.
 532>
 536654#!5!
 53CMsgSteamDatagramClientPingSampleReply_POP_AltAddress
@@ -6232,11 +6232,9 @@ ${FILENAME}
 54&#72
 54&'7
 546'2>
-5467.
 5467
 54632
 54663
-532654.
 546632
 5467!
 5467#".
@@ -6245,6 +6243,7 @@ ${FILENAME}
 5467'
 5467'!
 5467'7
+5467.
 546753
 546;
 54CControllerConfigMsg_ControllerPersonalizationResponse
@@ -6452,6 +6451,7 @@ ${FILENAME}
 65R=
 65c\r
 66(YP_
+663
 6632
 6636
 6653
@@ -6652,9 +6652,10 @@ ${FILENAME}
 73MW
 73nL4\v
 74&'3
+75#5!
+754.
 7524
 74632
-75#5!
 75pRD
 75th
 76&'3
@@ -19269,7 +19270,7 @@ Sending NoConnection to %s: { %s }\n
 Sending authorization request with pin %s\n
 Sent ack %u not pending.  %d: %u %u %u %u %u
 Sentiment
-Sep  1 2026
+Sep  7 2026
 September
 Serbian
 Seret
@@ -32008,7 +32009,7 @@ lh\n2Ta
 lhatod r
 lhhl
 liQS
-lib Sep  1 2026 00:43:56
+lib Sep  7 2026 20:48:15
 lib(%lu)
 libEGL.so.1
 libGL.so.1

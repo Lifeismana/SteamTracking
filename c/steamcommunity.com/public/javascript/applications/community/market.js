@@ -8104,7 +8104,7 @@
               .replace(/\?.*$/, "");
             return `${_._.MEDIA_CDN_COMMUNITY_URL}${_}`;
           }
-          {
+          if ("string" == typeof _[_]) {
             const _ = _.asset_url_format.replace("${FILENAME}", _[_]);
             return `${_._.STORE_ITEM_BASE_URL}${_}`;
           }

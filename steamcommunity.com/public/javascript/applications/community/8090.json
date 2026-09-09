@@ -19,7 +19,7 @@
     "moderation_recentchatrooms_label": "غرف الدردشة الحديثة:",
     "moderation_groupname_label": "اسم المجموعة:",
     "moderation_roomname_label": "اسم الغرفة:",
-    "moderation_recentchatpartners_label": "شركاء الدردشة الحديثون:",
+    "moderation_recentchatpartners_label": "أحدث شركاء دردشة:",
     "moderation_chat_reportedmessagesfrom": "الرسائل المبلغ عنها من إرسال %1$s",
     "moderation_chatgroup_reportedmessagesfrom": "رسائل المجموعة المبلغ عنها من إرسال %1$s",
     "moderation_chatgroup_defaultroom": "افتراضي",

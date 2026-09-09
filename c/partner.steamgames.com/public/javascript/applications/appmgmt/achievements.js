@@ -534,6 +534,7 @@
             _: () => _,
             _: () => _,
             _: () => _,
+            _: () => _,
           });
           var _,
             _ = __webpack_require__("chunkid"),
@@ -542,6 +543,7 @@
             _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
             _ = __webpack_require__._(_),
+            _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
@@ -571,7 +573,7 @@
           const _ = "Stats",
             _ = "StatSchema";
           function _(_, _ = !1) {
-            const _ = (0, _._)({
+            return (0, _._)({
               queryKey: [_, _, _, _],
               queryFn: async () => {
                 let _ = _
@@ -584,13 +586,20 @@
                     params: _,
                     withCredentials: !0,
                   });
-                if (_?.data?.success == _._) return _.data.schema;
+                if (_?.data?.success == _._) return _.data;
                 throw new Error(
                   `failed to load ${_ ? "live" : "draft"} stat schema for app id ${_}`,
                 );
               },
             });
-            return _.isLoading ? null : _.data;
+          }
+          function _(_, _ = !1) {
+            const _ = _(_, _);
+            return _.isLoading ? null : _.data?.schema;
+          }
+          function _(_) {
+            const _ = _(_);
+            return _.isLoading ? void 0 : _.data?.limits;
           }
           function _(_, _ = !1) {
             const _ = _(_, _);
@@ -672,17 +681,11 @@
           async function _(_, _) {
             const _ = `${_._.PARTNER_BASE_URL}achievements/ajaxsetlanguagelist/${_}`,
               _ = new FormData();
-            _.append("languages", JSON.stringify(_));
-            try {
-              const _ = await _().post(_, _, {
-                withCredentials: !0,
-              });
-              if (_?.data?.success == _._) return !0;
-              throw new Error("failed to set language list");
-            } catch (_) {
-              const _ = (0, _._)(_);
-              console.error("updateLanguageList failed: ", _.strErrorMsg, _);
-            }
+            return (
+              _.append("languages", JSON.stringify(_)),
+              await _("updateLanguageList", _, _),
+              !0
+            );
           }
           function _(_) {
             const _ = (0, _._)();
@@ -753,6 +756,32 @@
             });
             return _.isLoading ? null : _.data;
           }
+          function _(_, _) {
+            const { strErrorMsg: _, errorCode: _ } = (0, _._)(_);
+            console.error(`${_} failed: `, _, _, _);
+            const _ = _?.data?.error;
+            return _ == _._ && _
+              ? new Error(_)
+              : _ == _._
+                ? new Error(
+                    (0, _._)(
+                      "#AchievementEditor_Achievement_Edit_ApiName_Error_Duplicate",
+                    ),
+                  )
+                : new Error((0, _._)("#AchievementEditor_Error_RequestFailed"));
+          }
+          async function _(_, _, _) {
+            let _;
+            try {
+              _ = await _().post(_, _, {
+                withCredentials: !0,
+              });
+            } catch (_) {
+              throw _(_, _);
+            }
+            if (_?.data?.success != _._) throw _(_, _);
+            return _.data;
+          }
           async function _(_, _, _) {
             const _ = `${_._.PARTNER_BASE_URL}achievements/ajaxcreateorupdategroup/${_}`,
               _ = new FormData();
@@ -765,16 +794,7 @@
                 "1" == _.developeronly ? "true" : "false",
               ),
               _.append("order", _.order ?? "-1");
-            try {
-              const _ = await _().post(_, _, {
-                withCredentials: !0,
-              });
-              if (_?.data?.success == _._) return _.data.groupid;
-              throw new Error(`failed to save group id ${_}`);
-            } catch (_) {
-              const _ = (0, _._)(_);
-              console.error("useStatGroupMutation failed: ", _.strErrorMsg, _);
-            }
+            return (await _("addOrUpdateStatGroup", _, _)).groupid;
           }
           function _(_, _) {
             const _ = (0, _._)();
@@ -791,9 +811,7 @@
             const _ = (0, _._)();
             return (0, _._)({
               mutationFn: async (_) => {
-                for (const _ of _) {
-                  if (void 0 === (await _(_, _.groupid, _.group))) return !1;
-                }
+                for (const _ of _) await _(_, _.groupid, _.group);
                 return !0;
               },
               onSuccess: async () => {
@@ -807,20 +825,14 @@
             const _ = (0, _._)();
             return (0, _._)({
               mutationFn: async () => {
-                try {
-                  const _ = `${_._.PARTNER_BASE_URL}achievements/ajaxdeletegroup/${_}`,
-                    _ = new FormData();
-                  _.append("appid", _.toString()), _.append("groupid", _);
-                  const _ = await _().post(_, _, {
-                    withCredentials: !0,
-                  });
-                  if (_?.data?.success == _._) return !0;
-                  throw new Error(`failed to delete group with group id ${_}`);
-                } catch (_) {
-                  const _ = (0, _._)(_);
-                  console.error("StatGroupDelete failed: ", _.strErrorMsg, _);
-                }
-                return !1;
+                const _ = `${_._.PARTNER_BASE_URL}achievements/ajaxdeletegroup/${_}`,
+                  _ = new FormData();
+                return (
+                  _.append("appid", _.toString()),
+                  _.append("groupid", _),
+                  await _("deleteStatGroup", _, _),
+                  !0
+                );
               },
               onSuccess: async () => {
                 await __webpack_require__.invalidateQueries({
@@ -833,18 +845,8 @@
             const _ = new FormData();
             __webpack_require__.append("appid", _.toString()),
               __webpack_require__.append("groupids", JSON.stringify(_));
-            try {
-              const _ = `${_._.PARTNER_BASE_URL}achievements/ajaxreordergroups/${_}`,
-                _ = await _().post(_, _, {
-                  withCredentials: !0,
-                });
-              if (_?.data?.success == _._) return !0;
-              throw new Error("failed to reorder groups");
-            } catch (_) {
-              const _ = (0, _._)(_);
-              console.error("reorderGroups failed: ", _.strErrorMsg, _);
-            }
-            return !1;
+            const _ = `${_._.PARTNER_BASE_URL}achievements/ajaxreordergroups/${_}`;
+            return await _("reorderGroups", _, _), !0;
           }
           function _(_) {
             _(_);
@@ -863,18 +865,8 @@
             _.append("appid", _.toString()),
               _.append("groupid", (_ ?? 0).toString()),
               _.append("names", JSON.stringify(_));
-            try {
-              const _ = `${_._.PARTNER_BASE_URL}achievements/ajaxmoveachievements/${_}`,
-                _ = await _().post(_, _, {
-                  withCredentials: !0,
-                });
-              if (_?.data?.success == _._) return !0;
-              throw new Error(`failed to move achievements to group ${_}`);
-            } catch (_) {
-              const _ = (0, _._)(_);
-              console.error("moveAchievementsGroup failed: ", _.strErrorMsg, _);
-            }
-            return !1;
+            const _ = `${_._.PARTNER_BASE_URL}achievements/ajaxmoveachievements/${_}`;
+            return await _("moveAchievementsGroup", _, _), !0;
           }
           function _(_) {
             const _ = (0, _._)();
@@ -905,39 +897,12 @@
               _.append("bit", _),
               _.append("requestType", _.toString()),
               _.append("image", _);
-            try {
-              const _ = `${_._.PARTNER_BASE_URL}images/uploadachievement`,
-                _ = await _().post(_, _, {
-                  withCredentials: !0,
-                });
-              if (_?.data?.success == _._) return !0;
-              throw new Error(
-                `failed to save achievement image with stat id ${_} and bit id ${_}`,
-              );
-            } catch (_) {
-              const _ = (0, _._)(_);
-              console.error(
-                "AchievementImageUpload failed: ",
-                _.strErrorMsg,
-                _,
-              );
-            }
-            return !1;
+            const _ = `${_._.PARTNER_BASE_URL}images/uploadachievement`;
+            await _("AchievementImageUpload", _, _);
           }
           async function _(_, _, _, _, _) {
-            let _ = !0;
-            if (
-              (_ &&
-                _.startsWith("data:") &&
-                (_ = _ && (await _(_, _, _, _.Achieved, _))),
-              _ &&
-                _.startsWith("data:") &&
-                (_ = _ && (await _(_, _, _, _.Unachieved, _))),
-              !_)
-            )
-              throw new Error(
-                `Failed to save images for achievement with stat id ${_} and bit id ${_}`,
-              );
+            _ && _.startsWith("data:") && (await _(_, _, _, _.Achieved, _)),
+              _ && _.startsWith("data:") && (await _(_, _, _, _.Unachieved, _));
           }
           async function _(_, _) {
             const {
@@ -973,27 +938,9 @@
                   _.append("displayname", JSON.stringify(_.display.name)),
                 _.display.desc &&
                   _.append("displaydesc", JSON.stringify(_.display.desc)));
-            try {
-              const _ = `${_._.PARTNER_BASE_URL}achievements/ajaxcreateorupdateachievement/${_}`,
-                _ = await _().post(_, _, {
-                  withCredentials: !0,
-                });
-              if (_?.data?.success == _._) {
-                const _ = _.data.statid,
-                  _ = _.data.bitid;
-                return await _(_, _, _, _, _), _.data;
-              }
-              throw new Error(
-                `failed to save achievement with stat id ${_} and bit id ${_}`,
-              );
-            } catch (_) {
-              const _ = (0, _._)(_);
-              console.error(
-                "useStatAchievementMutation failed: ",
-                _.strErrorMsg,
-                _,
-              );
-            }
+            const _ = `${_._.PARTNER_BASE_URL}achievements/ajaxcreateorupdateachievement/${_}`,
+              _ = await _("addOrUpdateAchievement", _, _);
+            return await _(_, _.statid, _.bitid, _, _), _;
           }
           function _(_, _, _) {
             const _ = (0, _._)();
@@ -1012,25 +959,16 @@
             });
           }
           async function _(_, _) {
-            const { statID: _, bitID: _ } = _;
-            try {
-              const _ = `${_._.PARTNER_BASE_URL}achievements/ajaxdeleteachievement/${_}`,
-                _ = new FormData();
+            const { statID: _, bitID: _ } = _,
+              _ = `${_._.PARTNER_BASE_URL}achievements/ajaxdeleteachievement/${_}`,
+              _ = new FormData();
+            return (
               _.append("appid", _.toString()),
-                _.append("statid", _),
-                _.append("bitid", _);
-              const _ = await _().post(_, _, {
-                withCredentials: !0,
-              });
-              if (_?.data?.success == _._) return !0;
-              throw new Error(
-                `failed to delete achievement with stat id ${_} and bit id ${_}`,
-              );
-            } catch (_) {
-              const _ = (0, _._)(_);
-              console.error("AchievementDelete failed: ", _.strErrorMsg, _);
-            }
-            return !1;
+              _.append("statid", _),
+              _.append("bitid", _),
+              await _("deleteAchievement", _, _),
+              !0
+            );
           }
           function _(_, _, _) {
             const _ = (0, _._)();
@@ -1051,12 +989,8 @@
             const _ = (0, _._)();
             return (0, _._)({
               mutationFn: async (_) => {
-                for (const _ of _.addOrUpdate ?? []) {
-                  if ((await _(_, _)).success != _._) return !1;
-                }
-                for (const _ of _.delete ?? []) {
-                  if (!(await _(_, _))) return !1;
-                }
+                for (const _ of _.addOrUpdate ?? []) await _(_, _);
+                for (const _ of _.delete ?? []) await _(_, _);
                 return !0;
               },
               onSuccess: async () => {
@@ -1409,17 +1343,19 @@
           }
           function _() {
             const {
-              files: _,
-              hasData: _,
-              acceptedTypes: _,
-              fileInputRef: _,
-              uploadFiles: _,
-              openFilePicker: _,
-              save: _,
-              isSaving: _,
-              saveSucceeded: _,
-              onClose: _,
-            } = (0, _._)();
+                files: _,
+                hasData: _,
+                acceptedTypes: _,
+                fileInputRef: _,
+                uploadFiles: _,
+                openFilePicker: _,
+                save: _,
+                isSaving: _,
+                saveError: _,
+                saveSucceeded: _,
+                onClose: _,
+              } = (0, _._)(),
+              [_, _] = (0, _.useState)(void 0);
             return (0, _.jsxs)("div", {
               className: (0, _._)(_.Takeover, _.BulkEdit),
               children: [
@@ -1439,11 +1375,16 @@
                       multiple: !0,
                       fileInputRef: _,
                       onUpload: _,
+                      onError: _,
                       children: (0, _.jsx)("div", {
                         className: _.UploadPlaceholder,
                         children: (0, _._)("#AchievementEditor_Bulk_UploadBox"),
                       }),
                     }),
+                    !!_ &&
+                      (0, _.jsx)(_._, {
+                        text: _,
+                      }),
                     (0, _.jsx)("div", {
                       className: _.ButtonContainer,
                       children: (0, _.jsx)(_._, {
@@ -1486,6 +1427,7 @@
                 _ &&
                   (0, _.jsx)(_._, {
                     pending: _,
+                    error: _,
                     hideCancel: !0,
                     onSave: _,
                   }),
@@ -2906,11 +2848,14 @@
               fileInputRef: _,
               acceptedTypes: _,
               save: async () => {
-                await _.mutateAsync(_(_)),
-                  await _.mutateAsync(_(_, _, _, _)),
-                  _(!0);
+                try {
+                  await _.mutateAsync(_(_)),
+                    await _.mutateAsync(_(_, _, _, _)),
+                    _(!0);
+                } catch {}
               },
               isSaving: _.isPending || _.isPending,
+              saveError: _.error?.message ?? _.error?.message,
               saveSucceeded: _,
               onClose: _,
             };
@@ -3347,27 +3292,32 @@
                 : void 0,
             };
           }
+          function _(_, _) {
+            const _ = _.auy.number().safeParse(_.path[0])?.data;
+            return void 0 !== _ &&
+              Number.isInteger(_) &&
+              _ >= 0 &&
+              _ < _.data.length
+              ? _
+              : void 0;
+          }
           function _(_, _, _) {
-            const _ = _.auy.number().safeParse(_.path[0])?.data,
-              _ = void 0 !== _ && _.data.length > _,
-              _ = _ ? _.data[_][_] : void 0,
+            const _ = _(_, _),
+              _ = _.data[_],
               _ = _.path.length > 1 ? _.path[1] : _;
             return {
-              line: void 0 === _ ? void 0 : _ + 2,
-              key: _,
+              line: _ + 2,
+              key: _[_],
               field: _,
-              input: _ && _ in _.data[_] ? _.data[_][_] : "",
+              input: _ in _ ? _[_] : "",
               message: _.message,
             };
           }
           function _(_, _, _) {
+            const _ = (_) => _.path.length > 1 && void 0 !== _(_, _);
             return {
-              errors: _?.filter((_) => _.path.length <= 1).map(
-                (_) => _.message,
-              ),
-              fieldErrors: _?.filter((_) => _.path.length > 1).map((_) =>
-                _(_, _, _),
-              ),
+              errors: _?.filter((_) => !_(_)).map((_) => _.message),
+              fieldErrors: _?.filter(_).map((_) => _(_, _, _)),
             };
           }
           function _(_) {
@@ -3715,7 +3665,7 @@
                             onClick: _,
                             children: (0, _.jsxs)(_._, {
                               direction: "row",
-                              gap: "1",
+                              gap: "2",
                               align: "center",
                               children: [
                                 (0, _.jsx)(_._, {
@@ -3801,7 +3751,7 @@
                 _
                   ? (0, _.jsx)(_, {
                       achievement: _,
-                      onSave: (_) => {
+                      onSave: () => {
                         _(!1);
                       },
                       onCancel: () => {
@@ -3911,7 +3861,9 @@
                                 !!_ &&
                                   (0, _.jsx)(_.Fragment, {
                                     children: (0, _.jsxs)(_._, {
-                                      toolTipContent: "Global achievement rate",
+                                      toolTipContent: (0, _._)(
+                                        "#AchievementEditor_AchievementsTable_GlobalRate_Tooltip",
+                                      ),
                                       style: {
                                         verticalAlign: "middle",
                                         whiteSpace: "nowrap",
@@ -4073,10 +4025,13 @@
                           "#AchievementEditor_Achievement_Delete_Dialog_Delete",
                         ),
                         saveColor: "red",
+                        pending: _.isPending,
+                        error: _.error?.message,
                         onCancel: _,
-                        onSave: async () => {
-                          await _.mutateAsync(), __webpack_require__();
-                        },
+                        onSave: () =>
+                          _.mutate(void 0, {
+                            onSuccess: _,
+                          }),
                       }),
                     }),
                   ],
@@ -4105,16 +4060,45 @@
                 groupid: _,
               } = _,
               { appID: _, cdnRoot: _ } = (0, _._)(),
-              _ = (0, _._)(_),
+              _ = (0, _._)(_) ?? [],
               _ = (0, _._)(_),
               _ = (0, _._)(_?.statID, _?.bitID),
               _ = (0, _._)(_),
+              _ = (0, _._)(_),
+              _ = (0, _.useMemo)(
+                () =>
+                  new Set(
+                    (_ ?? [])
+                      .filter(
+                        (_) => _.statID != _?.statID || _.bitID != _?.bitID,
+                      )
+                      .map((_) => _.name?.trim().toUpperCase()),
+                  ),
+                [_, _?.statID, _?.bitID],
+              ),
+              _ = (0, _.useMemo)(
+                () =>
+                  (0, _._)(
+                    _.YjP()
+                      .refine((_) => _.trim().length > 0, {
+                        error: (0, _._)(
+                          "#AchievementEditor_Achievement_Edit_ApiName_Error_Required",
+                        ),
+                      })
+                      .refine((_) => !_.has(_.trim().toUpperCase()), {
+                        error: (0, _._)(
+                          "#AchievementEditor_Achievement_Edit_ApiName_Error_Duplicate",
+                        ),
+                      }),
+                  ),
+                [_],
+              ),
               {
                 value: _,
                 setValue: _,
                 isValid: _,
                 issues: _,
-              } = (0, _._)(_?.name, (0, _._)(_.YjP().nonempty()), !0),
+              } = (0, _._)(_?.name, _, !0),
               [_, _] = _.useState(_?.permission ?? _._.Client),
               [_, _] = _.useState("1" == _?.display?.hidden),
               [_, _] = _.useState("1" == _?.archived),
@@ -4149,19 +4133,32 @@
                   ? {
                       image: _ + _?.display?.icon,
                       imageType: _._,
-                      filenameWithoutExtension: _?.display?.icon,
+                      filenameWithoutExtension: _?.name,
                     }
                   : void 0,
               ),
+              [_, _] = _.useState(void 0),
               [_, _] = _.useState(
                 _?.display?.icon_gray
                   ? {
                       image: _ + _?.display?.icon_gray,
                       imageType: _._,
-                      filenameWithoutExtension: _?.display?.icon_gray,
+                      filenameWithoutExtension: _?.name,
                     }
                   : void 0,
               ),
+              _ = async (_) => {
+                try {
+                  _(void 0),
+                    _({
+                      image: await (0, _._)(_),
+                      imageType: _._,
+                      filenameWithoutExtension: _,
+                    });
+                } catch {
+                  _((0, _._)("#AchievementEditor_Image_Error_GrayscaleFailed"));
+                }
+              },
               _ = (0, _._)(_, _ ? null : _.statID, _ ? null : _.bitID);
             let _;
             return (
@@ -4233,14 +4230,7 @@
                                     (0, _.jsx)(_, {
                                       icon: _,
                                       setIcon: async (_) => {
-                                        if ((_(_), !_)) {
-                                          const _ = await (0, _._)(_.image);
-                                          _({
-                                            image: _,
-                                            imageType: _._,
-                                            filenameWithoutExtension: "",
-                                          });
-                                        }
+                                        _(_), _ || (await _(_.image));
                                       },
                                       achievement: _,
                                     }),
@@ -4268,17 +4258,14 @@
                                     !!_ &&
                                       (0, _.jsx)(_._, {
                                         color: "dull",
-                                        onClick: async () => {
-                                          const _ = await (0, _._)(_.image);
-                                          _({
-                                            image: _,
-                                            imageType: _._,
-                                            filenameWithoutExtension: "",
-                                          });
-                                        },
+                                        onClick: () => _(_.image),
                                         children: (0, _._)(
                                           "#AchievementEditor_Achievement_Edit_Icons_Button_Generate",
                                         ),
+                                      }),
+                                    !!_ &&
+                                      (0, _.jsx)(_._, {
+                                        text: _,
                                       }),
                                   ],
                                 }),
@@ -4514,8 +4501,11 @@
                     }),
                     (0, _.jsx)(_._, {
                       saveDisabled: !_,
-                      onSave: async () => {
-                        const _ = (0, _._)(
+                      pending: _.isPending,
+                      error: _.error?.message,
+                      onSave: () => {
+                        const _ = _.trim(),
+                          _ = (0, _._)(
                             _?.display?.name?.token,
                             _?.name,
                             "name",
@@ -4553,15 +4543,18 @@
                           },
                           progress: _,
                         };
-                        await _.mutateAsync({
-                          achievement: _,
-                          icon: _?.image,
-                          icon_gray: _?.image,
-                        })
-                          .then(({ statid: _, bitid: _ }) => {
-                            _ && _(_);
-                          })
-                          .catch((_) => {});
+                        _.mutate(
+                          {
+                            achievement: _,
+                            icon: _?.image,
+                            icon_gray: _?.image,
+                          },
+                          {
+                            onSuccess: () => {
+                              _ && _(_);
+                            },
+                          },
+                        );
                       },
                       onCancel: _,
                     }),
@@ -4570,14 +4563,22 @@
               })
             );
           }
+          [_, _, _, _, _, _, _] = _.then ? (await _)() : _;
+          const _ = 256;
           function _(_) {
             const { icon: _, setIcon: _, achievement: _ } = _,
-              _ = (0, _.useRef)(null);
+              _ = (0, _.useRef)(null),
+              [_, _] = _.useState(void 0);
             return (0, _.jsxs)(_.Fragment, {
               children: [
                 (0, _.jsx)(_._, {
                   className: _.AchievementUploadBox,
-                  onUpload: _,
+                  onUpload: (_) => {
+                    _(void 0), __webpack_require__(_);
+                  },
+                  onError: _,
+                  forceSquare: !0,
+                  maxDimension: _,
                   fileInputRef: _,
                   children: _
                     ? (0, _.jsx)(_._, {
@@ -4591,6 +4592,10 @@
                         showWarningOnEmpty: !1,
                       }),
                 }),
+                !!_ &&
+                  (0, _.jsx)(_._, {
+                    text: _,
+                  }),
                 (0, _.jsx)(_._, {
                   color: "accent-7",
                   children: (0, _._)(
@@ -4607,7 +4612,7 @@
               ],
             });
           }
-          ([_, _, _, _, _, _, _] = _.then ? (await _)() : _), _();
+          _();
         } catch (_) {
           _(_);
         }
@@ -4670,7 +4675,7 @@
               [_, _] = (0, _.useState)("main"),
               _ = {
                 main: {
-                  label: "Manage Achievements",
+                  label: (0, _._)("#AchievementEditor_Tab_ManageAchievements"),
                   render: () =>
                     (0, _.jsx)(_._, {
                       reordering: _,
@@ -4680,7 +4685,7 @@
                     }),
                 },
                 bulk: {
-                  label: "Bulk Import/Export",
+                  label: (0, _._)("#AchievementEditor_Tab_BulkImportExport"),
                   render: () =>
                     (0, _.jsx)(_._, {
                       onClose: () => _("main"),
@@ -4727,7 +4732,7 @@
                     onOk: () => {
                       _(!1), _(!1), _(_), _(void 0);
                     },
-                    okText: "Confirm",
+                    okText: (0, _._)("#Button_Confirm"),
                     children: (0, _._)(
                       "#AchievementEditor_TabBar_BulkUnsavedConfirm",
                     ),
@@ -4896,9 +4901,6 @@
                             },
                             children: (0, _.jsx)(_._, {
                               onClick: () => _(!0),
-                              title: (0, _._)(
-                                "#AchievementEditor_ReorderGroups",
-                              ),
                             }),
                           }),
                       ],
@@ -4915,7 +4917,11 @@
           function _(_) {
             const { appID: _ } = (0, _._)(),
               _ = _._.steamid,
-              _ = `${_._.COMMUNITY_BASE_URL}profiles/${_}/achievements/${_}`;
+              _ = `${_._.COMMUNITY_BASE_URL}profiles/${_}/achievements/${_}`,
+              _ = `${_._.PARTNER_BASE_URL}doc/features/achievements`,
+              _ = `${_}#5`,
+              _ = (0, _._)(_),
+              _ = (0, _._)(_)?.length ?? 0;
             return (0, _.jsxs)("div", {
               className: _.HeaderContainer,
               children: [
@@ -4929,7 +4935,7 @@
                         children: (0, _._)("#AchievementEditor_title"),
                       }),
                       (0, _.jsx)(_._, {
-                        href: `${_._.PARTNER_BASE_URL}doc/features/achievements`,
+                        href: _,
                         children: (0, _._)("#AssetRequest_General_SeeDocs"),
                       }),
                     ],
@@ -5008,6 +5014,43 @@
                         }),
                       ],
                     }),
+                    !!_ &&
+                      (0, _.jsxs)("div", {
+                        children: [
+                          (0, _.jsxs)("div", {
+                            children: [
+                              (0, _._)(
+                                "#AchievementEditor_Description_Title_Limit",
+                              ),
+                              ":",
+                            ],
+                          }),
+                          (0, _.jsxs)("div", {
+                            children: [
+                              (0, _._)(
+                                "#AchievementEditor_Description_Limit",
+                                _,
+                                _.max_achievements,
+                              ),
+                              !_.vetted &&
+                                (0, _.jsxs)(_.Fragment, {
+                                  children: [
+                                    " ",
+                                    (0, _._)(
+                                      (0, _._)(
+                                        "#AchievementEditor_Description_Limit_Unvetted",
+                                        _.max_achievements,
+                                      ),
+                                      (0, _.jsx)("a", {
+                                        href: _,
+                                      }),
+                                    ),
+                                  ],
+                                }),
+                            ],
+                          }),
+                        ],
+                      }),
                     (0, _.jsxs)("div", {
                       children: [
                         (0, _.jsxs)("div", {
@@ -5276,10 +5319,14 @@
                 }),
                 (0, _.jsx)(_._, {
                   pending: _.isPending,
-                  onSave: async () => {
-                    await _.mutateAsync(_.map((_) => _.groupid)),
-                      __webpack_require__();
-                  },
+                  error: _.error?.message,
+                  onSave: () =>
+                    _.mutate(
+                      _.map((_) => _.groupid),
+                      {
+                        onSuccess: _,
+                      },
+                    ),
                   onCancel: _,
                 }),
               ],
@@ -5300,7 +5347,7 @@
               _ = (0, _._)(),
               _ =
                 _.visible &&
-                Object.values(_).some(
+                Object.values(_ ?? {}).some(
                   (_) => (_.global_unlock_percent ?? 0) > 0,
                 ),
               [_, _] = _.useState(_),
@@ -5332,36 +5379,46 @@
               _ = () => {
                 _(!1), _ && _();
               };
-            let _ = (0, _.jsxs)(_._, {
+            let _ = (0, _.jsx)(_._, {
               variant: "vibrant",
               onClick: () => _(!0),
-              children: [
-                (0, _.jsx)(_.OMN, {
-                  width: "14",
-                  height: "14",
-                  fill: "currentColor",
-                  className: _.Icon,
-                }),
-                " ",
-                (0, _._)("#AchievementEditor_Group_CreateAchievement"),
-              ],
+              children: (0, _.jsxs)(_._, {
+                children: [
+                  (0, _.jsx)(_.OMN, {
+                    width: "14",
+                    height: "14",
+                    fill: "currentColor",
+                    className: _.Icon,
+                  }),
+                  " ",
+                  (0, _._)("#AchievementEditor_Group_CreateAchievement"),
+                ],
+              }),
             });
             return (
               _ &&
                 (_ = (0, _.jsxs)(_._, {
                   direction: "row",
-                  gap: "1",
+                  gap: "2",
                   align: "center",
                   children: [
                     _,
                     (0, _.jsxs)(_._, {
-                      color: "amber-9",
+                      align: "center",
+                      gap: "1",
                       children: [
-                        (0, _.jsx)(_._, {}),
-                        " ",
-                        (0, _._)(
-                          "#AchievementEditor_Group_CreateAchievement_WarnLiveGroup",
-                        ),
+                        (0, _.jsx)(_._, {
+                          color: "var(--color-amber-9)",
+                        }),
+                        (0, _.jsxs)(_._, {
+                          color: "amber-9",
+                          children: [
+                            " ",
+                            (0, _._)(
+                              "#AchievementEditor_Group_CreateAchievement_WarnLiveGroup",
+                            ),
+                          ],
+                        }),
                       ],
                     }),
                   ],
@@ -5746,25 +5803,27 @@
                           ),
                           onCancel: _,
                           onSave: async () => {
-                            let _ = _;
-                            _ && (_ = await _.save());
-                            const _ = {
-                              groupid: _,
-                              api_names: _.filter((_) =>
-                                _.has((0, _._)(_)),
-                              ).map((_) => _.name),
-                            };
-                            await _.mutateAsync(_),
-                              setTimeout(() => {
-                                const _ = document.getElementById(_(_));
-                                _?.scrollIntoView({
-                                  behavior: "smooth",
-                                  block: "nearest",
-                                });
-                              }, 200),
-                              __webpack_require__();
+                            try {
+                              const _ = _ ? await _.save() : _,
+                                _ = {
+                                  groupid: _,
+                                  api_names: _.filter((_) =>
+                                    _.has((0, _._)(_)),
+                                  ).map((_) => _.name),
+                                };
+                              await _.mutateAsync(_),
+                                setTimeout(() => {
+                                  const _ = document.getElementById(_(_));
+                                  _?.scrollIntoView({
+                                    behavior: "smooth",
+                                    block: "nearest",
+                                  });
+                                }, 200),
+                                __webpack_require__();
+                            } catch {}
                           },
-                          pending: _.isPending,
+                          pending: _.isPending || _.isPending,
+                          error: _.error?.message ?? _.error,
                         }),
                       ],
                     }),
@@ -5879,7 +5938,7 @@
           function _(_) {
             const { archived: _ = !1, developeronly: _ = !1, app: _ } = _,
               _ = _ || _ || !_?.is_released_somewhere,
-              _ = (0, _._)(_.Label, _.Unreleased);
+              _ = (0, _._)(_.Unreleased, _.Label);
             return (0, _.jsxs)("div", {
               className: _.GroupVisibilityInfo,
               children: [
@@ -5994,18 +6053,9 @@
                   _("1" == _?.archived),
                   _(_ || "1" == _?.developeronly);
               },
-              save: async () => {
-                let _;
-                return (
-                  await _.mutateAsync(_)
-                    .then((_) => {
-                      _ = _;
-                    })
-                    .catch((_) => {}),
-                  _
-                );
-              },
+              save: async () => await _.mutateAsync(_),
               isPending: _,
+              error: _.error?.message,
             };
           }
           function _(_) {
@@ -6030,13 +6080,15 @@
             const { value: _, setValue: _ } = _,
               { appID: _ } = (0, _._)(),
               _ = (0, _._)(_),
+              _ = (0, _.useMemo)(
+                () => new Map(_.map((_) => [_.appid, _.name])),
+                [_],
+              ),
               _ = (0, _.useCallback)(
-                (_) => {
-                  if ("0" == (_ ?? "0"))
-                    return `(${_}) ${(0, _._)("#AchievementEditor_Group_Field_Restrictions_Value_AllPlayers")}`;
-                  const _ = _.find((_) => _.appid == _)?.name;
-                  return `(${_}) ${_}`;
-                },
+                (_) =>
+                  "0" == (_ ?? "0")
+                    ? `(${_}) ${(0, _._)("#AchievementEditor_Group_Field_Restrictions_Value_AllPlayers")}`
+                    : `(${_}) ${_.get(_)}`,
                 [_, _],
               ),
               _ = Array.from(
@@ -6196,8 +6248,9 @@
                                           _ &&
                                             (0, _.jsx)(_._, {
                                               children: (0, _.jsx)("p", {
-                                                children:
-                                                  'May sometimes be displayed with "DLC" prefix',
+                                                children: (0, _._)(
+                                                  "#AchievementEditor_Group_Edit_Field_Name_DlcPrefix",
+                                                ),
                                               }),
                                             }),
                                         ],
@@ -6301,12 +6354,15 @@
                         !_ &&
                           (0, _.jsx)(_._, {
                             onSave: async () => {
-                              void 0 !== (await _.save()) && _ && _();
+                              try {
+                                await _.save(), _ && _();
+                              } catch {}
                             },
                             onCancel: () => {
                               _.reset(), _ && _();
                             },
                             pending: _,
+                            error: _.error,
                           }),
                       ],
                     }),
@@ -6383,10 +6439,13 @@
                         ),
                         saveColor: "red",
                         saveDisabled: !_,
+                        pending: _.isPending,
+                        error: _.error?.message,
                         onCancel: _,
-                        onSave: async () => {
-                          await _.mutateAsync(), _();
-                        },
+                        onSave: () =>
+                          _.mutate(void 0, {
+                            onSuccess: _,
+                          }),
                       }),
                     }),
                   ],
@@ -6615,8 +6674,10 @@
                 {},
               ),
               _ = [..._].sort((_, _) => _[_].localeCompare(_[_])),
-              _ = (0, _.useCallback)(async () => {
-                (await _.mutateAsync(Array.from(_))) && _();
+              _ = (0, _.useCallback)(() => {
+                _.mutate(Array.from(_), {
+                  onSuccess: _,
+                });
               }, [_, _, _]),
               _ = _.slice(0, Math.round(_.length / 2)),
               _ = _.slice(_.length);
@@ -6675,6 +6736,7 @@
                 }),
                 (0, _.jsx)(_._, {
                   pending: _.isPending,
+                  error: _.error?.message,
                   onSave: _,
                   onCancel: _,
                 }),
@@ -6768,7 +6830,7 @@
                 validator: _,
               } = _,
               _ = (0, _.useId)(),
-              _ = (0, _._)(_);
+              _ = (0, _._)(_) ?? [];
             return (0, _.jsxs)(_.Fragment, {
               children: [
                 (0, _.jsx)(_._, {
@@ -6954,6 +7016,7 @@
             _: () => _,
             _: () => _,
             _: () => _,
+            _: () => _,
           });
           var _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
@@ -6981,12 +7044,17 @@
               onSave: _,
               onCancel: _,
               pending: _,
+              error: _,
               saveDisabled: _ = !1,
               hideCancel: _ = !1,
             } = _;
             return (0, _.jsxs)("div", {
               className: _.SaveCloseButtons,
               children: [
+                !!_ &&
+                  (0, _.jsx)(_, {
+                    text: _,
+                  }),
                 (0, _.jsx)(_._, {
                   color: _ ?? "green",
                   variant: "vibrant",
@@ -7043,7 +7111,7 @@
             });
           }
           function _(_) {
-            const { title: _, onClick: _ } = _;
+            const { onClick: _ } = _;
             return (0, _.jsxs)(_._, {
               color: "dull",
               icon: !0,
@@ -7117,6 +7185,18 @@
               children: [(0, _.jsx)(_, {}), " ", _],
             });
           }
+          function _(_) {
+            const { text: _ } = _;
+            return (0, _.jsxs)(_._, {
+              direction: "row",
+              gap: "1",
+              align: "center",
+              style: {
+                color: "var(--color-error)",
+              },
+              children: [(0, _.jsx)(_, {}), " ", _],
+            });
+          }
           [_, _] = _.then ? (await _)() : _;
           const _ = "0";
           function _(_) {
@@ -7162,13 +7242,10 @@
               _ = [_, ...Object.keys(_)],
               _ = void 0 === _ ? _ : _.filter(_);
             _ && _.splice(0, 0, _);
-            const [_, _] = _.useState(_ ?? void 0);
             return (0, _.jsx)(_._, {
               selectedValue: _,
               variant: _,
-              onSelectionChange: (_) => {
-                _(_), __webpack_require__(_ === _ ? void 0 : _);
-              },
+              onSelectionChange: _,
               options: _,
               placeholder: _,
               getOptionLabel: (_) =>
@@ -7209,7 +7286,7 @@
                     }),
                     (0, _.jsx)(_._, {
                       children: (0, _.jsx)(_, {
-                        saveText: _ ?? "OK",
+                        saveText: _ ?? (0, _._)("#Button_OK"),
                         saveColor: _,
                         onSave: _,
                         cancelText: _,
@@ -7291,6 +7368,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -7299,10 +7377,21 @@
             accept: _,
             multiple: _ = !1,
             fileInputRef: _,
+            onError: _,
             children: _,
           } = _,
           [_, _] = (0, _.useState)(!1),
-          [_, _] = (0, _.useState)(!1);
+          [_, _] = (0, _.useState)(!1),
+          _ = (_) => {
+            _ &&
+              _(
+                !_ && _.length > 1
+                  ? (0, _._)("#AchievementEditor_Upload_Error_SingleFileOnly")
+                  : (0, _._)(
+                      "#AchievementEditor_Image_Error_UnknownContentType",
+                    ),
+              );
+          };
         return (0, _.jsxs)("div", {
           className: (0, _._)(_.DragBox, _ && _.Dragging, _ && _.Invalid, _),
           onDragEnter: (_) => {
@@ -7327,7 +7416,10 @@
           onDrop: async (_) => {
             _.preventDefault(), _(!1);
             let _ = _;
-            _(!1), _ || __webpack_require__(_.dataTransfer.files);
+            _(!1),
+              _
+                ? _(_.dataTransfer.files)
+                : __webpack_require__(_.dataTransfer.files);
           },
           children: [
             _,
@@ -7342,7 +7434,12 @@
                 multiple: _,
                 ref: _,
                 onChange: async (_) => {
-                  __webpack_require__(_.target.files);
+                  var _;
+                  ((_ = _.target.files),
+                  (!_ && _.length > 1) ||
+                    !Array.from(_).every((_) => _.includes(_.type)))
+                    ? _(_.target.files)
+                    : __webpack_require__(_.target.files);
                 },
               }),
           ],
@@ -7362,17 +7459,21 @@
         _ = __webpack_require__("chunkid");
       const _ = 1;
       async function _(_) {
-        return new Promise((_) => {
+        return new Promise((_, _) => {
           const _ = new Image();
-          (_.onload = () => {
-            const _ = document.createElement("canvas");
-            (_.width = _.width), (_.height = _.height);
-            const _ = _.getContext("2d");
-            (_.filter = "grayscale(100%)"),
-              _.drawImage(_, 0, 0, _.width, _.height);
-            const _ = _.toDataURL("image/png");
-            _(_);
-          }),
+          (_.onerror = () =>
+            __webpack_require__(
+              new Error("failed to decode image for grayscale conversion"),
+            )),
+            (_.onload = () => {
+              const _ = document.createElement("canvas");
+              (_.width = _.width), (_.height = _.height);
+              const _ = _.getContext("2d");
+              (_.filter = "grayscale(100%)"),
+                __webpack_require__.drawImage(_, 0, 0, _.width, _.height);
+              const _ = _.toDataURL("image/png");
+              _(_);
+            }),
             (_.src = _);
         });
       }
@@ -7382,109 +7483,133 @@
       }
       async function _(_, _ = 0, _ = 0, _ = !1) {
         return new Promise((_, _) => {
-          _ ||
-            _({
+          if (!_)
+            return void _({
               success: !1,
-              filename: _.name,
+              filename: "",
+              error: (0, _._)("#AchievementEditor_Image_Error_ReadFailed"),
             });
-          const _ = new FileReader();
-          (_.onloadend = () => {
-            const _ = _.type,
-              _ = _.name;
-            if (
-              (("image/png" === _ || _.endsWith(".png")) &&
-                _.result.toString().startsWith("data:image/png;base64,")) ||
-              (("image/jpeg" === _ ||
-                _.endsWith(".jpg") ||
-                _.endsWith(".jpeg")) &&
-                (_.result.toString().startsWith("data:image/jpeg;base64,") ||
-                  _.result.toString().startsWith("data:image/jpg;base64,")))
-            ) {
-              const _ = new Image();
-              (_.onload = () => {
-                _ && _.width != _.height
-                  ? (console.error(
-                      "Image width and height don't match, must be square",
-                    ),
-                    _({
-                      success: !1,
-                      filename: _.name,
-                      error: (0, _._)(
-                        "#AchievementEditor_Image_Error_NotSquare",
-                      ),
-                      image: {
-                        image: _.src,
-                        imageType: _,
-                        filenameWithoutExtension: _(_),
-                      },
-                    }))
-                  : _ > 0 && (_.width < _ || _.height < _)
-                    ? (console.error("Image too small"),
-                      _({
-                        success: !1,
-                        filename: _.name,
-                        error: (0, _._)(
-                          "#AchievementEditor_Image_Error_TooSmall",
+          const _ = () =>
+              _({
+                success: !1,
+                filename: _.name,
+                error: (0, _._)("#AchievementEditor_Image_Error_ReadFailed"),
+              }),
+            _ = new FileReader();
+          (_.onerror = _),
+            (_.onloadend = () => {
+              const _ = _.type,
+                _ = _.name;
+              if (
+                (("image/png" === _ || _.endsWith(".png")) &&
+                  _.result.toString().startsWith("data:image/png;base64,")) ||
+                (("image/jpeg" === _ ||
+                  _.endsWith(".jpg") ||
+                  _.endsWith(".jpeg")) &&
+                  (_.result.toString().startsWith("data:image/jpeg;base64,") ||
+                    _.result.toString().startsWith("data:image/jpg;base64,")))
+              ) {
+                const _ = new Image();
+                (_.onerror = _),
+                  (_.onload = () => {
+                    _ && _.width != _.height
+                      ? (console.error(
+                          "Image width and height don't match, must be square",
                         ),
-                        image: {
-                          image: _.src,
-                          imageType: _,
-                          filenameWithoutExtension: _(_),
-                        },
-                      }))
-                    : _ > 0 && (_.width > _ || _.height > _)
-                      ? (function (_, _, _, _) {
-                          const _ = new FileReader();
-                          (_.onload = (_) => {
-                            const _ = new Image();
-                            (_.onload = () => {
-                              const _ = document.createElement("canvas");
-                              let _ = _.width,
-                                _ = _.height;
-                              _ > _
-                                ? _ > _ && ((_ *= _ / _), (_ = _))
-                                : _ > _ && ((_ *= _ / _), (_ = _)),
-                                (_.width = _),
-                                (_.height = _),
-                                _.getContext("2d").drawImage(_, 0, 0, _, _);
-                              const _ = _.toDataURL(_.type);
-                              _(_);
-                            }),
-                              (_.src = _.target?.result);
-                          }),
-                            _.readAsDataURL(_);
-                        })(_, _, _, (_) => {
-                          _({
-                            success: !0,
-                            filename: _.name,
-                            image: {
-                              image: _,
-                              imageType: _,
-                              filenameWithoutExtension: _(_),
-                            },
-                          });
-                        })
-                      : _({
-                          success: !0,
+                        _({
+                          success: !1,
                           filename: _.name,
+                          error: (0, _._)(
+                            "#AchievementEditor_Image_Error_NotSquare",
+                          ),
                           image: {
-                            image: _.result,
+                            image: _.src,
                             imageType: _,
                             filenameWithoutExtension: _(_),
                           },
-                        });
-              }),
-                (_.src = _.result);
-            } else
-              console.error("unknown content types: " + _),
-                _({
-                  success: !1,
-                  filename: _.name,
-                  error: (0, _._)(
-                    "#AchievementEditor_Image_Error_UnknownContentType",
-                  ),
-                });
-          }),
+                        }))
+                      : _ > 0 && (_.width < _ || _.height < _)
+                        ? (console.error("Image too small"),
+                          _({
+                            success: !1,
+                            filename: _.name,
+                            error: (0, _._)(
+                              "#AchievementEditor_Image_Error_TooSmall",
+                            ),
+                            image: {
+                              image: _.src,
+                              imageType: _,
+                              filenameWithoutExtension: _(_),
+                            },
+                          }))
+                        : _ > 0 && (_.width > _ || _.height > _)
+                          ? (function (_, _, _, _, _) {
+                              const _ = new FileReader();
+                              (_.onerror = _),
+                                (_.onload = (_) => {
+                                  const _ = new Image();
+                                  (_.onerror = _),
+                                    (_.onload = () => {
+                                      const _ =
+                                        document.createElement("canvas");
+                                      let _ = _.width,
+                                        _ = _.height;
+                                      _ > _
+                                        ? _ > _ && ((_ *= _ / _), (_ = _))
+                                        : _ > _ && ((_ *= _ / _), (_ = _)),
+                                        (_.width = _),
+                                        (_.height = _),
+                                        _.getContext("2d").drawImage(
+                                          _,
+                                          0,
+                                          0,
+                                          _,
+                                          _,
+                                        );
+                                      const _ = _.toDataURL(_.type);
+                                      _(_);
+                                    }),
+                                    (_.src = _.target?.result);
+                                }),
+                                _.readAsDataURL(_);
+                            })(
+                              _,
+                              _,
+                              _,
+                              (_) => {
+                                _({
+                                  success: !0,
+                                  filename: _.name,
+                                  image: {
+                                    image: _,
+                                    imageType: _,
+                                    filenameWithoutExtension: _(_),
+                                  },
+                                });
+                              },
+                              _,
+                            )
+                          : _({
+                              success: !0,
+                              filename: _.name,
+                              image: {
+                                image: _.result,
+                                imageType: _,
+                                filenameWithoutExtension: _(_),
+                              },
+                            });
+                  }),
+                  (_.src = _.result);
+              } else
+                console.error("unknown content types: " + _),
+                  _({
+                    success: !1,
+                    filename: _.name,
+                    error: (0, _._)(
+                      "#AchievementEditor_Image_Error_UnknownContentType",
+                    ),
+                  });
+            }),
             _.readAsDataURL(_);
         });
       }
@@ -7504,26 +7629,37 @@
           fileInputRef: _,
           onUpload: _,
           onBulkUpload: _,
+          onError: _,
           children: _,
         } = _;
         return (0, _.jsx)(_._, {
           onUpload: async (_) => {
             const _ = await _({
-              ..._,
-              files: Array.from(_),
-            });
-            _
-              ? _[0].success && _(_[0].image)
-              : _(
-                  __webpack_require__
-                    .filter((_) => _.success)
-                    .map((_) => _.image),
-                );
+                ..._,
+                files: Array.from(_),
+              }),
+              _ = __webpack_require__.filter((_) => !_.success);
+            _.length > 0 &&
+              _ &&
+              _(
+                _.map((_) => _.error)
+                  .filter((_) => !!_)
+                  .join(" ") ||
+                  (0, _._)("#AchievementEditor_Image_Error_ReadFailed"),
+              ),
+              _
+                ? _[0].success && _(_[0].image)
+                : _(
+                    __webpack_require__
+                      .filter((_) => _.success)
+                      .map((_) => _.image),
+                  );
           },
           className: _,
           accept: ["image/png", "image/jpeg"],
           multiple: _,
           fileInputRef: _,
+          onError: _,
           children: _,
         });
       }
@@ -7548,7 +7684,7 @@
       function _(_, _, _) {
         const [_, _] = (0, _.useState)(_(_));
         return {
-          value: _.data,
+          value: _.success ? _.data : _.input,
           setValue: (_) => {
             const _ = _(_);
             (_ || _.success) && _(_);
@@ -7890,7 +8026,7 @@
           }),
           _ = _._.PARTNER_BASE_URL + "apps/landing/" + _,
           _ = (function (_, _) {
-            if (_?.asset_url_format && _[_])
+            if (_?.asset_url_format && "string" == typeof _[_])
               return (
                 _._.BASE_URL_SHARED_CDN +
                 "/store_item_assets/" +
@@ -8045,7 +8181,12 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = "steamQueryPersist";
+      const _ = _.createContext(void 0);
+      _.Provider;
+      Date.now();
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = 0,
@@ -8156,11 +8297,29 @@
             return _;
           },
           staleTime: 36e5,
+          area: "achievements",
         };
       }
       function _(_) {
-        const _ = (0, _._)();
-        return (0, _._)(_(_, _));
+        return (function (_) {
+          const { area: _, maxAgeSeconds: _, meta: _, ..._ } = _,
+            _ = _.useContext(_),
+            _ = _.useMemo(
+              () => ({
+                ..._,
+                [_]: {
+                  area: _,
+                  maxAgeSeconds: _,
+                },
+              }),
+              [_, _, _],
+            );
+          return (0, _._)({
+            ..._,
+            meta: _,
+            persister: _?.GetPersister(_),
+          });
+        })(_((0, _._)(), _));
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -9554,8 +9713,10 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -9590,6 +9751,29 @@
           className: (_) => _[`Underline-${_}`],
         },
       ];
+      function _(_) {
+        const { underline: _ = "auto", focusable: _, navProps: _, ..._ } = _,
+          _ = (0, _._)(),
+          _ = _ ?? _?.focusable ?? !!_.onClick,
+          _ = (0, _.jsx)("span", {
+            role: "button",
+            ...(0, _._)(
+              {
+                ..._,
+                underline: _,
+                className: _.TextLinkButton,
+              },
+              _,
+            ),
+          });
+        return _ && (_ || _)
+          ? (0, _.jsx)(_._, {
+              ...(_ || {}),
+              focusable: _,
+              children: _,
+            })
+          : _;
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

@@ -145,6 +145,7 @@
           _: () => _,
           _: () => _,
           _: () => _,
+          _: () => _,
         });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -156,6 +157,7 @@
         _ = 3,
         _ = 0,
         _ = 3,
+        _ = 4,
         _ = 6,
         _ = 7;
       class _ extends _.Message {
@@ -1948,7 +1950,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       (0, _._)(
         [_._],
@@ -3128,17 +3129,12 @@
           if (!this.jsondata.sale_sections) return new Set();
           const _ = new Set(_),
             _ = new Set();
-          if (
-            ((0, _._)(
+          return (
+            (0, _._)(
               !this.jsondata.bOptimizedForSize,
               "Cannot find all items in optimized json",
             ),
-            this.jsondata.bOptimizedForSize && "dev" == _._.WEB_UNIVERSE)
-          )
-            throw new Error(
-              "GetSaleOfItemType called on a truncated jsondata.",
-            );
-          return (
+            this.jsondata.bOptimizedForSize,
             this.jsondata.tagged_items?.forEach((_) => {
               _.AccumulateCapsuleListIDs([_.capsule], _, _, _);
             }),

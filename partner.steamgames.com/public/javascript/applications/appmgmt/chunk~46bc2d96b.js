@@ -58,8 +58,8 @@
       i.d(e, {
         BG: () => M,
         E7: () => B,
-        cR: () => y,
-        p6: () => S,
+        cR: () => S,
+        p6: () => y,
         sU: () => w,
         tW: () => f,
         ur: () => v,
@@ -168,7 +168,7 @@
             m.append("name", i),
             m.append("start_time", t.toString()),
             m.append("end_time", e.toString()),
-            m.append("strJSONDiscountInfo", y(i, n, r, s, c));
+            m.append("strJSONDiscountInfo", S(i, n, r, s, c));
           let _ = null;
           try {
             const l = await a().post(d, m, {
@@ -384,24 +384,14 @@
           );
         }
         constructor() {
-          "dev" == p.TS.WEB_UNIVERSE && (window.g_DiscountEventStore = this);
+          0;
         }
         Init() {
           const t = (0, p.Tc)("discount_events", "application_config");
-          if (
-            (("dev" != p.TS.WEB_UNIVERSE && "beta" != p.TS.WEB_UNIVERSE) ||
-              console.log(
-                "DEV_DEBUG: CDiscountEventStore loading payload: ",
-                t,
-              ),
-            this.BIsConfigValid(t))
-          ) {
+          if (this.BIsConfigValid(t)) {
             for (const e of t) this.m_mapDiscountEvents.set(e.id, e);
             this.m_bLoadedViaInitOrFullLoad = !0;
-          } else
-            "dev" == p.TS.WEB_UNIVERSE &&
-              t &&
-              console.error("CDiscountEventStore Invalid payload");
+          } else 0;
         }
         BIsConfigValid(t) {
           const e = t;
@@ -471,7 +461,7 @@
         })(t);
         return e;
       }
-      function S(t) {
+      function y(t) {
         const [e, i] = (0, s.useState)(_.Get().GetDiscountEvent(t)),
           [n, r] = (0, s.useState)(_.Get().GetAppList(t));
         return (
@@ -488,7 +478,7 @@
           n ? { oDiscountEvent: e, rgAppList: n } : null
         );
       }
-      function y(t, e, i, n, r) {
+      function S(t, e, i, n, r) {
         return JSON.stringify({
           discount_event: {
             name: t,
@@ -526,16 +516,16 @@
       "use strict";
       i.d(e, {
         D6: () => v,
-        DC: () => R,
+        DC: () => E,
         EF: () => D,
         G7: () => B,
-        Iy: () => S,
-        O4: () => E,
-        _q: () => C,
+        Iy: () => y,
+        O4: () => R,
+        _q: () => P,
         dN: () => I,
-        es: () => P,
+        es: () => C,
         fw: () => k,
-        k: () => y,
+        k: () => S,
         kJ: () => M,
         ms: () => z,
         uL: () => w,
@@ -1040,10 +1030,7 @@
               (0, h.Tc)("optin_registrations", "application_config"),
             ),
           );
-          this.ValidateStoreDefault(t) &&
-            (this.InternalAddRegistrations(t),
-            "dev" == h.TS.WEB_UNIVERSE &&
-              console.log("COptInRegistrations: " + t.length, t));
+          this.ValidateStoreDefault(t) && this.InternalAddRegistrations(t);
         }
         ValidateStoreDefault(t) {
           const e = t;
@@ -1086,7 +1073,7 @@
           [],
         );
       }
-      function S(t, e, i) {
+      function y(t, e, i) {
         const [n, r] = o.useState(null),
           a = (0, b.m)("useMultiLoadOptInAppReg");
         return (
@@ -1114,14 +1101,14 @@
           n
         );
       }
-      function y(t) {
+      function S(t) {
         const [e, i] = o.useState(w.Get().GetAllOptInRegistrations(t));
         return (
           (0, f.hL)(w.Get().GetOptInNameRegistrationsCallbackList(t), i), e
         );
       }
       function v(t) {
-        const e = y(t),
+        const e = S(t),
           [i, n] = o.useState({
             nAppOptedIn: 0,
             nAppEligible: 0,
@@ -1173,24 +1160,24 @@
           bIsInError: e.isError,
         };
       }
-      function E(t, e) {
+      function R(t, e) {
         const i = M(t, !1),
           [n, r] = (0, o.useState)(i?.find((t) => t.appid == e));
         return (0, f.hL)(w.Get().GetSingleAppRegistrationChange(e, t), r), n;
       }
-      function R(t, e) {
+      function E(t, e) {
         const [i, n] = (0, o.useState)(
           w.Get().GetOptInRegistrationAndEligibilityForAppOrCreate(t, e),
         );
         return (0, f.hL)(w.Get().GetSingleAppRegistrationChange(t, e), n), i;
       }
-      function C(t, e) {
+      function P(t, e) {
         const [i, n] = (0, o.useState)(
           w.Get().GetExistingOptInRegistartion(t, e),
         );
         return (0, f.hL)(w.Get().GetSingleAppRegistrationChange(t, e), n), i;
       }
-      function P() {
+      function C() {
         return {
           fnUpdateOptInRegistrationJson: w.Get().UpdateOptInRegistrationJson,
         };
@@ -1233,12 +1220,12 @@
         Mh: () => v,
         XA: () => z,
         XL: () => L,
-        a8: () => R,
-        aU: () => P,
-        gr: () => E,
-        hC: () => C,
-        iI: () => y,
-        qN: () => S,
+        a8: () => E,
+        aU: () => C,
+        gr: () => R,
+        hC: () => P,
+        iI: () => S,
+        qN: () => y,
         qT: () => _,
         sZ: () => f,
         sk: () => G,
@@ -1278,35 +1265,16 @@
           );
         }
         constructor() {
-          "dev" == m.TS.WEB_UNIVERSE && (window.g_PackageDiscountStore = this);
+          0;
         }
         Init() {
           const t = (0, m.Tc)("package_discounts", "application_config");
-          ("dev" != m.TS.WEB_UNIVERSE && "beta" != m.TS.WEB_UNIVERSE) ||
-            console.log(
-              "DEV_DEBUG: CPackageDiscountStore loading discount payload: ",
-              t,
-            ),
-            this.BIsDiscountPayloadValid(t)
-              ? this.InternalAddDiscounts(t)
-              : "dev" == m.TS.WEB_UNIVERSE &&
-                t &&
-                console.error("Invalid discount payload");
+          this.BIsDiscountPayloadValid(t) && this.InternalAddDiscounts(t);
           const e = (0, m.Tc)("max_discount_percentages", "application_config");
-          if (
-            (("dev" != m.TS.WEB_UNIVERSE && "beta" != m.TS.WEB_UNIVERSE) ||
-              console.log(
-                "DEV_DEBUG: CDiscountGridStore loading max-discount-% payload: ",
-                e,
-              ),
-            this.BIsMaxDiscountPayloadValid(e))
-          )
+          if (this.BIsMaxDiscountPayloadValid(e))
             for (let t in e)
               this.m_mapMaxDiscountPercentageByPackageId.set(Number(t), e[t]);
-          else
-            "dev" == m.TS.WEB_UNIVERSE &&
-              e &&
-              console.error("Invalid max-discount-% payload");
+          else 0;
         }
         InternalAddDiscounts(t, e) {
           const i = new Set(),
@@ -1620,10 +1588,10 @@
       function D(t) {
         return h.Get().GetAllDiscountsForDiscountEvent(t);
       }
-      function S(t) {
+      function y(t) {
         return h.Get().GetAllDiscountsForPackage(t);
       }
-      function y(t) {
+      function S(t) {
         return h.Get().GetCallbackListForPackage(t);
       }
       function v() {
@@ -1638,7 +1606,7 @@
           [],
         );
       }
-      function E() {
+      function R() {
         const t = (t) => h.Get().SaveDiscountToServer(t),
           e = (t, e, i) => h.Get().DeleteDiscountOnServer(t, e, i);
         return a.useMemo(
@@ -1646,12 +1614,12 @@
           [],
         );
       }
-      function R(t) {
+      function E(t) {
         return new Map(
           Array.from(t.map((t) => [t, h.Get().GetDiscountByID(t)])),
         );
       }
-      function C(t) {
+      function P(t) {
         const e = (0, o.f1)(),
           [i, n] = a.useState(h.Get().GetAllDiscountsForPackage(t));
         return (
@@ -1672,7 +1640,7 @@
           }, [t, e, i])
         );
       }
-      function P(t) {
+      function C(t) {
         const e = (0, o.f1)();
         if (!t) return null;
         let i = null;
@@ -1783,33 +1751,33 @@
       "use strict";
       i.d(e, {
         Be: () => R,
-        C5: () => it,
-        Gq: () => et,
+        C5: () => et,
+        Gq: () => tt,
         NK: () => P,
-        QD: () => V,
-        T1: () => G,
-        UZ: () => w,
-        WV: () => W,
+        QD: () => N,
+        T1: () => z,
+        UZ: () => b,
+        WV: () => x,
         ZM: () => q,
-        _9: () => Q,
-        bA: () => x,
+        _9: () => Y,
+        bA: () => U,
         ew: () => H,
-        gr: () => Z,
-        h5: () => I,
-        hk: () => D,
-        hu: () => E,
-        i3: () => K,
-        jM: () => v,
-        jf: () => M,
-        l4: () => N,
-        nu: () => O,
-        s3: () => B,
-        ve: () => J,
-        wF: () => X,
-        we: () => S,
-        wk: () => tt,
-        wn: () => C,
-        zP: () => $,
+        gr: () => J,
+        h5: () => M,
+        hk: () => B,
+        hu: () => I,
+        i3: () => V,
+        jM: () => S,
+        jf: () => v,
+        l4: () => W,
+        nu: () => G,
+        s3: () => w,
+        ve: () => $,
+        wF: () => Z,
+        we: () => D,
+        wk: () => Q,
+        wn: () => E,
+        zP: () => K,
         zU: () => y,
       });
       var n = i(30168),
@@ -1826,21 +1794,20 @@
         g = i(73745),
         _ = i(41338),
         f = i(14771),
-        h = i(78327),
-        b = i(43552);
-      const w = 0,
-        B = 1,
-        D = 2,
-        S = 3,
+        h = i(43552);
+      const b = 0,
+        w = 1,
+        B = 2,
+        D = 3,
         y = 4,
-        v = 5,
-        M = 6,
-        I = 7,
-        E = 8,
+        S = 5,
+        v = 6,
+        M = 7,
+        I = 8,
         R = 9,
-        C = 10,
+        E = 10,
         P = 11;
-      function k(t, e) {
+      function C(t, e) {
         return (
           !!t == !!e &&
           t?.packageID == e?.packageID &&
@@ -1848,21 +1815,21 @@
           t?.eState == e?.eState &&
           t?.rgConflictDetails?.length == e?.rgConflictDetails?.length &&
           t?.optInReg == e?.optInReg &&
-          z(t?.discount, e?.discount) &&
+          k(t?.discount, e?.discount) &&
           t?.nBaseAppID == e?.nBaseAppID &&
           t?.bChangedLocally == e?.bChangedLocally
         );
       }
-      function z(t, e) {
+      function k(t, e) {
         return (
           (!e && 0 == (t?.nDiscountPct ?? 0)) ||
           (!!e && e.nDiscountPct == t?.nDiscountPct)
         );
       }
-      const G = 30,
-        O = G * f.Kp.PerDay - 1.5 * f.Kp.PerHour,
-        A = 10 * f.Kp.PerMinute;
-      class L {
+      const z = 30,
+        G = z * f.Kp.PerDay - 1.5 * f.Kp.PerHour,
+        O = 10 * f.Kp.PerMinute;
+      class A {
         m_mapPackageStateForDiscountEvents = new Map();
         m_mapLocalPackageDiscountOverrides = new Map();
         m_mapDiscountPackageCallbackList = new Map();
@@ -1873,30 +1840,30 @@
         static s_initializationCallbackList = new p.lu();
         static Get() {
           return (
-            L.s_Singleton || ((L.s_Singleton = new L()), L.s_Singleton.Init()),
-            L.s_Singleton
+            A.s_Singleton || ((A.s_Singleton = new A()), A.s_Singleton.Init()),
+            A.s_Singleton
           );
         }
         static IsInitialized() {
-          return !!L.s_Singleton;
+          return !!A.s_Singleton;
         }
         constructor() {
-          "dev" == h.TS.WEB_UNIVERSE && (window.g_DiscountGridEditStore = this);
+          0;
         }
         Init() {
           for (const t of (0, o.OM)())
-            L.Get().ComputePackageState(t),
+            A.Get().ComputePackageState(t),
               (0, s.iI)(t).Register(() => {
-                L.Get().ComputePackageState(t);
+                A.Get().ComputePackageState(t);
               });
-          (0, b.ou)().Register(() => {
-            for (const t of (0, o.OM)()) L.Get().ComputePackageState(t, !0);
+          (0, h.ou)().Register(() => {
+            for (const t of (0, o.OM)()) A.Get().ComputePackageState(t, !0);
           }),
-            L.s_initializationCallbackList.Dispatch(!0);
+            A.s_initializationCallbackList.Dispatch(!0);
         }
         OverridePackageDiscountPct(t, e, i) {
-          const n = L.Get().m_mapPackageStateForDiscountEvents.get(t)?.get(e);
-          if (n?.eState != B)
+          const n = A.Get().m_mapPackageStateForDiscountEvents.get(t)?.get(e);
+          if (n?.eState != w)
             return (
               console.error(
                 "Cannot change discount in current state:",
@@ -1905,7 +1872,7 @@
               null
             );
           const r = n.discount,
-            a = (0, b.Z6)(e),
+            a = (0, h.Z6)(e),
             s = {
               nDiscountID: r?.nDiscountID,
               packageID: t,
@@ -1917,7 +1884,7 @@
               discountEventID: a.id,
               bChangedLocally: !0,
             };
-          return z(s, r)
+          return k(s, r)
             ? null
             : (this.m_mapLocalPackageDiscountOverrides.has(t) ||
                 this.m_mapLocalPackageDiscountOverrides.set(t, new Map()),
@@ -1934,7 +1901,7 @@
           let i = 0;
           return (
             e.forEach((t, e) => {
-              t.eState == B && (i = Math.max(i, t.discount?.nDiscountPct || 0));
+              t.eState == w && (i = Math.max(i, t.discount?.nDiscountPct || 0));
             }),
             i
           );
@@ -1944,10 +1911,10 @@
           return (
             this.m_mapLocalPackageDiscountOverrides.forEach((e) =>
               e.forEach((e) => {
-                z(e, e.nDiscountID && (0, s.Lj)(e.nDiscountID)) || t.push(e);
+                k(e, e.nDiscountID && (0, s.Lj)(e.nDiscountID)) || t.push(e);
               }),
             ),
-            t.sort(U),
+            t.sort(j),
             t
           );
         }
@@ -1971,7 +1938,7 @@
           i?.forEach((t) => this.ComputePackageState(t));
         }
         GetPackageDiscountsIncludingOverrides(t) {
-          const e = (0, d.sB)() - O,
+          const e = (0, d.sB)() - G,
             i = (0, s.qN)(t);
           if (!i) return null;
           const n = new Map(
@@ -1979,7 +1946,7 @@
           );
           return (
             this.m_mapLocalPackageDiscountOverrides.get(t)?.forEach((t, e) => {
-              z(t, n.get(e)) || n.set(e, t);
+              k(t, n.get(e)) || n.set(e, t);
             }),
             n
           );
@@ -2014,7 +1981,7 @@
         GetAllPackageStatesForDiscountEvent(t) {
           const e = [];
           return (
-            L.Get().m_mapPackageStateForDiscountEvents.forEach((i, n) =>
+            A.Get().m_mapPackageStateForDiscountEvents.forEach((i, n) =>
               e.push(i.get(t)),
             ),
             e
@@ -2023,7 +1990,7 @@
         ComputePackageState(t, e) {
           const i = m.A.Get().GetPackage(t);
           if (!i) return;
-          const n = (0, b.E1)(),
+          const n = (0, h.E1)(),
             s = (0, c.i$)(i),
             o = s.nBaseAppID;
           let l = o && a.uL.Get().GetOptInRegistrationAndEligibilityForApp(o);
@@ -2052,15 +2019,15 @@
               (n.bChangedLocally = !!n.discount?.bChangedLocally),
               d)
             )
-              n.eState = w;
+              n.eState = b;
             else if (n.discount?.nDiscountPct > 0) {
-              n.eState = B;
+              n.eState = w;
               const t = a.opt_in_name && l?.get(a.opt_in_name);
               t && (n.optInReg = t);
             } else {
-              if (((n.eState = B), j(a, i))) n.eState = C;
+              if (((n.eState = w), T(a, i))) n.eState = E;
               else if (a.opt_in_name) {
-                const { ePackageDiscountState: t, optInRegistration: e } = T(
+                const { ePackageDiscountState: t, optInRegistration: e } = F(
                   a.opt_in_name,
                   l,
                   i,
@@ -2069,9 +2036,9 @@
                 );
                 (n.eState = t), (n.optInReg = e);
               }
-              if (n.eState != C && n.eState != y && n.eState != v) {
-                const e = F(t, a, p);
-                e.ePackageDiscountState != B &&
+              if (n.eState != E && n.eState != y && n.eState != S) {
+                const e = L(t, a, p);
+                e.ePackageDiscountState != w &&
                   ((n.eState = e.ePackageDiscountState),
                   (n.rgConflictDetails = e.rgConflictingDiscounts.map(
                     (t) =>
@@ -2079,7 +2046,7 @@
                   )));
               }
             }
-            k(n, g.get(a.id)) ||
+            C(n, g.get(a.id)) ||
               (g.set(a.id, n),
               this.GetDiscountPackageCallbackList(t).Dispatch(),
               this.GetDiscountGridCellCallbackList(t, a.id).Dispatch(n),
@@ -2090,8 +2057,8 @@
         }
         GetAvailableDiscountEventsInRange(t, e, i) {
           const n = this.m_mapPackageStateForDiscountEvents.get(t),
-            r = new Set([B, P, D, S]);
-          return (0, b.E1)()
+            r = new Set([w, P, B, D]);
+          return (0, h.E1)()
             .filter(
               (t) =>
                 e <= t.start_date &&
@@ -2111,7 +2078,7 @@
                 return e?.collision_type != n.Lg;
               })
               .forEach((t) => {
-                t.rtEndDate + O < i && (i = t.rtEndDate + O);
+                t.rtEndDate + G < i && (i = t.rtEndDate + G);
               }),
             i
           );
@@ -2125,32 +2092,32 @@
             ),
             s = (0, d.sB)(),
             o = e.GetReleaseDateRTime(),
-            c = (0, b.zL)(t),
+            c = (0, h.zL)(t),
             u = this.GetFurthestCooldownFromPastDiscounts(a),
-            p = Math.max(s, (o ?? 0) + O, c + O, u),
+            p = Math.max(s, (o ?? 0) + G, c + G, u),
             g = [],
             _ = new Set();
-          let h = p;
+          let b = p;
           for (let e = 0; e < a.length; e++) {
             const i = a[e];
             if (0 == i.nDiscountPct) continue;
             if (i.rtStartDate < p) continue;
             const s = (0, r.E7)(i.discountEventID);
-            let o = i.rtStartDate - O;
+            let o = i.rtStartDate - G;
             const c = s?.collision_type == n.Lg;
-            if (c && ((o = i.rtStartDate + A), e + 1 < a.length)) {
+            if (c && ((o = i.rtStartDate + O), e + 1 < a.length)) {
               const t = a[e + 1],
-                i = (0, b.Z6)(t.discountEventID);
-              i?.collision_type != n.Lg && (o = Math.min(o, t.rtStartDate - O));
+                i = (0, h.Z6)(t.discountEventID);
+              i?.collision_type != n.Lg && (o = Math.min(o, t.rtStartDate - G));
             }
-            if (h + f.Kp.PerDay < o) {
+            if (b + f.Kp.PerDay < o) {
               const e = {
                 bIsAvailable: !0,
-                rtStartDate: h,
+                rtStartDate: b,
                 rtEndDate: o,
                 rgDiscountEventIDs: this.GetAvailableDiscountEventsInRange(
                   t,
-                  h,
+                  b,
                   o,
                 ),
               };
@@ -2166,36 +2133,36 @@
             if (
               (g.push(u),
               _.add(i.discountEventID),
-              (h = i.rtEndDate + O),
-              c && ((h = i.rtEndDate - A), e - 1 >= 0))
+              (b = i.rtEndDate + G),
+              c && ((b = i.rtEndDate - O), e - 1 >= 0))
             ) {
               const t = a[e - 1],
-                i = (0, b.Z6)(t.discountEventID);
-              i?.collision_type != n.Lg && (h = Math.max(h, t.rtEndDate + O));
+                i = (0, h.Z6)(t.discountEventID);
+              i?.collision_type != n.Lg && (b = Math.max(b, t.rtEndDate + G));
             }
-            const d = (0, l.M)(h);
-            d - h <= 2 * f.Kp.PerHour && (h = d);
+            const d = (0, l.M)(b);
+            d - b <= 2 * f.Kp.PerHour && (b = d);
           }
-          const w = (0, l.M)(s + f.Kp.PerYear / 2);
-          if (h + f.Kp.PerDay < w) {
+          const B = (0, l.M)(s + f.Kp.PerYear / 2);
+          if (b + f.Kp.PerDay < B) {
             const e = {
               bIsAvailable: !0,
-              rtStartDate: h,
-              rtEndDate: w,
+              rtStartDate: b,
+              rtEndDate: B,
               rgDiscountEventIDs: this.GetAvailableDiscountEventsInRange(
                 t,
-                h,
-                w,
+                b,
+                B,
               ),
             };
             g.push(e), e.rgDiscountEventIDs.forEach((t) => _.add(t));
           }
-          const D = (0, b.E1)().filter(
+          const D = (0, h.E1)().filter(
             (e) =>
               e.collision_type == n.Lg &&
               !_.has(e.id) &&
               this.m_mapPackageStateForDiscountEvents.get(t).get(e.id).eState ==
-                B,
+                w,
           );
           for (const t of D)
             for (let e = 0; e < g.length; e++)
@@ -2216,23 +2183,23 @@
           return g;
         }
       }
-      function F(t, e, i) {
-        let a = B;
+      function L(t, e, i) {
+        let a = w;
         const s = [];
         let o = !1;
         const c = m.A.Get().GetPackage(t);
-        if (c?.GetReleaseDateRTime() > e.start_date - O)
+        if (c?.GetReleaseDateRTime() > e.start_date - G)
           return (
-            (a = M),
+            (a = v),
             {
               ePackageDiscountState: a,
               rgConflictingDiscounts: s,
               bChangedLocally: o,
             }
           );
-        if ((0, b.zL)(t) > e.start_date - O)
+        if ((0, h.zL)(t) > e.start_date - G)
           return (
-            (a = I),
+            (a = M),
             {
               ePackageDiscountState: a,
               rgConflictingDiscounts: s,
@@ -2243,11 +2210,11 @@
           if (e.id == t.discountEventID) continue;
           const i = (0, r.E7)(t.discountEventID),
             c = e.collision_type == n.Lg || i?.collision_type == n.Lg,
-            l = c ? e.start_date + A : e.start_date - O,
-            u = c ? e.end_date - A : e.end_date + O;
+            l = c ? e.start_date + O : e.start_date - G,
+            u = c ? e.end_date - O : e.end_date + G;
           if (t.rtEndDate > l && u > t.rtStartDate) {
             if (((o = o || t.bChangedLocally), 0 == t.nDiscountPct)) continue;
-            s.push(t), (a = c ? R : E);
+            s.push(t), (a = c ? R : I);
           }
         }
         return {
@@ -2256,14 +2223,14 @@
           bChangedLocally: o,
         };
       }
-      function T(t, e, i, n, r) {
+      function F(t, e, i, n, r) {
         let s,
-          o = v;
+          o = S;
         if (e)
           (s = e.get(t)),
             !s || s.restricted || s.pruned
               ? ((o = y), (s = { restricted: !0 }))
-              : (o = s.opt_in ? B : s.invited || !s.time_opted_in ? D : S);
+              : (o = s.opt_in ? w : s.invited || !s.time_opted_in ? B : D);
         else if (!n.nBaseAppID) {
           const t = i
             .GetIncludedAppIDs()
@@ -2275,12 +2242,12 @@
             )
             .filter(Boolean);
           t.some((t) => t.opt_in)
-            ? (o = B)
+            ? (o = w)
             : t.some((t) => !t.restricted && !t.pruned) && (o = P);
         }
         return { ePackageDiscountState: o, optInRegistration: s };
       }
-      function j(t, e) {
+      function T(t, e) {
         if (t.appids?.length > 0) {
           if (e?.GetIncludedAppIDs()?.length) {
             const i = new Set(t.appids);
@@ -2294,7 +2261,7 @@
         }
         return !1;
       }
-      function U(t, e) {
+      function j(t, e) {
         if (t.packageID != e.packageID) {
           const i = m.A.Get().GetPackage(t.packageID)?.GetName(),
             n = m.A.Get().GetPackage(e.packageID)?.GetName();
@@ -2309,72 +2276,72 @@
             : t.rtStartDate - e.rtStartDate;
         }
       }
-      function x() {
+      function U() {
         return u.useCallback(() => {
-          L.Get();
+          A.Get();
         }, []);
       }
-      function W() {
-        const [t, e] = u.useState(L.Get().GetLocalPackageDiscountOverrides());
+      function x() {
+        const [t, e] = u.useState(A.Get().GetLocalPackageDiscountOverrides());
         return (
-          (0, g.hL)(L.Get().GetLocalPackageDiscountOverrideCallbackList(), e), t
+          (0, g.hL)(A.Get().GetLocalPackageDiscountOverrideCallbackList(), e), t
         );
       }
       function q() {
         return u.useCallback(
-          () => L.Get().GetLocalPackageDiscountOverrides()?.length > 0,
+          () => A.Get().GetLocalPackageDiscountOverrides()?.length > 0,
+          [],
+        );
+      }
+      function W() {
+        return u.useCallback(
+          (t) => A.Get().DiscardAllLocalPackageDiscountOverrides(t),
           [],
         );
       }
       function N() {
         return u.useCallback(
-          (t) => L.Get().DiscardAllLocalPackageDiscountOverrides(t),
-          [],
-        );
-      }
-      function V() {
-        return u.useCallback(
-          (t, e) => L.Get().OptInRegistrationUpdatedForApp(t, e),
+          (t, e) => A.Get().OptInRegistrationUpdatedForApp(t, e),
           [],
         );
       }
       function H() {
         return u.useCallback(
-          (t, e) => L.Get().DiscardLocalPackageDiscountOverride(t, e),
+          (t, e) => A.Get().DiscardLocalPackageDiscountOverride(t, e),
           [],
         );
       }
-      function K(t, e) {
-        const i = L.Get().m_mapPackageStateForDiscountEvents.get(t)?.get(e);
-        return i?.eState == B ? (i?.discount?.nDiscountPct ?? 0) : null;
+      function V(t, e) {
+        const i = A.Get().m_mapPackageStateForDiscountEvents.get(t)?.get(e);
+        return i?.eState == w ? (i?.discount?.nDiscountPct ?? 0) : null;
       }
-      function $(t, e) {
+      function K(t, e) {
         const [i, n] = u.useState(() =>
-          L.Get().m_mapPackageStateForDiscountEvents.get(t)?.get(e),
+          A.Get().m_mapPackageStateForDiscountEvents.get(t)?.get(e),
         );
-        (0, g.hL)(L.Get().GetDiscountGridCellCallbackList(t, e), n);
+        (0, g.hL)(A.Get().GetDiscountGridCellCallbackList(t, e), n);
         return {
           packageState: i,
           fnSetDiscountPct: u.useCallback(
             (i) => {
-              L.Get().OverridePackageDiscountPct(t, e, i);
+              A.Get().OverridePackageDiscountPct(t, e, i);
             },
             [t, e],
           ),
         };
       }
-      function J() {
+      function $() {
         return u.useCallback((t, e, i) => {
           const n = [];
           for (const r of i) {
-            const i = L.Get().OverridePackageDiscountPct(r, e, t);
+            const i = A.Get().OverridePackageDiscountPct(r, e, t);
             i && n.push(i);
           }
           return n;
         }, []);
       }
-      function Z(t) {
-        const e = X(t);
+      function J(t) {
+        const e = Z(t);
         return u.useMemo(
           () => ({
             nAlreadySet: e.alreadySet.size,
@@ -2386,19 +2353,19 @@
           [e],
         );
       }
-      function X(t) {
-        const [e, i] = u.useState(() => Y(t)),
+      function Z(t) {
+        const [e, i] = u.useState(() => X(t)),
           n = u.useCallback(() => {
-            i(Y(t));
+            i(X(t));
           }, [t]);
         return (
           u.useEffect(n, [t, n]),
-          (0, g.hL)(L.Get().GetDiscountEventColumnCallbackList(t), n),
+          (0, g.hL)(A.Get().GetDiscountEventColumnCallbackList(t), n),
           e
         );
       }
-      function Y(t) {
-        const e = L.Get().GetAllPackageStatesForDiscountEvent(t),
+      function X(t) {
+        const e = A.Get().GetAllPackageStatesForDiscountEvent(t),
           i = {
             alreadySet: new Set(),
             available: new Set(),
@@ -2408,42 +2375,42 @@
           };
         for (const t of e)
           switch (t?.eState) {
-            case w:
+            case b:
               break;
-            case B:
+            case w:
               (t.discount?.nDiscountPct ?? 0) > 0
                 ? i.alreadySet.add(t.packageID)
                 : i.available.add(t.packageID);
               break;
+            case v:
             case M:
             case I:
-            case E:
             case R:
               i.conflicts.add(t.packageID);
               break;
+            case B:
             case D:
-            case S:
               i.needRegistration.add(t.packageID);
               break;
             case y:
-            case v:
-            case C:
+            case S:
+            case E:
               i.ineligibile.add(t.packageID);
           }
         return i;
       }
-      function Q(t) {
+      function Y(t) {
         return (
           !!(0, s.$U)(t).some((t) => t.nDiscountPct > 0) ||
           !(
-            !L.IsInitialized() ||
-            !L.Get()
+            !A.IsInitialized() ||
+            !A.Get()
               .GetAllPackageStatesForDiscountEvent(t)
               .some((t) => (t.discount?.nDiscountPct ?? 0) > 0)
           )
         );
       }
-      function tt(t, e = !0) {
+      function Q(t, e = !0) {
         if ((0, s.Ko)(t)) return !0;
         if (!e && t.startsWith("weeklongdeal_")) return !1;
         const i = (0, r.E7)(t);
@@ -2451,19 +2418,19 @@
         const n = a.uL.Get().GetAllOptInRegistrations(i.opt_in_name);
         return !!n?.length && n.some((t) => !t.restricted && !t.pruned);
       }
-      function et(t) {
+      function tt(t) {
         const e = (function () {
-            const [t, e] = u.useState(L.IsInitialized());
-            return (0, g.hL)(L.s_initializationCallbackList, e), t;
+            const [t, e] = u.useState(A.IsInitialized());
+            return (0, g.hL)(A.s_initializationCallbackList, e), t;
           })(),
-          [i, n] = u.useState(e ? L.Get().GetFutureDiscountRanges(t) : []),
+          [i, n] = u.useState(e ? A.Get().GetFutureDiscountRanges(t) : []),
           r = u.useCallback(
-            () => n(e ? L.Get().GetFutureDiscountRanges(t) : []),
+            () => n(e ? A.Get().GetFutureDiscountRanges(t) : []),
             [t, e],
           );
         return (
           (0, g.hL)(
-            e && L.Get().GetLocalPackageDiscountOverrideCallbackList(),
+            e && A.Get().GetLocalPackageDiscountOverrideCallbackList(),
             r,
           ),
           (0, g.hL)(e && (0, s.iI)(t), r),
@@ -2471,18 +2438,18 @@
           i
         );
       }
-      function it(t) {
-        let [e, i] = u.useState(() => L.Get().GetHighestPackageDiscount(t)),
+      function et(t) {
+        let [e, i] = u.useState(() => A.Get().GetHighestPackageDiscount(t)),
           n = u.useCallback(() => {
-            i(L.Get().GetHighestPackageDiscount(t));
+            i(A.Get().GetHighestPackageDiscount(t));
           }, [t, i]);
-        return (0, g.hL)(L.Get().GetDiscountPackageCallbackList(t), n), e;
+        return (0, g.hL)(A.Get().GetDiscountPackageCallbackList(t), n), e;
       }
     },
     43552: (t, e, i) => {
       "use strict";
       i.d(e, {
-        Ad: () => S,
+        Ad: () => y,
         E1: () => h,
         Fs: () => v,
         Ix: () => B,
@@ -2492,7 +2459,7 @@
         dp: () => D,
         ou: () => w,
         ry: () => m,
-        u7: () => y,
+        u7: () => S,
         v8: () => d,
         zL: () => f,
       });
@@ -2532,20 +2499,14 @@
           );
         }
         constructor() {
-          "dev" == o.TS.WEB_UNIVERSE && (window.g_DiscountGridStore = this);
+          0;
         }
         Init() {
           const t = (0, o.Tc)("price_increase_times", "application_config");
-          if (
-            (("dev" != o.TS.WEB_UNIVERSE && "beta" != o.TS.WEB_UNIVERSE) ||
-              console.log("DEV_DEBUG: CDiscountGridStore loading payload: ", t),
-            this.BIsPriceIncreasePayloadValid(t))
-          )
+          if (this.BIsPriceIncreasePayloadValid(t))
             for (let e in t)
               this.m_mapLastTimeRaisedPrices.set(Number(e), t[e]);
-          else
-            "dev" == o.TS.WEB_UNIVERSE &&
-              console.error("CDiscountGridStore Invalid payload");
+          else 0;
           (this.m_eRelatedDiscountView = window.localStorage.getItem(g) ?? d),
             this.UpdateDiscountEventsForGrid(),
             (0, c.yB)().Register(() => this.UpdateDiscountEventsForGrid()),
@@ -2716,7 +2677,7 @@
         const [t, e] = n.useState(_.Get().m_setVisibleDiscountEventIDs);
         return (0, s.hL)(_.Get().m_visibleDiscountEventIDsCallbackList, e), t;
       }
-      function S(t) {
+      function y(t) {
         const [e, i] = n.useState(_.Get().m_mapDiscountEventsByID.get(t)),
           r = n.useCallback(
             () => i(_.Get().m_mapDiscountEventsByID.get(t)),
@@ -2728,7 +2689,7 @@
           e
         );
       }
-      function y(t = !0) {
+      function S(t = !0) {
         const [e, i] = n.useState(_.Get().GetEventSelectionParameters()),
           r = t ? _.Get().m_gridEventSelectionParametersCallbackList : null;
         return (0, s.hL)(r, i), e;
@@ -2756,12 +2717,12 @@
       i.d(e, {
         HA: () => B,
         IR: () => G,
-        NP: () => P,
+        NP: () => C,
         Xr: () => O,
         ZN: () => z,
-        mE: () => R,
+        mE: () => E,
         rK: () => D,
-        sF: () => C,
+        sF: () => P,
         uv: () => I,
       });
       var n = i(7850),
@@ -2795,7 +2756,7 @@
           );
         return (0, n.jsx)(w.Provider, { value: o, children: e });
       }
-      function S(t) {
+      function y(t) {
         const { row: e } = t,
           i = e.original.packageID || 0,
           r = (0, _.C5)(i);
@@ -2810,7 +2771,7 @@
             : (0, o.we)("#PackageGrid_VisitPackagePricing_Tooltip");
         return (0, n.jsx)(M, { className: s, toolTip: c, ...t });
       }
-      function y(t) {
+      function S(t) {
         const { row: e } = t,
           i = e.original.packageID || 0,
           r = (0, d.nT)(i);
@@ -2910,7 +2871,7 @@
           [],
         );
       }
-      function E(t, e, i) {
+      function R(t, e, i) {
         let n = /^\d+$/.test(i);
         const r = t.original.packageID;
         return (
@@ -2918,7 +2879,7 @@
           t.getValue(e).toLowerCase().includes(i.toLowerCase())
         );
       }
-      function R(t) {
+      function E(t) {
         return r.useMemo(
           () => ({
             accessorKey: "packageName",
@@ -2930,17 +2891,17 @@
               ),
               cellClassname: l().PackageName,
             },
-            filterFn: E,
-            cell: t ? S : y,
+            filterFn: R,
+            cell: t ? y : S,
             size: 300,
           }),
           [t],
         );
       }
-      function C() {
+      function P() {
         return r.useMemo(() => ({ accessorKey: "appids" }), []);
       }
-      function P() {
+      function C() {
         return r.useMemo(
           () => ({
             accessorKey: "packageType",
@@ -3063,7 +3024,7 @@
       "use strict";
       i.d(e, { Hf: () => d, i$: () => l, qP: () => o });
       var n = i(37085),
-        r = i(6824),
+        r = i(30570),
         a = i(16021),
         s = i(61859);
       const o = new Set([r.uE.HT, r.uE.RA, r.uE.Sv, r.uE.Lj]),
@@ -3181,12 +3142,12 @@
             scrollAlign: h,
             bNativeScrollIntoView: b,
             initialOffset: B,
-            onOffsetChange: y,
+            onOffsetChange: S,
             ...v
           } = t,
           [M, I] = (0, d.useState)(p ?? _),
-          [E, R] = d.useState(),
-          [C, P] = d.useState(),
+          [R, E] = d.useState(),
+          [P, C] = d.useState(),
           k = d.useRef(null),
           z = d.useCallback(
             (t) => {
@@ -3194,8 +3155,8 @@
               const e = (0, f._f)(t, "y"),
                 i = w(t, "window" == p ? null : e);
               (0, d.startTransition)(() => {
-                "window" != p && R(e || void 0),
-                  P(i),
+                "window" != p && E(e || void 0),
+                  C(i),
                   p || I(e ? "element" : "window");
               });
             },
@@ -3204,9 +3165,9 @@
           G =
             ((O = (t) => {
               if (!k.current) return;
-              const e = w(k.current, E);
+              const e = w(k.current, R);
               (0, d.startTransition)(() => {
-                P(e);
+                C(e);
               });
             }),
             (0, r.QS)(
@@ -3242,7 +3203,7 @@
             scrollAlign: h,
             bNativeScrollIntoView: b,
             initialOffset: B,
-            onOffsetChange: y,
+            onOffsetChange: S,
           };
         return (0, n.jsx)(g.Z, {
           className: m,
@@ -3251,8 +3212,8 @@
           children: (0, n.jsxs)(d.Suspense, {
             children: [
               "element" === M &&
-                (0, n.jsx)(S, { ...L, nScrollMargin: C || 0, elScrollable: E }),
-              "window" === M && (0, n.jsx)(D, { ...L, nScrollMargin: C }),
+                (0, n.jsx)(y, { ...L, nScrollMargin: P || 0, elScrollable: R }),
+              "window" === M && (0, n.jsx)(D, { ...L, nScrollMargin: P }),
             ],
           }),
         });
@@ -3296,10 +3257,10 @@
           (g.shouldAdjustScrollPositionOnItemSizeChange = (t) =>
             void 0 !== e && t.start < (g.scrollOffset ?? 0)),
           B(g, p, m),
-          (0, n.jsx)(y, { ...t, virtualizer: g })
+          (0, n.jsx)(S, { ...t, virtualizer: g })
         );
       }
-      function S(t) {
+      function y(t) {
         const {
             nRows: e,
             nScrollMargin: i,
@@ -3335,7 +3296,7 @@
                 },
             initialOffset: l,
             observeElementOffset: M,
-            observeElementRect: E,
+            observeElementRect: R,
             onChange(t, e) {
               u?.(t.scrollOffset);
             },
@@ -3344,10 +3305,10 @@
           (f.shouldAdjustScrollPositionOnItemSizeChange = (t) =>
             void 0 !== r && t.start < (f.scrollOffset ?? 0)),
           B(f, g, p),
-          (0, n.jsx)(y, { ...t, virtualizer: f })
+          (0, n.jsx)(S, { ...t, virtualizer: f })
         );
       }
-      function y(t) {
+      function S(t) {
         const {
             virtualizer: e,
             nRowGap: i,
@@ -3431,7 +3392,7 @@
           }
         );
       }
-      function E(t, e) {
+      function R(t, e) {
         const i = t.scrollElement;
         if (!i) return;
         const n = v((t) =>
@@ -3455,9 +3416,9 @@
           }
         );
       }
-      var R = i(26408);
-      const C = d.createContext(void 0);
-      function P(t) {
+      var E = i(26408);
+      const P = d.createContext(void 0);
+      function C(t) {
         const { table: e, setColumnSizeOverride: i } = t,
           r = (0, d.useRef)(e);
         r.current = e;
@@ -3465,7 +3426,7 @@
           () => ({ table: r.current, setColumnSizeOverride: i }),
           [i],
         );
-        return (0, n.jsx)(C.Provider, { value: a, children: t.children });
+        return (0, n.jsx)(P.Provider, { value: a, children: t.children });
       }
       const k = d.forwardRef(function (t, e) {
         const {
@@ -3483,11 +3444,11 @@
             initialSorting: w,
             initialColumnFilters: B,
             initialGrouping: D,
-            initialExpanded: S,
-            initialColumnPinning: y,
+            initialExpanded: y,
+            initialColumnPinning: S,
             initialColumnVisibility: v,
-            onGroupingChange: R,
-            onVisibleRowsChange: C,
+            onGroupingChange: E,
+            onVisibleRowsChange: P,
             renderGroup: k,
             virtualizeType: z = "element",
           } = t,
@@ -3507,15 +3468,15 @@
               { ...t, size: e }
             );
           }),
-          W = (0, a.N4)({
+          q = (0, a.N4)({
             data: i,
             columns: x,
             defaultColumn: { minSize: 60, maxSize: 800 },
             initialState: {
               sorting: w,
               grouping: D ?? [],
-              expanded: S,
-              columnPinning: y ?? {},
+              expanded: y,
+              columnPinning: S ?? {},
               columnFilters: B,
               columnVisibility: v,
             },
@@ -3525,17 +3486,17 @@
             getGroupedRowModel: (0, s.cU)(),
             columnResizeMode: "onChange",
           }),
-          { rows: q, flatRows: N } = W.getRowModel(),
-          V = q.flatMap((t) => (t.getIsExpanded() ? [t, ...t.subRows] : t)),
-          H = W.getState().grouping;
+          { rows: W, flatRows: N } = q.getRowModel(),
+          H = W.flatMap((t) => (t.getIsExpanded() ? [t, ...t.subRows] : t)),
+          V = q.getState().grouping;
         (0, d.useEffect)(() => {
-          R?.(H);
-        }, [R, H]),
+          E?.(V);
+        }, [E, V]),
           (0, d.useEffect)(() => {
-            C?.(V);
-          }, [C, V.length]);
+            P?.(H);
+          }, [P, H.length]);
         const K = (0, o.Te)({
-            count: V.length,
+            count: H.length,
             scrollMargin: p,
             getScrollElement: d.useCallback(
               () => ("element" === z ? tt.current : window),
@@ -3547,15 +3508,15 @@
             overscan: f,
             initialRect: void 0,
             observeElementOffset: M,
-            observeElementRect: (t, e) => ("window" === z ? I(t, e) : E(t, e)),
+            observeElementRect: (t, e) => ("window" === z ? I(t, e) : R(t, e)),
             getItemKey(t) {
-              const e = V[t];
+              const e = H[t];
               return `${e.parentId ?? ""}${b(t, e.original)}`;
             },
           }),
           $ = (0, d.useRef)(0),
           J = d.useMemo(() => {
-            const t = W.getFlatHeaders(),
+            const t = q.getFlatHeaders(),
               e = {};
             for (let i = 0; i < t.length; i++) {
               const n = t[i];
@@ -3563,7 +3524,7 @@
                 (e[`--col-${n.column.id}-size`] = `${n.column.getSize()}px`);
             }
             return ($.current += 1), e;
-          }, [W.getState().columnSizingInfo, W.getState().columnSizing, r]);
+          }, [q.getState().columnSizingInfo, q.getState().columnSizing, r]);
         d.useEffect(() => {
           (0, d.startTransition)(() => {
             K.measure();
@@ -3574,8 +3535,8 @@
           Y = K.getTotalSize(),
           Q = (0, o.Te)({
             estimateSize: (t) =>
-              V[0]?.getVisibleCells()[t].column.getSize() ?? 0,
-            count: V[0]?.getVisibleCells().length ?? 0,
+              H[0]?.getVisibleCells()[t].column.getSize() ?? 0,
+            count: H[0]?.getVisibleCells().length ?? 0,
             overscan: 6,
             horizontal: !0,
             getScrollElement: d.useCallback(
@@ -3585,7 +3546,7 @@
             scrollToFn: (t, e, i) =>
               "window" === z ? (0, c.e8)(t, e, i) : (0, c.Ox)(t, e, i),
             rangeExtractor(t) {
-              const e = V[0]?.getVisibleCells() ?? [],
+              const e = H[0]?.getVisibleCells() ?? [],
                 i = new Set((0, c.vp)(t));
               return (
                 e.forEach((t, e) => {
@@ -3595,7 +3556,7 @@
               );
             },
             observeElementOffset: M,
-            observeElementRect: (t, e) => ("window" === z ? I(t, e) : E(t, e)),
+            observeElementRect: (t, e) => ("window" === z ? I(t, e) : R(t, e)),
           });
         (0, d.useEffect)(() => {
           Q.measure();
@@ -3604,12 +3565,12 @@
             e,
             () => ({
               getData: () => N.map((t) => t.original),
-              getVisibleRows: () => V,
-              getState: W.getState,
-              getColumns: W.getAllColumns,
+              getVisibleRows: () => H,
+              getState: q.getState,
+              getColumns: q.getAllColumns,
               getColumnDefs: () => U,
-              setColumnFilters: W.setColumnFilters,
-              resetColumnFilters: W.resetColumnFilters,
+              setColumnFilters: q.setColumnFilters,
+              resetColumnFilters: q.resetColumnFilters,
               setColumnFilterFnOverride: F,
               getColumnFilterFnOverride: () => L,
               getContainerElement: () => tt.current,
@@ -3620,11 +3581,11 @@
             }),
             [
               N,
-              V,
-              W.setColumnFilters,
-              W.resetColumnFilters,
-              W.getState,
-              W.getAllColumns,
+              H,
+              q.setColumnFilters,
+              q.resetColumnFilters,
+              q.getState,
+              q.getAllColumns,
               L,
               U,
               Q,
@@ -3633,15 +3594,15 @@
         const tt = (0, d.useRef)(null),
           et = h ? (_ ?? 0) : 0;
         let it = 0;
-        const nt = V[0]?.getVisibleCells(),
+        const nt = H[0]?.getVisibleCells(),
           rt = Q.getVirtualItems(),
           at = rt[rt.length - 1]?.end;
         for (const t of rt) {
           const e = nt[t.index];
           e?.column.getIsPinned() && (it += t.size);
         }
-        return (0, n.jsx)(P, {
-          table: W,
+        return (0, n.jsx)(C, {
+          table: q,
           setColumnSizeOverride: j,
           children: (0, n.jsx)("div", {
             className: l,
@@ -3659,23 +3620,25 @@
               "aria-rowcount": i.length,
               style: {
                 minHeight: Y,
-                width: W.getTotalSize(),
+                width: q.getTotalSize(),
                 "--virtualPos": `${X}px`,
                 ...J,
               },
               children: [
-                W.getHeaderGroups().map((t) =>
-                  (0, n.jsx)(
-                    G,
-                    { group: t, sticky: h, nHeaderHeight: _ },
-                    t.id,
+                q
+                  .getHeaderGroups()
+                  .map((t) =>
+                    (0, n.jsx)(
+                      G,
+                      { group: t, sticky: h, nHeaderHeight: _ },
+                      t.id,
+                    ),
                   ),
-                ),
                 Z.map((t) =>
                   (0, n.jsx)(
                     O,
                     {
-                      row: V[t.index],
+                      row: H[t.index],
                       size: t.size,
                       rowVirtualizer: Q,
                       index: t.index,
@@ -3820,7 +3783,7 @@
         });
       }
       function L(t, e) {
-        const i = (0, d.useContext)(C),
+        const i = (0, d.useContext)(P),
           n = t.columnDef.meta?.bGrowToFit,
           r = t.id,
           a = n ? t.getSize() : 0,
@@ -3890,7 +3853,7 @@
                 e.isPlaceholder
                   ? null
                   : (0, a.Kv)(e.column.columnDef.header, e.getContext()),
-                c && (0, n.jsx)(R.o, { tooltip: c }),
+                c && (0, n.jsx)(E.o, { tooltip: c }),
                 o &&
                   !e.column.columnDef.meta?.bDisableSortButton &&
                   (0, n.jsx)("div", { className: p().SortIndicator }),
@@ -3953,10 +3916,10 @@
         hp: () => gt,
         xE: () => it,
         mQ: () => J,
-        vt: () => H,
+        vt: () => V,
         lr: () => ot,
         tY: () => Q,
-        KQ: () => q,
+        KQ: () => W,
         vm: () => r,
         K1: () => s,
         Y2: () => a,
@@ -3971,7 +3934,7 @@
       i.r(a),
         i.d(a, {
           ru: () => g,
-          mC: () => S,
+          mC: () => y,
           cJ: () => _,
           J5: () => f,
           tx: () => b,
@@ -3986,13 +3949,13 @@
           RM: () => v,
           dk: () => A,
           Ng: () => O,
-          Mc: () => P,
-          pF: () => y,
-          EE: () => E,
-          nT: () => R,
+          Mc: () => C,
+          pF: () => S,
+          EE: () => R,
+          nT: () => E,
           CI: () => M,
           _j: () => k,
-          UM: () => C,
+          UM: () => P,
           K2: () => I,
           E0: () => F,
           iY: () => z,
@@ -4014,15 +3977,15 @@
         w = 64,
         B = 128,
         D = 256,
-        S = 512,
-        y = 0,
+        y = 512,
+        S = 0,
         v = 1,
         M = 2,
         I = 4,
-        E = 8,
-        R = 16,
-        C = 128,
-        P = 256,
+        R = 8,
+        E = 16,
+        P = 128,
+        C = 256,
         k = 512,
         z = 1024,
         G = 2048,
@@ -4299,66 +4262,6 @@
           return "CPublishing_CreatePartnerAppOptInEmail_Request";
         }
       }
-      class W extends o.Message {
-        static ImplementsStaticInterface() {}
-        constructor(t = null) {
-          super(),
-            W.prototype.email_def_id || l.Sg(W.M()),
-            o.Message.initialize(this, t, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            W.sm_m ||
-              (W.sm_m = {
-                proto: W,
-                fields: {
-                  email_def_id: {
-                    n: 1,
-                    br: l.qM.readFixed64String,
-                    bw: l.gp.writeFixed64String,
-                  },
-                },
-              }),
-            W.sm_m
-          );
-        }
-        static MBF() {
-          return W.sm_mbf || (W.sm_mbf = l.w0(W.M())), W.sm_mbf;
-        }
-        toObject(t = !1) {
-          return W.toObject(t, this);
-        }
-        static toObject(t, e) {
-          return l.BT(W.M(), t, e);
-        }
-        static fromObject(t) {
-          return l.Uq(W.M(), t);
-        }
-        static deserializeBinary(t) {
-          let e = new (c().BinaryReader)(t),
-            i = new W();
-          return W.deserializeBinaryFromReader(i, e);
-        }
-        static deserializeBinaryFromReader(t, e) {
-          return l.zj(W.MBF(), t, e);
-        }
-        serializeBinary() {
-          var t = new (c().BinaryWriter)();
-          return W.serializeBinaryToWriter(this, t), t.getResultBuffer();
-        }
-        static serializeBinaryToWriter(t, e) {
-          l.i0(W.M(), t, e);
-        }
-        serializeBase64String() {
-          var t = new (c().BinaryWriter)();
-          return W.serializeBinaryToWriter(this, t), t.getResultBase64String();
-        }
-        getClassName() {
-          return "CPublishing_CreatePartnerAppOptInEmail_Response";
-        }
-      }
       class q extends o.Message {
         static ImplementsStaticInterface() {}
         constructor(t = null) {
@@ -4373,6 +4276,66 @@
             q.sm_m ||
               (q.sm_m = {
                 proto: q,
+                fields: {
+                  email_def_id: {
+                    n: 1,
+                    br: l.qM.readFixed64String,
+                    bw: l.gp.writeFixed64String,
+                  },
+                },
+              }),
+            q.sm_m
+          );
+        }
+        static MBF() {
+          return q.sm_mbf || (q.sm_mbf = l.w0(q.M())), q.sm_mbf;
+        }
+        toObject(t = !1) {
+          return q.toObject(t, this);
+        }
+        static toObject(t, e) {
+          return l.BT(q.M(), t, e);
+        }
+        static fromObject(t) {
+          return l.Uq(q.M(), t);
+        }
+        static deserializeBinary(t) {
+          let e = new (c().BinaryReader)(t),
+            i = new q();
+          return q.deserializeBinaryFromReader(i, e);
+        }
+        static deserializeBinaryFromReader(t, e) {
+          return l.zj(q.MBF(), t, e);
+        }
+        serializeBinary() {
+          var t = new (c().BinaryWriter)();
+          return q.serializeBinaryToWriter(this, t), t.getResultBuffer();
+        }
+        static serializeBinaryToWriter(t, e) {
+          l.i0(q.M(), t, e);
+        }
+        serializeBase64String() {
+          var t = new (c().BinaryWriter)();
+          return q.serializeBinaryToWriter(this, t), t.getResultBase64String();
+        }
+        getClassName() {
+          return "CPublishing_CreatePartnerAppOptInEmail_Response";
+        }
+      }
+      class W extends o.Message {
+        static ImplementsStaticInterface() {}
+        constructor(t = null) {
+          super(),
+            W.prototype.email_def_id || l.Sg(W.M()),
+            o.Message.initialize(this, t, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            W.sm_m ||
+              (W.sm_m = {
+                proto: W,
                 fields: {
                   email_def_id: {
                     n: 1,
@@ -4414,39 +4377,39 @@
                   },
                 },
               }),
-            q.sm_m
+            W.sm_m
           );
         }
         static MBF() {
-          return q.sm_mbf || (q.sm_mbf = l.w0(q.M())), q.sm_mbf;
+          return W.sm_mbf || (W.sm_mbf = l.w0(W.M())), W.sm_mbf;
         }
         toObject(t = !1) {
-          return q.toObject(t, this);
+          return W.toObject(t, this);
         }
         static toObject(t, e) {
-          return l.BT(q.M(), t, e);
+          return l.BT(W.M(), t, e);
         }
         static fromObject(t) {
-          return l.Uq(q.M(), t);
+          return l.Uq(W.M(), t);
         }
         static deserializeBinary(t) {
           let e = new (c().BinaryReader)(t),
-            i = new q();
-          return q.deserializeBinaryFromReader(i, e);
+            i = new W();
+          return W.deserializeBinaryFromReader(i, e);
         }
         static deserializeBinaryFromReader(t, e) {
-          return l.zj(q.MBF(), t, e);
+          return l.zj(W.MBF(), t, e);
         }
         serializeBinary() {
           var t = new (c().BinaryWriter)();
-          return q.serializeBinaryToWriter(this, t), t.getResultBuffer();
+          return W.serializeBinaryToWriter(this, t), t.getResultBuffer();
         }
         static serializeBinaryToWriter(t, e) {
-          l.i0(q.M(), t, e);
+          l.i0(W.M(), t, e);
         }
         serializeBase64String() {
           var t = new (c().BinaryWriter)();
-          return q.serializeBinaryToWriter(this, t), t.getResultBase64String();
+          return W.serializeBinaryToWriter(this, t), t.getResultBase64String();
         }
         getClassName() {
           return "CPublishing_UpdatePartnerAppOptInEmail_Request";
@@ -4487,20 +4450,20 @@
           return "CPublishing_UpdatePartnerAppOptInEmail_Response";
         }
       }
-      class V extends o.Message {
+      class H extends o.Message {
         static ImplementsStaticInterface() {}
         constructor(t = null) {
           super(),
-            V.prototype.accounts_examined || l.Sg(V.M()),
+            H.prototype.accounts_examined || l.Sg(H.M()),
             o.Message.initialize(this, t, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            V.sm_m ||
-              (V.sm_m = {
-                proto: V,
+            H.sm_m ||
+              (H.sm_m = {
+                proto: H,
                 fields: {
                   accounts_examined: {
                     n: 1,
@@ -4528,67 +4491,6 @@
                     br: l.qM.readUint32,
                     bw: l.gp.writeUint32,
                   },
-                },
-              }),
-            V.sm_m
-          );
-        }
-        static MBF() {
-          return V.sm_mbf || (V.sm_mbf = l.w0(V.M())), V.sm_mbf;
-        }
-        toObject(t = !1) {
-          return V.toObject(t, this);
-        }
-        static toObject(t, e) {
-          return l.BT(V.M(), t, e);
-        }
-        static fromObject(t) {
-          return l.Uq(V.M(), t);
-        }
-        static deserializeBinary(t) {
-          let e = new (c().BinaryReader)(t),
-            i = new V();
-          return V.deserializeBinaryFromReader(i, e);
-        }
-        static deserializeBinaryFromReader(t, e) {
-          return l.zj(V.MBF(), t, e);
-        }
-        serializeBinary() {
-          var t = new (c().BinaryWriter)();
-          return V.serializeBinaryToWriter(this, t), t.getResultBuffer();
-        }
-        static serializeBinaryToWriter(t, e) {
-          l.i0(V.M(), t, e);
-        }
-        serializeBase64String() {
-          var t = new (c().BinaryWriter)();
-          return V.serializeBinaryToWriter(this, t), t.getResultBase64String();
-        }
-        getClassName() {
-          return "CPartnerAppOptInEmailStats";
-        }
-      }
-      class H extends o.Message {
-        static ImplementsStaticInterface() {}
-        constructor(t = null) {
-          super(),
-            H.prototype.email_def_id || l.Sg(H.M()),
-            o.Message.initialize(this, t, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            H.sm_m ||
-              (H.sm_m = {
-                proto: H,
-                fields: {
-                  email_def_id: {
-                    n: 1,
-                    br: l.qM.readFixed64String,
-                    bw: l.gp.writeFixed64String,
-                  },
-                  force_resend: { n: 2, br: l.qM.readBool, bw: l.gp.writeBool },
                 },
               }),
             H.sm_m
@@ -4626,6 +4528,67 @@
           return H.serializeBinaryToWriter(this, t), t.getResultBase64String();
         }
         getClassName() {
+          return "CPartnerAppOptInEmailStats";
+        }
+      }
+      class V extends o.Message {
+        static ImplementsStaticInterface() {}
+        constructor(t = null) {
+          super(),
+            V.prototype.email_def_id || l.Sg(V.M()),
+            o.Message.initialize(this, t, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            V.sm_m ||
+              (V.sm_m = {
+                proto: V,
+                fields: {
+                  email_def_id: {
+                    n: 1,
+                    br: l.qM.readFixed64String,
+                    bw: l.gp.writeFixed64String,
+                  },
+                  force_resend: { n: 2, br: l.qM.readBool, bw: l.gp.writeBool },
+                },
+              }),
+            V.sm_m
+          );
+        }
+        static MBF() {
+          return V.sm_mbf || (V.sm_mbf = l.w0(V.M())), V.sm_mbf;
+        }
+        toObject(t = !1) {
+          return V.toObject(t, this);
+        }
+        static toObject(t, e) {
+          return l.BT(V.M(), t, e);
+        }
+        static fromObject(t) {
+          return l.Uq(V.M(), t);
+        }
+        static deserializeBinary(t) {
+          let e = new (c().BinaryReader)(t),
+            i = new V();
+          return V.deserializeBinaryFromReader(i, e);
+        }
+        static deserializeBinaryFromReader(t, e) {
+          return l.zj(V.MBF(), t, e);
+        }
+        serializeBinary() {
+          var t = new (c().BinaryWriter)();
+          return V.serializeBinaryToWriter(this, t), t.getResultBuffer();
+        }
+        static serializeBinaryToWriter(t, e) {
+          l.i0(V.M(), t, e);
+        }
+        serializeBase64String() {
+          var t = new (c().BinaryWriter)();
+          return V.serializeBinaryToWriter(this, t), t.getResultBase64String();
+        }
+        getClassName() {
           return "CPublishing_SendPartnerAppOptInEmailAndWait_Request";
         }
       }
@@ -4641,7 +4604,7 @@
         static M() {
           return (
             K.sm_m ||
-              (K.sm_m = { proto: K, fields: { results: { n: 1, c: V } } }),
+              (K.sm_m = { proto: K, fields: { results: { n: 1, c: H } } }),
             K.sm_m
           );
         }
@@ -4725,7 +4688,7 @@
                     br: l.qM.readUint32,
                     bw: l.gp.writeUint32,
                   },
-                  stats: { n: 7, c: V },
+                  stats: { n: 7, c: H },
                   creator_accountid: {
                     n: 8,
                     br: l.qM.readUint32,
@@ -4976,7 +4939,7 @@
         static M() {
           return (
             Y.sm_m ||
-              (Y.sm_m = { proto: Y, fields: { stats: { n: 1, c: V } } }),
+              (Y.sm_m = { proto: Y, fields: { stats: { n: 1, c: H } } }),
             Y.sm_m
           );
         }
@@ -6553,14 +6516,14 @@
             return t.SendMsg(
               "Publishing.CreatePartnerAppOptInEmails#1",
               (0, u.I8)(x, e, i),
-              W,
+              q,
               { ePrivilege: 1 },
             );
           }),
           (t.UpdatePartnerAppOptInEmails = function (t, e, i) {
             return t.SendMsg(
               "Publishing.UpdatePartnerAppOptInEmails#1",
-              (0, u.I8)(q, e, i),
+              (0, u.I8)(W, e, i),
               N,
               { ePrivilege: 1 },
             );
@@ -6568,7 +6531,7 @@
           (t.SendPartnerOptInEmailAndWait = function (t, e, i) {
             return t.SendMsg(
               "Publishing.SendPartnerOptInEmailAndWait#1",
-              (0, u.I8)(H, e, i),
+              (0, u.I8)(V, e, i),
               K,
               { ePrivilege: 1 },
             );

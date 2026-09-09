@@ -270,14 +270,11 @@
             _.s_globalSingletonStore ||
               ((_ = "CHomeViewStore.s_globalSingletonStore"),
               (0, _._)(!0, "Unexpected code running in SSR Server: " + _),
-              (_.s_globalSingletonStore = new _()),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_HomeViewSetting = _.s_globalSingletonStore)),
+              (_.s_globalSingletonStore = new _())),
             _.s_globalSingletonStore
           );
         }
         constructor() {
-          "dev" === _._.WEB_UNIVERSE && (window.g_HomeViewStore = this);
           const _ = (0, _._)("home_view_setting", "application_config");
           this.ValidateHomeViewData(_) && this.SetHomeViewSetting(_);
           const _ = (0, _._)(
@@ -511,24 +508,18 @@
           return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
         }
         constructor() {
-          (0, _._)(this),
-            "dev" == _._.WEB_UNIVERSE && (window.g_curatorListStore = this);
+          (0, _._)(this);
           let _ = (0, _._)("curatorlistdata", "application_config");
-          ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-            console.log(
-              "DEV_DEBUG: CCuratorListStore loading list payload: " + _?.length,
-              _,
-            ),
-            this.ValidateStoreDefault(_) &&
-              (0, _._)(() => {
-                _.forEach((_) => {
-                  _.multi_detail_lists.forEach((_) => {
-                    _(_),
-                      _(_.curation_language, _),
-                      this.m_mapList.set(_.listid, _);
-                  });
+          this.ValidateStoreDefault(_) &&
+            (0, _._)(() => {
+              _.forEach((_) => {
+                _.multi_detail_lists.forEach((_) => {
+                  _(_),
+                    _(_.curation_language, _),
+                    this.m_mapList.set(_.listid, _);
                 });
               });
+            });
         }
         ValidateStoreDefault(_) {
           const _ = _;
@@ -636,7 +627,6 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -767,14 +757,12 @@
         return !1;
       }
       async function _(_, _, _, _) {
-        let _ = 0,
-          _ = 0;
         const _ = [];
         await _(_, _._, _);
         for (const _ of _) {
           const _ = _._.Get().GetStoreItem(_._, (0, _._)(_.type));
           if (!_) {
-            _++;
+            0;
             continue;
           }
           const _ = _.GetIncludedAppIDs()
@@ -790,23 +778,11 @@
             _ && _.push(..._);
           }
           _.some(_ || _)
-            ? (_++,
-              _ &&
-                (_._.Get().BIsStoreItemOwned(_) || __webpack_require__.push(_)))
+            ? _ &&
+              (_._.Get().BIsStoreItemOwned(_) || __webpack_require__.push(_))
             : _.push(_);
         }
-        return (
-          "dev" === _._.WEB_UNIVERSE &&
-            0 === _.length &&
-            console.log(
-              "ApplyStorePreferenceFilters: " +
-                _ +
-                " failed to load, " +
-                _ +
-                " hidden by user filter.",
-            ),
-          _
-        );
+        return _;
       }
       async function _(_, _, _, _, _, _, _) {
         let _ = await _(

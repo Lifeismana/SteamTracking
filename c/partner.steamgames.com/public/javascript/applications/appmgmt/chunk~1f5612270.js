@@ -42,6 +42,7 @@
         SaveButton: "_16sHrIsuZRMMARr_H1gSdR",
         NavigationWarning: "_3lm-HapxTM6gKnYv9iTdLb",
         PricePreviewWarning: "IxZAjD6UWfP6qIUU-JIsp",
+        PricePreviewWarningLine: "_1Fr6wQhuDghGzMFD8XxFWR",
         SeeDetailsSection: "_36-JCOAm-RV4rsa1HaZ6hW",
         SeeDetailsButton: "_4aHIWNtAHpL3bTZwenwHu",
         PriceOverrideSummaryList: "_3Y8X4CF7L7ZC8hcC2hifte",
@@ -830,6 +831,54 @@
           (_) => _.packageID,
         );
       }
+      const _ = 5;
+      function _(_) {
+        const { rgViolations: _ } = _;
+        if (0 == _.length) return null;
+        const _ = _.slice(0, _),
+          _ = _.length - _.length,
+          _ = (0, _.jsx)(_._, {
+            href: "https://partner.steamgames.com/doc/store/pricing",
+          });
+        return (0, _.jsxs)("div", {
+          className: _().PricePreviewWarning,
+          children: [
+            __webpack_require__.map((_) =>
+              (0, _.jsx)(
+                "div",
+                {
+                  className: _().PricePreviewWarningLine,
+                  children: (0, _._)(
+                    _.bTooLow
+                      ? "#PricingDashboard_PreviewWarning_TooLow"
+                      : "#PricingDashboard_PreviewWarning_TooHigh",
+                    (0, _._)(_.packageID),
+                    _.strPriceKey,
+                    (0, _._)(_.nPriceInCents, _.strPriceKey).join(""),
+                    (0, _._)(_.nLimitInCents, _.strPriceKey).join(""),
+                  ),
+                },
+                `${_.packageID}_${_.strPriceKey}`,
+              ),
+            ),
+            _ > 0 &&
+              (0, _.jsx)("div", {
+                className: _().PricePreviewWarningLine,
+                children: (0, _._)(
+                  "#PricingDashboard_PreviewWarning_MorePriceProblems",
+                  _,
+                ),
+              }),
+            (0, _.jsx)("div", {
+              className: _().PricePreviewWarningLine,
+              children: (0, _._)(
+                "#PricingDashboard_PreviewWarning_SeeRules",
+                _,
+              ),
+            }),
+          ],
+        });
+      }
       function _(_) {
         const { closeModal: _, strContinueUrl: _, bReloadPageOnSave: _ } = _,
           _ = (0, _._)(),
@@ -897,17 +946,29 @@
               ),
             }),
           });
-        let _ = !1,
-          _ = !1,
+        let _ = [],
           _ = new Set(),
           _ = new Set();
         for (const _ of _) {
-          const { nMinPriceInCents: _, nMaxPriceInCents: _ } = (0, _._)(
-            _.packageID,
-            _.strPriceKey,
-          );
-          (_ = _ || _.nPriceInCents < _),
-            (_ = _ || (!!_ && _.nPriceInCents > _)),
+          const { packageID: _, strPriceKey: _, nPriceInCents: _ } = _,
+            { nMinPriceInCents: _, nMaxPriceInCents: _ } = (0, _._)(_, _);
+          _ < _
+            ? _.push({
+                packageID: _,
+                strPriceKey: _,
+                nPriceInCents: _,
+                nLimitInCents: _,
+                bTooLow: !0,
+              })
+            : _ &&
+              _ > _ &&
+              _.push({
+                packageID: _,
+                strPriceKey: _,
+                nPriceInCents: _,
+                nLimitInCents: _,
+                bTooLow: !1,
+              }),
             _.nPriceInCents > _.nOldPriceInCents && _.add(_.strPriceKey),
             _.add(_.packageID);
         }
@@ -918,8 +979,7 @@
           let _ = _.map((_) => (0, _._)(_));
           _ = (0, _._)("#PricingDashboad_RequiredPrices", _.join(", "));
         }
-        const _ = _ || _,
-          _ = _ || void 0 === _ || 0 != _.length,
+        const _ = _.length > 0 || void 0 === _ || 0 != _.length,
           _ = (_) => {
             _
               ? (window.location.href = _)
@@ -939,9 +999,6 @@
                   "Pricing:SaveChangesDialog auto publish undefined",
                 );
           };
-        let _ = (0, _.jsx)(_._, {
-          href: "https://partner.steamgames.com/doc/store/pricing",
-        });
         return (0, _.jsx)(_._, {
           title: _,
           onOK: _,
@@ -960,15 +1017,9 @@
                       children: (0, _._)("#PackageGrid_NavigationWarning"),
                     }),
                   _,
-                  _ &&
-                    (0, _.jsxs)("div", {
-                      className: _().PricePreviewWarning,
-                      children: [
-                        " ",
-                        (0, _._)("#PricingDashboard_PreviewWarning", _),
-                        " ",
-                      ],
-                    }),
+                  (0, _.jsx)(_, {
+                    rgViolations: _,
+                  }),
                   _ &&
                     (0, _.jsxs)("div", {
                       className: _().PricePreviewWarning,

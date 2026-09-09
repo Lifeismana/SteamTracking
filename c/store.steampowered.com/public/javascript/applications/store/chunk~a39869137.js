@@ -429,7 +429,7 @@
               _.strClosedCaptionFile = _
                 ? _._.COMMUNITY_BASE_URL + "vtt/video/" + _
                 : "";
-            } else if ("store" == _ || "dev" == _._.WEB_UNIVERSE) {
+            } else if ("store" == _) {
               const _ = new URL(_.strClosedCaptionFile).pathname.split(
                 "/video/",
               )[1];

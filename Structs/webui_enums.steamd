@@ -293,6 +293,7 @@ enum ECategoryButtonAction
 	k_ECategoryButtonAction_Filter = 1;
 	k_ECategoryButtonAction_Add = 2;
 	k_ECategoryButtonAction_Remove = 3;
+	k_ECategoryButtonAction_Select = 4;
 }
 
 enum EChatFontSize
@@ -907,6 +908,20 @@ enum ERaiseGameWindowResult
 	k_ERaiseGameWindowResult_NotRunning = 1;
 	k_ERaiseGameWindowResult_Success = 2;
 	k_ERaiseGameWindowResult_Failure = 3;
+}
+
+enum ERemoteClientInstall
+{
+	k_ERemoteClientInstallOK = 1;
+	k_ERemoteClientInstallFail = 2;
+	k_ERemoteClientInstallNoSpace = 3;
+	k_ERemoteClientInstallDownloadFiltered = 4;
+	k_ERemoteClientInstallRequiresUI = 5;
+	k_ERemoteClientInstallRequiresEULA = 6;
+	k_ERemoteClientInstallAlreadyInstalled = 7;
+	k_ERemoteClientInstallTimeout = 8;
+	k_ERemoteClientInstallAccessDenied = 9;
+	k_ERemoteClientInstallNetworkError = 10;
 }
 
 enum ERemoteClientLaunch
@@ -3120,15 +3135,6 @@ enum UnnamedEnum67c7e176cced8c1b
 {
 	Increase = 0;
 	Decrease = 1;
-}
-
-enum UnnamedEnum67e7921661046ee2
-{
-	New = 1;
-	ComingSoon = 2;
-	PlayerFavorite = 3;
-	Recommended = 4;
-	NewPlayers = 5;
 }
 
 enum UnnamedEnum6847f45783a9d593

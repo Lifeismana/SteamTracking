@@ -342,10 +342,8 @@
         _: () => _,
         _: () => _,
       });
+      __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -376,23 +374,7 @@
         }
         ParseDevOverrides(_) {
           if (!_ || 0 == _.length) return;
-          const _ = new URLSearchParams("?" == _[0] ? _.substring(1) : _);
-          if (
-            _.has("t") &&
-            ("dev" == _._.WEB_UNIVERSE || "beta" == _._.WEB_UNIVERSE)
-          ) {
-            const _ = _.get("t");
-            let _ = /^\d+$/.test(null != _ ? _ : "")
-              ? _().unix(Number.parseInt(null != _ ? _ : "0"))
-              : _()(_);
-            (this.nOverrideDateNow = Math.floor(__webpack_require__.unix())),
-              console.log(
-                "CEventCalendarDevFeatures overriding partner event time: " +
-                  this.nOverrideDateNow +
-                  " " +
-                  __webpack_require__.format(),
-              );
-          }
+          new URLSearchParams("?" == _[0] ? _.substring(1) : _).has("t");
         }
       })();
       function _(_ = 1) {
@@ -446,66 +428,82 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid");
-      function _(_) {
-        return (0, _.jsx)(_._, {
-          onEscKeypress: _.closeModal,
-          bDisableBackgroundDismiss: !0,
-          children: (0, _.jsx)(_, {
-            redirectURL: _.redirectURL,
-            guestOption: _.guestOption,
-          }),
-        });
+      function _(_, _) {
+        let _;
+        if ("string" == typeof _) _ = _;
+        else if ("location" in _) _ = _.location.search;
+        else {
+          if (!("search" in _)) return;
+          _ = _.search;
+        }
+        const _ = new URLSearchParams(__webpack_require__.substring("chunkid"));
+        if (_.has(_)) {
+          const _ = _.getAll(_);
+          return _[_.length - 1];
+        }
       }
-      function _() {
-        (0, _._)(
-          (0, _.jsx)(_, {
-            ownerWin: window,
-            redirectURL: window.location.href,
-          }),
-          window,
-          {
-            strTitle: (0, _._)("#Login_SignInTitle"),
-          },
-        );
+      function _(_, _, _, _ = !1) {
+        const _ = new URLSearchParams(_.location.search.substring(1));
+        if (null != _ && null != _) {
+          if (_.get(_) == _) return;
+          _.set(_, _);
+        } else {
+          if (!_.has(_)) return;
+          _.delete(_);
+        }
+        _
+          ? _.replace(`?${_.toString()}`, {
+              ..._.location.state,
+            })
+          : _.push(`?${_.toString()}`);
       }
-      function _(_) {
-        const { redirectURL: _, guestOption: _ } = _,
-          [_] = (0, _.useState)(
-            new _._(_._.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
-          ),
-          [_, _] = (0, _.useState)(!1);
-        return (0, _.jsx)("div", {
-          children: _
-            ? (0, _.jsx)(_._, {})
-            : (0, _.jsx)(_._, {
-                autoFocus: !0,
-                transport: _,
-                platform: _._._,
-                onComplete: (_) => {
-                  _ == _._.k_PrimaryDomainFail
-                    ? _(!0)
-                    : window.location.assign(_);
-                },
-                redirectUrl: _,
-                theme: "modal",
-                children:
-                  _ &&
-                  (0, _.jsx)(_._, {
-                    redirectURL: _,
-                  }),
-              }),
-        });
+      function _(_, _, _) {
+        _(_, _, _, !0);
+      }
+      function _(_, _) {
+        const _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = (0, _.useMemo)(() => {
+            const _ = _(_.search, _);
+            return null != _ && null != _
+              ? null != _ && null != _
+                ? "boolean" == typeof _
+                  ? _.constructor("false" !== _)
+                  : _.constructor(_)
+                : _
+              : _;
+          }, [_.search, _, _]),
+          _ = (0, _.useCallback)(
+            (_, _ = !1) => {
+              _(_, _, null != _ && null != _ ? String(_) : null, _);
+            },
+            [_, _],
+          );
+        return [_, _];
+      }
+      function _(_, _, _ = !1) {
+        const _ = new URLSearchParams(_.location.search.substring(1));
+        for (const _ in _)
+          if (_.hasOwnProperty(_)) {
+            const _ = _[_];
+            _.delete(_), null != _ && null != _ && _.append(_, _);
+          }
+        _
+          ? _.replace(`?${_.toString()}`, {
+              ..._.location.state,
+            })
+          : _.push(`?${_.toString()}`);
+      }
+      function _(_, _) {
+        _(_, _, !0);
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

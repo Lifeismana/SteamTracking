@@ -82,8 +82,8 @@
           s.nStartNumber &&
           s.strMedia &&
           (t.bContainsThumbnails || s.strInitialization)
-          ? ((s.strMedia = R(s.strMedia, i)),
-            (s.strInitialization = R(s.strInitialization, i)),
+          ? ((s.strMedia = k(s.strMedia, i)),
+            (s.strInitialization = k(s.strInitialization, i)),
             s)
           : null;
       }
@@ -108,10 +108,10 @@
         let n = t.startsWith("/") ? 1 : 0;
         return i + t.substring(n);
       }
-      function R(e, t) {
+      function k(e, t) {
         return e && !P(e) && P(t) ? A(t, e) : e;
       }
-      function k(e) {
+      function R(e) {
         return (
           0 == e.rgRoles.length || e.rgRoles.findIndex((e) => "main" == e) >= 0
         );
@@ -195,14 +195,14 @@
           if (0 == this.m_rgPeriods.length) return null;
           let e = this.m_rgPeriods[0];
           for (let t of e.rgAdaptationSets)
-            if (k(t) && t.bContainsVideo) return t;
+            if (R(t) && t.bContainsVideo) return t;
           return null;
         }
         GetMainAudioAdaption() {
           if (0 == this.m_rgPeriods.length) return null;
           let e = this.m_rgPeriods[0];
           for (let t of e.rgAdaptationSets)
-            if (k(t) && t.bContainsAudio) return t;
+            if (R(t) && t.bContainsAudio) return t;
           return null;
         }
         GetThumbnailAdaptation() {
@@ -423,7 +423,7 @@
               s.strClosedCaptionFile = e
                 ? f.TS.COMMUNITY_BASE_URL + "vtt/video/" + e
                 : "";
-            } else if ("store" == o || "dev" == f.TS.WEB_UNIVERSE) {
+            } else if ("store" == o) {
               const e = new URL(s.strClosedCaptionFile).pathname.split(
                 "/video/",
               )[1];
@@ -1865,11 +1865,11 @@
             if (
               (!this.m_strVideoAdaptationID &&
                 e.bContainsVideo &&
-                k(e) &&
+                R(e) &&
                 ((t = e), (this.m_strVideoAdaptationID = e.strID)),
               !this.m_strAudioAdaptationID &&
                 e.bContainsAudio &&
-                k(e) &&
+                R(e) &&
                 ((t = e), (this.m_strAudioAdaptationID = e.strID)),
               t)
             ) {

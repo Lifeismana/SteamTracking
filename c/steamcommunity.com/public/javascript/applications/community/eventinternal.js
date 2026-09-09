@@ -602,13 +602,7 @@
           return [];
         }
         static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-                (window.g_MigrateSaleStore = _.s_Singleton)),
-            _.s_Singleton
-          );
+          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
         }
         constructor() {
           (this.m_mapSaleIDToInfo = new Map()),
@@ -621,7 +615,6 @@
       (0, _._)([_._], _.prototype, "m_mapSaleIDToInfo", void 0),
         (0, _._)([_._], _.prototype, "m_listSaleState", void 0);
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         constructor() {
@@ -758,9 +751,7 @@
       const _ = (0, _._)((_) => {
           const [_, _] = (0, _.useState)(!0);
           (0, _.useEffect)(() => {
-            Promise.all([_._.InitGlobal(), _._.Init()]).then(() =>
-              __webpack_require__(!1),
-            );
+            _._.Init(), __webpack_require__(!1);
           }, []);
           const [_, _] = (0, _._)("start", 0),
             [_, _] = (0, _._)("start_appid", 0),

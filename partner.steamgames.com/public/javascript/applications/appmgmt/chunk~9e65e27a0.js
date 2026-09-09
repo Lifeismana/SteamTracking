@@ -200,10 +200,6 @@
             (this.m_rtEndTime = s - 86400),
               (this.m_rtStartTime = s - 24 * (e + 1) * 60 * 60);
           }
-          "dev" == i.TS.WEB_UNIVERSE &&
-            console.log(
-              `CAppSaleSummary initializing to ${this.m_rtStartTime} to ${this.m_rtEndTime}`,
-            );
         }
       }
     },
@@ -371,8 +367,7 @@
       }
       class S {
         constructor() {
-          (0, u.Gn)(this),
-            "dev" === m.TS.WEB_UNIVERSE && (window.g_StoreTagStore = this);
+          (0, u.Gn)(this);
         }
         m_rgTags;
         m_rgCategories;
@@ -431,17 +426,8 @@
                   this.m_mapStoreTags.set(e.tagid, e),
                 ),
                 (this.m_mapStoreCategories = new Map()),
-                this.m_rgCategories.forEach((e) =>
+                void this.m_rgCategories.forEach((e) =>
                   this.m_mapStoreCategories.set(e.categoryid, e),
-                ),
-                void (
-                  "dev" === m.TS.WEB_UNIVERSE &&
-                  console.log(
-                    "tags " +
-                      this.m_rgTags.length +
-                      ", categories " +
-                      this.m_rgCategories.length,
-                  )
                 )
               );
             (this.m_promise = null), (s = (0, l.H)(a));
@@ -498,12 +484,12 @@
       s.d(t, {
         AY: () => G,
         CU: () => S,
-        Iw: () => v,
+        Iw: () => x,
         Th: () => f,
         _E: () => g,
-        eX: () => T,
-        hl: () => x,
-        mg: () => b,
+        eX: () => b,
+        hl: () => v,
+        mg: () => T,
         p$: () => A,
         tt: () => h,
       });
@@ -717,13 +703,7 @@
         }
         static s_Singleton;
         static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              "dev" == d.TS.WEB_UNIVERSE &&
-                (window.g_ThemeEventStore = _.s_Singleton)),
-            _.s_Singleton
-          );
+          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
         }
       }
       function S(e) {
@@ -802,7 +782,7 @@
           });
         return 0 == a.length && 0 == n.length && 0 == o.length ? C : i || null;
       }
-      function T(e, t, s) {
+      function b(e, t, s) {
         const a = A(e, t, s),
           n = (0, l.useMemo)(() => {
             const {
@@ -823,7 +803,7 @@
           r
         );
       }
-      function b(e, t, s) {
+      function T(e, t, s) {
         const a = (0, l.useMemo)(() => {
             const {
               musthaveall: a,
@@ -870,7 +850,7 @@
           s
         );
       }
-      function v(e) {
+      function x(e) {
         const [t, s] = (0, l.useState)(
           _.Get().GetAppSummaryObject().GetAppSaleSummary(e),
         );
@@ -882,7 +862,7 @@
           t
         );
       }
-      function x(e) {
+      function v(e) {
         const [t, s] = (0, l.useState)(_.Get().GetTopAppSummary(e));
         return (
           (0, p.hL)(_.Get().GetContentHubTopAppSaleSummaryChangeCallback(e), s),
@@ -904,11 +884,11 @@
       "use strict";
       s.d(t, {
         KU: () => j,
-        Ke: () => x,
+        Ke: () => v,
         W7: () => E,
         hp: () => f,
-        iT: () => v,
-        ny: () => N,
+        iT: () => x,
+        ny: () => D,
       });
       var a = s(7850),
         n = s(562),
@@ -925,14 +905,14 @@
         g = s(82227),
         _ = s(30470),
         S = s(92237),
-        y = s(35380),
+        y = s(14987),
         C = s(39777),
         A = s(71420),
-        T = s(42834);
-      const b = "0px 0px 100% 0px",
+        b = s(42834);
+      const T = "0px 0px 100% 0px",
         f = 5e3,
-        v = 500;
-      function x(e) {
+        x = 500;
+      function v(e) {
         const [t, s] = (0, l.useState)(!0),
           o = (0, n.lY)(),
           i = (0, l.useMemo)(
@@ -962,7 +942,7 @@
                                   " Days of Sale Summaries",
                                 ],
                               }),
-                            (0, a.jsx)(k, {}),
+                            (0, a.jsx)(N, {}),
                           ],
                         }),
                       ],
@@ -1012,7 +992,7 @@
         const { category: t, bSaleSummary: s } = e;
         return (0, a.jsx)(p.K, {
           placeholderHeight: 250,
-          rootMargin: b,
+          rootMargin: T,
           children: (0, a.jsx)(w, { category: t, bSaleSummary: s }),
         });
       }
@@ -1020,7 +1000,7 @@
         const { nTotalGames: t } = e;
         let s, n;
         return (
-          t > v && t <= f
+          t > x && t <= f
             ? ((s = S.SizeColorSweet), (n = "Good size!"))
             : t > f
               ? ((s = S.SizeColorBig), (n = "Too big"))
@@ -1049,7 +1029,7 @@
                 (0, a.jsx)(j, { nTotalGames: o }),
                 (0, a.jsx)("div", {
                   className: S.SaleStats,
-                  children: Boolean(s && i) && (0, a.jsx)(D, { category: t }),
+                  children: Boolean(s && i) && (0, a.jsx)(k, { category: t }),
                 }),
               ],
             }),
@@ -1073,7 +1053,7 @@
             }),
             (0, a.jsxs)("div", {
               className: S.ThemeDetails,
-              children: ["handle: ", t.handle, (0, a.jsx)(H, { category: t })],
+              children: ["handle: ", t.handle, (0, a.jsx)(R, { category: t })],
             }),
           ],
         });
@@ -1097,7 +1077,7 @@
                   children: (0, a.jsx)("a", {
                     href: (0, A._)(o),
                     children: (0, a.jsx)("img", {
-                      src: (0, T.b0)(r, "header"),
+                      src: (0, b.b0)(r, "header"),
                       alt: o.name,
                     }),
                   }),
@@ -1105,7 +1085,7 @@
                 (0, a.jsxs)("div", {
                   children: [" Rank: ", t.long_term_sale_rank],
                 }),
-                Boolean(s) && (0, a.jsx)(R, { ...e }),
+                Boolean(s) && (0, a.jsx)(H, { ...e }),
               ],
             })
           : (0, a.jsxs)("div", {
@@ -1117,7 +1097,7 @@
               ],
             });
       }
-      function R(e) {
+      function H(e) {
         const { info: t, category: s } = e,
           n = (0, r.Iw)(t.appid),
           o = (0, r.Th)(s);
@@ -1142,7 +1122,7 @@
           ],
         });
       }
-      function H(e) {
+      function R(e) {
         const { mapStoreTags: t, mapStoreCategories: s } = (0, n.k)(),
           { category: r } = e;
         return t && s && (r.any || r.must || r.mustnot)
@@ -1215,7 +1195,7 @@
               children: [s.has(o) ? s.get(o).name : "category id: " + o, ", "],
             });
       }
-      function N(e) {
+      function D(e) {
         const { saleSummary: t, topAppSummary: s } = e;
         return t
           ? (0, a.jsx)("div", {
@@ -1293,13 +1273,13 @@
               string: "Loading Sale Info",
             });
       }
-      function D(e) {
+      function k(e) {
         const { category: t } = e,
           s = (0, r.Th)(t),
           n = (0, r.hl)(t);
-        return (0, a.jsx)(N, { saleSummary: s, topAppSummary: n });
+        return (0, a.jsx)(D, { saleSummary: s, topAppSummary: n });
       }
-      function k(e) {
+      function N(e) {
         const t = (0, r.AY)();
         return (0, a.jsx)("a", {
           href: `data:application/octet-stream,${encodeURIComponent(i().unparse({ data: t, fields: Object.keys(t ? t[0] : {}) }))}`,
@@ -1336,15 +1316,15 @@
             onReorder: h,
             onMove: y,
             bDisabled: A,
-            rowClassName: T,
+            rowClassName: b,
           } = e,
-          [b, f] = n.useState(!1),
-          [v, x] = n.useState(void 0),
+          [T, f] = n.useState(!1),
+          [x, v] = n.useState(void 0),
           [G, j] = n.useState(void 0),
           [w, E] = n.useState(-1),
-          [R, H] = n.useState(void 0),
-          [B, N] = n.useState(0),
-          [D, k] = n.useState(0),
+          [H, R] = n.useState(void 0),
+          [B, D] = n.useState(0),
+          [k, N] = n.useState(0),
           [L, M] = n.useState(void 0),
           [P, I] = n.useState(""),
           K = n.useRef(void 0),
@@ -1353,8 +1333,8 @@
           Y = n.useMemo(() => g().CancelToken.source(), []),
           F = () => {
             K.current?.firstElementChild &&
-              (N(K.current.firstElementChild.getBoundingClientRect().height),
-              k(K.current.firstElementChild.getBoundingClientRect().width));
+              (D(K.current.firstElementChild.getBoundingClientRect().height),
+              N(K.current.firstElementChild.getBoundingClientRect().width));
           };
         n.useEffect(() => {
           F();
@@ -1364,11 +1344,11 @@
             (e) => {
               const t = U.current[w]?.current;
               t
-                ? ((t.style.left = e.clientX - v + "px"),
+                ? ((t.style.left = e.clientX - x + "px"),
                   (t.style.top = e.clientY - G + "px"))
                 : console.error("update grab element missing element");
             },
-            [w, v, G],
+            [w, x, G],
           ),
           O = n.useCallback(() => {
             const e = U.current[w]?.current;
@@ -1378,7 +1358,7 @@
               f(!1),
               E(-1),
               M(void 0),
-              H(void 0);
+              R(void 0);
           }, [w]),
           Q = (e, t) => {
             Y.token.reason ||
@@ -1393,9 +1373,9 @@
                   return void console.error(
                     "start element grab missing element at index " + e,
                   );
-                f(!0), E(e), M(void 0), H(e);
+                f(!0), E(e), M(void 0), R(e);
                 const a = t.clientX - s.getBoundingClientRect().left;
-                x(a);
+                v(a);
                 const n = t.clientY - s.getBoundingClientRect().top;
                 j(n),
                   (s.style.position = "fixed"),
@@ -1405,13 +1385,13 @@
               })(t, e),
               e.preventDefault());
           },
-          V = (e, s) => {
+          q = (e, s) => {
             const a = _.OQ(s > e ? s - 1 : s, 0, t.length - 1);
             e != a && (y ? y(e, a) : (0, l.yY)(t, e, a), $(a), h && h(t));
           },
-          q = n.useCallback(
+          X = n.useCallback(
             (e) => {
-              if (!b || Y.token.reason) return;
+              if (!T || Y.token.reason) return;
               const t = e.clientY;
               let s;
               for (let e = 0; e < W.current.length; e++) {
@@ -1425,17 +1405,17 @@
                   break;
                 }
               }
-              H(s ?? W.current.length), z(e);
+              R(s ?? W.current.length), z(e);
             },
-            [b, Y, z],
+            [T, Y, z],
           );
-        (0, r.l6)(window, "mousemove", b ? q : void 0),
+        (0, r.l6)(window, "mousemove", T ? X : void 0),
           (0, r.l6)(
             window,
             "mouseup",
-            b
+            T
               ? (e) => {
-                  b && !Y.token.reason && (O(), V(w, R));
+                  T && !Y.token.reason && (O(), q(w, H));
                 }
               : void 0,
           ),
@@ -1443,15 +1423,15 @@
             for (let e = U.current.length; e < t.length; e++)
               U.current.push(n.createRef()), W.current.push(n.createRef());
           }, [t.length]);
-        const X = (e) => {
+        const J = (e) => {
             M(void 0);
             const t = P?.trim(),
               s = Number.parseInt(t);
             if (0 == t.length || isNaN(s)) return;
             const a = s - 1;
-            e != a && V(e, a);
+            e != a && q(e, a);
           },
-          [J, $] = n.useState(void 0);
+          [V, $] = n.useState(void 0);
         return (0, a.jsx)("div", {
           className: u().WhitelistCtn,
           ref: K,
@@ -1461,14 +1441,14 @@
               {
                 ref: W.current[n],
                 children: [
-                  n == R && (0, a.jsx)(C, { width: D }),
+                  n == H && (0, a.jsx)(C, { width: k }),
                   (0, a.jsx)("div", {
                     ref: U.current[n],
                     className: u().DragGhost,
                     children:
                       n == w &&
                       (0, a.jsxs)("div", {
-                        className: (0, S.A)(u().WhitelistRow, T),
+                        className: (0, S.A)(u().WhitelistRow, b),
                         children: [
                           (0, a.jsx)("img", {
                             className: (0, S.A)(
@@ -1484,7 +1464,7 @@
                               u().Grabbing,
                             ),
                             type: "text",
-                            value: (R > n ? R - 1 : R) + 1,
+                            value: (H > n ? H - 1 : H) + 1,
                             disabled: !0,
                           }),
                           s(e, n),
@@ -1494,10 +1474,10 @@
                   (0, a.jsxs)("div", {
                     className: (0, S.A)(
                       u().WhitelistRow,
-                      T,
-                      b && u().DragActive,
+                      b,
+                      T && u().DragActive,
                       n == w && u().BeingDragged,
-                      J == n && u().Dropped,
+                      V == n && u().Dropped,
                     ),
                     onAnimationEnd: () => $(void 0),
                     children: [
@@ -1521,12 +1501,12 @@
                         onChange: (e) => I(e.target.value),
                         onKeyDown: (e) =>
                           ((e, t) => {
-                            "Enter" === e.key && (X(t), e.currentTarget.blur());
+                            "Enter" === e.key && (J(t), e.currentTarget.blur());
                           })(e, n),
                         onFocus: (e) => {
                           M(n), I(e.target.value);
                         },
-                        onBlur: () => X(n),
+                        onBlur: () => J(n),
                       }),
                       s(e, n),
                       Boolean(n != w) &&
@@ -1550,9 +1530,9 @@
                         }),
                     ],
                   }),
-                  R == t.length &&
+                  H == t.length &&
                     n == t.length - 1 &&
-                    (0, a.jsx)(C, { width: D }),
+                    (0, a.jsx)(C, { width: k }),
                 ],
               },
               n,

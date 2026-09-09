@@ -310,7 +310,7 @@ function SubmitReplyForm_Internal( form, extraFormData )
 		return;
 	}
 
-	var regexProcessReplacementText = /(?:^|\p{Po}| )⭈[\w\-]+(?: |\p{Po}|$)/iu;
+	var regexProcessReplacementText = /[⭈⭊]/u;
 
 	if ( regexProcessReplacementText.exec( strReply ) )
 	{
@@ -2313,17 +2313,22 @@ var PreapprovalQueue = {
 
 	CopyMap: function( strApprovalType )
 	{
-		PreapprovalQueue.CopyMapInternal( PreapprovalQueue.mapPreapprovals.get( strApprovalType ) );
+		PreapprovalQueue.CopyMapInternal( PreapprovalQueue.mapPreapprovals.get( strApprovalType ), 0 );
 	},
 
-	CopyMapInternal: function( map )
+	CopyReferences: function( strApprovalType )
+	{
+		PreapprovalQueue.CopyMapInternal( PreapprovalQueue.mapPreapprovals.get( strApprovalType ), 1 );
+	},
+
+	CopyMapInternal: function( map, idx )
 	{
 		var sList = "";
 		var nCount = map.size;
 		map.forEach(
 			function( value )
 			{
-				sList += value[0];
+				sList += value[idx];
 				if ( --nCount > 0 )
 					sList += "\n";
 			} );

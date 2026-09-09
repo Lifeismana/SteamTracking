@@ -3762,6 +3762,7 @@ $steammessages_parental_objects.proto"
 (\r">\n(CMsgClientUCMDeletePublishedFileResponse
 (\r">\n.CTransportValidation_GetLargeResponse_Response
 (\r"?\n.CCommunity_PartnerEventsShowMoreForApp_Request
+(\r"@\n"CMsgRemoteClientInstallAppResponse
 (\r"A\n*CBroadcast_WebRTCLookupTURNServer_Response
 (\r"A\n-CChatRoom_GetMessageReactionReactors_Response
 (\r"B\n!CCloudGaming_CreateNonce_Response
@@ -4694,6 +4695,7 @@ $steammessages_parental_objects.proto"
 )\n$k_EMsgGCHAccountTradeBanStatusChange
 )\n$k_EMsgGMShellAndServerAddressUpdates
 )\n$k_EMsgProductInfoChangedNotification
+)\n$k_EMsgRemoteClientInstallAppResponse
 )\n$k_EMsgRemoteClientPairWifiAPResponse
 )\n$k_EMsgUCMPublishedFileContentUpdated
 )\n$k_EMsgUCMUpdatePublishedFileResponse
@@ -6371,7 +6373,7 @@ $steammessages_parental_objects.proto"
 .AppCloudStatus
 .AppStageProgress
 .AppUpdateInfo
-.AppUpdateInfo"
+.AppUpdateInfo",\n
 .BNW^h
 .CAchievements_GetInfo_Request
 .CAchievements_GetInfo_Response
@@ -8108,8 +8110,14 @@ $steammessages_parental_objects.proto"
 0 bytes,
 0"W\n+CCommunity_GetUserPartnerEventNews_Response
 0)AA7A
+0.0333
+0.050
+0.125
 0.13.15.106
+0.15
 0.3.19
+0.65
+0.75
 0.CAccountHardware_GetPersonalizationFile_Request
 0.CAccountHardware_GetSteamDeckComponents_Request
 0.CAccountHardware_SetPersonalizationFile_Request
@@ -8154,12 +8162,6 @@ $steammessages_parental_objects.proto"
 0000000000000000000000000000000000000000
 00000000
 0000000000000000
-0.0333
-0.050
-0.125
-0.15
-0.65
-0.75
 00000001
 00003333
 000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798990123456789abcdef
@@ -9977,6 +9979,7 @@ $steammessages_parental_objects.proto"
 12CProtoBufMsgI26CMsgClientWalletInfoUpdateE
 12CProtoBufMsgI26CMsgGameServerPolicyUpdateE
 12CProtoBufMsgI26CMsgRemoteClientAcceptEULAE
+12CProtoBufMsgI26CMsgRemoteClientInstallAppE
 12CProtoBufMsgI26CMsgRemoteClientPairWifiAPE
 12CProtoBufMsgI26SiteServerUI_Login_RequestE
 12CProtoBufMsgI26SiteServerUI_Quit_ResponseE
@@ -10115,6 +10118,7 @@ $steammessages_parental_objects.proto"
 12CProtoBufMsgI34CMsgClientRequestItemAnnouncementsE
 12CProtoBufMsgI34CMsgClientSharedLibraryStopPlayingE
 12CProtoBufMsgI34CMsgClientUCMAddScreenshotResponseE
+12CProtoBufMsgI34CMsgRemoteClientInstallAppResponseE
 12CProtoBufMsgI34CMsgRemoteClientPairWifiAPResponseE
 12CProtoBufMsgI34CPlayer_GetLastPlayedTimes_RequestE
 12CProtoBufMsgI34SiteServerUI_ClientStatus_ResponseE
@@ -11619,6 +11623,7 @@ $steammessages_parental_objects.proto"
 1\n-k_EQueryFilesSpecialFilter_FavoritedByFriends
 1\n-k_ERemoteClientBroadcastMsgClientIDDeconflict
 1\n-k_ERemoteClientBroadcastMsgPairingExclusivity
+1\n-k_ERemoteClientServiceRemoteInstallWithoutPin
 1\n-k_ESharedLibrary_AppExcluded_NonrefundableDLC
 1\n-k_ESharedLibrary_LicenseExcluded_FlagBorrowed
 1\n-k_ESteamDatagramMsg_SetSecondaryAddressResult
@@ -12741,6 +12746,7 @@ $steammessages_parental_objects.proto"
 26CMsgNetworkDeviceIP4Config
 26CMsgNetworkDeviceIP6Config
 26CMsgRemoteClientAcceptEULA
+26CMsgRemoteClientInstallApp
 26CMsgRemoteClientPairWifiAP
 26CMsgSavePageToJPEGResponse
 26CMsgSetControllerActionSet
@@ -12757,6 +12763,7 @@ $steammessages_parental_objects.proto"
 26CParties_JoinParty_Request
 26CPlayer_AcceptSSA_Response
 26CPlayer_AddFriend_Response
+26CRemoteClientJobInstallApp
 26CRemoteClient_TaskList_Job
 26CSetTritonSlotInfoWorkItem
 26CShaderCacheImplSteamDepot
@@ -13643,6 +13650,7 @@ $steammessages_parental_objects.proto"
 31CPublishedFile_AddChild_Request
 31CPublishedFile_Publish_Response
 31CRegisterValveIndexComponentJob
+31CRemoteClientJobStartAppInstall
 31CRemoteClientPairWifiAPResponse
 31CRemoteDeviceJobAuthorizeDevice
 31CSetInputTemporarilyDisabledMsg
@@ -14043,6 +14051,7 @@ $steammessages_parental_objects.proto"
 34CMsgClientSharedLibraryStopPlaying
 34CMsgClientUCMAddScreenshotResponse
 34CMsgRemoteClientBroadcastDiscovery
+34CMsgRemoteClientInstallAppResponse
 34CMsgRemoteClientPairWifiAPResponse
 34CMsgSteamDatagramCertificateSigned
 34CMsgSteamDatagramConnectionQuality
@@ -18340,6 +18349,7 @@ BIsFixedDisk Yielding IO Job
 BIsGameRunning
 BIsGameWindowReady
 BIsGlobalInstance
+BIsInstallStartInProgress
 BIsJobRunning()
 BIsKnownGoodVersion
 BIsLauncherServiceEnabled
@@ -18478,6 +18488,7 @@ BRemoteClientHasStreamingSupportedByIndex
 BRemoteClientIsConnected
 BRemoteClientIsLowSpecHardware
 BRemoteClientStreaming
+BRemoteClientSupportsAppInstallationWithoutPin
 BRemoteClientWifiAPUnpaired
 BRemoteDeviceStreaming
 BRemoveDirectory Yielding IO Job
@@ -20867,6 +20878,7 @@ CMsgRemoteClientAppStatus
 CMsgRemoteClientBroadcastHeader
 CMsgRemoteClientBroadcastStatus
 CMsgRemoteClientDownloadStatus
+CMsgRemoteClientInstallApp
 CMsgRemoteClientPairWifiAP
 CMsgRemoteClientPing"
 CMsgRemoteClientPingResponse"S\n
@@ -21312,6 +21324,7 @@ CRecordedInput
 CRecordedInputStream
 CRefreshDevicesJob
 CRefreshDevicesJob::ThreadedRefreshDevices
+CRegisterValveIndexComponentJob
 CReloadWorkshopContentForInstalledAppsJob
 CRemoteClientBroadcastHandler - discovery
 CRemoteClientBroadcastHandler - status
@@ -21330,6 +21343,7 @@ CRemoteClientJobHandleClientAuthorizationConfirmed
 CRemoteClientJobHandleClientAuthorizationRequest
 CRemoteClientJobHandleClientAuthorizationResponse
 CRemoteClientJobHandleProofRequest
+CRemoteClientJobInstallApp timed out k_ERemoteClientWaitUIInstall
 CRemoteClientJobPing
 CRemoteClientJobRemotePlayInvite
 CRemoteClientJobRemotePlayInvite couldn't create invitation URL
@@ -21339,6 +21353,9 @@ CRemoteClientJobRemotePlayInvite couldn't invite user to session
 CRemoteClientJobRemotePlayInvite timed out k_ERemoteClientWaitUIDriverInstallation
 CRemoteClientJobRemotePlayInvite timed out k_ERemoteClientWaitUIProcessStreamStart
 CRemoteClientJobRequestControllerConfig
+CRemoteClientJobStartAppInstall received e_launch_result %d
+CRemoteClientJobStartAppInstall timed out waiting for reply
+CRemoteClientJobStartAppInstall::BYieldingRunClientJob starting appid %u on %llu (%s)
 CRemoteClientJobStartRemoteApp
 CRemoteClientJobStartRemoteApp couldn't get nonce for NVIDIA launch
 CRemoteClientJobStartRemoteApp launch_only success
@@ -21394,11 +21411,15 @@ CRemoteClientManager::SendAppStatusToConnectedClients
 CRemoteClientManager::SendDownloadIndexChangeToRemoteClient
 CRemoteClientManager::SendDownloadQueueChangeToRemoteClient
 CRemoteClientManager::SendEnableAllDownloadsToRemoteClient
+CRemoteClientManager::SendInstallRemoteApp
 CRemoteClientManager::SendQueuedBroadcastMessagesIfNecessary
 CRemoteClientManager::SendRemoveFromDownloadsToRemoteClient
 CRemoteClientManager::SendSuspendDownloadThrottleingToRemoteClient
 CRemoteClientManager::SendSuspendLanPeerContent
+CRemoteClientManager::SendUninstallRemoteApp
 CRemoteClientManager::SetDownloadingAppIDToRemoteClient
+CRemoteClientManager::StartInstall failed: another launch in progress for appid %u
+CRemoteClientManager::StartInstall failed: not %s
 CRemoteClientManager::StartStream failed: another launch in progress for appid %u
 CRemoteClientManager::StartStream failed: not %s
 CRemoteClientManager::m_pWorkThreadPool
@@ -28239,6 +28260,7 @@ Install path removed
 Install script %s was already correctly signed.
 InstallApp
 InstallApp: iLibraryFolderIndex is not set, installing to default folder
+InstallAppResult
 InstallConfigStore
 InstallDir
 InstallScript
@@ -34008,7 +34030,9 @@ RemoteClient.SendSteamToSteamPacket#1
 RemoteClientCache
 RemoteClientDongle
 RemoteClientJobGetControllerConfig
+RemoteClientJobInstallApp
 RemoteClientJobPing
+RemoteClientJobStartAppInstall
 RemoteClientJobStartStream
 RemoteClientLaunchFailed_t
 RemoteClientPairWifiAP
@@ -35597,6 +35621,7 @@ SendHTTPRequest
 SendHTTPRequestAndStreamResponse
 SendHdmiCecVolume
 SendInfoMessage
+SendInstallRemoteApp
 SendItemDropHeartbeat
 SendLobbyChatMsg
 SendLobbyChatMsg rate limit exceeded\n
@@ -35646,6 +35671,7 @@ SendThumbnailToRelay
 SendTimeSincePreviousPacket
 SendTo
 SendUDPacket
+SendUninstallRemoteApp
 SendUserConnectAndAuthenticate
 SendUserConnectAndAuthenticate called with invalid cubAuthBlobSize\n
 SendUserConnectAndAuthenticate called with invalid steamID ticket\n
@@ -37067,6 +37093,7 @@ StartDir
 StartGamePhase
 StartGamePhase_t
 StartGyroSoftwareCalibration
+StartInstall
 StartItemUpdate
 StartPipelineBuild
 StartPlaytimeTracking
@@ -49717,7 +49744,6 @@ https://video.steamstatic.com/
 https_proxy
 httpserver
 httpstatuscode
-huFU\t(y
 hu_HU
 hub_description
 hub_type
@@ -50439,6 +50465,7 @@ installed file locked
 installed\n
 installed_depots
 installer
+installing_app_id
 installscript.vdf
 installscript_log
 installscriptosx
@@ -52453,6 +52480,8 @@ k_EMsgRemoteClientAuthorizationResponse
 k_EMsgRemoteClientBase
 k_EMsgRemoteClientGetControllerConfig
 k_EMsgRemoteClientGetControllerConfigResponse
+k_EMsgRemoteClientInstallApp
+k_EMsgRemoteClientInstallAppResponse
 k_EMsgRemoteClientPairWifiAP
 k_EMsgRemoteClientPing
 k_EMsgRemoteClientPingResponse
@@ -61545,7 +61574,7 @@ stderr
 stdin
 stdout
 steam
-steam Sep  1 2026 00:44:14
+steam Sep  7 2026 20:53:01
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n
@@ -63379,6 +63408,7 @@ unignore
 unimplemented
 uninitialized
 uninitialized __any_string
+uninstalling_app_id
 uninterpreted_option
 uniqueIdentifier
 uniqueMember

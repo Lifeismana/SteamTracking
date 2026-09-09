@@ -87,7 +87,7 @@
         A = N(76217),
         j = N(95695),
         n = N.n(j),
-        a = N(82477),
+        a = N(71420),
         D = N(52038),
         T = N(61859),
         c = N(84933),
@@ -133,7 +133,7 @@
                 ),
                 strOKButtonText: (0, T.we)("#MobileLogin_SignIn"),
                 onCancel: this.props.closeModal,
-                onOK: () => (0, a.vg)(),
+                onOK: () => (0, a.l)(),
               })
             : this.state.bShareOnSteamDialog
               ? (0, L.jsx)(x.J, {

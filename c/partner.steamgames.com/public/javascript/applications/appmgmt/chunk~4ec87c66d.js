@@ -4,6 +4,66 @@
   {
     chunkid: (module) => {
       module.exports = {
+        ListArea: "gbif2hEiU91nZaM6kXn4Z",
+        SectionContainer: "_1PiBdCCjO150Q3hTAufdO-",
+        CalendarContainer: "_1Q9Esj5HeM-zR9xwNwZbLz",
+        CalendarMovingRegion: "_3z91JA_guW8Kol6_3JYdsK",
+        Sticky: "y0zs1X6cJnOeGGGHMnykj",
+        FilterHeader: "_2MXeDRYOqlELNsek990_rP",
+        FilterOptionsContainer: "_1ZcqFkHkuRJ22gzZ4fORx_",
+        FilterOption: "XvuAsXIIOXpunZZFsbG1J",
+        Highlighted: "_1EjDsvA9MZZb2AvmujSv3u",
+        FilterTextArea: "JkxeAXegHM_QgtpOvm_AH",
+        FilterTextInput: "_2RGPezbGnjjotWULS4Gk3E",
+        FilterTextIcon: "hydxe4hXqJfIxrt7409Iz",
+        FilterTextClearButton: "vAsUAkbX_RoNYnnfJISZR",
+        ListContainer: "_2KG00jfx602luW_vdQRBzE",
+        List: "weIDXAqztYzqoIwepmsqa",
+        Overflows: "DkGpNkRj4z7mW_dfjSvRq",
+        Expanded: "_2jreD9S_Xh_xvWoqzS6bWg",
+        ListMonthContainer: "_2ZwvtkeX0URO2_-2taBoRV",
+        ListMonthCalendarMovingContainer: "_3lJsS_dw0OHW1NVfxmu4ec",
+        ListMonthCalendar: "_3IydHRCeAWvMa9BsrKO8wD",
+        ListMonthCalendarAlt: "_1CfSWUeq7BwPIyOkYQpgJU",
+        ListMonthCalendarAltFlag: "_2bbnwMGGRiyd5ZDbXEZSqW",
+        Live: "_6ee9pUIbo29-Ff4xoo1Vq",
+        Past: "_8ry_ijicR9Z_4y8MHNTj9",
+        ListMonthCalendarAltLiveText: "_1P0U5YrXZxfa-C_FHPiFSd",
+        ListMonthCalendarAltPastText: "_9AyZNx9V_HPQuM_vtiYvb",
+        ListMonth: "_3okkw7x-z0qZCEK1NAahdQ",
+        EmptyMonth: "_3lyfmIZ1z2WSjSGhWIPf3O",
+        ListDay: "_3nICiFsbiDeF2mpxzd7IwS",
+        ListDayGroup: "_352WWYgRAg5jmv-U2SnWfB",
+        ListEvent: "_3MRpE4hb3oHP-SJc6vi4yU",
+        Dimmed: "_3exR8ToQYk5rc15u6VEoUa",
+        DeadlineUrgent: "_2gM5oc8dylrxJTQo2jP4rs",
+        ListEventEventElement: "_266M20K-owSPOzkiuGBsBf",
+        LinkButton: "_3QsxIbY8Nzn3iGjsYBzrZR",
+        ListEventHeader: "_1Vdp0aCwns6iiwo5MG0vNI",
+        ValveOnly: "_28655jUVT6o-ebdfQQ1vyx",
+        Edit: "_1dnVPTtaahO2JQS3OE3SYY",
+        Spacer: "_1MLZKEQOuWsi2BTjmjlOBh",
+        Dismiss: "_2odt96_ZRUgmstGH4SoHb3",
+        ListDayNumber: "_2Ncx_BvvudD_IcBVx_LvxT",
+        Deadline: "wtQr51ScyM_XVTch64sH_",
+        DLCRelease: "_2NkJJG4Hwuh-stavQ37q8c",
+        GameRelease: "_1VysaKhxfy4cBLdjI6JsyG",
+        Event: "_2xxX0s3uxEU627JFdaQYDJ",
+        ListEventType: "_37eU9658-vqcNosEYTJkcp",
+        ListEventEventSection: "_3wlVa8x4AS1PHWwY_wi-k-",
+        ListEventEventGutter: "_382iDNo-Drucmr1EywHor6",
+        Loading: "_1BsxVDOWwiT4onflhO4bAR",
+        ExpandButton: "_97EaAkAHVWnrq08EKad4J",
+        AllEventsFiltered: "_3x4GpVBlBh7Scc9WVEWgU-",
+        GroupPlaceholder: "h-0YMsaRZ9MTVsMb2fuWk",
+        GroupPlaceholderCapsules: "ptApIyhzYXOYjPeSyazsK",
+        ExpandContainer: "_1eSEFRNJRuuc3ywaWvSTAE",
+        GroupPlaceholderCapsule: "C1qEKLBiqrSSmwKoRjABM",
+        GroupPlaceholderCapsuleMissing: "cj9RQ9Fa8HRuAfXaBC-j8",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         ItemContainer: "x1ZXiuhxzdmthc1Gn6cqH",
         ButtonsOnTop: "_1b7b1bvhRiuhRcDQmW55h-",
         ButtonsOnBottom: "_1hA2MT9R4XntxdhXc2g4r1",
@@ -1237,6 +1297,18 @@
     },
     chunkid: (module) => {
       module.exports = {
+        narrowWidth: "500px",
+        EventDetailTimeInfo: "xBUZ1jJ4rafFpeTqBLFXy",
+        StartDate: "_3fnIGWmHQRS3H57PR7Qm0V",
+        EndDate: "_27ujtr5AsAF4_qa1HEifF4",
+        MultiDateAndTime: "_130Qkcrkkg7Ygi1ksNJVM",
+        RightSideTitles: "_34vtF4hGMg7lb2WZUbe8ie",
+        DateAndTime: "zLuUcDh0YJONQX3MssuAu",
+        VerticalLocalDateAndTime: "MT8Ri2dV3bsGLkpXTvoVG",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         DefaultFancyTable: "_3OVilOdb2tSBtG90cwqGUo",
         NoColumnBorders: "_3C2djc2HxWtHJaUqVq-cKt",
       };
@@ -1261,37 +1333,6 @@
       module.exports = {
         SeeMoreButtonGamepad: "_3LB60XV--dXt2yYQ6dF5aT",
         Focused: "_3NISN-t8MP65UYQ4p5bNgh",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        "duration-app-launch": "800ms",
-        Picker: "tid_OE5NJWCCVJQP1PfRc",
-        Tabs: "_1yVkTX9Mo_7qb2sxWhM0Cr",
-        Tab: "_2CJ0LpiSgVs2JuTlwbzBM",
-        Focus: "_1xH5si_KorJpS4ST2Geksh",
-        TabContent: "_1mROo5bpUJSg8D8ILx7qpw",
-        Active: "_1ddEQAfz6GuVRSEqk-d0r",
-        Content: "dUQIH8Qg80N6kjB8UQO0P",
-        ItemList: "_2OWGRbhpXNcuR3oih9IGrX",
-        Item: "_1SFqyFzFrpPOEAKCrq2kKZ",
-        SectionedPageTitle: "ZmsElITvVzU-7a2HXKBZI",
-        SectionTitle: "_3WuFl419BivPeLqeVIC939",
-        FilterInputContainer: "EuFePPYFGrcf99uLXmBYN",
-        FilterInput: "_2l4z-U60lABvd9XWArGjAf",
-        AddonPickerMessage: "_2wUk7QR9TZiiKB4bX_9EgD",
-        BackgroundAnimation: "NB2T8xbO5KSdw1jQWC0aq",
-        "ItemFocusAnim-darkerGrey-nocolor": "_1tzknOYTl338bweAg8VM66",
-        "ItemFocusAnim-darkerGrey": "_321Bw1yIABWsLJup9W__Gb",
-        "ItemFocusAnim-darkGreySettings": "BSoZ5uHW-lcSEjyeNZol4",
-        "ItemFocusAnim-darkGrey": "_3Xhw1BWpHpkagZqxZOv8kb",
-        "ItemFocusAnim-grey": "_2OnCF3hKjr89wU_tfFaWX2",
-        "ItemFocusAnim-translucent-white-10": "_2uQtLVYFAkVIQ8Mzm6C5K3",
-        "ItemFocusAnim-translucent-white-20": "_2vYgLWggR0AEuxE9DPEEk2",
-        "ItemFocusAnimBorder-darkGrey": "PgPnyLUdsSEfTVdlxX2a9",
-        "ItemFocusAnim-green": "_26b32AeDG8ENv_LcSS6SPE",
-        focusAnimation: "NrCY5qgGbXyh_LeVWegvW",
-        hoverAnimation: "ECWcgkTWpWeZLs6-rszlL",
       };
     },
     chunkid: (module) => {
@@ -1330,23 +1371,6 @@
     chunkid: (module) => {
       module.exports = {
         Image: "_1po_jxHTSix3Li3w5ZnMBB",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        narrowWidth: "500px",
-        chatEntryControls: "_3Ule3rolhZJiBN4yNNtk1s",
-        chatTextarea: "_113iuw_HlE_qSgt9cGWCSv",
-        chatEntryActionsGroup: "_2WfNoLBdfKwyutA6ho4aSH",
-        chatEntryActionsContainer: "W0OhkJtz8zMUW8Mhu0BMO",
-        minHeightZero: "_2zeehYTQ2oNY7TvjqGC_gL",
-        chatSubmitButton: "RVIs84dAE6wHcjH9tkinc",
-        EmbedButton: "_3zOBeq5W4cNK3lRz_7aroW",
-        EmoticonPickerButton: "Aupswi7-c-w3XwNO5cp2i",
-        disabled: "jaQN2IyN4P8LZXJ6P11qy",
-        Inactive: "_3G-I9qj7vqOe6SOFG27ohD",
-        AudioLines: "IWabakUFeIH_d5rhBZ6dG",
-        Active: "_37tPtXtV-sv9XgDHjS2cnj",
       };
     },
     chunkid: (module) => {
@@ -1457,40 +1481,6 @@
         ImageContainer: "_2ti3yMwzfkGoiW68FuNjTG",
         Image: "y902_9A0Wj5bTshbt4xRb",
         ImageFilename: "_2jzLZXXxgDMMcA9X0QDSdg",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        Container: "mKmrOjr9bGjKAolgp9NoD",
-        VoteContainer: "_3Kelh1-_v6xHfRjF68n7NB",
-        DiscussContainer: "_16xC0mtOWoLbvSQbmo_ycv",
-        ShareContainer: "_3ctGqQID5-8adtd7HlZ3YM",
-        InnerContainer: "_9x4Z7eMgdwfAVMr16ZaJ0",
-        DiscussionButton: "rHz7G5xZ3qXUYUcBW2bzX",
-        DiscussIcon: "_1HBhpUbVmEXbTls8Dx-z98",
-        linkField: "_3VmknRBpalymNnqAtRNJNX",
-        ShareButtonContainer: "sKjWNkv_y_-TthHlUOo0R",
-        LinkInputLabel: "_3ueQruKYDysu1Q9rNA62lb",
-        LinkButton: "NrgD8TK-KmZ5WoWxGcOaD",
-        ShareSteamBtn: "_1G3P8wlZ4seS-hs8-P9cwE",
-        ClipboardText: "ytQqTkd5AxOMJlwopd6G-",
-        LinkInput: "hgGF9tJhSgdN6iw-BPD5X",
-        ShareIcon: "_3qVz2p-X14nAGX6EWNC87I",
-        ClipboardIcon: "_3XZsWYaYpPd4DZvwdZqRLw",
-        SteamIcon: "_3PXcvKt0U1PJ2DAM8I5lLx",
-        share_controls_ctn: "_3F-Ryi3XDXB3d2vL---jof",
-        ShareLanguagePicker: "ydWt5IK9ePS8udoXm9X8D",
-        LanguageLabel: "_1AaiWRsZdYHvteubgV4AHk",
-        ShareBtn: "_22m-GVWK4oToZYpcPXpkNk",
-        VoteCount: "_3csl-MPe-hKuT8hQpOqEG5",
-        DiscussionCount: "QQy4BCjcpjCfAvTKAqBq3",
-        DiscussionButtonText: "_3P2XeK0HGdzGWS3fRQ4_vX",
-        VoteDownIcon: "_3ZqxxB_poSsEYBW1s4t1OY",
-        VoteDownSelectedIcon: "_1PTQ2mq0eTaG8ifW8juu81",
-        VoteUpIcon: "_2akzufsslA5YAnC95zYx0K",
-        VoteUpSelectedIcon: "_34YgMAbrVXVMMfXvsZAU9_",
-        VoteUpStaticIcon: "Sf3urgalDvD2sZqNjEV9i",
-        VoteButtonSelected: "_2OXBSB7B1AuT3O2sUF46T9",
       };
     },
     chunkid: (module) => {
@@ -1675,19 +1665,11 @@
     },
     chunkid: (module) => {
       module.exports = {
-        StoreSalePriceWidget: "NIRD8Bn9II9OQY1KDrAZv",
-        StoreSaleDiscountedPriceCtn: "_2M2uuGKI-mqASr4K5BRefp",
-        StoreSalePriceBox: "pk-LoKoNmmPK4GBiC9DR8",
-        StoreSaleReservationPriceBox: "_2KER4-iUzYJ7IYSjvQaG8T",
-        StoreSaleDiscountBox: "XMxkarW3W_NNebjelsgAY",
-        FromCoupon: "_3rH5bNCtORkBasSH4z6zfz",
-        StoreOriginalPrice: "_3-o3G9jt3lqcvbRXt8epsn",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         narrowWidth: "500px",
         EventDetailsPageContainer: "_2Ptras-ZC31rwdT6pD-t0a",
+        EventNotPublicBar: "_214UHKV-VeP2IhhsZ2LVcn",
+        EventNotPublicBarTitle: "acDtTp9VueGVdAapPDLxy",
+        EventNotPublicBarDetail: "_1fbHYCMO42X_XiaPzyCcQk",
         EventBackgroundBlurCtn: "_32nPM5nI8cmMdkvRnsUcq",
         EventBackgroundBlur: "stsss-bTNuazY8FYtvTOX",
         DetailArtworkAgeAppropriate: "_1p_lsRZvAYiGSonqGbCnrp",
@@ -1735,13 +1717,8 @@
         lang_ko: "_36n2d0WrYP7qNfJaBDPBzE",
         lang_ja: "-TO1bNNGYVahD_n4sJP5r",
         "lang_zh-tw": "_3lwKp3Y9WtjxoKIhneSXGJ",
-        StartDate: "_1Maw_Rw6sOKYC1KkOI1xM",
-        EndDate: "vjGzCo2ZaJr6KcbuTta8L",
-        MultiDateAndTime: "hrpa5B__OlJvPDvHQM_d-",
         RightSideTitles: "efy3k8RozzxfFidgbdfZZ",
         DisplayAdminPanel_Title: "_1lmj3YadvgLSNGiTrVsnnT",
-        DateAndTime: "_3Sy57gZmUNuNdOI8qtPQVs",
-        NoDateAndTime: "_3lh2YoTQ3RiHxrfuO3CVjL",
         AppSummaryCtn: "Wk21cv1qcYBOF2PSAOfb-",
         AppSummaryWidgetTitleCtn: "jJFfoBi2WDn1ym8KCLfLr",
         Title: "_2gsoDhNzhAXpECJk2aM94W",
@@ -1777,7 +1754,6 @@
         MarketLink: "_19WRlHb-r_EpFcgEtFL8iV",
         MarketLinkhover: "Q7KDk8kBk01MxhM_KZoqt",
         ReadMoreCnt: "_1L8MouFdSBwf8mcqLtAIPu",
-        VerticalLocalDateAndTime: "_1mp7jCbQZOXCcY5CmAu7xm",
       };
     },
     chunkid: (module) => {
@@ -1847,14 +1823,6 @@
         dropdown: "_2uDosrOO-P5HteHs8r2DHF",
         ItemDefCtn: "_2xiHGC5uLleLI4yqeulx5a",
         ItemActionBtn: "_2fJMMn4OtB-DA4H4GDPp5I",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        Link: "-HlDBB290kjpl61uUmRed",
-        Banner: "_2bT8irkKNnA5sxFG3MUXzH",
-        Big: "sGy-bB7uqEt4Hoe7U5iA1",
-        Mobile: "mhii5hgMCQvO2tXOUdWPQ",
       };
     },
     chunkid: (module) => {
@@ -6102,7 +6070,7 @@
         Init() {
           let _ = (0, _._)("steampagefeaturing", "application_config");
           this.ValidateStoreDefault(_) &&
-            (_.forEach((_) => {
+            _.forEach((_) => {
               this.m_rgMapCluster.set(_.cluster_name, _.clusters),
                 this.m_rgFeatureNames.push(_.cluster_name),
                 _.clusters &&
@@ -6118,15 +6086,7 @@
                           this.InsertVanityToForceFeature(_(_.website), _, _);
                       });
                 });
-            }),
-            "dev" == _._.WEB_UNIVERSE &&
-              console.log(
-                "CForceFeatureStore - Total Active Features: " +
-                  this.m_rgActiveFeatureNames.length +
-                  " Matching Vanity: " +
-                  this.m_mapSaleVanityTakeover.size,
-                this.m_mapSaleVanityTakeover.keys(),
-              ));
+            });
           let _ = (0, _._)("spotlightfeaturing", "application_config");
           this.ValidateSpotlightDefault(_) &&
             ((this.m_rgSpotlights = _),
@@ -6141,15 +6101,7 @@
                       _(_.associated_app.website),
                       _,
                     );
-              }),
-            "dev" == _._.WEB_UNIVERSE &&
-              console.log(
-                "CForceFeatureStore - Total Active Spotlight: " +
-                  this.m_rgSpotlights.length +
-                  " Matchign Vanity: " +
-                  this.m_mapSaleVanitySpotlight.size,
-                this.m_mapSaleVanitySpotlight.keys(),
-              ));
+              }));
           let _ = (0, _._)("marketingmsg", "application_config");
           this.ValidateIMDefault(_) &&
             ((this.m_rgIM = _),
@@ -6158,15 +6110,7 @@
                 let _ = _(_.template.linkurl);
                 this.m_mapSaleVanityIM.set(_, _);
               }
-            }),
-            "dev" == _._.WEB_UNIVERSE &&
-              console.log(
-                "CForceFeatureStore - Total Active Marketing MEssages (IM) : " +
-                  this.m_rgIM.length +
-                  " Matchign Vanity: " +
-                  this.m_mapSaleVanityIM.size,
-                this.m_mapSaleVanityIM.keys(),
-              ));
+            }));
         }
         ValidateStoreDefault(_) {
           const _ = _;
@@ -6296,13 +6240,7 @@
         m_EmailDefinitions = void 0;
         m_mapEmails = new Map();
         static Get() {
-          return (
-            _.s_Editor ||
-              ((_.s_Editor = new _()),
-              ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-                (window.g_OptInAdminEditModel = _.s_Editor)),
-            _.s_Editor
-          );
+          return _.s_Editor || (_.s_Editor = new _()), _.s_Editor;
         }
         m_activeStatsChange = new _._();
         GetActiveStatsChangeCallaback() {
@@ -8424,6 +8362,7 @@
         static s_OptInAdmin;
         m_optInDef = new Map();
         m_activeOptInDef = new Array();
+        m_draftOptInDef = new Array();
         m_archivedOptInDef = new Array();
         m_game_tags = [];
         m_optin_stats = {};
@@ -8432,6 +8371,9 @@
         m_mapOptInLoader = new Map();
         GetActiveOptIn() {
           return this.m_activeOptInDef;
+        }
+        GetDraftOptIn() {
+          return this.m_draftOptInDef;
         }
         GetArchivedOptIn() {
           return this.m_archivedOptInDef;
@@ -8457,6 +8399,10 @@
           -1 != _ &&
             (this.m_activeOptInDef.splice(_, 1),
             this.m_activeOptInDef.unshift(_)),
+            (_ = this.m_draftOptInDef.findIndex((_) => _.pageid == _.pageid)),
+            -1 != _ &&
+              (this.m_draftOptInDef.splice(_, 1),
+              this.m_draftOptInDef.unshift(_)),
             (_ = this.m_archivedOptInDef.findIndex(
               (_) => _.pageid == _.pageid,
             )),
@@ -8468,6 +8414,8 @@
           this.m_optInDef.delete(_);
           let _ = this.m_activeOptInDef.findIndex((_) => _.pageid == _);
           -1 != _ && this.m_activeOptInDef.splice(_, 1),
+            (_ = this.m_draftOptInDef.findIndex((_) => _.pageid == _)),
+            -1 != _ && this.m_draftOptInDef.splice(_, 1),
             (_ = this.m_archivedOptInDef.findIndex((_) => _.pageid == _)),
             -1 != _ && this.m_archivedOptInDef.splice(_, 1);
         }
@@ -8566,10 +8514,7 @@
         static Get() {
           return (
             _.s_OptInAdmin ||
-              ((_.s_OptInAdmin = new _()),
-              ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-                (window.g_OptInAdminStore = _.s_OptInAdmin),
-              _.s_OptInAdmin.Init()),
+              ((_.s_OptInAdmin = new _()), _.s_OptInAdmin.Init()),
             _.s_OptInAdmin
           );
         }
@@ -8578,7 +8523,9 @@
           const _ = Math.floor(Date.now() / 1e3);
           _.event_end_date && 0 != _.event_end_date && _.event_end_date < _
             ? this.m_archivedOptInDef.push(_)
-            : this.m_activeOptInDef.push(_),
+            : _.sale_optin_enabled
+              ? this.m_activeOptInDef.push(_)
+              : this.m_draftOptInDef.push(_),
             !_.sale_optin_enabled &&
             _.event_start_date &&
             _.event_start_date > _
@@ -8606,20 +8553,13 @@
               this.m_optin_stats[_] = _[_];
             }
           let _ = (0, _._)("optin_admin_pages", "application_config");
-          this.ValidateStoreDefault(_)
-            ? (__webpack_require__.forEach((_) => {
-                (0, _._)(_);
-              }),
-              __webpack_require__.map((_) => {
-                this.InternalAddOptInDef(_);
-              }),
-              "dev" == _._.WEB_UNIVERSE &&
-                console.log(
-                  "Loading OptIn Definitions: " + this.m_optInDef.size,
-                  this.m_optInDef,
-                ))
-            : "dev" == _._.WEB_UNIVERSE &&
-              console.error("COptInAdmin.Init: Failed to load defintion", _);
+          this.ValidateStoreDefault(_) &&
+            (__webpack_require__.forEach((_) => {
+              (0, _._)(_);
+            }),
+            __webpack_require__.map((_) => {
+              this.InternalAddOptInDef(_);
+            }));
         }
         ValidateStoreDefault(_) {
           const _ = _;
@@ -8736,11 +8676,7 @@
         static s_Singleton;
         static Get() {
           return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              _.s_Singleton.Init(),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_PartnerSitePackageStore = _.s_Singleton)),
+            _.s_Singleton || ((_.s_Singleton = new _()), _.s_Singleton.Init()),
             _.s_Singleton
           );
         }
@@ -9101,11 +9037,7 @@
         static s_Singleton;
         static Get() {
           return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              _.s_Singleton.Init(),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_ClusterStore = _.s_Singleton)),
+            _.s_Singleton || ((_.s_Singleton = new _()), _.s_Singleton.Init()),
             _.s_Singleton
           );
         }
@@ -9149,7 +9081,6 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         m_model = null;
@@ -9170,13 +9101,7 @@
         }
         static s_Singleton;
         static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_DailyDealEditStore = _.s_Singleton)),
-            _.s_Singleton
-          );
+          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
         }
         constructor() {}
       }
@@ -9897,11 +9822,7 @@
         static s_Singleton;
         static Get() {
           return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              _.s_Singleton.Init(),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_DailyDealStore = _.s_Singleton)),
+            _.s_Singleton || ((_.s_Singleton = new _()), _.s_Singleton.Init()),
             _.s_Singleton
           );
         }
@@ -9951,10 +9872,6 @@
                   eType: _.k_BlockDate,
                   name: _.name,
                 }),
-              ),
-            "dev" == _._.WEB_UNIVERSE &&
-              console.log(
-                `DEV_DEBUG: CDailyDealStore loaded ${_.length} daily deals, separate blocked dates ${_.length}, separated schedule dates ${_.length}`,
               );
         }
         HelperAddEDailyDealDisplayInfo(_, _) {
@@ -10384,22 +10301,12 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         m_mapEditModel = new Map();
         m_callback = new Map();
         InitMarketingMessageToEdit(_, _, _ = !1) {
-          if (
-            ("dev" == _._.WEB_UNIVERSE &&
-              console.log(
-                "(Dev Only) CMarketingMessageEditStore.InitMarketingMessageToEdit with model:" +
-                  Boolean(this.m_mapEditModel.get(_)),
-                (0, _._)(_),
-              ),
-            this.m_mapEditModel.has(_) && !_)
-          )
+          if (this.m_mapEditModel.has(_) && !_)
             this.m_mapEditModel.get(_).Reset(_);
           else {
             const _ = new _._(_);
@@ -10426,13 +10333,7 @@
         }
         static s_Singleton;
         static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_MarketingMessageEditStore = _.s_Singleton)),
-            _.s_Singleton
-          );
+          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
         }
         constructor() {}
       }
@@ -11119,11 +11020,7 @@
         static s_Singleton;
         static Get() {
           return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              _.s_Singleton.Init(),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_MarketingMessageStore = _.s_Singleton)),
+            _.s_Singleton || ((_.s_Singleton = new _()), _.s_Singleton.Init()),
             _.s_Singleton
           );
         }
@@ -11131,11 +11028,6 @@
         Init() {
           const _ = (0, _._)("promotion_operation_token", "application_config");
           (0, _._)(Boolean(_), "require promotion_operation_token"),
-            "dev" == _._.WEB_UNIVERSE &&
-              console.log(
-                "DEV_DEBUG Initializing CMarketingMessageStore with access token ",
-                _,
-              ),
             (this.m_steamInterface = new _._(_._.WEBAPI_BASE_URL, _));
           const _ = (0, _._)("marketing_messages", "application_config");
           this.BIsValidPlanList(_) &&
@@ -11357,13 +11249,7 @@
         }
         static s_Singleton;
         static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_PartnerContactStore = _.s_Singleton)),
-            _.s_Singleton
-          );
+          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
         }
         constructor() {}
       }
@@ -11553,13 +11439,7 @@
         }
         static s_Singleton;
         static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_DailyDealEditStore = _.s_Singleton)),
-            _.s_Singleton
-          );
+          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
         }
         constructor() {}
       }
@@ -12090,12 +11970,6 @@
         m_SteamInterface = null;
         InitPromotionPlanToEdit(_, _, _ = !1) {
           return (
-            "dev" == _._.WEB_UNIVERSE &&
-              console.log(
-                "(Dev Only) CPlanInputPipelineEditStore.InitPromotionPlanToEdit with model: " +
-                  Boolean(this.m_model),
-                (0, _._)(_),
-              ),
             this.m_model
               ? (this.m_model.Reset(_, _),
                 _ && this.m_model.GetCallback().Dispatch(this.m_model))
@@ -12158,11 +12032,7 @@
         static s_Singleton;
         static Get() {
           return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              _.s_Singleton.Init(),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_PromotionPlanInputPipelineEditStore = _.s_Singleton)),
+            _.s_Singleton || ((_.s_Singleton = new _()), _.s_Singleton.Init()),
             _.s_Singleton
           );
         }
@@ -12178,11 +12048,8 @@
             _ = JSON.parse(
               (0, _._)("promotion_plan_input", "application_config"),
             );
-          this.ValidateInputDefault(_)
-            ? this.InitPromotionPlanToEdit(_, _, !0)
-            : _ &&
-              "dev" == _._.WEB_UNIVERSE &&
-              console.error("CPlanInputPipelineEditStore: failed to parse ", _);
+          this.ValidateInputDefault(_) &&
+            this.InitPromotionPlanToEdit(_, _, !0);
         }
         ValidateInputDefault(_) {
           const _ = _;
@@ -12525,11 +12392,7 @@
         static s_Singleton;
         static Get() {
           return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              _.s_Singleton.Init(),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_PromoInviteStore = _.s_Singleton)),
+            _.s_Singleton || ((_.s_Singleton = new _()), _.s_Singleton.Init()),
             _.s_Singleton
           );
         }
@@ -12539,11 +12402,6 @@
             _.forEach((_) => this.m_mapInvites.set(_.inviteid, _));
           const _ = (0, _._)("promotion_operation_token", "application_config");
           (0, _._)(Boolean(_), "require promotion_operation_token"),
-            "dev" == _._.WEB_UNIVERSE &&
-              console.log(
-                "DEV_DEBUG Initializing CMarketingMessageStore with access token ",
-                _,
-              ),
             (this.m_SteamInterface = new _._(_._.WEBAPI_BASE_URL, _));
         }
         ValidateStoreDefault(_) {
@@ -13872,12 +13730,6 @@
         m_model = null;
         InitPromotionPlanToEdit(_, _, _ = !1) {
           return (
-            "dev" == _._.WEB_UNIVERSE &&
-              console.log(
-                "(Dev Only) CPromotionPlanEditStore.InitPromotionPlanToEdit with model: " +
-                  Boolean(this.m_model),
-                (0, _._)(_),
-              ),
             this.m_model
               ? (this.m_model.Reset(_, _),
                 _ && this.m_model.GetCallback().Dispatch(this.m_model))
@@ -13893,13 +13745,7 @@
         }
         static s_Singleton;
         static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_PromotionPlanEditStore = _.s_Singleton)),
-            _.s_Singleton
-          );
+          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
         }
         constructor() {}
       }
@@ -14441,11 +14287,7 @@
         static s_Singleton;
         static Get() {
           return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              _.s_Singleton.Init(),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_PromotionPlanningStore = _.s_Singleton)),
+            _.s_Singleton || ((_.s_Singleton = new _()), _.s_Singleton.Init()),
             _.s_Singleton
           );
         }
@@ -14744,13 +14586,7 @@
         }
         static s_Singleton;
         static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_PromoInviteStore = _.s_Singleton)),
-            _.s_Singleton
-          );
+          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
         }
       }
       function _(_) {
@@ -14859,7 +14695,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         m_mapEditModel = new Map();
@@ -14892,13 +14727,7 @@
         }
         static s_Singleton;
         static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_SpotlightEditStore = _.s_Singleton)),
-            _.s_Singleton
-          );
+          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
         }
         constructor() {}
       }
@@ -15065,11 +14894,7 @@
         static s_Singleton;
         static Get() {
           return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              _.s_Singleton.Init(),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_SpotlightStore = _.s_Singleton)),
+            _.s_Singleton || ((_.s_Singleton = new _()), _.s_Singleton.Init()),
             _.s_Singleton
           );
         }
@@ -15521,6 +15346,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = 0,
         _ = 1,
@@ -15686,7 +15512,7 @@
         return (
           _?.length > 0 &&
           (0, _.jsx)("button", {
-            className: (0, _._)(_.LinkButton),
+            className: (0, _._)(_.LinkButton, _.LinkButton),
             onClick: () => window.open(_, "_blank"),
             children: _,
           })
@@ -16700,13 +16526,7 @@
         }
         static s_Singleton;
         static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-                (window.g_OptInDefinitionStore = _.s_Singleton)),
-            _.s_Singleton
-          );
+          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
         }
         constructor() {}
       }
@@ -18346,7 +18166,6 @@
       }
       const _ = _.memo(function (_) {
         const _ = _.useRef(null);
-        "dev" == _._.WEB_UNIVERSE && (window.g_DiscountGridTableRef = _);
         const _ = (0, _._)(),
           _ = (function (_) {
             const _ = (0, _._)(),
@@ -18439,8 +18258,6 @@
           _ = _.has(_._) ? decodeURIComponent(_.get(_._)) : "",
           _ = (0, _._)(),
           _ = _();
-        ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-          console.log("Rendering grid", _);
         const _ = {};
         _.has("de") && (_[_] = !1);
         const _ = (0, _._)();
@@ -21194,11 +21011,7 @@
         static s_Singleton;
         static Get() {
           return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-                (window.g_OptInEmailAdminStore = _.s_Singleton),
-              _.s_Singleton.Init()),
+            _.s_Singleton || ((_.s_Singleton = new _()), _.s_Singleton.Init()),
             _.s_Singleton
           );
         }
@@ -21367,6 +21180,10 @@
         }, []);
         const [_, _] = (0, _._)("tab", "active"),
           _ = (_) => _(_.key),
+          _ = (0, _.useMemo)(
+            () => [..._._.Get().GetActiveOptIn(), ..._._.Get().GetDraftOptIn()],
+            [],
+          ),
           _ = [
             {
               name: `Active Opt-In Events (${_._.Get().GetActiveOptIn()?.length || 0})`,
@@ -21374,6 +21191,18 @@
               contents: (0, _.jsx)(_._, {
                 children: (0, _.jsx)(_, {
                   list: _._.Get().GetActiveOptIn(),
+                  stats: _._.Get().GetOptInStats(),
+                  bActiveOptIn: !0,
+                }),
+              }),
+              onClick: _,
+            },
+            {
+              name: `Draft Opt-In Events (${_._.Get().GetDraftOptIn()?.length || 0})`,
+              key: "draft",
+              contents: (0, _.jsx)(_._, {
+                children: (0, _.jsx)(_, {
+                  list: _._.Get().GetDraftOptIn(),
                   stats: _._.Get().GetOptInStats(),
                   bActiveOptIn: !0,
                 }),
@@ -21402,7 +21231,7 @@
                       "TODO: In development mode; not ready for prime time.",
                   }),
                   (0, _.jsx)(_, {
-                    list: _._.Get().GetActiveOptIn(),
+                    list: _,
                     bActiveOptIn: !0,
                   }),
                 ],
@@ -21466,7 +21295,7 @@
               (0, _.jsx)("hr", {}),
               (0, _.jsx)("p", {
                 children:
-                  "This shows all of the active and past opt-in definitions we have setup. Definition drives both the eligibility of the app that are included and also describe the content we show partners on their specific opt-in page.",
+                  "This shows all of the active, draft and past opt-in definitions we have setup. Draft are the ones not yet enabled, so partners cannot see them. Definition drives both the eligibility of the app that are included and also describe the content we show partners on their specific opt-in page.",
               }),
               (0, _.jsx)(_._, {
                 active: _,
@@ -22426,11 +22255,7 @@
         static s_Singleton;
         static Get() {
           return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-                (window.g_OptInAdminAdditionalFeaturingStore = _.s_Singleton),
-              _.s_Singleton.Init()),
+            _.s_Singleton || ((_.s_Singleton = new _()), _.s_Singleton.Init()),
             _.s_Singleton
           );
         }
@@ -22690,13 +22515,7 @@
         }
         static s_Singleton;
         static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-                (window.g_OptInAdminInvitationStore = _.s_Singleton)),
-            _.s_Singleton
-          );
+          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
         }
         constructor() {}
         ValidateStoreDefault(_) {
@@ -26314,13 +26133,7 @@
         }
         static s_Singleton;
         static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-                (window.g_OptInDemoAppStores = _.s_Singleton)),
-            _.s_Singleton
-          );
+          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
         }
         constructor() {
           (0, _._)(this);
@@ -37639,13 +37452,7 @@
         }
         static s_Singleton;
         static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-                (window.g_OptInAppReviewStores = _.s_Singleton)),
-            _.s_Singleton
-          );
+          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
         }
         constructor() {
           let _ = JSON.parse(
@@ -39556,10 +39363,6 @@
           (0, _.useEffect)(() => {
             const _ = (0, _._)("optin_registered", "application_config");
             _(_) &&
-              ("dev" === _._.WEB_UNIVERSE &&
-                console.log(
-                  "useOptInRegistrationForDashboardNotPruned has " + _.length,
-                ),
               _(
                 _.map((_) =>
                   _.jsondata && "" !== _.jsondata
@@ -39572,7 +39375,7 @@
                         jsondata: {},
                       },
                 ).filter((_) => _.jsondata?.opt_in),
-              ));
+              );
           }, []),
           _
         );
@@ -39824,10 +39627,6 @@
               (0, _.useEffect)(() => {
                 const _ = (0, _._)("optin_opportunities", "application_config");
                 _(_) &&
-                  ("dev" === _._.WEB_UNIVERSE &&
-                    console.log(
-                      "useOptInOpportunitiesForDashboard has " + _.length,
-                    ),
                   _(
                     _.map((_) =>
                       _.jsondata && "" !== _.jsondata
@@ -39840,7 +39639,7 @@
                             jsondata: {},
                           },
                     ),
-                  ));
+                  );
               }, []),
               _
             );
@@ -45328,29 +45127,7 @@
           [_, _] = _.useState(""),
           _ = (_) => {
             const _ = _(_.errorCode);
-            _(_?.gid),
-              ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-              _.errorCode == _._
-                ? _(_)
-                : _(
-                    (0, _.jsxs)(_.Fragment, {
-                      children: [
-                        (0, _.jsx)("div", {
-                          children: _,
-                        }),
-                        (0, _.jsx)("div", {
-                          style: {
-                            color: "red",
-                          },
-                          children:
-                            "(VO) error details:" +
-                            _.errorCode +
-                            ", " +
-                            _.strErrorMsg,
-                        }),
-                      ],
-                    }),
-                  );
+            _(_?.gid), _(_);
           },
           _ = _.useCallback(async () => {
             const _ = (0, _._)(_);
@@ -50936,15 +50713,7 @@
                   credentials: "include",
                 },
               );
-              if (
-                ("dev" == _._.WEB_UNIVERSE &&
-                  console.log(
-                    "asset localization workflow dev debug info: ",
-                    _,
-                  ),
-                !_._)
-              )
-                throw new Error("Failed to create Monday Request");
+              if (!_._) throw new Error("Failed to create Monday Request");
               const _ = await _.json();
               return _?.results;
             },
@@ -51096,13 +50865,7 @@
         }
         static s_Singleton;
         static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_SaleAssetEditStore = _.s_Singleton)),
-            _.s_Singleton
-          );
+          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
         }
         constructor() {}
       }
@@ -51955,7 +51718,7 @@
                   children: "SPOTLIGHT ASSETS",
                 }),
                 (0, _.jsx)("hr", {}),
-                Boolean("dev" == _._.WEB_UNIVERSE) &&
+                Boolean(!1) &&
                   (0, _.jsx)("div", {
                     className: _.WarningStylesWithIcon,
                     children:
@@ -52385,13 +52148,7 @@
         }
         static s_Singleton;
         static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_TakeoverEditStore = _.s_Singleton)),
-            _.s_Singleton
-          );
+          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
         }
         constructor() {}
       }
@@ -52662,7 +52419,7 @@
                   children: ["Takeover Assets (", _.GetTypeString(), ")"],
                 }),
                 (0, _.jsx)("hr", {}),
-                Boolean("dev" == _._.WEB_UNIVERSE) &&
+                Boolean(!1) &&
                   (0, _.jsx)("div", {
                     className: _.WarningStylesWithIcon,
                     children:
@@ -53115,13 +52872,7 @@
         }
         static s_Singleton;
         static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_takeunderEditStore = _.s_Singleton)),
-            _.s_Singleton
-          );
+          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
         }
         constructor() {}
       }
@@ -53242,7 +52993,7 @@
                   children: "Frontpage Takeunder Assets",
                 }),
                 (0, _.jsx)("hr", {}),
-                Boolean("dev" == _._.WEB_UNIVERSE) &&
+                Boolean(!1) &&
                   (0, _.jsx)("div", {
                     className: _.WarningStylesWithIcon,
                     children:
@@ -53436,7 +53187,6 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         m_oStoreAppAssets = null;
@@ -53513,6 +53263,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         m_mapAppAssets = new Map();
@@ -53596,11 +53347,7 @@
         static s_Singleton;
         static Get() {
           return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              _.s_Singleton.Init(),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_AppAssetsStore = _.s_Singleton)),
+            _.s_Singleton || ((_.s_Singleton = new _()), _.s_Singleton.Init()),
             _.s_Singleton
           );
         }
@@ -53616,15 +53363,7 @@
         m_mapEditModel = new Map();
         m_callback = new Map();
         InitAppAssetsToEdit(_, _, _ = !1) {
-          if (
-            ("dev" == _._.WEB_UNIVERSE &&
-              console.log(
-                "(Dev Only) CAppAssetsEditStore.InitAppAssetsToEdit with model: " +
-                  Boolean(this.m_mapEditModel.get(_)),
-                (0, _._)(_),
-              ),
-            this.m_mapEditModel.has(_) && !_)
-          )
+          if (this.m_mapEditModel.has(_) && !_)
             this.m_mapEditModel.get(_).Reset(_);
           else {
             const _ = new _(_);
@@ -53651,13 +53390,7 @@
         }
         static s_Singleton;
         static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_AppAssetsEditStore = _.s_Singleton)),
-            _.s_Singleton
-          );
+          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
         }
         constructor() {}
       }
@@ -53766,7 +53499,7 @@
                   children: "Promotion App Assets",
                 }),
                 (0, _.jsx)("hr", {}),
-                Boolean("dev" == _._.WEB_UNIVERSE) &&
+                Boolean(!1) &&
                   (0, _.jsx)("div", {
                     className: _.WarningStylesWithIcon,
                     children:
@@ -55130,7 +54863,7 @@
                         }),
                       ],
                     }),
-                  Boolean("dev" == _._.WEB_UNIVERSE) &&
+                  Boolean(!1) &&
                     (0, _.jsx)("div", {
                       className: _.WarningStylesWithIcon,
                       children:
@@ -56037,67 +55770,58 @@
             [_],
           ),
           _ = _?.find((_) => _.gid === _);
-        return (
-          "dev" == _._.WEB_UNIVERSE &&
-            console.log(
-              `AssetRequestSelectPartnerEvent: selectedEventGID=${_} === selected?.gid=${_?.gid}`,
-              _,
-              _,
-              _?.gid,
-            ),
-          _ || (!_ && !_?.appid)
-            ? _ && 0 != _.length
-              ? (0, _.jsxs)(_.Fragment, {
-                  children: [
-                    Boolean(_) &&
-                      (0, _.jsx)("a", {
-                        href: _,
-                        target: "_blank",
-                        style: {
-                          float: "right",
-                        },
-                        children: (0, _._)(
-                          "#DiscountDashboard_DetailView_BatchDiscount_MaxDiscountDocumentationLink",
-                        ),
-                      }),
-                    (0, _.jsx)(_._, {
-                      label: _,
-                      tooltip: _,
-                      selectedOption: _,
-                      onChange: (_) => _(_.clanAccountID, _.data.gid),
-                      rgOptions: _,
-                    }),
-                  ],
-                })
-              : (0, _.jsxs)(_.Fragment, {
-                  children: [
-                    (0, _.jsxs)(_._, {
-                      children: [
-                        _,
-                        " ",
-                        (0, _.jsx)(_._, {
-                          tooltip: _,
-                        }),
-                      ],
-                    }),
-                    (0, _.jsx)("div", {
-                      className: (0, _._)(_.ErrorStylesWithIcon, "ErrorCtn"),
+        return _ || (!_ && !_?.appid)
+          ? _ && 0 != _.length
+            ? (0, _.jsxs)(_.Fragment, {
+                children: [
+                  Boolean(_) &&
+                    (0, _.jsx)("a", {
+                      href: _,
+                      target: "_blank",
+                      style: {
+                        float: "right",
+                      },
                       children: (0, _._)(
-                        "#EventDropDown_NoEventFound",
-                        (0, _.jsx)("a", {
-                          href: `${_._.COMMUNITY_BASE_URL}ogg/${_}/partnerevents`,
-                          target: "_blank",
-                        }),
+                        "#DiscountDashboard_DetailView_BatchDiscount_MaxDiscountDocumentationLink",
                       ),
                     }),
-                  ],
-                })
-            : (0, _.jsx)(_._, {
-                string: (0, _._)("#Loading"),
-                size: "small",
-                position: "center",
+                  (0, _.jsx)(_._, {
+                    label: _,
+                    tooltip: _,
+                    selectedOption: _,
+                    onChange: (_) => _(_.clanAccountID, _.data.gid),
+                    rgOptions: _,
+                  }),
+                ],
               })
-        );
+            : (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsxs)(_._, {
+                    children: [
+                      _,
+                      " ",
+                      (0, _.jsx)(_._, {
+                        tooltip: _,
+                      }),
+                    ],
+                  }),
+                  (0, _.jsx)("div", {
+                    className: (0, _._)(_.ErrorStylesWithIcon, "ErrorCtn"),
+                    children: (0, _._)(
+                      "#EventDropDown_NoEventFound",
+                      (0, _.jsx)("a", {
+                        href: `${_._.COMMUNITY_BASE_URL}ogg/${_}/partnerevents`,
+                        target: "_blank",
+                      }),
+                    ),
+                  }),
+                ],
+              })
+          : (0, _.jsx)(_._, {
+              string: (0, _._)("#Loading"),
+              size: "small",
+              position: "center",
+            });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -60022,7 +59746,7 @@
                   children: [
                     (0, _.jsx)(_, {
                       bSet: (0, _._)(_),
-                      strTooltip: "Linked to a partner sale event",
+                      strTooltip: "Linked to a sale event",
                       children: (0, _.jsx)(_.XH_, {}),
                     }),
                     (0, _.jsx)("div", {
@@ -61798,7 +61522,6 @@
               (this.m_anonymousServiceTransport =
                 _.GetAnonymousServiceTransport());
           }
-          "dev" === _._.WEB_UNIVERSE && (window.g_dlcForYouStore = this);
         }
         static Get() {
           return _.s_singleton || (_.s_singleton = new _()), _.s_singleton;
@@ -61808,21 +61531,18 @@
         const [_, _] = (0, _.useState)(null);
         return (
           (0, _.useEffect)(() => {
-            if (_ && _ != _._)
-              if ("dev" == _._.WEB_UNIVERSE && 782330 == _)
-                _([1749103, 1749101, 1749102, 1098300]);
-              else {
-                const _ = {
-                  nCount: _,
-                  strFlavor: "popular",
-                };
-                _.Get()
-                  .LoadDLCForApps([_], _)
-                  .then(() => {
-                    const _ = _.Get().GetDLCForApps([_], _);
-                    _(_.get(_));
-                  });
-              }
+            if (_ && _ != _._) {
+              const _ = {
+                nCount: _,
+                strFlavor: "popular",
+              };
+              _.Get()
+                .LoadDLCForApps([_], _)
+                .then(() => {
+                  const _ = _.Get().GetDLCForApps([_], _);
+                  _(_.get(_));
+                });
+            }
           }, [_, _]),
           _
         );
@@ -64259,11 +63979,7 @@
         static s_Singleton;
         static Get() {
           return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              _.s_Singleton.Init(),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_MarketingMessagePreviewStore = _.s_Singleton)),
+            _.s_Singleton || ((_.s_Singleton = new _()), _.s_Singleton.Init()),
             _.s_Singleton
           );
         }
@@ -64272,10 +63988,6 @@
           const _ = (0, _._)("promotion_operation_token", "application_config"),
             _ = (0, _._)("publisherid", "application_config");
           (0, _._)(Boolean(_), "require promotion_operation_token"),
-            "dev" == _._.WEB_UNIVERSE &&
-              console.log(
-                `DEV_DEBUG Initializing CMarketingMessagePartnerPreviewStore with access token ${_} and publisherID ${_}`,
-              ),
             (this.m_steamInterface = new _._(_._.WEBAPI_BASE_URL, _)),
             (this.m_publisherID = _);
         }
@@ -65058,13 +64770,7 @@
         }
         static s_Singleton;
         static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_DiscountEventEditStore = _.s_Singleton)),
-            _.s_Singleton
-          );
+          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
         }
         constructor() {}
       }
@@ -65581,8 +65287,6 @@
               });
             return [_, _.map((_) => _.appid)];
           }, [_, _, _, _, _, _, _, _, _, _, _, _]);
-        "dev" == _._.WEB_UNIVERSE &&
-          console.log("DEV_DEBUG: candidates apps", _, _);
         const _ =
             (_ ? "&freetoplay=true" : "") +
             (_ ? "&adultonly=true" : "") +
@@ -71182,7 +70886,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         m_oRequest = null;
@@ -71295,12 +70998,6 @@
         m_model = null;
         InitPromotionPlanToEdit(_, _, _ = !1) {
           return (
-            "dev" == _._.WEB_UNIVERSE &&
-              console.log(
-                "(Dev Only) CPromotionPlanPartnerEditStore.InitPromotionPlanToEdit with model: " +
-                  Boolean(this.m_model),
-                (0, _._)(_),
-              ),
             this.m_model
               ? (this.m_model.Reset(_, _),
                 _ && this.m_model.GetCallback().Dispatch(this.m_model))
@@ -71316,13 +71013,7 @@
         }
         static s_Singleton;
         static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_PromotionPlanPartnerEditStore = _.s_Singleton)),
-            _.s_Singleton
-          );
+          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
         }
         constructor() {}
       }
@@ -72362,15 +72053,7 @@
                     credentials: "include",
                   },
                 );
-                if (
-                  ("dev" == _._.WEB_UNIVERSE &&
-                    console.log(
-                      "event image copy workflow dev debug info: ",
-                      _,
-                      _,
-                    ),
-                  !_._)
-                )
+                if (!_._)
                   throw new Error("Failed to copy event assets, check logs");
                 const _ = await _.json();
                 if (!_ || _?.success != _._)
@@ -74663,11 +74346,7 @@
         static s_Singleton;
         static Get() {
           return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              _.s_Singleton.Init(),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_PromoStatsStore = _.s_Singleton)),
+            _.s_Singleton || ((_.s_Singleton = new _()), _.s_Singleton.Init()),
             _.s_Singleton
           );
         }
@@ -76228,12 +75907,9 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -76242,7 +75918,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
-      __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -76510,48 +76185,6 @@
             [_, _] = (0, _.useState)(null),
             [_, _] = (0, _.useState)(null),
             [_, _, _] = (0, _._)();
-          "dev" == _._.WEB_UNIVERSE &&
-            (0, _.useEffect)(() => {
-              const _ = window.location.search;
-              if (_ && _.length > 0) {
-                const _ = new URLSearchParams("?" == _[0] ? _.substring(1) : _);
-                if (
-                  (_.has("eventName") && _(_.get("eventName")),
-                  _.has("vanity") && _(_.get("vanity")),
-                  _.has("startTime"))
-                ) {
-                  const _ = _.get("startTime");
-                  let _ = /^\d+$/.test(_)
-                    ? _().unix(Number.parseInt(_))
-                    : _()(_);
-                  _(Math.floor(__webpack_require__.unix()));
-                }
-                if (_.has("endTime")) {
-                  const _ = _.get("endTime");
-                  let _ = /^\d+$/.test(_)
-                    ? _().unix(Number.parseInt(_))
-                    : _()(_);
-                  _(Math.floor(__webpack_require__.unix()));
-                }
-                if (_.has("clan_account_id")) {
-                  const _ = _().CancelToken.source();
-                  _.current = _.cancel;
-                  const _ = _._.InitFromClanID(
-                    Number.parseInt(_.get("clan_account_id")),
-                  );
-                  (async () => {
-                    let _ = await _._.LoadCreatorHome(_, !1, _);
-                    _.token.reason || _(_);
-                  })();
-                }
-              }
-              return () => {
-                _.current &&
-                  __webpack_require__.current(
-                    "NewPartnerEventSalePageDialog: unmounting",
-                  );
-              };
-            }, []);
           let _ = new Array(),
             _ = !1;
           if (null == _)
@@ -76877,7 +76510,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -76888,10 +76520,7 @@
           [_, _] = _.useState(!0);
         if (
           (_.useEffect(() => {
-            _ &&
-              (_._.Init(),
-              _._.Get(),
-              Promise.all([_._.InitGlobal()]).then(() => _(!1)));
+            _ && (_._.Init(), _._.Get(), _(!1));
           }, [_]),
           _)
         )
@@ -76926,13 +76555,7 @@
       function _(_) {
         const [_, _] = _.useState(!0);
         _.useEffect(() => {
-          _ &&
-            (_._.Init(),
-            _._.Get(),
-            _._.Get(),
-            Promise.all([_._.InitGlobal()]).then(() =>
-              __webpack_require__(!1),
-            ));
+          _ && (_._.Init(), _._.Get(), _._.Get(), __webpack_require__(!1));
         }, [_]);
         return _
           ? (0, _.jsx)(_._, {
@@ -77338,7 +76961,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -77521,13 +77143,7 @@
         static s_singleton;
         constructor() {}
         static Get() {
-          return (
-            _.s_singleton ||
-              ((_.s_singleton = new _()),
-              "dev" === _._.WEB_UNIVERSE &&
-                (window.g_SaleItemBrowserStore = _.s_singleton)),
-            _.s_singleton
-          );
+          return _.s_singleton || (_.s_singleton = new _()), _.s_singleton;
         }
         async GetItemsSoFar(_, _, _, _, _, _, _, _, _, _) {
           let _;
@@ -77659,7 +77275,7 @@
                 nMatchCount: _.match_count,
                 bMoreAvailable: _.possible_has_more,
                 nNextSolrIndex: _ + _,
-                strRequest: ("dev" === _._.WEB_UNIVERSE && _.request) || void 0,
+                strRequest: void 0,
               }),
               this.m_mapResults.get(_)
             );
@@ -77734,8 +77350,7 @@
                   nMatchCount: _.data.match_count,
                   bMoreAvailable: _.data.possible_has_more,
                   nNextSolrIndex: _ + _,
-                  strRequest:
-                    ("dev" === _._.WEB_UNIVERSE && _.data.request) || void 0,
+                  strRequest: void 0,
                 }),
                 _.Debug(
                   `GetItems start ${_} count ${_} items ${_.length} next ${_ + _}`,
@@ -77866,14 +77481,11 @@
             _.s_globalSingletonStore ||
               ((_ = "CHomeViewStore.s_globalSingletonStore"),
               (0, _._)(!0, "Unexpected code running in SSR Server: " + _),
-              (_.s_globalSingletonStore = new _()),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_HomeViewSetting = _.s_globalSingletonStore)),
+              (_.s_globalSingletonStore = new _())),
             _.s_globalSingletonStore
           );
         }
         constructor() {
-          "dev" === _._.WEB_UNIVERSE && (window.g_HomeViewStore = this);
           const _ = (0, _._)("home_view_setting", "application_config");
           this.ValidateHomeViewData(_) && this.SetHomeViewSetting(_);
           const _ = (0, _._)(
@@ -78001,14 +77613,12 @@
         return !1;
       }
       async function _(_, _, _, _) {
-        let _ = 0,
-          _ = 0;
         const _ = [];
         await _(_, _._, _);
         for (const _ of _) {
           const _ = _._.Get().GetStoreItem(_._, (0, _._)(_.type));
           if (!_) {
-            _++;
+            0;
             continue;
           }
           const _ = _.GetIncludedAppIDs()
@@ -78024,23 +77634,11 @@
             _ && _.push(..._);
           }
           _.some(_ || _)
-            ? (_++,
-              _ &&
-                (_._.Get().BIsStoreItemOwned(_) || __webpack_require__.push(_)))
+            ? _ &&
+              (_._.Get().BIsStoreItemOwned(_) || __webpack_require__.push(_))
             : _.push(_);
         }
-        return (
-          "dev" === _._.WEB_UNIVERSE &&
-            0 === _.length &&
-            console.log(
-              "ApplyStorePreferenceFilters: " +
-                _ +
-                " failed to load, " +
-                _ +
-                " hidden by user filter.",
-            ),
-          _
-        );
+        return _;
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -79440,23 +79038,13 @@
               _,
             );
           } finally {
-            (this.m_rtimeLastServiceCallComplete = Date.now()),
-              "dev" == _._.WEB_UNIVERSE &&
-                console.log(
-                  `LoadRevealedItems: started ${Math.floor(this.m_rtimeLastServiceCallStarted / 1e3)} and completed ${Math.floor(this.m_rtimeLastServiceCallComplete / 1e3)} taking ${this.m_rtimeLastServiceCallComplete - this.m_rtimeLastServiceCallStarted} MS`,
-                );
+            this.m_rtimeLastServiceCallComplete = Date.now();
           }
           return [];
         }
         static s_Singleton;
         static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-                (window.g_DynamicRevealStore = _.s_Singleton)),
-            _.s_Singleton
-          );
+          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
         }
         constructor() {
           (0, _._)(this);
@@ -79490,215 +79078,404 @@
         return !1;
       }
       __webpack_require__("chunkid");
-      __webpack_require__("chunkid"), __webpack_require__("chunkid");
+      __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
         _ =
           (__webpack_require__("chunkid"),
           __webpack_require__("chunkid"),
           __webpack_require__("chunkid"),
-          __webpack_require__("chunkid"));
-      class _ {
-        m_mapAppItemDefs = new Map();
-        m_mapAppCallbackList = new Map();
-        m_mapAppItemDefPromises = new Map();
-        GetItemDef(_, _) {
-          return this.m_mapAppItemDefs.get(_)?.get(_);
-        }
-        BHasItemDef(_, _) {
-          return Boolean(this.GetItemDef(_, _));
-        }
-        BHasAllItemDef(_, _) {
-          return _.filter((_) => !this.BHasItemDef(_, _)).length > 0;
-        }
-        GetAllItemDefForApp(_) {
-          return this.m_mapAppItemDefs.has(_)
-            ? Array.from(this.m_mapAppItemDefs.get(_)?.values() ?? [])
-            : [];
-        }
-        GetCallbackForAppList(_) {
-          let _ = this.m_mapAppCallbackList.get(_);
-          return (
-            _ ||
-              (this.m_mapAppCallbackList.set(_, new _._()),
-              (_ = this.m_mapAppCallbackList.get(_))),
-            _
-          );
-        }
-        async SearchItemDefs(_, _) {
-          let _ = null;
-          try {
-            const _ = {
-                start: 0,
-                count: 12,
-                searchtext: _,
-                _: _._.LANGUAGE,
-                _: _._.COUNTRY,
-              },
-              _ = _._.STORE_BASE_URL + `itemstore/${_}/ajaxgetitemdefs`,
-              _ = await _().get(_, {
-                params: _,
-                withCredentials: !0,
-              });
-            if (200 == _?.status && _.data?.success == _._ && _.data?.matches)
-              return this.AddItemDefs(_.data.matches), _.data.matches || [];
-            _ = (0, _._)(_);
-          } catch (_) {
-            _ = (0, _._)(_);
-          }
-          return (
-            console.error(
-              "CItemDefStore.SearchForItemDefs failed: " + _?.strErrorMsg,
-              _,
-            ),
-            []
-          );
-        }
-        async LoadItemDef(_) {
-          if (!_.nAppID || !_.nItemDefID) return !1;
-          let _ = this.m_mapAppItemDefPromises.get(_.nAppID);
-          _ ||
-            (this.m_mapAppItemDefPromises.set(_.nAppID, new Map()),
-            (_ = this.m_mapAppItemDefPromises.get(_.nAppID)));
-          let _ = _.get(_.nItemDefID);
-          return (
-            _ || ((_ = this.InternalLoadItemDef([_])), _.set(_.nItemDefID, _)),
-            _
-          );
-        }
-        async LoadAllItemDefForSingleApp(_, _) {
-          if (
-            0 ==
-            (_ = _.filter(
-              (_) => _.nItemDefID && !this.BHasItemDef(_, _.nItemDefID),
-            )).length
-          )
-            return !0;
-          this.m_mapAppItemDefPromises.has(_) ||
-            this.m_mapAppItemDefPromises.set(_, new Map());
-          const _ = _.filter(
-              (_) => !this.m_mapAppItemDefPromises.get(_)?.get(_.nItemDefID),
-            ),
-            _ = _.map((_) =>
-              this.m_mapAppItemDefPromises.get(_)?.get(_.nItemDefID),
-            ).filter(Boolean);
-          if (_.length > 0) {
-            const _ = this.InternalLoadItemDef(_);
-            __webpack_require__.forEach((_) =>
-              this.m_mapAppItemDefPromises.get(_)?.set(_.nItemDefID, _),
-            ),
-              _.push(_);
-          }
-          return await Promise.all(_), !0;
-        }
-        async InternalLoadItemDef(_) {
-          let _ = null;
-          try {
-            const _ = {
-              strItemDefIDs: _.map((_) => _.nItemDefID).join(","),
-              _: _._.LANGUAGE,
-              _: _._.COUNTRY,
-            };
-            let _ = _._.STORE_BASE_URL + `itemstore/${_[0].nAppID}/`;
-            "community" == (0, _._)()
-              ? (_ += "ajaxgetauthedmultipleitemdefsbyid")
-              : (_ += "ajaxgetmultipleitemdefsbyid");
-            const _ = await _().get(_, {
-              params: _,
-              withCredentials: !0,
-            });
-            if (200 == _?.status && _.data?.success == _._ && _.data?.matches)
-              return this.AddItemDefs(_.data.matches), !0;
-            _ = (0, _._)(_);
-          } catch (_) {
-            _ = (0, _._)(_);
-          }
-          return (
-            console.error(
-              "CItemDefStore.SearchForItemDefs failed: " + _?.strErrorMsg,
-              _,
-            ),
-            !1
-          );
-        }
-        static s_Singleton;
-        static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-                (window.g_ItemDefStore = _.s_Singleton)),
-            _.s_Singleton
-          );
-        }
-        AddItemDefs(_) {
-          const _ = new Set();
-          _.forEach((_) => {
-            if (!_.nAppID || !_.nItemDefID) return;
-            let _ = this.m_mapAppItemDefs.get(_.nAppID);
-            _ ||
-              (this.m_mapAppItemDefs.set(_.nAppID, new Map()),
-              (_ = this.m_mapAppItemDefs.get(_.nAppID))),
-              __webpack_require__.set(_.nItemDefID, _),
-              _.add(_.nAppID);
-          }),
-            _.forEach((_) =>
-              this.GetCallbackForAppList(_).Dispatch(
-                Array.from(this.m_mapAppItemDefs.get(_)?.values() ?? []),
-              ),
-            );
-        }
-        constructor() {
-          if (document.getElementById("application_config")) {
-            let _ = (0, _._)("itemdefs", "application_config");
-            _.ValidateItemDef(_) &&
-              (this.AddItemDefs(_),
-              "dev" == _._.WEB_UNIVERSE &&
-                console.log("CItemDefStore loaded item defs: " + _.length, _));
-          }
-        }
-        static ValidateItemDef(_) {
-          const _ = _;
-          return (
-            !!(_ && Array.isArray(_) && _.length > 0) &&
-            "number" == typeof _[0].nAppID &&
-              "number" == typeof _[0].nItemDefID &&
-            "string" == typeof _[0].strName
-          );
-        }
-      }
-      (0, _._)([_._], _.prototype, "SearchItemDefs", null),
-        (0, _._)([_._], _.prototype, "LoadItemDef", null),
-        (0, _._)([_._], _.prototype, "LoadAllItemDefForSingleApp", null);
-      var _;
-      __webpack_require__("chunkid"), __webpack_require__("chunkid");
-      !(function (_) {
-        (_.k_eBlock = "block"),
-          (_.k_eFinal = "final"),
-          (_.k_eOriginal = "original"),
-          (_.k_eReservation = "reservation");
-      })(_ || (_ = {}));
-      var _ = __webpack_require__("chunkid");
+          __webpack_require__("chunkid")),
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
       __webpack_require__("chunkid");
       __webpack_require__("chunkid"), __webpack_require__("chunkid");
       var _,
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
+        _ = __webpack_require__._(_);
+      !(function (_) {
+        (_[(_.k_eLibrary = 1)] = "k_eLibrary"),
+          (_[(_.k_eWishlist = 2)] = "k_eWishlist"),
+          (_[(_.k_eFollowing = 4)] = "k_eFollowing"),
+          (_[(_.k_eRecommended = 8)] = "k_eRecommended"),
+          (_[(_.k_eSteam = 16)] = "k_eSteam"),
+          (_[(_.k_eRequired = 32)] = "k_eRequired"),
+          (_[(_.k_eFeatured = 64)] = "k_eFeatured"),
+          (_[(_.k_eCurator = 128)] = "k_eCurator"),
+          (_[(_.k_eReposted = 256)] = "k_eReposted");
+      })(_ || (_ = {}));
+      class _ {
+        clanid;
+        unique_id;
+        event_type;
+        appid;
+        start_time;
+        appInfo;
+        clanInfo;
+        score;
+        GetSource() {
+          return this.appInfo
+            ? this.appInfo.source
+            : (this.clanInfo?.source ?? 0);
+        }
+        static GetEntityNameForID(_, _) {
+          if (_)
+            return (
+              _._.Get().GetApp(_)?.GetName() ??
+              (0, _._)("#EventCalendar_MuteApp_Unknown")
+            );
+          if (_) {
+            const _ = _._.GetClanInfoByClanAccountID(_);
+            if (_?.group_name) return _.group_name;
+          }
+          return (0, _._)("#EventCalendar_MuteApp_Unknown");
+        }
+        static BHasEntityNameForID(_, _) {
+          return _
+            ? Boolean(_._.Get().GetApp(_)?.GetName())
+            : !!_ && !!_._.GetClanInfoByClanAccountID(_)?.group_name;
+        }
+        GetEntityName() {
+          return _.GetEntityNameForID(this.appid, this.clanid);
+        }
+        GetGameCapsule() {
+          if (this.appInfo)
+            return _._.Get()
+              .GetApp(this.appInfo.appid)
+              ?.GetAssets()
+              ?.GetMainCapsuleURL();
+          if (this.clanInfo) {
+            let _ = _._.GetClanInfoByClanAccountID(this.clanInfo.clanid);
+            if (_) return _.avatar_full_url;
+          }
+          return (0, _._)("#EventCalendar_MuteApp_Unknown");
+        }
+        GetGameIcon() {
+          if (this.appInfo)
+            return _._.Get()
+              .GetApp(this.appInfo.appid)
+              ?.GetAssets()
+              ?.GetCommunityIconURL();
+          if (this.clanInfo) {
+            let _ = _._.GetClanInfoByClanAccountID(this.clanInfo.clanid);
+            if (_) return _.avatar_full_url;
+          }
+          return (0, _._)("#EventCalendar_MuteApp_Unknown");
+        }
+      }
+      class _ {
+        appid;
+        source;
+        playtime;
+        last_played;
+        wishlist_added;
+      }
+      class _ {
+        clanid;
+        source;
+      }
+      var _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       !(function (_) {
-        (_.Default = "default"),
-          (_.Upcoming = "upcoming"),
-          (_.Featured = "featured"),
-          (_.Press = "press"),
-          (_.Steam = "steam"),
-          (_.Halloween = "halloween"),
-          (_.Dev_Sales = "sales"),
-          (_.Dev_All = "all"),
-          (_.Dev_AssociatedPress = "associated_press");
+        (_.k_ERecent = "recent"),
+          (_.k_ELibrary = "library"),
+          (_.k_EWishlist = "wishlist"),
+          (_.k_EFollowing = "following"),
+          (_.k_ERecommended = "recommended"),
+          (_.k_ESteam = "steam"),
+          (_.k_EFeatured = "featured"),
+          (_.k_ECurator = "curator");
       })(_ || (_ = {}));
+      const _ = [
+          _.k_ELibrary,
+          _.k_EWishlist,
+          _.k_EFollowing,
+          _.k_ERecommended,
+          _.k_ESteam,
+          _.k_ECurator,
+        ],
+        _ = [..._, _.k_EFeatured],
+        _ = [_.k_EFeatured];
+      var _;
+      !(function (_) {
+        (_.k_ENews = "news"),
+          (_.k_EEvents = "events"),
+          (_.k_EStreaming = "streaming"),
+          (_.k_EUpdates = "updates"),
+          (_.k_EReleases = "releases"),
+          (_.k_ESales = "sales");
+      })(_ || (_ = {}));
+      const _ = [
+          _.k_ENews,
+          _.k_EEvents,
+          _.k_EStreaming,
+          _.k_EUpdates,
+          _.k_EReleases,
+          _.k_ESales,
+        ],
+        _ = new Map([
+          [_.k_ENews, [_.uYK]],
+          [_.k_EEvents, [_.L0X, _.I5b, _._, _._, _.hGl, _.WNR, _.pIh, _.izQ]],
+          [_.k_EStreaming, [_.KDJ]],
+          [_.k_EUpdates, [_.Fwr, _._, _.zeJ]],
+          [_.k_EReleases, [_.yhO, _.Aqr, _.DEQ, _.f4X, _.zcX]],
+          [_.k_ESales, [_.HRy, _.C$4, _.LOv, _.HFK]],
+        ]);
+      function _(_) {
+        return new Map(_.map((_) => [_, !0]));
+      }
+      class _ {
+        m_mapEventTypeGroupsAllowed = new Map();
+        m_mapGameSources = new Map();
+        m_bCuratorUnhideOnFollowDialogDismissed = !1;
+        m_mapHiddenApps = new Map();
+        m_mapHiddenClans = new Map();
+        m_bInitializedForUpdatesOnly = !1;
+        m_eStorageType = "session";
+        m_strStorageKey;
+        constructor(_) {
+          (0, _._)(this),
+            (0, _._)(() => {
+              _?.rgHiddenApps &&
+                _.rgHiddenApps.forEach((_) => this.m_mapHiddenApps.set(_, !0)),
+                _?.rgHiddenClans &&
+                  _.rgHiddenClans.forEach((_) =>
+                    this.m_mapHiddenClans.set(_, !0),
+                  );
+            });
+        }
+        GetGameSources() {
+          return Array.from(this.m_mapGameSources.keys());
+        }
+        GetStorageObject() {
+          return this.m_strStorageKey
+            ? "session" === this.m_eStorageType
+              ? window.sessionStorage
+              : window.localStorage
+            : null;
+        }
+        GetPreferencesStorageKey() {
+          return `${this.m_strStorageKey}-event-calendar-prefs`;
+        }
+        get enabledEventTypeSet() {
+          const _ = new Set();
+          for (const _ of Array.from(this.m_mapEventTypeGroupsAllowed.keys()))
+            _.get(_)?.forEach((_) => _.add(_));
+          return _;
+        }
+        MapClanEventTypeToGroup(_) {
+          let _;
+          return (
+            _.forEach((_, _) => {
+              -1 !== __webpack_require__.indexOf(_) && (_ = _);
+            }),
+            _ || _.k_EEvents
+          );
+        }
+        InitDefaultCheckboxes(_, _, _) {
+          (this.m_bInitializedForUpdatesOnly = _),
+            (this.m_mapEventTypeGroupsAllowed = _(_ ? [_.k_EUpdates] : _));
+          const _ = (0, _._)() ? _ : _;
+          (this.m_mapGameSources = _(_ ? _ : _)),
+            _ && this.m_mapGameSources.set(_.k_EFeatured, !0);
+        }
+        Init(_, _, _, _, _) {
+          (this.m_eStorageType = _), (this.m_strStorageKey = _);
+          const _ = this.GetStorageObject(),
+            _ = _ ? _.getItem(this.GetPreferencesStorageKey()) : null;
+          if (_) {
+            const _ = JSON.parse(_);
+            if (_.rgEventTypeGroupsAllowed && _.rgGameSources) {
+              const { rgEventTypeGroupsAllowed: _, rgGameSources: _ } = _;
+              return (
+                (this.m_mapEventTypeGroupsAllowed = _(_)),
+                (this.m_mapGameSources = _(_)),
+                void (
+                  void 0 !== _.bCuratorUnhideOnFollowDismissed &&
+                  (this.m_bCuratorUnhideOnFollowDialogDismissed =
+                    _.bCuratorUnhideOnFollowDismissed)
+                )
+              );
+            }
+          }
+          this.InitDefaultCheckboxes(_, _, _);
+        }
+        SaveFilterPreferences() {
+          const _ = this.GetStorageObject();
+          if (!_) return;
+          const _ = {
+            rgEventTypeGroupsAllowed: Array.from(
+              this.m_mapEventTypeGroupsAllowed.keys(),
+            ),
+            rgGameSources: Array.from(this.m_mapGameSources.keys()),
+            bCuratorUnhideOnFollowDismissed:
+              this.m_bCuratorUnhideOnFollowDialogDismissed,
+          };
+          _.setItem(this.GetPreferencesStorageKey(), JSON.stringify(_));
+        }
+        RecordFilterChange() {
+          let _ = 0;
+          this.BIsGameSourceAllowed(_.k_ELibrary) && (_ |= 1),
+            this.BIsGameSourceAllowed(_.k_EWishlist) && (_ |= 2),
+            this.BIsGameSourceAllowed(_.k_EFollowing) && (_ |= 4),
+            this.BIsGameSourceAllowed(_.k_ERecommended) && (_ |= 8),
+            this.BIsGameSourceAllowed(_.k_ESteam) && (_ |= 16),
+            this.BIsGameSourceAllowed(_.k_EFeatured) && (_ |= 32),
+            this.BIsGameSourceAllowed(_.k_ERecent) && (_ |= 64),
+            this.BIsEventTypeGroupAllowed(_.k_ENews) && (_ |= 1024),
+            this.BIsEventTypeGroupAllowed(_.k_EEvents) && (_ |= 2048),
+            this.BIsEventTypeGroupAllowed(_.k_EStreaming) && (_ |= 4096),
+            this.BIsEventTypeGroupAllowed(_.k_EUpdates) && (_ |= 8192),
+            this.BIsEventTypeGroupAllowed(_.k_EReleases) && (_ |= 16384),
+            this.BIsEventTypeGroupAllowed(_.k_ESales) && (_ |= 32768),
+            (0, _._)(_._, _);
+        }
+        BCuratorUnhideOnFollowDialogDismissed() {
+          return this.m_bCuratorUnhideOnFollowDialogDismissed;
+        }
+        SetCuratorUnhideOnFollowDialogDismissed(_) {
+          (this.m_bCuratorUnhideOnFollowDialogDismissed = _),
+            this.SaveFilterPreferences();
+        }
+        BIsEventTypeGroupAllowed(_) {
+          return this.m_mapEventTypeGroupsAllowed.has(_);
+        }
+        BIsGameSourceAllowed(_) {
+          return (
+            !(_ === _.k_EFollowing && !(0, _._)()) &&
+            !(_ === _.k_ECurator && !(0, _._)()) &&
+            this.m_mapGameSources.has(_)
+          );
+        }
+        SetEventTypeGroupAllowed(_, _) {
+          _
+            ? this.m_mapEventTypeGroupsAllowed.set(_, !0)
+            : this.m_mapEventTypeGroupsAllowed.delete(_),
+            this.SaveFilterPreferences(),
+            this.RecordFilterChange();
+        }
+        SetGameSourceAllowed(_, _) {
+          _
+            ? (this.m_mapGameSources.set(_, !0),
+              _ == _.k_ERecent
+                ? this.m_mapGameSources.delete(_.k_ELibrary)
+                : _ == _.k_ELibrary &&
+                  ((0, _._)(
+                    !this.m_mapGameSources.has(_.k_ERecent),
+                    "Setting Library although Recent already set - illusion was broken",
+                  ),
+                  this.m_mapGameSources.delete(_.k_ERecent)))
+            : (this.m_mapGameSources.delete(_),
+              _ == _.k_ERecent
+                ? this.m_mapGameSources.set(_.k_ELibrary, !0)
+                : _ == _.k_ELibrary &&
+                  this.m_mapGameSources.delete(_.k_ERecent)),
+            this.SaveFilterPreferences(),
+            this.RecordFilterChange();
+        }
+        BShouldDisplayEvent(_) {
+          const _ = _.GetSource(),
+            _ = Boolean(
+              _.appInfo &&
+                _.appInfo.last_played &&
+                _.appInfo.last_played + 15552e3 >= _._.GetTimeNowWithOverride(),
+            );
+          return (
+            !!(
+              this.enabledEventTypeSet.has(_.event_type) ||
+              (this.m_bInitializedForUpdatesOnly &&
+                this.BIsEventTypeGroupAllowed(_.k_EUpdates) &&
+                _.event_type == _.uYK &&
+                _.start_time < 1599202800)
+            ) &&
+            !this.m_mapHiddenApps.has(_.appid) &&
+              !this.m_mapHiddenClans.has(_.clanid) &&
+            (!!(_ & _.k_eRequired || _ & _.k_eReposted) ||
+              Boolean(
+                (this.BIsGameSourceAllowed(_.k_ERecent) && _) ||
+                  (this.BIsGameSourceAllowed(_.k_ELibrary) &&
+                    _ & _.k_eLibrary) ||
+                  (this.BIsGameSourceAllowed(_.k_EWishlist) &&
+                    _ & _.k_eWishlist) ||
+                  (this.BIsGameSourceAllowed(_.k_EFollowing) &&
+                    _ & _.k_eFollowing) ||
+                  (this.BIsGameSourceAllowed(_.k_ERecommended) &&
+                    _ & _.k_eRecommended) ||
+                  (this.BIsGameSourceAllowed(_.k_ESteam) && _ & _.k_eSteam) ||
+                  (this.BIsGameSourceAllowed(_.k_EFeatured) &&
+                    _ & _.k_eFeatured) ||
+                  (this.BIsGameSourceAllowed(_.k_ECurator) && _ & _.k_eCurator),
+              ))
+          );
+        }
+        BAreAllEventsHidden() {
+          return (
+            0 == this.m_mapEventTypeGroupsAllowed.size ||
+            0 == this.m_mapGameSources.size
+          );
+        }
+        BAreAnyEventsFiltered(_) {
+          const _ = (0, _._)() ? _ : _;
+          return (
+            (_ ? _ : _).some((_) => !this.BIsGameSourceAllowed(_)) ||
+            _.some((_) => !this.BIsEventTypeGroupAllowed(_))
+          );
+        }
+        BIsClanVisible(_) {
+          return !this.m_mapHiddenClans.has(_);
+        }
+        SetClanVisibility(_, _) {
+          _
+            ? this.m_mapHiddenClans.has(_) && this.m_mapHiddenClans.delete(_)
+            : this.m_mapHiddenClans.has(_) || this.m_mapHiddenClans.set(_, !0);
+        }
+        BIsAppVisible(_) {
+          return !this.m_mapHiddenApps.has(_);
+        }
+        SetAppVisibility(_, _) {
+          _
+            ? this.m_mapHiddenApps.has(_) && this.m_mapHiddenApps.delete(_)
+            : this.m_mapHiddenApps.has(_) || this.m_mapHiddenApps.set(_, !0);
+        }
+      }
+      var _;
+      (0, _._)([_._], _.prototype, "m_mapEventTypeGroupsAllowed", void 0),
+        (0, _._)([_._], _.prototype, "m_mapGameSources", void 0),
+        (0, _._)(
+          [_._],
+          _.prototype,
+          "m_bCuratorUnhideOnFollowDialogDismissed",
+          void 0,
+        ),
+        (0, _._)([_._], _.prototype, "m_mapHiddenApps", void 0),
+        (0, _._)([_._], _.prototype, "m_mapHiddenClans", void 0),
+        (0, _._)(
+          [
+            (0, _._)({
+              keepAlive: !0,
+              equals: _._.structural,
+            }),
+          ],
+          _.prototype,
+          "enabledEventTypeSet",
+          null,
+        ),
+        (0, _._)([_._], _.prototype, "SetEventTypeGroupAllowed", null),
+        (0, _._)([_._], _.prototype, "SetGameSourceAllowed", null),
+        (function (_) {
+          (_.Default = "default"),
+            (_.Upcoming = "upcoming"),
+            (_.Featured = "featured"),
+            (_.Press = "press"),
+            (_.Steam = "steam"),
+            (_.Halloween = "halloween"),
+            (_.Dev_Sales = "sales"),
+            (_.Dev_All = "all"),
+            (_.Dev_AssociatedPress = "associated_press");
+        })(_ || (_ = {}));
       new Map();
-      var _ = __webpack_require__("chunkid");
       class _ {
         constructor() {
           (0, _._)(this);
@@ -79720,12 +79497,7 @@
         Init() {
           const _ = (0, _._)("mutedcomminfo", "application_config");
           this.ValidateStoreDefault(_) &&
-            (("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-              console.log(
-                "DEV_DEBUG: CMutedCommunicationStore loading bundles payload: " +
-                  JSON.stringify(_),
-              ),
-            _.appids &&
+            (_.appids &&
               _.appids.forEach((_) => this.m_mapBlockedAppIds.set(_, !0)),
             _.clanids &&
               _.clanids.forEach((_) => this.m_mapBlockedClanIds.set(_, !0)));
@@ -79831,7 +79603,7 @@
         constructor(_, _) {
           (0, _._)(this),
             (this.m_key = _),
-            (this.m_visibilityStore = new _._(_)),
+            (this.m_visibilityStore = new _(_)),
             _._.Get().HintLoad();
         }
         GetNumEventsLoaded() {
@@ -80143,7 +79915,7 @@
           if (_)
             for (const _ of _) {
               if (this.m_mapCalendarAppsByID.has(_.appid)) continue;
-              const _ = new _._();
+              const _ = new _();
               (_.appid = _.appid),
                 (_.source = _.source),
                 (_.playtime = _.playtime),
@@ -80158,7 +79930,7 @@
           if (_)
             for (const _ of _)
               if (!this.m_mapCalendarClansByID.has(_.clanid)) {
-                const _ = new _._();
+                const _ = new _();
                 (_.clanid = _.clanid),
                   (_.source = _.source),
                   this.m_mapCalendarClansByID.set(_.clanid, _),
@@ -80167,17 +79939,16 @@
               }
         }
         RegisterReadEvents(_) {
-          if (!_) return;
-          const _ = _._.Get();
-          for (const _ of _) _.SetEventAsRead(_);
+          _ && (0, _._)(_);
         }
         RegisterEventVotes(_) {
-          if (!_) return;
-          const _ = _._.Get();
-          for (const _ of _) {
-            const _ = void 0 === _.vote ? void 0 : Boolean(_.vote);
-            _.SetVote(_._, _);
-          }
+          _ &&
+            (0, _._)(
+              _.map((_) => ({
+                gidAnnouncement: _._,
+                vote: void 0 === _.vote ? null : _.vote ? "up" : "down",
+              })),
+            );
         }
         RegisterCalendarEvents(_) {
           if (_) {
@@ -80244,9 +80015,8 @@
               "forward" === _
                 ? this.m_nForwardStuckCount
                 : this.m_nBackwardStuckCount,
-            _ = _ < 3 ? _ : 0,
             _ = _ >= 3 ? 1 : 0,
-            _ = ("dev" === _._.WEB_UNIVERSE ? 50 : 250) + 50 * _,
+            _ = 250 + 50 * (_ < 3 ? _ : 0),
             _ = _._.GetTimeNowWithOverride(),
             _ = this.GetTimeEdgeForDirection(_, _) ?? _,
             _ = {
@@ -80329,7 +80099,7 @@
             _ = this.m_mapCalendarClansByID.get(_.clanid);
           if (!_ && !_)
             return console.log("No AppInfo or ClanInfo For: ", _), !1;
-          const _ = new _._();
+          const _ = new _();
           return (
             (_.clanid = _.clanid),
             (_.unique_id = _.unique_id),
@@ -80358,7 +80128,7 @@
             _ = _.clanInfo ? _.clanInfo.clanid : void 0;
           null != _ || null != _
             ? (await _.Get().UpdateCommunicationSetting(_, _, _),
-              _._.RecordAppInteractionEvent(_, _._.k_eMuted))
+              (0, _._)(_._.k_eMuted))
             : (0, _._)(
                 !1,
                 "Both clan id and account id are missing, cannot change communication status",
@@ -80385,8 +80155,6 @@
         (0, _._)([_._], _.prototype, "RegisterCalendarEventsAndModels", null),
         (0, _._)([_._], _.prototype, "RegisterCalendarApps", null),
         (0, _._)([_._], _.prototype, "RegisterCalendarClans", null),
-        (0, _._)([_._], _.prototype, "RegisterReadEvents", null),
-        (0, _._)([_._], _.prototype, "RegisterEventVotes", null),
         (0, _._)([_._], _.prototype, "RegisterCalendarEvents", null),
         (0, _._)([_._], _.prototype, "BHitEventHorizon", null),
         (0, _._)([_._.bound], _.prototype, "LoadAdditionalEvents", null),
@@ -80571,7 +80339,7 @@
           const _ = this.m_mapEvents.get(_.GID);
           return !_ || !_.m_bHasBeenTracked;
         }
-        StartTracking(_, _) {
+        StartTracking(_, _, _) {
           if (_.bOldAnnouncement) return;
           let _ = this.m_mapEvents.get(_.GID);
           _ || ((_ = new _()), this.m_mapEvents.set(_.GID, _)),
@@ -80580,16 +80348,23 @@
               ((_.m_fnSubmit = new _._()),
               _.m_fnSubmit.Schedule(
                 this.m_nImpressionDelayMS,
-                this.ReportImpression.bind(this, _, _),
+                this.ReportImpression.bind(this, _, _, _),
               ));
         }
         StopTracking(_) {
           const _ = this.m_mapEvents.get(_.GID);
           _ && _.m_fnSubmit && (_.m_fnSubmit.Cancel(), (_.m_fnSubmit = null));
         }
-        ReportImpression(_, _) {
-          _._.Get().RecordEventShown(_, _._._),
-            _ && _._.RecordViewedEvent(_(), _.GID);
+        ReportImpression(_, _, _) {
+          if ((__webpack_require__.RecordEventShown(_, _._._), _)) {
+            const _ = _();
+            _.RecordEventViewed(
+              _.GID,
+              __webpack_require__.GetCurrentlyLoadedItemsForStats(),
+              __webpack_require__.GetStoreInitializationTimestamp().getTime() /
+                1e3,
+            );
+          }
           const _ = this.m_mapEvents.get(_.GID);
           _ &&
             ((_.m_bHasBeenTracked = !0),
@@ -81014,7 +80789,7 @@
             });
         }
       }
-      __webpack_require__("chunkid"), __webpack_require__("chunkid");
+      __webpack_require__("chunkid");
       __webpack_require__("chunkid"),
         __webpack_require__("chunkid"),
         __webpack_require__("chunkid");
@@ -82082,9 +81857,7 @@
                 : void 0;
           let _ = (0, _.jsxs)(_.Fragment, {
             children: [
-              Boolean(
-                "dev" === _._.WEB_UNIVERSE && this.state.results?.strRequest,
-              ) &&
+              Boolean(!1) &&
                 (0, _.jsx)(_, {
                   request: this.state.results.strRequest,
                 }),
@@ -82266,59 +82039,7 @@
                 ]),
               );
           }, [_.request]),
-          "dev" !== _._.WEB_UNIVERSE
-            ? null
-            : _ && _
-              ? (0, _.jsxs)("div", {
-                  className: (0, _._)(
-                    _().SaleItemBrowserDebug,
-                    _().ValveOnlyBackground,
-                  ),
-                  children: [
-                    (0, _.jsxs)(_._, {
-                      className: _().ShowHideLink,
-                      onClick: () => _(!_),
-                      children: [_ ? "Hide" : "Show", " Solr Query Details"],
-                    }),
-                    _ &&
-                      (0, _.jsxs)(_.Fragment, {
-                        children: [
-                          Boolean(_) &&
-                            _.map((_, _) =>
-                              (0, _.jsxs)(
-                                "div",
-                                {
-                                  className: _().QueryTerm,
-                                  children: [
-                                    (0, _.jsx)("div", {
-                                      className: _().Name,
-                                      children: _[0],
-                                    }),
-                                    (0, _.jsx)("div", {
-                                      children: _[1],
-                                    }),
-                                  ],
-                                },
-                                "filter_" + _,
-                              ),
-                            ),
-                          (0, _.jsx)(_._, {
-                            className: _().WGTesterLink,
-                            target: "_blank",
-                            href:
-                              "https://local.steam.dev:4443/wg?reqname=QuerySolr&request=" +
-                              encodeURIComponent(
-                                "['request' => 'QuerySolr', 'core' => 'store', 'query' => '" +
-                                  _ +
-                                  "']",
-                              ),
-                            children: "Open in WG Tester",
-                          }),
-                        ],
-                      }),
-                  ],
-                })
-              : null
+          null
         );
       }
       function _(_) {
@@ -82826,7 +82547,7 @@
       };
       function _(_) {
         const { saleDesc: _ } = _,
-          _ = (0, _._)(_.clanAccountID),
+          { data: _ } = (0, _._)(_.clanAccountID),
           _ =
             _._.COMMUNITY_BASE_URL +
             "gid/" +
@@ -82852,7 +82573,7 @@
                 "EventGID: ",
                 _.clanEventGID,
                 (0, _.jsx)("br", {}),
-                Boolean(_.can_edit) &&
+                Boolean(_?.can_edit) &&
                   (0, _.jsxs)(_.Fragment, {
                     children: [
                       (0, _._)("#Sale_Section_Type_links"),
@@ -83057,8 +82778,9 @@
         });
       }
       function _(_) {
-        const { eventModel: _ } = _;
-        return (0, _._)(_.clanSteamID.GetAccountID()).can_edit
+        const { eventModel: _ } = _,
+          { data: _ } = (0, _._)(_.clanSteamID.GetAccountID());
+        return _?.can_edit
           ? (0, _.jsx)(_, {
               eventModel: _,
             })
@@ -83136,7 +82858,7 @@
       function _(_) {
         const { saleDesc: _, eventModel: _, showWhyAmISeeingThis: _ } = _,
           _ = (0, _._)(),
-          _ = (0, _._)(_.clanSteamID.GetAccountID()),
+          { data: _ } = (0, _._)(_.clanSteamID.GetAccountID()),
           _ = _.clanSteamID.GetAccountID(),
           _ = _.GID,
           _ = (0, _._)(_),
@@ -83180,13 +82902,13 @@
         return (0, _.jsxs)("div", {
           className: (0, _._)(_().LinkCtn),
           children: [
-            Boolean(_.can_edit) &&
+            Boolean(_?.can_edit) &&
               (0, _.jsx)("a", {
                 href: _,
                 target: "_blank",
                 children: (0, _._)("#EventEditor_Edit"),
               }),
-            Boolean(!__webpack_require__.BIsVisibleEvent() && _.can_edit) &&
+            Boolean(!__webpack_require__.BIsVisibleEvent() && _?.can_edit) &&
               (0, _.jsx)("a", {
                 href: _,
                 target: "_blank",
@@ -84474,6 +84196,63 @@
         _ = _;
       function _() {
         return _.IsDebugEnabled();
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        return ["GetClanAnnouncementVoteForUser", _, _];
+      }
+      function _(_, _, _, _) {
+        const _ = (0, _._)(),
+          _ = _(_, _._.accountid),
+          { data: _ } = (0, _._)({
+            queryKey: _,
+            queryFn: async () => await __webpack_require__.GetMyEventVote(_),
+            initialData: _?.initialVote,
+            enabled: Boolean(_) && Boolean(_._.accountid) && (_?.bAsk ?? !0),
+            staleTime: 1 / 0,
+            gcTime: 1 / 0,
+          }),
+          { mutate: _ } = (0, _._)({
+            mutationFn: async (_) => {
+              const _ = await __webpack_require__.RateEvent(_, _, _);
+              if (_ != _._)
+                throw new Error(`RateClanAnnouncement failed with ${_}`);
+            },
+            onMutate: (_) => _.setQueryData(_, _),
+            onError: () =>
+              _.invalidateQueries({
+                queryKey: _,
+              }),
+          });
+        return {
+          myVote: _,
+          Vote: (_) => {
+            _ && _ != _ && _(_);
+          },
+        };
+      }
+      function _(_, _) {
+        if (0 == _.length) return;
+        const _ = _ ?? (0, _._)("SetMyEventVotes");
+        _ &&
+          _.forEach((_) =>
+            __webpack_require__.setQueryData(
+              _(_.gidAnnouncement, _._.accountid),
+              _.vote,
+            ),
+          );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -87088,142 +86867,6 @@
         }
         getClassName() {
           return "CPromotionPlanning_GetAllPlansForApps_Response_CAppIncludedInSales";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.partnerid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  partnerid: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  start_date: {
-                    _: 5,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  end_date: {
-                    _: 6,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  show_hidden: {
-                    _: 4,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CPromotionPlanning_GetAllPlansForPartner_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.plans || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  plans: {
-                    _: 1,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CPromotionPlanning_GetAllPlansForPartner_Response";
         }
       }
       class _ extends _.Message {
@@ -91123,18 +90766,6 @@
               },
             );
           }),
-          (_.GetAllPlansForPartner = function (_, _, _) {
-            return _.SendMsg(
-              "PromotionPlanning.GetAllPlansForPartner#1",
-              (0, _._)(_, _, _),
-              _,
-              {
-                bConstMethod: !0,
-                ePrivilege: 2,
-                eWebAPIKeyRequirement: 1,
-              },
-            );
-          }),
           (_.GetPlanByInputAccessKey = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.GetPlanByInputAccessKey#1",
@@ -91341,111 +90972,6 @@
             );
           };
         })(_ || (_ = {}));
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid");
-      function _(_) {
-        if (_) {
-          if ("appid" in _) return "app";
-          if ("bundleid" in _) return "bundle";
-          if ("packageid" in _) return "sub";
-        }
-      }
-      function _(_) {
-        const {
-            _: _,
-            hoverClassName: _,
-            fnGetIDOverride: _,
-            fnHoverState: _,
-            disableScreenshots: _,
-            children: _,
-          } = _,
-          _ = _.useRef(null),
-          _ = _.useCallback(
-            (_) => {
-              const _ = _(_);
-              _ &&
-                (_ && _(!0),
-                window.GameHover &&
-                  (_.current &&
-                    _ &&
-                    (_.current.dataset.hoverDisableScreenshots = "true"),
-                  window.GameHover(_ ? _() : _.current, _, "global_hover", {
-                    type: _,
-                    _: (0, _._)(_)._,
-                    _: 1,
-                  })));
-            },
-            [_, _, _, _],
-          ),
-          _ = _.useCallback(
-            (_) => {
-              _(_) &&
-                (_ && _.relatedTarget && _(!1),
-                window.HideGameHover &&
-                  window.HideGameHover(_ ? _() : _.current, _, "global_hover"));
-            },
-            [_, _, _],
-          );
-        return (0, _.jsx)("div", {
-          ref: _,
-          className: _,
-          onMouseEnter: _,
-          onMouseLeave: _,
-          onFocus: _,
-          onBlur: _,
-          children: _,
-        });
-      }
-      function _(_) {
-        const {
-            _: _,
-            strExtraParams: _,
-            fnOnClickOverride: _,
-            strOverrideURL: _,
-          } = _,
-          _ = (0, _._)(),
-          _ = (0, _._)(),
-          _ = (0, _._)(
-            _ ||
-              (_ && "creatorid" in _
-                ? (0, _._)(
-                    `${_._.STORE_BASE_URL}curator/${((0, _._))(_)._}${_ ? `?${_}` : ""}`,
-                    _,
-                    _,
-                  )
-                : (0, _._)(
-                    `${_._.STORE_BASE_URL}${_(_)}/${((0, _._))(_)._}${_ ? `?${_}` : ""}`,
-                    _,
-                    _,
-                  )),
-          );
-        return (0, _.jsx)(_, {
-          ..._,
-          children: (0, _.jsx)(_._, {
-            className: _.className,
-            href: _ ? void 0 : _,
-            target: _._.IN_CLIENT || _ ? void 0 : "_blank",
-            rel: "noopener noreferrer",
-            onClick: _,
-            children: _.children,
-          }),
-        });
-      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -91779,8 +91305,7 @@
         _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
       class _ {
         constructor() {
-          (0, _._)(this),
-            "dev" == _._.WEB_UNIVERSE && (window.g_ClanImageStore = this);
+          (0, _._)(this);
         }
         m_mapClanToImages = new Map();
         m_mapClanImageLoadPromises = new Map();
@@ -92236,11 +91761,7 @@
         static s_Singleton;
         static Get() {
           return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              _.s_Singleton.Init(),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_PartnerEventPrivateDataStore = _.s_Singleton)),
+            _.s_Singleton || ((_.s_Singleton = new _()), _.s_Singleton.Init()),
             _.s_Singleton
           );
         }
@@ -92427,11 +91948,7 @@
             _
           );
         } catch (_) {
-          "dev" == _._.WEB_UNIVERSE &&
-            console.error(
-              "MarketingMessageReadAndParseTemplateVars: Failed to prase",
-              _,
-            );
+          0;
         }
         return null;
       }
@@ -92660,12 +92177,11 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -92696,69 +92212,46 @@
           enabled: _ > 0,
         });
       }
-      function _() {
-        const _ = (0, _._)();
-        return (0, _._)({
-          queryKey: [`SteamAwardNominations_${_._.accountid}`],
-          queryFn: async () => {
-            const _ = _._.Init(_._),
-              _ = await _._.GetUserNominations(_, _);
-            return __webpack_require__.Body().toObject()?.nominations;
-          },
-          initialData: () => _()?.user_nominations?.nominations,
-          enabled: _._.logged_in,
-        });
+      async function _(_) {
+        const _ = _._.Init(_._),
+          _ = await _._.GetUserNominations(_, _);
+        return __webpack_require__.Body().toObject()?.nominations ?? [];
       }
-      function _(_) {
-        const _ = _();
-        return _.isLoading
-          ? {
-              bLoadingNominationForCategory: !0,
-            }
-          : {
-              currentNomination: _.data?.find((_) => _.category_id == _),
-              bLoadingNominationForCategory: !1,
-            };
+      async function _(_, _, _, _) {
+        const _ = _._.Init(_._);
+        _.Body().set_category_id(_),
+          _.Body().set_source(_),
+          _.Body().set_nominated_id(_);
+        const _ = await _._.Nominate(_, _);
+        return (
+          _.BSuccess() ||
+            console.warn(`Failed to nominate app: ${_.GetEResult()}`),
+          [_.GetEResult(), _.Body().toObject()]
+        );
       }
-      function _() {
-        return [`SteamAwardBadgeProgress_${_._.accountid}`];
+      async function _(_, _, _, _) {
+        const _ = _._.Init(_._);
+        _.Body().set_voteid(_),
+          _.Body().set_appid(_),
+          _.Body().set_sale_appid(_);
+        const _ = await _._.SetVote(_, _);
+        return (
+          _.BSuccess() ||
+            console.warn(
+              `Failed to set vote for app (${_}): ${_.GetEResult()}`,
+            ),
+          [_.GetEResult(), _.Body().toObject()]
+        );
       }
-      function _(_, _, _, _, _) {
-        const _ = (0, _._)(),
-          _ = (0, _._)();
-        return (0, _._)({
-          mutationFn: () =>
-            (async function (_, _, _, _) {
-              const _ = _._.Init(_._);
-              _.Body().set_category_id(_),
-                _.Body().set_source(_),
-                _.Body().set_nominated_id(_);
-              const _ = await _._.Nominate(_, _);
-              return (
-                _.BSuccess() ||
-                  console.warn(`Failed to nominate app: ${_.GetEResult()}`),
-                [_.GetEResult(), _.Body().toObject()]
-              );
-            })(_, _, _, _),
-          onSuccess: ([_, _]) => {
-            _ == _._
-              ? (!(function (_, _) {
-                  _.setQueryData([`SteamAwardNominations_${_._.accountid}`], _);
-                })(_, _.nominations),
-                window.setTimeout(
-                  () =>
-                    _.invalidateQueries({
-                      queryKey: _(),
-                    }),
-                  1e3,
-                ),
-                _ && _())
-              : _ && _(_);
-          },
-          onError: () => {
-            _ && _();
-          },
-        });
+      async function _(_, _) {
+        const _ = _._.Init(_._);
+        __webpack_require__.Body().set_sale_appid(_);
+        const _ = await _._.GetUserVotes(_, _);
+        return (
+          _.BSuccess() ||
+            console.warn(`Failed to get votes for user: ${_.GetEResult()}`),
+          _.Body().toObject()?.user_votes
+        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -93356,15 +92849,883 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+      var _,
+        _,
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.bincremental || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [2], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  bincremental: {
+                    _: 1,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  friends: {
+                    _: 2,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                  max_friend_count: {
+                    _: 3,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  active_friend_count: {
+                    _: 4,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  friends_limit_hit: {
+                    _: 5,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CMsgClientFriendsList";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.ulfriendid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  ulfriendid: {
+                    _: 1,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  efriendrelationship: {
+                    _: 2,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CMsgClientFriendsList_Friend";
+        }
+      }
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.groupid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [3], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  groupid: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  name: {
+                    _: 2,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  accountid_members: {
+                    _: 3,
+                    _: !0,
+                    _: !0,
+                    _: _._.readUint32,
+                    pbr: _._.readPackedUint32,
+                    _: _._.writeRepeatedUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CFriendsListCategory";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _
+            ? {
+                $jspbMessageInstance: _,
+              }
+            : {};
+        }
+        static fromObject(_) {
+          return new _();
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _;
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {}
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CFriendsList_GetCategories_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.categories || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [1], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  categories: {
+                    _: 1,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CFriendsList_GetCategories_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.accountid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  accountid: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  clanid: {
+                    _: 2,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  chat_group_id: {
+                    _: 3,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CFriendsListFavoriteEntry";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _
+            ? {
+                $jspbMessageInstance: _,
+              }
+            : {};
+        }
+        static fromObject(_) {
+          return new _();
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _;
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {}
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CFriendsList_GetFavorites_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.favorites || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [1], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  favorites: {
+                    _: 1,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CFriendsList_GetFavorites_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.favorites || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [1], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  favorites: {
+                    _: 1,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CFriendsList_SetFavorites_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _
+            ? {
+                $jspbMessageInstance: _,
+              }
+            : {};
+        }
+        static fromObject(_) {
+          return new _();
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _;
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {}
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CFriendsList_SetFavorites_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.favorites || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [1], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  favorites: {
+                    _: 1,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CFriendsList_FavoritesChanged_Notification";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _
+            ? {
+                $jspbMessageInstance: _,
+              }
+            : {};
+        }
+        static fromObject(_) {
+          return new _();
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _;
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {}
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CFriendsList_GetFriendsList_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.friendslist || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  friendslist: {
+                    _: 1,
+                    _: _,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CFriendsList_GetFriendsList_Response";
+        }
+      }
+      !(function (_) {
+        (_.GetCategories = function (_, _, _) {
+          return _.SendMsg(
+            "FriendsList.GetCategories#1",
+            (0, _._)(_, _, _),
+            _,
+            {
+              bConstMethod: !0,
+              ePrivilege: 1,
+            },
+          );
+        }),
+          (_.GetFriendsList = function (_, _, _) {
+            return _.SendMsg(
+              "FriendsList.GetFriendsList#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
+          }),
+          (_.GetFavorites = function (_, _, _) {
+            return _.SendMsg(
+              "FriendsList.GetFavorites#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
+          }),
+          (_.SetFavorites = function (_, _, _) {
+            return _.SendMsg(
+              "FriendsList.SetFavorites#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
+          });
+      })(_ || (_ = {})),
+        (function (_) {
+          _.FavoritesChangedHandler = {
+            name: "FriendsListClient.FavoritesChanged#1",
+            request: _,
+          };
+        })(_ || (_ = {}));
+      __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        return {
+          queryKey: ["GetFriendsList", _],
+          queryFn: async () => {
+            const _ = _._.Init(_),
+              _ = await _.GetFriendsList(_, _),
+              _ = [];
+            for (const _ of __webpack_require__
+              .Body()
+              .friendslist()
+              ?.friends() ?? []) {
+              const _ = _.ulfriendid();
+              _ &&
+                ((_.efriendrelationship() != _._UC &&
+                  _.efriendrelationship() != _.Ec7) ||
+                  !new _._(_).BIsIndividualAccount() ||
+                  _.push(_));
+            }
+            return _;
+          },
+        };
+      }
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -94689,7 +95050,11 @@
           [_, _] = _.useState(""),
           [_, _] = _.useState(void 0),
           [_, _] = _.useState(void 0),
-          { data: _ } = (0, _._)(),
+          { data: _ } = (function () {
+            const _ = (0, _._)(),
+              _ = (0, _._)();
+            return (0, _._)(_(_, _));
+          })(),
           { isLoading: _, data: _ } = (0, _._)(_?.GetAccountID()),
           _ = 0 != _.trim().length && 0 != _.trim().length;
         return (0, _.jsx)(_._, {
@@ -95117,7 +95482,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _._ {
         m_filesToUpload = _._.array();
@@ -95202,12 +95566,6 @@
                   new _._(_, _.name, _, this.m_rgImageOptions),
                 ]),
                 !0
-              );
-            "dev" == _._.WEB_UNIVERSE &&
-              console.error(
-                "CCloudImageUploader failed to determine file type, not image, video or subtitle",
-                _,
-                _.type,
               );
           }
           return !1;
@@ -95752,1211 +96110,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = 1576780700;
-      let _ = class extends _.Component {
-        OnEmoticonClick(_) {
-          const {
-              emoticonStore: _,
-              strFlairGroupID: _,
-              SetUIDisplayPref: _,
-              contextOptions: _,
-              bShowChatAddons: _,
-            } = this.props,
-            {
-              roomEffectSettings: _,
-              onRoomEffectSelected: _,
-              onStickerSelected: _,
-            } = this.props;
-          let _ = null;
-          if (
-            ((_ =
-              _ && _ && _ && _
-                ? (0, _.jsx)(_._, {
-                    emoticonStore: this.props.emoticonStore,
-                    strFlairGroupID: this.props.strFlairGroupID,
-                    onEmoticonSelected: (_) =>
-                      this.props.OnEmoticonSelected(_, !1),
-                    roomEffectSettings: _,
-                    onRoomEffectSelected: _,
-                    onStickerSelected: _,
-                  })
-                : _ && _.flair_list && _.GetFlairListByGroupID(_)?.length > 0
-                  ? (0, _.jsx)(_._, {
-                      emoticonStore: this.props.emoticonStore,
-                      strFlairGroupID: this.props.strFlairGroupID,
-                      OnSelected: this.props.OnEmoticonSelected,
-                    })
-                  : (0, _.jsx)(_._, {
-                      emoticonStore: this.props.emoticonStore,
-                      strFlairGroupID: this.props.strFlairGroupID,
-                      OnSelected: this.props.OnEmoticonSelected,
-                    })),
-            (0, _._)(
-              _,
-              _,
-              _ || {
-                bOverlapHorizontal: !0,
-                bPreferPopLeft: !0,
-                bPreferPopTop: !0,
-              },
-            ),
-            this.BHaveUnseenEmoticons() && _)
-          ) {
-            let _ = this.GetNewestIndicatorTime();
-            (!_ || _ < _) && (_ = _), _("rtLastAckedNewEmoticons", _);
-          }
-        }
-        GetNewestIndicatorTime() {
-          let _ = this.props.emoticonStore,
-            _ = Number.MIN_SAFE_INTEGER,
-            _ = _.GetTimeReceivedNewestEmoticon();
-          _ && (_ = _);
-          let _ = _.GetTimeReceivedForStickerOrEffect();
-          return (_ = Math.max(_, _)), _ > Number.MIN_SAFE_INTEGER ? _ : void 0;
-        }
-        BHaveUnseenEmoticons() {
-          const { rtLastAckedNewEmoticons: _ } = this.props;
-          let _ = this.GetNewestIndicatorTime();
-          return !_ || _ < _ || (_ && (!_ || _ < _));
-        }
-        render() {
-          const { disabled: _, className: _, ttip: _, useImg: _ } = this.props;
-          let _ = [_],
-            _ = !1;
-          return (
-            _ ? _.push("disabled") : this.BHaveUnseenEmoticons() && (_ = !0),
-            _ && _.push("ttip"),
-            _
-              ? (0, _.jsx)(_._, {
-                  onClick: this.OnEmoticonClick,
-                  onOKActionDescription: (0, _._)("#ChatEntryButton_Emoticon"),
-                  focusable: !0,
-                  children: (0, _.jsx)(_._, {
-                    toolTipContent: _,
-                    children: (0, _.jsx)("img", {
-                      src: this.props.useImg,
-                      className: (0, _._)(..._),
-                      title:
-                        this.props.title ||
-                        (0, _._)("#ChatEntryButton_Emoticon"),
-                    }),
-                  }),
-                })
-              : (_.push(_().chatSubmitButton, _().EmoticonPickerButton),
-                (0, _.jsx)(_._, {
-                  className: (0, _._)(..._),
-                  onOKActionDescription: (0, _._)("#ChatEntryButton_Emoticon"),
-                  type: "button",
-                  onClick: this.OnEmoticonClick,
-                  title:
-                    this.props.title || (0, _._)("#ChatEntryButton_Emoticon"),
-                  disabled: _,
-                  children: (0, _.jsxs)(_._, {
-                    toolTipContent: _,
-                    children: [
-                      this.props.buttonIcon || (0, _.jsx)(_._, {}),
-                      _ && (0, _.jsx)(_._, {}),
-                    ],
-                  }),
-                }))
-          );
-        }
-      };
-      (0, _._)([_._], _.prototype, "OnEmoticonClick", null),
-        (_ = (0, _._)([_._], _));
-      const _ = _;
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, _, _ = !1) {
-        return `${_}economy/sticker${_ ? "static" : ""}/${encodeURIComponent(_)}`;
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ extends _.Component {
-        constructor(_) {
-          super(_),
-            (this.state = {
-              activeIndex: _.initialActiveIndex || 0,
-            });
-        }
-        render() {
-          const { config: _ } = this.props,
-            { activeIndex: _ } = this.state,
-            _ = _[_],
-            _ = _ ? __webpack_require__.renderContent() : null,
-            _ = _.length > 1,
-            _ = _
-              ? ({ detail: { button: _ } }) => {
-                  _ === _._.BUMPER_LEFT
-                    ? this.setState({
-                        activeIndex: Math.max(0, this.state.activeIndex - 1),
-                      })
-                    : _ === _._.BUMPER_RIGHT &&
-                      this.setState({
-                        activeIndex: Math.min(
-                          _.length - 1,
-                          this.state.activeIndex + 1,
-                        ),
-                      });
-                }
-              : void 0;
-          return (0, _.jsxs)(_._, {
-            className: _.Picker,
-            onButtonDown: _,
-            children: [
-              _ &&
-                (0, _.jsx)(_, {
-                  children: this.RenderTabs(),
-                }),
-              _,
-            ],
-          });
-        }
-        RenderTabs() {
-          return this.props.config.map(({ renderTab: _ }, _) => {
-            const _ = this.state.activeIndex === _;
-            return (0, _.jsx)(
-              _,
-              {
-                active: _,
-                onClick: () =>
-                  this.setState({
-                    activeIndex: _,
-                  }),
-                children: _(_),
-              },
-              _,
-            );
-          });
-        }
-      }
-      function _(_) {
-        return (0, _.jsx)(_._, {
-          className: _.Tabs,
-          "flow-children": "row",
-          children: _.children,
-        });
-      }
-      function _(_) {
-        return (0, _.jsx)("div", {
-          className: _.Content,
-          children: _.children,
-        });
-      }
-      function _(_) {
-        const { active: _, children: _, onClick: _ } = _;
-        return (0, _.jsx)(_._, {
-          className: (0, _._)(_.Tab, _ && _.Active),
-          focusClassName: _.Focus,
-          onActivate: _,
-          children: (0, _.jsx)("div", {
-            className: (0, _._)(_.TabContent, _ && _.Active),
-            children: _,
-          }),
-        });
-      }
-      function _(_) {
-        const {
-          items: _,
-          renderItem: _,
-          onItemSelect: _,
-          keyExtractor: _,
-          renderEmpty: _,
-        } = _;
-        let _ = _.map((_, _) =>
-          (0, _.jsx)(
-            _._,
-            {
-              className: _.Item,
-              onActivate: () => _(_[_]),
-              autoFocus: 0 === _,
-              focusClassName: _.Focus,
-              children: __webpack_require__(_[_]),
-            },
-            _(_),
-          ),
-        );
-        return (
-          0 === _.length && _ && (_ = _()),
-          (0, _.jsx)(_._, {
-            "flow-children": "grid",
-            className: _.ItemList,
-            children: _,
-          })
-        );
-      }
-      function _(_) {
-        const { title: _, onFilterChange: _, filter: _, onSubmit: _, ..._ } = _;
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            (0, _.jsx)(_, {
-              children: (0, _.jsx)(_, {
-                title: _,
-                children: (0, _.jsx)(_, {
-                  ..._,
-                }),
-              }),
-            }),
-            (0, _.jsx)(_, {
-              value: _,
-              onChange: _,
-              onSubmit: _,
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const { onFilterChange: _, filter: _, sections: _, title: _ } = _;
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            (0, _.jsxs)(_, {
-              children: [
-                _ &&
-                  (0, _.jsx)("div", {
-                    className: _.SectionedPageTitle,
-                    children: _,
-                  }),
-                _.map(({ title: _, ..._ }) =>
-                  (0, _.jsx)(
-                    _,
-                    {
-                      title: _,
-                      children: (0, _.jsx)(_, {
-                        ..._,
-                      }),
-                    },
-                    _,
-                  ),
-                ),
-              ],
-            }),
-            (0, _.jsx)(_, {
-              value: _,
-              onChange: _,
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        return (0, _.jsxs)("div", {
-          className: _.Section,
-          children: [
-            (0, _.jsx)("div", {
-              className: _.SectionTitle,
-              children: _.title,
-            }),
-            (0, _.jsx)("div", {
-              className: _.SectionContent,
-              children: _.children,
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const { value: _, onChange: _, onSubmit: _ } = _;
-        return (0, _.jsx)("div", {
-          className: _.FilterInputContainer,
-          children: (0, _.jsx)(_._, {
-            type: "text",
-            placeholder: (0, _._)("#AddonPicker_Search"),
-            className: _.FilterInput,
-            value: _,
-            onChange: (_) => __webpack_require__(_.target.value),
-            onSubmit: _,
-          }),
-        });
-      }
-      function _(_) {
-        const { className: _, ..._ } = _;
-        return (0, _.jsx)("div", {
-          className: (0, _._)(_, _.AddonPickerMessage),
-          ..._,
-        });
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        return _.recent_emoticons;
-      }
-      function _(_) {
-        return _.recent_stickers;
-      }
-      function _(_) {
-        return _(_).length + _(_).length > 0;
-      }
-      const _ = (0, _._)((_) => {
-        const {
-          emoticonStore: _,
-          roomEffectSettings: _,
-          strFlairGroupID: _,
-          onEmoticonSelected: _,
-          onRoomEffectSelected: _,
-          onStickerSelected: _,
-        } = _;
-        !(function (_) {
-          const [_, _] = (0, _.useState)(_.is_initialized);
-          (0, _.useEffect)(() => {
-            if (!_.is_initialized) {
-              _.UpdateEmoticonList();
-              const _ = (0, _._)(
-                () => _.is_initialized,
-                () => __webpack_require__(_.is_initialized),
-              );
-              return () => _();
-            }
-            return () => {};
-          }, [_]);
-        })(_);
-        const _ = [];
-        return (
-          _(_) &&
-            _.push({
-              renderTab: (_) =>
-                (0, _.jsx)("span", {
-                  title: (0, _._)("#AddonPicker_RecentlyUsed"),
-                  className: (0, _._)(
-                    _().PickerTab,
-                    _().Clock,
-                    _ && _().ActiveTab,
-                  ),
-                  children: (0, _.jsx)(_, {}),
-                }),
-              renderContent: () =>
-                (0, _.jsx)(_, {
-                  store: _,
-                  onEmoticonSelect: (_) => _(_.name),
-                  onStickerSelect: (_) => _(_.name),
-                  flairGroupID: _,
-                }),
-            }),
-          (0, _.jsx)(_._, {
-            children: (0, _.jsx)(_, {
-              config: [
-                ..._,
-                {
-                  renderTab: (_) =>
-                    (0, _.jsx)("span", {
-                      title: (0, _._)("#AddonPicker_Emoticons"),
-                      className: (0, _._)(_().PickerTab, _ && _().ActiveTab),
-                      children: (0, _.jsx)(_, {}),
-                    }),
-                  renderContent: () =>
-                    (0, _.jsx)(_, {
-                      store: _,
-                      onItemSelect: (_) => _(_.name),
-                      flairGroupID: _,
-                    }),
-                },
-                {
-                  renderTab: (_) =>
-                    (0, _.jsx)("span", {
-                      title: (0, _._)("#AddonPicker_Stickers"),
-                      className: (0, _._)(_().PickerTab, _ && _().ActiveTab),
-                      children: (0, _.jsx)(_, {}),
-                    }),
-                  renderContent: () =>
-                    (0, _.jsx)(_, {
-                      store: _,
-                      onItemSelect: (_) => _(_.name),
-                    }),
-                },
-                {
-                  renderTab: (_) =>
-                    (0, _.jsx)("span", {
-                      title: (0, _._)("#AddonPicker_RoomEffects"),
-                      className: (0, _._)(_().PickerTab, _ && _().ActiveTab),
-                      children: (0, _.jsx)(_, {}),
-                    }),
-                  renderContent: () =>
-                    (0, _.jsx)(_, {
-                      store: _,
-                      effectSettings: _,
-                      onItemSelect: (_) => _(_.name),
-                    }),
-                },
-              ],
-            }),
-          })
-        );
-      });
-      let _ = class extends _.Component {
-        m_disposeEmoticonStore;
-        constructor(_) {
-          super(_),
-            (this.state = {
-              strSearchText: "",
-            });
-          let _ = this.props.emoticonStore;
-          _.is_initialized ||
-            (_.UpdateEmoticonList(),
-            (this.m_disposeEmoticonStore = (0, _._)(
-              () => _.is_initialized,
-              () => this.forceUpdate(),
-            )));
-        }
-        componentWillUnmount() {
-          this.m_disposeEmoticonStore && this.m_disposeEmoticonStore();
-        }
-        render() {
-          const {
-              emoticonStore: _,
-              onEmoticonSelected: _,
-              onStickerSelected: _,
-              strFlairGroupID: _,
-            } = this.props,
-            _ = [];
-          return (
-            _(_) &&
-              _.push({
-                renderTab: (_) =>
-                  (0, _.jsx)("span", {
-                    title: (0, _._)("#AddonPicker_RecentlyUsed"),
-                    className: (0, _._)(
-                      _().PickerTab,
-                      _().Clock,
-                      _ && _().ActiveTab,
-                    ),
-                    children: (0, _.jsx)(_, {}),
-                  }),
-                renderContent: () =>
-                  (0, _.jsx)(_, {
-                    store: _,
-                    onEmoticonSelect: (_) => _(_.name),
-                    onStickerSelect: (_) => __webpack_require__(_.name),
-                    flairGroupID: _,
-                  }),
-              }),
-            (0, _.jsx)(_._, {
-              children: (0, _.jsx)(_, {
-                config: [
-                  ..._,
-                  {
-                    renderTab: (_) =>
-                      (0, _.jsx)("span", {
-                        title: (0, _._)("#AddonPicker_Emoticons"),
-                        className: (0, _._)(_().PickerTab, _ && _().ActiveTab),
-                        children: (0, _.jsx)(_, {}),
-                      }),
-                    renderContent: () =>
-                      (0, _.jsx)(_, {
-                        store: _,
-                        onItemSelect: (_) => _(_.name),
-                        flairGroupID: _,
-                      }),
-                  },
-                  {
-                    renderTab: (_) =>
-                      (0, _.jsx)("span", {
-                        title: (0, _._)("#AddonPicker_Stickers"),
-                        className: (0, _._)(_().PickerTab, _ && _().ActiveTab),
-                        children: (0, _.jsx)(_, {}),
-                      }),
-                    renderContent: () =>
-                      (0, _.jsx)(_, {
-                        store: _,
-                        onItemSelect: (_) => __webpack_require__(_.name),
-                      }),
-                  },
-                ],
-              }),
-            })
-          );
-        }
-      };
-      _ = (0, _._)([_._], _);
-      class _ extends _.Component {
-        m_disposeEmoticonStore;
-        constructor(_) {
-          super(_),
-            (this.state = {
-              strSearchText: "",
-            });
-          let _ = this.props.emoticonStore;
-          _.is_initialized ||
-            (_.UpdateEmoticonList(),
-            (this.m_disposeEmoticonStore = (0, _._)(
-              () => _.is_initialized,
-              () => this.forceUpdate(),
-            )));
-        }
-        componentWillUnmount() {
-          this.m_disposeEmoticonStore && this.m_disposeEmoticonStore();
-        }
-        render() {
-          return (0, _.jsx)(_._, {
-            children: (0, _.jsx)(_, {
-              config: [
-                {
-                  renderTab: () =>
-                    (0, _.jsx)("span", {
-                      title: (0, _._)("#AddonPicker_Emoticons"),
-                      className: _().PickerTab,
-                      children: (0, _.jsx)(_, {}),
-                    }),
-                  renderContent: () =>
-                    (0, _.jsx)(_, {
-                      store: this.props.emoticonStore,
-                      onItemSelect: (_) => this.props.OnSelected(_.name, !1),
-                      flairGroupID: this.props.strFlairGroupID,
-                    }),
-                },
-              ],
-            }),
-          });
-        }
-      }
-      class _ extends _.Component {
-        m_disposeEmoticonStore;
-        constructor(_) {
-          super(_),
-            (this.state = {
-              strSearchText: "",
-            });
-          let _ = this.props.emoticonStore;
-          _.is_initialized ||
-            (_.UpdateEmoticonList(),
-            (this.m_disposeEmoticonStore = (0, _._)(
-              () => _.is_initialized,
-              () => this.forceUpdate(),
-            )));
-        }
-        componentWillUnmount() {
-          this.m_disposeEmoticonStore && this.m_disposeEmoticonStore();
-        }
-        render() {
-          return (0, _.jsx)(_._, {
-            children: (0, _.jsx)(_, {
-              config: [
-                {
-                  renderTab: () =>
-                    (0, _.jsx)("span", {
-                      title: (0, _._)("#AddonPicker_Emoticons"),
-                      className: _().PickerTab,
-                      children: (0, _.jsx)(_, {}),
-                    }),
-                  renderContent: () =>
-                    (0, _.jsx)(_, {
-                      store: this.props.emoticonStore,
-                      onItemSelect: (_) => this.props.OnSelected(_.name, !1),
-                      flairGroupID: this.props.strFlairGroupID,
-                    }),
-                },
-              ],
-            }),
-          });
-        }
-      }
-      class _ extends _.Component {
-        state = {
-          filter: "",
-        };
-        render() {
-          const {
-              store: _,
-              onEmoticonSelect: _,
-              onStickerSelect: _,
-            } = this.props,
-            { filter: _ } = this.state,
-            _ = [];
-          return (
-            _(_) &&
-              _.push({
-                title: (0, _._)("#AddonPicker_RecentEmoticons"),
-                items: _._.FilterEmoticons(_(_), _),
-                onItemSelect: _,
-                renderItem: (_) =>
-                  (0, _.jsx)(_, {
-                    emoticon: _,
-                  }),
-                keyExtractor: (_) => _.name,
-                renderEmpty: () =>
-                  (0, _.jsx)(_, {
-                    children: _
-                      ? (0, _._)("#AddonPicker_NoResults")
-                      : (0, _._)(
-                          "#AddonPicker_NoRecent",
-                          (0, _._)("#AddonPicker_Emoticons"),
-                        ),
-                  }),
-              }),
-            _(_).length &&
-              _.push({
-                title: (0, _._)("#AddonPicker_RecentStickers"),
-                items: _._.FilterStickers(_(_), _),
-                onItemSelect: _,
-                renderItem: (_) =>
-                  (0, _.jsx)(_, {
-                    sticker: _,
-                  }),
-                keyExtractor: ({ name: _ }) => _,
-                renderEmpty: () =>
-                  (0, _.jsx)(_, {
-                    children: _
-                      ? (0, _._)("#AddonPicker_NoResults")
-                      : (0, _._)(
-                          "#AddonPicker_NoRecent",
-                          (0, _._)("#AddonPicker_Stickers"),
-                        ),
-                  }),
-              }),
-            (0, _.jsx)(_, {
-              onFilterChange: (_) =>
-                this.setState({
-                  filter: _,
-                }),
-              filter: _,
-              sections: _,
-            })
-          );
-        }
-      }
-      class _ extends _.Component {
-        state = {
-          filter: "",
-        };
-        render() {
-          const { store: _, onItemSelect: _, flairGroupID: _ } = this.props,
-            { filter: _ } = this.state,
-            _ = !_ && _ ? _.GetFlairListByGroupID(_) : _.emoticon_list,
-            _ = _._.FilterEmoticons(_, _).slice(0, 1e3);
-          return (0, _.jsx)(_, {
-            title: (0, _._)("#AddonPicker_Emoticons"),
-            items: _,
-            onItemSelect: _,
-            renderItem: (_) =>
-              (0, _.jsx)(_, {
-                emoticon: _,
-              }),
-            keyExtractor: (_) => _.name,
-            onFilterChange: (_) =>
-              this.setState({
-                filter: _,
-              }),
-            filter: _,
-            onSubmit: () => _(_[0]),
-            renderEmpty: () =>
-              _
-                ? (0, _.jsx)(_, {
-                    children: (0, _._)("#AddonPicker_NoResults"),
-                  })
-                : (0, _.jsx)(_, {}),
-          });
-        }
-      }
-      function _() {
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            (0, _.jsx)(_, {
-              children: (0, _._)(
-                "#AddonPicker_NoneOwned",
-                (0, _._)("#AddonPicker_Emoticons"),
-              ),
-            }),
-            (0, _.jsx)(_, {
-              children: (0, _._)(
-                "#AddonPicker_AcquireAtPointsShopOrMarket",
-                (0, _.jsx)(_._, {
-                  href: `${_._.STORE_BASE_URL}points/shop/c/emoticons`,
-                  children: (0, _._)("#AddonPicker_AcquireAtPointsShop_Link"),
-                }),
-                (0, _.jsx)(_._, {
-                  href: `${_._.COMMUNITY_BASE_URL}market`,
-                  children: (0, _._)(
-                    "#AddonPicker_AcquireAtPointsShopOrMarket_Link",
-                  ),
-                }),
-              ),
-            }),
-          ],
-        });
-      }
-      class _ extends _.Component {
-        state = {
-          filter: "",
-        };
-        render() {
-          const { store: _, onItemSelect: _ } = this.props,
-            { filter: _ } = this.state,
-            _ = _._.FilterStickers(_.GetStickerList(), _);
-          return (0, _.jsx)(_, {
-            title: (0, _._)("#EmoticonPicker_StickerHeading"),
-            items: _,
-            onItemSelect: _,
-            renderItem: (_) =>
-              (0, _.jsx)(_, {
-                sticker: _,
-              }),
-            keyExtractor: ({ name: _ }) => _,
-            onFilterChange: (_) =>
-              this.setState({
-                filter: _,
-              }),
-            filter: _,
-            onSubmit: () => _(_[0]),
-            renderEmpty: () =>
-              _
-                ? (0, _.jsx)(_, {
-                    children: (0, _._)("#AddonPicker_NoResults"),
-                  })
-                : (0, _.jsxs)(_.Fragment, {
-                    children: [
-                      (0, _.jsx)(_, {
-                        children: (0, _._)(
-                          "#AddonPicker_NoneOwned",
-                          (0, _._)("#AddonPicker_Stickers"),
-                        ),
-                      }),
-                      (0, _.jsx)(_, {
-                        children: (0, _._)(
-                          "#AddonPicker_AcquireAtPointsShop",
-                          (0, _.jsx)(_._, {
-                            href: `${_._.STORE_BASE_URL}points/shop/c/stickers`,
-                            children: (0, _._)(
-                              "#AddonPicker_AcquireAtPointsShop_Link",
-                            ),
-                          }),
-                        ),
-                      }),
-                    ],
-                  }),
-          });
-        }
-      }
-      class _ extends _.Component {
-        state = {
-          filter: "",
-        };
-        render() {
-          const { store: _, effectSettings: _, onItemSelect: _ } = this.props,
-            { filter: _ } = this.state,
-            _ = _.GetEffectList().filter(({ name: _ }) => _.indexOf(_) > -1);
-          return (0, _.jsx)(_, {
-            title: (0, _._)("#EmoticonPicker_EffectHeading"),
-            items: _,
-            onItemSelect: _,
-            renderItem: (_) =>
-              (0, _.jsx)(_, {
-                effect: _,
-                roomEffectSettings: _,
-              }),
-            keyExtractor: ({ name: _ }) => _,
-            onFilterChange: (_) =>
-              this.setState({
-                filter: _,
-              }),
-            filter: _,
-            onSubmit: () => __webpack_require__(_[0]),
-            renderEmpty: () =>
-              _
-                ? (0, _.jsx)(_, {
-                    children: (0, _._)("#AddonPicker_NoResults"),
-                  })
-                : (0, _.jsxs)(_.Fragment, {
-                    children: [
-                      (0, _.jsx)(_, {
-                        children: (0, _._)(
-                          "#AddonPicker_NoneOwned",
-                          (0, _._)("#AddonPicker_RoomEffects"),
-                        ),
-                      }),
-                      (0, _.jsx)(_, {
-                        children: (0, _._)(
-                          "#AddonPicker_AcquireAtPointsShop",
-                          (0, _.jsx)(_._, {
-                            href: `${_._.STORE_BASE_URL}points/shop/c/chateffects`,
-                            children: (0, _._)(
-                              "#AddonPicker_AcquireAtPointsShop_Link",
-                            ),
-                          }),
-                        ),
-                      }),
-                    ],
-                  }),
-          });
-        }
-      }
-      let _ = class extends _.Component {
-        state = {
-          filter: "",
-        };
-        render() {
-          const { store: _, onItemSelect: _, flairGroupID: _ } = this.props,
-            { filter: _ } = this.state,
-            _ = [];
-          return (
-            _(_).length &&
-              _.push({
-                title: (0, _._)("#AddonPicker_RecentEmoticons"),
-                items: _._.FilterEmoticons(_(_), _),
-                onItemSelect: _,
-                renderItem: (_) =>
-                  (0, _.jsx)(_, {
-                    emoticon: _,
-                  }),
-                keyExtractor: (_) => _.name,
-                renderEmpty: () =>
-                  (0, _.jsx)(_, {
-                    children: _
-                      ? (0, _._)("#AddonPicker_NoResults")
-                      : (0, _._)(
-                          "#AddonPicker_NoRecent",
-                          (0, _._)("#AddonPicker_Emoticons"),
-                        ),
-                  }),
-              }),
-            (0, _.jsx)(_, {
-              onFilterChange: (_) =>
-                this.setState({
-                  filter: _,
-                }),
-              filter: _,
-              sections: [
-                ..._,
-                {
-                  title: (0, _._)("#AddonPicker_AllEmoticons"),
-                  items: _._.FilterStickers(_.emoticon_list, _).slice(0, 1e3),
-                  onItemSelect: _,
-                  renderItem: (_) =>
-                    (0, _.jsx)(_, {
-                      emoticon: _,
-                    }),
-                  keyExtractor: (_) => _.name,
-                  renderEmpty: () =>
-                    _
-                      ? (0, _.jsx)(_, {
-                          children: (0, _._)("#AddonPicker_NoResults"),
-                        })
-                      : (0, _.jsx)(_, {}),
-                },
-              ],
-            })
-          );
-        }
-      };
-      _ = (0, _._)([_._], _);
-      let _ = class extends _.Component {
-        state = {
-          filter: "",
-        };
-        render() {
-          const { store: _, onItemSelect: _, flairGroupID: _ } = this.props,
-            { filter: _ } = this.state;
-          return (0, _.jsx)(_, {
-            onFilterChange: (_) =>
-              this.setState({
-                filter: _,
-              }),
-            filter: _,
-            sections: [
-              {
-                title: (0, _._)("#ChatEntryButton_Flair"),
-                items: _._.FilterStickers(_.GetFlairListByGroupID(_), _),
-                onItemSelect: _,
-                renderItem: (_) =>
-                  (0, _.jsx)(_, {
-                    emoticon: _,
-                  }),
-                keyExtractor: (_) => _.name,
-                renderEmpty: () =>
-                  _
-                    ? (0, _.jsx)(_, {
-                        children: (0, _._)("#AddonPicker_NoResults"),
-                      })
-                    : (0, _.jsx)(_, {}),
-              },
-            ],
-          });
-        }
-      };
-      _ = (0, _._)([_._], _);
-      const _ = (_) => {
-        const { emoticon: _, large: _ } = _,
-          _ = !_.last_used && _.time_received;
-        return (0, _.jsxs)("div", {
-          className: _().EmoticonItem,
-          children: [
-            (0, _.jsx)(_._, {
-              emoticon: _.name,
-              large: _,
-            }),
-            _ && (0, _.jsx)(_, {}),
-          ],
-        });
-      };
-      class _ extends _.Component {
-        state = {
-          showHover: !1,
-        };
-        m_ref = _.createRef();
-        render() {
-          const { sticker: _, className: _, ..._ } = this.props,
-            _ = _(_._.COMMUNITY_CDN_URL, _.name);
-          return (0, _.jsxs)("div", {
-            ref: this.m_ref,
-            className: (0, _._)(_, _().StickerButton),
-            onMouseOver: () =>
-              this.setState({
-                showHover: !0,
-              }),
-            onFocus: () =>
-              this.setState({
-                showHover: !0,
-              }),
-            onMouseLeave: () =>
-              this.setState({
-                showHover: !1,
-              }),
-            onBlur: () =>
-              this.setState({
-                showHover: !1,
-              }),
-            ..._,
-            children: [
-              (0, _.jsx)("img", {
-                style: {
-                  width: "100%",
-                },
-                src: _,
-              }),
-              this.state.showHover &&
-                this.m_ref.current &&
-                (0, _.jsx)(_, {
-                  target: this.m_ref.current,
-                  sticker: _,
-                }),
-            ],
-          });
-        }
-      }
-      const _ = (0, _._)((_) => {
-        const {
-            target: _,
-            sticker: { name: _, appid: _ },
-          } = _,
-          [_] = (0, _._)(_, {});
-        return (0, _.jsx)(_._, {
-          target: _,
-          title: _,
-          subtitle: _?.GetName(),
-          children: (0, _.jsx)("img", {
-            src: _(_._.COMMUNITY_CDN_URL, _),
-            className: _().StickerHoverSticker,
-          }),
-        });
-      });
-      class _ extends _.Component {
-        state = {
-          showHover: !1,
-        };
-        m_ref = _.createRef();
-        render() {
-          const {
-              effect: _,
-              roomEffectSettings: _,
-              className: _,
-              ..._
-            } = this.props,
-            _ = _[_.name];
-          return (0, _.jsxs)("div", {
-            ref: this.m_ref,
-            onMouseOver: () =>
-              this.setState({
-                showHover: !0,
-              }),
-            onFocus: () =>
-              this.setState({
-                showHover: !0,
-              }),
-            onMouseLeave: () =>
-              this.setState({
-                showHover: !1,
-              }),
-            onBlur: () =>
-              this.setState({
-                showHover: !1,
-              }),
-            className: (0, _._)(_, _().EffectButton),
-            ..._,
-            children: [
-              _.renderEffectIcon(),
-              this.state.showHover &&
-                this.m_ref.current &&
-                (0, _.jsx)(_, {
-                  target: this.m_ref.current,
-                  effect: _,
-                  roomEffectSettings: _,
-                }),
-            ],
-          });
-        }
-      }
-      const _ = (0, _._)((_) => {
-        const {
-            target: _,
-            effect: { name: _, appid: _ },
-            roomEffectSettings: _,
-          } = _,
-          _ = _[_],
-          [_] = (0, _._)(_, {});
-        return (0, _.jsx)(_._, {
-          target: _,
-          title: _,
-          subtitle: _?.GetName(),
-          children: (0, _.jsx)("div", {
-            className: _().EffectHoverEffect,
-            children: _.renderEffectIcon(),
-          }),
-        });
-      });
-      function _() {
-        return (0, _.jsx)("div", {
-          className: _().NewEmoticonIndicator,
-          children: (0, _.jsx)("div", {
-            className: _().NewEmoticonCircle,
-          }),
-        });
-      }
-      function _(_) {
-        return (0, _.jsxs)("svg", {
-          xmlns: "http://www.w3.org/2000/svg",
-          viewBox: "0 0 36 36",
-          fill: "none",
-          ..._,
-          children: [
-            (0, _.jsx)("path", {
-              fill: "currentColor",
-              _: "M8 4C5.79086 4 4 5.79086 4 8V27C4 29.2091 5.79086 31 8 31H13V20C13 16.134 16.134 13 20 13H31V8C31 5.79086 29.2091 4 27 4H8Z",
-            }),
-            (0, _.jsx)("path", {
-              fill: "currentColor",
-              _: "M16 20C16 17.7909 17.7909 16 20 16H31L16 31V20Z",
-            }),
-            (0, _.jsx)("path", {
-              fill: "currentColor",
-              _: "M29 24.0625V25C29 25.2671 28.9738 25.5282 28.9239 25.7806L30.8858 26.1688C30.9609 25.7892 31 25.3982 31 25V24.0625H29Z",
-            }),
-            (0, _.jsx)("path", {
-              fill: "currentColor",
-              _: "M28.3263 27.2225C28.0342 27.6587 27.6587 28.0342 27.2225 28.3263L28.3351 29.9882C28.9885 29.5507 29.5507 28.9885 29.9882 28.3351L28.3263 27.2225Z",
-            }),
-            (0, _.jsx)("path", {
-              fill: "currentColor",
-              _: "M21 29H22.1875V31H19L21 29Z",
-            }),
-            (0, _.jsx)("path", {
-              fill: "currentColor",
-              _: "M24.0625 29H25C25.2671 29 25.5282 28.9738 25.7806 28.9239L26.1688 30.8858C25.7892 30.9609 25.3982 31 25 31H24.0625V29Z",
-            }),
-            (0, _.jsx)("path", {
-              fill: "currentColor",
-              _: "M29 22.1875V21L31 19V22.1875H29Z",
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        return (0, _.jsx)("svg", {
-          xmlns: "http://www.w3.org/2000/svg",
-          viewBox: "0 0 36 36",
-          fill: "none",
-          ..._,
-          children: (0, _.jsx)("path", {
-            fill: "currentColor",
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            _: "M18 3C15.0333 3 12.1332 3.87973 9.66645 5.52796C7.19972 7.17618 5.27713 9.51886 4.14181 12.2597C3.0065 15.0006 2.70945 18.0166 3.28823 20.9264C3.86701 23.8361 5.29562 26.5088 7.3934 28.6066C9.49119 30.7044 12.1639 32.133 15.0737 32.7118C17.9834 33.2906 20.9994 32.9935 23.7403 31.8582C26.4811 30.7229 28.8238 28.8003 30.472 26.3336C32.1203 23.8668 33 20.9667 33 18C33 16.0302 32.612 14.0796 31.8582 12.2597C31.1044 10.4399 29.9995 8.78628 28.6066 7.3934C27.2137 6.00052 25.5601 4.89563 23.7403 4.14181C21.9204 3.38799 19.9698 3 18 3ZM9.00001 15C9.00001 14.4067 9.17595 13.8266 9.5056 13.3333C9.83524 12.8399 10.3038 12.4554 10.852 12.2284C11.4001 12.0013 12.0033 11.9419 12.5853 12.0576C13.1672 12.1734 13.7018 12.4591 14.1213 12.8787C14.5409 13.2982 14.8266 13.8328 14.9424 14.4147C15.0581 14.9967 14.9987 15.5999 14.7716 16.1481C14.5446 16.6962 14.1601 17.1648 13.6667 17.4944C13.1734 17.8241 12.5934 18 12 18C11.2044 18 10.4413 17.6839 9.87869 17.1213C9.31608 16.5587 9.00001 15.7956 9.00001 15ZM24 18C23.4067 18 22.8266 17.8241 22.3333 17.4944C21.8399 17.1648 21.4554 16.6962 21.2284 16.1481C21.0013 15.5999 20.9419 14.9967 21.0576 14.4147C21.1734 13.8328 21.4591 13.2982 21.8787 12.8787C22.2982 12.4591 22.8328 12.1734 23.4147 12.0576C23.9967 11.9419 24.5999 12.0013 25.1481 12.2284C25.6962 12.4554 26.1648 12.8399 26.4944 13.3333C26.8241 13.8266 27 14.4067 27 15C27 15.7956 26.6839 16.5587 26.1213 17.1213C25.5587 17.6839 24.7957 18 24 18ZM26.3149 23.6788C26.7672 22.8295 27 21.9193 27 21H18H9C9 21.9193 9.23279 22.8295 9.68508 23.6788C10.1374 24.5281 10.8003 25.2997 11.636 25.9497C12.4718 26.5998 13.4639 27.1154 14.5558 27.4672C15.6478 27.8189 16.8181 28 18 28C19.1819 28 20.3522 27.8189 21.4442 27.4672C22.5361 27.1154 23.5282 26.5998 24.364 25.9497C25.1997 25.2997 25.8626 24.5281 26.3149 23.6788Z",
-          }),
-        });
-      }
-      function _(_) {
-        return (0, _.jsxs)("svg", {
-          xmlns: "http://www.w3.org/2000/svg",
-          viewBox: "0 0 36 36",
-          fill: "none",
-          ..._,
-          children: [
-            (0, _.jsx)("path", {
-              fill: "currentColor",
-              _: "M14.7163 7.6875L17.2476 15.5344C17.564 16.6102 18.4499 17.4328 19.5257 17.8125L27.3726 20.3438L19.5257 22.875C18.4499 23.1914 17.6273 24.0773 17.2476 25.1531L14.7163 33L12.1851 25.1531C11.8687 24.0773 10.9827 23.2547 9.90696 22.875L2.06009 20.3438L9.90696 17.8125C10.9827 17.4961 11.8054 16.6102 12.1851 15.5344L14.7163 7.6875Z",
-            }),
-            (0, _.jsx)("path", {
-              fill: "currentColor",
-              _: "M24.488 3L25.7861 7.06499C25.9591 7.63321 26.3918 8.07031 26.9543 8.24514L30.9784 9.55643L26.9543 10.8677C26.3918 11.0426 25.9591 11.4796 25.7861 12.0479L24.488 16.1129L23.1899 12.0479C23.0168 11.4796 22.5841 11.0426 22.0216 10.8677L17.9976 9.55643L22.0216 8.24514C22.5841 8.07031 23.0168 7.63321 23.1899 7.06499L24.488 3Z",
-            }),
-            (0, _.jsx)("path", {
-              fill: "currentColor",
-              _: "M8.11778 3.9375L8.76682 5.99185C8.85336 6.25411 9.0697 6.47265 9.32932 6.56007L11.363 7.21571L9.32932 7.87136C9.0697 7.95878 8.85336 8.17732 8.76682 8.43958L8.11778 10.4939L7.46874 8.43958C7.3822 8.17732 7.16586 7.95878 6.90624 7.87136L4.87259 7.21571L6.90624 6.56007C7.16586 6.47265 7.3822 6.25411 7.46874 5.99185L8.11778 3.9375Z",
-            }),
-            (0, _.jsx)("path", {
-              fill: "currentColor",
-              _: "M30.6178 12.375L31.2668 14.4293C31.3534 14.6916 31.5697 14.9102 31.8293 14.9976L33.863 15.6532L31.8293 16.3089C31.5697 16.3963 31.3534 16.6148 31.2668 16.8771L30.6178 18.9314L29.9687 16.8771C29.8822 16.6148 29.6659 16.3963 29.4062 16.3089L27.3726 15.6532L29.4062 14.9976C29.6659 14.9102 29.8822 14.6916 29.9687 14.4293L30.6178 12.375Z",
-            }),
-            (0, _.jsx)("path", {
-              fill: "currentColor",
-              _: "M25.9303 24.5625L26.5793 26.6168C26.6659 26.8791 26.8822 27.0977 27.1418 27.1851L29.1755 27.8407L27.1418 28.4964C26.8822 28.5838 26.6659 28.8023 26.5793 29.0646L25.9303 31.1189L25.2812 29.0646C25.1947 28.8023 24.9784 28.5838 24.7187 28.4964L22.6851 27.8407L24.7187 27.1851C24.9784 27.0977 25.1947 26.8791 25.2812 26.6168L25.9303 24.5625Z",
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const { className: _, ..._ } = _;
-        return (0, _.jsx)("svg", {
-          className: (0, _._)("SVGIcon_Button SVGIcon_Clock", _),
-          version: "1.1",
-          _: "0px",
-          _: "0px",
-          width: "20px",
-          height: "20px",
-          viewBox: "0 0 24 24",
-          ..._,
-          children: (0, _.jsx)("path", {
-            _: "M15.999 15c-.15 0-.303-.034-.446-.105l-4-2A1.001 1.001 0 0111 12V5a1 1 0 012 0v6.382l3.447 1.724A1 1 0 0115.999 15zM12 24C5.383 24 0 18.617 0 12S5.383 0 12 0s12 5.383 12 12-5.383 12-12 12zm0-22C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2z",
-          }),
-        });
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -97002,6 +96155,37 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const {
+            _: _,
+            event: _,
+            className: _,
+            dateRangeLayout: _ = "horizontal",
+          } = _,
+          [_, _, _] = (0, _._)(() => [
+            __webpack_require__.GetStartTimeAndDateUnixSeconds(),
+            __webpack_require__.GetEndTimeAndDateUnixSeconds(),
+            _.type,
+          ]),
+          _ = {};
+        return (
+          "vertical" == _ && (_.ShortDateRange = _().VerticalLocalDateAndTime),
+          (0, _.jsx)("div", {
+            _: _,
+            className: (0, _._)(_().EventDetailTimeInfo, _),
+            children: (0, _.jsx)(_._, {
+              startDateAndTime: _,
+              endDateAndTime: _,
+              bHideEndTime: !(0, _._)(_),
+              stylesmodule: _,
+            }),
+          })
+        );
+      }
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -97141,10 +96325,79 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      let _;
+      function _(_, _) {
+        const _ = _?.AnnouncementGID,
+          _ = _?.clanSteamID.GetAccountID() ?? 0,
+          _ = (function () {
+            const _ = (0, _._)();
+            return _.useMemo(
+              () => ({
+                GetMyEventVote: async (_) =>
+                  await (async function (_, _) {
+                    if (!_) return null;
+                    const _ = await _._.GetClanAnnouncementVoteForUser(_, {
+                      announcementid: _,
+                    });
+                    if (!__webpack_require__.BSuccess()) return null;
+                    return __webpack_require__.Body().voted_up()
+                      ? "up"
+                      : __webpack_require__.Body().voted_down()
+                        ? "down"
+                        : null;
+                  })(_, _),
+                RateEvent: async (_, _, _) =>
+                  await (async function (_, _, _, _) {
+                    if (!_) return _._;
+                    const _ = await _._.RateClanAnnouncement(_, {
+                      announcementid: _,
+                      vote_up: "up" == _,
+                      clan_accountid: _,
+                    });
+                    return _.GetEResult();
+                  })(_, _, _, _),
+              }),
+              [_],
+            );
+          })(),
+          { myVote: _, Vote: _ } = (0, _._)(_, _, _, {
+            initialVote: _(_),
+            ..._,
+          });
+        return {
+          myVote: _,
+          Vote: (_) => {
+            _ &&
+              _ &&
+              _ != _ &&
+              (_ && _.UpdateVoteCount(_, -1), _.UpdateVoteCount(_, 1), _(_));
+          },
+        };
+      }
+      function _(_) {
+        if ("undefined" != typeof window) {
+          if (!_) {
+            _ = new Map();
+            const _ = (0, _._)("uservotes", "application_config");
+            _?.forEach((_) => {
+              _.clanAnnouncementGID &&
+                _.set(
+                  _.clanAnnouncementGID,
+                  _.voted_up ? "up" : _.voted_down ? "down" : null,
+                );
+            });
+          }
+          return _ ? _.get(_) : void 0;
+        }
+        (0, _._)(!1, "GetVoteFromPageConfig is browser only");
+      }
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -97470,80 +96723,6 @@
           .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
       );
       function _(_) {
-        const [_, _] = _.useState(() =>
-            _._.Get().BHasMyVote(_)
-              ? _(_._.Get().GetPreviouslyLoadedVote(_))
-              : void 0,
-          ),
-          [_, _] = _.useState(() => !!_._.Get().BHasMyVote(_)),
-          _ = _.useRef(_),
-          _ = _.GID;
-        _.useEffect(() => {
-          const _ = _.current || !_._.Get().BIsUserLoggedIn();
-          if (((_.current = !1), _)) return;
-          const _ = _().CancelToken.source();
-          return (
-            _._.Get()
-              .LoadMyVote(_, _)
-              .then((_) => {
-                __webpack_require__(_(_)), _(!0);
-              })
-              .catch((_) => {
-                const _ = (0, _._)(_);
-                console.error("EventDiscussionWidget = " + _.strErrorMsg);
-              }),
-            () => _.cancel("EventDiscussionWidget is being unmounted")
-          );
-        }, [_]);
-        const _ = _.useCallback(
-          (_) => {
-            (function (_, _) {
-              return _.BIsUserLoggedIn()
-                ? !_.GetPartnerEventPermissions(_.clanSteamID).limited_user ||
-                    ((0, _._)((0, _.jsx)(_._, {}), window), !1)
-                : (_._.IN_CLIENT
-                    ? console.log(
-                        "EventDiscussionWidget: In Client: Cannot use login widget. We expect to be already logged in.",
-                      )
-                    : (0, _._)(
-                        (0, _.jsx)(_._, {
-                          strTitle: (0, _._)("#EventDisplay_Share_NotLoggedIn"),
-                          strDescription: (0, _._)(
-                            "#EventDisplay_Share_NotLoggedIn_Description",
-                          ),
-                          strOKButtonText: (0, _._)("#MobileLogin_SignIn"),
-                          onOK: () => (0, _._)(),
-                        }),
-                        window,
-                      ),
-                  !1);
-            })(_, _._.Get()) &&
-              _ != _ &&
-              null != _ &&
-              _ &&
-              (_._.Get()
-                .Vote(_, "up" === _, _().CancelToken.source())
-                .catch((_) => {
-                  const _ = (0, _._)(_);
-                  console.error(
-                    "EventDiscussionWidget.OnVote" + _ + " " + _.strErrorMsg,
-                    _,
-                  );
-                }),
-              __webpack_require__(_));
-          },
-          [_, _, _],
-        );
-        return {
-          myVote: _,
-          Vote: _,
-        };
-      }
-      function _(_) {
-        let _;
-        return !0 === _ ? (_ = "up") : !1 === _ && (_ = "down"), _;
-      }
-      function _(_) {
         const { eventModel: _, emoticonStore: _, partnerEventStore: _ } = _,
           _ = (0, _._)(),
           { myVote: _, Vote: _ } = _(_),
@@ -97559,8 +96738,29 @@
         return (0, _.jsx)(_, {
           nVoteCount: _,
           nCommentCount: _,
-          myVote: _,
-          onVote: _,
+          myVote: _ ?? void 0,
+          onVote: (_) => {
+            (_._.logged_in
+              ? !_._.is_limited || ((0, _._)((0, _.jsx)(_._, {}), window), 0)
+              : (_._.IN_CLIENT
+                  ? console.log(
+                      "EventDiscussionWidget: In Client: Cannot use login widget. We expect to be already logged in.",
+                    )
+                  : (0, _._)(
+                      (0, _.jsx)(_._, {
+                        strTitle: (0, _._)("#EventDisplay_Share_NotLoggedIn"),
+                        strDescription: (0, _._)(
+                          "#EventDisplay_Share_NotLoggedIn_Description",
+                        ),
+                        strOKButtonText: (0, _._)("#MobileLogin_SignIn"),
+                        onOK: () => (0, _._)(),
+                      }),
+                      window,
+                    ),
+                0)) &&
+              void 0 !== _ &&
+              _(_);
+          },
           strDiscussionURL: _,
           onDiscussionUnavailable: (_) => {
             (0, _._)(
@@ -97649,6 +96849,83 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = 4147080,
+        _ = "#ee6c5d";
+      function _(_, _, _, _) {
+        const _ = (function (_) {
+            return _._.EUNIVERSE != _.wLO || (_ >= 1764005400 && _ < 1764612e3);
+          })(_),
+          _ = _(_, _),
+          _ = _(_, _);
+        if (_.length || _.length)
+          return {
+            nomination: _.length
+              ? {
+                  rgCategories: _,
+                  bNominationsLive: _,
+                }
+              : void 0,
+            vote: _.length
+              ? {
+                  rgCategories: _,
+                  bNominationsLive: _,
+                }
+              : void 0,
+          };
+      }
+      function _(_) {
+        return _ > 0;
+      }
+      function _(_, _) {
+        const _ = [];
+        for (const _ of _.filter(_)) {
+          const _ = _.find((_) => _.voteid == _);
+          _?.localization?.title &&
+            __webpack_require__.push({
+              eCategoryID: _,
+              strTitle: _.localization.title,
+              strDescription: _.localization.award_description ?? "",
+              bLaborOfLove: _.flag == _._._,
+            });
+        }
+        return _;
+      }
+      function _(_, _) {
+        const _ = (0, _._)(),
+          _ = ["StoreSales.GetUserVotes", _._.accountid, _];
+        const { data: _ } = (0, _._)({
+            queryKey: _,
+            queryFn: async () => await _.GetMySteamAwardVotes(),
+            enabled: Boolean(_._.accountid),
+          }),
+          { mutate: _ } = (0, _._)({
+            mutationFn: async (_) => {
+              const _ = await _.SetSteamAwardVote(_, _);
+              if (_ != _._)
+                throw new Error(`StoreSales.SetVote failed with ${_}`);
+            },
+            onMutate: (_) =>
+              __webpack_require__.setQueryData(_, (_) => [
+                ...(_ ?? []).filter((_) => _.voteid != _),
+                {
+                  voteid: _,
+                  appid: _,
+                },
+              ]),
+            onError: () =>
+              __webpack_require__.invalidateQueries({
+                queryKey: _,
+              }),
+          });
+        return {
+          unVotedAppID: _?.find((_) => _.voteid == _)?.appid,
+          bAnswered: null != _ || !_._.accountid,
+          Vote: _,
+        };
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -97656,99 +96933,22 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        return _._.logged_in
-          ? !_._.is_limited ||
-              ((0, _._)(
-                (0, _.jsx)(_._, {
-                  strTokenOverride: _
-                    ? "#SteamAward_Vote_LimitedAccount"
-                    : "#SteamAward_Nominate_LimitedAccount",
-                }),
-                window,
-              ),
-              !1)
-          : ((0, _._)(
-              (0, _.jsx)(_._, {
-                strTitle: (0, _._)("#EventDisplay_Share_NotLoggedIn"),
-                strDescription: (0, _._)(
-                  "#EventDisplay_Share_NotLoggedIn_Description",
-                ),
-                strOKButtonText: (0, _._)("#MobileLogin_SignIn"),
-                onOK: _._,
-              }),
-              window,
-            ),
-            !1);
+        return `${_._.MEDIA_CDN_URL}store/promo/steamawards2025/${_}`;
       }
-      async function _(_, _) {
-        const _ =
-            _._.STORE_BASE_URL + "steamawards/ajaxgetsteamawardeventdetails",
-          _ = {
-            rgCategories: _,
-            _:
-              ((_ = (0, _._)()),
-              new Date(1e3 * _).toISOString().slice(0, 19).replace("T", " ")),
-          };
-        var _;
-        try {
-          const _ = await _().get(_, {
-            params: _,
-            withCredentials: !1,
-            cancelToken: _.token,
-          });
-          if (_.token.reason) return null;
-          if (_?.data?.success == _._ && _?.data?.event_details)
-            return _.data.event_details;
-        } catch (_) {
-          const _ = (0, _._)(_);
-          console.error(
-            "Could not fetch award event details:" + _.strErrorMsg,
-            _,
-          );
-        }
-        return null;
-      }
-      const _ = {
-          include_assets: !0,
-        },
-        _ = {
-          include_basic_info: !0,
-        };
       function _(_) {
-        const { event: _, previewMode: _ } = _,
-          [_] = (0, _._)(() => [_.GetSteamAwardCategory()]),
-          _ = (0, _._)("EventDisplaySteamAwardNomination"),
-          _ = (0, _._)(),
-          [_] = (0, _._)(_.appid, _),
-          [_, _] = (0, _.useState)(null),
-          { currentNomination: _, bLoadingNominationForCategory: _ } = (0, _._)(
-            _,
-          );
-        if (
-          ((0, _.useEffect)(() => {
-            _([_], _).then((_) => {
-              _(_);
-            });
-          }, [_, _]),
-          !_ || !_.rgAwardCategoryDetails?.length || _)
-        )
-          return (0, _.jsx)(_._, {
-            className: _().SteamAwardContainer,
-            size: "medium",
-            position: "center",
-            string: (0, _._)("#Loading"),
-          });
-        if (!_ && !_.bIsAutumnSaleActive) return null;
-        let _ = {};
-        _.strBackgroundCSS?.length && (_.backgroundColor = _.strBackgroundCSS),
-          _.strBackgroundImage?.length &&
-            (_.backgroundImage = `url( ${_.strBackgroundImage} )`),
-          _.strTextColor?.length && (_.color = _.strTextColor);
-        const _ = 1 == _.rgAwardCategoryDetails?.length,
-          _ =
-            _.BIsEventActionEnabled(_) ||
-            _ < _.GetStartTimeAndDateUnixSeconds(),
-          _ = new Date().getFullYear();
+        const {
+            strMainTitle: _,
+            subtitle: _,
+            headerText: _,
+            headerContent: _,
+            children: _,
+            footer: _,
+          } = _,
+          _ = {
+            backgroundColor: "#173471",
+            backgroundImage: `url( ${_("header_notrophy.webp")} )`,
+            color: "#FFFFFF",
+          };
         return (0, _.jsxs)("div", {
           style: _,
           className: (0, _._)(_().SteamAwardContainer, _().PartnerEventFont),
@@ -97758,115 +96958,269 @@
               children: [
                 (0, _.jsx)("img", {
                   className: _().SteamAwardHeaderImage,
-                  src: `${_.strTrophyImg}`,
+                  src: _("trophy_220.png?v=1"),
+                  alt: "",
                 }),
                 (0, _.jsxs)("div", {
                   className: _().SteamAwardMainCtn,
                   children: [
                     (0, _.jsx)("div", {
                       className: _().SteamAwardMainTitle,
-                      children: (0, _._)("#SteamAwards_EventMainTitle"),
+                      children: _,
                     }),
-                    (0, _.jsxs)("div", {
-                      className: _().SteamAwardSubTitle,
-                      children: [
-                        _
-                          ? (0, _._)("#SteamAwards_EventCallToAction")
-                          : (0, _._)("#SteamAwards_EventVotingDateTeaser", _),
-                        _ &&
-                          (0, _.jsxs)("a", {
-                            href: (0, _._)(
-                              _._.STORE_BASE_URL + "steamawards/nominations/",
-                            ),
-                            className: _().SteamAwardLearnMore,
-                            children: [
-                              "(",
-                              (0, _._)("#EventDisplay_CallToAction_LearnMore"),
-                              ")",
-                            ],
-                          }),
-                      ],
-                    }),
+                    _,
                     (0, _.jsx)("div", {
                       className: _().SteamAwardHeaderText,
-                      children: _
-                        ? _
-                          ? (0, _._)(
-                              "#SteamAwards_EventNominateGamePrompt_Long",
-                              _?.GetName(),
-                            )
-                          : (0, _.jsx)("a", {
-                              className: _().LinkText,
-                              href: (0, _._)(
-                                _._.STORE_BASE_URL + "steamawards/nominations/",
-                              ),
-                              children: (0, _._)(
-                                "#SteamAwards_EventNominateGamePrompt_NoCategory",
-                                _?.GetName(),
-                              ),
-                            })
-                        : (0, _._)("#SteamAwards_Event_NominationsClosed"),
+                      children: _,
                     }),
+                    _,
                   ],
                 }),
               ],
             }),
-            (0, _.jsx)(_, {
-              event: _,
-              nominationEventDetails: _,
-              currentNomination: _,
-            }),
+            _,
+            Boolean(_) &&
+              (0, _.jsx)("div", {
+                className: _().SteamAwardLinkToNominationPage,
+                children: _,
+              }),
           ],
         });
       }
       function _(_) {
-        const { event: _, nominationEventDetails: _, currentNomination: _ } = _,
-          [_, _] = (0, _._)(() => [_.GetSteamAwardCategory(), _.appid]),
-          _ = (0, _._)(),
-          _ = _?.appid,
-          _ = (0, _._)(_, _, _._._),
-          _ = Boolean(_?.appid == _ && _?.category_id == _),
-          _ = (0, _.useCallback)(
-            async (_) => {
-              if (!_)
-                return void console.log(
-                  "EventDisplaySteamAwardNomination: ignore turning off the checkbox",
-                );
-              if (!_(!1))
-                return void console.log(
-                  "EventDisplaySteamAwardNomination: UserEligibleToNominateOrVote failed",
-                );
-              _ && _ != _
-                ? (0, _._)(
-                    (0, _.jsx)(_, {
-                      strLocTokenInfix: "Nomination",
-                      newAppID: _,
-                      curNominatedAppID: _,
-                      fnOnConfirm: _.mutate,
-                    }),
-                    window,
-                  )
-                : _.mutate();
-            },
-            [_, _, _],
+        return `${_._.STORE_BASE_URL}steamawards/${_ ? "nominations/" : ""}`;
+      }
+      function _() {
+        return (0, _.jsx)(_._, {
+          className: _().SteamAwardContainer,
+          size: "medium",
+          position: "center",
+          string: _._.Localize("#Loading"),
+        });
+      }
+      function _(_) {
+        const { elDialogElement: _, fnShowLogonDialog: _ } = (0, _._)(),
+          [_, _, _] = (0, _._)();
+        return {
+          elDialogElement: (0, _.jsxs)(_.Fragment, {
+            children: [
+              _,
+              (0, _.jsx)(_._, {
+                active: _,
+                children: (0, _.jsx)(_, {
+                  bVote: _,
+                  closeModal: _,
+                }),
+              }),
+            ],
+          }),
+          BCanTakeAction: () =>
+            _._.logged_in
+              ? !_._.is_limited || (_(), !1)
+              : (__webpack_require__(), !1),
+        };
+      }
+      function _(_) {
+        const { bVote: _, closeModal: _ } = _;
+        return (0, _.jsx)(_._, {
+          strTitle: _._.Localize("#Informational_Message"),
+          onCancel: _,
+          onOK: _,
+          bAlertDialog: !0,
+          children: (0, _.jsx)("div", {
+            children: _._.LocalizeReact(
+              _
+                ? "#SteamAward_Vote_LimitedAccount"
+                : "#SteamAward_Nominate_LimitedAccount",
+              (0, _.jsx)("a", {
+                href: `${_._.HELP_BASE_URL}wizard/HelpWithLimitedAccount`,
+                target: _._.IN_CLIENT ? void 0 : "_blank",
+                rel: "noreferrer",
+                children: _._.Localize("#User_LimitedAccount_UrlInfo"),
+              }),
+            ),
+          }),
+        });
+      }
+      function _(_) {
+        const {
+            strLocTokenInfix: _,
+            unCurrentAppID: _,
+            unNewAppID: _,
+            fnOnConfirm: _,
+            closeModal: _,
+          } = _,
+          { data: _ } = (0, _._)({
+            appid: _,
+          }),
+          { data: _ } = (0, _._)({
+            appid: _,
+          }),
+          { data: _ } = (0, _._)({
+            appid: _,
+          }),
+          { data: _ } = (0, _._)({
+            appid: _,
+          }),
+          _ = _ ? (0, _._)(_, "small_capsule") : void 0,
+          _ = _ ? (0, _._)(_, "small_capsule") : void 0;
+        return (0, _.jsx)(_._, {
+          modalClassName: _().SteamAwardConflictModal,
+          strTitle: _._.Localize(
+            "Vote" == _
+              ? "#SteamAward_VoteConflictWarning_Title"
+              : "#SteamAward_NominationConflictWarning_Title",
           ),
-          _ = 1 == _.rgAwardCategoryDetails?.length,
-          _ =
-            _.BIsEventActionEnabled(_) ||
-            _ < _.GetStartTimeAndDateUnixSeconds();
-        return _ && (_ || _)
-          ? (0, _.jsxs)("div", {
-              className: (0, _._)(
-                _().SteamAwardNominationWidget,
-                _().SteamAwardVoteWidget,
+          closeModal: _,
+          onOK: _,
+          onCancel: _,
+          children: (0, _.jsxs)("div", {
+            className: _().ConflictBody,
+            children: [
+              _._.LocalizeReact(
+                "Vote" == _
+                  ? "#SteamAward_VoteConflictWarning_Explanation"
+                  : "#SteamAward_NominationConflictWarning_Explanation",
+                (0, _.jsx)("span", {
+                  className: _().SteamAwardModalGameTitle,
+                  children: _?.name,
+                }),
+                (0, _.jsx)("span", {
+                  className: _().SteamAwardModalGameTitle,
+                  children: _?.name,
+                }),
               ),
-              children: [
-                (0, _.jsxs)("div", {
+              _ && _
+                ? (0, _.jsxs)("div", {
+                    className: _().NominationSwitchCtn,
+                    children: [
+                      (0, _.jsx)("img", {
+                        src: _,
+                        alt: "",
+                      }),
+                      "→",
+                      (0, _.jsx)("img", {
+                        src: _,
+                        alt: "",
+                      }),
+                    ],
+                  })
+                : (0, _.jsx)(_._, {
+                    size: "small",
+                    position: "center",
+                    string: _._.Localize("#Loading"),
+                  }),
+            ],
+          }),
+        });
+      }
+      function _(_) {
+        const { unAppID: _, widget: _, actions: _, bNominationsOpen: _ } = _,
+          _ = _.rgCategories[0],
+          { data: _ } = (0, _._)({
+            appid: _,
+          }),
+          {
+            unNominatedAppID: _,
+            bAnswered: _,
+            Nominate: _,
+          } = (function (_, _) {
+            const _ = (0, _._)(),
+              _ = ["SteamAwards.GetUserNominations", _._.accountid],
+              { data: _ } = (0, _._)({
+                queryKey: _,
+                queryFn: async () => await _.GetMySteamAwardNominations(),
+                enabled: Boolean(_._.accountid),
+              }),
+              { mutate: _ } = (0, _._)({
+                mutationFn: async (_) => {
+                  const _ = await _.NominateForSteamAward(_, _);
+                  if (_ != _._)
+                    throw new Error(`SteamAwards.Nominate failed with ${_}`);
+                },
+                onMutate: (_) =>
+                  __webpack_require__.setQueryData(_, (_) => [
+                    ...(_ ?? []).filter((_) => _.category_id != _),
+                    {
+                      category_id: _,
+                      appid: _,
+                    },
+                  ]),
+                onError: () =>
+                  __webpack_require__.invalidateQueries({
+                    queryKey: _,
+                  }),
+              });
+            return {
+              unNominatedAppID: _?.find((_) => _.category_id == _)?.appid,
+              bAnswered: null != _ || !_._.accountid,
+              Nominate: _,
+            };
+          })(_.eCategoryID, _),
+          { elDialogElement: _, BCanTakeAction: _ } = _(!1),
+          [_, _, _] = (0, _._)();
+        if (!_.bNominationsLive) return null;
+        if (!_) return (0, _.jsx)(_, {});
+        const _ = (0, _._)(_(!0)),
+          _ = _ == _,
+          _ = 1 == _.rgCategories.length,
+          _ = _ && !_.bLaborOfLove;
+        return (0, _.jsxs)(_, {
+          strMainTitle: _._.Localize("#SteamAwards_EventMainTitle"),
+          subtitle: (0, _.jsxs)("div", {
+            className: _().SteamAwardSubTitle,
+            children: [
+              _
+                ? _._.Localize("#SteamAwards_EventCallToAction")
+                : _._.Localize("#SteamAwards_EventVotingDateTeaser", 2025),
+              _ &&
+                (0, _.jsxs)("a", {
+                  href: _,
+                  className: _().SteamAwardLearnMore,
+                  children: [
+                    "(",
+                    _._.Localize("#EventDisplay_CallToAction_LearnMore"),
+                    ")",
+                  ],
+                }),
+            ],
+          }),
+          headerText: _
+            ? _
+              ? _._.Localize(
+                  "#SteamAwards_EventNominateGamePrompt_Long",
+                  _?.name ?? "",
+                )
+              : (0, _.jsx)("a", {
+                  className: _().LinkText,
+                  href: _,
+                  children: _._.Localize(
+                    "#SteamAwards_EventNominateGamePrompt_NoCategory",
+                    _?.name ?? "",
+                  ),
+                })
+            : _._.Localize("#SteamAwards_Event_NominationsClosed"),
+          footer:
+            _ &&
+            (0, _.jsx)("a", {
+              href: _,
+              children: _._.Localize(
+                "#SteamAwards_EventNominationAlternativeLinkText",
+              ),
+            }),
+          children: [
+            Boolean(_ && (_ || _)) &&
+              (0, _.jsx)("div", {
+                className: (0, _._)(
+                  _().SteamAwardNominationWidget,
+                  _().SteamAwardVoteWidget,
+                ),
+                children: (0, _.jsxs)("div", {
                   className: _().NominateCtn,
                   children: [
                     (0, _.jsx)("div", {
                       style: {
-                        background: _?.strNominateButtonBGColor,
+                        background: _,
                       },
                       className: (0, _._)(
                         _().SteamAwardNominateButton,
@@ -97879,440 +97233,262 @@
                           _ && _().Nominated,
                         ),
                         checked: _,
-                        onChange: _,
+                        onChange: (_) => {
+                          _ && _() && (_ && _ != _ ? _() : _(_));
+                        },
                         disabled: _,
                         color: "#FFFFFF",
                         highlightColor: "white",
-                        label: (0, _.jsx)(_.Fragment, {
-                          children: (0, _.jsx)("div", {
-                            className: _().SteamAwardCategoryTitle,
-                            children: _
-                              ? (0, _._)(
-                                  "#SteamAwards_NominateWidget_CTA_PastTense",
-                                  _.rgAwardCategoryDetails[0]
-                                    .strSuggestedCategoryTitle,
-                                )
-                              : (0, _._)(
-                                  "#SteamAwards_NominateWidget_CTA",
-                                  _.rgAwardCategoryDetails[0]
-                                    .strSuggestedCategoryTitle,
-                                ),
-                          }),
+                        label: (0, _.jsx)("div", {
+                          className: _().SteamAwardCategoryTitle,
+                          children: _._.Localize(
+                            _
+                              ? "#SteamAwards_NominateWidget_CTA_PastTense"
+                              : "#SteamAwards_NominateWidget_CTA",
+                            _.strTitle,
+                          ),
                         }),
                       }),
                     }),
                     (0, _.jsx)("div", {
                       className: _().SteamAwardCategoryDesc,
-                      children:
-                        _.rgAwardCategoryDetails[0].strSuggestedCategoryDesc,
+                      children: _.strDescription,
                     }),
                   ],
                 }),
-                Boolean(_ && _ != _.eLaborOfLove) &&
-                  (0, _.jsx)("div", {
-                    className: _().SteamAwardLinkToNominationPage,
-                    children: (0, _.jsx)("a", {
-                      href: (0, _._)(
-                        _._.STORE_BASE_URL + "steamawards/nominations/",
-                      ),
-                      children: (0, _._)(
-                        "#SteamAwards_EventNominationAlternativeLinkText",
-                      ),
-                    }),
-                  }),
-              ],
-            })
-          : null;
+              }),
+            _,
+            (0, _.jsx)(_._, {
+              active: _,
+              children: (0, _.jsx)(_, {
+                strLocTokenInfix: "Nomination",
+                unCurrentAppID: _,
+                unNewAppID: _,
+                fnOnConfirm: () => _(_),
+                closeModal: _,
+              }),
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
-            curNominatedAppID: _,
-            newAppID: _,
-            strLocTokenInfix: _,
-            fnOnConfirm: _,
-            fnOnCancel: _,
-            closeModal: _,
+            unAppID: _,
+            widget: _,
+            actions: _,
+            bVotesOpen: _,
+            bHideCategoryDescriptions: _,
           } = _,
-          [_] = (0, _._)(_, _),
-          [_] = (0, _._)(_, _);
-        return (0, _.jsx)(_._, {
-          modalClassName: _().SteamAwardConflictModal,
-          strTitle: (0, _._)(`#SteamAward_${_}ConflictWarning_Title`),
-          closeModal: _,
-          onOK: _,
-          onCancel: _,
-          children: (0, _.jsxs)("div", {
-            className: _().ConflictBody,
-            children: [
-              (0, _._)(
-                `#SteamAward_${_.strLocTokenInfix}ConflictWarning_Explanation`,
-                (0, _.jsx)("span", {
-                  className: _().SteamAwardModalGameTitle,
-                  children: _?.GetName(),
-                }),
-                (0, _.jsx)("span", {
-                  className: _().SteamAwardModalGameTitle,
-                  children: _?.GetName(),
-                }),
+          { data: _ } = (0, _._)({
+            appid: _,
+          }),
+          _ = (0, _._)(_(!1));
+        return (0, _.jsx)(_, {
+          strMainTitle: _._.Localize("#SteamAwards_EventMainTitleCombined"),
+          headerText: _
+            ? _._.Localize("#SteamAwards_EventVoteForGamePrompt", _?.name ?? "")
+            : (0, _.jsx)("a", {
+                href: _,
+                className: _().LinkText,
+                children: _._.Localize("#SteamAwards_Event_VotesClosed"),
+              }),
+          headerContent: (0, _.jsx)("div", {
+            className: _().AwardCategoriesCtn,
+            children: _.rgCategories.map((_) =>
+              (0, _.jsx)(
+                _,
+                {
+                  unAppID: _,
+                  category: _,
+                  actions: _,
+                  bVotesOpen: _,
+                  bHideDescription: _,
+                },
+                _.eCategoryID,
               ),
-              Boolean(!_ || !_)
-                ? (0, _.jsx)(_._, {
-                    size: "small",
-                    position: "center",
-                    string: (0, _._)("#Loading"),
-                  })
-                : (0, _.jsxs)("div", {
-                    className: _().NominationSwitchCtn,
-                    children: [
-                      (0, _.jsx)("img", {
-                        src: _.GetAssets().GetSmallCapsuleURL(),
-                      }),
-                      "→",
-                      (0, _.jsx)("img", {
-                        src: _.GetAssets().GetSmallCapsuleURL(),
-                      }),
-                    ],
-                  }),
-            ],
+            ),
+          }),
+          footer: (0, _.jsx)("a", {
+            href: _,
+            children: _._.Localize("#EventDisplay_CallToAction_LearnMore"),
           }),
         });
       }
-      let _ = class extends _.Component {
-        constructor(_) {
-          super(_), (0, _._)(this);
-        }
-        state = {
-          eCategoryLoaded: null,
-          votedForAppID: null,
-        };
-        m_strPreviousVotedForAppTitle = null;
-        m_cancelSignal = _().CancelToken.source();
-        componentDidMount() {
-          this.FetchVoteState();
-        }
-        componentDidUpdate() {
-          this.props.eVoteCategory != this.state.eCategoryLoaded &&
-            this.FetchVoteState();
-        }
-        componentWillUnmount() {
-          this.m_cancelSignal.cancel(
-            "EventDisplaySteamAwardVote is being unmounted",
-          );
-        }
-        async FetchVoteState() {
-          const _ = _._.STORE_BASE_URL + "steamawards/ajaxgetuservotes";
-          if (_._.logged_in)
-            try {
-              const _ = await _().get(_, {
-                withCredentials: !0,
-                cancelToken: this.m_cancelSignal.token,
-              });
-              if (this.m_cancelSignal.token.reason) return;
-              _?.data?.success == _._ &&
-                _.data.votes &&
-                this.UpdateVoteState(_.data.votes);
-            } catch (_) {
-              const _ = (0, _._)(_);
-              console.error(
-                "Could not fetch previous votes:" + _.strErrorMsg,
-                _,
-              );
-            }
-          else this.UpdateVoteState([]);
-        }
-        async UpdateVoteState(_) {
-          const _ = this.props.eVoteCategory,
-            _ = _[_];
-          if (
-            (this.setState({
-              eCategoryLoaded: _,
-              votedForAppID: _,
-            }),
-            _ && _ != this.props.appID)
-          ) {
-            if (
-              (await _._.Get().QueueAppRequest(_, {}),
-              this.m_cancelSignal.token.reason)
-            )
-              return;
-            this.props.eVoteCategory == _ &&
-              (this.m_strPreviousVotedForAppTitle = _._.Get()
-                .GetApp(_)
-                ?.GetName());
-          }
-        }
-        async OnVoteClick() {
-          const _ = this.props.eVoteCategory;
-          if (_ != this.state.eCategoryLoaded) return;
-          if (!_(!0)) return;
-          const _ = this.props.appID;
-          this.state.votedForAppID && this.state.votedForAppID != _
-            ? this.HandleConflict(() => this.SaveVote(_, _))
-            : this.SaveVote(_, _);
-        }
-        HandleConflict(_) {
-          const _ = _._.Get().GetApp(this.props.appID);
-          (0, _._)(
-            (0, _.jsx)(_, {
-              strLocTokenInfix: "Vote",
-              newAppID: _?.GetAppID(),
-              curNominatedAppID: this.state.votedForAppID,
-              fnOnConfirm: _,
-              fnOnCancel: () => {},
-            }),
-            window,
-          );
-        }
-        async SaveVote(_, _) {
-          if (
-            (this.setState({
-              eCategoryLoaded: _,
-              votedForAppID: _,
-            }),
-            this.props.previewMode && _._.EUNIVERSE == _.wLO)
-          )
-            return;
-          const _ = _._.STORE_BASE_URL + "steamawards/ajaxvoteforgame",
-            _ = new URLSearchParams();
-          _.append("sessionid", (0, _._)()),
-            _.append("categoryid", _.toString()),
-            _.append("appid", _.toString());
-          try {
-            const _ = await _().post(_, _, {
-              withCredentials: !0,
-              cancelToken: this.m_cancelSignal.token,
-            });
-            if (this.m_cancelSignal.token.reason) return;
-            (_ && 200 == _.status && _.data.success == _._) ||
-              console.error("Vote request failed.", _ && (0, _._)(_));
-          } catch (_) {
-            const _ = (0, _._)(_);
-            console.error("SaveVote failed: " + _.strErrorMsg, _);
-          }
-        }
-        render() {
-          const _ = this.props.eVoteCategory,
-            _ =
-              this.state.eCategoryLoaded == _ &&
-              this.state.votedForAppID == this.props.appID,
-            _ = this.props.bIsEventActionEnabled || this.props.previewMode || _;
-          let _ = {};
-          return (
-            this.props.strBackgroundColor.length &&
-              (_.backgroundColor = this.props.strBackgroundColor),
-            _
-              ? (0, _.jsx)("div", {
-                  style: _,
-                  className: (0, _._)(_().SteamAwardVoteWidget),
-                  children: (0, _.jsxs)("div", {
-                    className: _().SteamAwardVoteButtonArea,
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: (0, _._)(
-                          _().SteamAwardCategoryTitle,
-                          _().VotingTitle,
-                        ),
-                        children: this.props.strCategoryTitle,
-                      }),
-                      !this.props.bRenderFromStorePage &&
-                        (0, _.jsx)("div", {
-                          className: _().SteamAwardCategoryDesc,
-                          children: this.props.strCategoryDesc,
-                        }),
-                      _
-                        ? (0, _.jsx)("button", {
-                            className: _().SteamAwardVoteButtonSubmitted,
-                            children: (0, _.jsx)("span", {
-                              className: _().SteamAwardVoteButtonText,
-                              children: (0, _._)(
-                                "#SteamAward_VoteButton_VotedText",
-                              ),
-                            }),
-                          })
-                        : (0, _.jsx)("button", {
-                            className: _().SteamAwardVoteButton,
-                            onClick: this.OnVoteClick,
-                            children: (0, _.jsx)("span", {
-                              className: _().SteamAwardVoteButtonText,
-                              children: (0, _._)(
-                                "#SteamAward_VoteButton_PromptText",
-                              ),
-                            }),
-                          }),
-                    ],
-                  }),
-                })
-              : null
-          );
-        }
-      };
-      (0, _._)([_._], _.prototype, "m_strPreviousVotedForAppTitle", void 0),
-        (0, _._)([_._], _.prototype, "OnVoteClick", null),
-        (0, _._)([_._], _.prototype, "SaveVote", null),
-        (_ = (0, _._)([_._], _));
-      _.Component;
-      let _ = class extends _.Component {
-        m_cancelSignal = _().CancelToken.source();
-        m_awardEventDetails = null;
-        constructor(_) {
-          super(_),
-            (0, _._)(this),
-            (this.state = {
-              bAppInfoLoaded: !1,
-            });
-        }
-        componentDidMount() {
-          _._.Get()
-            .QueueAppRequest(this.props.appID, {})
-            .then(() => {
-              _._.Get().BHasApp(this.props.appID) &&
-                this.setState({
-                  bAppInfoLoaded: !0,
-                });
-            }),
-            _(this.props.voteCategories, this.m_cancelSignal).then((_) => {
-              this.m_awardEventDetails = _;
-            });
-        }
-        componentWillUnmount() {
-          this.m_cancelSignal.cancel(
-            "WinterSaleSteamAwardVoteWrapper is being unmounted",
-          );
-        }
-        GetNominatedAwardCategories() {
-          let _ = [];
-          return (
-            this.m_awardEventDetails.rgAwardCategoryDetails?.forEach((_) => {
-              _.push(
-                (0, _.jsx)(
-                  _,
-                  {
-                    eVoteCategory: _.eSteamAwardCategoryID,
-                    strCategoryDesc: _.strSuggestedCategoryDesc,
-                    strCategoryTitle: _.strSuggestedCategoryTitle,
-                    strBackgroundColor:
-                      this.m_awardEventDetails.strNominateButtonBGColor,
-                    ...this.props,
-                  },
-                  _.eSteamAwardCategoryID,
-                ),
-              );
-            }),
-            _
-          );
-        }
-        render() {
-          if (!this.state.bAppInfoLoaded || !this.props.voteCategories)
-            return null;
-          if (!this.m_awardEventDetails) return null;
-          let _ = {};
-          return (
-            this.m_awardEventDetails.strBackgroundCSS?.length &&
-              (_.backgroundColor = this.m_awardEventDetails.strBackgroundCSS),
-            this.m_awardEventDetails.strBackgroundImage?.length &&
-              (_.backgroundImage = `url( ${this.m_awardEventDetails.strBackgroundImage} )`),
-            this.m_awardEventDetails.strTextColor?.length &&
-              (_.color = this.m_awardEventDetails.strTextColor),
-            (0, _.jsxs)("div", {
-              style: _,
-              className: (0, _._)(
-                _().SteamAwardContainer,
-                _().PartnerEventFont,
-              ),
-              children: [
-                (0, _.jsxs)("div", {
-                  className: _().SteamAwardHeader,
-                  children: [
-                    (0, _.jsx)("img", {
-                      className: _().SteamAwardHeaderImage,
-                      src: this.m_awardEventDetails.strTrophyImg,
-                      role: "presentation",
-                    }),
-                    (0, _.jsxs)("div", {
-                      className: _().SteamAwardMainCtn,
-                      children: [
-                        (0, _.jsxs)("div", {
-                          className: _().SteamAwardMainTitle,
-                          children: [
-                            " ",
-                            (0, _._)("#SteamAwards_EventMainTitleCombined"),
-                            " ",
-                          ],
-                        }),
-                        (0, _.jsx)("div", {
-                          className: _().SteamAwardHeaderText,
-                          children: this.props.bIsEventActionEnabled
-                            ? (0, _.jsx)(_.Fragment, {
-                                children: (0, _._)(
-                                  "#SteamAwards_EventVoteForGamePrompt",
-                                  _._.Get().GetApp(this.props.appID)?.GetName(),
-                                ),
-                              })
-                            : (0, _.jsx)("a", {
-                                href: (0, _._)(
-                                  _._.STORE_BASE_URL + "steamawards/",
-                                ),
-                                className: _().LinkText,
-                                children: (0, _._)(
-                                  "#SteamAwards_Event_VotesClosed",
-                                ),
-                              }),
-                        }),
-                        (0, _.jsx)("div", {
-                          className: _().AwardCategoriesCtn,
-                          children: this.GetNominatedAwardCategories(),
-                        }),
-                      ],
-                    }),
-                  ],
-                }),
-                (0, _.jsx)("div", {
-                  className: _().SteamAwardLinkToNominationPage,
-                  children: (0, _.jsx)("a", {
-                    href: (0, _._)(_._.STORE_BASE_URL + "steamawards/"),
-                    children: (0, _._)("#EventDisplay_CallToAction_LearnMore"),
-                  }),
-                }),
-              ],
-            })
-          );
-        }
-      };
-      (0, _._)([_._], _.prototype, "m_awardEventDetails", void 0),
-        (_ = (0, _._)([_._], _));
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
       function _(_) {
-        const { _: _, event: _, dateRangeLayout: _ = "horizontal" } = _,
-          [_, _, _] = (0, _._)(() => [
-            __webpack_require__.GetStartTimeAndDateUnixSeconds(),
-            __webpack_require__.GetEndTimeAndDateUnixSeconds(),
-            _.type,
-          ]),
-          _ = {};
-        return (
-          "vertical" == _ && (_.ShortDateRange = _().VerticalLocalDateAndTime),
-          (0, _.jsx)("div", {
-            _: _,
-            className: _().EventDetailTimeInfo,
-            children: (0, _.jsx)(_._, {
-              startDateAndTime: _,
-              endDateAndTime: _,
-              bHideEndTime: !(0, _._)(_),
-              stylesmodule: _,
+        const {
+            unAppID: _,
+            category: _,
+            actions: _,
+            bVotesOpen: _,
+            bHideDescription: _,
+          } = _,
+          { unVotedAppID: _, bAnswered: _, Vote: _ } = _(_.eCategoryID, _),
+          { elDialogElement: _, BCanTakeAction: _ } = _(!0),
+          [_, _, _] = (0, _._)(),
+          _ = _ == _;
+        if (!_ && !_) return null;
+        return (0, _.jsxs)("div", {
+          style: {
+            backgroundColor: _,
+          },
+          className: _().SteamAwardVoteWidget,
+          children: [
+            (0, _.jsxs)("div", {
+              className: _().SteamAwardVoteButtonArea,
+              children: [
+                (0, _.jsx)("div", {
+                  className: (0, _._)(
+                    _().SteamAwardCategoryTitle,
+                    _().VotingTitle,
+                  ),
+                  children: _.strTitle,
+                }),
+                !_ &&
+                  (0, _.jsx)("div", {
+                    className: _().SteamAwardCategoryDesc,
+                    children: _.strDescription,
+                  }),
+                _
+                  ? (0, _.jsx)("button", {
+                      className: _().SteamAwardVoteButtonSubmitted,
+                      children: (0, _.jsx)("span", {
+                        className: _().SteamAwardVoteButtonText,
+                        children: _._.Localize(
+                          "#SteamAward_VoteButton_VotedText",
+                        ),
+                      }),
+                    })
+                  : (0, _.jsx)("button", {
+                      className: _().SteamAwardVoteButton,
+                      onClick: () => {
+                        _ && _() && (_ && _ != _ ? _() : _(_));
+                      },
+                      children: (0, _.jsx)("span", {
+                        className: _().SteamAwardVoteButtonText,
+                        children: _._.Localize(
+                          "#SteamAward_VoteButton_PromptText",
+                        ),
+                      }),
+                    }),
+              ],
             }),
-          })
-        );
+            _,
+            (0, _.jsx)(_._, {
+              active: _,
+              children: (0, _.jsx)(_, {
+                strLocTokenInfix: "Vote",
+                unCurrentAppID: _,
+                unNewAppID: _,
+                fnOnConfirm: () => _(_),
+                closeModal: _,
+              }),
+            }),
+          ],
+        });
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const _ = (0, _._)();
+        return (0, _.useMemo)(
+          () => ({
+            GetMySteamAwardNominations: () => (0, _._)(_),
+            NominateForSteamAward: async (_, _) => {
+              if (_) return _._;
+              const [_] = await (0, _._)(_, _, _, _._._);
+              return _;
+            },
+            GetMySteamAwardVotes: () => (0, _._)(_, _),
+            SetSteamAwardVote: async (_, _) => {
+              if (_) return _._;
+              const [_] = await (0, _._)(_, _, _, _);
+              return _;
+            },
+          }),
+          [_, _],
+        );
+      }
+      const _ = [];
+      function _(_, _, _) {
+        const _ = _.some(_) || _.some(_),
+          _ = (0, _._)(_ ? _ : void 0);
+        return _
+          ? _.data
+            ? {
+                widgets: _(_.data.votes ?? [], _, _, _),
+                bLoading: !1,
+              }
+            : {
+                bLoading: !0,
+              }
+          : {
+              bLoading: !1,
+            };
+      }
+      function _(_) {
+        return Boolean(_) && _._.EUNIVERSE == _.wLO;
+      }
+      function _(_) {
+        const { event: _, previewMode: _ } = _,
+          [_, _] = (0, _._)(() => [_.GetSteamAwardCategory(), _.appid]),
+          _ = (0, _._)(),
+          { widgets: _, bLoading: _ } = _([_], _, _),
+          _ = _(_(_));
+        if (_) return (0, _.jsx)(_, {});
+        if (!_?.nomination) return null;
+        const _ =
+          _.BIsEventActionEnabled(_) || _ < _.GetStartTimeAndDateUnixSeconds();
+        return (0, _.jsx)(_, {
+          unAppID: _,
+          actions: _,
+          widget:
+            ((_ = _.nomination),
+            (_ = Boolean(_)),
+            _
+              ? {
+                  ..._,
+                  bNominationsLive: !0,
+                }
+              : _),
+          bNominationsOpen: _,
+        });
+        var _, _;
+      }
+      function _(_) {
+        const {
+            appID: _,
+            voteCategories: _,
+            bIsEventActionEnabled: _,
+            previewMode: _,
+            bRenderFromStorePage: _,
+          } = _,
+          _ = (0, _._)(),
+          { widgets: _, bLoading: _ } = _(_, _ ?? _, _),
+          _ = _(_(_));
+        return _
+          ? (0, _.jsx)(_, {})
+          : _?.vote
+            ? (0, _.jsx)(_, {
+                unAppID: _,
+                widget: _.vote,
+                actions: _,
+                bVotesOpen: _ || Boolean(_),
+                bHideCategoryDescriptions: _,
+              })
+            : null;
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -98469,8 +97645,8 @@
             _._.COUNTRY +
             "&l=" +
             _._.LANGUAGE,
-          _ = _._.Get().GetPartnerEventPermissions(_._.InitFromClanID(_)),
-          _ = _ && (_.can_edit || _.support_user),
+          { data: _ } = (0, _._)(_),
+          _ = Boolean(_?.can_edit || _?.support_user),
           _ = _._.Get().BOwnsApp(_),
           _ = (0, _.useMemo)(() => {
             const _ = [];
@@ -98600,7 +97776,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         const { event: _ } = _,
@@ -98635,6 +97810,7 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { children: _ } = _;
@@ -98651,7 +97827,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
@@ -98856,9 +98031,11 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.lazy(() =>
-        __webpack_require__
-          ._("chunkid")
-          .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        Promise.all([
+          __webpack_require__._("chunkid"),
+          __webpack_require__._("chunkid"),
+          __webpack_require__._("chunkid"),
+        ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
       );
       function _(_) {
         const [_, _] = (0, _._)(_.appid, {
@@ -99239,13 +98416,15 @@
             [_, _] = (0, _._)(_.event.appid, {
               include_assets: !0,
             }),
-            _ = (0, _._)(_.event.appid);
+            _ = (0, _._)(_.event.appid),
+            _ = (0, _._)();
           return (0, _.jsx)(_, {
             ref: _,
             ..._,
             bInGamepadUI: _,
             bShouldMaskImages: _,
             storeItem: _,
+            tracker: _,
           });
         });
       let _ = class extends _.Component {
@@ -99255,7 +98434,7 @@
         OnEnterVisible() {
           if (this.m_bSentRead || this.m_sendReadInfo.IsScheduled()) return;
           this.m_sendReadInfo.Schedule(750, () => {
-            _._.Get().RecordEventRead(this.props.event, _._._),
+            this.props.tracker.RecordEventRead(this.props.event, _._._),
               (this.m_bSentRead = !0);
           });
         }
@@ -99337,6 +98516,7 @@
                               }),
                               (0, _.jsx)(_, {
                                 event: _,
+                                className: _().EventDetailTimeInfo,
                               }),
                             ],
                           }),
@@ -100616,9 +99796,7 @@
           __webpack_require__("chunkid"),
           __webpack_require__("chunkid"));
       _.createContext({});
-      __webpack_require__("chunkid"),
-        __webpack_require__("chunkid"),
-        __webpack_require__("chunkid");
+      __webpack_require__("chunkid"), __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid");
       _.createContext({
         showDiscoveryQueue: (_) =>
@@ -100757,13 +99935,7 @@
         }
         static s_Singleton;
         static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-                (window.g_PersonalizedCarouselStore = _.s_Singleton)),
-            _.s_Singleton
-          );
+          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
         }
       }
       (0, _._)([_._], _.prototype, "m_mapLoadedData", void 0);
@@ -100951,67 +100123,6 @@
             ? (0, _._)(_.default_subtitle)
             : "")
         );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { gidEvent: _ } = _,
-          _ = (0, _._)(_);
-        return _
-          ? (0, _.jsx)(_, {
-              event: _,
-              lang: (0, _.sfN)(_._.LANGUAGE),
-              href: (0, _._)((0, _._)(_) ?? ""),
-            })
-          : null;
-      }
-      function _(_) {
-        const { event: _, lang: _, href: _ } = _,
-          [_, _] = (0, _.useMemo)(() => {
-            const _ = _.jsondata.localized_sale_product_banner,
-              _ = _.jsondata.localized_sale_product_mobile_banner;
-            if (_?.length && _?.length) {
-              const _ = _._.GetWithFallback(_, _),
-                _ = _._.GetWithFallback(_, _);
-              if (_?.length && _?.length)
-                return [
-                  _._.GenerateURLFromHashAndExt(_.clanSteamID, _),
-                  _._.GenerateURLFromHashAndExt(_.clanSteamID, _),
-                ];
-            }
-            return [void 0, void 0];
-          }, [_, _]);
-        return _?.length && _?.length
-          ? (0, _.jsxs)("a", {
-              href: _,
-              className: _.Link,
-              children: [
-                (0, _.jsx)("img", {
-                  src: _,
-                  className: (0, _._)(_.Banner, _.Big),
-                }),
-                (0, _.jsx)("img", {
-                  src: _,
-                  className: (0, _._)(_.Banner, _.Mobile),
-                }),
-              ],
-            })
-          : null;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -101286,8 +100397,11 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
@@ -101478,10 +100592,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = "capsule_index_";

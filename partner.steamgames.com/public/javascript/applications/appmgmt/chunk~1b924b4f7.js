@@ -74,7 +74,7 @@
         m = t(7929),
         f = t(96434),
         _ = t.n(f),
-        D = t(14336);
+        D = t(44419);
       let x = null;
       function C(e) {
         const { packageID: n, strPriceKey: t } = e,
@@ -827,7 +827,7 @@
         (i.italian = () => t.e(1724).then(t.t.bind(t, 1724, 19))),
         (i.japanese = () => t.e(4731).then(t.t.bind(t, 34731, 19))),
         (i.koreana = () => t.e(4219).then(t.t.bind(t, 14219, 19))),
-        (i.latam = () => t.e(3059).then(t.t.bind(t, 5440, 19))),
+        (i.latam = () => t.e(3059).then(t.t.bind(t, 83059, 19))),
         (i.malay = () => t.e(7036).then(t.t.bind(t, 57036, 19))),
         (i.norwegian = () => t.e(2220).then(t.t.bind(t, 62220, 19))),
         (i.polish = () => t.e(5501).then(t.t.bind(t, 35501, 19))),

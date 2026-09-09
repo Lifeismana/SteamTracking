@@ -123,6 +123,14 @@ message CWishlist_RemoveWishlistItemCategory_Request {
 message CWishlist_RemoveWishlistItemCategory_Response {
 }
 
+message CWishlist_RenameWishlistCategory_Request {
+	optional uint64 categoryid = 1;
+	optional string name = 2;
+}
+
+message CWishlist_RenameWishlistCategory_Response {
+}
+
 message CWishlist_SetWishlistCategoryNotifications_Request {
 	repeated .CWishlist_SetWishlistCategoryNotifications_Request_CategorySettings categories = 1;
 }
@@ -133,6 +141,19 @@ message CWishlist_SetWishlistCategoryNotifications_Request_CategorySettings {
 }
 
 message CWishlist_SetWishlistCategoryNotifications_Response {
+}
+
+message CWishlist_SetWishlistItemCategoryBulk_Request {
+	repeated uint32 appids = 1;
+	optional uint64 categoryid = 2;
+	optional string category_name = 3;
+	optional bool remove = 4;
+}
+
+message CWishlist_SetWishlistItemCategoryBulk_Response {
+	optional .CWishlistCategory category = 1;
+	repeated uint32 appids_updated = 2;
+	repeated uint32 appids_failed = 3;
 }
 
 message CWishlistCategory {
@@ -194,6 +215,10 @@ service Wishlist {
 	// ePrivilege=1
 	rpc RemoveWishlistItemCategory (.CWishlist_RemoveWishlistItemCategory_Request) returns (.CWishlist_RemoveWishlistItemCategory_Response);
 	// ePrivilege=1
+	rpc RenameWishlistCategory (.CWishlist_RenameWishlistCategory_Request) returns (.CWishlist_RenameWishlistCategory_Response);
+	// ePrivilege=1
 	rpc SetWishlistCategoryNotifications (.CWishlist_SetWishlistCategoryNotifications_Request) returns (.CWishlist_SetWishlistCategoryNotifications_Response);
+	// ePrivilege=1
+	rpc SetWishlistItemCategoryBulk (.CWishlist_SetWishlistItemCategoryBulk_Request) returns (.CWishlist_SetWishlistItemCategoryBulk_Response);
 }
 

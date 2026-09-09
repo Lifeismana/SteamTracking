@@ -240,6 +240,19 @@ message CPlayer_GetGameBadgeLevels_Response_Badge {
 	optional uint32 border_color = 3;
 }
 
+message CPlayer_GetGlobalAchievementPercentages_Request {
+	optional uint32 appid = 1;
+}
+
+message CPlayer_GetGlobalAchievementPercentages_Response {
+	repeated .CPlayer_GetGlobalAchievementPercentages_Response_Achievement achievements = 1;
+}
+
+message CPlayer_GetGlobalAchievementPercentages_Response_Achievement {
+	optional uint32 internal_key = 1;
+	optional float player_percent_unlocked = 2;
+}
+
 message CPlayer_GetLastPlayedTimes_Request {
 	optional uint32 min_last_played = 1;
 }
@@ -931,6 +944,8 @@ service Player {
 	rpc GetGameAchievements (.CPlayer_GetGameAchievements_Request) returns (.CPlayer_GetGameAchievements_Response);
 	// bConstMethod=true, ePrivilege=1
 	rpc GetGameBadgeLevels (.CPlayer_GetGameBadgeLevels_Request) returns (.CPlayer_GetGameBadgeLevels_Response);
+	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1
+	rpc GetGlobalAchievementPercentages (.CPlayer_GetGlobalAchievementPercentages_Request) returns (.CPlayer_GetGlobalAchievementPercentages_Response);
 	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1
 	rpc GetMiniProfileBackground (.CPlayer_GetMiniProfileBackground_Request) returns (.CPlayer_GetMiniProfileBackground_Response);
 	// bConstMethod=true, ePrivilege=1

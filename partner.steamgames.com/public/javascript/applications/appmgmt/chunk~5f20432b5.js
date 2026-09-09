@@ -7,7 +7,7 @@
   {
     72839: (e, t, s) => {
       s.d(t, { Bn: () => l, hS: () => r, rV: () => n });
-      var a = s(6824),
+      var a = s(30570),
         i = s(78327);
       s(38516);
       function n(e, t) {
@@ -34,7 +34,7 @@
         l = s(56545),
         o = s(96059),
         u = s(59411),
-        c = s(6824),
+        c = s(30570),
         m = s(81393),
         d = s(68797),
         h = s(78327),
@@ -660,14 +660,7 @@
                           s.success() == n.R && !this.BIsStoreItemMissing(a, r);
                       if (o || u) this.ReadItem(s, t);
                       else {
-                        switch (
-                          ("dev" == h.TS.WEB_UNIVERSE &&
-                            console.warn(
-                              `Failed to load ${a} type ${r} with error ${s.success()}`,
-                              s,
-                            ),
-                          r)
-                        ) {
+                        switch (r) {
                           case c.c6.qI:
                             this.m_setUnavailableApps.add(a),
                               this.m_mapApps.delete(a);
@@ -952,6 +945,12 @@
         }
       }
       (0, a.Cg)([g.o], b.prototype, "ReadItem", null);
+    },
+    63340: (e, t, s) => {
+      function a(e, t) {
+        "undefined" != typeof window && (window[e] = t);
+      }
+      s.d(t, { V: () => a });
     },
   },
 ]);

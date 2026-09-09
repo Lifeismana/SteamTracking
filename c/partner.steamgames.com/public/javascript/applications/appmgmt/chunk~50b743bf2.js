@@ -55,6 +55,29 @@
         HitSlop: "_1tiFDvBjIAQRZDbVwz8k2u",
       };
     },
+    chunkid: (module) => {
+      module.exports = {
+        Box: "_2YzOLNBx6TonKU0Zmp20l4",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        Flex: "_3nHL7awgK1Qei1XivGvHMK",
+        Direction: "_3JCkAyd9cnB90tRcDLPp4W",
+        Justify: "_12ampOcrpRamy1y301kEaK",
+        Align: "_1SxQuUnaM-MXeF5UfssWve",
+        Gap: "ja5o2GZTopxfGJArsZgFh",
+        GapX: "_3KiTPfFvdkPH6ixij56nVM",
+        GapY: "_38cfDT7owcq-7PHlx-Bx2j",
+        Wrap: "dB7ipW28YN-_GytLR4EuE",
+        Inline: "LOeaKjPDMbdcAB54IFgyX",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        Reset: "_3A_c3YHYd4YIjA8Y-olnPl",
+      };
+    },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
@@ -1026,6 +1049,165 @@
             fill: "currentColor",
           }),
         });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { _: _ = "div", focusable: _, navProps: _, ref: _, ..._ } = _,
+          _ = (0, _._)(),
+          _ = (0, _._)(
+            {
+              ..._,
+              className: _()(_.Box, (0, _._)(), _.className),
+            },
+            _,
+          ),
+          _ = _ ?? _?.focusable ?? !!_.onClick,
+          _ = (0, _.jsx)(_, {
+            ref: _,
+            ..._,
+          });
+        return _ && (_ || _)
+          ? (0, _.jsx)(_._, {
+              ...(_ || {}),
+              focusable: _,
+              children: _,
+            })
+          : _;
+      }
+      const _ = _._;
+      function _(_) {
+        return (0, _._)(_, _._);
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { _: _ = "div", focusable: _, navProps: _, ref: _, ..._ } = _,
+          _ = (0, _._)(),
+          _ = (0, _._)(
+            {
+              ..._,
+              className: _()(_.className, _.Flex),
+            },
+            _,
+          ),
+          _ = _ ?? _?.focusable ?? !!_.onClick,
+          _ = (0, _.jsx)(_, {
+            ref: _,
+            ..._,
+          }),
+          _ = (0, _._)(_.direction ?? "row");
+        return _
+          ? (0, _.jsx)(_._, {
+              ...(_ || {}),
+              focusable: _,
+              "flow-children": _,
+              children: _,
+            })
+          : _;
+      }
+      const _ = [
+        ..._._,
+        {
+          prop: "direction",
+          responsive: !0,
+          className: _.Direction,
+          cssProperty: "--direction",
+        },
+        {
+          prop: "justify",
+          responsive: !0,
+          className: _.Justify,
+          cssProperty: (_) => ["--justify", _(_)],
+        },
+        {
+          prop: "align",
+          responsive: !0,
+          className: _.Align,
+          cssProperty: "--align",
+        },
+        {
+          prop: "gap",
+          responsive: !0,
+          className: _.Gap,
+          cssProperty: (_) => ["--gap", `var(--spacing-${_})`],
+        },
+        {
+          prop: "gapX",
+          responsive: !0,
+          className: _.GapX,
+          cssProperty: (_) => ["--gap-x", `var(--spacing-${_})`],
+        },
+        {
+          prop: "gapY",
+          responsive: !0,
+          className: _.GapY,
+          cssProperty: (_) => ["--gap-y", `var(--spacing-${_})`],
+        },
+        {
+          prop: "wrap",
+          responsive: !0,
+          className: _.Wrap,
+          cssProperty: "--wrap",
+        },
+        {
+          prop: "inline",
+          responsive: !0,
+          className: _.Inline,
+        },
+      ];
+      function _(_) {
+        return /^(between|around|evenly)$/.test(_) ? `space-${_}` : _;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      function _(_, _, _) {
+        return "function" == typeof _ ? _(_, _) : _.cloneElement(_, _);
+      }
+      function _(_, _, _, _) {
+        return _(_ || _, _, _);
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      function _() {
+        return _.Reset;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

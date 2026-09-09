@@ -407,24 +407,14 @@
           );
         }
         constructor() {
-          "dev" == _._.WEB_UNIVERSE && (window.g_DiscountEventStore = this);
+          0;
         }
         Init() {
           const _ = (0, _._)("discount_events", "application_config");
-          if (
-            (("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-              console.log(
-                "DEV_DEBUG: CDiscountEventStore loading payload: ",
-                _,
-              ),
-            this.BIsConfigValid(_))
-          ) {
+          if (this.BIsConfigValid(_)) {
             for (const _ of _) this.m_mapDiscountEvents.set(_._, _);
             this.m_bLoadedViaInitOrFullLoad = !0;
-          } else
-            "dev" == _._.WEB_UNIVERSE &&
-              _ &&
-              console.error("CDiscountEventStore Invalid payload");
+          } else 0;
         }
         BIsConfigValid(_) {
           const _ = _;
@@ -1115,10 +1105,7 @@
               (0, _._)("optin_registrations", "application_config"),
             ),
           );
-          this.ValidateStoreDefault(_) &&
-            (this.InternalAddRegistrations(_),
-            "dev" == _._.WEB_UNIVERSE &&
-              console.log("COptInRegistrations: " + _.length, _));
+          this.ValidateStoreDefault(_) && this.InternalAddRegistrations(_);
         }
         ValidateStoreDefault(_) {
           const _ = _;
@@ -1354,35 +1341,16 @@
           );
         }
         constructor() {
-          "dev" == _._.WEB_UNIVERSE && (window.g_PackageDiscountStore = this);
+          0;
         }
         Init() {
           const _ = (0, _._)("package_discounts", "application_config");
-          ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-            console.log(
-              "DEV_DEBUG: CPackageDiscountStore loading discount payload: ",
-              _,
-            ),
-            this.BIsDiscountPayloadValid(_)
-              ? this.InternalAddDiscounts(_)
-              : "dev" == _._.WEB_UNIVERSE &&
-                _ &&
-                console.error("Invalid discount payload");
+          this.BIsDiscountPayloadValid(_) && this.InternalAddDiscounts(_);
           const _ = (0, _._)("max_discount_percentages", "application_config");
-          if (
-            (("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-              console.log(
-                "DEV_DEBUG: CDiscountGridStore loading max-discount-% payload: ",
-                _,
-              ),
-            this.BIsMaxDiscountPayloadValid(_))
-          )
+          if (this.BIsMaxDiscountPayloadValid(_))
             for (let _ in _)
               this.m_mapMaxDiscountPercentageByPackageId.set(Number(_), _[_]);
-          else
-            "dev" == _._.WEB_UNIVERSE &&
-              _ &&
-              console.error("Invalid max-discount-% payload");
+          else 0;
         }
         InternalAddDiscounts(_, _) {
           const _ = new Set(),
@@ -1935,7 +1903,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = 0,
         _ = 1,
@@ -1990,7 +1957,7 @@
           return !!_.s_Singleton;
         }
         constructor() {
-          "dev" == _._.WEB_UNIVERSE && (window.g_DiscountGridEditStore = this);
+          0;
         }
         Init() {
           for (const _ of (0, _._)())
@@ -2652,20 +2619,14 @@
           );
         }
         constructor() {
-          "dev" == _._.WEB_UNIVERSE && (window.g_DiscountGridStore = this);
+          0;
         }
         Init() {
           const _ = (0, _._)("price_increase_times", "application_config");
-          if (
-            (("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-              console.log("DEV_DEBUG: CDiscountGridStore loading payload: ", _),
-            this.BIsPriceIncreasePayloadValid(_))
-          )
+          if (this.BIsPriceIncreasePayloadValid(_))
             for (let _ in _)
               this.m_mapLastTimeRaisedPrices.set(Number(_), _[_]);
-          else
-            "dev" == _._.WEB_UNIVERSE &&
-              console.error("CDiscountGridStore Invalid payload");
+          else 0;
           (this.m_eRelatedDiscountView = window.localStorage.getItem(_) ?? _),
             this.UpdateDiscountEventsForGrid(),
             (0, _._)().Register(() => this.UpdateDiscountEventsForGrid()),

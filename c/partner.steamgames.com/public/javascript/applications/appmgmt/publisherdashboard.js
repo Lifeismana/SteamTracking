@@ -4,65 +4,6 @@
   {
     chunkid: (module) => {
       module.exports = {
-        SectionContainer: "_1PiBdCCjO150Q3hTAufdO-",
-        CalendarContainer: "_1Q9Esj5HeM-zR9xwNwZbLz",
-        CalendarMovingRegion: "_3z91JA_guW8Kol6_3JYdsK",
-        Sticky: "y0zs1X6cJnOeGGGHMnykj",
-        ListArea: "gbif2hEiU91nZaM6kXn4Z",
-        FilterHeader: "_2MXeDRYOqlELNsek990_rP",
-        FilterOptionsContainer: "_1ZcqFkHkuRJ22gzZ4fORx_",
-        FilterOption: "XvuAsXIIOXpunZZFsbG1J",
-        Highlighted: "_1EjDsvA9MZZb2AvmujSv3u",
-        FilterTextArea: "JkxeAXegHM_QgtpOvm_AH",
-        FilterTextInput: "_2RGPezbGnjjotWULS4Gk3E",
-        FilterTextIcon: "hydxe4hXqJfIxrt7409Iz",
-        FilterTextClearButton: "vAsUAkbX_RoNYnnfJISZR",
-        ListContainer: "_2KG00jfx602luW_vdQRBzE",
-        List: "weIDXAqztYzqoIwepmsqa",
-        Overflows: "DkGpNkRj4z7mW_dfjSvRq",
-        Expanded: "_2jreD9S_Xh_xvWoqzS6bWg",
-        ListMonthContainer: "_2ZwvtkeX0URO2_-2taBoRV",
-        ListMonthCalendarMovingContainer: "_3lJsS_dw0OHW1NVfxmu4ec",
-        ListMonthCalendar: "_3IydHRCeAWvMa9BsrKO8wD",
-        ListMonthCalendarAlt: "_1CfSWUeq7BwPIyOkYQpgJU",
-        ListMonthCalendarAltFlag: "_2bbnwMGGRiyd5ZDbXEZSqW",
-        Live: "_6ee9pUIbo29-Ff4xoo1Vq",
-        Past: "_8ry_ijicR9Z_4y8MHNTj9",
-        ListMonthCalendarAltLiveText: "_1P0U5YrXZxfa-C_FHPiFSd",
-        ListMonthCalendarAltPastText: "_9AyZNx9V_HPQuM_vtiYvb",
-        ListMonth: "_3okkw7x-z0qZCEK1NAahdQ",
-        EmptyMonth: "_3lyfmIZ1z2WSjSGhWIPf3O",
-        ListDay: "_3nICiFsbiDeF2mpxzd7IwS",
-        ListDayGroup: "_352WWYgRAg5jmv-U2SnWfB",
-        ListEvent: "_3MRpE4hb3oHP-SJc6vi4yU",
-        Dimmed: "_3exR8ToQYk5rc15u6VEoUa",
-        DeadlineUrgent: "_2gM5oc8dylrxJTQo2jP4rs",
-        ListEventEventElement: "_266M20K-owSPOzkiuGBsBf",
-        ListEventHeader: "_1Vdp0aCwns6iiwo5MG0vNI",
-        ValveOnly: "_28655jUVT6o-ebdfQQ1vyx",
-        Edit: "_1dnVPTtaahO2JQS3OE3SYY",
-        Spacer: "_1MLZKEQOuWsi2BTjmjlOBh",
-        Dismiss: "_2odt96_ZRUgmstGH4SoHb3",
-        ListDayNumber: "_2Ncx_BvvudD_IcBVx_LvxT",
-        Deadline: "wtQr51ScyM_XVTch64sH_",
-        DLCRelease: "_2NkJJG4Hwuh-stavQ37q8c",
-        GameRelease: "_1VysaKhxfy4cBLdjI6JsyG",
-        Event: "_2xxX0s3uxEU627JFdaQYDJ",
-        ListEventType: "_37eU9658-vqcNosEYTJkcp",
-        ListEventEventSection: "_3wlVa8x4AS1PHWwY_wi-k-",
-        ListEventEventGutter: "_382iDNo-Drucmr1EywHor6",
-        Loading: "_1BsxVDOWwiT4onflhO4bAR",
-        ExpandButton: "_97EaAkAHVWnrq08EKad4J",
-        AllEventsFiltered: "_3x4GpVBlBh7Scc9WVEWgU-",
-        GroupPlaceholder: "h-0YMsaRZ9MTVsMb2fuWk",
-        GroupPlaceholderCapsules: "ptApIyhzYXOYjPeSyazsK",
-        ExpandContainer: "_1eSEFRNJRuuc3ywaWvSTAE",
-        GroupPlaceholderCapsule: "C1qEKLBiqrSSmwKoRjABM",
-        GroupPlaceholderCapsuleMissing: "cj9RQ9Fa8HRuAfXaBC-j8",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         ReleaseInfoCtn: "_3pyc1rLbsfwxBzJyo5sSGH",
         ReleaseInfoRow: "_3xlpWtlLHzeEs867WmkEco",
         ReleaseDateLabel: "_1c-xWcy3xU5-9w4WMDBaBk",
@@ -508,13 +449,7 @@
         m_setDismisses = new Set();
         static s_Singleton;
         static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_PartnerDismissStore = _.s_Singleton)),
-            _.s_Singleton
-          );
+          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
         }
         async Init(_, _) {
           (this.m_accountId = _),
@@ -2648,13 +2583,6 @@
                 children: _(_?.TemplateName),
               }),
             };
-          default:
-            "dev" == _._.WEB_UNIVERSE &&
-              console.log(
-                "GetDeadlineDisplay: Unexpected deadline type not being rendered " +
-                  _.type,
-                _,
-              );
         }
       }
       function _(_) {
@@ -2826,6 +2754,13 @@
             case "DocReq-TreatyClaimUSAddress-FR":
             case "DocReq-W8USAddress-FR":
             case "DocReq-W8USParent-FR":
+            case "DocReq-PhotoId-10Years":
+            case "DocReq-PhotoId-FrontBack":
+            case "DocRec-NameTranslation":
+            case "DocReq-Entity-CN-NECIPS":
+            case "DocReq-ProofOfAddress":
+            case "DocReq-TaxResidency":
+            case "DocReq-Entity-TR-Gazetesi":
               return (0, _._)(
                 "#PartnerDeadline_TaxRequirement_AdditionalDocuments",
               );
@@ -4993,11 +4928,7 @@
               _ ? _.Get().SetDismiss(_, _.endDate) : _.Get().ClearDismiss(_),
             [_.endDate, _],
           ),
-          _ = (function (_) {
-            if ("dev" != _._.WEB_UNIVERSE) return null;
-            const _ = new URL(window.location.href);
-            return _.searchParams.set("eventids", _), _.toString();
-          })(_._);
+          _ = (_._, null);
         return (
           _ &&
           (0, _.jsxs)("div", {
@@ -5178,7 +5109,6 @@
                     : 0;
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -5468,8 +5398,7 @@
                     _._.accountid,
                     Number.isNaN(_) ? 0 : _,
                   );
-                  await Promise.all([_._.InitGlobal(), _]),
-                    __webpack_require__(!1);
+                  await _, __webpack_require__(!1);
                 })();
               }, [_]),
               _
@@ -5584,7 +5513,7 @@
           }),
           _ = _._.PARTNER_BASE_URL + "apps/landing/" + _,
           _ = (function (_, _) {
-            if (_?.asset_url_format && _[_])
+            if (_?.asset_url_format && "string" == typeof _[_])
               return (
                 _._.BASE_URL_SHARED_CDN +
                 "/store_item_assets/" +

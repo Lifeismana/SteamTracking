@@ -1531,10 +1531,7 @@
         static Get() {
           return (
             _.s_CuratorAdminStore ||
-              ((_.s_CuratorAdminStore = new _()),
-              _.s_CuratorAdminStore.Init(),
-              "dev" === _._.WEB_UNIVERSE &&
-                (window.g_CuratorAdminStore = _.s_CuratorAdminStore)),
+              ((_.s_CuratorAdminStore = new _()), _.s_CuratorAdminStore.Init()),
             _.s_CuratorAdminStore
           );
         }
@@ -2850,15 +2847,13 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _.Component {
         state = {
           bIsLoading: !0,
         };
-        async componentDidMount() {
+        componentDidMount() {
           _._.Get(),
-            await _._.InitGlobal(),
             this.setState({
               bIsLoading: !1,
             });
@@ -4478,8 +4473,8 @@
             }));
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -6378,15 +6373,7 @@
       function _() {
         const _ = (0, _._)("partnerbrowse_webapi_token", "application_config");
         (0, _._)(Boolean(_), "require partnerbrowse_webapi_token");
-        const _ = new _._(_._.WEBAPI_BASE_URL, _);
-        return (
-          ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-            console.log(
-              "DEV_DEBUG: Constructing partner store-browse WebAPI interface with access token",
-              _,
-            ),
-          _
-        );
+        return new _._(_._.WEBAPI_BASE_URL, _);
       }
       var _ = __webpack_require__("chunkid");
       const _ = () =>

@@ -1196,6 +1196,8 @@
 #SettingsController_SteamController
 #SettingsDownloads_No_Throttle
 #SteamUI_AppType%s%s%s
+#SteamUI_InstallApp_Failed
+#SteamUI_InstallApp_Timeout
 #SteamUI_InstallServiceCancel
 #SteamUI_InstallServiceOk
 #SteamUI_InstallServiceText
@@ -3299,6 +3301,7 @@ ${LANGUAGE}
 (\r">\n&CBroadcast_EndBroadcastSession_Request
 (\r">\n.CTransportValidation_GetLargeResponse_Response
 (\r"?\n.CCommunity_PartnerEventsShowMoreForApp_Request
+(\r"@\n"CMsgRemoteClientInstallAppResponse
 (\r"A\n*CBroadcast_WebRTCLookupTURNServer_Response
 (\r"A\n-CChatRoom_GetMessageReactionReactors_Response
 (\r"B\n!CCloudGaming_CreateNonce_Response
@@ -3502,7 +3505,6 @@ ${LANGUAGE}
 (\t"C\n-CSteamEngine_GetTextFilterDictionary_Response
 (\t"E\n CCloud_GetSingleFileInfo_Request
 (\t"E\n,CTransportValidation_AppendToString_Response
-(\t"H\n$CClientNotificationDownloadCompleted
 (\t"H\n(CSteamTV_CreateBroadcastChannel_Response
 (\t"H\n-CSteamInputService_GetControllerName_Response
 (\t"J\n&CStore_GetLocalizedNameForTags_Request
@@ -3543,6 +3545,7 @@ ${LANGUAGE}
 (\t"`\n(CBroadcast_MuteBroadcastChatUser_Request
 (\t"a\n,CBroadcast_WebRTCHaveTURNServer_Notification
 (\t"c\n)CStore_UpdatePackageReservations_Response
+(\t"d\n$CClientNotificationDownloadCompleted
 (\t"e\n!CInventory_SplitItemStack_Request
 (\t"f\n&CSteamTV_HomePageTemplate_ConveyorBelt
 (\t"f\n&CSteamTV_HomePageTemplate_QuickExplore
@@ -4129,6 +4132,7 @@ ${LANGUAGE}
 )\n$k_EMsgGCHAccountTradeBanStatusChange
 )\n$k_EMsgGMShellAndServerAddressUpdates
 )\n$k_EMsgProductInfoChangedNotification
+)\n$k_EMsgRemoteClientInstallAppResponse
 )\n$k_EMsgRemoteClientPairWifiAPResponse
 )\n$k_EMsgUCMPublishedFileContentUpdated
 )\n$k_EMsgUCMUpdatePublishedFileResponse
@@ -5967,7 +5971,7 @@ ${LANGUAGE}
 .AppCloudStatus
 .AppStageProgress
 .AppUpdateInfo
-.AppUpdateInfo"
+.AppUpdateInfo",\n
 .BNW^h
 .CAchievements_GetInfo_Request
 .CAchievements_GetInfo_Response
@@ -9499,6 +9503,7 @@ ${LANGUAGE}
 1\n-k_EQueryFilesSpecialFilter_FavoritedByFriends
 1\n-k_ERemoteClientBroadcastMsgClientIDDeconflict
 1\n-k_ERemoteClientBroadcastMsgPairingExclusivity
+1\n-k_ERemoteClientServiceRemoteInstallWithoutPin
 1\n-k_ESharedLibrary_AppExcluded_NonrefundableDLC
 1\n-k_ESharedLibrary_LicenseExcluded_FlagBorrowed
 1\n-k_ESteamDeckCompatibilityCategory_Unsupported
@@ -9631,8 +9636,8 @@ ${LANGUAGE}
 20CJSMethodCallHandlerI15CInstallManagerJ9CSmartPtrI18CJSCallbackPromiseEEE
 20CJSMethodCallHandlerI15CInstallManagerJEE
 20CJSMethodCallHandlerI15CInstallManagerJP10CUtlVectorIj10CUtlMemoryIjEE9CSmartPtrI18CJSCallbackPromiseEEE
-20CJSMethodCallHandlerI15CInstallManagerJP10CUtlVectorIj10CUtlMemoryIjEEEE
-20CJSMethodCallHandlerI15CInstallManagerJP10CUtlVectorIj10CUtlMemoryIjEEbEE
+20CJSMethodCallHandlerI15CInstallManagerJP10CUtlVectorIj10CUtlMemoryIjEEyEE
+20CJSMethodCallHandlerI15CInstallManagerJP10CUtlVectorIj10CUtlMemoryIjEEybEE
 20CJSMethodCallHandlerI15CInstallManagerJPKcEE
 20CJSMethodCallHandlerI15CInstallManagerJbb9CSmartPtrI18CJSCallbackPromiseEEE
 20CJSMethodCallHandlerI15CInstallManagerJi9CSmartPtrI18CJSCallbackPromiseEEE
@@ -10448,6 +10453,7 @@ ${LANGUAGE}
 26CMsgNetworkDeviceIP4Config
 26CMsgNetworkDeviceIP6Config
 26CMsgRemoteClientAcceptEULA
+26CMsgRemoteClientInstallApp
 26CMsgRemoteClientPairWifiAP
 26CMsgSavePageToJPEGResponse
 26CMsgSetControllerActionSet
@@ -11217,6 +11223,7 @@ ${LANGUAGE}
 34CMsgBluetoothManagerAdapterDetails
 34CMsgClientAddFriendToGroupResponse
 34CMsgRemoteClientBroadcastDiscovery
+34CMsgRemoteClientInstallAppResponse
 34CMsgRemoteClientPairWifiAPResponse
 34CMsgStorageDevicesData_BlockDevice
 34CMsgSystemAudioVolume_ChannelEntry
@@ -11358,6 +11365,7 @@ ${LANGUAGE}
 35CUser_GetSavedHardwareInfo_Response
 35ISteamMatchmakingServerListResponse
 35ISteamNetworkingConnectionSignaling
+35ISteamRemoteClientInstallAppHandler
 35StoreItem_BasicInfo_CreatorHomeLink
 360opf
 36CAudio_GetMonoDownmixEnabled_Request
@@ -13416,7 +13424,8 @@ ${LANGUAGE}
 9CCallbackI30CStreamingClientGameController20StreamClientResult_tLb0EE
 9CCallbackI30CStreamingClientGameController31RemoteClientStartStreamResult_tLb0EE
 9CCallbackI30CStreamingClientGameController33RemoteClientStartStreamProgress_tLb0EE
-9CCallbackI30CStreamingClientGameController34RemoteClientAcceptAllEULAsForApp_tLb0EE
+9CCallbackI33CRemoteClientInstallAppController30RemoteClientInstallAppResult_tLb0EE
+9CCallbackI33CRemoteClientInstallAppController34RemoteClientAcceptAllEULAsForApp_tLb0EE
 9CCallbackI9CSteamDoc16DRMDataRequest_tLb0EE
 9CCallbackI9CSteamDoc16PostLogonState_tLb0EE
 9CCallbackI9CSteamDoc18UnlockH264Result_tLb0EE
@@ -17201,6 +17210,7 @@ CMsgRemoteClientAppStatus
 CMsgRemoteClientBroadcastHeader
 CMsgRemoteClientBroadcastStatus
 CMsgRemoteClientDownloadStatus
+CMsgRemoteClientInstallApp
 CMsgRemoteClientPairWifiAP
 CMsgRemoteClientPing"
 CMsgRemoteClientPingResponse"S\n
@@ -17574,9 +17584,14 @@ CRebuildDianosticInfoJob
 CRecordedInput
 CRecordedInputStream
 CRefreshDevicesJob
+CRegisterValveIndexComponentJob
+CRemoteClientInstallAppController::OnRemoteClientAcceptAllEULAs
+CRemoteClientInstallAppController::OnRemoteClientInstallAppResult
 CRemoteClientJobRequestControllerConfig
+CRemoteClientJobStartRemoteApp
 CRemoteClientPairWifiAP
 CRemoteClientPairWifiAPResponse
+CRemoteClientSoftAP::ScheduledStateCheck
 CRemoteClient_ClientDetails
 CRemoteClient_ClientLogin
 CRemoteClient_DeviceDetails
@@ -17594,6 +17609,7 @@ CRemotePlayController::OnRemoteClientDongleDisconnected
 CRemotePlayController::OnRemoteClientDongleFixWifiResult
 CRemotePlayController::OnRemoteClientDonglePlugEvent
 CRemotePlayController::OnRemoteClientInputSettingsChange
+CRemotePlayController::OnRemoteClientInstallAppResult
 CRemotePlayController::OnRemoteClientLaunchFailed
 CRemotePlayController::OnRemoteClientOffline
 CRemotePlayController::OnRemoteClientPairWifiAPResult
@@ -17904,6 +17920,7 @@ CSteamUIInputController::OnRemoteClientRemotePlayUIMovedController
 CSteamUIInputController::OnShowControllerLayoutPreview
 CSteamUILocalDownloads::OnDlcInstalled
 CSteamUILocalDownloads::OnEnableAllDownloadsFromRemoteClient
+CSteamUILocalDownloads::OnInstallAppID
 CSteamUILocalDownloads::OnRemoteClientAppQueueChanged
 CSteamUILocalDownloads::OnRemoteClientDownloadQueueChanged
 CSteamUILocalDownloads::OnRemoteRemoveFromDownloadList
@@ -17912,6 +17929,7 @@ CSteamUILocalDownloads::OnRemoteSuspendLanePeerContent
 CSteamUILocalDownloads::OnRestrictAutoUpdateChanged
 CSteamUILocalDownloads::OnSteamServersConnected
 CSteamUILocalDownloads::OnSteamServersDisconnected
+CSteamUILocalDownloads::OnUninstallAppID
 CSteamUIMessagingController::OnClientPostMessage
 CSteamUIMusicController::OnCurrentQueueEntryHasChanged
 CSteamUIMusicController::OnCurrentQueueEntrySecondsElapsedChanged
@@ -17982,7 +18000,6 @@ CStreamVideoMode
 CStreamVideoOverflowMsg
 CStreamingClientCaps
 CStreamingClientConfig
-CStreamingClientGameController::OnRemoteClientAcceptAllEULAs
 CStreamingClientGameController::OnRemoteClientStartStreamProgress
 CStreamingClientGameController::OnRemoteClientStartStreamResult
 CStreamingClientGameController::OnStreamClientResult
@@ -18419,7 +18436,6 @@ Camellia(128)
 Camellia(256)
 Camera
 Can not set launch app on complete for Remote Client.
-Can not show download complete notification on Remote Client.
 Can't
 Can't AbortConnection as it deletes inside a HTTP2 callback from nghttp2, doing async - but fix caller
 Can't BackUp() after failed Next().
@@ -26105,6 +26121,7 @@ N21CRemotePlayController47CCallbackInternal_OnRemoteClientAppStateChangedE
 N21CRemotePlayController47CCallbackInternal_OnRemoteClientDongleConnectedE
 N21CRemotePlayController47CCallbackInternal_OnRemoteClientDonglePlugEventE
 N21CRemotePlayController47CCallbackInternal_OnStreamingClientDisconnectedE
+N21CRemotePlayController48CCallbackInternal_OnRemoteClientInstallAppResultE
 N21CRemotePlayController48CCallbackInternal_OnRemoteClientPairWifiAPResultE
 N21CRemotePlayController48CCallbackInternal_OnRemotePlayTogetherPlayerLeftE
 N21CRemotePlayController49CCallbackInternal_OnRemoteClientSoftAPStateChangeE
@@ -26179,6 +26196,8 @@ N22CGameSessionController37CCallbackInternal_OnScreenshotWrittenE
 N22CGameSessionController43CCallbackInternal_OnAppLifetimeNotificationE
 N22CScreensaverController39CCallbackInternal_OnBatteryStateChangedE
 N22CSteamUILocalDownloads32CCallbackInternal_OnDlcInstalledE
+N22CSteamUILocalDownloads32CCallbackInternal_OnInstallAppIDE
+N22CSteamUILocalDownloads34CCallbackInternal_OnUninstallAppIDE
 N22CSteamUILocalDownloads41CCallbackInternal_OnSteamServersConnectedE
 N22CSteamUILocalDownloads44CCallbackInternal_OnSteamServersDisconnectedE
 N22CSteamUILocalDownloads45CCallbackInternal_OnRestrictAutoUpdateChangedE
@@ -26418,11 +26437,12 @@ N2vr19IVRSteamPrivate_031E
 N30CGetControllerConfigWorkerBase46CCallbackInternal_OnReceivedDownloadItemResultE
 N30CSteamUICloudStorageController34CCallbackInternal_OnPostLogonStateE
 N30CStreamingClientGameController30CCallback_OnStreamClientResultE
-N30CStreamingClientGameController38CCallback_OnRemoteClientAcceptAllEULAsE
 N30CStreamingClientGameController41CCallback_OnRemoteClientStartStreamResultE
 N30CStreamingClientGameController43CCallback_OnRemoteClientStartStreamProgressE
 N31CHardwareRegistrationController34CCallbackInternal_OnPostLogonStateE
 N32CGameStreamVideoStageQueueThread18CProcessDataThreadE
+N33CRemoteClientInstallAppController38CCallback_OnRemoteClientAcceptAllEULAsE
+N33CRemoteClientInstallAppController40CCallback_OnRemoteClientInstallAppResultE
 N36CLoadControllerPersonalizationWorker46CCallbackInternal_OnReceivedDownloadItemResultE
 N3IPC10ISharedMemE
 N3IPC11ISyncObjectE
@@ -28916,7 +28936,9 @@ Remote File Conflict
 Remote Play Config Msg with URL: %s
 Remote call failed
 Remote peer returned unexpected data while we expected SETTINGS frame.  Perhaps, peer does not support HTTP/2 properly.
+RemoteClientJobInstallApp
 RemoteClientJobPing
+RemoteClientJobStartAppInstall
 RemoteClientJobStartStream
 RemoteClientSteamClient
 RemoteClientSteamClient.NotifyEnableSteamBroadcast#1
@@ -30031,7 +30053,7 @@ Sent ping with MTU %d, increment = %d\n
 SentenceMode
 SentenceModeMenu
 Sentiment
-Sep  1 2026 00:44:13
+Sep  7 2026 20:52:12
 September
 Serbian
 Serial
@@ -31247,6 +31269,7 @@ Streaming session running; can't start %s
 Streaming started to %s at %s, audio channels = %d, MTU = %d
 Streaming.AcceptStreamingEULA
 Streaming.CancelStreamGame
+Streaming.RegisterForInstallAppComplete
 Streaming.RegisterForStreamingClientFinished
 Streaming.RegisterForStreamingClientLaunchProgress
 Streaming.RegisterForStreamingClientStarted
@@ -45091,6 +45114,7 @@ installaudiocapturedriver
 installdir
 installed
 installed_depots
+installing_app_id
 installmanagertimeout
 insufficient memory
 insufficient memory to read chunk
@@ -47099,6 +47123,8 @@ k_EMsgRemoteClientAuthorizationResponse
 k_EMsgRemoteClientBase
 k_EMsgRemoteClientGetControllerConfig
 k_EMsgRemoteClientGetControllerConfigResponse
+k_EMsgRemoteClientInstallApp
+k_EMsgRemoteClientInstallAppResponse
 k_EMsgRemoteClientPairWifiAP
 k_EMsgRemoteClientPing
 k_EMsgRemoteClientPingResponse
@@ -49240,6 +49266,8 @@ m_vecCallbacksGameActionShowUI
 m_vecCallbacksGameActionStart
 m_vecCallbacksGameActionTaskChange
 m_vecCallbacksGameActionUserRequest
+m_vecCallbacksInstallAppComplete
+m_vecCallbacksInstallShowEula
 m_vecCallbacksLoginStateChange
 m_vecCallbacksPrepareForSuspendProgress
 m_vecCallbacksResumeSuspendedGamesProgress
@@ -49253,8 +49281,8 @@ m_vecCallbacksStreamingClientShowProgressUI
 m_vecCallbacksStreamingClientStart
 m_vecCallbacksStreamingLaunchComplete
 m_vecCallbacksStreamingPrelaunchCheck
-m_vecCallbacksStreamingShowEula
 m_vecCallbacksStreamingShowLaunchOptions
+m_vecCallbacksStreamingStillDownloading
 m_vecCallbacksUsersChanged
 m_vecCompletedAndWaiting
 m_vecConfigSelectionChangedCallbacks
@@ -56266,6 +56294,7 @@ uninitialized
 uninitialized __any_string
 uninstalled
 uninstalling
+uninstalling_app_id
 uninterpreted_option
 uniqueIdentifier
 uniqueMember

@@ -323,24 +323,12 @@
         }
         static s_Singleton;
         static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-                (window.g_DeckVerifiedDetailStores = _.s_Singleton)),
-            _.s_Singleton
-          );
+          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
         }
         constructor() {
           if (document.getElementById("application_config")) {
             let _ = (0, _._)("hardwarecompatibility", "application_config");
-            _.ValidateCompatabilityResult(_) &&
-              (this.AddCompatabilityResult(_),
-              "dev" == _._.WEB_UNIVERSE &&
-                console.log(
-                  "CDeckCompatibilityDetailsStore compatability loaded: ",
-                  _,
-                ));
+            _.ValidateCompatabilityResult(_) && this.AddCompatabilityResult(_);
           }
         }
         static ValidateCompatabilityResult(_) {
@@ -378,7 +366,9 @@
               category: _,
             }),
             (0, _.jsx)(_._, {
-              onClick: _,
+              onClick: (_) => {
+                _.preventDefault(), _();
+              },
               children: (0, _.jsx)("span", {
                 className: _().LearnMorePC,
                 children: _._.Localize(
@@ -3242,13 +3232,7 @@
               className: _().CompatibilityDetailsResultIcon,
             });
           case _:
-            return (
-              "dev" == _._.WEB_UNIVERSE &&
-                console.error(
-                  "deck verified banner shouldn't try to display the information display type for appid",
-                ),
-              null
-            );
+            return null;
         }
       }
       function _(_) {

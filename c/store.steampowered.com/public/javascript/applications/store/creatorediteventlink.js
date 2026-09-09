@@ -54,6 +54,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _,
         _ = __webpack_require__("chunkid"),
@@ -95,23 +96,16 @@
         /(?:steampowered\.com|community\.\S+\.steam\.dev|store\.\S+\.steam\.dev|valve\.org\/store|steam\.dev\/store|\.steamchina\.com|steamcommunity\.com|valve\.org\/community|steam\.dev\/community)\/(\w+)(\/|$)/i;
       function _(_, _) {
         if (!_) return !1;
-        const _ = "store" === (0, _._)(),
-          _ = (function (_) {
+        const _ = (function (_) {
             const _ = _.match(_);
             return _?.[1];
           })(window.location.href),
-          _ = _ && "news" == _,
+          _ = "news" == _,
           _ = _.GetEventType() == _.ajI,
-          _ = "community" === (0, _._)(),
-          _ = _.appid ? "games" : "groups",
-          _ =
-            _ &&
-            _ == _ &&
-            ((_.appid && _.appid === _._.APPID) ||
-              (!_.appid && _.clanSteamID.GetAccountID() === _._.CLANACCOUNTID));
+          _ = (_.appid, !1);
         switch (_) {
           case _.k_eView:
-            return _ || _;
+            return _ && !0;
           case _.k_eCommunityView:
           case _.k_eCommunityEdit:
           case _.k_eCommunityEditBroadcast:
@@ -124,8 +118,9 @@
           case _.k_eCommunityAdminPage:
             return !_ && _;
           case _.k_eViewWebSiteHub:
-            return _ || _;
+            return _;
           case _.k_eStoreView:
+            return _ && !0;
           case _.k_eStoreNewsHub:
           case _.k_eStoreOwnerPage:
           case _.k_eStoreUsersNewsHub:
@@ -166,6 +161,9 @@
       function _() {
         return "news";
       }
+      function _() {
+        return !1;
+      }
       function _(_, _, _) {
         const { data: _ } = (0, _._)(
           _?.appid
@@ -178,13 +176,11 @@
       }
       function _(_, _, _, _) {
         const _ = "relative" === _,
-          _ = "community" === (0, _._)(),
           _ = _ ? "/" : _._.STORE_BASE_URL,
           _ = _(_.appid, _.clanSteamID, _);
         _ === _.k_eView
-          ? (_ = _ ? _.k_eCommunityView : _.k_eStoreView)
-          : _ === _.k_eViewWebSiteHub &&
-            (_ = _ ? _.k_eCommunityAnnouncementHub : _.k_eStoreNewsHub);
+          ? (_ = _.k_eStoreView)
+          : _ === _.k_eViewWebSiteHub && (_ = _.k_eStoreNewsHub);
         const _ = _.GID ? _.GID : "",
           _ = _.AnnouncementGID ? _.AnnouncementGID : "",
           _ =
@@ -272,7 +268,10 @@
             if (_)
               return `${(0, _._)(_)}/${_.GetSaleUpdateLandingPageVanity()}`;
             if (_) return `${_}curator/${_.clanSteamID.GetAccountID()}`;
-            return `${_}news/${_.appid ? `app/${_.appid}` : `group/${_.clanSteamID.GetAccountID()}`}/${_.bOldAnnouncement ? `old_view/${_}` : `view/${_}`}`;
+            {
+              const _ = "view";
+              return `${_}news/${_.appid ? `app/${_.appid}` : `group/${_.clanSteamID.GetAccountID()}`}/${_.bOldAnnouncement ? `old_view/${_}` : `${_}/${_}`}`;
+            }
           case _.k_eStoreUsersNewsHub:
             return `${_}news/`;
           default:
@@ -353,6 +352,19 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      const _ = 1,
+        _ = 2,
+        _ = 4,
+        _ = 1073741824;
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
       function _(_) {
         return (
           !!_ &&
@@ -378,6 +390,7 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -386,6 +399,137 @@
           return _ && (0, _._)(_)
             ? `${_._.STORE_BASE_URL}app/${((0, _._))(_)[0]}`
             : `${_._.STORE_BASE_URL}${_.store_url_path}`;
+      }
+      function _() {
+        window.location.href = `${_._.STORE_BASE_URL}login/?redir=${encodeURIComponent(window.location.href)}`;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = 0,
+        _ = "061818254b2c99ac49e6626adb128ed1282a392f",
+        _ = 120;
+      class _ {
+        m_unAppID;
+        m_bInitialized = !1;
+        m_strName;
+        m_strIconURL;
+        m_dtUpdatedFromServer;
+        m_eAppType;
+        constructor(_) {
+          this.m_unAppID = _;
+        }
+        get appid() {
+          return this.m_unAppID;
+        }
+        get is_initialized() {
+          return this.m_bInitialized;
+        }
+        get is_valid() {
+          return this.m_bInitialized && !!this.m_strName;
+        }
+        get name() {
+          return this.m_strName;
+        }
+        get icon_url_no_default() {
+          return this.m_strIconURL && this.BuildAppURL(this.m_strIconURL, _);
+        }
+        get icon_url() {
+          return this.BuildAppURL(this.m_strIconURL, _);
+        }
+        get time_updated_from_server() {
+          return this.m_dtUpdatedFromServer;
+        }
+        get apptype() {
+          return this.m_eAppType;
+        }
+        BIsApplicationOrTool() {
+          return this.apptype == _._ || this.apptype == _._;
+        }
+        BuildAppURL(_, _) {
+          return _
+            ? _._.MEDIA_CDN_COMMUNITY_URL +
+                "images/apps/" +
+                this.appid +
+                "/" +
+                _ +
+                ".jpg"
+            : (0, _._)(_);
+        }
+        DeserializeFromMessage(_) {
+          (this.m_bInitialized = !0),
+            (this.m_strName = _.name()),
+            (this.m_strIconURL = _.icon()),
+            (this.m_dtUpdatedFromServer = new Date()),
+            (this.m_eAppType = _.app_type());
+        }
+        DeserializeFromAppOverview(_) {
+          _.icon_hash() && _.app_type() != _._
+            ? ((this.m_bInitialized = !0),
+              (this.m_strName = _.display_name()),
+              (this.m_strIconURL = _.icon_hash()),
+              (this.m_dtUpdatedFromServer = new Date()),
+              (this.m_eAppType = _.app_type()))
+            : (this.m_bInitialized = !1);
+        }
+        DeserializeFromCacheObject(_) {
+          try {
+            (this.m_strName = _.strName),
+              (this.m_strIconURL = _.strIconURL),
+              (this.m_dtUpdatedFromServer = new Date(_.strUpdatedFromServer)),
+              (this.m_eAppType = _.eAppType),
+              (this.m_bInitialized = !0);
+          } catch {}
+        }
+        SerializeToCacheObject() {
+          return (
+            (0, _._)(
+              this.m_bInitialized,
+              "Attempting to serialize an uninitialized AppInfo object for caching!",
+            ),
+            this.m_bInitialized
+              ? {
+                  strName: this.m_strName,
+                  strIconURL: this.m_strIconURL,
+                  strUpdatedFromServer: this.m_dtUpdatedFromServer.toJSON(),
+                  eAppType: this.m_eAppType,
+                }
+              : null
+          );
+        }
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      const _ = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
+      function _(_, _) {
+        let _ = ".jpg";
+        (_ && "0000000000000000000000000000000000000000" !== _) || (_ = _),
+          44 == _.length && ((_ = _.substr(-4)), (_ = _.substr(0, 40)));
+        let _ = _._.AVATAR_BASE_URL;
+        return (
+          _ ||
+            ((_ = _._.MEDIA_CDN_COMMUNITY_URL + "images/avatars/"),
+            (_ += _.substr(0, 2) + "/")),
+          (_ += _),
+          _ && "small" != _ && (_ += "_" + _),
+          (_ += _),
+          _
+        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -493,6 +637,26 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = () => (_._.EUNIVERSE === _._ ? 2581 : 45267781);
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const _ = _.useRef(_().CancelToken.source());
+        return (
+          _.useEffect(() => {
+            const _ = _.current;
+            return () =>
+              __webpack_require__.cancel(_ ? `${_}: unmounting` : "unmounting");
+          }, [_]),
+          _.current
+        );
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

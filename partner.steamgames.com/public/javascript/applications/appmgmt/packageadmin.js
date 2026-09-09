@@ -105,14 +105,14 @@
         if (j[e]) return j[e]();
       });
       var S = i(26408);
-      function y(e) {
+      function f(e) {
         return (
           (n = e.getValue()),
           k.Localize(`#CurrencyCodeDescription_${(0, m.M1)(n)}`)
         );
         var n;
       }
-      function z(e) {
+      function y(e) {
         const n = e.getValue(),
           i = (0, m.mG)(n),
           t = k.Localize(`#Region_Pricing_Tooltip_${i}`);
@@ -120,9 +120,9 @@
           children: [i, " ", (0, r.jsx)(S.o, { tooltip: t })],
         });
       }
-      var D = i(82314),
-        f = i(32232),
-        w = i.n(f),
+      var z = i(82314),
+        D = i(32232),
+        w = i.n(D),
         v = i(64753),
         R = i(64238),
         L = i.n(R),
@@ -136,8 +136,8 @@
         U = i(9154),
         O = i(61859),
         Y = i(33299),
-        G = i(87641),
-        B = i(95582),
+        B = i(87641),
+        G = i(95582),
         $ = i(10754),
         K = i(96434),
         M = i.n(K),
@@ -464,10 +464,10 @@
           : null;
       }
       const Se = (0, h.FB)();
-      function ye(e) {
+      function fe(e) {
         const { nPackageID: n, appids: i } = e,
           t = (0, H.Zz)();
-        (0, G.h)(t);
+        (0, B.h)(t);
         const c = (0, W.cK)(),
           a = Number.parseInt(n);
         (0, p.cT)();
@@ -497,7 +497,7 @@
               }),
               (0, r.jsx)("div", {
                 className: "",
-                children: (0, r.jsx)(ze, {
+                children: (0, r.jsx)(ye, {
                   nPackageID: a,
                   appids: i.map(Number.parseInt),
                 }),
@@ -506,7 +506,7 @@
           }),
         });
       }
-      function ze(e) {
+      function ye(e) {
         const { nPackageID: n, appids: i } = e,
           c = (0, p.cT)(),
           {
@@ -667,7 +667,7 @@
                                     "#PricingDashboard_Select_Price",
                                   ),
                                 }),
-                                (0, r.jsx)(De, { usdRow: a[P.CS] }),
+                                (0, r.jsx)(ze, { usdRow: a[P.CS] }),
                               ],
                             }),
                             (0, r.jsxs)(d.s, {
@@ -687,7 +687,7 @@
                                     }),
                                   ],
                                 }),
-                                (0, r.jsx)(fe, {
+                                (0, r.jsx)(De, {
                                   nPackageID: n,
                                   oPricingGuideline: c,
                                 }),
@@ -711,7 +711,7 @@
                         Se.accessor("eCurrencyCode", {
                           header: (0, O.we)("#PackagePricing_Col_Currency"),
                           size: 200,
-                          cell: y,
+                          cell: f,
                         }),
                         ...k,
                       ],
@@ -730,12 +730,12 @@
                         Se.accessor("eRegionCode", {
                           header: (0, O.we)("#PackagePricing_Col_Region"),
                           size: 200,
-                          cell: z,
+                          cell: y,
                         }),
                         Se.accessor("eCurrencyCode", {
                           header: (0, O.we)("#PackagePricing_Col_Currency"),
                           size: 100,
-                          cell: y,
+                          cell: f,
                         }),
                         ...k,
                       ],
@@ -760,7 +760,7 @@
                           Se.accessor("eCurrencyCode", {
                             header: (0, O.we)("#PackagePricing_Col_Currency"),
                             size: 100,
-                            cell: y,
+                            cell: f,
                           }),
                           ...k,
                         ],
@@ -775,10 +775,10 @@
               ],
             });
       }
-      function De(e) {
+      function ze(e) {
         const { usdRow: n } = e,
           { fnApplyGuidelines: i } = (0, p.gC)((0, H.$i)());
-        return (0, r.jsx)(D.e, {
+        return (0, r.jsx)(z.e, {
           strButton: x.g.Localize("#PricingDashboard_Select_Price_button"),
           strTooltip: x.g.Localize(
             "#PricingDashboard_Select_Price_button_ttip",
@@ -793,7 +793,7 @@
           bCanSetToFree: n.bCanSetToFree,
         });
       }
-      function fe(e) {
+      function De(e) {
         const { nPackageID: n, oPricingGuideline: i } = e,
           [t, c, a] = (0, v.uD)(),
           s = (0, v.CH)();
@@ -807,7 +807,7 @@
             }),
             (0, r.jsx)(U.EN, {
               active: t,
-              children: (0, r.jsx)(B.i, {
+              children: (0, r.jsx)(G.i, {
                 closeModal: a,
                 fnOnApply: s,
                 singlePackage: !0,
@@ -828,7 +828,7 @@
                   children: (0, r.jsx)(o.X, {
                     config: {
                       "packageadmin-price-editor": (e) =>
-                        (0, r.jsx)(ye, { ...e }),
+                        (0, r.jsx)(fe, { ...e }),
                     },
                   }),
                 }),
@@ -841,26 +841,42 @@
     },
     28491: (e, n, i) => {
       "use strict";
-      i.d(n, { Y: () => d });
+      i.d(n, { W: () => h, Y: () => l });
       var r = i(7850),
         t = i(50122),
         c = i(20187),
         a = i(11526),
         s = i(45699),
-        o = i(78327);
-      function d(e) {
-        const { underline: n = "auto", focusable: i, navProps: c, ...d } = e,
-          g = (0, o.Qn)(),
-          h = i ?? c?.focusable ?? !!d.href,
-          u = (0, a.mz)({ ...d, underline: n, className: t.TextLink }, l);
-        return g && (h || c)
+        o = i(39479),
+        d = i(78327);
+      function l(e) {
+        const { underline: n = "auto", focusable: i, navProps: c, ...o } = e,
+          l = (0, d.Qn)(),
+          h = i ?? c?.focusable ?? !!o.href,
+          u = (0, a.mz)({ ...o, underline: n, className: t.TextLink }, g);
+        return l && (h || c)
           ? (0, r.jsx)(s.Ii, { ...u, ...(c || {}), focusable: h })
           : (0, r.jsx)("a", { ...u });
       }
-      const l = [
+      const g = [
         ...c.Ae,
         { prop: "underline", className: (e) => t[`Underline-${e}`] },
       ];
+      function h(e) {
+        const { underline: n = "auto", focusable: i, navProps: c, ...s } = e,
+          l = (0, d.Qn)(),
+          h = i ?? c?.focusable ?? !!s.onClick,
+          u = (0, r.jsx)("span", {
+            role: "button",
+            ...(0, a.mz)(
+              { ...s, underline: n, className: t.TextLinkButton },
+              g,
+            ),
+          });
+        return l && (h || c)
+          ? (0, r.jsx)(o.J, { ...(c || {}), focusable: h, children: u })
+          : u;
+      }
     },
   },
 ]);

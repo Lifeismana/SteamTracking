@@ -404,8 +404,7 @@
               e.origin + e.pathname + "?" + t.toString() + e.hash
             );
           } catch (e) {
-            "dev" == i.TS.WEB_UNIVERSE &&
-              console.error("UTM parameter parsing failed:", a, e);
+            0;
           }
         return n;
       }

@@ -461,13 +461,13 @@
         RightPanel: "_1QYBs5PGw6PClZRx9WNL6z",
       };
     },
-    70760: (e, t, n) => {
+    70760: (e, n, t) => {
       "use strict";
-      n.a(
+      t.a(
         e,
         async (e, i) => {
           try {
-            n.d(t, {
+            t.d(n, {
               A$I: () => o.A$I,
               Ikc: () => o.Ikc,
               Whr: () => o.Whr,
@@ -481,10 +481,10 @@
               rLB: () => o.rLB,
               uEf: () => o.uEf,
             });
-            var s = n(61859),
-              r = n(10410),
-              a = n(62617),
-              o = n(68980);
+            var s = t(61859),
+              r = t(10410),
+              a = t(62617),
+              o = t(68980);
             const c = {
               "es-419": "es",
               "pt-br": "pt",
@@ -493,9 +493,9 @@
             };
             async function l() {
               const e = (0, s.l4)(),
-                t = e in c ? c[e] : e,
-                n = r[t];
-              a.$W(n());
+                n = e in c ? c[e] : e,
+                t = r[n];
+              a.$W(t());
             }
             await l(), i();
           } catch (d) {
@@ -505,214 +505,219 @@
         1,
       );
     },
-    84896: (e, t, n) => {
+    84896: (e, n, t) => {
       "use strict";
-      n.a(e, async (e, i) => {
+      t.a(e, async (e, i) => {
         try {
-          n.d(t, {
-            $j: () => N,
-            Bx: () => ne,
-            Er: () => W,
-            F0: () => Y,
-            FK: () => k,
-            FM: () => I,
-            J3: () => T,
+          t.d(n, {
+            $j: () => D,
+            Bx: () => oe,
+            Er: () => Q,
+            F0: () => Z,
+            FK: () => G,
+            FM: () => k,
+            J3: () => B,
             L3: () => y,
-            Q4: () => S,
-            SN: () => ie,
-            Xe: () => z,
-            aR: () => w,
-            iF: () => J,
-            kb: () => D,
-            kk: () => L,
-            l7: () => x,
-            mb: () => H,
-            nf: () => f,
-            q4: () => ee,
-            sJ: () => O,
-            ts: () => R,
-            vd: () => F,
+            Q4: () => T,
+            Rz: () => I,
+            SN: () => ce,
+            Xe: () => W,
+            aR: () => E,
+            iF: () => X,
+            kb: () => R,
+            kk: () => V,
+            l7: () => f,
+            mb: () => q,
+            nf: () => j,
+            q4: () => re,
+            sJ: () => U,
+            ts: () => M,
+            vd: () => P,
             yu: () => s,
-            zG: () => q,
+            zG: () => ne,
           });
           var s,
-            r = n(37085),
-            a = n(20194),
-            o = n(75233),
-            c = n(51614),
-            l = n(41735),
-            d = n.n(l),
-            u = n(74761),
-            p = n(90626),
-            m = n(68797),
-            h = n(78327),
-            v = n(70760),
-            _ = e([v]);
-          (v = (_.then ? (await _)() : _)[0]),
+            r = t(37085),
+            a = t(20194),
+            o = t(75233),
+            c = t(51614),
+            l = t(41735),
+            d = t.n(l),
+            u = t(74761),
+            p = t(90626),
+            m = t(68797),
+            h = t(61859),
+            v = t(78327),
+            _ = t(70760),
+            g = e([_]);
+          (_ = (g.then ? (await g)() : g)[0]),
             (function (e) {
               (e[(e.Client = 0)] = "Client"),
                 (e[(e.GameServer = 1)] = "GameServer"),
                 (e[(e.OfficialGameServer = 2)] = "OfficialGameServer");
             })(s || (s = {}));
-          const x = ["Client", "GameServer", "OfficialGameServer"];
-          function f(e) {
+          const f = ["Client", "GameServer", "OfficialGameServer"];
+          function j(e) {
             return `${e.statID}.${e.bitID}`;
           }
-          function j(e) {
+          function A(e) {
             return "ACHIEVEMENTS" === e[1].type;
           }
-          function A(e) {
+          function w(e) {
             return "ACHIEVEMENTS" !== e[1].type;
           }
-          const w = (0, p.createContext)(null);
+          const E = (0, p.createContext)(null);
           function y() {
-            return (0, p.useContext)(w);
+            return (0, p.useContext)(E);
           }
-          const E = "Stats",
-            C = "StatSchema";
-          function b(e, t = !1) {
-            const n = (0, a.I)({
-              queryKey: [E, C, e, t],
+          const C = "Stats",
+            b = "StatSchema";
+          function S(e, n = !1) {
+            return (0, a.I)({
+              queryKey: [C, b, e, n],
               queryFn: async () => {
-                let n = t ? { version: "live" } : {};
-                const i = `${h.TS.PARTNER_BASE_URL}achievements/ajaxgetstatsschema/${e}`,
-                  s = await d().get(i, { params: n, withCredentials: !0 });
-                if (s?.data?.success == r.R) return s.data.schema;
+                let t = n ? { version: "live" } : {};
+                const i = `${v.TS.PARTNER_BASE_URL}achievements/ajaxgetstatsschema/${e}`,
+                  s = await d().get(i, { params: t, withCredentials: !0 });
+                if (s?.data?.success == r.R) return s.data;
                 throw new Error(
-                  `failed to load ${t ? "live" : "draft"} stat schema for app id ${e}`,
+                  `failed to load ${n ? "live" : "draft"} stat schema for app id ${e}`,
                 );
               },
             });
-            return n.isLoading ? null : n.data;
           }
-          function S(e, t = !1) {
-            const n = b(e, t);
-            return n?.groups;
-          }
-          function N(e, t, n = !1) {
-            const i = S(e, n);
-            return i?.[t];
+          function N(e, n = !1) {
+            const t = S(e, n);
+            return t.isLoading ? null : t.data?.schema;
           }
           function I(e) {
-            const t = S(e);
-            if (!t) return [];
-            return Object.keys(t)
+            const n = S(e);
+            return n.isLoading ? void 0 : n.data?.limits;
+          }
+          function T(e, n = !1) {
+            const t = N(e, n);
+            return t?.groups;
+          }
+          function D(e, n, t = !1) {
+            const i = T(e, t);
+            return i?.[n];
+          }
+          function k(e) {
+            const n = T(e);
+            if (!n) return [];
+            return Object.keys(n)
               .map((e) => ({
                 groupid: e,
-                sortid: v.auy.number().default(0).parse(t[e].order),
-                ...t[e],
+                sortid: _.auy.number().default(0).parse(n[e].order),
+                ...n[e],
               }))
-              .sort((e, t) => e.sortid - t.sortid)
+              .sort((e, n) => e.sortid - n.sortid)
               .map((e) => e);
           }
-          function T(e, t = !1) {
-            const n = b(e, t);
-            return n?.stats
-              ? Object.entries(n.stats)
-                  .filter(A)
-                  .map(([e, t]) => ({ ...t, statID: e }))
+          function B(e, n = !1) {
+            const t = N(e, n);
+            return t?.stats
+              ? Object.entries(t.stats)
+                  .filter(w)
+                  .map(([e, n]) => ({ ...n, statID: e }))
               : void 0;
           }
-          function D(e, t = !1) {
-            const n = b(e, t);
-            return n?.stats
-              ? Object.entries(n.stats)
-                  .filter(j)
-                  .flatMap(([e, t]) =>
-                    Object.entries(t.bits).map(([t, n]) => ({
-                      ...n,
+          function R(e, n = !1) {
+            const t = N(e, n);
+            return t?.stats
+              ? Object.entries(t.stats)
+                  .filter(A)
+                  .flatMap(([e, n]) =>
+                    Object.entries(n.bits).map(([n, t]) => ({
+                      ...t,
                       statID: e,
-                      bitID: t,
+                      bitID: n,
                     })),
                   )
               : void 0;
           }
-          function k(e, t, n = !1) {
-            const i = b(e, n);
+          function G(e, n, t = !1) {
+            const i = N(e, t);
             return i?.stats
               ? Object.entries(i.stats)
-                  .filter(j)
-                  .flatMap(([e, n]) =>
-                    Object.entries(n.bits)
-                      .filter(([e, n]) => (!t && !n.groupid) || t === n.groupid)
-                      .map(([t, n]) => ({ ...n, statID: e, bitID: t })),
+                  .filter(A)
+                  .flatMap(([e, t]) =>
+                    Object.entries(t.bits)
+                      .filter(([e, t]) => (!n && !t.groupid) || n === t.groupid)
+                      .map(([n, t]) => ({ ...t, statID: e, bitID: n })),
                   )
               : void 0;
           }
-          const B = "AppLanguageList";
-          function R(e) {
-            const t = (0, a.I)({
-              queryKey: [E, B, e],
+          const L = "AppLanguageList";
+          function M(e) {
+            const n = (0, a.I)({
+              queryKey: [C, L, e],
               queryFn: async () => {
-                const t = `${h.TS.PARTNER_BASE_URL}achievements/ajaxgetlanguagelist/${e}`,
-                  n = await d().get(t, { withCredentials: !0 });
-                if (n?.data?.success == r.R)
-                  return n.data.languages.sort((e, t) => e.localeCompare(t));
+                const n = `${v.TS.PARTNER_BASE_URL}achievements/ajaxgetlanguagelist/${e}`,
+                  t = await d().get(n, { withCredentials: !0 });
+                if (t?.data?.success == r.R)
+                  return t.data.languages.sort((e, n) => e.localeCompare(n));
                 throw new Error(`failed to load language list for app id ${e}`);
               },
             });
-            return t.isLoading ? ["english"] : t.data;
+            return n.isLoading ? ["english"] : n.data;
           }
-          async function G(e, t) {
-            const n = `${h.TS.PARTNER_BASE_URL}achievements/ajaxsetlanguagelist/${e}`,
+          async function F(e, n) {
+            const t = `${v.TS.PARTNER_BASE_URL}achievements/ajaxsetlanguagelist/${e}`,
               i = new FormData();
-            i.append("languages", JSON.stringify(t));
-            try {
-              const e = await d().post(n, i, { withCredentials: !0 });
-              if (e?.data?.success == r.R) return !0;
-              throw new Error("failed to set language list");
-            } catch (e) {
-              const t = (0, m.H)(e);
-              console.error("updateLanguageList failed: ", t.strErrorMsg, t);
-            }
+            return (
+              i.append("languages", JSON.stringify(n)),
+              await K("updateLanguageList", t, i),
+              !0
+            );
           }
-          function L(e) {
-            const t = (0, o.jE)();
+          function V(e) {
+            const n = (0, o.jE)();
             return (0, c.n)({
-              mutationFn: async (t) => await G(e, t),
+              mutationFn: async (n) => await F(e, n),
               onSuccess: async () => {
-                await t.invalidateQueries({ queryKey: [E, B, e] });
+                await n.invalidateQueries({ queryKey: [C, L, e] });
               },
             });
           }
-          const M = "AppLanguageOptionsList";
-          function F(e) {
-            const t = (0, a.I)({
-              queryKey: [E, M, e],
+          const O = "AppLanguageOptionsList";
+          function P(e) {
+            const n = (0, a.I)({
+              queryKey: [C, O, e],
               queryFn: async () => {
-                const t = `${h.TS.PARTNER_BASE_URL}achievements/ajaxgetlanguageoptionslist/${e}`,
-                  n = await d().get(t, { withCredentials: !0 });
-                if (n?.data?.success == r.R)
-                  return n.data.languages.sort((e, t) => e.localeCompare(t));
+                const n = `${v.TS.PARTNER_BASE_URL}achievements/ajaxgetlanguageoptionslist/${e}`,
+                  t = await d().get(n, { withCredentials: !0 });
+                if (t?.data?.success == r.R)
+                  return t.data.languages.sort((e, n) => e.localeCompare(n));
                 throw new Error(
                   `failed to load language options list for app id ${e}`,
                 );
               },
             });
-            return t.isLoading ? ["english"] : t.data;
+            return n.isLoading ? ["english"] : n.data;
           }
-          const V = "AppDLCList";
-          function O(e) {
-            const t = (0, a.I)({
-              queryKey: [E, V, e],
+          const z = "AppDLCList";
+          function U(e) {
+            const n = (0, a.I)({
+              queryKey: [C, z, e],
               queryFn: async () => {
-                const t = `${h.TS.PARTNER_BASE_URL}achievements/ajaxgetdlc/${e}`,
-                  n = await d().get(t, { withCredentials: !0 });
-                if (n?.data?.success == r.R) return n.data.dlc;
+                const n = `${v.TS.PARTNER_BASE_URL}achievements/ajaxgetdlc/${e}`,
+                  t = await d().get(n, { withCredentials: !0 });
+                if (t?.data?.success == r.R) return t.data.dlc;
                 throw new Error(`failed to load dlc for app id ${e}`);
               },
             });
-            return t.isLoading ? [] : t.data;
+            return n.isLoading ? [] : n.data;
           }
-          const P = "AppInfo";
-          function z(e) {
-            const t = (0, a.I)({
-              queryKey: [E, P, e],
+          const H = "AppInfo";
+          function W(e) {
+            const n = (0, a.I)({
+              queryKey: [C, H, e],
               queryFn: async () => {
-                const t = `${h.TS.PARTNER_BASE_URL}achievements/ajaxgetappinfo/${e}`,
-                  n = await d().get(t, { withCredentials: !0 });
-                if (n?.data?.success == r.R) return n.data.app;
-                if (n?.data?.success == r.Qo)
+                const n = `${v.TS.PARTNER_BASE_URL}achievements/ajaxgetappinfo/${e}`,
+                  t = await d().get(n, { withCredentials: !0 });
+                if (t?.data?.success == r.R) return t.data.app;
+                if (t?.data?.success == r.Qo)
                   return {
                     appid: e.toString(),
                     type: "Game",
@@ -725,186 +730,160 @@
                 throw new Error(`failed to load app info for app id ${e}`);
               },
             });
-            return t.isLoading ? null : t.data;
+            return n.isLoading ? null : n.data;
           }
-          async function U(e, t, n) {
-            const i = `${h.TS.PARTNER_BASE_URL}achievements/ajaxcreateorupdategroup/${e}`,
+          function Y(e, n) {
+            const { strErrorMsg: t, errorCode: i } = (0, m.H)(n);
+            console.error(`${e} failed: `, i, t, n);
+            const s = n?.data?.error;
+            return i == r.TE && s
+              ? new Error(s)
+              : i == r.VB
+                ? new Error(
+                    (0, h.we)(
+                      "#AchievementEditor_Achievement_Edit_ApiName_Error_Duplicate",
+                    ),
+                  )
+                : new Error(
+                    (0, h.we)("#AchievementEditor_Error_RequestFailed"),
+                  );
+          }
+          async function K(e, n, t) {
+            let i;
+            try {
+              i = await d().post(n, t, { withCredentials: !0 });
+            } catch (n) {
+              throw Y(e, n);
+            }
+            if (i?.data?.success != r.R) throw Y(e, i);
+            return i.data;
+          }
+          async function J(e, n, t) {
+            const i = `${v.TS.PARTNER_BASE_URL}achievements/ajaxcreateorupdategroup/${e}`,
               s = new FormData();
-            s.append("groupid", t),
-              s.append("name", JSON.stringify(n.name)),
-              n.dlcappid && s.append("requiredappid", n.dlcappid),
-              s.append("isarchived", "1" == n.archived ? "true" : "false"),
+            s.append("groupid", n),
+              s.append("name", JSON.stringify(t.name)),
+              t.dlcappid && s.append("requiredappid", t.dlcappid),
+              s.append("isarchived", "1" == t.archived ? "true" : "false"),
               s.append(
                 "isdeveloperonly",
-                "1" == n.developeronly ? "true" : "false",
+                "1" == t.developeronly ? "true" : "false",
               ),
-              s.append("order", n.order ?? "-1");
-            try {
-              const e = await d().post(i, s, { withCredentials: !0 });
-              if (e?.data?.success == r.R) return e.data.groupid;
-              throw new Error(`failed to save group id ${t}`);
-            } catch (e) {
-              const t = (0, m.H)(e);
-              console.error("useStatGroupMutation failed: ", t.strErrorMsg, t);
-            }
+              s.append("order", t.order ?? "-1");
+            return (await K("addOrUpdateStatGroup", i, s)).groupid;
           }
-          function H(e, t) {
-            const n = (0, o.jE)();
+          function q(e, n) {
+            const t = (0, o.jE)();
             return (0, c.n)({
-              mutationFn: async (n) => await U(e, t, n),
+              mutationFn: async (t) => await J(e, n, t),
               onSuccess: async () => {
-                await n.invalidateQueries({ queryKey: [E, C, e, !1] });
+                await t.invalidateQueries({ queryKey: [C, b, e, !1] });
               },
             });
           }
-          function W(e) {
-            const t = (0, o.jE)();
+          function Q(e) {
+            const n = (0, o.jE)();
             return (0, c.n)({
-              mutationFn: async (t) => {
-                for (const n of t) {
-                  if (void 0 === (await U(e, n.groupid, n.group))) return !1;
-                }
+              mutationFn: async (n) => {
+                for (const t of n) await J(e, t.groupid, t.group);
                 return !0;
               },
               onSuccess: async () => {
-                await t.invalidateQueries({ queryKey: [E, C, e, !1] });
+                await n.invalidateQueries({ queryKey: [C, b, e, !1] });
               },
             });
           }
-          function Y(e, t) {
-            const n = (0, o.jE)();
+          function Z(e, n) {
+            const t = (0, o.jE)();
             return (0, c.n)({
               mutationFn: async () => {
-                try {
-                  const n = `${h.TS.PARTNER_BASE_URL}achievements/ajaxdeletegroup/${e}`,
-                    i = new FormData();
-                  i.append("appid", e.toString()), i.append("groupid", t);
-                  const s = await d().post(n, i, { withCredentials: !0 });
-                  if (s?.data?.success == r.R) return !0;
-                  throw new Error(`failed to delete group with group id ${t}`);
-                } catch (e) {
-                  const t = (0, m.H)(e);
-                  console.error("StatGroupDelete failed: ", t.strErrorMsg, t);
-                }
-                return !1;
+                const t = `${v.TS.PARTNER_BASE_URL}achievements/ajaxdeletegroup/${e}`,
+                  i = new FormData();
+                return (
+                  i.append("appid", e.toString()),
+                  i.append("groupid", n),
+                  await K("deleteStatGroup", t, i),
+                  !0
+                );
               },
               onSuccess: async () => {
-                await n.invalidateQueries({ queryKey: [E, C, e, !1] });
+                await t.invalidateQueries({ queryKey: [C, b, e, !1] });
               },
             });
           }
-          async function K(e, t) {
-            const n = new FormData();
-            n.append("appid", e.toString()),
-              n.append("groupids", JSON.stringify(t));
-            try {
-              const t = `${h.TS.PARTNER_BASE_URL}achievements/ajaxreordergroups/${e}`,
-                i = await d().post(t, n, { withCredentials: !0 });
-              if (i?.data?.success == r.R) return !0;
-              throw new Error("failed to reorder groups");
-            } catch (e) {
-              const t = (0, m.H)(e);
-              console.error("reorderGroups failed: ", t.strErrorMsg, t);
-            }
-            return !1;
+          async function $(e, n) {
+            const t = new FormData();
+            t.append("appid", e.toString()),
+              t.append("groupids", JSON.stringify(n));
+            const i = `${v.TS.PARTNER_BASE_URL}achievements/ajaxreordergroups/${e}`;
+            return await K("reorderGroups", i, t), !0;
           }
-          function J(e) {
-            S(e);
-            const t = (0, o.jE)();
+          function X(e) {
+            T(e);
+            const n = (0, o.jE)();
             return (0, c.n)({
-              mutationFn: async (t) => await K(e, t),
+              mutationFn: async (n) => await $(e, n),
               onSuccess: async () => {
-                await t.invalidateQueries({ queryKey: [E, C, e, !1] });
+                await n.invalidateQueries({ queryKey: [C, b, e, !1] });
               },
             });
           }
-          async function Q(e, t, n) {
+          async function ee(e, n, t) {
             const i = new FormData();
             i.append("appid", e.toString()),
-              i.append("groupid", (t ?? 0).toString()),
-              i.append("names", JSON.stringify(n));
-            try {
-              const n = `${h.TS.PARTNER_BASE_URL}achievements/ajaxmoveachievements/${e}`,
-                s = await d().post(n, i, { withCredentials: !0 });
-              if (s?.data?.success == r.R) return !0;
-              throw new Error(`failed to move achievements to group ${t}`);
-            } catch (e) {
-              const t = (0, m.H)(e);
-              console.error("moveAchievementsGroup failed: ", t.strErrorMsg, t);
-            }
-            return !1;
+              i.append("groupid", (n ?? 0).toString()),
+              i.append("names", JSON.stringify(t));
+            const s = `${v.TS.PARTNER_BASE_URL}achievements/ajaxmoveachievements/${e}`;
+            return await K("moveAchievementsGroup", s, i), !0;
           }
-          function q(e) {
-            const t = (0, o.jE)();
+          function ne(e) {
+            const n = (0, o.jE)();
             return (0, c.n)({
-              mutationFn: async (t) => {
-                const { groupid: n, api_names: i } = t;
-                return await Q(e, n, i);
+              mutationFn: async (n) => {
+                const { groupid: t, api_names: i } = n;
+                return await ee(e, t, i);
               },
               onSuccess: async () => {
-                await t.invalidateQueries({ queryKey: [E, C, e, !1] });
+                await n.invalidateQueries({ queryKey: [C, b, e, !1] });
               },
             });
           }
-          var g;
-          async function Z(e, t, n, i, s) {
-            const [a, o, c] = s.match(/data:(image\/\w+);base64,(.*)/),
-              l = u.hp.from(c, "base64"),
-              p = "image/png" === o ? "png" : "jpg",
-              v = `${e.toString()}_${t}_${n}_${i == g.Achieved ? "a" : "g"}.${p}`,
-              _ = new File([l], v, { type: o }),
-              x = new FormData();
-            x.append("appID", e.toString()),
-              x.append("statID", t),
-              x.append("bit", n),
-              x.append("requestType", i.toString()),
-              x.append("image", _);
-            try {
-              const e = `${h.TS.PARTNER_BASE_URL}images/uploadachievement`,
-                i = await d().post(e, x, { withCredentials: !0 });
-              if (i?.data?.success == r.R) return !0;
-              throw new Error(
-                `failed to save achievement image with stat id ${t} and bit id ${n}`,
-              );
-            } catch (e) {
-              const t = (0, m.H)(e);
-              console.error(
-                "AchievementImageUpload failed: ",
-                t.strErrorMsg,
-                t,
-              );
-            }
-            return !1;
+          var x;
+          async function te(e, n, t, i, s) {
+            const [r, a, o] = s.match(/data:(image\/\w+);base64,(.*)/),
+              c = u.hp.from(o, "base64"),
+              l = "image/png" === a ? "png" : "jpg",
+              d = `${e.toString()}_${n}_${t}_${i == x.Achieved ? "a" : "g"}.${l}`,
+              p = new File([c], d, { type: a }),
+              m = new FormData();
+            m.append("appID", e.toString()),
+              m.append("statID", n),
+              m.append("bit", t),
+              m.append("requestType", i.toString()),
+              m.append("image", p);
+            const h = `${v.TS.PARTNER_BASE_URL}images/uploadachievement`;
+            await K("AchievementImageUpload", h, m);
           }
-          async function $(e, t, n, i, s) {
-            let r = !0;
-            if (
-              (i &&
-                i.startsWith("data:") &&
-                (r = r && (await Z(e, t, n, g.Achieved, i))),
+          async function ie(e, n, t, i, s) {
+            i && i.startsWith("data:") && (await te(e, n, t, x.Achieved, i)),
               s &&
                 s.startsWith("data:") &&
-                (r = r && (await Z(e, t, n, g.Unachieved, s))),
-              !r)
-            )
-              throw new Error(
-                `Failed to save images for achievement with stat id ${t} and bit id ${n}`,
-              );
+                (await te(e, n, t, x.Unachieved, s));
           }
-          async function X(e, t) {
+          async function se(e, n) {
             const {
-              statID: n,
+              statID: t,
               bitID: i,
               achievement: s,
               icon: a,
               icon_gray: o,
-            } = t;
-            if (!s && n && i)
+            } = n;
+            if (!s && t && i)
               return (
-                await $(e, n, i, a, o), { success: r.R, statid: n, bitid: i }
+                await ie(e, t, i, a, o), { success: r.R, statid: t, bitid: i }
               );
             const c = new FormData();
-            n && c.append("statid", n),
+            t && c.append("statid", t),
               i && c.append("bitid", i),
               s.groupid && c.append("groupid", s.groupid),
               c.append("name", s.name),
@@ -920,131 +899,104 @@
                   c.append("displayname", JSON.stringify(s.display.name)),
                 s.display.desc &&
                   c.append("displaydesc", JSON.stringify(s.display.desc)));
-            try {
-              const t = `${h.TS.PARTNER_BASE_URL}achievements/ajaxcreateorupdateachievement/${e}`,
-                s = await d().post(t, c, { withCredentials: !0 });
-              if (s?.data?.success == r.R) {
-                const t = s.data.statid,
-                  n = s.data.bitid;
-                return await $(e, t, n, a, o), s.data;
-              }
-              throw new Error(
-                `failed to save achievement with stat id ${n} and bit id ${i}`,
-              );
-            } catch (e) {
-              const t = (0, m.H)(e);
-              console.error(
-                "useStatAchievementMutation failed: ",
-                t.strErrorMsg,
-                t,
-              );
-            }
+            const l = `${v.TS.PARTNER_BASE_URL}achievements/ajaxcreateorupdateachievement/${e}`,
+              d = await K("addOrUpdateAchievement", l, c);
+            return await ie(e, d.statid, d.bitid, a, o), d;
           }
-          function ee(e, t, n) {
+          function re(e, n, t) {
             const i = (0, o.jE)();
             return (0, c.n)({
               mutationFn: async (i) =>
-                await X(e, { statID: t, bitID: n, ...i }),
+                await se(e, { statID: n, bitID: t, ...i }),
               onSuccess: async () => {
-                await i.invalidateQueries({ queryKey: [E, C, e, !1] });
+                await i.invalidateQueries({ queryKey: [C, b, e, !1] });
               },
             });
           }
-          async function te(e, t) {
-            const { statID: n, bitID: i } = t;
-            try {
-              const t = `${h.TS.PARTNER_BASE_URL}achievements/ajaxdeleteachievement/${e}`,
-                s = new FormData();
-              s.append("appid", e.toString()),
-                s.append("statid", n),
-                s.append("bitid", i);
-              const a = await d().post(t, s, { withCredentials: !0 });
-              if (a?.data?.success == r.R) return !0;
-              throw new Error(
-                `failed to delete achievement with stat id ${n} and bit id ${i}`,
-              );
-            } catch (e) {
-              const t = (0, m.H)(e);
-              console.error("AchievementDelete failed: ", t.strErrorMsg, t);
-            }
-            return !1;
+          async function ae(e, n) {
+            const { statID: t, bitID: i } = n,
+              s = `${v.TS.PARTNER_BASE_URL}achievements/ajaxdeleteachievement/${e}`,
+              r = new FormData();
+            return (
+              r.append("appid", e.toString()),
+              r.append("statid", t),
+              r.append("bitid", i),
+              await K("deleteAchievement", s, r),
+              !0
+            );
           }
-          function ne(e, t, n) {
+          function oe(e, n, t) {
             const i = (0, o.jE)();
             return (0, c.n)({
-              mutationFn: async () => await te(e, { statID: t, bitID: n }),
+              mutationFn: async () => await ae(e, { statID: n, bitID: t }),
               onSuccess: async () => {
-                await i.invalidateQueries({ queryKey: [E, C, e, !1] });
+                await i.invalidateQueries({ queryKey: [C, b, e, !1] });
               },
             });
           }
-          function ie(e) {
-            const t = (0, o.jE)();
+          function ce(e) {
+            const n = (0, o.jE)();
             return (0, c.n)({
-              mutationFn: async (t) => {
-                for (const n of t.addOrUpdate ?? []) {
-                  if ((await X(e, n)).success != r.R) return !1;
-                }
-                for (const n of t.delete ?? []) {
-                  if (!(await te(e, n))) return !1;
-                }
+              mutationFn: async (n) => {
+                for (const t of n.addOrUpdate ?? []) await se(e, t);
+                for (const t of n.delete ?? []) await ae(e, t);
                 return !0;
               },
               onSuccess: async () => {
-                await t.invalidateQueries({ queryKey: [E, C, e, !1] });
+                await n.invalidateQueries({ queryKey: [C, b, e, !1] });
               },
             });
           }
           !(function (e) {
             (e.Achieved = "achievement"), (e.Unachieved = "achievement_gray");
-          })(g || (g = {})),
+          })(x || (x = {})),
             i();
-        } catch (se) {
-          i(se);
+        } catch (le) {
+          i(le);
         }
       });
     },
-    21632: (e, t, n) => {
+    21632: (e, n, t) => {
       "use strict";
-      n.a(e, async (e, i) => {
+      t.a(e, async (e, i) => {
         try {
-          n.d(t, { V: () => T });
-          var s = n(7850),
-            r = n(83392),
-            a = n(20187),
-            o = n(53965),
-            c = n(57757),
-            l = n(90534),
-            d = n(84896),
-            u = n(90626),
-            p = n(10435),
-            m = n(12155),
-            h = n(52038),
-            v = n(61859),
-            _ = n(70427),
-            g = n(44752),
-            x = n(64563),
-            f = n(59330),
-            j = n(91661),
-            A = n(21261),
-            w = n(24369),
-            y = n(33551),
-            E = n.n(y),
-            C = n(61023),
-            b = n(32754),
+          t.d(n, { V: () => T });
+          var s = t(7850),
+            r = t(83392),
+            a = t(20187),
+            o = t(53965),
+            c = t(57757),
+            l = t(90534),
+            d = t(84896),
+            u = t(90626),
+            p = t(10435),
+            m = t(12155),
+            h = t(52038),
+            v = t(61859),
+            _ = t(70427),
+            g = t(44752),
+            x = t(64563),
+            f = t(59330),
+            j = t(91661),
+            A = t(21261),
+            w = t(24369),
+            E = t(33551),
+            y = t.n(E),
+            C = t(61023),
+            b = t(32754),
             S = e([d, g, x, f, j, A]);
-          function N(e, t, n, i, s) {
-            return (i && e in i) || (n && e in n && B(t[e], n[e], s));
+          function N(e, n, t, i, s) {
+            return (i && e in i) || (t && e in t && B(n[e], t[e], s));
           }
           function I() {
             const {
                 generateUnachievedImages: e,
-                setGenerateUnachievedImages: t,
+                setGenerateUnachievedImages: n,
               } = (0, j.Mt)(),
-              { appID: n } = (0, d.L3)(),
-              i = (0, d.kb)(n),
-              l = (0, d.FM)(n),
-              p = (0, d.ts)(n),
+              { appID: t } = (0, d.L3)(),
+              i = (0, d.kb)(t),
+              l = (0, d.FM)(t),
+              p = (0, d.ts)(t),
               [m, h] = (0, u.useState)(!1),
               _ = "dull-7",
               x = "blue-8";
@@ -1082,7 +1034,7 @@
                         (0, s.jsxs)(o.$, {
                           color: "dull",
                           onClick: () => {
-                            (0, g.le)(n, i);
+                            (0, g.le)(t, i);
                           },
                           children: [
                             (0, s.jsx)(Z, {}),
@@ -1172,7 +1124,7 @@
                             (0, s.jsxs)(o.$, {
                               color: "dull",
                               onClick: () => {
-                                (0, g.CD)(n, i, p);
+                                (0, g.CD)(t, i, p);
                               },
                               children: [
                                 (0, s.jsx)(Z, {}),
@@ -1235,7 +1187,7 @@
                         (0, s.jsxs)(o.$, {
                           color: "dull",
                           onClick: () => {
-                            (0, g.jF)(n, l, p);
+                            (0, g.jF)(t, l, p);
                           },
                           children: [
                             (0, s.jsx)(Z, {}),
@@ -1287,7 +1239,7 @@
                       marginBottom: "2",
                       children: (0, s.jsx)(c.S, {
                         checked: e,
-                        onChange: (e) => t(e),
+                        onChange: (e) => n(e),
                         children: (0, s.jsxs)(s.Fragment, {
                           children: [
                             (0, v.we)(
@@ -1309,44 +1261,46 @@
             });
           }
           function T(e) {
-            const { onClose: t, setHasChanges: n } = e;
+            const { onClose: n, setHasChanges: t } = e;
             return (0, s.jsx)(j.FU, {
-              onClose: t,
-              setHasChanges: n,
+              onClose: n,
+              setHasChanges: t,
               children: (0, s.jsx)(k, {}),
             });
           }
           function D(e) {
-            const { title: t, description: n, children: i } = e;
+            const { title: n, description: t, children: i } = e;
             return (0, s.jsxs)("div", {
               className: _.BulkEditSection,
               children: [
-                (0, s.jsx)("h2", { children: t }),
-                (0, s.jsx)("p", { children: n }),
+                (0, s.jsx)("h2", { children: n }),
+                (0, s.jsx)("p", { children: t }),
                 i,
               ],
             });
           }
           function k() {
             const {
-              files: e,
-              hasData: t,
-              acceptedTypes: n,
-              fileInputRef: i,
-              uploadFiles: r,
-              openFilePicker: a,
-              save: c,
-              isSaving: d,
-              saveSucceeded: u,
-              onClose: p,
-            } = (0, j.Mt)();
+                files: e,
+                hasData: n,
+                acceptedTypes: t,
+                fileInputRef: i,
+                uploadFiles: r,
+                openFilePicker: a,
+                save: c,
+                isSaving: d,
+                saveError: p,
+                saveSucceeded: m,
+                onClose: g,
+              } = (0, j.Mt)(),
+              [x, E] = (0, u.useState)(void 0);
             return (0, s.jsxs)("div", {
               className: (0, h.A)(_.Takeover, _.BulkEdit),
               children: [
-                u &&
+                m &&
                   (0, s.jsx)(A.TM, {
                     hideCancelButton: !0,
-                    onOk: p,
+                    onOk: g,
                     children: (0, v.we)("#AchievementEditor_Bulk_Save_Confirm"),
                   }),
                 (0, s.jsx)(I, {}),
@@ -1355,10 +1309,11 @@
                   children: [
                     (0, s.jsx)(w.z, {
                       className: _.BulkUploadFileDropBox,
-                      accept: n,
+                      accept: t,
                       multiple: !0,
                       fileInputRef: i,
                       onUpload: r,
+                      onError: E,
                       children: (0, s.jsx)("div", {
                         className: _.UploadPlaceholder,
                         children: (0, v.we)(
@@ -1366,6 +1321,7 @@
                         ),
                       }),
                     }),
+                    !!x && (0, s.jsx)(A.r3, { text: x }),
                     (0, s.jsx)("div", {
                       className: _.ButtonContainer,
                       children: (0, s.jsx)(o.$, {
@@ -1384,7 +1340,7 @@
                         ),
                         children: (0, s.jsx)(Y, {}),
                       }),
-                    t &&
+                    n &&
                       (0, s.jsxs)(D, {
                         title: (0, v.we)(
                           "#AchievementEditor_Bulk_Pending_Title",
@@ -1405,27 +1361,32 @@
                       }),
                   ],
                 }),
-                t &&
-                  (0, s.jsx)(A.Aj, { pending: d, hideCancel: !0, onSave: c }),
+                n &&
+                  (0, s.jsx)(A.Aj, {
+                    pending: d,
+                    error: p,
+                    hideCancel: !0,
+                    onSave: c,
+                  }),
               ],
             });
           }
-          function B(e, t, n) {
+          function B(e, n, t) {
             if (!e) return !0;
-            const i = (e, t) => (e < t ? -1 : e > t ? 1 : 0),
-              s = (0, g.pC)(e, n).sort((e, t) => i(e.field, t.field)),
-              r = R(t, n).sort((e, t) => i(e.field, t.field));
-            return !E()(s, r);
+            const i = (e, n) => (e < n ? -1 : e > n ? 1 : 0),
+              s = (0, g.pC)(e, t).sort((e, n) => i(e.field, n.field)),
+              r = R(n, t).sort((e, n) => i(e.field, n.field));
+            return !y()(s, r);
           }
-          function R(e, t) {
-            const n = t.reduce((e, t) => ((e[t] = ""), e), {});
-            return e.map((e) => ({ ...n, ...e }));
+          function R(e, n) {
+            const t = n.reduce((e, n) => ((e[n] = ""), e), {});
+            return e.map((e) => ({ ...t, ...e }));
           }
           function G() {
             const {
                 definitions: e,
-                localization: t,
-                images: n,
+                localization: n,
+                images: t,
                 confirmDelete: i,
                 setConfirmDelete: r,
               } = (0, j.Mt)(),
@@ -1437,12 +1398,12 @@
                 unmodified: p,
                 deleted: m,
               } = e,
-              { localization: x } = t ?? {},
+              { localization: x } = n ?? {},
               { appID: f } = (0, d.L3)(),
               A = (0, d.ts)(f),
-              w = (e) => N(e, o, x, n, A),
-              y = [...u, ...p.filter(w)],
-              E = p.filter((e) => !w(e));
+              w = (e) => N(e, o, x, t, A),
+              E = [...u, ...p.filter(w)],
+              y = p.filter((e) => !w(e));
             return (0, s.jsxs)("div", {
               className: _.ResultsContainer,
               children: [
@@ -1466,39 +1427,39 @@
                         description: (0, v.we)(
                           "#AchievementEditor_AchievementCsvImport_Added_Description",
                         ),
-                        children: l.map((e, t) =>
+                        children: l.map((e, n) =>
                           (0, s.jsx)(
                             U,
                             {
                               data: a[e],
                               localization: x?.[e],
-                              images: n?.[e],
+                              images: t?.[e],
                             },
-                            t,
+                            n,
                           ),
                         ),
                       }),
-                    y &&
-                      !!y.length &&
+                    E &&
+                      !!E.length &&
                       (0, s.jsx)(O, {
                         className: (0, h.A)(_.ChangeBorder, _.Modified),
                         title: (0, v.we)(
                           "#AchievementEditor_AchievementCsvImport_Modified_Title",
-                          y.length,
+                          E.length,
                         ),
                         description: (0, v.we)(
                           "#AchievementEditor_AchievementCsvImport_Modified_Description",
                         ),
-                        children: y.map((e, t) =>
+                        children: E.map((e, n) =>
                           (0, s.jsx)(
                             U,
                             {
                               achievement: o[e],
                               data: a?.[e] || (0, g.oK)(o[e]),
                               localization: x?.[e],
-                              images: n?.[e],
+                              images: t?.[e],
                             },
-                            t,
+                            n,
                           ),
                         ),
                       }),
@@ -1527,39 +1488,39 @@
                             ),
                           }),
                         }),
-                        children: m.map((e, t) =>
+                        children: m.map((e, n) =>
                           (0, s.jsx)(
                             U,
                             {
                               achievement: o[e],
                               data: (0, g.oK)(o[e]),
                               localization: x?.[e],
-                              images: n?.[e],
+                              images: t?.[e],
                             },
-                            t,
+                            n,
                           ),
                         ),
                       }),
-                    E &&
-                      !!E.length &&
+                    y &&
+                      !!y.length &&
                       (0, s.jsx)(P, {
                         title: (0, v.we)(
                           "#AchievementEditor_AchievementCsvImport_Unmodified_Title",
-                          E.length,
+                          y.length,
                         ),
                         description: (0, v.we)(
                           "#AchievementEditor_AchievementCsvImport_Unmodified_Description",
                         ),
-                        children: E.map((e, t) =>
+                        children: y.map((e, n) =>
                           (0, s.jsx)(
                             U,
                             {
                               achievement: o[e],
                               data: (0, g.oK)(o[e]),
                               localization: x?.[e],
-                              images: n?.[e],
+                              images: t?.[e],
                             },
-                            t,
+                            n,
                           ),
                         ),
                       }),
@@ -1583,9 +1544,9 @@
           }
           function M() {
             const { groupLocalization: e } = (0, j.Mt)(),
-              { currentLanguage: t } = (0, d.L3)().localization,
-              { csv: n, groups: i, modified: a, unmodified: o } = e ?? {};
-            if (!n) return null;
+              { currentLanguage: n } = (0, d.L3)().localization,
+              { csv: t, groups: i, modified: a, unmodified: o } = e ?? {};
+            if (!t) return null;
             const c = (e) =>
               (0, s.jsxs)("div", {
                 className: _.ImportedGroups,
@@ -1606,8 +1567,8 @@
                     ],
                   }),
                   e.map((e) => {
-                    const r = (0, g.NJ)(n[e], i[e]),
-                      a = (0, f.ZM)(i[e]?.name, t) != (0, f.ZM)(r, t);
+                    const r = (0, g.NJ)(t[e], i[e]),
+                      a = (0, f.ZM)(i[e]?.name, n) != (0, f.ZM)(r, n);
                     return (0, s.jsxs)(
                       "div",
                       {
@@ -1665,24 +1626,24 @@
             });
           }
           function F(e) {
-            const { title: t, description: n, headerChildren: i } = e;
+            const { title: n, description: t, headerChildren: i } = e;
             return (0, s.jsxs)(s.Fragment, {
               children: [
-                (0, s.jsx)(a.EY, { size: "4", contrast: "title", children: t }),
-                (0, s.jsx)(a.EY, { children: n }),
+                (0, s.jsx)(a.EY, { size: "4", contrast: "title", children: n }),
+                (0, s.jsx)(a.EY, { children: t }),
                 i,
               ],
             });
           }
           function V(e) {
-            const { className: t, children: n } = e;
+            const { className: n, children: t } = e;
             return (0, s.jsx)("div", {
-              className: (0, h.A)(_.ImportedAchievementsTableContainer, t),
-              children: n,
+              className: (0, h.A)(_.ImportedAchievementsTableContainer, n),
+              children: t,
             });
           }
           function O(e) {
-            const { children: t, className: n, ...i } = e;
+            const { children: n, className: t, ...i } = e;
             return (0, s.jsxs)(V, {
               ...e,
               children: [
@@ -1692,13 +1653,13 @@
                 }),
                 (0, s.jsxs)("div", {
                   className: _.ImportedAchievementsTable,
-                  children: [(0, s.jsx)(z, {}), t],
+                  children: [(0, s.jsx)(z, {}), n],
                 }),
               ],
             });
           }
           function P(e) {
-            const { children: t, className: n, ...i } = e,
+            const { children: n, className: t, ...i } = e,
               [r, a] = (0, u.useState)(!0);
             return (0, s.jsxs)(V, {
               ...e,
@@ -1724,7 +1685,7 @@
                     _.ImportedAchievementsTable,
                     r && _.Collapsed,
                   ),
-                  children: [(0, s.jsx)(z, {}), t],
+                  children: [(0, s.jsx)(z, {}), n],
                 }),
               ],
             });
@@ -1763,7 +1724,7 @@
             });
           }
           function U(e) {
-            const { achievement: t, data: n, localization: i, images: r } = e,
+            const { achievement: n, data: t, localization: i, images: r } = e,
               {
                 api_name: a,
                 groupid: o,
@@ -1773,32 +1734,32 @@
                 progress_stat_name: p,
                 progress_stat_min: m,
                 progress_stat_max: j,
-              } = n ?? {},
+              } = t ?? {},
               A = (0, g.B6)(
-                t?.display?.name?.token,
+                n?.display?.name?.token,
                 i?.find((e) => "name" == e.field),
               ),
               w = (0, g.B6)(
-                t?.display?.desc?.token,
+                n?.display?.desc?.token,
                 i?.find((e) => "description" == e.field),
               ),
-              { localization: y } = (0, d.L3)(),
-              { currentLanguage: E } = y;
-            function C(e, n, i) {
+              { localization: E } = (0, d.L3)(),
+              { currentLanguage: y } = E;
+            function C(e, t, i) {
               return (0, h.A)(
                 i,
-                e == n && void 0 !== t ? void 0 : _.ModifiedField,
+                e == t && void 0 !== n ? void 0 : _.ModifiedField,
               );
             }
-            const b = "1" == t?.display?.hidden,
-              S = "1" == t?.archived,
+            const b = "1" == n?.display?.hidden,
+              S = "1" == n?.archived,
               N = C(
-                (0, f.ZM)(t?.display?.name, E),
-                (0, f.ZM)(i ? A : t?.display?.name, E),
+                (0, f.ZM)(n?.display?.name, y),
+                (0, f.ZM)(i ? A : n?.display?.name, y),
               ),
               I = C(
-                (0, f.ZM)(t?.display?.desc, E),
-                (0, f.ZM)(i ? w : t?.display?.desc, E),
+                (0, f.ZM)(n?.display?.desc, y),
+                (0, f.ZM)(i ? w : n?.display?.desc, y),
               );
             return (0, s.jsxs)("div", {
               className: _.CompactAchievementRow,
@@ -1812,7 +1773,7 @@
                           className: _.ModifiedIcon,
                         })
                       : (0, s.jsx)(x.T, {
-                          achievement: t,
+                          achievement: n,
                           size: 32,
                           className: _.UnmodifiedIcon,
                         }),
@@ -1823,7 +1784,7 @@
                           className: _.ModifiedIcon,
                         })
                       : (0, s.jsx)(x.T, {
-                          achievement: t,
+                          achievement: n,
                           achieved: !1,
                           size: 32,
                           className: _.UnmodifiedIcon,
@@ -1836,13 +1797,13 @@
                     (0, s.jsx)("div", {
                       className: N,
                       children: (0, s.jsx)(f.VU, {
-                        text: i ? A : t?.display?.name,
+                        text: i ? A : n?.display?.name,
                       }),
                     }),
                     (0, s.jsx)("div", {
                       className: I,
                       children: (0, s.jsx)(f.VU, {
-                        text: i ? w : t?.display?.desc,
+                        text: i ? w : n?.display?.desc,
                       }),
                     }),
                   ],
@@ -1851,7 +1812,7 @@
                   className: _.ApiColumn,
                   children: [
                     (0, s.jsx)("div", {
-                      className: C(a, t?.name),
+                      className: C(a, n?.name),
                       children: a,
                     }),
                     p &&
@@ -1859,17 +1820,17 @@
                         className: _.ProgressColumn,
                         children: [
                           (0, s.jsx)("span", {
-                            className: C(p, t?.progress?.value?.operand1),
+                            className: C(p, n?.progress?.value?.operand1),
                             children: p,
                           }),
                           ": ",
                           (0, s.jsx)("span", {
-                            className: C(m.toString(), t?.progress?.min_val),
+                            className: C(m.toString(), n?.progress?.min_val),
                             children: m,
                           }),
                           " - ",
                           (0, s.jsx)("span", {
-                            className: C(j.toString(), t?.progress?.max_val),
+                            className: C(j.toString(), n?.progress?.max_val),
                             children: j,
                           }),
                         ],
@@ -1877,15 +1838,15 @@
                   ],
                 }),
                 (0, s.jsx)("div", {
-                  className: C(o, t?.groupid ?? ""),
+                  className: C(o, n?.groupid ?? ""),
                   children: (0, s.jsx)(H, {
                     groupid: o,
-                    oldgroupid: t?.groupid,
-                    isnew: !t,
+                    oldgroupid: n?.groupid,
+                    isnew: !n,
                   }),
                 }),
                 (0, s.jsx)("div", {
-                  className: C(u, t?.permission ?? d.yu.Client),
+                  className: C(u, n?.permission ?? d.yu.Client),
                   children: d.yu[u],
                 }),
                 (0, s.jsxs)("div", {
@@ -1920,7 +1881,7 @@
                         children: c
                           ? (0, s.jsxs)(s.Fragment, {
                               children: [
-                                (0, s.jsx)(te, {}),
+                                (0, s.jsx)(ne, {}),
                                 " ",
                                 (0, v.we)(
                                   "#AchievementEditor_Achievement_Edit_Archived",
@@ -1929,7 +1890,7 @@
                             })
                           : (0, s.jsxs)(s.Fragment, {
                               children: [
-                                (0, s.jsx)(ne, {}),
+                                (0, s.jsx)(te, {}),
                                 " ",
                                 (0, v.we)(
                                   "#AchievementEditor_Achievement_Edit_Dearchived",
@@ -1944,12 +1905,12 @@
             });
           }
           function H(e) {
-            const { groupid: t, oldgroupid: n, isnew: i } = e,
+            const { groupid: n, oldgroupid: t, isnew: i } = e,
               { appID: r } = (0, d.L3)(),
               a = (0, d.Q4)(r),
-              o = t && "" != t ? t : A.z0,
+              o = n && "" != n ? n : A.z0,
               c = (0, A.fw)(o, a?.[o]),
-              l = (0, A.fw)(n, a?.[n]),
+              l = (0, A.fw)(t, a?.[t]),
               u =
                 o == A.z0
                   ? (0, v.we)(
@@ -1974,7 +1935,7 @@
                     ],
                   });
             }
-            return (i || o != n) && c.hasprogress
+            return (i || o != t) && c.hasprogress
               ? (0, s.jsxs)(b.he, {
                   className: _.Warning,
                   toolTipContent: (0, v.we)(
@@ -1990,8 +1951,8 @@
           }
           function W(e) {
             const {
-                title: t,
-                description: n,
+                title: n,
+                description: t,
                 icon: i,
                 collapsible: o = !1,
                 className: c,
@@ -2018,11 +1979,11 @@
                             (0, s.jsx)(a.EY, {
                               size: "4",
                               contrast: "title",
-                              children: t,
+                              children: n,
                             }),
                           ],
                         }),
-                        (0, s.jsx)(a.EY, { children: n }),
+                        (0, s.jsx)(a.EY, { children: t }),
                       ],
                     }),
                     o &&
@@ -2043,8 +2004,8 @@
             });
           }
           function Y() {
-            const { errors: e, successes: t } = (0, j.Mt)();
-            return 0 == e.length && 0 == t.length
+            const { errors: e, successes: n } = (0, j.Mt)();
+            return 0 == e.length && 0 == n.length
               ? null
               : (0, s.jsxs)(r.s, {
                   direction: "column",
@@ -2061,20 +2022,20 @@
                           "#AchievementEditor_Bulk_Errors_Description",
                         ),
                         children: e.map((e) =>
-                          (0, s.jsx)(Q, { result: e }, e.filename),
+                          (0, s.jsx)(q, { result: e }, e.filename),
                         ),
                       }),
-                    t.length > 0 &&
+                    n.length > 0 &&
                       (0, s.jsx)(W, {
                         collapsible: !0,
                         title: (0, v.Yp)(
                           "#AchievementEditor_Bulk_Successes_Count_Title",
-                          t.length,
+                          n.length,
                         ),
                         description: (0, v.we)(
                           "#AchievementEditor_Bulk_Successes_Description",
                         ),
-                        children: t.map((e) =>
+                        children: n.map((e) =>
                           (0, s.jsx)(
                             "div",
                             {
@@ -2089,10 +2050,10 @@
                 });
           }
           function K(e) {
-            const { result: t } = e,
-              { filename: n, imageErrors: i } = t,
+            const { result: n } = e,
+              { filename: t, imageErrors: i } = n,
               { removeFile: o } = (0, j.Mt)(),
-              c = t.image?.result?.image ?? i?.[0]?.image,
+              c = n.image?.result?.image ?? i?.[0]?.image,
               d = c
                 ? (0, s.jsx)("div", {
                     className: _.FileImage,
@@ -2126,78 +2087,78 @@
                       size: "4",
                       contrast: "title",
                       whiteSpace: "pre-wrap",
-                      children: n,
+                      children: t,
                     }),
                   ],
                 }),
-                (0, s.jsx)(A.et, { onClick: () => o(n) }),
+                (0, s.jsx)(A.et, { onClick: () => o(t) }),
               ],
             });
           }
           function J(e) {
             const {
-              kind: t,
-              errors: n,
+              kind: n,
+              errors: t,
               csvErrors: i,
               imageErrors: r,
             } = e.result;
             if (i) {
               const e =
-                "grouplocalization" == t
+                "grouplocalization" == n
                   ? (0, v.we)(
                       "#AchievementEditor_GroupCsvImport_Header_GroupID",
                     )
                   : (0, v.we)("#AchievementEditor_Achievement_Edit_ApiName");
-              return (0, s.jsx)(q, {
+              return (0, s.jsx)(Q, {
                 keyHeader: e,
-                errorStrings: n,
+                errorStrings: t,
                 csvErrors: i,
               });
             }
             return r
               ? (0, s.jsxs)("div", {
                   children: [
-                    n &&
-                      n.map((e, t) =>
+                    t &&
+                      t.map((e, n) =>
                         (0, s.jsx)(
                           "div",
                           { className: _.FileError, children: e },
-                          t,
+                          n,
                         ),
                       ),
-                    r.map((e, t) =>
+                    r.map((e, n) =>
                       (0, s.jsx)(
                         "div",
                         { className: _.FileError, children: e.error },
-                        t,
+                        n,
                       ),
                     ),
                   ],
                 })
               : (0, s.jsx)("div", {
                   children:
-                    n &&
-                    n.map((e, t) =>
+                    t &&
+                    t.map((e, n) =>
                       (0, s.jsx)(
                         "div",
                         { className: _.FileError, children: e },
-                        t,
+                        n,
                       ),
                     ),
                 });
           }
-          function Q(e) {
-            const { result: t } = e;
+          function q(e) {
+            const { result: n } = e;
             return (0, s.jsxs)("div", {
               className: _.FileErrorList,
               children: [
-                (0, s.jsx)(K, { result: t }),
-                (0, s.jsx)(J, { result: t }),
+                (0, s.jsx)(K, { result: n }),
+                (0, s.jsx)(J, { result: n }),
               ],
             });
           }
-          function q(e) {
-            const { keyHeader: t, errorStrings: n, csvErrors: i } = e;
+          function Q(e) {
+            const { keyHeader: n, errorStrings: t, csvErrors: i } = e;
             return (0, s.jsxs)("div", {
               className: _.CsvErrorsTable,
               children: [
@@ -2209,7 +2170,7 @@
                         "#AchievementEditor_AchievementCsvImport_Header_Line",
                       ),
                     }),
-                    (0, s.jsx)("div", { children: t }),
+                    (0, s.jsx)("div", { children: n }),
                     (0, s.jsx)("div", {
                       children: (0, v.we)(
                         "#AchievementEditor_AchievementCsvImport_Header_Field",
@@ -2227,17 +2188,17 @@
                     }),
                   ],
                 }),
-                n &&
-                  n.map((e, t) =>
+                t &&
+                  t.map((e, n) =>
                     (0, s.jsx)(
                       "div",
                       { className: _.FileError, children: e },
-                      t,
+                      n,
                     ),
                   ),
                 i
                   .sort(se)
-                  .map((e, t) =>
+                  .map((e, n) =>
                     (0, s.jsxs)(
                       "div",
                       {
@@ -2249,77 +2210,77 @@
                           (0, s.jsx)("div", { children: e.message }),
                         ],
                       },
-                      `${e.key}.${e.field}.${t}`,
+                      `${e.key}.${e.field}.${n}`,
                     ),
                   ),
               ],
             });
           }
           function Z(e) {
-            const { className: t } = e;
+            const { className: n } = e;
             return (0, s.jsx)("div", {
-              className: (0, h.A)(_.AchievementDetailIcon, t),
+              className: (0, h.A)(_.AchievementDetailIcon, n),
               children: (0, s.jsx)(m.MwB, {}),
             });
           }
           function $(e) {
-            const { className: t } = e;
+            const { className: n } = e;
             return (0, s.jsx)("div", {
-              className: (0, h.A)(_.AchievementDetailIcon, t),
+              className: (0, h.A)(_.AchievementDetailIcon, n),
               children: (0, s.jsx)(m.f5X, {}),
             });
           }
           function X(e) {
-            const { className: t, hideTitle: n = !1 } = e;
+            const { className: n, hideTitle: t = !1 } = e;
             return (0, s.jsx)("div", {
-              className: (0, h.A)(_.AchievementDetailIcon, t),
-              title: n
+              className: (0, h.A)(_.AchievementDetailIcon, n),
+              title: t
                 ? void 0
                 : (0, v.we)("#AchievementEditor_Achievement_Edit_Hidden"),
               children: (0, s.jsx)(p.ZyV, {}),
             });
           }
           function ee(e) {
-            const { className: t, hideTitle: n = !1 } = e;
+            const { className: n, hideTitle: t = !1 } = e;
             return (0, s.jsx)("div", {
-              className: (0, h.A)(_.AchievementDetailIcon, t),
-              title: n
+              className: (0, h.A)(_.AchievementDetailIcon, n),
+              title: t
                 ? void 0
                 : (0, v.we)("#AchievementEditor_Achievement_Edit_Visible"),
               children: (0, s.jsx)(p.rxV, {}),
             });
           }
-          function te(e) {
-            const { className: t, hideTitle: n = !1 } = e;
+          function ne(e) {
+            const { className: n, hideTitle: t = !1 } = e;
             return (0, s.jsx)("div", {
-              className: (0, h.A)(_.AchievementDetailIcon, t),
-              title: n
+              className: (0, h.A)(_.AchievementDetailIcon, n),
+              title: t
                 ? void 0
                 : (0, v.we)("#AchievementEditor_Achievement_Edit_Archived"),
               children: (0, s.jsx)(m.c_I, {}),
             });
           }
-          function ne(e) {
-            const { className: t } = e;
+          function te(e) {
+            const { className: n } = e;
             return (0, s.jsx)("div", {
-              className: (0, h.A)(_.AchievementDetailIcon, t),
+              className: (0, h.A)(_.AchievementDetailIcon, n),
               children: (0, s.jsx)(m.$VH, {}),
             });
           }
           function ie(e) {
-            const { className: t } = e;
+            const { className: n } = e;
             return (0, s.jsx)("div", {
-              className: (0, h.A)(_.AchievementDetailIcon, t),
+              className: (0, h.A)(_.AchievementDetailIcon, n),
               children: (0, s.jsx)(m.eTF, { color: "var(--color-error)" }),
             });
           }
-          function se(e, t) {
-            let n = (e.line ?? 0) - (t.line ?? 0);
-            return 0 != n
-              ? n
-              : ((n = e.key.localeCompare(t.key)),
-                0 != n || (n = e.field.localeCompare(t.field)),
-                n);
+          function se(e, n) {
+            let t = (e.line ?? 0) - (n.line ?? 0);
+            return 0 != t
+              ? t
+              : ((t = e.key.localeCompare(n.key)),
+                0 != t || (t = e.field.localeCompare(n.field)),
+                t);
           }
           ([d, g, x, f, j, A] = S.then ? (await S)() : S), i();
         } catch (re) {
@@ -2327,28 +2288,28 @@
         }
       });
     },
-    91661: (e, t, n) => {
+    91661: (e, n, t) => {
       "use strict";
-      n.a(e, async (e, i) => {
+      t.a(e, async (e, i) => {
         try {
-          n.d(t, { FU: () => G, Mt: () => R });
-          var s = n(7850),
-            r = n(84896),
-            a = n(90626),
-            o = n(61859),
-            c = n(44752),
-            l = n(53338),
+          t.d(n, { FU: () => G, Mt: () => R });
+          var s = t(7850),
+            r = t(84896),
+            a = t(90626),
+            o = t(61859),
+            c = t(44752),
+            l = t(53338),
             d = e([r, c]);
           function u(e) {
             return e.errors?.length > 0 || e.fieldErrors?.length > 0;
           }
-          async function p(e, t) {
-            const n = await (0, c.Wk)(e);
-            if (n.errors)
-              return { filename: e.name, success: !1, errors: n.errors };
-            if ((0, c.Yc)(n)) {
-              const { groups: i, stats: s, achievements: r } = t,
-                a = (0, c.Rr)(n, i, s, r),
+          async function p(e, n) {
+            const t = await (0, c.Wk)(e);
+            if (t.errors)
+              return { filename: e.name, success: !1, errors: t.errors };
+            if ((0, c.Yc)(t)) {
+              const { groups: i, stats: s, achievements: r } = n,
+                a = (0, c.Rr)(t, i, s, r),
                 o = u(a);
               return {
                 filename: e.name,
@@ -2359,21 +2320,21 @@
                 definitions: o ? void 0 : a,
               };
             }
-            if ((0, c.Lq)(n)) {
-              const t = (0, c.EO)(n),
-                i = u(t);
+            if ((0, c.Lq)(t)) {
+              const n = (0, c.EO)(t),
+                i = u(n);
               return {
                 filename: e.name,
                 kind: "localization",
                 success: !i,
-                errors: t.errors,
-                csvErrors: t.fieldErrors,
-                localization: i ? void 0 : t,
+                errors: n.errors,
+                csvErrors: n.fieldErrors,
+                localization: i ? void 0 : n,
               };
             }
-            if ((0, c.JP)(n)) {
-              const { groups: i, validLanguages: s } = t,
-                r = (0, c.OB)(n, i, s),
+            if ((0, c.JP)(t)) {
+              const { groups: i, validLanguages: s } = n,
+                r = (0, c.OB)(t, i, s),
                 a = u(r);
               return {
                 filename: e.name,
@@ -2394,28 +2355,28 @@
           const m = "_ACHIEVED",
             h = "_UNACHIEVED";
           function v(e) {
-            const t = e.toUpperCase(),
-              n = [h, m].find((e) => t.endsWith(e));
+            const n = e.toUpperCase(),
+              t = [h, m].find((e) => n.endsWith(e));
             return {
-              apiName: n ? e.substring(0, e.length - n.length) : e,
-              isAchieved: n != h,
+              apiName: t ? e.substring(0, e.length - t.length) : e,
+              isAchieved: t != h,
             };
           }
           async function _(e) {
-            const t = (await (0, l.Tc)({ files: [e], forceSquare: !0 }))[0];
-            if (!t.success)
+            const n = (await (0, l.Tc)({ files: [e], forceSquare: !0 }))[0];
+            if (!n.success)
               return {
                 filename: e.name,
                 kind: "image",
                 success: !1,
-                imageErrors: [t],
+                imageErrors: [n],
               };
-            const { apiName: n, isAchieved: i } = v(
-                t.image.filenameWithoutExtension,
+            const { apiName: t, isAchieved: i } = v(
+                n.image.filenameWithoutExtension,
               ),
               s = i
                 ? {
-                    image: await (0, l.I7)(t.image.image),
+                    image: await (0, l.I7)(n.image.image),
                     imageType: l.bi,
                     filenameWithoutExtension: "GENERATED",
                   }
@@ -2425,9 +2386,9 @@
               kind: "image",
               success: !0,
               image: {
-                apiName: n,
+                apiName: t,
                 isAchieved: i,
-                result: t,
+                result: n,
                 generatedUnachieved: s,
               },
             };
@@ -2438,14 +2399,14 @@
             ],
             x = Array.from(new Set(g.flatMap((e) => e.accept))),
             f = ["definitions", "localization", "grouplocalization"];
-          function j(e, t) {
-            return t.reduce((e, t) => {
-              const n = f.includes(t.kind);
+          function j(e, n) {
+            return n.reduce((e, n) => {
+              const t = f.includes(n.kind);
               return [
                 ...e.filter(
-                  (e) => e.filename != t.filename && !(n && e.kind == t.kind),
+                  (e) => e.filename != n.filename && !(t && e.kind == n.kind),
                 ),
-                t,
+                n,
               ];
             }, e);
           }
@@ -2459,30 +2420,30 @@
               unmodified: e.map((e) => e.name),
             };
           }
-          function w(e, t) {
-            const n = e.find((e) => e.success && e.definitions)?.definitions;
-            return n
+          function w(e, n) {
+            const t = e.find((e) => e.success && e.definitions)?.definitions;
+            return t
               ? {
-                  csv: n.csv ?? {},
-                  achievements: n.achievements ?? (0, c.K1)(t),
-                  added: n.added ?? [],
-                  modified: n.modified ?? [],
-                  deleted: n.deleted ?? [],
-                  unmodified: n.unmodified ?? [],
+                  csv: t.csv ?? {},
+                  achievements: t.achievements ?? (0, c.K1)(n),
+                  added: t.added ?? [],
+                  modified: t.modified ?? [],
+                  deleted: t.deleted ?? [],
+                  unmodified: t.unmodified ?? [],
                 }
-              : A(t);
+              : A(n);
           }
-          function y(e, t) {
-            const n = e.find((e) => e.success && e.localization)?.localization;
-            if (!n) return;
-            const i = Object.keys(n.localization ?? {})
-              .filter((e) => !E(e, t))
-              .reduce((e, t) => ((e[t] = n.localization[t]), e), {});
-            return { ...n, localization: i };
+          function E(e, n) {
+            const t = e.find((e) => e.success && e.localization)?.localization;
+            if (!t) return;
+            const i = Object.keys(t.localization ?? {})
+              .filter((e) => !y(e, n))
+              .reduce((e, n) => ((e[n] = t.localization[n]), e), {});
+            return { ...t, localization: i };
           }
-          function E(e, t) {
-            return e in t.achievements || e in t.csv
-              ? t.deleted.includes(e)
+          function y(e, n) {
+            return e in n.achievements || e in n.csv
+              ? n.deleted.includes(e)
                 ? (0, o.we)(
                     "#AchievementEditor_Localization_Error_MissingFromDefinitions",
                   )
@@ -2491,10 +2452,10 @@
                   "#AchievementEditor_Localization_Error_NoAchievement",
                 );
           }
-          function C(e, t) {
+          function C(e, n) {
             return e.success && e.localization
               ? Object.keys(e.localization.localization ?? {})
-                  .map((e) => ({ apiName: e, message: E(e, t) }))
+                  .map((e) => ({ apiName: e, message: y(e, n) }))
                   .filter((e) => !!e.message)
                   .map((e) => ({
                     key: e.apiName,
@@ -2507,23 +2468,23 @@
             return e.find((e) => e.success && e.groupLocalization)
               ?.groupLocalization;
           }
-          function S(e, t) {
-            if (e in t.achievements || e in t.csv) return e;
-            const n = e.toUpperCase();
+          function S(e, n) {
+            if (e in n.achievements || e in n.csv) return e;
+            const t = e.toUpperCase();
             return (
-              [...Object.keys(t.achievements), ...Object.keys(t.csv)].find(
-                (e) => e.toUpperCase() == n,
+              [...Object.keys(n.achievements), ...Object.keys(n.csv)].find(
+                (e) => e.toUpperCase() == t,
               ) ?? e
             );
           }
-          function N(e, t) {
+          function N(e, n) {
             if (!e.success || !e.image) return;
-            const n = S(e.image.apiName, t);
-            return n in t.achievements || n in t.csv
-              ? t.deleted.includes(n)
+            const t = S(e.image.apiName, n);
+            return t in n.achievements || t in n.csv
+              ? n.deleted.includes(t)
                 ? (0, o.we)(
                     "#AchievementEditor_Image_Error_AchievementMissingFromCsv",
-                    n,
+                    t,
                   )
                 : void 0
               : (0, o.we)(
@@ -2531,18 +2492,18 @@
                   e.image.apiName,
                 );
           }
-          function I(e, t, n) {
+          function I(e, n, t) {
             const i = e
-                .filter((e) => e.success && e.image && !N(e, t))
-                .map((e) => ({ ...e.image, apiName: S(e.image.apiName, t) })),
+                .filter((e) => e.success && e.image && !N(e, n))
+                .map((e) => ({ ...e.image, apiName: S(e.image.apiName, n) })),
               s = new Set(i.map((e) => e.apiName));
-            return Array.from(s).reduce((e, t) => {
-              const s = i.filter((e) => e.apiName == t),
+            return Array.from(s).reduce((e, n) => {
+              const s = i.filter((e) => e.apiName == n),
                 r = s.filter((e) => e.isAchieved).pop(),
                 a = s.filter((e) => !e.isAchieved).pop(),
-                o = n ? r?.generatedUnachieved : void 0;
+                o = t ? r?.generatedUnachieved : void 0;
               return (
-                (e[t] = {
+                (e[n] = {
                   achieved: r?.result,
                   unachieved:
                     a?.result ??
@@ -2554,75 +2515,75 @@
               );
             }, {});
           }
-          function T(e, t) {
-            const n = (e) => N(e, t),
-              i = (e) => C(e, t),
-              s = (e) => !!n(e) || i(e).length > 0;
+          function T(e, n) {
+            const t = (e) => N(e, n),
+              i = (e) => C(e, n),
+              s = (e) => !!t(e) || i(e).length > 0;
             return {
               errors: [
                 ...e.filter((e) => !e.success),
                 ...e.filter(s).map((e) => {
-                  const t = n(e);
+                  const n = t(e);
                   return {
                     ...e,
                     success: !1,
-                    imageErrors: t
-                      ? [{ ...e.image.result, success: !1, error: t }]
+                    imageErrors: n
+                      ? [{ ...e.image.result, success: !1, error: n }]
                       : void 0,
-                    csvErrors: t ? void 0 : i(e),
+                    csvErrors: n ? void 0 : i(e),
                   };
                 }),
               ],
               successes: e.filter((e) => e.success && !s(e)),
             };
           }
-          function D(e, t, n, i) {
+          function D(e, n, t, i) {
             const s = (e) => ({
-                icon: n[e]?.achieved?.image?.image,
-                icon_gray: n[e]?.unachieved?.image?.image,
+                icon: t[e]?.achieved?.image?.image,
+                icon_gray: t[e]?.unachieved?.image?.image,
               }),
-              r = (t) => {
-                const { statID: n, bitID: i } = e.achievements[t];
-                return { statID: n, bitID: i };
+              r = (n) => {
+                const { statID: t, bitID: i } = e.achievements[n];
+                return { statID: t, bitID: i };
               };
             return {
               addOrUpdate: [
-                ...e.added.map((n) => ({
-                  achievement: (0, c.f4)(e.csv[n], t?.localization?.[n]),
-                  ...s(n),
+                ...e.added.map((t) => ({
+                  achievement: (0, c.f4)(e.csv[t], n?.localization?.[t]),
+                  ...s(t),
                 })),
                 ...Array.from(
                   new Set([
                     ...e.modified,
-                    ...Object.keys(t?.localization ?? {}).filter(
-                      (t) => !e.added.includes(t) && t in e.achievements,
+                    ...Object.keys(n?.localization ?? {}).filter(
+                      (n) => !e.added.includes(n) && n in e.achievements,
                     ),
                   ]),
-                ).map((n) => {
-                  const i = e.achievements[n];
+                ).map((t) => {
+                  const i = e.achievements[t];
                   return {
-                    ...r(n),
+                    ...r(t),
                     achievement: (0, c.f4)(
-                      e.csv[n] ?? (0, c.oK)(i),
-                      t?.localization?.[n],
+                      e.csv[t] ?? (0, c.oK)(i),
+                      n?.localization?.[t],
                       i,
                     ),
-                    ...s(n),
+                    ...s(t),
                   };
                 }),
-                ...Object.keys(n)
-                  .filter((t) => e.unmodified.includes(t))
+                ...Object.keys(t)
+                  .filter((n) => e.unmodified.includes(n))
                   .map((e) => ({ ...r(e), ...s(e) })),
               ],
               delete: i ? e.deleted.map(r) : [],
             };
           }
           function k(e) {
-            return (e?.modified ?? []).map((t) => {
-              const n = e.groups[t];
+            return (e?.modified ?? []).map((n) => {
+              const t = e.groups[n];
               return {
-                groupid: t,
-                group: { ...n, name: (0, c.NJ)(e.csv[t], n) },
+                groupid: n,
+                group: { ...t, name: (0, c.NJ)(e.csv[n], t) },
               };
             });
           }
@@ -2631,7 +2592,7 @@
             return (0, a.useContext)(B);
           }
           function G(e) {
-            const { onClose: t, setHasChanges: n, children: i } = e,
+            const { onClose: n, setHasChanges: t, children: i } = e,
               { appID: c } = (0, r.L3)(),
               l = (0, r.kb)(c),
               d = (0, a.useMemo)(() => l ?? [], [l]),
@@ -2641,12 +2602,12 @@
               h = (0, r.SN)(c),
               v = (0, r.Er)(c),
               [_, f] = (0, a.useState)([]),
-              [A, E] = (0, a.useState)(!0),
+              [A, y] = (0, a.useState)(!0),
               [C, S] = (0, a.useState)(!1),
               [N, R] = (0, a.useState)(!1),
               G = (0, a.useRef)(void 0),
               L = (0, a.useMemo)(() => w(_, d), [_, d]),
-              M = (0, a.useMemo)(() => y(_, L), [_, L]),
+              M = (0, a.useMemo)(() => E(_, L), [_, L]),
               F = (0, a.useMemo)(() => b(_), [_]),
               V = (0, a.useMemo)(() => I(_, L, A), [_, L, A]),
               { errors: O, successes: P } = (0, a.useMemo)(
@@ -2655,8 +2616,8 @@
               ),
               z = _.some((e) => e.success);
             (0, a.useEffect)(() => {
-              n(z);
-            }, [z, n]);
+              t(z);
+            }, [z, t]);
             const U = {
               files: _,
               definitions: L,
@@ -2667,24 +2628,24 @@
               successes: P,
               hasData: z,
               generateUnachievedImages: A,
-              setGenerateUnachievedImages: E,
+              setGenerateUnachievedImages: y,
               confirmDelete: C,
               setConfirmDelete: S,
               uploadFiles: async (e) => {
-                const t = [];
-                for (const n of e) {
-                  const e = g.find((e) => e.accept.includes(n.type));
+                const n = [];
+                for (const t of e) {
+                  const e = g.find((e) => e.accept.includes(t.type));
                   e
-                    ? t.push(
-                        await e.process(n, {
+                    ? n.push(
+                        await e.process(t, {
                           groups: u,
                           stats: p,
                           achievements: d,
                           validLanguages: m,
                         }),
                       )
-                    : t.push({
-                        filename: n.name,
+                    : n.push({
+                        filename: t.name,
                         success: !1,
                         errors: [
                           (0, o.we)(
@@ -2693,20 +2654,23 @@
                         ],
                       });
                 }
-                f((e) => j(e, t)), G.current && (G.current.value = "");
+                f((e) => j(e, n)), G.current && (G.current.value = "");
               },
-              removeFile: (e) => f((t) => t.filter((t) => t.filename != e)),
+              removeFile: (e) => f((n) => n.filter((n) => n.filename != e)),
               openFilePicker: () => G.current?.click(),
               fileInputRef: G,
               acceptedTypes: x,
               save: async () => {
-                await v.mutateAsync(k(F)),
-                  await h.mutateAsync(D(L, M, V, C)),
-                  R(!0);
+                try {
+                  await v.mutateAsync(k(F)),
+                    await h.mutateAsync(D(L, M, V, C)),
+                    R(!0);
+                } catch {}
               },
               isSaving: h.isPending || v.isPending,
+              saveError: v.error?.message ?? h.error?.message,
               saveSucceeded: N,
-              onClose: t,
+              onClose: n,
             };
             return (0, s.jsx)(B, { value: U, children: i });
           }
@@ -2716,36 +2680,36 @@
         }
       });
     },
-    44752: (e, t, n) => {
+    44752: (e, n, t) => {
       "use strict";
-      n.a(e, async (e, i) => {
+      t.a(e, async (e, i) => {
         try {
-          n.d(t, {
+          t.d(n, {
             B6: () => w,
             CD: () => B,
-            EO: () => P,
-            JP: () => Z,
+            EO: () => z,
+            JP: () => $,
             K1: () => _,
-            Lq: () => O,
-            NJ: () => J,
-            OB: () => $,
-            Rr: () => V,
+            Lq: () => P,
+            NJ: () => q,
+            OB: () => X,
+            Rr: () => O,
             Wk: () => C,
-            Yc: () => F,
+            Yc: () => V,
             f4: () => G,
-            jF: () => X,
+            jF: () => ee,
             le: () => k,
             oK: () => j,
-            pC: () => E,
+            pC: () => y,
           });
-          var s = n(33551),
-            r = n.n(s),
-            a = n(70760),
-            o = n(84896),
-            c = n(9161),
-            l = n(61859),
-            d = n(21261),
-            u = n(59330),
+          var s = t(33551),
+            r = t.n(s),
+            a = t(70760),
+            o = t(84896),
+            c = t(9161),
+            l = t(61859),
+            d = t(21261),
+            u = t(59330),
             p = e([a, o, d, u]);
           [a, o, d, u] = p.then ? (await p)() : p;
           const m = a.Ikc({
@@ -2766,12 +2730,12 @@
             }),
             v = h.catchall(a.YjP());
           function _(e) {
-            return e.reduce((e, t) => ((e[t.name] = t), e), {});
+            return e.reduce((e, n) => ((e[n.name] = n), e), {});
           }
           function g(e) {
-            const { groups: t, stats: n, achievements: i } = e,
-              s = new Set(t.map((e) => e.groupid));
-            return m.superRefine((e, t) => {
+            const { groups: n, stats: t, achievements: i } = e,
+              s = new Set(n.map((e) => e.groupid));
+            return m.superRefine((e, n) => {
               if (
                 (e.groupid &&
                   !s.has(e.groupid) &&
@@ -2784,15 +2748,15 @@
                 void 0 === e.progress_stat_name || "" == e.progress_stat_name)
               )
                 return;
-              function i(n, i) {
-                t.addIssue({
+              function i(t, i) {
+                n.addIssue({
                   code: "custom",
-                  path: [n],
-                  input: e[n],
+                  path: [t],
+                  input: e[t],
                   message: i,
                 });
               }
-              const r = n.find((t) => t.name == e.progress_stat_name);
+              const r = t.find((n) => n.name == e.progress_stat_name);
               if (void 0 !== r) {
                 e.permission != (r.permission ?? o.yu.Client) &&
                   i(
@@ -2817,23 +2781,23 @@
                         ),
                       ));
                 {
-                  const t = "INT" == r.type ? a.ZSL.zH.int32 : a.ZSL.zH.float32,
-                    n = [
-                      a.auy.number().default(t[0]).parse(r.min),
-                      a.auy.number().default(t[1]).parse(r.max),
+                  const n = "INT" == r.type ? a.ZSL.zH.int32 : a.ZSL.zH.float32,
+                    t = [
+                      a.auy.number().default(n[0]).parse(r.min),
+                      a.auy.number().default(n[1]).parse(r.max),
                     ],
                     s = [
                       a.aig().parse(e.progress_stat_min),
                       a.aig().parse(e.progress_stat_max),
                     ];
-                  s[0] < n[0] &&
+                  s[0] < t[0] &&
                     i(
                       "progress_stat_min",
                       (0, l.we)(
                         "#AchievementEditor_Validator_Error_MinLessThanStatMin",
                       ),
                     ),
-                    s[1] > n[1] &&
+                    s[1] > t[1] &&
                       i(
                         "progress_stat_max",
                         (0, l.we)(
@@ -2857,29 +2821,29 @@
                 );
             });
           }
-          function x(e, t, n, i) {
-            const s = e.reduce((e, t) => {
-              const i = String(t[n]);
+          function x(e, n, t, i) {
+            const s = e.reduce((e, n) => {
+              const i = String(n[t]);
               return (e[i] = (e[i] ?? 0) + 1), e;
             }, {});
             e.forEach((e, r) => {
-              s[String(e[n])] > 1 &&
-                t.addIssue({
+              s[String(e[t])] > 1 &&
+                n.addIssue({
                   code: "custom",
-                  path: [r, n],
-                  input: e[n],
+                  path: [r, t],
+                  input: e[t],
                   message: i,
                 });
             });
           }
           function f(e) {
-            const { stats: t, achievements: n } = e;
+            const { stats: n, achievements: t } = e;
             return a
               .YOg(g(e))
-              .superRefine((e, t) =>
+              .superRefine((e, n) =>
                 x(
                   e,
-                  t,
+                  n,
                   "api_name",
                   (0, l.we)(
                     "#AchievementEditor_AchievementCsvImport_Error_DuplicateApiName",
@@ -2887,25 +2851,25 @@
                 ),
               )
               .transform((e) => {
-                const t = e.map((e) => e.api_name),
-                  i = e.reduce((e, t) => ((e[t.api_name] = t), e), {}),
-                  s = _(n);
+                const n = e.map((e) => e.api_name),
+                  i = e.reduce((e, n) => ((e[n.api_name] = n), e), {}),
+                  s = _(t);
                 let a = {
                   csv: i,
                   achievements: s,
-                  added: t.filter((e) => !n.some((t) => t.name == e)),
-                  deleted: n.map((e) => e.name).filter((e) => !t.includes(e)),
+                  added: n.filter((e) => !t.some((n) => n.name == e)),
+                  deleted: t.map((e) => e.name).filter((e) => !n.includes(e)),
                   modified: [],
                   unmodified: [],
                 };
-                return t
+                return n
                   .filter((e) => !a.added.includes(e) && !a.deleted.includes(e))
-                  .reduce((e, t) => {
-                    var n, a;
+                  .reduce((e, n) => {
+                    var t, a;
                     return (
-                      (n = i[t]),
-                      (a = s[t]),
-                      r()(n, j(a)) ? e.unmodified.push(t) : e.modified.push(t),
+                      (t = i[n]),
+                      (a = s[n]),
+                      r()(t, j(a)) ? e.unmodified.push(n) : e.modified.push(n),
                       e
                     );
                   }, a);
@@ -2923,45 +2887,45 @@
               progress_stat_max: parseFloat(e.progress?.max_val ?? "0"),
             };
           }
-          function A(e, t) {
+          function A(e, n) {
             if (!e) return {};
-            const n = (0, u.II)(e, t),
-              { token: i, ...s } = n;
+            const t = (0, u.II)(e, n),
+              { token: i, ...s } = t;
             return s;
           }
-          function w(e, t) {
-            const { api_name: n, field: i, ...s } = t ?? {};
+          function w(e, n) {
+            const { api_name: t, field: i, ...s } = n ?? {};
             return { token: e, ...s };
           }
-          function y(e) {
-            return e.reduce((e, t) => ((e[t] = ""), e), {});
+          function E(e) {
+            return e.reduce((e, n) => ((e[n] = ""), e), {});
           }
-          function E(e, t) {
-            const n = y(t);
+          function y(e, n) {
+            const t = E(n);
             return [
               {
                 api_name: e.name,
                 field: "name",
-                ...n,
-                ...A(e.display?.name, t),
+                ...t,
+                ...A(e.display?.name, n),
               },
               {
                 api_name: e.name,
                 field: "description",
-                ...n,
-                ...A(e.display?.desc, t),
+                ...t,
+                ...A(e.display?.desc, n),
               },
             ];
           }
           async function C(e) {
-            const t = await c.g.ParseCSVFile(e, N);
-            return t.errors && t.errors.length > 0
+            const n = await c.g.ParseCSVFile(e, N);
+            return n.errors && n.errors.length > 0
               ? {
                   fields: void 0,
                   data: void 0,
-                  errors: t.errors.map((e) => e.message),
+                  errors: n.errors.map((e) => e.message),
                 }
-              : { fields: t.meta.fields, data: t.data, errors: void 0 };
+              : { fields: n.meta.fields, data: n.data, errors: void 0 };
           }
           function b() {
             return {
@@ -2970,15 +2934,15 @@
               groupid: (0, l.we)("#AchievementEditor_Csv_Hint_LocGroupID"),
             };
           }
-          function S(e, t, n) {
-            const i = t.reduce(
-              (e, t) => ((e[t] = n[t] ? `${t} (${n[t]})` : t), e),
+          function S(e, n, t) {
+            const i = n.reduce(
+              (e, n) => ((e[n] = t[n] ? `${n} (${t[n]})` : n), e),
               {},
             );
             return {
-              fields: t.map((e) => i[e]),
+              fields: n.map((e) => i[e]),
               rows: e.map((e) =>
-                Object.keys(e).reduce((t, n) => ((t[i[n] ?? n] = e[n]), t), {}),
+                Object.keys(e).reduce((n, t) => ((n[i[t] ?? t] = e[t]), n), {}),
               ),
             };
           }
@@ -2988,26 +2952,26 @@
           const I = "EXAMPLE_",
             T = [`${I}FIRST_WIN`, `${I}HUNDRED_WINS`];
           function D(e) {
-            const t = y(e),
-              n = [
+            const n = E(e),
+              t = [
                 { name: "First Victory", description: "Win your first match." },
                 { name: "100 Wins", description: "Win 100 different matches." },
               ];
             return T.map((e, i) => [
-              { api_name: e, field: "name", ...t, english: n[i].name },
+              { api_name: e, field: "name", ...n, english: t[i].name },
               {
                 api_name: e,
                 field: "description",
-                ...t,
-                english: n[i].description,
+                ...n,
+                english: t[i].description,
               },
             ]);
           }
-          function k(e, t) {
-            const n = `${e}-achievements-definitions.csv`,
+          function k(e, n) {
+            const t = `${e}-achievements-definitions.csv`,
               i = (
-                t.length > 0
-                  ? t.map(j)
+                n.length > 0
+                  ? n.map(j)
                   : [
                       {
                         api_name: T[0],
@@ -3053,40 +3017,40 @@
                   "#AchievementEditor_Csv_Hint_ProgressStatMax",
                 ),
               });
-            c.g.WriteCSVToFile(r, n, !0, s);
+            c.g.WriteCSVToFile(r, t, !0, s);
           }
-          function B(e, t, n) {
+          function B(e, n, t) {
             const i = `${e}-achievements-localization.csv`,
-              s = (t.length > 0 ? t.map((e) => E(e, n)) : D(n)).reduce(
-                (e, t) => (e.push(...t), e),
+              s = (n.length > 0 ? n.map((e) => y(e, t)) : D(t)).reduce(
+                (e, n) => (e.push(...n), e),
                 [],
               ),
               { fields: r, rows: a } = S(
                 s,
-                [...Object.keys(h.shape), ...n],
+                [...Object.keys(h.shape), ...t],
                 b(),
               );
             c.g.WriteCSVToFile(a, i, !0, r);
           }
-          function R(e, t, n) {
-            if (!t) return {};
-            const i = t.find((e) => "name" == e.field),
-              s = t.find((e) => "description" == e.field),
+          function R(e, n, t) {
+            if (!n) return {};
+            const i = n.find((e) => "name" == e.field),
+              s = n.find((e) => "description" == e.field),
               r = (0, d.EV)(
-                n?.display?.name?.token,
-                n?.name,
+                t?.display?.name?.token,
+                t?.name,
                 "name",
-                e ?? n?.name,
+                e ?? t?.name,
               ),
               a = (0, d.EV)(
-                n?.display?.desc?.token,
-                n?.name,
+                t?.display?.desc?.token,
+                t?.name,
                 "desc",
-                e ?? n?.name,
+                e ?? t?.name,
               );
             return { name: i ? w(r, i) : void 0, desc: s ? w(a, s) : void 0 };
           }
-          function G(e, t, n) {
+          function G(e, n, t) {
             return {
               name: e.api_name,
               groupid: e.groupid,
@@ -3098,7 +3062,7 @@
                 desc: void 0,
                 icon: void 0,
                 icon_gray: void 0,
-                ...R(e?.api_name, t, n),
+                ...R(e?.api_name, n, t),
               },
               progress: e.progress_stat_name
                 ? {
@@ -3109,88 +3073,93 @@
                 : void 0,
             };
           }
-          function L(e, t, n) {
-            const i = a.auy.number().safeParse(t.path[0])?.data,
-              s = void 0 !== i && e.data.length > i,
-              r = s ? e.data[i][n] : void 0,
-              o = t.path.length > 1 ? t.path[1] : n;
+          function L(e, n) {
+            const t = a.auy.number().safeParse(n.path[0])?.data;
+            return void 0 !== t &&
+              Number.isInteger(t) &&
+              t >= 0 &&
+              t < e.data.length
+              ? t
+              : void 0;
+          }
+          function M(e, n, t) {
+            const i = L(e, n),
+              s = e.data[i],
+              r = n.path.length > 1 ? n.path[1] : t;
             return {
-              line: void 0 === i ? void 0 : i + 2,
-              key: r,
-              field: o,
-              input: s && o in e.data[i] ? e.data[i][o] : "",
-              message: t.message,
+              line: i + 2,
+              key: s[t],
+              field: r,
+              input: r in s ? s[r] : "",
+              message: n.message,
             };
           }
-          function M(e, t, n) {
+          function F(e, n, t) {
+            const i = (n) => n.path.length > 1 && void 0 !== L(e, n);
             return {
-              errors: t
-                ?.filter((e) => e.path.length <= 1)
-                .map((e) => e.message),
-              fieldErrors: t
-                ?.filter((e) => e.path.length > 1)
-                .map((t) => L(e, t, n)),
+              errors: n?.filter((e) => !i(e)).map((e) => e.message),
+              fieldErrors: n?.filter(i).map((n) => M(e, n, t)),
             };
           }
-          function F(e) {
-            const t = new Set(e.fields);
-            return Object.keys(m.shape).every((e) => t.has(e));
+          function V(e) {
+            const n = new Set(e.fields);
+            return Object.keys(m.shape).every((e) => n.has(e));
           }
-          function V(e, t, n, i) {
-            const s = f({ groups: t, stats: n, achievements: i }).safeParse(
+          function O(e, n, t, i) {
+            const s = f({ groups: n, stats: t, achievements: i }).safeParse(
               e.data,
             );
-            return { ...s.data, ...M(e, s.error?.issues, "api_name") };
-          }
-          function O(e) {
-            const t = new Set(e.fields);
-            return Object.keys(h.shape).every((e) => t.has(e));
+            return { ...s.data, ...F(e, s.error?.issues, "api_name") };
           }
           function P(e) {
-            const t = a.YOg(v).safeParse(e.data);
+            const n = new Set(e.fields);
+            return Object.keys(h.shape).every((e) => n.has(e));
+          }
+          function z(e) {
+            const n = a.YOg(v).safeParse(e.data);
             return {
               localization:
-                t.data?.reduce(
-                  (e, t) => (
-                    t.api_name in e || (e[t.api_name] = []),
-                    e[t.api_name].push(t),
+                n.data?.reduce(
+                  (e, n) => (
+                    n.api_name in e || (e[n.api_name] = []),
+                    e[n.api_name].push(n),
                     e
                   ),
                   {},
                 ) ?? {},
-              ...M(e, t.error?.issues, "api_name"),
+              ...F(e, n.error?.issues, "api_name"),
             };
           }
-          const z = a.Ikc({ groupid: a.YjP().min(1) }),
-            U = z.catchall(a.YjP());
-          function H(e) {
-            return e.reduce((e, t) => ((e[t.groupid] = t), e), {});
-          }
+          const U = a.Ikc({ groupid: a.YjP().min(1) }),
+            H = U.catchall(a.YjP());
           function W(e) {
-            const t = e?.name;
-            return "string" == typeof t ? { english: t } : (t ?? {});
+            return e.reduce((e, n) => ((e[n.groupid] = n), e), {});
           }
           function Y(e) {
+            const n = e?.name;
+            return "string" == typeof n ? { english: n } : (n ?? {});
+          }
+          function K(e) {
             return Object.keys(e)
-              .filter((t) => "token" == t || !!e[t])
-              .reduce((t, n) => ((t[n] = e[n]), t), {});
+              .filter((n) => "token" == n || !!e[n])
+              .reduce((n, t) => ((n[t] = e[t]), n), {});
           }
-          function K(e, t) {
-            return { groupid: e.groupid, ...y(t), ...A(e.name, t) };
+          function J(e, n) {
+            return { groupid: e.groupid, ...E(n), ...A(e.name, n) };
           }
-          function J(e, t) {
-            const { groupid: n, ...i } = e;
-            return Y({ ...W(t), ...i });
+          function q(e, n) {
+            const { groupid: t, ...i } = e;
+            return K({ ...Y(n), ...i });
           }
           function Q(e) {
-            const { groups: t, validLanguages: n } = e,
-              i = new Set(t.map((e) => e.groupid));
-            return U.superRefine((e, t) => {
-              function s(n, i) {
-                t.addIssue({
+            const { groups: n, validLanguages: t } = e,
+              i = new Set(n.map((e) => e.groupid));
+            return H.superRefine((e, n) => {
+              function s(t, i) {
+                n.addIssue({
                   code: "custom",
-                  path: [n],
-                  input: e[n],
+                  path: [t],
+                  input: e[t],
                   message: i,
                 });
               }
@@ -3209,7 +3178,7 @@
                     ),
                   ),
                 Object.keys(e)
-                  .filter((e) => "groupid" != e && !n.includes(e))
+                  .filter((e) => "groupid" != e && !t.includes(e))
                   .forEach((e) =>
                     s(
                       e,
@@ -3228,14 +3197,14 @@
                   );
             });
           }
-          function q(e) {
-            const { groups: t } = e;
+          function Z(e) {
+            const { groups: n } = e;
             return a
               .YOg(Q(e))
-              .superRefine((e, t) =>
+              .superRefine((e, n) =>
                 x(
                   e,
-                  t,
+                  n,
                   "groupid",
                   (0, l.we)(
                     "#AchievementEditor_GroupCsvImport_Error_DuplicateGroupID",
@@ -3243,61 +3212,61 @@
                 ),
               )
               .transform((e) => {
-                const n = e.reduce((e, t) => ((e[t.groupid] = t), e), {}),
-                  i = H(t);
-                return Object.keys(n).reduce(
-                  (e, t) => {
+                const t = e.reduce((e, n) => ((e[n.groupid] = n), e), {}),
+                  i = W(n);
+                return Object.keys(t).reduce(
+                  (e, n) => {
                     var s, a;
                     return (
-                      (s = n[t]),
-                      (a = i[t]),
-                      r()(J(s, a), Y(W(a)))
-                        ? e.unmodified.push(t)
-                        : e.modified.push(t),
+                      (s = t[n]),
+                      (a = i[n]),
+                      r()(q(s, a), K(Y(a)))
+                        ? e.unmodified.push(n)
+                        : e.modified.push(n),
                       e
                     );
                   },
-                  { csv: n, groups: i, modified: [], unmodified: [] },
+                  { csv: t, groups: i, modified: [], unmodified: [] },
                 );
               });
           }
-          function Z(e) {
-            const t = new Set(e.fields);
+          function $(e) {
+            const n = new Set(e.fields);
             return (
-              Object.keys(z.shape).every((e) => t.has(e)) && !t.has("api_name")
+              Object.keys(U.shape).every((e) => n.has(e)) && !n.has("api_name")
             );
           }
-          function $(e, t, n) {
-            const i = q({ groups: t, validLanguages: n }).safeParse(e.data);
-            return { ...i.data, ...M(e, i.error?.issues, "groupid") };
+          function X(e, n, t) {
+            const i = Z({ groups: n, validLanguages: t }).safeParse(e.data);
+            return { ...i.data, ...F(e, i.error?.issues, "groupid") };
           }
-          function X(e, t, n) {
+          function ee(e, n, t) {
             const i = `${e}-achievement-groups-localization.csv`,
-              s = t.map((e) => K(e, n)),
+              s = n.map((e) => J(e, t)),
               { fields: r, rows: a } = S(
                 s,
-                [...Object.keys(z.shape), ...n],
+                [...Object.keys(U.shape), ...t],
                 b(),
               );
             c.g.WriteCSVToFile(a, i, !0, r);
           }
           i();
-        } catch (ee) {
-          i(ee);
+        } catch (ne) {
+          i(ne);
         }
       });
     },
-    64563: (e, t, n) => {
+    64563: (e, n, t) => {
       "use strict";
-      n.a(e, async (e, i) => {
+      t.a(e, async (e, i) => {
         try {
-          n.d(t, { O: () => m, T: () => p });
-          var s = n(7850),
-            r = n(70402),
-            a = n(12155),
-            o = n(84896),
-            c = n(52038),
-            l = n(61859),
+          t.d(n, { O: () => m, T: () => p });
+          var s = t(7850),
+            r = t(70402),
+            a = t(12155),
+            o = t(84896),
+            c = t(52038),
+            l = t(61859),
             d = e([o]);
           o = (d.then ? (await d)() : d)[0];
           const u = {
@@ -3308,16 +3277,16 @@
           };
           function p(e) {
             const {
-                size: t = 64,
-                achievement: n,
+                size: n = 64,
+                achievement: t,
                 achieved: i = !0,
                 showWarningOnEmpty: d = !0,
                 children: p,
                 className: m,
               } = e,
               { cdnRoot: h } = (0, o.L3)(),
-              v = i ? n?.display?.icon : n?.display?.icon_gray,
-              _ = u[t],
+              v = i ? t?.display?.icon : t?.display?.icon_gray,
+              _ = u[n],
               g = (0, c.A)(
                 _,
                 r.AchievementImageContainer,
@@ -3341,19 +3310,19 @@
           }
           function m(e) {
             const {
-                size: t = 64,
-                image: n,
+                size: n = 64,
+                image: t,
                 showNewIcon: i = !1,
                 children: o,
                 className: l,
               } = e,
-              d = u[t];
+              d = u[n];
             return (0, s.jsxs)("div", {
               className: (0, c.A)(d, r.AchievementImageContainer, l),
               children: [
                 (0, s.jsx)("img", {
-                  src: n.image,
-                  alt: n.filenameWithoutExtension,
+                  src: t.image,
+                  alt: t.filenameWithoutExtension,
                 }),
                 i && (0, s.jsx)(a.FEq, { className: r.NewIcon }),
                 o,
@@ -3366,74 +3335,74 @@
         }
       });
     },
-    97377: (e, t, n) => {
+    97377: (e, n, t) => {
       "use strict";
-      n.a(e, async (e, i) => {
+      t.a(e, async (e, i) => {
         try {
-          n.d(t, { i: () => G, p: () => k });
-          var s = n(7850),
-            r = n(53965),
-            a = n(83392),
-            o = n(20187),
-            c = n(90534),
-            l = n(19997),
-            d = n(11967),
-            u = n(57757),
-            p = n(61023),
-            m = n(70760),
-            h = n(84896),
-            v = n(90626),
-            _ = n(16676),
-            g = n(9154),
-            x = n(12155),
-            f = n(52694),
-            j = n(32754),
-            A = n(52038),
-            w = n(61859),
-            y = n(64563),
-            E = n(15008),
-            C = n(59330),
-            b = n(24292),
-            S = n(21261),
-            N = n(53338),
-            I = n(60668),
-            T = n(34532),
-            D = e([m, h, y, C, b, S, T]);
+          t.d(n, { i: () => G, p: () => k });
+          var s = t(7850),
+            r = t(53965),
+            a = t(83392),
+            o = t(20187),
+            c = t(90534),
+            l = t(19997),
+            d = t(11967),
+            u = t(57757),
+            p = t(61023),
+            m = t(70760),
+            h = t(84896),
+            v = t(90626),
+            _ = t(16676),
+            g = t(9154),
+            x = t(12155),
+            f = t(52694),
+            j = t(32754),
+            A = t(52038),
+            w = t(61859),
+            E = t(64563),
+            y = t(15008),
+            C = t(59330),
+            b = t(24292),
+            S = t(21261),
+            N = t(53338),
+            I = t(60668),
+            T = t(34532),
+            D = e([m, h, E, C, b, S, T]);
           function k(e) {
             const {
-                achievements: t,
-                compact: n = !1,
+                achievements: n,
+                compact: t = !1,
                 editable: i = !0,
                 contentBefore: o,
                 headerContentBefore: c,
                 setBulkMove: l,
               } = e,
               d = (0, A.A)(
-                E.GroupAchievementList,
-                n ? E.Compact : void 0,
-                void 0 === o ? void 0 : E.HasBeforeContent,
+                y.GroupAchievementList,
+                t ? y.Compact : void 0,
+                void 0 === o ? void 0 : y.HasBeforeContent,
               );
             return (0, s.jsxs)("div", {
               className: d,
               children: [
                 (0, s.jsxs)("div", {
-                  className: E.Headers,
+                  className: y.Headers,
                   children: [
                     void 0 !== o &&
                       (0, s.jsx)("div", {
-                        className: E.ContentBefore,
+                        className: y.ContentBefore,
                         children: void 0 !== c && c(),
                       }),
                     (0, s.jsx)("div", {
                       children:
-                        !n &&
+                        !t &&
                         (0, s.jsx)(s.Fragment, {
                           children: (0, s.jsx)(r.$, {
                             size: "1",
                             onClick: l,
                             children: (0, s.jsxs)(a.s, {
                               direction: "row",
-                              gap: "1",
+                              gap: "2",
                               align: "center",
                               children: [
                                 (0, s.jsx)(f.MG, {
@@ -3454,8 +3423,8 @@
                         }),
                     }),
                     (0, s.jsx)("div", {
-                      className: E.Name,
-                      children: n
+                      className: y.Name,
+                      children: t
                         ? (0, w.we)(
                             "#AchievementEditor_Achievement_Edit_DisplayName",
                           )
@@ -3464,20 +3433,20 @@
                           ),
                     }),
                     (0, s.jsx)("div", {
-                      className: E.ApiName,
+                      className: y.ApiName,
                       children: (0, w.we)(
                         "#AchievementEditor_AchievementsTable_Header_ApiName",
                       ),
                     }),
-                    !n &&
+                    !t &&
                       (0, s.jsx)("div", {
                         children: (0, w.we)(
                           "#AchievementEditor_AchievementsTable_Header_SetBy",
                         ),
                       }),
-                    !n &&
+                    !t &&
                       (0, s.jsx)("div", {
-                        className: E.Availability,
+                        className: y.Availability,
                         children: (0, w.we)(
                           "#AchievementEditor_AchievementsTable_Header_Availability",
                         ),
@@ -3485,12 +3454,12 @@
                     (0, s.jsx)("div", {}),
                   ],
                 }),
-                t.map((e) =>
+                n.map((e) =>
                   (0, s.jsx)(
                     B,
                     {
                       achievement: e,
-                      compact: n,
+                      compact: t,
                       editable: i,
                       contentBefore: o,
                     },
@@ -3502,24 +3471,24 @@
           }
           function B(e) {
             const {
-                achievement: t,
-                compact: n,
+                achievement: n,
+                compact: t,
                 editable: i,
                 contentBefore: r,
               } = e,
-              l = (0, S.YZ)(t.statID, t.bitID),
+              l = (0, S.YZ)(n.statID, n.bitID),
               { appID: d } = (0, h.L3)(),
-              u = (0, h.$j)(d, t.groupid),
-              p = (0, S.fw)(t.groupid, u),
+              u = (0, h.$j)(d, n.groupid),
+              p = (0, S.fw)(n.groupid, u),
               [m, _] = v.useState(!1),
               [g, x] = v.useState(!1),
-              f = n ? 32 : 64;
+              f = t ? 32 : 64;
             return (0, s.jsxs)("div", {
               children: [
                 m
                   ? (0, s.jsx)(L, {
-                      achievement: t,
-                      onSave: (e) => {
+                      achievement: n,
+                      onSave: () => {
                         _(!1);
                       },
                       onCancel: () => {
@@ -3530,20 +3499,20 @@
                       children: [
                         void 0 !== r &&
                           (0, s.jsxs)("div", {
-                            className: E.ContentBefore,
-                            children: [r(t), " "],
+                            className: y.ContentBefore,
+                            children: [r(n), " "],
                           }),
                         (0, s.jsxs)("div", {
-                          className: E.Images,
+                          className: y.Images,
                           children: [
-                            (0, s.jsx)(y.T, {
-                              achievement: t,
+                            (0, s.jsx)(E.T, {
+                              achievement: n,
                               achieved: !0,
                               size: f,
                             }),
-                            !n &&
-                              (0, s.jsx)(y.T, {
-                                achievement: t,
+                            !t &&
+                              (0, s.jsx)(E.T, {
+                                achievement: n,
                                 achieved: !1,
                                 size: f,
                               }),
@@ -3556,45 +3525,45 @@
                               weight: "heavy",
                               contrast: "title",
                               children: (0, s.jsx)(C.VU, {
-                                text: t.display?.name,
+                                text: n.display?.name,
                               }),
                             }),
-                            !n &&
+                            !t &&
                               (0, s.jsx)(o.EY, {
                                 children: (0, s.jsx)(C.VU, {
-                                  text: t.display?.desc,
+                                  text: n.display?.desc,
                                 }),
                               }),
                           ],
                         }),
                         (0, s.jsxs)("div", {
-                          className: E.ApiName,
+                          className: y.ApiName,
                           children: [
-                            (0, s.jsx)("div", { children: t.name }),
-                            !n &&
+                            (0, s.jsx)("div", { children: n.name }),
+                            !t &&
                               (0, s.jsx)("div", {
-                                children: t.progress
-                                  ? `${t.progress.value.operand1} ${t.progress.min_val} - ${t.progress.max_val}`
+                                children: n.progress
+                                  ? `${n.progress.value.operand1} ${n.progress.min_val} - ${n.progress.max_val}`
                                   : "",
                               }),
                           ],
                         }),
-                        !n &&
+                        !t &&
                           (0, s.jsx)("div", {
-                            className: E.Permission,
-                            children: h.yu[t.permission ?? 0],
+                            className: y.Permission,
+                            children: h.yu[n.permission ?? 0],
                           }),
-                        !n &&
+                        !t &&
                           (0, s.jsxs)("div", {
-                            className: E.Availability,
+                            className: y.Availability,
                             children: [
-                              "1" == t.display?.hidden &&
+                              "1" == n.display?.hidden &&
                                 (0, s.jsx)("div", {
                                   children: (0, w.we)(
                                     "#AchievementEditor_Achievement_Edit_Spoiler",
                                   ),
                                 }),
-                              "1" == t.archived &&
+                              "1" == n.archived &&
                                 (0, s.jsx)("div", {
                                   children: (0, w.we)(
                                     "#AchievementEditor_Achievement_Edit_Archived",
@@ -3603,9 +3572,9 @@
                             ],
                           }),
                         (0, s.jsxs)("div", {
-                          className: E.EditButtons,
+                          className: y.EditButtons,
                           children: [
-                            !n &&
+                            !t &&
                               i &&
                               (0, s.jsxs)("div", {
                                 children: [
@@ -3622,19 +3591,21 @@
                                 ],
                               }),
                             (0, s.jsxs)("div", {
-                              className: E.IDText,
+                              className: y.IDText,
                               children: [
                                 !!l &&
                                   (0, s.jsx)(s.Fragment, {
                                     children: (0, s.jsxs)(j.he, {
-                                      toolTipContent: "Global achievement rate",
+                                      toolTipContent: (0, w.we)(
+                                        "#AchievementEditor_AchievementsTable_GlobalRate_Tooltip",
+                                      ),
                                       style: {
                                         verticalAlign: "middle",
                                         whiteSpace: "nowrap",
                                       },
                                       children: [
                                         (0, s.jsx)(S.BA, {
-                                          className: E.GlobalRateIcon,
+                                          className: y.GlobalRateIcon,
                                         }),
                                         (0, S.Z7)(l.global_unlock_percent),
                                       ],
@@ -3653,7 +3624,7 @@
                                   },
                                   children: (0, s.jsx)(T.C6, {
                                     hidden: !p?.visible,
-                                    className: E.GroupVisibility,
+                                    className: y.GroupVisibility,
                                     omitText: !0,
                                   }),
                                 }),
@@ -3661,9 +3632,9 @@
                                   "#AchievementEditor_AchievementsTable_Header_ID",
                                 ),
                                 ": ",
-                                t.statID,
+                                n.statID,
                                 ".",
-                                t.bitID,
+                                n.bitID,
                               ],
                             }),
                           ],
@@ -3672,7 +3643,7 @@
                     }),
                 g &&
                   (0, s.jsx)(R, {
-                    achievement: t,
+                    achievement: n,
                     hideModal: () => {
                       x(!1);
                     },
@@ -3681,17 +3652,17 @@
             });
           }
           function R(e) {
-            const { achievement: t, hideModal: n } = e,
+            const { achievement: n, hideModal: t } = e,
               { appID: i } = (0, h.L3)(),
-              r = (0, S.YZ)(t.statID, t.bitID),
+              r = (0, S.YZ)(n.statID, n.bitID),
               o = r && r.global_unlock_percent > 0,
-              c = (0, h.Bx)(i, t.statID, t.bitID);
+              c = (0, h.Bx)(i, n.statID, n.bitID);
             return (0, s.jsx)(g.EN, {
               active: !0,
               children: (0, s.jsx)(g.x_, {
-                onEscKeypress: n,
+                onEscKeypress: t,
                 children: (0, s.jsxs)(_.U9, {
-                  className: E.AchievementDeleteDialog,
+                  className: y.AchievementDeleteDialog,
                   children: [
                     (0, s.jsx)(_.Y9, {
                       children: (0, w.we)(
@@ -3714,11 +3685,11 @@
                             ],
                           }),
                         (0, s.jsxs)("div", {
-                          className: E.AchievementBox,
+                          className: y.AchievementBox,
                           children: [
                             (0, s.jsx)("div", {
-                              children: (0, s.jsx)(y.T, {
-                                achievement: t,
+                              children: (0, s.jsx)(E.T, {
+                                achievement: n,
                                 achieved: !0,
                               }),
                             }),
@@ -3734,7 +3705,7 @@
                                         ":",
                                       ],
                                     }),
-                                    (0, s.jsx)("div", { children: t.name }),
+                                    (0, s.jsx)("div", { children: n.name }),
                                   ],
                                 }),
                                 (0, s.jsxs)("div", {
@@ -3749,8 +3720,8 @@
                                     }),
                                     (0, s.jsx)("div", {
                                       children:
-                                        (0, C.ZM)(t.display?.name, "english") ??
-                                        (0, C.ZM)(t.display?.name, "token"),
+                                        (0, C.ZM)(n.display?.name, "english") ??
+                                        (0, C.ZM)(n.display?.name, "token"),
                                     }),
                                   ],
                                 }),
@@ -3766,8 +3737,8 @@
                                     }),
                                     (0, s.jsx)("div", {
                                       children:
-                                        (0, C.ZM)(t.display?.desc, "english") ??
-                                        (0, C.ZM)(t.display?.desc, "token"),
+                                        (0, C.ZM)(n.display?.desc, "english") ??
+                                        (0, C.ZM)(n.display?.desc, "token"),
                                     }),
                                   ],
                                 }),
@@ -3783,10 +3754,10 @@
                           "#AchievementEditor_Achievement_Delete_Dialog_Delete",
                         ),
                         saveColor: "red",
-                        onCancel: n,
-                        onSave: async () => {
-                          await c.mutateAsync(), n();
-                        },
+                        pending: c.isPending,
+                        error: c.error?.message,
+                        onCancel: t,
+                        onSave: () => c.mutate(void 0, { onSuccess: t }),
                       }),
                     }),
                   ],
@@ -3802,90 +3773,137 @@
           }
           function M(e) {
             const {
-                onSave: t,
-                onCancel: n,
+                onSave: n,
+                onCancel: t,
                 bNewAchievement: i,
                 achievement: c,
                 groupid: _,
               } = e,
               { appID: g, cdnRoot: f } = (0, h.L3)(),
-              A = (0, h.J3)(g),
-              y = (0, h.Q4)(g),
+              A = (0, h.J3)(g) ?? [],
+              E = (0, h.Q4)(g),
               T = (0, S.YZ)(c?.statID, c?.bitID),
               D = (0, h.ts)(g),
+              k = (0, h.kb)(g),
+              B = (0, v.useMemo)(
+                () =>
+                  new Set(
+                    (k ?? [])
+                      .filter(
+                        (e) => e.statID != c?.statID || e.bitID != c?.bitID,
+                      )
+                      .map((e) => e.name?.trim().toUpperCase()),
+                  ),
+                [k, c?.statID, c?.bitID],
+              ),
+              R = (0, v.useMemo)(
+                () =>
+                  (0, I.Cm)(
+                    m
+                      .YjP()
+                      .refine((e) => e.trim().length > 0, {
+                        error: (0, w.we)(
+                          "#AchievementEditor_Achievement_Edit_ApiName_Error_Required",
+                        ),
+                      })
+                      .refine((e) => !B.has(e.trim().toUpperCase()), {
+                        error: (0, w.we)(
+                          "#AchievementEditor_Achievement_Edit_ApiName_Error_Duplicate",
+                        ),
+                      }),
+                  ),
+                [B],
+              ),
               {
-                value: k,
-                setValue: B,
-                isValid: R,
-                issues: G,
-              } = (0, I.$q)(c?.name, (0, I.Cm)(m.YjP().nonempty()), !0),
-              [L, M] = v.useState(c?.permission ?? h.yu.Client),
-              [V, O] = v.useState("1" == c?.display?.hidden),
-              [P, z] = v.useState("1" == c?.archived),
-              [U, H] = v.useState(c?.groupid ?? _),
-              [W, Y] = v.useState(c?.display?.name ?? { token: `${k}_NAME` }),
-              [K, J] = v.useState(c?.display?.desc ?? { token: `${k}_DESC` }),
-              Q = y?.[c?.groupid ?? _],
-              q = (0, S.fw)(U, Q),
-              Z = (0, S.fw)(U, y?.[U]),
-              [$, X] = v.useState(c?.progress ?? void 0),
-              ee = $ ? A.find((e) => e.name == $.value.operand1) : void 0,
-              te = (0, b.E)(ee),
-              ne =
-                !$ ||
-                te.validator(
+                value: G,
+                setValue: L,
+                isValid: M,
+                issues: F,
+              } = (0, I.$q)(c?.name, R, !0),
+              [O, P] = v.useState(c?.permission ?? h.yu.Client),
+              [z, U] = v.useState("1" == c?.display?.hidden),
+              [H, W] = v.useState("1" == c?.archived),
+              [Y, K] = v.useState(c?.groupid ?? _),
+              [J, q] = v.useState(c?.display?.name ?? { token: `${G}_NAME` }),
+              [Q, Z] = v.useState(c?.display?.desc ?? { token: `${G}_DESC` }),
+              $ = E?.[c?.groupid ?? _],
+              X = (0, S.fw)(Y, $),
+              ee = (0, S.fw)(Y, E?.[Y]),
+              [ne, te] = v.useState(c?.progress ?? void 0),
+              ie = ne ? A.find((e) => e.name == ne.value.operand1) : void 0,
+              se = (0, b.E)(ie),
+              re =
+                !ne ||
+                se.validator(
                   m
                     .Ikc({ min_val: m.auy.number(), max_val: m.auy.number() })
-                    .safeParse($).data,
+                    .safeParse(ne).data,
                 ).success,
-              ie = R && ne,
-              [se, re] = v.useState(
+              ae = M && re,
+              [oe, ce] = v.useState(
                 c?.display?.icon
                   ? {
                       image: f + c?.display?.icon,
                       imageType: N.bi,
-                      filenameWithoutExtension: c?.display?.icon,
+                      filenameWithoutExtension: c?.name,
                     }
                   : void 0,
               ),
-              [ae, oe] = v.useState(
+              [le, de] = v.useState(void 0),
+              [ue, pe] = v.useState(
                 c?.display?.icon_gray
                   ? {
                       image: f + c?.display?.icon_gray,
                       imageType: N.bi,
-                      filenameWithoutExtension: c?.display?.icon_gray,
+                      filenameWithoutExtension: c?.name,
                     }
                   : void 0,
               ),
-              ce = (0, h.q4)(g, i ? null : c.statID, i ? null : c.bitID);
-            let le;
+              me = async (e) => {
+                try {
+                  de(void 0),
+                    pe({
+                      image: await (0, N.I7)(e),
+                      imageType: N.bi,
+                      filenameWithoutExtension: G,
+                    });
+                } catch {
+                  de(
+                    (0, w.we)("#AchievementEditor_Image_Error_GrayscaleFailed"),
+                  );
+                }
+              },
+              he = (0, h.q4)(g, i ? null : c.statID, i ? null : c.bitID);
+            let ve;
             return (
-              i && Z.visible && Z.hasprogress
-                ? (le = (0, s.jsx)(S.lh, {
+              i && ee.visible && ee.hasprogress
+                ? (ve = (0, s.jsx)(S.lh, {
                     text: (0, w.we)(
                       "#AchievementEditor_Group_CreateAchievement_WarnLiveGroup",
                     ),
                   }))
-                : q.visible && !Z.visible && (T?.global_unlock_percent ?? 0) > 0
-                  ? (le = (0, s.jsx)(S.lh, {
+                : X.visible &&
+                    !ee.visible &&
+                    (T?.global_unlock_percent ?? 0) > 0
+                  ? (ve = (0, s.jsx)(S.lh, {
                       text: (0, w.we)(
                         "#AchievementEditor_Achievement_Edit_Group_Warn_HidingAchievement",
                       ),
                     }))
                   : c?.groupid != _ &&
-                    Z.visible &&
-                    Z.hasprogress &&
-                    (le = (0, s.jsx)(S.lh, {
+                    ee.visible &&
+                    ee.hasprogress &&
+                    (ve = (0, s.jsx)(S.lh, {
                       text: (0, w.we)(
                         "#AchievementEditor_Achievement_Edit_Group_Warn_BreakCompletion",
                       ),
                     })),
               (0, s.jsx)("div", {
-                className: E.AchievementEditDialog,
+                className: y.AchievementEditDialog,
                 children: (0, s.jsxs)("form", {
                   children: [
                     (0, s.jsx)("div", {
-                      className: E.EditTitle,
+                      className: y.EditTitle,
                       children: (0, s.jsx)("h1", {
                         children: i
                           ? (0, w.we)(
@@ -3897,7 +3915,7 @@
                       }),
                     }),
                     (0, s.jsxs)("div", {
-                      className: E.EditContent,
+                      className: y.EditContent,
                       children: [
                         (0, s.jsx)("div", {
                           style: { paddingRight: "10px" },
@@ -3923,17 +3941,10 @@
                                         ),
                                       }),
                                     }),
-                                    (0, s.jsx)(F, {
-                                      icon: se,
+                                    (0, s.jsx)(V, {
+                                      icon: oe,
                                       setIcon: async (e) => {
-                                        if ((re(e), !ae)) {
-                                          const t = await (0, N.I7)(e.image);
-                                          oe({
-                                            image: t,
-                                            imageType: N.bi,
-                                            filenameWithoutExtension: "",
-                                          });
-                                        }
+                                        ce(e), ue || (await me(e.image));
                                       },
                                       achievement: c,
                                     }),
@@ -3953,26 +3964,20 @@
                                         ),
                                       }),
                                     }),
-                                    (0, s.jsx)(F, {
-                                      icon: ae,
-                                      setIcon: oe,
+                                    (0, s.jsx)(V, {
+                                      icon: ue,
+                                      setIcon: pe,
                                       achievement: c,
                                     }),
-                                    !!se &&
+                                    !!oe &&
                                       (0, s.jsx)(r.$, {
                                         color: "dull",
-                                        onClick: async () => {
-                                          const e = await (0, N.I7)(se.image);
-                                          oe({
-                                            image: e,
-                                            imageType: N.bi,
-                                            filenameWithoutExtension: "",
-                                          });
-                                        },
+                                        onClick: () => me(oe.image),
                                         children: (0, w.we)(
                                           "#AchievementEditor_Achievement_Edit_Icons_Button_Generate",
                                         ),
                                       }),
+                                    !!le && (0, s.jsx)(S.r3, { text: le }),
                                   ],
                                 }),
                               ],
@@ -3988,10 +3993,10 @@
                               placeholder: (0, w.we)(
                                 "#AchievementEditor_Achievement_Edit_ApiName_Placeholder",
                               ),
-                              value: k,
-                              isValid: R,
-                              setValue: B,
-                              issues: G,
+                              value: G,
+                              isValid: M,
+                              setValue: L,
+                              issues: F,
                               autoFocus: void 0 === c?.name,
                             }),
                             (0, s.jsxs)("div", {
@@ -4001,12 +4006,12 @@
                                     (0, w.we)(
                                       "#AchievementEditor_Achievement_Edit_SetBy",
                                     ),
-                                    !!$ &&
+                                    !!ne &&
                                       (0, s.jsxs)(o.EY, {
                                         contrast: "description",
                                         children: [
                                           (0, s.jsx)("div", {
-                                            className: E.InlineSVG,
+                                            className: y.InlineSVG,
                                             children: (0, s.jsx)(x.c_I, {}),
                                           }),
                                           (0, w.we)(
@@ -4016,37 +4021,37 @@
                                       }),
                                   ],
                                 }),
-                                $
+                                ne
                                   ? (0, s.jsx)(p.j, {
                                       disabled: !0,
-                                      children: h.yu[L ?? h.yu.Client],
+                                      children: h.yu[O ?? h.yu.Client],
                                     })
                                   : (0, s.jsx)(d.l6, {
                                       options: Object.values(h.yu).filter(
                                         (e) => "number" == typeof e,
                                       ),
                                       getOptionLabel: (e) => h.yu[e],
-                                      selectedValue: L,
+                                      selectedValue: O,
                                       onSelectionChange: (e) => {
-                                        M(e ?? h.yu.Client);
+                                        P(e ?? h.yu.Client);
                                       },
                                     }),
                               ],
                             }),
                             (0, s.jsx)(b.O, {
                               appID: g,
-                              progress: $,
+                              progress: ne,
                               setProgress: (e) => {
                                 if (e && e.value.operand1) {
-                                  X(e);
-                                  const t = A.find(
-                                    (t) => t.name == e.value.operand1,
+                                  te(e);
+                                  const n = A.find(
+                                    (n) => n.name == e.value.operand1,
                                   );
-                                  t && M(t.permission);
+                                  n && P(n.permission);
                                 } else
-                                  X(void 0), M(c?.permission ?? h.yu.Client);
+                                  te(void 0), P(c?.permission ?? h.yu.Client);
                               },
-                              ...te,
+                              ...se,
                             }),
                           ],
                         }),
@@ -4055,36 +4060,36 @@
                             (0, s.jsxs)("div", {
                               children: [
                                 (0, s.jsxs)("div", {
-                                  className: E.LocHeader,
+                                  className: y.LocHeader,
                                   children: [
                                     (0, s.jsx)("h2", {
                                       children: (0, w.we)(
                                         "#AchievementEditor_Achievement_Edit_DisplayName",
                                       ),
                                     }),
-                                    (0, s.jsx)(C.Mq, { locstring: W }),
+                                    (0, s.jsx)(C.Mq, { locstring: J }),
                                   ],
                                 }),
-                                (0, s.jsx)(C.Pk, { value: W, setValue: Y }),
+                                (0, s.jsx)(C.Pk, { value: J, setValue: q }),
                               ],
                             }),
                             (0, s.jsxs)("div", {
                               children: [
                                 (0, s.jsxs)("div", {
-                                  className: E.LocHeader,
+                                  className: y.LocHeader,
                                   children: [
                                     (0, s.jsx)("h2", {
                                       children: (0, w.we)(
                                         "#AchievementEditor_Achievement_Edit_Description",
                                       ),
                                     }),
-                                    (0, s.jsx)(C.Mq, { locstring: K }),
+                                    (0, s.jsx)(C.Mq, { locstring: Q }),
                                   ],
                                 }),
                                 (0, s.jsx)(C.Pk, {
                                   multiline: !0,
-                                  value: K,
-                                  setValue: J,
+                                  value: Q,
+                                  setValue: Z,
                                 }),
                               ],
                             }),
@@ -4095,10 +4100,10 @@
                                     "#AchievementEditor_Achievement_Edit_Group",
                                   ),
                                 }),
-                                le,
+                                ve,
                                 (0, s.jsx)(S.yo, {
-                                  selectedValue: U ?? S.z0,
-                                  onSelectionChange: H,
+                                  selectedValue: Y ?? S.z0,
+                                  onSelectionChange: K,
                                 }),
                               ],
                             }),
@@ -4128,10 +4133,10 @@
                                         flexGrow: "1",
                                         padding: "1",
                                         align: "start",
-                                        className: E.Cursor,
+                                        className: y.Cursor,
                                         children: (0, s.jsx)(u.S, {
-                                          checked: V,
-                                          onChange: O,
+                                          checked: z,
+                                          onChange: U,
                                           align: "start",
                                           children: (0, s.jsxs)(a.s, {
                                             direction: "column",
@@ -4166,10 +4171,10 @@
                                         flexGrow: "1",
                                         padding: "1",
                                         align: "start",
-                                        className: E.Cursor,
+                                        className: y.Cursor,
                                         children: (0, s.jsx)(u.S, {
-                                          checked: P,
-                                          onChange: z,
+                                          checked: H,
+                                          onChange: W,
                                           align: "start",
                                           children: (0, s.jsxs)(a.s, {
                                             direction: "column",
@@ -4199,74 +4204,88 @@
                       ],
                     }),
                     (0, s.jsx)(S.Aj, {
-                      saveDisabled: !ie,
-                      onSave: async () => {
-                        const e = (0, S.EV)(
+                      saveDisabled: !ae,
+                      pending: he.isPending,
+                      error: he.error?.message,
+                      onSave: () => {
+                        const e = G.trim(),
+                          t = (0, S.EV)(
                             c?.display?.name?.token,
                             c?.name,
                             "name",
-                            k,
+                            e,
                           ),
-                          n = (0, S.EV)(
+                          i = (0, S.EV)(
                             c?.display?.desc?.token,
                             c?.name,
                             "desc",
-                            k,
+                            e,
                           ),
-                          i = (0, C.II)(c?.display?.name, D),
-                          s = (0, C.II)(c?.display?.desc, D),
-                          r = (0, C.II)(W, D),
-                          a = (0, C.II)(K, D);
-                        let o = {
+                          s = (0, C.II)(c?.display?.name, D),
+                          r = (0, C.II)(c?.display?.desc, D),
+                          a = (0, C.II)(J, D),
+                          o = (0, C.II)(Q, D);
+                        let l = {
                           ...c,
-                          name: k,
-                          groupid: U,
-                          permission: L,
-                          archived: P ? "1" : "0",
+                          name: e,
+                          groupid: Y,
+                          permission: O,
+                          archived: H ? "1" : "0",
                           display: {
                             ...c?.display,
-                            name: { ...i, ...r, token: e },
-                            desc: { ...s, ...a, token: n },
-                            hidden: V ? "1" : "0",
+                            name: { ...s, ...a, token: t },
+                            desc: { ...r, ...o, token: i },
+                            hidden: z ? "1" : "0",
                           },
-                          progress: $,
+                          progress: ne,
                         };
-                        await ce
-                          .mutateAsync({
-                            achievement: o,
-                            icon: se?.image,
-                            icon_gray: ae?.image,
-                          })
-                          .then(({ statid: e, bitid: n }) => {
-                            t && t(o);
-                          })
-                          .catch((e) => {});
+                        he.mutate(
+                          {
+                            achievement: l,
+                            icon: oe?.image,
+                            icon_gray: ue?.image,
+                          },
+                          {
+                            onSuccess: () => {
+                              n && n(l);
+                            },
+                          },
+                        );
                       },
-                      onCancel: n,
+                      onCancel: t,
                     }),
                   ],
                 }),
               })
             );
           }
-          function F(e) {
-            const { icon: t, setIcon: n, achievement: i } = e,
-              a = (0, v.useRef)(null);
+          [m, h, E, C, b, S, T] = D.then ? (await D)() : D;
+          const F = 256;
+          function V(e) {
+            const { icon: n, setIcon: t, achievement: i } = e,
+              a = (0, v.useRef)(null),
+              [c, l] = v.useState(void 0);
             return (0, s.jsxs)(s.Fragment, {
               children: [
                 (0, s.jsx)(N._Q, {
-                  className: E.AchievementUploadBox,
-                  onUpload: n,
+                  className: y.AchievementUploadBox,
+                  onUpload: (e) => {
+                    l(void 0), t(e);
+                  },
+                  onError: l,
+                  forceSquare: !0,
+                  maxDimension: F,
                   fileInputRef: a,
-                  children: t
-                    ? (0, s.jsx)(y.O, { image: t, size: 128 })
-                    : (0, s.jsx)(y.T, {
+                  children: n
+                    ? (0, s.jsx)(E.O, { image: n, size: 128 })
+                    : (0, s.jsx)(E.T, {
                         achievement: i,
                         achieved: !0,
                         size: 128,
                         showWarningOnEmpty: !1,
                       }),
                 }),
+                !!c && (0, s.jsx)(S.r3, { text: c }),
                 (0, s.jsx)(o.EY, {
                   color: "accent-7",
                   children: (0, w.we)(
@@ -4283,64 +4302,64 @@
               ],
             });
           }
-          ([m, h, y, C, b, S, T] = D.then ? (await D)() : D), i();
-        } catch (V) {
-          i(V);
+          i();
+        } catch (O) {
+          i(O);
         }
       });
     },
-    15793: (e, t, n) => {
+    15793: (e, n, t) => {
       "use strict";
-      n.a(e, async (e, i) => {
+      t.a(e, async (e, i) => {
         try {
-          n.r(t), n.d(t, { default: () => S });
-          var s = n(7850),
-            r = n(83392),
-            a = n(38256),
-            o = n(53965),
-            c = n(28491),
-            l = n(84896),
-            d = n(90626),
-            u = n(45737),
-            p = n.n(u),
-            m = n(52038),
-            h = n(61859),
-            v = n(78327),
-            _ = n(30470),
-            g = n(21632),
-            x = n(5088),
-            f = n(10435),
-            j = n(34532),
-            A = n(59330),
-            w = n(21261),
-            y = n(66418),
-            E = n(25865),
-            C = n(32754),
+          t.r(n), t.d(n, { default: () => S });
+          var s = t(7850),
+            r = t(83392),
+            a = t(38256),
+            o = t(53965),
+            c = t(28491),
+            l = t(84896),
+            d = t(90626),
+            u = t(45737),
+            p = t.n(u),
+            m = t(52038),
+            h = t(61859),
+            v = t(78327),
+            _ = t(30470),
+            g = t(21632),
+            x = t(5088),
+            f = t(10435),
+            j = t(34532),
+            A = t(59330),
+            w = t(21261),
+            E = t(66418),
+            y = t(47284),
+            C = t(32754),
             b = e([l, g, j, A, w]);
           function S(e) {
-            const { appId: t } = e,
-              n = (0, v.Tc)("icon_cdn_root", "application_config"),
+            const { appId: n } = e,
+              t = (0, v.Tc)("icon_cdn_root", "application_config"),
               [i, r] = (0, d.useState)("english"),
               [a, o] = (0, d.useState)(""),
               [c, u] = (0, d.useState)(!1),
               [p, _] = (0, d.useState)(!1),
-              f = (0, E.On)(t),
+              f = (0, y.On)(n),
               A =
-                ((0, l.vd)(t),
+                ((0, l.vd)(n),
                 {
-                  appID: t,
-                  cdnRoot: n,
+                  appID: n,
+                  cdnRoot: t,
                   localization: { currentLanguage: i, setCurrentLanguage: r },
                   filter: a,
                   existingAchievements: f.data,
                 }),
-              [y, C] = (0, d.useState)(!1),
+              [E, C] = (0, d.useState)(!1),
               [b, S] = (0, d.useState)(),
               [D, k] = (0, d.useState)(!1),
               [B, R] = (0, d.useState)("main"),
               G = {
                 main: {
-                  label: "Manage Achievements",
+                  label: (0, h.we)("#AchievementEditor_Tab_ManageAchievements"),
                   render: () =>
                     (0, s.jsx)(j._e, {
                       reordering: c,
@@ -4350,7 +4369,7 @@
                     }),
                 },
                 bulk: {
-                  label: "Bulk Import/Export",
+                  label: (0, h.we)("#AchievementEditor_Tab_BulkImportExport"),
                   render: () =>
                     (0, s.jsx)(g.V, {
                       onClose: () => R("main"),
@@ -4391,13 +4410,13 @@
                     G[B].render(),
                   ],
                 }),
-                y &&
+                E &&
                   (0, s.jsx)(w.TM, {
                     onCancel: () => C(!1),
                     onOk: () => {
                       C(!1), k(!1), R(b), S(void 0);
                     },
-                    okText: "Confirm",
+                    okText: (0, h.we)("#Button_Confirm"),
                     children: (0, h.we)(
                       "#AchievementEditor_TabBar_BulkUnsavedConfirm",
                     ),
@@ -4407,23 +4426,23 @@
           }
           function N(e) {
             const {
-              options: t,
-              getOptionLabel: n,
+              options: n,
+              getOptionLabel: t,
               selectedOption: i,
               onChange: r,
             } = e;
             return (0, s.jsx)("div", {
               className: x.TabBar,
-              children: t.map((e) =>
+              children: n.map((e) =>
                 e == i
                   ? (0, s.jsx)(
                       "div",
-                      { className: x.Selected, children: n ? n(e) : e },
+                      { className: x.Selected, children: t ? t(e) : e },
                       e,
                     )
                   : (0, s.jsx)(
                       "div",
-                      { onClick: () => r(e), children: n ? n(e) : e },
+                      { onClick: () => r(e), children: t ? t(e) : e },
                       e,
                     ),
               ),
@@ -4431,8 +4450,8 @@
           }
           function I(e) {
             const {
-                filter: t,
-                setFilter: n,
+                filter: n,
+                setFilter: t,
                 showFilter: i,
                 reordering: c,
                 setReordering: l,
@@ -4443,7 +4462,7 @@
               } = e,
               _ = (0, A.DG)(),
               g = Object.values(_).every((e) => e.set == e.total),
-              [j, y] = (0, d.useState)(!1);
+              [j, E] = (0, d.useState)(!1);
             return (0, s.jsxs)("div", {
               className: x.Toolbar,
               children: [
@@ -4481,7 +4500,7 @@
                               ),
                               style: { height: "1.2em" },
                               children: (0, s.jsx)(w.lg, {
-                                onClick: () => y(!0),
+                                onClick: () => E(!0),
                                 className: x.LanguageEditButton,
                               }),
                             }),
@@ -4501,8 +4520,8 @@
                           placeholder: (0, h.we)(
                             "#AchievementEditor_Toolbar_Filter_Placeholder",
                           ),
-                          value: t,
-                          onTextChange: n,
+                          value: n,
+                          onTextChange: t,
                           clearable: !0,
                         }),
                       }),
@@ -4554,23 +4573,24 @@
                             },
                             children: (0, s.jsx)(w.mc, {
                               onClick: () => l(!0),
-                              title: (0, h.we)(
-                                "#AchievementEditor_ReorderGroups",
-                              ),
                             }),
                           }),
                       ],
                     }),
                   ],
                 }),
-                j && (0, s.jsx)(A.Jt, { onClose: () => y(!1) }),
+                j && (0, s.jsx)(A.Jt, { onClose: () => E(!1) }),
               ],
             });
           }
           function T(e) {
-            const { appID: t } = (0, l.L3)(),
-              n = y.iA.steamid,
-              i = `${_.TS.COMMUNITY_BASE_URL}profiles/${n}/achievements/${t}`;
+            const { appID: n } = (0, l.L3)(),
+              t = E.iA.steamid,
+              i = `${_.TS.COMMUNITY_BASE_URL}profiles/${t}/achievements/${n}`,
+              r = `${_.TS.PARTNER_BASE_URL}doc/features/achievements`,
+              a = `${r}#5`,
+              o = (0, l.Rz)(n),
+              d = (0, l.kb)(n)?.length ?? 0;
             return (0, s.jsxs)("div", {
               className: x.HeaderContainer,
               children: [
@@ -4584,7 +4604,7 @@
                         children: (0, h.we)("#AchievementEditor_title"),
                       }),
                       (0, s.jsx)(c.Y, {
-                        href: `${_.TS.PARTNER_BASE_URL}doc/features/achievements`,
+                        href: r,
                         children: (0, h.we)("#AssetRequest_General_SeeDocs"),
                       }),
                     ],
@@ -4663,6 +4683,41 @@
                         }),
                       ],
                     }),
+                    !!o &&
+                      (0, s.jsxs)("div", {
+                        children: [
+                          (0, s.jsxs)("div", {
+                            children: [
+                              (0, h.we)(
+                                "#AchievementEditor_Description_Title_Limit",
+                              ),
+                              ":",
+                            ],
+                          }),
+                          (0, s.jsxs)("div", {
+                            children: [
+                              (0, h.we)(
+                                "#AchievementEditor_Description_Limit",
+                                d,
+                                o.max_achievements,
+                              ),
+                              !o.vetted &&
+                                (0, s.jsxs)(s.Fragment, {
+                                  children: [
+                                    " ",
+                                    (0, h.uH)(
+                                      (0, h.we)(
+                                        "#AchievementEditor_Description_Limit_Unvetted",
+                                        o.max_achievements,
+                                      ),
+                                      (0, s.jsx)("a", { href: a }),
+                                    ),
+                                  ],
+                                }),
+                            ],
+                          }),
+                        ],
+                      }),
                     (0, s.jsxs)("div", {
                       children: [
                         (0, s.jsxs)("div", {
@@ -4695,7 +4750,7 @@
                           children: (0, h.oW)(
                             "#AchievementEditor_Description_Releasing",
                             (0, s.jsx)("a", {
-                              href: `${_.TS.PARTNER_BASE_URL}admin/game/editbyappid/${t}?activetab=tab_basic#feature_section`,
+                              href: `${_.TS.PARTNER_BASE_URL}admin/game/editbyappid/${n}?activetab=tab_basic#feature_section`,
                             }),
                           ),
                         }),
@@ -4712,53 +4767,53 @@
         }
       });
     },
-    34532: (e, t, n) => {
+    34532: (e, n, t) => {
       "use strict";
-      n.a(e, async (e, i) => {
+      t.a(e, async (e, i) => {
         try {
-          n.d(t, { C6: () => V, _e: () => N, or: () => O });
-          var s = n(7850),
-            r = n(89558),
-            a = n(53965),
-            o = n(83392),
-            c = n(20187),
-            l = n(90534),
-            d = n(57757),
-            u = n(11967),
-            p = n(46562),
-            m = n(84896),
-            h = n(90626),
-            v = n(16676),
-            _ = n(10435),
-            g = n(9154),
-            x = n(12155),
-            f = n(52038),
-            j = n(61859),
-            A = n(874),
-            w = n(97377),
-            y = n(1103),
-            E = n(59330),
-            C = n(21261),
-            b = e([m, w, E, C]);
-          function S(e, t, n) {
-            if (!t) return { included: e, excluded: [] };
-            const i = t.replace(/[#-.]|[[-^]|[?|{}]/g, "\\$&"),
+          t.d(n, { C6: () => V, _e: () => N, or: () => O });
+          var s = t(7850),
+            r = t(89558),
+            a = t(53965),
+            o = t(83392),
+            c = t(20187),
+            l = t(90534),
+            d = t(57757),
+            u = t(11967),
+            p = t(46562),
+            m = t(84896),
+            h = t(90626),
+            v = t(16676),
+            _ = t(10435),
+            g = t(9154),
+            x = t(12155),
+            f = t(52038),
+            j = t(61859),
+            A = t(874),
+            w = t(97377),
+            E = t(1103),
+            y = t(59330),
+            C = t(21261),
+            b = e([m, w, y, C]);
+          function S(e, n, t) {
+            if (!n) return { included: e, excluded: [] };
+            const i = n.replace(/[#-.]|[[-^]|[?|{}]/g, "\\$&"),
               s = new RegExp(`.*${i ?? ""}.*`, "i");
             return (e ?? []).reduce(
-              (e, t) => (
+              (e, n) => (
                 ((e) => {
-                  const t = (0, E.ZM)(e.display?.name, n ?? "english"),
-                    r = (0, E.ZM)(e.display?.desc, n ?? "english");
+                  const n = (0, y.ZM)(e.display?.name, t ?? "english"),
+                    r = (0, y.ZM)(e.display?.desc, t ?? "english");
                   return !(
                     i &&
                     "" !== i &&
                     !e.name.match(s) &&
-                    !t?.match(s) &&
+                    !n?.match(s) &&
                     !r?.match(s)
                   );
-                })(t)
-                  ? e.included.push(t)
-                  : e.excluded.push(t),
+                })(n)
+                  ? e.included.push(n)
+                  : e.excluded.push(n),
                 e
               ),
               { included: [], excluded: [] },
@@ -4766,31 +4821,31 @@
           }
           function N(e) {
             const {
-                reordering: t,
-                setReordering: n,
+                reordering: n,
+                setReordering: t,
                 creatingNewGroup: i,
                 setCreatingNewGroup: r,
               } = e,
               { appID: o } = (0, m.L3)(),
               c = (0, m.kb)(o),
               l = (0, m.FM)(o);
-            return t
+            return n
               ? (0, s.jsx)("div", {
                   children: (0, s.jsxs)("div", {
-                    className: y.GroupList,
+                    className: E.GroupList,
                     children: [
                       (0, s.jsx)("div", {
-                        className: y.GroupReorderDescription,
+                        className: E.GroupReorderDescription,
                         children: (0, j.we)(
                           "#AchievementEditor_Reorder_Description",
                         ),
                       }),
                       (0, s.jsxs)("div", {
-                        className: y.SortDefaultGroup,
+                        className: E.SortDefaultGroup,
                         children: [
                           (0, s.jsx)(D, { groupid: null, group: null }),
                           (0, s.jsx)("div", {
-                            className: y.OverlayContent,
+                            className: E.OverlayContent,
                             children: (0, s.jsx)("h2", {
                               children: (0, j.we)(
                                 "#AchievementEditor_Reorder_NotDefault",
@@ -4801,8 +4856,8 @@
                       }),
                       (0, s.jsx)(I, {
                         groups: l,
-                        onSave: () => n(!1),
-                        onCancel: () => n(!1),
+                        onSave: () => t(!1),
+                        onCancel: () => t(!1),
                       }),
                     ],
                   }),
@@ -4810,7 +4865,7 @@
               : (0, s.jsxs)("div", {
                   children: [
                     (0, s.jsxs)("div", {
-                      className: y.GroupList,
+                      className: E.GroupList,
                       children: [
                         !!c && (0, s.jsx)(T, { groupid: null, group: null }),
                         !!l &&
@@ -4836,7 +4891,7 @@
                             },
                             "kg_newgroup",
                           )
-                        : !t &&
+                        : !n &&
                           (0, s.jsxs)(a.$, {
                             variant: "vibrant",
                             onClick: () => r(!0),
@@ -4845,7 +4900,7 @@
                                 width: "14",
                                 height: "14",
                                 fill: "currentColor",
-                                className: y.Icon,
+                                className: E.Icon,
                               }),
                               " ",
                               (0, j.we)(
@@ -4858,18 +4913,18 @@
                 });
           }
           function I(e) {
-            const { groups: t, onSave: n, onCancel: i } = e,
+            const { groups: n, onSave: t, onCancel: i } = e,
               { appID: a } = (0, m.L3)(),
-              [o, c] = h.useState(t),
+              [o, c] = h.useState(n),
               l = (0, m.iF)(a);
             return (0, s.jsxs)(s.Fragment, {
               children: [
                 (0, s.jsx)(r.JY, {
                   onDragEnd: function (e) {
                     if (!e.destination) return;
-                    let t = [...o];
-                    const [n] = t.splice(e.source.index, 1);
-                    t.splice(e.destination.index, 0, n), c(t);
+                    let n = [...o];
+                    const [t] = n.splice(e.source.index, 1);
+                    n.splice(e.destination.index, 0, t), c(n);
                   },
                   children: (0, s.jsx)(r.gL, {
                     droppableId: "droppable",
@@ -4879,23 +4934,23 @@
                     direction: "vertical",
                     children: (e) =>
                       (0, s.jsxs)("div", {
-                        className: y.GroupSorter,
+                        className: E.GroupSorter,
                         ...e.droppableProps,
                         ref: e.innerRef,
                         children: [
-                          o.map((e, t) =>
+                          o.map((e, n) =>
                             (0, s.jsx)(
                               r.sx,
                               {
                                 draggableId: e.groupid,
-                                index: t,
-                                children: (t) =>
+                                index: n,
+                                children: (n) =>
                                   (0, s.jsx)(D, {
                                     groupid: e.groupid,
                                     group: e,
-                                    ref: t?.innerRef,
-                                    ...t?.draggableProps,
-                                    ...t?.dragHandleProps,
+                                    ref: n?.innerRef,
+                                    ...n?.draggableProps,
+                                    ...n?.dragHandleProps,
                                   }),
                               },
                               e.groupid,
@@ -4908,9 +4963,12 @@
                 }),
                 (0, s.jsx)(C.Aj, {
                   pending: l.isPending,
-                  onSave: async () => {
-                    await l.mutateAsync(o.map((e) => e.groupid)), n();
-                  },
+                  error: l.error?.message,
+                  onSave: () =>
+                    l.mutate(
+                      o.map((e) => e.groupid),
+                      { onSuccess: t },
+                    ),
                   onCancel: i,
                 }),
               ],
@@ -4918,20 +4976,20 @@
           }
           function T(e) {
             const {
-                groupid: t,
-                group: n,
+                groupid: n,
+                group: t,
                 bNewGroup: i,
                 onSave: r,
                 onCancel: l,
               } = e,
               { appID: d, filter: u, localization: p } = (0, m.L3)(),
               { currentLanguage: v } = p,
-              g = (0, m.FK)(d, t),
-              f = (0, C.fw)(t, n),
+              g = (0, m.FK)(d, n),
+              f = (0, C.fw)(n, t),
               A = (0, C.$P)(),
-              E =
+              y =
                 f.visible &&
-                Object.values(A).some(
+                Object.values(A ?? {}).some(
                   (e) => (e.global_unlock_percent ?? 0) > 0,
                 ),
               [b, S] = h.useState(i),
@@ -4955,7 +5013,7 @@
                       action: () => I(!0),
                     },
                   ].filter((e) =>
-                    "edit" == e.key ? !!t : "delete" != e.key || !!t,
+                    "edit" == e.key ? !!n : "delete" != e.key || !!n,
                   ),
               O = async () => {
                 S(!1), r && r();
@@ -4963,36 +5021,44 @@
               U = () => {
                 S(!1), l && l();
               };
-            let H = (0, s.jsxs)(a.$, {
+            let H = (0, s.jsx)(a.$, {
               variant: "vibrant",
               onClick: () => R(!0),
-              children: [
-                (0, s.jsx)(_.OMN, {
-                  width: "14",
-                  height: "14",
-                  fill: "currentColor",
-                  className: y.Icon,
-                }),
-                " ",
-                (0, j.we)("#AchievementEditor_Group_CreateAchievement"),
-              ],
+              children: (0, s.jsxs)(o.s, {
+                children: [
+                  (0, s.jsx)(_.OMN, {
+                    width: "14",
+                    height: "14",
+                    fill: "currentColor",
+                    className: E.Icon,
+                  }),
+                  " ",
+                  (0, j.we)("#AchievementEditor_Group_CreateAchievement"),
+                ],
+              }),
             });
             return (
-              E &&
+              y &&
                 (H = (0, s.jsxs)(o.s, {
                   direction: "row",
-                  gap: "1",
+                  gap: "2",
                   align: "center",
                   children: [
                     H,
-                    (0, s.jsxs)(c.EY, {
-                      color: "amber-9",
+                    (0, s.jsxs)(o.s, {
+                      align: "center",
+                      gap: "1",
                       children: [
-                        (0, s.jsx)(C.id, {}),
-                        " ",
-                        (0, j.we)(
-                          "#AchievementEditor_Group_CreateAchievement_WarnLiveGroup",
-                        ),
+                        (0, s.jsx)(C.id, { color: "var(--color-amber-9)" }),
+                        (0, s.jsxs)(c.EY, {
+                          color: "amber-9",
+                          children: [
+                            " ",
+                            (0, j.we)(
+                              "#AchievementEditor_Group_CreateAchievement_WarnLiveGroup",
+                            ),
+                          ],
+                        }),
                       ],
                     }),
                   ],
@@ -5001,24 +5067,24 @@
                 ? i
                   ? (0, s.jsx)(P, { onSave: O, onCancel: U })
                   : (0, s.jsx)(z, {
-                      groupid: t,
-                      group: n,
+                      groupid: n,
+                      group: t,
                       onSave: O,
                       onCancel: U,
                     })
                 : (0, s.jsxs)(B, {
-                    groupid: t,
-                    group: n,
+                    groupid: n,
+                    group: t,
                     actions: V,
                     collapsed: M,
                     setCollapsed: F,
                     children: [
                       !M &&
                         (0, s.jsx)("div", {
-                          className: y.AchievementsFullDisplay,
+                          className: E.AchievementsFullDisplay,
                           children: T
                             ? (0, s.jsx)(L, {
-                                groupid: t,
+                                groupid: n,
                                 achievements: g,
                                 filter: u,
                                 currentLanguage: v,
@@ -5036,7 +5102,7 @@
                                     children: k
                                       ? (0, s.jsx)(w.i, {
                                           achievement: null,
-                                          groupid: t,
+                                          groupid: n,
                                           onSave: (e) => R(!1),
                                           onCancel: () => R(!1),
                                         })
@@ -5047,8 +5113,8 @@
                         }),
                       N &&
                         (0, s.jsx)(K, {
-                          groupid: t,
-                          group: n,
+                          groupid: n,
+                          group: t,
                           hideModal: () => {
                             I(!1);
                           },
@@ -5058,10 +5124,10 @@
             );
           }
           function D(e) {
-            const { className: t, ...n } = e;
+            const { className: n, ...t } = e;
             return (0, s.jsx)(B, {
-              className: (0, f.A)(y.CompactGroupContainer, t),
-              ...n,
+              className: (0, f.A)(E.CompactGroupContainer, n),
+              ...t,
             });
           }
           function k(e) {
@@ -5069,8 +5135,8 @@
           }
           function B(e) {
             const {
-                groupid: t,
-                group: n,
+                groupid: n,
+                group: t,
                 actions: i,
                 children: r,
                 className: a,
@@ -5078,17 +5144,17 @@
                 setCollapsed: c,
                 ...l
               } = e,
-              d = (0, C.fw)(t, n).visible ? y.Released : y.Unreleased;
+              d = (0, C.fw)(n, t).visible ? E.Released : E.Unreleased;
             return (0, s.jsx)("div", {
-              id: k(t),
-              className: (0, f.A)(y.Group, a, d),
+              id: k(n),
+              className: (0, f.A)(E.Group, a, d),
               ...l,
               children: (0, s.jsxs)("div", {
-                className: y.GroupDisplay,
+                className: E.GroupDisplay,
                 children: [
                   (0, s.jsx)(R, {
-                    groupid: t,
-                    group: n,
+                    groupid: n,
+                    group: t,
                     actions: i,
                     collapsed: o,
                     setCollapsed: c,
@@ -5100,27 +5166,27 @@
           }
           function R(e) {
             const {
-                groupid: t,
-                group: n,
+                groupid: n,
+                group: t,
                 actions: i,
                 collapsed: r,
                 setCollapsed: a,
               } = e,
               { appID: c } = (0, m.L3)(),
-              d = n?.dlcappid,
+              d = t?.dlcappid,
               u = (0, m.Xe)(c),
               p = (0, m.sJ)(c),
               h = p?.find((e) => d == e.appid);
             return (0, s.jsxs)("div", {
-              className: y.GroupHeader,
+              className: E.GroupHeader,
               children: [
                 (0, s.jsx)(F, { info: h ?? u }),
                 (0, s.jsxs)("div", {
-                  className: y.GroupHeaderContent,
+                  className: E.GroupHeaderContent,
                   children: [
-                    !t &&
+                    !n &&
                       (0, s.jsxs)("div", {
-                        className: y.CoreGroup,
+                        className: E.CoreGroup,
                         children: [
                           (0, s.jsx)("h1", {
                             children: (0, j.we)(
@@ -5135,21 +5201,21 @@
                         ],
                       }),
                     (0, s.jsxs)("div", {
-                      className: y.GroupData,
+                      className: E.GroupData,
                       children: [
-                        !!t &&
+                        !!n &&
                           (0, s.jsx)("div", {
                             children: (0, s.jsx)("h2", {
-                              children: (0, s.jsx)(E.VU, {
-                                text: n?.name,
+                              children: (0, s.jsx)(y.VU, {
+                                text: t?.name,
                                 missingStringLocToken:
                                   "#AchievementEditor_Group_MissingName",
                               }),
                             }),
                           }),
                         (0, s.jsx)(O, {
-                          archived: "1" == n?.archived,
-                          developeronly: "1" == n?.developeronly,
+                          archived: "1" == t?.archived,
+                          developeronly: "1" == t?.developeronly,
                           app: h ?? u,
                         }),
                       ],
@@ -5157,7 +5223,7 @@
                   ],
                 }),
                 (0, s.jsxs)("div", {
-                  className: y.EditButtons,
+                  className: E.EditButtons,
                   children: [
                     (0, s.jsxs)(o.s, {
                       direction: "row",
@@ -5167,7 +5233,7 @@
                         void 0 !== r &&
                           a &&
                           (0, s.jsx)(l.az, {
-                            className: y.CollapseButton,
+                            className: E.CollapseButton,
                             onClick: () => a(!r),
                             children: (0, s.jsx)(x.F2T, {
                               fill: "currentColor",
@@ -5176,10 +5242,10 @@
                           }),
                       ],
                     }),
-                    !!t &&
+                    !!n &&
                       (0, s.jsxs)("div", {
-                        className: y.IDText,
-                        children: ["ID: ", t],
+                        className: E.IDText,
+                        children: ["ID: ", n],
                       }),
                   ],
                 }),
@@ -5188,19 +5254,19 @@
           }
           function G(e) {
             const {
-                achievements: t,
-                filter: n,
+                achievements: n,
+                filter: t,
                 currentLanguage: i,
                 setBulkMove: r,
               } = e,
-              a = S(t, n, i);
+              a = S(n, t, i);
             return (0, s.jsxs)(s.Fragment, {
               children: [
                 a.included.length > 0 &&
                   (0, s.jsx)(w.p, { achievements: a.included, setBulkMove: r }),
                 a.excluded.length > 0 &&
                   (0, s.jsxs)("div", {
-                    className: y.FilterFooter,
+                    className: E.FilterFooter,
                     children: [
                       (0, s.jsx)(x.dJT, {}),
                       (0, j.Yp)(
@@ -5209,9 +5275,9 @@
                       ),
                     ],
                   }),
-                (!t || 0 == t.length) &&
+                (!n || 0 == n.length) &&
                   (0, s.jsx)("div", {
-                    className: y.Empty,
+                    className: E.Empty,
                     children: (0, j.we)(
                       "#AchievementEditor_Group_EmptyGroup_Description",
                     ),
@@ -5221,8 +5287,8 @@
           }
           function L(e) {
             const {
-                groupid: t,
-                onClose: n,
+                groupid: n,
+                onClose: t,
                 achievements: i,
                 filter: r,
                 currentLanguage: a,
@@ -5234,20 +5300,20 @@
               g = (0, m.Q4)(c) || {};
             let f = new Set(v);
             const A = u === C.Gl,
-              E = U(void 0, void 0, !0),
-              b = g[t],
+              y = U(void 0, void 0, !0),
+              b = g[n],
               N = g[u],
-              I = (0, C.fw)(t, b);
+              I = (0, C.fw)(n, b);
             let T,
               D = (0, C.fw)(u, N);
-            A && (D = E.visibility),
+            A && (D = y.visibility),
               I.visible && !D.visible
                 ? (T = (0, s.jsx)(C.lh, {
                     text: (0, j.we)(
                       "#AchievementEditor_Group_MoveAchievements_Warn_HidingAchievements",
                     ),
                   }))
-                : b?.dlcappid != (A ? E.editAppID : N?.dlcappid) &&
+                : b?.dlcappid != (A ? y.editAppID : N?.dlcappid) &&
                   D.visible &&
                   D.hasprogress &&
                   (T = (0, s.jsx)(C.lh, {
@@ -5258,9 +5324,9 @@
             const [B, R] = h.useState(l.included.length == v.length),
               G = (0, m.zG)(c),
               L = (e) => {
-                for (const t of l.included) {
-                  const n = (0, m.nf)(t);
-                  e ? f.add(n) : f.delete(n);
+                for (const n of l.included) {
+                  const t = (0, m.nf)(n);
+                  e ? f.add(t) : f.delete(t);
                 }
                 _([...f]), R(e);
               };
@@ -5273,30 +5339,30 @@
                     editable: !1,
                     headerContentBefore: () =>
                       (0, s.jsx)("div", {
-                        className: y.MoveAchievementCheckbox,
+                        className: E.MoveAchievementCheckbox,
                         children: (0, s.jsx)(d.S, { checked: B, onChange: L }),
                       }),
                     contentBefore: (e) => {
-                      const t = (0, m.nf)(e);
+                      const n = (0, m.nf)(e);
                       return (0, s.jsx)("div", {
-                        className: y.MoveAchievementCheckbox,
+                        className: E.MoveAchievementCheckbox,
                         children: (0, s.jsx)(d.S, {
-                          checked: f.has(t),
+                          checked: f.has(n),
                           onChange: (e) =>
-                            ((e, t) => {
-                              t ? f.add(e) : f.delete(e),
+                            ((e, n) => {
+                              n ? f.add(e) : f.delete(e),
                                 _([...f]),
                                 f.size,
                                 l.included.length,
                                 (f.size == l.included.length) != B && R(!B);
-                            })(t, e),
+                            })(n, e),
                         }),
                       });
                     },
                   }),
                 l.excluded.length > 0 &&
                   (0, s.jsxs)("div", {
-                    className: y.FilterFooter,
+                    className: E.FilterFooter,
                     children: [
                       (0, s.jsx)(x.dJT, {}),
                       (0, j.Yp)(
@@ -5307,7 +5373,7 @@
                   }),
                 (!i || 0 == i.length) &&
                   (0, s.jsx)("div", {
-                    className: y.Empty,
+                    className: E.Empty,
                     children: (0, j.we)(
                       "#AchievementEditor_Group_EmptyGroup_Description",
                     ),
@@ -5317,7 +5383,7 @@
                   justify: A ? void 0 : "between",
                   align: A ? void 0 : "end",
                   gap: "1",
-                  className: y.MoveFooter,
+                  className: E.MoveFooter,
                   children: [
                     (0, s.jsxs)(o.s, {
                       direction: "column",
@@ -5335,7 +5401,7 @@
                           children: (0, s.jsx)(C.yo, {
                             variant: "inset",
                             selectedValue: u,
-                            filter: (0, C.zy)(t),
+                            filter: (0, C.zy)(n),
                             onSelectionChange: p,
                             allowCreate: !0,
                           }),
@@ -5345,7 +5411,7 @@
                             bHideSaveCancelButtons: !0,
                             onCancel: () => {},
                             onSave: () => {},
-                            state: E,
+                            state: y,
                           }),
                       ],
                     }),
@@ -5360,27 +5426,29 @@
                           saveText: (0, j.we)(
                             "#AchievementEditor_Group_MoveAchievements_MoveButton",
                           ),
-                          onCancel: n,
+                          onCancel: t,
                           onSave: async () => {
-                            let e = u;
-                            A && (e = await E.save());
-                            const t = {
-                              groupid: e,
-                              api_names: i
-                                .filter((e) => f.has((0, m.nf)(e)))
-                                .map((e) => e.name),
-                            };
-                            await G.mutateAsync(t),
-                              setTimeout(() => {
-                                const t = document.getElementById(k(e));
-                                t?.scrollIntoView({
-                                  behavior: "smooth",
-                                  block: "nearest",
-                                });
-                              }, 200),
-                              n();
+                            try {
+                              const e = A ? await y.save() : u,
+                                n = {
+                                  groupid: e,
+                                  api_names: i
+                                    .filter((e) => f.has((0, m.nf)(e)))
+                                    .map((e) => e.name),
+                                };
+                              await G.mutateAsync(n),
+                                setTimeout(() => {
+                                  const n = document.getElementById(k(e));
+                                  n?.scrollIntoView({
+                                    behavior: "smooth",
+                                    block: "nearest",
+                                  });
+                                }, 200),
+                                t();
+                            } catch {}
                           },
-                          pending: G.isPending,
+                          pending: G.isPending || y.isPending,
+                          error: G.error?.message ?? y.error,
                         }),
                       ],
                     }),
@@ -5390,44 +5458,44 @@
             });
           }
           function M(e) {
-            const { actions: t } = e,
-              n = (0, u.WM)({
-                rgOptions: t.map((e, t) => t),
+            const { actions: n } = e,
+              t = (0, u.WM)({
+                rgOptions: n.map((e, n) => n),
                 selectedValue: void 0,
                 onSelectionChange: (e) => {
-                  void 0 !== e && t[e].action();
+                  void 0 !== e && n[e].action();
                 },
               });
             return (0, s.jsxs)(u.l6.Root, {
-              state: n,
+              state: t,
               children: [
                 (0, s.jsx)(u.l6.Trigger, {
                   render: (e) =>
                     (0, s.jsxs)("div", {
-                      className: (0, f.A)(y.EditButton),
+                      className: (0, f.A)(E.EditButton),
                       ...e,
                       children: [
                         (0, j.we)("#AchievementEditor_Options"),
                         " ",
                         (0, s.jsx)("div", {
-                          className: (0, f.A)(y.SmallIconButton, y.OptionsSVG),
+                          className: (0, f.A)(E.SmallIconButton, E.OptionsSVG),
                           children: (0, s.jsx)(x.GB9, {}),
                         }),
                       ],
                     }),
                 }),
                 (0, s.jsx)(u.l6.Options, {
-                  children: t.map((e, t) =>
+                  children: n.map((e, n) =>
                     (0, s.jsx)(
                       u.l6.Option,
                       {
-                        value: t,
+                        value: n,
                         children: (0, s.jsxs)("div", {
-                          className: y.SelectIconOption,
+                          className: E.SelectIconOption,
                           children: [e?.icon(), e.label],
                         }),
                       },
-                      t,
+                      n,
                     ),
                   ),
                 }),
@@ -5435,20 +5503,20 @@
             });
           }
           function F(e) {
-            const { info: t } = e,
-              { image: n, type: i, releasestate: r, name: a } = t || {},
+            const { info: n } = e,
+              { image: t, type: i, releasestate: r, name: a } = n || {},
               o = {
-                ...t,
-                appid: t?.appid ? parseInt(t.appid) : 0,
+                ...n,
+                appid: n?.appid ? parseInt(n.appid) : 0,
                 releasestate: r,
               };
             return (0, s.jsxs)("div", {
-              className: y.AppTile,
+              className: E.AppTile,
               children: [
                 (0, s.jsx)("div", {
-                  className: y.AppTileImage,
-                  children: n
-                    ? (0, s.jsx)("img", { src: n })
+                  className: E.AppTileImage,
+                  children: t
+                    ? (0, s.jsx)("img", { src: t })
                     : (0, s.jsx)("div", { children: a }),
                 }),
                 i && r && (0, s.jsx)(A.b, { app: o }),
@@ -5456,14 +5524,14 @@
             });
           }
           function V(e) {
-            const { hidden: t, className: n, omitText: i = !1 } = e;
+            const { hidden: n, className: t, omitText: i = !1 } = e;
             return (0, s.jsx)("div", {
               className: (0, f.A)(
-                y.GroupVisibilitySummary,
-                t ? y.UnreleasedText : y.ReleasedText,
-                n,
+                E.GroupVisibilitySummary,
+                n ? E.UnreleasedText : E.ReleasedText,
+                t,
               ),
-              children: t
+              children: n
                 ? (0, s.jsxs)(s.Fragment, {
                     children: [
                       (0, s.jsx)(_.ZyV, {}),
@@ -5485,22 +5553,22 @@
             });
           }
           function O(e) {
-            const { archived: t = !1, developeronly: n = !1, app: i } = e,
-              r = t || n || !i?.is_released_somewhere,
-              a = (0, f.A)(y.Label, y.Unreleased);
+            const { archived: n = !1, developeronly: t = !1, app: i } = e,
+              r = n || t || !i?.is_released_somewhere,
+              a = (0, f.A)(E.Unreleased, E.Label);
             return (0, s.jsxs)("div", {
-              className: y.GroupVisibilityInfo,
+              className: E.GroupVisibilityInfo,
               children: [
                 (0, s.jsx)("div", {
                   className: (0, f.A)(
-                    y.GroupVisibilitySummary,
-                    r ? y.UnreleasedText : y.ReleasedText,
+                    E.GroupVisibilitySummary,
+                    r ? E.UnreleasedText : E.ReleasedText,
                   ),
                   children: (0, s.jsx)(V, { hidden: r }),
                 }),
                 r &&
                   (0, s.jsxs)("div", {
-                    className: y.GroupVisibilityLabels,
+                    className: E.GroupVisibilityLabels,
                     children: [
                       !i?.is_released_somewhere &&
                         (0, s.jsx)("div", {
@@ -5513,7 +5581,7 @@
                             ),
                           ),
                         }),
-                      t &&
+                      n &&
                         (0, s.jsxs)("div", {
                           className: a,
                           children: [
@@ -5529,7 +5597,7 @@
                             }),
                           ],
                         }),
-                      n &&
+                      t &&
                         (0, s.jsxs)("div", {
                           className: a,
                           children: [
@@ -5556,23 +5624,23 @@
           function z(e) {
             return (0, s.jsx)(H, { bNewGroup: !1, ...e });
           }
-          function U(e, t, n) {
+          function U(e, n, t) {
             const { appID: i } = (0, m.L3)(),
-              [s, r] = h.useState(t?.name ?? {}),
-              [a, o] = h.useState(t?.dlcappid),
-              [c, l] = h.useState("1" == t?.archived),
-              [d, u] = h.useState(n || "1" == t?.developeronly),
+              [s, r] = h.useState(n?.name ?? {}),
+              [a, o] = h.useState(n?.dlcappid),
+              [c, l] = h.useState("1" == n?.archived),
+              [d, u] = h.useState(t || "1" == n?.developeronly),
               p = (0, h.useMemo)(
                 () => ({
-                  ...t,
+                  ...n,
                   name: s,
                   dlcappid: a,
                   archived: c ? "1" : "0",
                   developeronly: d ? "1" : "0",
                 }),
-                [s, a, c, d, t],
+                [s, a, c, d, n],
               ),
-              v = (0, m.mb)(i, n ? "0" : e),
+              v = (0, m.mb)(i, t ? "0" : e),
               _ = (0, C.fw)(e, p),
               g = v.isPending;
             return {
@@ -5584,32 +5652,22 @@
               setEditIsArchived: l,
               editDeveloperOnly: d,
               setEditDeveloperOnly: u,
-              isNewGroup: n ?? !1,
+              isNewGroup: t ?? !1,
               visibility: _,
               reset: () => {
-                r(t?.name),
-                  o(t?.dlcappid),
-                  l("1" == t?.archived),
-                  u(n || "1" == t?.developeronly);
+                r(n?.name),
+                  o(n?.dlcappid),
+                  l("1" == n?.archived),
+                  u(t || "1" == n?.developeronly);
               },
-              save: async () => {
-                let e;
-                return (
-                  await v
-                    .mutateAsync(p)
-                    .then((t) => {
-                      e = t;
-                    })
-                    .catch((e) => {}),
-                  e
-                );
-              },
+              save: async () => await v.mutateAsync(p),
               isPending: g,
+              error: v.error?.message,
             };
           }
           function H(e) {
-            const { groupid: t, group: n, bNewGroup: i } = e,
-              r = U(t, n, i),
+            const { groupid: n, group: t, bNewGroup: i } = e,
+              r = U(n, t, i),
               a = (0, h.useRef)(null);
             return (
               (0, h.useEffect)(() => {
@@ -5622,46 +5680,48 @@
             );
           }
           function W(e) {
-            const { value: t, setValue: n } = e,
+            const { value: n, setValue: t } = e,
               { appID: i } = (0, m.L3)(),
               r = (0, m.sJ)(i),
-              a = (0, h.useCallback)(
-                (e) => {
-                  if ("0" == (e ?? "0"))
-                    return `(${i}) ${(0, j.we)("#AchievementEditor_Group_Field_Restrictions_Value_AllPlayers")}`;
-                  const t = r.find((t) => t.appid == e)?.name;
-                  return `(${e}) ${t}`;
-                },
-                [r, i],
+              a = (0, h.useMemo)(
+                () => new Map(r.map((e) => [e.appid, e.name])),
+                [r],
               ),
-              o = Array.from(
+              o = (0, h.useCallback)(
+                (e) =>
+                  "0" == (e ?? "0")
+                    ? `(${i}) ${(0, j.we)("#AchievementEditor_Group_Field_Restrictions_Value_AllPlayers")}`
+                    : `(${e}) ${a.get(e)}`,
+                [a, i],
+              ),
+              c = Array.from(
                 new Set(
                   r
-                    .sort((e, t) => (e.name ?? "").localeCompare(t.name ?? ""))
+                    .sort((e, n) => (e.name ?? "").localeCompare(n.name ?? ""))
                     .map((e) => e.appid),
                 ),
               ),
-              c = ["0"].concat(o);
+              l = ["0"].concat(c);
             return r.length < 20
               ? (0, s.jsx)(u.l6, {
-                  options: c,
-                  getOptionLabel: a,
-                  selectedValue: t ?? "0",
-                  onSelectionChange: n,
+                  options: l,
+                  getOptionLabel: o,
+                  selectedValue: n ?? "0",
+                  onSelectionChange: t,
                 })
               : (0, s.jsx)(p.G3, {
-                  options: c,
-                  getOptionLabel: a,
-                  selectedValue: t ?? "0",
-                  onSelectionChange: n,
+                  options: l,
+                  getOptionLabel: o,
+                  selectedValue: n ?? "0",
+                  onSelectionChange: t,
                   placeholder: "",
                   filterPlaceholder: "",
                 });
           }
           function Y(e) {
             const {
-                state: t,
-                groupid: n,
+                state: n,
+                groupid: t,
                 bHideSaveCancelButtons: i,
                 onSave: r,
                 onCancel: a,
@@ -5684,27 +5744,27 @@
                 isNewGroup: N,
                 visibility: I,
                 isPending: T,
-              } = t,
-              D = void 0 !== t.editAppID,
-              k = I.visible ? y.Released : y.Unreleased;
+              } = n,
+              D = void 0 !== n.editAppID,
+              k = I.visible ? E.Released : E.Unreleased;
             return (0, s.jsxs)("div", {
               ref: c,
-              className: (0, f.A)(y.Group, y.Editing, k),
+              className: (0, f.A)(E.Group, E.Editing, k),
               children: [
                 (0, s.jsx)("div", {
-                  className: (0, f.A)(y.ReleaseStatusBar, k),
+                  className: (0, f.A)(E.ReleaseStatusBar, k),
                 }),
                 (0, s.jsx)("div", {
-                  className: y.GroupDisplay,
+                  className: E.GroupDisplay,
                   children: (0, s.jsx)("div", {
-                    className: y.GroupHeader,
+                    className: E.GroupHeader,
                     children: (0, s.jsxs)("div", {
-                      className: y.GroupHeaderContent,
+                      className: E.GroupHeaderContent,
                       children: [
-                        !n &&
+                        !t &&
                           !N &&
                           (0, s.jsxs)("div", {
-                            className: y.CoreGroup,
+                            className: E.CoreGroup,
                             children: [
                               (0, s.jsx)("h1", {
                                 children: (0, j.we)(
@@ -5721,7 +5781,7 @@
                         (0, s.jsx)("div", {
                           children: N
                             ? (0, s.jsx)("div", {
-                                className: y.EditTitle,
+                                className: E.EditTitle,
                                 children: (0, s.jsx)("h1", {
                                   children: (0, j.we)(
                                     "#AchievementEditor_AchievementsTable_Header_CreateGroup",
@@ -5729,7 +5789,7 @@
                                 }),
                               })
                             : (0, s.jsx)("div", {
-                                className: y.EditTitle,
+                                className: E.EditTitle,
                                 children: (0, s.jsx)("h1", {
                                   children: (0, j.we)(
                                     "#AchievementEditor_Group_Tools_Edit",
@@ -5738,7 +5798,7 @@
                               }),
                         }),
                         (0, s.jsxs)("div", {
-                          className: y.GroupData,
+                          className: E.GroupData,
                           children: [
                             (0, s.jsxs)("div", {
                               children: [
@@ -5767,9 +5827,9 @@
                               ],
                             }),
                             (0, s.jsxs)("div", {
-                              className: y.VisibilityColumn,
+                              className: E.VisibilityColumn,
                               children: [
-                                (!!n || N) &&
+                                (!!t || N) &&
                                   (0, s.jsxs)("div", {
                                     children: [
                                       (0, s.jsxs)(o.s, {
@@ -5786,8 +5846,9 @@
                                           D &&
                                             (0, s.jsx)(o.s, {
                                               children: (0, s.jsx)("p", {
-                                                children:
-                                                  'May sometimes be displayed with "DLC" prefix',
+                                                children: (0, j.we)(
+                                                  "#AchievementEditor_Group_Edit_Field_Name_DlcPrefix",
+                                                ),
                                               }),
                                             }),
                                         ],
@@ -5800,12 +5861,12 @@
                                                 "#AchievementEditor_Group_Edit_Field_Name_Description",
                                               ),
                                               " ",
-                                              (0, s.jsx)(E.Mq, {
+                                              (0, s.jsx)(y.Mq, {
                                                 locstring: v,
                                               }),
                                             ],
                                           }),
-                                          (0, s.jsx)(E.Pk, {
+                                          (0, s.jsx)(y.Pk, {
                                             autofocus: !0,
                                             value: v,
                                             setValue: _,
@@ -5867,7 +5928,7 @@
                                     ],
                                   }),
                                 (0, s.jsxs)("div", {
-                                  className: y.VisibilitySection,
+                                  className: E.VisibilitySection,
                                   children: [
                                     (0, s.jsxs)("div", {
                                       children: [
@@ -5889,12 +5950,15 @@
                         !i &&
                           (0, s.jsx)(C.Aj, {
                             onSave: async () => {
-                              void 0 !== (await t.save()) && r && r();
+                              try {
+                                await n.save(), r && r();
+                              } catch {}
                             },
                             onCancel: () => {
-                              t.reset(), a && a();
+                              n.reset(), a && a();
                             },
                             pending: T,
+                            error: n.error,
                           }),
                       ],
                     }),
@@ -5904,18 +5968,18 @@
             });
           }
           function K(e) {
-            const { groupid: t, group: n, hideModal: i } = e,
+            const { groupid: n, group: t, hideModal: i } = e,
               { appID: r } = (0, m.L3)(),
-              a = (0, m.F0)(r, t),
-              l = (0, m.FK)(r, t),
-              d = (0, C.fw)(t, n),
+              a = (0, m.F0)(r, n),
+              l = (0, m.FK)(r, n),
+              d = (0, C.fw)(n, t),
               u = !l || 0 === l.length;
             return (0, s.jsx)(g.EN, {
               active: !0,
               children: (0, s.jsx)(g.x_, {
                 onEscKeypress: i,
                 children: (0, s.jsxs)(v.U9, {
-                  className: y.GroupDeleteDialog,
+                  className: E.GroupDeleteDialog,
                   children: [
                     (0, s.jsx)(v.Y9, {
                       children: (0, j.we)(
@@ -5946,7 +6010,7 @@
                           direction: "column",
                           gap: "1",
                           padding: "2",
-                          className: y.GroupBox,
+                          className: E.GroupBox,
                           children: [
                             (0, s.jsxs)(c.EY, {
                               children: [
@@ -5954,7 +6018,7 @@
                                   "#AchievementEditor_Group_Field_Name",
                                 ),
                                 ": ",
-                                (0, E.ZM)(n?.name, "english") ?? n?.name.token,
+                                (0, y.ZM)(t?.name, "english") ?? t?.name.token,
                               ],
                             }),
                             (0, s.jsx)(O, { ...d }),
@@ -5969,10 +6033,10 @@
                         ),
                         saveColor: "red",
                         saveDisabled: !u,
+                        pending: a.isPending,
+                        error: a.error?.message,
                         onCancel: i,
-                        onSave: async () => {
-                          await a.mutateAsync(), i();
-                        },
+                        onSave: () => a.mutate(void 0, { onSuccess: i }),
                       }),
                     }),
                   ],
@@ -5980,89 +6044,89 @@
               }),
             });
           }
-          ([m, w, E, C] = b.then ? (await b)() : b), i();
+          ([m, w, y, C] = b.then ? (await b)() : b), i();
         } catch (J) {
           i(J);
         }
       });
     },
-    59330: (e, t, n) => {
+    59330: (e, n, t) => {
       "use strict";
-      n.a(e, async (e, i) => {
+      t.a(e, async (e, i) => {
         try {
-          n.d(t, {
-            DG: () => y,
+          t.d(n, {
+            DG: () => E,
             II: () => C,
             Jt: () => I,
-            Mq: () => E,
+            Mq: () => y,
             Pk: () => b,
             VU: () => N,
             ZM: () => S,
           });
-          var s = n(7850),
-            r = n(11967),
-            a = n(58157),
-            o = n(38256),
-            c = n(19997),
-            l = n(90534),
-            d = n(20187),
-            u = n(83392),
-            p = n(57757),
-            m = n(56456),
-            h = n(84896),
-            v = n(90626),
-            _ = n(10435),
-            g = n(12155),
-            x = n(52038),
-            f = n(61859),
-            j = n(6629),
-            A = n(21261),
+          var s = t(7850),
+            r = t(11967),
+            a = t(58157),
+            o = t(38256),
+            c = t(19997),
+            l = t(90534),
+            d = t(20187),
+            u = t(83392),
+            p = t(57757),
+            m = t(56456),
+            h = t(84896),
+            v = t(90626),
+            _ = t(10435),
+            g = t(12155),
+            x = t(52038),
+            f = t(61859),
+            j = t(6629),
+            A = t(21261),
             w = e([h, A]);
-          function y() {
+          function E() {
             const { appID: e } = (0, h.L3)(),
-              t = (0, h.ts)(e),
-              n = (0, h.Q4)(e) || {},
+              n = (0, h.ts)(e),
+              t = (0, h.Q4)(e) || {},
               i = (0, h.kb)(e) || [];
             return [
               ...i.map((e) => e.display?.name),
               ...i.map((e) => e.display?.desc),
-              ...Object.keys(n).map((e) => n[e].name),
+              ...Object.keys(t).map((e) => t[e].name),
             ].reduce(
-              (e, t) => (
-                Object.keys(e).forEach((n) => {
-                  const i = e[n];
+              (e, n) => (
+                Object.keys(e).forEach((t) => {
+                  const i = e[t];
                   i.total = i.total + 1;
-                  const s = S(t, n);
-                  (s?.length ?? 0) > 0 && (i.set = i.set + 1), (e[n] = i);
+                  const s = S(n, t);
+                  (s?.length ?? 0) > 0 && (i.set = i.set + 1), (e[t] = i);
                 }),
                 e
               ),
-              t.reduce((e, t) => ((e[t] = { set: 0, total: 0 }), e), {}),
+              n.reduce((e, n) => ((e[n] = { set: 0, total: 0 }), e), {}),
             );
           }
-          function E(e) {
-            const { locstring: t } = e,
-              { appID: n, localization: i } = (0, h.L3)(),
+          function y(e) {
+            const { locstring: n } = e,
+              { appID: t, localization: i } = (0, h.L3)(),
               { currentLanguage: a, setCurrentLanguage: o } = i,
-              c = (0, h.ts)(n),
-              l = void 0 === t,
-              d = y(),
+              c = (0, h.ts)(t),
+              l = void 0 === n,
+              d = E(),
               u = l ? d : {},
               p = (0, r.WM)({
                 rgOptions: c,
                 selectedValue: a,
                 onSelectionChange: o,
               }),
-              m = (e, n = !1) => {
+              m = (e, t = !1) => {
                 const i = l
                     ? u[e].set === u[e].total
-                    : (S(t, e)?.length ?? 0) > 0,
+                    : (S(n, e)?.length ?? 0) > 0,
                   r = i ? j.Provided : j.Missing,
                   a = l ? ` (${u[e].set} / ${u[e].total})` : "";
                 return (0, s.jsxs)("span", {
                   className: r,
                   children: [
-                    n &&
+                    t &&
                       (i
                         ? (0, s.jsx)(g.Jlk, { color: "var(--text-color)" })
                         : (0, s.jsx)(_.eTF, { color: "var(--text-color)" })),
@@ -6073,9 +6137,9 @@
                 });
               };
             return (0, s.jsx)("div", {
-              className: (0, x.A)(j.LocSelect, t ? j.Inline : null),
+              className: (0, x.A)(j.LocSelect, n ? j.Inline : null),
               children: (0, s.jsxs)(r.l6.Root, {
-                variant: t ? "underline" : "default",
+                variant: n ? "underline" : "default",
                 size: "2",
                 state: p,
                 children: [
@@ -6093,13 +6157,13 @@
               }),
             });
           }
-          function C(e, t) {
+          function C(e, n) {
             return e
               ? "string" == typeof e
                 ? { english: e }
                 : Object.keys(e).reduce(
-                    (n, i) => (
-                      ("token" == i || t.includes(i)) && (n[i] = e[i]), n
+                    (t, i) => (
+                      ("token" == i || n.includes(i)) && (t[i] = e[i]), t
                     ),
                     {},
                   )
@@ -6107,17 +6171,17 @@
           }
           function b(e) {
             const {
-                value: t,
-                setValue: n,
+                value: n,
+                setValue: t,
                 multiline: i = !1,
                 autofocus: r = !1,
               } = e,
               { currentLanguage: c } = (0, h.L3)().localization,
               { appID: l } = (0, h.L3)(),
-              d = C(t, (0, h.ts)(l)),
+              d = C(n, (0, h.ts)(l)),
               u = (e) => {
-                const t = { ...d, [c]: e };
-                n(t);
+                const n = { ...d, [c]: e };
+                t(n);
               };
             return (0, s.jsx)("div", {
               className: (0, x.A)(j.LocTextInput, d[c] ? void 0 : j.Empty),
@@ -6135,20 +6199,20 @@
                   }),
             });
           }
-          function S(e, t) {
+          function S(e, n) {
             if (void 0 !== e)
               return "string" == typeof e
-                ? "english" === t
+                ? "english" === n
                   ? e
                   : void 0
-                : e && t in e && "" != e[t]
-                  ? e[t]
+                : e && n in e && "" != e[n]
+                  ? e[n]
                   : void 0;
           }
           function N(e) {
-            const { text: t, missingStringLocToken: n } = e,
+            const { text: n, missingStringLocToken: t } = e,
               { currentLanguage: i } = (0, h.L3)().localization,
-              r = S(t, i);
+              r = S(n, i);
             return (
               r ||
               (0, s.jsxs)("span", {
@@ -6157,7 +6221,7 @@
                   (0, s.jsx)(_.eTF, { color: "var(--text-color)" }),
                   " ",
                   (0, f.we)(
-                    n ?? "#AchievementEditor_Localization_MissingString",
+                    t ?? "#AchievementEditor_Localization_MissingString",
                     (0, f.we)(`#Language_${i}`),
                   ),
                 ],
@@ -6165,24 +6229,24 @@
             );
           }
           function I(e) {
-            const { onClose: t } = e,
-              { appID: n } = (0, h.L3)(),
-              i = (0, h.ts)(n),
-              r = (0, h.vd)(n),
-              a = (0, h.kk)(n),
+            const { onClose: n } = e,
+              { appID: t } = (0, h.L3)(),
+              i = (0, h.ts)(t),
+              r = (0, h.vd)(t),
+              a = (0, h.kk)(t),
               [o, _] = (0, v.useState)(new Set(i)),
               g = r.reduce(
-                (e, t) => ((e[t] = (0, f.we)(`#Language_${t}`)), e),
+                (e, n) => ((e[n] = (0, f.we)(`#Language_${n}`)), e),
                 {},
               ),
-              x = [...r].sort((e, t) => g[e].localeCompare(g[t])),
-              j = (0, v.useCallback)(async () => {
-                (await a.mutateAsync(Array.from(o))) && t();
-              }, [a, t, o]),
+              x = [...r].sort((e, n) => g[e].localeCompare(g[n])),
+              j = (0, v.useCallback)(() => {
+                a.mutate(Array.from(o), { onSuccess: n });
+              }, [a, n, o]),
               w = x.slice(0, Math.round(x.length / 2)),
-              y = x.slice(w.length);
+              E = x.slice(w.length);
             return (0, s.jsxs)(m.s, {
-              onClose: t,
+              onClose: n,
               strTitle: (0, f.we)("#AchievementEditor_AppLanguageEdit_Title"),
               children: [
                 (0, s.jsxs)(c.x, {
@@ -6201,7 +6265,7 @@
                         ),
                       }),
                     }),
-                    [w, y].map((e, t) =>
+                    [w, E].map((e, n) =>
                       (0, s.jsx)(
                         u.s,
                         {
@@ -6213,31 +6277,32 @@
                               {
                                 disabled: "english" == e,
                                 checked: "english" == e || o.has(e),
-                                onChange: (t) =>
-                                  ((e, t) => {
-                                    _((n) =>
-                                      t
-                                        ? new Set(Array.from([...n, e]))
+                                onChange: (n) =>
+                                  ((e, n) => {
+                                    _((t) =>
+                                      n
+                                        ? new Set(Array.from([...t, e]))
                                         : new Set(
-                                            Array.from(n).filter((t) => t != e),
+                                            Array.from(t).filter((n) => n != e),
                                           ),
                                     );
-                                  })(e, t),
+                                  })(e, n),
                                 children: g[e],
                               },
                               e,
                             ),
                           ),
                         },
-                        t,
+                        n,
                       ),
                     ),
                   ],
                 }),
                 (0, s.jsx)(A.VZ, {
                   pending: a.isPending,
+                  error: a.error?.message,
                   onSave: j,
-                  onCancel: t,
+                  onCancel: n,
                 }),
               ],
             });
@@ -6248,22 +6313,22 @@
         }
       });
     },
-    24292: (e, t, n) => {
+    24292: (e, n, t) => {
       "use strict";
-      n.a(e, async (e, i) => {
+      t.a(e, async (e, i) => {
         try {
-          n.d(t, { E: () => w, O: () => y });
-          var s = n(7850),
-            r = n(46562),
-            a = n(38528),
-            o = n(48906),
-            c = n(25489),
-            l = n(70760),
-            d = n(84896),
-            u = n(90626),
-            p = n(61859),
-            m = n(14223),
-            h = n(60668),
+          t.d(n, { E: () => w, O: () => E });
+          var s = t(7850),
+            r = t(46562),
+            a = t(38528),
+            o = t(48906),
+            c = t(25489),
+            l = t(70760),
+            d = t(84896),
+            u = t(90626),
+            p = t(61859),
+            m = t(14223),
+            h = t(60668),
             v = e([l, d]);
           [l, d] = v.then ? (await v)() : v;
           const _ = l.YjP().regex(/^-?\d+(?:\.\d*)?$/),
@@ -6279,16 +6344,16 @@
             },
             A = l.rLB(f, l.Whr(), j);
           function w(e) {
-            const t =
+            const n =
                 "INT" == e?.type
                   ? f.transform(j.decode)
                   : _.transform(g.decode),
-              n =
+              t =
                 "INT" == e?.type
                   ? [0, l.ZSL.zH.int32[1]]
                   : [0, l.ZSL.zH.float32[1]],
-              i = t.default(0).parse(e?.min),
-              s = t.default(n[1]).parse(e?.max),
+              i = n.default(0).parse(e?.min),
+              s = n.default(t[1]).parse(e?.max),
               r = "INT" == e?.type ? l.aig().int() : l.aig(),
               a = (0, h.Cm)(
                 l
@@ -6310,10 +6375,10 @@
               validator: a,
             };
           }
-          function y(e) {
+          function E(e) {
             const {
-                appID: t,
-                progress: n,
+                appID: n,
+                progress: t,
                 setProgress: i,
                 hasStat: a,
                 hasMin: o,
@@ -6324,7 +6389,7 @@
                 validator: g,
               } = e,
               x = (0, u.useId)(),
-              f = (0, d.J3)(t);
+              f = (0, d.J3)(n) ?? [];
             return (0, s.jsxs)(s.Fragment, {
               children: [
                 (0, s.jsx)(h.ox, {
@@ -6340,16 +6405,16 @@
                     options: f.map((e) => e.name),
                     getOptionLabel: function (e) {
                       if (!e) return;
-                      const t = f.find((t) => t.name == e);
-                      return `${t.name} (${t.type} ${t.min ?? 0} - ${t.max ?? "∞"})`;
+                      const n = f.find((n) => n.name == e);
+                      return `${n.name} (${n.type} ${n.min ?? 0} - ${n.max ?? "∞"})`;
                     },
-                    selectedValue: n?.value?.operand1,
+                    selectedValue: t?.value?.operand1,
                     onSelectionChange: function (e) {
                       if (void 0 === e) return void i(void 0);
-                      const t = f.find((t) => t.name == e);
+                      const n = f.find((n) => n.name == e);
                       i({
-                        min_val: t?.min,
-                        max_val: t?.max,
+                        min_val: n?.min,
+                        max_val: n?.max,
                         value: { operand1: e, operation: "statvalue" },
                       });
                     },
@@ -6359,32 +6424,32 @@
                   }),
                 }),
                 a &&
-                  (0, s.jsx)(E, {
+                  (0, s.jsx)(y, {
                     showSlider: o && c,
                     min: m,
                     max: v,
                     integer: "INT" == _,
                     validator: g,
                     value: [
-                      l.auy.number().default(m).parse(n?.min_val),
-                      l.auy.number().default(v).parse(n?.max_val),
+                      l.auy.number().default(m).parse(t?.min_val),
+                      l.auy.number().default(v).parse(t?.max_val),
                     ],
                     setValue: function (e) {
-                      const t = {
-                        value: n.value,
+                      const n = {
+                        value: t.value,
                         min_val: e[0].toString(),
                         max_val: e[1].toString(),
                       };
-                      i(t);
+                      i(n);
                     },
                   }),
               ],
             });
           }
-          function E(e) {
+          function y(e) {
             const {
-                showSlider: t = !1,
-                min: n,
+                showSlider: n = !1,
+                min: t,
                 max: i,
                 validator: r,
                 integer: a,
@@ -6401,13 +6466,13 @@
               ),
               isValid: d.success,
               issues: d.success ? void 0 : d.issues?.map((e) => e),
-              children: t ? (0, s.jsx)(C, { ...e }) : (0, s.jsx)(b, { ...e }),
+              children: n ? (0, s.jsx)(C, { ...e }) : (0, s.jsx)(b, { ...e }),
             });
           }
           function C(e) {
-            const { min: t, max: n, integer: i, value: r, setValue: o } = e,
+            const { min: n, max: t, integer: i, value: r, setValue: o } = e,
               l = i ? 1 : 0.1,
-              d = [c.OQ(r[0], t, n), c.OQ(r[1], t, n)];
+              d = [c.OQ(r[0], n, t), c.OQ(r[1], n, t)];
             return (0, s.jsxs)("div", {
               className: m.MinMaxRangeContainer,
               children: [
@@ -6415,15 +6480,15 @@
                 (0, s.jsx)(a.F, {
                   value: d,
                   onValueChange: o,
-                  min: t,
-                  max: n,
+                  min: n,
+                  max: t,
                   step: l,
                 }),
               ],
             });
           }
           function b(e) {
-            const { value: t, setValue: n, integer: i } = e;
+            const { value: n, setValue: t, integer: i } = e;
             return (0, s.jsxs)("div", {
               className: m.MinMax,
               children: [
@@ -6432,9 +6497,9 @@
                     placeholder: (0, p.we)(
                       "#AchievementEditor_Achievement_Edit_Stat_Min_Placeholder",
                     ),
-                    value: t[0],
+                    value: n[0],
                     integer: i,
-                    onValueChange: (e) => n([e, t[1]]),
+                    onValueChange: (e) => t([e, n[1]]),
                   }),
                 }),
                 (0, s.jsx)("span", { children: " - " }),
@@ -6443,24 +6508,24 @@
                     placeholder: (0, p.we)(
                       "#AchievementEditor_Achievement_Edit_Stat_Max_Placeholder",
                     ),
-                    value: t[1],
+                    value: n[1],
                     integer: i,
-                    onValueChange: (e) => n([t[0], e]),
+                    onValueChange: (e) => t([n[0], e]),
                   }),
                 }),
               ],
             });
           }
           function S(e) {
-            const { defaultValue: t = 0, integer: n = !1, ...i } = e,
-              r = n ? A : x;
+            const { defaultValue: n = 0, integer: t = !1, ...i } = e,
+              r = t ? A : x;
             return (0, s.jsx)(o.I, {
               valueToString: (e) => r.safeEncode(e).data,
               valueFromString: function (e) {
-                const t = r.safeDecode(e);
-                return t.success ? t.data : void 0;
+                const n = r.safeDecode(e);
+                return n.success ? n.data : void 0;
               },
-              checkValidText: (e, t) => !e || (t !== o.C && !isNaN(t)),
+              checkValidText: (e, n) => !e || (n !== o.C && !isNaN(n)),
               ...i,
             });
           }
@@ -6470,74 +6535,77 @@
         }
       });
     },
-    21261: (e, t, n) => {
+    21261: (e, n, t) => {
       "use strict";
-      n.a(e, async (e, i) => {
+      t.a(e, async (e, i) => {
         try {
-          n.d(t, {
-            $P: () => P,
+          t.d(n, {
+            $P: () => z,
             Aj: () => b,
-            BA: () => y,
-            EV: () => F,
-            Gl: () => G,
+            BA: () => E,
+            EV: () => V,
+            Gl: () => L,
             NT: () => D,
-            TM: () => V,
+            TM: () => O,
             VZ: () => w,
-            YZ: () => z,
-            Z7: () => H,
+            YZ: () => U,
+            Z7: () => W,
             et: () => T,
-            fw: () => O,
-            id: () => E,
+            fw: () => P,
+            id: () => y,
             lg: () => I,
             lh: () => k,
             mc: () => S,
-            yo: () => L,
-            z0: () => B,
-            zy: () => M,
+            r3: () => B,
+            yo: () => M,
+            z0: () => R,
+            zy: () => F,
           });
-          var s = n(7850),
-            r = n(53965),
-            a = n(90534),
-            o = n(83392),
-            c = n(11967),
-            l = n(90626),
-            d = n(61859),
-            u = n(79964),
-            p = n(12155),
-            m = n(10435),
-            h = n(52038),
-            v = n(84896),
-            _ = n(32754),
-            g = n(9154),
-            x = n(16676),
-            f = n(3049),
-            j = n(59330),
+          var s = t(7850),
+            r = t(53965),
+            a = t(90534),
+            o = t(83392),
+            c = t(11967),
+            l = t(90626),
+            d = t(61859),
+            u = t(79964),
+            p = t(12155),
+            m = t(10435),
+            h = t(52038),
+            v = t(84896),
+            _ = t(32754),
+            g = t(9154),
+            x = t(16676),
+            f = t(3049),
+            j = t(59330),
             A = e([v, j]);
           function w(e) {
             const {
-              saveText: t,
-              saveColor: n,
+              saveText: n,
+              saveColor: t,
               cancelText: i,
               onSave: a,
               onCancel: o,
               pending: c,
-              saveDisabled: l = !1,
-              hideCancel: p = !1,
+              error: l,
+              saveDisabled: p = !1,
+              hideCancel: m = !1,
             } = e;
             return (0, s.jsxs)("div", {
               className: u.SaveCloseButtons,
               children: [
+                !!l && (0, s.jsx)(B, { text: l }),
                 (0, s.jsx)(r.$, {
-                  color: n ?? "green",
+                  color: t ?? "green",
                   variant: "vibrant",
                   onClick: a,
                   loading: c,
-                  disabled: l || c,
+                  disabled: p || c,
                   children: (0, s.jsx)("span", {
-                    children: t || (0, d.we)("#Button_Save"),
+                    children: n || (0, d.we)("#Button_Save"),
                   }),
                 }),
-                !p &&
+                !m &&
                   (0, s.jsx)(r.$, {
                     color: "dull",
                     onClick: o,
@@ -6549,25 +6617,25 @@
               ],
             });
           }
-          function y(e) {
-            const { className: t } = e;
+          function E(e) {
+            const { className: n } = e;
             return (0, s.jsx)(a.az, {
-              className: (0, h.A)(u.Icon, t),
+              className: (0, h.A)(u.Icon, n),
               children: (0, s.jsx)(p.qzq, {}),
             });
           }
-          function E(e) {
-            const { color: t = "currentColor" } = e;
+          function y(e) {
+            const { color: n = "currentColor" } = e;
             return (0, s.jsx)(a.az, {
               className: u.Icon,
-              children: (0, s.jsx)(m.eTF, { color: t }),
+              children: (0, s.jsx)(m.eTF, { color: n }),
             });
           }
           function C(e) {
-            const { color: t = "var(--color-unreleased)" } = e;
+            const { color: n = "var(--color-unreleased)" } = e;
             return (0, s.jsx)(a.az, {
               className: u.Icon,
-              children: (0, s.jsx)(m.ZyV, { color: t }),
+              children: (0, s.jsx)(m.ZyV, { color: n }),
             });
           }
           function b(e) {
@@ -6577,7 +6645,7 @@
             });
           }
           function S(e) {
-            const { title: t, onClick: n } = e;
+            const { onClick: n } = e;
             return (0, s.jsxs)(r.$, {
               color: "dull",
               icon: !0,
@@ -6604,68 +6672,78 @@
             });
           }
           function I(e) {
-            const { title: t, onClick: n, className: i } = e;
+            const { title: n, onClick: t, className: i } = e;
             return (0, s.jsx)("div", {
-              title: t,
+              title: n,
               className: (0, h.A)(u.SmallIconButton, u.EditButton, i),
               children: (0, s.jsx)(r.$, {
                 variant: "ghost",
                 icon: !0,
-                onClick: n,
+                onClick: t,
                 children: (0, s.jsx)(p.ffu, {}),
               }),
             });
           }
           function T(e) {
-            const { title: t, onClick: n } = e;
+            const { title: n, onClick: t } = e;
             return (0, s.jsx)("div", {
-              title: t,
+              title: n,
               className: (0, h.A)(u.SmallIconButton, u.DeleteButton),
               children: (0, s.jsx)(r.$, {
                 variant: "ghost",
                 icon: !0,
-                onClick: n,
+                onClick: t,
                 children: (0, s.jsx)(p.X, {}),
               }),
             });
           }
           function D(e) {
-            const { helpText: t } = e;
+            const { helpText: n } = e;
             return (0, s.jsx)(_.he, {
-              toolTipContent: t,
+              toolTipContent: n,
               children: (0, s.jsx)(p._VW, {}),
             });
           }
           function k(e) {
-            const { text: t } = e;
+            const { text: n } = e;
             return (0, s.jsxs)(o.s, {
               direction: "row",
               gap: "1",
               align: "center",
               style: { color: "var(--color-warning)" },
-              children: [(0, s.jsx)(E, {}), " ", t],
+              children: [(0, s.jsx)(y, {}), " ", n],
+            });
+          }
+          function B(e) {
+            const { text: n } = e;
+            return (0, s.jsxs)(o.s, {
+              direction: "row",
+              gap: "1",
+              align: "center",
+              style: { color: "var(--color-error)" },
+              children: [(0, s.jsx)(y, {}), " ", n],
             });
           }
           [v, j] = A.then ? (await A)() : A;
-          const B = "0";
-          function R(e) {
-            const { groupID: t, group: n, showVisibility: i = !1 } = e,
-              { visible: r } = O(t, n),
+          const R = "0";
+          function G(e) {
+            const { groupID: n, group: t, showVisibility: i = !1 } = e,
+              { visible: r } = P(n, t),
               { existingAchievements: a } = (0, v.L3)(),
               c =
-                t === B || void 0 === t
+                n === R || void 0 === n
                   ? (0, d.we)(
                       "#AchievementEditor_Group_CoreGameAchievements_Heading",
                     )
-                  : ((0, j.ZM)(n?.name, "english") ?? n?.name?.token),
-              l = a?.groups.find((e) => e.id.toString() == t),
+                  : ((0, j.ZM)(t?.name, "english") ?? t?.name?.token),
+              l = a?.groups.find((e) => e.id.toString() == n),
               u =
                 l?.achievements.some(
                   (e) => (e.global_unlock_percent ?? 0) > 0,
                 ) ?? !1;
             let p;
             return (
-              i && (r ? u && (p = (0, s.jsx)(y, {})) : (p = (0, s.jsx)(C, {}))),
+              i && (r ? u && (p = (0, s.jsx)(E, {})) : (p = (0, s.jsx)(C, {}))),
               (0, s.jsxs)(o.s, {
                 direction: "row",
                 gap: "1",
@@ -6674,11 +6752,11 @@
               })
             );
           }
-          const G = "newgroup";
-          function L(e) {
+          const L = "newgroup";
+          function M(e) {
             const {
-                selectedValue: t,
-                onSelectionChange: n,
+                selectedValue: n,
+                onSelectionChange: t,
                 filter: i,
                 allowCreate: r,
                 variant: a,
@@ -6686,41 +6764,38 @@
                   "#AchievementEditor_Group_SelectGroupPlaceholder",
                 ),
               } = e,
-              { appID: u } = (0, v.L3)(),
-              p = (0, v.Q4)(u) || {},
-              m = [B, ...Object.keys(p)],
-              h = void 0 === i ? m : m.filter(i);
-            r && h.splice(0, 0, G);
-            const [_, g] = l.useState(t ?? void 0);
+              { appID: l } = (0, v.L3)(),
+              u = (0, v.Q4)(l) || {},
+              p = [R, ...Object.keys(u)],
+              m = void 0 === i ? p : p.filter(i);
+            r && m.splice(0, 0, L);
             return (0, s.jsx)(c.l6, {
-              selectedValue: _,
+              selectedValue: n,
               variant: a,
-              onSelectionChange: (e) => {
-                g(e), n(B === e ? void 0 : e);
-              },
-              options: h,
+              onSelectionChange: t,
+              options: m,
               placeholder: o,
               getOptionLabel: (e) =>
-                e == G
+                e == L
                   ? (0, d.we)("#AchievementEditor_Group_SelectGroup_Create")
-                  : (0, s.jsx)(R, {
+                  : (0, s.jsx)(G, {
                       groupID: e,
-                      group: p[e],
+                      group: u[e],
                       showVisibility: !0,
                     }),
             });
           }
-          function M(e) {
-            return (t) => t != e && (!!e || t != B);
+          function F(e) {
+            return (n) => n != e && (!!e || n != R);
           }
-          function F(e, t, n, i) {
-            const s = "name" == n ? "NAME" : "DESC";
-            return e && e != `${t}_${s}` ? e : `${i}_${s}`;
+          function V(e, n, t, i) {
+            const s = "name" == t ? "NAME" : "DESC";
+            return e && e != `${n}_${s}` ? e : `${i}_${s}`;
           }
-          function V(e) {
+          function O(e) {
             const {
-              okText: t,
-              cancelText: n,
+              okText: n,
+              cancelText: t,
               onOk: i,
               onCancel: r,
               okColor: a,
@@ -6736,10 +6811,10 @@
                     (0, s.jsx)(x.nB, { children: c }),
                     (0, s.jsx)(x.wi, {
                       children: (0, s.jsx)(b, {
-                        saveText: t ?? "OK",
+                        saveText: n ?? (0, d.we)("#Button_OK"),
                         saveColor: a,
                         onSave: i,
-                        cancelText: n,
+                        cancelText: t,
                         onCancel: r,
                         hideCancel: o,
                       }),
@@ -6749,16 +6824,16 @@
               }),
             });
           }
-          function O(e, t) {
-            const { appID: n, existingAchievements: i } = (0, v.L3)(),
-              s = t?.dlcappid,
-              r = (0, v.Xe)(n),
-              a = (0, v.sJ)(n),
+          function P(e, n) {
+            const { appID: t, existingAchievements: i } = (0, v.L3)(),
+              s = n?.dlcappid,
+              r = (0, v.Xe)(t),
+              a = (0, v.sJ)(t),
               o = a?.find((e) => s == e.appid),
-              c = "1" == t?.archived,
-              l = "1" == t?.developeronly,
+              c = "1" == n?.archived,
+              l = "1" == n?.developeronly,
               d = (o ?? r)?.is_released_somewhere,
-              u = i?.groups.find((t) => t.id.toString() == (e ?? B));
+              u = i?.groups.find((n) => n.id.toString() == (e ?? R));
             return {
               archived: c,
               developeronly: l,
@@ -6771,14 +6846,14 @@
               visible: !c && !l && d,
             };
           }
-          function P() {
+          function z() {
             const { existingAchievements: e } = (0, v.L3)();
             return (0, l.useMemo)(() => {
               if (e)
                 return e.groups.reduce(
-                  (e, t) => (
-                    t.achievements.forEach((t) => {
-                      e[t.internal_key] = t;
+                  (e, n) => (
+                    n.achievements.forEach((n) => {
+                      e[n.internal_key] = n;
                     }),
                     e
                   ),
@@ -6786,258 +6861,313 @@
                 );
             }, [e]);
           }
-          function z(e, t) {
-            const n = P();
-            if (void 0 === n) return;
-            if (void 0 === e || void 0 === t) return;
-            return n[U(e, t)];
+          function U(e, n) {
+            const t = z();
+            if (void 0 === t) return;
+            if (void 0 === e || void 0 === n) return;
+            return t[H(e, n)];
           }
-          function U(e, t) {
+          function H(e, n) {
             return (
               (("string" == typeof e ? Number.parseInt(e) : e) << 8) |
-              ("string" == typeof t ? Number.parseInt(t) : t)
+              ("string" == typeof n ? Number.parseInt(n) : n)
             );
           }
-          function H(e) {
+          function W(e) {
             return ((e ?? 0) / 100).toLocaleString((0, f.J)(), {
               style: "percent",
               maximumFractionDigits: 1,
             });
           }
           i();
-        } catch (W) {
-          i(W);
+        } catch (Y) {
+          i(Y);
         }
       });
     },
-    24369: (e, t, n) => {
+    24369: (e, n, t) => {
       "use strict";
-      n.d(t, { z: () => o });
-      var i = n(7850),
-        s = n(90626),
-        r = n(3952),
-        a = n(52038);
-      function o(e) {
+      t.d(n, { z: () => c });
+      var i = t(7850),
+        s = t(90626),
+        r = t(3952),
+        a = t(52038),
+        o = t(61859);
+      function c(e) {
         const {
-            className: t,
-            onUpload: n,
-            accept: o,
-            multiple: c = !1,
-            fileInputRef: l,
-            children: d,
+            className: n,
+            onUpload: t,
+            accept: c,
+            multiple: l = !1,
+            fileInputRef: d,
+            onError: u,
+            children: p,
           } = e,
-          [u, p] = (0, s.useState)(!1),
-          [m, h] = (0, s.useState)(!1);
+          [m, h] = (0, s.useState)(!1),
+          [v, _] = (0, s.useState)(!1),
+          g = (e) => {
+            u &&
+              u(
+                !l && e.length > 1
+                  ? (0, o.we)("#AchievementEditor_Upload_Error_SingleFileOnly")
+                  : (0, o.we)(
+                      "#AchievementEditor_Image_Error_UnknownContentType",
+                    ),
+              );
+          };
         return (0, i.jsxs)("div", {
-          className: (0, a.A)(r.DragBox, u && r.Dragging, m && r.Invalid, t),
+          className: (0, a.A)(r.DragBox, m && r.Dragging, v && r.Invalid, n),
           onDragEnter: (e) => {
-            e.preventDefault(), p(!0);
-            const t = [...e.dataTransfer.items];
-            if (!c && t.length > 1)
-              return h(!0), void (e.dataTransfer.effectAllowed = "none");
-            for (const n of t)
-              if (!o.includes(n.type))
+            e.preventDefault(), h(!0);
+            const n = [...e.dataTransfer.items];
+            if (!l && n.length > 1)
+              return _(!0), void (e.dataTransfer.effectAllowed = "none");
+            for (const t of n)
+              if (!c.includes(t.type))
                 return (
-                  h(!0),
+                  _(!0),
                   (e.dataTransfer.effectAllowed = "none"),
-                  void console.log(n.type)
+                  void console.log(t.type)
                 );
           },
           onDragOver: (e) => {
-            m && (e.dataTransfer.dropEffect = "none"), e.preventDefault();
+            v && (e.dataTransfer.dropEffect = "none"), e.preventDefault();
           },
           onDragLeave: () => {
-            p(!1), h(!1);
+            h(!1), _(!1);
           },
           onDrop: async (e) => {
-            e.preventDefault(), p(!1);
-            let t = m;
-            h(!1), t || n(e.dataTransfer.files);
+            e.preventDefault(), h(!1);
+            let n = v;
+            _(!1), n ? g(e.dataTransfer.files) : t(e.dataTransfer.files);
           },
           children: [
-            d,
-            l &&
+            p,
+            d &&
               (0, i.jsx)("input", {
                 type: "file",
                 style: { display: "none" },
                 name: "upload",
-                accept: o.join(","),
-                multiple: c,
-                ref: l,
+                accept: c.join(","),
+                multiple: l,
+                ref: d,
                 onChange: async (e) => {
-                  n(e.target.files);
+                  var n;
+                  ((n = e.target.files),
+                  (!l && n.length > 1) ||
+                    !Array.from(n).every((e) => c.includes(e.type)))
+                    ? g(e.target.files)
+                    : t(e.target.files);
                 },
               }),
           ],
         });
       }
     },
-    53338: (e, t, n) => {
+    53338: (e, n, t) => {
       "use strict";
-      n.d(t, { I7: () => o, Tc: () => d, _Q: () => u, bi: () => a });
-      var i = n(7850),
-        s = n(61859),
-        r = n(24369);
+      t.d(n, { I7: () => o, Tc: () => d, _Q: () => u, bi: () => a });
+      var i = t(7850),
+        s = t(61859),
+        r = t(24369);
       const a = 1;
       async function o(e) {
-        return new Promise((t) => {
-          const n = new Image();
-          (n.onload = () => {
-            const e = document.createElement("canvas");
-            (e.width = n.width), (e.height = n.height);
-            const i = e.getContext("2d");
-            (i.filter = "grayscale(100%)"),
-              i.drawImage(n, 0, 0, n.width, n.height);
-            const s = e.toDataURL("image/png");
-            t(s);
-          }),
-            (n.src = e);
+        return new Promise((n, t) => {
+          const i = new Image();
+          (i.onerror = () =>
+            t(new Error("failed to decode image for grayscale conversion"))),
+            (i.onload = () => {
+              const e = document.createElement("canvas");
+              (e.width = i.width), (e.height = i.height);
+              const t = e.getContext("2d");
+              (t.filter = "grayscale(100%)"),
+                t.drawImage(i, 0, 0, i.width, i.height);
+              const s = e.toDataURL("image/png");
+              n(s);
+            }),
+            (i.src = e);
         });
       }
       function c(e) {
-        const t = e.lastIndexOf(".");
-        return -1 !== t && t > e.lastIndexOf("/") ? e.slice(0, t) : e;
+        const n = e.lastIndexOf(".");
+        return -1 !== n && n > e.lastIndexOf("/") ? e.slice(0, n) : e;
       }
-      async function l(e, t = 0, n = 0, i = !1) {
+      async function l(e, n = 0, t = 0, i = !1) {
         return new Promise((r, o) => {
-          e || r({ success: !1, filename: e.name });
-          const l = new FileReader();
-          (l.onloadend = () => {
-            const o = e.type,
-              d = e.name;
-            if (
-              (("image/png" === o || d.endsWith(".png")) &&
-                l.result.toString().startsWith("data:image/png;base64,")) ||
-              (("image/jpeg" === o ||
-                d.endsWith(".jpg") ||
-                d.endsWith(".jpeg")) &&
-                (l.result.toString().startsWith("data:image/jpeg;base64,") ||
-                  l.result.toString().startsWith("data:image/jpg;base64,")))
-            ) {
-              const o = new Image();
-              (o.onload = () => {
-                i && o.width != o.height
-                  ? (console.error(
-                      "Image width and height don't match, must be square",
-                    ),
-                    r({
-                      success: !1,
-                      filename: e.name,
-                      error: (0, s.we)(
-                        "#AchievementEditor_Image_Error_NotSquare",
-                      ),
-                      image: {
-                        image: o.src,
-                        imageType: a,
-                        filenameWithoutExtension: c(d),
-                      },
-                    }))
-                  : t > 0 && (o.width < t || o.height < t)
-                    ? (console.error("Image too small"),
-                      r({
-                        success: !1,
-                        filename: e.name,
-                        error: (0, s.we)(
-                          "#AchievementEditor_Image_Error_TooSmall",
-                        ),
-                        image: {
-                          image: o.src,
-                          imageType: a,
-                          filenameWithoutExtension: c(d),
-                        },
-                      }))
-                    : n > 0 && (o.width > n || o.height > n)
-                      ? (function (e, t, n, i) {
-                          const s = new FileReader();
-                          (s.onload = (s) => {
-                            const r = new Image();
-                            (r.onload = () => {
-                              const s = document.createElement("canvas");
-                              let a = r.width,
-                                o = r.height;
-                              a > o
-                                ? a > t && ((o *= t / a), (a = t))
-                                : o > n && ((a *= n / o), (o = n)),
-                                (s.width = a),
-                                (s.height = o),
-                                s.getContext("2d").drawImage(r, 0, 0, a, o);
-                              const c = s.toDataURL(e.type);
-                              i(c);
-                            }),
-                              (r.src = s.target?.result);
-                          }),
-                            s.readAsDataURL(e);
-                        })(e, n, n, (t) => {
-                          r({
-                            success: !0,
-                            filename: e.name,
-                            image: {
-                              image: t,
-                              imageType: a,
-                              filenameWithoutExtension: c(d),
-                            },
-                          });
-                        })
-                      : r({
-                          success: !0,
-                          filename: e.name,
-                          image: {
-                            image: l.result,
-                            imageType: a,
-                            filenameWithoutExtension: c(d),
-                          },
-                        });
+          if (!e)
+            return void r({
+              success: !1,
+              filename: "",
+              error: (0, s.we)("#AchievementEditor_Image_Error_ReadFailed"),
+            });
+          const l = () =>
+              r({
+                success: !1,
+                filename: e.name,
+                error: (0, s.we)("#AchievementEditor_Image_Error_ReadFailed"),
               }),
-                (o.src = l.result);
-            } else
-              console.error("unknown content types: " + o),
-                r({
-                  success: !1,
-                  filename: e.name,
-                  error: (0, s.we)(
-                    "#AchievementEditor_Image_Error_UnknownContentType",
-                  ),
-                });
-          }),
-            l.readAsDataURL(e);
+            d = new FileReader();
+          (d.onerror = l),
+            (d.onloadend = () => {
+              const o = e.type,
+                u = e.name;
+              if (
+                (("image/png" === o || u.endsWith(".png")) &&
+                  d.result.toString().startsWith("data:image/png;base64,")) ||
+                (("image/jpeg" === o ||
+                  u.endsWith(".jpg") ||
+                  u.endsWith(".jpeg")) &&
+                  (d.result.toString().startsWith("data:image/jpeg;base64,") ||
+                    d.result.toString().startsWith("data:image/jpg;base64,")))
+              ) {
+                const o = new Image();
+                (o.onerror = l),
+                  (o.onload = () => {
+                    i && o.width != o.height
+                      ? (console.error(
+                          "Image width and height don't match, must be square",
+                        ),
+                        r({
+                          success: !1,
+                          filename: e.name,
+                          error: (0, s.we)(
+                            "#AchievementEditor_Image_Error_NotSquare",
+                          ),
+                          image: {
+                            image: o.src,
+                            imageType: a,
+                            filenameWithoutExtension: c(u),
+                          },
+                        }))
+                      : n > 0 && (o.width < n || o.height < n)
+                        ? (console.error("Image too small"),
+                          r({
+                            success: !1,
+                            filename: e.name,
+                            error: (0, s.we)(
+                              "#AchievementEditor_Image_Error_TooSmall",
+                            ),
+                            image: {
+                              image: o.src,
+                              imageType: a,
+                              filenameWithoutExtension: c(u),
+                            },
+                          }))
+                        : t > 0 && (o.width > t || o.height > t)
+                          ? (function (e, n, t, i, s) {
+                              const r = new FileReader();
+                              (r.onerror = s),
+                                (r.onload = (r) => {
+                                  const a = new Image();
+                                  (a.onerror = s),
+                                    (a.onload = () => {
+                                      const s =
+                                        document.createElement("canvas");
+                                      let r = a.width,
+                                        o = a.height;
+                                      r > o
+                                        ? r > n && ((o *= n / r), (r = n))
+                                        : o > t && ((r *= t / o), (o = t)),
+                                        (s.width = r),
+                                        (s.height = o),
+                                        s
+                                          .getContext("2d")
+                                          .drawImage(a, 0, 0, r, o);
+                                      const c = s.toDataURL(e.type);
+                                      i(c);
+                                    }),
+                                    (a.src = r.target?.result);
+                                }),
+                                r.readAsDataURL(e);
+                            })(
+                              e,
+                              t,
+                              t,
+                              (n) => {
+                                r({
+                                  success: !0,
+                                  filename: e.name,
+                                  image: {
+                                    image: n,
+                                    imageType: a,
+                                    filenameWithoutExtension: c(u),
+                                  },
+                                });
+                              },
+                              l,
+                            )
+                          : r({
+                              success: !0,
+                              filename: e.name,
+                              image: {
+                                image: d.result,
+                                imageType: a,
+                                filenameWithoutExtension: c(u),
+                              },
+                            });
+                  }),
+                  (o.src = d.result);
+              } else
+                console.error("unknown content types: " + o),
+                  r({
+                    success: !1,
+                    filename: e.name,
+                    error: (0, s.we)(
+                      "#AchievementEditor_Image_Error_UnknownContentType",
+                    ),
+                  });
+            }),
+            d.readAsDataURL(e);
         });
       }
       async function d(e) {
         const {
-          files: t,
-          forceSquare: n,
+          files: n,
+          forceSquare: t,
           maxDimension: i,
           minDimension: s,
         } = e;
-        return await Promise.all(t.map((e) => l(e, s, i, n)));
+        return await Promise.all(n.map((e) => l(e, s, i, t)));
       }
       function u(e) {
         const {
-          className: t,
-          allowMultiple: n,
-          fileInputRef: s,
-          onUpload: a,
-          onBulkUpload: o,
-          children: c,
+          className: n,
+          allowMultiple: t,
+          fileInputRef: a,
+          onUpload: o,
+          onBulkUpload: c,
+          onError: l,
+          children: u,
         } = e;
         return (0, i.jsx)(r.z, {
-          onUpload: async (t) => {
-            const n = await d({ ...e, files: Array.from(t) });
-            a
-              ? n[0].success && a(n[0].image)
-              : o(n.filter((e) => e.success).map((e) => e.image));
+          onUpload: async (n) => {
+            const t = await d({ ...e, files: Array.from(n) }),
+              i = t.filter((e) => !e.success);
+            i.length > 0 &&
+              l &&
+              l(
+                i
+                  .map((e) => e.error)
+                  .filter((e) => !!e)
+                  .join(" ") ||
+                  (0, s.we)("#AchievementEditor_Image_Error_ReadFailed"),
+              ),
+              o
+                ? t[0].success && o(t[0].image)
+                : c(t.filter((e) => e.success).map((e) => e.image));
           },
-          className: t,
+          className: n,
           accept: ["image/png", "image/jpeg"],
-          multiple: n,
-          fileInputRef: s,
-          children: c,
+          multiple: t,
+          fileInputRef: a,
+          onError: l,
+          children: u,
         });
       }
     },
-    60668: (e, t, n) => {
+    60668: (e, n, t) => {
       "use strict";
-      n.d(t, {
+      t.d(n, {
         $q: () => d,
         Cm: () => u,
         WL: () => p,
@@ -7045,40 +7175,40 @@
         qF: () => v,
         wI: () => m,
       });
-      var i = n(7850),
-        s = n(38256),
-        r = n(20187),
-        a = n(90626),
-        o = n(12155),
-        c = n(52038),
-        l = n(95415);
-      function d(e, t, n) {
-        const [i, s] = (0, a.useState)(t(e));
+      var i = t(7850),
+        s = t(38256),
+        r = t(20187),
+        a = t(90626),
+        o = t(12155),
+        c = t(52038),
+        l = t(95415);
+      function d(e, n, t) {
+        const [i, s] = (0, a.useState)(n(e));
         return {
-          value: i.data,
+          value: i.success ? i.data : i.input,
           setValue: (e) => {
-            const r = t(e);
-            (n || i.success) && s(r);
+            const i = n(e);
+            (t || i.success) && s(i);
           },
           isValid: i.success,
           issues: i.issues,
         };
       }
       function u(e) {
-        return (t) => {
-          const n = e.safeParse(t);
+        return (n) => {
+          const t = e.safeParse(n);
           return {
-            success: n.success,
-            data: n.data,
-            input: t,
-            issues: n.success ? void 0 : n.error?.issues.map((e) => e.message),
+            success: t.success,
+            data: t.data,
+            input: n,
+            issues: t.success ? void 0 : t.error?.issues.map((e) => e.message),
           };
         };
       }
       function p(e) {
         const {
-            label: t,
-            value: n,
+            label: n,
+            value: t,
             setValue: r,
             isValid: o,
             issues: c,
@@ -7088,12 +7218,12 @@
           [u, p] = (0, a.useState)(!1);
         return (0, i.jsx)(v, {
           labelId: d,
-          label: t,
+          label: n,
           isValid: !u || o,
           issues: c,
           children: (0, i.jsx)(m, {
             children: (0, i.jsx)(s.k, {
-              value: n,
+              value: t,
               onTextChange: (e) => {
                 p(!0), r(e);
               },
@@ -7107,26 +7237,26 @@
         });
       }
       function m(e) {
-        const { children: t } = e;
+        const { children: n } = e;
         return (0, i.jsx)("div", {
           className: l.ValidatedControl,
-          children: t,
+          children: n,
         });
       }
       function h(e) {
-        const { label: t, description: n, labelId: s, children: a } = e;
+        const { label: n, description: t, labelId: s, children: a } = e;
         return (0, i.jsxs)("div", {
           children: [
-            t && (0, i.jsx)("h2", { id: s, children: t }),
-            n && (0, i.jsx)(r.EY, { contrast: "description", children: n }),
+            n && (0, i.jsx)("h2", { id: s, children: n }),
+            t && (0, i.jsx)(r.EY, { contrast: "description", children: t }),
             a,
           ],
         });
       }
       function v(e) {
         const {
-          label: t,
-          description: n,
+          label: n,
+          description: t,
           labelId: s,
           issues: r,
           isValid: a,
@@ -7139,8 +7269,8 @@
           ),
           children: [
             (0, i.jsx)(h, {
-              label: t,
-              description: n,
+              label: n,
+              description: t,
               labelId: s,
               children: d,
             }),
@@ -7155,7 +7285,7 @@
                       r,
                     ],
                   })
-                : r.map((e, t) =>
+                : r.map((e, n) =>
                     (0, i.jsxs)(
                       "span",
                       {
@@ -7166,16 +7296,16 @@
                           e,
                         ],
                       },
-                      t,
+                      n,
                     ),
                   )),
           ],
         });
       }
     },
-    59403: (e, t, n) => {
+    59403: (e, n, t) => {
       "use strict";
-      n.d(t, {
+      t.d(n, {
         Gx: () => o,
         _w: () => u,
         ap: () => r,
@@ -7184,8 +7314,8 @@
         pc: () => l,
         sq: () => a,
       });
-      var i = n(7850),
-        s = n(61859);
+      var i = t(7850),
+        s = t(61859);
       function r(e) {
         if (!e || 0 == e.trim().length) return null;
         try {
@@ -7194,24 +7324,24 @@
           return null;
         }
       }
-      function a(e, t) {
-        const n = new Set();
+      function a(e, n) {
+        const t = new Set();
         return e.filter((e) => {
-          const i = t(e);
-          return !n.has(i) && (n.add(i), !0);
+          const i = n(e);
+          return !t.has(i) && (t.add(i), !0);
         });
       }
       function o(...e) {
         return [...new Set(e.flat())];
       }
       function c(e) {
-        const { href: t, children: n } = e;
-        return t
-          ? (0, i.jsx)("a", { ...e, children: n })
-          : (0, i.jsx)(i.Fragment, { children: n });
+        const { href: n, children: t } = e;
+        return n
+          ? (0, i.jsx)("a", { ...e, children: t })
+          : (0, i.jsx)(i.Fragment, { children: t });
       }
-      function l(e, t) {
-        const n = {
+      function l(e, n) {
+        const t = {
             sText: (0, s.we)(
               "#Dashboard_UpcomingEvents_AppReleaseState_unavailable",
             ),
@@ -7274,48 +7404,48 @@
               bPrereleaseOrReleased: !1,
             },
           };
-        let a = n;
-        return e in r ? (a = r[e]) : t || (a = i), a;
+        let a = t;
+        return e in r ? (a = r[e]) : n || (a = i), a;
       }
       function d(e) {
         if ("seasonalsale" == e.type) {
-          const t = e.name.toLowerCase();
-          if (t.includes("spring")) return "#dd71d4";
-          if (t.includes("summer")) return "#29c6ec";
-          if (t.includes("autumn")) return "#ac240c";
-          if (t.includes("winter")) return "#01704f";
+          const n = e.name.toLowerCase();
+          if (n.includes("spring")) return "#dd71d4";
+          if (n.includes("summer")) return "#29c6ec";
+          if (n.includes("autumn")) return "#ac240c";
+          if (n.includes("winter")) return "#01704f";
         }
       }
       function u(e) {
-        let t = 0;
-        for (let n = 0; n < e.length; n++) t = e.charCodeAt(n) + ((t << 5) - t);
-        return `hsl(${t % 360}, ${50 + (t % 50)}%, ${40 + (t % 30)}%, 0.25)`;
+        let n = 0;
+        for (let t = 0; t < e.length; t++) n = e.charCodeAt(t) + ((n << 5) - n);
+        return `hsl(${n % 360}, ${50 + (n % 50)}%, ${40 + (n % 30)}%, 0.25)`;
       }
     },
-    874: (e, t, n) => {
+    874: (e, n, t) => {
       "use strict";
-      n.d(t, { b: () => x, a: () => h });
-      var i = n(7850),
-        s = n(39777),
-        r = n(90626),
-        a = n(30470);
-      var o = n(32754),
-        c = n(52038),
-        l = n(61859),
-        d = n(78327),
-        u = n(28325),
-        p = n(86770),
-        m = n(59403);
+      t.d(n, { b: () => x, a: () => h });
+      var i = t(7850),
+        s = t(39777),
+        r = t(90626),
+        a = t(30470);
+      var o = t(32754),
+        c = t(52038),
+        l = t(61859),
+        d = t(78327),
+        u = t(28325),
+        p = t(86770),
+        m = t(59403);
       function h(e) {
-        const t = r.useMemo(
+        const n = r.useMemo(
           () =>
             (function () {
               const e = (0, d.Tc)("rgRecentApps", "application_config"),
-                t = e ? Object.keys(e).map((t) => e[t]) : [],
-                n = (0, d.Tc)("rgRecentUnreleasedApps", "application_config"),
-                i = n ? Object.keys(n).map((e) => n[e]) : [],
-                s = (0, m.Gx)(t, i);
-              return s.sort((e, t) => e.nOrder - t.nOrder), s;
+                n = e ? Object.keys(e).map((n) => e[n]) : [],
+                t = (0, d.Tc)("rgRecentUnreleasedApps", "application_config"),
+                i = t ? Object.keys(t).map((e) => t[e]) : [],
+                s = (0, m.Gx)(n, i);
+              return s.sort((e, n) => e.nOrder - n.nOrder), s;
             })(),
           [],
         );
@@ -7325,21 +7455,21 @@
           children: (0, i.jsxs)("div", {
             className: u.AppTileContainer,
             children: [
-              !t.length && (0, i.jsx)(v, {}),
-              t.map((e) => (0, i.jsx)(g, { app: e }, e.appid)),
+              !n.length && (0, i.jsx)(v, {}),
+              n.map((e) => (0, i.jsx)(g, { app: e }, e.appid)),
             ],
           }),
         });
       }
       function v(e) {
-        const t = d.TS.PARTNER_BASE_URL + "apps/";
+        const n = d.TS.PARTNER_BASE_URL + "apps/";
         return (0, i.jsxs)("div", {
           className: u.NoRecentApps,
           children: [
             (0, l.we)("#Dashboard_RecentApps_NoRecent"),
             " ",
             (0, i.jsxs)("a", {
-              href: t,
+              href: n,
               target: "_blank",
               children: [" ", (0, l.we)("#Dashboard_RecentApps_ViewAll")],
             }),
@@ -7347,29 +7477,29 @@
         });
       }
       function _(e) {
-        const t = d.TS.PARTNER_BASE_URL + "apps/";
+        const n = d.TS.PARTNER_BASE_URL + "apps/";
         return (0, i.jsx)("div", {
           className: u.ViewAppsContainer,
           children: (0, i.jsx)("div", {
             className: u.ViewAppsLink,
             children: (0, i.jsx)("a", {
-              href: t,
+              href: n,
               children: (0, l.we)("#Dashboard_RecentApps_ViewAllShort"),
             }),
           }),
         });
       }
       function g(e) {
-        const { app: t } = e,
-          n = t.appid,
-          { data: r } = (0, s.lv)({ appid: n }),
-          c = d.TS.PARTNER_BASE_URL + "apps/landing/" + n,
-          l = (function (e, t) {
-            if (e?.asset_url_format && e[t])
+        const { app: n } = e,
+          t = n.appid,
+          { data: r } = (0, s.lv)({ appid: t }),
+          c = d.TS.PARTNER_BASE_URL + "apps/landing/" + t,
+          l = (function (e, n) {
+            if (e?.asset_url_format && "string" == typeof e[n])
               return (
                 a.TS.BASE_URL_SHARED_CDN +
                 "/store_item_assets/" +
-                e.asset_url_format.replace("${FILENAME}", e[t])
+                e.asset_url_format.replace("${FILENAME}", e[n])
               );
           })(r, "header");
         return (0, i.jsxs)("div", {
@@ -7377,7 +7507,7 @@
           children: [
             l &&
               (0, i.jsx)(o.he, {
-                toolTipContent: t.name,
+                toolTipContent: n.name,
                 children: (0, i.jsx)("div", {
                   className: u.AppTileImage,
                   children: (0, i.jsx)("a", {
@@ -7393,58 +7523,58 @@
                 children: (0, i.jsx)("a", {
                   href: c,
                   target: "_blank",
-                  children: t.name,
+                  children: n.name,
                 }),
               }),
-            (0, i.jsx)(x, { app: t }),
+            (0, i.jsx)(x, { app: n }),
           ],
         });
       }
       function x(e) {
-        const { app: t } = e,
-          n = t.appid,
-          { data: r } = (0, s.J$)({ appid: n });
+        const { app: n } = e,
+          t = n.appid,
+          { data: r } = (0, s.J$)({ appid: t });
         return (0, i.jsxs)("div", {
           className: u.AppLabels,
           children: [
-            (0, i.jsx)(f, { appType: t.type }),
+            (0, i.jsx)(f, { appType: n.type }),
             (0, i.jsx)(j, {
-              releaseState: t.releasestate,
+              releaseState: n.releasestate,
               hasStoreItem: r?.visible,
             }),
           ],
         });
       }
       function f(e) {
-        const { appType: t } = e;
-        let n = null,
+        const { appType: n } = e;
+        let t = null,
           s = null;
         return (
-          "Game" == t
-            ? (n = (0, l.we)("#Dashboard_RecentApps_Game"))
-            : "DLC" == t
-              ? ((n = (0, l.we)("#Dashboard_RecentApps_DLC")), (s = u.DLC))
-              : "Beta" == t
-                ? ((n = (0, l.we)("#Dashboard_RecentApps_Playtest")),
+          "Game" == n
+            ? (t = (0, l.we)("#Dashboard_RecentApps_Game"))
+            : "DLC" == n
+              ? ((t = (0, l.we)("#Dashboard_RecentApps_DLC")), (s = u.DLC))
+              : "Beta" == n
+                ? ((t = (0, l.we)("#Dashboard_RecentApps_Playtest")),
                   (s = u.Playtest))
-                : "Demo" == t
-                  ? ((n = (0, l.we)("#Dashboard_RecentApps_Demo")),
+                : "Demo" == n
+                  ? ((t = (0, l.we)("#Dashboard_RecentApps_Demo")),
                     (s = u.Demo))
-                  : "Music" == t &&
-                    ((n = (0, l.we)("#Dashboard_RecentApps_Music")),
+                  : "Music" == n &&
+                    ((t = (0, l.we)("#Dashboard_RecentApps_Music")),
                     (s = u.Music)),
-          !!n &&
+          !!t &&
             (0, i.jsx)("div", {
               className: (0, c.A)(u.AppType, s),
-              children: n,
+              children: t,
             })
         );
       }
       function j(e) {
-        const { releaseState: t, hasStoreItem: n } = e,
-          s = (0, m.pc)(t, n);
+        const { releaseState: n, hasStoreItem: t } = e,
+          s = (0, m.pc)(n, t);
         return (
-          "released" != t &&
+          "released" != n &&
           (0, i.jsx)("div", {
             className: (0, c.A)(u.AppRelease),
             children: s.sText,
@@ -7452,16 +7582,16 @@
         );
       }
     },
-    86770: (e, t, n) => {
+    86770: (e, n, t) => {
       "use strict";
-      n.d(t, { $: () => o });
-      var i = n(7850),
-        s = n(90626),
-        r = n(61859),
-        a = n(6853);
-      const o = s.forwardRef((e, t) => {
+      t.d(n, { $: () => o });
+      var i = t(7850),
+        s = t(90626),
+        r = t(61859),
+        a = t(6853);
+      const o = s.forwardRef((e, n) => {
         const {
-          title: n,
+          title: t,
           count: s,
           description: o,
           children: c,
@@ -7470,7 +7600,7 @@
         } = e;
         return (0, i.jsxs)("div", {
           className: a.Section,
-          ref: t,
+          ref: n,
           children: [
             (0, i.jsxs)("div", {
               className: a.Header,
@@ -7478,7 +7608,7 @@
                 (0, i.jsxs)("div", {
                   className: a.Title,
                   children: [
-                    n,
+                    t,
                     null != s &&
                       (0, i.jsx)("span", { className: a.Count, children: s }),
                     l &&
@@ -7497,46 +7627,51 @@
         });
       });
     },
-    25865: (e, t, n) => {
+    47284: (e, n, t) => {
       "use strict";
-      n.d(t, { On: () => h });
-      var i = n(66418),
-        s = n(23809),
-        r = n(20194),
-        a = n(37085),
-        o = n(76176);
-      const c = 0,
-        l = {
-          GlobalProgressAsc: function (e, t) {
+      t.d(n, { On: () => g });
+      var i = t(66418),
+        s = t(20194),
+        r = t(90626);
+      const a = "steamQueryPersist";
+      const o = r.createContext(void 0);
+      o.Provider;
+      Date.now();
+      var c = t(23809),
+        l = t(37085),
+        d = t(76176);
+      const u = 0,
+        p = {
+          GlobalProgressAsc: function (e, n) {
             return (
-              (e.global_unlock_percent ?? 0) - (t.global_unlock_percent ?? 0)
+              (e.global_unlock_percent ?? 0) - (n.global_unlock_percent ?? 0)
             );
           },
-          GlobalProgressDesc: function (e, t) {
+          GlobalProgressDesc: function (e, n) {
             return (
-              (t.global_unlock_percent ?? 0) - (e.global_unlock_percent ?? 0)
+              (n.global_unlock_percent ?? 0) - (e.global_unlock_percent ?? 0)
             );
           },
         };
-      function d(e, ...t) {
-        return ["achievements", e, ...t];
+      function m(e, ...n) {
+        return ["achievements", e, ...n];
       }
-      const u = (e) => d(e, "schema");
-      function p(e, t) {
-        if (void 0 !== t && "" !== t)
-          return `${i.TS.BASE_URL_SHARED_CDN}community_assets/images/apps/${e}/${t}`;
+      const h = (e) => m(e, "schema");
+      function v(e, n) {
+        if (void 0 !== n && "" !== n)
+          return `${i.TS.BASE_URL_SHARED_CDN}community_assets/images/apps/${e}/${n}`;
       }
-      function m(e, t) {
+      function _(e, n) {
         return {
-          queryKey: u(t),
+          queryKey: h(n),
           queryFn: async () => {
-            const n = i.TS.LANGUAGE,
-              s = (async function (e, t, n) {
-                const i = await o.xtC.GetGameAchievements(e, {
-                  appid: t,
-                  language: n,
+            const t = i.TS.LANGUAGE,
+              s = (async function (e, n, t) {
+                const i = await d.xtC.GetGameAchievements(e, {
+                  appid: n,
+                  language: t,
                 });
-                if (i.GetEResult() !== a.R)
+                if (i.GetEResult() !== l.R)
                   throw (
                     (console.error(
                       "Received error from GetGameAchievements",
@@ -7547,8 +7682,8 @@
                     ))
                   );
                 const s = {};
-                (s[c] = {
-                  id: c,
+                (s[u] = {
+                  id: u,
                   archived: !1,
                   developeronly: !1,
                   ispublic: !0,
@@ -7561,9 +7696,9 @@
                     .Body()
                     .groups()
                     .forEach((e) => {
-                      const t = e.groupid();
-                      s[t] = {
-                        id: t,
+                      const n = e.groupid();
+                      s[n] = {
+                        id: n,
                         name: e.localized_name(),
                         archived: e.archived() ?? !1,
                         ispublic: e.ispublic() ?? !0,
@@ -7577,21 +7712,21 @@
                     .Body()
                     .toObject()
                     ?.achievements?.forEach((e) => {
-                      const n = e.groupid ?? c;
-                      s[n].achievements.push({
+                      const t = e.groupid ?? u;
+                      s[t].achievements.push({
                         internal_key: e.internal_key ?? 0,
                         api_name: e.internal_name ?? "",
                         name: e.localized_name,
                         description: e.localized_desc,
                         hidden: e.hidden ?? !1,
                         archived: e.archived ?? !1,
-                        icon_achieved: p(t, e.icon),
-                        icon_unachieved: p(t, e.icon_gray),
+                        icon_achieved: v(n, e.icon),
+                        icon_unachieved: v(n, e.icon_gray),
                         global_unlock_percent:
                           void 0 === e.player_percent_unlocked
                             ? void 0
                             : Number.parseFloat(e.player_percent_unlocked),
-                        groupid: e.groupid ?? c,
+                        groupid: e.groupid ?? u,
                         min_progress:
                           e.min_progress_int ?? e.min_progress_float,
                         max_progress:
@@ -7600,80 +7735,88 @@
                     });
                 const r = Object.values(s)
                   .filter((e) => e.achievements.length > 0)
-                  .sort((e, t) => e.order - t.order);
+                  .sort((e, n) => e.order - n.order);
                 return (
-                  r.forEach((e) => e.achievements.sort(l.GlobalProgressDesc)),
+                  r.forEach((e) => e.achievements.sort(p.GlobalProgressDesc)),
                   {
-                    appid: t,
-                    language: n,
+                    appid: n,
+                    language: t,
                     groups: r,
                     schema_hash: i.Body()?.schema_hash() ?? 0,
                     schema_version: i.Body()?.schema_version() ?? 0,
                   }
                 );
-              })(e, t, n);
+              })(e, n, t);
             return s;
           },
           staleTime: 36e5,
+          area: "achievements",
         };
       }
-      function h(e) {
-        const t = (0, s.KV)();
-        return (0, r.I)(m(t, e));
+      function g(e) {
+        return (function (e) {
+          const { area: n, maxAgeSeconds: t, meta: i, ...c } = e,
+            l = r.useContext(o),
+            d = r.useMemo(
+              () => ({ ...i, [a]: { area: n, maxAgeSeconds: t } }),
+              [i, n, t],
+            );
+          return (0, s.I)({ ...c, meta: d, persister: l?.GetPersister(n) });
+        })(_((0, c.KV)(), e));
       }
     },
-    53965: (e, t, n) => {
+    53965: (e, n, t) => {
       "use strict";
-      n.d(t, { $: () => A, v: () => w });
-      var i = n(7850),
-        s = n(64238),
-        r = n.n(s),
-        a = n(69041),
-        o = n(75659),
-        c = n(11526),
-        l = n(11820),
-        d = n(73406),
-        u = n(90534),
-        p = n(83392),
-        m = n(66922);
+      t.d(n, { $: () => A, v: () => w });
+      var i = t(7850),
+        s = t(64238),
+        r = t.n(s),
+        a = t(69041),
+        o = t(75659),
+        c = t(11526),
+        l = t(11820),
+        d = t(73406),
+        u = t(90534),
+        p = t(83392),
+        m = t(66922);
       function h(e) {
         const {
-            size: t = "3",
-            loading: n = !0,
+            size: n = "3",
+            loading: t = !0,
             children: s,
             color: r,
             variant: a,
             ...o
           } = e,
           c = (0, m.f)("LoadingSpinner", a);
-        return s || !n
+        return s || !t
           ? (0, i.jsxs)(u.az, {
               position: "relative",
               ...o,
               width: "fit-content",
               children: [
                 (0, i.jsx)("div", {
-                  "data-visibility": !n,
+                  "data-visibility": !t,
                   className: d.ChildContainer,
                   children: s,
                 }),
-                n &&
+                t &&
                   (0, i.jsx)(p.s, {
                     position: "absolute",
                     inset: "0",
                     justify: "center",
                     align: "center",
-                    children: (0, i.jsx)(v, { size: t, color: r, variant: c }),
+                    children: (0, i.jsx)(v, { size: n, color: r, variant: c }),
                   }),
               ],
             })
-          : (0, i.jsx)(v, { size: t, color: r, variant: c, ...o });
+          : (0, i.jsx)(v, { size: n, color: r, variant: c, ...o });
       }
       function v(e) {
-        const { className: t, color: n, ...s } = (0, c.mz)(e, _);
+        const { className: n, color: t, ...s } = (0, c.mz)(e, _);
         return (0, i.jsx)("div", {
-          "data-accent-color": n,
-          className: r()(t, d.Spinner),
+          "data-accent-color": t,
+          className: r()(n, d.Spinner),
           ...s,
         });
       }
@@ -7682,8 +7825,8 @@
         { prop: "size", responsive: !0, className: (e) => d[`Size-${e}`] },
         { prop: "variant", className: (e) => d[`Variant-${e}`] },
       ];
-      var g = n(45699),
-        x = n(78327);
+      var g = t(45699),
+        x = t(78327);
       function f(e) {
         e.preventDefault();
       }
@@ -7707,8 +7850,8 @@
         ],
         A = function (e) {
           const {
-              variant: t,
-              size: n = "2",
+              variant: n,
+              size: t = "2",
               minWidth: s = "fit-content",
               color: o,
               loading: l,
@@ -7722,39 +7865,39 @@
             A = (0, x.Qn)(),
             w = l
               ? (0, i.jsx)(h, {
-                  size: n,
+                  size: t,
                   color: o,
                   variant: "bright",
                   children: d,
                 })
               : d,
-            y = l ? void 0 : u,
-            E = v ?? _?.focusable ?? !!y,
-            C = (0, m.f)("Button", t),
+            E = l ? void 0 : u,
+            y = v ?? _?.focusable ?? !!E,
+            C = (0, m.f)("Button", n),
             b = {
               type: "button",
               ...(0, c.mz)(
                 {
                   ...f,
                   variant: C,
-                  size: n,
+                  size: t,
                   minWidth: s,
                   color: o,
                   className: r()(a.Button, p && a.Icon),
-                  onClick: y,
+                  onClick: E,
                 },
                 j,
               ),
               children: w,
             };
-          return A && (E || _)
-            ? (0, i.jsx)(g.fu, { ...b, ...(_ || {}), focusable: E })
+          return A && (y || _)
+            ? (0, i.jsx)(g.fu, { ...b, ...(_ || {}), focusable: y })
             : (0, i.jsx)("button", { ...b });
         },
         w = function (e) {
           const {
-              variant: t,
-              size: n = "2",
+              variant: n,
+              size: t = "2",
               minWidth: s = "fit-content",
               disabled: o,
               icon: d,
@@ -7763,7 +7906,7 @@
               ...h
             } = e,
             v = (0, x.Qn)(),
-            _ = (0, m.f)("Button", t),
+            _ = (0, m.f)("Button", n),
             A = o ? f : void 0,
             w = (0, c.mz)(
               {
@@ -7771,7 +7914,7 @@
                 "aria-disabled": o,
                 ...h,
                 variant: _,
-                size: n,
+                size: t,
                 minWidth: s,
                 className: r()(a.Button, d && a.Icon, (0, l.T)()),
               },
@@ -7782,17 +7925,17 @@
             : (0, i.jsx)("a", { ...w });
         };
     },
-    48906: (e, t, n) => {
+    48906: (e, n, t) => {
       "use strict";
-      n.d(t, { C: () => a, I: () => o });
-      var i = n(7850),
-        s = n(90626),
-        r = n(38256);
+      t.d(n, { C: () => a, I: () => o });
+      var i = t(7850),
+        s = t(90626),
+        r = t(38256);
       const a = Symbol("CoercingTextInputNotParseable");
       function o(e) {
         const {
-            value: t,
-            onValueChange: n,
+            value: n,
+            onValueChange: t,
             valueToString: o,
             valueFromString: c,
             checkValidText: l,
@@ -7801,18 +7944,18 @@
             ...p
           } = e,
           [m, h] = (0, s.useState)(null),
-          v = m ?? (void 0 === t ? "" : o(t)),
+          v = m ?? (void 0 === n ? "" : o(n)),
           _ = () => {
             if (null !== m) {
               const e = c(m);
-              e !== a && n(e), h(null);
+              e !== a && t(e), h(null);
             }
           };
         return (0, i.jsx)(r.k, {
           value: v,
           onTextChange: (e) => {
-            const t = c(e);
-            t !== a && e === o(t) ? (h(null), n(t)) : (l && !l(e, t)) || h(e);
+            const n = c(e);
+            n !== a && e === o(n) ? (h(null), t(n)) : (l && !l(e, n)) || h(e);
           },
           onKeyDown: (e) => {
             "Enter" === e.key && _(), u && u(e);
@@ -7824,33 +7967,33 @@
         });
       }
     },
-    46562: (e, t, n) => {
+    46562: (e, n, t) => {
       "use strict";
-      n.d(t, { G3: () => D });
-      var i = n(7850),
-        s = n(90626),
-        r = n(61023),
-        a = n(89047),
-        o = n(20187),
-        c = n(38256),
-        l = n(77914),
-        d = n(17394),
-        u = n(92148),
-        p = n(59366),
-        m = n(90534),
-        h = n(80797),
-        v = n(83392),
-        _ = n(52038),
-        g = n(14181),
-        x = n(57757),
-        f = n(81393),
-        j = n(82277),
-        A = n(66922),
-        w = n(78327);
-      function y(e) {
+      t.d(n, { G3: () => D });
+      var i = t(7850),
+        s = t(90626),
+        r = t(61023),
+        a = t(89047),
+        o = t(20187),
+        c = t(38256),
+        l = t(77914),
+        d = t(17394),
+        u = t(92148),
+        p = t(59366),
+        m = t(90534),
+        h = t(80797),
+        v = t(83392),
+        _ = t(52038),
+        g = t(14181),
+        x = t(57757),
+        f = t(81393),
+        j = t(82277),
+        A = t(66922),
+        w = t(78327);
+      function E(e) {
         const {
-            refPopover: t,
-            inputValue: n,
+            refPopover: n,
+            inputValue: t,
             onInputChange: s,
             activeIndex: r,
             popoverPlacement: a,
@@ -7869,7 +8012,7 @@
             children: e.children,
           });
         return (0, i.jsx)(d.k.Positioner, {
-          ref: t,
+          ref: n,
           children: (0, i.jsxs)(v.s, {
             direction: "column",
             maxHeight: "var(--popover-max-height)",
@@ -7882,7 +8025,7 @@
                   margin: "3",
                   variant: "inset",
                   radius: "sm",
-                  value: n,
+                  value: t,
                   onTextChange: s,
                   onKeyDown: (e) => {
                     "Enter" === e.key &&
@@ -7908,24 +8051,24 @@
           }),
         });
       }
-      const E = (0, s.createContext)(null);
+      const y = (0, s.createContext)(null);
       function C(e) {
-        const { virtualItem: t, children: n } = e,
-          r = (0, s.useContext)(E);
+        const { virtualItem: n, children: t } = e,
+          r = (0, s.useContext)(y);
         return (
           (0, f.wT)(r, "Virtual item rendered outside of a virtualizer!"),
           (0, i.jsx)(m.az, {
             position: "absolute",
             width: "100%",
-            style: { top: 0, left: 0, transform: `translateY(${t.start}px)` },
+            style: { top: 0, left: 0, transform: `translateY(${n.start}px)` },
             ref: r.measureElement,
-            "data-index": t.index,
-            children: n,
+            "data-index": n.index,
+            children: t,
           })
         );
       }
       function b(e) {
-        const { value: t, children: n, disabled: s } = e,
+        const { value: n, children: t, disabled: s } = e,
           {
             onItemSelectionChange: r,
             selectedValue: a,
@@ -7935,12 +8078,12 @@
         let l = !1,
           u = !1;
         o
-          ? ((l = Array.isArray(a) && a.includes(t)),
+          ? ((l = Array.isArray(a) && a.includes(n)),
             (u = !!c && Array.isArray(a) && a.length >= c))
-          : (l = t === a);
+          : (l = n === a);
         const p = s || (u && !l);
         return (0, i.jsxs)(d.k.Item, {
-          onSelect: () => r(t),
+          onSelect: () => r(n),
           selected: l,
           disabled: p,
           children: [
@@ -7948,17 +8091,17 @@
               (0, i.jsxs)(v.s, {
                 gap: "2",
                 align: "center",
-                children: [(0, i.jsx)(x.S, { checked: l, variant: "dark" }), n],
+                children: [(0, i.jsx)(x.S, { checked: l, variant: "dark" }), t],
               }),
-            !o && n,
+            !o && t,
           ],
         });
       }
-      function S(e, t) {
-        if ("string" == typeof t)
-          return t.toLocaleLowerCase().includes(e.toLocaleLowerCase());
+      function S(e, n) {
+        if ("string" == typeof n)
+          return n.toLocaleLowerCase().includes(e.toLocaleLowerCase());
         try {
-          return JSON.stringify(t)
+          return JSON.stringify(n)
             .toLocaleLowerCase()
             .includes(e.toLocaleLowerCase());
         } catch (e) {}
@@ -7969,9 +8112,9 @@
           !1
         );
       }
-      function N(e, t) {
+      function N(e, n) {
         const {
-            rgOptions: n,
+            rgOptions: t,
             filter: i = S,
             filterPlaceholder: r,
             selectedValue: a,
@@ -7981,7 +8124,7 @@
           [l, d] = (0, s.useState)(""),
           [u, p] = (0, s.useState)(!1),
           [m, h] = (0, s.useState)(null),
-          v = (0, s.useMemo)(() => n.filter((e) => i(l, e)), [l, n, i]),
+          v = (0, s.useMemo)(() => t.filter((e) => i(l, e)), [l, t, i]),
           _ = "number" == typeof m,
           g = v.length > 0,
           x = (0, s.useCallback)(
@@ -7998,22 +8141,22 @@
           ),
           j = (0, s.useCallback)(
             (e) => {
-              o(e), t || f(!1);
+              o(e), n || f(!1);
             },
-            [t, o, f],
+            [n, o, f],
           ),
           A = (0, s.useCallback)(
             (e) => {
-              if (t)
+              if (n)
                 if (a) {
-                  const t = a,
-                    n = t.indexOf(e);
-                  if (-1 !== n) return j(t.slice(0, n).concat(t.slice(n + 1)));
-                  j(t.concat(e));
+                  const n = a,
+                    t = n.indexOf(e);
+                  if (-1 !== t) return j(n.slice(0, t).concat(n.slice(t + 1)));
+                  j(n.concat(e));
                 } else j([e]);
               else j(e);
             },
-            [j, a, t],
+            [j, a, n],
           );
         return {
           activeIndex: m,
@@ -8023,54 +8166,54 @@
           onSelectionChange: j,
           onItemSelectionChange: A,
           onClear: (e) => {
-            j(t ? [] : null), e.stopPropagation(), e.preventDefault();
+            j(n ? [] : null), e.stopPropagation(), e.preventDefault();
           },
           inputValue: l,
           onInputChange: x,
           bOpen: u,
           setOpen: f,
           filterPlaceholder: r,
-          multiselect: t,
+          multiselect: n,
           maxSelected: c,
         };
       }
       const I = {
         Root: function (e) {
           const {
-              children: t,
-              state: n,
+              children: n,
+              state: t,
               placement: r = "bottom-end",
               popoverWidth: a = "dropdown",
               popoverMaxHeight: o,
               ...c
             } = e,
             [l, u] = (0, s.useState)(void 0);
-          (0, s.useEffect)(() => u(void 0), [n.bOpen]);
+          (0, s.useEffect)(() => u(void 0), [t.bOpen]);
           const p = (0, w.Qn)(),
             m = (0, s.useRef)(null),
             h = (0, s.useRef)(null),
             v = (0, s.useMemo)(
-              () => n.rgFilteredOptions.findIndex((e) => e === n.selectedValue),
-              [n.selectedValue, n.rgFilteredOptions],
+              () => t.rgFilteredOptions.findIndex((e) => e === t.selectedValue),
+              [t.selectedValue, t.rgFilteredOptions],
             ),
             _ = (0, d.T)({
-              open: n.bOpen,
-              onOpenChange: n.setOpen,
+              open: t.bOpen,
+              onOpenChange: t.setOpen,
               width: a,
               maxHeight: o,
               placement: r,
               gutter: "4",
-              activeIndex: n.activeIndex,
-              setActiveIndex: n.setActiveIndex,
+              activeIndex: t.activeIndex,
+              setActiveIndex: t.setActiveIndex,
               selectedIndex: v,
               setSelectedIndex: (e) =>
-                n.onItemSelectionChange(n.rgFilteredOptions[e]),
+                t.onItemSelectionChange(t.rgFilteredOptions[e]),
               interactions: { click: !0, virtualItemFocus: !p },
               role: "combobox",
               scroll: !1,
             }),
             g = {
-              ...n,
+              ...t,
               ...c,
               focusedValue: l,
               onFocusChange: u,
@@ -8079,33 +8222,33 @@
               setOpen: (e) => {
                 if (e) {
                   let e = null;
-                  (e = n.multiselect
-                    ? Array.isArray(n.selectedValue)
-                      ? n.selectedValue[0]
+                  (e = t.multiselect
+                    ? Array.isArray(t.selectedValue)
+                      ? t.selectedValue[0]
                       : null
-                    : n.selectedValue),
+                    : t.selectedValue),
                     u(e),
-                    n.onInputChange("");
+                    t.onInputChange("");
                 }
-                n.setOpen(e);
+                t.setOpen(e);
               },
               onIndexSelected: (e) => {
-                const t = _.elementsRef.current;
-                if (t && t[e]) {
-                  t[e].click();
+                const n = _.elementsRef.current;
+                if (n && n[e]) {
+                  n[e].click();
                 }
               },
               popoverPlacement: _.floating.placement,
             };
           return (0, i.jsx)(k.Provider, {
             value: g,
-            children: (0, i.jsx)(d.k.Root, { state: _, children: t }),
+            children: (0, i.jsx)(d.k.Root, { state: _, children: n }),
           });
         },
         Option: b,
-        Options: y,
+        Options: E,
         VirtualizedOptions: function (e) {
-          const { items: t, renderItem: n, overscan: r = 5, ...a } = e,
+          const { items: n, renderItem: t, overscan: r = 5, ...a } = e,
             {
               bOpen: o,
               refPopover: c,
@@ -8117,37 +8260,37 @@
             v !== d && h(v);
           }, [v, d]);
           const _ = (0, u.Te)({
-            count: d ? t.length : Math.min(t.length, 3),
+            count: d ? n.length : Math.min(n.length, 3),
             getScrollElement: () => l.current,
             enabled: o,
             measureElement: p.ZO,
             ...a,
           });
-          return (0, i.jsx)(y, {
-            children: (0, i.jsx)(E, {
+          return (0, i.jsx)(E, {
+            children: (0, i.jsx)(y, {
               value: _,
               children: (0, i.jsx)(m.az, {
                 height: `${_.getTotalSize()}px`,
                 position: "relative",
                 width: "100%",
-                children: _.getVirtualItems().map((e) => n(t[e.index], e, _)),
+                children: _.getVirtualItems().map((e) => t(n[e.index], e, _)),
               }),
             }),
           });
         },
         VirtualizedOption: function (e) {
-          const { virtualItem: t, ...n } = e;
+          const { virtualItem: n, ...t } = e;
           return (0, i.jsx)(C, {
-            virtualItem: t,
-            children: (0, i.jsx)(b, { ...n }),
+            virtualItem: n,
+            children: (0, i.jsx)(b, { ...t }),
           });
         },
         VirtualizedContent: function (e) {
-          const { virtualItem: t, children: n } = e;
-          return (0, i.jsx)(C, { virtualItem: t, children: n });
+          const { virtualItem: n, children: t } = e;
+          return (0, i.jsx)(C, { virtualItem: n, children: t });
         },
         Trigger: function (e) {
-          const { children: t, beforeContent: n, render: s } = e,
+          const { children: n, beforeContent: t, render: s } = e,
             {
               bOpen: o,
               setOpen: c,
@@ -8161,8 +8304,8 @@
               setActiveIndex: f,
               onFocusChange: j,
               rgFilteredOptions: w,
-              onSelectionChange: y,
-              multiselect: E,
+              onSelectionChange: E,
+              multiselect: y,
               onClear: C,
               refPopover: b,
               clearable: S,
@@ -8173,8 +8316,8 @@
               variant: k,
               ...R
             } = B("<ComboboxTrigger>"),
-            G = { tabIndex: 0, children: t },
-            L = E ? Array.isArray(m) && m.length > 0 : !!m,
+            G = { tabIndex: 0, children: n },
+            L = y ? Array.isArray(m) && m.length > 0 : !!m,
             M =
               L && S
                 ? (0, i.jsx)(l.g, {
@@ -8185,7 +8328,7 @@
                 : (0, i.jsx)(a.V, {}),
             F = (0, A.f)("Combobox", k),
             V = (0, i.jsx)(r.j, {
-              beforeContent: n,
+              beforeContent: t,
               afterContent: M,
               hasValue: L,
               cursor: "pointer",
@@ -8228,8 +8371,8 @@
       }
       const D = Object.assign(function (e) {
         const {
-            selectedValue: t,
-            onSelectionChange: n,
+            selectedValue: n,
+            onSelectionChange: t,
             options: r,
             filter: a,
             filterPlaceholder: o,
@@ -8240,23 +8383,23 @@
           u = (function (e) {
             return N(e, !1);
           })({
-            onSelectionChange: n,
-            selectedValue: t,
+            onSelectionChange: t,
+            selectedValue: n,
             rgOptions: r,
             filter: (0, s.useCallback)(
-              (e, t) => (a ? a(e, t) : S(e, l(t))),
+              (e, n) => (a ? a(e, n) : S(e, l(n))),
               [a, l],
             ),
             filterPlaceholder: o,
           }),
-          p = null != t;
+          p = null != n;
         return (0, i.jsxs)(D.Root, {
           state: u,
           ...d,
           children: [
             (0, i.jsxs)(D.Trigger, {
               children: [
-                p && (0, i.jsx)(D.Value, { children: l(t) }),
+                p && (0, i.jsx)(D.Value, { children: l(n) }),
                 !p && (0, i.jsx)(D.Placeholder, { children: c }),
               ],
             }),
@@ -8270,8 +8413,8 @@
       }, I);
       Object.assign(function (e) {
         const {
-            selectedValue: t,
-            onSelectionChange: n,
+            selectedValue: n,
+            onSelectionChange: t,
             options: r,
             filter: a,
             filterPlaceholder: o,
@@ -8283,20 +8426,20 @@
           p = (function (e) {
             return N(e, !0);
           })({
-            onSelectionChange: n,
-            selectedValue: t,
+            onSelectionChange: t,
+            selectedValue: n,
             rgOptions: r,
             filter: (0, s.useCallback)(
-              (e, t) => (a ? a(e, t) : S(e, l(t))),
+              (e, n) => (a ? a(e, n) : S(e, l(n))),
               [a, l],
             ),
             filterPlaceholder: o,
             maxSelected: d,
           }),
-          m = Array.isArray(t) && t.length > 0;
+          m = Array.isArray(n) && n.length > 0;
         let h = "";
         if (m) {
-          const e = t.map((e) => l(e));
+          const e = n.map((e) => l(e));
           h =
             "ListFormat" in Intl
               ? new Intl.ListFormat((0, g.ZO)().strISOCode).format(e)
@@ -8322,38 +8465,38 @@
       }, I);
       const k = (0, s.createContext)(null);
       function B(e) {
-        const t = (0, s.useContext)(k);
-        return t || console.error(`${e} must be used within a <Combobox>!`), t;
+        const n = (0, s.useContext)(k);
+        return n || console.error(`${e} must be used within a <Combobox>!`), n;
       }
     },
-    63910: (e, t, n) => {
+    63910: (e, n, t) => {
       "use strict";
-      n.d(t, { F: () => s });
-      var i = n(24089);
+      t.d(n, { F: () => s });
+      var i = t(24089);
       function s() {
         return i.TextEntry;
       }
     },
-    38528: (e, t, n) => {
+    38528: (e, n, t) => {
       "use strict";
-      n.d(t, { F: () => l });
-      var i = n(7850),
-        s = n(90626),
-        r = n(81393),
-        a = n(25489),
-        o = n(75),
-        c = n(80797);
+      t.d(n, { F: () => l });
+      var i = t(7850),
+        s = t(90626),
+        r = t(81393),
+        a = t(25489),
+        o = t(75),
+        c = t(80797);
       Object.assign(
         function (e) {
           const {
-              value: t,
-              onValueChange: n,
+              value: n,
+              onValueChange: t,
               onValueSettled: r,
               min: a,
               ...o
             } = e,
-            c = [t],
-            l = (0, s.useCallback)((e) => n(e[0]), [n]),
+            c = [n],
+            l = (0, s.useCallback)((e) => t(e[0]), [t]),
             d = (0, s.useCallback)((e) => r?.(e[0]), [r]);
           return (0, i.jsxs)(u, {
             ...o,
@@ -8362,7 +8505,7 @@
             onValueSettled: d,
             value: c,
             children: [
-              (0, i.jsx)(m, { children: (0, i.jsx)(h, { start: a, end: t }) }),
+              (0, i.jsx)(m, { children: (0, i.jsx)(h, { start: a, end: n }) }),
               (0, i.jsx)(v, {}),
             ],
           });
@@ -8370,12 +8513,12 @@
         { Root: u, Track: m, Range: h, Handle: v },
       );
       function l(e) {
-        const { value: t } = e;
+        const { value: n } = e;
         return (0, i.jsxs)(u, {
           ...e,
           children: [
             (0, i.jsx)(m, {
-              children: (0, i.jsx)(h, { start: t[0], end: t[1] }),
+              children: (0, i.jsx)(h, { start: n[0], end: n[1] }),
             }),
             (0, i.jsx)(v, {}),
             (0, i.jsx)(v, {}),
@@ -8384,7 +8527,7 @@
       }
       const d = (0, s.createContext)(null);
       function u(e) {
-        const { children: t, color: n, ...r } = e,
+        const { children: n, color: t, ...r } = e,
           {
             min: a,
             max: c,
@@ -8401,7 +8544,7 @@
           value: { ...r, handles: f, bDragActive: j },
           children: (0, i.jsx)("div", {
             className: o.SliderRoot,
-            "data-accent-color": n,
+            "data-accent-color": t,
             ref: v,
             onPointerDown: (e) => {
               if (v.current) {
@@ -8409,17 +8552,17 @@
                   (e.target.setPointerCapture(e.pointerId),
                   "number" != typeof u)
                 ) {
-                  const t = v.current.getBoundingClientRect(),
-                    n = _(e.clientX - t.left, [0, t.width], [a, c]);
-                  x.current = { activeValueIndex: p(u, n), bMoved: !1 };
+                  const n = v.current.getBoundingClientRect(),
+                    t = _(e.clientX - n.left, [0, n.width], [a, c]);
+                  x.current = { activeValueIndex: p(u, t), bMoved: !1 };
                 } else x.current = { activeValueIndex: 0, bMoved: !1 };
                 A(!0);
               }
             },
             onPointerUp: (e) => {
-              const t = e.target;
-              t.hasPointerCapture(e.pointerId) &&
-                (t.releasePointerCapture(e.pointerId),
+              const n = e.target;
+              n.hasPointerCapture(e.pointerId) &&
+                (n.releasePointerCapture(e.pointerId),
                 h && x.current?.bMoved && h(u),
                 A(!1));
             },
@@ -8429,60 +8572,60 @@
                 v.current &&
                 x.current
               ) {
-                const t = v.current.getBoundingClientRect(),
-                  n = g({
-                    value: _(e.clientX - t.left, [0, t.width], [a, c]),
+                const n = v.current.getBoundingClientRect(),
+                  t = g({
+                    value: _(e.clientX - n.left, [0, n.width], [a, c]),
                     min: a,
                     max: c,
                     step: m,
                   }),
                   i = [...u];
-                (i[x.current.activeValueIndex] = n),
-                  i.sort((e, t) => e - t),
-                  (x.current.activeValueIndex = i.indexOf(n)),
+                (i[x.current.activeValueIndex] = t),
+                  i.sort((e, n) => e - n),
+                  (x.current.activeValueIndex = i.indexOf(t)),
                   (x.current.bMoved = !0),
                   l(i);
               }
             },
             onClick: (e) => {
               if (!v.current || x.current?.bMoved) return;
-              const t = v.current.getBoundingClientRect(),
-                n = _(e.clientX - t.left, [0, t.width], [a, c]),
-                i = g({ value: n, min: a, max: c, step: m }),
-                s = p(u, n),
+              const n = v.current.getBoundingClientRect(),
+                t = _(e.clientX - n.left, [0, n.width], [a, c]),
+                i = g({ value: t, min: a, max: c, step: m }),
+                s = p(u, t),
                 r = [...u];
               (r[s] = i), l(r), h && h(r);
             },
-            children: (0, i.jsx)("div", { className: o.Inner, children: t }),
+            children: (0, i.jsx)("div", { className: o.Inner, children: n }),
           }),
         });
       }
-      function p(e, t) {
+      function p(e, n) {
         if (e.length <= 1) return e.length - 1;
-        let n = 0,
-          i = Math.abs(t - e[0]);
+        let t = 0,
+          i = Math.abs(n - e[0]);
         for (let s = 1; s < e.length; s++) {
-          const r = Math.abs(e[s] - t);
-          r < i && ((n = s), (i = r));
+          const r = Math.abs(e[s] - n);
+          r < i && ((t = s), (i = r));
         }
-        return n;
+        return t;
       }
       function m(e) {
-        const { render: t, ...n } = e;
+        const { render: n, ...t } = e;
         return (0, c.Q)(
-          t,
-          (0, i.jsx)("div", { className: o.SliderTrack }),
           n,
+          (0, i.jsx)("div", { className: o.SliderTrack }),
+          t,
           void 0,
         );
       }
       function h(e) {
-        const { start: t, end: n, render: a } = e,
+        const { start: n, end: t, render: a } = e,
           l = (0, s.useContext)(d);
         (0, r.wT)(l, "SliderRange must be used within a SliderRoot!");
         const { min: u, max: p } = l,
-          m = x(t, u, p),
-          h = 100 - x(n, u, p);
+          m = x(n, u, p),
+          h = 100 - x(t, u, p);
         return (0, c.Q)(
           a,
           (0, i.jsx)("div", {
@@ -8494,9 +8637,9 @@
         );
       }
       function v(e) {
-        const { render: t } = e,
-          n = (0, s.useContext)(d);
-        (0, r.wT)(n, "SliderHandle must be used within a SliderRoot!");
+        const { render: n } = e,
+          t = (0, s.useContext)(d);
+        (0, r.wT)(t, "SliderHandle must be used within a SliderRoot!");
         const {
             min: a,
             max: l,
@@ -8505,7 +8648,7 @@
             step: m = 1,
             onValueChange: h,
             onValueSettled: v,
-          } = n,
+          } = t,
           [_, f] = (0, s.useState)(null),
           [j, A] = (0, s.useState)(-1);
         (0, s.useEffect)(
@@ -8513,9 +8656,9 @@
           [_, u],
         );
         const w = j > -1,
-          y = { "--handle-pct": `${x(w ? p[j] : a, a, l)}%` };
-        w || (y.display = "none");
-        const E = {
+          E = { "--handle-pct": `${x(w ? p[j] : a, a, l)}%` };
+        w || (E.display = "none");
+        const y = {
           ref: f,
           role: "slider",
           "aria-valuenow": p[j],
@@ -8528,9 +8671,9 @@
               case "ArrowUp":
               case "ArrowLeft":
               case "ArrowDown": {
-                const t = "ArrowRight" === e.key || "ArrowUp" === e.key,
-                  n = m * (t ? 1 : -1),
-                  i = g({ value: p[j] + n, min: a, max: l, step: m }),
+                const n = "ArrowRight" === e.key || "ArrowUp" === e.key,
+                  t = m * (n ? 1 : -1),
+                  i = g({ value: p[j] + t, min: a, max: l, step: m }),
                   s = [...p];
                 (s[j] = i),
                   h(s),
@@ -8541,9 +8684,9 @@
               }
               case "PageUp":
               case "PageDown": {
-                const t = "PageUp" === e.key,
-                  n = Math.round((l - a) / 10) * (t ? 1 : -1),
-                  i = g({ value: p[j] + n, min: a, max: l, step: m }),
+                const n = "PageUp" === e.key,
+                  t = Math.round((l - a) / 10) * (n ? 1 : -1),
+                  i = g({ value: p[j] + t, min: a, max: l, step: m }),
                   s = [...p];
                 (s[j] = i),
                   h(s),
@@ -8556,40 +8699,40 @@
           },
         };
         return (0, c.Q)(
-          t,
-          (0, i.jsx)("span", { className: o.SliderHandle, style: y }),
-          E,
-          { value: p[j], bDragActive: n.bDragActive },
+          n,
+          (0, i.jsx)("span", { className: o.SliderHandle, style: E }),
+          y,
+          { value: p[j], bDragActive: t.bDragActive },
         );
       }
-      function _(e, t, n) {
-        if (t[0] === t[1] || n[0] === n[1]) return n[0];
-        const i = ((n[1] - n[0]) / (t[1] - t[0])) * (e - t[0]) + n[0];
-        return a.OQ(i, n[0], n[1]);
+      function _(e, n, t) {
+        if (n[0] === n[1] || t[0] === t[1]) return t[0];
+        const i = ((t[1] - t[0]) / (n[1] - n[0])) * (e - n[0]) + t[0];
+        return a.OQ(i, t[0], t[1]);
       }
       function g(e) {
-        const { value: t, min: n, max: i, step: s } = e,
-          r = Math.round((t - n) / s) / (1 / s);
-        return a.OQ(r + n, n, i);
+        const { value: n, min: t, max: i, step: s } = e,
+          r = Math.round((n - t) / s) / (1 / s);
+        return a.OQ(r + t, t, i);
       }
-      function x(e, t, n) {
-        return ((e - t) / (n - t)) * 100;
+      function x(e, n, t) {
+        return ((e - n) / (t - n)) * 100;
       }
     },
-    58157: (e, t, n) => {
+    58157: (e, n, t) => {
       "use strict";
-      n.d(t, { f: () => d });
-      var i = n(7850),
-        s = n(11820),
-        r = n(63910),
-        a = n(61023),
-        o = n(64238),
-        c = n.n(o),
-        l = n(66922);
+      t.d(n, { f: () => d });
+      var i = t(7850),
+        s = t(11820),
+        r = t(63910),
+        a = t(61023),
+        o = t(64238),
+        c = t.n(o),
+        l = t(66922);
       function d(e) {
         const {
-            rows: t = 3,
-            resize: n = "none",
+            rows: n = 3,
+            resize: t = "none",
             ref: o,
             value: d,
             onTextChange: u,
@@ -8602,7 +8745,7 @@
           g = (0, a.w)({
             ...v,
             className: c()((0, s.T)(), (0, r.F)()),
-            style: { resize: n },
+            style: { resize: t },
             cursor: "text",
             disabled: m,
             variant: _,
@@ -8614,30 +8757,30 @@
           onChange: (e) => {
             m || (u(e.target.value), p && p(e));
           },
-          rows: t,
+          rows: n,
           readOnly: m,
           "aria-disabled": m,
         });
       }
     },
-    38256: (e, t, n) => {
+    38256: (e, n, t) => {
       "use strict";
-      n.d(t, { k: () => _ });
-      var i = n(7850),
-        s = n(90626),
-        r = n(64238),
-        a = n.n(r),
-        o = n(11820),
-        c = n(63910),
-        l = n(90534),
-        d = n(61023),
-        u = n(77914),
-        p = n(8871),
-        m = n(45699),
-        h = n(66922),
-        v = n(78327);
+      t.d(n, { k: () => _ });
+      var i = t(7850),
+        s = t(90626),
+        r = t(64238),
+        a = t.n(r),
+        o = t(11820),
+        c = t(63910),
+        l = t(90534),
+        d = t(61023),
+        u = t(77914),
+        p = t(8871),
+        m = t(45699),
+        h = t(66922),
+        v = t(78327);
       function _(e) {
-        const { extracted: t, remaining: n } = (0, l.A4)(e),
+        const { extracted: n, remaining: t } = (0, l.A4)(e),
           {
             value: r,
             onTextChange: _,
@@ -8647,15 +8790,15 @@
             radius: j,
             variant: A,
             size: w,
-            beforeContent: y,
-            afterContent: E,
+            beforeContent: E,
+            afterContent: y,
             inputRef: C,
             ref: b,
             disabled: S,
             gamepadFocusable: N = !0,
             status: I,
             ...T
-          } = n,
+          } = t,
           D = (0, v.Qn)(),
           k =
             r && x
@@ -8666,14 +8809,14 @@
                   cursor: "pointer",
                   hitSlop: !0,
                 })
-              : E,
+              : y,
           B = {
-            ...t,
+            ...n,
             variant: (0, h.f)("TextInput", A),
             size: w,
             radius: j,
             status: I,
-            beforeContent: y,
+            beforeContent: E,
             afterContent: k,
             ref: b,
             disabled: S,
@@ -8701,23 +8844,23 @@
         });
       }
     },
-    19997: (e, t, n) => {
+    19997: (e, n, t) => {
       "use strict";
-      n.d(t, { x: () => u });
-      var i = n(7850),
-        s = n(39479),
-        r = n(64238),
-        a = n.n(r),
-        o = n(75659),
-        c = n(11526),
-        l = n(75180),
-        d = n(78327);
+      t.d(n, { x: () => u });
+      var i = t(7850),
+        s = t(39479),
+        r = t(64238),
+        a = t.n(r),
+        o = t(75659),
+        c = t(11526),
+        l = t(75180),
+        d = t(78327);
       function u(e) {
-        const { as: t = "div", ref: n, focusable: r, navProps: o, ...u } = e,
+        const { as: n = "div", ref: t, focusable: r, navProps: o, ...u } = e,
           m = (0, d.Qn)(),
           h = (0, c.mz)({ ...u, className: a()(l.Grid, e.className) }, p),
           v = r ?? o?.focusable ?? !!u.onClick,
-          _ = (0, i.jsx)(t, { ref: n, ...h });
+          _ = (0, i.jsx)(n, { ref: t, ...h });
         return m
           ? (0, i.jsx)(s.J, {
               "flow-children": "grid",
@@ -8821,56 +8964,72 @@
         },
       ];
     },
-    28491: (e, t, n) => {
+    28491: (e, n, t) => {
       "use strict";
-      n.d(t, { Y: () => l });
-      var i = n(7850),
-        s = n(50122),
-        r = n(20187),
-        a = n(11526),
-        o = n(45699),
-        c = n(78327);
-      function l(e) {
-        const { underline: t = "auto", focusable: n, navProps: r, ...l } = e,
-          u = (0, c.Qn)(),
-          p = n ?? r?.focusable ?? !!l.href,
-          m = (0, a.mz)({ ...l, underline: t, className: s.TextLink }, d);
-        return u && (p || r)
+      t.d(n, { W: () => p, Y: () => d });
+      var i = t(7850),
+        s = t(50122),
+        r = t(20187),
+        a = t(11526),
+        o = t(45699),
+        c = t(39479),
+        l = t(78327);
+      function d(e) {
+        const { underline: n = "auto", focusable: t, navProps: r, ...c } = e,
+          d = (0, l.Qn)(),
+          p = t ?? r?.focusable ?? !!c.href,
+          m = (0, a.mz)({ ...c, underline: n, className: s.TextLink }, u);
+        return d && (p || r)
           ? (0, i.jsx)(o.Ii, { ...m, ...(r || {}), focusable: p })
           : (0, i.jsx)("a", { ...m });
       }
-      const d = [
+      const u = [
         ...r.Ae,
         { prop: "underline", className: (e) => s[`Underline-${e}`] },
       ];
+      function p(e) {
+        const { underline: n = "auto", focusable: t, navProps: r, ...o } = e,
+          d = (0, l.Qn)(),
+          p = t ?? r?.focusable ?? !!o.onClick,
+          m = (0, i.jsx)("span", {
+            role: "button",
+            ...(0, a.mz)(
+              { ...o, underline: n, className: s.TextLinkButton },
+              u,
+            ),
+          });
+        return d && (p || r)
+          ? (0, i.jsx)(c.J, { ...(r || {}), focusable: p, children: m })
+          : m;
+      }
     },
-    56456: (e, t, n) => {
+    56456: (e, n, t) => {
       "use strict";
-      n.d(t, { s: () => x });
-      var i = n(7850),
-        s = n(76217),
-        r = n(64238),
-        a = n.n(r),
-        o = n(12155),
-        c = n(45699),
-        l = n(85585),
-        d = n(7445),
-        u = n(90626),
-        p = n(78327),
-        m = n(88208);
+      t.d(n, { s: () => x });
+      var i = t(7850),
+        s = t(76217),
+        r = t(64238),
+        a = t.n(r),
+        o = t(12155),
+        c = t(45699),
+        l = t(85585),
+        d = t(7445),
+        u = t(90626),
+        p = t(78327),
+        m = t(88208);
       const h = Object.assign(
         function (e) {
-          const { children: t, className: n, ...s } = e;
+          const { children: n, className: t, ...s } = e;
           return (0, i.jsx)(h.Root, {
             ...s,
-            children: (0, i.jsx)(h.Content, { className: n, children: t }),
+            children: (0, i.jsx)(h.Content, { className: t, children: n }),
           });
         },
         {
           Root: function (e) {
             const {
-                onClose: t,
-                className: n,
+                onClose: n,
+                className: t,
                 navID: s,
                 children: r,
                 allowScrollBehind: o,
@@ -8888,17 +9047,17 @@
               }, []),
               _ = u.useCallback(
                 (e) => {
-                  e.target == e.currentTarget && t("backdropclick");
+                  e.target == e.currentTarget && n("backdropclick");
                 },
-                [t],
+                [n],
               );
             return (0, i.jsx)(v, {
               navID: s ?? "ModalDialog",
-              onClose: t,
+              onClose: n,
               children: (0, i.jsx)("dialog", {
                 ref: h,
-                className: a()(m.ModalDialog, !o && l && m.PreventScroll, n),
-                onClose: () => t("onclose"),
+                className: a()(m.ModalDialog, !o && l && m.PreventScroll, t),
+                onClose: () => n("onclose"),
                 onClick: _,
                 ...c,
                 children: (0, i.jsx)(d.q, { children: r }),
@@ -8906,23 +9065,23 @@
             });
           },
           Content: function (e) {
-            const { className: t, children: n } = e;
+            const { className: n, children: t } = e;
             return (0, i.jsx)("div", {
-              className: a()(m.ModalDialogContent, t),
+              className: a()(m.ModalDialogContent, n),
               onClick: (e) => e.stopPropagation(),
-              children: n,
+              children: t,
             });
           },
         },
       );
       function v(e) {
-        const { navID: t, onClose: n, children: s } = e,
-          r = u.useCallback(() => n("cancelbutton"), [n]),
+        const { navID: n, onClose: t, children: s } = e,
+          r = u.useCallback(() => t("cancelbutton"), [t]),
           a = u.useRef(void 0);
         (0, c.O7)(a, !0, !0);
         return (0, p.Qn)()
           ? (0, i.jsx)(l.D6, {
-              navID: t ?? "ModalDialog",
+              navID: n ?? "ModalDialog",
               onCancelButton: r,
               modal: !0,
               navTreeRef: a,
@@ -8930,23 +9089,23 @@
             })
           : (0, i.jsx)(i.Fragment, { children: s });
       }
-      var _ = n(83217),
-        g = n.n(_);
+      var _ = t(83217),
+        g = t.n(_);
       function x(e) {
         const {
-          onClose: t,
-          className: n,
+          onClose: n,
+          className: t,
           navID: r,
           children: c,
           strTitle: l,
           ...d
         } = e;
         return (0, i.jsx)(h, {
-          onClose: t,
+          onClose: n,
           navID: r ?? "SimpleModalDialog",
           ...d,
           children: (0, i.jsxs)("div", {
-            className: a()(n, g().SimpleModalDialog),
+            className: a()(t, g().SimpleModalDialog),
             children: [
               " ",
               (0, i.jsxs)(s.Z, {
@@ -8958,7 +9117,7 @@
                       children: l,
                     }),
                   (0, i.jsx)("button", {
-                    onClick: (e) => (t("xclick"), e.preventDefault(), !1),
+                    onClick: (e) => (n("xclick"), e.preventDefault(), !1),
                     className: g().XButton,
                     children: (0, i.jsx)(o.tmm, {}),
                   }),

@@ -1217,21 +1217,8 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
-      });
-      const _ = 1,
-        _ = 2,
-        _ = 4,
-        _ = 1073741824;
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = 0,
@@ -1272,7 +1259,7 @@
           return this.m_eAppType;
         }
         BIsApplicationOrTool() {
-          return this.apptype == _._ || this.apptype == _._;
+          return 4 == this.apptype || 2 == this.apptype;
         }
         BuildAppURL(_, _) {
           return _
@@ -1292,7 +1279,7 @@
             (this.m_eAppType = _.app_type());
         }
         DeserializeFromAppOverview(_) {
-          _.icon_hash() && _.app_type() != _._
+          _.icon_hash() && 1073741824 != _.app_type()
             ? ((this.m_bInitialized = !0),
               (this.m_strName = _.display_name()),
               (this.m_strIconURL = _.icon_hash()),

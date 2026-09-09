@@ -2213,7 +2213,7 @@ html.GamepadMode ._3456EX4aC94XtIz6d_Qhsl {
   border-bottom-right-radius: unset;
 }
 ._2s-O5T3qJJYR2AUq4b9jIN ._2_KY_e11FV0ftXR2_7TMmP {
-  height: -webkit-fill-available;
+  align-self: stretch;
   display: flex;
   align-items: center;
   text-transform: uppercase;

@@ -179,11 +179,7 @@
         }
         static Get() {
           return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              _.s_Singleton.Init(),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_ConferenceStore = _.s_Singleton)),
+            _.s_Singleton || ((_.s_Singleton = new _()), _.s_Singleton.Init()),
             _.s_Singleton
           );
         }
@@ -299,30 +295,12 @@
               ],
             });
       }
-      var _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid");
       function _(_) {
         const { conferenceInfo: _ } = _;
-        return "dev" != _._.WEB_UNIVERSE
-          ? null
-          : (0, _.jsxs)("div", {
-              children: [
-                (0, _.jsx)("h1", {
-                  children: "Conference Data",
-                }),
-                (0, _.jsx)(_._, {
-                  data: _,
-                }),
-                (0, _.jsx)("h1", {
-                  children: "Config Data",
-                }),
-                (0, _.jsx)(_._, {
-                  strConfigID: "application_config",
-                }),
-              ],
-            });
+        return null;
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -337,21 +315,14 @@
           );
         }
         async InternalLoadInitialCalendarData(_, _) {
-          _._.IsInitialized() || _._.InitGlobal(),
-            (0, _._)({
-              collectionid: _,
-              bSectionByDay: !0,
-              rtCalendarEnd: _,
-            });
+          (0, _._)({
+            collectionid: _,
+            bSectionByDay: !0,
+            rtCalendarEnd: _,
+          });
           const _ = (0, _._)(),
             _ = (0, _._)("conference_calendar", "application_config");
-          _ &&
-            ("dev" == _._.WEB_UNIVERSE &&
-              console.log(
-                "Conference LandingPage loading initial events: " + _.length,
-                _,
-              ),
-            await __webpack_require__.RegisterCalendarEventsAndModels(_)),
+          _ && (await __webpack_require__.RegisterCalendarEventsAndModels(_)),
             __webpack_require__.SetFilteredView((_) => !0);
         }
         static Get() {
@@ -365,9 +336,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -671,6 +639,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       const _ = (_) => {
@@ -768,12 +739,12 @@
             fnOnClicked: _,
           } = _,
           [_, _] = _.useState(!1),
+          _ = (0, _._)(),
           _ = (0, _._)(_.GetAppIDOrReferenceAppID());
         (0, _._)(_);
         const _ = (0, _._)(_);
         (0, _._)(null === (_ = _.clanInfo) || void 0 === _ ? void 0 : _.clanid);
-        const _ = _._.Get(),
-          _ = (0, _.sfN)(_._.LANGUAGE),
+        const _ = (0, _.sfN)(_._.LANGUAGE),
           _ = "capsule",
           [_, _, _, _, _, _, _, _, _, _, _] = (0, _._)(() => [
             _.has_live_stream,
@@ -798,6 +769,7 @@
               ? _
               : _,
           _ = _(_, _),
+          _ = (0, _._)(_),
           _ = _()[`EventType${_}`],
           _ = _.map((_) => _()[`Tag-${_}`]),
           _ = (0, _._)(
@@ -807,7 +779,7 @@
             _ ? _().DisableHovers : _().EnableHovers,
             _ && _().VideoPlayerReady,
             _ && _().HasVideo,
-            _.HasEventBeenRead(_) && _().HasBeenRead,
+            _ && _().HasBeenRead,
             "wide" === _ && _().WideMode,
             "carousel" === _ && _().CarouselMode,
             "upcoming" === _ && _().UpcomingMode,
@@ -868,10 +840,9 @@
               children: (0, _.jsxs)("div", {
                 className: _().Tile,
                 onClick: (_) => {
-                  _._.RecordAppInteractionEvent(_.appid, _._.k_eClickThrough),
-                    _(_),
-                    _.stopPropagation(),
-                    _.preventDefault();
+                  _.RecordInteraction(_._.k_eClickThrough),
+                    (0, _._)() ||
+                      (_(_), _.stopPropagation(), _.preventDefault());
                 },
                 children: [
                   _ === _.zeJ &&
@@ -972,7 +943,7 @@
       function _(_) {
         const { eventModel: _, fnSetVideoStateReady: _, mode: _ } = _,
           { video_preview_id: _, type: _ } = _.eventModel,
-          _ = _.calendarEvent.appid,
+          _ = (0, _._)(),
           _ = (0, _.sfN)(_._.LANGUAGE),
           _ = (0, _._)() && _ == _.zeJ ? _._.full : _._.capsule_main,
           _ = (0, _._)(_, "capsule", _, _, !0);
@@ -991,8 +962,7 @@
           controls: !0,
           imageClassnames: _().YoutubePreviewImage,
           onPlayerActivated: () => {
-            _._.RecordAppInteractionEvent(_, _._.k_ePlayedVideo),
-              __webpack_require__(!0);
+            _.RecordInteraction(_._.k_ePlayedVideo), __webpack_require__(!0);
           },
           preloadYoutubeScripts: !0,
           playsInline: !0,
@@ -1275,25 +1245,27 @@
           );
       function _(_) {
         const { eventModel: _ } = _,
-          _ = _._.Get(),
+          _ = (0, _._)(),
+          { myVote: _, Vote: _ } = (0, _._)(_, {
+            bAsk: !1,
+          }),
           [, _] = (0, _._)(_.clanSteamID.GetAccountID()),
-          [_, _, _, _] = (0, _._)(() => [
+          [_, _, _] = (0, _._)(() => [
             Math.max(0, _.nVotesUp - _.nVotesDown),
-            __webpack_require__.GetPreviouslyLoadedVote(_),
             _.GetForumTopicURL(null == _ ? void 0 : _.vanity_url),
             _.nCommentCount,
           ]),
-          _ = (function (_, _) {
-            return _.BIsUserLoggedIn()
+          _ = (function (_) {
+            return _._.logged_in
               ? _._.is_limited
                 ? _().Vote_LimitedUser
-                : !0 === _
+                : "up" === _
                   ? _().Vote_Positive
-                  : !1 === _
+                  : "down" === _
                     ? _().Vote_Negative
                     : _().Vote_Ready
               : _().Vote_NotLoggedIn;
-          })(_, _),
+          })(_),
           _ = !(0, _._)() && _,
           _ =
             _.live_stream_viewer_count > 0
@@ -1312,10 +1284,10 @@
               (0, _.jsxs)("div", {
                 className: (0, _._)(_().FooterStat, _().Vote, _),
                 onClick: () => {
-                  !0 !== __webpack_require__.GetPreviouslyLoadedVote(_) &&
-                    (0, _._)(_, _) &&
-                    (__webpack_require__.Vote(_, !0, _().CancelToken.source()),
-                    _._.RecordAppInteractionEvent(_.appid, _._.k_eThumbsUp));
+                  "up" !== _ &&
+                    (0, _._)() &&
+                    (_("up"),
+                    __webpack_require__.RecordInteraction(_._.k_eThumbsUp));
                 },
                 children: [
                   (0, _.jsx)(_.bfp, {
@@ -1334,10 +1306,7 @@
                     className: _().CommentIconCtn,
                     target: "_blank",
                     onClick: () => {
-                      _._.RecordAppInteractionEvent(
-                        _.appid,
-                        _._.k_eDiscussions,
-                      );
+                      __webpack_require__.RecordInteraction(_._.k_eDiscussions);
                     },
                     children: [
                       (0, _.jsx)(_._h6, {
@@ -2021,9 +1990,9 @@
             onClick: _,
           }),
           _.push({
-            name: "(VO/WebUniveser=Dev) Debug",
+            name: "(VO/Internal) Debug",
             key: "debug",
-            hidden: "dev" != _._.WEB_UNIVERSE,
+            hidden: !0,
             contents: (0, _.jsx)(_._, {
               children: (0, _.jsx)(_, {
                 conferenceInfo: _,

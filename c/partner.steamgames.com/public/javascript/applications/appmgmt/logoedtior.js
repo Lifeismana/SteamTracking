@@ -1779,8 +1779,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _.Component {
-        m_elCanvas;
-        m_Context;
+        m_elCanvas = null;
+        m_Context = null;
         m_schUpdate = new _._();
         m_bSetupComplete = !1;
         componentDidMount() {
@@ -1805,7 +1805,9 @@
           let _ = this.props.scaleFactor || [1, 1],
             _ = this.props.elementRef,
             _ = this.props.updateRate;
-          this.m_Context = this.m_elCanvas.getContext("2d");
+          const _ = this.m_elCanvas.getContext("2d");
+          if (!_) return;
+          this.m_Context = _;
           let _ = Math.floor(
               this.m_elCanvas.clientWidth / this.props.reductionFactor,
             ),
@@ -1814,10 +1816,10 @@
             );
           (this.m_elCanvas.width = _),
             (this.m_elCanvas.height = _),
-            this.props.blurAmount > 0 &&
-              (this.m_Context.filter = "blur(" + this.props.blurAmount + "px)");
+            (this.props.blurAmount ?? 0) > 0 &&
+              (_.filter = "blur(" + this.props.blurAmount + "px)");
           let _ = () => {
-            this.m_Context.drawImage(_, 0, 0, _ * _[0], _ * _[1]),
+            _.drawImage(_, 0, 0, _ * _[0], _ * _[1]),
               _ > 0 && this.m_schUpdate.Schedule(_, _);
           };
           _(), (this.m_bSetupComplete = !0);

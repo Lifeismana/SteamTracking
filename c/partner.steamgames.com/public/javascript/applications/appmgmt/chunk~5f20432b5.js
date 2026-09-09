@@ -690,14 +690,7 @@
                           !this.BIsStoreItemMissing(_, _);
                       if (_ || _) this.ReadItem(_, _);
                       else {
-                        switch (
-                          ("dev" == _._.WEB_UNIVERSE &&
-                            console.warn(
-                              `Failed to load ${_} type ${_} with error ${__webpack_require__.success()}`,
-                              _,
-                            ),
-                          _)
-                        ) {
+                        switch (_) {
                           case _._._:
                             this.m_setUnavailableApps.add(_),
                               this.m_mapApps.delete(_);
@@ -985,6 +978,14 @@
         }
       }
       (0, _._)([_._], _.prototype, "ReadItem", null);
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      function _(_, _) {
+        "undefined" != typeof window && (window[_] = _);
+      }
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
     },
   },
 ]);

@@ -632,11 +632,8 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _, _) {
@@ -703,17 +700,6 @@
             },
           ],
         };
-      }
-      function _() {
-        const [_, _] = _.useState(() => !_._.BIsInited());
-        return (
-          _.useEffect(() => {
-            (async () => {
-              await Promise.all([_._.InitGlobal()]), _(!1);
-            })();
-          }, []),
-          _
-        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -1371,12 +1357,21 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
-        if (!_ || !_.BIsClanAccount()) return !1;
-        const _ = _._.Get().GetPartnerEventPermissions(_);
-        return !!_ && (_ ? _.valve_admin : _.valve_admin || _.support_user);
+        const _ = Boolean(_ && _.BIsClanAccount()),
+          { data: _ } = (0, _._)(_ ? _.GetAccountID() : 0);
+        return (
+          _ &&
+          (function (_, _) {
+            return (
+              !!_ &&
+              (_
+                ? Boolean(_.valve_admin)
+                : Boolean(_.valve_admin || _.support_user))
+            );
+          })(_, _)
+        );
       }
       function _(_) {
         const { clanSteamID: _, _: _ } = _;
@@ -1509,8 +1504,7 @@
         m_curLocImageGroup = null;
         m_curLocImageGroupType = null;
         constructor() {
-          (0, _._)(this),
-            "dev" == _._.WEB_UNIVERSE && (window.g_ClanImageStore = this);
+          (0, _._)(this);
         }
         static async BDoesClanImageFileExistsOnCDNOrOrigin(_, _, _, _) {
           let _ =
@@ -2380,8 +2374,8 @@
             fnOnOpenLocalizedImageGroup: _,
             bDeleting: _,
           } = _,
-          _ = (0, _._)(_.clanAccountID);
-        return _ || !_.valve_admin
+          { data: _ } = (0, _._)(_.clanAccountID);
+        return _ || !_?.valve_admin
           ? null
           : (0, _.jsx)("span", {
               className: (0, _._)(_().Localized, _().ValveOnlyBackground),
@@ -5034,7 +5028,8 @@
             }),
             [_, _, _, _, _],
           ),
-          _ = (0, _._)(() => _?.BIsBackgroundImageEnabled() ?? !1);
+          _ = (0, _._)(() => _?.BIsBackgroundImageEnabled() ?? !1),
+          _ = _(_?.clanSteamID);
         if (_ && void 0 !== _) {
           const _ =
               _.jsondata.localized_sale_logo &&
@@ -5066,7 +5061,6 @@
                 : _._.EPreviewMode_Enabled
               : _._.EPreviewMode_Disabled,
             _ = _ || __webpack_require__.GetEventType() != _.ajI,
-            _ = _(_.clanSteamID),
             _ = _ ? _._.NoTransform : _._.NoTransformSparseContent,
             _ = (0, _._)(
               _().SaleOuterContainer,
@@ -6270,8 +6264,7 @@
         }
       }
       const _ = "useMonthlyTopRelease";
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       class _ {
         m_WebAPI;
         constructor(_) {
@@ -6285,11 +6278,7 @@
           ),
             _.Body().set_include_dlc(!0);
           const _ =
-            _._.is_support &&
-            "public" !== _._.WEB_UNIVERSE &&
-            _ == new Date().getUTCFullYear()
-              ? this.m_WebAPI.GetServiceTransport()
-              : this.m_WebAPI.GetAnonymousServiceTransport();
+            (_._.is_support, this.m_WebAPI.GetAnonymousServiceTransport());
           let _ = await _._.GetYearTopAppReleases(_, _);
           if (_.GetEResult() != _._) {
             if (_.GetEResult() == _._)
@@ -6300,86 +6289,7 @@
             throw "error loading top releases";
           }
           const _ = _.Body().toObject();
-          return !_._.is_support ||
-            0 != _.top_app_list.length ||
-            ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE)
-            ? _
-            : (function () {
-                const _ = {
-                    top_app_list: [],
-                    top_combined_app_and_dlc_releases: [],
-                    top_dlc_releases: [],
-                  },
-                  _ = [_._._, _._._, _._._, _._._],
-                  _ = [
-                    {
-                      appid: 400,
-                      app_release_rank: _._._,
-                      type: _._._,
-                    },
-                    {
-                      appid: 440,
-                      app_release_rank: _._._,
-                      type: _._._,
-                    },
-                    {
-                      appid: 620,
-                      app_release_rank: _._._,
-                      type: _._._,
-                    },
-                    {
-                      appid: 583950,
-                      app_release_rank: _._._,
-                      type: _._._,
-                    },
-                    {
-                      appid: 546560,
-                      app_release_rank: _._._,
-                      type: _._._,
-                    },
-                  ];
-                for (const _ of _)
-                  for (const _ of _)
-                    _.top_app_list.push({
-                      ..._,
-                      app_release_rank: _,
-                    }),
-                      _.top_app_list.push({
-                        ..._,
-                        appid: 730,
-                        app_release_rank: _,
-                      }),
-                      _.top_app_list.push({
-                        ..._,
-                        appid: 540,
-                        app_release_rank: _,
-                      });
-                const _ = Math.round(new Date().getTime() / 1e3);
-                for (const _ of _)
-                  _.top_combined_app_and_dlc_releases.push(
-                    {
-                      appid: 400,
-                      app_release_rank: _,
-                      rtime_release: _,
-                    },
-                    {
-                      appid: 440,
-                      app_release_rank: _,
-                      rtime_release: _,
-                    },
-                    {
-                      appid: 620,
-                      app_release_rank: _,
-                      rtime_release: _,
-                    },
-                    {
-                      appid: 583950,
-                      app_release_rank: _,
-                      rtime_release: _,
-                    },
-                  );
-                return _;
-              })();
+          return _._.is_support && _.top_app_list.length, _;
         }
       }
       const _ = "useYearlyTopRelease";
@@ -6643,6 +6553,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         let _ = _().PlatinumSection;
@@ -6890,10 +6801,15 @@
             facets: _,
           } = _,
           _ = _(_, _, _, _, _),
-          _ = (0, _.sfN)(_._.LANGUAGE),
-          _ = (0, _._)();
-        return !_ || _
-          ? null === _
+          _ = (0, _.sfN)(_._.LANGUAGE);
+        return _
+          ? (0, _.jsx)(_._, {
+              eventModel: _,
+              language: _,
+              bIsPreview: !1,
+              bDynamicallyCreatedSale: !0,
+            })
+          : null === _
             ? (0, _.jsx)("div", {
                 className: _.ErrorStylesWithIcon,
                 children: (0, _._)("#Error_ErrorCommunicatingWithNetwork"),
@@ -6901,13 +6817,7 @@
             : (0, _.jsx)(_._, {
                 string: (0, _._)("#Loading"),
                 position: "center",
-              })
-          : (0, _.jsx)(_._, {
-              eventModel: _,
-              language: _,
-              bIsPreview: !1,
-              bDynamicallyCreatedSale: !0,
-            });
+              });
       }
       function _(_, _, _, _) {
         (0, _.useEffect)(() => {
@@ -7800,10 +7710,15 @@
       function _(_) {
         const { rgTabsData: _, nYear: _, facets: _ } = _,
           _ = _(_, _, _),
-          _ = (0, _.sfN)(_._.LANGUAGE),
-          _ = (0, _._)();
-        return !_ || _
-          ? null === _
+          _ = (0, _.sfN)(_._.LANGUAGE);
+        return _
+          ? (0, _.jsx)(_._, {
+              eventModel: _,
+              language: _,
+              bIsPreview: !1,
+              bDynamicallyCreatedSale: !0,
+            })
+          : null === _
             ? (0, _.jsx)("div", {
                 className: _.ErrorStylesWithIcon,
                 children: (0, _._)("#Error_ErrorCommunicatingWithNetwork"),
@@ -7811,13 +7726,7 @@
             : (0, _.jsx)(_._, {
                 string: (0, _._)("#Loading"),
                 position: "center",
-              })
-          : (0, _.jsx)(_._, {
-              eventModel: _,
-              language: _,
-              bIsPreview: !1,
-              bDynamicallyCreatedSale: !0,
-            });
+              });
       }
       function _(_) {
         const { salePageName: _, TopYearlyReleasesStore: _ } = _,

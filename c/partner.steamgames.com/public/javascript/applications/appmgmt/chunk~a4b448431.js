@@ -356,7 +356,7 @@
         constructor(_ = null) {
           super(),
             _.prototype.gid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
+            _.Message.initialize(this, _, 0, -1, [12], null);
         }
         static sm_m;
         static sm_mbf;
@@ -403,6 +403,12 @@
                     _: 11,
                     _: _._.readString,
                     _: _._.writeString,
+                  },
+                  recommended_items: {
+                    _: 12,
+                    _: _._,
+                    _: !0,
+                    _: !0,
                   },
                 },
               }),
@@ -3440,8 +3446,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3615,13 +3620,7 @@
           );
         }
         BCheckDataRequestIncluded(_) {
-          ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-            (0, _._)(
-              this.BContainDataRequest(_),
-              `Requested data without for ${(0, _._)(this.m_eItemType)} @ ${this.m_unID}`,
-              _,
-              this.m_DataRequested,
-            );
+          0;
         }
         GetStoreItemType() {
           return this.m_eItemType;
@@ -4881,14 +4880,6 @@
             return "";
         }
       }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      function _(_, _) {
-        "undefined" != typeof window && (window[_] = _);
-      }
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
     },
   },
 ]);

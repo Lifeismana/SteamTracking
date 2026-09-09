@@ -15,8 +15,6 @@
         FamilyMemberRow: "_2LyGIHuQ8SFKb5T262YUvg",
         InfoRow: "_3TgL3aJ2hUdLP2stFZ2wZv",
         InvitePending: "_1IeeH6Qo58UdaFJ3hkLMzs",
-        ExpandRowButton: "_3Qa1urRRWR4tjkBSNaO8Wi",
-        Selected: "r0ToHd0tmv46GM00Lr0a_",
       };
     },
     chunkid: (module) => {
@@ -41,10 +39,8 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -174,16 +170,6 @@
                 children: (0, _._)("#FamilyManagement_Me"),
               }),
           ],
-        });
-      }
-      function _(_) {
-        const { bExpanded: _, setExpanded: _ } = _;
-        return (0, _.jsx)(_._, {
-          className: (0, _._)(_.ExpandRowButton, _ && _.Selected),
-          onClick: () => __webpack_require__(!_),
-          children: (0, _.jsx)(_.b8_, {
-            direction: "down",
-          }),
         });
       }
     },

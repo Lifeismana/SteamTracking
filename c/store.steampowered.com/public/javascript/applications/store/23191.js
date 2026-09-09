@@ -1201,8 +1201,7 @@
         _ = __webpack_require__("chunkid");
       class _ {
         constructor() {
-          (0, _._)(this),
-            "dev" == _._.WEB_UNIVERSE && (window.g_ClanImageStore = this);
+          (0, _._)(this);
         }
         m_mapClanToImages = new Map();
         m_mapClanImageLoadPromises = new Map();
@@ -1466,10 +1465,7 @@
         static s_globalSingletonStore;
         static Get() {
           return (
-            _.s_globalSingletonStore ||
-              ((_.s_globalSingletonStore = new _()),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.DUS = _.s_globalSingletonStore)),
+            _.s_globalSingletonStore || (_.s_globalSingletonStore = new _()),
             _.s_globalSingletonStore
           );
         }

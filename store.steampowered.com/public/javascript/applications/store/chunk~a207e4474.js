@@ -8,7 +8,7 @@
       n.d(t, { Xh: () => u, cU: () => d, tf: () => p, wl: () => _ });
       var a = n(22837),
         r = n(71150),
-        o = n(91297),
+        o = n(95578),
         s = n(30894),
         i = n(16021),
         l = n(62792),
@@ -82,7 +82,7 @@
               }
               e = r.GetIncludedAppIDs()[0];
             case "app":
-              _ = y(e, t, n, a, !0);
+              _ = g(e, t, n, a, !0);
               break;
             case "bundle":
               _ = h(e, t, a, !0);
@@ -137,7 +137,7 @@
             ? l.by.k_RejectCreatorClan
             : l.by.k_NotRejected;
       }
-      function g(e, t) {
+      function y(e, t) {
         if (t.localized) {
           const t = (0, a.sfN)(c.TS.LANGUAGE);
           if (!e.GetAllLanguagesWithSomeSupport()?.includes(t))
@@ -145,7 +145,7 @@
         }
         return l.by.k_NotRejected;
       }
-      function y(e, t, n, a, c) {
+      function g(e, t, n, a, c) {
         const u = i.A.Get().GetApp(e);
         if (!u) return l.by.k_RejectNotLoaded;
         const d = f(u, t);
@@ -183,7 +183,7 @@
                 ? l.by.k_RejectAlreadyDisplayed
                 : t.has_trailer && !u.BHasTrailers(!1)
                   ? l.by.k_RejectNoTrailer
-                  : g(u, t)
+                  : y(u, t)
               : l.by.k_NotRejected;
       }
       function G(e, t) {
@@ -214,7 +214,7 @@
             : a
               ? n.BHasPackageID(e)
                 ? l.by.k_RejectAlreadyDisplayed
-                : g(r, t)
+                : y(r, t)
               : l.by.k_NotRejected;
       }
       function h(e, t, n, a) {
@@ -228,7 +228,7 @@
           : a
             ? n.BHasBundleID(e)
               ? l.by.k_RejectAlreadyDisplayed
-              : g(r, t)
+              : y(r, t)
             : l.by.k_NotRejected;
       }
     },
@@ -251,14 +251,11 @@
             o.s_globalSingletonStore ||
               ((e = "CHomeViewStore.s_globalSingletonStore"),
               (0, a.wT)(!0, "Unexpected code running in SSR Server: " + e),
-              (o.s_globalSingletonStore = new o()),
-              "dev" == r.TS.WEB_UNIVERSE &&
-                (window.g_HomeViewSetting = o.s_globalSingletonStore)),
+              (o.s_globalSingletonStore = new o())),
             o.s_globalSingletonStore
           );
         }
         constructor() {
-          "dev" === r.TS.WEB_UNIVERSE && (window.g_HomeViewStore = this);
           const e = (0, r.Tc)("home_view_setting", "application_config");
           this.ValidateHomeViewData(e) && this.SetHomeViewSetting(e);
           const t = (0, r.Tc)(
@@ -299,12 +296,12 @@
     6626: (e, t, n) => {
       n.d(t, {
         F6: () => b,
-        ME: () => w,
+        ME: () => k,
         QV: () => h,
         RA: () => D,
-        cc: () => k,
-        fq: () => B,
-        m1: () => L,
+        cc: () => L,
+        fq: () => j,
+        m1: () => w,
       });
       var a = n(34629),
         r = n(41735),
@@ -319,15 +316,15 @@
         p = n(6379),
         m = n(99032),
         f = n(62490),
-        g = n(81393),
-        y = n(68797),
+        y = n(81393),
+        g = n(68797),
         G = n(84933),
         I = n(78327);
       const h = 1;
       function A(e) {
         e.list_jsondata && "string" == typeof e.list_jsondata
           ? (e.list_jsondata = JSON.parse(e.list_jsondata))
-          : ((0, g.wT)(
+          : ((0, y.wT)(
               !e.list_jsondata,
               "Found unexpected ListDetails_t.list_jsondata type: " +
                 typeof e.list_jsondata,
@@ -381,7 +378,7 @@
             if (s?.data?.success == c.R) {
               const n = { ...s.data.list_details };
               return (
-                (0, g.wT)(t == n?.listid, "Wanted" + t + "but got" + n?.listid),
+                (0, y.wT)(t == n?.listid, "Wanted" + t + "but got" + n?.listid),
                 A(n),
                 S(s.data.curation_language, n),
                 this.m_mapList.set(t, n),
@@ -390,7 +387,7 @@
               );
             }
           } catch (e) {
-            const t = (0, y.H)(e);
+            const t = (0, g.H)(e);
             console.error(
               "CCuratorListStore.LoadListDetails: error on load: " +
                 t.strErrorMsg,
@@ -468,7 +465,7 @@
               );
             }
           } catch (e) {
-            const t = (0, y.H)(e);
+            const t = (0, g.H)(e);
             console.error(n + ": error on load: " + t.strErrorMsg, t);
           }
           return [];
@@ -478,24 +475,18 @@
           return D.s_Singleton || (D.s_Singleton = new D()), D.s_Singleton;
         }
         constructor() {
-          (0, s.Gn)(this),
-            "dev" == I.TS.WEB_UNIVERSE && (window.g_curatorListStore = this);
+          (0, s.Gn)(this);
           let e = (0, I.Tc)("curatorlistdata", "application_config");
-          ("dev" != I.TS.WEB_UNIVERSE && "beta" != I.TS.WEB_UNIVERSE) ||
-            console.log(
-              "DEV_DEBUG: CCuratorListStore loading list payload: " + e?.length,
-              e,
-            ),
-            this.ValidateStoreDefault(e) &&
-              (0, s.h5)(() => {
-                e.forEach((e) => {
-                  e.multi_detail_lists.forEach((t) => {
-                    A(t),
-                      S(e.curation_language, t),
-                      this.m_mapList.set(t.listid, t);
-                  });
+          this.ValidateStoreDefault(e) &&
+            (0, s.h5)(() => {
+              e.forEach((e) => {
+                e.multi_detail_lists.forEach((t) => {
+                  A(t),
+                    S(e.curation_language, t),
+                    this.m_mapList.set(t.listid, t);
                 });
               });
+            });
         }
         ValidateStoreDefault(e) {
           const t = e;
@@ -512,7 +503,7 @@
             : t && Array.isArray(t) && 0 == t.length;
         }
       }
-      function w(e, t) {
+      function k(e, t) {
         const n = (0, G.CH)();
         return (
           (0, i.useEffect)(() => {
@@ -542,7 +533,7 @@
           D.Get().GetListDetails(t)
         );
       }
-      function L(e) {
+      function w(e) {
         const t = e && d.ac.GetClanInfoByClanAccountID(e),
           [n, a] = (0, i.useState)(!!t);
         return (
@@ -557,16 +548,16 @@
           t
         );
       }
-      function k(e) {
+      function L(e) {
         return Boolean(e?.sale_clan_event_gid) && Boolean(e?.sale_clan_steamid);
       }
-      function B(e) {
+      function j(e) {
         const t = (0, G.CH)(),
-          n = k(e) ? e.sale_clan_event_gid : null,
+          n = L(e) ? e.sale_clan_event_gid : null,
           a = n && p.O3.GetClanEventModel(n);
         return (
           (0, i.useEffect)(() => {
-            if (a || !k(e)) return;
+            if (a || !L(e)) return;
             const r = o().CancelToken.source();
             return (
               (async () => {
@@ -588,30 +579,29 @@
     },
     99032: (e, t, n) => {
       n.d(t, {
-        AX: () => h,
+        AX: () => I,
         H2: () => y,
-        Li: () => I,
-        S7: () => m,
-        a9: () => A,
-        jy: () => G,
-        nt: () => g,
-        sd: () => p,
-        tJ: () => f,
+        Li: () => G,
+        S7: () => p,
+        a9: () => h,
+        jy: () => g,
+        nt: () => f,
+        sd: () => _,
+        tJ: () => m,
       });
       var a = n(57876),
         r = n(62792),
         o = n(81886),
         s = n(22837),
-        i = n(91297),
+        i = n(95578),
         l = n(30894),
         c = n(16021),
-        u = n(78327),
-        d = n(62734),
-        _ = n(81393);
-      function p(e) {
+        u = n(62734),
+        d = n(81393);
+      function _(e) {
         return c.A.Get().BIsStoreItemMissing(e.id, (0, r.SW)(e.type));
       }
-      function m(e, t, n) {
+      function p(e, t, n) {
         const a = new Array();
         return (
           e?.forEach((e) => a.push({ id: e, type: "game" })),
@@ -620,12 +610,12 @@
           a
         );
       }
-      function f(e) {
+      function m(e) {
         const t = c.A.Get().GetStoreItem(e.id, (0, r.SW)(e.type));
         return (t?.GetBestPurchaseOption()?.discount_pct ?? 0) > 0;
       }
-      function g(e) {
-        if (!d.f.Get().GetHomeView()?.localized) return !0;
+      function f(e) {
+        if (!u.f.Get().GetHomeView()?.localized) return !0;
         const t = c.A.Get().GetStoreItem(e.id, (0, r.SW)(e.type));
         return (
           !t ||
@@ -678,16 +668,16 @@
           return t && !t.GetParentAppID();
         });
       }
-      const G = {
+      const g = {
         include_tag_count: 20,
         include_basic_info: !0,
         include_supported_languages: !0,
       };
-      function I(e) {
+      function G(e) {
         if (!e) return !0;
         const t = l.Fm.Get();
         if (
-          ((0, _.wT)(t.BIsLoaded(), "Dynamic Store not loaded"),
+          ((0, d.wT)(t.BIsLoaded(), "Dynamic Store not loaded"),
           e.GetStoreItemType() == i.c6.qI)
         ) {
           const n = e.GetParentAppID();
@@ -702,7 +692,7 @@
         if (t.BExcludeTagIDs(e.GetTagIDs())) return !0;
         if (e.GetAllCreatorClanIDs().some((e) => t.BIsIgnoringCurator(e)))
           return !0;
-        const n = d.f.Get().GetHomeView()?.localized;
+        const n = u.f.Get().GetHomeView()?.localized;
         if (n) {
           const n = e.GetAllLanguagesWithSomeSupport();
           if (
@@ -714,49 +704,36 @@
         }
         return !1;
       }
-      async function h(e, t, n, o) {
-        let s = 0,
-          i = 0;
-        const d = [];
+      async function I(e, t, n, o) {
+        const s = [];
         await y(e, a.Xh, t);
         for (const a of e) {
           const e = c.A.Get().GetStoreItem(a.id, (0, r.SW)(a.type));
           if (!e) {
-            s++;
+            0;
             continue;
           }
-          const u = e
+          const i = e
             .GetIncludedAppIDs()
             .map((e) => c.A.Get().GetApp(e))
             .filter((e) => Boolean(e));
-          if ((u.push(e), t)) {
+          if ((i.push(e), t)) {
             const e = new Set(
-                u.map((e) => e.GetParentAppID()).filter((e) => Boolean(e)),
+                i.map((e) => e.GetParentAppID()).filter((e) => Boolean(e)),
               ),
               t = Array.from(e)
                 .map((e) => c.A.Get().GetApp(e))
                 .filter((e) => Boolean(e));
-            t && u.push(...t);
+            t && i.push(...t);
           }
-          u.some(o || I)
-            ? (i++, n && (l.Fm.Get().BIsStoreItemOwned(e) || n.push(a)))
-            : d.push(a);
+          i.some(o || G)
+            ? n && (l.Fm.Get().BIsStoreItemOwned(e) || n.push(a))
+            : s.push(a);
         }
-        return (
-          "dev" === u.TS.WEB_UNIVERSE &&
-            0 === d.length &&
-            console.log(
-              "ApplyStorePreferenceFilters: " +
-                s +
-                " failed to load, " +
-                i +
-                " hidden by user filter.",
-            ),
-          d
-        );
+        return s;
       }
-      async function A(e, t, n, a, o, s, i) {
-        let u = await h(
+      async function h(e, t, n, a, o, s, i) {
+        let u = await I(
           e,
           t,
           i,
@@ -767,7 +744,7 @@
                   e.GetContentDescriptorIDs(),
                 ) ||
                 l.Fm.Get().BExcludeTagIDs(e.GetTagIDs())
-            : I,
+            : G,
         );
         const d = [];
         for (const e of u) {

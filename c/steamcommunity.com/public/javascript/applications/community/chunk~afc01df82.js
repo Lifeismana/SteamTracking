@@ -247,9 +247,8 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid");
       const _ = {
           editModel: null,
           bClanImagesV2: !1,
@@ -288,10 +287,7 @@
       }
       function _() {
         const _ = _.useContext(_),
-          _ =
-            ("dev" == _._.WEB_UNIVERSE || "beta" == _._.WEB_UNIVERSE) &&
-            _._.EUNIVERSE == _._ &&
-            _._.is_support;
+          _ = !1;
         return {
           bClanImagesV2: _.bClanImagesV2 && _,
           bClanImagesV2Allowed: _,
@@ -1272,8 +1268,7 @@
         constructor() {
           (this.m_curLocImageGroup = null),
             (this.m_curLocImageGroupType = null),
-            (0, _._)(this),
-            "dev" == _._.WEB_UNIVERSE && (window.g_ClanImageStore = this);
+            (0, _._)(this);
         }
         static async BDoesClanImageFileExistsOnCDNOrOrigin(_, _, _, _) {
           let _ =
@@ -1834,8 +1829,8 @@
             fnOnOpenLocalizedImageGroup: _,
             bDeleting: _,
           } = _,
-          _ = (0, _._)(_.clanAccountID);
-        return _ || !_.valve_admin
+          { data: _ } = (0, _._)(_.clanAccountID);
+        return _ || !(null == _ ? void 0 : _.valve_admin)
           ? null
           : (0, _.jsx)("span", {
               className: (0, _._)(_().Localized, _().ValveOnlyBackground),
@@ -4191,9 +4186,19 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
-        if (!_ || !_.BIsClanAccount()) return !1;
-        const _ = _._.Get().GetPartnerEventPermissions(_);
-        return !!_ && (_ ? _.valve_admin : _.valve_admin || _.support_user);
+        const _ = Boolean(_ && _.BIsClanAccount()),
+          { data: _ } = (0, _._)(_ ? _.GetAccountID() : 0);
+        return (
+          _ &&
+          (function (_, _) {
+            return (
+              !!_ &&
+              (_
+                ? Boolean(_.valve_admin)
+                : Boolean(_.valve_admin || _.support_user))
+            );
+          })(_, _)
+        );
       }
       function _(_) {
         const { clanSteamID: _, _: _ } = _;

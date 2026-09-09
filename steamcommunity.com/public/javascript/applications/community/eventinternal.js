@@ -31,7 +31,7 @@
     },
     98378: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => ee });
+      a.r(t), a.d(t, { default: () => J });
       var n = a(7850),
         s = a(43527),
         r = a(25888),
@@ -45,18 +45,18 @@
         g = a(17720),
         m = a(6626),
         p = a(68255),
-        _ = a(9154),
-        S = a(738),
-        v = a(12155),
+        v = a(9154),
+        _ = a(738),
+        S = a(12155),
         f = a(22797),
         C = a(56011),
         x = a(61859),
         I = a(68797),
         j = a(78327),
         A = a(22517),
-        E = a(88997),
-        b = a(67165),
-        M = a(60155),
+        b = a(88997),
+        M = a(67165),
+        E = a(60155),
         w = a(84811),
         T = a(64641),
         D = a(41338),
@@ -91,10 +91,10 @@
                   const e = l().CancelToken.source();
                   o.current = e.cancel;
                   try {
-                    const a = await b.pF.SearchCreatorHomeStore(t, r, e);
+                    const a = await M.pF.SearchCreatorHomeStore(t, r, e);
                     if (e.token.reason) return;
-                    i.current = (0, E.lX)(
-                      (0, n.jsx)(N, { list: a, fnSetCurator: s }),
+                    i.current = (0, b.lX)(
+                      (0, n.jsx)(G, { list: a, fnSetCurator: s }),
                       d.current.element,
                       {
                         bOverlapHorizontal: !0,
@@ -130,13 +130,13 @@
             }),
           });
         },
-        N = (e) => {
+        G = (e) => {
           const { list: t, fnSetCurator: a } = e;
-          return (0, n.jsx)(M.tz, {
+          return (0, n.jsx)(E.tz, {
             className: L.SearchResults,
             children: t.map((e) =>
               (0, n.jsx)(
-                M.kt,
+                E.kt,
                 {
                   onSelected: () => a(e),
                   children: (0, n.jsxs)("div", {
@@ -159,7 +159,7 @@
           });
         };
       var R = a(94333);
-      const G = (0, d.PA)((e) => {
+      const N = (0, d.PA)((e) => {
           const t = (function () {
             const [e, t] = u.useState(!k.Get().BHasLoadCompleted());
             return (
@@ -229,7 +229,7 @@
                   (0, n.jsx)("span", { children: " " }),
                   (0, n.jsx)(p.$n, {
                     onClick: () => o(!r),
-                    children: r ? (0, n.jsx)(v.hz4, {}) : (0, n.jsx)(v.Xjb, {}),
+                    children: r ? (0, n.jsx)(S.hz4, {}) : (0, n.jsx)(S.Xjb, {}),
                   }),
                 ],
               }),
@@ -292,7 +292,7 @@
                   Boolean(!t.gid_clan_event || (t.hidden && !t.published)) &&
                     (0, n.jsx)(p.$n, {
                       onClick: (e) =>
-                        (0, S.pg)((0, n.jsx)(P, { record: t }), (0, C.uX)(e)),
+                        (0, _.pg)((0, n.jsx)(P, { record: t }), (0, C.uX)(e)),
                       children: "Migrate Sale Page",
                     }),
                 ],
@@ -308,8 +308,8 @@
             [l, c] = (0, u.useState)(void 0),
             [d, h] = (0, u.useState)(!1),
             [m, p] = (0, u.useState)(t.gid_clan_event),
-            [S, v] = (0, u.useState)(null);
-          return (0, n.jsxs)(_.o0, {
+            [_, S] = (0, u.useState)(null);
+          return (0, n.jsxs)(v.o0, {
             strTitle: "Migrate Sale page",
             strDescription: `Will migrate the sale page ${t.vanity} to the below clan `,
             bOKDisabled: !s || o,
@@ -348,10 +348,10 @@
                         strToolTip:
                           "Partner Event sales must belong to a creator home (which is a curator with games associated to it from the partner site)",
                         fnSetCurator: (e) => {
-                          r(e.GetClanAccountID()), v(e);
+                          r(e.GetClanAccountID()), S(e);
                         },
                       }),
-                      Boolean(S) && (0, n.jsx)(O, { creatorHome: S }),
+                      Boolean(_) && (0, n.jsx)(O, { creatorHome: _ }),
                     ],
                   }),
               Boolean(o && !l) &&
@@ -558,13 +558,7 @@
           return [];
         }
         static Get() {
-          return (
-            k.s_Singleton ||
-              ((k.s_Singleton = new k()),
-              ("dev" != j.TS.WEB_UNIVERSE && "beta" != j.TS.WEB_UNIVERSE) ||
-                (window.g_MigrateSaleStore = k.s_Singleton)),
-            k.s_Singleton
-          );
+          return k.s_Singleton || (k.s_Singleton = new k()), k.s_Singleton;
         }
         constructor() {
           (this.m_mapSaleIDToInfo = new Map()),
@@ -576,10 +570,9 @@
       }
       (0, o.Cg)([c.sH], k.prototype, "m_mapSaleIDToInfo", void 0),
         (0, o.Cg)([c.sH], k.prototype, "m_listSaleState", void 0);
-      var U = a(4796),
-        F = a(28210),
-        z = a(95034);
-      class q {
+      var F = a(4796),
+        U = a(95034);
+      class z {
         constructor() {
           (this.m_rgApps = []),
             (this.m_rgClanAccountIDs = []),
@@ -589,10 +582,10 @@
         }
         static Get() {
           return (
-            q.s_globalSingletonStore ||
-              ((q.s_globalSingletonStore = new q()),
-              q.s_globalSingletonStore.Init()),
-            q.s_globalSingletonStore
+            z.s_globalSingletonStore ||
+              ((z.s_globalSingletonStore = new z()),
+              z.s_globalSingletonStore.Init()),
+            z.s_globalSingletonStore
           );
         }
         Init() {}
@@ -698,50 +691,50 @@
           );
         }
       }
-      (0, o.Cg)([c.sH.shallow], q.prototype, "m_rgApps", void 0),
-        (0, o.Cg)([c.sH.shallow], q.prototype, "m_rgClanAccountIDs", void 0);
-      var Y = a(6503),
-        $ = a(80778),
-        Q = a.n($),
-        V = a(22837);
+      (0, o.Cg)([c.sH.shallow], z.prototype, "m_rgApps", void 0),
+        (0, o.Cg)([c.sH.shallow], z.prototype, "m_rgClanAccountIDs", void 0);
+      var q = a(6503),
+        Y = a(80778),
+        $ = a.n(Y),
+        Q = a(22837);
       const K = (0, d.PA)((e) => {
           const [t, a] = (0, u.useState)(!0);
           (0, u.useEffect)(() => {
-            Promise.all([F.KN.InitGlobal(), r.mh.Init()]).then(() => a(!1));
+            r.mh.Init(), a(!1);
           }, []);
-          const [s, o] = (0, z.QD)("start", 0),
-            [i, l] = (0, z.QD)("start_appid", 0),
-            [c, d] = (0, z.QD)("count", 10),
-            [h, g] = (0, z.QD)("autoload", !0),
-            [m, p] = (0, z.QD)("batch_size", 1),
-            [_, S] = (0, z.QD)("automigrate", !1),
-            [v, C] = (0, u.useState)(!1),
-            [x, I] = (0, z.QD)("rolling", 0),
+          const [s, o] = (0, U.QD)("start", 0),
+            [i, l] = (0, U.QD)("start_appid", 0),
+            [c, d] = (0, U.QD)("count", 10),
+            [h, g] = (0, U.QD)("autoload", !0),
+            [m, p] = (0, U.QD)("batch_size", 1),
+            [v, _] = (0, U.QD)("automigrate", !1),
+            [S, C] = (0, u.useState)(!1),
+            [x, I] = (0, U.QD)("rolling", 0),
             [j, A] = (0, u.useState)(new Set()),
-            E = (0, u.useRef)(0),
-            b = q.Get().GetApps(s, c, i),
-            M = 0 == x ? b : b.filter((e) => !j.has(Number(e.id))).slice(0, x),
+            b = (0, u.useRef)(0),
+            M = z.Get().GetApps(s, c, i),
+            E = 0 == x ? M : M.filter((e) => !j.has(Number(e.id))).slice(0, x),
             w = (e, t) => {
               j.has(e) ||
                 (console.log("completed: ", e, t),
                 j.add(e),
-                (E.current += t),
+                (b.current += t),
                 A(new Set(j)));
             };
           return (0, n.jsxs)("div", {
-            className: Q().MigrateToolCtn,
+            className: $().MigrateToolCtn,
             children: [
               (0, n.jsx)("div", {
-                className: Q().ToolHeader,
+                className: $().ToolHeader,
                 children: "Partner Events Migration Tools",
               }),
-              M.map((e) =>
+              E.map((e) =>
                 (0, n.jsx)(
-                  W,
+                  V,
                   {
                     app: e,
                     bAutoLoad: h,
-                    bAutoMigrate: _ || v,
+                    bAutoMigrate: v || S,
                     nMigrateBatchSize: m,
                     fnOnCompletion: w,
                   },
@@ -754,38 +747,38 @@
                   position: "center",
                   string: "initializing",
                 }),
-              !b.length &&
+              !M.length &&
                 (0, n.jsx)(f.t, {
                   size: "xlarge",
                   position: "center",
                   string: "loading apps",
                 }),
               (0, n.jsx)("div", {
-                className: Q().LoadEventsButton,
+                className: $().LoadEventsButton,
                 onClick: () => {
                   C(!1), A(new Set()), o(s + c);
                 },
                 children: "LOAD NEXT PAGE",
               }),
-              !_ &&
+              !v &&
                 (0, n.jsx)("div", {
-                  className: Q().LoadEventsButton,
+                  className: $().LoadEventsButton,
                   onClick: () => C(!0),
                   children: "MIGRATE ALL ON PAGE",
                 }),
               (0, n.jsx)("div", {
-                className: Q().StatusMessage,
+                className: $().StatusMessage,
                 children:
                   j.size +
                   " OF " +
-                  b.length +
+                  M.length +
                   " APPS COMPLETE. #EVENTS: " +
-                  E.current,
+                  b.current,
               }),
             ],
           });
         }),
-        W = (0, d.PA)((e) => {
+        V = (0, d.PA)((e) => {
           const t = Number(e.app.id),
             [a, s] = (0, u.useState)(0),
             [o, i] = (0, u.useState)([]),
@@ -793,7 +786,7 @@
             d = (0, u.useRef)(new Set()),
             h = (0, u.useRef)(0);
           (0, u.useEffect)(() => {
-            U.ac.LoadOGGClanInfoForAppID(t).then((e) => {
+            F.ac.LoadOGGClanInfoForAppID(t).then((e) => {
               var a;
               return console.log(
                 "Loaded app",
@@ -806,36 +799,36 @@
               );
             });
           }, [t]);
-          const g = U.ac.GetOGGClanInfo(t),
+          const g = F.ac.GetOGGClanInfo(t),
             m = g ? g.group_name : e.app.name,
             p = `${j.TS.COMMUNITY_BASE_URL}games/${g ? g.vanity_url : t}/partnerevents/`,
-            _ = o.length,
-            S = a == _,
-            v = o.filter((e) => e.BIsVisibleEvent()),
-            C = v.length,
-            x = v.filter(
+            v = o.length,
+            _ = a == v,
+            S = o.filter((e) => e.BIsVisibleEvent()),
+            C = S.length,
+            x = S.filter(
               (e) =>
                 e.bOldAnnouncement &&
                 g &&
                 g.clanAccountID != e.announcementClanSteamID.GetAccountID(),
             ).length,
-            A = v.filter(
+            A = S.filter(
               (e) =>
                 e.bOldAnnouncement &&
                 !d.current.has(e.AnnouncementGID) &&
                 (!g ||
                   g.clanAccountID == e.announcementClanSteamID.GetAccountID()),
             ),
-            E = A.length,
-            b = !S && E > 0 && (null == g ? void 0 : g.clanSteamID),
-            M = async () => {
+            b = A.length,
+            M = !_ && b > 0 && (null == g ? void 0 : g.clanSteamID),
+            E = async () => {
               const e = a;
               s(a + 50), c(!0);
               const n = await r.mh.LoadPartnerEventsPageable(void 0, t, e, 50);
               i(o.concat(n)), c(!1);
             };
           (0, u.useEffect)(() => {
-            e.bAutoLoad && S && !l && M();
+            e.bAutoLoad && _ && !l && E();
           });
           const w = (e, t) => {
               t ? (h.current += 1) : d.current.add(e);
@@ -848,11 +841,11 @@
                       "Migrating",
                       a,
                       o.AnnouncementGID,
-                      o.GetNameWithFallback(V.Bhc),
+                      o.GetNameWithFallback(Q.Bhc),
                       o,
                     );
                     try {
-                      const e = await (0, Y.e6)(o.AnnouncementGID, a, n);
+                      const e = await (0, q.e6)(o.AnnouncementGID, a, n);
                       if (e) console.warn("Already migrated to event", e);
                       else {
                         const e = r.mh.GetEditModel();
@@ -878,75 +871,75 @@
             };
           return (
             (0, u.useEffect)(() => {
-              e.bAutoMigrate && b && !l && T();
+              e.bAutoMigrate && M && !l && T();
             }),
             (0, u.useEffect)(() => {
-              S || b || l || e.fnOnCompletion(t, h.current);
+              _ || M || l || e.fnOnCompletion(t, h.current);
             }),
             (0, n.jsxs)("div", {
-              className: Q().ClanRow,
+              className: $().ClanRow,
               children: [
-                (0, n.jsx)("div", { className: Q().ID, children: t }),
+                (0, n.jsx)("div", { className: $().ID, children: t }),
                 (0, n.jsx)("a", {
-                  className: Q().ClanName,
+                  className: $().ClanName,
                   href: p,
                   children: m,
                 }),
                 (0, n.jsxs)("div", {
-                  className: Q().Counts,
+                  className: $().Counts,
                   children: [
-                    `Loaded: ${_}\tVisible: ${C}\tOld: ${E}`,
+                    `Loaded: ${v}\tVisible: ${C}\tOld: ${b}`,
                     x > 0 &&
                       (0, n.jsx)("span", {
-                        className: Q().LinkedAnnouncements,
+                        className: $().LinkedAnnouncements,
                         children: `Linked: ${x}`,
                       }),
                   ],
                 }),
-                S
+                _
                   ? (0, n.jsx)("div", {
-                      className: Q().LoadEventsButton,
-                      onClick: M,
+                      className: $().LoadEventsButton,
+                      onClick: E,
                       children: "LOAD EVENTS",
                     })
                   : l
                     ? (0, n.jsx)(f.t, { size: "small" })
-                    : b
+                    : M
                       ? (0, n.jsx)("div", {
-                          className: Q().MigrateEventsButton,
+                          className: $().MigrateEventsButton,
                           onClick: T,
                           children: "MIGRATE EVENTS",
                         })
                       : (0, n.jsx)("div", {
-                          className: Q().CompleteMessage,
+                          className: $().CompleteMessage,
                           children: "NOTHING TO MIGRATE",
                         }),
               ],
             })
           );
         });
-      var X = a(92757),
-        Z = a(91254),
-        J = (a(5977), a(97058));
-      function ee(e) {
+      var W = a(92757),
+        X = a(91254),
+        Z = (a(5977), a(97058));
+      function J(e) {
         const [t, a] = u.useState(!0);
         return (
           u.useEffect(() => {
-            Z.O3.Init(), Promise.all([]).then(() => a(!1));
+            X.O3.Init(), Promise.all([]).then(() => a(!1));
           }, []),
           t
             ? (0, n.jsx)(f.t, { position: "center", size: "medium" })
-            : (0, n.jsxs)(X.dO, {
+            : (0, n.jsxs)(W.dO, {
                 children: [
-                  (0, n.jsx)(X.qh, {
+                  (0, n.jsx)(W.qh, {
                     path: s.mQ.MigrateSaleEvents(),
-                    component: G,
+                    component: N,
                   }),
-                  (0, n.jsx)(X.qh, {
+                  (0, n.jsx)(W.qh, {
                     path: s.mQ.MigrateEvents(),
                     component: K,
                   }),
-                  (0, n.jsx)(X.qh, { component: J.a }),
+                  (0, n.jsx)(W.qh, { component: Z.a }),
                 ],
               })
         );

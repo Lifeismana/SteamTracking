@@ -203,8 +203,8 @@
         _ = "UpperCenter",
         x = "CenterCenter",
         B = "BottomCenter";
-      var C = o(20521),
-        I = o.n(C),
+      var I = o(20521),
+        C = o.n(I),
         v = o(48077),
         S = o.n(v),
         A = o(51272),
@@ -212,12 +212,12 @@
         y = o(10050),
         R = o(25489);
       const N = {
-          exit: I().FullscreenExitStart,
-          exitActive: I().FullscreenExitActive,
-          exitDone: I().FullscreenExitDone,
-          enter: I().FullscreenEnterStart,
-          enterDone: I().FullscreenEnterDone,
-          enterActive: I().FullscreenEnterActive,
+          exit: C().FullscreenExitStart,
+          exitActive: C().FullscreenExitActive,
+          exitDone: C().FullscreenExitDone,
+          enter: C().FullscreenEnterStart,
+          enterDone: C().FullscreenEnterDone,
+          enterActive: C().FullscreenEnterActive,
         },
         j = (0, A.i_)(S()["duration-app-launch"]),
         O = { pinnedPosition: f, nWidthPct: 50, nHeightPct: 50 },
@@ -297,22 +297,22 @@
               fnOnPositionChanged: this.OnPositionChanged,
               children: [
                 (0, n.jsx)("div", {
-                  className: `${I().PinBox} ${I().BottomLeft}`,
+                  className: `${C().PinBox} ${C().BottomLeft}`,
                   onClick: () => this.SetPinnedPosition(f),
                   title: "Pin to Bottom Left",
                 }),
                 (0, n.jsx)("div", {
-                  className: `${I().PinBox} ${I().UpperCenter}`,
+                  className: `${C().PinBox} ${C().UpperCenter}`,
                   onClick: () => this.SetPinnedPosition(_),
                   title: "Pin to Top Center",
                 }),
                 (0, n.jsx)("div", {
-                  className: `${I().PinBox} ${I().CenterCenter}`,
+                  className: `${C().PinBox} ${C().CenterCenter}`,
                   onClick: () => this.SetPinnedPosition(x),
                   title: "Pin to Center",
                 }),
                 (0, n.jsx)("div", {
-                  className: `${I().PinBox} ${I().BottomCenter}`,
+                  className: `${C().PinBox} ${C().BottomCenter}`,
                   onClick: () => this.SetPinnedPosition(B),
                   title: "Pin to Bottom Center",
                 }),
@@ -403,10 +403,10 @@
             { bHasLogoImage: l } = this.state,
             c = 1 == this.props.rgHeaderImages.length,
             d = (0, m.A)(
-              I().TopCapsule,
+              C().TopCapsule,
               s,
-              !this.state.bHasHeaderImage && I().NoArt,
-              (!this.props.hasHeroImage || c) && I().FallbackArt,
+              !this.state.bHasHeaderImage && C().NoArt,
+              (!this.props.hasHeroImage || c) && C().FallbackArt,
               !l && i,
             ),
             h = { "--header-height": null == a ? void 0 : a + "px" };
@@ -444,8 +444,8 @@
                         children: (0, n.jsx)(p.c, {
                           ref: this.m_refLogoImage,
                           className: (0, m.A)(
-                            I().TitleLogo,
-                            this.state.bLogoLoaded && I().Loaded,
+                            C().TitleLogo,
+                            this.state.bLogoLoaded && C().Loaded,
                           ),
                           rgSources: e,
                           onLoad: this.OnLogoLoad,
@@ -456,7 +456,7 @@
                       e[0],
                     ),
                   this.props.children,
-                  (0, n.jsx)("div", { className: I().TopGradient }),
+                  (0, n.jsx)("div", { className: C().TopGradient }),
                 ],
               }),
           });
@@ -543,9 +543,9 @@
                   (0, n.jsx)("img", {
                     src: this.props.rgBlurImages[this.state.nBlurImageIndex],
                     className: (0, m.A)(
-                      I().ImgSrc,
-                      I().ImgBlur,
-                      I().ImgBlurBackdrop,
+                      C().ImgSrc,
+                      C().ImgBlur,
+                      C().ImgBlurBackdrop,
                     ),
                     onError: this.OnBlurImageFailed,
                   }),
@@ -554,9 +554,9 @@
                   !this.props.bLowPerfMode &&
                   (0, n.jsx)(u.m, {
                     className: (0, m.A)(
-                      I().ImgSrc,
-                      I().ImgBlur,
-                      I().ImgBlurBackdrop,
+                      C().ImgSrc,
+                      C().ImgBlur,
+                      C().ImgBlurBackdrop,
                     ),
                     elementRef: this.m_refCanvasBlurImage,
                     updateRate: 0,
@@ -578,8 +578,8 @@
                     (0, n.jsxs)("div", {
                       ref: t,
                       className: (0, m.A)(
-                        I().HeaderBackgroundImage,
-                        I().Glassy,
+                        C().HeaderBackgroundImage,
+                        C().Glassy,
                       ),
                       children: [
                         !this.state.bUseCanvasBlur &&
@@ -589,14 +589,14 @@
                             src: this.props.rgBlurImages[
                               this.state.nBlurImageIndex
                             ],
-                            className: (0, m.A)(I().ImgSrc, I().ImgBlur),
+                            className: (0, m.A)(C().ImgSrc, C().ImgBlur),
                             onError: this.OnBlurImageFailed,
                           }),
                         this.state.bUseCanvasBlur &&
                           this.state.bBackgroundLoaded &&
                           !this.props.bLowPerfMode &&
                           (0, n.jsx)(u.m, {
-                            className: (0, m.A)(I().ImgSrc, I().ImgBlur),
+                            className: (0, m.A)(C().ImgSrc, C().ImgBlur),
                             elementRef: this.m_refCanvasBlurImage,
                             updateRate: 0,
                             width: 192,
@@ -605,13 +605,13 @@
                             blurAmount: 3,
                           }),
                         (0, n.jsx)("div", {
-                          className: I().ImgContainer,
+                          className: C().ImgContainer,
                           children:
                             this.HasHeaderImages() &&
                             (0, n.jsx)(p.c, {
                               ref: this.m_refBackgroundImage,
                               rgSources: this.props.rgHeaderImages,
-                              className: I().ImgSrc,
+                              className: C().ImgSrc,
                               onLoad: this.OnHeaderLoad,
                               onIncrementalError: this.OnIncrementalError,
                               onError: this.props.onError,
@@ -647,11 +647,11 @@
               width: `${t.nWidthPct}%`,
               height: `${t.nHeightPct}%`,
             }),
-          g = (0, m.A)(I().BoxSizer, I()[t.pinnedPosition]);
+          g = (0, m.A)(C().BoxSizer, C()[t.pinnedPosition]);
         return (0, n.jsx)("div", {
-          className: I().BoxSizerContainer,
+          className: C().BoxSizerContainer,
           children: (0, n.jsxs)("div", {
-            className: I().BoxSizerValidRegion,
+            className: C().BoxSizerValidRegion,
             children: [
               !e.editMode &&
                 (0, n.jsx)("div", {
@@ -665,7 +665,7 @@
                     children: (e) =>
                       (0, n.jsx)("div", {
                         ref: e,
-                        className: I().TitleImageContainer,
+                        className: C().TitleImageContainer,
                         children: s,
                       }),
                   }),
@@ -980,10 +980,10 @@
               bottom: this.state.curBottomPosPct + "%",
             },
             t = (0, m.A)(
-              I().BoxSizerDragBox,
+              C().BoxSizerDragBox,
               this.state.EdgeDown &&
-                (0, m.A)(I().EdgeDown, I()[this.state.EdgeDown]),
-              I()[this.props.pinType],
+                (0, m.A)(C().EdgeDown, C()[this.state.EdgeDown]),
+              C()[this.props.pinType],
             );
           return (0, n.jsx)("div", {
             className: t,
@@ -991,69 +991,69 @@
             ref: this.LinkRegionBoxRef,
             draggable: !1,
             children: (0, n.jsxs)("div", {
-              className: I().BoxSizerGridBox,
+              className: C().BoxSizerGridBox,
               children: [
                 (0, n.jsx)("div", {
-                  className: `${I().BoxSizerEdge} ${I().TopLeft}`,
+                  className: `${C().BoxSizerEdge} ${C().TopLeft}`,
                   onMouseDown: (e) => {
                     this.OnMouseDown(e, H.topleft);
                   },
                   draggable: !1,
                 }),
                 (0, n.jsx)("div", {
-                  className: `${I().BoxSizerEdge} ${I().Top}`,
+                  className: `${C().BoxSizerEdge} ${C().Top}`,
                   onMouseDown: (e) => {
                     this.OnMouseDown(e, H.top);
                   },
                 }),
                 (0, n.jsx)("div", {
-                  className: `${I().BoxSizerEdge} ${I().TopRight}`,
+                  className: `${C().BoxSizerEdge} ${C().TopRight}`,
                   onMouseDown: (e) => {
                     this.OnMouseDown(e, H.topright);
                   },
                   draggable: !1,
                 }),
                 (0, n.jsx)("div", {
-                  className: `${I().BoxSizerEdge} ${I().Left}`,
+                  className: `${C().BoxSizerEdge} ${C().Left}`,
                   onMouseDown: (e) => {
                     this.OnMouseDown(e, H.left);
                   },
                   draggable: !1,
                 }),
                 (0, n.jsx)("div", {
-                  className: `${I().BoxSizerEdge} ${I().Middle}`,
+                  className: `${C().BoxSizerEdge} ${C().Middle}`,
                   onMouseDown: (e) => {
                     this.OnMouseDown(e, H.middle);
                   },
                   draggable: !1,
                   children: (0, n.jsx)("div", {
-                    className: I().TitleImageContainer,
+                    className: C().TitleImageContainer,
                     children: this.props.children,
                   }),
                 }),
                 (0, n.jsx)("div", {
-                  className: `${I().BoxSizerEdge} ${I().Right}`,
+                  className: `${C().BoxSizerEdge} ${C().Right}`,
                   onMouseDown: (e) => {
                     this.OnMouseDown(e, H.right);
                   },
                   draggable: !1,
                 }),
                 (0, n.jsx)("div", {
-                  className: `${I().BoxSizerEdge} ${I().BottomLeft}`,
+                  className: `${C().BoxSizerEdge} ${C().BottomLeft}`,
                   onMouseDown: (e) => {
                     this.OnMouseDown(e, H.bottomleft);
                   },
                   draggable: !1,
                 }),
                 (0, n.jsx)("div", {
-                  className: `${I().BoxSizerEdge} ${I().Bottom}`,
+                  className: `${C().BoxSizerEdge} ${C().Bottom}`,
                   onMouseDown: (e) => {
                     this.OnMouseDown(e, H.bottom);
                   },
                   draggable: !1,
                 }),
                 (0, n.jsx)("div", {
-                  className: `${I().BoxSizerEdge} ${I().BottomRight}`,
+                  className: `${C().BoxSizerEdge} ${C().BottomRight}`,
                   onMouseDown: (e) => {
                     this.OnMouseDown(e, H.bottomright);
                   },
@@ -1076,7 +1076,7 @@
         t.length > 8 && (s = Math.max(s - (t.length - 5) / 2, 5.8));
         const [i, r] = (0, b.l)();
         return (0, n.jsxs)("svg", {
-          className: (0, m.A)(I().SVGTitle, o),
+          className: (0, m.A)(C().SVGTitle, o),
           viewBox: "0 0 300 14",
           children: [
             (0, n.jsx)("defs", {
@@ -1121,13 +1121,13 @@
           classNames: N,
           children: (0, n.jsxs)("div", {
             ref: r,
-            className: (0, m.A)(I().TitleSection, t ? I().NoLogo : ""),
+            className: (0, m.A)(C().TitleSection, t ? C().NoLogo : ""),
             children: [
               (0, n.jsx)("div", {
-                className: I().TextNameSpace,
+                className: C().TextNameSpace,
                 children: !!t && (0, n.jsx)(G, { title: t }),
               }),
-              (0, n.jsx)("div", { className: I().Features, children: o }),
+              (0, n.jsx)("div", { className: C().Features, children: o }),
             ],
           }),
         });
@@ -1578,8 +1578,8 @@
         r = o(73745),
         a = o(6144);
       class l extends i.Component {
-        m_elCanvas;
-        m_Context;
+        m_elCanvas = null;
+        m_Context = null;
         m_schUpdate = new a.LU();
         m_bSetupComplete = !1;
         componentDidMount() {
@@ -1604,22 +1604,24 @@
           let e = this.props.scaleFactor || [1, 1],
             t = this.props.elementRef,
             o = this.props.updateRate;
-          this.m_Context = this.m_elCanvas.getContext("2d");
-          let s = Math.floor(
+          const s = this.m_elCanvas.getContext("2d");
+          if (!s) return;
+          this.m_Context = s;
+          let n = Math.floor(
               this.m_elCanvas.clientWidth / this.props.reductionFactor,
             ),
-            n = Math.floor(
+            i = Math.floor(
               this.m_elCanvas.clientHeight / this.props.reductionFactor,
             );
-          (this.m_elCanvas.width = s),
-            (this.m_elCanvas.height = n),
-            this.props.blurAmount > 0 &&
-              (this.m_Context.filter = "blur(" + this.props.blurAmount + "px)");
-          let i = () => {
-            this.m_Context.drawImage(t, 0, 0, s * e[0], n * e[1]),
-              o > 0 && this.m_schUpdate.Schedule(o, i);
+          (this.m_elCanvas.width = n),
+            (this.m_elCanvas.height = i),
+            (this.props.blurAmount ?? 0) > 0 &&
+              (s.filter = "blur(" + this.props.blurAmount + "px)");
+          let r = () => {
+            s.drawImage(t, 0, 0, n * e[0], i * e[1]),
+              o > 0 && this.m_schUpdate.Schedule(o, r);
           };
-          i(), (this.m_bSetupComplete = !0);
+          r(), (this.m_bSetupComplete = !0);
         }
         render() {
           return (0, n.jsx)("canvas", {

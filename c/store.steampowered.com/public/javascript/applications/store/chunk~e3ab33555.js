@@ -1039,6 +1039,7 @@
                         }),
                     (0, _.jsx)(_._, {
                       event: _,
+                      className: _().EventDetailTimeInfo,
                       nOverrideEndTime: _,
                       nOverrideStartTime: _,
                     }),
@@ -1178,12 +1179,11 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         const { event: _, lang: _ } = _,
           _ = (0, _._)(() => _.jsondata.meet_steam_groups),
-          _ = (0, _._)(_.clanSteamID.GetAccountID()),
+          { data: _ } = (0, _._)(_.clanSteamID.GetAccountID()),
           [_, _, _] = (0, _.useMemo)(() => {
             const _ = new Map(),
               _ = new Map();
@@ -1204,7 +1204,7 @@
           }, [_]);
         return 0 == _.size
           ? null
-          : _.can_edit
+          : _?.can_edit
             ? (0, _.jsxs)("div", {
                 className: (0, _._)(
                   _().DefaultSectionCtn,
@@ -1385,6 +1385,8 @@
         },
         _ = _.lazy(() =>
           Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -1740,12 +1742,7 @@
           (0, _._)(this);
           let _ = (0, _._)("sc_app_privildge", "application_config");
           this.ValidateStoreDefault(_)
-            ? ("dev" === _._.WEB_UNIVERSE &&
-                console.log(
-                  "DEV_DEBUG: CSteamChinaStore: Loading payload from data-*, bHasAccess: " +
-                    _.bHasAccess,
-                ),
-              (this.m_objApprovalPriviledge = _),
+            ? ((this.m_objApprovalPriviledge = _),
               (this.m_LoadingPriviledgePromise = null))
             : (_._.logged_in && _._.EREALM === _._.k_ESteamRealmChina) ||
               (this.m_objApprovalPriviledge = {
@@ -1768,35 +1765,50 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
           const [_, _] = _.useState(null),
             { eventModel: _ } = _;
           let _ = _.clanSteamID.GetAccountID();
-          _.useEffect(() => {
-            const _ = _().CancelToken.source();
-            return (
-              (async () => {
-                const _ = _._.InitFromClanID(_),
-                  _ = await _._.Get().LoadSingleAppEventPermissions(_),
-                  _ = await _.Get().HintLoadAppApprovalPriviledge();
-                _.token.reason ||
-                  __webpack_require__(
-                    _._.is_support || _.can_edit || _.bHasAccess,
-                  );
-              })(),
-              () => _.cancel("SteamChinaAdminPanel is unmounting")
-            );
-          }, [_]);
-          const _ = _._.InitFromClanID(_);
-          return _._.is_support ||
-            _._.Get().GetPartnerEventPermissions(_).can_edit
-            ? (0, _.jsx)(_._, {
-                eventModel: _,
-                partnerEventStore: _.partnerEventStore,
-                addtionalAdminButtons: _
-                  ? [
+          const { data: _ } = (0, _._)(_);
+          return (
+            _.useEffect(() => {
+              const _ = _().CancelToken.source();
+              return (
+                (async () => {
+                  const _ = await _.Get().HintLoadAppApprovalPriviledge();
+                  _.token.reason ||
+                    __webpack_require__(
+                      _._.is_support || Boolean(_?.can_edit) || _.bHasAccess,
+                    );
+                })(),
+                () => _.cancel("SteamChinaAdminPanel is unmounting")
+              );
+            }, [_, _]),
+            _._.is_support || _?.can_edit
+              ? (0, _.jsx)(_._, {
+                  eventModel: _,
+                  partnerEventStore: _.partnerEventStore,
+                  addtionalAdminButtons: _
+                    ? [
+                        (0, _.jsx)(
+                          _,
+                          {
+                            eventModel: _,
+                          },
+                          "removesteamchina",
+                        ),
+                      ]
+                    : void 0,
+                })
+              : _.Get().BHasSteamChinaAppApprovalPriviledge()
+                ? (0, _.jsxs)("div", {
+                    className: _.DisplayAdminPanel,
+                    children: [
+                      (0, _.jsx)("span", {
+                        className: _.DisplayAdminPanel_Title,
+                        children: (0, _._)("#EventDisplay_Admin_Title"),
+                      }),
                       (0, _.jsx)(
                         _,
                         {
@@ -1804,27 +1816,10 @@
                         },
                         "removesteamchina",
                       ),
-                    ]
-                  : void 0,
-              })
-            : _.Get().BHasSteamChinaAppApprovalPriviledge()
-              ? (0, _.jsxs)("div", {
-                  className: _.DisplayAdminPanel,
-                  children: [
-                    (0, _.jsx)("span", {
-                      className: _.DisplayAdminPanel_Title,
-                      children: (0, _._)("#EventDisplay_Admin_Title"),
-                    }),
-                    (0, _.jsx)(
-                      _,
-                      {
-                        eventModel: _,
-                      },
-                      "removesteamchina",
-                    ),
-                  ],
-                })
-              : null;
+                    ],
+                  })
+                : null
+          );
         }),
         _ = (_) => {
           const { eventModel: _ } = _;

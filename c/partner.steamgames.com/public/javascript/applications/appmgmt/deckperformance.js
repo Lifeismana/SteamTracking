@@ -11,6 +11,7 @@
         DescriptionSection: "_1C4uPBMaD8hewNntz_uA3F",
         PerformanceSectionTitle: "_3RgwExAFwWbutDA-nZwOCK",
         DescriptionDetails: "nL0dzsDcGMBJXrt6KYm5N",
+        TabContainer: "F0acTKwTPFIdDYfsMFzbD",
         FrameRateValue: "_2B6juattDAX-hilEh3Rt_B",
         DescriptionEmphasis: "ina27Iss3Cu6uQV6muq16",
         FeedbackAgree: "_1hAFmIlqGPHT1w7at0haFP",
@@ -24,6 +25,20 @@
         FeedbackOther: "_2qfV7V9Hcm-IbWZ2jMulQX",
         FeedbackTableHeader: "_2RNTmni7sGrUo6vvhW9r9l",
         FeedbackChartContainer: "_2h_JKiy1-oqTL5oobp5fGl",
+        FrameRateTabs: "_2WkkV2Wg0u_3QDy9g6Q4yY",
+        TabActive: "_78FuQRakVNuz-fNPKM9m_",
+        TabInactive: "_2Hr7ssx_b-MrYZee0bQcdh",
+        HistogramContainer: "_3WBxQEY65qUzlWxin28Vtk",
+        Chart: "_1MTZOaNYA30CHWXAvcI8gL",
+        ChartBar: "_1Xg8jwpB60j3CS1RAvy12d",
+        ChartBarLabel: "_2nV2VeXYF3zU1RRW-66tLK",
+        Labels: "_27ILhiLpeZOcytOo5xl-ul",
+        LabelContainer: "_1VQCzz-bKmYHtp8Tm5KQzP",
+        Tick: "_2qB7E_nIxNYaX35EBnRISc",
+        TickHidden: "_1Ep0gM0lRnWp7uhUCmssnW",
+        Label: "_317oB8prBfarBhyivc4bkB",
+        TopLabel: "_12RkB0ye7r5ZCa4og8tbWC",
+        ValveOnly: "GBy50vuPi8ifA3M3YvGUB",
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -119,15 +134,7 @@
       function _() {
         const _ = (0, _._)("partnerbrowse_webapi_token", "application_config");
         (0, _._)(Boolean(_), "require partnerbrowse_webapi_token");
-        const _ = new _._(_._.WEBAPI_BASE_URL, _);
-        return (
-          ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-            console.log(
-              "DEV_DEBUG: Constructing partner store-browse WebAPI interface with access token",
-              _,
-            ),
-          _
-        );
+        return new _._(_._.WEBAPI_BASE_URL, _);
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -156,7 +163,10 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      const _ = 4;
       function _(_) {
         const { dataprops: _, appId: _ } = _;
         return _?.framerate || _?.feedback
@@ -171,7 +181,7 @@
           : (0, _.jsx)(_.Fragment, {});
       }
       function _(_) {
-        const { dataprops: _, appName: _ } = _;
+        const { dataprops: _, appName: _, histogramData: _ } = _;
         return _?.framerate || _?.feedback
           ? (0, _.jsxs)("div", {
               className: _.PerformanceContainer,
@@ -180,6 +190,7 @@
                   (0, _.jsx)(_, {
                     appId: Number(_.appId),
                     appName: _,
+                    histogramData: _,
                     frameRateData: _.framerate,
                   }),
                 Boolean(_?.feedback) &&
@@ -332,26 +343,61 @@
           ],
         });
       }
+      const _ = new Map([
+          [3, "LCD"],
+          [_, "OLED"],
+        ]),
+        _ = new Array(
+          {
+            name: _.get(_),
+            key: _.get(_),
+            contents: null,
+          },
+          {
+            name: _.get(3),
+            key: _.get(3),
+            contents: null,
+          },
+        );
       function _(_) {
-        const { appId: _, appName: _, frameRateData: _ } = _,
+        const { appName: _, frameRateData: _, histogramData: _ } = _,
+          [_, _] = _.useState(void 0),
           _ = _.useMemo(() => {
             let _ = [];
             return (
               _?.frame_rate_clusters &&
                 _?.frame_rate_clusters.length > 0 &&
-                _.frame_rate_clusters[0].daily_frame_rates?.map((_) => {
-                  const _ = parseInt("" + _.mean_frame_rate),
-                    _ = parseInt("" + _.mean_frame_rate_stddev);
-                  return _.push({
-                    date: _.date,
-                    mean: _,
-                    range: [_ + _, _ - _],
-                  });
+                _.frame_rate_clusters.forEach((_) => {
+                  if (!_.clusterid || !_.get(_.clusterid)) return;
+                  let _ = {
+                    tab: _.get(_.clusterid),
+                    clusterid: _.clusterid ?? 0,
+                    mean_frame_rate: _.mean_frame_rate,
+                    report_days: _.report_days ?? 0,
+                    data: [],
+                  };
+                  _.daily_frame_rates?.map((_) => {
+                    const _ = parseInt("" + _.mean_frame_rate),
+                      _ = parseInt("" + _.mean_frame_rate_stddev);
+                    return _.data.push({
+                      date: _.date,
+                      mean: _,
+                      range: [_ + _, _ - _],
+                    });
+                  }),
+                    _.data.sort((_, _) => _.date - _.date),
+                    _.push(_);
                 }),
-              _.sort((_, _) => _.date - _.date)
+              _
             );
+          }, [_]),
+          _ = _.useMemo(() => {
+            const _ = _.get(_);
+            return _.some((_) => _.tab == _ && _.data.length > 0)
+              ? _
+              : (_.find((_) => _.data.length > 0)?.tab ?? _);
           }, [_]);
-        if (!_ || !_.frame_rate_clusters?.length)
+        if (!_?.frame_rate_clusters?.length)
           return (0, _.jsx)("div", {
             className: _.FrameRateContainer,
             children: (0, _.jsxs)("div", {
@@ -369,18 +415,154 @@
               ],
             }),
           });
-        const _ = _.frame_rate_clusters[0],
-          _ = Number(_.mean_frame_rate).toFixed(0),
-          _ = (0, _.jsx)("span", {
-            className: _.FrameRateValue,
-            children: _._.Localize("#GamePerformanceStats_FPS", _),
-          }),
-          _ = _
-            ? _._.LocalizeReact("#GamePerformanceStats_AverageFrameRate", _, _)
-            : _._.LocalizeReact(
-                "#GamePerformanceStats_AverageFrameRate_ThisGame",
+        let _,
+          _ = (0, _.jsx)("div", {
+            children: _._.Localize("#GamePerformanceStats_NoData"),
+          });
+        const _ = _ ?? _,
+          _ = [..._.entries()].find(([_, _]) => _ === _)[0],
+          _ = _.find((_) => _.clusterid == _);
+        if (_) {
+          const _ = Number(_.mean_frame_rate ?? 0).toFixed(0),
+            _ = (0, _.jsx)("span", {
+              className: _.FrameRateValue,
+              children: _._.Localize("#GamePerformanceStats_FPS", _),
+            });
+          (_ = _
+            ? _._.LocalizeReact(
+                "#GamePerformanceStats_AverageFrameRate_Device",
                 _,
-              );
+                _,
+                _,
+              )
+            : _._.LocalizeReact(
+                "#GamePerformanceStats_AverageFrameRate_ThisGame_Device",
+                _,
+                _,
+              )),
+            (_ = (0, _.jsx)(_._, {
+              width: "100%",
+              minWidth: 600,
+              height: 300,
+              children: (0, _.jsxs)(_._, {
+                margin: {
+                  top: 25,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                },
+                data: _.data,
+                children: [
+                  (0, _.jsx)(_._, {
+                    strokeDasharray: "3 3",
+                    color: "red",
+                  }),
+                  (0, _.jsx)(_._, {
+                    dataKey: "date",
+                    tickFormatter: _,
+                    stroke: "white",
+                  }),
+                  (0, _.jsx)(_._, {
+                    stroke: "white",
+                    domain: [() => 0, (_) => Math.max(_, 100)],
+                  }),
+                  (0, _.jsx)(_._, {
+                    labelFormatter: _,
+                  }),
+                  (0, _.jsx)(_._, {
+                    type: "natural",
+                    dataKey: "mean",
+                    name: "average",
+                    stroke: "#4477EE",
+                  }),
+                  !1,
+                ],
+              }),
+            }));
+        }
+        let _,
+          _ = !1,
+          _ = (0, _.jsx)("div", {
+            children: _._.Localize("#GamePerformanceStats_NoData"),
+          });
+        const _ = _ ? _.find((_) => _.clusterID == _) : void 0;
+        if (_) {
+          const _ = Math.max(..._.rgResults);
+          if (((_ = _ > 0), _)) {
+            let _ = 0,
+              _ = 1;
+            const _ = 200;
+            (_ = (0.9 * _) / _), (_ = _.rgResults.indexOf(_));
+            let _ = 0;
+            _.rgResults.forEach((_, _) => {
+              Math.floor(100 * _) > 0 && (_ = _);
+            });
+            const _ = _.rgResults.slice(0, _ + 1);
+            (_ = _
+              ? _._.LocalizeReact(
+                  "#GamePerformanceStats_FrameRateHistogram_Device",
+                  _,
+                  _,
+                )
+              : _._.LocalizeReact(
+                  "#GamePerformanceStats_FrameRateHistogram_ThisGame_Device",
+                  _,
+                )),
+              (_ = (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)(_._, {
+                    className: _.Chart,
+                    children: _.map((_, _) =>
+                      (0, _.jsx)(
+                        "div",
+                        {
+                          className: _.ChartBar,
+                          style: {
+                            height: _ * _,
+                            marginTop: _ - _ * _,
+                          },
+                          children: (0, _.jsx)("div", {
+                            className: _.ChartBarLabel,
+                            children:
+                              _ == _ ? `${(100 * _).toFixed(1)}%` : null,
+                          }),
+                        },
+                        `bar_${_}`,
+                      ),
+                    ),
+                  }),
+                  (0, _.jsx)(_._, {
+                    className: _.Labels,
+                    children: _.map((_, _) => {
+                      const _ = 15 + 5 * _,
+                        _ = _ % 10 == 0;
+                      return (0, _.jsxs)(
+                        "div",
+                        {
+                          className: _.LabelContainer,
+                          children: [
+                            (0, _.jsx)("div", {
+                              className: (0, _._)(_.Tick, !_ && _.TickHidden),
+                              children: "",
+                            }),
+                            (0, _.jsx)(
+                              "div",
+                              {
+                                className: _.Label,
+                                children: _ ? _ : "",
+                              },
+                              `label_${_}`,
+                            ),
+                          ],
+                        },
+                        _,
+                      );
+                    }),
+                  }),
+                ],
+              }));
+          }
+        }
         return (0, _.jsxs)("div", {
           className: _.FrameRateContainer,
           children: [
@@ -402,13 +584,14 @@
                 (0, _.jsx)("div", {
                   children: _,
                 }),
-                (0, _.jsx)("div", {
-                  className: _.DescriptionSection,
-                  children: _._.Localize(
-                    "#GamePerformanceStats_FrameRateDataBasedOn",
-                    _.report_days,
-                  ),
-                }),
+                Boolean(_?.report_days) &&
+                  (0, _.jsx)("div", {
+                    className: _.DescriptionSection,
+                    children: _._.Localize(
+                      "#GamePerformanceStats_FrameRateDataBasedOn",
+                      _?.report_days ?? 0,
+                    ),
+                  }),
                 (0, _.jsx)("div", {
                   className: _.DescriptionSection,
                   children: _._.Localize(
@@ -417,45 +600,68 @@
                 }),
               ],
             }),
-            (0, _.jsx)(_._, {
-              width: "100%",
-              minWidth: 600,
-              height: 300,
-              children: (0, _.jsxs)(_._, {
-                margin: {
-                  top: 25,
-                  left: 0,
-                  right: 0,
-                  bottom: 0,
-                },
-                data: _,
+            (0, _.jsxs)("div", {
+              className: _.TabContainer,
+              children: [
+                (0, _.jsx)(_._, {
+                  className: _.FrameRateTabs,
+                  children: _.map((_) =>
+                    (0, _.jsx)(
+                      _,
+                      {
+                        active: _.key === _,
+                        locToken: _.name,
+                        onClick: () => _(_.key),
+                      },
+                      _.key,
+                    ),
+                  ),
+                }),
+                _,
+              ],
+            }),
+            _ &&
+              (0, _.jsxs)(_.Fragment, {
                 children: [
-                  (0, _.jsx)(_._, {
-                    strokeDasharray: "3 3",
-                    color: "red",
+                  (0, _.jsxs)("div", {
+                    className: _.DescriptionContainer,
+                    children: [
+                      (0, _.jsxs)("div", {
+                        className: _.PerformanceSectionTitle,
+                        children: [
+                          _._.Localize(
+                            "#GamePerformanceStats_FrameRateHistogram_Title",
+                          ),
+                          " ",
+                          (0, _.jsx)("span", {
+                            className: _.ValveOnly,
+                            children: "(VO)",
+                          }),
+                          (0, _.jsx)("span", {
+                            className: _.Beta,
+                            children: _._.Localize("#NewToolTitleSuffix_Beta"),
+                          }),
+                        ],
+                      }),
+                      (0, _.jsx)("div", {
+                        children: _,
+                      }),
+                    ],
                   }),
-                  (0, _.jsx)(_._, {
-                    dataKey: "date",
-                    tickFormatter: _,
-                    stroke: "white",
+                  (0, _.jsx)("div", {
+                    className: _.HistogramContainer,
+                    children: _,
                   }),
-                  (0, _.jsx)(_._, {
-                    stroke: "white",
-                  }),
-                  (0, _.jsx)(_._, {
-                    labelFormatter: _,
-                  }),
-                  (0, _.jsx)(_._, {
-                    type: "natural",
-                    dataKey: "mean",
-                    name: "average",
-                    stroke: "#4477EE",
-                  }),
-                  !1,
                 ],
               }),
-            }),
           ],
+        });
+      }
+      function _(_) {
+        return (0, _.jsx)(_._, {
+          className: _.active ? _.TabActive : _.TabInactive,
+          onClick: _.onClick,
+          children: _.locToken,
         });
       }
       function _(_) {

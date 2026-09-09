@@ -90,7 +90,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = [
         "mousemove",
@@ -108,8 +107,7 @@
         constructor() {
           (this.m_callbackList = new _._()),
             (this.m_timer = null),
-            (this.m_bAreEventListenersRegistered = !1),
-            "dev" == _._.WEB_UNIVERSE && (window.g_FidgetStore = this);
+            (this.m_bAreEventListenersRegistered = !1);
         }
         ResetFidgetTimer(_) {
           this.m_timer && window.clearTimeout(this.m_timer);
@@ -148,6 +146,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = 0,
         _ = 1,
@@ -163,8 +162,7 @@
             (this.m_dashboardCallbackList = new _._()),
             (this.m_mapQuestions = new Map()),
             (this.m_mapQuestionCallbackList = new Map()),
-            (this.m_rgPendingQuestionGIDs = []),
-            "dev" == _._.WEB_UNIVERSE && (window.g_QAndAStore = this);
+            (this.m_rgPendingQuestionGIDs = []);
         }
         GetQAndACallbackList(_) {
           return (

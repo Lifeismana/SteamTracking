@@ -148,10 +148,20 @@
     "Wishlist_Controls_Categories_Header_Other": "Другите ми категории",
     "Wishlist_Controls_Categories_Header_Suggested": "Предложени категории",
     "Wishlist_Categories_Max_Per_App_Reached": "Този артикул от списъка с желания е достигнал лимита от %1$s категории.",
+    "Wishlist_Categories_Dialog_Advanced": "Разширени…",
     "Price_History_Normal_Price": "НОРМАЛНА",
     "Price_History_Recent_Low_Price": "НАЙ-НИСКА ЗА 30 ДНИ",
     "Price_History_Recent_Low_Price_Ttip": "Тази игра беше с отстъпка за %1$s през последните %2$s дни",
     "Price_History_Current_Low_Price_Ttip": "Понастоящем тази игра е на най-ниската цена в рамките на изминалите %1$s дни.",
     "Price_History_Current_Price": "СЕГА",
-    "Price_History_Lowest_Previous_30": "Отстъпки спрямо най-ниската цена през предходните 30 дни"
+    "Price_History_Lowest_Previous_30": "Отстъпки спрямо най-ниската цена през предходните 30 дни",
+    "PersonalCalendar_Title": "Личният Ви календар",
+    "PersonalCalendar_Subtitle": "Персонализиран за Вас списък от нови и предстоящи игри.",
+    "PersonalCalendar_More": "+Още %1$s",
+    "PersonalCalendar_Full": "Проучете Вашия пълен персонализиран календар",
+    "PersonalCalendar_Explore": "Проучване на още",
+    "PersonalCalendar_EmptyDay": "Нямаме никакви нови издания, които да Ви препоръчаме за този ден. <1>Вижте останалата част от календара си!</1>",
+    "NewBadge": "НОВО",
+    "Time_Today": "Днес",
+    "store_ui_dummy": "dont translate"
 }

@@ -1160,8 +1160,7 @@
               _.origin + _.pathname + "?" + _.toString() + _.hash
             );
           } catch (_) {
-            "dev" == _._.WEB_UNIVERSE &&
-              console.error("UTM parameter parsing failed:", _, _);
+            0;
           }
         return _;
       }

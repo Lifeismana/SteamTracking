@@ -388,17 +388,7 @@
             this.m_onLoadContextCall.has(i))
           ) {
             const t = this.m_onLoadContextCall.get(i);
-            t
-              ? ("dev" == u.TS.WEB_UNIVERSE &&
-                  console.log(
-                    "CBroadcastEmbeddableStore initialized after caller using callback to " +
-                      t.name,
-                  ),
-                t.fnCallback())
-              : "dev" == u.TS.WEB_UNIVERSE &&
-                console.log(
-                  "CBroadcastEmbeddableStore initialized after caller, however callback is since cleared",
-                );
+            t && t.fnCallback();
           }
           const r = this.GetStreams(t);
           return await this.AutoStartVideoStream(t, r), r;
@@ -554,10 +544,7 @@
         static Get() {
           return (
             y.s_GlobalStore ||
-              ((y.s_GlobalStore = new y()),
-              "dev" == u.TS.WEB_UNIVERSE &&
-                (window.g_BroadcastEmbeddableStore = y.s_GlobalStore),
-              y.s_GlobalStore.Init()),
+              ((y.s_GlobalStore = new y()), y.s_GlobalStore.Init()),
             y.s_GlobalStore
           );
         }
@@ -764,7 +751,7 @@
       const m = new d();
     },
     54728: (t, e, a) => {
-      a.d(e, { es: () => N, fK: () => E, a0: () => A, fO: () => P });
+      a.d(e, { es: () => x, fK: () => E, a0: () => R, fO: () => A });
       var s = a(34629),
         i = a(41735),
         r = a.n(i),
@@ -1252,11 +1239,12 @@
         I = a(81393),
         T = a(61859),
         w = a(68797),
-        V = a(6469),
-        k = a(43882),
-        G = a(66703);
-      const P = 7;
-      var E, A;
+        V = a(7860),
+        k = a(62658),
+        G = a(43882),
+        P = a(66703);
+      const A = 7;
+      var E, R;
       !(function (t) {
         (t[(t.None = 0)] = "None"),
           (t[(t.Unlocking = 1)] = "Unlocking"),
@@ -1264,7 +1252,7 @@
           (t[(t.Ready = 3)] = "Ready"),
           (t[(t.Error = 4)] = "Error");
       })(E || (E = {}));
-      class R {
+      class H {
         constructor() {
           (this.m_rtUnlockTime = 0), (this.m_schUnlockTimeout = new y.LU());
         }
@@ -1282,17 +1270,17 @@
             : t.SetState(E.Error, (0, T.we)("#BroadcastWatch_MinBrowser"));
         }
         BCanUnlockH264() {
-          return (0, G.Dp)("RemotePlay.UnlockH264")
+          return (0, P.Dp)("RemotePlay.UnlockH264")
             ? (console.log("Client supports direct H.264 unlock"), !0)
-            : (0, G.Dp)("BrowserView.PostMessageToParent")
+            : (0, P.Dp)("BrowserView.PostMessageToParent")
               ? (console.log("Client supports browserview H.264 unlock"), !0)
               : (console.log("Client does not support H.264 unlock"), !1);
         }
         RequestUnlockH264() {
-          (0, G.Dp)("RemotePlay.UnlockH264")
+          (0, P.Dp)("RemotePlay.UnlockH264")
             ? (console.log("Requesting direct H.264 unlock"),
               SteamClient.RemotePlay.UnlockH264())
-            : (0, G.Dp)("BrowserView.PostMessageToParent")
+            : (0, P.Dp)("BrowserView.PostMessageToParent")
               ? (console.log("Requesting browserview unlock"),
                 SteamClient.BrowserView.PostMessageToParent(
                   "UnlockH264Request",
@@ -1323,7 +1311,7 @@
               );
         }
       }
-      class H {
+      class M {
         constructor() {
           (this.m_steamIDBroadcast = ""),
             (this.m_ulBroadcastID = ""),
@@ -1343,17 +1331,17 @@
             t == E.Error && console.log(this.m_strStateDescription);
         }
       }
-      (0, s.Cg)([o.sH], H.prototype, "m_ulBroadcastID", void 0),
-        (0, s.Cg)([o.sH], H.prototype, "m_eWatchState", void 0),
-        (0, s.Cg)([o.sH], H.prototype, "m_strStateDescription", void 0),
-        (0, s.Cg)([o.XI], H.prototype, "SetState", null);
-      class M {
+      (0, s.Cg)([o.sH], M.prototype, "m_ulBroadcastID", void 0),
+        (0, s.Cg)([o.sH], M.prototype, "m_eWatchState", void 0),
+        (0, s.Cg)([o.sH], M.prototype, "m_strStateDescription", void 0),
+        (0, s.Cg)([o.XI], M.prototype, "SetState", null);
+      class O {
         constructor(t) {
           (this.m_steamIDBroadcast = ""),
             (this.m_bInitialized = !1),
             (this.m_strTitle = ""),
-            (this.m_strAppId = "" + P),
-            (this.m_nAppID = P),
+            (this.m_strAppId = "" + A),
+            (this.m_nAppID = A),
             (this.m_strAppTitle = ""),
             (this.m_strThumbnailUrl = ""),
             (this.m_nViewerCount = 0),
@@ -1364,15 +1352,15 @@
             (this.m_steamIDBroadcast = t);
         }
       }
-      (0, s.Cg)([o.sH], M.prototype, "m_bInitialized", void 0),
-        (0, s.Cg)([o.sH], M.prototype, "m_strTitle", void 0),
-        (0, s.Cg)([o.sH], M.prototype, "m_strAppId", void 0),
-        (0, s.Cg)([o.sH], M.prototype, "m_nAppID", void 0),
-        (0, s.Cg)([o.sH], M.prototype, "m_strAppTitle", void 0),
-        (0, s.Cg)([o.sH], M.prototype, "m_strThumbnailUrl", void 0),
-        (0, s.Cg)([o.sH], M.prototype, "m_nViewerCount", void 0),
-        (0, s.Cg)([o.sH], M.prototype, "m_bIsOnline", void 0);
-      class O {
+      (0, s.Cg)([o.sH], O.prototype, "m_bInitialized", void 0),
+        (0, s.Cg)([o.sH], O.prototype, "m_strTitle", void 0),
+        (0, s.Cg)([o.sH], O.prototype, "m_strAppId", void 0),
+        (0, s.Cg)([o.sH], O.prototype, "m_nAppID", void 0),
+        (0, s.Cg)([o.sH], O.prototype, "m_strAppTitle", void 0),
+        (0, s.Cg)([o.sH], O.prototype, "m_strThumbnailUrl", void 0),
+        (0, s.Cg)([o.sH], O.prototype, "m_nViewerCount", void 0),
+        (0, s.Cg)([o.sH], O.prototype, "m_bIsOnline", void 0);
+      class L {
         constructor() {
           (this.m_eWatchState = E.None),
             (this.m_strStateDescription = ""),
@@ -1385,12 +1373,12 @@
             t == E.Error && console.log(this.m_strStateDescription);
         }
       }
-      (0, s.Cg)([o.sH], O.prototype, "m_eWatchState", void 0),
-        (0, s.Cg)([o.sH], O.prototype, "m_strStateDescription", void 0),
-        (0, s.Cg)([o.XI], O.prototype, "SetState", null);
-      class L extends O {}
-      class U extends O {}
-      class W {
+      (0, s.Cg)([o.sH], L.prototype, "m_eWatchState", void 0),
+        (0, s.Cg)([o.sH], L.prototype, "m_strStateDescription", void 0),
+        (0, s.Cg)([o.XI], L.prototype, "SetState", null);
+      class U extends L {}
+      class W extends L {}
+      class F {
         constructor() {
           (this.m_mapBroadcasts = new Map()),
             (this.m_mapClips = new Map()),
@@ -1437,40 +1425,40 @@
         CreateBroadcastVideo(t, e, a, s) {
           let i = this.GetOrCreateBroadcast(e),
             { nVolume: r, bMuted: o } = this.m_broadcastSettings,
-            n = new F(t, r, o, a);
+            n = new N(t, r, o, a);
           if (
             (n.SetBroadcastSteamID(e),
             i.m_rgVideos.push(n),
             (i.m_bWebRTC = s),
             !(0, h.Mc)() && !(0, h.aM)())
           ) {
-            return new R().UnlockH264(i, n), n;
+            return new H().UnlockH264(i, n), n;
           }
           return n;
         }
         CreateClipVideo(t, e, a) {
           let s = this.GetOrCreateClip(e),
             { nVolume: i, bMuted: r } = this.m_broadcastSettings,
-            o = new F(t, i, r, a);
+            o = new N(t, i, r, a);
           if (
             (o.SetBroadcastClipID(e),
             s.m_rgVideos.push(o),
             !(0, h.Mc)() && !(0, h.aM)())
           ) {
-            return new R().UnlockH264(s, o), o;
+            return new H().UnlockH264(s, o), o;
           }
           return o;
         }
         CreateVODVideo(t, e, a) {
           let s = this.GetOrCreateVOD(e),
             { nVolume: i, bMuted: r } = this.m_broadcastSettings,
-            o = new F(t, i, r, a);
+            o = new N(t, i, r, a);
           if (
             (o.SetBroadcastAppIDVOD(e),
             s.m_rgVideos.push(o),
             !(0, h.Mc)() && !(0, h.aM)())
           ) {
-            return new R().UnlockH264(s, o), o;
+            return new H().UnlockH264(s, o), o;
           }
           return o;
         }
@@ -1555,10 +1543,10 @@
         }
         GetOrCreateBroadcastInfo(t) {
           if (!t) {
-            return new M("");
+            return new O("");
           }
           if (!this.m_broadcastInfos[t]) {
-            const e = (0, o.sH)(new M(t));
+            const e = (0, o.sH)(new O(t));
             this.m_broadcastInfos[t] = e;
           }
           return this.m_broadcastInfos[t];
@@ -1567,7 +1555,7 @@
           let e = this.m_mapBroadcasts.get(t);
           return (
             e ||
-            ((e = new H()),
+            ((e = new M()),
             (e.m_steamIDBroadcast = t),
             (e.m_eWatchState = E.None),
             this.m_mapBroadcasts.set(t, e),
@@ -1593,7 +1581,7 @@
           let e = this.m_mapClips.get(t);
           return (
             e ||
-            ((e = new L()),
+            ((e = new U()),
             (e.m_clipID = t),
             (e.m_eWatchState = E.None),
             this.m_mapClips.set(t, e),
@@ -1604,7 +1592,7 @@
           let e = this.m_mapVODs.get(t);
           return (
             e ||
-            ((e = new U()),
+            ((e = new W()),
             (e.m_nAppIDVOD = t),
             (e.m_eWatchState = E.None),
             this.m_mapVODs.set(t, e),
@@ -1806,7 +1794,13 @@
         }
         async GetVODManifest(t, e) {
           t.SetState(E.Loading, "");
-          let a = await V.K.Get().LoadVODForAppID(t.m_nAppIDVOD);
+          let a = await V.L.fetchQuery((0, k.uj)(t.m_nAppIDVOD)).catch((e) => {
+            console.error(
+              "BroadcastWatchStore:GetVODManifest: Failed to load VOD " +
+                t.m_nAppIDVOD,
+              e,
+            );
+          });
           a
             ? (t.SetState(E.Ready),
               (t.m_manifestURL = a.video_url),
@@ -1899,11 +1893,11 @@
             this.SaveBroadcastSettings());
         }
       }
-      (0, s.Cg)([o.sH], W.prototype, "m_mapBroadcasts", void 0),
+      (0, s.Cg)([o.sH], F.prototype, "m_mapBroadcasts", void 0),
         (function (t) {
           (t[(t.Timeline = 1)] = "Timeline"), (t[(t.Minimap = 2)] = "Minimap");
-        })(A || (A = {}));
-      class F {
+        })(R || (R = {}));
+      class N {
         constructor(t, e, a, s) {
           (this.m_player = null),
             (this.m_listeners = new y.Ji()),
@@ -2059,10 +2053,10 @@
           this.m_bStartWithSubtitles = t;
         }
         GetBroadcastState() {
-          return N.GetBroadcastState(this);
+          return x.GetBroadcastState(this);
         }
         GetBroadcastStateDescription() {
-          return N.GetBroadcastStateDescription(this);
+          return x.GetBroadcastStateDescription(this);
         }
         SetOnVideoCallback(t) {
           this.m_fnOnVideoEnd = t;
@@ -2174,7 +2168,7 @@
               t.m_ulBroadcastID,
               t.m_ulViewerToken,
             ),
-            (this.m_BroadcastInfo = N.StartInfo(this.m_steamIDBroadcast));
+            (this.m_BroadcastInfo = x.StartInfo(this.m_steamIDBroadcast));
         }
         StartClip(t) {
           var e;
@@ -2196,7 +2190,7 @@
             (this.m_player = a),
             u.iA.logged_in &&
               t.m_nAppIDVOD &&
-              a.SetBookmarkAdapter(new k.M(t.m_nAppIDVOD)),
+              a.SetBookmarkAdapter(new G.M(t.m_nAppIDVOD)),
             t.m_manifestURL && a.PlayMPD(t.m_manifestURL),
             this.SetVolume(this.m_nVolume),
             null === (e = this.m_player) ||
@@ -2206,7 +2200,7 @@
         Stop() {
           this.m_listeners.Unregister(),
             this.m_BroadcastInfo &&
-              (N.StopInfo(this.m_BroadcastInfo), (this.m_BroadcastInfo = null)),
+              (x.StopInfo(this.m_BroadcastInfo), (this.m_BroadcastInfo = null)),
             (this.m_gameDataParser = null),
             this.m_player && (this.m_player.Close(), (this.m_player = null));
         }
@@ -2217,14 +2211,14 @@
         }
         Play() {
           const t = this.GetBroadcastState();
-          if (t == E.None || this.IsBroadcastClip()) N.StartVideo(this);
+          if (t == E.None || this.IsBroadcastClip()) x.StartVideo(this);
           else if (t == E.Ready)
-            if ((N.SetActiveVideo(this), this.m_player)) this.m_player.Play();
+            if ((x.SetActiveVideo(this), this.m_player)) this.m_player.Play();
             else if (this.IsBroadcastVOD()) {
-              const t = N.GetBroadcastVOD(this.m_nBroadcastAppIDVOD);
+              const t = x.GetBroadcastVOD(this.m_nBroadcastAppIDVOD);
               t && this.StartVOD(t);
             } else {
-              const t = N.GetBroadcast(this.m_steamIDBroadcast);
+              const t = x.GetBroadcast(this.m_steamIDBroadcast);
               t && this.StartBroadcast(t);
             }
         }
@@ -2260,12 +2254,12 @@
           this.m_player &&
             (this.m_player.SetVolume(t),
             (this.m_nVolume = this.m_player.GetVolume())),
-            N.SaveVolumeChange(t, this.m_bMuted);
+            x.SaveVolumeChange(t, this.m_bMuted);
         }
         SetMute(t) {
           this.m_player && this.m_player.SetMuted(t),
             (this.m_bMuted = t),
-            N.SaveVolumeChange(this.m_nVolume, t);
+            x.SaveVolumeChange(this.m_nVolume, t);
         }
         IsMuted() {
           return this.m_bMuted;
@@ -2358,13 +2352,13 @@
         }
         OnDownloadFailed(t) {
           let e = t.detail || p.N_.Invalid;
-          N.BroadcastDownloadFailed(this, !0, e);
+          x.BroadcastDownloadFailed(this, !0, e);
         }
         OnWebRTCRetry() {
-          N.BroadcastDownloadFailed(this, !1);
+          x.BroadcastDownloadFailed(this, !1);
         }
         OnWebRTCFailed() {
-          N.BroadcastDownloadFailed(this, !0);
+          x.BroadcastDownloadFailed(this, !0);
         }
         OnUserInputNeeded() {
           this.m_bUserInputNeeded = !0;
@@ -2390,7 +2384,7 @@
           let a = 0,
             s = 0;
           return (
-            e == A.Timeline
+            e == R.Timeline
               ? ((s = this.m_nVideoEndPos), (a = s - this.m_nTimelineDuration))
               : ((a = 0), (s = 0)),
             _.Fu(t, a, s, 0, 100)
@@ -2415,34 +2409,34 @@
           return this.m_rgSegments.length > 0;
         }
       }
-      (0, s.Cg)([o.sH], F.prototype, "m_player", void 0),
-        (0, s.Cg)([o.sH], F.prototype, "m_bPaused", void 0),
-        (0, s.Cg)([o.sH], F.prototype, "m_nPlaybackTime", void 0),
-        (0, s.Cg)([o.sH], F.prototype, "m_bBuffering", void 0),
-        (0, s.Cg)([o.sH], F.prototype, "m_bOnLiveEdge", void 0),
-        (0, s.Cg)([o.sH], F.prototype, "m_nVolume", void 0),
-        (0, s.Cg)([o.sH], F.prototype, "m_bMuted", void 0),
-        (0, s.Cg)([o.sH], F.prototype, "m_bUserInputNeeded", void 0),
-        (0, s.Cg)([o.sH], F.prototype, "m_bIsReplay", void 0),
-        (0, s.Cg)([o.sH], F.prototype, "m_nTimelineDuration", void 0),
-        (0, s.Cg)([o.sH], F.prototype, "m_nVideoStartPos", void 0),
-        (0, s.Cg)([o.sH], F.prototype, "m_nVideoEndPos", void 0),
-        (0, s.Cg)([o.sH], F.prototype, "m_editorStartTime", void 0),
-        (0, s.Cg)([o.sH], F.prototype, "m_editorEndTime", void 0),
-        (0, s.Cg)([o.XI.bound], F.prototype, "StartBroadcast", null),
-        (0, s.Cg)([o.XI.bound], F.prototype, "StartClip", null),
-        (0, s.Cg)([o.XI.bound], F.prototype, "StartVOD", null),
-        (0, s.Cg)([S.o], F.prototype, "OnVideoPlaying", null),
-        (0, s.Cg)([S.o], F.prototype, "OnVideoPause", null),
-        (0, s.Cg)([o.XI.bound], F.prototype, "OnVideoTimeUpdate", null),
-        (0, s.Cg)([S.o], F.prototype, "OnVolumeUpdated", null),
-        (0, s.Cg)([o.XI.bound], F.prototype, "OnGameDataUpdate", null),
-        (0, s.Cg)([S.o], F.prototype, "OnDownloadFailed", null),
-        (0, s.Cg)([S.o], F.prototype, "OnWebRTCRetry", null),
-        (0, s.Cg)([S.o], F.prototype, "OnWebRTCFailed", null),
-        (0, s.Cg)([S.o], F.prototype, "OnUserInputNeeded", null);
-      const N = new W();
-      window.uiBroadcastWatchStore = N;
+      (0, s.Cg)([o.sH], N.prototype, "m_player", void 0),
+        (0, s.Cg)([o.sH], N.prototype, "m_bPaused", void 0),
+        (0, s.Cg)([o.sH], N.prototype, "m_nPlaybackTime", void 0),
+        (0, s.Cg)([o.sH], N.prototype, "m_bBuffering", void 0),
+        (0, s.Cg)([o.sH], N.prototype, "m_bOnLiveEdge", void 0),
+        (0, s.Cg)([o.sH], N.prototype, "m_nVolume", void 0),
+        (0, s.Cg)([o.sH], N.prototype, "m_bMuted", void 0),
+        (0, s.Cg)([o.sH], N.prototype, "m_bUserInputNeeded", void 0),
+        (0, s.Cg)([o.sH], N.prototype, "m_bIsReplay", void 0),
+        (0, s.Cg)([o.sH], N.prototype, "m_nTimelineDuration", void 0),
+        (0, s.Cg)([o.sH], N.prototype, "m_nVideoStartPos", void 0),
+        (0, s.Cg)([o.sH], N.prototype, "m_nVideoEndPos", void 0),
+        (0, s.Cg)([o.sH], N.prototype, "m_editorStartTime", void 0),
+        (0, s.Cg)([o.sH], N.prototype, "m_editorEndTime", void 0),
+        (0, s.Cg)([o.XI.bound], N.prototype, "StartBroadcast", null),
+        (0, s.Cg)([o.XI.bound], N.prototype, "StartClip", null),
+        (0, s.Cg)([o.XI.bound], N.prototype, "StartVOD", null),
+        (0, s.Cg)([S.o], N.prototype, "OnVideoPlaying", null),
+        (0, s.Cg)([S.o], N.prototype, "OnVideoPause", null),
+        (0, s.Cg)([o.XI.bound], N.prototype, "OnVideoTimeUpdate", null),
+        (0, s.Cg)([S.o], N.prototype, "OnVolumeUpdated", null),
+        (0, s.Cg)([o.XI.bound], N.prototype, "OnGameDataUpdate", null),
+        (0, s.Cg)([S.o], N.prototype, "OnDownloadFailed", null),
+        (0, s.Cg)([S.o], N.prototype, "OnWebRTCRetry", null),
+        (0, s.Cg)([S.o], N.prototype, "OnWebRTCFailed", null),
+        (0, s.Cg)([S.o], N.prototype, "OnUserInputNeeded", null);
+      const x = new F();
+      window.uiBroadcastWatchStore = x;
     },
   },
 ]);

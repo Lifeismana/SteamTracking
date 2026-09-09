@@ -565,11 +565,7 @@
         static s_Singleton;
         static Get() {
           return (
-            j.s_Singleton ||
-              ((j.s_Singleton = new j()),
-              j.s_Singleton.Init(),
-              "dev" == p.TS.WEB_UNIVERSE &&
-                (window.g_ReservationMessagingStore = j.s_Singleton)),
+            j.s_Singleton || ((j.s_Singleton = new j()), j.s_Singleton.Init()),
             j.s_Singleton
           );
         }
@@ -580,11 +576,6 @@
             "application_config",
           );
           (0, m.wT)(Boolean(e), "require promotion_operation_token"),
-            "dev" == p.TS.WEB_UNIVERSE &&
-              console.log(
-                "DEV_DEBUG Initializing CReservationMessagingStore with access token ",
-                e,
-              ),
             (this.m_steamInterface = new d.D(p.TS.WEBAPI_BASE_URL, e));
           const t = (0, r.Tc)(
             "reservation_queue_position_messages",
@@ -718,8 +709,8 @@
         });
       }
       var k = s(71298),
-        T = s(99637),
-        y = s(8905),
+        y = s(99637),
+        T = s(8905),
         R = s(9154),
         D = s(738),
         C = s(48479),
@@ -728,16 +719,16 @@
         I = s(95695),
         L = s(67936),
         N = (s(66418), s(78686)),
-        E = s(6866),
-        B = (s(78603), s(12842)),
-        G = s.n(B);
+        B = s(6866),
+        E = (s(78603), s(12842)),
+        G = s.n(E);
       function z(e) {
         const { elReservationMessage: t, strUrlLearnMoreLink: s } = e;
         return s
           ? (0, n.jsxs)(n.Fragment, {
               children: [
                 t,
-                (0, n.jsx)(E.d$, {
+                (0, n.jsx)(B.d$, {
                   url: s,
                   className: G().Link,
                   children: N.Z.Localize("#Button_Learn"),
@@ -887,7 +878,7 @@
                 "No products with reservation position messages exists.",
             });
       }
-      function V(e) {
+      function H(e) {
         return (0, n.jsxs)("div", {
           children: [
             (0, n.jsx)(w.JU, { children: "instructions:" }),
@@ -906,7 +897,7 @@
           ],
         });
       }
-      function H(e) {
+      function V(e) {
         f();
         return (0, n.jsxs)("div", {
           children: [
@@ -1013,7 +1004,7 @@
             (0, n.jsxs)("td", {
               children: [
                 (0, n.jsx)("div", {
-                  children: (0, n.jsx)(y.p, { accountID: t.accountid }),
+                  children: (0, n.jsx)(T.p, { accountID: t.accountid }),
                 }),
                 (0, n.jsx)("br", {}),
                 "On: ",
@@ -1095,7 +1086,7 @@
                     onChange: (e) =>
                       c(Number.parseInt(e?.currentTarget?.value || "0")),
                   }),
-                  (0, n.jsx)(T.K, {
+                  (0, n.jsx)(y.K, {
                     bShowTimeZone: !0,
                     strDescription: "Estimated Time Users will receive invite",
                     strDescToolTip:
@@ -1257,11 +1248,11 @@
                   children: [
                     (0, n.jsx)("div", {
                       className: ie().SectionCtn,
-                      children: (0, n.jsx)(V, {}),
+                      children: (0, n.jsx)(H, {}),
                     }),
                     (0, n.jsx)("div", {
                       className: ie().SectionCtn,
-                      children: (0, n.jsx)(H, {}),
+                      children: (0, n.jsx)(V, {}),
                     }),
                     (0, n.jsxs)("div", {
                       className: ie().SectionCtn,
@@ -1308,21 +1299,19 @@
     },
     44165: (e, t, s) => {
       "use strict";
-      s.d(t, { HD: () => u, P_: () => d, f1: () => p, sB: () => g });
-      var n = s(19367),
-        i = s.n(n),
-        r = s(90626),
-        o = s(83085),
-        a = s(4434),
-        l = s(78327),
-        c = s(63340);
-      const u = new (class {
+      s.d(t, { HD: () => a, P_: () => l, f1: () => h, sB: () => m });
+      s(19367);
+      var n = s(90626),
+        i = s(83085),
+        r = s(4434),
+        o = s(63340);
+      const a = new (class {
         bIncludeFeaturedAsGameSource = !0;
         get nOverrideDateNow() {
-          return (0, o.mm)();
+          return (0, i.mm)();
         }
         set nOverrideDateNow(e) {
-          (0, o.ai)(e);
+          (0, i.ai)(e);
         }
         get bRequireAllEventsLoadedInTimeBlock() {
           return !1;
@@ -1331,65 +1320,49 @@
           return !0;
         }
         GetTimeNowWithOverride() {
-          return (0, o.Gw)();
+          return (0, i.Gw)();
         }
         GetTimeNowWithOverrideAsDate() {
-          return (0, o.Lk)();
+          return (0, i.Lk)();
         }
         BHasTimeOverride() {
-          return Boolean((0, o.mm)());
+          return Boolean((0, i.mm)());
         }
         ParseDevOverrides(e) {
           if (!e || 0 == e.length) return;
-          const t = new URLSearchParams("?" == e[0] ? e.substring(1) : e);
-          if (
-            t.has("t") &&
-            ("dev" == l.TS.WEB_UNIVERSE || "beta" == l.TS.WEB_UNIVERSE)
-          ) {
-            const e = t.get("t");
-            let s = /^\d+$/.test(e ?? "")
-              ? i().unix(Number.parseInt(e ?? "0"))
-              : i()(e);
-            (this.nOverrideDateNow = Math.floor(s.unix())),
-              console.log(
-                "CEventCalendarDevFeatures overriding partner event time: " +
-                  this.nOverrideDateNow +
-                  " " +
-                  s.format(),
-              );
-          }
+          new URLSearchParams("?" == e[0] ? e.substring(1) : e).has("t");
         }
       })();
-      function d(e = 1) {
-        const [t, s] = r.useState(() => _()),
-          n = (0, a.m)("useTimeNowWithOverride"),
-          i = r.useCallback(() => {
-            n.token.reason || s(_());
+      function l(e = 1) {
+        const [t, s] = n.useState(() => d()),
+          i = (0, r.m)("useTimeNowWithOverride"),
+          o = n.useCallback(() => {
+            i.token.reason || s(d());
           }, []);
         return (
-          r.useEffect(() => {
+          n.useEffect(() => {
             const t = 1e3 * e,
               s = t - (Date.now() % t),
-              n = window.setTimeout(i, s);
+              n = window.setTimeout(o, s);
             return () => {
               window.clearTimeout(n);
             };
-          }, [t, e, i]),
+          }, [t, e, o]),
           t
         );
       }
-      (0, c.V)("g_EventCalendarDevFeatures", u);
-      const m = new Date(),
-        h = Math.floor(m.getTime() / 1e3);
-      function _() {
+      (0, o.V)("g_EventCalendarDevFeatures", a);
+      const c = new Date(),
+        u = Math.floor(c.getTime() / 1e3);
+      function d() {
         const e = Math.floor(Date.now() / 1e3);
-        return u.nOverrideDateNow ? u.nOverrideDateNow + (e - h) : e;
+        return a.nOverrideDateNow ? a.nOverrideDateNow + (e - u) : e;
       }
-      function g() {
-        return u.nOverrideDateNow ?? h;
+      function m() {
+        return a.nOverrideDateNow ?? u;
       }
-      function p() {
-        return r.useMemo(() => g(), []);
+      function h() {
+        return n.useMemo(() => m(), []);
       }
     },
     27144: (e, t, s) => {
@@ -1546,8 +1519,8 @@
           bNoDefaultDate: S,
           className: M,
           strDescToolTip: k,
-          strDescription: T,
-          bShowTimeZone: y,
+          strDescription: y,
+          bShowTimeZone: T,
           strInvalidDateTimeLocalizedMsg: R,
           fnIsValidDateTime: D,
           bWeekdaysOnly: C,
@@ -1563,7 +1536,7 @@
             ? v
             : f;
         const N = r(),
-          [E, B] = i.useState(N > 0 ? j()(1e3 * N) : null),
+          [B, E] = i.useState(N > 0 ? j()(1e3 * N) : null),
           [G, z] = i.useState(0),
           [F, U] = i.useState(),
           [O, Y] = i.useState(),
@@ -1589,7 +1562,7 @@
             );
           })(F, O, R, D, c),
           q = !c && W;
-        let Q, V;
+        let Q, H;
         if (t && s && t == s && s > l.HD.GetTimeNowWithOverride()) {
           const e = j().unix(s);
           (Q = {
@@ -1600,10 +1573,10 @@
           }),
             (L = v);
         }
-        N || !s || S || (V = j().unix(s));
-        const H = j().tz.guess(),
-          K = j().unix(N).tz(H),
-          J = !!_ && H != _ && j().unix(N).tz(_),
+        N || !s || S || (H = j().unix(s));
+        const V = j().tz.guess(),
+          K = j().unix(N).tz(V),
+          J = !!_ && V != _ && j().unix(N).tz(_),
           {
             fnOnInput: Z,
             fnOnInputBlur: X,
@@ -1619,7 +1592,7 @@
                 e.minute(s.minute()),
                 e.second(0),
                 A(e.unix()),
-                B(e);
+                E(e);
             },
             Y,
           ),
@@ -1646,7 +1619,7 @@
                   3600 * e.hour() +
                   60 * e.minutes();
               }
-              A(n), B(j().unix(n));
+              A(n), E(j().unix(n));
             },
             U,
           ),
@@ -1660,7 +1633,7 @@
                 (0, n.jsx)(h.he, {
                   toolTipContent: k,
                   direction: "top",
-                  children: Boolean(T) && (0, n.jsx)("span", { children: T }),
+                  children: Boolean(y) && (0, n.jsx)("span", { children: y }),
                 }),
                 q &&
                   (0, n.jsxs)("span", {
@@ -1680,7 +1653,7 @@
                       {
                         onChange: $,
                         timeFormat: !1,
-                        value: null != O ? O : E,
+                        value: null != O ? O : B,
                         isValidDate: (e) =>
                           !p &&
                           (function (e, t, s, n) {
@@ -1700,7 +1673,7 @@
                                 (r = !1));
                             return r;
                           })(s, t, C, e),
-                        initialValue: V,
+                        initialValue: H,
                         inputProps: {
                           placeholder: (0, m.we)("#DateTimePicker_Enter_Date"),
                           className: (0, d.A)(
@@ -1732,7 +1705,7 @@
                         dateFormat: !1,
                         timeFormat: L,
                         timeConstraints: Q,
-                        value: null != F ? F : E,
+                        value: null != F ? F : B,
                         inputProps: {
                           placeholder: (0, m.we)("#DateTimePicker_Enter_Time"),
                           className: (0, d.A)(
@@ -1754,7 +1727,7 @@
                       }),
                   ],
                 }),
-                y &&
+                T &&
                   (0, n.jsxs)("div", {
                     children: [
                       (0, n.jsx)("div", {
@@ -1773,7 +1746,7 @@
                     type: "button",
                     className: g().ClearButton,
                     onClick: () => {
-                      p || (A(0), B(null), Y(null), U(null), z((e) => e + 1));
+                      p || (A(0), E(null), Y(null), U(null), z((e) => e + 1));
                     },
                     children: (0, m.we)("#Button_Clear"),
                   }),

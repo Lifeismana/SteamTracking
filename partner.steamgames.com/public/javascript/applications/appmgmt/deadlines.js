@@ -239,11 +239,11 @@
       "use strict";
       i.d(t, {
         MY: () => h,
-        UA: () => x,
+        UA: () => p,
         Yd: () => y,
         qG: () => v,
         rN: () => f,
-        vh: () => p,
+        vh: () => x,
       });
       var n = i(34629),
         a = i(41735),
@@ -327,22 +327,14 @@
         }
         static s_Singleton;
         static Get() {
-          return (
-            m.s_Singleton ||
-              ((m.s_Singleton = new m()),
-              ("dev" != c.TS.WEB_UNIVERSE && "beta" != c.TS.WEB_UNIVERSE) ||
-                (window.g_PartnerInfoStore = m.s_Singleton)),
-            m.s_Singleton
-          );
+          return m.s_Singleton || (m.s_Singleton = new m()), m.s_Singleton;
         }
         constructor() {
           let e = JSON.parse(
             JSON.stringify((0, c.Tc)("partner_info", "application_config")),
           );
           this.ValidateStoreDefault(e) &&
-            (e.forEach((e) => this.m_mapOptInToPartners.set(e.partnerid, e)),
-            "dev" == c.TS.WEB_UNIVERSE &&
-              console.log("DEV_DEUBG: CPartnerInfoStore::constructor", e));
+            e.forEach((e) => this.m_mapOptInToPartners.set(e.partnerid, e));
         }
         ValidateStoreDefault(e) {
           const t = e;
@@ -358,7 +350,7 @@
           );
         }
       }
-      function p(e) {
+      function x(e) {
         const [t, i] = (0, o.useState)(!1);
         return (
           (0, o.useEffect)(() => {
@@ -372,7 +364,7 @@
           t
         );
       }
-      function x(e) {
+      function p(e) {
         const [t, i] = o.useState(() => m.Get().GetPartnerInfo(e));
         return (
           o.useEffect(() => {
@@ -413,22 +405,22 @@
         u = i(41735),
         h = i.n(u),
         m = i(78327),
-        p = i(22837),
-        x = i(66418),
+        x = i(22837),
+        p = i(66418),
         f = i(54330),
         y = i(32179),
         v = i(16021),
         j = i(55263),
         g = i(95034),
         S = i(95695),
-        _ = i.n(S),
+        N = i.n(S),
         b = i(51272),
-        N = i(26408),
+        _ = i(26408),
         w = i(52038),
         T = i(61859),
         C = i(91675);
       const I = { include_assets: !0, include_release: !0 };
-      function B() {
+      function R() {
         const e = F(a.Qo.Jg),
           [t, i] = (0, g.QD)("query", ""),
           r = (0, s.useMemo)(
@@ -448,7 +440,7 @@
           c = (0, j.zX)(r, I),
           u = (0, y.vh)(d),
           [h, m] = (0, g.QD)("internaldate", !1),
-          p = (0, s.useMemo)(() => {
+          x = (0, s.useMemo)(() => {
             const i = t.trim().toLocaleLowerCase();
             return e
               ?.filter(
@@ -474,7 +466,7 @@
                   children: [
                     "Season Passes ",
                     (0, n.jsx)("button", {
-                      className: (0, w.A)(_().Button),
+                      className: (0, w.A)(N().Button),
                       style: { float: "right", marginRight: "16px" },
                       onClick: (e) =>
                         (0, b.EP)(
@@ -514,7 +506,7 @@
                           (0, n.jsxs)("th", {
                             children: [
                               "Milestone ID ",
-                              (0, n.jsx)(N.o, {
+                              (0, n.jsx)(_.o, {
                                 tooltip:
                                   "This is only unique within a DLC Season Pass",
                               }),
@@ -528,7 +520,7 @@
                           (0, n.jsxs)("th", {
                             children: [
                               "Deadline Date ",
-                              (0, n.jsx)(N.o, {
+                              (0, n.jsx)(_.o, {
                                 tooltip:
                                   "This account for what the customrs see on the store, not their specific data",
                               }),
@@ -540,8 +532,8 @@
                       }),
                     }),
                     (0, n.jsx)("tbody", {
-                      children: p.map((e) =>
-                        (0, n.jsx)(R, { deadline: e }, "" + e.deadlineid),
+                      children: x.map((e) =>
+                        (0, n.jsx)(B, { deadline: e }, "" + e.deadlineid),
                       ),
                     }),
                   ],
@@ -550,7 +542,7 @@
             })
           : null;
       }
-      function R(e) {
+      function B(e) {
         const { deadline: t } = e,
           [i] = (0, j.t7)(t.data.store_item_id, I),
           [a] = (0, y.UA)(t.data.partnerid),
@@ -569,7 +561,7 @@
                 }),
                 "(",
                 (0, n.jsxs)("a", {
-                  href: `${x.TS.PARTNER_BASE_URL}admin/game/editbyappid/${t.data.store_item_id}`,
+                  href: `${p.TS.PARTNER_BASE_URL}admin/game/editbyappid/${t.data.store_item_id}`,
                   target: "_blank",
                   children: [t.data.store_item_id, ")"],
                 }),
@@ -577,7 +569,7 @@
             }),
             (0, n.jsx)("td", {
               children: (0, n.jsxs)("a", {
-                href: `${x.TS}pub/companydetails/${t.data.partnerid}`,
+                href: `${p.TS}pub/companydetails/${t.data.partnerid}`,
                 target: "_blank",
                 children: [a?.name || "unknown", " (", t.data.partnerid, ")"],
               }),
@@ -597,15 +589,15 @@
               ],
             }),
             (0, n.jsx)("td", {
-              children: o?.title.find((e) => e.language == p.Bhc)
+              children: o?.title.find((e) => e.language == x.Bhc)
                 ?.localized_string,
             }),
             (0, n.jsx)("td", { children: "TODO" }),
           ],
         });
       }
-      var A = i(39700);
-      function P() {
+      var P = i(39700);
+      function A() {
         const [e, t] = s.useState(0),
           i = F(a.Qo.RO, e),
           o = s.useRef(0);
@@ -683,7 +675,7 @@
                         Array.from(r?.values()).map((e, t) =>
                           e.length > 0
                             ? (0, n.jsx)(
-                                k,
+                                q,
                                 { actionID: e[0].gid, rgDeadlines: e },
                                 "aid_" + t,
                               )
@@ -692,7 +684,7 @@
                     }),
                   ],
                 }),
-                Boolean(!i && e > 0) && (0, n.jsx)(A.k, { size: "small" }),
+                Boolean(!i && e > 0) && (0, n.jsx)(P.k, { size: "small" }),
                 Boolean(0 == i?.length && e > 0) &&
                   (0, n.jsxs)("div", {
                     className: d().EmptyNotifications,
@@ -703,7 +695,7 @@
           ],
         });
       }
-      function k(e) {
+      function q(e) {
         const { actionID: t, rgDeadlines: i } = e;
         return i.length
           ? (0, n.jsxs)(n.Fragment, {
@@ -712,13 +704,13 @@
                   children: (0, n.jsx)("td", { children: t }),
                 }),
                 i.map((e, t) =>
-                  (0, n.jsx)(q, { deadline: e }, e.gid + "_" + t),
+                  (0, n.jsx)(k, { deadline: e }, e.gid + "_" + t),
                 ),
               ],
             })
           : null;
       }
-      function q(e) {
+      function k(e) {
         const { deadline: t } = e,
           i = JSON.parse(t.description_jsondata),
           a = new Date(i.CreatedOn).toUTCString();
@@ -744,10 +736,10 @@
         let c = null;
         switch (t) {
           case a.Qo.RO.toString():
-            c = (0, n.jsx)(P, {});
+            c = (0, n.jsx)(A, {});
             break;
           case a.Qo.Jg.toString():
-            c = (0, n.jsx)(B, {});
+            c = (0, n.jsx)(R, {});
             break;
           default:
             console.error(
@@ -804,7 +796,7 @@
     2203: (e, t, i) => {
       "use strict";
       i.r(t),
-        i.d(t, { default: () => P, k_rgTemplateNameOptionsList: () => B });
+        i.d(t, { default: () => A, k_rgTemplateNameOptionsList: () => R });
       var n = i(7850),
         a = i(90626),
         s = i(24484),
@@ -816,8 +808,8 @@
         u = i.n(c),
         h = i(61859),
         m = i(52038),
-        p = i(16676),
-        x = i(14771),
+        x = i(16676),
+        p = i(14771),
         f = i(78327),
         y = i(41735),
         v = i.n(y),
@@ -835,7 +827,7 @@
           ],
         });
       }
-      function _() {
+      function N() {
         return (0, n.jsxs)("div", {
           className: l().MessageHeader,
           children: [
@@ -849,7 +841,7 @@
         });
       }
       let b = -1,
-        N = -1;
+        _ = -1;
       function w(e) {
         const { requirement: t } = e,
           [i, s] = (0, a.useState)(""),
@@ -877,7 +869,7 @@
           children: [
             !!i &&
               (0, n.jsx)("div", { className: l().InterviewError, children: i }),
-            (0, n.jsx)(p.jn, {
+            (0, n.jsx)(x.jn, {
               disabled: o,
               onClick: () => d(),
               className: l().NotificationButton,
@@ -891,8 +883,8 @@
           i = JSON.parse(t.deadline.data.description_jsondata),
           a = i.Parameters?.Dropbox_FileRequest_Url;
         if (!a) return null;
-        if (-1 == N) N = t.index;
-        else if (N != t.index) return null;
+        if (-1 == _) _ = t.index;
+        else if (_ != t.index) return null;
         return (0, n.jsxs)("div", {
           children: [
             (0, n.jsx)("div", {
@@ -907,11 +899,11 @@
                 (0, n.jsx)("span", {
                   className: l().DocumentProcessingNotice,
                   children:
-                    "Please note that this action item will remain active and on your dashboard until our tax vendor has reviewed and approved your documents. The document approval process typically takes 2 to 7 days.",
+                    "Please note that this action item will remain active and on your dashboard until our tax vendor has reviewed and approved your documents. The document approval process takes up to 10 days.",
                 }),
               ],
             }),
-            (0, n.jsx)(p.jn, {
+            (0, n.jsx)(x.jn, {
               onClick: () => window.open(a, "_blank"),
               className: l().NotificationButton,
               children: "Open Dropbox™ File Request",
@@ -971,7 +963,7 @@
           ? "Until your tax information has been verified, you will not be able to receive any further payments."
           : "You will be unable to distribute your product via Steam until we receive valid KYC and tax information from you.";
       }
-      const B = [
+      const R = [
           "AddressCorrection",
           "DocReq-KYC-Docs",
           "DocReq-KYC-Entity-FR",
@@ -999,8 +991,15 @@
           "Notify-NoTINTreaty-Partner",
           "Renewal-W8-Initial",
           "Renewal-W8-Partner-Urgent",
+          "DocReq-PhotoId-10Years",
+          "DocReq-PhotoId-FrontBack",
+          "DocRec-NameTranslation",
+          "DocReq-Entity-CN-NECIPS",
+          "DocReq-ProofOfAddress",
+          "DocReq-TaxResidency",
+          "DocReq-Entity-TR-Gazetesi",
         ],
-        R = {
+        B = {
           AddressCorrection: {
             component: function (e) {
               return (0, n.jsxs)("div", {
@@ -1045,7 +1044,7 @@
               return (0, n.jsxs)("div", {
                 className: (0, m.A)(l().NotificationContainer, u().SectionCtn),
                 children: [
-                  (0, n.jsx)(_, {}),
+                  (0, n.jsx)(N, {}),
                   (0, n.jsxs)("div", {
                     className: l().SectionBody,
                     children: [
@@ -1064,7 +1063,7 @@
               return (0, n.jsxs)("div", {
                 className: (0, m.A)(l().NotificationContainer, u().SectionCtn),
                 children: [
-                  (0, n.jsx)(_, {}),
+                  (0, n.jsx)(N, {}),
                   (0, n.jsx)("div", {
                     className: l().SectionTitle,
                     children: "Why is this important?",
@@ -1136,7 +1135,7 @@
               return (0, n.jsxs)("div", {
                 className: (0, m.A)(l().NotificationContainer, u().SectionCtn),
                 children: [
-                  (0, n.jsx)(_, {}),
+                  (0, n.jsx)(N, {}),
                   (0, n.jsx)("div", {
                     className: l().SectionTitle,
                     children: "Why is this important?",
@@ -1186,7 +1185,7 @@
                       u().SectionCtn,
                     ),
                     children: [
-                      (0, n.jsx)(_, {}),
+                      (0, n.jsx)(N, {}),
                       (0, n.jsx)("div", {
                         className: l().SectionTitle,
                         children: "Why is this important?",
@@ -1231,7 +1230,7 @@
                               (0, n.jsxs)("div", {
                                 className: l().SectionBody,
                                 children: [
-                                  "Please provide one of the following:",
+                                  "Please provide one of the following, issued within the last 10 years:",
                                   (0, n.jsxs)("ol", {
                                     children: [
                                       (0, n.jsx)("li", {
@@ -1378,7 +1377,7 @@
                       (0, n.jsx)("div", {
                         className: l().MessageSubject,
                         children:
-                          "Please provide a selfie of you holding your identity document.",
+                          "Please provide both a selfie of yourself holding your photo identification and a separate, clear image of the same identification document (front and back if the identification is a card style ID). Both images must show the exact same, valid (unexpired) photo ID, issued within the past 10 years.",
                       }),
                     ],
                   }),
@@ -1389,7 +1388,7 @@
                   (0, n.jsx)("div", {
                     className: l().SectionBody,
                     children:
-                      "Show your full face, and you holding the same Identification document that you have previously provided. Please remove all hats, glasses, and other facial obstructions",
+                      "Show your full face, and you holding the same Identification document that you have previously provided. Please remove all hats, glasses, and other facial obstructions. The ID itself must be clear and legible and all four corners and edges must be visible.",
                   }),
                   (0, n.jsx)(T, { ...e }),
                 ],
@@ -1592,7 +1591,7 @@
                   }),
                   (0, n.jsx)("div", {
                     className: l().SectionBody,
-                    children: (0, n.jsx)(p.jn, {
+                    children: (0, n.jsx)(x.jn, {
                       onClick: () => window.open(i, "_blank"),
                       className: l().NotificationButton,
                       children: "View Tax Documents",
@@ -1632,7 +1631,7 @@
                   }),
                   (0, n.jsx)("div", {
                     className: l().SectionBody,
-                    children: (0, n.jsx)(p.jn, {
+                    children: (0, n.jsx)(x.jn, {
                       onClick: () => window.open(i, "_blank"),
                       className: l().NotificationButton,
                       children: "View Tax Documents",
@@ -1933,7 +1932,7 @@
                       (0, n.jsxs)("li", {
                         children: [
                           "If you need to change your Steamworks partner legal name, please open a Steamworks support ticket to make that change.",
-                          (0, n.jsx)(p.jn, {
+                          (0, n.jsx)(x.jn, {
                             onClick: () =>
                               window.open(
                                 f.TS.HELP_BASE_URL +
@@ -1959,7 +1958,7 @@
                       (0, n.jsxs)("li", {
                         children: [
                           "If you need to change your Steamworks partner legal name, please return to the payment information page using the button below and click 'start over' to start the process again to correct your Steamworks partner legal name (note: you will not lose your Steam Direct app credit).",
-                          (0, n.jsx)(p.jn, {
+                          (0, n.jsx)(x.jn, {
                             onClick: () =>
                               window.open(
                                 f.TS.PARTNER_BASE_URL + "newpartner",
@@ -2295,8 +2294,317 @@
               });
             },
           },
+          "DocReq-PhotoId-10Years": {
+            component: function (e) {
+              return (0, n.jsxs)("div", {
+                className: (0, m.A)(l().NotificationContainer, u().SectionCtn),
+                children: [
+                  (0, n.jsx)("div", {
+                    className: l().MessageHeader,
+                    children: (0, n.jsx)("h1", {
+                      children: "Identity verification required",
+                    }),
+                  }),
+                  (0, n.jsxs)("div", {
+                    className: l().SectionBody,
+                    children: [
+                      "Please provide a valid form of photo identification that has been issued within the past 10 years (front and back if the identification is a card style ID).",
+                      (0, n.jsx)("p", {}),
+                      "Note: while we understand your ID may be valid beyond 10 years, our requirement is that the ID is issued within the last 10 years.",
+                    ],
+                  }),
+                  (0, n.jsx)("div", {
+                    className: l().SectionTitle,
+                    children: "Image Requirements",
+                  }),
+                  (0, n.jsx)("div", {
+                    className: l().SectionBody,
+                    children: (0, n.jsx)("div", {
+                      className: l().RequiredDocumentList,
+                      children: (0, n.jsxs)("ol", {
+                        children: [
+                          (0, n.jsx)("li", {
+                            children:
+                              "Please ensure the images are high quality, in color and are clear and in focus. Do not crop the images. The four corners and edges of the card must be clearly visible.",
+                          }),
+                          (0, n.jsx)("li", {
+                            children:
+                              "Please send the images as a JPEG / Image file",
+                          }),
+                        ],
+                      }),
+                    }),
+                  }),
+                  (0, n.jsx)(T, { ...e }),
+                ],
+              });
+            },
+          },
+          "DocReq-PhotoId-FrontBack": {
+            component: function (e) {
+              return (0, n.jsxs)("div", {
+                className: (0, m.A)(l().NotificationContainer, u().SectionCtn),
+                children: [
+                  (0, n.jsx)("div", {
+                    className: l().MessageHeader,
+                    children: (0, n.jsx)("h1", {
+                      children: "Identity verification required",
+                    }),
+                  }),
+                  (0, n.jsx)("div", {
+                    className: l().SectionBody,
+                    children:
+                      "Please provide an image of both the front and back of your photo identification document so that we can validate your account.",
+                  }),
+                  (0, n.jsx)("div", {
+                    className: l().SectionTitle,
+                    children: "Image Requirements",
+                  }),
+                  (0, n.jsx)("div", {
+                    className: l().SectionBody,
+                    children: (0, n.jsx)("div", {
+                      className: l().RequiredDocumentList,
+                      children: (0, n.jsxs)("ol", {
+                        children: [
+                          (0, n.jsx)("li", {
+                            children:
+                              "Please ensure the images are high quality, in color and are clear and in focus. Do not crop the images. The four corners and edges of the card must be clearly visible.",
+                          }),
+                          (0, n.jsx)("li", {
+                            children:
+                              "Please send the images as a JPEG / Image file",
+                          }),
+                        ],
+                      }),
+                    }),
+                  }),
+                  (0, n.jsx)(T, { ...e }),
+                ],
+              });
+            },
+          },
+          "DocRec-NameTranslation": {
+            component: function (e) {
+              return (0, n.jsxs)("div", {
+                className: (0, m.A)(l().NotificationContainer, u().SectionCtn),
+                children: [
+                  (0, n.jsx)("div", {
+                    className: l().MessageHeader,
+                    children: (0, n.jsx)("h1", {
+                      children: "Identity verification required",
+                    }),
+                  }),
+                  (0, n.jsx)("div", {
+                    className: l().SectionBody,
+                    children:
+                      "Please provide a document that shows your full legal name in English such as an international passport.  You may also provide a picture of a bank card or credit card (with the numbers masked) that presents your name in English.",
+                  }),
+                  (0, n.jsx)("div", {
+                    className: l().SectionBody,
+                    children:
+                      "When we translate the legal name on the document you provided, it does not match the name you provided when you signed up for an account with Steam. We are unable to validate your account until we can confirm the legal name in English.",
+                  }),
+                  (0, n.jsx)("div", {
+                    className: l().SectionTitle,
+                    children: "Image Requirements",
+                  }),
+                  (0, n.jsx)("div", {
+                    className: l().SectionBody,
+                    children: (0, n.jsx)("div", {
+                      className: l().RequiredDocumentList,
+                      children: (0, n.jsxs)("ol", {
+                        children: [
+                          (0, n.jsx)("li", {
+                            children:
+                              "Please ensure the images are high quality, in color and are clear and in focus. Do not crop the images. The four corners and edges of the card must be clearly visible.",
+                          }),
+                          (0, n.jsx)("li", {
+                            children:
+                              "Please send the images as a JPEG / Image file",
+                          }),
+                        ],
+                      }),
+                    }),
+                  }),
+                  (0, n.jsx)(T, { ...e }),
+                ],
+              });
+            },
+          },
+          "DocReq-Entity-CN-NECIPS": {
+            component: function (e) {
+              return (0, n.jsxs)("div", {
+                className: (0, m.A)(l().NotificationContainer, u().SectionCtn),
+                children: [
+                  (0, n.jsx)("div", {
+                    className: l().MessageHeader,
+                    children: (0, n.jsx)("h1", {
+                      children: "Identity verification required",
+                    }),
+                  }),
+                  (0, n.jsxs)("div", {
+                    className: l().SectionBody,
+                    children: [
+                      "In order for us to validate your account, we need to verify the company is not only legally registered but also in good operational standing. Please provide us with a copy of the following from the NECIPS platform:",
+                      (0, n.jsx)("div", {
+                        className: l().RequiredDocumentList,
+                        children: (0, n.jsxs)("ol", {
+                          children: [
+                            (0, n.jsx)("li", {
+                              children: "Business License (营业执照)",
+                            }),
+                            (0, n.jsx)("li", {
+                              children: "Articles of Association (公司章程)",
+                            }),
+                            (0, n.jsx)("li", {
+                              children: "Operational Continuity (经营状态)",
+                            }),
+                          ],
+                        }),
+                      }),
+                      (0, n.jsx)("b", {
+                        children:
+                          "We are unable to validate your account without each of these required documents.",
+                      }),
+                    ],
+                  }),
+                  (0, n.jsx)("div", {
+                    className: l().SectionBody,
+                    children:
+                      "Please send documents as pdf files. Do not send screenshots of these documents. We require the full pdf document.",
+                  }),
+                  (0, n.jsx)(T, { ...e }),
+                ],
+              });
+            },
+          },
+          "DocReq-ProofOfAddress": {
+            component: function (e) {
+              return (0, n.jsxs)("div", {
+                className: (0, m.A)(l().NotificationContainer, u().SectionCtn),
+                children: [
+                  (0, n.jsx)("div", {
+                    className: l().MessageHeader,
+                    children: (0, n.jsx)("h1", {
+                      children: "Identity verification required",
+                    }),
+                  }),
+                  (0, n.jsx)("div", {
+                    className: l().SectionBody,
+                    children:
+                      "At this time, we are unable to validate your Steam account. This is because the permanent and / or mailing address you entered in the tax interview cannot be verified.",
+                  }),
+                  (0, n.jsx)("div", {
+                    className: l().SectionBody,
+                    children: (0, n.jsx)("b", {
+                      children:
+                        "Please upload a proof of address document (such as a bank statement or utility bill) that clearly shows both your name and the same mailing and permanent address you entered in your tax interview.",
+                    }),
+                  }),
+                  (0, n.jsxs)("div", {
+                    className: l().SectionBody,
+                    children: [
+                      (0, n.jsx)("div", {
+                        className: l().SectionTitle,
+                        children: "Document Requirements",
+                      }),
+                      (0, n.jsx)("div", {
+                        className: l().RequiredDocumentList,
+                        children: (0, n.jsxs)("ul", {
+                          children: [
+                            (0, n.jsx)("li", {
+                              children:
+                                "Please highlight or indicate where the address appears on the document so it can be easily identified during review.",
+                            }),
+                            (0, n.jsx)("li", {
+                              children:
+                                "The address must be translated into English and include any Building / Apartment numbers.",
+                            }),
+                            (0, n.jsx)("li", {
+                              children:
+                                "The address must also include the correct postcode / zip if your country uses them.",
+                            }),
+                            (0, n.jsxs)("li", {
+                              children: [
+                                "Please ",
+                                (0, n.jsx)("b", { children: "do not" }),
+                                " give us the address of your bank or utility company.",
+                              ],
+                            }),
+                            (0, n.jsx)("li", {
+                              children:
+                                "Your account will not be validated until we can make an exact match of the address you entered.",
+                            }),
+                          ],
+                        }),
+                      }),
+                    ],
+                  }),
+                  (0, n.jsx)(T, { ...e }),
+                ],
+              });
+            },
+          },
+          "DocReq-TaxResidency": {
+            component: function (e) {
+              const { requirement: t } = e,
+                i = JSON.parse(t.deadline.data.description_jsondata),
+                a = t.bTestDisplay ? "Sweden" : i?.Parameters?.Country;
+              return (0, n.jsxs)("div", {
+                className: (0, m.A)(l().NotificationContainer, u().SectionCtn),
+                children: [
+                  (0, n.jsx)("div", {
+                    className: l().MessageHeader,
+                    children: (0, n.jsx)("h1", {
+                      children: "Identity verification required",
+                    }),
+                  }),
+                  (0, n.jsxs)("div", {
+                    className: l().SectionBody,
+                    children: [
+                      "Please provide a copy of your tax residency certificate for ",
+                      a,
+                      " so we can validate your account.",
+                    ],
+                  }),
+                  (0, n.jsx)("div", {
+                    className: l().SectionBody,
+                    children:
+                      "Please send the document as a pdf file. Do not send a screenshot of the document. We require the full pdf document.",
+                  }),
+                  (0, n.jsx)(T, { ...e }),
+                ],
+              });
+            },
+          },
+          "DocReq-Entity-TR-Gazetesi": {
+            component: function (e) {
+              return (0, n.jsxs)("div", {
+                className: (0, m.A)(l().NotificationContainer, u().SectionCtn),
+                children: [
+                  (0, n.jsx)("div", {
+                    className: l().MessageHeader,
+                    children: (0, n.jsx)("h1", {
+                      children: "Identity verification required",
+                    }),
+                  }),
+                  (0, n.jsx)("div", {
+                    className: l().SectionBody,
+                    children:
+                      "Please provide an extract from Turkiye Ticaret Sicili Gazetesi showing your entity's legal name.",
+                  }),
+                  (0, n.jsx)("div", {
+                    className: l().SectionBody,
+                    children:
+                      "Please send the document as a pdf file. Do not send a screenshot of the document. We require the full pdf document.",
+                  }),
+                  (0, n.jsx)(T, { ...e }),
+                ],
+              });
+            },
+          },
         };
-      function A() {
+      function P() {
         const [e] = (0, a.useState)(
             (0, s.Tc)("deadlines", "application_config"),
           ),
@@ -2314,9 +2622,9 @@
           );
         return [e, n, t, i, o];
       }
-      function P(e) {
-        const [t, i, d, c, h] = A(),
-          [p, x] = (function () {
+      function A(e) {
+        const [t, i, d, c, h] = P(),
+          [x, p] = (function () {
             const [e] = (0, a.useState)(
                 (0, s.Tc)("testpage", "application_config"),
               ),
@@ -2379,12 +2687,12 @@
                       }),
                     (0, n.jsxs)(n.Fragment, {
                       children: [
-                        p && (0, n.jsx)(k, { strTemplate: x }),
+                        x && (0, n.jsx)(q, { strTemplate: p }),
                         y &&
                           f.length > 0 &&
                           f.map((e, t) =>
                             (0, n.jsx)(
-                              q,
+                              k,
                               {
                                 requirement: {
                                   deadline: e,
@@ -2440,31 +2748,31 @@
           }),
         });
       }
-      function k(e) {
+      function q(e) {
         const { strTemplate: t } = e,
           [i, s] = a.useState(t || "Renewal-W8-Initial"),
           [o, r] = a.useState(!0),
-          d = B.map((e) => ({ label: e, data: e })),
+          d = R.map((e) => ({ label: e, data: e })),
           l = Date.now(),
           c = {},
           u = new Intl.DateTimeFormat(navigator.language).format(l);
         return (
           (c.data = {}),
-          (c.data.due_date = l / 1e3 + 14 * x.Kp.PerDay),
+          (c.data.due_date = l / 1e3 + 14 * p.Kp.PerDay),
           (c.data.description_jsondata = `{ "TemplateName": "${i}", "CreatedOn": "${u}" }`),
           (0, n.jsxs)("div", {
             children: [
               (0, n.jsxs)("div", {
                 style: { display: "flex", alignItems: "center" },
                 children: [
-                  (0, n.jsx)(p.ZU, {
+                  (0, n.jsx)(x.ZU, {
                     rgOptions: d,
                     selectedOption: i,
                     onChange: (e) => {
                       s(e.data);
                     },
                   }),
-                  (0, n.jsx)(p.Yh, {
+                  (0, n.jsx)(x.Yh, {
                     checked: o,
                     style: { marginLeft: "10px", marginRight: "10px" },
                     onClick: () => r(!o),
@@ -2476,7 +2784,7 @@
                 ],
               }),
               (0, n.jsx)("br", {}),
-              (0, n.jsx)(q, {
+              (0, n.jsx)(k, {
                 requirement: {
                   deadline: c,
                   index: 0,
@@ -2488,13 +2796,13 @@
           })
         );
       }
-      function q(e) {
+      function k(e) {
         const { requirement: t } = e,
           i = JSON.parse(t.deadline.data.description_jsondata),
-          [, a] = A(),
+          [, a] = P(),
           s = new Date(i?.CreatedOn);
         if ("ActionComplete" == i.TemplateName) return null;
-        if (!R[i.TemplateName])
+        if (!B[i.TemplateName])
           return (0, n.jsxs)("div", {
             className: (0, m.A)(l().NotificationContainer, u().SectionCtn),
             children: [
@@ -2505,7 +2813,7 @@
               (0, n.jsx)("div", { children: "Message Not Available" }),
             ],
           });
-        const o = R[i.TemplateName].component;
+        const o = B[i.TemplateName].component;
         return (0, n.jsxs)(n.Fragment, {
           children: [
             (0, n.jsx)("div", {
@@ -2523,19 +2831,19 @@
         G6: () => m,
         Gg: () => f,
         MS: () => j,
-        Ow: () => x,
+        Ow: () => p,
         Sq: () => c,
         eR: () => u,
         gF: () => g,
         ik: () => h,
-        t7: () => p,
+        t7: () => x,
         zX: () => v,
       });
       var n = i(41735),
         a = i.n(n),
         s = i(90626),
         o = i(37085),
-        r = i(6824),
+        r = i(30570),
         d = i(73745),
         l = i(16021);
       const c = 1,
@@ -2544,27 +2852,27 @@
       function m(e, t, i, n) {
         const r = (0, s.useRef)(void 0),
           m = (0, s.useRef)(void 0),
-          p = (0, d.CH)();
+          x = (0, d.CH)();
         r.current = e;
-        const [x, f] = (0, s.useState)(void 0),
+        const [p, f] = (0, s.useState)(void 0),
           {
             include_assets: y,
             include_release: v,
             include_platforms: j,
             include_all_purchase_options: g,
             include_screenshots: S,
-            include_trailers: _,
+            include_trailers: N,
             include_ratings: b,
-            include_tag_count: N,
+            include_tag_count: _,
             include_reviews: w,
             include_basic_info: T,
             include_supported_languages: C,
             include_full_description: I,
-            include_included_items: B,
-            include_assets_without_overrides: R,
-            apply_user_filters: A,
-            include_links: P,
-            include_extra_details: k,
+            include_included_items: R,
+            include_assets_without_overrides: B,
+            apply_user_filters: P,
+            include_links: A,
+            include_extra_details: q,
           } = i;
         if (
           ((0, s.useEffect)(() => {
@@ -2574,31 +2882,31 @@
               include_platforms: j,
               include_all_purchase_options: g,
               include_screenshots: S,
-              include_trailers: _,
+              include_trailers: N,
               include_ratings: b,
-              include_tag_count: N,
+              include_tag_count: _,
               include_reviews: w,
               include_basic_info: T,
               include_supported_languages: C,
               include_full_description: I,
-              include_included_items: B,
-              include_assets_without_overrides: R,
-              apply_user_filters: A,
-              include_links: P,
-              include_extra_details: k,
+              include_included_items: R,
+              include_assets_without_overrides: B,
+              apply_user_filters: P,
+              include_links: A,
+              include_extra_details: q,
             };
             let s = null;
             return (
               !e ||
                 e < 0 ||
                 l.A.Get().BHasStoreItem(e, t, i) ||
-                (void 0 !== x && n && n == m.current) ||
+                (void 0 !== p && n && n == m.current) ||
                 (n !== m.current && (f(void 0), (m.current = n)),
                 (s = a().CancelToken.source()),
                 l.A.Get()
                   .QueueStoreItemRequest(e, t, i)
                   .then((t) => {
-                    s?.token.reason || r.current !== e || f(t == o.R), p();
+                    s?.token.reason || r.current !== e || f(t == o.R), x();
                   })),
               () => s?.cancel("useStoreItemCache: unmounting")
             );
@@ -2606,39 +2914,39 @@
             e,
             t,
             n,
-            x,
+            p,
             y,
             v,
             j,
             g,
             S,
-            _,
-            b,
             N,
+            b,
+            _,
             w,
             T,
             C,
             I,
-            B,
             R,
-            A,
+            B,
             P,
-            k,
-            p,
+            A,
+            q,
+            x,
           ]),
           !e)
         )
           return [null, u];
-        if (!1 === x) return [void 0, u];
+        if (!1 === p) return [void 0, u];
         if (l.A.Get().BIsStoreItemMissing(e, t)) return [void 0, u];
         if (!l.A.Get().BHasStoreItem(e, t, i)) return [void 0, c];
-        const q = l.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
-        return q ? [q, h] : [null, u];
-      }
-      function p(e, t, i) {
-        return m(e, r.c6.qI, t, i);
+        const k = l.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
+        return k ? [k, h] : [null, u];
       }
       function x(e, t, i) {
+        return m(e, r.c6.qI, t, i);
+      }
+      function p(e, t, i) {
         return m(e, r.c6.xO, t, i);
       }
       function f(e, t, i) {
@@ -2649,17 +2957,17 @@
           {
             include_assets: r,
             include_release: m,
-            include_platforms: p,
-            include_all_purchase_options: x,
+            include_platforms: x,
+            include_all_purchase_options: p,
             include_screenshots: f,
             include_trailers: y,
             include_ratings: v,
             include_tag_count: j,
             include_reviews: g,
             include_basic_info: S,
-            include_supported_languages: _,
+            include_supported_languages: N,
             include_full_description: b,
-            include_included_items: N,
+            include_included_items: _,
             include_assets_without_overrides: w,
             apply_user_filters: T,
             include_links: C,
@@ -2671,17 +2979,17 @@
             const i = {
                 include_assets: r,
                 include_release: m,
-                include_platforms: p,
-                include_all_purchase_options: x,
+                include_platforms: x,
+                include_all_purchase_options: p,
                 include_screenshots: f,
                 include_trailers: y,
                 include_ratings: v,
                 include_tag_count: j,
                 include_reviews: g,
                 include_basic_info: S,
-                include_supported_languages: _,
+                include_supported_languages: N,
                 include_full_description: b,
-                include_included_items: N,
+                include_included_items: _,
                 include_assets_without_overrides: w,
                 apply_user_filters: T,
                 include_links: C,
@@ -2703,7 +3011,7 @@
               }),
               () => s.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, n, o, r, m, p, x, f, y, v, j, g, S, _, b, N, w, T, C, I]),
+          }, [e, t, n, o, r, m, x, p, f, y, v, j, g, S, N, b, _, w, T, C, I]),
           !e)
         )
           return u;

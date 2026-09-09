@@ -16808,6 +16808,11 @@
                     _: _._.readString,
                     _: _._.writeString,
                   },
+                  cache_group: {
+                    _: 12,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
                 },
               }),
             _.sm_m
@@ -21722,12 +21727,42 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
       });
-      const _ = 1,
-        _ = 2,
-        _ = 4,
-        _ = 1073741824;
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { data: _ } = (0, _._)(_);
+        return (0, _.useMemo)(
+          () =>
+            _
+              ? _.item_type == _._._
+                ? [_.appid]
+                : _.included_appids || []
+              : [],
+          [_],
+        );
+      }
+      function _(_) {
+        const { data: _ } = (0, _._)(_);
+        return (0, _.useMemo)(() => {
+          if (_ && _.related_items && _.related_items.parent_appid)
+            return {
+              appid: _.related_items.parent_appid,
+            };
+        }, [_]);
+      }
+      function _(_) {
+        return (0, _.useMemo)(
+          () =>
+            _
+              ? {
+                  appid: _,
+                }
+              : void 0,
+          [_],
+        );
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -21752,230 +21787,6 @@
       function _() {
         const _ = _.get();
         return _ ? new Date(1e3 * _) : new Date();
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        return (0, _.useMemo)(
-          () =>
-            (function (_) {
-              if (!_ || !_._) return;
-              if (!_.type)
-                return {
-                  appid: _._,
-                };
-              switch (_.type) {
-                case "sub":
-                  return {
-                    packageid: _._,
-                  };
-                case "bundle":
-                  return {
-                    bundleid: _._,
-                  };
-                default:
-                  return {
-                    appid: _._,
-                  };
-              }
-            })(_),
-          [_?._, _?.type],
-        );
-      }
-      function _(_, _) {
-        return (0, _.useMemo)(
-          () =>
-            (function (_, _) {
-              switch (_) {
-                case "sub":
-                  return {
-                    packageid: _,
-                  };
-                case "bundle":
-                  return {
-                    bundleid: _,
-                  };
-                default:
-                  return {
-                    appid: _,
-                  };
-              }
-            })(_, _),
-          [_, _],
-        );
-      }
-      function _(_, _) {
-        return (0, _.useMemo)(() => _(_, _), [_, _]);
-      }
-      function _(_, _) {
-        let _ = "app";
-        return (
-          _ == _._._ ? (_ = "bundle") : _ == _._._ && (_ = "sub"),
-          (0, _.useMemo)(() => _(_, _), [_, _])
-        );
-      }
-      function _(_, _) {
-        switch (_) {
-          case "sub":
-            return {
-              packageid: _,
-            };
-          case "bundle":
-            return {
-              bundleid: _,
-            };
-          default:
-            return {
-              appid: _,
-            };
-        }
-      }
-      function _(_) {
-        return (0, _.useMemo)(() => {
-          if (null != _ && _ != _._)
-            return {
-              appid: _,
-            };
-        }, [_]);
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = 0,
-        _ = "061818254b2c99ac49e6626adb128ed1282a392f",
-        _ = 120;
-      class _ {
-        m_unAppID;
-        m_bInitialized = !1;
-        m_strName;
-        m_strIconURL;
-        m_dtUpdatedFromServer;
-        m_eAppType;
-        constructor(_) {
-          this.m_unAppID = _;
-        }
-        get appid() {
-          return this.m_unAppID;
-        }
-        get is_initialized() {
-          return this.m_bInitialized;
-        }
-        get is_valid() {
-          return this.m_bInitialized && !!this.m_strName;
-        }
-        get name() {
-          return this.m_strName;
-        }
-        get icon_url_no_default() {
-          return this.m_strIconURL && this.BuildAppURL(this.m_strIconURL, _);
-        }
-        get icon_url() {
-          return this.BuildAppURL(this.m_strIconURL, _);
-        }
-        get time_updated_from_server() {
-          return this.m_dtUpdatedFromServer;
-        }
-        get apptype() {
-          return this.m_eAppType;
-        }
-        BIsApplicationOrTool() {
-          return this.apptype == _._ || this.apptype == _._;
-        }
-        BuildAppURL(_, _) {
-          return _
-            ? _._.MEDIA_CDN_COMMUNITY_URL +
-                "images/apps/" +
-                this.appid +
-                "/" +
-                _ +
-                ".jpg"
-            : (0, _._)(_);
-        }
-        DeserializeFromMessage(_) {
-          (this.m_bInitialized = !0),
-            (this.m_strName = _.name()),
-            (this.m_strIconURL = _.icon()),
-            (this.m_dtUpdatedFromServer = new Date()),
-            (this.m_eAppType = _.app_type());
-        }
-        DeserializeFromAppOverview(_) {
-          _.icon_hash() && _.app_type() != _._
-            ? ((this.m_bInitialized = !0),
-              (this.m_strName = _.display_name()),
-              (this.m_strIconURL = _.icon_hash()),
-              (this.m_dtUpdatedFromServer = new Date()),
-              (this.m_eAppType = _.app_type()))
-            : (this.m_bInitialized = !1);
-        }
-        DeserializeFromCacheObject(_) {
-          try {
-            (this.m_strName = _.strName),
-              (this.m_strIconURL = _.strIconURL),
-              (this.m_dtUpdatedFromServer = new Date(_.strUpdatedFromServer)),
-              (this.m_eAppType = _.eAppType),
-              (this.m_bInitialized = !0);
-          } catch {}
-        }
-        SerializeToCacheObject() {
-          return (
-            (0, _._)(
-              this.m_bInitialized,
-              "Attempting to serialize an uninitialized AppInfo object for caching!",
-            ),
-            this.m_bInitialized
-              ? {
-                  strName: this.m_strName,
-                  strIconURL: this.m_strIconURL,
-                  strUpdatedFromServer: this.m_dtUpdatedFromServer.toJSON(),
-                  eAppType: this.m_eAppType,
-                }
-              : null
-          );
-        }
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid");
-      const _ = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
-      function _(_, _) {
-        let _ = ".jpg";
-        (_ && "0000000000000000000000000000000000000000" !== _) || (_ = _),
-          44 == _.length && ((_ = _.substr(-4)), (_ = _.substr(0, 40)));
-        let _ = _._.AVATAR_BASE_URL;
-        return (
-          _ ||
-            ((_ = _._.MEDIA_CDN_COMMUNITY_URL + "images/avatars/"),
-            (_ += _.substr(0, 2) + "/")),
-          (_ += _),
-          _ && "small" != _ && (_ += "_" + _),
-          (_ += _),
-          _
-        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -22027,10 +21838,7 @@
         static s_globalSingletonStore;
         static Get() {
           return (
-            _.s_globalSingletonStore ||
-              ((_.s_globalSingletonStore = new _()),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.DUS = _.s_globalSingletonStore)),
+            _.s_globalSingletonStore || (_.s_globalSingletonStore = new _()),
             _.s_globalSingletonStore
           );
         }
@@ -22057,10 +21865,8 @@
         _: () => _,
         _: () => _,
       });
+      __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -22089,23 +21895,7 @@
         }
         ParseDevOverrides(_) {
           if (!_ || 0 == _.length) return;
-          const _ = new URLSearchParams("?" == _[0] ? _.substring(1) : _);
-          if (
-            _.has("t") &&
-            ("dev" == _._.WEB_UNIVERSE || "beta" == _._.WEB_UNIVERSE)
-          ) {
-            const _ = _.get("t");
-            let _ = /^\d+$/.test(_ ?? "")
-              ? _().unix(Number.parseInt(_ ?? "0"))
-              : _()(_);
-            (this.nOverrideDateNow = Math.floor(__webpack_require__.unix())),
-              console.log(
-                "CEventCalendarDevFeatures overriding partner event time: " +
-                  this.nOverrideDateNow +
-                  " " +
-                  __webpack_require__.format(),
-              );
-          }
+          new URLSearchParams("?" == _[0] ? _.substring(1) : _).has("t");
         }
       })();
       function _(_ = 1) {

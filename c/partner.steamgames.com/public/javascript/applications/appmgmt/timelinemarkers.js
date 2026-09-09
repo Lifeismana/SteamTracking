@@ -2261,11 +2261,7 @@
         static s_Singleton;
         static Get() {
           return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              _.s_Singleton.Init(),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_AssetSetStore = _.s_Singleton)),
+            _.s_Singleton || ((_.s_Singleton = new _()), _.s_Singleton.Init()),
             _.s_Singleton
           );
         }
@@ -2275,11 +2271,6 @@
             _.forEach((_) => this.m_mapAssetSets.set(_.assetset_id, _));
           const _ = (0, _._)("promotion_operation_token", "application_config");
           (0, _._)(Boolean(_), "require promotion_operation_token"),
-            "dev" == _._.WEB_UNIVERSE &&
-              console.log(
-                "DEV_DEBUG Initializing CAssetSetStore with access token ",
-                _,
-              ),
             (this.m_SteamInterface = new _._(_._.WEBAPI_BASE_URL, _));
         }
         ValidateStoreDefault(_) {
@@ -2417,20 +2408,16 @@
       }
       function _(_) {
         let _ = `<g id="${_.markerid}">`;
-        return (
-          _.image_type == _
-            ? (_ += (function (_) {
-                const _ = new DOMParser(),
-                  _ = _.parseFromString(_, "image/svg+xml").querySelector(
-                    "svg",
-                  );
-                return _ ? _.innerHTML : null;
-              })(_.image))
-            : _.image_type == _ &&
-              (_ += `<image width="36" height="36" xlink:href='${_.image}' />`),
-          (_ += "</g>"),
-          _
-        );
+        if (_.image_type == _)
+          _ += (function (_) {
+            const _ = new DOMParser(),
+              _ = _.parseFromString(_, "image/svg+xml").querySelector("svg");
+            return _ ? _.innerHTML : null;
+          })(_.image);
+        else if (_.image_type == _) {
+          _ += `<image width="36" height="36" xlink:href="${_.image.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/"/g, "&quot;")}" />`;
+        }
+        return (_ += "</g>"), _;
       }
       const _ = 128,
         _ = 128,
@@ -2549,8 +2536,6 @@
             if (200 == _?.status && _.data.success == _._) {
               const _ = _.data.new_marker;
               return (
-                "dev" == _._.WEB_UNIVERSE &&
-                  console.log("new marker created: ", _),
                 this.m_mapTimelineMarker.set(_.timeline_marker_id, _),
                 this.GetAppMarkerListChange(_).Dispatch([
                   ...this.GetAllMarkersForApp(_),
@@ -2757,11 +2742,7 @@
         static s_Singleton;
         static Get() {
           return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              _.s_Singleton.Init(),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_TimelineMarkerEditStore = _.s_Singleton)),
+            _.s_Singleton || ((_.s_Singleton = new _()), _.s_Singleton.Init()),
             _.s_Singleton
           );
         }
@@ -3563,41 +3544,7 @@
         (0, _._)([_._], _.prototype, "OnVolumeChange", null),
         (0, _._)([_._], _.prototype, "OnVideoWaiting", null),
         (0, _._)([_._], _.prototype, "UserInputReceived", null);
-      var _,
-        _,
-        _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _() {
-        const _ = _(_().GetGameID());
-        return _ === _.NotRecording || _ === _.NotRunning
-          ? null
-          : (0, _.jsx)(_, {});
-      }
-      function _(_) {
-        const _ = _(),
-          _ = (0, _._)(() => _.GetIsLiveEdge() && !_.GetHidePlayer()),
-          _ = _.useCallback(() => {
-            _.SetHidePlayer(!1), _.GetGameRecordingVideo().Play();
-            const _ = _.GetLiveEdgeMS();
-            _.SetPlaytimeFromGlobalMS(_), _.FocusGlobalMS(_);
-          }, [_]);
-        return (0, _.jsx)(_._, {
-          className: _.GoLiveButtonCtn,
-          toolTipContent: (0, _._)(
-            _ ? "#Playback_AtLatest" : "#Playback_JumpToLatest",
-          ),
-          direction: "bottom",
-          children: (0, _.jsx)(_._, {
-            onClick: _,
-            className: (0, _._)(_.GoLiveButton, _ && _.IsLive),
-            children: (0, _.jsx)(_._, {
-              className: (0, _._)(_.JumpToEndIcon),
-            }),
-          }),
-        });
-      }
+      var _, _, _;
       function _(_) {
         const { app: _ } = _(_);
         if (!_) return _.NotRecording;
@@ -3616,8 +3563,7 @@
         (_.NotRunning = "NotRunning"),
           (_.NotRecording = "NotRecording"),
           (_.ManualRecording = "ManualRecording"),
-          (_.BackgroundRecording = "BackgroundRecording"),
-          (_.ForeverRecording = "ForeverRecording");
+          (_.BackgroundRecording = "BackgroundRecording");
       })(_ || (_ = {})),
         (function (_) {
           (_.Overlay = "Overlay"),
@@ -3702,7 +3648,7 @@
                       this.m_strRecordingID &&
                     this.m_pendingStop.m_nOffsetMS <= 1e3 * _
                   ) {
-                    if (this.m_playbackDefinition)
+                    if (this.m_playbackDefinition?.m_nLoopDurationMS)
                       return void this.StartPlaybackForRange();
                     this.m_gameRecordingVideo.Pause(),
                       (this.m_pendingStop = null);
@@ -4097,8 +4043,8 @@
                 )),
             _)
           ) {
-            if (this.m_playbackDefinition.m_nDurationMS) {
-              let _ = _ + this.m_playbackDefinition.m_nDurationMS,
+            if (this.m_playbackDefinition.m_nLoopDurationMS) {
+              let _ = _ + this.m_playbackDefinition.m_nLoopDurationMS,
                 _ =
                   this.m_timelineLoader.ConvertGlobaOffsetToRecordingAndRelativeOffset(
                     _,
@@ -4219,7 +4165,7 @@
           );
         }
         PlayNextTimelineRecording(_) {
-          if (this.m_playbackDefinition)
+          if (this.m_playbackDefinition?.m_nLoopDurationMS)
             return void this.StartPlaybackForRange();
           let _;
           if (this.m_strRecordingID)
@@ -5663,11 +5609,7 @@
         static s_Singleton;
         static Get() {
           return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              _.s_Singleton.Init(),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_SteamTimelineMarker = _.s_Singleton)),
+            _.s_Singleton || ((_.s_Singleton = new _()), _.s_Singleton.Init()),
             _.s_Singleton
           );
         }
@@ -7667,13 +7609,7 @@
         }
         static s_Singleton;
         static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_ThumbnailCache = _.s_Singleton)),
-            _.s_Singleton
-          );
+          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
         }
       }
       function _(_, _, _, _, _, _, _) {
@@ -9100,7 +9036,38 @@
             style: _,
           });
         });
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _() {
+        const _ = _(_().GetGameID());
+        return _ === _.NotRecording || _ === _.NotRunning
+          ? null
+          : (0, _.jsx)(_, {});
+      }
+      function _(_) {
+        const _ = _(),
+          _ = (0, _._)(() => _.GetIsLiveEdge() && !_.GetHidePlayer()),
+          _ = _.useCallback(() => {
+            _.SetHidePlayer(!1), _.GetGameRecordingVideo().Play();
+            const _ = _.GetLiveEdgeMS();
+            _.SetPlaytimeFromGlobalMS(_), _.FocusGlobalMS(_);
+          }, [_]);
+        return (0, _.jsx)(_._, {
+          className: _.GoLiveButtonCtn,
+          toolTipContent: (0, _._)(
+            _ ? "#Playback_AtLatest" : "#Playback_JumpToLatest",
+          ),
+          direction: "bottom",
+          children: (0, _.jsx)(_._, {
+            onClick: _,
+            className: (0, _._)(_.GoLiveButton, _ && _.IsLive),
+            children: (0, _.jsx)(_._, {
+              className: (0, _._)(_.JumpToEndIcon),
+            }),
+          }),
+        });
+      }
       const _ = (0, _.forwardRef)(function (_, _) {
           const _ = _();
           return (0, _._)(() => !__webpack_require__.BEmpty())
@@ -10783,33 +10750,14 @@
       const _ = /^assetsetid_(.+)_markerid_(.+)$/,
         _ = /^droptarget_assetsetid_(.+)_appid_(.+)$/;
       async function _(_, _) {
-        if (!_.destination)
-          return void (
-            "dev" == _._.WEB_UNIVERSE &&
-            console.log("TimelineMarkerDrop: Dev Only: Destination missing?")
-          );
+        if (!_.destination) return void 0;
         const _ = _.draggableId.match(_),
           _ = _.destination.droppableId.match(_);
-        if (!(_?.length > 2 && _?.length > 2))
-          return void (
-            "dev" == _._.WEB_UNIVERSE &&
-            console.log(
-              "TimelineMarkerDrop: Dev Only: failed to parse",
-              _.draggableId,
-              _.destination.droppableId,
-            )
-          );
+        if (!(_?.length > 2 && _?.length > 2)) return void 0;
         _(_[1], _[2], _[1], Number.parseInt(_[2]));
       }
       async function _(_, _, _, _) {
-        if (_ == _)
-          return (
-            "dev" == _._.WEB_UNIVERSE &&
-              console.log(
-                "TimelineMarkerDrop: Dev Only: No-op, source and target are the same asset set id.",
-              ),
-            _
-          );
+        if (_ == _) return _;
         if (_ == _) {
           const _ = await _(_, !0);
           if (_.eResult != _._) {
@@ -10852,11 +10800,10 @@
           !_?.unpublished_changes &&
           ((_ = await _(_, _, _.timeline_marker_id)), _ != _._)
           ? (console.error("TimelineMarkerDrop failed on step 3: " + _), _)
-          : ("dev" == _._.WEB_UNIVERSE &&
-              console.log("drag&drop complete successfully"),
-            _);
+          : _;
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const { appid: _ } = _,
           _ = _(_),
@@ -11116,11 +11063,7 @@
         static s_Singleton;
         static Get() {
           return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              _.s_Singleton.Init(),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_BranchNameStore = _.s_Singleton)),
+            _.s_Singleton || ((_.s_Singleton = new _()), _.s_Singleton.Init()),
             _.s_Singleton
           );
         }
@@ -13030,19 +12973,6 @@
       }
       (0, _._)([_._], _.prototype, "m_bInitialized", void 0),
         (0, _._)([_._], _.prototype, "UpdateRunningTimelines", null);
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      const _ = 1,
-        _ = 2,
-        _ = 4,
-        _ = 1073741824;
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -21100,7 +21030,6 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = 0,
         _ = "061818254b2c99ac49e6626adb128ed1282a392f",
@@ -21140,7 +21069,7 @@
           return this.m_eAppType;
         }
         BIsApplicationOrTool() {
-          return this.apptype == _._ || this.apptype == _._;
+          return 4 == this.apptype || 2 == this.apptype;
         }
         BuildAppURL(_, _) {
           return _
@@ -21160,7 +21089,7 @@
             (this.m_eAppType = _.app_type());
         }
         DeserializeFromAppOverview(_) {
-          _.icon_hash() && _.app_type() != _._
+          _.icon_hash() && 1073741824 != _.app_type()
             ? ((this.m_bInitialized = !0),
               (this.m_strName = _.display_name()),
               (this.m_strIconURL = _.icon_hash()),

@@ -28,6 +28,7 @@
       "use strict";
       __webpack_require__._(module_exports),
         __webpack_require__._(module_exports, {
+          SeasonPassDisplayFromStoreBrowse: () => _,
           default: () => _,
         });
       var _ = __webpack_require__("chunkid"),
@@ -83,6 +84,16 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { appid: _ } = _,
+          _ = (0, _._)(_),
+          { data: _ } = (0, _._)(_);
+        return _?.season_pass
+          ? (0, _.jsx)(_, {
+              season_pass: _.season_pass,
+            })
+          : null;
+      }
       function _(_) {
         const { season_pass: _ } = _;
         return _ && _.milestones && 0 != _.milestones.length

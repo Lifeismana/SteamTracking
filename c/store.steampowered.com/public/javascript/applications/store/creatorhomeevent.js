@@ -407,11 +407,8 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _, _) {
@@ -478,17 +475,6 @@
             },
           ],
         };
-      }
-      function _() {
-        const [_, _] = _.useState(() => !_._.BIsInited());
-        return (
-          _.useEffect(() => {
-            (async () => {
-              await Promise.all([_._.InitGlobal()]), _(!1);
-            })();
-          }, []),
-          _
-        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -1146,12 +1132,21 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
-        if (!_ || !_.BIsClanAccount()) return !1;
-        const _ = _._.Get().GetPartnerEventPermissions(_);
-        return !!_ && (_ ? _.valve_admin : _.valve_admin || _.support_user);
+        const _ = Boolean(_ && _.BIsClanAccount()),
+          { data: _ } = (0, _._)(_ ? _.GetAccountID() : 0);
+        return (
+          _ &&
+          (function (_, _) {
+            return (
+              !!_ &&
+              (_
+                ? Boolean(_.valve_admin)
+                : Boolean(_.valve_admin || _.support_user))
+            );
+          })(_, _)
+        );
       }
       function _(_) {
         const { clanSteamID: _, _: _ } = _;
@@ -1284,8 +1279,7 @@
         m_curLocImageGroup = null;
         m_curLocImageGroupType = null;
         constructor() {
-          (0, _._)(this),
-            "dev" == _._.WEB_UNIVERSE && (window.g_ClanImageStore = this);
+          (0, _._)(this);
         }
         static async BDoesClanImageFileExistsOnCDNOrOrigin(_, _, _, _) {
           let _ =
@@ -2155,8 +2149,8 @@
             fnOnOpenLocalizedImageGroup: _,
             bDeleting: _,
           } = _,
-          _ = (0, _._)(_.clanAccountID);
-        return _ || !_.valve_admin
+          { data: _ } = (0, _._)(_.clanAccountID);
+        return _ || !_?.valve_admin
           ? null
           : (0, _.jsx)("span", {
               className: (0, _._)(_().Localized, _().ValveOnlyBackground),
@@ -4809,7 +4803,8 @@
             }),
             [_, _, _, _, _],
           ),
-          _ = (0, _._)(() => _?.BIsBackgroundImageEnabled() ?? !1);
+          _ = (0, _._)(() => _?.BIsBackgroundImageEnabled() ?? !1),
+          _ = _(_?.clanSteamID);
         if (_ && void 0 !== _) {
           const _ =
               _.jsondata.localized_sale_logo &&
@@ -4841,7 +4836,6 @@
                 : _._.EPreviewMode_Enabled
               : _._.EPreviewMode_Disabled,
             _ = _ || __webpack_require__.GetEventType() != _.ajI,
-            _ = _(_.clanSteamID),
             _ = _ ? _._.NoTransform : _._.NoTransformSparseContent,
             _ = (0, _._)(
               _().SaleOuterContainer,
@@ -5384,19 +5378,14 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { clanAccountID: _, gidEvent: _ } = _,
-          [_, _] = _.useState(!0);
+        const { clanAccountID: _, gidEvent: _ } = _;
         let { eventModel: _, bLoading: _ } = (0, _._)(_, _);
         const _ = (0, _.sfN)(_._.LANGUAGE),
           [_] = (0, _._)("livepreview");
         return (
           _ && (_ = (0, _._)(_, _.ajI, "creatorhome_fake")),
-          _.useEffect(() => {
-            _._.InitGlobal().then(() => _(!1));
-          }),
           _.useEffect(() => {
             if (!_ && !_) {
               const _ = new URL(window.location.href);
@@ -5404,13 +5393,13 @@
                 window.location.replace(_.toString());
             }
           }, [_, _]),
-          !_ || _
-            ? (0, _.jsx)(_._, {})
-            : (0, _.jsx)(_.default, {
+          _
+            ? (0, _.jsx)(_.default, {
                 eventModel: _,
                 promotionName: `creatorhome_${_}`,
                 language: _,
               })
+            : (0, _.jsx)(_._, {})
         );
       }
     },

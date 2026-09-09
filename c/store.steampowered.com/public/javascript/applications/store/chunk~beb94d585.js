@@ -195,25 +195,13 @@
               });
             let _ = (0, _._)("partnereventadjacents", "application_config");
             this.ValidateAdjacentEvent(_) &&
-              (("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-                console.log(
-                  "DEV_DEBUG: CPartnerEventStore loading adjacents gids payload: " +
-                    _.length,
-                ),
               __webpack_require__.forEach((_) => {
                 _ &&
                   this.m_mapAdjacentAnnouncementGIDs.set(
                     _.announcementGID,
                     _.adjacents,
                   );
-              })),
-              "dev" == _._.WEB_UNIVERSE &&
-                console.log(
-                  "PartnerEventStore Loaded events: " +
-                    this.m_mapExistingEvents.size +
-                    " with adjacent info: " +
-                    this.m_mapExistingEvents.size,
-                ),
+              }),
               (this.m_bLoadedFromConfig = !0);
           }
         }

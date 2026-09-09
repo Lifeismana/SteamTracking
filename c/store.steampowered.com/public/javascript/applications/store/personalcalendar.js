@@ -17,6 +17,47 @@
     chunkid: (module) => {
       module.exports = {
         "duration-app-launch": "800ms",
+        PersonalCalendarWidget: "_326_uhqq2I-hJwNRSqIZK4",
+        TitleSection: "_2su8lGbBoTlZdVmMWOxDR3",
+        TitleSectionLeft: "_10kzxYP01BOeSD8R135uWX",
+        Title: "_3RqS6vEZhqX3_4AIeJFajW",
+        Subtitle: "_1qbTrTsvR9qbMi-Navsk-D",
+        PersonalCalendarWidgetDay: "tqaXEuWN2wV5_8lmSkMng",
+        TodayCtn: "_8UPO4fZBxxerbhcRBpAcc",
+        FutureCtn: "_1beaDtCHZ3Kn9oAHWEKXMe",
+        DayTitle: "VSMflzbqITft0dYgbLNq1",
+        DayOfWeek: "_3cnfRW-1ajM2MW96f4sTXj",
+        Date: "_1pMe55FBPBDyaWssCZrawa",
+        Today: "_1iXgQQI5ZT9D1DgDCwVW_T",
+        DayAppContainer: "_2nBfmktG8nbBOFnhjq6OS5",
+        EmptyDay: "_1Vtz51wGyJHD9wpoDFNZ8M",
+        MoreGames: "_1wt5Ne6MrJfPVdFz5fGlop",
+        StoreAppHover: "_3JFqZ4-_gZl_CQKdNJFdg2",
+        StoreAppCapsule: "_2A83UfRXWSLbHFYfDcch9W",
+        Hovered: "_2z7ihwH3mo730-p6kXROXX",
+        Image: "_3GS5DCQb2y5KKnOB8rHEw5",
+        "microtrailer-fade-in": "_3qUTo-Eq8k8fA3-Ajqh5Dy",
+        NewBadge: "lX3GvxrkYaEqKJRpIhPsk",
+        ScreenshotCycler: "_1lFAPltm4lZIZGtvNVBvpt",
+        Screenshot: "_1MSXc0v0S-mTDz8I9uJTni",
+        Active: "_3t54Nkge_M_VTM00eQZGbG",
+        BackgroundAnimation: "_9w_RZLHWSbY7mGKg8_lq8",
+        "ItemFocusAnim-darkerGrey-nocolor": "_2owaON2RMAVAh5SWIZqpcF",
+        "ItemFocusAnim-darkerGrey": "T5TTVqu-H2f6LXV_oELfk",
+        "ItemFocusAnim-darkGreySettings": "XUwN0D5PCg_KK-TOCFDta",
+        "ItemFocusAnim-darkGrey": "R4ALVL6ak2yBIrTQvO8Jg",
+        "ItemFocusAnim-grey": "_1oT3pq6sDfx8_WSmWBIG1Z",
+        "ItemFocusAnim-translucent-white-10": "_3m1GEnADKZGqAnPgomD5QN",
+        "ItemFocusAnim-translucent-white-20": "_2RrDQGgK3xNY28XMkYa68H",
+        "ItemFocusAnimBorder-darkGrey": "_38snEWmylibePk914iSE2Y",
+        "ItemFocusAnim-green": "_3v-91BC6mitEKHIgk6Qz2p",
+        focusAnimation: "_3SxantsMz8K4PnaeHHYVgr",
+        hoverAnimation: "Nlqr9db677xuQ--5YelhJ",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        "duration-app-launch": "800ms",
         narrowWidth: "500px",
         carouselNavButton: "_13rGo4vexAbY9-CP7FsLOg",
         carouselBtnCtn: "_3zfZ9tkIrSDZdSTv8mvZ3-",
@@ -57,29 +98,6 @@
     chunkid: (module) => {
       module.exports = {
         ScrollSnapCarousel: "_1nUtBXgWizhgU1jv-8wVC7",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        PersonalCalendarWidget: "_1rLdYDrWbYRcVNpPlFd225",
-        PersonalCalendarWidgetDay: "uUNiI-Woa-IKlMTl8sNz4",
-        TodayCtn: "zxpXN3eSl7IE7Y_HFaDsf",
-        FutureCtn: "_37Rq_2iPWm1eJ7eL072jsC",
-        DayTitle: "_1UXC23q3yEmSJ2eQNdi-0W",
-        DayOfWeek: "_8gOpVF6uAFG2cGwiwvREf",
-        Date: "_2ZLaa9X1KqHlMCSw96mYaW",
-        Today: "_3mRf-suj1kS8DGKgfnHAql",
-        DayAppContainer: "_3LhmtdtkRlqwQbEcHrCJGs",
-        EmptyDay: "_3UXGJAjhm6tgbPHq1f_UlN",
-        MoreGames: "_2T5aAmTJF2RJhrBpoIOfqW",
-        StoreAppHover: "_2Tqn7YAJcleffVrwKeeky6",
-        StoreAppCapsule: "_1V0RCs8QeHLs8oLOr0MdyK",
-        Hovered: "_1StchN24Q1CulpMocY_T5a",
-        Image: "_15wSFuv0rJYhA009HlKKE1",
-        NewBadge: "uh7LG17VS8cMtDP9jCt1f",
-        ScreenshotCycler: "_2icO_OA6Rqt6nLSts5ow4E",
-        Screenshot: "_3aD2ult5gmmxWA_7oCdUPO",
-        Active: "kPZWPvJo2jw2t3b47viEo",
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -476,6 +494,420 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
+      __webpack_require__._(module_exports),
+        __webpack_require__._(module_exports, {
+          default: () => _,
+        });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = {
+        name: "personalcalendarPrefs",
+        options: {
+          path: "/personalcalendar",
+          secure: !0,
+          maxAge: 31536e6,
+        },
+        preferenceControls: {
+          isTechnicallyNecessary: !0,
+        },
+      };
+      var _;
+      function _(_) {
+        const { bShowNewBadge: _, bHasFooterActionLegend: _, onSeeMore: _ } = _,
+          _ = (0, _._)(_),
+          _ = _ ? JSON.parse(_) : void 0,
+          _ = (0, _._)(940),
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = new Date().getDay(),
+          _ = 13 + _,
+          _ = 22 - _,
+          _ = (0, _._)(0, _, _),
+          _ = (0, _._)(_, _, !0, !0).flat(),
+          _ = (0, _._)(`${_._.STORE_BASE_URL}personalcalendar`, _, _),
+          { bShowSeeMoreHint: _, panelProps: _ } = (0, _._)(_),
+          _ = _._.Localize("#PersonalCalendar_Explore"),
+          _ = _.useCallback(() => _?.(_), [_, _]);
+        if (!_.data)
+          return (0, _.jsx)(_._, {
+            className: _.PersonalCalendarWidget,
+          });
+        let _ = _.data.arrAppInfos;
+        return (
+          _ &&
+            ((_ = _.filter((_) => !_.bHideOwned || !_.bIsOwned)),
+            (_ = _.filter((_) => !_.bHideEarlyAccess || !_.bIsEarlyAccess)),
+            (_ = _.filter((_) => {
+              switch (_.eWishlistDisplay) {
+                case _.Show:
+                  return !0;
+                case _.Only:
+                  return _.bIsWishlisted;
+                case _.Hide:
+                  return !_.bIsWishlisted;
+                default:
+                  return !0;
+              }
+            }))),
+          (0, _.jsxs)(_._, {
+            className: _.PersonalCalendarWidget,
+            navEntryPreferPosition: _._.PREFERRED_CHILD,
+            ..._,
+            onOptionsButton: _ ? _ : _.onOptionsButton,
+            onOptionsActionDescription: _,
+            children: [
+              (0, _.jsxs)("div", {
+                className: _.TitleSection,
+                children: [
+                  (0, _.jsxs)("div", {
+                    className: _.TitleSectionLeft,
+                    children: [
+                      (0, _.jsxs)("div", {
+                        className: _.Title,
+                        children: [
+                          _ &&
+                            (0, _.jsx)("span", {
+                              className: _.NewBadge,
+                              children: _._.Localize("#NewBadge"),
+                            }),
+                          _._.Localize("#PersonalCalendar_Title"),
+                        ],
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _.Subtitle,
+                        children: _._.Localize("#PersonalCalendar_Subtitle"),
+                      }),
+                    ],
+                  }),
+                  !_ &&
+                    (0, _.jsx)(_, {
+                      calendarURL: _,
+                      location: "desktop",
+                    }),
+                  _ &&
+                    !_ &&
+                    (0, _.jsx)(_._, {
+                      label: _,
+                      shown: _,
+                    }),
+                ],
+              }),
+              (0, _.jsx)(_._, {
+                visibleElements: 5,
+                hideArrows: !1,
+                disableEdgeWrap: !0,
+                hidePips: _,
+                screenIsWide: _,
+                startingSlide: 10,
+                className: _ ? void 0 : "fiveElementEightGap",
+                children: _.map((_, _) =>
+                  (0, _.jsx)(
+                    _,
+                    {
+                      bInitialFocus: 10 === _,
+                      nTimestamp: _,
+                      nNextTimestamp: _ < _.length - 1 ? _[_ + 1] : _ + 86400,
+                      arrAppInfos: _,
+                      nRankThreshold: _?.nResultsToShow ?? 100,
+                    },
+                    _,
+                  ),
+                ),
+              }),
+              !_ &&
+                (0, _.jsx)(_, {
+                  calendarURL: _,
+                  location: "mobile",
+                }),
+            ],
+          })
+        );
+      }
+      function _(_) {
+        const { calendarURL: _, location: _ } = _,
+          _ = "mobile" == _ ? "see_more_mobile" : "see_more_desktop";
+        return (0, _.jsx)("div", {
+          className: `see_more_link ${_} home_section_button`,
+          children: (0, _.jsx)("a", {
+            href: _,
+            className: "btn_small btn_medium btnv6_white_transparent",
+            children: (0, _.jsx)("span", {
+              children: _._.Localize("#PersonalCalendar_Explore"),
+            }),
+          }),
+        });
+      }
+      function _(_) {
+        const {
+            nTimestamp: _,
+            nNextTimestamp: _,
+            bInitialFocus: _,
+            arrAppInfos: _,
+            nRankThreshold: _,
+          } = _,
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = (0, _._)(`${_._.STORE_BASE_URL}personalcalendar`, _, _),
+          _ = new Date(1e3 * _),
+          _ = new Date(),
+          _ =
+            _.getDate() === _.getDate() &&
+            _.getMonth() === _.getMonth() &&
+            _.getFullYear() === _.getFullYear(),
+          _ = _ > _,
+          _ = _.toLocaleDateString((0, _._)(), {
+            weekday: "short",
+          }),
+          _ = _.toLocaleString((0, _._)(), {
+            day: "numeric",
+            month: "numeric",
+          }),
+          _ = _.filter((_) => _.nReleaseDate > _ && _.nReleaseDate < _).sort(
+            (_, _) =>
+              _.bIsWishlisted && !_.bIsWishlisted
+                ? -1
+                : _.bIsWishlisted && !_.bIsWishlisted
+                  ? 1
+                  : _.nRank - _.nRank,
+          ),
+          _ = _ ?? 100,
+          _ = _.filter((_) => _.nRank <= _).length - 2,
+          _ = 0 == _.length,
+          [_, _] = _.useState(!1),
+          _ = (0, _._)(),
+          _ = _.useRef(null);
+        return (
+          _.useEffect(() => {
+            if (_ && _ && _.current) {
+              const _ = _.current.closest(".carousel__slide"),
+                _ = _.current.closest(".carousel__slider-tray-wrapper");
+              _ && _ && (_.scrollLeft = _.offsetLeft);
+            }
+          }, [_, _]),
+          (0, _.jsxs)(_._, {
+            className: (0, _._)(
+              _.PersonalCalendarWidgetDay,
+              _ && _.TodayCtn,
+              _ && _.FutureCtn,
+              _ && _.EmptyDayCtn,
+            ),
+            "flow-children": "column",
+            children: [
+              (0, _.jsxs)("div", {
+                className: _.DayTitle,
+                children: [
+                  !_ &&
+                    (0, _.jsx)("div", {
+                      className: _.DayOfWeek,
+                      children: _,
+                    }),
+                  !_ &&
+                    (0, _.jsx)("div", {
+                      className: _.Date,
+                      children: _,
+                    }),
+                  _ &&
+                    (0, _.jsx)("div", {
+                      className: _.Today,
+                      children: _._.Localize("#Time_Today"),
+                    }),
+                ],
+              }),
+              (0, _.jsx)(_._, {
+                className: _.DayAppContainer,
+                "flow-children": "column",
+                navEntryPreferPosition: _._.MAINTAIN_Y,
+                preferredFocus: _ && !_,
+                ref: _,
+                onFocusWithin: () => _(!0),
+                children: (0, _.jsxs)(_.Fragment, {
+                  children: [
+                    _.slice(0, 2).map((_) =>
+                      (0, _.jsx)(
+                        _,
+                        {
+                          nAppID: _.nAppID,
+                        },
+                        _.nAppID,
+                      ),
+                    ),
+                    _ &&
+                      (0, _.jsx)("div", {
+                        className: _.EmptyDay,
+                        children: (0, _._)(
+                          _._.Localize("#PersonalCalendar_EmptyDay"),
+                          (0, _.jsx)("a", {
+                            href: _,
+                          }),
+                        ),
+                      }),
+                  ],
+                }),
+              }),
+              !_ &&
+                _ > 0 &&
+                (0, _.jsx)(_._, {
+                  href: _,
+                  className: _.MoreGames,
+                  children: _._.Localize("#PersonalCalendar_More", _),
+                }),
+            ],
+          })
+        );
+      }
+      function _(_) {
+        const _ = (0, _._)({
+            appid: _.nAppID,
+          }),
+          _ = (0, _._)(940),
+          _ = (0, _._)(),
+          [_, _] = _.useState(!1),
+          [_, _] = _.useState(!1),
+          _ = _.useRef(null),
+          _ = null === _.data ? void 0 : _.data,
+          _ = _ || _,
+          _ = (0, _._)(_, _ ? "main_capsule" : "hero_capsule"),
+          { data: _ } = (0, _._)(),
+          _ = _?.preferences?.disable_microtrailers,
+          _ = _ || _;
+        return (
+          _.useEffect(() => {
+            if (
+              (_.current &&
+                _.current.setAttribute(
+                  "data-ds-appid",
+                  _.nAppID.toString() ?? "",
+                ),
+              window.GDynamicStore && window._)
+            ) {
+              const _ = window._(_.current);
+              window.GDynamicStore.DecorateDynamicItems(_);
+            }
+          }, [_.nAppID, _]),
+          (0, _.jsx)(_._, {
+            feature: "personalcalendar-homepage",
+            children: (0, _.jsx)(_._, {
+              onGamepadFocus: () => _(!0),
+              onGamepadBlur: () => _(!1),
+              children: (0, _.jsx)(_._, {
+                _: {
+                  appid: _.nAppID,
+                },
+                hoverClassName: _.StoreAppHover,
+                disableScreenshots: !0,
+                children: (0, _.jsx)(_._, {
+                  appID: _.nAppID,
+                  children: (0, _.jsxs)(_._, {
+                    ref: _,
+                    className: (0, _._)(_.StoreAppCapsule, _ && _.Hovered),
+                    onMouseOver: () => _(!0),
+                    onMouseOut: () => _(!1),
+                    children: [
+                      (0, _.jsx)("img", {
+                        className: _.Image,
+                        src: _,
+                        alt: "",
+                      }),
+                      _ &&
+                        _ &&
+                        (0, _.jsx)(_, {
+                          _: {
+                            appid: _.nAppID,
+                          },
+                          nIntervalMS: 1e3,
+                        }),
+                      !_ &&
+                        (0, _.jsx)(_._, {
+                          _: {
+                            appid: _.nAppID,
+                          },
+                          active: _,
+                          bIsHoverMode: !0,
+                        }),
+                    ],
+                  }),
+                }),
+              }),
+            }),
+          })
+        );
+      }
+      function _(_) {
+        const _ = (0, _._)(_._) ?? [],
+          [_, _] = _.useState(0);
+        return (
+          (0, _._)(() => {
+            _.length > 0 && _((_ + 1) % _.length);
+          }, _.nIntervalMS),
+          _?.length && -1 != _
+            ? (0, _.jsx)("div", {
+                className: _.ScreenshotCycler,
+                children: _.map((_, _) =>
+                  (0, _.jsx)(
+                    "img",
+                    {
+                      className: (0, _._)(_.Screenshot, _ == _ && _.Active),
+                      src:
+                        _._.BASE_URL_SHARED_CDN +
+                        "/store_item_assets/" +
+                        _.filename,
+                      alt: "",
+                    },
+                    _.filename,
+                  ),
+                ),
+              })
+            : null
+        );
+      }
+      function _(_) {
+        return _._.logged_in
+          ? (0, _.jsx)(_._, {
+              placeholderHeight: 390,
+              rootMargin: "100% 0px 100% 0px",
+              children: (0, _.jsx)(_, {
+                ..._,
+              }),
+            })
+          : null;
+      }
+      !(function (_) {
+        (_[(_.Show = 0)] = "Show"),
+          (_[(_.Only = 1)] = "Only"),
+          (_[(_.Hide = 2)] = "Hide");
+      })(_ || (_ = {}));
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
@@ -567,7 +999,7 @@
       });
       var _ = __webpack_require__("chunkid");
       function _(_, _) {
-        if (_?.asset_url_format && _[_])
+        if (_?.asset_url_format && "string" == typeof _[_])
           return (
             _._.BASE_URL_SHARED_CDN +
             "/store_item_assets/" +
@@ -1222,392 +1654,6 @@
       }
       (0, _._)([_._], _.prototype, "HandleRef", null),
         (0, _._)([_._], _.prototype, "OnIntersection", null);
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports),
-        __webpack_require__._(module_exports, {
-          default: () => _,
-        });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = {
-        name: "personalcalendarPrefs",
-        options: {
-          path: "/personalcalendar",
-          secure: !0,
-          maxAge: 31536e6,
-        },
-        preferenceControls: {
-          isTechnicallyNecessary: !0,
-        },
-      };
-      var _;
-      function _() {
-        const _ = (0, _._)(_),
-          _ = _ ? JSON.parse(_) : void 0,
-          _ = (0, _._)(940),
-          _ = (0, _._)(),
-          _ = (0, _._)(),
-          _ = (0, _._)(),
-          _ = new Date().getDay(),
-          _ = 13 + _,
-          _ = 22 - _,
-          _ = (0, _._)(0, _, _),
-          _ = (0, _._)(_, _, !0, !0).flat(),
-          _ = (0, _._)(`${_._.STORE_BASE_URL}personalcalendar`, _, _),
-          { bShowSeeMoreHint: _, panelProps: _ } = (0, _._)(_);
-        if (!_.data)
-          return (0, _.jsx)(_._, {
-            className: _.PersonalCalendarWidget,
-          });
-        let _ = _.data.arrAppInfos;
-        return (
-          _ &&
-            ((_ = _.filter((_) => !_.bHideOwned || !_.bIsOwned)),
-            (_ = _.filter((_) => !_.bHideEarlyAccess || !_.bIsEarlyAccess)),
-            (_ = _.filter((_) => {
-              switch (_.eWishlistDisplay) {
-                case _.Show:
-                  return !0;
-                case _.Only:
-                  return _.bIsWishlisted;
-                case _.Hide:
-                  return !_.bIsWishlisted;
-              }
-            }))),
-          (0, _.jsxs)(_._, {
-            className: _.PersonalCalendarWidget,
-            navEntryPreferPosition: _._.PREFERRED_CHILD,
-            ..._,
-            children: [
-              (0, _.jsxs)("div", {
-                className: "title_grid",
-                children: [
-                  (0, _.jsxs)("div", {
-                    className: "home_section_title",
-                    children: [
-                      (0, _.jsx)("span", {
-                        className: _.NewBadge,
-                        children: (0, _._)("#NewBadge"),
-                      }),
-                      (0, _._)("#PersonalCalendar_Title"),
-                    ],
-                  }),
-                  (0, _.jsx)("div", {
-                    className: "home_section_subtitle",
-                    children: (0, _._)("#PersonalCalendar_Subtitle"),
-                  }),
-                  !_ &&
-                    (0, _.jsx)(_, {
-                      calendarURL: _,
-                      location: "desktop",
-                    }),
-                ],
-              }),
-              (0, _.jsx)(_._, {
-                visibleElements: 5,
-                hideArrows: !1,
-                disableEdgeWrap: !0,
-                hidePips: _,
-                screenIsWide: _,
-                startingSlide: 10,
-                className: _ ? void 0 : "fiveElementEightGap",
-                children: _.map((_, _) =>
-                  (0, _.jsx)(
-                    _,
-                    {
-                      bInitialFocus: 10 === _,
-                      nTimestamp: _,
-                      nNextTimestamp: _ < _.length - 1 ? _[_ + 1] : _ + 86400,
-                      arrAppInfos: _,
-                      nRankThreshold: _?.nResultsToShow,
-                    },
-                    _,
-                  ),
-                ),
-              }),
-              !_ &&
-                (0, _.jsx)(_, {
-                  calendarURL: _,
-                  location: "mobile",
-                }),
-              _ &&
-                (0, _.jsx)(_._, {
-                  label: (0, _._)("#PersonalCalendar_Full"),
-                  shown: _,
-                }),
-            ],
-          })
-        );
-      }
-      function _(_) {
-        const { calendarURL: _, location: _ } = _,
-          _ = "mobile" == _ ? "see_more_mobile" : "see_more_desktop";
-        return (0, _.jsx)("div", {
-          className: `see_more_link ${_} home_section_button`,
-          children: (0, _.jsx)("a", {
-            href: _,
-            className: "btn_small btn_medium btnv6_white_transparent",
-            children: (0, _.jsx)("span", {
-              children: (0, _._)("#PersonalCalendar_Full"),
-            }),
-          }),
-        });
-      }
-      function _(_) {
-        const {
-            nTimestamp: _,
-            nNextTimestamp: _,
-            bInitialFocus: _,
-            arrAppInfos: _,
-            nRankThreshold: _,
-          } = _,
-          _ = (0, _._)(),
-          _ = (0, _._)(),
-          _ = (0, _._)(`${_._.STORE_BASE_URL}personalcalendar`, _, _),
-          _ = new Date(1e3 * _),
-          _ = new Date(),
-          _ =
-            _.getDate() === _.getDate() &&
-            _.getMonth() === _.getMonth() &&
-            _.getFullYear() === _.getFullYear(),
-          _ = _ > _,
-          _ = _.toLocaleDateString((0, _._)(), {
-            weekday: "short",
-          }),
-          _ = _.toLocaleString((0, _._)(), {
-            day: "numeric",
-            month: "numeric",
-          }),
-          _ = _.filter((_) => _.nReleaseDate > _ && _.nReleaseDate < _).sort(
-            (_, _) =>
-              _.bIsWishlisted && !_.bIsWishlisted
-                ? -1
-                : _.bIsWishlisted && !_.bIsWishlisted
-                  ? 1
-                  : _.nRank - _.nRank,
-          ),
-          _ = _ ?? 100,
-          _ = _.filter((_) => _.nRank <= _).length - 2,
-          _ = 0 == _.length,
-          [_, _] = _.useState(!1),
-          _ = (0, _._)(),
-          _ = _.useRef(null);
-        return (
-          _.useEffect(() => {
-            if (_ && _ && _.current) {
-              const _ = _.current.closest(".carousel__slide"),
-                _ = _.current.closest(".carousel__slider-tray-wrapper");
-              _ && _ && (_.scrollLeft = _.offsetLeft);
-            }
-          }, [_, _]),
-          (0, _.jsxs)(_._, {
-            className: (0, _._)(
-              _.PersonalCalendarWidgetDay,
-              _ && _.TodayCtn,
-              _ && _.FutureCtn,
-              _ && _.EmptyDayCtn,
-            ),
-            "flow-children": "column",
-            children: [
-              (0, _.jsxs)("div", {
-                className: _.DayTitle,
-                children: [
-                  !_ &&
-                    (0, _.jsx)("div", {
-                      className: _.DayOfWeek,
-                      children: _,
-                    }),
-                  !_ &&
-                    (0, _.jsx)("div", {
-                      className: _.Date,
-                      children: _,
-                    }),
-                  _ &&
-                    (0, _.jsx)("div", {
-                      className: _.Today,
-                      children: (0, _._)("#Time_Today"),
-                    }),
-                ],
-              }),
-              (0, _.jsx)(_._, {
-                className: _.DayAppContainer,
-                "flow-children": "column",
-                navEntryPreferPosition: _._.MAINTAIN_Y,
-                preferredFocus: _ && !_,
-                ref: _,
-                onFocusWithin: () => _(!0),
-                children: (0, _.jsxs)(_.Fragment, {
-                  children: [
-                    _.slice(0, 2).map((_) =>
-                      (0, _.jsx)(
-                        _,
-                        {
-                          nAppID: _.nAppID,
-                        },
-                        _.nAppID,
-                      ),
-                    ),
-                    _ &&
-                      (0, _.jsx)("div", {
-                        className: _.EmptyDay,
-                        children: (0, _._)(
-                          (0, _._)("#PersonalCalendar_EmptyDay"),
-                          (0, _.jsx)("a", {
-                            href: _,
-                          }),
-                        ),
-                      }),
-                  ],
-                }),
-              }),
-              !_ &&
-                _ > 0 &&
-                (0, _.jsx)(_._, {
-                  href: _,
-                  className: _.MoreGames,
-                  children: (0, _._)("#PersonalCalendar_More", _),
-                }),
-            ],
-          })
-        );
-      }
-      function _(_) {
-        const _ = (0, _._)({
-            appid: _.nAppID,
-          }),
-          _ = (0, _._)(940),
-          [_, _] = _.useState(!1),
-          _ = _.useRef(null),
-          _ = (0, _._)(_.data, _ ? "main_capsule" : "hero_capsule"),
-          { data: _ } = (0, _._)(),
-          _ = _?.preferences?.disable_microtrailers;
-        return (
-          _.useEffect(() => {
-            if (
-              (_.current.setAttribute(
-                "data-ds-appid",
-                _.nAppID.toString() ?? "",
-              ),
-              window.GDynamicStore && window._)
-            ) {
-              const _ = window._(_.current);
-              window.GDynamicStore.DecorateDynamicItems(_);
-            }
-          }, [_.nAppID, _]),
-          (0, _.jsx)(_._, {
-            feature: "personalcalendar-homepage",
-            children: (0, _.jsx)(_._, {
-              _: {
-                appid: _.nAppID,
-              },
-              hoverClassName: _.StoreAppHover,
-              disableScreenshots: !0,
-              children: (0, _.jsx)(_._, {
-                appID: _.nAppID,
-                children: (0, _.jsxs)(_._, {
-                  ref: _,
-                  className: (0, _._)(_.StoreAppCapsule, _ && _.Hovered),
-                  onMouseOver: () => _(!0),
-                  onMouseOut: () => _(!1),
-                  children: [
-                    (0, _.jsx)("img", {
-                      className: _.Image,
-                      src: _,
-                    }),
-                    _ &&
-                      _ &&
-                      (0, _.jsx)(_, {
-                        _: {
-                          appid: _.nAppID,
-                        },
-                        nIntervalMS: 1e3,
-                      }),
-                    !_ &&
-                      (0, _.jsx)(_._, {
-                        _: {
-                          appid: _.nAppID,
-                        },
-                        active: _,
-                        bIsHoverMode: !0,
-                      }),
-                  ],
-                }),
-              }),
-            }),
-          })
-        );
-      }
-      function _(_) {
-        const _ = (0, _._)(_._),
-          [_, _] = _.useState(0);
-        return (
-          (0, _._)(() => {
-            _.length > 0 && _((_ + 1) % _.length);
-          }, _.nIntervalMS),
-          _?.length && -1 != _
-            ? (0, _.jsx)("div", {
-                className: _.ScreenshotCycler,
-                children: _.map((_, _) =>
-                  (0, _.jsx)(
-                    "img",
-                    {
-                      className: (0, _._)(_.Screenshot, _ == _ && _.Active),
-                      src:
-                        _._.BASE_URL_SHARED_CDN +
-                        "/store_item_assets/" +
-                        _.filename,
-                    },
-                    _.filename,
-                  ),
-                ),
-              })
-            : null
-        );
-      }
-      function _() {
-        return _._.logged_in
-          ? (0, _.jsx)(_._, {
-              placeholderHeight: 390,
-              rootMargin: "100% 0px 100% 0px",
-              children: (0, _.jsx)(_, {}),
-            })
-          : null;
-      }
-      !(function (_) {
-        (_[(_.Show = 0)] = "Show"),
-          (_[(_.Only = 1)] = "Only"),
-          (_[(_.Hide = 2)] = "Hide");
-      })(_ || (_ = {}));
     },
   },
 ]);

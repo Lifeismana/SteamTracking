@@ -5,20 +5,20 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [3556],
   {
-    70484: (e, r, s) => {
-      s.d(r, { J: () => n });
-      var a = s(88267);
+    70484: (e, r, a) => {
+      a.d(r, { J: () => n });
+      var s = a(88267);
       const c = {
-          [a.rg]: {},
-          [a.CS]: { strSymbol: "$" },
-          [a.dz]: { strSymbol: "£" },
-          [a.a4]: {
+          [s.rg]: {},
+          [s.CS]: { strSymbol: "$" },
+          [s.dz]: { strSymbol: "£" },
+          [s.a4]: {
             strSymbol: "€",
             strDecimalSymbol: ",",
             strThousandsSeparator: " ",
           },
-          [a.ln]: { strSymbol: "CHF" },
-          [a.Fq]: {
+          [s.ln]: { strSymbol: "CHF" },
+          [s.Fq]: {
             strSymbol: "руб.",
             bSuffixSymbol: !0,
             bWholeUnitsOnly: !0,
@@ -26,139 +26,139 @@
             strDecimalSymbol: ",",
             strThousandsSeparator: "",
           },
-          [a.sY]: {
+          [s.sY]: {
             strSymbol: "zł",
             bSuffixSymbol: !0,
             bSpaceForSymbol: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: " ",
           },
-          [a.iU]: {
+          [s.iU]: {
             strSymbol: "R$",
             bSpaceForSymbol: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: ".",
           },
-          [a.xm]: { strSymbol: "¥", bWholeUnitsOnly: !0, bSpaceForSymbol: !0 },
-          [a.KE]: {
+          [s.xm]: { strSymbol: "¥", bWholeUnitsOnly: !0, bSpaceForSymbol: !0 },
+          [s.KE]: {
             strSymbol: "kr",
             bSuffixSymbol: !0,
             bSpaceForSymbol: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: ".",
           },
-          [a.DP]: {
+          [s.DP]: {
             strSymbol: "Rp",
             bWholeUnitsOnly: !0,
             bSpaceForSymbol: !0,
             strDecimalSymbol: ".",
             strThousandsSeparator: " ",
           },
-          [a.Jw]: { strSymbol: "RM" },
-          [a.En]: { strSymbol: "P" },
-          [a.wA]: { strSymbol: "S$" },
-          [a.cm]: { strSymbol: "฿" },
-          [a.aQ]: {
+          [s.Jw]: { strSymbol: "RM" },
+          [s.En]: { strSymbol: "P" },
+          [s.wA]: { strSymbol: "S$" },
+          [s.cm]: { strSymbol: "฿" },
+          [s.aQ]: {
             strSymbol: "₫",
             bWholeUnitsOnly: !0,
             bSuffixSymbol: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: ".",
           },
-          [a.yR]: { strSymbol: "₩", bWholeUnitsOnly: !0, bSpaceForSymbol: !0 },
-          [a.bj]: {
+          [s.yR]: { strSymbol: "₩", bWholeUnitsOnly: !0, bSpaceForSymbol: !0 },
+          [s.bj]: {
             strSymbol: "TL",
             bSuffixSymbol: !0,
             bSpaceForSymbol: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: ".",
           },
-          [a.SJ]: {
+          [s.SJ]: {
             strSymbol: "₴",
             bSuffixSymbol: !0,
             bWholeUnitsOnly: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: " ",
           },
-          [a.ds]: { strSymbol: "Mex$", bSpaceForSymbol: !0 },
-          [a.cX]: { strSymbol: "CDN$", bSpaceForSymbol: !0 },
-          [a.m1]: { strSymbol: "A$", bSpaceForSymbol: !0 },
-          [a.WS]: { strSymbol: "NZ$", bSpaceForSymbol: !0 },
-          [a.C6]: { strSymbol: "¥", bSpaceForSymbol: !0 },
-          [a.T_]: { strSymbol: "₹", bSpaceForSymbol: !0, bWholeUnitsOnly: !0 },
-          [a.D5]: {
+          [s.ds]: { strSymbol: "Mex$", bSpaceForSymbol: !0 },
+          [s.cX]: { strSymbol: "CDN$", bSpaceForSymbol: !0 },
+          [s.m1]: { strSymbol: "A$", bSpaceForSymbol: !0 },
+          [s.WS]: { strSymbol: "NZ$", bSpaceForSymbol: !0 },
+          [s.C6]: { strSymbol: "¥", bSpaceForSymbol: !0 },
+          [s.T_]: { strSymbol: "₹", bSpaceForSymbol: !0, bWholeUnitsOnly: !0 },
+          [s.D5]: {
             strSymbol: "CLP$",
             bSpaceForSymbol: !0,
             bWholeUnitsOnly: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: ".",
           },
-          [a.D4]: { strSymbol: "S/." },
-          [a.G1]: {
+          [s.D4]: { strSymbol: "S/." },
+          [s.G1]: {
             strSymbol: "COL$",
             bSpaceForSymbol: !0,
             bWholeUnitsOnly: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: ".",
           },
-          [a.de]: {
+          [s.de]: {
             strSymbol: "R",
             bSpaceForSymbol: !0,
             strDecimalSymbol: ".",
             strThousandsSeparator: " ",
           },
-          [a.bO]: { strSymbol: "HK$", bSpaceForSymbol: !0 },
-          [a.Jb]: {
+          [s.bO]: { strSymbol: "HK$", bSpaceForSymbol: !0 },
+          [s.Jb]: {
             strSymbol: "NT$",
             bWholeUnitsOnly: !0,
             bSpaceForSymbol: !0,
           },
-          [a.CR]: { strSymbol: "SR", bSuffixSymbol: !0, bSpaceForSymbol: !0 },
-          [a.Cv]: { strSymbol: "AED", bSuffixSymbol: !0, bSpaceForSymbol: !0 },
-          [a.JW]: { strSymbol: "kr", bSpaceForSymbol: !0, bSuffixSymbol: !0 },
-          [a.aU]: {
+          [s.CR]: { strSymbol: "SR", bSuffixSymbol: !0, bSpaceForSymbol: !0 },
+          [s.Cv]: { strSymbol: "AED", bSuffixSymbol: !0, bSpaceForSymbol: !0 },
+          [s.JW]: { strSymbol: "kr", bSpaceForSymbol: !0, bSuffixSymbol: !0 },
+          [s.aU]: {
             strSymbol: "ARS$",
             bSpaceForSymbol: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: ".",
           },
-          [a.G7]: { strSymbol: "₪" },
-          [a.jT]: { strSymbol: "Br" },
-          [a.X0]: {
+          [s.G7]: { strSymbol: "₪" },
+          [s.jT]: { strSymbol: "Br" },
+          [s.X0]: {
             strSymbol: "₸",
             bSuffixSymbol: !0,
             bWholeUnitsOnly: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: " ",
           },
-          [a.Gx]: { strSymbol: "KD", bSuffixSymbol: !0, bSpaceForSymbol: !0 },
-          [a.w7]: { strSymbol: "QR", bSuffixSymbol: !0, bSpaceForSymbol: !0 },
-          [a.uZ]: {
+          [s.Gx]: { strSymbol: "KD", bSuffixSymbol: !0, bSpaceForSymbol: !0 },
+          [s.w7]: { strSymbol: "QR", bSuffixSymbol: !0, bSpaceForSymbol: !0 },
+          [s.uZ]: {
             strSymbol: "₡",
             bWholeUnitsOnly: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: ".",
           },
-          [a.lK]: {
+          [s.lK]: {
             strSymbol: "$U",
             bWholeUnitsOnly: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: ".",
           },
-          [a.xt]: { strSymbol: "лв", bSuffixSymbol: !0, bSpaceForSymbol: !0 },
-          [a.Bz]: { strSymbol: "kn", bSuffixSymbol: !0, bSpaceForSymbol: !0 },
-          [a.OD]: { strSymbol: "Kč", bSuffixSymbol: !0, bSpaceForSymbol: !0 },
-          [a.S1]: { strSymbol: "kr.", bSuffixSymbol: !0, bSpaceForSymbol: !0 },
-          [a.HQ]: { strSymbol: "Ft", bSuffixSymbol: !0, bSpaceForSymbol: !0 },
-          [a.tn]: { strSymbol: "lei", bSuffixSymbol: !0, bSpaceForSymbol: !0 },
-          [a.mh]: {},
+          [s.xt]: { strSymbol: "лв", bSuffixSymbol: !0, bSpaceForSymbol: !0 },
+          [s.Bz]: { strSymbol: "kn", bSuffixSymbol: !0, bSpaceForSymbol: !0 },
+          [s.OD]: { strSymbol: "Kč", bSuffixSymbol: !0, bSpaceForSymbol: !0 },
+          [s.S1]: { strSymbol: "kr.", bSuffixSymbol: !0, bSpaceForSymbol: !0 },
+          [s.HQ]: { strSymbol: "Ft", bSuffixSymbol: !0, bSpaceForSymbol: !0 },
+          [s.tn]: { strSymbol: "lei", bSuffixSymbol: !0, bSpaceForSymbol: !0 },
+          [s.mh]: {},
         },
         t = {
           strSymbol: "",
           bSuffixSymbol: !1,
           bSpaceForSymbol: !1,
           bWholeUnitsOnly: !1,
-          eCurrency: a.rg,
+          eCurrency: s.rg,
           strDecimalSymbol: ".",
           strThousandsSeparator: ",",
         };
@@ -166,16 +166,16 @@
         return { ...t, ...c[e], eCurrency: e };
       }
     },
-    61459: (e, r, s) => {
-      s.d(r, { d: () => t, x: () => c });
-      var a = s(70484);
+    61459: (e, r, a) => {
+      a.d(r, { d: () => t, x: () => c });
+      var s = a(70484);
       function c(e, r) {
-        return t(e, (0, a.J)(r));
+        return t(e, (0, s.J)(r));
       }
       function t(e, r) {
         const {
-            strSymbol: s,
-            bSuffixSymbol: a,
+            strSymbol: a,
+            bSuffixSymbol: s,
             bSpaceForSymbol: c,
             bWholeUnitsOnly: t,
             strDecimalSymbol: n,
@@ -197,11 +197,11 @@
         const m = l.reverse().join(""),
           b = c ? " " : "",
           y = o ? "-" : "";
-        return a ? `${y}${m}${b}${s}` : `${y}${s}${b}${m}`;
+        return s ? `${y}${m}${b}${a}` : `${y}${a}${b}${m}`;
       }
     },
-    72255: (e, r, s) => {
-      s.d(r, {
+    72255: (e, r, a) => {
+      a.d(r, {
         IG: () => m,
         M1: () => u,
         Ug: () => o,
@@ -212,9 +212,9 @@
         rt: () => n,
         t_: () => y,
       });
-      var a = s(81393),
-        c = s(88267),
-        t = s(29848);
+      var s = a(81393),
+        c = a(88267),
+        t = a(29848);
       function n(e) {
         switch (e?.toUpperCase()) {
           case "AE":
@@ -922,7 +922,7 @@
               ? i(e.substring(0, 3))
               : Number.isInteger(Number(e))
                 ? Number(e)
-                : ((0, a.wT)(
+                : ((0, s.wT)(
                     !1,
                     `ASCIICurrencyCodeToECurrencyCode unexpected code ${e}`,
                   ),
@@ -942,13 +942,13 @@
         return `${o(i(e.toUpperCase()))} (${e})`;
       }
     },
-    88267: (e, r, s) => {
-      s.d(r, {
+    88267: (e, r, a) => {
+      a.d(r, {
         Bz: () => Z,
         C6: () => F,
-        CR: () => B,
+        CR: () => L,
         CS: () => c,
-        Cv: () => E,
+        Cv: () => P,
         D4: () => M,
         D5: () => I,
         DP: () => b,
@@ -958,8 +958,8 @@
         G7: () => W,
         Gx: () => J,
         HQ: () => Q,
-        JW: () => L,
-        Jb: () => O,
+        JW: () => B,
+        Jb: () => E,
         Jw: () => y,
         KE: () => m,
         OD: () => $,
@@ -972,7 +972,7 @@
         a4: () => n,
         aQ: () => D,
         aU: () => w,
-        bO: () => P,
+        bO: () => O,
         bj: () => R,
         cX: () => T,
         cm: () => h,
@@ -985,7 +985,7 @@
         ln: () => u,
         m1: () => _,
         mh: () => j,
-        rg: () => a,
+        rg: () => s,
         sY: () => S,
         tn: () => X,
         uZ: () => Y,
@@ -996,7 +996,7 @@
         yR: () => C,
         yv: () => q,
       });
-      const a = 0,
+      const s = 0,
         c = 1,
         t = 2,
         n = 3,
@@ -1025,11 +1025,11 @@
         M = 26,
         G = 27,
         K = 28,
-        P = 29,
-        O = 30,
-        B = 31,
-        E = 32,
-        L = 33,
+        O = 29,
+        E = 30,
+        L = 31,
+        P = 32,
+        B = 33,
         w = 34,
         W = 35,
         x = 36,
@@ -1075,10 +1075,10 @@
           M,
           G,
           K,
-          P,
           O,
-          B,
           E,
+          L,
+          P,
           W,
           g,
           J,
@@ -1088,20 +1088,20 @@
         ];
       }
       function ee() {
-        return [...q(), ...V, L, v, Z, $, k, Q, X];
+        return [...q(), ...V, B, v, Z, $, k, Q, X];
       }
     },
-    29848: (e, r, s) => {
-      s.d(r, {
+    29848: (e, r, a) => {
+      a.d(r, {
         Hc: () => o,
         M_: () => n,
         R$: () => S,
-        YS: () => a,
+        YS: () => s,
         _S: () => c,
         aL: () => t,
         aY: () => u,
       });
-      const a = 0,
+      const s = 0,
         c = 1,
         t = 2,
         n = 3,
@@ -1111,23 +1111,15 @@
         return [c, t, n, u];
       }
     },
-    45334: (e, r, s) => {
-      s.d(r, { $e: () => a, B7: () => t, Pe: () => n, Pv: () => c });
-      const a = 1,
-        c = 2,
-        t = 4,
-        n = 1073741824;
-    },
-    17690: (e, r, s) => {
-      s.d(r, { IU: () => S, by: () => l, sc: () => u });
-      var a = s(78327),
-        c = s(85044),
-        t = s(81393),
-        n = s(45334);
-      const u = 0,
-        o = "061818254b2c99ac49e6626adb128ed1282a392f",
-        S = 120;
-      class l {
+    11353: (e, r, a) => {
+      a.d(r, { by: () => S, sc: () => n, IU: () => o });
+      var s = a(78327),
+        c = a(85044),
+        t = a(81393);
+      const n = 0,
+        u = "061818254b2c99ac49e6626adb128ed1282a392f",
+        o = 120;
+      class S {
         m_unAppID;
         m_bInitialized = !1;
         m_strName;
@@ -1150,10 +1142,10 @@
           return this.m_strName;
         }
         get icon_url_no_default() {
-          return this.m_strIconURL && this.BuildAppURL(this.m_strIconURL, o);
+          return this.m_strIconURL && this.BuildAppURL(this.m_strIconURL, u);
         }
         get icon_url() {
-          return this.BuildAppURL(this.m_strIconURL, o);
+          return this.BuildAppURL(this.m_strIconURL, u);
         }
         get time_updated_from_server() {
           return this.m_dtUpdatedFromServer;
@@ -1162,11 +1154,11 @@
           return this.m_eAppType;
         }
         BIsApplicationOrTool() {
-          return this.apptype == n.B7 || this.apptype == n.Pv;
+          return 4 == this.apptype || 2 == this.apptype;
         }
         BuildAppURL(e, r) {
           return e
-            ? a.TS.MEDIA_CDN_COMMUNITY_URL +
+            ? s.TS.MEDIA_CDN_COMMUNITY_URL +
                 "images/apps/" +
                 this.appid +
                 "/" +
@@ -1182,7 +1174,7 @@
             (this.m_eAppType = e.app_type());
         }
         DeserializeFromAppOverview(e) {
-          e.icon_hash() && e.app_type() != n.Pe
+          e.icon_hash() && 1073741824 != e.app_type()
             ? ((this.m_bInitialized = !0),
               (this.m_strName = e.display_name()),
               (this.m_strIconURL = e.icon_hash()),
@@ -1217,22 +1209,22 @@
         }
       }
     },
-    85044: (e, r, s) => {
-      s.d(r, { d: () => c, t: () => t });
-      var a = s(78327);
+    85044: (e, r, a) => {
+      a.d(r, { d: () => c, t: () => t });
+      var s = a(78327);
       const c = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
       function t(e, r) {
-        let s = ".jpg";
+        let a = ".jpg";
         (e && "0000000000000000000000000000000000000000" !== e) || (e = c),
-          44 == e.length && ((s = e.substr(-4)), (e = e.substr(0, 40)));
-        let t = a.TS.AVATAR_BASE_URL;
+          44 == e.length && ((a = e.substr(-4)), (e = e.substr(0, 40)));
+        let t = s.TS.AVATAR_BASE_URL;
         return (
           t ||
-            ((t = a.TS.MEDIA_CDN_COMMUNITY_URL + "images/avatars/"),
+            ((t = s.TS.MEDIA_CDN_COMMUNITY_URL + "images/avatars/"),
             (t += e.substr(0, 2) + "/")),
           (t += e),
           r && "small" != r && (t += "_" + r),
-          (t += s),
+          (t += a),
           t
         );
       }

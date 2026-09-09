@@ -6815,6 +6815,11 @@
                     _: 5,
                     _: _,
                   },
+                  seconds_since_active: {
+                    _: 6,
+                    _: _.readUint32,
+                    _: _.writeUint32,
+                  },
                 },
               }),
             _.sm_m
@@ -7087,6 +7092,16 @@
                     _: _.readString,
                     _: _.writeString,
                   },
+                  kernel_version_major: {
+                    _: 7,
+                    _: _.readInt32,
+                    _: _.writeInt32,
+                  },
+                  kernel_version_minor: {
+                    _: 8,
+                    _: _.readInt32,
+                    _: _.writeInt32,
+                  },
                 },
               }),
             _.sm_m
@@ -7342,6 +7357,7 @@
           "/.millennium/Dist",
           "Millennium internal",
           "millenium",
+          "millennium",
           "Refused unauthorized RPC command",
         ];
       function _() {

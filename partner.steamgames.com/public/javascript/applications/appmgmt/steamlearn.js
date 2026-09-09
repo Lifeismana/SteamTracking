@@ -12696,11 +12696,6 @@
         Init() {
           const e = (0, Ga.Tc)("webapi_token", "application_config");
           (0, Ha.wT)(Boolean(e), "require webapi_token"),
-            "dev" == Ga.TS.WEB_UNIVERSE &&
-              console.log(
-                "DEV_DEBUG Initializing CSteamLearnStore with access token ",
-                e,
-              ),
             (this.m_SteamInterface = new Aa.D(Ga.TS.WEBAPI_BASE_URL, e));
         }
         GetServiceTransport() {

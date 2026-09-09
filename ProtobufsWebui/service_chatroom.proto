@@ -50,6 +50,13 @@ message CChatRoom_ChatRoomHeaderState_Notification {
 	optional .CChatRoomGroupHeaderState header_state = 1;
 }
 
+message CChatRoom_ChatRoomNotice_Notification {
+	optional uint64 chat_group_id = 1;
+	optional fixed64 steamid_sender = 2;
+	optional int32 notice_type = 3 [(.description) = "enum"];
+	optional bool active = 4;
+}
+
 message CChatRoom_CreateChatRoom_Request {
 	optional uint64 chat_group_id = 1;
 	optional string name = 2;
@@ -140,6 +147,12 @@ message CChatRoom_DeleteRoleFromUser_Request {
 }
 
 message CChatRoom_DeleteRoleFromUser_Response {
+}
+
+message CChatRoom_DismissChatRoomNotice_Notification {
+	optional uint64 chat_group_id = 1;
+	optional fixed64 steamid_sender = 2;
+	optional int32 notice_type = 3 [(.description) = "enum"];
 }
 
 message CChatRoom_EndMiniGameForChatRoomGroup_Request {
@@ -592,6 +605,7 @@ message CChatRoom_SetSessionActiveChatRoomGroups_Request {
 message CChatRoom_SetSessionActiveChatRoomGroups_Response {
 	repeated .CChatRoomGroupState chat_states = 1;
 	repeated uint64 virtualize_members_chat_group_ids = 2;
+	repeated .CChatRoomGroupMemberNotices chat_group_notices = 3;
 }
 
 message CChatRoom_SetUserBanState_Request {
@@ -692,6 +706,11 @@ message CChatRoomGroupInvite {
 	optional uint32 time_invited = 3;
 }
 
+message CChatRoomGroupMemberNotices {
+	optional uint64 chat_group_id = 1;
+	repeated .CChatRoomMemberNotice member_notices = 2;
+}
+
 message CChatRoomGroupState {
 	optional .CChatRoomGroupHeaderState header_state = 1;
 	repeated .CChatRoomMember members = 2;
@@ -714,6 +733,11 @@ message CChatRoomMemberListView {
 	optional int32 total_count = 5;
 	optional int32 client_changenumber = 6;
 	optional int32 server_changenumber = 7;
+}
+
+message CChatRoomMemberNotice {
+	optional uint32 accountid = 1;
+	optional int32 notice_type = 2 [(.description) = "enum"];
 }
 
 message CChatRoomMemberSummaryCounts {
@@ -789,6 +813,8 @@ service ChatRoom {
 	rpc DeleteRole (.CChatRoom_DeleteRole_Request) returns (.CChatRoom_DeleteRole_Response);
 	// ePrivilege=3
 	rpc DeleteRoleFromUser (.CChatRoom_DeleteRoleFromUser_Request) returns (.CChatRoom_DeleteRoleFromUser_Response);
+	// ePrivilege=1
+	rpc DismissChatRoomNotice (.CChatRoom_DismissChatRoomNotice_Notification) returns (.NoResponse);
 	// ePrivilege=3
 	rpc EndMiniGameForChatRoomGroup (.CChatRoom_EndMiniGameForChatRoomGroup_Request) returns (.CChatRoom_EndMiniGameForChatRoomGroup_Response);
 	// ePrivilege=3
@@ -884,6 +910,7 @@ service ChatRoomClient {
 	rpc NotifyChatRoomDisconnect (.ChatRoomClient_NotifyChatRoomDisconnect_Notification) returns (.NoResponse);
 	rpc NotifyChatRoomGroupRoomsChange (.CChatRoom_ChatRoomGroupRoomsChange_Notification) returns (.NoResponse);
 	rpc NotifyChatRoomHeaderStateChange (.CChatRoom_ChatRoomHeaderState_Notification) returns (.NoResponse);
+	rpc NotifyChatRoomNotice (.CChatRoom_ChatRoomNotice_Notification) returns (.NoResponse);
 	rpc NotifyIncomingChatMessage (.CChatRoom_IncomingChatMessage_Notification) returns (.NoResponse);
 	rpc NotifyMemberListViewUpdated (.CChatRoomClient_MemberListViewUpdated_Notification) returns (.NoResponse);
 	rpc NotifyMemberStateChange (.CChatRoom_MemberStateChange_Notification) returns (.NoResponse);

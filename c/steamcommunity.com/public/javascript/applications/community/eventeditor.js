@@ -2848,18 +2848,20 @@
           }),
         });
       }
-      const _ = (_) =>
-        (0, _.jsxs)(_.Fragment, {
+      const _ = (_) => {
+        const { data: _ } = (0, _._)(_.editModel.GetClanAccountID());
+        return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)(_._, {
               className: (0, _._)(_.EditPreviewButton),
               toolTipContent: (0, _._)("#EventEditor_Loc_Export_Desc0"),
               children: (0, _.jsx)("a", {
                 onClick: (_) => {
-                  _.preventDefault(),
+                  __webpack_require__.preventDefault(),
                     (0, _._)(
                       (0, _.jsx)(_, {
                         editModel: _.editModel,
+                        permissions: _,
                       }),
                       (0, _._)(_),
                     );
@@ -2874,6 +2876,7 @@
             }),
           ],
         });
+      };
       let _ = class extends _.Component {
         constructor() {
           super(...arguments),
@@ -2903,8 +2906,7 @@
           });
         }
         render() {
-          const { closeModal: _, editModel: _ } = this.props,
-            _ = _._.Get().GetPartnerEventPermissions(_.GetClanSteamID());
+          const { closeModal: _, editModel: _, permissions: _ } = this.props;
           return (0, _.jsx)(_._, {
             title: (0, _._)("#EventEditor_Loc_Export"),
             onCancel: _,
@@ -2957,7 +2959,7 @@
                         ],
                       }),
                       Boolean(
-                        _.support_user &&
+                        (null == _ ? void 0 : _.support_user) &&
                           (_.BHasSaleEnabled() || _.BHasEmailEnabled),
                       ) &&
                         (0, _.jsxs)("div", {
@@ -3774,6 +3776,7 @@
               }),
             [],
           ),
+          _ = (0, _._)(_.clanSteamID, !0),
           _ = _.useCallback(
             (_) => {
               _.stopPropagation(),
@@ -3807,6 +3810,7 @@
                 (0, _.jsx)(_._, {
                   editModel: _._.GetEditModel(),
                   partnerEventEditorStore: _._,
+                  bValveAdmin: _,
                   closeModal: _,
                   OnPublishSuccess: _,
                 }),
@@ -4498,9 +4502,14 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -6083,6 +6092,7 @@
               _.GetEventModel().BHasTag("hide_store"),
           ),
           _ = _ == _.ajI,
+          _ = (0, _._)(_.GetClanSteamID(), !0),
           _ = (_, _ = !1) => (0, _._)(_, _),
           _ = (_, _ = !1) => (0, _._)(_, _),
           _ =
@@ -6119,7 +6129,7 @@
                 "product_mobile_banner",
                 "sale_logo",
               ),
-              (0, _._)(_.GetClanSteamID(), !0) && _.push("sale_overlay")),
+              _ && _.push("sale_overlay")),
           (0, _.jsxs)(_.Fragment, {
             children: [
               (0, _.jsx)(_._, {
@@ -7073,7 +7083,6 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = _._.GetEditModel(),
@@ -7085,10 +7094,10 @@
           [_, _] = (0, _._)(() => [
             _.BHasSaleEnabled(),
             _.GetEventModel().jsondata.sale_presenters,
-          ]);
+          ]),
+          _ = (0, _._)(_.GetClanSteamID(), !0);
         if (!_) return (0, _.jsx)(_.Fragment, {});
-        const _ = (0, _._)(_.GetClanSteamID(), !0),
-          _ = Boolean(_);
+        const _ = Boolean(_);
         return _ ||
           (_ && (!_ || (null == _ ? void 0 : _.length) >= 1)) ||
           _.GetEventType() == _.ajI
@@ -7172,11 +7181,12 @@
             _.GetClanAccountID(),
             _.GetGID(),
           ),
-          { bVisible: _ } = (0, _._)(_.GetEventModel()),
+          _ = (0, _._)(_.GetClanSteamID(), !0),
+          { bVisible: _ } = (0, _._)(_.GetEventModel(), _),
           { bVisible: _ } = (0, _._)(_.GetEventModel());
         if (_) return null;
         if (_ || _) return null;
-        if ((0, _._)(_.GetClanSteamID(), !0)) return (0, _.jsx)(_, {});
+        if (_) return (0, _.jsx)(_, {});
         return Boolean(_) ? (0, _.jsx)(_, {}) : null;
       }
       function _() {
@@ -8554,8 +8564,9 @@
             requireAdmin: _,
             dataToCopy: _,
           } = _,
-          _ = (0, _._)(() => _ && (0, _._)(_));
-        if (_ && !(0, _._)(_, _)) return null;
+          _ = (0, _._)(() => _ && (0, _._)(_)),
+          _ = (0, _._)(_, _);
+        if (_ && !_) return null;
         const _ = _
           ? (_) => {
               (0, _._)(_), _.preventDefault(), _.stopPropagation();
@@ -12052,8 +12063,10 @@
               (0, _._)();
         }, [_]);
         const _ = _.useCallback((_) => {
-          (0, _._)(_.strSectionId) && (0, _._)(_.strSectionId);
-        }, []);
+            (0, _._)(_.strSectionId) && (0, _._)(_.strSectionId);
+          }, []),
+          _ = (0, _._)(_.GetClanSteamID()),
+          _ = (0, _._)(_.GetClanSteamID(), !0);
         if (
           !_.BIsSourceEventSaleEnabled() &&
           _.clone_from_event_gid &&
@@ -12080,9 +12093,8 @@
           : 2 == _ &&
             ((_ = "#Sale_CreatorHome_title"),
             (_ = "doc/marketing/event_tools/creatorhome/tools"));
-        const _ = (0, _._)(_.GetClanSteamID()),
-          { bVisible: _ } = (0, _._)(_.GetEventModel()),
-          { bVisible: _ } = (0, _._)(_.GetEventModel()),
+        const { bVisible: _ } = (0, _._)(_.GetEventModel(), _),
+          { bVisible: _ } = (0, _._)(_.GetEventModel(), _),
           { bVisible: _ } = (0, _._)(_.GetEventModel()),
           _ = _ || _ || (_ && _);
         return (0, _.jsxs)("div", {
@@ -12826,16 +12838,11 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
-      function _(_) {
-        return _.BHasSaleEnabled() && (0, _._)(_).bVisible;
+      function _(_, _) {
+        return _.BHasSaleEnabled() && (0, _._)(_, _).bVisible;
       }
-      function _(_) {
-        return (
-          !!_(_.GetEventModel()) &&
-          (_._.Get().GetPartnerEventPermissions(_.GetClanSteamID())
-            .valve_admin ||
-            _.BHasTag(_))
-        );
+      function _(_, _) {
+        return !!_(_.GetEventModel(), _) && (_ || _.BHasTag(_));
       }
       function _(_) {
         const { editModel: _ } = _,
@@ -13107,23 +13114,18 @@
         }
         DeleteWhiteListAccount(_) {
           let _ = this.GetJSONData().broadcast_whitelist.indexOf(_);
-          _ < 0
-            ? "dev" == _._.WEB_UNIVERSE &&
-              console.log(
-                `EventBroadcastEditModel: Failed to find account to  ${_} in `,
-                this.GetJSONData().broadcast_whitelist,
-              )
-            : (this.GetJSONData().broadcast_whitelist.splice(_, 1),
-              this.GetJSONData().broadcast_language &&
-                this.GetJSONData().broadcast_language.length > _ &&
-                this.GetJSONData().broadcast_language.splice(_, 1),
-              this.GetJSONData().broadcast_priority &&
-                this.GetJSONData().broadcast_priority.length > _ &&
-                this.GetJSONData().broadcast_priority.splice(_, 1),
-              (this.GetJSONData().broadcast_whitelist = [
-                ...this.GetJSONData().broadcast_whitelist,
-              ]),
-              this.m_editModel.SetDirty(_._.jsondata_broadcast));
+          _ < 0 ||
+            (this.GetJSONData().broadcast_whitelist.splice(_, 1),
+            this.GetJSONData().broadcast_language &&
+              this.GetJSONData().broadcast_language.length > _ &&
+              this.GetJSONData().broadcast_language.splice(_, 1),
+            this.GetJSONData().broadcast_priority &&
+              this.GetJSONData().broadcast_priority.length > _ &&
+              this.GetJSONData().broadcast_priority.splice(_, 1),
+            (this.GetJSONData().broadcast_whitelist = [
+              ...this.GetJSONData().broadcast_whitelist,
+            ]),
+            this.m_editModel.SetDirty(_._.jsondata_broadcast));
         }
         SetWhiteListAccountLanguage(_, _) {
           let _ = this.GetJSONData().broadcast_whitelist.indexOf(_);
@@ -13322,13 +13324,7 @@
           );
         }
         static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-                (window.g_DynamicRevealStore = _.s_Singleton)),
-            _.s_Singleton
-          );
+          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
         }
         constructor() {
           this.m_rgFriendsList = null;
@@ -13337,8 +13333,6 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
@@ -14284,7 +14278,8 @@
         (0, _._)([_._], _.prototype, "OnOpenGradientInnerColor", null),
         (0, _._)([_._], _.prototype, "OnOpenGradientOuterColor", null),
         (_ = (0, _._)([_._], _));
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       class _ {
         GetDLCForAppID(_) {
           return this.m_mapAppIDToDLCs.get(_);
@@ -14359,13 +14354,7 @@
           };
         }
         static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_StoreTagCache = _.s_Singleton)),
-            _.s_Singleton
-          );
+          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
         }
         constructor() {
           (this.m_mapAppIDToDLCs = new Map()),
@@ -15629,7 +15618,6 @@
         (0, _._)([_._], _.prototype, "ShowTargets", null),
         (0, _._)([_._], _.prototype, "ClearTargets", null),
         (_ = (0, _._)([_._], _));
-      var _ = __webpack_require__("chunkid");
       const _ = (_) => {
         const [_, _] = (0, _.useState)(!!_ && void 0);
         return (
@@ -15730,12 +15718,19 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        return (
+          !!_.BHasEmailEnabled() ||
+          _.clanSteamID.GetAccountID() == (0, _._)() ||
+          ((_._.IS_OGG || _._.IS_VALVE_GROUP) &&
+            Boolean(null == _ ? void 0 : _.valve_admin))
+        );
+      }
       const _ = (0, _._)((_) => {
-          const { editModel: _ } = _;
-          _.useEffect(() => {
-            _._.HintLoad();
-          }, []);
-          if (!_._.Get().BShowEmailEditorTab(_.GetEventModel())) return null;
+          const { editModel: _ } = _,
+            { bHasValidatedEmail: _ } = (0, _._)(),
+            { data: _ } = (0, _._)(_.GetClanAccountID());
+          if (!_(_.GetEventModel(), _)) return null;
           const _ = (0, _._)() !== _.GetClanAccountID();
           return (0, _.jsxs)(_.Fragment, {
             children: [
@@ -15794,6 +15789,8 @@
                       (0, _.jsx)(_._, {
                         children: (0, _.jsx)(_, {
                           editModel: _,
+                          bHasValidatedEmail: _,
+                          permissions: _,
                         }),
                       }),
                     (0, _.jsx)(_._, {
@@ -15824,9 +15821,11 @@
                               children: [
                                 (0, _.jsx)(_, {
                                   editModel: _,
+                                  permissions: _,
                                 }),
                                 (0, _.jsx)(_, {
                                   editModel: _,
+                                  permissions: _,
                                 }),
                               ],
                             }),
@@ -15886,7 +15885,7 @@
         OnTestEmail(_) {
           const { editModel: _ } = this.props;
           _.preventDefault(),
-            _._.BHasValidatedEmail() && !_.BIsDirtyType(_._.jsondata_email)
+            this.props.bHasValidatedEmail && !_.BIsDirtyType(_._.jsondata_email)
               ? (0, _._)(
                   (0, _.jsx)(_._, {
                     strTitle: (0, _._)("#EventEmail_Test_Email"),
@@ -16015,7 +16014,7 @@
         render() {
           const { editModel: _ } = this.props,
             _ = Boolean(_.GetEmailSettings().locked),
-            _ = _._.Get().GetPartnerEventPermissions(_.GetClanSteamID());
+            { permissions: _ } = this.props;
           return (0, _.jsxs)("div", {
             className: _.ControlBarCtn,
             children: [
@@ -16031,14 +16030,14 @@
                 ],
               }),
               _ &&
-                _.valve_admin &&
+                (null == _ ? void 0 : _.valve_admin) &&
                 (0, _.jsx)("a", {
                   onClick: this.OnSetupAndFireEmailConfirm,
                   className: _().EditPreviewButton,
                   children: "(VO) Setup and Fire Email",
                 }),
               _ &&
-                !_.valve_admin &&
+                !(null == _ ? void 0 : _.valve_admin) &&
                 (0, _.jsx)("div", {
                   children: (0, _._)("#EventEmail_Ready_ValveRequiredToSend"),
                 }),
@@ -16300,12 +16299,8 @@
           this.GetEmailEditModel().SetControlGroupPercent(_);
         }
         render() {
-          const { editModel: _ } = this.props;
-          if (
-            !_._.Get().GetPartnerEventPermissions(_.GetClanSteamID())
-              .support_user
-          )
-            return null;
+          const { editModel: _, permissions: _ } = this.props;
+          if (!(null == _ ? void 0 : _.support_user)) return null;
           if (!Boolean(this.state.clanInfo))
             return (0, _.jsx)(_._, {
               string: (0, _._)("#Loading"),
@@ -16336,21 +16331,21 @@
                       onChange: (_) =>
                         this.GetEmailEditModel().SetFilterIRTopN(_),
                       label: (0, _._)("#EventEmail_Filter_IR"),
-                      checked: _.BIsIRTopNFiltering(),
+                      checked: __webpack_require__.BIsIRTopNFiltering(),
                     }),
                   Boolean(this.state.clanInfo.is_ogg) &&
                     (0, _.jsx)(_._, {
                       onChange: (_) =>
                         this.GetEmailEditModel().SetFilterWishlist(_),
                       label: (0, _._)("#EventEmail_Filter_Wishlist"),
-                      checked: _.BIsWishListFiltering(),
+                      checked: __webpack_require__.BIsWishListFiltering(),
                     }),
                   (0, _.jsx)(_._, {
                     type: "number",
                     min: "0",
                     max: "99",
                     label: (0, _._)("#EventEmail_Filter_ControlGroup"),
-                    value: _.GetControlGroupPercent(),
+                    value: __webpack_require__.GetControlGroupPercent(),
                     onChange: this.OnControlGroupSpinnerChange,
                   }),
                 ],
@@ -16454,7 +16449,7 @@
                       "RecipientToggle_" + _.clan_account_id,
                     ),
                   ),
-                    _.support_user &&
+                    (null == _ ? void 0 : _.support_user) &&
                       ((_ = (0, _.jsx)(_, {
                         valveOnly: !0,
                         label: (0, _._)(
@@ -16509,7 +16504,7 @@
         render() {
           const { editModel: _ } = this.props;
           let _ = new _._(_);
-          const _ = _._.Get().GetPartnerEventPermissions(_.GetClanSteamID());
+          const { permissions: _ } = this.props;
           return (0, _.jsxs)("div", {
             className: _.RecipientCtn,
             children: [
@@ -16983,7 +16978,7 @@
       const _ = (0, _._)((_) => {
         const { editModel: _ } = _;
         let _ = (0, _._)(_.GetEventType());
-        const _ = _._.Get().GetPartnerEventPermissions(_.GetClanSteamID()),
+        const { data: _ } = (0, _._)(_.GetClanAccountID()),
           _ = _.BHasTag("curator");
         return (0, _.jsxs)("div", {
           className: _().Columns,
@@ -17003,7 +16998,7 @@
                 (0, _.jsx)(_, {
                   editModel: _,
                 }),
-                (!_ || _.valve_admin) &&
+                (!_ || (null == _ ? void 0 : _.valve_admin)) &&
                   (0, _.jsx)(_, {
                     editModel: _,
                   }),
@@ -17238,14 +17233,15 @@
       }
       const _ = (0, _._)((_) => {
         const { editModel: _ } = _,
-          _ = _._.Get().GetPartnerEventPermissions(_.GetClanSteamID());
+          { data: _ } = (0, _._)(_.GetClanAccountID()),
+          _ = Boolean(null == _ ? void 0 : _.valve_admin);
         let _ = _.useRef(void 0);
         const _ = _.BHasSaleEnabled(),
           _ = _.GetEventType(),
           [_] = (0, _._)(() => [
             _.GetEventModel().jsondata.country_restriction,
           ]);
-        if (!_.valve_admin) return null;
+        if (!_) return null;
         const _ =
           _.GetAppID() == _._ ? "Deck" : _.GetAppID() == _._ ? "Frame" : void 0;
         return (0, _.jsxs)(_.Fragment, {
@@ -17315,7 +17311,7 @@
                         "By default we show sale pages on the events and discount store hub. Turning this on, we will not show this sale page there.",
                     }),
                   }),
-                Boolean(_(_.GetEventModel())) &&
+                Boolean(_(_.GetEventModel(), _)) &&
                   (0, _.jsx)(_._, {
                     onChange: (_) => _.SetTag(_, _),
                     label:
@@ -17740,12 +17736,14 @@
         }, [_]);
         const _ = _.GetEventType() == _.ajI,
           _ = _.GetAccountID() == (0, _._)() || _,
-          _ = !_ && (0, _._)(_, !0),
+          _ = (0, _._)(_, !0),
+          _ = !_ && _,
           _ = (_, _) => {
             (0, _._)(
               (0, _.jsx)(_._, {
                 editModel: _,
                 bUnlistedMode: _,
+                bValveAdmin: _,
                 OnPublishSuccess: () => _(!0),
                 partnerEventEditorStore: _._,
               }),
@@ -17848,6 +17846,7 @@
                           (0, _._)(
                             (0, _.jsx)(_._, {
                               editModel: _,
+                              bValveAdmin: _,
                               OnPublishSuccess: () => _(!0),
                               partnerEventEditorStore: _._,
                               closeModal: () => {
@@ -17976,11 +17975,7 @@
         }
         static Get() {
           return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              _.s_Singleton.Init(),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_VisibilityRoundsStore = _.s_Singleton)),
+            _.s_Singleton || ((_.s_Singleton = new _()), _.s_Singleton.Init()),
             _.s_Singleton
           );
         }
@@ -17995,7 +17990,6 @@
         Init() {}
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         var _;
@@ -18438,7 +18432,8 @@
             _.GetEventType(),
             _.GetEventModel().jsondata.sale_presenters,
             _.BVisible(),
-          ]);
+          ]),
+          { data: _ } = (0, _._)(_.GetClanAccountID());
         return (0, _.jsx)("div", {
           className: (0, _._)(_.PublishContainer),
           children: (0, _.jsx)("div", {
@@ -18478,6 +18473,7 @@
                 (0, _.jsx)(_, {
                   eventType: _,
                   clanSteamID: _,
+                  permissions: _,
                 }),
                 (0, _.jsx)("div", {
                   className: _.ClearThings,
@@ -18510,13 +18506,12 @@
             });
           let _ = _._.GetEditModel(),
             _ = _.GetCategoryAsType();
-          const _ = _._.Get().GetPartnerEventPermissions(
-              this.props.clanSteamID,
-            ),
+          const { permissions: _ } = this.props,
             _ = _._.GetClanInfoByClanAccountID(
               _.GetClanSteamID().GetAccountID(),
             );
-          if (!_.can_edit) return (0, _.jsx)(_.Fragment, {});
+          if (!(null == _ ? void 0 : _.can_edit))
+            return (0, _.jsx)(_.Fragment, {});
           let _ = _.BHasSaleEnabled() || _.is_ogg;
           const _ =
             (_.BWillShowOnLibraryOverviewDueToSettings() ||
@@ -19050,17 +19045,18 @@
             }
             return !1;
           }, [_]),
-          _ = (0, _._)(_),
-          _ = (0, _._)(() => (0, _._)()),
-          _ = (0, _._)(_),
-          _ = (0, _._)(() => (0, _._)()),
+          { data: _ } = (0, _._)(_.clanSteamID.GetAccountID()),
+          _ = Boolean(null == _ ? void 0 : _.valve_admin),
+          _ = (0, _._)(_, _),
+          _ = (0, _._)(() => (0, _._)(_)),
+          _ = (0, _._)(_, _),
+          _ = (0, _._)(() => (0, _._)(_)),
           _ = (0, _._)(_);
         (0, _._)(
           [_.bVisible, _.bVisible, _.bVisible].filter(Boolean).length <= 1,
           "Sale, Update Landing Page, and Creator Home should be mutually exclusive",
         );
-        const _ = !_._.Get().BShowEmailEditorTab(_.GetEventModel()),
-          _ = _._.Get().GetPartnerEventPermissions(_.clanSteamID);
+        const _ = !_(_.GetEventModel(), _);
         _._.LoadClanInfoForClanSteamID(_);
         const _ = Boolean(
             null === (_ = _._.GetClanInfoByClanAccountID(_.GetAccountID())) ||
@@ -19215,7 +19211,7 @@
             {
               name: "(VO) Debug",
               key: "debug",
-              hidden: !_.valve_admin,
+              hidden: !_,
               contents: (0, _.jsx)(_._, {
                 children: (0, _.jsx)(_._, {
                   editModel: _,
@@ -19226,7 +19222,7 @@
             {
               name: "(VO) Stats",
               key: "stats",
-              hidden: !_.valve_admin || !_.GID || !_.BHasSaleEnabled(),
+              hidden: !_ || !_.GID || !_.BHasSaleEnabled(),
               contents: (0, _.jsx)(_._, {
                 children: (0, _.jsx)(_, {
                   editModel: _,
@@ -19395,22 +19391,75 @@
           ],
         });
       }
-      let _ = class extends _.Component {
-        constructor() {
-          super(...arguments), (this.m_clanSteamID = new _._(_._.CLANSTEAMID));
-        }
-        render() {
-          return (0, _.jsx)(_, {
-            appid_or_vanity_str: this.props.match.params.appid_or_vanity_str,
-            appid: _._.APPID,
-            gid: this.props.match.params.gid,
-            clanSteamID: this.m_clanSteamID,
-            bInitiatePublishDialog: this.props.bInitiatePublishDialog,
-          });
-        }
-      };
-      _ = (0, _._)([_._], _);
-      const _ = (0, _._)(_);
+      const _ = (0, _._)(function (_) {
+          const _ = (0, _.useMemo)(() => new _._(_._.CLANSTEAMID), []),
+            { bResyncing: _, bFailed: _ } = (function () {
+              const _ = (0, _._)(),
+                _ = _._.GetEditModel(),
+                [_, _] = (0, _.useState)(!1);
+              return (
+                (0, _.useEffect)(() => {
+                  if (!(null == _ ? void 0 : _.BTagsNeedResync())) return;
+                  let _ = !1;
+                  return (
+                    (0, _._)(_, _)
+                      .then((_) => {
+                        !_ &&
+                          _.length > 0 &&
+                          (0, _._)(
+                            (0, _._)(
+                              "#EventEditor_TagResyncIncomplete",
+                              _.length,
+                              _.slice(0, 10)
+                                .map((_) => _.type + " " + _._)
+                                .join(", "),
+                            ),
+                            window,
+                          );
+                      })
+                      .catch((_) => {
+                        console.error(
+                          "Failed to rebuild the stripped tags for this event",
+                          _,
+                        ),
+                          _ || _(!0);
+                      }),
+                    () => {
+                      _ = !0;
+                    }
+                  );
+                }, [_, _]),
+                {
+                  bResyncing:
+                    Boolean(null == _ ? void 0 : _.BTagsNeedResync()) && !_,
+                  bFailed: _,
+                }
+              );
+            })();
+          return _
+            ? (0, _.jsxs)("div", {
+                className: _().FlexCenter,
+                children: [
+                  (0, _.jsx)(_._, {}),
+                  (0, _.jsx)("div", {
+                    children: (0, _._)("#EventEditor_TagResyncProgress"),
+                  }),
+                ],
+              })
+            : _
+              ? (0, _.jsx)(_._, {
+                  strErrorMsg: (0, _._)("#EventEditor_TagResyncFailed"),
+                  appid_or_vanity_str: _.match.params.appid_or_vanity_str,
+                })
+              : (0, _.jsx)(_, {
+                  appid_or_vanity_str: _.match.params.appid_or_vanity_str,
+                  appid: _._.APPID,
+                  gid: _.match.params.gid,
+                  clanSteamID: _,
+                  bInitiatePublishDialog: _.bInitiatePublishDialog,
+                });
+        }),
+        _ = (0, _._)(_);
       class _ extends _.Component {
         constructor(_) {
           super(_),
@@ -19434,6 +19483,7 @@
       }
       function _(_) {
         const { editModel: _ } = _,
+          _ = (0, _._)(_.GetClanSteamID(), !0),
           [_, _, _, _, _, _, _, _, _, _] = (0, _._)(() => {
             return [
               _.GetEventType(),
@@ -19446,7 +19496,7 @@
               _ ? _.filter(Boolean).length : 0),
               _.BAllowedSteamStoreSpotlight(),
               _.GetAppID(),
-              _(_),
+              _(_, _),
             ];
             var _;
           }),
@@ -19683,71 +19733,39 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      class _ {
-        GetCounts() {
-          return this.m_counts;
-        }
-        async LoadCounts() {
-          return Boolean(this.m_counts)
-            ? this.m_counts
-            : (this.m_promise || (this.m_promise = this.LoadInternalCount()),
-              this.m_promise);
-        }
-        async LoadInternalCount() {
-          var _, _;
-          let _ = null;
-          try {
-            const _ =
-                _._.STORE_BASE_URL + "saleaction/ajaxgetuserdeckcompatcounts",
-              _ = await _().get(_, {});
-            if (
-              200 == (null == _ ? void 0 : _.status) &&
-              (null === (_ = _.data) || void 0 === _ ? void 0 : _.success) ==
-                _._ &&
-              (null === (_ = _.data) || void 0 === _ ? void 0 : _.counts)
-            )
-              return (this.m_counts = _.data.counts), this.m_counts;
-            _ = (0, _._)(_);
-          } catch (_) {
-            _ = (0, _._)(_);
-          }
-          return (
-            console.error(
-              "CDeckCompCountStore.LoadInternalCount failed: " +
-                (null == _ ? void 0 : _.strErrorMsg),
-              _,
-            ),
-            null
+      async function _() {
+        const _ = new URLSearchParams(),
+          _ = "undefined" != typeof self ? self.origin : "community";
+        _ && _.set("origin", _);
+        const _ = `${_._.STORE_BASE_URL}saleaction/ajaxgetuserdeckcompatcounts?${_}`,
+          _ = await fetch(_);
+        if (!_._) throw new Error(`${_} answered ${_.status}`);
+        const _ = await _.json();
+        if ((null == _ ? void 0 : _.success) != _._ || !_.counts)
+          throw new Error(
+            `${_} answered EResult ${null == _ ? void 0 : _.success}`,
           );
-        }
-        static Get() {
-          return (
-            _.s_globalSingletonStore ||
-              ((_.s_globalSingletonStore = new _()),
-              ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-                (window.g_DeckCompatCountStores = _.s_globalSingletonStore)),
-            _.s_globalSingletonStore
-          );
-        }
-        constructor() {
-          if (
-            ((this.m_counts = null),
-            document.getElementById("application_config"))
-          ) {
-            let _ = (0, _._)("deckcompatcount", "application_config");
-            _.ValidateListCompat(_) && (this.m_counts = _);
-          }
-        }
-        static ValidateListCompat(_) {
-          const _ = _;
-          return (
-            _ &&
-            "number" == typeof _.verified &&
-            "number" == typeof _.unsupported &&
-            "number" == typeof _.playable
-          );
+        return _.counts;
+      }
+      const _ = 3e5;
+      function _() {
+        const { data: _ } = (0, _._)({
+          queryKey: ["DeckCompatCounts"],
+          queryFn: () => _(),
+          staleTime: _,
+          retry: !1,
+        });
+        return _;
+      }
+      function _(_, _) {
+        switch (_) {
+          case _._:
+            return null == _ ? void 0 : _.playable;
+          case _._:
+            return null == _ ? void 0 : _.unsupported;
+          default:
+            return null == _ ? void 0 : _.verified;
         }
       }
       var _ = __webpack_require__("chunkid"),
@@ -20069,8 +20087,27 @@
               ],
             });
       }
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        const _ = Number(_.args.packageid);
+        return _
+          ? (0, _.jsx)(_._, {
+              packageID: _,
+              display_style: (0, _._)(_.args.display),
+            })
+          : null;
+      }
+      function _(_) {
+        const _ = Number(_.args.packageid),
+          _ = Number(_.args.compareid);
+        return _ && _
+          ? (0, _.jsx)(_._, {
+              packageID: _,
+              compareID: _,
+            })
+          : null;
+      }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -20141,36 +20178,42 @@
           _ = (0, _._)(_),
           { fnOpenDoor: _ } = (0, _._)(),
           [_, _] = _.useState(!1),
-          [_, _] = _.useState(!1);
-        return (0, _.jsx)(_._, {
-          disabled: _,
-          onClick: (_) => {
-            _ ||
-              (_._.logged_in
-                ? (_(!0),
-                  _(_, !0, null, !1)
-                    .then((_) => {
-                      _ || _(!0), _(!1);
-                    })
-                    .catch(() => {
-                      _(!0), _(!1);
-                    }))
-                : (0, _._)());
-          },
-          children: Boolean(_)
-            ? (0, _.jsx)("div", {
-                children: (0, _._)("#GrantAwardError_Busy"),
-              })
-            : (0, _.jsxs)(_.Fragment, {
-                children: [
-                  Boolean(_) &&
-                    (0, _.jsx)(_._, {
-                      size: "small",
-                    }),
-                  Boolean(_) && (0, _.jsx)(_.Jlk, {}),
-                  _,
-                ],
-              }),
+          [_, _] = _.useState(!1),
+          { elDialogElement: _, fnShowLogonDialog: _ } = (0, _._)();
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
+              disabled: _,
+              onClick: (_) => {
+                _ ||
+                  (_._.logged_in
+                    ? (_(!0),
+                      _(_, !0, null, !1)
+                        .then((_) => {
+                          _ || _(!0), _(!1);
+                        })
+                        .catch(() => {
+                          _(!0), _(!1);
+                        }))
+                    : _());
+              },
+              children: Boolean(_)
+                ? (0, _.jsx)("div", {
+                    children: (0, _._)("#GrantAwardError_Busy"),
+                  })
+                : (0, _.jsxs)(_.Fragment, {
+                    children: [
+                      Boolean(_) &&
+                        (0, _.jsx)(_._, {
+                          size: "small",
+                        }),
+                      Boolean(_) && (0, _.jsx)(_.Jlk, {}),
+                      _,
+                    ],
+                  }),
+            }),
+            _,
+          ],
         });
       }
       function _(_) {
@@ -20229,7 +20272,7 @@
           _ = Number.parseInt((0, _._)(_.args, "itemdefid")),
           _ = Number.parseInt((0, _._)(_.args, "maxquantity")),
           _ = (0, _._)(_.args, "calltoaction");
-        return (0, _._)(_, _)
+        return (0, _._)(_, _, !1) && _
           ? (0, _.jsx)(_._, {
               language: _.language,
               clanAccountID: _.clanSteamID.GetAccountID(),
@@ -20247,30 +20290,14 @@
             });
       }
       function _(_) {
-        const _ = (function () {
-          const [_, _] = _.useState(_.Get().GetCounts());
-          return (
-            _.useEffect(() => {
-              _ || _.Get().LoadCounts().then(_);
-            }, []),
-            _
-          );
-        })();
+        const _ = _();
         if (!_)
           return (0, _.jsx)(_._, {
             size: "small",
           });
         const _ = Number.parseInt((0, _._)(_.args));
-        let _ = _.verified;
-        switch (_) {
-          case _._:
-            _ = _.playable;
-            break;
-          case _._:
-            _ = _.unsupported;
-        }
         return (0, _.jsx)("span", {
-          children: (0, _._)(Number(_)),
+          children: (0, _._)(Number(_(_, _))),
         });
       }
       function _(_) {
@@ -20375,22 +20402,24 @@
           _ = Number.parseInt((0, _._)(_.args)),
           _ = _.useMemo(() => {
             var _;
-            return null === (_ = _.jsondata.sale_sections) || void 0 === _
-              ? void 0
-              : _.find((_) => {
-                  var _, _;
-                  return (
-                    "vo_internal" == _.section_type &&
-                    ("reservation_widget" ==
-                      (null === (_ = _.internal_section_data) || void 0 === _
-                        ? void 0
-                        : _.internal_type) ||
-                      "while_supplies_last" ==
+            if (_)
+              return null === (_ = _.jsondata.sale_sections) || void 0 === _
+                ? void 0
+                : _.find((_) => {
+                    var _, _;
+                    return (
+                      "vo_internal" == _.section_type &&
+                      ("reservation_widget" ==
                         (null === (_ = _.internal_section_data) || void 0 === _
                           ? void 0
-                          : _.internal_type))
-                  );
-                });
+                          : _.internal_type) ||
+                        "while_supplies_last" ==
+                          (null === (_ = _.internal_section_data) ||
+                          void 0 === _
+                            ? void 0
+                            : _.internal_type))
+                    );
+                  });
           }, [_]);
         if (_ && _) {
           const _ = Number.parseInt((0, _._)(_.args, "depositpackageid")),
@@ -20487,9 +20516,7 @@
             _._.Init(new _._(_._.WEBAPI_BASE_URL)),
               _._.Init(),
               _._.Init(),
-              Promise.all([_._.InitGlobal()]).then(() =>
-                __webpack_require__(!1),
-              );
+              __webpack_require__(!1);
           }, []),
           _ || !_
             ? (0, _.jsx)(_._, {
@@ -20562,14 +20589,14 @@
                         [
                           "price",
                           {
-                            Constructor: _._,
+                            Constructor: _,
                             autocloses: !1,
                           },
                         ],
                         [
                           "pricesavings",
                           {
-                            Constructor: _._,
+                            Constructor: _,
                             autocloses: !1,
                           },
                         ],
@@ -21095,11 +21122,7 @@
         }
         static Get() {
           return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              _.s_Singleton.Init(),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_GiveawayStore = _.s_Singleton)),
+            _.s_Singleton || ((_.s_Singleton = new _()), _.s_Singleton.Init()),
             _.s_Singleton
           );
         }

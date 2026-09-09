@@ -218,6 +218,23 @@
         DisabledInputCtn: "ZePu4IVRyGY6qjrJ4cgua",
       };
     },
+    56420: (e) => {
+      e.exports = {
+        narrowWidth: "500px",
+        SnoozeContainer: "_1DsumfIa3MlkzUV9EXY5W9",
+        SnoozeZ: "_2n0EiKMGRP-r_BI5tDtttu",
+        none: "T3Fb5KTXwIHM2B-ThTvEs",
+        Medium: "_1iYPlsChibPe7Ga9B3c5Wm",
+        Large: "_3BESV4eFnr4EnaSaJSdk6T",
+        Dim: "rpZ9bKyFXYvNQvgtKn5GV",
+        Z1: "_2hnF3M_l4xdIdQ4CkN7LYB",
+        Z2: "VmQTOrz5MPOWte5C9K7YS",
+        Z3: "_29mtadjX8N6pRn5TX1nA0o",
+        hoverParent: "_3-8cByP2koYzHwgZqjvFA",
+        animating: "_2rXc7hLg6bohWZ-JpRcYEB",
+        Snoring: "_38wIVgo1WjvGqL5ZsmpmiX",
+      };
+    },
     85198: (e) => {
       e.exports = {
         miniProfile: "_2QPdq7GZ_03AD1ioPixVXW",
@@ -270,6 +287,38 @@
         featuredSubTitle: "_3DelZ7HZu1TfU115lLc7vl",
       };
     },
+    70342: (e) => {
+      e.exports = {
+        "duration-app-launch": "800ms",
+        narrowWidth: "500px",
+        PersonaStatusIcon: "KxAI_M9gWx3OnKSshHOs6",
+        MobilePhoneIcon: "_1iRFj5lJrMqMnRb3GZYPSw",
+        SteamDeckIcon: "_2oLqcfqHHKKAK0WfzjXMg_",
+        VRIcon: "_368tz9TSOLGiG2mNMLScMz",
+        BackgroundAnimation: "_3EMAF_7GAyPW8G7OSt8s0z",
+        "ItemFocusAnim-darkerGrey-nocolor": "_3fWOpZpfDmwOCKEdw8xcqf",
+        "ItemFocusAnim-darkerGrey": "_2Tvf1f8cUg1eYlQg027B3W",
+        "ItemFocusAnim-darkGreySettings": "_1tKhhjTYPWAz5_eQe91O1A",
+        "ItemFocusAnim-darkGrey": "_1l7IyrCH5ez4PBO7R4h8RT",
+        "ItemFocusAnim-grey": "_3X7_M9NEYzjKEgQRMQevkQ",
+        "ItemFocusAnim-translucent-white-10": "_3YCxpOEfjLuLbB1hut87fZ",
+        "ItemFocusAnim-translucent-white-20": "_2kvhksXgWA4vxGz5Oy1tV1",
+        "ItemFocusAnimBorder-darkGrey": "_3N1wGZIJ5QySTBWgyBavuM",
+        "ItemFocusAnim-green": "Vgab6fHUHvZ-iWKRJwy8h",
+        focusAnimation: "GvE_FaPqTf1D0HASx1C_0",
+        hoverAnimation: "_88lGefJsUDJUpRFJ3pUq7",
+      };
+    },
+    43047: (e) => {
+      e.exports = {
+        narrowWidth: "500px",
+        avatarHolder: "nibodjvvrm86uCfnnAn4g",
+        avatarStatus: "_3xUpb5DWXPFNcHHIcv-9pe",
+        avatar: "_3h-QRJGxnVOIExtHD1R0f2",
+        avatarFrame: "X_mJE4BYV5StDPwZhSiAu",
+        avatarFrameImg: "_3fM0F85j3aWVzr4RJM9-eu",
+      };
+    },
     19939: (e) => {
       e.exports = {
         DefaultTheme: "tedMfud89T5ZrUuQ8lAqa",
@@ -302,33 +351,160 @@
         SteamDeckTheme: "_2aDQKbd2fBPJ0D_2CiGhRT",
       };
     },
-    10801: (e, t, i) => {
+    49043: (e, t, i) => {
       "use strict";
-      i.r(t), i.d(t, { ProfileEditRoutes: () => gr, default: () => Pr });
+      i.r(t), i.d(t, { ProfileEditRoutes: () => xr, default: () => jr });
       var r = i(7850);
       let a = { ProfileURL: "" };
       var s = i(34629),
         o = i(41735),
         n = i.n(o),
         l = i(14947),
-        d = i(22837),
-        m = i(77350),
+        m = i(22837),
+        d = i(77350),
         c = i(51006),
         h = i(75844),
         u = i(90626),
-        p = i(51383),
-        _ = i(52038),
-        v = i(61859),
-        g = i(83141),
-        f = i(85198),
-        P = i.n(f),
-        y = i(10622),
-        C = i(1035),
-        S = i(55263),
-        x = i(14771),
-        A = i(78327);
-      const w = x.Kp.PerMinute;
-      class j {
+        p = i(61859),
+        _ = i(38924),
+        v = i(10622),
+        g = i(52038),
+        f = i(12155),
+        P = i(70342),
+        y = i.n(P),
+        C = i(97232);
+      const A = (0, h.PA)((e) => {
+        const { persona: t, className: i, ...a } = e;
+        if (!t) return null;
+        if (!t.is_online) return null;
+        const s = t.HasStateFlag(_.R$),
+          o = t.HasStateFlag(_.hs),
+          n = t.m_eGamingDeviceType == m.LS$,
+          l = t.m_eGamingDeviceType == m.ppM,
+          d = !n && !l && !o && t.HasStateFlag(_.sr);
+        return (0, r.jsxs)(u.Fragment, {
+          children: [
+            s &&
+              (0, r.jsx)("div", {
+                className: (0, g.A)(
+                  i,
+                  y().PersonaStatusIcon,
+                  y().MobilePhoneIcon,
+                  (0, v.rO)(t),
+                ),
+                title: (0, p.we)("#Platform_Hint_Mobile"),
+                ...a,
+                children: (0, r.jsx)(C.rf, {}),
+              }),
+            o &&
+              (0, r.jsx)("div", {
+                className: (0, g.A)(
+                  i,
+                  y().PersonaStatusIcon,
+                  y().VRIcon,
+                  (0, v.rO)(t),
+                ),
+                title: (0, p.we)("#Platform_Hint_VR"),
+                ...a,
+                children: (0, r.jsx)(f.MUh, {}),
+              }),
+            d &&
+              (0, r.jsx)("div", {
+                className: (0, g.A)(
+                  i,
+                  y().PersonaStatusIcon,
+                  y().BigPictureIcon,
+                  (0, v.rO)(t),
+                ),
+                title: (0, p.we)("#Platform_Hint_BigPicture"),
+                ...a,
+                children: (0, r.jsx)(f.bPr, {}),
+              }),
+            n &&
+              (0, r.jsx)("div", {
+                className: (0, g.A)(
+                  i,
+                  y().PersonaStatusIcon,
+                  y().SteamDeckIcon,
+                  (0, v.rO)(t),
+                ),
+                title: (0, p.we)("#Platform_Hint_SteamDeck"),
+                ...a,
+                children: (0, r.jsx)(f.DQe, {}),
+              }),
+            l &&
+              (0, r.jsx)("div", {
+                className: (0, g.A)(
+                  i,
+                  y().PersonaStatusIcon,
+                  y().SteamDeckIcon,
+                  (0, v.rO)(t),
+                ),
+                title: (0, p.we)("#Platform_Hint_LegionGoS"),
+                ...a,
+                children: (0, r.jsx)(f.DQe, {}),
+              }),
+          ],
+        });
+      });
+      var S = i(56420),
+        x = i.n(S);
+      let w = class extends u.Component {
+        static get hoverClass() {
+          return x().hoverParent;
+        }
+        render() {
+          const {
+            persona: e,
+            animating: t,
+            className: i,
+            size: a,
+            dim: s,
+            ...o
+          } = this.props;
+          let n = "";
+          return (
+            "medium" == a ? (n = x().Medium) : "large" == a && (n = x().Large),
+            (0, r.jsxs)("div", {
+              className: (0, g.A)(
+                x().SnoozeContainer,
+                e.online_state,
+                i,
+                t && x().animating,
+                n,
+                s && x().Dim,
+              ),
+              ...o,
+              children: [
+                (0, r.jsx)("div", {
+                  "data-text": "Z",
+                  className: (0, g.A)(x().SnoozeZ, x().Z1),
+                  children: "Z",
+                }),
+                (0, r.jsx)("div", {
+                  "data-text": "Z",
+                  className: (0, g.A)(x().SnoozeZ, x().Z2),
+                  children: "Z",
+                }),
+                (0, r.jsx)("div", {
+                  "data-text": "Z",
+                  className: (0, g.A)(x().SnoozeZ, x().Z3),
+                  children: "Z",
+                }),
+              ],
+            })
+          );
+        }
+      };
+      w = (0, s.Cg)([h.PA], w);
+      var j = i(85198),
+        I = i.n(j),
+        B = i(1035),
+        G = i(55263),
+        E = i(14771),
+        N = i(78327);
+      const b = E.Kp.PerMinute;
+      class R {
         constructor(e) {
           (this.m_bLoadingData = !1),
             (this.m_rtLastLoad = 0),
@@ -361,16 +537,16 @@
         }
         EnsureCommunityDataLoaded() {
           const e = this.m_communityData || this.m_bLoadingData,
-            t = Date.now() > this.m_rtLastLoad + 1e3 * w;
+            t = Date.now() > this.m_rtLastLoad + 1e3 * b;
           (!e || (t && !this.m_bLoadingData)) &&
             ((this.m_bLoadingData = !0),
             n()
               .get(
-                A.TS.CHAT_BASE_URL +
+                N.TS.CHAT_BASE_URL +
                   "miniprofile/" +
                   this.m_accountid +
                   "/json/?origin=" +
-                  (0, A.xv)(),
+                  (0, N.xv)(),
               )
               .then((e) => {
                 let t = e.data;
@@ -385,38 +561,38 @@
               }));
         }
       }
-      (0, s.Cg)([l.sH], j.prototype, "m_communityData", void 0);
-      let I = class extends u.Component {
+      (0, s.Cg)([l.sH], R.prototype, "m_communityData", void 0);
+      let L = class extends u.Component {
         render() {
           const { community_data: e } = this.props;
           let t = e && e.favorite_badge;
           return t
             ? (0, r.jsxs)("div", {
-                className: (0, _.A)(
-                  P().miniProfileFeaturedContainer,
+                className: (0, g.A)(
+                  I().miniProfileFeaturedContainer,
                   this.props.className,
                 ),
                 children: [
                   (0, r.jsx)("div", {
-                    className: P().favoriteBadgeIcon,
+                    className: I().favoriteBadgeIcon,
                     children: (0, r.jsx)("img", {
                       src: t.icon,
-                      className: P().badgeIcon,
+                      className: I().badgeIcon,
                     }),
                   }),
                   (0, r.jsxs)("div", {
-                    className: (0, _.A)(
-                      P().featuredLabels,
-                      P().favoriteBadgeDescription,
+                    className: (0, g.A)(
+                      I().featuredLabels,
+                      I().favoriteBadgeDescription,
                     ),
                     children: [
                       (0, r.jsx)("div", {
-                        className: P().featuredTitle,
+                        className: I().featuredTitle,
                         children: t.name,
                       }),
                       (0, r.jsx)("div", {
-                        className: P().featuredSubTitle,
-                        children: (0, v.we)("#Hover_BadgeXP", t.xp),
+                        className: I().featuredSubTitle,
+                        children: (0, p.we)("#Hover_BadgeXP", t.xp),
                       }),
                     ],
                   }),
@@ -425,26 +601,26 @@
             : null;
         }
       };
-      I = (0, s.Cg)([h.PA], I);
-      let G = class extends u.Component {
+      L = (0, s.Cg)([h.PA], L);
+      let F = class extends u.Component {
         render() {
           const { community_data: e, className: t } = this.props;
           return e
             ? (0, r.jsxs)("div", {
-                className: (0, _.A)(P().miniProfileFeaturedContainer, t),
+                className: (0, g.A)(I().miniProfileFeaturedContainer, t),
                 children: [
                   (0, r.jsx)("div", {
                     className: e.level_class,
                     children: (0, r.jsx)("span", {
-                      className: P().friendPlayerLevelNum,
+                      className: I().friendPlayerLevelNum,
                       children: e.level,
                     }),
                   }),
                   (0, r.jsx)("div", {
-                    className: P().featuredLabels,
+                    className: I().featuredLabels,
                     children: (0, r.jsx)("div", {
-                      className: P().featuredTitle,
-                      children: (0, v.we)("#Hover_SteamLevel") + " ",
+                      className: I().featuredTitle,
+                      children: (0, p.we)("#Hover_SteamLevel") + " ",
                     }),
                   }),
                 ],
@@ -452,15 +628,15 @@
             : null;
         }
       };
-      G = (0, s.Cg)([h.PA], G);
-      let B = class extends u.Component {
+      F = (0, s.Cg)([h.PA], F);
+      let T = class extends u.Component {
         render() {
           var e;
           let t = this.props.persona,
             i = this.props.community_data;
           return (0, r.jsxs)("div", {
-            className: (0, _.A)(
-              P().miniProfileGameContainer,
+            className: (0, g.A)(
+              I().miniProfileGameContainer,
               this.props.className,
             ),
             children: [
@@ -468,20 +644,20 @@
                 ? void 0
                 : e.logo) &&
                 (0, r.jsx)("img", {
-                  className: P().gameLogo,
+                  className: I().gameLogo,
                   src: i.in_game.logo,
                 }),
               (0, r.jsxs)("div", {
-                className: (0, _.A)(
-                  P().gameContent,
-                  P().persona,
-                  P().ingame,
-                  P().ellipsis,
+                className: (0, g.A)(
+                  I().gameContent,
+                  I().persona,
+                  I().ingame,
+                  I().ellipsis,
                 ),
                 children: [
                   (0, r.jsx)("div", {
-                    className: P().gameState,
-                    children: (0, v.we)(
+                    className: I().gameState,
+                    children: (0, p.we)(
                       t.is_in_nonsteam_game
                         ? "#PersonaStateInNonSteamGame"
                         : "#PersonaStateInGame",
@@ -490,7 +666,7 @@
                   this.props.persona.GetCurrentGameName(),
                   this.props.persona.HasCurrentGameRichPresence() &&
                     (0, r.jsx)("div", {
-                      className: P().richPresence,
+                      className: I().richPresence,
                       children: this.props.persona.GetCurrentGameRichPresence(),
                     }),
                   this.props.in_game_section_additional,
@@ -500,54 +676,54 @@
           });
         }
       };
-      function E(e) {
+      function k(e) {
         var t;
         const { appID: i } = e,
-          [a] = (0, S.t7)(i, { include_assets_without_overrides: !0 }),
+          [a] = (0, G.t7)(i, { include_assets_without_overrides: !0 }),
           s =
             null === (t = null == a ? void 0 : a.GetAssetsWithoutOverrides()) ||
             void 0 === t
               ? void 0
               : t.GetHeaderURL();
         return s
-          ? (0, r.jsx)("img", { className: P().gameLogo, src: s })
+          ? (0, r.jsx)("img", { className: I().gameLogo, src: s })
           : null;
       }
-      B = (0, s.Cg)([h.PA], B);
-      let N = class extends u.Component {
+      T = (0, s.Cg)([h.PA], T);
+      let D = class extends u.Component {
         render() {
           let e,
             t,
             i = this.props.broadcast_description;
           return (
-            i && ((e = (0, v.we)("#PersonaStateWatchingBroadcast")), (t = i)),
+            i && ((e = (0, p.we)("#PersonaStateWatchingBroadcast")), (t = i)),
             (0, r.jsxs)("div", {
-              className: (0, _.A)(
-                P().miniProfileGameContainer,
+              className: (0, g.A)(
+                I().miniProfileGameContainer,
                 this.props.className,
               ),
               children: [
                 this.props.persona.m_broadcastAppId &&
-                  (0, r.jsx)(E, { appID: this.props.persona.m_broadcastAppId }),
+                  (0, r.jsx)(k, { appID: this.props.persona.m_broadcastAppId }),
                 (0, r.jsxs)("div", {
-                  className: (0, _.A)(
-                    P().gameContent,
-                    P().persona,
-                    P().watchingbroadcast,
-                    P().ellipsis,
+                  className: (0, g.A)(
+                    I().gameContent,
+                    I().persona,
+                    I().watchingbroadcast,
+                    I().ellipsis,
                   ),
                   children: [
                     (0, r.jsx)("div", {
-                      className: P().gameState,
+                      className: I().gameState,
                       children: e,
                     }),
                     t &&
                       (0, r.jsx)("div", {
-                        className: P().richPresence,
+                        className: I().richPresence,
                         children: t,
                       }),
                     (0, r.jsx)("div", {
-                      className: P().watchingbroadcastThumbnail,
+                      className: I().watchingbroadcastThumbnail,
                       children: this.props.broadcast_thumbnail,
                     }),
                   ],
@@ -557,8 +733,8 @@
           );
         }
       };
-      N = (0, s.Cg)([h.PA], N);
-      let b = class extends u.Component {
+      D = (0, s.Cg)([h.PA], D);
+      let M = class extends u.Component {
         render() {
           const {
             className: e,
@@ -569,68 +745,68 @@
             is_friend: o,
             is_blocked: n,
             friend_relationship: l,
-            broadcast_description: m,
+            broadcast_description: d,
             broadcast_thumbnail: c,
             mutual_friends: h,
-            in_game_section_additional: f,
-            bottom_section_additional: C,
-            ...S
+            in_game_section_additional: _,
+            bottom_section_additional: f,
+            ...P
           } = this.props;
-          let x = i.community_data;
-          a && (x = { ...x, ...a });
-          const A = Object.keys((x && x.profile_background) || {}).length > 0;
-          let w,
-            j = P().miniProfileContent;
+          let y = i.community_data;
+          a && (y = { ...y, ...a });
+          const C = Object.keys((y && y.profile_background) || {}).length > 0;
+          let S,
+            x = I().miniProfileContent;
           t.is_ingame
-            ? (w = (0, r.jsx)(B, {
+            ? (S = (0, r.jsx)(T, {
                 ...this.props,
-                community_data: x,
-                className: A ? P().miniProfileBackdropBlur : void 0,
+                community_data: y,
+                className: C ? I().miniProfileBackdropBlur : void 0,
               }))
             : t.is_watchingbroadcast
-              ? (w = (0, r.jsx)(N, {
+              ? (S = (0, r.jsx)(D, {
                   ...this.props,
-                  className: A ? P().miniProfileBackdropBlur : void 0,
+                  className: C ? I().miniProfileBackdropBlur : void 0,
                 }))
-              : (j += " " + P().notInOrWatchingGame);
-          let E = !0,
-            b = !1,
-            F = !1;
-          o || ((j += " " + P().notFriends), (E = !1)),
-            n && ((j += " " + P().communicationBlocked), (F = !0));
-          let k,
-            T = void 0 !== s,
-            D = t.is_awayOrSnooze;
+              : (x += " " + I().notInOrWatchingGame);
+          let j = !0,
+            B = !1,
+            G = !1;
+          o || ((x += " " + I().notFriends), (j = !1)),
+            n && ((x += " " + I().communicationBlocked), (G = !0));
+          let E,
+            N = void 0 !== s,
+            b = t.is_awayOrSnooze;
           return (
-            (k = T
+            (E = N
               ? (0, r.jsxs)("div", {
                   children: [
                     (0, r.jsxs)("div", {
-                      className: P().personaAndIcons,
+                      className: I().personaAndIcons,
                       children: [
                         (0, r.jsxs)("div", {
-                          className: (0, _.A)(P().personaName, P().nickName),
+                          className: (0, g.A)(I().personaName, I().nickName),
                           children: [
                             (0, r.jsx)("div", {
-                              className: P().personaNameLabel,
+                              className: I().personaNameLabel,
                               children: this.props.nickname,
                             }),
                             (0, r.jsx)("div", {
-                              className: P().playerNicknameBracket,
-                              title: (0, v.we)("#isNickname"),
+                              className: I().playerNicknameBracket,
+                              title: (0, p.we)("#isNickname"),
                               children: "*",
                             }),
                           ],
                         }),
-                        (0, r.jsx)(p.X, { persona: t }),
+                        (0, r.jsx)(A, { persona: t }),
                       ],
                     }),
                     (0, r.jsxs)("div", {
-                      className: (0, _.A)(P().personaName, P().hasNickname),
+                      className: (0, g.A)(I().personaName, I().hasNickname),
                       children: [
                         "( ",
                         (0, r.jsx)("div", {
-                          className: P().personaNameLabel,
+                          className: I().personaNameLabel,
                           children: t.m_strPlayerName,
                         }),
                         " )",
@@ -639,94 +815,94 @@
                   ],
                 })
               : (0, r.jsxs)("div", {
-                  className: P().personaAndIcons,
+                  className: I().personaAndIcons,
                   children: [
                     (0, r.jsx)("div", {
-                      className: P().personaName,
+                      className: I().personaName,
                       children: (0, r.jsx)("div", {
-                        className: P().personaNameLabel,
+                        className: I().personaNameLabel,
                         children: t.m_strPlayerName,
                       }),
                     }),
-                    (0, r.jsx)(p.X, { persona: t }),
+                    (0, r.jsx)(A, { persona: t }),
                   ],
                 })),
-            this.props.friend_relationship == d.UXi && (b = !0),
+            this.props.friend_relationship == m.UXi && (B = !0),
             (0, r.jsx)(u.Fragment, {
               children: (0, r.jsx)(
                 "div",
                 {
-                  className: (0, _.A)(this.props.className, P().miniProfile),
-                  ...S,
+                  className: (0, g.A)(this.props.className, I().miniProfile),
+                  ...P,
                   children: (0, r.jsxs)("div", {
-                    className: j,
+                    className: x,
                     children: [
-                      (0, r.jsx)(R, { community_data: x, persona: t }),
+                      (0, r.jsx)(O, { community_data: y, persona: t }),
                       (0, r.jsx)("div", {
-                        className: P().miniProfileHeader,
+                        className: I().miniProfileHeader,
                         children: (0, r.jsxs)("div", {
-                          className: (0, _.A)(
-                            P().miniProfilePlayer,
+                          className: (0, g.A)(
+                            I().miniProfilePlayer,
                             t.online_state,
-                            D && P().isAway,
-                            (0, y.rO)(t),
+                            b && I().isAway,
+                            (0, v.rO)(t),
                           ),
                           children: [
-                            (0, r.jsx)(L, {
+                            (0, r.jsx)(H, {
                               persona: this.props.persona,
-                              community_data: x,
+                              community_data: y,
                             }),
-                            D &&
-                              (0, r.jsx)(g.p, {
+                            b &&
+                              (0, r.jsx)(w, {
                                 persona: t,
                                 animating: !0,
-                                className: P().SnoozeContainer,
+                                className: I().SnoozeContainer,
                                 size: "large",
                               }),
                             (0, r.jsx)("div", {
-                              className: P().playerContent,
+                              className: I().playerContent,
                               children: (0, r.jsx)("div", {
-                                className: P().playerName,
+                                className: I().playerName,
                                 children: (0, r.jsxs)("div", {
-                                  className: P().persona,
+                                  className: I().persona,
                                   children: [
-                                    k,
-                                    D &&
+                                    E,
+                                    b &&
                                       (0, r.jsx)("div", {
-                                        className: P().awayStatusLabel,
-                                        children: (0, v.we)(
+                                        className: I().awayStatusLabel,
+                                        children: (0, p.we)(
                                           "#PersonaStateAway",
                                         ),
                                       }),
                                     !t.is_online &&
                                       (0, r.jsx)("div", {
-                                        className: P().awayStatusLabel,
+                                        className: I().awayStatusLabel,
                                         children:
                                           this.props.persona.GetLocalizedOnlineStatus(),
                                       }),
                                     "online" == t.online_state &&
-                                      !D &&
+                                      !b &&
                                       (0, r.jsx)("div", {
-                                        className: P().awayStatusLabel,
-                                        children: (0, v.we)(
+                                        className: I().awayStatusLabel,
+                                        children: (0, p.we)(
                                           "#PersonaStateOnline",
                                         ),
                                       }),
-                                    !E &&
+                                    !j &&
                                       (0, r.jsx)("div", {
-                                        className: P().miniProfileNotFriends,
-                                        children: b
-                                          ? (0, v.we)(
+                                        className: I().miniProfileNotFriends,
+                                        children: B
+                                          ? (0, p.we)(
                                               "#Friend_Menu_NotAFriendRequesting",
                                             )
-                                          : (0, v.we)(
+                                          : (0, p.we)(
                                               "#Friend_Menu_NotAFriendLabel",
                                             ),
                                       }),
-                                    F &&
+                                    G &&
                                       (0, r.jsx)("div", {
-                                        className: P().miniProfileBlocked,
-                                        children: (0, v.we)(
+                                        className: I().miniProfileBlocked,
+                                        children: (0, p.we)(
                                           "#PersonaStateBlocked",
                                         ),
                                       }),
@@ -737,20 +913,20 @@
                           ],
                         }),
                       }),
-                      w,
+                      S,
                       (0, r.jsxs)("div", {
-                        className: (0, _.A)(
-                          P().miniProfileBottom,
-                          A && P().miniProfileBackdropBlur,
+                        className: (0, g.A)(
+                          I().miniProfileBottom,
+                          C && I().miniProfileBackdropBlur,
                         ),
                         children: [
-                          (0, r.jsx)(I, { community_data: x }),
-                          (0, r.jsx)(G, { community_data: x }),
+                          (0, r.jsx)(L, { community_data: y }),
+                          (0, r.jsx)(F, { community_data: y }),
                         ],
                       }),
-                      C,
+                      f,
                       (0, r.jsx)("div", {
-                        className: P().mutualFriends,
+                        className: I().mutualFriends,
                         children: this.props.mutual_friends,
                       }),
                     ],
@@ -762,17 +938,17 @@
           );
         }
       };
-      b = (0, s.Cg)([h.PA], b);
-      const R = ({ community_data: e, persona: t }) => {
+      M = (0, s.Cg)([h.PA], M);
+      const O = ({ community_data: e, persona: t }) => {
           if (e && e.profile_background) {
             const { image: t, ...i } = e.profile_background;
             if (Object.keys(i).length)
               return (0, r.jsx)(
                 "div",
                 {
-                  className: P().miniProfileVideoBackgroundContainer,
+                  className: I().miniProfileVideoBackgroundContainer,
                   children: (0, r.jsx)("video", {
-                    className: P().miniProfileVideoBackground,
+                    className: I().miniProfileVideoBackground,
                     playsInline: !0,
                     muted: !0,
                     autoPlay: !0,
@@ -787,43 +963,43 @@
               );
             if (t)
               return (0, r.jsx)("div", {
-                className: P().miniProfileVideoBackgroundContainer,
+                className: I().miniProfileVideoBackgroundContainer,
                 children: (0, r.jsx)("img", {
-                  className: P().miniProfileVideoBackground,
+                  className: I().miniProfileVideoBackground,
                   src: t,
                 }),
               });
           }
           return (0, r.jsx)("div", {
-            className: P().miniProfileBackground,
+            className: I().miniProfileBackground,
             children: (0, r.jsx)("img", {
-              className: P().miniProfileBackgroundBlur,
+              className: I().miniProfileBackgroundBlur,
               src: t.avatar_url,
             }),
           });
         },
-        L = (e) => {
+        H = (e) => {
           const { persona: t, community_data: i, size: a, ...s } = e,
             o =
               i &&
               i.avatar_frame &&
-              (0, r.jsx)("img", { src: i.avatar_frame, className: P().Frame }),
+              (0, r.jsx)("img", { src: i.avatar_frame, className: I().Frame }),
             n = i && i.animated_avatar,
             l = {
               size: a || "X-Large",
               statusPosition: "bottom",
-              className: P().playerAvatar,
+              className: I().playerAvatar,
             };
           return n
-            ? (0, r.jsx)(C.Ul, { ...s, strAvatarURL: n, ...l, children: o })
-            : (0, r.jsx)(C.i8, { persona: t, ...s, ...l, children: o });
+            ? (0, r.jsx)(B.Ul, { ...s, strAvatarURL: n, ...l, children: o })
+            : (0, r.jsx)(B.i8, { persona: t, ...s, ...l, children: o });
         };
-      var F = i(17720),
-        k = i(68033),
-        T = i(37085),
-        D = i(56545),
-        O = i(43261);
-      class M {
+      var U = i(17720),
+        q = i(68033),
+        K = i(37085),
+        Q = i(56545),
+        W = i(43261);
+      class z {
         constructor(e) {
           (this.m_rgPreviousAvatars = []),
             (0, l.Gn)(this),
@@ -843,17 +1019,17 @@
             (this.m_promiseLoading = this.LoadAvatarHistory());
         }
         async LoadAvatarHistory() {
-          const e = D.w.Init(O.Vc);
+          const e = Q.w.Init(W.Vc);
           e.SetBodyFields({
-            steamid: A.iA.steamid,
+            steamid: N.iA.steamid,
             filter_user_uploaded_only: !0,
           });
-          let t = await O.BE.GetAvatarHistory(
+          let t = await W.BE.GetAvatarHistory(
             this.m_SteamInterface.GetServiceTransport(),
             e,
           );
           return (
-            t.GetEResult() == T.R
+            t.GetEResult() == K.R
               ? ((this.m_rgPreviousAvatars = []),
                 t
                   .Body()
@@ -875,25 +1051,25 @@
           for (let i = 0; i < this.m_rgPreviousAvatars.length; ++i)
             if (this.m_rgPreviousAvatars[i].avatar_hash == t)
               return this.SelectAvatar(e, t);
-          return T.p;
+          return K.p;
         }
         async SelectAvatar(e, t) {
           let i = new FormData();
-          i.append("sessionid", (0, A.KC)()),
+          i.append("sessionid", (0, N.KC)()),
             i.append("json", "1"),
             i.append("sha", t);
           let r =
             (
               await n().post(
-                `${A.TS.COMMUNITY_BASE_URL}actions/selectPreviousAvatar`,
+                `${N.TS.COMMUNITY_BASE_URL}actions/selectPreviousAvatar`,
                 i,
               )
-            ).data.success || T.zi;
-          return r == T.R && e.CommitAvatarHash(), r;
+            ).data.success || K.zi;
+          return r == K.R && e.CommitAvatarHash(), r;
         }
       }
-      (0, s.Cg)([l.sH], M.prototype, "m_rgPreviousAvatars", void 0);
-      class H {
+      (0, s.Cg)([l.sH], z.prototype, "m_rgPreviousAvatars", void 0);
+      class V {
         constructor() {
           (this.m_AvatarData = void 0), (0, l.Gn)(this);
         }
@@ -924,7 +1100,7 @@
         }
         async LoadOGGAvatars() {
           let e = await n().get(
-            `${A.TS.COMMUNITY_BASE_URL}actions/GameAvatars/?json=1&l=${A.TS.LANGUAGE}`,
+            `${N.TS.COMMUNITY_BASE_URL}actions/GameAvatars/?json=1&l=${N.TS.LANGUAGE}`,
           );
           return (this.m_AvatarData = e.data || null), !!e.data;
         }
@@ -943,21 +1119,21 @@
             let i = t.avatars.find((e) => e.avatar_hash == r);
             if (i) return this.SelectGameAvatar(e, t.appid, i.ordinal);
           }
-          return T.p;
+          return K.p;
         }
         async SelectGameAvatar(e, t, i) {
           let r = new FormData();
-          r.append("sessionid", (0, A.KC)()),
+          r.append("sessionid", (0, N.KC)()),
             r.append("json", "1"),
             r.append("selectedAvatar", "" + i);
           let a =
             (
               await n().post(
-                `${A.TS.COMMUNITY_BASE_URL}ogg/${t}/selectAvatar`,
+                `${N.TS.COMMUNITY_BASE_URL}ogg/${t}/selectAvatar`,
                 r,
               )
-            ).data.success || T.zi;
-          return a == T.R && e.CommitAvatarHash(), a;
+            ).data.success || K.zi;
+          return a == K.R && e.CommitAvatarHash(), a;
         }
         UpdateAvatarsForGame(e, t) {
           const i = ["rgRecentGames", "rgOwnedGames", "rgOtherGames"];
@@ -973,23 +1149,23 @@
           });
         }
       }
-      (0, s.Cg)([l.sH.shallow], H.prototype, "m_AvatarData", void 0);
-      function U(e) {
+      (0, s.Cg)([l.sH.shallow], V.prototype, "m_AvatarData", void 0);
+      function Z(e) {
         switch (e) {
-          case d.uvF:
-            return (0, v.we)("#Privacy_Private");
-          case d.Snd:
-            return (0, v.we)("#Privacy_FriendsOnly");
-          case d.Quy:
-            return (0, v.we)("#Privacy_Public");
+          case m.uvF:
+            return (0, p.we)("#Privacy_Private");
+          case m.Snd:
+            return (0, p.we)("#Privacy_FriendsOnly");
+          case m.Quy:
+            return (0, p.we)("#Privacy_Public");
           default:
             return "";
         }
       }
-      function q(e, t) {
+      function Y(e, t) {
         return e < t ? e : t;
       }
-      class z {
+      class X {
         constructor(e, t) {
           (this.m_PrivacySettings = void 0),
             (this.m_eCommentPermission = void 0),
@@ -1001,27 +1177,27 @@
         }
         GetPrivacySetting(e) {
           return "PrivacyOwnedGames" == e
-            ? q(
+            ? Y(
                 this.m_PrivacySettings.PrivacyProfile,
                 this.m_PrivacySettings.PrivacyOwnedGames,
               )
             : "PrivacyPlaytime" == e
-              ? q(
+              ? Y(
                   this.GetPrivacySetting("PrivacyOwnedGames"),
                   this.m_PrivacySettings.PrivacyPlaytime,
                 )
               : "PrivacyInventory" == e
-                ? q(
+                ? Y(
                     this.m_PrivacySettings.PrivacyProfile,
                     this.m_PrivacySettings.PrivacyInventory,
                   )
                 : "PrivacyInventoryGifts" == e
-                  ? q(
+                  ? Y(
                       this.GetPrivacySetting("PrivacyInventory"),
                       this.m_PrivacySettings.PrivacyInventoryGifts,
                     )
                   : "PrivacyFriendsList" == e
-                    ? q(
+                    ? Y(
                         this.m_PrivacySettings.PrivacyProfile,
                         this.m_PrivacySettings.PrivacyFriendsList,
                       )
@@ -1064,7 +1240,7 @@
         SavePrivacy() {
           let e = new FormData();
           return (
-            e.append("sessionid", (0, A.KC)()),
+            e.append("sessionid", (0, N.KC)()),
             e.append("Privacy", JSON.stringify(this.m_PrivacySettings)),
             e.append(
               "eCommentPermission",
@@ -1074,11 +1250,11 @@
               .post(a.ProfileURL + "ajaxsetprivacy/", e)
               .then((e) => {
                 let t = e.data;
-                if (t.success != T.R)
+                if (t.success != K.R)
                   return (
                     window.ShowAlertDialog(
-                      (0, v.we)("#Error_Error"),
-                      (0, v.we)("#Error_CommentEditFailed"),
+                      (0, p.we)("#Error_Error"),
+                      (0, p.we)("#Error_CommentEditFailed"),
                     ),
                     !1
                   );
@@ -1097,8 +1273,8 @@
               .catch(
                 (e) => (
                   window.ShowAlertDialog(
-                    (0, v.we)("#Error_Error"),
-                    (0, v.we)("#Error_CommentEditFailed"),
+                    (0, p.we)("#Error_Error"),
+                    (0, p.we)("#Error_CommentEditFailed"),
                   ),
                   !1
                 ),
@@ -1106,12 +1282,12 @@
           );
         }
       }
-      (0, s.Cg)([l.sH], z.prototype, "m_PrivacySettings", void 0),
-        (0, s.Cg)([l.sH], z.prototype, "m_eCommentPermission", void 0),
-        (0, s.Cg)([l.sH], z.prototype, "m_eSaveStateByKey", void 0),
-        (0, s.Cg)([l.sH], z.prototype, "m_eCommentSaveState", void 0);
-      var K = i(78619);
-      class W {
+      (0, s.Cg)([l.sH], X.prototype, "m_PrivacySettings", void 0),
+        (0, s.Cg)([l.sH], X.prototype, "m_eCommentPermission", void 0),
+        (0, s.Cg)([l.sH], X.prototype, "m_eSaveStateByKey", void 0),
+        (0, s.Cg)([l.sH], X.prototype, "m_eCommentSaveState", void 0);
+      var J = i(78619);
+      class $ {
         constructor(e, t, i) {
           (this.m_rgBadges = []),
             (this.m_FavoriteBadge = void 0),
@@ -1126,8 +1302,8 @@
               let i;
               (i =
                 "communityitemid" in t
-                  ? new X(t, this.m_AppInfoStore)
-                  : new Y(t)),
+                  ? new ie(t, this.m_AppInfoStore)
+                  : new te(t)),
                 this.m_rgBadges.push(i),
                 a &&
                   i.BIsFavoriteBadge(a) &&
@@ -1155,19 +1331,19 @@
           return this.m_FavoriteBadge != this.m_CommittedFavoriteBadge;
         }
         async CommitFavoriteBadgeChanges() {
-          if (this.m_FavoriteBadge == this.m_CommittedFavoriteBadge) return T.R;
+          if (this.m_FavoriteBadge == this.m_CommittedFavoriteBadge) return K.R;
           let e = this.FavoriteBadgeID,
-            t = D.w.Init(K.Hrm);
+            t = Q.w.Init(J.Hrm);
           e.badgeid
             ? t.Body().set_badgeid(e.badgeid)
             : e.communityitemid &&
               t.Body().set_communityitemid(e.communityitemid);
-          let i = await K.xtC.SetFavoriteBadge(
+          let i = await J.xtC.SetFavoriteBadge(
             this.m_CMInterface.GetServiceTransport(),
             t,
           );
           return (
-            i.GetEResult() == T.R &&
+            i.GetEResult() == K.R &&
               (this.m_CommittedFavoriteBadge = this.m_FavoriteBadge),
             i.GetEResult()
           );
@@ -1184,10 +1360,10 @@
             : null;
         }
       }
-      (0, s.Cg)([l.sH], W.prototype, "m_FavoriteBadge", void 0),
-        (0, s.Cg)([l.XI], W.prototype, "SetFavoriteBadge", null),
-        (0, s.Cg)([l.XI], W.prototype, "RevertFavoriteBadge", null);
-      class V {
+      (0, s.Cg)([l.sH], $.prototype, "m_FavoriteBadge", void 0),
+        (0, s.Cg)([l.XI], $.prototype, "SetFavoriteBadge", null),
+        (0, s.Cg)([l.XI], $.prototype, "RevertFavoriteBadge", null);
+      class ee {
         constructor(e) {
           (this.m_strIconURL = e.icon),
             (this.m_strName = e.name),
@@ -1209,7 +1385,7 @@
           return !1;
         }
       }
-      class Y extends V {
+      class te extends ee {
         constructor(e) {
           super(e), (this.m_unBadgeID = e.badgeid);
         }
@@ -1220,7 +1396,7 @@
           return e.badgeid && e.badgeid == this.m_unBadgeID;
         }
       }
-      class X extends V {
+      class ie extends ee {
         constructor(e, t) {
           super(e),
             (this.m_ulCommunityItemID = e.communityitemid),
@@ -1244,53 +1420,53 @@
           return 1 == this.m_unBorderColor;
         }
       }
-      var Z = i(29609),
-        Q = i(6144);
-      function $(e) {
-        return ie(e.image_small);
+      var re = i(29609),
+        ae = i(6144);
+      function se(e) {
+        return me(e.image_small);
       }
-      function J(e) {
-        return ie(e.image_large);
+      function oe(e) {
+        return me(e.image_large);
       }
-      function ee(e) {
+      function ne(e) {
         return (function (e, t, i) {
           return e
             ? e.image_large
-              ? `${A.TS.COMMUNITY_CDN_URL}economy/profilebackground/${e.image_large}?size=${t}x${i}`
+              ? `${N.TS.COMMUNITY_CDN_URL}economy/profilebackground/${e.image_large}?size=${t}x${i}`
               : null
-            : `${A.TS.COMMUNITY_CDN_URL}public/images/profile/2020/bg_dots.png`;
+            : `${N.TS.COMMUNITY_CDN_URL}public/images/profile/2020/bg_dots.png`;
         })(e, 252, 160);
       }
-      function te(e, t = !1) {
+      function le(e, t = !1) {
         let i = {},
           r = t
             ? (function (e) {
-                return ie(e.movie_webm_small) || ie(e.movie_webm);
+                return me(e.movie_webm_small) || me(e.movie_webm);
               })(e)
             : (function (e) {
-                return ie(e.movie_webm);
+                return me(e.movie_webm);
               })(e);
         r && (i["video/webm"] = r);
         let a = t
           ? (function (e) {
-              return ie(e.movie_mp4_small) || ie(e.movie_mp4);
+              return me(e.movie_mp4_small) || me(e.movie_mp4);
             })(e)
           : (function (e) {
-              return ie(e.movie_mp4);
+              return me(e.movie_mp4);
             })(e);
         return a && (i["video/mp4"] = a), i;
       }
-      function ie(e) {
-        return e ? `${A.TS.MEDIA_CDN_COMMUNITY_URL}images/${e}` : null;
+      function me(e) {
+        return e ? `${N.TS.MEDIA_CDN_COMMUNITY_URL}images/${e}` : null;
       }
-      class re {
+      class de {
         constructor(e, t, i) {
-          (this.m_Backgrounds = new ae(this)),
-            (this.m_MiniProfileBackgrounds = new ae(this)),
-            (this.m_Avatars = new ae(this)),
-            (this.m_AvatarFrames = new ae(this)),
-            (this.m_ProfileModifiers = new ae(this)),
-            (this.m_OnAvatarEquipmentChangedCallbacks = new Q.lu()),
+          (this.m_Backgrounds = new ce(this)),
+            (this.m_MiniProfileBackgrounds = new ce(this)),
+            (this.m_Avatars = new ce(this)),
+            (this.m_AvatarFrames = new ce(this)),
+            (this.m_ProfileModifiers = new ce(this)),
+            (this.m_OnAvatarEquipmentChangedCallbacks = new ae.lu()),
             (this.m_mapGoldenProfileConfigByAppID = new Map()),
             (0, l.Gn)(this),
             (this.m_SteamInterface = e),
@@ -1339,39 +1515,39 @@
             this.m_Backgrounds.BIsUncomitted())
           ) {
             {
-              let e = D.w.Init(K.F55);
+              let e = Q.w.Init(J.F55);
               e.Body().set_communityitemid(
                 this.m_Backgrounds.m_EquippedItem &&
                   this.m_Backgrounds.m_EquippedItem.communityitemid,
               );
-              let t = await K.xtC.SetProfileBackground(
+              let t = await J.xtC.SetProfileBackground(
                 this.m_SteamInterface.GetServiceTransport(),
                 e,
               );
-              if (t.GetEResult() != T.R) return t.GetEResult();
+              if (t.GetEResult() != K.R) return t.GetEResult();
             }
             if (
               this.m_Backgrounds.m_EquippedItem &&
               this.m_Backgrounds.m_EquippedItem.communityitemid
             ) {
-              let e = D.w.Init(K.MK$);
+              let e = Q.w.Init(J.MK$);
               e
                 .Body()
                 .set_communityitemid(
                   this.m_Backgrounds.m_EquippedItem.communityitemid,
                 ),
                 e.Body().set_flags(this.m_Backgrounds.m_EquipFlags);
-              let t = await K.xtC.SetEquippedProfileItemFlags(
+              let t = await J.xtC.SetEquippedProfileItemFlags(
                 this.m_SteamInterface.GetServiceTransport(),
                 e,
               );
-              t.GetEResult() != T.R &&
+              t.GetEResult() != K.R &&
                 console.error(
                   `Error when calling PlayerService.SetEquippedProfileItemFlags: EResult=${t.GetEResult()}`,
                 );
             }
           }
-          return this.m_Backgrounds.SetComitted(), T.R;
+          return this.m_Backgrounds.SetComitted(), K.R;
         }
         RevertBackgroundChanges() {
           this.m_Backgrounds.Revert();
@@ -1406,21 +1582,21 @@
         }
         async CommitMiniProfileChanges() {
           if (this.m_MiniProfileBackgrounds.BIsUncomitted()) {
-            let e = D.w.Init(K.A6_);
+            let e = Q.w.Init(J.A6_);
             e.Body().set_communityitemid(
               this.m_MiniProfileBackgrounds.m_EquippedItem &&
                 this.m_MiniProfileBackgrounds.m_EquippedItem.communityitemid,
             );
-            let t = await K.xtC.SetMiniProfileBackground(
+            let t = await J.xtC.SetMiniProfileBackground(
               this.m_SteamInterface.GetServiceTransport(),
               e,
             );
-            if (t.GetEResult() != T.R) return t.GetEResult();
+            if (t.GetEResult() != K.R) return t.GetEResult();
           }
           return (
             this.m_MiniProfileBackgrounds.SetComitted(),
             this.m_OnAvatarEquipmentChangedCallbacks.Dispatch(),
-            T.R
+            K.R
           );
         }
         RevertMiniProfileBackgroundChanges() {
@@ -1435,40 +1611,40 @@
         async CommitAvatarChanges() {
           let e, t;
           if (this.m_Avatars.BIsUncomitted()) {
-            let t = D.w.Init(K.UMm);
+            let t = Q.w.Init(J.UMm);
             t
               .Body()
               .set_communityitemid(
                 this.m_Avatars.m_EquippedItem &&
                   this.m_Avatars.m_EquippedItem.communityitemid,
               ),
-              (e = K.xtC.SetAnimatedAvatar(
+              (e = J.xtC.SetAnimatedAvatar(
                 this.m_SteamInterface.GetServiceTransport(),
                 t,
               ));
           }
           if (this.m_AvatarFrames.BIsUncomitted()) {
-            let e = D.w.Init(K.C0y);
+            let e = Q.w.Init(J.C0y);
             e
               .Body()
               .set_communityitemid(
                 this.m_AvatarFrames.m_EquippedItem &&
                   this.m_AvatarFrames.m_EquippedItem.communityitemid,
               ),
-              (t = K.xtC.SetAvatarFrame(
+              (t = J.xtC.SetAvatarFrame(
                 this.m_SteamInterface.GetServiceTransport(),
                 e,
               ));
           }
           const [i, r] = await Promise.all([e, t]);
-          return i && i.GetEResult() != T.R
+          return i && i.GetEResult() != K.R
             ? i.GetEResult()
-            : r && r.GetEResult() != T.R
+            : r && r.GetEResult() != K.R
               ? r.GetEResult()
               : (this.m_Avatars.SetComitted(),
                 this.m_AvatarFrames.SetComitted(),
                 this.m_OnAvatarEquipmentChangedCallbacks.Dispatch(),
-                T.R);
+                K.R);
         }
         RevertAvatarChanges() {
           this.m_Avatars.Revert(), this.m_AvatarFrames.Revert();
@@ -1588,10 +1764,10 @@
           this.m_ProfileModifiers.Revert();
         }
         ReloadEquippedItems() {
-          let e = D.w.Init(K.aKf);
-          e.Body().set_steamid(A.iA.steamid),
-            e.Body().set_language(A.TS.LANGUAGE),
-            (this.m_promiseEquipped = K.xtC.GetProfileItemsEquipped(
+          let e = Q.w.Init(J.aKf);
+          e.Body().set_steamid(N.iA.steamid),
+            e.Body().set_language(N.TS.LANGUAGE),
+            (this.m_promiseEquipped = J.xtC.GetProfileItemsEquipped(
               this.m_SteamInterface.GetServiceTransport(),
               e,
             )),
@@ -1613,7 +1789,7 @@
               this.m_ProfileModifiers.m_CommittedEquippedItem !=
                 this.m_ProfileModifiers.m_EquippedItem
             ) {
-              let t = D.w.Init(Z.fp);
+              let t = Q.w.Init(re.fp);
               t
                 .Body()
                 .set_communityitemid(
@@ -1626,15 +1802,15 @@
                     this.m_ProfileModifiers.m_CommittedEquippedItem.appid,
                   ),
                 t.Body().set_activate(!1);
-              let i = await Z.uy.ActivateProfileModifierItem(
+              let i = await re.uy.ActivateProfileModifierItem(
                 this.m_SteamInterface.GetServiceTransport(),
                 t,
               );
-              if (i.GetEResult() != T.R) return i.GetEResult();
+              if (i.GetEResult() != K.R) return i.GetEResult();
               e = !0;
             }
             if (this.m_ProfileModifiers.m_EquippedItem) {
-              let t = D.w.Init(Z.fp);
+              let t = Q.w.Init(re.fp);
               t
                 .Body()
                 .set_communityitemid(
@@ -1644,11 +1820,11 @@
                   .Body()
                   .set_appid(this.m_ProfileModifiers.m_EquippedItem.appid),
                 t.Body().set_activate(!0);
-              let i = await Z.uy.ActivateProfileModifierItem(
+              let i = await re.uy.ActivateProfileModifierItem(
                 this.m_SteamInterface.GetServiceTransport(),
                 t,
               );
-              if (i.GetEResult() != T.R) return i.GetEResult();
+              if (i.GetEResult() != K.R) return i.GetEResult();
               e = !0;
             }
             this.m_ProfileModifiers.SetComitted(),
@@ -1657,7 +1833,7 @@
                   this.ReloadEquippedItems();
                 });
           }
-          return T.R;
+          return K.R;
         }
         BIsLegacyGoldenProfile(e) {
           return this.m_mapGoldenProfileConfigByAppID.has(e);
@@ -1681,31 +1857,31 @@
           return this.GetGoldenProfileConfigValue("miniprofile_movie");
         }
         async Initialize() {
-          let e = D.w.Init(K.YkN);
-          e.Body().set_language(A.TS.LANGUAGE),
-            (this.m_promiseOwned = K.xtC.GetProfileItemsOwned(
+          let e = Q.w.Init(J.YkN);
+          e.Body().set_language(N.TS.LANGUAGE),
+            (this.m_promiseOwned = J.xtC.GetProfileItemsOwned(
               this.m_SteamInterface.GetServiceTransport(),
               e,
             ));
-          let t = D.w.Init(K.aKf);
-          t.Body().set_steamid(A.iA.steamid),
-            t.Body().set_language(A.TS.LANGUAGE),
-            (this.m_promiseEquipped = K.xtC.GetProfileItemsEquipped(
+          let t = Q.w.Init(J.aKf);
+          t.Body().set_steamid(N.iA.steamid),
+            t.Body().set_language(N.TS.LANGUAGE),
+            (this.m_promiseEquipped = J.xtC.GetProfileItemsEquipped(
               this.m_SteamInterface.GetServiceTransport(),
               t,
             ));
         }
       }
-      (0, s.Cg)([l.XI], re.prototype, "RevertBackgroundChanges", null),
+      (0, s.Cg)([l.XI], de.prototype, "RevertBackgroundChanges", null),
         (0, s.Cg)(
           [l.XI],
-          re.prototype,
+          de.prototype,
           "RevertMiniProfileBackgroundChanges",
           null,
         ),
-        (0, s.Cg)([l.XI], re.prototype, "RevertAvatarChanges", null),
-        (0, s.Cg)([l.XI], re.prototype, "ReloadEquippedItems", null);
-      class ae {
+        (0, s.Cg)([l.XI], de.prototype, "RevertAvatarChanges", null),
+        (0, s.Cg)([l.XI], de.prototype, "ReloadEquippedItems", null);
+      class ce {
         constructor(e) {
           (this.m_cItemsOwned = void 0),
             (this.m_bEquippedLoaded = !1),
@@ -1781,15 +1957,15 @@
           return e;
         }
       }
-      (0, s.Cg)([l.sH], ae.prototype, "m_cItemsOwned", void 0),
-        (0, s.Cg)([l.sH], ae.prototype, "m_bUnsavedChanges", void 0),
-        (0, s.Cg)([l.sH], ae.prototype, "m_CommittedEquippedItem", void 0),
-        (0, s.Cg)([l.sH], ae.prototype, "m_EquippedItem", void 0),
-        (0, s.Cg)([l.sH], ae.prototype, "m_EquipFlags", void 0),
-        (0, s.Cg)([l.XI], ae.prototype, "SetEquipped", null),
-        (0, s.Cg)([l.XI], ae.prototype, "SetEquippedFlags", null),
-        (0, s.Cg)([l.XI], ae.prototype, "Revert", null);
-      class se {
+      (0, s.Cg)([l.sH], ce.prototype, "m_cItemsOwned", void 0),
+        (0, s.Cg)([l.sH], ce.prototype, "m_bUnsavedChanges", void 0),
+        (0, s.Cg)([l.sH], ce.prototype, "m_CommittedEquippedItem", void 0),
+        (0, s.Cg)([l.sH], ce.prototype, "m_EquippedItem", void 0),
+        (0, s.Cg)([l.sH], ce.prototype, "m_EquipFlags", void 0),
+        (0, s.Cg)([l.XI], ce.prototype, "SetEquipped", null),
+        (0, s.Cg)([l.XI], ce.prototype, "SetEquippedFlags", null),
+        (0, s.Cg)([l.XI], ce.prototype, "Revert", null);
+      class he {
         constructor(e, t, i, r, a, s) {
           (this.m_strDisplayCountry = void 0),
             (this.m_strDisplayState = void 0),
@@ -1861,7 +2037,7 @@
             ? this.m_rgCountryList
             : (this.m_promiseLoadCountries ||
                 ((this.m_promiseLoadCountries = n()
-                  .get(A.TS.COMMUNITY_BASE_URL + "/actions/QueryLocations/")
+                  .get(N.TS.COMMUNITY_BASE_URL + "/actions/QueryLocations/")
                   .then((e) => e.data)),
                 this.m_promiseLoadCountries.then(
                   (e) => {
@@ -1893,7 +2069,7 @@
               : (e.stateloader ||
                   ((e.stateloader = n()
                     .get(
-                      A.TS.COMMUNITY_BASE_URL +
+                      N.TS.COMMUNITY_BASE_URL +
                         `/actions/QueryLocations/${e.countrycode}/`,
                     )
                     .then((e) => e.data)),
@@ -1928,7 +2104,7 @@
               : (e.cityloader ||
                   ((e.cityloader = n()
                     .get(
-                      A.TS.COMMUNITY_BASE_URL +
+                      N.TS.COMMUNITY_BASE_URL +
                         `/actions/QueryLocations/${e.countrycode}/${e.statecode}`,
                     )
                     .then((e) => e.data)),
@@ -1944,20 +2120,20 @@
             : [];
         }
       }
-      (0, s.Cg)([l.sH], se.prototype, "m_strDisplayCountry", void 0),
-        (0, s.Cg)([l.sH], se.prototype, "m_strDisplayState", void 0),
-        (0, s.Cg)([l.sH], se.prototype, "m_strDisplayCity", void 0),
-        (0, s.Cg)([l.sH], se.prototype, "m_strCountryCode", void 0),
-        (0, s.Cg)([l.sH], se.prototype, "m_strStateCode", void 0),
-        (0, s.Cg)([l.sH], se.prototype, "m_strCityCode", void 0),
-        (0, s.Cg)([l.sH], se.prototype, "m_bStateSelectionAvailable", void 0),
-        (0, s.Cg)([l.sH], se.prototype, "m_bCitySelectionAvailable", void 0),
-        (0, s.Cg)([l.XI], se.prototype, "SetCountry", null),
-        (0, s.Cg)([l.XI], se.prototype, "SetState", null),
-        (0, s.Cg)([l.XI], se.prototype, "SetCity", null),
-        (0, s.Cg)([l.XI], se.prototype, "FindAndSetActiveCountry", null),
-        (0, s.Cg)([l.XI], se.prototype, "FindAndSetActiveState", null);
-      class oe {
+      (0, s.Cg)([l.sH], he.prototype, "m_strDisplayCountry", void 0),
+        (0, s.Cg)([l.sH], he.prototype, "m_strDisplayState", void 0),
+        (0, s.Cg)([l.sH], he.prototype, "m_strDisplayCity", void 0),
+        (0, s.Cg)([l.sH], he.prototype, "m_strCountryCode", void 0),
+        (0, s.Cg)([l.sH], he.prototype, "m_strStateCode", void 0),
+        (0, s.Cg)([l.sH], he.prototype, "m_strCityCode", void 0),
+        (0, s.Cg)([l.sH], he.prototype, "m_bStateSelectionAvailable", void 0),
+        (0, s.Cg)([l.sH], he.prototype, "m_bCitySelectionAvailable", void 0),
+        (0, s.Cg)([l.XI], he.prototype, "SetCountry", null),
+        (0, s.Cg)([l.XI], he.prototype, "SetState", null),
+        (0, s.Cg)([l.XI], he.prototype, "SetCity", null),
+        (0, s.Cg)([l.XI], he.prototype, "FindAndSetActiveCountry", null),
+        (0, s.Cg)([l.XI], he.prototype, "FindAndSetActiveState", null);
+      class ue {
         constructor(e, t, i) {
           (this.m_ActiveTheme = void 0),
             (0, l.Gn)(this),
@@ -1965,7 +2141,7 @@
             (this.m_rgAvailableThemes = i.map((e) => ({
               ...e,
               theme_id: e.theme_id || "Default",
-              title: (0, v.we)(e.title),
+              title: (0, p.we)(e.title),
             }))),
             void 0 === t || "" === t.theme_id
               ? this.SetActiveTheme("Default", !0)
@@ -1993,27 +2169,27 @@
           this.m_ActiveTheme = this.m_ComittedActiveTheme;
         }
         async CommitActiveTheme() {
-          let e = D.w.Init(K.yow);
+          let e = Q.w.Init(J.yow);
           e.Body().set_theme_id(
             "Default" == this.ActiveTheme.theme_id
               ? ""
               : this.ActiveTheme.theme_id,
           );
-          const t = await K.xtC.SetProfileTheme(
+          const t = await J.xtC.SetProfileTheme(
             this.m_CMInterface.GetServiceTransport(),
             e,
           );
           return (
-            t.GetEResult() == T.R &&
+            t.GetEResult() == K.R &&
               (this.m_ComittedActiveTheme = this.ActiveTheme),
             t.GetEResult()
           );
         }
       }
-      (0, s.Cg)([l.sH], oe.prototype, "m_ActiveTheme", void 0),
-        (0, s.Cg)([l.XI], oe.prototype, "RevertActiveTheme", null);
-      var ne = i(85044);
-      async function le(e, t) {
+      (0, s.Cg)([l.sH], ue.prototype, "m_ActiveTheme", void 0),
+        (0, s.Cg)([l.XI], ue.prototype, "RevertActiveTheme", null);
+      var pe = i(85044);
+      async function _e(e, t) {
         let i;
         if (t instanceof FormData) i = t;
         else {
@@ -2021,7 +2197,7 @@
           for (const e in t) i.append(e, t[e]);
         }
         i.append("type", e),
-          i.append("sessionID", (0, A.KC)()),
+          i.append("sessionID", (0, N.KC)()),
           i.append("json", "1");
         const r = `${a.ProfileURL}edit/`;
         try {
@@ -2033,19 +2209,19 @@
           };
         } catch (e) {
           return {
-            eResult: T.iV,
-            strHTMLError: (0, v.we)("#ConnectionTrouble_FailedToConnect"),
+            eResult: K.iV,
+            strHTMLError: (0, p.we)("#ConnectionTrouble_FailedToConnect"),
           };
         }
       }
-      class de {
+      class ve {
         constructor(e) {
           (this.m_PrimaryGroup = void 0),
             (this.m_bLoaded = !1),
             (0, l.Gn)(this),
             e &&
               (this.m_CommittedPrimaryGroup = this.m_PrimaryGroup =
-                new me(new F.b(e.steamid), e.name, e.avatarHash));
+                new ge(new U.b(e.steamid), e.name, e.avatarHash));
         }
         get PrimaryGroup() {
           return this.m_PrimaryGroup;
@@ -2079,7 +2255,7 @@
             (0, l.h5)(() => {
               e.data &&
                 (this.m_rgUserGroups = e.data.map(
-                  (e) => new me(new F.b(e.steamid), e.name, e.avatarHash),
+                  (e) => new ge(new U.b(e.steamid), e.name, e.avatarHash),
                 )),
                 (this.m_bLoaded = !0);
             }),
@@ -2095,13 +2271,13 @@
           );
         }
         async CommitPrimaryGroup() {
-          let e = await le("favoriteclan", {
+          let e = await _e("favoriteclan", {
             primary_group_steamid: this.m_PrimaryGroup
               .GetSteamID()
               .ConvertTo64BitString(),
           });
           return (
-            e.eResult == T.R &&
+            e.eResult == K.R &&
               (this.m_CommittedPrimaryGroup = this.m_PrimaryGroup),
             e
           );
@@ -2110,11 +2286,11 @@
           this.m_PrimaryGroup = this.m_CommittedPrimaryGroup;
         }
       }
-      (0, s.Cg)([l.sH], de.prototype, "m_PrimaryGroup", void 0),
-        (0, s.Cg)([l.sH], de.prototype, "m_bLoaded", void 0),
-        (0, s.Cg)([l.XI], de.prototype, "SetPrimaryGroup", null),
-        (0, s.Cg)([l.XI], de.prototype, "RevertPrimaryGroupChanges", null);
-      class me {
+      (0, s.Cg)([l.sH], ve.prototype, "m_PrimaryGroup", void 0),
+        (0, s.Cg)([l.sH], ve.prototype, "m_bLoaded", void 0),
+        (0, s.Cg)([l.XI], ve.prototype, "SetPrimaryGroup", null),
+        (0, s.Cg)([l.XI], ve.prototype, "RevertPrimaryGroupChanges", null);
+      class ge {
         constructor(e, t, i) {
           (this.m_steamID = e),
             (this.m_strName = t),
@@ -2127,41 +2303,41 @@
           return this.m_strName;
         }
         GetAvatarURL(e) {
-          return (0, ne.t)(
+          return (0, pe.t)(
             this.m_strAvatarHash || "0000000000000000000000000000000000000000",
             e,
           );
         }
       }
-      class ce {
+      class fe {
         constructor(e, t, i) {
-          (this.m_OGGAvatars = new H()),
-            (this.m_EmoticonStore = new k.T()),
-            (this.m_Profile = new he(e)),
+          (this.m_OGGAvatars = new V()),
+            (this.m_EmoticonStore = new q.T()),
+            (this.m_Profile = new Pe(e)),
             (this.m_WebAPI = i),
             (this.m_AppInfoStore = new c.Mi()),
             this.m_AppInfoStore.Init(this.m_WebAPI),
-            this.m_AppInfoStore.SetCacheStorage(new m.A()),
-            (this.m_ProfileBadges = new W(
+            this.m_AppInfoStore.SetCacheStorage(new d.A()),
+            (this.m_ProfileBadges = new $(
               this.m_WebAPI,
               this.m_AppInfoStore,
               t,
             )),
-            (this.m_ProfileItems = new re(
+            (this.m_ProfileItems = new de(
               this.m_WebAPI,
               this.m_AppInfoStore,
               e.rgGoldenProfileData,
             )),
-            (this.m_ProfileTheme = new oe(
+            (this.m_ProfileTheme = new ue(
               this.m_WebAPI,
               e.ActiveTheme,
               e.rgAvailableThemes,
             )),
-            (this.m_ProfilePrivacy = new z(
+            (this.m_ProfilePrivacy = new X(
               e.Privacy.PrivacySettings,
               e.Privacy.eCommentPermission,
             )),
-            (this.m_AvatarHistory = new M(this.m_WebAPI)),
+            (this.m_AvatarHistory = new z(this.m_WebAPI)),
             this.m_ProfileItems.AddOnAvatarEquipmentChangedCallback(() => {
               this.m_Profile.MiniProfileData.Reload(),
                 this.m_AvatarHistory.RefreshAvatarHistory();
@@ -2200,7 +2376,7 @@
           };
         }
       }
-      class he {
+      class Pe {
         constructor(e) {
           (this.m_strPersonaName = void 0),
             (this.m_strCommittedPersonaName = void 0),
@@ -2231,11 +2407,11 @@
               locCityCode: o,
             },
           } = e;
-          (this.m_Location = new se(t, i, r, a, s, o)),
-            (this.m_GroupList = new de(e.PrimaryGroup));
-          const n = new F.b(A.iA.steamid);
-          (this.m_MiniProfileData = new j(n.GetAccountID())),
-            (this.m_persona = new y.Z(n)),
+          (this.m_Location = new he(t, i, r, a, s, o)),
+            (this.m_GroupList = new ve(e.PrimaryGroup));
+          const n = new U.b(N.iA.steamid);
+          (this.m_MiniProfileData = new R(n.GetAccountID())),
+            (this.m_persona = new v.Z(n)),
             (0, l.fm)(() => {
               this.BuildPersonaStateObject();
             }),
@@ -2268,7 +2444,7 @@
           if (null == e ? void 0 : e.postMessage) {
             const t = {
               event_name: "personastatechanged",
-              steamid: A.iA.steamid,
+              steamid: N.iA.steamid,
             };
             e.postMessage(JSON.stringify(t));
           }
@@ -2302,8 +2478,8 @@
         }
         GetConstructedURL() {
           return this.m_strCustomURL
-            ? `${A.TS.COMMUNITY_BASE_URL}id/${this.m_strCustomURL}/`
-            : `${A.TS.COMMUNITY_BASE_URL}profiles/${A.iA.steamid}/`;
+            ? `${N.TS.COMMUNITY_BASE_URL}id/${this.m_strCustomURL}/`
+            : `${N.TS.COMMUNITY_BASE_URL}profiles/${N.iA.steamid}/`;
         }
         GetAvatarHash() {
           return this.m_strAvatarHash;
@@ -2347,32 +2523,32 @@
         BuildPersonaStateObject() {
           (this.m_persona.m_strPlayerName = this.m_strPersonaName),
             (this.m_persona.m_strAvatarHash = this.m_strAvatarHash),
-            (this.m_persona.m_ePersonaState = d.UXk);
+            (this.m_persona.m_ePersonaState = m.UXk);
         }
         async UploadAvatar(e) {
           let t = new FormData();
           t.append("avatar", e),
             t.append("type", "player_avatar_image"),
-            t.append("sId", A.iA.steamid),
-            t.append("sessionid", (0, A.KC)()),
+            t.append("sId", N.iA.steamid),
+            t.append("sessionid", (0, N.KC)()),
             t.append("doSub", "1"),
             t.append("json", "1");
           let i = !1,
             r = "";
           try {
             let e = await n().post(
-              `${A.TS.COMMUNITY_BASE_URL}actions/FileUploader/`,
+              `${N.TS.COMMUNITY_BASE_URL}actions/FileUploader/`,
               t,
             );
             e.data && e.data.success
               ? ((i = !0), this.SetAvatarHash(e.data.hash, !0))
               : (r =
                   (e.data && e.data.message) ||
-                  (0, v.we)("#Chat_Settings_Error_ServerError"));
+                  (0, p.we)("#Chat_Settings_Error_ServerError"));
           } catch (e) {
             r =
               (e.response && e.response.data.message) ||
-              (0, v.we)("#Chat_Settings_Error_ServerError");
+              (0, p.we)("#Chat_Settings_Error_ServerError");
           }
           return { bSuccess: i, strError: r };
         }
@@ -2407,71 +2583,71 @@
           return this.m_rtAvatarBannedUntil;
         }
       }
-      (he.k_strPersonaNameCooldownSupportURL =
+      (Pe.k_strPersonaNameCooldownSupportURL =
         "https://help.steampowered.com/faqs/view/6862-8119-C23E-EA7B"),
-        (he.k_strProfileSummaryCooldownSupportURL =
+        (Pe.k_strProfileSummaryCooldownSupportURL =
           "https://help.steampowered.com/faqs/view/6862-8119-C23E-EA7B"),
-        (he.k_strAvatarCooldownSupportURL =
+        (Pe.k_strAvatarCooldownSupportURL =
           "https://help.steampowered.com/faqs/view/6862-8119-C23E-EA7B"),
-        (he.k_strNameFilteredSupportURL =
+        (Pe.k_strNameFilteredSupportURL =
           "https://help.steampowered.com/wizard/HelpWithSteamIssue/?issueid=415"),
-        (0, s.Cg)([l.sH], he.prototype, "m_strPersonaName", void 0),
-        (0, s.Cg)([l.sH], he.prototype, "m_strCommittedPersonaName", void 0),
-        (0, s.Cg)([l.sH], he.prototype, "m_strCustomURL", void 0),
-        (0, s.Cg)([l.sH], he.prototype, "m_strRealName", void 0),
-        (0, s.Cg)([l.sH], he.prototype, "m_strSummary", void 0),
-        (0, s.Cg)([l.sH], he.prototype, "m_strAvatarHash", void 0),
-        (0, s.Cg)([l.sH], he.prototype, "m_strCommittedAvatarHash", void 0),
-        (0, s.Cg)([l.sH], he.prototype, "m_Preferences", void 0),
-        (0, s.Cg)([l.XI], he.prototype, "RevertBasicInfoChanges", null),
-        (0, s.Cg)([l.XI], he.prototype, "SetAvatarHash", null),
-        (0, s.Cg)([l.XI], he.prototype, "RevertToComittedAvatarHash", null);
-      var ue = i(92757),
-        pe = i(2160),
-        _e = i(23809),
-        ve = (i(64641), i(72739)),
-        ge = i(35471),
-        fe = i(68255),
-        Pe = i(73745),
-        ye = i(66418),
-        Ce = i(88942),
-        Se = i(45301),
-        xe = i(76217),
-        Ae = i(31270),
-        we = i(9154),
-        je = i(84811),
-        Ie = i(91675);
-      const Ge = ({ title: e, className: t, children: i }) =>
+        (0, s.Cg)([l.sH], Pe.prototype, "m_strPersonaName", void 0),
+        (0, s.Cg)([l.sH], Pe.prototype, "m_strCommittedPersonaName", void 0),
+        (0, s.Cg)([l.sH], Pe.prototype, "m_strCustomURL", void 0),
+        (0, s.Cg)([l.sH], Pe.prototype, "m_strRealName", void 0),
+        (0, s.Cg)([l.sH], Pe.prototype, "m_strSummary", void 0),
+        (0, s.Cg)([l.sH], Pe.prototype, "m_strAvatarHash", void 0),
+        (0, s.Cg)([l.sH], Pe.prototype, "m_strCommittedAvatarHash", void 0),
+        (0, s.Cg)([l.sH], Pe.prototype, "m_Preferences", void 0),
+        (0, s.Cg)([l.XI], Pe.prototype, "RevertBasicInfoChanges", null),
+        (0, s.Cg)([l.XI], Pe.prototype, "SetAvatarHash", null),
+        (0, s.Cg)([l.XI], Pe.prototype, "RevertToComittedAvatarHash", null);
+      var ye = i(92757),
+        Ce = i(2160),
+        Ae = i(23809),
+        Se = (i(64641), i(72739)),
+        xe = i(35471),
+        we = i(68255),
+        je = i(73745),
+        Ie = i(66418),
+        Be = i(88942),
+        Ge = i(45301),
+        Ee = i(76217),
+        Ne = i(31270),
+        be = i(9154),
+        Re = i(84811),
+        Le = i(91675);
+      const Fe = ({ title: e, className: t, children: i }) =>
           (0, r.jsxs)("div", {
-            className: (0, _.A)(Ae.ProfileBox, t),
+            className: (0, g.A)(Ne.ProfileBox, t),
             children: [
-              (0, r.jsx)("div", { className: Ae.ProfileBoxTitle, children: e }),
+              (0, r.jsx)("div", { className: Ne.ProfileBoxTitle, children: e }),
               (0, r.jsx)("div", {
-                className: Ae.ProfileBoxContent,
-                children: (0, r.jsx)(je.tH, { children: i }),
+                className: Ne.ProfileBoxContent,
+                children: (0, r.jsx)(Re.tH, { children: i }),
               }),
             ],
           }),
-        Be = ({ onSave: e, onCancel: t, disabled: i }) =>
-          (0, r.jsxs)(xe.Z, {
-            className: Ae.SaveCancelButtons,
+        Te = ({ onSave: e, onCancel: t, disabled: i }) =>
+          (0, r.jsxs)(Ee.Z, {
+            className: Ne.SaveCancelButtons,
             "flow-children": "row-reverse",
             children: [
-              (0, r.jsx)(fe.jn, {
+              (0, r.jsx)(we.jn, {
                 onClick: e,
                 disabled: i,
-                children: (0, v.we)("#Button_Save"),
+                children: (0, p.we)("#Button_Save"),
               }),
-              (0, r.jsx)(fe.$n, {
+              (0, r.jsx)(we.$n, {
                 onClick: t,
-                children: (0, v.we)("#Button_Cancel"),
+                children: (0, p.we)("#Button_Cancel"),
               }),
             ],
           });
-      function Ee(e) {
-        return (0, v.we)(e).replace(/%s/g, "");
+      function ke(e) {
+        return (0, p.we)(e).replace(/%s/g, "");
       }
-      class Ne extends u.Component {
+      class De extends u.Component {
         constructor() {
           super(...arguments),
             (this.state = { activeItem: void 0, bSaving: !1 });
@@ -2502,33 +2678,33 @@
               ...s
             } = this.props,
             { activeItem: o, bSaving: n } = this.state;
-          return (0, r.jsxs)(fe.nB, {
-            className: (0, _.A)(Ae.PickerPreviewDialog, i),
+          return (0, r.jsxs)(we.nB, {
+            className: (0, g.A)(Ne.PickerPreviewDialog, i),
             children: [
-              (0, r.jsx)(ue.XG, {
+              (0, r.jsx)(ye.XG, {
                 when: !s.fnIsSameItem(o, this.props.ActiveItem),
-                message: (0, v.we)("#Profile_Edit_UnsavedChangesWarning"),
+                message: (0, p.we)("#Profile_Edit_UnsavedChangesWarning"),
               }),
-              (0, r.jsxs)(xe.Z, {
-                className: Ae.PickerPreviewBody,
+              (0, r.jsxs)(Ee.Z, {
+                className: Ne.PickerPreviewBody,
                 "flow-children": "column",
                 children: [
                   (0, r.jsx)("div", {
-                    className: Ae.PickerPreview,
-                    children: (0, r.jsx)(je.tH, { children: a(o) }),
+                    className: Ne.PickerPreview,
+                    children: (0, r.jsx)(Re.tH, { children: a(o) }),
                   }),
-                  e && (0, r.jsx)(fe.Y9, { children: e }),
+                  e && (0, r.jsx)(we.Y9, { children: e }),
                   (0, r.jsx)("div", {
-                    className: Ae.PickerPreviewItems,
-                    children: (0, r.jsx)(je.tH, {
-                      children: (0, r.jsx)(Re, {
+                    className: Ne.PickerPreviewItems,
+                    children: (0, r.jsx)(Re.tH, {
+                      children: (0, r.jsx)(Oe, {
                         ...s,
                         onItemSelected: this.OnItemSelected,
                         activeItem: o,
                       }),
                     }),
                   }),
-                  (0, r.jsx)(Be, {
+                  (0, r.jsx)(Te, {
                     onSave: this.CommitChanges,
                     onCancel: this.RevertChanges,
                     disabled: n,
@@ -2539,13 +2715,13 @@
           });
         }
       }
-      function be(e) {
+      function Me(e) {
         return e ? e.toLocaleLowerCase().replace(/\W/g, "") : "";
       }
-      (0, s.Cg)([Pe.oI], Ne.prototype, "CommitChanges", null),
-        (0, s.Cg)([Pe.oI], Ne.prototype, "RevertChanges", null),
-        (0, s.Cg)([Pe.oI], Ne.prototype, "OnItemSelected", null);
-      class Re extends u.Component {
+      (0, s.Cg)([je.oI], De.prototype, "CommitChanges", null),
+        (0, s.Cg)([je.oI], De.prototype, "RevertChanges", null),
+        (0, s.Cg)([je.oI], De.prototype, "OnItemSelected", null);
+      class Oe extends u.Component {
         constructor() {
           super(...arguments),
             (this.state = { strSearch: "" }),
@@ -2563,7 +2739,7 @@
             this.m_fnSearchFieldsDisposer = (0, l.fm)(() => {
               (this.m_rgSearchableItems = r.map((e, r) => ({
                 key: "" + r,
-                normalized_search_strings: t && t(e).map(be),
+                normalized_search_strings: t && t(e).map(Me),
                 OnSelected: () => {
                   i(e);
                 },
@@ -2627,42 +2803,42 @@
               fnIsSameItem: s,
               classNameItemPicker: o,
             } = this.props,
-            { strSearch: n, nWidth: l, nHeight: d } = this.state;
+            { strSearch: n, nWidth: l, nHeight: m } = this.state;
           if (null === this.m_rgSearchableItems) return null;
-          let m = this.BuildFilterPredicate(),
+          let d = this.BuildFilterPredicate(),
             c = {};
-          l && d && (c = { width: l + "px", height: d + "px" });
+          l && m && (c = { width: l + "px", height: m + "px" });
           let h =
             s ||
             function (e, t) {
               return e == t;
             };
-          return (0, r.jsxs)(xe.Z, {
-            className: (0, _.A)(Ae.ItemPicker, o),
+          return (0, r.jsxs)(Ee.Z, {
+            className: (0, g.A)(Ne.ItemPicker, o),
             ref: this.m_refRootDiv,
             style: c,
             "flow-children": "column",
             children: [
               i &&
                 (0, r.jsx)("div", {
-                  className: Ae.ItemPickeFilter,
-                  children: (0, r.jsx)(fe.pd, {
+                  className: Ne.ItemPickeFilter,
+                  children: (0, r.jsx)(we.pd, {
                     value: n,
-                    label: (0, v.we)("#ItemPicker_Filter"),
+                    label: (0, p.we)("#ItemPicker_Filter"),
                     onChange: this.OnSearchChange,
                   }),
                 }),
               (0, r.jsx)("div", {
-                className: Ae.ItemPickerCtn,
-                children: (0, r.jsx)(xe.Z, {
-                  className: Ae.ItemPickerList,
+                className: Ne.ItemPickerCtn,
+                children: (0, r.jsx)(Ee.Z, {
+                  className: Ne.ItemPickerList,
                   "flow-children": "grid",
                   children: this.m_rgSearchableItems.map((i) =>
-                    m && !m(i)
+                    d && !d(i)
                       ? null
                       : i.item
                         ? (0, r.jsx)(
-                            je.tH,
+                            Re.tH,
                             {
                               children: (0, r.jsx)(e, {
                                 Item: i.item,
@@ -2673,7 +2849,7 @@
                             i.key,
                           )
                         : (0, r.jsx)(
-                            je.tH,
+                            Re.tH,
                             {
                               children: t({
                                 onSelected: i.OnSelected,
@@ -2689,23 +2865,23 @@
           });
         }
       }
-      (0, s.Cg)([Pe.oI], Re.prototype, "OnSearchChange", null);
-      const Le = ({ strHTMLError: e }) =>
+      (0, s.Cg)([je.oI], Oe.prototype, "OnSearchChange", null);
+      const He = ({ strHTMLError: e }) =>
           e
             ? (0, r.jsxs)("div", {
-                className: Ae.HTMLErrorBox,
+                className: Ne.HTMLErrorBox,
                 children: [
                   (0, r.jsxs)("b", {
-                    children: [(0, v.we)("#Error_Generic_Label"), " "],
+                    children: [(0, p.we)("#Error_Generic_Label"), " "],
                   }),
                   (0, r.jsx)("span", {
-                    className: Ae.HTMLError,
+                    className: Ne.HTMLError,
                     dangerouslySetInnerHTML: { __html: e },
                   }),
                 ],
               })
             : null,
-        Fe = ({
+        Ue = ({
           strCooldownLabel: e,
           rtCooldownEnd: t,
           strCooldownDescHTML: i,
@@ -2714,18 +2890,18 @@
           if (!t) return (0, r.jsx)(r.Fragment, { children: a });
           const s = Math.max(0, t - Date.now() / 1e3);
           return (0, r.jsxs)("div", {
-            className: Ae.CooldownNotice,
+            className: Ne.CooldownNotice,
             children: [
               (0, r.jsxs)("div", {
-                className: Ae.HTMLErrorBox,
+                className: Ne.HTMLErrorBox,
                 children: [
                   (0, r.jsxs)("div", {
-                    className: Ae.ErrorMessage,
+                    className: Ne.ErrorMessage,
                     children: [
                       e,
                       " ",
-                      (0, v.Hq)(s, {
-                        eSuffix: Ie.a8.None,
+                      (0, p.Hq)(s, {
+                        eSuffix: Le.a8.None,
                         bForceSingleUnits: !0,
                       }),
                       " ",
@@ -2735,17 +2911,17 @@
                 ],
               }),
               (0, r.jsx)("div", {
-                className: Ae.DisabledInputCtn,
+                className: Ne.DisabledInputCtn,
                 children: a,
               }),
             ],
           });
         };
-      function ke(e) {
+      function qe(e) {
         const { image: t, onSelected: i, className: a } = e,
           [s, o] = u.useState(!1),
           [n, l] = u.useState(!1);
-        return (0, r.jsx)(xe.Z, {
+        return (0, r.jsx)(Ee.Z, {
           className: a,
           onGamepadFocus: () => l(!0),
           onGamepadBlur: () => l(!1),
@@ -2753,13 +2929,13 @@
           onMouseLeave: () => o(!1),
           onActivate: () => i(t),
           children: (0, r.jsx)("img", {
-            src: s || n || Je ? $(t) : J(t),
+            src: s || n || ot ? se(t) : oe(t),
             loading: "lazy",
           }),
         });
       }
-      var Te = i(6083);
-      let De = class extends u.Component {
+      var Ke = i(6083);
+      let Qe = class extends u.Component {
         constructor() {
           super(...arguments), (this.state = { bReady: !1 });
         }
@@ -2824,12 +3000,12 @@
           } = this.props;
           if (e)
             return (0, r.jsxs)("div", {
-              className: Se.AvatarCollection,
+              className: Ge.AvatarCollection,
               children: [
-                (0, r.jsx)(Me, {
-                  children: (0, v.we)("#Profile_Edit_Avatar_YourAvatars"),
+                (0, r.jsx)(ze, {
+                  children: (0, p.we)("#Profile_Edit_Avatar_YourAvatars"),
                 }),
-                (0, r.jsx)(qe, {
+                (0, r.jsx)(Ye, {
                   rgAnimatedAvatars: this.m_rgAvatars,
                   OGGAvatars: i,
                   AvatarHistory: a,
@@ -2842,15 +3018,15 @@
           {
             let e = this.GetTopAvatars();
             return (0, r.jsxs)("div", {
-              className: Se.AvatarCollection,
+              className: Ge.AvatarCollection,
               children: [
-                (0, r.jsx)(Me, {
-                  children: (0, v.we)("#Profile_Edit_Avatar_YourAvatars"),
+                (0, r.jsx)(ze, {
+                  children: (0, p.we)("#Profile_Edit_Avatar_YourAvatars"),
                 }),
                 (0, r.jsx)("div", {
-                  className: Se.AvatarCollectionSingleRowWrapper,
-                  children: (0, r.jsx)(xe.Z, {
-                    className: Se.AvatarCollectionSingleRow,
+                  className: Ge.AvatarCollectionSingleRowWrapper,
+                  children: (0, r.jsx)(Ee.Z, {
+                    className: Ge.AvatarCollectionSingleRow,
                     "flow-children": "row",
                     children: e.map((e) =>
                       "communityitemid" in e
@@ -2858,13 +3034,13 @@
                             u.Fragment,
                             {
                               children: [
-                                (0, r.jsx)(He, {
+                                (0, r.jsx)(Ve, {
                                   avatar: e,
                                   onSelected: this.SelectAnimatedAvatar,
                                   large: !0,
                                 }),
                                 (0, r.jsx)("div", {
-                                  className: Se.AvatarRowSpacer,
+                                  className: Ge.AvatarRowSpacer,
                                 }),
                               ],
                             },
@@ -2875,13 +3051,13 @@
                               u.Fragment,
                               {
                                 children: [
-                                  (0, r.jsx)(Ue, {
+                                  (0, r.jsx)(Ze, {
                                     hash: e.avatar_hash,
                                     onSelected: this.SelectPreviousAvatar,
                                     large: !0,
                                   }),
                                   (0, r.jsx)("div", {
-                                    className: Se.AvatarRowSpacer,
+                                    className: Ge.AvatarRowSpacer,
                                   }),
                                 ],
                               },
@@ -2891,13 +3067,13 @@
                               u.Fragment,
                               {
                                 children: [
-                                  (0, r.jsx)(Ue, {
+                                  (0, r.jsx)(Ze, {
                                     hash: e.avatar_hash,
                                     onSelected: this.SelectOGGAvatar,
                                     large: !0,
                                   }),
                                   (0, r.jsx)("div", {
-                                    className: Se.AvatarRowSpacer,
+                                    className: Ge.AvatarRowSpacer,
                                   }),
                                 ],
                               },
@@ -2907,10 +3083,10 @@
                   }),
                 }),
                 (0, r.jsx)("div", {
-                  className: Se.ExpandButtonContainer,
-                  children: (0, r.jsx)(fe.$n, {
+                  className: Ge.ExpandButtonContainer,
+                  children: (0, r.jsx)(we.$n, {
                     onClick: t,
-                    children: (0, v.we)("#Profile_Edit_Avatar_SeeAll"),
+                    children: (0, p.we)("#Profile_Edit_Avatar_SeeAll"),
                   }),
                 }),
               ],
@@ -2918,38 +3094,38 @@
           }
         }
       };
-      (0, s.Cg)([Pe.oI], De.prototype, "SelectAnimatedAvatar", null),
-        (0, s.Cg)([Pe.oI], De.prototype, "SelectOGGAvatar", null),
-        (0, s.Cg)([Pe.oI], De.prototype, "SelectPreviousAvatar", null),
-        (De = (0, s.Cg)([h.PA], De));
-      const Oe = De,
-        Me = ({ children: e }) =>
+      (0, s.Cg)([je.oI], Qe.prototype, "SelectAnimatedAvatar", null),
+        (0, s.Cg)([je.oI], Qe.prototype, "SelectOGGAvatar", null),
+        (0, s.Cg)([je.oI], Qe.prototype, "SelectPreviousAvatar", null),
+        (Qe = (0, s.Cg)([h.PA], Qe));
+      const We = Qe,
+        ze = ({ children: e }) =>
           (0, r.jsx)("div", {
-            className: Se.AvatarCollectionHeader,
+            className: Ge.AvatarCollectionHeader,
             children: (0, r.jsx)("div", {
-              className: Se.AvatarCollectionName,
+              className: Ge.AvatarCollectionName,
               children: e,
             }),
           });
-      function He(e) {
+      function Ve(e) {
         const { avatar: t, onSelected: i, large: a } = e;
-        return (0, r.jsx)(ke, {
+        return (0, r.jsx)(qe, {
           image: t,
           onSelected: i,
-          className: (0, _.A)(Se.AvatarPreview, Se.Animated, a && Se.Large),
+          className: (0, g.A)(Ge.AvatarPreview, Ge.Animated, a && Ge.Large),
         });
       }
-      const Ue = ({ hash: e, onSelected: t, large: i }) =>
-          (0, r.jsx)(xe.Z, {
-            className: (0, _.A)(Se.AvatarPreview, Se.Static, i && Se.Large),
+      const Ze = ({ hash: e, onSelected: t, large: i }) =>
+          (0, r.jsx)(Ee.Z, {
+            className: (0, g.A)(Ge.AvatarPreview, Ge.Static, i && Ge.Large),
             onClick: () => t(e),
             onActivate: () => t(e),
             children: (0, r.jsx)("img", {
-              src: (0, y.tp)(e, i ? "full" : "medium"),
+              src: (0, v.tp)(e, i ? "full" : "medium"),
               loading: "lazy",
             }),
           }),
-        qe = (0, h.PA)(
+        Ye = (0, h.PA)(
           ({
             rgAnimatedAvatars: e,
             OGGAvatars: t,
@@ -2960,45 +3136,45 @@
           }) => {
             let n = i.GetAvatarHistory(),
               l = [...t.GetRecentGameAvatars(), ...t.GetOwnedGameAvatars()];
-            return (0, r.jsxs)(xe.Z, {
+            return (0, r.jsxs)(Ee.Z, {
               "flow-children": "column",
               children: [
-                (0, r.jsx)(ze, { rgAnimatedAvatars: e, onSelected: a }),
-                (0, r.jsx)(Ke, { rgAvatars: n, onSelected: o }),
-                (0, r.jsx)(We, {
+                (0, r.jsx)(Xe, { rgAnimatedAvatars: e, onSelected: a }),
+                (0, r.jsx)(Je, { rgAvatars: n, onSelected: o }),
+                (0, r.jsx)($e, {
                   OGGAvatars: t,
                   rgAvatars: l,
                   onSelected: s,
-                  title: (0, v.we)("#Profile_Edit_YourGameAvatars"),
+                  title: (0, p.we)("#Profile_Edit_YourGameAvatars"),
                 }),
                 l.length < 20 &&
-                  (0, r.jsx)(We, {
+                  (0, r.jsx)($e, {
                     OGGAvatars: t,
                     rgAvatars: t.GetOtherGameAvatars(),
                     onSelected: s,
-                    title: (0, v.we)("#Profile_Edit_MoreGameAvatars"),
+                    title: (0, p.we)("#Profile_Edit_MoreGameAvatars"),
                   }),
               ],
             });
           },
         ),
-        ze = ({ rgAnimatedAvatars: e, onSelected: t }) =>
+        Xe = ({ rgAnimatedAvatars: e, onSelected: t }) =>
           e.length
             ? (0, r.jsxs)("div", {
-                className: (0, _.A)(Se.CollectionGroup, Se.Primary),
+                className: (0, g.A)(Ge.CollectionGroup, Ge.Primary),
                 children: [
                   (0, r.jsx)("div", {
-                    className: Se.Title,
-                    children: (0, v.we)(
+                    className: Ge.Title,
+                    children: (0, p.we)(
                       "#Profile_Edit_PurchasedFromRewardsStore",
                     ),
                   }),
-                  (0, r.jsx)(xe.Z, {
-                    className: Se.CollectionGroupAvatars,
+                  (0, r.jsx)(Ee.Z, {
+                    className: Ge.CollectionGroupAvatars,
                     "flow-children": "grid",
                     children: e.map((e) =>
                       (0, r.jsx)(
-                        He,
+                        Ve,
                         { avatar: e, onSelected: t },
                         e.communityitemid,
                       ),
@@ -3007,20 +3183,20 @@
                 ],
               })
             : null,
-        Ke = (0, h.PA)(({ rgAvatars: e, onSelected: t }) =>
+        Je = (0, h.PA)(({ rgAvatars: e, onSelected: t }) =>
           e.length
             ? (0, r.jsxs)("div", {
-                className: (0, _.A)(Se.CollectionGroup, Se.Primary),
+                className: (0, g.A)(Ge.CollectionGroup, Ge.Primary),
                 children: [
                   (0, r.jsx)("div", {
-                    className: Se.Title,
-                    children: (0, v.we)("#Profile_Edit_YourPreviousAvatars"),
+                    className: Ge.Title,
+                    children: (0, p.we)("#Profile_Edit_YourPreviousAvatars"),
                   }),
                   (0, r.jsx)("div", {
-                    className: Se.CollectionGroupAvatars,
+                    className: Ge.CollectionGroupAvatars,
                     children: e.map((e) =>
                       (0, r.jsx)(
-                        Ue,
+                        Ze,
                         { hash: e.avatar_hash, onSelected: t },
                         e.avatar_hash,
                       ),
@@ -3030,16 +3206,16 @@
               })
             : null,
         );
-      function We(e) {
+      function $e(e) {
         const { rgAvatars: t, OGGAvatars: i, onSelected: a, title: s } = e;
         return t.length
           ? (0, r.jsxs)("div", {
-              className: (0, _.A)(Se.CollectionGroup, Se.Primary),
+              className: (0, g.A)(Ge.CollectionGroup, Ge.Primary),
               children: [
-                (0, r.jsx)("div", { className: Se.Title, children: s }),
+                (0, r.jsx)("div", { className: Ge.Title, children: s }),
                 t.map((e) =>
                   (0, r.jsx)(
-                    Ve,
+                    et,
                     { OGGAvatars: i, game: e, onSelected: a },
                     e.appid,
                   ),
@@ -3048,15 +3224,15 @@
             })
           : null;
       }
-      function Ve(e) {
+      function et(e) {
         const { game: t, onSelected: i, OGGAvatars: a } = e,
           [s, o] = u.useState(!1),
           { isLoading: n, data: l } = (function (e, t, i) {
-            return (0, Ce.I)({
+            return (0, Be.I)({
               queryKey: ["OGGAvatars", t],
               queryFn: async () => {
                 const i = await fetch(
-                    `${ye.TS.COMMUNITY_BASE_URL}actions/GameAvatarsForGame/${t}`,
+                    `${Ie.TS.COMMUNITY_BASE_URL}actions/GameAvatarsForGame/${t}`,
                   ),
                   r = await i.json();
                 return e.UpdateAvatarsForGame(t, r), r;
@@ -3064,48 +3240,48 @@
               enabled: i,
             });
           })(a, t.appid, s);
-        let d;
-        d =
+        let m;
+        m =
           s && l
             ? l
             : t.avatar_count == t.avatars.length
               ? t.avatars
               : t.avatars.slice(0, 5);
-        const m = t.avatar_count - d.length;
+        const d = t.avatar_count - m.length;
         return (0, r.jsxs)("div", {
-          className: Se.CollectionGroup,
+          className: Ge.CollectionGroup,
           children: [
-            (0, r.jsx)("div", { className: Se.Title, children: t.name }),
-            (0, r.jsxs)(xe.Z, {
-              className: Se.CollectionGroupAvatars,
+            (0, r.jsx)("div", { className: Ge.Title, children: t.name }),
+            (0, r.jsxs)(Ee.Z, {
+              className: Ge.CollectionGroupAvatars,
               "flow-children": "grid",
               children: [
-                d.map((e) =>
+                m.map((e) =>
                   (0, r.jsx)(
-                    Ue,
+                    Ze,
                     { hash: e.avatar_hash, onSelected: i },
                     e.avatar_hash,
                   ),
                 ),
                 (!s || n) &&
-                  m > 0 &&
-                  (0, r.jsxs)(fe.$n, {
+                  d > 0 &&
+                  (0, r.jsxs)(we.$n, {
                     type: "button",
-                    className: (0, _.A)(
-                      Se.AvatarPreview,
-                      Se.ExpandAvatarsButton,
-                      Se.Static,
+                    className: (0, g.A)(
+                      Ge.AvatarPreview,
+                      Ge.ExpandAvatarsButton,
+                      Ge.Static,
                     ),
                     disabled: n,
                     onClick: n ? void 0 : () => o(!0),
-                    children: ["+", (0, Te.D)(m)],
+                    children: ["+", (0, Ke.D)(d)],
                   }),
               ],
             }),
           ],
         });
       }
-      class Ye extends u.Component {
+      class tt extends u.Component {
         constructor() {
           super(...arguments), (this.state = { bReady: !1 });
         }
@@ -3128,13 +3304,13 @@
           } = this.props;
           if (e)
             return (0, r.jsxs)("div", {
-              className: Se.AvatarCollection,
+              className: Ge.AvatarCollection,
               children: [
-                (0, r.jsx)(Me, {
-                  children: (0, v.we)("#Profile_Edit_Avatar_YourFrames"),
+                (0, r.jsx)(ze, {
+                  children: (0, p.we)("#Profile_Edit_Avatar_YourFrames"),
                 }),
-                (0, r.jsx)(je.tH, {
-                  children: (0, r.jsx)(Qe, {
+                (0, r.jsx)(Re.tH, {
+                  children: (0, r.jsx)(at, {
                     rgFrames: this.m_rgFrames,
                     ProfileItems: t,
                     onSelected: this.SelectFrame,
@@ -3145,41 +3321,41 @@
           {
             let e = this.m_rgFrames.slice(0, 2),
               a = this.m_rgFrames.length > 2;
-            return (0, r.jsxs)(xe.Z, {
-              className: Se.AvatarCollection,
+            return (0, r.jsxs)(Ee.Z, {
+              className: Ge.AvatarCollection,
               "flow-children": "column",
               children: [
-                (0, r.jsx)(Me, {
-                  children: (0, v.we)("#Profile_Edit_Avatar_YourFrames"),
+                (0, r.jsx)(ze, {
+                  children: (0, p.we)("#Profile_Edit_Avatar_YourFrames"),
                 }),
                 (0, r.jsx)("div", {
-                  className: Se.AvatarCollectionSingleRowWrapper,
-                  children: (0, r.jsxs)(xe.Z, {
-                    className: (0, _.A)(
-                      Se.AvatarCollectionSingleRow,
-                      Se.ThreeColumns,
+                  className: Ge.AvatarCollectionSingleRowWrapper,
+                  children: (0, r.jsxs)(Ee.Z, {
+                    className: (0, g.A)(
+                      Ge.AvatarCollectionSingleRow,
+                      Ge.ThreeColumns,
                     ),
                     "flow-children": "row",
                     children: [
-                      (0, r.jsx)(Ze, {
+                      (0, r.jsx)(rt, {
                         onSelected: this.SelectFrame,
                         large: !0,
                         ProfileItems: t,
                       }),
-                      (0, r.jsx)("div", { className: Se.AvatarRowSpacer }),
-                      (0, r.jsx)(je.tH, {
+                      (0, r.jsx)("div", { className: Ge.AvatarRowSpacer }),
+                      (0, r.jsx)(Re.tH, {
                         children: e.map((e) =>
                           (0, r.jsxs)(
                             u.Fragment,
                             {
                               children: [
-                                (0, r.jsx)(Xe, {
+                                (0, r.jsx)(it, {
                                   frame: e,
                                   onSelected: this.SelectFrame,
                                   large: !0,
                                 }),
                                 (0, r.jsx)("div", {
-                                  className: Se.AvatarRowSpacer,
+                                  className: Ge.AvatarRowSpacer,
                                 }),
                               ],
                             },
@@ -3192,10 +3368,10 @@
                 }),
                 a &&
                   (0, r.jsx)("div", {
-                    className: Se.ExpandButtonContainer,
-                    children: (0, r.jsx)(fe.$n, {
+                    className: Ge.ExpandButtonContainer,
+                    children: (0, r.jsx)(we.$n, {
                       onClick: i,
-                      children: (0, v.we)("#Profile_Edit_Avatar_SeeAll"),
+                      children: (0, p.we)("#Profile_Edit_Avatar_SeeAll"),
                     }),
                   }),
               ],
@@ -3203,54 +3379,54 @@
           }
         }
       }
-      function Xe(e) {
+      function it(e) {
         const { frame: t, onSelected: i, large: a } = e;
-        return (0, r.jsx)(ke, {
+        return (0, r.jsx)(qe, {
           image: t,
           onSelected: i,
-          className: (0, _.A)(Se.FramePreview, a && Se.Large),
+          className: (0, g.A)(Ge.FramePreview, a && Ge.Large),
         });
       }
-      (0, s.Cg)([Pe.oI], Ye.prototype, "SelectFrame", null);
-      const Ze = (0, h.PA)(({ onSelected: e, ProfileItems: t, large: i }) => {
+      (0, s.Cg)([je.oI], tt.prototype, "SelectFrame", null);
+      const rt = (0, h.PA)(({ onSelected: e, ProfileItems: t, large: i }) => {
           let a = t.GetProfileModifierAvatarFrameURL();
           return a
-            ? (0, r.jsx)(xe.Z, {
-                className: (0, _.A)(Se.FramePreview, i && Se.Large),
+            ? (0, r.jsx)(Ee.Z, {
+                className: (0, g.A)(Ge.FramePreview, i && Ge.Large),
                 onActivate: () => e(null),
                 children: (0, r.jsx)("img", { src: a }),
               })
-            : (0, r.jsx)(xe.Z, {
-                className: (0, _.A)(
-                  Se.FramePreview,
-                  i && Se.Large,
-                  Se.DefaultAvatarFramePreview,
+            : (0, r.jsx)(Ee.Z, {
+                className: (0, g.A)(
+                  Ge.FramePreview,
+                  i && Ge.Large,
+                  Ge.DefaultAvatarFramePreview,
                 ),
                 onActivate: () => e(null),
                 children: (0, r.jsx)("div", {
-                  className: Se.DefaultAvatarFrame,
+                  className: Ge.DefaultAvatarFrame,
                   children: (0, r.jsx)("div", {
-                    className: Se.DefaultAvatarFrameContent,
+                    className: Ge.DefaultAvatarFrameContent,
                   }),
                 }),
               });
         }),
-        Qe = ({ rgFrames: e, ProfileItems: t, onSelected: i }) =>
+        at = ({ rgFrames: e, ProfileItems: t, onSelected: i }) =>
           (0, r.jsxs)("div", {
-            className: (0, _.A)(Se.CollectionGroup, Se.Primary),
+            className: (0, g.A)(Ge.CollectionGroup, Ge.Primary),
             children: [
               (0, r.jsx)("div", {
-                className: Se.Title,
-                children: (0, v.we)("#Profile_Edit_PurchasedFromRewardsStore"),
+                className: Ge.Title,
+                children: (0, p.we)("#Profile_Edit_PurchasedFromRewardsStore"),
               }),
-              (0, r.jsxs)(xe.Z, {
-                className: Se.CollectionGroupAvatars,
+              (0, r.jsxs)(Ee.Z, {
+                className: Ge.CollectionGroupAvatars,
                 "flow-children": "grid",
                 children: [
-                  (0, r.jsx)(Ze, { onSelected: i, ProfileItems: t }),
+                  (0, r.jsx)(rt, { onSelected: i, ProfileItems: t }),
                   e.map((e) =>
                     (0, r.jsx)(
-                      Xe,
+                      it,
                       { frame: e, onSelected: i },
                       e.communityitemid,
                     ),
@@ -3259,25 +3435,25 @@
               }),
             ],
           }),
-        $e = u.lazy(() =>
+        st = u.lazy(() =>
           Promise.all([i.e(4922), i.e(5278)]).then(i.bind(i, 66884)),
         ),
-        Je = !0;
-      let et = class extends u.Component {
+        ot = !0;
+      let nt = class extends u.Component {
         render() {
-          return (0, r.jsx)(rt, { ...this.props });
+          return (0, r.jsx)(dt, { ...this.props });
         }
       };
-      et = (0, s.Cg)([h.PA], et);
-      const tt = et;
-      class it extends u.Component {
+      nt = (0, s.Cg)([h.PA], nt);
+      const lt = nt;
+      class mt extends u.Component {
         componentDidMount() {
           document
             .querySelector(".profile_small_header_avatar")
-            .classList.add(ge.HideDefaultAvatar),
+            .classList.add(xe.HideDefaultAvatar),
             (this.m_disposer = (0, l.fm)(() => {
               const { Profile: e, ProfileItems: t } = this.props,
-                i = st(
+                i = ht(
                   e.GetCommittedAvatarHash(),
                   t.GetCommittedEquippedAvatar(),
                   "small",
@@ -3291,18 +3467,18 @@
         componentWillUnmount() {
           document
             .querySelector(".profile_small_header_avatar")
-            .classList.remove(ge.HideDefaultAvatar),
+            .classList.remove(xe.HideDefaultAvatar),
             this.m_disposer();
         }
         render() {
           const { Profile: e, ProfileItems: t } = this.props;
-          return ve.createPortal(
-            (0, r.jsx)(dt, { Profile: e, ProfileItems: t }),
+          return Se.createPortal(
+            (0, r.jsx)(vt, { Profile: e, ProfileItems: t }),
             document.querySelector(".profile_small_header_avatar"),
           );
         }
       }
-      class rt extends u.Component {
+      class dt extends u.Component {
         constructor() {
           super(...arguments),
             (this.state = {
@@ -3371,7 +3547,7 @@
               i.SetEquippedAvatar(null, !0),
               r.RefreshAvatarHistory(),
               this.setState({
-                bHTMLError: (await i.CommitAvatarChanges()) !== T.R,
+                bHTMLError: (await i.CommitAvatarChanges()) !== K.R,
               }))
             : this.setState({ strUploadError: a.strError });
         }
@@ -3386,12 +3562,12 @@
               t.CommitAvatarChanges(),
               e.BHasUncomittedAvatarChanges()
                 ? i.SetPlayerOGGAvatar(e)
-                : Promise.resolve(T.R),
+                : Promise.resolve(K.R),
               e.BHasUncomittedAvatarChanges()
                 ? r.SetPreviousAvatar(e)
-                : Promise.resolve(T.R),
+                : Promise.resolve(K.R),
             ]);
-          this.setState({ bHTMLError: a !== T.R || (s !== T.R && o !== T.R) }),
+          this.setState({ bHTMLError: a !== K.R || (s !== K.R && o !== K.R) }),
             r.RefreshAvatarHistory();
         }
         componentWillUnmount() {
@@ -3410,57 +3586,57 @@
               bFrameCollectionExpanded: n,
               bSaving: l,
             } = this.state,
-            d = {
+            m = {
               Profile: e,
               ProfileItems: t,
               OGGAvatars: i,
               AvatarHistory: a,
               fnOnCollapse: this.Reset,
             };
-          return (0, r.jsxs)(fe.nB, {
-            className: ge.AvatarDialog,
+          return (0, r.jsxs)(we.nB, {
+            className: xe.AvatarDialog,
             children: [
-              (0, r.jsx)(ue.XG, {
+              (0, r.jsx)(ye.XG, {
                 when: t.BIsAvatarUncomitted(),
-                message: (0, v.we)("#Profile_Edit_UnsavedChangesWarning"),
+                message: (0, p.we)("#Profile_Edit_UnsavedChangesWarning"),
               }),
-              (0, r.jsxs)(xe.Z, {
+              (0, r.jsxs)(Ee.Z, {
                 "flow-children": "column",
                 children: [
-                  (0, r.jsxs)(xe.Z, {
-                    className: ge.AvatarDialogBody,
+                  (0, r.jsxs)(Ee.Z, {
+                    className: xe.AvatarDialogBody,
                     "flow-children": "column",
                     children: [
-                      (0, r.jsx)(fe.Y9, {
-                        children: (0, v.we)("#Profile_FieldAvatar"),
+                      (0, r.jsx)(we.Y9, {
+                        children: (0, p.we)("#Profile_FieldAvatar"),
                       }),
-                      (0, r.jsx)(fe.a3, {
-                        children: (0, v.we)(
+                      (0, r.jsx)(we.a3, {
+                        children: (0, p.we)(
                           "#Profile_Edit_Avatar_Instructions",
                         ),
                       }),
-                      (0, r.jsx)(Le, {
+                      (0, r.jsx)(He, {
                         strHTMLError: this.state.bHTMLError
-                          ? (0, v.we)("#ConnectionTrouble_FailedToConnect")
+                          ? (0, p.we)("#ConnectionTrouble_FailedToConnect")
                           : "",
                       }),
-                      (0, r.jsxs)(at, {
+                      (0, r.jsxs)(ct, {
                         Profile: e,
                         children: [
                           (0, r.jsxs)("div", {
-                            className: ge.AvatarDialogTop,
+                            className: xe.AvatarDialogTop,
                             children: [
-                              (0, r.jsx)(ot, { Profile: e, ProfileItems: t }),
+                              (0, r.jsx)(ut, { Profile: e, ProfileItems: t }),
                               (0, r.jsxs)("div", {
-                                className: ge.AvatarDialogUploadArea,
+                                className: xe.AvatarDialogUploadArea,
                                 children: [
-                                  (0, r.jsx)(lt, {
+                                  (0, r.jsx)(_t, {
                                     OnAvatarSelected: this.OnUploadSelected,
                                     disabled: this.state.bSaving,
                                     strError: this.state.strUploadError,
                                   }),
                                   (0, r.jsx)("div", {
-                                    children: (0, v.we)(
+                                    children: (0, p.we)(
                                       "#Profile_Edit_Avatar_UploadInstructions",
                                     ),
                                   }),
@@ -3471,22 +3647,22 @@
                           s &&
                             (0, r.jsx)(u.Suspense, {
                               fallback: null,
-                              children: (0, r.jsx)($e, {
+                              children: (0, r.jsx)(st, {
                                 imageData: s,
                                 ref: this.cropRef,
                               }),
                             }),
                           !s &&
                             !n &&
-                            (0, r.jsx)(Oe, {
-                              ...d,
+                            (0, r.jsx)(We, {
+                              ...m,
                               bExpanded: o,
                               fnOnExpand: this.OnShowAllAvatarsClicked,
                             }),
                           !s &&
                             !o &&
-                            (0, r.jsx)(Ye, {
-                              ...d,
+                            (0, r.jsx)(tt, {
+                              ...m,
                               bExpanded: n,
                               fnOnExpand: this.OnShowAllFramesClicked,
                             }),
@@ -3494,7 +3670,7 @@
                       }),
                     ],
                   }),
-                  (0, r.jsx)(Be, {
+                  (0, r.jsx)(Te, {
                     onSave: this.OnSave,
                     onCancel: this.RevertChanges,
                     disabled: l || e.BIsAvatarChangeOnCooldown(),
@@ -3505,34 +3681,34 @@
           });
         }
       }
-      (0, s.Cg)([Pe.oI], rt.prototype, "OnUploadSelected", null),
-        (0, s.Cg)([Pe.oI], rt.prototype, "OnShowAllAvatarsClicked", null),
-        (0, s.Cg)([Pe.oI], rt.prototype, "OnShowAllFramesClicked", null),
-        (0, s.Cg)([Pe.oI], rt.prototype, "Reset", null),
-        (0, s.Cg)([Pe.oI], rt.prototype, "RevertChanges", null),
-        (0, s.Cg)([Pe.oI], rt.prototype, "OnSave", null),
-        (0, s.Cg)([Pe.oI], rt.prototype, "SaveUpload", null),
-        (0, s.Cg)([Pe.oI], rt.prototype, "CommitChanges", null);
-      const at = ({ Profile: e, children: t }) =>
+      (0, s.Cg)([je.oI], dt.prototype, "OnUploadSelected", null),
+        (0, s.Cg)([je.oI], dt.prototype, "OnShowAllAvatarsClicked", null),
+        (0, s.Cg)([je.oI], dt.prototype, "OnShowAllFramesClicked", null),
+        (0, s.Cg)([je.oI], dt.prototype, "Reset", null),
+        (0, s.Cg)([je.oI], dt.prototype, "RevertChanges", null),
+        (0, s.Cg)([je.oI], dt.prototype, "OnSave", null),
+        (0, s.Cg)([je.oI], dt.prototype, "SaveUpload", null),
+        (0, s.Cg)([je.oI], dt.prototype, "CommitChanges", null);
+      const ct = ({ Profile: e, children: t }) =>
         e.BIsAvatarChangeOnCooldown()
-          ? (0, r.jsx)(Fe, {
+          ? (0, r.jsx)(Ue, {
               rtCooldownEnd: e.GetAvatarChangeCooldownEndRTime(),
-              strCooldownLabel: (0, v.we)("#Profile_AvatarUploadingBanned"),
-              strCooldownDescHTML: (0, v.we)(
+              strCooldownLabel: (0, p.we)("#Profile_AvatarUploadingBanned"),
+              strCooldownDescHTML: (0, p.we)(
                 "#Profile_AvatarUploadingBanned_Desc",
-                he.k_strAvatarCooldownSupportURL,
+                Pe.k_strAvatarCooldownSupportURL,
               ),
               children: t,
             })
           : (0, r.jsx)(r.Fragment, { children: t });
-      function st(e, t, i, r) {
+      function ht(e, t, i, r) {
         return t
           ? (null == r ? void 0 : r.disableAnimation)
-            ? J(t)
-            : $(t)
-          : (0, ne.t)(e || ne.d, i);
+            ? oe(t)
+            : se(t)
+          : (0, pe.t)(e || pe.d, i);
       }
-      const ot = (0, h.PA)(({ Profile: e, ProfileItems: t }) => {
+      const ut = (0, h.PA)(({ Profile: e, ProfileItems: t }) => {
           const i = e.GetAvatarHash(),
             a = t.GetEquippedAvatar(),
             s = t.GetEquippedAvatarFrame();
@@ -3540,28 +3716,28 @@
           o && !t.BIsLegacyGoldenProfile(o.appid) && (o = null);
           let n = null;
           return (
-            o ? (n = t.GetProfileModifierAvatarFrameURL()) : s && (n = $(s)),
+            o ? (n = t.GetProfileModifierAvatarFrameURL()) : s && (n = se(s)),
             (0, r.jsxs)("div", {
-              className: ge.AvatarRow,
+              className: xe.AvatarRow,
               children: [
-                (0, r.jsx)(nt, {
-                  sizeClassName: ge.Large,
+                (0, r.jsx)(pt, {
+                  sizeClassName: xe.Large,
                   sizePx: 184,
-                  avatarURL: st(i, a, "full"),
+                  avatarURL: ht(i, a, "full"),
                   frameURL: n,
                   isGolden: !!o,
                 }),
-                (0, r.jsx)(nt, {
-                  sizeClassName: ge.Medium,
+                (0, r.jsx)(pt, {
+                  sizeClassName: xe.Medium,
                   sizePx: 64,
-                  avatarURL: st(i, a, "medium"),
+                  avatarURL: ht(i, a, "medium"),
                   frameURL: n,
                   isGolden: !!o,
                 }),
-                (0, r.jsx)(nt, {
-                  sizeClassName: ge.Small,
+                (0, r.jsx)(pt, {
+                  sizeClassName: xe.Small,
                   sizePx: 32,
-                  avatarURL: st(i, a, "small"),
+                  avatarURL: ht(i, a, "small"),
                   frameURL: n,
                   isGolden: !!o,
                 }),
@@ -3569,7 +3745,7 @@
             })
           );
         }),
-        nt = ({
+        pt = ({
           sizeClassName: e,
           sizePx: t,
           avatarURL: i,
@@ -3577,25 +3753,25 @@
           isGolden: s,
         }) =>
           (0, r.jsxs)("div", {
-            className: (0, _.A)(ge.Avatar, e),
+            className: (0, g.A)(xe.Avatar, e),
             children: [
               (0, r.jsxs)("div", {
-                className: ge.AvatarImgCtn,
+                className: xe.AvatarImgCtn,
                 children: [
-                  (0, r.jsx)("div", { className: ge.AvatarCropPreview }),
+                  (0, r.jsx)("div", { className: xe.AvatarCropPreview }),
                   a &&
                     (0, r.jsx)("div", {
-                      className: ge.AvatarFrame,
+                      className: xe.AvatarFrame,
                       children: (0, r.jsx)("img", { src: a }),
                     }),
                   s && (0, r.jsx)("div", { className: "goldenAvatarOverlay" }),
                   (0, r.jsx)("img", { src: i }),
                 ],
               }),
-              (0, r.jsxs)("div", { className: ge.size, children: [t, "px"] }),
+              (0, r.jsxs)("div", { className: xe.size, children: [t, "px"] }),
             ],
           });
-      function lt(e) {
+      function _t(e) {
         const { OnAvatarSelected: t, disabled: i, strError: a } = e,
           s = u.useRef(void 0),
           o = u.useCallback(() => {
@@ -3615,17 +3791,17 @@
               ref: s,
               onInput: o,
             }),
-            !!a && (0, r.jsx)("div", { className: ge.Error, children: a }),
-            (0, r.jsx)(fe.$n, {
+            !!a && (0, r.jsx)("div", { className: xe.Error, children: a }),
+            (0, r.jsx)(we.$n, {
               onClick: () => s.current.click(),
               disabled: i,
-              children: (0, v.we)("#Profile_UploadAvatar"),
+              children: (0, p.we)("#Profile_UploadAvatar"),
             }),
           ],
         });
       }
-      const dt = (0, h.PA)(({ Profile: e, ProfileItems: t }) => {
-        const i = st(
+      const vt = (0, h.PA)(({ Profile: e, ProfileItems: t }) => {
+        const i = ht(
             e.GetCommittedAvatarHash(),
             t.GetCommittedEquippedAvatar(),
             "full",
@@ -3635,15 +3811,15 @@
         return (
           !a && t.GetCommittedEquippedProfileModifier()
             ? (s = t.GetProfileModifierAvatarFrameURL())
-            : a && (s = $(a)),
+            : a && (s = se(a)),
           (0, r.jsx)("div", {
-            className: (0, _.A)(ge.Avatar, ge.Medium),
+            className: (0, g.A)(xe.Avatar, xe.Medium),
             children: (0, r.jsxs)("div", {
-              className: ge.AvatarImgCtn,
+              className: xe.AvatarImgCtn,
               children: [
                 s &&
                   (0, r.jsx)("div", {
-                    className: ge.AvatarFrame,
+                    className: xe.AvatarFrame,
                     children: (0, r.jsx)("img", { src: s }),
                   }),
                 (0, r.jsx)("img", { src: i }),
@@ -3652,25 +3828,25 @@
           })
         );
       });
-      var mt = i(23649),
-        ct = i(27456),
-        ht = i(65946);
-      function ut(e) {
+      var gt = i(23649),
+        ft = i(27456),
+        Pt = i(65946);
+      function yt(e) {
         const {
           Profile: { Location: t },
         } = e;
         return (0, r.jsxs)(r.Fragment, {
           children: [
-            (0, r.jsx)(_t, { LocationStore: t }),
-            (0, r.jsx)(vt, { LocationStore: t }),
-            (0, r.jsx)(gt, { LocationStore: t }),
+            (0, r.jsx)(At, { LocationStore: t }),
+            (0, r.jsx)(St, { LocationStore: t }),
+            (0, r.jsx)(xt, { LocationStore: t }),
           ],
         });
       }
-      async function pt(e, t) {
+      async function Ct(e, t) {
         const i = await e();
         return [
-          { label: (0, v.we)("#Profile_LocationDoNotDisplay"), data: null },
+          { label: (0, p.we)("#Profile_LocationDoNotDisplay"), data: null },
           ...i
             .map(t)
             .sort((e, t) =>
@@ -3678,14 +3854,14 @@
             ),
         ];
       }
-      function _t(e) {
+      function At(e) {
         const { LocationStore: t } = e,
           { CountryCode: i, Country: a } = t,
           [s, o] = u.useState(),
-          n = (0, Ce.I)({
+          n = (0, Be.I)({
             queryKey: ["CountryEdit"],
             queryFn: async () =>
-              await pt(
+              await Ct(
                 () => t.GetCountryList(),
                 (e) => ({
                   label: e.countryname,
@@ -3738,32 +3914,32 @@
               name: "country",
               value: i || "",
             }),
-            (0, r.jsx)(fe.m, {
+            (0, r.jsx)(we.m, {
               contextMenuPositionOptions: { bDisablePopTop: !0 },
-              label: (0, v.we)("#Profile_FieldCountry"),
+              label: (0, p.we)("#Profile_FieldCountry"),
               rgOptions: n.data,
               selectedOption: null == s ? void 0 : s.data,
               controlled: !0,
               disabled: n.isFetching,
               onChange: l,
-              strDefaultLabel: a || (0, v.we)("#Profile_LocationDoNotDisplay"),
-              tooltip: Ee("#Profile_DescriptionLocation"),
+              strDefaultLabel: a || (0, p.we)("#Profile_LocationDoNotDisplay"),
+              tooltip: ke("#Profile_DescriptionLocation"),
             }),
           ],
         });
       }
-      function vt(e) {
+      function St(e) {
         const { LocationStore: t } = e,
           { StateCode: i, State: a } = t,
           [s, o] = u.useState(),
-          [n, l] = (0, ht.q3)(() => [
+          [n, l] = (0, Pt.q3)(() => [
             t.BIsStateSelectionAvailable(),
             t.CountryCode,
           ]),
-          d = (0, Ce.I)({
+          m = (0, Be.I)({
             queryKey: ["StateEdit", l],
             queryFn: async () =>
-              await pt(
+              await Ct(
                 () => t.GetStateList(),
                 (e) => ({
                   label: e.statename,
@@ -3777,7 +3953,7 @@
           o(
             null !==
               (i =
-                null === (e = d.data) || void 0 === e
+                null === (e = m.data) || void 0 === e
                   ? void 0
                   : e.find((e) => {
                       var i;
@@ -3788,12 +3964,12 @@
                       );
                     })) && void 0 !== i
               ? i
-              : (null === (r = d.data) || void 0 === r ? void 0 : r.length) > 0
-                ? d.data[0]
+              : (null === (r = m.data) || void 0 === r ? void 0 : r.length) > 0
+                ? m.data[0]
                 : void 0,
           );
-        }, [d.data, t.StateCode]);
-        const m = u.useCallback(
+        }, [m.data, t.StateCode]);
+        const d = u.useCallback(
             (e) => {
               var i, r;
               t.SetState(
@@ -3806,7 +3982,7 @@
             },
             [t],
           ),
-          c = n && !d.isError;
+          c = n && !m.isError;
         return (0, r.jsxs)(r.Fragment, {
           children: [
             (0, r.jsx)("input", {
@@ -3815,34 +3991,34 @@
               value: i || "",
             }),
             c &&
-              (0, r.jsx)(fe.m, {
+              (0, r.jsx)(we.m, {
                 contextMenuPositionOptions: { bDisablePopTop: !0 },
-                label: (0, v.we)("#Profile_FieldState"),
-                rgOptions: d.data,
+                label: (0, p.we)("#Profile_FieldState"),
+                rgOptions: m.data,
                 selectedOption: null == s ? void 0 : s.data,
                 controlled: !0,
-                disabled: d.isFetching,
-                onChange: m,
+                disabled: m.isFetching,
+                onChange: d,
                 strDefaultLabel:
-                  a || (0, v.we)("#Profile_LocationDoNotDisplay"),
-                tooltip: Ee("#Profile_DescriptionLocation"),
+                  a || (0, p.we)("#Profile_LocationDoNotDisplay"),
+                tooltip: ke("#Profile_DescriptionLocation"),
               }),
           ],
         });
       }
-      function gt(e) {
+      function xt(e) {
         const { LocationStore: t } = e,
           { CityCode: i, City: a } = t,
           [s, o] = u.useState(),
-          [n, l, d] = (0, ht.q3)(() => [
+          [n, l, m] = (0, Pt.q3)(() => [
             t.BIsCitySelectionAvailable(),
             t.CountryCode,
             t.StateCode,
           ]),
-          m = (0, Ce.I)({
-            queryKey: ["CityEdit", l, d],
+          d = (0, Be.I)({
+            queryKey: ["CityEdit", l, m],
             queryFn: async () =>
-              await pt(
+              await Ct(
                 () => t.GetCityList(),
                 (e) => ({
                   label: e.cityname,
@@ -3857,7 +4033,7 @@
           o(
             null !==
               (i =
-                null === (e = m.data) || void 0 === e
+                null === (e = d.data) || void 0 === e
                   ? void 0
                   : e.find((e) => {
                       var i;
@@ -3868,11 +4044,11 @@
                       );
                     })) && void 0 !== i
               ? i
-              : (null === (r = m.data) || void 0 === r ? void 0 : r.length) > 0
-                ? m.data[0]
+              : (null === (r = d.data) || void 0 === r ? void 0 : r.length) > 0
+                ? d.data[0]
                 : void 0,
           );
-        }, [m.data, t.CityCode]);
+        }, [d.data, t.CityCode]);
         const c = u.useCallback(
             (e) => {
               var i, r;
@@ -3886,7 +4062,7 @@
             },
             [t],
           ),
-          h = n && !m.isError;
+          h = n && !d.isError;
         return (0, r.jsxs)(r.Fragment, {
           children: [
             (0, r.jsx)("input", {
@@ -3895,24 +4071,24 @@
               value: i || "",
             }),
             h &&
-              (0, r.jsx)(fe.m, {
+              (0, r.jsx)(we.m, {
                 contextMenuPositionOptions: { bDisablePopTop: !0 },
-                label: (0, v.we)("#Profile_FieldCity"),
-                rgOptions: m.data,
+                label: (0, p.we)("#Profile_FieldCity"),
+                rgOptions: d.data,
                 selectedOption: null == s ? void 0 : s.data,
                 controlled: !0,
-                disabled: m.isFetching,
+                disabled: d.isFetching,
                 onChange: c,
                 strDefaultLabel:
-                  a || (0, v.we)("#Profile_LocationDoNotDisplay"),
-                tooltip: Ee("#Profile_DescriptionLocation"),
+                  a || (0, p.we)("#Profile_LocationDoNotDisplay"),
+                tooltip: ke("#Profile_DescriptionLocation"),
               }),
           ],
         });
       }
-      var ft = i(283),
-        Pt = i(19838);
-      class yt extends u.Component {
+      var wt = i(283),
+        jt = i(19838);
+      class It extends u.Component {
         constructor() {
           super(...arguments),
             (this.state = { strSummary: "" }),
@@ -3943,25 +4119,25 @@
         render() {
           const { EmoticonStore: e, Profile: t } = this.props,
             { strSummary: i } = this.state;
-          return (0, r.jsx)(Ct, {
+          return (0, r.jsx)(Bt, {
             Profile: t,
             children: (0, r.jsxs)("div", {
-              className: Pt.summaryContainer,
+              className: jt.summaryContainer,
               children: [
-                (0, r.jsx)(fe.Cl, {
+                (0, r.jsx)(we.Cl, {
                   nMinHeight: 40,
                   name: "summary",
                   rows: 3,
                   cols: 40,
                   onChange: this.OnChange,
-                  className: Pt.summaryTextArea,
+                  className: jt.summaryTextArea,
                   value: i,
                   ref: this.m_refTextInput,
                 }),
                 (0, r.jsx)("div", {
-                  className: Pt.formattingButtons,
-                  children: (0, r.jsx)(ft.A, {
-                    className: Pt.formattingButton,
+                  className: jt.formattingButtons,
+                  children: (0, r.jsx)(wt.A, {
+                    className: jt.formattingButton,
                     disabled: !1,
                     OnEmoticonSelected: this.InsertEmoticon,
                     emoticonStore: e,
@@ -3972,22 +4148,22 @@
           });
         }
       }
-      (0, s.Cg)([Pe.oI], yt.prototype, "OnChange", null),
-        (0, s.Cg)([Pe.oI], yt.prototype, "InsertEmoticon", null);
-      const Ct = ({ Profile: e, children: t }) =>
+      (0, s.Cg)([je.oI], It.prototype, "OnChange", null),
+        (0, s.Cg)([je.oI], It.prototype, "InsertEmoticon", null);
+      const Bt = ({ Profile: e, children: t }) =>
         e.BIsProfileSummaryChangeOnCooldown()
-          ? (0, r.jsx)(Fe, {
+          ? (0, r.jsx)(Ue, {
               rtCooldownEnd: e.GetProfileSummaryCooldownEndRTime(),
-              strCooldownLabel: (0, v.we)("#Profile_ProfileSummaryCooldown"),
-              strCooldownDescHTML: (0, v.we)(
+              strCooldownLabel: (0, p.we)("#Profile_ProfileSummaryCooldown"),
+              strCooldownDescHTML: (0, p.we)(
                 "#Profile_ProfileSummaryCooldown_Desc",
-                he.k_strProfileSummaryCooldownSupportURL,
+                Pe.k_strProfileSummaryCooldownSupportURL,
               ),
               children: t,
             })
           : (0, r.jsx)(r.Fragment, { children: t });
-      var St = i(84143);
-      class xt extends u.Component {
+      var Gt = i(84143);
+      class Et extends u.Component {
         constructor() {
           super(...arguments), (this.state = { bSaving: !1, strHTMLError: "" });
         }
@@ -3996,7 +4172,7 @@
         }
         async CommitChanges(e) {
           this.setState({ bSaving: !0, strHTMLError: "" });
-          let t = await le("profileSave", new FormData(e));
+          let t = await _e("profileSave", new FormData(e));
           t.strRedirectURL
             ? (window.location.href = `${t.strRedirectURL}/info`)
             : (this.props.Profile.SetBasicInfoChangesComitted(),
@@ -4013,9 +4189,9 @@
         render() {
           const { Profile: e, EmoticonStore: t } = this.props,
             { bSaving: i, strHTMLError: s } = this.state;
-          return (0, r.jsx)(xe.Z, {
+          return (0, r.jsx)(Ee.Z, {
             "flow-children": "column",
-            navEntryPreferPosition: St.iU.MAINTAIN_Y,
+            navEntryPreferPosition: Gt.iU.MAINTAIN_Y,
             children: (0, r.jsxs)("form", {
               method: "POST",
               action: `${a.ProfileURL}edit/info`,
@@ -4024,7 +4200,7 @@
                 (0, r.jsx)("input", {
                   type: "hidden",
                   name: "sessionID",
-                  value: (0, A.KC)(),
+                  value: (0, N.KC)(),
                 }),
                 (0, r.jsx)("input", {
                   type: "hidden",
@@ -4061,46 +4237,46 @@
                   name: "weblink_3_url",
                   value: "",
                 }),
-                (0, r.jsx)(fe.Y9, { children: (0, v.we)("#Profile_About") }),
-                (0, r.jsx)(fe.a3, { children: (0, r.jsx)(At, {}) }),
-                (0, r.jsx)(Le, { strHTMLError: s }),
-                (0, r.jsxs)(Ge, {
-                  title: (0, v.we)("#Profile_Edit_BasicInfo"),
+                (0, r.jsx)(we.Y9, { children: (0, p.we)("#Profile_About") }),
+                (0, r.jsx)(we.a3, { children: (0, r.jsx)(Nt, {}) }),
+                (0, r.jsx)(He, { strHTMLError: s }),
+                (0, r.jsxs)(Fe, {
+                  title: (0, p.we)("#Profile_Edit_BasicInfo"),
                   children: [
-                    (0, r.jsx)(wt, { Profile: e }),
-                    !(0, pe.nA)(A.TS.EREALM) && (0, r.jsx)(Et, { Profile: e }),
+                    (0, r.jsx)(bt, { Profile: e }),
+                    !(0, Ce.nA)(N.TS.EREALM) && (0, r.jsx)(kt, { Profile: e }),
                   ],
                 }),
-                !(0, pe.nA)(A.TS.EREALM) &&
-                  (0, r.jsx)(Ge, {
-                    title: (0, v.we)("#Profile_Edit_Location"),
-                    children: (0, r.jsx)(ut, { Profile: e }),
+                !(0, Ce.nA)(N.TS.EREALM) &&
+                  (0, r.jsx)(Fe, {
+                    title: (0, p.we)("#Profile_Edit_Location"),
+                    children: (0, r.jsx)(yt, { Profile: e }),
                   }),
-                !(0, pe.nA)(A.TS.EREALM) &&
-                  (0, r.jsx)(Ge, {
-                    title: (0, v.we)("#Profile_FieldSummary"),
-                    children: (0, r.jsx)(yt, { Profile: e, EmoticonStore: t }),
+                !(0, Ce.nA)(N.TS.EREALM) &&
+                  (0, r.jsx)(Fe, {
+                    title: (0, p.we)("#Profile_FieldSummary"),
+                    children: (0, r.jsx)(It, { Profile: e, EmoticonStore: t }),
                   }),
-                !(0, pe.nA)(A.TS.EREALM) &&
-                  (0, r.jsx)(Ge, {
-                    title: (0, v.we)("#Profile_Edit_Preferences"),
-                    children: (0, r.jsx)(bt, { Profile: e }),
+                !(0, Ce.nA)(N.TS.EREALM) &&
+                  (0, r.jsx)(Fe, {
+                    title: (0, p.we)("#Profile_Edit_Preferences"),
+                    children: (0, r.jsx)(Mt, { Profile: e }),
                   }),
-                (0, r.jsx)(Be, { onCancel: this.RevertChanges, disabled: i }),
+                (0, r.jsx)(Te, { onCancel: this.RevertChanges, disabled: i }),
               ],
             }),
           });
         }
       }
-      (0, s.Cg)([Pe.oI], xt.prototype, "OnSubmit", null),
-        (0, s.Cg)([Pe.oI], xt.prototype, "RevertChanges", null);
-      class At extends u.Component {
+      (0, s.Cg)([je.oI], Et.prototype, "OnSubmit", null),
+        (0, s.Cg)([je.oI], Et.prototype, "RevertChanges", null);
+      class Nt extends u.Component {
         render() {
           return (0, r.jsx)("div", {
             style: { display: "block" },
-            children: (0, r.jsx)(mt.h, {
-              text: (0, v.we)(
-                (0, pe.nA)(A.TS.EREALM)
+            children: (0, r.jsx)(gt.h, {
+              text: (0, p.we)(
+                (0, Ce.nA)(N.TS.EREALM)
                   ? "#Profile_Edit_About_Instructions_SteamChina"
                   : "#Profile_Edit_About_Instructions",
               ),
@@ -4108,7 +4284,7 @@
           });
         }
       }
-      let wt = class extends u.Component {
+      let bt = class extends u.Component {
         OnPersonaNameChange(e) {
           this.props.Profile.SetPersonaName(e.target.value);
         }
@@ -4119,107 +4295,107 @@
           const { Profile: e } = this.props;
           return (0, r.jsxs)(r.Fragment, {
             children: [
-              (0, r.jsxs)(jt, {
+              (0, r.jsxs)(Rt, {
                 Profile: e,
                 children: [
-                  (0, r.jsx)(fe.pd, {
-                    label: (0, v.we)("#Profile_FieldProfileName"),
+                  (0, r.jsx)(we.pd, {
+                    label: (0, p.we)("#Profile_FieldProfileName"),
                     disabled: e.BIsPersonaNameChangeOnCooldown(),
                     name: "personaName",
                     value: e.GetPersonaName(),
                     onChange: this.OnPersonaNameChange,
                   }),
-                  (0, r.jsx)(It, { Profile: e }),
+                  (0, r.jsx)(Lt, { Profile: e }),
                 ],
               }),
-              !(0, pe.nA)(A.TS.EREALM) &&
-                (0, r.jsxs)(Gt, {
+              !(0, Ce.nA)(N.TS.EREALM) &&
+                (0, r.jsxs)(Ft, {
                   Profile: e,
                   children: [
-                    (0, r.jsx)(fe.pd, {
-                      label: (0, v.we)("#Profile_FieldRealName"),
+                    (0, r.jsx)(we.pd, {
+                      label: (0, p.we)("#Profile_FieldRealName"),
                       disabled: e.BIsProfileSummaryChangeOnCooldown(),
-                      tooltip: Ee("#Profile_DescriptionRealName"),
+                      tooltip: ke("#Profile_DescriptionRealName"),
                       name: "real_name",
                       value: e.GetRealName(),
                       onChange: this.OnRealNameChange,
                     }),
-                    (0, r.jsx)(Bt, { Profile: e }),
+                    (0, r.jsx)(Tt, { Profile: e }),
                   ],
                 }),
             ],
           });
         }
       };
-      (0, s.Cg)([Pe.oI], wt.prototype, "OnPersonaNameChange", null),
-        (0, s.Cg)([Pe.oI], wt.prototype, "OnRealNameChange", null),
-        (wt = (0, s.Cg)([h.PA], wt));
-      const jt = ({ Profile: e, children: t }) =>
+      (0, s.Cg)([je.oI], bt.prototype, "OnPersonaNameChange", null),
+        (0, s.Cg)([je.oI], bt.prototype, "OnRealNameChange", null),
+        (bt = (0, s.Cg)([h.PA], bt));
+      const Rt = ({ Profile: e, children: t }) =>
         e.BIsPersonaNameChangeOnCooldown()
-          ? (0, r.jsx)(Fe, {
+          ? (0, r.jsx)(Ue, {
               rtCooldownEnd: e.GetPersonaNameCooldownEndRTime(),
-              strCooldownLabel: (0, v.we)("#Profile_PersonaNameCooldown"),
-              strCooldownDescHTML: (0, v.we)(
+              strCooldownLabel: (0, p.we)("#Profile_PersonaNameCooldown"),
+              strCooldownDescHTML: (0, p.we)(
                 "#Profile_PersonaNameCooldown_Desc",
-                he.k_strPersonaNameCooldownSupportURL,
+                Pe.k_strPersonaNameCooldownSupportURL,
               ),
               children: t,
             })
           : (0, r.jsx)(r.Fragment, { children: t });
-      class It extends u.Component {
+      class Lt extends u.Component {
         render() {
           const { Profile: e } = this.props;
           return e.HasFilteredPersonaName()
             ? (0, r.jsx)("div", {
-                className: ct.FilteredNameWarning,
-                children: (0, v.oW)(
+                className: ft.FilteredNameWarning,
+                children: (0, p.oW)(
                   "#Profile_PersonaNameFiltered",
-                  (0, r.jsx)("a", { href: he.k_strNameFilteredSupportURL }),
+                  (0, r.jsx)("a", { href: Pe.k_strNameFilteredSupportURL }),
                 ),
               })
             : null;
         }
       }
-      const Gt = ({ Profile: e, children: t }) =>
+      const Ft = ({ Profile: e, children: t }) =>
         e.BIsProfileSummaryChangeOnCooldown()
-          ? (0, r.jsx)(Fe, {
+          ? (0, r.jsx)(Ue, {
               rtCooldownEnd: e.GetProfileSummaryCooldownEndRTime(),
-              strCooldownLabel: (0, v.we)("#Profile_RealNameCooldown"),
-              strCooldownDescHTML: (0, v.we)(
+              strCooldownLabel: (0, p.we)("#Profile_RealNameCooldown"),
+              strCooldownDescHTML: (0, p.we)(
                 "#Profile_RealNameCooldown_Desc",
-                he.k_strPersonaNameCooldownSupportURL,
+                Pe.k_strPersonaNameCooldownSupportURL,
               ),
               children: t,
             })
           : (0, r.jsx)(r.Fragment, { children: t });
-      class Bt extends u.Component {
+      class Tt extends u.Component {
         render() {
           const { Profile: e } = this.props;
           return e.HasFilteredRealName()
             ? (0, r.jsx)("div", {
-                className: ct.FilteredNameWarning,
-                children: (0, v.oW)(
+                className: ft.FilteredNameWarning,
+                children: (0, p.oW)(
                   "#Profile_RealNameFiltered",
-                  (0, r.jsx)("a", { href: he.k_strNameFilteredSupportURL }),
+                  (0, r.jsx)("a", { href: Pe.k_strNameFilteredSupportURL }),
                 ),
               })
             : null;
         }
       }
-      let Et = class extends u.Component {
+      let kt = class extends u.Component {
         OnProfileURLChange(e) {
           this.props.Profile.SetCustomURL(e.target.value);
         }
         render() {
           const { Profile: e } = this.props;
           return (0, r.jsx)(r.Fragment, {
-            children: (0, r.jsx)(fe.pd, {
-              label: (0, v.we)("#Profile_FieldCustomURL"),
-              tooltip: Ee("#Profile_DescriptionCustomURL"),
+            children: (0, r.jsx)(we.pd, {
+              label: (0, p.we)("#Profile_FieldCustomURL"),
+              tooltip: ke("#Profile_DescriptionCustomURL"),
               name: "customURL",
               value: e.GetCustomURL(),
               onChange: this.OnProfileURLChange,
-              description: (0, v.we)(
+              description: (0, p.we)(
                 "#Profile_ProfileAvailableAtURL",
                 e.GetConstructedURL(),
               ),
@@ -4227,9 +4403,9 @@
           });
         }
       };
-      (0, s.Cg)([Pe.oI], Et.prototype, "OnProfileURLChange", null),
-        (Et = (0, s.Cg)([h.PA], Et));
-      let Nt = class extends u.Component {
+      (0, s.Cg)([je.oI], kt.prototype, "OnProfileURLChange", null),
+        (kt = (0, s.Cg)([h.PA], kt));
+      let Dt = class extends u.Component {
         componentDidMount() {
           this.m_disposer = (0, l.fm)(() => {
             const { Profile: e } = this.props;
@@ -4245,8 +4421,8 @@
           return null;
         }
       };
-      Nt = (0, s.Cg)([h.PA], Nt);
-      let bt = class extends u.Component {
+      Dt = (0, s.Cg)([h.PA], Dt);
+      let Mt = class extends u.Component {
         OnProfileAwardsCheckboxChecked(e) {
           let { Profile: t } = this.props,
             i = e,
@@ -4258,8 +4434,8 @@
             t = e.GetPreferences();
           return (0, r.jsxs)("div", {
             children: [
-              (0, r.jsx)(fe.Yh, {
-                label: (0, v.we)("#Profile_Preferences_HideProfileAwards"),
+              (0, r.jsx)(we.Yh, {
+                label: (0, p.we)("#Profile_Preferences_HideProfileAwards"),
                 checked: t.hide_profile_awards,
                 onChange: this.OnProfileAwardsCheckboxChecked,
               }),
@@ -4272,19 +4448,19 @@
           });
         }
       };
-      (0, s.Cg)([Pe.oI], bt.prototype, "OnProfileAwardsCheckboxChecked", null),
-        (bt = (0, s.Cg)([h.PA], bt));
-      var Rt = i(90713);
-      let Lt = class extends u.Component {
+      (0, s.Cg)([je.oI], Mt.prototype, "OnProfileAwardsCheckboxChecked", null),
+        (Mt = (0, s.Cg)([h.PA], Mt));
+      var Ot = i(90713);
+      let Ht = class extends u.Component {
         constructor() {
           super(...arguments), (this.state = { bSaving: !1, strHTMLError: "" });
         }
         async CommitFavoriteBadge() {
           const e = this.props.Badges;
           this.setState({ bSaving: !0 }),
-            (await e.CommitFavoriteBadgeChanges()) != T.R
+            (await e.CommitFavoriteBadgeChanges()) != K.R
               ? this.setState({
-                  strHTMLError: (0, v.we)("#ConnectionTrouble_FailedToConnect"),
+                  strHTMLError: (0, p.we)("#ConnectionTrouble_FailedToConnect"),
                 })
               : this.setState({ strHTMLError: "" }),
             this.setState({ bSaving: !1 });
@@ -4300,32 +4476,32 @@
           const { Badges: e } = this.props,
             { bSaving: t, strHTMLError: i } = this.state;
           let a = e.FavoriteBadge;
-          return (0, r.jsx)(je.tH, {
-            children: (0, r.jsxs)(xe.Z, {
+          return (0, r.jsx)(Re.tH, {
+            children: (0, r.jsxs)(Ee.Z, {
               "flow-children": "column",
               children: [
-                (0, r.jsx)(ue.XG, {
+                (0, r.jsx)(ye.XG, {
                   when: e.BFavoriteBadgeUncomitted(),
-                  message: (0, v.we)("#Profile_Edit_UnsavedChangesWarning"),
+                  message: (0, p.we)("#Profile_Edit_UnsavedChangesWarning"),
                 }),
-                (0, r.jsx)(fe.Y9, {
-                  children: (0, v.we)("#Profile_Edit_FavoriteBadge"),
+                (0, r.jsx)(we.Y9, {
+                  children: (0, p.we)("#Profile_Edit_FavoriteBadge"),
                 }),
-                (0, r.jsx)(fe.a3, {
-                  children: (0, v.we)("#Profile_Edit_Badge_Instructions"),
+                (0, r.jsx)(we.a3, {
+                  children: (0, p.we)("#Profile_Edit_Badge_Instructions"),
                 }),
-                (0, r.jsx)(Le, { strHTMLError: i }),
-                a && (0, r.jsx)(kt, { badge: a }),
-                !a && (0, r.jsx)(Tt, { count: e.Badges.length }),
-                (0, r.jsx)(Re, {
-                  getSearchFields: Dt,
+                (0, r.jsx)(He, { strHTMLError: i }),
+                a && (0, r.jsx)(qt, { badge: a }),
+                !a && (0, r.jsx)(Kt, { count: e.Badges.length }),
+                (0, r.jsx)(Oe, {
+                  getSearchFields: Qt,
                   getItems: async () => e.Badges,
                   onItemSelected: (t) => {
                     e.SetFavoriteBadge(t);
                   },
-                  ItemComponent: Ot,
+                  ItemComponent: Wt,
                 }),
-                (0, r.jsx)(Be, {
+                (0, r.jsx)(Te, {
                   onSave: this.CommitFavoriteBadge,
                   onCancel: this.RevertFavoriteBadge,
                   disabled: t,
@@ -4335,80 +4511,80 @@
           });
         }
       };
-      (0, s.Cg)([Pe.oI], Lt.prototype, "CommitFavoriteBadge", null),
-        (0, s.Cg)([Pe.oI], Lt.prototype, "RevertFavoriteBadge", null),
-        (Lt = (0, s.Cg)([h.PA], Lt));
-      const Ft = Lt,
-        kt = ({ badge: e, children: t }) =>
+      (0, s.Cg)([je.oI], Ht.prototype, "CommitFavoriteBadge", null),
+        (0, s.Cg)([je.oI], Ht.prototype, "RevertFavoriteBadge", null),
+        (Ht = (0, s.Cg)([h.PA], Ht));
+      const Ut = Ht,
+        qt = ({ badge: e, children: t }) =>
           (0, r.jsxs)("div", {
-            className: (0, _.A)(Rt.Badge, Rt.FavoriteBadge),
+            className: (0, g.A)(Ot.Badge, Ot.FavoriteBadge),
             children: [
               (0, r.jsx)("img", {
-                className: Rt.BadgeImage,
+                className: Ot.BadgeImage,
                 src: e.GetIconURL(),
               }),
               (0, r.jsxs)("div", {
-                className: Rt.BadgeDetails,
+                className: Ot.BadgeDetails,
                 children: [
                   (0, r.jsx)("div", {
-                    className: Rt.BadgeName,
+                    className: Ot.BadgeName,
                     children: e.GetName(),
                   }),
                   (0, r.jsx)("div", {
-                    className: Rt.GameName,
+                    className: Ot.GameName,
                     children: e.GetGameName(),
                   }),
                 ],
               }),
             ],
           }),
-        Tt = ({ count: e, children: t }) =>
+        Kt = ({ count: e, children: t }) =>
           (0, r.jsxs)("div", {
-            className: (0, _.A)(Rt.Badge, Rt.FavoriteBadge),
+            className: (0, g.A)(Ot.Badge, Ot.FavoriteBadge),
             children: [
               (0, r.jsx)("div", {
-                className: Rt.BadgeImageNone,
+                className: Ot.BadgeImageNone,
                 children: (0, r.jsx)("img", {
-                  className: Rt.BadgeImage,
-                  src: `${A.TS.COMMUNITY_CDN_URL}public/images/trans.gif`,
+                  className: Ot.BadgeImage,
+                  src: `${N.TS.COMMUNITY_CDN_URL}public/images/trans.gif`,
                 }),
               }),
               (0, r.jsxs)("div", {
-                className: Rt.BadgeDetails,
+                className: Ot.BadgeDetails,
                 children: [
                   (0, r.jsx)("div", {
-                    className: Rt.BadgeName,
+                    className: Ot.BadgeName,
                     children: "None selected",
                   }),
                   (0, r.jsx)("div", {
-                    className: Rt.GameName,
+                    className: Ot.GameName,
                     children: `${e} badges available`,
                   }),
                 ],
               }),
             ],
           }),
-        Dt = (e) => [e.GetName(), e.GetGameName()],
-        Ot = ({ Item: e, onSelected: t }) => {
+        Qt = (e) => [e.GetName(), e.GetGameName()],
+        Wt = ({ Item: e, onSelected: t }) => {
           const i = e;
-          return (0, r.jsxs)(xe.Z, {
-            className: (0, _.A)(Rt.Badge, Rt.BadgeOption),
+          return (0, r.jsxs)(Ee.Z, {
+            className: (0, g.A)(Ot.Badge, Ot.BadgeOption),
             onActivate: t,
             children: [
               (0, r.jsx)("img", {
-                className: Rt.BadgeImage,
+                className: Ot.BadgeImage,
                 src: i.GetIconURL(),
                 loading: "lazy",
               }),
               (0, r.jsxs)("div", {
-                className: Rt.BadgeDetails,
+                className: Ot.BadgeDetails,
                 children: [
                   (0, r.jsx)("div", {
-                    className: Rt.BadgeName,
+                    className: Ot.BadgeName,
                     children: i.GetName(),
                   }),
                   (0, r.jsx)("div", {
-                    className: Rt.GameName,
+                    className: Ot.GameName,
                     children: i.GetGameName(),
                   }),
                 ],
@@ -4416,8 +4592,8 @@
             ],
           });
         };
-      var Mt = i(53841);
-      let Ht = class extends u.Component {
+      var zt = i(53841);
+      let Vt = class extends u.Component {
         constructor() {
           super(...arguments), (this.state = { bSaving: !1, strHTMLError: "" });
         }
@@ -4442,32 +4618,32 @@
             { bSaving: t, strHTMLError: i } = this.state,
             a = e.GroupList,
             s = a.PrimaryGroup;
-          return (0, r.jsxs)(xe.Z, {
+          return (0, r.jsxs)(Ee.Z, {
             "flow-children": "column",
             children: [
-              (0, r.jsx)(ue.XG, {
+              (0, r.jsx)(ye.XG, {
                 when: a.BPrimaryGroupUncomitted(),
-                message: (0, v.we)("#Profile_Edit_UnsavedChangesWarning"),
+                message: (0, p.we)("#Profile_Edit_UnsavedChangesWarning"),
               }),
-              (0, r.jsx)(fe.Y9, {
-                children: (0, v.we)("#Profile_Edit_FavoriteGroup"),
+              (0, r.jsx)(we.Y9, {
+                children: (0, p.we)("#Profile_Edit_FavoriteGroup"),
               }),
-              (0, r.jsx)(fe.a3, {
-                children: (0, v.we)("#Profile_Edit_Group_Instructions"),
+              (0, r.jsx)(we.a3, {
+                children: (0, p.we)("#Profile_Edit_Group_Instructions"),
               }),
-              (0, r.jsx)(Le, { strHTMLError: i }),
-              s && (0, r.jsx)(qt, { group: s }),
-              (0, r.jsx)(Re, {
-                getSearchFields: zt,
+              (0, r.jsx)(He, { strHTMLError: i }),
+              s && (0, r.jsx)(Yt, { group: s }),
+              (0, r.jsx)(Oe, {
+                getSearchFields: Xt,
                 getItems: async () => (
                   await a.BWaitForUserGroups(), a.GetUserGroups()
                 ),
                 onItemSelected: (e) => {
                   a.SetPrimaryGroup(e);
                 },
-                ItemComponent: Kt,
+                ItemComponent: Jt,
               }),
-              (0, r.jsx)(Be, {
+              (0, r.jsx)(Te, {
                 onSave: this.CommitFavoriteGroup,
                 onCancel: this.RevertFavoriteGroup,
                 disabled: t,
@@ -4476,52 +4652,52 @@
           });
         }
       };
-      (0, s.Cg)([Pe.oI], Ht.prototype, "CommitFavoriteGroup", null),
-        (0, s.Cg)([Pe.oI], Ht.prototype, "RevertFavoriteGroup", null),
-        (Ht = (0, s.Cg)([h.PA], Ht));
-      const Ut = Ht,
-        qt = ({ group: e, children: t }) =>
+      (0, s.Cg)([je.oI], Vt.prototype, "CommitFavoriteGroup", null),
+        (0, s.Cg)([je.oI], Vt.prototype, "RevertFavoriteGroup", null),
+        (Vt = (0, s.Cg)([h.PA], Vt));
+      const Zt = Vt,
+        Yt = ({ group: e, children: t }) =>
           (0, r.jsxs)("div", {
-            className: (0, _.A)(Mt.Group, Mt.FavoriteGroup),
+            className: (0, g.A)(zt.Group, zt.FavoriteGroup),
             children: [
               (0, r.jsx)("img", {
-                className: Mt.GroupAvatar,
+                className: zt.GroupAvatar,
                 src: e.GetAvatarURL("full"),
               }),
               (0, r.jsx)("div", {
-                className: Mt.GroupDetails,
+                className: zt.GroupDetails,
                 children: (0, r.jsx)("div", {
-                  className: Mt.GroupName,
+                  className: zt.GroupName,
                   children: e.GetName(),
                 }),
               }),
             ],
           }),
-        zt = (e) => [e.GetName()],
-        Kt = ({ Item: e, onSelected: t }) => {
+        Xt = (e) => [e.GetName()],
+        Jt = ({ Item: e, onSelected: t }) => {
           const i = e;
-          return (0, r.jsxs)(xe.Z, {
-            className: (0, _.A)(Mt.Group, Mt.GroupOption),
+          return (0, r.jsxs)(Ee.Z, {
+            className: (0, g.A)(zt.Group, zt.GroupOption),
             onActivate: t,
             children: [
               (0, r.jsx)("img", {
-                className: Mt.GroupAvatar,
+                className: zt.GroupAvatar,
                 src: i.GetAvatarURL("full"),
                 loading: "lazy",
               }),
               (0, r.jsx)("div", {
-                className: Mt.GroupDetails,
+                className: zt.GroupDetails,
                 children: (0, r.jsx)("div", {
-                  className: Mt.GroupName,
+                  className: zt.GroupName,
                   children: i.GetName(),
                 }),
               }),
             ],
           });
         };
-      var Wt = i(30082);
-      const Vt = ({ Item: e, small: t }) => {
-          let i = te(e, t);
+      var $t = i(30082);
+      const ei = ({ Item: e, small: t }) => {
+          let i = le(e, t);
           return 0 == Object.keys(i).length
             ? null
             : (0, r.jsx)("video", {
@@ -4535,26 +4711,26 @@
                 ),
               });
         },
-        Yt = ({ Background: e, className: t, small: i }) =>
+        ti = ({ Background: e, className: t, small: i }) =>
           e
             ? (0, r.jsx)("div", {
                 className: t,
-                children: (0, r.jsx)(Vt, { Item: e, small: i }),
+                children: (0, r.jsx)(ei, { Item: e, small: i }),
               })
             : null;
-      function Xt(e) {
+      function ii(e) {
         e.currentTarget.querySelector("video").play();
       }
-      function Zt(e) {
+      function ri(e) {
         e.detail.focusedNode.Element.querySelector("video").play();
       }
-      function Qt(e) {
+      function ai(e) {
         return [e.item_title, e.app_name];
       }
-      function $t(e, t) {
+      function si(e, t) {
         return e ? !!t && e.communityitemid === t.communityitemid : !t;
       }
-      let Jt = class extends u.Component {
+      let oi = class extends u.Component {
         RevertChanges() {
           this.props.ProfileEdit.ProfileItems.RevertMiniProfileBackgroundChanges();
         }
@@ -4564,13 +4740,13 @@
             { MiniProfileData: s, PersonaState: o } = t;
           return (0, r.jsxs)(r.Fragment, {
             children: [
-              (0, r.jsx)(fe.Y9, {
-                children: (0, v.we)("#Profile_Edit_MiniProfile"),
+              (0, r.jsx)(we.Y9, {
+                children: (0, p.we)("#Profile_Edit_MiniProfile"),
               }),
-              (0, r.jsx)(fe.a3, {
-                children: (0, v.we)("#Profile_Edit_MiniProfile_Instructions"),
+              (0, r.jsx)(we.a3, {
+                children: (0, p.we)("#Profile_Edit_MiniProfile_Instructions"),
               }),
-              (0, r.jsx)(ti, {
+              (0, r.jsx)(li, {
                 ProfileItems: i,
                 Profile: t,
                 MiniProfileOverrideData: a,
@@ -4580,10 +4756,10 @@
           });
         }
       };
-      (0, s.Cg)([Pe.oI], Jt.prototype, "RevertChanges", null),
-        (Jt = (0, s.Cg)([h.PA], Jt));
-      const ei = Jt,
-        ti = (0, h.PA)(
+      (0, s.Cg)([je.oI], oi.prototype, "RevertChanges", null),
+        (oi = (0, s.Cg)([h.PA], oi));
+      const ni = oi,
+        li = (0, h.PA)(
           ({
             Profile: e,
             ProfileItems: t,
@@ -4593,21 +4769,21 @@
             let s = t.GetEquippedProfileModifier();
             return (
               s && !t.BIsLegacyGoldenProfile(s.appid) && (s = null),
-              (0, r.jsx)(Ne, {
+              (0, r.jsx)(De, {
                 fnRevertChanges: a,
-                getSearchFields: Qt,
+                getSearchFields: ai,
                 getItems: () => t.GetOwnedMiniProfileBackgrounds(),
                 fnCommitChanges: async (e) => (
                   t.SetEquippedMiniProfileBackground(e),
                   t.CommitMiniProfileChanges()
                 ),
-                ItemComponent: ri,
+                ItemComponent: di,
                 RenderDefaultComponent: ({ onSelected: e, active: t }) =>
-                  (0, r.jsx)(ai, { onSelected: e, active: t, Modifier: s }),
+                  (0, r.jsx)(ci, { onSelected: e, active: t, Modifier: s }),
                 ActiveItem: t.GetEquippedMiniProfileBackground(),
-                fnIsSameItem: $t,
+                fnIsSameItem: si,
                 fnRenderPreview: (a) =>
-                  (0, r.jsx)(ii, {
+                  (0, r.jsx)(mi, {
                     MiniProfileBackground: a,
                     Profile: e,
                     ProfileItems: t,
@@ -4617,7 +4793,7 @@
             );
           },
         ),
-        ii = ({
+        mi = ({
           MiniProfileBackground: e,
           MiniProfileOverrideData: t,
           Profile: i,
@@ -4626,8 +4802,8 @@
           const { MiniProfileData: s, PersonaState: o } = i;
           let n;
           if (e) {
-            n = te(e);
-            let t = J(e);
+            n = le(e);
+            let t = oe(e);
             t && (n.image = t);
           } else {
             n = a.GetProfileModifierMiniProfileBackgroundMovies();
@@ -4636,50 +4812,50 @@
           }
           return (0, r.jsx)(r.Fragment, {
             children: (0, r.jsx)("div", {
-              className: Wt.MiniProfileDialogPreviewCtn,
-              children: (0, r.jsx)(b, {
+              className: $t.MiniProfileDialogPreviewCtn,
+              children: (0, r.jsx)(M, {
                 persona: o,
-                className: Wt.MiniProfilePreview,
+                className: $t.MiniProfilePreview,
                 data_loader: s,
                 community_data_override: { ...t, profile_background: n },
               }),
             }),
           });
         },
-        ri = ({ Item: e, onSelected: t, children: i, active: a }) => {
-          let s = te(e),
+        di = ({ Item: e, onSelected: t, children: i, active: a }) => {
+          let s = le(e),
             o = Object.keys(s).length > 0;
-          return (0, r.jsxs)(xe.Z, {
-            className: (0, _.A)(
-              Wt.MiniProfileBackgroundOption,
-              o && Wt.WithVideo,
-              a && Wt.Active,
+          return (0, r.jsxs)(Ee.Z, {
+            className: (0, g.A)(
+              $t.MiniProfileBackgroundOption,
+              o && $t.WithVideo,
+              a && $t.Active,
             ),
             onActivate: t,
-            onMouseEnter: o ? Xt : void 0,
+            onMouseEnter: o ? ii : void 0,
             children: [
               (0, r.jsxs)("div", {
-                className: Wt.Preview,
+                className: $t.Preview,
                 children: [
-                  (0, r.jsx)("img", { src: J(e), loading: "lazy" }),
+                  (0, r.jsx)("img", { src: oe(e), loading: "lazy" }),
                   o &&
                     (0, r.jsx)("div", {
-                      className: Wt.PreviewVideo,
-                      children: (0, r.jsx)(Vt, { Item: e }),
+                      className: $t.PreviewVideo,
+                      children: (0, r.jsx)(ei, { Item: e }),
                     }),
                 ],
               }),
               (0, r.jsxs)("div", {
-                className: Wt.Details,
+                className: $t.Details,
                 children: [
                   (0, r.jsxs)("div", {
                     children: [
                       (0, r.jsx)("div", {
-                        className: Wt.Title,
+                        className: $t.Title,
                         children: e.item_title,
                       }),
                       (0, r.jsx)("div", {
-                        className: Wt.App,
+                        className: $t.App,
                         children: e.app_name,
                       }),
                     ],
@@ -4690,36 +4866,36 @@
             ],
           });
         },
-        ai = ({ Modifier: e, onSelected: t, children: i, active: a }) =>
+        ci = ({ Modifier: e, onSelected: t, children: i, active: a }) =>
           e
-            ? (0, r.jsx)(ri, { Item: e, onSelected: t, active: a })
-            : (0, r.jsxs)(xe.Z, {
-                className: (0, _.A)(
-                  Wt.MiniProfileBackgroundOption,
-                  a && Wt.Active,
+            ? (0, r.jsx)(di, { Item: e, onSelected: t, active: a })
+            : (0, r.jsxs)(Ee.Z, {
+                className: (0, g.A)(
+                  $t.MiniProfileBackgroundOption,
+                  a && $t.Active,
                 ),
                 onClick: t,
                 onActivate: t,
                 children: [
                   (0, r.jsx)("div", {
-                    className: (0, _.A)(Wt.Preview, Wt.BlankBackground),
+                    className: (0, g.A)($t.Preview, $t.BlankBackground),
                     children: (0, r.jsx)("img", {
-                      src: `${A.TS.COMMUNITY_CDN_URL}public/images/trans.gif`,
+                      src: `${N.TS.COMMUNITY_CDN_URL}public/images/trans.gif`,
                       loading: "lazy",
                     }),
                   }),
                   (0, r.jsxs)("div", {
-                    className: Wt.Details,
+                    className: $t.Details,
                     children: [
                       (0, r.jsxs)("div", {
                         children: [
                           (0, r.jsx)("div", {
-                            className: Wt.Title,
-                            children: (0, v.we)(
+                            className: $t.Title,
+                            children: (0, p.we)(
                               "#Profile_Edit_DefaultBlankBackground",
                             ),
                           }),
-                          (0, r.jsx)("div", { className: Wt.App }),
+                          (0, r.jsx)("div", { className: $t.App }),
                         ],
                       }),
                       i,
@@ -4727,124 +4903,124 @@
                   }),
                 ],
               });
-      var si = i(45699);
-      let oi = class extends u.Component {
+      var hi = i(45699);
+      let ui = class extends u.Component {
         render() {
           let e = this.props.PrivacyStore;
-          return (0, r.jsxs)(xe.Z, {
+          return (0, r.jsxs)(Ee.Z, {
             className: "ProfilePrivacyRoot",
             "flow-children": "column",
-            navEntryPreferPosition: St.iU.MAINTAIN_Y,
+            navEntryPreferPosition: Gt.iU.MAINTAIN_Y,
             children: [
-              (0, r.jsx)(ni, {
+              (0, r.jsx)(pi, {
                 PrivacyStore: e,
-                strLabel: (0, v.we)("#ProfilePrivacy_BasicDetails"),
-                strReadOnlySetting: U(d.Quy),
-                children: (0, v.we)("#ProfilePrivacy_BasicDetails_Desc"),
+                strLabel: (0, p.we)("#ProfilePrivacy_BasicDetails"),
+                strReadOnlySetting: Z(m.Quy),
+                children: (0, p.we)("#ProfilePrivacy_BasicDetails_Desc"),
               }),
               (0, r.jsx)("div", { className: "ProfilePrivacyHR" }),
-              (0, r.jsxs)(ni, {
+              (0, r.jsxs)(pi, {
                 PrivacyStore: e,
-                strLabel: (0, v.we)("#ProfilePrivacy_Profile"),
+                strLabel: (0, p.we)("#ProfilePrivacy_Profile"),
                 PrivacyKey: "PrivacyProfile",
                 children: [
                   (0, r.jsx)("p", {
-                    children: (0, v.we)("#ProfilePrivacy_Profile_Desc"),
+                    children: (0, p.we)("#ProfilePrivacy_Profile_Desc"),
                   }),
                   (0, r.jsx)("p", {
-                    children: (0, v.we)("#ProfilePrivacy_Profile_Desc2"),
+                    children: (0, p.we)("#ProfilePrivacy_Profile_Desc2"),
                   }),
                 ],
               }),
               (0, r.jsxs)("div", {
                 className: "ProfilePrivacyRoot_Indent",
                 children: [
-                  (0, r.jsxs)(ni, {
+                  (0, r.jsxs)(pi, {
                     PrivacyStore: e,
-                    strLabel: (0, v.we)("#ProfilePrivacy_GameLibrary"),
+                    strLabel: (0, p.we)("#ProfilePrivacy_GameLibrary"),
                     PrivacyKey: "PrivacyOwnedGames",
                     LimitPrivacyKey: "PrivacyProfile",
                     children: [
-                      (0, v.we)("#ProfilePrivacy_GameLibrary_Desc"),
-                      e.GetPrivacySetting("PrivacyOwnedGames") != d.uvF &&
-                        (0, r.jsx)(hi, {
+                      (0, p.we)("#ProfilePrivacy_GameLibrary_Desc"),
+                      e.GetPrivacySetting("PrivacyOwnedGames") != m.uvF &&
+                        (0, r.jsx)(Pi, {
                           PrivacyStore: e,
                           PrivacyKey: "PrivacyPlaytime",
                           LimitPrivacyKey: "PrivacyOwnedGames",
-                          children: (0, v.we)("#ProfilePrivacy_Playtime"),
+                          children: (0, p.we)("#ProfilePrivacy_Playtime"),
                         }),
                     ],
                   }),
                   (0, r.jsx)("div", { className: "ProfilePrivacyHR" }),
-                  (0, r.jsx)(ni, {
+                  (0, r.jsx)(pi, {
                     PrivacyStore: e,
-                    strLabel: (0, v.we)("#ProfilePrivacy_FriendsList"),
+                    strLabel: (0, p.we)("#ProfilePrivacy_FriendsList"),
                     PrivacyKey: "PrivacyFriendsList",
                     LimitPrivacyKey: "PrivacyProfile",
-                    children: (0, v.we)("#ProfilePrivacy_FriendsList_Desc"),
+                    children: (0, p.we)("#ProfilePrivacy_FriendsList_Desc"),
                   }),
                   (0, r.jsx)("div", { className: "ProfilePrivacyHR" }),
-                  (0, r.jsxs)(ni, {
+                  (0, r.jsxs)(pi, {
                     PrivacyStore: e,
-                    strLabel: (0, v.we)("#ProfilePrivacy_Inventory"),
+                    strLabel: (0, p.we)("#ProfilePrivacy_Inventory"),
                     PrivacyKey: "PrivacyInventory",
                     LimitPrivacyKey: "PrivacyProfile",
                     children: [
-                      (0, r.jsx)(xe.Z, {
+                      (0, r.jsx)(Ee.Z, {
                         "flow-children": "row",
-                        children: (0, v.PP)(
+                        children: (0, p.PP)(
                           "#ProfilePrivacy_Inventory_Desc",
-                          (0, r.jsx)(si.Ii, {
+                          (0, r.jsx)(hi.Ii, {
                             href: a.ProfileURL + "inventory/",
-                            children: (0, v.we)(
+                            children: (0, p.we)(
                               "#ProfilePrivacy_Inventory_Inventory",
                             ),
                           }),
-                          (0, r.jsx)(si.Ii, {
+                          (0, r.jsx)(hi.Ii, {
                             href: a.ProfileURL + "inventory/#753_6",
-                            children: (0, v.we)(
+                            children: (0, p.we)(
                               "#ProfilePrivacy_Inventory_TradingCards",
                             ),
                           }),
                         ),
                       }),
-                      e.GetPrivacySetting("PrivacyInventory") != d.uvF &&
-                        (0, r.jsx)(hi, {
+                      e.GetPrivacySetting("PrivacyInventory") != m.uvF &&
+                        (0, r.jsx)(Pi, {
                           PrivacyStore: e,
                           PrivacyKey: "PrivacyInventoryGifts",
                           LimitPrivacyKey: "PrivacyInventory",
-                          children: (0, v.we)("#ProfilePrivacy_Gifts"),
+                          children: (0, p.we)("#ProfilePrivacy_Gifts"),
                         }),
                     ],
                   }),
                   (0, r.jsx)("div", { className: "ProfilePrivacyHR" }),
-                  (0, r.jsxs)(li, {
+                  (0, r.jsxs)(_i, {
                     children: [
-                      (0, v.we)("#ProfilePrivacy_Comments"),
+                      (0, p.we)("#ProfilePrivacy_Comments"),
                       ":",
-                      (0, r.jsx)(ui, { PrivacyStore: e }),
+                      (0, r.jsx)(yi, { PrivacyStore: e }),
                     ],
                   }),
-                  !(0, pe.nA)(A.TS.EREALM) &&
+                  !(0, Ce.nA)(N.TS.EREALM) &&
                     (0, r.jsx)("div", { className: "ProfilePrivacyHR" }),
-                  !(0, pe.nA)(A.TS.EREALM) &&
-                    (0, r.jsx)(ni, {
+                  !(0, Ce.nA)(N.TS.EREALM) &&
+                    (0, r.jsx)(pi, {
                       PrivacyStore: e,
-                      strLabel: (0, v.we)("#ProfilePrivacy_UGC"),
-                      strReadOnlySetting: (0, v.we)("#Privacy_PerItem"),
-                      children: (0, r.jsx)(xe.Z, {
+                      strLabel: (0, p.we)("#ProfilePrivacy_UGC"),
+                      strReadOnlySetting: (0, p.we)("#Privacy_PerItem"),
+                      children: (0, r.jsx)(Ee.Z, {
                         "flow-children": "row",
-                        children: (0, v.PP)(
+                        children: (0, p.PP)(
                           "#ProfilePrivacy_UGC_Desc",
-                          (0, r.jsx)(si.Ii, {
+                          (0, r.jsx)(hi.Ii, {
                             href: a.ProfileURL + "screenshots/",
-                            children: (0, v.we)(
+                            children: (0, p.we)(
                               "#ProfilePrivacy_UGC_Desc_Screenshots",
                             ),
                           }),
-                          (0, r.jsx)(si.Ii, {
+                          (0, r.jsx)(hi.Ii, {
                             href: a.ProfileURL + "myworkshopfiles/",
-                            children: (0, v.we)(
+                            children: (0, p.we)(
                               "#ProfilePrivacy_UGC_Desc_WorkshopItems",
                             ),
                           }),
@@ -4857,38 +5033,38 @@
           });
         }
       };
-      function ni(e) {
+      function pi(e) {
         let t;
         return (
           (t = e.strReadOnlySetting
-            ? (0, r.jsx)(pi, { strLabel: e.strReadOnlySetting })
-            : (0, r.jsx)(mi, {
+            ? (0, r.jsx)(Ci, { strLabel: e.strReadOnlySetting })
+            : (0, r.jsx)(gi, {
                 PrivacyStore: e.PrivacyStore,
                 PrivacyKey: e.PrivacyKey,
                 LimitPrivacyKey: e.LimitPrivacyKey,
               })),
           (0, r.jsxs)(u.Fragment, {
             children: [
-              (0, r.jsxs)(li, { children: [e.strLabel, ":", t] }),
-              (0, r.jsx)(di, { children: e.children }),
+              (0, r.jsxs)(_i, { children: [e.strLabel, ":", t] }),
+              (0, r.jsx)(vi, { children: e.children }),
             ],
           })
         );
       }
-      function li(e) {
+      function _i(e) {
         return (0, r.jsx)("div", {
           className: "ProfilePrivacyHeader",
           children: e.children,
         });
       }
-      function di(e) {
+      function vi(e) {
         return (0, r.jsx)("div", {
           className: "ProfilePrivacyDesc",
           children: e.children,
         });
       }
-      oi = (0, s.Cg)([h.PA], oi);
-      const mi = (0, h.PA)(function (e) {
+      ui = (0, s.Cg)([h.PA], ui);
+      const gi = (0, h.PA)(function (e) {
         const {
             PrivacyStore: t,
             PrivacyKey: i,
@@ -4905,51 +5081,51 @@
             [t, i],
           );
         let l = t.GetPrivacySetting(i);
-        U(l);
-        const m = (function (e) {
+        Z(l);
+        const d = (function (e) {
           const t = [
-              { label: (0, v.we)("#Privacy_Public"), data: d.Quy },
-              { label: (0, v.we)("#Privacy_FriendsOnly"), data: d.Snd },
-              { label: (0, v.we)("#Privacy_Private"), data: d.uvF },
+              { label: (0, p.we)("#Privacy_Public"), data: m.Quy },
+              { label: (0, p.we)("#Privacy_FriendsOnly"), data: m.Snd },
+              { label: (0, p.we)("#Privacy_Private"), data: m.uvF },
             ],
-            i = null != e ? e : d.Quy;
+            i = null != e ? e : m.Quy;
           return t.filter((e) => i >= e.data);
         })(o());
         return (0, r.jsxs)(u.Fragment, {
           children: [
-            (0, r.jsx)(fe.ZU, {
+            (0, r.jsx)(we.ZU, {
               strDropDownButtonClassName: "ProfilePrivacyDropDown",
               bMatchWidth: !1,
-              rgOptions: m,
+              rgOptions: d,
               onChange: (e) => n(e.data),
               selectedOption: l,
             }),
-            (0, r.jsx)(ci, { eSaveState: t.GetSaveState(i) }),
+            (0, r.jsx)(fi, { eSaveState: t.GetSaveState(i) }),
           ],
         });
       });
-      function ci(e) {
+      function fi(e) {
         switch (e.eSaveState) {
           case 1:
             return (0, r.jsx)("div", {
               className: "PrivacySaveNotice Saving",
-              children: (0, v.we)("#Shared_Saving"),
+              children: (0, p.we)("#Shared_Saving"),
             });
           case 3:
             return (0, r.jsx)("div", {
               className: "PrivacySaveNotice Error",
-              children: (0, v.we)("#Error_Error"),
+              children: (0, p.we)("#Error_Error"),
             });
           case 2:
             return (0, r.jsx)("div", {
               className: "PrivacySaveNotice Saved",
-              children: (0, v.we)("#Shared_Saved"),
+              children: (0, p.we)("#Shared_Saved"),
             });
           default:
             return null;
         }
       }
-      function hi(e) {
+      function Pi(e) {
         const {
             PrivacyStore: t,
             PrivacyKey: i,
@@ -4958,17 +5134,17 @@
           } = e,
           o = u.useCallback(
             (e) => {
-              let r = e.currentTarget.checked ? d.uvF : d.Quy;
+              let r = e.currentTarget.checked ? m.uvF : m.Quy;
               t.ChangePrivacySetting(i, r, a);
             },
             [t, i, a],
           );
-        let n = (0, ht.q3)(() => t.GetPrivacySetting(i)) == d.uvF;
+        let n = (0, Pt.q3)(() => t.GetPrivacySetting(i)) == m.uvF;
         return (0, r.jsx)("div", {
           className: "ProfilePrivacyCheckbox",
           children: (0, r.jsxs)("label", {
             children: [
-              (0, r.jsx)(si.BA, {
+              (0, r.jsx)(hi.BA, {
                 className: "ProfilePrivacyCheckbox_Input",
                 type: "checkbox",
                 checked: n,
@@ -4982,7 +5158,7 @@
           }),
         });
       }
-      let ui = class extends u.Component {
+      let yi = class extends u.Component {
         constructor(e) {
           super(e), (this.state = { eSaveState: 0 });
         }
@@ -4995,74 +5171,74 @@
           !(function (e) {
             switch (e) {
               case 0:
-                return (0, v.we)("#Privacy_FriendsOnly");
+                return (0, p.we)("#Privacy_FriendsOnly");
               case 1:
-                return (0, v.we)("#Privacy_Public");
+                return (0, p.we)("#Privacy_Public");
               case 2:
-                return (0, v.we)("#Privacy_Private");
+                return (0, p.we)("#Privacy_Private");
               default:
             }
-          })(((i = e), (a = t) == d.uvF ? 2 : a == d.Snd && 1 == i ? 0 : i));
+          })(((i = e), (a = t) == m.uvF ? 2 : a == m.Snd && 1 == i ? 0 : i));
           var i, a;
           const s = (function (e) {
             const t = [
                 {
-                  label: (0, v.we)("#Profile_CommentPermission_Public_Desc"),
+                  label: (0, p.we)("#Profile_CommentPermission_Public_Desc"),
                   data: 1,
                 },
                 {
-                  label: (0, v.we)(
+                  label: (0, p.we)(
                     "#Profile_CommentPermission_FriendsOnly_Desc",
                   ),
                   data: 0,
                 },
                 {
-                  label: (0, v.we)("#Profile_CommentPermission_Private_Desc"),
+                  label: (0, p.we)("#Profile_CommentPermission_Private_Desc"),
                   data: 2,
                 },
               ],
-              i = null != e ? e : d.Quy;
+              i = null != e ? e : m.Quy;
             return t.filter((e) => i >= e.data);
           })(t);
           return (0, r.jsxs)(u.Fragment, {
             children: [
-              (0, r.jsx)(fe.ZU, {
+              (0, r.jsx)(we.ZU, {
                 strDropDownButtonClassName: "ProfilePrivacyDropDown",
                 rgOptions: s,
                 bMatchWidth: !1,
                 onChange: (e) => this.OnSettingChanged(e.data),
                 selectedOption: e,
               }),
-              (0, r.jsx)(ci, {
+              (0, r.jsx)(fi, {
                 eSaveState: this.props.PrivacyStore.GetCommentSaveState(),
               }),
             ],
           });
         }
       };
-      function pi(e) {
+      function Ci(e) {
         return (0, r.jsx)("div", {
           className: "ProfilePrivacyDropDown readonly",
           children: e.strLabel,
         });
       }
-      (0, s.Cg)([Pe.oI], ui.prototype, "OnSettingChanged", null),
-        (ui = (0, s.Cg)([h.PA], ui));
-      var _i = i(26075),
-        vi = i(38945),
-        gi = i(19939),
-        fi = i(97875);
-      const Pi = ({ className: e, width: t, height: i, theme: a }) => {
+      (0, s.Cg)([je.oI], yi.prototype, "OnSettingChanged", null),
+        (yi = (0, s.Cg)([h.PA], yi));
+      var Ai = i(26075),
+        Si = i(38945),
+        xi = i(19939),
+        wi = i(97875);
+      const ji = ({ className: e, width: t, height: i, theme: a }) => {
           a || (a = "Default"), (a += "Theme");
-          const [s, o] = (0, fi.l)(),
-            [n, l] = (0, fi.l)();
+          const [s, o] = (0, wi.l)(),
+            [n, l] = (0, wi.l)();
           return (0, r.jsxs)("svg", {
             width: t || "401",
             height: i || "399",
             viewBox: "0 0 401 399",
             fill: "none",
             xmlns: "http://www.w3.org/2000/svg",
-            className: (0, _.A)(e, vi.ProfilePreview, gi[a]),
+            className: (0, g.A)(e, Si.ProfilePreview, xi[a]),
             children: [
               (0, r.jsx)("rect", {
                 y: "13",
@@ -5363,21 +5539,21 @@
                 height: "382",
                 fill: "var(--gradient-background)",
                 fillOpacity: "0.23",
-                className: vi.ThemeBackground,
+                className: Si.ThemeBackground,
               }),
               (0, r.jsx)("rect", {
                 y: "13",
                 width: "401",
                 height: "382",
                 fill: o,
-                className: vi.PaintRadial0,
+                className: Si.PaintRadial0,
               }),
               (0, r.jsx)("rect", {
                 y: "13",
                 width: "401",
                 height: "382",
                 fill: l,
-                className: vi.PaintRadial1,
+                className: Si.PaintRadial1,
               }),
               (0, r.jsxs)("defs", {
                 children: [
@@ -5423,12 +5599,12 @@
             ],
           });
         },
-        yi = (0, h.PA)(({ ProfileItems: e, Background: t, theme: i }) => {
+        Ii = (0, h.PA)(({ ProfileItems: e, Background: t, theme: i }) => {
           void 0 === t && (t = e.GetEquippedBackground());
           let a = t && t.movie_webm,
             s = t && t.tiled,
-            o = t ? J(t) : ee(null);
-          const n = t && !s && e.GetEquippedBackgroundFlags() == K.JA9.Z;
+            o = t ? oe(t) : ne(null);
+          const n = t && !s && e.GetEquippedBackgroundFlags() == J.JA9.Z;
           let l = null;
           return (
             s &&
@@ -5439,24 +5615,24 @@
               }),
             (0, r.jsxs)("div", {
               style: l,
-              className: vi.ProfilePagePreviewCtn,
+              className: Si.ProfilePagePreviewCtn,
               children: [
                 (0, r.jsx)("div", {
-                  className: vi.BackgroundPosition,
+                  className: Si.BackgroundPosition,
                   children: (0, r.jsxs)("div", {
-                    className: (0, _.A)(vi.Background, n && vi.FullScreen),
+                    className: (0, g.A)(Si.Background, n && Si.FullScreen),
                     children: [
                       !a && !s && (0, r.jsx)("img", { src: o }),
-                      a && (0, r.jsx)(Yt, { Background: t, className: "" }),
+                      a && (0, r.jsx)(ti, { Background: t, className: "" }),
                     ],
                   }),
                 }),
                 (0, r.jsx)("div", {
-                  className: vi.ProfilePreviewPosition,
+                  className: Si.ProfilePreviewPosition,
                   children: (0, r.jsx)("div", {
-                    className: vi.ProfilePreviewCtn,
-                    children: (0, r.jsx)(Pi, {
-                      className: vi.ProfilePreview,
+                    className: Si.ProfilePreviewCtn,
+                    children: (0, r.jsx)(ji, {
+                      className: Si.ProfilePreview,
                       width: "50%",
                       height: "auto",
                       theme: i,
@@ -5467,7 +5643,7 @@
             })
           );
         });
-      let Ci = class extends u.Component {
+      let Bi = class extends u.Component {
         constructor() {
           super(...arguments), (this.state = { equipFlags: 0 });
         }
@@ -5489,28 +5665,28 @@
           let i = e.GetEquippedProfileModifier();
           return (
             i && !e.BIsLegacyGoldenProfile(i.appid) && (i = null),
-            (0, r.jsxs)(xe.Z, {
+            (0, r.jsxs)(Ee.Z, {
               "flow-children": "column",
               children: [
-                (0, r.jsx)(fe.Y9, {
-                  children: (0, v.we)("#Profile_Edit_ChooseBackground"),
+                (0, r.jsx)(we.Y9, {
+                  children: (0, p.we)("#Profile_Edit_ChooseBackground"),
                 }),
-                (0, r.jsx)(fe.a3, {
-                  children: (0, v.we)("#Profile_Edit_Background_Instructions"),
+                (0, r.jsx)(we.a3, {
+                  children: (0, p.we)("#Profile_Edit_Background_Instructions"),
                 }),
-                (0, r.jsx)(Ne, {
-                  className: _i.BackgroundPickerPage,
-                  getSearchFields: Qt,
+                (0, r.jsx)(De, {
+                  className: Ai.BackgroundPickerPage,
+                  getSearchFields: ai,
                   getItems: () => e.GetOwnedBackgrounds(),
                   fnCommitChanges: this.CommitChanges,
                   fnRevertChanges: this.RevertChanges,
-                  ItemComponent: Ii,
+                  ItemComponent: Li,
                   RenderDefaultComponent: ({ onSelected: e, active: t }) =>
-                    (0, r.jsx)(Gi, { Modifier: i, onSelected: e, active: t }),
+                    (0, r.jsx)(Fi, { Modifier: i, onSelected: e, active: t }),
                   ActiveItem: e.GetEquippedBackground(),
-                  fnIsSameItem: $t,
+                  fnIsSameItem: si,
                   fnRenderPreview: (i) =>
-                    (0, r.jsx)(wi, {
+                    (0, r.jsx)(bi, {
                       Background: i,
                       ProfileItems: e,
                       theme: t.ActiveTheme.theme_id,
@@ -5521,14 +5697,14 @@
           );
         }
       };
-      (0, s.Cg)([Pe.oI], Ci.prototype, "CommitChanges", null),
-        (0, s.Cg)([Pe.oI], Ci.prototype, "RevertChanges", null),
-        (Ci = (0, s.Cg)([h.PA], Ci));
-      const Si = Ci,
-        xi = ({ label: e, currentFlag: t, flag: i, onSelect: a }) =>
+      (0, s.Cg)([je.oI], Bi.prototype, "CommitChanges", null),
+        (0, s.Cg)([je.oI], Bi.prototype, "RevertChanges", null),
+        (Bi = (0, s.Cg)([h.PA], Bi));
+      const Gi = Bi,
+        Ei = ({ label: e, currentFlag: t, flag: i, onSelect: a }) =>
           (0, r.jsx)("div", {
-            className: _i.ProfileBackgroundEquipOption,
-            children: (0, r.jsx)(fe.Od, {
+            className: Ai.ProfileBackgroundEquipOption,
+            children: (0, r.jsx)(we.Od, {
               checked: t == i,
               disabled: t == i,
               onChange: (e) => {
@@ -5537,7 +5713,7 @@
               label: e,
             }),
           });
-      let Ai = class extends u.Component {
+      let Ni = class extends u.Component {
         OnChange(e) {
           this.props.ProfileItems.SetEquippedBackgroundFlags(e);
         }
@@ -5545,57 +5721,57 @@
           let { Background: e, ProfileItems: t } = this.props;
           const i = !e || (null == e ? void 0 : e.tiled),
             a = t.GetEquippedBackgroundFlags();
-          let s = (0, r.jsx)(xi, {
-              flag: K.JA9.Z,
+          let s = (0, r.jsx)(Ei, {
+              flag: J.JA9.Z,
               currentFlag: a,
               onSelect: this.OnChange,
-              label: (0, v.we)("#Profile_Edit_BackgroundEquipFlag_FullScreen"),
+              label: (0, p.we)("#Profile_Edit_BackgroundEquipFlag_FullScreen"),
             }),
-            o = (0, r.jsx)(xi, {
+            o = (0, r.jsx)(Ei, {
               flag: 0,
               currentFlag: a,
               onSelect: this.OnChange,
-              label: (0, v.we)(
+              label: (0, p.we)(
                 "#Profile_Edit_BackgroundEquipFlag_OriginalSize",
               ),
             });
           return (0, r.jsxs)("div", {
-            className: (0, _.A)(
-              _i.ProfileBackgroundEquipOptions,
-              i && _i.HideEquipOptions,
+            className: (0, g.A)(
+              Ai.ProfileBackgroundEquipOptions,
+              i && Ai.HideEquipOptions,
             ),
             children: [s, o],
           });
         }
       };
-      (0, s.Cg)([Pe.oI], Ai.prototype, "OnChange", null),
-        (Ai = (0, s.Cg)([h.PA], Ai));
-      const wi = (0, h.PA)(({ Background: e, ProfileItems: t, theme: i }) =>
+      (0, s.Cg)([je.oI], Ni.prototype, "OnChange", null),
+        (Ni = (0, s.Cg)([h.PA], Ni));
+      const bi = (0, h.PA)(({ Background: e, ProfileItems: t, theme: i }) =>
           (0, r.jsxs)("div", {
             children: [
               (0, r.jsx)(
-                yi,
+                Ii,
                 { Background: e, ProfileItems: t, theme: i },
                 e && e.communityitemid,
               ),
-              (0, r.jsx)(Ai, { ProfileItems: t, Background: e }),
+              (0, r.jsx)(Ni, { ProfileItems: t, Background: e }),
             ],
           }),
         ),
-        ji = ({ Background: e, children: t }) =>
+        Ri = ({ Background: e, children: t }) =>
           (0, r.jsxs)("div", {
-            className: _i.Details,
+            className: Ai.Details,
             children: [
               (0, r.jsxs)("div", {
                 children: [
                   (0, r.jsx)("div", {
-                    className: _i.Title,
+                    className: Ai.Title,
                     children: e
                       ? e.item_title
-                      : (0, v.we)("#Profile_Edit_DefaultBlankBackground"),
+                      : (0, p.we)("#Profile_Edit_DefaultBlankBackground"),
                   }),
                   (0, r.jsx)("div", {
-                    className: _i.App,
+                    className: Ai.App,
                     children: e && e.app_name,
                   }),
                 ],
@@ -5603,55 +5779,55 @@
               t,
             ],
           }),
-        Ii = ({ Item: e, onSelected: t, active: i, children: a }) => {
+        Li = ({ Item: e, onSelected: t, active: i, children: a }) => {
           let s = !!e.movie_webm;
-          return (0, r.jsxs)(xe.Z, {
-            className: (0, _.A)(
-              _i.BackgroundOption,
-              s && _i.WithVideo,
-              i && _i.Active,
+          return (0, r.jsxs)(Ee.Z, {
+            className: (0, g.A)(
+              Ai.BackgroundOption,
+              s && Ai.WithVideo,
+              i && Ai.Active,
             ),
             onClick: t,
             onActivate: t,
-            onGamepadFocus: s ? Zt : void 0,
-            onMouseEnter: s ? Xt : void 0,
+            onGamepadFocus: s ? ri : void 0,
+            onMouseEnter: s ? ii : void 0,
             focusable: !0,
             children: [
               (0, r.jsxs)("div", {
-                className: _i.Preview,
+                className: Ai.Preview,
                 children: [
-                  (0, r.jsx)("img", { src: ee(e), loading: "lazy" }),
-                  (0, r.jsx)(Yt, {
+                  (0, r.jsx)("img", { src: ne(e), loading: "lazy" }),
+                  (0, r.jsx)(ti, {
                     Background: e,
-                    className: _i.PreviewVideo,
+                    className: Ai.PreviewVideo,
                     small: !0,
                   }),
                 ],
               }),
-              (0, r.jsx)(ji, { Background: e, children: a }),
+              (0, r.jsx)(Ri, { Background: e, children: a }),
             ],
           });
         },
-        Gi = ({ onSelected: e, Modifier: t, active: i, children: a }) =>
+        Fi = ({ onSelected: e, Modifier: t, active: i, children: a }) =>
           t
-            ? (0, r.jsx)(Ii, { Item: t, onSelected: e, active: i })
+            ? (0, r.jsx)(Li, { Item: t, onSelected: e, active: i })
             : (0, r.jsxs)("div", {
-                className: (0, _.A)(_i.BackgroundOption, i && _i.Active),
+                className: (0, g.A)(Ai.BackgroundOption, i && Ai.Active),
                 onClick: e,
                 children: [
                   (0, r.jsx)("div", {
-                    className: _i.Preview,
-                    children: (0, r.jsx)("img", { src: ee(null) }),
+                    className: Ai.Preview,
+                    children: (0, r.jsx)("img", { src: ne(null) }),
                   }),
-                  (0, r.jsx)(ji, { Background: null, children: a }),
+                  (0, r.jsx)(Ri, { Background: null, children: a }),
                 ],
               });
-      var Bi = i(12447),
-        Ei = i(17083);
-      function Ni(e) {
+      var Ti = i(12447),
+        ki = i(17083);
+      function Di(e) {
         const { navigate: t, onClick: i, ...a } = e,
           { target: s } = a;
-        return (0, r.jsx)(si.Ii, {
+        return (0, r.jsx)(hi.Ii, {
           ...a,
           onClick: (e) => {
             try {
@@ -5669,114 +5845,114 @@
           },
         });
       }
-      function bi(e) {
-        return (0, r.jsx)(Ei.k2, { component: Ni, ...e });
+      function Mi(e) {
+        return (0, r.jsx)(ki.k2, { component: Di, ...e });
       }
-      var Ri = i(78091);
-      function Li(e) {
+      var Oi = i(78091);
+      function Hi(e) {
         const { root: t, currentPath: i, linksAvailable: a, children: s } = e;
-        return (0, r.jsx)(Bi.u, {
+        return (0, r.jsx)(Ti.u, {
           navID: "ProfileEditShell",
-          children: (0, r.jsx)(xe.Z, {
-            children: (0, r.jsxs)(xe.Z, {
-              className: Ri.Shell,
+          children: (0, r.jsx)(Ee.Z, {
+            children: (0, r.jsxs)(Ee.Z, {
+              className: Oi.Shell,
               "flow-children": "row",
-              navEntryPreferPosition: St.iU.FIRST,
+              navEntryPreferPosition: Gt.iU.FIRST,
               children: [
-                (0, r.jsx)(Fi, { root: t, currentPath: i, linksAvailable: a }),
+                (0, r.jsx)(Ui, { root: t, currentPath: i, linksAvailable: a }),
                 (0, r.jsx)("div", {
-                  className: Ri.PageContent,
-                  children: (0, r.jsx)(je.tH, { children: s }),
+                  className: Oi.PageContent,
+                  children: (0, r.jsx)(Re.tH, { children: s }),
                 }),
               ],
             }),
           }),
         });
       }
-      const Fi = ({ root: e, currentPath: t, linksAvailable: i }) => {
+      const Ui = ({ root: e, currentPath: t, linksAvailable: i }) => {
           const s = { root: e, currentPath: t },
-            o = gr,
-            n = (0, A.Qn)();
-          return (0, r.jsxs)(xe.Z, {
-            className: Ri.Navigation,
+            o = xr,
+            n = (0, N.Qn)();
+          return (0, r.jsxs)(Ee.Z, {
+            className: Oi.Navigation,
             "flow-children": "column",
             children: [
               (0, r.jsx)("div", {
-                className: Ri.BackToProfileCtn,
-                children: (0, r.jsx)(si.Ii, {
+                className: Oi.BackToProfileCtn,
+                children: (0, r.jsx)(hi.Ii, {
                   href: a.ProfileURL,
-                  children: (0, v.we)("#Profile_ReturnToYourProfile"),
+                  children: (0, p.we)("#Profile_ReturnToYourProfile"),
                 }),
               }),
-              (0, r.jsx)("div", { className: Ri.ProfileEditLine }),
-              (0, r.jsx)(ki, {
+              (0, r.jsx)("div", { className: Oi.ProfileEditLine }),
+              (0, r.jsx)(qi, {
                 ...s,
                 to: o.Info(),
-                children: (0, v.we)("#Profile_Edit_BasicInfo"),
+                children: (0, p.we)("#Profile_Edit_BasicInfo"),
               }),
-              (0, r.jsx)(ki, {
+              (0, r.jsx)(qi, {
                 ...s,
                 to: o.Avatar(),
-                children: (0, v.we)("#Profile_FieldAvatar"),
+                children: (0, p.we)("#Profile_FieldAvatar"),
               }),
-              (0, r.jsx)(ki, {
+              (0, r.jsx)(qi, {
                 ...s,
                 to: o.Background(),
-                children: (0, v.we)("#Profile_FieldProfileBackground"),
+                children: (0, p.we)("#Profile_FieldProfileBackground"),
               }),
-              (0, r.jsx)(ki, {
+              (0, r.jsx)(qi, {
                 ...s,
                 to: o.MiniProfile(),
-                children: (0, v.we)("#Profile_Edit_MiniProfile"),
+                children: (0, p.we)("#Profile_Edit_MiniProfile"),
               }),
-              (0, r.jsx)(ki, {
+              (0, r.jsx)(qi, {
                 ...s,
                 to: o.Theme(),
-                children: (0, v.we)("#Profile_Edit_Theme"),
+                children: (0, p.we)("#Profile_Edit_Theme"),
               }),
-              (0, r.jsx)(ki, {
+              (0, r.jsx)(qi, {
                 ...s,
                 to: o.ProfileModifier(),
                 fnVisible: i.ProfileModifierAvailable,
-                children: (0, v.we)("#Profile_Edit_ProfileModifier"),
+                children: (0, p.we)("#Profile_Edit_ProfileModifier"),
               }),
-              (0, r.jsx)(ki, {
+              (0, r.jsx)(qi, {
                 ...s,
                 to: o.FavoriteBadge(),
                 fnVisible: i.BadgesAvailable,
-                children: (0, v.we)("#Profile_Edit_FavoriteBadge"),
+                children: (0, p.we)("#Profile_Edit_FavoriteBadge"),
               }),
-              (0, r.jsx)(ki, {
+              (0, r.jsx)(qi, {
                 ...s,
                 to: o.FavoriteGroup(),
                 fnVisible: i.GroupsAvailable,
-                children: (0, v.we)("#Profile_Edit_FavoriteGroup"),
+                children: (0, p.we)("#Profile_Edit_FavoriteGroup"),
               }),
               !n &&
-                (0, r.jsx)(ki, {
+                (0, r.jsx)(qi, {
                   ...s,
                   to: o.Showcases(),
                   fnVisible: i.ShowcasesAvailable,
-                  children: (0, v.we)("#Profile_Edit_FeaturedShowcase"),
+                  children: (0, p.we)("#Profile_Edit_FeaturedShowcase"),
                 }),
-              (0, r.jsx)("div", { className: Ri.ProfileEditLine }),
-              (0, r.jsx)(ki, {
+              (0, r.jsx)("div", { className: Oi.ProfileEditLine }),
+              (0, r.jsx)(qi, {
                 ...s,
                 to: o.Privacy(),
-                children: (0, v.we)("#Profile_EditPrivacySettings"),
+                children: (0, p.we)("#Profile_EditPrivacySettings"),
               }),
               (0, r.jsx)("div", {
-                className: Ri.ProfileEditStoreLink,
-                children: (0, r.jsx)(si.Ii, {
-                  className: (0, _.A)(Ri.ExternalLink),
-                  href: `${A.TS.STORE_BASE_URL}points/`,
-                  children: (0, v.we)("#SteamPointsShop"),
+                className: Oi.ProfileEditStoreLink,
+                children: (0, r.jsx)(hi.Ii, {
+                  className: (0, g.A)(Oi.ExternalLink),
+                  href: `${N.TS.STORE_BASE_URL}points/`,
+                  children: (0, p.we)("#SteamPointsShop"),
                 }),
               }),
             ],
           });
         },
-        ki = (0, h.PA)(
+        qi = (0, h.PA)(
           ({
             root: e,
             currentPath: t,
@@ -5788,27 +5964,27 @@
             const n = `${e}${i}`,
               l = n == t;
             if (!l && a && !a()) return null;
-            const d = s && s(),
-              m = !!d;
+            const m = s && s(),
+              d = !!m;
             let c;
             return (
-              d && (c = (e) => e.preventDefault()),
-              (0, r.jsx)(bi, {
-                className: (0, _.A)(
-                  Ri.NavLink,
-                  l && Ri.Active,
-                  m && Ri.Disabled,
+              m && (c = (e) => e.preventDefault()),
+              (0, r.jsx)(Mi, {
+                className: (0, g.A)(
+                  Oi.NavLink,
+                  l && Oi.Active,
+                  d && Oi.Disabled,
                 ),
                 to: n,
                 onClick: c,
-                title: d,
+                title: m,
                 children: o,
               })
             );
           },
         );
-      var Ti = i(49622);
-      let Di = class extends u.Component {
+      var Ki = i(49622);
+      let Qi = class extends u.Component {
         constructor() {
           super(...arguments), (this.state = { bDialogActive: !1 });
         }
@@ -5821,7 +5997,7 @@
         render() {
           const { ProfileItems: e } = this.props;
           return e.BHasAnyProfileModifiers()
-            ? (0, r.jsx)(Ui, {
+            ? (0, r.jsx)(Zi, {
                 active: this.state.bDialogActive,
                 ProfileItems: e,
                 onDismiss: this.HideDialog,
@@ -5829,11 +6005,11 @@
             : null;
         }
       };
-      (0, s.Cg)([Pe.oI], Di.prototype, "ShowDialog", null),
-        (0, s.Cg)([Pe.oI], Di.prototype, "HideDialog", null),
-        (Di = (0, s.Cg)([h.PA], Di));
-      const Oi = Di,
-        Mi = (0, h.PA)(({ ProfileItems: e }) => {
+      (0, s.Cg)([je.oI], Qi.prototype, "ShowDialog", null),
+        (0, s.Cg)([je.oI], Qi.prototype, "HideDialog", null),
+        (Qi = (0, s.Cg)([h.PA], Qi));
+      const Wi = Qi,
+        zi = (0, h.PA)(({ ProfileItems: e }) => {
           let t = e.GetProfileModifierCSSURL();
           return t
             ? (0, r.jsx)("link", {
@@ -5843,35 +6019,35 @@
               })
             : null;
         }),
-        Hi = ({ ProfileModifier: e }) => {
+        Vi = ({ ProfileModifier: e }) => {
           const t = e
-              ? J(e)
-              : `${A.TS.COMMUNITY_CDN_URL}public/images/trans.gif`,
+              ? oe(e)
+              : `${N.TS.COMMUNITY_CDN_URL}public/images/trans.gif`,
             i = e
               ? e.item_title
-              : (0, v.we)("#Profile_Edit_DefaultBlankBackground"),
+              : (0, p.we)("#Profile_Edit_DefaultBlankBackground"),
             a = e ? e.app_name : "";
           return (0, r.jsx)(r.Fragment, {
             children: (0, r.jsxs)("div", {
-              className: Ti.ProfileModifierBody,
+              className: Ki.ProfileModifierBody,
               children: [
                 (0, r.jsx)("img", {
-                  className: Ti.GoldenProfileItemImage,
+                  className: Ki.GoldenProfileItemImage,
                   src: t,
                 }),
                 (0, r.jsx)("div", {
-                  className: Ti.GoldenProfileTitle,
+                  className: Ki.GoldenProfileTitle,
                   children: i,
                 }),
                 (0, r.jsx)("div", {
-                  className: Ti.GoldenProfileApp,
+                  className: Ki.GoldenProfileApp,
                   children: a,
                 }),
               ],
             }),
           });
         };
-      let Ui = class extends u.Component {
+      let Zi = class extends u.Component {
         OnDismiss() {
           this.props.ProfileItems.RevertProfileModifierChanges(),
             this.props.onDismiss();
@@ -5880,55 +6056,55 @@
           const { ProfileItems: e } = this.props;
           return (0, r.jsxs)(r.Fragment, {
             children: [
-              (0, r.jsx)(fe.Y9, {
-                children: (0, v.we)("#Profile_Edit_ProfileModifier"),
+              (0, r.jsx)(we.Y9, {
+                children: (0, p.we)("#Profile_Edit_ProfileModifier"),
               }),
-              (0, r.jsx)(fe.a3, {
-                children: (0, v.we)(
+              (0, r.jsx)(we.a3, {
+                children: (0, p.we)(
                   "#Profile_Edit_ProfileModifier_Instructions",
                 ),
               }),
-              (0, r.jsx)(Ne, {
+              (0, r.jsx)(De, {
                 fnRevertChanges: this.OnDismiss,
-                getSearchFields: Qt,
+                getSearchFields: ai,
                 getItems: () => e.GetOwnedProfileModifiers(),
                 fnCommitChanges: async (t) => (
                   e.SetEquippedProfileModifier(t),
                   e.CommitProfileModifierChanges()
                 ),
-                ItemComponent: qi,
+                ItemComponent: Yi,
                 RenderDefaultComponent: ({ onSelected: e, active: t }) =>
-                  (0, r.jsx)(zi, { onSelected: e, active: t }),
+                  (0, r.jsx)(Xi, { onSelected: e, active: t }),
                 ActiveItem: e.GetEquippedProfileModifier(),
-                fnIsSameItem: $t,
-                fnRenderPreview: (e) => (0, r.jsx)(Hi, { ProfileModifier: e }),
+                fnIsSameItem: si,
+                fnRenderPreview: (e) => (0, r.jsx)(Vi, { ProfileModifier: e }),
               }),
             ],
           });
         }
       };
-      (0, s.Cg)([Pe.oI], Ui.prototype, "OnDismiss", null),
-        (Ui = (0, s.Cg)([h.PA], Ui));
-      const qi = ({ Item: e, onSelected: t, children: i, active: a }) =>
-          (0, r.jsxs)(xe.Z, {
-            className: (0, _.A)(Ti.ProfileModifierOption, a && Ti.Active),
+      (0, s.Cg)([je.oI], Zi.prototype, "OnDismiss", null),
+        (Zi = (0, s.Cg)([h.PA], Zi));
+      const Yi = ({ Item: e, onSelected: t, children: i, active: a }) =>
+          (0, r.jsxs)(Ee.Z, {
+            className: (0, g.A)(Ki.ProfileModifierOption, a && Ki.Active),
             onActivate: t,
             children: [
               (0, r.jsx)("div", {
-                className: Ti.Preview,
-                children: (0, r.jsx)("img", { src: J(e), loading: "lazy" }),
+                className: Ki.Preview,
+                children: (0, r.jsx)("img", { src: oe(e), loading: "lazy" }),
               }),
               (0, r.jsxs)("div", {
-                className: Ti.Details,
+                className: Ki.Details,
                 children: [
                   (0, r.jsxs)("div", {
                     children: [
                       (0, r.jsx)("div", {
-                        className: Ti.Title,
+                        className: Ki.Title,
                         children: e.item_title,
                       }),
                       (0, r.jsx)("div", {
-                        className: Ti.App,
+                        className: Ki.App,
                         children: e.app_name,
                       }),
                     ],
@@ -5938,28 +6114,28 @@
               }),
             ],
           }),
-        zi = ({ onSelected: e, children: t, active: i }) =>
-          (0, r.jsxs)(xe.Z, {
-            className: (0, _.A)(Ti.ProfileModifierOption, i && Ti.Active),
+        Xi = ({ onSelected: e, children: t, active: i }) =>
+          (0, r.jsxs)(Ee.Z, {
+            className: (0, g.A)(Ki.ProfileModifierOption, i && Ki.Active),
             onActivate: e,
             children: [
               (0, r.jsx)("div", {
-                className: (0, _.A)(Ti.Preview, Ti.BlankBackground),
+                className: (0, g.A)(Ki.Preview, Ki.BlankBackground),
                 children: (0, r.jsx)("img", {
-                  src: `${A.TS.COMMUNITY_CDN_URL}public/images/trans.gif`,
+                  src: `${N.TS.COMMUNITY_CDN_URL}public/images/trans.gif`,
                   loading: "lazy",
                 }),
               }),
               (0, r.jsxs)("div", {
-                className: Ti.Details,
+                className: Ki.Details,
                 children: [
                   (0, r.jsxs)("div", {
                     children: [
                       (0, r.jsx)("div", {
-                        className: Ti.Title,
-                        children: (0, v.we)("#ProfileModifier_DisabledTitle"),
+                        className: Ki.Title,
+                        children: (0, p.we)("#ProfileModifier_DisabledTitle"),
                       }),
-                      (0, r.jsx)("div", { className: Ti.App }),
+                      (0, r.jsx)("div", { className: Ki.App }),
                     ],
                   }),
                   t,
@@ -5967,8 +6143,8 @@
               }),
             ],
           });
-      var Ki = i(20644);
-      let Wi = class extends u.Component {
+      var Ji = i(20644);
+      let $i = class extends u.Component {
         constructor() {
           super(...arguments), (this.state = { bSaving: !1, strHTMLError: "" });
         }
@@ -5978,9 +6154,9 @@
             t.SetActiveTheme(e.theme_id);
           let i = await t.CommitActiveTheme();
           return (
-            i != T.R &&
+            i != K.R &&
               this.setState({
-                strHTMLError: (0, v.we)("#ConnectionTrouble_FailedToConnect"),
+                strHTMLError: (0, p.we)("#ConnectionTrouble_FailedToConnect"),
               }),
             this.setState({ bSaving: !1 }),
             i
@@ -5995,66 +6171,66 @@
           let i = !!t.GetEquippedProfileModifier();
           return (0, r.jsxs)(r.Fragment, {
             children: [
-              (0, r.jsx)(fe.Y9, { children: (0, v.we)("#Profile_Edit_Theme") }),
-              (0, r.jsx)(fe.a3, {
-                children: (0, v.we)("#Profile_Edit_Theme_Instructions"),
+              (0, r.jsx)(we.Y9, { children: (0, p.we)("#Profile_Edit_Theme") }),
+              (0, r.jsx)(we.a3, {
+                children: (0, p.we)("#Profile_Edit_Theme_Instructions"),
               }),
-              (0, r.jsx)(Le, { strHTMLError: this.state.strHTMLError }),
-              i && (0, r.jsx)($i, {}),
-              (0, r.jsx)(Ne, {
+              (0, r.jsx)(He, { strHTMLError: this.state.strHTMLError }),
+              i && (0, r.jsx)(sr, {}),
+              (0, r.jsx)(De, {
                 getSearchFields: null,
                 ActiveItem: e.ActiveTheme,
                 getItems: async () => e.AvailableThemes,
                 fnCommitChanges: this.CommitChanges,
                 fnRevertChanges: this.RevertChanges,
                 fnRenderPreview: (e) =>
-                  (0, r.jsx)(Xi, { Theme: e, ProfileItems: t }),
-                fnIsSameItem: Zi,
-                ItemComponent: Qi,
-                classNameItemPicker: Ki.ProfileThemePicker,
-                className: (0, _.A)(i && Ki.ThemePickerDisabled),
+                  (0, r.jsx)(ir, { Theme: e, ProfileItems: t }),
+                fnIsSameItem: rr,
+                ItemComponent: ar,
+                classNameItemPicker: Ji.ProfileThemePicker,
+                className: (0, g.A)(i && Ji.ThemePickerDisabled),
               }),
             ],
           });
         }
       };
-      (0, s.Cg)([Pe.oI], Wi.prototype, "CommitChanges", null),
-        (0, s.Cg)([Pe.oI], Wi.prototype, "RevertChanges", null),
-        (Wi = (0, s.Cg)([h.PA], Wi));
-      const Vi = Wi,
-        Yi = ({ Theme: e, children: t }) => {
+      (0, s.Cg)([je.oI], $i.prototype, "CommitChanges", null),
+        (0, s.Cg)([je.oI], $i.prototype, "RevertChanges", null),
+        ($i = (0, s.Cg)([h.PA], $i));
+      const er = $i,
+        tr = ({ Theme: e, children: t }) => {
           let i;
           return (
             (i =
               "string" == typeof e
                 ? e + "Theme"
                 : ((null == e ? void 0 : e.theme_id) || "Default") + "Theme"),
-            (0, r.jsx)("div", { className: gi[i], children: t })
+            (0, r.jsx)("div", { className: xi[i], children: t })
           );
         },
-        Xi = (0, h.PA)(({ Theme: e, ProfileItems: t }) =>
+        ir = (0, h.PA)(({ Theme: e, ProfileItems: t }) =>
           (0, r.jsx)("div", {
-            className: Ki.ProfileThemePreviewCtn,
-            children: (0, r.jsx)(yi, { ProfileItems: t, theme: e.theme_id }),
+            className: Ji.ProfileThemePreviewCtn,
+            children: (0, r.jsx)(Ii, { ProfileItems: t, theme: e.theme_id }),
           }),
         ),
-        Zi = (e, t) => (e && e.theme_id) === (t && t.theme_id),
-        Qi = ({ Item: e, onSelected: t, active: i, children: a }) => {
+        rr = (e, t) => (e && e.theme_id) === (t && t.theme_id),
+        ar = ({ Item: e, onSelected: t, active: i, children: a }) => {
           const s = e.theme_id + "Theme",
             o = `ThemeOption${s}`;
-          return (0, r.jsxs)(xe.Z, {
-            className: (0, _.A)(
-              Ki.ProfileTheme,
-              t && Ki.Option,
-              i && Ki.Active,
-              gi[s],
+          return (0, r.jsxs)(Ee.Z, {
+            className: (0, g.A)(
+              Ji.ProfileTheme,
+              t && Ji.Option,
+              i && Ji.Active,
+              xi[s],
             ),
             onActivate: t,
             children: [
               (0, r.jsx)("div", {
-                className: Ki.PreviewCtn,
+                className: Ji.PreviewCtn,
                 children: (0, r.jsxs)("svg", {
-                  className: (0, _.A)(Ki.Preview),
+                  className: (0, g.A)(Ji.Preview),
                   viewBox: "0 0 382 382",
                   width: "100%",
                   height: "100%",
@@ -6063,26 +6239,26 @@
                       width: "382",
                       height: "382",
                       fill: "var(--edit-background)",
-                      className: Ki.EditBackground,
+                      className: Ji.EditBackground,
                     }),
                     (0, r.jsx)("rect", {
                       width: "382",
                       height: "382",
                       fill: "var(--gradient-background)",
                       fillOpacity: "0.23",
-                      className: Ki.ThemeBackground,
+                      className: Ji.ThemeBackground,
                     }),
                     (0, r.jsx)("rect", {
                       width: "382",
                       height: "382",
                       fill: `url(#${o}paint0_radial)`,
-                      className: Ki.PaintRadial0,
+                      className: Ji.PaintRadial0,
                     }),
                     (0, r.jsx)("rect", {
                       width: "382",
                       height: "382",
                       fill: `url(#${o}paint1_radial)`,
-                      className: Ki.PaintRadial1,
+                      className: Ji.PaintRadial1,
                     }),
                     (0, r.jsxs)("defs", {
                       children: [
@@ -6131,24 +6307,24 @@
                 }),
               }),
               (0, r.jsxs)("div", {
-                className: Ki.Details,
+                className: Ji.Details,
                 children: [
-                  (0, r.jsx)("div", { className: Ki.Title, children: e.title }),
+                  (0, r.jsx)("div", { className: Ji.Title, children: e.title }),
                   a,
                 ],
               }),
             ],
           });
         },
-        $i = ({ children: e }) =>
+        sr = ({ children: e }) =>
           (0, r.jsx)("div", {
-            className: Ki.ThemesDisabledNotice,
+            className: Ji.ThemesDisabledNotice,
             children: (0, r.jsx)("div", {
-              className: Ki.Notice,
-              children: (0, v.we)("#Profile_Edit_GoldenProfileOverridesTheme"),
+              className: Ji.Notice,
+              children: (0, p.we)("#Profile_Edit_GoldenProfileOverridesTheme"),
             }),
           });
-      class Ji extends u.Component {
+      class or extends u.Component {
         constructor() {
           super(...arguments),
             (this.m_refDiv = u.createRef()),
@@ -6159,7 +6335,7 @@
         }
         async CommitChanges(e) {
           this.setState({ bSaving: !0, strHTMLError: "" });
-          let t = await le("showcases", new FormData(e));
+          let t = await _e("showcases", new FormData(e));
           t.strHTMLError
             ? this.setState({ strHTMLError: t.strHTMLError })
             : this.setState({ strHTMLError: "" }),
@@ -6176,51 +6352,51 @@
         render() {
           const { bSaving: e, strHTMLError: t } = this.state,
             { ProfileTheme: i } = this.props;
-          return (0, r.jsx)(Yi, {
+          return (0, r.jsx)(tr, {
             Theme: i.ActiveTheme,
             children: (0, r.jsxs)("form", {
               onSubmit: this.OnSubmit,
               children: [
-                (0, r.jsx)(fe.Y9, {
-                  children: (0, v.we)("#Profile_Edit_FeaturedShowcase"),
+                (0, r.jsx)(we.Y9, {
+                  children: (0, p.we)("#Profile_Edit_FeaturedShowcase"),
                 }),
-                (0, r.jsx)(fe.a3, {
-                  children: (0, v.oW)(
+                (0, r.jsx)(we.a3, {
+                  children: (0, p.oW)(
                     "#Profile_Edit_Showcase_Instructions",
                     (0, r.jsx)("a", {
                       href:
-                        A.TS.STORE_BASE_URL + "points/shop/profileshowcases",
+                        N.TS.STORE_BASE_URL + "points/shop/profileshowcases",
                     }),
                   ),
                 }),
-                (0, r.jsx)(Le, { strHTMLError: t }),
+                (0, r.jsx)(He, { strHTMLError: t }),
                 (0, r.jsx)("div", { ref: this.m_refDiv }),
-                (0, r.jsx)(Be, { onCancel: this.RevertChanges, disabled: e }),
+                (0, r.jsx)(Te, { onCancel: this.RevertChanges, disabled: e }),
               ],
             }),
           });
         }
       }
-      let er, tr, ir;
-      function rr(e) {
+      let nr, lr, mr;
+      function dr(e) {
         const [t, i] = u.useState(!1),
-          s = (0, _e.TR)();
+          s = (0, Ae.TR)();
         if (
           (u.useEffect(() => {
-            ir ||
-              (ir = (async function (e) {
-                let t = (0, A.Tc)("config", "profile_config");
+            mr ||
+              (mr = (async function (e) {
+                let t = (0, N.Tc)("config", "profile_config");
                 t && Object.assign(a, t),
-                  (er = new ce(
-                    (0, A.Tc)("profile-edit", "profile_edit_config"),
-                    (0, A.Tc)("profile-badges", "profile_edit_config"),
+                  (nr = new fe(
+                    (0, N.Tc)("profile-edit", "profile_edit_config"),
+                    (0, N.Tc)("profile-badges", "profile_edit_config"),
                     e,
                   )),
-                  (0, pe.nA)(A.TS.EREALM) ||
-                    er.Profile.GroupList.GetUserGroups(),
-                  (tr = document.getElementById("showcases"));
+                  (0, Ce.nA)(N.TS.EREALM) ||
+                    nr.Profile.GroupList.GetUserGroups(),
+                  (lr = document.getElementById("showcases"));
               })(s)),
-              ir.then(() => i(!0));
+              mr.then(() => i(!0));
           }, [s]),
           u.useLayoutEffect(() => {
             if (t)
@@ -6236,94 +6412,94 @@
         )
           return null;
         const o = e.match.url,
-          n = er,
+          n = nr,
           {
             Profile: l,
-            ProfileItems: d,
-            ProfileTheme: m,
+            ProfileItems: m,
+            ProfileTheme: d,
             EmoticonStore: c,
           } = n,
-          h = gr,
+          h = xr,
           p = {
-            ProfileModifierAvailable: () => d.BHasAnyProfileModifiers(),
+            ProfileModifierAvailable: () => m.BHasAnyProfileModifiers(),
             BadgesAvailable: () =>
-              !(0, pe.nA)(A.TS.EREALM) && n.ProfileBadges.Badges.length > 0,
+              !(0, Ce.nA)(N.TS.EREALM) && n.ProfileBadges.Badges.length > 0,
             GroupsAvailable: () =>
-              !(0, pe.nA)(A.TS.EREALM) &&
+              !(0, Ce.nA)(N.TS.EREALM) &&
               (!l.GroupList.BGroupsLoaded() || l.GroupList.BHasAnyGroups()),
-            ShowcasesAvailable: () => null != tr,
+            ShowcasesAvailable: () => null != lr,
           };
         return (0, r.jsxs)(r.Fragment, {
           children: [
-            (0, r.jsx)(Mi, { ProfileItems: d }),
-            (0, r.jsx)(Nt, { Profile: l }),
-            (0, r.jsx)(it, { Profile: l, ProfileItems: d }),
-            (0, r.jsx)(Li, {
+            (0, r.jsx)(zi, { ProfileItems: m }),
+            (0, r.jsx)(Dt, { Profile: l }),
+            (0, r.jsx)(mt, { Profile: l, ProfileItems: m }),
+            (0, r.jsx)(Hi, {
               root: o,
               currentPath: e.location.pathname,
               linksAvailable: p,
-              children: (0, r.jsxs)(ue.dO, {
+              children: (0, r.jsxs)(ye.dO, {
                 children: [
-                  (0, r.jsx)(ue.qh, {
+                  (0, r.jsx)(ye.qh, {
                     path: `${o}${h.Info()}`,
-                    children: (0, r.jsx)(xt, { Profile: l, EmoticonStore: c }),
+                    children: (0, r.jsx)(Et, { Profile: l, EmoticonStore: c }),
                   }),
-                  (0, r.jsx)(ue.qh, {
+                  (0, r.jsx)(ye.qh, {
                     path: `${o}${h.Avatar()}`,
-                    children: (0, r.jsx)(tt, {
+                    children: (0, r.jsx)(lt, {
                       Profile: l,
-                      ProfileItems: d,
+                      ProfileItems: m,
                       OGGAvatars: n.OGGAvatarStore,
                       AvatarHistory: n.AvatarHistory,
                     }),
                   }),
-                  (0, r.jsx)(ue.qh, {
+                  (0, r.jsx)(ye.qh, {
                     path: `${o}${h.Background()}`,
-                    children: (0, r.jsx)(Si, {
-                      ProfileTheme: m,
-                      ProfileItems: d,
+                    children: (0, r.jsx)(Gi, {
+                      ProfileTheme: d,
+                      ProfileItems: m,
                     }),
                   }),
-                  (0, r.jsx)(ue.qh, {
+                  (0, r.jsx)(ye.qh, {
                     path: `${o}${h.MiniProfile()}`,
-                    children: (0, r.jsx)(ei, { ProfileEdit: n }),
+                    children: (0, r.jsx)(ni, { ProfileEdit: n }),
                   }),
-                  (0, r.jsx)(ue.qh, {
+                  (0, r.jsx)(ye.qh, {
                     path: `${o}${h.Theme()}`,
-                    children: (0, r.jsx)(Vi, {
-                      ProfileTheme: m,
-                      ProfileItems: d,
+                    children: (0, r.jsx)(er, {
+                      ProfileTheme: d,
+                      ProfileItems: m,
                     }),
                   }),
-                  (0, r.jsx)(ue.qh, {
+                  (0, r.jsx)(ye.qh, {
                     path: `${o}${h.ProfileModifier()}`,
-                    children: (0, r.jsx)(Oi, { ProfileItems: d }),
+                    children: (0, r.jsx)(Wi, { ProfileItems: m }),
                   }),
-                  !(0, pe.nA)(A.TS.EREALM) &&
-                    (0, r.jsx)(ue.qh, {
+                  !(0, Ce.nA)(N.TS.EREALM) &&
+                    (0, r.jsx)(ye.qh, {
                       path: `${o}${h.FavoriteBadge()}`,
-                      children: (0, r.jsx)(Ft, { Badges: n.ProfileBadges }),
+                      children: (0, r.jsx)(Ut, { Badges: n.ProfileBadges }),
                     }),
-                  !(0, pe.nA)(A.TS.EREALM) &&
-                    (0, r.jsx)(ue.qh, {
+                  !(0, Ce.nA)(N.TS.EREALM) &&
+                    (0, r.jsx)(ye.qh, {
                       path: `${o}${h.FavoriteGroup()}`,
-                      children: (0, r.jsx)(Ut, { Profile: l }),
+                      children: (0, r.jsx)(Zt, { Profile: l }),
                     }),
-                  (0, r.jsx)(ue.qh, {
+                  (0, r.jsx)(ye.qh, {
                     path: `${o}${h.Privacy()}`,
-                    children: (0, r.jsx)(oi, {
+                    children: (0, r.jsx)(ui, {
                       PrivacyStore: n.ProfilePrivacy,
                     }),
                   }),
-                  (0, r.jsx)(ue.qh, {
+                  (0, r.jsx)(ye.qh, {
                     path: `${o}${h.Showcases()}`,
-                    children: (0, r.jsx)(Ji, {
-                      elShowcases: tr,
-                      ProfileTheme: m,
+                    children: (0, r.jsx)(or, {
+                      elShowcases: lr,
+                      ProfileTheme: d,
                     }),
                   }),
-                  (0, r.jsx)(ue.qh, {
-                    children: (0, r.jsx)(ue.rd, { to: `${o}${h.Info()}` }),
+                  (0, r.jsx)(ye.qh, {
+                    children: (0, r.jsx)(ye.rd, { to: `${o}${h.Info()}` }),
                   }),
                 ],
               }),
@@ -6331,30 +6507,30 @@
           ],
         });
       }
-      (0, s.Cg)([Pe.oI], Ji.prototype, "OnSubmit", null),
-        (0, s.Cg)([Pe.oI], Ji.prototype, "RevertChanges", null);
-      var ar = i(66008),
-        sr = i(30760),
-        or = i(6813),
-        nr = i(53495),
-        lr = i(39832),
-        dr = i(90182),
-        mr = i(65843),
-        cr = i(99164),
-        hr = i(29385),
-        ur = i(61739),
-        pr = i(22797);
-      function _r(e) {
+      (0, s.Cg)([je.oI], or.prototype, "OnSubmit", null),
+        (0, s.Cg)([je.oI], or.prototype, "RevertChanges", null);
+      var cr = i(66008),
+        hr = i(30760),
+        ur = i(6813),
+        pr = i(53495),
+        _r = i(39832),
+        vr = i(90182),
+        gr = i(65843),
+        fr = i(99164),
+        Pr = i(29385),
+        yr = i(61739),
+        Cr = i(22797);
+      function Ar(e) {
         const [t, i] = (0, u.useState)(!1),
           a = (function (e) {
-            const t = (0, _e.KV)();
-            return (0, Ce.I)({
+            const t = (0, Ae.KV)();
+            return (0, Be.I)({
               queryKey: ["reportercooldown", e],
               queryFn: async () => {
                 var i;
-                const r = D.w.Init(cr.a9);
+                const r = Q.w.Init(fr.a9);
                 r.Body().set_steamid(e);
-                const a = await cr.fL.GetReporterCooldown(t, r);
+                const a = await fr.fL.GetReporterCooldown(t, r);
                 if (!a.BSuccess()) throw new Error("EResult " + a.GetEResult());
                 return null !== (i = a.Body().rtime_cooldown_ends()) &&
                   void 0 !== i
@@ -6364,16 +6540,16 @@
             });
           })(e.steamid),
           s = (function (e) {
-            const t = (0, _e.KV)(),
-              i = (0, hr.jE)();
-            return (0, ur.n)({
+            const t = (0, Ae.KV)(),
+              i = (0, Pr.jE)();
+            return (0, yr.n)({
               mutationFn: async (i) => {
-                const r = D.w.Init(cr.f0);
+                const r = Q.w.Init(fr.f0);
                 r.Body().set_steamid(e),
                   r.Body().set_rtime_cooldown_ends(i.rtCooldownEnds),
                   void 0 !== i.bClearOpenReports &&
                     r.Body().set_acquit_unresolved_reports(i.bClearOpenReports);
-                const a = await cr.fL.UpdateReporterCooldown(t, r);
+                const a = await fr.fL.UpdateReporterCooldown(t, r);
                 if (!a.BSuccess()) throw new Error("EResult " + a.GetEResult());
               },
               onSuccess: async () => {
@@ -6385,26 +6561,26 @@
           })(e.steamid),
           o = (0, u.useRef)(null),
           n = (0, u.useRef)(null),
-          [l, d] = (0, u.useState)(!1),
-          m = (0, dr.KQ)(e.steamid);
+          [l, m] = (0, u.useState)(!1),
+          d = (0, vr.KQ)(e.steamid);
         let c = "";
         if (a.isSuccess && a.data > 0) {
           const e = Math.floor((a.data - new Date().getTime() / 1e3) / 86400);
-          c = " " + mr.u.Localize("#setcooldown_cooldownsummary", e);
+          c = " " + gr.u.Localize("#setcooldown_cooldownsummary", e);
         }
         return (0, r.jsxs)(r.Fragment, {
           children: [
-            (0, r.jsx)(we.EN, {
+            (0, r.jsx)(be.EN, {
               active: t,
-              children: (0, r.jsxs)(we.o0, {
+              children: (0, r.jsxs)(be.o0, {
                 onCancel: () => i(!1),
                 onOK: async () => {
                   var e, t;
-                  if ((d(!0), !o.current)) return;
+                  if ((m(!0), !o.current)) return;
                   const r = o.current.value,
                     a = 86400 * parseInt(r),
                     l = Math.floor(new Date().getTime() / 1e3) + a,
-                    m =
+                    d =
                       null !==
                         (t =
                           null === (e = n.current) || void 0 === e
@@ -6414,51 +6590,51 @@
                       t;
                   await s.mutateAsync({
                     rtCooldownEnds: l,
-                    bClearOpenReports: m,
+                    bClearOpenReports: d,
                   }),
                     i(!1),
-                    d(!1);
+                    m(!1);
                 },
-                strTitle: mr.u.Localize("#setcooldown_dialogtitle"),
-                strDescription: mr.u.Localize("#setcooldown_dialogdescription"),
-                strOKButtonText: mr.u.Localize("#setcooldown_setbutton"),
+                strTitle: gr.u.Localize("#setcooldown_dialogtitle"),
+                strDescription: gr.u.Localize("#setcooldown_dialogdescription"),
+                strOKButtonText: gr.u.Localize("#setcooldown_setbutton"),
                 bOKDisabled: l,
                 children: [
                   a.isLoading &&
                     (0, r.jsxs)("p", {
                       children: [
-                        (0, r.jsx)(pr.t, { size: "small" }),
+                        (0, r.jsx)(Cr.t, { size: "small" }),
                         " ",
-                        mr.u.Localize("#setcooldown_loading"),
+                        gr.u.Localize("#setcooldown_loading"),
                       ],
                     }),
                   a.isError &&
                     (0, r.jsx)("p", {
-                      children: mr.u.Localize("#setcooldown_errorloading"),
+                      children: gr.u.Localize("#setcooldown_errorloading"),
                     }),
                   a.isSuccess &&
                     a.data > 0 &&
                     (0, r.jsx)("p", {
-                      children: mr.u.Localize(
+                      children: gr.u.Localize(
                         "#setcooldown_expireson",
-                        (0, lr.P0)(a.data, !1, ""),
+                        (0, _r.P0)(a.data, !1, ""),
                       ),
                     }),
                   a.isSuccess &&
                     0 === a.data &&
                     (0, r.jsx)("p", {
-                      children: mr.u.Localize("#setcooldown_nocooldown"),
+                      children: gr.u.Localize("#setcooldown_nocooldown"),
                     }),
-                  m.isSuccess &&
-                    !!m.data &&
+                  d.isSuccess &&
+                    !!d.data &&
                     (0, r.jsx)(r.Fragment, {
                       children: (0, r.jsx)("p", {
-                        children: mr.u.Localize(
+                        children: gr.u.Localize(
                           "#setcooldown_statssummary",
-                          m.data.total_acquitted_reports,
-                          m.data.total_reports,
-                          m.data.acquitted_reports_in_last_week,
-                          m.data.reports_in_last_week,
+                          d.data.total_acquitted_reports,
+                          d.data.total_reports,
+                          d.data.acquitted_reports_in_last_week,
+                          d.data.reports_in_last_week,
                         ),
                       }),
                     }),
@@ -6466,12 +6642,12 @@
                     children: [
                       (0, r.jsxs)("label", {
                         children: [
-                          mr.u.Localize("#setcooldown_newcooldownlabel"),
+                          gr.u.Localize("#setcooldown_newcooldownlabel"),
                           " ",
                           (0, r.jsx)("input", {
                             type: "number",
                             min: "0",
-                            placeholder: mr.u.Localize("#setcooldown_days"),
+                            placeholder: gr.u.Localize("#setcooldown_days"),
                             ref: o,
                           }),
                         ],
@@ -6480,7 +6656,7 @@
                         children: [
                           (0, r.jsx)("input", { type: "checkbox", ref: n }),
                           " ",
-                          mr.u.Localize("#setcooldown_clearopenreports"),
+                          gr.u.Localize("#setcooldown_clearopenreports"),
                         ],
                       }),
                       (0, r.jsx)("button", {
@@ -6488,7 +6664,7 @@
                         onClick: async () => {
                           await s.mutateAsync({ rtCooldownEnds: 0 }), i(!1);
                         },
-                        children: mr.u.Localize("#setcooldown_clearcooldown"),
+                        children: gr.u.Localize("#setcooldown_clearcooldown"),
                       }),
                     ],
                   }),
@@ -6503,13 +6679,13 @@
           ],
         });
       }
-      const vr = {
+      const Sr = {
           ProfileEdit: () => "edit",
           ProfilePrivacy: () => "edit/settings",
           Games: () => "games",
           ItemCollection: () => "itemcollection",
         },
-        gr = {
+        xr = {
           Info: () => "/info",
           Avatar: () => "/avatar",
           Background: () => "/background",
@@ -6521,28 +6697,28 @@
           Privacy: () => "/settings",
           Showcases: () => "/showcases",
         };
-      function fr(e) {
+      function wr(e) {
         return (0, r.jsx)("div", {
-          children: (0, r.jsx)(sr.Ay, { targetType: ar.Pw.BZ }),
+          children: (0, r.jsx)(hr.Ay, { targetType: cr.Pw.BZ }),
         });
       }
-      function Pr(e) {
+      function jr(e) {
         const t = e.match.path;
-        return (0, r.jsxs)(ue.dO, {
+        return (0, r.jsxs)(ye.dO, {
           children: [
-            (0, r.jsx)(ue.qh, {
-              path: `${t}/${vr.ProfileEdit()}`,
-              render: (e) => (0, r.jsx)(rr, { ...e }),
+            (0, r.jsx)(ye.qh, {
+              path: `${t}/${Sr.ProfileEdit()}`,
+              render: (e) => (0, r.jsx)(dr, { ...e }),
             }),
-            (0, r.jsx)(ue.qh, {
+            (0, r.jsx)(ye.qh, {
               path: `${t}`,
               render: (e) =>
-                (0, r.jsx)(or.X, {
+                (0, r.jsx)(ur.X, {
                   config: {
-                    "profile-rewards": () => (0, r.jsx)(fr, { ...e }),
+                    "profile-rewards": () => (0, r.jsx)(wr, { ...e }),
                     "ugc-file-content-moderation-report-dialog": (e) =>
-                      (0, r.jsx)(nr.Xi, { ...e }),
-                    "reporter-cooldown-dialog": (e) => (0, r.jsx)(_r, { ...e }),
+                      (0, r.jsx)(pr.Xi, { ...e }),
+                    "reporter-cooldown-dialog": (e) => (0, r.jsx)(Ar, { ...e }),
                   },
                 }),
             }),
@@ -6557,7 +6733,7 @@
         KQ: () => y,
         Kt: () => _,
         N8: () => g,
-        c3: () => S,
+        c3: () => A,
         iW: () => u,
         kZ: () => p,
         lY: () => v,
@@ -6570,8 +6746,8 @@
         o = i(88942),
         n = i(29385),
         l = i(61739),
-        d = i(37085),
-        m = i(43261);
+        m = i(37085),
+        d = i(43261);
       const c = "get_content_report_subject_group",
         h = "get_content_report_subject_audit_log";
       async function u(e, t, i, r) {
@@ -6623,7 +6799,7 @@
       }
       function v(e, t, i) {
         const o = (0, s.KV)(),
-          m = (0, n.jE)();
+          d = (0, n.jE)();
         return (0, l.n)({
           mutationFn: async (s) => {
             const n = r.w.Init(a.u5);
@@ -6634,14 +6810,14 @@
               s.eReason && n.Body().set_reason(s.eReason),
               s.strNote && n.Body().set_note(s.strNote);
             const l = await a.fL.EscalateSubject(o, n);
-            if (l.GetEResult() !== d.R)
+            if (l.GetEResult() !== m.R)
               throw new Error(`Failed to escalate subject: ${l.GetEMsg()}`);
           },
           onSuccess: async (r, a) => {
             await Promise.all([
-              u(m, e, t, i),
-              m.invalidateQueries({ queryKey: ["get_claimed"] }),
-              m.invalidateQueries({ queryKey: ["get_subject_overview"] }),
+              u(d, e, t, i),
+              d.invalidateQueries({ queryKey: ["get_claimed"] }),
+              d.invalidateQueries({ queryKey: ["get_subject_overview"] }),
             ]);
           },
         });
@@ -6663,8 +6839,8 @@
           },
         });
       }
-      function f(e, t, i, o, d) {
-        const m = (0, s.KV)(),
+      function f(e, t, i, o, m) {
+        const d = (0, s.KV)(),
           c = (0, n.jE)();
         return (0, l.n)({
           mutationFn: async () => {
@@ -6673,8 +6849,8 @@
               s.Body().set_subject_type(t),
               s.Body().set_subject_group_id(i),
               s.Body().set_subject_id(o),
-              s.Body().set_details(d);
-            await a.fL.DisputeModerationForSubject(m, s);
+              s.Body().set_details(m);
+            await a.fL.DisputeModerationForSubject(d, s);
           },
           onSuccess: async () => {
             await u(c, t, i, o);
@@ -6682,8 +6858,8 @@
         });
       }
       function P(e, t, i, o) {
-        const d = (0, n.jE)(),
-          m = (0, s.KV)();
+        const m = (0, n.jE)(),
+          d = (0, s.KV)();
         return (0, l.n)({
           mutationFn: async () => {
             const s = r.w.Init(a.zF);
@@ -6691,11 +6867,11 @@
               s.Body().set_subject_group_id(t),
               s.Body().set_subject_id(i),
               s.Body().set_owner_dispute_details(o);
-            const n = await a.fL.UpdateSubject(m, s);
+            const n = await a.fL.UpdateSubject(d, s);
             if (!n.BSuccess()) throw new Error("EResult " + n.GetEResult());
           },
           onSuccess: async () => {
-            await u(d, e, t, i);
+            await u(m, e, t, i);
           },
         });
       }
@@ -6721,19 +6897,19 @@
           o = (0, n.jE)();
         return (0, l.n)({
           mutationFn: async (s) => {
-            const o = r.w.Init(m.Er);
+            const o = r.w.Init(d.Er);
             o.Body().set_steamid(e),
               o.Body().set_comment_thread_id(t),
               o.Body().set_gidcomment(i),
               o.Body().set_reason(s.reason),
               o.Body().set_note(s.message);
             for (const e of s.sanctions) {
-              const t = new m.u6();
+              const t = new d.u6();
               t.set_sanction(e.sanction),
                 e.days && t.set_days(e.days),
                 o.Body().add_sanctions(t);
             }
-            const n = await m.BE.SanctionComment(a, o);
+            const n = await d.BE.SanctionComment(a, o);
             if (!n.BSuccess())
               throw new Error(
                 `SanctionComment failed. EResult: ${n.GetEResult()} (${n.GetErrorMessage()})`,
@@ -6744,18 +6920,18 @@
           },
         });
       }
-      function S(e, t, i) {
+      function A(e, t, i) {
         const a = (0, s.KV)(),
           o = (0, n.jE)();
         return (0, l.n)({
           mutationFn: async () => {
-            const s = r.w.Init(m.RX);
+            const s = r.w.Init(d.RX);
             s.Body().set_steamid(e),
               s.Body().set_comment_thread_id(t),
               s.Body().set_gidcomment(i),
-              s.Body().set_report_action(m.du.Pn),
+              s.Body().set_report_action(d.du.Pn),
               s.Body().set_resolve(!0),
-              await m.Vi.UpdateCommentReportState(a, s);
+              await d.Vi.UpdateCommentReportState(a, s);
           },
           onSuccess: async () => {
             await o.invalidateQueries({ queryKey: ["get_claimed"] });
@@ -6789,8 +6965,8 @@
         o = i(51006),
         n = i(61859),
         l = i(22837),
-        d = i(38924),
-        m = i(78327),
+        m = i(38924),
+        d = i(78327),
         c = i(85044);
       function h(e) {
         let t = "offline";
@@ -6887,7 +7063,7 @@
             ((null !== (e = this.m_unPersonaStateFlags) && void 0 !== e
               ? e
               : 0) &
-              d.Fj)
+              m.Fj)
           );
         }
         get connect_string() {
@@ -6919,7 +7095,7 @@
           this.m_ePersonaState != l.cU3 && this.Reset();
         }
         get is_golden() {
-          return this.HasStateFlag(d.Zx);
+          return this.HasStateFlag(m.Zx);
         }
         GetCurrentGameName() {
           return this.m_strGameExtraInfo
@@ -6956,7 +7132,7 @@
               let t = this.m_mapRichPresence.get("steam_display");
               return e.Localize(t, this.m_mapRichPresence);
             }
-          } else if (this.HasStateFlag(d.o5))
+          } else if (this.HasStateFlag(m.o5))
             return (0, n.we)("#PersonaStateRemotePlayTogether");
           return "";
         }
@@ -6978,7 +7154,7 @@
           if (0 == this.last_seen_online)
             return (0, n.we)("#PersonaStateOffline");
           let e = this.GetOfflineStatusUpdateRate();
-          (!m.TS.IN_MOBILE || e <= 60) && (0, s.tB)(e);
+          (!d.TS.IN_MOBILE || e <= 60) && (0, s.tB)(e);
           let t = o.Vw.CMInterface.GetServerRTime32() - this.last_seen_online;
           return t < 60
             ? (0, n.we)("#PersonaStateLastSeen_JustNow")
@@ -7065,8 +7241,8 @@
         }
         GetCommunityProfileURL() {
           return this.m_strProfileURL
-            ? `${m.TS.COMMUNITY_BASE_URL}id/${this.m_strProfileURL}/`
-            : `${m.TS.COMMUNITY_BASE_URL}profiles/${this.m_steamid.ConvertTo64BitString()}/`;
+            ? `${d.TS.COMMUNITY_BASE_URL}id/${this.m_strProfileURL}/`
+            : `${d.TS.COMMUNITY_BASE_URL}profiles/${this.m_steamid.ConvertTo64BitString()}/`;
         }
       }
       (0, r.Cg)([a.sH], u.prototype, "m_bInitialized", void 0),
@@ -7092,6 +7268,291 @@
         (0, r.Cg)([a.sH], u.prototype, "m_bCommunityBanned", void 0),
         (0, r.Cg)([a.sH], u.prototype, "m_eGamingDeviceType", void 0),
         (0, r.Cg)([a.sH], u.prototype, "m_bNameInitialized", void 0);
+    },
+    1035: (e, t, i) => {
+      "use strict";
+      i.d(t, { Ul: () => v, i8: () => g });
+      var r = i(34629),
+        a = i(7850),
+        s = i(90626),
+        o = i(75844),
+        n = i(10622),
+        l = i(52038),
+        m = i(78327),
+        d = i(3088);
+      const c =
+          "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gODAK/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsICMmJykqKRkfLTAtKDAlKCko/9sAQwEHBwcKCAoTCgoTKBoWGigoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgo/8AAEQgAQABAAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A8Inmk8+T94/3j/EfWmedJ/z0f/vo0T/6+T/eP86ZQA/zpP8Ano//AH0aPOk/56P/AN9GmVo6Loeq65M0Wj6ddXrr94QRF9v1I6fjQBR86T/no/8A30aPOk/56P8A99GtHW/Dus6GV/tjS7yyD8K00RVW+h6GsugB/nSf89H/AO+jT4JpPPj/AHj/AHh/EfWoafB/r4/94fzoAJ/9fJ/vH+dMp8/+vk/3j/OmUAXdE099W1mw06Jgsl3PHApPYswUH9a+qPF3iHSPhF4S0+003TxK0hMcEAbZvIA3SO2OvIz6k18nW88ttcRz28jxTRMHSRGKsrA5BBHQg1b1TWdT1fy/7V1G8vfLzs+0TNJtz1xknHQUAfUXw+8c6Z8UdN1HS9V0xIpUTM1s7eYkiE43KcAgg/lxg180+NtEHhzxZqmkqxdLWcojHqUPK598EV9CfBbwpF4G8J3fiLxA4trm5hEsnmceRCOQD/tHqR9B1r568a63/wAJH4r1TVghRLqYuinqE6KD74AoAxafB/r4/wDeH86ZT4P9fH/vD+dABP8A6+T/AHj/ADplPn/18n+8f50ygArt/gtpltq/xK0e2vYxJArPMUYZDFEZhn2yBXEV0/w203VNX8YWdloOoHTtQkWQx3IZl2gISeV55AI/GgD1H9pvxPdi/s/DcDGOz8pbqfHWRizBQfYbc/U+1eD12PxW0fWtE8Tpa+I9UOqXpt0cTl2bCEthctz1B/OuOoAKfB/r4/8AeH86ZT4P9fH/ALw/nQAT/wCvk/3j/OmVNPDJ58n7t/vH+E+tM8mT/nm//fJoAZV7Q9Xv9C1KLUNJuGtryMEJIoBIyCD1BHQmqnkyf883/wC+TR5Mn/PN/wDvk0AaHiHXtT8RX4vdau2u7oIIxIygHaCSBwB6msyn+TJ/zzf/AL5NHkyf883/AO+TQAynwf6+P/eH86PJk/55v/3yafBDJ58f7t/vD+E+tAH/2Q==",
+        h =
+          i.p +
+          "images/applications/community/avatar_default_full.jpg?v=valveisgoodatcaching";
+      var u = i(43047),
+        p = i.n(u),
+        _ = i(81393);
+      const v = s.memo(function (e) {
+        const {
+            strAvatarURL: t,
+            size: i = "Medium",
+            className: r,
+            statusStyle: o,
+            statusPosition: n,
+            children: m,
+            ...u
+          } = e,
+          v = s.useMemo(() => {
+            const e = [];
+            return (
+              t && e.push(t),
+              e.push(
+                (function (e) {
+                  switch (e) {
+                    case "X-Small":
+                    case "Small":
+                      return "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gOTAK/9sAQwADAgIDAgIDAwMDBAMDBAUIBQUEBAUKBwcGCAwKDAwLCgsLDQ4SEA0OEQ4LCxAWEBETFBUVFQwPFxgWFBgSFBUU/9sAQwEDBAQFBAUJBQUJFA0LDRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQU/8AAEQgAIAAgAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A/P4mW5nmllmeSR3LMzMSSc1a07R73V72KzsILi9u5TiOC2RpJHPoFGSarQ/ef6n+de4fAn9oaL4D+DfGX9i6Uf8AhO9XSKDT9eZY3WxiDZcBGByTkn0JCZBxQB41qeiX+iXslnqNtdWF3H9+3uo2jkX6q2CKpgy208MsUzxyI4ZWViCDmvsr9rrUdT1j9nb4T6h8RBbH4qXUs0zMsSxXJ04hivnKoAU5MPGBg7uM7q+NpvvJ9R/OgAh+8/1P867T4POI/iz4Mc6U+u7NZtG/suPbuu8TKfKG4hct93njnmuKIltp5opYXjkRyrKykEHNWbDVbvSr63vbKaezvLeRZYbi3ZkkidTlWVhyCCMgjpQB6l+1F411nx58dPFWpa5a3mnXaXP2ZNOvXVpLKNBhYflJUY5PB5JJ6k15LN95PqP51a1PWr7WtQnvtRuLm/vrhzJNc3TtJLIx6lmbJJ9zVQCW5nhiiheSR3CqqqSSc0Af/9k=";
+                    case "Medium":
+                    case "MediumLarge":
+                      return c;
+                    case "Large":
+                    case "X-Large":
+                    case "FillArea":
+                      return h;
+                    default:
+                      return (0, _.z_)(e, `Unhandled size ${e}`), c;
+                  }
+                })(i),
+              ),
+              e
+            );
+          }, [t, i]);
+        return (0, a.jsxs)("div", {
+          className: (0, l.A)(
+            p().avatarHolder,
+            "avatarHolder",
+            "no-drag",
+            i,
+            r,
+          ),
+          ...u,
+          children: [
+            (0, a.jsx)("div", {
+              className: (0, l.A)(p().avatarStatus, "avatarStatus", n),
+              style: o,
+            }),
+            (0, a.jsx)(d.c, {
+              className: (0, l.A)(p().avatar, "avatar"),
+              rgSources: v,
+              draggable: !1,
+            }),
+            m,
+          ],
+        });
+      });
+      let g = class extends s.Component {
+        render() {
+          const {
+            persona: e,
+            size: t = "Medium",
+            animatedAvatar: i,
+            className: r,
+            strBackupAvatarURL: s,
+            ...o
+          } = this.props;
+          let d = "";
+          return (
+            i && i.image_small && 0 != i.image_small.length
+              ? (d = m.TS.MEDIA_CDN_COMMUNITY_URL + "images/" + i.image_small)
+              : e
+                ? ((d = e.avatar_url_medium),
+                  "Small" == t || "X-Small" == t
+                    ? (d = e.avatar_url)
+                    : ("Large" != t && "X-Large" != t && "FillArea" != t) ||
+                      (d = e.avatar_url_full))
+                : s && (d = s),
+            (0, a.jsx)(v, {
+              strAvatarURL: d,
+              size: t,
+              className: (0, l.A)((0, n.rO)(e), r),
+              ...o,
+            })
+          );
+        }
+      };
+      g = (0, r.Cg)([o.PA], g);
+      const f = (0, o.PA)((e) => {
+        const { profileItem: t, className: i, bDisableAnimation: r, ...s } = e;
+        if (!t || !t.image_small || 0 == t.image_small.length) return null;
+        let o = r ? t.image_large : t.image_small;
+        return (
+          o || (o = t.image_small),
+          o.startsWith("https://") ||
+            (o = m.TS.MEDIA_CDN_COMMUNITY_URL + "images/" + o),
+          (0, a.jsx)("div", {
+            className: (0, l.A)(p().avatarFrame, i, "avatarFrame"),
+            ...s,
+            children: (0, a.jsx)("img", {
+              className: p().avatarFrameImg,
+              src: o,
+            }),
+          })
+        );
+      });
+      let P = class extends s.Component {
+        constructor(e) {
+          super(e),
+            (this.state = { bAnimate: "None" != this.props.loopDuration }),
+            (this.m_timer = 0);
+        }
+        componentDidMount() {
+          this.props.bParentHovered || this.SetupAnimationTimer();
+        }
+        SetupAnimationTimer() {
+          let e = 0;
+          switch (this.props.loopDuration) {
+            case "Short":
+              e = 2500;
+              break;
+            case "Medium":
+              e = 5e3;
+              break;
+            case "Long":
+              e = 1e4;
+          }
+          0 != e &&
+            (this.setState({ bAnimate: "None" != this.props.loopDuration }),
+            (this.m_timer = window.setTimeout(
+              () => this.setState({ bAnimate: !1 }),
+              e,
+            )));
+        }
+        StopAnimationTimer() {
+          this.m_timer &&
+            (window.clearTimeout(this.m_timer), (this.m_timer = 0));
+        }
+        onHover() {
+          this.SetupAnimationTimer();
+        }
+        componentWillUnmount() {
+          this.StopAnimationTimer();
+        }
+        componentDidUpdate(e) {
+          this.props.loopDuration != e.loopDuration &&
+            ("None" == this.props.loopDuration
+              ? (this.setState({ bAnimate: !1 }), this.StopAnimationTimer())
+              : "Infinite" == this.props.loopDuration
+                ? (this.setState({ bAnimate: !0 }), this.StopAnimationTimer())
+                : (this.setState({ bAnimate: !0 }),
+                  this.SetupAnimationTimer())),
+            this.props.bParentHovered != e.bParentHovered &&
+              (this.props.bParentHovered &&
+              "None" != this.props.loopDuration &&
+              "Infinite" != this.props.loopDuration
+                ? (this.setState({ bAnimate: !0 }), this.StopAnimationTimer())
+                : this.state.bAnimate && this.SetupAnimationTimer());
+        }
+        render() {
+          let {
+            loopDuration: e,
+            animatedAvatar: t,
+            avatarFrame: i,
+            children: r,
+            style: s,
+            bLimitProfileFrameAnimationTime: o,
+            bParentHovered: n,
+            ...l
+          } = this.props;
+          l.onClick && (s = { ...s, cursor: "pointer" });
+          const m = this.state.bAnimate && null != t ? t : void 0;
+          return (0, a.jsx)("div", {
+            onMouseEnter: () =>
+              this.setState({ bAnimate: "None" != this.props.loopDuration }),
+            onMouseLeave: () => this.SetupAnimationTimer(),
+            children: (0, a.jsxs)(g, {
+              animatedAvatar: m,
+              ...l,
+              children: [
+                r,
+                (0, a.jsx)(f, {
+                  profileItem: null != i ? i : null,
+                  bDisableAnimation: o && !this.state.bAnimate,
+                }),
+              ],
+            }),
+          });
+        }
+      };
+      P = (0, r.Cg)([o.PA], P);
+    },
+    4434: (e, t, i) => {
+      "use strict";
+      i.d(t, { m: () => o });
+      var r = i(41735),
+        a = i.n(r),
+        s = i(90626);
+      function o(e) {
+        const t = s.useRef(a().CancelToken.source());
+        return (
+          s.useEffect(() => {
+            const i = t.current;
+            return () => i.cancel(e ? `${e}: unmounting` : "unmounting");
+          }, [e]),
+          t.current
+        );
+      }
+    },
+    82227: (e, t, i) => {
+      "use strict";
+      i.d(t, { Dq: () => o, dm: () => s });
+      var r = i(3049),
+        a = i(78686);
+      function s(e, t, i, s) {
+        let o = t;
+        o =
+          "number" == typeof o
+            ? {
+                nDigitsAfterDecimal: t,
+                bUseBinary1K: i || void 0 === i,
+                bValueIsInBytes: !s,
+                bValueIsRate: s,
+                nMinimumDigitsAfterDecimal: 0,
+              }
+            : {
+                nDigitsAfterDecimal: 2,
+                bUseBinary1K: !0,
+                bValueIsInBytes: !0,
+                bValueIsRate: !1,
+                nMinimumDigitsAfterDecimal: 0,
+                ...o,
+              };
+        const { nNum: n, strPrefix: l } = (function (e, t) {
+            const i = t.bUseBinary1K ? 1024 : 1e3,
+              r = i * i,
+              a = r * i,
+              s = a * i;
+            return e > s
+              ? { nNum: e / s, strPrefix: "Tera" }
+              : e > a
+                ? { nNum: e / a, strPrefix: "Giga" }
+                : e > r
+                  ? { nNum: e / r, strPrefix: "Mega" }
+                  : e > i
+                    ? { nNum: e / i, strPrefix: "Kilo" }
+                    : { nNum: e, strPrefix: "" };
+          })(e, o),
+          m = `#${l}${o.bValueIsInBytes ? "bytes" : "bits"}${o.bValueIsRate ? "_PerSecond" : ""}`;
+        return a.Z.Localize(
+          m,
+          n.toLocaleString((0, r.J)(), {
+            minimumFractionDigits: o.nMinimumDigitsAfterDecimal,
+            maximumFractionDigits: o.nDigitsAfterDecimal,
+          }),
+        );
+      }
+      function o(e, t = 0) {
+        let i;
+        return (
+          t && (i = { maximumFractionDigits: t }),
+          e ? e.toLocaleString((0, r.J)(), i) : "" + e
+        );
+      }
     },
   },
 ]);

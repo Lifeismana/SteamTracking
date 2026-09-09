@@ -192,7 +192,7 @@
     },
     64908: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { ShoppingCartErrorModal: () => H, default: () => k });
+      a.r(t), a.d(t, { ShoppingCartErrorModal: () => H, default: () => M });
       var i = a(7850),
         n = a(98682),
         r = a(83392),
@@ -251,15 +251,15 @@
         S = a(41515),
         U = a(90626),
         j = a(31292),
-        w = a(56283),
-        I = a(74568),
+        I = a(56283),
+        w = a(74568),
         K = a(61859),
         T = a(30470),
-        y = a(48980),
-        R = a(11543),
-        x = a.n(R),
-        M = a(53534);
-      function k(e) {
+        y = a(42798),
+        R = a(25619),
+        x = a(11543),
+        k = a.n(x);
+      function M(e) {
         const { closeCart: t, lineItemIDs: a, replacedPackageIDs: n } = e,
           r = (0, S.UI)(),
           { data: s } = (0, S.g7)(),
@@ -273,35 +273,36 @@
         )
           return null;
         const c = n?.length > 0;
-        return (0, i.jsx)(M.wW, {
+        return (0, i.jsx)(y.wW, {
           validateCart: s,
-          eDisplayType: M.WA.k_ECartDisplayType_Modal,
-          children: (0, i.jsxs)(I.mt, {
+          eDisplayType: y.WA.k_ECartDisplayType_Modal,
+          ItemLink: R.O3,
+          children: (0, i.jsxs)(w.mt, {
             active: !0,
-            className: x().ShoppingCartModal,
+            className: k().ShoppingCartModal,
             onDismiss: t,
             children: [
               (0, i.jsx)("div", {
-                className: x().ShoppingCartHeader,
+                className: k().ShoppingCartHeader,
                 children: (0, K.we)(
                   c ? "#Cart_UpdatedYourCart" : "#Cart_AddedToYourCart",
                 ),
               }),
-              (0, i.jsx)(y.pf, {
+              (0, i.jsx)(R.pf, {
                 lineItems: A,
                 cartValidation: s,
                 scrollable: !0,
               }),
               (0, i.jsx)(N, { lineItems: A, cartValidation: s }),
               (0, i.jsxs)(u.Z, {
-                className: x().ShoppingCartModalBtns,
+                className: k().ShoppingCartModalBtns,
                 children: [
-                  (0, i.jsx)(w.$n, {
+                  (0, i.jsx)(I.$n, {
                     onClick: t,
                     children: (0, K.we)("#Cart_ContinueShopping"),
                   }),
-                  (0, i.jsx)(w.jn, {
-                    className: x().OpenCartBtn,
+                  (0, i.jsx)(I.jn, {
+                    className: k().OpenCartBtn,
                     onClick: () => (window.location.href = o),
                     children: (0, K.we)(
                       "#Cart_ViewMyCart",
@@ -316,25 +317,25 @@
       }
       function H(e) {
         const { active: t, result: a, onDismiss: n } = e;
-        return (0, i.jsxs)(I.mt, {
+        return (0, i.jsxs)(w.mt, {
           active: t,
           onDismiss: n,
           children: [
-            (0, i.jsx)(w.Y9, { children: (0, K.we)("#Error_Generic") }),
+            (0, i.jsx)(I.Y9, { children: (0, K.we)("#Error_Generic") }),
             (0, i.jsxs)("div", {
-              className: x().ErrorModalContent,
+              className: k().ErrorModalContent,
               children: [
                 (0, i.jsx)("div", {
-                  className: x().ErrorModalMessage,
+                  className: k().ErrorModalMessage,
                   children: (0, K.we)("#Cart_ErrorUpdating"),
                 }),
                 (0, i.jsx)("div", {
-                  className: x().ErrorModalCode,
+                  className: k().ErrorModalCode,
                   children: a ? (0, K.we)("#Cart_ErrorCode", a) : "",
                 }),
                 (0, i.jsx)("div", {
-                  className: x().ErrorModalBottom,
-                  children: (0, i.jsx)(w.$n, {
+                  className: k().ErrorModalBottom,
+                  children: (0, i.jsx)(I.$n, {
                     onClick: n,
                     children: (0, K.we)("#Button_Close"),
                   }),
@@ -394,7 +395,7 @@
           !S)
         )
           return null;
-        const w = (0, i.jsxs)("a", {
+        const I = (0, i.jsxs)("a", {
           href: (0, d.n)(C),
           target: "_blank",
           children: [
@@ -405,13 +406,13 @@
               alt: C.public_data.persona_name,
             }),
             (0, i.jsx)("div", {
-              className: x().PersonaName,
+              className: k().PersonaName,
               children: C.public_data.persona_name,
             }),
           ],
         });
         return (0, i.jsxs)(r.s, {
-          className: x().GifteeHintCtn,
+          className: k().GifteeHintCtn,
           align: "center",
           gap: "3",
           direction: "row",
@@ -419,8 +420,8 @@
             (0, i.jsx)(s.EY, {
               as: "div",
               align: "center",
-              className: x().GifteeHint,
-              children: (0, K.PP)("#Cart_GifteeHint_Wishlist", w),
+              className: k().GifteeHint,
+              children: (0, K.PP)("#Cart_GifteeHint_Wishlist", I),
             }),
             (0, i.jsxs)(r.s, {
               gap: "2",
