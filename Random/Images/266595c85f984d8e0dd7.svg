@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<svg viewBox="-100 -100 200 200" xmlns="http://www.w3.org/2000/svg" width="" height="">
+<svg viewBox="" xmlns="http://www.w3.org/2000/svg" width="" height="">
   <defs>
     <marker id="" marker-width="6" marker-height="6" refX="0" refY="3" orient="auto">
       <polygon points="0 0, 6 3, 0 6" fill="currentColor"/>

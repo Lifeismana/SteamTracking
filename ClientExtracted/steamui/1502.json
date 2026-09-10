@@ -16,6 +16,8 @@
     "VerifiedProgram_DeckDisclaimer": "O trailer pode não representar o desempenho real no Steam Deck",
     "StoreItemFound": "%1$s Encontrados (%2$s)",
     "StoreItemNotFound": "Não encontrados (%1$s)",
+    "SteamReviewSection_AppID": "Análises da aplicação",
+    "SteamReviewSection_AppID_ttip": "A aplicação cujas análises Steam são mostradas nesta secção e a aplicação à qual a análise de um utilizador está associada.",
     "SteamURLAccepted": "%1$s URL aceite",
     "SteamURLInvalid": "Erro: URL não encaminha para uma página do Steam (Loja/Comunidade)",
     "AnchorHashInputInvalid": "Entrada inválida",
