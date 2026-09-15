@@ -239,6 +239,91 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = "events/ajaxgetdynamiceventmetadata";
+      async function _(_) {
+        const _ =
+            _._.STORE_BASE_URL + _ + "?" + new URLSearchParams(_).toString(),
+          _ = await fetch(_, {
+            credentials: "include",
+          });
+        if (!_._) throw new Error(`${_} answered ${_.status}`);
+        return await __webpack_require__.json();
+      }
+      function _(_) {
+        return ["DynamicEventMetadata", "youtube", _];
+      }
+      function _(_, _ = !0) {
+        return (0, _._)(
+          (function (_, _ = !0) {
+            return {
+              queryKey: _(_),
+              queryFn: async () => {
+                var _, _, _;
+                const _ = await _({
+                    youtubevideoids: _,
+                  }),
+                  _ =
+                    null !==
+                      (_ =
+                        null === (_ = _.youtube) || void 0 === _
+                          ? void 0
+                          : _.find((_) => _.videoid == _)) && void 0 !== _
+                      ? _
+                      : null === (_ = _.youtube) || void 0 === _
+                        ? void 0
+                        : _[0];
+                if (!_) throw new Error(`no metadata for youtube video ${_}`);
+                return _;
+              },
+              enabled: _ && !0,
+              staleTime: 36e5,
+              retry: !1,
+            };
+          })(_, _),
+        );
+      }
+      function _(_) {
+        return ["DynamicEventMetadata", "sharedfile", _];
+      }
+      function _(_) {
+        return (0, _._)(
+          (function (_) {
+            return {
+              queryKey: _(_),
+              queryFn: async () => {
+                var _, _, _;
+                const _ = await _({
+                    sharedfileids: _,
+                  }),
+                  _ =
+                    null !==
+                      (_ =
+                        null === (_ = _.sharedfiles) || void 0 === _
+                          ? void 0
+                          : _.find((_) => _.sharedfileid == _)) && void 0 !== _
+                      ? _
+                      : null === (_ = _.sharedfiles) || void 0 === _
+                        ? void 0
+                        : _[0];
+                if (!_) throw new Error(`no metadata for shared file ${_}`);
+                return _;
+              },
+              enabled: !0,
+              staleTime: 36e5,
+              retry: !1,
+            };
+          })(_),
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -3005,99 +3090,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ {
-        constructor() {
-          (this.m_mapYouTubeVideo = new Map()),
-            (this.m_mapSharedFile = new Map()),
-            (0, _._)(this);
-        }
-        async LoadYouTubeDynamicData(_, _) {
-          var _;
-          let _ = new Array(),
-            _ = "";
-          if (
-            (_.forEach((_, _) => {
-              const _ = this.m_mapYouTubeVideo.get(_);
-              _ ? _.push(_) : (_.length > 0 && (_ += ","), (_ += _));
-            }),
-            0 == _.length)
-          )
-            return _;
-          let _ = {
-            youtubevideoids: _,
-          };
-          const _ = await _().get(
-              _._.STORE_BASE_URL + "/events/ajaxgetdynamiceventmetadata",
-              {
-                params: _,
-                cancelToken: _.token,
-              },
-            ),
-            _ =
-              null === (_ = null == _ ? void 0 : _.data) || void 0 === _
-                ? void 0
-                : _.youtube;
-          return (
-            _ &&
-              (0, _._)(() => {
-                _.forEach((_, _) => {
-                  this.m_mapYouTubeVideo.set(_.videoid, _), _.push(_);
-                });
-              }),
-            _
-          );
-        }
-        async LoadSharedFileDynamicData(_, _) {
-          var _;
-          let _ = new Array(),
-            _ = "";
-          if (
-            (_.forEach((_, _) => {
-              const _ = this.m_mapSharedFile.get(_);
-              _ ? _.push(_) : (_.length > 0 && (_ += ","), (_ += _));
-            }),
-            0 == _.length)
-          )
-            return _;
-          let _ = {
-            sharedfileids: _,
-          };
-          const _ = await _().get(
-              _._.STORE_BASE_URL + "/events/ajaxgetdynamiceventmetadata",
-              {
-                params: _,
-                cancelToken: _.token,
-              },
-            ),
-            _ =
-              null === (_ = null == _ ? void 0 : _.data) || void 0 === _
-                ? void 0
-                : _.sharedfiles;
-          return (
-            _ &&
-              (0, _._)(() => {
-                _.forEach((_, _) => {
-                  this.m_mapSharedFile.set(_.sharedfileid, _), _.push(_);
-                });
-              }),
-            _
-          );
-        }
-      }
-      (0, _._)([_._], _.prototype, "m_mapYouTubeVideo", void 0),
-        (0, _._)([_._], _.prototype, "m_mapSharedFile", void 0);
-      const _ = new _();
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -3437,11 +3429,10 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
+        var _, _, _;
         const {
             videoID: _,
             bShowVideoImmediately: _,
@@ -3451,32 +3442,20 @@
             classNameAlign: _,
           } = _,
           [_, _] = (0, _.useState)(!_),
-          [_, _] = (0, _.useState)(!1),
-          _ = (0, _._)("YouTubeInlineSnippet"),
-          [_, _] = (0, _.useState)({
-            title: (0, _._)("#Loading"),
-            description: "",
-            videoid: _,
-            views: "0",
-          });
-        if (
-          ((0, _.useEffect)(() => {
-            _ &&
-              _._.LoadYouTubeDynamicData([_], _)
-                .then((_) => {
-                  !_.token.reason && _.length > 0 && (_(_[0]), _(!0));
-                })
-                .catch((_) =>
-                  console.error(
-                    "YouTubeInlineSnippet: " + (0, _._)(_).strErrorMsg,
-                  ),
-                );
-          }, [_, _, _]),
-          _)
-        ) {
-          const _ = _.title,
-            _ = _.views,
-            _ = _.description;
+          { data: _, isSuccess: _ } = (0, _._)(_, _);
+        if (_) {
+          const _ =
+              null !== (_ = null == _ ? void 0 : _.title) && void 0 !== _
+                ? _
+                : (0, _._)("#Loading"),
+            _ =
+              null !== (_ = null == _ ? void 0 : _.views) && void 0 !== _
+                ? _
+                : "0",
+            _ =
+              null !== (_ = null == _ ? void 0 : _.description) && void 0 !== _
+                ? _
+                : "";
           return (0, _.jsxs)("div", {
             className: _._.Box,
             onClick: () => _(!1),

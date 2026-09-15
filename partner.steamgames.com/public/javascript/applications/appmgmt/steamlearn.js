@@ -4623,16 +4623,40 @@
       class Me extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), _.Message.initialize(this, e, 0, -1, void 0, null);
+          super(),
+            Me.prototype.bert_model || p.Sg(Me.M()),
+            _.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            Me.sm_m ||
+              (Me.sm_m = {
+                proto: Me,
+                fields: {
+                  bert_model: { n: 1, br: p.qM.readEnum, bw: p.gp.writeEnum },
+                  sequence_length: {
+                    n: 2,
+                    br: p.qM.readUint32,
+                    bw: p.gp.writeUint32,
+                  },
+                },
+              }),
+            Me.sm_m
+          );
+        }
+        static MBF() {
+          return Me.sm_mbf || (Me.sm_mbf = p.w0(Me.M())), Me.sm_mbf;
         }
         toObject(e = !1) {
           return Me.toObject(e, this);
         }
         static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
+          return p.BT(Me.M(), e, t);
         }
         static fromObject(e) {
-          return new Me();
+          return p.Uq(Me.M(), e);
         }
         static deserializeBinary(e) {
           let t = new (u().BinaryReader)(e),
@@ -4640,13 +4664,15 @@
           return Me.deserializeBinaryFromReader(a, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return e;
+          return p.zj(Me.MBF(), e, t);
         }
         serializeBinary() {
           var e = new (u().BinaryWriter)();
           return Me.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {}
+        static serializeBinaryToWriter(e, t) {
+          p.i0(Me.M(), e, t);
+        }
         serializeBase64String() {
           var e = new (u().BinaryWriter)();
           return Me.serializeBinaryToWriter(this, e), e.getResultBase64String();

@@ -834,6 +834,17 @@ Body.v6 ._2GHTaky49GZrPLyiOgKWB7 h2 {
   pointer-events: none;
   transition: opacity 0.3s;
 }
+._1EtV67mAPZ0HqX9gDKHQk- button.DialogButton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: auto;
+  padding: 4px 20px 4px 10px;
+}
+._1EtV67mAPZ0HqX9gDKHQk- ._32U0JhithwvTeeStn41PFK {
+  width: 24px;
+  height: 24px;
+}
 ._35KiKa7cq-3mn4lChNW67c {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   display: flex;
@@ -857,18 +868,6 @@ Body.v6 ._2GHTaky49GZrPLyiOgKWB7 h2 {
 }
 ._1KbfPGq52sl-NB4ku90gN3 .DialogInputLabelGroup {
   max-width: 500px;
-}
-._2JLogmiR30ClrphBajhwYK button.DialogButton {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: auto;
-  padding: 4px 20px 4px 10px;
-}
-._2JLogmiR30ClrphBajhwYK ._3bl-GtsF8LkmzsRFkqjeCz {
-  width: 24px;
-  height: 24px;
-  transform: rotate(180deg);
 }
 ._35gHo_M6tBBUOL8PWGEmA9 {
   display: flex;

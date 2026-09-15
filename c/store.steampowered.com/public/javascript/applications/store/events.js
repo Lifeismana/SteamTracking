@@ -3432,7 +3432,7 @@
           [, _] = (0, _._)(_.clanSteamID.GetAccountID()),
           [_, _, _] = (0, _._)(() => [
             Math.max(0, _.nVotesUp - _.nVotesDown),
-            _.GetForumTopicURL(_?.vanity_url),
+            _.GetDiscussionURL(_?.vanity_url),
             _.nCommentCount,
           ]),
           _ = (function (_) {

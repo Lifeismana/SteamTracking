@@ -244,6 +244,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -404,6 +405,14 @@
             enabled: !!_,
           }
         );
+      }
+      function _(_) {
+        return _.isPending ? void 0 : (_.data ?? null);
+      }
+      function _(_, _ = "group") {
+        const _ = (0, _._)(),
+          _ = (0, _._)(_(_, _, _));
+        return _(_ ? _(_) : void 0);
       }
       function _(_, _) {
         if (_) return _(_.getQueryData(_(_))) ?? void 0;

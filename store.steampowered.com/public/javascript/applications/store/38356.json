@@ -1383,6 +1383,8 @@
     "Login_GoOffline_Button": "Gå i offlinetilstand",
     "Login_Error_Anonymous_Title": "Understøttes ikke",
     "Login_Error_Anonymous_Description": "Anonymt login understøttes ikke på nettet eller i Steams skrivebordsklient, kun i steamcmd.",
+    "Login_Error_Action_Necessary_Title": "Account Action Necessary",
+    "Login_Error_Action_Necessary_Description": "Please log in on another device or scan the QR code.",
     "Login_Error_Default_Description": "Der gik noget galt under loginforsøget. Prøv igen senere.",
     "Login_Error_MoveAuthenticator_Description": "Der opstod et problem i forsøget på at flytte din authenticator. Prøv venligst igen senere.",
     "Login_ConnectingToSteam": "Opretter forbindelse til Steam",

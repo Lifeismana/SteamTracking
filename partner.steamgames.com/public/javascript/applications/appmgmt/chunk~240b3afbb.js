@@ -7,11 +7,12 @@
   {
     39832: (e, n, t) => {
       t.d(n, {
+        sq: () => m,
         TW: () => u,
         KC: () => d,
         $z: () => s,
         _l: () => c,
-        R2: () => m,
+        R2: () => l,
       });
       var i = t(3049);
       const r = {};
@@ -114,6 +115,12 @@
         return r.toLocaleTimeString(a, o);
       }
       function m(e) {
+        return e.toLocaleDateString((0, i.J)(), {
+          month: "long",
+          year: "numeric",
+        });
+      }
+      function l(e) {
         const n = Math.floor(e / h.Kp.PerYear),
           t = Math.floor(e / h.Kp.PerMonth),
           i = Math.floor((e % h.Kp.PerMonth) / h.Kp.PerDay),

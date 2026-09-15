@@ -755,6 +755,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -915,6 +916,14 @@
             enabled: !!_,
           }
         );
+      }
+      function _(_) {
+        return _.isPending ? void 0 : (_.data ?? null);
+      }
+      function _(_, _ = "group") {
+        const _ = (0, _._)(),
+          _ = (0, _._)(_(_, _, _));
+        return _(_ ? _(_) : void 0);
       }
       function _(_, _) {
         if (_) return _(_.getQueryData(_(_))) ?? void 0;
@@ -2147,6 +2156,160 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      const _ = 150,
+        _ = _.createContext(void 0);
+      function _(_) {
+        const {
+            hoverContent: _,
+            hoverProps: _,
+            nDelayShowMs: _,
+            nWidthMultiplier: _,
+            children: _,
+            className: _,
+          } = _,
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = !_ && !_,
+          [_, _] = _.useState(!1),
+          [_, _] = _.useState(void 0),
+          _ = _.useCallback(() => _(!1), []);
+        return (0, _.jsxs)("div", {
+          "data-key": "hover div",
+          role: "button",
+          tabIndex: 0,
+          className: (0, _._)(_().ItemHoverSource, _),
+          onMouseEnter: (_) => {
+            _(!0), _(_.currentTarget);
+          },
+          onMouseLeave: () => _(!1),
+          onTouchStart: () => _(!1),
+          onKeyDown: (_) => {
+            _.keyCode == _._ &&
+              (_(!1), _.preventDefault(), _.stopPropagation());
+          },
+          children: [
+            _ &&
+              _ &&
+              (0, _.jsx)(_.Provider, {
+                value: _,
+                children: (0, _.jsx)(_, {
+                  visible: _,
+                  target: _,
+                  nDelayShowMs: _,
+                  nWidthMultiplier: _,
+                  hoverProps: _,
+                  children: _,
+                }),
+              }),
+            (0, _.jsx)(_._, {
+              children: _,
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const {
+            hoverProps: _,
+            nDelayShowMs: _ = _,
+            nWidthMultiplier: _ = 1.15,
+            target: _,
+            visible: _,
+            children: _,
+          } = _,
+          [_, _] = _.useState(_);
+        if (
+          (_.useEffect(() => {
+            if (_) {
+              if (_) {
+                const _ = window.setTimeout(() => _(!0), _);
+                return () => window.clearTimeout(_);
+              }
+              _(!0);
+            } else (0, _._)() || _(!1);
+          }, [_]),
+          _.useEffect(() => {
+            if (!_) return;
+            const _ = _.ownerDocument.defaultView;
+            if (_) {
+              const _ = _.scrollY,
+                _ = () => {
+                  Math.abs(_.scrollY - _) > 50 && _(!1);
+                };
+              return (
+                window.addEventListener("scroll", _),
+                () => window.removeEventListener("scroll", _)
+              );
+            }
+            return () => {};
+          }, [_, _?.ownerDocument.defaultView]),
+          !_ || !_ || !_)
+        )
+          return null;
+        const _ = _.clientWidth < 200 ? "8px" : "10px",
+          _ = {
+            direction: "overlay-center",
+            bEnablePointerEvents: !0,
+            ...(_ || {}),
+            style: {
+              zIndex: 98,
+              width: _.clientWidth * _,
+              fontSize: _,
+              minHeight: "hiding" == _() ? void 0 : 300,
+              height:
+                "hiding" == _() ? 1.15 * _.clientWidth * (125 / 184) : void 0,
+              ..._?.style,
+            },
+            target: _,
+          };
+        return (0, _.jsx)(_, {
+          hoverProps: _,
+          children: (0, _.jsx)(_._, {
+            children: _,
+          }),
+        });
+      }
+      function _(_) {
+        const { hoverProps: _, children: _ } = _,
+          _ = _.useCallback((_) => _?.focus(), []);
+        return (0, _.jsx)(_._, {
+          ..._,
+          children: (0, _.jsx)(_._, {
+            timeout: 500,
+            _: !0,
+            appear: !0,
+            classNames: {
+              appearActive: (0, _._)(_().Opening, _().Opening),
+              enterDone: (0, _._)(_().Open, _().Open),
+            },
+            children: (_) =>
+              (0, _.jsx)("div", {
+                ref: (0, _._)(_, _),
+                className: _().HoverContentTransition,
+                tabIndex: -1,
+                children: _,
+              }),
+          }),
+        });
+      }
+      function _() {
+        return window.sessionStorage?.getItem(_) || "default";
+      }
+      const _ = "DEBUG_UseNewGameHover";
+      window.SetHoverPresentation = function (_) {
+        window.sessionStorage.setItem(_, _);
+      };
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -2200,10 +2363,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__("chunkid");
       const _ = 5500,
         _ = 2e3,
         _ = 10;
@@ -2422,151 +2582,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      const _ = 150;
-      function _(_) {
-        const {
-            hoverContent: _,
-            hoverProps: _,
-            nDelayShowMs: _,
-            nWidthMultiplier: _,
-            children: _,
-            className: _,
-          } = _,
-          _ = (0, _._)(),
-          _ = (0, _._)(),
-          _ = !_ && !_,
-          [_, _] = _.useState(!1),
-          [_, _] = _.useState(void 0);
-        return (0, _.jsxs)("div", {
-          "data-key": "hover div",
-          role: "button",
-          tabIndex: 0,
-          className: (0, _._)(_().ItemHoverSource, _),
-          onMouseEnter: (_) => {
-            _(!0), _(_.currentTarget);
-          },
-          onMouseLeave: () => _(!1),
-          onTouchStart: () => _(!1),
-          onKeyDown: (_) => {
-            _.keyCode == _._ &&
-              (_(!1), _.preventDefault(), _.stopPropagation());
-          },
-          children: [
-            _ &&
-              _ &&
-              (0, _.jsx)(_, {
-                visible: _,
-                target: _,
-                nDelayShowMs: _,
-                nWidthMultiplier: _,
-                hoverProps: _,
-                children: _,
-              }),
-            (0, _.jsx)(_._, {
-              children: _,
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const {
-            hoverProps: _,
-            nDelayShowMs: _ = _,
-            nWidthMultiplier: _ = 1.15,
-            target: _,
-            visible: _,
-            children: _,
-          } = _,
-          [_, _] = _.useState(_);
-        if (
-          (_.useEffect(() => {
-            if (_) {
-              if (_) {
-                const _ = window.setTimeout(() => _(!0), _);
-                return () => window.clearTimeout(_);
-              }
-              _(!0);
-            } else (0, _._)() || _(!1);
-          }, [_]),
-          _.useEffect(() => {
-            if (!_) return;
-            const _ = _.ownerDocument.defaultView;
-            if (_) {
-              const _ = _.scrollY,
-                _ = () => {
-                  Math.abs(_.scrollY - _) > 50 && _(!1);
-                };
-              return (
-                window.addEventListener("scroll", _),
-                () => window.removeEventListener("scroll", _)
-              );
-            }
-            return () => {};
-          }, [_, _?.ownerDocument.defaultView]),
-          !_ || !_ || !_)
-        )
-          return null;
-        const _ = _.clientWidth < 200 ? "8px" : "10px",
-          _ = {
-            direction: "overlay-center",
-            bEnablePointerEvents: !0,
-            ...(_ || {}),
-            style: {
-              zIndex: 98,
-              width: _.clientWidth * _,
-              fontSize: _,
-              minHeight: "hiding" == _() ? void 0 : 300,
-              height:
-                "hiding" == _() ? 1.15 * _.clientWidth * (125 / 184) : void 0,
-              ..._?.style,
-            },
-            target: _,
-          };
-        return (0, _.jsx)(_, {
-          hoverProps: _,
-          children: (0, _.jsx)(_._, {
-            children: _,
-          }),
-        });
-      }
-      function _(_) {
-        const { hoverProps: _, children: _ } = _,
-          _ = _.useCallback((_) => _?.focus(), []);
-        return (0, _.jsx)(_._, {
-          ..._,
-          children: (0, _.jsx)(_._, {
-            timeout: 500,
-            _: !0,
-            appear: !0,
-            classNames: {
-              appearActive: (0, _._)(_().Opening, _().Opening),
-              enterDone: (0, _._)(_().Open, _().Open),
-            },
-            children: (_) =>
-              (0, _.jsx)("div", {
-                ref: (0, _._)(_, _),
-                className: _().HoverContentTransition,
-                tabIndex: -1,
-                children: _,
-              }),
-          }),
-        });
-      }
-      function _() {
-        return window.sessionStorage?.getItem(_) || "default";
-      }
-      const _ = "DEBUG_UseNewGameHover";
-      window.SetHoverPresentation = function (_) {
-        window.sessionStorage.setItem(_, _);
-      };
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -2606,11 +2621,18 @@
             bHideBottomHalf: _,
             bHidePrice: _,
             bShowDeckCompatibilityDialog: _,
+            onShowDeckCompatibilityDialog: _,
             bUseSubscriptionLayout: _,
             nCreatorAccountID: _,
             bPreventNavigation: _,
             bShowDescription: _,
           } = _,
+          _ = _.useContext(_),
+          _ =
+            _ &&
+            (() => {
+              _?.(), _();
+            }),
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(""),
           { data: _ } = (0, _._)(_),
@@ -2709,6 +2731,7 @@
                   Boolean(_ && _) &&
                     (0, _.jsx)(_._, {
                       _: _,
+                      onShowDialog: _,
                     }),
                   Boolean(_) && _,
                   _ &&
@@ -2819,6 +2842,7 @@
           } = _,
           { data: _ } = (0, _._)(_),
           _ = (0, _._)(),
+          [_, _, _] = (0, _._)(),
           { strStoreURL: _, snr: _ } = (0, _._)(_, _);
         if ((!_ && !_) || _)
           return (0, _.jsx)(_.Fragment, {
@@ -2849,7 +2873,9 @@
             bShowWishlistButton: _,
             bShowIgnoreButton: _,
             bShowDescription: _,
+            onShowDeckCompatibilityDialog: _ ? _ : void 0,
           },
+          _ = _ && _?.item_type == _._._ ? _.appid : void 0,
           _ = (0, _.jsx)(_, {
             ..._,
           }),
@@ -2859,11 +2885,22 @@
                 children: _,
               })
             : _;
-        return (0, _.jsx)(_, {
-          hoverContent: _,
-          nWidthMultiplier: _,
-          ..._,
-          children: _,
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_, {
+              hoverContent: _,
+              nWidthMultiplier: _,
+              ..._,
+              children: _,
+            }),
+            _ &&
+              (0, _.jsx)(_._, {
+                nAppID: _,
+                appName: _?.name || _,
+                active: _,
+                closeModal: _,
+              }),
+          ],
         });
       }
     },
@@ -4423,6 +4460,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -4443,6 +4481,12 @@
         if (!_?.length) return [];
         const _ = _.map((_) => _.creator_clan_account_id).filter((_) => !!_);
         return Array.from(new Set(_));
+      }
+      function _(_) {
+        const { data: _ } = (0, _._)({
+          appid: _,
+        });
+        return _?.appid || _;
       }
       function _(_) {
         const { data: _ } = (0, _._)(_);
@@ -5500,6 +5544,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -5614,7 +5659,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        const { _: _ } = _,
+        const { _: _, onShowDialog: _ } = _,
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_),
           [_, _, _] = (0, _._)();
@@ -5628,7 +5673,7 @@
             }),
             (0, _.jsx)(_._, {
               onClick: (_) => {
-                _.preventDefault(), _();
+                _.preventDefault(), (_ ?? _)();
               },
               children: (0, _.jsx)("span", {
                 className: _().LearnMorePC,
@@ -5637,14 +5682,25 @@
                 ),
               }),
             }),
-            (0, _.jsx)(_._, {
-              active: _,
-              children: (0, _.jsx)(_, {
+            !_ &&
+              (0, _.jsx)(_, {
                 nAppID: _.appid,
+                appName: _.name,
+                active: _,
                 closeModal: _,
               }),
-            }),
           ],
+        });
+      }
+      function _(_) {
+        const { nAppID: _, active: _, appName: _, closeModal: _ } = _;
+        return (0, _.jsx)(_._, {
+          active: _,
+          children: (0, _.jsx)(_, {
+            nAppID: _,
+            appName: _,
+            closeModal: _,
+          }),
         });
       }
       function _(_) {
@@ -5676,7 +5732,7 @@
         });
       }
       function _(_) {
-        const { nAppID: _, closeModal: _ } = _,
+        const { nAppID: _, appName: _, closeModal: _ } = _,
           _ = (function (_) {
             const [_, _] = _.useState(_.Get().GetCompatabilityResultForApp(_));
             return (
@@ -5707,6 +5763,7 @@
               children: _
                 ? (0, _.jsx)(_._, {
                     titleId: _,
+                    appName: _,
                     results: _,
                   })
                 : (0, _.jsx)(_._, {
@@ -8526,10 +8583,7 @@
               }),
               onClick: _,
             },
-          ];
-        return (
-          _ == _._ &&
-            _.push({
+            {
               name: (0, _.jsxs)("div", {
                 className: _().pillContent,
                 children: [
@@ -8548,15 +8602,16 @@
                 }),
               }),
               onClick: _,
-            }),
-          (0, _.jsx)(_._, {
-            tabs: _,
-            classNameCtn: _().CompatibilityTabs,
-            classNameTabContent: _().CompatibilityTabContent,
-            startingTab: _.toString(),
-            preferredFocus: !0,
-          })
-        );
+            },
+          ];
+        return (0, _.jsx)(_._, {
+          tabs: _,
+          classNameCtn: _().CompatibilityTabs,
+          classNameTabContent: _().CompatibilityTabContent,
+          startingTab: _.toString(),
+          preferredFocus: !0,
+          bDisableRouting: !0,
+        });
       }
       function _(_) {
         const {

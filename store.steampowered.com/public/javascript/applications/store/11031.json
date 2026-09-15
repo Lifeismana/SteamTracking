@@ -1383,6 +1383,8 @@
     "Login_GoOffline_Button": "Enter Offline Mode",
     "Login_Error_Anonymous_Title": "Not Supported",
     "Login_Error_Anonymous_Description": "Signing in anonymously is not supported on the web or in the desktop Steam client, only in steamcmd.",
+    "Login_Error_Action_Necessary_Title": "Account Action Necessary",
+    "Login_Error_Action_Necessary_Description": "Please log in on another device or scan the QR code.",
     "Login_Error_Default_Description": "Something went wrong while attempting to sign you in. Please try again later.",
     "Login_Error_MoveAuthenticator_Description": "There was a problem moving your authenticator. Please try again later.",
     "Login_ConnectingToSteam": "Connecting to Steam",

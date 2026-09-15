@@ -91,6 +91,237 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        return (
+          (null == _.gid || null == _.gid || "0" == _.gid) &&
+          !!_.announcement_body &&
+          "0" != _.announcement_body.gid
+        );
+      }
+      function _(_) {
+        return _(_) ? _._ + _.announcement_body?.gid : _.gid;
+      }
+      function _(_, _) {
+        let _ = new _._();
+        if (
+          ((_.clanSteamID = _),
+          (0, _._)(
+            _.clanSteamID && _.clanSteamID.BIsValid(),
+            "Invalid Clan SteamID: " +
+              _.clanSteamID.ConvertTo64BitString() +
+              " " +
+              _._.EUNIVERSE,
+          ),
+          (_.GID = _(_)),
+          (_.bOldAnnouncement = _(_)),
+          (_.appid = _.appid ?? 0),
+          (_.createTime = _.rtime_created),
+          (_.startTime = _.rtime32_start_time),
+          (_.endTime = _.rtime32_end_time),
+          (_.visibilityStartTime = _.rtime32_visibility_start),
+          (_.visibilityEndTime = _.rtime32_visibility_end),
+          (_.loadedAllLanguages = !1),
+          (_.type = _.event_type ?? _.DRF),
+          (_.nVotesUp = _.votes_up ?? 0),
+          (_.nVotesDown = _.votes_down ?? 0),
+          (_.comment_type = _.comment_type),
+          (_.gidfeature = _.gidfeature),
+          (_.gidfeature2 = _.gidfeature2),
+          (_.featured_app_tagid = _.featured_app_tagid),
+          (_.vecTags = new Array()),
+          (_.creator_steamid = _.creator_steamid),
+          (_.last_update_steamid = _.last_update_steamid),
+          (_.rtime32_last_modified = _.rtime32_last_modified),
+          (_.rtime32_moderator_reviewed = _.rtime_mod_reviewed),
+          (_.video_preview_type = _.video_preview_type),
+          (_.video_preview_id = _.video_preview_id),
+          (_.has_live_stream = _.has_live_stream),
+          (_.live_stream_viewer_count = _.live_stream_viewer_count),
+          (_.m_nBuildID = _.build_id),
+          (_.m_strBuildBranch = _.build_branch),
+          _.announcement_body)
+        ) {
+          let _ = _.announcement_body;
+          (_.AnnouncementGID = _.gid),
+            _.name.set(_.language, _.headline),
+            _.description.set(_.language, _.body),
+            _.timestamp_loc_updated.clear(),
+            (_.forumTopicGID = _.forum_topic_id),
+            (_.nCommentCount = _.commentcount),
+            (_.postTime = _.posttime),
+            _.bOldAnnouncement && !_.hidden && (_.startTime = _.posttime),
+            (_.announcementClanSteamID = new _._(_.clanid)),
+            _.tags &&
+              _.tags.length > 0 &&
+              _.tags.forEach((_) => _.vecTags.push(_)),
+            !_.rtime32_last_solr_search_col_updated &&
+              _.rtime32_last_modified &&
+              ((_.rtime32_last_solr_search_col_updated =
+                _.rtime32_last_modified),
+              (_.rtime32_last_modified = _.updatetime));
+        } else
+          (_.AnnouncementGID = "0"),
+            (_.forumTopicGID = _.forum_topic_id),
+            _.name.clear(),
+            _.description.clear(),
+            _.timestamp_loc_updated.clear(),
+            (_.postTime = _.rtime32_start_time),
+            (_.nCommentCount = _.comment_count ?? 0),
+            _.name.set(_.Bhc, _.event_name ?? ""),
+            _.description.set(_.Bhc, _.event_notes ?? "");
+        _.broadcaster_accountid &&
+          (_.broadcaster = new _._(_.broadcaster_accountid));
+        const _ = _._;
+        try {
+          _.jsondata = {
+            ..._,
+            ...(_.jsondata ? JSON.parse(_.jsondata) : void 0),
+          };
+        } catch (_) {
+          const _ = (0, _._)(_);
+          throw (
+            (console.error(
+              "PartnerEventStore::InsertEventModelFromClanEventData: failed to parse embedded json model" +
+                _.strErrorMsg,
+              _,
+            ),
+            _)
+          );
+        }
+        if (
+          ((_.jsondata.localized_capsule_image = (0, _._)(
+            _.jsondata.localized_capsule_image || [],
+            _.bP9,
+            null,
+          )),
+          (_.jsondata.localized_title_image = (0, _._)(
+            _.jsondata.localized_title_image || [],
+            _.bP9,
+            null,
+          )),
+          (_.jsondata.localized_subtitle = (0, _._)(
+            _.jsondata.localized_subtitle || [],
+            _.bP9,
+            null,
+          )),
+          (_.jsondata.localized_summary = (0, _._)(
+            _.jsondata.localized_summary || [],
+            _.bP9,
+            null,
+          )),
+          (_.jsondata.localized_broadcast_title = (0, _._)(
+            _.jsondata.localized_broadcast_title || [],
+            _.bP9,
+            null,
+          )),
+          (_.jsondata.localized_broadcast_left_image = (0, _._)(
+            _.jsondata.localized_broadcast_left_image || [],
+            _.bP9,
+            null,
+          )),
+          (_.jsondata.localized_broadcast_right_image = (0, _._)(
+            _.jsondata.localized_broadcast_right_image || [],
+            _.bP9,
+            null,
+          )),
+          (_.jsondata.localized_sale_header = (0, _._)(
+            _.jsondata.localized_sale_header || [],
+            _.bP9,
+            null,
+          )),
+          (_.jsondata.localized_sale_overlay = (0, _._)(
+            _.jsondata.localized_sale_overlay || [],
+            _.bP9,
+            null,
+          )),
+          (_.jsondata.localized_sale_product_banner = (0, _._)(
+            _.jsondata.localized_sale_product_banner || [],
+            _.bP9,
+            null,
+          )),
+          (_.jsondata.localized_sale_product_mobile_banner = (0, _._)(
+            _.jsondata.localized_sale_product_mobile_banner || [],
+            _.bP9,
+            null,
+          )),
+          (_.jsondata.localized_sale_logo = (0, _._)(
+            _.jsondata.localized_sale_logo || [],
+            _.bP9,
+            null,
+          )),
+          void 0 !== _.jsondata.sale_num_headers &&
+            _.jsondata.localized_per_day_sales_header)
+        )
+          for (let _ = 0; _ < _.jsondata.sale_num_headers; ++_)
+            _.jsondata.localized_per_day_sales_header[_] = (0, _._)(
+              _.jsondata.localized_per_day_sales_header[_],
+              _.bP9,
+              null,
+            );
+        return (
+          _.jsondata.sale_sections &&
+            _.jsondata.sale_sections.forEach((_, _) => {
+              _.localized_label &&
+                (_.localized_label = (0, _._)(_.localized_label, _.bP9, null)),
+                "trailercarousel" === _.section_type &&
+                  (_.show_as_carousel = !1),
+                (_.jsondata.sale_sections[_] = {
+                  ..._._,
+                  ..._,
+                });
+            }),
+          _.jsondata.email_setting &&
+            _.jsondata.email_setting.sections &&
+            _.jsondata.email_setting.sections.forEach((_) => {
+              void 0 !== _.localized_headline &&
+                null !== _.localized_headline &&
+                (_.localized_headline = (0, _._)(
+                  _.localized_headline,
+                  _.bP9,
+                  null,
+                )),
+                void 0 !== _.localized_body &&
+                  null !== _.localized_body &&
+                  (_.localized_body = (0, _._)(_.localized_body, _.bP9, null)),
+                void 0 !== _.localized_image &&
+                  null !== _.localized_image &&
+                  (_.localized_image = (0, _._)(
+                    _.localized_image,
+                    _.bP9,
+                    null,
+                  ));
+            }),
+          _.jsondata.localized_title_image.forEach((_, _) => {
+            if (null != _ && "http" == _.substr(0, 4)) {
+              let _ = _.lastIndexOf("/"),
+                _ = _.substr(_ + 1);
+              _.jsondata.localized_title_image[_] = _;
+            }
+          }),
+          (_.bLoaded = !0),
+          _.published
+            ? _.unlisted
+              ? (_.visibility_state = _._.k_EEventStateUnlisted)
+              : _.hidden
+                ? (_.visibility_state = _._.k_EEventStateStaged)
+                : (_.visibility_state = _._.k_EEventStateVisible)
+            : (_.visibility_state = _._.k_EEventStateUnpublished),
+          _
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
         _: () => _,
         _: () => _,
       });
@@ -112,18 +343,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_) {
-        return (
-          (null == _.gid || null == _.gid || "0" == _.gid) &&
-          !!_.announcement_body &&
-          "0" != _.announcement_body.gid
-        );
-      }
-      function _(_) {
-        return _(_) ? _._ + _.announcement_body?.gid : _.gid;
-      }
-      var _ = __webpack_require__("chunkid");
       class _ {
         appid;
         date;
@@ -279,7 +501,7 @@
         RegisterClanEvents(_) {
           if (_)
             for (const _ of _) {
-              const _ = _(_);
+              const _ = (0, _._)(_);
               if (!this.m_mapExistingEvents.has(_)) {
                 const _ = new _._(_.clan_steamid);
                 this.InsertEventModelFromClanEventData(_, _);
@@ -301,222 +523,7 @@
           return __webpack_require__.sort(this.DefaultEventSortFunction), _;
         }
         InsertEventModelFromClanEventData(_, _) {
-          const _ = (function (_, _) {
-            let _ = new _._();
-            if (
-              ((_.clanSteamID = _),
-              (0, _._)(
-                _.clanSteamID && _.clanSteamID.BIsValid(),
-                "Invalid Clan SteamID: " +
-                  _.clanSteamID.ConvertTo64BitString() +
-                  " " +
-                  _._.EUNIVERSE,
-              ),
-              (_.GID = _(_)),
-              (_.bOldAnnouncement = _(_)),
-              (_.appid = _.appid ?? 0),
-              (_.createTime = _.rtime_created),
-              (_.startTime = _.rtime32_start_time),
-              (_.endTime = _.rtime32_end_time),
-              (_.visibilityStartTime = _.rtime32_visibility_start),
-              (_.visibilityEndTime = _.rtime32_visibility_end),
-              (_.loadedAllLanguages = !1),
-              (_.type = _.event_type ?? _.DRF),
-              (_.nVotesUp = _.votes_up ?? 0),
-              (_.nVotesDown = _.votes_down ?? 0),
-              (_.comment_type = _.comment_type),
-              (_.gidfeature = _.gidfeature),
-              (_.gidfeature2 = _.gidfeature2),
-              (_.featured_app_tagid = _.featured_app_tagid),
-              (_.vecTags = new Array()),
-              (_.creator_steamid = _.creator_steamid),
-              (_.last_update_steamid = _.last_update_steamid),
-              (_.rtime32_last_modified = _.rtime32_last_modified),
-              (_.rtime32_moderator_reviewed = _.rtime_mod_reviewed),
-              (_.video_preview_type = _.video_preview_type),
-              (_.video_preview_id = _.video_preview_id),
-              (_.has_live_stream = _.has_live_stream),
-              (_.live_stream_viewer_count = _.live_stream_viewer_count),
-              (_.m_nBuildID = _.build_id),
-              (_.m_strBuildBranch = _.build_branch),
-              _.announcement_body)
-            ) {
-              let _ = _.announcement_body;
-              (_.AnnouncementGID = _.gid),
-                _.name.set(_.language, _.headline),
-                _.description.set(_.language, _.body),
-                _.timestamp_loc_updated.clear(),
-                (_.forumTopicGID = _.forum_topic_id),
-                (_.nCommentCount = _.commentcount),
-                (_.postTime = _.posttime),
-                _.bOldAnnouncement && !_.hidden && (_.startTime = _.posttime),
-                (_.announcementClanSteamID = new _._(_.clanid)),
-                _.tags &&
-                  _.tags.length > 0 &&
-                  _.tags.forEach((_) => _.vecTags.push(_)),
-                !_.rtime32_last_solr_search_col_updated &&
-                  _.rtime32_last_modified &&
-                  ((_.rtime32_last_solr_search_col_updated =
-                    _.rtime32_last_modified),
-                  (_.rtime32_last_modified = _.updatetime));
-            } else
-              (_.AnnouncementGID = "0"),
-                (_.forumTopicGID = _.forum_topic_id),
-                _.name.clear(),
-                _.description.clear(),
-                _.timestamp_loc_updated.clear(),
-                (_.postTime = _.rtime32_start_time),
-                (_.nCommentCount = _.comment_count ?? 0),
-                _.name.set(_.Bhc, _.event_name ?? ""),
-                _.description.set(_.Bhc, _.event_notes ?? "");
-            _.broadcaster_accountid &&
-              (_.broadcaster = new _._(_.broadcaster_accountid));
-            const _ = _._;
-            try {
-              _.jsondata = {
-                ..._,
-                ...(_.jsondata ? JSON.parse(_.jsondata) : void 0),
-              };
-            } catch (_) {
-              const _ = (0, _._)(_);
-              throw (
-                (console.error(
-                  "PartnerEventStore::InsertEventModelFromClanEventData: failed to parse embedded json model" +
-                    _.strErrorMsg,
-                  _,
-                ),
-                _)
-              );
-            }
-            if (
-              ((_.jsondata.localized_capsule_image = (0, _._)(
-                _.jsondata.localized_capsule_image || [],
-                _.bP9,
-                null,
-              )),
-              (_.jsondata.localized_title_image = (0, _._)(
-                _.jsondata.localized_title_image || [],
-                _.bP9,
-                null,
-              )),
-              (_.jsondata.localized_subtitle = (0, _._)(
-                _.jsondata.localized_subtitle || [],
-                _.bP9,
-                null,
-              )),
-              (_.jsondata.localized_summary = (0, _._)(
-                _.jsondata.localized_summary || [],
-                _.bP9,
-                null,
-              )),
-              (_.jsondata.localized_broadcast_title = (0, _._)(
-                _.jsondata.localized_broadcast_title || [],
-                _.bP9,
-                null,
-              )),
-              (_.jsondata.localized_broadcast_left_image = (0, _._)(
-                _.jsondata.localized_broadcast_left_image || [],
-                _.bP9,
-                null,
-              )),
-              (_.jsondata.localized_broadcast_right_image = (0, _._)(
-                _.jsondata.localized_broadcast_right_image || [],
-                _.bP9,
-                null,
-              )),
-              (_.jsondata.localized_sale_header = (0, _._)(
-                _.jsondata.localized_sale_header || [],
-                _.bP9,
-                null,
-              )),
-              (_.jsondata.localized_sale_overlay = (0, _._)(
-                _.jsondata.localized_sale_overlay || [],
-                _.bP9,
-                null,
-              )),
-              (_.jsondata.localized_sale_product_banner = (0, _._)(
-                _.jsondata.localized_sale_product_banner || [],
-                _.bP9,
-                null,
-              )),
-              (_.jsondata.localized_sale_product_mobile_banner = (0, _._)(
-                _.jsondata.localized_sale_product_mobile_banner || [],
-                _.bP9,
-                null,
-              )),
-              (_.jsondata.localized_sale_logo = (0, _._)(
-                _.jsondata.localized_sale_logo || [],
-                _.bP9,
-                null,
-              )),
-              void 0 !== _.jsondata.sale_num_headers &&
-                _.jsondata.localized_per_day_sales_header)
-            )
-              for (let _ = 0; _ < _.jsondata.sale_num_headers; ++_)
-                _.jsondata.localized_per_day_sales_header[_] = (0, _._)(
-                  _.jsondata.localized_per_day_sales_header[_],
-                  _.bP9,
-                  null,
-                );
-            return (
-              _.jsondata.sale_sections &&
-                _.jsondata.sale_sections.forEach((_, _) => {
-                  _.localized_label &&
-                    (_.localized_label = (0, _._)(
-                      _.localized_label,
-                      _.bP9,
-                      null,
-                    )),
-                    "trailercarousel" === _.section_type &&
-                      (_.show_as_carousel = !1),
-                    (_.jsondata.sale_sections[_] = {
-                      ..._._,
-                      ..._,
-                    });
-                }),
-              _.jsondata.email_setting &&
-                _.jsondata.email_setting.sections &&
-                _.jsondata.email_setting.sections.forEach((_) => {
-                  void 0 !== _.localized_headline &&
-                    null !== _.localized_headline &&
-                    (_.localized_headline = (0, _._)(
-                      _.localized_headline,
-                      _.bP9,
-                      null,
-                    )),
-                    void 0 !== _.localized_body &&
-                      null !== _.localized_body &&
-                      (_.localized_body = (0, _._)(
-                        _.localized_body,
-                        _.bP9,
-                        null,
-                      )),
-                    void 0 !== _.localized_image &&
-                      null !== _.localized_image &&
-                      (_.localized_image = (0, _._)(
-                        _.localized_image,
-                        _.bP9,
-                        null,
-                      ));
-                }),
-              _.jsondata.localized_title_image.forEach((_, _) => {
-                if (null != _ && "http" == _.substr(0, 4)) {
-                  let _ = _.lastIndexOf("/"),
-                    _ = _.substr(_ + 1);
-                  _.jsondata.localized_title_image[_] = _;
-                }
-              }),
-              (_.bLoaded = !0),
-              _.published
-                ? _.unlisted
-                  ? (_.visibility_state = _._.k_EEventStateUnlisted)
-                  : _.hidden
-                    ? (_.visibility_state = _._.k_EEventStateStaged)
-                    : (_.visibility_state = _._.k_EEventStateVisible)
-                : (_.visibility_state = _._.k_EEventStateUnpublished),
-              _
-            );
-          })(_, _);
+          const _ = (0, _._)(_, _);
           return (
             this.InsertUniqueEventGID(_.GetAccountID(), _.appid, _.GID),
             this.m_mapExistingEvents.set(_.GID, _),
@@ -716,7 +723,7 @@
               if (_?.data?.success == _._)
                 (0, _._)(() => {
                   for (let _ of _.data.events) {
-                    let _ = _(_);
+                    let _ = (0, _._)(_);
                     if (!this.m_mapExistingEvents.has(_)) {
                       let _ = new _._(_.clan_steamid);
                       this.InsertEventModelFromClanEventData(_ || _, _);
@@ -778,7 +785,7 @@
             });
             (0, _._)(() => {
               for (let _ of _.data.events) {
-                let _ = _(_);
+                let _ = (0, _._)(_);
                 if (!this.m_mapExistingEvents.has(_)) {
                   let _ = new _._(_.clan_steamid);
                   this.InsertEventModelFromClanEventData(_, _);
@@ -816,7 +823,7 @@
           return (
             (0, _._)(() => {
               for (let _ of _.data.events) {
-                let _ = _(_);
+                let _ = (0, _._)(_);
                 if (!this.m_mapExistingEvents.has(_)) {
                   let _ = new _._(_.clan_steamid);
                   this.InsertEventModelFromClanEventData(_, _);
@@ -866,7 +873,7 @@
           return (
             (0, _._)(() => {
               for (let _ of _.data.events) {
-                let _ = _(_);
+                let _ = (0, _._)(_);
                 if (!this.m_mapExistingEvents.has(_)) {
                   let _ = new _._(_.clan_steamid);
                   this.InsertEventModelFromClanEventData(_, _);
@@ -982,7 +989,7 @@
             let _ = await _().get(_, _);
             if (_.data.success !== _._) return;
             let _ = _.data.event,
-              _ = _(_);
+              _ = (0, _._)(_);
             if (
               !this.m_mapExistingEvents.has(_) ||
               (this.m_mapExistingEvents.get(_).rtime32_last_modified ?? 0) <
@@ -1200,7 +1207,7 @@
               _.forEach((_) => {
                 if (_ && _.data && _.data.events)
                   for (let _ of _.data.events) {
-                    let _ = _(_);
+                    let _ = (0, _._)(_);
                     if (!this.m_mapExistingEvents.has(_)) {
                       let _ = new _._(_.clan_steamid);
                       this.InsertEventModelFromClanEventData(_, _);

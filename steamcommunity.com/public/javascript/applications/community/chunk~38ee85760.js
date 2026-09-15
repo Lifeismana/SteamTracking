@@ -66,13 +66,16 @@
     39832: (e, t, r) => {
       "use strict";
       r.d(t, {
+        sq: () => m,
+        u6: () => p,
         cc: () => d,
+        vl: () => b,
         TW: () => a,
-        P0: () => u,
-        KC: () => f,
+        P0: () => f,
+        KC: () => h,
         $z: () => l,
-        _l: () => h,
-        R2: () => b,
+        _l: () => u,
+        R2: () => k,
       });
       var n = r(3049);
       const c = {};
@@ -133,7 +136,7 @@
         const r = { year: "numeric", month: "short", day: "numeric", ...t };
         return new Date(1e3 * e).toLocaleDateString((0, n.J)(), r);
       }
-      function h(e, t) {
+      function u(e, t) {
         const {
             fullmonthname: r = !1,
             bUseRelativeNames: c = !0,
@@ -143,19 +146,19 @@
           a = new Date(1e3 * e);
         if (a.getFullYear() != s.getFullYear())
           return l(e, { month: r ? "long" : "short" });
-        const h = new Date();
-        if ((h.setHours(0, 0, 0, 0), c))
-          if (a >= h) {
-            if ((h.setDate(h.getDate() + 1), a < h))
+        const u = new Date();
+        if ((u.setHours(0, 0, 0, 0), c))
+          if (a >= u) {
+            if ((u.setDate(u.getDate() + 1), a < u))
               return o.Localize("#Time_Today");
-            if ((h.setDate(h.getDate() + 1), a < h))
+            if ((u.setDate(u.getDate() + 1), a < u))
               return o.Localize("#Time_Tomorrow");
-          } else if ((h.setDate(h.getDate() - 1), a >= h))
+          } else if ((u.setDate(u.getDate() - 1), a >= u))
             return o.Localize("#Time_Yesterday");
-        const f = { month: r ? "long" : "short", day: "numeric" };
-        return i && (f.weekday = "long"), a.toLocaleDateString((0, n.J)(), f);
+        const h = { month: r ? "long" : "short", day: "numeric" };
+        return i && (h.weekday = "long"), a.toLocaleDateString((0, n.J)(), h);
       }
-      function f(e, t, r) {
+      function h(e, t, r) {
         const c = new Date(1e3 * e),
           o = (0, n.J)(),
           i = {
@@ -174,7 +177,7 @@
           };
         return c.toLocaleTimeString(o, i);
       }
-      function u(e, t, r) {
+      function f(e, t, r) {
         return (
           (function (e, t = !1, r = !0) {
             const c = {
@@ -185,7 +188,7 @@
             return e.toLocaleDateString((0, n.J)(), c);
           })(new Date(1e3 * e), !1, !1) +
           " " +
-          f(e, { bForce24HourClock: t }) +
+          h(e, { bForce24HourClock: t }) +
           " " +
           r
         );
@@ -194,6 +197,45 @@
         return e.toLocaleDateString((0, n.J)(), { weekday: "long" });
       }
       function b(e) {
+        return e.toLocaleDateString((0, n.J)(), { year: "numeric" });
+      }
+      function m(e) {
+        return e.toLocaleDateString((0, n.J)(), {
+          month: "long",
+          year: "numeric",
+        });
+      }
+      function p(e, t) {
+        switch (e.getUTCMonth()) {
+          case 0:
+          case 1:
+          case 2:
+            return o.Localize(
+              t ? "#Time_QuarterOfYear_Expanded_Q1" : "#Time_QuarterOfYear_Q1",
+              e.getUTCFullYear(),
+            );
+          case 3:
+          case 4:
+          case 5:
+            return o.Localize(
+              t ? "#Time_QuarterOfYear_Expanded_Q2" : "#Time_QuarterOfYear_Q2",
+              e.getUTCFullYear(),
+            );
+          case 6:
+          case 7:
+          case 8:
+            return o.Localize(
+              t ? "#Time_QuarterOfYear_Expanded_Q3" : "#Time_QuarterOfYear_Q3",
+              e.getUTCFullYear(),
+            );
+          default:
+            return o.Localize(
+              t ? "#Time_QuarterOfYear_Expanded_Q4" : "#Time_QuarterOfYear_Q4",
+              e.getUTCFullYear(),
+            );
+        }
+      }
+      function k(e) {
         const t = Math.floor(e / s.Kp.PerYear),
           r = Math.floor(e / s.Kp.PerMonth),
           n = Math.floor((e % s.Kp.PerMonth) / s.Kp.PerDay),
@@ -255,7 +297,7 @@
     },
     22797: (e, t, r) => {
       "use strict";
-      r.d(t, { t: () => f });
+      r.d(t, { t: () => h });
       var n = r(7850),
         c = r(90626),
         o = r(52038),
@@ -265,19 +307,19 @@
         r.p +
         "images/applications/community/steam_spinner.png?v=valveisgoodatcaching";
       var l = r(42248),
-        h = r(66418);
-      const f = c.memo(function (e) {
+        u = r(66418);
+      const h = c.memo(function (e) {
         const {
           className: t,
           size: r,
           string: i,
-          position: f,
+          position: h,
           static: d,
           msDelayAppear: b,
         } = e;
-        let m = [s().LoadingWrapper, "SteamLogoThrobber", u(r)];
+        let m = [s().LoadingWrapper, "SteamLogoThrobber", f(r)];
         const [p, k] = c.useState(!b),
-          g = !(0, l.q)();
+          _ = !(0, l.q)();
         return (
           (0, c.useEffect)(() => {
             if (p) return;
@@ -289,18 +331,18 @@
           d && m.push(s().Static),
           (0, n.jsxs)("div", {
             className: (0, o.A)(
-              "center" == f && s().throbber_center_wrapper,
+              "center" == h && s().throbber_center_wrapper,
               !!b && s().ThrobberDelayAppear,
               p && s().Visible,
             ),
             children: [
               p &&
-                g &&
+                _ &&
                 (0, n.jsx)("div", {
                   className: m.join(" "),
                   children: (0, n.jsx)("div", {
                     className: s().NewThrobber,
-                    children: (0, n.jsx)("img", { src: (0, h.YJ)(a) }),
+                    children: (0, n.jsx)("img", { src: (0, u.YJ)(a) }),
                   }),
                 }),
               Boolean(i) &&
@@ -316,29 +358,29 @@
           string: i,
           position: a,
           static: l,
-          msDelayAppear: h,
+          msDelayAppear: u,
         } = e;
-        let f = [s().LoadingWrapper, "SteamLogoThrobber", u(r)];
-        const [b, m] = c.useState(!h);
+        let h = [s().LoadingWrapper, "SteamLogoThrobber", f(r)];
+        const [b, m] = c.useState(!u);
         return (
           (0, c.useEffect)(() => {
             if (b) return;
-            const e = setTimeout(() => m(!0), h);
+            const e = setTimeout(() => m(!0), u);
             return () => clearTimeout(e);
-          }, [h, b]),
-          void 0 === i && f.push(s().noString),
-          t && f.push(t),
-          l && f.push(s().Static),
+          }, [u, b]),
+          void 0 === i && h.push(s().noString),
+          t && h.push(t),
+          l && h.push(s().Static),
           (0, n.jsxs)("div", {
             className: (0, o.A)(
               "center" == a && s().throbber_center_wrapper,
-              !!h && s().ThrobberDelayAppear,
+              !!u && s().ThrobberDelayAppear,
               b && s().Visible,
             ),
             children: [
               b &&
                 (0, n.jsx)("div", {
-                  className: f.join(" "),
+                  className: h.join(" "),
                   children: (0, n.jsxs)("div", {
                     className: s().Throbber,
                     children: [
@@ -353,7 +395,7 @@
           })
         );
       });
-      function u(e) {
+      function f(e) {
         switch (e) {
           case "small":
             return s().throbber_small;

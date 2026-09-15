@@ -10656,10 +10656,14 @@
             (_ ? _.MergeData(_, _) : ((_ = new _(_, _)), _.set(_._(), _)),
             _.include_included_items && _.included_items(!1))
           ) {
+            const _ = _.included_item_data_request ?? {
+              ..._,
+              include_included_items: !1,
+            };
             for (const _ of _.included_items().included_apps())
-              this.ReadItem(_, _.included_item_data_request);
+              this.ReadItem(_, _);
             for (const _ of _.included_items().included_packages())
-              this.ReadItem(_, _.included_item_data_request);
+              this.ReadItem(_, _);
           }
           return _;
         }
@@ -18707,7 +18711,10 @@
             transform: `translateX(${_}px)`,
           },
           children: (0, _.jsx)("div", {
-            className: _().CompoundSliderSubSliderLabelInternal,
+            className: (0, _._)(
+              _().CompoundSliderSubSliderLabelInternal,
+              "CompoundSliderSubSliderLabelInternal",
+            ),
             children: _,
           }),
         });
@@ -19724,86 +19731,41 @@
           bLoop: _ ? _ : _,
         });
       }
-      class _ {
-        constructor() {
-          (0, _._)(this);
-        }
-        m_mapYouTubeVideo = new Map();
-        m_mapSharedFile = new Map();
-        async LoadYouTubeDynamicData(_, _) {
-          let _ = new Array(),
-            _ = "";
-          if (
-            (_.forEach((_, _) => {
-              const _ = this.m_mapYouTubeVideo.get(_);
-              _
-                ? __webpack_require__.push(_)
-                : (_.length > 0 && (_ += ","), (_ += _));
-            }),
-            0 == _.length)
-          )
-            return _;
-          let _ = {
-            youtubevideoids: _,
-          };
-          const _ = await _().get(
-              _._.STORE_BASE_URL + "/events/ajaxgetdynamiceventmetadata",
-              {
-                params: _,
-                cancelToken: _.token,
-              },
-            ),
-            _ = _?.data?.youtube;
-          return (
-            _ &&
-              (0, _._)(() => {
-                _.forEach((_, _) => {
-                  this.m_mapYouTubeVideo.set(_.videoid, _),
-                    __webpack_require__.push(_);
-                });
-              }),
-            _
-          );
-        }
-        async LoadSharedFileDynamicData(_, _) {
-          let _ = new Array(),
-            _ = "";
-          if (
-            (_.forEach((_, _) => {
-              const _ = this.m_mapSharedFile.get(_);
-              _
-                ? __webpack_require__.push(_)
-                : (_.length > 0 && (_ += ","), (_ += _));
-            }),
-            0 == _.length)
-          )
-            return _;
-          let _ = {
-            sharedfileids: _,
-          };
-          const _ = await _().get(
-              _._.STORE_BASE_URL + "/events/ajaxgetdynamiceventmetadata",
-              {
-                params: _,
-                cancelToken: _.token,
-              },
-            ),
-            _ = _?.data?.sharedfiles;
-          return (
-            _ &&
-              (0, _._)(() => {
-                _.forEach((_, _) => {
-                  this.m_mapSharedFile.set(_.sharedfileid, _),
-                    __webpack_require__.push(_);
-                });
-              }),
-            _
-          );
-        }
+      var _ = __webpack_require__("chunkid");
+      async function _(_) {
+        const _ =
+            _._.STORE_BASE_URL +
+            "events/ajaxgetdynamiceventmetadata?" +
+            new URLSearchParams(_).toString(),
+          _ = await fetch(_, {
+            credentials: "include",
+          });
+        if (!_._) throw new Error(`${_} answered ${_.status}`);
+        return await __webpack_require__.json();
       }
-      (0, _._)([_._], _.prototype, "m_mapYouTubeVideo", void 0),
-        (0, _._)([_._], _.prototype, "m_mapSharedFile", void 0);
-      const _ = new _();
+      function _(_) {
+        return ["DynamicEventMetadata", "youtube", _];
+      }
+      function _(_, _ = !0) {
+        return (0, _._)(
+          (function (_, _ = !0) {
+            return {
+              queryKey: _(_),
+              queryFn: async () => {
+                const _ = await _({
+                    youtubevideoids: _,
+                  }),
+                  _ = _.youtube?.find((_) => _.videoid == _) ?? _.youtube?.[0];
+                if (!_) throw new Error(`no metadata for youtube video ${_}`);
+                return _;
+              },
+              enabled: _ && !0,
+              staleTime: 36e5,
+              retry: !1,
+            };
+          })(_, _),
+        );
+      }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ =
@@ -20547,7 +20509,6 @@
               preference_state: _._._,
             };
       }
-      var _ = __webpack_require__("chunkid");
       function _() {
         const _ = (0, _._)();
         return (0, _._)(
@@ -20932,42 +20893,11 @@
             classNameAlign: _,
           } = _,
           [_, _] = (0, _.useState)(!_),
-          [_, _] = (0, _.useState)(!1),
-          _ = (function (_) {
-            const _ = _.useRef(_().CancelToken.source());
-            return (
-              _.useEffect(() => {
-                const _ = _.current;
-                return () =>
-                  __webpack_require__.cancel(
-                    _ ? `${_}: unmounting` : "unmounting",
-                  );
-              }, [_]),
-              _.current
-            );
-          })("YouTubeInlineSnippet"),
-          [_, _] = (0, _.useState)({
-            title: (0, _._)("#Loading"),
-            description: "",
-            videoid: _,
-            views: "0",
-          });
-        if (
-          ((0, _.useEffect)(() => {
-            _ &&
-              _.LoadYouTubeDynamicData([_], _)
-                .then((_) => {
-                  !_.token.reason && _.length > 0 && (_(_[0]), _(!0));
-                })
-                .catch((_) =>
-                  console.error("YouTubeInlineSnippet: " + _(_).strErrorMsg),
-                );
-          }, [_, _, _]),
-          _)
-        ) {
-          const _ = _.title,
-            _ = _.views,
-            _ = _.description;
+          { data: _, isSuccess: _ } = _(_, _);
+        if (_) {
+          const _ = _?.title ?? (0, _._)("#Loading"),
+            _ = _?.views ?? "0",
+            _ = _?.description ?? "";
           return (0, _.jsxs)("div", {
             className: _.Box,
             onClick: () => _(!1),
@@ -29127,6 +29057,97 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
+      function _(
+        _,
+        {
+          activeBitColor: _ = [33, 35, 40],
+          inactiveBitColor: _ = [255, 255, 255],
+          borderWidth: _ = 3,
+        } = {},
+        _ = {},
+      ) {
+        const _ = _()(_, _).modules;
+        if (!_) return null;
+        let _ = [];
+        for (let _ = 0; _ < _; _++) _.push(Array(_.length + 2 * _).fill(!1));
+        for (let _ = 0; _ < _.length; _++)
+          _.push([
+            ...Array.from(
+              {
+                length: _,
+              },
+              () => !1,
+            ),
+            ..._[_],
+            ...Array.from(
+              {
+                length: _,
+              },
+              () => !1,
+            ),
+          ]);
+        for (let _ = 0; _ < _; _++) _.push(Array(_.length + 2 * _).fill(!1));
+        return (function (_, _, _) {
+          const _ = _.length,
+            _ = _[0].length,
+            _ = new Uint8Array(40 + (_ + 2) * _);
+          let _ = 0;
+          (_[_++] = 71),
+            (_[_++] = 73),
+            (_[_++] = 70),
+            (_[_++] = 56),
+            (_[_++] = 57),
+            (_[_++] = 97),
+            (_[_++] = _),
+            (_[_++] = 0),
+            (_[_++] = _),
+            (_[_++] = 0),
+            (0, _._)(
+              "transparent" != _ || "transparent" != _,
+              "Trying to use transparent for both colors in QR",
+            ),
+            (_[_++] = 161),
+            (_[_++] = 0),
+            (_[_++] = 0),
+            "transparent" == _
+              ? ((_[_++] = 0), (_[_++] = 0), (_[_++] = 0))
+              : ((_[_++] = _[0]), (_[_++] = _[1]), (_[_++] = _[2])),
+            "transparent" == _
+              ? ((_[_++] = 0), (_[_++] = 0), (_[_++] = 0))
+              : ((_[_++] = _[0]), (_[_++] = _[1]), (_[_++] = _[2])),
+            (_[_++] = 255),
+            (_[_++] = 255),
+            (_[_++] = 255),
+            (_[_++] = 255),
+            (_[_++] = 255),
+            (_[_++] = 255),
+            ("transparent" != _ && "transparent" != _) ||
+              ((_[_++] = 33),
+              (_[_++] = 249),
+              (_[_++] = 4),
+              (_[_++] = 1),
+              (_[_++] = 0),
+              (_[_++] = 0),
+              (_[_++] = "transparent" == _ ? 0 : 1),
+              (_[_++] = 0)),
+            (_[_++] = 44),
+            (_[_++] = 0),
+            (_[_++] = 0),
+            (_[_++] = 0),
+            (_[_++] = 0),
+            (_[_++] = _),
+            (_[_++] = 0),
+            (_[_++] = _),
+            (_[_++] = 0),
+            (_[_++] = 0),
+            (_[_++] = 7);
+          for (let _ = 0; _ < _.length; _++) {
+            (_[_++] = _ + 1), (_[_++] = 128);
+            for (let _ = 0; _ < _.length; _++) _[_++] = _[_][_] ? 0 : 1;
+          }
+          return (_[_++] = 1), (_[_++] = 129), (_[_++] = 0), (_[_++] = 59), _;
+        })(_, _, _);
+      }
       function _(_) {
         let {
           quality: _ = _._,
@@ -29137,91 +29158,39 @@
           borderWidth: _ = 3,
           typeNumber: _ = 6,
         } = _;
-        const _ = (function (_, _ = {}) {
-          const { typeNumber: _, errorCorrectLevel: _ } = _,
-            [_, _] = (0, _.useState)();
-          return (
-            (0, _.useEffect)(() => {
+        const _ = (function (_, _) {
+          const {
+            typeNumber: _,
+            errorCorrectLevel: _,
+            activeBitColor: _,
+            inactiveBitColor: _,
+            borderWidth: _,
+          } = _;
+          return (0, _.useMemo)(
+            () =>
               _(
-                _()(_, {
+                _,
+                {
+                  activeBitColor: _,
+                  inactiveBitColor: _,
+                  borderWidth: _,
+                },
+                {
                   typeNumber: _,
                   errorCorrectLevel: _,
-                }).modules,
-              );
-            }, [_, _, _]),
-            _
+                },
+              ),
+            [_, _, _, _, _, _],
           );
         })(_, {
           typeNumber: _,
           errorCorrectLevel: _,
+          activeBitColor: _,
+          inactiveBitColor: _,
+          borderWidth: _,
         });
         if (!_) return null;
-        let _ = [];
-        for (let _ = 0; _ < _; _++) _.push(Array(_.length + 2 * _).fill(!1));
-        for (let _ = 0; _ < _.length; _++)
-          _.push([].concat(Array(_).fill(!1), _[_], Array(_).fill(!1)));
-        for (let _ = 0; _ < _; _++) _.push(Array(_.length + 2 * _).fill(!1));
-        const _ = (function (_, _, _) {
-            const _ = _.length,
-              _ = _[0].length,
-              _ = new Uint8Array(40 + (_ + 2) * _);
-            let _ = 0;
-            (_[_++] = 71),
-              (_[_++] = 73),
-              (_[_++] = 70),
-              (_[_++] = 56),
-              (_[_++] = 57),
-              (_[_++] = 97),
-              (_[_++] = _),
-              (_[_++] = 0),
-              (_[_++] = _),
-              (_[_++] = 0),
-              (0, _._)(
-                "transparent" != _ || "transparent" != _,
-                "Trying to use transparent for both colors in QR",
-              ),
-              (_[_++] = 161),
-              (_[_++] = 0),
-              (_[_++] = 0),
-              "transparent" == _
-                ? ((_[_++] = 0), (_[_++] = 0), (_[_++] = 0))
-                : ((_[_++] = _[0]), (_[_++] = _[1]), (_[_++] = _[2])),
-              "transparent" == _
-                ? ((_[_++] = 0), (_[_++] = 0), (_[_++] = 0))
-                : ((_[_++] = _[0]), (_[_++] = _[1]), (_[_++] = _[2])),
-              (_[_++] = 255),
-              (_[_++] = 255),
-              (_[_++] = 255),
-              (_[_++] = 255),
-              (_[_++] = 255),
-              (_[_++] = 255),
-              ("transparent" != _ && "transparent" != _) ||
-                ((_[_++] = 33),
-                (_[_++] = 249),
-                (_[_++] = 4),
-                (_[_++] = 1),
-                (_[_++] = 0),
-                (_[_++] = 0),
-                (_[_++] = "transparent" == _ ? 0 : 1),
-                (_[_++] = 0)),
-              (_[_++] = 44),
-              (_[_++] = 0),
-              (_[_++] = 0),
-              (_[_++] = 0),
-              (_[_++] = 0),
-              (_[_++] = _),
-              (_[_++] = 0),
-              (_[_++] = _),
-              (_[_++] = 0),
-              (_[_++] = 0),
-              (_[_++] = 7);
-            for (let _ = 0; _ < _.length; _++) {
-              (_[_++] = _ + 1), (_[_++] = 128);
-              for (let _ = 0; _ < _.length; _++) _[_++] = _[_][_] ? 0 : 1;
-            }
-            return (_[_++] = 1), (_[_++] = 129), (_[_++] = 0), (_[_++] = 59), _;
-          })(_, _, _),
-          _ = new Blob([_], {
+        const _ = new Blob([_], {
             type: "image/gif",
           }),
           _ = URL.createObjectURL(_),
@@ -31180,7 +31149,7 @@
           errorColor: _ = "red",
           bodyTextColor: _ = "text-light",
           successTextColor: _ = "text-green",
-          warningTextColor: _ = "text-red",
+          warningTextColor: _ = "text-yellow",
           errorTextColor: _ = "text-red",
           breakpoints: _,
           variants: _,
@@ -38499,6 +38468,11 @@
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
+                  frame_rate_limit: {
+                    _: 7,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
                 },
               }),
             _.sm_m
@@ -39037,6 +39011,7 @@
           "Millennium internal",
           "millenium",
           "millennium",
+          "decky://",
           "Refused unauthorized RPC command",
         ];
       function _() {
@@ -43193,6 +43168,11 @@
                     _: !0,
                     _: !0,
                   },
+                  skip_lock: {
+                    _: 7,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
                 },
               }),
             _.sm_m
@@ -47135,6 +47115,11 @@
                     _: 13,
                     _: _._.readString,
                     _: _._.writeString,
+                  },
+                  skip_lock: {
+                    _: 14,
+                    _: _._.readBool,
+                    _: _._.writeBool,
                   },
                 },
               }),
@@ -52650,6 +52635,11 @@
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
+                  app_running: {
+                    _: 6,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
                 },
               }),
             _.sm_m
@@ -53769,6 +53759,11 @@
                     _: 4,
                     _: _._.readBool,
                     _: _._.writeBool,
+                  },
+                  time_completed: {
+                    _: 9,
+                    _: _._.readFixed32,
+                    _: _._.writeFixed32,
                   },
                 },
               }),
@@ -59483,7 +59478,7 @@
         constructor(_ = null) {
           super(),
             _.prototype.type || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [3, 9], null);
+            _.Message.initialize(this, _, 0, -1, [3, 9, 12], null);
         }
         static sm_m;
         static sm_mbf;
@@ -59552,6 +59547,14 @@
                     _: 11,
                     _: _._.readBool,
                     _: _._.writeBool,
+                  },
+                  descriptor_images: {
+                    _: 12,
+                    _: !0,
+                    _: !0,
+                    _: _._.readEnum,
+                    pbr: _._.readPackedEnum,
+                    _: _._.writeRepeatedEnum,
                   },
                   image_url: {
                     _: 20,
@@ -67848,15 +67851,16 @@
               _.included_item_data_request = _;
             }
             const _ = _._.Init(_._);
-            let _;
-            if (
-              (_(_, _),
+            _(_, _),
               (function (_, _) {
                 _.Body().set_data_request(_._.fromObject(_));
-              })(_, _),
-              _.forEach((_) => {
+              })(_, _);
+            const _ = [];
+            let _;
+            if (
+              (_.forEach((_) => {
                 const _ = (0, _._)(_);
-                _ && _.Body().add_ids(_._.fromObject(_));
+                _ && (_.Body().add_ids(_._.fromObject(_)), _.push(_));
               }),
               _.bUsePartnerAPI)
             ) {
@@ -67871,8 +67875,10 @@
             return (
               _.Body()
                 .store_items()
-                .forEach((_) => {
-                  _.set((0, _._)(_.item_type(), _.gid() ?? _._()), _);
+                .forEach((_, _) => {
+                  const _ = _.item_type(),
+                    _ = void 0 !== _ ? (0, _._)(_, _.gid() ?? _._()) : _[_];
+                  _ && _.set(_, _);
                 }),
               _ &&
                 (function (_, _, _, _) {
@@ -67882,14 +67888,20 @@
                       return;
                     let _ = !1;
                     const _ = {};
-                    _.forEach((_) => {
-                      _.has(_) ||
-                        ((_ = !0),
-                        "top_tags" == _
-                          ? (_.include_tag_count = 20)
-                          : _ && "default_info" != _ && (_[_] = !0));
-                    }),
-                      _ && _(_, _);
+                    if (
+                      (_.forEach((_) => {
+                        _.has(_) ||
+                          ((_ = !0),
+                          "top_tags" == _
+                            ? (_.include_tag_count = 20)
+                            : _ && "default_info" != _ && (_[_] = !0));
+                      }),
+                      _.include_included_items)
+                    ) {
+                      const { include_included_items: _, ..._ } = _;
+                      _.included_item_data_request = _;
+                    }
+                    _ && _(_, _);
                   });
                 })(_, _, _, _),
               __webpack_require__.map((_) => {
@@ -73816,6 +73828,7 @@
           IN_CHROMEOS: !1,
           TESLA: !1,
           LOCAL_HOSTNAME: "",
+          PACKAGE_CL: "",
           WEBAPI_BASE_URL: "",
           TOKEN_URL: "",
           BUILD_TIMESTAMP: 0,
@@ -73988,7 +74001,7 @@
   },
   (_) => {
     _._(0, [8997], () => {
-      return (_ = 7419), _((_._ = _));
+      return (_ = 4489), _((_._ = _));
       var _;
     });
     _._();

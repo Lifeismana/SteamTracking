@@ -93,6 +93,7 @@ message CFriendMessages_ResolveReport_Request {
 	optional int32 resolution = 5 [(.description) = "enum"];
 	optional int32 reason = 6 [(.description) = "enum"];
 	optional bool skip_lock = 7;
+	optional uint64 reported_content_id = 8;
 }
 
 message CFriendMessages_ResolveReport_Response {

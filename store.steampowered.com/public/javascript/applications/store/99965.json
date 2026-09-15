@@ -1383,6 +1383,8 @@
     "Login_GoOffline_Button": "进入离线模式",
     "Login_Error_Anonymous_Title": "不支持",
     "Login_Error_Anonymous_Description": "网页端和桌面版 Steam 客户端均不支持匿名登录；仅 steamcmd 支持匿名登陆。",
+    "Login_Error_Action_Necessary_Title": "Account Action Necessary",
+    "Login_Error_Action_Necessary_Description": "Please log in on another device or scan the QR code.",
     "Login_Error_Default_Description": "登录时出现错误。请稍后再试。",
     "Login_Error_MoveAuthenticator_Description": "在移动您的验证器时出现问题，请稍后再试。",
     "Login_ConnectingToSteam": "正在连接到 Steam",

@@ -236,6 +236,82 @@
         });
       }
     },
+    80664: (e, t, r) => {
+      "use strict";
+      r.d(t, { F8: () => l, oK: () => u });
+      var i = r(66418),
+        n = r(88942);
+      const s = "events/ajaxgetdynamiceventmetadata";
+      async function a(e) {
+        const t =
+            i.TS.STORE_BASE_URL + s + "?" + new URLSearchParams(e).toString(),
+          r = await fetch(t, { credentials: "include" });
+        if (!r.ok) throw new Error(`${t} answered ${r.status}`);
+        return await r.json();
+      }
+      function o(e) {
+        return ["DynamicEventMetadata", "youtube", e];
+      }
+      function l(e, t = !0) {
+        return (0, n.I)(
+          (function (e, t = !0) {
+            return {
+              queryKey: o(e),
+              queryFn: async () => {
+                var t, r, i;
+                const n = await a({ youtubevideoids: e }),
+                  s =
+                    null !==
+                      (r =
+                        null === (t = n.youtube) || void 0 === t
+                          ? void 0
+                          : t.find((t) => t.videoid == e)) && void 0 !== r
+                      ? r
+                      : null === (i = n.youtube) || void 0 === i
+                        ? void 0
+                        : i[0];
+                if (!s) throw new Error(`no metadata for youtube video ${e}`);
+                return s;
+              },
+              enabled: t && !0,
+              staleTime: 36e5,
+              retry: !1,
+            };
+          })(e, t),
+        );
+      }
+      function c(e) {
+        return ["DynamicEventMetadata", "sharedfile", e];
+      }
+      function u(e) {
+        return (0, n.I)(
+          (function (e) {
+            return {
+              queryKey: c(e),
+              queryFn: async () => {
+                var t, r, i;
+                const n = await a({ sharedfileids: e }),
+                  s =
+                    null !==
+                      (r =
+                        null === (t = n.sharedfiles) || void 0 === t
+                          ? void 0
+                          : t.find((t) => t.sharedfileid == e)) && void 0 !== r
+                      ? r
+                      : null === (i = n.sharedfiles) || void 0 === i
+                        ? void 0
+                        : i[0];
+                if (!s) throw new Error(`no metadata for shared file ${e}`);
+                return s;
+              },
+              enabled: !0,
+              staleTime: 36e5,
+              retry: !1,
+            };
+          })(e),
+        );
+      }
+    },
     29609: (e, t, r) => {
       "use strict";
       r.d(t, {
@@ -257,25 +333,25 @@
       var s = {};
       r.r(s),
         r.d(s, {
-          XR: () => g,
-          x7: () => f,
+          XR: () => f,
+          x7: () => g,
           Bc: () => j,
-          xJ: () => w,
+          xJ: () => b,
           QB: () => x,
-          Bk: () => B,
+          Bk: () => C,
           Ou: () => I,
           r: () => _,
           PQ: () => v,
           W: () => S,
           LK: () => M,
-          zE: () => b,
+          zE: () => w,
           mj: () => y,
-          hK: () => C,
+          hK: () => B,
         });
       var a = {};
       r.r(a), r.d(a, { rg: () => A, kE: () => E });
       var o = {};
-      r.r(o), r.d(o, { hu: () => T, yt: () => N });
+      r.r(o), r.d(o, { hu: () => N, yt: () => T });
       var l = r(80613),
         c = r.n(l),
         u = r(89068),
@@ -283,15 +359,15 @@
       const m = 0,
         p = 72,
         h = 1,
-        g = 1,
-        f = 2,
+        f = 1,
+        g = 2,
         _ = 3,
         y = 4,
         S = 5,
-        b = 6,
-        w = 7,
-        C = 8,
-        B = 9,
+        w = 6,
+        b = 7,
+        B = 8,
+        C = 9,
         v = 10,
         x = 11,
         M = 12,
@@ -299,8 +375,8 @@
         j = 14,
         A = 1,
         E = 2,
-        T = 1,
-        N = 3;
+        N = 1,
+        T = 3;
       function k(e) {
         return "unknown EVirtualItemRewardEvent ( " + e + " )";
       }
@@ -1535,19 +1611,19 @@
     59952: (e, t, r) => {
       "use strict";
       r.d(t, {
-        B8: () => N,
+        B8: () => T,
         It: () => x,
-        N2: () => C,
-        Pk: () => T,
+        N2: () => B,
+        Pk: () => N,
         Sz: () => j,
         Tu: () => v,
-        W4: () => w,
+        W4: () => b,
         ZS: () => A,
         Zb: () => I,
         _J: () => k,
         ck: () => R,
         d$: () => E,
-        j$: () => B,
+        j$: () => C,
       });
       var i = r(7850),
         n = r(33645),
@@ -1561,13 +1637,13 @@
         m = r(74410),
         p = r(90622),
         h = r(12155),
-        g = r(32754),
-        f = r(52038),
+        f = r(32754),
+        g = r(52038),
         _ = r(61859),
         y = r(61336),
         S = r(30470),
-        b = r(84958);
-      const w = new Map([
+        w = r(84958);
+      const b = new Map([
           [
             "b",
             {
@@ -1585,7 +1661,7 @@
             {
               Constructor: function (e) {
                 return (0, i.jsx)("i", {
-                  className: (0, f.A)(s().Italic, "BB_Italic"),
+                  className: (0, g.A)(s().Italic, "BB_Italic"),
                   children: e.children,
                 });
               },
@@ -1599,7 +1675,7 @@
             "h4",
             {
               Constructor: function (e) {
-                return M("h4", e, (0, f.A)(s().Header4, "BB_Header4"));
+                return M("h4", e, (0, g.A)(s().Header4, "BB_Header4"));
               },
               autocloses: !1,
               skipFollowingNewline: !0,
@@ -1609,7 +1685,7 @@
             "h5",
             {
               Constructor: function (e) {
-                return M("h5", e, (0, f.A)(s().Header5, "BB_Header5"));
+                return M("h5", e, (0, g.A)(s().Header5, "BB_Header5"));
               },
               autocloses: !1,
               skipFollowingNewline: !0,
@@ -1619,7 +1695,7 @@
             "center",
             {
               Constructor: function (e) {
-                let t = B(e.args, "id");
+                let t = C(e.args, "id");
                 t &&
                   "string" == typeof t &&
                   t.length > 0 &&
@@ -1627,7 +1703,7 @@
                   (t = t.substring(1));
                 return (0, i.jsx)("span", {
                   id: t || void 0,
-                  className: (0, f.A)(s().CenterSpan, "BB_Center"),
+                  className: (0, g.A)(s().CenterSpan, "BB_Center"),
                   children: e.children,
                 });
               },
@@ -1638,7 +1714,7 @@
             "smalltext",
             {
               Constructor: function (e) {
-                return M("div", e, (0, f.A)(s().SmallText, "BB_SmallText"));
+                return M("div", e, (0, g.A)(s().SmallText, "BB_SmallText"));
               },
               autocloses: !1,
               skipFollowingNewline: !0,
@@ -1677,7 +1753,7 @@
                     r(!t);
                   }, [t]);
                 return (0, i.jsx)(o.Z, {
-                  className: (0, f.A)(s().Spoiler, t && s().Revealed),
+                  className: (0, g.A)(s().Spoiler, t && s().Revealed),
                   focusable: !0,
                   onActivate: n,
                   onOKActionDescription: (0, _.we)(
@@ -1714,15 +1790,15 @@
             "url",
             {
               Constructor: function (e) {
-                let t = (0, p.J)(B(e.args));
+                let t = (0, p.J)(C(e.args));
                 if (!t) {
                   const r = e.children;
                   "string" == typeof r && (0, y.DZ)(r) && (t = (0, p.J)(r));
                 }
                 const r =
-                    "button" == B(e.args, "style") ? s().LinkButton : void 0,
-                  n = r && B(e.args, "buttoncolor");
-                let a = B(e.args, "id");
+                    "button" == C(e.args, "style") ? s().LinkButton : void 0,
+                  n = r && C(e.args, "buttoncolor");
+                let a = C(e.args, "id");
                 a &&
                   "string" == typeof a &&
                   a.length > 0 &&
@@ -1749,7 +1825,7 @@
               autocloses: !1,
             },
           ],
-          ["quote", { Constructor: T, autocloses: !1 }],
+          ["quote", { Constructor: N, autocloses: !1 }],
           [
             "pullquote",
             {
@@ -1786,7 +1862,7 @@
               autocloses: !1,
             },
           ],
-          ["list", { Constructor: N, autocloses: !1, skipInternalNewline: !0 }],
+          ["list", { Constructor: T, autocloses: !1, skipInternalNewline: !0 }],
           [
             "olist",
             { Constructor: k, autocloses: !1, skipInternalNewline: !0 },
@@ -1796,11 +1872,11 @@
             "table",
             {
               Constructor: function (e) {
-                const t = B(e.args, "noborder"),
-                  r = B(e.args, "equalcells"),
-                  n = B(e.args, "colwidth");
+                const t = C(e.args, "noborder"),
+                  r = C(e.args, "equalcells"),
+                  n = C(e.args, "colwidth");
                 return (0, i.jsxs)("table", {
-                  className: (0, f.A)(
+                  className: (0, g.A)(
                     s().Table,
                     "BB_Table",
                     t && s().NoBorder,
@@ -1826,7 +1902,7 @@
             {
               Constructor: function (e) {
                 return (0, i.jsx)("tr", {
-                  className: (0, f.A)(s().TableRow, "BB_TableRow"),
+                  className: (0, g.A)(s().TableRow, "BB_TableRow"),
                   children: e.children,
                 });
               },
@@ -1862,11 +1938,11 @@
             {
               Constructor: function (e) {
                 var t;
-                const r = Boolean(B(e.args, "expanded")),
+                const r = Boolean(C(e.args, "expanded")),
                   [n, a] = c.useState(r),
-                  o = B(e.args, "title"),
-                  l = B(e.args, "collapsed_str"),
-                  u = B(e.args, "expanded_str"),
+                  o = C(e.args, "title"),
+                  l = C(e.args, "collapsed_str"),
+                  u = C(e.args, "expanded_str"),
                   d = (function (e, t, r, i) {
                     switch (e) {
                       case "details":
@@ -1896,9 +1972,9 @@
                           style: s().ExpandSection_ShowMore,
                         };
                     }
-                  })(B(e.args, "type"), o, l, u);
+                  })(C(e.args, "type"), o, l, u);
                 return (0, i.jsxs)("div", {
-                  className: (0, f.A)({
+                  className: (0, g.A)({
                     [s().ExpandSectionBlock]: !0,
                     [null !== (t = d.style) && void 0 !== t ? t : ""]:
                       null != d.style,
@@ -1937,29 +2013,29 @@
             {
               Constructor: function (e) {
                 var t, r, n, a, o;
-                const c = B(e.args, "title"),
+                const c = C(e.args, "title"),
                   u =
-                    null !== (t = B(e.args, "start")) && void 0 !== t
+                    null !== (t = C(e.args, "start")) && void 0 !== t
                       ? t
-                      : B(e.args, "datetime"),
+                      : C(e.args, "datetime"),
                   d =
-                    null !== (r = B(e.args, "end")) && void 0 !== r
+                    null !== (r = C(e.args, "end")) && void 0 !== r
                       ? r
-                      : B(e.args, "datetime"),
+                      : C(e.args, "datetime"),
                   m =
-                    null !== (n = B(e.args, "body")) && void 0 !== n ? n : null,
+                    null !== (n = C(e.args, "body")) && void 0 !== n ? n : null,
                   p =
-                    null !== (a = B(e.args, "location")) && void 0 !== a
+                    null !== (a = C(e.args, "location")) && void 0 !== a
                       ? a
                       : null,
-                  h = null !== (o = B(e.args, "id")) && void 0 !== o ? o : "",
-                  g = new Date(u),
-                  _ = g.getUTCFullYear(),
-                  y = ("0" + (g.getUTCMonth() + 1)).slice(-2),
-                  S = ("0" + g.getUTCDate()).slice(-2),
-                  b = ("0" + g.getUTCHours()).slice(-2),
-                  w = ("0" + g.getUTCMinutes()).slice(-2),
-                  C = `${_}${y}${S}T${b}${w}00Z`,
+                  h = null !== (o = C(e.args, "id")) && void 0 !== o ? o : "",
+                  f = new Date(u),
+                  _ = f.getUTCFullYear(),
+                  y = ("0" + (f.getUTCMonth() + 1)).slice(-2),
+                  S = ("0" + f.getUTCDate()).slice(-2),
+                  w = ("0" + f.getUTCHours()).slice(-2),
+                  b = ("0" + f.getUTCMinutes()).slice(-2),
+                  B = `${_}${y}${S}T${w}${b}00Z`,
                   v = new Date(d),
                   x = v.getUTCFullYear(),
                   M = ("0" + (v.getUTCMonth() + 1)).slice(-2),
@@ -1967,33 +2043,33 @@
                   j = ("0" + v.getUTCHours()).slice(-2),
                   A = ("0" + v.getUTCMinutes()).slice(-2),
                   E = `${x}${M}${I}T${j}${A}00Z`;
-                let T;
+                let N;
                 try {
                   let e = "BEGIN:VCALENDAR\r\n";
                   (e += "VERSION:2.0\r\n"),
                     (e += "BEGIN:VEVENT\r\n"),
-                    (e += `DTSTART:${C}\r\n`),
+                    (e += `DTSTART:${B}\r\n`),
                     (e += `DTEND:${E}\r\n`),
                     (e += `SUMMARY:${c.replace("\n", "\\n")}\r\n`),
                     m && (e += `DESCRIPTION:${m.replace("\n", "\\n")}\r\n`),
                     p && (e += `LOCATION:${p.replace("\n", "\\n")}\r\n`),
                     (e += "END:VEVENT\r\n"),
                     (e += "END:VCALENDAR\r\n"),
-                    (T = `data:text/calendar;charset=utf-8;base64,${l.fromByteArray(new TextEncoder().encode(e))}`);
+                    (N = `data:text/calendar;charset=utf-8;base64,${l.fromByteArray(new TextEncoder().encode(e))}`);
                 } catch (e) {
                   console.error(e);
                 }
-                let N =
+                let T =
                   "https://calendar.google.com/calendar/render?action=TEMPLATE";
-                (N += `&text=${encodeURI(c)}`),
-                  (N += `&details=${encodeURI(m)}`),
-                  (N += `&dates=${encodeURI(C + "/" + E)}`);
+                (T += `&text=${encodeURI(c)}`),
+                  (T += `&details=${encodeURI(m)}`),
+                  (T += `&dates=${encodeURI(B + "/" + E)}`);
                 const k = (e) => {
                   if ("ReactNativeWebView" in window) {
                     const t = window.ReactNativeWebView,
                       r = {
                         event_name: "addcalendarevent",
-                        tsStart: g.getTime(),
+                        tsStart: f.getTime(),
                         tsEnd: v.getTime(),
                         strTitle: c,
                         strNotes: m,
@@ -2003,38 +2079,38 @@
                   }
                 };
                 return (0, i.jsxs)("div", {
-                  className: (0, f.A)(
+                  className: (0, g.A)(
                     "SaleSectionCalendarEventContainer",
                     s().CalendarEventContainer,
                   ),
                   id: h,
                   children: [
-                    T &&
+                    N &&
                       (0, i.jsx)("a", {
-                        className: (0, f.A)(
+                        className: (0, g.A)(
                           "SaleSectionCalendarEventLink",
                           s().CalendarEventLink,
                         ),
-                        href: T,
+                        href: N,
                         onClick: k,
                         download: "calendar.ics",
                         children: "Apple",
                       }),
                     (0, i.jsx)("a", {
-                      className: (0, f.A)(
+                      className: (0, g.A)(
                         "SaleSectionCalendarEventLink",
                         s().CalendarEventLink,
                       ),
-                      href: N,
+                      href: T,
                       children: "Google",
                     }),
-                    T &&
+                    N &&
                       (0, i.jsx)("a", {
-                        className: (0, f.A)(
+                        className: (0, g.A)(
                           "SaleSectionCalendarEventLink",
                           s().CalendarEventLink,
                         ),
-                        href: T,
+                        href: N,
                         onClick: k,
                         download: "calendar.ics",
                         children: "Outlook",
@@ -2049,9 +2125,9 @@
             "doclink",
             {
               Constructor: function (e) {
-                const t = B(e.args),
-                  r = "button" == B(e.args, "style") ? s().LinkButton : void 0,
-                  n = r && B(e.args, "buttoncolor");
+                const t = C(e.args),
+                  r = "button" == C(e.args, "style") ? s().LinkButton : void 0,
+                  n = r && C(e.args, "buttoncolor");
                 return (0, i.jsx)(E, {
                   className: r,
                   style: { backgroundColor: n },
@@ -2066,7 +2142,7 @@
             "color",
             {
               Constructor: function (e) {
-                const t = B(e.args);
+                const t = C(e.args);
                 return (0, i.jsx)("span", {
                   style: { color: t },
                   children: e.children,
@@ -2079,7 +2155,7 @@
             "bgcolor",
             {
               Constructor: function (e) {
-                const t = B(e.args);
+                const t = C(e.args);
                 return (0, i.jsx)("span", {
                   style: { backgroundColor: t },
                   children: e.children,
@@ -2102,13 +2178,13 @@
             },
           ],
         ]),
-        C = new Map([
-          ["looping_media", { Constructor: b.$A, autocloses: !1 }],
-          ["video", { Constructor: b.UT, autocloses: !1 }],
+        B = new Map([
+          ["looping_media", { Constructor: w.$A, autocloses: !1 }],
+          ["video", { Constructor: w.UT, autocloses: !1 }],
           ["youtubeorvideo", { Constructor: m.Eo, autocloses: !1 }],
           ["previewyoutube", { Constructor: m.gH, autocloses: !1 }],
         ]);
-      function B(e, t) {
+      function C(e, t) {
         return void 0 === t ? e[""] : e[t];
       }
       function v(e, t) {
@@ -2122,9 +2198,9 @@
         });
       }
       function M(e, t, r) {
-        let n = B(t.args, "id");
+        let n = C(t.args, "id");
         return (
-          n || (n = B(t.args)),
+          n || (n = C(t.args)),
           n &&
             "string" == typeof n &&
             n.length > 0 &&
@@ -2132,19 +2208,19 @@
             (n = n.substring(1)),
           (0, i.jsx)(e, {
             id: n || void 0,
-            className: (0, f.A)(r, t.className),
+            className: (0, g.A)(r, t.className),
             children: t.children,
           })
         );
       }
       function I(e) {
-        return M("h1", e, (0, f.A)(s().Header1, "BB_Header1"));
+        return M("h1", e, (0, g.A)(s().Header1, "BB_Header1"));
       }
       function j(e) {
-        return M("h2", e, (0, f.A)(s().Header2, "BB_Header2"));
+        return M("h2", e, (0, g.A)(s().Header2, "BB_Header2"));
       }
       function A(e) {
-        return M("h3", e, (0, f.A)(s().Header3, "BB_Header3"));
+        return M("h3", e, (0, g.A)(s().Header3, "BB_Header3"));
       }
       const E = (e) => {
         const { href: t, ...r } = e;
@@ -2163,7 +2239,7 @@
           !t.startsWith("steam://")
             ? (0, y.Qz)(t)
             : void 0;
-        return (0, i.jsx)(g.Gq, {
+        return (0, i.jsx)(f.Gq, {
           toolTipContent: o,
           direction: "top",
           children: (0, i.jsx)(a.Ii, {
@@ -2174,10 +2250,10 @@
           }),
         });
       };
-      function T(e) {
-        const t = B(e.args, "author");
+      function N(e) {
+        const t = C(e.args, "author");
         return (0, i.jsxs)("blockquote", {
-          className: (0, f.A)(s().BlockQuote, e.className),
+          className: (0, g.A)(s().BlockQuote, e.className),
           children: [
             !!t &&
               (0, i.jsxs)("div", {
@@ -2192,9 +2268,9 @@
           ],
         });
       }
-      function N(e) {
+      function T(e) {
         return (0, i.jsx)("ul", {
-          className: (0, f.A)(s().List, "bullets"),
+          className: (0, g.A)(s().List, "bullets"),
           children: e.children,
         });
       }
@@ -2205,7 +2281,7 @@
         });
       }
       function R(e) {
-        let t = B(e.args, "id");
+        let t = C(e.args, "id");
         return (
           t &&
             "string" == typeof t &&
@@ -2228,15 +2304,15 @@
         );
       }
       function L(e, t) {
-        const r = B(t.args, "width"),
-          n = B(t.args, "colspan"),
-          a = B(t.args, "rowspan"),
+        const r = C(t.args, "width"),
+          n = C(t.args, "colspan"),
+          a = C(t.args, "rowspan"),
           o = {};
         return (
           n && parseInt(n) > 1 && (o.colSpan = parseInt(n)),
           a && parseInt(a) > 1 && (o.rowSpan = parseInt(a)),
           (0, i.jsx)(e, {
-            className: (0, f.A)(s().TableCell, "td" == e && "BB_TableData"),
+            className: (0, g.A)(s().TableCell, "td" == e && "BB_TableData"),
             ...o,
             style: r ? { width: r } : void 0,
             children: t.children,
@@ -2367,96 +2443,15 @@
         return { strVideoID: t, nStartSeconds: i };
       }
     },
-    13699: (e, t, r) => {
-      "use strict";
-      r.d(t, { R: () => c });
-      var i = r(34629),
-        n = r(41735),
-        s = r.n(n),
-        a = r(14947),
-        o = r(78327);
-      class l {
-        constructor() {
-          (this.m_mapYouTubeVideo = new Map()),
-            (this.m_mapSharedFile = new Map()),
-            (0, a.Gn)(this);
-        }
-        async LoadYouTubeDynamicData(e, t) {
-          var r;
-          let i = new Array(),
-            n = "";
-          if (
-            (e.forEach((e, t) => {
-              const r = this.m_mapYouTubeVideo.get(e);
-              r ? i.push(r) : (n.length > 0 && (n += ","), (n += e));
-            }),
-            0 == n.length)
-          )
-            return i;
-          let l = { youtubevideoids: n };
-          const c = await s().get(
-              o.TS.STORE_BASE_URL + "/events/ajaxgetdynamiceventmetadata",
-              { params: l, cancelToken: t.token },
-            ),
-            u =
-              null === (r = null == c ? void 0 : c.data) || void 0 === r
-                ? void 0
-                : r.youtube;
-          return (
-            u &&
-              (0, a.h5)(() => {
-                u.forEach((e, t) => {
-                  this.m_mapYouTubeVideo.set(e.videoid, e), i.push(e);
-                });
-              }),
-            i
-          );
-        }
-        async LoadSharedFileDynamicData(e, t) {
-          var r;
-          let i = new Array(),
-            n = "";
-          if (
-            (e.forEach((e, t) => {
-              const r = this.m_mapSharedFile.get(e);
-              r ? i.push(r) : (n.length > 0 && (n += ","), (n += e));
-            }),
-            0 == n.length)
-          )
-            return i;
-          let l = { sharedfileids: n };
-          const c = await s().get(
-              o.TS.STORE_BASE_URL + "/events/ajaxgetdynamiceventmetadata",
-              { params: l, cancelToken: t.token },
-            ),
-            u =
-              null === (r = null == c ? void 0 : c.data) || void 0 === r
-                ? void 0
-                : r.sharedfiles;
-          return (
-            u &&
-              (0, a.h5)(() => {
-                u.forEach((e, t) => {
-                  this.m_mapSharedFile.set(e.sharedfileid, e), i.push(e);
-                });
-              }),
-            i
-          );
-        }
-      }
-      (0, i.Cg)([a.sH], l.prototype, "m_mapYouTubeVideo", void 0),
-        (0, i.Cg)([a.sH], l.prototype, "m_mapSharedFile", void 0);
-      const c = new l();
-    },
     55263: (e, t, r) => {
       "use strict";
       r.d(t, {
         G6: () => p,
-        Gg: () => g,
+        Gg: () => f,
         Sq: () => u,
         eR: () => d,
         ik: () => m,
-        mZ: () => f,
+        mZ: () => g,
         t7: () => h,
         zX: () => y,
       });
@@ -2475,15 +2470,15 @@
           p = (0, s.useRef)(void 0),
           h = (0, l.CH)();
         o.current = e;
-        const [g, f] = (0, s.useState)(void 0),
+        const [f, g] = (0, s.useState)(void 0),
           {
             include_assets: _,
             include_release: y,
             include_platforms: S,
-            include_all_purchase_options: b,
-            include_screenshots: w,
-            include_trailers: C,
-            include_ratings: B,
+            include_all_purchase_options: w,
+            include_screenshots: b,
+            include_trailers: B,
+            include_ratings: C,
             include_tag_count: v,
             include_reviews: x,
             include_basic_info: M,
@@ -2491,8 +2486,8 @@
             include_full_description: j,
             include_included_items: A,
             include_assets_without_overrides: E,
-            apply_user_filters: T,
-            include_links: N,
+            apply_user_filters: N,
+            include_links: T,
             include_extra_details: k,
           } = r;
         if (
@@ -2501,10 +2496,10 @@
               include_assets: _,
               include_release: y,
               include_platforms: S,
-              include_all_purchase_options: b,
-              include_screenshots: w,
-              include_trailers: C,
-              include_ratings: B,
+              include_all_purchase_options: w,
+              include_screenshots: b,
+              include_trailers: B,
+              include_ratings: C,
               include_tag_count: v,
               include_reviews: x,
               include_basic_info: M,
@@ -2512,8 +2507,8 @@
               include_full_description: j,
               include_included_items: A,
               include_assets_without_overrides: E,
-              apply_user_filters: T,
-              include_links: N,
+              apply_user_filters: N,
+              include_links: T,
               include_extra_details: k,
             };
             let s = null;
@@ -2521,15 +2516,15 @@
               !e ||
                 e < 0 ||
                 c.A.Get().BHasStoreItem(e, t, r) ||
-                (void 0 !== g && i && i == p.current) ||
-                (i !== p.current && (f(void 0), (p.current = i)),
+                (void 0 !== f && i && i == p.current) ||
+                (i !== p.current && (g(void 0), (p.current = i)),
                 (s = n().CancelToken.source()),
                 c.A.Get()
                   .QueueStoreItemRequest(e, t, r)
                   .then((t) => {
                     (null == s ? void 0 : s.token.reason) ||
                       o.current !== e ||
-                      f(t == a.R),
+                      g(t == a.R),
                       h();
                   })),
               () =>
@@ -2539,14 +2534,14 @@
             e,
             t,
             i,
-            g,
+            f,
             _,
             y,
             S,
-            b,
             w,
-            C,
+            b,
             B,
+            C,
             v,
             x,
             M,
@@ -2554,15 +2549,15 @@
             j,
             A,
             E,
-            T,
             N,
+            T,
             k,
             h,
           ]),
           !e)
         )
           return [null, d];
-        if (!1 === g) return [void 0, d];
+        if (!1 === f) return [void 0, d];
         if (c.A.Get().BIsStoreItemMissing(e, t)) return [void 0, d];
         if (!c.A.Get().BHasStoreItem(e, t, r)) return [void 0, u];
         const R = c.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
@@ -2571,10 +2566,10 @@
       function h(e, t, r) {
         return p(e, o.c6.qI, t, r);
       }
-      function g(e, t, r) {
+      function f(e, t, r) {
         return p(e, o.c6.RD, t, r);
       }
-      function f(e, t, r) {
+      function g(e, t, r) {
         var i;
         const [n, s] = p(e, t, r);
         let a;
@@ -2593,15 +2588,15 @@
             include_assets: o,
             include_release: p,
             include_platforms: h,
-            include_all_purchase_options: g,
-            include_screenshots: f,
+            include_all_purchase_options: f,
+            include_screenshots: g,
             include_trailers: _,
             include_ratings: y,
             include_tag_count: S,
-            include_reviews: b,
-            include_basic_info: w,
-            include_supported_languages: C,
-            include_full_description: B,
+            include_reviews: w,
+            include_basic_info: b,
+            include_supported_languages: B,
+            include_full_description: C,
             include_included_items: v,
             include_assets_without_overrides: x,
             apply_user_filters: M,
@@ -2615,15 +2610,15 @@
                 include_assets: o,
                 include_release: p,
                 include_platforms: h,
-                include_all_purchase_options: g,
-                include_screenshots: f,
+                include_all_purchase_options: f,
+                include_screenshots: g,
                 include_trailers: _,
                 include_ratings: y,
                 include_tag_count: S,
-                include_reviews: b,
-                include_basic_info: w,
-                include_supported_languages: C,
-                include_full_description: B,
+                include_reviews: w,
+                include_basic_info: b,
+                include_supported_languages: B,
+                include_full_description: C,
                 include_included_items: v,
                 include_assets_without_overrides: x,
                 apply_user_filters: M,
@@ -2646,7 +2641,7 @@
               }),
               () => s.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, i, a, o, p, h, g, f, _, y, S, b, w, C, B, v, x, M, I, j]),
+          }, [e, t, i, a, o, p, h, f, g, _, y, S, w, b, B, C, v, x, M, I, j]),
           !e)
         )
           return d;
@@ -2694,7 +2689,7 @@
     },
     74410: (e, t, r) => {
       "use strict";
-      r.d(t, { Eo: () => _, V2: () => i, gH: () => g, j6: () => f });
+      r.d(t, { Eo: () => _, V2: () => i, gH: () => f, j6: () => g });
       var i,
         n = r(7850),
         s = r(90626),
@@ -2714,7 +2709,7 @@
           alignStr: e == i.full ? "" : e == i.left ? d.floatLeft : d.floatRight,
         };
       }
-      function g(e) {
+      function f(e) {
         if (p()) return null;
         let t = (0, a.j$)(e.args);
         if (t) {
@@ -2733,7 +2728,7 @@
         }
         return (0, n.jsx)(s.Fragment, {});
       }
-      function f(e) {
+      function g(e) {
         if (p()) return null;
         const t = (0, m.XU)(e);
         return void 0 !== (null == t ? void 0 : t.strVideoID)
@@ -2770,79 +2765,66 @@
     },
     88527: (e, t, r) => {
       "use strict";
-      r.d(t, { A: () => _ });
+      r.d(t, { A: () => f });
       var i = r(7850),
         n = r(90626),
-        s = r(13699),
+        s = r(80664),
         a = r(22797),
-        o = r(4434),
-        l = r(68797),
-        c = r(52038),
-        u = r(61859),
-        d = r(82227),
-        m = r(66418),
-        p = r(48211),
-        h = r(73662),
-        g = r.n(h),
-        f = r(77429);
-      function _(e) {
+        o = r(52038),
+        l = r(61859),
+        c = r(82227),
+        u = r(66418),
+        d = r(48211),
+        m = r(73662),
+        p = r.n(m),
+        h = r(77429);
+      function f(e) {
+        var t, r, m;
         const {
-            videoID: t,
-            bShowVideoImmediately: r,
-            bAutoPlay: h,
-            nStartSeconds: _,
-            classNameSize: y,
-            classNameAlign: S,
+            videoID: f,
+            bShowVideoImmediately: g,
+            bAutoPlay: _,
+            nStartSeconds: y,
+            classNameSize: S,
+            classNameAlign: w,
           } = e,
-          [b, w] = (0, n.useState)(!r),
-          [C, B] = (0, n.useState)(!1),
-          v = (0, o.m)("YouTubeInlineSnippet"),
-          [x, M] = (0, n.useState)({
-            title: (0, u.we)("#Loading"),
-            description: "",
-            videoid: t,
-            views: "0",
-          });
-        if (
-          ((0, n.useEffect)(() => {
-            b &&
-              s.R.LoadYouTubeDynamicData([t], v)
-                .then((e) => {
-                  !v.token.reason && e.length > 0 && (M(e[0]), B(!0));
-                })
-                .catch((e) =>
-                  console.error(
-                    "YouTubeInlineSnippet: " + (0, l.H)(e).strErrorMsg,
-                  ),
-                );
-          }, [b, v, t]),
-          b)
-        ) {
-          const e = x.title,
-            r = x.views,
-            n = x.description;
+          [b, B] = (0, n.useState)(!g),
+          { data: C, isSuccess: v } = (0, s.F8)(f, b);
+        if (b) {
+          const e =
+              null !== (t = null == C ? void 0 : C.title) && void 0 !== t
+                ? t
+                : (0, l.we)("#Loading"),
+            n =
+              null !== (r = null == C ? void 0 : C.views) && void 0 !== r
+                ? r
+                : "0",
+            s =
+              null !== (m = null == C ? void 0 : C.description) && void 0 !== m
+                ? m
+                : "";
           return (0, i.jsxs)("div", {
-            className: f.gg.Box,
-            onClick: () => w(!1),
+            className: h.gg.Box,
+            onClick: () => B(!1),
             children: [
-              (0, i.jsx)(f.KN, {
-                strURL: "https://img.youtube.com/vi/" + t + "/0.jpg",
+              (0, i.jsx)(h.KN, {
+                strURL: "https://img.youtube.com/vi/" + f + "/0.jpg",
               }),
-              (0, i.jsxs)(f.J7, {
+              (0, i.jsxs)(h.J7, {
                 children: [
-                  (0, i.jsx)(f.bv, {
-                    children: (0, u.we)("#EventEditor_YouTubeVideoTitle", e),
+                  (0, i.jsx)(h.bv, {
+                    children: (0, l.we)("#EventEditor_YouTubeVideoTitle", e),
                   }),
-                  (0, i.jsx)(f.Yd, {
-                    children: (0, u.we)(
+                  (0, i.jsx)(h.Yd, {
+                    children: (0, l.we)(
                       "#EventEditor_YouTubeVideoViews",
-                      (0, d.Dq)(Number(r)),
+                      (0, c.Dq)(Number(n)),
                     ),
                   }),
-                  (0, i.jsxs)(f.s4, {
+                  (0, i.jsxs)(h.s4, {
                     children: [
-                      C && n,
-                      !C && (0, i.jsx)(a.t, { size: "medium" }),
+                      v && s,
+                      !v && (0, i.jsx)(a.t, { size: "medium" }),
                     ],
                   }),
                 ],
@@ -2850,22 +2832,22 @@
             ],
           });
         }
-        return (0, i.jsx)(p.gZ, {
-          video: t,
+        return (0, i.jsx)(d.gZ, {
+          video: f,
           children: (0, i.jsxs)("div", {
-            className: (0, c.A)(g().PreviewYouTubeVideo, y, S),
-            id: t,
+            className: (0, o.A)(p().PreviewYouTubeVideo, S, w),
+            id: f,
             children: [
               (0, i.jsx)("img", {
-                className: g().PlaceholderImg,
+                className: p().PlaceholderImg,
                 src:
-                  m.TS.COMMUNITY_CDN_URL +
+                  u.TS.COMMUNITY_CDN_URL +
                   "public/shared/images/responsive/youtube_16x9_placeholder.gif",
               }),
-              (0, i.jsx)(p.fm, {
-                video: t,
-                autoplay: null != h && h,
-                startSeconds: _,
+              (0, i.jsx)(d.fm, {
+                video: f,
+                autoplay: null != _ && _,
+                startSeconds: y,
                 controls: !0,
                 playsInline: !0,
                 autopause: !0,
@@ -2878,7 +2860,7 @@
     },
     283: (e, t, r) => {
       "use strict";
-      r.d(t, { A: () => b });
+      r.d(t, { A: () => w });
       var i = r(34629),
         n = r(7850),
         s = r(90626),
@@ -2891,8 +2873,8 @@
         m = r(61859),
         p = r(52038),
         h = r(90024),
-        g = r.n(h),
-        f = r(97232),
+        f = r.n(h),
+        g = r(97232),
         _ = r(32754);
       const y = 1576780700;
       let S = class extends s.Component {
@@ -2989,7 +2971,7 @@
                     }),
                   }),
                 })
-              : (s.push(g().chatSubmitButton, g().EmoticonPickerButton),
+              : (s.push(f().chatSubmitButton, f().EmoticonPickerButton),
                 (0, n.jsx)(l.fu, {
                   className: (0, p.A)(...s),
                   onOKActionDescription: (0, m.we)("#ChatEntryButton_Emoticon"),
@@ -3001,7 +2983,7 @@
                   children: (0, n.jsxs)(_.he, {
                     toolTipContent: r,
                     children: [
-                      this.props.buttonIcon || (0, n.jsx)(f.nl, {}),
+                      this.props.buttonIcon || (0, n.jsx)(g.nl, {}),
                       a && (0, n.jsx)(d.iD, {}),
                     ],
                   }),
@@ -3011,7 +2993,7 @@
       };
       (0, i.Cg)([o.oI], S.prototype, "OnEmoticonClick", null),
         (S = (0, i.Cg)([a.PA], S));
-      const b = S;
+      const w = S;
     },
     10820: (e, t, r) => {
       "use strict";
@@ -3030,8 +3012,8 @@
         return `${e}economy/sticker${r ? "static" : ""}/${encodeURIComponent(t)}`;
       }
       var h = r(78327),
-        g = r(68255),
-        f = r(76217),
+        f = r(68255),
+        g = r(76217),
         _ = r(88006),
         y = r(19418);
       class S extends o.Component {
@@ -3059,17 +3041,17 @@
                       });
                 }
               : void 0;
-          return (0, n.jsxs)(f.Z, {
+          return (0, n.jsxs)(g.Z, {
             className: y.Picker,
             onButtonDown: a,
-            children: [s && (0, n.jsx)(b, { children: this.RenderTabs() }), i],
+            children: [s && (0, n.jsx)(w, { children: this.RenderTabs() }), i],
           });
         }
         RenderTabs() {
           return this.props.config.map(({ renderTab: e }, t) => {
             const r = this.state.activeIndex === t;
             return (0, n.jsx)(
-              C,
+              B,
               {
                 active: r,
                 onClick: () => this.setState({ activeIndex: t }),
@@ -3080,22 +3062,22 @@
           });
         }
       }
-      function b(e) {
-        return (0, n.jsx)(f.Z, {
+      function w(e) {
+        return (0, n.jsx)(g.Z, {
           className: y.Tabs,
           "flow-children": "row",
           children: e.children,
         });
       }
-      function w(e) {
+      function b(e) {
         return (0, n.jsx)("div", {
           className: y.Content,
           children: e.children,
         });
       }
-      function C(e) {
+      function B(e) {
         const { active: t, children: r, onClick: i } = e;
-        return (0, n.jsx)(f.Z, {
+        return (0, n.jsx)(g.Z, {
           className: (0, d.A)(y.Tab, t && y.Active),
           focusClassName: y.Focus,
           onActivate: i,
@@ -3105,7 +3087,7 @@
           }),
         });
       }
-      function B(e) {
+      function C(e) {
         const {
           items: t,
           renderItem: r,
@@ -3115,7 +3097,7 @@
         } = e;
         let o = t.map((e, a) =>
           (0, n.jsx)(
-            f.Z,
+            g.Z,
             {
               className: y.Item,
               onActivate: () => i(t[a]),
@@ -3128,7 +3110,7 @@
         );
         return (
           0 === t.length && a && (o = a()),
-          (0, n.jsx)(f.Z, {
+          (0, n.jsx)(g.Z, {
             "flow-children": "grid",
             className: y.ItemList,
             children: o,
@@ -3139,10 +3121,10 @@
         const { title: t, onFilterChange: r, filter: i, onSubmit: s, ...a } = e;
         return (0, n.jsxs)(n.Fragment, {
           children: [
-            (0, n.jsx)(w, {
+            (0, n.jsx)(b, {
               children: (0, n.jsx)(M, {
                 title: t,
-                children: (0, n.jsx)(B, { ...a }),
+                children: (0, n.jsx)(C, { ...a }),
               }),
             }),
             (0, n.jsx)(I, { value: i, onChange: r, onSubmit: s }),
@@ -3153,7 +3135,7 @@
         const { onFilterChange: t, filter: r, sections: i, title: s } = e;
         return (0, n.jsxs)(n.Fragment, {
           children: [
-            (0, n.jsxs)(w, {
+            (0, n.jsxs)(b, {
               children: [
                 s &&
                   (0, n.jsx)("div", {
@@ -3163,7 +3145,7 @@
                 i.map(({ title: e, ...t }) =>
                   (0, n.jsx)(
                     M,
-                    { title: e, children: (0, n.jsx)(B, { ...t }) },
+                    { title: e, children: (0, n.jsx)(C, { ...t }) },
                     e,
                   ),
                 ),
@@ -3189,7 +3171,7 @@
         const { value: t, onChange: r, onSubmit: i } = e;
         return (0, n.jsx)("div", {
           className: y.FilterInputContainer,
-          children: (0, n.jsx)(g.pd, {
+          children: (0, n.jsx)(f.pd, {
             type: "text",
             placeholder: (0, m.we)("#AddonPicker_Search"),
             className: y.FilterInput,
@@ -3208,8 +3190,8 @@
       }
       var A = r(42060),
         E = r.n(A),
-        T = r(51272),
-        N = r(81962);
+        N = r(51272),
+        T = r(81962);
       function k(e) {
         return e.recent_emoticons;
       }
@@ -3560,11 +3542,11 @@
             (0, n.jsx)(j, {
               children: (0, m.PP)(
                 "#AddonPicker_AcquireAtPointsShopOrMarket",
-                (0, n.jsx)(T.uU, {
+                (0, n.jsx)(N.uU, {
                   href: `${h.TS.STORE_BASE_URL}points/shop/c/emoticons`,
                   children: (0, m.we)("#AddonPicker_AcquireAtPointsShop_Link"),
                 }),
-                (0, n.jsx)(T.uU, {
+                (0, n.jsx)(N.uU, {
                   href: `${h.TS.COMMUNITY_BASE_URL}market`,
                   children: (0, m.we)(
                     "#AddonPicker_AcquireAtPointsShopOrMarket_Link",
@@ -3608,7 +3590,7 @@
                       (0, n.jsx)(j, {
                         children: (0, m.PP)(
                           "#AddonPicker_AcquireAtPointsShop",
-                          (0, n.jsx)(T.uU, {
+                          (0, n.jsx)(N.uU, {
                             href: `${h.TS.STORE_BASE_URL}points/shop/c/stickers`,
                             children: (0, m.we)(
                               "#AddonPicker_AcquireAtPointsShop_Link",
@@ -3655,7 +3637,7 @@
                       (0, n.jsx)(j, {
                         children: (0, m.PP)(
                           "#AddonPicker_AcquireAtPointsShop",
-                          (0, n.jsx)(T.uU, {
+                          (0, n.jsx)(N.uU, {
                             href: `${h.TS.STORE_BASE_URL}points/shop/c/chateffects`,
                             children: (0, m.we)(
                               "#AddonPicker_AcquireAtPointsShop_Link",
@@ -3753,7 +3735,7 @@
         return (0, n.jsxs)("div", {
           className: E().EmoticonItem,
           children: [
-            (0, n.jsx)(N.n, { emoticon: t.name, large: r }),
+            (0, n.jsx)(T.n, { emoticon: t.name, large: r }),
             i && (0, n.jsx)(J, {}),
           ],
         });
@@ -3790,7 +3772,7 @@
             sticker: { name: r, appid: i },
           } = e,
           [s] = (0, c.t7)(i, {});
-        return (0, n.jsx)(N.c, {
+        return (0, n.jsx)(T.c, {
           target: t,
           title: r,
           subtitle: null == s ? void 0 : s.GetName(),
@@ -3843,7 +3825,7 @@
           } = e,
           a = s[r],
           [o] = (0, c.t7)(i, {});
-        return (0, n.jsx)(N.c, {
+        return (0, n.jsx)(T.c, {
           target: t,
           title: r,
           subtitle: null == o ? void 0 : o.GetName(),
@@ -3960,7 +3942,7 @@
     },
     81962: (e, t, r) => {
       "use strict";
-      r.d(t, { n: () => h, c: () => f });
+      r.d(t, { n: () => h, c: () => g });
       var i = r(7850),
         n = r(90626),
         s = r(6336),
@@ -4000,7 +3982,7 @@
           [s, c] = (0, d.OP)(),
           [m, p] = n.useState(null),
           h = `:${t}:`,
-          f = (0, a.G)(t, r);
+          g = (0, a.G)(t, r);
         return (0, i.jsxs)(i.Fragment, {
           children: [
             (0, i.jsx)(o, {
@@ -4008,18 +3990,18 @@
               style: "merge-adjacent",
               children: (0, i.jsx)("img", {
                 ...c,
-                src: f,
+                src: g,
                 className: (0, l.A)(u().emoticon, r ? u().large : void 0),
                 "data-emoticon": t,
                 alt: t,
                 ref: p,
               }),
             }),
-            s && m && (0, i.jsx)(g, { target: m, emoticon: t }),
+            s && m && (0, i.jsx)(f, { target: m, emoticon: t }),
           ],
         });
       }
-      function g(e) {
+      function f(e) {
         const { target: t, emoticon: r } = e,
           { data: n } = (function (e) {
             return (0, m.I)({
@@ -4033,14 +4015,14 @@
               },
             });
           })(r);
-        return (0, i.jsx)(f, {
+        return (0, i.jsx)(g, {
           target: t,
           title: `:${r}:`,
           subtitle: n && n.app_name ? n.app_name : void 0,
           children: (0, i.jsx)(h, { emoticon: r, large: !0 }),
         });
       }
-      const f = ({ target: e, title: t, subtitle: r, children: n }) =>
+      const g = ({ target: e, title: t, subtitle: r, children: n }) =>
         (0, i.jsxs)(s.g, {
           target: e,
           style: { zIndex: 1700 },
@@ -4123,11 +4105,11 @@
               bMuted: d,
               className: m,
               mediaScale: h,
-              flAspectRatio: g,
-              onClick: b,
-              altText: w,
+              flAspectRatio: f,
+              onClick: w,
+              altText: b,
             } = e,
-            C = (0, s.useMemo)(() => {
+            B = (0, s.useMemo)(() => {
               var e;
               return Boolean(
                 null === (e = r.rgVideoTracks) || void 0 === e
@@ -4137,8 +4119,8 @@
                     ),
               );
             }, [r.rgVideoTracks]),
-            [B, v] = s.useState(!1),
-            x = f();
+            [C, v] = s.useState(!1),
+            x = g();
           if (!r.rgVideoSources || !r.rgVideoSources.length) return null;
           const M = (function (e) {
             return !(
@@ -4150,7 +4132,7 @@
             );
           })(r);
           let I;
-          (!M || (C && u.TS.EUNIVERSE == a.wLO)) && (I = "anonymous");
+          (!M || (B && u.TS.EUNIVERSE == a.wLO)) && (I = "anonymous");
           const j = d || (i && p.Get().BVolumePreferenceMuted()),
             A = r.sPoster ? _(r.sPoster, x) : "";
           return (0, n.jsxs)("video", {
@@ -4166,7 +4148,7 @@
             onVolumeChange: (e) => {
               const t = e.target,
                 r = t.muted ? 0 : t.volume;
-              B && p.Get().SetVolumePreference(r);
+              C && p.Get().SetVolumePreference(r);
             },
             onPlay: (e) => {
               const t = e.target,
@@ -4184,11 +4166,11 @@
             },
             ref: t,
             className: m,
-            onClick: b,
-            "aria-label": w,
+            onClick: w,
+            "aria-label": b,
             style: {
               width: h && h >= 1 && h < 100 ? `${h}%` : void 0,
-              aspectRatio: g || void 0,
+              aspectRatio: f || void 0,
             },
             children: [
               (0, n.jsx)(y, { rgVideoSources: r.rgVideoSources }),
@@ -4196,9 +4178,9 @@
             ],
           });
         }),
-        g = s.createContext(void 0);
-      function f() {
-        return s.useContext(g) || (0, d.xv)();
+        f = s.createContext(void 0);
+      function g() {
+        return s.useContext(f) || (0, d.xv)();
       }
       function _(e, t) {
         if (e) {
@@ -4216,7 +4198,7 @@
       }
       function y(e) {
         const { rgVideoSources: t } = e,
-          r = f();
+          r = g();
         return t
           .filter((e) => Boolean(e.sURL))
           .map((e) =>
@@ -4230,12 +4212,12 @@
       function S(e) {
         const { rgVideoTracks: t } = e;
         return t
-          ? t.map((e, r) => (0, n.jsx)(b, { track: e, rgVideoTracks: t }, r))
+          ? t.map((e, r) => (0, n.jsx)(w, { track: e, rgVideoTracks: t }, r))
           : null;
       }
-      function b(e) {
+      function w(e) {
         const { track: t, rgVideoTracks: r } = e,
-          i = f();
+          i = g();
         let s = t.eLanguage;
         if (u.TS.EREALM == o.TU.k_ESteamRealmChina)
           if (l.A0.IsELanguageValidInRealm(s, o.TU.k_ESteamRealmChina))
@@ -4296,7 +4278,7 @@
         n.useEffect(() => {
           d(0), p((e) => e + 1);
         }, [h]);
-        const g = n.useMemo(() => {
+        const f = n.useMemo(() => {
             let r = "";
             return (
               t && t.length > u && (r = t[u]),
@@ -4311,7 +4293,7 @@
               r
             );
           }, [t, u, e]),
-          f = n.useCallback(
+          g = n.useCallback(
             (e) => {
               null == r || r(e, t[u], u);
               const i = u + 1;
@@ -4321,14 +4303,14 @@
           );
         return (0, i.jsx)(
           "img",
-          { ref: c, ...l, src: g, onError: f, alt: a },
+          { ref: c, ...l, src: f, onError: g, alt: a },
           m,
         );
       }
     },
     48211: (e, t, r) => {
       "use strict";
-      r.d(t, { N1: () => C, VC: () => S, fm: () => x, gZ: () => B });
+      r.d(t, { N1: () => B, VC: () => S, fm: () => x, gZ: () => C });
       var i,
         n = r(34629),
         s = r(7850),
@@ -4341,23 +4323,23 @@
         m = r(61859),
         p = r(23338),
         h = r(8871),
-        g = r(40236);
+        f = r(40236);
       !(function (e) {
         (e[(e.NotLoaded = 0)] = "NotLoaded"),
           (e[(e.Loading = 1)] = "Loading"),
           (e[(e.Loaded = 2)] = "Loaded");
       })(i || (i = {}));
-      let f = i.NotLoaded,
+      let g = i.NotLoaded,
         _ = [];
       function y(e) {
         var t;
-        if (f != i.Loaded) {
-          if (f == i.NotLoaded) {
+        if (g != i.Loaded) {
+          if (g == i.NotLoaded) {
             let e = document.createElement("script");
             e.src = "https://www.youtube.com/iframe_api";
             let r = document.getElementsByTagName("script")[0];
             null === (t = r.parentNode) || void 0 === t || t.insertBefore(e, r),
-              (window.onYouTubeIframeAPIReady = w);
+              (window.onYouTubeIframeAPIReady = b);
           }
           e && (_.includes(e) || _.push(e));
         } else e && e();
@@ -4368,26 +4350,26 @@
           t && e && y();
         }, [t, e]);
       }
-      function b(e) {
+      function w(e) {
         o.x9(_, e);
       }
-      function w() {
-        f = i.Loaded;
+      function b() {
+        g = i.Loaded;
         for (let e of _) e();
         _ = [];
       }
-      class C extends a.Component {
+      class B extends a.Component {
         constructor(e) {
           super(e),
             (this.m_strPlayerID = ""),
             (this.m_player = null),
             (this.m_playerContainer = null),
             (this.m_bPlayerReady = !1),
-            (this.m_strPlayerID = "YoutubePlayer_" + C.s_nPlayerIndex++),
+            (this.m_strPlayerID = "YoutubePlayer_" + B.s_nPlayerIndex++),
             (this.state = { bYoutubeLoaded: !1 });
         }
         componentWillUnmount() {
-          this.DestroyPlayer(), b(this.OnYoutubeScriptsReady);
+          this.DestroyPlayer(), w(this.OnYoutubeScriptsReady);
         }
         shouldComponentUpdate(e, t) {
           if (!this.m_player) return !1;
@@ -4526,7 +4508,7 @@
             (e && this.m_player.seekTo(0, !0), this.m_player.playVideo());
         }
         render() {
-          return (0, s.jsx)(B, {
+          return (0, s.jsx)(C, {
             video: this.props.video,
             children: (0, s.jsx)(
               p.j,
@@ -4543,7 +4525,7 @@
           });
         }
       }
-      function B(e) {
+      function C(e) {
         const { video: t, children: r } = e;
         return (0, d.Rp)("youtube")
           ? r
@@ -4578,7 +4560,7 @@
               ? void 0
               : e.pauseVideo();
           }, []),
-          c = (0, g.OO)({ onLeave: r ? l : void 0 }),
+          c = (0, f.OO)({ onLeave: r ? l : void 0 }),
           u = (0, h.Ue)(o, c);
         return (
           a.useEffect(() => {
@@ -4588,7 +4570,7 @@
             return (
               r && y(e),
               () => {
-                b(e), (n.current = null);
+                w(e), (n.current = null);
               }
             );
           }, [r]),
@@ -4603,15 +4585,15 @@
           })
         );
       }
-      (C.s_nPlayerIndex = 0),
-        (0, n.Cg)([l.oI], C.prototype, "BindPlayerContainer", null),
-        (0, n.Cg)([l.oI], C.prototype, "OnYoutubeScriptsReady", null),
-        (0, n.Cg)([l.oI], C.prototype, "CreatePlayer", null),
-        (0, n.Cg)([l.oI], C.prototype, "OnPlayerReady", null),
-        (0, n.Cg)([l.oI], C.prototype, "OnPlayerStateChange", null),
-        (0, n.Cg)([l.oI], C.prototype, "OnError", null),
-        (0, n.Cg)([l.oI], C.prototype, "OnPlayerLeftView", null),
-        (0, n.Cg)([l.oI], C.prototype, "PlayVideo", null);
+      (B.s_nPlayerIndex = 0),
+        (0, n.Cg)([l.oI], B.prototype, "BindPlayerContainer", null),
+        (0, n.Cg)([l.oI], B.prototype, "OnYoutubeScriptsReady", null),
+        (0, n.Cg)([l.oI], B.prototype, "CreatePlayer", null),
+        (0, n.Cg)([l.oI], B.prototype, "OnPlayerReady", null),
+        (0, n.Cg)([l.oI], B.prototype, "OnPlayerStateChange", null),
+        (0, n.Cg)([l.oI], B.prototype, "OnError", null),
+        (0, n.Cg)([l.oI], B.prototype, "OnPlayerLeftView", null),
+        (0, n.Cg)([l.oI], B.prototype, "PlayVideo", null);
     },
   },
 ]);

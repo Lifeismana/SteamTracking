@@ -14852,6 +14852,11 @@
                     _: ReaderProto.readUint32,
                     _: WriterProto.writeUint32,
                   },
+                  frame_rate_limit: {
+                    _: 7,
+                    _: ReaderProto.readUint32,
+                    _: WriterProto.writeUint32,
+                  },
                 },
               }),
               _.sm_m
@@ -16154,6 +16159,7 @@
           `Millennium internal`,
           `millenium`,
           `millennium`,
+          `decky://`,
           `Refused unauthorized RPC command`,
         ]),
         (CErrorReportingStore = class {
@@ -34500,6 +34506,11 @@ Error generating stack: ` +
                     _: ReaderProto.readBool,
                     _: WriterProto.writeBool,
                   },
+                  rumble_intensity: {
+                    _: 50,
+                    _: ReaderProto.readInt32,
+                    _: WriterProto.writeInt32,
+                  },
                 },
               }),
               _.sm_m
@@ -38173,7 +38184,7 @@ Error generating stack: ` +
                 _,
                 0,
                 -1,
-                [3, 9],
+                [3, 9, 12],
                 null,
               );
           }
@@ -38243,6 +38254,14 @@ Error generating stack: ` +
                     _: 11,
                     _: ReaderProto.readBool,
                     _: WriterProto.writeBool,
+                  },
+                  descriptor_images: {
+                    _: 12,
+                    _: !0,
+                    _: !0,
+                    _: ReaderProto.readEnum,
+                    pbr: ReaderProto.readPackedEnum,
+                    _: WriterProto.writeRepeatedEnum,
                   },
                   image_url: {
                     _: 20,
@@ -44468,6 +44487,7 @@ Error generating stack: ` +
           IN_CHROMEOS: !1,
           TESLA: !1,
           LOCAL_HOSTNAME: ``,
+          PACKAGE_CL: ``,
           WEBAPI_BASE_URL: ``,
           TOKEN_URL: ``,
           BUILD_TIMESTAMP: 0,
@@ -51277,6 +51297,7 @@ Error generating stack: ` +
       Header_Global_News: () => Header_Global_News$30,
       Header_Global_News_Steam: () => Header_Global_News_Steam$30,
       Header_Global_News_SteamDeck: () => Header_Global_News_SteamDeck$30,
+      Header_Global_News_SteamFrame: () => Header_Global_News_SteamFrame$30,
       Header_Global_News_SteamVR: () => Header_Global_News_SteamVR$30,
       Header_Global_News_Steamworks: () => Header_Global_News_Steamworks$30,
       Header_Global_Resources: () => Header_Global_Resources$30,
@@ -51341,6 +51362,9 @@ Error generating stack: ` +
         Header_Nav_Sites_Historical_Usage$30,
       Header_Nav_SteamDeck_Compat: () => Header_Nav_SteamDeck_Compat$30,
       Header_Nav_StoreAdmin: () => Header_Nav_StoreAdmin$30,
+      Header_Nav_StoreAdmin_Frontpage: () => Header_Nav_StoreAdmin_Frontpage$30,
+      Header_Nav_StoreAdmin_Spotlights: () =>
+        Header_Nav_StoreAdmin_Spotlights$30,
       Header_Nav_Support: () => Header_Nav_Support$30,
       Header_Nav_Tools: () => Header_Nav_Tools$30,
       Header_Nav_Tools_BanCDKeys: () => Header_Nav_Tools_BanCDKeys$30,
@@ -51414,6 +51438,7 @@ Error generating stack: ` +
     Header_Global_News_Steam$30,
     Header_Global_News_SteamVR$30,
     Header_Global_News_SteamDeck$30,
+    Header_Global_News_SteamFrame$30,
     Steamworks_Logo_Label$30,
     global_menu_language$61,
     global_menu_change_language$61,
@@ -51474,6 +51499,8 @@ Error generating stack: ` +
     Header_Nav_DirectPurchasing_OpenInvoices$30,
     Header_Nav_DirectPurchasing_CreateInvoices$30,
     Header_Nav_StoreAdmin$30,
+    Header_Nav_StoreAdmin_Spotlights$30,
+    Header_Nav_StoreAdmin_Frontpage$30,
     Header_Nav_OEM$30,
     Header_Nav_OEM_Ticket_Batches$30,
     Header_Nav_Sites$30,
@@ -51535,6 +51562,7 @@ Error generating stack: ` +
         (Header_Global_News_Steam$30 = `مدونة Steam`),
         (Header_Global_News_SteamVR$30 = `مدونة Steam VR`),
         (Header_Global_News_SteamDeck$30 = `مدونة Steam Deck`),
+        (Header_Global_News_SteamFrame$30 = `مدونة Steam Frame`),
         (Steamworks_Logo_Label$30 = `Steamworks`),
         (global_menu_language$61 = `اللغة`),
         (global_menu_change_language$61 = `تغيير اللغة`),
@@ -51595,6 +51623,8 @@ Error generating stack: ` +
         (Header_Nav_DirectPurchasing_OpenInvoices$30 = `مطابقة الفواتير المقدمة`),
         (Header_Nav_DirectPurchasing_CreateInvoices$30 = `إنشاء/إدارة الفواتير`),
         (Header_Nav_StoreAdmin$30 = `مسؤول المتجر`),
+        (Header_Nav_StoreAdmin_Spotlights$30 = `المحتوى الأبرز`),
+        (Header_Nav_StoreAdmin_Frontpage$30 = `الصفحة الرئيسية`),
         (Header_Nav_OEM$30 = `أدوات OEM`),
         (Header_Nav_OEM_Ticket_Batches$30 = `دفعات تذاكر OEM`),
         (Header_Nav_Sites$30 = `برنامج PC Café`),
@@ -51665,6 +51695,7 @@ Error generating stack: ` +
           Header_Global_News_Steam: Header_Global_News_Steam$30,
           Header_Global_News_SteamVR: Header_Global_News_SteamVR$30,
           Header_Global_News_SteamDeck: Header_Global_News_SteamDeck$30,
+          Header_Global_News_SteamFrame: Header_Global_News_SteamFrame$30,
           Steamworks_Logo_Label: Steamworks_Logo_Label$30,
           global_menu_language: global_menu_language$61,
           global_menu_change_language: global_menu_change_language$61,
@@ -51744,6 +51775,8 @@ Error generating stack: ` +
           Header_Nav_DirectPurchasing_CreateInvoices:
             Header_Nav_DirectPurchasing_CreateInvoices$30,
           Header_Nav_StoreAdmin: Header_Nav_StoreAdmin$30,
+          Header_Nav_StoreAdmin_Spotlights: Header_Nav_StoreAdmin_Spotlights$30,
+          Header_Nav_StoreAdmin_Frontpage: Header_Nav_StoreAdmin_Frontpage$30,
           Header_Nav_OEM: Header_Nav_OEM$30,
           Header_Nav_OEM_Ticket_Batches: Header_Nav_OEM_Ticket_Batches$30,
           Header_Nav_Sites: Header_Nav_Sites$30,
@@ -61167,7 +61200,7 @@ Error generating stack: ` +
         (Header_Nav_Tools_BanCDKeys$13 = `Larang Steam Key`),
         (Header_Nav_Tools_CDKeyRestrictions$13 = `Lihat Templat Pakej Steam Key`),
         (Header_Nav_Tools_NavTraffic$13 = `Trafik Navigasi Gedung & Platform Steam`),
-        (Header_Nav_Tools_HealthChecks$13 = `Catalog Recommended Actions`),
+        (Header_Nav_Tools_HealthChecks$13 = `Tindakan Katalog Dicadangkan`),
         (Header_Nav_Tools_MeetSteam$13 = `Meet Steam @ Persidangan Industri`),
         (Header_Nav_UsersPermissions$13 = `Pengguna & Kebenaran`),
         (Header_Nav_UsersPermissions_Overview$13 = `Gambaran`),
@@ -61203,7 +61236,7 @@ Error generating stack: ` +
         (Header_Nav_OEM$13 = `Alat OEM`),
         (Header_Nav_OEM_Ticket_Batches$13 = `Kumpulan Tiket OEM`),
         (Header_Nav_Sites$13 = `Program PC Café`),
-        (Header_Nav_Sites_Edit_Sites$13 = `Manage Sites`),
+        (Header_Nav_Sites_Edit_Sites$13 = `Urus Laman`),
         (Header_Nav_Sites_Current_Usage$13 = `Urus Lesen Komersial`),
         (Header_Nav_Sites_Historical_Usage$13 = `Sejarah Penggunaan`),
         (Header_Nav_Sites_Content_Control$13 = `Kawalan Kandungan`),
@@ -64220,6 +64253,13 @@ Error generating stack: ` +
           AppType_TitleCase_DLC_SeasonPass: AppType_TitleCase_DLC_SeasonPass$8,
           Aria_Navigation: Aria_Navigation$39,
         });
+    }),
+    partner_menu_sc_schinese_exports = __exportAll({
+      default: () => partner_menu_sc_schinese_default,
+    }),
+    partner_menu_sc_schinese_default,
+    init_partner_menu_sc_schinese = __esmMin(() => {
+      partner_menu_sc_schinese_default = {};
     }),
     partner_menu_schinese_exports = __exportAll({
       AppType_TitleCase_Advertising: () => AppType_TitleCase_Advertising$7,
@@ -68926,6 +68966,17 @@ Error generating stack: ` +
         () =>
           Promise.resolve().then(
             () => (init_partner_menu_russian(), partner_menu_russian_exports),
+          ),
+        void 0,
+        {}.url,
+      )),
+    (paths$1.sc_schinese = () =>
+      __vitePreload(
+        () =>
+          Promise.resolve().then(
+            () => (
+              init_partner_menu_sc_schinese(), partner_menu_sc_schinese_exports
+            ),
           ),
         void 0,
         {}.url,

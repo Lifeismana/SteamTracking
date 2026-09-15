@@ -8,7 +8,7 @@
       n.d(t, { B9: () => m, RR: () => d, hE: () => c });
       var a = n(90626),
         s = n(37085),
-        i = n(6379),
+        i = n(91254),
         o = n(4434),
         r = n(17720),
         l = (n(78327), n(17690), n(61859));
@@ -74,8 +74,233 @@
         return e != n && (t += "_" + n), t;
       }
     },
-    6379: (e, t, n) => {
-      n.d(t, { ZQ: () => b, O3: () => S, MX: () => T, dB: () => P });
+    30163: (e, t, n) => {
+      n.d(t, { E0: () => c, oE: () => _ });
+      var a = n(81393),
+        s = n(78327),
+        i = n(17720),
+        o = n(62641),
+        r = n(68797),
+        l = n(22837),
+        d = n(62490);
+      function m(e) {
+        return (
+          (null == e.gid || null == e.gid || "0" == e.gid) &&
+          !!e.announcement_body &&
+          "0" != e.announcement_body.gid
+        );
+      }
+      function c(e) {
+        return m(e) ? o.cB + e.announcement_body?.gid : e.gid;
+      }
+      function _(e, t) {
+        let n = new o.lh();
+        if (
+          ((n.clanSteamID = e),
+          (0, a.wT)(
+            n.clanSteamID && n.clanSteamID.BIsValid(),
+            "Invalid Clan SteamID: " +
+              n.clanSteamID.ConvertTo64BitString() +
+              " " +
+              s.TS.EUNIVERSE,
+          ),
+          (n.GID = c(t)),
+          (n.bOldAnnouncement = m(t)),
+          (n.appid = t.appid ?? 0),
+          (n.createTime = t.rtime_created),
+          (n.startTime = t.rtime32_start_time),
+          (n.endTime = t.rtime32_end_time),
+          (n.visibilityStartTime = t.rtime32_visibility_start),
+          (n.visibilityEndTime = t.rtime32_visibility_end),
+          (n.loadedAllLanguages = !1),
+          (n.type = t.event_type ?? l.DRF),
+          (n.nVotesUp = t.votes_up ?? 0),
+          (n.nVotesDown = t.votes_down ?? 0),
+          (n.comment_type = t.comment_type),
+          (n.gidfeature = t.gidfeature),
+          (n.gidfeature2 = t.gidfeature2),
+          (n.featured_app_tagid = t.featured_app_tagid),
+          (n.vecTags = new Array()),
+          (n.creator_steamid = t.creator_steamid),
+          (n.last_update_steamid = t.last_update_steamid),
+          (n.rtime32_last_modified = t.rtime32_last_modified),
+          (n.rtime32_moderator_reviewed = t.rtime_mod_reviewed),
+          (n.video_preview_type = t.video_preview_type),
+          (n.video_preview_id = t.video_preview_id),
+          (n.has_live_stream = t.has_live_stream),
+          (n.live_stream_viewer_count = t.live_stream_viewer_count),
+          (n.m_nBuildID = t.build_id),
+          (n.m_strBuildBranch = t.build_branch),
+          t.announcement_body)
+        ) {
+          let e = t.announcement_body;
+          (n.AnnouncementGID = e.gid),
+            n.name.set(e.language, e.headline),
+            n.description.set(e.language, e.body),
+            n.timestamp_loc_updated.clear(),
+            (n.forumTopicGID = e.forum_topic_id),
+            (n.nCommentCount = e.commentcount),
+            (n.postTime = e.posttime),
+            n.bOldAnnouncement && !e.hidden && (n.startTime = e.posttime),
+            (n.announcementClanSteamID = new i.b(e.clanid)),
+            e.tags &&
+              e.tags.length > 0 &&
+              e.tags.forEach((e) => n.vecTags.push(e)),
+            !n.rtime32_last_solr_search_col_updated &&
+              n.rtime32_last_modified &&
+              ((n.rtime32_last_solr_search_col_updated =
+                n.rtime32_last_modified),
+              (n.rtime32_last_modified = e.updatetime));
+        } else
+          (n.AnnouncementGID = "0"),
+            (n.forumTopicGID = t.forum_topic_id),
+            n.name.clear(),
+            n.description.clear(),
+            n.timestamp_loc_updated.clear(),
+            (n.postTime = t.rtime32_start_time),
+            (n.nCommentCount = t.comment_count ?? 0),
+            n.name.set(l.Bhc, t.event_name ?? ""),
+            n.description.set(l.Bhc, t.event_notes ?? "");
+        t.broadcaster_accountid &&
+          (n.broadcaster = new i.b(t.broadcaster_accountid));
+        const _ = o.DJ;
+        try {
+          n.jsondata = {
+            ..._,
+            ...(t.jsondata ? JSON.parse(t.jsondata) : void 0),
+          };
+        } catch (e) {
+          const t = (0, r.H)(e);
+          throw (
+            (console.error(
+              "PartnerEventStore::InsertEventModelFromClanEventData: failed to parse embedded json model" +
+                t.strErrorMsg,
+              t,
+            ),
+            e)
+          );
+        }
+        if (
+          ((n.jsondata.localized_capsule_image = (0, d.$Y)(
+            n.jsondata.localized_capsule_image || [],
+            l.bP9,
+            null,
+          )),
+          (n.jsondata.localized_title_image = (0, d.$Y)(
+            n.jsondata.localized_title_image || [],
+            l.bP9,
+            null,
+          )),
+          (n.jsondata.localized_subtitle = (0, d.$Y)(
+            n.jsondata.localized_subtitle || [],
+            l.bP9,
+            null,
+          )),
+          (n.jsondata.localized_summary = (0, d.$Y)(
+            n.jsondata.localized_summary || [],
+            l.bP9,
+            null,
+          )),
+          (n.jsondata.localized_broadcast_title = (0, d.$Y)(
+            n.jsondata.localized_broadcast_title || [],
+            l.bP9,
+            null,
+          )),
+          (n.jsondata.localized_broadcast_left_image = (0, d.$Y)(
+            n.jsondata.localized_broadcast_left_image || [],
+            l.bP9,
+            null,
+          )),
+          (n.jsondata.localized_broadcast_right_image = (0, d.$Y)(
+            n.jsondata.localized_broadcast_right_image || [],
+            l.bP9,
+            null,
+          )),
+          (n.jsondata.localized_sale_header = (0, d.$Y)(
+            n.jsondata.localized_sale_header || [],
+            l.bP9,
+            null,
+          )),
+          (n.jsondata.localized_sale_overlay = (0, d.$Y)(
+            n.jsondata.localized_sale_overlay || [],
+            l.bP9,
+            null,
+          )),
+          (n.jsondata.localized_sale_product_banner = (0, d.$Y)(
+            n.jsondata.localized_sale_product_banner || [],
+            l.bP9,
+            null,
+          )),
+          (n.jsondata.localized_sale_product_mobile_banner = (0, d.$Y)(
+            n.jsondata.localized_sale_product_mobile_banner || [],
+            l.bP9,
+            null,
+          )),
+          (n.jsondata.localized_sale_logo = (0, d.$Y)(
+            n.jsondata.localized_sale_logo || [],
+            l.bP9,
+            null,
+          )),
+          void 0 !== n.jsondata.sale_num_headers &&
+            n.jsondata.localized_per_day_sales_header)
+        )
+          for (let e = 0; e < n.jsondata.sale_num_headers; ++e)
+            n.jsondata.localized_per_day_sales_header[e] = (0, d.$Y)(
+              n.jsondata.localized_per_day_sales_header[e],
+              l.bP9,
+              null,
+            );
+        return (
+          n.jsondata.sale_sections &&
+            n.jsondata.sale_sections.forEach((e, t) => {
+              e.localized_label &&
+                (e.localized_label = (0, d.$Y)(e.localized_label, l.bP9, null)),
+                "trailercarousel" === e.section_type &&
+                  (e.show_as_carousel = !1),
+                (n.jsondata.sale_sections[t] = { ...o.G6, ...e });
+            }),
+          n.jsondata.email_setting &&
+            n.jsondata.email_setting.sections &&
+            n.jsondata.email_setting.sections.forEach((e) => {
+              void 0 !== e.localized_headline &&
+                null !== e.localized_headline &&
+                (e.localized_headline = (0, d.$Y)(
+                  e.localized_headline,
+                  l.bP9,
+                  null,
+                )),
+                void 0 !== e.localized_body &&
+                  null !== e.localized_body &&
+                  (e.localized_body = (0, d.$Y)(e.localized_body, l.bP9, null)),
+                void 0 !== e.localized_image &&
+                  null !== e.localized_image &&
+                  (e.localized_image = (0, d.$Y)(
+                    e.localized_image,
+                    l.bP9,
+                    null,
+                  ));
+            }),
+          n.jsondata.localized_title_image.forEach((e, t) => {
+            if (null != e && "http" == e.substr(0, 4)) {
+              let a = e.lastIndexOf("/"),
+                s = e.substr(a + 1);
+              n.jsondata.localized_title_image[t] = s;
+            }
+          }),
+          (n.bLoaded = !0),
+          t.published
+            ? t.unlisted
+              ? (n.visibility_state = o.zv.k_EEventStateUnlisted)
+              : t.hidden
+                ? (n.visibility_state = o.zv.k_EEventStateStaged)
+                : (n.visibility_state = o.zv.k_EEventStateVisible)
+            : (n.visibility_state = o.zv.k_EEventStateUnpublished),
+          n
+        );
+      }
+    },
+    91254: (e, t, n) => {
+      n.d(t, { MX: () => S, O3: () => b, ZQ: () => G, dB: () => T });
       var a = n(34629),
         s = n(41735),
         i = n.n(s),
@@ -94,19 +319,10 @@
         g = n(78327),
         y = n(90626),
         I = n(84933),
-        A = n(38390);
-      function f(e) {
-        return (
-          (null == e.gid || null == e.gid || "0" == e.gid) &&
-          !!e.announcement_body &&
-          "0" != e.announcement_body.gid
-        );
-      }
-      function D(e) {
-        return f(e) ? m.cB + e.announcement_body?.gid : e.gid;
-      }
-      var C = n(63340);
-      class G {
+        A = n(38390),
+        f = n(30163),
+        D = n(63340);
+      class C {
         appid;
         date;
         can_play;
@@ -124,7 +340,7 @@
             (this.announcementid = e.announcementid);
         }
       }
-      class b {
+      class G {
         constructor(e = !1) {
           (0, o.Gn)(this), (this.m_bOnlySummary = e);
         }
@@ -261,7 +477,7 @@
         RegisterClanEvents(e) {
           if (e)
             for (const t of e) {
-              const e = D(t);
+              const e = (0, f.E0)(t);
               if (!this.m_mapExistingEvents.has(e)) {
                 const e = new c.b(t.clan_steamid);
                 this.InsertEventModelFromClanEventData(e, t);
@@ -283,219 +499,7 @@
           return n.sort(this.DefaultEventSortFunction), n;
         }
         InsertEventModelFromClanEventData(e, t) {
-          const n = (function (e, t) {
-            let n = new m.lh();
-            if (
-              ((n.clanSteamID = e),
-              (0, p.wT)(
-                n.clanSteamID && n.clanSteamID.BIsValid(),
-                "Invalid Clan SteamID: " +
-                  n.clanSteamID.ConvertTo64BitString() +
-                  " " +
-                  g.TS.EUNIVERSE,
-              ),
-              (n.GID = D(t)),
-              (n.bOldAnnouncement = f(t)),
-              (n.appid = t.appid ?? 0),
-              (n.createTime = t.rtime_created),
-              (n.startTime = t.rtime32_start_time),
-              (n.endTime = t.rtime32_end_time),
-              (n.visibilityStartTime = t.rtime32_visibility_start),
-              (n.visibilityEndTime = t.rtime32_visibility_end),
-              (n.loadedAllLanguages = !1),
-              (n.type = t.event_type ?? l.DRF),
-              (n.nVotesUp = t.votes_up ?? 0),
-              (n.nVotesDown = t.votes_down ?? 0),
-              (n.comment_type = t.comment_type),
-              (n.gidfeature = t.gidfeature),
-              (n.gidfeature2 = t.gidfeature2),
-              (n.featured_app_tagid = t.featured_app_tagid),
-              (n.vecTags = new Array()),
-              (n.creator_steamid = t.creator_steamid),
-              (n.last_update_steamid = t.last_update_steamid),
-              (n.rtime32_last_modified = t.rtime32_last_modified),
-              (n.rtime32_moderator_reviewed = t.rtime_mod_reviewed),
-              (n.video_preview_type = t.video_preview_type),
-              (n.video_preview_id = t.video_preview_id),
-              (n.has_live_stream = t.has_live_stream),
-              (n.live_stream_viewer_count = t.live_stream_viewer_count),
-              (n.m_nBuildID = t.build_id),
-              (n.m_strBuildBranch = t.build_branch),
-              t.announcement_body)
-            ) {
-              let e = t.announcement_body;
-              (n.AnnouncementGID = e.gid),
-                n.name.set(e.language, e.headline),
-                n.description.set(e.language, e.body),
-                n.timestamp_loc_updated.clear(),
-                (n.forumTopicGID = e.forum_topic_id),
-                (n.nCommentCount = e.commentcount),
-                (n.postTime = e.posttime),
-                n.bOldAnnouncement && !e.hidden && (n.startTime = e.posttime),
-                (n.announcementClanSteamID = new c.b(e.clanid)),
-                e.tags &&
-                  e.tags.length > 0 &&
-                  e.tags.forEach((e) => n.vecTags.push(e)),
-                !n.rtime32_last_solr_search_col_updated &&
-                  n.rtime32_last_modified &&
-                  ((n.rtime32_last_solr_search_col_updated =
-                    n.rtime32_last_modified),
-                  (n.rtime32_last_modified = e.updatetime));
-            } else
-              (n.AnnouncementGID = "0"),
-                (n.forumTopicGID = t.forum_topic_id),
-                n.name.clear(),
-                n.description.clear(),
-                n.timestamp_loc_updated.clear(),
-                (n.postTime = t.rtime32_start_time),
-                (n.nCommentCount = t.comment_count ?? 0),
-                n.name.set(l.Bhc, t.event_name ?? ""),
-                n.description.set(l.Bhc, t.event_notes ?? "");
-            t.broadcaster_accountid &&
-              (n.broadcaster = new c.b(t.broadcaster_accountid));
-            const a = m.DJ;
-            try {
-              n.jsondata = {
-                ...a,
-                ...(t.jsondata ? JSON.parse(t.jsondata) : void 0),
-              };
-            } catch (e) {
-              const t = (0, v.H)(e);
-              throw (
-                (console.error(
-                  "PartnerEventStore::InsertEventModelFromClanEventData: failed to parse embedded json model" +
-                    t.strErrorMsg,
-                  t,
-                ),
-                e)
-              );
-            }
-            if (
-              ((n.jsondata.localized_capsule_image = (0, u.$Y)(
-                n.jsondata.localized_capsule_image || [],
-                l.bP9,
-                null,
-              )),
-              (n.jsondata.localized_title_image = (0, u.$Y)(
-                n.jsondata.localized_title_image || [],
-                l.bP9,
-                null,
-              )),
-              (n.jsondata.localized_subtitle = (0, u.$Y)(
-                n.jsondata.localized_subtitle || [],
-                l.bP9,
-                null,
-              )),
-              (n.jsondata.localized_summary = (0, u.$Y)(
-                n.jsondata.localized_summary || [],
-                l.bP9,
-                null,
-              )),
-              (n.jsondata.localized_broadcast_title = (0, u.$Y)(
-                n.jsondata.localized_broadcast_title || [],
-                l.bP9,
-                null,
-              )),
-              (n.jsondata.localized_broadcast_left_image = (0, u.$Y)(
-                n.jsondata.localized_broadcast_left_image || [],
-                l.bP9,
-                null,
-              )),
-              (n.jsondata.localized_broadcast_right_image = (0, u.$Y)(
-                n.jsondata.localized_broadcast_right_image || [],
-                l.bP9,
-                null,
-              )),
-              (n.jsondata.localized_sale_header = (0, u.$Y)(
-                n.jsondata.localized_sale_header || [],
-                l.bP9,
-                null,
-              )),
-              (n.jsondata.localized_sale_overlay = (0, u.$Y)(
-                n.jsondata.localized_sale_overlay || [],
-                l.bP9,
-                null,
-              )),
-              (n.jsondata.localized_sale_product_banner = (0, u.$Y)(
-                n.jsondata.localized_sale_product_banner || [],
-                l.bP9,
-                null,
-              )),
-              (n.jsondata.localized_sale_product_mobile_banner = (0, u.$Y)(
-                n.jsondata.localized_sale_product_mobile_banner || [],
-                l.bP9,
-                null,
-              )),
-              (n.jsondata.localized_sale_logo = (0, u.$Y)(
-                n.jsondata.localized_sale_logo || [],
-                l.bP9,
-                null,
-              )),
-              void 0 !== n.jsondata.sale_num_headers &&
-                n.jsondata.localized_per_day_sales_header)
-            )
-              for (let e = 0; e < n.jsondata.sale_num_headers; ++e)
-                n.jsondata.localized_per_day_sales_header[e] = (0, u.$Y)(
-                  n.jsondata.localized_per_day_sales_header[e],
-                  l.bP9,
-                  null,
-                );
-            return (
-              n.jsondata.sale_sections &&
-                n.jsondata.sale_sections.forEach((e, t) => {
-                  e.localized_label &&
-                    (e.localized_label = (0, u.$Y)(
-                      e.localized_label,
-                      l.bP9,
-                      null,
-                    )),
-                    "trailercarousel" === e.section_type &&
-                      (e.show_as_carousel = !1),
-                    (n.jsondata.sale_sections[t] = { ...m.G6, ...e });
-                }),
-              n.jsondata.email_setting &&
-                n.jsondata.email_setting.sections &&
-                n.jsondata.email_setting.sections.forEach((e) => {
-                  void 0 !== e.localized_headline &&
-                    null !== e.localized_headline &&
-                    (e.localized_headline = (0, u.$Y)(
-                      e.localized_headline,
-                      l.bP9,
-                      null,
-                    )),
-                    void 0 !== e.localized_body &&
-                      null !== e.localized_body &&
-                      (e.localized_body = (0, u.$Y)(
-                        e.localized_body,
-                        l.bP9,
-                        null,
-                      )),
-                    void 0 !== e.localized_image &&
-                      null !== e.localized_image &&
-                      (e.localized_image = (0, u.$Y)(
-                        e.localized_image,
-                        l.bP9,
-                        null,
-                      ));
-                }),
-              n.jsondata.localized_title_image.forEach((e, t) => {
-                if (null != e && "http" == e.substr(0, 4)) {
-                  let a = e.lastIndexOf("/"),
-                    s = e.substr(a + 1);
-                  n.jsondata.localized_title_image[t] = s;
-                }
-              }),
-              (n.bLoaded = !0),
-              t.published
-                ? t.unlisted
-                  ? (n.visibility_state = m.zv.k_EEventStateUnlisted)
-                  : t.hidden
-                    ? (n.visibility_state = m.zv.k_EEventStateStaged)
-                    : (n.visibility_state = m.zv.k_EEventStateVisible)
-                : (n.visibility_state = m.zv.k_EEventStateUnpublished),
-              n
-            );
-          })(e, t);
+          const n = (0, f.oE)(e, t);
           return (
             this.InsertUniqueEventGID(e.GetAccountID(), n.appid, n.GID),
             this.m_mapExistingEvents.set(n.GID, n),
@@ -690,7 +694,7 @@
               if (s?.data?.success == d.R)
                 (0, o.h5)(() => {
                   for (let e of s.data.events) {
-                    let t = D(e);
+                    let t = (0, f.E0)(e);
                     if (!this.m_mapExistingEvents.has(t)) {
                       let t = new c.b(e.clan_steamid);
                       this.InsertEventModelFromClanEventData(n || t, e);
@@ -750,7 +754,7 @@
             let e = await i().get(l, { params: d });
             (0, o.h5)(() => {
               for (let t of e.data.events) {
-                let e = D(t);
+                let e = (0, f.E0)(t);
                 if (!this.m_mapExistingEvents.has(e)) {
                   let e = new c.b(t.clan_steamid);
                   this.InsertEventModelFromClanEventData(e, t);
@@ -788,7 +792,7 @@
           return (
             (0, o.h5)(() => {
               for (let e of l.data.events) {
-                let t = D(e);
+                let t = (0, f.E0)(e);
                 if (!this.m_mapExistingEvents.has(t)) {
                   let t = new c.b(e.clan_steamid);
                   this.InsertEventModelFromClanEventData(t, e);
@@ -825,7 +829,7 @@
           return (
             (0, o.h5)(() => {
               for (let e of u.data.events) {
-                let t = D(e);
+                let t = (0, f.E0)(e);
                 if (!this.m_mapExistingEvents.has(t)) {
                   let t = new c.b(e.clan_steamid);
                   this.InsertEventModelFromClanEventData(t, e);
@@ -935,7 +939,7 @@
             let e = await i().get(u, _);
             if (e.data.success !== d.R) return;
             let t = e.data.event,
-              n = D(t);
+              n = (0, f.E0)(t);
             if (
               !this.m_mapExistingEvents.has(n) ||
               (this.m_mapExistingEvents.get(n).rtime32_last_modified ?? 0) <
@@ -1062,7 +1066,7 @@
             a.data.apps &&
               a.data.apps.length > 0 &&
               (0, o.h5)(() => {
-                const e = new Map(a.data.apps?.map((e) => [e.appid, new G(e)]));
+                const e = new Map(a.data.apps?.map((e) => [e.appid, new C(e)]));
                 this.m_mapUpdatedApps = e;
               });
           }
@@ -1143,7 +1147,7 @@
               e.forEach((e) => {
                 if (e && e.data && e.data.events)
                   for (let t of e.data.events) {
-                    let e = D(t);
+                    let e = (0, f.E0)(t);
                     if (!this.m_mapExistingEvents.has(e)) {
                       let e = new c.b(t.clan_steamid);
                       this.InsertEventModelFromClanEventData(e, t);
@@ -1210,45 +1214,46 @@
           return this.m_bOnlySummary;
         }
       }
-      (0, a.Cg)([o.sH], b.prototype, "m_mapExistingEvents", void 0),
-        (0, a.Cg)([o.sH], b.prototype, "m_mapAnnouncementBodyToEvent", void 0),
-        (0, a.Cg)([o.sH], b.prototype, "m_mapClanToGIDs", void 0),
-        (0, a.Cg)([o.sH], b.prototype, "m_mapAppIDToGIDs", void 0),
-        (0, a.Cg)([o.sH], b.prototype, "m_mapUpdatedApps", void 0),
-        (0, a.Cg)([o.XI], b.prototype, "Init", null),
-        (0, a.Cg)([I.oI], b.prototype, "GetPartnerEventChangeCallback", null),
-        (0, a.Cg)([o.XI], b.prototype, "RegisterClanEvents", null),
+      (0, a.Cg)([o.sH], G.prototype, "m_mapExistingEvents", void 0),
+        (0, a.Cg)([o.sH], G.prototype, "m_mapAnnouncementBodyToEvent", void 0),
+        (0, a.Cg)([o.sH], G.prototype, "m_mapClanToGIDs", void 0),
+        (0, a.Cg)([o.sH], G.prototype, "m_mapAppIDToGIDs", void 0),
+        (0, a.Cg)([o.sH], G.prototype, "m_mapUpdatedApps", void 0),
+        (0, a.Cg)([o.XI], G.prototype, "Init", null),
+        (0, a.Cg)([I.oI], G.prototype, "GetPartnerEventChangeCallback", null),
+        (0, a.Cg)([o.XI], G.prototype, "RegisterClanEvents", null),
         (0, a.Cg)(
           [o.XI],
-          b.prototype,
+          G.prototype,
           "InsertEventModelFromClanEventData",
           null,
         ),
-        (0, a.Cg)([o.XI], b.prototype, "DeleteClanEvent", null),
-        (0, a.Cg)([o.XI], b.prototype, "RemoveGIDFromList", null),
-        (0, a.Cg)([o.XI], b.prototype, "FlushEventFromCache", null),
-        (0, a.Cg)([I.oI], b.prototype, "SavePartnerEventSaleAssets", null);
-      const S = new b();
-      (0, C.V)("g_PartnerEventStore", S);
-      const T = new b(!0);
-      function P(e, t, n = !1) {
-        const [a, s] = (0, y.useState)(() => S.GetClanEventModel(t)),
+        (0, a.Cg)([o.XI], G.prototype, "DeleteClanEvent", null),
+        (0, a.Cg)([o.XI], G.prototype, "RemoveGIDFromList", null),
+        (0, a.Cg)([o.XI], G.prototype, "FlushEventFromCache", null),
+        (0, a.Cg)([I.oI], G.prototype, "SavePartnerEventSaleAssets", null);
+      const b = new G();
+      (0, D.V)("g_PartnerEventStore", b);
+      const S = new G(!0);
+      function T(e, t, n = !1) {
+        const [a, s] = (0, y.useState)(() => b.GetClanEventModel(t)),
           [i, o] = (0, y.useState)(!0),
           r = (0, y.useMemo)(() => c.b.InitFromClanID(e), [e]);
         return (
           (0, y.useEffect)(() => {
             !a &&
               e > 0 &&
-              (S.Init(),
-              S.LoadPartnerEventFromClanEventGIDAndClanSteamID(r, t, 0, n)
+              (b.Init(),
+              b
+                .LoadPartnerEventFromClanEventGIDAndClanSteamID(r, t, 0, n)
                 .then(s)
                 .finally(() => o(!1)));
           }, [r, t, a, e, n]),
-          (0, I.hL)(n ? S.GetPartnerEventChangeCallback(t) : void 0, s),
+          (0, I.hL)(n ? b.GetPartnerEventChangeCallback(t) : void 0, s),
           { eventModel: a, bLoading: i }
         );
       }
-      (0, C.V)("g_PartnerEventSummaryStore", T);
+      (0, D.V)("g_PartnerEventSummaryStore", S);
     },
     55563: (e, t, n) => {
       function a(e) {

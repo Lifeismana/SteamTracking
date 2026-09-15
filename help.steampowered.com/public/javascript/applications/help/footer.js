@@ -1747,6 +1747,7 @@
         (ke.portuguese = () => r.e(8233).then(r.t.bind(r, 8233, 19))),
         (ke.romanian = () => r.e(8727).then(r.t.bind(r, 8727, 19))),
         (ke.russian = () => r.e(8973).then(r.t.bind(r, 8973, 19))),
+        (ke.sc_schinese = () => r.e(1143).then(r.t.bind(r, 1143, 19))),
         (ke.schinese = () => r.e(9720).then(r.t.bind(r, 9720, 19))),
         (ke.spanish = () => r.e(1924).then(r.t.bind(r, 1924, 19))),
         (ke.swedish = () => r.e(7925).then(r.t.bind(r, 7925, 19))),

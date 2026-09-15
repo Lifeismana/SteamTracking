@@ -3739,7 +3739,10 @@
                 editable: _,
                 contentBefore: _,
               } = _,
-              _ = (0, _._)(_.statID, _.bitID),
+              { existingAchievement: _, globalUnlockPercentage: _ } = (0, _._)(
+                _.statID,
+                _.bitID,
+              ),
               { appID: _ } = (0, _._)(),
               _ = (0, _._)(_, _.groupid),
               _ = (0, _._)(_.groupid, _),
@@ -3872,7 +3875,7 @@
                                         (0, _.jsx)(_._, {
                                           className: _.GlobalRateIcon,
                                         }),
-                                        (0, _._)(_.global_unlock_percent),
+                                        (0, _._)(_ ?? 0),
                                       ],
                                     }),
                                   }),
@@ -3921,8 +3924,11 @@
           function _(_) {
             const { achievement: _, hideModal: _ } = _,
               { appID: _ } = (0, _._)(),
-              _ = (0, _._)(_.statID, _.bitID),
-              _ = _ && _.global_unlock_percent > 0,
+              { existingAchievement: _, globalUnlockPercentage: _ } = (0, _._)(
+                _.statID,
+                _.bitID,
+              ),
+              _ = _ && _ > 0,
               _ = (0, _._)(_, _.statID, _.bitID);
             return (0, _.jsx)(_._, {
               active: !0,
@@ -4062,7 +4068,7 @@
               { appID: _, cdnRoot: _ } = (0, _._)(),
               _ = (0, _._)(_) ?? [],
               _ = (0, _._)(_),
-              _ = (0, _._)(_?.statID, _?.bitID),
+              { globalUnlockPercentage: _ } = (0, _._)(_?.statID, _?.bitID),
               _ = (0, _._)(_),
               _ = (0, _._)(_),
               _ = (0, _.useMemo)(
@@ -4168,7 +4174,7 @@
                       "#AchievementEditor_Group_CreateAchievement_WarnLiveGroup",
                     ),
                   }))
-                : _.visible && !_.visible && (_?.global_unlock_percent ?? 0) > 0
+                : _.visible && !_.visible && (_ ?? 0) > 0
                   ? (_ = (0, _.jsx)(_._, {
                       text: (0, _._)(
                         "#AchievementEditor_Achievement_Edit_Group_Warn_HidingAchievement",
@@ -4657,6 +4663,7 @@
               [_, _] = (0, _.useState)(!1),
               [_, _] = (0, _.useState)(!1),
               _ = (0, _._)(_),
+              { data: _ } = (0, _._)(_),
               _ =
                 ((0, _._)(_),
                 {
@@ -4668,6 +4675,7 @@
                   },
                   filter: _,
                   existingAchievements: _.data,
+                  existingAchievementUnlockPercentages: _,
                 }),
               [_, _] = (0, _.useState)(!1),
               [_, _] = (0, _.useState)(),
@@ -5348,7 +5356,7 @@
               _ =
                 _.visible &&
                 Object.values(_ ?? {}).some(
-                  (_) => (_.global_unlock_percent ?? 0) > 0,
+                  (_) => (_.globalUnlockPercentage ?? 0) > 0,
                 ),
               [_, _] = _.useState(_),
               [_, _] = _.useState(!1),
@@ -7202,7 +7210,10 @@
           function _(_) {
             const { groupID: _, group: _, showVisibility: _ = !1 } = _,
               { visible: _ } = _(_, _),
-              { existingAchievements: _ } = (0, _._)(),
+              {
+                existingAchievements: _,
+                existingAchievementUnlockPercentages: _,
+              } = (0, _._)(),
               _ =
                 _ === _ || void 0 === _
                   ? (0, _._)(
@@ -7212,7 +7223,7 @@
               _ = _?.groups.find((_) => _._.toString() == _),
               _ =
                 _?.achievements.some(
-                  (_) => (_.global_unlock_percent ?? 0) > 0,
+                  (_) => (_?.percentages?.[_.internal_key] ?? 0) > 0,
                 ) ?? !1;
             let _;
             return (
@@ -7300,7 +7311,11 @@
             });
           }
           function _(_, _) {
-            const { appID: _, existingAchievements: _ } = (0, _._)(),
+            const {
+                appID: _,
+                existingAchievements: _,
+                existingAchievementUnlockPercentages: _,
+              } = (0, _._)(),
               _ = _?.dlcappid,
               _ = (0, _._)(_),
               _ = (0, _._)(_),
@@ -7315,32 +7330,42 @@
               is_released_somewhere: _,
               hasprogress:
                 _?.achievements.some(
-                  (_) => (_.global_unlock_percent ?? 0) > 0,
+                  (_) => (_?.percentages?.[_.internal_key] ?? 0) > 0,
                 ) ?? !1,
               app: _ ?? _,
               visible: !_ && !_ && _,
             };
           }
           function _() {
-            const { existingAchievements: _ } = (0, _._)();
-            return (0, _.useMemo)(() => {
-              if (_)
-                return _.groups.reduce(
-                  (_, _) => (
-                    _.achievements.forEach((_) => {
-                      _[_.internal_key] = _;
-                    }),
-                    _
-                  ),
-                  {},
-                );
-            }, [_]);
+            const {
+              existingAchievements: _,
+              existingAchievementUnlockPercentages: _,
+            } = (0, _._)();
+            return (0, _.useMemo)(
+              () =>
+                _
+                  ? _.groups.reduce(
+                      (_, _) => (
+                        _.achievements.forEach((_) => {
+                          _[_.internal_key] = {
+                            existingAchievement: _,
+                            globalUnlockPercentage:
+                              _?.percentages?.[_.internal_key],
+                          };
+                        }),
+                        _
+                      ),
+                      {},
+                    )
+                  : {},
+              [_, _],
+            );
           }
           function _(_, _) {
             const _ = _();
-            if (void 0 === _) return;
-            if (void 0 === _ || void 0 === _) return;
-            return _[_(_, _)];
+            if (void 0 === _) return {};
+            if (void 0 === _ || void 0 === _) return {};
+            return _[_(_, _)] ?? {};
           }
           function _(_, _) {
             return (
@@ -8178,6 +8203,7 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -8185,23 +8211,30 @@
       const _ = "steamQueryPersist";
       const _ = _.createContext(void 0);
       _.Provider;
+      function _(_) {
+        const { area: _, maxAgeSeconds: _, meta: _, ..._ } = _,
+          _ = _.useContext(_),
+          _ = _.useMemo(
+            () => ({
+              ..._,
+              [_]: {
+                area: _,
+                maxAgeSeconds: _,
+              },
+            }),
+            [_, _, _],
+          );
+        return (0, _._)({
+          ..._,
+          meta: _,
+          persister: _?.GetPersister(_),
+        });
+      }
       Date.now();
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = 0,
-        _ = {
-          GlobalProgressAsc: function (_, _) {
-            return (
-              (_.global_unlock_percent ?? 0) - (_.global_unlock_percent ?? 0)
-            );
-          },
-          GlobalProgressDesc: function (_, _) {
-            return (
-              (_.global_unlock_percent ?? 0) - (_.global_unlock_percent ?? 0)
-            );
-          },
-        };
+      const _ = 0;
       function _(_, ..._) {
         return ["achievements", _, ..._];
       }
@@ -8210,6 +8243,7 @@
         if (void 0 !== _ && "" !== _)
           return `${_._.BASE_URL_SHARED_CDN}community_assets/images/apps/${_}/${_}`;
       }
+      const _ = (_) => _(_, "globalpercentages");
       function _(_, _) {
         return {
           queryKey: _(_),
@@ -8269,10 +8303,6 @@
                         archived: _.archived ?? !1,
                         icon_achieved: _(_, _.icon),
                         icon_unachieved: _(_, _.icon_gray),
-                        global_unlock_percent:
-                          void 0 === _.player_percent_unlocked
-                            ? void 0
-                            : Number.parseFloat(_.player_percent_unlocked),
                         groupid: _.groupid ?? _,
                         min_progress:
                           _.min_progress_int ?? _.min_progress_float,
@@ -8283,43 +8313,63 @@
                 const _ = Object.values(_)
                   .filter((_) => _.achievements.length > 0)
                   .sort((_, _) => _.order - _.order);
-                return (
-                  _.forEach((_) => _.achievements.sort(_.GlobalProgressDesc)),
-                  {
-                    appid: _,
-                    language: _,
-                    groups: _,
-                    schema_hash: _.Body()?.schema_hash() ?? 0,
-                    schema_version: _.Body()?.schema_version() ?? 0,
-                  }
-                );
+                return {
+                  appid: _,
+                  language: _,
+                  groups: _,
+                  schema_hash: _.Body()?.schema_hash() ?? 0,
+                  schema_version: _.Body()?.schema_version() ?? 0,
+                };
               })(_, _, _);
             return _;
           },
-          staleTime: 36e5,
+          staleTime: 864e5,
           area: "achievements",
         };
       }
       function _(_) {
-        return (function (_) {
-          const { area: _, maxAgeSeconds: _, meta: _, ..._ } = _,
-            _ = _.useContext(_),
-            _ = _.useMemo(
-              () => ({
-                ..._,
-                [_]: {
-                  area: _,
-                  maxAgeSeconds: _,
-                },
-              }),
-              [_, _, _],
-            );
-          return (0, _._)({
-            ..._,
-            meta: _,
-            persister: _?.GetPersister(_),
-          });
-        })(_((0, _._)(), _));
+        return _(_((0, _._)(), _));
+      }
+      function _(_, _) {
+        return {
+          queryKey: _(_),
+          queryFn: async () => {
+            const _ = (async function (_, _) {
+              const _ = await _.xtC.GetGlobalAchievementPercentages(_, {
+                appid: _,
+              });
+              if (__webpack_require__.GetEResult() !== _._)
+                throw (
+                  (console.error(
+                    "Received error from GetGlobalAchievementPercentages",
+                    __webpack_require__.GetEResult(),
+                  ),
+                  new Error(
+                    `Error from GetGlobalAchievementPercentages: ${__webpack_require__.GetEResult()}`,
+                  ))
+                );
+              return {
+                percentages: __webpack_require__
+                  .Body()
+                  .achievements()
+                  .reduce((_, _) => {
+                    const _ = _.internal_key();
+                    return (
+                      void 0 === _ ||
+                        (_[_] = _.player_percent_unlocked() ?? 0.1),
+                      _
+                    );
+                  }, {}),
+              };
+            })(_, _);
+            return _;
+          },
+          staleTime: 864e5,
+          area: "achievements",
+        };
+      }
+      function _(_) {
+        return _(_((0, _._)(), _));
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -9458,6 +9508,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -9472,6 +9524,7 @@
             ..._
           } = _,
           _ = (0, _._)("TextArea", _),
+          _ = (0, _._)(),
           _ = (0, _._)({
             ..._,
             className: _()((0, _._)(), (0, _._)()),
@@ -9481,8 +9534,9 @@
             cursor: "text",
             disabled: _,
             variant: _,
-          });
-        return (0, _.jsx)("textarea", {
+          }),
+          _ = _ ? _._ : "textarea";
+        return (0, _.jsx)(_, {
           ref: _,
           ..._,
           value: _ || "",

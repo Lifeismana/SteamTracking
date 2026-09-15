@@ -3,8 +3,49 @@
   {
     chunkid: (module) => {
       module.exports = {
+        Root: "_1kIuUssJvopWbHik1IKMG6",
+        "Variant-light": "zcrlDqGBY0Lrl7faLFoJI",
+        "Variant-dark": "_3b6kFRuG8ILziz88w8GESp",
+        "Variant-outline": "wlcXkTKJWe-SE0fCwIRwQ",
+        Disabled: "kLcGKsNxkoEqxgok6YzML",
+        Checkbox: "_3babFLLB0YYBf8znrlE7Dt",
+        Icon: "cngAYeP7ZvFo2pT_v3-xO",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         ObjectFit: "_NIZ2fYFBu6WSnEE1H6i3",
         ObjectPosition: "_3OZ4rrlKzwAYOKP9HdqUrq",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        TextEntry: "_1vE-LsK6l_D_5yjbywZV1p",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        Separator: "_2v8lnOhHPKk5DrlAD0yAwc",
+        "Size-1": "HA_T1szVWGIw7_cDibhei",
+        "Size-2": "oSgUz2qE-NgHuOm4wt_OC",
+        "Size-3": "f9Ra4JmQiBJz_dBLijs_x",
+        "Size-4": "_1zkUYDDyfzPgesBbGmMsxP",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        Color: "_2Vc3a-PM4tOhJcD72NEq1U",
+        IconSizeDefault: "_20lX82QaoUw-iHboSsmZBI",
+        "IconSize-1": "_1zRMg9IjPqEIAejKQDDLYW",
+        "IconSize-2": "_3dn_hJnXYKfl38rjqz4y91",
+        "IconSize-3": "_2aoIykgGddbEHeCGgMR79l",
+        "IconSize-4": "_1Ypu_MleveHHMyLy8PVNy",
+        "IconSize-5": "e8vp9esm_uAhUEdfq5zjr",
+        "IconSize-6": "hXAsxCohKrk8qBq6Enfgt",
+        "IconSize-7": "_5TifSVb5dMP2wAaHIDqM_",
+        "IconSize-8": "_32KP-QSJpecoxuWZfWkqmy",
+        "IconSize-9": "_3TcYJ4xwprVIVhcdzwF17m",
+        HitSlop: "_1tiFDvBjIAQRZDbVwz8k2u",
       };
     },
     chunkid: (module) => {
@@ -341,6 +382,9 @@
     chunkid: (module) => {
       module.exports = {
         AppList: "_3WieBjkVb28rpePKxyn3gl",
+        AppText: "sqjdG_fjedZUmCmzyHdpN",
+        InLibrary: "PIsyQ6ew7BEmrOpzzJKCT",
+        AppIcon: "_1zJQxJZsmaRcsnMKVsj1SD",
         AppImages: "_2cKkqSc2Aw1kr_8SzTKYNF",
         PlatformIcons: "Wd0ssUN-E1g_6nF5cApwN",
         PlatformIcon: "_2_NmZjBVcuMKTZkfsRP_HD",
@@ -389,6 +433,13 @@
         PageSection: "_2WpiheNBkhzJpmxQ4Arawu",
         Header: "y5728HUyiI5XdCDBm5D7A",
         Banner: "_3hkPxq8NpEEOtbG7MPXNUy",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        ThumbIcon: "_2lDikjo0mk970SwUm3DRTK",
+        Down: "_1Cwc3y07Is4gEGD1Q0zKc_",
+        CommentIcon: "_2obrbR9xy_xows-ok2qmxn",
       };
     },
     chunkid: (module) => {
@@ -457,6 +508,12 @@
       module.exports = {
         TagList: "_3jV1ymbnCcg8o3qq78ndN7",
         Tag: "gctfUSqAf4-wM1_s7LW7C",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        VerdictIcon: "_9yuiPD5NCU4QYi8jzKFrC",
+        VerdictIconDown: "_2j8Acce2gU2Mnn4slpUyTf",
       };
     },
     chunkid: (module) => {
@@ -775,6 +832,91 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        return (0, _.jsx)(_._, {
+          ..._,
+          viewBoxSize: 16,
+          children: (0, _.jsx)("path", {
+            _: "M13.8182 1.94629L5.77816 9.98184L2.40483 6.61296L0.835938 8.18184L5.77816 13.1285L15.387 3.51518L13.8182 1.94629Z",
+            fill: "currentColor",
+          }),
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            checked: _,
+            onChange: _,
+            disabled: _,
+            children: _,
+            ref: _,
+            variant: _,
+            color: _,
+            align: _ = "center",
+            ..._
+          } = _,
+          _ = "indeterminate" === _,
+          _ = _ ? _ : _,
+          _ = () => {
+            _ || (_ && __webpack_require__(!!_ || !_));
+          },
+          _ = (0, _._)("Checkbox", _);
+        return (0, _.jsxs)(_._, {
+          align: _,
+          ref: _,
+          role: "checkbox",
+          "aria-checked": _ ? "mixed" : _,
+          "data-state": _(_),
+          className: _()(_.Root, _[`Variant-${_}`], _ && _.Disabled),
+          onClick: _,
+          tabIndex: 0,
+          onKeyDown: (_) => {
+            _ ||
+              (" " === _.key && (_(), _.preventDefault(), _.stopPropagation()));
+          },
+          cursor: "default",
+          "aria-disabled": _,
+          "data-accent-color": _,
+          ..._,
+          children: [
+            (0, _.jsx)("div", {
+              className: _.Checkbox,
+              children:
+                _ &&
+                (0, _.jsx)(_, {
+                  className: _.Icon,
+                }),
+            }),
+            _,
+          ],
+        });
+      }
+      function _(_) {
+        return "indeterminate" === _ ? _ : _ ? "checked" : "unchecked";
+      }
+      function _(_) {
+        return (0, _.jsx)("svg", {
+          viewBox: "0 0 16 16",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: (0, _.jsx)("path", {
+            _: "M14.6663 7.11133H1.33301V9.33355H14.6663V7.11133Z",
+            fill: "currentColor",
+          }),
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
@@ -1020,6 +1162,77 @@
         },
         FocusManager: _,
       };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { viewBoxSize: _ = 20, ..._ } = _,
+          _ = _.size ? void 0 : _.IconSizeDefault;
+        return (0, _.jsx)("svg", {
+          viewBox: `0 0 ${_} ${_}`,
+          ...(0, _._)(
+            {
+              className: _,
+              ..._,
+            },
+            _,
+          ),
+        });
+      }
+      const _ = [
+        ..._._,
+        {
+          prop: "size",
+          responsive: !0,
+          className: (_) => _[`IconSize-${_}`],
+        },
+        {
+          prop: "color",
+          className: _.Color,
+          cssProperty: (_) => ["--icon-color", (0, _._)(_)],
+        },
+        {
+          prop: "hitSlop",
+          className: _.HitSlop,
+          cssProperty: (_) => [
+            "--hit-slop-custom",
+            "string" == typeof _ ? _ : "",
+          ],
+        },
+        _._.find(({ prop: _ }) => "cursor" === _),
+      ];
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = {
+        _: "rotate( 180, 10, 10 )",
+        left: "rotate( 90, 10, 10 )",
+        right: "rotate( 270, 10, 10 )",
+      };
+      function _(_) {
+        const { direction: _ = "down" } = _,
+          _ = _[_];
+        return (0, _.jsx)(_._, {
+          ..._,
+          children: (0, _.jsx)("path", {
+            transform: _,
+            _: "M5.14541 6.89977L10.0063 12.2027L14.8671 6.89977C15.3557 6.36674 16.145 6.36674 16.6336 6.89977C17.1221 7.4328 17.1221 8.29385 16.6336 8.82688L10.8832 15.1002C10.3946 15.6333 9.60537 15.6333 9.11678 15.1002L3.36644 8.82688C2.87785 8.29385 2.87785 7.4328 3.36644 6.89977C3.85503 6.38041 4.65682 6.36674 5.14541 6.89977Z",
+            fill: "currentColor",
+          }),
+        });
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -7410,7 +7623,7 @@
         return (0, _.jsx)(_._, {
           direction: "column",
           flexGrow: "1",
-          gap: "3",
+          gap: "2",
           overflow: "hidden",
           children: _,
         });
@@ -8291,7 +8504,8 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       const _ = new _._("PurchaseOptions");
       function _(_) {
         const { _: _, option: _ } = _,
@@ -8305,7 +8519,8 @@
           }, [_]);
         if (!_ || !_) return console.warn("Not ready", _, _, _, _), null;
         const _ = _.included_appids?.length || 0,
-          _ = _.included_appids?.filter((_) => !_.has(_)) || [];
+          _ = _.included_appids?.filter((_) => !_.has(_)) || [],
+          _ = _.included_appids?.filter((_) => _.has(_)) || [];
         let _ = _.length;
         let _ =
           _ != _.length
@@ -8376,7 +8591,8 @@
                                 ),
                               }),
                               (0, _.jsx)(_, {
-                                apps: _,
+                                apps: [..._, ..._],
+                                setOwnedApps: _,
                               }),
                             ],
                           }),
@@ -8391,8 +8607,8 @@
         );
       }
       function _(_) {
-        const { apps: _ } = _,
-          [_, _] = _.useState(Math.min(_.length, 6)),
+        const { apps: _, setOwnedApps: _ } = _,
+          [_, _] = _.useState(_.length > 7 ? 6 : _.length),
           _ = _.useRef(null),
           _ = (0, _._)((_) => {
             if (_.current) {
@@ -8427,6 +8643,7 @@
                 _,
                 {
                   appid: _,
+                  bOwned: __webpack_require__.has(_),
                 },
                 _,
               ),
@@ -8434,26 +8651,60 @@
             (0, _.jsx)(_._, {
               ref: _,
               size: "2",
-              children: _.Localize("#AppPage_AdditionalItems", _),
+              children: _.LocalizePlural("#AppPage_AdditionalItem", _),
             }),
           ],
         });
       }
       function _(_) {
-        const { appid: _ } = _,
+        const { appid: _, bOwned: _ } = _,
           { data: _ } = (0, _._)({
             appid: _,
-          });
-        return _
-          ? (0, _.jsx)("li", {
-              className: _().BundleApp,
-              children: (0, _.jsx)(_._, {
-                size: "2",
-                lineClamp: 2,
-                children: _.name,
-              }),
-            })
-          : null;
+          }),
+          { data: _ } = (0, _._)({
+            appid: _,
+          }),
+          _ = (0, _._)({
+            appid: _,
+          }),
+          { data: _ } = (0, _._)(_);
+        if (!_) return null;
+        const _ =
+          (_ && (0, _._)(_, "community_icon")) ||
+          (_ && (0, _._)(_, "community_icon"));
+        return (0, _.jsxs)("li", {
+          className: _().BundleApp,
+          children: [
+            (0, _.jsx)("div", {
+              className: _().AppIcon,
+              children:
+                _ &&
+                (0, _.jsx)("img", {
+                  src: _,
+                  alt: "",
+                }),
+            }),
+            (0, _.jsxs)("div", {
+              className: _().AppText,
+              children: [
+                (0, _.jsx)(_._, {
+                  size: "2",
+                  contrast: _ ? "description" : "subtitle",
+                  lineClamp: _ ? 1 : 2,
+                  children: _.name,
+                }),
+                _ &&
+                  (0, _.jsx)(_._, {
+                    size: "1",
+                    weight: "heavy",
+                    color: "blue-8",
+                    className: _().InLibrary,
+                    children: (0, _._)("in_library"),
+                  }),
+              ],
+            }),
+          ],
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -9313,7 +9564,7 @@
         const { options: _ } = _,
           _ = "purchase_options",
           [_, _] = (0, _._)(_),
-          _ = 240,
+          _ = 256,
           _ = parseInt(_().CarouselPaddingTop),
           _ = parseInt(_().CarouselPaddingBottom),
           _ = _.useCallback(
@@ -9378,9 +9629,9 @@
                 focusedColumn: _,
                 setFocusedColumn: _,
                 nNumItems: _.length,
-                nHeight: 263.7362637362637 + _ + _,
-                nItemHeight: 263.7362637362637,
-                nItemMarginX: 10,
+                nHeight: 266.6666666666667 + _ + _,
+                nItemHeight: 266.6666666666667,
+                nItemMarginX: 8,
                 fnGetColumnWidth: _,
                 fnGetId: _,
                 fnItemRenderer: _,
@@ -9398,11 +9649,9 @@
         _ = 5;
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.lazy(() =>
         Promise.all([
-          __webpack_require__._("chunkid"),
           __webpack_require__._("chunkid"),
           __webpack_require__._("chunkid"),
           __webpack_require__._("chunkid"),
@@ -10634,27 +10883,31 @@
             className: (0, _._)(_().AutoCollapsePanel, _),
             focusableIfEmpty: !0,
             onActivate: _ ? _ : void 0,
-            children: (0, _.jsxs)(_._, {
-              focusable: _,
-              children: [
-                (0, _.jsx)("div", {
-                  ref: _,
-                  className: (0, _._)(
-                    _().Contents,
-                    _ && _().Collapsed,
-                    _ && _().Expanded,
-                  ),
-                  children: _,
-                }),
-                _ &&
+            children: (0, _.jsxs)(
+              _._,
+              {
+                focusable: _,
+                children: [
                   (0, _.jsx)("div", {
-                    className: _().ReadMore,
-                    children: _.Localize(
-                      _ ? "#btn_read_less" : "#btn_read_more",
+                    ref: _,
+                    className: (0, _._)(
+                      _().Contents,
+                      _ && _().Collapsed,
+                      _ && _().Expanded,
                     ),
+                    children: _,
                   }),
-              ],
-            }),
+                  _ &&
+                    (0, _.jsx)("div", {
+                      className: _().ReadMore,
+                      children: _.Localize(
+                        _ ? "#btn_read_less" : "#btn_read_more",
+                      ),
+                    }),
+                ],
+              },
+              _ ? "collapsed" : "expanded",
+            ),
           })
         );
       }
@@ -13718,7 +13971,7 @@
             const { data: _ } = (0, _._)({
                 appid: _,
               }),
-              _ = _?.appid || _,
+              _ = (0, _._)(_),
               { data: _ } = (0, _._)(_),
               _ = _?.your_info;
             if (!_?.owned || !_.minutes_played_forever) return null;
@@ -13952,6 +14205,858 @@
               }),
             });
       }
+      var _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        return ["OwnReview", _, _];
+      }
+      function _(_) {
+        const _ = (0, _._)(),
+          _ = (0, _._)(_),
+          _ = (function (_, _, _) {
+            return {
+              queryKey: _(_, _),
+              queryFn: async () => {
+                const _ = await _._.GetIndividualRecommendations(_, {
+                  requests: [
+                    {
+                      steamid: _,
+                      appid: _,
+                    },
+                  ],
+                });
+                if (_.GetEResult() == _._) return null;
+                if (_.GetEResult() != _._)
+                  throw new _._(
+                    _.GetEResult(),
+                    "Error from GetIndividualRecommendations",
+                  );
+                return _.Body().recommendations()[0]?.toObject() ?? null;
+              },
+              staleTime: 1 / 0,
+            };
+          })(_, _._.steamid, _);
+        return (0, _._)(_);
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const { review: _, eAppType: _, nSteamworksAppid: _, onEdit: _ } = _,
+          { data: _ } = (0, _._)(_._.steamid);
+        _.use(_.Ready());
+        const _ = (0, _._)((0, _._)(_, _._.steamid), _),
+          _ = _.is_public
+            ? "#AppPage_OwnReview_PostedPublic"
+            : "#AppPage_OwnReview_PostedFriendsOnly";
+        return (0, _.jsxs)(_._, {
+          direction: "column",
+          padding: "4",
+          borderColor: "greyneutral-9 50%",
+          children: [
+            (0, _.jsx)(_, {
+              review: _,
+              eAppType: _,
+            }),
+            (0, _.jsxs)(_._, {
+              direction: "column",
+              background: "greyneutral-11 14%",
+              children: [
+                (0, _.jsx)(_, {
+                  review: _,
+                }),
+                (0, _.jsxs)(_._, {
+                  direction: "column",
+                  gap: "3",
+                  padding: "3",
+                  children: [
+                    (0, _.jsxs)(_._, {
+                      gap: "3",
+                      align: "center",
+                      children: [
+                        (0, _.jsx)(_, {
+                          bPositive: !!_.voted_up,
+                        }),
+                        (0, _.jsx)(_._, {
+                          flexGrow: "1",
+                          children: (0, _.jsx)(_._, {
+                            size: "3",
+                            color: "slate-11",
+                            children: _.Localize(_),
+                          }),
+                        }),
+                      ],
+                    }),
+                    (0, _.jsx)(_, {
+                      review: _,
+                    }),
+                    (0, _.jsxs)(_._, {
+                      gap: "2",
+                      justify: "end",
+                      children: [
+                        (0, _.jsx)(_._, {
+                          focusable: !0,
+                          color: "blue",
+                          onClick: _,
+                          children: _.Localize("#AppPage_OwnReview_Edit"),
+                        }),
+                        (0, _.jsx)(_._, {
+                          focusable: !0,
+                          color: "blue",
+                          href: _,
+                          children: _.Localize("#AppPage_OwnReview_View"),
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+              ],
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const { review: _, eAppType: _ } = _,
+          _ = _.GetAppTypeLocKey("#AppPage_OwnReview_Reviewed", _ ?? _._._),
+          _ = (0, _._)(_.time_created ?? 0, {
+            fullmonthname: !0,
+          });
+        return (0, _.jsxs)(_._, {
+          size: "5",
+          weight: "medium",
+          color: "text-light",
+          contrast: "title",
+          marginBottom: "2",
+          children: [
+            _.Localize(_, _),
+            !!_.time_updated &&
+              ` (${_.Localize(
+                "#AppPage_OwnReview_Updated",
+                (0, _._)(_.time_updated, {
+                  fullmonthname: !0,
+                }),
+              )})`,
+          ],
+        });
+      }
+      function _(_) {
+        const { bPositive: _ } = _;
+        return (0, _.jsx)("div", {
+          className: (0, _._)(_().ThumbIcon, !_ && _().Down),
+          children: (0, _.jsx)(_.twC, {}),
+        });
+      }
+      function _(_) {
+        const { review: _ } = _,
+          _ = _.votes_up ?? 0,
+          _ = _.comment_count ?? 0;
+        return _ || _
+          ? (0, _.jsxs)(_._, {
+              gap: "3",
+              align: "center",
+              paddingX: "4",
+              paddingY: "2",
+              background: "greyneutral-9 50%",
+              children: [
+                _ > 0 &&
+                  (0, _.jsx)(_._, {
+                    size: "3",
+                    children: _.LocalizePlural(
+                      "#AppPage_OwnReview_HelpfulCount",
+                      _,
+                    ),
+                  }),
+                _ > 0 &&
+                  (0, _.jsxs)(_._, {
+                    gap: "1",
+                    align: "center",
+                    children: [
+                      (0, _.jsx)(_._, {
+                        size: "3",
+                        children: _,
+                      }),
+                      (0, _.jsx)(_.MwB, {
+                        className: _().CommentIcon,
+                      }),
+                    ],
+                  }),
+              ],
+            })
+          : null;
+      }
+      function _(_) {
+        const { review: _ } = _,
+          [_, _] = _.useState(!1),
+          _ = _.useCallback(() => _(!0), []);
+        if (!_.developer_response) return null;
+        _.use(_._.Ready());
+        const _ = (0, _._)(_.time_developer_responded ?? 0, {
+          fullmonthname: !0,
+          bUseRelativeNames: !1,
+        });
+        return (0, _.jsxs)(_._, {
+          direction: "column",
+          gap: "2",
+          children: [
+            (0, _.jsxs)(_._, {
+              gap: "2",
+              align: "center",
+              wrap: "wrap",
+              children: [
+                (0, _.jsx)(_._, {
+                  size: "3",
+                  color: "slate-11",
+                  children: _._.Localize(
+                    "#Review_OfficialDeveloperResponseExistsDate",
+                    _,
+                  ),
+                }),
+                !_ &&
+                  (0, _.jsx)(_._, {
+                    focusable: !0,
+                    size: "1",
+                    variant: "ghost",
+                    color: "blue",
+                    onClick: _,
+                    children: _._.Localize(
+                      "#Review_OfficialDeveloperResponse_View",
+                    ),
+                  }),
+              ],
+            }),
+            _ &&
+              (0, _.jsx)(_._, {
+                padding: "3",
+                background: "greyneutral-9 50%",
+                className: (0, _._)(_().BBCodeContent, _().Community),
+                children: (0, _.jsx)(_._, {
+                  text: _.developer_response,
+                  bBeWary: !0,
+                }),
+              }),
+          ],
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            rows: _ = 3,
+            resize: _ = "none",
+            ref: _,
+            value: _,
+            onTextChange: _,
+            onChange: _,
+            disabled: _,
+            variant: _,
+            ..._
+          } = _,
+          _ = (0, _._)("TextArea", _),
+          _ = (0, _._)(),
+          _ = (0, _._)({
+            ..._,
+            className: _()((0, _._)(), _.TextEntry),
+            style: {
+              resize: _,
+            },
+            cursor: "text",
+            disabled: _,
+            variant: _,
+          }),
+          _ = _ ? _._ : "textarea";
+        return (0, _.jsx)(_, {
+          ref: _,
+          ..._,
+          value: _ || "",
+          onChange: (_) => {
+            _ || (_(_.target.value), _ && _(_));
+          },
+          rows: _,
+          readOnly: _,
+          "aria-disabled": _,
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { orientation: _ = "horizontal", size: _ = "1", ..._ } = _;
+        return (0, _.jsx)("div", {
+          role: "separator",
+          "aria-orientation": _,
+          ...(0, _._)(
+            {
+              ..._,
+              size: _,
+              className: _.Separator,
+            },
+            _,
+          ),
+        });
+      }
+      const _ = [
+        ..._._,
+        {
+          prop: "size",
+          className: (_) => _[`Size-${_}`],
+          responsive: !0,
+        },
+        {
+          prop: "color",
+          cssProperty: (_) => ["--separator-color", (0, _._)(_)],
+        },
+      ];
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        const _ = (0, _._)(_),
+          _ = (0, _._)("recommend-game");
+        return (0, _._)({
+          mutationFn: (_) =>
+            _
+              ? (async function (_, _) {
+                  const _ = await _(
+                    `${_._.STORE_BASE_URL}userreviews/update/${_}`,
+                    {
+                      review_text: _.review ?? "",
+                      voted_up: _.voted_up,
+                      is_public: _.is_public,
+                      language: _.language ?? "",
+                      received_compensation: _.received_compensation,
+                      comments_disabled: _.comments_disabled,
+                      sessionid: (0, _._)(),
+                    },
+                  );
+                  if (_.success != _._) throw new Error("");
+                })(_, _)
+              : (async function (_, _, _, _) {
+                  const _ = await _(
+                    `${_._.STORE_BASE_URL}friends/recommendgame`,
+                    {
+                      appid: _,
+                      steamworksappid: _,
+                      comment: _.review ?? "",
+                      rated_up: _.voted_up,
+                      is_public: _.is_public,
+                      language: _.language ?? "",
+                      received_compensation: _.received_compensation,
+                      disable_comments: _.comments_disabled,
+                      sessionid: (0, _._)(),
+                      hide_in_steam_china: !(0, _._)(_._.EREALM),
+                      snr: _,
+                    },
+                  );
+                  if (!_.success) throw new Error(_.strError ?? "");
+                })(_, _, _, _),
+          onSuccess: () => {
+            window.location.reload();
+          },
+        });
+      }
+      async function _(_, _) {
+        const _ = (function (_) {
+            function _(_) {
+              return "boolean" == typeof _ || null == _
+                ? _
+                  ? "1"
+                  : "0"
+                : String(_);
+            }
+            const _ = new FormData();
+            return (
+              Object.entries(_).forEach(([_, _]) => {
+                if (Array.isArray(_))
+                  for (const _ of _) __webpack_require__.append(_ + "[]", _(_));
+                else __webpack_require__.append(_, _(_));
+              }),
+              _
+            );
+          })(_),
+          _ = await fetch(_, {
+            method: "POST",
+            body: _,
+            credentials: "include",
+          });
+        return await _.json().catch(() => ({}));
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      const _ = "6862-8119-C23E-EA7B",
+        _ = 8e3,
+        _ = _._.filter((_) => "sc_schinese" != _ && "arabic" != _);
+      function _(_) {
+        const { appid: _, review: _ } = _,
+          { data: _ } = (0, _._)({
+            appid: _,
+          }),
+          { data: _ } = (0, _._)(_._.steamid),
+          [_, _] = _.useState(() =>
+            (function (_) {
+              const _ = (0, _._)(_._.EREALM);
+              if (_)
+                return {
+                  ..._,
+                  language: _ || !_.language ? _() : _.language,
+                  comments_disabled: _.comments_disabled || _,
+                  is_public: _.is_public && !_._.is_limited,
+                };
+              return {
+                is_public: !_._.is_limited,
+                language: _(),
+                comments_disabled: _,
+              };
+            })(_),
+          ),
+          [_, _] = _.useState(""),
+          _ = _(_, _?.recommendationid),
+          _ = _.mutate,
+          _ = _.useCallback((_) => {
+            _((_) => ({
+              ..._,
+              ..._,
+            }));
+          }, []),
+          _ = _.useCallback(
+            (_) =>
+              _({
+                review: _,
+              }),
+            [_],
+          ),
+          _ = _?.name ?? "",
+          _ = _.useCallback(() => {
+            _.review?.trim()
+              ? void 0 !== _.voted_up
+                ? (_(""), _(_))
+                : _(_.Localize("#AppPage_WriteReview_ErrorNoRating", _))
+              : _(_.Localize("#AppPage_WriteReview_ErrorNoText"));
+          }, [_, _, _]);
+        if (!_) return null;
+        _.use(_.Ready()), _.use(_._.Ready());
+        const _ = !!_,
+          _ = _.type ?? _._._,
+          _ = _.error
+            ? _.error.message || _.Localize("#AppPage_WriteReview_ErrorPosting")
+            : "";
+        return (0, _.jsx)(_._, {
+          navEntryPreferPosition: _._.PREFERRED_CHILD,
+          children: (0, _.jsxs)(_._, {
+            direction: "column",
+            gap: "3",
+            padding: "4",
+            borderColor: "greyneutral-9 50%",
+            children: [
+              (0, _.jsx)(_, {
+                strAppName: _,
+                eAppType: _,
+                bUpdate: _,
+              }),
+              (0, _.jsxs)(_._, {
+                gap: "3",
+                children: [
+                  !!_ &&
+                    (0, _.jsx)(_._, {
+                      playerLinkDetails: _,
+                      size: "MediumLarge",
+                      statusPosition: "border",
+                      alt: "",
+                    }),
+                  (0, _.jsxs)(_._, {
+                    direction: "column",
+                    gap: "3",
+                    flexGrow: "1",
+                    navProps: {
+                      preferredFocus: !0,
+                    },
+                    children: [
+                      (!!_ || !!_) &&
+                        (0, _.jsx)(_._, {
+                          size: "3",
+                          color: "red-10",
+                          children: _ || _,
+                        }),
+                      (0, _.jsx)(_, {
+                        value: _.review ?? "",
+                        onTextChange: _,
+                        placeholder: _.Localize(
+                          "#AppPage_WriteReview_Placeholder",
+                        ),
+                        rows: 4,
+                        maxLength: _,
+                      }),
+                      (0, _.jsx)(_, {
+                        review: _,
+                        bFreeApp: !!_.is_free,
+                        UpdateForm: _,
+                      }),
+                      (0, _.jsx)(_, {
+                        bVotedUp: _.voted_up,
+                        eAppType: _,
+                        bUpdate: _,
+                        bPosting: _.isPending,
+                        UpdateForm: _,
+                        OnSubmit: _,
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+            ],
+          }),
+        });
+      }
+      function _(_) {
+        const { strAppName: _, eAppType: _, bUpdate: _ } = _;
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
+              size: "5",
+              color: "blue-11",
+              children: _.Localize(
+                _
+                  ? "#AppPage_WriteReview_TitleUpdate"
+                  : "#AppPage_WriteReview_Title",
+                _,
+              ),
+            }),
+            (0, _.jsx)(_._, {
+              size: "3",
+              color: "greyneutral-11",
+              children: (0, _._)(
+                _.Localize(_.GetAppTypeLocKey("#AppPage_WriteReview_Desc", _)),
+                (0, _.jsx)(_._, {
+                  underline: "always",
+                  color: "blue-8",
+                  href: `${_._.HELP_BASE_URL}faqs/view/${_}`,
+                }),
+              ),
+            }),
+            (0, _._)(_._.EREALM) &&
+              (0, _.jsx)(_._, {
+                size: "3",
+                color: "brown-10",
+                children: _.Localize("#AppPage_WriteReview_ChinaDisclaimer"),
+              }),
+          ],
+        });
+      }
+      function _(_) {
+        const { review: _, bFreeApp: _, UpdateForm: _ } = _,
+          [_, _] = _.useState(!1),
+          _ = _.useCallback(() => _((_) => !_), []),
+          _ = _.useCallback(
+            (_) =>
+              _({
+                is_public: _.data,
+              }),
+            [_],
+          ),
+          _ = _.useCallback(
+            (_) =>
+              _({
+                language: _.data,
+              }),
+            [_],
+          ),
+          _ = _.useCallback(
+            (_) =>
+              _({
+                comments_disabled: !_,
+              }),
+            [_],
+          ),
+          _ = _.useCallback(
+            (_) =>
+              _({
+                received_compensation: _,
+              }),
+            [_],
+          ),
+          _ = _.Localize("#AppPage_WriteReview_Visibility"),
+          _ = _.Localize("#AppPage_WriteReview_Language"),
+          _ = [
+            {
+              label: _.Localize("#AppPage_WriteReview_VisibilityPublic"),
+              data: !0,
+            },
+            {
+              label: _.Localize("#AppPage_WriteReview_VisibilityFriends"),
+              data: !1,
+            },
+          ],
+          _ = _.map((_) => ({
+            label: (0, _._)(_),
+            data: _,
+          }));
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
+              variant: "basic",
+              color: "greyneutral",
+              width: "100%",
+              focusable: !0,
+              onClick: _,
+              children: (0, _.jsxs)(_._, {
+                justify: "between",
+                align: "center",
+                width: "100%",
+                children: [
+                  _.Localize("#AppPage_WriteReview_Settings"),
+                  (0, _.jsx)(_._, {
+                    direction: _ ? "up" : "down",
+                  }),
+                ],
+              }),
+            }),
+            _ &&
+              (0, _.jsxs)(_._, {
+                direction: "column",
+                gap: "2",
+                children: [
+                  (0, _.jsxs)(_._, {
+                    justify: "between",
+                    align: "center",
+                    gap: "2",
+                    children: [
+                      (0, _.jsx)(_._, {
+                        size: "3",
+                        children: _,
+                      }),
+                      _._.is_limited
+                        ? (0, _.jsx)(_._, {
+                            size: "3",
+                            color: "greyneutral-11",
+                            children: _.Localize(
+                              "#AppPage_WriteReview_VisibilityLimited",
+                            ),
+                          })
+                        : (0, _.jsx)(_._, {
+                            width: "50%",
+                            children: (0, _.jsx)(_._, {
+                              controlled: !0,
+                              rgOptions: _,
+                              selectedOption: !!_.is_public,
+                              onChange: _,
+                              menuLabel: _,
+                            }),
+                          }),
+                    ],
+                  }),
+                  !(0, _._)(_._.EREALM) &&
+                    (0, _.jsxs)(_._, {
+                      justify: "between",
+                      align: "center",
+                      gap: "2",
+                      children: [
+                        (0, _.jsx)(_._, {
+                          size: "3",
+                          children: _,
+                        }),
+                        (0, _.jsx)(_._, {
+                          width: "50%",
+                          children: (0, _.jsx)(_._, {
+                            controlled: !0,
+                            rgOptions: _,
+                            selectedOption: _.language,
+                            onChange: _,
+                            menuLabel: _,
+                            strDefaultLabel: (0, _._)(_.language ?? ""),
+                          }),
+                        }),
+                      ],
+                    }),
+                  (0, _.jsx)(_._, {
+                    checked: !_.comments_disabled,
+                    onChange: _,
+                    children: (0, _.jsx)(_._, {
+                      size: "3",
+                      children: _.Localize(
+                        "#AppPage_WriteReview_AllowComments",
+                      ),
+                    }),
+                  }),
+                  !_ &&
+                    (0, _.jsx)(_._, {
+                      checked: !!_.received_compensation,
+                      onChange: _,
+                      children: (0, _.jsx)(_._, {
+                        size: "3",
+                        children: _.Localize(
+                          "#AppPage_WriteReview_ReceivedFree",
+                        ),
+                      }),
+                    }),
+                  (0, _.jsx)(_, {
+                    color: "greyneutral-9 50%",
+                  }),
+                ],
+              }),
+          ],
+        });
+      }
+      function _(_) {
+        const {
+            bVotedUp: _,
+            eAppType: _,
+            bUpdate: _,
+            bPosting: _,
+            UpdateForm: _,
+            OnSubmit: _,
+          } = _,
+          _ = _.useCallback(
+            () =>
+              _({
+                voted_up: !0,
+              }),
+            [_],
+          ),
+          _ = _.useCallback(
+            () =>
+              _({
+                voted_up: !1,
+              }),
+            [_],
+          );
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsxs)(_._, {
+              direction: "column",
+              gap: "2",
+              children: [
+                (0, _.jsx)(_._, {
+                  size: "4",
+                  children: _.Localize(
+                    _.GetAppTypeLocKey("#AppPage_WriteReview_Recommend", _),
+                  ),
+                }),
+                (0, _.jsxs)(_._, {
+                  gap: "2",
+                  children: [
+                    (0, _.jsx)(_, {
+                      bThumbsUp: !0,
+                      bSelected: !0 === _,
+                      onSelect: _,
+                    }),
+                    (0, _.jsx)(_, {
+                      bThumbsUp: !1,
+                      bSelected: !1 === _,
+                      onSelect: _,
+                    }),
+                  ],
+                }),
+              ],
+            }),
+            (0, _.jsx)(_._, {
+              justify: "end",
+              children: (0, _.jsx)(_._, {
+                focusable: !0,
+                color: "blue",
+                loading: _,
+                onClick: _,
+                children: _.Localize(
+                  _
+                    ? "#AppPage_WriteReview_Update"
+                    : "#AppPage_WriteReview_Post",
+                ),
+              }),
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const { bThumbsUp: _, bSelected: _, onSelect: _ } = _;
+        return (0, _.jsx)(_._, {
+          focusable: !0,
+          variant: "basic",
+          color: _ ? "blue" : "greyneutral",
+          onClick: _,
+          children: (0, _.jsxs)(_._, {
+            direction: "row",
+            gap: "1",
+            align: "center",
+            children: [
+              (0, _.jsx)(_.twC, {
+                className: (0, _._)(_().VerdictIcon, !_ && _().VerdictIconDown),
+              }),
+              (0, _.jsx)(_._, {
+                size: "4",
+                contrast: "title",
+                children: _.Localize(
+                  _
+                    ? "#AppPage_WriteReview_RecommendYes"
+                    : "#AppPage_WriteReview_RecommendNo",
+                ),
+              }),
+            ],
+          }),
+        });
+      }
+      function _() {
+        return (0, _._)(_._.EREALM)
+          ? "schinese"
+          : "korean" == _._.LANGUAGE
+            ? "koreana"
+            : _._.LANGUAGE;
+      }
+      function _(_) {
+        const { appid: _, ownReview: _ } = _,
+          _ = (function (_) {
+            const _ = (0, _._)(),
+              _ = (0, _._)(_);
+            return _.useCallback(
+              (_) => {
+                _.setQueryData(_(_._.steamid, _), _);
+              },
+              [_, _],
+            );
+          })(_),
+          [_, _] = _.useState(!1);
+        return (
+          _.useEffect(() => {
+            _(_), _(!0);
+          }, [_, _]),
+          _
+            ? (0, _.jsx)(_, {
+                appid: _,
+              })
+            : null
+        );
+      }
+      function _(_) {
+        const { appid: _ } = _,
+          { data: _ } = (0, _._)({
+            appid: _,
+          }),
+          { data: _ } = _(_),
+          _ = (0, _._)(_),
+          [_, _] = _.useState(!1),
+          _ = _.useCallback(() => _(!0), []);
+        return _
+          ? (0, _.jsx)(_._, {
+              direction: "column",
+              paddingX: "5",
+              paddingY: "3",
+              background: "greyneutral-2 80%",
+              children:
+                _ && !_
+                  ? (0, _.jsx)(_, {
+                      review: _,
+                      eAppType: _.type,
+                      nSteamworksAppid: _,
+                      onEdit: _,
+                    })
+                  : (0, _.jsx)(_, {
+                      appid: _,
+                      review: _ ?? null,
+                    }),
+            })
+          : null;
+      }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -14092,32 +15197,35 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
           Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -14352,6 +15460,14 @@
                       "store-awards": () =>
                         (0, _.jsx)(_, {
                           appid: _,
+                        }),
+                      "write-review": (_) =>
+                        (0, _.jsx)(_._, {
+                          feature: "owned-game",
+                          children: (0, _.jsx)(_, {
+                            ..._,
+                            appid: _,
+                          }),
                         }),
                     },
                   }),

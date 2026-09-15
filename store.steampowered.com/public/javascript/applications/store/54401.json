@@ -1383,6 +1383,8 @@
     "Login_GoOffline_Button": "Offlinemodus starten",
     "Login_Error_Anonymous_Title": "Niet ondersteund",
     "Login_Error_Anonymous_Description": "Anoniem aanmelden wordt alleen ondersteund in steamcmd en niet in de webbrowser of de Steam-bureaubladclient.",
+    "Login_Error_Action_Necessary_Title": "Account Action Necessary",
+    "Login_Error_Action_Necessary_Description": "Please log in on another device or scan the QR code.",
     "Login_Error_Default_Description": "Er is een fout opgetreden bij het aanmelden. Probeer het later opnieuw.",
     "Login_Error_MoveAuthenticator_Description": "Er is een probleem opgetreden bij het overzetten van je authenticator. Probeer het later opnieuw.",
     "Login_ConnectingToSteam": "Verbinden met Steam",

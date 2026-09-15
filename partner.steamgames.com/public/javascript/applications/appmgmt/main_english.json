@@ -1064,6 +1064,7 @@
     "StoreAdmin_AntiCheat_Type_hackshield": "HackShield",
     "StoreAdmin_AntiCheat_Type_ace": "Anti-Cheat Expert (ACE)",
     "StoreAdmin_AntiCheat_Type_sard": "SARD Anti-Cheat",
+    "StoreAdmin_AntiCheat_Type_hprotect": "HProtect",
     "StoreAdmin_AntiCheat_Type_other": "Other",
     "StoreAdmin_GameEngine_Type_unreal": "Unreal Engine",
     "StoreAdmin_Platform_AllPlatforms": "All Platforms",

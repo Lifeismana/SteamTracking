@@ -210,6 +210,9 @@
 	}
 }
 
+.long_mod_message_button span {
+	font-size: 12px;
+}
 
 .notification_paging {
 	position: relative;

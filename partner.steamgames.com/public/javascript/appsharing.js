@@ -97,24 +97,47 @@ function ManageShareInvite( ulShareID, eNewShareState, nPublisherID )
 	}
 
 	$dialog.done( function() {
+		SubmitManageShareInvite( ulShareID, eNewShareState, nPublisherID );
+	} );
+}
 
-		var rgParams = {
-			'sessionid' : g_sessionID,
-			'shareid' : ulShareID,
-			'new_share_state' : eNewShareState
-		};
+// strConfirmationCode is the SMS code from an earlier k_EResultPending round trip, if any
+function SubmitManageShareInvite( ulShareID, eNewShareState, nPublisherID, strConfirmationCode )
+{
+	var rgParams = {
+		'sessionid' : g_sessionID,
+		'shareid' : ulShareID,
+		'new_share_state' : eNewShareState
+	};
+	if ( strConfirmationCode )
+		rgParams.confirmation = strConfirmationCode;
 
-		$J.post( 'https://partner.steamgames.com/appsharing/ajaxmanageinvite/' + nPublisherID, rgParams )
-			.done( function( data ) {
+	$J.post( 'https://partner.steamgames.com/appsharing/ajaxmanageinvite/' + nPublisherID, rgParams )
+		.done( function( data ) {
 
-				if ( data.success == 1 )
+			if ( data.success == 1 )
+			{
+				location.reload( true );
+			}
+			else if ( data.success == 22 )
+			{
+				if ( data.require_confirmation )
 				{
-					location.reload( true );
+					// approve from the Steam mobile app; reload on dismiss so the row reflects whatever they did there
+					ShowAlertDialog( 'Approve App Share', $J( '#mobileconf_example' ).clone().show(), null, { bExplicitDismissalOnly: true } )
+						.always( function() { location.reload( true ); } );
 				}
 				else
 				{
-					ShowAlertDialog( 'Your Request Failed...', 'ERROR' );
+					ShowPromptDialog( 'Approve App Share', 'Please enter the code texted to your mobile device', 'Approve', null, { bExplicitDismissalOnly: true } )
+						.done( function( strCode ) {
+							SubmitManageShareInvite( ulShareID, eNewShareState, nPublisherID, strCode );
+						} );
 				}
-			} );
-	} );
+			}
+			else
+			{
+				ShowAlertDialog( 'Your Request Failed...', data.msg ?? 'We experienced an issue in processing your request. Please try again later. If the issue persists, please contact Steamworks Support.' );
+			}
+		} );
 }

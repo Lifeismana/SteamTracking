@@ -118,6 +118,8 @@
           __webpack_require__._("chunkid").then(_._.bind(_, 22224, 19))),
         (_.russian = () =>
           __webpack_require__._("chunkid").then(_._.bind(_, 35544, 19))),
+        (_.sc_schinese = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 57906, 19))),
         (_.schinese = () =>
           __webpack_require__._("chunkid").then(_._.bind(_, 58875, 19))),
         (_.spanish = () =>
@@ -297,6 +299,8 @@
           __webpack_require__._("chunkid").then(_._.bind(_, 47265, 19))),
         (_.russian = () =>
           __webpack_require__._("chunkid").then(_._.bind(_, 22115, 19))),
+        (_.sc_schinese = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 3913, 19))),
         (_.schinese = () =>
           __webpack_require__._("chunkid").then(_._.bind(_, 64698, 19))),
         (_.spanish = () =>

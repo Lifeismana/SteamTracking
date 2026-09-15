@@ -345,29 +345,26 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      async function _() {
-        const _ = new URLSearchParams(),
-          _ = "undefined" != typeof self ? self.origin : "store";
-        _ && _.set("origin", _);
-        const _ = `${_._.STORE_BASE_URL}saleaction/ajaxgetuserdeckcompatcounts?${_}`,
-          _ = await fetch(_);
-        if (!_._) throw new Error(`${_} answered ${_.status}`);
-        const _ = await _.json();
-        if (_?.success != _._ || !_.counts)
-          throw new Error(`${_} answered EResult ${_?.success}`);
-        return _.counts;
-      }
       const _ = 3e5;
       function _() {
-        const { data: _ } = (0, _._)({
+        return {
           queryKey: ["DeckCompatCounts"],
-          queryFn: () => _(),
+          queryFn: () =>
+            (async function () {
+              const _ = await (0, _._)(
+                "ajaxgetuserdeckcompatcounts",
+                new URLSearchParams(),
+              );
+              if (!_.counts)
+                throw new Error(
+                  "ajaxgetuserdeckcompatcounts answered without counts",
+                );
+              return _.counts;
+            })(),
           staleTime: _,
           retry: !1,
-        });
-        return _;
+        };
       }
       function _(_, _) {
         switch (_) {
@@ -380,6 +377,7 @@
         }
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -904,7 +902,10 @@
             });
       }
       function _(_) {
-        const _ = _();
+        const _ = (function () {
+          const { data: _ } = (0, _._)(_());
+          return _;
+        })();
         if (!_)
           return (0, _.jsx)(_._, {
             size: "small",

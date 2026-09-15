@@ -525,14 +525,14 @@
             aR: () => E,
             iF: () => X,
             kb: () => R,
-            kk: () => V,
+            kk: () => P,
             l7: () => f,
-            mb: () => q,
+            mb: () => J,
             nf: () => j,
             q4: () => re,
             sJ: () => U,
             ts: () => M,
-            vd: () => P,
+            vd: () => O,
             yu: () => s,
             zG: () => ne,
           });
@@ -671,7 +671,7 @@
               !0
             );
           }
-          function V(e) {
+          function P(e) {
             const n = (0, o.jE)();
             return (0, c.n)({
               mutationFn: async (n) => await F(e, n),
@@ -680,10 +680,10 @@
               },
             });
           }
-          const O = "AppLanguageOptionsList";
-          function P(e) {
+          const V = "AppLanguageOptionsList";
+          function O(e) {
             const n = (0, a.I)({
-              queryKey: [C, O, e],
+              queryKey: [C, V, e],
               queryFn: async () => {
                 const n = `${v.TS.PARTNER_BASE_URL}achievements/ajaxgetlanguageoptionslist/${e}`,
                   t = await d().get(n, { withCredentials: !0 });
@@ -758,7 +758,7 @@
             if (i?.data?.success != r.R) throw Y(e, i);
             return i.data;
           }
-          async function J(e, n, t) {
+          async function q(e, n, t) {
             const i = `${v.TS.PARTNER_BASE_URL}achievements/ajaxcreateorupdategroup/${e}`,
               s = new FormData();
             s.append("groupid", n),
@@ -772,10 +772,10 @@
               s.append("order", t.order ?? "-1");
             return (await K("addOrUpdateStatGroup", i, s)).groupid;
           }
-          function q(e, n) {
+          function J(e, n) {
             const t = (0, o.jE)();
             return (0, c.n)({
-              mutationFn: async (t) => await J(e, n, t),
+              mutationFn: async (t) => await q(e, n, t),
               onSuccess: async () => {
                 await t.invalidateQueries({ queryKey: [C, b, e, !1] });
               },
@@ -785,7 +785,7 @@
             const n = (0, o.jE)();
             return (0, c.n)({
               mutationFn: async (n) => {
-                for (const t of n) await J(e, t.groupid, t.group);
+                for (const t of n) await q(e, t.groupid, t.group);
                 return !0;
               },
               onSuccess: async () => {
@@ -1418,7 +1418,7 @@
                   children: [
                     l &&
                       !!l.length &&
-                      (0, s.jsx)(O, {
+                      (0, s.jsx)(V, {
                         className: (0, h.A)(_.ChangeBorder, _.Added),
                         title: (0, v.we)(
                           "#AchievementEditor_AchievementCsvImport_Added_Title",
@@ -1441,7 +1441,7 @@
                       }),
                     E &&
                       !!E.length &&
-                      (0, s.jsx)(O, {
+                      (0, s.jsx)(V, {
                         className: (0, h.A)(_.ChangeBorder, _.Modified),
                         title: (0, v.we)(
                           "#AchievementEditor_AchievementCsvImport_Modified_Title",
@@ -1465,7 +1465,7 @@
                       }),
                     m &&
                       !!m.length &&
-                      (0, s.jsx)(O, {
+                      (0, s.jsx)(V, {
                         className: (0, h.A)(_.ChangeBorder, _.Deleted),
                         title: (0, v.we)(
                           "#AchievementEditor_AchievementCsvImport_Removed_Title",
@@ -1503,7 +1503,7 @@
                       }),
                     y &&
                       !!y.length &&
-                      (0, s.jsx)(P, {
+                      (0, s.jsx)(O, {
                         title: (0, v.we)(
                           "#AchievementEditor_AchievementCsvImport_Unmodified_Title",
                           y.length,
@@ -1635,16 +1635,16 @@
               ],
             });
           }
-          function V(e) {
+          function P(e) {
             const { className: n, children: t } = e;
             return (0, s.jsx)("div", {
               className: (0, h.A)(_.ImportedAchievementsTableContainer, n),
               children: t,
             });
           }
-          function O(e) {
+          function V(e) {
             const { children: n, className: t, ...i } = e;
-            return (0, s.jsxs)(V, {
+            return (0, s.jsxs)(P, {
               ...e,
               children: [
                 (0, s.jsx)("div", {
@@ -1658,10 +1658,10 @@
               ],
             });
           }
-          function P(e) {
+          function O(e) {
             const { children: n, className: t, ...i } = e,
               [r, a] = (0, u.useState)(!0);
-            return (0, s.jsxs)(V, {
+            return (0, s.jsxs)(P, {
               ...e,
               children: [
                 (0, s.jsxs)("div", {
@@ -2022,7 +2022,7 @@
                           "#AchievementEditor_Bulk_Errors_Description",
                         ),
                         children: e.map((e) =>
-                          (0, s.jsx)(q, { result: e }, e.filename),
+                          (0, s.jsx)(J, { result: e }, e.filename),
                         ),
                       }),
                     n.length > 0 &&
@@ -2095,7 +2095,7 @@
               ],
             });
           }
-          function J(e) {
+          function q(e) {
             const {
               kind: n,
               errors: t,
@@ -2147,13 +2147,13 @@
                     ),
                 });
           }
-          function q(e) {
+          function J(e) {
             const { result: n } = e;
             return (0, s.jsxs)("div", {
               className: _.FileErrorList,
               children: [
                 (0, s.jsx)(K, { result: n }),
-                (0, s.jsx)(J, { result: n }),
+                (0, s.jsx)(q, { result: n }),
               ],
             });
           }
@@ -2609,8 +2609,8 @@
               L = (0, a.useMemo)(() => w(_, d), [_, d]),
               M = (0, a.useMemo)(() => E(_, L), [_, L]),
               F = (0, a.useMemo)(() => b(_), [_]),
-              V = (0, a.useMemo)(() => I(_, L, A), [_, L, A]),
-              { errors: O, successes: P } = (0, a.useMemo)(
+              P = (0, a.useMemo)(() => I(_, L, A), [_, L, A]),
+              { errors: V, successes: O } = (0, a.useMemo)(
                 () => T(_, L),
                 [_, L],
               ),
@@ -2623,9 +2623,9 @@
               definitions: L,
               localization: M,
               groupLocalization: F,
-              images: V,
-              errors: O,
-              successes: P,
+              images: P,
+              errors: V,
+              successes: O,
               hasData: z,
               generateUnachievedImages: A,
               setGenerateUnachievedImages: y,
@@ -2663,7 +2663,7 @@
               save: async () => {
                 try {
                   await v.mutateAsync(k(F)),
-                    await h.mutateAsync(D(L, M, V, C)),
+                    await h.mutateAsync(D(L, M, P, C)),
                     R(!0);
                 } catch {}
               },
@@ -2690,12 +2690,12 @@
             EO: () => z,
             JP: () => $,
             K1: () => _,
-            Lq: () => P,
-            NJ: () => q,
+            Lq: () => O,
+            NJ: () => J,
             OB: () => X,
-            Rr: () => O,
+            Rr: () => V,
             Wk: () => C,
-            Yc: () => V,
+            Yc: () => P,
             f4: () => G,
             jF: () => ee,
             le: () => k,
@@ -3101,17 +3101,17 @@
               fieldErrors: n?.filter(i).map((n) => M(e, n, t)),
             };
           }
-          function V(e) {
+          function P(e) {
             const n = new Set(e.fields);
             return Object.keys(m.shape).every((e) => n.has(e));
           }
-          function O(e, n, t, i) {
+          function V(e, n, t, i) {
             const s = f({ groups: n, stats: t, achievements: i }).safeParse(
               e.data,
             );
             return { ...s.data, ...F(e, s.error?.issues, "api_name") };
           }
-          function P(e) {
+          function O(e) {
             const n = new Set(e.fields);
             return Object.keys(h.shape).every((e) => n.has(e));
           }
@@ -3144,10 +3144,10 @@
               .filter((n) => "token" == n || !!e[n])
               .reduce((n, t) => ((n[t] = e[t]), n), {});
           }
-          function J(e, n) {
+          function q(e, n) {
             return { groupid: e.groupid, ...E(n), ...A(e.name, n) };
           }
-          function q(e, n) {
+          function J(e, n) {
             const { groupid: t, ...i } = e;
             return K({ ...Y(n), ...i });
           }
@@ -3220,7 +3220,7 @@
                     return (
                       (s = t[n]),
                       (a = i[n]),
-                      r()(q(s, a), K(Y(a)))
+                      r()(J(s, a), K(Y(a)))
                         ? e.unmodified.push(n)
                         : e.modified.push(n),
                       e
@@ -3242,7 +3242,7 @@
           }
           function ee(e, n, t) {
             const i = `${e}-achievement-groups-localization.csv`,
-              s = n.map((e) => J(e, t)),
+              s = n.map((e) => q(e, t)),
               { fields: r, rows: a } = S(
                 s,
                 [...Object.keys(U.shape), ...t],
@@ -3476,23 +3476,26 @@
                 editable: i,
                 contentBefore: r,
               } = e,
-              l = (0, S.YZ)(n.statID, n.bitID),
-              { appID: d } = (0, h.L3)(),
-              u = (0, h.$j)(d, n.groupid),
-              p = (0, S.fw)(n.groupid, u),
-              [m, _] = v.useState(!1),
-              [g, x] = v.useState(!1),
-              f = t ? 32 : 64;
+              { existingAchievement: l, globalUnlockPercentage: d } = (0, S.YZ)(
+                n.statID,
+                n.bitID,
+              ),
+              { appID: u } = (0, h.L3)(),
+              p = (0, h.$j)(u, n.groupid),
+              m = (0, S.fw)(n.groupid, p),
+              [_, g] = v.useState(!1),
+              [x, f] = v.useState(!1),
+              A = t ? 32 : 64;
             return (0, s.jsxs)("div", {
               children: [
-                m
+                _
                   ? (0, s.jsx)(L, {
                       achievement: n,
                       onSave: () => {
-                        _(!1);
+                        g(!1);
                       },
                       onCancel: () => {
-                        _(!1);
+                        g(!1);
                       },
                     })
                   : (0, s.jsxs)(s.Fragment, {
@@ -3508,13 +3511,13 @@
                             (0, s.jsx)(E.T, {
                               achievement: n,
                               achieved: !0,
-                              size: f,
+                              size: A,
                             }),
                             !t &&
                               (0, s.jsx)(E.T, {
                                 achievement: n,
                                 achieved: !1,
-                                size: f,
+                                size: A,
                               }),
                           ],
                         }),
@@ -3580,12 +3583,12 @@
                                 children: [
                                   (0, s.jsx)(S.lg, {
                                     onClick: () => {
-                                      _(!0);
+                                      g(!0);
                                     },
                                   }),
                                   (0, s.jsx)(S.et, {
                                     onClick: () => {
-                                      x(!0);
+                                      f(!0);
                                     },
                                   }),
                                 ],
@@ -3607,7 +3610,7 @@
                                         (0, s.jsx)(S.BA, {
                                           className: y.GlobalRateIcon,
                                         }),
-                                        (0, S.Z7)(l.global_unlock_percent),
+                                        (0, S.Z7)(d ?? 0),
                                       ],
                                     }),
                                   }),
@@ -3615,7 +3618,7 @@
                                   toolTipContent: (0, s.jsx)(c.az, {
                                     background: "dull-5",
                                     padding: "2",
-                                    children: (0, s.jsx)(T.or, { ...p }),
+                                    children: (0, s.jsx)(T.or, { ...m }),
                                   }),
                                   direction: "bottom",
                                   style: {
@@ -3623,7 +3626,7 @@
                                     whiteSpace: "nowrap",
                                   },
                                   children: (0, s.jsx)(T.C6, {
-                                    hidden: !p?.visible,
+                                    hidden: !m?.visible,
                                     className: y.GroupVisibility,
                                     omitText: !0,
                                   }),
@@ -3641,11 +3644,11 @@
                         }),
                       ],
                     }),
-                g &&
+                x &&
                   (0, s.jsx)(R, {
                     achievement: n,
                     hideModal: () => {
-                      x(!1);
+                      f(!1);
                     },
                   }),
               ],
@@ -3654,9 +3657,12 @@
           function R(e) {
             const { achievement: n, hideModal: t } = e,
               { appID: i } = (0, h.L3)(),
-              r = (0, S.YZ)(n.statID, n.bitID),
-              o = r && r.global_unlock_percent > 0,
-              c = (0, h.Bx)(i, n.statID, n.bitID);
+              { existingAchievement: r, globalUnlockPercentage: o } = (0, S.YZ)(
+                n.statID,
+                n.bitID,
+              ),
+              c = r && o > 0,
+              l = (0, h.Bx)(i, n.statID, n.bitID);
             return (0, s.jsx)(g.EN, {
               active: !0,
               children: (0, s.jsx)(g.x_, {
@@ -3671,7 +3677,7 @@
                     }),
                     (0, s.jsxs)(_.nB, {
                       children: [
-                        o &&
+                        c &&
                           (0, s.jsxs)(a.s, {
                             direction: "row",
                             gap: "1",
@@ -3754,10 +3760,10 @@
                           "#AchievementEditor_Achievement_Delete_Dialog_Delete",
                         ),
                         saveColor: "red",
-                        pending: c.isPending,
-                        error: c.error?.message,
+                        pending: l.isPending,
+                        error: l.error?.message,
                         onCancel: t,
-                        onSave: () => c.mutate(void 0, { onSuccess: t }),
+                        onSave: () => l.mutate(void 0, { onSuccess: t }),
                       }),
                     }),
                   ],
@@ -3782,7 +3788,7 @@
               { appID: g, cdnRoot: f } = (0, h.L3)(),
               A = (0, h.J3)(g) ?? [],
               E = (0, h.Q4)(g),
-              T = (0, S.YZ)(c?.statID, c?.bitID),
+              { globalUnlockPercentage: T } = (0, S.YZ)(c?.statID, c?.bitID),
               D = (0, h.ts)(g),
               k = (0, h.kb)(g),
               B = (0, v.useMemo)(
@@ -3820,11 +3826,11 @@
                 isValid: M,
                 issues: F,
               } = (0, I.$q)(c?.name, R, !0),
-              [O, P] = v.useState(c?.permission ?? h.yu.Client),
+              [V, O] = v.useState(c?.permission ?? h.yu.Client),
               [z, U] = v.useState("1" == c?.display?.hidden),
               [H, W] = v.useState("1" == c?.archived),
               [Y, K] = v.useState(c?.groupid ?? _),
-              [J, q] = v.useState(c?.display?.name ?? { token: `${G}_NAME` }),
+              [q, J] = v.useState(c?.display?.name ?? { token: `${G}_NAME` }),
               [Q, Z] = v.useState(c?.display?.desc ?? { token: `${G}_DESC` }),
               $ = E?.[c?.groupid ?? _],
               X = (0, S.fw)(Y, $),
@@ -3882,9 +3888,7 @@
                       "#AchievementEditor_Group_CreateAchievement_WarnLiveGroup",
                     ),
                   }))
-                : X.visible &&
-                    !ee.visible &&
-                    (T?.global_unlock_percent ?? 0) > 0
+                : X.visible && !ee.visible && (T ?? 0) > 0
                   ? (ve = (0, s.jsx)(S.lh, {
                       text: (0, w.we)(
                         "#AchievementEditor_Achievement_Edit_Group_Warn_HidingAchievement",
@@ -3941,7 +3945,7 @@
                                         ),
                                       }),
                                     }),
-                                    (0, s.jsx)(V, {
+                                    (0, s.jsx)(P, {
                                       icon: oe,
                                       setIcon: async (e) => {
                                         ce(e), ue || (await me(e.image));
@@ -3964,7 +3968,7 @@
                                         ),
                                       }),
                                     }),
-                                    (0, s.jsx)(V, {
+                                    (0, s.jsx)(P, {
                                       icon: ue,
                                       setIcon: pe,
                                       achievement: c,
@@ -4024,16 +4028,16 @@
                                 ne
                                   ? (0, s.jsx)(p.j, {
                                       disabled: !0,
-                                      children: h.yu[O ?? h.yu.Client],
+                                      children: h.yu[V ?? h.yu.Client],
                                     })
                                   : (0, s.jsx)(d.l6, {
                                       options: Object.values(h.yu).filter(
                                         (e) => "number" == typeof e,
                                       ),
                                       getOptionLabel: (e) => h.yu[e],
-                                      selectedValue: O,
+                                      selectedValue: V,
                                       onSelectionChange: (e) => {
-                                        P(e ?? h.yu.Client);
+                                        O(e ?? h.yu.Client);
                                       },
                                     }),
                               ],
@@ -4047,9 +4051,9 @@
                                   const n = A.find(
                                     (n) => n.name == e.value.operand1,
                                   );
-                                  n && P(n.permission);
+                                  n && O(n.permission);
                                 } else
-                                  te(void 0), P(c?.permission ?? h.yu.Client);
+                                  te(void 0), O(c?.permission ?? h.yu.Client);
                               },
                               ...se,
                             }),
@@ -4067,10 +4071,10 @@
                                         "#AchievementEditor_Achievement_Edit_DisplayName",
                                       ),
                                     }),
-                                    (0, s.jsx)(C.Mq, { locstring: J }),
+                                    (0, s.jsx)(C.Mq, { locstring: q }),
                                   ],
                                 }),
-                                (0, s.jsx)(C.Pk, { value: J, setValue: q }),
+                                (0, s.jsx)(C.Pk, { value: q, setValue: J }),
                               ],
                             }),
                             (0, s.jsxs)("div", {
@@ -4223,13 +4227,13 @@
                           ),
                           s = (0, C.II)(c?.display?.name, D),
                           r = (0, C.II)(c?.display?.desc, D),
-                          a = (0, C.II)(J, D),
+                          a = (0, C.II)(q, D),
                           o = (0, C.II)(Q, D);
                         let l = {
                           ...c,
                           name: e,
                           groupid: Y,
-                          permission: O,
+                          permission: V,
                           archived: H ? "1" : "0",
                           display: {
                             ...c?.display,
@@ -4261,7 +4265,7 @@
           }
           [m, h, E, C, b, S, T] = D.then ? (await D)() : D;
           const F = 256;
-          function V(e) {
+          function P(e) {
             const { icon: n, setIcon: t, achievement: i } = e,
               a = (0, v.useRef)(null),
               [c, l] = v.useState(void 0);
@@ -4303,8 +4307,8 @@
             });
           }
           i();
-        } catch (O) {
-          i(O);
+        } catch (V) {
+          i(V);
         }
       });
     },
@@ -4333,7 +4337,7 @@
             A = t(59330),
             w = t(21261),
             E = t(66418),
-            y = t(47284),
+            y = t(32433),
             C = t(32754),
             b = e([l, g, j, A, w]);
           function S(e) {
@@ -4344,7 +4348,8 @@
               [c, u] = (0, d.useState)(!1),
               [p, _] = (0, d.useState)(!1),
               f = (0, y.On)(n),
-              A =
+              { data: A } = (0, y.jw)(n),
+              E =
                 ((0, l.vd)(n),
                 {
                   appID: n,
@@ -4352,12 +4357,13 @@
                   localization: { currentLanguage: i, setCurrentLanguage: r },
                   filter: a,
                   existingAchievements: f.data,
+                  existingAchievementUnlockPercentages: A,
                 }),
-              [E, C] = (0, d.useState)(!1),
-              [b, S] = (0, d.useState)(),
-              [D, k] = (0, d.useState)(!1),
-              [B, R] = (0, d.useState)("main"),
-              G = {
+              [C, b] = (0, d.useState)(!1),
+              [S, D] = (0, d.useState)(),
+              [k, B] = (0, d.useState)(!1),
+              [R, G] = (0, d.useState)("main"),
+              L = {
                 main: {
                   label: (0, h.we)("#AchievementEditor_Tab_ManageAchievements"),
                   render: () =>
@@ -4372,13 +4378,13 @@
                   label: (0, h.we)("#AchievementEditor_Tab_BulkImportExport"),
                   render: () =>
                     (0, s.jsx)(g.V, {
-                      onClose: () => R("main"),
-                      setHasChanges: k,
+                      onClose: () => G("main"),
+                      setHasChanges: B,
                     }),
                 },
               };
             return (0, s.jsxs)(l.aR, {
-              value: A,
+              value: E,
               children: [
                 (0, s.jsxs)("div", {
                   className: (0, m.A)(
@@ -4388,33 +4394,33 @@
                   children: [
                     (0, s.jsx)(T, {}),
                     (0, s.jsx)(N, {
-                      options: Object.keys(G),
-                      getOptionLabel: (e) => G[e].label,
-                      selectedOption: B,
+                      options: Object.keys(L),
+                      getOptionLabel: (e) => L[e].label,
+                      selectedOption: R,
                       onChange: (e) => {
-                        "bulk" == B && D ? (S(e), C(!0)) : R(e);
+                        "bulk" == R && k ? (D(e), b(!0)) : G(e);
                       },
                     }),
-                    "main" == B &&
+                    "main" == R &&
                       (0, s.jsx)(I, {
                         filter: a,
                         setFilter: o,
-                        showFilter: "main" == B,
+                        showFilter: "main" == R,
                         reordering: c,
                         setReordering: u,
-                        showReorder: "main" == B,
+                        showReorder: "main" == R,
                         creatingNewGroup: p,
                         setCreatingNewGroup: _,
-                        showCreateNewGroup: "main" == B,
+                        showCreateNewGroup: "main" == R,
                       }),
-                    G[B].render(),
+                    L[R].render(),
                   ],
                 }),
-                E &&
+                C &&
                   (0, s.jsx)(w.TM, {
-                    onCancel: () => C(!1),
+                    onCancel: () => b(!1),
                     onOk: () => {
-                      C(!1), k(!1), R(b), S(void 0);
+                      b(!1), B(!1), G(S), D(void 0);
                     },
                     okText: (0, h.we)("#Button_Confirm"),
                     children: (0, h.we)(
@@ -4771,7 +4777,7 @@
       "use strict";
       t.a(e, async (e, i) => {
         try {
-          t.d(n, { C6: () => V, _e: () => N, or: () => O });
+          t.d(n, { C6: () => P, _e: () => N, or: () => V });
           var s = t(7850),
             r = t(89558),
             a = t(53965),
@@ -4990,14 +4996,14 @@
               y =
                 f.visible &&
                 Object.values(A ?? {}).some(
-                  (e) => (e.global_unlock_percent ?? 0) > 0,
+                  (e) => (e.globalUnlockPercentage ?? 0) > 0,
                 ),
               [b, S] = h.useState(i),
               [N, I] = h.useState(!1),
               [T, D] = h.useState(!1),
               [k, R] = h.useState(!1),
               [M, F] = h.useState(!1),
-              V = T
+              P = T
                 ? void 0
                 : [
                     {
@@ -5015,7 +5021,7 @@
                   ].filter((e) =>
                     "edit" == e.key ? !!n : "delete" != e.key || !!n,
                   ),
-              O = async () => {
+              V = async () => {
                 S(!1), r && r();
               },
               U = () => {
@@ -5065,17 +5071,17 @@
                 })),
               b
                 ? i
-                  ? (0, s.jsx)(P, { onSave: O, onCancel: U })
+                  ? (0, s.jsx)(O, { onSave: V, onCancel: U })
                   : (0, s.jsx)(z, {
                       groupid: n,
                       group: t,
-                      onSave: O,
+                      onSave: V,
                       onCancel: U,
                     })
                 : (0, s.jsxs)(B, {
                     groupid: n,
                     group: t,
-                    actions: V,
+                    actions: P,
                     collapsed: M,
                     setCollapsed: F,
                     children: [
@@ -5213,7 +5219,7 @@
                               }),
                             }),
                           }),
-                        (0, s.jsx)(O, {
+                        (0, s.jsx)(V, {
                           archived: "1" == t?.archived,
                           developeronly: "1" == t?.developeronly,
                           app: h ?? u,
@@ -5523,7 +5529,7 @@
               ],
             });
           }
-          function V(e) {
+          function P(e) {
             const { hidden: n, className: t, omitText: i = !1 } = e;
             return (0, s.jsx)("div", {
               className: (0, f.A)(
@@ -5552,7 +5558,7 @@
                   }),
             });
           }
-          function O(e) {
+          function V(e) {
             const { archived: n = !1, developeronly: t = !1, app: i } = e,
               r = n || t || !i?.is_released_somewhere,
               a = (0, f.A)(E.Unreleased, E.Label);
@@ -5564,7 +5570,7 @@
                     E.GroupVisibilitySummary,
                     r ? E.UnreleasedText : E.ReleasedText,
                   ),
-                  children: (0, s.jsx)(V, { hidden: r }),
+                  children: (0, s.jsx)(P, { hidden: r }),
                 }),
                 r &&
                   (0, s.jsxs)("div", {
@@ -5618,7 +5624,7 @@
               ],
             });
           }
-          function P(e) {
+          function O(e) {
             return (0, s.jsx)(H, { bNewGroup: !0, ...e });
           }
           function z(e) {
@@ -5939,7 +5945,7 @@
                                       ],
                                     }),
                                     (0, s.jsx)("div", {
-                                      children: (0, s.jsx)(O, { ...I }),
+                                      children: (0, s.jsx)(V, { ...I }),
                                     }),
                                   ],
                                 }),
@@ -6021,7 +6027,7 @@
                                 (0, y.ZM)(t?.name, "english") ?? t?.name.token,
                               ],
                             }),
-                            (0, s.jsx)(O, { ...d }),
+                            (0, s.jsx)(V, { ...d }),
                           ],
                         }),
                       ],
@@ -6045,8 +6051,8 @@
             });
           }
           ([m, w, y, C] = b.then ? (await b)() : b), i();
-        } catch (J) {
-          i(J);
+        } catch (q) {
+          i(q);
         }
       });
     },
@@ -6543,15 +6549,15 @@
             $P: () => z,
             Aj: () => b,
             BA: () => E,
-            EV: () => V,
+            EV: () => P,
             Gl: () => L,
             NT: () => D,
-            TM: () => O,
+            TM: () => V,
             VZ: () => w,
             YZ: () => U,
             Z7: () => W,
             et: () => T,
-            fw: () => P,
+            fw: () => O,
             id: () => y,
             lg: () => I,
             lh: () => k,
@@ -6728,27 +6734,30 @@
           const R = "0";
           function G(e) {
             const { groupID: n, group: t, showVisibility: i = !1 } = e,
-              { visible: r } = P(n, t),
-              { existingAchievements: a } = (0, v.L3)(),
-              c =
+              { visible: r } = O(n, t),
+              {
+                existingAchievements: a,
+                existingAchievementUnlockPercentages: c,
+              } = (0, v.L3)(),
+              l =
                 n === R || void 0 === n
                   ? (0, d.we)(
                       "#AchievementEditor_Group_CoreGameAchievements_Heading",
                     )
                   : ((0, j.ZM)(t?.name, "english") ?? t?.name?.token),
-              l = a?.groups.find((e) => e.id.toString() == n),
-              u =
-                l?.achievements.some(
-                  (e) => (e.global_unlock_percent ?? 0) > 0,
+              u = a?.groups.find((e) => e.id.toString() == n),
+              p =
+                u?.achievements.some(
+                  (e) => (c?.percentages?.[e.internal_key] ?? 0) > 0,
                 ) ?? !1;
-            let p;
+            let m;
             return (
-              i && (r ? u && (p = (0, s.jsx)(E, {})) : (p = (0, s.jsx)(C, {}))),
+              i && (r ? p && (m = (0, s.jsx)(E, {})) : (m = (0, s.jsx)(C, {}))),
               (0, s.jsxs)(o.s, {
                 direction: "row",
                 gap: "1",
                 align: "center",
-                children: [p, c],
+                children: [m, l],
               })
             );
           }
@@ -6788,11 +6797,11 @@
           function F(e) {
             return (n) => n != e && (!!e || n != R);
           }
-          function V(e, n, t, i) {
+          function P(e, n, t, i) {
             const s = "name" == t ? "NAME" : "DESC";
             return e && e != `${n}_${s}` ? e : `${i}_${s}`;
           }
-          function O(e) {
+          function V(e) {
             const {
               okText: n,
               cancelText: t,
@@ -6824,48 +6833,62 @@
               }),
             });
           }
-          function P(e, n) {
-            const { appID: t, existingAchievements: i } = (0, v.L3)(),
-              s = n?.dlcappid,
-              r = (0, v.Xe)(t),
-              a = (0, v.sJ)(t),
-              o = a?.find((e) => s == e.appid),
-              c = "1" == n?.archived,
-              l = "1" == n?.developeronly,
-              d = (o ?? r)?.is_released_somewhere,
-              u = i?.groups.find((n) => n.id.toString() == (e ?? R));
+          function O(e, n) {
+            const {
+                appID: t,
+                existingAchievements: i,
+                existingAchievementUnlockPercentages: s,
+              } = (0, v.L3)(),
+              r = n?.dlcappid,
+              a = (0, v.Xe)(t),
+              o = (0, v.sJ)(t),
+              c = o?.find((e) => r == e.appid),
+              l = "1" == n?.archived,
+              d = "1" == n?.developeronly,
+              u = (c ?? a)?.is_released_somewhere,
+              p = i?.groups.find((n) => n.id.toString() == (e ?? R));
             return {
-              archived: c,
-              developeronly: l,
-              is_released_somewhere: d,
+              archived: l,
+              developeronly: d,
+              is_released_somewhere: u,
               hasprogress:
-                u?.achievements.some(
-                  (e) => (e.global_unlock_percent ?? 0) > 0,
+                p?.achievements.some(
+                  (e) => (s?.percentages?.[e.internal_key] ?? 0) > 0,
                 ) ?? !1,
-              app: o ?? r,
-              visible: !c && !l && d,
+              app: c ?? a,
+              visible: !l && !d && u,
             };
           }
           function z() {
-            const { existingAchievements: e } = (0, v.L3)();
-            return (0, l.useMemo)(() => {
-              if (e)
-                return e.groups.reduce(
-                  (e, n) => (
-                    n.achievements.forEach((n) => {
-                      e[n.internal_key] = n;
-                    }),
-                    e
-                  ),
-                  {},
-                );
-            }, [e]);
+            const {
+              existingAchievements: e,
+              existingAchievementUnlockPercentages: n,
+            } = (0, v.L3)();
+            return (0, l.useMemo)(
+              () =>
+                e
+                  ? e.groups.reduce(
+                      (e, t) => (
+                        t.achievements.forEach((t) => {
+                          e[t.internal_key] = {
+                            existingAchievement: t,
+                            globalUnlockPercentage:
+                              n?.percentages?.[t.internal_key],
+                          };
+                        }),
+                        e
+                      ),
+                      {},
+                    )
+                  : {},
+              [e, n],
+            );
           }
           function U(e, n) {
             const t = z();
-            if (void 0 === t) return;
-            if (void 0 === e || void 0 === n) return;
-            return t[H(e, n)];
+            if (void 0 === t) return {};
+            if (void 0 === e || void 0 === n) return {};
+            return t[H(e, n)] ?? {};
           }
           function H(e, n) {
             return (
@@ -7627,32 +7650,29 @@
         });
       });
     },
-    47284: (e, n, t) => {
+    32433: (e, n, t) => {
       "use strict";
-      t.d(n, { On: () => g });
+      t.d(n, { On: () => x, jw: () => j });
       var i = t(66418),
         s = t(20194),
         r = t(90626);
       const a = "steamQueryPersist";
       const o = r.createContext(void 0);
       o.Provider;
+      function c(e) {
+        const { area: n, maxAgeSeconds: t, meta: i, ...c } = e,
+          l = r.useContext(o),
+          d = r.useMemo(
+            () => ({ ...i, [a]: { area: n, maxAgeSeconds: t } }),
+            [i, n, t],
+          );
+        return (0, s.I)({ ...c, meta: d, persister: l?.GetPersister(n) });
+      }
       Date.now();
-      var c = t(23809),
-        l = t(37085),
-        d = t(76176);
-      const u = 0,
-        p = {
-          GlobalProgressAsc: function (e, n) {
-            return (
-              (e.global_unlock_percent ?? 0) - (n.global_unlock_percent ?? 0)
-            );
-          },
-          GlobalProgressDesc: function (e, n) {
-            return (
-              (n.global_unlock_percent ?? 0) - (e.global_unlock_percent ?? 0)
-            );
-          },
-        };
+      var l = t(23809),
+        d = t(37085),
+        u = t(76176);
+      const p = 0;
       function m(e, ...n) {
         return ["achievements", e, ...n];
       }
@@ -7661,17 +7681,18 @@
         if (void 0 !== n && "" !== n)
           return `${i.TS.BASE_URL_SHARED_CDN}community_assets/images/apps/${e}/${n}`;
       }
-      function _(e, n) {
+      const _ = (e) => m(e, "globalpercentages");
+      function g(e, n) {
         return {
           queryKey: h(n),
           queryFn: async () => {
             const t = i.TS.LANGUAGE,
               s = (async function (e, n, t) {
-                const i = await d.xtC.GetGameAchievements(e, {
+                const i = await u.xtC.GetGameAchievements(e, {
                   appid: n,
                   language: t,
                 });
-                if (i.GetEResult() !== l.R)
+                if (i.GetEResult() !== d.R)
                   throw (
                     (console.error(
                       "Received error from GetGameAchievements",
@@ -7682,8 +7703,8 @@
                     ))
                   );
                 const s = {};
-                (s[u] = {
-                  id: u,
+                (s[p] = {
+                  id: p,
                   archived: !1,
                   developeronly: !1,
                   ispublic: !0,
@@ -7712,7 +7733,7 @@
                     .Body()
                     .toObject()
                     ?.achievements?.forEach((e) => {
-                      const t = e.groupid ?? u;
+                      const t = e.groupid ?? p;
                       s[t].achievements.push({
                         internal_key: e.internal_key ?? 0,
                         api_name: e.internal_name ?? "",
@@ -7722,11 +7743,7 @@
                         archived: e.archived ?? !1,
                         icon_achieved: v(n, e.icon),
                         icon_unachieved: v(n, e.icon_gray),
-                        global_unlock_percent:
-                          void 0 === e.player_percent_unlocked
-                            ? void 0
-                            : Number.parseFloat(e.player_percent_unlocked),
-                        groupid: e.groupid ?? u,
+                        groupid: e.groupid ?? p,
                         min_progress:
                           e.min_progress_int ?? e.min_progress_float,
                         max_progress:
@@ -7736,33 +7753,63 @@
                 const r = Object.values(s)
                   .filter((e) => e.achievements.length > 0)
                   .sort((e, n) => e.order - n.order);
-                return (
-                  r.forEach((e) => e.achievements.sort(p.GlobalProgressDesc)),
-                  {
-                    appid: n,
-                    language: t,
-                    groups: r,
-                    schema_hash: i.Body()?.schema_hash() ?? 0,
-                    schema_version: i.Body()?.schema_version() ?? 0,
-                  }
-                );
+                return {
+                  appid: n,
+                  language: t,
+                  groups: r,
+                  schema_hash: i.Body()?.schema_hash() ?? 0,
+                  schema_version: i.Body()?.schema_version() ?? 0,
+                };
               })(e, n, t);
             return s;
           },
-          staleTime: 36e5,
+          staleTime: 864e5,
           area: "achievements",
         };
       }
-      function g(e) {
-        return (function (e) {
-          const { area: n, maxAgeSeconds: t, meta: i, ...c } = e,
-            l = r.useContext(o),
-            d = r.useMemo(
-              () => ({ ...i, [a]: { area: n, maxAgeSeconds: t } }),
-              [i, n, t],
-            );
-          return (0, s.I)({ ...c, meta: d, persister: l?.GetPersister(n) });
-        })(_((0, c.KV)(), e));
+      function x(e) {
+        return c(g((0, l.KV)(), e));
+      }
+      function f(e, n) {
+        return {
+          queryKey: _(n),
+          queryFn: async () => {
+            const t = (async function (e, n) {
+              const t = await u.xtC.GetGlobalAchievementPercentages(e, {
+                appid: n,
+              });
+              if (t.GetEResult() !== d.R)
+                throw (
+                  (console.error(
+                    "Received error from GetGlobalAchievementPercentages",
+                    t.GetEResult(),
+                  ),
+                  new Error(
+                    `Error from GetGlobalAchievementPercentages: ${t.GetEResult()}`,
+                  ))
+                );
+              return {
+                percentages: t
+                  .Body()
+                  .achievements()
+                  .reduce((e, n) => {
+                    const t = n.internal_key();
+                    return (
+                      void 0 === t ||
+                        (e[t] = n.player_percent_unlocked() ?? 0.1),
+                      e
+                    );
+                  }, {}),
+              };
+            })(e, n);
+            return t;
+          },
+          staleTime: 864e5,
+          area: "achievements",
+        };
+      }
+      function j(e) {
+        return c(f((0, l.KV)(), e));
       }
     },
     53965: (e, n, t) => {
@@ -8327,7 +8374,7 @@
                   })
                 : (0, i.jsx)(a.V, {}),
             F = (0, A.f)("Combobox", k),
-            V = (0, i.jsx)(r.j, {
+            P = (0, i.jsx)(r.j, {
               beforeContent: t,
               afterContent: M,
               hasValue: L,
@@ -8336,8 +8383,8 @@
               variant: F,
               ...R,
             }),
-            O = (0, h.Q)(s, V, G, void 0);
-          return (0, i.jsx)(d.k.Anchor, { children: O });
+            V = (0, h.Q)(s, P, G, void 0);
+          return (0, i.jsx)(d.k.Anchor, { children: V });
         },
         DefaultOptionFilter: S,
         Value: function (e) {
@@ -8721,45 +8768,49 @@
     },
     58157: (e, n, t) => {
       "use strict";
-      t.d(n, { f: () => d });
+      t.d(n, { f: () => p });
       var i = t(7850),
         s = t(11820),
         r = t(63910),
         a = t(61023),
         o = t(64238),
         c = t.n(o),
-        l = t(66922);
-      function d(e) {
+        l = t(66922),
+        d = t(45699),
+        u = t(78327);
+      function p(e) {
         const {
             rows: n = 3,
             resize: t = "none",
             ref: o,
-            value: d,
-            onTextChange: u,
-            onChange: p,
-            disabled: m,
-            variant: h,
-            ...v
+            value: p,
+            onTextChange: m,
+            onChange: h,
+            disabled: v,
+            variant: _,
+            ...g
           } = e,
-          _ = (0, l.f)("TextArea", h),
-          g = (0, a.w)({
-            ...v,
+          x = (0, l.f)("TextArea", _),
+          f = (0, u.Qn)(),
+          j = (0, a.w)({
+            ...g,
             className: c()((0, s.T)(), (0, r.F)()),
             style: { resize: t },
             cursor: "text",
-            disabled: m,
-            variant: _,
-          });
-        return (0, i.jsx)("textarea", {
+            disabled: v,
+            variant: x,
+          }),
+          A = f ? d.dO : "textarea";
+        return (0, i.jsx)(A, {
           ref: o,
-          ...g,
-          value: d || "",
+          ...j,
+          value: p || "",
           onChange: (e) => {
-            m || (u(e.target.value), p && p(e));
+            v || (m(e.target.value), h && h(e));
           },
           rows: n,
-          readOnly: m,
-          "aria-disabled": m,
+          readOnly: v,
+          "aria-disabled": v,
         });
       }
     },

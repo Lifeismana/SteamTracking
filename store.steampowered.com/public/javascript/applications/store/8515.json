@@ -1383,6 +1383,8 @@
     "Login_GoOffline_Button": "Masuk Mod Luar Talian",
     "Login_Error_Anonymous_Title": "Tidak Disokong",
     "Login_Error_Anonymous_Description": "Mendaftar masuk secara tanpa nama tidak disokong di laman web atau di klien desktop Steam, hanya dalam steamcmd.",
+    "Login_Error_Action_Necessary_Title": "Account Action Necessary",
+    "Login_Error_Action_Necessary_Description": "Please log in on another device or scan the QR code.",
     "Login_Error_Default_Description": "Masalah telah berlaku semasa anda cuba mendaftar masuk. Sila cuba lagi nanti.",
     "Login_Error_MoveAuthenticator_Description": "Masalah telah berlaku semasa memindahkan pengesah anda. Sila cuba lagi nanti.",
     "Login_ConnectingToSteam": "Menyambung ke Steam",

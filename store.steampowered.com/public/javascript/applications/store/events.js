@@ -909,7 +909,7 @@
         ce = n(67540),
         de = n(44165),
         ue = n(1059),
-        pe = n(6379),
+        pe = n(91254),
         he = n(17083),
         me = n(81886),
         ge = n(45699),
@@ -2724,7 +2724,7 @@
         qt = n(46107),
         Yt = n(91397),
         Kt = n(4703),
-        zt = n(78842),
+        zt = n(56934),
         Jt = n(34121),
         Xt = n(10224),
         Qt = n(94743),
@@ -3229,7 +3229,7 @@
           [, o] = (0, g.TB)(t.clanSteamID.GetAccountID()),
           [i, l, c] = (0, $.q3)(() => [
             Math.max(0, t.nVotesUp - t.nVotesDown),
-            t.GetForumTopicURL(o?.vanity_url),
+            t.GetDiscussionURL(o?.vanity_url),
             t.nCommentCount,
           ]),
           d = (function (e) {

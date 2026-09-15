@@ -17,7 +17,7 @@ var CLSTAMP = "steamdb";
           "./friendsui_english.json": [20723, 3016],
           "./friendsui_finnish.json": [80444, 8759],
           "./friendsui_french.json": [79337, 8194],
-          "./friendsui_german.json": [51651, 5480],
+          "./friendsui_german.json": [74032, 5480],
           "./friendsui_greek.json": [74483, 4488],
           "./friendsui_hungarian.json": [35798, 5341],
           "./friendsui_indonesian.json": [88097, 762],
@@ -66,7 +66,7 @@ var CLSTAMP = "steamdb";
           "./friendsui_english.json": [20723, 3016],
           "./friendsui_finnish.json": [80444, 8759],
           "./friendsui_french.json": [79337, 8194],
-          "./friendsui_german.json": [51651, 5480],
+          "./friendsui_german.json": [74032, 5480],
           "./friendsui_greek.json": [74483, 4488],
           "./friendsui_hungarian.json": [35798, 5341],
           "./friendsui_indonesian.json": [88097, 762],
@@ -37448,24 +37448,6 @@ var CLSTAMP = "steamdb";
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
@@ -37538,6 +37520,7 @@ var CLSTAMP = "steamdb";
           if (_[_]) return _[_]();
         });
         var _;
+        __webpack_require__("chunkid");
         !(function (_) {
           (_[(_.k_EContentModerationAction_None = 0)] =
             "k_EContentModerationAction_None"),
@@ -38121,7 +38104,25 @@ var CLSTAMP = "steamdb";
           }
         }
         _._, _._, _._, _._, _._;
-        var _ = __webpack_require__("chunkid");
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_);
         function _(_) {
           const {
               unAccountIDSender: _,
@@ -70427,6 +70428,7 @@ var CLSTAMP = "steamdb";
           _ = 102,
           _ = 120,
           _ = 130,
+          _ = 0,
           _ = 0;
         var _;
         !(function (_) {
@@ -70535,6 +70537,7 @@ var CLSTAMP = "steamdb";
             nXInputIndex: _.xinput_index ?? _,
             nControllerIndex: _.controller_index ?? 16,
             eRumblePreference: _.rumble_setting ?? _,
+            eRumbleIntensity: _.rumble_intensity ?? _,
             bWireless: _.is_wireless_steam_dongle ?? !1,
             unVendorID: _.vendor_id ?? 0,
             unProductID: _.product_id ?? 0,
@@ -78836,6 +78839,7 @@ var CLSTAMP = "steamdb";
             "Millennium internal",
             "millenium",
             "millennium",
+            "decky://",
             "Refused unauthorized RPC command",
           ];
         function _() {
@@ -80882,8 +80886,76 @@ var CLSTAMP = "steamdb";
           _: () => _,
           _: () => _,
         });
-        var _,
-          _ = __webpack_require__("chunkid");
+        var _ = __webpack_require__("chunkid");
+        const _ = {};
+        (_.arabic = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 6696, 19))),
+          (_.brazilian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 58906, 19))),
+          (_.bulgarian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 53473, 19))),
+          (_.czech = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 83899, 19))),
+          (_.danish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 84925, 19))),
+          (_.dutch = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 69902, 19))),
+          (_.english = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 80716, 19))),
+          (_.finnish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 81663, 19))),
+          (_.french = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 48484, 19))),
+          (_.german = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 66810, 19))),
+          (_.greek = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 13744, 19))),
+          (_.hungarian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 62101, 19))),
+          (_.indonesian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 68948, 19))),
+          (_.italian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 2916, 19))),
+          (_.japanese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 40195, 19))),
+          (_.koreana = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 84259, 19))),
+          (_.latam = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 24475, 19))),
+          (_.malay = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 60580, 19))),
+          (_.norwegian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 36884, 19))),
+          (_.polish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 15269, 19))),
+          (_.portuguese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 96865, 19))),
+          (_.romanian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 71391, 19))),
+          (_.russian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 64933, 19))),
+          (_.sc_schinese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 27503, 19))),
+          (_.schinese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 44768, 19))),
+          (_.spanish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 20876, 19))),
+          (_.swedish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 75181, 19))),
+          (_.tchinese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 89779, 19))),
+          (_.thai = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 98970, 19))),
+          (_.turkish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 87996, 19))),
+          (_.ukrainian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 47306, 19))),
+          (_.vietnamese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 72539, 19)));
+        const _ = (0, __webpack_require__("chunkid")._)(async function (_) {
+          if (_[_]) return _[_]();
+        });
+        var _;
         function _(_, _) {
           const _ = {
             year: "numeric",
@@ -80892,6 +80964,17 @@ var CLSTAMP = "steamdb";
             ..._,
           };
           return new Date(1e3 * _).toLocaleDateString((0, _._)(), _);
+        }
+        function _(_) {
+          return _.toLocaleDateString((0, _._)(), {
+            year: "numeric",
+          });
+        }
+        function _(_) {
+          return _.toLocaleDateString((0, _._)(), {
+            month: "long",
+            year: "numeric",
+          });
         }
         !(function (_) {
           (_[(_.None = 0)] = "None"),
@@ -80909,40 +80992,46 @@ var CLSTAMP = "steamdb";
                   case "date_month":
                     return _(new Date(1e3 * _));
                   case "date_quarter":
-                    return (function (_) {
+                    return (function (_, _) {
                       switch (_.getUTCMonth()) {
                         case 0:
                         case 1:
                         case 2:
-                          return _._.Localize(
-                            "#Time_QuarterOfYear_Q1",
+                          return _.Localize(
+                            _
+                              ? "#Time_QuarterOfYear_Expanded_Q1"
+                              : "#Time_QuarterOfYear_Q1",
                             _.getUTCFullYear(),
                           );
                         case 3:
                         case 4:
                         case 5:
-                          return _._.Localize(
-                            "#Time_QuarterOfYear_Q2",
+                          return _.Localize(
+                            _
+                              ? "#Time_QuarterOfYear_Expanded_Q2"
+                              : "#Time_QuarterOfYear_Q2",
                             _.getUTCFullYear(),
                           );
                         case 6:
                         case 7:
                         case 8:
-                          return _._.Localize(
-                            "#Time_QuarterOfYear_Q3",
+                          return _.Localize(
+                            _
+                              ? "#Time_QuarterOfYear_Expanded_Q3"
+                              : "#Time_QuarterOfYear_Q3",
                             _.getUTCFullYear(),
                           );
                         default:
-                          return _._.Localize(
-                            "#Time_QuarterOfYear_Q4",
+                          return _.Localize(
+                            _
+                              ? "#Time_QuarterOfYear_Expanded_Q4"
+                              : "#Time_QuarterOfYear_Q4",
                             _.getUTCFullYear(),
                           );
                       }
                     })(new Date(1e3 * _));
                   case "date_year":
-                    return new Date(1e3 * _).toLocaleDateString((0, _._)(), {
-                      year: "numeric",
-                    });
+                    return _(new Date(1e3 * _));
                   case "text_comingsoon":
                     return _ || _._.Localize("#Store_ComingSoon_ComingSoon");
                   case "text_tba":
@@ -80956,19 +81045,11 @@ var CLSTAMP = "steamdb";
                 _.custom_release_date_message,
               )
             : _?.steam_release_date
-              ? ((_ = _.steam_release_date),
-                new Date(1e3 * _).toLocaleDateString((0, _._)()))
+              ? _(_.steam_release_date)
               : "";
-          var _;
         }
         function _(_) {
           return _(_.releaseInfo);
-        }
-        function _(_) {
-          return _.toLocaleDateString((0, _._)(), {
-            month: "long",
-            year: "numeric",
-          });
         }
         function _(_) {
           if (!_) return "";
@@ -81703,13 +81784,13 @@ var CLSTAMP = "steamdb";
                 _.included_item_data_request = _;
               }
               const _ = _._.Init(_._);
+              (0, _._)(_, _), (0, _._)(_, _);
+              const _ = [];
               let _;
               if (
-                ((0, _._)(_, _),
-                (0, _._)(_, _),
-                _.forEach((_) => {
+                (_.forEach((_) => {
                   const _ = (0, _._)(_);
-                  _ && _.Body().add_ids(_._.fromObject(_));
+                  _ && (_.Body().add_ids(_._.fromObject(_)), _.push(_));
                 }),
                 _.bUsePartnerAPI)
               ) {
@@ -81724,8 +81805,10 @@ var CLSTAMP = "steamdb";
               return (
                 _.Body()
                   .store_items()
-                  .forEach((_) => {
-                    _.set((0, _._)(_.item_type(), _.gid() ?? _._()), _);
+                  .forEach((_, _) => {
+                    const _ = _.item_type(),
+                      _ = void 0 !== _ ? (0, _._)(_, _.gid() ?? _._()) : _[_];
+                    _ && _.set(_, _);
                   }),
                 _ &&
                   (function (_, _, _, _) {
@@ -81735,14 +81818,20 @@ var CLSTAMP = "steamdb";
                         return;
                       let _ = !1;
                       const _ = {};
-                      _.forEach((_) => {
-                        _.has(_) ||
-                          ((_ = !0),
-                          "top_tags" == _
-                            ? (_.include_tag_count = 20)
-                            : _ && "default_info" != _ && (_[_] = !0));
-                      }),
-                        _ && _(_, _);
+                      if (
+                        (_.forEach((_) => {
+                          _.has(_) ||
+                            ((_ = !0),
+                            "top_tags" == _
+                              ? (_.include_tag_count = 20)
+                              : _ && "default_info" != _ && (_[_] = !0));
+                        }),
+                        _.include_included_items)
+                      ) {
+                        const { include_included_items: _, ..._ } = _;
+                        _.included_item_data_request = _;
+                      }
+                      _ && _(_, _);
                     });
                   })(_, _, _, _),
                 __webpack_require__.map((_) => {
@@ -83905,8 +83994,7 @@ var CLSTAMP = "steamdb";
           (0, _._)([_._], _.prototype, "MuteUserForSession", null);
         __webpack_require__("chunkid");
         var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
+          _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
         const _ = new (class {
           bIncludeFeaturedAsGameSource = !0;
           get nOverrideDateNow() {
@@ -85174,6 +85262,97 @@ var CLSTAMP = "steamdb";
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_);
+        function _(
+          _,
+          {
+            activeBitColor: _ = [33, 35, 40],
+            inactiveBitColor: _ = [255, 255, 255],
+            borderWidth: _ = 3,
+          } = {},
+          _ = {},
+        ) {
+          const _ = _()(_, _).modules;
+          if (!_) return null;
+          let _ = [];
+          for (let _ = 0; _ < _; _++) _.push(Array(_.length + 2 * _).fill(!1));
+          for (let _ = 0; _ < _.length; _++)
+            _.push([
+              ...Array.from(
+                {
+                  length: _,
+                },
+                () => !1,
+              ),
+              ..._[_],
+              ...Array.from(
+                {
+                  length: _,
+                },
+                () => !1,
+              ),
+            ]);
+          for (let _ = 0; _ < _; _++) _.push(Array(_.length + 2 * _).fill(!1));
+          return (function (_, _, _) {
+            const _ = _.length,
+              _ = _[0].length,
+              _ = new Uint8Array(40 + (_ + 2) * _);
+            let _ = 0;
+            (_[_++] = 71),
+              (_[_++] = 73),
+              (_[_++] = 70),
+              (_[_++] = 56),
+              (_[_++] = 57),
+              (_[_++] = 97),
+              (_[_++] = _),
+              (_[_++] = 0),
+              (_[_++] = _),
+              (_[_++] = 0),
+              (0, _._)(
+                "transparent" != _ || "transparent" != _,
+                "Trying to use transparent for both colors in QR",
+              ),
+              (_[_++] = 161),
+              (_[_++] = 0),
+              (_[_++] = 0),
+              "transparent" == _
+                ? ((_[_++] = 0), (_[_++] = 0), (_[_++] = 0))
+                : ((_[_++] = _[0]), (_[_++] = _[1]), (_[_++] = _[2])),
+              "transparent" == _
+                ? ((_[_++] = 0), (_[_++] = 0), (_[_++] = 0))
+                : ((_[_++] = _[0]), (_[_++] = _[1]), (_[_++] = _[2])),
+              (_[_++] = 255),
+              (_[_++] = 255),
+              (_[_++] = 255),
+              (_[_++] = 255),
+              (_[_++] = 255),
+              (_[_++] = 255),
+              ("transparent" != _ && "transparent" != _) ||
+                ((_[_++] = 33),
+                (_[_++] = 249),
+                (_[_++] = 4),
+                (_[_++] = 1),
+                (_[_++] = 0),
+                (_[_++] = 0),
+                (_[_++] = "transparent" == _ ? 0 : 1),
+                (_[_++] = 0)),
+              (_[_++] = 44),
+              (_[_++] = 0),
+              (_[_++] = 0),
+              (_[_++] = 0),
+              (_[_++] = 0),
+              (_[_++] = _),
+              (_[_++] = 0),
+              (_[_++] = _),
+              (_[_++] = 0),
+              (_[_++] = 0),
+              (_[_++] = 7);
+            for (let _ = 0; _ < _.length; _++) {
+              (_[_++] = _ + 1), (_[_++] = 128);
+              for (let _ = 0; _ < _.length; _++) _[_++] = _[_][_] ? 0 : 1;
+            }
+            return (_[_++] = 1), (_[_++] = 129), (_[_++] = 0), (_[_++] = 59), _;
+          })(_, _, _);
+        }
         function _(_) {
           let {
             quality: _ = _._,
@@ -85184,93 +85363,39 @@ var CLSTAMP = "steamdb";
             borderWidth: _ = 3,
             typeNumber: _ = 6,
           } = _;
-          const _ = (function (_, _ = {}) {
-            const { typeNumber: _, errorCorrectLevel: _ } = _,
-              [_, _] = (0, _.useState)();
-            return (
-              (0, _.useEffect)(() => {
+          const _ = (function (_, _) {
+            const {
+              typeNumber: _,
+              errorCorrectLevel: _,
+              activeBitColor: _,
+              inactiveBitColor: _,
+              borderWidth: _,
+            } = _;
+            return (0, _.useMemo)(
+              () =>
                 _(
-                  _()(_, {
+                  _,
+                  {
+                    activeBitColor: _,
+                    inactiveBitColor: _,
+                    borderWidth: _,
+                  },
+                  {
                     typeNumber: _,
                     errorCorrectLevel: _,
-                  }).modules,
-                );
-              }, [_, _, _]),
-              _
+                  },
+                ),
+              [_, _, _, _, _, _],
             );
           })(_, {
             typeNumber: _,
             errorCorrectLevel: _,
+            activeBitColor: _,
+            inactiveBitColor: _,
+            borderWidth: _,
           });
           if (!_) return null;
-          let _ = [];
-          for (let _ = 0; _ < _; _++) _.push(Array(_.length + 2 * _).fill(!1));
-          for (let _ = 0; _ < _.length; _++)
-            _.push([].concat(Array(_).fill(!1), _[_], Array(_).fill(!1)));
-          for (let _ = 0; _ < _; _++) _.push(Array(_.length + 2 * _).fill(!1));
-          const _ = (function (_, _, _) {
-              const _ = _.length,
-                _ = _[0].length,
-                _ = new Uint8Array(40 + (_ + 2) * _);
-              let _ = 0;
-              (_[_++] = 71),
-                (_[_++] = 73),
-                (_[_++] = 70),
-                (_[_++] = 56),
-                (_[_++] = 57),
-                (_[_++] = 97),
-                (_[_++] = _),
-                (_[_++] = 0),
-                (_[_++] = _),
-                (_[_++] = 0),
-                (0, _._)(
-                  "transparent" != _ || "transparent" != _,
-                  "Trying to use transparent for both colors in QR",
-                ),
-                (_[_++] = 161),
-                (_[_++] = 0),
-                (_[_++] = 0),
-                "transparent" == _
-                  ? ((_[_++] = 0), (_[_++] = 0), (_[_++] = 0))
-                  : ((_[_++] = _[0]), (_[_++] = _[1]), (_[_++] = _[2])),
-                "transparent" == _
-                  ? ((_[_++] = 0), (_[_++] = 0), (_[_++] = 0))
-                  : ((_[_++] = _[0]), (_[_++] = _[1]), (_[_++] = _[2])),
-                (_[_++] = 255),
-                (_[_++] = 255),
-                (_[_++] = 255),
-                (_[_++] = 255),
-                (_[_++] = 255),
-                (_[_++] = 255),
-                ("transparent" != _ && "transparent" != _) ||
-                  ((_[_++] = 33),
-                  (_[_++] = 249),
-                  (_[_++] = 4),
-                  (_[_++] = 1),
-                  (_[_++] = 0),
-                  (_[_++] = 0),
-                  (_[_++] = "transparent" == _ ? 0 : 1),
-                  (_[_++] = 0)),
-                (_[_++] = 44),
-                (_[_++] = 0),
-                (_[_++] = 0),
-                (_[_++] = 0),
-                (_[_++] = 0),
-                (_[_++] = _),
-                (_[_++] = 0),
-                (_[_++] = _),
-                (_[_++] = 0),
-                (_[_++] = 0),
-                (_[_++] = 7);
-              for (let _ = 0; _ < _.length; _++) {
-                (_[_++] = _ + 1), (_[_++] = 128);
-                for (let _ = 0; _ < _.length; _++) _[_++] = _[_][_] ? 0 : 1;
-              }
-              return (
-                (_[_++] = 1), (_[_++] = 129), (_[_++] = 0), (_[_++] = 59), _
-              );
-            })(_, _, _),
-            _ = new Blob([_], {
+          const _ = new Blob([_], {
               type: "image/gif",
             }),
             _ = URL.createObjectURL(_),
@@ -87883,88 +88008,43 @@ var CLSTAMP = "steamdb";
             bLoop: _ ? _ : _,
           });
         }
-        class _ {
-          constructor() {
-            (0, _._)(this);
-          }
-          m_mapYouTubeVideo = new Map();
-          m_mapSharedFile = new Map();
-          async LoadYouTubeDynamicData(_, _) {
-            let _ = new Array(),
-              _ = "";
-            if (
-              (_.forEach((_, _) => {
-                const _ = this.m_mapYouTubeVideo.get(_);
-                _
-                  ? __webpack_require__.push(_)
-                  : (_.length > 0 && (_ += ","), (_ += _));
-              }),
-              0 == _.length)
-            )
-              return _;
-            let _ = {
-              youtubevideoids: _,
-            };
-            const _ = await _().get(
-                _._.STORE_BASE_URL + "/events/ajaxgetdynamiceventmetadata",
-                {
-                  params: _,
-                  cancelToken: _.token,
-                },
-              ),
-              _ = _?.data?.youtube;
-            return (
-              _ &&
-                (0, _._)(() => {
-                  _.forEach((_, _) => {
-                    this.m_mapYouTubeVideo.set(_.videoid, _),
-                      __webpack_require__.push(_);
-                  });
-                }),
-              _
-            );
-          }
-          async LoadSharedFileDynamicData(_, _) {
-            let _ = new Array(),
-              _ = "";
-            if (
-              (_.forEach((_, _) => {
-                const _ = this.m_mapSharedFile.get(_);
-                _
-                  ? __webpack_require__.push(_)
-                  : (_.length > 0 && (_ += ","), (_ += _));
-              }),
-              0 == _.length)
-            )
-              return _;
-            let _ = {
-              sharedfileids: _,
-            };
-            const _ = await _().get(
-                _._.STORE_BASE_URL + "/events/ajaxgetdynamiceventmetadata",
-                {
-                  params: _,
-                  cancelToken: _.token,
-                },
-              ),
-              _ = _?.data?.sharedfiles;
-            return (
-              _ &&
-                (0, _._)(() => {
-                  _.forEach((_, _) => {
-                    this.m_mapSharedFile.set(_.sharedfileid, _),
-                      __webpack_require__.push(_);
-                  });
-                }),
-              _
-            );
-          }
+        var _ = __webpack_require__("chunkid");
+        async function _(_) {
+          const _ =
+              _._.STORE_BASE_URL +
+              "events/ajaxgetdynamiceventmetadata?" +
+              new URLSearchParams(_).toString(),
+            _ = await fetch(_, {
+              credentials: "include",
+            });
+          if (!_._) throw new Error(`${_} answered ${_.status}`);
+          return await __webpack_require__.json();
         }
-        (0, _._)([_._], _.prototype, "m_mapYouTubeVideo", void 0),
-          (0, _._)([_._], _.prototype, "m_mapSharedFile", void 0);
-        const _ = new _();
+        function _(_) {
+          return ["DynamicEventMetadata", "youtube", _];
+        }
+        function _(_, _ = !0) {
+          return (0, _._)(
+            (function (_, _ = !0) {
+              return {
+                queryKey: _(_),
+                queryFn: async () => {
+                  const _ = await _({
+                      youtubevideoids: _,
+                    }),
+                    _ =
+                      _.youtube?.find((_) => _.videoid == _) ?? _.youtube?.[0];
+                  if (!_) throw new Error(`no metadata for youtube video ${_}`);
+                  return _;
+                },
+                enabled: _ && !0,
+                staleTime: 36e5,
+                retry: !1,
+              };
+            })(_, _),
+          );
+        }
         var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
@@ -88015,32 +88095,11 @@ var CLSTAMP = "steamdb";
               classNameAlign: _,
             } = _,
             [_, _] = (0, _.useState)(!_),
-            [_, _] = (0, _.useState)(!1),
-            _ = (0, _._)("YouTubeInlineSnippet"),
-            [_, _] = (0, _.useState)({
-              title: (0, _._)("#Loading"),
-              description: "",
-              videoid: _,
-              views: "0",
-            });
-          if (
-            ((0, _.useEffect)(() => {
-              _ &&
-                _.LoadYouTubeDynamicData([_], _)
-                  .then((_) => {
-                    !_.token.reason && _.length > 0 && (_(_[0]), _(!0));
-                  })
-                  .catch((_) =>
-                    console.error(
-                      "YouTubeInlineSnippet: " + (0, _._)(_).strErrorMsg,
-                    ),
-                  );
-            }, [_, _, _]),
-            _)
-          ) {
-            const _ = _.title,
-              _ = _.views,
-              _ = _.description;
+            { data: _, isSuccess: _ } = _(_, _);
+          if (_) {
+            const _ = _?.title ?? (0, _._)("#Loading"),
+              _ = _?.views ?? "0",
+              _ = _?.description ?? "";
             return (0, _.jsxs)("div", {
               className: _.Box,
               onClick: () => _(!1),
@@ -95418,6 +95477,7 @@ var CLSTAMP = "steamdb";
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         class _ {
           static s_VODStore;
@@ -96759,8 +96819,8 @@ var CLSTAMP = "steamdb";
           _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -96773,38 +96833,53 @@ var CLSTAMP = "steamdb";
           _ = 5,
           _ = 7;
         class _ {
-          constructor() {
-            (0, _._)(this);
-          }
-          exportFn = void 0;
-          file = void 0;
-          dataURL = void 0;
-          uploadFileName = "";
-          displayFileName = void 0;
-          sha1 = "";
-          hmac = "";
-          timestamp = 0;
-          imageWidth = 0;
-          imageHeight = 0;
-          fileInfo = void 0;
-          uploadInfo = void 0;
-          eUploadState = _;
-          uploadProgress = 0;
-          strErrorDescription = void 0;
-        }
-        (0, _._)([_._], _.prototype, "file", void 0),
-          (0, _._)([_._], _.prototype, "dataURL", void 0),
-          (0, _._)([_._], _.prototype, "imageWidth", void 0),
-          (0, _._)([_._], _.prototype, "imageHeight", void 0),
-          (0, _._)([_._], _.prototype, "eUploadState", void 0),
-          (0, _._)([_._], _.prototype, "uploadProgress", void 0),
-          (0, _._)([_._], _.prototype, "strErrorDescription", void 0);
-        class _ {
           m_Callbacks;
-          m_fileUploadProps = new _();
+          m_fileUploadProps = (function () {
+            const _ = {
+              exportFn: void 0,
+              file: void 0,
+              dataURL: void 0,
+              uploadFileName: "",
+              displayFileName: void 0,
+              sha1: "",
+              hmac: "",
+              timestamp: 0,
+              imageWidth: 0,
+              imageHeight: 0,
+              fileInfo: void 0,
+              uploadInfo: void 0,
+              eUploadState: _,
+              uploadProgress: 0,
+              strErrorDescription: void 0,
+            };
+            return (0, _._)(_, {
+              exportFn: !1,
+              file: _._.ref,
+              uploadFileName: !1,
+              displayFileName: !1,
+              sha1: !1,
+              hmac: !1,
+              timestamp: !1,
+              fileInfo: !1,
+              uploadInfo: !1,
+            });
+          })();
           m_onComplete;
           constructor(_) {
-            (0, _._)(this), (this.m_Callbacks = _);
+            (0, _._)(this, {
+              SetUploadFileError: _._,
+              StartFileExportToUpload: _._,
+              SetImageFileToUpload: _._,
+              SetOtherFileToUpload: _._,
+              SetFileToUpload: _._,
+              RetryFileUpload: _._,
+              BeginFileUpload: _._,
+              DoFileUpload: _._,
+              CommitFileUpload: _._,
+              ClearFileUploadError: _._,
+              Reset: _._,
+            }),
+              (this.m_Callbacks = _);
           }
           get file_upload_props() {
             return this.m_fileUploadProps;
@@ -97250,17 +97325,6 @@ var CLSTAMP = "steamdb";
               __webpack_require__.readAsArrayBuffer(_);
           });
         }
-        (0, _._)([_._], _.prototype, "SetUploadFileError", null),
-          (0, _._)([_._], _.prototype, "StartFileExportToUpload", null),
-          (0, _._)([_._], _.prototype, "SetImageFileToUpload", null),
-          (0, _._)([_._], _.prototype, "SetOtherFileToUpload", null),
-          (0, _._)([_._], _.prototype, "SetFileToUpload", null),
-          (0, _._)([_._], _.prototype, "RetryFileUpload", null),
-          (0, _._)([_._], _.prototype, "BeginFileUpload", null),
-          (0, _._)([_._], _.prototype, "DoFileUpload", null),
-          (0, _._)([_._], _.prototype, "CommitFileUpload", null),
-          (0, _._)([_._], _.prototype, "ClearFileUploadError", null),
-          (0, _._)([_._], _.prototype, "Reset", null);
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -97747,17 +97811,6 @@ var CLSTAMP = "steamdb";
             (_[(_.k_EEventStateUnlisted = 3)] = "k_EEventStateUnlisted");
         })(_ || (_ = {}));
         var _, _, _, _, _, _;
-        function _(_) {
-          switch (_) {
-            case "items":
-            case "trailercarousel":
-            case "crosspromotesalepage":
-            case "creator_list":
-            case "calendar":
-              return !0;
-          }
-          return !1;
-        }
         !(function (_) {
           (_[(_.k_EStoreFilterClauseTypeOr = 0)] =
             "k_EStoreFilterClauseTypeOr"),
@@ -97805,6 +97858,17 @@ var CLSTAMP = "steamdb";
             (_.Summary = "summary"),
               (_.SummaryLargeImage = "summary_large_image");
           })(_ || (_ = {}));
+        function _(_) {
+          switch (_) {
+            case "items":
+            case "trailercarousel":
+            case "crosspromotesalepage":
+            case "creator_list":
+            case "calendar":
+              return !0;
+          }
+          return !1;
+        }
         const _ = {
           capsules: [],
           events: [],
@@ -97884,6 +97948,7 @@ var CLSTAMP = "steamdb";
           AnnouncementGID = void 0;
           clanSteamID = new _._();
           forumTopicGID = void 0;
+          clanSteamIDOriginal = void 0;
           type = _.DRF;
           appid = 0;
           name = new Map();
@@ -97953,8 +98018,7 @@ var CLSTAMP = "steamdb";
           }
           static FromCClanEventData(_, _) {
             let _ = new _();
-            return (
-              (_.GID = _.gid),
+            (_.GID = _.gid),
               (_.clanSteamID = new _._(_.clan_steamid)),
               _.name.set(_, _.event_name ?? ""),
               (_.type = _.event_type),
@@ -97984,7 +98048,15 @@ var CLSTAMP = "steamdb";
                 (_.broadcaster = _._.InitFromAccountID(
                   _.broadcaster_accountid,
                 )),
-              (_.AnnouncementGID = _.announcement_body?.gid ?? "0"),
+              (_.AnnouncementGID = _.announcement_body?.gid ?? "0");
+            const _ = _.clan_steamid_original;
+            return (
+              _
+                ? (_.clanSteamIDOriginal = new _._(_))
+                : _.announcement_body?.clanid &&
+                  (_.clanSteamIDOriginal = _._.InitFromClanID(
+                    Number(_.announcement_body.clanid),
+                  )),
               (_.postTime = _.announcement_body?.posttime),
               (_.forumTopicGID = _.forum_topic_id),
               _.name.set(_, _.announcement_body?.headline ?? ""),
@@ -98017,6 +98089,7 @@ var CLSTAMP = "steamdb";
               ((_.GID = this.GID),
               (_.AnnouncementGID = this.AnnouncementGID),
               (_.clanSteamID = this.clanSteamID),
+              (_.clanSteamIDOriginal = this.clanSteamIDOriginal),
               (_.bOldAnnouncement = this.bOldAnnouncement),
               (_.nCommentCount = this.nCommentCount),
               (_.nVotesUp = this.nVotesUp),
@@ -98256,6 +98329,21 @@ var CLSTAMP = "steamdb";
                     this.clanSteamID.ConvertTo64BitString() +
                     "/eventcomments/" +
                     this.forumTopicGID
+              : "";
+          }
+          GetDiscussionURL(_) {
+            return this.BHasForumTopicGID()
+              ? this.GetForumTopicURL(_)
+              : this.GetLegacyAnnouncementCommentsURL();
+          }
+          GetLegacyAnnouncementCommentsURL() {
+            const _ = this.clanSteamIDOriginal ?? this.clanSteamID;
+            return this.BHasAnnouncementGID() && _ && _.BIsValid()
+              ? _._.COMMUNITY_BASE_URL +
+                  "gid/" +
+                  _.ConvertTo64BitString() +
+                  "/announcements/old_detail/" +
+                  this.AnnouncementGID
               : "";
           }
           BIsEventInFuture(_ = (0, _._)()) {
@@ -102376,10 +102464,14 @@ var CLSTAMP = "steamdb";
               (_ ? _.MergeData(_, _) : ((_ = new _._(_, _)), _.set(_._(), _)),
               _.include_included_items && _.included_items(!1))
             ) {
+              const _ = _.included_item_data_request ?? {
+                ..._,
+                include_included_items: !1,
+              };
               for (const _ of _.included_items().included_apps())
-                this.ReadItem(_, _.included_item_data_request);
+                this.ReadItem(_, _);
               for (const _ of _.included_items().included_packages())
-                this.ReadItem(_, _.included_item_data_request);
+                this.ReadItem(_, _);
             }
             return _;
           }
@@ -109980,7 +110072,10 @@ var CLSTAMP = "steamdb";
               transform: `translateX(${_}px)`,
             },
             children: (0, _.jsx)("div", {
-              className: _().CompoundSliderSubSliderLabelInternal,
+              className: (0, _._)(
+                _().CompoundSliderSubSliderLabelInternal,
+                "CompoundSliderSubSliderLabelInternal",
+              ),
               children: _,
             }),
           });
@@ -125357,6 +125452,7 @@ var CLSTAMP = "steamdb";
             fill: "none",
             children: [
               (0, _.jsx)("path", {
+                className: "SteamFrameDumpling",
                 opacity: "0.84",
                 fill: "currentColor",
                 _: "M18.0001 7.54712C12.2272 7.54712 7.54736 12.227 7.54736 17.9998H18.0001V7.54712Z",
@@ -130612,6 +130708,7 @@ var CLSTAMP = "steamdb";
             IN_CHROMEOS: !1,
             TESLA: !1,
             LOCAL_HOSTNAME: "",
+            PACKAGE_CL: "",
             WEBAPI_BASE_URL: "",
             TOKEN_URL: "",
             BUILD_TIMESTAMP: 0,
@@ -132142,166 +132239,199 @@ var CLSTAMP = "steamdb";
         43: "b98e0f420add57691fc2",
         133: "82545716ea1a8b82e4d9",
         191: "f3d164bc18e6e4eb035c",
-        200: "f70dc77df2b44c5b6c28",
+        195: "091ec794d3d9282375f8",
+        200: "1e6fcf9ee57eef82b681",
         277: "8ac481477d17b71a308e",
-        295: "30a1b0feb050dde520dd",
+        295: "e1e4ac4adb7465da3903",
         316: "b4a4125ab8550ef83a0b",
         382: "57763f481aca5421fdcc",
         474: "6a9d0b4e2892dded462e",
-        496: "fb606fd9941402c4c9fd",
-        559: "e8fd6d4fe87221a119fa",
+        496: "ac15dfa8e0c8703cd003",
+        559: "02aecec80d680dd7b005",
+        580: "a9adb26c430f3c04af01",
         684: "7b7abc722226e7196944",
+        716: "594148f5c00309b02094",
         762: "6381bf741535ad65d4e3",
-        815: "c7a18e80878daf8f54e1",
-        836: "346af22a8ddb7018db31",
-        898: "b6a64c82dc169d24fab2",
-        902: "55c8b333a5261e9183dc",
+        815: "e3179825c7f3c271c102",
+        876: "51ef786d3dfe812c14a9",
+        898: "0fc5c69edefddfb0b4b6",
+        902: "6aeda17c2ed20dda0703",
         947: "77123a0d43c051462d19",
-        975: "3a1c568c77dec2962779",
+        975: "255072890b35cbcaeba8",
         1087: "e11786deaa8b241d4432",
-        1136: "5f832a08c3bef135c68e",
-        1144: "896ffa5dbc529d9c48a5",
-        1158: "20c08adf29ac06b096f3",
+        1136: "39052344410e9cdf46c0",
+        1144: "b445b2b33d04756b3059",
+        1158: "94ad03fd9226a221f5b5",
         1224: "8cf7b28930c7b7c56321",
         1316: "984c1d3de5bcacca87dd",
         1330: "d8ab1ac01d7f47e93aca",
+        1391: "057d95231b1576648144",
+        1417: "8b4fa6683be707656fec",
         1499: "016609b438b84fcc275a",
         1571: "301c37a370bcf304422d",
-        1639: "48a7008667f0f9b1d559",
-        1849: "c211a47bad2b684320fd",
-        1864: "f2b9178068767b40d428",
+        1639: "aeb07bbbc14ebddf0d02",
+        1663: "6e32f2ce814ed8f67afe",
+        1671: "7373e36673df8735b1c1",
+        1849: "b2b428e765155accc1bb",
+        1864: "84b32657ef3245eae108",
         1954: "ce875dc43cc518068eea",
-        1990: "f85ce9a0d9c8bd0dcdf2",
-        2116: "9caf93966dc0a0c7202f",
-        2177: "77c78758e314a85bc85e",
-        2269: "913b2ce129ee42bef5df",
-        2281: "6496f3d7e4ce6308483c",
+        1990: "70b1a94fc112b366e0e3",
+        2101: "49e06d82b53a46650e72",
+        2116: "0b07277aef68620ce466",
+        2177: "8f9944aa3e586b92117b",
+        2269: "5a1973d58ab9488fe1b4",
+        2281: "8c4105c7cdabafdfd365",
         2292: "2648171bbf7a4e541935",
-        2506: "3995fb6cb9c524d2af74",
+        2506: "0d7cc97f3b13fc1bbfff",
         2520: "5bfbaedd17d68216d8eb",
         2532: "a9d9f49d622113e7237a",
+        2539: "909cd8fc9ff8b31e1339",
         2687: "105bc40c10c3eaf266d1",
-        2889: "7370f87b7e9e453eb0eb",
+        2889: "46aa5e4dd4fd7c212f55",
+        2916: "60a7b33063885759bbb3",
         2945: "b1bb49c86e94db92dee9",
         2993: "e6827764a5e82e106259",
         3e3: "1b03996604202ef27322",
         3016: "ca85786390010cceefc4",
-        3199: "0172f6eaeb8d488a5d78",
-        3202: "7ed472ccdbd3ccd9db03",
+        3199: "56cc97564a0f78997d21",
+        3202: "d9dc3f3c72f66cf7d7e3",
         3232: "506a59c269184fbbf9b5",
-        3307: "52f9b1de1367f6212ec9",
-        3382: "f4dd3d6e1a89705b7fa7",
+        3307: "4f8c5bde3af88831f964",
+        3382: "51ae7a0a8208126428d8",
+        3407: "57225c388709ce5afdc0",
         3415: "f27b27ba4a24ffe3357b",
+        3473: "6471b967b2cfad8ddf3c",
         3485: "08349ebcf15f4d7c2342",
-        3577: "2337465c4bd74edf3412",
+        3577: "34c3bb5596ec1928d668",
         3723: "a69634b2de1f3fa5dba5",
+        3744: "fea1673992963572f88f",
         3778: "f10ff9679525e51d3ee7",
         3789: "7576118cdc2ea612c555",
-        3800: "29f495d97b5169da720b",
+        3800: "716882e1dfa08ffd827b",
         3810: "e5049fe30dd9a6434d81",
         3875: "f4eb6016a7ef30ff0ad4",
-        3898: "90846a9e84c0e34eca45",
-        3907: "3dea78f6a4155105eeaa",
+        3898: "82f6f22f7e9960dde322",
+        3899: "5559185045f072250cb7",
+        3907: "979f4bf89461e45cc96a",
         4006: "0652b75ab14e56a841e7",
         4154: "ab85015c1182c53c2a07",
-        4227: "b9f7e2337d2bec4eff82",
-        4230: "163b24575a8590b5dd57",
-        4289: "b1ffb8ea3b089c182e85",
+        4227: "e148b728f3478c8dac0e",
+        4230: "2216ab783d266b2bae39",
+        4259: "aca072edd6d6dd1eccda",
+        4289: "5ef3f3bcc33bf84aeeb8",
         4295: "e2c54df00cd7fc6e55c9",
         4302: "127bac547ebe35debb6e",
         4352: "de92a58e851fd1f40a2a",
-        4419: "a0af6463f1a69b1adf58",
+        4419: "63db3f76fc47f0f7b302",
         4421: "9fa6f4e86d1f195ce124",
         4434: "7042d1e1cb05e782371a",
         4473: "a4086781f9cbe6881139",
+        4475: "a63bc7e44927130c0113",
         4488: "ecc72b7e73d0d3a37046",
-        4625: "b3f0a685e298e07970f2",
-        4750: "2f714d699e60e9e5441a",
+        4625: "3a7aa008a558f62445b9",
+        4750: "53f8b1d501de9ef86188",
+        4768: "9901a55c15965a580b88",
         4776: "642916fbd7a977b50de9",
-        4777: "040c37a660c26d77931d",
+        4777: "03a84d34aab5fdfafbdf",
         4779: "909f21776039059914ce",
         4787: "ef50a874abefeb603b11",
-        4792: "f9a55c905cc523f64b44",
+        4792: "3dd70b6f5dc82c60cbac",
         4844: "9b0a060abc338b33c9ea",
+        4925: "e519812b003e3f0cba5c",
+        4933: "314165591585433c69f4",
         4976: "793b1acb4211f3513c7c",
-        4978: "4253d6570728d8675048",
-        5040: "f96790d344ca1985baf6",
-        5094: "d15c06f400812c0725f0",
-        5136: "d873a49dcff7475852a5",
-        5191: "8aa4a92e8e0301626e83",
-        5233: "536bb318dfdd1d48eca4",
+        4978: "a96b1b8cfa400e5c2b6d",
+        5040: "9d106d8c426fe10ba9cb",
+        5094: "e5dce5a361b0e57d7821",
+        5136: "8780ca755a7a197bbcc9",
+        5181: "209ff7217fcd3b9ca319",
+        5191: "3e138aba157eb1a3048e",
+        5233: "7d9920f1d3e86bf6e146",
+        5269: "79a97249435b1a0d921f",
         5341: "d01dc36adbf1ed0dc168",
         5358: "cc380c8f3bae9ea254d4",
-        5436: "7a51987a0662bd324382",
-        5480: "aa8842d2e7d72dad67c5",
+        5436: "1fd82a7ac8c5340ccd72",
+        5480: "1b95c668c7ef41788b3c",
         5522: "43ef07153506837b9ad7",
         5536: "67277551d20afcb0ab7a",
         5617: "6d58f25bd9f169dac32a",
         5725: "0107f56cf91554afee1b",
-        5777: "a0cbe768cbe83f6a2a8d",
+        5777: "25795b0debcb4806f5f4",
         5893: "2b48f5504e36c140ac9d",
-        6059: "e0d80564c1174fd84376",
+        6059: "0c3b02927f81a8e583c6",
         6127: "4882c58af191aaf74128",
-        6170: "0a707b61824222356e7e",
+        6170: "5fb9650a13022ed3fb07",
         6196: "2858ceca5518092425bd",
-        6305: "10b03bb6a5af6137fa3d",
+        6305: "5fbd9b2f5a839c58ea3c",
         6385: "e5f8cfa9b62ae2ae5efe",
         6447: "531013264cfebd28a7ca",
-        6512: "91ee6858d882af1c5e62",
-        6518: "1367c553cc7eccd07bc4",
+        6512: "01b7a19fe85aa0f64665",
+        6518: "a9d5318be576311fe3cf",
         6609: "fc94f8d39971c6671379",
         6637: "bee05b6c76a9dd2fe06d",
-        6736: "17e2509232d2db22d939",
+        6696: "b53d5d3dc27e1c6f91f3",
+        6736: "dca2db9461f3d756058d",
+        6810: "1ef82b614a4f6f5d48da",
+        6865: "9a67ff86da7136487018",
+        6884: "28f634113578204ad834",
         6888: "c50f7606409776b647a0",
         6905: "d9316fc5a220e6b4c416",
         6920: "2de6a783e3834bed04fa",
         6950: "82d3f20014a5cee7d6d4",
         6971: "e7f4af03b6ba3a7fa534",
-        7246: "167c8393e8c49711acd7",
+        7246: "60a97f9c76f512eb4415",
         7247: "7021b7a5aaf6d7ee9806",
-        7263: "99f6d1aa488039ff2230",
+        7263: "0297fcabe3ea3eb74643",
         7279: "ec928a0879ed71ee39f4",
+        7306: "5b3b8b9c7d88951f6a1e",
         7365: "7dc558a369acfb0ec614",
         7418: "7680875bb68efceaf698",
-        7462: "fb83bbb089607af82872",
+        7462: "ac37fd7886810978fc60",
         7464: "7e61c51d834807ecd2b7",
         7468: "53e0875c52dff3de164a",
         7487: "8efea89904c72e8440e5",
-        7637: "4d32b59b329ef468b7d5",
-        7653: "2505b6a63255483d827b",
+        7503: "362e655b8858b8f9df76",
+        7637: "6e769a59176e773094d6",
+        7653: "d51e92d143691873f9ac",
         7673: "065a311d75b3213d4f15",
-        7714: "6212ccc79d1b6d908bba",
         7788: "204929add0c27533aa2a",
         7861: "5edde2f8fc8a9ec95168",
         7904: "116aefb93e005baea38e",
-        8016: "f51fbdb9a370ce988f71",
+        7996: "1b62b80d2bcbcba8e4b5",
+        8016: "577ee4bac05a201aa8ac",
         8106: "56f522e6cd550a1bfbfa",
         8191: "7c71b0175a3b35434ec8",
         8194: "7b692387d3a77ce31c7b",
         8246: "d8dd4a47668b5bf225ab",
-        8311: "410eff68de4d1e8b26d0",
+        8311: "5dbd89a8c537e33d1f1a",
         8366: "fbd35ad496eb7892a424",
-        8476: "1ddeaaa684b3b1ffb95c",
+        8476: "69fc4151e016df48d40c",
+        8484: "68e7c7220c697e64f4b8",
         8566: "cd93e0bf03daf5972185",
         8703: "fc28c3b359e195fe803f",
         8759: "73a7657685d5198e1a73",
         8766: "0447dd79b31a8fe64ce1",
-        8822: "f6e77bc2564a0557665b",
+        8822: "7764d2c0afff3b7bcf97",
         8833: "0db29dc3b45b31acb4a4",
-        8855: "cb5af29a40dad01a9fb6",
+        8855: "5848a09da261428bfd95",
         8871: "70d06b50db86bcd130b8",
+        8906: "fbac03840b0674a6848b",
         8930: "f446863221abe8a3b6d3",
+        8948: "16c209d2cb6b1bd4dbde",
+        8970: "387d122ea41a96b81947",
         9273: "702b2119e94a4b56417e",
         9401: "0c0cd9c24baf6ebde222",
-        9457: "32ab60ec18bedaed3503",
-        9574: "a1c254a386aa01497b75",
-        9668: "67e32057588ddc9e6d12",
+        9457: "61a8c0f40073a7ec8863",
+        9574: "279815a1985601206775",
+        9668: "dc41ad3d058e40e25dc2",
         9746: "3679c8e2ce76e34b2ccf",
+        9779: "7012ad760ce038fb95d4",
         9808: "51bb932b4ac14b5211d4",
-        9863: "e0e594dbfb4435361da5",
-        9925: "77586f22def2595b9c64",
-        9930: "f92544de12d0462e95d3",
-        9947: "db121efc3d24d771a8f9",
+        9863: "dfaf0bdf05cfe6a1b3a6",
+        9902: "94e79e0584ed95da468d",
+        9925: "90301b2211dc8b3d6755",
+        9930: "2d3b554eaf01dd9a36bd",
+        9947: "57f0058d58891ea2a11a",
       }[_]),
     (_.miniCssF = (_) =>
       "css/webui/" +
@@ -132312,7 +132442,7 @@ var CLSTAMP = "steamdb";
       ".css?contenthash=" +
       {
         7462: "720b410a25437da34ec5",
-        7653: "fa2c26f6b734433e6b09",
+        7653: "77fec79aba4a37ab0064",
       }[_]),
     (_._ = (function () {
       if ("object" == typeof globalThis) return globalThis;
@@ -132546,6 +132676,6 @@ var CLSTAMP = "steamdb";
       __webpack_require__.forEach(_.bind(null, 0)),
         (_.push = _.bind(null, _.push.bind(_)));
     })();
-  var _ = _._(void 0, [3987, 9489, 1068], () => _(6699));
+  var _ = _._(void 0, [3987, 9489, 1068], () => _(83502));
   _ = _._(_);
 })();
