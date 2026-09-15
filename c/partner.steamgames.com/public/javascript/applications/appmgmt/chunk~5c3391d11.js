@@ -239,6 +239,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -353,7 +354,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        const { _: _ } = _,
+        const { _: _, onShowDialog: _ } = _,
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_),
           [_, _, _] = (0, _._)();
@@ -367,7 +368,7 @@
             }),
             (0, _.jsx)(_._, {
               onClick: (_) => {
-                _.preventDefault(), _();
+                _.preventDefault(), (_ ?? _)();
               },
               children: (0, _.jsx)("span", {
                 className: _().LearnMorePC,
@@ -376,18 +377,29 @@
                 ),
               }),
             }),
-            (0, _.jsx)(_._, {
-              active: _,
-              children: (0, _.jsx)(_, {
+            !_ &&
+              (0, _.jsx)(_, {
                 nAppID: _.appid,
+                appName: _.name,
+                active: _,
                 closeModal: _,
               }),
-            }),
           ],
         });
       }
       function _(_) {
-        const { nAppID: _, closeModal: _ } = _,
+        const { nAppID: _, active: _, appName: _, closeModal: _ } = _;
+        return (0, _.jsx)(_._, {
+          active: _,
+          children: (0, _.jsx)(_, {
+            nAppID: _,
+            appName: _,
+            closeModal: _,
+          }),
+        });
+      }
+      function _(_) {
+        const { nAppID: _, appName: _, closeModal: _ } = _,
           _ = (function (_) {
             const [_, _] = _.useState(_.Get().GetCompatabilityResultForApp(_));
             return (
@@ -418,6 +430,7 @@
               children: _
                 ? (0, _.jsx)(_.default, {
                     titleId: _,
+                    appName: _,
                     results: _,
                   })
                 : (0, _.jsx)(_._, {
@@ -2784,10 +2797,7 @@
               }),
               onClick: _,
             },
-          ];
-        return (
-          _ == _._ &&
-            _.push({
+            {
               name: (0, _.jsxs)("div", {
                 className: _().pillContent,
                 children: [
@@ -2806,15 +2816,16 @@
                 }),
               }),
               onClick: _,
-            }),
-          (0, _.jsx)(_._, {
-            tabs: _,
-            classNameCtn: _().CompatibilityTabs,
-            classNameTabContent: _().CompatibilityTabContent,
-            startingTab: _.toString(),
-            preferredFocus: !0,
-          })
-        );
+            },
+          ];
+        return (0, _.jsx)(_._, {
+          tabs: _,
+          classNameCtn: _().CompatibilityTabs,
+          classNameTabContent: _().CompatibilityTabContent,
+          startingTab: _.toString(),
+          preferredFocus: !0,
+          bDisableRouting: !0,
+        });
       }
       function _(_) {
         const {

@@ -4819,12 +4819,12 @@
     97436: (e, t, r) => {
       "use strict";
       r.d(t, {
-        P5: () => st,
-        sW: () => nt,
-        YN: () => Je,
-        Fn: () => Xe,
-        Mk: () => gt,
-        kt: () => xt,
+        P5: () => at,
+        sW: () => st,
+        YN: () => et,
+        Fn: () => Je,
+        Mk: () => ht,
+        kt: () => It,
       });
       var i = r(7850),
         n = r(2160),
@@ -4954,7 +4954,7 @@
             c &&
               (0, i.jsx)("div", {
                 className: M().Loading,
-                children: (0, i.jsx)(xt, { size: "small" }),
+                children: (0, i.jsx)(It, { size: "small" }),
               }),
             R,
           ],
@@ -6976,7 +6976,88 @@
         We = r(81393),
         Oe = r(5804),
         Ee = r.n(Oe);
-      function Ne(e) {
+      function Ne(
+        e,
+        {
+          activeBitColor: t = [33, 35, 40],
+          inactiveBitColor: r = [255, 255, 255],
+          borderWidth: i = 3,
+        } = {},
+        n = {},
+      ) {
+        const s = qe()(e, n).modules;
+        if (!s) return null;
+        let a = [];
+        for (let e = 0; e < i; e++) a.push(Array(s.length + 2 * i).fill(!1));
+        for (let e = 0; e < s.length; e++)
+          a.push([
+            ...Array.from({ length: i }, () => !1),
+            ...s[e],
+            ...Array.from({ length: i }, () => !1),
+          ]);
+        for (let e = 0; e < i; e++) a.push(Array(s.length + 2 * i).fill(!1));
+        return (function (e, t, r) {
+          const i = e.length,
+            n = e[0].length,
+            s = new Uint8Array(40 + (i + 2) * n);
+          let a = 0;
+          (s[a++] = 71),
+            (s[a++] = 73),
+            (s[a++] = 70),
+            (s[a++] = 56),
+            (s[a++] = 57),
+            (s[a++] = 97),
+            (s[a++] = i),
+            (s[a++] = 0),
+            (s[a++] = n),
+            (s[a++] = 0),
+            (0, We.wT)(
+              "transparent" != t || "transparent" != r,
+              "Trying to use transparent for both colors in QR",
+            ),
+            (s[a++] = 161),
+            (s[a++] = 0),
+            (s[a++] = 0),
+            "transparent" == t
+              ? ((s[a++] = 0), (s[a++] = 0), (s[a++] = 0))
+              : ((s[a++] = t[0]), (s[a++] = t[1]), (s[a++] = t[2])),
+            "transparent" == r
+              ? ((s[a++] = 0), (s[a++] = 0), (s[a++] = 0))
+              : ((s[a++] = r[0]), (s[a++] = r[1]), (s[a++] = r[2])),
+            (s[a++] = 255),
+            (s[a++] = 255),
+            (s[a++] = 255),
+            (s[a++] = 255),
+            (s[a++] = 255),
+            (s[a++] = 255),
+            ("transparent" != t && "transparent" != r) ||
+              ((s[a++] = 33),
+              (s[a++] = 249),
+              (s[a++] = 4),
+              (s[a++] = 1),
+              (s[a++] = 0),
+              (s[a++] = 0),
+              (s[a++] = "transparent" == t ? 0 : 1),
+              (s[a++] = 0)),
+            (s[a++] = 44),
+            (s[a++] = 0),
+            (s[a++] = 0),
+            (s[a++] = 0),
+            (s[a++] = 0),
+            (s[a++] = i),
+            (s[a++] = 0),
+            (s[a++] = n),
+            (s[a++] = 0),
+            (s[a++] = 0),
+            (s[a++] = 7);
+          for (let t = 0; t < e.length; t++) {
+            (s[a++] = i + 1), (s[a++] = 128);
+            for (let r = 0; r < e.length; r++) s[a++] = e[t][r] ? 0 : 1;
+          }
+          return (s[a++] = 1), (s[a++] = 129), (s[a++] = 0), (s[a++] = 59), s;
+        })(a, t, r);
+      }
+      function Ue(e) {
         let {
           quality: t = xe.M,
           children: r,
@@ -6986,91 +7067,40 @@
           borderWidth: o = 3,
           typeNumber: l = 6,
         } = e;
-        const c = (function (e, t = {}) {
-          const { typeNumber: r, errorCorrectLevel: i } = t,
-            [n, s] = (0, u.useState)();
-          return (
-            (0, u.useEffect)(() => {
-              s(qe()(e, { typeNumber: r, errorCorrectLevel: i }).modules);
-            }, [e, r, i]),
-            n
-          );
-        })(r, { typeNumber: l, errorCorrectLevel: t });
-        if (!c) return null;
-        let m = [];
-        for (let e = 0; e < o; e++) m.push(Array(c.length + 2 * o).fill(!1));
-        for (let e = 0; e < c.length; e++)
-          m.push([].concat(Array(o).fill(!1), c[e], Array(o).fill(!1)));
-        for (let e = 0; e < o; e++) m.push(Array(c.length + 2 * o).fill(!1));
-        const d = (function (e, t, r) {
-            const i = e.length,
-              n = e[0].length,
-              s = new Uint8Array(40 + (i + 2) * n);
-            let a = 0;
-            (s[a++] = 71),
-              (s[a++] = 73),
-              (s[a++] = 70),
-              (s[a++] = 56),
-              (s[a++] = 57),
-              (s[a++] = 97),
-              (s[a++] = i),
-              (s[a++] = 0),
-              (s[a++] = n),
-              (s[a++] = 0),
-              (0, We.wT)(
-                "transparent" != t || "transparent" != r,
-                "Trying to use transparent for both colors in QR",
+        const c = (function (e, t) {
+          const {
+            typeNumber: r,
+            errorCorrectLevel: i,
+            activeBitColor: n,
+            inactiveBitColor: s,
+            borderWidth: a,
+          } = t;
+          return (0, u.useMemo)(
+            () =>
+              Ne(
+                e,
+                { activeBitColor: n, inactiveBitColor: s, borderWidth: a },
+                { typeNumber: r, errorCorrectLevel: i },
               ),
-              (s[a++] = 161),
-              (s[a++] = 0),
-              (s[a++] = 0),
-              "transparent" == t
-                ? ((s[a++] = 0), (s[a++] = 0), (s[a++] = 0))
-                : ((s[a++] = t[0]), (s[a++] = t[1]), (s[a++] = t[2])),
-              "transparent" == r
-                ? ((s[a++] = 0), (s[a++] = 0), (s[a++] = 0))
-                : ((s[a++] = r[0]), (s[a++] = r[1]), (s[a++] = r[2])),
-              (s[a++] = 255),
-              (s[a++] = 255),
-              (s[a++] = 255),
-              (s[a++] = 255),
-              (s[a++] = 255),
-              (s[a++] = 255),
-              ("transparent" != t && "transparent" != r) ||
-                ((s[a++] = 33),
-                (s[a++] = 249),
-                (s[a++] = 4),
-                (s[a++] = 1),
-                (s[a++] = 0),
-                (s[a++] = 0),
-                (s[a++] = "transparent" == t ? 0 : 1),
-                (s[a++] = 0)),
-              (s[a++] = 44),
-              (s[a++] = 0),
-              (s[a++] = 0),
-              (s[a++] = 0),
-              (s[a++] = 0),
-              (s[a++] = i),
-              (s[a++] = 0),
-              (s[a++] = n),
-              (s[a++] = 0),
-              (s[a++] = 0),
-              (s[a++] = 7);
-            for (let t = 0; t < e.length; t++) {
-              (s[a++] = i + 1), (s[a++] = 128);
-              for (let r = 0; r < e.length; r++) s[a++] = e[t][r] ? 0 : 1;
-            }
-            return (s[a++] = 1), (s[a++] = 129), (s[a++] = 0), (s[a++] = 59), s;
-          })(m, s, a),
-          g = new Blob([d], { type: "image/gif" }),
-          h = URL.createObjectURL(g),
-          p = `rgb(${a[0]}, ${a[1]}, ${a[2]})`;
+            [e, r, i, n, s, a],
+          );
+        })(r, {
+          typeNumber: l,
+          errorCorrectLevel: t,
+          activeBitColor: s,
+          inactiveBitColor: a,
+          borderWidth: o,
+        });
+        if (!c) return null;
+        const m = new Blob([c], { type: "image/gif" }),
+          d = URL.createObjectURL(m),
+          g = `rgb(${a[0]}, ${a[1]}, ${a[2]})`;
         return (0, i.jsx)("div", {
           className: (0, y.A)(Ee().QRBits, n),
-          style: { "--qr-bright-color": p },
+          style: { "--qr-bright-color": g },
           children: (0, i.jsx)("img", {
             className: Ee().QRImg,
-            src: h,
+            src: d,
             alt: "",
           }),
         });
@@ -7081,10 +7111,10 @@
           (e[(e.Q = 3)] = "Q"),
           (e[(e.H = 2)] = "H");
       })(xe || (xe = {}));
-      var Ue = r(5522),
-        Le = r.n(Ue),
-        De = r(68255);
-      function Ge(e) {
+      var Le = r(5522),
+        De = r.n(Le),
+        Ge = r(68255);
+      function Pe(e) {
         const {
             transport: t,
             onComplete: r,
@@ -7093,7 +7123,7 @@
             styling: o = "default",
             activeBitValue: l = 255,
           } = e,
-          c = F.TS.IN_STEAMUI ? nt : st,
+          c = F.TS.IN_STEAMUI ? st : at,
           {
             eStatus: m,
             strChallengeURL: d,
@@ -7130,11 +7160,11 @@
           b = m === je,
           w = m === Te,
           M = w
-            ? (0, i.jsx)(Ze, {})
+            ? (0, i.jsx)($e, {})
             : b
-              ? (0, i.jsx)(Ve, { reset: p })
+              ? (0, i.jsx)(Qe, { reset: p })
               : _
-                ? (0, i.jsx)(He, { size: "small" })
+                ? (0, i.jsx)(Ve, { size: "small" })
                 : null,
           S = _ || b || w;
         (0, u.useEffect)(() => {
@@ -7146,29 +7176,29 @@
         const R = F.TS.EUNIVERSE !== s.wLO,
           v = `rgb(${l}, ${l}, ${l})`;
         return (0, i.jsx)("div", {
-          className: Le().Column,
+          className: De().Column,
           children: (0, i.jsxs)("div", {
             style: { position: "relative" },
             children: [
-              (0, i.jsx)(Ne, {
+              (0, i.jsx)(Ue, {
                 borderWidth: 0,
                 activeBitColor: [21, 23, 28],
                 inactiveBitColor: R ? [l, 0, l] : [l, l, l],
-                quality: Pe(B),
+                quality: He(B),
                 className: (0, y.A)(
-                  Le().LoginQR,
-                  "deck" == o && Le().QRLoginDeck,
-                  "vr" == o && Le().QRLoginVR,
-                  S && Le().Blur,
-                  R && Le().NonPublic,
+                  De().LoginQR,
+                  "deck" == o && De().QRLoginDeck,
+                  "vr" == o && De().QRLoginVR,
+                  S && De().Blur,
+                  R && De().NonPublic,
                 ),
                 children: B,
               }),
               S &&
                 (0, i.jsx)("div", {
-                  className: Le().Overlay,
+                  className: De().Overlay,
                   children: (0, i.jsx)("div", {
-                    className: Le().Box,
+                    className: De().Box,
                     style: { "--qr-bright-color": v },
                     children: M,
                   }),
@@ -7177,28 +7207,28 @@
           }),
         });
       }
-      function Pe(e) {
+      function He(e) {
         return e.length <= 90 ? xe.Q : void 0;
       }
-      function He(e) {
+      function Ve(e) {
         const { size: t } = e;
         return (0, i.jsx)("div", {
           className: (0, y.A)(
-            Le().Loading,
-            "small" == t && Le().Small,
-            ("medium" == t || !t) && Le().Medium,
-            "large" == t && Le().Large,
+            De().Loading,
+            "small" == t && De().Small,
+            ("medium" == t || !t) && De().Medium,
+            "large" == t && De().Large,
           ),
         });
       }
-      function Ve(e) {
-        return (0, i.jsx)(De.$n, {
+      function Qe(e) {
+        return (0, i.jsx)(Ge.$n, {
           onClick: e.reset,
-          className: Le().QRFailure,
-          children: (0, i.jsx)(Qe, {}),
+          className: De().QRFailure,
+          children: (0, i.jsx)(Ze, {}),
         });
       }
-      function Qe(e) {
+      function Ze(e) {
         return (0, i.jsxs)("svg", {
           version: "1.1",
           id: "Layer_2",
@@ -7225,7 +7255,7 @@
           ],
         });
       }
-      function Ze() {
+      function $e() {
         return (0, i.jsx)("svg", {
           version: "1.1",
           id: "base",
@@ -7247,19 +7277,19 @@
           }),
         });
       }
-      var $e = r(66418);
-      const Ke = (0, u.createContext)(!1),
-        Ye = () => (0, u.useContext)(Ke);
-      function Xe() {
+      var Ke = r(66418);
+      const Ye = (0, u.createContext)(!1),
+        Xe = () => (0, u.useContext)(Ye);
+      function Je() {
         return (0, i.jsx)("div", {
           className: Ae().Login,
-          children: (0, i.jsx)(At, {
+          children: (0, i.jsx)(kt, {
             reset: () => window.location.reload(),
             failure: x.eF.Generic,
           }),
         });
       }
-      function Je(e) {
+      function et(e) {
         return (function (e) {
           const t = (0, u.useRef)(e);
           t.current = e;
@@ -7312,7 +7342,7 @@
           );
         })(e.redirectUrl)
           ? null
-          : (0, i.jsx)(et, {
+          : (0, i.jsx)(tt, {
               ...e,
               creationRedirectUrl: e.redirectUrl,
               onSuccess: (t) => {
@@ -7325,35 +7355,35 @@
               embedded: "modal" === e.theme,
             });
       }
-      function et(e) {
+      function tt(e) {
         const { embedded: t, children: r, ...n } = e;
         return (0, i.jsx)(f.tH, {
-          children: (0, i.jsx)(Ke.Provider, {
+          children: (0, i.jsx)(Ye.Provider, {
             value: null != t && t,
             children: (0, i.jsxs)("div", {
               className: Ae().Login,
-              children: [(0, i.jsx)(ot, { ...n }), r],
+              children: [(0, i.jsx)(lt, { ...n }), r],
             }),
           }),
         });
       }
-      function tt(e) {
+      function rt(e) {
         if ((0, p.q)()) return null;
         const { variant: t } = e;
         return "function" == typeof t
-          ? (0, i.jsx)(Ht, {
+          ? (0, i.jsx)(Vt, {
               onClick: t,
               children: (0, T.we)("#Login_Help_SignIn"),
             })
-          : (0, i.jsx)(Ht, {
+          : (0, i.jsx)(Vt, {
               href: `${F.TS.HELP_BASE_URL}wizard/HelpWithLogin?redir=${encodeURIComponent(document.location.href)}`,
               children: (0, T.we)("#Login_Help_SignIn"),
             });
       }
-      function rt(e) {
+      function it(e) {
         const { variant: t, redirectUrl: r } = e;
         if ("function" == typeof t)
-          return (0, i.jsx)(Ht, {
+          return (0, i.jsx)(Vt, {
             inline: !0,
             onClick: t,
             children: (0, T.we)("#Login_CreateAccount"),
@@ -7363,13 +7393,13 @@
           switch (null != t ? t : "normal") {
             default:
             case "normal":
-              return (0, i.jsx)(Ht, {
+              return (0, i.jsx)(Vt, {
                 inline: !0,
                 href: `${F.TS.STORE_BASE_URL}join/${e}`,
                 children: (0, T.we)("#Login_CreateAccount"),
               });
             case "partner":
-              return (0, i.jsx)(Ht, {
+              return (0, i.jsx)(Vt, {
                 inline: !0,
                 href: `${F.TS.PARTNER_BASE_URL}${e}`,
                 children: (0, T.we)("#Login_CreateSteamworksAccount"),
@@ -7379,7 +7409,7 @@
           }
         }
       }
-      function it(e) {
+      function nt(e) {
         const { launcherType: t, variant: r, redirectUrl: n } = e;
         if (t === s.A2g) return null;
         if ("none" == r) return null;
@@ -7400,11 +7430,11 @@
               className: Ae().AccountCreationPrompt,
               children: (0, T.we)(o),
             }),
-            (0, i.jsx)(rt, { variant: r, redirectUrl: n }),
+            (0, i.jsx)(it, { variant: r, redirectUrl: n }),
           ],
         });
       }
-      async function nt() {
+      async function st() {
         var e, t, r, i, n, s;
         const [a, l, c, u] = await Promise.all([
           SteamClient.System.GetOSType(),
@@ -7448,13 +7478,13 @@
           gaming_device_type: l.eGamingDeviceType,
         };
       }
-      async function st() {
+      async function at() {
         return {
           device_friendly_name: window.navigator.userAgent,
           platform_type: o.SS.tS,
         };
       }
-      function at(e) {
+      function ot(e) {
         var t, r, i;
         const {
             onSuccess: n,
@@ -7575,14 +7605,14 @@
           },
         };
       }
-      function ot(e) {
+      function lt(e) {
         const {
             transport: t,
             onSuccess: r,
             platform: n,
             autoFocus: s,
             refreshInfo: o,
-            renderSuccess: l = () => (0, i.jsx)(rr, {}),
+            renderSuccess: l = () => (0, i.jsx)(ir, {}),
             lastResult: c,
             joinLinkVariant: m,
             defaultAccountName: d,
@@ -7591,7 +7621,7 @@
             onShowAgreement: f,
             creationRedirectUrl: _,
           } = e,
-          b = F.TS.IN_STEAMUI ? nt : st,
+          b = F.TS.IN_STEAMUI ? st : at,
           w = F.TS.IN_STEAMUI
             ? (e) => SteamClient.Auth.GetSteamGuardData(e)
             : null,
@@ -7603,7 +7633,7 @@
               (0, B.f3)(window.location, "need_password");
             return void 0 !== e && "false" !== e && "0" !== e;
           })(),
-          S = at({
+          S = ot({
             transport: t,
             platform: n,
             onSuccess: r,
@@ -7615,12 +7645,12 @@
             isProbablySharedPC: p,
             onShowAgreement: f,
           }),
-          R = Ye(),
+          R = Xe(),
           v = (0, u.useId)();
         if (null != c && c != a.R)
           return (0, i.jsx)("div", {
             className: Ae().Login,
-            children: (0, i.jsx)(At, {
+            children: (0, i.jsx)(kt, {
               reset: () => window.location.reload(),
               failure: x.eF.Generic,
               errorReference: c.toString(),
@@ -7632,7 +7662,7 @@
           const r = (0, i.jsxs)("div", {
             className: (0, y.A)(Ae().SideBySide, R && Ae().Embedded),
             children: [
-              (0, i.jsx)(ut, {
+              (0, i.jsx)(mt, {
                 strAccountName: S.strAccountName,
                 onAccountNameChange: S.onAccountNameChange,
                 strPassword: S.strPassword,
@@ -7646,7 +7676,7 @@
                 refreshInfo: e.refreshInfo,
               }),
               C &&
-                (0, i.jsx)(dt, {
+                (0, i.jsx)(gt, {
                   transport: t,
                   onQRStatusChange: S.onQRStatusChange,
                   onComplete: S.onComplete,
@@ -7658,18 +7688,18 @@
           if (R) {
             const t = F.TS.IN_STEAMUI,
               n = t ? F.TS.LAUNCHER_TYPE : void 0;
-            return (0, i.jsxs)(Qt, {
+            return (0, i.jsxs)(Zt, {
               className: (0, y.A)(Ae().EmbeddedRoot, t && Ae().InClient),
               children: [
                 !t && !1,
                 !e.refreshInfo &&
-                  (0, i.jsx)(Xt, {
+                  (0, i.jsx)(Jt, {
                     realm: F.TS.EREALM,
                     launcherType: n,
                     className: Ae().HeaderLogo,
                     onBack: e.onBack,
                   }),
-                (0, i.jsx)(lt, { refreshInfo: o }),
+                (0, i.jsx)(ct, { refreshInfo: o }),
                 r,
                 (0, i.jsxs)("div", {
                   className: (0, y.A)(
@@ -7677,8 +7707,8 @@
                     t && Ae().InClient,
                   ),
                   children: [
-                    (0, i.jsx)(tt, { variant: e.helpLinkVariant }),
-                    (0, i.jsx)(it, {
+                    (0, i.jsx)(rt, { variant: e.helpLinkVariant }),
+                    (0, i.jsx)(nt, {
                       launcherType: n,
                       variant: m,
                       redirectUrl: _,
@@ -7704,13 +7734,13 @@
                   ? (0, T.we)("#Login_RefreshSignIn")
                   : (0, T.we)("#Login_SignInTitle"),
               }),
-              (0, i.jsx)(lt, { refreshInfo: e.refreshInfo }),
+              (0, i.jsx)(ct, { refreshInfo: e.refreshInfo }),
             ],
           });
-          return (0, i.jsxs)(Yt, {
+          return (0, i.jsxs)(Xt, {
             title: a,
             titleId: v,
-            children: [M && (0, i.jsx)(ct, {}), r],
+            children: [M && (0, i.jsx)(ut, {}), r],
           });
         }
         const z = S.password.eStatus;
@@ -7718,13 +7748,13 @@
           case pe:
             return e.renderLoading
               ? (0, i.jsx)(i.Fragment, { children: e.renderLoading() })
-              : (0, i.jsx)(Ft, {});
+              : (0, i.jsx)(xt, {});
           case me:
           case he:
           case ce:
           case ge:
             const t = z === me || z === he;
-            return (0, i.jsx)(qt, {
+            return (0, i.jsx)(Wt, {
               type: t ? "mobile" : "email",
               onSubmitCode: S.password.addCode,
               status: z,
@@ -7736,16 +7766,16 @@
           case de:
           case ue:
             const r = z === de;
-            return (0, i.jsx)(Pt, {
+            return (0, i.jsx)(Ht, {
               type: r ? "mobile" : "email",
               accountName: S.password.strAccountName,
               onUseCodeOverride: S.password.useCodeOverride,
               onCodeHelp: e.onCodeHelp,
             });
           case _e:
-            return (0, i.jsx)(kt, { reset: S.password.reset });
+            return (0, i.jsx)(qt, { reset: S.password.reset });
           case Be:
-            return (0, i.jsx)(At, {
+            return (0, i.jsx)(kt, {
               reset: S.password.reset,
               failure: S.password.eFailureState,
               onRequestOffline: S.onTryOffline,
@@ -7753,11 +7783,11 @@
               extendedErrorMessage: S.password.strExtendedErrorMessage,
             });
           case fe:
-            return (0, i.jsx)(Yt, { compact: !0, children: l() });
+            return (0, i.jsx)(Xt, { compact: !0, children: l() });
           default:
             return (
               (0, h.ZI)(`Unknown Phase: ${z}`),
-              (0, i.jsx)(At, {
+              (0, i.jsx)(kt, {
                 reset: S.password.reset,
                 failure: x.eF.Generic,
                 onRequestOffline: S.onTryOffline,
@@ -7767,7 +7797,7 @@
             );
         }
       }
-      function lt(e) {
+      function ct(e) {
         var t, r;
         if (!e.refreshInfo) return null;
         let n;
@@ -7826,13 +7856,13 @@
           ],
         });
       }
-      function ct() {
+      function ut() {
         return (0, i.jsx)("div", {
           className: Ae().ConfirmCredntialsNag,
           children: (0, T.we)("#Login_ConfirmCredentials"),
         });
       }
-      function ut(e) {
+      function mt(e) {
         const {
             onSubmit: t,
             status: r,
@@ -7847,7 +7877,7 @@
             secureComputer: g = !0,
           } = e,
           [h, p] = (0, u.useState)(!1),
-          f = Ye(),
+          f = Xe(),
           B = (function () {
             const e = (0, u.useRef)(!0);
             return (
@@ -7863,14 +7893,14 @@
           _ = r === oe || r === pe,
           b = r === le && !h,
           y = b
-            ? (0, i.jsx)(jt, { children: (0, T.we)("#Login_CheckCredentials") })
-            : (0, i.jsx)(jt, { children: " " }),
+            ? (0, i.jsx)(Ft, { children: (0, T.we)("#Login_CheckCredentials") })
+            : (0, i.jsx)(Ft, { children: " " }),
           w = n && !a,
           M = n && !!a,
           S = !!e.refreshInfo,
           R = (0, u.useId)(),
           v = (0, u.useId)();
-        return (0, i.jsxs)(Vt, {
+        return (0, i.jsxs)(Qt, {
           onSubmit: () => {
             t().then(() => {
               B() && p(!1);
@@ -7878,9 +7908,9 @@
           },
           className: Ae().LoginForm,
           children: [
-            (0, i.jsx)(_t, {
+            (0, i.jsx)(bt, {
               tone: b ? "danger" : void 0,
-              label: (0, i.jsx)(bt, {
+              label: (0, i.jsx)(yt, {
                 highlight: !0,
                 inputId: R,
                 children: (0, T.we)("#Login_SignIn_WithAccountName"),
@@ -7893,9 +7923,9 @@
               disabled: S,
               id: R,
             }),
-            (0, i.jsx)(_t, {
+            (0, i.jsx)(bt, {
               tone: b ? "danger" : void 0,
-              label: (0, i.jsx)(bt, {
+              label: (0, i.jsx)(yt, {
                 inputId: v,
                 children: (0, T.we)("#Login_Password"),
               }),
@@ -7911,7 +7941,7 @@
               ? (0, i.jsx)(z.he, {
                   toolTipContent: "#Login_RememberMe_Tooltip",
                   direction: "bottom",
-                  children: (0, i.jsx)(Mt, {
+                  children: (0, i.jsx)(St, {
                     label: (0, T.we)("#Login_RememberMe_Short"),
                     value: m,
                     onChange: d,
@@ -7921,10 +7951,10 @@
                   className: Ae().InsecureComputer,
                   children: (0, T.we)("#Login_InsecureComputer"),
                 }),
-            (0, i.jsx)(Rt, { loading: _, refreshLogin: S }),
+            (0, i.jsx)(vt, { loading: _, refreshLogin: S }),
             y,
             !f &&
-              (0, i.jsx)(Ht, {
+              (0, i.jsx)(Vt, {
                 href: `${F.TS.HELP_BASE_URL}wizard/HelpWithLogin?redir=${encodeURIComponent(document.location.href)}`,
                 align: "center",
                 children: (0, T.we)("#Login_Help_SignIn"),
@@ -7932,10 +7962,10 @@
           ],
         });
       }
-      const mt = 700;
-      function dt(e) {
+      const dt = 700;
+      function gt(e) {
         const t = (0, g.R7)(),
-          r = () => t.ownerWindow.screen.width < mt,
+          r = () => t.ownerWindow.screen.width < dt,
           [n, s] = (0, u.useState)(r());
         return (
           (0, j.l6)(t.ownerWindow, "resize", () => {
@@ -7943,18 +7973,18 @@
           }),
           (0, i.jsx)("div", {
             className: Ae().QRSection,
-            children: n ? (0, i.jsx)(pt, { ...e }) : (0, i.jsx)(ht, { ...e }),
+            children: n ? (0, i.jsx)(ft, { ...e }) : (0, i.jsx)(pt, { ...e }),
           })
         );
       }
-      function gt(e) {
+      function ht(e) {
         const t =
           F.TS.STORE_BASE_URL +
           "join/?guest=1&purchaseType=gift&checkout=1&redir=" +
           encodeURIComponent(e.redirectURL);
         return (0, i.jsx)("div", {
           className: Ae().GuestLayout,
-          children: (0, i.jsx)(Yt, {
+          children: (0, i.jsx)(Xt, {
             compact: !0,
             children: (0, i.jsxs)("div", {
               className: Ae().GuestContainer,
@@ -7982,16 +8012,16 @@
           }),
         });
       }
-      function ht(e) {
-        return (0, i.jsx)(Bt, { ...e });
-      }
       function pt(e) {
-        const [t, r] = (0, u.useState)(!1);
-        return t
-          ? (0, i.jsx)(Bt, { ...e, bShowHideButton: !0, setShowQR: r })
-          : (0, i.jsx)(ft, { setShowQR: r });
+        return (0, i.jsx)(_t, { ...e });
       }
       function ft(e) {
+        const [t, r] = (0, u.useState)(!1);
+        return t
+          ? (0, i.jsx)(_t, { ...e, bShowHideButton: !0, setShowQR: r })
+          : (0, i.jsx)(Bt, { setShowQR: r });
+      }
+      function Bt(e) {
         return (0, i.jsxs)("div", {
           className: Ae().MessagingContainer,
           children: [
@@ -8019,7 +8049,7 @@
           ],
         });
       }
-      function Bt(e) {
+      function _t(e) {
         const {
           onQRStatusChange: t,
           transport: r,
@@ -8032,13 +8062,13 @@
         return (0, i.jsxs)("div", {
           className: Ae().QRCodeContainer,
           children: [
-            (0, i.jsx)(bt, {
+            (0, i.jsx)(yt, {
               highlight: !0,
               children: (0, T.we)("#Login_SignIn_OrWithQRCode"),
             }),
             (0, i.jsx)("div", {
               className: Ae().QR,
-              children: (0, i.jsx)(Ge, {
+              children: (0, i.jsx)(Pe, {
                 onStatusChange: t,
                 transport: r,
                 onComplete: n,
@@ -8057,7 +8087,7 @@
               className: Ae().UseMobileAppForQR,
               children: (0, T.oW)(
                 "#Login_UseMobileAppForQR_Inline",
-                (0, i.jsx)(Ht, {
+                (0, i.jsx)(Vt, {
                   href: `${F.TS.STORE_BASE_URL}mobile`,
                   align: "center",
                 }),
@@ -8066,21 +8096,21 @@
           ],
         });
       }
-      function _t(e) {
+      function bt(e) {
         const { label: t, error: r, tone: n, autoFocus: s, id: a, ...o } = e,
           l = null != n ? n : r ? "danger" : void 0;
         return (0, i.jsxs)("div", {
           className: Ae().TextField,
           children: [
             "string" == typeof t
-              ? (0, i.jsx)(bt, { inputId: a, children: t })
+              ? (0, i.jsx)(yt, { inputId: a, children: t })
               : t,
-            r && (0, i.jsx)(wt, { type: "error", children: r }),
-            (0, i.jsx)(yt, { autoFocus: s, tone: l, id: a, ...o }),
+            r && (0, i.jsx)(Mt, { type: "error", children: r }),
+            (0, i.jsx)(wt, { autoFocus: s, tone: l, id: a, ...o }),
           ],
         });
       }
-      function bt(e) {
+      function yt(e) {
         const { children: t, inputId: r, highlight: n } = e;
         return (0, i.jsx)("label", {
           className: (0, y.A)(Ae().FieldLabel, n && Ae().Highlight),
@@ -8088,7 +8118,7 @@
           children: t,
         });
       }
-      function yt(e) {
+      function wt(e) {
         const {
           value: t,
           onChange: r,
@@ -8109,14 +8139,14 @@
           id: c,
         });
       }
-      function wt(e) {
+      function Mt(e) {
         const { children: t, type: r } = e;
         return (0, i.jsx)("div", {
           className: (0, y.A)(Ae().FieldHint, "error" === r && Ae().Error),
           children: t,
         });
       }
-      function Mt(e) {
+      function St(e) {
         const { label: t, onChange: r, value: n } = e;
         let s = () => {
           r && r(!n);
@@ -8129,7 +8159,7 @@
             " " == e.key && (s(), e.preventDefault());
           },
           children: [
-            (0, i.jsx)(St, { labelledBy: a, value: n }),
+            (0, i.jsx)(Rt, { labelledBy: a, value: n }),
             (0, i.jsx)("label", {
               id: a,
               className: Ae().CheckboxFieldLabel,
@@ -8138,7 +8168,7 @@
           ],
         });
       }
-      function St(e) {
+      function Rt(e) {
         const { value: t, labelledBy: r } = e;
         return (0, i.jsx)("div", {
           tabIndex: 0,
@@ -8154,25 +8184,25 @@
             }),
         });
       }
-      function Rt(e) {
+      function vt(e) {
         const { refreshLogin: t, ...r } = e;
         return t &&
           "SteamClient" in globalThis &&
           "User" in SteamClient &&
           "StartShutdown" in SteamClient.User
-          ? (0, i.jsx)(Ct, {})
-          : (0, i.jsx)(vt, { ...r });
+          ? (0, i.jsx)(zt, {})
+          : (0, i.jsx)(Ct, { ...r });
       }
-      function vt(e) {
+      function Ct(e) {
         return (0, i.jsx)("div", {
           className: Ae().SignInButtonContainer,
-          children: (0, i.jsx)(zt, {
+          children: (0, i.jsx)(Tt, {
             ...e,
             children: (0, T.we)("#Login_SignIn"),
           }),
         });
       }
-      function Ct() {
+      function zt() {
         return (0, i.jsxs)("div", {
           className: Ae().RefreshButtonContainer,
           children: [
@@ -8189,10 +8219,10 @@
           ],
         });
       }
-      function zt(e) {
-        return (0, i.jsx)(Tt, { type: "submit", ...e });
-      }
       function Tt(e) {
+        return (0, i.jsx)(jt, { type: "submit", ...e });
+      }
+      function jt(e) {
         const { className: t, loading: r, disabled: n, children: s, ...a } = e,
           o = n || r;
         return (0, i.jsxs)("button", {
@@ -8204,19 +8234,19 @@
             r &&
               (0, i.jsx)("div", {
                 className: Ae().LoadingContainer,
-                children: (0, i.jsx)(xt, { size: "small" }),
+                children: (0, i.jsx)(It, { size: "small" }),
               }),
           ],
         });
       }
-      function jt(e) {
+      function Ft(e) {
         const t = e.children || " ";
         return (0, i.jsx)("div", { className: Ae().FormError, children: t });
       }
-      function Ft() {
-        return (0, i.jsx)(Yt, {
+      function xt() {
+        return (0, i.jsx)(Xt, {
           compact: !0,
-          children: (0, i.jsxs)(Qt, {
+          children: (0, i.jsxs)(Zt, {
             alignItems: "center",
             className: (0, y.A)(
               Ae().WaitingForTokenContainer,
@@ -8236,7 +8266,7 @@
           }),
         });
       }
-      function xt(e) {
+      function It(e) {
         const { size: t } = e;
         return (0, i.jsx)("div", {
           className: (0, y.A)(
@@ -8247,7 +8277,7 @@
           ),
         });
       }
-      function It(e) {
+      function At(e) {
         return (0, i.jsx)("div", {
           className: Ae().OfferOffline,
           children: (0, i.jsx)("button", {
@@ -8257,7 +8287,7 @@
           }),
         });
       }
-      function At(e) {
+      function kt(e) {
         const {
             reset: t,
             failure: r,
@@ -8313,10 +8343,10 @@
             return r;
           })(r, a),
           c = F.TS.IN_STEAMUI && r == x.eF.Network;
-        return (0, i.jsxs)(Yt, {
+        return (0, i.jsxs)(Xt, {
           compact: !0,
           children: [
-            (0, i.jsxs)(Qt, {
+            (0, i.jsxs)(Zt, {
               alignItems: "center",
               gap: 12,
               children: [
@@ -8333,15 +8363,15 @@
                     className: Ae().FailureDescription,
                     children: (0, T.we)("#Login_GoOffline_Description"),
                   }),
-                (0, i.jsxs)(Zt, {
+                (0, i.jsxs)($t, {
                   className: Ae().FailureButtons,
                   children: [
-                    (0, i.jsx)(Tt, {
+                    (0, i.jsx)(jt, {
                       className: Ae().TryAgainButton,
                       onClick: t,
                       children: (0, T.we)("#Button_Retry"),
                     }),
-                    c && n && (0, i.jsx)(It, { onRequestOffline: n }),
+                    c && n && (0, i.jsx)(At, { onRequestOffline: n }),
                   ],
                 }),
               ],
@@ -8354,11 +8384,11 @@
           ],
         });
       }
-      function kt(e) {
-        const { reset: t } = e;
-        return (0, i.jsx)(At, { reset: t, failure: x.eF.Generic });
-      }
       function qt(e) {
+        const { reset: t } = e;
+        return (0, i.jsx)(kt, { reset: t, failure: x.eF.Generic });
+      }
+      function Wt(e) {
         const {
             type: t,
             onSubmitCode: r,
@@ -8386,38 +8416,38 @@
         return (
           p
             ? "mobile" === t
-              ? ((v = (0, i.jsx)(Ot, {})), (R = "#Login_UseMobileCode"))
-              : ((v = (0, i.jsx)(Ot, {})), (R = "#Login_UseEmailCode"))
+              ? ((v = (0, i.jsx)(Et, {})), (R = "#Login_UseMobileCode"))
+              : ((v = (0, i.jsx)(Et, {})), (R = "#Login_UseEmailCode"))
             : ((v =
                 "mobile" === t
-                  ? (0, i.jsx)(Et, {})
-                  : (0, i.jsx)(Nt, { emailAddress: a })),
+                  ? (0, i.jsx)(Nt, {})
+                  : (0, i.jsx)(Ut, { emailAddress: a })),
               (R = "#Login_UseBackupCode")),
-          (0, i.jsx)(Yt, {
-            title: (0, i.jsx)(Xt, {}),
+          (0, i.jsx)(Xt, {
+            title: (0, i.jsx)(Jt, {}),
             compact: !0,
-            children: (0, i.jsx)(Vt, {
+            children: (0, i.jsx)(Qt, {
               onSubmit: () => {
                 w && M(y);
               },
-              children: (0, i.jsxs)(Qt, {
+              children: (0, i.jsxs)(Zt, {
                 alignItems: "center",
                 gap: 14,
                 children: [
-                  (0, i.jsx)(Ut, { type: t, accountName: s }),
+                  (0, i.jsx)(Lt, { type: t, accountName: s }),
                   (0, i.jsxs)("div", {
                     className: Ae().ConfirmationEntryContainer,
                     children: [
-                      (0, i.jsxs)(Qt, {
+                      (0, i.jsxs)(Zt, {
                         alignItems: "center",
                         gap: 2,
                         children: [
                           S &&
-                            (0, i.jsx)(jt, {
+                            (0, i.jsx)(Ft, {
                               children: (0, T.we)("#Login_IncorrectSteamGuard"),
                             }),
                           (0, i.jsx)(
-                            $t,
+                            Kt,
                             {
                               value: l,
                               onChange: (e) => {
@@ -8437,21 +8467,21 @@
                     ],
                   }),
                   b &&
-                    (0, i.jsx)(Ht, {
+                    (0, i.jsx)(Vt, {
                       onClick: () => {
                         f(!p), c([]), r(""), _(B + 1);
                       },
                       align: "center",
                       children: (0, T.we)(R),
                     }),
-                  (0, i.jsx)(Wt, { type: t, onCodeHelp: e.onCodeHelp }),
+                  (0, i.jsx)(Ot, { type: t, onCodeHelp: e.onCodeHelp }),
                 ],
               }),
             }),
           })
         );
       }
-      function Wt(e) {
+      function Ot(e) {
         if ((0, p.q)()) return null;
         let t, r;
         return (
@@ -8461,20 +8491,20 @@
             : ((t = `${F.TS.HELP_BASE_URL}wizard/HelpWithSteamGuardCode`),
               (r = (0, T.we)("#Login_Help_AccessEmail"))),
           e.onCodeHelp
-            ? (0, i.jsx)(Ht, {
+            ? (0, i.jsx)(Vt, {
                 onClick: () => e.onCodeHelp(t),
                 align: "center",
                 children: r,
               })
-            : (0, i.jsx)(Ht, { href: t, align: "center", children: r })
+            : (0, i.jsx)(Vt, { href: t, align: "center", children: r })
         );
       }
-      function Ot() {
-        return (0, i.jsx)(Zt, {
+      function Et() {
+        return (0, i.jsx)($t, {
           justifyContent: "space-evenly",
           alignItems: "center",
           className: Ae().EnterBackupCodeContainer,
-          children: (0, i.jsxs)(Qt, {
+          children: (0, i.jsxs)(Zt, {
             children: [
               (0, i.jsx)("div", {
                 className: Ae().EnterCodeFromMobile,
@@ -8488,8 +8518,8 @@
           }),
         });
       }
-      function Et() {
-        return (0, i.jsxs)(Zt, {
+      function Nt() {
+        return (0, i.jsxs)($t, {
           justifyContent: "space-evenly",
           alignItems: "center",
           className: Ae().EnterCodeFromMobileContainer,
@@ -8498,17 +8528,17 @@
               className: Ae().EnterCodeFromMobile,
               children: (0, T.we)("#Login_EnterMobileCode"),
             }),
-            (0, i.jsx)(Dt, { className: Ae().AwaitingMobileConfIcon }),
+            (0, i.jsx)(Gt, { className: Ae().AwaitingMobileConfIcon }),
           ],
         });
       }
-      function Nt(e) {
-        return (0, i.jsxs)(Zt, {
+      function Ut(e) {
+        return (0, i.jsxs)($t, {
           justifyContent: "space-evenly",
           alignItems: "center",
           className: Ae().EnterCodeFromEmailContainer,
           children: [
-            (0, i.jsx)(Kt, {
+            (0, i.jsx)(Yt, {
               align: "center",
               spacing: 6,
               children: (0, i.jsx)("div", {
@@ -8522,17 +8552,17 @@
                 ),
               }),
             }),
-            (0, i.jsx)(Gt, { className: Ae().AwaitingEmailConfIcon }),
+            (0, i.jsx)(Pt, { className: Ae().AwaitingEmailConfIcon }),
           ],
         });
       }
-      function Ut(e) {
+      function Lt(e) {
         const { accountName: t, type: r } = e,
           n =
             "mobile" === r
               ? (0, T.we)("#Login_MobileProtectingAccount")
               : (0, T.we)("#Login_EmailProtectingAccount"),
-          s = Ye();
+          s = Xe();
         return (0, i.jsxs)("div", {
           className: Ae().ProtectingAccount,
           children: [
@@ -8551,13 +8581,13 @@
           ],
         });
       }
-      function Lt() {
-        return (0, i.jsx)(Qt, {
+      function Dt() {
+        return (0, i.jsx)(Zt, {
           alignItems: "center",
           children: (0, i.jsxs)("div", {
             className: Ae().ConfirmationContainer,
             children: [
-              (0, i.jsx)("img", { src: (0, $e.YJ)(d) }),
+              (0, i.jsx)("img", { src: (0, Ke.YJ)(d) }),
               (0, i.jsx)("div", {
                 className: Ae().AwaitingMobileConfText,
                 children: (0, T.oW)("#Login_AwaitingMobileConfirmation"),
@@ -8566,7 +8596,7 @@
           }),
         });
       }
-      function Dt(e) {
+      function Gt(e) {
         return (0, i.jsxs)("svg", {
           viewBox: "0 0 33 49",
           fill: "currentColor",
@@ -8601,7 +8631,7 @@
           ],
         });
       }
-      function Gt(e) {
+      function Pt(e) {
         return (0, i.jsx)("svg", {
           viewBox: "0 0 58 56",
           fill: "none",
@@ -8612,14 +8642,14 @@
           }),
         });
       }
-      function Pt(e) {
+      function Ht(e) {
         const { type: t, accountName: r, onUseCodeOverride: n } = e,
-          s = Ye(),
-          a = (0, i.jsx)(Wt, { type: "mobile", onCodeHelp: e.onCodeHelp }),
+          s = Xe(),
+          a = (0, i.jsx)(Ot, { type: "mobile", onCodeHelp: e.onCodeHelp }),
           o = s
             ? (0, i.jsx)("div", {
                 style: { paddingBottom: "20px" },
-                children: (0, i.jsx)(Ht, {
+                children: (0, i.jsx)(Vt, {
                   align: "center",
                   onClick: n,
                   children: (0, T.we)("#Login_EnterCodeInstead"),
@@ -8627,20 +8657,20 @@
               })
             : (0, i.jsx)("div", {
                 className: Ae().EnterCodeInsteadLink,
-                children: (0, i.jsx)(Ht, {
+                children: (0, i.jsx)(Vt, {
                   align: "center",
                   onClick: n,
                   children: (0, T.we)("#Login_EnterCodeInstead"),
                 }),
               });
-        return (0, i.jsx)(Yt, {
-          title: (0, i.jsx)(Xt, {}),
+        return (0, i.jsx)(Xt, {
+          title: (0, i.jsx)(Jt, {}),
           compact: !0,
-          children: (0, i.jsxs)(Qt, {
+          children: (0, i.jsxs)(Zt, {
             gap: F.TS.IN_STEAMUI ? 24 : 40,
             children: [
-              (0, i.jsx)(Ut, { type: t, accountName: r }),
-              (0, i.jsx)(Lt, {}),
+              (0, i.jsx)(Lt, { type: t, accountName: r }),
+              (0, i.jsx)(Dt, {}),
               (0, i.jsxs)("div", {
                 className: Ae().LinkContainer,
                 children: [o, a],
@@ -8649,7 +8679,7 @@
           }),
         });
       }
-      function Ht(e) {
+      function Vt(e) {
         const { children: t, align: r, inline: n } = e,
           s = (0, y.A)(Ae().TextLink, "center" === r && Ae().TextAlignCenter);
         if ("href" in e) {
@@ -8667,7 +8697,7 @@
           });
         }
       }
-      function Vt(e) {
+      function Qt(e) {
         const { onSubmit: t, children: r, className: n } = e;
         return (0, i.jsx)("form", {
           onSubmit: (e) => (e.preventDefault(), t(), !1),
@@ -8675,7 +8705,7 @@
           children: r,
         });
       }
-      function Qt(e) {
+      function Zt(e) {
         const {
             alignItems: t,
             justifyContent: r,
@@ -8698,7 +8728,7 @@
           children: o,
         });
       }
-      function Zt(e) {
+      function $t(e) {
         const {
             children: t,
             justifyContent: r,
@@ -8713,7 +8743,7 @@
           };
         return (0, i.jsx)("div", { style: a, className: s, children: t });
       }
-      function $t(e) {
+      function Kt(e) {
         const { onChange: t, backupCode: r = !1, ...n } = e;
         return (0, i.jsx)(S, {
           length: we(r),
@@ -8726,10 +8756,10 @@
           allowCharacter: (e) => /\w/g.test(e),
         });
       }
-      function Kt(e) {
+      function Yt(e) {
         var t;
         const { children: r, spacing: n = 0, align: s } = e;
-        return (0, i.jsx)(Qt, {
+        return (0, i.jsx)(Zt, {
           alignItems: s,
           children:
             null ===
@@ -8745,11 +8775,11 @@
               : t.filter(Boolean),
         });
       }
-      function Yt(e) {
+      function Xt(e) {
         const { title: t, titleId: r, children: n, compact: s } = e,
-          a = Ye(),
+          a = Xe(),
           o = (0, u.useId)();
-        return (0, i.jsxs)(Qt, {
+        return (0, i.jsxs)(Zt, {
           gap: F.TS.IN_STEAMUI ? 0 : 32,
           className: (0, y.A)(
             Ae().StandardLayout,
@@ -8770,7 +8800,7 @@
           ],
         });
       }
-      function Xt(e) {
+      function Jt(e) {
         const {
           realm: t = F.TS.EREALM,
           launcherType: r = F.TS.IN_STEAMUI ? F.TS.LAUNCHER_TYPE : void 0,
@@ -8781,15 +8811,15 @@
           : (0, i.jsxs)("div", {
               className: Ae().LogoContainer,
               children: [
-                (0, i.jsx)(Jt, { onBack: e.onBack }),
+                (0, i.jsx)(er, { onBack: e.onBack }),
                 t !== n.TU.k_ESteamRealmChina
-                  ? (0, i.jsx)(er, { className: a })
-                  : (0, i.jsx)(tr, { className: a }),
+                  ? (0, i.jsx)(tr, { className: a })
+                  : (0, i.jsx)(rr, { className: a }),
                 " ",
               ],
             });
       }
-      function Jt(e) {
+      function er(e) {
         return e.onBack
           ? (0, i.jsx)("div", {
               className: Ae().BackArrowContainer,
@@ -8798,7 +8828,7 @@
             })
           : null;
       }
-      function er(e) {
+      function tr(e) {
         return (0, i.jsxs)("svg", {
           viewBox: "0 0 153 46",
           fill: "none",
@@ -8844,7 +8874,7 @@
           ],
         });
       }
-      function tr(e) {
+      function rr(e) {
         return (0, i.jsxs)("svg", {
           viewBox: "0 0 232.73 46.07",
           xmlns: "http://www.w3.org/2000/svg",
@@ -8914,8 +8944,8 @@
           ],
         });
       }
-      function rr() {
-        return (0, i.jsx)(Qt, {
+      function ir() {
+        return (0, i.jsx)(Zt, {
           alignItems: "center",
           justifyContent: "center",
           children: (0, i.jsx)(C.t, {}),

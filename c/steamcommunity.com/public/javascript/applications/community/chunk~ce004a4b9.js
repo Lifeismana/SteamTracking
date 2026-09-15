@@ -3813,7 +3813,8 @@
         _ = __webpack_require__("chunkid");
       const _ = new WeakSet();
       function _(_ = _._) {
-        if ("undefined" == typeof window) return;
+        if ("undefined" == typeof window || "undefined" == typeof document)
+          return;
         if (_.has(_)) return;
         const _ = (0, _._)("groupvanityinfo", "application_config");
         (void 0 === _ && "complete" != document.readyState) ||

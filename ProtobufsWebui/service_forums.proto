@@ -106,6 +106,7 @@ message CForums_SanctionReportedPost_Request {
 	optional int32 reason = 7 [(.description) = "enum"];
 	repeated .CForums_SanctionReportedPost_Request_Sanction sanctions = 8;
 	optional string note = 9;
+	optional bool skip_lock = 10;
 }
 
 message CForums_SanctionReportedPost_Request_Sanction {

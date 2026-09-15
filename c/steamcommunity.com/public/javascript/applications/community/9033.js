@@ -79,7 +79,7 @@
       function _(_) {
         const { settings: _, fnOnUpdate: _ } = _,
           [_, _] = (0, _.useState)(!!_),
-          [_, _, _, _] = (0, _._)(() => {
+          [_, _, _, _, _] = (0, _._)(() => {
             var _, _, _, _;
             return [
               null !==
@@ -98,6 +98,7 @@
               void 0 !== _
                 ? _
                 : "",
+              !!(null == _ ? void 0 : _.collection_time_allow_multiple_models),
               null !== (_ = null == _ ? void 0 : _.waiting_learn_more_url) &&
               void 0 !== _
                 ? _
@@ -144,7 +145,7 @@
                 (0, _.jsx)(_._, {
                   label: "Unix Epoch Time Shuffle Closes",
                   tooltip:
-                    "This will be displayed to the user, they can enter the shuffle upto this point. Purely for display purpose. Switching out of shuffle is control by server; if not provided we use release date of the hardware item instead",
+                    "Optional. Purely for display purpose: we show the time the server closes the list unless you announce a different one here. Switching out of shuffle is control by server",
                   rtime: _,
                   onValueChange: (_) => {
                     const _ = _
@@ -154,6 +155,25 @@
                       : {};
                     (_.collection_rtime_end = _), __webpack_require__(_);
                   },
+                }),
+                (0, _.jsxs)(_._, {
+                  checked: _,
+                  onChange: (_) => {
+                    const _ = _
+                      ? {
+                          ..._,
+                        }
+                      : {};
+                    (_.collection_time_allow_multiple_models = _),
+                      __webpack_require__(_);
+                  },
+                  children: [
+                    "Allow Signing Up For Multiple Models",
+                    (0, _.jsx)(_._, {
+                      tooltip:
+                        "Off (default): the customer signs up for one model and can switch models for free while the shuffle list is open.",
+                    }),
+                  ],
                 }),
                 (0, _.jsx)(_._, {
                   children: "Waitlist Settings",

@@ -817,6 +817,8 @@ message CMsgSteamLearnModelNodeBatchNormalization {
 }
 
 message CMsgSteamLearnModelNodeBert {
+	optional int32 bert_model = 1 [(.description) = "enum"];
+	optional uint32 sequence_length = 2;
 }
 
 message CMsgSteamLearnModelNodeBertFinetune {

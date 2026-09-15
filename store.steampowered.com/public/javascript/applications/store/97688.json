@@ -36,7 +36,7 @@
     "Reservation_Pool_NotSignedIn_Desc": "Accedi a Steam per unirti alla lista. Seleziona OK per andare alla pagina di accesso.",
     "Reservation_InPool_Message_Date": "Unisciti alla lista in qualsiasi momento prima del giorno %1$s. La lista verrà quindi chiusa e randomizzata, e riceverai un'e-mail con i tuoi risultati entro un giorno.",
     "Reservation_Pool_Closed": "Seleziona un modello qui sotto per unirti alla lista d'attesa.",
-    "Reservation_Pool_InProgress_Joined": "La lista è stata chiusa e ora è in fase di randomizzazione. Riceverai un'e-mail entro un giorno con i tuoi risultati.",
+    "Reservation_Pool_InProgress_Joined": "La lista è stata chiusa e ora è in fase di randomizzazione. Riceverai un'e-mail entro un giorno con l'esito.",
     "Reservation_Pool_InProgress_NotJoined": "La lista è stata chiusa e ora è in fase di randomizzazione. Se non hai effettuato la registrazione in tempo, puoi ancora metterti in coda alla lista d'attesa per un modello.",
     "Reservation_NoListJoined_OneModel": "Seleziona un modello qui sotto per registrarti. I clienti idonei possono registrarsi per un solo modello.",
     "Reservation_InPool_WithName": "Sei in lista per %1$s",

@@ -15,11 +15,15 @@
     },
     chunkid: (module) => {
       module.exports = {
+        AtendeeListButtonRow: "_1EtV67mAPZ0HqX9gDKHQk-",
+        BackToListIcon: "_32U0JhithwvTeeStn41PFK",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         Ctn: "_35KiKa7cq-3mn4lChNW67c",
         EventName: "e-36dCsEtoK52wg6Qx1iq",
         AtendeeSearchRow: "_1KbfPGq52sl-NB4ku90gN3",
-        AtendeeListButtonRow: "_2JLogmiR30ClrphBajhwYK",
-        BackToListIcon: "_3bl-GtsF8LkmzsRFkqjeCz",
         AttendeeRow: "_35gHo_M6tBBUOL8PWGEmA9",
         DisplayAllDaysCtn: "_3bvF759mojZQZv_TGXaM5Q",
         DisplayDaysCtn: "_1b8sKAzr4LILvJyl7fkRrL",
@@ -500,12 +504,22 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const [_] = (0, _._)("gid"),
           _ = (0, _._)(_),
-          _ = (0, _.sfN)(_._.LANGUAGE);
+          _ = (0, _.sfN)(_._.LANGUAGE),
+          _ = (0, _.useCallback)(
+            () =>
+              window.location.assign(
+                `${_._.STORE_BASE_URL}meetsteam/attendeelist?gid=${_}`,
+              ),
+            [_],
+          );
         return _
           ? (0, _.jsxs)("div", {
               className: _().Ctn,
@@ -522,6 +536,19 @@
                       children: "See Event Details",
                     }),
                   ],
+                }),
+                (0, _.jsx)("div", {
+                  className: _().AtendeeListButtonRow,
+                  children: (0, _.jsxs)(_._, {
+                    onClick: _,
+                    children: [
+                      (0, _.jsx)(_.uMb, {
+                        angle: 180,
+                        className: _().BackToListIcon,
+                      }),
+                      "Back to full list",
+                    ],
+                  }),
                 }),
                 (0, _.jsx)(_, {
                   eventModel: _,
@@ -845,7 +872,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = new Date(_.getTime());
@@ -967,6 +993,7 @@
                 onClick: _,
                 children: [
                   (0, _.jsx)(_.uMb, {
+                    angle: 180,
                     className: _().BackToListIcon,
                   }),
                   "Back to full list",

@@ -3165,7 +3165,7 @@
         Bt = a(92757),
         kt = a(16021),
         Lt = a(84811),
-        Rt = a(73130),
+        Rt = a(76700),
         Ot = a(32803),
         Pt = a(46107),
         Ft = a(26296),
@@ -4314,13 +4314,13 @@
           });
         }),
         ca = (0, ee.L)(ra);
-      var _a = a(89692),
+      var _a = a(51886),
         ua = a(32720),
-        pa = a(21771),
+        pa = a(47961),
         ha = a(87057),
         ma = a(65606),
         va = a(43261),
-        ga = a(53565);
+        ga = a(87414);
       let Sa = class extends n.Component {
         constructor() {
           super(...arguments), (this.m_clanSteamID = new v.b(f.UF.CLANSTEAMID));
@@ -8658,7 +8658,7 @@
         Li = a(97471),
         Ri = a(60155),
         Oi = a(1743),
-        Pi = a(13725),
+        Pi = a(71509),
         Fi = a(35453);
       function Ui(e) {
         const t = () => e.closeModal && e.closeModal(),
@@ -9291,7 +9291,11 @@
         us = a(54969);
       function ps(e) {
         const { editModel: t } = e,
-          a = [
+          a = t.GetEventModel(),
+          n = (0, Ot.Bw)(a, Ot.PH.k_eStoreSalePage, "forceAbsolute"),
+          s = (0, Ot.Bw)(a, Ot.PH.k_eStoreHardwarePreview, "forceAbsolute"),
+          o = (0, Q.Dd)(t.GetClanSteamID(), !0) && (0, Ot.LH)(a),
+          l = [
             {
               label: (0, w.we)("#Sale_Debug_LivePreview_Device_Desktop"),
               data: "desktop",
@@ -9314,37 +9318,42 @@
               data: "window",
               newWindow: !0,
             },
-          ],
-          n = (0, Ot.Bw)(
-            t.GetEventModel(),
-            Ot.PH.k_eStoreSalePage,
-            "forceAbsolute",
-          ),
-          s = (e) => {
-            var i;
-            const s = a.find((t) => t.data == e),
+          ];
+        o &&
+          l.push({
+            label: "(VO) Pre-launch hardware page",
+            tooltip: "Valve admins on dev and beta only.",
+            data: "hardwarepreview",
+            size: { width: 1500, height: 1100 },
+            url: s,
+          });
+        const r = (e) => {
+            var t, i;
+            const s = l.find((t) => t.data == e),
               o = !(
-                null !== (i = null == s ? void 0 : s.newWindow) &&
-                void 0 !== i &&
-                i
+                null !== (t = null == s ? void 0 : s.newWindow) &&
+                void 0 !== t &&
+                t
               );
             us.xr
               .Get()
               .ShowPreviewWindow(
-                n,
-                t.GetEventModel(),
+                null !== (i = null == s ? void 0 : s.url) && void 0 !== i
+                  ? i
+                  : n,
+                a,
                 o,
                 null == s ? void 0 : s.size,
                 null == s ? void 0 : s.queryParams,
               );
           },
-          o = (0, us.cv)();
+          d = (0, us.cv)();
         return (0, i.jsxs)("div", {
-          className: (0, X.A)(_s().LivePreview, o && _s().Connected),
+          className: (0, X.A)(_s().LivePreview, d && _s().Connected),
           children: [
             (0, i.jsx)(x.$n, {
               className: (0, X.A)(_s().Button),
-              onClick: () => s(void 0),
+              onClick: () => r(void 0),
               children: (0, w.we)("#Sale_Debug_LivePreview"),
             }),
             (0, i.jsx)(x.$n, {
@@ -9352,8 +9361,8 @@
               onClick: (e) =>
                 ((e) => {
                   const t = (0, i.jsx)(x.n4, {
-                    rgOptions: a,
-                    onValueSelected: (e, t) => s(t.data),
+                    rgOptions: l,
+                    onValueSelected: (e, t) => r(t.data),
                   });
                   (0, ki.lX)(t, e, { bOverlapHorizontal: !0 });
                 })(e),
@@ -18638,30 +18647,27 @@
       var dd = a(6503),
         cd = a(96059),
         _d = a(51006),
-        ud = a(34104);
-      async function pd() {
-        const e = new URLSearchParams(),
-          t = "undefined" != typeof self ? self.origin : "community";
-        t && e.set("origin", t);
-        const a = `${ho.TS.STORE_BASE_URL}saleaction/ajaxgetuserdeckcompatcounts?${e}`,
-          n = await fetch(a);
-        if (!n.ok) throw new Error(`${a} answered ${n.status}`);
-        const i = await n.json();
-        if ((null == i ? void 0 : i.success) != Ht.R || !i.counts)
-          throw new Error(
-            `${a} answered EResult ${null == i ? void 0 : i.success}`,
-          );
-        return i.counts;
-      }
+        ud = a(34104),
+        pd = a(69071);
       const hd = 3e5;
       function md() {
-        const { data: e } = (0, Rn.I)({
+        return {
           queryKey: ["DeckCompatCounts"],
-          queryFn: () => pd(),
+          queryFn: () =>
+            (async function () {
+              const e = await (0, pd.d)(
+                "ajaxgetuserdeckcompatcounts",
+                new URLSearchParams(),
+              );
+              if (!e.counts)
+                throw new Error(
+                  "ajaxgetuserdeckcompatcounts answered without counts",
+                );
+              return e.counts;
+            })(),
           staleTime: hd,
           retry: !1,
-        });
-        return e;
+        };
       }
       function vd(e, t) {
         switch (t) {
@@ -18674,8 +18680,8 @@
         }
       }
       var gd = a(59952),
-        Sd = a(85320),
-        xd = a(35400),
+        Sd = a(69854),
+        xd = a(72668),
         Ed = a(6878),
         jd = a(1090),
         bd = a(53807),
@@ -18994,7 +19000,7 @@
         _c = a(99487),
         uc = a(28714),
         pc = a(39199),
-        hc = a(36148),
+        hc = a(48256),
         mc = a(40353);
       function vc(e) {
         const { eventModel: t, nEventBadgeID: a } = e,
@@ -19054,7 +19060,7 @@
       function xc(e) {
         const { nDoorIndex: t, children: a } = e,
           s = (0, xd.OM)(t),
-          { fnOpenDoor: o } = (0, xd.OC)(),
+          o = (0, xd.gP)(),
           [l, r] = n.useState(!1),
           [d, c] = n.useState(!1),
           { elDialogElement: _, fnShowLogonDialog: u } = (0, Ld.l)();
@@ -19066,7 +19072,7 @@
                 l ||
                   (f.iA.logged_in
                     ? (r(!0),
-                      o(t, !0, null, !1)
+                      o({ iDoorIndex: t })
                         .then((e) => {
                           e || c(!0), r(!1);
                         })
@@ -19158,14 +19164,17 @@
             });
       }
       function fc(e) {
-        const t = md();
+        const t = (function () {
+          const { data: e } = (0, Rn.I)(md());
+          return e;
+        })();
         if (!t) return (0, i.jsx)(M.t, { size: "small" });
         const a = Number.parseInt((0, gd.j$)(e.args));
         return (0, i.jsx)("span", { children: (0, Kt.D)(Number(vd(t, a))) });
       }
       function yc(e) {
         var t, a, n, s;
-        const o = (0, Sd.j)(f.iA.accountid, "library");
+        const o = (0, Sd.jR)(f.iA.accountid, "library");
         if (!o) return (0, i.jsx)(M.t, { size: "small" });
         const l = Number.parseInt((0, gd.j$)(e.args));
         let r =
@@ -19284,7 +19293,7 @@
         }
         return (0, i.jsx)(i.Fragment, {});
       }
-      var Bc = a(86665),
+      var Bc = a(16869),
         kc = a(16180),
         Lc = (a(5977), a(97058)),
         Rc = a(39020);

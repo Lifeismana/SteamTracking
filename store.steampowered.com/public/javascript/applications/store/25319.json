@@ -1383,6 +1383,8 @@
     "Login_GoOffline_Button": "Bruk frakoblet modus",
     "Login_Error_Anonymous_Title": "Støttes ikke",
     "Login_Error_Anonymous_Description": "Det støttes ikke å logge inn anonymt i nettleseren eller i Steam-klienten, kun i steamcmd.",
+    "Login_Error_Action_Necessary_Title": "Account Action Necessary",
+    "Login_Error_Action_Necessary_Description": "Please log in on another device or scan the QR code.",
     "Login_Error_Default_Description": "Noe gikk galt under innloggingsforsøket. Prøv igjen senere.",
     "Login_Error_MoveAuthenticator_Description": "Det oppstod et problem med å flytte autentiseringsenheten din. Prøv igjen senere.",
     "Login_ConnectingToSteam": "Kobler til Steam",

@@ -6820,6 +6820,11 @@
                     _: _.readUint32,
                     _: _.writeUint32,
                   },
+                  frame_rate_limit: {
+                    _: 7,
+                    _: _.readUint32,
+                    _: _.writeUint32,
+                  },
                 },
               }),
             _.sm_m

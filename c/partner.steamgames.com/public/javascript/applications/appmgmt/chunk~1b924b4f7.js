@@ -908,6 +908,8 @@
           __webpack_require__._("chunkid").then(_._.bind(_, 57175, 19))),
         (_.russian = () =>
           __webpack_require__._("chunkid").then(_._.bind(_, 13757, 19))),
+        (_.sc_schinese = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 44967, 19))),
         (_.schinese = () =>
           __webpack_require__._("chunkid").then(_._.bind(_, 80216, 19))),
         (_.spanish = () =>

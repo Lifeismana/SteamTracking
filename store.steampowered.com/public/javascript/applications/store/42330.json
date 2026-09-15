@@ -1383,6 +1383,8 @@
     "Login_GoOffline_Button": "Offline módba lépés",
     "Login_Error_Anonymous_Title": "Nem támogatott",
     "Login_Error_Anonymous_Description": "A névtelen bejelentkezés nem támogatott a weben, illetve az asztali Steam kliensben, csak a steamcmd-ben.",
+    "Login_Error_Action_Necessary_Title": "Account Action Necessary",
+    "Login_Error_Action_Necessary_Description": "Please log in on another device or scan the QR code.",
     "Login_Error_Default_Description": "Valami hiba történt bejelentkeztetésed megkísérlése közben. Kérjük, próbáld újra később.",
     "Login_Error_MoveAuthenticator_Description": "Probléma adódott mobilhitelesítőd áthelyezésekor. Próbáld újra később.",
     "Login_ConnectingToSteam": "Csatlakozás a Steamhez",

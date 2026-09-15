@@ -1383,6 +1383,8 @@
     "Login_GoOffline_Button": "Çevrimdışı Moda Geç",
     "Login_Error_Anonymous_Title": "Desteklenmiyor",
     "Login_Error_Anonymous_Description": "Adsız giriş yapmak tarayıcıda veya masaüstü Steam istemcisinde desteklenmez, sadece steamcmd'de desteklenir.",
+    "Login_Error_Action_Necessary_Title": "Account Action Necessary",
+    "Login_Error_Action_Necessary_Description": "Please log in on another device or scan the QR code.",
     "Login_Error_Default_Description": "Girişiniz yapılmaya çalışılırken bir hata oluştu. Lütfen daha sonra tekrar deneyin.",
     "Login_Error_MoveAuthenticator_Description": "Kimlik doğrulayıcınızı taşırken bir hata meydana geldi. Lütfen daha sonra tekrar deneyin.",
     "Login_ConnectingToSteam": "Steam'e Bağlanılıyor",

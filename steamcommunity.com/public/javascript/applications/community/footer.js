@@ -55,8 +55,8 @@
       n.d(t, { A: () => _, p: () => j });
       var s = n(7850),
         r = n(90626),
-        o = n(73788),
-        i = n(8083),
+        i = n(73788),
+        o = n(8083),
         c = n(94621),
         l = n(8871),
         a = n(45699),
@@ -78,14 +78,14 @@
           !!n,
           "<Popover.Positioner> must be a child of <Popover.Root>.",
         );
-        const o = r.useRef(void 0);
+        const i = r.useRef(void 0);
         return (
-          (0, a.O7)(o, !!o.current, !1),
+          (0, a.O7)(i, !!i.current, !1),
           (0, s.jsx)(h.D6, {
             navID: "Popover",
             onCancelButton: () => n.floating.context.onOpenChange(!1),
             modal: !0,
-            navTreeRef: o,
+            navTreeRef: i,
             children: (0, s.jsx)("div", {
               style: { display: "contents" },
               children: (0, s.jsx)(C.q, { children: t }),
@@ -101,7 +101,7 @@
             !!n,
             "<Popover.Positioner> must be a child of <Popover.Root>.",
           ),
-          (0, s.jsx)(o.s3, {
+          (0, s.jsx)(i.s3, {
             context: n.floating.context,
             initialFocus: -1,
             returnFocus: !1,
@@ -126,43 +126,43 @@
           s.push(
             (0, c.Ej)({
               apply: (n) => {
-                const { rects: s, elements: r, availableHeight: o } = n,
-                  i = { boxSizing: "border-box", zIndex: "1" };
-                switch ((e.scroll && (i.overflowY = "auto"), e.width)) {
+                const { rects: s, elements: r, availableHeight: i } = n,
+                  o = { boxSizing: "border-box", zIndex: "1" };
+                switch ((e.scroll && (o.overflowY = "auto"), e.width)) {
                   case "target":
-                    i.width = `${s.reference.width}px`;
+                    o.width = `${s.reference.width}px`;
                     break;
                   case "content":
-                    i.width = `${s.floating.width}px`;
+                    o.width = `${s.floating.width}px`;
                     break;
                   case "dropdown": {
                     let e = s.reference.width;
                     s.floating.width > e && e < 200 && (e = s.floating.width),
-                      (i.width = `${e}px`);
+                      (o.width = `${e}px`);
                   }
                 }
                 "function" == typeof e.width &&
-                  (i.width = e.width({
+                  (o.width = e.width({
                     unContentWidth: s.floating.width,
                     unTargetWidth: s.reference.width,
                   }));
                 const c =
                   "number" == typeof t ? `${t}px` : `var(--spacing-${t})`;
                 "function" == typeof e.maxHeight
-                  ? (i.maxHeight = e.maxHeight({
-                      unAvailableHeight: o,
+                  ? (o.maxHeight = e.maxHeight({
+                      unAvailableHeight: i,
                       gutter: c,
                     }))
                   : "number" == typeof e.maxHeight
-                    ? (i.maxHeight = `min( calc( ${o}px - ${c} ), ${e.maxHeight}px )`)
-                    : (i.maxHeight =
+                    ? (o.maxHeight = `min( calc( ${i}px - ${c} ), ${e.maxHeight}px )`)
+                    : (o.maxHeight =
                         "number" == typeof t
-                          ? o - t + "px"
-                          : `calc( ${o}px - var(--spacing-${t}) )`),
-                  Object.assign(r.floating.style, i),
+                          ? i - t + "px"
+                          : `calc( ${i}px - var(--spacing-${t}) )`),
+                  Object.assign(r.floating.style, o),
                   r.floating.style.setProperty(
                     "--popover-max-height",
-                    i.maxHeight,
+                    o.maxHeight,
                   );
               },
             }),
@@ -182,15 +182,15 @@
               } = e;
               let c = t;
               0;
-              const l = (0, o.we)({
+              const l = (0, i.we)({
                   open: c,
                   onOpenChange: n,
                   middleware: j(e),
-                  whileElementsMounted: i.ll,
+                  whileElementsMounted: o.ll,
                   placement: s && "object" == typeof s ? s.initial : s,
                   strategy: "fixed",
                   platform: {
-                    ...i.iD,
+                    ...o.iD,
                     getOffsetParent: (e) => {
                       var t, n;
                       return null !==
@@ -206,15 +206,15 @@
                 }),
                 a = { enabled: !!r.click },
                 h = "function" == typeof r.click ? r.click(a) : a,
-                C = (0, o.kp)(l.context, h),
+                C = (0, i.kp)(l.context, h),
                 d = { enabled: !!r.focus },
                 p = "function" == typeof r.focus ? r.focus(d) : d,
-                u = (0, o.iQ)(l.context, p),
-                f = { handleClose: (0, o.iB)() },
+                u = (0, i.iQ)(l.context, p),
+                f = { handleClose: (0, i.iB)() },
                 x = "function" == typeof r.hover ? r.hover(f) : f,
-                g = (0, o.Mk)(l.context, { enabled: !!r.hover, ...x }),
-                m = (0, o.s9)(l.context),
-                { getFloatingProps: H, getReferenceProps: v } = (0, o.bv)([
+                g = (0, i.Mk)(l.context, { enabled: !!r.hover, ...x }),
+                m = (0, i.s9)(l.context),
+                { getFloatingProps: H, getReferenceProps: v } = (0, i.bv)([
                   C,
                   u,
                   g,
@@ -246,10 +246,10 @@
             : null;
         },
         Positioner: function (e) {
-          const { children: t, className: n, ref: i } = e,
+          const { children: t, className: n, ref: o } = e,
             c = (0, r.useContext)(g),
-            l = (0, o.SV)([
-              i,
+            l = (0, i.SV)([
+              o,
               null == c ? void 0 : c.floating.refs.setFloating,
               (e) => {
                 var t;
@@ -288,23 +288,23 @@
       n.d(t, { x: () => C });
       var s = n(7850),
         r = n(39479),
-        o = n(64238),
-        i = n.n(o),
+        i = n(64238),
+        o = n.n(i),
         c = n(75659),
         l = n(11526),
         a = n(75180),
         h = n(78327);
       function C(e) {
         var t;
-        const { as: n = "div", ref: o, focusable: c, navProps: C, ...p } = e,
+        const { as: n = "div", ref: i, focusable: c, navProps: C, ...p } = e,
           u = (0, h.Qn)(),
-          f = (0, l.mz)({ ...p, className: i()(a.Grid, e.className) }, d),
+          f = (0, l.mz)({ ...p, className: o()(a.Grid, e.className) }, d),
           x =
             null !== (t = null != c ? c : null == C ? void 0 : C.focusable) &&
             void 0 !== t
               ? t
               : !!p.onClick,
-          g = (0, s.jsx)(n, { ref: o, ...f });
+          g = (0, s.jsx)(n, { ref: i, ...f });
         return u
           ? (0, s.jsx)(r.J, {
               "flow-children": "grid",
@@ -413,8 +413,8 @@
       n.d(t, { D: () => p });
       var s = n(7850),
         r = n(39049),
-        o = n(75659),
-        i = n(20187),
+        i = n(75659),
+        o = n(20187),
         c = n(11526),
         l = n(90626);
       const a = l.createContext({ depth: 0 });
@@ -422,8 +422,8 @@
         C = n(64238),
         d = n.n(C);
       function p(e) {
-        const { level: t = "auto", className: n, color: o } = e,
-          i = (function (e, t) {
+        const { level: t = "auto", className: n, color: i } = e,
+          o = (function (e, t) {
             if ("auto" === e && 0 === t) return "h1";
             const n = "auto" === e ? t.toString() : e;
             if (!/^[1-6]$/.test(n))
@@ -438,13 +438,13 @@
                   "h1");
             return "h" + n;
           })(t, (0, l.useContext)(a).depth);
-        return (0, s.jsx)(i, {
+        return (0, s.jsx)(o, {
           ...(0, c.mz)({ ...e, className: d()((0, h.T)(), r.Heading, n) }, u),
         });
       }
       const u = [
-        ...i.U6,
-        ...o.L,
+        ...o.U6,
+        ...i.L,
         {
           prop: "size",
           responsive: !0,
@@ -457,8 +457,8 @@
       n.r(t), n.d(t, { GlobalFooter: () => J });
       var s = n(7850),
         r = n(83392),
-        o = n(59805),
-        i = n(28491),
+        i = n(59805),
+        o = n(28491),
         c = n(10430),
         l = n(20187),
         a = n(48474),
@@ -488,8 +488,8 @@
             children: t,
             hoverContent: n,
             nDelayShowMS: r,
-            bTooltipMode: o,
-            popoverProps: i,
+            bTooltipMode: i,
+            popoverProps: o,
           } = e,
           [c, l] = (0, _.useState)(!1);
         return (0, s.jsxs)(V.A.Root, {
@@ -498,10 +498,10 @@
           interactions: {
             hover: (e) => {
               let t = { ...e, delay: { open: r, close: 0 } };
-              return o && (t = { ...t, handleClose: null }), t;
+              return i && (t = { ...t, handleClose: null }), t;
             },
           },
-          ...i,
+          ...o,
           children: [
             (0, s.jsx)(V.A.Anchor, { children: t }),
             (0, s.jsx)(V.A.Positioner, {
@@ -601,7 +601,7 @@
         return (
           (null == t ? void 0 : t.startsWith(m.TS.STORE_BASE_URL)) &&
             (t = (0, H.bV)(r, t)),
-          (0, s.jsx)(i.Y, {
+          (0, s.jsx)(o.Y, {
             href: t,
             color: "dull-11",
             target: "_blank",
@@ -807,6 +807,7 @@
         (k.portuguese = () => n.e(8233).then(n.t.bind(n, 58233, 19))),
         (k.romanian = () => n.e(8727).then(n.t.bind(n, 48727, 19))),
         (k.russian = () => n.e(8973).then(n.t.bind(n, 98973, 19))),
+        (k.sc_schinese = () => n.e(1143).then(n.t.bind(n, 11143, 19))),
         (k.schinese = () => n.e(9720).then(n.t.bind(n, 49720, 19))),
         (k.spanish = () => n.e(1924).then(n.t.bind(n, 31924, 19))),
         (k.swedish = () => n.e(7925).then(n.t.bind(n, 17925, 19))),
@@ -945,7 +946,7 @@
         return (0, s.jsx)(r.s, { direction: "column", gap: "4", ...e });
       }
       function Y(e) {
-        return (0, s.jsx)(o.D, {
+        return (0, s.jsx)(i.D, {
           level: "3",
           color: "dull-12",
           weight: "heavy",
@@ -959,7 +960,7 @@
         return (
           (null == t ? void 0 : t.startsWith(m.TS.STORE_BASE_URL)) &&
             (t = (0, H.bV)(r, t)),
-          (0, s.jsx)(i.Y, {
+          (0, s.jsx)(o.Y, {
             href: t,
             color: "dull-11",
             target: "_blank",

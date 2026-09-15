@@ -69,8 +69,10 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       const _ = 39049601,
+        _ = 45479024,
         _ = 41316928,
         _ = 4,
         _ = 20,
@@ -144,6 +146,8 @@
           __webpack_require__._("chunkid").then(_._.bind(_, 81555, 19))),
         (_.russian = () =>
           __webpack_require__._("chunkid").then(_._.bind(_, 11809, 19))),
+        (_.sc_schinese = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 98347, 19))),
         (_.schinese = () =>
           __webpack_require__._("chunkid").then(_._.bind(_, 79004, 19))),
         (_.spanish = () =>

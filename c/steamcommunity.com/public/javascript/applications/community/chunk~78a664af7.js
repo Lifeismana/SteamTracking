@@ -34,6 +34,7 @@
         BottomButtons: "mdeaaJPcT9kJyTGau_Zr7",
         SanctionForm: "_33cLeNjYsBEX2T0-B9gc5G",
         OneColumn: "_2LTDR9F3yb80ONcUPcDxo1",
+        QuickReasons: "_1VdNqwseupCqI68H-YwwZO",
         MessageTextArea: "_3IWpl3mfH9OFkiqMIh7WtY",
         ErrorMessage: "_3_dhawEOV-fztaXEftlfxJ",
       };
@@ -567,139 +568,6 @@
           ],
         });
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const [_, _] = (0, _.useState)(null),
-          [_, _] = (0, _.useState)([]),
-          [_, _] = (0, _.useState)(!1),
-          [_, _] = (0, _.useState)(!1);
-        let _ = _.reasons;
-        for (const _ of _) _ = _[_].children;
-        const _ = null !== _ ? (0, _._)(_) : null,
-          _ = null !== _ ? (0, _._)(_) : null,
-          _ = () => {
-            null !== _
-              ? __webpack_require__(null)
-              : 0 === _.length
-                ? _.onSelect(null)
-                : _(_.slice(0, -1));
-          };
-        return (0, _.jsxs)("div", {
-          children: [
-            null === _ &&
-              (0, _.jsxs)(_.Fragment, {
-                children: [
-                  (0, _.jsx)("div", {
-                    className: _().BlockList,
-                    children: _.map((_, _) => {
-                      const _ = () => {
-                        if ((0, _._)(_)) {
-                          const _ = [..._];
-                          _.push(_), _(_);
-                        } else {
-                          if (!(0, _._)(_))
-                            throw new Error("This should be unreachable.");
-                          (0, _._)(_.value) || (0, _._)(_.value)
-                            ? __webpack_require__(_.value)
-                            : _.onSelect(_.value);
-                        }
-                      };
-                      return (0, _._)(_)
-                        ? (0, _.jsx)(
-                            _._,
-                            {
-                              className: _().BlockListItem,
-                              href: _.url,
-                              children: _._.Localize(_.strLocToken),
-                            },
-                            _.url,
-                          )
-                        : (0, _.jsxs)(
-                            _._,
-                            {
-                              onActivate: _,
-                              className: _().BlockListItem,
-                              children: [
-                                (0, _.jsx)("span", {
-                                  children: (0, _._)(_)
-                                    ? _._.Localize(_.strLocToken)
-                                    : (0, _._)(_.value),
-                                }),
-                                (0, _._)(_) &&
-                                  (0, _.jsx)("span", {
-                                    children: "▶",
-                                  }),
-                              ],
-                            },
-                            _,
-                          );
-                    }),
-                  }),
-                  (0, _.jsx)(_._, {
-                    onClick: _,
-                    children: "Back",
-                  }),
-                ],
-              }),
-            null !== _ &&
-              (0, _.jsxs)("div", {
-                className: _().BlockList,
-                children: [
-                  (0, _.jsx)("div", {
-                    className: _().BlockListItem,
-                    children: (0, _._)(_),
-                  }),
-                  null !== _ &&
-                    (0, _.jsxs)("label", {
-                      children: [
-                        (0, _.jsx)("input", {
-                          type: "checkbox",
-                          checked: _,
-                          onChange: (_) => _(_.target.checked),
-                        }),
-                        " Targeted at women",
-                      ],
-                    }),
-                  null !== _ &&
-                    (0, _.jsxs)("label", {
-                      children: [
-                        (0, _.jsx)("input", {
-                          type: "checkbox",
-                          checked: _,
-                          onChange: (_) => _(_.target.checked),
-                        }),
-                        " Deepfake",
-                      ],
-                    }),
-                  (0, _.jsxs)("div", {
-                    className: _().BottomButtons,
-                    children: [
-                      (0, _.jsx)(_._, {
-                        onClick: _,
-                        children: "Back",
-                      }),
-                      (0, _.jsx)(_._, {
-                        onClick: () => {
-                          let _ = _;
-                          null !== _ &&
-                            (_ && null !== (0, _._)(_) && (_ = (0, _._)(_)),
-                            _ && null !== (0, _._)(_) && (_ = (0, _._)(_)),
-                            _.onSelect(_));
-                        },
-                        children: "Continue",
-                      }),
-                    ],
-                  }),
-                ],
-              }),
-          ],
-        });
-      }
       var _,
         _,
         _ = __webpack_require__("chunkid"),
@@ -708,8 +576,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
@@ -1337,8 +1205,147 @@
             });
         })(_ || (_ = {}));
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       function _(_) {
+        const [_, _] = (0, _.useState)(null),
+          [_, _] = (0, _.useState)([]),
+          [_, _] = (0, _.useState)(!1),
+          [_, _] = (0, _.useState)(!1);
+        let _ = _.reasons;
+        for (const _ of _) _ = _[_].children;
+        const _ = null !== _ ? (0, _._)(_) : null,
+          _ = null !== _ ? (0, _._)(_) : null,
+          _ = () => {
+            null !== _
+              ? __webpack_require__(null)
+              : 0 === _.length
+                ? _.onSelect(null)
+                : _(_.slice(0, -1));
+          };
+        return (0, _.jsxs)("div", {
+          children: [
+            null === _ &&
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _().BlockList,
+                    children: _.map((_, _) => {
+                      const _ = () => {
+                        if ((0, _._)(_)) {
+                          const _ = [..._];
+                          _.push(_), _(_);
+                        } else {
+                          if (!(0, _._)(_))
+                            throw new Error("This should be unreachable.");
+                          (0, _._)(_.value) || (0, _._)(_.value)
+                            ? __webpack_require__(_.value)
+                            : _.onSelect(_.value);
+                        }
+                      };
+                      return (0, _._)(_)
+                        ? (0, _.jsx)(
+                            _._,
+                            {
+                              className: _().BlockListItem,
+                              href: _.url,
+                              children: _._.Localize(_.strLocToken),
+                            },
+                            _.url,
+                          )
+                        : (0, _.jsxs)(
+                            _._,
+                            {
+                              onActivate: _,
+                              className: _().BlockListItem,
+                              children: [
+                                (0, _.jsx)("span", {
+                                  children: (0, _._)(_)
+                                    ? _._.Localize(_.strLocToken)
+                                    : (0, _._)(_.value),
+                                }),
+                                (0, _._)(_) &&
+                                  (0, _.jsx)("span", {
+                                    children: "▶",
+                                  }),
+                              ],
+                            },
+                            _,
+                          );
+                    }),
+                  }),
+                  (0, _.jsx)(_._, {
+                    onClick: _,
+                    children: "Back",
+                  }),
+                ],
+              }),
+            null !== _ &&
+              (0, _.jsxs)("div", {
+                className: _().BlockList,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _().BlockListItem,
+                    children: (0, _._)(_),
+                  }),
+                  null !== _ &&
+                    (0, _.jsxs)("label", {
+                      children: [
+                        (0, _.jsx)("input", {
+                          type: "checkbox",
+                          checked: _,
+                          onChange: (_) => _(_.target.checked),
+                        }),
+                        " Targeted at women",
+                      ],
+                    }),
+                  null !== _ &&
+                    (0, _.jsxs)("label", {
+                      children: [
+                        (0, _.jsx)("input", {
+                          type: "checkbox",
+                          checked: _,
+                          onChange: (_) => _(_.target.checked),
+                        }),
+                        " Deepfake",
+                      ],
+                    }),
+                  (0, _.jsxs)("div", {
+                    className: _().BottomButtons,
+                    children: [
+                      (0, _.jsx)(_._, {
+                        onClick: _,
+                        children: "Back",
+                      }),
+                      (0, _.jsx)(_._, {
+                        onClick: () => {
+                          let _ = _;
+                          null !== _ &&
+                            (_ && null !== (0, _._)(_) && (_ = (0, _._)(_)),
+                            _ && null !== (0, _._)(_) && (_ = (0, _._)(_)),
+                            _.onSelect(_));
+                        },
+                        children: "Continue",
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+          ],
+        });
+      }
+      const _ = {
+        [_._]: [_._, _._, _._, _._, _._],
+        [_._]: [_._, _._, _._, _._, _._],
+      };
+      function _(_) {
+        var _;
         const [_, _] = (0, _.useState)(null),
           [_, _] = (0, _.useState)("main"),
           [_, _] = (0, _.useState)(!1),
@@ -1353,6 +1360,13 @@
           _ =
             void 0 !== _.rtContentCreatedAt &&
             (Date.now() / 1e3 - _.rtContentCreatedAt) / 2592e3,
+          _ =
+            null !==
+              (_ = _.subject.subject_type
+                ? _[_.subject.subject_type]
+                : void 0) && void 0 !== _
+              ? _
+              : [],
           _ = _ || _ || _ || _ || _ || _ || _,
           _ =
             ((_ = _.authorSteamID),
@@ -1438,7 +1452,7 @@
               (0, _.jsx)(_, {
                 reasons: _._,
                 onSelect: (_) => {
-                  __webpack_require__(_), _("main");
+                  _(_), _("main");
                 },
               }),
             "main" === _ &&
@@ -1471,6 +1485,22 @@
                               )
                             : (0, _._)(_),
                       }),
+                      _.length > 0 &&
+                        (0, _.jsx)("div", {
+                          className: _().QuickReasons,
+                          children: _.map((_) =>
+                            (0, _.jsx)(
+                              _._,
+                              {
+                                onClick: () => _(_ === _ ? null : _),
+                                size: "1",
+                                variant: _ === _ ? "basic" : "dark",
+                                children: (0, _._)(_),
+                              },
+                              _,
+                            ),
+                          ),
+                        }),
                       (0, _.jsxs)("label", {
                         className: _().OneColumn,
                         children: [
@@ -1739,44 +1769,44 @@
                                 );
                                 const _ = [];
                                 _ &&
-                                  __webpack_require__.push({
+                                  _.push({
                                     sanction: _._,
                                   }),
                                   _ &&
-                                    __webpack_require__.push({
+                                    _.push({
                                       sanction: _._,
                                     }),
                                   _ &&
-                                    __webpack_require__.push({
-                                      sanction: _._,
-                                      days: _,
-                                    }),
-                                  _ &&
-                                    __webpack_require__.push({
+                                    _.push({
                                       sanction: _._,
                                       days: _,
                                     }),
                                   _ &&
-                                    __webpack_require__.push({
+                                    _.push({
                                       sanction: _._,
                                       days: _,
                                     }),
                                   _ &&
-                                    __webpack_require__.push({
+                                    _.push({
+                                      sanction: _._,
+                                      days: _,
+                                    }),
+                                  _ &&
+                                    _.push({
                                       sanction: _._,
                                       days: -1,
                                     }),
                                   _ &&
-                                    __webpack_require__.push({
+                                    _.push({
                                       sanction: _._,
                                     }),
                                   _ === _._
-                                    ? __webpack_require__.push({
+                                    ? _.push({
                                         sanction: _._,
                                         escalate_to: _._,
                                       })
                                     : _ === _._ &&
-                                      __webpack_require__.push({
+                                      _.push({
                                         sanction: _._,
                                         escalate_to: _._,
                                       }),

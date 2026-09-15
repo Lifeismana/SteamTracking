@@ -69,17 +69,17 @@
     },
     5729: (e, n, t) => {
       "use strict";
-      t.d(n, { H: () => a, s: () => i });
+      t.d(n, { H: () => s, s: () => i });
       var o = t(90626),
         r = t(11158);
-      let s = 0;
-      function a(e, n) {
+      let a = 0;
+      function s(e, n) {
         (0, o.useEffect)(() => {
           if (!e && !n)
             return (
-              s++,
+              a++,
               () => {
-                0 == --s && (0, r.s)();
+                0 == --a && (0, r.s)();
               }
             );
         }, [e, n]);
@@ -90,7 +90,7 @@
           const n = window.setTimeout(() => t(!0), e);
           return () => window.clearTimeout(n);
         }, [e]),
-          a(n);
+          s(n);
       }
     },
     94057: (e, n, t) => {
@@ -98,8 +98,8 @@
       t.d(n, { w: () => p });
       var o = t(34629),
         r = t(41735),
-        s = t.n(r),
-        a = t(14947),
+        a = t.n(r),
+        s = t(14947),
         i = t(65946),
         l = t(90626),
         c = t(6419),
@@ -108,7 +108,7 @@
         m = t(78327);
       class _ {
         constructor() {
-          (0, a.Gn)(this);
+          (0, s.Gn)(this);
         }
         giveaway_id = void 0;
         seconds_until_drawing = void 0;
@@ -138,15 +138,15 @@
           );
         }
       }
-      (0, o.Cg)([a.sH], _.prototype, "giveaway_id", void 0),
-        (0, o.Cg)([a.sH], _.prototype, "seconds_until_drawing", void 0),
-        (0, o.Cg)([a.sH], _.prototype, "rtime_start", void 0),
-        (0, o.Cg)([a.sH], _.prototype, "rtime_end", void 0),
-        (0, o.Cg)([a.sH], _.prototype, "closed", void 0),
-        (0, o.Cg)([a.sH], _.prototype, "winner_count", void 0);
-      class w {
+      (0, o.Cg)([s.sH], _.prototype, "giveaway_id", void 0),
+        (0, o.Cg)([s.sH], _.prototype, "seconds_until_drawing", void 0),
+        (0, o.Cg)([s.sH], _.prototype, "rtime_start", void 0),
+        (0, o.Cg)([s.sH], _.prototype, "rtime_end", void 0),
+        (0, o.Cg)([s.sH], _.prototype, "closed", void 0),
+        (0, o.Cg)([s.sH], _.prototype, "winner_count", void 0);
+      class g {
         constructor() {
-          (0, a.Gn)(this);
+          (0, s.Gn)(this);
         }
         m_mapGiveawayIDToNextDrawInfo = new Map();
         m_mapGiveawayIDAndInstanceToNextDrawInfo = new Map();
@@ -183,8 +183,8 @@
             o = null,
             r = { origin: self.origin };
           return (
-            (o = await s().get(t, { params: r })),
-            (0, a.h5)(() => {
+            (o = await a().get(t, { params: r })),
+            (0, s.h5)(() => {
               if (
                 (this.m_mapGiveawayIDToNextDrawInfo.has(e) ||
                   this.m_mapGiveawayIDToNextDrawInfo.set(e, new _()),
@@ -212,8 +212,8 @@
         static s_Singleton;
         static Get() {
           return (
-            w.s_Singleton || ((w.s_Singleton = new w()), w.s_Singleton.Init()),
-            w.s_Singleton
+            g.s_Singleton || ((g.s_Singleton = new g()), g.s_Singleton.Init()),
+            g.s_Singleton
           );
         }
         Init() {
@@ -228,16 +228,16 @@
           }
         }
       }
-      (0, o.Cg)([a.sH], w.prototype, "m_mapGiveawayIDToNextDrawInfo", void 0),
-        (0, o.Cg)([a.XI], w.prototype, "CopyToGiveaway", null);
-      class g {
+      (0, o.Cg)([s.sH], g.prototype, "m_mapGiveawayIDToNextDrawInfo", void 0),
+        (0, o.Cg)([s.XI], g.prototype, "CopyToGiveaway", null);
+      class w {
         m_intervalID;
         m_intervalCountDownID;
         static s_GlobalInstance = 0;
         m_myInstanceNumber = 0;
         constructor() {
-          (this.m_myInstanceNumber = g.s_GlobalInstance),
-            (g.s_GlobalInstance += 1);
+          (this.m_myInstanceNumber = w.s_GlobalInstance),
+            (w.s_GlobalInstance += 1);
         }
         ClearRefreshInterval() {
           this.m_intervalID &&
@@ -261,22 +261,22 @@
         }
       }
       function v(e, n) {
-        const t = w.Get().GetInfoByInstance(e, n.m_myInstanceNumber);
+        const t = g.Get().GetInfoByInstance(e, n.m_myInstanceNumber);
         (t.seconds_until_drawing -= 1),
           0 == t.seconds_until_drawing && n.ClearCountDown();
       }
       function p(e) {
-        const [n] = (0, l.useState)(new g()),
+        const [n] = (0, l.useState)(new w()),
           t = (0, d.CH)();
         (0, l.useEffect)(
           () => (
-            w
+            g
               .Get()
               .ReloadGiveaway(e, n.m_myInstanceNumber)
               .then((o) => {
                 n.SetupRefreshDataInterval(o, () =>
                   (function (e, n) {
-                    const t = w
+                    const t = g
                       .Get()
                       .GetInfoByInstance(e, n.m_myInstanceNumber);
                     t &&
@@ -284,7 +284,7 @@
                       t.seconds_until_drawing <= 0 &&
                       !t.closed &&
                       (n.ClearCountDown(),
-                      w
+                      g
                         .Get()
                         .ReloadGiveaway(e, n.m_myInstanceNumber)
                         .then((t) => {
@@ -303,8 +303,8 @@
           ),
           [n, e, t],
         );
-        const o = w.Get().GetInfoByInstance(e, n.m_myInstanceNumber),
-          [r, s, a] = (0, i.q3)(() => [
+        const o = g.Get().GetInfoByInstance(e, n.m_myInstanceNumber),
+          [r, a, s] = (0, i.q3)(() => [
             o?.winner_count,
             o?.closed,
             o?.seconds_until_drawing,
@@ -313,53 +313,50 @@
           bLoadingGiveawayInfo:
             !o || null == o.giveaway_id || !o.BStarted() || void 0 === r,
           winner_count: r,
-          closed: s,
-          seconds_until_drawing: a,
+          closed: a,
+          seconds_until_drawing: s,
         };
       }
-      (0, o.Cg)([c.o], g.prototype, "ClearRefreshInterval", null),
-        (0, o.Cg)([c.o], g.prototype, "ClearCountDown", null),
-        (0, o.Cg)([c.o], g.prototype, "SetupRefreshDataInterval", null),
-        (0, o.Cg)([c.o], g.prototype, "SetupCountDown", null);
+      (0, o.Cg)([c.o], w.prototype, "ClearRefreshInterval", null),
+        (0, o.Cg)([c.o], w.prototype, "ClearCountDown", null),
+        (0, o.Cg)([c.o], w.prototype, "SetupRefreshDataInterval", null),
+        (0, o.Cg)([c.o], w.prototype, "SetupCountDown", null);
     },
     84173: (e, n, t) => {
       "use strict";
-      t.d(n, { d: () => Ve });
+      t.d(n, { d: () => Xe });
       var o = t(7850),
         r = t(19367),
-        s = t(90626),
-        a = t(72034),
+        a = t(90626),
+        s = t(72034),
         i = t(51006),
-        l = t(6379),
+        l = t(91254),
         c = t(61859),
         u = t(78327),
         d = t(34104),
         m = t(80902),
-        _ = t(37085),
-        w = t(66418);
-      async function g() {
-        const e = new URLSearchParams(),
-          n = "undefined" != typeof self ? self.origin : "store";
-        n && e.set("origin", n);
-        const t = `${w.TS.STORE_BASE_URL}saleaction/ajaxgetuserdeckcompatcounts?${e}`,
-          o = await fetch(t);
-        if (!o.ok) throw new Error(`${t} answered ${o.status}`);
-        const r = await o.json();
-        if (r?.success != _.R || !r.counts)
-          throw new Error(`${t} answered EResult ${r?.success}`);
-        return r.counts;
-      }
-      const v = 3e5;
-      function p() {
-        const { data: e } = (0, m.I)({
+        _ = t(69071);
+      const g = 3e5;
+      function w() {
+        return {
           queryKey: ["DeckCompatCounts"],
-          queryFn: () => g(),
-          staleTime: v,
+          queryFn: () =>
+            (async function () {
+              const e = await (0, _.d)(
+                "ajaxgetuserdeckcompatcounts",
+                new URLSearchParams(),
+              );
+              if (!e.counts)
+                throw new Error(
+                  "ajaxgetuserdeckcompatcounts answered without counts",
+                );
+              return e.counts;
+            })(),
+          staleTime: g,
           retry: !1,
-        });
-        return e;
+        };
       }
-      function h(e, n) {
+      function v(e, n) {
         switch (n) {
           case d.sd:
             return e?.playable;
@@ -369,68 +366,69 @@
             return e?.verified;
         }
       }
-      var I = t(59952),
-        f = t(85320),
-        y = t(72668),
-        D = t(6878),
-        x = t(22837),
-        b = t(1090),
-        C = t(53807),
-        j = t(62490),
-        k = t(84811),
-        N = t(22797),
-        B = t(70189);
-      const G = s.Fragment;
-      function S(e) {
+      var p = t(59952),
+        h = t(69854),
+        I = t(72668),
+        f = t(6878),
+        y = t(22837),
+        D = t(66418),
+        x = t(1090),
+        b = t(53807),
+        C = t(62490),
+        j = t(84811),
+        k = t(22797),
+        N = t(70189);
+      const G = a.Fragment;
+      function B(e) {
         const {
             reservationPackageID: n,
             depositPackageID: t,
             bIsPreview: r,
-            psuLessPackageID: a,
+            psuLessPackageID: s,
             strOutOfStockOverride: i,
             strDeliveryOverride: l,
             bDeliveryOverrideOnlyIfOutOfStock: u,
             section: d,
           } = e,
-          { data: m } = (0, b.DR)(n),
-          { data: _ } = (0, b.DR)(a),
-          g = (0, s.useMemo)(
+          { data: m } = (0, x.DR)(n),
+          { data: _ } = (0, x.DR)(s),
+          g = (0, a.useMemo)(
             () => [
               {
                 unique_id: "reservation_bbcode_" + n,
                 reservation_package: n,
                 deposit_package: t,
-                localized_reservation_desc: (0, j.$Y)([], x.bP9, null),
-                localized_out_of_stock_override: (0, j.$Y)(
+                localized_reservation_desc: (0, C.$Y)([], y.bP9, null),
+                localized_out_of_stock_override: (0, C.$Y)(
                   [i || null],
-                  x.bP9,
+                  y.bP9,
                   null,
                 ),
-                localized_delivery_override_desc: (0, j.$Y)(
+                localized_delivery_override_desc: (0, C.$Y)(
                   [l || null],
-                  x.bP9,
+                  y.bP9,
                   null,
                 ),
                 override_delivery_only_out_of_stock: Boolean(u),
-                psu_less_package: a,
+                psu_less_package: s,
               },
             ],
-            [n, t, i, l, u, a],
+            [n, t, i, l, u, s],
           );
-        if (!m || (a && !_))
-          return (0, o.jsx)(N.t, {
+        if (!m || (s && !_))
+          return (0, o.jsx)(k.t, {
             string: (0, c.we)("#Loading"),
             size: "small",
             position: "center",
           });
-        const v = !w.iA.logged_in || !m.account_restricted_from_purchasing,
-          p =
-            m.reservation_state == C.G.k_EPurchaseReservationState_Reserved
+        const w = !D.iA.logged_in || !m.account_restricted_from_purchasing,
+          v =
+            m.reservation_state == b.G.k_EPurchaseReservationState_Reserved
               ? m
               : void 0;
-        return (0, o.jsxs)(k.tH, {
+        return (0, o.jsxs)(j.tH, {
           children: [
-            (0, o.jsx)(s.Suspense, {
+            (0, o.jsx)(a.Suspense, {
               fallback: null,
               children: (0, o.jsx)(G, { bIsPreview: !!r, rgReservationDef: g }),
             }),
@@ -438,22 +436,22 @@
               (0, o.jsxs)("div", {
                 className: g[0].unique_id,
                 children: [
-                  (0, o.jsx)(B.bk, {
+                  (0, o.jsx)(N.bk, {
                     reservationDef: g[0],
                     hardwareDetail: m,
                     bPSULessModel: !1,
-                    reservedHardwareDetail: p,
+                    reservedHardwareDetail: v,
                   }),
-                  v &&
-                    (0, o.jsx)(B.pc, {
+                  w &&
+                    (0, o.jsx)(N.pc, {
                       section: d,
                       reservationDef: g[0],
                       hardwareDetail: m,
-                      reservedHardwareDetail: p,
+                      reservedHardwareDetail: v,
                     }),
                   _ &&
                     _?.allow_purchase_in_country &&
-                    (0, o.jsx)(B.bk, {
+                    (0, o.jsx)(N.bk, {
                       reservationDef: g[0],
                       hardwareDetail: _,
                       bPSULessModel: !0,
@@ -464,45 +462,45 @@
           ],
         });
       }
-      var A = t(28188),
-        F = t(60014),
-        T = t(73371),
-        E = t.n(T),
+      var S = t(28188),
+        A = t(60014),
+        F = t(73371),
+        T = t.n(F),
         O = t(52038),
-        L = t(20446),
+        E = t(20446),
         P = t(10026),
-        M = t.n(P),
-        R = t(76217),
+        L = t.n(P),
+        M = t(76217),
         H = t(68009),
-        W = t(1062),
-        $ = t(12155),
+        R = t(1062),
+        W = t(12155),
         q = t(4434),
         U = t(84547),
-        Q = t(32545),
-        z = t.n(Q);
-      function Z(e) {
+        $ = t(32545),
+        Q = t.n($);
+      function z(e) {
         const { appID: n, classOverride: t, styleOverride: r } = e,
-          [a, i] = (0, s.useState)(!1),
+          [s, i] = (0, a.useState)(!1),
           l = (0, q.m)("GameHoverFollowButton"),
           { elDialogElement: d, fnShowLogonDialog: m } = (0, U.l)(),
           _ = (0, H.Fh)(n),
-          { mutateAsync: w } = (0, W.L)(n, !_, void 0);
-        return (0, o.jsxs)(R.Z, {
-          className: (0, O.A)(z().FollowButton, t),
+          { mutateAsync: g } = (0, R.L)(n, !_, void 0);
+        return (0, o.jsxs)(M.Z, {
+          className: (0, O.A)(Q().FollowButton, t),
           onClick: async (e) => {
             e.preventDefault(),
               e.stopPropagation(),
               u.iA.logged_in
-                ? (i(!0), await w(), l.token.reason || i(!1))
+                ? (i(!0), await g(), l.token.reason || i(!1))
                 : m();
           },
           style: r,
           children: [
-            _ ? (0, o.jsx)($.pPV, {}) : (0, o.jsx)($.c9e, {}),
+            _ ? (0, o.jsx)(W.pPV, {}) : (0, o.jsx)(W.c9e, {}),
             (0, o.jsx)("div", {
               className: (0, O.A)(
-                z().FollowButtonText,
-                a && z().FollowLoadingText,
+                Q().FollowButtonText,
+                s && Q().FollowLoadingText,
                 "FollowGameButton",
               ),
               children: (0, c.we)(
@@ -513,70 +511,70 @@
           ],
         });
       }
-      function X(e) {
+      function Z(e) {
         const { appid: n, color: t, bgcolor: r } = e;
-        (0, F.n9)();
-        return (0, o.jsx)(Z, {
+        (0, A.n9)();
+        return (0, o.jsx)(z, {
           appID: n,
           classOverride: (0, O.A)(
-            E().FollowGameButtonNotTop,
-            M().BBCodeFollowButton,
+            T().FollowGameButtonNotTop,
+            L().BBCodeFollowButton,
           ),
           styleOverride: { color: t, backgroundColor: r },
         });
       }
-      function V(e) {
+      function X(e) {
         const n = Number(e.args.appid);
         if (!n) return null;
-        const t = (0, L.O)(e.args.color, "black"),
-          r = (0, L.O)(e.args.bgcolor, "white");
-        return (0, o.jsx)(X, { appid: n, color: t, bgcolor: r });
+        const t = (0, E.O)(e.args.color, "black"),
+          r = (0, E.O)(e.args.bgcolor, "white");
+        return (0, o.jsx)(Z, { appid: n, color: t, bgcolor: r });
       }
-      var Y = t(37744),
-        J = t(18657),
-        K = t.n(J),
-        ee = t(10705);
-      function ne(e) {
+      var V = t(37744),
+        Y = t(18657),
+        J = t.n(Y),
+        K = t(10705);
+      function ee(e) {
         const { clanAccountID: n, color: t, bgcolor: r } = e;
-        (0, Y.mx)();
-        const [a, i] = s.useState(!1);
+        (0, V.mx)();
+        const [s, i] = a.useState(!1);
         return (0, o.jsx)("div", {
-          className: (0, O.A)(K().BBCodeFollowButton, a && K().isHovered),
+          className: (0, O.A)(J().BBCodeFollowButton, s && J().isHovered),
           onMouseEnter: () => i(!0),
           onMouseLeave: () => i(!1),
-          children: (0, o.jsx)(ee.Q, {
+          children: (0, o.jsx)(K.Q, {
             nCreatorAccountID: n,
-            classOverride: E().FollowGameButtonNotTop,
+            classOverride: T().FollowGameButtonNotTop,
             styleOverride: { color: t, backgroundColor: r },
             followType: "group",
           }),
         });
       }
-      function te(e) {
+      function ne(e) {
         const { event: n } = e.context,
           t = Number(e.args.groupid) || n?.clanSteamID.GetAccountID();
         if (!t) return null;
-        const r = (0, L.O)(e.args.color, "black"),
-          s = (0, L.O)(e.args.bgcolor, "white");
-        return (0, o.jsx)(ne, { clanAccountID: t, color: r, bgcolor: s });
+        const r = (0, E.O)(e.args.color, "black"),
+          a = (0, E.O)(e.args.bgcolor, "white");
+        return (0, o.jsx)(ee, { clanAccountID: t, color: r, bgcolor: a });
       }
-      var oe = t(55963),
-        re = t(94636),
-        se = t(9202),
-        ae = t.n(se),
-        ie = t(14987);
-      function le(e) {
+      var te = t(55963),
+        oe = t(94636),
+        re = t(9202),
+        ae = t.n(re),
+        se = t(14987);
+      function ie(e) {
         const { appid: n, color: t, bgcolor: r } = e,
-          s = (0, F.n9)(),
-          a = (0, ie.$5)(n),
-          i = (0, oe.L3)(s);
+          a = (0, A.n9)(),
+          s = (0, se.$5)(n),
+          i = (0, te.L3)(a);
         return (0, o.jsx)("div", {
           className: ae().WishlistHoverCtn,
-          children: (0, o.jsx)(re.E, {
+          children: (0, o.jsx)(oe.E, {
             snr: i,
-            id: a,
+            id: s,
             classOverride: (0, O.A)(
-              E().WishlistButtonNotTop,
+              T().WishlistButtonNotTop,
               ae().BBCodeWishlistButton,
               "WishlistButton",
             ),
@@ -585,65 +583,65 @@
           }),
         });
       }
-      function ce(e) {
+      function le(e) {
         const n = Number(e.args.appid);
         if (!n) return null;
-        const t = (0, L.O)(e.args.color, "black"),
-          r = (0, L.O)(e.args.bgcolor, "white");
-        return (0, o.jsx)(le, { appid: n, color: t, bgcolor: r });
+        const t = (0, E.O)(e.args.color, "black"),
+          r = (0, E.O)(e.args.bgcolor, "white");
+        return (0, o.jsx)(ie, { appid: n, color: t, bgcolor: r });
       }
-      let ue = null;
-      var de = t(94057),
-        me = t(29868),
-        _e = t(6083);
-      function we(e) {
+      let ce = null;
+      var ue = t(94057),
+        de = t(29868),
+        me = t(6083);
+      function _e(e) {
         return e < 10 ? "0" + e : e;
       }
       function ge(e) {
         const { giveawayid: n } = e,
-          t = (0, de.w)(n),
+          t = (0, ue.w)(n),
           {
             bLoadingGiveawayInfo: r,
-            winner_count: a,
+            winner_count: s,
             closed: i,
             seconds_until_drawing: l,
           } = t;
         return r
           ? null
           : (0, o.jsxs)("div", {
-              className: me.countdownCtn,
+              className: de.countdownCtn,
               children: [
                 Boolean(i) &&
                   (0, o.jsx)("div", {
-                    className: me.Closed,
+                    className: de.Closed,
                     children:
-                      a > 0
-                        ? (0, c.we)("#Giveaway_Closed", (0, _e.D)(a))
+                      s > 0
+                        ? (0, c.we)("#Giveaway_Closed", (0, me.D)(s))
                         : (0, c.we)("#Giveaway_Closed_NoWinnerInfo"),
                   }),
                 Boolean(!i) &&
-                  (0, o.jsxs)(s.Fragment, {
+                  (0, o.jsxs)(a.Fragment, {
                     children: [
                       Boolean(l <= 0)
                         ? (0, o.jsxs)("div", {
-                            className: me.Throbber,
+                            className: de.Throbber,
                             children: [
-                              (0, o.jsx)(N.t, { size: "small" }),
+                              (0, o.jsx)(k.t, { size: "small" }),
                               (0, o.jsx)("div", {
                                 children: (0, c.we)("#Giveaway_RandomDraw"),
                               }),
                             ],
                           })
                         : (0, o.jsxs)("div", {
-                            className: me.CountDownCtn,
+                            className: de.CountDownCtn,
                             children: [
                               (0, o.jsx)("div", {
-                                className: me.CountDownTime,
+                                className: de.CountDownTime,
                                 children:
-                                  we(Math.floor(l / 60)) + ":" + we(l % 60),
+                                  _e(Math.floor(l / 60)) + ":" + _e(l % 60),
                               }),
                               (0, o.jsxs)("div", {
-                                className: me.CountDownText,
+                                className: de.CountDownText,
                                 children: [
                                   (0, c.we)("#Giveaway_CountDown2"),
                                   " ",
@@ -652,16 +650,16 @@
                               }),
                             ],
                           }),
-                      Boolean(a > 0) &&
+                      Boolean(s > 0) &&
                         (0, o.jsxs)("div", {
-                          className: me.WinnerInfo,
+                          className: de.WinnerInfo,
                           children: [
                             (0, o.jsx)("div", {
-                              className: me.WinnerCount,
-                              children: (0, _e.D)(a),
+                              className: de.WinnerCount,
+                              children: (0, me.D)(s),
                             }),
                             (0, o.jsx)("div", {
-                              className: me.WinnerText,
+                              className: de.WinnerText,
                               children: (0, c.we)("#Giveaway_Congratulation"),
                             }),
                           ],
@@ -671,46 +669,46 @@
               ],
             });
       }
-      var ve = t(40895);
-      function pe(e) {
+      var we = t(40895);
+      function ve(e) {
         const n = Number(e.args.packageid);
         return n
-          ? (0, o.jsx)(ve.eF, {
+          ? (0, o.jsx)(we.eF, {
               packageID: n,
-              display_style: (0, ve._w)(e.args.display),
+              display_style: (0, we._w)(e.args.display),
             })
           : null;
       }
-      function he(e) {
+      function pe(e) {
         const n = Number(e.args.packageid),
           t = Number(e.args.compareid);
         return n && t
-          ? (0, o.jsx)(ve.hJ, { packageID: n, compareID: t })
+          ? (0, o.jsx)(we.hJ, { packageID: n, compareID: t })
           : null;
       }
-      var Ie = t(97670),
-        fe = t(39733),
-        ye = t(56283),
-        De = t(92757),
-        xe = t(39256),
-        be = t(99487),
-        Ce = t(7193),
-        je = t(39199),
-        ke = t(60860),
-        Ne = t(68877),
-        Be = t(40353);
+      var he = t(97670),
+        Ie = t(39733),
+        fe = t(56283),
+        ye = t(92757),
+        De = t(39256),
+        xe = t(99487),
+        be = t(7193),
+        Ce = t(39199),
+        je = t(60860),
+        ke = t(28800),
+        Ne = t(40353);
       function Ge(e) {
         const { eventModel: n, nEventBadgeID: t } = e,
-          r = (0, fe.fy)(t);
+          r = (0, Ie.fy)(t);
         if (r?.level > 0) {
           let e = r.level;
           if (n?.BHasSaleEnabled()) {
             const r = n.GetSaleSectionsByType("badge_progress");
             if (1 == r?.length) {
-              const s = r[0].badge_progress;
-              if (s?.event_badgeid == t && s?.granted_by_discovery_queue) {
-                const t = s.levels[s.levels.length - 1].level;
-                return (0, o.jsx)(Se, {
+              const a = r[0].badge_progress;
+              if (a?.event_badgeid == t && a?.granted_by_discovery_queue) {
+                const t = a.levels[a.levels.length - 1].level;
+                return (0, o.jsx)(Be, {
                   eventModel: n,
                   nBadgeLevel: e,
                   nMaxLevel: t,
@@ -720,60 +718,60 @@
           }
           return (0, o.jsx)("span", {
             className: "DisplayBadgeProgress",
-            children: (0, _e.D)(e),
+            children: (0, me.D)(e),
           });
         }
         return null;
       }
-      function Se(e) {
+      function Be(e) {
         const { eventModel: n, nBadgeLevel: t, nMaxLevel: r } = e,
-          a = s.useMemo(() => {
+          s = a.useMemo(() => {
             const e = n
               .GetSaleSections()
               .filter((e) => "discoveryqueue" == e.section_type);
             return e?.length > 0 ? e[0] : null;
           }, [n]),
-          { storePageFilter: i, eStoreDiscoveryQueueType: l } = s.useMemo(
-            () => (0, Ce.lx)(n, a),
-            [n, a],
+          { storePageFilter: i, eStoreDiscoveryQueueType: l } = a.useMemo(
+            () => (0, be.lx)(n, s),
+            [n, s],
           ),
-          c = (0, je.Uf)(l, i),
+          c = (0, Ce.Uf)(l, i),
           u = Math.min(t + c, r);
         return (0, o.jsx)("span", {
           className: "DisplayBadgeProgress",
-          children: (0, _e.D)(u),
+          children: (0, me.D)(u),
         });
       }
-      function Ae(e) {
+      function Se(e) {
         const { event: n } = e.context,
-          t = Number.parseInt((0, I.j$)(e.args, "eventid"));
+          t = Number.parseInt((0, p.j$)(e.args, "eventid"));
         return u.iA.logged_in && t
           ? (0, o.jsx)(Ge, { nEventBadgeID: t, eventModel: n })
           : null;
       }
-      function Fe(e) {
+      function Ae(e) {
         const { nDoorIndex: n, children: t } = e,
-          r = (0, y.OM)(n),
-          a = (0, y.gP)(),
-          [i, l] = s.useState(!1),
-          [d, m] = s.useState(!1),
-          { elDialogElement: _, fnShowLogonDialog: w } = (0, U.l)();
+          r = (0, I.OM)(n),
+          s = (0, I.gP)(),
+          [i, l] = a.useState(!1),
+          [d, m] = a.useState(!1),
+          { elDialogElement: _, fnShowLogonDialog: g } = (0, U.l)();
         return (0, o.jsxs)(o.Fragment, {
           children: [
-            (0, o.jsx)(ye.$n, {
+            (0, o.jsx)(fe.$n, {
               disabled: r,
               onClick: (e) => {
                 i ||
                   (u.iA.logged_in
                     ? (l(!0),
-                      a({ iDoorIndex: n })
+                      s({ iDoorIndex: n })
                         .then((e) => {
                           e || m(!0), l(!1);
                         })
                         .catch(() => {
                           m(!0), l(!1);
                         }))
-                    : w());
+                    : g());
               },
               children: Boolean(d)
                 ? (0, o.jsx)("div", {
@@ -781,8 +779,8 @@
                   })
                 : (0, o.jsxs)(o.Fragment, {
                     children: [
-                      Boolean(i) && (0, o.jsx)(N.t, { size: "small" }),
-                      Boolean(r) && (0, o.jsx)($.Jlk, {}),
+                      Boolean(i) && (0, o.jsx)(k.t, { size: "small" }),
+                      Boolean(r) && (0, o.jsx)(W.Jlk, {}),
                       t,
                     ],
                   }),
@@ -791,76 +789,79 @@
           ],
         });
       }
-      function Te(e) {
-        const n = Number.parseInt((0, I.j$)(e.args)) || 0;
+      function Fe(e) {
+        const n = Number.parseInt((0, p.j$)(e.args)) || 0;
         return n >= 0 && n < 32
-          ? (0, o.jsx)(Fe, { nDoorIndex: n, children: e.children })
+          ? (0, o.jsx)(Ae, { nDoorIndex: n, children: e.children })
           : null;
       }
-      const Ee = (0, De.y)(Ne.H);
+      const Te = (0, ye.y)(ke.H);
       function Oe(e) {
-        const n = Number.parseInt((0, I.j$)(e.args)),
+        const n = Number.parseInt((0, p.j$)(e.args)),
           { event: t, showErrorInfo: r } = e.context;
         if (n) {
-          const s = t?.jsondata?.sale_sections?.findIndex(
+          const a = t?.jsondata?.sale_sections?.findIndex(
             (e) => e.unique_id == n,
           );
-          if (s >= 0) {
+          if (a >= 0) {
             const n = t.GetDayIndexFromEventStart();
-            return (0, o.jsx)(ke.Cs, {
-              location: r ? ke.HY : ke.bs,
-              children: (0, o.jsx)(Ee, {
+            return (0, o.jsx)(je.Cs, {
+              location: r ? je.HY : je.bs,
+              children: (0, o.jsx)(Te, {
                 event: t,
-                section: t.jsondata.sale_sections[s],
-                activeTab: new be.y(null, n),
+                section: t.jsondata.sale_sections[a],
+                activeTab: new xe.y(null, n),
                 language: e.language,
                 nSaleDayIndex: n,
                 promotionName: "",
                 appVisibilityTracker: null,
                 ePreviewMode: r
-                  ? Be.S.EPreviewMode_Enabled
-                  : Be.S.EPreviewMode_Disabled,
+                  ? Ne.S.EPreviewMode_Enabled
+                  : Ne.S.EPreviewMode_Disabled,
               }),
             });
           }
           if (r)
             return (0, o.jsxs)("div", {
-              className: xe.ErrorDiv,
+              className: De.ErrorDiv,
               children: ["Error could not find sale section ", n],
             });
         }
         return null;
       }
-      let Le = null;
+      let Ee = null;
       function Pe(e) {
         const { event: n } = e.context,
-          t = Number.parseInt((0, I.j$)(e.args, "appid")),
-          r = Number.parseInt((0, I.j$)(e.args, "itemdefid")),
-          s = Number.parseInt((0, I.j$)(e.args, "maxquantity")),
-          a = (0, I.j$)(e.args, "calltoaction");
-        return (0, Ie.gS)(t, r, !1) && n
-          ? (0, o.jsx)(A.f, {
+          t = Number.parseInt((0, p.j$)(e.args, "appid")),
+          r = Number.parseInt((0, p.j$)(e.args, "itemdefid")),
+          a = Number.parseInt((0, p.j$)(e.args, "maxquantity")),
+          s = (0, p.j$)(e.args, "calltoaction");
+        return (0, he.gS)(t, r, !1) && n
+          ? (0, o.jsx)(S.f, {
               language: e.language,
               clanAccountID: n.clanSteamID.GetAccountID(),
-              itemDefSetting: { nAppID: t, nItemDefID: r, max_quantity: s },
-              strCallToAction: a,
+              itemDefSetting: { nAppID: t, nItemDefID: r, max_quantity: a },
+              strCallToAction: s,
             })
-          : (0, o.jsx)(N.t, {
+          : (0, o.jsx)(k.t, {
               size: "small",
               position: "center",
               string: (0, c.we)("#Loading"),
             });
       }
-      function Me(e) {
-        const n = p();
-        if (!n) return (0, o.jsx)(N.t, { size: "small" });
-        const t = Number.parseInt((0, I.j$)(e.args));
-        return (0, o.jsx)("span", { children: (0, _e.D)(Number(h(n, t))) });
+      function Le(e) {
+        const n = (function () {
+          const { data: e } = (0, m.I)(w());
+          return e;
+        })();
+        if (!n) return (0, o.jsx)(k.t, { size: "small" });
+        const t = Number.parseInt((0, p.j$)(e.args));
+        return (0, o.jsx)("span", { children: (0, me.D)(Number(v(n, t))) });
       }
-      function Re(e) {
-        const n = (0, f.jR)(u.iA.accountid, "library");
-        if (!n) return (0, o.jsx)(N.t, { size: "small" });
-        const t = Number.parseInt((0, I.j$)(e.args));
+      function Me(e) {
+        const n = (0, h.jR)(u.iA.accountid, "library");
+        if (!n) return (0, o.jsx)(k.t, { size: "small" });
+        const t = Number.parseInt((0, p.j$)(e.args));
         let r = n.verifiedList?.length || 0;
         switch (t) {
           case d.sd:
@@ -872,43 +873,43 @@
           case d.YX:
             r = n.unknownList?.length || 0;
         }
-        return (0, o.jsx)("span", { children: (0, _e.D)(Number(r)) });
+        return (0, o.jsx)("span", { children: (0, me.D)(Number(r)) });
       }
       function He(e) {
-        const n = Number.parseInt((0, I.j$)(e.args)),
+        const n = Number.parseInt((0, p.j$)(e.args)),
           t =
             "hide" in e.args &&
-            Boolean(Number.parseInt((0, I.j$)(e.args, "hide")));
+            Boolean(Number.parseInt((0, p.j$)(e.args, "hide")));
         return n >= 0
-          ? (0, o.jsx)(We, { nDoorIndex: n, bHide: t, children: e.children })
+          ? (0, o.jsx)(Re, { nDoorIndex: n, bHide: t, children: e.children })
           : null;
       }
-      function We(e) {
+      function Re(e) {
         const { nDoorIndex: n, bHide: t, children: r } = e,
-          s = (0, y.OM)(n);
-        return null == s
+          a = (0, I.OM)(n);
+        return null == a
           ? null
-          : (s && !t) || (!s && t)
+          : (a && !t) || (!a && t)
             ? (0, o.jsx)(o.Fragment, { children: e.children })
             : null;
       }
-      function $e(e) {
+      function We(e) {
         if (u.iA.logged_in) {
-          const n = Number.parseInt((0, I.j$)(e.args)),
-            t = Number.parseInt((0, I.j$)(e.args, "mod"));
+          const n = Number.parseInt((0, p.j$)(e.args)),
+            t = Number.parseInt((0, p.j$)(e.args, "mod"));
           if (t > 0 && n < t && u.iA.accountid % t == n) return e.children;
         }
         return null;
       }
       function qe(e) {
-        const n = (0, I.j$)(e.args);
+        const n = (0, p.j$)(e.args);
         return n?.trim().length > 0
           ? (0, o.jsx)("div", { className: n.trim(), children: e.children })
           : (0, o.jsx)(o.Fragment, { children: e.children });
       }
       function Ue(e) {
         return (0, o.jsx)("span", {
-          className: D.LocalizeBlock,
+          className: f.LocalizeBlock,
           children: (0, c.oW)(
             e.children,
             (0, o.jsx)("b", {}),
@@ -918,16 +919,16 @@
           ),
         });
       }
-      function Qe(e) {
-        let n = (0, I.j$)(e.args);
+      function $e(e) {
+        let n = (0, p.j$)(e.args);
         return n
           ? (0, o.jsx)(ge, { giveawayid: n })
-          : (0, o.jsx)(s.Fragment, {});
+          : (0, o.jsx)(a.Fragment, {});
       }
-      function ze(e) {
+      function Qe(e) {
         const { showErrorInfo: n, event: t } = e.context,
-          r = Number.parseInt((0, I.j$)(e.args)),
-          a = s.useMemo(() => {
+          r = Number.parseInt((0, p.j$)(e.args)),
+          s = a.useMemo(() => {
             if (t)
               return t.jsondata.sale_sections?.find(
                 (e) =>
@@ -938,54 +939,54 @@
                       e.internal_section_data?.internal_type),
               );
           }, [t]);
-        if (r && a) {
-          const n = Number.parseInt((0, I.j$)(e.args, "depositpackageid")),
-            t = Number.parseInt((0, I.j$)(e.args, "psulesspackageid")),
-            s = (0, I.j$)(e.args, "out_of_stock_override"),
-            i = (0, I.j$)(e.args, "delivery_override"),
-            l = (0, I.j$)(e.args, "delivery_override_out_of_stock");
-          return (0, o.jsx)(S, {
-            section: a,
+        if (r && s) {
+          const n = Number.parseInt((0, p.j$)(e.args, "depositpackageid")),
+            t = Number.parseInt((0, p.j$)(e.args, "psulesspackageid")),
+            a = (0, p.j$)(e.args, "out_of_stock_override"),
+            i = (0, p.j$)(e.args, "delivery_override"),
+            l = (0, p.j$)(e.args, "delivery_override_out_of_stock");
+          return (0, o.jsx)(B, {
+            section: s,
             reservationPackageID: r,
             depositPackageID: n,
             psuLessPackageID: t,
-            strOutOfStockOverride: s,
+            strOutOfStockOverride: a,
             strDeliveryOverride: l || i,
             bDeliveryOverrideOnlyIfOutOfStock: Boolean(l),
           });
         }
         return (0, o.jsx)(o.Fragment, {});
       }
-      var Ze = t(5729),
-        Xe = t(91374);
-      function Ve(e) {
+      var ze = t(5729),
+        Ze = t(69776);
+      function Xe(e) {
         const { bSalePage: n } = e,
-          [t, d] = s.useState(!1);
+          [t, d] = a.useState(!1);
         return (
-          (0, Ze.H)(t, n),
-          s.useEffect(() => {
-            i.Vw.Init(new a.D(u.TS.WEBAPI_BASE_URL)), l.O3.Init(), d(!0);
+          (0, ze.H)(t, n),
+          a.useEffect(() => {
+            i.Vw.Init(new s.D(u.TS.WEBAPI_BASE_URL)), l.O3.Init(), d(!0);
           }, []),
-          s.useEffect(() => {
+          a.useEffect(() => {
             const e = (0, c.l4)();
             e && r.locale(e);
           }, []),
           t
             ? n
-              ? (0, o.jsx)(Xe.d3, {
+              ? (0, o.jsx)(Ze.d3, {
                   dictionary:
-                    (null == Le &&
-                      (Le = new Map([
+                    (null == Ee &&
+                      (Ee = new Map([
                         ...Array.from(
-                          (null == ue &&
-                            (ue = new Map([
-                              ["wishlist", { Constructor: ce, autocloses: !1 }],
+                          (null == ce &&
+                            (ce = new Map([
+                              ["wishlist", { Constructor: le, autocloses: !1 }],
                               [
                                 "followgroup",
-                                { Constructor: te, autocloses: !1 },
+                                { Constructor: ne, autocloses: !1 },
                               ],
                             ])),
-                          ue).entries(),
+                          ce).entries(),
                         ),
                         [
                           "itemdef",
@@ -996,37 +997,37 @@
                             allowWrapTextForCopying: !0,
                           },
                         ],
-                        ["followgame", { Constructor: V, autocloses: !1 }],
+                        ["followgame", { Constructor: X, autocloses: !1 }],
                         [
                           "deckcompatcount",
-                          { Constructor: Me, autocloses: !1 },
+                          { Constructor: Le, autocloses: !1 },
                         ],
                         [
                           "deckcompatuserlibrarycount",
-                          { Constructor: Re, autocloses: !1 },
+                          { Constructor: Me, autocloses: !1 },
                         ],
-                        ["giveawayinfo", { Constructor: Qe, autocloses: !1 }],
-                        ["price", { Constructor: pe, autocloses: !1 }],
-                        ["pricesavings", { Constructor: he, autocloses: !1 }],
+                        ["giveawayinfo", { Constructor: $e, autocloses: !1 }],
+                        ["price", { Constructor: ve, autocloses: !1 }],
+                        ["pricesavings", { Constructor: pe, autocloses: !1 }],
                         [
                           "eventdoorvisibility",
                           { Constructor: He, autocloses: !1 },
                         ],
-                        ["chooseaccount", { Constructor: $e, autocloses: !1 }],
+                        ["chooseaccount", { Constructor: We, autocloses: !1 }],
                         [
                           "badgecurrentlevel",
-                          { Constructor: Ae, autocloses: !1 },
+                          { Constructor: Se, autocloses: !1 },
                         ],
-                        ["optindoorquest", { Constructor: Te, autocloses: !1 }],
+                        ["optindoorquest", { Constructor: Fe, autocloses: !1 }],
                         ["classname", { Constructor: qe, autocloses: !1 }],
                         ["localize", { Constructor: Ue, autocloses: !1 }],
                         ["salesection", { Constructor: Oe, autocloses: !1 }],
                         [
                           "reservationbutton",
-                          { Constructor: ze, autocloses: !1 },
+                          { Constructor: Qe, autocloses: !1 },
                         ],
                       ])),
-                    Le),
+                    Ee),
                   children: e.children,
                 })
               : e.children

@@ -936,10 +936,14 @@
             (i ? i.MergeData(e, t) : ((i = new p.Ay(e, t)), a.set(e.id(), i)),
             t.include_included_items && e.included_items(!1))
           ) {
-            for (const s of e.included_items().included_apps())
-              this.ReadItem(s, t.included_item_data_request);
-            for (const s of e.included_items().included_packages())
-              this.ReadItem(s, t.included_item_data_request);
+            const s = t.included_item_data_request ?? {
+              ...t,
+              include_included_items: !1,
+            };
+            for (const t of e.included_items().included_apps())
+              this.ReadItem(t, s);
+            for (const t of e.included_items().included_packages())
+              this.ReadItem(t, s);
           }
           return i;
         }

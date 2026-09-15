@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-  [8521, 8396],
+  [8521],
   {
     88619: (e) => {
       e.exports = { BroadcastChatCtn: "_28b1vPJH7sip9Uh_p3OJvD" };
@@ -618,7 +618,7 @@
         ge = t(46107),
         fe = t(91397),
         je = t(4703),
-        Se = t(3426),
+        Se = t(56934),
         Ie = t(10224),
         be = t(26296),
         we = t(48211),
@@ -1209,7 +1209,7 @@
           [, l] = (0, z.TB)(n.clanSteamID.GetAccountID()),
           [i, r, c] = (0, g.q3)(() => [
             Math.max(0, n.nVotesUp - n.nVotesDown),
-            n.GetForumTopicURL(null == l ? void 0 : l.vanity_url),
+            n.GetDiscussionURL(null == l ? void 0 : l.vanity_url),
             n.nCommentCount,
           ]),
           u = (function (e) {

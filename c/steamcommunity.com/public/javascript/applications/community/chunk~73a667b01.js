@@ -7506,6 +7506,97 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
+      function _(
+        _,
+        {
+          activeBitColor: _ = [33, 35, 40],
+          inactiveBitColor: _ = [255, 255, 255],
+          borderWidth: _ = 3,
+        } = {},
+        _ = {},
+      ) {
+        const _ = _()(_, _).modules;
+        if (!_) return null;
+        let _ = [];
+        for (let _ = 0; _ < _; _++) _.push(Array(_.length + 2 * _).fill(!1));
+        for (let _ = 0; _ < _.length; _++)
+          _.push([
+            ...Array.from(
+              {
+                length: _,
+              },
+              () => !1,
+            ),
+            ..._[_],
+            ...Array.from(
+              {
+                length: _,
+              },
+              () => !1,
+            ),
+          ]);
+        for (let _ = 0; _ < _; _++) _.push(Array(_.length + 2 * _).fill(!1));
+        return (function (_, _, _) {
+          const _ = _.length,
+            _ = _[0].length,
+            _ = new Uint8Array(40 + (_ + 2) * _);
+          let _ = 0;
+          (_[_++] = 71),
+            (_[_++] = 73),
+            (_[_++] = 70),
+            (_[_++] = 56),
+            (_[_++] = 57),
+            (_[_++] = 97),
+            (_[_++] = _),
+            (_[_++] = 0),
+            (_[_++] = _),
+            (_[_++] = 0),
+            (0, _._)(
+              "transparent" != _ || "transparent" != _,
+              "Trying to use transparent for both colors in QR",
+            ),
+            (_[_++] = 161),
+            (_[_++] = 0),
+            (_[_++] = 0),
+            "transparent" == _
+              ? ((_[_++] = 0), (_[_++] = 0), (_[_++] = 0))
+              : ((_[_++] = _[0]), (_[_++] = _[1]), (_[_++] = _[2])),
+            "transparent" == _
+              ? ((_[_++] = 0), (_[_++] = 0), (_[_++] = 0))
+              : ((_[_++] = _[0]), (_[_++] = _[1]), (_[_++] = _[2])),
+            (_[_++] = 255),
+            (_[_++] = 255),
+            (_[_++] = 255),
+            (_[_++] = 255),
+            (_[_++] = 255),
+            (_[_++] = 255),
+            ("transparent" != _ && "transparent" != _) ||
+              ((_[_++] = 33),
+              (_[_++] = 249),
+              (_[_++] = 4),
+              (_[_++] = 1),
+              (_[_++] = 0),
+              (_[_++] = 0),
+              (_[_++] = "transparent" == _ ? 0 : 1),
+              (_[_++] = 0)),
+            (_[_++] = 44),
+            (_[_++] = 0),
+            (_[_++] = 0),
+            (_[_++] = 0),
+            (_[_++] = 0),
+            (_[_++] = _),
+            (_[_++] = 0),
+            (_[_++] = _),
+            (_[_++] = 0),
+            (_[_++] = 0),
+            (_[_++] = 7);
+          for (let _ = 0; _ < _.length; _++) {
+            (_[_++] = _ + 1), (_[_++] = 128);
+            for (let _ = 0; _ < _.length; _++) _[_++] = _[_][_] ? 0 : 1;
+          }
+          return (_[_++] = 1), (_[_++] = 129), (_[_++] = 0), (_[_++] = 59), _;
+        })(_, _, _);
+      }
       function _(_) {
         let {
           quality: _ = _._,
@@ -7516,91 +7607,39 @@
           borderWidth: _ = 3,
           typeNumber: _ = 6,
         } = _;
-        const _ = (function (_, _ = {}) {
-          const { typeNumber: _, errorCorrectLevel: _ } = _,
-            [_, _] = (0, _.useState)();
-          return (
-            (0, _.useEffect)(() => {
+        const _ = (function (_, _) {
+          const {
+            typeNumber: _,
+            errorCorrectLevel: _,
+            activeBitColor: _,
+            inactiveBitColor: _,
+            borderWidth: _,
+          } = _;
+          return (0, _.useMemo)(
+            () =>
               _(
-                _()(_, {
+                _,
+                {
+                  activeBitColor: _,
+                  inactiveBitColor: _,
+                  borderWidth: _,
+                },
+                {
                   typeNumber: _,
                   errorCorrectLevel: _,
-                }).modules,
-              );
-            }, [_, _, _]),
-            _
+                },
+              ),
+            [_, _, _, _, _, _],
           );
         })(_, {
           typeNumber: _,
           errorCorrectLevel: _,
+          activeBitColor: _,
+          inactiveBitColor: _,
+          borderWidth: _,
         });
         if (!_) return null;
-        let _ = [];
-        for (let _ = 0; _ < _; _++) _.push(Array(_.length + 2 * _).fill(!1));
-        for (let _ = 0; _ < _.length; _++)
-          _.push([].concat(Array(_).fill(!1), _[_], Array(_).fill(!1)));
-        for (let _ = 0; _ < _; _++) _.push(Array(_.length + 2 * _).fill(!1));
-        const _ = (function (_, _, _) {
-            const _ = _.length,
-              _ = _[0].length,
-              _ = new Uint8Array(40 + (_ + 2) * _);
-            let _ = 0;
-            (_[_++] = 71),
-              (_[_++] = 73),
-              (_[_++] = 70),
-              (_[_++] = 56),
-              (_[_++] = 57),
-              (_[_++] = 97),
-              (_[_++] = _),
-              (_[_++] = 0),
-              (_[_++] = _),
-              (_[_++] = 0),
-              (0, _._)(
-                "transparent" != _ || "transparent" != _,
-                "Trying to use transparent for both colors in QR",
-              ),
-              (_[_++] = 161),
-              (_[_++] = 0),
-              (_[_++] = 0),
-              "transparent" == _
-                ? ((_[_++] = 0), (_[_++] = 0), (_[_++] = 0))
-                : ((_[_++] = _[0]), (_[_++] = _[1]), (_[_++] = _[2])),
-              "transparent" == _
-                ? ((_[_++] = 0), (_[_++] = 0), (_[_++] = 0))
-                : ((_[_++] = _[0]), (_[_++] = _[1]), (_[_++] = _[2])),
-              (_[_++] = 255),
-              (_[_++] = 255),
-              (_[_++] = 255),
-              (_[_++] = 255),
-              (_[_++] = 255),
-              (_[_++] = 255),
-              ("transparent" != _ && "transparent" != _) ||
-                ((_[_++] = 33),
-                (_[_++] = 249),
-                (_[_++] = 4),
-                (_[_++] = 1),
-                (_[_++] = 0),
-                (_[_++] = 0),
-                (_[_++] = "transparent" == _ ? 0 : 1),
-                (_[_++] = 0)),
-              (_[_++] = 44),
-              (_[_++] = 0),
-              (_[_++] = 0),
-              (_[_++] = 0),
-              (_[_++] = 0),
-              (_[_++] = _),
-              (_[_++] = 0),
-              (_[_++] = _),
-              (_[_++] = 0),
-              (_[_++] = 0),
-              (_[_++] = 7);
-            for (let _ = 0; _ < _.length; _++) {
-              (_[_++] = _ + 1), (_[_++] = 128);
-              for (let _ = 0; _ < _.length; _++) _[_++] = _[_][_] ? 0 : 1;
-            }
-            return (_[_++] = 1), (_[_++] = 129), (_[_++] = 0), (_[_++] = 59), _;
-          })(_, _, _),
-          _ = new Blob([_], {
+        const _ = new Blob([_], {
             type: "image/gif",
           }),
           _ = URL.createObjectURL(_),

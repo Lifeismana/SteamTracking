@@ -15,13 +15,13 @@
         FocusRingOnHiddenItem: "focusring_FocusRingOnHiddenItem_2rIZm",
       };
     },
-    445: (e, t, r) => {
+    201: (e, t, r) => {
       "use strict";
       r.d(t, { InitializeGamepadNavigation: () => sn });
       var i,
         n = r(669),
         s = r.n(n),
-        a = r(775),
+        a = r(794),
         o = r(696);
       function l(e) {
         return "object" == typeof e && null !== e && "value" in e;
@@ -95,10 +95,10 @@
         );
       }
       var b = r(629),
-        f = r(959),
-        p = r(368),
-        B = r(555),
-        w = r(770);
+        f = r(747),
+        p = r(20),
+        B = r(567),
+        w = r(726);
       class y {
         m_NavigationController;
         m_postMessage;
@@ -377,8 +377,8 @@
         (0, b.Cg)([f.o], C.prototype, "OnKeyUp", null),
         (0, b.Cg)([f.o], C.prototype, "Reset", null);
       var R,
-        T = r(326),
-        I = r(126);
+        T = r(594),
+        I = r(762);
       class F {
         SyncStore(e) {
           return this.Subscribe(e).Unsubscribe;
@@ -6194,6 +6194,11 @@
                   game_settings: { n: 5, c: Ct },
                   seconds_since_active: {
                     n: 6,
+                    br: nt.readUint32,
+                    bw: st.writeUint32,
+                  },
+                  frame_rate_limit: {
+                    n: 7,
                     br: nt.readUint32,
                     bw: st.writeUint32,
                   },
@@ -13132,7 +13137,7 @@
         },
       };
     },
-    368: (e, t, r) => {
+    20: (e, t, r) => {
       "use strict";
       r.d(t, { T: () => i, h: () => n });
       const i = "GamepadInput";
@@ -13145,12 +13150,12 @@
           (e[(e.Full = 4)] = "Full");
       })(n || (n = {}));
     },
-    770: (e, t, r) => {
+    726: (e, t, r) => {
       "use strict";
       r.d(t, { A7: () => a, Vp: () => o, n4: () => l });
       var i = r(629),
-        n = r(959),
-        s = r(368);
+        n = r(747),
+        s = r(20);
       class a {
         PostMessage(e) {}
         RegisterForMessage(e) {}

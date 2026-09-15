@@ -65,20 +65,22 @@
       "use strict";
       a.d(t, {
         GU: () => r,
-        Kd: () => s,
-        WN: () => m,
-        bv: () => n,
-        mW: () => o,
-        wv: () => i,
-        yT: () => l,
+        Kd: () => o,
+        WN: () => c,
+        bv: () => s,
+        gt: () => n,
+        mW: () => i,
+        wv: () => l,
+        yT: () => m,
       });
       const r = 39049601,
-        n = 41316928,
-        s = 4,
-        o = 20,
-        i = 45559995,
-        l = 45902273,
-        m = [4145017, 35143931, r, s, n];
+        n = 45479024,
+        s = 41316928,
+        o = 4,
+        i = 20,
+        l = 45559995,
+        m = 45902273,
+        c = [4145017, 35143931, r, o, s];
     },
     26205: (e, t, a) => {
       "use strict";
@@ -118,6 +120,7 @@
         (n.portuguese = () => a.e(3629).then(a.t.bind(a, 23629, 19))),
         (n.romanian = () => a.e(1555).then(a.t.bind(a, 81555, 19))),
         (n.russian = () => a.e(1809).then(a.t.bind(a, 11809, 19))),
+        (n.sc_schinese = () => a.e(728).then(a.t.bind(a, 98347, 19))),
         (n.schinese = () => a.e(9004).then(a.t.bind(a, 79004, 19))),
         (n.spanish = () => a.e(7760).then(a.t.bind(a, 97760, 19))),
         (n.swedish = () => a.e(6881).then(a.t.bind(a, 86881, 19))),

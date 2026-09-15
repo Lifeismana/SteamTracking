@@ -4793,7 +4793,7 @@ ${LANGUAGE}
 *ZN23CSteamOSControllerLinux10InitializeEvEUlbE23_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlbE24_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlbE25_
-*ZN23CSteamOSControllerLinux10InitializeEvEUlbE26_
+*ZN23CSteamOSControllerLinux10InitializeEvEUlbE27_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlbE28_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlbE30_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlbE36_
@@ -4810,7 +4810,7 @@ ${LANGUAGE}
 *ZN23CSteamOSControllerLinux10InitializeEvEUliE37_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlvE15_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlvE17_
-*ZN23CSteamOSControllerLinux10InitializeEvEUlvE27_
+*ZN23CSteamOSControllerLinux10InitializeEvEUlvE26_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlvE29_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlvE31_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlvE33_
@@ -30563,7 +30563,7 @@ Sent ping with MTU %d, increment = %d\n
 SentenceMode
 SentenceModeMenu
 Sentiment
-Sep 14 2026 21:48:58
+Sep 15 2026 19:44:49
 September
 Serbian
 Serial

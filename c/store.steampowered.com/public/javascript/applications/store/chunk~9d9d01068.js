@@ -2063,6 +2063,52 @@
       })(_ || (_ = {}));
       const _ = "bordered";
       var _, _, _, _, _, _;
+      !(function (_) {
+        (_[(_.k_EStoreFilterClauseTypeOr = 0)] = "k_EStoreFilterClauseTypeOr"),
+          (_[(_.k_EStoreFilterClauseTypeAnd = 1)] =
+            "k_EStoreFilterClauseTypeAnd"),
+          (_[(_.k_EStoreFilterClauseTypeStoreTag = 2)] =
+            "k_EStoreFilterClauseTypeStoreTag"),
+          (_[(_.k_EStoreFilterClauseTypeFeatureTag = 3)] =
+            "k_EStoreFilterClauseTypeFeatureTag"),
+          (_[(_.k_EStoreFilterClauseTypeLanguage = 4)] =
+            "k_EStoreFilterClauseTypeLanguage"),
+          (_[(_.k_EStoreFilterClauseTypeContentDescriptor = 5)] =
+            "k_EStoreFilterClauseTypeContentDescriptor"),
+          (_[(_.k_EStoreFilterClauseTypePrice = 6)] =
+            "k_EStoreFilterClauseTypePrice"),
+          (_[(_.k_EStoreFilterClauseTypeAppType = 7)] =
+            "k_EStoreFilterClauseTypeAppType");
+      })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.k_ESaleTagFilter = 0)] = "k_ESaleTagFilter"),
+            (_[(_.k_ELanguage = 1)] = "k_ELanguage"),
+            (_[(_.k_EContentDescriptor = 2)] = "k_EContentDescriptor"),
+            (_[(_.k_EUserPreference = 3)] = "k_EUserPreference"),
+            (_[(_.k_EPrice = 4)] = "k_EPrice"),
+            (_[(_.k_EAppType = 5)] = "k_EAppType");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.k_EHideOwnedItems = 0)] = "k_EHideOwnedItems"),
+            (_[(_.k_EHideWishlistedItems = 1)] = "k_EHideWishlistedItems"),
+            (_[(_.k_EHideIgnoredItems = 2)] = "k_EHideIgnoredItems");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.k_ESortFacetsByName = 0)] = "k_ESortFacetsByName"),
+            (_[(_.k_ESortFacetsByMatchCount = 1)] =
+              "k_ESortFacetsByMatchCount"),
+            (_[(_.k_ESortFacetsManually = 2)] = "k_ESortFacetsManually");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_.Steam = "Steam"),
+            (_.Facebook = "Facebook"),
+            (_.Twitter = "Twitter"),
+            (_.Reddit = "Reddit");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_.Summary = "summary"),
+            (_.SummaryLargeImage = "summary_large_image");
+        })(_ || (_ = {}));
       function _(_) {
         return _ && !!_.show_as_carousel && !_.enable_faceted_browsing;
       }
@@ -2152,52 +2198,6 @@
       function _(_, _, _) {
         return !!_.use_random_order || !!_(_, _, _);
       }
-      !(function (_) {
-        (_[(_.k_EStoreFilterClauseTypeOr = 0)] = "k_EStoreFilterClauseTypeOr"),
-          (_[(_.k_EStoreFilterClauseTypeAnd = 1)] =
-            "k_EStoreFilterClauseTypeAnd"),
-          (_[(_.k_EStoreFilterClauseTypeStoreTag = 2)] =
-            "k_EStoreFilterClauseTypeStoreTag"),
-          (_[(_.k_EStoreFilterClauseTypeFeatureTag = 3)] =
-            "k_EStoreFilterClauseTypeFeatureTag"),
-          (_[(_.k_EStoreFilterClauseTypeLanguage = 4)] =
-            "k_EStoreFilterClauseTypeLanguage"),
-          (_[(_.k_EStoreFilterClauseTypeContentDescriptor = 5)] =
-            "k_EStoreFilterClauseTypeContentDescriptor"),
-          (_[(_.k_EStoreFilterClauseTypePrice = 6)] =
-            "k_EStoreFilterClauseTypePrice"),
-          (_[(_.k_EStoreFilterClauseTypeAppType = 7)] =
-            "k_EStoreFilterClauseTypeAppType");
-      })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ESaleTagFilter = 0)] = "k_ESaleTagFilter"),
-            (_[(_.k_ELanguage = 1)] = "k_ELanguage"),
-            (_[(_.k_EContentDescriptor = 2)] = "k_EContentDescriptor"),
-            (_[(_.k_EUserPreference = 3)] = "k_EUserPreference"),
-            (_[(_.k_EPrice = 4)] = "k_EPrice"),
-            (_[(_.k_EAppType = 5)] = "k_EAppType");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EHideOwnedItems = 0)] = "k_EHideOwnedItems"),
-            (_[(_.k_EHideWishlistedItems = 1)] = "k_EHideWishlistedItems"),
-            (_[(_.k_EHideIgnoredItems = 2)] = "k_EHideIgnoredItems");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ESortFacetsByName = 0)] = "k_ESortFacetsByName"),
-            (_[(_.k_ESortFacetsByMatchCount = 1)] =
-              "k_ESortFacetsByMatchCount"),
-            (_[(_.k_ESortFacetsManually = 2)] = "k_ESortFacetsManually");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_.Steam = "Steam"),
-            (_.Facebook = "Facebook"),
-            (_.Twitter = "Twitter"),
-            (_.Reddit = "Reddit");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_.Summary = "summary"),
-            (_.SummaryLargeImage = "summary_large_image");
-        })(_ || (_ = {}));
       const _ = {
         capsules: [],
         events: [],
@@ -2343,6 +2343,7 @@
         AnnouncementGID = void 0;
         clanSteamID = new _._();
         forumTopicGID = void 0;
+        clanSteamIDOriginal = void 0;
         type = _.DRF;
         appid = 0;
         name = new Map();
@@ -2412,8 +2413,7 @@
         }
         static FromCClanEventData(_, _) {
           let _ = new _();
-          return (
-            (_.GID = _.gid),
+          (_.GID = _.gid),
             (_.clanSteamID = new _._(_.clan_steamid)),
             _.name.set(_, _.event_name ?? ""),
             (_.type = _.event_type),
@@ -2441,7 +2441,15 @@
             (_.featured_app_tagid = _.featured_app_tagid),
             _.broadcaster_accountid &&
               (_.broadcaster = _._.InitFromAccountID(_.broadcaster_accountid)),
-            (_.AnnouncementGID = _.announcement_body?.gid ?? "0"),
+            (_.AnnouncementGID = _.announcement_body?.gid ?? "0");
+          const _ = _.clan_steamid_original;
+          return (
+            _
+              ? (_.clanSteamIDOriginal = new _._(_))
+              : _.announcement_body?.clanid &&
+                (_.clanSteamIDOriginal = _._.InitFromClanID(
+                  Number(_.announcement_body.clanid),
+                )),
             (_.postTime = _.announcement_body?.posttime),
             (_.forumTopicGID = _.forum_topic_id),
             _.name.set(_, _.announcement_body?.headline ?? ""),
@@ -2474,6 +2482,7 @@
             ((_.GID = this.GID),
             (_.AnnouncementGID = this.AnnouncementGID),
             (_.clanSteamID = this.clanSteamID),
+            (_.clanSteamIDOriginal = this.clanSteamIDOriginal),
             (_.bOldAnnouncement = this.bOldAnnouncement),
             (_.nCommentCount = this.nCommentCount),
             (_.nVotesUp = this.nVotesUp),
@@ -2706,6 +2715,21 @@
                   this.clanSteamID.ConvertTo64BitString() +
                   "/eventcomments/" +
                   this.forumTopicGID
+            : "";
+        }
+        GetDiscussionURL(_) {
+          return this.BHasForumTopicGID()
+            ? this.GetForumTopicURL(_)
+            : this.GetLegacyAnnouncementCommentsURL();
+        }
+        GetLegacyAnnouncementCommentsURL() {
+          const _ = this.clanSteamIDOriginal ?? this.clanSteamID;
+          return this.BHasAnnouncementGID() && _ && _.BIsValid()
+            ? _._.COMMUNITY_BASE_URL +
+                "gid/" +
+                _.ConvertTo64BitString() +
+                "/announcements/old_detail/" +
+                this.AnnouncementGID
             : "";
         }
         BIsEventInFuture(_ = (0, _._)()) {
@@ -3527,7 +3551,8 @@
         return _() >= _;
       }
       function _(_) {
-        const _ = _(_),
+        const _ = _(),
+          _ = _ >= _,
           _ = (0, _._)(_);
         return _
           ? {
@@ -3536,10 +3561,7 @@
             }
           : {
               nMaxCapsulesPerRow: Math.min(
-                Math.max(
-                  Math.floor(window.innerWidth / _.nItemMinimumWidth),
-                  1,
-                ),
+                Math.max(Math.floor(_ / _.nItemMinimumWidth), 1),
                 _.nMaxItemsPerRow,
               ),
               bScreenIsWide: _,

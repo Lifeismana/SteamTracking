@@ -1,5 +1,5 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-  [8521, 8396],
+  [8521],
   {
     chunkid: (module) => {
       module.exports = {
@@ -1252,7 +1252,7 @@
           [, _] = (0, _._)(_.clanSteamID.GetAccountID()),
           [_, _, _] = (0, _._)(() => [
             Math.max(0, _.nVotesUp - _.nVotesDown),
-            _.GetForumTopicURL(null == _ ? void 0 : _.vanity_url),
+            _.GetDiscussionURL(null == _ ? void 0 : _.vanity_url),
             _.nCommentCount,
           ]),
           _ = (function (_) {

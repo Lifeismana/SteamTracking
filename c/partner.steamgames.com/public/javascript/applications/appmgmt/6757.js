@@ -51,8 +51,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
@@ -217,11 +215,8 @@
                       (0, _.jsx)("div", {
                         className: _().ShareLink,
                         children: (0, _.jsx)(_._, {
-                          linkWidgets: (0, _._)(),
-                          children: (0, _.jsx)(_._, {
-                            text: _,
-                            partnerEventStore: _.partnerEventStore,
-                          }),
+                          text: _,
+                          partnerEventStore: _.partnerEventStore,
                         }),
                       }),
                     ],

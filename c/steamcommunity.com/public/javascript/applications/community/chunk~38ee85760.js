@@ -73,6 +73,9 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid");
       const _ = {};
@@ -253,6 +256,47 @@
         return _.toLocaleDateString((0, _._)(), {
           weekday: "long",
         });
+      }
+      function _(_) {
+        return _.toLocaleDateString((0, _._)(), {
+          year: "numeric",
+        });
+      }
+      function _(_) {
+        return _.toLocaleDateString((0, _._)(), {
+          month: "long",
+          year: "numeric",
+        });
+      }
+      function _(_, _) {
+        switch (_.getUTCMonth()) {
+          case 0:
+          case 1:
+          case 2:
+            return _.Localize(
+              _ ? "#Time_QuarterOfYear_Expanded_Q1" : "#Time_QuarterOfYear_Q1",
+              _.getUTCFullYear(),
+            );
+          case 3:
+          case 4:
+          case 5:
+            return _.Localize(
+              _ ? "#Time_QuarterOfYear_Expanded_Q2" : "#Time_QuarterOfYear_Q2",
+              _.getUTCFullYear(),
+            );
+          case 6:
+          case 7:
+          case 8:
+            return _.Localize(
+              _ ? "#Time_QuarterOfYear_Expanded_Q3" : "#Time_QuarterOfYear_Q3",
+              _.getUTCFullYear(),
+            );
+          default:
+            return _.Localize(
+              _ ? "#Time_QuarterOfYear_Expanded_Q4" : "#Time_QuarterOfYear_Q4",
+              _.getUTCFullYear(),
+            );
+        }
       }
       function _(_) {
         const _ = Math.floor(_ / _._.PerYear),

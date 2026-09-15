@@ -436,6 +436,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -605,6 +606,11 @@
           _ = (0, _._)(_(_, _));
         return _(_ ? _(_) : void 0);
       }
+      function _(_, _ = "group") {
+        const _ = (0, _._)(),
+          _ = (0, _._)(_(_, _, _));
+        return _(_ ? _(_) : void 0);
+      }
       function _(_, _) {
         if (_) return _(_.getQueryData(_(_))) ?? void 0;
       }
@@ -627,6 +633,68 @@
       }
       async function _(_, _, _ = "group") {
         return _ ? _(await _.fetchQuery(_(_, _, _)), _) : null;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        return (0, _._)(
+          (function (_) {
+            return {
+              queryKey: _(_),
+              queryFn: async () => {
+                const _ = await (async function (_) {
+                  let _ = {
+                    get_appids: !0,
+                    _: _._.LANGUAGE,
+                  };
+                  const _ = new URLSearchParams(_).toString(),
+                    _ = `${_._.STORE_BASE_URL}curator/${_}/ajaxgetcreatorhomeinfo/?${_}`,
+                    _ = await fetch(_, {
+                      method: "GET",
+                    });
+                  if (!_._) throw new Error(`Server returned ${_.status}`);
+                  const _ = await _.json();
+                  return _.success != _._ ? null : _;
+                })(_);
+                if (_) {
+                  const {
+                    success: _,
+                    err_msg: _,
+                    warning: _,
+                    warning_msg: _,
+                    ..._
+                  } = _;
+                  return _;
+                }
+                return null;
+              },
+              enabled: !!_,
+            };
+          })(_),
+        );
+      }
+      function _(_) {
+        return ["creatorhomebyaccount", _];
+      }
+      function _(_, _) {
+        if (_.vanity) {
+          switch (_) {
+            case "publisher":
+              return `${_._.STORE_BASE_URL}publisher/${_.vanity}/`;
+            case "franchise":
+              return `${_._.STORE_BASE_URL}franchise/${_.vanity}/`;
+          }
+          return `${_._.STORE_BASE_URL}developer/${_.vanity}/`;
+        }
+        return `${_._.STORE_BASE_URL}curator/${_.creator_clan_id}/`;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -682,6 +750,131 @@
       __webpack_require__._(module_exports, {
         _: () => _,
       });
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        $YD: () => _,
+        BGM: () => _,
+        Buq: () => _,
+        DHU: () => _,
+        DfI: () => _,
+        Ftl: () => _,
+        FzB: () => _,
+        GBh: () => _,
+        Gkz: () => _,
+        IEJ: () => _,
+        IbE: () => _,
+        J1r: () => _,
+        JEe: () => _,
+        Jtk: () => _,
+        Jzd: () => _,
+        KCN: () => _,
+        KoH: () => _,
+        LGs: () => _,
+        LqT: () => _,
+        Mhp: () => _,
+        PYD: () => _,
+        R$d: () => _,
+        RW$: () => _,
+        Sv2: () => _,
+        UfY: () => _,
+        Vg1: () => _,
+        Vov: () => _,
+        Yr4: () => _,
+        Ywc: () => _,
+        ZBT: () => _,
+        aNN: () => _,
+        aWw: () => _,
+        cTj: () => _,
+        ceg: () => _,
+        dWZ: () => _,
+        dxW: () => _,
+        f_e: () => _,
+        gGw: () => _,
+        iZ9: () => _,
+        lPO: () => _,
+        lXI: () => _,
+        lYS: () => _,
+        lw$: () => _,
+        mG_: () => _,
+        mYY: () => _,
+        mvf: () => _,
+        nL9: () => _,
+        nNq: () => _,
+        nuP: () => _,
+        r7M: () => _,
+        rAU: () => _,
+        rTg: () => _,
+        t_B: () => _,
+        u7l: () => _,
+        uZq: () => _,
+        ubQ: () => _,
+        _: () => _,
+        wIS: () => _,
+        z3Q: () => _,
+        zah: () => _,
+      });
+      const _ = 19,
+        _ = 21,
+        _ = 9,
+        _ = 599,
+        _ = 122,
+        _ = 113,
+        _ = 701,
+        _ = 699,
+        _ = 6650,
+        _ = 12095,
+        _ = 1664,
+        _ = 3859,
+        _ = 1667,
+        _ = 3942,
+        _ = 1774,
+        _ = 1625,
+        _ = 1663,
+        _ = 1773,
+        _ = 3799,
+        _ = 1698,
+        _ = 1755,
+        _ = 4106,
+        _ = 4231,
+        _ = 1716,
+        _ = 5900,
+        _ = 1741,
+        _ = 1676,
+        _ = 3959,
+        _ = 4885,
+        _ = 1738,
+        _ = 4434,
+        _ = 9551,
+        _ = 1645,
+        _ = 1720,
+        _ = 1666,
+        _ = 1628,
+        _ = 4486,
+        _ = 5395,
+        _ = 11014,
+        _ = 560542,
+        _ = 17305,
+        _ = 21725,
+        _ = 3813,
+        _ = 5055,
+        _ = 8666,
+        _ = 16689,
+        _ = 24003,
+        _ = 9204,
+        _ = 791774,
+        _ = 615955,
+        _ = 4102,
+        _ = 3877,
+        _ = 5537,
+        _ = 6506,
+        _ = 5379,
+        _ = 10235,
+        _ = 1100687,
+        _ = 42804,
+        _ = 9130,
+        _ = 97376;
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -2823,60 +3016,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        return (0, _._)(
-          (function (_) {
-            return {
-              queryKey: _(_),
-              queryFn: async () => {
-                const _ = await (async function (_) {
-                  let _ = {
-                    get_appids: !0,
-                    _: _._.LANGUAGE,
-                  };
-                  const _ = new URLSearchParams(_).toString(),
-                    _ = `${_._.STORE_BASE_URL}curator/${_}/ajaxgetcreatorhomeinfo/?${_}`,
-                    _ = await fetch(_, {
-                      method: "GET",
-                    });
-                  if (!_._) throw new Error(`Server returned ${_.status}`);
-                  const _ = await _.json();
-                  return _.success != _._ ? null : _;
-                })(_);
-                if (_) {
-                  const {
-                    success: _,
-                    err_msg: _,
-                    warning: _,
-                    warning_msg: _,
-                    ..._
-                  } = _;
-                  return _;
-                }
-                return null;
-              },
-              enabled: !!_,
-            };
-          })(_),
-        );
-      }
-      function _(_) {
-        return ["creatorhomebyaccount", _];
-      }
-      function _(_, _) {
-        if (_.vanity) {
-          switch (_) {
-            case "publisher":
-              return `${_._.STORE_BASE_URL}publisher/${_.vanity}/`;
-            case "franchise":
-              return `${_._.STORE_BASE_URL}franchise/${_.vanity}/`;
-          }
-          return `${_._.STORE_BASE_URL}developer/${_.vanity}/`;
-        }
-        return `${_._.STORE_BASE_URL}curator/${_.creator_clan_id}/`;
-      }
-      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -2889,29 +3030,29 @@
             followType: _,
           } = _,
           { data: _ } = (0, _._)(_),
-          { data: _ } = _(_);
-        return _ && _
-          ? (0, _.jsxs)("div", {
-              className: (0, _._)(_().GameHoverCreatorFollowButtonCtn, _),
-              style: _,
-              children: [
-                (0, _.jsx)("a", {
-                  href: _(_, "developer"),
-                  children: (0, _.jsx)("img", {
-                    src:
-                      null == _
-                        ? (0, _._)(void 0, "medium")
-                        : _?.avatar_medium_url,
-                    alt: _?.group_name,
-                  }),
-                }),
-                (0, _.jsx)(_._, {
-                  clanAccountID: _,
-                  followType: _,
-                }),
-              ],
-            })
-          : null;
+          { data: _ } = (0, _._)(_);
+        if (!_ || !_) return null;
+        const _ =
+          _.avatar_medium_url ||
+          _.avatar_full_url ||
+          (0, _._)(void 0, "medium");
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(_().GameHoverCreatorFollowButtonCtn, _),
+          style: _,
+          children: [
+            (0, _.jsx)("a", {
+              href: (0, _._)(_, "developer"),
+              children: (0, _.jsx)("img", {
+                src: _,
+                alt: _.group_name,
+              }),
+            }),
+            (0, _.jsx)(_._, {
+              clanAccountID: _,
+              followType: _,
+            }),
+          ],
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3001,6 +3142,7 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3232,7 +3374,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -3272,11 +3413,18 @@
             bHideBottomHalf: _,
             bHidePrice: _,
             bShowDeckCompatibilityDialog: _,
+            onShowDeckCompatibilityDialog: _,
             bUseSubscriptionLayout: _,
             nCreatorAccountID: _,
             bPreventNavigation: _,
             bShowDescription: _,
           } = _,
+          _ = (0, _._)(),
+          _ =
+            _ &&
+            (() => {
+              _?.(), _();
+            }),
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(""),
           { data: _ } = (0, _._)(_),
@@ -3375,6 +3523,7 @@
                   Boolean(_ && _) &&
                     (0, _.jsx)(_._, {
                       _: _,
+                      onShowDialog: _,
                     }),
                   Boolean(_) && _,
                   _ &&
@@ -3485,6 +3634,7 @@
           } = _,
           { data: _ } = (0, _._)(_),
           _ = (0, _._)(),
+          [_, _, _] = (0, _._)(),
           { strStoreURL: _, snr: _ } = (0, _._)(_, _);
         if ((!_ && !_) || _)
           return (0, _.jsx)(_.Fragment, {
@@ -3515,7 +3665,9 @@
             bShowWishlistButton: _,
             bShowIgnoreButton: _,
             bShowDescription: _,
+            onShowDeckCompatibilityDialog: _ ? _ : void 0,
           },
+          _ = _ && _?.item_type == _._._ ? _.appid : void 0,
           _ = (0, _.jsx)(_, {
             ..._,
           }),
@@ -3525,11 +3677,22 @@
                 children: _,
               })
             : _;
-        return (0, _.jsx)(_._, {
-          hoverContent: _,
-          nWidthMultiplier: _,
-          ..._,
-          children: _,
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
+              hoverContent: _,
+              nWidthMultiplier: _,
+              ..._,
+              children: _,
+            }),
+            _ &&
+              (0, _.jsx)(_._, {
+                nAppID: _,
+                appName: _?.name || _,
+                active: _,
+                closeModal: _,
+              }),
+          ],
         });
       }
     },
@@ -3754,6 +3917,7 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3770,7 +3934,11 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
-      const _ = 150;
+      const _ = 150,
+        _ = _.createContext(void 0);
+      function _() {
+        return _.useContext(_);
+      }
       function _(_) {
         const {
             hoverContent: _,
@@ -3784,7 +3952,8 @@
           _ = (0, _._)(),
           _ = !_ && !_,
           [_, _] = _.useState(!1),
-          [_, _] = _.useState(void 0);
+          [_, _] = _.useState(void 0),
+          _ = _.useCallback(() => _(!1), []);
         return (0, _.jsxs)("div", {
           "data-key": "hover div",
           role: "button",
@@ -3802,13 +3971,16 @@
           children: [
             _ &&
               _ &&
-              (0, _.jsx)(_, {
-                visible: _,
-                target: _,
-                nDelayShowMs: _,
-                nWidthMultiplier: _,
-                hoverProps: _,
-                children: _,
+              (0, _.jsx)(_.Provider, {
+                value: _,
+                children: (0, _.jsx)(_, {
+                  visible: _,
+                  target: _,
+                  nDelayShowMs: _,
+                  nWidthMultiplier: _,
+                  hoverProps: _,
+                  children: _,
+                }),
               }),
             (0, _.jsx)(_._, {
               children: _,
@@ -7405,14 +7577,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_) {
-        return _.toLocaleDateString((0, _._)(), {
-          month: "long",
-          year: "numeric",
-        });
-      }
       function _(_) {
         if (!_) return "";
         if (_ && _.is_coming_soon) {
@@ -7422,7 +7587,7 @@
           const _ = _.steam_release_date;
           return _
             ? _.is_abridged_release_date
-              ? _(new Date(1e3 * _))
+              ? (0, _._)(new Date(1e3 * _))
               : (0, _._)(_)
             : "";
         }
@@ -7480,6 +7645,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = (0, _._)(),
@@ -7519,10 +7685,12 @@
         const { data: _ } = _(_);
         return _ && _[_];
       }
+      _.RW$, _.ZBT, _.gGw;
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -7557,6 +7725,17 @@
             _
               ? {
                   appid: _,
+                }
+              : void 0,
+          [_],
+        );
+      }
+      function _(_) {
+        return (0, _.useMemo)(
+          () =>
+            _
+              ? {
+                  packageid: _,
                 }
               : void 0,
           [_],
@@ -7741,133 +7920,6 @@
                 unAppID: _[0],
               }
         );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _() {
-        (0, _._)();
-        const _ = _._.accountid;
-        return (0, _._)(
-          (function (_, _) {
-            return {
-              queryKey: _(_),
-              queryFn: async () => {
-                const _ = new Map();
-                if (_)
-                  try {
-                    (
-                      await (async function (_, _) {
-                        const _ = (0, _._)(
-                            _._.STORE_BASE_URL,
-                            _,
-                            _._.country_code,
-                          ),
-                          _ = await fetch(_),
-                          _ = await _.json(),
-                          _ = new Set();
-                        _.rgCreatorsIgnored?.forEach((_) => _.add(_)),
-                          _.rgCreatorsFollowed?.forEach((_) => _.add(_));
-                        const _ = new Set();
-                        return (
-                          _.rgCreatorsIgnored?.forEach((_) => _.add(_)),
-                          [
-                            ...(_.rgCuratorsIgnored ?? []),
-                            ...(_.rgCurators
-                              ? Object.values(_.rgCurators ?? {}).map(
-                                  (_) => _.clanid,
-                                )
-                              : []),
-                          ].map((_) => {
-                            const _ = _.has(_);
-                            return {
-                              clanid: _,
-                              ignored: _,
-                              followed: !_,
-                              is_creator: _.has(_),
-                            };
-                          })
-                        );
-                      })(0, _)
-                    ).forEach((_) => _.set(_.clanid, _));
-                  } catch (_) {
-                    console.error("GetCuratorAffinityQuery", _);
-                  }
-                return _;
-              },
-              enabled: !!_,
-            };
-          })(0, _),
-        );
-      }
-      function _(_) {
-        const { data: _ } = _();
-        return void 0 === _ || null == _ ? void 0 : Boolean(_.get(_)?.followed);
-      }
-      function _(_) {
-        const { data: _ } = _();
-        return void 0 === _ || null == _ ? void 0 : Boolean(_.get(_)?.ignored);
-      }
-      function _() {
-        return _._.EREALM != _._.k_ESteamRealmChina;
-      }
-      function _() {
-        return _._.EREALM != _._.k_ESteamRealmChina;
-      }
-      function _() {
-        const _ = (0, _._)(),
-          _ = _._.accountid;
-        return (_, _, _, _) => {
-          _.setQueryData(_(_), (_) => {
-            if (!_) return;
-            const _ = new Map(_);
-            return (
-              __webpack_require__?.forEach((_) => {
-                _.has(_.clanAccountID)
-                  ? (_.get(_.clanAccountID).followed = !0)
-                  : _.set(_.clanAccountID, {
-                      clanid: _.clanAccountID,
-                      followed: !0,
-                      ignored: !1,
-                      is_creator: !1,
-                    });
-              }),
-              _?.forEach((_) => {
-                _.has(_.clanAccountID)
-                  ? (_.get(_.clanAccountID).ignored = !0)
-                  : _.set(_.clanAccountID, {
-                      clanid: _.clanAccountID,
-                      followed: !1,
-                      ignored: !0,
-                      is_creator: !1,
-                    });
-              }),
-              _?.forEach((_) => _.delete(_.clanAccountID)),
-              _?.forEach((_) => {
-                let _ = _.get(_.clanAccountID);
-                _ && (_.is_creator = !0);
-              }),
-              _
-            );
-          });
-        };
-      }
-      function _(_) {
-        return ["CuratorAffinityQueryKey", _ ?? 0];
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -12197,14 +12249,24 @@
       function _() {
         return (
           _.useContext(_).cartID ||
-          (_._.logged_in
-            ? {
-                type: "account",
-              }
-            : {
-                type: "anonymous",
-                gid: (0, _._)(_._),
-              })
+          (function (_) {
+            if (_) {
+              const _ = new URLSearchParams(_).get("gidreplay");
+              if (_)
+                return {
+                  type: "replay",
+                  gid: _,
+                };
+            }
+            return _._.logged_in
+              ? {
+                  type: "account",
+                }
+              : {
+                  type: "anonymous",
+                  gid: (0, _._)(_._),
+                };
+          })()
         );
       }
       function _(_) {
@@ -12740,6 +12802,204 @@
       var _,
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _() {
+        (0, _._)();
+        const _ = _._.accountid;
+        return (0, _._)(
+          (function (_, _) {
+            return {
+              queryKey: _(_),
+              queryFn: async () => {
+                const _ = new Map();
+                if (_)
+                  try {
+                    (
+                      await (async function (_, _) {
+                        const _ = (0, _._)(
+                            _._.STORE_BASE_URL,
+                            _,
+                            _._.country_code,
+                          ),
+                          _ = await fetch(_),
+                          _ = await _.json(),
+                          _ = new Set();
+                        _.rgCreatorsIgnored?.forEach((_) => _.add(_)),
+                          _.rgCreatorsFollowed?.forEach((_) => _.add(_));
+                        const _ = new Set();
+                        return (
+                          _.rgCreatorsIgnored?.forEach((_) => _.add(_)),
+                          [
+                            ...(_.rgCuratorsIgnored ?? []),
+                            ...(_.rgCurators
+                              ? Object.values(_.rgCurators ?? {}).map(
+                                  (_) => _.clanid,
+                                )
+                              : []),
+                          ].map((_) => {
+                            const _ = _.has(_);
+                            return {
+                              clanid: _,
+                              ignored: _,
+                              followed: !_,
+                              is_creator: _.has(_),
+                            };
+                          })
+                        );
+                      })(0, _)
+                    ).forEach((_) => _.set(_.clanid, _));
+                  } catch (_) {
+                    console.error("GetCuratorAffinityQuery", _);
+                  }
+                return _;
+              },
+              enabled: !!_,
+            };
+          })(0, _),
+        );
+      }
+      function _(_) {
+        return ["CuratorAffinityQueryKey", _ ?? 0];
+      }
+      function _(_, _) {
+        const _ = (function () {
+            const _ = (0, _._)(),
+              _ = _._.accountid;
+            return (_, _, _, _) => {
+              _.setQueryData(_(_), (_) => {
+                if (!_) return;
+                const _ = new Map(_);
+                return (
+                  __webpack_require__?.forEach((_) => {
+                    _.has(_.clanAccountID)
+                      ? (_.get(_.clanAccountID).followed = !0)
+                      : _.set(_.clanAccountID, {
+                          clanid: _.clanAccountID,
+                          followed: !0,
+                          ignored: !1,
+                          is_creator: !1,
+                        });
+                  }),
+                  _?.forEach((_) => {
+                    _.has(_.clanAccountID)
+                      ? (_.get(_.clanAccountID).ignored = !0)
+                      : _.set(_.clanAccountID, {
+                          clanid: _.clanAccountID,
+                          followed: !1,
+                          ignored: !0,
+                          is_creator: !1,
+                        });
+                  }),
+                  _?.forEach((_) => _.delete(_.clanAccountID)),
+                  _?.forEach((_) => {
+                    let _ = _.get(_.clanAccountID);
+                    _ && (_.is_creator = !0);
+                  }),
+                  _
+                );
+              });
+            };
+          })(),
+          _ = _._.accountid;
+        return (0, _._)({
+          mutationKey: ["useUpdateCuratorAffinity", _, _, _],
+          mutationFn: async () => {
+            if (null == _) return !1;
+            const _ = _ == _.k_ECuratorFollow || _ == _.k_ECuratorUnfollow,
+              _ = _ == _.k_ECuratorFollow || _ == _.k_ECuratorIgnore,
+              _ = `${_._.STORE_BASE_URL}curators/${_ ? "ajaxfollow/" : "ajaxignore/"}`,
+              _ = new FormData();
+            _.append("clanid", "" + _),
+              _.append("sessionid", (0, _._)()),
+              _.append(_ ? "follow" : "ignore", _ ? "1" : "0");
+            const _ = await fetch(_, {
+                method: "POST",
+                body: _,
+                credentials: "include",
+              }),
+              _ = await _.json();
+            if (!_._)
+              throw new Error(
+                `Curator Affinity: ${_ ? "Follow" : "Ignore"} Currator ${_ ? "add" : "remove"} failed (${_.status} / ${_.msg})`,
+              );
+            return _.is_creator;
+          },
+          onMutate: () => {
+            if (null != _) {
+              const _ = _ == _.k_ECuratorUnfollow || _ == _.k_ECuratorUnignore;
+              __webpack_require__(
+                _ == _.k_ECuratorFollow
+                  ? [
+                      {
+                        clanAccountID: _,
+                      },
+                    ]
+                  : void 0,
+                _ == _.k_ECuratorIgnore
+                  ? [
+                      {
+                        clanAccountID: _,
+                      },
+                    ]
+                  : void 0,
+                _
+                  ? [
+                      {
+                        clanAccountID: _,
+                      },
+                    ]
+                  : void 0,
+              );
+            }
+          },
+          onError: (_) => {
+            if (null != _) {
+              const _ = _ == _.k_ECuratorFollow || _ == _.k_ECuratorIgnore;
+              __webpack_require__(
+                _ == _.k_ECuratorUnfollow
+                  ? [
+                      {
+                        clanAccountID: _,
+                      },
+                    ]
+                  : void 0,
+                _ == _.k_ECuratorUnignore
+                  ? [
+                      {
+                        clanAccountID: _,
+                      },
+                    ]
+                  : void 0,
+                _
+                  ? [
+                      {
+                        clanAccountID: _,
+                      },
+                    ]
+                  : void 0,
+                _
+                  ? [
+                      {
+                        clanAccountID: _,
+                        is_creator: !0,
+                      },
+                    ]
+                  : void 0,
+              );
+            }
+          },
+          onSuccess: (_) => {
+            _ &&
+              _ &&
+              __webpack_require__(void 0, void 0, void 0, [
+                {
+                  clanAccountID: _,
+                  is_creator: !0,
+                },
+              ]),
+              (0, _._)();
+          },
+        });
+      }
       !(function (_) {
         (_[(_.k_ECuratorFollow = 1)] = "k_ECuratorFollow"),
           (_[(_.k_ECuratorUnfollow = 2)] = "k_ECuratorUnfollow"),
@@ -12766,7 +13026,7 @@
             followType: _,
           } = _,
           { elDialogElement: _, fnShowLogonDialog: _ } = (0, _._)();
-        if (!(0, _._)()) return null;
+        if (_._.EREALM == _._.k_ESteamRealmChina) return null;
         let _ = null;
         switch (_) {
           case "app":
@@ -12830,112 +13090,22 @@
           } = _,
           [_, _] = _.useState(!1),
           { data: _ } = (0, _._)(_ ? void 0 : _),
-          _ = (0, _._)(_),
-          _ = (0, _._)(_),
-          { mutateAsync: _ } = (function (_, _) {
-            const _ = (0, _._)(),
-              _ = _._.accountid;
-            return (0, _._)({
-              mutationKey: ["useUpdateCuratorAffinity", _, _, _],
-              mutationFn: async () => {
-                if (null == _) return !1;
-                const _ = _ == _.k_ECuratorFollow || _ == _.k_ECuratorUnfollow,
-                  _ = _ == _.k_ECuratorFollow || _ == _.k_ECuratorIgnore,
-                  _ = `${_._.STORE_BASE_URL}curators/${_ ? "ajaxfollow/" : "ajaxignore/"}`,
-                  _ = new FormData();
-                _.append("clanid", "" + _),
-                  _.append("sessionid", (0, _._)()),
-                  _.append(_ ? "follow" : "ignore", _ ? "1" : "0");
-                const _ = await fetch(_, {
-                    method: "POST",
-                    body: _,
-                    credentials: "include",
-                  }),
-                  _ = await _.json();
-                if (!_._)
-                  throw new Error(
-                    `Curator Affinity: ${_ ? "Follow" : "Ignore"} Currator ${_ ? "add" : "remove"} failed (${_.status} / ${_.msg})`,
-                  );
-                return _.is_creator;
-              },
-              onMutate: () => {
-                if (null != _) {
-                  const _ =
-                    _ == _.k_ECuratorUnfollow || _ == _.k_ECuratorUnignore;
-                  __webpack_require__(
-                    _ == _.k_ECuratorFollow
-                      ? [
-                          {
-                            clanAccountID: _,
-                          },
-                        ]
-                      : void 0,
-                    _ == _.k_ECuratorIgnore
-                      ? [
-                          {
-                            clanAccountID: _,
-                          },
-                        ]
-                      : void 0,
-                    _
-                      ? [
-                          {
-                            clanAccountID: _,
-                          },
-                        ]
-                      : void 0,
-                  );
-                }
-              },
-              onError: (_) => {
-                if (null != _) {
-                  const _ = _ == _.k_ECuratorFollow || _ == _.k_ECuratorIgnore;
-                  __webpack_require__(
-                    _ == _.k_ECuratorUnfollow
-                      ? [
-                          {
-                            clanAccountID: _,
-                          },
-                        ]
-                      : void 0,
-                    _ == _.k_ECuratorUnignore
-                      ? [
-                          {
-                            clanAccountID: _,
-                          },
-                        ]
-                      : void 0,
-                    _
-                      ? [
-                          {
-                            clanAccountID: _,
-                          },
-                        ]
-                      : void 0,
-                    _
-                      ? [
-                          {
-                            clanAccountID: _,
-                            is_creator: !0,
-                          },
-                        ]
-                      : void 0,
-                  );
-                }
-              },
-              onSuccess: (_) => {
-                _ &&
-                  _ &&
-                  __webpack_require__(void 0, void 0, void 0, [
-                    {
-                      clanAccountID: _,
-                      is_creator: !0,
-                    },
-                  ]),
-                  (0, _._)();
-              },
-            });
-          })(_, _ ? _.k_ECuratorUnfollow : _.k_ECuratorFollow),
+          _ = (function (_) {
+            const { data: _ } = _();
+            return void 0 === _ || null == _
+              ? void 0
+              : Boolean(_.get(_)?.followed);
+          })(_),
+          _ = (function (_) {
+            const { data: _ } = _();
+            return void 0 === _ || null == _
+              ? void 0
+              : Boolean(_.get(_)?.ignored);
+          })(_),
+          { mutateAsync: _ } = _(
+            _,
+            _ ? _.k_ECuratorUnfollow : _.k_ECuratorFollow,
+          ),
           [_, _, _] = (0, _._)(),
           _ = _.useCallback(async () => {
             null != _ && (_(!0), await _(), _(!1), _ && __webpack_require__(_));

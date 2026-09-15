@@ -214,13 +214,14 @@
     54906: (e, t, r) => {
       "use strict";
       r.d(t, {
-        Ez: () => D,
-        UN: () => I,
+        Ez: () => I,
+        UN: () => A,
         Q8: () => S,
-        Pu: () => T,
-        Nt: () => F,
+        cO: () => Z,
+        Pu: () => z,
+        Nt: () => T,
         aw: () => B,
-        cP: () => A,
+        cP: () => F,
       });
       var s = r(7850),
         i = r(45699),
@@ -328,19 +329,19 @@
         N = r(35111),
         M = r.n(N);
       function S(e) {
-        const { id: t } = e,
-          { data: r } = (0, C.J$)(t),
-          { data: a } = (0, C.qI)(t),
-          [l, d, m] = (0, c.uD)();
-        if (!r || !a || r.item_type !== n.c6.qI) return null;
-        const p = a.steam_deck_compat_category || o.YX;
+        const { id: t, onShowDialog: r } = e,
+          { data: a } = (0, C.J$)(t),
+          { data: l } = (0, C.qI)(t),
+          [d, m, p] = (0, c.uD)();
+        if (!a || !l || a.item_type !== n.c6.qI) return null;
+        const g = l.steam_deck_compat_category || o.YX;
         return (0, s.jsxs)("div", {
           className: (0, V.A)(M().LearnMoreCtn, "LearnMoreCtn"),
           children: [
-            (0, s.jsx)(u.$o, { category: p }),
+            (0, s.jsx)(u.$o, { category: g }),
             (0, s.jsx)(i.Ii, {
               onClick: (e) => {
-                e.preventDefault(), d();
+                e.preventDefault(), (r ?? m)();
               },
               children: (0, s.jsx)("span", {
                 className: M().LearnMorePC,
@@ -349,16 +350,26 @@
                 ),
               }),
             }),
-            (0, s.jsx)(L.EN, {
-              active: l,
-              children: (0, s.jsx)(Z, { nAppID: r.appid, closeModal: m }),
-            }),
+            !r &&
+              (0, s.jsx)(Z, {
+                nAppID: a.appid,
+                appName: a.name,
+                active: d,
+                closeModal: p,
+              }),
           ],
         });
       }
       function Z(e) {
-        const { nAppID: t, closeModal: r } = e,
-          i = (function (e) {
+        const { nAppID: t, active: r, appName: i, closeModal: a } = e;
+        return (0, s.jsx)(L.EN, {
+          active: r,
+          children: (0, s.jsx)(D, { nAppID: t, appName: i, closeModal: a }),
+        });
+      }
+      function D(e) {
+        const { nAppID: t, appName: r, closeModal: i } = e,
+          o = (function (e) {
             const [t, r] = d.useState(w.Get().GetCompatabilityResultForApp(e));
             return (
               (0, _.hL)(w.Get().GetCallbackForAppList(e), r),
@@ -372,18 +383,18 @@
               t
             );
           })(t),
-          o = d.useId();
+          l = d.useId();
         return (0, s.jsx)(L.eV, {
-          "aria-labelledby": o,
+          "aria-labelledby": l,
           modalClassName: "DeckVerifiedModalDialog",
-          closeModal: r,
-          onCancel: r,
+          closeModal: i,
+          onCancel: i,
           children: (0, s.jsx)(v.nB, {
             children: (0, s.jsx)(a.Z, {
               focusable: !1,
               "flow-children": "column",
-              children: i
-                ? (0, s.jsx)(j.default, { titleId: o, results: i })
+              children: o
+                ? (0, s.jsx)(j.default, { titleId: l, appName: r, results: o })
                 : (0, s.jsx)(y.t, {
                     size: "medium",
                     position: "center",
@@ -393,7 +404,7 @@
           }),
         });
       }
-      function D(e) {
+      function I(e) {
         const { category: t } = e;
         switch (t) {
           case o.I2:
@@ -438,7 +449,7 @@
             });
         }
       }
-      function I(e) {
+      function A(e) {
         const { id: t, category: r, appName: i, descriptionToken: a } = e;
         if (r == o.YX)
           return (0, s.jsx)("div", {
@@ -468,7 +479,7 @@
         }
         const c = (0, s.jsx)("span", {
             className: n,
-            children: k.Z.Localize(z(r)),
+            children: k.Z.Localize(U(r)),
           }),
           C = (0, s.jsx)("span", {
             className: M().CompatibilityDetailRatingSummary,
@@ -488,7 +499,7 @@
           children: d,
         });
       }
-      function A(e) {
+      function F(e) {
         const { id: t, category: r, appName: i, descriptionToken: a } = e;
         if (r == l.xs)
           return (0, s.jsx)("div", {
@@ -513,7 +524,7 @@
         }
         const c = (0, s.jsx)("span", {
             className: n,
-            children: k.Z.Localize(U(r)),
+            children: k.Z.Localize(K(r)),
           }),
           C = (0, s.jsx)("span", {
             className: M().CompatibilityDetailRatingSummary,
@@ -537,7 +548,7 @@
           children: d,
         });
       }
-      function F(e) {
+      function T(e) {
         const { id: t, category: r, appName: i, descriptionToken: a } = e;
         if (r == o.YX)
           return (0, s.jsx)("div", {
@@ -566,7 +577,7 @@
         }
         const c = (0, s.jsx)("span", {
             className: n,
-            children: k.Z.Localize(z(r)),
+            children: k.Z.Localize(U(r)),
           }),
           C = (0, s.jsx)("span", {
             className: M().CompatibilityDetailRatingSummary,
@@ -590,7 +601,7 @@
           children: d,
         });
       }
-      function T(e) {
+      function z(e) {
         const { id: t, category: r, appName: i, descriptionToken: a } = e;
         if (r == o.YX)
           return (0, s.jsx)("div", {
@@ -619,7 +630,7 @@
         }
         const c = (0, s.jsx)("span", {
             className: n,
-            children: k.Z.Localize(z(r)),
+            children: k.Z.Localize(U(r)),
           }),
           C = (0, s.jsx)("span", {
             className: M().CompatibilityDetailRatingSummary,
@@ -639,7 +650,7 @@
           children: d,
         });
       }
-      function z(e) {
+      function U(e) {
         switch (e) {
           case o.I2:
             return "#SteamDeckVerified_Category_Verified";
@@ -651,7 +662,7 @@
             return "#SteamDeckVerified_Category_Unknown";
         }
       }
-      function U(e) {
+      function K(e) {
         switch (e) {
           case l.Hi:
             return "#SteamOSCompatibility_Category_Compatible";
@@ -923,7 +934,7 @@
         S = r.n(M),
         Z = r(52038),
         D = r(61859);
-      function B(e) {
+      function I(e) {
         switch (e) {
           case V.Small:
             return S().SizeSmall;
@@ -935,7 +946,7 @@
             return S().SizeMedium;
         }
       }
-      function I(e) {
+      function B(e) {
         switch (e) {
           case y.Knockout:
             return S().Knockout;
@@ -949,8 +960,8 @@
       }
       function A(e) {
         const t = (0, Z.A)(
-            null != e.size ? B(e.size) : B(V.Medium),
-            null != e.type ? I(e.type) : I(y.Light),
+            null != e.size ? I(e.size) : I(V.Medium),
+            null != e.type ? B(e.type) : B(y.Light),
             e.additionalClassName,
           ),
           r = e.type == y.Knockout;
@@ -1016,13 +1027,13 @@
               "aria-label": (0, D.we)("#ControllerButton_QAM"),
             });
           case g.Select:
-            return (0, s.jsx)(Y, {
+            return (0, s.jsx)(X, {
               bIsKnockout: r,
               className: t,
               "aria-label": (0, D.we)("#ControllerButton_View"),
             });
           case g.Start:
-            return (0, s.jsx)(X, {
+            return (0, s.jsx)(Y, {
               bIsKnockout: r,
               className: t,
               "aria-label": (0, D.we)("#ControllerButton_Menu"),
@@ -1513,7 +1524,7 @@
               ],
             });
       }
-      function Y({ bIsKnockout: e, ...t }) {
+      function X({ bIsKnockout: e, ...t }) {
         return e
           ? (0, s.jsx)("svg", {
               xmlns: "http://www.w3.org/2000/svg",
@@ -1552,7 +1563,7 @@
               ],
             });
       }
-      function X({ bIsKnockout: e, ...t }) {
+      function Y({ bIsKnockout: e, ...t }) {
         return e
           ? (0, s.jsx)("svg", {
               xmlns: "http://www.w3.org/2000/svg",
@@ -2696,10 +2707,7 @@
               }),
               onClick: w,
             },
-          ];
-        return (
-          d == ye.bY &&
-            v.push({
+            {
               name: (0, s.jsxs)("div", {
                 className: N().pillContent,
                 children: [
@@ -2712,15 +2720,16 @@
                 children: (0, s.jsx)(Se, { ...e }),
               }),
               onClick: w,
-            }),
-          (0, s.jsx)(fe.V, {
-            tabs: v,
-            classNameCtn: N().CompatibilityTabs,
-            classNameTabContent: N().CompatibilityTabContent,
-            startingTab: d.toString(),
-            preferredFocus: !0,
-          })
-        );
+            },
+          ];
+        return (0, s.jsx)(fe.V, {
+          tabs: v,
+          classNameCtn: N().CompatibilityTabs,
+          classNameTabContent: N().CompatibilityTabContent,
+          startingTab: d.toString(),
+          preferredFocus: !0,
+          bDisableRouting: !0,
+        });
       }
       function ke(e) {
         const {
@@ -2822,7 +2831,7 @@
                       {
                         className: N().CompatibilityDetailsRow,
                         children: [
-                          (0, s.jsx)(Be, { displaytype: e.display_type }),
+                          (0, s.jsx)(Ie, { displaytype: e.display_type }),
                           (0, s.jsx)("span", {
                             children: ge.Z.Localize(e.loc_token),
                           }),
@@ -2842,7 +2851,7 @@
                         {
                           className: N().CompatibilityDetailsRow,
                           children: [
-                            (0, s.jsx)(Be, { displaytype: e.display_type }),
+                            (0, s.jsx)(Ie, { displaytype: e.display_type }),
                             (0, s.jsx)("span", {
                               children: ge.Z.Localize(e.loc_token),
                             }),
@@ -3122,7 +3131,7 @@
             return null;
         }
       }
-      function Be(e) {
+      function Ie(e) {
         const { displaytype: t } = e;
         switch (t) {
           case n:

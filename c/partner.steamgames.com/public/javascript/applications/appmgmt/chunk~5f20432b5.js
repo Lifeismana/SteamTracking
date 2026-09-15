@@ -969,10 +969,14 @@
             (_ ? _.MergeData(_, _) : ((_ = new _._(_, _)), _.set(_._(), _)),
             _.include_included_items && _.included_items(!1))
           ) {
+            const _ = _.included_item_data_request ?? {
+              ..._,
+              include_included_items: !1,
+            };
             for (const _ of _.included_items().included_apps())
-              this.ReadItem(_, _.included_item_data_request);
+              this.ReadItem(_, _);
             for (const _ of _.included_items().included_packages())
-              this.ReadItem(_, _.included_item_data_request);
+              this.ReadItem(_, _);
           }
           return _;
         }

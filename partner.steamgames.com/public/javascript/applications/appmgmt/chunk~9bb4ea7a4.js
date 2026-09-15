@@ -4352,6 +4352,7 @@
                     br: n.qM.readUint32,
                     bw: n.gp.writeUint32,
                   },
+                  app_running: { n: 6, br: n.qM.readBool, bw: n.gp.writeBool },
                 },
               }),
             je.sm_m
@@ -5331,6 +5332,11 @@
                     bw: n.gp.writeUint32,
                   },
                   is_completed: { n: 4, br: n.qM.readBool, bw: n.gp.writeBool },
+                  time_completed: {
+                    n: 9,
+                    br: n.qM.readFixed32,
+                    bw: n.gp.writeFixed32,
+                  },
                 },
               }),
             Ae.sm_m

@@ -9724,6 +9724,10 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { editModel: _ } = _,
+          _ = _.GetEventModel(),
+          _ = (0, _._)(_, _._.k_eStoreSalePage, "forceAbsolute"),
+          _ = (0, _._)(_, _._.k_eStoreHardwarePreview, "forceAbsolute"),
+          _ = (0, _._)(_.GetClanSteamID(), !0) && (0, _._)(_),
           _ = [
             {
               label: (0, _._)("#Sale_Debug_LivePreview_Device_Desktop"),
@@ -9761,23 +9765,29 @@
               data: "window",
               newWindow: !0,
             },
-          ],
-          _ = (0, _._)(
-            _.GetEventModel(),
-            _._.k_eStoreSalePage,
-            "forceAbsolute",
-          ),
-          _ = (_) => {
-            var _;
-            const _ = __webpack_require__.find((_) => _.data == _),
+          ];
+        _ &&
+          _.push({
+            label: "(VO) Pre-launch hardware page",
+            tooltip: "Valve admins on dev and beta only.",
+            data: "hardwarepreview",
+            size: {
+              width: 1500,
+              height: 1100,
+            },
+            url: _,
+          });
+        const _ = (_) => {
+            var _, _;
+            const _ = _.find((_) => _.data == _),
               _ = !(
                 null !== (_ = null == _ ? void 0 : _.newWindow) &&
                 void 0 !== _ &&
                 _
               );
             _._.Get().ShowPreviewWindow(
+              null !== (_ = null == _ ? void 0 : _.url) && void 0 !== _ ? _ : _,
               _,
-              _.GetEventModel(),
               _,
               null == _ ? void 0 : _.size,
               null == _ ? void 0 : _.queryParams,
@@ -19733,30 +19743,27 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      async function _() {
-        const _ = new URLSearchParams(),
-          _ = "undefined" != typeof self ? self.origin : "community";
-        _ && _.set("origin", _);
-        const _ = `${_._.STORE_BASE_URL}saleaction/ajaxgetuserdeckcompatcounts?${_}`,
-          _ = await fetch(_);
-        if (!_._) throw new Error(`${_} answered ${_.status}`);
-        const _ = await _.json();
-        if ((null == _ ? void 0 : _.success) != _._ || !_.counts)
-          throw new Error(
-            `${_} answered EResult ${null == _ ? void 0 : _.success}`,
-          );
-        return _.counts;
-      }
       const _ = 3e5;
       function _() {
-        const { data: _ } = (0, _._)({
+        return {
           queryKey: ["DeckCompatCounts"],
-          queryFn: () => _(),
+          queryFn: () =>
+            (async function () {
+              const _ = await (0, _._)(
+                "ajaxgetuserdeckcompatcounts",
+                new URLSearchParams(),
+              );
+              if (!_.counts)
+                throw new Error(
+                  "ajaxgetuserdeckcompatcounts answered without counts",
+                );
+              return _.counts;
+            })(),
           staleTime: _,
           retry: !1,
-        });
-        return _;
+        };
       }
       function _(_, _) {
         switch (_) {
@@ -20176,7 +20183,7 @@
       function _(_) {
         const { nDoorIndex: _, children: _ } = _,
           _ = (0, _._)(_),
-          { fnOpenDoor: _ } = (0, _._)(),
+          _ = (0, _._)(),
           [_, _] = _.useState(!1),
           [_, _] = _.useState(!1),
           { elDialogElement: _, fnShowLogonDialog: _ } = (0, _._)();
@@ -20188,7 +20195,9 @@
                 _ ||
                   (_._.logged_in
                     ? (_(!0),
-                      _(_, !0, null, !1)
+                      _({
+                        iDoorIndex: _,
+                      })
                         .then((_) => {
                           _ || _(!0), _(!1);
                         })
@@ -20290,7 +20299,10 @@
             });
       }
       function _(_) {
-        const _ = _();
+        const _ = (function () {
+          const { data: _ } = (0, _._)(_());
+          return _;
+        })();
         if (!_)
           return (0, _.jsx)(_._, {
             size: "small",

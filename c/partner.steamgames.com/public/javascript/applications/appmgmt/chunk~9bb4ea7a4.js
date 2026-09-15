@@ -4750,6 +4750,11 @@
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
+                  app_running: {
+                    _: 6,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
                 },
               }),
             _.sm_m
@@ -5869,6 +5874,11 @@
                     _: 4,
                     _: _._.readBool,
                     _: _._.writeBool,
+                  },
+                  time_completed: {
+                    _: 9,
+                    _: _._.readFixed32,
+                    _: _._.writeFixed32,
                   },
                 },
               }),

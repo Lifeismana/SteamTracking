@@ -4254,6 +4254,28 @@ span.new {
 	margin: 30px;
 }
 
+.graphical_assets_override_count {
+	margin-left: 10px;
+	font-size: 14px;
+	color: #8f98a0;
+}
+
+.graphical_assets_override_option.limit_reached input[type="radio"],
+.graphical_assets_override_option.limit_reached .graphical_assets_override_option_title label {
+	cursor: not-allowed;
+}
+
+.graphical_assets_override_option.limit_reached .btn_disabled {
+	opacity: 0.4;
+	pointer-events: none;
+}
+
+.graphical_assets_override_limit_explanation {
+	margin-top: 8px;
+	color: #e67122;
+	font-size: 14px;
+}
+
 .graphical_assets_tab_content:not(.active)
 {
 	display: none;
