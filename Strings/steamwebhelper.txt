@@ -17,11 +17,6 @@
   Comment started here.
   Expected :
   Ss=%d, Se=%d, Ah=%d, Al=%d
-  f_bavail: %lu\n
-  f_bfree : %lu\n
-  f_blocks: %lu\n
-  f_bsize : %lu\n
-  f_frsize: %lu\n
   what():
  !"#$%&'()*+,-./0123
  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
@@ -46,7 +41,6 @@
  --mock-update-available
  --mock-update-error
  12CDynamicFuncIPFP9_XDisplayPKcEE
- 2>/dev/null
  = { <proto text format> }". To set fields within it, use syntax like "
  BackUp() can only be called after Next().
  Can't back up over more bytes than were returned by the last call to Next().
@@ -163,6 +157,7 @@
 !hcK+dbF&
 !is_large()
 !m_data.HasError()
+!m_pEarlyIPCAcceptThread
 !m_pInt
 !pArray || ( Base() >= ( pArray + size ) ) || ( pArray >= ( Base() + Count() ) )
 !pToCopy || ( pToCopy + num <= Base() ) || ( pToCopy >= ( Base() + Count() ) )
@@ -261,7 +256,6 @@
 "type mismatch! call is<type>() before get<type>()" && is<array>()
 "type mismatch! call is<type>() before get<type>()" && is<object>()
 "type mismatch! call is<type>() before get<type>()" && is<std::string>()
-#!/bin/sh\nexit 0\n
 #3CScs
 #5fb3e4
 #:*S8,}gNzl
@@ -309,6 +303,8 @@ $\n k_EContentModerationSanction_MAX
 $\n k_EContentReportReason_CSAMOther
 $\n k_EContentReportReason_Derailing
 $\n k_EContentReportReason_Reposting
+$\n k_EDLCHighlightReason_ComingSoon
+$\n k_EDLCHighlightReason_NewPlayers
 $\n k_EExternalSaleEventType_Unknown
 $\n k_EGPUPerformanceLevel_Profiling
 $\n k_EGpuDriverId_GoogleSwiftshader
@@ -442,6 +438,7 @@ $d`D-laM
 %\n!k_EContentReportReason_OtherAbuse
 %\n!k_EContentReportResolution_Broken
 %\n!k_EContentReportResolution_Purged
+%\n!k_EDLCHighlightReason_Recommended
 %\n!k_EExternalSaleEventType_Showcase
 %\n!k_EGameRecordingType_NotRecording
 %\n!k_EGraphicsPerfOverlayLevel_Basic
@@ -459,9 +456,6 @@ $d`D-laM
 %a, %e-%b-%Y %H:%M:%S
 %a, %e-%b-%y %H:%M:%S
 %d %d %d %d %d %d
-%d MB avail\n
-%d MB free space\n
-%d MB total space\n
 %d.%d.%d.%d
 %d.%d.%d.%d/%d.%d.%d.%d
 %d.%d.%d.%d:%d
@@ -514,6 +508,7 @@ $d`D-laM
 %s/%s/%s.txt
 %s/.local/share/applications
 %s/.steam/%s
+%s/.steam/steam
 %s/steamXXXXXX
 %s: %s:%d: %s
 %s: (%d bit)\n
@@ -590,6 +585,7 @@ $d`D-laM
 '\n#k_EBrowserGPUStatus_DisabledUnknown
 '\n#k_EContentModerationSanction_Warned
 '\n#k_EContentModeratorLevel_Supervisor
+'\n#k_EContentReportReason_BulkDeletion
 '\n#k_EContentReportReason_ToSViolation
 '\n#k_EContentReportSubjectType_Invalid
 '\n#k_EContentReportSubjectType_UGCFile
@@ -604,6 +600,8 @@ $d`D-laM
 ( elem == Count() ) || IsValidIndex( elem )
 ( m_iHead & nNewCapacityMask ) == nNewCapacity - nPreSplit
 (!(1(=(?(I(Q([(](a(g(u(
+(%zu) Descend: %s, (%s), %s\n
+(%zu) readdir failed to find '%s' in '%s'\n
 ()*+,-./*(((
 (): requires 1 params ( callbackFn )
 (0'yX
@@ -635,6 +633,7 @@ $d`D-laM
 (\n$k_EContentReportResolution_Sustained
 (\n$k_EContentReportSubjectAction_Locked
 (\n$k_EContentReportSubjectAction_Warned
+(\n$k_EDLCHighlightReason_PlayerFavorite
 (\n$k_EGameRecordingType_ManualRecording
 (\n$k_ENewSteamAnnouncementState_AllRead
 (\n$k_ENewSteamAnnouncementState_Invalid
@@ -760,6 +759,7 @@ $d`D-laM
 *N12_GLOBAL__N_118CefOnceClosureTaskE
 *N12_GLOBAL__N_121system_error_categoryE
 *N12_GLOBAL__N_122generic_error_categoryE
+*N16SteamThreadTools19CSimpleLambdaThreadIZN10CCEFThread23StartEarlyIPCAcceptPumpEvEUlvE_EE
 *N6google8protobuf12_GLOBAL__N_123AggregateErrorCollectorE
 *N6google8protobuf12_GLOBAL__N_123GeneratedMessageFactoryE
 *N6google8protobuf12_GLOBAL__N_123StringBaseTextGeneratorE
@@ -818,6 +818,7 @@ $d`D-laM
 *\n&k_EProvideDeckFeedbackPreference_Unset
 *\n&k_EResolutionAutomation_FullyAutomated
 *\n&k_ESystemDisplayCompatibilityMode_None
+*\n&k_EWindowsUpdateOperationResult_Failed
 *\n&k_PublishedFileQueryType_RankedByTrend
 *hbJ1
 *laM-\SO
@@ -856,6 +857,7 @@ $d`D-laM
 +\n'k_ESteamDeckCompatibilityFeedback_Agree
 +\n'k_ESteamDeckCompatibilityFeedback_Unset
 +\n'k_ESteamOSCompatibilityCategory_Unknown
++\n'k_EWindowsUpdateOperationResult_Aborted
 +\n\rReservedRange
 +\n\vmethod_type
 +automatic
@@ -912,7 +914,6 @@ $d`D-laM
 --disable
 --enable
 -0123456789
--6Ivv
 -;-C-I-M-a-e-q-
 -DBF
 -[Cocoa_WindowListener processHitTest:]
@@ -932,6 +933,7 @@ $d`D-laM
 -\n)k_ESteamDeckCompatibilityCategory_Unknown
 -\n)k_ESystemDisplayCompatibilityMode_Invalid
 -\n)k_EWindowsUpdateInstallationImpact_Normal
+-\n)k_EWindowsUpdateOperationResult_Succeeded
 -\n\rrasterization
 -\n\rsecurity_info
 -\n\rskia_graphite
@@ -1012,6 +1014,8 @@ $d`D-laM
 .\n*k_ESteamDeckCompatibilityCategory_Verified
 .\n*k_ESteamDeckCompatibilityFeedback_Disagree
 .\n*k_ESteamOSCompatibilityCategory_Compatible
+.\n*k_EWindowsUpdateOperationResult_InProgress
+.\n*k_EWindowsUpdateOperationResult_NotStarted
 .\n*k_EnhancedMarketAppearanceStatus_Completed
 .cef-dev-tools-size.vdf
 .cef-initialize-sentinel
@@ -1042,7 +1046,7 @@ $d`D-laM
 .placeholder.proto
 .png
 .pp@0
-.steam_exec_test.sh
+.steam_exec_test
 .thumb
 .uifont
 .valvefile
@@ -1169,9 +1173,11 @@ $d`D-laM
 /proc/device-tree/compatible
 /proc/device-tree/model
 /proc/mounts
+/proc/self/fd/%d
 /proc/self/maps
 /sbin/lsof
 /steamrtarm64
+/steamsysinfo
 /sys/bus/iio/devices
 /sys/class/backlight/
 /sys/class/drm/card0/card0-eDP-1/edid
@@ -1182,12 +1188,10 @@ $d`D-laM
 /tmp/.X11-unix
 /tmp/cmd-stderr.XXXXXX
 /tmp/cmd-stdout.XXXXXX
-/tmp/disk-free.XXXXXX
 /tmp/gamescope.png
 /tmp/steam_chrome_shmem_uid%d_spid%u
 /u%d-Shm_%x
 /u%d-ValveIPCSharedObj-Steam
-/ubuntu12_64/disk-free
 /user-dirs.dirs
 /usr/bin/crosdisk %s
 /usr/bin/lsof
@@ -1200,8 +1204,8 @@ $d`D-laM
 /usr/bin/steamos-polkit-helpers/steamos-format-sdcard
 /usr/bin/steamos-polkit-helpers/steamos-priv-write "%s" "%s"
 /usr/bin/steamos-polkit-helpers/steamos-reboot-other
-/usr/bin/steamos-polkit-helpers/steamos-set-hostname %s
-/usr/bin/steamos-polkit-helpers/steamos-set-timezone %s
+/usr/bin/steamos-polkit-helpers/steamos-set-hostname
+/usr/bin/steamos-polkit-helpers/steamos-set-timezone
 /usr/bin/steamos-polkit-helpers/steamos-trim-devices
 /usr/bin/steamos-polkit-helpers/steamos-update
 /usr/bin/xdg-open
@@ -1619,6 +1623,7 @@ $d`D-laM
 16CHTMLProtoBufMsgI16CMsgAckScreenDPIE
 16CHTMLProtoBufMsgI16CMsgBrowserReadyE
 16CHTMLProtoBufMsgI16CMsgClearHistoryE
+16CHTMLProtoBufMsgI16CMsgInputBlockedE
 16CHTMLProtoBufMsgI16CMsgJSMethodCallE
 16CHTMLProtoBufMsgI16CMsgNodeHasFocusE
 16CHTMLProtoBufMsgI16CMsgOpenDevToolsE
@@ -1637,6 +1642,7 @@ $d`D-laM
 16CHTMLProtoBufMsgI17CMsgLoadedRequestE
 16CHTMLProtoBufMsgI17CMsgMouseDblClickE
 16CHTMLProtoBufMsgI17CMsgSearchResultsE
+16CHTMLProtoBufMsgI17CMsgSetBlockInputE
 16CHTMLProtoBufMsgI17CMsgStartDownloadE
 16CHTMLProtoBufMsgI17CMsgUpdateToolTipE
 16CHTMLProtoBufMsgI18CMsgBlockedRequestE
@@ -1663,7 +1669,6 @@ $d`D-laM
 16CHTMLProtoBufMsgI20CMsgJSExecutePromiseE
 16CHTMLProtoBufMsgI20CMsgJSRaiseExceptionE
 16CHTMLProtoBufMsgI20CMsgJSRegisterMethodE
-16CHTMLProtoBufMsgI20CMsgRestartJSContextE
 16CHTMLProtoBufMsgI20CMsgScalePageToValueE
 16CHTMLProtoBufMsgI20CMsgSetSteamBetaNameE
 16CHTMLProtoBufMsgI21CMsgBrowserSetMinSizeE
@@ -1742,6 +1747,7 @@ $d`D-laM
 16CMsgAckScreenDPI
 16CMsgBrowserReady
 16CMsgClearHistory
+16CMsgInputBlocked
 16CMsgJSMethodCall
 16CMsgNodeHasFocus
 16CMsgOpenDevTools
@@ -1787,6 +1793,7 @@ $d`D-laM
 17CMsgMouseDblClick
 17CMsgResponseCurve
 17CMsgSearchResults
+17CMsgSetBlockInput
 17CMsgStartDownload
 17CMsgUpdateToolTip
 17CPurchaseGiftInfo
@@ -2017,7 +2024,6 @@ $d`D-laM
 2+ss
 2/.google.protobuf.MethodOptions.IdempotencyLevel:
 2048
-20:48:28
 20CHTMLBaseProtoBufMsg
 20CIBusCallbackManager
 20CMsgGetCookiesForURL
@@ -2025,7 +2031,6 @@ $d`D-laM
 20CMsgJSExecutePromise
 20CMsgJSRaiseException
 20CMsgJSRegisterMethod
-20CMsgRestartJSContext
 20CMsgScalePageToValue
 20CMsgSetSteamBetaName
 20CPurchaseReceiptInfo
@@ -2045,6 +2050,7 @@ $d`D-laM
 20CefPreferenceManager
 20CefV8ExceptionCToCpp
 20CefX509CertPrincipal
+21:48:47
 21CClanAnnouncementInfo
 21CHTMLPageSecurityInfo
 21CLogFileAsyncCallback
@@ -2328,6 +2334,7 @@ $d`D-laM
 4T9\n
 4\fZQ
 4\n'k_EChildProcessQueryExitCode_ErrorOther
+4\n'k_EWindowsUpdateOperationResult_Unknown
 4\n0k_EAsyncGameSessionUserVisibilitySessionListOnly
 4\n0k_EContentReportReason_LinkingToMaliciousContent
 4\n0k_EContentReportSubjectAction_MarkedAsSuspicious
@@ -2406,6 +2413,7 @@ $d`D-laM
 7\n3k_ESteamDeckCompatibilityResultDisplayType_Playable
 7\n3k_ESteamDeckCompatibilityResultDisplayType_Verified
 7\n3k_ESteamOSCompatibilityResultDisplayType_Compatible
+7\n3k_EWindowsUpdateOperationResult_SucceededWithErrors
 7\n\tenum_type
 7b7fe2a66d548a0daf01c44056f5
 7nY7m
@@ -2518,6 +2526,7 @@ $d`D-laM
 <empty>\n
 <html><body>File Not Found</body></html>
 <invalid>
+<none>
 <null>
 <unsupported>
 = or is NULL
@@ -2957,6 +2966,13 @@ BF-CFB
 BF-ECB
 BF-OFB
 BFUa.X
+BFilesystemAllowsExecution: couldn't read %s\n
+BFilesystemAllowsExecution: execute test timed out\n
+BFilesystemAllowsExecution: failed to copy %s to %s: %s\n
+BFilesystemAllowsExecution: failed to get exit code\n
+BFilesystemAllowsExecution: failed to reopen fd: %d\n
+BFilesystemAllowsExecution: failed to write %s: %s\n
+BFilesystemAllowsExecution: fork() failed: %s\n
 BGetFreeDiskSpace: usable_space:%llu disk_size:%llu expandable_space:%llu\n
 BIGNUM
 BIO lib
@@ -3065,6 +3081,8 @@ BResolveHostString - unexpected DNS lookup flag '%d'\n
 BRestoreWindowSizeAndPosition 1 parameter: <restore details: string>
 BSaveBufferToFileWithTemporary() failed to find unused file temp name
 BSaveBufferToFileWithTemporary() without k_EFileIOFlushImmediately will result in data loss
+BSetSteamAutoStart: failed to copy %s to %s\n
+BSetSteamAutoStart: failed to create directories for %s\n
 BShouldPresent
 BUF lib
 BUF_MEM_grow
@@ -3143,6 +3161,7 @@ Bounce
 Bradesco Online
 Brazilian
 Break
+Breaking '%s' in '%s'\n
 BringToFront
 BroadcastFullWindowState
 Broadcom
@@ -3174,13 +3193,12 @@ Browser.SetTouchGesturesToCancel
 Browser.StartDownload
 Browser.StartDownload takes one argument: <url: string>
 BrowserComposerGL: Unsupported SDL SYSWM
+BrowserCreated
 BrowserPosition
 BrowserSize
 BrowserView.
 BrowserView.AddGlass expects 2 arguments: <enabled> <background appearance>
 BrowserView.AddGlass() - invalid appearance
-BrowserView.CanGoBackward expects 0 argument
-BrowserView.CanGoForward expects 0 arguments
 BrowserView.Create
 BrowserView.Create initial URL not valid.
 BrowserView.Create optional option bBrowserViewDomainMapping must be a boolean.
@@ -3200,31 +3218,25 @@ BrowserView.CreatePopup optional option strVROverlayKey must be a string.
 BrowserView.CreatePopup takes one optional argument: BrowserViewCreatePopupOptions_t
 BrowserView.Destroy
 BrowserView.Destroytakes one argument: <browserview>
-BrowserView.DialogResponse expects 1 argument
 BrowserView.DialogResponse expects 1 boolean argument
 BrowserView.EnableSteamInput - input methods not exposed to parent browser
-BrowserView.EnableSteamInput expects 0 parameters
 BrowserView.FindInPage - invalid find parameter
 BrowserView.FindInPage expects 3 arguments: <find: string> <findNext: bool> <reverse: bool>
-BrowserView.GetBounds expects zero arguments
-BrowserView.GoBack() expects zero arguments
-BrowserView.GoForward() expects zero arguments
 BrowserView.HandleContextMenuCommand expects and int parameter and an object parameter
 BrowserView.JSAddHeader - invalid key parameter
 BrowserView.JSAddHeader expects 2 argument: <string key> <string value> <bool onlySendToSteam>
 BrowserView.JSSetVRKeyboardVisible expects 1 argument: <bool visible>
 BrowserView.LoadURL - invalid URL
 BrowserView.LoadURL expects one argument: <url>
-BrowserView.NotifyUserActivation expects 0 parameters
 BrowserView.PostMessage - invalid message parameter
 BrowserView.PostMessage requires 1-2 arguments: <message: string> <arguments?: string>
 BrowserView.PostMessageToParent
 BrowserView.PostMessageToParent optional arguments must be a string.
 BrowserView.PostMessageToParent requires 1-2 arguments: <message: string> <arguments?: string>
 BrowserView.RegisterForMessageFromParent
-BrowserView.Reload() expects zero arguments
 BrowserView.ReplaceURL - invalid URL
 BrowserView.ReplaceURL expects one argument: <url>
+BrowserView.SetBlockInput expects 1 argument: <enabled boolean>
 BrowserView.SetBlockedProtocols expects 1 argument: <comma separated list>
 BrowserView.SetBounds expects four argument: x, y, width, height
 BrowserView.SetFocus expects 1 argument: <focused>
@@ -3311,6 +3323,14 @@ CCEFThread - CrashClientCheck
 CCEFThread - SDL_PumpEvents()
 CCEFThread - Scroll + Think
 CCEFThread - VR Overlay Events
+CCEFThread::BInit - AppGetSettings
+CCEFThread::BInit - BuildLanguageListForClient
+CCEFThread::BInit - CefInitialize
+CCEFThread::BInit - ChromeIPCServer().Init
+CCEFThread::BInit - CleanupTempFolders
+CCEFThread::BInit - SDL_Init
+CCEFThread::BInit - SetChromePreferences
+CCEFThread::Run - LoadDevToolsRestoreData
 CCIR601 sampling not implemented yet
 CChromeIPCServer::RunFrame
 CChromeIPCServer::RunFrame - process check
@@ -3579,6 +3599,8 @@ CHECK failed: z.first != NULL:
 CHROMEOS
 CHTMLPageSecurityInfo
 CIPAndPort::GetIPv4 called on IPv6 address
+CIPCTaskPost::Run - wait for IPC data
+CIPCTaskPost::Run - wait for command dispatch
 CJSMethodArgs::AddProtobufAsBinary
 CJSMethodArgs::AddProtobufAsObject
 CLIENTENGINE_INTERFACE_VERSION005
@@ -3770,6 +3792,7 @@ CMsgImeCancelComposition
 CMsgImeCommitText
 CMsgImeCompositionRangeChanged
 CMsgImeSetComposition
+CMsgInputBlocked
 CMsgInspectElement
 CMsgJSDialogResponse
 CMsgJSExecuteCallback
@@ -3807,13 +3830,13 @@ CMsgRequestFullScreen
 CMsgRequestProcessInfo
 CMsgResizeGripChanged
 CMsgResponseCurve
-CMsgRestartJSContext"
 CMsgSavePageToJPEG
 CMsgSavePageToJPEGResponse
 CMsgScalePageToValue
 CMsgScreenInformationChanged
 CMsgSearchResults
 CMsgSetAccessibilitySettings
+CMsgSetBlockInput
 CMsgSetControllerActionSet
 CMsgSetControllerInputActivator
 CMsgSetControllerInputActivatorEnabled
@@ -3902,6 +3925,7 @@ CRYPTO_new_ex_data
 CRYPTO_ocb128_copy_ctx
 CRYPTO_ocb128_init
 CRYPTO_set_ex_data
+CSHA1::HashFile
 CSHA1::Update
 CSPAuth
 CSPName
@@ -4203,7 +4227,6 @@ Could not create an instance of
 Could not encode argument %u
 Could not find type "
 Couldn't parse default value "
-Couldn't write %s: %s\n
 CountryCode
 Coupon has expired
 Create
@@ -4257,7 +4280,7 @@ DAL\fL@
 DATA_LOSS
 DB Lookup CD-Key
 DBF-
-DBG_STAT
+DBG_PATHMATCH
 DCT coefficient out of range
 DCT scaled block size %dx%d not supported
 DD.9
@@ -4459,6 +4482,7 @@ Depot
 Descending
 DescriptorProto
 DescriptorProtosH
+Desktop
 Destroying a held mutex\n
 Details
 DetectNow failed
@@ -4734,6 +4758,7 @@ ED448
 EDH-DSS-DES-CBC3-SHA
 EDH-RSA-DES-CBC3-SHA
 EDIPARTYNAME
+EDLCHighlightReason
 EDRMWrapLocation
 EDownloadSourceHTTPSSupport
 EDurationControlProgress
@@ -4930,6 +4955,7 @@ EWUInstallCriticalUpdatesResult
 EWURequiresRebootResult
 EWalletSource
 EWindowStackingOrder
+EWindowsUpdateOperationResult
 EWindowsUpdateRebootBehavior
 EWorkshopFileType
 EXPAND_ONLY
@@ -4944,6 +4970,7 @@ E[3M
 E\foD
 E\n8k_EChildProcessQueryExitCode_ErrorNotSupportedByPlatform
 E\r\f52
+EarlyIPCAccept
 EdiPartyName
 EdiPartyName:<unsupported>
 Editor
@@ -5090,7 +5117,6 @@ EventNotes
 EventTime
 EventType
 Excluded
-Execute: %s\n
 Existing cancelled license
 Exito
 Expanded map entry type
@@ -5167,10 +5193,10 @@ Failed creating file mapping %s\n
 Failed creating read event %s\n
 Failed creating view of file for %s\n
 Failed creating write event %s\n
+Failed setting ForceQuiet
 Failed setting downloads
 Failed setting updates
-Failed system(%s) in execute test: %d %s\n
-Failed system(%s) in execute test: %d\n
+Failed starting the early IPC accept pump, Steam will block until CEF is up
 Failed to bind client address for shared fd id: 0x%lx\n
 Failed to bind server addres for shared fd: %d\n
 Failed to call function %s: %s
@@ -5290,6 +5316,7 @@ Finnish
 First argument to Swap() (of type "
 First argument to SwapFields() (of type "
 FirstName
+FirstPaint
 FiveHours
 Flags
 FocusDbg [%s]
@@ -5317,7 +5344,6 @@ Frame Failed
 Fraud Check Failed
 Free
 Free Weekend
-Free disk space for %s would overflow
 Freed EMS handle %u
 Freed XMS handle %u
 French
@@ -6935,9 +6961,11 @@ Live Broadcast
 Lj&&lZ66~A??
 Load certs from files in a directory
 Load file into cache
+LoadEnd
 LoadFileIntoBuffer: NULL parameters
 LoadFileRangeIntoBuffer_Internal
 LoadFromBuffer: missing {   (current key: '%s')
+LoadStart
 LoadTGA: Only type 2 and 10 targa RGB images supported\n
 LoadURL
 Loaded GL %d.%d
@@ -6966,6 +6994,7 @@ Loop Detected
 Lost connection to the display %s;\nmost likely the X server was shut down or you killed/destroyed\nthe application.\n
 Low FPS
 Low Violence
+Lowered '%s' -> '%s'\n
 Luxembourgish
 M-laO
 M3fU3
@@ -7047,6 +7076,8 @@ Master Subscription
 MasterCard
 MasterPackageID
 Mastercard (BoaCompra)
+MatchCaseInsensitivePathIfAvailable: in slow path
+Matched '%s' -> '%s'\n
 MaxProtocol
 MaxResults
 MaxUseCount
@@ -8319,6 +8350,7 @@ RankedByVotesUp
 Rapipago
 Rate Limit Exceeded
 Rbg.E
+ReOpenFd: failed to reopen: %s: %s\n
 Reached an unintended state: CPPTYPE_MESSAGE
 Reached impossible case in HasBit().
 Read Error
@@ -8336,6 +8368,7 @@ RearLeftUpper
 RearRightLower
 RearRightUpper
 Reasons
+Reboot required before updates can install
 Rebuild
 ReceivedNewGame
 ReceivesGroupComment
@@ -8368,6 +8401,7 @@ Region restricted
 RegisterJSMethod: invalid browser %d\n
 Registered ID
 Registered ID:
+Rejecting save file request for pending path %s
 Relay Failed
 Release State Override
 ReleaseLast
@@ -8755,6 +8789,9 @@ SSLv3
 STACK_OVERFLOW
 STACK_UNDERFLOW
 START
+STARTUP %s t=%.3f +%.1fms from create
+STARTUP ResourceHandler calls=%d total=%.1fms max=%.1fms
+STARTUP ResourceHandler slow %.1fms request:%s
 STEAMDISABLEBACKGROUNDTHROTTLING
 STEAMVIDEOTOKEN
 STEAMVIDEOTOKEN2
@@ -8848,7 +8885,7 @@ SenderAddress
 SenderName
 Sending of an email failed
 Sentiment
-Sep  7 2026
+Sep 14 2026
 September
 Serbian
 SerialNumber
@@ -8867,6 +8904,7 @@ Session Replaced
 SessionTicket
 Set the base used to construct quick login URLs
 SetAllocatedMessage
+SetBlockInput
 SetBlockedProtocols
 SetBool
 SetBounds
@@ -8945,6 +8983,7 @@ Site License locked
 SiteLicense
 Size on connection to existing CSharedMemStream doesn't match actual: %s, %u, %u
 Size() == operand.Size()
+Skipping one GPU acceleration runtime check after a deliberate GPU process restart
 Skipping safe browser shutdown workaround: disabled
 SlotsAvailable
 Slovak
@@ -9086,6 +9125,7 @@ SteamGameId=
 SteamID
 SteamMachine
 SteamOSGeneric
+SteamRealPath
 SteamRealm
 SteamStdLib::CCommandLineParam::CCommandLineParam(char const*, char const*)
 SteamStdLib::CCommandLineParam::~CCommandLineParam()
@@ -9120,8 +9160,10 @@ SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
 SteamUI: %s: %s
 SteamUniverse
 SteamUserBaseStorage
+SteamVProf::CVProfManager::StartProfilingAllThreads(float, int)
 SteamVProf::CVProfile::EnterScope(char const*, EVProfBugdetGroup, void*)
 SteamVProf::CVProfile::ExitScope()
+SteamVProf::CVProfile::MarkFrame(char const*)
 SteamWebhelper
 Steam_BGetCallback
 Steam_FreeLastCallback
@@ -9449,9 +9491,11 @@ This is an S/MIME signed message%s%s
 This program requires version
 This program was compiled against version
 This shouldn't be called if all the sizes are equal.
+ThreadCloseProcess
 ThreadFileDialogCallback
 ThreadGetCurrentId
 ThreadGetCurrentProcessId
+ThreadGetProcessExitCode
 ThreadImplOneTimeInit
 ThreadInMainThread
 ThreadInMainThread()
@@ -9468,6 +9512,7 @@ ThreadSetForceDeviceScaleFactors %f * %f = %f
 ThreadSetPriority
 ThreadShellExecute
 ThreadSleep
+ThreadWaitForProcessExit
 ThreadedFileDialogGetResult
 ThreeHours
 Thursday
@@ -9635,6 +9680,7 @@ Unknown interlace method in IHDR
 Unknown method
 Unknown row filter for method 0
 UnlockedGroupAchievement
+Unmatched %s\n
 Unprocessable Content
 Unprocessed type %d\n
 Unrecognized character code '%c' in format string, ignoring
@@ -9725,15 +9771,12 @@ VTC Pay Wallet
 VTT for
 V_AppendSlash
 V_BasicHtmlEntityEncode
-V_ComposeFileName
 V_CopyAndFixSlashes
 V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*, bool)
-V_ExtractDomainFromURL
 V_ExtractFileExtension
 V_ExtractFilePath
 V_FixDoubleSlashes
 V_FixSlashes
-V_FormatAndAppend
 V_GetFileExtension
 V_IsAbsolutePath
 V_MakeAbsolutePath
@@ -9897,9 +9940,13 @@ WebMoney Steam Card (Japan)
 WebMoney Steam Card Top Up (Japan)
 WebSocket
 Webhelper
+Webhelper IPC Thread
+Webhelper Main Thread
 Webhelper Subview
 Webhelper: An X Error occurred
 Webhelper: An X Error occurred on display %p
+Webhelper: CCEFThread::BInit
+Webhelper: StartForceDisableAntiAliasingAndSharpening
 Wednesday
 Welsh
 What city were you born in?
@@ -10337,6 +10384,7 @@ Zulu
 [lazy = true] can only be specified for submessage fields.
 [libprotobuf %s %s:%d] %s\n
 [packed = true] can only be specified for repeated primitive fields.
+[size:%zd, data:%p]
 \%02X
 \%03o
 \(a8Bk
@@ -10557,6 +10605,7 @@ Zulu
 \rmj>zjZ
 \sG7tPD
 \t#\t%\t+\t/\t5\tC\tI\tM\tO\tU\tY\t_\tk\tq\tw\t
+\t(%zu) comparing %s with %s\n
 \t-f3F2
 \t6trF
 \tHAI8xpH\f
@@ -10632,7 +10681,6 @@ __gmon_start__
 __gnu_cxx::__concurrence_lock_error
 __gnu_cxx::__concurrence_unlock_error
 __int128
-__isoc99_fscanf
 __isoc99_sscanf
 __iswctype_l
 __libc_csu_fini
@@ -10643,6 +10691,8 @@ __newlocale
 __nl_langinfo_l
 __proto__
 __pthread_key_create
+__real_access
+__real_opendir
 __register_atfork
 __stack_chk_fail
 __stack_chk_guard
@@ -10744,6 +10794,7 @@ ac-targeting
 accept
 accept error
 acceptableResponses
+access
 accessor_ == other.accessor_
 account
 account flags changed
@@ -11785,6 +11836,7 @@ chmod
 choose_directory
 chrome
 chrome-devtools://
+chrome-extension://
 chrome://
 chromeos_public_88ac3843c888c7adb9cd406fbac4ff7a7d2cde9b
 chunk data is too large
@@ -12004,6 +12056,7 @@ controller_xbox360
 controller_xboxelite
 controller_xboxone
 controller_zotac_zone
+convar changed
 convar_
 cookie gen callback failure
 cookie mismatch
@@ -12658,7 +12711,6 @@ disablehighdpi
 disconnected
 discriminant is zero
 disk
-disk-free command failed\n
 diskSize
 display_height
 distinguishedName
@@ -12789,6 +12841,7 @@ dtls_get_reassembled_message
 dtls_process_hello_verify
 dtls_wait_for_dry
 dual_stack
+dup2
 dupKeyMap
 duplicate
 duplicate compression id
@@ -12997,6 +13050,7 @@ entry.m_sFunctionName.length() > 0 && entry.m_eMethodType != k_EJSRegisterMethod
 enum
 enums.proto
 enveloped-data
+environ
 err:%lx:%lx:%lx:%lx
 errno=
 error
@@ -13061,6 +13115,7 @@ excessive message size
 excluded
 excluded subtree violation
 excludedSubtrees
+execve
 existingLen < k_cchMaxString && cubInput * 2 < k_cchMaxString - existingLen
 exit
 exit_process
@@ -13119,6 +13174,7 @@ f.N%H
 fC\tc
 fNt7
 fP~V
+faccessat
 facebook.com
 facsimileTelephoneNumber
 failed to create lock
@@ -13137,6 +13193,7 @@ fastly
 fatal
 favicon-urls-changed
 favouriteDrink
+fchmod
 fclose
 fcntl
 fd-cl-
@@ -13244,7 +13301,6 @@ fontFileDecrypted.opentype_font_data().size() <= INT_MAX
 font_file_name
 fonts
 fopen
-fopen tmpfile failed\n
 fopen('
 fopen64
 force-device-scale-factor
@@ -13252,6 +13308,7 @@ force-opaque-background
 force-sandbox
 forcing save of an unhandled chunk; please call png_set_keep_unknown_chunks
 forever
+fork
 form
 format error in CRL's lastUpdate field
 format error in CRL's nextUpdate field
@@ -13283,7 +13340,6 @@ friendlyCountryName
 friendlyName
 friends
 friendster.com
-fscanf disk-free output failed\n
 fseek
 fseeko64
 fstat
@@ -13312,6 +13368,7 @@ gAY:
 gB>d
 gK99r
 g_ClockSpeed
+g_VProfManager
 g_VProfProfilesRunningCount
 g_VProfile
 g_VecLoadedModules
@@ -16564,6 +16621,8 @@ homePostalAddress
 homeTelephoneNumber
 host
 host=
+hotfix finished
+hotfix started
 hour
 houseIdentifier
 html
@@ -16620,6 +16679,7 @@ https://shared.steamstatic.com/store_item_assets/steam/apps
 https://steam-chat.com/
 https://steamcommunity.com/
 https://steamloopback.host
+https://steamloopback.host/
 https://steamloopback.host/index.html?
 https://steampublishbeta.valve.org/
 https://store.steamchina.com/qr/
@@ -17219,6 +17279,7 @@ initials
 input
 input not initialized
 input not reduced
+input-blocked
 input_attached_real_keyboards
 input_controllerinputmessage
 input_controllermenudata
@@ -17457,6 +17518,7 @@ is_writable
 isalnum
 isalpha
 isbundle
+iscntrl
 isinbundle
 isspace
 issuer
@@ -17632,6 +17694,8 @@ k_EControllerPresetType_Nextk_EControllerPresetType_Nonek_EControllerPresetType_
 k_EControllerSettingAccelerationk_EControllerSettingAccelerationStylek_EControllerSettingActionSetTriggerCursorHidek_EControllerSettingActionSetTriggerCursorShowk_EControllerSettingActivatorActivateStickOrTrackpadk_EControllerSettingActivatorAnalogOutputValuek_EControllerSettingActivatorChordk_EControllerSettingActivatorCyclek_EControllerSettingActivatorDoubleTapTimek_EControllerSettingActivatorEndDelayk_EControllerSettingActivatorInterruptablek_EControllerSettingActivatorInvertInputk_EControllerSettingActivatorLongPressTimek_EControllerSettingActivatorMouseWarpXk_EControllerSettingActivatorMouseWarpYk_EControllerSettingActivatorOutputAxisk_EControllerSettingActivatorRepeatRatek_EControllerSettingActivatorSoftPressStylek_EControllerSettingActivatorStartDelayk_EControllerSettingActivatorThresholdk_EControllerSettingActivatorTogglek_EControllerSettingAdaptiveCenteringk_EControllerSettingAdaptiveThresholdk_EControllerSettingAnalogEmulationDutyCyclePctk_EControllerSettingAnalogEmulationPeriodk_EControllerSettingAntiDeadZonek_EControllerSettingAntiDeadZoneBufferk_EControllerSettingCountk_EControllerSettingCurveExponentk_EControllerSettingCustomCurveExponentk_EControllerSettingDeadZoneEnabledk_EControllerSettingDeadZoneInnerRadiusk_EControllerSettingDeadZoneOuterRadiusk_EControllerSettingDeadZoneShapek_EControllerSettingDeadzonek_EControllerSettingDeadzoneAdvancedSettingsk_EControllerSettingDotsPer360k_EControllerSettingDoubleTapk_EControllerSettingDoubleTapBeepk_EControllerSettingDoubleTapMaxDistk_EControllerSettingDoubleTapMaxDurationk_EControllerSettingDoubleTapMinDurationk_EControllerSettingDynamicModek_EControllerSettingEdgeBindingInvertk_EControllerSettingEdgeBindingRadiusk_EControllerSettingEdgeSpinRadiusk_EControllerSettingEdgeSpinVelocityk_EControllerSettingFlickStickAllowFlickOnAwakek_EControllerSettingFlickStickDepressionSpeedk_EControllerSettingFlickStickEdgeBindingRadiusk_EControllerSettingFlickStickForwardDeadZonek_EControllerSettingFlickStickFrameTimek_EControllerSettingFlickStickHapticBumpPerAnglek_EControllerSettingFlickStickSnapModek_EControllerSettingFlickStickSnapTightnessk_EControllerSettingFlickStickSweepSensitivityk_EControllerSettingFlickStickSweepTightnessk_EControllerSettingFlickStickTransitionTimek_EControllerSettingFourButtonDistk_EControllerSettingFourButtonSizek_EControllerSettingFrictionk_EControllerSettingFrictionVertScalek_EControllerSettingGyroAxisk_EControllerSettingGyroButtonk_EControllerSettingGyroButtonHapticEffectk_EControllerSettingGyroButtonInvertk_EControllerSettingGyroButtonMaskk_EControllerSettingGyroButtonRequireAnyOrAllk_EControllerSettingGyroDeflectionAngleMaxk_EControllerSettingGyroDeflectionAngleMink_EControllerSettingGyroDeflectionNeutralAnglek_EControllerSettingGyroDeflectionUseGravityk_EControllerSettingGyroDeflectionUseGravityRollk_EControllerSettingGyroEnableAngleCatchUpk_EControllerSettingGyroJoystickOutputMaxk_EControllerSettingGyroJoystickOutputMink_EControllerSettingGyroJoystickPowerCurvek_EControllerSettingGyroLockExtentsk_EControllerSettingGyroModek_EControllerSettingGyroNaturalSensitivityk_EControllerSettingGyroNeutralAnglek_EControllerSettingGyroOnOffHapticIntensityk_EControllerSettingGyroPointerk_EControllerSettingGyroPrecisionSpeedk_EControllerSettingGyroRollScalek_EControllerSettingGyroSampleAngleOffsetXk_EControllerSettingGyroSensitivityScalek_EControllerSettingGyroSpeedDeadzonek_EControllerSettingGyroSpeedMaxAnglePerSecondk_EControllerSettingGyroSpeedMinAnglePerSecondk_EControllerSettingGyroTo2DConversionStylek_EControllerSettingGyroUsePerControllerGyroPreferencesk_EControllerSettingGyroXYRatiok_EControllerSettingGyroYawScalek_EControllerSettingHapticIntensityk_EControllerSettingHapticIntensityOverridek_EControllerSettingHoldRepeatIntervalk_EControllerSettingHoldRepeatsk_EControllerSettingInvertXk_EControllerSettingInvertYk_EControllerSettingLayerModek_EControllerSettingLayoutk_EControllerSettingLeftTrackpadModek_EControllerSettingMouseMoveThresholdk_EControllerSettingMouseRegionPositionXk_EControllerSettingMouseRegionPositionYk_EControllerSettingMouseRegionScalek_EControllerSettingMouseSmoothingk_EControllerSettingOutputAxisk_EControllerSettingOutputJoystickk_EControllerSettingOutputToJoystickk_EControllerSettingOutputToJoystickDeadzoneXk_EControllerSettingOutputToJoystickDeadzoneYk_EControllerSettingOutputToJoystickPrecisionk_EControllerSettingOutputTriggerk_EControllerSettingOverlapRegionk_EControllerSettingPressureJoystickEnablek_EControllerSettingPressureJoystickMaxPressurek_EControllerSettingPressureJoystickMinPressurek_EControllerSettingReferencedModek_EControllerSettingRequiresClickk_EControllerSettingRightTrackpadModek_EControllerSettingRotationk_EControllerSettingRotationOldk_EControllerSettingRumbleIntensityk_EControllerSettingRumbleTypek_EControllerSettingScrollAnglek_EControllerSettingScrollInvertk_EControllerSettingScrollMomentumk_EControllerSettingScrollTypek_EControllerSettingScrollWrapk_EControllerSettingSensitivityk_EControllerSettingSensitivityHorizScalek_EControllerSettingSensitivityVertScalek_EControllerSettingSmoothJoystickk_EControllerSettingSwipeDurationk_EControllerSettingTeleportMouseStartk_EControllerSettingTeleportMouseStopk_EControllerSettingTestParam0k_EControllerSettingTestParam1k_EControllerSettingTestParam2k_EControllerSettingTestParam3k_EControllerSettingTestParam4k_EControllerSettingTestParam5k_EControllerSettingTestParam6k_EControllerSettingTestParam7k_EControllerSettingTestParam8k_EControllerSettingTestParam9k_EControllerSettingTouchMenuActivateButtonk_EControllerSettingTouchMenuButtonCountk_EControllerSettingTouchMenuButtonTypek_EControllerSettingTouchMenuInnerDeadzonek_EControllerSettingTouchMenuLabelsk_EControllerSettingTouchMenuOpacityk_EControllerSettingTouchMenuOuterDeadzonek_EControllerSettingTouchMenuPosXk_EControllerSettingTouchMenuPosYk_EControllerSettingTouchMenuScalek_EControllerSettingTrackballk_EControllerSettingTrackpadTriggerDatak_EControllerSettingTriggerMouseClampingk_EControllerSettingTriggerMouseClampingAmountk_EControllerSettingVirtualCapSizek_EControllerSettingVirtualMenuCenterBoundk_EControllerSettingVirtualModek_EControllerSettingVirtualStickThrow
 k_EControllerSourceMode_2DScrollwheelk_EControllerSourceMode_AbsoluteMousek_EControllerSourceMode_Buttonsk_EControllerSourceMode_CameraAnglesk_EControllerSourceMode_Countk_EControllerSourceMode_Disabledk_EControllerSourceMode_Dpadk_EControllerSourceMode_FlickStickk_EControllerSourceMode_FlickStickToCameraAnglesk_EControllerSourceMode_FourButtonsk_EControllerSourceMode_GyroToCameraAnglesk_EControllerSourceMode_GyroToJoystickCamerak_EControllerSourceMode_GyroToJoystickDeflectionk_EControllerSourceMode_GyroToMousek_EControllerSourceMode_Hotbark_EControllerSourceMode_JoystickCamerak_EControllerSourceMode_JoystickMousek_EControllerSourceMode_JoystickMovek_EControllerSourceMode_JoystickToCameraAnglesk_EControllerSourceMode_MouseJoystickk_EControllerSourceMode_MouseRegionk_EControllerSourceMode_Nonek_EControllerSourceMode_RadialMenuk_EControllerSourceMode_Referencek_EControllerSourceMode_RelativeMousek_EControllerSourceMode_ScrollWheelk_EControllerSourceMode_SingleButtonk_EControllerSourceMode_Switchesk_EControllerSourceMode_TouchMenuk_EControllerSourceMode_TrackPadToCameraAnglesk_EControllerSourceMode_Trigger
 k_EControllerSource_ABXYk_EControllerSource_CapJoystickLeftk_EControllerSource_CapJoystickRightk_EControllerSource_CenterTrackpadk_EControllerSource_Countk_EControllerSource_DPadk_EControllerSource_Gyrok_EControllerSource_Joystickk_EControllerSource_Keyk_EControllerSource_LeftBumperk_EControllerSource_LeftGyrok_EControllerSource_LeftTrackpadk_EControllerSource_LeftTriggerk_EControllerSource_Mousek_EControllerSource_Nonek_EControllerSource_RightBumperk_EControllerSource_RightJoystickk_EControllerSource_RightTrackpadk_EControllerSource_RightTriggerk_EControllerSource_Switch
+k_EDLCHighlightReason_New
+k_EDLCHighlightReason_None
 k_EDeviceSupportFlowStateBindingk_EDeviceSupportFlowStateIdlek_EDeviceSupportFlowStateTesting
 k_EExportCodec_Default
 k_EExportCodec_H264
@@ -18361,7 +18425,6 @@ misspelled_word
 mixed handshake and non handshake data
 mkdir
 mkstemp
-mkstemp errno %d\n
 mktime
 mlock
 mmZ7EEP
@@ -19616,6 +19679,7 @@ professionItems
 professionOIDs
 profile '
 profile matches sRGB but writing iCCP instead
+profilestartup
 promise_handle
 promoted to moderator
 promoted to officer
@@ -19873,7 +19937,6 @@ responseExtensions
 responseStatus
 responseType
 responses
-restart-on-ui-mode-change
 restoredetails
 result
 result too large
@@ -19908,7 +19971,6 @@ roleOccupant
 romanian
 room
 roomNumber
-root
 root ca not trusted
 routes
 row_stride == (int)( nImageWidth * jpegInfo.output_components )
@@ -20628,8 +20690,8 @@ status_request
 status_request_v2
 statvfs64
 statvfs64 failed for %s, errno %d %s
+statvfs64 output would overflow: %s
 statvfs64 reports success but zero free space\n
-statvfs64: ret %d errno %d\n
 stbl_module_init
 stbl_section
 std::allocator
@@ -20715,6 +20777,7 @@ strUserAgentOverride
 strVROverlayKey
 str_copy
 strcasecmp
+strcasestr
 strcat
 strchr
 strcmp
@@ -21638,6 +21701,7 @@ wcstol
 wctob
 weak
 weak_dependency
+web deploy
 web links changed
 web:checkout
 web:community

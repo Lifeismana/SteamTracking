@@ -90,6 +90,7 @@
           (_.k_eStoreNewsHub = "newshub"),
           (_.k_eStoreOwnerPage = "store"),
           (_.k_eStoreSalePage = "sale"),
+          (_.k_eStoreHardwarePreview = "hardwarepreview"),
           (_.k_eStoreUsersNewsHub = "usernewshub");
       })(_ || (_ = {}));
       const _ =
@@ -126,6 +127,7 @@
           case _.k_eStoreUsersNewsHub:
             return _;
           case _.k_eStoreSalePage:
+          case _.k_eStoreHardwarePreview:
             return !1;
           default:
             return (0, _._)(!1, "Unknown route specified for link: " + _), !1;
@@ -259,6 +261,12 @@
                             _.clanSteamID.GetAccountID() +
                             "/sale/") +
                         _.jsondata.sale_vanity_id
+              : _;
+          case _.k_eStoreHardwarePreview:
+            return (function (_) {
+              return _.clanSteamID.GetAccountID() === _._ && !1;
+            })(_)
+              ? `${_}hardware_v2/${_}?beta=1`
               : _;
           case _.k_eCommunityView:
             return _ + "announcements/detail/" + _;

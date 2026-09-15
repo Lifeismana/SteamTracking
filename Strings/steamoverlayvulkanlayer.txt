@@ -200,6 +200,7 @@ Vcoeff
 Voffset
 VulkanSteamOverlayBeginRendering
 VulkanSteamOverlayDeleteTexture(int)
+VulkanSteamOverlayDestroySwapChain
 VulkanSteamOverlayDrawTexturedRect
 VulkanSteamOverlayPresent
 VulkanSteamOverlayProcessCapturedFrame

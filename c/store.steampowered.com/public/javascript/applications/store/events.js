@@ -741,7 +741,13 @@
                       _ && _.Flush();
                   }
                 }
-              })(),
+              })().catch((_) => {
+                console.error(
+                  "PartnerEventRow: loading the adjacent events failed",
+                  _,
+                ),
+                  _(!1);
+              }),
               () => {
                 _.current && _.current("PartnerEventRow: unmounting");
               }
@@ -794,7 +800,7 @@
               appid: _,
             } = _,
             [_, _] = (0, _.useState)(_ ? _.GetClanEventModel(_) : void 0),
-            [_] = (0, _._)(_?.appid, {
+            [, _] = (0, _._)(_?.appid, {
               include_assets: !0,
               include_release: !0,
               include_platforms: !0,
@@ -855,7 +861,7 @@
               );
             }, [_, _, _, _, _]);
           const _ = (0, _._)(_, _._.k_eStoreNewsHub, "allowRelative");
-          if (_ || !_ || (_?.appid && !_)) {
+          if (_ || !_ || (_?.appid && _ == _._)) {
             const _ = "lang_" + (0, _.wwZ)((0, _.sfN)(_._.LANGUAGE)),
               _ = "";
             return (0, _.jsxs)("div", {

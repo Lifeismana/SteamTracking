@@ -49,7 +49,7 @@
         Bw: () => T,
         EX: () => f,
         Hx: () => x,
-        JP: () => k,
+        JP: () => I,
         LJ: () => D,
         OG: () => U,
         PH: () => r,
@@ -59,9 +59,9 @@
         yh: () => j,
       });
       var r,
-        i = n(7850),
-        s = n(27939),
-        a = n(22837),
+        a = n(7850),
+        i = n(27939),
+        s = n(22837),
         o = n(45699),
         c = n(60014),
         l = n(90626),
@@ -92,22 +92,23 @@
           (e.k_eStoreNewsHub = "newshub"),
           (e.k_eStoreOwnerPage = "store"),
           (e.k_eStoreSalePage = "sale"),
+          (e.k_eStoreHardwarePreview = "hardwarepreview"),
           (e.k_eStoreUsersNewsHub = "usernewshub");
       })(r || (r = {}));
-      const E =
+      const k =
         /(?:steampowered\.com|community\.\S+\.steam\.dev|store\.\S+\.steam\.dev|valve\.org\/store|steam\.dev\/store|\.steamchina\.com|steamcommunity\.com|valve\.org\/community|steam\.dev\/community)\/(\w+)(\/|$)/i;
-      function I(e, t) {
+      function E(e, t) {
         if (!t) return !1;
         const n = (function (e) {
-            const t = e.match(E);
+            const t = e.match(k);
             return t?.[1];
           })(window.location.href),
-          i = "news" == n,
-          s = t.GetEventType() == a.ajI,
+          a = "news" == n,
+          i = t.GetEventType() == s.ajI,
           o = (t.appid, !1);
         switch (e) {
           case r.k_eView:
-            return i && !0;
+            return a && !0;
           case r.k_eCommunityView:
           case r.k_eCommunityEdit:
           case r.k_eCommunityEditBroadcast:
@@ -118,22 +119,23 @@
           case r.k_eCommunityAnnouncementHub:
             return o;
           case r.k_eCommunityAdminPage:
-            return !s && o;
+            return !i && o;
           case r.k_eViewWebSiteHub:
-            return i;
+            return a;
           case r.k_eStoreView:
-            return i && !0;
+            return a && !0;
           case r.k_eStoreNewsHub:
           case r.k_eStoreOwnerPage:
           case r.k_eStoreUsersNewsHub:
-            return i;
+            return a;
           case r.k_eStoreSalePage:
+          case r.k_eStoreHardwarePreview:
             return !1;
           default:
             return (0, p.wT)(!1, "Unknown route specified for link: " + e), !1;
         }
       }
-      function k(e) {
+      function I(e) {
         const t =
           v.TS.COMMUNITY_BASE_URL +
           "gid/" +
@@ -170,8 +172,8 @@
         const { data: r } = (0, g.J$)(e?.appid ? { appid: e.appid } : void 0);
         if (e) return j(e, r, t, n);
       }
-      function j(e, t, n, i) {
-        const o = "relative" === i,
+      function j(e, t, n, a) {
+        const o = "relative" === a,
           c = o ? "/" : v.TS.STORE_BASE_URL,
           l = C(e.appid, e.clanSteamID, o);
         n === r.k_eView
@@ -184,7 +186,7 @@
             e.appid &&
             t &&
             e.BHasSaleUpdateLandingPageVanity(),
-          S = e.GetEventType() == a.ajI;
+          S = e.GetEventType() == s.ajI;
         switch (n) {
           case r.k_eCommunityPublish:
             return (
@@ -239,9 +241,9 @@
             );
           case r.k_eStoreSalePage:
             return e.jsondata.bSaleEnabled
-              ? e.clanSteamID.GetAccountID() == s.wv
+              ? e.clanSteamID.GetAccountID() == i.wv
                 ? `${c}charts/topnewreleases/${e.jsondata.sale_vanity_id}`
-                : e.clanSteamID.GetAccountID() == s.yT
+                : e.clanSteamID.GetAccountID() == i.yT
                   ? `${c}charts/bestofyear/${e.jsondata.sale_vanity_id}`
                   : _
                     ? `${(0, b._)(t)}/${e.GetSaleUpdateLandingPageVanity()}`
@@ -255,6 +257,12 @@
                             e.clanSteamID.GetAccountID() +
                             "/sale/") +
                         e.jsondata.sale_vanity_id
+              : c;
+          case r.k_eStoreHardwarePreview:
+            return (function (e) {
+              return e.clanSteamID.GetAccountID() === i.gt && !1;
+            })(e)
+              ? `${c}hardware_v2/${d}?beta=1`
               : c;
           case r.k_eCommunityView:
             return l + "announcements/detail/" + d;
@@ -278,18 +286,18 @@
         return L(
           e,
           t,
-          "forceAbsolute" === n || !I(t, e) ? "absolute" : "relative",
+          "forceAbsolute" === n || !E(t, e) ? "absolute" : "relative",
         );
       }
       function U(e) {
         const { eventModel: t, route: n, bPopup: r = !0 } = e,
-          s = I(n, t),
-          a = L(t, n, s ? "relative" : "absolute");
+          i = E(n, t),
+          s = L(t, n, i ? "relative" : "absolute");
         return (
           l.useEffect(() => {
-            a && (r ? window.open(a) : window.location.assign(a));
-          }, [r, a]),
-          s && a ? (0, i.jsx)(u.rd, { push: !0, to: a }) : null
+            s && (r ? window.open(s) : window.location.assign(s));
+          }, [r, s]),
+          i && s ? (0, a.jsx)(u.rd, { push: !0, to: s }) : null
         );
       }
       function x(e, t, n) {
@@ -298,42 +306,42 @@
       }
       function H(e) {
         const { eventModel: t, preferredFocus: n } = e,
-          { bCanUseLink: s } = l.useContext(_.I),
-          a = (0, c.n9)(),
+          { bCanUseLink: i } = l.useContext(_.I),
+          s = (0, c.n9)(),
           m = (0, u.W6)(),
-          p = s && I(e.route, t),
+          p = i && E(e.route, t),
           h = L(t, e.route, p ? "relative" : "absolute"),
           v = !p && h ? (0, S.NT)(h) : h,
-          b = p || !v ? v : (0, d.wJ)(v, a),
+          b = p || !v ? v : (0, d.wJ)(v, s),
           g = L(t, r.k_eViewWebSiteHub, "absolute"),
-          E = Boolean(e.route != r.k_eViewWebSiteHub)
+          k = Boolean(e.route != r.k_eViewWebSiteHub)
             ? w.Z.Localize("#EventBrowse_MoreEventsBtn")
             : "",
-          k = l.useCallback(() => {
+          I = l.useCallback(() => {
             g && window.location.assign(g);
           }, [g]);
         return t
           ? p
-            ? (0, i.jsx)(o.Ii, {
+            ? (0, a.jsx)(o.Ii, {
                 style: e.style,
                 className: e.className,
                 href: m.createHref({ pathname: b }),
                 onClick: (t) => {
                   b && (e.onClick?.(t), m.push(b), t.preventDefault());
                 },
-                onOptionsActionDescription: E,
-                onOptionsButton: E ? k : void 0,
+                onOptionsActionDescription: k,
+                onOptionsButton: k ? I : void 0,
                 preferredFocus: n,
                 children: e.children,
               })
-            : (0, i.jsx)(o.Ii, {
+            : (0, a.jsx)(o.Ii, {
                 href: b,
                 style: e.style,
                 className: e.className,
                 onClick: e.onClick,
                 preferredFocus: n,
-                onOptionsActionDescription: E,
-                onOptionsButton: E ? k : void 0,
+                onOptionsActionDescription: k,
+                onOptionsButton: k ? I : void 0,
                 children: e.children,
               })
           : null;
@@ -341,11 +349,11 @@
     },
     45334: (e, t, n) => {
       "use strict";
-      n.d(t, { $e: () => r, B7: () => s, Pe: () => a, Pv: () => i });
+      n.d(t, { $e: () => r, B7: () => i, Pe: () => s, Pv: () => a });
       const r = 1,
-        i = 2,
-        s = 4,
-        a = 1073741824;
+        a = 2,
+        i = 4,
+        s = 1073741824;
     },
     62349: (e, t, n) => {
       "use strict";
@@ -360,25 +368,25 @@
           )
         );
       }
-      function i(e) {
+      function a(e) {
         return e && e.related_items?.standalone_demo_appid
           ? e.related_items?.standalone_demo_appid
           : [];
       }
-      n.d(t, { J: () => r, S: () => i });
+      n.d(t, { J: () => r, S: () => a });
     },
     71420: (e, t, n) => {
       "use strict";
-      n.d(t, { _: () => s, l: () => a });
+      n.d(t, { _: () => i, l: () => s });
       var r = n(66418),
-        i = n(62349);
-      function s(e, t = !1) {
+        a = n(62349);
+      function i(e, t = !1) {
         if (e)
-          return t && (0, i.J)(e)
-            ? `${r.TS.STORE_BASE_URL}app/${((0, i.S))(e)[0]}`
+          return t && (0, a.J)(e)
+            ? `${r.TS.STORE_BASE_URL}app/${((0, a.S))(e)[0]}`
             : `${r.TS.STORE_BASE_URL}${e.store_url_path}`;
       }
-      function a() {
+      function s() {
         window.location.href = `${r.TS.STORE_BASE_URL}login/?redir=${encodeURIComponent(window.location.href)}`;
       }
     },
@@ -386,9 +394,9 @@
       "use strict";
       n.d(t, { IU: () => l, by: () => u, sc: () => o });
       var r = n(78327),
-        i = n(85044),
-        s = n(81393),
-        a = n(45334);
+        a = n(85044),
+        i = n(81393),
+        s = n(45334);
       const o = 0,
         c = "061818254b2c99ac49e6626adb128ed1282a392f",
         l = 120;
@@ -427,7 +435,7 @@
           return this.m_eAppType;
         }
         BIsApplicationOrTool() {
-          return this.apptype == a.B7 || this.apptype == a.Pv;
+          return this.apptype == s.B7 || this.apptype == s.Pv;
         }
         BuildAppURL(e, t) {
           return e
@@ -437,7 +445,7 @@
                 "/" +
                 e +
                 ".jpg"
-            : (0, i.t)(t);
+            : (0, a.t)(t);
         }
         DeserializeFromMessage(e) {
           (this.m_bInitialized = !0),
@@ -447,7 +455,7 @@
             (this.m_eAppType = e.app_type());
         }
         DeserializeFromAppOverview(e) {
-          e.icon_hash() && e.app_type() != a.Pe
+          e.icon_hash() && e.app_type() != s.Pe
             ? ((this.m_bInitialized = !0),
               (this.m_strName = e.display_name()),
               (this.m_strIconURL = e.icon_hash()),
@@ -466,7 +474,7 @@
         }
         SerializeToCacheObject() {
           return (
-            (0, s.wT)(
+            (0, i.wT)(
               this.m_bInitialized,
               "Attempting to serialize an uninitialized AppInfo object for caching!",
             ),
@@ -484,22 +492,22 @@
     },
     85044: (e, t, n) => {
       "use strict";
-      n.d(t, { d: () => i, t: () => s });
+      n.d(t, { d: () => a, t: () => i });
       var r = n(78327);
-      const i = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
-      function s(e, t) {
+      const a = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
+      function i(e, t) {
         let n = ".jpg";
-        (e && "0000000000000000000000000000000000000000" !== e) || (e = i),
+        (e && "0000000000000000000000000000000000000000" !== e) || (e = a),
           44 == e.length && ((n = e.substr(-4)), (e = e.substr(0, 40)));
-        let s = r.TS.AVATAR_BASE_URL;
+        let i = r.TS.AVATAR_BASE_URL;
         return (
-          s ||
-            ((s = r.TS.MEDIA_CDN_COMMUNITY_URL + "images/avatars/"),
-            (s += e.substr(0, 2) + "/")),
-          (s += e),
-          t && "small" != t && (s += "_" + t),
-          (s += n),
-          s
+          i ||
+            ((i = r.TS.MEDIA_CDN_COMMUNITY_URL + "images/avatars/"),
+            (i += e.substr(0, 2) + "/")),
+          (i += e),
+          t && "small" != t && (i += "_" + t),
+          (i += n),
+          i
         );
       }
     },
@@ -507,31 +515,31 @@
       "use strict";
       n.d(t, { Hh: () => u, vs: () => l });
       var r = n(7850),
-        i = n(90626),
-        s = n(74568),
-        a = n(56330),
+        a = n(90626),
+        i = n(74568),
+        s = n(56330),
         o = n(61859),
         c = n(22797);
       function l(e) {
-        const [t, n] = (0, i.useState)(() => Boolean(e)),
-          [r, s] = (0, i.useState)(!1),
-          [a, o] = (0, i.useState)(!1),
-          [c, l] = (0, i.useState)(null),
-          [u, d] = (0, i.useState)(null),
-          [m, _] = (0, i.useState)(null),
-          [p, S] = (0, i.useState)(null),
-          [h, v] = (0, i.useState)(null);
+        const [t, n] = (0, a.useState)(() => Boolean(e)),
+          [r, i] = (0, a.useState)(!1),
+          [s, o] = (0, a.useState)(!1),
+          [c, l] = (0, a.useState)(null),
+          [u, d] = (0, a.useState)(null),
+          [m, _] = (0, a.useState)(null),
+          [p, S] = (0, a.useState)(null),
+          [h, v] = (0, a.useState)(null);
         return {
           bLoading: t,
           bError: r,
-          bSuccess: a,
+          bSuccess: s,
           strError: c,
           strSuccess: u,
           elSuccess: p,
           elError: m,
           strThrobber: h,
           fnSetLoading: n,
-          fnSetError: s,
+          fnSetError: i,
           fnSetSuccess: o,
           fnSetStrError: l,
           fnSetStrSuccess: d,
@@ -544,7 +552,7 @@
         const {
             strDialogTitle: t,
             state: n,
-            closeModal: i,
+            closeModal: a,
             strThrobber: l,
           } = e,
           {
@@ -558,15 +566,15 @@
             strThrobber: v,
           } = n;
         return d || _ || h
-          ? (0, r.jsxs)(s.o0, {
+          ? (0, r.jsxs)(i.o0, {
               strTitle: t,
               bAlertDialog: !0,
-              closeModal: i,
-              className: a.SuccessErrorDialog,
+              closeModal: a,
+              className: s.SuccessErrorDialog,
               children: [
                 Boolean(_) &&
                   (0, r.jsx)("div", {
-                    className: a.ErrorStylesWithIcon,
+                    className: s.ErrorStylesWithIcon,
                     children:
                       _ || (0, o.we)("#Error_ErrorCommunicatingWithNetwork"),
                   }),
@@ -574,17 +582,17 @@
               ],
             })
           : m || p || S
-            ? (0, r.jsx)(s.o0, {
+            ? (0, r.jsx)(i.o0, {
                 strTitle: t,
                 strDescription: p || (0, o.we)("#EventDisplay_Share_Success"),
                 bAlertDialog: !0,
-                closeModal: i,
-                className: a.SuccessErrorDialog,
+                closeModal: a,
+                className: s.SuccessErrorDialog,
                 children: (0, r.jsx)(r.Fragment, { children: Boolean(S) && S }),
               })
-            : (0, r.jsx)(s.o0, {
+            : (0, r.jsx)(i.o0, {
                 strTitle: t,
-                className: a.SuccessErrorDialog,
+                className: s.SuccessErrorDialog,
                 bProgressDialog: !0,
                 closeModal: () => {},
                 children: (0, r.jsx)(c.t, {
@@ -597,21 +605,21 @@
     },
     26161: (e, t, n) => {
       "use strict";
-      n.d(t, { H: () => s });
+      n.d(t, { H: () => i });
       var r = n(22837),
-        i = n(30470);
-      const s = () => (i.TS.EUNIVERSE === r.Rv ? 2581 : 45267781);
+        a = n(30470);
+      const i = () => (a.TS.EUNIVERSE === r.Rv ? 2581 : 45267781);
     },
     4434: (e, t, n) => {
       "use strict";
-      n.d(t, { m: () => a });
+      n.d(t, { m: () => s });
       var r = n(41735),
-        i = n.n(r),
-        s = n(90626);
-      function a(e) {
-        const t = s.useRef(i().CancelToken.source());
+        a = n.n(r),
+        i = n(90626);
+      function s(e) {
+        const t = i.useRef(a().CancelToken.source());
         return (
-          s.useEffect(() => {
+          i.useEffect(() => {
             const n = t.current;
             return () => n.cancel(e ? `${e}: unmounting` : "unmounting");
           }, [e]),
@@ -623,10 +631,10 @@
       "use strict";
       n.r(t), n.d(t, { default: () => j });
       var r = n(7850),
-        i = n(90626),
-        s = n(78327),
-        a = n(41735),
-        o = n.n(a),
+        a = n(90626),
+        i = n(78327),
+        s = n(41735),
+        o = n.n(s),
         c = n(61859),
         l = n(22837),
         u = n(37085),
@@ -640,9 +648,9 @@
         w = n.n(v),
         b = n(32803),
         g = n(12155),
-        E = n(81393),
-        I = n(32754),
-        k = n(56283),
+        k = n(81393),
+        E = n(32754),
+        I = n(56283),
         f = n(78395),
         y = n(71298),
         C = n(21869),
@@ -651,9 +659,9 @@
         L = n(26408);
       function j(e) {
         const { clanAccountID: t } = e,
-          n = (0, S.YR)(() => new d.b(t, s.TS.EUNIVERSE, l.P3F, 0)),
+          n = (0, S.YR)(() => new d.b(t, i.TS.EUNIVERSE, l.P3F, 0)),
           {
-            bIsFetching: a,
+            bIsFetching: s,
             rgEventModels: u,
             fnRefetch: _,
           } = (function (e) {
@@ -668,34 +676,34 @@
               ],
               queryFn: async () => {
                 const t =
-                    s.TS.STORE_BASE_URL +
+                    i.TS.STORE_BASE_URL +
                     "/curator/" +
                     e.GetAccountID() +
                     "/admin/ajaxgetcreatorhomeevents",
-                  n = { l: s.TS.LANGUAGE },
+                  n = { l: i.TS.LANGUAGE },
                   r = await o()
                     .get(t, { params: n })
                     .catch(() => {}),
-                  i = new Array();
-                i.push(
+                  a = new Array();
+                a.push(
                   ...r.data.creatorhome_event_gids.map((t) =>
                     p.MX.LoadHiddenPartnerEvent(e, t),
                   ),
                 );
-                return await Promise.all(i);
+                return await Promise.all(a);
               },
             });
             return { bIsFetching: n, rgEventModels: t, fnRefetch: r };
           })(n),
-          v = `${s.TS.COMMUNITY_BASE_URL}gid/${n.ConvertTo64BitString()}/partnerevents/create?type=creatorhome`,
-          { creatorHome: b, isFetching: g, refetch: E } = (0, D.FV)(t),
+          v = `${i.TS.COMMUNITY_BASE_URL}gid/${n.ConvertTo64BitString()}/partnerevents/create?type=creatorhome`,
+          { creatorHome: b, isFetching: g, refetch: k } = (0, D.FV)(t),
           f = b?.GetLinkedEventGID(),
           y = f && u?.some((e) => f == e.GID),
-          C = a || g,
+          C = s || g,
           A = () => {
-            _(), E();
+            _(), k();
           },
-          L = i.useMemo(
+          L = a.useMemo(
             () => [...(u ?? [])].sort((e, t) => t.startTime - e.startTime),
             [u],
           ),
@@ -703,10 +711,10 @@
           U = L.filter((e) => !f || f != e.GID);
         return (0, r.jsxs)(r.Fragment, {
           children: [
-            (0, r.jsx)(I.he, {
+            (0, r.jsx)(E.he, {
               toolTipContent: (0, c.we)("#CreatorHome_EventLink_Create_ttip"),
               style: { width: "25%" },
-              children: (0, r.jsx)(k.jn, {
+              children: (0, r.jsx)(I.jn, {
                 onClick: () => window.location.assign(v),
                 children: (0, c.we)("#CreatorHome_EventLink_Create"),
               }),
@@ -798,45 +806,45 @@
         });
       }
       function T(e) {
-        const { clanSteamID: t, creatorHome: n, eventModel: a, refetch: d } = e,
-          [m, p] = i.useState(!1),
+        const { clanSteamID: t, creatorHome: n, eventModel: s, refetch: d } = e,
+          [m, p] = a.useState(!1),
           S = (0, _.n)({
             mutationFn: async (e) => {
               const t =
-                  s.TS.STORE_BASE_URL +
+                  i.TS.STORE_BASE_URL +
                   "/curator/" +
                   e.clanSteamID.GetAccountID() +
                   "/admin/ajaxdeletecreatorhomeevent",
                 n = new FormData();
-              n.append("sessionid", (0, s.KC)()), n.append("gid", e.gid);
+              n.append("sessionid", (0, i.KC)()), n.append("gid", e.gid);
               const r = await o().post(t, n, { withCredentials: !0 });
               return r?.data?.success == u.R;
             },
           }),
-          [h, v] = i.useState(!1),
-          [E, I] = i.useState(!1),
-          k = (0, _.n)({
+          [h, v] = a.useState(!1),
+          [k, E] = a.useState(!1),
+          I = (0, _.n)({
             mutationFn: async (e) => {
               const t =
-                  s.TS.STORE_BASE_URL +
+                  i.TS.STORE_BASE_URL +
                   "/curator/" +
                   e.clanSteamID.GetAccountID() +
                   "/admin/ajaxselectcreatorhome",
                 n = new FormData();
-              n.append("sessionid", (0, s.KC)()), n.append("gid", e.gid);
+              n.append("sessionid", (0, i.KC)()), n.append("gid", e.gid);
               const r = await o().post(t, n, { withCredentials: !0 });
               return r?.data?.success == u.R;
             },
           }),
           f = n?.GetLinkedEventGID(),
-          y = f && f == a.GID,
-          C = !y && a.BIsVisibleEvent(),
-          D = `${s.TS.COMMUNITY_BASE_URL}gid/${t.ConvertTo64BitString()}/partnerevents/clone/${a.GID}?redir=${window.location.href}`;
+          y = f && f == s.GID,
+          C = !y && s.BIsVisibleEvent(),
+          D = `${i.TS.COMMUNITY_BASE_URL}gid/${t.ConvertTo64BitString()}/partnerevents/clone/${s.GID}?redir=${window.location.href}`;
         return (0, r.jsxs)(r.Fragment, {
           children: [
             (0, r.jsx)(U, {
               active: m,
-              mutateAsync: () => S.mutateAsync({ clanSteamID: t, gid: a.GID }),
+              mutateAsync: () => S.mutateAsync({ clanSteamID: t, gid: s.GID }),
               onClose: (e) => {
                 p(!1), e && d();
               },
@@ -848,7 +856,7 @@
             }),
             (0, r.jsx)(U, {
               active: h,
-              mutateAsync: () => k.mutateAsync({ clanSteamID: t, gid: a.GID }),
+              mutateAsync: () => I.mutateAsync({ clanSteamID: t, gid: s.GID }),
               onClose: (e) => {
                 v(!1), e && d();
               },
@@ -859,10 +867,10 @@
               strError: (0, c.we)("#CreatorHome_EventLink_Select_Dialog_Error"),
             }),
             (0, r.jsx)(U, {
-              active: E,
-              mutateAsync: () => k.mutateAsync({ clanSteamID: t, gid: "0" }),
+              active: k,
+              mutateAsync: () => I.mutateAsync({ clanSteamID: t, gid: "0" }),
               onClose: (e) => {
-                I(!1), e && d();
+                E(!1), e && d();
               },
               strTitle: (0, c.we)("#CreatorHome_EventLink_Clear"),
               strDescription: (0, c.we)(
@@ -878,11 +886,11 @@
                   children: [
                     (0, r.jsx)("span", {
                       className: w().Label,
-                      children: a.GetNameWithFallback(
-                        (0, l.sfN)(s.TS.LANGUAGE),
+                      children: s.GetNameWithFallback(
+                        (0, l.sfN)(i.TS.LANGUAGE),
                       ),
                     }),
-                    !a.BIsVisibleEvent() &&
+                    !s.BIsVisibleEvent() &&
                       (0, r.jsxs)("span", {
                         className: w().UnpublishedState,
                         children: [
@@ -899,7 +907,7 @@
                           }),
                         ],
                       }),
-                    a.BIsVisibleEvent() &&
+                    s.BIsVisibleEvent() &&
                       !y &&
                       (0, r.jsxs)("span", {
                         className: w().PublishedAndNotSelectedState,
@@ -919,7 +927,7 @@
                       }),
                     C
                       ? (0, r.jsx)(x, {
-                          eventModel: a,
+                          eventModel: s,
                           label: (0, c.we)("#CreatorHome_EventLink_Select"),
                           icon: (0, r.jsx)(g.FEq, {}),
                           onClick: () => v(!0),
@@ -942,10 +950,10 @@
                         }),
                     y &&
                       (0, r.jsx)(x, {
-                        eventModel: a,
+                        eventModel: s,
                         label: (0, c.we)("#CreatorHome_EventLink_Clear"),
                         icon: (0, r.jsx)(g.FEq, { filled: !0 }),
-                        onClick: () => I(!0),
+                        onClick: () => E(!0),
                         tooltip: (0, c.we)("#CreatorHome_EventLink_Clear_ttip"),
                       }),
                   ],
@@ -954,26 +962,26 @@
                   className: w().ActionsRow,
                   children: [
                     (0, r.jsx)(x, {
-                      eventModel: a,
+                      eventModel: s,
                       label: (0, c.we)("#Button_Edit"),
                       icon: (0, r.jsx)(g.ffu, {}),
                       route: b.PH.k_eCommunityEdit,
                     }),
                     (0, r.jsx)(x, {
-                      eventModel: a,
+                      eventModel: s,
                       label: (0, c.we)("#Button_Preview"),
                       icon: (0, r.jsx)(g.Exy, {}),
                       route: b.PH.k_eCommunityPreviewSale,
                     }),
                     (0, r.jsx)(x, {
-                      eventModel: a,
+                      eventModel: s,
                       label: (0, c.we)("#Button_Clone"),
                       icon: (0, r.jsx)(g.rI_, {}),
                       onClick: () => window.location.assign(D),
                     }),
                     !y &&
                       (0, r.jsx)(x, {
-                        eventModel: a,
+                        eventModel: s,
                         label: (0, c.we)("#Button_Delete"),
                         icon: (0, r.jsx)(g.lMJ, {}),
                         onClick: () => p(!0),
@@ -989,9 +997,9 @@
         const {
             active: t,
             mutateAsync: n,
-            onClose: i,
-            strTitle: s,
-            strDescription: a,
+            onClose: a,
+            strTitle: i,
+            strDescription: s,
             strError: o,
           } = e,
           c = (0, y.vs)();
@@ -999,19 +1007,19 @@
           return c.bLoading
             ? (0, r.jsx)(C.E, {
                 active: !0,
-                children: (0, r.jsx)(y.Hh, { state: c, strDialogTitle: s }),
+                children: (0, r.jsx)(y.Hh, { state: c, strDialogTitle: i }),
               })
             : (0, r.jsx)(C.E, {
                 active: !0,
                 children: (0, r.jsx)(f.o0, {
-                  strTitle: s,
-                  strDescription: a,
-                  onCancel: () => i(!1),
+                  strTitle: i,
+                  strDescription: s,
+                  onCancel: () => a(!1),
                   bOKDisabled: c.bLoading,
                   onOK: async () => {
                     c.fnSetLoading(!0);
                     try {
-                      (await n()) ? i(!0) : c.fnSetElError(o);
+                      (await n()) ? a(!0) : c.fnSetElError(o);
                     } catch (e) {
                       c.fnSetElError(o);
                     }
@@ -1023,25 +1031,25 @@
         const {
           eventModel: t,
           label: n,
-          tooltip: i,
-          icon: s,
-          route: a,
+          tooltip: a,
+          icon: i,
+          route: s,
           onClick: o,
         } = e;
-        (0, E.wT)(a || o, "Must specify route or onClick");
+        (0, k.wT)(s || o, "Must specify route or onClick");
         const c =
           o ||
           (() => {
-            const e = a ? (0, b.yh)(t, null, a, "absolute") : void 0;
+            const e = s ? (0, b.yh)(t, null, s, "absolute") : void 0;
             window.location.assign(e);
           });
         return (0, r.jsxs)("div", {
           className: w().ManageButton,
           onClick: c,
           children: [
-            (0, r.jsx)("div", { className: w().SVGIcon, children: s }),
+            (0, r.jsx)("div", { className: w().SVGIcon, children: i }),
             n,
-            i && (0, r.jsx)(L.o, { tooltip: i, small: !0 }),
+            a && (0, r.jsx)(L.o, { tooltip: a, small: !0 }),
           ],
         });
       }

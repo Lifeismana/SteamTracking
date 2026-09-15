@@ -369,9 +369,9 @@
             return e?.verified;
         }
       }
-      var f = t(59952),
-        I = t(85320),
-        y = t(35400),
+      var I = t(59952),
+        f = t(85320),
+        y = t(72668),
         D = t(6878),
         x = t(22837),
         b = t(1090),
@@ -472,8 +472,8 @@
         L = t(20446),
         P = t(10026),
         M = t.n(P),
-        H = t(76217),
-        R = t(68009),
+        R = t(76217),
+        H = t(68009),
         W = t(1062),
         $ = t(12155),
         q = t(4434),
@@ -485,9 +485,9 @@
           [a, i] = (0, s.useState)(!1),
           l = (0, q.m)("GameHoverFollowButton"),
           { elDialogElement: d, fnShowLogonDialog: m } = (0, U.l)(),
-          _ = (0, R.Fh)(n),
+          _ = (0, H.Fh)(n),
           { mutateAsync: w } = (0, W.L)(n, !_, void 0);
-        return (0, o.jsxs)(H.Z, {
+        return (0, o.jsxs)(R.Z, {
           className: (0, O.A)(z().FollowButton, t),
           onClick: async (e) => {
             e.preventDefault(),
@@ -688,8 +688,8 @@
           ? (0, o.jsx)(ve.hJ, { packageID: n, compareID: t })
           : null;
       }
-      var fe = t(97670),
-        Ie = t(39733),
+      var Ie = t(97670),
+        fe = t(39733),
         ye = t(56283),
         De = t(92757),
         xe = t(39256),
@@ -697,11 +697,11 @@
         Ce = t(7193),
         je = t(39199),
         ke = t(60860),
-        Ne = t(48636),
+        Ne = t(68877),
         Be = t(40353);
       function Ge(e) {
         const { eventModel: n, nEventBadgeID: t } = e,
-          r = (0, Ie.fy)(t);
+          r = (0, fe.fy)(t);
         if (r?.level > 0) {
           let e = r.level;
           if (n?.BHasSaleEnabled()) {
@@ -746,7 +746,7 @@
       }
       function Ae(e) {
         const { event: n } = e.context,
-          t = Number.parseInt((0, f.j$)(e.args, "eventid"));
+          t = Number.parseInt((0, I.j$)(e.args, "eventid"));
         return u.iA.logged_in && t
           ? (0, o.jsx)(Ge, { nEventBadgeID: t, eventModel: n })
           : null;
@@ -754,7 +754,7 @@
       function Fe(e) {
         const { nDoorIndex: n, children: t } = e,
           r = (0, y.OM)(n),
-          { fnOpenDoor: a } = (0, y.OC)(),
+          a = (0, y.gP)(),
           [i, l] = s.useState(!1),
           [d, m] = s.useState(!1),
           { elDialogElement: _, fnShowLogonDialog: w } = (0, U.l)();
@@ -766,7 +766,7 @@
                 i ||
                   (u.iA.logged_in
                     ? (l(!0),
-                      a(n, !0, null, !1)
+                      a({ iDoorIndex: n })
                         .then((e) => {
                           e || m(!0), l(!1);
                         })
@@ -792,14 +792,14 @@
         });
       }
       function Te(e) {
-        const n = Number.parseInt((0, f.j$)(e.args)) || 0;
+        const n = Number.parseInt((0, I.j$)(e.args)) || 0;
         return n >= 0 && n < 32
           ? (0, o.jsx)(Fe, { nDoorIndex: n, children: e.children })
           : null;
       }
       const Ee = (0, De.y)(Ne.H);
       function Oe(e) {
-        const n = Number.parseInt((0, f.j$)(e.args)),
+        const n = Number.parseInt((0, I.j$)(e.args)),
           { event: t, showErrorInfo: r } = e.context;
         if (n) {
           const s = t?.jsondata?.sale_sections?.findIndex(
@@ -834,11 +834,11 @@
       let Le = null;
       function Pe(e) {
         const { event: n } = e.context,
-          t = Number.parseInt((0, f.j$)(e.args, "appid")),
-          r = Number.parseInt((0, f.j$)(e.args, "itemdefid")),
-          s = Number.parseInt((0, f.j$)(e.args, "maxquantity")),
-          a = (0, f.j$)(e.args, "calltoaction");
-        return (0, fe.gS)(t, r, !1) && n
+          t = Number.parseInt((0, I.j$)(e.args, "appid")),
+          r = Number.parseInt((0, I.j$)(e.args, "itemdefid")),
+          s = Number.parseInt((0, I.j$)(e.args, "maxquantity")),
+          a = (0, I.j$)(e.args, "calltoaction");
+        return (0, Ie.gS)(t, r, !1) && n
           ? (0, o.jsx)(A.f, {
               language: e.language,
               clanAccountID: n.clanSteamID.GetAccountID(),
@@ -854,13 +854,13 @@
       function Me(e) {
         const n = p();
         if (!n) return (0, o.jsx)(N.t, { size: "small" });
-        const t = Number.parseInt((0, f.j$)(e.args));
+        const t = Number.parseInt((0, I.j$)(e.args));
         return (0, o.jsx)("span", { children: (0, _e.D)(Number(h(n, t))) });
       }
-      function He(e) {
-        const n = (0, I.j)(u.iA.accountid, "library");
+      function Re(e) {
+        const n = (0, f.jR)(u.iA.accountid, "library");
         if (!n) return (0, o.jsx)(N.t, { size: "small" });
-        const t = Number.parseInt((0, f.j$)(e.args));
+        const t = Number.parseInt((0, I.j$)(e.args));
         let r = n.verifiedList?.length || 0;
         switch (t) {
           case d.sd:
@@ -874,11 +874,11 @@
         }
         return (0, o.jsx)("span", { children: (0, _e.D)(Number(r)) });
       }
-      function Re(e) {
-        const n = Number.parseInt((0, f.j$)(e.args)),
+      function He(e) {
+        const n = Number.parseInt((0, I.j$)(e.args)),
           t =
             "hide" in e.args &&
-            Boolean(Number.parseInt((0, f.j$)(e.args, "hide")));
+            Boolean(Number.parseInt((0, I.j$)(e.args, "hide")));
         return n >= 0
           ? (0, o.jsx)(We, { nDoorIndex: n, bHide: t, children: e.children })
           : null;
@@ -894,14 +894,14 @@
       }
       function $e(e) {
         if (u.iA.logged_in) {
-          const n = Number.parseInt((0, f.j$)(e.args)),
-            t = Number.parseInt((0, f.j$)(e.args, "mod"));
+          const n = Number.parseInt((0, I.j$)(e.args)),
+            t = Number.parseInt((0, I.j$)(e.args, "mod"));
           if (t > 0 && n < t && u.iA.accountid % t == n) return e.children;
         }
         return null;
       }
       function qe(e) {
-        const n = (0, f.j$)(e.args);
+        const n = (0, I.j$)(e.args);
         return n?.trim().length > 0
           ? (0, o.jsx)("div", { className: n.trim(), children: e.children })
           : (0, o.jsx)(o.Fragment, { children: e.children });
@@ -919,14 +919,14 @@
         });
       }
       function Qe(e) {
-        let n = (0, f.j$)(e.args);
+        let n = (0, I.j$)(e.args);
         return n
           ? (0, o.jsx)(ge, { giveawayid: n })
           : (0, o.jsx)(s.Fragment, {});
       }
       function ze(e) {
         const { showErrorInfo: n, event: t } = e.context,
-          r = Number.parseInt((0, f.j$)(e.args)),
+          r = Number.parseInt((0, I.j$)(e.args)),
           a = s.useMemo(() => {
             if (t)
               return t.jsondata.sale_sections?.find(
@@ -939,11 +939,11 @@
               );
           }, [t]);
         if (r && a) {
-          const n = Number.parseInt((0, f.j$)(e.args, "depositpackageid")),
-            t = Number.parseInt((0, f.j$)(e.args, "psulesspackageid")),
-            s = (0, f.j$)(e.args, "out_of_stock_override"),
-            i = (0, f.j$)(e.args, "delivery_override"),
-            l = (0, f.j$)(e.args, "delivery_override_out_of_stock");
+          const n = Number.parseInt((0, I.j$)(e.args, "depositpackageid")),
+            t = Number.parseInt((0, I.j$)(e.args, "psulesspackageid")),
+            s = (0, I.j$)(e.args, "out_of_stock_override"),
+            i = (0, I.j$)(e.args, "delivery_override"),
+            l = (0, I.j$)(e.args, "delivery_override_out_of_stock");
           return (0, o.jsx)(S, {
             section: a,
             reservationPackageID: r,
@@ -957,7 +957,7 @@
         return (0, o.jsx)(o.Fragment, {});
       }
       var Ze = t(5729),
-        Xe = t(67680);
+        Xe = t(91374);
       function Ve(e) {
         const { bSalePage: n } = e,
           [t, d] = s.useState(!1);
@@ -1003,14 +1003,14 @@
                         ],
                         [
                           "deckcompatuserlibrarycount",
-                          { Constructor: He, autocloses: !1 },
+                          { Constructor: Re, autocloses: !1 },
                         ],
                         ["giveawayinfo", { Constructor: Qe, autocloses: !1 }],
                         ["price", { Constructor: pe, autocloses: !1 }],
                         ["pricesavings", { Constructor: he, autocloses: !1 }],
                         [
                           "eventdoorvisibility",
-                          { Constructor: Re, autocloses: !1 },
+                          { Constructor: He, autocloses: !1 },
                         ],
                         ["chooseaccount", { Constructor: $e, autocloses: !1 }],
                         [

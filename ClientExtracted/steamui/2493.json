@@ -16,6 +16,8 @@
     "VerifiedProgram_DeckDisclaimer": "Trailer may not represent actual Steam Deck gameplay",
     "StoreItemFound": "%1$s Found (%2$s)",
     "StoreItemNotFound": "Not Found (%1$s)",
+    "SteamReviewSection_AppID": "Reviews From App",
+    "SteamReviewSection_AppID_ttip": "The app whose Steam reviews are shown in this section, and the app a customer's review is written against.",
     "SteamURLAccepted": "%1$s URL is Accepted",
     "SteamURLInvalid": "Error URL not to a Steam property (store/community)",
     "AnchorHashInputInvalid": "Invalid Input",

@@ -2024,22 +2024,36 @@
 	"group"
 	{
 		"id"		"6"
-		"mode"		"absolute_mouse"
+		"mode"		"scrollwheel"
+		"name"		""
+		"description"		""
 		"inputs"
 		{
-			"click"
+			"scroll_clockwise"
 			{
 				"activators"
 				{
-					"Soft_Press"
+					"Full_Press"
 					{
 						"bindings"
 						{
-							"binding"		"game_action WebBrowser BrowserOpenInNewTab, Open link in new tab"
+							"binding"		"mouse_wheel SCROLL_DOWN"
 						}
-						"settings"
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+			"scroll_counterclockwise"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
 						{
-							"haptic_intensity"		"1"
+							"binding"		"mouse_wheel SCROLL_UP"
 						}
 					}
 				}
@@ -2047,8 +2061,7 @@
 		}
 		"settings"
 		{
-			"virtual_mode"		"1"
-			"friction"		"1"
+			"scroll_angle"		"160"
 		}
 		"gameactions"
 		{

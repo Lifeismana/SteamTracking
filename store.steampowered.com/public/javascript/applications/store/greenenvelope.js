@@ -571,7 +571,8 @@
         u = n(63340);
       const _ = new WeakSet();
       function p(e = i.L) {
-        if ("undefined" == typeof window) return;
+        if ("undefined" == typeof window || "undefined" == typeof document)
+          return;
         if (_.has(e)) return;
         const t = (0, l.Fd)("groupvanityinfo", "application_config");
         (void 0 === t && "complete" != document.readyState) ||

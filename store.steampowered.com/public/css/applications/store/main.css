@@ -1127,6 +1127,7 @@ dialog._32QRvPPBL733SpNR9x0Gp3::backdrop {
   letter-spacing: initial;
   text-align: initial;
   font-weight: initial;
+  white-space: initial;
   position: fixed;
   inset: 0;
   width: 100%;
@@ -8505,6 +8506,11 @@ button._2Cp17yynz2h_StEQZcNnqB {
   --color-text-red-body: #c40000;
   --color-text-red-description: #af0000;
   --color-text-red-note: #6b0000;
+  --color-text-yellow-title: #f6eeb4;
+  --color-text-yellow-subtitle: #ffff57;
+  --color-text-yellow-body: #836a21;
+  --color-text-yellow-description: #524202;
+  --color-text-yellow-note: #433500;
   --color-text-green-title: #00f300;
   --color-text-green-subtitle: #00db00;
   --color-text-green-body: #00c400;
@@ -9544,6 +9550,14 @@ button._2Cp17yynz2h_StEQZcNnqB {
   --color-text-body-body: var(--color-text-red-body);
   --color-text-body-description: var(--color-text-red-description);
   --color-text-body-note: var(--color-text-red-note);
+}
+:root:has(._2KPA3I9eXE9r251_-GX_iv > div[data-body-text-color="text-yellow"]),
+:root [data-body-text-color="text-yellow"] {
+  --color-text-body-title: var(--color-text-yellow-title);
+  --color-text-body-subtitle: var(--color-text-yellow-subtitle);
+  --color-text-body-body: var(--color-text-yellow-body);
+  --color-text-body-description: var(--color-text-yellow-description);
+  --color-text-body-note: var(--color-text-yellow-note);
 }
 :root:has(._2KPA3I9eXE9r251_-GX_iv > div[data-body-text-color="text-green"]),
 :root [data-body-text-color="text-green"] {

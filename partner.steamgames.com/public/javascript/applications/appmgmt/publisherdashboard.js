@@ -159,7 +159,7 @@
     },
     30200: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => wn });
+      n.r(t), n.d(t, { default: () => fn });
       var a = n(7850),
         s = n(90626),
         i = n(78327),
@@ -484,15 +484,15 @@
       var S,
         I = n(26408),
         U = n(95034),
-        M = n(27989),
-        P = n(55263),
+        P = n(27989),
+        M = n(55263),
         L = n(30570),
         G = n(91675),
-        k = n(59403),
-        F = n(38964);
+        F = n(59403),
+        k = n(38964);
       function B(e) {
         const { app: t } = e,
-          [n] = (0, P.G6)(t.appid, L.c6.qI, {
+          [n] = (0, M.G6)(t.appid, L.c6.qI, {
             include_assets: !0,
             include_release: !0,
           }),
@@ -509,55 +509,55 @@
           r = i.TS.PARTNER_BASE_URL + "apps/landing/" + t.appid,
           o = s ? n.GetName() : t.name,
           d = n?.GetAssets().GetHeaderURL();
-        return (0, a.jsxs)(F.b1, {
+        return (0, a.jsxs)(k.b1, {
           hasImage: !!d,
           children: [
-            (0, a.jsx)(F.zS, { imageUrl: d, url: r }),
-            (0, a.jsxs)(F.Q1, {
+            (0, a.jsx)(k.zS, { imageUrl: d, url: r }),
+            (0, a.jsxs)(k.Q1, {
               hasImage: !!d,
               children: [
-                (0, a.jsx)(F.Pz, { text: o, url: r }),
+                (0, a.jsx)(k.Pz, { text: o, url: r }),
                 (0, a.jsxs)("div", {
-                  className: M.ReleaseInfoCtn,
+                  className: P.ReleaseInfoCtn,
                   children: [
                     t.releaserequest &&
                       (0, a.jsxs)("div", {
-                        className: M.ReleaseInfoRow,
+                        className: P.ReleaseInfoRow,
                         children: [
                           (0, a.jsx)("span", {
-                            className: M.ReleaseDateLabel,
+                            className: P.ReleaseDateLabel,
                             children: (0, c.we)(
                               "#App_Landing_SpecifiedReleaseDate",
                             ),
                           }),
                           (0, a.jsx)("span", {
-                            className: M.ReleaseDateText,
+                            className: P.ReleaseDateText,
                             children: O(t.releaserequest.release_date),
                           }),
                         ],
                       }),
                     s &&
                       (0, a.jsxs)("div", {
-                        className: M.ReleaseInfoRow,
+                        className: P.ReleaseInfoRow,
                         children: [
                           (0, a.jsx)("span", {
-                            className: M.ReleaseDateLabel,
+                            className: P.ReleaseDateLabel,
                             children: (0, c.we)(
                               "#App_Landing_CustomersSeeReleaseDate",
                             ),
                           }),
                           (0, a.jsx)("span", {
-                            className: M.ReleaseDateText,
+                            className: P.ReleaseDateText,
                             children: n.GetFormattedSteamReleaseDate(),
                           }),
                         ],
                       }),
                     t.earliestadvancedaccessdate > 0 &&
                       (0, a.jsxs)("div", {
-                        className: (0, l.A)(M.ReleaseInfoRow, M.AdvancedAccess),
+                        className: (0, l.A)(P.ReleaseInfoRow, P.AdvancedAccess),
                         children: [
                           (0, a.jsxs)("span", {
-                            className: M.ReleaseDateLabel,
+                            className: P.ReleaseDateLabel,
                             children: [
                               (0, c.we)("#App_Landing_AdvancedAccessDate"),
                               (0, a.jsx)(I.o, {
@@ -568,7 +568,7 @@
                             ],
                           }),
                           (0, a.jsx)("span", {
-                            className: M.ReleaseDateText,
+                            className: P.ReleaseDateText,
                             children: O(t.earliestadvancedaccessdate),
                           }),
                         ],
@@ -587,19 +587,19 @@
       }
       function V(e) {
         const { app: t, hasStoreItem: n } = e,
-          s = (0, k.pc)(t.releasestate, n),
+          s = (0, F.pc)(t.releasestate, n),
           i = (0, l.A)(
-            M.ItemReleaseStatusText,
-            "prerelease" == t.releasestate && M.Prerelease,
-            "released" == t.releasestate && M.Released,
+            P.ItemReleaseStatusText,
+            "prerelease" == t.releasestate && P.Prerelease,
+            "released" == t.releasestate && P.Released,
           );
         return (0, a.jsx)("div", {
-          className: M.ItemReleaseInfoContainer,
+          className: P.ItemReleaseInfoContainer,
           children: (0, a.jsxs)("div", {
-            className: M.ItemReleaseStatusCtn,
+            className: P.ItemReleaseStatusCtn,
             children: [
               (0, a.jsx)("div", {
-                className: M.ItemReleaseStatusLabel,
+                className: P.ItemReleaseStatusLabel,
                 children: (0, c.we)(
                   "#Dashboard_UpcomingEvents_ReleaseStatusLabel",
                 ),
@@ -658,7 +658,7 @@
         static ExtractOptInDefinitions(e) {
           for (const t of Object.keys(e)) {
             const n = e[t].description,
-              a = (0, k.ap)(n?.jsondata);
+              a = (0, F.ap)(n?.jsondata);
             delete n?.jsondata, a && (e[t].description.definition = a);
           }
         }
@@ -698,15 +698,15 @@
         oe = n(77155);
       var le = n(12493);
       function de(e) {
-        const t = Wt(),
+        const t = qt(),
           n = te(),
           a = s.useMemo(() => {
             const a = (0, i.Tc)("rgPartnerPromotions", "application_config"),
               s = a?.rgPlans
-                ?.map((e) => (0, k.ap)(e.partner_readonly_jsondata))
+                ?.map((e) => (0, F.ap)(e.partner_readonly_jsondata))
                 .filter((e) => e && e.id),
               r = a?.rgPlans
-                ?.map((e) => ({ plan: e, input: (0, k.ap)(e.input_jsondata) }))
+                ?.map((e) => ({ plan: e, input: (0, F.ap)(e.input_jsondata) }))
                 .filter((e) => !!e.input)
                 .reduce(
                   (e, t) => e.set(t.plan.promotion_id, t.input),
@@ -765,7 +765,7 @@
             );
           }, [t, n, e]),
           r = (function (e) {
-            const t = Wt(),
+            const t = qt(),
               [n] = (0, U.QD)("recap"),
               a = s.useCallback(
                 (n, a) => {
@@ -903,7 +903,7 @@
             (this.getElement = () => u({ eventData: this })),
             (this.getCapsuleElement = () => v?.({ eventData: this }));
         }
-        passesFilter = (e) => e == Ft;
+        passesFilter = (e) => e == Bt;
         dataChanged() {
           this.m_changedCallbacks.Dispatch();
         }
@@ -994,7 +994,7 @@
       }
       function me(e) {
         const { eventData: t } = e;
-        return _e(Wt(), t.m_plan) && "nextfest" == t.m_plan.type
+        return _e(qt(), t.m_plan) && "nextfest" == t.m_plan.type
           ? (0, a.jsx)(Ee, { eventData: t })
           : "nextfest" == t.m_plan.type || "themesale" === t.m_plan.type
             ? (0, a.jsx)(he, { eventData: t })
@@ -1002,7 +1002,7 @@
       }
       function ue(e) {
         const { eventData: t } = e;
-        return _e(Wt(), t.m_plan) && "nextfest" == t.m_plan.type
+        return _e(qt(), t.m_plan) && "nextfest" == t.m_plan.type
           ? (0, a.jsx)(we, { eventData: t })
           : "nextfest" == t.m_plan.type || "themesale" === t.m_plan.type
             ? (0, a.jsx)(De, { eventData: t })
@@ -1011,11 +1011,11 @@
       function ve(e) {
         const { eventData: t } = e,
           n = t.m_plan,
-          [s] = (0, P.G6)(n.store_item_id, n.store_item_type, {
+          [s] = (0, M.G6)(n.store_item_id, n.store_item_type, {
             include_basic_info: !0,
             include_assets: !0,
           }),
-          [r] = (0, P.G6)(n.advertising_appid, L.c6.qI, {
+          [r] = (0, M.G6)(n.advertising_appid, L.c6.qI, {
             include_basic_info: !0,
             include_assets: !0,
           }),
@@ -1056,20 +1056,20 @@
               : void 0,
           h = (0, a.jsxs)(a.Fragment, {
             children: [
-              (0, a.jsx)(F.z9, {
+              (0, a.jsx)(k.z9, {
                 url: g,
                 children: (0, c.we)(
                   "#Dashboard_UpcomingEvents_Events_OptIn_Button_EnterDiscounts",
                 ),
               }),
               l &&
-                (0, a.jsx)(F.z9, {
+                (0, a.jsx)(k.z9, {
                   url: d,
                   children: (0, c.we)(
                     "#Dashboard_UpcomingEvents_Events_OptIn_Button_LearnMore",
                   ),
                 }),
-              (0, a.jsx)(F.z9, {
+              (0, a.jsx)(k.z9, {
                 url: n.asset_kit_url,
                 children: (0, c.we)(
                   "#Dashboard_UpcomingEvents_Events_OptIn_Button_AssetKit",
@@ -1077,8 +1077,8 @@
               }),
             ],
           }),
-          D = (0, k.cG)(n);
-        return (0, a.jsxs)(F.b1, {
+          D = (0, F.cG)(n);
+        return (0, a.jsxs)(k.b1, {
           dimmed: t.dimmed,
           backgroundColor: D,
           hasImage: !!p,
@@ -1100,11 +1100,11 @@
       function ge(e) {
         const { eventData: t } = e,
           n = t.m_plan,
-          [s] = (0, P.G6)(n.store_item_id, n.store_item_type, {
+          [s] = (0, M.G6)(n.store_item_id, n.store_item_type, {
             include_basic_info: !0,
             include_assets: !0,
           }),
-          [r] = (0, P.G6)(n.advertising_appid, L.c6.qI, {
+          [r] = (0, M.G6)(n.advertising_appid, L.c6.qI, {
             include_basic_info: !0,
             include_assets: !0,
           }),
@@ -1117,7 +1117,7 @@
           );
         return (
           (l ??= !p && c?.GetImageURL("capsule", d, K.wI.capsule_main)),
-          (0, a.jsx)(F.aV, { imageUrl: l })
+          (0, a.jsx)(k.aV, { imageUrl: l })
         );
       }
       function he(e) {
@@ -1163,8 +1163,8 @@
           });
         }
         !(function (e) {
-          const t = Wt(),
-            n = qt();
+          const t = qt(),
+            n = zt();
           s.useEffect(() => {
             let s;
             if (
@@ -1215,15 +1215,15 @@
             }, [])
             .get("optin_placeholder_banner"),
           h = v ?? g,
-          D = v ? void 0 : (0, k._w)(r.id),
+          D = v ? void 0 : (0, F._w)(r.id),
           x = (e, t) => e?.map((e) => ({ details: e, bRegistered: t })) ?? [],
           E = s.useMemo(
             () =>
-              (0, k.Gx)(x(o?.rgEligibleApps, !1), x(o?.rgRegisteredApps, !0)),
+              (0, F.Gx)(x(o?.rgEligibleApps, !1), x(o?.rgRegisteredApps, !0)),
             [o?.rgEligibleApps, o?.rgRegisteredApps],
           ),
           T = E?.length > 0;
-        return (0, a.jsxs)(F.b1, {
+        return (0, a.jsxs)(k.b1, {
           buttonPosition: T ? "bottom" : void 0,
           backgroundImageUrl: h,
           backgroundColor: D,
@@ -1258,10 +1258,10 @@
             s?.description.opt_in_name &&
             r &&
             (0, Z.Yi)(s?.description.opt_in_name, n, r);
-        return (0, a.jsx)(F.aV, { imageUrl: o });
+        return (0, a.jsx)(k.aV, { imageUrl: o });
       }
       function xe(e) {
-        const t = qt(),
+        const t = zt(),
           n =
             ("seasonalsale" == e.m_plan.type || "themesale" == e.m_plan.type) &&
             "deadline" != e.eventType &&
@@ -1281,13 +1281,13 @@
             [e.m_optIn?.rgRegisteredApps],
           ),
           r = Ne(e.m_partnerId, i, e.m_plan.start_date, e.m_plan.end_date),
-          o = Vt(),
-          l = Wt(),
+          o = Wt(),
+          l = qt(),
           d = o.setManageDiscountsAppIDs;
         s.useEffect(() => {
           if (!(n && e.m_optIn?.rgFeaturedApps?.length > 0)) return;
           const s = [];
-          for (const n of (0, k.Gx)(
+          for (const n of (0, F.Gx)(
             e.m_optIn.rgEligibleApps,
             e.m_optIn.rgRegisteredApps,
           )) {
@@ -1396,7 +1396,7 @@
           u = r.opt_in_id?.startsWith("sale_nextfest_")
             ? `${i.TS.PARTNER_BASE_URL}recap/nextfest/${r.opt_in_id.substring(14)}/${t.m_partnerId}`
             : void 0,
-          v = qt(),
+          v = zt(),
           g = ne(r.opt_in_id),
           h = s.useMemo(
             () => re.Ew(p.data?.appIdsWithoutPermissions ?? []),
@@ -1471,7 +1471,7 @@
                   _ &&
                     (0, a.jsx)("div", {
                       className: q.RecapItemImage,
-                      children: (0, a.jsx)(k.iN, {
+                      children: (0, a.jsx)(F.iN, {
                         href: m,
                         target: "_blank",
                         children: (0, a.jsx)("img", { src: _ }),
@@ -1584,7 +1584,7 @@
                   _ &&
                     (0, a.jsx)("div", {
                       className: q.RecapItemImage,
-                      children: (0, a.jsx)(k.iN, {
+                      children: (0, a.jsx)(F.iN, {
                         href: m,
                         target: "_blank",
                         children: (0, a.jsx)("img", { src: _ }),
@@ -1722,7 +1722,7 @@
             s.sale_clan_event_gid,
           ),
           l = !o && r?.GetImageURL("capsule", n, K.wI.capsule_main);
-        return (0, a.jsx)(F.aV, { imageUrl: l });
+        return (0, a.jsx)(k.aV, { imageUrl: l });
       }
       function fe(e) {
         const {
@@ -1739,15 +1739,15 @@
         } = e;
         return (0, a.jsxs)(a.Fragment, {
           children: [
-            (0, a.jsx)(F.zS, { imageUrl: l, url: s }),
-            (0, a.jsxs)(F.Q1, {
+            (0, a.jsx)(k.zS, { imageUrl: l, url: s }),
+            (0, a.jsxs)(k.Q1, {
               hasImage: !!l,
               children: [
-                (0, a.jsxs)(F.Hg, {
+                (0, a.jsxs)(k.Hg, {
                   inlineDate: c,
                   children: [
-                    (0, a.jsx)(F.Pz, { text: t, url: s, large: p }),
-                    (0, a.jsx)(F.ek, {
+                    (0, a.jsx)(k.Pz, { text: t, url: s, large: p }),
+                    (0, a.jsx)(k.ek, {
                       startTimestamp: i,
                       endTimestamp: r,
                       largeDate: c,
@@ -1762,7 +1762,7 @@
                   }),
               ],
             }),
-            d && (0, a.jsx)(F.m2, { children: d }),
+            d && (0, a.jsx)(k.m2, { children: d }),
           ],
         });
       }
@@ -1779,7 +1779,7 @@
             t.m_plan.start_date &&
             r.format(1e3 * (0, z.OS)(void 0, t.m_plan.start_date, "partner")),
           l = t.m_plan,
-          [d] = (0, P.G6)(l.store_item_id, l.store_item_type, {
+          [d] = (0, M.G6)(l.store_item_id, l.store_item_type, {
             include_basic_info: !0,
             include_assets: !0,
           }),
@@ -1797,10 +1797,10 @@
           g = (0, oe.uK)(t.m_plan, t.m_assetInput) > oe.mM.k_AwaitingPartner,
           h = !m || _?.length > 0 || v?.length > 0;
         if (t.m_assetInput?.enable_input)
-          return (0, a.jsxs)(F.FV, {
+          return (0, a.jsxs)(k.FV, {
             children: [
-              (0, a.jsx)(F.hq, { complete: g && h, urgent: !0 }),
-              (0, a.jsx)(F.Pj, {
+              (0, a.jsx)(k.hq, { complete: g && h, urgent: !0 }),
+              (0, a.jsx)(k.Pj, {
                 complete: g,
                 urgent: !0,
                 label: (0, c.we)(
@@ -1817,7 +1817,7 @@
                 actionUrl: n,
               }),
               m &&
-                (0, a.jsx)(F.Pj, {
+                (0, a.jsx)(k.Pj, {
                   complete: h,
                   urgent: !0,
                   label: (0, c.we)(
@@ -1867,7 +1867,7 @@
             [p],
           ),
           m = o?.length > 0,
-          u = Vt().setManageDiscountsAppIDs,
+          u = Wt().setManageDiscountsAppIDs,
           v = o?.some((e) => u.has(e.details.appid)),
           g =
             l.discount_event_id && v
@@ -1888,7 +1888,7 @@
         return (0, a.jsxs)(a.Fragment, {
           children: [
             m &&
-              (0, a.jsxs)(F.FV, {
+              (0, a.jsxs)(k.FV, {
                 children: [
                   (0, a.jsx)(Re, {
                     text: (0, c.we)(
@@ -1919,7 +1919,7 @@
                   }),
                 ],
               }),
-            (0, a.jsxs)(F.m2, {
+            (0, a.jsxs)(k.m2, {
               children: [
                 x &&
                   (0, a.jsxs)(a.Fragment, {
@@ -1936,7 +1936,7 @@
                       }),
                     ],
                   }),
-                (0, a.jsx)(F.z9, {
+                (0, a.jsx)(k.z9, {
                   url: n,
                   children: m
                     ? (0, c.we)(
@@ -1946,7 +1946,7 @@
                         "#Dashboard_UpcomingEvents_Events_OptIn_Button_LearnMore",
                       ),
                 }),
-                (0, a.jsx)(F.z9, {
+                (0, a.jsx)(k.z9, {
                   url: g,
                   children: (0, c.we)(
                     "#Dashboard_UpcomingEvents_Events_OptIn_Button_EnterDiscounts",
@@ -2017,7 +2017,7 @@
           d = (0, $.sfN)(i.TS.LANGUAGE),
           p = t.m_plan,
           _ = t.m_optIn,
-          [m] = (0, P.G6)(n, L.c6.qI, {
+          [m] = (0, M.G6)(n, L.c6.qI, {
             include_basic_info: !0,
             include_assets: !0,
           }),
@@ -2092,26 +2092,26 @@
               (I =
                 "#Dashboard_UpcomingEvents_Events_Deadline_EventFeaturedRegister_Action");
         }
-        return (0, a.jsxs)(F.b1, {
+        return (0, a.jsxs)(k.b1, {
           hasImage: !!u,
           backgroundImageUrl: b,
           dimmed: !0,
           children: [
-            (0, a.jsx)(F.zS, { imageUrl: u, url: v }),
-            (0, a.jsxs)(F.Q1, {
+            (0, a.jsx)(k.zS, { imageUrl: u, url: v }),
+            (0, a.jsxs)(k.Q1, {
               hasImage: !!u,
               children: [
-                (0, a.jsx)(F.Pz, { text: (0, c.we)(N, t.title), light: !0 }),
+                (0, a.jsx)(k.Pz, { text: (0, c.we)(N, t.title), light: !0 }),
                 (0, a.jsx)("div", {
                   className: (0, l.A)(q.ItemDeadlineHeaderText, A && q.Urgent),
                   children: (0, c.we)(S, D),
                 }),
               ],
             }),
-            (0, a.jsxs)(F.FV, {
+            (0, a.jsxs)(k.FV, {
               children: [
-                (0, a.jsx)(F.hq, { complete: C, urgent: A }),
-                (0, a.jsx)(F.Pj, {
+                (0, a.jsx)(k.hq, { complete: C, urgent: A }),
+                (0, a.jsx)(k.Pj, {
                   complete: T,
                   urgent: A,
                   label: (0, c.we)(I),
@@ -2121,7 +2121,7 @@
                   ),
                   actionUrl: g,
                 }),
-                (0, a.jsx)(F.Pj, {
+                (0, a.jsx)(k.Pj, {
                   complete: y,
                   urgent: A,
                   label: (0, c.we)(
@@ -2144,7 +2144,7 @@
           day: "numeric",
           year: "2-digit",
         });
-        return (0, k.sq)(e, (e) => `${e.rtStartDate}_${e.rtEndDate}`)
+        return (0, F.sq)(e, (e) => `${e.rtStartDate}_${e.rtEndDate}`)
           .map(
             (e) =>
               `${t.format(new Date(1e3 * e.rtStartDate))} - ${t.format(new Date(1e3 * e.rtEndDate))}`,
@@ -2227,11 +2227,11 @@
       }
       (0, W.Cg)([p.oI], ce.prototype, "dataChanged", null);
       var Ue = n(79198),
-        Me = n(10698),
-        Pe = n(44165),
+        Pe = n(10698),
+        Me = n(44165),
         Le = n(54330);
       function Ge() {
-        const e = Wt(),
+        const e = qt(),
           t = te();
         return s.useMemo(() => {
           if (!t) return [];
@@ -2286,11 +2286,11 @@
                 s
                   ? r.push(
                       (function (e, t) {
-                        if (t[0].type === y.Qo.o6) return ke(e, t[0]);
+                        if (t[0].type === y.Qo.o6) return Fe(e, t[0]);
                         return;
                       })(t, i),
                     )
-                  : r.push(...i.map((e) => ke(t, e))),
+                  : r.push(...i.map((e) => Fe(t, e))),
                 r
                   .filter((e) => !!e)
                   .map((t) => ({
@@ -2302,14 +2302,14 @@
                     eventTypeName: t.sHeader,
                     getElement: () => t.element,
                     getCapsuleElement: () => t.capsuleElement,
-                    passesFilter: (e) => e == Ft,
+                    passesFilter: (e) => e == Bt,
                   }))
               );
             });
           return s ?? [];
         }, [e, t]);
       }
-      function ke(e, t) {
+      function Fe(e, t) {
         const n = t.description_jsondata
           ? JSON.parse(t.description_jsondata)
           : void 0;
@@ -2319,7 +2319,7 @@
               sHeader: "Action Required",
               sTitle: "Test 1",
               bUrgent: !0,
-              element: (0, a.jsx)(Fe, { deadline: t, json: n }),
+              element: (0, a.jsx)(ke, { deadline: t, json: n }),
             };
           case y.Qo.Z5:
             return {
@@ -2388,23 +2388,23 @@
               sTitle: (0, c.we)(
                 "#Dashboard_UpcomingEvents_EventType_SeasonPass",
               ),
-              bUrgent: t.due_date < Pe.HD.GetTimeNowWithOverride() - 604800,
+              bUrgent: t.due_date < Me.HD.GetTimeNowWithOverride() - 604800,
               element: (0, a.jsx)(qe, { deadline: t, json: n }),
             };
           case y.Qo.RO:
             return {
               sHeader: Qe(n?.TemplateName),
-              sTitle: Ze(n?.TemplateName),
-              bUrgent: t.due_date < Pe.HD.GetTimeNowWithOverride() + 2678400,
+              sTitle: Ze(n),
+              bUrgent: t.due_date < Me.HD.GetTimeNowWithOverride() + 2678400,
               element: (0, a.jsx)(ze, { deadline: t, json: n }),
               capsuleElement: (0, a.jsx)("div", {
                 className: Ue.CapsuleTax,
-                children: Ze(n?.TemplateName),
+                children: Ze(n),
               }),
             };
         }
       }
-      function Fe(e) {
+      function ke(e) {
         const { deadline: t, json: n } = e,
           s = new Intl.DateTimeFormat(navigator.language, {
             month: "short",
@@ -2419,11 +2419,11 @@
       }
       function Be(e) {
         const { deadline: t } = e,
-          [n] = (0, P.G6)(t?.store_item_id, t?.store_item_type, {
+          [n] = (0, M.G6)(t?.store_item_id, t?.store_item_type, {
             include_assets: !0,
           }),
           s = `${i.TS.PARTNER_BASE_URL}promotion/dailydeals/invite/${t.gid}`,
-          r = (0, Me.FN)(t?.due_date, !0);
+          r = (0, Pe.FN)(t?.due_date, !0);
         return (0, a.jsx)($e, {
           urgent: !0,
           imageUrl: n?.GetAssets().GetHeaderURL(),
@@ -2431,7 +2431,7 @@
           body: (0, c.we)("#PartnerDeadline_InviteExpiring_Body", r),
           url: s,
           imageTooltip: n?.GetName(),
-          rightCol: (0, a.jsx)(F.z9, {
+          rightCol: (0, a.jsx)(k.z9, {
             url: s,
             children: (0, c.we)("#DailyDeals_PickDate"),
           }),
@@ -2439,11 +2439,11 @@
       }
       function He(e) {
         const { deadline: t } = e,
-          [n] = (0, P.G6)(t?.store_item_id, t?.store_item_type, {
+          [n] = (0, M.G6)(t?.store_item_id, t?.store_item_type, {
             include_assets: !0,
           }),
           s = `${i.TS.PARTNER_BASE_URL}promotion/assetportal/request/${t.gid}`,
-          r = (0, Me.FN)(t?.due_date, !0);
+          r = (0, Pe.FN)(t?.due_date, !0);
         return (0, a.jsx)($e, {
           urgent: !0,
           imageUrl: n?.GetAssets().GetHeaderURL(),
@@ -2453,7 +2453,7 @@
           body: (0, c.we)("#PartnerDeadline_InviteExpiring_Body", r),
           url: s,
           imageTooltip: n?.GetName(),
-          rightCol: (0, a.jsx)(F.z9, {
+          rightCol: (0, a.jsx)(k.z9, {
             url: s,
             children: (0, c.we)(
               "#Dashboard_UpcomingEvents_EventType_PromotionPlan_assetrequest_button",
@@ -2469,7 +2469,7 @@
           ? (0, a.jsx)($e, {
               title: s.description.definition.event_title[i.TS.LANGUAGE],
               body: (0, c.we)("#PartnerDeadline_NextFest_PressPreview_Body"),
-              rightCol: (0, a.jsx)(F.z9, {
+              rightCol: (0, a.jsx)(k.z9, {
                 url: r,
                 children: (0, c.we)(
                   "#PartnerDeadline_NextFest_View_Registration",
@@ -2481,7 +2481,7 @@
       function Ve(e) {
         const { deadline: t, json: n } = e,
           s = ne(n.opt_in_name),
-          [r] = (0, P.G6)(t?.store_item_id, t?.store_item_type, {
+          [r] = (0, M.G6)(t?.store_item_id, t?.store_item_type, {
             include_assets: !0,
           });
         if (!s || !t?.store_item_id) return null;
@@ -2497,7 +2497,7 @@
             ),
             (0, a.jsx)("a", { href: l }),
           ),
-          rightCol: (0, a.jsx)(F.z9, {
+          rightCol: (0, a.jsx)(k.z9, {
             url: o,
             children: (0, c.we)("#PartnerDeadline_NextFest_View_Registration"),
           }),
@@ -2506,7 +2506,7 @@
       const We = { include_assets: !0 };
       function qe(e) {
         const { deadline: t, json: n } = e,
-          [s] = (0, P.t7)(t.store_item_id, We),
+          [s] = (0, M.t7)(t.store_item_id, We),
           r = (0, Le.u)(t.store_item_id),
           o = r?.find((e) => e.milestone_id == Number.parseInt(t.gid)),
           l = c.A0.GetTokenWithFallback(o?.title),
@@ -2521,11 +2521,11 @@
           body: (0, c.we)("#PartnerDeadline_SeasonPass_Desc", l || t.gid),
           rightCol: (0, a.jsxs)(a.Fragment, {
             children: [
-              (0, a.jsx)(F.z9, {
+              (0, a.jsx)(k.z9, {
                 url: d,
                 children: (0, c.we)("#PartnerDeadline_SeasonPass_OpenEditor"),
               }),
-              (0, a.jsx)(F.z9, {
+              (0, a.jsx)(k.z9, {
                 url: p,
                 children: (0, c.we)(
                   "#DiscountDashboard_VisitAppLanding_Tooltip",
@@ -2537,7 +2537,7 @@
       }
       function ze(e) {
         const { deadline: t, json: n } = e,
-          r = (0, Me.FN)(t?.due_date, !0),
+          r = (0, Pe.FN)(t?.due_date, !0),
           o = `${i.TS.PARTNER_BASE_URL}taxrequirement/view/${t.partnerid}/${t.gid}`,
           l = (function () {
             const [e] = s.useState(
@@ -2546,7 +2546,8 @@
             return e;
           })();
         let d = (function (e, t) {
-          switch (e) {
+          const n = e?.TemplateName;
+          switch (n) {
             case "Renewal-W8-Initial":
               return (0, c.we)(
                 "#PartnerDeadline_TaxRequirement_Renewal-W8-Initial",
@@ -2595,10 +2596,22 @@
               return (0, c.we)("#PartnerDeadline_TaxRequirement_Invalid");
             case "Notify-NoTINTreaty-Partner":
               return (0, c.we)("#PartnerDeadline_TaxRequirement_NoTINTreaty");
+            case "Freeform":
+            case "Freeform-FR":
+              let n = "";
+              return (
+                Ye(e)
+                  ? (n = (0, c.we)(
+                      "#PartnerDeadline_TaxRequirement_FileReceived",
+                    ))
+                  : ((n = e?.Parameters?.CustomMessageBody?.trim() || ""),
+                    n.length > 64 && (n = n.substring(0, 64) + "...")),
+                n
+              );
             default:
               return "";
           }
-        })(n?.TemplateName, r);
+        })(n, r);
         return (
           l ||
             (d +=
@@ -2607,9 +2620,9 @@
                 "#PartnerDeadline_TaxRequirement_ActualAuthorityRequired",
               )),
           (0, a.jsx)($e, {
-            title: Ze(n?.TemplateName),
+            title: Ze(n),
             body: d,
-            rightCol: (0, a.jsx)(F.z9, {
+            rightCol: (0, a.jsx)(k.z9, {
               url: o,
               children: (0, c.we)(
                 "#PartnerDeadline_TaxRequirement_ButtonViewDetails",
@@ -2628,26 +2641,28 @@
           rightCol: o,
           urgent: l,
         } = e;
-        return (0, a.jsxs)(F.b1, {
+        return (0, a.jsxs)(k.b1, {
           hasImage: !!t,
           children: [
-            (0, a.jsx)(F.zS, { imageUrl: t, url: r, tooltip: i }),
-            (0, a.jsxs)(F.Q1, {
+            (0, a.jsx)(k.zS, { imageUrl: t, url: r, tooltip: i }),
+            (0, a.jsxs)(k.Q1, {
               hasImage: !!t,
               children: [
-                (0, a.jsx)(F.Pz, { text: n }),
+                (0, a.jsx)(k.Pz, { text: n }),
                 (0, a.jsx)("div", {
                   className: l ? Ue.DeadlineWarningUrgent : Ue.DeadlineWarning,
                   children: s,
                 }),
               ],
             }),
-            o && (0, a.jsx)(F.m2, { children: o }),
+            o && (0, a.jsx)(k.m2, { children: o }),
           ],
         });
       }
       function Qe(e) {
         switch (e) {
+          case "Freeform":
+          case "Freeform-FR":
           case "F1099MISC-ConsentYes":
           case "F1042-Consent":
             return (0, c.we)("#PartnerDeadline_TaxRequirement_Header_NoAction");
@@ -2656,7 +2671,13 @@
         }
       }
       function Ze(e) {
-        switch (e) {
+        const t = e?.TemplateName;
+        switch (t) {
+          case "Freeform":
+          case "Freeform-FR":
+            return Ye(e)
+              ? (0, c.we)("#PartnerDeadline_TaxRequirement_Title_FileReceived")
+              : (0, c.we)("#PartnerDeadline_TaxRequirement_Title_Freeform");
           case "F1099MISC-ConsentYes":
           case "F1042-Consent":
             return (0, c.we)("#PartnerDeadline_TaxRequirement_Title_NoAction");
@@ -2664,35 +2685,38 @@
             return (0, c.we)("#PartnerDeadline_TaxRequirement_Title");
         }
       }
-      var Ye = n(95013),
-        Ke = n(94238),
-        Je = n(18509),
-        Xe = n(32410),
-        et = n(40357),
-        tt = n(54965),
-        nt = n(51134),
-        at = n(82227);
-      function st(e) {
-        return it(new Date(), e)
+      function Ye(e) {
+        return void 0 !== e?.Parameters?.UploadOriginalFileName;
+      }
+      var Ke = n(95013),
+        Je = n(94238),
+        Xe = n(18509),
+        et = n(32410),
+        tt = n(40357),
+        nt = n(54965),
+        at = n(51134),
+        st = n(82227);
+      function it(e) {
+        return rt(new Date(), e)
           ? (0, c.we)("#Dashboard_UpcomingEvents_EventType_DailyDealRecap")
           : (0, c.we)("#Dashboard_UpcomingEvents_EventType_DailyDeal");
       }
-      function it(e, t) {
+      function rt(e, t) {
         return (
           new Date(1e3 * (t.rtime32_start_time + C.Kp.PerDay)).getTime() <
           e.getTime()
         );
       }
-      function rt(e) {
-        const { deal: t, partnerId: n } = e;
-        return it(new Date(), t)
-          ? (0, a.jsx)(dt, { deal: t, partnerId: n })
-          : (0, a.jsx)(ot, { partnerId: n, deal: t });
-      }
       function ot(e) {
+        const { deal: t, partnerId: n } = e;
+        return rt(new Date(), t)
+          ? (0, a.jsx)(ct, { deal: t, partnerId: n })
+          : (0, a.jsx)(lt, { partnerId: n, deal: t });
+      }
+      function lt(e) {
         const { partnerId: t, deal: n } = e,
-          r = (0, Ke.Dw)(n.store_item_type),
-          [o] = (0, P.G6)(n.store_item_id, r, { include_assets: !0 }),
+          r = (0, Je.Dw)(n.store_item_type),
+          [o] = (0, M.G6)(n.store_item_id, r, { include_assets: !0 }),
           l = o?.GetAssets().GetHeaderURL();
         let d = null;
         r == L.c6.qI && o
@@ -2707,41 +2731,41 @@
             nDiscountPercentHigh: _,
             dtDiscountStart: m,
             dtDiscountEnd: u,
-          } = (0, Xe.Y4)(n),
-          v = s.useMemo(() => (0, Xe.Dt)(n, _), [n, _]),
-          g = (0, Xe.o9)(n),
+          } = (0, et.Y4)(n),
+          v = s.useMemo(() => (0, et.Dt)(n, _), [n, _]),
+          g = (0, et.o9)(n),
           h = _ > 0,
-          D = v >= Xe.of.DealReady,
+          D = v >= et.of.DealReady,
           x = D
             ? (0, c.we)("#Dashboard_UpcomingEvents_DailyDeal_ReadyToGo")
             : "",
-          E = (0, Ke.ls)(t?.toString(), n.discount_event_id?.toString()),
+          E = (0, Je.ls)(t?.toString(), n.discount_event_id?.toString()),
           T = new Intl.DateTimeFormat(navigator.language, {
             month: "short",
             day: "numeric",
           }).format(new Date(1e3 * n.rtime32_start_time)),
-          w = (0, Xe.UJ)(n);
-        return (0, a.jsxs)(F.b1, {
+          w = (0, et.UJ)(n);
+        return (0, a.jsxs)(k.b1, {
           hasImage: !!l,
           children: [
-            (0, a.jsx)(F.zS, {
+            (0, a.jsx)(k.zS, {
               imageUrl: l,
               url: d,
               tooltip: n.store_item_name,
             }),
-            (0, a.jsxs)(F.Q1, {
+            (0, a.jsxs)(k.Q1, {
               hasImage: !!l,
               children: [
-                (0, a.jsx)(F.Pz, { text: n.store_item_name }),
+                (0, a.jsx)(k.Pz, { text: n.store_item_name }),
                 (0, a.jsxs)("div", {
                   children: [
                     (0, a.jsx)("span", {
-                      className: Ye.DateDesc,
+                      className: Ke.DateDesc,
                       children: (0, c.we)(
                         "#Dashboard_UpcomingEvents_DailyDeal_Dates",
                       ),
                     }),
-                    (0, a.jsx)(F.ek, {
+                    (0, a.jsx)(k.ek, {
                       startTimestamp: n.rtime32_start_time,
                       endTimestamp: p,
                     }),
@@ -2751,34 +2775,34 @@
                   (0, a.jsxs)("div", {
                     children: [
                       (0, a.jsx)("span", {
-                        className: Ye.DateDesc,
+                        className: Ke.DateDesc,
                         children: (0, c.we)(
                           "#Dashboard_UpcomingEvents_DailyDeal_Discounted",
                         ),
                       }),
-                      (0, a.jsx)(F.ek, { startTimestamp: m, endTimestamp: u }),
+                      (0, a.jsx)(k.ek, { startTimestamp: m, endTimestamp: u }),
                     ],
                   }),
               ],
             }),
-            (0, a.jsxs)(F.FV, {
+            (0, a.jsxs)(k.FV, {
               children: [
-                (0, a.jsx)(F.hq, { complete: D, urgent: !0, overrideText: x }),
+                (0, a.jsx)(k.hq, { complete: D, urgent: !0, overrideText: x }),
                 h &&
-                  (0, a.jsx)(F.Pj, {
+                  (0, a.jsx)(k.Pj, {
                     complete: h,
                     urgent: !0,
                     label: (0, c.we)(
                       "#Dashboard_UpcomingEvents_DailyDeal_StatusDiscountLabel",
                     ),
-                    status: (0, a.jsx)(Je.b4, { oDailyDeal: n }),
+                    status: (0, a.jsx)(Xe.b4, { oDailyDeal: n }),
                     actionStatus: (0, c.we)(
                       "#Dashboard_UpcomingEvents_DailyDeal_EditDiscount",
                     ),
                     actionUrl: E,
                   }),
                 !h &&
-                  (0, a.jsx)(F.Pj, {
+                  (0, a.jsx)(k.Pj, {
                     complete: !1,
                     urgent: !0,
                     label: (0, c.we)(
@@ -2793,8 +2817,8 @@
                     ),
                     actionUrl: E,
                   }),
-                g == Xe.Sq.SetUp &&
-                  (0, a.jsx)(F.Pj, {
+                g == et.Sq.SetUp &&
+                  (0, a.jsx)(k.Pj, {
                     complete: !0,
                     urgent: !0,
                     label: (0, c.we)(
@@ -2805,8 +2829,8 @@
                     ),
                     actionUrl: w,
                   }),
-                g == Xe.Sq.NotSetUp &&
-                  (0, a.jsx)(F.Pj, {
+                g == et.Sq.NotSetUp &&
+                  (0, a.jsx)(k.Pj, {
                     complete: !1,
                     urgent: !0,
                     label: (0, c.we)(
@@ -2818,10 +2842,10 @@
           ],
         });
       }
-      function lt(e) {
+      function dt(e) {
         const { deal: t } = e,
-          n = (0, Ke.Dw)(t.store_item_type),
-          [s] = (0, P.G6)(t.store_item_id, n, { include_assets: !0 }),
+          n = (0, Je.Dw)(t.store_item_type),
+          [s] = (0, M.G6)(t.store_item_id, n, { include_assets: !0 }),
           r = s?.GetAssets().GetHeaderURL();
         let o = null;
         return (
@@ -2833,20 +2857,20 @@
                 s &&
                 (o =
                   i.TS.PARTNER_BASE_URL + "store/packagelanding/" + s.GetID()),
-          (0, a.jsx)(F.aV, {
+          (0, a.jsx)(k.aV, {
             imageUrl: r,
             title: (0, c.we)("#Dashboard_UpcomingEvents_EventType_DailyDeal"),
           })
         );
       }
-      function dt(e) {
+      function ct(e) {
         const { deal: t, partnerId: n } = e,
-          [s, r] = (0, P.G6)(t?.store_item_id, (0, Ke.Dw)(t?.store_item_type), {
+          [s, r] = (0, M.G6)(t?.store_item_id, (0, Je.Dw)(t?.store_item_type), {
             include_assets: !0,
           }),
-          o = (0, tt.c)(n, t?.gid ? [t.gid] : []),
+          o = (0, nt.c)(n, t?.gid ? [t.gid] : []),
           d = o?.get(t.gid),
-          p = !t || !d || r == P.Sq;
+          p = !t || !d || r == M.Sq;
         if (t.cancelled || t.deleted) return null;
         const _ = `${i.TS.PARTNER_BASE_URL}promotion/dailydeals/dashboard/${n}`;
         let m;
@@ -2857,78 +2881,78 @@
               ? (0, c.we)("#DailyDeals_HeaderArtMissing")
               : (0, c.we)("#DailyDeals_StoreItem_Hidden")),
           (0, a.jsx)("div", {
-            className: (0, l.A)(Ye.DailyDeal_RecapContainer),
+            className: (0, l.A)(Ke.DailyDeal_RecapContainer),
             children: p
-              ? (0, a.jsx)(ct, {})
+              ? (0, a.jsx)(pt, {})
               : (0, a.jsx)(a.Fragment, {
                   children: (0, a.jsxs)("div", {
-                    className: (0, l.A)(Ye.DailyDeal_RecapTable),
+                    className: (0, l.A)(Ke.DailyDeal_RecapTable),
                     children: [
                       (0, a.jsx)("div", {
-                        className: Ye.Cell,
+                        className: Ke.Cell,
                         children: (0, a.jsx)("div", {
-                          className: Ye.CapsuleContainer,
+                          className: Ke.CapsuleContainer,
                           children: m,
                         }),
                       }),
                       (0, a.jsxs)("div", {
-                        className: (0, l.A)(Ye.Cell),
+                        className: (0, l.A)(Ke.Cell),
                         children: [
                           (0, a.jsxs)("div", {
-                            className: Ye.PromoTitle,
+                            className: Ke.PromoTitle,
                             children: [
                               (0, a.jsx)("span", {
-                                className: Ye.FeaturedDate,
+                                className: Ke.FeaturedDate,
                                 children: (0, c.TW)(t.rtime32_start_time),
                               }),
                               s?.GetName() || t?.store_item_name,
                             ],
                           }),
                           (0, a.jsxs)("div", {
-                            className: Ye.SalesRow,
+                            className: Ke.SalesRow,
                             children: [
                               (0, a.jsx)("div", {
-                                className: Ye.VerticalCell,
+                                className: Ke.VerticalCell,
                                 children:
                                   d?.gross_sales &&
                                   (0, a.jsxs)(a.Fragment, {
                                     children: [
                                       (0, a.jsx)("div", {
-                                        className: Ye.HighlightHeader,
+                                        className: Ke.HighlightHeader,
                                         children: (0, c.we)(
                                           "#DailyDeals_Report_Revenue",
                                         ),
                                       }),
                                       (0, a.jsx)("div", {
                                         className: (0, l.A)(
-                                          Ye.HighlightValue,
-                                          Ye.Revenue,
+                                          Ke.HighlightValue,
+                                          Ke.Revenue,
                                         ),
                                         children: d.gross_sales
-                                          ? (0, nt.xE)(d.gross_sales)
+                                          ? (0, at.xE)(d.gross_sales)
                                           : "?",
                                       }),
                                     ],
                                   }),
                               }),
                               (0, a.jsx)("div", {
-                                className: Ye.VerticalCell,
+                                className: Ke.VerticalCell,
                                 children:
                                   d?.impressions &&
                                   (0, a.jsxs)(a.Fragment, {
                                     children: [
                                       (0, a.jsx)("div", {
-                                        className: Ye.HighlightHeader,
+                                        className: Ke.HighlightHeader,
                                         children: (0, c.we)(
                                           "#DailyDeals_Report_Impressions",
                                         ),
                                       }),
                                       (0, a.jsx)("div", {
                                         className: (0, l.A)(
-                                          Ye.HighlightValue,
-                                          Ye.Revenue,
+                                          Ke.HighlightValue,
+                                          Ke.Revenue,
                                         ),
-                                        children: (0, at.Dq)(d.impressions),
+                                        children: (0, st.Dq)(d.impressions),
                                       }),
                                     ],
                                   }),
@@ -2938,15 +2962,15 @@
                         ],
                       }),
                       (0, a.jsx)("div", {
-                        className: (0, l.A)(Ye.Cell, Ye.GameCount),
+                        className: (0, l.A)(Ke.Cell, Ke.GameCount),
                         children:
                           d?.marketing?.length > 1 &&
-                          (0, a.jsx)(et.K, { nGames: d.marketing.length }),
+                          (0, a.jsx)(tt.K, { nGames: d.marketing.length }),
                       }),
                       (0, a.jsx)("div", {
-                        className: Ye.Cell,
+                        className: Ke.Cell,
                         children: (0, a.jsx)("div", {
-                          className: Ye.DailyDealLinkButtonContainer,
+                          className: Ke.DailyDealLinkButtonContainer,
                           children: (0, a.jsx)(Te, { summaryURL: _ }),
                         }),
                       }),
@@ -2956,66 +2980,66 @@
           })
         );
       }
-      function ct() {
+      function pt() {
         return (0, a.jsx)("div", {
-          className: Ye.RecapThrobberContainer,
+          className: Ke.RecapThrobberContainer,
           children: (0, a.jsx)(se.t, {
             size: "medium",
             position: "center",
-            className: Ye.ReportThrobber,
+            className: Ke.ReportThrobber,
           }),
         });
       }
-      var pt = n(4130),
-        _t = n(35687),
-        mt = n(20587),
-        ut = n(4703);
-      function vt(e) {
+      var _t = n(4130),
+        mt = n(35687),
+        ut = n(20587),
+        vt = n(4703);
+      function gt(e) {
         const { saleDesc: t } = e;
-        return mt.O3.GetClanEventModel(t.clanEventGID)
-          ? (0, a.jsx)(_t.Wr, {
+        return ut.O3.GetClanEventModel(t.clanEventGID)
+          ? (0, a.jsx)(mt.Wr, {
               saleDesc: t,
               bShowAppBrowse: !0,
               bHidePartnerStats: !0,
               bShowWhyAmISeeingThis: !0,
             })
-          : (0, a.jsx)(_t.GS, {
+          : (0, a.jsx)(mt.GS, {
               saleDesc: t,
               message: (0, c.we)(
                 "#Dashboard_UpcomingEvents_PartnerEvents_NoAccess",
               ),
             });
       }
-      function gt(e) {
+      function ht(e) {
         const { saleDesc: t } = e,
           n = (0, $.sfN)(i.TS.LANGUAGE),
-          s = mt.O3.GetClanEventModel(t.clanEventGID),
-          r = (0, ut.WC)(s, "capsule", n, K.wI.capsule_main);
-        return s ? (0, a.jsx)(F.aV, { imageUrls: r }) : void 0;
+          s = ut.O3.GetClanEventModel(t.clanEventGID),
+          r = (0, vt.WC)(s, "capsule", n, K.wI.capsule_main);
+        return s ? (0, a.jsx)(k.aV, { imageUrls: r }) : void 0;
       }
-      var ht = n(6330),
-        Dt = n(62641),
-        xt = n(64610),
-        Et = n(32703),
-        Tt = n(43470);
-      function wt(e) {
+      var Dt = n(6330),
+        xt = n(62641),
+        Et = n(64610),
+        Tt = n(32703),
+        wt = n(43470);
+      function ft(e) {
         let t = L.c6.Ep;
         return (
-          e == ht.OT.vy
+          e == Dt.OT.vy
             ? (t = L.c6.qI)
-            : e == ht.OT.jA
+            : e == Dt.OT.jA
               ? (t = L.c6.RD)
-              : e == ht.OT.uA && (t = L.c6.xO),
+              : e == Dt.OT.uA && (t = L.c6.xO),
           t
         );
       }
-      function ft(e) {
+      function jt(e) {
         const { marketingMessage: t } = e,
-          n = Vt(),
-          s = t.visibility === ht.V$.QP,
-          r = t.visibility === ht.V$.Mj,
-          o = wt(t.association_type),
-          [l] = (0, P.G6)(t.associated_id, o, {
+          n = Wt(),
+          s = t.visibility === Dt.V$.QP,
+          r = t.visibility === Dt.V$.Mj,
+          o = ft(t.association_type),
+          [l] = (0, M.G6)(t.associated_id, o, {
             include_basic_info: !0,
             include_assets: !0,
           }),
@@ -3028,16 +3052,16 @@
                 "promotion/marketingmessages/partnerpreview/" +
                 t.gid
               : void 0,
-          { bReady: u, bReadyExceptLiveEvent: v } = (0, Et._p)(null, t, !0),
+          { bReady: u, bReadyExceptLiveEvent: v } = (0, Tt._p)(null, t, !0),
           g = n.bShowWarnings
             ? z.Hm.GetMarketingMesssageEditURL(t.gid)
             : void 0,
-          h = Wt();
+          h = qt();
         let D,
           x,
           E,
           T,
-          w = F.di;
+          w = k.di;
         s && t.start_date > h.getTime() / 1e3
           ? ((x = (0, c.we)(
               "#Dashboard_UpcomingEvents_Events_MarketingMessage_Event_StatusVisibleOn",
@@ -3046,7 +3070,7 @@
             (T = (0, c.we)(
               "#Dashboard_UpcomingEvents_Events_MarketingMessage_ViewButton",
             )),
-            (w = F.QK))
+            (w = k.QK))
           : s
             ? ((x = (0, c.we)(
                 "#Dashboard_UpcomingEvents_Events_MarketingMessage_StatusPublic",
@@ -3054,7 +3078,7 @@
               (T = (0, c.we)(
                 "#Dashboard_UpcomingEvents_Events_MarketingMessage_ViewButton",
               )),
-              (w = F.QK))
+              (w = k.QK))
             : r
               ? ((D = (0, c.we)(
                   "#Dashboard_UpcomingEvents_Events_MarketingMessage_StatusReadyToPublish",
@@ -3075,14 +3099,14 @@
                   (E = (0, c.we)(
                     "#Dashboard_UpcomingEvents_Events_MarketingMessage_StatusValveReview_ttip",
                   )),
-                  (w = F.vf))
+                  (w = k.vf))
                 : ((x = (0, c.we)(
                     "#Dashboard_UpcomingEvents_Events_MarketingMessage_StatusNotReady",
                   )),
                   (E = (0, c.we)(
                     "#Dashboard_UpcomingEvents_Events_MarketingMessage_StatusNotReady_ttip",
                   )));
-        const f = w === F.vf ? F.QK : w,
+        const f = w === k.vf ? k.QK : w,
           j = (function (e) {
             const t =
                 e.template_vars_json?.length > 0
@@ -3094,9 +3118,9 @@
                 t.update_event_gid,
                 !0,
               ),
-              r = (0, Tt.fj)(t.update_event_clan_accountid, t.update_event_gid),
-              o = s?.visibility_state == Dt.zv.k_EEventStateVisible,
-              l = (0, xt.Bw)(s, xt.PH.k_eCommunityEdit, "allowRelative");
+              r = (0, wt.fj)(t.update_event_clan_accountid, t.update_event_gid),
+              o = s?.visibility_state == xt.zv.k_EEventStateVisible,
+              l = (0, Et.Bw)(s, Et.PH.k_eCommunityEdit, "allowRelative");
             if (!n) return;
             let d =
               s && s.BIsVisibleEvent()
@@ -3119,7 +3143,7 @@
                 );
             return (0, a.jsxs)(a.Fragment, {
               children: [
-                (0, a.jsx)(F.Pj, {
+                (0, a.jsx)(k.Pj, {
                   complete: o,
                   label: (0, c.we)(
                     "#Dashboard_UpcomingEvents_Events_MarketingMessage_Event_Status",
@@ -3130,7 +3154,7 @@
                   ),
                   actionUrl: l,
                 }),
-                (0, a.jsx)(F.Pj, {
+                (0, a.jsx)(k.Pj, {
                   complete: _,
                   label: (0, c.we)(
                     "#Dashboard_UpcomingEvents_Events_MarketingMessage_Ticket_Status",
@@ -3149,18 +3173,18 @@
               ],
             });
           })(t);
-        return (0, a.jsxs)(F.b1, {
+        return (0, a.jsxs)(k.b1, {
           hasImage: !!p,
           buttonPosition: "top",
           children: [
-            (0, a.jsx)(F.zS, { imageUrl: p, url: _ }),
-            (0, a.jsx)(F.Q1, {
+            (0, a.jsx)(k.zS, { imageUrl: p, url: _ }),
+            (0, a.jsx)(k.Q1, {
               hasImage: !!p,
-              children: (0, a.jsxs)(F.Hg, {
+              children: (0, a.jsxs)(k.Hg, {
                 children: [
-                  (0, a.jsx)(F.Pz, { text: t.title, url: _ }),
+                  (0, a.jsx)(k.Pz, { text: t.title, url: _ }),
                   (0, a.jsx)("div", {
-                    children: (0, a.jsx)(F.ek, {
+                    children: (0, a.jsx)(k.ek, {
                       startTimestamp: t.start_date,
                       endTimestamp: t.end_date,
                     }),
@@ -3168,10 +3192,10 @@
                 ],
               }),
             }),
-            (0, a.jsxs)(F.FV, {
+            (0, a.jsxs)(k.FV, {
               children: [
-                (0, a.jsx)(F.hq, { complete: f, overrideText: D }),
-                (0, a.jsx)(F.Pj, {
+                (0, a.jsx)(k.hq, { complete: f, overrideText: D }),
+                (0, a.jsx)(k.Pj, {
                   complete: w,
                   label: (0, c.we)(
                     "#Dashboard_UpcomingEvents_Events_MarketingMessage_Status",
@@ -3185,8 +3209,8 @@
               ],
             }),
             g &&
-              (0, a.jsx)(F.m2, {
-                children: (0, a.jsx)(F.z9, {
+              (0, a.jsx)(k.m2, {
+                children: (0, a.jsx)(k.z9, {
                   url: g,
                   children: "Edit MM (VO)...",
                 }),
@@ -3194,51 +3218,51 @@
           ],
         });
       }
-      function jt(e) {
+      function yt(e) {
         const { marketingMessage: t } = e,
-          n = wt(t.association_type),
-          [s] = (0, P.G6)(t.associated_id, n, {
+          n = ft(t.association_type),
+          [s] = (0, M.G6)(t.associated_id, n, {
             include_basic_info: !0,
             include_assets: !0,
           }),
           i = s,
           r = i?.GetAssets().GetHeaderURL() || null;
-        return (0, a.jsx)(F.aV, { imageUrl: r });
+        return (0, a.jsx)(k.aV, { imageUrl: r });
       }
-      var yt = n(99661);
-      const Rt = new Date(Date.UTC(2024, 10, 15, 17, 0, 0));
-      function bt(e) {
+      var Rt = n(99661);
+      const bt = new Date(Date.UTC(2024, 10, 15, 17, 0, 0));
+      function Ct(e) {
         const { apps: t, partnerId: n } = e,
           s = `${i.TS.PARTNER_BASE_URL}doc/gettingstarted/contentsurvey/germany`,
           r = `${i.TS.PARTNER_BASE_URL}recommended_actions/missingratingforgermany/?partnerid=${n}`,
           o = new Intl.DateTimeFormat(navigator.language, {
             month: "long",
             day: "numeric",
-          }).format(Rt),
+          }).format(bt),
           d = t
             .sort((e, t) => e.name.localeCompare(t.name))
             .slice(0, 30)
             .map((e) => (0, a.jsx)("div", { children: e.name }, e.appid)),
           p = (0, a.jsxs)("div", {
-            className: yt.AppsCountTooltip,
+            className: Rt.AppsCountTooltip,
             children: [
               d,
               t.length > 30 ? (0, a.jsx)("div", { children: "..." }) : void 0,
             ],
           });
-        return (0, a.jsxs)(F.b1, {
+        return (0, a.jsxs)(k.b1, {
           children: [
-            (0, a.jsx)(F.Q1, {
-              children: (0, a.jsxs)(F.Hg, {
+            (0, a.jsx)(k.Q1, {
+              children: (0, a.jsxs)(k.Hg, {
                 children: [
-                  (0, a.jsx)(F.Pz, {
+                  (0, a.jsx)(k.Pz, {
                     text: (0, c.we)(
                       "#Dashboard_UpcomingEvents_GermanRatingMissing_Title",
                     ),
                     url: r,
                   }),
                   (0, a.jsx)("div", {
-                    className: (0, l.A)(yt.HeaderText),
+                    className: (0, l.A)(Rt.HeaderText),
                     children: (0, c.we)(
                       1 == t.length
                         ? "#Dashboard_UpcomingEvents_GermanRatingMissing_Desc"
@@ -3247,22 +3271,22 @@
                     ),
                   }),
                   (0, a.jsx)(u.m9, {
-                    className: yt.AppsCountToolTipSource,
+                    className: Rt.AppsCountToolTipSource,
                     toolTipContent: p,
                     children: (0, a.jsx)("a", {
-                      className: yt.AppsCountText,
+                      className: Rt.AppsCountText,
                       href: r,
                       children: (0, a.jsxs)("div", {
-                        className: yt.AppsCount,
+                        className: Rt.AppsCount,
                         children: [
                           (0, a.jsx)("div", {
-                            className: yt.AppsCountLabel,
+                            className: Rt.AppsCountLabel,
                             children: (0, c.we)(
                               "#Dashboard_UpcomingEvents_GermanRatingMissing_Count",
                             ),
                           }),
                           (0, a.jsx)("div", {
-                            className: yt.AppsCountText,
+                            className: Rt.AppsCountText,
                             children: t.length,
                           }),
                         ],
@@ -3272,15 +3296,15 @@
                 ],
               }),
             }),
-            (0, a.jsxs)(F.m2, {
+            (0, a.jsxs)(k.m2, {
               children: [
-                (0, a.jsx)(F.z9, {
+                (0, a.jsx)(k.z9, {
                   url: s,
                   children: (0, c.we)(
                     "#Dashboard_UpcomingEvents_General_ReadDocumentation",
                   ),
                 }),
-                (0, a.jsx)(F.z9, {
+                (0, a.jsx)(k.z9, {
                   url: r,
                   children: (0, c.we)(
                     "#Dashboard_UpcomingEvents_General_AffectedApps",
@@ -3291,12 +3315,12 @@
           ],
         });
       }
-      var Ct = n(46406),
-        At = n(12155),
-        Nt = n(30163),
-        St = n(26161),
-        It = n(17720);
-      function Ut() {
+      var At = n(46406),
+        Nt = n(12155),
+        St = n(30163),
+        It = n(26161),
+        Ut = n(17720);
+      function Pt() {
         const e = s.useMemo(
           () =>
             (function () {
@@ -3305,8 +3329,8 @@
               const t = new Map();
               for (const n in e.rgEvents)
                 try {
-                  const a = It.b.InitFromAccountID((0, St.H)()),
-                    s = (0, Nt.oE)(a, e.rgEvents[n]);
+                  const a = Ut.b.InitFromAccountID((0, It.H)()),
+                    s = (0, St.oE)(a, e.rgEvents[n]);
                   t.set(n, s);
                 } catch {}
               return {
@@ -3335,8 +3359,8 @@
                 ),
                 getElement: () =>
                   (0, a.jsx)(Mt, { eventModel: e, registered: n }),
-                getCapsuleElement: () => (0, a.jsx)(Pt, { eventModel: e }),
-                passesFilter: (e) => e == Ft,
+                getCapsuleElement: () => (0, a.jsx)(Lt, { eventModel: e }),
+                passesFilter: (e) => e == Bt,
               };
             }) ?? []
           );
@@ -3351,19 +3375,19 @@
                 "#Dashboard_UpcomingEvents_Events_MeetSteam_Invited_Title",
                 t.GetNameWithFallback(s),
               ),
-          o = (0, xt.Bw)(t, xt.PH.k_eView, "allowRelative"),
+          o = (0, Et.Bw)(t, Et.PH.k_eView, "allowRelative"),
           l = t.GetImageURL("capsule", s, K.wI.capsule_main);
-        return (0, a.jsxs)(F.b1, {
+        return (0, a.jsxs)(k.b1, {
           hasImage: !!l,
           buttonPosition: "top",
           children: [
-            (0, a.jsx)(F.zS, { imageUrl: l, url: o }),
-            (0, a.jsx)(F.Q1, {
+            (0, a.jsx)(k.zS, { imageUrl: l, url: o }),
+            (0, a.jsx)(k.Q1, {
               hasImage: !!l,
-              children: (0, a.jsxs)(F.Hg, {
+              children: (0, a.jsxs)(k.Hg, {
                 children: [
-                  (0, a.jsx)(F.Pz, { text: r, url: o }),
-                  (0, a.jsx)(F.ek, {
+                  (0, a.jsx)(k.Pz, { text: r, url: o }),
+                  (0, a.jsx)(k.ek, {
                     startTimestamp: t.startTime,
                     endTimestamp: t.endTime,
                     showTime: !0,
@@ -3371,9 +3395,9 @@
                   (0, a.jsx)("div", { children: t.GetSummaryWithFallback(s) }),
                   n &&
                     (0, a.jsxs)("div", {
-                      className: Ct.YoureRegistered,
+                      className: At.YoureRegistered,
                       children: [
-                        (0, a.jsx)(At.Jlk, {}),
+                        (0, a.jsx)(Nt.Jlk, {}),
                         (0, c.we)(
                           "#Dashboard_UpcomingEvents_Events_MeetSteam_Invited_YoureRegistered",
                         ),
@@ -3382,8 +3406,8 @@
                 ],
               }),
             }),
-            (0, a.jsx)(F.m2, {
-              children: (0, a.jsx)(F.z9, {
+            (0, a.jsx)(k.m2, {
+              children: (0, a.jsx)(k.z9, {
                 url: o,
                 children: n
                   ? (0, c.we)(
@@ -3397,17 +3421,17 @@
           ],
         });
       }
-      function Pt(e) {
+      function Lt(e) {
         const { eventModel: t } = e,
           n = (0, $.sfN)(i.TS.LANGUAGE);
         return (
           !!t &&
-          (0, a.jsx)(F.aV, {
+          (0, a.jsx)(k.aV, {
             imageUrl: t.GetImageURL("capsule", n, K.wI.capsule_main),
           })
         );
       }
-      function Lt(e, t, n, r) {
+      function Gt(e, t, n, r) {
         const o = s.useMemo(
             () => (0, T.Tc)("sEventIds", "application_config")?.split(","),
             [],
@@ -3557,10 +3581,10 @@
                   eventTypeName: (0, c.we)(
                     "#Dashboard_UpcomingEvents_EventType_MarketingMessagePreview",
                   ),
-                  getElement: () => (0, a.jsx)(ft, { marketingMessage: e }),
+                  getElement: () => (0, a.jsx)(jt, { marketingMessage: e }),
                   getCapsuleElement: () =>
-                    (0, a.jsx)(jt, { marketingMessage: e }),
-                  passesFilter: (e) => e == Ft,
+                    (0, a.jsx)(yt, { marketingMessage: e }),
+                  passesFilter: (e) => e == Bt,
                 };
               });
             return t ?? [];
@@ -3584,7 +3608,7 @@
                     : (0, c.we)("#Dashboard_UpcomingEvents_EventType_Release"),
                   eventTypeSortWeight: n ? 10 : 0,
                   getElement: () => (0, a.jsx)(B, { app: e }),
-                  passesFilter: (e) => e == Bt,
+                  passesFilter: (e) => e == Ht,
                 };
               });
             return t ?? [];
@@ -3595,7 +3619,7 @@
                 () => (0, i.Tc)("rgDailyDeals", "application_config") ?? [],
                 [],
               ),
-              n = Wt();
+              n = qt();
             return s.useMemo(
               () =>
                 t
@@ -3615,11 +3639,11 @@
                       endDate: n,
                       eventType: "event",
                       id: t.gid,
-                      eventTypeName: st(t),
+                      eventTypeName: it(t),
                       getElement: () =>
-                        (0, a.jsx)(rt, { deal: t, partnerId: e }),
-                      getCapsuleElement: () => (0, a.jsx)(lt, { deal: t }),
-                      passesFilter: (e) => e == Ft,
+                        (0, a.jsx)(ot, { deal: t, partnerId: e }),
+                      getCapsuleElement: () => (0, a.jsx)(dt, { deal: t }),
+                      passesFilter: (e) => e == Bt,
                       editURL: `${i.TS.PARTNER_BASE_URL}promotion/dailydeals/edit/${t.gid}`,
                     };
                   }) ?? [],
@@ -3627,9 +3651,9 @@
             );
           })(t),
           D = s.useMemo(() => {
-            const e = pt.c.Get().GetActiveEvents(),
-              t = pt.c.Get().GetUpcomingEvents(),
-              n = pt.c.Get().GetDraftEvents(),
+            const e = _t.c.Get().GetActiveEvents(),
+              t = _t.c.Get().GetUpcomingEvents(),
+              n = _t.c.Get().GetDraftEvents(),
               s = (e, t) => ({
                 title: e.strEventName,
                 startDate: new Date(1e3 * e.rtStartTime),
@@ -3637,9 +3661,9 @@
                 eventType: "event",
                 id: e.clanEventGID,
                 eventTypeName: t,
-                getElement: () => (0, a.jsx)(vt, { saleDesc: e }),
-                getCapsuleElement: () => (0, a.jsx)(gt, { saleDesc: e }),
-                passesFilter: (e) => e == Ft,
+                getElement: () => (0, a.jsx)(gt, { saleDesc: e }),
+                getCapsuleElement: () => (0, a.jsx)(ht, { saleDesc: e }),
+                passesFilter: (e) => e == Bt,
               }),
               i = (e) => e.eEventType != $.ajI;
             return [
@@ -3684,22 +3708,22 @@
                       title: (0, c.we)(
                         "#Dashboard_UpcomingEvents_GermanRatingMissing_Title",
                       ),
-                      startDate: Rt,
-                      endDate: Rt,
+                      startDate: bt,
+                      endDate: bt,
                       eventType: "deadline-urgent",
                       id: "storelinkdeprecationnotice",
                       eventTypeName: (0, c.we)(
                         "#Dashboard_UpcomingEvents_EventType_GermanRatingMissing",
                       ),
                       getElement: () =>
-                        (0, a.jsx)(bt, { apps: e, partnerId: E }),
-                      passesFilter: (e) => e == Ft,
+                        (0, a.jsx)(Ct, { apps: e, partnerId: E }),
+                      passesFilter: (e) => e == Bt,
                     },
                   ]
                 : [];
             }, [E]));
         var E;
-        const w = Ut(),
+        const w = Pt(),
           f = (function (e) {
             const [t, n] = s.useState([]),
               [a, i] = s.useState(0);
@@ -3746,35 +3770,35 @@
               ),
               t = e.length;
             return {
-              rgShownEvents: e.filter((e) => (n == Ht) == y.has(Gt(e))),
+              rgShownEvents: e.filter((e) => (n == Ot) == y.has(Ft(e))),
               nShouldBeShownCount: t,
             };
           }, [m, v, u, g, h, D, x, w, f, r, _, l, o, j, y, n, d]);
         return R;
       }
-      function Gt(e) {
+      function Ft(e) {
         return JSON.stringify({ usage: "dashboard", eventId: e.id });
       }
       const kt = 0,
-        Ft = 1,
-        Bt = 2,
-        Ht = 3,
-        Ot = s.createContext({
+        Bt = 1,
+        Ht = 2,
+        Ot = 3,
+        Vt = s.createContext({
           now: new Date(),
           bShowWarnings: !1,
           additionalEventStore: void 0,
           setManageDiscountsAppIDs: void 0,
         });
-      function Vt() {
-        return s.useContext(Ot);
-      }
       function Wt() {
-        return s.useContext(Ot).now;
+        return s.useContext(Vt);
       }
       function qt() {
-        return s.useContext(Ot).additionalEventStore;
+        return s.useContext(Vt).now;
       }
-      function zt(e) {
+      function zt() {
+        return s.useContext(Vt).additionalEventStore;
+      }
+      function $t(e) {
         const { showWarnings: t } = e,
           n = s.useMemo(
             () =>
@@ -3796,12 +3820,12 @@
             }),
             [r, t, i, n],
           );
-        return (0, a.jsx)(Ot.Provider, {
+        return (0, a.jsx)(Vt.Provider, {
           value: o,
-          children: (0, a.jsx)($t, { ...e }),
+          children: (0, a.jsx)(Qt, { ...e }),
         });
       }
-      function $t(e) {
+      function Qt(e) {
         const { partnerId: t, testData: n } = e,
           [i] = (0, U.QD)("expanded", !1),
           [o, l] = s.useState(!!i),
@@ -3830,16 +3854,16 @@
             [v, D],
           ),
           [w, f] = s.useState(kt),
-          j = Vt(),
-          { rgShownEvents: y, nShouldBeShownCount: R } = Lt(j, t, w, n),
+          j = Wt(),
+          { rgShownEvents: y, nShouldBeShownCount: R } = Gt(j, t, w, n),
           C = (function (e, t, n, i, r, o) {
-            const l = Wt();
+            const l = qt();
             return (
               s.useMemo(
                 () =>
                   e.forEach((e) =>
                     (0, b.wT)(
-                      !Qt(l, e) || !Zt(l, e),
+                      !Zt(l, e) || !Yt(l, e),
                       "An event can't be both live and a recap",
                     ),
                   ),
@@ -3857,7 +3881,7 @@
                   n ||
                     (s = e(
                       s,
-                      (e) => Qt(l, e),
+                      (e) => Zt(l, e),
                       (e) => ({
                         title: (0, c.we)(
                           "#Dashboard_UpcomingEvents_Events_Placeholder_Live",
@@ -3868,7 +3892,7 @@
                         id: "live_placeholder",
                         eventTypeName: "",
                         getElement: () =>
-                          (0, a.jsx)(rn, {
+                          (0, a.jsx)(on, {
                             text: (0, c.we)(
                               "#Dashboard_UpcomingEvents_Events_Placeholder_Live",
                             ),
@@ -3881,7 +3905,7 @@
                     r ||
                       (s = e(
                         s,
-                        (e) => Zt(l, e),
+                        (e) => Yt(l, e),
                         (e) => ({
                           title: (0, c.we)(
                             "#Dashboard_UpcomingEvents_Events_Placeholder_Recap",
@@ -3892,7 +3916,7 @@
                           id: "recap_placeholder",
                           eventTypeName: "",
                           getElement: () =>
-                            (0, a.jsx)(rn, {
+                            (0, a.jsx)(on, {
                               text: (0, c.we)(
                                 "#Dashboard_UpcomingEvents_Events_Placeholder_Recap",
                               ),
@@ -3926,7 +3950,7 @@
                   if (
                     !(
                       a == kt ||
-                      a == Ht ||
+                      a == Ot ||
                       (t.passesFilter && t.passesFilter(a))
                     )
                   )
@@ -3944,8 +3968,8 @@
               return new Set(S.filter((t) => e.has(t.id)).map((e) => e.id));
             }, [S, I]));
         var S, I;
-        const M = w != kt || (x && x.trim().length > 0),
-          P = s.useMemo(() => new Map(), []),
+        const P = w != kt || (x && x.trim().length > 0),
+          M = s.useMemo(() => new Map(), []),
           L = s.useRef(void 0),
           G = (function (e, t) {
             const n = s.useRef(void 0),
@@ -3964,24 +3988,24 @@
               a
             );
           })(o, l),
-          k = s.useCallback(
+          F = s.useCallback(
             (e) => {
               if ((0, _.xi)(e).getTime() == (0, _.xi)(j.now).getTime())
                 return void L.current.scrollIntoView();
-              const t = P?.get((0, _.xi)(e).getTime() / 1e3);
+              const t = M?.get((0, _.xi)(e).getTime() / 1e3);
               t && G(t.element);
             },
-            [j.now, P, G],
+            [j.now, M, G],
           ),
-          [F, B] = s.useState();
+          [k, B] = s.useState();
         s.useEffect(() => B(void 0), [y]);
         const H = s.useMemo(
             () =>
               (0, a.jsxs)("div", {
                 className: r.FilterHeader,
                 children: [
-                  (0, a.jsx)(Kt, { filterType: w, setFilterType: f }),
-                  (0, a.jsx)(Yt, { filterText: x, setFilterText: T }),
+                  (0, a.jsx)(Jt, { filterType: w, setFilterType: f }),
+                  (0, a.jsx)(Kt, { filterText: x, setFilterText: T }),
                 ],
               }),
             [x, w, T],
@@ -4008,7 +4032,7 @@
                           "#Dashboard_UpcomingEvents_Filter_DismissedAllDismissed",
                           (0, a.jsx)("a", {
                             onClick: () => {
-                              f(Ht), E("");
+                              f(Ot), E("");
                             },
                             children: (0, c.we)(
                               "#Dashboard_UpcomingEvents_Filter_DismissedAllDismissed_LinkText",
@@ -4017,19 +4041,19 @@
                         ),
                       }),
                     !V &&
-                      (0, a.jsx)(Xt, {
+                      (0, a.jsx)(en, {
                         events: A,
                         filterVisibleEventIds: N,
-                        dayRefsToScrollTo: P,
-                        fnScrollToDay: k,
+                        dayRefsToScrollTo: M,
+                        fnScrollToDay: F,
                         isExpanded: o,
                         fnSetExpanded: p,
-                        filterEnabled: M,
+                        filterEnabled: P,
                         filterType: w,
                         clearAllFilters: () => {
                           f(kt), E("");
                         },
-                        hoverEvent: F,
+                        hoverEvent: k,
                         setHoverEvent: B,
                       }),
                   ],
@@ -4038,13 +4062,13 @@
             }),
         });
       }
-      function Qt(e, t) {
+      function Zt(e, t) {
         return t.startDate != t.endDate && e >= t.startDate && e <= t.endDate;
       }
-      function Zt(e, t) {
+      function Yt(e, t) {
         return e > t.endDate;
       }
-      function Yt(e) {
+      function Kt(e) {
         const { filterText: t, setFilterText: n } = e;
         return (0, a.jsxs)("div", {
           className: r.FilterTextArea,
@@ -4067,7 +4091,7 @@
           ],
         });
       }
-      function Kt(e) {
+      function Jt(e) {
         const { filterType: t, setFilterType: n } = e,
           i = s.useMemo(
             () => [
@@ -4076,15 +4100,15 @@
                 text: (0, c.we)("#Dashboard_UpcomingEvents_Filter_All"),
               },
               {
-                type: Ft,
+                type: Bt,
                 text: (0, c.we)("#Dashboard_UpcomingEvents_Filter_Events"),
               },
               {
-                type: Bt,
+                type: Ht,
                 text: (0, c.we)("#Dashboard_UpcomingEvents_Filter_Releases"),
               },
               {
-                type: Ht,
+                type: Ot,
                 text: (0, c.we)("#Dashboard_UpcomingEvents_Filter_Dismissed"),
               },
             ],
@@ -4108,7 +4132,7 @@
           ),
         });
       }
-      function Jt(e) {
+      function Xt(e) {
         const { partnerId: t, showWarnings: n, testData: i } = e,
           o = s.useMemo(() => new Date(), []),
           l = s.useMemo(() => new f(), []),
@@ -4131,12 +4155,12 @@
             }),
             [o, n, l, d],
           ),
-          { rgShownEvents: p } = Lt(c, t, kt, i),
+          { rgShownEvents: p } = Gt(c, t, kt, i),
           _ = s.useMemo(
             () =>
               p.map((e) =>
                 (0, a.jsx)(
-                  sn,
+                  rn,
                   {
                     event: e,
                     setHoverEvent: () => {},
@@ -4148,7 +4172,7 @@
               ),
             [p],
           );
-        return (0, a.jsx)(Ot.Provider, {
+        return (0, a.jsx)(Vt.Provider, {
           value: c,
           children: (0, a.jsx)("div", {
             className: r.ListDayGroup,
@@ -4156,7 +4180,7 @@
           }),
         });
       }
-      function Xt(e) {
+      function en(e) {
         const {
             events: t,
             filterVisibleEventIds: n,
@@ -4170,9 +4194,9 @@
             hoverEvent: g,
             setHoverEvent: h,
           } = e,
-          D = Wt(),
-          x = s.useMemo(() => t.filter((e) => Zt(D, e)), [t, D]),
-          E = s.useMemo(() => t.filter((e) => Qt(D, e)), [t, D]),
+          D = qt(),
+          x = s.useMemo(() => t.filter((e) => Yt(D, e)), [t, D]),
+          E = s.useMemo(() => t.filter((e) => Zt(D, e)), [t, D]),
           T = s.useMemo(
             () =>
               Array.from(
@@ -4188,11 +4212,11 @@
                   return e;
                 })(
                   (0, _.bv)(
-                    t.filter((e) => !Zt(D, e) && !Qt(D, e)),
+                    t.filter((e) => !Yt(D, e) && !Zt(D, e)),
                     (e) => (0, _.J2)(e.startDate),
                   ),
                 ),
-              ).sort(on),
+              ).sort(ln),
             [t, D],
           ),
           [w, f] = s.useState(!1),
@@ -4214,7 +4238,7 @@
             (e, t, s, r, l) =>
               t.length > 0
                 ? (0, a.jsx)(
-                    en,
+                    tn,
                     {
                       date: new Date(1e3 * e),
                       events: t,
@@ -4276,7 +4300,7 @@
                   (0, a.jsx)("div", {
                     className: r.AllEventsFiltered,
                     children: (0, c.PP)(
-                      p != Ht
+                      p != Ot
                         ? "#Dashboard_UpcomingEvents_Filter_NoEvents"
                         : "#Dashboard_UpcomingEvents_Filter_DismissedNoEvents",
                       (0, a.jsx)("a", {
@@ -4307,7 +4331,7 @@
           ],
         });
       }
-      function en(e) {
+      function tn(e) {
         const {
             date: t,
             events: n,
@@ -4321,7 +4345,7 @@
             setHoverEvent: D,
             showHeader: x,
           } = e,
-          T = Wt(),
+          T = qt(),
           w = s.useMemo(
             () =>
               T.getFullYear() == t.getFullYear()
@@ -4336,7 +4360,7 @@
           ),
           f = s.useMemo(
             () =>
-              Array.from((0, _.bv)(n, (e) => (0, _.xi)(e.startDate))).sort(on),
+              Array.from((0, _.bv)(n, (e) => (0, _.xi)(e.startDate))).sort(ln),
             [n],
           ),
           j = s.useRef(void 0),
@@ -4353,7 +4377,7 @@
             () =>
               f.map(([e, t]) =>
                 (0, a.jsx)(
-                  nn,
+                  an,
                   {
                     events: t,
                     showHeader: x,
@@ -4366,13 +4390,13 @@
               ),
             [f, y, D, x],
           ),
-          b = s.useMemo(() => n.map((e) => [e, tn(e)]), [n]),
+          b = s.useMemo(() => n.map((e) => [e, nn(e)]), [n]),
           C = s.useMemo(
             () => b.reduce((e, t) => e.set(t[1], t[0]), new Map()),
             [b],
           ),
           A = s.useMemo(() => b.map((e) => e[1]), [b]),
-          N = s.useCallback((e, t) => ln(C.get(e), C.get(t)), [C]),
+          N = s.useCallback((e, t) => dn(C.get(e), C.get(t)), [C]),
           S = s.useCallback(
             (e, t) =>
               (function (e, t) {
@@ -4423,7 +4447,7 @@
                               events: A,
                               filterVisibleEventIds: o,
                               fnScrollToDay: p,
-                              hoverEvent: tn(v),
+                              hoverEvent: nn(v),
                               bShowPreceedingWeeks: m,
                               bShowFollowingWeeks: u,
                               compareEvents: N,
@@ -4479,7 +4503,7 @@
           ],
         });
       }
-      function tn(e) {
+      function nn(e) {
         if (!e) return;
         let t,
           n = !1;
@@ -4501,7 +4525,7 @@
         }
         return { ...e, note: n, color: t };
       }
-      function nn(e) {
+      function an(e) {
         const {
             events: t,
             showHeader: n,
@@ -4515,7 +4539,7 @@
                 a = e.get(n) || [];
               return e.set(n, [...a, t]), e;
             }, new Map());
-            for (const t of e.values()) t.sort(ln);
+            for (const t of e.values()) t.sort(dn);
             return Array.from(e).sort(([e, t], [n, a]) =>
               (t[0].eventTypeSortWeight ?? 0) != (a[0].eventTypeSortWeight ?? 0)
                 ? (t[0].eventTypeSortWeight ?? 0) -
@@ -4527,7 +4551,7 @@
             () =>
               d.map(([e, t]) =>
                 (0, a.jsx)(
-                  an,
+                  sn,
                   {
                     events: t,
                     showHeader: n,
@@ -4542,7 +4566,7 @@
           );
         return (0, a.jsx)("div", { ref: o, className: r.ListDay, children: c });
       }
-      function an(e) {
+      function sn(e) {
         const {
             events: t,
             showHeader: n,
@@ -4554,7 +4578,7 @@
             () =>
               t.map((e, t) =>
                 (0, a.jsx)(
-                  sn,
+                  rn,
                   {
                     event: e,
                     setHoverEvent: l,
@@ -4572,14 +4596,14 @@
           children: d,
         });
       }
-      function sn(e) {
+      function rn(e) {
         const {
             event: t,
             showHeader: n,
             showDateInHeader: i,
             setHoverEvent: d,
           } = e,
-          _ = Vt();
+          _ = Wt();
         !(function (e) {
           const t = (0, p.CH)();
           s.useEffect(() => {
@@ -4609,7 +4633,7 @@
             D && r.Event,
           ),
           T = t.getElement(),
-          w = Gt(t),
+          w = Ft(t),
           f = N.Get().GetDismissState(w),
           y = s.useCallback(
             (e) =>
@@ -4727,7 +4751,7 @@
           })
         );
       }
-      function rn(e) {
+      function on(e) {
         const { text: t, events: n, expanded: s, setExpanded: i } = e,
           o = n
             .slice(0, 4)
@@ -4767,10 +4791,10 @@
           ],
         });
       }
-      function on(e, t) {
+      function ln(e, t) {
         return e[0] - t[0];
       }
-      function ln(e, t) {
+      function dn(e, t) {
         return e.startDate.getTime() < t.startDate.getTime()
           ? -1
           : e.startDate.getTime() > t.startDate.getTime()
@@ -4785,11 +4809,11 @@
                     ? 1
                     : 0;
       }
-      var dn = n(11577),
-        cn = n(874),
-        pn = n(75493),
-        _n = n(60103);
-      function mn(e) {
+      var cn = n(11577),
+        pn = n(874),
+        _n = n(75493),
+        mn = n(60103);
+      function un(e) {
         return (0, a.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           viewBox: "0 0 60 39",
@@ -4823,7 +4847,7 @@
           ],
         });
       }
-      function un(e) {
+      function vn(e) {
         return (0, a.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           viewBox: "0 0 55 37",
@@ -4835,7 +4859,7 @@
           }),
         });
       }
-      function vn(e) {
+      function gn(e) {
         return (0, a.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           viewBox: "0 0 42 35",
@@ -4847,7 +4871,7 @@
           }),
         });
       }
-      function gn(e) {
+      function hn(e) {
         const t = (function (e) {
             const t = (0, i.Tc)("rgDailyDealInvitations", "application_config");
             if (!(e || (t && 0 != t.length))) return [];
@@ -4863,13 +4887,13 @@
                 title: (0, c.we)(
                   "#Dashboard_ImportantActions_DailyDeals_Title",
                 ),
-                image: (0, a.jsx)(mn, {}),
+                image: (0, a.jsx)(un, {}),
                 description: s
                   ? (0, c.we)(
                       "#Dashboard_ImportantActions_DailyDeals_Desc_Expiring",
                     )
                   : (0, c.we)("#Dashboard_ImportantActions_DailyDeals_Desc"),
-                priority: s ? xn : Dn,
+                priority: s ? En : xn,
                 actionDescription: (0, c.we)("#DailyDeals_Dashboard"),
                 action: `${i.TS.PARTNER_BASE_URL}promotion/dailydeals/dashboard`,
               }),
@@ -4888,7 +4912,7 @@
                   title: (0, c.we)(
                     "#Dashboard_ImportantActions_CommRights_Title",
                   ),
-                  image: (0, a.jsx)(un, {}),
+                  image: (0, a.jsx)(vn, {}),
                   description: (0, c.we)(
                     "#Dashboard_ImportantActions_CommRights_Desc",
                   ),
@@ -4906,7 +4930,7 @@
                   title: (0, c.we)(
                     "#Dashboard_ImportantActions_MailingAddr_Title",
                   ),
-                  image: (0, a.jsx)(vn, {}),
+                  image: (0, a.jsx)(gn, {}),
                   description: (0, c.we)(
                     "#Dashboard_ImportantActions_MailingAddr_Desc",
                   ),
@@ -4924,7 +4948,7 @@
                   title: (0, c.we)(
                     "#Dashboard_ImportantActions_PhoneNumber_Title",
                   ),
-                  image: (0, a.jsx)(un, {}),
+                  image: (0, a.jsx)(vn, {}),
                   description: (0, c.we)(
                     "#Dashboard_ImportantActions_PhoneNumber_Desc",
                   ),
@@ -4950,7 +4974,7 @@
                 title: (0, c.we)(
                   "#Dashboard_ImportantActions_BankingExpiring_Title",
                 ),
-                image: (0, a.jsx)(mn, {}),
+                image: (0, a.jsx)(un, {}),
                 description: (0, c.we)(
                   "#Dashboard_ImportantActions_BankingExpiring_Desc",
                   r,
@@ -4959,7 +4983,7 @@
                   "#Dashboard_ImportantActions_BankingExpiring_Details",
                   r,
                 ),
-                priority: xn,
+                priority: En,
                 actionDescription: (0, c.we)(
                   "#Dashboard_ImportantActions_BankingExpiring_Action",
                 ),
@@ -4972,34 +4996,34 @@
           const e = t.concat(n);
           return (
             e.sort((e, t) => {
-              const n = hn(e.priority),
-                a = hn(t.priority);
+              const n = Dn(e.priority),
+                a = Dn(t.priority);
               return n !== a ? a - n : 0;
             }),
             e
           );
         }, [t, n]);
       }
-      function hn(e) {
-        return e === xn ? 1 : 0;
+      function Dn(e) {
+        return e === En ? 1 : 0;
       }
-      const Dn = 0,
-        xn = 1;
-      function En(e) {
+      const xn = 0,
+        En = 1;
+      function Tn(e) {
         const [t] = (0, U.QD)("testactions", !1),
-          n = gn(t);
+          n = hn(t);
         return 0 == n.length
           ? null
           : (0, a.jsx)(d.$, {
               title: (0, c.we)("#Dashboard_ImportantActions_Title"),
               count: n.length,
               children: (0, a.jsx)("div", {
-                className: _n.ImportantActions,
-                children: n.map((e) => (0, a.jsx)(Tn, { ...e }, e.id)),
+                className: mn.ImportantActions,
+                children: n.map((e) => (0, a.jsx)(wn, { ...e }, e.id)),
               }),
             });
       }
-      function Tn(e) {
+      function wn(e) {
         const {
           title: t,
           image: n,
@@ -5010,18 +5034,18 @@
           action: d,
         } = e;
         return (0, a.jsxs)("div", {
-          className: (0, l.A)(_n.ImportantAction, r == xn && _n.Urgent),
+          className: (0, l.A)(mn.ImportantAction, r == En && mn.Urgent),
           children: [
             (0, a.jsxs)("div", {
-              className: _n.Header,
+              className: mn.Header,
               children: [
-                (0, a.jsx)("div", { className: _n.Image, children: n }),
+                (0, a.jsx)("div", { className: mn.Image, children: n }),
                 (0, a.jsxs)("div", {
-                  className: _n.Body,
+                  className: mn.Body,
                   children: [
-                    (0, a.jsx)("div", { className: _n.Title, children: t }),
+                    (0, a.jsx)("div", { className: mn.Title, children: t }),
                     (0, a.jsxs)("div", {
-                      className: _n.Description,
+                      className: mn.Description,
                       children: [s, i && (0, a.jsx)(I.o, { tooltip: i })],
                     }),
                   ],
@@ -5029,7 +5053,7 @@
               ],
             }),
             (0, a.jsx)("button", {
-              className: (0, l.A)(_n.Button),
+              className: (0, l.A)(mn.Button),
               onClick: () => {
                 "function" == typeof d && d(), window.open(d, "_blank");
               },
@@ -5038,8 +5062,8 @@
           ],
         });
       }
-      function wn(e) {
-        const t = (0, pn.V)(),
+      function fn(e) {
+        const t = (0, _n.V)(),
           n = (0, i.Tc)("bShowWarnings", "application_config"),
           r = (0, i.Tc)("bTestData", "application_config"),
           o = (0, i.Tc)("bPartnerOnboarding", "application_config"),
@@ -5047,7 +5071,7 @@
             const [t, n] = s.useState(!0);
             return (
               s.useEffect(() => {
-                mt.O3.Init(), pt.c.Get();
+                ut.O3.Init(), _t.c.Get();
                 (async () => {
                   const t = N.Get().Init(
                     i.iA.accountid,
@@ -5062,18 +5086,18 @@
         return l
           ? null
           : o
-            ? (0, a.jsx)(dn.m, {
-                children: (0, a.jsx)(Jt, {
+            ? (0, a.jsx)(cn.m, {
+                children: (0, a.jsx)(Xt, {
                   partnerId: t,
                   showWarnings: n,
                   testData: r,
                 }),
               })
-            : (0, a.jsxs)(dn.m, {
+            : (0, a.jsxs)(cn.m, {
                 children: [
-                  (0, a.jsx)(En, {}),
-                  (0, a.jsx)(cn.a, {}),
-                  (0, a.jsx)(zt, {
+                  (0, a.jsx)(Tn, {}),
+                  (0, a.jsx)(pn.a, {}),
+                  (0, a.jsx)($t, {
                     partnerId: t,
                     showWarnings: n,
                     testData: r,

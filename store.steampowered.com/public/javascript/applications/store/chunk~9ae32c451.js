@@ -5,9 +5,9 @@
   [70351],
   {
     20019: (e, t, n) => {
-      n.d(t, { U: () => a });
+      n.d(t, { U: () => r });
       var o = n(95578);
-      function a(e) {
+      function r(e) {
         switch (e) {
           case o.uE.HT:
             return "game";
@@ -30,93 +30,305 @@
         return "invalid";
       }
     },
+    72668: (e, t, n) => {
+      n.d(t, {
+        qr: () => I,
+        aL: () => v,
+        Nb: () => B,
+        Ys: () => S,
+        kW: () => F,
+        qn: () => L,
+        Um: () => G,
+        DV: () => C,
+        W3: () => D,
+        OM: () => b,
+        Tn: () => w,
+        dI: () => M,
+        fF: () => _,
+        gP: () => j,
+      });
+      var o = n(66418),
+        r = n(80902),
+        s = n(75233),
+        a = n(51614),
+        i = n(90626),
+        c = n(37085),
+        u = n(30470),
+        l = n(24484);
+      const d = !0;
+      function m(e) {
+        return o.TS.STORE_BASE_URL + "saleaction/" + e;
+      }
+      async function p(e, t) {
+        const n = await fetch(e, { credentials: "include", ...t });
+        if (!n.ok) throw new Error(`${e} answered ${n.status}`);
+        return await n.json();
+      }
+      function g() {
+        return (0, l.Fd)("doorinfo", "application_config") ?? void 0;
+      }
+      var f = n(71432);
+      function h(e = !0) {
+        return {
+          queryKey: ["EventDoors"],
+          queryFn: () =>
+            (async function () {
+              const e = await p(m("ajaxgetopendoor"), { method: "GET" });
+              if (!e.doordata)
+                throw new Error("ajaxgetopendoor answered " + e.success);
+              return e.doordata;
+            })(),
+          initialData: g,
+          enabled: d && e,
+          staleTime: 1 / 0,
+          gcTime: 1 / 0,
+          retry: !1,
+        };
+      }
+      function v(e, t) {
+        return (
+          !(!e || null == t) && Boolean(t >= 0 && t < e.length && e[t].opened)
+        );
+      }
+      function S(e) {
+        let t = f.K;
+        return (
+          e?.forEach((e) => {
+            e.opened && e.day > t && (t = e.day);
+          }),
+          t
+        );
+      }
+      function I(e) {
+        return S(e) != f.K;
+      }
+      function _(e = !0) {
+        const { data: t } = (0, r.I)(h(e));
+        return t;
+      }
+      function C() {
+        return null != _();
+      }
+      function b(e) {
+        return v(_(), e);
+      }
+      function w() {
+        return S(_());
+      }
+      function D() {
+        return I(_());
+      }
+      const y = { nOpenCount: 0, iLastDoorIndex: f.K };
+      function M() {
+        const { data: e } = (0, r.I)({
+          queryKey: ["EventDoorOpened"],
+          queryFn: () => y,
+          initialData: y,
+          staleTime: 1 / 0,
+          gcTime: 1 / 0,
+        });
+        return e ?? y;
+      }
+      const E = new WeakMap();
+      function x(e) {
+        let t = E.get(e);
+        return t || ((t = new Map()), E.set(e, t)), t;
+      }
+      async function T(e, t) {
+        const {
+          iDoorIndex: n,
+          bOpenDoor: r = !0,
+          datarecord: s,
+          bPreviewMode: a = !1,
+        } = t;
+        const i = e.getQueryData(["EventDoors"]);
+        if (!o.iA.logged_in || !i || n > i.length || n < 0) return null;
+        const d = x(e),
+          g = d.get(n);
+        if (g) return g;
+        if (i[n].opened == r) return {};
+        const f = (async function (e, t, n, o, r) {
+          try {
+            const s = await (async function (e, t, n, o) {
+              const r = new FormData();
+              r.append("sessionid", (0, l.KC)()),
+                r.append("door_index", "" + e),
+                n && r.append("datarecord", n),
+                o && r.append("fake_open", "" + o),
+                r.append("clan_accountid", "" + u.UF.CLANACCOUNTID),
+                t || r.append("open_door", "0");
+              const s = await p(m("ajaxopendoor"), { method: "POST", body: r });
+              if (s.success != c.R)
+                throw new Error(
+                  "ajaxopendoor answered " +
+                    s.success +
+                    (s.err_msg ? ": " + s.err_msg : ""),
+                );
+              return s;
+            })(t, n, o, r);
+            return (
+              O(e, t, n),
+              n &&
+                !r &&
+                e.setQueryData(["EventDoorOpened"], (e) => ({
+                  nOpenCount: (e?.nOpenCount ?? 0) + 1,
+                  iLastDoorIndex: t,
+                })),
+              s
+            );
+          } catch (n) {
+            return (
+              x(e).delete(t), console.error("OpenEventDoor hit error", n), null
+            );
+          }
+        })(e, n, r, s, a);
+        return d.set(n, f), f;
+      }
+      function j() {
+        const e = (0, s.jE)(),
+          { mutateAsync: t } = (0, a.n)({ mutationFn: (t) => T(e, t) });
+        return t;
+      }
+      function B(e) {
+        return e.ensureQueryData(h());
+      }
+      function F(e, t, n) {
+        t < 0 || t >= f.F
+          ? console.error("SetEventDoorState: Wrong door being set " + t)
+          : O(e, t, n);
+      }
+      function O(e, t, n) {
+        e.setQueryData(["EventDoors"], (e) =>
+          e?.map((e, o) => (o == t && e.opened != n ? { ...e, opened: n } : e)),
+        );
+      }
+      function L(e, t) {
+        e.setQueryData(["EventDoors"], (e) =>
+          e?.map((e, n) => {
+            if (n >= f.F) return e;
+            const o = n <= t;
+            return e.opened != o ? { ...e, opened: o } : e;
+          }),
+        );
+      }
+      async function A(e, t) {
+        const n = await (async function (e) {
+          const t = new FormData();
+          t.append("sessionid", (0, l.KC)()),
+            t.append("clan_accountid", "" + e);
+          const n = await p(m("ajaxclosealldoor"), { method: "POST", body: t });
+          if (n.success != c.R)
+            throw new Error("ajaxclosealldoor answered " + n.success);
+          return n.count ?? 0;
+        })(t);
+        return (
+          console.log("CloseAllEventDoors - closed " + n),
+          L(e, f.K),
+          x(e).clear(),
+          n
+        );
+      }
+      function G() {
+        const e = (0, s.jE)(),
+          { mutate: t } = (0, a.n)({
+            mutationFn: (t) => A(e, t),
+            onError: (e) => console.error("CloseAllEventDoors failed", e),
+          });
+        return (0, i.useCallback)((e) => t(e), [t]);
+      }
+    },
+    71432: (e, t, n) => {
+      n.d(t, { F: () => o, K: () => r });
+      const o = 7,
+        r = -1;
+    },
     2677: (e, t, n) => {
       n.d(t, {
-        Ig: () => p,
-        Jz: () => g,
-        LM: () => S,
+        Ig: () => g,
+        Jz: () => f,
+        LM: () => I,
         LS: () => m,
-        P9: () => h,
-        VX: () => C,
-        Z$: () => f,
-        fp: () => u,
-        xN: () => _,
-        xe: () => D,
+        P9: () => p,
+        VX: () => S,
+        Z$: () => C,
+        fp: () => d,
+        xN: () => v,
+        xe: () => h,
       });
       var o = n(80902),
-        a = n(75233),
+        r = n(75233),
         s = n(51614),
-        r = n(90626),
+        a = n(90626),
         i = n(56055);
-      const l = 64,
-        c = [];
-      function d(e) {
+      const c = 64,
+        u = [];
+      function l(e) {
         return ["SaleQuizAnswers", e];
       }
-      function u(e) {
+      function d(e) {
         const { data: t } = (0, o.I)(
           (function (e) {
             return {
-              queryKey: d(e),
-              queryFn: () => c,
-              initialData: c,
+              queryKey: l(e),
+              queryFn: () => u,
+              initialData: u,
               staleTime: 1 / 0,
               gcTime: 1 / 0,
             };
           })(e),
         );
-        return t ?? c;
+        return t ?? u;
       }
       function m(e, t) {
-        return u(e)[t];
+        return d(e)[t];
       }
-      function h(e) {
+      function p(e) {
         for (let t = e.length - 1; t >= 0; --t) if (e[t]?.answer) return t + 1;
         return 0;
       }
-      function p(e) {
+      function g(e) {
         return e.map((e) => e?.answer).filter((e) => Boolean(e));
       }
-      function g(e) {
+      function f(e) {
         return e.flatMap((e) => e?.rgCategoryIDs?.filter(Boolean) ?? []);
       }
-      function D(e) {
+      function h(e) {
         return e.some((e) => e?.answer?.reveal_question_id == i.b2);
       }
+      function v(e, t, n, o) {
+        _(e, t, n, { answer: o });
+      }
+      function S(e, t, n, o) {
+        _(e, t, n, { rgCategoryIDs: o?.length ? o : void 0 });
+      }
+      function I(e, t) {
+        e.setQueryData(l(t), u);
+      }
       function _(e, t, n, o) {
-        I(e, t, n, { answer: o });
-      }
-      function C(e, t, n, o) {
-        I(e, t, n, { rgCategoryIDs: o?.length ? o : void 0 });
-      }
-      function S(e, t) {
-        e.setQueryData(d(t), c);
-      }
-      function I(e, t, n, o) {
-        const a = Math.min(Math.max(n, 0), l);
-        e.setQueryData(d(t), (e) => {
-          const t = (e ?? c).slice();
-          for (; t.length <= a; ) t.push(void 0);
-          return (t[a] = { ...t[a], ...o }), t;
+        const r = Math.min(Math.max(n, 0), c);
+        e.setQueryData(l(t), (e) => {
+          const t = (e ?? u).slice();
+          for (; t.length <= r; ) t.push(void 0);
+          return (t[r] = { ...t[r], ...o }), t;
         });
       }
-      function f(e) {
-        const t = (0, a.jE)(),
+      function C(e) {
+        const t = (0, r.jE)(),
           { mutate: n } = (0, s.n)({
             mutationFn: async (n) => {
               switch (n.type) {
                 case "answer":
-                  _(t, e, n.iQuestionIndex, n.answer);
+                  v(t, e, n.iQuestionIndex, n.answer);
                   break;
                 case "categories":
-                  C(t, e, n.iQuestionIndex, n.rgCategoryIDs);
+                  S(t, e, n.iQuestionIndex, n.rgCategoryIDs);
                   break;
                 case "clear":
-                  S(t, e);
+                  I(t, e);
               }
             },
           });
-        return (0, r.useMemo)(
+        return (0, a.useMemo)(
           () => ({
             fnSetAnswer: (e, t) =>
               n({ type: "answer", iQuestionIndex: e, answer: t }),
@@ -129,26 +341,26 @@
       }
     },
     56055: (e, t, n) => {
-      n.d(t, { b2: () => o, nx: () => a });
+      n.d(t, { b2: () => o, nx: () => r });
       const o = "terminal";
-      var a;
+      var r;
       !(function (e) {
         (e[(e.TemplateFAQDisplayColumn = 1)] = "TemplateFAQDisplayColumn"),
           (e[(e.TemplateFAQDisplaySimpleRow = 2)] =
             "TemplateFAQDisplaySimpleRow");
-      })(a || (a = {}));
+      })(r || (r = {}));
     },
     39733: (e, t, n) => {
-      n.d(t, { Du: () => p, fy: () => h, pt: () => g });
+      n.d(t, { Du: () => g, fy: () => p, pt: () => f });
       var o = n(68797),
-        a = n(78327),
+        r = n(78327),
         s = n(41735),
-        r = n.n(s),
+        a = n.n(s),
         i = n(37085),
-        l = n(90626),
-        c = n(6144),
-        d = n(84933),
-        u = n(81393);
+        c = n(90626),
+        u = n(6144),
+        l = n(84933),
+        d = n(81393);
       class m {
         m_mapBadgeInfo = new Map();
         m_mapBadgeLoadPromises = new Map();
@@ -163,7 +375,7 @@
         GetBadgeInfoChangeCallback(e) {
           return (
             this.m_eventBadgehangeCallback.has(e) ||
-              this.m_eventBadgehangeCallback.set(e, new c.lu()),
+              this.m_eventBadgehangeCallback.set(e, new u.lu()),
             this.m_eventBadgehangeCallback.get(e)
           );
         }
@@ -186,23 +398,23 @@
           if (!e || !Number.isInteger(e)) return { badgeid: e, level: 0 };
           let t = null;
           try {
-            const n = (0, a.xv)();
-            (0, u.wT)(
-              n == a.TS.STORE_BASE_URL || n == a.TS.COMMUNITY_BASE_URL,
+            const n = (0, r.xv)();
+            (0, d.wT)(
+              n == r.TS.STORE_BASE_URL || n == r.TS.COMMUNITY_BASE_URL,
               "ajaxgetbadgeinfo called on wrong unsupported site: " + n,
             );
             const s = n + "actions/ajaxgetbadgeinfo",
-              l = { badgeid: e },
-              c = await r().get(s, { params: l, withCredentials: !0 });
+              c = { badgeid: e },
+              u = await a().get(s, { params: c, withCredentials: !0 });
             if (
-              200 == c.status &&
-              (c.data?.success == i.R || c.data?.success == i.p)
+              200 == u.status &&
+              (u.data?.success == i.R || u.data?.success == i.p)
             ) {
               const t = {
-                badgeid: c.data.badgeid,
-                level: c.data.level,
-                xp: c.data.xp,
-                completion_time: c.data.completion_time,
+                badgeid: u.data.badgeid,
+                level: u.data.level,
+                xp: u.data.xp,
+                completion_time: u.data.completion_time,
               };
               return (
                 this.m_mapBadgeInfo.set(e, t),
@@ -211,7 +423,7 @@
                 t
               );
             }
-            t = (0, o.H)(c);
+            t = (0, o.H)(u);
           } catch (e) {
             t = (0, o.H)(e);
           }
@@ -225,10 +437,10 @@
         }
         constructor() {}
       }
-      function h(e) {
-        const [t, n] = (0, l.useState)(e ? m.Get().GetBadgeInfo(e) : void 0);
+      function p(e) {
+        const [t, n] = (0, c.useState)(e ? m.Get().GetBadgeInfo(e) : void 0);
         return (
-          (0, l.useEffect)(() => {
+          (0, c.useEffect)(() => {
             !t &&
               e &&
               m
@@ -236,444 +448,149 @@
                 .LoadBadgeInfo(e)
                 .then((e) => n(e));
           }, [e, t]),
-          (0, d.hL)(e ? m.Get().GetBadgeInfoChangeCallback(e) : void 0, n),
+          (0, l.hL)(e ? m.Get().GetBadgeInfoChangeCallback(e) : void 0, n),
           t
         );
       }
-      function p(e) {
+      function g(e) {
         m.Get().Test_SetBadgeInfo(e);
       }
-      function g(e) {
-        const [t, n] = (0, l.useState)(
+      function f(e) {
+        const [t, n] = (0, c.useState)(
           e ? m.Get().GetInitialBadgeInfo(e) : void 0,
         );
         return (
-          (0, l.useEffect)(() => {
+          (0, c.useEffect)(() => {
             !t && e && m.Get().LoadBadgeInfo(e);
           }, [e, t]),
-          (0, d.hL)(e ? m.Get().GetBadgeInfoChangeCallback(e) : void 0, () =>
+          (0, l.hL)(e ? m.Get().GetBadgeInfoChangeCallback(e) : void 0, () =>
             n(e ? m.Get().GetInitialBadgeInfo(e) : void 0),
           ),
           t
         );
       }
     },
-    35400: (e, t, n) => {
-      n.d(t, {
-        DV: () => _,
-        OC: () => D,
-        OM: () => C,
-        Sp: () => f,
-        Tn: () => S,
-        W3: () => I,
-        hH: () => g,
-        my: () => b,
-      });
-      var o = n(34629),
-        a = n(41735),
-        s = n.n(a),
-        r = n(14947),
-        i = n(90626),
-        l = n(37085),
-        c = n(68797),
-        d = n(6144),
-        u = n(84933),
-        m = n(78327),
-        h = n(44165);
-      const p = -1;
-      class g {
-        m_userData;
-        m_bLoadedDuringInit = !1;
-        m_strLastDoorOpenKey = "video_noneset";
-        m_bIsAnyDoorOpened = !1;
-        m_nHighestDoorOpened = p;
-        m_initialLoadPromise;
-        m_mapDoorOpenPromise = new Map();
-        m_mapChangeCallback = new Map();
-        m_doorInitializedChangedCallback = new d.lu();
-        m_largestDoorChangeCallback = new d.lu();
-        m_bIsAnyDoorOpenChangeCallback = new d.lu();
-        m_doorOpenedCallback = new d.lu();
-        GetLastDoorOpen() {
-          return this.m_strLastDoorOpenKey;
-        }
-        GetRawDoorData() {
-          return this.m_userData;
-        }
-        BIsDoorOpened(e) {
-          return (
-            null != e &&
-            null != e &&
-            !!this.m_userData &&
-            Boolean(e < this.m_userData.length && this.m_userData[e].opened)
-          );
-        }
-        BCanUserOpenDoor(e) {
-          let t = h.HD.GetTimeNowWithOverride();
-          return (
-            m.iA.logged_in &&
-            this.m_userData &&
-            e < this.m_userData.length &&
-            t >= this.m_userData[e].rtime_start &&
-            t <= this.m_userData[e].rtime_end
-          );
-        }
-        GetDoorCount() {
-          return this.m_userData ? this.m_userData.length : 0;
-        }
-        BIsAnyDoorOpened() {
-          return this.m_bIsAnyDoorOpened;
-        }
-        GetIsAnyDoorOpenChange() {
-          return this.m_bIsAnyDoorOpenChangeCallback;
-        }
-        GetLargestDoorOpenIndex() {
-          return this.m_nHighestDoorOpened;
-        }
-        GetLargestDoorIndexChange() {
-          return this.m_largestDoorChangeCallback;
-        }
-        GetDoorStateChangeCallback(e) {
-          return (
-            this.m_mapChangeCallback.has(e) ||
-              this.m_mapChangeCallback.set(e, new d.lu()),
-            this.m_mapChangeCallback.get(e)
-          );
-        }
-        GetDoorStateInitializedChangeCallback() {
-          return this.m_doorInitializedChangedCallback;
-        }
-        GetDoorOpenedCallback() {
-          return this.m_doorOpenedCallback;
-        }
-        BIsInitialized() {
-          return this.m_bLoadedDuringInit;
-        }
-        GetMaxDoor() {
-          return 7;
-        }
-        SetInMemoryUpdateDoorOpenUpto(e) {
-          for (let t = 0; t < 7; ++t) {
-            const n = t <= e;
-            this.m_userData[t].opened != n &&
-              ((this.m_userData[t].opened = n),
-              this.GetDoorStateChangeCallback(t).Dispatch(n));
-          }
-          this.RecomputeState();
-        }
-        SetInMemorySpecificDoorState(e, t) {
-          e < 7
-            ? this.m_userData[e].opened != t &&
-              ((this.m_userData[e].opened = t),
-              this.GetDoorStateChangeCallback(e).Dispatch(t),
-              this.RecomputeState())
-            : console.error("CDoorStore: Wrong door being set " + e);
-        }
-        RecomputeState() {
-          let e = p;
-          this.m_userData?.forEach((t) => {
-            t.opened && t.day > e && (e = t.day);
-          });
-          const t = e != p;
-          t != this.m_bIsAnyDoorOpened &&
-            ((this.m_bIsAnyDoorOpened = t),
-            this.GetIsAnyDoorOpenChange().Dispatch(t)),
-            e != this.m_nHighestDoorOpened &&
-              ((this.m_nHighestDoorOpened = e),
-              this.GetLargestDoorIndexChange().Dispatch(e));
-        }
-        async OpenDoor(e, t = !0, n = "", o = !1) {
-          return !m.iA.logged_in ||
-            !this.m_userData ||
-            e > this.m_userData.length ||
-            e < 0
-            ? null
-            : this.m_mapDoorOpenPromise.has(e)
-              ? this.m_mapDoorOpenPromise.get(e)
-              : this.m_userData[e].opened == t
-                ? {}
-                : (this.m_mapDoorOpenPromise.has(e) ||
-                    this.m_mapDoorOpenPromise.set(
-                      e,
-                      this.InternalOpenDoor(e, t, n, o),
-                    ),
-                  this.m_mapDoorOpenPromise.get(e));
-        }
-        async InternalOpenDoor(e, t = !0, n, o = !1) {
-          let a = m.TS.STORE_BASE_URL + "saleaction/ajaxopendoor";
-          const r = new FormData();
-          r.append("sessionid", (0, m.KC)()),
-            n && r.append("datarecord", n),
-            o && r.append("fake_open", "" + o),
-            r.append("door_index", "" + e),
-            r.append("clan_accountid", "" + m.UF.CLANACCOUNTID),
-            t || r.append("open_door", "0");
-          let i = null;
-          try {
-            let n = await s().post(a, r, { withCredentials: !0 });
-            if (200 == n?.status && n?.data?.success == l.R)
-              return (
-                (this.m_userData[e].opened = t),
-                (this.m_strLastDoorOpenKey = "door_" + (t ? e : e - 1)),
-                this.GetDoorStateChangeCallback(e).Dispatch(t),
-                this.RecomputeState(),
-                t && !o && this.GetDoorOpenedCallback().Dispatch(e),
-                n.data
-              );
-            i = (0, c.H)(n);
-          } catch (e) {
-            i = (0, c.H)(e);
-          }
-          return (
-            this.m_mapDoorOpenPromise.delete(e),
-            console.error("OpenDoor hit error: " + i.strErrorMsg, i),
-            null
-          );
-        }
-        async LoadDoorData() {
-          return this.m_bLoadedDuringInit
-            ? this.m_userData
-            : (this.m_initialLoadPromise ||
-                (this.m_initialLoadPromise = this.InternalLoadDoorData()),
-              this.m_initialLoadPromise);
-        }
-        async InternalLoadDoorData() {
-          const e = m.TS.STORE_BASE_URL + "saleaction/ajaxgetopendoor";
-          let t = null;
-          try {
-            const n = await s().get(e, { withCredentials: !0 });
-            if (200 == n.status && n.data?.doordata) {
-              (this.m_userData = n.data.doordata),
-                (this.m_bLoadedDuringInit = !0);
-              for (let e = 0; e < 7; ++e)
-                this.GetDoorStateChangeCallback(e).Dispatch(
-                  this.m_userData[e].opened,
-                );
-              return (
-                this.GetDoorStateInitializedChangeCallback().Dispatch(
-                  this.m_bLoadedDuringInit,
-                ),
-                this.RecomputeState(),
-                this.m_userData
-              );
-            }
-            t = (0, c.H)(n);
-          } catch (e) {
-            t = (0, c.H)(e);
-          }
-          return (
-            console.error(
-              "CDoorStore.LoadDoorData failed: " + t?.strErrorMsg,
-              t,
-            ),
-            null
-          );
-        }
-        async CloseAllDoors(e) {
-          let t = m.TS.STORE_BASE_URL + "saleaction/ajaxclosealldoor";
-          const n = new FormData();
-          n.append("sessionid", (0, m.KC)()),
-            n.append("clan_accountid", "" + e);
-          let o = null;
-          try {
-            let e = await s().post(t, n, { withCredentials: !0 });
-            if (200 == e.status && e?.data?.success == l.R) {
-              console.log("CDoorStore - closed " + e.data.count);
-              for (let e = 0; e < 7; ++e)
-                (this.m_userData[e].opened = !1),
-                  this.GetDoorStateChangeCallback(e).Dispatch(
-                    this.m_userData[e].opened,
-                  );
-              return this.RecomputeState(), !0;
-            }
-            o = (0, c.H)(e);
-          } catch (e) {
-            o = (0, c.H)(e);
-          }
-          return (
-            console.error(
-              "CDoorStore.CloseAllDoors failed: " + o?.strErrorMsg,
-              o,
-            ),
-            null
-          );
-        }
-        static s_Singleton;
-        static Get() {
-          return (
-            g.s_Singleton || ((g.s_Singleton = new g()), g.s_Singleton.Init()),
-            g.s_Singleton
-          );
-        }
-        constructor() {
-          (0, r.Gn)(this);
-        }
-        Init() {
-          (this.m_userData = (0, m.Tc)("doorinfo", "application_config")),
-            this.m_userData &&
-              ((this.m_bLoadedDuringInit = !0), this.RecomputeState());
-        }
-      }
-      function D() {
-        return { fnOpenDoor: g.Get().OpenDoor };
-      }
-      function _() {
-        const [e, t] = (0, i.useState)(g.Get().BIsInitialized());
-        return (
-          (0, i.useEffect)(() => {
-            e || g.Get().LoadDoorData();
-          }, [e]),
-          (0, u.hL)(g.Get().GetDoorStateInitializedChangeCallback(), t),
-          e
-        );
-      }
-      function C(e) {
-        const t = _(),
-          [n, o] = (0, i.useState)(t ? g.Get().BIsDoorOpened(e) : void 0);
-        return (0, u.hL)(g.Get().GetDoorStateChangeCallback(e), o), n;
-      }
-      function S() {
-        const e = _(),
-          [t, n] = (0, i.useState)(e ? g.Get().GetLargestDoorOpenIndex() : p);
-        return (0, u.hL)(g.Get().GetLargestDoorIndexChange(), n), t;
-      }
-      function I() {
-        const e = _(),
-          [t, n] = (0, i.useState)(!!e && g.Get().BIsAnyDoorOpened());
-        return (0, u.hL)(g.Get().GetIsAnyDoorOpenChange(), n), t;
-      }
-      function f(e) {
-        g.Get().SetInMemoryUpdateDoorOpenUpto(e);
-      }
-      function b(e, t) {
-        g.Get().SetInMemorySpecificDoorState(e, t);
-      }
-      (0, o.Cg)([r.sH], g.prototype, "m_bIsAnyDoorOpened", void 0),
-        (0, o.Cg)([r.sH], g.prototype, "m_nHighestDoorOpened", void 0),
-        (0, o.Cg)([u.oI], g.prototype, "BIsDoorOpened", null),
-        (0, o.Cg)([u.oI], g.prototype, "OpenDoor", null);
-    },
     94333: (e, t, n) => {
-      n.d(t, { hA: () => B, LG: () => x });
+      n.d(t, { hA: () => j, LG: () => B });
       var o = n(7850),
-        a = n(67165),
+        r = n(67165),
         s = n(30894),
-        r = n(61859),
+        a = n(61859),
         i = n(78327),
-        l = n(84811),
-        c = n(22797),
-        d = n(45699),
-        u = n(66407),
+        c = n(84811),
+        u = n(22797),
+        l = n(45699),
+        d = n(66407),
         m = n(39777),
-        h = n(14987),
-        p = n(90626),
-        g = n(56524),
-        D = n.n(g),
-        _ = n(76217),
-        C = n(95695),
-        S = n.n(C),
-        I = n(32630),
-        f = n(17289),
+        p = n(14987),
+        g = n(90626),
+        f = n(56524),
+        h = n.n(f),
+        v = n(76217),
+        S = n(95695),
+        I = n.n(S),
+        _ = n(32630),
+        C = n(17289),
         b = n(52038),
-        v = n(82227),
-        w = n(61336);
-      function O(e) {
+        w = n(82227),
+        D = n(61336);
+      function y(e) {
         const {
           strURL: t,
           strName: n,
-          strAvatarURL: a,
+          strAvatarURL: r,
           nFollowers: s,
           strCreatorType: i,
-          strTagLine: l,
-          strMemberListURL: c,
-          followButton: d,
-          bSmallFormat: u,
+          strTagLine: c,
+          strMemberListURL: u,
+          followButton: l,
+          bSmallFormat: d,
           bMinimalDisplay: m,
         } = e;
-        return (0, o.jsx)(I.Ay, {
+        return (0, o.jsx)(_.Ay, {
           feature: "salecreatorhome",
-          children: (0, o.jsxs)(_.Z, {
+          children: (0, o.jsxs)(v.Z, {
             className: (0, b.A)(
-              D().DevSummaryCtn,
-              u ? D().SmallFormat : D().LargeFormat,
-              m ? D().MinimalDisplay : "",
+              h().DevSummaryCtn,
+              d ? h().SmallFormat : h().LargeFormat,
+              m ? h().MinimalDisplay : "",
             ),
             "flow-children": "row",
             children: [
               Boolean(i) &&
-                (0, o.jsx)("span", { className: D().Title, children: i }),
+                (0, o.jsx)("span", { className: h().Title, children: i }),
               (0, o.jsxs)("div", {
-                className: D().DevSummaryWidgetCtn,
+                className: h().DevSummaryWidgetCtn,
                 children: [
                   (0, o.jsx)("div", {
-                    className: D().DevSummaryBackground,
-                    style: { backgroundImage: `url(${a} )` },
+                    className: h().DevSummaryBackground,
+                    style: { backgroundImage: `url(${r} )` },
                   }),
                   (0, o.jsxs)("div", {
-                    className: (0, b.A)(D().DevSummaryContent),
+                    className: (0, b.A)(h().DevSummaryContent),
                     children: [
                       (0, o.jsxs)("div", {
-                        className: S().FlexRowContainer,
+                        className: I().FlexRowContainer,
                         children: [
-                          (0, o.jsx)(f.m, {
-                            href: (0, w.k2)(t),
-                            className: D().AvatarLink,
+                          (0, o.jsx)(C.m, {
+                            href: (0, D.k2)(t),
+                            className: h().AvatarLink,
                             bAllowFocuseableAnchor: !0,
                             children: (0, o.jsx)("img", {
-                              className: (0, b.A)(D().Avatar, "Avatar_Trgt"),
-                              src: a,
+                              className: (0, b.A)(h().Avatar, "Avatar_Trgt"),
+                              src: r,
                             }),
                           }),
                           (0, o.jsxs)("div", {
                             className: (0, b.A)(
-                              S().FlexColumnContainer,
-                              D().CreatorDescCtn,
+                              I().FlexColumnContainer,
+                              h().CreatorDescCtn,
                             ),
                             children: [
                               (0, o.jsxs)("div", {
                                 className: (0, b.A)(
-                                  D().CreatorTitleCtn,
-                                  S().FlexColumnContainer,
+                                  h().CreatorTitleCtn,
+                                  I().FlexColumnContainer,
                                 ),
                                 children: [
-                                  (0, o.jsx)(f.m, {
-                                    href: (0, w.k2)(t),
-                                    className: D().CreatorNameName,
+                                  (0, o.jsx)(C.m, {
+                                    href: (0, D.k2)(t),
+                                    className: h().CreatorNameName,
                                     children: n,
                                   }),
-                                  Boolean(l) &&
+                                  Boolean(c) &&
                                     (0, o.jsx)("div", {
                                       className: (0, b.A)(
-                                        S().FlexColumnContainer,
-                                        D().CreatorTagline,
+                                        I().FlexColumnContainer,
+                                        h().CreatorTagline,
                                       ),
-                                      children: l,
+                                      children: c,
                                     }),
                                 ],
                               }),
                               (0, o.jsx)("div", {
                                 className: (0, b.A)({
-                                  [S().FlexColumnContainer]: u,
-                                  [S().FlexRowContainer]: !u,
-                                  [D().SocialFollowersCtn]: !0,
+                                  [I().FlexColumnContainer]: d,
+                                  [I().FlexRowContainer]: !d,
+                                  [h().SocialFollowersCtn]: !0,
                                 }),
                                 children: (0, o.jsxs)("div", {
-                                  className: (0, b.A)(D().FollowBtnCtn),
+                                  className: (0, b.A)(h().FollowBtnCtn),
                                   children: [
-                                    d,
+                                    l,
                                     (0, o.jsxs)("div", {
                                       className: (0, b.A)({
-                                        [D().Followers]: !0,
+                                        [h().Followers]: !0,
                                       }),
                                       children: [
                                         (0, o.jsx)("span", {
-                                          children: (0, r.we)(
+                                          children: (0, a.we)(
                                             "#CreatorHome_JustFollowers",
                                           ),
                                         }),
                                         (0, o.jsx)("span", {
-                                          className: D().FollowerCount,
-                                          children: (0, v.Dq)(s),
+                                          className: h().FollowerCount,
+                                          children: (0, w.Dq)(s),
                                         }),
                                       ],
                                     }),
@@ -684,12 +601,12 @@
                           }),
                         ],
                       }),
-                      Boolean(c) &&
+                      Boolean(u) &&
                         (0, o.jsx)("a", {
-                          href: c,
+                          href: u,
                           target: "_blank",
-                          className: D().MembersListLink,
-                          children: (0, r.we)("#ClanMembershipList"),
+                          className: h().MembersListLink,
+                          children: (0, a.we)("#ClanMembershipList"),
                         }),
                     ],
                   }),
@@ -699,47 +616,47 @@
           }),
         });
       }
-      var y = n(28372);
-      function M(e) {
-        const { data: t } = (0, m.wl)(e ? { appid: e } : void 0);
-        return p.useMemo(() => {
+      var M = n(28372);
+      function E(e) {
+        const { data: t, isPending: n } = (0, m.wl)(e ? { appid: e } : void 0);
+        return g.useMemo(() => {
           if (!e) return [];
-          if (!t) return;
-          const n = [],
-            o = new Set(),
-            a = [
-              ["developer", (0, h.Qm)(t.developers)],
-              ["publisher", (0, h.Qm)(t.publishers)],
-              ["franchise", (0, h.Qm)(t.franchises)],
+          if (!t) return n ? void 0 : [];
+          const o = [],
+            r = new Set(),
+            s = [
+              ["developer", (0, p.Qm)(t.developers)],
+              ["publisher", (0, p.Qm)(t.publishers)],
+              ["franchise", (0, p.Qm)(t.franchises)],
             ];
-          for (const [t, s] of a)
-            for (const a of s)
-              o.has(a) ||
-                (o.add(a),
-                n.push({ appid: e, name: "", clan_account_id: a, type: t }));
-          return n;
-        }, [e, t]);
+          for (const [t, n] of s)
+            for (const s of n)
+              r.has(s) ||
+                (r.add(s),
+                o.push({ appid: e, name: "", clan_account_id: s, type: t }));
+          return o;
+        }, [e, t, n]);
       }
-      function G(e) {
+      function x(e) {
         const { rgCreators: t, renderCreator: n } = e,
-          [a, s] = p.useState(0);
+          [r, s] = g.useState(0);
         if (!t.length) return null;
         if (1 == t.length) return (0, o.jsx)(o.Fragment, { children: n(t[0]) });
-        const r = a % t.length;
+        const a = r % t.length;
         return (0, o.jsxs)("div", {
-          className: D().CreatorCarouselCtn,
+          className: h().CreatorCarouselCtn,
           children: [
-            n(t[r]),
+            n(t[a]),
             (0, o.jsx)("div", {
-              className: D().CreatorCarouselCrumbs,
+              className: h().CreatorCarouselCrumbs,
               children: t.map((e, t) =>
                 (0, o.jsx)(
-                  d.ml,
+                  l.ml,
                   {
-                    className: D().CreatorCarouselCrumb,
+                    className: h().CreatorCarouselCrumb,
                     onClick: () => s(t),
-                    "aria-label": L(e.type),
-                    children: (0, o.jsx)(u.U, { bIsActive: t == r }),
+                    "aria-label": T(e.type),
+                    children: (0, o.jsx)(d.U, { bIsActive: t == a }),
                   },
                   e.clan_account_id,
                 ),
@@ -748,99 +665,108 @@
           ],
         });
       }
-      function L(e) {
+      function T(e) {
         switch (e) {
           case "publisher":
-            return (0, r.we)("#CreatorHome_PublishedBy");
+            return (0, a.we)("#CreatorHome_PublishedBy");
           case "franchise":
-            return (0, r.we)("#CreatorHome_InFranchise");
+            return (0, a.we)("#CreatorHome_InFranchise");
         }
-        return (0, r.we)("#CreatorHome_DevelopedBy");
+        return (0, a.we)("#CreatorHome_DevelopedBy");
       }
-      function B(e) {
+      function j(e) {
         const {
             creatorID: t,
             bShowTagline: n,
-            bHideCreatorType: d,
-            bSmallFormat: u,
+            bHideCreatorType: l,
+            bSmallFormat: d,
             bHideFollowButton: m,
-            bAddLinkToMemberList: h,
-            bMinimalDisplay: p,
+            bAddLinkToMemberList: p,
+            bMinimalDisplay: g,
           } = e,
-          { creatorHome: D } = (0, a.FV)(t.clan_account_id),
-          [_] = (0, s.L2)();
-        return _ || !D
+          { creatorHome: h, isFetching: v } = (0, r.FV)(t.clan_account_id),
+          [S] = (0, s.L2)();
+        return S || (!h && v)
           ? (0, o.jsx)("div", {
-              className: g.DevSummaryWidgetCtn,
-              children: (0, o.jsx)(c.t, {
-                string: (0, r.we)("#Loading"),
+              className: f.DevSummaryWidgetCtn,
+              children: (0, o.jsx)(u.t, {
+                string: (0, a.we)("#Loading"),
                 size: "medium",
                 position: "center",
               }),
             })
-          : (0, o.jsx)(l.tH, {
-              children: (0, o.jsx)(O, {
-                strURL: D.GetCreatorHomeURL(t.type),
-                strName: D.GetName(),
-                strAvatarURL: D.GetAvatarURLFullSize(),
-                nFollowers: D.GetNumFollowers(),
-                strCreatorType: d ? void 0 : L(t.type),
-                strTagLine: n ? D.GetTagLine() : void 0,
-                strMemberListURL: h
-                  ? i.TS.COMMUNITY_BASE_URL +
-                    "gid/" +
-                    D.GetClanSteamID().ConvertTo64BitString() +
-                    "/members/"
-                  : void 0,
-                followButton: m
-                  ? void 0
-                  : (0, o.jsx)(y.of, {
-                      clanAccountID: t.clan_account_id,
-                      creatorID: t,
-                    }),
-                bSmallFormat: u,
-                bMinimalDisplay: p,
-              }),
-            });
+          : h
+            ? (0, o.jsx)(c.tH, {
+                children: (0, o.jsx)(y, {
+                  strURL: h.GetCreatorHomeURL(t.type),
+                  strName: h.GetName(),
+                  strAvatarURL: h.GetAvatarURLFullSize(),
+                  nFollowers: h.GetNumFollowers(),
+                  strCreatorType: l ? void 0 : T(t.type),
+                  strTagLine: n ? h.GetTagLine() : void 0,
+                  strMemberListURL: p
+                    ? i.TS.COMMUNITY_BASE_URL +
+                      "gid/" +
+                      h.GetClanSteamID().ConvertTo64BitString() +
+                      "/members/"
+                    : void 0,
+                  followButton: m
+                    ? void 0
+                    : (0, o.jsx)(M.of, {
+                        clanAccountID: t.clan_account_id,
+                        creatorID: t,
+                      }),
+                  bSmallFormat: d,
+                  bMinimalDisplay: g,
+                }),
+              })
+            : null;
       }
-      function x(e) {
+      function B(e) {
         const { appid: t, bSmallFormat: n } = e,
-          a = M(t);
-        return a
-          ? (0, o.jsx)(l.tH, {
-              children: (0, o.jsx)(G, {
-                rgCreators: a,
+          r = E(t);
+        return r
+          ? (0, o.jsx)(c.tH, {
+              children: (0, o.jsx)(x, {
+                rgCreators: r,
                 renderCreator: (e) =>
-                  (0, o.jsx)(B, { creatorID: e, bSmallFormat: n }),
+                  (0, o.jsx)(j, { creatorID: e, bSmallFormat: n }),
               }),
             })
           : (0, o.jsx)("div", {
-              className: g.DevSummaryWidgetCtn,
-              children: (0, o.jsx)(c.t, {}),
+              className: f.DevSummaryWidgetCtn,
+              children: (0, o.jsx)(u.t, {}),
             });
       }
     },
     77021: (e, t, n) => {
-      n.d(t, { PM: () => m, TU: () => c, lM: () => u, ty: () => d });
+      n.d(t, {
+        D2: () => m,
+        PM: () => g,
+        TU: () => l,
+        lM: () => p,
+        ty: () => d,
+      });
       var o = n(34629),
-        a = n(90626),
+        r = n(90626),
         s = n(84933),
-        r = n(14947),
+        a = n(14947),
         i = n(95034),
-        l = n(65946);
-      class c {
+        c = n(65946),
+        u = n(62641);
+      class l {
         m_sParentOrigin;
         m_eventModelJson = void 0;
-        m_setMouseOverSectionID = r.sH.set();
-        m_setMouseOverSubsectionID = r.sH.set();
+        m_setMouseOverSectionID = a.sH.set();
+        m_setMouseOverSubsectionID = a.sH.set();
         m_jumpToSection = void 0;
         m_jumpToSubsection = void 0;
         static s_Singleton;
         static Get() {
-          return c.s_Singleton || (c.s_Singleton = new c()), c.s_Singleton;
+          return l.s_Singleton || (l.s_Singleton = new l()), l.s_Singleton;
         }
         constructor() {
-          (0, r.Gn)(this),
+          (0, a.Gn)(this),
             window.opener &&
               ((this.m_sParentOrigin = (0, i.f3)(
                 location.search,
@@ -881,10 +807,10 @@
           return this.m_jumpToSubsection;
         }
         ClearJumpToSectionID() {
-          (0, r.h5)(() => (this.m_jumpToSection = void 0));
+          (0, a.h5)(() => (this.m_jumpToSection = void 0));
         }
         ClearJumpToSubectionID() {
-          (0, r.h5)(() => (this.m_jumpToSubsection = void 0));
+          (0, a.h5)(() => (this.m_jumpToSubsection = void 0));
         }
         PostMessage(e) {
           window.opener &&
@@ -928,13 +854,13 @@
               case "PartnerEventEditor_Update":
                 if ("eventModelJson" in t && t.eventModelJson) {
                   const e = t;
-                  (0, r.h5)(() => (this.m_eventModelJson = e.eventModelJson));
+                  (0, a.h5)(() => (this.m_eventModelJson = e.eventModelJson));
                 }
                 break;
               case "PartnerEventEditor_MouseOverEditorSection":
                 if ("nSectionID" in t) {
                   const e = t;
-                  (0, r.h5)(() => {
+                  (0, a.h5)(() => {
                     e.bMouseOver
                       ? this.m_setMouseOverSectionID.add(e.nSectionID)
                       : this.m_setMouseOverSectionID.delete(e.nSectionID);
@@ -944,7 +870,7 @@
               case "PartnerEventEditor_MouseOverEditorSubsection":
                 if ("strSubsectionID" in t) {
                   const e = t;
-                  (0, r.h5)(() => {
+                  (0, a.h5)(() => {
                     e.bMouseOver
                       ? this.m_setMouseOverSubsectionID.add(e.strSubsectionID)
                       : this.m_setMouseOverSubsectionID.delete(
@@ -956,13 +882,13 @@
               case "PartnerEventEditor_JumpToEditorSection":
                 if ("nSectionID" in t) {
                   const e = t;
-                  (0, r.h5)(() => (this.m_jumpToSection = e.nSectionID));
+                  (0, a.h5)(() => (this.m_jumpToSection = e.nSectionID));
                 }
                 break;
               case "PartnerEventEditor_JumpToEditorSubection":
                 if ("strSubsectionID" in t) {
                   const e = t;
-                  (0, r.h5)(() => {
+                  (0, a.h5)(() => {
                     (this.m_jumpToSection = e.nSectionID),
                       (this.m_jumpToSubsection = {
                         nSectionID: e.nSectionID,
@@ -974,43 +900,51 @@
         }
       }
       function d() {
-        return (0, l.q3)(() => c.Get().BIsConnected());
+        return (0, c.q3)(() => l.Get().BIsConnected());
       }
-      function u(e) {
-        const t = (0, l.q3)(() => c.Get().GetJumpToSectionID());
-        a.useEffect(() => {
-          if (!c.Get().BIsConnected() || !t) return;
-          e(t) && c.Get().ClearJumpToSectionID();
+      function m() {
+        const e = (0, c.q3)(() => l.Get().GetEventModelJson());
+        return r.useMemo(() => {
+          if (!e) return;
+          const t = u.lh.FromJSON(e);
+          return (t.rtime32_last_modified = Math.floor(Date.now() / 1e3)), t;
+        }, [e]);
+      }
+      function p(e) {
+        const t = (0, c.q3)(() => l.Get().GetJumpToSectionID());
+        r.useEffect(() => {
+          if (!l.Get().BIsConnected() || !t) return;
+          e(t) && l.Get().ClearJumpToSectionID();
         }, [e, t]);
       }
-      function m(e) {
-        const t = (0, l.q3)(() => c.Get().GetJumpToSubsectionIDs());
-        a.useEffect(() => {
-          if (!c.Get().BIsConnected() || !t) return;
+      function g(e) {
+        const t = (0, c.q3)(() => l.Get().GetJumpToSubsectionIDs());
+        r.useEffect(() => {
+          if (!l.Get().BIsConnected() || !t) return;
           e(t.nSectionID, t.strSubsectionID) &&
-            c.Get().ClearJumpToSubectionID();
+            l.Get().ClearJumpToSubectionID();
         }, [e, t]);
       }
-      (0, o.Cg)([r.sH], c.prototype, "m_eventModelJson", void 0),
-        (0, o.Cg)([r.sH], c.prototype, "m_setMouseOverSectionID", void 0),
-        (0, o.Cg)([r.sH], c.prototype, "m_setMouseOverSubsectionID", void 0),
-        (0, o.Cg)([r.sH], c.prototype, "m_jumpToSection", void 0),
-        (0, o.Cg)([r.sH], c.prototype, "m_jumpToSubsection", void 0),
-        (0, o.Cg)([s.oI], c.prototype, "HandleMessage", null);
+      (0, o.Cg)([a.sH], l.prototype, "m_eventModelJson", void 0),
+        (0, o.Cg)([a.sH], l.prototype, "m_setMouseOverSectionID", void 0),
+        (0, o.Cg)([a.sH], l.prototype, "m_setMouseOverSubsectionID", void 0),
+        (0, o.Cg)([a.sH], l.prototype, "m_jumpToSection", void 0),
+        (0, o.Cg)([a.sH], l.prototype, "m_jumpToSubsection", void 0),
+        (0, o.Cg)([s.oI], l.prototype, "HandleMessage", null);
     },
     17289: (e, t, n) => {
       n.d(t, { m: () => i });
       var o = n(7850),
-        a = n(45699),
+        r = n(45699),
         s = n(66418),
-        r = n(2160);
+        a = n(2160);
       function i(e) {
-        const { href: t, children: n, bAllowFocuseableAnchor: i, ...l } = e;
-        return s.TS.EREALM === r.TU.k_ESteamRealmChina
-          ? (0, o.jsx)("div", { ...l, children: n })
+        const { href: t, children: n, bAllowFocuseableAnchor: i, ...c } = e;
+        return s.TS.EREALM === a.TU.k_ESteamRealmChina
+          ? (0, o.jsx)("div", { ...c, children: n })
           : i
-            ? (0, o.jsx)(a.Ii, { href: t, ...l, children: n })
-            : (0, o.jsx)("a", { href: t, ...l, children: n });
+            ? (0, o.jsx)(r.Ii, { href: t, ...c, children: n })
+            : (0, o.jsx)("a", { href: t, ...c, children: n });
       }
     },
   },

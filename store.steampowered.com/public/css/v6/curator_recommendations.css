@@ -568,6 +568,11 @@ background: -webkit-linear-gradient( 45deg, rgba(87, 92, 104, 0.3) 5%,rgba(87, 9
 	background-color:#990000;
 }
 
+.curator_featured .capsule a {
+	display: block;
+	position: relative;
+}
+
 .curator_featured .capsule .capimg {
 	width: 100%;
 }

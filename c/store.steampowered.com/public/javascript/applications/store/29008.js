@@ -1709,6 +1709,9 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid");
       const _ = {};
@@ -1941,6 +1944,47 @@
         return _.toLocaleDateString((0, _._)(), {
           weekday: "long",
         });
+      }
+      function _(_) {
+        return _.toLocaleDateString((0, _._)(), {
+          year: "numeric",
+        });
+      }
+      function _(_) {
+        return _.toLocaleDateString((0, _._)(), {
+          month: "long",
+          year: "numeric",
+        });
+      }
+      function _(_, _) {
+        switch (_.getUTCMonth()) {
+          case 0:
+          case 1:
+          case 2:
+            return _.Localize(
+              _ ? "#Time_QuarterOfYear_Expanded_Q1" : "#Time_QuarterOfYear_Q1",
+              _.getUTCFullYear(),
+            );
+          case 3:
+          case 4:
+          case 5:
+            return _.Localize(
+              _ ? "#Time_QuarterOfYear_Expanded_Q2" : "#Time_QuarterOfYear_Q2",
+              _.getUTCFullYear(),
+            );
+          case 6:
+          case 7:
+          case 8:
+            return _.Localize(
+              _ ? "#Time_QuarterOfYear_Expanded_Q3" : "#Time_QuarterOfYear_Q3",
+              _.getUTCFullYear(),
+            );
+          default:
+            return _.Localize(
+              _ ? "#Time_QuarterOfYear_Expanded_Q4" : "#Time_QuarterOfYear_Q4",
+              _.getUTCFullYear(),
+            );
+        }
       }
       function _(_) {
         const _ = Math.floor(_ / _._.PerYear),
@@ -2845,28 +2889,28 @@
           } = _,
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_);
-        return _ && _
-          ? (0, _.jsxs)("div", {
-              className: (0, _._)(_().GameHoverCreatorFollowButtonCtn, _),
-              style: _,
-              children: [
-                (0, _.jsx)("a", {
-                  href: (0, _._)(_, "developer"),
-                  children: (0, _.jsx)("img", {
-                    src:
-                      null == _
-                        ? (0, _._)(void 0, "medium")
-                        : _?.avatar_medium_url,
-                    alt: _?.group_name,
-                  }),
-                }),
-                (0, _.jsx)(_._, {
-                  clanAccountID: _,
-                  followType: _,
-                }),
-              ],
-            })
-          : null;
+        if (!_ || !_) return null;
+        const _ =
+          _.avatar_medium_url ||
+          _.avatar_full_url ||
+          (0, _._)(void 0, "medium");
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(_().GameHoverCreatorFollowButtonCtn, _),
+          style: _,
+          children: [
+            (0, _.jsx)("a", {
+              href: (0, _._)(_, "developer"),
+              children: (0, _.jsx)("img", {
+                src: _,
+                alt: _.group_name,
+              }),
+            }),
+            (0, _.jsx)(_._, {
+              clanAccountID: _,
+              followType: _,
+            }),
+          ],
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -3138,6 +3182,8 @@
           __webpack_require__._("chunkid").then(_._.bind(_, 81555, 19))),
         (_.russian = () =>
           __webpack_require__._("chunkid").then(_._.bind(_, 11809, 19))),
+        (_.sc_schinese = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 98347, 19))),
         (_.schinese = () =>
           __webpack_require__._("chunkid").then(_._.bind(_, 79004, 19))),
         (_.spanish = () =>
@@ -4283,7 +4329,6 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         return _?.is_coming_soon
@@ -4292,42 +4337,11 @@
                 case "date_full":
                   return (0, _._)(_);
                 case "date_month":
-                  return _(new Date(1e3 * _));
+                  return (0, _._)(new Date(1e3 * _));
                 case "date_quarter":
-                  return (function (_) {
-                    switch (_.getUTCMonth()) {
-                      case 0:
-                      case 1:
-                      case 2:
-                        return _._.Localize(
-                          "#Time_QuarterOfYear_Q1",
-                          _.getUTCFullYear(),
-                        );
-                      case 3:
-                      case 4:
-                      case 5:
-                        return _._.Localize(
-                          "#Time_QuarterOfYear_Q2",
-                          _.getUTCFullYear(),
-                        );
-                      case 6:
-                      case 7:
-                      case 8:
-                        return _._.Localize(
-                          "#Time_QuarterOfYear_Q3",
-                          _.getUTCFullYear(),
-                        );
-                      default:
-                        return _._.Localize(
-                          "#Time_QuarterOfYear_Q4",
-                          _.getUTCFullYear(),
-                        );
-                    }
-                  })(new Date(1e3 * _));
+                  return (0, _._)(new Date(1e3 * _));
                 case "date_year":
-                  return new Date(1e3 * _).toLocaleDateString((0, _._)(), {
-                    year: "numeric",
-                  });
+                  return (0, _._)(new Date(1e3 * _));
                 case "text_comingsoon":
                   return _ || _._.Localize("#Store_ComingSoon_ComingSoon");
                 case "text_tba":
@@ -4341,16 +4355,8 @@
               _.custom_release_date_message,
             )
           : _?.steam_release_date
-            ? ((_ = _.steam_release_date),
-              new Date(1e3 * _).toLocaleDateString((0, _._)()))
+            ? (0, _._)(_.steam_release_date)
             : "";
-        var _;
-      }
-      function _(_) {
-        return _.toLocaleDateString((0, _._)(), {
-          month: "long",
-          year: "numeric",
-        });
       }
       function _(_) {
         if (!_) return "";
@@ -4361,7 +4367,7 @@
           const _ = _.steam_release_date;
           return _
             ? _.is_abridged_release_date
-              ? _(new Date(1e3 * _))
+              ? (0, _._)(new Date(1e3 * _))
               : (0, _._)(_)
             : "";
         }

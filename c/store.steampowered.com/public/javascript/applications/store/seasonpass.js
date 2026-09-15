@@ -3,25 +3,25 @@
   {
     chunkid: (module) => {
       module.exports = {
-        StoreItemCtn: "_2SxhiHrQSCtBnKf3oKdon2",
-        StoreItemRow: "_3cBgZqhPaJpdeZl8hARr1o",
-        StoreItemDescription: "_2pkGLftA9XILpaWN0kejPk",
+        SeasonPass: "_3gfJe6nIkr6ZriDDPYp-z7",
+        Description: "_3sdNbLRZYrhEi9HWS1XAdu",
+        Title: "_3u0Ar8iq66LfqUbdXK2Scn",
+        Shipped: "_14Z4vFKjBcbizLEXIFSvWg",
+        DateAndControl: "_1bjdoxghswkEhrMsa43lpE",
+        Upcoming: "_2P0yy2pWYDXAg02ywBc6xc",
+        Status: "_2_JVEcPrnkP9U8YnlcUaV7",
+        Content: "FL3zV7J5DHOjOZzklSfsu",
+        Text: "_2bVkdku0nL6ga2QxSvR0Np",
+        Padding: "_3ENBi7dhQgbnK6NpZ-ut67",
+        Strike: "_33nXsC2--p10FL6D9ICf9W",
+        Chevron: "z1O0vP7Inz1H3vHuEjrUl",
       };
     },
     chunkid: (module) => {
       module.exports = {
-        SeasonPass: "oa0Mg649faNiGrRBlXZ7b",
-        Description: "_3ZmgNZ5nbBbDojlnZLRkgc",
-        Title: "_1PoePgbQRAy0Sbtz2Po_R7",
-        Shipped: "Y4pxifDaDKS1sYR7j-35X",
-        DateAndControl: "_3-5TufllBcRHGRpNEAuY5u",
-        Upcoming: "lZmBeL-zQf8GORGTr4uX-",
-        Status: "_2uj7WLmhl5-zIS1NE_Ig-9",
-        Content: "_1Axq2b2LqJszxamtTvrnTV",
-        Text: "_3zXxPvXsjZinhyyYuHArVW",
-        Padding: "_26DsxbVP4TJh-d5NBcU6Qc",
-        Strike: "CoE7R_RffGU0rYbU4eHwa",
-        Chevron: "_1qoDole_3YKojGNDyp72EY",
+        StoreItemCtn: "_2SxhiHrQSCtBnKf3oKdon2",
+        StoreItemRow: "_3cBgZqhPaJpdeZl8hARr1o",
+        StoreItemDescription: "_2pkGLftA9XILpaWN0kejPk",
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -120,13 +120,12 @@
                   _.milestones
                     .sort((_, _) =>
                       _.shipped && _.shipped
-                        ? _.rtime_complete - _.rtime_complete
+                        ? (_.rtime_complete ?? 0) - (_.rtime_complete ?? 0)
                         : _.shipped
                           ? -1
                           : _.shipped
                             ? 1
-                            : _.dates[_.dates.length - 1].rtime -
-                              _.dates[_.dates.length - 1].rtime,
+                            : _(_) - _(_),
                     )
                     .map((_) =>
                       (0, _.jsx)(
@@ -144,8 +143,12 @@
           : null;
       }
       function _(_) {
+        const _ = _.dates ?? [];
+        return _[_.length - 1]?.rtime ?? 0;
+      }
+      function _(_) {
         const { milestone: _, baseGameAppID: _ } = _,
-          _ = _.milestone_desc?.length > 0;
+          _ = (_.milestone_desc?.length ?? 0) > 0;
         return (0, _.jsxs)("div", {
           className: _().SeasonPass,
           children: [
@@ -156,7 +159,7 @@
                   children: [
                     Boolean(_.shipped) && "✓",
                     " ",
-                    _._.GetTokenWithFallback(_.title),
+                    _._.GetTokenWithFallback(_.title ?? []),
                   ],
                 }),
                 (0, _.jsx)("div", {
@@ -177,14 +180,15 @@
       }
       function _(_) {
         const { milestone: _, baseGameAppID: _ } = _,
-          _ = _._.GetTokenWithFallback(_.milestone_desc),
+          _ = _._.GetTokenWithFallback(_.milestone_desc ?? []),
           _ = _.appid || _.coming_soon_appid;
         return (0, _.jsxs)(_.Fragment, {
           children: [
-            Boolean(_) &&
-              (0, _.jsx)(_, {
-                appid: _,
-              }),
+            _
+              ? (0, _.jsx)(_, {
+                  appid: _,
+                })
+              : null,
             (0, _.jsxs)("div", {
               className: _().Description,
               children: [
@@ -207,15 +211,23 @@
           return (0, _.jsx)(_, {
             milestone: _,
           });
-        const _ = _.dates[0].rtime,
-          _ = _.dates.filter((_, _) => 0 == _ || _.rtime < _);
+        const _ = _.dates ?? [],
+          _ = _[0]?.rtime ?? 0,
+          _ = __webpack_require__.filter(
+            (_, _) => 0 == _ || (_.rtime ?? 0) < _,
+          );
         return (0, _.jsx)("div", {
           className: _().Upcoming,
           children: (0, _._)(
             "#SeasonPass_Release_Date",
             (0, _.jsx)("br", {}),
             [..._].reverse().map((_, _) => {
-              const _ = (0, _._)(_.coming_soon_display_type, _.rtime, null, !0);
+              const _ = (0, _._)(
+                _.coming_soon_display_type,
+                _.rtime ?? 0,
+                void 0,
+                !0,
+              );
               return (0, _.jsx)(
                 "div",
                 {
@@ -232,7 +244,7 @@
         const { milestone: _ } = _,
           _ = (0, _._)(_.appid),
           { data: _ } = (0, _._)(_),
-          _ = _?.steam_release_date || _.rtime_complete;
+          _ = _?.steam_release_date || _.rtime_complete || 0;
         return (0, _.jsx)("div", {
           className: _().Shipped,
           children: (0, _._)(
@@ -282,7 +294,7 @@
       function _(_) {
         const { milestone: _, baseGameAppID: _ } = _,
           [_, _] = (0, _.useState)(!1),
-          _ = (0, _._)(_.event_gid);
+          _ = (0, _._)(_.event_gid ?? "");
         return _
           ? (0, _.jsxs)(_.Fragment, {
               children: [

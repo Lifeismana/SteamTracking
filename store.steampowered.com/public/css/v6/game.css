@@ -3861,19 +3861,25 @@ span.prepurchase_text_normal {
 }
 
 div.early_access_banner {
-	height: 49px;
+	min-height: 61px;
 	position: relative;
-    background: rgb(68,75,84); /* Old browsers */
-    background: -moz-linear-gradient(-60deg,  rgba(68,75,84,1) 0%, rgba(91,98,108,1) 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(68,75,84,1)), color-stop(100%,rgba(91,98,108,1))); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(-60deg,  rgba(68,75,84,1) 0%,rgba(91,98,108,1) 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(-60deg,  rgba(68,75,84,1) 0%,rgba(91,98,108,1) 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(-60deg,  rgba(68,75,84,1) 0%,rgba(91,98,108,1) 100%); /* IE10+ */
-    background: linear-gradient(135deg,  rgba(68,75,84,1) 0%,rgba(91,98,108,1) 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#444b54', endColorstr='#5b626c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-    padding: 12px 15px 0 55px;
+	background: rgb(68,75,84); /* Old browsers */
+	background: -moz-linear-gradient(-60deg,  rgba(68,75,84,1) 0%, rgba(91,98,108,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(68,75,84,1)), color-stop(100%,rgba(91,98,108,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-60deg,  rgba(68,75,84,1) 0%,rgba(91,98,108,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-60deg,  rgba(68,75,84,1) 0%,rgba(91,98,108,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-60deg,  rgba(68,75,84,1) 0%,rgba(91,98,108,1) 100%); /* IE10+ */
+	background: linear-gradient(135deg,  rgba(68,75,84,1) 0%,rgba(91,98,108,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#444b54', endColorstr='#5b626c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	padding-right: 15px;
+	padding-left: 55px;
 	margin: 15px 0 40px 0;
 	border-radius: 2px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 4px;
+	box-sizing: border-box;
 }
 
 div.early_access_banner p {
@@ -3886,7 +3892,7 @@ div.early_access_banner p {
 			margin: 0;
 	padding: 0;
 	position: relative;
-	width: 350px;
+	max-width: 350px;
 }
 
 div.early_access_banner > .img {
@@ -3899,10 +3905,10 @@ div.early_access_banner > .img {
 }
 
 div.early_access_banner > .btn_medium {
-	float: right;
 	display: block;
-    background-color: #174661;
-    border: 2px solid #000000;
+	background-color: #174661;
+	border: 2px solid #000000;
+	min-width: fit-content;
 }
 
 div.early_access_header {
@@ -6804,8 +6810,10 @@ a.open_in_steam_body:hover {
 }
 
 .banner_open_in_steam {
-	min-height: 50px;
+	min-height: 57px;
+	background-color: #2681da;
 }
+
 @media screen and (max-width: 910px )
 {
 	.banner_open_in_steam {

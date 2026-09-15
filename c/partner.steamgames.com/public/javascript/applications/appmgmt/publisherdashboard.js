@@ -2572,7 +2572,7 @@
           case _._._:
             return {
               sHeader: _(_?.TemplateName),
-              sTitle: _(_?.TemplateName),
+              sTitle: _(_),
               bUrgent: _.due_date < _._.GetTimeNowWithOverride() + 2678400,
               element: (0, _.jsx)(_, {
                 deadline: _,
@@ -2580,7 +2580,7 @@
               }),
               capsuleElement: (0, _.jsx)("div", {
                 className: _.CapsuleTax,
-                children: _(_?.TemplateName),
+                children: _(_),
               }),
             };
         }
@@ -2733,6 +2733,7 @@
             return _;
           })();
         let _ = (function (_, _) {
+          const _ = _?.TemplateName;
           switch (_) {
             case "Renewal-W8-Initial":
               return (0, _._)(
@@ -2782,10 +2783,23 @@
               return (0, _._)("#PartnerDeadline_TaxRequirement_Invalid");
             case "Notify-NoTINTreaty-Partner":
               return (0, _._)("#PartnerDeadline_TaxRequirement_NoTINTreaty");
+            case "Freeform":
+            case "Freeform-FR":
+              let _ = "";
+              return (
+                _(_)
+                  ? (_ = (0, _._)(
+                      "#PartnerDeadline_TaxRequirement_FileReceived",
+                    ))
+                  : ((_ = _?.Parameters?.CustomMessageBody?.trim() || ""),
+                    _.length > 64 &&
+                      (_ = __webpack_require__.substring(0, 64) + "...")),
+                _
+              );
             default:
               return "";
           }
-        })(_?.TemplateName, _);
+        })(_, _);
         return (
           _ ||
             (_ +=
@@ -2794,7 +2808,7 @@
                 "#PartnerDeadline_TaxRequirement_ActualAuthorityRequired",
               )),
           (0, _.jsx)(_, {
-            title: _(_?.TemplateName),
+            title: _(_),
             body: _,
             rightCol: (0, _.jsx)(_._, {
               url: _,
@@ -2844,6 +2858,8 @@
       }
       function _(_) {
         switch (_) {
+          case "Freeform":
+          case "Freeform-FR":
           case "F1099MISC-ConsentYes":
           case "F1042-Consent":
             return (0, _._)("#PartnerDeadline_TaxRequirement_Header_NoAction");
@@ -2852,13 +2868,22 @@
         }
       }
       function _(_) {
+        const _ = _?.TemplateName;
         switch (_) {
+          case "Freeform":
+          case "Freeform-FR":
+            return _(_)
+              ? (0, _._)("#PartnerDeadline_TaxRequirement_Title_FileReceived")
+              : (0, _._)("#PartnerDeadline_TaxRequirement_Title_Freeform");
           case "F1099MISC-ConsentYes":
           case "F1042-Consent":
             return (0, _._)("#PartnerDeadline_TaxRequirement_Title_NoAction");
           default:
             return (0, _._)("#PartnerDeadline_TaxRequirement_Title");
         }
+      }
+      function _(_) {
+        return void 0 !== _?.Parameters?.UploadOriginalFileName;
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),

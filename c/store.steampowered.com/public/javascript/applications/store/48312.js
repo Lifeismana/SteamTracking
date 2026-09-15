@@ -33,6 +33,7 @@
         TOCLink: "_2bD720Zjxza1mHMOZ6URrU",
         LearnMoreLink: "_2njnWu1if_8cDnjWtpuBMQ",
         Terms: "_2oU42aqXAKCuhoH2GmPkWD",
+        PoolMessage: "_3-_nsU7fX4Uep5Nr-eATPw",
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -185,7 +186,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       __webpack_require__("chunkid");
       function _(_) {
@@ -202,18 +202,20 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         const {
             hardwareDetail: _,
             reservationAdvancedSettings: _,
-            storeItemReleaseInfo: _,
             bShuffleInProgress: _,
             bHasSomeReservation: _,
+            reservedHardwareDetail: _,
           } = _,
-          [_, _] = (0, _._)(() => [
+          [_, _, _] = (0, _._)(() => [
             _?.collection_rtime_end,
             _?.collection_time_learn_more_url,
+            !!_?.collection_time_allow_multiple_models,
           ]),
           [_, _] = (0, _.useState)({}),
           _ = (0, _.useCallback)(
@@ -224,8 +226,7 @@
               }));
             },
             [_],
-          ),
-          _ = (0, _._)(_);
+          );
         if (_)
           return (0, _.jsxs)("div", {
             className: (0, _._)(_.expecteddate_str),
@@ -251,14 +252,15 @@
             (0, _.jsxs)("div", {
               className: (0, _._)(_.expecteddate_str),
               children: [
-                _._.LocalizeReact(
-                  "#Reservation_InPool_Message",
-                  _
-                    ? (0, _.jsx)(_, {
-                        rtime: _,
-                      })
-                    : _,
-                ),
+                (0, _.jsx)("div", {
+                  className: _().PoolMessage,
+                  children: _._.LocalizeReact(
+                    "#Reservation_InPool_Message_Date",
+                    (0, _.jsx)(_, {
+                      rtime: _ || _.collection_time_active,
+                    }),
+                  ),
+                }),
                 _ &&
                   (0, _.jsx)("a", {
                     className: _().LearnMoreLink,
@@ -295,6 +297,7 @@
             _._.logged_in
               ? (0, _.jsx)(_, {
                   hardwareDetail: _,
+                  reservedHardwareDetail: _ ? void 0 : _,
                   bUserAcceptedTerms: !_ || _,
                   onLeaveShuffleList: () => _(!1),
                 })
@@ -313,6 +316,7 @@
       function _(_) {
         const {
           hardwareDetail: _,
+          reservedHardwareDetail: _,
           bUserAcceptedTerms: _,
           onLeaveShuffleList: _,
         } = _;
@@ -320,16 +324,28 @@
           case _._.k_EPurchaseReservationState_NotReserved:
           case _._.k_EPurchaseReservationState_Consumed:
           case _._.k_EPurchaseReservationState_Cancelled:
-            return (0, _.jsx)(_._, {
-              toolTipContent: _
-                ? void 0
-                : _._.Localize("#Reservation_JoinPool_ClickTerms"),
-              children: (0, _.jsx)(_._, {
-                bInputDisabled: !_,
-                packageid: _.packageid,
-                label: _._.Localize("#Reservation_JoinPool"),
-              }),
-            });
+            return _ && _.packageid !== _.packageid
+              ? (0, _.jsx)(_._, {
+                  toolTipContent: _
+                    ? void 0
+                    : _._.Localize("#Reservation_JoinPool_ClickTerms"),
+                  children: (0, _.jsx)(_._, {
+                    hardwareDetail: _,
+                    reservedHardwareDetail: _,
+                    bInputDisabled: !_,
+                    bShufflePool: !0,
+                  }),
+                })
+              : (0, _.jsx)(_._, {
+                  toolTipContent: _
+                    ? void 0
+                    : _._.Localize("#Reservation_JoinPool_ClickTerms"),
+                  children: (0, _.jsx)(_._, {
+                    bInputDisabled: !_,
+                    packageid: _.packageid,
+                    label: _._.Localize("#Reservation_JoinPool"),
+                  }),
+                });
           case _._.k_EPurchaseReservationState_Reserved:
           case _._.k_EPurchaseReservationState_Allocated:
           default:

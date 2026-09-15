@@ -1014,74 +1014,66 @@
           _ = _.appid,
           _ = _.clanSteamID,
           _ = _ || _.GetStartTimeAndDateUnixSeconds(),
-          { data: _ } = (0, _._)(
+          { data: _, isPending: _ } = (0, _._)(
             _
               ? {
                   appid: _,
                 }
               : void 0,
           ),
-          { data: _ } = (0, _._)(_.GetAccountID());
-        return _
-          ? _ && !_
-            ? null
-            : (0, _.jsx)("div", {
-                className: _().EventDetailTitleDesc,
-                children: (0, _.jsxs)("div", {
-                  className: _().EventDetailsSticky,
-                  children: [
-                    _.is_ogg
-                      ? (0, _.jsx)(_, {
-                          appid: _.appid,
-                        })
-                      : (0, _.jsx)(_, {
-                          clanSteamID: _,
-                        }),
-                    (0, _.jsx)(_._, {
-                      event: _,
-                      className: _().EventDetailTimeInfo,
-                      nOverrideEndTime: _,
-                      nOverrideStartTime: _,
-                    }),
-                    _ &&
-                      _.type !== _.uYK &&
-                      _ < _ &&
-                      (0, _.jsx)("div", {
-                        className: _().EventDetailTimeInfo,
-                        children: _,
+          { data: _, isPending: _ } = (0, _._)(_.GetAccountID());
+        return _ || (_ && _)
+          ? null
+          : (0, _.jsx)("div", {
+              className: _().EventDetailTitleDesc,
+              children: (0, _.jsxs)("div", {
+                className: _().EventDetailsSticky,
+                children: [
+                  (_?.is_ogg ?? Boolean(_))
+                    ? (0, _.jsx)(_, {
+                        appid: _?.appid || _,
+                      })
+                    : (0, _.jsx)(_, {
+                        clanSteamID: _,
                       }),
-                    (0, _.jsxs)("div", {
-                      className: _().EventDetailUserType,
-                      children: [
-                        (0, _.jsx)("div", {
-                          className: _().RightSideTitles,
-                          children: (0, _._)(
-                            "#EventDisplay_RightColumnTitle_EventType",
-                          ),
-                        }),
-                        (0, _.jsxs)("div", {
-                          className: _().EventDetailsType,
-                          children: [_.GetCategoryAsString(), " "],
-                        }),
-                      ],
+                  (0, _.jsx)(_._, {
+                    event: _,
+                    className: _().EventDetailTimeInfo,
+                    nOverrideEndTime: _,
+                    nOverrideStartTime: _,
+                  }),
+                  _ &&
+                    _.type !== _.uYK &&
+                    _ < _ &&
+                    (0, _.jsx)("div", {
+                      className: _().EventDetailTimeInfo,
+                      children: _,
                     }),
-                    _,
-                    Boolean(_.jsondata.meet_steam_groups) && _,
-                  ],
-                }),
-              })
-          : ((0, _._)(
-              _,
-              "EventDetailsRightColumn - clan info (" +
-                _.GetAccountID() +
-                ") is missing",
-            ),
-            null);
+                  (0, _.jsxs)("div", {
+                    className: _().EventDetailUserType,
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _().RightSideTitles,
+                        children: (0, _._)(
+                          "#EventDisplay_RightColumnTitle_EventType",
+                        ),
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: _().EventDetailsType,
+                        children: [_.GetCategoryAsString(), " "],
+                      }),
+                    ],
+                  }),
+                  _,
+                  Boolean(_.jsondata.meet_steam_groups) && _,
+                ],
+              }),
+            });
       });
       function _(_) {
         const { appid: _ } = _;
         (0, _._)(_ && 0 != _, "Expected Appid In Game Info Section");
-        const { data: _ } = (0, _._)(
+        const { data: _, isPending: _ } = (0, _._)(
           _
             ? {
                 appid: _,
@@ -1107,19 +1099,22 @@
               bHideStatusBanners: !0,
               bPreferAssetWithoutOverride: !1,
             }),
-            (0, _.jsx)("div", {
+            (0, _.jsxs)("div", {
               className: (0, _._)(_().GameActions),
-              children: _
-                ? (0, _.jsx)(_._, {
+              children: [
+                _ &&
+                  (0, _.jsx)(_._, {
                     appid: _,
                     bIsFree: Boolean(_.is_free),
                     bIsComingSoon: Boolean(_.is_coming_soon),
                     className: _().ActionButton,
-                  })
-                : (0, _.jsx)(_._, {
+                  }),
+                _ &&
+                  (0, _.jsx)(_._, {
                     size: "small",
                     position: "center",
                   }),
+              ],
             }),
           ],
         });
@@ -1129,14 +1124,7 @@
           _ = _.GetAccountID(),
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_);
-        if (!_)
-          return (
-            (0, _._)(
-              _,
-              "EventDetailsRightCreatorInfo - clan info (" + _ + ") is missing",
-            ),
-            null
-          );
+        if (!_) return null;
         const _ = _
           ? (0, _._)(_, "developer")
           : _._.COMMUNITY_BASE_URL +
@@ -1256,7 +1244,47 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      const _ = {};
+      _.english = () =>
+        __webpack_require__._("chunkid").then(_._.bind(_, 23130, 19));
+      const _ = (0, _._)(async function (_) {
+        if (_[_]) return _[_]();
+      });
+      function _(_) {
+        const { appid: _ } = _,
+          { data: _ } = (0, _._)(
+            _
+              ? {
+                  appid: _,
+                }
+              : void 0,
+          );
+        return _ && _._.logged_in && _?.type == _._._
+          ? (0, _.jsx)(_, {
+              appid: _,
+            })
+          : null;
+      }
+      function _(_) {
+        return !1 !== (0, _._)(_.appid)
+          ? null
+          : (0, _.jsxs)("div", {
+              className: _().EventNotPublicBar,
+              children: [
+                (0, _.jsx)("span", {
+                  className: _().EventNotPublicBarTitle,
+                  children: _.Localize("#PartnerEvents_PlaytestOnly_Header"),
+                }),
+                (0, _.jsx)("span", {
+                  className: _().EventNotPublicBarDetail,
+                  children: _.Localize("#PartnerEvents_PlaytestOnly_Detail"),
+                }),
+              ],
+            });
+      }
       const _ = (0, _._)((_) => {
           const {
               event: _,
@@ -1298,6 +1326,9 @@
             children: [
               _,
               _,
+              (0, _.jsx)(_, {
+                appid: _.appid,
+              }),
               (0, _.jsx)(_, {
                 strImageURL: _,
               }),
@@ -1407,7 +1438,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = (0, _._)((_) => {
@@ -1433,7 +1463,7 @@
                   }
                 : void 0,
             ),
-            { data: _ } = (0, _._)(_);
+            { data: _, isPending: _ } = (0, _._)(_);
           if (
             (_.useEffect(() => {
               window.scrollTo(0, 0);
@@ -1447,7 +1477,7 @@
             });
           const _ = (0, _._)(_, _._.k_eStoreNewsHub, "allowRelative"),
             _ = (0, _._)(_, _._.k_eStoreUsersNewsHub, "allowRelative");
-          if (!_.bLoaded || !_ || (_ && _))
+          if (!_.bLoaded || _ || (_ && _))
             return (0, _.jsx)("div", {
               className: _().FlexCenter,
               style: {
@@ -1458,6 +1488,7 @@
                 string: (0, _._)("#Loading"),
               }),
             });
+          const _ = _?.name || _?.group_name;
           let _ = _.GetDescriptionWithFallback(_);
           return (0, _.jsx)(_, {
             event: _,
@@ -1478,13 +1509,14 @@
                           name: (0, _._)("#BreadCrumbs_AllEvents"),
                           url: _,
                         },
-                        {
-                          name: (0, _._)(
-                            "#BreadCrumbs_GameEvents",
-                            _?.name || _.group_name,
-                          ),
-                          url: _,
-                        },
+                        ...(_
+                          ? [
+                              {
+                                name: (0, _._)("#BreadCrumbs_GameEvents", _),
+                                url: _,
+                              },
+                            ]
+                          : []),
                       ],
                     }),
                     (0, _.jsx)("div", {
@@ -1625,7 +1657,7 @@
                         }),
                         editorInfo: (0, _.jsx)(_, {
                           event: _,
-                          bIsOGG: _.is_ogg,
+                          bIsOGG: _?.is_ogg ?? Boolean(_),
                         }),
                         meetSteamInfo: (0, _.jsx)(_, {
                           event: _,

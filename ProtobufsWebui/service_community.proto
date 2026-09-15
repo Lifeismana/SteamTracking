@@ -437,6 +437,7 @@ message CCommunity_SanctionComment_Request {
 	optional int32 reason = 4 [(.description) = "enum"];
 	optional string note = 5;
 	repeated .CCommunity_SanctionComment_Request_Sanction sanctions = 6;
+	optional bool skip_lock = 7;
 }
 
 message CCommunity_SanctionComment_Request_Sanction {

@@ -10,12 +10,12 @@
       "use strict";
       s.r(a), s.d(a, { default: () => u });
       var i = s(7850),
-        t = s(66418),
-        o = s(14987),
-        r = s(39777),
+        o = s(66418),
+        t = s(14987),
+        l = s(39777),
         n = s(65946),
-        c = s(67936),
-        l = s(53807),
+        r = s(67936),
+        c = s(53807),
         d = s(48890),
         _ = s.n(d),
         v = s(79050);
@@ -24,60 +24,75 @@
             rgPackageTuples: a,
             rgHardwareDetails: s,
             selectedProduct: d,
+            bAllowMultipleModels: u,
           } = e,
-          [u, g, f, m, k] = (0, n.q3)(() => [
+          [g, m, f, N, h] = (0, n.q3)(() => [
             s?.some((e) => e.collection_time_active),
             s?.some(
               (e) =>
-                e.collection_time_active && e.collection_time_active < t.TS.NOW,
+                e.collection_time_active && e.collection_time_active < o.TS.NOW,
             ),
             a.length,
-            s?.find((e) => (0, l.k)(e.reservation_state)),
+            s?.find((e) => (0, c.k)(e.reservation_state)),
             s?.find(
               (e) => !!e.packageid && e.packageid === d?.reservation_package,
             ),
           ]),
-          h = (0, o.oc)(m?.packageid),
-          { data: N } = (0, r.J$)(h);
+          M = (0, t.oc)(N?.packageid),
+          { data: k } = (0, l.J$)(M);
         if (!s) return null;
-        const p = m && (0, l.k)(m.reservation_state);
-        if (u) {
-          if (g && p)
-            return (0, i.jsx)("div", {
-              className: _().Message,
-              children: c.F5.Localize("#Reservation_InPool"),
-            });
-          if (!g)
-            return (0, i.jsx)("div", {
-              className: _().Message,
-              children: p
-                ? c.F5.Localize("#Reservation_InPool_NoDate", f)
-                : c.F5.Localize("#Reserationn_NoListJoined", f),
-            });
-        }
-        const R = (0, v.i)(m, k),
-          F = N?.name;
+        const L = N && (0, c.k)(N.reservation_state);
+        if (g)
+          if (u) {
+            if (m && L)
+              return (0, i.jsx)("div", {
+                className: _().Message,
+                children: r.F5.Localize("#Reservation_InPool"),
+              });
+            if (!m)
+              return (0, i.jsx)("div", {
+                className: _().Message,
+                children: L
+                  ? r.F5.Localize("#Reservation_InPool_NoDate", f)
+                  : r.F5.Localize("#Reserationn_NoListJoined", f),
+              });
+          } else {
+            if (L)
+              return (0, i.jsx)("div", {
+                className: _().Message,
+                children: k?.name
+                  ? r.F5.Localize("#Reservation_InPool_WithName", k.name)
+                  : r.F5.Localize("#Reservation_InPool_NoName"),
+              });
+            if (!m)
+              return (0, i.jsx)("div", {
+                className: _().Message,
+                children: r.F5.Localize("#Reservation_NoListJoined_OneModel"),
+              });
+          }
+        const R = (0, v.i)(N, h),
+          p = k?.name;
         if (R) {
-          if (F && p)
+          if (p && L)
             return (0, i.jsx)("div", {
               className: _().Message,
-              children: c.F5.Localize(
+              children: r.F5.Localize(
                 "#Reservation_In_Waitlist_WithName_NoDate",
-                F,
+                p,
               ),
             });
-          if (!p)
+          if (!L)
             return (0, i.jsx)("div", {
               className: _().Message,
-              children: c.F5.Localize("#Reservation_Pool_Closed"),
+              children: r.F5.Localize("#Reservation_Pool_Closed"),
             });
         }
-        return F && p
+        return p && L
           ? (0, i.jsx)("div", {
               className: _().Message,
-              children: c.F5.Localize(
+              children: r.F5.Localize(
                 "#Reservation_OnRegularReserveForModel",
-                F,
+                p,
               ),
             })
           : null;

@@ -114,6 +114,36 @@
     },
     chunkid: (module) => {
       module.exports = {
+        TopPlayedBannerCtn: "_3m4H3O5OzhRFzeMBr1GiJh",
+        DeckLogo: "_2fWPD8Bedv6c-yWTvZgAqn",
+        BannerTitle: "R1EIDJDmlv3wymunXxGRz",
+        BannerRightContent: "_3xmin8LWu9-cWEzsA9HEqJ",
+        BannerHeader: "_2qmB_riG0azA3gECMHzEs_",
+        BannerGameText: "VTRpu0RD7FA2Cn1UIp_Sn",
+        Adventurer: "_2Vfzito2cEHtvOnl6hWD2t",
+        Anime: "_1ms_oh1o4LBbEJqlW8N4RN",
+        Apocalypse: "_2ba_EyebFU2kLncHcEzoDD",
+        Astronaut: "W2X9qKmJY1fAkIM7GsolJ",
+        Beach: "_2_LFdeCE0gMxtEUKki5NqO",
+        Bed: "_1oByLIlDSo2XnZICLfSwvI",
+        Bus: "OB7zhBm37vzrd_8riRWex",
+        BusStop: "_2rd1Qm-OWFA2YmwiW-AghQ",
+        Campfire: "fWKU1FqjXbYwqp1oB_xBs",
+        Car: "GeAKpVY8Ba6-QT7tznVks",
+        City: "_2QdugEdfMAb6V79yJPUR9L",
+        Family: "_1g6v39jh2MnE5vuJnDagye",
+        Farmer: "_3HFHolp6BQ7uMIedbyxc7D",
+        Knight: "_2O7EV4jX-WO2knwBjeJz_D",
+        Miner: "_13chpvw7DnNOsWqu92qK7_",
+        Porch: "_3M4GVoRT9lg9yBm6y1dCSi",
+        Robot: "_2RASj4ZnI-VHE5mRp8zKoB",
+        Superhero: "_2HvlKfWJXw_ynFe07XKdY8",
+        Woodsman: "_1CL5Wdh_nHnOYZvnjVA8YD",
+        Zombies: "_3Ox405Kuu5XWIbPA9UvtBS",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         Body: "gWQvQ7aZkfTUnQOpDv4Kf",
         Capsules: "_1vjLJiRQDnGVGagJgrX2vw",
         Item: "_2WnGgbEVDGWA6Aiw-Iac2P",
@@ -174,7 +204,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        FeaturesHeader: "_2vQT0AgFmnLEuve59-iug3",
         CategorySection: "_2LrShr7IWhwfZHCuws5N_O",
         CategoryLinks: "_3vOT4NU0o9mYCU_6o_CCRh",
         SearchLink: "_3-Crx2dI9tgqfo1yOT0jw8",
@@ -205,6 +234,68 @@
         FriendOwnership: "q5QNi4yaj2QV4U77xNSKp",
         FriendList: "_1jkvh5RzUyV-afkmRZBsEt",
         WithNames: "_1YludsZff-JSeiUJGTaBFP",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        storeNarrowResponsiveWidth: "910px",
+        TheaterDialog: "xunB9e_XJHY-ooP2zNKag",
+        TheaterModeHeader: "_17YJmMg813A6ympHsbwM7n",
+        TheaterModeFooter: "_2469TwTWqAicsI1RnlvsCU",
+        TheaterModeFrame: "_35w3v2QgvaAyQ5US4OJOMN",
+        Center: "_1nooJM8SlOrumMla-n5kcg",
+        Right: "_124rcqdHDS-7ZiS4Ug15rj",
+        SkeletonViewArea: "_2Jk5sZuh6Yam81wQzpBUWj",
+        TheaterMode: "_1_fv9P3XnAj9M8zRjBUsm0",
+        ItemViewArea: "_33i4zSWeCfsTaa25tHu5Us",
+        FullscreenArrow: "_258hIVgneRO0dUbgnPZh_R",
+        Visible: "_2--1QTPdJLonnu6CEnIlNX",
+        Next: "fpXUftvcJkKb5pMG7ctH0",
+        Previous: "_1h__Z4jtufgzUAJJ5y1c1v",
+        ViewedItem: "_2KIVa7T6PMqAVvVKkwdVZO",
+        Active: "_2CZHqKcmYmjWbdMK4aidRV",
+        Screenshot: "_2zBrte9SWvr4lSb3lAkNpR",
+        PageEmbedded: "TunqbQieNpnpnbQo2LG9Q",
+        Controls: "_2h-RE4j4pbuPMtOjZ_fCyr",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        StripSkeleton: "_3-9sYm9MJfEc7DUv7-tqG2",
+        TheaterMode: "_1l7ZtmzPX6TqB7rvA1wdUR",
+        Items: "_2Y9cdZVnoEU6uCzgX9P8gO",
+        Scrollbar: "_3uF_Wfs589dYv9BQRlFmZt",
+        Strip: "_3CdIWRo2e9D_FxVHjVII7d",
+        StripItems: "ZpjLn9D4rTIVnM4axYSoG",
+        Item: "_2Ose8zPg3MlKQQeG9nwv24",
+        PlayIcon: "_2qzM1XTf6NXdHvCDD9D-PF",
+        Active: "_2uCL56lGO9iUUcLEtE83zG",
+        StripScrollbar: "_2Z-YccLz9coJD6SBV13Fya",
+        Arrow: "_2lIBEOcXRC3KKhDamcV9t",
+        Track: "_2SBCUqLfy4PgWdonAHX_fR",
+        Thumb: "_3DXmyv2Yx-lnmLz03GryEd",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        TheaterDialog: "_1cR7UuAEyt152HSNWylbqz",
+        FocusRingRoot: "_3zXPOFGaYWCD3fd-ESi70A",
+        FocusRingClip: "_2jZfIoMOoZQx6kdcgBhMHa",
+        GamepadCarousel: "PYe6PtelQzh2UB7OtpWMk",
+        CarouselItem: "_3ulAzvZbXfVEZatmwdipsk",
+        StillPoster: "_3pCSQuZSNLXT9AhGtOXpNb",
+        VideoStarted: "_1lbow7a3gRkR7fjSzCyrXr",
+        Poster: "_3ExPGBI8XGCQSuFfQ6JAlj",
+        Icon: "qcq_UlIfBHLqkTw-IcrR8",
+        TitleCard: "_3HXfy0jxwE_OWJIKKyQFUE",
+        Bottom: "_1QDEDk1q1y-jG5E4UV5-rC",
+        SingleFileTrailer: "_3i1CkfhnBQSj5NuMV9PxnF",
+        Screenshot: "p0NZiXp9agvT1BeWoCNDK",
+        DashTrailer: "_1B_rAEDcFM9o79CoGmnUgM",
+        BottomRow: "_3ZLxtge6-gw9pSzVXTf4gd",
+        WishlistButton: "_23N7SSBmU_2S4o8Kc8NBEg",
+        StarIcon: "_3LKNblFkXFm-hTnW4lMeOQ",
+        ButtonIcon: "FP1PcTBe4kKmycVNKGtk3",
       };
     },
     chunkid: (module) => {
@@ -286,6 +377,14 @@
     },
     chunkid: (module) => {
       module.exports = {
+        InLibraryRow: "_1Ea1bwlHmxO1UmYTEQ8jHC",
+        InLibraryFlag: "_2GveL49aC8sm8Mey1StYth",
+        InLibrarySVG: "_2HPdYtyoJJ6hsAHw3jTQ10",
+        Actions: "_2vmUZW0F1kvoznIng92EOn",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         PageSections: "_1_PU6_24UNZMD-aymVilmB",
         PageSection: "_2WpiheNBkhzJpmxQ4Arawu",
         Header: "y5728HUyiI5XdCDBm5D7A",
@@ -324,7 +423,6 @@
       module.exports = {
         narrowWidth: "500px",
         RecommendationReasonsDisplay: "_8A-vhpEBdS-qVF5Jl9jc7",
-        Header: "_37F_eUYhbVWVvWWgkfRkqf",
         ReviewScore: "DpGN2-UG7sEXIZDAb2xtu",
         Positive: "_1kiOvqf3wN3kBFxMVI8w-3",
         Negative: "_1UTMsJhG80MMvkig6Pw7UN",
@@ -359,6 +457,24 @@
       module.exports = {
         TagList: "_3jV1ymbnCcg8o3qq78ndN7",
         Tag: "gctfUSqAf4-wM1_s7LW7C",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        SteamAwards: "jJURdXW1ChOFN-_p287Zm",
+        Banner: "FIGm-_qZMzF3jFUHQ3WnL",
+        Titles: "_2J_cQuvocvg37gIlzurEay",
+        Winner: "n_444AQvZuBuGzXn2ekfZ",
+        Category: "_3kIk6XVA93BAg1PpnlC8jR",
+        Year: "jlMMBNsV2V8eRl6Kr0Vsn",
+        Year2023: "_3QOYUCrBHECSTWOJukosMs",
+        Year2024: "_2TAHqCxVB487j7ILyr5mt3",
+        Year2025: "_23ICoTwOCxBIpOwj40sp4h",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        StoreAwards: "_1CixVKuNHvP6aAZqdbx6nN",
       };
     },
     chunkid: (module) => {
@@ -653,98 +769,6 @@
         "ItemFocusAnim-green": "_1Z9fl4e9G4PQnLxyIHXNKG",
         focusAnimation: "_268HCaPK9gD6A2Mw_o7sqP",
         hoverAnimation: "DbNTwkzqEh5siXLRNvICD",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        storeNarrowResponsiveWidth: "910px",
-        TheaterDialog: "_2LTQCvpGyFO806nkXurNE3",
-        TheaterModeHeader: "_1i4ygMVdcBqF0ARYxp_tk5",
-        TheaterModeFooter: "_3KpVJvYK0Kg4JlezHipbO-",
-        TheaterModeFrame: "_3xAL780ykDyLO-xDuTgjHr",
-        Center: "_3KPRxtJAJXmOtkgDn495Ra",
-        Right: "_1-rpRk5iDBLQ9Yr8gAOLVg",
-        SkeletonViewArea: "_18mK2DQSWK6rhEoF3BiGlf",
-        TheaterMode: "_2M5VHVoDj7cEeG_Sq9Nfxp",
-        ItemViewArea: "_7uoIsggaW3jDWxwMtlOy8",
-        FullscreenArrow: "KkkFLdIE4YTPfdeoIQoo2",
-        Visible: "_3q0hI5sbgcmpVuwBKatnhv",
-        Next: "_2XmwxD18W2cEXHlvhYbcyJ",
-        Previous: "_1EBlS2FQmejekYhQDC-Kmh",
-        ViewedItem: "_29RD-6nVM1ZsiWWlkICHj_",
-        Active: "_12fD6HsYoCTsLA50fqBiX9",
-        Screenshot: "_3R7Y3WNTdNhOgbZ21bs9xD",
-        PageEmbedded: "Oh37M-rKB_EeqpigY-fF_",
-        Controls: "_1-KK-_5TKZfLdri4MpeGD8",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        StripSkeleton: "_10CMdNEAjTNQ2B8FYmuDDv",
-        TheaterMode: "_2Cx8GckLIvEMflF7fc-JYz",
-        Items: "_3RaF9xdu3xYnya4v856Hd2",
-        Scrollbar: "_1KWgAv5EXrGMLZ7T77kOxk",
-        Strip: "_3iK8kx5bYvc5UXmW7XZh5V",
-        StripItems: "_21pEuTVe17EOUzkHK8ZGnJ",
-        Item: "deMuRscIE7upszCfACmbK",
-        PlayIcon: "_3p2KFN7o1Z8EV4_sbV5b25",
-        Active: "_3VIimult0z05qCgQN1CfPg",
-        StripScrollbar: "_1DvsO7ezbpz3pIVBWOLOzF",
-        Arrow: "_2LR-6h1uKQt4bj21r14zy5",
-        Track: "IJs3gGlk7XiekF90xqQtx",
-        Thumb: "_2kGps6wpqMKuwW2LinnWW6",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        TheaterDialog: "eAntzEAgQPDbynwFmCjT6",
-        FocusRingRoot: "_3SseNLlWRUSh4WLnN2aLYa",
-        FocusRingClip: "_2N2pOqeMRNyt7Ov6byou1W",
-        GamepadCarousel: "_37QdQ9pnGu3WgatTPnOP1D",
-        CarouselItem: "_3eFhSH3a_Uh0AF_AWuqHjR",
-        StillPoster: "_3dXa0LwyVTHtiDmLdQMWRf",
-        VideoStarted: "tN78A9Uh28E1x212ny6Yq",
-        Poster: "_1V_gSi1f7czrRSVL0vnsdx",
-        Icon: "_2EVWyymrYul8YWhcdwdPl3",
-        TitleCard: "_1nLEdpxu_F32ex_rg0_jew",
-        Bottom: "_12CljMZ1pAd-gKKiVB5Wxc",
-        SingleFileTrailer: "_3pzTJNRx9UoRhXeeA2IisY",
-        Screenshot: "_3MyKwsurcFxFwiLabbudSk",
-        DashTrailer: "_1Aoum4NTlVVCFiiAiXQbkQ",
-        BottomRow: "_3w6DlMoNcBYJowmTkPUvRh",
-        WishlistButton: "_3zsPA4_Sk0JUb1auieWgUJ",
-        StarIcon: "t1LMouAzeAadJbWvMJbdH",
-        ButtonIcon: "_1cugSsUJQZgGaT5y3eMrQo",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        TopPlayedBannerCtn: "_28-JzhtXHYEcY9I5iFk3YP",
-        DeckLogo: "E-ox_4OryQdke1181LNoB",
-        BannerTitle: "s1wKhoJ4gbSLtf27P3_EZ",
-        BannerRightContent: "_34ZA0IltnucVU_mKBtcc8E",
-        BannerHeader: "_2whUPn_CZ5_BidCN9GODA5",
-        BannerGameText: "OXgVBMVdP9Ecu6IgqZ3_n",
-        Adventurer: "raNwGKfW_4_WgrvVN7dq_",
-        Anime: "EwXMZcXfMhx8IXHsX2jwt",
-        Apocalypse: "IXTWgAQld_EMABNkCGbWH",
-        Astronaut: "LNbx62cQQ_D4Ln0UFRSZR",
-        Beach: "_3PDsNvk9wHPIT_meJVEv39",
-        Bed: "_3diT7BTktlk0puAWr6yL9w",
-        Bus: "lZhhgVZvpy277i5CIZsxv",
-        BusStop: "_3uXZSulc-St3wA_mxmp0A_",
-        Campfire: "yBV0Z8rYkNE2hhalghMvt",
-        Car: "_2Z4fMLt-xMQ9mMYQ6F8Apk",
-        City: "ZNsKNiDvYdo0fdE1DD7M0",
-        Family: "f5iMmXzfk0F0i8JDhk-0G",
-        Farmer: "_34SPdiHy-XcKAe7xr1tUCM",
-        Knight: "_3LVfeJCSquA6caK-yXajmH",
-        Miner: "_1YxR3MFhDWSooqc0R5jKLw",
-        Porch: "_2z91XhCKqvwmYqkRndpTq3",
-        Robot: "_1jvo4urjLahEQx0CgrItEb",
-        Superhero: "_2v6byLboEtxj9hPQ_kgSJz",
-        Woodsman: "urO4erFoFvnP14FJ41NMD",
-        Zombies: "_3OCIBFe-fNBm1tXmL490m4",
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -4727,7 +4751,7 @@
       function _(_) {
         let { trailers: _, screenshots: _, appid: _ } = _,
           _ = (0, _._)(),
-          _ = "theater" == _.strMode,
+          _ = "theater" == _?.strMode,
           _ = (0, _._)(_, "theater"),
           _ = (0, _._)(_, "none"),
           _ = (0, _._)(),
@@ -4742,20 +4766,22 @@
             return [_, _];
           })(_, _),
           _ = _(_, _);
-        if (
-          ((function (_) {
-            let _ = _.length;
-            (0, _.useLayoutEffect)(() => {
-              if (_ < 1) return;
-              document
-                .querySelectorAll(".gamehighlight_gamepadskeleton")
-                .forEach((_) => _.remove());
-            }, [_]);
-          })(_),
-          _.use(_._.Ready()),
-          0 == _.length)
-        )
-          return null;
+        !(function (_) {
+          let _ = _.length;
+          (0, _.useLayoutEffect)(() => {
+            if (_ < 1) return;
+            document
+              .querySelectorAll(".gamehighlight_gamepadskeleton")
+              .forEach((_) => _.remove());
+          }, [_]);
+        })(_);
+        const _ = _.useCallback(
+          (_) => {
+            _.refTheater && _.refTheater(_);
+          },
+          [_],
+        );
+        if ((_.use(_._.Ready()), 0 == _.length)) return null;
         let _ = _.map((_, _) =>
             "screenshot" == _.type
               ? (0, _.jsx)(
@@ -4779,7 +4805,7 @@
           ),
           _ = _ ? "" : _._.Localize("#TrailerPlayer_FullScreen_Tooltip");
         return (0, _.jsx)("div", {
-          ref: _.refTheater,
+          ref: _,
           className: _.TheaterDialog,
           popover: "manual",
           children: (0, _.jsx)("div", {
@@ -4861,6 +4887,7 @@
               }),
               _ = (0, _._)(
                 (_) => {
+                  if (!_) return () => {};
                   let _ = () => {
                       _((_) => ({
                         ..._,
@@ -4997,6 +5024,7 @@
                 (0, _.jsx)("img", {
                   className: (0, _._)(_.Poster),
                   src: _,
+                  alt: "",
                 }),
                 (0, _.jsx)(_._, {
                   className: _.Icon,
@@ -5013,7 +5041,8 @@
         const _ = _.useCallback(() => {
           _(!0);
         }, []);
-        let _ = (0, _._)(_.CarouselItem, _.DashTrailer);
+        let _,
+          _ = (0, _._)(_.CarouselItem, _.DashTrailer);
         return (0, _.jsxs)(_._, {
           ref: _,
           className: _,
@@ -5034,7 +5063,7 @@
                 screenshot: _.poster,
                 altText: _.title,
                 forcePause: !_ || !_,
-                onPlaybackEnd: null,
+                onPlaybackEnd: _,
                 onPlaybackStart: _,
                 title: _.title,
                 category: _.category,
@@ -5100,6 +5129,7 @@
                   ((_ = _.asset_url_format),
                   (_ = _.header),
                   _._.STORE_ITEM_BASE_URL + _.replace("${FILENAME}", _)),
+                alt: "",
               }),
               (0, _.jsxs)(_._, {
                 className: _.Bottom,
@@ -5121,7 +5151,7 @@
                         _: "4",
                         _: "6",
                       },
-                      children: _.name,
+                      children: _?.name,
                     }),
                   }),
                   (0, _.jsx)(_._, {
@@ -5135,10 +5165,10 @@
                       },
                       lineClamp: 7,
                       contrast: "body",
-                      children: _.short_description,
+                      children: _?.short_description,
                     }),
                   }),
-                  _.best_purchase_option &&
+                  _?.best_purchase_option &&
                     (0, _.jsxs)(_._, {
                       className: _.BottomRow,
                       flexGrow: "0",
@@ -5243,7 +5273,7 @@
       const _ = (0, _.createContext)(void 0);
       function _(_) {
         let { orderedItems: _, children: _ } = _,
-          _ = (0, _._)().m_bAutoplayEnabled,
+          _ = (0, _._)().m_bAutoplayEnabled ?? !1,
           [_, _] = (0, _.useState)(() =>
             (function (_, _) {
               return (
@@ -5280,7 +5310,14 @@
         });
       }
       function _() {
-        return (0, _.useContext)(_);
+        let _ = (0, _.useContext)(_);
+        return (
+          (0, _._)(
+            null != _,
+            "useHighlightContext used outside of HighlightContextProvider",
+          ),
+          _
+        );
       }
       function _(_) {
         return _ == _().strActiveID;
@@ -5316,10 +5353,11 @@
               _ = (0, _.useRef)(void 0);
             _.current || (_.current = new Map());
             (0, _.useEffect)(() => {
-              let _ = _.current,
+              const _ = _.current,
                 _ = _.current,
-                _ = _.current,
-                _ = _.matches(":dir(rtl)"),
+                _ = _.current;
+              if (!_ || !_ || !_) return;
+              let _ = _.matches(":dir(rtl)"),
                 _ = () => {
                   _.current ||
                     (_.current = requestAnimationFrame(() => {
@@ -5346,10 +5384,11 @@
               );
             }, []),
               (0, _.useEffect)(() => {
-                let _ = _.current,
+                const _ = _.current,
                   _ = _.current,
-                  _ = _.current,
-                  _ = null,
+                  _ = _.current;
+                if (!_ || !_ || !_) return;
+                let _ = null,
                   _ = _.matches(":dir(rtl)"),
                   _ = (_) => {
                     if (!_) return;
@@ -5401,8 +5440,9 @@
             (0, _.useEffect)(() => {
               let _ = _.current.get(_);
               if (!_) return;
-              let _ = _.current,
-                _ = __webpack_require__.getBoundingClientRect(),
+              const _ = _.current;
+              if (!_) return;
+              let _ = __webpack_require__.getBoundingClientRect(),
                 _ = _.getBoundingClientRect();
               if (_.left < _.left || _.right > _.right) {
                 let _ = _.left - _.left + _.scrollLeft;
@@ -5425,7 +5465,8 @@
               fnRegisterItemElement: _,
             };
           })(),
-          _ = "theater" == (0, _._)().strMode;
+          _ = (0, _._)(),
+          _ = "theater" == _?.strMode;
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsxs)("div", {
@@ -5512,6 +5553,7 @@
             Boolean(_) &&
               (0, _.jsx)("img", {
                 src: _,
+                alt: "",
               }),
             "trailer" == _.type &&
               (0, _.jsx)("div", {
@@ -5524,8 +5566,8 @@
       function _(_) {
         let { refTrack: _, refThumb: _ } = _,
           _ = _(),
-          _ = _.strPreviousID ? () => _.fnSetActive(_.strPreviousID) : null,
-          _ = _.strNextID ? () => _.fnSetActive(_.strNextID) : null;
+          _ = _.strPreviousID ? () => _.fnSetActive(_.strPreviousID) : void 0,
+          _ = _.strNextID ? () => _.fnSetActive(_.strNextID) : void 0;
         return (0, _.jsxs)("div", {
           className: _.StripScrollbar,
           children: [
@@ -5634,7 +5676,8 @@
               _ = _(),
               _ = (0, _.useRef)(_);
             _.current = _;
-            let _ = "none" != (0, _._)().strMode,
+            let _ = (0, _._)(),
+              _ = "none" != (_?.strMode ?? "none"),
               _ = (0, _.useRef)(_);
             _.current = _;
             let _ = (0, _.useCallback)(() => {
@@ -5664,8 +5707,9 @@
                 _ ? _() : _();
               }, [_]),
               (0, _.useEffect)(() => {
-                let _ = _.current,
-                  _ = () => {
+                const _ = _.current;
+                if (!_) return;
+                let _ = () => {
                     "visible" == document.visibilityState ? _() : _();
                   },
                   _ = () => {
@@ -5727,7 +5771,7 @@
             return _;
           })(),
           _ = (0, _._)(),
-          _ = "theater" == _.strMode,
+          _ = "theater" == _?.strMode,
           [_, _] = (function () {
             let [_, _] = (0, _._)(),
               _ = (0, _.useRef)({
@@ -5805,7 +5849,7 @@
             );
             return (0, _._)(_);
           })(_),
-          _ = (0, _._)(_.refTheater, _),
+          _ = (0, _._)(_?.refTheater, _),
           _ = __webpack_require__.map((_) =>
             "screenshot" == _.type
               ? (0, _.jsx)(
@@ -5829,8 +5873,8 @@
                   )
                 : null,
           ),
-          _ = _.strPreviousID ? () => _.fnSetActive(_.strPreviousID) : null,
-          _ = _.strNextID ? () => _.fnSetActive(_.strNextID) : null;
+          _ = _.strPreviousID ? () => _.fnSetActive(_.strPreviousID) : void 0,
+          _ = _.strNextID ? () => _.fnSetActive(_.strNextID) : void 0;
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)(_, {
@@ -5844,7 +5888,7 @@
                     appName: _,
                   }),
                   (0, _.jsxs)("div", {
-                    ref: _.refFullscreen,
+                    ref: _?.refFullscreen,
                     className: _.ItemViewArea,
                     ..._,
                     onKeyDown: _,
@@ -5893,7 +5937,7 @@
       function _(_) {
         let { ref: _, children: _, ..._ } = _,
           _ = (0, _._)(),
-          _ = _.strMode,
+          _ = _?.strMode,
           _ = (0, _._)(_, "none"),
           _ = (0, _.useCallback)(
             (_) => {
@@ -5965,7 +6009,7 @@
         let _ = _(_ || _),
           _ = (0, _._)(),
           _ = (0, _._)(_, "theater"),
-          _ = "none" == _.strMode,
+          _ = !_?.strMode || "none" == _.strMode,
           _ = (0, _._)(_);
         if (!_) return null;
         let _ = (0, _._)(
@@ -5974,8 +6018,8 @@
             _.Screenshot,
             _ && _.PageEmbedded,
           ),
-          _ = (_.strMode, _.full),
-          _ = _ ? _ : null;
+          _ = _.full,
+          _ = _ ? _ : void 0;
         return (0, _.jsxs)("div", {
           ref: _,
           className: _,
@@ -5989,8 +6033,8 @@
             (0, _.jsxs)("div", {
               className: _.Controls,
               children: [
-                _.bSupportsTheater && (0, _.jsx)(_._, {}),
-                _.bSupportsFullscreen && (0, _.jsx)(_._, {}),
+                _?.bSupportsTheater && (0, _.jsx)(_._, {}),
+                _?.bSupportsFullscreen && (0, _.jsx)(_._, {}),
               ],
             }),
           ],
@@ -7197,6 +7241,8 @@
           __webpack_require__._("chunkid").then(_._.bind(_, 48824, 19))),
         (_.russian = () =>
           __webpack_require__._("chunkid").then(_._.bind(_, 50208, 19))),
+        (_.sc_schinese = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 63354, 19))),
         (_.schinese = () =>
           __webpack_require__._("chunkid").then(_._.bind(_, 63875, 19))),
         (_.spanish = () =>
@@ -11325,6 +11371,20 @@
             });
       }
       function _(_) {
+        return (0, _.jsx)(_._, {
+          marginBottom: "2",
+          children: (0, _.jsx)(_._, {
+            contrast: "title",
+            size: "2",
+            weight: "heavy",
+            style: {
+              letterSpacing: "0.5px",
+            },
+            children: _.text,
+          }),
+        });
+      }
+      function _(_) {
         const { appid: _, rgCategories: _, controllersUsed: _ } = _,
           { data: _ } = (0, _._)({
             appid: _,
@@ -11365,9 +11425,8 @@
           className: _().CategorySection,
           "flow-children": "column",
           children: [
-            (0, _.jsx)(_._, {
-              className: _().FeaturesHeader,
-              children: _.Localize("#AppPage_Features"),
+            (0, _.jsx)(_, {
+              text: _.Localize("#AppPage_Features"),
             }),
             (0, _.jsxs)(_._, {
               color: "blue-8",
@@ -12340,6 +12399,9 @@
           enabled: !!_._.accountid,
         });
       }
+      function _(_, _ = !1) {
+        return (_ / 60).toFixed(_ || _ < 1200 ? 1 : 0);
+      }
       var _,
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
@@ -12473,7 +12535,7 @@
             : _.nMinutesPlayedRecent > 0 &&
               (_ = _.Localize(
                 "#AppPage_FriendOwnership_PlayedHours",
-                Math.round(_.nMinutesPlayedRecent / 6) / 10,
+                _(_.nMinutesPlayedRecent, !0),
               )),
           _
             ? (0, _.jsx)("div", {
@@ -12915,18 +12977,14 @@
       function _(_) {
         const { reasons: _ } = _,
           _ = _("#AppPage_RecommendationReason_Header", _);
-        return (0, _.jsx)("div", {
-          className: _().Header,
-          children: _,
+        return (0, _.jsx)(_, {
+          text: _,
         });
       }
       function _(_) {
         const { reasons: _ } = _;
         if (_.nCurrentUserPlaytimeMins > 0) {
-          let _ =
-            _.nCurrentUserPlaytimeMins >= 1200
-              ? Math.round(_.nCurrentUserPlaytimeMins / 60)
-              : Math.round((10 * _.nCurrentUserPlaytimeMins) / 60) / 10;
+          const _ = _(_.nCurrentUserPlaytimeMins);
           return (0, _.jsx)(_, {
             description: _.Localize(
               "#AppPage_RecommendationReason_Playtime",
@@ -13599,7 +13657,398 @@
       function _(_) {
         return null;
       }
-      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            nMinutesForever: _,
+            nMinutesLastTwoWeeks: _,
+            bShowStatsLinks: _,
+            nSteamworksAppid: _,
+          } = _.stats,
+          { data: _ } = (0, _._)(_._.steamid);
+        _.use(_.Ready());
+        const _ = `${(0, _._)(_, _._.steamid)}/stats/appid/${_}`,
+          _ = `${_._.COMMUNITY_BASE_URL}stats/${_}/achievements`;
+        return (0, _.jsxs)(_._, {
+          direction: "column",
+          children: [
+            (0, _.jsxs)(_._, {
+              size: "3",
+              color: "slate-11",
+              children: [
+                _ > 0 &&
+                  `${_.Localize("#AppPage_MyActivity_HoursLastTwoWeeks", _(_))} / `,
+                _.Localize("#AppPage_MyActivity_HoursOnRecord", _(_)),
+              ],
+            }),
+            _ &&
+              (0, _.jsxs)(_._, {
+                gap: "2",
+                children: [
+                  (0, _.jsx)(_._, {
+                    size: "3",
+                    color: "blue-8",
+                    href: _,
+                    children: _.Localize("#AppPage_MyActivity_ViewStats"),
+                  }),
+                  (0, _.jsx)(_._, {
+                    size: "3",
+                    color: "blue-8",
+                    href: _,
+                    children: _.Localize("#AppPage_MyActivity_ViewGlobalStats"),
+                  }),
+                ],
+              }),
+          ],
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const {
+            appid: _,
+            bOwned: _,
+            masterSub: _,
+            timedTrial: _,
+            playAppid: _,
+          } = _,
+          { data: _ } = (0, _._)({
+            appid: _,
+          }),
+          _ = (function (_) {
+            const { data: _ } = (0, _._)({
+                appid: _,
+              }),
+              _ = _?.appid || _,
+              { data: _ } = (0, _._)(_),
+              _ = _?.your_info;
+            if (!_?.owned || !_.minutes_played_forever) return null;
+            const _ = !!_?.categories?.feature_categoryids?.includes(_.Vb8);
+            return {
+              nMinutesForever: _.minutes_played_forever,
+              nMinutesLastTwoWeeks: _.minutes_played ?? 0,
+              bShowStatsLinks: _ && !(0, _._)(_._.EREALM),
+              nSteamworksAppid: _,
+            };
+          })(_);
+        if (!_ || (!_ && !_)) return null;
+        _.use(_.Ready());
+        const _ = _.type == _._._,
+          _ = !!_ && 0 == _.nSecondsRemaining && !!_?.subscription,
+          _ = _ && !_ && !_;
+        return (0, _.jsxs)(_._, {
+          direction: "column",
+          paddingX: "5",
+          paddingY: "3",
+          background: "greyneutral-2 80%",
+          children: [
+            _ &&
+              _ &&
+              (0, _.jsx)(_, {
+                masterSub: _,
+                bTrial: !!_,
+              }),
+            _ &&
+              !_ &&
+              (0, _.jsx)(_, {
+                strAppName: _.name ?? "",
+              }),
+            _ &&
+              _ &&
+              (0, _.jsx)(_, {
+                subscription: _.subscription,
+              }),
+            _ &&
+              (0, _.jsx)(_, {
+                strAppName: _.name ?? "",
+                masterSub: _,
+                timedTrial: _,
+              }),
+            (0, _.jsxs)(_._, {
+              className: _().Actions,
+              "flow-children": "row",
+              children: [
+                _ &&
+                  null !== _ &&
+                  (0, _.jsx)(_, {
+                    appid: _,
+                    eType: _.type,
+                  }),
+                _ &&
+                  !!_ &&
+                  (0, _.jsx)(_, {
+                    nSecondsRemaining: _.nSecondsRemaining,
+                  }),
+                !!_ &&
+                  (0, _.jsx)(_, {
+                    stats: _,
+                  }),
+              ],
+            }),
+          ],
+        });
+      }
+      function _() {
+        return (0, _.jsxs)(_._, {
+          className: _().InLibraryFlag,
+          gap: "1",
+          flexShrink: "0",
+          align: "center",
+          height: "18px",
+          paddingX: "1",
+          background: "storegreen-10",
+          children: [
+            (0, _.jsx)(_.wpD, {
+              className: _().InLibrarySVG,
+            }),
+            (0, _.jsx)(_._, {
+              size: "1",
+              color: "slate-1",
+              children: _.Localize("#AppPage_Owned_InLibraryFlag"),
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const { strAppName: _ } = _;
+        return (0, _.jsxs)(_._, {
+          gap: "2",
+          justify: "between",
+          paddingBottom: "3",
+          className: _().InLibraryRow,
+          children: [
+            (0, _.jsx)(_._, {
+              size: "4",
+              color: "storegreen-10",
+              children: _.Localize("#AppPage_Owned_AlreadyInLibrary", _),
+            }),
+            (0, _.jsx)(_, {}),
+          ],
+        });
+      }
+      function _(_) {
+        const { masterSub: _, bTrial: _ } = _,
+          { strPackageName: _, subscription: _ } = _,
+          _ = _
+            ? "#AppPage_Owned_MasterSubTrialHeader"
+            : "#AppPage_Owned_MasterSubHeader";
+        return (0, _.jsxs)(_._, {
+          align: "center",
+          gap: "2",
+          children: [
+            _?.strBadgeImage
+              ? (0, _.jsx)(_._, {
+                  background: "blue-7",
+                  justify: "center",
+                  align: "center",
+                  paddingY: "1",
+                  paddingLeft: "2",
+                  paddingRight: "5",
+                  children: (0, _.jsx)(_, {
+                    src: _.strBadgeImage,
+                    alt: "",
+                    height: "18px",
+                  }),
+                })
+              : (0, _.jsx)(_, {}),
+            (0, _.jsx)(_._, {
+              flexGrow: "0",
+              children: (0, _.jsx)(_._, {
+                size: "4",
+                color: "storegreen-10",
+                children: _.Localize(_, _),
+              }),
+            }),
+            !!_ &&
+              (0, _.jsx)(_._, {
+                flexShrink: "0",
+                children: (0, _.jsx)(_._, {
+                  href: _.strInfoURL,
+                  size: "2",
+                  color: "text-light",
+                  underline: "always",
+                  children: _.Localize(
+                    "#AppPage_Owned_MasterSubBrowse",
+                    _.strName,
+                  ),
+                }),
+              }),
+          ],
+        });
+      }
+      function _(_) {
+        const { strAppName: _, masterSub: _, timedTrial: _ } = _,
+          _ = _?.subscription;
+        let _ = null;
+        if (_) {
+          const _ = (0, _._)(_.nSecondsAllowed, {
+            eSuffix: _._.None,
+          });
+          _ = _
+            ? (0, _._)(
+                _.Localize("#AppPage_Owned_TrialWithMasterSub", _, _.strName),
+                (0, _.jsx)(_._, {
+                  href: _.strInfoURL,
+                }),
+              )
+            : _.Localize("#AppPage_Owned_TrialFree", _, _);
+        } else
+          _ &&
+            (_ = (0, _._)(
+              _.Localize("#AppPage_Owned_MasterSubDesc", _.strName),
+              (0, _.jsx)(_._, {
+                href: _.strInfoURL,
+              }),
+            ));
+        return _
+          ? (0, _.jsx)(_._, {
+              size: "3",
+              marginTop: "3",
+              children: _,
+            })
+          : null;
+      }
+      function _(_) {
+        const { subscription: _ } = _;
+        return (0, _.jsx)(_._, {
+          size: "3",
+          marginTop: "3",
+          children: (0, _._)(
+            _.Localize("#AppPage_Owned_TrialEnded", _.strName),
+            (0, _.jsx)(_._, {
+              href: _.strInfoURL,
+            }),
+          ),
+        });
+      }
+      function _(_) {
+        const { appid: _, eType: _ } = _;
+        let _ = "#AppPage_Owned_Play";
+        return (
+          _ == _._._
+            ? (_ = "#AppPage_Owned_Use")
+            : _ == _._._
+              ? (_ = "#AppPage_Owned_Watch")
+              : _ == _._._ && (_ = "#AppPage_Owned_PlayMusic"),
+          (0, _.jsx)(_._, {
+            focusable: !0,
+            color: "blue",
+            href:
+              ((_ = `launch/${_}/Dialog`),
+              ((0, _._)(_._.EREALM) ? "steamchina://" : "steam://") + _),
+            children: _.Localize(_),
+          })
+        );
+        var _;
+      }
+      function _(_) {
+        const { nSecondsRemaining: _ } = _;
+        return _ <= 0
+          ? null
+          : (0, _.jsx)(_._, {
+              size: "4",
+              color: "text-light",
+              children: (0, _._)(_, {
+                eSuffix: _._.Remaining,
+              }),
+            });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      const _ = {
+        2023: _().Year2023,
+        2024: _().Year2024,
+        2025: _().Year2025,
+      };
+      function _(_) {
+        const { appid: _ } = _,
+          { data: _ } = (0, _._)({
+            appid: _,
+          }),
+          _ = (_?.steam_award ?? [])
+            .filter((_) => !!_.localization?.title && !!_[_.award_year])
+            .sort((_, _) => _.award_year - _.award_year);
+        return _.length
+          ? (0, _.jsx)(_._, {
+              direction: "column",
+              gap: "4",
+              children: _.map((_) =>
+                (0, _.jsx)(
+                  _,
+                  {
+                    award: _,
+                  },
+                  `${_.award_year}_${_.voteid}`,
+                ),
+              ),
+            })
+          : null;
+      }
+      function _(_) {
+        const { award: _ } = _,
+          _ = _.award_year,
+          _ = (0, _._)(`${_._.STORE_BASE_URL}steamawards/${_}/`);
+        return (0, _.jsxs)(_._, {
+          className: (0, _._)(_().Banner, _[_]),
+          href: _,
+          children: [
+            (0, _.jsxs)("div", {
+              className: _().Titles,
+              children: [
+                (0, _.jsx)("span", {
+                  className: _().AwardsTitle,
+                  children: _.Localize("#AppPage_SteamAwards_Title"),
+                }),
+                (0, _.jsx)("span", {
+                  className: _().Year,
+                  children: _,
+                }),
+              ],
+            }),
+            (0, _.jsx)("div", {
+              className: _().Winner,
+              children: _.Localize("#AppPage_SteamAwards_Winner"),
+            }),
+            (0, _.jsx)("div", {
+              className: _().Category,
+              children: _.localization.title,
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const { appid: _ } = _,
+          { data: _ } = (0, _._)({
+            appid: _,
+          });
+        _.use(_.Ready());
+        const _ =
+            _?.partner_awards_bbcode && _.partner_awards_bbcode.length > 0,
+          _ = _?.steam_award && _.steam_award.length > 0;
+        return (
+          console.log("Rendering steam awards", _),
+          _ || _
+            ? (0, _.jsxs)(_, {
+                className: _().StoreAwards,
+                "flow-children": "column",
+                children: [
+                  (0, _.jsx)(_, {
+                    text: _.Localize("#AppPage_Awards_Header"),
+                  }),
+                  (0, _.jsx)(_, {
+                    appid: _,
+                  }),
+                  _?.partner_awards_bbcode &&
+                    (0, _.jsx)(_._, {
+                      text: _.partner_awards_bbcode,
+                    }),
+                ],
+              })
+            : null
+        );
+      }
       const _ = _.lazy(() =>
           __webpack_require__
             ._("chunkid")
@@ -13643,8 +14092,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
@@ -13666,11 +14113,11 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
           Promise.all([
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -13892,6 +14339,18 @@
                       "early-access": (_) =>
                         (0, _.jsx)(_, {
                           ..._,
+                          appid: _,
+                        }),
+                      "ownership-banner": (_) =>
+                        (0, _.jsx)(_._, {
+                          feature: "owned-game",
+                          children: (0, _.jsx)(_, {
+                            ..._,
+                            appid: _,
+                          }),
+                        }),
+                      "store-awards": () =>
+                        (0, _.jsx)(_, {
                           appid: _,
                         }),
                     },

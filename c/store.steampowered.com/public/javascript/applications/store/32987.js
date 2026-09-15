@@ -27,6 +27,7 @@
             rgPackageTuples: _,
             rgHardwareDetails: _,
             selectedProduct: _,
+            bAllowMultipleModels: _,
           } = _,
           [_, _, _, _, _] = (0, _._)(() => [
             __webpack_require__?.some((_) => _.collection_time_active),
@@ -44,20 +45,34 @@
           { data: _ } = (0, _._)(_);
         if (!_) return null;
         const _ = _ && (0, _._)(_.reservation_state);
-        if (_) {
-          if (_ && _)
-            return (0, _.jsx)("div", {
-              className: _().Message,
-              children: _._.Localize("#Reservation_InPool"),
-            });
-          if (!_)
-            return (0, _.jsx)("div", {
-              className: _().Message,
-              children: _
-                ? _._.Localize("#Reservation_InPool_NoDate", _)
-                : _._.Localize("#Reserationn_NoListJoined", _),
-            });
-        }
+        if (_)
+          if (_) {
+            if (_ && _)
+              return (0, _.jsx)("div", {
+                className: _().Message,
+                children: _._.Localize("#Reservation_InPool"),
+              });
+            if (!_)
+              return (0, _.jsx)("div", {
+                className: _().Message,
+                children: _
+                  ? _._.Localize("#Reservation_InPool_NoDate", _)
+                  : _._.Localize("#Reserationn_NoListJoined", _),
+              });
+          } else {
+            if (_)
+              return (0, _.jsx)("div", {
+                className: _().Message,
+                children: _?.name
+                  ? _._.Localize("#Reservation_InPool_WithName", _.name)
+                  : _._.Localize("#Reservation_InPool_NoName"),
+              });
+            if (!_)
+              return (0, _.jsx)("div", {
+                className: _().Message,
+                children: _._.Localize("#Reservation_NoListJoined_OneModel"),
+              });
+          }
         const _ = (0, _._)(_, _),
           _ = _?.name;
         if (_) {

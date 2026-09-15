@@ -9,15 +9,9 @@
   Comment started here.
   Expected :
   Scope                                                      Calls  Time+Child    Pct        Time    Pct   Avg+Child         Avg        Peak\n
-  f_bavail: %lu\n
-  f_bfree : %lu\n
-  f_blocks: %lu\n
-  f_bsize : %lu\n
-  f_frsize: %lu\n
   what():
  !"#$%&'()*+,-./0123
  - file:%s, line:%u ,time:%04u%02u%02u%02u%02u%02u\n
- 2>/dev/null
  = { <proto text format> }". To set fields within it, use syntax like "
  Avg Time/Frame (ms)\n
  BackUp() can only be called after Next().
@@ -156,6 +150,7 @@
 "GetRawRepeatedField"
 "InsertOrLookupMapValue"
 "LookupMapValue"
+"M\n+CMsgChildProcessQueryEnumerateHostAppsLinux
 "MapBegin"
 "MapEnd"
 "MapSize"
@@ -165,7 +160,6 @@
 "type mismatch! call is<type>() before get<type>()" && is<array>()
 "type mismatch! call is<type>() before get<type>()" && is<object>()
 "type mismatch! call is<type>() before get<type>()" && is<std::string>()
-#!/bin/sh\nexit 0\n
 #FLR
 #include
 #include is NULL
@@ -196,6 +190,8 @@ $\n k_EContentModerationSanction_MAX
 $\n k_EContentReportReason_CSAMOther
 $\n k_EContentReportReason_Derailing
 $\n k_EContentReportReason_Reposting
+$\n k_EDLCHighlightReason_ComingSoon
+$\n k_EDLCHighlightReason_NewPlayers
 $\n k_EExternalSaleEventType_Unknown
 $\n k_EGPUPerformanceLevel_Profiling
 $\n k_EGpuDriverId_GoogleSwiftshader
@@ -249,6 +245,7 @@ $\nY8O
 %\n!k_EContentReportReason_OtherAbuse
 %\n!k_EContentReportResolution_Broken
 %\n!k_EContentReportResolution_Purged
+%\n!k_EDLCHighlightReason_Recommended
 %\n!k_EExternalSaleEventType_Showcase
 %\n!k_EGameRecordingType_NotRecording
 %\n!k_EGraphicsPerfOverlayLevel_Basic
@@ -265,9 +262,6 @@ $\nY8O
 %a, %e %b %Y %H:%M:%S
 %a, %e-%b-%Y %H:%M:%S
 %a, %e-%b-%y %H:%M:%S
-%d MB avail\n
-%d MB free space\n
-%d MB total space\n
 %d frames sampled for %.2f seconds\n
 %d validator nodes, %d nodes larger than %s\n
 %d.%d.%d.%d:%d
@@ -280,7 +274,6 @@ $\nY8O
 %llu
 %llx
 %lx-%lx %*c%*c%*c%*c %*x %*x:%*x %*u %16383[^\n]
-%s %s %s %s
 %s [%s]%-*s
 %s double claimed!\n
 %s not implemented
@@ -293,9 +286,9 @@ $\nY8O
 %s.current.txt
 %s/%s/%s.previous.txt
 %s/%s/%s.txt
-%s/.steam/%s
 %s/.steam/steam
 %s/steamXXXXXX
+%s: No arguments passed, exiting\n
 %s: __pos (which is %zu) > this->size() (which is %zu)
 %s: no such process %d - %d\n
 &AElig;
@@ -438,6 +431,7 @@ $\nY8O
 '\n#k_EChildProcessQueryCommand_Invalid
 '\n#k_EContentModerationSanction_Warned
 '\n#k_EContentModeratorLevel_Supervisor
+'\n#k_EContentReportReason_BulkDeletion
 '\n#k_EContentReportReason_ToSViolation
 '\n#k_EContentReportSubjectType_Invalid
 '\n#k_EContentReportSubjectType_UGCFile
@@ -473,6 +467,7 @@ $\nY8O
 (\n$k_EContentReportResolution_Sustained
 (\n$k_EContentReportSubjectAction_Locked
 (\n$k_EContentReportSubjectAction_Warned
+(\n$k_EDLCHighlightReason_PlayerFavorite
 (\n$k_EGameRecordingType_ManualRecording
 (\n$k_ENewSteamAnnouncementState_AllRead
 (\n$k_ENewSteamAnnouncementState_Invalid
@@ -492,6 +487,7 @@ $\nY8O
 (\v2$.google.protobuf.UninterpretedOption":\n\fOptimizeMode
 (\v2$.google.protobuf.UninterpretedOption"P\n
 (\v2$.google.protobuf.UninterpretedOption*\t
+(\v2%.CMsgChildProcessQueryGetHostAppLinuxH
 (\v2%.google.protobuf.FieldDescriptorProto
 (\v2%.google.protobuf.OneofDescriptorProto
 (\v2&.google.protobuf.ExtensionRangeOptions
@@ -500,6 +496,7 @@ $\nY8O
 (\v2(.google.protobuf.SourceCodeInfo.Location
 (\v2).CMsgChildProcessQueryGpuTopology.GpuInfo
 (\v2).google.protobuf.EnumValueDescriptorProto
+(\v2,.CMsgChildProcessQueryEnumerateHostAppsLinuxH
 (\v2-.google.protobuf.GeneratedCodeInfo.Annotation
 (\v2-.google.protobuf.UninterpretedOption.NamePart
 (\v2..google.protobuf.DescriptorProto.ReservedRange
@@ -594,6 +591,7 @@ $\nY8O
 *\n&k_EProvideDeckFeedbackPreference_Unset
 *\n&k_EResolutionAutomation_FullyAutomated
 *\n&k_ESystemDisplayCompatibilityMode_None
+*\n&k_EWindowsUpdateOperationResult_Failed
 *\n&k_PublishedFileQueryType_RankedByTrend
 *pchMsg && *pchMsg == '%'
 *|\n\fECPUGovernor
@@ -623,6 +621,7 @@ $\nY8O
 +\n'k_ESteamDeckCompatibilityFeedback_Agree
 +\n'k_ESteamDeckCompatibilityFeedback_Unset
 +\n'k_ESteamOSCompatibilityCategory_Unknown
++\n'k_EWindowsUpdateOperationResult_Aborted
 +\n\rReservedRange
 +ulsX
 , but was
@@ -664,6 +663,7 @@ $\nY8O
 -- Profile scopes sorted by time (without children) --
 -- Summary --\n
 ----------------------------------------\n
+--icon
 -0123456789
 -\n(k_EPersonaStateFlag_LaunchTypeCompatTool
 -\n)k_EAppTestType_SteamChina_StorePageReview
@@ -681,6 +681,7 @@ $\nY8O
 -\n)k_ESteamDeckCompatibilityCategory_Unknown
 -\n)k_ESystemDisplayCompatibilityMode_Invalid
 -\n)k_EWindowsUpdateInstallationImpact_Normal
+-\n)k_EWindowsUpdateOperationResult_Succeeded
 -buildid
 -chromeos
 -chromeosdiskmanagement
@@ -698,6 +699,7 @@ $\nY8O
 -nocrashdialog
 -out-file
 -query
+-query-arg
 -stack=
 -steamconsole
 -steamdeck
@@ -727,6 +729,8 @@ $\nY8O
 ./google/protobuf/repeated_field.h
 ./google/protobuf/stubs/stringpiece.h
 ./google/protobuf/unknown_field_set.h
+.CMsgHostAppInfo"E\n$CMsgChildProcessQueryGetHostAppLinux
+.CMsgHostAppInfo*
 .PLACEHOLDER_VALUE
 .\n*k_EAsyncGameSessionUserStateReadyForAction
 .\n*k_EAsyncGameSessionUserVisibilityDismissed
@@ -746,6 +750,8 @@ $\nY8O
 .\n*k_ESteamDeckCompatibilityCategory_Verified
 .\n*k_ESteamDeckCompatibilityFeedback_Disagree
 .\n*k_ESteamOSCompatibilityCategory_Compatible
+.\n*k_EWindowsUpdateOperationResult_InProgress
+.\n*k_EWindowsUpdateOperationResult_NotStarted
 .\n*k_EnhancedMarketAppearanceStatus_Completed
 .cpl
 .current.txt
@@ -760,10 +766,11 @@ $\nY8O
 .google.protobuf.ServiceOptions"
 .google.protobuf.SourceCodeInfo
 .placeholder.proto
-.steam_exec_test.sh
+.steam_exec_test
 .y4w
 /\n+k_EAppTestType_SteamDeckCompatibilityReview
 /\n+k_EBrowserFeatureStatus_UnavailableSoftware
+/\n+k_EChildProcessQueryCommand_GetHostAppLinux
 /\n+k_ECommentThreadTypePublishedFile_Developer
 /\n+k_ECommunityItemClass_MiniProfileBackground
 /\n+k_ECommunityItemClass_SteamDeckKeyboardSkin
@@ -788,6 +795,7 @@ $\nY8O
 /data/src/public/tier0/tslist.h
 /data/src/public/tier0/vprof.h
 /data/src/public/tier1/bitstring.h
+/data/src/public/tier1/interface.h
 /data/src/public/tier1/netadr.h
 /data/src/public/tier1/smartptr.h
 /data/src/public/tier1/utlbuffer.h
@@ -826,34 +834,23 @@ $\nY8O
 /dev
 /dev/
 /dev/disk/by-uuid
+/dev/null
 /dev/urandom
-/etc/SUSE-release
-/etc/arch-release
-/etc/centos-release
-/etc/debian_release
-/etc/fedora-release
-/etc/gentoo-release
-/etc/lsb-release
-/etc/mandrake-release
 /etc/mtab
 /etc/os-release
-/etc/redhat-release
-/etc/slackware-release
 /etc/steamos-oobe-image
-/etc/yellowdog-release
 /proc/%d/status
 /proc/meminfo
 /proc/mounts
 /proc/self/exe
 /proc/self/fd
+/proc/self/fd/%d
 /proc/self/maps
-/proc/version
 /run/host/etc/os-release
 /steamrtarm64
+/steamsysinfo
 /tmp
 /tmp/.steam-sem-names
-/tmp/disk-free.XXXXXX
-/ubuntu12_64/disk-free
 /usr/bin/crosdisk %s
 0 != m_rgchPrefixFileName[0]
 0 == m_ThreadLocalSpewReentrancyGuardInstance.Get()
@@ -947,6 +944,21 @@ $\nY8O
 11CUtlHashMapIji10CDefEqualsIjE11HashFunctorIjEjE
 11CUtlHashMapIti10CDefEqualsItE11HashFunctorItEtE
 11CUtlHashMapIyi10CDefEqualsIyE11HashFunctorIyEyE
+12CDynamicFuncIPFP16_GDesktopAppInfoPKcEE
+12CDynamicFuncIPFP6_GIconP9_GAppInfoEE
+12CDynamicFuncIPFP6_GListvEE
+12CDynamicFuncIPFPKcP16_GDesktopAppInfoEE
+12CDynamicFuncIPFPKcP9_GAppInfoEE
+12CDynamicFuncIPFPcP6_GIconEE
+12CDynamicFuncIPFiP14_GTypeInstancemEE
+12CDynamicFuncIPFiP16_GDesktopAppInfoPKcEE
+12CDynamicFuncIPFiP9_GAppInfoEE
+12CDynamicFuncIPFiPKcPiPPPcPP7_GErrorEE
+12CDynamicFuncIPFmvEE
+12CDynamicFuncIPFvP6_GListPFvPvEEE
+12CDynamicFuncIPFvP7_GErrorEE
+12CDynamicFuncIPFvPPcEE
+12CDynamicFuncIPFvPvEE
 12CLogInstance
 12CStdMemAlloc
 14CUtlLinkedListI10CUtlStringiE
@@ -954,8 +966,10 @@ $\nY8O
 14CUtlLinkedListI14CLogWatchParamiE
 14CUtlLinkedListIN11SteamStdLib12CCommandLine18CommandLineParam_tEiE
 14ConCommandBase
+15CMsgHostAppInfo
 16CAdHocValidation
 16CKeyValuesSystem
+16IDynamicFunction
 16IKeyValuesSystem
 17CFileWriterThread
 17CStreamReaderBase
@@ -983,10 +997,10 @@ $\nY8O
 2*.google.protobuf.FieldDescriptorProto.Type
 2+.google.protobuf.FieldDescriptorProto.Label
 2/.google.protobuf.MethodOptions.IdempotencyLevel:
-20:48:08
 20CSteamSysInfoLogFile
 20CUniformRandomStream
 20IUniformRandomStream
+21:48:35
 21CLogFileAsyncCallback
 21CUtlCStringConversion
 24CDirWatcherPollingThread
@@ -1012,6 +1026,7 @@ $\nY8O
 30>9
 31CAdHocValidation_SimpleCallback
 32CMsgChildProcessQueryGpuTopology
+36CMsgChildProcessQueryGetHostAppLinux
 3\n&k_EWindowsUpdateRebootBehavior_Unknown
 3\n/k_EContentReportReason_BypassingProfanityFilter
 3\n/k_EContentReportReason_CSAMGroomingOrEnticement
@@ -1019,10 +1034,12 @@ $\nY8O
 3\n/k_EWindowsUpdateRebootBehavior_NeverNeedsReboot
 3\n/k_PublishedFileQueryType_RankedByNumParentItems
 40CMsgChildProcessQueryGpuTopology_GpuInfo
+43CMsgChildProcessQueryEnumerateHostAppsLinux
 44,4
 456789:;<=
 49fN
 4\n'k_EChildProcessQueryExitCode_ErrorOther
+4\n'k_EWindowsUpdateOperationResult_Unknown
 4\n0k_EAsyncGameSessionUserVisibilitySessionListOnly
 4\n0k_EContentReportReason_LinkingToMaliciousContent
 4\n0k_EContentReportSubjectAction_MarkedAsSuspicious
@@ -1048,6 +1065,7 @@ $\nY8O
 6 PQ
 6ConVar
 6\n2k_EBrowserGPUStatus_DisabledCompositingCommandLine
+6\n2k_EChildProcessQueryCommand_EnumerateHostAppsLinux
 6\n2k_EContentModerationSanction_CommentHistoryDeleted
 6\n2k_EContentReportReason_GenderedEncouragingViolence
 6\n2k_EContentReportReason_RightToBeForgottenViolation
@@ -1068,6 +1086,7 @@ $\nY8O
 7\n3k_ESteamDeckCompatibilityResultDisplayType_Playable
 7\n3k_ESteamDeckCompatibilityResultDisplayType_Verified
 7\n3k_ESteamOSCompatibilityResultDisplayType_Compatible
+7\n3k_EWindowsUpdateOperationResult_SucceededWithErrors
 7\n\tenum_type
 7~8A
 8CAutoPtrI7CUtlSetI10CUtlStringi8CDefLessEE
@@ -1142,6 +1161,7 @@ ASCII
 ASCII//TRANSLIT
 A\n=k_EContentReportReason_OtherDataProtectionAndPrivacyViolation
 A\n\nannotation
+A\n\thost_apps
 AddAllocatedMessage
 AddBool
 AddDouble
@@ -1155,13 +1175,9 @@ AddUInt32
 AddUInt64
 Address too small!
 Already saw decimal point or exponent; can't have another one.
-Android
-Android 6.x
-Android 7.x
-Android 8.x
-Android 9.x
 Anonymous mutex cannot have bAllAccess == true
 April
+Argument for the query, the meaning depends on the query
 Assert( %s ):%s:%d\n
 Assertion Failed: stack%2d: %s
 Assertion Failed: stack%2d: %s (%d): %s
@@ -1174,6 +1190,13 @@ August
 Average %.2f fps, %.2f ms per frame\n
 BCreateDirectory
 BEnsureDiskSpaceAvailable: available:%llu needed:%llu\n
+BFilesystemAllowsExecution: couldn't read %s\n
+BFilesystemAllowsExecution: execute test timed out\n
+BFilesystemAllowsExecution: failed to copy %s to %s: %s\n
+BFilesystemAllowsExecution: failed to get exit code\n
+BFilesystemAllowsExecution: failed to reopen fd: %d\n
+BFilesystemAllowsExecution: failed to write %s: %s\n
+BFilesystemAllowsExecution: fork() failed: %s\n
 BGetFreeDiskSpace: usable_space:%llu disk_size:%llu expandable_space:%llu\n
 BIPFamiliesOverlap - unknown eServerFamilies value %d
 BIsOpen()
@@ -1468,6 +1491,7 @@ CMemoryPool
 CMemoryPool::AddNewBlob: mode == GROW_NONE
 CMemoryPool::Alloc: ran out of memory
 CMsgChildProcessQueryResponse
+CMsgHostAppInfo
 CORD
 CPPTYPE_BOOL
 CPPTYPE_DOUBLE
@@ -1481,6 +1505,7 @@ CPPTYPE_UINT32
 CPPTYPE_UINT64
 CPathString
 CRC32_ProcessBuffer
+CSHA1::HashFile
 CSHA1::Update
 CTSListBase: Misaligned list\n
 CTSQueue bad node count
@@ -1554,11 +1579,9 @@ Convars
 Could not create an instance of
 Could not find type "
 Couldn't parse default value "
-Couldn't write %s: %s\n
 CreateInterface
 DATA_LOSS
 DBG_PATHMATCH
-DBG_STAT
 DEADLINE_EXCEEDED
 DLOPEN Error:%s\n
 DO NOT PARSE: fields may be stripped and missing.\n
@@ -1603,6 +1626,7 @@ EContentReportResolution
 EContentReportSubjectAction
 EContentReportSubjectType
 EControlledLegalCategoryStatus
+EDLCHighlightReason
 EEnhancedMarketAppearanceStatus
 EExternalSaleEventType
 EGPUPerformanceLevel
@@ -1642,6 +1666,7 @@ ESystemDisplayCompatibilityMode
 ESystemFanControlMode
 ESystemServiceState
 EWindowStackingOrder
+EWindowsUpdateOperationResult
 EWindowsUpdateRebootBehavior
 E\n8k_EChildProcessQueryExitCode_ErrorNotSupportedByPlatform
 Element( i )
@@ -1659,6 +1684,7 @@ EnumOptions
 EnumReservedRange
 EnumValueDescriptorProto
 EnumValueOptions
+EnumerateHostAppsLinux
 Enums must contain at least one value.
 Error State on string being set.
 Error decoding string1: %s
@@ -1667,7 +1693,6 @@ Error parsing text-format
 Error reporting not implemented.
 Error while parsing option value for "
 Error while parsing text KeyValues for resource %s
-Execute: %s\n
 Exit code: %d\n
 Exiting on SPEW_ABORT\n
 Expanded map entry type
@@ -1708,17 +1733,20 @@ FCZ&
 FILT
 F\nBk_PublishedFileQueryType_FavoritedByFriendsRankedByPublicationDate
 F\n\foptimize_for
-Failed system(%s) in execute test: %d %s\n
-Failed system(%s) in execute test: %d\n
 Failed to capture callstack
 Failed to close logfile with prefix %s during BTearOffLogFile call!
 Failed to create thread (error 0x%x)
+Failed to enumerate host apps\n
 Failed to find time in logfile name
 Failed to get thread priority: foreign thread unsupported\n
 Failed to get thread priority: getpriority failed %d\n
+Failed to load "%s"
+Failed to load desktop file via gio: %s\n
 Failed to load optional module %s\n
 Failed to query vulkan gpu topology\n
 Failed to remove log event from threadsafe queue!
+Failed to resolve gio, cannot enumerate host apps\n
+Failed to resolve gio, cannot read host app\n
 Failed to save response to file
 Failed to serialize response
 Failed to set thread local value
@@ -1771,7 +1799,6 @@ Files with optimize_for = LITE_RUNTIME cannot define services unless you set bot
 First argument to Swap() (of type "
 First argument to SwapFields() (of type "
 Found invalid proto option data for:
-Free disk space for %s would overflow
 Friday
 GAMESCOPE_WAYLAND_DISPLAY
 GCC: (Debian 10.2.1-6) 10.2.1 20210110
@@ -1789,6 +1816,8 @@ GetFileSystemStableId requires a valid path
 GetFileSystemStableId requires a valid path: %s\n
 GetFloat
 GetFloatFromString() did not get correct peCS parameter
+GetHostAppLinux
+GetHostAppLinux requires a desktop entry path in -query-arg\n
 GetInt32
 GetInt64
 GetInt64FromString() did not get correct peCS parameter
@@ -1933,28 +1962,6 @@ Label
 Last Message Repeated %d times.\n%s
 Leaked KeyValues (%u):\n
 Leaked mem: %s %s\n
-Linux
-Linux 2.2
-Linux 2.4
-Linux 2.6
-Linux 3.10
-Linux 3.16
-Linux 3.18
-Linux 3.2
-Linux 3.5
-Linux 3.6
-Linux 3.x
-Linux 4.1
-Linux 4.14
-Linux 4.19
-Linux 4.4
-Linux 4.9
-Linux 4.x
-Linux 5.10
-Linux 5.4
-Linux 5.x
-Linux 6.x
-Linux 7.x
 LoadFileIntoBuffer: NULL parameters
 LoadFileRangeIntoBuffer_Internal
 LoadFromBuffer: missing {   (current key: '%s')
@@ -1968,34 +1975,6 @@ Logic problem? szsrc =
 Logical bytes allocated (no heap overhead/fragmentation, but includes sbh block size overhead): %s\n
 Lowered '%s' -> '%s'\n
 MGiI
-Mac OS
-MacOS 10.10
-MacOS 10.11
-MacOS 10.12
-MacOS 10.13
-MacOS 10.14
-MacOS 10.15
-MacOS 10.4
-MacOS 10.5
-MacOS 10.5.8
-MacOS 10.6
-MacOS 10.6.3
-MacOS 10.6.4 with Apple's Snow Leopard Graphics Update
-MacOS 10.6.7
-MacOS 10.7
-MacOS 10.8
-MacOS 10.9
-MacOS 11
-MacOS 11 (as 10.16)
-MacOS 11.1
-MacOS 12
-MacOS 12 (as 10.17)
-MacOS 13
-MacOS 13 (as 10.18)
-MacOS 14
-MacOS 14 (as 10.19)
-MacOS 15
-MacOS 15 (as 10.20)
 MapKey::GetBoolValue
 MapKey::GetInt32Value
 MapKey::GetInt64Value
@@ -2025,6 +2004,7 @@ MapValueRef::SetStringValue
 MapValueRef::SetUInt32Value
 MapValueRef::SetUInt64Value
 March
+MatchCaseInsensitivePathIfAvailable: in slow path
 Matched '%s' -> '%s'\n
 MaybeAllocateAligned cannot fail here.
 MbP?H
@@ -2260,6 +2240,7 @@ R1h58
 RESOURCE_EXHAUSTED
 RGBA: %.2X %.2X %.2X %.2X
 RGh]
+ReOpenFd: failed to reopen: %s: %s\n
 Reached an unintended state: CPPTYPE_MESSAGE
 Reached impossible case in HasBit().
 Recursion limit at end of parse should be
@@ -2298,7 +2279,7 @@ Second argument to SwapFields() (of type "
 Seeking to a position not supported with async io
 Seeking to a position which is not sector aligned will break unbuffered io
 Semaphore name (%s) is longer than POSIX can handle, truncating.
-Sep  7 2026
+Sep 14 2026
 September
 ServerMain
 ServiceDescriptorProto
@@ -2438,6 +2419,7 @@ TMPDIR
 Target buffer for V_URLEncode should be 3x source length, plus one for terminating null\n
 Target buffer too short to terminate\n
 Target buffer too short\n
+Terminal
 The JSON camel-case name of field "
 The [proto3_optional=true] option may only be set on proto3fields, not
 The extension
@@ -2550,29 +2532,7 @@ Warning: failed to set thread priority: set failed for %d: %s\n
 Warning: failed to set thread priority: set failed for priority %d\n
 Warning: support for elevated priorities is most likely unavailable, suppressing future warnings\n
 Warning: thread priority outside allowed range %d\n
-Web Client
 Wednesday
-Windows
-Windows 10
-Windows 11
-Windows 2000
-Windows 2003
-Windows 2008
-Windows 2012
-Windows 2012 R2
-Windows 2016
-Windows 2019
-Windows 2022
-Windows 3.11
-Windows 7
-Windows 8
-Windows 8.1
-Windows 95
-Windows 98
-Windows ME
-Windows NT
-Windows Vista
-Windows XP
 X360
 XXXXXX
 YYYY
@@ -2651,9 +2611,11 @@ Zjz\v
 \n\rTYPE_SFIXED64
 \n\rdefault_value
 \n\rk_EAppTypeDLC
+\n\rpath_shortcut
 \n\rphp_namespace
 \n\rreserved_name
 \n\tEOSBranch
+\n\ticon_name
 \n\tjson_name
 \n\tmap_entry
 \n\tname_part
@@ -2668,6 +2630,7 @@ Zjz\v
 \n\vTYPE_UINT64
 \n\vallow_alias
 \n\venums.proto*
+\n\vis_terminal
 \n\voneof_index
 \n\voutput_type
 \n\vsource_file
@@ -2686,7 +2649,7 @@ Zjz\v
 \u%04x
 \u000
 \u001
-\venums.proto"f\n
+\venums.proto"
 \x%02x
 ]JldN
 _Accum
@@ -2721,7 +2684,6 @@ __gmon_start__
 __gnu_cxx::__concurrence_lock_error
 __gnu_cxx::__concurrence_unlock_error
 __int128
-__isoc99_fscanf
 __isoc99_sscanf
 __isoc99_swscanf
 __iswctype_l
@@ -2808,9 +2770,10 @@ alnum
 alpha
 alphasort64
 alse
-android
 anonymous
+apps
 argLen < 0x10000000u
+args
 array
 asctime_r
 audio.so
@@ -2954,7 +2917,6 @@ destSize >= 1
 dgettext
 digit
 dirName
-disk-free command failed\n
 diskSize
 dl_iterate_phdr
 dladdr
@@ -2969,6 +2931,7 @@ dprintf
 driver_version_major
 driver_version_minor
 driver_version_patch
+dup2
 dynamic_cast
 eGroup < VPROF_BUDGETGROUP_MAX
 eGroup >= static_cast< ESpewGroup >( 0 ) && eGroup < k_ESpew_ArraySize
@@ -2979,6 +2942,7 @@ environ
 error
 exec
 execv
+execve
 execvp
 existingLen < k_cchMaxString && cubInput * 2 < k_cchMaxString - existingLen
 expandableSpace
@@ -2993,6 +2957,7 @@ faccessat
 fallocate64
 false
 false"
+fchmod
 fclose
 fcntl
 fdatasync
@@ -3017,7 +2982,6 @@ flock LOCK_EX %s failed, errno = %d\n
 flock LOCK_SH requested but file is not opened for reading, ignoring: %s\n
 fnmatch
 fopen
-fopen tmpfile failed\n
 fopen64
 fork
 fprintf
@@ -3029,7 +2993,6 @@ freeaddrinfo
 freopen
 friends
 friendsui.so
-fscanf disk-free output failed\n
 fseek
 fseeko64
 fsync %s failed, errno = %d\n
@@ -3040,9 +3003,27 @@ fwrite
 gAY:
 g_VecLoadedModules
 g_VecLoadedModules[ iLoadedModules ].m_cRef > 0
+g_app_info_get_all
+g_app_info_get_commandline
+g_app_info_get_display_name
+g_app_info_get_icon
+g_app_info_should_show
+g_desktop_app_info_get_boolean
+g_desktop_app_info_get_filename
+g_desktop_app_info_get_type
+g_desktop_app_info_new_from_filename
+g_error_free
+g_free
+g_icon_to_string
+g_list_free_full
+g_object_unref
 g_pFioAsyncEnqueue == NULL
 g_pFioAsyncFinalize == NULL
 g_pMemAllocSteam
+g_shell_parse_argv
+g_shell_parse_argv %s failed: %s\n
+g_strfreev
+g_type_check_instance_is_a
 g_vecTempTextBuffer
 generic
 get_disk_info
@@ -3177,39 +3158,11 @@ guard variable for
 guestpass
 half
 hidden alias for
+host_app
 html
 httpclient
 httpserver
 i < length_
-iOS 1
-iOS 10
-iOS 10.1
-iOS 10.2
-iOS 10.3
-iOS 11
-iOS 11.1
-iOS 11.2
-iOS 11.3
-iOS 11.4
-iOS 12
-iOS 12.1
-iOS 2
-iOS 3
-iOS 4
-iOS 5
-iOS 6
-iOS 6.1
-iOS 7
-iOS 7.1
-iOS 8
-iOS 8.1
-iOS 8.2
-iOS 8.3
-iOS 8.4
-iOS 9
-iOS 9.1
-iOS 9.2
-iOS 9_.3
 iOption != m_listCommandLineOption.InvalidIndex()
 i[mpppp
 i]Wb
@@ -3353,6 +3306,8 @@ k_EContentReportReason_Trolling
 k_EContentReportReason_Unknown
 k_EContentReportResolution_MAX
 k_EContentReportSubjectType_MAX
+k_EDLCHighlightReason_New
+k_EDLCHighlightReason_None
 k_EExportCodec_Default
 k_EExportCodec_H264
 k_EExportCodec_H265
@@ -3531,13 +3486,15 @@ length_ >= n
 libSDL3.so.0
 libc.so.6
 libdl.so.2
+libgio-2.0.so.0
+libglib-2.0.so.0
+libgobject-2.0.so.0
 libm.so.6
 libpthread.so.0
 libvulkan.so
 libvulkan.so.1
 license
 link
-linux
 linux_arm64_beta_861407927dc8efb407da7cf
 local
 locale::facet::_S_create_c_locale name not valid
@@ -3628,7 +3585,6 @@ m_vecParms.IsValidIndex( nIndex )
 m_vecParms[i]
 m_vecRegisteredWriters
 m_vecRegisteredWriters.HasElement( pFile )
-macos
 malloc
 malloc_usable_size
 map keys are not unique
@@ -3656,8 +3612,6 @@ metrics
 misc.h
 mkdir
 mkfifo
-mkstemp
-mkstemp errno %d\n
 mktime
 mmap
 mmap64
@@ -3764,6 +3718,7 @@ parse
 parsing
 path
 pathStringLength >= 1
+path_exe
 pchBaseFileName
 pchBuffer
 pchFileName
@@ -3868,7 +3823,6 @@ resizeNumBits >= 0
 response"
 rewind
 rmdir
-root
 ru&o
 s1 != NULL
 s2 != NULL
@@ -3962,8 +3916,8 @@ stats
 statvfs
 statvfs64
 statvfs64 failed for %s, errno %d %s
+statvfs64 output would overflow: %s
 statvfs64 reports success but zero free space\n
-statvfs64: ret %d errno %d\n
 std::allocator
 std::bad_alloc
 std::bad_array_new_length
@@ -4110,6 +4064,7 @@ ungetwc
 uninitialized __any_string
 uninterpreted_option
 unknown
+unknown error
 unlink
 unsigned
 unsigned __int128
@@ -4805,7 +4760,6 @@ wcstoull
 wctob
 weak
 weak_dependency
-windows
 with a type that does not implement MergeFrom. This is unsafe;
 wmemchr
 wmemcmp

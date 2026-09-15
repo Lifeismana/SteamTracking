@@ -15,6 +15,37 @@
         AvatarFrameImg: "Uk4DBWxeyo7Tn8SAl8afe",
       };
     },
+    chunkid: (module) => {
+      module.exports = {
+        strMaxCartPartResponsiveWidth: "840px",
+        CartCard: "_1HYjtPJd8D-AHSlOebB4f-",
+        ShoppingCartModalContent: "_1859zsZbgy1ECsQDqMGedi",
+        ShoppingCartModalBtns: "md6XqKKeYLOQhwbHaayWp",
+        GifteeHintCtn: "_3aFtAPVADDqnrvZKg8_sNL",
+        GifteeHint: "_3BT_cAM78V_Zp-BQSJ5VIs",
+        PersonaName: "_2heOUrUMUce3PVqrccBfAS",
+        ErrorModalContent: "_1lKR42gC3dveUEc7REcDQU",
+        ErrorModalMessage: "AqeEBZKe681APQ3j1fRXB",
+        ErrorModalBottom: "_3dX7MBqqR019JJaCTLX3ig",
+        ErrorModalCode: "_290RyArlGp7DySTEwdIPmV",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        PreventScroll: "ycpazsHLq6lCBFmWPCLCZ",
+        ModalDialog: "_1mPKxUDAZ01x-i7612JIsL",
+        ModalDialogContent: "_79d7mzfWutbJb1DCbh1Du",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        SimpleModalDialog: "_3ej4mcyhVunlvw3BjUXtel",
+        SimpleModalDialogHeader: "_1w-TUMWBEOX_zsSa-BBhK8",
+        SimpleModalDialogTitle: "_2tpBIlq2yGQqKcloht-UiJ",
+        XButton: "RC4JznqJb34yCm04FKk0I",
+        SimpleModalContentCtn: "_2yRV5HfgoGdJZqs9Fl049T",
+      };
+    },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
@@ -141,68 +172,9 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid");
-      function _(_, _) {
-        return _?.public_data?.profile_url
-          ? `${_._.COMMUNITY_BASE_URL}id/${_.public_data.profile_url}`
-          : (function (_) {
-              return _ ? `${_._.COMMUNITY_BASE_URL}profiles/${_}` : "";
-            })(_?.public_data?.steamid || _);
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = 1;
-      function _(_) {
-        return ["PlayerLinkDetails", _];
-      }
-      function _(_, _) {
-        const _ =
-          "number" == typeof _
-            ? _._.InitFromAccountID(_, _._.EUNIVERSE).ConvertTo64BitString()
-            : _;
-        return {
-          queryKey: _(_),
-          queryFn: async () => {
-            if (_) {
-              return (function (_) {
-                return (
-                  delete _?.private_data?.account_name,
-                  delete _?.public_data?.account_flags,
-                  delete _?.public_data?.ban_expires_time,
-                  delete _?.public_data?.privacy_state,
-                  _?.public_data?.profile_state !== _ && delete _?.private_data,
-                  _
-                );
-              })(await _.load(_));
-            }
-            return null;
-          },
-          enabled: !!_,
-        };
-      }
-      function _(_) {
-        const _ = (0, _._)(),
-          _ = (0, _._)(_);
-        return (0, _._)(_(_, _));
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
       __webpack_require__._(module_exports),
         __webpack_require__._(module_exports, {
-          ShoppingCartErrorModal: () => _,
+          CartErrorModal: () => _,
           default: () => _,
         });
       var _ = __webpack_require__("chunkid"),
@@ -278,97 +250,95 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__("chunkid");
       function _(_) {
-        const { closeCart: _, lineItemIDs: _, replacedPackageIDs: _ } = _,
+        const { closeCart: _, lineItemIDs: _, bPackagesReplaced: _ } = _,
           _ = (0, _._)(),
           { data: _ } = (0, _._)(),
+          { data: _ } = (0, _._)(),
           _ = (0, _._)(_),
-          _ = (0, _._)(_._.STORE_BASE_URL + "cart");
+          _ = (0, _._)(`${_._.STORE_BASE_URL}cart/`);
         if (
           (_.useEffect(() => {
-            _.isSuccess && _ && 0 === _.length && _();
-          }, [_, _, _]),
-          !_)
+            _ && 0 == _?.length && _();
+          }, [_, _]),
+          !_ || !_)
         )
           return null;
-        const _ = _?.length > 0;
+        const _ = _._.Localize(
+          _ ? "#Cart_UpdatedYourCart" : "#Cart_AddedToYourCart",
+        );
         return (0, _.jsx)(_._, {
           validateCart: _,
           eDisplayType: _._.k_ECartDisplayType_Modal,
-          ItemLink: _._,
-          children: (0, _.jsxs)(_._, {
-            active: !0,
-            className: _().ShoppingCartModal,
-            onDismiss: _,
-            children: [
-              (0, _.jsx)("div", {
-                className: _().ShoppingCartHeader,
-                children: (0, _._)(
-                  _ ? "#Cart_UpdatedYourCart" : "#Cart_AddedToYourCart",
-                ),
-              }),
-              (0, _.jsx)(_._, {
-                lineItems: _,
-                cartValidation: _,
-                scrollable: !0,
-              }),
-              (0, _.jsx)(_, {
-                lineItems: _,
-                cartValidation: _,
-              }),
-              (0, _.jsxs)(_._, {
-                className: _().ShoppingCartModalBtns,
-                children: [
-                  (0, _.jsx)(_._, {
-                    onClick: _,
-                    children: (0, _._)("#Cart_ContinueShopping"),
-                  }),
-                  (0, _.jsx)(_._, {
-                    className: _().OpenCartBtn,
-                    onClick: () => (window.location.href = _),
-                    children: (0, _._)(
-                      "#Cart_ViewMyCart",
-                      _.data?.line_items.length,
-                    ),
-                  }),
-                ],
-              }),
-            ],
+          children: (0, _.jsx)(_._, {
+            onClose: _,
+            navID: "CartModal",
+            strTitle: _,
+            children: (0, _.jsxs)("div", {
+              className: _.ShoppingCartModalContent,
+              children: [
+                (0, _.jsx)(_._, {
+                  lineItems: _,
+                  cartValidation: _,
+                  scrollable: !0,
+                }),
+                (0, _.jsx)(_, {
+                  lineItems: _,
+                  cartValidation: _,
+                }),
+                (0, _.jsxs)(_._, {
+                  className: _.ShoppingCartModalBtns,
+                  children: [
+                    (0, _.jsx)(_._, {
+                      onClick: _,
+                      children: _._.Localize("#Cart_ContinueShopping"),
+                    }),
+                    (0, _.jsx)(_._, {
+                      autoFocus: !0,
+                      href: _,
+                      children: _._.Localize(
+                        "#Cart_ViewMyCart",
+                        _?.line_items?.length ?? _.length,
+                      ),
+                    }),
+                  ],
+                }),
+              ],
+            }),
           }),
         });
       }
       function _(_) {
-        const { active: _, result: _, onDismiss: _ } = _;
-        return (0, _.jsxs)(_._, {
-          active: _,
-          onDismiss: _,
-          children: [
-            (0, _.jsx)(_._, {
-              children: (0, _._)("#Error_Generic"),
-            }),
-            (0, _.jsxs)("div", {
-              className: _().ErrorModalContent,
-              children: [
-                (0, _.jsx)("div", {
-                  className: _().ErrorModalMessage,
-                  children: (0, _._)("#Cart_ErrorUpdating"),
-                }),
-                (0, _.jsx)("div", {
-                  className: _().ErrorModalCode,
-                  children: _ ? (0, _._)("#Cart_ErrorCode", _) : "",
-                }),
-                (0, _.jsx)("div", {
-                  className: _().ErrorModalBottom,
-                  children: (0, _.jsx)(_._, {
-                    onClick: _,
-                    children: (0, _._)("#Button_Close"),
+        const { result: _, onDismiss: _ } = _;
+        return (0, _._)()
+          ? (0, _.jsx)(_._, {
+              onClose: _,
+              navID: "CartErrorModal",
+              strTitle: _._.Localize("#Error_Generic"),
+              children: (0, _.jsxs)("div", {
+                className: _.ErrorModalContent,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _.ErrorModalMessage,
+                    children: _._.Localize("#Cart_ErrorUpdating"),
                   }),
-                }),
-              ],
-            }),
-          ],
-        });
+                  (0, _.jsx)("div", {
+                    className: _.ErrorModalCode,
+                    children: _ ? _._.Localize("#Cart_ErrorCode", _) : "",
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _.ErrorModalBottom,
+                    children: (0, _.jsx)(_._, {
+                      autoFocus: !0,
+                      onClick: _,
+                      children: _._.Localize("#Button_Close"),
+                    }),
+                  }),
+                ],
+              }),
+            })
+          : null;
       }
       function _(_) {
         const { cartValidation: _, lineItems: _ } = _,
@@ -401,16 +371,12 @@
               },
             });
           })(),
-          _ = (0, _._)();
-        let _ = !(
-          _ ||
-          !_?.nGifteeAccountID ||
-          !_?.public_data ||
-          _ ||
-          !_?.cart_items
-        );
+          _ = (0, _._)(),
+          _ = _?.public_data,
+          _ = _?.cart_items;
+        let _ = !(_ || !_?.nGifteeAccountID || !_ || _ || !_?.cart_items);
         if (_) {
-          const _ = new Map(_.cart_items.map((_) => [_.line_item_id, _]));
+          const _ = new Map(_.map((_) => [_.line_item_id, _]));
           _ = !!__webpack_require__.find(
             (_) =>
               !_.gift_info?.accountid_giftee &&
@@ -427,21 +393,22 @@
         const _ = (0, _.jsxs)("a", {
           href: (0, _._)(_),
           target: "_blank",
+          rel: "noreferrer",
           children: [
             (0, _.jsx)(_._, {
               size: "X-Small",
               statusPosition: "right",
               playerLinkDetails: _,
-              alt: _.public_data.persona_name,
+              alt: _.persona_name ?? "",
             }),
             (0, _.jsx)("div", {
-              className: _().PersonaName,
-              children: _.public_data.persona_name,
+              className: _.PersonaName,
+              children: _.persona_name,
             }),
           ],
         });
         return (0, _.jsxs)(_._, {
-          className: _().GifteeHintCtn,
+          className: _.GifteeHintCtn,
           align: "center",
           gap: "3",
           direction: "row",
@@ -449,8 +416,8 @@
             (0, _.jsx)(_._, {
               _: "div",
               align: "center",
-              className: _().GifteeHint,
-              children: (0, _._)("#Cart_GifteeHint_Wishlist", _),
+              className: _.GifteeHint,
+              children: _._.LocalizeReact("#Cart_GifteeHint_Wishlist", _),
             }),
             (0, _.jsxs)(_._, {
               gap: "2",
@@ -463,7 +430,7 @@
                   onClick: () => {
                     (0, _._)()?.AddEvent(_._._), _.mutate(null);
                   },
-                  children: (0, _._)("#Button_No"),
+                  children: _._.Localize("#Button_No"),
                 }),
                 (0, _.jsx)(_._, {
                   size: "1",
@@ -482,11 +449,173 @@
                       });
                     _.mutate(_), _(!0), (0, _._)()?.AddEvent(_._._);
                   },
-                  children: (0, _._)("#Button_Yes"),
+                  children: _._.Localize("#Button_Yes"),
                 }),
               ],
             }),
           ],
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        return _?.public_data?.profile_url
+          ? `${_._.COMMUNITY_BASE_URL}id/${_.public_data.profile_url}`
+          : (function (_) {
+              return _ ? `${_._.COMMUNITY_BASE_URL}profiles/${_}` : "";
+            })(_?.public_data?.steamid || _);
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = Object.assign(
+        function (_) {
+          const { children: _, className: _, ..._ } = _;
+          return (0, _.jsx)(_.Root, {
+            ..._,
+            children: (0, _.jsx)(_.Content, {
+              className: _,
+              children: _,
+            }),
+          });
+        },
+        {
+          Root: function (_) {
+            const {
+                onClose: _,
+                className: _,
+                navID: _,
+                children: _,
+                allowScrollBehind: _,
+                ..._
+              } = _,
+              [_, _] = _.useState(!1),
+              _ = _.useCallback((_) => {
+                _ &&
+                  (_.showModal(),
+                  _.ownerDocument.defaultView &&
+                    _(
+                      _.ownerDocument.body.scrollHeight >
+                        _.ownerDocument.defaultView.innerHeight,
+                    ));
+              }, []),
+              _ = _.useCallback(
+                (_) => {
+                  _.target == _.currentTarget && _("backdropclick");
+                },
+                [_],
+              );
+            return (0, _.jsx)(_, {
+              navID: _ ?? "ModalDialog",
+              onClose: _,
+              children: (0, _.jsx)("dialog", {
+                ref: _,
+                className: _()(_.ModalDialog, !_ && _ && _.PreventScroll, _),
+                onClose: () => _("onclose"),
+                onClick: _,
+                ..._,
+                children: (0, _.jsx)(_._, {
+                  children: _,
+                }),
+              }),
+            });
+          },
+          Content: function (_) {
+            const { className: _, children: _ } = _;
+            return (0, _.jsx)("div", {
+              className: _()(_.ModalDialogContent, _),
+              onClick: (_) => _.stopPropagation(),
+              children: _,
+            });
+          },
+        },
+      );
+      function _(_) {
+        const { navID: _, onClose: _, children: _ } = _,
+          _ = _.useCallback(() => __webpack_require__("cancelbutton"), [_]),
+          _ = _.useRef(void 0);
+        (0, _._)(_, !0, !0);
+        return (0, _._)()
+          ? (0, _.jsx)(_._, {
+              navID: _ ?? "ModalDialog",
+              onCancelButton: _,
+              modal: !0,
+              navTreeRef: _,
+              children: _,
+            })
+          : (0, _.jsx)(_.Fragment, {
+              children: _,
+            });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const {
+          onClose: _,
+          className: _,
+          navID: _,
+          children: _,
+          strTitle: _,
+          ..._
+        } = _;
+        return (0, _.jsx)(_._, {
+          onClose: _,
+          navID: _ ?? "SimpleModalDialog",
+          ..._,
+          children: (0, _.jsxs)("div", {
+            className: _()(_, _().SimpleModalDialog),
+            children: [
+              " ",
+              (0, _.jsxs)(_._, {
+                className: _().SimpleModalDialogHeader,
+                children: [
+                  _ &&
+                    (0, _.jsx)("h2", {
+                      className: _().SimpleModalDialogTitle,
+                      children: _,
+                    }),
+                  (0, _.jsx)("button", {
+                    onClick: (_) => (_("xclick"), _.preventDefault(), !1),
+                    className: _().XButton,
+                    children: (0, _.jsx)(_.tmm, {}),
+                  }),
+                ],
+              }),
+              (0, _.jsx)("div", {
+                className: _().SimpleModalContentCtn,
+                children: _,
+              }),
+            ],
+          }),
         });
       }
     },

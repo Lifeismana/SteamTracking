@@ -235,8 +235,8 @@ $ORIGIN
 16CAdHocValidation
 18CUtlCharConversion
 19CUtlNoEscConversion
-20:48:08
-20:48:11
+21:48:35
+21:48:37
 21CUtlCStringConversion
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
@@ -361,7 +361,7 @@ SDL_GetError
 SDL_SetCurrentThreadPriority
 STEAM_DESKTOP_APP_AFFINITY_LIST
 Semaphore name (%s) is longer than POSIX can handle, truncating.
-Sep  7 2026
+Sep 14 2026
 ServerMain
 Size
 Sleeping
@@ -609,7 +609,6 @@ fork
 fprintf
 fputc
 fputs
-fread
 free
 freopen
 friendsui.so

@@ -925,6 +925,7 @@
         (k.portuguese = () => n.e(58233).then(n.t.bind(n, 58233, 19))),
         (k.romanian = () => n.e(48727).then(n.t.bind(n, 48727, 19))),
         (k.russian = () => n.e(98973).then(n.t.bind(n, 98973, 19))),
+        (k.sc_schinese = () => n.e(11143).then(n.t.bind(n, 11143, 19))),
         (k.schinese = () => n.e(49720).then(n.t.bind(n, 49720, 19))),
         (k.spanish = () => n.e(31924).then(n.t.bind(n, 31924, 19))),
         (k.swedish = () => n.e(17925).then(n.t.bind(n, 17925, 19))),

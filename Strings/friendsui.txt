@@ -2,17 +2,11 @@
   Actual   :
   Comment started here.
   Expected :
-  f_bavail: %lu\n
-  f_bfree : %lu\n
-  f_blocks: %lu\n
-  f_bsize : %lu\n
-  f_frsize: %lu\n
   what():
  !"#$%&'()*+,-./0123
  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
  !"#$%&'()*+,-./0123\n\venums.proto*
  +0000
- 2>/dev/null
  = { <proto text format> }". To set fields within it, use syntax like "
  BackUp() can only be called after Next().
  Can't back up over more bytes than were returned by the last call to Next().
@@ -188,7 +182,6 @@
 "type mismatch! call is<type>() before get<type>()" && is<array>()
 "type mismatch! call is<type>() before get<type>()" && is<object>()
 "type mismatch! call is<type>() before get<type>()" && is<std::string>()
-#!/bin/sh\nexit 0\n
 #3CScs
 #FLR
 #FileOpenDialog_Cancel
@@ -292,6 +285,8 @@ $\n k_EContentModerationSanction_MAX
 $\n k_EContentReportReason_CSAMOther
 $\n k_EContentReportReason_Derailing
 $\n k_EContentReportReason_Reposting
+$\n k_EDLCHighlightReason_ComingSoon
+$\n k_EDLCHighlightReason_NewPlayers
 $\n k_EExternalSaleEventType_Unknown
 $\n k_EFrameStatPacketLossPercentage
 $\n k_EGPUPerformanceLevel_Profiling
@@ -354,6 +349,7 @@ $\nY8O
 %\n!k_EContentReportReason_OtherAbuse
 %\n!k_EContentReportResolution_Broken
 %\n!k_EContentReportResolution_Purged
+%\n!k_EDLCHighlightReason_Recommended
 %\n!k_EExternalSaleEventType_Showcase
 %\n!k_EGameRecordingErrorLowDiskSpace
 %\n!k_EGameRecordingType_NotRecording
@@ -375,9 +371,6 @@ $\nY8O
 %a, %e-%b-%Y %H:%M:%S
 %a, %e-%b-%y %H:%M:%S
 %d %d %d %d
-%d MB avail\n
-%d MB free space\n
-%d MB total space\n
 %d.%d.%d.%d:%d
 %d:00
 %f %f %f %f
@@ -447,6 +440,7 @@ $\nY8O
 &\n"k_EStreamControlStopMicrophoneData
 &\n"k_EStreamControlVirtualHereRequest
 &\n"k_SystemAudioPortDirection_Invalid
+&\n\ncolorspace
 &\n\ngpu_status
 &\n\tdata_type
 &bzi
@@ -462,6 +456,7 @@ $\nY8O
 '\n#k_EClientNotificationType_MajorSale
 '\n#k_EContentModerationSanction_Warned
 '\n#k_EContentModeratorLevel_Supervisor
+'\n#k_EContentReportReason_BulkDeletion
 '\n#k_EContentReportReason_ToSViolation
 '\n#k_EContentReportSubjectType_Invalid
 '\n#k_EContentReportSubjectType_UGCFile
@@ -512,6 +507,7 @@ $\nY8O
 (\n$k_EContentReportResolution_Sustained
 (\n$k_EContentReportSubjectAction_Locked
 (\n$k_EContentReportSubjectAction_Warned
+(\n$k_EDLCHighlightReason_PlayerFavorite
 (\n$k_EGameRecordingType_ManualRecording
 (\n$k_ENewSteamAnnouncementState_AllRead
 (\n$k_ENewSteamAnnouncementState_Invalid
@@ -540,7 +536,6 @@ $\nY8O
 (\r"<\n\rCMsgScreenDPI
 (\r"F\n\vCFrameEvent
 (\r"K\n0CClientNotificationFamilySharingLibraryAvailable
-(\r"L\n\fCVideoFormat
 (\r"P\n\rCMsgMouseDown
 (\r"P\n\rCMsgMouseMove
 (\r"R\n\fCAudioFormat
@@ -555,8 +550,8 @@ $\nY8O
 (\r"w\n\vCMsgKeyDown
 (\r"z\n)CMsgBrowserViewPostMessageToParentRequest
 (\r"z\n\vCMsgMouseUp
+(\t"#\n!CClientNotificationLoggedInAsUser""\n CClientNotificationRestartNeeded"%\n#CClientNotificationRedeemFramePromo*
 (\t"#\n\rCDebugDumpMsg
-(\t"%\n#CClientNotificationRedeemFramePromo*
 (\t")\n\vCHTMLHeader
 (\t",\n*CClientNotificationDockUnsupportedFirmware"H\n$CClientNotificationPeerContentUpload
 (\t"5\n\fCMsgSetFocus
@@ -692,7 +687,6 @@ $\nY8O
 *NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIcLb1EEE
 *NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIwLb0EEE
 *NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIwLb1EEE
-*W\n\fEVideoFormat
 *ZNK6ConVar26GetCommaSeparatedSetOfIntsEvEUlRK10CUtlStringE_
 *ZNK6ConVar29GetCommaSeparatedSetOfStringsEvEUlRK10CUtlStringE_
 *\\n\fEExportCodec
@@ -737,6 +731,7 @@ $\nY8O
 *\n&k_EStreamFrameResultDroppedNetworkLost
 *\n&k_EStreamFrameResultDroppedNetworkSlow
 *\n&k_ESystemDisplayCompatibilityMode_None
+*\n&k_EWindowsUpdateOperationResult_Failed
 *\n&k_PublishedFileQueryType_RankedByTrend
 *\n\frestrictions
 *^\n\fELogFileType
@@ -749,6 +744,7 @@ $\nY8O
 +\n'k_EBrowserFeatureStatus_EnabledReadback
 +\n'k_EBrowserGPUStatus_DisabledCommandLine
 +\n'k_EClientNotificationType_FriendMessage
++\n'k_EClientNotificationType_RestartNeeded
 +\n'k_EClientNotificationType_TradeReversal
 +\n'k_ECommentThreadTypeUserReceivedNewGame
 +\n'k_ECommentThreadTypeUserStatusPublished
@@ -773,6 +769,7 @@ $\nY8O
 +\n'k_ESteamDeckCompatibilityFeedback_Unset
 +\n'k_ESteamOSCompatibilityCategory_Unknown
 +\n'k_ESystemUpdateNotificationType_Invalid
++\n'k_EWindowsUpdateOperationResult_Aborted
 +\n\rReservedRange
 +\n\rplaytime_days
 +\n\vmethod_type
@@ -797,6 +794,7 @@ $\nY8O
 ,\n(k_EBrowserFeatureStatus_UnavailableOffOk
 ,\n(k_EClientNotificationType_ClipDownloaded
 ,\n(k_EClientNotificationType_HardwareSurvey
+,\n(k_EClientNotificationType_LoggedInAsUser
 ,\n(k_EClientNotificationType_PlaytestInvite
 ,\n(k_ECommentThreadTypePublishedFile_Public
 ,\n(k_EContentModerationSanction_TradeBanned
@@ -854,6 +852,7 @@ $\nY8O
 -\n)k_ESystemDisplayCompatibilityMode_Invalid
 -\n)k_ESystemUpdateNotificationType_Available
 -\n)k_EWindowsUpdateInstallationImpact_Normal
+-\n)k_EWindowsUpdateOperationResult_Succeeded
 -\n\fmouse_motion
 -\n\rrasterization
 -\n\rsecurity_info
@@ -940,6 +939,7 @@ $\nY8O
 .EStreamActivity
 .EStreamAudioCodec
 .EStreamColorspace
+.EStreamColorspace"
 .EStreamControlMessage
 .EStreamControllerConfigMsg
 .EStreamFrameEvent
@@ -986,6 +986,8 @@ $\nY8O
 .\n*k_ESteamDeckCompatibilityFeedback_Disagree
 .\n*k_ESteamOSCompatibilityCategory_Compatible
 .\n*k_EStreamControlInputGamepadEvent_OBSOLETE
+.\n*k_EWindowsUpdateOperationResult_InProgress
+.\n*k_EWindowsUpdateOperationResult_NotStarted
 .\n*k_EnhancedMarketAppearanceStatus_Completed
 .\n\tdirection
 .cpl
@@ -1010,7 +1012,7 @@ $\nY8O
 .ogv
 .placeholder.proto
 .png
-.steam_exec_test.sh
+.steam_exec_test
 .webm
 .y4w
 /P8i
@@ -1119,13 +1121,14 @@ $\nY8O
 /dev
 /dev/
 /dev/disk/by-uuid
+/dev/null
 /etc/mtab
 /proc/mounts
+/proc/self/fd/%d
 /proc/self/maps
 /steamrtarm64
+/steamsysinfo
 /tmp
-/tmp/disk-free.XXXXXX
-/ubuntu12_64/disk-free
 /usr/bin/crosdisk %s
 /usr/bin/xdg-open
 /yQA
@@ -1389,7 +1392,6 @@ $\nY8O
 12CQuitRequest
 12CSetTitleMsg
 12CStopRequest
-12CVideoFormat
 13CBoolProperty
 13CCallbackBase
 13CCallbackImplILi1032EE
@@ -1532,6 +1534,7 @@ $\nY8O
 16CMsgAckScreenDPI
 16CMsgBrowserReady
 16CMsgClearHistory
+16CMsgInputBlocked
 16CMsgJSMethodCall
 16CMsgNodeHasFocus
 16CMsgOpenDevTools
@@ -1558,6 +1561,7 @@ $\nY8O
 17CMsgLoadedRequest
 17CMsgMouseDblClick
 17CMsgSearchResults
+17CMsgSetBlockInput
 17CMsgStartDownload
 17CMsgUpdateToolTip
 17CNegotiatedConfig
@@ -1567,6 +1571,7 @@ $\nY8O
 17CStreamReaderBase
 17CStreamVideoLimit
 17CSystemSuspendMsg
+17CVideoFrameHeader
 17DirectoryTreeView
 18CFrameStatsListMsg
 18CGetCursorImageMsg
@@ -1691,7 +1696,6 @@ $\nY8O
 20CMsgJSExecutePromise
 20CMsgJSRaiseException
 20CMsgJSRegisterMethod
-20CMsgRestartJSContext
 20CMsgScalePageToValue
 20CMsgSetSteamBetaName
 20CRecordedInputStream
@@ -1836,7 +1840,6 @@ $\nY8O
 2\n.k_PublishedFileQueryType_RankedByTotalVotesAsc
 2\r.EAudioFormat
 2\r.ELogFileType
-2\r.EVideoFormat
 2ju:
 3+C;SSKS
 30!]^JV
@@ -1858,8 +1861,10 @@ $\nY8O
 31CMsgDisableBackgroundThrottling
 31CSetInputTemporarilyDisabledMsg
 32CClientNotificationFriendMessage
+32CClientNotificationRestartNeeded
 3333
 3333UUUU
+33CClientNotificationLoggedInAsUser
 33CMsgVerticalScrollBarSizeResponse
 33CRemotePlayTogetherGroupUpdateMsg
 33CTransportSignalMsg_WebRTCMessage
@@ -1920,6 +1925,7 @@ $\nY8O
 48CClientNotificationFamilySharingLibraryAvailable
 49fN
 4\n'k_EChildProcessQueryExitCode_ErrorOther
+4\n'k_EWindowsUpdateOperationResult_Unknown
 4\n/k_EStreamControlControllerPersonalizationUpdate
 4\n0k_EAsyncGameSessionUserVisibilitySessionListOnly
 4\n0k_EClientNotificationType_ControllerDisconnected
@@ -2005,6 +2011,7 @@ $\nY8O
 7\n3k_ESteamDeckCompatibilityResultDisplayType_Verified
 7\n3k_ESteamOSCompatibilityResultDisplayType_Compatible
 7\n3k_EStreamControlSetControllerPairingResult_OBSOLETE
+7\n3k_EWindowsUpdateOperationResult_SucceededWithErrors
 7\n\tenum_type
 7~8A
 8CAutoPtrI7CUtlSetI10CUtlStringi8CDefLessEE
@@ -2072,6 +2079,7 @@ $\nY8O
 <\n8k_PublishedFileQueryType_RankedByLifetimeAveragePlaytime
 <empty>\n
 <no url>
+<null>
 <unnamed>
 =\n9k_EAppTestType_SteamChinaPlatformOperator_StorePageReview
 =\n9k_EClientNotificationType_CannotReadControllerGuideButton
@@ -2159,6 +2167,13 @@ B#C0D?EQFeG|H
 BCreateDirectory
 BEGIN
 BEnsureDiskSpaceAvailable: available:%llu needed:%llu\n
+BFilesystemAllowsExecution: couldn't read %s\n
+BFilesystemAllowsExecution: execute test timed out\n
+BFilesystemAllowsExecution: failed to copy %s to %s: %s\n
+BFilesystemAllowsExecution: failed to get exit code\n
+BFilesystemAllowsExecution: failed to reopen fd: %d\n
+BFilesystemAllowsExecution: failed to write %s: %s\n
+BFilesystemAllowsExecution: fork() failed: %s\n
 BGetFreeDiskSpace: usable_space:%llu disk_size:%llu expandable_space:%llu\n
 BIPFamiliesOverlap - unknown eServerFamilies value %d
 BIsOpen()
@@ -2625,6 +2640,7 @@ CMsgImeCancelComposition
 CMsgImeCommitText
 CMsgImeCompositionRangeChanged
 CMsgImeSetComposition
+CMsgInputBlocked
 CMsgInspectElement
 CMsgJSDialogResponse
 CMsgJSExecuteCallback
@@ -2658,13 +2674,13 @@ CMsgRenderProcessTerminated
 CMsgRequestFullScreen
 CMsgRequestProcessInfo
 CMsgResizeGripChanged
-CMsgRestartJSContext"
 CMsgSavePageToJPEG
 CMsgSavePageToJPEGResponse
 CMsgScalePageToValue
 CMsgScreenInformationChanged
 CMsgSearchResults
 CMsgSetAccessibilitySettings
+CMsgSetBlockInput
 CMsgSetForceDeviceScaleFactors
 CMsgSetForegroundWindow
 CMsgSetHTMLTitle
@@ -2737,6 +2753,7 @@ CRYPTO_memcmp
 CRecordedInput
 CRecordedInputStream
 CResumeControllerInputMsg"
+CSHA1::HashFile
 CSHA1::Update
 CSaveTouchConfigLayoutMsg
 CServerHandshakeMsg
@@ -2771,7 +2788,7 @@ CSteamParentalController::OnParentalPlaytimeExhausted
 CSteamParentalController::OnParentalPlaytimeWarning
 CSteamParentalController::OnParentalWebTokenChanged
 CSteamUIMessagingController::OnClientPostMessage
-CStopAudioDataMsg"{\n
+CStopAudioDataMsg"
 CStopVideoDataMsg"
 CStreamDataLostMsg
 CStreamVideoLimit
@@ -2821,6 +2838,7 @@ CValidator::Push(char const*, void*, char const*)
 CVariableBitStringBase
 CVideoDecoderInfoMsg
 CVideoEncoderInfoMsg
+CVideoFrameHeader
 CVirtualHereReadyMsg
 CVirtualHereRequestMsg
 CVirtualHereShareDeviceMsg
@@ -2965,7 +2983,6 @@ Couldn't parse script file: expected 'event', found '%s'\n
 Couldn't parse script file: expected <event name>, found nothing\n
 Couldn't parse script sequence '%s': expected '{', found '%s'\n
 Couldn't parse script sequence '%s': expected <anim command>, found '%s'\n
-Couldn't write %s: %s\n
 Create
 CreateButton
 CreateDirectory
@@ -2987,7 +3004,6 @@ CustomURL
 Czech
 DATA_LOSS
 DBG_PATHMATCH
-DBG_STAT
 DDDDUUUU
 DEADLINE_EXCEEDED
 DLOPEN Error:%s\n
@@ -3073,6 +3089,7 @@ EContentReportResolution
 EContentReportSubjectAction
 EContentReportSubjectType
 EControlledLegalCategoryStatus
+EDLCHighlightReason
 EEnhancedMarketAppearanceStatus
 EExternalSaleEventType
 EFrameAccumulatedStat
@@ -3145,6 +3162,7 @@ ETW_Steamworks_RunCallbacks_End_
 ETW_Steamworks_RunCallbacks_Start
 EVCert
 EWindowStackingOrder
+EWindowsUpdateOperationResult
 EWindowsUpdateRebootBehavior
 E\n8k_EChildProcessQueryExitCode_ErrorNotSupportedByPlatform
 EditMenu
@@ -3180,7 +3198,6 @@ Error while parsing option value for "
 Error while parsing text KeyValues for resource %s
 Escape
 Estonian
-Execute: %s\n
 Expand
 Expanded map entry type
 Expect a decimal number, got:
@@ -3223,8 +3240,6 @@ FILT
 F\nBk_PublishedFileQueryType_FavoritedByFriendsRankedByPublicationDate
 F\n\foptimize_for
 Failed creating HTML browser %s: %s
-Failed system(%s) in execute test: %d %s\n
-Failed system(%s) in execute test: %d\n
 Failed to close logfile with prefix %s during BTearOffLogFile call!
 Failed to find time in logfile name
 Failed to load menu file %s\n
@@ -3320,7 +3335,6 @@ FrameSystemButton.Icon
 FrameTitle
 FrameTitleBar.Font
 FrameTitleBar.SmallFont
-Free disk space for %s would overflow
 French
 Friday
 FriendSettings.GetEnabledFeatures
@@ -3402,6 +3416,7 @@ HTML.SearchInsetX
 HTML.SearchInsetY
 HTML.SearchTall
 HTML.SearchWide
+HTML::ExecuteJSCallback
 HTML::Paint()
 HTMLBackRequested
 HTMLCanGoBackAndForward
@@ -3577,6 +3592,13 @@ JArray
 JPEG Image (*.jpeg)
 JPEG Image (*.jpg)
 JSClientStorage
+JSMethodCall - ConvertArgsToTuple
+JSMethodCall - FreeArgsInTuple
+JSMethodCall - invalid argument ShortDebugString
+JSMethodCall - invoke handler
+JSMethodCall - too few arguments
+JSMethodCall: %s
+JSMethodCall: <untagged>
 JSObjectProperty
 JSType
 JZJ{.
@@ -3923,6 +3945,7 @@ MapValueRef::SetUInt32Value
 MapValueRef::SetUInt64Value
 Marathi
 March
+MatchCaseInsensitivePathIfAvailable: in slow path
 Matched '%s' -> '%s'\n
 Maximize
 MaybeAllocateAligned cannot fail here.
@@ -4440,6 +4463,7 @@ RadioButton
 RadioButton::OnThink()
 RadioButtonChecked
 RaiseJSException: %s\n
+ReOpenFd: failed to reopen: %s: %s\n
 Reached an unintended state: CPPTYPE_MESSAGE
 Reached impossible case in HasBit().
 Read Error
@@ -4492,6 +4516,7 @@ SHA256_Init( &c )
 SKIN
 SKyu
 SPEED
+STARTUP SlowJSMethodCall %s took %.1fms\n
 STEAMVIDEOTOKEN
 STEAM_
 STRING
@@ -4797,8 +4822,10 @@ This ZeroCopyOutputStream doesn't support aliasing. Reaching here usually means 
 This program requires version
 This program was compiled against version
 This shouldn't be called if all the sizes are equal.
+ThreadCloseProcess
 ThreadGetCurrentId
 ThreadGetCurrentProcessId
+ThreadGetProcessExitCode
 ThreadImplOneTimeInit
 ThreadInMainThread
 ThreadInMainThread()
@@ -4811,6 +4838,7 @@ ThreadInterlockedExchangeAdd64
 ThreadInterlockedIncrement
 ThreadShellExecute
 ThreadSleep
+ThreadWaitForProcessExit
 ThrobberImagePanel
 Thursday
 Tick
@@ -4916,7 +4944,7 @@ VGUI_Localize003
 VGUI_NotificationManager002
 VGUI_Panel010
 VGUI_Scheme010
-VGUI_Surface039
+VGUI_Surface040
 VGUI_System011
 VGUI_ivgui007
 VGuiModuleTracker001
@@ -4926,14 +4954,12 @@ VProfInternalEnterScopeCurrentThread
 VProfInternalGetProfileForCurrentThread
 VTT for
 V_AppendSlash
-V_ComposeFileName
 V_CopyAndFixSlashes
 V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*, bool)
 V_ExtractFileExtension
 V_ExtractFilePath
 V_FixDoubleSlashes
 V_FixSlashes
-V_FormatAndAppend
 V_GetFileExtension
 V_IsAbsolutePath
 V_IsSteamCloseProtocol
@@ -5187,6 +5213,7 @@ Zulu
 \n\ncache_miss
 \n\ncertExpiry
 \n\ncodec_data
+\n\ncolorspace
 \n\ncommand_id
 \n\ndependency
 \n\ndeprecated
@@ -5205,6 +5232,7 @@ Zulu
 \n\nmax_height
 \n\nmin_height
 \n\npageserial
+\n\npixel_bits
 \n\nrequest_id
 \n\nscreenshot
 \n\nscroll_max
@@ -5238,6 +5266,8 @@ Zulu
 \n\rk_EAppTypeDLC
 \n\rlast_frame_id
 \n\rlong_frame_ms
+\n\rmax_luminance
+\n\rmin_luminance
 \n\rmouse_enabled
 \n\rnativeKeyCode
 \n\rpct_remaining
@@ -5248,6 +5278,7 @@ Zulu
 \n\rreplace_entry
 \n\rreserved_name
 \n\rrtime_expires
+\n\rsdr_luminance
 \n\rshift_keycode
 \n\rsource_handle
 \n\rvroverlay_key
@@ -5390,7 +5421,6 @@ __gmon_start__
 __gnu_cxx::__concurrence_lock_error
 __gnu_cxx::__concurrence_unlock_error
 __int128
-__isoc99_fscanf
 __isoc99_sscanf
 __iswctype_l
 __lxstat
@@ -5467,6 +5497,7 @@ _blank
 _clickableTextPanels
 _edata
 _end
+_exit
 _imageDar
 _imageDar.IsValidIndex( index )
 _internal.RegisterForStyleChanges
@@ -5925,7 +5956,6 @@ disable_client_cursor
 disable_intel_hardware_encoding
 disable_steam_store
 disabled
-disk-free command failed\n
 diskSize
 display_hdr_setting
 display_height
@@ -5948,6 +5978,7 @@ dpi_horizontal
 drophoverdelay
 droppable
 dulltext
+dup2
 dupKeyMap
 duplicate
 duplicate sRGB information ignored
@@ -6001,6 +6032,7 @@ entries
 entry
 enum
 enums.proto
+environ
 error
 error in user chunk
 error writing ancillary chunked compressed data
@@ -6017,6 +6049,7 @@ events
 ever_enabled
 ewh/?y
 exceeds application limits
+execve
 existingLen < k_cchMaxString && cubInput * 2 < k_cchMaxString - existingLen
 exit
 expandableSpace
@@ -6035,6 +6068,7 @@ false"
 false"&\n\fCMsgStopFind
 false"M\n
 family_groupid
+fchmod
 fclose
 fcntl
 fdatasync
@@ -6091,10 +6125,10 @@ focus
 focused
 font
 fopen
-fopen tmpfile failed\n
 fopen64
 force_to_foreground
 forcing save of an unhandled chunk; please call png_set_keep_unknown_chunks
+fork
 format
 forward
 fotolog.net
@@ -6131,7 +6165,6 @@ friends
 friends/trackerui_%language%.txt
 friendster.com
 friendsui.dll
-fscanf disk-free output failed\n
 fseek
 fseeko64
 fsync %s failed, errno = %d\n
@@ -6568,6 +6601,7 @@ is_save
 is_site_license_lock
 isalnum
 isalpha
+iscntrl
 isevcert
 ispageload
 isredirect
@@ -6700,6 +6734,8 @@ k_EContentReportReason_Trolling
 k_EContentReportReason_Unknown
 k_EContentReportResolution_MAX
 k_EContentReportSubjectType_MAX
+k_EDLCHighlightReason_New
+k_EDLCHighlightReason_None
 k_EExportCodec_Default
 k_EExportCodec_H264
 k_EExportCodec_H265
@@ -6960,8 +6996,6 @@ k_EStreamVideoCodecHEVC
 k_EStreamVideoCodecNone
 k_EStreamVideoCodecPyrowave
 k_EStreamVideoCodecRaw
-k_EStreamVideoCodecVP8
-k_EStreamVideoCodecVP9
 k_EStreamingAudioData
 k_EStreamingMicrophoneData
 k_EStreamingVideoData
@@ -6995,9 +7029,6 @@ k_EUpdaterType_Invalid
 k_EUpdaterType_OS
 k_EUpdaterType_Test1
 k_EUpdaterType_Test2
-k_EVideoFormatAccel
-k_EVideoFormatNone
-k_EVideoFormatYV12
 k_EWindowStackingOrder_Bottom
 k_EWindowStackingOrder_Invalid
 k_EWindowStackingOrder_Top
@@ -7395,8 +7426,6 @@ missing LZ dictionary
 misspelled_word
 mkdir
 mkfifo
-mkstemp
-mkstemp errno %d\n
 mktime
 mmap
 mmap64
@@ -8095,6 +8124,9 @@ putwc
 pvecAddressesOut != nullptr || pSingleOutput != nullptr
 pwrite64
 py_generic_services
+pyrowave_custom_bitrate
+pyrowave_custom_bitrate_kbps
+pyrowave_quality_modifier
 qR5FE%
 qdZRMHD@=;86421/.-+*)(''&%$$#""!!
 quality
@@ -8368,8 +8400,8 @@ status
 statvfs
 statvfs64
 statvfs64 failed for %s, errno %d %s
+statvfs64 output would overflow: %s
 statvfs64 reports success but zero free space\n
-statvfs64: ret %d errno %d\n
 std::__once_call
 std::__once_callable
 std::allocator
@@ -8808,6 +8840,8 @@ yhotspot
 yoruba
 youtube.com
 ypos
+yuv420
+yuv444
 zC`G;
 zError
 zTXt

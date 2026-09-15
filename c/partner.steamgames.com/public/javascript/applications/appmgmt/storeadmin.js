@@ -162,8 +162,12 @@
         Ctn: "_1ZAQLoxm9d3f6xrGzbfNqv",
         CreatorCtn: "_3E1g0g32lII6LOwFavs-pL",
         CreatorNameCtn: "_19ddIB98Eino8bn5wXuKtY",
+        CreatorStatusCtn: "O-Pu4bjH4MigfkfagtPeP",
         HoverCtn: "_2BgPwOwyt6_vzsU2JpcvFM",
         Avatar: "_2aKMBhqBnmiLCGD_hcZSx3",
+        CreatorCtnError: "tN8iKI_k1ulzwyVVkMZ_d",
+        ErrorIcon: "ZVfEgEjtH7tAsGX1IaM2j",
+        ErrorText: "_1nZjxaUnIUZlozbCYgBdi_",
       };
     },
     chunkid: (module) => {
@@ -395,6 +399,9 @@
         CustomUsd: "Ru7OVKpEg2-4T6i2fJPVP",
         MissingCurrency: "_1aHJaADVcfWKEoJd3rHyzS",
         Title: "_3vH34cEyQM0jTB1rtzMc19",
+        SectionHeader: "_2GhfKAafoa5Z1PGwOg6ju9",
+        AutoApprovalCtn: "_1-7oBBbh-eUUB7iskMHyxE",
+        Notes: "_1y1kejSOqm-cFSP1HxSL_s",
         CurrencyWarningsCtn: "_2H_McBAV-1DEhfPhYqmTG8",
         AboveAutoPublish: "_18NNA8ajB8j6lCIlkk8_uk",
         ThresholdMiniTable: "_1Qz3SUdF4Z2HAIlSWPA08n",
@@ -9679,6 +9686,29 @@
       const _ = {
         include_release: !0,
       };
+      var _;
+      !(function (_) {
+        (_[(_.None = 0)] = "None"),
+          (_[(_.Approved = 1)] = "Approved"),
+          (_[(_.Rejected_CountryPricing = 2)] = "Rejected_CountryPricing"),
+          (_[(_.Rejected_ExceedsMaxPrice = 3)] = "Rejected_ExceedsMaxPrice"),
+          (_[(_.Rejected_PriceIncreaseTooHigh = 4)] =
+            "Rejected_PriceIncreaseTooHigh"),
+          (_[(_.Rejected_NoGuidelineMatch = 5)] = "Rejected_NoGuidelineMatch"),
+          (_[(_.Rejected_MissingCurrencies = 6)] =
+            "Rejected_MissingCurrencies"),
+          (_[(_.Rejected_MissingRegions = 7)] = "Rejected_MissingRegions");
+      })(_ || (_ = {}));
+      const _ = {
+        [_.None]: "None",
+        [_.Approved]: "Auto-Approvable",
+        [_.Rejected_CountryPricing]: "Contains Country-Override Pricing",
+        [_.Rejected_ExceedsMaxPrice]: "Exceeds Max Auto-Approvable Price",
+        [_.Rejected_PriceIncreaseTooHigh]: "Prices Above Guidance Thresholds",
+        [_.Rejected_NoGuidelineMatch]: "No Guideline Match",
+        [_.Rejected_MissingCurrencies]: "Missing Currencies",
+        [_.Rejected_MissingRegions]: "Missing Regions",
+      };
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -11378,18 +11408,12 @@
               checked: _,
               onChange: _,
             }),
-            (0, _.jsxs)("div", {
+            (0, _.jsx)("div", {
               className: (0, _._)(_.RowCtn),
-              children: [
-                (0, _.jsx)("div", {
-                  className: _.PackageInfoColumn,
-                  children: "Package Info",
-                }),
-                (0, _.jsx)("div", {
-                  className: _.FailuresCtn,
-                  children: "Errors Blocking Auto Submission:",
-                }),
-              ],
+              children: (0, _.jsx)("div", {
+                className: _.PackageInfoColumn,
+                children: "Package Info",
+              }),
             }),
             _.map((_) =>
               (0, _.jsx)(
@@ -11449,6 +11473,13 @@
             (0, _.jsx)(_, {
               ..._,
             }),
+            (0, _.jsx)("div", {
+              className: _.SectionHeader,
+              children: "Web Auto-Approval Checks",
+            }),
+            (0, _.jsx)(_, {
+              ..._,
+            }),
             (0, _.jsx)(_, {
               ..._,
             }),
@@ -11465,6 +11496,29 @@
               partnerID: _,
               setTicketCount: _,
             }),
+          ],
+        });
+      }
+      function _(_) {
+        const { proposal: _ } = _,
+          _ = _.auto_approval_state || _.None,
+          _ = _[_] || `Unknown (${_})`;
+        return (0, _.jsxs)("div", {
+          className: _.AutoApprovalCtn,
+          children: [
+            (0, _.jsx)("div", {
+              className: _.SectionHeader,
+              children: "Server Auto-Approval Checks",
+            }),
+            (0, _.jsx)("div", {
+              className: _.Title,
+              children: _,
+            }),
+            Boolean(_.auto_approval_notes) &&
+              (0, _.jsxs)("div", {
+                className: _.Notes,
+                children: ["- ", _.auto_approval_notes],
+              }),
           ],
         });
       }
@@ -16142,6 +16196,9 @@
             nPrimaryPartnerID: _,
             strName: _,
             strKvTargetName: _,
+            rgConflictClanAccountIDs: _,
+            rgNameMustMatchLinks: _,
+            strMatchKey: _,
           } = _,
           [_, _] = (0, _.useState)(() => _),
           _ = (function (_, _) {
@@ -16159,7 +16216,17 @@
             (_) =>
               _.linkname.trim().toLocaleLowerCase() ==
               _.trim().toLocaleLowerCase(),
-          );
+          ),
+          _ = (0, _.useMemo)(() => {
+            if (!_) return null;
+            const _ = new _._(_.clan_steamid).GetAccountID();
+            if (_?.includes(_))
+              return (0, _._)("#AppLanding_Creator_FranchiseSameAsDevPub");
+            const _ = _?.filter((_) => _.clanAccountID === _);
+            return _?.length && !_.some((_) => _.strMatchKey === _)
+              ? (0, _._)("#AppLanding_Creator_DeveloperNameMismatch")
+              : null;
+          }, [_, _, _, _]);
         return (0, _.jsxs)("div", {
           className: _().Ctn,
           children: [
@@ -16184,6 +16251,7 @@
               (0, _.jsx)(_, {
                 pageLink: _,
                 strKvTargetName: _,
+                strLinkIssue: _,
               }),
             Boolean(!_ && _?.trim().length > 0) &&
               (0, _.jsx)(_, {
@@ -16232,21 +16300,38 @@
         };
       }
       function _(_) {
-        const { pageLink: _, strKvTargetName: _ } = _,
+        const { pageLink: _, strKvTargetName: _, strLinkIssue: _ } = _,
           { clanAccountID: _, clanInfo: _, strURL: _ } = _(_, _);
         return (0, _.jsxs)("div", {
           className: _().CreatorNameCtn,
           children: [
-            (0, _.jsx)("div", {
-              className: _().CreatorCtn,
-              children: (0, _._)(
-                "#AppLanding_CreatorLinked",
-                (0, _.jsx)(_, {
-                  clanAccountID: _,
-                  strURL: _,
-                  clanInfo: _,
+            (0, _.jsxs)("div", {
+              className: _().CreatorStatusCtn,
+              children: [
+                (0, _.jsxs)("div", {
+                  className: (0, _._)(_().CreatorCtn, _ && _().CreatorCtnError),
+                  children: [
+                    Boolean(_) &&
+                      (0, _.jsx)("span", {
+                        className: _().ErrorIcon,
+                        children: "✖",
+                      }),
+                    (0, _._)(
+                      "#AppLanding_CreatorLinked",
+                      (0, _.jsx)(_, {
+                        clanAccountID: _,
+                        strURL: _,
+                        clanInfo: _,
+                      }),
+                    ),
+                  ],
                 }),
-              ),
+                Boolean(_) &&
+                  (0, _.jsx)("div", {
+                    className: _().ErrorText,
+                    children: _,
+                  }),
+              ],
             }),
             (0, _.jsx)(_, {
               pageLink: _,

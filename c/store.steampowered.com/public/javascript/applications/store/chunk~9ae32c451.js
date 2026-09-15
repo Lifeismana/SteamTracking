@@ -42,6 +42,248 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = !0;
+      function _(_) {
+        return _._.STORE_BASE_URL + "saleaction/" + _;
+      }
+      async function _(_, _) {
+        const _ = await fetch(_, {
+          credentials: "include",
+          ..._,
+        });
+        if (!_._) throw new Error(`${_} answered ${_.status}`);
+        return await __webpack_require__.json();
+      }
+      function _() {
+        return (0, _._)("doorinfo", "application_config") ?? void 0;
+      }
+      var _ = __webpack_require__("chunkid");
+      function _(_ = !0) {
+        return {
+          queryKey: ["EventDoors"],
+          queryFn: () =>
+            (async function () {
+              const _ = await _(_("ajaxgetopendoor"), {
+                method: "GET",
+              });
+              if (!_.doordata)
+                throw new Error("ajaxgetopendoor answered " + _.success);
+              return _.doordata;
+            })(),
+          initialData: _,
+          enabled: _ && _,
+          staleTime: 1 / 0,
+          gcTime: 1 / 0,
+          retry: !1,
+        };
+      }
+      function _(_, _) {
+        return (
+          !(!_ || null == _) && Boolean(_ >= 0 && _ < _.length && _[_].opened)
+        );
+      }
+      function _(_) {
+        let _ = _._;
+        return (
+          _?.forEach((_) => {
+            _.opened && _.day > _ && (_ = _.day);
+          }),
+          _
+        );
+      }
+      function _(_) {
+        return _(_) != _._;
+      }
+      function _(_ = !0) {
+        const { data: _ } = (0, _._)(_(_));
+        return _;
+      }
+      function _() {
+        return null != _();
+      }
+      function _(_) {
+        return _(_(), _);
+      }
+      function _() {
+        return _(_());
+      }
+      function _() {
+        return _(_());
+      }
+      const _ = {
+        nOpenCount: 0,
+        iLastDoorIndex: _._,
+      };
+      function _() {
+        const { data: _ } = (0, _._)({
+          queryKey: ["EventDoorOpened"],
+          queryFn: () => _,
+          initialData: _,
+          staleTime: 1 / 0,
+          gcTime: 1 / 0,
+        });
+        return _ ?? _;
+      }
+      const _ = new WeakMap();
+      function _(_) {
+        let _ = _.get(_);
+        return _ || ((_ = new Map()), _.set(_, _)), _;
+      }
+      async function _(_, _) {
+        const {
+          iDoorIndex: _,
+          bOpenDoor: _ = !0,
+          datarecord: _,
+          bPreviewMode: _ = !1,
+        } = _;
+        const _ = _.getQueryData(["EventDoors"]);
+        if (!_._.logged_in || !_ || _ > _.length || _ < 0) return null;
+        const _ = _(_),
+          _ = _.get(_);
+        if (_) return _;
+        if (_[_].opened == _) return {};
+        const _ = (async function (_, _, _, _, _) {
+          try {
+            const _ = await (async function (_, _, _, _) {
+              const _ = new FormData();
+              _.append("sessionid", (0, _._)()),
+                _.append("door_index", "" + _),
+                _ && _.append("datarecord", _),
+                _ && _.append("fake_open", "" + _),
+                _.append("clan_accountid", "" + _._.CLANACCOUNTID),
+                _ || _.append("open_door", "0");
+              const _ = await _(_("ajaxopendoor"), {
+                method: "POST",
+                body: _,
+              });
+              if (_.success != _._)
+                throw new Error(
+                  "ajaxopendoor answered " +
+                    _.success +
+                    (_.err_msg ? ": " + _.err_msg : ""),
+                );
+              return _;
+            })(_, _, _, _);
+            return (
+              _(_, _, _),
+              _ &&
+                !_ &&
+                _.setQueryData(["EventDoorOpened"], (_) => ({
+                  nOpenCount: (_?.nOpenCount ?? 0) + 1,
+                  iLastDoorIndex: _,
+                })),
+              _
+            );
+          } catch (_) {
+            return (
+              _(_).delete(_), console.error("OpenEventDoor hit error", _), null
+            );
+          }
+        })(_, _, _, _, _);
+        return _.set(_, _), _;
+      }
+      function _() {
+        const _ = (0, _._)(),
+          { mutateAsync: _ } = (0, _._)({
+            mutationFn: (_) => _(_, _),
+          });
+        return _;
+      }
+      function _(_) {
+        return _.ensureQueryData(_());
+      }
+      function _(_, _, _) {
+        _ < 0 || _ >= _._
+          ? console.error("SetEventDoorState: Wrong door being set " + _)
+          : _(_, _, _);
+      }
+      function _(_, _, _) {
+        _.setQueryData(["EventDoors"], (_) =>
+          _?.map((_, _) =>
+            _ == _ && _.opened != _
+              ? {
+                  ..._,
+                  opened: _,
+                }
+              : _,
+          ),
+        );
+      }
+      function _(_, _) {
+        _.setQueryData(["EventDoors"], (_) =>
+          _?.map((_, _) => {
+            if (_ >= _._) return _;
+            const _ = _ <= _;
+            return _.opened != _
+              ? {
+                  ..._,
+                  opened: _,
+                }
+              : _;
+          }),
+        );
+      }
+      async function _(_, _) {
+        const _ = await (async function (_) {
+          const _ = new FormData();
+          _.append("sessionid", (0, _._)()), _.append("clan_accountid", "" + _);
+          const _ = await _(_("ajaxclosealldoor"), {
+            method: "POST",
+            body: _,
+          });
+          if (_.success != _._)
+            throw new Error("ajaxclosealldoor answered " + _.success);
+          return _.count ?? 0;
+        })(_);
+        return (
+          console.log("CloseAllEventDoors - closed " + _),
+          _(_, _._),
+          _(_).clear(),
+          _
+        );
+      }
+      function _() {
+        const _ = (0, _._)(),
+          { mutate: _ } = (0, _._)({
+            mutationFn: (_) => _(_, _),
+            onError: (_) => console.error("CloseAllEventDoors failed", _),
+          });
+        return (0, _.useCallback)((_) => _(_), [_]);
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      const _ = 7,
+        _ = -1;
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -301,309 +543,6 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = -1;
-      class _ {
-        m_userData;
-        m_bLoadedDuringInit = !1;
-        m_strLastDoorOpenKey = "video_noneset";
-        m_bIsAnyDoorOpened = !1;
-        m_nHighestDoorOpened = _;
-        m_initialLoadPromise;
-        m_mapDoorOpenPromise = new Map();
-        m_mapChangeCallback = new Map();
-        m_doorInitializedChangedCallback = new _._();
-        m_largestDoorChangeCallback = new _._();
-        m_bIsAnyDoorOpenChangeCallback = new _._();
-        m_doorOpenedCallback = new _._();
-        GetLastDoorOpen() {
-          return this.m_strLastDoorOpenKey;
-        }
-        GetRawDoorData() {
-          return this.m_userData;
-        }
-        BIsDoorOpened(_) {
-          return (
-            null != _ &&
-            null != _ &&
-            !!this.m_userData &&
-            Boolean(_ < this.m_userData.length && this.m_userData[_].opened)
-          );
-        }
-        BCanUserOpenDoor(_) {
-          let _ = _._.GetTimeNowWithOverride();
-          return (
-            _._.logged_in &&
-            this.m_userData &&
-            _ < this.m_userData.length &&
-            _ >= this.m_userData[_].rtime_start &&
-            _ <= this.m_userData[_].rtime_end
-          );
-        }
-        GetDoorCount() {
-          return this.m_userData ? this.m_userData.length : 0;
-        }
-        BIsAnyDoorOpened() {
-          return this.m_bIsAnyDoorOpened;
-        }
-        GetIsAnyDoorOpenChange() {
-          return this.m_bIsAnyDoorOpenChangeCallback;
-        }
-        GetLargestDoorOpenIndex() {
-          return this.m_nHighestDoorOpened;
-        }
-        GetLargestDoorIndexChange() {
-          return this.m_largestDoorChangeCallback;
-        }
-        GetDoorStateChangeCallback(_) {
-          return (
-            this.m_mapChangeCallback.has(_) ||
-              this.m_mapChangeCallback.set(_, new _._()),
-            this.m_mapChangeCallback.get(_)
-          );
-        }
-        GetDoorStateInitializedChangeCallback() {
-          return this.m_doorInitializedChangedCallback;
-        }
-        GetDoorOpenedCallback() {
-          return this.m_doorOpenedCallback;
-        }
-        BIsInitialized() {
-          return this.m_bLoadedDuringInit;
-        }
-        GetMaxDoor() {
-          return 7;
-        }
-        SetInMemoryUpdateDoorOpenUpto(_) {
-          for (let _ = 0; _ < 7; ++_) {
-            const _ = _ <= _;
-            this.m_userData[_].opened != _ &&
-              ((this.m_userData[_].opened = _),
-              this.GetDoorStateChangeCallback(_).Dispatch(_));
-          }
-          this.RecomputeState();
-        }
-        SetInMemorySpecificDoorState(_, _) {
-          _ < 7
-            ? this.m_userData[_].opened != _ &&
-              ((this.m_userData[_].opened = _),
-              this.GetDoorStateChangeCallback(_).Dispatch(_),
-              this.RecomputeState())
-            : console.error("CDoorStore: Wrong door being set " + _);
-        }
-        RecomputeState() {
-          let _ = _;
-          this.m_userData?.forEach((_) => {
-            _.opened && _.day > _ && (_ = _.day);
-          });
-          const _ = _ != _;
-          _ != this.m_bIsAnyDoorOpened &&
-            ((this.m_bIsAnyDoorOpened = _),
-            this.GetIsAnyDoorOpenChange().Dispatch(_)),
-            _ != this.m_nHighestDoorOpened &&
-              ((this.m_nHighestDoorOpened = _),
-              this.GetLargestDoorIndexChange().Dispatch(_));
-        }
-        async OpenDoor(_, _ = !0, _ = "", _ = !1) {
-          return !_._.logged_in ||
-            !this.m_userData ||
-            _ > this.m_userData.length ||
-            _ < 0
-            ? null
-            : this.m_mapDoorOpenPromise.has(_)
-              ? this.m_mapDoorOpenPromise.get(_)
-              : this.m_userData[_].opened == _
-                ? {}
-                : (this.m_mapDoorOpenPromise.has(_) ||
-                    this.m_mapDoorOpenPromise.set(
-                      _,
-                      this.InternalOpenDoor(_, _, _, _),
-                    ),
-                  this.m_mapDoorOpenPromise.get(_));
-        }
-        async InternalOpenDoor(_, _ = !0, _, _ = !1) {
-          let _ = _._.STORE_BASE_URL + "saleaction/ajaxopendoor";
-          const _ = new FormData();
-          _.append("sessionid", (0, _._)()),
-            _ && _.append("datarecord", _),
-            _ && _.append("fake_open", "" + _),
-            _.append("door_index", "" + _),
-            _.append("clan_accountid", "" + _._.CLANACCOUNTID),
-            _ || _.append("open_door", "0");
-          let _ = null;
-          try {
-            let _ = await _().post(_, _, {
-              withCredentials: !0,
-            });
-            if (200 == _?.status && _?.data?.success == _._)
-              return (
-                (this.m_userData[_].opened = _),
-                (this.m_strLastDoorOpenKey = "door_" + (_ ? _ : _ - 1)),
-                this.GetDoorStateChangeCallback(_).Dispatch(_),
-                this.RecomputeState(),
-                _ && !_ && this.GetDoorOpenedCallback().Dispatch(_),
-                _.data
-              );
-            _ = (0, _._)(_);
-          } catch (_) {
-            _ = (0, _._)(_);
-          }
-          return (
-            this.m_mapDoorOpenPromise.delete(_),
-            console.error("OpenDoor hit error: " + _.strErrorMsg, _),
-            null
-          );
-        }
-        async LoadDoorData() {
-          return this.m_bLoadedDuringInit
-            ? this.m_userData
-            : (this.m_initialLoadPromise ||
-                (this.m_initialLoadPromise = this.InternalLoadDoorData()),
-              this.m_initialLoadPromise);
-        }
-        async InternalLoadDoorData() {
-          const _ = _._.STORE_BASE_URL + "saleaction/ajaxgetopendoor";
-          let _ = null;
-          try {
-            const _ = await _().get(_, {
-              withCredentials: !0,
-            });
-            if (200 == _.status && _.data?.doordata) {
-              (this.m_userData = _.data.doordata),
-                (this.m_bLoadedDuringInit = !0);
-              for (let _ = 0; _ < 7; ++_)
-                this.GetDoorStateChangeCallback(_).Dispatch(
-                  this.m_userData[_].opened,
-                );
-              return (
-                this.GetDoorStateInitializedChangeCallback().Dispatch(
-                  this.m_bLoadedDuringInit,
-                ),
-                this.RecomputeState(),
-                this.m_userData
-              );
-            }
-            _ = (0, _._)(_);
-          } catch (_) {
-            _ = (0, _._)(_);
-          }
-          return (
-            console.error(
-              "CDoorStore.LoadDoorData failed: " + _?.strErrorMsg,
-              _,
-            ),
-            null
-          );
-        }
-        async CloseAllDoors(_) {
-          let _ = _._.STORE_BASE_URL + "saleaction/ajaxclosealldoor";
-          const _ = new FormData();
-          __webpack_require__.append("sessionid", (0, _._)()),
-            __webpack_require__.append("clan_accountid", "" + _);
-          let _ = null;
-          try {
-            let _ = await _().post(_, _, {
-              withCredentials: !0,
-            });
-            if (200 == _.status && _?.data?.success == _._) {
-              console.log("CDoorStore - closed " + _.data.count);
-              for (let _ = 0; _ < 7; ++_)
-                (this.m_userData[_].opened = !1),
-                  this.GetDoorStateChangeCallback(_).Dispatch(
-                    this.m_userData[_].opened,
-                  );
-              return this.RecomputeState(), !0;
-            }
-            _ = (0, _._)(_);
-          } catch (_) {
-            _ = (0, _._)(_);
-          }
-          return (
-            console.error(
-              "CDoorStore.CloseAllDoors failed: " + _?.strErrorMsg,
-              _,
-            ),
-            null
-          );
-        }
-        static s_Singleton;
-        static Get() {
-          return (
-            _.s_Singleton || ((_.s_Singleton = new _()), _.s_Singleton.Init()),
-            _.s_Singleton
-          );
-        }
-        constructor() {
-          (0, _._)(this);
-        }
-        Init() {
-          (this.m_userData = (0, _._)("doorinfo", "application_config")),
-            this.m_userData &&
-              ((this.m_bLoadedDuringInit = !0), this.RecomputeState());
-        }
-      }
-      function _() {
-        return {
-          fnOpenDoor: _.Get().OpenDoor,
-        };
-      }
-      function _() {
-        const [_, _] = (0, _.useState)(_.Get().BIsInitialized());
-        return (
-          (0, _.useEffect)(() => {
-            _ || _.Get().LoadDoorData();
-          }, [_]),
-          (0, _._)(_.Get().GetDoorStateInitializedChangeCallback(), _),
-          _
-        );
-      }
-      function _(_) {
-        const _ = _(),
-          [_, _] = (0, _.useState)(_ ? _.Get().BIsDoorOpened(_) : void 0);
-        return (0, _._)(_.Get().GetDoorStateChangeCallback(_), _), _;
-      }
-      function _() {
-        const _ = _(),
-          [_, _] = (0, _.useState)(_ ? _.Get().GetLargestDoorOpenIndex() : _);
-        return (0, _._)(_.Get().GetLargestDoorIndexChange(), _), _;
-      }
-      function _() {
-        const _ = _(),
-          [_, _] = (0, _.useState)(!!_ && _.Get().BIsAnyDoorOpened());
-        return (0, _._)(_.Get().GetIsAnyDoorOpenChange(), _), _;
-      }
-      function _(_) {
-        _.Get().SetInMemoryUpdateDoorOpenUpto(_);
-      }
-      function _(_, _) {
-        _.Get().SetInMemorySpecificDoorState(_, _);
-      }
-      (0, _._)([_._], _.prototype, "m_bIsAnyDoorOpened", void 0),
-        (0, _._)([_._], _.prototype, "m_nHighestDoorOpened", void 0),
-        (0, _._)([_._], _.prototype, "BIsDoorOpened", null),
-        (0, _._)([_._], _.prototype, "OpenDoor", null);
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -756,7 +695,7 @@
       }
       var _ = __webpack_require__("chunkid");
       function _(_) {
-        const { data: _ } = (0, _._)(
+        const { data: _, isPending: _ } = (0, _._)(
           _
             ? {
                 appid: _,
@@ -765,7 +704,7 @@
         );
         return _.useMemo(() => {
           if (!_) return [];
-          if (!_) return;
+          if (!_) return _ ? void 0 : [];
           const _ = [],
             _ = new Set(),
             _ = [
@@ -777,14 +716,14 @@
             for (const _ of _)
               _.has(_) ||
                 (_.add(_),
-                __webpack_require__.push({
+                _.push({
                   appid: _,
                   name: "",
                   clan_account_id: _,
                   type: _,
                 }));
           return _;
-        }, [_, _]);
+        }, [_, _, _]);
       }
       function _(_) {
         const { rgCreators: _, renderCreator: _ } = _,
@@ -838,9 +777,9 @@
             bAddLinkToMemberList: _,
             bMinimalDisplay: _,
           } = _,
-          { creatorHome: _ } = (0, _._)(_.clan_account_id),
+          { creatorHome: _, isFetching: _ } = (0, _._)(_.clan_account_id),
           [_] = (0, _._)();
-        return _ || !_
+        return _ || (!_ && _)
           ? (0, _.jsx)("div", {
               className: _.DevSummaryWidgetCtn,
               children: (0, _.jsx)(_._, {
@@ -849,30 +788,32 @@
                 position: "center",
               }),
             })
-          : (0, _.jsx)(_._, {
-              children: (0, _.jsx)(_, {
-                strURL: _.GetCreatorHomeURL(_.type),
-                strName: _.GetName(),
-                strAvatarURL: _.GetAvatarURLFullSize(),
-                nFollowers: _.GetNumFollowers(),
-                strCreatorType: _ ? void 0 : _(_.type),
-                strTagLine: _ ? _.GetTagLine() : void 0,
-                strMemberListURL: _
-                  ? _._.COMMUNITY_BASE_URL +
-                    "gid/" +
-                    _.GetClanSteamID().ConvertTo64BitString() +
-                    "/members/"
-                  : void 0,
-                followButton: _
-                  ? void 0
-                  : (0, _.jsx)(_._, {
-                      clanAccountID: _.clan_account_id,
-                      creatorID: _,
-                    }),
-                bSmallFormat: _,
-                bMinimalDisplay: _,
-              }),
-            });
+          : _
+            ? (0, _.jsx)(_._, {
+                children: (0, _.jsx)(_, {
+                  strURL: _.GetCreatorHomeURL(_.type),
+                  strName: _.GetName(),
+                  strAvatarURL: _.GetAvatarURLFullSize(),
+                  nFollowers: _.GetNumFollowers(),
+                  strCreatorType: _ ? void 0 : _(_.type),
+                  strTagLine: _ ? _.GetTagLine() : void 0,
+                  strMemberListURL: _
+                    ? _._.COMMUNITY_BASE_URL +
+                      "gid/" +
+                      _.GetClanSteamID().ConvertTo64BitString() +
+                      "/members/"
+                    : void 0,
+                  followButton: _
+                    ? void 0
+                    : (0, _.jsx)(_._, {
+                        clanAccountID: _.clan_account_id,
+                        creatorID: _,
+                      }),
+                  bSmallFormat: _,
+                  bMinimalDisplay: _,
+                }),
+              })
+            : null;
       }
       function _(_) {
         const { appid: _, bSmallFormat: _ } = _,
@@ -900,8 +841,10 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1058,6 +1001,14 @@
       }
       function _() {
         return (0, _._)(() => _.Get().BIsConnected());
+      }
+      function _() {
+        const _ = (0, _._)(() => _.Get().GetEventModelJson());
+        return _.useMemo(() => {
+          if (!_) return;
+          const _ = _._.FromJSON(_);
+          return (_.rtime32_last_modified = Math.floor(Date.now() / 1e3)), _;
+        }, [_]);
       }
       function _(_) {
         const _ = (0, _._)(() => _.Get().GetJumpToSectionID());

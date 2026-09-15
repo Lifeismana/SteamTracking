@@ -5629,236 +5629,206 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      const _ = new (class {
-        async DeleteForumTopic(_, _, _, _, _) {
-          let _ =
-            _._.COMMUNITY_BASE_URL +
-            "forum/" +
-            _.GetAccountID() +
-            "/" +
-            _ +
-            "/deletetopic/";
-          null != _ && "" != _ && (_ += _ + "/");
-          const _ = new FormData();
-          _.append("sessionid", (0, _._)()), _.append("gidforumtopic", _);
-          let _ = await _().post(_, _, {
-            withCredentials: !0,
-            cancelToken: _.token,
-          });
-          if (_.data.success != _._) throw _.data;
-          return _.data;
-        }
-      })();
-      class _ extends _.Component {
-        static m_uniqueError = 0;
-        m_forumTopicGID;
-        m_clanSteamID;
-        m_cancelSignal = _().CancelToken.source();
-        constructor(_) {
-          super(_),
-            (this.state = {
-              dialogState: this.props.bNoConfirmationNeeded
-                ? "waiting"
-                : "confirmation",
-              bDeleteCommentThread: !1,
-            });
-        }
-        componentDidMount() {
-          this.props.bNoConfirmationNeeded && this.OnDelete();
-        }
-        OnDeleteEventSuccessCallback() {
-          this.props.partnerEventStore.ResetModel(),
-            this.state.bDeleteCommentThread
-              ? _.DeleteForumTopic(
-                  this.m_clanSteamID,
-                  "Event",
-                  void 0,
-                  this.m_forumTopicGID,
-                  this.m_cancelSignal,
+        _ = __webpack_require__("chunkid");
+      function _() {
+        return (0, _._)({
+          mutationFn: (_) =>
+            (async function (_) {
+              const {
+                clanAccountID: _,
+                forumType: _,
+                forumGID: _,
+                forumTopicGID: _,
+                signal: _,
+              } = _;
+              let _ =
+                _._.COMMUNITY_BASE_URL +
+                "forum/" +
+                _ +
+                "/" +
+                _ +
+                "/deletetopic/";
+              null != _ && "" != _ && (_ += _ + "/");
+              const _ = new FormData();
+              _.append("sessionid", (0, _._)()), _.append("gidforumtopic", _);
+              const _ = await fetch(_, {
+                method: "POST",
+                body: _,
+                credentials: "include",
+                signal: _,
+              });
+              if (!_._) throw new Error(`${_} answered ${_.status}`);
+              const _ = await _.json();
+              if (_.success != _._) throw _;
+              return _;
+            })(_),
+        });
+      }
+      let _ = 0;
+      function _(_) {
+        const {
+            closeModal: _,
+            eventModel: _,
+            onDeleteSuccessAndCloseDialog: _,
+            bNoConfirmationNeeded: _,
+            partnerEventStore: _,
+          } = _,
+          [_, _] = (0, _.useState)(_ ? "waiting" : "confirmation"),
+          [_, _] = (0, _.useState)({}),
+          [_, _] = (0, _.useState)(!1),
+          _ = (0, _.useRef)(void 0),
+          _ = (0, _.useMemo)(() => new AbortController(), []);
+        _.useEffect(() => () => _.abort(), [_]);
+        const { mutate: _ } = _(),
+          _ = (0, _.useCallback)(() => {
+            _.ResetModel();
+            const _ = _.current?.forumTopicGID;
+            _ && _ && _.current
+              ? _(
+                  {
+                    clanAccountID: _.current.clanAccountID,
+                    forumType: "Event",
+                    forumTopicGID: _,
+                    signal: _.signal,
+                  },
+                  {
+                    onSuccess: () => _("success"),
+                    onError: (_) => {
+                      _((0, _._)(_)), _("failed_thread_delete");
+                    },
+                  },
                 )
-                  .then(this.OnDeleteForumTopicSuccessCallback)
-                  .catch(this.OnDeleteForumTopicFailureCallback)
-              : this.setState({
-                  dialogState: "success",
-                });
-        }
-        OnDeleteForumTopicSuccessCallback() {
-          this.setState({
-            dialogState: "success",
-          });
-        }
-        componentWillUnmount() {
-          this.m_cancelSignal.cancel("component unmounted");
-        }
-        OnDeleteEventFailureCallback(_) {
-          this.setState({
-            dialogState: "error",
-            ...(0, _._)(_),
-          });
-        }
-        OnDeleteForumTopicFailureCallback(_) {
-          this.setState({
-            dialogState: "failed_thread_delete",
-            ...(0, _._)(_),
-          });
-        }
-        SetToWaiting() {
-          "waiting" != this.state.dialogState &&
-            this.setState({
-              dialogState: "waiting",
-            });
-        }
-        OnDelete() {
-          const { eventModel: _, partnerEventStore: _ } = this.props;
-          let _ = _.clanSteamID,
-            _ = _.GID,
-            _ = _.AnnouncementGID;
-          (this.m_forumTopicGID = _.forumTopicGID),
-            (this.m_clanSteamID = _),
-            !this.props.eventModel.bOldAnnouncement &&
-            _ &&
-            "0" != _ &&
-            _ != _.kFb
-              ? (this.SetToWaiting(),
-                _.DeleteClanEvent(_, _)
-                  .then(this.OnDeleteEventSuccessCallback)
-                  .catch(this.OnDeleteEventFailureCallback))
-              : this.props.eventModel.bOldAnnouncement
-                ? (this.SetToWaiting(),
-                  _.DeleteOldAnnouncement(_, _)
-                    .then(this.OnDeleteEventSuccessCallback)
-                    .catch(this.OnDeleteEventFailureCallback))
-                : (_.ResetModel(),
-                  this.setState({
-                    dialogState: "success",
-                  }));
-        }
-        OnChangeDeleteForum() {
-          this.setState({
-            bDeleteCommentThread: !this.state.bDeleteCommentThread,
-          });
-        }
-        render() {
-          let _ = this.props.eventModel,
-            _ = this.props.closeModal,
-            _ = "",
-            _ = new Array();
-          switch (this.state.dialogState) {
-            case "confirmation":
-              let _ = _.GetNameWithFallback((0, _.sfN)(_._.LANGUAGE)),
-                _ = _.BIsVisibleEvent()
-                  ? "#EventDisplay_AreYouSure_Visible"
-                  : "#EventDisplay_AreYouSure";
-              (_ = (0, _._)(_, _)),
-                (_ = this.OnDelete),
-                _.BHasForumTopicGID() &&
-                  _.push(
-                    (0, _.jsxs)(
-                      "div",
-                      {
-                        className: _().Padding,
-                        children: [
-                          (0, _.jsx)("input", {
-                            type: "checkbox",
-                            _: "del_cmt_post",
-                            name: "del_cmt_post",
-                            defaultChecked: this.state.bDeleteCommentThread,
-                            onChange: this.OnChangeDeleteForum,
-                          }),
-                          (0, _.jsx)("label", {
-                            htmlFor: "del_cmt_post",
-                            children: (0, _._)(
-                              "#EventDisplay_DeleteEvent_Comment",
-                            ),
-                          }),
-                        ],
-                      },
-                      "WantToDeleteCmtThread",
-                    ),
-                  );
-              break;
-            case "waiting":
-              (_ = (0, _._)("#EventDisplay_DeleteEvent_InProgress")),
-                _.push((0, _.jsx)(_._, {}, "throbber"));
-              break;
-            case "error":
-              (_ = (0, _._)("#EventDisplay_DeleteEvent_Error")),
+              : _("success");
+          }, [_, _, _, _]),
+          _ = (0, _.useCallback)((_) => {
+            _((0, _._)(_)), _("error");
+          }, []),
+          _ = (0, _.useCallback)(() => {
+            const _ = _.clanSteamID,
+              _ = _.GID,
+              _ = _.AnnouncementGID;
+            (_.current = {
+              clanAccountID: _.GetAccountID(),
+              forumTopicGID: _.forumTopicGID,
+            }),
+              !_.bOldAnnouncement && _ && "0" != _ && _ != _.kFb
+                ? (_("waiting"), _.DeleteClanEvent(_, _).then(_).catch(_))
+                : _.bOldAnnouncement && _
+                  ? (_("waiting"),
+                    _.DeleteOldAnnouncement(_, _).then(_).catch(_))
+                  : (_.ResetModel(), _("success"));
+          }, [_, _, _, _]),
+          _ = (0, _.useRef)(!1);
+        _.useEffect(() => {
+          _ && !_.current && ((_.current = !0), _());
+        }, [_, _]);
+        let _ = _,
+          _ = "";
+        const _ = new Array();
+        switch (_) {
+          case "confirmation":
+            const _ = __webpack_require__.GetNameWithFallback(
+                (0, _.sfN)(_._.LANGUAGE),
+              ),
+              _ = __webpack_require__.BIsVisibleEvent()
+                ? "#EventDisplay_AreYouSure_Visible"
+                : "#EventDisplay_AreYouSure";
+            (_ = (0, _._)(_, _ ?? "")),
+              (_ = _),
+              __webpack_require__.BHasForumTopicGID() &&
                 _.push(
-                  (0, _.jsx)(
+                  (0, _.jsxs)(
                     "div",
                     {
-                      className: _().ErrorStyles,
-                      children: this.state.strErrorMsg,
+                      className: _().Padding,
+                      children: [
+                        (0, _.jsx)("input", {
+                          type: "checkbox",
+                          _: "del_cmt_post",
+                          name: "del_cmt_post",
+                          defaultChecked: _,
+                          onChange: () => _(!_),
+                        }),
+                        (0, _.jsx)("label", {
+                          htmlFor: "del_cmt_post",
+                          children: (0, _._)(
+                            "#EventDisplay_DeleteEvent_Comment",
+                          ),
+                        }),
+                      ],
                     },
-                    "deleteerror_" + ++_.m_uniqueError,
+                    "WantToDeleteCmtThread",
                   ),
                 );
-              break;
-            case "failed_thread_delete":
-              (_ = (0, _._)("#EventDisplay_DeleteEvent_ForumTopicError")),
-                _.push(
-                  (0, _.jsx)(
-                    "div",
-                    {
-                      className: _().ErrorStyles,
-                      children: this.state.strErrorMsg,
-                    },
-                    "deleteerror_" + ++_.m_uniqueError,
-                  ),
+            break;
+          case "waiting":
+            (_ = (0, _._)("#EventDisplay_DeleteEvent_InProgress")),
+              _.push((0, _.jsx)(_._, {}, "throbber"));
+            break;
+          case "error":
+            (_ = (0, _._)("#EventDisplay_DeleteEvent_Error")),
+              _.push(
+                (0, _.jsx)(
+                  "div",
+                  {
+                    className: _().ErrorStyles,
+                    children: _.strErrorMsg,
+                  },
+                  "deleteerror_" + ++_,
                 ),
-                this.props.onDeleteSuccessAndCloseDialog &&
-                  (_ = () => {
-                    this.props.onDeleteSuccessAndCloseDialog(),
-                      this.props.closeModal();
-                  });
-              break;
-            case "success":
-              (_ = (0, _._)("#EventDisplay_DeleteEvent_Success")),
-                this.props.onDeleteSuccessAndCloseDialog &&
-                  (_ = () => {
-                    this.props.onDeleteSuccessAndCloseDialog(),
-                      this.props.closeModal();
-                  });
-          }
-          return (0, _.jsx)(_._, {
-            strTitle: (0, _._)("#EventDisplay_DeleteEvent"),
-            strDescription: _,
-            onCancel: this.props.closeModal,
-            onOK: _,
-            bAlertDialog: "confirmation" != this.state.dialogState,
-            bOKDisabled: "waiting" == this.state.dialogState,
-            bDestructiveWarning: "error" == this.state.dialogState,
-            children: _,
-          });
+              );
+            break;
+          case "failed_thread_delete":
+            (_ = (0, _._)("#EventDisplay_DeleteEvent_ForumTopicError")),
+              _.push(
+                (0, _.jsx)(
+                  "div",
+                  {
+                    className: _().ErrorStyles,
+                    children: _.strErrorMsg,
+                  },
+                  "deleteerror_" + ++_,
+                ),
+              ),
+              _ &&
+                (_ = () => {
+                  _?.(), _?.();
+                });
+            break;
+          case "success":
+            (_ = (0, _._)("#EventDisplay_DeleteEvent_Success")),
+              _ &&
+                (_ = () => {
+                  _?.(), _?.();
+                });
         }
+        return (0, _.jsx)(_._, {
+          strTitle: (0, _._)("#EventDisplay_DeleteEvent"),
+          strDescription: _,
+          onCancel: _,
+          onOK: _,
+          bAlertDialog: "confirmation" != _,
+          bOKDisabled: "waiting" == _,
+          bDestructiveWarning: "error" == _,
+          children: _,
+        });
       }
-      (0, _._)([_._], _.prototype, "OnDeleteEventSuccessCallback", null),
-        (0, _._)([_._], _.prototype, "OnDeleteForumTopicSuccessCallback", null),
-        (0, _._)([_._], _.prototype, "OnDeleteEventFailureCallback", null),
-        (0, _._)([_._], _.prototype, "OnDeleteForumTopicFailureCallback", null),
-        (0, _._)([_._], _.prototype, "SetToWaiting", null),
-        (0, _._)([_._], _.prototype, "OnDelete", null),
-        (0, _._)([_._], _.prototype, "OnChangeDeleteForum", null);
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -5913,7 +5883,7 @@
               children: [
                 (0, _.jsx)("span", {
                   className: _().DisplayAdminPanel_Title,
-                  children: (0, _._)("#EventDisplay_Admin_Title"),
+                  children: _._.Localize("#EventDisplay_Admin_Title"),
                 }),
                 (0, _.jsxs)("div", {
                   className: (0, _._)(
@@ -5932,14 +5902,17 @@
                       route: _._.k_eCommunityEdit,
                       className: (0, _._)(_().Button, _().AdminButton),
                       children: _
-                        ? (0, _._)("#EventEditor_Edit_Page")
-                        : (0, _._)("#EventEditor_Edit"),
+                        ? _._.Localize("#EventEditor_Edit_Page")
+                        : _._.Localize("#EventEditor_Edit"),
                     }),
-                    Boolean(_) &&
+                    _ &&
                       (0, _.jsx)("span", {
                         className: _().Button + " " + _().AdminButton,
+                        role: "button",
+                        tabIndex: 0,
                         onClick: _,
-                        children: (0, _._)("#EventDisplay_DeleteEvent"),
+                        onKeyDown: _(_),
+                        children: _._.Localize("#EventDisplay_DeleteEvent"),
                       }),
                     !_ &&
                       (0, _.jsx)(_.Fragment, {
@@ -5947,7 +5920,7 @@
                           eventModel: _,
                           route: _._.k_eCommunityPublish,
                           className: (0, _._)(_().Button, _().AdminButton),
-                          children: (0, _._)(
+                          children: _._.Localize(
                             _
                               ? "#EventEditor_Publish_VisibleNow"
                               : "#Button_Publish",
@@ -5958,7 +5931,7 @@
                       eventModel: _,
                       route: _._.k_eCommunityAdminPage,
                       className: (0, _._)(_().Button, _().AdminButton),
-                      children: (0, _._)("#EventDisplay_Events"),
+                      children: _._.Localize("#EventDisplay_Events"),
                     }),
                     _,
                     Boolean(_ && _ && !_) &&
@@ -5966,7 +5939,7 @@
                         eventModel: _,
                         route: _._.k_eStoreSalePage,
                         className: (0, _._)(_().Button, _().AdminButton),
-                        children: (0, _._)("#EventDisplay_SalesPage"),
+                        children: _._.Localize("#EventDisplay_SalesPage"),
                       }),
                     Boolean(_ && _ && _) &&
                       (0, _.jsx)("a", {
@@ -5977,12 +5950,13 @@
                           "&clanid=" +
                           _,
                         target: _._.IN_CLIENT ? "" : "_blank",
+                        rel: "noreferrer",
                         className: (0, _._)(
                           _().Button,
                           _().AdminButton,
                           _().ValveOnlyBackground,
                         ),
-                        children: (0, _._)("#EventDisplay_StatsPage"),
+                        children: _._.Localize("#EventDisplay_StatsPage"),
                       }),
                     Boolean(_ && _ && _ && !_) &&
                       (0, _.jsx)("a", {
@@ -5993,12 +5967,13 @@
                           "&saleclanaccountid=" +
                           _,
                         target: _._.IN_CLIENT ? "" : "_blank",
+                        rel: "noreferrer",
                         className: (0, _._)(
                           _().Button,
                           _().AdminButton,
                           _().ValveOnlyBackground,
                         ),
-                        children: (0, _._)(
+                        children: _._.Localize(
                           "#EventDisplay_InvitationPlannerPage",
                         ),
                       }),
@@ -6007,12 +5982,13 @@
                       (0, _.jsx)("a", {
                         href: `${_._.PARTNER_BASE_URL}admin/store/contenthub/categories?edit=${_.GetContentHubCategory()}`,
                         target: _._.IN_CLIENT ? "" : "_blank",
+                        rel: "noreferrer",
                         className: (0, _._)(
                           _().Button,
                           _().AdminButton,
                           _().ValveOnlyBackground,
                         ),
-                        children: (0, _._)("#EventDisplay_CategoryEditor"),
+                        children: _._.Localize("#EventDisplay_CategoryEditor"),
                       }),
                     Boolean(_ && (_ || (_ && !_))) &&
                       (0, _.jsx)(_._, {
@@ -6021,7 +5997,7 @@
                           ? _._.k_eCommunityPreviewSale
                           : _._.k_eCommunityView,
                         className: (0, _._)(_().Button, _().AdminButton),
-                        children: (0, _._)(
+                        children: _._.Localize(
                           _
                             ? "#EventDisplay_PreviewOnCommunity"
                             : "#EventDisplay_ViewOnCommunity",
@@ -6032,15 +6008,18 @@
                         eventModel: _,
                         route: _._.k_eStoreView,
                         className: (0, _._)(_().Button, _().AdminButton),
-                        children: (0, _._)("#EventDisplay_ViewOnStore"),
+                        children: _._.Localize("#EventDisplay_ViewOnStore"),
                       }),
                     _,
                     _ &&
                       (0, _.jsx)("div", {
                         className: _().DisplayAdminPanelClose,
+                        role: "button",
+                        tabIndex: 0,
                         onClick: () => _(!1),
+                        onKeyDown: _(() => _(!1)),
                         children: (0, _.jsx)(_._, {
-                          toolTipContent: (0, _._)(
+                          toolTipContent: _._.Localize(
                             "#EventDisplay_Admin_Close_ttip",
                           ),
                           children: (0, _.jsx)(_._, {}),
@@ -6050,9 +6029,12 @@
                       _ &&
                       (0, _.jsx)("div", {
                         className: _().DisplayAdminPanelClose,
+                        role: "button",
+                        tabIndex: 0,
                         onClick: () => _(!0),
+                        onKeyDown: _(() => _(!0)),
                         children: (0, _.jsx)(_._, {
-                          toolTipContent: (0, _._)(
+                          toolTipContent: _._.Localize(
                             "#EventDisplay_Admin_Reopen_ttip",
                           ),
                           children: (0, _.jsx)(_.i3G, {
@@ -6072,9 +6054,17 @@
         });
       }
       function _(_) {
+        return (_) => {
+          ("Enter" !== _.key && " " !== _.key) || (_.preventDefault(), _(_));
+        };
+      }
+      function _(_) {
         return Boolean(_?.support_user && _?.valve_admin);
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -6100,54 +6090,56 @@
       }
       const _ = "Answered as: ";
       function _(_) {
+        return "string" == typeof _ ? _ : "";
+      }
+      function _(_) {
         const { eventModel: _ } = _,
           [_, _] = (0, _.useState)(!1),
+          _ = (0, _._)(),
           _ = (0, _._)(),
           _ = (0, _._)();
         if (
           ((0, _.useEffect)(() => {
-            _._.Get()
-              .LoadDoorData()
-              .then(() => _(!0));
-          }, []),
+            (0, _._)(_).then(() => _(!0));
+          }, [_]),
           !_)
         )
           return null;
         const _ = _.GetSaleSectionsByType("quiz"),
+          _ = _.length > 0 ? _[0].quiz : void 0,
+          _ = _?.answer_categories ?? [],
           _ = [],
-          _ = _?.length > 0 ? _[0].unique_id : void 0,
+          _ = _.length > 0 ? _[0].unique_id : void 0,
           _ =
-            1 == _?.length &&
-            ("scenario" == _[0].quiz.quiz_type ||
-              "branching" == _[0].quiz.quiz_type) &&
-            _[0].quiz.answer_categories?.length > 0;
+            1 == _.length &&
+            ("scenario" == _?.quiz_type || "branching" == _?.quiz_type) &&
+            _.length > 0;
         if (_)
           _.push({
             label: "State: Reset the Quiz",
             data: -1,
           }),
             _.push(
-              ..._[0].quiz.answer_categories.map((_) => ({
+              ..._.map((_) => ({
                 label: _ + _.category_name,
-                data: _.door_index,
+                data: _.door_index ?? 0,
               })),
             ),
             _.push(
-              ..._[0].quiz.answer_categories.map((_) => ({
+              ..._.map((_) => ({
                 label: "Rewarded as: " + _.category_name,
-                data: _.door_index,
+                data: _.door_index ?? 0,
               })),
             );
-        else {
-          const _ = _._.Get().GetMaxDoor();
-          for (let _ = -1; _ <= _; ++_)
+        else
+          for (let _ = -1; _ <= _._; ++_)
             _.push({
               label: "Doors Opened " + (_ + 1),
               data: _,
             });
-        }
         const _ = _.GetSaleSectionsByType("rewards"),
-          _ = _?.length > 0 ? _[0] : null;
+          _ = _.length > 0 ? _[0] : void 0,
+          _ = _?.rewards?.reward_items ?? [];
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)("a", {
@@ -6158,9 +6150,9 @@
                     strTitle: (0, _._)("#Dialog_AreYouSure"),
                     strDescription:
                       "Reload page after you hit OK; will not grant virtual reward items a second itme",
-                    onOK: () => _._.Get().CloseAllDoors(_._.CLANACCOUNTID),
+                    onOK: () => _(_._.CLANACCOUNTID),
                   }),
-                  (0, _._)(_),
+                  (0, _._)(_) ?? window,
                 );
               },
               children: "Reset All Doors",
@@ -6174,57 +6166,58 @@
                 const _ = new Array();
                 if (_)
                   (0, _._)(() => {
-                    if (((0, _._)(-1), (0, _._)(_, _), -1 != _.data)) {
-                      const _ = _[0].quiz.answer_categories.find(
-                        (_) => _.door_index == _.data,
-                      );
+                    if (((0, _._)(_, -1), (0, _._)(_, _), -1 != _.data)) {
+                      const _ = _.find((_) => _.door_index == _.data),
+                        _ = _?.category_id;
                       _ &&
-                        _[0].quiz.questions
-                          .filter((_) => _.answers?.length > 0)
+                        void 0 !== _ &&
+                        (_?.questions ?? [])
+                          .filter((_) => (_.answers?.length ?? 0) > 0)
                           .forEach((_, _) => {
-                            let _ = _.answers.findIndex((_) =>
-                              _.category_ids?.includes(_.category_id),
+                            const _ = _.answers ?? [];
+                            let _ = __webpack_require__.findIndex((_) =>
+                              _.category_ids?.includes(_),
                             );
                             _ < 0 && (_ = 0),
-                              (0, _._)(_, _, _, _.answers[_].category_ids),
-                              (0, _._)(_, _, _, _.answers[_]);
+                              (0, _._)(_, _, _, _[_].category_ids),
+                              (0, _._)(_, _, _, _[_]);
                           }),
-                        _.label.toString().startsWith(_) ||
-                          ((0, _._)(0, !0),
-                          (0, _._)(_.data, !0),
+                        _(_.label).startsWith(_) ||
+                          ((0, _._)(_, 0, !0),
+                          (0, _._)(_, _.data, !0),
                           _.push(0),
                           _.push(_.data));
                     }
                   });
                 else {
                   for (let _ = 0; _ <= _.data; ++_) _.push(_);
-                  (0, _._)(_.data);
+                  (0, _._)(_, _.data);
                 }
+                const _ = _[0]?.appid;
                 if (
                   _ &&
-                  _.rewards?.reward_items?.length > 0 &&
+                  void 0 !== _ &&
                   _.data > -1 &&
-                  !_.label.toString().startsWith(_)
+                  !_(_.label).startsWith(_)
                 ) {
                   const _ = _.map((_) =>
                       (function (_, _) {
                         if (_ && "rewards" == _.section_type) {
-                          const _ = _.rewards.reward_items?.filter(
+                          const _ = _.rewards?.reward_items?.filter(
                             (_) => _.item_bucket == _,
                           );
-                          if (_?.length > 0)
+                          if (_ && _.length > 0)
                             return __webpack_require__.map((_) => ({
                               appid: _.appid,
                               item_type: _.community_item_type,
                               amount: "1",
                             }));
                         }
-                        return null;
+                        return [];
                       })(_, _),
                     ).filter(Boolean),
                     _ = new Array();
-                  _.forEach((_) => __webpack_require__.push(..._)),
-                    (0, _._)(_, _.rewards?.reward_items[0].appid, _);
+                  _.forEach((_) => _.push(..._)), (0, _._)(_, _, _);
                 }
               },
             }),
@@ -6245,8 +6238,8 @@
           _ = (0, _._)(() =>
             (function (_) {
               let _;
-              _?.BHasSaleEnabled() &&
-                (_.GetSaleSectionCount() > 0 &&
+              if (_?.BHasSaleEnabled()) {
+                _.GetSaleSectionCount() > 0 &&
                   _.GetSaleSections().forEach((_) => {
                     (0, _._)(_.section_type) &&
                       !(0, _._)(_) &&
@@ -6255,10 +6248,10 @@
                           (void 0 === _ || _ < _.visibility_index) &&
                           (_ = _.visibility_index);
                       });
-                  }),
-                _.jsondata.sale_num_headers > 1 &&
-                  (void 0 === _ || _ < _.jsondata.sale_num_headers) &&
-                  (_ = _.jsondata.sale_num_headers));
+                  });
+                const _ = _.jsondata.sale_num_headers ?? 0;
+                _ > 1 && (void 0 === _ || _ < _) && (_ = _);
+              }
               return _;
             })(_),
           ),
@@ -6292,24 +6285,26 @@
           additionalButtons: _,
           onDeleteRequest: Boolean(_ && "community" == (0, _._)())
             ? (_) => {
-                (0, _._)(
-                  (0, _.jsx)(_, {
-                    eventModel: _,
-                    onDeleteSuccessAndCloseDialog: () => _(!0),
-                    partnerEventStore: _,
-                  }),
-                  (0, _._)(_),
-                );
+                _ &&
+                  (0, _._)(
+                    (0, _.jsx)(_, {
+                      eventModel: _,
+                      onDeleteSuccessAndCloseDialog: () => _(!0),
+                      partnerEventStore: _,
+                    }),
+                    (0, _._)(_) ?? window,
+                  );
               }
             : void 0,
           saleDayControl:
-            Boolean(void 0 !== _ && _.length > 0) &&
+            void 0 !== _ &&
+            _.length > 0 &&
             (0, _.jsx)(_._, {
               strDropDownClassName: _.DropDownScroll,
               rgOptions: _,
               selectedOption: Math.min(_, _),
               onChange: (_) => {
-                _(_.data), _(_.data);
+                _(_.data), _?.(_.data);
               },
               bDisableMouseOverlay: !0,
               contextMenuPositionOptions: {
@@ -6317,7 +6312,8 @@
               },
             }),
           promotionPlanLinks:
-            Boolean(_ && _(_) && _) &&
+            Boolean(_ && _(_)) &&
+            void 0 !== _ &&
             (0, _.jsx)(_, {
               clanAccountID: _,
               gidClanEvent: _,
@@ -6345,7 +6341,9 @@
               ),
             [_],
           );
-        return _?.badge_progress?.levels?.length > 0 && _._.is_support
+        return _ &&
+          (_.badge_progress?.levels?.length ?? 0) > 0 &&
+          _._.is_support
           ? (0, _.jsx)(_, {
               section: _,
             })
@@ -6354,8 +6352,8 @@
       function _(_) {
         const { section: _ } = _,
           _ = (0, _._)(_.badge_progress?.event_badgeid),
-          _ = (0, _._)(() => _.badge_progress.levels),
-          _ = Math.max(..._.map((_) => _.level));
+          _ = (0, _._)(() => _.badge_progress?.levels),
+          _ = Math.max(...(_ ?? []).map((_) => _.level ?? 0));
         if (!_) return null;
         const _ = [];
         for (let _ = 0; _ <= _; ++_)
@@ -6388,6 +6386,7 @@
                   {
                     href: `${_._.PARTNER_BASE_URL}promotion/planning/edit/${_}`,
                     target: _._.IN_CLIENT ? "" : "_blank",
+                    rel: "noreferrer",
                     className: (0, _._)(
                       _.Button,
                       _.AdminButton,

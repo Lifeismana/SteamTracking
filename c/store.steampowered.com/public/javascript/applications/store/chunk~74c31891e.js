@@ -794,7 +794,7 @@
       function _(_) {
         const { nDoorIndex: _, children: _ } = _,
           _ = (0, _._)(_),
-          { fnOpenDoor: _ } = (0, _._)(),
+          _ = (0, _._)(),
           [_, _] = _.useState(!1),
           [_, _] = _.useState(!1),
           { elDialogElement: _, fnShowLogonDialog: _ } = (0, _._)();
@@ -806,7 +806,9 @@
                 _ ||
                   (_._.logged_in
                     ? (_(!0),
-                      _(_, !0, null, !1)
+                      _({
+                        iDoorIndex: _,
+                      })
                         .then((_) => {
                           _ || _(!0), _(!1);
                         })

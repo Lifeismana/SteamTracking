@@ -7358,6 +7358,7 @@
           "Millennium internal",
           "millenium",
           "millennium",
+          "decky://",
           "Refused unauthorized RPC command",
         ];
       function _() {
@@ -11152,6 +11153,11 @@
                     _: 49,
                     _: _.readBool,
                     _: _.writeBool,
+                  },
+                  rumble_intensity: {
+                    _: 50,
+                    _: _.readInt32,
+                    _: _.writeInt32,
                   },
                 },
               }),

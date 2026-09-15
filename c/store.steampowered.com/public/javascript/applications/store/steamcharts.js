@@ -1294,8 +1294,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         Keyify = (_) =>
@@ -1389,6 +1387,7 @@
           : null;
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1741,6 +1740,7 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
@@ -4956,8 +4956,46 @@
           ],
         });
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { nSectionID: _, children: _ } = _,
+          [_, _] = _.useState(!1),
+          [_, _] = _.useState(!1);
+        _.useEffect(() => {
+          _._.Get().SetMouseOverSection(_, _);
+        }, [_, _]);
+        const _ = (0, _._)(() => _._.Get().GetMouseOverSectionID()),
+          _ = _ && _ == _,
+          _ = _.useRef(null);
+        return (
+          (0, _._)((_) => _ == _ && (_.current?.scrollIntoView(), _(!0), !0)),
+          (0, _.jsxs)("div", {
+            ref: _,
+            className: (0, _._)({
+              [_().SaleSectionLivePreview]: !0,
+              [_().Hover]: !!_,
+              [_().JumpedTo]: !!_,
+            }),
+            onAnimationEnd: () => _(!1),
+            onMouseEnter: () => _(!0),
+            onMouseLeave: () => _(!1),
+            children: [
+              _ &&
+                (0, _.jsx)(_._, {
+                  toolTipContent: (0, _._)("#Sale_SaleEditor_JumpTo_ttip"),
+                  direction: "top",
+                  children: (0, _.jsx)("button", {
+                    className: _().JumpToButton,
+                    onClick: () => _._.Get().JumpToSection(_),
+                    children: (0, _.jsx)(_.ffu, {}),
+                  }),
+                }),
+              _,
+            ],
+          })
+        );
+      }
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         const {
             promotionName: _,
@@ -4971,7 +5009,8 @@
           [_, _] = _.useState(__webpack_require__?.GetDayIndexFromEventStart()),
           [_, _] = _.useState(null),
           _ = (0, _._)(() => _.jsondata.sale_header_disable_top_margin),
-          _ = (function (_, _) {
+          [_, _] = _.useState(void 0),
+          _ = (function (_, _, _) {
             const [_] = (0, _._)(_._, void 0);
             return _.useMemo(() => {
               const _ = _.GetSaleSectionFirstMatchByType("tabs"),
@@ -4980,10 +5019,10 @@
                 let _ = _ > 0 ? _.find((_) => _.unique_id == _) : void 0;
                 _ || (_ = _[0]);
                 const _ = _ === _[0];
-                return new _._(_, _, _);
+                return new _._(_, _, _, _.tab_tag_filter ? _ : void 0);
               }
-            }, [_, _, _]);
-          })(_, _),
+            }, [_, _, _, _]);
+          })(_, _, _),
           [_, _] = (0, _.useState)(!1);
         _.useEffect(() => {
           if (
@@ -5123,6 +5162,8 @@
                           nSaleDayIndex: _,
                           broadcastEmbedContext: _,
                           selectedTab: _,
+                          tagSelection: _,
+                          setTagSelection: _,
                         }),
                         !_ &&
                           (0, _.jsx)(_, {
@@ -5459,44 +5500,6 @@
               }),
             })
           : null;
-      }
-      function _(_) {
-        const { nSectionID: _, children: _ } = _,
-          [_, _] = _.useState(!1),
-          [_, _] = _.useState(!1);
-        _.useEffect(() => {
-          _._.Get().SetMouseOverSection(_, _);
-        }, [_, _]);
-        const _ = (0, _._)(() => _._.Get().GetMouseOverSectionID()),
-          _ = _ && _ == _,
-          _ = _.useRef(null);
-        return (
-          (0, _._)((_) => _ == _ && (_.current?.scrollIntoView(), _(!0), !0)),
-          (0, _.jsxs)("div", {
-            ref: _,
-            className: (0, _._)({
-              [_().SaleSectionLivePreview]: !0,
-              [_().Hover]: !!_,
-              [_().JumpedTo]: !!_,
-            }),
-            onAnimationEnd: () => _(!1),
-            onMouseEnter: () => _(!0),
-            onMouseLeave: () => _(!1),
-            children: [
-              _ &&
-                (0, _.jsx)(_._, {
-                  toolTipContent: (0, _._)("#Sale_SaleEditor_JumpTo_ttip"),
-                  direction: "top",
-                  children: (0, _.jsx)("button", {
-                    className: _().JumpToButton,
-                    onClick: () => _._.Get().JumpToSection(_),
-                    children: (0, _.jsx)(_.ffu, {}),
-                  }),
-                }),
-              _,
-            ],
-          })
-        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

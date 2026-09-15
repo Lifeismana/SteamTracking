@@ -985,24 +985,24 @@
     },
     46120: (e, t, r) => {
       r.d(t, {
-        OT: () => xt,
-        iO: () => Et,
-        T4: () => Nt,
-        n8: () => It,
-        hr: () => Ct,
-        IC: () => gt,
-        V4: () => Mt,
-        sR: () => pt,
-        jb: () => $t,
-        Rl: () => Xt,
-        XT: () => Yt,
-        cE: () => qt,
-        tM: () => Wt,
-        K9: () => _t,
-        bP: () => At,
-        aq: () => Bt,
-        u5: () => Gt,
-        IL: () => Ut,
+        OT: () => kt,
+        iO: () => Gt,
+        T4: () => xt,
+        n8: () => Et,
+        hr: () => Nt,
+        IC: () => Bt,
+        V4: () => wt,
+        sR: () => Mt,
+        jb: () => Xt,
+        Rl: () => Jt,
+        XT: () => Kt,
+        cE: () => Tt,
+        tM: () => Ot,
+        K9: () => bt,
+        bP: () => Dt,
+        aq: () => yt,
+        u5: () => At,
+        IL: () => Ct,
       });
       var i,
         n = r(34629),
@@ -3083,6 +3083,11 @@
                   },
                   sanctions_applied: { n: 23, c: se, r: !0, q: !0 },
                   sanctions_applied_on_dispute: { n: 24, c: se, r: !0, q: !0 },
+                  reported_content_id: {
+                    n: 25,
+                    br: m.qM.readUint64String,
+                    bw: m.gp.writeUint64String,
+                  },
                 },
               }),
             Q.sm_m
@@ -5941,6 +5946,11 @@
                     br: m.qM.readString,
                     bw: m.gp.writeString,
                   },
+                  reported_content_id: {
+                    n: 7,
+                    br: m.qM.readUint64String,
+                    bw: m.gp.writeUint64String,
+                  },
                 },
               }),
             Le.sm_m
@@ -6305,6 +6315,11 @@
                   },
                   subject_id: {
                     n: 3,
+                    br: m.qM.readUint64String,
+                    bw: m.gp.writeUint64String,
+                  },
+                  reported_content_id: {
+                    n: 4,
                     br: m.qM.readUint64String,
                     bw: m.gp.writeUint64String,
                   },
@@ -7038,16 +7053,7 @@
                     br: m.qM.readUint64String,
                     bw: m.gp.writeUint64String,
                   },
-                  report_id: {
-                    n: 2,
-                    br: m.qM.readUint64String,
-                    bw: m.gp.writeUint64String,
-                  },
-                  dispute_details: {
-                    n: 3,
-                    br: m.qM.readString,
-                    bw: m.gp.writeString,
-                  },
+                  details: { n: 2, br: m.qM.readString, bw: m.gp.writeString },
                 },
               }),
             lt.sm_m
@@ -7085,7 +7091,7 @@
           return lt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CContentModeration_ReporterDisputeModeration_Request";
+          return "CContentModeration_OwnerDisputeModeration_Request";
         }
       }
       class ut extends l.Message {
@@ -7120,10 +7126,115 @@
           return ut.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
+          return "CContentModeration_OwnerDisputeModeration_Response";
+        }
+      }
+      class mt extends l.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            mt.prototype.reported_content_id || m.Sg(mt.M()),
+            l.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            mt.sm_m ||
+              (mt.sm_m = {
+                proto: mt,
+                fields: {
+                  reported_content_id: {
+                    n: 1,
+                    br: m.qM.readUint64String,
+                    bw: m.gp.writeUint64String,
+                  },
+                  report_id: {
+                    n: 2,
+                    br: m.qM.readUint64String,
+                    bw: m.gp.writeUint64String,
+                  },
+                  dispute_details: {
+                    n: 3,
+                    br: m.qM.readString,
+                    bw: m.gp.writeString,
+                  },
+                },
+              }),
+            mt.sm_m
+          );
+        }
+        static MBF() {
+          return mt.sm_mbf || (mt.sm_mbf = m.w0(mt.M())), mt.sm_mbf;
+        }
+        toObject(e = !1) {
+          return mt.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return m.BT(mt.M(), e, t);
+        }
+        static fromObject(e) {
+          return m.Uq(mt.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (u().BinaryReader)(e),
+            r = new mt();
+          return mt.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return m.zj(mt.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (u().BinaryWriter)();
+          return mt.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          m.i0(mt.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (u().BinaryWriter)();
+          return mt.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CContentModeration_ReporterDisputeModeration_Request";
+        }
+      }
+      class dt extends l.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(), l.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return dt.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return e ? { $jspbMessageInstance: t } : {};
+        }
+        static fromObject(e) {
+          return new dt();
+        }
+        static deserializeBinary(e) {
+          let t = new (u().BinaryReader)(e),
+            r = new dt();
+          return dt.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return e;
+        }
+        serializeBinary() {
+          var e = new (u().BinaryWriter)();
+          return dt.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {}
+        serializeBase64String() {
+          var e = new (u().BinaryWriter)();
+          return dt.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
           return "CContentModeration_ReporterDisputeModeration_Response";
         }
       }
-      var mt;
+      var _t;
       !(function (e) {
         (e.ClaimBatch = function (e, t, r) {
           return e.SendMsg(
@@ -7349,16 +7460,24 @@
               { bConstMethod: !0, ePrivilege: 5 },
             );
           }),
-          (e.ReporterDisputeModeration = function (e, t, r) {
+          (e.OwnerDisputeModeration = function (e, t, r) {
             return e.SendMsg(
-              "ContentModeration.ReporterDisputeModeration#1",
+              "ContentModeration.OwnerDisputeModeration#1",
               (0, s.I8)(lt, t, r),
               ut,
               { ePrivilege: 1 },
             );
+          }),
+          (e.ReporterDisputeModeration = function (e, t, r) {
+            return e.SendMsg(
+              "ContentModeration.ReporterDisputeModeration#1",
+              (0, s.I8)(mt, t, r),
+              dt,
+              { ePrivilege: 1 },
+            );
           });
-      })(mt || (mt = {}));
-      const dt = {
+      })(_t || (_t = {}));
+      const gt = {
         [a.Vv.wY]: {
           displayNameLoc: "#SteamNotification_HelpRequest_Author",
           titleLoc: "#SteamNotification_HelpRequest_Title",
@@ -7432,13 +7551,13 @@
             `${P.TS.COMMUNITY_BASE_URL}my/reportedcontent/${e.subject_type}-${e.subject_group_id}-${e.subject_id}`,
         },
       };
-      function _t(e) {
-        if (void 0 !== e) return dt[e];
+      function bt(e) {
+        if (void 0 !== e) return gt[e];
       }
-      function gt(e) {
-        return !!_t(e);
+      function Bt(e) {
+        return !!bt(e);
       }
-      const bt = {
+      const pt = {
         [a.Vv.Rj]: {
           steamidAttribute: "inviter",
           titleLoc: "#SteamNotifications_FamilyInviteTitle",
@@ -7506,13 +7625,13 @@
             `${P.TS.STORE_BASE_URL}account/familymanagement?tab=requests`,
         },
       };
-      function Bt(e) {
-        if (void 0 !== e) return bt[e];
+      function yt(e) {
+        if (void 0 !== e) return pt[e];
       }
-      function pt(e) {
-        return !!Bt(e);
+      function Mt(e) {
+        return !!yt(e);
       }
-      const yt = [
+      const ft = [
         a.Vv.v_,
         a.Vv.pZ,
         a.Vv.K,
@@ -7525,30 +7644,30 @@
         a.Vv.js,
         a.Vv.mr,
       ];
-      function Mt(e) {
-        return null != yt.findIndex((t) => t == e);
+      function wt(e) {
+        return null != ft.findIndex((t) => t == e);
       }
-      function ft(e) {
+      function zt(e) {
         return (
           !e.hidden &&
-          (gt((t = e.notification_type)) || pt(t) || Mt(t)) &&
-          Gt(e.body_data)
+          (Bt((t = e.notification_type)) || Mt(t) || wt(t)) &&
+          At(e.body_data)
         );
         var t;
       }
-      var wt;
+      var St;
       !(function (e) {
         (e[(e.New = 0)] = "New"),
           (e[(e.Update = 1)] = "Update"),
           (e[(e.Remove = 2)] = "Remove");
-      })(wt || (wt = {}));
-      const zt = 172800,
-        St = 600,
-        Rt = new A.wd("SteamNotificationStore"),
-        jt = Rt.Debug,
-        ht = Rt.Error,
-        vt = Rt.Warning;
-      class qt {
+      })(St || (St = {}));
+      const Rt = 172800,
+        jt = 600,
+        ht = new A.wd("SteamNotificationStore"),
+        vt = ht.Debug,
+        qt = ht.Error,
+        Wt = ht.Warning;
+      class Tt {
         constructor() {
           (0, I.Gn)(this);
         }
@@ -7615,7 +7734,7 @@
         BSendToCallbackAsNew(e) {
           return (
             !e.read &&
-            !Yt(e) &&
+            !Kt(e) &&
             !this.m_rgUnreadNotificationIDs.includes(e.notification_id)
           );
         }
@@ -7651,12 +7770,12 @@
           if (-1 === r)
             return void (t
               ? this.NotifyServerNotificationsRead([e])
-              : ht(
+              : qt(
                   "Attempted to mark notification read that is not in the notification store",
                 ));
           let i = this.m_rgNotificationRollups[r];
           if (i.item.read)
-            ht("Attempted to mark notification read that is already read");
+            qt("Attempted to mark notification read that is already read");
           else if (((i.item.read = !0), i.rgunread?.length > 0)) {
             this.ReduceNewTotals(i.type, i.rgunread.length);
             let e = [];
@@ -7673,7 +7792,7 @@
             (t) => t.item.notification_id == e,
           );
           if (-1 === t)
-            return void ht(
+            return void qt(
               "Attempted to mark notification hidden that is not in the notification store",
             );
           let r = this.m_rgNotificationRollups[t];
@@ -7683,7 +7802,7 @@
             this.NotifyServerNotificationsHidden([...r.rgunread, ...r.rgread]);
         }
         ReduceNewTotals(e, t) {
-          Ht(this.m_summary, e, -t);
+          Yt(this.m_summary, e, -t);
         }
         MarkAllItemsViewed() {
           const e = s.w.Init(a.nH);
@@ -7748,17 +7867,17 @@
         }
         ApplyNotificationsUpdate(e) {
           if (
-            (jt("ApplyNotificationsUpdate", e),
+            (vt("ApplyNotificationsUpdate", e),
             !e ||
               (!e.notifications?.length &&
                 void 0 === e.pending_friend_count &&
                 void 0 === e.pending_gift_count))
           )
-            return void jt(
+            return void vt(
               "Error: ApplyNotificationsUpdate was called with no data",
             );
           if (!this.m_currentNotificationsData)
-            return void jt(
+            return void vt(
               "Error: ApplyNotificationsUpdate was called before this.m_currentNotificationsData was set",
             );
           const t = this.m_currentNotificationsData;
@@ -7823,14 +7942,14 @@
                       (e) => e == i.notification_id,
                     ) && (i.hidden = !0);
                 }
-                if (ft(i)) {
+                if (zt(i)) {
                   if (this.m_rgNotifyServerRead.length > 0) {
                     -1 !==
                       this.m_rgNotifyServerRead.findIndex(
                         (e) => e == i.notification_id,
                       ) && (i.read = !0);
                   }
-                  i.read || Ht(t, i.notification_type, 1),
+                  i.read || Yt(t, i.notification_type, 1),
                     i.viewed || r++,
                     this.AddNotificationToRollups(e, i);
                 }
@@ -7845,7 +7964,7 @@
                   t.rollup_key,
                   JSON.parse(JSON.stringify(t)),
                 ),
-                  this.m_fnOnNotificationCallback(t, wt.New);
+                  this.m_fnOnNotificationCallback(t, St.New);
               else if (this.m_rgNewRollupIDs.has(t.rollup_key)) {
                 let e = this.m_rgNewRollupIDs.get(t.rollup_key);
                 (e.item.read == t.item.read &&
@@ -7854,11 +7973,11 @@
                     t.rollup_key,
                     JSON.parse(JSON.stringify(t)),
                   ),
-                  this.m_fnOnNotificationCallback(t, wt.Update));
+                  this.m_fnOnNotificationCallback(t, St.Update));
               }
             for (const [t, r] of this.m_rgNewRollupIDs)
               -1 == e.findIndex((e) => e.rollup_key == t) &&
-                (this.m_fnOnNotificationCallback(r, wt.Remove),
+                (this.m_fnOnNotificationCallback(r, St.Remove),
                 this.m_rgNewRollupIDs.delete(t));
           }
           e.reverse(),
@@ -7875,7 +7994,7 @@
             (this.m_nUnviewed = r);
         }
         BExcludeClientTargetedNotification(e) {
-          const t = Gt(e.body_data);
+          const t = At(e.body_data);
           return (
             !!t &&
             (!(
@@ -7903,7 +8022,7 @@
           switch (i) {
             case a.Vv.v_:
               {
-                const n = kt(t);
+                const n = Pt(t);
                 if (!n) return;
                 const a =
                   "comment_" +
@@ -7923,12 +8042,12 @@
                     rgunread: t.read ? [] : [t.notification_id],
                     rgread: t.read ? [t.notification_id] : [],
                     bSendToCallbackAsNew: r,
-                    url: Ft(n),
+                    url: It(n),
                   });
                 else {
                   let i = e[s];
                   this.BReplaceRollupItem(t, i.item) &&
-                    ((i.url = Ft(n)),
+                    ((i.url = It(n)),
                     (i.item = t),
                     (i.timestamp = t.timestamp),
                     (i.bSendToCallbackAsNew = r)),
@@ -7940,21 +8059,21 @@
               }
               break;
             case a.Vv.hW:
-              const n = kt(t);
+              const n = Pt(t);
               if (n) {
                 const a = "item_" + n.appid;
                 this.AddNotificationToRollupByAppID(e, t, a, i, r, n.appid);
               }
               break;
             case a.Vv.Y9:
-              const s = kt(t)?.appid.toString();
+              const s = Pt(t)?.appid.toString();
               if (s) {
                 const n = "asyncgame_" + s;
                 this.AddNotificationToRollupByAppID(e, t, n, i, r, s);
               }
               break;
             case a.Vv.Iz:
-              const o = kt(t),
+              const o = Pt(t),
                 c = o?.report_id,
                 l = o?.subject_type,
                 u = o?.subject_group_id,
@@ -8024,7 +8143,7 @@
           }
         }
       }
-      async function Wt(e, t, r, i, n, c = !0, l = !1) {
+      async function Ot(e, t, r, i, n, c = !0, l = !1) {
         if (!t) throw new Error("Invalid steamid for GetSteamNotifications");
         const u = s.w.Init(a.GG);
         u.Body().set_language(r),
@@ -8034,7 +8153,7 @@
         const m = await a.Fn.GetSteamNotifications(e, u);
         if (m.GetEResult() !== o.R)
           throw (
-            (vt(
+            (Wt(
               `Received error from GetSteamNotifications. Result ${m.GetEResult()}. Transport ${m.Hdr().transport_error()}`,
             ),
             new Error(`Error from GetSteamNotifications: ${m.GetEResult()}`))
@@ -8043,32 +8162,32 @@
         return (
           i &&
             (d.notifications = d.notifications?.filter(
-              (e) => !$t(e.notification_type, i, n),
+              (e) => !Xt(e.notification_type, i, n),
             )),
           d
         );
       }
-      (0, n.Cg)([I.sH], qt.prototype, "m_rgNotificationRollups", void 0),
-        (0, n.Cg)([I.sH], qt.prototype, "m_summary", void 0),
-        (0, n.Cg)([I.sH], qt.prototype, "m_bLoaded", void 0),
-        (0, n.Cg)([I.sH], qt.prototype, "m_nUnviewed", void 0),
-        (0, n.Cg)([I.XI], qt.prototype, "ProcessNotifications", null);
-      const Tt = "ItemMetadata";
-      function Ot(e) {
+      (0, n.Cg)([I.sH], Tt.prototype, "m_rgNotificationRollups", void 0),
+        (0, n.Cg)([I.sH], Tt.prototype, "m_summary", void 0),
+        (0, n.Cg)([I.sH], Tt.prototype, "m_bLoaded", void 0),
+        (0, n.Cg)([I.sH], Tt.prototype, "m_nUnviewed", void 0),
+        (0, n.Cg)([I.XI], Tt.prototype, "ProcessNotifications", null);
+      const Ut = "ItemMetadata";
+      function Ft(e) {
         return [
-          `${Tt}_${e?.steamid}_${e?.appid}_${e?.contextid}_${e?.assetid}`,
+          `${Ut}_${e?.steamid}_${e?.appid}_${e?.contextid}_${e?.assetid}`,
         ];
       }
-      function Ut(e, t, r) {
-        let n = Pt(a.Vv.hW, e.body_data);
+      function Ct(e, t, r) {
+        let n = Vt(a.Vv.hW, e.body_data);
         n.steamid = t;
         let c = (0, C.I)({
-          queryKey: Ot(n),
+          queryKey: Ft(n),
           queryFn: async () =>
             (async function (e, t) {
               if (!(e && e.steamid && e.contextid && e.appid && e.assetid))
                 return (
-                  ht("Item notification missing required attributes"), null
+                  qt("Item notification missing required attributes"), null
                 );
               const r = s.w.Init(j);
               r.Body().set_steamid(e.steamid),
@@ -8080,7 +8199,7 @@
               n.add_assetids(e.assetid), r.Body().set_filters(n);
               const a = await i.GetInventoryItemsWithDescriptions(t, r);
               return a.GetEResult() !== o.R
-                ? (ht(
+                ? (qt(
                     "Request for steam item metadata did not succeed",
                     a.GetEResult(),
                   ),
@@ -8091,42 +8210,42 @@
         });
         return c.isSuccess ? c.data : null;
       }
-      function Ft(e) {
+      function It(e) {
         let t = `comment/${e.comment_type}/bounce/${e.owner_steam_id.ConvertTo64BitString()}/${e.forum_id}/?feature2=${e.topic_id}`;
         return e.last_post > 0 && (t += "&tscn=" + (e.last_post - 1)), t;
-      }
-      function Ct(e) {
-        return e.comment_type == x.Yd;
-      }
-      function It(e) {
-        return e?.bhas_friend;
       }
       function Nt(e) {
         return e.comment_type == x.Yd;
       }
       function Et(e) {
-        return Ct(e) || It(e);
+        return e?.bhas_friend;
       }
       function xt(e) {
-        return Nt(e);
+        return e.comment_type == x.Yd;
       }
       function Gt(e) {
+        return Nt(e) || Et(e);
+      }
+      function kt(e) {
+        return xt(e);
+      }
+      function At(e) {
         if (!e) return null;
         try {
           return JSON.parse(e);
         } catch (t) {
-          jt("Steam notification in invalid format:", e);
+          vt("Steam notification in invalid format:", e);
         }
         return null;
       }
-      function kt(e) {
-        return Pt(e.notification_type, e.body_data);
+      function Pt(e) {
+        return Vt(e.notification_type, e.body_data);
       }
-      function At(e) {
-        return Pt(e.type, e.item?.body_data);
+      function Dt(e) {
+        return Vt(e.type, e.item?.body_data);
       }
-      function Pt(e, t) {
-        let r = Gt(t);
+      function Vt(e, t) {
+        let r = At(t);
         if (!r) return null;
         switch (e) {
           case a.Vv.K:
@@ -8147,14 +8266,14 @@
             };
           case a.Vv.Y9:
             return !r.appid || !r.state || (r.state != G.GO && r.state != G.cf)
-              ? (jt("Async game notification invalid data", t), null)
+              ? (vt("Async game notification invalid data", t), null)
               : { appid: parseInt(r.appid), state: parseInt(r.state) };
           case a.Vv.v_:
             let i = {
               owner_steam_id: r.owner_steam_id
                 ? new N.b(r.owner_steam_id)
                 : null,
-              bclan_account: Dt(r.bclan_account),
+              bclan_account: Lt(r.bclan_account),
               title: r.title,
               comment: r.text,
               time: r.last_post,
@@ -8164,11 +8283,11 @@
               account_steam_id: r.account_id
                 ? N.b.InitFromAccountID(r.account_id)
                 : null,
-              bhas_friend: Dt(r.bhas_friend),
-              bis_forum: Dt(r.bis_forum),
+              bhas_friend: Lt(r.bhas_friend),
+              bis_forum: Lt(r.bis_forum),
               last_post: r.last_post,
-              bsubscribed: Dt(r.subscribed),
-              bis_owner: Dt(r.bis_owner),
+              bsubscribed: Lt(r.subscribed),
+              bis_owner: Lt(r.bis_owner),
             };
             return (
               r.json_data &&
@@ -8211,7 +8330,7 @@
             };
           default:
             return (
-              jt(
+              vt(
                 "GetCustomNotificationDataByType called with unexpected type:" +
                   e,
                 t,
@@ -8220,7 +8339,7 @@
             );
         }
       }
-      function Dt(e) {
+      function Lt(e) {
         if (void 0 === e) return !1;
         if ("number" == typeof e) return e > 0;
         if ("string" == typeof e)
@@ -8231,9 +8350,9 @@
             default:
               return !1;
           }
-        return jt("notification contained unexpected boolean value"), !1;
+        return vt("notification contained unexpected boolean value"), !1;
       }
-      const Vt = {
+      const $t = {
         [a.Vv.Jo]: { rollup_field: void 0, eFeature: void 0 },
         [a.Vv.yh]: { rollup_field: void 0, eFeature: void 0 },
         [a.Vv.K]: { rollup_field: "gifts", eFeature: E.uX },
@@ -8277,27 +8396,27 @@
         [a.Vv.mr]: { rollup_field: void 0, eFeature: E.ut },
         [a.Vv.Iz]: { rollup_field: void 0, eFeature: E.uX },
       };
-      function Lt(e) {
-        const t = Vt[e];
+      function Ht(e) {
+        const t = $t[e];
         return (0, $.wT)(!!t, `Missing notification type data for ${e}`), t;
       }
-      function $t(e, t, r) {
+      function Xt(e, t, r) {
         if (!t) return !1;
-        const i = Lt(e);
+        const i = Ht(e);
         return (0, H.EC)(t, i?.eFeature ?? E.JC, r);
       }
-      function Ht(e, t, r) {
+      function Yt(e, t, r) {
         (0, I.h5)(() => {
-          const i = Lt(t);
+          const i = Ht(t);
           i?.rollup_field &&
             (e[i.rollup_field] = Math.max(0, e[i.rollup_field] + r));
         });
       }
-      function Xt(e) {
-        return !e.viewed || e.viewed + St > (0, k._2)();
+      function Jt(e) {
+        return !e.viewed || e.viewed + jt > (0, k._2)();
       }
-      function Yt(e) {
-        return e.viewed && e.viewed + zt < (0, k._2)();
+      function Kt(e) {
+        return e.viewed && e.viewed + Rt < (0, k._2)();
       }
     },
   },

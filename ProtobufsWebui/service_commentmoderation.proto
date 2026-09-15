@@ -14,6 +14,7 @@ message CCommentModeration_UpdateCommentReportState_Request {
 	optional uint64 comment_thread_id = 11;
 	repeated .CCommentModeration_UpdateCommentReportState_Request_Sanction sanctions = 12;
 	optional string note = 13;
+	optional bool skip_lock = 14;
 }
 
 message CCommentModeration_UpdateCommentReportState_Request_Sanction {

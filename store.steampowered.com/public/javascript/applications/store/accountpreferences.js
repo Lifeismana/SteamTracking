@@ -3,16 +3,6 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [22634],
   {
-    43047: (e) => {
-      e.exports = {
-        narrowWidth: "500px",
-        avatarHolder: "nibodjvvrm86uCfnnAn4g",
-        avatarStatus: "_3xUpb5DWXPFNcHHIcv-9pe",
-        avatar: "_3h-QRJGxnVOIExtHD1R0f2",
-        avatarFrame: "X_mJE4BYV5StDPwZhSiAu",
-        avatarFrameImg: "_3fM0F85j3aWVzr4RJM9-eu",
-      };
-    },
     39449: (e) => {
       e.exports = {
         PopupScreenshotModal: "yloqxGhIEzvGIwbQbo6KP",
@@ -143,244 +133,374 @@
         GooglePlayStoreImg: "_273YCymOUtX4V13BJ6p2uZ",
       };
     },
+    61738: (e, t, s) => {
+      var r = {
+        "./af": 30911,
+        "./af.js": 30911,
+        "./ar": 63595,
+        "./ar-dz": 99358,
+        "./ar-dz.js": 99358,
+        "./ar-kw": 46830,
+        "./ar-kw.js": 46830,
+        "./ar-ly": 26067,
+        "./ar-ly.js": 26067,
+        "./ar-ma": 64154,
+        "./ar-ma.js": 64154,
+        "./ar-ps": 90753,
+        "./ar-ps.js": 90753,
+        "./ar-sa": 53616,
+        "./ar-sa.js": 53616,
+        "./ar-tn": 19026,
+        "./ar-tn.js": 19026,
+        "./ar.js": 63595,
+        "./az": 87043,
+        "./az.js": 87043,
+        "./be": 28437,
+        "./be.js": 28437,
+        "./bg": 29843,
+        "./bg.js": 29843,
+        "./bm": 39421,
+        "./bm.js": 39421,
+        "./bn": 41300,
+        "./bn-bd": 54487,
+        "./bn-bd.js": 54487,
+        "./bn.js": 41300,
+        "./bo": 40827,
+        "./bo.js": 40827,
+        "./br": 35120,
+        "./br.js": 35120,
+        "./bs": 41991,
+        "./bs.js": 41991,
+        "./ca": 47504,
+        "./ca.js": 47504,
+        "./cs": 98346,
+        "./cs.js": 98346,
+        "./cv": 17525,
+        "./cv.js": 17525,
+        "./cy": 80872,
+        "./cy.js": 80872,
+        "./da": 48787,
+        "./da.js": 48787,
+        "./de": 30199,
+        "./de-at": 33461,
+        "./de-at.js": 33461,
+        "./de-ch": 97995,
+        "./de-ch.js": 97995,
+        "./de.js": 30199,
+        "./dv": 14682,
+        "./dv.js": 14682,
+        "./el": 52549,
+        "./el.js": 52549,
+        "./en-au": 5706,
+        "./en-au.js": 5706,
+        "./en-ca": 50584,
+        "./en-ca.js": 50584,
+        "./en-gb": 41685,
+        "./en-gb.js": 41685,
+        "./en-ie": 32050,
+        "./en-ie.js": 32050,
+        "./en-il": 35545,
+        "./en-il.js": 35545,
+        "./en-in": 42551,
+        "./en-in.js": 42551,
+        "./en-nz": 10620,
+        "./en-nz.js": 10620,
+        "./en-sg": 16222,
+        "./en-sg.js": 16222,
+        "./eo": 88124,
+        "./eo.js": 88124,
+        "./es": 59784,
+        "./es-do": 30300,
+        "./es-do.js": 30300,
+        "./es-mx": 47292,
+        "./es-mx.js": 47292,
+        "./es-us": 36469,
+        "./es-us.js": 36469,
+        "./es.js": 59784,
+        "./et": 56349,
+        "./et.js": 56349,
+        "./eu": 6782,
+        "./eu.js": 6782,
+        "./fa": 86749,
+        "./fa.js": 86749,
+        "./fi": 52469,
+        "./fi.js": 52469,
+        "./fil": 2989,
+        "./fil.js": 2989,
+        "./fo": 50743,
+        "./fo.js": 50743,
+        "./fr": 34916,
+        "./fr-ca": 96853,
+        "./fr-ca.js": 96853,
+        "./fr-ch": 81566,
+        "./fr-ch.js": 81566,
+        "./fr.js": 34916,
+        "./fy": 82949,
+        "./fy.js": 82949,
+        "./ga": 80932,
+        "./ga.js": 80932,
+        "./gd": 82671,
+        "./gd.js": 82671,
+        "./gl": 95687,
+        "./gl.js": 95687,
+        "./gom-deva": 67330,
+        "./gom-deva.js": 67330,
+        "./gom-latn": 7021,
+        "./gom-latn.js": 7021,
+        "./gu": 78728,
+        "./gu.js": 78728,
+        "./he": 28211,
+        "./he.js": 28211,
+        "./hi": 15487,
+        "./hi.js": 15487,
+        "./hr": 94106,
+        "./hr.js": 94106,
+        "./hu": 14147,
+        "./hu.js": 14147,
+        "./hy-am": 23862,
+        "./hy-am.js": 23862,
+        "./id": 78825,
+        "./id.js": 78825,
+        "./is": 57612,
+        "./is.js": 57612,
+        "./it": 9497,
+        "./it-ch": 75653,
+        "./it-ch.js": 75653,
+        "./it.js": 9497,
+        "./ja": 2209,
+        "./ja.js": 2209,
+        "./jv": 85668,
+        "./jv.js": 85668,
+        "./ka": 6904,
+        "./ka.js": 6904,
+        "./kk": 2138,
+        "./kk.js": 2138,
+        "./km": 81660,
+        "./km.js": 81660,
+        "./kn": 88613,
+        "./kn.js": 88613,
+        "./ko": 57894,
+        "./ko.js": 57894,
+        "./ku": 28468,
+        "./ku-kmr": 57123,
+        "./ku-kmr.js": 57123,
+        "./ku.js": 28468,
+        "./ky": 91808,
+        "./ky.js": 91808,
+        "./lb": 47070,
+        "./lb.js": 47070,
+        "./lo": 56505,
+        "./lo.js": 56505,
+        "./lt": 53656,
+        "./lt.js": 53656,
+        "./lv": 83746,
+        "./lv.js": 83746,
+        "./me": 42486,
+        "./me.js": 42486,
+        "./mi": 82,
+        "./mi.js": 82,
+        "./mk": 14792,
+        "./mk.js": 14792,
+        "./ml": 10845,
+        "./ml.js": 10845,
+        "./mn": 46939,
+        "./mn.js": 46939,
+        "./mr": 5575,
+        "./mr.js": 5575,
+        "./ms": 81424,
+        "./ms-my": 43179,
+        "./ms-my.js": 43179,
+        "./ms.js": 81424,
+        "./mt": 30341,
+        "./mt.js": 30341,
+        "./my": 72834,
+        "./my.js": 72834,
+        "./nb": 75292,
+        "./nb.js": 75292,
+        "./ne": 23753,
+        "./ne.js": 23753,
+        "./nl": 53922,
+        "./nl-be": 77542,
+        "./nl-be.js": 77542,
+        "./nl.js": 53922,
+        "./nn": 81304,
+        "./nn.js": 81304,
+        "./oc-lnc": 41156,
+        "./oc-lnc.js": 41156,
+        "./pa-in": 17851,
+        "./pa-in.js": 17851,
+        "./pl": 66636,
+        "./pl.js": 66636,
+        "./pt": 13252,
+        "./pt-br": 95189,
+        "./pt-br.js": 95189,
+        "./pt.js": 13252,
+        "./ro": 5451,
+        "./ro.js": 5451,
+        "./ru": 981,
+        "./ru.js": 981,
+        "./sd": 49139,
+        "./sd.js": 49139,
+        "./se": 24684,
+        "./se.js": 24684,
+        "./si": 85448,
+        "./si.js": 85448,
+        "./sk": 61682,
+        "./sk.js": 61682,
+        "./sl": 17595,
+        "./sl.js": 17595,
+        "./sq": 61360,
+        "./sq.js": 61360,
+        "./sr": 45897,
+        "./sr-cyrl": 80616,
+        "./sr-cyrl.js": 80616,
+        "./sr.js": 45897,
+        "./ss": 15034,
+        "./ss.js": 15034,
+        "./sv": 78213,
+        "./sv.js": 78213,
+        "./sw": 47494,
+        "./sw.js": 47494,
+        "./ta": 48387,
+        "./ta.js": 48387,
+        "./te": 90951,
+        "./te.js": 90951,
+        "./tet": 83675,
+        "./tet.js": 83675,
+        "./tg": 99753,
+        "./tg.js": 99753,
+        "./th": 59844,
+        "./th.js": 59844,
+        "./tk": 84429,
+        "./tk.js": 84429,
+        "./tl-ph": 54645,
+        "./tl-ph.js": 54645,
+        "./tlh": 56946,
+        "./tlh.js": 56946,
+        "./tr": 8630,
+        "./tr.js": 8630,
+        "./tzl": 79480,
+        "./tzl.js": 79480,
+        "./tzm": 13839,
+        "./tzm-latn": 36313,
+        "./tzm-latn.js": 36313,
+        "./tzm.js": 13839,
+        "./ug-cn": 26648,
+        "./ug-cn.js": 26648,
+        "./uk": 24192,
+        "./uk.js": 24192,
+        "./ur": 8335,
+        "./ur.js": 8335,
+        "./uz": 21351,
+        "./uz-latn": 60785,
+        "./uz-latn.js": 60785,
+        "./uz.js": 21351,
+        "./vi": 9541,
+        "./vi.js": 9541,
+        "./x-pseudo": 309,
+        "./x-pseudo.js": 309,
+        "./yo": 21512,
+        "./yo.js": 21512,
+        "./zh-cn": 98562,
+        "./zh-cn.js": 98562,
+        "./zh-hk": 7374,
+        "./zh-hk.js": 7374,
+        "./zh-mo": 87107,
+        "./zh-mo.js": 87107,
+        "./zh-tw": 34518,
+        "./zh-tw.js": 34518,
+      };
+      function a(e) {
+        var t = i(e);
+        return s(t);
+      }
+      function i(e) {
+        if (!s.o(r, e)) {
+          var t = new Error("Cannot find module '" + e + "'");
+          throw ((t.code = "MODULE_NOT_FOUND"), t);
+        }
+        return r[e];
+      }
+      (a.keys = function () {
+        return Object.keys(r);
+      }),
+        (a.resolve = i),
+        (e.exports = a),
+        (a.id = 61738);
+    },
     83085: (e, t, s) => {
       "use strict";
       s.d(t, { Gw: () => c, Lk: () => o, ai: () => n, mm: () => i });
-      var a = s(14947);
-      const r = a.sH.box(void 0);
+      var r = s(14947);
+      const a = r.sH.box(void 0);
       function i() {
-        return r.get();
+        return a.get();
       }
       function n(e) {
-        (0, a.h5)(() => r.set(e));
+        (0, r.h5)(() => a.set(e));
       }
       function c() {
-        const e = r.get();
+        const e = a.get();
         return e || Math.floor(Date.now() / 1e3);
       }
       function o() {
-        const e = r.get();
+        const e = a.get();
         return e ? new Date(1e3 * e) : new Date();
       }
     },
-    1035: (e, t, s) => {
+    44165: (e, t, s) => {
       "use strict";
-      s.d(t, { Ul: () => v, xz: () => A, $Y: () => f, i8: () => g });
-      var a = s(34629),
-        r = s(7850),
-        i = s(90626),
-        n = s(75844),
-        c = s(10622),
-        o = s(52038),
-        l = s(78327),
-        d = s(3088);
-      const _ =
-          "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gODAK/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsICMmJykqKRkfLTAtKDAlKCko/9sAQwEHBwcKCAoTCgoTKBoWGigoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgo/8AAEQgAQABAAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A8Inmk8+T94/3j/EfWmedJ/z0f/vo0T/6+T/eP86ZQA/zpP8Ano//AH0aPOk/56P/AN9GmVo6Loeq65M0Wj6ddXrr94QRF9v1I6fjQBR86T/no/8A30aPOk/56P8A99GtHW/Dus6GV/tjS7yyD8K00RVW+h6GsugB/nSf89H/AO+jT4JpPPj/AHj/AHh/EfWoafB/r4/94fzoAJ/9fJ/vH+dMp8/+vk/3j/OmUAXdE099W1mw06Jgsl3PHApPYswUH9a+qPF3iHSPhF4S0+003TxK0hMcEAbZvIA3SO2OvIz6k18nW88ttcRz28jxTRMHSRGKsrA5BBHQg1b1TWdT1fy/7V1G8vfLzs+0TNJtz1xknHQUAfUXw+8c6Z8UdN1HS9V0xIpUTM1s7eYkiE43KcAgg/lxg180+NtEHhzxZqmkqxdLWcojHqUPK598EV9CfBbwpF4G8J3fiLxA4trm5hEsnmceRCOQD/tHqR9B1r568a63/wAJH4r1TVghRLqYuinqE6KD74AoAxafB/r4/wDeH86ZT4P9fH/vD+dABP8A6+T/AHj/ADplPn/18n+8f50ygArt/gtpltq/xK0e2vYxJArPMUYZDFEZhn2yBXEV0/w203VNX8YWdloOoHTtQkWQx3IZl2gISeV55AI/GgD1H9pvxPdi/s/DcDGOz8pbqfHWRizBQfYbc/U+1eD12PxW0fWtE8Tpa+I9UOqXpt0cTl2bCEthctz1B/OuOoAKfB/r4/8AeH86ZT4P9fH/ALw/nQAT/wCvk/3j/OmVNPDJ58n7t/vH+E+tM8mT/nm//fJoAZV7Q9Xv9C1KLUNJuGtryMEJIoBIyCD1BHQmqnkyf883/wC+TR5Mn/PN/wDvk0AaHiHXtT8RX4vdau2u7oIIxIygHaCSBwB6msyn+TJ/zzf/AL5NHkyf883/AO+TQAynwf6+P/eH86PJk/55v/3yafBDJ58f7t/vD+E+tAH/2Q==",
-        u =
-          s.p +
-          "images/applications/store/avatar_default_full.jpg?v=valveisgoodatcaching";
-      var m = s(43047),
-        h = s.n(m),
-        p = s(81393);
-      const v = i.memo(function (e) {
-        const {
-            strAvatarURL: t,
-            size: s = "Medium",
-            className: a,
-            statusStyle: n,
-            statusPosition: c,
-            children: l,
-            ...m
-          } = e,
-          v = i.useMemo(() => {
-            const e = [];
-            return (
-              t && e.push(t),
-              e.push(
-                (function (e) {
-                  switch (e) {
-                    case "X-Small":
-                    case "Small":
-                      return "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gOTAK/9sAQwADAgIDAgIDAwMDBAMDBAUIBQUEBAUKBwcGCAwKDAwLCgsLDQ4SEA0OEQ4LCxAWEBETFBUVFQwPFxgWFBgSFBUU/9sAQwEDBAQFBAUJBQUJFA0LDRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQU/8AAEQgAIAAgAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A/P4mW5nmllmeSR3LMzMSSc1a07R73V72KzsILi9u5TiOC2RpJHPoFGSarQ/ef6n+de4fAn9oaL4D+DfGX9i6Uf8AhO9XSKDT9eZY3WxiDZcBGByTkn0JCZBxQB41qeiX+iXslnqNtdWF3H9+3uo2jkX6q2CKpgy208MsUzxyI4ZWViCDmvsr9rrUdT1j9nb4T6h8RBbH4qXUs0zMsSxXJ04hivnKoAU5MPGBg7uM7q+NpvvJ9R/OgAh+8/1P867T4POI/iz4Mc6U+u7NZtG/suPbuu8TKfKG4hct93njnmuKIltp5opYXjkRyrKykEHNWbDVbvSr63vbKaezvLeRZYbi3ZkkidTlWVhyCCMgjpQB6l+1F411nx58dPFWpa5a3mnXaXP2ZNOvXVpLKNBhYflJUY5PB5JJ6k15LN95PqP51a1PWr7WtQnvtRuLm/vrhzJNc3TtJLIx6lmbJJ9zVQCW5nhiiheSR3CqqqSSc0Af/9k=";
-                    case "Medium":
-                    case "MediumLarge":
-                      return _;
-                    case "Large":
-                    case "X-Large":
-                    case "FillArea":
-                      return u;
-                    default:
-                      return (0, p.z_)(e, `Unhandled size ${e}`), _;
-                  }
-                })(s),
-              ),
-              e
-            );
-          }, [t, s]);
-        return (0, r.jsxs)("div", {
-          className: (0, o.A)(
-            h().avatarHolder,
-            "avatarHolder",
-            "no-drag",
-            s,
-            a,
-          ),
-          ...m,
-          children: [
-            (0, r.jsx)("div", {
-              className: (0, o.A)(h().avatarStatus, "avatarStatus", c),
-              style: n,
-            }),
-            (0, r.jsx)(d.c, {
-              className: (0, o.A)(h().avatar, "avatar"),
-              rgSources: v,
-              draggable: !1,
-            }),
-            l,
-          ],
-        });
-      });
-      let g = class extends i.Component {
-        render() {
-          const {
-            persona: e,
-            size: t = "Medium",
-            animatedAvatar: s,
-            className: a,
-            strBackupAvatarURL: i,
-            ...n
-          } = this.props;
-          let d = "";
-          return (
-            s && s.image_small && 0 != s.image_small.length
-              ? (d = l.TS.MEDIA_CDN_COMMUNITY_URL + "images/" + s.image_small)
-              : e
-                ? ((d = e.avatar_url_medium),
-                  "Small" == t || "X-Small" == t
-                    ? (d = e.avatar_url)
-                    : ("Large" != t && "X-Large" != t && "FillArea" != t) ||
-                      (d = e.avatar_url_full))
-                : i && (d = i),
-            (0, r.jsx)(v, {
-              strAvatarURL: d,
-              size: t,
-              className: (0, o.A)((0, c.rO)(e), a),
-              ...n,
-            })
-          );
+      s.d(t, { HD: () => n, f1: () => d, s4: () => _, sB: () => l });
+      s(19367);
+      var r = s(90626),
+        a = s(83085),
+        i = (s(4434), s(63340));
+      const n = new (class {
+        bIncludeFeaturedAsGameSource = !0;
+        get nOverrideDateNow() {
+          return (0, a.mm)();
         }
-      };
-      g = (0, a.Cg)([n.PA], g);
-      const f = (0, n.PA)((e) => {
-        const { profileItem: t, className: s, bDisableAnimation: a, ...i } = e;
-        if (!t || !t.image_small || 0 == t.image_small.length) return null;
-        let n = a ? t.image_large : t.image_small;
-        return (
-          n || (n = t.image_small),
-          n.startsWith("https://") ||
-            (n = l.TS.MEDIA_CDN_COMMUNITY_URL + "images/" + n),
-          (0, r.jsx)("div", {
-            className: (0, o.A)(h().avatarFrame, s, "avatarFrame"),
-            ...i,
-            children: (0, r.jsx)("img", {
-              className: h().avatarFrameImg,
-              src: n,
-            }),
-          })
-        );
-      });
-      let A = class extends i.Component {
-        m_timer;
-        constructor(e) {
-          super(e),
-            (this.state = { bAnimate: "None" != this.props.loopDuration }),
-            (this.m_timer = 0);
+        set nOverrideDateNow(e) {
+          (0, a.ai)(e);
         }
-        componentDidMount() {
-          this.props.bParentHovered || this.SetupAnimationTimer();
+        get bRequireAllEventsLoadedInTimeBlock() {
+          return !1;
         }
-        SetupAnimationTimer() {
-          let e = 0;
-          switch (this.props.loopDuration) {
-            case "Short":
-              e = 2500;
-              break;
-            case "Medium":
-              e = 5e3;
-              break;
-            case "Long":
-              e = 1e4;
-          }
-          0 != e &&
-            (this.setState({ bAnimate: "None" != this.props.loopDuration }),
-            (this.m_timer = window.setTimeout(
-              () => this.setState({ bAnimate: !1 }),
-              e,
-            )));
+        get bIncludeCurators() {
+          return !0;
         }
-        StopAnimationTimer() {
-          this.m_timer &&
-            (window.clearTimeout(this.m_timer), (this.m_timer = 0));
+        GetTimeNowWithOverride() {
+          return (0, a.Gw)();
         }
-        onHover() {
-          this.SetupAnimationTimer();
+        GetTimeNowWithOverrideAsDate() {
+          return (0, a.Lk)();
         }
-        componentWillUnmount() {
-          this.StopAnimationTimer();
+        BHasTimeOverride() {
+          return Boolean((0, a.mm)());
         }
-        componentDidUpdate(e) {
-          this.props.loopDuration != e.loopDuration &&
-            ("None" == this.props.loopDuration
-              ? (this.setState({ bAnimate: !1 }), this.StopAnimationTimer())
-              : "Infinite" == this.props.loopDuration
-                ? (this.setState({ bAnimate: !0 }), this.StopAnimationTimer())
-                : (this.setState({ bAnimate: !0 }),
-                  this.SetupAnimationTimer())),
-            this.props.bParentHovered != e.bParentHovered &&
-              (this.props.bParentHovered &&
-              "None" != this.props.loopDuration &&
-              "Infinite" != this.props.loopDuration
-                ? (this.setState({ bAnimate: !0 }), this.StopAnimationTimer())
-                : this.state.bAnimate && this.SetupAnimationTimer());
+        ParseDevOverrides(e) {
+          if (!e || 0 == e.length) return;
+          new URLSearchParams("?" == e[0] ? e.substring(1) : e).has("t");
         }
-        render() {
-          let {
-            loopDuration: e,
-            animatedAvatar: t,
-            avatarFrame: s,
-            children: a,
-            style: i,
-            bLimitProfileFrameAnimationTime: n,
-            bParentHovered: c,
-            ...o
-          } = this.props;
-          o.onClick && (i = { ...i, cursor: "pointer" });
-          const l = this.state.bAnimate ? (t ?? void 0) : void 0;
-          return (0, r.jsx)("div", {
-            onMouseEnter: () =>
-              this.setState({ bAnimate: "None" != this.props.loopDuration }),
-            onMouseLeave: () => this.SetupAnimationTimer(),
-            children: (0, r.jsxs)(g, {
-              animatedAvatar: l,
-              ...o,
-              children: [
-                a,
-                (0, r.jsx)(f, {
-                  profileItem: s ?? null,
-                  bDisableAnimation: n && !this.state.bAnimate,
-                }),
-              ],
-            }),
-          });
-        }
-      };
-      A = (0, a.Cg)([n.PA], A);
+      })();
+      (0, i.V)("g_EventCalendarDevFeatures", n);
+      const c = new Date(),
+        o = Math.floor(c.getTime() / 1e3);
+      function l() {
+        return n.nOverrideDateNow ?? o;
+      }
+      function d() {
+        return r.useMemo(() => l(), []);
+      }
+      function _() {
+        return r.useMemo(() => n.GetTimeNowWithOverrideAsDate(), []);
+      }
     },
     54969: (e, t, s) => {
       "use strict";
-      s.d(t, { QW: () => g, VZ: () => v, g: () => h, kF: () => m });
-      var a = s(37085),
-        r = s(56545),
+      s.d(t, { QW: () => f, VZ: () => p, g: () => h, kF: () => m });
+      var r = s(37085),
+        a = s(56545),
         i = s(1270),
         n = s(66418),
         c = s(80902),
@@ -394,9 +514,9 @@
         return (0, c.I)({
           queryKey: [u],
           queryFn: async () => {
-            const t = r.w.Init(i.rX),
+            const t = a.w.Init(i.rX),
               s = await i.BX.GetInvites(e, t);
-            if (s.GetEResult() != a.R)
+            if (s.GetEResult() != r.R)
               throw new Error(
                 `Error from usePlaytestInvite: ${s.GetEResult()} ${s.GetErrorMessage()}`,
               );
@@ -409,21 +529,21 @@
           s = (0, o.jE)();
         return (0, l.n)({
           mutationFn: async (s) => {
-            const n = r.w.Init(i.q);
+            const n = a.w.Init(i.q);
             n.Body().add_invite_ids(e),
               n.Body().set_status(s.bAccept ? i.b1.T5 : i.b1.eh);
             const c = await i.BX.UpdateInvites(t, n);
-            if (c.GetEResult() != a.R)
+            if (c.GetEResult() != r.R)
               throw {
                 result: c.GetEResult(),
                 message: `Error from UpdatePlaytestInvite: ${c.GetErrorMessage()} ( ${c.GetEResult()} )`,
               };
           },
-          onSuccess: (t, a) => {
+          onSuccess: (t, r) => {
             s.setQueryData([u], (t) =>
               t.map((t) =>
                 t.invite_id === e
-                  ? { ...t, status: a.bAccept ? i.b1.T5 : i.b1.eh }
+                  ? { ...t, status: r.bAccept ? i.b1.T5 : i.b1.eh }
                   : t,
               ),
             );
@@ -433,19 +553,19 @@
           },
         });
       }
-      function p(e) {
+      function v(e) {
         return ["PlaytestUserStatus", e];
       }
-      function v(e) {
+      function p(e) {
         const t = (0, _.KV)();
         return (0, c.I)({
-          queryKey: p(e),
+          queryKey: v(e),
           queryFn: async () => {
             if (n.iA.logged_in) {
-              const s = r.w.Init(i.eW);
+              const s = a.w.Init(i.eW);
               e && s.Body().set_appid(e);
               const n = await i.BX.GetUserStatus(t, s);
-              if (n.GetEResult() != a.R)
+              if (n.GetEResult() != r.R)
                 throw new Error(
                   `Error from usePlaytestUserStatus: ${n.GetEResult()} ${n.GetErrorMessage()}`,
                 );
@@ -456,11 +576,11 @@
           staleTime: 6e5,
         });
       }
-      function g() {
+      function f() {
         const e = (0, o.jE)();
         return d.useCallback(
           (t, s) => {
-            e.setQueryData(p(t), s);
+            e.setQueryData(v(t), s);
           },
           [e],
         );
@@ -469,8 +589,8 @@
     1078: (e, t, s) => {
       "use strict";
       s.d(t, { XC: () => u, _G: () => h });
-      var a = s(7850),
-        r = s(90626),
+      var r = s(7850),
+        a = s(90626),
         i = s(12155),
         n = s(52038),
         c = s(44691),
@@ -479,25 +599,25 @@
         d = s.n(l),
         _ = s(61859);
       function u() {
-        const [e, t] = r.useState(void 0),
-          s = r.useCallback(() => t(void 0), []),
-          i = (0, a.jsx)(o.EN, {
+        const [e, t] = a.useState(void 0),
+          s = a.useCallback(() => t(void 0), []),
+          i = (0, r.jsx)(o.EN, {
             active: void 0 !== e,
-            children: (0, a.jsx)(m, { closeModal: s, rgImageURL: e }),
+            children: (0, r.jsx)(m, { closeModal: s, rgImageURL: e }),
           });
         return [t, i];
       }
       function m(e) {
         const { closeModal: t, rgImageURL: s } = e,
-          [i, n] = r.useState(0),
+          [i, n] = a.useState(0),
           c = s?.length ?? 0,
-          l = r.useCallback(() => {
+          l = a.useCallback(() => {
             n(0 == i ? c - 1 : i - 1);
           }, [i, c]),
-          u = r.useCallback(() => {
+          u = a.useCallback(() => {
             n(s && i + 1 >= c ? 0 : i + 1);
           }, [i, s, c]);
-        return (0, a.jsxs)(o.eV, {
+        return (0, r.jsxs)(o.eV, {
           title: (0, _.we)("#SaleTech_Screenshot_Viewer"),
           bAllowFullSize: !0,
           bOKDisabled: !0,
@@ -505,7 +625,7 @@
           bHideCloseIcon: !0,
           modalClassName: d().PopupScreenshotModal,
           children: [
-            (0, a.jsx)(h, {
+            (0, r.jsx)(h, {
               index: i,
               numElements: s?.length || 0,
               fnForward: u,
@@ -513,9 +633,9 @@
               fnClose: t,
               bCircular: !0,
             }),
-            (0, a.jsx)("div", {
+            (0, r.jsx)("div", {
               className: d().PopupScreenshotContainer,
-              children: (0, a.jsx)("img", {
+              children: (0, r.jsx)("img", {
                 className: d().PopupScreenshot,
                 src: s?.[i],
               }),
@@ -527,46 +647,46 @@
         const {
           index: t,
           numElements: s,
-          fnForward: r,
+          fnForward: a,
           fnBackwards: o,
           fnClose: l,
           bCircular: _,
         } = e;
         (0, c.E)("ArrowLeft", () => o?.(), !0, !0),
           (0, c.E)("Left", () => o?.(), !0, !0),
-          (0, c.E)("ArrowRight", () => r?.(), !0, !0),
-          (0, c.E)("Right", () => r?.(), !0, !0),
+          (0, c.E)("ArrowRight", () => a?.(), !0, !0),
+          (0, c.E)("Right", () => a?.(), !0, !0),
           (0, c.E)("Escape", () => l && l(), !0, !0),
           (0, c.E)("Esc", () => l && l(), !0, !0);
         let u = s > 1;
-        return (0, a.jsxs)("div", {
+        return (0, r.jsxs)("div", {
           className: d().ButtonCtn,
           children: [
             u &&
-              (0, a.jsxs)(a.Fragment, {
+              (0, r.jsxs)(r.Fragment, {
                 children: [
-                  (0, a.jsx)("div", {
+                  (0, r.jsx)("div", {
                     className: (0, n.A)(
                       d().ButtonIcon,
                       0 !== t || _ ? null : d().Disabled,
                     ),
                     onClick: o,
-                    children: (0, a.jsx)(i.V5W, { angle: 270 }),
+                    children: (0, r.jsx)(i.V5W, { angle: 270 }),
                   }),
-                  (0, a.jsx)("div", {
+                  (0, r.jsx)("div", {
                     className: (0, n.A)(
                       d().ButtonIcon,
                       t !== s - 1 || _ ? null : d().Disabled,
                     ),
-                    onClick: r,
-                    children: (0, a.jsx)(i.V5W, { angle: 90 }),
+                    onClick: a,
+                    children: (0, r.jsx)(i.V5W, { angle: 90 }),
                   }),
                 ],
               }),
-            (0, a.jsx)("div", {
+            (0, r.jsx)("div", {
               className: d().ButtonIcon,
               onClick: l,
-              children: (0, a.jsx)(i.X, {}),
+              children: (0, r.jsx)(i.X, {}),
             }),
           ],
         });
@@ -575,8 +695,8 @@
     26296: (e, t, s) => {
       "use strict";
       s.d(t, { i: () => l, o: () => o });
-      var a = s(7850),
-        r = s(90626),
+      var r = s(7850),
+        a = s(90626),
         i = s(61859),
         n = s(67523),
         c = s(41951);
@@ -590,18 +710,18 @@
             alt: o,
             crossOrigin: l,
           } = e,
-          [d, _] = r.useState(s.length),
-          [u, m] = r.useState(0);
-        r.useEffect(() => {
+          [d, _] = a.useState(s.length),
+          [u, m] = a.useState(0);
+        a.useEffect(() => {
           d != s.length && (_(s.length), m(0));
         }, [d, s.length]);
-        const h = r.useCallback(() => {
+        const h = a.useCallback(() => {
           e.onImageError && e.onImageError(e.srcs[u]),
             u + 1 < e.srcs.length && m(u + 1);
         }, [u, e]);
         return 0 == s.length
           ? null
-          : (0, a.jsx)("img", {
+          : (0, r.jsx)("img", {
               className: t,
               src: s[u],
               crossOrigin: l,
@@ -613,7 +733,7 @@
             });
       }
       function l(e) {
-        const [t, s] = r.useState(!1),
+        const [t, s] = a.useState(!1),
           {
             className: o,
             src: l,
@@ -624,23 +744,23 @@
             crossOrigin: h,
           } = e;
         return t
-          ? (0, a.jsxs)("div", {
+          ? (0, r.jsxs)("div", {
               className: n.ErrorDiv,
               children: [
-                (0, a.jsx)("p", {
+                (0, r.jsx)("p", {
                   children: (0, i.we)("#Image_ErrorTitle", l),
                 }),
-                (0, a.jsx)("ul", {
-                  children: (0, a.jsx)("li", {
+                (0, r.jsx)("ul", {
+                  children: (0, r.jsx)("li", {
                     children: (0, i.we)("#Image_Error_msg1"),
                   }),
                 }),
-                (0, a.jsx)("p", {
+                (0, r.jsx)("p", {
                   children: (0, i.we)("#Image_Error_suggestion"),
                 }),
               ],
             })
-          : (0, a.jsx)(c.o, {
+          : (0, r.jsx)(c.o, {
               className: o,
               src: l,
               onError: () => s(!0),
@@ -655,8 +775,8 @@
     41951: (e, t, s) => {
       "use strict";
       s.d(t, { o: () => m });
-      var a = s(7850),
-        r = s(90626),
+      var r = s(7850),
+        a = s(90626),
         i = s(12155),
         n = s(52038),
         c = s(1078),
@@ -666,17 +786,17 @@
         _ = 3,
         u = 256;
       function m(e) {
-        const [t, s] = (0, r.useState)(!1),
-          [m, h] = (0, r.useState)({
+        const [t, s] = (0, a.useState)(!1),
+          [m, h] = (0, a.useState)({
             naturalWidth: 0,
             naturalHeight: 0,
             displayWidth: 0,
             displayHeight: 0,
           }),
-          p = (0, r.useRef)(null),
-          [v, g] = (0, c.XC)();
+          v = (0, a.useRef)(null),
+          [p, f] = (0, c.XC)();
         return (
-          (0, r.useEffect)(() => {
+          (0, a.useEffect)(() => {
             if (
               m.naturalWidth > m.displayWidth * d &&
               m.naturalHeight > m.displayHeight * d &&
@@ -686,41 +806,41 @@
             }
           }, [m]),
           t
-            ? (0, a.jsxs)("span", {
+            ? (0, r.jsxs)("span", {
                 className: l.PreviewCtn,
                 children: [
-                  g,
-                  (0, a.jsx)("span", {
+                  f,
+                  (0, r.jsx)("span", {
                     className: l.SVG,
-                    children: (0, a.jsx)(i.YNO, {}),
+                    children: (0, r.jsx)(i.YNO, {}),
                   }),
-                  (0, a.jsx)("img", {
+                  (0, r.jsx)("img", {
                     ...e,
                     className: (0, n.A)({
                       ...(e.className && { [e.className]: !0 }),
                     }),
                     onClick: (t) => {
-                      e.src && v([e.src]);
+                      e.src && p([e.src]);
                     },
                   }),
                 ],
               })
-            : (0, a.jsx)("img", {
+            : (0, r.jsx)("img", {
                 ...e,
-                ref: p,
+                ref: v,
                 onLoad: (e) => {
                   if (!e.currentTarget.closest("a") && !(0, o.c5)()) {
                     const {
                       naturalWidth: t,
                       naturalHeight: s,
-                      width: a,
-                      height: r,
+                      width: r,
+                      height: a,
                     } = e.currentTarget;
                     h({
                       naturalWidth: t,
                       naturalHeight: s,
-                      displayWidth: a,
-                      displayHeight: r,
+                      displayWidth: r,
+                      displayHeight: a,
                     });
                   }
                 },
@@ -731,8 +851,8 @@
     3088: (e, t, s) => {
       "use strict";
       s.d(t, { c: () => i });
-      var a = s(7850),
-        r = s(90626);
+      var r = s(7850),
+        a = s(90626);
       function i(e) {
         const {
             rgSources: t,
@@ -742,19 +862,19 @@
             ref: c,
             ...o
           } = e,
-          l = r.useRef(null),
-          [d, _] = r.useState(0),
-          [u, m] = r.useState(0);
-        r.useImperativeHandle(
+          l = a.useRef(null),
+          [d, _] = a.useState(0),
+          [u, m] = a.useState(0);
+        a.useImperativeHandle(
           c,
           () => ({ imgRef: l, nSourceIndex: d, nSourceLength: t.length }),
           [l, d, t],
         );
-        const h = r.useMemo(() => JSON.stringify(t), [t]);
-        r.useEffect(() => {
+        const h = a.useMemo(() => JSON.stringify(t), [t]);
+        a.useEffect(() => {
           _(0), m((e) => e + 1);
         }, [h]);
-        const p = r.useMemo(() => {
+        const v = a.useMemo(() => {
             let s = "";
             return (
               t && t.length > d && (s = t[d]),
@@ -769,17 +889,17 @@
               s
             );
           }, [t, d, e]),
-          v = r.useCallback(
+          p = a.useCallback(
             (e) => {
               s?.(e, t[d], d);
-              const a = d + 1;
-              a >= t.length && i && i(e), a < t.length && _(a);
+              const r = d + 1;
+              r >= t.length && i && i(e), r < t.length && _(r);
             },
             [d, i, s, t],
           );
-        return (0, a.jsx)(
+        return (0, r.jsx)(
           "img",
-          { ref: l, ...o, src: p, onError: v, alt: n },
+          { ref: l, ...o, src: v, onError: p, alt: n },
           u,
         );
       }
@@ -787,8 +907,8 @@
     2489: (e, t, s) => {
       "use strict";
       s.r(t), s.d(t, { AccountPreferencesRoutes: () => it, default: () => nt });
-      var a = s(7850),
-        r = s(90626),
+      var r = s(7850),
+        a = s(90626),
         i = s(92757),
         n = s(34629),
         c = s(14947),
@@ -949,13 +1069,13 @@
         }
       }
       (0, n.Cg)([c.sH], h.prototype, "m_Preferences", void 0);
-      var p = s(75844),
-        v = s(56283),
-        g = s(72518),
-        f = s(52038),
-        A = s(76217),
+      var v = s(75844),
+        p = s(56283),
+        f = s(72518),
+        g = s(52038),
+        j = s(76217),
         w = s(45699);
-      class S {
+      class x {
         m_Preferences = void 0;
         constructor(e) {
           (0, c.Gn)(this), (this.m_Preferences = e);
@@ -1013,10 +1133,10 @@
           }
         }
       }
-      (0, n.Cg)([c.sH], S.prototype, "m_Preferences", void 0);
-      var x = s(68950),
-        j = s(22837);
-      class y {
+      (0, n.Cg)([c.sH], x.prototype, "m_Preferences", void 0);
+      var S = s(68950),
+        y = s(22837);
+      class k {
         m_rgSavedHardware = [];
         static s_AccountSavedHardwareStore;
         constructor() {
@@ -1024,10 +1144,10 @@
         }
         static Get() {
           return (
-            y.s_AccountSavedHardwareStore ||
-              ((y.s_AccountSavedHardwareStore = new y()),
-              y.s_AccountSavedHardwareStore.Init()),
-            y.s_AccountSavedHardwareStore
+            k.s_AccountSavedHardwareStore ||
+              ((k.s_AccountSavedHardwareStore = new k()),
+              k.s_AccountSavedHardwareStore.Init()),
+            k.s_AccountSavedHardwareStore
           );
         }
         Init() {
@@ -1062,11 +1182,11 @@
         }
         async RenameHardware(e, t) {
           const s = l.TS.STORE_BASE_URL + "account/ajaxhardwarerename",
-            a = new FormData();
-          a.set("sessionid", (0, l.KC)()),
-            a.set("savedHardwareID", e),
-            a.set("strFriendlyName", t);
-          if (await this.PostRequest(s, a))
+            r = new FormData();
+          r.set("sessionid", (0, l.KC)()),
+            r.set("savedHardwareID", e),
+            r.set("strFriendlyName", t);
+          if (await this.PostRequest(s, r))
             for (let s = 0; s < this.m_rgSavedHardware.length; ++s)
               this.m_rgSavedHardware[s].hardware_id == e &&
                 (this.m_rgSavedHardware[s].friendly_name = t);
@@ -1081,18 +1201,18 @@
                 return void this.m_rgSavedHardware.splice(t, 1);
         }
       }
-      (0, n.Cg)([c.sH], y.prototype, "m_rgSavedHardware", void 0);
-      var k = s(82227),
-        N = s(65946),
-        P = s(738),
-        T = s(56011),
-        C = s(78395);
-      function D(e) {
+      (0, n.Cg)([c.sH], k.prototype, "m_rgSavedHardware", void 0);
+      var N = s(82227),
+        P = s(65946),
+        T = s(738),
+        b = s(56011),
+        D = s(78395);
+      function A(e) {
         const { hw: t, closeModal: s } = e,
-          i = r.useCallback(() => {
-            y.Get().DeleteHardware(t.hardware_id), s();
+          i = a.useCallback(() => {
+            k.Get().DeleteHardware(t.hardware_id), s();
           }, [s, t.hardware_id]);
-        return (0, a.jsx)(C.o0, {
+        return (0, r.jsx)(D.o0, {
           bDisableBackgroundDismiss: !0,
           strTitle: (0, m.we)("#SavedHardware_Delete_Confirm_Title"),
           onCancel: s,
@@ -1104,20 +1224,20 @@
           ),
         });
       }
-      function b(e) {
+      function C(e) {
         const { hw: t, closeModal: s } = e,
-          [i, n] = r.useState(t.friendly_name),
-          c = r.useCallback(() => {
-            y.Get().RenameHardware(t.hardware_id, i.trim()), s();
+          [i, n] = a.useState(t.friendly_name),
+          c = a.useCallback(() => {
+            k.Get().RenameHardware(t.hardware_id, i.trim()), s();
           }, [i, s, t.hardware_id]);
-        return (0, a.jsx)(C.o0, {
+        return (0, r.jsx)(D.o0, {
           bDisableBackgroundDismiss: !0,
           strTitle: (0, m.we)("#SavedHardware_Rename_Confirm_Title"),
           onCancel: s,
           onOK: c,
           bOKDisabled: 0 == i.trim().length,
           strOKButtonText: (0, m.we)("#SavedHardware_Rename"),
-          children: (0, a.jsx)(v.FO, {
+          children: (0, r.jsx)(p.FO, {
             label: (0, m.we)("#SavedHardware_Rename_Confirm_Label"),
             value: i,
             onChange: (e) => {
@@ -1127,54 +1247,54 @@
           }),
         });
       }
-      const E = (0, N.PA)((e) => {
+      const E = (0, P.PA)((e) => {
           const { hw: t } = e;
           let s;
           switch (t.system_info.gaming_device_type) {
-            case j.LS$:
+            case y.LS$:
               s = (0, m.we)("#HardwareVariant_SteamDeck");
               break;
-            case j.ppM:
+            case y.ppM:
               s = (0, m.we)("#HardwareVariant_LegionGoS");
               break;
-            case j.bOm:
+            case y.bOm:
               s = (0, m.we)("#HardwareVariant_SteamMachine");
           }
-          return (0, a.jsxs)("div", {
-            className: g.SavedHardware,
+          return (0, r.jsxs)("div", {
+            className: f.SavedHardware,
             children: [
-              (0, a.jsxs)("div", {
+              (0, r.jsxs)("div", {
                 children: [
-                  (0, a.jsxs)("div", {
-                    className: g.FriendlyName,
+                  (0, r.jsxs)("div", {
+                    className: f.FriendlyName,
                     children: [t.friendly_name, " "],
                   }),
-                  (0, a.jsxs)("div", {
-                    className: g.Details,
+                  (0, r.jsxs)("div", {
+                    className: f.Details,
                     children: [
-                      s && (0, a.jsx)("div", { children: s }),
-                      (0, a.jsx)("div", { children: t.system_info.os }),
-                      (0, a.jsxs)("div", {
+                      s && (0, r.jsx)("div", { children: s }),
+                      (0, r.jsx)("div", { children: t.system_info.os }),
+                      (0, r.jsxs)("div", {
                         children: [
                           t.system_info.cpu_name,
                           " - ",
-                          (0, k.dm)(
+                          (0, N.dm)(
                             1024 * parseInt(t.system_info.system_ram) * 1024,
                             0,
                           ),
                         ],
                       }),
-                      (0, a.jsxs)("div", {
+                      (0, r.jsxs)("div", {
                         children: [
                           t.system_info.adapter_description,
                           " - ",
-                          (0, k.dm)(1024 * t.system_info.vram_size * 1024, 0),
+                          (0, N.dm)(1024 * t.system_info.vram_size * 1024, 0),
                         ],
                       }),
                     ],
                   }),
-                  (0, a.jsx)("div", {
-                    className: g.Timestamp,
+                  (0, r.jsx)("div", {
+                    className: f.Timestamp,
                     children: (0, m.we)(
                       "#SavedHardware_Timestamp",
                       (0, m.$z)(t.timestamp_created),
@@ -1182,19 +1302,19 @@
                   }),
                 ],
               }),
-              (0, a.jsxs)("div", {
-                className: g.SavedHardwareControls,
+              (0, r.jsxs)("div", {
+                className: f.SavedHardwareControls,
                 children: [
-                  (0, a.jsx)(v.$n, {
-                    className: g.RenameButton,
+                  (0, r.jsx)(p.$n, {
+                    className: f.RenameButton,
                     onClick: (e) =>
-                      (0, P.pg)((0, a.jsx)(b, { hw: t }), (0, T.uX)(e)),
+                      (0, T.pg)((0, r.jsx)(C, { hw: t }), (0, b.uX)(e)),
                     children: (0, m.we)("#SavedHardware_Rename"),
                   }),
-                  (0, a.jsx)(v.$n, {
-                    className: g.DeleteButton,
+                  (0, r.jsx)(p.$n, {
+                    className: f.DeleteButton,
                     onClick: (e) =>
-                      (0, P.pg)((0, a.jsx)(D, { hw: t }), (0, T.uX)(e)),
+                      (0, T.pg)((0, r.jsx)(A, { hw: t }), (0, b.uX)(e)),
                     children: (0, m.we)("#SavedHardware_Delete"),
                   }),
                 ],
@@ -1202,44 +1322,44 @@
             ],
           });
         }),
-        B = (0, N.PA)(() => {
-          const e = y.Get().GetSavedHardware(),
+        G = (0, P.PA)(() => {
+          const e = k.Get().GetSavedHardware(),
             t = "undefined" != typeof SteamClient,
-            s = r.useCallback(() => {
+            s = a.useCallback(() => {
               window.location.reload();
             }, []),
-            i = r.useCallback(() => {
+            i = a.useCallback(() => {
               window.SteamClient.BrowserView.RegisterForMessageFromParent(s),
                 SteamClient.BrowserView.PostMessageToParent(
                   "ShowSavedHardwareDialog",
                   "",
                 );
             }, [s]);
-          return (0, a.jsxs)("div", {
-            className: g.CookieGroup,
+          return (0, r.jsxs)("div", {
+            className: f.CookieGroup,
             children: [
-              (0, a.jsxs)("div", {
-                className: g.CookieSection,
+              (0, r.jsxs)("div", {
+                className: f.CookieSection,
                 children: [
-                  (0, a.jsx)("h2", {
+                  (0, r.jsx)("h2", {
                     children: (0, m.we)("#SavedHardware_Title"),
                   }),
-                  (0, a.jsx)("p", {
-                    className: g.SectionDescription,
+                  (0, r.jsx)("p", {
+                    className: f.SectionDescription,
                     children: (0, m.we)("#SavedHardware_Desc"),
                   }),
                 ],
               }),
-              (0, a.jsx)("div", {
-                className: g.SavedHardwareList,
-                children: e.map((e) => (0, a.jsx)(E, { hw: e }, e.hardware_id)),
+              (0, r.jsx)("div", {
+                className: f.SavedHardwareList,
+                children: e.map((e) => (0, r.jsx)(E, { hw: e }, e.hardware_id)),
               }),
-              (0, a.jsx)("div", {
-                className: g.SavedHardwareControls,
+              (0, r.jsx)("div", {
+                className: f.SavedHardwareControls,
                 children:
                   t &&
-                  (0, a.jsxs)(v.$n, {
-                    className: g.SavedHardwareAddPCButton,
+                  (0, r.jsxs)(p.$n, {
+                    className: f.SavedHardwareAddPCButton,
                     onClick: i,
                     children: [(0, m.we)("#SavedHardware_AddNew"), " "],
                   }),
@@ -1249,7 +1369,7 @@
         });
       let R = null,
         I = null;
-      const H = (0, p.PA)(() => {
+      const H = (0, v.PA)(() => {
           const [e, t] = (function () {
               if (!R) {
                 let e = (0, l.Tc)("cookiepreferences", "application_config");
@@ -1257,188 +1377,188 @@
               }
               if (!I) {
                 let e = (0, l.Tc)("storedatapreferences", "application_config");
-                I = new S(e);
+                I = new x(e);
               }
               return [R, I];
             })(),
-            s = (0, r.useCallback)(() => {
+            s = (0, a.useCallback)(() => {
               e.SetPreferenceState(d.CY.PK);
             }, [e]),
-            i = (0, r.useCallback)(() => {
+            i = (0, a.useCallback)(() => {
               e.SetPreferenceState(d.CY.rE);
             }, [e]),
-            n = (0, x.LH)();
-          return (0, a.jsxs)("div", {
+            n = (0, S.LH)();
+          return (0, r.jsxs)("div", {
             children: [
-              (0, a.jsx)("div", {
-                className: (0, f.A)(
-                  g.CookieSettingsHeader,
+              (0, r.jsx)("div", {
+                className: (0, g.A)(
+                  f.CookieSettingsHeader,
                   "account_header_line noicon",
                 ),
-                children: (0, a.jsx)("div", {
+                children: (0, r.jsx)("div", {
                   children: (0, m.we)("#CookiePref_OptionalCookies_Title"),
                 }),
               }),
-              (0, a.jsxs)("div", {
+              (0, r.jsxs)("div", {
                 className: "account_settings_container",
                 children: [
-                  (0, a.jsxs)(A.Z, {
+                  (0, r.jsxs)(j.Z, {
                     "flow-children": "row",
-                    className: g.ButtonGroup,
+                    className: f.ButtonGroup,
                     children: [
-                      (0, a.jsx)(w.ml, {
-                        className: (0, f.A)(
-                          g.AllButton,
-                          e.BIsRejectAll() ? g.ButtonHighlight : "",
+                      (0, r.jsx)(w.ml, {
+                        className: (0, g.A)(
+                          f.AllButton,
+                          e.BIsRejectAll() ? f.ButtonHighlight : "",
                         ),
                         onClick: i,
                         children: (0, m.we)("#CookiePref_RejectAll"),
                       }),
-                      (0, a.jsx)(w.ml, {
-                        className: (0, f.A)(
-                          g.AllButton,
-                          e.BIsAllowAll() ? g.ButtonHighlight : "",
+                      (0, r.jsx)(w.ml, {
+                        className: (0, g.A)(
+                          f.AllButton,
+                          e.BIsAllowAll() ? f.ButtonHighlight : "",
                         ),
                         onClick: s,
                         children: (0, m.we)("#CookiePref_AcceptAll"),
                       }),
                     ],
                   }),
-                  (0, a.jsx)(G, { settings: e }),
-                  (0, a.jsx)(F, { settings: e }),
-                  (0, a.jsx)(L, { settings: e }),
+                  (0, r.jsx)(F, { settings: e }),
+                  (0, r.jsx)(z, { settings: e }),
+                  (0, r.jsx)(L, { settings: e }),
                 ],
               }),
-              (0, a.jsx)("div", {
-                className: (0, f.A)(
-                  g.CookieSettingsHeader,
+              (0, r.jsx)("div", {
+                className: (0, g.A)(
+                  f.CookieSettingsHeader,
                   "account_header_line noicon",
                 ),
-                children: (0, a.jsx)("div", {
+                children: (0, r.jsx)("div", {
                   children: (0, m.we)("#CookiePref_TechnicallyNeccesary_Title"),
                 }),
               }),
-              (0, a.jsxs)("div", {
+              (0, r.jsxs)("div", {
                 className: "account_settings_container",
                 children: [
-                  (0, a.jsx)("p", {
+                  (0, r.jsx)("p", {
                     children: (0, m.we)(
                       "#CookiePref_TechnicallyNeccesary_Desc",
                     ),
                   }),
-                  (0, a.jsxs)("div", {
-                    className: g.CookieGroup,
+                  (0, r.jsxs)("div", {
+                    className: f.CookieGroup,
                     children: [
-                      (0, a.jsxs)("div", {
-                        className: g.NecessaryGroup,
+                      (0, r.jsxs)("div", {
+                        className: f.NecessaryGroup,
                         children: [
-                          (0, a.jsx)("span", {
-                            className: g.NecessaryTitle,
+                          (0, r.jsx)("span", {
+                            className: f.NecessaryTitle,
                             children: (0, m.we)("#CookiePref_SessionID_Title"),
                           }),
-                          (0, a.jsx)("span", {
-                            className: g.NecessaryDesc,
+                          (0, r.jsx)("span", {
+                            className: f.NecessaryDesc,
                             children: (0, m.we)("#CookiePref_SessionID_Desc"),
                           }),
                         ],
                       }),
-                      (0, a.jsxs)("div", {
-                        className: g.NecessaryGroup,
+                      (0, r.jsxs)("div", {
+                        className: f.NecessaryGroup,
                         children: [
-                          (0, a.jsx)("span", {
-                            className: g.NecessaryTitle,
+                          (0, r.jsx)("span", {
+                            className: f.NecessaryTitle,
                             children: (0, m.we)(
                               "#CookiePref_ShoppingCart_Title",
                             ),
                           }),
-                          (0, a.jsx)("span", {
-                            className: g.NecessaryDesc,
+                          (0, r.jsx)("span", {
+                            className: f.NecessaryDesc,
                             children: (0, m.we)(
                               "#CookiePref_ShoppingCart_Desc",
                             ),
                           }),
                         ],
                       }),
-                      (0, a.jsxs)("div", {
-                        className: g.NecessaryGroup,
+                      (0, r.jsxs)("div", {
+                        className: f.NecessaryGroup,
                         children: [
-                          (0, a.jsx)("span", {
-                            className: g.NecessaryTitle,
+                          (0, r.jsx)("span", {
+                            className: f.NecessaryTitle,
                             children: (0, m.we)(
                               "#CookiePref_SteamCountry_Title",
                             ),
                           }),
-                          (0, a.jsx)("span", {
-                            className: g.NecessaryDesc,
+                          (0, r.jsx)("span", {
+                            className: f.NecessaryDesc,
                             children: (0, m.we)(
                               "#CookiePref_SteamCountry_Desc",
                             ),
                           }),
                         ],
                       }),
-                      (0, a.jsxs)("div", {
-                        className: g.NecessaryGroup,
+                      (0, r.jsxs)("div", {
+                        className: f.NecessaryGroup,
                         children: [
-                          (0, a.jsx)("span", {
-                            className: g.NecessaryTitle,
+                          (0, r.jsx)("span", {
+                            className: f.NecessaryTitle,
                             children: (0, m.we)("#CookiePref_Timezone_Title"),
                           }),
-                          (0, a.jsx)("span", {
-                            className: g.NecessaryDesc,
+                          (0, r.jsx)("span", {
+                            className: f.NecessaryDesc,
                             children: (0, m.we)("#CookiePref_Timezone_Desc"),
                           }),
                         ],
                       }),
-                      (0, a.jsxs)("div", {
-                        className: g.NecessaryGroup,
+                      (0, r.jsxs)("div", {
+                        className: f.NecessaryGroup,
                         children: [
-                          (0, a.jsx)("span", {
-                            className: g.NecessaryTitle,
+                          (0, r.jsx)("span", {
+                            className: f.NecessaryTitle,
                             children: (0, m.we)("#CookiePref_BirthTime_Title"),
                           }),
-                          (0, a.jsx)("span", {
-                            className: g.NecessaryDesc,
+                          (0, r.jsx)("span", {
+                            className: f.NecessaryDesc,
                             children: (0, m.we)("#CookiePref_BirthTime_Desc"),
                           }),
                         ],
                       }),
-                      (0, a.jsxs)("div", {
-                        className: g.NecessaryGroup,
+                      (0, r.jsxs)("div", {
+                        className: f.NecessaryGroup,
                         children: [
-                          (0, a.jsx)("span", {
-                            className: g.NecessaryTitle,
+                          (0, r.jsx)("span", {
+                            className: f.NecessaryTitle,
                             children: (0, m.we)("#CookiePref_Login_Title"),
                           }),
-                          (0, a.jsx)("span", {
-                            className: g.NecessaryDesc,
+                          (0, r.jsx)("span", {
+                            className: f.NecessaryDesc,
                             children: (0, m.we)("#CookiePref_Login_Desc"),
                           }),
                         ],
                       }),
-                      (0, a.jsxs)("div", {
-                        className: g.NecessaryGroup,
+                      (0, r.jsxs)("div", {
+                        className: f.NecessaryGroup,
                         children: [
-                          (0, a.jsx)("span", {
-                            className: g.NecessaryTitle,
+                          (0, r.jsx)("span", {
+                            className: f.NecessaryTitle,
                             children: (0, m.we)("#CookiePref_Language_Title"),
                           }),
-                          (0, a.jsx)("span", {
-                            className: g.NecessaryDesc,
+                          (0, r.jsx)("span", {
+                            className: f.NecessaryDesc,
                             children: (0, m.we)("#CookiePref_Language_Desc"),
                           }),
                         ],
                       }),
-                      (0, a.jsxs)("div", {
-                        className: g.NecessaryGroup,
+                      (0, r.jsxs)("div", {
+                        className: f.NecessaryGroup,
                         children: [
-                          (0, a.jsx)("span", {
-                            className: g.NecessaryTitle,
+                          (0, r.jsx)("span", {
+                            className: f.NecessaryTitle,
                             children: (0, m.we)(
                               "#CookiePref_CookieSettings_Title",
                             ),
                           }),
-                          (0, a.jsx)("span", {
-                            className: g.NecessaryDesc,
+                          (0, r.jsx)("span", {
+                            className: f.NecessaryDesc,
                             children: (0, m.we)(
                               "#CookiePref_CookieSettings_Desc",
                             ),
@@ -1449,34 +1569,34 @@
                   }),
                 ],
               }),
-              (0, a.jsx)("div", {
-                className: (0, f.A)(
-                  g.CookieSettingsHeader,
+              (0, r.jsx)("div", {
+                className: (0, g.A)(
+                  f.CookieSettingsHeader,
                   "account_header_line noicon",
                 ),
-                children: (0, a.jsx)("div", {
+                children: (0, r.jsx)("div", {
                   children: (0, m.we)("#PrivacySettings_Marketing_Header"),
                 }),
               }),
-              (0, a.jsx)("div", {
+              (0, r.jsx)("div", {
                 className: "account_settings_container",
-                children: (0, a.jsx)(z, { settings: e }),
+                children: (0, r.jsx)(B, { settings: e }),
               }),
               !!n &&
-                (0, a.jsxs)(a.Fragment, {
+                (0, r.jsxs)(r.Fragment, {
                   children: [
-                    (0, a.jsx)("div", {
-                      className: (0, f.A)(
-                        g.DataCollectionSettingsHeader,
+                    (0, r.jsx)("div", {
+                      className: (0, g.A)(
+                        f.DataCollectionSettingsHeader,
                         "account_header_line noicon",
                       ),
-                      children: (0, a.jsx)("div", {
+                      children: (0, r.jsx)("div", {
                         children: (0, m.we)("#DataPreferences_Header"),
                       }),
                     }),
-                    (0, a.jsx)("div", {
+                    (0, r.jsx)("div", {
                       className: "account_settings_container",
-                      children: (0, a.jsx)(Q, { settings: t }),
+                      children: (0, r.jsx)(M, { settings: t }),
                     }),
                   ],
                 }),
@@ -1484,24 +1604,24 @@
             ],
           });
         }),
-        G = (0, p.PA)((e) => {
+        F = (0, v.PA)((e) => {
           const { settings: t } = e,
-            s = (0, r.useCallback)(() => {
+            s = (0, a.useCallback)(() => {
               t.ToggleRecentApps();
             }, [t]);
-          return (0, a.jsx)("div", {
-            className: g.CookieGroup,
-            children: (0, a.jsxs)("div", {
-              className: g.CookieSection,
+          return (0, r.jsx)("div", {
+            className: f.CookieGroup,
+            children: (0, r.jsxs)("div", {
+              className: f.CookieSection,
               children: [
-                (0, a.jsx)("h2", {
+                (0, r.jsx)("h2", {
                   children: (0, m.we)("#CookiePref_Content_Title"),
                 }),
-                (0, a.jsx)("p", {
-                  className: g.SectionDescription,
+                (0, r.jsx)("p", {
+                  className: f.SectionDescription,
                   children: (0, m.we)("#CookiePref_Content_Desc"),
                 }),
-                (0, a.jsx)(v.RF, {
+                (0, r.jsx)(p.RF, {
                   onChange: s,
                   label: (0, m.we)("#CookiePref_Content_ToggleTitle"),
                   checked: t.GetRecentApps(),
@@ -1511,24 +1631,24 @@
             }),
           });
         }),
-        F = (0, p.PA)((e) => {
+        z = (0, v.PA)((e) => {
           const { settings: t } = e,
-            s = (0, r.useCallback)(() => {
+            s = (0, a.useCallback)(() => {
               t.ToggleImpressions();
             }, [t]);
-          return (0, a.jsx)("div", {
-            className: g.CookieGroup,
-            children: (0, a.jsxs)("div", {
-              className: g.CookieSection,
+          return (0, r.jsx)("div", {
+            className: f.CookieGroup,
+            children: (0, r.jsxs)("div", {
+              className: f.CookieSection,
               children: [
-                (0, a.jsx)("h2", {
+                (0, r.jsx)("h2", {
                   children: (0, m.we)("#CookiePref_ValveAnalytics_Title"),
                 }),
-                (0, a.jsx)("p", {
-                  className: g.SectionDescription,
+                (0, r.jsx)("p", {
+                  className: f.SectionDescription,
                   children: (0, m.we)("#CookiePref_ValveAnalytics_Desc"),
                 }),
-                (0, a.jsx)(v.RF, {
+                (0, r.jsx)(p.RF, {
                   onChange: s,
                   label: (0, m.we)("#CookiePref_ValveAnalytics_ToggleTitle"),
                   checked: t.GetImpressions(),
@@ -1540,36 +1660,36 @@
             }),
           });
         }),
-        L = (0, p.PA)((e) => {
+        L = (0, v.PA)((e) => {
           const { settings: t } = e,
-            s = (0, r.useCallback)(() => {
+            s = (0, a.useCallback)(() => {
               t.ToggleYouTube();
             }, [t]),
-            i = (0, r.useCallback)(() => {
+            i = (0, a.useCallback)(() => {
               t.ToggleVimeo();
             }, [t]),
-            n = (0, r.useCallback)(() => {
+            n = (0, a.useCallback)(() => {
               t.ToggleSketchfab();
             }, [t]);
-          return (0, a.jsx)("div", {
-            className: g.CookieGroup,
-            children: (0, a.jsxs)("div", {
-              className: g.CookieSection,
+          return (0, r.jsx)("div", {
+            className: f.CookieGroup,
+            children: (0, r.jsxs)("div", {
+              className: f.CookieSection,
               children: [
-                (0, a.jsx)("h2", {
+                (0, r.jsx)("h2", {
                   children: (0, m.we)("#CookiePref_ThirdParty_Title"),
                 }),
-                (0, a.jsx)("p", {
-                  className: g.SectionDescription,
+                (0, r.jsx)("p", {
+                  className: f.SectionDescription,
                   children: (0, m.we)("#CookiePref_ThirdParty_Desc"),
                 }),
-                (0, a.jsx)(v.RF, {
+                (0, r.jsx)(p.RF, {
                   onChange: s,
                   label: (0, m.we)("#CookiePref_YouTube_Title"),
                   checked: t.GetYouTube(),
                   description: (0, m.PP)(
                     "#CookiePref_YouTube_Desc",
-                    (0, a.jsx)("a", {
+                    (0, r.jsx)("a", {
                       href: "https://policies.google.com/privacy",
                       target: "_blank",
                       children: (0, m.we)(
@@ -1578,26 +1698,26 @@
                     }),
                   ),
                 }),
-                (0, a.jsx)(v.RF, {
+                (0, r.jsx)(p.RF, {
                   onChange: i,
                   label: (0, m.we)("#CookiePref_Vimeo_Title"),
                   checked: t.GetVimeo(),
                   description: (0, m.PP)(
                     "#CookiePref_Vimeo_Desc",
-                    (0, a.jsx)("a", {
+                    (0, r.jsx)("a", {
                       href: "https://vimeo.com/privacy",
                       target: "_blank",
                       children: (0, m.we)("#CookiePref_Vimeo_TogglePolicyName"),
                     }),
                   ),
                 }),
-                (0, a.jsx)(v.RF, {
+                (0, r.jsx)(p.RF, {
                   onChange: n,
                   label: (0, m.we)("#CookiePref_Sketchfab_Title"),
                   checked: t.GetSketchfab(),
                   description: (0, m.PP)(
                     "#CookiePref_Sketchfab_Desc",
-                    (0, a.jsx)("a", {
+                    (0, r.jsx)("a", {
                       href: "https://sketchfab.com/privacy",
                       target: "_blank",
                       children: (0, m.we)(
@@ -1610,24 +1730,24 @@
             }),
           });
         }),
-        z = (0, p.PA)((e) => {
+        B = (0, v.PA)((e) => {
           const { settings: t } = e,
-            s = (0, r.useCallback)(() => {
+            s = (0, a.useCallback)(() => {
               t.ToggleUTMEnabled();
             }, [t]);
-          return (0, a.jsx)("div", {
-            className: g.CookieGroup,
-            children: (0, a.jsxs)("div", {
-              className: g.CookieSection,
+          return (0, r.jsx)("div", {
+            className: f.CookieGroup,
+            children: (0, r.jsxs)("div", {
+              className: f.CookieSection,
               children: [
-                (0, a.jsx)("h2", {
+                (0, r.jsx)("h2", {
                   children: (0, m.we)("#PrivacySettings_Marketing_Title"),
                 }),
-                (0, a.jsx)("p", {
-                  className: g.SectionDescription,
+                (0, r.jsx)("p", {
+                  className: f.SectionDescription,
                   children: (0, m.we)("#PrivacySettings_Marketing_Desc"),
                 }),
-                (0, a.jsx)(v.RF, {
+                (0, r.jsx)(p.RF, {
                   onChange: s,
                   label: (0, m.we)("#PrivacySettings_UTM_ToggleLabel"),
                   checked: t.GetUTMEnabled(),
@@ -1637,33 +1757,33 @@
             }),
           });
         }),
-        Q = (0, p.PA)((e) => {
+        M = (0, v.PA)((e) => {
           const { settings: t } = e,
-            s = (0, r.useCallback)(() => {
+            s = (0, a.useCallback)(() => {
               t.ToggleProvideDeckFeeback();
             }, [t]),
-            i = (0, r.useCallback)(() => {
+            i = (0, a.useCallback)(() => {
               t.ToggleGameFrameRateReporting();
             }, [t]);
-          return (0, a.jsxs)(a.Fragment, {
+          return (0, r.jsxs)(r.Fragment, {
             children: [
-              (0, a.jsx)("div", {
-                className: g.CookieGroup,
-                children: (0, a.jsxs)("div", {
-                  className: g.CookieSection,
+              (0, r.jsx)("div", {
+                className: f.CookieGroup,
+                children: (0, r.jsxs)("div", {
+                  className: f.CookieSection,
                   children: [
-                    (0, a.jsx)("h2", {
+                    (0, r.jsx)("h2", {
                       children: (0, m.we)(
                         "#DataPreferences_Provide_SteamOS_Feedback_Title",
                       ),
                     }),
-                    (0, a.jsx)("p", {
-                      className: g.SectionDescription,
+                    (0, r.jsx)("p", {
+                      className: f.SectionDescription,
                       children: (0, m.we)(
                         "#DataPreferences_Provide_SteamOS_Feedback_Desc",
                       ),
                     }),
-                    (0, a.jsx)(v.RF, {
+                    (0, r.jsx)(p.RF, {
                       onChange: s,
                       checked: t.GetProvideDeckFeedbackEnabled(),
                       description: (0, m.we)(
@@ -1673,24 +1793,24 @@
                   ],
                 }),
               }),
-              (0, a.jsx)("div", {
-                className: g.CookieGroup,
-                children: (0, a.jsxs)("div", {
-                  className: g.CookieSection,
+              (0, r.jsx)("div", {
+                className: f.CookieGroup,
+                children: (0, r.jsxs)("div", {
+                  className: f.CookieSection,
                   children: [
-                    (0, a.jsx)("h2", {
+                    (0, r.jsx)("h2", {
                       id: "FrameRateReporting",
                       children: (0, m.we)(
                         "#DataPreferences_FrameRateReporting_Title",
                       ),
                     }),
-                    (0, a.jsx)("p", {
-                      className: g.SectionDescription,
+                    (0, r.jsx)("p", {
+                      className: f.SectionDescription,
                       children: (0, m.we)(
                         "#DataPreferences_FrameRateReporting_Description",
                       ),
                     }),
-                    (0, a.jsx)(v.RF, {
+                    (0, r.jsx)(p.RF, {
                       onChange: i,
                       checked: t.GetGameFrameRateReportingEnabled(),
                       description: (0, m.we)(
@@ -1700,71 +1820,71 @@
                   ],
                 }),
               }),
-              (0, a.jsx)(B, {}),
+              (0, r.jsx)(G, {}),
             ],
           });
         });
-      var U = s(6813),
-        M = s(86227),
-        K = s.n(M),
+      var O = s(6813),
+        U = s(86227),
+        V = s.n(U),
         W = s(54969),
-        V = s(1035),
-        O = s(41471),
+        K = s(1035),
+        q = s(41471),
         Y = s(17720),
-        J = s(55263),
-        q = s(1270),
-        X = s(44165),
-        Z = s(51272),
-        $ = s(84811),
+        $ = s(55263),
+        X = s(1270),
+        Q = s(44165),
+        J = s(51272),
+        Z = s(84811),
         ee = s(22797),
         te = s(23310),
         se = s(61855);
-      function ae(e) {
+      function re(e) {
         const { bShowPlaytestOverview: t } = e,
           s = (0, W.kF)();
-        let r = [];
+        let a = [];
         return (
           s.isSuccess &&
-            (r = s.data
-              .filter((e) => e.status === q.b1.fm || e.status === q.b1.T5)
+            (a = s.data
+              .filter((e) => e.status === X.b1.fm || e.status === X.b1.T5)
               .map((e) => {
                 switch (e.status) {
-                  case q.b1.T5:
-                    return (0, a.jsx)(re, { invite: e }, e.invite_id);
-                  case q.b1.fm:
+                  case X.b1.T5:
+                    return (0, r.jsx)(ae, { invite: e }, e.invite_id);
+                  case X.b1.fm:
                   default:
-                    return (0, a.jsx)(ie, { invite: e }, e.invite_id);
+                    return (0, r.jsx)(ie, { invite: e }, e.invite_id);
                 }
               })),
-          (0, a.jsxs)("div", {
+          (0, r.jsxs)("div", {
             children: [
-              (0, a.jsx)("div", {
+              (0, r.jsx)("div", {
                 className: "account_header_line noicon",
                 children: (0, m.we)("#PlaytestInvites_Title"),
               }),
-              (0, a.jsx)("div", {
-                className: (0, f.A)(
-                  K().PlaytestInvites,
+              (0, r.jsx)("div", {
+                className: (0, g.A)(
+                  V().PlaytestInvites,
                   "account_settings_container",
                 ),
                 children:
-                  s.isLoading || r.length > 0
-                    ? r
+                  s.isLoading || a.length > 0
+                    ? a
                     : (0, m.we)("#PlaytestInvites_NoInvites"),
               }),
               t &&
-                (0, a.jsxs)("div", {
+                (0, r.jsxs)("div", {
                   className: "account_settings_container",
                   children: [
-                    (0, a.jsx)("h2", {
+                    (0, r.jsx)("h2", {
                       children: (0, m.we)("#PlaytestInvites_Desc_Title"),
                     }),
-                    (0, a.jsx)("p", {
-                      className: K().Description,
+                    (0, r.jsx)("p", {
+                      className: V().Description,
                       children: (0, m.we)("#PlaytestInvites_Desc1"),
                     }),
-                    (0, a.jsx)("p", {
-                      className: K().Description,
+                    (0, r.jsx)("p", {
+                      className: V().Description,
                       children: (0, m.we)("#PlaytestInvites_Desc2"),
                     }),
                   ],
@@ -1773,33 +1893,33 @@
           })
         );
       }
-      function re(e) {
+      function ae(e) {
         const { invite: t } = e,
           s = t.appid,
           i = de(t.appid);
         let n = i?.GetName() ?? t.app_name;
-        const c = r.useCallback(
+        const c = a.useCallback(
           (e) => {
-            (0, Z.EP)((0, T.uX)(e), `steam://open/games/details/${s}`);
+            (0, J.EP)((0, b.uX)(e), `steam://open/games/details/${s}`);
           },
           [s],
         );
-        return (0, a.jsxs)("div", {
-          className: K().PlaytestInvite,
+        return (0, r.jsxs)("div", {
+          className: V().PlaytestInvite,
           children: [
-            (0, a.jsx)("div", {
-              className: K().InviteInfo,
-              children: (0, a.jsx)("span", {
+            (0, r.jsx)("div", {
+              className: V().InviteInfo,
+              children: (0, r.jsx)("span", {
                 children: (0, m.we)("#PlaytestInvites_Welcome", n),
               }),
             }),
             !l.TS.IN_MOBILE_WEBVIEW &&
-              (0, a.jsx)("div", {
-                className: K().StatusCtn,
-                children: (0, a.jsx)(A.Z, {
-                  className: K().Buttons,
-                  children: (0, a.jsx)(v.jn, {
-                    className: K().WideButton,
+              (0, r.jsx)("div", {
+                className: V().StatusCtn,
+                children: (0, r.jsx)(j.Z, {
+                  className: V().Buttons,
+                  children: (0, r.jsx)(p.jn, {
+                    className: V().WideButton,
                     noFocusRing: !1,
                     onClick: c,
                     children: (0, m.we)("#PlaytestInvites_ViewLibrary"),
@@ -1811,54 +1931,54 @@
       }
       function ie(e) {
         const { invite: t } = e,
-          s = (0, X.f1)(),
+          s = (0, Q.f1)(),
           i = de(t.appid);
         let n = i?.GetName() ?? t.app_name;
         const c = (0, W.g)(t.invite_id),
-          o = r.useCallback(
+          o = a.useCallback(
             (e) => {
               c.mutate({ bAccept: e });
             },
             [c],
           ),
           l = new Y.b(t.steamid_inviter);
-        return (0, a.jsx)($.tH, {
-          children: (0, a.jsxs)(A.Z, {
-            className: K().PlaytestInvite,
+        return (0, r.jsx)(Z.tH, {
+          children: (0, r.jsxs)(j.Z, {
+            className: V().PlaytestInvite,
             navEntryPreferPosition: te.iU.MAINTAIN_X,
             children: [
-              (0, a.jsxs)("div", {
-                className: K().InviteInfo,
+              (0, r.jsxs)("div", {
+                className: V().InviteInfo,
                 children: [
-                  (0, a.jsx)(ce, { steamIDInviter: l }),
-                  (0, a.jsx)(ne, {
+                  (0, r.jsx)(ce, { steamIDInviter: l }),
+                  (0, r.jsx)(ne, {
                     appStoreItem: i,
                     strAppName: n,
                     nAppID: t.appid,
                   }),
-                  (0, a.jsx)("div", {
-                    className: K().TimeInvited,
+                  (0, r.jsx)("div", {
+                    className: V().TimeInvited,
                     children: (0, m.Nm)(t.time_created ?? s),
                   }),
                 ],
               }),
-              (0, a.jsx)("div", {
-                className: K().StatusCtn,
+              (0, r.jsx)("div", {
+                className: V().StatusCtn,
                 children: c.isPending
-                  ? (0, a.jsx)(ee.t, {
+                  ? (0, r.jsx)(ee.t, {
                       size: "medium",
                       position: "center",
                       msDelayAppear: 250,
                     })
-                  : (0, a.jsxs)("div", {
-                      className: K().Buttons,
+                  : (0, r.jsxs)("div", {
+                      className: V().Buttons,
                       children: [
-                        (0, a.jsx)(v.jn, {
+                        (0, r.jsx)(p.jn, {
                           noFocusRing: !1,
                           onClick: () => o(!0),
                           children: (0, m.we)("#PlaytestInvites_Accept"),
                         }),
-                        (0, a.jsx)(v.$n, {
+                        (0, r.jsx)(p.$n, {
                           noFocusRing: !1,
                           onClick: () => o(!1),
                           children: (0, m.we)("#PlaytestInvites_Reject"),
@@ -1871,28 +1991,28 @@
         });
       }
       function ne(e) {
-        const { appStoreItem: t, strAppName: s, nAppID: r } = e;
+        const { appStoreItem: t, strAppName: s, nAppID: a } = e;
         let i = t?.GetDeveloperNames()?.length
             ? t.GetDeveloperNames()[0]
             : null,
           n = t?.GetStorePageURL(),
-          c = (0, a.jsx)("img", {
-            className: K().SmallCap,
+          c = (0, r.jsx)("img", {
+            className: V().SmallCap,
             src: t?.GetAssets().GetSmallCapsuleURL() ?? se.A,
           });
         return (
-          1422450 == r && (i = "Valve"),
-          (0, a.jsxs)("div", {
-            className: K().AppInfoCtn,
+          1422450 == a && (i = "Valve"),
+          (0, r.jsxs)("div", {
+            className: V().AppInfoCtn,
             children: [
-              n ? (0, a.jsxs)(w.Ii, { href: n, children: [" ", c, " "] }) : c,
-              (0, a.jsxs)("div", {
-                className: K().AppDescription,
+              n ? (0, r.jsxs)(w.Ii, { href: n, children: [" ", c, " "] }) : c,
+              (0, r.jsxs)("div", {
+                className: V().AppDescription,
                 children: [
-                  (0, a.jsx)("div", { className: K().AppName, children: s }),
+                  (0, r.jsx)("div", { className: V().AppName, children: s }),
                   i &&
-                    (0, a.jsx)("div", {
-                      className: K().AppDetail,
+                    (0, r.jsx)("div", {
+                      className: V().AppDetail,
                       children: (0, m.we)("#PlaytestInvites_AppDeveloper", i),
                     }),
                 ],
@@ -1904,76 +2024,76 @@
       function ce(e) {
         const { steamIDInviter: t } = e;
         return t.BIsValid()
-          ? (0, a.jsx)(oe, { steamIDInviter: t })
-          : (0, a.jsx)(le, {});
+          ? (0, r.jsx)(oe, { steamIDInviter: t })
+          : (0, r.jsx)(le, {});
       }
       function oe(e) {
         const { steamIDInviter: t } = e,
-          s = (0, O.js)(t.ConvertTo64BitString()),
-          r = s?.data;
+          s = (0, q.js)(t.ConvertTo64BitString()),
+          a = s?.data;
         return s.isSuccess
-          ? (0, a.jsxs)("div", {
-              className: (0, f.A)(K().AvatarAndPersona, K().InviteDescription),
+          ? (0, r.jsxs)("div", {
+              className: (0, g.A)(V().AvatarAndPersona, V().InviteDescription),
               children: [
-                (0, a.jsx)(V.i8, {
-                  persona: r,
+                (0, r.jsx)(K.i8, {
+                  persona: a,
                   size: "Small",
                   statusPosition: "right",
                 }),
-                (0, a.jsx)("div", {
+                (0, r.jsx)("div", {
                   children: (0, m.PP)(
                     "#PlaytestInvites_InviteDescription_FromUser2",
-                    (0, a.jsx)(w.Ii, {
-                      href: r.GetCommunityProfileURL(),
-                      children: r?.m_strPlayerName,
+                    (0, r.jsx)(w.Ii, {
+                      href: a.GetCommunityProfileURL(),
+                      children: a?.m_strPlayerName,
                     }),
                   ),
                 }),
               ],
             })
-          : (0, a.jsx)(le, {});
+          : (0, r.jsx)(le, {});
       }
       function le(e) {
-        return (0, a.jsx)("div", {
-          className: K().InviteDescription,
+        return (0, r.jsx)("div", {
+          className: V().InviteDescription,
           children: (0, m.we)("#PlaytestInvites_InviteDescription_FromApp2"),
         });
       }
       function de(e) {
-        const [t, s] = (0, J.t7)(e, {
+        const [t, s] = (0, $.t7)(e, {
           include_basic_info: !0,
           include_assets: !0,
         });
-        return t && s == J.ik ? t : null;
+        return t && s == $.ik ? t : null;
       }
       var _e = s(31896),
         ue = s.n(_e);
       function me(e) {
-        return (0, a.jsxs)("div", {
+        return (0, r.jsxs)("div", {
           children: [
-            (0, a.jsx)(ae, { bShowPlaytestOverview: !1 }),
-            (0, a.jsx)("div", {
+            (0, r.jsx)(re, { bShowPlaytestOverview: !1 }),
+            (0, r.jsx)("div", {
               className: "account_header_line noicon",
               children: (0, m.we)("#PlaytestStatus_Title"),
             }),
-            (0, a.jsx)("div", {
-              className: (0, f.A)(
+            (0, r.jsx)("div", {
+              className: (0, g.A)(
                 ue().PlaytestStatusCtn,
                 "account_settings_container",
               ),
               children: (0, m.we)("#PlaytestStatus_None"),
             }),
-            (0, a.jsxs)("div", {
+            (0, r.jsxs)("div", {
               className: "account_settings_container",
               children: [
-                (0, a.jsx)("h2", {
+                (0, r.jsx)("h2", {
                   children: (0, m.we)("#PlaytestInvites_Desc_Title"),
                 }),
-                (0, a.jsx)("p", {
+                (0, r.jsx)("p", {
                   className: ue().Description,
                   children: (0, m.we)("#PlaytestInvites_Desc1"),
                 }),
-                (0, a.jsx)("p", {
+                (0, r.jsx)("p", {
                   className: ue().Description,
                   children: (0, m.we)("#PlaytestInvites_Desc2"),
                 }),
@@ -2053,28 +2173,28 @@
       }
       (0, n.Cg)([c.sH], he.prototype, "m_rgActiveDevices", void 0),
         (0, n.Cg)([c.sH], he.prototype, "m_rgRevokedDevices", void 0);
-      var pe = s(4869),
-        ve = s(26296);
-      const ge =
+      var ve = s(4869),
+        pe = s(26296);
+      const fe =
           s.p +
           "images/applications/store/sg_shield_off.png?v=valveisgoodatcaching",
-        fe =
+        ge =
           s.p +
           "images/applications/store/sg_shield_on.png?v=valveisgoodatcaching",
-        Ae =
+        je =
           s.p +
           "images/applications/store/steam_mobile_qr_code.png?v=valveisgoodatcaching";
       var we,
-        Se = s(2160),
-        xe = s(51883),
-        je = s(23443),
-        ye = s(31258),
-        ke = s(12155),
-        Ne = s(32754),
-        Pe = s(91675),
-        Te = s(14771),
-        Ce = s(11838),
-        De = s(61359);
+        xe = s(2160),
+        Se = s(51883),
+        ye = s(23443),
+        ke = s(31258),
+        Ne = s(12155),
+        Pe = s(32754),
+        Te = s(91675),
+        be = s(14771),
+        De = s(11838),
+        Ae = s(61359);
       !(function (e) {
         (e[(e.k_ETwoFactorTokenSteamguardScheme_None = 0)] =
           "k_ETwoFactorTokenSteamguardScheme_None"),
@@ -2083,11 +2203,11 @@
           (e[(e.k_ETwoFactorTokenSteamguardScheme_TwoFactor = 2)] =
             "k_ETwoFactorTokenSteamguardScheme_TwoFactor");
       })(we || (we = {}));
-      const be = (0, p.PA)(() => {
+      const Ce = (0, v.PA)(() => {
         let e = he.Get();
         const t = Re(),
           s = Date.now() / 1e3,
-          r = Be(e),
+          a = Ge(e),
           i = e.GetTwoFactorStatus();
         let n = null;
         switch (i.steamguard_scheme) {
@@ -2106,15 +2226,15 @@
         for (const n of e.GetActiveDevices()) {
           const e = n.logged_in && n.last_seen?.time > s - 900,
             l =
-              n.effective_token_state == xe.wv.BH ? De.RememberedDevice : null,
-            d = (0, a.jsx)(
+              n.effective_token_state == Se.wv.BH ? Ae.RememberedDevice : null,
+            d = (0, r.jsx)(
               Ie,
               {
                 className: l,
                 device: n,
                 bActiveNow: e,
                 bCurrentDevice: t == n.token_id,
-                strActiveCountry: r,
+                strActiveCountry: a,
                 msgTwoFactorStatus: i,
               },
               n.token_id,
@@ -2124,48 +2244,48 @@
         const l = e
           .GetRevokedDevices()
           .map((e) =>
-            (0, a.jsx)(
+            (0, r.jsx)(
               Ie,
               {
-                className: De.RevokedDevice,
+                className: Ae.RevokedDevice,
                 device: e,
-                strActiveCountry: r,
+                strActiveCountry: a,
                 msgTwoFactorStatus: i,
               },
               e.token_id,
             ),
           );
-        return (0, a.jsxs)(a.Fragment, {
+        return (0, r.jsxs)(r.Fragment, {
           children: [
-            (0, a.jsx)("div", {
-              className: (0, f.A)(
-                De.AuthorizedDeviceHeader,
+            (0, r.jsx)("div", {
+              className: (0, g.A)(
+                Ae.AuthorizedDeviceHeader,
                 "account_header_line noicon",
               ),
-              children: (0, a.jsx)("div", {
+              children: (0, r.jsx)("div", {
                 children: (0, m.we)(
                   "#accountpreferences_authorized_devices_header",
                 ),
               }),
             }),
-            (0, a.jsxs)("div", {
+            (0, r.jsxs)("div", {
               className: "account_settings_container",
               children: [
-                (0, a.jsx)("div", {
-                  className: De.SectionDescription,
+                (0, r.jsx)("div", {
+                  className: Ae.SectionDescription,
                   children: (0, m.PP)(
                     "#accountpreferences_authorized_devices_description",
-                    (0, a.jsx)("p", {}),
+                    (0, r.jsx)("p", {}),
                   ),
                 }),
-                (0, a.jsxs)("div", {
-                  className: De.AuthorizedDeviceGroup,
+                (0, r.jsxs)("div", {
+                  className: Ae.AuthorizedDeviceGroup,
                   children: [
-                    (0, a.jsx)(Ee, {
-                      elHeader: (0, a.jsxs)("div", {
-                        className: De.ActiveNow,
+                    (0, r.jsx)(Ee, {
+                      elHeader: (0, r.jsxs)("div", {
+                        className: Ae.ActiveNow,
                         children: [
-                          (0, a.jsx)(ke.jlt, { className: De.ActiveNowDot }),
+                          (0, r.jsx)(Ne.jlt, { className: Ae.ActiveNowDot }),
                           (0, m.we)(
                             "#accountpreferences_authorized_device_active_now",
                           ),
@@ -2173,20 +2293,20 @@
                       }),
                       rgDevices: c,
                     }),
-                    (0, a.jsx)(Ee, {
+                    (0, r.jsx)(Ee, {
                       elHeader: (0, m.we)(
                         "#accountpreferences_authorized_devices_recentseen_heading",
                       ),
                       rgDevices: o,
                     }),
-                    (0, a.jsx)("div", {
-                      className: De.DeviceGroup,
-                      children: (0, a.jsx)("div", {
-                        className: De.RemoveDevicesRow,
-                        children: (0, a.jsx)(v.wl, {
-                          className: De.RemoveDevicesButton,
+                    (0, r.jsx)("div", {
+                      className: Ae.DeviceGroup,
+                      children: (0, r.jsx)("div", {
+                        className: Ae.RemoveDevicesRow,
+                        children: (0, r.jsx)(p.wl, {
+                          className: Ae.RemoveDevicesButton,
                           onClick: (e) => {
-                            (0, P.pg)((0, a.jsx)(Ke, {}), (0, T.uX)(e));
+                            (0, T.pg)((0, r.jsx)(Ve, {}), (0, b.uX)(e));
                           },
                           children: (0, m.we)(
                             "#accountpreferences_authorized_devices_remove_button",
@@ -2199,29 +2319,29 @@
               ],
             }),
             l?.length > 0 &&
-              (0, a.jsxs)(a.Fragment, {
+              (0, r.jsxs)(r.Fragment, {
                 children: [
-                  (0, a.jsx)("div", {
-                    className: (0, f.A)(
-                      De.AuthorizedDeviceHeader,
+                  (0, r.jsx)("div", {
+                    className: (0, g.A)(
+                      Ae.AuthorizedDeviceHeader,
                       "account_header_line noicon",
                     ),
-                    children: (0, a.jsx)("div", {
+                    children: (0, r.jsx)("div", {
                       children: (0, m.we)(
                         "#accountpreferences_revoked_devices_revoked_header",
                       ),
                     }),
                   }),
-                  (0, a.jsxs)("div", {
+                  (0, r.jsxs)("div", {
                     className: "account_settings_container",
                     children: [
-                      (0, a.jsx)("div", {
-                        className: De.SectionDescription,
-                        children: (0, m.PP)(n, (0, a.jsx)("p", {})),
+                      (0, r.jsx)("div", {
+                        className: Ae.SectionDescription,
+                        children: (0, m.PP)(n, (0, r.jsx)("p", {})),
                       }),
-                      (0, a.jsx)("div", {
-                        className: De.AuthorizedDeviceGroup,
-                        children: (0, a.jsx)(Ee, { rgDevices: l }),
+                      (0, r.jsx)("div", {
+                        className: Ae.AuthorizedDeviceGroup,
+                        children: (0, r.jsx)(Ee, { rgDevices: l }),
                       }),
                     ],
                   }),
@@ -2234,14 +2354,14 @@
         const { rgDevices: t, elHeader: s } = e;
         return 0 == t.length
           ? null
-          : (0, a.jsxs)("div", {
-              className: De.DeviceGroup,
+          : (0, r.jsxs)("div", {
+              className: Ae.DeviceGroup,
               children: [s && s, t],
             });
       }
-      function Be(e) {
+      function Ge(e) {
         const t = Date.now() / 1e3;
-        return Ue(
+        return Oe(
           e
             .GetActiveDevices()
             .find((e) => e.logged_in && e.last_seen?.time > t - 900) ??
@@ -2249,7 +2369,7 @@
         ).country;
       }
       function Re() {
-        const [e] = r.useState(() =>
+        const [e] = a.useState(() =>
           (0, l.Tc)("requesting_token_id", "application_config"),
         );
         return e;
@@ -2264,14 +2384,14 @@
             msgTwoFactorStatus: o,
             bShowAuthenticatorActivity: l,
           } = e,
-          [d, _] = (0, r.useState)(!1),
-          u = r.useRef(void 0);
-        r.useEffect(() => {
+          [d, _] = (0, a.useState)(!1),
+          u = a.useRef(void 0);
+        a.useEffect(() => {
           u.current?.BHasFocus() && u.current?.Node().ForceMeasureFocusRing();
         }, [d]);
         let h = (function (e) {
-          if (e.platform_type == xe.SS.tS) {
-            let t = new Ce.UAParser(e.token_description).getResult();
+          if (e.platform_type == Se.SS.tS) {
+            let t = new De.UAParser(e.token_description).getResult();
             return t.browser.name && t.os.name
               ? "WebKit" == t.browser.name
                 ? t.os.name
@@ -2288,24 +2408,24 @@
         })(t);
         h.length &&
           (h = ` ${(0, m.we)("#accountpreferences_authorized_devices_name_separator")} "${h}"`);
-        const p = Ue(t);
-        let g = null;
-        g =
-          p.country && n && n != p.country
-            ? (0, a.jsx)(Ne.he, {
-                className: De.Tooltip,
+        const v = Oe(t);
+        let f = null;
+        f =
+          v.country && n && n != v.country
+            ? (0, r.jsx)(Pe.he, {
+                className: Ae.Tooltip,
                 toolTipContent: (0, m.we)(
                   "#accountpreferences_authorized_devices_suspicous_tooltip",
                 ),
                 direction: "top",
-                children: (0, a.jsxs)("div", {
-                  className: De.LocationSuspicious,
-                  children: [p.location, (0, a.jsx)(pe.$$j, {})],
+                children: (0, r.jsxs)("div", {
+                  className: Ae.LocationSuspicious,
+                  children: [v.location, (0, r.jsx)(ve.$$j, {})],
                 }),
               })
-            : (0, a.jsx)("div", {
-                className: De.LocationNotSuspicious,
-                children: p.location,
+            : (0, r.jsx)("div", {
+                className: Ae.LocationNotSuspicious,
+                children: v.location,
               });
         const w = (function (e, t) {
           return (
@@ -2314,48 +2434,48 @@
             e.token_id == t?.last_seen_auth_token_id
           );
         })(t, o);
-        return (0, a.jsxs)(
-          A.Z,
+        return (0, r.jsxs)(
+          j.Z,
           {
-            className: (0, f.A)(De.DeviceContainer, s && De.ActiveDevice, c),
+            className: (0, g.A)(Ae.DeviceContainer, s && Ae.ActiveDevice, c),
             navRef: u,
             onActivate: () => _(!d),
             children: [
-              (0, a.jsx)(Qe, { device: t, bHasAuthenticator: w }),
-              (0, a.jsxs)("div", {
-                className: De.DeviceContent,
+              (0, r.jsx)(Me, { device: t, bHasAuthenticator: w }),
+              (0, r.jsxs)("div", {
+                className: Ae.DeviceContent,
                 children: [
-                  (0, a.jsxs)("div", {
-                    className: De.DeviceHeaderRow,
+                  (0, r.jsxs)("div", {
+                    className: Ae.DeviceHeaderRow,
                     children: [
-                      (0, a.jsxs)("div", {
-                        className: De.DeviceNameContainer,
+                      (0, r.jsxs)("div", {
+                        className: Ae.DeviceNameContainer,
                         children: [
-                          (0, a.jsxs)("div", {
-                            className: De.DeviceName,
-                            children: [(0, a.jsx)(Me, { device: t }), h],
+                          (0, r.jsxs)("div", {
+                            className: Ae.DeviceName,
+                            children: [(0, r.jsx)(Ue, { device: t }), h],
                           }),
                           i &&
-                            (0, a.jsx)("div", {
-                              className: De.ThisDevice,
+                            (0, r.jsx)("div", {
+                              className: Ae.ThisDevice,
                               children: (0, m.we)(
                                 "#accountpreferences_authorized_devices_this_device",
                               ),
                             }),
                         ],
                       }),
-                      (0, a.jsxs)("div", {
-                        className: De.DetailsToggleContainer,
+                      (0, r.jsxs)("div", {
+                        className: Ae.DetailsToggleContainer,
                         children: [
-                          g,
-                          (0, a.jsx)("div", {
-                            className: De.DetailsToggle,
-                            children: (0, a.jsx)(v.wl, {
-                              className: (0, f.A)({
-                                [De.DetailsToggle]: !0,
-                                [De.Selected]: d,
+                          f,
+                          (0, r.jsx)("div", {
+                            className: Ae.DetailsToggle,
+                            children: (0, r.jsx)(p.wl, {
+                              className: (0, g.A)({
+                                [Ae.DetailsToggle]: !0,
+                                [Ae.Selected]: d,
                               }),
-                              children: (0, a.jsx)(pe.b8_, {
+                              children: (0, r.jsx)(ve.b8_, {
                                 direction: "down",
                               }),
                             }),
@@ -2364,12 +2484,12 @@
                       }),
                     ],
                   }),
-                  (0, a.jsx)(He, {
+                  (0, r.jsx)(He, {
                     device: t,
                     bActiveNow: s,
                     msgTwoFactorStatus: l && o,
                   }),
-                  d && (0, a.jsx)(Le, { device: t }),
+                  d && (0, r.jsx)(Le, { device: t }),
                 ],
               }),
             ],
@@ -2378,135 +2498,135 @@
         );
       }
       function He(e) {
-        const { device: t, bActiveNow: s, msgTwoFactorStatus: r } = e;
-        return r?.state > 0
-          ? (0, a.jsx)(Ge, {
-              msgTwoFactorUsage: r.usages?.length > 0 ? r.usages[0] : null,
+        const { device: t, bActiveNow: s, msgTwoFactorStatus: a } = e;
+        return a?.state > 0
+          ? (0, r.jsx)(Fe, {
+              msgTwoFactorUsage: a.usages?.length > 0 ? a.usages[0] : null,
             })
           : s
             ? null
-            : (0, a.jsx)(Fe, { device: t });
+            : (0, r.jsx)(ze, { device: t });
       }
-      function Ge(e) {
+      function Fe(e) {
         const { msgTwoFactorUsage: t } = e;
         if (!t || !t.time) return null;
-        const s = (0, Pe.Nm)(t.time);
-        let r = null;
-        if (t.usage_type == je.oN.U3)
-          r = (0, m.we)("#authorized_devices_lasttwofactor_login", s);
-        else if (t.usage_type == je.oN.Ej) {
+        const s = (0, Te.Nm)(t.time);
+        let a = null;
+        if (t.usage_type == ye.oN.U3)
+          a = (0, m.we)("#authorized_devices_lasttwofactor_login", s);
+        else if (t.usage_type == ye.oN.Ej) {
           const e = 1 == t.confirmation_action ? "_allow" : "_cancel";
           switch (t.confirmation_type) {
             case 2:
-              r = (0, m.we)(
+              a = (0, m.we)(
                 `#authorized_devices_lasttwofactor_confirmation_trade${e}`,
                 s,
               );
               break;
             case 3:
-              r = (0, m.we)(
+              a = (0, m.we)(
                 `#authorized_devices_lasttwofactor_confirmation_marketlisting${e}`,
                 s,
               );
               break;
             case 5:
-              r = (0, m.we)(
+              a = (0, m.we)(
                 `#authorized_devices_lasttwofactor_confirmation_phonechange${e}`,
                 s,
               );
               break;
             case 6:
-              r = (0, m.we)(
+              a = (0, m.we)(
                 `#authorized_devices_lasttwofactor_confirmation_accountrecovery${e}`,
                 s,
               );
               break;
             case 7:
-              r = (0, m.we)(
+              a = (0, m.we)(
                 `#authorized_devices_lasttwofactor_confirmation_buildchange${e}`,
                 s,
               );
               break;
             case 8:
-              r = (0, m.we)(
+              a = (0, m.we)(
                 `#authorized_devices_lasttwofactor_confirmation_adduser${e}`,
                 s,
               );
               break;
             case 9:
-              r = (0, m.we)(
+              a = (0, m.we)(
                 `#authorized_devices_lasttwofactor_confirmation_registerapikey${e}`,
                 s,
               );
               break;
             case 10:
-              r = (0, m.we)(
+              a = (0, m.we)(
                 `#authorized_devices_lasttwofactor_confirmation_familygroupinvite${e}`,
                 s,
               );
               break;
             case 11:
-              r = (0, m.we)(
+              a = (0, m.we)(
                 `#authorized_devices_lasttwofactor_confirmation_joinfamilygroup${e}`,
                 s,
               );
               break;
             case 12:
-              r = (0, m.we)(
+              a = (0, m.we)(
                 `#authorized_devices_lasttwofactor_confirmation_marketpurchase${e}`,
                 s,
               );
               break;
             case 13:
-              r = (0, m.we)(
+              a = (0, m.we)(
                 `#authorized_devices_lasttwofactor_confirmation_refund${e}`,
                 s,
               );
               break;
             default:
-              r = (0, m.we)(
+              a = (0, m.we)(
                 `#authorized_devices_lasttwofactor_confirmation_unknown${e}`,
                 s,
               );
           }
         }
-        return r
-          ? (0, a.jsx)("div", {
-              className: De.LastSeenRow,
-              children: (0, a.jsx)("div", { children: r }),
+        return a
+          ? (0, r.jsx)("div", {
+              className: Ae.LastSeenRow,
+              children: (0, r.jsx)("div", { children: a }),
             })
           : null;
       }
-      function Fe(e) {
+      function ze(e) {
         const { device: t } = e,
           s =
             t.first_seen?.time &&
-            t.first_seen.time + 2 * Te.Kp.PerWeek > Date.now() / 1e3,
-          r = t.effective_token_state == xe.wv.BH;
+            t.first_seen.time + 2 * be.Kp.PerWeek > Date.now() / 1e3,
+          a = t.effective_token_state == Se.wv.BH;
         let i = (0, m.we)(
           "#accountpreferences_authorized_devices_last_seen_max",
         );
         return (
           t.last_seen?.time
-            ? (i = (0, Pe.Nm)(t.last_seen.time))
+            ? (i = (0, Te.Nm)(t.last_seen.time))
             : t.time_updated &&
               t.time_updated > Math.floor(Date.now() / 1e3 - 7776e3) &&
-              (i = (0, Pe.Nm)(t.time_updated)),
-          (0, a.jsxs)("div", {
-            className: De.LastSeenRow,
+              (i = (0, Te.Nm)(t.time_updated)),
+          (0, r.jsxs)("div", {
+            className: Ae.LastSeenRow,
             children: [
-              (0, a.jsxs)("div", {
+              (0, r.jsxs)("div", {
                 children: [
-                  (0, a.jsx)("span", {
-                    className: De.LastActive,
+                  (0, r.jsx)("span", {
+                    className: Ae.LastActive,
                     children: (0, m.we)(
                       "#accountpreferences_authorized_devices_last_seen_title",
                     ),
                   }),
                   i,
-                  r &&
-                    (0, a.jsxs)("span", {
-                      className: De.LastActive,
+                  a &&
+                    (0, r.jsxs)("span", {
+                      className: Ae.LastActive,
                       children: [
                         " - ",
                         (0, m.we)(
@@ -2517,11 +2637,11 @@
                 ],
               }),
               s &&
-                (0, a.jsx)("div", {
-                  className: De.NewDevice,
+                (0, r.jsx)("div", {
+                  className: Ae.NewDevice,
                   children: (0, m.oW)(
                     "#accountpreferences_authorized_devices_new_device",
-                    (0, a.jsx)("a", {
+                    (0, r.jsx)("a", {
                       href: l.TS.HELP_BASE_URL + "wizard/HelpWithAccountStolen",
                       onClick: (e) => {
                         e.stopPropagation();
@@ -2535,96 +2655,96 @@
       }
       function Le(e) {
         const { device: t } = e;
-        return (0, a.jsx)("div", {
-          className: De.AuthorizedDeviceDetails,
+        return (0, r.jsx)("div", {
+          className: Ae.AuthorizedDeviceDetails,
           children: (0, m.we)(
-            ze(t),
+            Be(t),
             (0, m.TW)(t.first_seen.time) +
               " @ " +
-              (0, Pe.KC)(t.first_seen.time),
+              (0, Te.KC)(t.first_seen.time),
           ),
         });
       }
-      function ze(e) {
+      function Be(e) {
         const t = e.authentication_type,
           s = e.auth_type;
-        if (t == xe.O6.w$) return "#authorized_devices_default_qr";
-        if (e.effective_token_state == xe.wv.BH)
+        if (t == Se.O6.w$) return "#authorized_devices_default_qr";
+        if (e.effective_token_state == Se.wv.BH)
           return "#authorized_devices_remembered_machine";
         switch (s) {
-          case xe.TY.Xs:
+          case Se.TY.Xs:
             return "#authorized_devices_emailcode_password";
-          case xe.TY.bH:
+          case Se.TY.bH:
             return "#authorized_devices_devicecode_password";
-          case xe.TY.x0:
-          case xe.TY.$Y:
+          case Se.TY.x0:
+          case Se.TY.$Y:
             return "#authorized_devices_mobileconf_password";
-          case xe.TY.ig:
+          case Se.TY.ig:
             return "#authorized_devices_machinetoken_password";
-          case xe.TY.sF:
-          case xe.TY.oP:
-          case xe.TY.WM:
+          case Se.TY.sF:
+          case Se.TY.oP:
+          case Se.TY.WM:
           default:
             return "#authorized_devices_default_password";
         }
       }
-      function Qe(e) {
+      function Me(e) {
         const { device: t, bHasAuthenticator: s } = e,
-          r = t.effective_token_state == xe.wv.BH;
+          a = t.effective_token_state == Se.wv.BH;
         let i = null;
-        if (t.platform_type == xe.SS.tS)
-          i = r
-            ? (0, a.jsx)(pe.SQF, {
-                className: (0, f.A)(De.DeviceLogo, De.RememberedDevice),
+        if (t.platform_type == Se.SS.tS)
+          i = a
+            ? (0, r.jsx)(ve.SQF, {
+                className: (0, g.A)(Ae.DeviceLogo, Ae.RememberedDevice),
               })
-            : (0, a.jsx)(pe.FH7, { className: De.DeviceLogo });
+            : (0, r.jsx)(ve.FH7, { className: Ae.DeviceLogo });
         else if (
-          t.platform_type != xe.SS.w0 ||
-          (t.gaming_device_type !== j.LS$ &&
-            t.gaming_device_type != j.ppM &&
-            t.gaming_device_type != j.Ner)
+          t.platform_type != Se.SS.w0 ||
+          (t.gaming_device_type !== y.LS$ &&
+            t.gaming_device_type != y.ppM &&
+            t.gaming_device_type != y.Ner)
         )
           switch (t.os_platform) {
-            case ye.tz.k_EPlatformTypeWin32:
-            case ye.tz.k_EPlatformTypeWin64:
-            case ye.tz.k_EPlatformTypeOSX:
-              i = r
-                ? (0, a.jsx)(pe.ulH, {
-                    className: (0, f.A)(De.DeviceLogo, De.RememberedDevice),
+            case ke.tz.k_EPlatformTypeWin32:
+            case ke.tz.k_EPlatformTypeWin64:
+            case ke.tz.k_EPlatformTypeOSX:
+              i = a
+                ? (0, r.jsx)(ve.ulH, {
+                    className: (0, g.A)(Ae.DeviceLogo, Ae.RememberedDevice),
                   })
-                : (0, a.jsx)(pe.nl8, { className: De.DeviceLogo });
+                : (0, r.jsx)(ve.nl8, { className: Ae.DeviceLogo });
               break;
-            case ye.tz.k_EPlatformTypeAndroid32:
-            case ye.tz.k_EPlatformTypeAndroid64:
-            case ye.tz.k_EPlatformTypeLinux32:
-            case ye.tz.k_EPlatformTypeLinux64:
-            case ye.tz.k_EPlatformTypeIOS32:
-            case ye.tz.k_EPlatformTypeIOS64:
-              i = (0, a.jsx)(ke.rfv, { className: De.DeviceLogo });
+            case ke.tz.k_EPlatformTypeAndroid32:
+            case ke.tz.k_EPlatformTypeAndroid64:
+            case ke.tz.k_EPlatformTypeLinux32:
+            case ke.tz.k_EPlatformTypeLinux64:
+            case ke.tz.k_EPlatformTypeIOS32:
+            case ke.tz.k_EPlatformTypeIOS64:
+              i = (0, r.jsx)(Ne.rfv, { className: Ae.DeviceLogo });
           }
         else
-          i = r
-            ? (0, a.jsx)(pe.VRo, {
-                className: (0, f.A)(De.DeviceLogo, De.RememberedDevice),
+          i = a
+            ? (0, r.jsx)(ve.VRo, {
+                className: (0, g.A)(Ae.DeviceLogo, Ae.RememberedDevice),
               })
-            : (0, a.jsx)(pe.oEi, { className: De.DeviceLogo });
+            : (0, r.jsx)(ve.oEi, { className: Ae.DeviceLogo });
         return s
-          ? (0, a.jsxs)("div", {
-              className: De.DeviceLogoBoundingBox,
+          ? (0, r.jsxs)("div", {
+              className: Ae.DeviceLogoBoundingBox,
               children: [
                 i,
-                (0, a.jsx)("img", {
-                  src: fe,
-                  className: De.DeviceSteamGuardLogo,
+                (0, r.jsx)("img", {
+                  src: ge,
+                  className: Ae.DeviceSteamGuardLogo,
                 }),
               ],
             })
           : i;
       }
-      function Ue(e) {
+      function Oe(e) {
         const t = e.last_seen ?? e.first_seen;
         if (t) {
-          if (!(0, Se.nA)(l.TS.EREALM))
+          if (!(0, xe.nA)(l.TS.EREALM))
             return {
               location: `${t.city ? t.city + ", " : ""}${t.country}`,
               country: t.country,
@@ -2638,56 +2758,56 @@
           country: "",
         };
       }
-      function Me(e) {
+      function Ue(e) {
         const { device: t } = e;
         switch (t.platform_type) {
-          case xe.SS.Ql:
+          case Se.SS.Ql:
             return (0, m.we)(
               "#accountpreferences_authorized_devices_type_mobile",
             );
-          case xe.SS.w0:
-            return t.gaming_device_type === j.LS$
+          case Se.SS.w0:
+            return t.gaming_device_type === y.LS$
               ? (0, m.we)(
                   "#accountpreferences_authorized_devices_type_steamdeck",
                 )
-              : t.gaming_device_type == j.ppM
+              : t.gaming_device_type == y.ppM
                 ? (0, m.we)(
                     "#accountpreferences_authorized_devices_type_legiongos",
                   )
-                : t.gaming_device_type == j.Ner
+                : t.gaming_device_type == y.Ner
                   ? (0, m.we)(
                       "#accountpreferences_authorized_devices_type_steamos",
                     )
                   : (0, m.we)(
                       "#accountpreferences_authorized_devices_type_desktop",
                     );
-          case xe.SS.tS:
+          case Se.SS.tS:
             return (0, m.we)(
               "#accountpreferences_authorized_devices_type_browser",
             );
-          case xe.SS.FB:
+          case Se.SS.FB:
           default:
             return (0, m.we)(
               "#accountpreferences_authorized_devices_type_unknown",
             );
         }
       }
-      function Ke(e) {
+      function Ve(e) {
         const { closeModal: t } = e;
-        return (0, a.jsx)(P.x_, {
+        return (0, r.jsx)(T.x_, {
           onEscKeypress: t,
-          children: (0, a.jsxs)(v.UC, {
+          children: (0, r.jsxs)(p.UC, {
             children: [
-              (0, a.jsx)(v.Y9, {
+              (0, r.jsx)(p.Y9, {
                 children: (0, m.we)("#authorized_devices_deauthorize_title"),
               }),
-              (0, a.jsxs)(v.nB, {
+              (0, r.jsxs)(p.nB, {
                 children: [
-                  (0, a.jsx)(v.a3, {
+                  (0, r.jsx)(p.a3, {
                     children: (0, m.we)("#authorized_devices_deauthorize_msg"),
                   }),
-                  (0, a.jsx)(v.wi, {
-                    children: (0, a.jsx)(v.CB, {
+                  (0, r.jsx)(p.wi, {
+                    children: (0, r.jsx)(p.CB, {
                       strOKText: (0, m.we)(
                         "#authorized_devices_deauthorize_proceed",
                       ),
@@ -2720,57 +2840,57 @@
         });
       }
       var We,
-        Ve = s(86342);
-      function Oe(e) {
-        return (0, a.jsxs)("div", {
-          children: [(0, a.jsx)(Ye, {}), (0, a.jsx)(be, {})],
+        Ke = s(86342);
+      function qe(e) {
+        return (0, r.jsxs)("div", {
+          children: [(0, r.jsx)(Ye, {}), (0, r.jsx)(Ce, {})],
         });
       }
       function Ye(e) {
         const t = l.TS.HELP_BASE_URL + "faqs/view/7EFD-3CAE-64D3-1C31",
           s = he.Get(),
-          r =
+          a =
             s.GetTwoFactorStatus()?.steamguard_scheme ==
             We.k_ETwoFactorTokenSteamguardScheme_TwoFactor;
-        return (0, a.jsxs)(a.Fragment, {
+        return (0, r.jsxs)(r.Fragment, {
           children: [
-            (0, a.jsx)("div", {
+            (0, r.jsx)("div", {
               className: "account_header_line",
-              children: (0, a.jsxs)("div", {
+              children: (0, r.jsxs)("div", {
                 children: [
-                  (0, a.jsx)(pe.iSZ, { className: Ve.HeaderIcon }),
+                  (0, r.jsx)(ve.iSZ, { className: Ke.HeaderIcon }),
                   (0, m.we)("#youraccount_account_security"),
                 ],
               }),
             }),
-            (0, a.jsxs)("div", {
-              className: (0, f.A)(
-                Ve.AccountSecurityCtn,
+            (0, r.jsxs)("div", {
+              className: (0, g.A)(
+                Ke.AccountSecurityCtn,
                 "account_settings_container",
               ),
               children: [
-                (0, a.jsx)("div", {
+                (0, r.jsx)("div", {
                   children: (0, m.oW)(
                     "#accountpreferences_account_security_description",
-                    (0, a.jsx)(w.Ii, { target: "_blank", href: t }),
+                    (0, r.jsx)(w.Ii, { target: "_blank", href: t }),
                   ),
                 }),
-                r
-                  ? (0, a.jsx)(Je, {
+                a
+                  ? (0, r.jsx)($e, {
                       msgTwoFactorStatus: s.GetTwoFactorStatus(),
                       strFaqUrl: t,
                     })
-                  : (0, a.jsx)(qe, { strFaqUrl: t }),
-                (0, a.jsxs)("div", {
-                  className: Ve.AccountDetailsCtn,
+                  : (0, r.jsx)(Xe, { strFaqUrl: t }),
+                (0, r.jsxs)("div", {
+                  className: Ke.AccountDetailsCtn,
                   children: [
-                    (0, a.jsx)(Ze, {}),
-                    (0, a.jsx)("div", { className: Ve.Divider }),
-                    (0, a.jsx)(et, {}),
-                    (0, a.jsx)($e, {
+                    (0, r.jsx)(Je, {}),
+                    (0, r.jsx)("div", { className: Ke.Divider }),
+                    (0, r.jsx)(et, {}),
+                    (0, r.jsx)(Ze, {
                       msgTwoFactorStatus: s.GetTwoFactorStatus(),
                     }),
-                    r && (0, a.jsx)(tt, {}),
+                    a && (0, r.jsx)(tt, {}),
                   ],
                 }),
               ],
@@ -2778,14 +2898,14 @@
           ],
         });
       }
-      function Je(e) {
+      function $e(e) {
         const { msgTwoFactorStatus: t, strFaqUrl: s } = e,
-          r = he.Get(),
-          i = Be(r),
+          a = he.Get(),
+          i = Ge(a),
           n = Re(),
           c = [
-            ...(r.GetActiveDevices() ?? []),
-            ...(r.GetActiveDevices() ?? []),
+            ...(a.GetActiveDevices() ?? []),
+            ...(a.GetActiveDevices() ?? []),
           ];
         let o = null,
           d = !1;
@@ -2793,21 +2913,21 @@
           t?.last_seen_auth_token_id &&
             ((o = c.find((e) => e.token_id === t.last_seen_auth_token_id)),
             (d = n?.length > 0 && n == o?.token_id)),
-          (0, a.jsxs)("div", {
+          (0, r.jsxs)("div", {
             children: [
-              (0, a.jsxs)("div", {
-                className: Ve.SteamGuardStatusHeader,
+              (0, r.jsxs)("div", {
+                className: Ke.SteamGuardStatusHeader,
                 children: [
-                  (0, a.jsx)("img", { className: Ve.SteamGuardLogo, src: fe }),
-                  (0, a.jsx)("div", {
-                    className: Ve.HeaderText,
+                  (0, r.jsx)("img", { className: Ke.SteamGuardLogo, src: ge }),
+                  (0, r.jsx)("div", {
+                    className: Ke.HeaderText,
                     children: (0, m.we)(
                       "#accountpreferences_account_security_steamguard",
                     ),
                   }),
-                  (0, a.jsx)("div", {
-                    className: Ve.RemoveText,
-                    children: (0, a.jsx)(w.Ii, {
+                  (0, r.jsx)("div", {
+                    className: Ke.RemoveText,
+                    children: (0, r.jsx)(w.Ii, {
                       href:
                         l.TS.STORE_BASE_URL +
                         "twofactor/remove?step=promptdevice",
@@ -2818,33 +2938,33 @@
                   }),
                 ],
               }),
-              (0, a.jsxs)("div", {
-                className: Ve.SteamGuardStatusBody,
+              (0, r.jsxs)("div", {
+                className: Ke.SteamGuardStatusBody,
                 children: [
                   !!o &&
-                    (0, a.jsxs)(a.Fragment, {
+                    (0, r.jsxs)(r.Fragment, {
                       children: [
-                        (0, a.jsx)(Ie, {
-                          className: Ve.AuthorizedDevice,
+                        (0, r.jsx)(Ie, {
+                          className: Ke.AuthorizedDevice,
                           device: o,
                           strActiveCountry: i,
                           msgTwoFactorStatus: t,
                           bShowAuthenticatorActivity: !0,
                         }),
-                        (0, a.jsx)("div", { className: Ve.Divider }),
+                        (0, r.jsx)("div", { className: Ke.Divider }),
                       ],
                     }),
-                  (0, a.jsxs)("div", {
-                    className: Ve.SteamGuardActionsCtn,
+                  (0, r.jsxs)("div", {
+                    className: Ke.SteamGuardActionsCtn,
                     children: [
-                      (0, a.jsx)(at, {
+                      (0, r.jsx)(rt, {
                         strLabel: (0, m.we)(
                           "#accountpreferences_account_security_move",
                         ),
                         href:
                           l.TS.HELP_BASE_URL + "faqs/view/29A9-9EEE-09F0-75F9",
                       }),
-                      (0, a.jsx)(at, {
+                      (0, r.jsx)(rt, {
                         strLabel: (0, m.we)(
                           "#accountpreferences_account_security_help_lost",
                         ),
@@ -2852,9 +2972,9 @@
                           l.TS.STORE_BASE_URL +
                           "twofactor/remove?step=promptdevice",
                       }),
-                      (0, a.jsx)("div", {
-                        className: Ve.RightAligned,
-                        children: (0, a.jsx)(w.Ii, {
+                      (0, r.jsx)("div", {
+                        className: Ke.RightAligned,
+                        children: (0, r.jsx)(w.Ii, {
                           href: s,
                           target: "_blank",
                           children: (0, m.we)(
@@ -2870,103 +2990,103 @@
           })
         );
       }
-      function qe(e) {
+      function Xe(e) {
         const { strFaqUrl: t } = e,
           s = he.Get().GetLatestAndroidAppVersion();
-        return (0, a.jsxs)("div", {
-          className: Ve.NoSteamGuardCtn,
+        return (0, r.jsxs)("div", {
+          className: Ke.NoSteamGuardCtn,
           children: [
-            (0, a.jsxs)("div", {
-              className: Ve.SteamGuardStatusHeader,
+            (0, r.jsxs)("div", {
+              className: Ke.SteamGuardStatusHeader,
               children: [
-                (0, a.jsx)("img", { className: Ve.SteamGuardLogo, src: ge }),
-                (0, a.jsx)("div", {
-                  className: Ve.HeaderText,
+                (0, r.jsx)("img", { className: Ke.SteamGuardLogo, src: fe }),
+                (0, r.jsx)("div", {
+                  className: Ke.HeaderText,
                   children: (0, m.we)(
                     "#accountpreferences_account_security_no_steamguard",
                   ),
                 }),
               ],
             }),
-            (0, a.jsx)("div", { className: Ve.Divider }),
-            (0, a.jsxs)("div", {
-              className: Ve.NoSteamGuardBody,
+            (0, r.jsx)("div", { className: Ke.Divider }),
+            (0, r.jsxs)("div", {
+              className: Ke.NoSteamGuardBody,
               children: [
-                (0, a.jsxs)("div", {
-                  className: Ve.QROuterCtn,
+                (0, r.jsxs)("div", {
+                  className: Ke.QROuterCtn,
                   children: [
-                    (0, a.jsxs)("div", {
-                      className: Ve.GetMobileAppCtn,
+                    (0, r.jsxs)("div", {
+                      className: Ke.GetMobileAppCtn,
                       children: [
-                        (0, a.jsx)("div", {
-                          className: Ve.GetMobileAppText,
+                        (0, r.jsx)("div", {
+                          className: Ke.GetMobileAppText,
                           children: (0, m.oW)(
                             "#accountpreferences_account_security_get_app",
-                            (0, a.jsx)(w.Ii, {
+                            (0, r.jsx)(w.Ii, {
                               href:
                                 l.TS.STORE_BASE_URL + "mobile#mobile_section",
                             }),
                           ),
                         }),
-                        (0, a.jsx)("div", {
+                        (0, r.jsx)("div", {
                           children: (0, m.we)(
                             "#accountpreferences_account_security_scan_qr",
                           ),
                         }),
                       ],
                     }),
-                    (0, a.jsx)("img", { src: Ae, className: Ve.QRCode }),
+                    (0, r.jsx)("img", { src: je, className: Ke.QRCode }),
                   ],
                 }),
-                (0, a.jsxs)("div", {
-                  className: Ve.MobileAppLinksCtn,
+                (0, r.jsxs)("div", {
+                  className: Ke.MobileAppLinksCtn,
                   children: [
-                    (0, a.jsx)("div", {
+                    (0, r.jsx)("div", {
                       children: (0, m.we)(
                         "#accountpreferences_account_security_mobile_os_reqs",
                       ),
                     }),
-                    (0, a.jsxs)("div", {
-                      className: Ve.MobileAppDownloadImages,
+                    (0, r.jsxs)("div", {
+                      className: Ke.MobileAppDownloadImages,
                       children: [
-                        (0, a.jsx)(w.Ii, {
+                        (0, r.jsx)(w.Ii, {
                           href: "https://itunes.apple.com/us/app/steam-mobile/id495369748",
                           rel: "noopener",
                           target: "_blank",
-                          children: (0, a.jsx)(ve.o, {
-                            srcs: Xe(
+                          children: (0, r.jsx)(pe.o, {
+                            srcs: Qe(
                               l.TS.IMG_URL +
                                 "mobile/localizedimages/appleappstore/apple_store_",
                               ".png",
                             ),
-                            className: Ve.AppleAppStoreImg,
+                            className: Ke.AppleAppStoreImg,
                           }),
                         }),
-                        (0, a.jsx)(w.Ii, {
+                        (0, r.jsx)(w.Ii, {
                           href: "https://play.google.com/store/apps/details?id=com.valvesoftware.android.steam.community",
                           rel: "noopener",
                           target: "_blank",
-                          children: (0, a.jsx)(ve.o, {
-                            srcs: Xe(
+                          children: (0, r.jsx)(pe.o, {
+                            srcs: Qe(
                               l.TS.IMG_URL +
                                 "mobile/localizedimages/googleplaystore/google_play_store_",
                               ".png",
                             ),
-                            className: Ve.GooglePlayStoreImg,
+                            className: Ke.GooglePlayStoreImg,
                           }),
                         }),
                       ],
                     }),
-                    (0, a.jsx)("div", {
+                    (0, r.jsx)("div", {
                       children: (0, m.oW)(
                         "#accountpreferences_account_security_apk_download",
-                        (0, a.jsx)("a", {
+                        (0, r.jsx)("a", {
                           href: `https://media.steampowered.com/apps/steam-android/steam-${s}.apk`,
                         }),
                       ),
                     }),
-                    (0, a.jsx)("div", {
-                      children: (0, a.jsx)("a", {
+                    (0, r.jsx)("div", {
+                      children: (0, r.jsx)("a", {
                         href: t,
                         target: "_blank",
                         children: (0, m.we)(
@@ -2981,24 +3101,24 @@
           ],
         });
       }
-      function Xe(e, t) {
+      function Qe(e, t) {
         const s = m.A0.GetLanguageFallback(l.TS.LANGUAGE);
-        let a = [e + l.TS.LANGUAGE + t];
-        return l.TS.LANGUAGE != s && a.push(e + s + t), a;
+        let r = [e + l.TS.LANGUAGE + t];
+        return l.TS.LANGUAGE != s && r.push(e + s + t), r;
       }
-      function Ze(e) {
+      function Je(e) {
         const t = he.Get(),
           s = l.TS.IN_MOBILE_WEBVIEW;
-        return (0, a.jsxs)("div", {
-          className: Ve.AccountDetailsSubBlock,
+        return (0, r.jsxs)("div", {
+          className: Ke.AccountDetailsSubBlock,
           children: [
-            (0, a.jsx)(st, {
+            (0, r.jsx)(st, {
               strLabel: (0, m.we)(
                 "#accountpreferences_account_security_account_name",
               ),
               strText: t.GetAccountName(),
             }),
-            (0, a.jsx)(at, {
+            (0, r.jsx)(rt, {
               strLabel: (0, m.we)(
                 "#accountpreferences_account_security_change_pass",
               ),
@@ -3010,29 +3130,29 @@
           ],
         });
       }
-      function $e(e) {
+      function Ze(e) {
         const { msgTwoFactorStatus: t } = e,
           s = he.Get(),
-          r = t.email_validated,
+          a = t.email_validated,
           i = t.steamguard_scheme == We.k_ETwoFactorTokenSteamguardScheme_Email,
           n = l.TS.IN_MOBILE_WEBVIEW;
-        return (0, a.jsxs)("div", {
-          className: Ve.AccountDetailsSubBlock,
+        return (0, r.jsxs)("div", {
+          className: Ke.AccountDetailsSubBlock,
           children: [
-            (0, a.jsx)(st, {
+            (0, r.jsx)(st, {
               strLabel: (0, m.we)("#accountpreferences_account_security_email"),
               strText: s.GetEmailAddress(),
             }),
-            (0, a.jsx)(st, {
+            (0, r.jsx)(st, {
               strLabel: (0, m.we)(
                 "#accountpreferences_account_security_email_status",
               ),
-              strText: r
+              strText: a
                 ? (0, m.we)("#youraccount_email_verified")
                 : (0, m.we)("#youraccount_email_unverified"),
             }),
             i &&
-              (0, a.jsx)(st, {
+              (0, r.jsx)(st, {
                 strLabel: (0, m.we)(
                   "#accountpreferences_account_security_verification",
                 ),
@@ -3040,10 +3160,10 @@
                   "#accountpreferences_account_security_via_email",
                 ),
               }),
-            (0, a.jsxs)("div", {
-              className: Ve.EmailActions,
+            (0, r.jsxs)("div", {
+              className: Ke.EmailActions,
               children: [
-                (0, a.jsx)(at, {
+                (0, r.jsx)(rt, {
                   strLabel: (0, m.we)(
                     "#accountpreferences_account_security_change_email",
                   ),
@@ -3053,7 +3173,7 @@
                   target: n ? "_blank" : void 0,
                 }),
                 i &&
-                  (0, a.jsx)(at, {
+                  (0, r.jsx)(rt, {
                     strLabel: (0, m.we)(
                       "#accountpreferences_account_security_remove_email_guard",
                     ),
@@ -3073,16 +3193,16 @@
               "#accountpreferences_account_security_phone_hint",
               t.GetPhoneHint(),
             )),
-          (0, a.jsxs)("div", {
-            className: Ve.AccountDetailsSubBlock,
+          (0, r.jsxs)("div", {
+            className: Ke.AccountDetailsSubBlock,
             children: [
-              (0, a.jsx)(st, {
+              (0, r.jsx)(st, {
                 strLabel: (0, m.we)(
                   "#accountpreferences_account_security_phone",
                 ),
                 strText: s,
               }),
-              (0, a.jsx)(at, {
+              (0, r.jsx)(rt, {
                 strLabel: (0, m.we)(
                   "#accountpreferences_account_security_manage_phone",
                 ),
@@ -3093,15 +3213,15 @@
         );
       }
       function tt(e) {
-        return (0, a.jsxs)("div", {
-          className: Ve.AccountDetailsSubBlock,
+        return (0, r.jsxs)("div", {
+          className: Ke.AccountDetailsSubBlock,
           children: [
-            (0, a.jsx)(st, {
+            (0, r.jsx)(st, {
               strLabel: (0, m.we)(
                 "#accountpreferences_account_security_backup_codes",
               ),
             }),
-            (0, a.jsx)(at, {
+            (0, r.jsx)(rt, {
               strLabel: (0, m.we)(
                 "#accountpreferences_account_security_get_backup_codes",
               ),
@@ -3112,23 +3232,23 @@
       }
       function st(e) {
         const { strLabel: t, strText: s } = e;
-        return (0, a.jsxs)("div", {
+        return (0, r.jsxs)("div", {
           children: [
-            (0, a.jsx)("span", {
-              className: Ve.AccountDetailLabel,
+            (0, r.jsx)("span", {
+              className: Ke.AccountDetailLabel,
               children: t,
             }),
-            !!s && (0, a.jsx)("span", { children: s }),
+            !!s && (0, r.jsx)("span", { children: s }),
           ],
         });
       }
-      function at(e) {
-        const { strLabel: t, href: s, target: r } = e;
-        return (0, a.jsx)("div", {
-          children: (0, a.jsx)(w.Ii, {
-            className: Ve.AccountActionButton,
+      function rt(e) {
+        const { strLabel: t, href: s, target: a } = e;
+        return (0, r.jsx)("div", {
+          children: (0, r.jsx)(w.Ii, {
+            className: Ke.AccountActionButton,
             href: s,
-            target: r,
+            target: a,
             children: t,
           }),
         });
@@ -3141,7 +3261,7 @@
           (e[(e.k_ETwoFactorTokenSteamguardScheme_TwoFactor = 2)] =
             "k_ETwoFactorTokenSteamguardScheme_TwoFactor");
       })(We || (We = {}));
-      const rt = r.lazy(() =>
+      const at = a.lazy(() =>
           Promise.all([
             s.e(92298),
             s.e(70576),
@@ -3167,44 +3287,44 @@
         nt = (e) => {
           const t = e.match.url,
             s = it;
-          return (0, a.jsxs)(i.dO, {
+          return (0, r.jsxs)(i.dO, {
             children: [
-              (0, a.jsx)(i.qh, {
+              (0, r.jsx)(i.qh, {
                 path: `${t}${s.CookieSettings()}`,
                 render: () =>
-                  (0, a.jsx)(U.X, {
-                    config: { "cookie-preferences": () => (0, a.jsx)(H, {}) },
+                  (0, r.jsx)(O.X, {
+                    config: { "cookie-preferences": () => (0, r.jsx)(H, {}) },
                   }),
               }),
-              (0, a.jsx)(i.qh, {
+              (0, r.jsx)(i.qh, {
                 path: `${t}${s.FamilyManagement()}`,
                 render: () =>
-                  (0, a.jsx)(U.X, {
-                    config: { "family-management": () => (0, a.jsx)(rt, {}) },
+                  (0, r.jsx)(O.X, {
+                    config: { "family-management": () => (0, r.jsx)(at, {}) },
                   }),
               }),
-              (0, a.jsx)(i.qh, {
+              (0, r.jsx)(i.qh, {
                 path: `${t}${s.SecurityDevices()}`,
                 render: () =>
-                  (0, a.jsx)(U.X, {
-                    config: { "security-devices": () => (0, a.jsx)(Oe, {}) },
+                  (0, r.jsx)(O.X, {
+                    config: { "security-devices": () => (0, r.jsx)(qe, {}) },
                   }),
               }),
-              (0, a.jsx)(i.qh, {
+              (0, r.jsx)(i.qh, {
                 path: `${t}${s.PlaytestInvites()}`,
                 render: () =>
-                  (0, a.jsx)(U.X, {
+                  (0, r.jsx)(O.X, {
                     config: {
                       "playtest-invites": () =>
-                        (0, a.jsx)(ae, { bShowPlaytestOverview: !0 }),
+                        (0, r.jsx)(re, { bShowPlaytestOverview: !0 }),
                     },
                   }),
               }),
-              (0, a.jsx)(i.qh, {
+              (0, r.jsx)(i.qh, {
                 path: `${t}${s.Playtests()}`,
                 render: () =>
-                  (0, a.jsx)(U.X, {
-                    config: { playtests: (e) => (0, a.jsx)(me, { ...e }) },
+                  (0, r.jsx)(O.X, {
+                    config: { playtests: (e) => (0, r.jsx)(me, { ...e }) },
                   }),
               }),
             ],

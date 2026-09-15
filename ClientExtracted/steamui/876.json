@@ -86,7 +86,7 @@
     "Time_Recent": "Reciente",
     "Time_Today_At": "Hoy a las %1$s",
     "Time_Yesterday_At": "Ayer a las %1$s",
-    "Time_Past_At": "%1$s a las %2$s (hora del Pacífico)",
+    "Time_Past_At": "%1$s a la(s) %2$s",
     "Time_QuarterOfYear_Q1": "1.ᵉʳ trimestre del %1$s",
     "Time_QuarterOfYear_Q2": "2.º trimestre del %1$s",
     "Time_QuarterOfYear_Q3": "3.ᵉʳ trimestre del %1$s",
