@@ -371,5 +371,14 @@
     "Watchlist_NameLabel": "Optional name",
     "ViewAllItems": "View all items",
     "Home_TrendingSection_Label": "Trending Items",
-    "Home_TrendingSection_ViewMore": "View more items..."
+    "Home_TrendingSection_ViewMore": "View more items...",
+    "OrderSummary_ActiveSell": "%1$s active sell listing",
+    "OrderSummary_ActiveSell_Plural": "%1$s active sell listings",
+    "OrderSummary_ActiveBuy": "%1$s active buy order",
+    "OrderSummary_ActiveBuy_Plural": "%1$s active buy orders",
+    "OrderSummary_YouHave": "You have: %1$s",
+    "OrderSummary_NoOrders": "You have no active orders",
+    "OrderSummary_Error": "There was a problem loading your active orders. Please try again later.",
+    "OrderSummary_InventoryLink": "View My Inventory",
+    "OrderSummary_HistoryLink": "View My Market History"
 }
