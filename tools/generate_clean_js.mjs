@@ -92,6 +92,23 @@ function normalizeAst(ast) {
 		}
 	}
 
+	// STEP 1.5: Special handling for the client ui js chunk that contains the CLSTAMP value in a string literal
+	// But isn't assigned to clstamp variable, so we assume the numeral value that is assigned the most is clstamp.
+	let clstamp;
+	if (inputFile.includes("/ClientExtracted/steamui/")) {
+		const stringCounts = new Map();
+		traverse(ast, {
+			enter: (node) => {
+				if (node.type === Syntax.Literal && typeof node.value === "string") {
+					if (/^[0-9]{8}$/.test(node.value)) {
+						stringCounts.set(node.value, (stringCounts.get(node.value) || 0) + 1);
+					}
+				}
+			},
+		});
+		clstamp = [...stringCounts.entries()].reduce((a, b) => (b[1] > a[1] ? b : a), [null, 0])[0];
+	}
+
 	// STEP 2: First pass to find webpack modules and require functions
 	const webpackModules = new Map();
 	const webpackRequires = new Set();
@@ -398,6 +415,14 @@ function normalizeAst(ast) {
 						node.value = normalizedPath;
 						node.raw = `"${normalizedPath}"`;
 					}
+				}
+			}
+
+			// Remove any occurrences of the original exact CLSTAMP value in string literals
+			if (clstamp && node.type === Syntax.Literal && typeof node.value === "string") {
+				if (node.value === clstamp) {
+					node.value = "steamdb";
+					node.raw = '"steamdb"';
 				}
 			}
 
