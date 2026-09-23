@@ -2545,8 +2545,13 @@
           return [_, _];
         }
         ChangeNavigationSource(_, _, _, _) {
-          let _ = this.m_navigationSource.Value,
-            _ = _.nLastActiveGamepadIndex;
+          let _ = this.m_navigationSource.Value;
+          if (
+            _ == _._.MOUSE &&
+            _.eActivationSourceType == _._.KEYBOARD_SIMULATOR
+          )
+            return !1;
+          let _ = _.nLastActiveGamepadIndex;
           return (
             null != _.nActiveGamepadIndex &&
               _.nActiveGamepadIndex >= 0 &&
@@ -5299,7 +5304,9 @@
             (_[(_.k_EWindowBringToFrontAndForceOS = 1)] =
               "k_EWindowBringToFrontAndForceOS"),
             (_[(_.k_EWindowBringToFrontWithoutForcingOS = 2)] =
-              "k_EWindowBringToFrontWithoutForcingOS");
+              "k_EWindowBringToFrontWithoutForcingOS"),
+            (_[(_.k_EWindowBringToFrontUsingExistingOSState = 3)] =
+              "k_EWindowBringToFrontUsingExistingOSState");
         })(_ || (_ = {}));
       var _;
       !(function (_) {
@@ -11289,6 +11296,7 @@
             navKey: _,
             noFocusRing: _,
             focusRingSizeElementID: _,
+            focusRingHasBorderRadius: _,
             focusable: _,
             navRef: _,
             actionDescriptionMap: _,
@@ -11318,6 +11326,7 @@
             navKey: _,
             noFocusRing: _,
             focusRingSizeElementID: _,
+            focusRingHasBorderRadius: _,
             focusable: _,
             navRef: _,
             onMoveUp: _,
@@ -13680,7 +13689,7 @@
           if (
             !(null === (_ = this.m_Properties) || void 0 === _
               ? void 0
-              : _.focusRingSizeElementID)
+              : _.focusRingHasBorderRadius)
           )
             return;
           const _ = this.GetElementForFocusRingMeasure();
@@ -14894,6 +14903,13 @@
             },
             [_],
           ),
+          _ = _.useCallback((_) => !_.bInVR && "mouse" === _.pointerType, [_]),
+          _ = _.useCallback(
+            (_) => {
+              _(_) || _.ShowVirtualKeyboard();
+            },
+            [_, _],
+          ),
           _ = (0, _._)(
             (_) => {
               _.current = _;
@@ -14910,26 +14926,24 @@
                       _.SetAsCurrentVirtualKeyboardTarget,
                     ),
                   ),
-                  _.addEventListener("click", _.ShowVirtualKeyboard),
-                  _.push(() =>
-                    _.removeEventListener("click", _.ShowVirtualKeyboard),
-                  ),
+                  _.addEventListener("click", _),
+                  _.push(() => _.removeEventListener("click", _)),
                   _.push((0, _._)(_, _.ShowVirtualKeyboard)),
                   _.push((0, _._)(_, _))),
                 () => _.forEach((_) => _())
               );
             },
-            [_, _],
+            [_, _, _],
           );
         return (
           _.useLayoutEffect(
             () => (
               (0, _._)(_, {
-                TakeFocusAndShowKeyboard: () => {
+                TakeFocusAndShowKeyboard: (_) => {
                   const _ = _.current;
                   _ &&
                     (document.activeElement != _ && _.focus(),
-                    _.ShowVirtualKeyboard());
+                    (_ && _(_)) || _.ShowVirtualKeyboard());
                 },
                 HideVirtualKeyboard: () => {
                   _.HideVirtualKeyboard();
@@ -14937,7 +14951,7 @@
               }),
               () => (0, _._)(_, null)
             ),
-            [_, _],
+            [_, _, _],
           ),
           _
         );
@@ -15346,6 +15360,8 @@
               (this.m_fnGetReportingInterval = _.fnGetReportingInterval),
             _.fnGetReportTags && (this.m_fnGetReportTags = _.fnGetReportTags),
             _.fnGetURL && (this.m_fnGetURL = _.fnGetURL),
+            _.strDisplayVersion &&
+              (this.strDisplayVersion = _.strDisplayVersion),
             this.m_bEnabled ||
               (console.error(
                 "Error reporting was initialized after being disabled, possibly dropping errors.",
@@ -15505,6 +15521,7 @@
                 _.strComponentStack &&
                   (_.strComponentStack = _.strComponentStack),
                 (_.strUrl = this.m_fnGetURL()),
+                (_.strDisplayVersion = this.strDisplayVersion),
                 this.SendErrorReport(_),
                 _)
               : null;
@@ -15582,7 +15599,8 @@
                 _.set_message(JSON.stringify(_.message)),
                 _.strComponentStack &&
                   (null != _ || (_ = {}),
-                  (_.componentStack = _.strComponentStack)),
+                  (_.componentStack = _.strComponentStack),
+                  (_.strDisplayVersion = _.strDisplayVersion)),
                 _ && _.set_context(JSON.stringify(_)),
                 _.strUrl && _.set_url(_.strUrl),
                 _
@@ -16300,9 +16318,10 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
       });
-      var _,
-        _ = __webpack_require__("chunkid"),
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -16310,6 +16329,22 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
+      const _ = "0";
+      var _;
+      function _(_) {
+        switch (_.subject_type) {
+          case _._:
+            return !!_.topic;
+          case _._:
+            return !!_.comment_thread_id;
+          case _._:
+            return !!_.published_file_id;
+          case _._:
+          case _._:
+            return !!_.sender_account_id;
+        }
+        return !1;
+      }
       !(function (_) {
         (_[(_.k_EContentModerationAction_None = 0)] =
           "k_EContentModerationAction_None"),
@@ -16601,6 +16636,7 @@
         _._,
         _._,
         _._;
+      new Set([_._]);
       function _() {
         return [
           {
@@ -17007,6 +17043,8 @@
             return _._.Localize("#moderation_sanction_markassuspicious");
           case _._:
             return _._.Localize("#moderation_sanction_relabelled");
+          case _._:
+            return _._.Localize("#moderation_sanction_markedincompatible");
           case _._:
             return _
               ? _._.Localize("#moderation_sanction_tradebanned_forever")
@@ -18101,6 +18139,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       const _ = 1,
         _ = 2,
@@ -18112,7 +18151,8 @@
         _ = 8,
         _ = 9,
         _ = 10,
-        _ = 12;
+        _ = 12,
+        _ = 13;
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -19221,6 +19261,41 @@
                     _: 45,
                     _: _._.readFixed64String,
                     _: _._.writeFixed64String,
+                  },
+                  wg_msg_trace_flags: {
+                    _: 46,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  wg_msg_trace_instance: {
+                    _: 47,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  wg_msg_trace_gid: {
+                    _: 48,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  wg_msg_trace_token: {
+                    _: 49,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  wg_msg_trace_steamid: {
+                    _: 50,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  wg_msg_trace_status: {
+                    _: 51,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  trace_flags: {
+                    _: 52,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
                   },
                 },
               }),
@@ -38593,6 +38668,11 @@
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
+                  include_family_licenses: {
+                    _: 2,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
                 },
               }),
             _.sm_m
@@ -42684,7 +42764,7 @@
               _,
               0,
               -1,
-              [11, 12, 20, 21, 25, 41, 52, 71, 74],
+              [11, 12, 20, 21, 25, 41, 52, 71, 74, 77],
               null,
             );
         }
@@ -42928,6 +43008,12 @@
                   extra_details: {
                     _: 75,
                     _: _,
+                  },
+                  optin_registration_tags: {
+                    _: 77,
+                    _: _,
+                    _: !0,
+                    _: !0,
                   },
                 },
               }),
@@ -44394,6 +44480,11 @@
                     _: _._.readString,
                     _: _._.writeString,
                   },
+                  is_free_license: {
+                    _: 56,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
                 },
               }),
             _.sm_m
@@ -45434,6 +45525,25 @@
                     _: 21,
                     _: _,
                   },
+                  links_and_info: {
+                    _: 22,
+                    _: _,
+                  },
+                  item_store_eligible: {
+                    _: 23,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  points_shop_eligible: {
+                    _: 24,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  specs_bbcode: {
+                    _: 25,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
                 },
               }),
             _.sm_m
@@ -45916,6 +46026,182 @@
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
           super(),
+            _.prototype.website || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [6, 7, 8], null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  website: {
+                    _: 1,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  stats_url: {
+                    _: 2,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  online_manual_url: {
+                    _: 3,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  health_warning_url: {
+                    _: 4,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  privacy_policy_url: {
+                    _: 5,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  available_documents: {
+                    _: 6,
+                    _: !0,
+                    _: !0,
+                    _: _._.readEnum,
+                    pbr: _._.readPackedEnum,
+                    _: _._.writeRepeatedEnum,
+                  },
+                  genreids: {
+                    _: 7,
+                    _: !0,
+                    _: !0,
+                    _: _._.readUint32,
+                    pbr: _._.readPackedUint32,
+                    _: _._.writeRepeatedUint32,
+                  },
+                  manufacturers: {
+                    _: 8,
+                    _: !0,
+                    _: !0,
+                    _: _._.readString,
+                    _: _._.writeRepeatedString,
+                  },
+                  achievements_visible: {
+                    _: 9,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  achievement_count: {
+                    _: 10,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "StoreItem_ExtraDetails_LinksAndInfo";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.optin_name || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [2], null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  optin_name: {
+                    _: 1,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  values: {
+                    _: 2,
+                    _: !0,
+                    _: !0,
+                    _: _._.readString,
+                    _: _._.writeRepeatedString,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "StoreItem_OptInRegistrationTags";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
             _.prototype.include_assets || _._(_._()),
             _.Message.initialize(this, _, 0, -1, void 0, null);
         }
@@ -46017,6 +46303,11 @@
                   include_best_purchase_option: {
                     _: 19,
                     _: !0,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  include_optin_registration_tags: {
+                    _: 20,
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
@@ -51407,14 +51698,17 @@
       __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
         const { data: _ } = (0, _._)(_),
           _ = (0, _._)();
-        if (void 0 === _) return;
-        if (null === _) return null;
-        const _ = [...(_.highlights || []), ...(_.other_trailers || [])];
-        return _ && !_ ? _.filter((_) => !!_.all_ages) : _;
+        return _.useMemo(() => {
+          if (void 0 === _) return;
+          if (null === _) return null;
+          const _ = [...(_.highlights || []), ...(_.other_trailers || [])];
+          return _ && !_ ? _.filter((_) => !!_.all_ages) : _;
+        }, [_, _, _]);
       }
       function _(_, _, _, _) {
         const _ = _(_, _);
@@ -51834,6 +52128,17 @@
             (function (_, _, _, _) {
               _(_, _, _, "include_ratings", "game_rating", _);
             })(_, _, _, _),
+          _.include_optin_registration_tags &&
+            (function (_, _, _, _) {
+              _(
+                _,
+                _,
+                _,
+                "include_optin_registration_tags",
+                "optin_registration_tags",
+                _,
+              );
+            })(_, _, _, _),
           _.include_included_items &&
             _.included_item_data_request &&
             (null ===
@@ -51877,6 +52182,7 @@
         "release",
         "package_groups",
         "extra_details",
+        "optin_registration_tags",
       ];
       function _(_) {
         const _ = {
@@ -56835,13 +57141,18 @@
           (_[(_.SteamChinaReviewLauncher = 8)] = "SteamChinaReviewLauncher"),
           (_[(_.OverlayVRGamepadUI = 9)] = "OverlayVRGamepadUI");
       })(_ || (_ = {}));
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       __webpack_require__("chunkid");
       const _ = {
         m_unPID: 0,
         m_nBrowserID: -1,
       };
-      var _ = __webpack_require__("chunkid"),
+      var _,
+        _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -56889,12 +57200,6 @@
               (this.m_fnRender = void 0));
         }
       }
-      (0, _._)([_._], _.prototype, "OnLinkLoad", null);
-      var _,
-        _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
       function _() {
         return (0, _._)() ? _.Composited : _.None;
       }
@@ -56954,37 +57259,38 @@
           _ = _.GetPopupForWindow(_);
         return (null == _ ? void 0 : _.browser_info) || _;
       }
-      !(function (_) {
-        (_[(_.None = 0)] = "None"),
-          (_[(_.Minimized = 1)] = "Minimized"),
-          (_[(_.Hidden = 2)] = "Hidden"),
-          (_[(_.TooltipHint = 4)] = "TooltipHint"),
-          (_[(_.NoTaskbarIcon = 8)] = "NoTaskbarIcon"),
-          (_[(_.Resizable = 16)] = "Resizable"),
-          (_[(_.NoScalePosition = 32)] = "NoScalePosition"),
-          (_[(_.NoScaleSize = 64)] = "NoScaleSize"),
-          (_[(_.Maximized = 128)] = "Maximized"),
-          (_[(_.Composited = 256)] = "Composited"),
-          (_[(_.NotFocusable = 512)] = "NotFocusable"),
-          (_[(_.FullScreen = 1024)] = "FullScreen"),
-          (_[(_.Fullscreen_Exclusive = 2048)] = "Fullscreen_Exclusive"),
-          (_[(_.ApplyBrowserScaleToDimensions = 4096)] =
-            "ApplyBrowserScaleToDimensions"),
-          (_[(_.AlwaysOnTop = 8192)] = "AlwaysOnTop"),
-          (_[(_.NoWindowShadow = 16384)] = "NoWindowShadow"),
-          (_[(_.NoMinimize = 32768)] = "NoMinimize"),
-          (_[(_.PopUpMenuHint = 65536)] = "PopUpMenuHint"),
-          (_[(_.IgnoreSavedSize = 131072)] = "IgnoreSavedSize"),
-          (_[(_.NoRoundedCorners = 262144)] = "NoRoundedCorners"),
-          (_[(_.ForceRoundedCorners = 524288)] = "ForceRoundedCorners"),
-          (_[(_.OverrideRedirect = 1048576)] = "OverrideRedirect"),
-          (_[(_.IgnoreSteamDisplayScale = 2097152)] =
-            "IgnoreSteamDisplayScale"),
-          (_[(_.TransparentParentWindow = 4194304)] =
-            "TransparentParentWindow"),
-          (_[(_.DisableDPIScale = 8388608)] = "DisableDPIScale"),
-          (_[(_.ForceBrowserVisible = 16777216)] = "ForceBrowserVisible");
-      })(_ || (_ = {})),
+      (0, _._)([_._], _.prototype, "OnLinkLoad", null),
+        (function (_) {
+          (_[(_.None = 0)] = "None"),
+            (_[(_.Minimized = 1)] = "Minimized"),
+            (_[(_.Hidden = 2)] = "Hidden"),
+            (_[(_.TooltipHint = 4)] = "TooltipHint"),
+            (_[(_.NoTaskbarIcon = 8)] = "NoTaskbarIcon"),
+            (_[(_.Resizable = 16)] = "Resizable"),
+            (_[(_.NoScalePosition = 32)] = "NoScalePosition"),
+            (_[(_.NoScaleSize = 64)] = "NoScaleSize"),
+            (_[(_.Maximized = 128)] = "Maximized"),
+            (_[(_.Composited = 256)] = "Composited"),
+            (_[(_.NotFocusable = 512)] = "NotFocusable"),
+            (_[(_.FullScreen = 1024)] = "FullScreen"),
+            (_[(_.Fullscreen_Exclusive = 2048)] = "Fullscreen_Exclusive"),
+            (_[(_.ApplyBrowserScaleToDimensions = 4096)] =
+              "ApplyBrowserScaleToDimensions"),
+            (_[(_.AlwaysOnTop = 8192)] = "AlwaysOnTop"),
+            (_[(_.NoWindowShadow = 16384)] = "NoWindowShadow"),
+            (_[(_.NoMinimize = 32768)] = "NoMinimize"),
+            (_[(_.PopUpMenuHint = 65536)] = "PopUpMenuHint"),
+            (_[(_.IgnoreSavedSize = 131072)] = "IgnoreSavedSize"),
+            (_[(_.NoRoundedCorners = 262144)] = "NoRoundedCorners"),
+            (_[(_.ForceRoundedCorners = 524288)] = "ForceRoundedCorners"),
+            (_[(_.OverrideRedirect = 1048576)] = "OverrideRedirect"),
+            (_[(_.IgnoreSteamDisplayScale = 2097152)] =
+              "IgnoreSteamDisplayScale"),
+            (_[(_.TransparentParentWindow = 4194304)] =
+              "TransparentParentWindow"),
+            (_[(_.DisableDPIScale = 8388608)] = "DisableDPIScale"),
+            (_[(_.ForceBrowserVisible = 16777216)] = "ForceBrowserVisible");
+        })(_ || (_ = {})),
         (function (_) {
           (_[(_.Overlay = 0)] = "Overlay"),
             (_[(_.Notification = 1)] = "Notification"),
@@ -57688,6 +57994,8 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       __webpack_require__("chunkid");
       const _ = _.createContext({
@@ -57697,8 +58005,6 @@
         return _.useContext(_);
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _, _) {
         const _ = _.useRef(void 0),
@@ -57718,34 +58024,34 @@
             )),
           (_.current.m_callbacks = _),
           _.useEffect(() => {
-            var _, _, _;
-            if (
-              !(null === (_ = _.current) || void 0 === _
+            var _, _, _, _;
+            return (
+              (null === (_ = _.current) || void 0 === _
                 ? void 0
-                : _.params.bNoInitialShow)
-            ) {
-              let _ = (
-                null === (_ = _.current) || void 0 === _
-                  ? void 0
-                  : _.params.bNoFocusOnShow
-              )
-                ? _.iEc.k_EWindowBringToFrontWithoutForcingOS
-                : _.iEc.k_EWindowBringToFrontAndForceOS;
-              null === (_ = _.current) ||
+                : _.params.bNoInitialShow) ||
+                null === (_ = _.current) ||
                 void 0 === _ ||
-                __webpack_require__.Show(_);
-            }
-            return () => {
-              var _, _;
-              (_.current.m_callbacks = void 0),
-                (null === (_ = _.current.window) || void 0 === _
-                  ? void 0
-                  : _.SteamClient.Window.SetHideOnClose) &&
-                  (null === (_ = _.current.window) ||
-                    void 0 === _ ||
-                    _.SteamClient.Window.SetHideOnClose(!1)),
-                _.current.Close();
-            };
+                _.Show(
+                  null !==
+                    (_ =
+                      null === (_ = _.current) || void 0 === _
+                        ? void 0
+                        : _.params.eWindowBringToFront) && void 0 !== _
+                    ? _
+                    : _.iEc.k_EWindowBringToFrontAndForceOS,
+                ),
+              () => {
+                var _, _;
+                (_.current.m_callbacks = void 0),
+                  (null === (_ = _.current.window) || void 0 === _
+                    ? void 0
+                    : _.SteamClient.Window.SetHideOnClose) &&
+                    (null === (_ = _.current.window) ||
+                      void 0 === _ ||
+                      _.SteamClient.Window.SetHideOnClose(!1)),
+                  _.current.Close();
+              }
+            );
           }, []),
           _.useEffect(() => {
             var _, _;
@@ -59247,6 +59553,11 @@
                 _.include_tag_count,
                 this.m_rgStoreTags.length || 0,
               ))),
+            _.include_optin_registration_tags &&
+              !this.m_rgOptInRegistrationTags &&
+              ((this.m_rgOptInRegistrationTags =
+                _.optin_registration_tags().map((_) => _.toObject())),
+              (this.m_DataRequested.include_optin_registration_tags = !0)),
             _.include_reviews &&
               !this.m_ReviewInfo &&
               ((this.m_ReviewInfo = _.reviews().toObject()),
@@ -59296,7 +59607,10 @@
               (!_.include_supported_languages ||
                 _.include_supported_languages) &&
               (!_.include_full_description || _.include_full_description) &&
-              (!_.include_links || _.include_links),
+              (!_.include_links || _.include_links) &&
+              (!_.apply_user_filters || _.apply_user_filters) &&
+              (!_.include_optin_registration_tags ||
+                _.include_optin_registration_tags),
           );
         }
         BContainDataRequest(_) {
@@ -59716,6 +60030,26 @@
               include_tag_count: 1,
             }),
             this.m_rgStoreTagIDs
+          );
+        }
+        GetOptInRegistrationTagValues(_) {
+          var _, _, _;
+          return (
+            this.BCheckDataRequestIncluded({
+              include_optin_registration_tags: !0,
+            }),
+            null !==
+              (_ =
+                null ===
+                  (_ =
+                    null === (_ = this.m_rgOptInRegistrationTags) ||
+                    void 0 === _
+                      ? void 0
+                      : _.find((_) => _.optin_name === _)) || void 0 === _
+                  ? void 0
+                  : _.values) && void 0 !== _
+              ? _
+              : []
           );
         }
         BHasTags() {
@@ -60429,6 +60763,9 @@
           include_links: _.include_links || _.include_links,
           include_extra_details:
             _.include_extra_details || _.include_extra_details,
+          include_optin_registration_tags:
+            _.include_optin_registration_tags ||
+            _.include_optin_registration_tags,
         };
       }
       async function _(_, _) {
@@ -80224,10 +80561,8 @@
         const { value: _, children: _, role: _ = "radio", ..._ } = _,
           { value: _, setValue: _, disabled: _ } = _.useContext(_);
         let _ = _;
-        const _ = _.useId(),
-          _ = _ === _;
+        const _ = _ === _;
         return (0, _.jsx)(_._, {
-          focusRingSizeElementID: _.bSetFocusRingSizeElementID ? _ : void 0,
           role: _,
           "aria-checked": _,
           "aria-selected": _,

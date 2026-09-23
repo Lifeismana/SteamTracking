@@ -5,6 +5,7 @@
   font-size: var(--font-size, var(--default-font-size));
   line-height: var(--line-height, var(--default-line-height));
   letter-spacing: var(--letter-spacing, var(--default-letter-spacing));
+  font-family: var(--font-family);
 }
 ._1DLGHwAfYnbFVIwbZjO2cn:where(._1FVRWG5uD8VhzoEiOZWrEo),
 ._30P9kUCljAZzX5fl1DHGJe:where(._1FVRWG5uD8VhzoEiOZWrEo) {
@@ -71,6 +72,7 @@
   margin-bottom: 6px;
 }
 ._12ldq1_X5RuLWAAs_ODwt7 {
+  font-family: var(--font-family);
   color: var(--text-color, var(--color-text-body-title));
   font-size: var(--font-size, var(--default-font-size));
   line-height: var(--line-height, var(--default-line-height));

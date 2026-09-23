@@ -105,6 +105,7 @@
     "moderation_sanction_hubbanned": "%1$s 天社群中心封鎖",
     "moderation_sanction_markassuspicious": "已標記為可疑內容",
     "moderation_sanction_relabelled": "已重新標記",
+    "moderation_sanction_markedincompatible": "Marked as incompatible",
     "moderation_sanction_tradebanned_forever": "永久交易封鎖",
     "moderation_sanction_tradebanned": "%1$s 天交易封鎖",
     "moderation_sanction_kickedfromgroup": "已自群組中踢出",
@@ -133,6 +134,6 @@
     "reportedsubjectlist_header": "已檢舉的主題",
     "moderation_already_owner_disputed": "已提出爭議",
     "moderationstats_alltypes": "所有主題類型",
-    "forumsubjectlist_subjectreportsummary": "%1$s 項未解決，%1$s 項已提出爭議",
+    "forumsubjectlist_subjectreportsummary": "%1$s 項未解決，%2$s 項已提出爭議",
     "empty_no_trailing_comma": ""
 }

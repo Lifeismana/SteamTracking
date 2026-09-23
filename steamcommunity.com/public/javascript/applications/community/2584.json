@@ -62,6 +62,7 @@
     "Reservation_OnRegularReserveForModel": "Kamu berada dalam antrean reservasi untuk %1$s",
     "Reservation_PostShuffle_TAndC": "<1>Syarat dan Ketentuan</1> berlaku.",
     "machine_dummy": "dummy",
+    "PriceDisplay_YourPrice": "Harga Darimu:",
     "PriceGrid_NormalPrice": "HARGA NORMAL",
     "PriceGrid_RecentPrice": "TERENDAH DALAM 30 HARI",
     "PriceGrid_CurrentPrice": "SEKARANG",

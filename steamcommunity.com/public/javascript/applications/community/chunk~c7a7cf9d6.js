@@ -14,8 +14,8 @@
       "use strict";
       n.d(t, { Xh: () => d, cU: () => u, tf: () => m, wl: () => p });
       var r = n(22837),
-        o = n(71150),
-        i = n(30570),
+        i = n(71150),
+        o = n(30570),
         a = n(30894),
         s = n(16021),
         l = n(97471),
@@ -26,6 +26,7 @@
         include_platforms: !0,
         include_tag_count: 20,
         include_basic_info: !0,
+        include_optin_registration_tags: !0,
         include_trailers: !0,
         include_reviews: !0,
         include_screenshots: !0,
@@ -68,7 +69,7 @@
         }
       }
       const p = 4;
-      function m(e, t, n, r, o, i) {
+      function m(e, t, n, r, i, o) {
         var a;
         const c = new Array(),
           d = new Array(),
@@ -80,23 +81,23 @@
           l.by.k_RejectAlreadyDisplayed,
           l.by.k_RejectNoTrailer,
         ];
-        for (let i of e) {
-          let e = i.id,
+        for (let o of e) {
+          let e = o.id,
             p = l.by.k_NotRejected;
-          switch (i.item_type) {
+          switch (o.item_type) {
             case "sub":
-              const o = s.A.Get().GetPackage(e);
+              const i = s.A.Get().GetPackage(e);
               if (
                 1 !==
-                (null === (a = null == o ? void 0 : o.GetIncludedAppIDs()) ||
+                (null === (a = null == i ? void 0 : i.GetIncludedAppIDs()) ||
                 void 0 === a
                   ? void 0
                   : a.length)
               ) {
-                p = g(e, t, r, !0);
+                p = I(e, t, r, !0);
                 break;
               }
-              e = o.GetIncludedAppIDs()[0];
+              e = i.GetIncludedAppIDs()[0];
             case "app":
               p = f(e, t, n, r, !0);
               break;
@@ -105,31 +106,31 @@
           }
           if (
             (p == l.by.k_NotRejected
-              ? ((i.rejected = l.by.k_NotRejected),
-                c.push({ ...i, priority: 1 }))
+              ? ((o.rejected = l.by.k_NotRejected),
+                c.push({ ...o, priority: 1 }))
               : _.includes(p)
-                ? ((i.rejected = l.by.k_NotRejected), d.push(i))
-                : ((i.rejected = p),
-                  p == l.by.k_RejectIgnoredGame ? u.push(i) : m.push(i)),
-            c.length > o)
+                ? ((o.rejected = l.by.k_NotRejected), d.push(o))
+                : ((o.rejected = p),
+                  p == l.by.k_RejectIgnoredGame ? u.push(o) : m.push(o)),
+            c.length > i)
           )
             break;
         }
         return (
-          c.length < o &&
-            (y(c, d, i, 2),
-            c.length < i &&
+          c.length < i &&
+            (y(c, d, o, 2),
+            c.length < o &&
               t.enforce_minimum &&
-              (y(c, u, i, 3), y(c, m, i, p))),
+              (y(c, u, o, 3), y(c, m, o, p))),
           c
         );
       }
       function y(e, t, n, r) {
-        for (let o = 0; e.length < n && o < t.length; ++o)
-          e.push({ ...t[o], priority: r });
+        for (let i = 0; e.length < n && i < t.length; ++i)
+          e.push({ ...t[i], priority: r });
       }
       function _(e, t) {
-        var n, r, o, i;
+        var n, r, i, o;
         const s = a.Fm.Get();
         if (t.only_current_platform && s.BHasPlatformPreferenceSet()) {
           if (
@@ -142,9 +143,9 @@
                 ? void 0
                 : r.mac) &&
                 s.BIsPreferredPlatform("mac")) ||
-              ((null === (o = e.GetPlatforms()) || void 0 === o
+              ((null === (i = e.GetPlatforms()) || void 0 === i
                 ? void 0
-                : o.steamos_linux) &&
+                : i.steamos_linux) &&
                 s.BIsPreferredPlatform("linux"))
             )
           )
@@ -159,9 +160,9 @@
           c.vr_support.vrhmd_only
           ? l.by.k_RejectNoVR
           : (
-                null === (i = e.GetAllCreatorClanIDs()) || void 0 === i
+                null === (o = e.GetAllCreatorClanIDs()) || void 0 === o
                   ? void 0
-                  : i.some((e) => s.BIsIgnoringCurator(e))
+                  : o.some((e) => s.BIsIgnoringCurator(e))
               )
             ? l.by.k_RejectCreatorClan
             : l.by.k_NotRejected;
@@ -192,12 +193,12 @@
         if (!t.early_access && d.BIsEarlyAccess())
           return l.by.k_RejectEarlyAccess;
         const m = d.GetAppType();
-        if (!t.software && m == i.uE.Sv) return l.by.k_RejectSoftware;
+        if (!t.software && m == o.uE.Sv) return l.by.k_RejectSoftware;
         if (t.games_already_in_library && p.BIsGameOwned(e))
           return l.by.k_RejectInLibrary;
         if (t.games_not_in_library && !p.BIsGameOwned(e))
           return l.by.k_RejectNotInLibrary;
-        if (!t.video && [i.uE.Wz, i.uE.gQ, i.uE.ID].includes(m))
+        if (!t.video && [o.uE.Wz, o.uE.gQ, o.uE.ID].includes(m))
           return l.by.k_RejectVideo;
         if (t.has_discount) {
           const e = d.GetBestPurchaseOption();
@@ -205,14 +206,14 @@
         }
         return "adultonly" != n &&
           t.no_ao_content &&
-          (d.HasContentDescriptorID(o.u7) || d.HasContentDescriptorID(o.T4))
+          (d.HasContentDescriptorID(i.u7) || d.HasContentDescriptorID(i.T4))
           ? l.by.k_RejectAO
-          : m == i.uE.ue &&
+          : m == o.uE.ue &&
               t.games_already_in_library &&
               p.BIsGameOwned(d.GetParentAppID() || 0)
             ? l.by.k_RejectInLibrary
             : c
-              ? (m == i.uE.ue && r.BHasAppID(d.GetParentAppID() || 0)) ||
+              ? (m == o.uE.ue && r.BHasAppID(d.GetParentAppID() || 0)) ||
                 r.BHasAppID(e)
                 ? l.by.k_RejectAlreadyDisplayed
                 : t.has_trailer && !d.BHasTrailers(!1)
@@ -220,7 +221,7 @@
                   : h(d, t)
               : l.by.k_NotRejected;
       }
-      function I(e, t) {
+      function g(e, t) {
         const n = a.Fm.Get();
         let r = !1;
         for (let t of e) {
@@ -233,12 +234,12 @@
             ? l.by.k_RejectNotInLibrary
             : l.by.k_NotRejected;
       }
-      function g(e, t, n, r) {
-        const o = s.A.Get().GetPackage(e);
-        if (!o) return l.by.k_RejectNotLoaded;
-        const i = _(o, t);
-        if (i != l.by.k_NotRejected) return i;
-        const c = I(o.GetIncludedAppIDs(), t);
+      function I(e, t, n, r) {
+        const i = s.A.Get().GetPackage(e);
+        if (!i) return l.by.k_RejectNotLoaded;
+        const o = _(i, t);
+        if (o != l.by.k_NotRejected) return o;
+        const c = g(i.GetIncludedAppIDs(), t);
         if (c != l.by.k_NotRejected) return c;
         const d = a.Fm.Get();
         return t.games_already_in_library && d.BOwnsPackage(e)
@@ -248,30 +249,30 @@
             : r
               ? n.BHasPackageID(e)
                 ? l.by.k_RejectAlreadyDisplayed
-                : h(o, t)
+                : h(i, t)
               : l.by.k_NotRejected;
       }
       function G(e, t, n, r) {
-        const o = s.A.Get().GetBundle(e);
-        if (!o) return l.by.k_RejectNotLoaded;
-        const i = _(o, t);
-        if (i != l.by.k_NotRejected) return i;
-        const a = I(o.GetIncludedAppIDs(), t);
+        const i = s.A.Get().GetBundle(e);
+        if (!i) return l.by.k_RejectNotLoaded;
+        const o = _(i, t);
+        if (o != l.by.k_NotRejected) return o;
+        const a = g(i.GetIncludedAppIDs(), t);
         return a != l.by.k_NotRejected
           ? a
           : r
             ? n.BHasBundleID(e)
               ? l.by.k_RejectAlreadyDisplayed
-              : h(o, t)
+              : h(i, t)
             : l.by.k_NotRejected;
       }
     },
     62734: (e, t, n) => {
       "use strict";
-      n.d(t, { f: () => i });
+      n.d(t, { f: () => o });
       var r = n(81393);
-      var o = n(78327);
-      class i {
+      var i = n(78327);
+      class o {
         BHasHomeView() {
           return Boolean(this.m_HomeView);
         }
@@ -284,18 +285,18 @@
         static Get() {
           var e;
           return (
-            i.s_globalSingletonStore ||
+            o.s_globalSingletonStore ||
               ((e = "CHomeViewStore.s_globalSingletonStore"),
               (0, r.wT)(!0, "Unexpected code running in SSR Server: " + e),
-              (i.s_globalSingletonStore = new i())),
-            i.s_globalSingletonStore
+              (o.s_globalSingletonStore = new o())),
+            o.s_globalSingletonStore
           );
         }
         constructor() {
           this.m_HomeView = void 0;
-          const e = (0, o.Tc)("home_view_setting", "application_config");
+          const e = (0, i.Tc)("home_view_setting", "application_config");
           this.ValidateHomeViewData(e) && this.SetHomeViewSetting(e);
-          const t = (0, o.Tc)(
+          const t = (0, i.Tc)(
             "home_view_setting_override",
             "application_config",
           );
@@ -339,22 +340,22 @@
       "use strict";
       n.d(t, { $: () => c });
       var r = n(41735),
-        o = n.n(r),
-        i = n(78327),
+        i = n.n(r),
+        o = n(78327),
         a = n(91254),
         s = n(70078),
         l = n(37085);
       class c extends a.ZQ {
         async DeleteOldAnnouncement(e, t) {
           let n = new URLSearchParams();
-          n.append("sessionid", (0, i.KC)());
+          n.append("sessionid", (0, o.KC)());
           let r =
-              i.TS.COMMUNITY_BASE_URL +
+              o.TS.COMMUNITY_BASE_URL +
               "/gid/" +
               e.ConvertTo64BitString() +
               "/announcements/ajaxdeleteannouncement/" +
               t,
-            a = await o().post(r, n);
+            a = await i().post(r, n);
           if (a.data.success != l.R) throw a.data;
           return this.RemoveGIDFromList(e, s.cB + t), a.data;
         }
@@ -377,9 +378,9 @@
       "use strict";
       n.d(t, { N: () => b });
       var r = n(34629),
-        o = n(7850),
-        i = n(41735),
-        a = n.n(i),
+        i = n(7850),
+        o = n(41735),
+        a = n.n(o),
         s = n(75844),
         l = n(90626),
         c = n(87652),
@@ -391,17 +392,17 @@
         _ = n.n(y),
         h = n(22797),
         f = n(68797),
-        I = n(78327),
-        g = n(66418),
+        g = n(78327),
+        I = n(66418),
         G = n(30894),
         A = n(51272),
         v = n(84811);
       const b = (e) => {
         let { bShowOnlyInitialEvent: t } = e;
-        const n = (0, I.Qn)(),
+        const n = (0, g.Qn)(),
           r = (0, c.Y)();
-        return (0, o.jsx)(v.tH, {
-          children: (0, o.jsx)(S, {
+        return (0, i.jsx)(v.tH, {
+          children: (0, i.jsx)(S, {
             ...e,
             bShowOnlyInitialEvent: t || n,
             tracker: r,
@@ -441,7 +442,7 @@
             clanSteamID: t,
             announcementGID: n,
             partnerEventStore: r,
-            additionalParams: o,
+            additionalParams: i,
           } = this.props;
           r.LoadAdjacentPartnerEventsByAnnouncement(
             n,
@@ -449,7 +450,7 @@
             e,
             0,
             3,
-            o,
+            i,
             this.m_cancelSignal,
           )
             .then((e) => {
@@ -479,17 +480,17 @@
           const { bShowOnlyInitialEvent: e } = this.props,
             { bLoading: t, eventModel: n } = this.state;
           if (t)
-            return (0, o.jsx)(p.EN, {
+            return (0, i.jsx)(p.EN, {
               active: !0,
-              children: (0, o.jsx)("div", {
+              children: (0, i.jsx)("div", {
                 className: _().FlexCenter,
                 style: { height: "400px" },
-                children: (0, o.jsx)(h.t, {}),
+                children: (0, i.jsx)(h.t, {}),
               }),
             });
           const {
             closeModal: r,
-            appid: i,
+            appid: o,
             clanSteamID: a,
             className: s,
             partnerEventStore: l,
@@ -498,18 +499,18 @@
             additionalParams: y,
             eventClassName: f,
           } = this.props;
-          let I;
-          g.TS.IN_CLIENT &&
+          let g;
+          I.TS.IN_CLIENT &&
             (null == n ? void 0 : n.appid) &&
             (G.Fm.Get().HintLoad(),
             G.Fm.Get().BOwnsApp(n.appid) &&
-              (I = (e) =>
+              (g = (e) =>
                 (0, A.EP)(e, "steam://nav/games/details/" + n.appid)));
-          const v = (0, o.jsx)(d.sU, {
+          const v = (0, i.jsx)(d.sU, {
             children: (t) =>
-              (0, o.jsx)(u.AD, {
+              (0, i.jsx)(u.AD, {
                 initialEvent: n,
-                appid: i,
+                appid: o,
                 clanSteamID: a,
                 partnerEventStore: l,
                 emoticonStore: t,
@@ -518,14 +519,14 @@
                 bShowOnlyInitialEvent: e,
                 additionalParams: y,
                 eventClassName: f,
-                onAppIconClick: I,
+                onAppIconClick: g,
               }),
           });
           return m
             ? v
-            : (0, o.jsx)(p.EN, {
+            : (0, i.jsx)(p.EN, {
                 active: !0,
-                children: (0, o.jsx)("div", { className: s, children: v }),
+                children: (0, i.jsx)("div", { className: s, children: v }),
               });
         }
       };
@@ -534,9 +535,9 @@
     99032: (e, t, n) => {
       "use strict";
       n.d(t, {
-        AX: () => g,
+        AX: () => I,
         H2: () => h,
-        Li: () => I,
+        Li: () => g,
         S7: () => m,
         a9: () => G,
         jy: () => f,
@@ -545,8 +546,8 @@
         tJ: () => y,
       });
       var r = n(57876),
-        o = n(97471),
-        i = n(81886),
+        i = n(97471),
+        o = n(81886),
         a = n(22837),
         s = n(30570),
         l = n(30894),
@@ -554,7 +555,7 @@
         d = n(62734),
         u = n(81393);
       function p(e) {
-        return c.A.Get().BIsStoreItemMissing(e.id, (0, o.SW)(e.type));
+        return c.A.Get().BIsStoreItemMissing(e.id, (0, i.SW)(e.type));
       }
       function m(e, t, n) {
         const r = new Array();
@@ -567,7 +568,7 @@
       }
       function y(e) {
         var t, n;
-        const r = c.A.Get().GetStoreItem(e.id, (0, o.SW)(e.type));
+        const r = c.A.Get().GetStoreItem(e.id, (0, i.SW)(e.type));
         return (
           (null !==
             (n =
@@ -587,7 +588,7 @@
             : t.localized)
         )
           return !0;
-        const n = c.A.Get().GetStoreItem(e.id, (0, o.SW)(e.type));
+        const n = c.A.Get().GetStoreItem(e.id, (0, i.SW)(e.type));
         return (
           !n ||
           l.Fm.Get().BIsAnyLanguageEnabled(n.GetAllLanguagesWithSomeSupport())
@@ -595,18 +596,18 @@
       }
       async function h(e, t, n) {
         if (!e || 0 == e.length) return [];
-        const r = e.filter((e) => (0, i.fp)(e.type)).map((e) => e.id),
-          o = e.filter((e) => "sub" === e.type).map((e) => e.id),
+        const r = e.filter((e) => (0, o.fp)(e.type)).map((e) => e.id),
+          i = e.filter((e) => "sub" === e.type).map((e) => e.id),
           a = e.filter((e) => "bundle" === e.type).map((e) => e.id);
         {
           const e = r.filter((e) => !c.A.Get().BHasApp(e, t)),
-            n = o.filter((e) => !c.A.Get().BHasApp(e, t)),
-            i = a.filter((e) => !c.A.Get().BHasApp(e, t));
-          (e.length > 0 || n.length > 0 || i.length > 0) &&
+            n = i.filter((e) => !c.A.Get().BHasApp(e, t)),
+            o = a.filter((e) => !c.A.Get().BHasApp(e, t));
+          (e.length > 0 || n.length > 0 || o.length > 0) &&
             (await Promise.all([
               c.A.Get().QueueMultipleAppRequests(e, t),
               c.A.Get().QueueMultiplePackageRequests(n, t),
-              c.A.Get().QueueMultipleBundleRequests(i, t),
+              c.A.Get().QueueMultipleBundleRequests(o, t),
             ]));
         }
         const s = new Set();
@@ -615,8 +616,8 @@
             const t = c.A.Get().GetBundle(e);
             null == t || t.GetIncludedAppIDs().forEach((e) => s.add(e));
           }),
-          null == o ||
-            o.forEach((e) => {
+          null == i ||
+            i.forEach((e) => {
               const t = c.A.Get().GetPackage(e);
               null == t || t.GetIncludedAppIDs().forEach((e) => s.add(e));
             });
@@ -646,7 +647,7 @@
         include_basic_info: !0,
         include_supported_languages: !0,
       };
-      function I(e) {
+      function g(e) {
         var t;
         if (!e) return !0;
         const n = l.Fm.Get();
@@ -681,11 +682,11 @@
         }
         return !1;
       }
-      async function g(e, t, n, i) {
+      async function I(e, t, n, o) {
         const a = [];
         await h(e, r.Xh, t);
         for (const r of e) {
-          const e = c.A.Get().GetStoreItem(r.id, (0, o.SW)(r.type));
+          const e = c.A.Get().GetStoreItem(r.id, (0, i.SW)(r.type));
           if (!e) {
             0;
             continue;
@@ -703,35 +704,35 @@
                 .filter((e) => Boolean(e));
             t && s.push(...t);
           }
-          s.some(i || I)
+          s.some(o || g)
             ? n && (l.Fm.Get().BIsStoreItemOwned(e) || n.push(r))
             : a.push(r);
         }
         return a;
       }
-      async function G(e, t, n, r, i, a, s) {
-        let d = await g(
+      async function G(e, t, n, r, o, a, s) {
+        let d = await I(
           e,
           t,
           s,
-          i
+          o
             ? (e) =>
                 !e ||
                 l.Fm.Get().BExcludesContentDescriptor(
                   e.GetContentDescriptorIDs(),
                 ) ||
                 l.Fm.Get().BExcludeTagIDs(e.GetTagIDs())
-            : I,
+            : g,
         );
         const u = [];
         for (const e of d) {
-          const t = c.A.Get().GetStoreItem(e.id, (0, o.SW)(e.type));
+          const t = c.A.Get().GetStoreItem(e.id, (0, i.SW)(e.type));
           if (!t) continue;
-          const i = null == t ? void 0 : t.GetIncludedAppIDsOrSelf();
+          const o = null == t ? void 0 : t.GetIncludedAppIDsOrSelf();
           let d = !1;
-          n && (d = d || i.every((e) => l.Fm.Get().BIsGameOwned(e))),
-            r && (d = d || i.every((e) => l.Fm.Get().BIsGameWishlisted(e))),
-            a && (d = d || i.every((e) => l.Fm.Get().BIsGameIgnored(e))),
+          n && (d = d || o.every((e) => l.Fm.Get().BIsGameOwned(e))),
+            r && (d = d || o.every((e) => l.Fm.Get().BIsGameWishlisted(e))),
+            a && (d = d || o.every((e) => l.Fm.Get().BIsGameIgnored(e))),
             d ? s && s.push(e) : u.push(e);
         }
         return u;
@@ -741,8 +742,8 @@
       "use strict";
       n.d(t, { AQ: () => y, pn: () => h, qx: () => _ });
       var r = n(7850),
-        o = n(68255),
-        i = n(61859),
+        i = n(68255),
+        o = n(61859),
         a = n(12155),
         s = n(90626),
         l = n(52038),
@@ -755,13 +756,13 @@
         const {
             title: t,
             tooltip: n,
-            getMinimized: o,
-            toggleMinimized: i,
+            getMinimized: i,
+            toggleMinimized: o,
             className: a,
             children: s,
             elAdditionalButtons: y,
           } = e,
-          _ = (0, p.q3)(() => o());
+          _ = (0, p.q3)(() => i());
         return (0, r.jsxs)(r.Fragment, {
           children: [
             (0, r.jsxs)("div", {
@@ -783,7 +784,7 @@
                   className: u.SectionTitleButtons,
                   children: [
                     y,
-                    (0, r.jsx)(h, { bIsMinimized: _, fnToggleMinimize: i }),
+                    (0, r.jsx)(h, { bIsMinimized: _, fnToggleMinimize: o }),
                   ],
                 }),
               ],
@@ -804,8 +805,8 @@
       function h(e) {
         const { bIsMinimized: t, fnToggleMinimize: n } = e,
           s = t ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
-        return (0, r.jsx)(o.$n, {
-          "data-tooltip-text": (0, i.we)(s),
+        return (0, r.jsx)(i.$n, {
+          "data-tooltip-text": (0, o.we)(s),
           onClick: n,
           children: e.bIsMinimized
             ? (0, r.jsx)(a.hz4, {})

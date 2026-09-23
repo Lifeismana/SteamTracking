@@ -26,6 +26,7 @@
     chunkid: (module) => {
       module.exports = {
         SimpleModalDialog: "_3ej4mcyhVunlvw3BjUXtel",
+        WideMode: "_1oLxPrvbIeJJ1d96fhJvOI",
         SimpleModalDialogHeader: "_1w-TUMWBEOX_zsSa-BBhK8",
         SimpleModalDialogTitle: "_2tpBIlq2yGQqKcloht-UiJ",
         XButton: "RC4JznqJb34yCm04FKk0I",
@@ -666,6 +667,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_, _, _ = 0) {
         return () => [
@@ -1100,10 +1102,17 @@
               parseDOM: [
                 {
                   tag: "a[href]",
-                  getAttrs: (_) => ({
-                    href: _.getAttribute("href"),
-                    title: _.getAttribute("title"),
-                  }),
+                  getAttrs(_) {
+                    var _;
+                    return {
+                      href: (0, _._)(
+                        null !== (_ = _.getAttribute("href")) && void 0 !== _
+                          ? _
+                          : "",
+                      ),
+                      title: _.getAttribute("title"),
+                    };
+                  },
                 },
               ],
               toDOM(_) {
@@ -1111,7 +1120,7 @@
                 return [
                   "a",
                   {
-                    href: _,
+                    href: (0, _._)(_),
                     title: _,
                     class: "BB_Link",
                   },
@@ -2143,6 +2152,7 @@
           navID: _,
           children: _,
           strTitle: _,
+          wideMode: _,
           ..._
         } = _;
         return (0, _.jsx)(_, {
@@ -2150,7 +2160,7 @@
           navID: null != _ ? _ : "SimpleModalDialog",
           ..._,
           children: (0, _.jsxs)("div", {
-            className: _()(_, _().SimpleModalDialog),
+            className: _()(_, _().SimpleModalDialog, _ && _().WideMode),
             children: [
               " ",
               (0, _.jsxs)(_._, {

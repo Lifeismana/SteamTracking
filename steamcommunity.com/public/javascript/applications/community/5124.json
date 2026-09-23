@@ -105,6 +105,7 @@
     "moderation_sanction_hubbanned": "Блокування в центрі спільноти на %1$s дн.",
     "moderation_sanction_markassuspicious": "Позначено як підозрілий",
     "moderation_sanction_relabelled": "Маркування змінено",
+    "moderation_sanction_markedincompatible": "Marked as incompatible",
     "moderation_sanction_tradebanned_forever": "Постійне блокування в системі обмінів",
     "moderation_sanction_tradebanned": "Блокування в системі обмінів на %1$s дн.",
     "moderation_sanction_kickedfromgroup": "Вигнано з групи",

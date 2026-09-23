@@ -122,35 +122,36 @@
             variant: f,
             color: x,
             align: g = "center",
-            ...m
+            icon: m,
+            ...v
           } = e,
-          v = "indeterminate" === t,
-          C = v ? h : i.i,
-          b = () => {
-            s || (n && n(!!v || !t));
+          C = "indeterminate" === t,
+          b = null != m ? m : C ? h : i.i,
+          j = () => {
+            s || (n && n(!!C || !t));
           },
-          j = (0, a.f)("Checkbox", f);
+          I = (0, a.f)("Checkbox", f);
         return (0, o.jsxs)(r.s, {
           align: g,
           ref: p,
           role: "checkbox",
-          "aria-checked": v ? "mixed" : t,
+          "aria-checked": C ? "mixed" : t,
           "data-state": d(t),
-          className: c()(l.Root, l[`Variant-${j}`], s && l.Disabled),
-          onClick: b,
+          className: c()(l.Root, l[`Variant-${I}`], s && l.Disabled),
+          onClick: j,
           tabIndex: 0,
           onKeyDown: (e) => {
             s ||
-              (" " === e.key && (b(), e.preventDefault(), e.stopPropagation()));
+              (" " === e.key && (j(), e.preventDefault(), e.stopPropagation()));
           },
           cursor: "default",
           "aria-disabled": s,
           "data-accent-color": x,
-          ...m,
+          ...v,
           children: [
             (0, o.jsx)("div", {
               className: l.Checkbox,
-              children: t && (0, o.jsx)(C, { className: l.Icon }),
+              children: t && (0, o.jsx)(b, { className: l.Icon }),
             }),
             u,
           ],

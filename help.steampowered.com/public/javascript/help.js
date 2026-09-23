@@ -1739,7 +1739,7 @@ HelpWizard = {
 		});
 	},
 
-	RefreshCaptcha: function( nUsage, bIsRecoverySearch = false )
+	RefreshCaptcha: function( nUsage )
 	{
 		var _wizard = this;
 		return new Promise( ( resolve ) => {
@@ -1761,7 +1761,7 @@ HelpWizard = {
 				$J.ajax({
 					type: "POST",
 					url: "https://help.steampowered.com/wizard/RefreshCaptcha",
-					data: $J.extend( {}, g_rgDefaultWizardPageParams, { usage: nUsage, hCaptcha: hCaptcha, is_search: bIsRecoverySearch ? 1 : 0 } )
+					data: $J.extend( {}, g_rgDefaultWizardPageParams, { usage: nUsage, hCaptcha: hCaptcha } )
 				}).done( function( data ) {
 					_wizard.UpdateCaptcha( data );
 

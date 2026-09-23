@@ -62,6 +62,7 @@
     "Reservation_OnRegularReserveForModel": "Είστε στην ουρά κρατήσεων για: %1$s",
     "Reservation_PostShuffle_TAndC": "Ισχύουν <1>όροι και προϋποθέσεις</1>.",
     "machine_dummy": "dummy",
+    "PriceDisplay_YourPrice": "Η τιμή σας:",
     "PriceGrid_NormalPrice": "ΚΑΝΟΝΙΚΗ",
     "PriceGrid_RecentPrice": "ΧΑΜΗΛΟΤΕΡΗ (30 ΗΜΕΡΕΣ)",
     "PriceGrid_CurrentPrice": "ΤΩΡΑ",

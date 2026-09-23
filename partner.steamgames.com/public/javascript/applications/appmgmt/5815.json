@@ -62,6 +62,7 @@
     "Reservation_OnRegularReserveForModel": "%1$s 예약 구매 대기자 명단에 등록되었습니다.",
     "Reservation_PostShuffle_TAndC": "<1>이용 약관</1>이 적용됩니다.",
     "machine_dummy": "테스트용",
+    "PriceDisplay_YourPrice": "가격:",
     "PriceGrid_NormalPrice": "기본 가격",
     "PriceGrid_RecentPrice": "30일 기준 최저 가격",
     "PriceGrid_CurrentPrice": "현재 가격",

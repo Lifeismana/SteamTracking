@@ -981,6 +981,12 @@ textarea._1vE-LsK6l_D_5yjbywZV1p {
   background: radial-gradient(circle 224px at 50% 108px, #333333, #1e1e1e);
   word-wrap: break-word;
 }
+._2VE_UZqsGp6cddlis2pNxV {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
 ._3LTPlbh1oIRZyLjujpw83H,
 ._27u72fjp-gJgeD5k7NQ1Vf {
   display: block;
@@ -988,6 +994,7 @@ textarea._1vE-LsK6l_D_5yjbywZV1p {
   height: 32px;
 }
 ._12ldq1_X5RuLWAAs_ODwt7 {
+  font-family: var(--font-family);
   color: var(--text-color, var(--color-text-body-title));
   font-size: var(--font-size, var(--default-font-size));
   line-height: var(--line-height, var(--default-line-height));

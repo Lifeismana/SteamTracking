@@ -105,6 +105,7 @@
     "moderation_sanction_hubbanned": "Merkezden %1$s gün yasaklandı",
     "moderation_sanction_markassuspicious": "Şüpheli olarak işaretlendi",
     "moderation_sanction_relabelled": "Yeniden etiketlendi",
+    "moderation_sanction_markedincompatible": "Marked as incompatible",
     "moderation_sanction_tradebanned_forever": "Kalıcı olarak takas yapmaktan yasaklandı",
     "moderation_sanction_tradebanned": "Takas yapmaktan %1$s gün yasaklandı",
     "moderation_sanction_kickedfromgroup": "Gruptan atıldı",
@@ -133,6 +134,6 @@
     "reportedsubjectlist_header": "Şikâyet edilen konular",
     "moderation_already_owner_disputed": "Zaten itiraz edildi",
     "moderationstats_alltypes": "Tüm konu türleri",
-    "forumsubjectlist_subjectreportsummary": "%1$s çözülmemiş, %1$s itiraz edilmiş",
+    "forumsubjectlist_subjectreportsummary": "%1$s çözülmemiş, %2$s itiraz edilmiş",
     "empty_no_trailing_comma": ""
 }

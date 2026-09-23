@@ -82,9 +82,13 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const _ = (0, _._)(_._, _.gidTopic),
+        const _ = (0, _._)({
+            subject_type: _._,
+            topic: _.gidTopic,
+          }),
           _ = _(_.clanSteamID, _._, _.gidForum, _.gidTopic);
         return (0, _.jsx)(_, {
           subjectType: _._,
@@ -157,25 +161,15 @@
                       maxHeight: "20em",
                       overflowY: "scroll",
                     },
-                    children: _.data.subjects.map((_) => {
-                      var _, _;
-                      return (
-                        null ===
-                          (_ =
-                            null === (_ = _.additional_subject_data) ||
-                            void 0 === _
-                              ? void 0
-                              : _.data) || void 0 === _
-                          ? void 0
-                          : _.length
-                      )
+                    children: _.data.subjects.map((_) =>
+                      _.coordinates
                         ? (0, _.jsx)(
                             _,
                             {
                               subject: _,
                               commentThreadQuery: _.commentThreadQuery,
                             },
-                            _.subject_id,
+                            _.reported_content_id,
                           )
                         : (0, _.jsx)(
                             "div",
@@ -187,8 +181,8 @@
                               children: "Bug - inform Valve",
                             },
                             "bad-" + _++,
-                          );
-                    }),
+                          ),
+                    ),
                   }),
               ],
             }),
@@ -196,6 +190,7 @@
         });
       }
       function _(_, _) {
+        var _, _, _, _;
         const _ =
           _.unresolved_dispute_count + _.unresolved_report_count > 0 ? 1 : 0;
         return (
@@ -210,7 +205,22 @@
               if (_ !== _) return _ - _;
             }
             return 0;
-          })(_.subject_id, _.subject_id)
+          })(
+            null !==
+              (_ =
+                null === (_ = _.coordinates) || void 0 === _
+                  ? void 0
+                  : _.comment) && void 0 !== _
+              ? _
+              : "",
+            null !==
+              (_ =
+                null === (_ = _.coordinates) || void 0 === _
+                  ? void 0
+                  : _.comment) && void 0 !== _
+              ? _
+              : "",
+          )
         );
       }
       function _(_) {
@@ -222,10 +232,11 @@
         return _.slice(0, 35);
       }
       function _(_) {
-        var _, _;
-        const { subject: _, commentThreadQuery: _ } = _;
+        var _, _, _, _;
+        const { subject: _, commentThreadQuery: _ } = _,
+          _ = null === (_ = _.coordinates) || void 0 === _ ? void 0 : _.comment;
         let _ = null;
-        "0" === _.subject_id && (_ = "Topic");
+        _ === _._ && (_ = "Topic");
         let _,
           _ = "#NA";
         if (null === _ && _.isSuccess) {
@@ -233,7 +244,7 @@
           for (const _ of null !== (_ = _.data.comments) && void 0 !== _
             ? _
             : []) {
-            if (_.gidcomment === _.subject_id) {
+            if (_.gidcomment === _) {
               (_ = _(_.text)), (_ = `#${_}`);
               break;
             }
@@ -247,17 +258,17 @@
             void 0 !== _
               ? _
               : [])
-              if (_.gidcomment === _.subject_id) {
+              if (_.gidcomment === _) {
                 _ = _(_.text);
                 break;
               }
         null === _ && (_ = "[Comment]"),
           _.subject_type === _._
             ? (_ =
-                "0" === _.subject_id
-                  ? `#forum_op_${_.subject_group_id}`
-                  : `#c${_.subject_id}`)
-            : _.subject_type === _._ && (_ = `#comment_${_.subject_id}`);
+                _ === _._
+                  ? `#forum_op_${null === (_ = _.coordinates) || void 0 === _ ? void 0 : _.topic}`
+                  : `#c${_}`)
+            : _.subject_type === _._ && (_ = `#comment_${_}`);
         const _ =
             _.unresolved_dispute_count > 0 || _.unresolved_report_count > 0,
           _ = _.required_moderator_level === _._,
@@ -350,83 +361,86 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = "get_content_report_subject_group",
-        _ = "get_content_report_subject_audit_log";
-      async function _(_, _, _, _) {
+      const _ = "get_reported_content",
+        _ = (_) => [_, JSON.stringify(_)],
+        _ = (_) => ["get_reported_content_by_id", _],
+        _ = (_) => ["get_reported_content_audit_log", _];
+      async function _(_, _) {
         return Promise.all([
           _.invalidateQueries({
-            queryKey: [_, _, _],
+            queryKey: [_],
+            exact: !1,
           }),
           _.invalidateQueries({
-            queryKey: [_, _, _, _],
+            queryKey: _(_),
+          }),
+          _.invalidateQueries({
+            queryKey: _(_),
           }),
         ]);
       }
-      function _(_, _) {
+      function _(_) {
         const _ = (0, _._)();
         return (0, _._)(
-          (function (_, _, _) {
+          (function (_, _) {
             return {
-              queryKey: [_, _, _],
+              queryKey: _(_),
+              enabled: (0, _._)(_),
               queryFn: async () => {
                 const _ = _._.Init(_._);
-                _.Body().set_subject_type(_), _.Body().set_subject_group_id(_);
-                const _ = await _._.GetContentReportSubjectGroup(_, _);
+                __webpack_require__.Body().set_coordinates(_._.fromObject(_));
+                const _ = await _._.GetReportedContent(_, _);
                 if (!_.BSuccess())
                   throw new Error(
-                    "Failed in GetContentReportSubjectGroup, EResult: " +
-                      _.GetEResult(),
+                    "Failed in GetReportedContent, EResult: " + _.GetEResult(),
                   );
                 return _.Body().toObject();
               },
             };
-          })(_, _, _),
+          })(_, _),
         );
       }
-      function _(_, _, _) {
+      function _(_) {
         const _ = (0, _._)();
         return (0, _._)(
-          (function (_, _, _, _) {
+          (function (_, _) {
             return {
-              queryKey: [_, _, _, _],
+              queryKey: _(_),
               queryFn: async () => {
-                if (void 0 === _ || void 0 === _ || void 0 === _) return;
+                if (!_) return;
                 const _ = _._.Init(_._);
                 return (
-                  _.Body().set_subject_type(_),
-                  _.Body().set_subject_group_id(_),
-                  _.Body().set_subject_id(_),
-                  (await _._.GetAuditLog(_, _)).Body().toObject()
+                  __webpack_require__.Body().set_reported_content_id(_),
+                  (await _._.GetAuditLogByID(_, _)).Body().toObject()
                 );
               },
             };
-          })(_, _, _, _),
+          })(_, _),
         );
       }
-      function _(_, _, _) {
+      function _(_) {
         const _ = (0, _._)(),
           _ = (0, _._)();
         return (0, _._)({
           mutationFn: async (_) => {
             const _ = _._.Init(_._);
-            _.Body().set_subject_type(_),
-              _.Body().set_subject_group_id(_),
-              _.Body().set_subject_id(_),
-              _.Body().set_required_level(_.eNewLevel),
+            _.Body().set_reported_content_id(_),
+              _.Body().set_new_level(_.eNewLevel),
               _.eReason && _.Body().set_reason(_.eReason),
               _.strNote && _.Body().set_note(_.strNote);
-            const _ = await _._.EscalateSubject(_, _);
+            const _ = await _._.EscalateSubjectByID(_, _);
             if (_.GetEResult() !== _._)
               throw new Error(`Failed to escalate subject: ${_.GetEMsg()}`);
           },
-          onSuccess: async (_, _) => {
+          onSuccess: async () => {
             await Promise.all([
-              _(_, _, _, _),
-              _.invalidateQueries({
+              _(_, _),
+              __webpack_require__.invalidateQueries({
                 queryKey: ["get_claimed"],
               }),
-              _.invalidateQueries({
+              __webpack_require__.invalidateQueries({
                 queryKey: ["get_subject_overview"],
               }),
             ]);
@@ -439,54 +453,48 @@
         return (0, _._)({
           mutationFn: async (_) => {
             const _ = _._.Init(_._);
-            __webpack_require__.Body().set_subject_type(_.eSubjectType),
-              __webpack_require__
-                .Body()
-                .set_subject_group_id(_.ulSubjectGroupID),
-              __webpack_require__.Body().set_subject_id(_.ulSubjectID);
-            await _._.SustainModeration(_, _);
+            __webpack_require__
+              .Body()
+              .set_reported_content_id(_.reportedContentID);
+            const _ = await _._.SustainModerationByID(_, _);
+            if (!_.BSuccess()) throw new Error("EResult " + _.GetEResult());
           },
           onSuccess: async (_, _) => {
-            await _.invalidateQueries({
-              queryKey: ["get_claimed"],
-            }),
-              await _(_, _.eSubjectType, _.ulSubjectGroupID, _.ulSubjectID);
+            await _(_, _.reportedContentID),
+              await _.invalidateQueries({
+                queryKey: ["get_claimed"],
+              });
           },
         });
       }
-      function _(_, _, _, _, _) {
+      function _(_, _) {
         const _ = (0, _._)(),
           _ = (0, _._)();
         return (0, _._)({
           mutationFn: async () => {
             const _ = _._.Init(_._);
-            _.Body().set_steamid(_),
-              _.Body().set_subject_type(_),
-              _.Body().set_subject_group_id(_),
-              _.Body().set_subject_id(_),
-              _.Body().set_details(_);
-            await _._.DisputeModerationForSubject(_, _);
-          },
-          onSuccess: async () => {
-            await _(_, _, _, _);
-          },
-        });
-      }
-      function _(_, _, _, _) {
-        const _ = (0, _._)(),
-          _ = (0, _._)();
-        return (0, _._)({
-          mutationFn: async () => {
-            const _ = _._.Init(_._);
-            _.Body().set_subject_type(_),
-              _.Body().set_subject_group_id(_),
-              _.Body().set_subject_id(_),
-              _.Body().set_owner_dispute_details(_);
-            const _ = await _._.UpdateSubject(_, _);
+            _.Body().set_reported_content_id(_), _.Body().set_details(_);
+            const _ = await _._.OwnerDisputeModeration(_, _);
             if (!_.BSuccess()) throw new Error("EResult " + _.GetEResult());
           },
           onSuccess: async () => {
-            await _(_, _, _, _);
+            await _(_, _);
+          },
+        });
+      }
+      function _(_, _) {
+        const _ = (0, _._)(),
+          _ = (0, _._)();
+        return (0, _._)({
+          mutationFn: async () => {
+            const _ = _._.Init(_._);
+            __webpack_require__.Body().set_reported_content_id(_),
+              __webpack_require__.Body().set_owner_dispute_details(_);
+            const _ = await _._.UpdateSubjectByID(_, _);
+            if (!_.BSuccess()) throw new Error("EResult " + _.GetEResult());
+          },
+          onSuccess: async () => {
+            await _(_, _);
           },
         });
       }

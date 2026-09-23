@@ -183,7 +183,7 @@
         var t;
         return (0, i.jsx)("img", {
           className: n.DynamicLink_Preview,
-          src: e.strURL,
+          src: e.strURL || void 0,
           alt: null !== (t = e.strAlt) && void 0 !== t ? t : "",
         });
       }
@@ -236,42 +236,53 @@
         });
       }
     },
-    80664: (e, t, r) => {
+    31995: (e, t, r) => {
       "use strict";
-      r.d(t, { F8: () => l, oK: () => u });
-      var i = r(66418),
-        n = r(88942);
-      const s = "events/ajaxgetdynamiceventmetadata";
-      async function a(e) {
+      function i(e) {
+        return e
+          .replace(/&lt;/g, "<")
+          .replace(/&gt;/g, ">")
+          .replace(/&quot;/g, '"')
+          .replace(/&amp;/g, "&");
+      }
+      r.d(t, { oK: () => d, F8: () => c });
+      var n = r(66418),
+        s = r(88942);
+      const a = "events/ajaxgetdynamiceventmetadata";
+      async function o(e) {
         const t =
-            i.TS.STORE_BASE_URL + s + "?" + new URLSearchParams(e).toString(),
+            n.TS.STORE_BASE_URL + a + "?" + new URLSearchParams(e).toString(),
           r = await fetch(t, { credentials: "include" });
         if (!r.ok) throw new Error(`${t} answered ${r.status}`);
         return await r.json();
       }
-      function o(e) {
+      function l(e) {
         return ["DynamicEventMetadata", "youtube", e];
       }
-      function l(e, t = !0) {
-        return (0, n.I)(
+      function c(e, t = !0) {
+        return (0, s.I)(
           (function (e, t = !0) {
             return {
-              queryKey: o(e),
+              queryKey: l(e),
               queryFn: async () => {
-                var t, r, i;
-                const n = await a({ youtubevideoids: e }),
-                  s =
+                var t, r, n;
+                const s = await o({ youtubevideoids: e }),
+                  a =
                     null !==
                       (r =
-                        null === (t = n.youtube) || void 0 === t
+                        null === (t = s.youtube) || void 0 === t
                           ? void 0
                           : t.find((t) => t.videoid == e)) && void 0 !== r
                       ? r
-                      : null === (i = n.youtube) || void 0 === i
+                      : null === (n = s.youtube) || void 0 === n
                         ? void 0
-                        : i[0];
-                if (!s) throw new Error(`no metadata for youtube video ${e}`);
-                return s;
+                        : n[0];
+                if (!a) throw new Error(`no metadata for youtube video ${e}`);
+                return {
+                  ...a,
+                  title: i(a.title),
+                  description: i(a.description),
+                };
               },
               enabled: t && !0,
               staleTime: 36e5,
@@ -280,29 +291,34 @@
           })(e, t),
         );
       }
-      function c(e) {
+      function u(e) {
         return ["DynamicEventMetadata", "sharedfile", e];
       }
-      function u(e) {
-        return (0, n.I)(
+      function d(e) {
+        return (0, s.I)(
           (function (e) {
             return {
-              queryKey: c(e),
+              queryKey: u(e),
               queryFn: async () => {
-                var t, r, i;
-                const n = await a({ sharedfileids: e }),
-                  s =
+                var t, r, n;
+                const s = await o({ sharedfileids: e }),
+                  a =
                     null !==
                       (r =
-                        null === (t = n.sharedfiles) || void 0 === t
+                        null === (t = s.sharedfiles) || void 0 === t
                           ? void 0
                           : t.find((t) => t.sharedfileid == e)) && void 0 !== r
                       ? r
-                      : null === (i = n.sharedfiles) || void 0 === i
+                      : null === (n = s.sharedfiles) || void 0 === n
                         ? void 0
-                        : i[0];
-                if (!s) throw new Error(`no metadata for shared file ${e}`);
-                return s;
+                        : n[0];
+                if (!a) throw new Error(`no metadata for shared file ${e}`);
+                return {
+                  ...a,
+                  title: i(a.title),
+                  description: i(a.description),
+                  type: i(a.type),
+                };
               },
               enabled: !0,
               staleTime: 36e5,
@@ -333,8 +349,8 @@
       var s = {};
       r.r(s),
         r.d(s, {
-          XR: () => f,
-          x7: () => g,
+          XR: () => g,
+          x7: () => f,
           Bc: () => j,
           xJ: () => b,
           QB: () => x,
@@ -359,8 +375,8 @@
       const m = 0,
         p = 72,
         h = 1,
-        f = 1,
-        g = 2,
+        g = 1,
+        f = 2,
         _ = 3,
         y = 4,
         S = 5,
@@ -1637,8 +1653,8 @@
         m = r(74410),
         p = r(90622),
         h = r(12155),
-        f = r(32754),
-        g = r(52038),
+        g = r(32754),
+        f = r(52038),
         _ = r(61859),
         y = r(61336),
         S = r(30470),
@@ -1661,7 +1677,7 @@
             {
               Constructor: function (e) {
                 return (0, i.jsx)("i", {
-                  className: (0, g.A)(s().Italic, "BB_Italic"),
+                  className: (0, f.A)(s().Italic, "BB_Italic"),
                   children: e.children,
                 });
               },
@@ -1675,7 +1691,7 @@
             "h4",
             {
               Constructor: function (e) {
-                return M("h4", e, (0, g.A)(s().Header4, "BB_Header4"));
+                return M("h4", e, (0, f.A)(s().Header4, "BB_Header4"));
               },
               autocloses: !1,
               skipFollowingNewline: !0,
@@ -1685,7 +1701,7 @@
             "h5",
             {
               Constructor: function (e) {
-                return M("h5", e, (0, g.A)(s().Header5, "BB_Header5"));
+                return M("h5", e, (0, f.A)(s().Header5, "BB_Header5"));
               },
               autocloses: !1,
               skipFollowingNewline: !0,
@@ -1703,7 +1719,7 @@
                   (t = t.substring(1));
                 return (0, i.jsx)("span", {
                   id: t || void 0,
-                  className: (0, g.A)(s().CenterSpan, "BB_Center"),
+                  className: (0, f.A)(s().CenterSpan, "BB_Center"),
                   children: e.children,
                 });
               },
@@ -1714,7 +1730,7 @@
             "smalltext",
             {
               Constructor: function (e) {
-                return M("div", e, (0, g.A)(s().SmallText, "BB_SmallText"));
+                return M("div", e, (0, f.A)(s().SmallText, "BB_SmallText"));
               },
               autocloses: !1,
               skipFollowingNewline: !0,
@@ -1753,7 +1769,7 @@
                     r(!t);
                   }, [t]);
                 return (0, i.jsx)(o.Z, {
-                  className: (0, g.A)(s().Spoiler, t && s().Revealed),
+                  className: (0, f.A)(s().Spoiler, t && s().Revealed),
                   focusable: !0,
                   onActivate: n,
                   onOKActionDescription: (0, _.we)(
@@ -1876,7 +1892,7 @@
                   r = C(e.args, "equalcells"),
                   n = C(e.args, "colwidth");
                 return (0, i.jsxs)("table", {
-                  className: (0, g.A)(
+                  className: (0, f.A)(
                     s().Table,
                     "BB_Table",
                     t && s().NoBorder,
@@ -1902,7 +1918,7 @@
             {
               Constructor: function (e) {
                 return (0, i.jsx)("tr", {
-                  className: (0, g.A)(s().TableRow, "BB_TableRow"),
+                  className: (0, f.A)(s().TableRow, "BB_TableRow"),
                   children: e.children,
                 });
               },
@@ -1974,7 +1990,7 @@
                     }
                   })(C(e.args, "type"), o, l, u);
                 return (0, i.jsxs)("div", {
-                  className: (0, g.A)({
+                  className: (0, f.A)({
                     [s().ExpandSectionBlock]: !0,
                     [null !== (t = d.style) && void 0 !== t ? t : ""]:
                       null != d.style,
@@ -2029,12 +2045,12 @@
                       ? a
                       : null,
                   h = null !== (o = C(e.args, "id")) && void 0 !== o ? o : "",
-                  f = new Date(u),
-                  _ = f.getUTCFullYear(),
-                  y = ("0" + (f.getUTCMonth() + 1)).slice(-2),
-                  S = ("0" + f.getUTCDate()).slice(-2),
-                  w = ("0" + f.getUTCHours()).slice(-2),
-                  b = ("0" + f.getUTCMinutes()).slice(-2),
+                  g = new Date(u),
+                  _ = g.getUTCFullYear(),
+                  y = ("0" + (g.getUTCMonth() + 1)).slice(-2),
+                  S = ("0" + g.getUTCDate()).slice(-2),
+                  w = ("0" + g.getUTCHours()).slice(-2),
+                  b = ("0" + g.getUTCMinutes()).slice(-2),
                   B = `${_}${y}${S}T${w}${b}00Z`,
                   v = new Date(d),
                   x = v.getUTCFullYear(),
@@ -2069,7 +2085,7 @@
                     const t = window.ReactNativeWebView,
                       r = {
                         event_name: "addcalendarevent",
-                        tsStart: f.getTime(),
+                        tsStart: g.getTime(),
                         tsEnd: v.getTime(),
                         strTitle: c,
                         strNotes: m,
@@ -2079,7 +2095,7 @@
                   }
                 };
                 return (0, i.jsxs)("div", {
-                  className: (0, g.A)(
+                  className: (0, f.A)(
                     "SaleSectionCalendarEventContainer",
                     s().CalendarEventContainer,
                   ),
@@ -2087,7 +2103,7 @@
                   children: [
                     N &&
                       (0, i.jsx)("a", {
-                        className: (0, g.A)(
+                        className: (0, f.A)(
                           "SaleSectionCalendarEventLink",
                           s().CalendarEventLink,
                         ),
@@ -2097,7 +2113,7 @@
                         children: "Apple",
                       }),
                     (0, i.jsx)("a", {
-                      className: (0, g.A)(
+                      className: (0, f.A)(
                         "SaleSectionCalendarEventLink",
                         s().CalendarEventLink,
                       ),
@@ -2106,7 +2122,7 @@
                     }),
                     N &&
                       (0, i.jsx)("a", {
-                        className: (0, g.A)(
+                        className: (0, f.A)(
                           "SaleSectionCalendarEventLink",
                           s().CalendarEventLink,
                         ),
@@ -2208,19 +2224,19 @@
             (n = n.substring(1)),
           (0, i.jsx)(e, {
             id: n || void 0,
-            className: (0, g.A)(r, t.className),
+            className: (0, f.A)(r, t.className),
             children: t.children,
           })
         );
       }
       function I(e) {
-        return M("h1", e, (0, g.A)(s().Header1, "BB_Header1"));
+        return M("h1", e, (0, f.A)(s().Header1, "BB_Header1"));
       }
       function j(e) {
-        return M("h2", e, (0, g.A)(s().Header2, "BB_Header2"));
+        return M("h2", e, (0, f.A)(s().Header2, "BB_Header2"));
       }
       function A(e) {
-        return M("h3", e, (0, g.A)(s().Header3, "BB_Header3"));
+        return M("h3", e, (0, f.A)(s().Header3, "BB_Header3"));
       }
       const E = (e) => {
         const { href: t, ...r } = e;
@@ -2239,7 +2255,7 @@
           !t.startsWith("steam://")
             ? (0, y.Qz)(t)
             : void 0;
-        return (0, i.jsx)(f.Gq, {
+        return (0, i.jsx)(g.Gq, {
           toolTipContent: o,
           direction: "top",
           children: (0, i.jsx)(a.Ii, {
@@ -2253,7 +2269,7 @@
       function N(e) {
         const t = C(e.args, "author");
         return (0, i.jsxs)("blockquote", {
-          className: (0, g.A)(s().BlockQuote, e.className),
+          className: (0, f.A)(s().BlockQuote, e.className),
           children: [
             !!t &&
               (0, i.jsxs)("div", {
@@ -2270,7 +2286,7 @@
       }
       function T(e) {
         return (0, i.jsx)("ul", {
-          className: (0, g.A)(s().List, "bullets"),
+          className: (0, f.A)(s().List, "bullets"),
           children: e.children,
         });
       }
@@ -2312,7 +2328,7 @@
           n && parseInt(n) > 1 && (o.colSpan = parseInt(n)),
           a && parseInt(a) > 1 && (o.rowSpan = parseInt(a)),
           (0, i.jsx)(e, {
-            className: (0, g.A)(s().TableCell, "td" == e && "BB_TableData"),
+            className: (0, f.A)(s().TableCell, "td" == e && "BB_TableData"),
             ...o,
             style: r ? { width: r } : void 0,
             children: t.children,
@@ -2447,11 +2463,11 @@
       "use strict";
       r.d(t, {
         G6: () => p,
-        Gg: () => f,
+        Gg: () => g,
         Sq: () => u,
         eR: () => d,
         ik: () => m,
-        mZ: () => g,
+        mZ: () => f,
         t7: () => h,
         zX: () => y,
       });
@@ -2470,7 +2486,7 @@
           p = (0, s.useRef)(void 0),
           h = (0, l.CH)();
         o.current = e;
-        const [f, g] = (0, s.useState)(void 0),
+        const [g, f] = (0, s.useState)(void 0),
           {
             include_assets: _,
             include_release: y,
@@ -2489,6 +2505,7 @@
             apply_user_filters: N,
             include_links: T,
             include_extra_details: k,
+            include_optin_registration_tags: R,
           } = r;
         if (
           ((0, s.useEffect)(() => {
@@ -2510,21 +2527,22 @@
               apply_user_filters: N,
               include_links: T,
               include_extra_details: k,
+              include_optin_registration_tags: R,
             };
             let s = null;
             return (
               !e ||
                 e < 0 ||
                 c.A.Get().BHasStoreItem(e, t, r) ||
-                (void 0 !== f && i && i == p.current) ||
-                (i !== p.current && (g(void 0), (p.current = i)),
+                (void 0 !== g && i && i == p.current) ||
+                (i !== p.current && (f(void 0), (p.current = i)),
                 (s = n().CancelToken.source()),
                 c.A.Get()
                   .QueueStoreItemRequest(e, t, r)
                   .then((t) => {
                     (null == s ? void 0 : s.token.reason) ||
                       o.current !== e ||
-                      g(t == a.R),
+                      f(t == a.R),
                       h();
                   })),
               () =>
@@ -2534,7 +2552,7 @@
             e,
             t,
             i,
-            f,
+            g,
             _,
             y,
             S,
@@ -2552,24 +2570,25 @@
             N,
             T,
             k,
+            R,
             h,
           ]),
           !e)
         )
           return [null, d];
-        if (!1 === f) return [void 0, d];
+        if (!1 === g) return [void 0, d];
         if (c.A.Get().BIsStoreItemMissing(e, t)) return [void 0, d];
         if (!c.A.Get().BHasStoreItem(e, t, r)) return [void 0, u];
-        const R = c.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
-        return R ? [R, m] : [null, d];
+        const P = c.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
+        return P ? [P, m] : [null, d];
       }
       function h(e, t, r) {
         return p(e, o.c6.qI, t, r);
       }
-      function f(e, t, r) {
+      function g(e, t, r) {
         return p(e, o.c6.RD, t, r);
       }
-      function g(e, t, r) {
+      function f(e, t, r) {
         var i;
         const [n, s] = p(e, t, r);
         let a;
@@ -2588,8 +2607,8 @@
             include_assets: o,
             include_release: p,
             include_platforms: h,
-            include_all_purchase_options: f,
-            include_screenshots: g,
+            include_all_purchase_options: g,
+            include_screenshots: f,
             include_trailers: _,
             include_ratings: y,
             include_tag_count: S,
@@ -2602,6 +2621,7 @@
             apply_user_filters: M,
             include_links: I,
             include_extra_details: j,
+            include_optin_registration_tags: A,
           } = r;
         if (
           ((0, s.useEffect)(() => {
@@ -2610,8 +2630,8 @@
                 include_assets: o,
                 include_release: p,
                 include_platforms: h,
-                include_all_purchase_options: f,
-                include_screenshots: g,
+                include_all_purchase_options: g,
+                include_screenshots: f,
                 include_trailers: _,
                 include_ratings: y,
                 include_tag_count: S,
@@ -2624,6 +2644,7 @@
                 apply_user_filters: M,
                 include_links: I,
                 include_extra_details: j,
+                include_optin_registration_tags: A,
               },
               i = e.filter(
                 (e) =>
@@ -2641,7 +2662,30 @@
               }),
               () => s.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, i, a, o, p, h, f, g, _, y, S, w, b, B, C, v, x, M, I, j]),
+          }, [
+            e,
+            t,
+            i,
+            a,
+            o,
+            p,
+            h,
+            g,
+            f,
+            _,
+            y,
+            S,
+            w,
+            b,
+            B,
+            C,
+            v,
+            x,
+            M,
+            I,
+            j,
+            A,
+          ]),
           !e)
         )
           return d;
@@ -2689,7 +2733,7 @@
     },
     74410: (e, t, r) => {
       "use strict";
-      r.d(t, { Eo: () => _, V2: () => i, gH: () => f, j6: () => g });
+      r.d(t, { Eo: () => _, V2: () => i, gH: () => g, j6: () => f });
       var i,
         n = r(7850),
         s = r(90626),
@@ -2709,7 +2753,7 @@
           alignStr: e == i.full ? "" : e == i.left ? d.floatLeft : d.floatRight,
         };
       }
-      function f(e) {
+      function g(e) {
         if (p()) return null;
         let t = (0, a.j$)(e.args);
         if (t) {
@@ -2728,7 +2772,7 @@
         }
         return (0, n.jsx)(s.Fragment, {});
       }
-      function g(e) {
+      function f(e) {
         if (p()) return null;
         const t = (0, m.XU)(e);
         return void 0 !== (null == t ? void 0 : t.strVideoID)
@@ -2765,10 +2809,10 @@
     },
     88527: (e, t, r) => {
       "use strict";
-      r.d(t, { A: () => f });
+      r.d(t, { A: () => g });
       var i = r(7850),
         n = r(90626),
-        s = r(80664),
+        s = r(31995),
         a = r(22797),
         o = r(52038),
         l = r(61859),
@@ -2778,18 +2822,18 @@
         m = r(73662),
         p = r.n(m),
         h = r(77429);
-      function f(e) {
+      function g(e) {
         var t, r, m;
         const {
-            videoID: f,
-            bShowVideoImmediately: g,
+            videoID: g,
+            bShowVideoImmediately: f,
             bAutoPlay: _,
             nStartSeconds: y,
             classNameSize: S,
             classNameAlign: w,
           } = e,
-          [b, B] = (0, n.useState)(!g),
-          { data: C, isSuccess: v } = (0, s.F8)(f, b);
+          [b, B] = (0, n.useState)(!f),
+          { data: C, isSuccess: v } = (0, s.F8)(g, b);
         if (b) {
           const e =
               null !== (t = null == C ? void 0 : C.title) && void 0 !== t
@@ -2808,7 +2852,7 @@
             onClick: () => B(!1),
             children: [
               (0, i.jsx)(h.KN, {
-                strURL: "https://img.youtube.com/vi/" + f + "/0.jpg",
+                strURL: "https://img.youtube.com/vi/" + g + "/0.jpg",
               }),
               (0, i.jsxs)(h.J7, {
                 children: [
@@ -2833,10 +2877,10 @@
           });
         }
         return (0, i.jsx)(d.gZ, {
-          video: f,
+          video: g,
           children: (0, i.jsxs)("div", {
             className: (0, o.A)(p().PreviewYouTubeVideo, S, w),
-            id: f,
+            id: g,
             children: [
               (0, i.jsx)("img", {
                 className: p().PlaceholderImg,
@@ -2845,7 +2889,7 @@
                   "public/shared/images/responsive/youtube_16x9_placeholder.gif",
               }),
               (0, i.jsx)(d.fm, {
-                video: f,
+                video: g,
                 autoplay: null != _ && _,
                 startSeconds: y,
                 controls: !0,
@@ -2873,8 +2917,8 @@
         m = r(61859),
         p = r(52038),
         h = r(90024),
-        f = r.n(h),
-        g = r(97232),
+        g = r.n(h),
+        f = r(97232),
         _ = r(32754);
       const y = 1576780700;
       let S = class extends s.Component {
@@ -2971,7 +3015,7 @@
                     }),
                   }),
                 })
-              : (s.push(f().chatSubmitButton, f().EmoticonPickerButton),
+              : (s.push(g().chatSubmitButton, g().EmoticonPickerButton),
                 (0, n.jsx)(l.fu, {
                   className: (0, p.A)(...s),
                   onOKActionDescription: (0, m.we)("#ChatEntryButton_Emoticon"),
@@ -2983,7 +3027,7 @@
                   children: (0, n.jsxs)(_.he, {
                     toolTipContent: r,
                     children: [
-                      this.props.buttonIcon || (0, n.jsx)(g.nl, {}),
+                      this.props.buttonIcon || (0, n.jsx)(f.nl, {}),
                       a && (0, n.jsx)(d.iD, {}),
                     ],
                   }),
@@ -3012,8 +3056,8 @@
         return `${e}economy/sticker${r ? "static" : ""}/${encodeURIComponent(t)}`;
       }
       var h = r(78327),
-        f = r(68255),
-        g = r(76217),
+        g = r(68255),
+        f = r(76217),
         _ = r(88006),
         y = r(19418);
       class S extends o.Component {
@@ -3041,7 +3085,7 @@
                       });
                 }
               : void 0;
-          return (0, n.jsxs)(g.Z, {
+          return (0, n.jsxs)(f.Z, {
             className: y.Picker,
             onButtonDown: a,
             children: [s && (0, n.jsx)(w, { children: this.RenderTabs() }), i],
@@ -3063,7 +3107,7 @@
         }
       }
       function w(e) {
-        return (0, n.jsx)(g.Z, {
+        return (0, n.jsx)(f.Z, {
           className: y.Tabs,
           "flow-children": "row",
           children: e.children,
@@ -3077,7 +3121,7 @@
       }
       function B(e) {
         const { active: t, children: r, onClick: i } = e;
-        return (0, n.jsx)(g.Z, {
+        return (0, n.jsx)(f.Z, {
           className: (0, d.A)(y.Tab, t && y.Active),
           focusClassName: y.Focus,
           onActivate: i,
@@ -3097,7 +3141,7 @@
         } = e;
         let o = t.map((e, a) =>
           (0, n.jsx)(
-            g.Z,
+            f.Z,
             {
               className: y.Item,
               onActivate: () => i(t[a]),
@@ -3110,7 +3154,7 @@
         );
         return (
           0 === t.length && a && (o = a()),
-          (0, n.jsx)(g.Z, {
+          (0, n.jsx)(f.Z, {
             "flow-children": "grid",
             className: y.ItemList,
             children: o,
@@ -3171,7 +3215,7 @@
         const { value: t, onChange: r, onSubmit: i } = e;
         return (0, n.jsx)("div", {
           className: y.FilterInputContainer,
-          children: (0, n.jsx)(f.pd, {
+          children: (0, n.jsx)(g.pd, {
             type: "text",
             placeholder: (0, m.we)("#AddonPicker_Search"),
             className: y.FilterInput,
@@ -3942,7 +3986,7 @@
     },
     81962: (e, t, r) => {
       "use strict";
-      r.d(t, { n: () => h, c: () => g });
+      r.d(t, { n: () => h, c: () => f });
       var i = r(7850),
         n = r(90626),
         s = r(6336),
@@ -3982,7 +4026,7 @@
           [s, c] = (0, d.OP)(),
           [m, p] = n.useState(null),
           h = `:${t}:`,
-          g = (0, a.G)(t, r);
+          f = (0, a.G)(t, r);
         return (0, i.jsxs)(i.Fragment, {
           children: [
             (0, i.jsx)(o, {
@@ -3990,18 +4034,18 @@
               style: "merge-adjacent",
               children: (0, i.jsx)("img", {
                 ...c,
-                src: g,
+                src: f,
                 className: (0, l.A)(u().emoticon, r ? u().large : void 0),
                 "data-emoticon": t,
                 alt: t,
                 ref: p,
               }),
             }),
-            s && m && (0, i.jsx)(f, { target: m, emoticon: t }),
+            s && m && (0, i.jsx)(g, { target: m, emoticon: t }),
           ],
         });
       }
-      function f(e) {
+      function g(e) {
         const { target: t, emoticon: r } = e,
           { data: n } = (function (e) {
             return (0, m.I)({
@@ -4015,14 +4059,14 @@
               },
             });
           })(r);
-        return (0, i.jsx)(g, {
+        return (0, i.jsx)(f, {
           target: t,
           title: `:${r}:`,
           subtitle: n && n.app_name ? n.app_name : void 0,
           children: (0, i.jsx)(h, { emoticon: r, large: !0 }),
         });
       }
-      const g = ({ target: e, title: t, subtitle: r, children: n }) =>
+      const f = ({ target: e, title: t, subtitle: r, children: n }) =>
         (0, i.jsxs)(s.g, {
           target: e,
           style: { zIndex: 1700 },
@@ -4105,7 +4149,7 @@
               bMuted: d,
               className: m,
               mediaScale: h,
-              flAspectRatio: f,
+              flAspectRatio: g,
               onClick: w,
               altText: b,
             } = e,
@@ -4120,7 +4164,7 @@
               );
             }, [r.rgVideoTracks]),
             [C, v] = s.useState(!1),
-            x = g();
+            x = f();
           if (!r.rgVideoSources || !r.rgVideoSources.length) return null;
           const M = (function (e) {
             return !(
@@ -4170,7 +4214,7 @@
             "aria-label": b,
             style: {
               width: h && h >= 1 && h < 100 ? `${h}%` : void 0,
-              aspectRatio: f || void 0,
+              aspectRatio: g || void 0,
             },
             children: [
               (0, n.jsx)(y, { rgVideoSources: r.rgVideoSources }),
@@ -4178,9 +4222,9 @@
             ],
           });
         }),
-        f = s.createContext(void 0);
-      function g() {
-        return s.useContext(f) || (0, d.xv)();
+        g = s.createContext(void 0);
+      function f() {
+        return s.useContext(g) || (0, d.xv)();
       }
       function _(e, t) {
         if (e) {
@@ -4198,7 +4242,7 @@
       }
       function y(e) {
         const { rgVideoSources: t } = e,
-          r = g();
+          r = f();
         return t
           .filter((e) => Boolean(e.sURL))
           .map((e) =>
@@ -4217,7 +4261,7 @@
       }
       function w(e) {
         const { track: t, rgVideoTracks: r } = e,
-          i = g();
+          i = f();
         let s = t.eLanguage;
         if (u.TS.EREALM == o.TU.k_ESteamRealmChina)
           if (l.A0.IsELanguageValidInRealm(s, o.TU.k_ESteamRealmChina))
@@ -4278,7 +4322,7 @@
         n.useEffect(() => {
           d(0), p((e) => e + 1);
         }, [h]);
-        const f = n.useMemo(() => {
+        const g = n.useMemo(() => {
             let r = "";
             return (
               t && t.length > u && (r = t[u]),
@@ -4293,7 +4337,7 @@
               r
             );
           }, [t, u, e]),
-          g = n.useCallback(
+          f = n.useCallback(
             (e) => {
               null == r || r(e, t[u], u);
               const i = u + 1;
@@ -4303,7 +4347,7 @@
           );
         return (0, i.jsx)(
           "img",
-          { ref: c, ...l, src: f, onError: g, alt: a },
+          { ref: c, ...l, src: g, onError: f, alt: a },
           m,
         );
       }
@@ -4323,18 +4367,18 @@
         m = r(61859),
         p = r(23338),
         h = r(8871),
-        f = r(40236);
+        g = r(40236);
       !(function (e) {
         (e[(e.NotLoaded = 0)] = "NotLoaded"),
           (e[(e.Loading = 1)] = "Loading"),
           (e[(e.Loaded = 2)] = "Loaded");
       })(i || (i = {}));
-      let g = i.NotLoaded,
+      let f = i.NotLoaded,
         _ = [];
       function y(e) {
         var t;
-        if (g != i.Loaded) {
-          if (g == i.NotLoaded) {
+        if (f != i.Loaded) {
+          if (f == i.NotLoaded) {
             let e = document.createElement("script");
             e.src = "https://www.youtube.com/iframe_api";
             let r = document.getElementsByTagName("script")[0];
@@ -4354,7 +4398,7 @@
         o.x9(_, e);
       }
       function b() {
-        g = i.Loaded;
+        f = i.Loaded;
         for (let e of _) e();
         _ = [];
       }
@@ -4560,7 +4604,7 @@
               ? void 0
               : e.pauseVideo();
           }, []),
-          c = (0, f.OO)({ onLeave: r ? l : void 0 }),
+          c = (0, g.OO)({ onLeave: r ? l : void 0 }),
           u = (0, h.Ue)(o, c);
         return (
           a.useEffect(() => {

@@ -75,12 +75,14 @@
             imageType: _,
             bPreferAssetWithoutOverride: _,
             strAdditionalClassName: _,
+            bNoShadow: _,
           } = _,
           { storeItemAsset: _, storeItemDefaultInfo: _ } = (0, _._)(_, _, _);
         if ("library" === _ || "vertical" == _)
           return (0, _.jsx)(_._, {
             _: _,
             bPreferAssetWithoutOverride: _,
+            bNoShadow: _,
           });
         let _ = "";
         if ("main" === _) _ = _().MainCapsuleImageContainer;
@@ -147,7 +149,13 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        const { _: _, bPreferLibrary: _, bPreferAssetWithoutOverride: _ } = _,
+        const {
+            _: _,
+            bPreferLibrary: _,
+            bPreferAssetWithoutOverride: _,
+            bNoShadow: _,
+          } = _,
+          _ = _ ? _().NoShadow : "",
           { storeItemDefaultInfo: _, storeItemAsset: _ } = (0, _._)(
             _,
             "vertical",
@@ -188,6 +196,7 @@
               _().LibraryFallbackAssetImageContainer,
               _().VerticalCapsule,
               _ ? _().ForceLibrarySizing : "",
+              _,
             ),
             children: [
               (0, _.jsx)("div", {
@@ -212,7 +221,7 @@
         if (_ < _.length) {
           const _ = _[_];
           return (0, _.jsxs)("div", {
-            className: _().LibraryFallbackAssetImageContainer,
+            className: (0, _._)(_().LibraryFallbackAssetImageContainer, _),
             children: [
               (0, _.jsx)("div", {
                 className: _().FallbackBackground,
@@ -1047,32 +1056,6 @@
           onOKActionDescription: _._.Localize("#Sale_Gamepad_Action_Select"),
         };
       }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        return _ == _._._ ? "bundle" : _ == _._._ ? "sub" : (_._._, "app");
-      }
-      const _ = (_) => {
-        const { appid: _ } = _,
-          _ = (0, _.jsx)("div", {
-            className: "ImpressionTrackedElement",
-            children: _.children,
-          });
-        return _
-          ? (0, _.jsx)(_._, {
-              appID: _,
-              children: _,
-            })
-          : _;
-      };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

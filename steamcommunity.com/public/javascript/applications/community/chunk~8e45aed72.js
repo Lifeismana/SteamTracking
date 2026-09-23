@@ -2495,8 +2495,8 @@
           ],
         ]),
         b = (e) => {
-          const { text: t, bShowErrorInfo: r, version: s } = e,
-            n = a.useCallback(
+          const { text: t, bShowErrorInfo: r, version: s, language: n } = e,
+            l = a.useCallback(
               (e) =>
                 new g.gL(
                   new g.pH(
@@ -2514,13 +2514,13 @@
                 ),
               [],
             ),
-            l = a.useRef(new u.B(y, n, m.TS.LANGUAGE));
+            o = a.useMemo(
+              () => new u.B(y, l, null != n ? n : m.TS.LANGUAGE),
+              [l, n],
+            );
           return (0, i.jsx)("div", {
             className: _().FAQContainer,
-            children: l.current.ParseBBCode(t, {
-              showErrorInfo: r,
-              version: s,
-            }),
+            children: o.ParseBBCode(t, { showErrorInfo: r, version: s }),
           });
         };
     },

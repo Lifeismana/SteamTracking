@@ -3201,7 +3201,9 @@
             (_[(_.k_EWindowBringToFrontAndForceOS = 1)] =
               "k_EWindowBringToFrontAndForceOS"),
             (_[(_.k_EWindowBringToFrontWithoutForcingOS = 2)] =
-              "k_EWindowBringToFrontWithoutForcingOS");
+              "k_EWindowBringToFrontWithoutForcingOS"),
+            (_[(_.k_EWindowBringToFrontUsingExistingOSState = 3)] =
+              "k_EWindowBringToFrontUsingExistingOSState");
         })(_ || (_ = {}));
       var _;
       !(function (_) {
@@ -9247,6 +9249,7 @@
             navKey: _,
             noFocusRing: _,
             focusRingSizeElementID: _,
+            focusRingHasBorderRadius: _,
             focusable: _,
             navRef: _,
             actionDescriptionMap: _,
@@ -9276,6 +9279,7 @@
             navKey: _,
             noFocusRing: _,
             focusRingSizeElementID: _,
+            focusRingHasBorderRadius: _,
             focusable: _,
             navRef: _,
             onMoveUp: _,
@@ -11475,7 +11479,7 @@
           return this.GetElementForFocusRingMeasure()?.getBoundingClientRect();
         }
         GetBorderRadiusForFocusRing() {
-          if (!this.m_Properties?.focusRingSizeElementID) return;
+          if (!this.m_Properties?.focusRingHasBorderRadius) return;
           const _ = this.GetElementForFocusRingMeasure();
           if (!_) return;
           const _ = _.ownerDocument?.defaultView?.getComputedStyle(_);
@@ -12700,6 +12704,13 @@
             },
             [_],
           ),
+          _ = _.useCallback((_) => !_.bInVR && "mouse" === _.pointerType, [_]),
+          _ = _.useCallback(
+            (_) => {
+              _(_) || _.ShowVirtualKeyboard();
+            },
+            [_, _],
+          ),
           _ = (0, _._)(
             (_) => {
               _.current = _;
@@ -12716,26 +12727,24 @@
                       _.SetAsCurrentVirtualKeyboardTarget,
                     ),
                   ),
-                  _.addEventListener("click", _.ShowVirtualKeyboard),
-                  _.push(() =>
-                    _.removeEventListener("click", _.ShowVirtualKeyboard),
-                  ),
+                  _.addEventListener("click", _),
+                  _.push(() => _.removeEventListener("click", _)),
                   _.push((0, _._)(_, _.ShowVirtualKeyboard)),
                   _.push((0, _._)(_, _))),
                 () => _.forEach((_) => _())
               );
             },
-            [_, _],
+            [_, _, _],
           );
         return (
           _.useLayoutEffect(
             () => (
               (0, _._)(_, {
-                TakeFocusAndShowKeyboard: () => {
+                TakeFocusAndShowKeyboard: (_) => {
                   const _ = _.current;
                   _ &&
                     (document.activeElement != _ && _.focus(),
-                    _.ShowVirtualKeyboard());
+                    (_ && _(_)) || _.ShowVirtualKeyboard());
                 },
                 HideVirtualKeyboard: () => {
                   _.HideVirtualKeyboard();
@@ -12743,7 +12752,7 @@
               }),
               () => (0, _._)(_, null)
             ),
-            [_, _],
+            [_, _, _],
           ),
           _
         );
@@ -12767,6 +12776,8 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -12839,14 +12850,33 @@
                 : [!1, _._];
       }
       function _(_) {
-        const { _: _, className: _ } = _,
+        const { _: _, eHWCompat: _, className: _ } = _,
           { data: _ } = (0, _._)(_);
-        return _
-          ? (0, _.jsx)(_, {
-              category: _?.steam_deck_compat_category,
+        if (!_) return null;
+        switch (_) {
+          case _._:
+            return (0, _.jsx)(_, {
+              category: _.steam_deck_compat_category,
               className: _,
-            })
-          : null;
+            });
+          case _._:
+            return (0, _.jsx)(_, {
+              category: _.steam_frame_compat_category,
+              className: _,
+            });
+          case _._:
+            return (0, _.jsx)(_, {
+              category: _.steam_machine_compat_category,
+              className: _,
+            });
+          case _._:
+            return (0, _.jsx)(_, {
+              category: _.steam_os_compat_category,
+              className: _,
+            });
+          default:
+            return null;
+        }
       }
       const _ = (_) => {
           const { category: _ = _._, className: _ } = _,
@@ -12888,7 +12918,7 @@
           });
         },
         _ = (_) => {
-          const { category: _, elControllerSupport: _ } = _,
+          const { category: _ = _._, elControllerSupport: _ } = _,
             _ = _(_);
           return (0, _.jsxs)("div", {
             className: (0, _._)(_.SteamDeckCompatInfo, _.className),
@@ -16129,6 +16159,7 @@
         m_fnGetReportingInterval = _;
         m_fnGetReportTags = () => [];
         m_fnGetURL = () => location.href;
+        strDisplayVersion;
         m_bEnabled = !0;
         m_bInitialized = !1;
         constructor(_ = !0) {
@@ -16162,6 +16193,8 @@
               (this.m_fnGetReportingInterval = _.fnGetReportingInterval),
             _.fnGetReportTags && (this.m_fnGetReportTags = _.fnGetReportTags),
             _.fnGetURL && (this.m_fnGetURL = _.fnGetURL),
+            _.strDisplayVersion &&
+              (this.strDisplayVersion = _.strDisplayVersion),
             this.m_bEnabled ||
               (console.error(
                 "Error reporting was initialized after being disabled, possibly dropping errors.",
@@ -16298,6 +16331,7 @@
                 _.strComponentStack &&
                   (_.strComponentStack = _.strComponentStack),
                 (_.strUrl = this.m_fnGetURL()),
+                (_.strDisplayVersion = this.strDisplayVersion),
                 this.SendErrorReport(_),
                 _)
               : null;
@@ -16374,7 +16408,9 @@
                 _.set_identifier(_.identifier + " " + _.identifierHash),
                 _.set_message(JSON.stringify(_.message)),
                 _.strComponentStack &&
-                  ((_ ??= {}), (_.componentStack = _.strComponentStack)),
+                  ((_ ??= {}),
+                  (_.componentStack = _.strComponentStack),
+                  (_.strDisplayVersion = _.strDisplayVersion)),
                 _ && _.set_context(JSON.stringify(_)),
                 _.strUrl && _.set_url(_.strUrl),
                 _
@@ -17953,6 +17989,7 @@
         CNW: () => _,
         CSO: () => _,
         CT2: () => _,
+        CYA: () => _,
         Cc7: () => _,
         Cuj: () => _,
         DHU: () => _,
@@ -17960,6 +17997,7 @@
         DcL: () => _,
         DfI: () => _,
         DnZ: () => _,
+        EEh: () => _,
         Ehy: () => _,
         Eid: () => _,
         EuK: () => _,
@@ -18054,11 +18092,13 @@
         Qw3: () => _,
         QxX: () => _,
         R$d: () => _,
+        R1B: () => _,
         REG: () => _,
         RRP: () => _,
         RW$: () => _,
         Reo: () => _,
         RnC: () => _,
+        RsL: () => _,
         SCk: () => _,
         SJn: () => _,
         SN2: () => _,
@@ -18203,7 +18243,6 @@
         lIy: () => _,
         lPO: () => _,
         lXI: () => _,
-        lYS: () => _,
         ljy: () => _,
         lw$: () => _,
         mG_: () => _,
@@ -18278,12 +18317,14 @@
         vXU: () => _,
         _: () => _,
         vk_: () => _,
+        vx7: () => _,
         w43: () => _,
         w7d: () => _,
         wIS: () => _,
         w_P: () => _,
         wdW: () => _,
         ws2: () => _,
+        wz4: () => _,
         x7u: () => _,
         xEY: () => _,
         xXG: () => _,
@@ -18620,6 +18661,7 @@
         _ = 22955,
         _ = 19780,
         _ = 47827,
+        _ = 5727,
         _ = 255534,
         _ = 7328,
         _ = 9803,
@@ -18643,6 +18685,7 @@
         _ = 87918,
         _ = 1100687,
         _ = 26921,
+        _ = 1100688,
         _ = 12190,
         _ = 13382,
         _ = 3993,
@@ -18654,9 +18697,12 @@
         _ = 454187,
         _ = 9130,
         _ = 916648,
+        _ = 91114,
         _ = 7178,
         _ = 11634,
-        _ = 97376,
+        _ = 723991,
+        _ = 1239876,
+        _ = 23491,
         _ = 3934,
         _ = 4291,
         _ = 4520,
@@ -20932,6 +20978,41 @@
                     _: 45,
                     _: _._.readFixed64String,
                     _: _._.writeFixed64String,
+                  },
+                  wg_msg_trace_flags: {
+                    _: 46,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  wg_msg_trace_instance: {
+                    _: 47,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  wg_msg_trace_gid: {
+                    _: 48,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  wg_msg_trace_token: {
+                    _: 49,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  wg_msg_trace_steamid: {
+                    _: 50,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  wg_msg_trace_status: {
+                    _: 51,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  trace_flags: {
+                    _: 52,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
                   },
                 },
               }),
@@ -40862,6 +40943,11 @@
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
+                  include_family_licenses: {
+                    _: 2,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
                 },
               }),
             _.sm_m
@@ -52617,7 +52703,7 @@
               _,
               0,
               -1,
-              [11, 12, 20, 21, 25, 41, 52, 71, 74],
+              [11, 12, 20, 21, 25, 41, 52, 71, 74, 77],
               null,
             );
         }
@@ -52863,6 +52949,12 @@
                   extra_details: {
                     _: 75,
                     _: _,
+                  },
+                  optin_registration_tags: {
+                    _: 77,
+                    _: _,
+                    _: !0,
+                    _: !0,
                   },
                 },
               }),
@@ -54361,6 +54453,11 @@
                     _: _._.readString,
                     _: _._.writeString,
                   },
+                  is_free_license: {
+                    _: 56,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
                 },
               }),
             _.sm_m
@@ -55427,6 +55524,25 @@
                     _: 21,
                     _: _,
                   },
+                  links_and_info: {
+                    _: 22,
+                    _: _,
+                  },
+                  item_store_eligible: {
+                    _: 23,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  points_shop_eligible: {
+                    _: 24,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  specs_bbcode: {
+                    _: 25,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
                 },
               }),
             _.sm_m
@@ -55921,6 +56037,186 @@
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
           super(),
+            _.prototype.website || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [6, 7, 8], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  website: {
+                    _: 1,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  stats_url: {
+                    _: 2,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  online_manual_url: {
+                    _: 3,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  health_warning_url: {
+                    _: 4,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  privacy_policy_url: {
+                    _: 5,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  available_documents: {
+                    _: 6,
+                    _: !0,
+                    _: !0,
+                    _: _._.readEnum,
+                    pbr: _._.readPackedEnum,
+                    _: _._.writeRepeatedEnum,
+                  },
+                  genreids: {
+                    _: 7,
+                    _: !0,
+                    _: !0,
+                    _: _._.readUint32,
+                    pbr: _._.readPackedUint32,
+                    _: _._.writeRepeatedUint32,
+                  },
+                  manufacturers: {
+                    _: 8,
+                    _: !0,
+                    _: !0,
+                    _: _._.readString,
+                    _: _._.writeRepeatedString,
+                  },
+                  achievements_visible: {
+                    _: 9,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  achievement_count: {
+                    _: 10,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "StoreItem_ExtraDetails_LinksAndInfo";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.optin_name || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [2], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  optin_name: {
+                    _: 1,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  values: {
+                    _: 2,
+                    _: !0,
+                    _: !0,
+                    _: _._.readString,
+                    _: _._.writeRepeatedString,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "StoreItem_OptInRegistrationTags";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
             _.prototype.include_assets || _._(_._()),
             _.Message.initialize(this, _, 0, -1, void 0, null);
         }
@@ -56024,6 +56320,11 @@
                   include_best_purchase_option: {
                     _: 19,
                     _: !0,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  include_optin_registration_tags: {
+                    _: 20,
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
@@ -65094,14 +65395,17 @@
       __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
         const { data: _ } = (0, _._)(_),
           _ = (0, _._)();
-        if (void 0 === _) return;
-        if (null === _) return null;
-        const _ = [...(_.highlights || []), ...(_.other_trailers || [])];
-        return _ && !_ ? _.filter((_) => !!_.all_ages) : _;
+        return _.useMemo(() => {
+          if (void 0 === _) return;
+          if (null === _) return null;
+          const _ = [...(_.highlights || []), ...(_.other_trailers || [])];
+          return _ && !_ ? _.filter((_) => !!_.all_ages) : _;
+        }, [_, _, _]);
       }
       function _(_, _, _, _) {
         const _ = _(_, _);
@@ -67327,6 +67631,17 @@
             (function (_, _, _, _) {
               _(_, _, _, "include_ratings", "game_rating", _);
             })(_, _, _, _),
+          _.include_optin_registration_tags &&
+            (function (_, _, _, _) {
+              _(
+                _,
+                _,
+                _,
+                "include_optin_registration_tags",
+                "optin_registration_tags",
+                _,
+              );
+            })(_, _, _, _),
           _.include_included_items &&
             _.included_item_data_request &&
             (_.included_items?.included_apps?.forEach((_) =>
@@ -67358,6 +67673,7 @@
         "release",
         "package_groups",
         "extra_details",
+        "optin_registration_tags",
       ];
       function _(_) {
         const _ = {
@@ -72688,13 +73004,18 @@
           (_[(_.SteamChinaReviewLauncher = 8)] = "SteamChinaReviewLauncher"),
           (_[(_.OverlayVRGamepadUI = 9)] = "OverlayVRGamepadUI");
       })(_ || (_ = {}));
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       __webpack_require__("chunkid");
       const _ = {
         m_unPID: 0,
         m_nBrowserID: -1,
       };
-      var _ = __webpack_require__("chunkid"),
+      var _,
+        _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -72742,12 +73063,6 @@
               (this.m_fnRender?.(), (this.m_fnRender = void 0));
         }
       }
-      (0, _._)([_._], _.prototype, "OnLinkLoad", null);
-      var _,
-        _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
       function _() {
         return (0, _._)() ? _.Composited : _.None;
       }
@@ -72807,37 +73122,38 @@
           _ = _.GetPopupForWindow(_);
         return _?.browser_info || _;
       }
-      !(function (_) {
-        (_[(_.None = 0)] = "None"),
-          (_[(_.Minimized = 1)] = "Minimized"),
-          (_[(_.Hidden = 2)] = "Hidden"),
-          (_[(_.TooltipHint = 4)] = "TooltipHint"),
-          (_[(_.NoTaskbarIcon = 8)] = "NoTaskbarIcon"),
-          (_[(_.Resizable = 16)] = "Resizable"),
-          (_[(_.NoScalePosition = 32)] = "NoScalePosition"),
-          (_[(_.NoScaleSize = 64)] = "NoScaleSize"),
-          (_[(_.Maximized = 128)] = "Maximized"),
-          (_[(_.Composited = 256)] = "Composited"),
-          (_[(_.NotFocusable = 512)] = "NotFocusable"),
-          (_[(_.FullScreen = 1024)] = "FullScreen"),
-          (_[(_.Fullscreen_Exclusive = 2048)] = "Fullscreen_Exclusive"),
-          (_[(_.ApplyBrowserScaleToDimensions = 4096)] =
-            "ApplyBrowserScaleToDimensions"),
-          (_[(_.AlwaysOnTop = 8192)] = "AlwaysOnTop"),
-          (_[(_.NoWindowShadow = 16384)] = "NoWindowShadow"),
-          (_[(_.NoMinimize = 32768)] = "NoMinimize"),
-          (_[(_.PopUpMenuHint = 65536)] = "PopUpMenuHint"),
-          (_[(_.IgnoreSavedSize = 131072)] = "IgnoreSavedSize"),
-          (_[(_.NoRoundedCorners = 262144)] = "NoRoundedCorners"),
-          (_[(_.ForceRoundedCorners = 524288)] = "ForceRoundedCorners"),
-          (_[(_.OverrideRedirect = 1048576)] = "OverrideRedirect"),
-          (_[(_.IgnoreSteamDisplayScale = 2097152)] =
-            "IgnoreSteamDisplayScale"),
-          (_[(_.TransparentParentWindow = 4194304)] =
-            "TransparentParentWindow"),
-          (_[(_.DisableDPIScale = 8388608)] = "DisableDPIScale"),
-          (_[(_.ForceBrowserVisible = 16777216)] = "ForceBrowserVisible");
-      })(_ || (_ = {})),
+      (0, _._)([_._], _.prototype, "OnLinkLoad", null),
+        (function (_) {
+          (_[(_.None = 0)] = "None"),
+            (_[(_.Minimized = 1)] = "Minimized"),
+            (_[(_.Hidden = 2)] = "Hidden"),
+            (_[(_.TooltipHint = 4)] = "TooltipHint"),
+            (_[(_.NoTaskbarIcon = 8)] = "NoTaskbarIcon"),
+            (_[(_.Resizable = 16)] = "Resizable"),
+            (_[(_.NoScalePosition = 32)] = "NoScalePosition"),
+            (_[(_.NoScaleSize = 64)] = "NoScaleSize"),
+            (_[(_.Maximized = 128)] = "Maximized"),
+            (_[(_.Composited = 256)] = "Composited"),
+            (_[(_.NotFocusable = 512)] = "NotFocusable"),
+            (_[(_.FullScreen = 1024)] = "FullScreen"),
+            (_[(_.Fullscreen_Exclusive = 2048)] = "Fullscreen_Exclusive"),
+            (_[(_.ApplyBrowserScaleToDimensions = 4096)] =
+              "ApplyBrowserScaleToDimensions"),
+            (_[(_.AlwaysOnTop = 8192)] = "AlwaysOnTop"),
+            (_[(_.NoWindowShadow = 16384)] = "NoWindowShadow"),
+            (_[(_.NoMinimize = 32768)] = "NoMinimize"),
+            (_[(_.PopUpMenuHint = 65536)] = "PopUpMenuHint"),
+            (_[(_.IgnoreSavedSize = 131072)] = "IgnoreSavedSize"),
+            (_[(_.NoRoundedCorners = 262144)] = "NoRoundedCorners"),
+            (_[(_.ForceRoundedCorners = 524288)] = "ForceRoundedCorners"),
+            (_[(_.OverrideRedirect = 1048576)] = "OverrideRedirect"),
+            (_[(_.IgnoreSteamDisplayScale = 2097152)] =
+              "IgnoreSteamDisplayScale"),
+            (_[(_.TransparentParentWindow = 4194304)] =
+              "TransparentParentWindow"),
+            (_[(_.DisableDPIScale = 8388608)] = "DisableDPIScale"),
+            (_[(_.ForceBrowserVisible = 16777216)] = "ForceBrowserVisible");
+        })(_ || (_ = {})),
         (function (_) {
           (_[(_.Overlay = 0)] = "Overlay"),
             (_[(_.Notification = 1)] = "Notification"),
@@ -73532,6 +73848,8 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       __webpack_require__("chunkid");
       const _ = _.createContext({
@@ -73541,8 +73859,6 @@
         return _.useContext(_);
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _, _) {
         const _ = _.useRef(void 0),
@@ -73561,20 +73877,22 @@
               _,
             )),
           (_.current.m_callbacks = _),
-          _.useEffect(() => {
-            if (!_.current?.params.bNoInitialShow) {
-              let _ = _.current?.params.bNoFocusOnShow
-                ? _.iEc.k_EWindowBringToFrontWithoutForcingOS
-                : _.iEc.k_EWindowBringToFrontAndForceOS;
-              _.current?.Show(_);
-            }
-            return () => {
-              (_.current.m_callbacks = void 0),
-                _.current.window?.SteamClient.Window.SetHideOnClose &&
-                  _.current.window?.SteamClient.Window.SetHideOnClose(!1),
-                _.current.Close();
-            };
-          }, []),
+          _.useEffect(
+            () => (
+              _.current?.params.bNoInitialShow ||
+                _.current?.Show(
+                  _.current?.params.eWindowBringToFront ??
+                    _.iEc.k_EWindowBringToFrontAndForceOS,
+                ),
+              () => {
+                (_.current.m_callbacks = void 0),
+                  _.current.window?.SteamClient.Window.SetHideOnClose &&
+                    _.current.window?.SteamClient.Window.SetHideOnClose(!1),
+                  _.current.Close();
+              }
+            ),
+            [],
+          ),
           _.useEffect(() => {
             _.current.window?.SteamClient.Window.SetHideOnClose &&
               _.current.window?.SteamClient.Window.SetHideOnClose(
@@ -75288,6 +75606,7 @@
         m_BasicInfo;
         m_rgStoreTags = [];
         m_rgStoreTagIDs = [];
+        m_rgOptInRegistrationTags;
         m_Assets;
         m_AssetsWithoutOverrides;
         m_ReleaseInfo;
@@ -75378,6 +75697,11 @@
                 _.include_tag_count,
                 this.m_rgStoreTags.length || 0,
               ))),
+            _.include_optin_registration_tags &&
+              !this.m_rgOptInRegistrationTags &&
+              ((this.m_rgOptInRegistrationTags =
+                _.optin_registration_tags().map((_) => _.toObject())),
+              (this.m_DataRequested.include_optin_registration_tags = !0)),
             _.include_reviews &&
               !this.m_ReviewInfo &&
               ((this.m_ReviewInfo = _.reviews().toObject()),
@@ -75424,7 +75748,10 @@
               (!_.include_supported_languages ||
                 _.include_supported_languages) &&
               (!_.include_full_description || _.include_full_description) &&
-              (!_.include_links || _.include_links),
+              (!_.include_links || _.include_links) &&
+              (!_.apply_user_filters || _.apply_user_filters) &&
+              (!_.include_optin_registration_tags ||
+                _.include_optin_registration_tags),
           );
         }
         BContainDataRequest(_) {
@@ -75711,6 +76038,15 @@
               include_tag_count: 1,
             }),
             this.m_rgStoreTagIDs
+          );
+        }
+        GetOptInRegistrationTagValues(_) {
+          return (
+            this.BCheckDataRequestIncluded({
+              include_optin_registration_tags: !0,
+            }),
+            this.m_rgOptInRegistrationTags?.find((_) => _.optin_name === _)
+              ?.values ?? []
           );
         }
         BHasTags() {
@@ -76386,6 +76722,9 @@
           include_links: _.include_links || _.include_links,
           include_extra_details:
             _.include_extra_details || _.include_extra_details,
+          include_optin_registration_tags:
+            _.include_optin_registration_tags ||
+            _.include_optin_registration_tags,
         };
       }
       async function _(_, _) {
@@ -79774,10 +80113,8 @@
         const { value: _, children: _, role: _ = "radio", ..._ } = _,
           { value: _, setValue: _, disabled: _ } = _.useContext(_);
         let _ = _;
-        const _ = _.useId(),
-          _ = _ === _;
+        const _ = _ === _;
         return (0, _.jsx)(_._, {
-          focusRingSizeElementID: _.bSetFocusRingSizeElementID ? _ : void 0,
           role: _,
           "aria-checked": _,
           "aria-selected": _,
@@ -83565,6 +83902,7 @@
         Epp: () => _,
         F7C: () => _,
         FH7: () => _,
+        JBW: () => _,
         JaO: () => _,
         K9I: () => _,
         Kkn: () => _,
@@ -84757,6 +85095,18 @@
             fillRule: "evenodd",
             clipRule: "evenodd",
             _: "M31.7 15.2077C31.703 12.5623 30.94 9.97259 29.5032 7.75136C28.0664 5.53014 26.0172 3.77242 23.6031 2.69048C21.189 1.60855 18.5133 1.24869 15.8992 1.65436C13.2851 2.06002 10.8443 3.21387 8.87163 4.97655C6.89899 6.73922 5.47888 9.03532 4.78281 11.5875C4.08673 14.1397 4.14447 16.8389 4.94905 19.359C5.75363 21.8791 7.27063 24.1124 9.31684 25.7891C11.363 27.4658 13.8509 28.5142 16.48 28.8077V34.5077L27.31 25.2477C28.6947 23.9675 29.7996 22.4147 30.5551 20.6869C31.3106 18.959 31.7004 17.0935 31.7 15.2077ZM15.3 7.06885L16.3075 16.9577H20.1309L21.1039 7.06885H15.3ZM20.6927 22.0125C20.6927 23.3774 19.5862 24.4838 18.2213 24.4838C16.8564 24.4838 15.7499 23.3774 15.7499 22.0125C15.7499 20.6475 16.8564 19.5411 18.2213 19.5411C19.5862 19.5411 20.6927 20.6475 20.6927 22.0125Z",
+            fill: "currentColor",
+          }),
+        });
+      }
+      function _(_) {
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          ..._,
+          children: (0, _.jsx)("path", {
+            _: "M33.63 8.05005L30.11 20.81C29.9416 21.453 29.5645 22.0219 29.0378 22.4273C28.5111 22.8328 27.8647 23.0518 27.2 23.05H14.75C14.1022 23.0507 13.4715 22.8416 12.9524 22.4541C12.4333 22.0665 12.0536 21.5213 11.87 20.9L7.56 8.05005H2V4.05005H8.28C8.90845 4.05122 9.52067 4.24973 10.0302 4.61755C10.5398 4.98538 10.921 5.50394 11.12 6.10005L11.78 8.10005L33.63 8.05005ZM15 27.05C14.5055 27.05 14.0222 27.1967 13.6111 27.4714C13.2 27.7461 12.8795 28.1365 12.6903 28.5933C12.5011 29.0502 12.4516 29.5528 12.548 30.0378C12.6445 30.5227 12.8826 30.9682 13.2322 31.3178C13.5819 31.6674 14.0273 31.9056 14.5123 32.002C14.9972 32.0985 15.4999 32.049 15.9567 31.8597C16.4135 31.6705 16.804 31.3501 17.0787 30.939C17.3534 30.5278 17.5 30.0445 17.5 29.55C17.5 28.887 17.2366 28.2511 16.7678 27.7823C16.2989 27.3134 15.663 27.05 15 27.05ZM27 27.05C26.5055 27.05 26.0222 27.1967 25.6111 27.4714C25.2 27.7461 24.8795 28.1365 24.6903 28.5933C24.5011 29.0502 24.4516 29.5528 24.548 30.0378C24.6445 30.5227 24.8826 30.9682 25.2322 31.3178C25.5819 31.6674 26.0273 31.9056 26.5123 32.002C26.9972 32.0985 27.4999 32.049 27.9567 31.8597C28.4135 31.6705 28.804 31.3501 29.0787 30.939C29.3534 30.5278 29.5 30.0445 29.5 29.55C29.5 28.887 29.2366 28.2511 28.7678 27.7823C28.2989 27.3134 27.663 27.05 27 27.05Z",
             fill: "currentColor",
           }),
         });
@@ -96889,8 +97239,13 @@
           return [_, _];
         }
         ChangeNavigationSource(_, _, _, _) {
-          let _ = this.m_navigationSource.Value,
-            _ = _.nLastActiveGamepadIndex;
+          let _ = this.m_navigationSource.Value;
+          if (
+            _ == _._.MOUSE &&
+            _.eActivationSourceType == _._.KEYBOARD_SIMULATOR
+          )
+            return !1;
+          let _ = _.nLastActiveGamepadIndex;
           return (
             null != _.nActiveGamepadIndex &&
               _.nActiveGamepadIndex >= 0 &&
@@ -97358,12 +97713,10 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
           Promise.all([
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -103187,7 +103540,6 @@
           __webpack_require__._("chunkid"),
           __webpack_require__._("chunkid"),
           __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
         ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
       );
       function _(_) {
@@ -103274,77 +103626,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _(() =>
@@ -103412,6 +103693,30 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -103434,6 +103739,46 @@
         _ = _(() =>
           Promise.all([
             __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -103534,7 +103879,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _(() =>
@@ -103557,53 +103901,10 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _(() =>
           Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -103660,18 +103961,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          Promise.all([
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -103682,12 +103971,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          Promise.all([
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -103717,6 +104000,56 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -103776,40 +104109,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _(() =>
@@ -103873,9 +104172,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _(() =>
@@ -103910,20 +104206,10 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _(() =>
           Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -104009,10 +104295,52 @@
           Promise.all([
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _(() =>
           Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -105063,7 +105391,7 @@
         "./main_dutch.json": [94338, 73266],
         "./main_english.json": [53800, 79188],
         "./main_finnish.json": [16963, 539],
-        "./main_french.json": [95440, 42702],
+        "./main_french.json": [73059, 42702],
         "./main_german.json": [68670, 36236],
         "./main_greek.json": [7908, 55484],
         "./main_hungarian.json": [81585, 87625],
@@ -105112,7 +105440,7 @@
         "./main_dutch.json": [94338, 73266],
         "./main_english.json": [53800, 79188],
         "./main_finnish.json": [16963, 539],
-        "./main_french.json": [95440, 42702],
+        "./main_french.json": [73059, 42702],
         "./main_german.json": [68670, 36236],
         "./main_greek.json": [7908, 55484],
         "./main_hungarian.json": [81585, 87625],

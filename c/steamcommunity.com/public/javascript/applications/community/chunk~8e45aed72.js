@@ -2655,7 +2655,7 @@
           ],
         ]),
         _ = (_) => {
-          const { text: _, bShowErrorInfo: _, version: _ } = _,
+          const { text: _, bShowErrorInfo: _, version: _, language: _ } = _,
             _ = _.useCallback(
               (_) =>
                 new _._(
@@ -2674,10 +2674,13 @@
                 ),
               [],
             ),
-            _ = _.useRef(new _._(_, _, _._.LANGUAGE));
+            _ = _.useMemo(
+              () => new _._(_, _, null != _ ? _ : _._.LANGUAGE),
+              [_, _],
+            );
           return (0, _.jsx)("div", {
             className: _().FAQContainer,
-            children: _.current.ParseBBCode(_, {
+            children: _.ParseBBCode(_, {
               showErrorInfo: _,
               version: _,
             }),

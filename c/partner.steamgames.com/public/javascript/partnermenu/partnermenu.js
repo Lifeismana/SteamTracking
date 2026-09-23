@@ -11506,6 +11506,41 @@
                     _: ReaderProto.readFixed64String,
                     _: WriterProto.writeFixed64String,
                   },
+                  wg_msg_trace_flags: {
+                    _: 46,
+                    _: ReaderProto.readUint32,
+                    _: WriterProto.writeUint32,
+                  },
+                  wg_msg_trace_instance: {
+                    _: 47,
+                    _: ReaderProto.readUint32,
+                    _: WriterProto.writeUint32,
+                  },
+                  wg_msg_trace_gid: {
+                    _: 48,
+                    _: ReaderProto.readUint32,
+                    _: WriterProto.writeUint32,
+                  },
+                  wg_msg_trace_token: {
+                    _: 49,
+                    _: ReaderProto.readString,
+                    _: WriterProto.writeString,
+                  },
+                  wg_msg_trace_steamid: {
+                    _: 50,
+                    _: ReaderProto.readFixed64String,
+                    _: WriterProto.writeFixed64String,
+                  },
+                  wg_msg_trace_status: {
+                    _: 51,
+                    _: ReaderProto.readString,
+                    _: WriterProto.writeString,
+                  },
+                  trace_flags: {
+                    _: 52,
+                    _: ReaderProto.readUint32,
+                    _: WriterProto.writeUint32,
+                  },
                 },
               }),
               _.sm_m
@@ -16173,6 +16208,7 @@
           m_fnGetReportingInterval = GetDefaultReportingInterval;
           m_fnGetReportTags = () => [];
           m_fnGetURL = () => location.href;
+          strDisplayVersion;
           m_bEnabled = !0;
           m_bInitialized = !1;
           constructor(_ = !0) {
@@ -16206,6 +16242,8 @@
                 (this.m_fnGetReportingInterval = _.fnGetReportingInterval),
               _.fnGetReportTags && (this.m_fnGetReportTags = _.fnGetReportTags),
               _.fnGetURL && (this.m_fnGetURL = _.fnGetURL),
+              _.strDisplayVersion &&
+                (this.strDisplayVersion = _.strDisplayVersion),
               (this.m_bEnabled ||=
                 (console.error(
                   `Error reporting was initialized after being disabled, possibly dropping errors.`,
@@ -16239,6 +16277,7 @@
                   _.strComponentStack &&
                     (_.strComponentStack = _.strComponentStack),
                   (_.strUrl = this.m_fnGetURL()),
+                  (_.strDisplayVersion = this.strDisplayVersion),
                   this.SendErrorReport(_),
                   _)
                 : null;
@@ -16319,7 +16358,9 @@
                 let _;
                 return (
                   _.strComponentStack &&
-                    ((_ ??= {}), (_.componentStack = _.strComponentStack)),
+                    ((_ ??= {}),
+                    (_.componentStack = _.strComponentStack),
+                    (_.strDisplayVersion = _.strDisplayVersion)),
                   _ && _.set_context(JSON.stringify(_)),
                   _.strUrl && _.set_url(_.strUrl),
                   _
@@ -38139,6 +38180,8 @@ Error generating stack: ` +
     StoreItem_ExtraDetails_PageSection,
     StoreItem_ExtraDetails_PressReview,
     StoreItem_ExtraDetails_EarlyAccess,
+    StoreItem_ExtraDetails_LinksAndInfo,
+    StoreItem_OptInRegistrationTags,
     StoreBrowseItemDataRequest,
     StoreBrowseContext,
     StoreItemID,
@@ -38325,7 +38368,7 @@ Error generating stack: ` +
                 _,
                 0,
                 -1,
-                [11, 12, 20, 21, 25, 41, 52, 71, 74],
+                [11, 12, 20, 21, 25, 41, 52, 71, 74, 77],
                 null,
               );
           }
@@ -38570,6 +38613,12 @@ Error generating stack: ` +
                   extra_details: {
                     _: 75,
                     _: StoreItem_ExtraDetails,
+                  },
+                  optin_registration_tags: {
+                    _: 77,
+                    _: StoreItem_OptInRegistrationTags,
+                    _: !0,
+                    _: !0,
                   },
                 },
               }),
@@ -40218,6 +40267,11 @@ Error generating stack: ` +
                     _: ReaderProto.readString,
                     _: WriterProto.writeString,
                   },
+                  is_free_license: {
+                    _: 56,
+                    _: ReaderProto.readBool,
+                    _: WriterProto.writeBool,
+                  },
                 },
               }),
               _.sm_m
@@ -41410,6 +41464,25 @@ Error generating stack: ` +
                     _: 21,
                     _: CSeasonPass,
                   },
+                  links_and_info: {
+                    _: 22,
+                    _: StoreItem_ExtraDetails_LinksAndInfo,
+                  },
+                  item_store_eligible: {
+                    _: 23,
+                    _: ReaderProto.readBool,
+                    _: WriterProto.writeBool,
+                  },
+                  points_shop_eligible: {
+                    _: 24,
+                    _: ReaderProto.readBool,
+                    _: WriterProto.writeBool,
+                  },
+                  specs_bbcode: {
+                    _: 25,
+                    _: ReaderProto.readString,
+                    _: WriterProto.writeString,
+                  },
                 },
               }),
               _.sm_m
@@ -41962,6 +42035,206 @@ Error generating stack: ` +
             return `StoreItem_ExtraDetails_EarlyAccess`;
           }
         }),
+        (StoreItem_ExtraDetails_LinksAndInfo = class _ extends (
+          import_google_protobuf$1.Message
+        ) {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.website || AddAccessors(_._()),
+              import_google_protobuf$1.Message.initialize(
+                this,
+                _,
+                0,
+                -1,
+                [6, 7, 8],
+                null,
+              );
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              (_.sm_m ||= {
+                proto: _,
+                fields: {
+                  website: {
+                    _: 1,
+                    _: ReaderProto.readString,
+                    _: WriterProto.writeString,
+                  },
+                  stats_url: {
+                    _: 2,
+                    _: ReaderProto.readString,
+                    _: WriterProto.writeString,
+                  },
+                  online_manual_url: {
+                    _: 3,
+                    _: ReaderProto.readString,
+                    _: WriterProto.writeString,
+                  },
+                  health_warning_url: {
+                    _: 4,
+                    _: ReaderProto.readString,
+                    _: WriterProto.writeString,
+                  },
+                  privacy_policy_url: {
+                    _: 5,
+                    _: ReaderProto.readString,
+                    _: WriterProto.writeString,
+                  },
+                  available_documents: {
+                    _: 6,
+                    _: !0,
+                    _: !0,
+                    _: ReaderProto.readEnum,
+                    pbr: ReaderProto.readPackedEnum,
+                    _: WriterProto.writeRepeatedEnum,
+                  },
+                  genreids: {
+                    _: 7,
+                    _: !0,
+                    _: !0,
+                    _: ReaderProto.readUint32,
+                    pbr: ReaderProto.readPackedUint32,
+                    _: WriterProto.writeRepeatedUint32,
+                  },
+                  manufacturers: {
+                    _: 8,
+                    _: !0,
+                    _: !0,
+                    _: ReaderProto.readString,
+                    _: WriterProto.writeRepeatedString,
+                  },
+                  achievements_visible: {
+                    _: 9,
+                    _: ReaderProto.readBool,
+                    _: WriterProto.writeBool,
+                  },
+                  achievement_count: {
+                    _: 10,
+                    _: ReaderProto.readUint32,
+                    _: WriterProto.writeUint32,
+                  },
+                },
+              }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return ToObject(_._(), _, _);
+          }
+          static fromObject(_) {
+            return FromObject(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new import_google_protobuf$1.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return DeserializeBinary(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new import_google_protobuf$1.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            SerializeBinary(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new import_google_protobuf$1.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return `StoreItem_ExtraDetails_LinksAndInfo`;
+          }
+        }),
+        (StoreItem_OptInRegistrationTags = class _ extends (
+          import_google_protobuf$1.Message
+        ) {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.optin_name || AddAccessors(_._()),
+              import_google_protobuf$1.Message.initialize(
+                this,
+                _,
+                0,
+                -1,
+                [2],
+                null,
+              );
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              (_.sm_m ||= {
+                proto: _,
+                fields: {
+                  optin_name: {
+                    _: 1,
+                    _: ReaderProto.readString,
+                    _: WriterProto.writeString,
+                  },
+                  values: {
+                    _: 2,
+                    _: !0,
+                    _: !0,
+                    _: ReaderProto.readString,
+                    _: WriterProto.writeRepeatedString,
+                  },
+                },
+              }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return ToObject(_._(), _, _);
+          }
+          static fromObject(_) {
+            return FromObject(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new import_google_protobuf$1.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return DeserializeBinary(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new import_google_protobuf$1.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            SerializeBinary(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new import_google_protobuf$1.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return `StoreItem_OptInRegistrationTags`;
+          }
+        }),
         (StoreBrowseItemDataRequest = class _ extends (
           import_google_protobuf$1.Message
         ) {
@@ -42077,6 +42350,11 @@ Error generating stack: ` +
                   include_best_purchase_option: {
                     _: 19,
                     _: !0,
+                    _: ReaderProto.readBool,
+                    _: WriterProto.writeBool,
+                  },
+                  include_optin_registration_tags: {
+                    _: 20,
                     _: ReaderProto.readBool,
                     _: WriterProto.writeBool,
                   },
@@ -49424,7 +49702,7 @@ Error generating stack: ` +
         return this.GetElementForFocusRingMeasure()?.getBoundingClientRect();
       }
       GetBorderRadiusForFocusRing() {
-        if (!this.m_Properties?.focusRingSizeElementID) return;
+        if (!this.m_Properties?.focusRingHasBorderRadius) return;
         let _ = this.GetElementForFocusRingMeasure();
         if (!_) return;
         let _ = _.ownerDocument?.defaultView?.getComputedStyle(_);
@@ -50459,6 +50737,16 @@ Error generating stack: ` +
         },
         [_],
       ),
+      _ = import_react$3.useCallback(
+        (_) => !_.bInVR && _.pointerType === `mouse`,
+        [_],
+      ),
+      _ = import_react$3.useCallback(
+        (_) => {
+          _(_) || _.ShowVirtualKeyboard();
+        },
+        [_, _],
+      ),
       _ = useRefCallbackWithCleanup(
         (_) => {
           _.current = _;
@@ -50472,26 +50760,24 @@ Error generating stack: ` +
                   _.SetAsCurrentVirtualKeyboardTarget,
                 ),
               ),
-              _.addEventListener(`click`, _.ShowVirtualKeyboard),
-              _.push(() =>
-                _.removeEventListener(`click`, _.ShowVirtualKeyboard),
-              ),
+              _.addEventListener(`click`, _),
+              _.push(() => _.removeEventListener(`click`, _)),
               _.push(RegisterGamepadOKEvent(_, _.ShowVirtualKeyboard)),
               _.push(RegisterGamepadBlurEvent(_, _))),
             () => _.forEach((_) => _())
           );
         },
-        [_, _],
+        [_, _, _],
       );
     return (
       import_react$3.useLayoutEffect(
         () => (
           setRef(_, {
-            TakeFocusAndShowKeyboard: () => {
+            TakeFocusAndShowKeyboard: (_) => {
               let _ = _.current;
               _ &&
                 (document.activeElement != _ && _.focus(),
-                _.ShowVirtualKeyboard());
+                !(_ && _(_)) && _.ShowVirtualKeyboard());
             },
             HideVirtualKeyboard: () => {
               _.HideVirtualKeyboard();
@@ -50499,7 +50785,7 @@ Error generating stack: ` +
           }),
           () => setRef(_, null)
         ),
-        [_, _],
+        [_, _, _],
       ),
       _
     );
@@ -50875,6 +51161,7 @@ Error generating stack: ` +
         navKey: _,
         noFocusRing: _,
         focusRingSizeElementID: _,
+        focusRingHasBorderRadius: _,
         focusable: _,
         navRef: _,
         actionDescriptionMap: _,
@@ -50908,6 +51195,7 @@ Error generating stack: ` +
         navKey: _,
         noFocusRing: _,
         focusRingSizeElementID: _,
+        focusRingHasBorderRadius: _,
         focusable: _,
         navRef: _,
         onMoveUp: _,
@@ -61230,7 +61518,7 @@ Error generating stack: ` +
         (Header_Nav_DirectPurchasing_Config$13 = `Lihat Butiran Pembayaran Bank`),
         (Header_Nav_DirectPurchasing_OpenInvoices$13 = `Selaraskan Invois Dihantar`),
         (Header_Nav_DirectPurchasing_CreateInvoices$13 = `Cipta/Urus Invois`),
-        (Header_Nav_StoreAdmin$13 = `Store Admin`),
+        (Header_Nav_StoreAdmin$13 = `Pentadbir Gedung`),
         (Header_Nav_StoreAdmin_Spotlights$13 = `Spotlights`),
         (Header_Nav_StoreAdmin_Frontpage$13 = `Front Page`),
         (Header_Nav_OEM$13 = `Alat OEM`),
@@ -61266,7 +61554,7 @@ Error generating stack: ` +
         (AppType_TitleCase_Episode$13 = `Episod`),
         (AppType_TitleCase_Movie$13 = `Filem`),
         (AppType_TitleCase_Beta$13 = `Beta`),
-        (AppType_TitleCase_DLC_SeasonPass$13 = `Season Pass`),
+        (AppType_TitleCase_DLC_SeasonPass$13 = `Pas Musim`),
         (Aria_Navigation$44 = `Navigasi`),
         (partner_menu_malay_default = {
           Header_Global_Documentation: Header_Global_Documentation$13,
@@ -71778,8 +72066,8 @@ Error generating stack: ` +
       (language$14 = `malay`),
         (Aria_Steam_Home_Link$14 = `Pautan ke Laman Utama Steam`),
         (global_menu_install_steam$14 = `Pasang Steam`),
-        (global_menu_login$13 = `sign in`),
-        (global_menu_login_caps$13 = `Sign in`),
+        (global_menu_login$13 = `daftar masuk`),
+        (global_menu_login_caps$13 = `Daftar masuk`),
         (global_menu_view_profile$13 = `Lihat profil saya`),
         (global_menu_account_details$13 = `Butiran akaun`),
         (global_menu_account_details_accountname$13 = `Butiran akaun: <1>%1$s</1>`),
@@ -72420,7 +72708,7 @@ Error generating stack: ` +
     global_header_russian_default,
     init_global_header_russian = __esmMin(() => {
       (language$9 = `russian`),
-        (Aria_Steam_Home_Link$9 = `Ссылка на домашнюю страницу Steam`),
+        (Aria_Steam_Home_Link$9 = `Ссылка на главную страницу Steam`),
         (global_menu_install_steam$9 = `Установить Steam`),
         (global_menu_login$8 = `вход`),
         (global_menu_login_caps$8 = `Вход`),

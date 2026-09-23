@@ -1297,6 +1297,7 @@
             apply_user_filters: _,
             include_links: _,
             include_extra_details: _,
+            include_optin_registration_tags: _,
           } = _;
         if (
           ((0, _.useEffect)(() => {
@@ -1318,6 +1319,7 @@
               apply_user_filters: _,
               include_links: _,
               include_extra_details: _,
+              include_optin_registration_tags: _,
             };
             let _ = null;
             return (
@@ -1335,6 +1337,7 @@
               () => _?.cancel("useStoreItemCache: unmounting")
             );
           }, [
+            _,
             _,
             _,
             _,
@@ -1396,6 +1399,7 @@
             apply_user_filters: _,
             include_links: _,
             include_extra_details: _,
+            include_optin_registration_tags: _,
           } = _;
         if (
           ((0, _.useEffect)(() => {
@@ -1418,6 +1422,7 @@
                 apply_user_filters: _,
                 include_links: _,
                 include_extra_details: _,
+                include_optin_registration_tags: _,
               },
               _ = _.filter(
                 (_) =>
@@ -1435,7 +1440,30 @@
               }),
               () => _.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]),
+          }, [
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+          ]),
           !_)
         )
           return _;

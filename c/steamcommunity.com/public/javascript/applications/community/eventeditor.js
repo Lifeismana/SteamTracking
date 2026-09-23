@@ -13760,9 +13760,10 @@
                       },
                       children: (0, _._)("#Broadcast_GradientInnerColor"),
                     }),
-                    (0, _.jsx)(_, {
-                      broadcastEditModel: this.GetBroadcastEditModel(),
-                    }),
+                    _.GetEventType() != _.ajI &&
+                      (0, _.jsx)(_, {
+                        broadcastEditModel: this.GetBroadcastEditModel(),
+                      }),
                     (0, _.jsx)(_, {
                       editModel: _,
                       broadcastEditModel: this.GetBroadcastEditModel(),
@@ -17106,6 +17107,9 @@
                       : (0, _._)("#EventEditor_Options_WontDisplayHere", _),
                     disabled: !_,
                   }),
+                  (0, _.jsx)(_, {
+                    editModel: _,
+                  }),
                   (0, _.jsx)(_._, {
                     onChange: _,
                     label: (0, _._)(
@@ -17175,6 +17179,28 @@
           }),
         });
       }
+      const _ = (0, _._)((_) => {
+        const { editModel: _ } = _,
+          { data: _ } = (0, _._)(_.GetClanAccountID());
+        if (
+          !Boolean(null == _ ? void 0 : _.valve_admin) ||
+          _._.IS_OGG ||
+          !_.BHasSaleEnabled()
+        )
+          return null;
+        const _ = _._.STORE_BASE_URL + "specials/";
+        return (0, _.jsx)("div", {
+          className: (0, _._)(_().FlexColumnContainer, _().ValveOnlyBackground),
+          children: (0, _.jsx)(_._, {
+            onChange: (_) => _.SetTag(_._, _),
+            label: "(VO) Hide this sale from the Specials page carousel",
+            tooltip: "Affects the sale events carousel on " + _,
+            checked: _.GetEventModel().BHasTag(_._),
+            description:
+              "Live sale pages are listed in the sale events carousel on the store's Specials page. Turn this on to keep this sale out of that carousel. The store takes a few minutes to pick up the change.",
+          }),
+        });
+      });
       function _(_) {
         const { editModel: _ } = _,
           _ = (function (_) {
@@ -17246,8 +17272,7 @@
           { data: _ } = (0, _._)(_.GetClanAccountID()),
           _ = Boolean(null == _ ? void 0 : _.valve_admin);
         let _ = _.useRef(void 0);
-        const _ = _.BHasSaleEnabled(),
-          _ = _.GetEventType(),
+        const _ = _.GetEventType(),
           [_] = (0, _._)(() => [
             _.GetEventModel().jsondata.country_restriction,
           ]);
@@ -17307,19 +17332,6 @@
                     checked: _.BAllowedSteamStoreSpotlight(),
                     description:
                       "Allows the partner to upload a store spotlight artwork to be shown on the product page for upto a week from the event start.",
-                  }),
-                Boolean(!_._.IS_OGG && _) &&
-                  (0, _.jsx)(_.Fragment, {
-                    children: (0, _.jsx)(_._, {
-                      onChange: (_) =>
-                        _.SetTag("hide_from_events_and_discount", _),
-                      label: "(VO) Hide Sale From Events and Discount Page",
-                      checked: _.GetEventModel().BHasTag(
-                        "hide_from_events_and_discount",
-                      ),
-                      description:
-                        "By default we show sale pages on the events and discount store hub. Turning this on, we will not show this sale page there.",
-                    }),
                   }),
                 Boolean(_(_.GetEventModel(), _)) &&
                   (0, _.jsx)(_._, {

@@ -3311,14 +3311,17 @@
       __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
         const { data: _ } = (0, _._)(_),
           _ = (0, _._)();
-        if (void 0 === _) return;
-        if (null === _) return null;
-        const _ = [...(_.highlights || []), ...(_.other_trailers || [])];
-        return _ && !_ ? _.filter((_) => !!_.all_ages) : _;
+        return _.useMemo(() => {
+          if (void 0 === _) return;
+          if (null === _) return null;
+          const _ = [...(_.highlights || []), ...(_.other_trailers || [])];
+          return _ && !_ ? _.filter((_) => !!_.all_ages) : _;
+        }, [_, _, _]);
       }
       function _(_) {
         let _ = _(_);
@@ -3474,6 +3477,7 @@
         m_BasicInfo;
         m_rgStoreTags = [];
         m_rgStoreTagIDs = [];
+        m_rgOptInRegistrationTags;
         m_Assets;
         m_AssetsWithoutOverrides;
         m_ReleaseInfo;
@@ -3564,6 +3568,11 @@
                 _.include_tag_count,
                 this.m_rgStoreTags.length || 0,
               ))),
+            _.include_optin_registration_tags &&
+              !this.m_rgOptInRegistrationTags &&
+              ((this.m_rgOptInRegistrationTags =
+                _.optin_registration_tags().map((_) => _.toObject())),
+              (this.m_DataRequested.include_optin_registration_tags = !0)),
             _.include_reviews &&
               !this.m_ReviewInfo &&
               ((this.m_ReviewInfo = _.reviews().toObject()),
@@ -3610,7 +3619,10 @@
               (!_.include_supported_languages ||
                 _.include_supported_languages) &&
               (!_.include_full_description || _.include_full_description) &&
-              (!_.include_links || _.include_links),
+              (!_.include_links || _.include_links) &&
+              (!_.apply_user_filters || _.apply_user_filters) &&
+              (!_.include_optin_registration_tags ||
+                _.include_optin_registration_tags),
           );
         }
         BContainDataRequest(_) {
@@ -3897,6 +3909,15 @@
               include_tag_count: 1,
             }),
             this.m_rgStoreTagIDs
+          );
+        }
+        GetOptInRegistrationTagValues(_) {
+          return (
+            this.BCheckDataRequestIncluded({
+              include_optin_registration_tags: !0,
+            }),
+            this.m_rgOptInRegistrationTags?.find((_) => _.optin_name === _)
+              ?.values ?? []
           );
         }
         BHasTags() {

@@ -62,6 +62,7 @@
     "Reservation_OnRegularReserveForModel": "Je staat in de reserveringswachtrij voor een %1$s",
     "Reservation_PostShuffle_TAndC": "<1>Algemene voorwaarden</1> zijn van toepassing.",
     "machine_dummy": "dummy",
+    "PriceDisplay_YourPrice": "Jouw prijs:",
     "PriceGrid_NormalPrice": "NORMAAL",
     "PriceGrid_RecentPrice": "LAAGSTE IN 30 DAGEN",
     "PriceGrid_CurrentPrice": "NU",

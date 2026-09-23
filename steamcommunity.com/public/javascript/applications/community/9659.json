@@ -105,6 +105,7 @@
     "moderation_sanction_hubbanned": "Blokada centrum na %1$s dni",
     "moderation_sanction_markassuspicious": "Oznaczono jako podejrzane",
     "moderation_sanction_relabelled": "Opatrzono nowym oznaczeniem",
+    "moderation_sanction_markedincompatible": "Marked as incompatible",
     "moderation_sanction_tradebanned_forever": "Trwała blokada handlu",
     "moderation_sanction_tradebanned": "Blokada handlu na %1$s dni",
     "moderation_sanction_kickedfromgroup": "Wyrzucenie z grupy",
@@ -133,6 +134,6 @@
     "reportedsubjectlist_header": "Zgłoszone tematy",
     "moderation_already_owner_disputed": "Już utworzono spór",
     "moderationstats_alltypes": "Wszystkie typy tematów",
-    "forumsubjectlist_subjectreportsummary": "Nierozstrzygnięte: %1$s. Zakwestionowane: %1$s.",
+    "forumsubjectlist_subjectreportsummary": "Nierozstrzygnięte: %1$s. Zakwestionowane: %2$s.",
     "empty_no_trailing_comma": ""
 }

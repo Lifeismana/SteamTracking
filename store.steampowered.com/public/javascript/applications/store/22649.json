@@ -62,6 +62,7 @@
     "Reservation_OnRegularReserveForModel": "Jesteś w kolejce rezerwowej dla %1$s",
     "Reservation_PostShuffle_TAndC": "Obowiązują <1>zasady i warunki</1>.",
     "machine_dummy": "dummy",
+    "PriceDisplay_YourPrice": "Twoja cena:",
     "PriceGrid_NormalPrice": "ZWYKLE",
     "PriceGrid_RecentPrice": "NAJNIŻSZA CENA Z 30 DNI PRZED OBNIŻKĄ",
     "PriceGrid_CurrentPrice": "OBECNIE",

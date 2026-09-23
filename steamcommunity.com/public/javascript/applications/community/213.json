@@ -105,6 +105,7 @@
     "moderation_sanction_hubbanned": "ハブから%1$s日間禁止されました",
     "moderation_sanction_markassuspicious": "「疑わしい」とマークされました",
     "moderation_sanction_relabelled": "ラベルが変更されました",
+    "moderation_sanction_markedincompatible": "Marked as incompatible",
     "moderation_sanction_tradebanned_forever": "取引が永久に禁止されました",
     "moderation_sanction_tradebanned": "取引が%1$s日間禁止されました",
     "moderation_sanction_kickedfromgroup": "グループから追放されました",
@@ -133,6 +134,6 @@
     "reportedsubjectlist_header": "報告された案件",
     "moderation_already_owner_disputed": "異議申し立て済み",
     "moderationstats_alltypes": "すべての案件タイプ",
-    "forumsubjectlist_subjectreportsummary": "未解決%1$s件、異議申し立て%1$s件",
+    "forumsubjectlist_subjectreportsummary": "未解決%1$s件、異議申し立て%2$s件",
     "empty_no_trailing_comma": ""
 }

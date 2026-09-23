@@ -3516,7 +3516,7 @@ ${LANGUAGE}
 (\t"/\n-CAccountHardware_ManageSavedHardware_Response"@\n-CAccountHardware_GetSavedHardwareList_Request
 (\t"/\n-CUserAccount_RedeemFriendInviteToken_Response"D\n,CUserAccount_RevokeFriendInviteToken_Request
 (\t"/\n-CUserAccount_RevokeFriendInviteToken_Response">\n'CUserAccount_RegisterCompatTool_Request
-(\t"0\n.CAccountHardware_RegisterSteamMachine_Response"e\n:CAccountHardwarePromotions_RedeemFramePromoPackage_Request
+(\t"0\n.CAccountHardware_RegisterSteamMachine_Response"f\n:CAccountHardwarePromotions_RedeemFramePromoPackage_Request
 (\t"0\n.CBroadcast_SendBroadcastStateToServer_Response"O\n7CBroadcast_NotifyBroadcastSessionHeartbeat_Notification
 (\t"1\n/CFamilyGroups_ModifyFamilyGroupDetails_Response"
 (\t"1\n/CGameRecording_UserRemoveTimelineEntry_Response"J\n6CGameRecording_ManuallyDeleteRecordingsForApps_Request
@@ -30563,7 +30563,7 @@ Sent ping with MTU %d, increment = %d\n
 SentenceMode
 SentenceModeMenu
 Sentiment
-Sep 15 2026 19:44:49
+Sep 22 2026 00:09:49
 September
 Serbian
 Serial
@@ -38842,6 +38842,7 @@ completion_achievements
 complex
 component_code
 component_name
+component_serial
 component_type
 compressed data too long
 compressed length too long
@@ -38860,7 +38861,6 @@ compression_method
 compute_file_sha
 compute_key
 computed
-computed_serial
 computer
 conditional group contains more than two branches
 config

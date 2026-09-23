@@ -28,6 +28,7 @@
     5598: (e) => {
       e.exports = {
         SimpleModalDialog: "_3ej4mcyhVunlvw3BjUXtel",
+        WideMode: "_1oLxPrvbIeJJ1d96fhJvOI",
         SimpleModalDialogHeader: "_1w-TUMWBEOX_zsSa-BBhK8",
         SimpleModalDialogTitle: "_2tpBIlq2yGQqKcloht-UiJ",
         XButton: "RC4JznqJb34yCm04FKk0I",
@@ -569,18 +570,19 @@
     },
     55608: (e, t, o) => {
       "use strict";
-      o.d(t, { BM: () => l, DQ: () => c, cI: () => d, ce: () => i });
+      o.d(t, { BM: () => i, DQ: () => d, cI: () => u, ce: () => c });
       var r = o(4188),
         s = o(52038),
-        n = o(33645),
-        a = o.n(n);
-      function l(e, t, o = 0) {
+        n = o(90622),
+        a = o(33645),
+        l = o.n(a);
+      function i(e, t, o = 0) {
         return () => [e, { class: t }, o];
       }
-      function i(e, t, o = 0) {
+      function c(e, t, o = 0) {
         return [e, { class: t }, o];
       }
-      const c = {
+      const d = {
           nodes: {
             paragraph: {
               attrs: { align: { default: "left" } },
@@ -593,7 +595,7 @@
                 },
               ],
               toDOM(e) {
-                const t = { class: (0, s.A)("pm_paragraph", a().Paragraph) };
+                const t = { class: (0, s.A)("pm_paragraph", l().Paragraph) };
                 return (
                   e.attrs.align &&
                     "left" != e.attrs.align &&
@@ -631,7 +633,7 @@
                 const t = {
                   class:
                     `BB_Header${e.attrs.level} ` +
-                    a()[`Header${e.attrs.level}`],
+                    l()[`Header${e.attrs.level}`],
                 };
                 return (
                   e.attrs.align &&
@@ -689,8 +691,8 @@
                     src: t,
                     alt: o,
                     title: r,
-                    class: (0, s.A)(a().Image, {
-                      [a().Image_Inline]: "inline" === n,
+                    class: (0, s.A)(l().Image, {
+                      [l().Image_Inline]: "inline" === n,
                     }),
                   },
                 ];
@@ -791,20 +793,20 @@
               ...r.fF,
               content: "list_item+",
               group: "block",
-              toDOM: l("ul", a().List),
+              toDOM: i("ul", l().List),
               bbCode: { tag: "list" },
             },
             ordered_list: {
               ...r.o8,
               content: "list_item+",
               group: "block",
-              toDOM: l("ol", a().OrderedList),
+              toDOM: i("ol", l().OrderedList),
               bbCode: { tag: "olist" },
             },
             list_item: {
               ...r.Aw,
               content: "paragraph block*",
-              toDOM: l("li", a().ListItem),
+              toDOM: i("li", l().ListItem),
               bbCode: { tag: "*", autocloses: !0 },
             },
             code_block: {
@@ -816,8 +818,8 @@
               parseDOM: [{ tag: "pre", preserveWhitespace: "full" }],
               toDOM: () => [
                 "pre",
-                { class: a().CodeBlock },
-                ["code", { class: a().Code }, 0],
+                { class: l().CodeBlock },
+                ["code", { class: l().Code }, 0],
               ],
               bbCode: { tag: "code" },
             },
@@ -839,7 +841,7 @@
                   getAttrs: (e) => /^(bold(er)?|[5-9]\d{2,})$/.test(e) && null,
                 },
               ],
-              toDOM: l("b", (0, s.A)("BB_Bold", a().Bold)),
+              toDOM: i("b", (0, s.A)("BB_Bold", l().Bold)),
               bbCode: { tag: "b" },
             },
             italic: {
@@ -852,22 +854,22 @@
                   clearMark: (e) => "em" == e.type.name,
                 },
               ],
-              toDOM: l("i", (0, s.A)("BB_Italic", a().Italic)),
+              toDOM: i("i", (0, s.A)("BB_Italic", l().Italic)),
               bbCode: { tag: "i" },
             },
             underline: {
               parseDOM: [{ tag: "u" }, { style: "text-decoration=underline" }],
-              toDOM: l("u", (0, s.A)("BB_Underline", a().Underline)),
+              toDOM: i("u", (0, s.A)("BB_Underline", l().Underline)),
               bbCode: { tag: "u" },
             },
             strike: {
               parseDOM: [{ style: "text-decoration=line-through" }],
-              toDOM: l("span", (0, s.A)("BB_Strike", a().Strike)),
+              toDOM: i("span", (0, s.A)("BB_Strike", l().Strike)),
               bbCode: { tag: "strike" },
             },
             code: {
               parseDOM: [{ tag: "code" }],
-              toDOM: l("code", (0, s.A)("BB_Code", a().Code)),
+              toDOM: i("code", (0, s.A)("BB_Code", l().Code)),
               bbCode: { tag: "c" },
             },
             link: {
@@ -876,15 +878,26 @@
               parseDOM: [
                 {
                   tag: "a[href]",
-                  getAttrs: (e) => ({
-                    href: e.getAttribute("href"),
-                    title: e.getAttribute("title"),
-                  }),
+                  getAttrs(e) {
+                    var t;
+                    return {
+                      href: (0, n.J)(
+                        null !== (t = e.getAttribute("href")) && void 0 !== t
+                          ? t
+                          : "",
+                      ),
+                      title: e.getAttribute("title"),
+                    };
+                  },
                 },
               ],
               toDOM(e) {
                 const { href: t, title: o } = e.attrs;
-                return ["a", { href: t, title: o, class: "BB_Link" }, 0];
+                return [
+                  "a",
+                  { href: (0, n.J)(t), title: o, class: "BB_Link" },
+                  0,
+                ];
               },
               bbCode: {
                 tag: "url",
@@ -895,7 +908,7 @@
             },
           },
         },
-        d = {
+        u = {
           node: {},
           marks: {
             color: {
@@ -905,7 +918,7 @@
                 "span",
                 {
                   style: `color: ${e.attrs.color}`,
-                  class: (0, s.A)("BB_Color", a().Color),
+                  class: (0, s.A)("BB_Color", l().Color),
                 },
                 0,
               ],
@@ -924,7 +937,7 @@
                 "span",
                 {
                   style: `background-color: ${e.attrs.color}`,
-                  class: (0, s.A)("BB_BGColor", a().BGColor),
+                  class: (0, s.A)("BB_BGColor", l().BGColor),
                 },
                 0,
               ],
@@ -1793,14 +1806,15 @@
           navID: s,
           children: n,
           strTitle: a,
-          ...i
+          wideMode: i,
+          ...u
         } = e;
         return (0, r.jsx)(f, {
           onClose: t,
           navID: null != s ? s : "SimpleModalDialog",
-          ...i,
+          ...u,
           children: (0, r.jsxs)("div", {
-            className: c()(o, C().SimpleModalDialog),
+            className: c()(o, C().SimpleModalDialog, i && C().WideMode),
             children: [
               " ",
               (0, r.jsxs)(l.Z, {

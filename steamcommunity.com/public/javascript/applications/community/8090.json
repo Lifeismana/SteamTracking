@@ -133,5 +133,5 @@
     "reportedsubjectlist_header": "المواضيع المُبلغ عنها",
     "moderation_already_owner_disputed": "محل نزاع بالفعل",
     "moderationstats_alltypes": "جميع أنواع المواضيع",
-    "forumsubjectlist_subjectreportsummary": "%1$s لم يتم الحل، %1$s محل نزاع"
+    "forumsubjectlist_subjectreportsummary": "%1$s لم يتم الحل، %2$s محل نزاع"
 }

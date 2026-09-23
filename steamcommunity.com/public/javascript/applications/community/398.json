@@ -105,11 +105,12 @@
     "moderation_sanction_hubbanned": "Dilarang daripada hab selama %1$s hari",
     "moderation_sanction_markassuspicious": "Ditanda sebagai mencurigakan",
     "moderation_sanction_relabelled": "Dilabel semula",
+    "moderation_sanction_markedincompatible": "Marked as incompatible",
     "moderation_sanction_tradebanned_forever": "Pertukaran dilarang secara kekal",
     "moderation_sanction_tradebanned": "Pertukaran dilarang selama %1$s hari",
     "moderation_sanction_kickedfromgroup": "Ditendang dari kumpulan",
-    "moderation_sanction_escalated": "Escalated",
-    "moderation_sanction_unknown": "Unknown (%1$s)",
+    "moderation_sanction_escalated": "Dirujuk",
+    "moderation_sanction_unknown": "Tidak diketahui: (%1$s)",
     "moderation_ownerdispute_description": "Sediakan kod tiket dari TicketMaster yang dihantar oleh pengguna ini.",
     "moderation_ownerdispute_ticketmastercode": "Kod tiket:",
     "moderation_ownerdispute_dispute": "Pertikaian",
@@ -133,6 +134,6 @@
     "reportedsubjectlist_header": "Subjek yang dilaporkan",
     "moderation_already_owner_disputed": "Sudah dipertikaikan",
     "moderationstats_alltypes": "Semua jenis subjek",
-    "forumsubjectlist_subjectreportsummary": "%1$s belum diselesaikan, %1$s dalam pertikaian",
+    "forumsubjectlist_subjectreportsummary": "%1$s belum diselesaikan, %2$s dalam pertikaian",
     "empty_no_trailing_comma": ""
 }

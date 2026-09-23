@@ -8750,6 +8750,7 @@
         m_BasicInfo;
         m_rgStoreTags = [];
         m_rgStoreTagIDs = [];
+        m_rgOptInRegistrationTags;
         m_Assets;
         m_AssetsWithoutOverrides;
         m_ReleaseInfo;
@@ -8840,6 +8841,11 @@
                 _.include_tag_count,
                 this.m_rgStoreTags.length || 0,
               ))),
+            _.include_optin_registration_tags &&
+              !this.m_rgOptInRegistrationTags &&
+              ((this.m_rgOptInRegistrationTags =
+                _.optin_registration_tags().map((_) => _.toObject())),
+              (this.m_DataRequested.include_optin_registration_tags = !0)),
             _.include_reviews &&
               !this.m_ReviewInfo &&
               ((this.m_ReviewInfo = _.reviews().toObject()),
@@ -8886,7 +8892,10 @@
               (!_.include_supported_languages ||
                 _.include_supported_languages) &&
               (!_.include_full_description || _.include_full_description) &&
-              (!_.include_links || _.include_links),
+              (!_.include_links || _.include_links) &&
+              (!_.apply_user_filters || _.apply_user_filters) &&
+              (!_.include_optin_registration_tags ||
+                _.include_optin_registration_tags),
           );
         }
         BContainDataRequest(_) {
@@ -9173,6 +9182,15 @@
               include_tag_count: 1,
             }),
             this.m_rgStoreTagIDs
+          );
+        }
+        GetOptInRegistrationTagValues(_) {
+          return (
+            this.BCheckDataRequestIncluded({
+              include_optin_registration_tags: !0,
+            }),
+            this.m_rgOptInRegistrationTags?.find((_) => _.optin_name === _)
+              ?.values ?? []
           );
         }
         BHasTags() {
@@ -9761,6 +9779,9 @@
           include_links: _.include_links || _.include_links,
           include_extra_details:
             _.include_extra_details || _.include_extra_details,
+          include_optin_registration_tags:
+            _.include_optin_registration_tags ||
+            _.include_optin_registration_tags,
         };
       }
       async function _(_, _) {
@@ -10742,11 +10763,16 @@
           (_[(_.SteamChinaReviewLauncher = 8)] = "SteamChinaReviewLauncher"),
           (_[(_.OverlayVRGamepadUI = 9)] = "OverlayVRGamepadUI");
       })(_ || (_ = {}));
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = {
         m_unPID: 0,
         m_nBrowserID: -1,
       };
-      var _ = __webpack_require__("chunkid"),
+      var _,
+        _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -10790,12 +10816,6 @@
               (this.m_fnRender?.(), (this.m_fnRender = void 0));
         }
       }
-      (0, _._)([_._], _.prototype, "OnLinkLoad", null);
-      var _,
-        _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
       function _() {
         return (0, _._)() ? _.Composited : _.None;
       }
@@ -10850,37 +10870,38 @@
             );
         }
       }
-      !(function (_) {
-        (_[(_.None = 0)] = "None"),
-          (_[(_.Minimized = 1)] = "Minimized"),
-          (_[(_.Hidden = 2)] = "Hidden"),
-          (_[(_.TooltipHint = 4)] = "TooltipHint"),
-          (_[(_.NoTaskbarIcon = 8)] = "NoTaskbarIcon"),
-          (_[(_.Resizable = 16)] = "Resizable"),
-          (_[(_.NoScalePosition = 32)] = "NoScalePosition"),
-          (_[(_.NoScaleSize = 64)] = "NoScaleSize"),
-          (_[(_.Maximized = 128)] = "Maximized"),
-          (_[(_.Composited = 256)] = "Composited"),
-          (_[(_.NotFocusable = 512)] = "NotFocusable"),
-          (_[(_.FullScreen = 1024)] = "FullScreen"),
-          (_[(_.Fullscreen_Exclusive = 2048)] = "Fullscreen_Exclusive"),
-          (_[(_.ApplyBrowserScaleToDimensions = 4096)] =
-            "ApplyBrowserScaleToDimensions"),
-          (_[(_.AlwaysOnTop = 8192)] = "AlwaysOnTop"),
-          (_[(_.NoWindowShadow = 16384)] = "NoWindowShadow"),
-          (_[(_.NoMinimize = 32768)] = "NoMinimize"),
-          (_[(_.PopUpMenuHint = 65536)] = "PopUpMenuHint"),
-          (_[(_.IgnoreSavedSize = 131072)] = "IgnoreSavedSize"),
-          (_[(_.NoRoundedCorners = 262144)] = "NoRoundedCorners"),
-          (_[(_.ForceRoundedCorners = 524288)] = "ForceRoundedCorners"),
-          (_[(_.OverrideRedirect = 1048576)] = "OverrideRedirect"),
-          (_[(_.IgnoreSteamDisplayScale = 2097152)] =
-            "IgnoreSteamDisplayScale"),
-          (_[(_.TransparentParentWindow = 4194304)] =
-            "TransparentParentWindow"),
-          (_[(_.DisableDPIScale = 8388608)] = "DisableDPIScale"),
-          (_[(_.ForceBrowserVisible = 16777216)] = "ForceBrowserVisible");
-      })(_ || (_ = {})),
+      (0, _._)([_._], _.prototype, "OnLinkLoad", null),
+        (function (_) {
+          (_[(_.None = 0)] = "None"),
+            (_[(_.Minimized = 1)] = "Minimized"),
+            (_[(_.Hidden = 2)] = "Hidden"),
+            (_[(_.TooltipHint = 4)] = "TooltipHint"),
+            (_[(_.NoTaskbarIcon = 8)] = "NoTaskbarIcon"),
+            (_[(_.Resizable = 16)] = "Resizable"),
+            (_[(_.NoScalePosition = 32)] = "NoScalePosition"),
+            (_[(_.NoScaleSize = 64)] = "NoScaleSize"),
+            (_[(_.Maximized = 128)] = "Maximized"),
+            (_[(_.Composited = 256)] = "Composited"),
+            (_[(_.NotFocusable = 512)] = "NotFocusable"),
+            (_[(_.FullScreen = 1024)] = "FullScreen"),
+            (_[(_.Fullscreen_Exclusive = 2048)] = "Fullscreen_Exclusive"),
+            (_[(_.ApplyBrowserScaleToDimensions = 4096)] =
+              "ApplyBrowserScaleToDimensions"),
+            (_[(_.AlwaysOnTop = 8192)] = "AlwaysOnTop"),
+            (_[(_.NoWindowShadow = 16384)] = "NoWindowShadow"),
+            (_[(_.NoMinimize = 32768)] = "NoMinimize"),
+            (_[(_.PopUpMenuHint = 65536)] = "PopUpMenuHint"),
+            (_[(_.IgnoreSavedSize = 131072)] = "IgnoreSavedSize"),
+            (_[(_.NoRoundedCorners = 262144)] = "NoRoundedCorners"),
+            (_[(_.ForceRoundedCorners = 524288)] = "ForceRoundedCorners"),
+            (_[(_.OverrideRedirect = 1048576)] = "OverrideRedirect"),
+            (_[(_.IgnoreSteamDisplayScale = 2097152)] =
+              "IgnoreSteamDisplayScale"),
+            (_[(_.TransparentParentWindow = 4194304)] =
+              "TransparentParentWindow"),
+            (_[(_.DisableDPIScale = 8388608)] = "DisableDPIScale"),
+            (_[(_.ForceBrowserVisible = 16777216)] = "ForceBrowserVisible");
+        })(_ || (_ = {})),
         (function (_) {
           (_[(_.Overlay = 0)] = "Overlay"),
             (_[(_.Notification = 1)] = "Notification"),
@@ -11597,6 +11618,7 @@
         );
       }
       var _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid");
       const _ = _.createContext({
         body_class: "",
       });
@@ -11604,7 +11626,6 @@
         return _.useContext(_);
       }
       var _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid");
       function _(_, _, _) {
         const _ = _.useRef(void 0),
           [_, _] = _.useState(void 0),
@@ -11622,20 +11643,22 @@
               _,
             )),
           (_.current.m_callbacks = _),
-          _.useEffect(() => {
-            if (!_.current?.params.bNoInitialShow) {
-              let _ = _.current?.params.bNoFocusOnShow
-                ? _.iEc.k_EWindowBringToFrontWithoutForcingOS
-                : _.iEc.k_EWindowBringToFrontAndForceOS;
-              _.current?.Show(_);
-            }
-            return () => {
-              (_.current.m_callbacks = void 0),
-                _.current.window?.SteamClient.Window.SetHideOnClose &&
-                  _.current.window?.SteamClient.Window.SetHideOnClose(!1),
-                _.current.Close();
-            };
-          }, []),
+          _.useEffect(
+            () => (
+              _.current?.params.bNoInitialShow ||
+                _.current?.Show(
+                  _.current?.params.eWindowBringToFront ??
+                    _.iEc.k_EWindowBringToFrontAndForceOS,
+                ),
+              () => {
+                (_.current.m_callbacks = void 0),
+                  _.current.window?.SteamClient.Window.SetHideOnClose &&
+                    _.current.window?.SteamClient.Window.SetHideOnClose(!1),
+                  _.current.Close();
+              }
+            ),
+            [],
+          ),
           _.useEffect(() => {
             _.current.window?.SteamClient.Window.SetHideOnClose &&
               _.current.window?.SteamClient.Window.SetHideOnClose(
@@ -19731,6 +19754,12 @@
           bLoop: _ ? _ : _,
         });
       }
+      function _(_) {
+        return _.replace(/&lt;/g, "<")
+          .replace(/&gt;/g, ">")
+          .replace(/&quot;/g, '"')
+          .replace(/&amp;/g, "&");
+      }
       var _ = __webpack_require__("chunkid");
       async function _(_) {
         const _ =
@@ -19757,7 +19786,11 @@
                   }),
                   _ = _.youtube?.find((_) => _.videoid == _) ?? _.youtube?.[0];
                 if (!_) throw new Error(`no metadata for youtube video ${_}`);
-                return _;
+                return {
+                  ..._,
+                  title: _(_.title),
+                  description: _(_.description),
+                };
               },
               enabled: _ && !0,
               staleTime: 36e5,
@@ -20855,7 +20888,7 @@
       function _(_) {
         return (0, _.jsx)("img", {
           className: _.DynamicLink_Preview,
-          src: _.strURL,
+          src: _.strURL || void 0,
           alt: _.strAlt ?? "",
         });
       }
@@ -21871,6 +21904,8 @@
         });
       };
       var _ = __webpack_require__("chunkid");
+      const _ = "{STEAM_CLAN_IMAGE}",
+        _ = "{STEAM_CLAN_LOC_IMAGE}";
       class _ extends _ {
         m_LinkFilter = _._;
         m_parentNode = void 0;
@@ -21925,15 +21960,17 @@
           let _ = _;
           this.m_parentNode &&
             "img" == this.m_parentNode.tag &&
+            !(function (_) {
+              const _ = _.trim();
+              return _.startsWith(_) || _.startsWith(_);
+            })(_) &&
             (_ = (0, _._)(_)),
             super.AppendText(_, _);
         }
       }
-      var _ = __webpack_require__("chunkid"),
+      var _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
-      const _ = "{STEAM_CLAN_IMAGE}",
-        _ = "{STEAM_CLAN_LOC_IMAGE}";
-      var _;
       !(function (_) {
         (_.full = ""),
           (_.background_main = "_960x311"),
@@ -22257,7 +22294,7 @@
           ],
         ]),
         _ = (_) => {
-          const { text: _, bShowErrorInfo: _, version: _ } = _,
+          const { text: _, bShowErrorInfo: _, version: _, language: _ } = _,
             _ = _.useCallback(
               (_) =>
                 new _(
@@ -22276,10 +22313,10 @@
                 ),
               [],
             ),
-            _ = _.useRef(new _(_, _, _._.LANGUAGE));
+            _ = _.useMemo(() => new _(_, _, _ ?? _._.LANGUAGE), [_, _]);
           return (0, _.jsx)("div", {
             className: _().FAQContainer,
-            children: _.current.ParseBBCode(_, {
+            children: _.ParseBBCode(_, {
               showErrorInfo: _,
               version: _,
             }),
@@ -22293,6 +22330,7 @@
               bIsPreview: _,
               elSideBars: _,
               version: _,
+              language: _,
             } = _,
             _ = (0, _._)();
           return (
@@ -22336,6 +22374,7 @@
                                 text: _,
                                 bShowErrorInfo: _,
                                 version: _ || "0",
+                                language: _,
                               }),
                             }),
                           ],
@@ -32445,7 +32484,9 @@
             (_[(_.k_EWindowBringToFrontAndForceOS = 1)] =
               "k_EWindowBringToFrontAndForceOS"),
             (_[(_.k_EWindowBringToFrontWithoutForcingOS = 2)] =
-              "k_EWindowBringToFrontWithoutForcingOS");
+              "k_EWindowBringToFrontWithoutForcingOS"),
+            (_[(_.k_EWindowBringToFrontUsingExistingOSState = 3)] =
+              "k_EWindowBringToFrontUsingExistingOSState");
         })(_ || (_ = {}));
       var _;
       !(function (_) {
@@ -32925,6 +32966,13 @@
             },
             [_],
           ),
+          _ = _.useCallback((_) => !_.bInVR && "mouse" === _.pointerType, [_]),
+          _ = _.useCallback(
+            (_) => {
+              _(_) || _.ShowVirtualKeyboard();
+            },
+            [_, _],
+          ),
           _ = (0, _._)(
             (_) => {
               _.current = _;
@@ -32941,26 +32989,24 @@
                       _.SetAsCurrentVirtualKeyboardTarget,
                     ),
                   ),
-                  _.addEventListener("click", _.ShowVirtualKeyboard),
-                  _.push(() =>
-                    _.removeEventListener("click", _.ShowVirtualKeyboard),
-                  ),
+                  _.addEventListener("click", _),
+                  _.push(() => _.removeEventListener("click", _)),
                   _.push((0, _._)(_, _.ShowVirtualKeyboard)),
                   _.push((0, _._)(_, _))),
                 () => _.forEach((_) => _())
               );
             },
-            [_, _],
+            [_, _, _],
           );
         return (
           _.useLayoutEffect(
             () => (
               (0, _._)(_, {
-                TakeFocusAndShowKeyboard: () => {
+                TakeFocusAndShowKeyboard: (_) => {
                   const _ = _.current;
                   _ &&
                     (document.activeElement != _ && _.focus(),
-                    _.ShowVirtualKeyboard());
+                    (_ && _(_)) || _.ShowVirtualKeyboard());
                 },
                 HideVirtualKeyboard: () => {
                   _.HideVirtualKeyboard();
@@ -32968,7 +33014,7 @@
               }),
               () => (0, _._)(_, null)
             ),
-            [_, _],
+            [_, _, _],
           ),
           _
         );
@@ -33094,6 +33140,7 @@
             navKey: _,
             noFocusRing: _,
             focusRingSizeElementID: _,
+            focusRingHasBorderRadius: _,
             focusable: _,
             navRef: _,
             actionDescriptionMap: _,
@@ -33123,6 +33170,7 @@
             navKey: _,
             noFocusRing: _,
             focusRingSizeElementID: _,
+            focusRingHasBorderRadius: _,
             focusable: _,
             navRef: _,
             onMoveUp: _,
@@ -35052,7 +35100,7 @@
           return this.GetElementForFocusRingMeasure()?.getBoundingClientRect();
         }
         GetBorderRadiusForFocusRing() {
-          if (!this.m_Properties?.focusRingSizeElementID) return;
+          if (!this.m_Properties?.focusRingHasBorderRadius) return;
           const _ = this.GetElementForFocusRingMeasure();
           if (!_) return;
           const _ = _.ownerDocument?.defaultView?.getComputedStyle(_);
@@ -39039,6 +39087,7 @@
         m_fnGetReportingInterval = _;
         m_fnGetReportTags = () => [];
         m_fnGetURL = () => location.href;
+        strDisplayVersion;
         m_bEnabled = !0;
         m_bInitialized = !1;
         constructor(_ = !0) {
@@ -39072,6 +39121,8 @@
               (this.m_fnGetReportingInterval = _.fnGetReportingInterval),
             _.fnGetReportTags && (this.m_fnGetReportTags = _.fnGetReportTags),
             _.fnGetURL && (this.m_fnGetURL = _.fnGetURL),
+            _.strDisplayVersion &&
+              (this.strDisplayVersion = _.strDisplayVersion),
             this.m_bEnabled ||
               (console.error(
                 "Error reporting was initialized after being disabled, possibly dropping errors.",
@@ -39208,6 +39259,7 @@
                 _.strComponentStack &&
                   (_.strComponentStack = _.strComponentStack),
                 (_.strUrl = this.m_fnGetURL()),
+                (_.strDisplayVersion = this.strDisplayVersion),
                 this.SendErrorReport(_),
                 _)
               : null;
@@ -39284,7 +39336,9 @@
                 _.set_identifier(_.identifier + " " + _.identifierHash),
                 _.set_message(JSON.stringify(_.message)),
                 _.strComponentStack &&
-                  ((_ ??= {}), (_.componentStack = _.strComponentStack)),
+                  ((_ ??= {}),
+                  (_.componentStack = _.strComponentStack),
+                  (_.strDisplayVersion = _.strDisplayVersion)),
                 _ && _.set_context(JSON.stringify(_)),
                 _.strUrl && _.set_url(_.strUrl),
                 _
@@ -41296,6 +41350,41 @@
                     _: 45,
                     _: _._.readFixed64String,
                     _: _._.writeFixed64String,
+                  },
+                  wg_msg_trace_flags: {
+                    _: 46,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  wg_msg_trace_instance: {
+                    _: 47,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  wg_msg_trace_gid: {
+                    _: 48,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  wg_msg_trace_token: {
+                    _: 49,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  wg_msg_trace_steamid: {
+                    _: 50,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  wg_msg_trace_status: {
+                    _: 51,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  trace_flags: {
+                    _: 52,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
                   },
                 },
               }),
@@ -55566,6 +55655,11 @@
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
+                  include_family_licenses: {
+                    _: 2,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
                 },
               }),
             _.sm_m
@@ -59616,7 +59710,7 @@
               _,
               0,
               -1,
-              [11, 12, 20, 21, 25, 41, 52, 71, 74],
+              [11, 12, 20, 21, 25, 41, 52, 71, 74, 77],
               null,
             );
         }
@@ -59862,6 +59956,12 @@
                   extra_details: {
                     _: 75,
                     _: _,
+                  },
+                  optin_registration_tags: {
+                    _: 77,
+                    _: _,
+                    _: !0,
+                    _: !0,
                   },
                 },
               }),
@@ -61360,6 +61460,11 @@
                     _: _._.readString,
                     _: _._.writeString,
                   },
+                  is_free_license: {
+                    _: 56,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
                 },
               }),
             _.sm_m
@@ -62426,6 +62531,25 @@
                     _: 21,
                     _: _,
                   },
+                  links_and_info: {
+                    _: 22,
+                    _: _,
+                  },
+                  item_store_eligible: {
+                    _: 23,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  points_shop_eligible: {
+                    _: 24,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  specs_bbcode: {
+                    _: 25,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
                 },
               }),
             _.sm_m
@@ -62920,6 +63044,186 @@
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
           super(),
+            _.prototype.website || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [6, 7, 8], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  website: {
+                    _: 1,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  stats_url: {
+                    _: 2,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  online_manual_url: {
+                    _: 3,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  health_warning_url: {
+                    _: 4,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  privacy_policy_url: {
+                    _: 5,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  available_documents: {
+                    _: 6,
+                    _: !0,
+                    _: !0,
+                    _: _._.readEnum,
+                    pbr: _._.readPackedEnum,
+                    _: _._.writeRepeatedEnum,
+                  },
+                  genreids: {
+                    _: 7,
+                    _: !0,
+                    _: !0,
+                    _: _._.readUint32,
+                    pbr: _._.readPackedUint32,
+                    _: _._.writeRepeatedUint32,
+                  },
+                  manufacturers: {
+                    _: 8,
+                    _: !0,
+                    _: !0,
+                    _: _._.readString,
+                    _: _._.writeRepeatedString,
+                  },
+                  achievements_visible: {
+                    _: 9,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  achievement_count: {
+                    _: 10,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "StoreItem_ExtraDetails_LinksAndInfo";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.optin_name || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [2], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  optin_name: {
+                    _: 1,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  values: {
+                    _: 2,
+                    _: !0,
+                    _: !0,
+                    _: _._.readString,
+                    _: _._.writeRepeatedString,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "StoreItem_OptInRegistrationTags";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
             _.prototype.include_assets || _._(_._()),
             _.Message.initialize(this, _, 0, -1, void 0, null);
         }
@@ -63023,6 +63327,11 @@
                   include_best_purchase_option: {
                     _: 19,
                     _: !0,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  include_optin_registration_tags: {
+                    _: 20,
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
@@ -67740,6 +68049,17 @@
             (function (_, _, _, _) {
               _(_, _, _, "include_ratings", "game_rating", _);
             })(_, _, _, _),
+          _.include_optin_registration_tags &&
+            (function (_, _, _, _) {
+              _(
+                _,
+                _,
+                _,
+                "include_optin_registration_tags",
+                "optin_registration_tags",
+                _,
+              );
+            })(_, _, _, _),
           _.include_included_items &&
             _.included_item_data_request &&
             (_.included_items?.included_apps?.forEach((_) =>
@@ -67771,6 +68091,7 @@
         "release",
         "package_groups",
         "extra_details",
+        "optin_registration_tags",
       ];
       function _(_) {
         const _ = {
@@ -74001,7 +74322,7 @@
   },
   (_) => {
     _._(0, [8997], () => {
-      return (_ = 4489), _((_._ = _));
+      return (_ = 8307), _((_._ = _));
       var _;
     });
     _._();

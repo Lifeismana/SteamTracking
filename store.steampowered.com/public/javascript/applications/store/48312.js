@@ -68,35 +68,36 @@
             variant: h,
             color: p,
             align: k = "center",
-            ...x
+            icon: x,
+            ...m
           } = e,
-          m = "indeterminate" === a,
-          f = m ? v : n,
-          L = () => {
-            s || (o && o(!!m || !a));
+          f = "indeterminate" === a,
+          L = x ?? (f ? v : n),
+          g = () => {
+            s || (o && o(!!f || !a));
           },
-          g = (0, d.f)("Checkbox", h);
+          S = (0, d.f)("Checkbox", h);
         return (0, r.jsxs)(i.s, {
           align: k,
           ref: _,
           role: "checkbox",
-          "aria-checked": m ? "mixed" : a,
+          "aria-checked": f ? "mixed" : a,
           "data-state": u(a),
-          className: l()(t.Root, t[`Variant-${g}`], s && t.Disabled),
-          onClick: L,
+          className: l()(t.Root, t[`Variant-${S}`], s && t.Disabled),
+          onClick: g,
           tabIndex: 0,
           onKeyDown: (e) => {
             s ||
-              (" " === e.key && (L(), e.preventDefault(), e.stopPropagation()));
+              (" " === e.key && (g(), e.preventDefault(), e.stopPropagation()));
           },
           cursor: "default",
           "aria-disabled": s,
           "data-accent-color": p,
-          ...x,
+          ...m,
           children: [
             (0, r.jsx)("div", {
               className: t.Checkbox,
-              children: a && (0, r.jsx)(f, { className: t.Icon }),
+              children: a && (0, r.jsx)(L, { className: t.Icon }),
             }),
             c,
           ],
@@ -166,7 +167,7 @@
         u = o(61859),
         v = o(67936),
         h = o(53807),
-        p = o(34121);
+        p = o(76684);
       o(26408);
       function k(e) {
         const { rtime: a } = e;

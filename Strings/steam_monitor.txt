@@ -229,13 +229,13 @@ $ORIGIN
 /tmp/.steam-sem-names
 /tmp/steam_monitor.log
 /tmp/steam_monitor.log.last
+00:09:21
+00:09:25
 0123456789ABCDEF
 0123456789abcdef
 12CStdMemAlloc
 16CAdHocValidation
 18CUtlCharConversion
-19:44:25
-19:44:29
 19CUtlNoEscConversion
 21CUtlCStringConversion
 31CAdHocValidation_SimpleCallback
@@ -361,7 +361,7 @@ SDL_GetError
 SDL_SetCurrentThreadPriority
 STEAM_DESKTOP_APP_AFFINITY_LIST
 Semaphore name (%s) is longer than POSIX can handle, truncating.
-Sep 15 2026
+Sep 22 2026
 ServerMain
 Size
 Sleeping

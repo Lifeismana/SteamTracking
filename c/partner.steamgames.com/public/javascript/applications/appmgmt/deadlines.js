@@ -997,7 +997,7 @@
                 (0, _.jsx)("span", {
                   className: _().DocumentProcessingNotice,
                   children:
-                    "Please note that this action item will remain active and on your dashboard until our tax vendor has reviewed and approved your documents. The document approval process takes up to 10 days.",
+                    "Please note that this action item will remain active and on your dashboard until our tax vendor has reviewed and approved your documents. The document approval process takes up to 10 business days.",
                 }),
               ],
             }),
@@ -1346,46 +1346,54 @@
                                 className: _().SectionBody,
                                 children: [
                                   "Please provide one of the following, issued within the last 10 years:",
-                                  (0, _.jsxs)("ol", {
+                                  (0, _.jsxs)("div", {
+                                    className: _().RequiredDocumentList,
                                     children: [
-                                      (0, _.jsx)("li", {
-                                        children: "International Passport",
+                                      (0, _.jsxs)("ul", {
+                                        children: [
+                                          (0, _.jsx)("li", {
+                                            children: "International Passport",
+                                          }),
+                                          (0, _.jsx)("li", {
+                                            children: "Driver's License",
+                                          }),
+                                          (0, _.jsx)("li", {
+                                            children:
+                                              "Government issued identification documentation either by a Federal, State / Provisional Government Authority",
+                                          }),
+                                        ],
                                       }),
-                                      (0, _.jsx)("li", {
-                                        children: "Driver's License",
+                                      (0, _.jsx)("div", {
+                                        children: (0, _.jsx)("i", {
+                                          children:
+                                            "Note, we are unable to validate the following documents:",
+                                        }),
                                       }),
-                                      (0, _.jsx)("li", {
-                                        children:
-                                          "Government issued identification documentation either by a Federal, State / Provisional Government Authority",
+                                      (0, _.jsx)("div", {
+                                        className: _().RequiredDocumentList,
+                                        children: (0, _.jsxs)("ul", {
+                                          children: [
+                                            (0, _.jsx)("li", {
+                                              children: "Citizen Card",
+                                            }),
+                                            (0, _.jsx)("li", {
+                                              children:
+                                                "Government Health Cards",
+                                            }),
+                                            (0, _.jsx)("li", {
+                                              children: "Military ID's",
+                                            }),
+                                            (0, _.jsx)("li", {
+                                              children: "Post office card",
+                                            }),
+                                            (0, _.jsx)("li", {
+                                              children: "Paper Documents",
+                                            }),
+                                          ],
+                                        }),
                                       }),
                                     ],
                                   }),
-                                  (0, _.jsx)("div", {
-                                    children: (0, _.jsx)("i", {
-                                      children:
-                                        "Note, we are unable to validate the following documents:",
-                                    }),
-                                  }),
-                                  (0, _.jsxs)("ol", {
-                                    children: [
-                                      (0, _.jsx)("li", {
-                                        children: "Citizen Card",
-                                      }),
-                                      (0, _.jsx)("li", {
-                                        children: "Government Health Cards",
-                                      }),
-                                      (0, _.jsx)("li", {
-                                        children: "Military ID's",
-                                      }),
-                                      (0, _.jsx)("li", {
-                                        children: "Post office card",
-                                      }),
-                                      (0, _.jsx)("li", {
-                                        children: "Paper Documents",
-                                      }),
-                                    ],
-                                  }),
-                                  (0, _.jsx)("br", {}),
                                   (0, _.jsx)("div", {
                                     children:
                                       "A high-quality photo or scan of the original, physical document, ensuring that the image is in focus, no external light impacts quality and that all watermarks, imprints, features and color are clearly visible. Do not Crop the images of your ID document - the corners and edges must be clearly visible. Ensure you do not deprecate any aspect of the image, otherwise we will not proceed with your verification.",
@@ -1420,7 +1428,7 @@
                                       (0, _.jsx)("b", {
                                         children: "Accepted file types",
                                       }),
-                                      (0, _.jsxs)("ol", {
+                                      (0, _.jsxs)("ul", {
                                         children: [
                                           (0, _.jsx)("li", {
                                             children: "PDF",
@@ -1440,32 +1448,41 @@
                             children: [
                               (0, _.jsx)("div", {
                                 className: _().SectionTitle,
-                                children: "Selfie",
+                                children: "Selfie Holding ID",
                               }),
                               (0, _.jsxs)("div", {
                                 className: _().SectionBody,
                                 children: [
                                   (0, _.jsx)("div", {
                                     children:
-                                      "We also require all payees to provide a selfie of themselves holding the same document they are providing. Please remove all hats, glasses, and other facial obstructions to get through the process as fast as possible",
+                                      "We also require all payees to provide a selfie of themselves holding the same document they are providing",
                                   }),
-                                  (0, _.jsx)("br", {}),
                                   (0, _.jsx)("div", {
-                                    children:
-                                      "Show your full face, and you holding the Identification document - note, this is not a substitute for supplying a scan / photo of the original document as described above",
+                                    className: _().SectionTitle,
+                                    children: "Selfie requirements",
                                   }),
-                                  (0, _.jsx)("br", {}),
-                                  (0, _.jsxs)("div", {
-                                    children: [
-                                      (0, _.jsx)("b", {
-                                        children: "Accepted file types",
-                                      }),
-                                      (0, _.jsx)("ol", {
-                                        children: (0, _.jsx)("li", {
-                                          children: "JPEG / Image files",
+                                  (0, _.jsx)("div", {
+                                    className: _().RequiredDocumentList,
+                                    children: (0, _.jsxs)("ol", {
+                                      children: [
+                                        (0, _.jsx)("li", {
+                                          children:
+                                            "Show your full face, and you holding the same Identification document - note, this is not a substitute for supplying a scan / photo of the original document as described above",
                                         }),
-                                      }),
-                                    ],
+                                        (0, _.jsx)("li", {
+                                          children:
+                                            "Please remove all hats, glasses, and other facial obstructions",
+                                        }),
+                                        (0, _.jsx)("li", {
+                                          children:
+                                            "The ID itself must be clear and legible and all four corners and edges must be visible",
+                                        }),
+                                        (0, _.jsx)("li", {
+                                          children:
+                                            "Please send the images as a JPEG / Image file",
+                                        }),
+                                      ],
+                                    }),
                                   }),
                                 ],
                               }),
@@ -1506,8 +1523,29 @@
                   }),
                   (0, _.jsx)("div", {
                     className: _().SectionBody,
-                    children:
-                      "Show your full face, and you holding the same Identification document that you have previously provided. Please remove all hats, glasses, and other facial obstructions. The ID itself must be clear and legible and all four corners and edges must be visible.",
+                    children: (0, _.jsx)("div", {
+                      className: _().RequiredDocumentList,
+                      children: (0, _.jsxs)("ol", {
+                        children: [
+                          (0, _.jsx)("li", {
+                            children:
+                              "Show your full face, and you holding the same Identification document that you have previously provided",
+                          }),
+                          (0, _.jsx)("li", {
+                            children:
+                              "Please remove all hats, glasses, and other facial obstructions",
+                          }),
+                          (0, _.jsx)("li", {
+                            children:
+                              "The ID itself must be clear and legible and all four corners and edges must be visible",
+                          }),
+                          (0, _.jsx)("li", {
+                            children:
+                              "Please send the images as a JPEG / Image file",
+                          }),
+                        ],
+                      }),
+                    }),
                   }),
                   (0, _.jsx)(_, {
                     ..._,
@@ -2468,12 +2506,7 @@
               return (0, _.jsxs)("div", {
                 className: (0, _._)(_().NotificationContainer, _().SectionCtn),
                 children: [
-                  (0, _.jsx)("div", {
-                    className: _().MessageHeader,
-                    children: (0, _.jsx)("h1", {
-                      children: "Identity verification required",
-                    }),
-                  }),
+                  _(),
                   (0, _.jsxs)("div", {
                     className: _().SectionBody,
                     children: [
@@ -2516,12 +2549,7 @@
               return (0, _.jsxs)("div", {
                 className: (0, _._)(_().NotificationContainer, _().SectionCtn),
                 children: [
-                  (0, _.jsx)("div", {
-                    className: _().MessageHeader,
-                    children: (0, _.jsx)("h1", {
-                      children: "Identity verification required",
-                    }),
-                  }),
+                  _(),
                   (0, _.jsx)("div", {
                     className: _().SectionBody,
                     children:
@@ -2561,12 +2589,7 @@
               return (0, _.jsxs)("div", {
                 className: (0, _._)(_().NotificationContainer, _().SectionCtn),
                 children: [
-                  (0, _.jsx)("div", {
-                    className: _().MessageHeader,
-                    children: (0, _.jsx)("h1", {
-                      children: "Identity verification required",
-                    }),
-                  }),
+                  _(),
                   (0, _.jsx)("div", {
                     className: _().SectionBody,
                     children:
@@ -2611,12 +2634,7 @@
               return (0, _.jsxs)("div", {
                 className: (0, _._)(_().NotificationContainer, _().SectionCtn),
                 children: [
-                  (0, _.jsx)("div", {
-                    className: _().MessageHeader,
-                    children: (0, _.jsx)("h1", {
-                      children: "Identity verification required",
-                    }),
-                  }),
+                  _(),
                   (0, _.jsxs)("div", {
                     className: _().SectionBody,
                     children: [
@@ -2663,7 +2681,7 @@
                   (0, _.jsx)("div", {
                     className: _().MessageHeader,
                     children: (0, _.jsx)("h1", {
-                      children: "Identity verification required",
+                      children: "Address verification required",
                     }),
                   }),
                   (0, _.jsx)("div", {
@@ -2730,14 +2748,14 @@
             component: function (_) {
               const { requirement: _ } = _,
                 _ = JSON.parse(_.deadline.data.description_jsondata),
-                _ = _.bTestDisplay ? "Sweden" : _?.Parameters?.Country;
+                _ = _.bTestDisplay ? "Sweden" : _?.Parameters?.TaxTreatyCountry;
               return (0, _.jsxs)("div", {
                 className: (0, _._)(_().NotificationContainer, _().SectionCtn),
                 children: [
                   (0, _.jsx)("div", {
                     className: _().MessageHeader,
                     children: (0, _.jsx)("h1", {
-                      children: "Identity verification required",
+                      children: "Tax verification required",
                     }),
                   }),
                   (0, _.jsxs)("div", {
@@ -2765,12 +2783,7 @@
               return (0, _.jsxs)("div", {
                 className: (0, _._)(_().NotificationContainer, _().SectionCtn),
                 children: [
-                  (0, _.jsx)("div", {
-                    className: _().MessageHeader,
-                    children: (0, _.jsx)("h1", {
-                      children: "Identity verification required",
-                    }),
-                  }),
+                  _(),
                   (0, _.jsx)("div", {
                     className: _().SectionBody,
                     children:
@@ -3076,6 +3089,7 @@
             apply_user_filters: _,
             include_links: _,
             include_extra_details: _,
+            include_optin_registration_tags: _,
           } = _;
         if (
           ((0, _.useEffect)(() => {
@@ -3097,6 +3111,7 @@
               apply_user_filters: _,
               include_links: _,
               include_extra_details: _,
+              include_optin_registration_tags: _,
             };
             let _ = null;
             return (
@@ -3114,6 +3129,7 @@
               () => _?.cancel("useStoreItemCache: unmounting")
             );
           }, [
+            _,
             _,
             _,
             _,
@@ -3175,6 +3191,7 @@
             apply_user_filters: _,
             include_links: _,
             include_extra_details: _,
+            include_optin_registration_tags: _,
           } = _;
         if (
           ((0, _.useEffect)(() => {
@@ -3197,6 +3214,7 @@
                 apply_user_filters: _,
                 include_links: _,
                 include_extra_details: _,
+                include_optin_registration_tags: _,
               },
               _ = _.filter(
                 (_) =>
@@ -3214,7 +3232,30 @@
               }),
               () => _.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]),
+          }, [
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+          ]),
           !_)
         )
           return _;

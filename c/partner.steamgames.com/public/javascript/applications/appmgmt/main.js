@@ -200,6 +200,17 @@
     },
     chunkid: (module) => {
       module.exports = {
+        AutoAdvanceContent: "_1ot7iONiZzKf4TAHgPi3qY",
+        Paused: "XXYx3DB0gLYbEuuCX_8Q7",
+        Disabled: "_13IEBrvx5g_lHE4QFLKYgW",
+        AutoAdvanceLabel: "_2jjPGobp_uYqLu7LCVWXx8",
+        AutoAdvanceBar: "_3ew7tsjPX6rYyFcWm_Ohz8",
+        AutoAdvanceCheckbox: "_1YFnAY801Coag4pbippyH6",
+        AutoAdvanceCheckboxCtn: "Fy_-Cbz1CV38fntOKZ5Qo",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         "duration-app-launch": "800ms",
         narrowWidth: "500px",
         carouselNavButton: "_13rGo4vexAbY9-CP7FsLOg",
@@ -210,6 +221,7 @@
         sliderBody: "_2M3SnYGvMvplWUC8yGhowo",
         slideTrayCustomize: "_2VUpHDtxN8lR1LDahY_cI2",
         breadcrumbContainer: "_3HjnEmKg66o82ah74EIvmq",
+        autoAdvanceRow: "_3M0zxbf96I8oQlbNsHboy4",
         breadcrumbContainerTemplate: "_3dMffY_iRZXHjZmXN9aLej",
         pip: "_3Byg6Wc4TX36gkUptUIk72",
         pipList: "LY1m24ODS7AFRuzclt0Sl",
@@ -1027,6 +1039,8 @@
         StoreGameAdminRoot: () => "/admin/game/",
         StoreAdminRoot: () => "/admin/store/",
         StoreAdminReviewPriceProposals: () => "/admin/reviewpricesubmissions/",
+        StoreAdminPackagePricingComparison: () =>
+          "/admin/packagepricingcomparison/",
         CreatorHomeAdminPage: () => "/admin/creatorhome/",
         AppCommunityItem: (_ = ":appid", _ = ":itemtype") =>
           `/apps/communityitems/${_}/${_}`,
@@ -2236,11 +2250,11 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
           Promise.all([
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -2652,6 +2666,10 @@
                           }),
                           (0, _.jsx)(_._, {
                             path: _._.StoreAdminReviewPriceProposals(),
+                            component: _,
+                          }),
+                          (0, _.jsx)(_._, {
+                            path: _._.StoreAdminPackagePricingComparison(),
                             component: _,
                           }),
                           (0, _.jsx)(_._, {
@@ -3990,7 +4008,9 @@
             (_[(_.k_EWindowBringToFrontAndForceOS = 1)] =
               "k_EWindowBringToFrontAndForceOS"),
             (_[(_.k_EWindowBringToFrontWithoutForcingOS = 2)] =
-              "k_EWindowBringToFrontWithoutForcingOS");
+              "k_EWindowBringToFrontWithoutForcingOS"),
+            (_[(_.k_EWindowBringToFrontUsingExistingOSState = 3)] =
+              "k_EWindowBringToFrontUsingExistingOSState");
         })(_ || (_ = {}));
       var _;
       !(function (_) {
@@ -9820,6 +9840,7 @@
             navKey: _,
             noFocusRing: _,
             focusRingSizeElementID: _,
+            focusRingHasBorderRadius: _,
             focusable: _,
             navRef: _,
             actionDescriptionMap: _,
@@ -9849,6 +9870,7 @@
             navKey: _,
             noFocusRing: _,
             focusRingSizeElementID: _,
+            focusRingHasBorderRadius: _,
             focusable: _,
             navRef: _,
             onMoveUp: _,
@@ -11880,7 +11902,7 @@
           return this.GetElementForFocusRingMeasure()?.getBoundingClientRect();
         }
         GetBorderRadiusForFocusRing() {
-          if (!this.m_Properties?.focusRingSizeElementID) return;
+          if (!this.m_Properties?.focusRingHasBorderRadius) return;
           const _ = this.GetElementForFocusRingMeasure();
           if (!_) return;
           const _ = _.ownerDocument?.defaultView?.getComputedStyle(_);
@@ -12930,6 +12952,13 @@
             },
             [_],
           ),
+          _ = _.useCallback((_) => !_.bInVR && "mouse" === _.pointerType, [_]),
+          _ = _.useCallback(
+            (_) => {
+              _(_) || _.ShowVirtualKeyboard();
+            },
+            [_, _],
+          ),
           _ = (0, _._)(
             (_) => {
               _.current = _;
@@ -12946,26 +12975,24 @@
                       _.SetAsCurrentVirtualKeyboardTarget,
                     ),
                   ),
-                  _.addEventListener("click", _.ShowVirtualKeyboard),
-                  _.push(() =>
-                    _.removeEventListener("click", _.ShowVirtualKeyboard),
-                  ),
+                  _.addEventListener("click", _),
+                  _.push(() => _.removeEventListener("click", _)),
                   _.push((0, _._)(_, _.ShowVirtualKeyboard)),
                   _.push((0, _._)(_, _))),
                 () => _.forEach((_) => _())
               );
             },
-            [_, _],
+            [_, _, _],
           );
         return (
           _.useLayoutEffect(
             () => (
               (0, _._)(_, {
-                TakeFocusAndShowKeyboard: () => {
+                TakeFocusAndShowKeyboard: (_) => {
                   const _ = _.current;
                   _ &&
                     (document.activeElement != _ && _.focus(),
-                    _.ShowVirtualKeyboard());
+                    (_ && _(_)) || _.ShowVirtualKeyboard());
                 },
                 HideVirtualKeyboard: () => {
                   _.HideVirtualKeyboard();
@@ -12973,7 +13000,7 @@
               }),
               () => (0, _._)(_, null)
             ),
-            [_, _],
+            [_, _, _],
           ),
           _
         );
@@ -13338,6 +13365,7 @@
         m_fnGetReportingInterval = _;
         m_fnGetReportTags = () => [];
         m_fnGetURL = () => location.href;
+        strDisplayVersion;
         m_bEnabled = !0;
         m_bInitialized = !1;
         constructor(_ = !0) {
@@ -13371,6 +13399,8 @@
               (this.m_fnGetReportingInterval = _.fnGetReportingInterval),
             _.fnGetReportTags && (this.m_fnGetReportTags = _.fnGetReportTags),
             _.fnGetURL && (this.m_fnGetURL = _.fnGetURL),
+            _.strDisplayVersion &&
+              (this.strDisplayVersion = _.strDisplayVersion),
             this.m_bEnabled ||
               (console.error(
                 "Error reporting was initialized after being disabled, possibly dropping errors.",
@@ -13507,6 +13537,7 @@
                 _.strComponentStack &&
                   (_.strComponentStack = _.strComponentStack),
                 (_.strUrl = this.m_fnGetURL()),
+                (_.strDisplayVersion = this.strDisplayVersion),
                 this.SendErrorReport(_),
                 _)
               : null;
@@ -13583,7 +13614,9 @@
                 _.set_identifier(_.identifier + " " + _.identifierHash),
                 _.set_message(JSON.stringify(_.message)),
                 _.strComponentStack &&
-                  ((_ ??= {}), (_.componentStack = _.strComponentStack)),
+                  ((_ ??= {}),
+                  (_.componentStack = _.strComponentStack),
+                  (_.strDisplayVersion = _.strDisplayVersion)),
                 _ && _.set_context(JSON.stringify(_)),
                 _.strUrl && _.set_url(_.strUrl),
                 _
@@ -15359,6 +15392,41 @@
                     _: 45,
                     _: _._.readFixed64String,
                     _: _._.writeFixed64String,
+                  },
+                  wg_msg_trace_flags: {
+                    _: 46,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  wg_msg_trace_instance: {
+                    _: 47,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  wg_msg_trace_gid: {
+                    _: 48,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  wg_msg_trace_token: {
+                    _: 49,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  wg_msg_trace_steamid: {
+                    _: 50,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  wg_msg_trace_status: {
+                    _: 51,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  trace_flags: {
+                    _: 52,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
                   },
                 },
               }),
@@ -25827,7 +25895,7 @@
               _,
               0,
               -1,
-              [11, 12, 20, 21, 25, 41, 52, 71, 74],
+              [11, 12, 20, 21, 25, 41, 52, 71, 74, 77],
               null,
             );
         }
@@ -26073,6 +26141,12 @@
                   extra_details: {
                     _: 75,
                     _: _,
+                  },
+                  optin_registration_tags: {
+                    _: 77,
+                    _: _,
+                    _: !0,
+                    _: !0,
                   },
                 },
               }),
@@ -27571,6 +27645,11 @@
                     _: _._.readString,
                     _: _._.writeString,
                   },
+                  is_free_license: {
+                    _: 56,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
                 },
               }),
             _.sm_m
@@ -28637,6 +28716,25 @@
                     _: 21,
                     _: _,
                   },
+                  links_and_info: {
+                    _: 22,
+                    _: _,
+                  },
+                  item_store_eligible: {
+                    _: 23,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  points_shop_eligible: {
+                    _: 24,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  specs_bbcode: {
+                    _: 25,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
                 },
               }),
             _.sm_m
@@ -29131,6 +29229,186 @@
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
           super(),
+            _.prototype.website || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [6, 7, 8], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  website: {
+                    _: 1,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  stats_url: {
+                    _: 2,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  online_manual_url: {
+                    _: 3,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  health_warning_url: {
+                    _: 4,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  privacy_policy_url: {
+                    _: 5,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  available_documents: {
+                    _: 6,
+                    _: !0,
+                    _: !0,
+                    _: _._.readEnum,
+                    pbr: _._.readPackedEnum,
+                    _: _._.writeRepeatedEnum,
+                  },
+                  genreids: {
+                    _: 7,
+                    _: !0,
+                    _: !0,
+                    _: _._.readUint32,
+                    pbr: _._.readPackedUint32,
+                    _: _._.writeRepeatedUint32,
+                  },
+                  manufacturers: {
+                    _: 8,
+                    _: !0,
+                    _: !0,
+                    _: _._.readString,
+                    _: _._.writeRepeatedString,
+                  },
+                  achievements_visible: {
+                    _: 9,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  achievement_count: {
+                    _: 10,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "StoreItem_ExtraDetails_LinksAndInfo";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.optin_name || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [2], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  optin_name: {
+                    _: 1,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  values: {
+                    _: 2,
+                    _: !0,
+                    _: !0,
+                    _: _._.readString,
+                    _: _._.writeRepeatedString,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "StoreItem_OptInRegistrationTags";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
             _.prototype.include_assets || _._(_._()),
             _.Message.initialize(this, _, 0, -1, void 0, null);
         }
@@ -29234,6 +29512,11 @@
                   include_best_purchase_option: {
                     _: 19,
                     _: !0,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  include_optin_registration_tags: {
+                    _: 20,
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
@@ -34686,6 +34969,17 @@
             (function (_, _, _, _) {
               _(_, _, _, "include_ratings", "game_rating", _);
             })(_, _, _, _),
+          _.include_optin_registration_tags &&
+            (function (_, _, _, _) {
+              _(
+                _,
+                _,
+                _,
+                "include_optin_registration_tags",
+                "optin_registration_tags",
+                _,
+              );
+            })(_, _, _, _),
           _.include_included_items &&
             _.included_item_data_request &&
             (_.included_items?.included_apps?.forEach((_) =>
@@ -34717,6 +35011,7 @@
         "release",
         "package_groups",
         "extra_details",
+        "optin_registration_tags",
       ];
       function _(_) {
         const _ = {
@@ -35827,13 +36122,18 @@
           (_[(_.SteamChinaReviewLauncher = 8)] = "SteamChinaReviewLauncher"),
           (_[(_.OverlayVRGamepadUI = 9)] = "OverlayVRGamepadUI");
       })(_ || (_ = {}));
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       __webpack_require__("chunkid");
       const _ = {
         m_unPID: 0,
         m_nBrowserID: -1,
       };
-      var _ = __webpack_require__("chunkid"),
+      var _,
+        _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -35881,12 +36181,6 @@
               (this.m_fnRender?.(), (this.m_fnRender = void 0));
         }
       }
-      (0, _._)([_._], _.prototype, "OnLinkLoad", null);
-      var _,
-        _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
       function _() {
         return (0, _._)() ? _.Composited : _.None;
       }
@@ -35946,37 +36240,38 @@
           _ = _.GetPopupForWindow(_);
         return _?.browser_info || _;
       }
-      !(function (_) {
-        (_[(_.None = 0)] = "None"),
-          (_[(_.Minimized = 1)] = "Minimized"),
-          (_[(_.Hidden = 2)] = "Hidden"),
-          (_[(_.TooltipHint = 4)] = "TooltipHint"),
-          (_[(_.NoTaskbarIcon = 8)] = "NoTaskbarIcon"),
-          (_[(_.Resizable = 16)] = "Resizable"),
-          (_[(_.NoScalePosition = 32)] = "NoScalePosition"),
-          (_[(_.NoScaleSize = 64)] = "NoScaleSize"),
-          (_[(_.Maximized = 128)] = "Maximized"),
-          (_[(_.Composited = 256)] = "Composited"),
-          (_[(_.NotFocusable = 512)] = "NotFocusable"),
-          (_[(_.FullScreen = 1024)] = "FullScreen"),
-          (_[(_.Fullscreen_Exclusive = 2048)] = "Fullscreen_Exclusive"),
-          (_[(_.ApplyBrowserScaleToDimensions = 4096)] =
-            "ApplyBrowserScaleToDimensions"),
-          (_[(_.AlwaysOnTop = 8192)] = "AlwaysOnTop"),
-          (_[(_.NoWindowShadow = 16384)] = "NoWindowShadow"),
-          (_[(_.NoMinimize = 32768)] = "NoMinimize"),
-          (_[(_.PopUpMenuHint = 65536)] = "PopUpMenuHint"),
-          (_[(_.IgnoreSavedSize = 131072)] = "IgnoreSavedSize"),
-          (_[(_.NoRoundedCorners = 262144)] = "NoRoundedCorners"),
-          (_[(_.ForceRoundedCorners = 524288)] = "ForceRoundedCorners"),
-          (_[(_.OverrideRedirect = 1048576)] = "OverrideRedirect"),
-          (_[(_.IgnoreSteamDisplayScale = 2097152)] =
-            "IgnoreSteamDisplayScale"),
-          (_[(_.TransparentParentWindow = 4194304)] =
-            "TransparentParentWindow"),
-          (_[(_.DisableDPIScale = 8388608)] = "DisableDPIScale"),
-          (_[(_.ForceBrowserVisible = 16777216)] = "ForceBrowserVisible");
-      })(_ || (_ = {})),
+      (0, _._)([_._], _.prototype, "OnLinkLoad", null),
+        (function (_) {
+          (_[(_.None = 0)] = "None"),
+            (_[(_.Minimized = 1)] = "Minimized"),
+            (_[(_.Hidden = 2)] = "Hidden"),
+            (_[(_.TooltipHint = 4)] = "TooltipHint"),
+            (_[(_.NoTaskbarIcon = 8)] = "NoTaskbarIcon"),
+            (_[(_.Resizable = 16)] = "Resizable"),
+            (_[(_.NoScalePosition = 32)] = "NoScalePosition"),
+            (_[(_.NoScaleSize = 64)] = "NoScaleSize"),
+            (_[(_.Maximized = 128)] = "Maximized"),
+            (_[(_.Composited = 256)] = "Composited"),
+            (_[(_.NotFocusable = 512)] = "NotFocusable"),
+            (_[(_.FullScreen = 1024)] = "FullScreen"),
+            (_[(_.Fullscreen_Exclusive = 2048)] = "Fullscreen_Exclusive"),
+            (_[(_.ApplyBrowserScaleToDimensions = 4096)] =
+              "ApplyBrowserScaleToDimensions"),
+            (_[(_.AlwaysOnTop = 8192)] = "AlwaysOnTop"),
+            (_[(_.NoWindowShadow = 16384)] = "NoWindowShadow"),
+            (_[(_.NoMinimize = 32768)] = "NoMinimize"),
+            (_[(_.PopUpMenuHint = 65536)] = "PopUpMenuHint"),
+            (_[(_.IgnoreSavedSize = 131072)] = "IgnoreSavedSize"),
+            (_[(_.NoRoundedCorners = 262144)] = "NoRoundedCorners"),
+            (_[(_.ForceRoundedCorners = 524288)] = "ForceRoundedCorners"),
+            (_[(_.OverrideRedirect = 1048576)] = "OverrideRedirect"),
+            (_[(_.IgnoreSteamDisplayScale = 2097152)] =
+              "IgnoreSteamDisplayScale"),
+            (_[(_.TransparentParentWindow = 4194304)] =
+              "TransparentParentWindow"),
+            (_[(_.DisableDPIScale = 8388608)] = "DisableDPIScale"),
+            (_[(_.ForceBrowserVisible = 16777216)] = "ForceBrowserVisible");
+        })(_ || (_ = {})),
         (function (_) {
           (_[(_.Overlay = 0)] = "Overlay"),
             (_[(_.Notification = 1)] = "Notification"),
@@ -36670,7 +36965,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
       __webpack_require__("chunkid");
       const _ = _.createContext({
         body_class: "",
@@ -36680,7 +36975,6 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid");
       function _(_, _, _) {
         const _ = _.useRef(void 0),
           [_, _] = _.useState(void 0),
@@ -36698,20 +36992,22 @@
               _,
             )),
           (_.current.m_callbacks = _),
-          _.useEffect(() => {
-            if (!_.current?.params.bNoInitialShow) {
-              let _ = _.current?.params.bNoFocusOnShow
-                ? _.iEc.k_EWindowBringToFrontWithoutForcingOS
-                : _.iEc.k_EWindowBringToFrontAndForceOS;
-              _.current?.Show(_);
-            }
-            return () => {
-              (_.current.m_callbacks = void 0),
-                _.current.window?.SteamClient.Window.SetHideOnClose &&
-                  _.current.window?.SteamClient.Window.SetHideOnClose(!1),
-                _.current.Close();
-            };
-          }, []),
+          _.useEffect(
+            () => (
+              _.current?.params.bNoInitialShow ||
+                _.current?.Show(
+                  _.current?.params.eWindowBringToFront ??
+                    _.iEc.k_EWindowBringToFrontAndForceOS,
+                ),
+              () => {
+                (_.current.m_callbacks = void 0),
+                  _.current.window?.SteamClient.Window.SetHideOnClose &&
+                    _.current.window?.SteamClient.Window.SetHideOnClose(!1),
+                  _.current.Close();
+              }
+            ),
+            [],
+          ),
           _.useEffect(() => {
             _.current.window?.SteamClient.Window.SetHideOnClose &&
               _.current.window?.SteamClient.Window.SetHideOnClose(
@@ -37911,6 +38207,104 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = "bTrailerCarouselAutoAdvance",
+        _ = 1,
+        _ = 2,
+        _ = 3,
+        _ = 4,
+        _ = 5,
+        _ = 1e4;
+      function _(_) {
+        const {
+            className: _,
+            currentItemKey: _,
+            autoAdvanceMsec: _,
+            fnAdvance: _,
+            enabled: _,
+            pauseReason: _,
+            countdownToken: _ = "#SaleTrailerCarousel_NextGameInSeconds",
+          } = _,
+          _ = _.useMemo(() => {
+            const _ = (0, _._)(_);
+            return !_ || "true" === _?.toLowerCase();
+          }, []),
+          [_, _] = _.useState(_),
+          _ = void 0 !== _ ? _ : _,
+          [_, _] = _.useState(_),
+          _ = void 0 !== _,
+          _ = (function (_) {
+            switch (_) {
+              case _:
+                return (0, _._)("#SaleTrailerCarousel_AutoAdvanceVideoPaused");
+              case _:
+              case _:
+                return (0, _._)("#SaleTrailerCarousel_AutoAdvanceHover");
+            }
+            return;
+          })(_),
+          _ = _ && _ && !_ && _ > 0 && _ > 0;
+        (0, _._)(
+          () => {
+            const _ = _ - 30;
+            _ <= 0 ? (_(), _(_)) : _(Math.max(_, 0));
+          },
+          30,
+          [_],
+          _,
+        );
+        const _ = _.useCallback(
+          (_) => {
+            (0, _._)(_, String(_), 3650), _(_), _(_);
+          },
+          [_],
+        );
+        return (
+          _.useEffect(() => {
+            _(_);
+          }, [_, _]),
+          (0, _.jsxs)("div", {
+            className: _,
+            children: [
+              (0, _.jsxs)("div", {
+                className: (0, _._)(
+                  _().AutoAdvanceContent,
+                  (!_ || !_) && _().Disabled,
+                  _ && _().Paused,
+                ),
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _().AutoAdvanceLabel,
+                    children: _ && _ ? _ : (0, _._)(_, Math.ceil(_ / 1e3)),
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _().AutoAdvanceBar,
+                    style: {
+                      "--auto-advance-ratio": 100 - (_ / _) * 100 + "%",
+                    },
+                  }),
+                ],
+              }),
+              (0, _.jsx)("div", {
+                className: (0, _._)(_().AutoAdvanceCheckboxCtn),
+                children: (0, _.jsx)(_._, {
+                  className: _().AutoAdvanceCheckbox,
+                  controlled: !0,
+                  checked: _,
+                  label: (0, _._)("#SaleTrailerCarousel_AutoAdvanceEnabled"),
+                  onChange: _,
+                }),
+              }),
+            ],
+          })
+        );
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -38109,13 +38503,44 @@
       }
       function _(_) {
         const _ = (0, _._)(),
+          [_, _] = _.useState(!1),
+          {
+            bTabHidden: _,
+            bOffscreen: _,
+            refIntersection: _,
+          } = (function () {
+            const [_, _] = _.useState(!1),
+              [_, _] = _.useState(!1);
+            _.useEffect(() => {
+              const _ = () => _(document.hidden);
+              return (
+                document.addEventListener("visibilitychange", _),
+                () => document.removeEventListener("visibilitychange", _)
+              );
+            }, []);
+            const _ = _.useCallback((_) => _(!_.isIntersecting), []),
+              _ = _.useMemo(
+                () => ({
+                  threshold: 0.5,
+                }),
+                [],
+              );
+            return {
+              bTabHidden: _,
+              bOffscreen: _,
+              refIntersection: (0, _._)(_, _),
+            };
+          })(),
           _ = () => _.Children.count(_.children),
-          _ = __webpack_require__(),
-          _ = Math.min(__webpack_require__(), _.visibleElements);
+          _ = _(),
+          _ = Math.min(_(), _.visibleElements);
         if (!_ || !_) return null;
         const _ = _ < _,
           _ = _.hideArrows || !_,
-          _ = !_ || _.hidePips;
+          _ = !_ || _.hidePips,
+          _ = !!_.bAutoAdvance && _ && !_;
+        let _;
+        _ && !(0, _._)() ? (_ = _) : _ ? (_ = _) : _ && (_ = _);
         let _ = 4 / 3,
           _ = !0;
         _.slideAspectRatio && ((_ = _.slideAspectRatio), (_ = !1));
@@ -38124,9 +38549,12 @@
           "flow-children": "row",
           className: (0, _._)(_.carouselBody, _.className, _),
           navKey: _.navKey,
+          ref: _,
+          onMouseEnter: () => _(!0),
+          onMouseLeave: () => _(!1),
           children: (0, _.jsxs)(_._, {
             visibleSlides: _.visibleElements,
-            totalSlides: __webpack_require__(),
+            totalSlides: _(),
             naturalSlideWidth: 100 * _,
             naturalSlideHeight: 100,
             step: _.visibleElements,
@@ -38141,7 +38569,6 @@
             children: [
               (0, _.jsx)(_, {
                 bHideArrows: _,
-                bAutoAdvance: _.bAutoAdvance && !_,
                 onSlide: _.onSlide,
                 arrowFill: _.arrowFill,
                 arrowStyle: _.arrowStyle,
@@ -38187,6 +38614,10 @@
                         children: _.children,
                       }),
                     })),
+              _ &&
+                (0, _.jsx)(_, {
+                  pauseReason: _,
+                }),
             ],
           }),
         });
@@ -38227,9 +38658,50 @@
         _.current && (window.clearTimeout(_.current), (_.current = null));
       }
       function _(_) {
+        const { pauseReason: _ } = _,
+          _ = _.useContext(_._),
+          [_, _] = _.useState(_.state.currentSlide),
+          [_, _] = _.useState(!0),
+          _ = _.useRef(null),
+          _ = _.useRef(_.state.currentSlide);
+        _.useEffect(() => {
+          const _ = () => {
+            const _ = _.state.currentSlide;
+            _ !== _.current &&
+              ((_.current = _),
+              _(_),
+              _.current === _
+                ? (_.current = null)
+                : null === _.current && _(!1));
+          };
+          return (
+            __webpack_require__.subscribe(_),
+            () => __webpack_require__.unsubscribe(_)
+          );
+        }, [_]);
+        const _ = _.useCallback(() => {
+          const { currentSlide: _, visibleSlides: _, totalSlides: _ } = _.state;
+          let _ = 0;
+          _ + _ < _ && (_ = Math.min(_ + _, _ - _)),
+            _ !== _ &&
+              ((_.current = _),
+              __webpack_require__.setStoreState({
+                currentSlide: _,
+              }));
+        }, [_]);
+        return (0, _.jsx)(_, {
+          className: _.autoAdvanceRow,
+          enabled: _,
+          currentItemKey: _,
+          autoAdvanceMsec: _,
+          fnAdvance: _,
+          pauseReason: _,
+          countdownToken: "#Carousel_AutoAdvanceNextInSeconds",
+        });
+      }
+      function _(_) {
         const {
             bHideArrows: _,
-            bAutoAdvance: _,
             children: _,
             onSlide: _,
             arrowFill: _,
@@ -38238,28 +38710,8 @@
           _ = _.useContext(_._),
           _ = _.useRef(_.state.currentSlide),
           [_, _] = _.useState(null),
-          [_, _] = _.useState(!!_),
-          _ = _.useRef(null),
           _ = _.useRef(null);
         _.useEffect(() => {
-          const _ = () => {
-            _.current = window.setTimeout(() => {
-              if (_.current) {
-                _(_);
-                let _ = 0;
-                _.state.currentSlide + _.state.visibleSlides <
-                  _.state.totalSlides &&
-                  (_ = Math.min(
-                    _.state.currentSlide + _.state.visibleSlides,
-                    _.state.totalSlides - _.state.visibleSlides,
-                  )),
-                  _.setStoreState({
-                    currentSlide: _,
-                  });
-              }
-            }, 8e3);
-          };
-          _ && _();
           const _ = () => {
             const _ = _.current,
               _ = _.state.currentSlide;
@@ -38267,16 +38719,15 @@
             (_.current = window.setTimeout(() => {
               _.current && (_(null), _(_));
             }, 1e3)),
-              (_.current = _),
-              _.current ? (_(_), _(!1)) : _ && _();
+              (_.current = _);
           };
           return (
             _.subscribe(_),
             () => {
-              _.unsubscribe(_), _(_), _(_);
+              _.unsubscribe(_), _(_);
             }
           );
-        }, [_, _]);
+        }, [_]);
         const _ = !!_ && "CarouselSliding" + _;
         return (0, _.jsxs)("div", {
           className: (0, _._)(_.sliderBody, "SliderBody", _),
@@ -40659,10 +41110,8 @@
         const { value: _, children: _, role: _ = "radio", ..._ } = _,
           { value: _, setValue: _, disabled: _ } = _.useContext(_);
         let _ = _;
-        const _ = _.useId(),
-          _ = _ === _;
+        const _ = _ === _;
         return (0, _.jsx)(_._, {
-          focusRingSizeElementID: _.bSetFocusRingSizeElementID ? _ : void 0,
           role: _,
           "aria-checked": _,
           "aria-selected": _,

@@ -29,6 +29,7 @@
         include_platforms: !0,
         include_tag_count: 20,
         include_basic_info: !0,
+        include_optin_registration_tags: !0,
         include_trailers: !0,
         include_reviews: !0,
         include_screenshots: !0,

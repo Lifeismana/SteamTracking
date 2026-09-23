@@ -62,6 +62,7 @@
     "Reservation_OnRegularReserveForModel": "You are in the reservation queue for %1$s",
     "Reservation_PostShuffle_TAndC": "<1>Terms and Conditions</1> apply.",
     "machine_dummy": "dummy",
+    "PriceDisplay_YourPrice": "Your Price:",
     "PriceGrid_NormalPrice": "NORMALLY",
     "PriceGrid_RecentPrice": "30-DAY LOW",
     "PriceGrid_CurrentPrice": "NOW",

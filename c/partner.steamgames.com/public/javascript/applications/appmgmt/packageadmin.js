@@ -371,49 +371,7 @@
             })
           : "--";
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = _.createContext({
-        depth: 0,
-      });
       var _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { level: _ = "auto", className: _, color: _ } = _,
-          _ = (function (_, _) {
-            if ("auto" === _ && 0 === _) return "h1";
-            const _ = "auto" === _ ? _.toString() : _;
-            if (!/^[1-6]$/.test(_))
-              return "auto" === _
-                ? (console.error(
-                    '<Section> nesting has exceeded "h6" for headings.',
-                  ),
-                  "h6")
-                : (console.error(
-                    `Attempt to render invalid heading level, "${_}".`,
-                  ),
-                  "h1");
-            return "h" + _;
-          })(_, (0, _.useContext)(_).depth);
-        return (0, _.jsx)(_, {
-          ...(0, _._)(
-            {
-              ..._,
-              className: _()((0, _._)(), _.Heading, _),
-            },
-            _,
-          ),
-        });
-      }
-      const _ = [
-        ..._._,
-        ..._._,
-        {
-          prop: "size",
-          responsive: !0,
-          className: (_) => _[`HeadingSize-${_}`],
-        },
-      ];
       function _(_) {
         const { nPackageID: _ } = _;
         return (0, _.jsxs)(_.Fragment, {
@@ -438,7 +396,7 @@
               direction: "column",
               paddingBottom: "4",
               children: [
-                (0, _.jsx)(_, {
+                (0, _.jsx)(_._, {
                   size: "7",
                   children: _._.Localize(
                     "#SinglePackagePricing_Right_Help_Title",
@@ -458,7 +416,7 @@
             (0, _.jsxs)(_._, {
               direction: "column",
               children: [
-                (0, _.jsx)(_, {
+                (0, _.jsx)(_._, {
                   size: "7",
                   children: _._.Localize("#SinglePackagePricing_Right_FAQ"),
                 }),
@@ -939,6 +897,60 @@
           })
         );
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = _.createContext({
+        depth: 0,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const { level: _ = "auto", className: _, color: _ } = _,
+          _ = (function (_, _) {
+            if ("auto" === _ && 0 === _) return "h1";
+            const _ = "auto" === _ ? _.toString() : _;
+            if (!/^[1-6]$/.test(_))
+              return "auto" === _
+                ? (console.error(
+                    '<Section> nesting has exceeded "h6" for headings.',
+                  ),
+                  "h6")
+                : (console.error(
+                    `Attempt to render invalid heading level, "${_}".`,
+                  ),
+                  "h1");
+            return "h" + _;
+          })(_, (0, _.useContext)(_).depth);
+        return (0, _.jsx)(_, {
+          ...(0, _._)(
+            {
+              ..._,
+              className: _()((0, _._)(), _.Heading, _),
+            },
+            _,
+          ),
+        });
+      }
+      const _ = [
+        ..._._,
+        ..._._,
+        {
+          prop: "size",
+          responsive: !0,
+          className: (_) => _[`HeadingSize-${_}`],
+        },
+      ];
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

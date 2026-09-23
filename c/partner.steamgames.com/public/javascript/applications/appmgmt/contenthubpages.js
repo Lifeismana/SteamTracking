@@ -860,6 +860,90 @@
       __webpack_require__._(module_exports, {
         _: () => _,
       });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      class _ {
+        static ParseCSVFile(_, _) {
+          return new Promise((_, _) => {
+            const _ = {
+              header: !0,
+              skipEmptyLines: "greedy",
+              complete: _,
+              error: (_) =>
+                _({
+                  errors: [_],
+                }),
+              transformHeader: _,
+            };
+            _().parse(_, _);
+          });
+        }
+        static ReadFile(_) {
+          return new Promise((_, _) => {
+            const _ = new FileReader();
+            (_.onload = (_) => _(_.result)), _.readAsText(_);
+          });
+        }
+        static WriteFile(_, _) {
+          let _ = document.createElement("a");
+          if (navigator.msSaveBlob) navigator.msSaveBlob(_, _);
+          else {
+            const _ = window.URL.createObjectURL(_);
+            _.href = _;
+          }
+          __webpack_require__.setAttribute("download", _),
+            __webpack_require__.click();
+          try {
+            document.removeChild(_);
+          } catch (_) {}
+        }
+        static WriteCSVToFile(_, _, _, _) {
+          const _ = _
+              ? _().unparse(
+                  {
+                    fields: _,
+                    data: _,
+                  },
+                  {
+                    header: !0,
+                  },
+                )
+              : _().unparse(_, {
+                  header: !0,
+                }),
+            _ = 1 == _ ? ["\ufeff" + _] : [_];
+          _.WriteFile(
+            new Blob(_, {
+              type: "text/csv:charset=utf-8;",
+            }),
+            _,
+          );
+        }
+        static m_DummyValueForQuestionHack = 0;
+        static WriteXMLToFile(_, _) {
+          const _ = () =>
+            this.m_DummyValueForQuestionHack ? "never returned" : "?";
+          let _ =
+            "<" +
+            __webpack_require__() +
+            'xml version="1.0" encoding="UTF-8" ' +
+            __webpack_require__() +
+            ">\n";
+          (_ += new XMLSerializer().serializeToString(_)),
+            _.WriteFile(
+              new Blob([_], {
+                type: "application/xml:charset=utf-8;",
+              }),
+              _,
+            );
+        }
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
       const _ =
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAcJJREFUeNqkUz1PAkEQfStggjESejU0GozlGqn8SGywkYIYY0IsaLCwIBTQUN5fMLGm8S8QSWwslVAYjAlUBEJDhCgWwp3nzN6eHqIVl8zN7rx5b+dm9oRt25jlmcOMj59f10JAkPcBcXIGWdECyqYn6TfGdZ9S9d4K4gQYx4WCtJzE+G/sKJudwpQABUGnGSf5vKzX60jmctL8SYzz+iCdls1mEzuplMIsLSC4iSUh1ClUlpHIZGStVkM0GsVNqVRlIJZIyG63i1AohMdKpUrZRQqXz4j7LWA7VSiR/WRSNhsNRRgOh+i02wgGg3hrtRSZelLmI6cExs7nKJGVtTX50uupMn0+H157PUWmZpYDXLoWUFPo6MC87jivx4MBFtxOWZYS11VipNdT98DWDVsPh2XQNLFIMdc4xpg9OZ3JMdIpRowSXVKt36+yuXvGxn+N0XS+3zj0kG+JSPEi261H5FCLmN9lUyNWyZ+Qag54eA6Hbfa8j1A88g+2qrlqCkKIZdovbAG7m8D5E3B5D9xR7IPsk/u7DextABd14OrBwd6J23YFligQ0IPwXE7lbedXUAPya5yHMiLuq5j1d/4SYAAj3NATBGE4PgAAAABJRU5ErkJggg==";
     },

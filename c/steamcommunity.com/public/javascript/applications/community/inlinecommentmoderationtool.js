@@ -19,14 +19,12 @@
             gidComment: _,
             authorSteamID: _,
           } = _,
-          _ = (0, _._)(_._, _),
-          _ = (0, _._)(_, _, _),
-          _ = (0, _._)(_, _, _),
-          _ = {
+          _ = (0, _._)({
             subject_type: _._,
-            subject_group_id: _,
-            subject_id: _,
-          },
+            comment_thread_id: _,
+          }),
+          _ = (0, _._)(_, _, _),
+          _ = (0, _._)(_, _, _),
           _ = (
             null !==
               (_ =
@@ -34,12 +32,20 @@
             void 0 !== _
               ? _
               : []
-          ).find((_) => _.subject_id === _);
+          ).find((_) => {
+            var _;
+            return (
+              (null === (_ = _.coordinates) || void 0 === _
+                ? void 0
+                : _.comment) === _
+            );
+          });
         return (0, _.jsx)(_._, {
           sanctionMutation: _,
           acquitMutation: _,
-          subjectKey: _,
           subject: _,
+          eSubjectType: _._,
+          gidComment: _,
           authorSteamID: _,
           children: (0, _.jsx)(_, {
             ..._,

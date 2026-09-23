@@ -481,6 +481,7 @@ message ContentReport {
 	repeated .ContentReportSubjectSanction sanctions_applied = 23;
 	repeated .ContentReportSubjectSanction sanctions_applied_on_dispute = 24;
 	optional uint64 reported_content_id = 25;
+	optional .ReportedContentCoordinates coordinates = 26;
 }
 
 message ContentReportSubject {

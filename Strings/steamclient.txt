@@ -3981,7 +3981,7 @@ $steammessages_parental_objects.proto"
 (\t"/\n-CAccountHardware_ManageSavedHardware_Response"@\n-CAccountHardware_GetSavedHardwareList_Request
 (\t"/\n-CUserAccount_RedeemFriendInviteToken_Response"D\n,CUserAccount_RevokeFriendInviteToken_Request
 (\t"/\n-CUserAccount_RevokeFriendInviteToken_Response">\n'CUserAccount_RegisterCompatTool_Request
-(\t"0\n.CAccountHardware_RegisterSteamMachine_Response"e\n:CAccountHardwarePromotions_RedeemFramePromoPackage_Request
+(\t"0\n.CAccountHardware_RegisterSteamMachine_Response"f\n:CAccountHardwarePromotions_RedeemFramePromoPackage_Request
 (\t"0\n.CBroadcast_SendBroadcastStateToServer_Response"O\n7CBroadcast_NotifyBroadcastSessionHeartbeat_Notification
 (\t"1\n/CFamilyGroups_ModifyFamilyGroupDetails_Response"
 (\t"1\n/CGameRecording_UserRemoveTimelineEntry_Response"J\n6CGameRecording_ManuallyDeleteRecordingsForApps_Request
@@ -8196,7 +8196,6 @@ $steammessages_parental_objects.proto"
 /usr/local/ssl/certs
 /usr/local/ssl/ct_log_list.cnf
 /usr/local/ssl/private
-/usr/local/steamvr
 /usr/sbin/lsof
 /usr/share/applications/steam.desktop
 /usr/share/applications/steambeta.desktop
@@ -8250,6 +8249,9 @@ $steammessages_parental_objects.proto"
 0 bytes,
 0"W\n+CCommunity_GetUserPartnerEventNews_Response
 0)AA7A
+0000000000000000000000000000000000000000
+00000000
+0000000000000000
 0.0333
 0.050
 0.125
@@ -8300,9 +8302,6 @@ $steammessages_parental_objects.proto"
 0.CTransportValidation_CountOrderedBytes_Response
 0.CTransportValidation_RequestInvalidBool_Request
 0.CVideo_BeginGameRecordingSegmentsUpload_Request
-0000000000000000000000000000000000000000
-00000000
-0000000000000000
 00000001
 00003333
 000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798990123456789abcdef
@@ -11901,11 +11900,11 @@ $steammessages_parental_objects.proto"
 20.StoreItem.PackageGroup.EPackageGroupDisplayType
 200 Mbps
 2000
+2019
+2048
 20000
 2000000
 200M
-2019
-2048
 208.64.200.0/22
 208.78.164.0/22
 20AccountHardware_Stub
@@ -16706,6 +16705,7 @@ $steammessages_parental_objects.proto"
 83Q2
 83Q3
 84CPlayer_GetPurchasedAndUpgradedProfileCustomizations_Response_PurchasedCustomization
+86400
 87CUserAccount_GetAvailableValveDiscountPromotions_Response_ValveDiscountPromotionDetails
 88n|
 88pH
@@ -16830,7 +16830,6 @@ $steammessages_parental_objects.proto"
 961e13c2046fbe474916afdb087db2222535db4e51f34b5fa45b4fd7803abff2
 98th
 9999
-86400
 99Ov
 99rKJJ
 9<n\nM
@@ -34815,6 +34814,7 @@ RunOnce
 RunTime
 RunUntilCompleted
 RunUntilCompletedLowPri
+RunVRPathReg: Can't find SteamVR install!
 Runic
 Running %sinstall script evaluator for AppID %u, %d step(s) %s
 Running Script
@@ -46427,6 +46427,7 @@ completion_achievements
 complex
 component_code
 component_name
+component_serial
 component_type
 composing
 compressed
@@ -46453,7 +46454,6 @@ computed/NumVRLaunchOptions
 computed/SupportsOpenVROverlay
 computed/SupportsOpenVRScene
 computed/SupportsOpenXR
-computed_serial
 computer activity: %s
 conditional group contains more than two branches
 config
@@ -62144,7 +62144,7 @@ stderr
 stdin
 stdout
 steam
-steam Sep 15 2026 19:44:50
+steam Sep 22 2026 00:09:50
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

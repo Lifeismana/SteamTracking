@@ -423,35 +423,36 @@
             variant: h,
             color: g,
             align: _ = "center",
-            ...f
+            icon: f,
+            ...x
           } = e,
-          x = "indeterminate" === t,
-          S = x ? m : i,
-          b = () => {
-            a || (s && s(!!x || !t));
+          S = "indeterminate" === t,
+          b = f ?? (S ? m : i),
+          y = () => {
+            a || (s && s(!!S || !t));
           },
-          y = (0, d.f)("Checkbox", h);
+          C = (0, d.f)("Checkbox", h);
         return (0, r.jsxs)(n.s, {
           align: _,
           ref: p,
           role: "checkbox",
-          "aria-checked": x ? "mixed" : t,
+          "aria-checked": S ? "mixed" : t,
           "data-state": u(t),
-          className: c()(o.Root, o[`Variant-${y}`], a && o.Disabled),
-          onClick: b,
+          className: c()(o.Root, o[`Variant-${C}`], a && o.Disabled),
+          onClick: y,
           tabIndex: 0,
           onKeyDown: (e) => {
             a ||
-              (" " === e.key && (b(), e.preventDefault(), e.stopPropagation()));
+              (" " === e.key && (y(), e.preventDefault(), e.stopPropagation()));
           },
           cursor: "default",
           "aria-disabled": a,
           "data-accent-color": g,
-          ...f,
+          ...x,
           children: [
             (0, r.jsx)("div", {
               className: o.Checkbox,
-              children: t && (0, r.jsx)(S, { className: o.Icon }),
+              children: t && (0, r.jsx)(b, { className: o.Icon }),
             }),
             l,
           ],
@@ -1868,6 +1869,7 @@
         include_platforms: !0,
         include_tag_count: 20,
         include_basic_info: !0,
+        include_optin_registration_tags: !0,
         include_trailers: !0,
         include_reviews: !0,
         include_screenshots: !0,
@@ -2129,6 +2131,7 @@
             apply_user_filters: D,
             include_links: P,
             include_extra_details: O,
+            include_optin_registration_tags: M,
           } = s;
         if (
           ((0, a.useEffect)(() => {
@@ -2150,6 +2153,7 @@
               apply_user_filters: D,
               include_links: P,
               include_extra_details: O,
+              include_optin_registration_tags: M,
             };
             let a = null;
             return (
@@ -2188,6 +2192,7 @@
             D,
             P,
             O,
+            M,
             h,
           ]),
           !e)
@@ -2196,8 +2201,8 @@
         if (!1 === g) return [void 0, p];
         if (c.A.Get().BIsStoreItemMissing(e, t)) return [void 0, p];
         if (!c.A.Get().BHasStoreItem(e, t, s)) return [void 0, d];
-        const M = c.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
-        return M ? [M, u] : [null, p];
+        const L = c.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
+        return L ? [L, u] : [null, p];
       }
       function h(e, t, s) {
         return m(e, o.c6.qI, t, s);
@@ -2238,6 +2243,7 @@
             apply_user_filters: w,
             include_links: A,
             include_extra_details: R,
+            include_optin_registration_tags: N,
           } = s;
         if (
           ((0, a.useEffect)(() => {
@@ -2260,6 +2266,7 @@
                 apply_user_filters: w,
                 include_links: A,
                 include_extra_details: R,
+                include_optin_registration_tags: N,
               },
               r = e.filter(
                 (e) =>
@@ -2277,7 +2284,30 @@
               }),
               () => a.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, r, i, o, m, h, g, _, f, x, S, b, y, C, I, v, j, w, A, R]),
+          }, [
+            e,
+            t,
+            r,
+            i,
+            o,
+            m,
+            h,
+            g,
+            _,
+            f,
+            x,
+            S,
+            b,
+            y,
+            C,
+            I,
+            v,
+            j,
+            w,
+            A,
+            R,
+            N,
+          ]),
           !e)
         )
           return p;
@@ -2452,7 +2482,7 @@
         });
       }
       var d = s(55156),
-        p = s(53965),
+        p = s(56347),
         u = s(38528),
         m = s(86632),
         h = s(14773),

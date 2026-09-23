@@ -1883,7 +1883,9 @@
           (e[(e.k_EStoreFilterClauseTypePrice = 6)] =
             "k_EStoreFilterClauseTypePrice"),
           (e[(e.k_EStoreFilterClauseTypeAppType = 7)] =
-            "k_EStoreFilterClauseTypeAppType");
+            "k_EStoreFilterClauseTypeAppType"),
+          (e[(e.k_EStoreFilterClauseTypeOptInRegistrationTag = 8)] =
+            "k_EStoreFilterClauseTypeOptInRegistrationTag");
       })(k || (k = {})),
         (function (e) {
           (e[(e.k_ESaleTagFilter = 0)] = "k_ESaleTagFilter"),

@@ -986,6 +986,7 @@
 }
 .f6hU22EA7Z8peFWZVBJU {
   box-sizing: border-box;
+  font-family: var(--font-family);
   color: var(--text-color, var(--color-text-body-body));
   font-size: var(--font-size, var(--default-font-size));
   line-height: var(--line-height, var(--default-line-height));

@@ -105,6 +105,7 @@
     "moderation_sanction_hubbanned": "%1$s napra kitiltva a központból",
     "moderation_sanction_markassuspicious": "Gyanúsnak jelölve",
     "moderation_sanction_relabelled": "Átcímkézve",
+    "moderation_sanction_markedincompatible": "Marked as incompatible",
     "moderation_sanction_tradebanned_forever": "Véglegesen eltiltva a cserétől",
     "moderation_sanction_tradebanned": "%1$s napra eltiltva a cserétől",
     "moderation_sanction_kickedfromgroup": "Kirúgva a csoportból",

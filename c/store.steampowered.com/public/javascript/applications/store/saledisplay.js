@@ -328,10 +328,11 @@
             variant: _,
             color: _,
             align: _ = "center",
+            icon: _,
             ..._
           } = _,
           _ = "indeterminate" === _,
-          _ = _ ? _ : _,
+          _ = _ ?? (_ ? _ : _),
           _ = () => {
             _ || (_ && __webpack_require__(!!_ || !_));
           },
@@ -4743,8 +4744,11 @@
               if (_ && _.length > 0) {
                 let _ = _ > 0 ? _.find((_) => _.unique_id == _) : void 0;
                 _ || (_ = _[0]);
-                const _ = _ === _[0];
-                return new _._(_, _, _, _.tab_tag_filter ? _ : void 0);
+                const _ = _ === _[0],
+                  _ =
+                    _.jsondata.sale_opt_in_page_name ||
+                    _.jsondata.prune_list_optin_name;
+                return new _._(_, _, _, _.tab_tag_filter ? _ : void 0, _);
               }
             }, [_, _, _, _]);
           })(_, _, _),

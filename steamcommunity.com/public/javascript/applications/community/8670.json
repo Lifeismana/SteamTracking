@@ -105,6 +105,7 @@
     "moderation_sanction_hubbanned": "Αποκλείστηκε από το Κέντρο για %1$s ημέρες",
     "moderation_sanction_markassuspicious": "Επισημάνθηκε ως ύποπτο",
     "moderation_sanction_relabelled": "Άλλαξε κατηγορία",
+    "moderation_sanction_markedincompatible": "Marked as incompatible",
     "moderation_sanction_tradebanned_forever": "Αποκλείστηκε οριστικά από ανταλλαγές",
     "moderation_sanction_tradebanned": "Αποκλείστηκε από ανταλλαγές για %1$s ημέρες",
     "moderation_sanction_kickedfromgroup": "Αποβολή από ομάδα",
@@ -133,6 +134,6 @@
     "reportedsubjectlist_header": "Θέματα που αναφέρθηκαν",
     "moderation_already_owner_disputed": "Έχει ήδη γίνει αμφισβήτηση",
     "moderationstats_alltypes": "Όλοι οι τύποι θεμάτων",
-    "forumsubjectlist_subjectreportsummary": "%1$s χωρίς επίλυση, %1$s υπό αμφισβήτηση",
+    "forumsubjectlist_subjectreportsummary": "%1$s χωρίς επίλυση, %2$s υπό αμφισβήτηση",
     "empty_no_trailing_comma": ""
 }

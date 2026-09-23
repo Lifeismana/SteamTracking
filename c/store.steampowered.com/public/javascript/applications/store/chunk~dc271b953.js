@@ -671,6 +671,7 @@
             bAllowTwoLinesForHeader: _,
             bShowReviewSummary: _,
             bShowDeckCompatibilityDialog: _,
+            eHardwareCompatibilityDisplay: _,
             bAutoFocus: _,
             fnOnClickOverride: _,
             bIsMarketingMessage: _,
@@ -716,7 +717,8 @@
           _ = _ && _.appid,
           _ = _.name || "",
           _ = (0, _._)(_, _),
-          _ = _ || !_?.is_coming_soon || _;
+          _ = _ || !_?.is_coming_soon || _,
+          [_, _] = (0, _._)(_, _);
         return (0, _.jsxs)(_._, {
           className: (0, _._)({
             [_().StoreSaleWidgetOuterContainer]: !0,
@@ -823,6 +825,7 @@
                                 }),
                                 Boolean(_ && _.item_type == _._._) &&
                                   (0, _.jsx)(_._, {
+                                    eHWCompat: _,
                                     className: _().DeckCompatIcon,
                                     _: _,
                                   }),
@@ -863,7 +866,7 @@
                                     bShowDemoButton: _,
                                     bHidePrice: _,
                                     bHideWishlistButton: _,
-                                    bShowDeckCompatibilityDialog: _,
+                                    eHardwareCompatibilityDisplay: _,
                                   }),
                           })
                         : (0, _.jsx)("div", {
@@ -980,6 +983,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -989,13 +993,15 @@
             fnOnPurchaseOptionsClick: _,
             bHidePrice: _,
             bShowDeckCompatibilityDialog: _,
+            eHardwareCompatibilityDisplay: _,
             className: _,
             bShowCartButton: _,
           } = _,
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_),
-          { bIsOwned: _ } = (0, _._)(_);
+          { bIsOwned: _ } = (0, _._)(_),
+          [_, _] = (0, _._)(_, _);
         if (!_) return null;
         const _ =
             (_.type === _._._ && !_?.is_coming_soon) ||
@@ -1057,9 +1063,10 @@
                   (0, _.jsx)(_._, {
                     _: _,
                   }),
-                Boolean(_) &&
+                _ &&
                   (0, _.jsx)(_._, {
                     _: _,
+                    compatibility: _,
                   }),
               ],
             }),

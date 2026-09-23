@@ -105,6 +105,7 @@
     "moderation_sanction_hubbanned": "Hubverbanning voor %1$s dagen",
     "moderation_sanction_markassuspicious": "Gemarkeerd als verdacht",
     "moderation_sanction_relabelled": "Anders gelabeld",
+    "moderation_sanction_markedincompatible": "Marked as incompatible",
     "moderation_sanction_tradebanned_forever": "Permanente ruilban",
     "moderation_sanction_tradebanned": "Ruilban voor %1$s dagen",
     "moderation_sanction_kickedfromgroup": "Uit de groep gekickt",
@@ -133,6 +134,6 @@
     "reportedsubjectlist_header": "Gerapporteerde onderwerpen",
     "moderation_already_owner_disputed": "Al bezwaar aangetekend",
     "moderationstats_alltypes": "Alle onderwerptypen",
-    "forumsubjectlist_subjectreportsummary": "%1$s niet opgelost, voor %1$s bezwaar aangetekend",
+    "forumsubjectlist_subjectreportsummary": "%1$s niet opgelost, voor %2$s bezwaar aangetekend",
     "empty_no_trailing_comma": ""
 }

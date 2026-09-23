@@ -105,6 +105,7 @@
     "moderation_sanction_hubbanned": "Interzis din centru pentru %1$s zile",
     "moderation_sanction_markassuspicious": "Marcat drept suspect",
     "moderation_sanction_relabelled": "Recategorisit",
+    "moderation_sanction_markedincompatible": "Marked as incompatible",
     "moderation_sanction_tradebanned_forever": "Interdicție permanentă pentru schimburi",
     "moderation_sanction_tradebanned": "Interdicție de schimb pentru %1$s zile",
     "moderation_sanction_kickedfromgroup": "Eliminat din grup",
@@ -133,6 +134,6 @@
     "reportedsubjectlist_header": "Subiecte raportate",
     "moderation_already_owner_disputed": "Deja contestat",
     "moderationstats_alltypes": "Toate tipurile de subiecte",
-    "forumsubjectlist_subjectreportsummary": "Nerezolvate: %1$s. Contestate: %1$s",
+    "forumsubjectlist_subjectreportsummary": "Nerezolvate: %1$s. Contestate: %2$s",
     "empty_no_trailing_comma": ""
 }

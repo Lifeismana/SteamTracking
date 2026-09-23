@@ -64,6 +64,7 @@
     45179: (t) => {
       t.exports = {
         ItemDescription: "_2MixhMbHTxS0qJ2uAefnVy",
+        ItemImageFit: "_2VE_UZqsGp6cddlis2pNxV",
         GameImage: "_3LTPlbh1oIRZyLjujpw83H",
         GameImagePlaceholder: "_27u72fjp-gJgeD5k7NQ1Vf",
       };
@@ -106,7 +107,7 @@
     },
     9043: (t, c, n) => {
       "use strict";
-      n.r(c), n.d(c, { default: () => qt });
+      n.r(c), n.d(c, { default: () => Zt });
       var e = n(7850),
         l = n(83392),
         s = n(90534),
@@ -327,8 +328,8 @@
       const Y = (0, O.l)(async function (t) {
           if (R[t]) return R[t]();
         }),
-        P = Y.Localize;
-      var E = n(3049);
+        E = Y.Localize;
+      var P = n(3049);
       const G = {
         Label: function (t) {
           const { appid: c, property: n } = t,
@@ -374,11 +375,11 @@
                   : t < 1e-12
                     ? (n = 21)
                     : t < 1e-5 && (n = 15)),
-            t.toLocaleString((0, E.J)(), { maximumFractionDigits: n })
+            t.toLocaleString((0, P.J)(), { maximumFractionDigits: n })
           );
         }
         return void 0 !== c.int_value
-          ? Number(c.int_value).toLocaleString((0, E.J)())
+          ? Number(c.int_value).toLocaleString((0, P.J)())
           : void 0 !== c.string_value
             ? c.string_value
             : null;
@@ -647,7 +648,7 @@
             : "0",
         );
         if (!e) return null;
-        return new Date(1e3 * e).toLocaleString((0, E.J)());
+        return new Date(1e3 * e).toLocaleString((0, P.J)());
       }
       var pt = n(18419);
       const ut = i.createContext(void 0);
@@ -739,7 +740,7 @@
                           (c =
                             null == o
                               ? void 0
-                              : o.toLocaleString((0, E.J)())) && void 0 !== c
+                              : o.toLocaleString((0, P.J)())) && void 0 !== c
                           ? c
                           : "",
                       ),
@@ -750,13 +751,13 @@
                   color: "green",
                   onClick: () => window.GrindIntoGoo(i, n, s),
                   size: "1",
-                  children: P("#ItemDescription_TurnIntoGemsButton"),
+                  children: E("#ItemDescription_TurnIntoGemsButton"),
                 }),
                 (0, e.jsx)(p.EY, {
                   as: "div",
                   contrast: "body",
                   children: (0, xt.xh)(
-                    P("#ItemDescription_GemDescription"),
+                    E("#ItemDescription_GemDescription"),
                     (0, e.jsx)(W.Y, {
                       underline: "auto",
                       color: "greyneutral-12",
@@ -933,15 +934,15 @@
       function Mt() {
         return (0, e.jsxs)(s.az, {
           position: "relative",
-          title: P("#ItemDescription_ListedItemTooltip"),
+          title: E("#ItemDescription_ListedItemTooltip"),
           children: [
             (0, e.jsx)(s.az, {
               className: zt.ListedItemLabel,
-              children: P("#ItemDescription_ListedItem"),
+              children: E("#ItemDescription_ListedItem"),
             }),
             (0, e.jsx)(d._, {
               className: zt.ListedItemIcon,
-              alt: P("#ItemDescription_ListedItem"),
+              alt: E("#ItemDescription_ListedItem"),
               src: `${f.TS.COMMUNITY_CDN_URL}public/images/economy/listed_on_market.png`,
             }),
           ],
@@ -994,7 +995,7 @@
                   color: "dull",
                   href: `${f.TS.COMMUNITY_BASE_URL}market/listings/${n}/${encodeURIComponent(s)}${r ? `?sellorderassetid=${r}` : ""}`,
                   size: "1",
-                  children: P("#SellOnMarket_ViewListing"),
+                  children: E("#SellOnMarket_ViewListing"),
                 }),
               })
             : (0, e.jsxs)(l.s, {
@@ -1009,7 +1010,7 @@
                       size: "1",
                       color: "dull",
                       href: `${f.TS.COMMUNITY_BASE_URL}market/listings/${n}/${encodeURIComponent(s)}`,
-                      children: P("#SellOnMarket_View"),
+                      children: E("#SellOnMarket_View"),
                     }),
                   i && !v && (0, e.jsx)(It, {}),
                 ],
@@ -1027,13 +1028,13 @@
                 (0, e.jsx)(p.EY, {
                   as: "div",
                   children: (null == n ? void 0 : n.lowest_price)
-                    ? P("#SellOnMarket_LowestPrice", n.lowest_price)
+                    ? E("#SellOnMarket_LowestPrice", n.lowest_price)
                     : " ",
                 }),
                 (0, e.jsx)(p.EY, {
                   as: "div",
                   children: (null == n ? void 0 : n.volume)
-                    ? P("#SellOnMarket_Volume", n.volume)
+                    ? E("#SellOnMarket_Volume", n.volume)
                     : " ",
                 }),
               ],
@@ -1048,7 +1049,7 @@
                 color: "green",
                 onClick: () => window.SellCurrentSelection(),
                 size: "1",
-                children: P("#SellOnMarket_SellThisItem"),
+                children: E("#SellOnMarket_SellThisItem"),
               }),
             })
           : null;
@@ -1057,15 +1058,15 @@
       function At() {
         return (0, e.jsxs)(s.az, {
           position: "relative",
-          title: P("#ItemDescription_TradeProtectedTooltip"),
+          title: E("#ItemDescription_TradeProtectedTooltip"),
           children: [
             (0, e.jsx)(s.az, {
               className: Ht.TradeProtectionLabel,
-              children: P("#ItemDescription_TradeProtected"),
+              children: E("#ItemDescription_TradeProtected"),
             }),
             (0, e.jsx)(d._, {
               className: Ht.TradeProtectionIcon,
-              alt: P("#ItemDescription_TradeProtected"),
+              alt: E("#ItemDescription_TradeProtected"),
               src: `${f.TS.COMMUNITY_CDN_URL}public/images/economy/protected_items_badge2.png`,
             }),
           ],
@@ -1074,8 +1075,8 @@
       var Ot = n(65646),
         Rt = n(59805),
         Yt = n(30570),
-        Pt = n(42834),
-        Et = n(69345),
+        Et = n(42834),
+        Pt = n(69345),
         Gt = n(39777),
         Nt = n(45179);
       const $t = {
@@ -1120,27 +1121,34 @@
           });
         },
         Image: function (t) {
-          const { bAllowAnimatedIcon: c = !0 } = t,
-            n = ft(),
-            a =
-              `${f.TS.COMMUNITY_CDN_URL}economy/image/${n.icon_url_large || n.icon_url}/330x192` +
+          const { bAllowAnimatedIcon: c = !0, size: n = "row" } = t,
+            a = ft(),
+            i = "fit" == n,
+            v =
+              `${f.TS.COMMUNITY_CDN_URL}economy/image/${a.icon_url_large || a.icon_url}/${Ft[n]}` +
               (c ? "?allow_animated=1" : "");
           return (0, e.jsxs)(l.s, {
-            height: "196px",
+            height: i ? "100%" : "196px",
+            width: i ? "100%" : void 0,
+            minHeight: "0",
             align: "center",
-            justify: "start",
+            justify: i ? "center" : "start",
             position: "relative",
             children: [
-              (0, e.jsx)("img", { src: a, alt: n.name }),
-              !!n.sealed &&
-                1 != n.sealed_type &&
+              (0, e.jsx)("img", {
+                className: i ? Nt.ItemImageFit : void 0,
+                src: v,
+                alt: a.name,
+              }),
+              !!a.sealed &&
+                1 != a.sealed_type &&
                 (0, e.jsx)(s.az, {
                   position: "absolute",
                   style: { left: "0", bottom: "0" },
                   children: (0, e.jsx)(At, {}),
                 }),
-              !!n.sealed &&
-                1 == n.sealed_type &&
+              !!a.sealed &&
+                1 == a.sealed_type &&
                 (0, e.jsx)(s.az, {
                   position: "absolute",
                   style: { left: "0", bottom: "0" },
@@ -1180,7 +1188,7 @@
                       color: "red-9",
                       as: "div",
                       children: [
-                        (0, e.jsx)(Ut, {
+                        (0, e.jsx)(Jt, {
                           style: {
                             height: "1.25em",
                             verticalAlign: "text-bottom",
@@ -1198,13 +1206,13 @@
         },
         GameInfo: function (t) {
           const c = ft(),
-            { gameURL: n, strName: a, iconURL: i } = Ft(t.hrefGame);
+            { gameURL: n, strName: a, iconURL: i } = Wt(t.hrefGame);
           return (0, e.jsxs)(l.s, {
             direction: "row",
             gapX: "2",
             align: "center",
             children: [
-              (0, e.jsx)(Dt, {
+              (0, e.jsx)(Ut, {
                 href: n,
                 children: i
                   ? (0, e.jsx)(d._, {
@@ -1217,7 +1225,7 @@
               (0, e.jsxs)(l.s, {
                 direction: "column",
                 children: [
-                  (0, e.jsx)(Wt, { ...t }),
+                  (0, e.jsx)(Dt, { ...t }),
                   (0, e.jsx)(p.EY, {
                     size: "3",
                     contrast: "description",
@@ -1228,7 +1236,7 @@
             ],
           });
         },
-        GameName: Wt,
+        GameName: Dt,
         Descriptions: function () {
           const t = ft(),
             c = gt();
@@ -1278,7 +1286,7 @@
                 size: "3",
                 contrast: "note",
                 children: [
-                  P("#ItemDescription_Tags"),
+                  E("#ItemDescription_Tags"),
                   " ",
                   " ",
                   c.map((t) => t.localized_tag_name).join(", "),
@@ -1312,7 +1320,7 @@
                   (0, e.jsx)(p.EY, {
                     as: "div",
                     size: "4",
-                    children: P("#ItemDescription_AccessoriesList_Title"),
+                    children: E("#ItemDescription_AccessoriesList_Title"),
                   }),
                   t.asset_accessories.map((t, n) =>
                     (0, e.jsx)(B, { appid: c.appid, accessory: t }, n),
@@ -1375,12 +1383,13 @@
           }),
         });
       }, $t);
-      function Ft(t) {
+      const Ft = { row: "330x192", fit: "512x512" };
+      function Wt(t) {
         const c = ft().appid,
           { data: n } = (0, Gt.lv)({ appid: c }),
           { data: e } = (0, Gt.J$)({ appid: c }),
-          l = n && n.community_icon ? (0, Pt.b0)(n, "community_icon") : void 0,
-          s = (0, Et.n)(e);
+          l = n && n.community_icon ? (0, Et.b0)(n, "community_icon") : void 0,
+          s = (0, Pt.n)(e);
         return {
           gameURL:
             null != t
@@ -1393,8 +1402,8 @@
           strName: null == e ? void 0 : e.name,
         };
       }
-      function Wt(t) {
-        const { gameURL: c, strName: n } = Ft(t.hrefGame);
+      function Dt(t) {
+        const { gameURL: c, strName: n } = Wt(t.hrefGame);
         return c
           ? (0, e.jsx)(W.Y, {
               href: c,
@@ -1409,11 +1418,11 @@
               children: n,
             });
       }
-      function Dt(t) {
+      function Ut(t) {
         const { children: c, href: n } = t;
         return n ? (0, e.jsx)("a", { href: n, children: c }) : c;
       }
-      function Ut(t) {
+      function Jt(t) {
         return (0, e.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           viewBox: "0 0 20 20",
@@ -1427,9 +1436,9 @@
           }),
         });
       }
-      var Jt = n(81393),
-        Kt = n(84811);
-      function qt(t) {
+      var Kt = n(81393),
+        qt = n(84811);
+      function Zt(t) {
         const {
             name: c,
             bIsMarket: n,
@@ -1448,10 +1457,10 @@
                 const e = window;
                 e.UpdateReactItemInfo ||
                   (e.UpdateReactItemInfo = (t, c, n) => {
-                    const e = tc.get(t);
+                    const e = cc.get(t);
                     e
                       ? e(c, n)
-                      : (0, Jt.wT)(!1, `Updater not registered: ${t}`);
+                      : (0, Kt.wT)(!1, `Updater not registered: ${t}`);
                   });
                 if (
                   null === (n = e.g_mapPendingItemInfo) || void 0 === n
@@ -1463,9 +1472,9 @@
                   c(n, l), e.g_mapPendingItemInfo.delete(t);
                 }
                 return (
-                  tc.set(t, c),
+                  cc.set(t, c),
                   () => {
-                    tc.delete(t);
+                    cc.delete(t);
                   }
                 );
               })(c, (t, c) => d(t && { description: t, asset: c })),
@@ -1474,14 +1483,14 @@
           h
             ? (0, e.jsx)(o, {
                 steamidOwner: v,
-                children: (0, e.jsx)(Kt.tH, {
+                children: (0, e.jsx)(qt.tH, {
                   children: n
-                    ? (0, e.jsx)(Qt, {
+                    ? (0, e.jsx)(tc, {
                         description: h.description,
                         asset: h.asset,
                         bHideActionsForUnique: a,
                       })
-                    : (0, e.jsx)(Zt, {
+                    : (0, e.jsx)(Xt, {
                         description: h.description,
                         asset: h.asset,
                         bInteractable: l,
@@ -1493,7 +1502,7 @@
             : null
         );
       }
-      function Zt(t) {
+      function Xt(t) {
         const {
           description: c,
           asset: n,
@@ -1524,12 +1533,12 @@
                 ],
               }),
               s && !a && (0, e.jsx)(Bt.SellOnMarket, {}),
-              !!a && (0, e.jsx)(Xt, { strLabel: a }),
+              !!a && (0, e.jsx)(Qt, { strLabel: a }),
             ],
           }),
         });
       }
-      function Xt(t) {
+      function Qt(t) {
         const { strLabel: c } = t;
         return (0, e.jsx)(l.s, {
           background: "greyneutral-3",
@@ -1546,7 +1555,7 @@
           }),
         });
       }
-      function Qt(t) {
+      function tc(t) {
         var c;
         const { description: n, asset: s, bHideActionsForUnique: a } = t,
           i = !(a && !n.commodity);
@@ -1594,7 +1603,7 @@
           }),
         });
       }
-      const tc = new Map();
+      const cc = new Map();
     },
     65423: (t, c, n) => {
       "use strict";
@@ -2524,8 +2533,8 @@
         });
       }
       var Y = n(50614),
-        P = n(19997),
-        E = n(44846);
+        E = n(19997),
+        P = n(44846);
       const G = 2;
       function N(t, c, n, e) {
         return (0, l.useMemo)(() => {
@@ -2566,7 +2575,7 @@
                     ),
                   ),
                   s === c.length - 1 &&
-                    (0, e.jsx)(E.$, { state: n, onStateChange: l }),
+                    (0, e.jsx)(P.$, { state: n, onStateChange: l }),
                 ],
               },
               `facets_${s}`,
@@ -2704,7 +2713,7 @@
               contrast: "title",
               children: A.K.Localize("#AdvancedSearch_SteamItems_TypeLabel"),
             }),
-            (0, e.jsx)(P.x, {
+            (0, e.jsx)(E.x, {
               columns: "repeat( auto-fit, minmax( 230px, 1fr ) )",
               gap: "2",
               marginTop: "2",
@@ -3804,7 +3813,7 @@
     },
     18419: (t, c, n) => {
       "use strict";
-      n.d(c, { PC: () => Pt, J8: () => Xt });
+      n.d(c, { PC: () => Et, J8: () => Xt });
       var e = n(7850),
         l = n(99483),
         s = n(90626),
@@ -3867,10 +3876,10 @@
           "images/applications/community/mac10.png?v=valveisgoodatcaching",
         Y =
           n.p + "images/applications/community/mp7.png?v=valveisgoodatcaching",
-        P =
+        E =
           n.p +
           "images/applications/community/ump45.png?v=valveisgoodatcaching",
-        E =
+        P =
           n.p + "images/applications/community/mp9.png?v=valveisgoodatcaching",
         G =
           n.p +
@@ -4003,8 +4012,8 @@
           bizon: (0, _.YJ)(O),
           mac10: (0, _.YJ)(R),
           mp7: (0, _.YJ)(Y),
-          ump45: (0, _.YJ)(P),
-          mp9: (0, _.YJ)(E),
+          ump45: (0, _.YJ)(E),
+          mp9: (0, _.YJ)(P),
           mp5sd: (0, _.YJ)(G),
           p90: (0, _.YJ)(N),
           p250: (0, _.YJ)($),
@@ -4828,10 +4837,10 @@
         });
       }
       var Yt = n(22837);
-      function Pt(t) {
+      function Et(t) {
         return _.TS.EUNIVERSE === Yt.Rv ? 710 === t : 730 === t;
       }
-      const Et = [
+      const Pt = [
           "weapon_knife_push",
           "weapon_knife_survival_bowie",
           "weapon_knife_gypsy_jackknife",
@@ -4970,7 +4979,7 @@
                 facet: "Type",
                 tag: "CSGO_Type_Knife",
               },
-              ...Et.map((t) => ({ facet: "Weapon", tag: t })),
+              ...Pt.map((t) => ({ facet: "Weapon", tag: t })),
             ],
           },
           { type: "facet", facet: "ItemSet" },
@@ -5066,7 +5075,7 @@
       const Wt = {
           facet: "",
           trigger: [
-            { facet: "Weapon", exclude: Et },
+            { facet: "Weapon", exclude: Pt },
             { facet: "Type", tag: $t },
             { facet: "ItemSet" },
           ],
@@ -5084,7 +5093,7 @@
         Ut = [
           {
             items: [
-              { facet: "Weapon", exclude: Et },
+              { facet: "Weapon", exclude: Pt },
               { facet: "Type", tag: $t },
             ],
             rarities: [
@@ -5995,7 +6004,7 @@
                 condition: c
                   ? Kt([
                       { facet: "Type", tag: $t },
-                      { facet: "Weapon", exclude: Et },
+                      { facet: "Weapon", exclude: Pt },
                       { facet: "ItemSet" },
                     ])
                   : void 0,
@@ -6359,7 +6368,7 @@
           ],
         });
       }
-      function P(t) {
+      function E(t) {
         const {
           rgToggles: c,
           onChange: n,
@@ -6388,7 +6397,7 @@
             ),
         });
       }
-      function E(t) {
+      function P(t) {
         const {
             rgToggles: c,
             onChange: n,
@@ -6503,9 +6512,9 @@
                 });
           }
           case "togglegroup":
-            return (0, e.jsx)(P, { ...c, onChange: l, state: n });
-          case "togglegrid":
             return (0, e.jsx)(E, { ...c, onChange: l, state: n });
+          case "togglegrid":
+            return (0, e.jsx)(P, { ...c, onChange: l, state: n });
           default:
             return (
               (0, V.z_)(c, `Unhandled facet field type: "${c.fieldType}"`), null

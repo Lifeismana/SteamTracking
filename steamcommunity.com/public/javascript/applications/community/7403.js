@@ -176,7 +176,7 @@
         y = s(25888),
         S = s(65946),
         T = s(26161),
-        I = s(16797),
+        I = s(67921),
         P = s(4869),
         U = s(78395),
         G = s(21869),
@@ -195,9 +195,9 @@
         Q = s(87937),
         $ = s(61819),
         H = s(88942),
-        X = s(78327),
-        J = s(41735),
-        W = s.n(J),
+        J = s(78327),
+        X = s(41735),
+        W = s.n(X),
         Z = s(26408);
       function ee(e) {
         const { hideModal: t, fnUpdateSession: s } = e,
@@ -549,7 +549,7 @@
             const t = (0, H.I)({
               queryKey: ["timezone", e],
               queryFn: async () => {
-                const t = `${X.TS.COMMUNITY_BASE_URL}/eventadmin/ajaxgettimezones`,
+                const t = `${J.TS.COMMUNITY_BASE_URL}/eventadmin/ajaxgettimezones`,
                   s = { reference_time: e },
                   o = await W().get(t, { params: s });
                 return null == o ? void 0 : o.data.timezones;
@@ -1414,7 +1414,7 @@
           }),
         });
       }
-      function Xe(e) {
+      function Je(e) {
         const {
             hideModal: t,
             userPollDef: s,
@@ -1444,7 +1444,7 @@
           }),
         });
       }
-      function Je(e) {
+      function Xe(e) {
         switch (e) {
           default:
           case Re.$t.k_EPollResult_NotVisible:
@@ -1463,7 +1463,7 @@
         const { userPollDef: t, fnSetDef: s } = e,
           n = (0, V.E)(),
           [l] = (0, S.q3)(() => [t.results_visibility_settings]),
-          i = Object.values(Re.$t).map((e) => ({ data: e, label: Je(e) }));
+          i = Object.values(Re.$t).map((e) => ({ data: e, label: Xe(e) }));
         return (0, o.jsxs)(o.Fragment, {
           children: [
             (0, o.jsx)(h.pd, {
@@ -1920,7 +1920,7 @@
                     }),
                     (0, o.jsx)(N.ff, {
                       onClick: () => {},
-                      tooltip: Je(i.results_visibility_settings),
+                      tooltip: Xe(i.results_visibility_settings),
                       children: (0, o.jsx)(pe.WLA, {}),
                     }),
                     (0, o.jsx)(N.ff, {
@@ -1931,7 +1931,7 @@
                   ],
                 }),
                 Boolean(a) &&
-                  (0, o.jsx)(Xe, {
+                  (0, o.jsx)(Je, {
                     hideModal: c,
                     userPollDef: i,
                     clanAccountID: l.GetClanAccountID(),
@@ -2679,45 +2679,43 @@
     },
     28106: (e, t, s) => {
       "use strict";
-      s.d(t, { W: () => _ });
+      s.d(t, { W: () => p });
       var o = s(7850),
         n = s(57053),
         l = s(52893),
         i = s(90626),
         a = s(61859),
-        r = s(17558),
-        d = s(22145),
-        c = s(37341),
-        u = s(42714);
-      const _ = i.memo(function (e) {
+        r = s(90622),
+        d = s(17558),
+        c = s(22145),
+        u = s(37341),
+        _ = s(42714);
+      const p = i.memo(function (e) {
         const {
             linkMarkType: t,
             onURLPasted: s,
             schema: a,
-            onClickURL: c = m,
+            onClickURL: u = h,
           } = e,
-          _ = i.useRef(c);
-        _.current = c;
-        const [h, x] = i.useState(),
-          [f, v] = i.useState(),
-          [j, g] = i.useState(),
-          [b, M] = (0, r.E)(a),
-          E = i.useMemo(
+          p = i.useRef(u);
+        p.current = u;
+        const [x, f] = i.useState(),
+          [v, j] = i.useState(),
+          [g, b] = i.useState(),
+          [M, E] = (0, d.E)(a),
+          w = i.useMemo(
             () =>
               new l.k_({
                 props: {
                   handleClickOn(e, s, o, n, l, i) {
                     if (i && (l.ctrlKey || 1 == l.button)) {
                       const e = o
-                        .resolve(s - n)
-                        .marks()
-                        .find((e) => e.type == t);
-                      if (e)
-                        return (
-                          _.current(e.attrs.href, l.view),
-                          l.preventDefault(),
-                          !0
-                        );
+                          .resolve(s - n)
+                          .marks()
+                          .find((e) => e.type == t),
+                        i = e && (0, r.J)(e.attrs.href);
+                      if (i)
+                        return p.current(i, l.view), l.preventDefault(), !0;
                     }
                     return !1;
                   },
@@ -2727,9 +2725,9 @@
                       (!t.metaKey && !t.ctrlKey) ||
                       t.shiftKey ||
                       t.altKey
-                    ) && (b(e), !0),
+                    ) && (M(e), !0),
                   clipboardTextParser(e, o, l, i) {
-                    const r = (0, u.F)(a, e, t, s);
+                    const r = (0, _.F)(a, e, t, s);
                     return r && new n.Ji(n.FK.from(r), o.start(), o.end());
                   },
                   handlePaste(e, o, l) {
@@ -2737,7 +2735,7 @@
                     if (
                       (l.content.descendants((e, o) => {
                         if (e.isText) {
-                          const n = (0, u.F)(a, e.text, t, s);
+                          const n = (0, _.F)(a, e.text, t, s);
                           n && i.push({ node: e, pos: o, rgNodes: n });
                         }
                       }),
@@ -2770,53 +2768,53 @@
                         if ("A" == e.nodeName && "getBoundingClientRect" in e) {
                           const t = e.getBoundingClientRect();
                           return (
-                            x(t.left + t.width / 2), v(t.bottom + 2), void g(e)
+                            f(t.left + t.width / 2), j(t.bottom + 2), void b(e)
                           );
                         }
-                      g(void 0);
+                      b(void 0);
                     },
-                    mouseleave: (e, t) => (g(void 0), !1),
+                    mouseleave: (e, t) => (b(void 0), !1),
                   },
                 },
               }),
-            [t, b, s, a],
+            [t, M, s, a],
           );
-        (0, d.c$)(E);
-        let w = null;
+        (0, c.c$)(w);
+        let k = null;
         return (
-          j &&
-            h &&
-            f &&
-            (w = (0, o.jsx)(p, {
-              top: f,
-              left: h,
-              href: j.getAttribute("href"),
+          g &&
+            x &&
+            v &&
+            (k = (0, o.jsx)(m, {
+              top: v,
+              left: x,
+              href: g.getAttribute("href"),
             })),
-          (0, o.jsxs)(o.Fragment, { children: [w, M] })
+          (0, o.jsxs)(o.Fragment, { children: [k, E] })
         );
       });
-      function p(e) {
+      function m(e) {
         const { top: t, left: s, href: n } = e,
           [l, r] = i.useState(0),
           d = i.useRef(null);
         i.useLayoutEffect(() => {
           r(d.current.getBoundingClientRect().width);
         }, [t, s, n]);
-        const u = { top: `${t}px`, left: `${Math.max(s - l / 2, 12)}px` };
+        const c = { top: `${t}px`, left: `${Math.max(s - l / 2, 12)}px` };
         return (0, o.jsxs)("div", {
-          className: c.Hover,
-          style: u,
+          className: u.Hover,
+          style: c,
           ref: d,
           children: [
-            (0, o.jsx)("div", { className: c.Link, children: n }),
+            (0, o.jsx)("div", { className: u.Link, children: n }),
             (0, o.jsx)("div", {
-              className: c.LinkHelp,
+              className: u.LinkHelp,
               children: (0, a.we)("#UserGameNotes_ClickToOpenLink"),
             }),
           ],
         });
       }
-      function m(e, t) {
+      function h(e, t) {
         t.open(e);
       }
     },

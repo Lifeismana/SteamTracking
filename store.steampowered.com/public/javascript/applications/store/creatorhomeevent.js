@@ -298,35 +298,36 @@
             variant: p,
             color: _,
             align: h = "center",
-            ...x
+            icon: x,
+            ...v
           } = e,
-          v = "indeterminate" === n,
-          I = v ? m : i,
-          b = () => {
-            r || (a && a(!!v || !n));
+          I = "indeterminate" === n,
+          b = x ?? (I ? m : i),
+          j = () => {
+            r || (a && a(!!I || !n));
           },
-          j = (0, d.f)("Checkbox", p);
+          S = (0, d.f)("Checkbox", p);
         return (0, t.jsxs)(o.s, {
           align: h,
           ref: g,
           role: "checkbox",
-          "aria-checked": v ? "mixed" : n,
+          "aria-checked": I ? "mixed" : n,
           "data-state": u(n),
-          className: c()(s.Root, s[`Variant-${j}`], r && s.Disabled),
-          onClick: b,
+          className: c()(s.Root, s[`Variant-${S}`], r && s.Disabled),
+          onClick: j,
           tabIndex: 0,
           onKeyDown: (e) => {
             r ||
-              (" " === e.key && (b(), e.preventDefault(), e.stopPropagation()));
+              (" " === e.key && (j(), e.preventDefault(), e.stopPropagation()));
           },
           cursor: "default",
           "aria-disabled": r,
           "data-accent-color": _,
-          ...x,
+          ...v,
           children: [
             (0, t.jsx)("div", {
               className: s.Checkbox,
-              children: n && (0, t.jsx)(I, { className: s.Icon }),
+              children: n && (0, t.jsx)(b, { className: s.Icon }),
             }),
             l,
           ],
@@ -4462,7 +4463,7 @@
           })
         );
       }
-      var Oa = a(28800);
+      var Oa = a(15604);
       function Ha(e) {
         const {
             promotionName: n,
@@ -4483,10 +4484,13 @@
               const o = e.GetSaleSectionFirstMatchByType("tabs"),
                 r = o?.tabs?.filter((e) => !e.hide);
               if (r && r.length > 0) {
-                let e = t > 0 ? r.find((e) => e.unique_id == t) : void 0;
-                e || (e = r[0]);
-                const o = e === r[0];
-                return new ue.y(e, n, o, e.tab_tag_filter ? a : void 0);
+                let o = t > 0 ? r.find((e) => e.unique_id == t) : void 0;
+                o || (o = r[0]);
+                const i = o === r[0],
+                  s =
+                    e.jsondata.sale_opt_in_page_name ||
+                    e.jsondata.prune_list_optin_name;
+                return new ue.y(o, n, i, o.tab_tag_filter ? a : void 0, s);
               }
             }, [e, n, t, a]);
           })(a, v, C),

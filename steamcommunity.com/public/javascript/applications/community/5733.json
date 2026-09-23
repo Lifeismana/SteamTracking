@@ -105,6 +105,7 @@
     "moderation_sanction_hubbanned": "Đã cấm trung tâm trong %1$s ngày",
     "moderation_sanction_markassuspicious": "Đánh dấu là đáng ngờ",
     "moderation_sanction_relabelled": "Đã đổi nhãn",
+    "moderation_sanction_markedincompatible": "Marked as incompatible",
     "moderation_sanction_tradebanned_forever": "Đã cấm trao đổi vĩnh viễn",
     "moderation_sanction_tradebanned": "Đã cấm trao đổi trong %1$s ngày",
     "moderation_sanction_kickedfromgroup": "Bị đuổi khỏi nhóm",
@@ -133,6 +134,6 @@
     "reportedsubjectlist_header": "Chủ đề bị tố cáo",
     "moderation_already_owner_disputed": "Đã phản đối",
     "moderationstats_alltypes": "Tất cả loại chủ đề",
-    "forumsubjectlist_subjectreportsummary": "%1$s chưa giải quyết, %1$s có phản đối",
+    "forumsubjectlist_subjectreportsummary": "%1$s chưa giải quyết, %2$s có phản đối",
     "empty_no_trailing_comma": ""
 }

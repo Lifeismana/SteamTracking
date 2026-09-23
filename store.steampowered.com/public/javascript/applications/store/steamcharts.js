@@ -517,35 +517,36 @@
             variant: p,
             color: _,
             align: h = "center",
-            ...b
+            icon: b,
+            ...x
           } = e,
-          x = "indeterminate" === t,
-          v = x ? m : o,
-          f = () => {
-            s || (a && a(!!x || !t));
+          v = "indeterminate" === t,
+          f = b ?? (v ? m : o),
+          S = () => {
+            s || (a && a(!!v || !t));
           },
-          S = (0, d.f)("Checkbox", p);
+          I = (0, d.f)("Checkbox", p);
         return (0, n.jsxs)(r.s, {
           align: h,
           ref: u,
           role: "checkbox",
-          "aria-checked": x ? "mixed" : t,
+          "aria-checked": v ? "mixed" : t,
           "data-state": g(t),
-          className: c()(i.Root, i[`Variant-${S}`], s && i.Disabled),
-          onClick: f,
+          className: c()(i.Root, i[`Variant-${I}`], s && i.Disabled),
+          onClick: S,
           tabIndex: 0,
           onKeyDown: (e) => {
             s ||
-              (" " === e.key && (f(), e.preventDefault(), e.stopPropagation()));
+              (" " === e.key && (S(), e.preventDefault(), e.stopPropagation()));
           },
           cursor: "default",
           "aria-disabled": s,
           "data-accent-color": _,
-          ...b,
+          ...x,
           children: [
             (0, n.jsx)("div", {
               className: i.Checkbox,
-              children: t && (0, n.jsx)(v, { className: i.Icon }),
+              children: t && (0, n.jsx)(f, { className: i.Icon }),
             }),
             l,
           ],
@@ -4681,7 +4682,7 @@
           })
         );
       }
-      var za = a(28800);
+      var za = a(15604);
       function Oa(e) {
         const {
             promotionName: t,
@@ -4702,10 +4703,13 @@
               const r = e.GetSaleSectionFirstMatchByType("tabs"),
                 s = r?.tabs?.filter((e) => !e.hide);
               if (s && s.length > 0) {
-                let e = n > 0 ? s.find((e) => e.unique_id == n) : void 0;
-                e || (e = s[0]);
-                const r = e === s[0];
-                return new ge.y(e, t, r, e.tab_tag_filter ? a : void 0);
+                let r = n > 0 ? s.find((e) => e.unique_id == n) : void 0;
+                r || (r = s[0]);
+                const o = r === s[0],
+                  i =
+                    e.jsondata.sale_opt_in_page_name ||
+                    e.jsondata.prune_list_optin_name;
+                return new ge.y(r, t, o, r.tab_tag_filter ? a : void 0, i);
               }
             }, [e, t, n, a]);
           })(a, x, y),

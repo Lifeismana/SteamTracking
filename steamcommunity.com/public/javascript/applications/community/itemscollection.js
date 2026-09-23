@@ -811,6 +811,7 @@
             apply_user_filters: L,
             include_links: A,
             include_extra_details: E,
+            include_optin_registration_tags: P,
           } = s;
         if (
           ((0, n.useEffect)(() => {
@@ -832,6 +833,7 @@
               apply_user_filters: L,
               include_links: A,
               include_extra_details: E,
+              include_optin_registration_tags: P,
             };
             let n = null;
             return (
@@ -874,6 +876,7 @@
             L,
             A,
             E,
+            P,
             f,
           ]),
           !e)
@@ -882,8 +885,8 @@
         if (!1 === p) return [void 0, u];
         if (a.A.Get().BIsStoreItemMissing(e, t)) return [void 0, u];
         if (!a.A.Get().BHasStoreItem(e, t, s)) return [void 0, d];
-        const P = a.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
-        return P ? [P, m] : [null, u];
+        const D = a.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
+        return D ? [D, m] : [null, u];
       }
       function f(e, t, s) {
         return _(e, o.c6.qI, t, s);
@@ -924,6 +927,7 @@
             apply_user_filters: y,
             include_links: T,
             include_extra_details: w,
+            include_optin_registration_tags: M,
           } = s;
         if (
           ((0, n.useEffect)(() => {
@@ -946,6 +950,7 @@
                 apply_user_filters: y,
                 include_links: T,
                 include_extra_details: w,
+                include_optin_registration_tags: M,
               },
               r = e.filter(
                 (e) =>
@@ -963,7 +968,30 @@
               }),
               () => n.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, r, c, o, _, f, p, h, b, g, I, x, k, v, S, j, N, y, T, w]),
+          }, [
+            e,
+            t,
+            r,
+            c,
+            o,
+            _,
+            f,
+            p,
+            h,
+            b,
+            g,
+            I,
+            x,
+            k,
+            v,
+            S,
+            j,
+            N,
+            y,
+            T,
+            w,
+            M,
+          ]),
           !e)
         )
           return u;

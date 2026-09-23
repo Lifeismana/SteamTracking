@@ -232,11 +232,157 @@
           }
         }
       }
-      const _ = "";
+      const _ = "",
+        _ = [
+          {
+            strKey: "Enter",
+            button: _._._,
+          },
+          {
+            strKey: "Escape",
+            button: _._.CANCEL,
+          },
+          {
+            strKey: "ArrowUp",
+            button: _._.DIR_UP,
+          },
+          {
+            strKey: "ArrowDown",
+            button: _._.DIR_DOWN,
+          },
+          {
+            strKey: "ArrowLeft",
+            button: _._.DIR_LEFT,
+          },
+          {
+            strKey: "ArrowRight",
+            button: _._.DIR_RIGHT,
+          },
+          {
+            strKey: "F1",
+            button: _._.STEAM_GUIDE,
+          },
+          {
+            strKey: "F2",
+            button: _._.STEAM_QUICK_MENU,
+          },
+          {
+            strKey: "F3",
+            button: _._.SECONDARY,
+          },
+          {
+            strKey: "F4",
+            button: _._.OPTIONS,
+          },
+          {
+            strKey: "F6",
+            button: _._.BUMPER_LEFT,
+          },
+          {
+            strKey: "F7",
+            button: _._.BUMPER_RIGHT,
+          },
+          {
+            strKey: "F6",
+            bShift: !0,
+            button: _._.TRIGGER_LEFT,
+          },
+          {
+            strKey: "F7",
+            bShift: !0,
+            button: _._.TRIGGER_RIGHT,
+          },
+          {
+            strKey: "F6",
+            bCtrl: !0,
+            button: _._.LSTICK_CLICK,
+          },
+          {
+            strKey: "F7",
+            bCtrl: !0,
+            button: _._.RSTICK_CLICK,
+          },
+          {
+            strKey: "F8",
+            button: _._.SELECT,
+          },
+          {
+            strKey: "F9",
+            button: _._.START,
+          },
+          {
+            strKey: "Backspace",
+            button: _._.SECONDARY,
+          },
+          {
+            strKey: "Digit1",
+            bCtrl: !0,
+            button: _._.STEAM_GUIDE,
+          },
+          {
+            strKey: "Digit2",
+            bCtrl: !0,
+            button: _._.STEAM_QUICK_MENU,
+          },
+          {
+            strKey: "Digit3",
+            bCtrl: !0,
+            button: _._.SELECT,
+          },
+          {
+            strKey: "Digit4",
+            bCtrl: !0,
+            button: _._.BUMPER_LEFT,
+          },
+          {
+            strKey: "Digit5",
+            bCtrl: !0,
+            button: _._.BUMPER_RIGHT,
+          },
+          {
+            strKey: "Digit6",
+            bCtrl: !0,
+            button: _._.LSTICK_CLICK,
+          },
+          {
+            strKey: "Digit7",
+            bCtrl: !0,
+            button: _._.RSTICK_CLICK,
+          },
+          {
+            strKey: "Digit8",
+            bCtrl: !0,
+            button: _._.OPTIONS,
+          },
+          {
+            strKey: "Digit0",
+            bCtrl: !0,
+            button: _._.START,
+          },
+          {
+            strKey: "Digit4",
+            bCtrl: !0,
+            bShift: !0,
+            button: _._.TRIGGER_LEFT,
+          },
+          {
+            strKey: "Digit5",
+            bCtrl: !0,
+            bShift: !0,
+            button: _._.TRIGGER_RIGHT,
+          },
+        ];
+      const _ = new WeakMap();
+      function _(_) {
+        return (_.get(_) ?? 0) > 0;
+      }
       class _ extends _._ {
         m_lastButtonDown = _._.INVALID;
+        m_strLastKeyDown;
+        m_targetWindow;
         constructor(_) {
           super(),
+            (this.m_targetWindow = _),
             this.SetSourceType(_._.KEYBOARD_SIMULATOR),
             _.addEventListener("keydown", this.OnKeyDown, {
               capture: !0,
@@ -247,6 +393,7 @@
             _.addEventListener("blur", this.Reset);
         }
         OnKeyDown(_) {
+          if (_(this.m_targetWindow)) return;
           const _ = this.TranslateKey(_);
           _ != _._.INVALID &&
             (_.preventDefault(),
@@ -254,20 +401,30 @@
             _ != this.m_lastButtonDown &&
               (this.Reset(),
               this.OnButtonDown(_),
-              (this.m_lastButtonDown = _)));
+              (this.m_lastButtonDown = _),
+              (this.m_strLastKeyDown = this.GetKeycodeFromEvent(_))));
         }
         OnKeyUp(_) {
-          const _ = this.TranslateKey(_);
-          _ != _._.INVALID &&
-            (this.OnButtonUp(_),
-            (this.m_lastButtonDown = _._.INVALID),
-            _.preventDefault(),
-            _.stopPropagation());
+          if (
+            this.m_lastButtonDown != _._.INVALID &&
+            this.GetKeycodeFromEvent(_) == this.m_strLastKeyDown
+          )
+            return (
+              this.OnButtonUp(this.m_lastButtonDown),
+              (this.m_lastButtonDown = _._.INVALID),
+              (this.m_strLastKeyDown = void 0),
+              _.preventDefault(),
+              void _.stopPropagation()
+            );
+          _(this.m_targetWindow) ||
+            this.TranslateKey(_) == _._.INVALID ||
+            (_.preventDefault(), _.stopPropagation());
         }
         Reset() {
           this.m_lastButtonDown != _._.INVALID &&
             (this.OnButtonUp(this.m_lastButtonDown),
-            (this.m_lastButtonDown = _._.INVALID));
+            (this.m_lastButtonDown = _._.INVALID),
+            (this.m_strLastKeyDown = void 0));
         }
         GetKeycodeFromEvent(_) {
           return "linux" === _ && _.key.length > 1
@@ -336,56 +493,13 @@
           if (_.altKey) return _._.INVALID;
           if (this.BShouldSwallowEventForTextInputWorkaround(_))
             return _._.INVALID;
-          if (_.ctrlKey)
-            if (_.shiftKey)
-              switch (_) {
-                case "Digit4":
-                  return _._.TRIGGER_LEFT;
-                case "Digit5":
-                  return _._.TRIGGER_RIGHT;
-                default:
-                  return _._.INVALID;
-              }
-            else
-              switch (_) {
-                case "Digit1":
-                  return _._.STEAM_GUIDE;
-                case "Digit2":
-                  return _._.STEAM_QUICK_MENU;
-                case "Digit3":
-                case "Digit9":
-                  return _._.SELECT;
-                case "Digit4":
-                  return _._.BUMPER_LEFT;
-                case "Digit5":
-                  return _._.BUMPER_RIGHT;
-                case "Digit6":
-                  return _._.LSTICK_CLICK;
-                case "Digit7":
-                  return _._.RSTICK_CLICK;
-                case "Digit8":
-                  return _._.OPTIONS;
-                case "Digit0":
-                  return _._.START;
-              }
-          else if (!_.shiftKey)
-            switch (_) {
-              case "Escape":
-                return _._.CANCEL;
-              case "Enter":
-                return _._._;
-              case "Backspace":
-                return _._.SECONDARY;
-              case "ArrowUp":
-                return _._.DIR_UP;
-              case "ArrowDown":
-                return _._.DIR_DOWN;
-              case "ArrowLeft":
-                return _._.DIR_LEFT;
-              case "ArrowRight":
-                return _._.DIR_RIGHT;
-            }
-          return _._.INVALID;
+          const _ = _.find(
+            (_) =>
+              _.strKey === _ &&
+              !!_.bCtrl === _.ctrlKey &&
+              !!_.bShift === _.shiftKey,
+          );
+          return _?.button ?? _._.INVALID;
         }
       }
       (0, _._)([_._], _.prototype, "OnKeyDown", null),
@@ -1989,7 +2103,7 @@
           return this.GetElementForFocusRingMeasure()?.getBoundingClientRect();
         }
         GetBorderRadiusForFocusRing() {
-          if (!this.m_Properties?.focusRingSizeElementID) return;
+          if (!this.m_Properties?.focusRingHasBorderRadius) return;
           const _ = this.GetElementForFocusRingMeasure();
           if (!_) return;
           const _ = _.ownerDocument?.defaultView?.getComputedStyle(_);
@@ -4573,6 +4687,41 @@
                     _: 45,
                     _: _.readFixed64String,
                     _: _.writeFixed64String,
+                  },
+                  wg_msg_trace_flags: {
+                    _: 46,
+                    _: _.readUint32,
+                    _: _.writeUint32,
+                  },
+                  wg_msg_trace_instance: {
+                    _: 47,
+                    _: _.readUint32,
+                    _: _.writeUint32,
+                  },
+                  wg_msg_trace_gid: {
+                    _: 48,
+                    _: _.readUint32,
+                    _: _.writeUint32,
+                  },
+                  wg_msg_trace_token: {
+                    _: 49,
+                    _: _.readString,
+                    _: _.writeString,
+                  },
+                  wg_msg_trace_steamid: {
+                    _: 50,
+                    _: _.readFixed64String,
+                    _: _.writeFixed64String,
+                  },
+                  wg_msg_trace_status: {
+                    _: 51,
+                    _: _.readString,
+                    _: _.writeString,
+                  },
+                  trace_flags: {
+                    _: 52,
+                    _: _.readUint32,
+                    _: _.writeUint32,
                   },
                 },
               }),
@@ -7391,6 +7540,7 @@
         m_fnGetReportingInterval = _;
         m_fnGetReportTags = () => [];
         m_fnGetURL = () => location.href;
+        strDisplayVersion;
         m_bEnabled = !0;
         m_bInitialized = !1;
         constructor(_ = !0) {
@@ -7424,6 +7574,8 @@
               (this.m_fnGetReportingInterval = _.fnGetReportingInterval),
             _.fnGetReportTags && (this.m_fnGetReportTags = _.fnGetReportTags),
             _.fnGetURL && (this.m_fnGetURL = _.fnGetURL),
+            _.strDisplayVersion &&
+              (this.strDisplayVersion = _.strDisplayVersion),
             this.m_bEnabled ||
               (console.error(
                 "Error reporting was initialized after being disabled, possibly dropping errors.",
@@ -7560,6 +7712,7 @@
                 _.strComponentStack &&
                   (_.strComponentStack = _.strComponentStack),
                 (_.strUrl = this.m_fnGetURL()),
+                (_.strDisplayVersion = this.strDisplayVersion),
                 this.SendErrorReport(_),
                 _)
               : null;
@@ -7636,7 +7789,9 @@
                 _.set_identifier(_.identifier + " " + _.identifierHash),
                 _.set_message(JSON.stringify(_.message)),
                 _.strComponentStack &&
-                  ((_ ??= {}), (_.componentStack = _.strComponentStack)),
+                  ((_ ??= {}),
+                  (_.componentStack = _.strComponentStack),
+                  (_.strDisplayVersion = _.strDisplayVersion)),
                 _ && _.set_context(JSON.stringify(_)),
                 _.strUrl && _.set_url(_.strUrl),
                 _
@@ -13471,8 +13626,13 @@
           return [_, _];
         }
         ChangeNavigationSource(_, _, _, _) {
-          let _ = this.m_navigationSource.Value,
-            _ = _.nLastActiveGamepadIndex;
+          let _ = this.m_navigationSource.Value;
+          if (
+            _ == _._.MOUSE &&
+            _.eActivationSourceType == _._.KEYBOARD_SIMULATOR
+          )
+            return !1;
+          let _ = _.nLastActiveGamepadIndex;
           return (
             null != _.nActiveGamepadIndex &&
               _.nActiveGamepadIndex >= 0 &&
@@ -14388,7 +14548,10 @@
             })),
           _ &&
             (_._("vgp_onok.vkbindings", () => _.ShowVirtualKeyboard()),
-            _._("click.vkbindings", () => _.ShowVirtualKeyboard()),
+            _._("click.vkbindings", (_) => {
+              "mouse" !== _.originalEvent?.pointerType &&
+                _.ShowVirtualKeyboard();
+            }),
             _._("blur.vkbindings", () => {
               document.hasFocus() &&
                 document.activeElement != _ &&

@@ -5,7 +5,7 @@
     "FreeOnDemand_Button_ttip": "Transformă pachetul acesta într-unul gratuit pentru clienți.",
     "FreeOnDemand_Button_disabled_ttip": "Acest pachet poate fi transformat într-unul gratuit doar de către un reprezentant al asistenței Steam. Te rugăm să folosești linkul „Contactează serviciul Steam de publicare” din secțiunea „Documentație și ajutor” pentru asistență.",
     "FreeOnDemand_Title": "Transformi pachetul într-unul gratuit?",
-    "FreeOnDemand_Desc": "În urma acestei acțiuni, pachetul tău va fi transformat într-unul gratuit, aplicația ta va putea apărea în centrul de magazin cu produse cu acces gratuit, iar afișarea prețului va fi modificată în funcție de opțiunea selectată mai jos. Această acțiune nu poate fi anulată fără a crea un tichet adresat echipei de asistență Steamworks.",
+    "FreeOnDemand_Desc": "În urma acestei acțiuni, pachetul tău va fi transformat într-unul gratuit, aplicația ta va putea apărea în centrul de magazin destinat produselor cu acces gratuit, iar afișarea prețului va fi modificată în funcție de opțiunea selectată mai jos. Această acțiune nu poate fi anulată fără a trimite o solicitare echipei de asistență Steamworks.",
     "FreeOnDemand_Desc_NotPermitted": "Acest pachet poate fi transformat într-unul gratuit doar de către un reprezentant al asistenței Steam. Apasă butonul de mai jos pentru a crea o solicitare de asistență cu detaliile cererii tale.",
     "FreeOnDemand_Radio": "Selectează textul potrivit care să fie afișat în locul prețului:",
     "FreeOnDemand_Radio_FreeToPlay": "„Joacă gratis” – titlul poate fi descărcat și jucat gratis, dar include achiziții opționale în joc (obiecte, monede virtuale, DLC-uri sau alte tipuri de monetizare).",

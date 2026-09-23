@@ -48,9 +48,9 @@
         NoColumnBorders: "_3C2djc2HxWtHJaUqVq-cKt",
       };
     },
-    65680: (e, n, i) => {
+    13181: (e, n, i) => {
       "use strict";
-      i.r(n), i.d(n, { default: () => ve });
+      i.r(n), i.d(n, { default: () => Se });
       var r = i(7850),
         t = i(90626),
         c = i(92757);
@@ -59,7 +59,7 @@
         o = i(32801),
         d = i(83392),
         l = i(20187),
-        g = i(53965),
+        g = i(48474),
         h = i(16666),
         u = i(66051),
         P = i(88267),
@@ -113,7 +113,7 @@
         );
         var n;
       }
-      function y(e) {
+      function D(e) {
         const n = e.getValue(),
           i = (0, m.mG)(n),
           t = k.Localize(`#Region_Pricing_Tooltip_${i}`);
@@ -121,9 +121,9 @@
           children: [i, " ", (0, r.jsx)(S.o, { tooltip: t })],
         });
       }
-      var z = i(82314),
-        D = i(32232),
-        w = i.n(D),
+      var y = i(82314),
+        z = i(32232),
+        w = i.n(z),
         v = i(64753),
         R = i(64238),
         L = i.n(R),
@@ -298,45 +298,8 @@
             })
           : "--";
       }
-      var le = i(39049),
-        ge = i(75659),
-        he = i(11526);
-      const ue = t.createContext({ depth: 0 });
-      var Pe = i(11820);
-      function pe(e) {
-        const { level: n = "auto", className: i, color: c } = e,
-          a = (function (e, n) {
-            if ("auto" === e && 0 === n) return "h1";
-            const i = "auto" === e ? n.toString() : e;
-            if (!/^[1-6]$/.test(i))
-              return "auto" === e
-                ? (console.error(
-                    '<Section> nesting has exceeded "h6" for headings.',
-                  ),
-                  "h6")
-                : (console.error(
-                    `Attempt to render invalid heading level, "${i}".`,
-                  ),
-                  "h1");
-            return "h" + i;
-          })(n, (0, t.useContext)(ue).depth);
-        return (0, r.jsx)(a, {
-          ...(0, he.mz)(
-            { ...e, className: L()((0, Pe.T)(), le.Heading, i) },
-            _e,
-          ),
-        });
-      }
-      const _e = [
-        ...l.U6,
-        ...ge.L,
-        {
-          prop: "size",
-          responsive: !0,
-          className: (e) => le[`HeadingSize-${e}`],
-        },
-      ];
-      function be(e) {
+      var le = i(59805);
+      function ge(e) {
         const { nPackageID: n } = e;
         return (0, r.jsxs)(r.Fragment, {
           children: [
@@ -360,7 +323,7 @@
               direction: "column",
               paddingBottom: "4",
               children: [
-                (0, r.jsx)(pe, {
+                (0, r.jsx)(le.D, {
                   size: "7",
                   children: x.g.Localize(
                     "#SinglePackagePricing_Right_Help_Title",
@@ -380,7 +343,7 @@
             (0, r.jsxs)(d.s, {
               direction: "column",
               children: [
-                (0, r.jsx)(pe, {
+                (0, r.jsx)(le.D, {
                   size: "7",
                   children: x.g.Localize("#SinglePackagePricing_Right_FAQ"),
                 }),
@@ -412,11 +375,11 @@
           ],
         });
       }
-      var xe = i(18715),
-        Ce = i.n(xe),
-        je = i(16676),
-        me = i(22797);
-      function ke(e) {
+      var he = i(18715),
+        ue = i.n(he),
+        Pe = i(16676),
+        pe = i(22797);
+      function _e(e) {
         const { nPackageID: n } = e,
           i = (0, H.d$)(n),
           [c, a, s] = (0, v.uD)(),
@@ -424,19 +387,19 @@
           [d, l] = (0, t.useState)(!1);
         return i
           ? (0, r.jsxs)("div", {
-              className: (0, ie.A)(Ce().ToolbarInfo, Ce().Visible),
+              className: (0, ie.A)(ue().ToolbarInfo, ue().Visible),
               children: [
                 (0, r.jsx)("div", {
-                  className: Ce().ProposalStatus,
+                  className: ue().ProposalStatus,
                   children: (0, r.jsx)(Q.QD, { packageID: n }),
                 }),
                 (0, r.jsxs)("div", {
-                  className: Ce().Buttons,
+                  className: ue().Buttons,
                   children: [
                     (0, r.jsx)(Q.m2, { packageID: n, bShowCancel: !1 }),
-                    (0, r.jsx)(je.$n, {
+                    (0, r.jsx)(Pe.$n, {
                       onClick: a,
-                      className: (0, ie.A)(Ce().Button),
+                      className: (0, ie.A)(ue().Button),
                       children: (0, O.we)(
                         "#PricingDashboard_CancelPriceProposal",
                       ),
@@ -454,7 +417,7 @@
                         },
                         children:
                           d &&
-                          (0, r.jsx)(me.t, {
+                          (0, r.jsx)(pe.t, {
                             string: (0, O.we)("#ImageUpload_Processing"),
                           }),
                       }),
@@ -465,8 +428,8 @@
             })
           : null;
       }
-      const Se = (0, h.FB)();
-      function fe(e) {
+      const be = (0, h.FB)();
+      function xe(e) {
         const { nPackageID: n, appids: i } = e,
           t = (0, H.Zz)();
         (0, B.h)(t);
@@ -492,14 +455,14 @@
                     className: "adminRightCol",
                     children: (0, r.jsx)("div", {
                       className: "panel",
-                      children: (0, r.jsx)(be, { nPackageID: a }),
+                      children: (0, r.jsx)(ge, { nPackageID: a }),
                     }),
                   }),
                 ],
               }),
               (0, r.jsx)("div", {
                 className: "",
-                children: (0, r.jsx)(ye, {
+                children: (0, r.jsx)(Ce, {
                   nPackageID: a,
                   appids: i.map(Number.parseInt),
                 }),
@@ -508,7 +471,7 @@
           }),
         });
       }
-      function ye(e) {
+      function Ce(e) {
         const { nPackageID: n, appids: i } = e,
           c = (0, p.cT)(),
           {
@@ -609,13 +572,13 @@
           (0, I.Sm)([n]);
         }, [n]);
         const k = [
-          Se.accessor("nPublishedPrice", {
+          be.accessor("nPublishedPrice", {
             header: (0, O.we)("#PackagePricing_Col_CurPrice"),
             meta: { cellClassname: L()(te().CurrentPrice) },
             size: 120,
             cell: ae,
           }),
-          Se.accessor(h ? "nProposedPrice" : "strPriceKey", {
+          be.accessor(h ? "nProposedPrice" : "strPriceKey", {
             header: (0, O.we)(
               C
                 ? "#PackagePricing_Col_Approved"
@@ -625,7 +588,7 @@
             size: 280,
             cell: h ? se : $.sh,
           }),
-          Se.accessor(h ? "nProposedPrice" : "strPriceKey", {
+          be.accessor(h ? "nProposedPrice" : "strPriceKey", {
             header: (0, O.we)("#PackagePricing_Col_MaxDiscount"),
             meta: {
               cellClassname: L()(te().MaxDiscount),
@@ -669,7 +632,7 @@
                                     "#PricingDashboard_Select_Price",
                                   ),
                                 }),
-                                (0, r.jsx)(ze, { usdRow: a[P.CS] }),
+                                (0, r.jsx)(je, { usdRow: a[P.CS] }),
                               ],
                             }),
                             (0, r.jsxs)(d.s, {
@@ -689,7 +652,7 @@
                                     }),
                                   ],
                                 }),
-                                (0, r.jsx)(De, {
+                                (0, r.jsx)(me, {
                                   nPackageID: n,
                                   oPricingGuideline: c,
                                 }),
@@ -710,7 +673,7 @@
                         M().PackagePricingContext,
                       ),
                       columns: [
-                        Se.accessor("eCurrencyCode", {
+                        be.accessor("eCurrencyCode", {
                           header: (0, O.we)("#PackagePricing_Col_Currency"),
                           size: 200,
                           cell: f,
@@ -729,12 +692,12 @@
                         M().PackagePricingContext,
                       ),
                       columns: [
-                        Se.accessor("eRegionCode", {
+                        be.accessor("eRegionCode", {
                           header: (0, O.we)("#PackagePricing_Col_Region"),
                           size: 200,
-                          cell: y,
+                          cell: D,
                         }),
-                        Se.accessor("eCurrencyCode", {
+                        be.accessor("eCurrencyCode", {
                           header: (0, O.we)("#PackagePricing_Col_Currency"),
                           size: 100,
                           cell: f,
@@ -754,12 +717,12 @@
                           M().PackagePricingContext,
                         ),
                         columns: [
-                          Se.accessor("strCountryOverride", {
+                          be.accessor("strCountryOverride", {
                             header: (0, O.we)("#PackagePricing_Col_Country"),
                             size: 200,
                             cell: oe,
                           }),
-                          Se.accessor("eCurrencyCode", {
+                          be.accessor("eCurrencyCode", {
                             header: (0, O.we)("#PackagePricing_Col_Currency"),
                             size: 100,
                             cell: f,
@@ -771,16 +734,16 @@
                         stickyHeader: !0,
                       }),
                     (0, r.jsx)(W.BL, { bReloadPageOnSave: !0 }),
-                    (0, r.jsx)(ke, { nPackageID: n }),
+                    (0, r.jsx)(_e, { nPackageID: n }),
                   ],
                 }),
               ],
             });
       }
-      function ze(e) {
+      function je(e) {
         const { usdRow: n } = e,
           { fnApplyGuidelines: i } = (0, p.gC)((0, H.$i)());
-        return (0, r.jsx)(z.e, {
+        return (0, r.jsx)(y.e, {
           strButton: x.g.Localize("#PricingDashboard_Select_Price_button"),
           strTooltip: x.g.Localize(
             "#PricingDashboard_Select_Price_button_ttip",
@@ -795,7 +758,7 @@
           bCanSetToFree: n.bCanSetToFree,
         });
       }
-      function De(e) {
+      function me(e) {
         const { nPackageID: n, oPricingGuideline: i } = e,
           [t, c, a] = (0, v.uD)(),
           s = (0, v.CH)();
@@ -818,10 +781,10 @@
           ],
         });
       }
-      var we = i(92724);
-      function ve(e) {
+      var ke = i(92724);
+      function Se(e) {
         return (
-          t.use((0, we.u)()),
+          t.use((0, ke.u)()),
           (0, r.jsx)(c.dO, {
             children: (0, r.jsxs)(N.jY, {
               children: [
@@ -830,7 +793,7 @@
                   children: (0, r.jsx)(o.X, {
                     config: {
                       "packageadmin-price-editor": (e) =>
-                        (0, r.jsx)(fe, { ...e }),
+                        (0, r.jsx)(xe, { ...e }),
                     },
                   }),
                 }),
@@ -840,6 +803,50 @@
           })
         );
       }
+    },
+    59805: (e, n, i) => {
+      "use strict";
+      i.d(n, { D: () => u });
+      var r = i(7850),
+        t = i(39049),
+        c = i(75659),
+        a = i(20187),
+        s = i(11526),
+        o = i(90626);
+      const d = o.createContext({ depth: 0 });
+      var l = i(11820),
+        g = i(64238),
+        h = i.n(g);
+      function u(e) {
+        const { level: n = "auto", className: i, color: c } = e,
+          a = (function (e, n) {
+            if ("auto" === e && 0 === n) return "h1";
+            const i = "auto" === e ? n.toString() : e;
+            if (!/^[1-6]$/.test(i))
+              return "auto" === e
+                ? (console.error(
+                    '<Section> nesting has exceeded "h6" for headings.',
+                  ),
+                  "h6")
+                : (console.error(
+                    `Attempt to render invalid heading level, "${i}".`,
+                  ),
+                  "h1");
+            return "h" + i;
+          })(n, (0, o.useContext)(d).depth);
+        return (0, r.jsx)(a, {
+          ...(0, s.mz)({ ...e, className: h()((0, l.T)(), t.Heading, i) }, P),
+        });
+      }
+      const P = [
+        ...a.U6,
+        ...c.L,
+        {
+          prop: "size",
+          responsive: !0,
+          className: (e) => t[`HeadingSize-${e}`],
+        },
+      ];
     },
     28491: (e, n, i) => {
       "use strict";

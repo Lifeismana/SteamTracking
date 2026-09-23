@@ -398,6 +398,7 @@
     chunkid: (module) => {
       module.exports = {
         SimpleModalDialog: "_3ej4mcyhVunlvw3BjUXtel",
+        WideMode: "_1oLxPrvbIeJJ1d96fhJvOI",
         SimpleModalDialogHeader: "_1w-TUMWBEOX_zsSa-BBhK8",
         SimpleModalDialogTitle: "_2tpBIlq2yGQqKcloht-UiJ",
         XButton: "RC4JznqJb34yCm04FKk0I",
@@ -8244,6 +8245,19 @@
           return `${_._.BASE_URL_SHARED_CDN}community_assets/images/apps/${_}/${_}`;
       }
       const _ = (_) => _(_, "globalpercentages");
+      function _(_) {
+        return {
+          ..._,
+          groups: _.groups.map((_) =>
+            _._ === _
+              ? {
+                  ..._,
+                  name: "Base game",
+                }
+              : _,
+          ),
+        };
+      }
       function _(_, _) {
         return {
           queryKey: _(_),
@@ -8323,6 +8337,7 @@
               })(_, _, _);
             return _;
           },
+          select: _,
           staleTime: 864e5,
           area: "achievements",
         };
@@ -8390,70 +8405,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const {
-            size: _ = "3",
-            loading: _ = !0,
-            children: _,
-            color: _,
-            variant: _,
-            ..._
-          } = _,
-          _ = (0, _._)("LoadingSpinner", _);
-        return _ || !_
-          ? (0, _.jsxs)(_._, {
-              position: "relative",
-              ..._,
-              width: "fit-content",
-              children: [
-                (0, _.jsx)("div", {
-                  "data-visibility": !_,
-                  className: _.ChildContainer,
-                  children: _,
-                }),
-                _ &&
-                  (0, _.jsx)(_._, {
-                    position: "absolute",
-                    inset: "0",
-                    justify: "center",
-                    align: "center",
-                    children: (0, _.jsx)(_, {
-                      size: _,
-                      color: _,
-                      variant: _,
-                    }),
-                  }),
-              ],
-            })
-          : (0, _.jsx)(_, {
-              size: _,
-              color: _,
-              variant: _,
-              ..._,
-            });
-      }
-      function _(_) {
-        const { className: _, color: _, ..._ } = (0, _._)(_, _);
-        return (0, _.jsx)("div", {
-          "data-accent-color": _,
-          className: _()(_, _.Spinner),
-          ..._,
-        });
-      }
-      const _ = [
-        ..._._,
-        {
-          prop: "size",
-          responsive: !0,
-          className: (_) => _[`Size-${_}`],
-        },
-        {
-          prop: "variant",
-          className: (_) => _[`Variant-${_}`],
-        },
-      ];
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
         _.preventDefault();
       }
       const _ = [
@@ -8500,7 +8451,7 @@
             } = _,
             _ = (0, _._)(),
             _ = _
-              ? (0, _.jsx)(_, {
+              ? (0, _.jsx)(_._, {
                   size: _,
                   color: _,
                   variant: "bright",
@@ -9197,6 +9148,83 @@
       function _() {
         return _.TextEntry;
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            size: _ = "3",
+            loading: _ = !0,
+            children: _,
+            color: _,
+            variant: _,
+            ..._
+          } = _,
+          _ = (0, _._)("LoadingSpinner", _);
+        return _ || !_
+          ? (0, _.jsxs)(_._, {
+              position: "relative",
+              ..._,
+              width: "fit-content",
+              children: [
+                (0, _.jsx)("div", {
+                  "data-visibility": !_,
+                  className: _.ChildContainer,
+                  children: _,
+                }),
+                _ &&
+                  (0, _.jsx)(_._, {
+                    position: "absolute",
+                    inset: "0",
+                    justify: "center",
+                    align: "center",
+                    children: (0, _.jsx)(_, {
+                      size: _,
+                      color: _,
+                      variant: _,
+                    }),
+                  }),
+              ],
+            })
+          : (0, _.jsx)(_, {
+              size: _,
+              color: _,
+              variant: _,
+              ..._,
+            });
+      }
+      function _(_) {
+        const { className: _, color: _, ..._ } = (0, _._)(_, _);
+        return (0, _.jsx)("div", {
+          "data-accent-color": _,
+          className: _()(_, _.Spinner),
+          ..._,
+        });
+      }
+      const _ = [
+        ..._._,
+        {
+          prop: "size",
+          responsive: !0,
+          className: (_) => _[`Size-${_}`],
+        },
+        {
+          prop: "variant",
+          className: (_) => _[`Variant-${_}`],
+        },
+      ];
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -9933,6 +9961,7 @@
           navID: _,
           children: _,
           strTitle: _,
+          wideMode: _,
           ..._
         } = _;
         return (0, _.jsx)(_, {
@@ -9940,7 +9969,7 @@
           navID: _ ?? "SimpleModalDialog",
           ..._,
           children: (0, _.jsxs)("div", {
-            className: _()(_, _().SimpleModalDialog),
+            className: _()(_, _().SimpleModalDialog, _ && _().WideMode),
             children: [
               " ",
               (0, _.jsxs)(_._, {
@@ -9965,6 +9994,90 @@
             ],
           }),
         });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      class _ {
+        static ParseCSVFile(_, _) {
+          return new Promise((_, _) => {
+            const _ = {
+              header: !0,
+              skipEmptyLines: "greedy",
+              complete: _,
+              error: (_) =>
+                _({
+                  errors: [_],
+                }),
+              transformHeader: _,
+            };
+            _().parse(_, _);
+          });
+        }
+        static ReadFile(_) {
+          return new Promise((_, _) => {
+            const _ = new FileReader();
+            (_.onload = (_) => _(_.result)), _.readAsText(_);
+          });
+        }
+        static WriteFile(_, _) {
+          let _ = document.createElement("a");
+          if (navigator.msSaveBlob) navigator.msSaveBlob(_, _);
+          else {
+            const _ = window.URL.createObjectURL(_);
+            _.href = _;
+          }
+          __webpack_require__.setAttribute("download", _),
+            __webpack_require__.click();
+          try {
+            document.removeChild(_);
+          } catch (_) {}
+        }
+        static WriteCSVToFile(_, _, _, _) {
+          const _ = _
+              ? _().unparse(
+                  {
+                    fields: _,
+                    data: _,
+                  },
+                  {
+                    header: !0,
+                  },
+                )
+              : _().unparse(_, {
+                  header: !0,
+                }),
+            _ = 1 == _ ? ["\ufeff" + _] : [_];
+          _.WriteFile(
+            new Blob(_, {
+              type: "text/csv:charset=utf-8;",
+            }),
+            _,
+          );
+        }
+        static m_DummyValueForQuestionHack = 0;
+        static WriteXMLToFile(_, _) {
+          const _ = () =>
+            this.m_DummyValueForQuestionHack ? "never returned" : "?";
+          let _ =
+            "<" +
+            __webpack_require__() +
+            'xml version="1.0" encoding="UTF-8" ' +
+            __webpack_require__() +
+            ">\n";
+          (_ += new XMLSerializer().serializeToString(_)),
+            _.WriteFile(
+              new Blob([_], {
+                type: "application/xml:charset=utf-8;",
+              }),
+              _,
+            );
+        }
       }
     },
   },

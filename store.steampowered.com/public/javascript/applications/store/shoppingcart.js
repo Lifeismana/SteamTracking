@@ -42,6 +42,7 @@
     5598: (e) => {
       e.exports = {
         SimpleModalDialog: "_3ej4mcyhVunlvw3BjUXtel",
+        WideMode: "_1oLxPrvbIeJJ1d96fhJvOI",
         SimpleModalDialogHeader: "_1w-TUMWBEOX_zsSa-BBhK8",
         SimpleModalDialogTitle: "_2tpBIlq2yGQqKcloht-UiJ",
         XButton: "RC4JznqJb34yCm04FKk0I",
@@ -168,12 +169,12 @@
     },
     10039: (e, a, t) => {
       "use strict";
-      t.r(a), t.d(a, { CartErrorModal: () => H, default: () => y });
+      t.r(a), t.d(a, { CartErrorModal: () => y, default: () => N });
       var n = t(7850),
         i = t(98682),
         r = t(83392),
         o = t(20187),
-        s = t(53965),
+        s = t(56347),
         l = t(82861),
         c = t(76217),
         A = t(1270),
@@ -224,37 +225,37 @@
         };
       }
       var S = t(60014),
-        j = t(90626),
-        _ = t(31292),
+        _ = t(90626),
+        j = t(31292),
         M = t(13904),
         U = t(79443),
-        x = t(38858),
-        I = t(85906),
+        I = t(38858),
+        x = t(85906),
         R = t(65244),
-        K = t(8364),
-        w = t(42798),
+        w = t(8364),
+        K = t(42798),
         T = t(52169),
-        N = t(46988);
-      function y(e) {
+        J = t(46988);
+      function N(e) {
         const { closeCart: a, lineItemIDs: t, bPackagesReplaced: i } = e,
-          r = (0, I.S5)(),
+          r = (0, x.S5)(),
           { data: o } = (0, R.UI)(),
-          { data: s } = (0, K.g7)(),
-          l = (0, x.Yj)(t),
+          { data: s } = (0, w.g7)(),
+          l = (0, I.Yj)(t),
           A = (0, S.aL)(`${d.TS.STORE_BASE_URL}cart/`);
         if (
-          (j.useEffect(() => {
+          (_.useEffect(() => {
             l && 0 == l?.length && a();
           }, [l, a]),
           !l || !r)
         )
           return null;
-        const B = I.Q8.Localize(
+        const B = x.Q8.Localize(
           i ? "#Cart_UpdatedYourCart" : "#Cart_AddedToYourCart",
         );
-        return (0, n.jsx)(w.wW, {
+        return (0, n.jsx)(K.wW, {
           validateCart: s,
-          eDisplayType: w.WA.k_ECartDisplayType_Modal,
+          eDisplayType: K.WA.k_ECartDisplayType_Modal,
           children: (0, n.jsx)(u.s, {
             onClose: a,
             navID: "CartModal",
@@ -262,23 +263,23 @@
             children: (0, n.jsxs)("div", {
               className: T.ShoppingCartModalContent,
               children: [
-                (0, n.jsx)(N.p, {
+                (0, n.jsx)(J.p, {
                   lineItems: l,
                   cartValidation: s,
                   scrollable: !0,
                 }),
-                (0, n.jsx)(k, { lineItems: l, cartValidation: s }),
+                (0, n.jsx)(H, { lineItems: l, cartValidation: s }),
                 (0, n.jsxs)(c.Z, {
                   className: T.ShoppingCartModalBtns,
                   children: [
                     (0, n.jsx)(g.Oh, {
                       onClick: a,
-                      children: I.Q8.Localize("#Cart_ContinueShopping"),
+                      children: x.Q8.Localize("#Cart_ContinueShopping"),
                     }),
                     (0, n.jsx)(g.x0, {
                       autoFocus: !0,
                       href: A,
-                      children: I.Q8.Localize(
+                      children: x.Q8.Localize(
                         "#Cart_ViewMyCart",
                         o?.line_items?.length ?? l.length,
                       ),
@@ -290,9 +291,9 @@
           }),
         });
       }
-      function H(e) {
+      function y(e) {
         const { result: a, onDismiss: t } = e;
-        return (0, I.S5)()
+        return (0, x.S5)()
           ? (0, n.jsx)(u.s, {
               onClose: t,
               navID: "CartErrorModal",
@@ -302,11 +303,11 @@
                 children: [
                   (0, n.jsx)("div", {
                     className: T.ErrorModalMessage,
-                    children: I.Q8.Localize("#Cart_ErrorUpdating"),
+                    children: x.Q8.Localize("#Cart_ErrorUpdating"),
                   }),
                   (0, n.jsx)("div", {
                     className: T.ErrorModalCode,
-                    children: a ? I.Q8.Localize("#Cart_ErrorCode", a) : "",
+                    children: a ? x.Q8.Localize("#Cart_ErrorCode", a) : "",
                   }),
                   (0, n.jsx)("div", {
                     className: T.ErrorModalBottom,
@@ -321,10 +322,10 @@
             })
           : null;
       }
-      function k(e) {
+      function H(e) {
         const { cartValidation: a, lineItems: t } = e,
-          c = j.useRef(!1),
-          [d, g] = j.useState(!1),
+          c = _.useRef(!1),
+          [d, g] = _.useState(!1),
           { gifteeHint: u, gifteePlayerDetails: C } = v(),
           f = (0, U.EJ)(),
           Q = (function () {
@@ -348,10 +349,10 @@
           })(),
           D = (0, M.C)(),
           S = C?.public_data,
-          x = a?.cart_items;
+          I = a?.cart_items;
         let R = !(d || !u?.nGifteeAccountID || !S || f || !a?.cart_items);
         if (R) {
-          const e = new Map(x.map((e) => [e.line_item_id, e]));
+          const e = new Map(I.map((e) => [e.line_item_id, e]));
           R = !!t.find(
             (a) =>
               !a.gift_info?.accountid_giftee &&
@@ -359,15 +360,15 @@
           );
         }
         if (
-          (j.useEffect(() => {
+          (_.useEffect(() => {
             R &&
               !c.current &&
-              ((0, _.D)()?.AddEvent(A.Xm.K4), (c.current = !0));
+              ((0, j.D)()?.AddEvent(A.Xm.K4), (c.current = !0));
           }, [R]),
           !R)
         )
           return null;
-        const K = (0, n.jsxs)("a", {
+        const w = (0, n.jsxs)("a", {
           href: (0, l.n)(C),
           target: "_blank",
           rel: "noreferrer",
@@ -394,7 +395,7 @@
               as: "div",
               align: "center",
               className: T.GifteeHint,
-              children: I.Q8.LocalizeReact("#Cart_GifteeHint_Wishlist", K),
+              children: x.Q8.LocalizeReact("#Cart_GifteeHint_Wishlist", w),
             }),
             (0, n.jsxs)(r.s, {
               gap: "2",
@@ -405,7 +406,7 @@
                   size: "1",
                   color: "dull",
                   onClick: () => {
-                    (0, _.D)()?.AddEvent(A.Xm.En), Q.mutate(null);
+                    (0, j.D)()?.AddEvent(A.Xm.En), Q.mutate(null);
                   },
                   children: B.Z.Localize("#Button_No"),
                 }),
@@ -422,7 +423,7 @@
                         },
                         gidCoupon: e.gidcoupon_applied,
                       });
-                    Q.mutate(u), g(!0), (0, _.D)()?.AddEvent(A.Xm.xh);
+                    Q.mutate(u), g(!0), (0, j.D)()?.AddEvent(A.Xm.xh);
                   },
                   children: B.Z.Localize("#Button_Yes"),
                 }),
@@ -547,14 +548,15 @@
           navID: r,
           children: c,
           strTitle: d,
-          ...g
+          wideMode: g,
+          ...u
         } = e;
         return (0, n.jsx)(l.y, {
           onClose: a,
           navID: r ?? "SimpleModalDialog",
-          ...g,
+          ...u,
           children: (0, n.jsxs)("div", {
-            className: o()(t, A().SimpleModalDialog),
+            className: o()(t, A().SimpleModalDialog, g && A().WideMode),
             children: [
               " ",
               (0, n.jsxs)(i.Z, {

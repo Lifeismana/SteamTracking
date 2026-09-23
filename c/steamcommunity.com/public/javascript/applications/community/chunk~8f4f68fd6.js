@@ -5957,6 +5957,12 @@
         _.k_EFamilyQueryInviteToFamily;
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _(_) {
+        const _ = (null == _ ? void 0 : _.reported_content_id)
+          ? _.reported_content_id
+          : `${null == _ ? void 0 : _.subject_type}-${null == _ ? void 0 : _.subject_group_id}-${null == _ ? void 0 : _.subject_id}`;
+        return `${_._.COMMUNITY_BASE_URL}my/reportedcontent/${_}`;
+      }
       const _ = {
         [_._._]: {
           displayNameLoc: "#SteamNotification_HelpRequest_Author",
@@ -6029,8 +6035,7 @@
                 return "#Notification_ReportedContentAction_Unknown";
             }
           },
-          link: (_) =>
-            `${_._.COMMUNITY_BASE_URL}my/reportedcontent/${_.subject_type}-${_.subject_group_id}-${_.subject_id}`,
+          link: (_) => _(_),
         },
       };
       function _(_) {
@@ -6606,9 +6611,7 @@
             case _._._:
               const _ = _(_),
                 _ = null == _ ? void 0 : _.report_id,
-                _ = null == _ ? void 0 : _.subject_type,
-                _ = null == _ ? void 0 : _.subject_group_id,
-                _ = null == _ ? void 0 : _.subject_id,
+                _ = _(_),
                 _ = `contentreport_${_}`;
               let _ = _.findIndex((_) => _.rollup_key == _);
               if (-1 == _)
@@ -6621,12 +6624,12 @@
                   rgunread: _.read ? [] : [_.notification_id],
                   rgread: _.read ? [_.notification_id] : [],
                   bSendToCallbackAsNew: _,
-                  url: `${_._.COMMUNITY_BASE_URL}my/reportedcontent/${_}-${_}-${_}`,
+                  url: _,
                 });
               else {
                 let _ = _[_];
                 this.BReplaceRollupItem(_, _.item) &&
-                  ((_.url = `${_._.COMMUNITY_BASE_URL}my/reportedcontent/${_}-${_}-${_}`),
+                  ((_.url = _),
                   (_.item = _),
                   (_.timestamp = _.timestamp),
                   (_.bSendToCallbackAsNew = _)),
@@ -6812,7 +6815,7 @@
         );
       }
       function _(_, _) {
-        var _, _, _, _, _, _, _, _, _, _, _, _, _, _;
+        var _, _, _, _, _, _, _, _, _, _, _, _, _, _, _;
         let _ = _(_);
         if (!_) return null;
         switch (_) {
@@ -6900,6 +6903,8 @@
           case _._._:
             return {
               report_id: null !== (_ = _.report_id) && void 0 !== _ ? _ : "",
+              reported_content_id:
+                null !== (_ = _.reported_content_id) && void 0 !== _ ? _ : "",
               subject_type:
                 null !== (_ = _.subject_type) && void 0 !== _ ? _ : 0,
               subject_group_id:

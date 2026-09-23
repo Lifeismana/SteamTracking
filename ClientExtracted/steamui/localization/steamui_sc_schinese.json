@@ -516,6 +516,7 @@
     "Overlay_ClipHint_1": "您的剪辑已保存至您的“蒸汽平台录像及截图”中",
     "Overlay_ClipHint_2": "要管理/编辑/分享您所有的录像，请从客户端菜单转至%1$s，或在下方的蒸汽平台叠加界面菜单中选择 %2$s。",
     "HardwareDeviceName_Generic": "蒸汽平台设备",
+    "HardwarePromo_FrameHLAlyx_Redeem_InvalidParam": "提供的序列号无效。如果此问题仍然存在，请联系蒸汽平台客服。",
     "SteamUI_Dialog_SystemInfo_SavedHardware_Desc": "在您将自己的 PC 配置添加到评测中前，我们会检测并存储您相关的详情。蒸汽平台检测到您系统的软硬件如下：",
     "SteamUI_Dialog_SystemInfo_SavedHardware_Error": "保存此信息到蒸汽平台时出错。请稍后重试。",
     "SteamUI_Dialog_SystemInfo_NameHardware_Desc": "保存此信息会将其存储在蒸汽平台服务器上，您可以将信息与自己的用户评测关联。"

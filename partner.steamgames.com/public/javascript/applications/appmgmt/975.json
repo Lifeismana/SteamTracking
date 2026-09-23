@@ -62,6 +62,7 @@
     "Reservation_OnRegularReserveForModel": "Jste v rezervační frontě pro model/balíček %1$s",
     "Reservation_PostShuffle_TAndC": "Platí <1>zde popsané podmínky</1>.",
     "machine_dummy": "dummy",
+    "PriceDisplay_YourPrice": "Vaše cena:",
     "PriceGrid_NormalPrice": "BĚŽNÁ CENA",
     "PriceGrid_RecentPrice": "NEJNIŽŠÍ CENA",
     "PriceGrid_CurrentPrice": "AKTUÁLNÍ CENA",

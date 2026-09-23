@@ -3527,6 +3527,7 @@
               bIsPreview: _,
               elSideBars: _,
               version: _,
+              language: _,
             } = _,
             _ = (0, _._)();
           return (
@@ -3584,6 +3585,7 @@
                                 text: _,
                                 bShowErrorInfo: _,
                                 version: _ || "0",
+                                language: _,
                               }),
                             }),
                           ],
@@ -3850,6 +3852,7 @@
                       ),
                       version:
                         "" + __webpack_require__.GetLastTimeLanguageUpdated(_),
+                      language: _,
                     }),
                     (0, _.jsx)(_, {
                       draft: _,

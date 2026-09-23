@@ -436,14 +436,14 @@
               (0, o.jsxs)("div", {
                 className: g[0].unique_id,
                 children: [
-                  (0, o.jsx)(N.bk, {
+                  (0, o.jsx)(N.b, {
                     reservationDef: g[0],
                     hardwareDetail: m,
                     bPSULessModel: !1,
                     reservedHardwareDetail: v,
                   }),
                   w &&
-                    (0, o.jsx)(N.pc, {
+                    (0, o.jsx)(N.p, {
                       section: d,
                       reservationDef: g[0],
                       hardwareDetail: m,
@@ -451,7 +451,7 @@
                     }),
                   _ &&
                     _?.allow_purchase_in_country &&
-                    (0, o.jsx)(N.bk, {
+                    (0, o.jsx)(N.b, {
                       reservationDef: g[0],
                       hardwareDetail: _,
                       bPSULessModel: !0,
@@ -695,7 +695,7 @@
         be = t(7193),
         Ce = t(39199),
         je = t(60860),
-        ke = t(28800),
+        ke = t(15604),
         Ne = t(40353);
       function Ge(e) {
         const { eventModel: n, nEventBadgeID: t } = e,

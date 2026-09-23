@@ -57,6 +57,17 @@
     },
     chunkid: (module) => {
       module.exports = {
+        AutoAdvanceContent: "_1ot7iONiZzKf4TAHgPi3qY",
+        Paused: "XXYx3DB0gLYbEuuCX_8Q7",
+        Disabled: "_13IEBrvx5g_lHE4QFLKYgW",
+        AutoAdvanceLabel: "_2jjPGobp_uYqLu7LCVWXx8",
+        AutoAdvanceBar: "_3ew7tsjPX6rYyFcWm_Ohz8",
+        AutoAdvanceCheckbox: "_1YFnAY801Coag4pbippyH6",
+        AutoAdvanceCheckboxCtn: "Fy_-Cbz1CV38fntOKZ5Qo",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         "duration-app-launch": "800ms",
         narrowWidth: "500px",
         carouselNavButton: "_13rGo4vexAbY9-CP7FsLOg",
@@ -67,6 +78,7 @@
         sliderBody: "_2M3SnYGvMvplWUC8yGhowo",
         slideTrayCustomize: "_2VUpHDtxN8lR1LDahY_cI2",
         breadcrumbContainer: "_3HjnEmKg66o82ah74EIvmq",
+        autoAdvanceRow: "_3M0zxbf96I8oQlbNsHboy4",
         breadcrumbContainerTemplate: "_3dMffY_iRZXHjZmXN9aLej",
         pip: "_3Byg6Wc4TX36gkUptUIk72",
         pipList: "LY1m24ODS7AFRuzclt0Sl",
@@ -1011,8 +1023,149 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = "bTrailerCarouselAutoAdvance",
+        _ = 0,
+        _ = 1,
+        _ = 2,
+        _ = 3,
+        _ = 4,
+        _ = 5,
+        _ = 1e4;
+      function _(_) {
+        const {
+            className: _,
+            currentItemKey: _,
+            autoAdvanceMsec: _,
+            fnAdvance: _,
+            enabled: _,
+            pauseReason: _,
+            countdownToken: _ = "#SaleTrailerCarousel_NextGameInSeconds",
+          } = _,
+          _ = _.useMemo(() => {
+            const _ = (0, _._)(_);
+            return !_ || "true" === _?.toLowerCase();
+          }, []),
+          [_, _] = _.useState(_),
+          _ = void 0 !== _ ? _ : _,
+          [_, _] = _.useState(_),
+          _ = void 0 !== _,
+          _ = (function (_) {
+            switch (_) {
+              case _:
+                return (0, _._)("#SaleTrailerCarousel_AutoAdvanceVideoPaused");
+              case _:
+              case _:
+                return (0, _._)("#SaleTrailerCarousel_AutoAdvanceHover");
+            }
+            return;
+          })(_),
+          _ = _ && _ && !_ && _ > 0 && _ > 0;
+        (0, _._)(
+          () => {
+            const _ = _ - 30;
+            _ <= 0 ? (_(), _(_)) : _(Math.max(_, 0));
+          },
+          30,
+          [_],
+          _,
+        );
+        const _ = _.useCallback(
+          (_) => {
+            (0, _._)(_, String(_), 3650), _(_), _(_);
+          },
+          [_],
+        );
+        return (
+          _.useEffect(() => {
+            _(_);
+          }, [_, _]),
+          (0, _.jsxs)("div", {
+            className: _,
+            children: [
+              (0, _.jsxs)("div", {
+                className: (0, _._)(
+                  _().AutoAdvanceContent,
+                  (!_ || !_) && _().Disabled,
+                  _ && _().Paused,
+                ),
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _().AutoAdvanceLabel,
+                    children: _ && _ ? _ : (0, _._)(_, Math.ceil(_ / 1e3)),
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _().AutoAdvanceBar,
+                    style: {
+                      "--auto-advance-ratio": 100 - (_ / _) * 100 + "%",
+                    },
+                  }),
+                ],
+              }),
+              (0, _.jsx)("div", {
+                className: (0, _._)(_().AutoAdvanceCheckboxCtn),
+                children: (0, _.jsx)(_._, {
+                  className: _().AutoAdvanceCheckbox,
+                  controlled: !0,
+                  checked: _,
+                  label: (0, _._)("#SaleTrailerCarousel_AutoAdvanceEnabled"),
+                  onChange: _,
+                }),
+              }),
+            ],
+          })
+        );
+      }
+      function _() {
+        const [_, _] = _.useState(!1),
+          [_, _] = _.useState(!1);
+        _.useEffect(() => {
+          const _ = () => _(document.hidden);
+          return (
+            document.addEventListener("visibilitychange", _),
+            () => document.removeEventListener("visibilitychange", _)
+          );
+        }, []);
+        const _ = _.useCallback((_) => _(!_.isIntersecting), []),
+          _ = _.useMemo(
+            () => ({
+              threshold: 0.5,
+            }),
+            [],
+          );
+        return {
+          bTabHidden: _,
+          bOffscreen: _,
+          refIntersection: (0, _._)(_, _),
+        };
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1220,13 +1373,18 @@
       }
       function _(_) {
         const _ = (0, _._)(),
+          [_, _] = _.useState(!1),
+          { bTabHidden: _, bOffscreen: _, refIntersection: _ } = (0, _._)(),
           _ = () => _.Children.count(_.children),
-          _ = __webpack_require__(),
-          _ = Math.min(__webpack_require__(), _.visibleElements);
+          _ = _(),
+          _ = Math.min(_(), _.visibleElements);
         if (!_ || !_) return null;
         const _ = _ < _,
           _ = _.hideArrows || !_,
-          _ = !_ || _.hidePips;
+          _ = !_ || _.hidePips,
+          _ = !!_.bAutoAdvance && _ && !_;
+        let _;
+        _ && !(0, _._)() ? (_ = _._) : _ ? (_ = _._) : _ && (_ = _._);
         let _ = 4 / 3,
           _ = !0;
         _.slideAspectRatio && ((_ = _.slideAspectRatio), (_ = !1));
@@ -1235,9 +1393,12 @@
           "flow-children": "row",
           className: (0, _._)(_.carouselBody, _.className, _),
           navKey: _.navKey,
+          ref: _,
+          onMouseEnter: () => _(!0),
+          onMouseLeave: () => _(!1),
           children: (0, _.jsxs)(_._, {
             visibleSlides: _.visibleElements,
-            totalSlides: __webpack_require__(),
+            totalSlides: _(),
             naturalSlideWidth: 100 * _,
             naturalSlideHeight: 100,
             step: _.visibleElements,
@@ -1252,7 +1413,6 @@
             children: [
               (0, _.jsx)(_, {
                 bHideArrows: _,
-                bAutoAdvance: _.bAutoAdvance && !_,
                 onSlide: _.onSlide,
                 arrowFill: _.arrowFill,
                 arrowStyle: _.arrowStyle,
@@ -1298,6 +1458,10 @@
                         children: _.children,
                       }),
                     })),
+              _ &&
+                (0, _.jsx)(_, {
+                  pauseReason: _,
+                }),
             ],
           }),
         });
@@ -1338,9 +1502,50 @@
         _.current && (window.clearTimeout(_.current), (_.current = null));
       }
       function _(_) {
+        const { pauseReason: _ } = _,
+          _ = _.useContext(_._),
+          [_, _] = _.useState(_.state.currentSlide),
+          [_, _] = _.useState(!0),
+          _ = _.useRef(null),
+          _ = _.useRef(_.state.currentSlide);
+        _.useEffect(() => {
+          const _ = () => {
+            const _ = _.state.currentSlide;
+            _ !== _.current &&
+              ((_.current = _),
+              _(_),
+              _.current === _
+                ? (_.current = null)
+                : null === _.current && _(!1));
+          };
+          return (
+            __webpack_require__.subscribe(_),
+            () => __webpack_require__.unsubscribe(_)
+          );
+        }, [_]);
+        const _ = _.useCallback(() => {
+          const { currentSlide: _, visibleSlides: _, totalSlides: _ } = _.state;
+          let _ = 0;
+          _ + _ < _ && (_ = Math.min(_ + _, _ - _)),
+            _ !== _ &&
+              ((_.current = _),
+              __webpack_require__.setStoreState({
+                currentSlide: _,
+              }));
+        }, [_]);
+        return (0, _.jsx)(_._, {
+          className: _.autoAdvanceRow,
+          enabled: _,
+          currentItemKey: _,
+          autoAdvanceMsec: _._,
+          fnAdvance: _,
+          pauseReason: _,
+          countdownToken: "#Carousel_AutoAdvanceNextInSeconds",
+        });
+      }
+      function _(_) {
         const {
             bHideArrows: _,
-            bAutoAdvance: _,
             children: _,
             onSlide: _,
             arrowFill: _,
@@ -1349,28 +1554,8 @@
           _ = _.useContext(_._),
           _ = _.useRef(_.state.currentSlide),
           [_, _] = _.useState(null),
-          [_, _] = _.useState(!!_),
-          _ = _.useRef(null),
           _ = _.useRef(null);
         _.useEffect(() => {
-          const _ = () => {
-            _.current = window.setTimeout(() => {
-              if (_.current) {
-                _(_);
-                let _ = 0;
-                _.state.currentSlide + _.state.visibleSlides <
-                  _.state.totalSlides &&
-                  (_ = Math.min(
-                    _.state.currentSlide + _.state.visibleSlides,
-                    _.state.totalSlides - _.state.visibleSlides,
-                  )),
-                  _.setStoreState({
-                    currentSlide: _,
-                  });
-              }
-            }, 8e3);
-          };
-          _ && _();
           const _ = () => {
             const _ = _.current,
               _ = _.state.currentSlide;
@@ -1378,16 +1563,15 @@
             (_.current = window.setTimeout(() => {
               _.current && (_(null), _(_));
             }, 1e3)),
-              (_.current = _),
-              _.current ? (_(_), _(!1)) : _ && _();
+              (_.current = _);
           };
           return (
             _.subscribe(_),
             () => {
-              _.unsubscribe(_), _(_), _(_);
+              _.unsubscribe(_), _(_);
             }
           );
-        }, [_, _]);
+        }, [_]);
         const _ = !!_ && "CarouselSliding" + _;
         return (0, _.jsxs)("div", {
           className: (0, _._)(_.sliderBody, "SliderBody", _),

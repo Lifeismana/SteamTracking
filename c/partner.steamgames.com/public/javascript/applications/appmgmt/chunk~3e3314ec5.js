@@ -1142,70 +1142,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const {
-            size: _ = "3",
-            loading: _ = !0,
-            children: _,
-            color: _,
-            variant: _,
-            ..._
-          } = _,
-          _ = (0, _._)("LoadingSpinner", _);
-        return _ || !_
-          ? (0, _.jsxs)(_._, {
-              position: "relative",
-              ..._,
-              width: "fit-content",
-              children: [
-                (0, _.jsx)("div", {
-                  "data-visibility": !_,
-                  className: _.ChildContainer,
-                  children: _,
-                }),
-                _ &&
-                  (0, _.jsx)(_._, {
-                    position: "absolute",
-                    inset: "0",
-                    justify: "center",
-                    align: "center",
-                    children: (0, _.jsx)(_, {
-                      size: _,
-                      color: _,
-                      variant: _,
-                    }),
-                  }),
-              ],
-            })
-          : (0, _.jsx)(_, {
-              size: _,
-              color: _,
-              variant: _,
-              ..._,
-            });
-      }
-      function _(_) {
-        const { className: _, color: _, ..._ } = (0, _._)(_, _);
-        return (0, _.jsx)("div", {
-          "data-accent-color": _,
-          className: _()(_, _.Spinner),
-          ..._,
-        });
-      }
-      const _ = [
-        ..._._,
-        {
-          prop: "size",
-          responsive: !0,
-          className: (_) => _[`Size-${_}`],
-        },
-        {
-          prop: "variant",
-          className: (_) => _[`Variant-${_}`],
-        },
-      ];
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
         _.preventDefault();
       }
       const _ = [
@@ -1252,7 +1188,7 @@
             } = _,
             _ = (0, _._)(),
             _ = _
-              ? (0, _.jsx)(_, {
+              ? (0, _.jsx)(_._, {
                   size: _,
                   color: _,
                   variant: "bright",
@@ -1324,6 +1260,83 @@
                 ..._,
               });
         };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            size: _ = "3",
+            loading: _ = !0,
+            children: _,
+            color: _,
+            variant: _,
+            ..._
+          } = _,
+          _ = (0, _._)("LoadingSpinner", _);
+        return _ || !_
+          ? (0, _.jsxs)(_._, {
+              position: "relative",
+              ..._,
+              width: "fit-content",
+              children: [
+                (0, _.jsx)("div", {
+                  "data-visibility": !_,
+                  className: _.ChildContainer,
+                  children: _,
+                }),
+                _ &&
+                  (0, _.jsx)(_._, {
+                    position: "absolute",
+                    inset: "0",
+                    justify: "center",
+                    align: "center",
+                    children: (0, _.jsx)(_, {
+                      size: _,
+                      color: _,
+                      variant: _,
+                    }),
+                  }),
+              ],
+            })
+          : (0, _.jsx)(_, {
+              size: _,
+              color: _,
+              variant: _,
+              ..._,
+            });
+      }
+      function _(_) {
+        const { className: _, color: _, ..._ } = (0, _._)(_, _);
+        return (0, _.jsx)("div", {
+          "data-accent-color": _,
+          className: _()(_, _.Spinner),
+          ..._,
+        });
+      }
+      const _ = [
+        ..._._,
+        {
+          prop: "size",
+          responsive: !0,
+          className: (_) => _[`Size-${_}`],
+        },
+        {
+          prop: "variant",
+          className: (_) => _[`Variant-${_}`],
+        },
+      ];
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

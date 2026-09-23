@@ -23,59 +23,6 @@
   height: 11px;
   width: 11px;
 }
-._1JFB_3Ek9uIS-ml-7C1V3 {
-  display: contents;
-  user-select: text;
-}
-._24i0Jj7bXsdJSJdDY0a4e9 {
-  height: 13px;
-  width: auto;
-}
-._2f8lQGhpOdBN1nDokNV-_v {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: start;
-  gap: 26px;
-}
-._3vIg4OosURoc-guanZbMot {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  gap: 36px;
-}
-._3o0wdHIoLEIVk2tOl2OyB1 {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 18px;
-}
-.MtttYfwYqnHlqj832CGXL {
-  padding: 0;
-  margin-left: 8px;
-}
-.MtttYfwYqnHlqj832CGXL svg {
-  width: 12px;
-  height: 12px;
-  stroke: #000;
-  fill: #000;
-}
-._1mtaTCIJfR1JZhSZpaPzUo {
-  color: red;
-}
-._2dWYzwO95xQRO7W66aSsH7 {
-  color: orange;
-}
-.HA6Hw6Hc332GoPbma_9sZ {
-  color: green;
-  width: 18px;
-  height: 18px;
-}
-._3WS1gYqe89ISF4mi7dvtBU {
-  fill: red;
-  width: 18px;
-  height: 18px;
-}
 ._3oSHTIvUhbK90D9Uvj438V {
   display: flex;
   margin-bottom: 16px;
@@ -219,7 +166,60 @@ html.responsive.touch ._3lJb_YN8uykqLcm4eG1jRF {
   color: #929699;
 }
 .ZGxYVjsUSjHLRHIWkx4-L {
-  color: #fbca7c;
+  color: #ffc53d;
+}
+._1JFB_3Ek9uIS-ml-7C1V3 {
+  display: contents;
+  user-select: text;
+}
+._24i0Jj7bXsdJSJdDY0a4e9 {
+  height: 13px;
+  width: auto;
+}
+._2f8lQGhpOdBN1nDokNV-_v {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  gap: 26px;
+}
+._3vIg4OosURoc-guanZbMot {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 36px;
+}
+._3o0wdHIoLEIVk2tOl2OyB1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 18px;
+}
+.MtttYfwYqnHlqj832CGXL {
+  padding: 0;
+  margin-left: 8px;
+}
+.MtttYfwYqnHlqj832CGXL svg {
+  width: 12px;
+  height: 12px;
+  stroke: #000;
+  fill: #000;
+}
+._1mtaTCIJfR1JZhSZpaPzUo {
+  color: red;
+}
+._2dWYzwO95xQRO7W66aSsH7 {
+  color: orange;
+}
+.HA6Hw6Hc332GoPbma_9sZ {
+  color: green;
+  width: 18px;
+  height: 18px;
+}
+._3WS1gYqe89ISF4mi7dvtBU {
+  fill: red;
+  width: 18px;
+  height: 18px;
 }
 ._2wAKy-0ZkO_vhbiQCP9MgE {
   display: flex;

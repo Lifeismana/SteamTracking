@@ -6890,6 +6890,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = _.useCallback(
@@ -6922,7 +6923,7 @@
           });
         }
         return (0, _.jsx)("a", {
-          href: _,
+          href: (0, _._)(_),
           children: _,
         });
       }
@@ -7757,7 +7758,7 @@
                 (0, _.jsxs)(_._, {
                   className: _().DiffButton,
                   onClick: () => {
-                    _(), _();
+                    null == _ || _(), _();
                   },
                   children: [
                     (0, _._)("#EventEditor_ShowDiff"),
@@ -7771,7 +7772,7 @@
                   active: _,
                   children: (0, _.jsx)(_._, {
                     closeModal: () => {
-                      __webpack_require__(), _();
+                      null == _ || __webpack_require__(), _();
                     },
                     bAlertDialog: !0,
                     bAllowFullSize: !0,
@@ -7893,6 +7894,7 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = {
         nodes: {
@@ -7985,7 +7987,7 @@
             toDOM: (_) => [
               "a",
               {
-                href: _.attrs.href,
+                href: (0, _._)(_.attrs.href),
               },
             ],
             bbCode: {
@@ -8139,7 +8141,7 @@
               return [
                 "a",
                 {
-                  href: _,
+                  href: (0, _._)(_),
                   title: _,
                   class: (0, _._)(_),
                   style: (0, _._)(_, _, _),
@@ -12386,20 +12388,25 @@
                   className: _.InfoStylesBackground,
                   children: (0, _._)("#Sale_Tabs_Editor_Frame"),
                 })
-              : _._.BFilterRequiresFeatureDemoStatic(_)
+              : _._.BFilterRequiresSteamMachineVerifiedOrPlayableStatic(_)
                 ? (0, _.jsx)("div", {
                     className: _.InfoStylesBackground,
-                    children: (0, _._)("#Sale_Tabs_Editor_Demo"),
+                    children: (0, _._)("#Sale_Tabs_Editor_Machine"),
                   })
-                : _._.BFilterRequiresUpcomingStatic(_) &&
-                    __webpack_require__.GetSaleSectionCount(
-                      "sale_item_browser",
-                    ) > 0
+                : _._.BFilterRequiresFeatureDemoStatic(_)
                   ? (0, _.jsx)("div", {
                       className: _.InfoStylesBackground,
-                      children: (0, _._)("#Sale_Tabs_Editor_Upcoming"),
+                      children: (0, _._)("#Sale_Tabs_Editor_Demo"),
                     })
-                  : null;
+                  : _._.BFilterRequiresUpcomingStatic(_) &&
+                      __webpack_require__.GetSaleSectionCount(
+                        "sale_item_browser",
+                      ) > 0
+                    ? (0, _.jsx)("div", {
+                        className: _.InfoStylesBackground,
+                        children: (0, _._)("#Sale_Tabs_Editor_Upcoming"),
+                      })
+                    : null;
       }
       function _(_) {
         const { tab: _, editModel: _ } = _,
@@ -15058,6 +15065,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { saleSection: _, editModel: _ } = _,
@@ -15067,11 +15075,30 @@
             },
             _.cap_item_count || 0,
           ]),
-          [_, _, _] = (0, _._)(() => [
+          [_, _, _, _] = (0, _._)(() => [
             _.master_subscription,
             _.show_deck_compability_details,
+            _.display_hw_compatibility_details,
             _.tabs || [],
           ]),
+          _ = [
+            {
+              data: _._,
+              label: "",
+            },
+            {
+              data: _._,
+              label: (0, _._)("#Library_DeviceType_SteamDeck"),
+            },
+            {
+              data: _._,
+              label: (0, _._)("#Library_DeviceType_SteamFrame"),
+            },
+            {
+              data: _._,
+              label: (0, _._)("#Library_DeviceType_SteamMachine"),
+            },
+          ],
           _ = _(_, _),
           _ =
             __webpack_require__.GetEventModel().jsondata.item_source_type ===
@@ -15147,17 +15174,18 @@
               },
               checked: _.prefer_demo_store_page,
             }),
-            (0, _.jsx)(_._, {
-              label: (0, _._)("#Sale_Section_ShowDeckCompatibility"),
-              tooltip: (0, _._)("#Sale_Section_ShowDeckCompatibility_ttip"),
-              onChange: (_) => {
-                _(),
-                  (_.item_browse_section_data.show_deck_compability_details =
-                    _),
-                  __webpack_require__.SetDirty(_._.jsondata_sales);
-              },
-              checked: _,
-            }),
+            _ &&
+              (0, _.jsx)(_._, {
+                label: (0, _._)("#Sale_Section_ShowDeckCompatibility"),
+                tooltip: (0, _._)("#Sale_Section_ShowDeckCompatibility_ttip"),
+                onChange: (_) => {
+                  _(),
+                    (_.item_browse_section_data.show_deck_compability_details =
+                      _),
+                    __webpack_require__.SetDirty(_._.jsondata_sales);
+                },
+                checked: _,
+              }),
             (0, _.jsx)(_._, {
               type: "text",
               label: (0, _._)("#Sale_BrowseSection_SubscriptionID"),
@@ -15169,6 +15197,19 @@
                   __webpack_require__.SetDirty(_._.jsondata_sales);
               },
               value: _,
+            }),
+            (0, _.jsx)(_._, {
+              layout: "inline",
+              label: (0, _._)("#Sale_Section_ShowHardwareCompatibility"),
+              tooltip: (0, _._)("#Sale_Section_ShowHardwareCompatibility_ttip"),
+              rgOptions: _,
+              selectedOption: _,
+              onChange: (_) => {
+                _(),
+                  (_.item_browse_section_data.display_hw_compatibility_details =
+                    _.data),
+                  __webpack_require__.SetDirty(_._.jsondata_sales);
+              },
             }),
             (0, _.jsx)(_._, {
               type: "number",
@@ -15358,7 +15399,7 @@
         const { saleSection: _, bSmartSection: _, editModel: _ } = _,
           _ = (0, _._)(),
           [_, _] = (0, _.useState)((0, _._)(_).toString()),
-          [_, _, _, _, _, _, _, _, _, _, _, _] = (0, _._)(() => {
+          [_, _, _, _, _, _, _, _, _, _, _, _, _] = (0, _._)(() => {
             var _;
             return [
               _.section_type,
@@ -15375,6 +15416,7 @@
                 ? void 0
                 : _.mobile_carousel_style) || _._.k_MobileCarousel_Disable,
               _(_),
+              _.show_deck_compability_details,
             ];
           }),
           _ = "trailercarousel" === _,
@@ -15384,6 +15426,7 @@
           _ = (0, _._)(_),
           _ = (0, _._)(_) || "events" === _ || "sale_events" === _,
           _ = (0, _._)(_),
+          _ = _ && _,
           _ = "library" === _,
           _ =
             (0, _._)(_) &&
@@ -15578,6 +15621,16 @@
                       ttipToken: "#Sale_Section_ShowDeckCompatibility_ttip",
                     },
                     "show_deck_compability_details",
+                  ),
+                _ &&
+                  (0, _.jsx)(
+                    _,
+                    {
+                      valveOnly: !0,
+                      saleSection: _,
+                      editModel: _,
+                    },
+                    "hardware_compat",
                   ),
               ],
               rightChildren: [
@@ -15782,6 +15835,54 @@
             }),
           ],
         });
+      }
+      function _(_) {
+        const { saleSection: _, editModel: _, valveOnly: _ } = _,
+          [_] = (0, _._)(() => [_.display_hw_compatibility_details || _._]),
+          _ = (0, _.useMemo)(
+            () => [
+              {
+                data: _._,
+                label: "",
+              },
+              {
+                data: _._,
+                label: (0, _._)("#Library_DeviceType_SteamDeck"),
+              },
+              {
+                data: _._,
+                label: (0, _._)("#Library_DeviceType_SteamFrame"),
+              },
+              {
+                data: _._,
+                label: (0, _._)("#Library_DeviceType_SteamMachine"),
+              },
+            ],
+            [],
+          ),
+          _ = (0, _.jsx)(_._, {
+            label:
+              (_ ? "(VO) " : "") +
+              (0, _._)("#Sale_Section_ShowHardwareCompatibility"),
+            tooltip: (0, _._)("#Sale_Section_ShowHardwareCompatibility_ttip"),
+            strDropDownClassName: _.DropDownScroll,
+            rgOptions: _,
+            selectedOption: _,
+            onChange: (_) => {
+              _.display_hw_compatibility_details != _.data &&
+                ((_.display_hw_compatibility_details = _.data),
+                __webpack_require__.SetDirty(_._.jsondata_sales));
+            },
+            contextMenuPositionOptions: {
+              bDisablePopTop: !0,
+            },
+          });
+        return _
+          ? (0, _.jsx)(_._, {
+              clanSteamID: __webpack_require__.GetClanSteamID(),
+              children: _,
+            })
+          : _;
       }
       function _(_) {
         const { saleSection: _, editModel: _ } = _,
@@ -21150,10 +21251,12 @@
               className: _.CrossTabLink,
               children: (0, _._)("#Sale_Broadcast_TabLink"),
             });
-          return _.GetEventModel().BHasBroadcastEnabled()
-            ? this.BIsFirstBroadcastSaleSection()
-              ? (0, _.jsxs)(_.Fragment, {
-                  children: [
+          if (_.GetEventModel().BHasBroadcastEnabled()) {
+            if (this.BIsFirstBroadcastSaleSection()) {
+              const _ = _.GetEventType() == _.ajI;
+              return (0, _.jsxs)(_.Fragment, {
+                children: [
+                  !_ &&
                     (0, _.jsx)("div", {
                       className: _.InputBorder,
                       children: (0, _.jsx)(_._, {
@@ -21167,27 +21270,29 @@
                             .sale_only_whitelisted_broadcasts,
                       }),
                     }),
-                    _,
-                  ],
-                })
-              : (0, _.jsx)("div", {
-                  className: _.CrossTabWarning,
-                  children: (0, _._)("#Sale_ShowingBroadcastElsewhere"),
-                })
-            : (0, _.jsxs)(_.Fragment, {
-                children: [
                   _,
-                  (0, _.jsxs)("div", {
-                    className: _.CrossTabWarning,
-                    children: [
-                      (0, _._)("#Sale_Broadcast_Disabled"),
-                      (0, _.jsx)(_._, {
-                        tooltip: (0, _._)("#Sale_Broadcast_Disabled_hint"),
-                      }),
-                    ],
-                  }),
                 ],
               });
+            }
+            return (0, _.jsx)("div", {
+              className: _.CrossTabWarning,
+              children: (0, _._)("#Sale_ShowingBroadcastElsewhere"),
+            });
+          }
+          return (0, _.jsxs)(_.Fragment, {
+            children: [
+              _,
+              (0, _.jsxs)("div", {
+                className: _.CrossTabWarning,
+                children: [
+                  (0, _._)("#Sale_Broadcast_Disabled"),
+                  (0, _.jsx)(_._, {
+                    tooltip: (0, _._)("#Sale_Broadcast_Disabled_hint"),
+                  }),
+                ],
+              }),
+            ],
+          });
         }
       };
       (0, _._)([_._], _.prototype, "OnShowOnlySaleWhiteListedBroadcasts", null),
@@ -28740,7 +28845,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -28873,7 +28977,85 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            packageid: _,
+            bUsePackageDescription: _,
+            localizedDesc: _,
+            language: _,
+            strEditTitle: _,
+            strEditDesc: _,
+            fnSetUsePackageDescription: _,
+            fnSetLocalizedDesc: _,
+            children: _,
+          } = _,
+          _ = _._.GetELanguageFallback(_),
+          _ = (null == _ ? void 0 : _[_]) || (null == _ ? void 0 : _[_]) || "",
+          _ = (0, _.useCallback)(
+            (_) => {
+              const _ = (0, _._)(_ || [], _.bP9, null);
+              (_[_] = _), _(_);
+            },
+            [_, _, _],
+          ),
+          [_, _, _] = (0, _._)();
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            !_ &&
+              (0, _.jsx)(_._, {
+                text: _,
+              }),
+            (0, _.jsx)(_._, {
+              checked: _,
+              onChange: (_) => {
+                _ != _ && _(_);
+              },
+              children: "Use Package Description?",
+            }),
+            _ && _,
+            _ &&
+              !!_ &&
+              (0, _.jsx)("a", {
+                href: `${_._.PARTNER_BASE_URL}admin/store/package/${_}?activetab=tab_description`,
+                children: "Open Package Description Editor",
+              }),
+            !_ &&
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)(_._, {
+                    onClick: _,
+                    children: _,
+                  }),
+                  (0, _.jsx)(_._, {
+                    active: _,
+                    children: (0, _.jsx)(_._, {
+                      bAlertDialog: !0,
+                      closeModal: _,
+                      strTitle: _,
+                      strDescription: _,
+                      children: (0, _.jsx)(_._, {
+                        strPlaceholder: "Enter Item Description",
+                        fnGetCurText: () => {
+                          var _;
+                          return null !== (_ = null == _ ? void 0 : _[_]) &&
+                            void 0 !== _
+                            ? _
+                            : "";
+                        },
+                        fnOnTextChange: (_) => _(_.currentTarget.value),
+                        fnSetText: _,
+                        bSupportHTMLImport: !0,
+                        bEmbeddedInDialog: !0,
+                      }),
+                    }),
+                  }),
+                ],
+              }),
+          ],
+        });
+      }
       function _(_) {
         const { fnOnDirty: _, saleSection: _, event: _ } = _,
           [_, _, _, _] = (0, _._)(() => {
@@ -29094,125 +29276,52 @@
         });
       }
       function _(_) {
-        const { reservation: _, fnOnDirty: _, event: _ } = _,
-          [_, _, _, _, _, _] = (0, _._)(() => {
-            var _, _;
-            const _ = _._.Get().GetCurEditLanguage(),
-              _ = _._.GetELanguageFallback(_);
-            return [
-              _,
-              (null === (_ = _.localized_reservation_desc) || void 0 === _
-                ? void 0
-                : _[_]) ||
-                (null === (_ = _.localized_reservation_desc) || void 0 === _
-                  ? void 0
-                  : _[_]) ||
-                "",
-              _.use_package_description,
-              _.reservation_package,
-              _.use_screenshot_carousel,
-              _.callout,
-            ];
-          }),
-          _ = (0, _._)(_),
-          { data: _ } = (0, _._)(_),
-          _ = (0, _.useCallback)(
-            (_) => {
-              (_.localized_reservation_desc = (0, _._)(
-                _.localized_reservation_desc || [],
-                _.bP9,
-                null,
-              )),
-                (_.localized_reservation_desc[_] = _),
-                __webpack_require__();
-            },
-            [_, _, _],
-          ),
-          [_, _, _] = (0, _._)(),
-          _ = _.use_package_description ? (null != _ ? _ : "") : _;
-        return (0, _.jsxs)(_.Fragment, {
+        const { reservation: _, fnOnDirty: _ } = _,
+          [_, _, _, _, _, _] = (0, _._)(() => [
+            _._.Get().GetCurEditLanguage(),
+            _.localized_reservation_desc,
+            _.use_package_description,
+            _.reservation_package,
+            _.use_screenshot_carousel,
+            _.callout,
+          ]);
+        return (0, _.jsxs)(_, {
+          packageid: _,
+          bUsePackageDescription: _,
+          localizedDesc: _,
+          language: _,
+          strEditTitle: (0, _._)("#Sale_ReserveEditor_EditTitle"),
+          strEditDesc: (0, _._)("#Sale_ReserveEditor_EditDesc"),
+          fnSetUsePackageDescription: (_) => {
+            (_.use_package_description = _), __webpack_require__();
+          },
+          fnSetLocalizedDesc: (_) => {
+            (_.localized_reservation_desc = _), __webpack_require__();
+          },
           children: [
-            !_.use_package_description &&
-              (0, _.jsx)(_._, {
-                text: _,
-              }),
-            (0, _.jsx)(_._, {
+            (0, _.jsxs)(_._, {
               checked: _,
               onChange: (_) => {
-                _.use_package_description != _ &&
-                  ((_.use_package_description = _), __webpack_require__());
+                _.use_screenshot_carousel != _ &&
+                  ((_.use_screenshot_carousel = _), __webpack_require__());
               },
-              children: "Use Package Description?",
+              children: [
+                "Carousel of Items from App Screenshots?",
+                (0, _.jsx)(_._, {
+                  tooltip:
+                    "Instead of using the package capsules use all available screenshots and allow the user to carousel through them.",
+                }),
+              ],
             }),
-            _ &&
-              (0, _.jsxs)(_.Fragment, {
-                children: [
-                  (0, _.jsxs)(_._, {
-                    checked: _,
-                    onChange: (_) => {
-                      _.use_screenshot_carousel != _ &&
-                        ((_.use_screenshot_carousel = _),
-                        __webpack_require__());
-                    },
-                    children: [
-                      "Carousel of Items from App Screenshots?",
-                      (0, _.jsx)(_._, {
-                        tooltip:
-                          "Instead of using the package capsules use all available screenshots and allow the user to carousel through them.",
-                      }),
-                    ],
-                  }),
-                  (0, _.jsx)(_, {
-                    callout: _,
-                    fnOnChange: (_) => {
-                      (_.callout = {
-                        ..._,
-                      }),
-                        __webpack_require__();
-                    },
-                  }),
-                ],
-              }),
-            _ &&
-              _ &&
-              (0, _.jsx)("a", {
-                href: `${_._.PARTNER_BASE_URL}admin/store/package/${null != _ ? _ : 0}?activetab=tab_description`,
-                children: "Open Package Description Editor",
-              }),
-            !_ &&
-              (0, _.jsxs)(_.Fragment, {
-                children: [
-                  (0, _.jsx)(_._, {
-                    onClick: _,
-                    children: (0, _._)("#Sale_ReserveEditor_EditTitle"),
-                  }),
-                  (0, _.jsx)(_._, {
-                    active: _,
-                    children: (0, _.jsx)(_._, {
-                      bAlertDialog: !0,
-                      closeModal: _,
-                      strTitle: (0, _._)("#Sale_ReserveEditor_EditTitle"),
-                      strDescription: (0, _._)("#Sale_ReserveEditor_EditDesc"),
-                      children: (0, _.jsx)(_._, {
-                        strPlaceholder: "Enter Item Description",
-                        fnGetCurText: () => {
-                          var _;
-                          return (null === (_ = _.localized_reservation_desc) ||
-                          void 0 === _
-                            ? void 0
-                            : _.length) > _
-                            ? _.localized_reservation_desc[_]
-                            : "";
-                        },
-                        fnOnTextChange: (_) => _(_.currentTarget.value),
-                        fnSetText: _,
-                        bSupportHTMLImport: !0,
-                        bEmbeddedInDialog: !0,
-                      }),
-                    }),
-                  }),
-                ],
-              }),
+            (0, _.jsx)(_, {
+              callout: _,
+              fnOnChange: (_) => {
+                (_.callout = {
+                  ..._,
+                }),
+                  __webpack_require__();
+              },
+            }),
           ],
         });
       }
@@ -29470,11 +29579,10 @@
               }),
         });
       }
-      var _ = __webpack_require__("chunkid");
       function _(_) {
-        const { fnOnDirty: _, saleSection: _, event: _ } = _,
+        const { fnOnDirty: _, saleSection: _ } = _,
           [_, _] = (0, _._)(() => {
-            var _, _;
+            var _, _, _, _;
             return [
               _._.Get().GetCurEditLanguage(),
               null !==
@@ -29484,6 +29592,13 @@
                     : _.while_supplies_last_option) && void 0 !== _
                 ? _
                 : [],
+              null ===
+                (_ =
+                  null === (_ = _.internal_section_data) || void 0 === _
+                    ? void 0
+                    : _.while_supplies_last_option) || void 0 === _
+                ? void 0
+                : _.length,
             ];
           }),
           _ = (0, _.useCallback)(() => {
@@ -29529,7 +29644,6 @@
                   onReorder: _,
                   render: (_) =>
                     (0, _.jsx)(_, {
-                      event: _,
                       supply: _,
                       fnOnDirty: _,
                     }),
@@ -29544,81 +29658,44 @@
           ],
         });
       }
-      const _ = {
-        include_basic_info: !0,
-        include_all_purchase_options: !0,
-      };
       function _(_) {
-        const { supply: _, fnOnDirty: _, event: _ } = _,
-          [_, _, _] = (0, _._)(() => [
+        const { supply: _, fnOnDirty: _ } = _,
+          [_, _, _, _] = (0, _._)(() => [
             _._.Get().GetCurEditLanguage(),
             _.supply_package,
-            _.localized_supply_desc || [],
-          ]),
-          [_, _] = (0, _._)(_, _),
-          _ = (0, _.useCallback)(
-            (_) => {
-              (_.localized_supply_desc = (0, _._)(_ || [], _.bP9, null)),
-                (_.localized_supply_desc[_] = _),
-                __webpack_require__();
-            },
-            [_, _, _, _],
-          ),
-          _ = (0, _.useCallback)(() => {
-            (0, _._)(
-              (0, _.jsx)(_._, {
-                bAlertDialog: !0,
-                strTitle: (0, _._)("#Sale_WhileSuppliesLastEditor_EditTitle"),
-                strDescription: (0, _._)(
-                  "#Sale_WhileSuppliesLastEditor_EditDesc",
-                ),
-                children: (0, _.jsx)(_._, {
-                  strPlaceholder: "Enter Item Description",
-                  fnGetCurText: () =>
-                    (null == _ ? void 0 : _.length) > _ ? _[_] : "",
-                  fnOnTextChange: (_) => _(_.currentTarget.value),
-                  fnSetText: _,
-                  bSupportHTMLImport: !0,
-                  bEmbeddedInDialog: !0,
-                }),
-              }),
-              window,
-            );
-          }, [_, _, _]),
-          _ = _._.GetELanguageFallback(_),
-          _ = _[_] || _[_] || "";
+            _.use_package_description,
+            _.localized_supply_desc,
+          ]);
         return (0, _.jsxs)("div", {
           children: [
-            (0, _.jsx)(_._, {
-              type: "number",
+            (0, _.jsx)(_, {
+              type: "sub",
               label: (0, _._)("#Sale_WhileSuppliesLastEditor_Pack"),
               tooltip: (0, _._)("#Sale_WhileSuppliesLastEditor_Pack_ttip"),
               value: null != _ ? _ : 0,
-              onChange: (_) => {
-                (_.supply_package = Number.parseInt(_.currentTarget.value)),
-                  __webpack_require__();
+              onValueChange: (_) => {
+                _.supply_package != _ &&
+                  ((_.supply_package = _), __webpack_require__());
               },
             }),
-            Boolean(_ == _._) &&
-              (0, _.jsxs)("div", {
-                children: [
-                  'Package Found: "',
-                  _.GetName(),
-                  '" Price: ',
-                  _.GetBestPurchasePriceFormatted(),
-                ],
+            (0, _.jsx)(_, {
+              packageid: _,
+              bUsePackageDescription: _,
+              localizedDesc: _,
+              language: _,
+              strEditTitle: (0, _._)("#Sale_WhileSuppliesLastEditor_EditTitle"),
+              strEditDesc: (0, _._)("#Sale_WhileSuppliesLastEditor_EditDesc"),
+              fnSetUsePackageDescription: (_) => {
+                (_.use_package_description = _), __webpack_require__();
+              },
+              fnSetLocalizedDesc: (_) => {
+                (_.localized_supply_desc = _), __webpack_require__();
+              },
+            }),
+            !_ &&
+              (0, _.jsx)("p", {
+                children: (0, _._)("#Sale_WhileSuppliesLastEditor_CompactHint"),
               }),
-            (0, _.jsx)(_._, {
-              text: _,
-              partnerEventStore: _._,
-              showErrorInfo: !0,
-              event: _,
-              languageOverride: _,
-            }),
-            (0, _.jsx)(_._, {
-              onClick: _,
-              children: (0, _._)("#Sale_WhileSuppliesLastEditor_EditTitle"),
-            }),
           ],
         });
       }
@@ -30889,6 +30966,55 @@
           ],
         });
       }
+      const _ = ["grid", "list"];
+      function _(_) {
+        const { saleSection: _, editModel: _ } = _,
+          _ = (0, _._)(() => {
+            var _, _;
+            return null !==
+              (_ =
+                null === (_ = _.internal_section_data) || void 0 === _
+                  ? void 0
+                  : _.while_supplies_last_layout) && void 0 !== _
+              ? _
+              : "grid";
+          }),
+          _ = (0, _.useCallback)(
+            (_) => {
+              _.internal_section_data.while_supplies_last_layout != _ &&
+                ((_.internal_section_data.while_supplies_last_layout = _),
+                __webpack_require__.SetDirty(_._.jsondata_sales));
+            },
+            [_, _.internal_section_data],
+          );
+        return (0, _.jsxs)(_._, {
+          align: "center",
+          gap: "3",
+          children: [
+            (0, _.jsxs)(_._, {
+              children: [
+                (0, _._)("#Sale_WhileSuppliesLastEditor_Layout"),
+                (0, _.jsx)(_._, {
+                  tooltip: (0, _._)(
+                    "#Sale_WhileSuppliesLastEditor_Layout_ttip",
+                  ),
+                }),
+              ],
+            }),
+            (0, _.jsx)(_._, {
+              selectedValue: _,
+              options: _,
+              getOptionLabel: (_) =>
+                (0, _._)(
+                  "list" == _
+                    ? "#Sale_WhileSuppliesLastEditor_Layout_List"
+                    : "#Sale_WhileSuppliesLastEditor_Layout_Grid",
+                ),
+              onSelectionChange: _,
+            }),
+          ],
+        });
+      }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
@@ -31325,7 +31451,7 @@
           _ = !_.includes(_.section_type),
           _ = (function (_, _) {
             return "vo_internal" == _
-              ? "reservation_widget" == _
+              ? "reservation_widget" == _ || "while_supplies_last" == _
               : [
                   "items",
                   "events",
@@ -31348,6 +31474,7 @@
           ),
           _ = (0, _._)(_),
           _ = (function (_, _, _, _, _, _, _, _, _, _, _) {
+            var _;
             const _ = [];
             if (
               (_ &&
@@ -31368,14 +31495,27 @@
                 ? _.push({
                     name: (0, _._)("#Sale_Section_EditTab_Layout"),
                     key: "display",
-                    contents: (0, _.jsx)(
-                      _,
-                      {
-                        editModel: _,
-                        saleSection: _,
-                      },
-                      "SaleSectionDisplayOptions",
-                    ),
+                    contents:
+                      "while_supplies_last" ==
+                      (null === (_ = _.internal_section_data) || void 0 === _
+                        ? void 0
+                        : _.internal_type)
+                        ? (0, _.jsx)(
+                            _,
+                            {
+                              editModel: _,
+                              saleSection: _,
+                            },
+                            "SaleSectionDisplayOptions",
+                          )
+                        : (0, _.jsx)(
+                            _,
+                            {
+                              editModel: _,
+                              saleSection: _,
+                            },
+                            "SaleSectionDisplayOptions",
+                          ),
                   })
                 : _.push({
                     name: (0, _._)("#Sale_Section_EditTab_Layout"),
@@ -31938,7 +32078,7 @@
                 data: "discoveryqueue",
                 tooltip: (0, _._)("#Sale_DiscoveryQueue_ttip"),
               },
-              !_ && {
+              {
                 label: (0, _._)("#Sale_BroadcastPlayerSection"),
                 data: "broadcast",
                 tooltip: (0, _._)("#Sale_BroadcastPlayerSection_ttip"),
@@ -37586,6 +37726,13 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
       function _(_, _) {
         return (
           null == _ ||
@@ -37615,11 +37762,23 @@
               : []
           : (null == _ ? void 0 : _.map((_) => _.unique_id)) || [];
       }
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
+      function _(_, _) {
+        return _.show_deck_compability_details ||
+          _.display_hw_compatibility_details == _._ ||
+          (null == _ ? void 0 : _.BFilterRequiresSteamDeckVerifiedOrPlayable())
+          ? _._
+          : _.display_hw_compatibility_details == _._ ||
+              (null == _
+                ? void 0
+                : _.BFilterRequiresSteamFrameVerifiedOrPlayable())
+            ? _._
+            : _.display_hw_compatibility_details == _._ ||
+                (null == _
+                  ? void 0
+                  : _.BFilterRequiresSteamMachineVerifiedOrPlayable())
+              ? _._
+              : _._;
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -37849,11 +38008,7 @@
                   rgChildren: [],
                 },
                 {
-                  nTagID: _.aNN,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.DHU,
+                  nTagID: _.BGM,
                   rgChildren: [],
                 },
                 {
@@ -37861,15 +38016,11 @@
                   rgChildren: [],
                 },
                 {
-                  nTagID: _.Jtk,
-                  rgChildren: [],
-                },
-                {
                   nTagID: _.Mhp,
                   rgChildren: [],
                 },
                 {
-                  nTagID: _.BGM,
+                  nTagID: _.Jtk,
                   rgChildren: [],
                 },
                 {
@@ -37881,7 +38032,11 @@
                   rgChildren: [],
                 },
                 {
-                  nTagID: _.mvf,
+                  nTagID: _.bPv,
+                  rgChildren: [],
+                },
+                {
+                  nTagID: _.Wq7,
                   rgChildren: [],
                 },
               ],
@@ -37902,19 +38057,19 @@
                   rgChildren: [],
                 },
                 {
-                  nTagID: _.r7M,
-                  rgChildren: [],
-                },
-                {
                   nTagID: _.KCN,
                   rgChildren: [],
                 },
                 {
-                  nTagID: _.nNq,
+                  nTagID: _.Vg1,
                   rgChildren: [],
                 },
                 {
-                  nTagID: _.Vg1,
+                  nTagID: _.cTj,
+                  rgChildren: [],
+                },
+                {
+                  nTagID: _.CYA,
                   rgChildren: [],
                 },
                 {
@@ -37923,10 +38078,6 @@
                 },
                 {
                   nTagID: _.aNN,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.cTj,
                   rgChildren: [],
                 },
               ],
@@ -37939,15 +38090,19 @@
                   rgChildren: [],
                 },
                 {
-                  nTagID: _.nNq,
+                  nTagID: _.X$z,
                   rgChildren: [],
                 },
                 {
-                  nTagID: _.KCN,
+                  nTagID: _.equ,
                   rgChildren: [],
                 },
                 {
-                  nTagID: _.Sv2,
+                  nTagID: _.Izv,
+                  rgChildren: [],
+                },
+                {
+                  nTagID: _.zwR,
                   rgChildren: [],
                 },
                 {
@@ -37955,23 +38110,11 @@
                   rgChildren: [],
                 },
                 {
-                  nTagID: _.mvf,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.Ywc,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.PYD,
-                  rgChildren: [],
-                },
-                {
                   nTagID: _.UfY,
                   rgChildren: [],
                 },
                 {
-                  nTagID: _.lw$,
+                  nTagID: _.PYD,
                   rgChildren: [],
                 },
               ],
@@ -37984,19 +38127,11 @@
                   rgChildren: [],
                 },
                 {
-                  nTagID: _.FzB,
-                  rgChildren: [],
-                },
-                {
                   nTagID: _.J1r,
                   rgChildren: [],
                 },
                 {
-                  nTagID: _.aNN,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.DHU,
+                  nTagID: _.Gxx,
                   rgChildren: [],
                 },
                 {
@@ -38004,15 +38139,11 @@
                   rgChildren: [],
                 },
                 {
+                  nTagID: _.gEw,
+                  rgChildren: [],
+                },
+                {
                   nTagID: _.Jtk,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.R$d,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.r7M,
                   rgChildren: [],
                 },
                 {
@@ -38025,7 +38156,7 @@
               nTagID: _.dWZ,
               rgChildren: [
                 {
-                  nTagID: _.DfI,
+                  nTagID: _.$YD,
                   rgChildren: [],
                 },
                 {
@@ -38033,11 +38164,7 @@
                   rgChildren: [],
                 },
                 {
-                  nTagID: _.KoH,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.mvf,
+                  nTagID: _.W5v,
                   rgChildren: [],
                 },
                 {
@@ -38045,23 +38172,31 @@
                   rgChildren: [],
                 },
                 {
-                  nTagID: _.lw$,
+                  nTagID: _.KoH,
                   rgChildren: [],
                 },
                 {
-                  nTagID: _.iZ9,
+                  nTagID: _.jzL,
                   rgChildren: [],
                 },
                 {
-                  nTagID: _.PYD,
+                  nTagID: _.vx7,
                   rgChildren: [],
                 },
                 {
-                  nTagID: _.FzB,
+                  nTagID: _.dm2,
                   rgChildren: [],
                 },
                 {
-                  nTagID: _._,
+                  nTagID: _.R1B,
+                  rgChildren: [],
+                },
+                {
+                  nTagID: _.IbE,
+                  rgChildren: [],
+                },
+                {
+                  nTagID: _.UfY,
                   rgChildren: [],
                 },
               ],
@@ -38074,27 +38209,7 @@
                   rgChildren: [],
                 },
                 {
-                  nTagID: _.$YD,
-                  rgChildren: [],
-                },
-                {
                   nTagID: _.JEe,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.Ywc,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.Yr4,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.FzB,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.Sv2,
                   rgChildren: [],
                 },
                 {
@@ -38102,11 +38217,11 @@
                   rgChildren: [],
                 },
                 {
-                  nTagID: _.DfI,
+                  nTagID: _.UEV,
                   rgChildren: [],
                 },
                 {
-                  nTagID: _.nNq,
+                  nTagID: _.btm,
                   rgChildren: [],
                 },
               ],
@@ -38119,39 +38234,27 @@
                   rgChildren: [],
                 },
                 {
-                  nTagID: _.wIS,
+                  nTagID: _.jzL,
                   rgChildren: [],
                 },
                 {
-                  nTagID: _.DfI,
+                  nTagID: _.dWZ,
                   rgChildren: [],
                 },
                 {
-                  nTagID: _.Ywc,
+                  nTagID: _.EEh,
                   rgChildren: [],
                 },
                 {
-                  nTagID: _.$YD,
+                  nTagID: _.rNe,
                   rgChildren: [],
                 },
                 {
-                  nTagID: _.FzB,
+                  nTagID: _.nPW,
                   rgChildren: [],
                 },
                 {
-                  nTagID: _.Sv2,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.nNq,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.lPO,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.JEe,
+                  nTagID: _.QA9,
                   rgChildren: [],
                 },
               ],
@@ -38168,15 +38271,7 @@
                   rgChildren: [],
                 },
                 {
-                  nTagID: _.rAU,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.FzB,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.mvf,
+                  nTagID: _.Buq,
                   rgChildren: [],
                 },
                 {
@@ -38184,19 +38279,7 @@
                   rgChildren: [],
                 },
                 {
-                  nTagID: _.Sv2,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.Buq,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.KCN,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.Yr4,
+                  nTagID: _.rAU,
                   rgChildren: [],
                 },
               ],
@@ -38205,7 +38288,23 @@
               nTagID: _.uZq,
               rgChildren: [
                 {
-                  nTagID: _.rAU,
+                  nTagID: _.aWw,
+                  rgChildren: [],
+                },
+                {
+                  nTagID: _.Wo$,
+                  rgChildren: [],
+                },
+                {
+                  nTagID: _.jx3,
+                  rgChildren: [],
+                },
+                {
+                  nTagID: _.PoK,
+                  rgChildren: [],
+                },
+                {
+                  nTagID: _.wz4,
                   rgChildren: [],
                 },
                 {
@@ -38213,35 +38312,7 @@
                   rgChildren: [],
                 },
                 {
-                  nTagID: _.aWw,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.FzB,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.mvf,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.nNq,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.Ywc,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.UfY,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.lw$,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.u7l,
+                  nTagID: _.rAU,
                   rgChildren: [],
                 },
               ],
@@ -38250,43 +38321,31 @@
               nTagID: _.LqT,
               rgChildren: [
                 {
+                  nTagID: _.gGw,
+                  rgChildren: [],
+                },
+                {
                   nTagID: _.t_B,
                   rgChildren: [],
                 },
                 {
-                  nTagID: _.lw$,
+                  nTagID: _.kpV,
                   rgChildren: [],
                 },
                 {
-                  nTagID: _.PYD,
+                  nTagID: _.cNr,
                   rgChildren: [],
                 },
                 {
-                  nTagID: _.LGs,
+                  nTagID: _.vk_,
                   rgChildren: [],
                 },
                 {
-                  nTagID: _.DfI,
+                  nTagID: _.PoK,
                   rgChildren: [],
                 },
                 {
-                  nTagID: _.nNq,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.rTg,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.J1r,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.u7l,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.KoH,
+                  nTagID: _.G1H,
                   rgChildren: [],
                 },
               ],
@@ -38298,20 +38357,215 @@
           strLocToken: "#Sale_Tabs_TagFilter_Class_Theme",
           rgNodes: [
             {
-              nTagID: _.IbE,
-              rgChildren: [],
+              nTagID: _.MNG,
+              rgChildren: [
+                {
+                  nTagID: _.z3Q,
+                  rgChildren: [],
+                },
+                {
+                  nTagID: _.nuP,
+                  rgChildren: [],
+                },
+                {
+                  nTagID: _.Xkc,
+                  rgChildren: [],
+                },
+                {
+                  nTagID: _.Gkz,
+                  rgChildren: [],
+                },
+                {
+                  nTagID: _.IEJ,
+                  rgChildren: [],
+                },
+                {
+                  nTagID: _.dWZ,
+                  rgChildren: [],
+                },
+                {
+                  nTagID: _.dBS,
+                  rgChildren: [],
+                },
+              ],
             },
             {
               nTagID: _.Vov,
-              rgChildren: [],
+              rgChildren: [
+                {
+                  nTagID: _.z3Q,
+                  rgChildren: [],
+                },
+                {
+                  nTagID: _.nuP,
+                  rgChildren: [],
+                },
+                {
+                  nTagID: _.Xkc,
+                  rgChildren: [],
+                },
+                {
+                  nTagID: _.Gkz,
+                  rgChildren: [],
+                },
+                {
+                  nTagID: _.IEJ,
+                  rgChildren: [],
+                },
+                {
+                  nTagID: _.dWZ,
+                  rgChildren: [],
+                },
+                {
+                  nTagID: _.ng1,
+                  rgChildren: [],
+                },
+                {
+                  nTagID: _.qhO,
+                  rgChildren: [],
+                },
+              ],
+            },
+            {
+              nTagID: _.BWK,
+              rgChildren: [
+                {
+                  nTagID: _.nuP,
+                  rgChildren: [],
+                },
+                {
+                  nTagID: _.z3Q,
+                  rgChildren: [],
+                },
+                {
+                  nTagID: _.Gkz,
+                  rgChildren: [],
+                },
+                {
+                  nTagID: _.IEJ,
+                  rgChildren: [],
+                },
+                {
+                  nTagID: _.Xkc,
+                  rgChildren: [],
+                },
+                {
+                  nTagID: _.dWZ,
+                  rgChildren: [],
+                },
+              ],
             },
             {
               nTagID: _.ubQ,
-              rgChildren: [],
+              rgChildren: [
+                {
+                  nTagID: _.ZUO,
+                  rgChildren: [],
+                },
+                {
+                  nTagID: _.Gkz,
+                  rgChildren: [],
+                },
+                {
+                  nTagID: _.VmN,
+                  rgChildren: [],
+                },
+                {
+                  nTagID: _.G1H,
+                  rgChildren: [],
+                },
+                {
+                  nTagID: _.UfY,
+                  rgChildren: [],
+                },
+              ],
             },
             {
-              nTagID: _.lYS,
-              rgChildren: [],
+              nTagID: _.yUQ,
+              rgChildren: [
+                {
+                  nTagID: _.uZq,
+                  rgChildren: [],
+                },
+                {
+                  nTagID: _.iZ9,
+                  rgChildren: [],
+                },
+                {
+                  nTagID: _.dWZ,
+                  rgChildren: [],
+                },
+                {
+                  nTagID: _.IEJ,
+                  rgChildren: [],
+                },
+                {
+                  nTagID: _.LGs,
+                  rgChildren: [],
+                },
+                {
+                  nTagID: _.a5M,
+                  rgChildren: [],
+                },
+                {
+                  nTagID: _.RsL,
+                  rgChildren: [],
+                },
+                {
+                  nTagID: _.jzL,
+                  rgChildren: [],
+                },
+              ],
+            },
+            {
+              nTagID: _.PoK,
+              rgChildren: [
+                {
+                  nTagID: _.IEJ,
+                  rgChildren: [],
+                },
+                {
+                  nTagID: _.uZq,
+                  rgChildren: [],
+                },
+                {
+                  nTagID: _.zwR,
+                  rgChildren: [],
+                },
+                {
+                  nTagID: _.MnB,
+                  rgChildren: [],
+                },
+                {
+                  nTagID: _.hSB,
+                  rgChildren: [],
+                },
+              ],
+            },
+            {
+              nTagID: _.gGw,
+              rgChildren: [
+                {
+                  nTagID: _.LqT,
+                  rgChildren: [],
+                },
+                {
+                  nTagID: _.kpV,
+                  rgChildren: [],
+                },
+                {
+                  nTagID: _.uZq,
+                  rgChildren: [],
+                },
+                {
+                  nTagID: _.eQ$,
+                  rgChildren: [],
+                },
+                {
+                  nTagID: _.hwI,
+                  rgChildren: [],
+                },
+              ],
             },
           ],
         },
@@ -38367,36 +38621,42 @@
             ? _.strParentKey + "," + _.strChildKey
             : _.strParentKey;
       }
-      function _(_) {
-        return _.nTagID
+      function _(_, _) {
+        return _.nTagID && _
           ? {
-              type: _._.k_EStoreFilterClauseTypeStoreTag,
-              value: _.nTagID,
+              type: _._.k_EStoreFilterClauseTypeOptInRegistrationTag,
+              optin: _,
+              value: String(_.nTagID),
             }
-          : _.strFeature
+          : _.nTagID
             ? {
-                type: _._.k_EStoreFilterClauseTypeFeatureTag,
-                value: _.strFeature,
+                type: _._.k_EStoreFilterClauseTypeStoreTag,
+                value: _.nTagID,
               }
-            : {
-                type: _._.k_EStoreFilterClauseTypeAppType,
-                value: _.strAppType,
-              };
+            : _.strFeature
+              ? {
+                  type: _._.k_EStoreFilterClauseTypeFeatureTag,
+                  value: _.strFeature,
+                }
+              : {
+                  type: _._.k_EStoreFilterClauseTypeAppType,
+                  value: _.strAppType,
+                };
       }
       function _(_, _) {
         return _.find((_) => _(_) === _);
       }
-      function _(_) {
+      function _(_, _) {
         if (_)
           for (const _ of _) {
             const _ = _(_.rgNodes, _.strParentKey);
             if (!_) continue;
-            if (!_.strChildKey) return _(_);
+            if (!_.strChildKey) return _(_, _);
             const _ = _(_.rgChildren, _.strChildKey);
             if (!_) return;
             return {
               type: _._.k_EStoreFilterClauseTypeAnd,
-              rgSubexpressions: [_(_), _(_)],
+              rgSubexpressions: [_(_, _), _(_)],
             };
           }
       }
@@ -42313,6 +42573,15 @@
               void 0 !== _ &&
               _;
             return _.bNegated ? !_ : _;
+          case _._.k_EStoreFilterClauseTypeOptInRegistrationTag:
+            return Boolean(
+              _.optin &&
+                (null == _
+                  ? void 0
+                  : _.GetOptInRegistrationTagValues(_.optin).includes(
+                      String(_.value),
+                    )),
+            );
           default:
             return !0;
         }
@@ -43177,6 +43446,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = 240;
       function _(_) {
@@ -43279,7 +43549,7 @@
                 ? _.filter((_) => !(0, _._)(_)).map((_) => ({
                     Render: (_) =>
                       (function (_, _) {
-                        var _, _, _, _;
+                        var _, _;
                         const {
                           capsuleStyle: _,
                           index: _,
@@ -43289,10 +43559,10 @@
                         } = _;
                         if ((0, _._)(_)) return null;
                         const _ = _(_),
-                          _ = _.BUseSubscriptionLayout();
-                        let _ = (0, _._)(_) && !_.bIsSingleCapsule;
-                        const _ =
-                          _.unique_id + "_" + _ + "_" + _.type + "_" + _._;
+                          _ = _.BUseSubscriptionLayout(),
+                          _ = (0, _._)(_) && !_.bIsSingleCapsule,
+                          _ = (0, _._)(_, _.activeTab),
+                          _ = _.unique_id + "_" + _ + "_" + _.type + "_" + _._;
                         if ("fullrow" !== _) {
                           let _ = (0, _._)(_ && _().CarouselSalePageCapsule);
                           const _ = "tall" === _ ? "library" : "header";
@@ -43320,11 +43590,7 @@
                                   index: _,
                                   bPreferAssetWithoutOverride:
                                     !!_.prefer_assets_without_overrides,
-                                  bShowDeckCompatibilityDialog:
-                                    _.show_deck_compability_details ||
-                                    (null === (_ = _.activeTab) || void 0 === _
-                                      ? void 0
-                                      : _.BFilterRequiresSteamDeckVerifiedOrPlayable()),
+                                  eHardwareCompatibilityDisplay: _,
                                 },
                                 _,
                               ),
@@ -43368,11 +43634,7 @@
                                     : _.BFilterRequiresFeatureDemo()),
                                 bPreferDemoStorePage: _.prefer_demo_store_page,
                                 bHidePrice: _.hide_prices,
-                                bShowDeckCompatibilityDialog:
-                                  _.show_deck_compability_details ||
-                                  (null === (_ = _.activeTab) || void 0 === _
-                                    ? void 0
-                                    : _.BFilterRequiresSteamDeckVerifiedOrPlayable()),
+                                eHardwareCompatibilityDisplay: _,
                                 fnOnClickOverride: _,
                                 bPreferAssetWithoutOverride:
                                   !!_.prefer_assets_without_overrides,
@@ -44612,11 +44874,8 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -44701,9 +44960,6 @@
         for (let _ = 0; _ < _; _++) _ += _[_ % _.length];
         return _;
       }
-      function _(_) {
-        return "sub" !== _.type && "bundle" !== _.type;
-      }
       async function _(_) {
         var _;
         const _ = _.clanSteamID.GetAccountID(),
@@ -44719,25 +44975,19 @@
           : [];
       }
       async function _(_, _, _) {
-        const _ = new Set(_.GetTabAppIDs());
-        _.GetSaleSections()
-          .filter((_) => (0, _._)(_.section_type))
-          .forEach((_) => {
-            _.ShouldShowSection(_) &&
-              _.capsules.forEach((_) => {
-                !_(_) ||
-                  (!_.diable_tab_id_filtering && _.BIsTabFilteringEnabled()) ||
-                  _.add(_._);
-              });
-          }),
-          null == _ ||
-            __webpack_require__.forEach((_) => {
-              const _ = _.capsule;
-              !_(_) ||
-                (_.BIsTabFilteringEnabled() && !_.ShouldShowCapsule(_)) ||
-                _.add(_._);
-            });
-        const _ = _.clanSteamID.GetAccountID(),
+        const _ = (0, _._)(
+            _,
+            _,
+            {
+              BIncludeSection: (_) =>
+                _.ShouldShowSection(_) &&
+                (!!_.diable_tab_id_filtering || !_.BIsTabFilteringEnabled()),
+              BIncludeLinkedCapsule: (_) =>
+                !_.BIsTabFilteringEnabled() || _.ShouldShowCapsule(_),
+            },
+            new Set(_.GetTabAppIDs()),
+          ),
+          _ = _.clanSteamID.GetAccountID(),
           _ = _._.GetClanInfoByClanAccountID(_);
         if ((0, _._)(_, _)) {
           (await _(_)).forEach((_) => {
@@ -44750,34 +45000,6 @@
           });
         }
         return _;
-      }
-      function _(_) {
-        const { event: _, section: _ } = _,
-          _ = (0, _.useMemo)(
-            () => (0, _._)("ch_newshub", "application_config"),
-            [],
-          );
-        if (_.hide_view_all_events_link) return null;
-        let _ = null;
-        if ("events" == _.section_type) {
-          if (!_) return null;
-          if (!_.BUsesContentHubForItemSource()) return null;
-          if (!(0, _._)(_)) return null;
-          _ = _._.STORE_BASE_URL + "news/" + _;
-        } else
-          "sale_events" == _.section_type
-            ? (_ = _._.STORE_BASE_URL + "news/collection/sales/")
-            : "calendar" == _.section_type &&
-              (_ = _._.STORE_BASE_URL + "personalcalendar");
-        return _
-          ? (0, _.jsx)("div", {
-              className: _().EventSectionViewAllCtn,
-              children: (0, _.jsx)(_._, {
-                onClick: (_) => (0, _._)(_, _),
-                children: (0, _._)("#EventBrowse_AllEventsBtn"),
-              }),
-            })
-          : null;
       }
       function _(_, _, _, _) {
         if (
@@ -45166,6 +45388,7 @@
             bHidePrice: _,
             bHidePlatforms: _,
             bShowDeckCompatibilityDialog: _,
+            eHardwareCompatibilityDisplay: _,
             bAutoFocus: _,
           } = _,
           _ = (0, _._)({
@@ -45174,6 +45397,7 @@
           }),
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_),
+          [_, _] = (0, _._)(_, _),
           _ = (null == _ ? void 0 : _.item_type) == _._._;
         return (0, _.jsx)(_._, {
           appid: _ ? _._ : void 0,
@@ -45210,11 +45434,9 @@
                                 _,
                             ) &&
                               (0, _.jsx)(_._, {
+                                eDisplay: _,
+                                storeItemPlatform: _,
                                 className: _.DeckCompatIcon,
-                                category:
-                                  null == _
-                                    ? void 0
-                                    : _.steam_deck_compat_category,
                               }),
                           ],
                         }),
@@ -45226,6 +45448,7 @@
                         bHidePrice: _,
                         bHideWishlistButton: !0,
                         bShowDeckCompatibilityDialog: _,
+                        eHardwareCompatibilityDisplay: _,
                       }),
                     ],
                   }),
@@ -45570,6 +45793,39 @@
         _: () => _,
         _: () => _,
       });
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        return "sub" !== _.type && "bundle" !== _.type;
+      }
+      function _(_, _, _, _) {
+        const _ = [];
+        for (const _ of _)
+          if (_.has(_) && !__webpack_require__(_) && (_.push(_), _.length >= _))
+            break;
+        return _;
+      }
+      function _(_, _, _, _ = new Set()) {
+        for (const _ of _.GetSaleSections())
+          if (
+            (0, _._)(_.section_type) &&
+            (!_ || __webpack_require__.BIncludeSection(_))
+          )
+            for (const _ of _.capsules) _(_) && _.add(_._);
+        for (const _ of null != _ ? _ : []) {
+          const _ = _.capsule;
+          !_(_) ||
+            (_ && !__webpack_require__.BIncludeLinkedCapsule(_)) ||
+            _.add(_._);
+        }
+        return _;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -45794,6 +46050,8 @@
                       bPreferDemoStorePage: _.bPreferDemoStorePage,
                       bShowDeckCompatibilityDialog:
                         _.bShowDeckCompatibilityDialog,
+                      eHardwareCompatibilityDisplay:
+                        _.eHardwareCompatibilityDisplay,
                       bHidePrice: _.bHidePrice,
                       bUseSubscriptionLayout: _.bUseSubscriptionLayout,
                       strExtraParams: _.strExtraParams,
@@ -46012,6 +46270,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
         return _.filter(
@@ -46019,13 +46278,13 @@
         );
       }
       class _ {
-        constructor(_, _, _ = !0, _) {
+        constructor(_, _, _ = !0, _, _) {
           (this.m_activeTab = null),
             (this.m_capsuleFilter = null),
             (this.m_bDefaultTab = !0),
             (this.m_nSaleDay = _),
             (this.m_tagSelection = _),
-            (this.m_tagStoreFilter = (0, _._)(_)),
+            (this.m_tagStoreFilter = (0, _._)(_, _)),
             _ &&
               ((this.m_activeTab = _),
               (this.m_bDefaultTab = _),
@@ -46133,6 +46392,15 @@
           }
           return !1;
         }
+        EFilterRequiresHWVerifiedOrPlayable() {
+          return this.BFilterRequiresSteamDeckVerifiedOrPlayable()
+            ? _._
+            : this.BFilterRequiresSteamFrameVerifiedOrPlayable()
+              ? _._
+              : this.BFilterRequiresSteamMachineVerifiedOrPlayable()
+                ? _._
+                : _._;
+        }
         BFilterRequiresSteamDeckVerifiedOrPlayable() {
           return (
             !!this.m_activeTab &&
@@ -46200,6 +46468,43 @@
                 (_) =>
                   "[Feature] Steam Frame Playable" == _ ||
                   "[Feature] Steam Frame Verified" == _,
+              )
+            );
+          }
+          return !1;
+        }
+        BFilterRequiresSteamMachineVerifiedOrPlayable() {
+          return (
+            !!this.m_activeTab &&
+            _.BFilterRequiresSteamMachineVerifiedOrPlayableStatic(
+              this.m_activeTab,
+            )
+          );
+        }
+        static BFilterRequiresSteamMachineVerifiedOrPlayableStatic(_) {
+          var _, _, _;
+          if (
+            1 ==
+            (null ===
+              (_ =
+                null === (_ = null == _ ? void 0 : _.sale_tag_filter) ||
+                void 0 === _
+                  ? void 0
+                  : _.clauses) || void 0 === _
+              ? void 0
+              : _.length)
+          ) {
+            const _ =
+              null === (_ = null == _ ? void 0 : _.sale_tag_filter) ||
+              void 0 === _
+                ? void 0
+                : _.clauses[0];
+            return (
+              "Must have" === _.type &&
+              _.or_tags.some(
+                (_) =>
+                  "[Feature] Steam Machine Playable" == _ ||
+                  "[Feature] Steam Machine Verified" == _,
               )
             );
           }

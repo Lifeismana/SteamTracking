@@ -5507,45 +5507,43 @@
     },
     28106: (e, t, r) => {
       "use strict";
-      r.d(t, { W: () => m });
+      r.d(t, { W: () => p });
       var i = r(7850),
         n = r(57053),
         s = r(52893),
         a = r(90626),
         o = r(61859),
-        l = r(17558),
-        c = r(22145),
-        u = r(37341),
-        d = r(42714);
-      const m = a.memo(function (e) {
+        l = r(90622),
+        c = r(17558),
+        u = r(22145),
+        d = r(37341),
+        m = r(42714);
+      const p = a.memo(function (e) {
         const {
             linkMarkType: t,
             onURLPasted: r,
             schema: o,
-            onClickURL: u = g,
+            onClickURL: d = B,
           } = e,
-          m = a.useRef(u);
-        m.current = u;
-        const [B, b] = a.useState(),
-          [f, M] = a.useState(),
-          [w, y] = a.useState(),
-          [_, h] = (0, l.E)(o),
-          z = a.useMemo(
+          p = a.useRef(d);
+        p.current = d;
+        const [b, f] = a.useState(),
+          [M, w] = a.useState(),
+          [y, _] = a.useState(),
+          [h, z] = (0, c.E)(o),
+          S = a.useMemo(
             () =>
               new s.k_({
                 props: {
                   handleClickOn(e, r, i, n, s, a) {
                     if (a && (s.ctrlKey || 1 == s.button)) {
                       const e = i
-                        .resolve(r - n)
-                        .marks()
-                        .find((e) => e.type == t);
-                      if (e)
-                        return (
-                          m.current(e.attrs.href, s.view),
-                          s.preventDefault(),
-                          !0
-                        );
+                          .resolve(r - n)
+                          .marks()
+                          .find((e) => e.type == t),
+                        a = e && (0, l.J)(e.attrs.href);
+                      if (a)
+                        return p.current(a, s.view), s.preventDefault(), !0;
                     }
                     return !1;
                   },
@@ -5555,9 +5553,9 @@
                       (!t.metaKey && !t.ctrlKey) ||
                       t.shiftKey ||
                       t.altKey
-                    ) && (_(e), !0),
+                    ) && (h(e), !0),
                   clipboardTextParser(e, i, s, a) {
-                    const l = (0, d.F)(o, e, t, r);
+                    const l = (0, m.F)(o, e, t, r);
                     return l && new n.Ji(n.FK.from(l), i.start(), i.end());
                   },
                   handlePaste(e, i, s) {
@@ -5565,7 +5563,7 @@
                     if (
                       (s.content.descendants((e, i) => {
                         if (e.isText) {
-                          const n = (0, d.F)(o, e.text, t, r);
+                          const n = (0, m.F)(o, e.text, t, r);
                           n && a.push({ node: e, pos: i, rgNodes: n });
                         }
                       }),
@@ -5598,53 +5596,53 @@
                         if ("A" == e.nodeName && "getBoundingClientRect" in e) {
                           const t = e.getBoundingClientRect();
                           return (
-                            b(t.left + t.width / 2), M(t.bottom + 2), void y(e)
+                            f(t.left + t.width / 2), w(t.bottom + 2), void _(e)
                           );
                         }
-                      y(void 0);
+                      _(void 0);
                     },
-                    mouseleave: (e, t) => (y(void 0), !1),
+                    mouseleave: (e, t) => (_(void 0), !1),
                   },
                 },
               }),
-            [t, _, r, o],
+            [t, h, r, o],
           );
-        (0, c.c$)(z);
-        let S = null;
+        (0, u.c$)(S);
+        let C = null;
         return (
-          w &&
-            B &&
-            f &&
-            (S = (0, i.jsx)(p, {
-              top: f,
-              left: B,
-              href: w.getAttribute("href"),
+          y &&
+            b &&
+            M &&
+            (C = (0, i.jsx)(g, {
+              top: M,
+              left: b,
+              href: y.getAttribute("href"),
             })),
-          (0, i.jsxs)(i.Fragment, { children: [S, h] })
+          (0, i.jsxs)(i.Fragment, { children: [C, z] })
         );
       });
-      function p(e) {
+      function g(e) {
         const { top: t, left: r, href: n } = e,
           [s, l] = a.useState(0),
           c = a.useRef(null);
         a.useLayoutEffect(() => {
           l(c.current.getBoundingClientRect().width);
         }, [t, r, n]);
-        const d = { top: `${t}px`, left: `${Math.max(r - s / 2, 12)}px` };
+        const u = { top: `${t}px`, left: `${Math.max(r - s / 2, 12)}px` };
         return (0, i.jsxs)("div", {
-          className: u.Hover,
-          style: d,
+          className: d.Hover,
+          style: u,
           ref: c,
           children: [
-            (0, i.jsx)("div", { className: u.Link, children: n }),
+            (0, i.jsx)("div", { className: d.Link, children: n }),
             (0, i.jsx)("div", {
-              className: u.LinkHelp,
+              className: d.LinkHelp,
               children: (0, o.we)("#UserGameNotes_ClickToOpenLink"),
             }),
           ],
         });
       }
-      function g(e, t) {
+      function B(e, t) {
         t.open(e);
       }
     },
@@ -5734,6 +5732,20 @@
             })
           : null;
       }
+    },
+    90622: (e, t, r) => {
+      "use strict";
+      function i(e) {
+        if (!e) return e;
+        const t = e.trim(),
+          r = t.toLowerCase();
+        return r.startsWith("javascript:") ||
+          r.startsWith("data:") ||
+          r.startsWith("vbscript:")
+          ? ""
+          : t;
+      }
+      r.d(t, { J: () => i });
     },
     27650: (e, t, r) => {
       "use strict";

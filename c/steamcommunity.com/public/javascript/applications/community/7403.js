@@ -2987,6 +2987,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.memo(function (_) {
         const {
@@ -3008,14 +3009,11 @@
                   handleClickOn(_, _, _, _, _, _) {
                     if (_ && (_.ctrlKey || 1 == _.button)) {
                       const _ = _.resolve(_ - _)
-                        .marks()
-                        .find((_) => _.type == _);
+                          .marks()
+                          .find((_) => _.type == _),
+                        _ = _ && (0, _._)(_.attrs.href);
                       if (_)
-                        return (
-                          _.current(_.attrs.href, _.view),
-                          _.preventDefault(),
-                          !0
-                        );
+                        return _.current(_, _.view), _.preventDefault(), !0;
                     }
                     return !1;
                   },

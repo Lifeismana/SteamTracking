@@ -11410,6 +11410,41 @@
                     br: ReaderProto.readFixed64String,
                     bw: WriterProto.writeFixed64String,
                   },
+                  wg_msg_trace_flags: {
+                    n: 46,
+                    br: ReaderProto.readUint32,
+                    bw: WriterProto.writeUint32,
+                  },
+                  wg_msg_trace_instance: {
+                    n: 47,
+                    br: ReaderProto.readUint32,
+                    bw: WriterProto.writeUint32,
+                  },
+                  wg_msg_trace_gid: {
+                    n: 48,
+                    br: ReaderProto.readUint32,
+                    bw: WriterProto.writeUint32,
+                  },
+                  wg_msg_trace_token: {
+                    n: 49,
+                    br: ReaderProto.readString,
+                    bw: WriterProto.writeString,
+                  },
+                  wg_msg_trace_steamid: {
+                    n: 50,
+                    br: ReaderProto.readFixed64String,
+                    bw: WriterProto.writeFixed64String,
+                  },
+                  wg_msg_trace_status: {
+                    n: 51,
+                    br: ReaderProto.readString,
+                    bw: WriterProto.writeString,
+                  },
+                  trace_flags: {
+                    n: 52,
+                    br: ReaderProto.readUint32,
+                    bw: WriterProto.writeUint32,
+                  },
                 },
               }),
               t.sm_m
@@ -16012,6 +16047,7 @@
           m_fnGetReportingInterval = GetDefaultReportingInterval;
           m_fnGetReportTags = () => [];
           m_fnGetURL = () => location.href;
+          strDisplayVersion;
           m_bEnabled = !0;
           m_bInitialized = !1;
           constructor(t = !0) {
@@ -16045,6 +16081,8 @@
                 (this.m_fnGetReportingInterval = i.fnGetReportingInterval),
               i.fnGetReportTags && (this.m_fnGetReportTags = i.fnGetReportTags),
               i.fnGetURL && (this.m_fnGetURL = i.fnGetURL),
+              i.strDisplayVersion &&
+                (this.strDisplayVersion = i.strDisplayVersion),
               (this.m_bEnabled ||=
                 (console.error(
                   `Error reporting was initialized after being disabled, possibly dropping errors.`,
@@ -16075,6 +16113,7 @@
                   r.strComponentStack &&
                     (i.strComponentStack = r.strComponentStack),
                   (i.strUrl = this.m_fnGetURL()),
+                  (i.strDisplayVersion = this.strDisplayVersion),
                   this.SendErrorReport(i),
                   i)
                 : null;
@@ -16152,7 +16191,9 @@
                 let s;
                 return (
                   n.strComponentStack &&
-                    ((s ??= {}), (s.componentStack = n.strComponentStack)),
+                    ((s ??= {}),
+                    (s.componentStack = n.strComponentStack),
+                    (s.strDisplayVersion = n.strDisplayVersion)),
                   s && o.set_context(JSON.stringify(s)),
                   n.strUrl && o.set_url(n.strUrl),
                   o
@@ -37134,6 +37175,8 @@ Error generating stack: ` +
     StoreItem_ExtraDetails_PageSection,
     StoreItem_ExtraDetails_PressReview,
     StoreItem_ExtraDetails_EarlyAccess,
+    StoreItem_ExtraDetails_LinksAndInfo,
+    StoreItem_OptInRegistrationTags,
     StoreBrowseItemDataRequest,
     StoreBrowseContext,
     StoreItemID,
@@ -37320,7 +37363,7 @@ Error generating stack: ` +
                 n,
                 0,
                 -1,
-                [11, 12, 20, 21, 25, 41, 52, 71, 74],
+                [11, 12, 20, 21, 25, 41, 52, 71, 74, 77],
                 null,
               );
           }
@@ -37505,6 +37548,12 @@ Error generating stack: ` +
                     q: !0,
                   },
                   extra_details: { n: 75, c: StoreItem_ExtraDetails },
+                  optin_registration_tags: {
+                    n: 77,
+                    c: StoreItem_OptInRegistrationTags,
+                    r: !0,
+                    q: !0,
+                  },
                 },
               }),
               t.sm_m
@@ -39116,6 +39165,11 @@ Error generating stack: ` +
                     br: ReaderProto.readString,
                     bw: WriterProto.writeString,
                   },
+                  is_free_license: {
+                    n: 56,
+                    br: ReaderProto.readBool,
+                    bw: WriterProto.writeBool,
+                  },
                 },
               }),
               t.sm_m
@@ -40292,6 +40346,25 @@ Error generating stack: ` +
                     c: StoreItem_ExtraDetails_EarlyAccess,
                   },
                   season_pass: { n: 21, c: CSeasonPass },
+                  links_and_info: {
+                    n: 22,
+                    c: StoreItem_ExtraDetails_LinksAndInfo,
+                  },
+                  item_store_eligible: {
+                    n: 23,
+                    br: ReaderProto.readBool,
+                    bw: WriterProto.writeBool,
+                  },
+                  points_shop_eligible: {
+                    n: 24,
+                    br: ReaderProto.readBool,
+                    bw: WriterProto.writeBool,
+                  },
+                  specs_bbcode: {
+                    n: 25,
+                    br: ReaderProto.readString,
+                    bw: WriterProto.writeString,
+                  },
                 },
               }),
               t.sm_m
@@ -40844,6 +40917,206 @@ Error generating stack: ` +
             return `StoreItem_ExtraDetails_EarlyAccess`;
           }
         }),
+        (StoreItem_ExtraDetails_LinksAndInfo = class t extends (
+          import_google_protobuf$1.Message
+        ) {
+          static ImplementsStaticInterface() {}
+          constructor(n = null) {
+            super(),
+              t.prototype.website || AddAccessors(t.M()),
+              import_google_protobuf$1.Message.initialize(
+                this,
+                n,
+                0,
+                -1,
+                [6, 7, 8],
+                null,
+              );
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              (t.sm_m ||= {
+                proto: t,
+                fields: {
+                  website: {
+                    n: 1,
+                    br: ReaderProto.readString,
+                    bw: WriterProto.writeString,
+                  },
+                  stats_url: {
+                    n: 2,
+                    br: ReaderProto.readString,
+                    bw: WriterProto.writeString,
+                  },
+                  online_manual_url: {
+                    n: 3,
+                    br: ReaderProto.readString,
+                    bw: WriterProto.writeString,
+                  },
+                  health_warning_url: {
+                    n: 4,
+                    br: ReaderProto.readString,
+                    bw: WriterProto.writeString,
+                  },
+                  privacy_policy_url: {
+                    n: 5,
+                    br: ReaderProto.readString,
+                    bw: WriterProto.writeString,
+                  },
+                  available_documents: {
+                    n: 6,
+                    r: !0,
+                    q: !0,
+                    br: ReaderProto.readEnum,
+                    pbr: ReaderProto.readPackedEnum,
+                    bw: WriterProto.writeRepeatedEnum,
+                  },
+                  genreids: {
+                    n: 7,
+                    r: !0,
+                    q: !0,
+                    br: ReaderProto.readUint32,
+                    pbr: ReaderProto.readPackedUint32,
+                    bw: WriterProto.writeRepeatedUint32,
+                  },
+                  manufacturers: {
+                    n: 8,
+                    r: !0,
+                    q: !0,
+                    br: ReaderProto.readString,
+                    bw: WriterProto.writeRepeatedString,
+                  },
+                  achievements_visible: {
+                    n: 9,
+                    br: ReaderProto.readBool,
+                    bw: WriterProto.writeBool,
+                  },
+                  achievement_count: {
+                    n: 10,
+                    br: ReaderProto.readUint32,
+                    bw: WriterProto.writeUint32,
+                  },
+                },
+              }),
+              t.sm_m
+            );
+          }
+          static MBF() {
+            return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+          }
+          toObject(n = !1) {
+            return t.toObject(n, this);
+          }
+          static toObject(n, r) {
+            return ToObject(t.M(), n, r);
+          }
+          static fromObject(n) {
+            return FromObject(t.M(), n);
+          }
+          static deserializeBinary(n) {
+            let r = new import_google_protobuf$1.BinaryReader(n),
+              i = new t();
+            return t.deserializeBinaryFromReader(i, r);
+          }
+          static deserializeBinaryFromReader(n, r) {
+            return DeserializeBinary(t.MBF(), n, r);
+          }
+          serializeBinary() {
+            var n = new import_google_protobuf$1.BinaryWriter();
+            return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+          }
+          static serializeBinaryToWriter(n, r) {
+            SerializeBinary(t.M(), n, r);
+          }
+          serializeBase64String() {
+            var n = new import_google_protobuf$1.BinaryWriter();
+            return (
+              t.serializeBinaryToWriter(this, n), n.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return `StoreItem_ExtraDetails_LinksAndInfo`;
+          }
+        }),
+        (StoreItem_OptInRegistrationTags = class t extends (
+          import_google_protobuf$1.Message
+        ) {
+          static ImplementsStaticInterface() {}
+          constructor(n = null) {
+            super(),
+              t.prototype.optin_name || AddAccessors(t.M()),
+              import_google_protobuf$1.Message.initialize(
+                this,
+                n,
+                0,
+                -1,
+                [2],
+                null,
+              );
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              (t.sm_m ||= {
+                proto: t,
+                fields: {
+                  optin_name: {
+                    n: 1,
+                    br: ReaderProto.readString,
+                    bw: WriterProto.writeString,
+                  },
+                  values: {
+                    n: 2,
+                    r: !0,
+                    q: !0,
+                    br: ReaderProto.readString,
+                    bw: WriterProto.writeRepeatedString,
+                  },
+                },
+              }),
+              t.sm_m
+            );
+          }
+          static MBF() {
+            return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+          }
+          toObject(n = !1) {
+            return t.toObject(n, this);
+          }
+          static toObject(n, r) {
+            return ToObject(t.M(), n, r);
+          }
+          static fromObject(n) {
+            return FromObject(t.M(), n);
+          }
+          static deserializeBinary(n) {
+            let r = new import_google_protobuf$1.BinaryReader(n),
+              i = new t();
+            return t.deserializeBinaryFromReader(i, r);
+          }
+          static deserializeBinaryFromReader(n, r) {
+            return DeserializeBinary(t.MBF(), n, r);
+          }
+          serializeBinary() {
+            var n = new import_google_protobuf$1.BinaryWriter();
+            return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+          }
+          static serializeBinaryToWriter(n, r) {
+            SerializeBinary(t.M(), n, r);
+          }
+          serializeBase64String() {
+            var n = new import_google_protobuf$1.BinaryWriter();
+            return (
+              t.serializeBinaryToWriter(this, n), n.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return `StoreItem_OptInRegistrationTags`;
+          }
+        }),
         (StoreBrowseItemDataRequest = class t extends (
           import_google_protobuf$1.Message
         ) {
@@ -40956,6 +41229,11 @@ Error generating stack: ` +
                   include_best_purchase_option: {
                     n: 19,
                     d: !0,
+                    br: ReaderProto.readBool,
+                    bw: WriterProto.writeBool,
+                  },
+                  include_optin_registration_tags: {
+                    n: 20,
                     br: ReaderProto.readBool,
                     bw: WriterProto.writeBool,
                   },
@@ -48072,7 +48350,7 @@ Error generating stack: ` +
         return this.GetElementForFocusRingMeasure()?.getBoundingClientRect();
       }
       GetBorderRadiusForFocusRing() {
-        if (!this.m_Properties?.focusRingSizeElementID) return;
+        if (!this.m_Properties?.focusRingHasBorderRadius) return;
         let t = this.GetElementForFocusRingMeasure();
         if (!t) return;
         let n = t.ownerDocument?.defaultView?.getComputedStyle(t);
@@ -49075,7 +49353,17 @@ Error generating stack: ` +
         },
         [l],
       ),
-      p = useRefCallbackWithCleanup(
+      p = import_react$3.useCallback(
+        (t) => !l.bInVR && t.pointerType === `mouse`,
+        [l],
+      ),
+      m = import_react$3.useCallback(
+        (t) => {
+          p(t) || l.ShowVirtualKeyboard();
+        },
+        [l, p],
+      ),
+      h = useRefCallbackWithCleanup(
         (t) => {
           o.current = t;
           let n = [];
@@ -49088,26 +49376,24 @@ Error generating stack: ` +
                   l.SetAsCurrentVirtualKeyboardTarget,
                 ),
               ),
-              t.addEventListener(`click`, l.ShowVirtualKeyboard),
-              n.push(() =>
-                t.removeEventListener(`click`, l.ShowVirtualKeyboard),
-              ),
+              t.addEventListener(`click`, m),
+              n.push(() => t.removeEventListener(`click`, m)),
               n.push(RegisterGamepadOKEvent(t, l.ShowVirtualKeyboard)),
               n.push(RegisterGamepadBlurEvent(t, u))),
             () => n.forEach((t) => t())
           );
         },
-        [u, l],
+        [u, m, l],
       );
     return (
       import_react$3.useLayoutEffect(
         () => (
           setRef(n, {
-            TakeFocusAndShowKeyboard: () => {
-              let t = o.current;
-              t &&
-                (document.activeElement != t && t.focus(),
-                l.ShowVirtualKeyboard());
+            TakeFocusAndShowKeyboard: (t) => {
+              let n = o.current;
+              n &&
+                (document.activeElement != n && n.focus(),
+                !(t && p(t)) && l.ShowVirtualKeyboard());
             },
             HideVirtualKeyboard: () => {
               l.HideVirtualKeyboard();
@@ -49115,9 +49401,9 @@ Error generating stack: ` +
           }),
           () => setRef(n, null)
         ),
-        [l, n],
+        [l, n, p],
       ),
-      p
+      h
     );
   }
   function useVirtualKeyboardReference(t) {
@@ -49476,28 +49762,29 @@ Error generating stack: ` +
         navKey: p,
         noFocusRing: m,
         focusRingSizeElementID: h,
-        focusable: g,
-        navRef: _,
-        actionDescriptionMap: v,
-        onMoveUp: y,
-        onMoveRight: x,
-        onMoveDown: S,
-        onMoveLeft: C,
-        navEntryPreferPosition: w,
-        scrollIntoViewWhenChildFocused: T,
-        fnScrollIntoViewHandler: E,
-        scrollIntoViewType: D,
-        resetNavOnEntry: O,
-        scrollRegionToStartOrEnd: k,
-        ...ee
+        focusRingHasBorderRadius: g,
+        focusable: _,
+        navRef: v,
+        actionDescriptionMap: y,
+        onMoveUp: x,
+        onMoveRight: S,
+        onMoveDown: C,
+        onMoveLeft: w,
+        navEntryPreferPosition: T,
+        scrollIntoViewWhenChildFocused: E,
+        fnScrollIntoViewHandler: D,
+        scrollIntoViewType: O,
+        resetNavOnEntry: k,
+        scrollRegionToStartOrEnd: ee,
+        ...te
       } = t,
       {
-        gamepadEvents: te,
-        actionDescriptions: ne,
-        props: re,
-      } = ExpandGamepadEventProps(ee);
+        gamepadEvents: ne,
+        actionDescriptions: re,
+        props: ie,
+      } = ExpandGamepadEventProps(te);
     return {
-      elemProps: re,
+      elemProps: ie,
       navOptions: {
         autoFocus: n,
         preferredFocus: r,
@@ -49509,21 +49796,22 @@ Error generating stack: ` +
         navKey: p,
         noFocusRing: m,
         focusRingSizeElementID: h,
-        focusable: g,
-        navRef: _,
-        onMoveUp: y,
-        onMoveRight: x,
-        onMoveDown: S,
-        onMoveLeft: C,
-        navEntryPreferPosition: w,
-        scrollIntoViewWhenChildFocused: T,
-        fnScrollIntoViewHandler: E,
-        scrollIntoViewType: D,
-        resetNavOnEntry: O,
-        scrollRegionToStartOrEnd: k,
-        actionDescriptionMap: { ...v, ...ne },
+        focusRingHasBorderRadius: g,
+        focusable: _,
+        navRef: v,
+        onMoveUp: x,
+        onMoveRight: S,
+        onMoveDown: C,
+        onMoveLeft: w,
+        navEntryPreferPosition: T,
+        scrollIntoViewWhenChildFocused: E,
+        fnScrollIntoViewHandler: D,
+        scrollIntoViewType: O,
+        resetNavOnEntry: k,
+        scrollRegionToStartOrEnd: ee,
+        actionDescriptionMap: { ...y, ...re },
       },
-      gamepadEvents: te,
+      gamepadEvents: ne,
     };
   }
   function FocusReactiveElementFactory(t) {
@@ -59784,7 +60072,7 @@ Error generating stack: ` +
         (Header_Nav_DirectPurchasing_Config$13 = `Lihat Butiran Pembayaran Bank`),
         (Header_Nav_DirectPurchasing_OpenInvoices$13 = `Selaraskan Invois Dihantar`),
         (Header_Nav_DirectPurchasing_CreateInvoices$13 = `Cipta/Urus Invois`),
-        (Header_Nav_StoreAdmin$13 = `Store Admin`),
+        (Header_Nav_StoreAdmin$13 = `Pentadbir Gedung`),
         (Header_Nav_StoreAdmin_Spotlights$13 = `Spotlights`),
         (Header_Nav_StoreAdmin_Frontpage$13 = `Front Page`),
         (Header_Nav_OEM$13 = `Alat OEM`),
@@ -59820,7 +60108,7 @@ Error generating stack: ` +
         (AppType_TitleCase_Episode$13 = `Episod`),
         (AppType_TitleCase_Movie$13 = `Filem`),
         (AppType_TitleCase_Beta$13 = `Beta`),
-        (AppType_TitleCase_DLC_SeasonPass$13 = `Season Pass`),
+        (AppType_TitleCase_DLC_SeasonPass$13 = `Pas Musim`),
         (Aria_Navigation$44 = `Navigasi`),
         (partner_menu_malay_default = {
           Header_Global_Documentation: Header_Global_Documentation$13,
@@ -70327,8 +70615,8 @@ Error generating stack: ` +
       (language$14 = `malay`),
         (Aria_Steam_Home_Link$14 = `Pautan ke Laman Utama Steam`),
         (global_menu_install_steam$14 = `Pasang Steam`),
-        (global_menu_login$13 = `sign in`),
-        (global_menu_login_caps$13 = `Sign in`),
+        (global_menu_login$13 = `daftar masuk`),
+        (global_menu_login_caps$13 = `Daftar masuk`),
         (global_menu_view_profile$13 = `Lihat profil saya`),
         (global_menu_account_details$13 = `Butiran akaun`),
         (global_menu_account_details_accountname$13 = `Butiran akaun: <1>%1$s</1>`),
@@ -70969,7 +71257,7 @@ Error generating stack: ` +
     global_header_russian_default,
     init_global_header_russian = __esmMin(() => {
       (language$9 = `russian`),
-        (Aria_Steam_Home_Link$9 = `Ссылка на домашнюю страницу Steam`),
+        (Aria_Steam_Home_Link$9 = `Ссылка на главную страницу Steam`),
         (global_menu_install_steam$9 = `Установить Steam`),
         (global_menu_login$8 = `вход`),
         (global_menu_login_caps$8 = `Вход`),

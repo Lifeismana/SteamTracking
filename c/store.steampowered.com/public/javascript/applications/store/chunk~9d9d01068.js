@@ -2078,7 +2078,9 @@
           (_[(_.k_EStoreFilterClauseTypePrice = 6)] =
             "k_EStoreFilterClauseTypePrice"),
           (_[(_.k_EStoreFilterClauseTypeAppType = 7)] =
-            "k_EStoreFilterClauseTypeAppType");
+            "k_EStoreFilterClauseTypeAppType"),
+          (_[(_.k_EStoreFilterClauseTypeOptInRegistrationTag = 8)] =
+            "k_EStoreFilterClauseTypeOptInRegistrationTag");
       })(_ || (_ = {})),
         (function (_) {
           (_[(_.k_ESaleTagFilter = 0)] = "k_ESaleTagFilter"),

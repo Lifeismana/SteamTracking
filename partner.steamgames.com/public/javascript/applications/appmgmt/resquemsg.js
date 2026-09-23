@@ -46,6 +46,7 @@
         reservation_ctn: "_1GzH4ChDWcNv3vCKTlSIfb",
         reservation_horizontal_ctn: "keZ2uzYaV6t4dSmdSpPpP",
         options: "_1ShICbWRa-d4k2sWXSBRU5",
+        options_list: "_2HdrY_BfMJtBgnkQG9Yy1N",
         price: "_K9GwdoULB7fidQYauP4H",
         CommunityPreviewReservationWidgetControl: "k82adLwDVk_0_Qpi4uKHS",
         reservecopy: "_2mg-ayeqtfvSlVBeUNudsd",

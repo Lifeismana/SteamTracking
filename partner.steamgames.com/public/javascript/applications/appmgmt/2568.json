@@ -62,6 +62,7 @@
     "Reservation_OnRegularReserveForModel": "%1$s için rezervasyon sırasındasınız.",
     "Reservation_PostShuffle_TAndC": "<1>Şartlar ve koşullar</1> geçerlidir.",
     "machine_dummy": "dummy",
+    "PriceDisplay_YourPrice": "Ödeyeceğiniz Fiyat:",
     "PriceGrid_NormalPrice": "NORMALDE",
     "PriceGrid_RecentPrice": "SON 30 GÜNDE EN DÜŞÜK FİYAT",
     "PriceGrid_CurrentPrice": "ŞİMDİ",

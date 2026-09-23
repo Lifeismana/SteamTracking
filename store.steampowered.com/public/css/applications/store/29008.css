@@ -141,7 +141,7 @@ html.responsive.touch ._3lJb_YN8uykqLcm4eG1jRF {
   color: #929699;
 }
 .ZGxYVjsUSjHLRHIWkx4-L {
-  color: #fbca7c;
+  color: #ffc53d;
 }
 ._2UAf_T9P3-2l5Rr-IlNksx .yjs9mmsKYDARPUPSoBFw3 {
   color: #0e141b;
@@ -877,7 +877,7 @@ html.GamepadMode ._3456EX4aC94XtIz6d_Qhsl {
   background-color: #a1cd44;
   color: #000;
   font-weight: 500;
-  padding: 2px 3px;
+  padding: 0px 6px;
 }
 .yvqq8z2k4i7-Mzx-JHeNC {
   cursor: pointer;
@@ -1599,6 +1599,13 @@ html.GamepadMode ._3456EX4aC94XtIz6d_Qhsl {
   color: var(--gpStoreLightestGrey);
   background: #071d35;
   flex-wrap: nowrap;
+  min-height: var(--control-height-2);
+  align-items: center;
+  border-radius: var(--radius-sm);
+}
+._2s-O5T3qJJYR2AUq4b9jIN._2R_C2rCrJEg8G8_d7-QQKn._2R_C2rCrJEg8G8_d7-QQKn
+  .cnkoFkzVCby40gJ0jGGS4 {
+  align-self: stretch;
 }
 ._2s-O5T3qJJYR2AUq4b9jIN._2R_C2rCrJEg8G8_d7-QQKn._2R_C2rCrJEg8G8_d7-QQKn
   ._3j4dI1yA7cRfCvK8h406OB:first-child {
@@ -1769,6 +1776,19 @@ html.GamepadMode ._3456EX4aC94XtIz6d_Qhsl {
 ._2R_C2rCrJEg8G8_d7-QQKn ._3NhLu7mTdty7JufpSpz6Re {
   align-items: center;
 }
+.BasicUI ._2R_C2rCrJEg8G8_d7-QQKn ._3NhLu7mTdty7JufpSpz6Re {
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0;
+  padding: 0px 0px 0px 6px;
+  line-height: 1.15;
+}
+.BasicUI
+  ._2R_C2rCrJEg8G8_d7-QQKn:not(._1g0B-RjwkUV0_MDURgy3Bi)
+  ._3NhLu7mTdty7JufpSpz6Re {
+  align-self: stretch;
+  border-left: 1px solid #2a425e;
+}
 ._3NhLu7mTdty7JufpSpz6Re ._3j4dI1yA7cRfCvK8h406OB {
   padding: 0px;
   line-height: 1.3;
@@ -1929,6 +1949,11 @@ html.GamepadMode ._3456EX4aC94XtIz6d_Qhsl {
   border-radius: unset;
   color: #beee11;
 }
+._1stCJEQuG2FqlQr_q9AgR2 {
+  color: #ccd8e3;
+  opacity: 0.6;
+  font-size: 12px;
+}
 ._3mInDnGL3LlUC7uPs1CfOP {
   padding: 6px;
   font-size: 18px;
@@ -1942,7 +1967,7 @@ html.GamepadMode ._3456EX4aC94XtIz6d_Qhsl {
   text-decoration: line-through;
 }
 ._2R_C2rCrJEg8G8_d7-QQKn ._3mInDnGL3LlUC7uPs1CfOP {
-  padding: 2px 0px 2px 3px;
+  padding-left: 6px;
   border-radius: 1px;
   font-size: 14px;
 }
@@ -1956,7 +1981,7 @@ html.GamepadMode ._3456EX4aC94XtIz6d_Qhsl {
   text-decoration: none;
   font-size: 16px;
   color: #a1cd44;
-  margin-right: 8px;
+  margin-right: 4px;
 }
 ._1BejQFnnmkHMi9stswiJzf {
   border-radius: 2px;
@@ -2184,6 +2209,9 @@ html.GamepadMode ._3456EX4aC94XtIz6d_Qhsl {
   position: relative;
   background: #000;
   box-shadow: 0 0 7px rgba(0, 0, 0, 0.8);
+}
+._1APLSpJeTPfN76xzyzVSfx.lxQeFs3wUE9dLxZkpEWtt {
+  box-shadow: none;
 }
 ._1APLSpJeTPfN76xzyzVSfx ._3chRZTd1smybX8C-swWcAm {
   position: absolute;

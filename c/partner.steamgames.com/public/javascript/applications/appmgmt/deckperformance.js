@@ -182,7 +182,7 @@
       }
       function _(_) {
         const { dataprops: _, appName: _, histogramData: _ } = _;
-        return _?.framerate || _?.feedback
+        return _?.framerate || _?.feedback?.game_stats
           ? (0, _.jsxs)("div", {
               className: _.PerformanceContainer,
               children: [
@@ -203,8 +203,9 @@
           : (0, _.jsx)(_.Fragment, {});
       }
       function _(_) {
-        const { feedbackData: _ } = _;
-        if (!_ || !_.daily?.length)
+        const { feedbackData: _ } = _,
+          _ = _?.game_stats ? _?.game_stats[0] : void 0;
+        if (!_?.daily?.length)
           return (0, _.jsx)("div", {
             className: _.FrameRateContainer,
             children: (0, _.jsxs)("div", {
@@ -266,6 +267,9 @@
                 }),
                 (0, _.jsx)(_, {
                   nAgreePercent: _,
+                  nGlobalAgreePercent: _.global_agree_percentage
+                    ? Math.floor(_.global_agree_percentage)
+                    : void 0,
                 }),
                 (0, _.jsx)("div", {
                   children: _._.Localize(
@@ -321,7 +325,7 @@
                   (0, _.jsx)(_._, {
                     labelFormatter: _,
                   }),
-                  __webpack_require__.map((_) =>
+                  _.map((_) =>
                     (0, _.jsx)(
                       _._,
                       {
@@ -668,30 +672,45 @@
         return (0, _._)(_);
       }
       function _(_) {
-        const { nAgreePercent: _ } = _;
+        const { nAgreePercent: _, nGlobalAgreePercent: _ } = _;
         return (0, _.jsxs)("div", {
           className: _.FeedbackAgree,
           children: [
-            _._.LocalizeReact(
-              "#GamePerformanceStats_Feedback_Agree",
-              (0, _.jsx)("span", {
-                className: (0, _._)(_.Percentage, _.DescriptionEmphasis),
-                children: _._.LocalizeReact(
-                  "#GamePerformanceStats_Feedback_AgreePercentage",
-                  _.toFixed(0),
-                ),
-              }),
-              (0, _.jsx)("span", {
-                children: _._.Localize("#SteamDeckVerified_Category_Verified"),
-              }),
-            ),
-            (0, _.jsx)(_._, {
-              tooltip: (0, _.jsx)("div", {
-                children: _._.Localize(
-                  "#GamePerformanceStats_Feedback_PercentageTooltip",
-                ),
-              }),
+            (0, _.jsx)("span", {
+              children: _._.LocalizeReact(
+                "#GamePerformanceStats_Feedback_Agree",
+                (0, _.jsx)("span", {
+                  className: (0, _._)(_.Percentage, _.DescriptionEmphasis),
+                  children: _._.LocalizeReact(
+                    "#GamePerformanceStats_Feedback_AgreePercentage",
+                    _.toFixed(0),
+                  ),
+                }),
+                _._.Localize("#SteamDeckVerified_Category_Verified"),
+              ),
             }),
+            !!_ &&
+              (0, _.jsxs)("span", {
+                children: [
+                  " ",
+                  _._.LocalizeReact(
+                    "#GamePerformanceStats_Feedback_AgreeContext",
+                    _._.LocalizeReact(
+                      "#GamePerformanceStats_Feedback_AgreePercentage",
+                      __webpack_require__.toFixed("chunkid"),
+                    ),
+                  ),
+                ],
+              }),
+            !!_ &&
+              (0, _.jsx)(_._, {
+                tooltip: (0, _.jsx)("div", {
+                  children: _._.Localize(
+                    "#GamePerformanceStats_Feedback_PercentageTooltip",
+                    _,
+                  ),
+                }),
+              }),
           ],
         });
       }

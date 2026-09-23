@@ -43,7 +43,7 @@
     },
     70740: (e, t, s) => {
       "use strict";
-      s.r(t), s.d(t, { ContentHubRoutes: () => H, default: () => J });
+      s.r(t), s.d(t, { ContentHubRoutes: () => Z, default: () => J });
       var a = s(7850),
         n = s(97058),
         o = s(17083),
@@ -63,25 +63,25 @@
         p = s(77411),
         x = s(45737),
         C = s.n(x),
-        j = s(16676),
-        y = s(9154),
+        y = s(16676),
+        j = s(9154),
         b = s(738),
-        S = s(56654),
-        v = s(12155),
-        A = s(22797);
+        v = s(56654),
+        S = s(12155),
+        f = s(22797);
       s(41735), s(78327), s(66418);
       h.ED, h.M, h.mx, h.T4, h.u7;
-      let f = new Map();
-      f.set(h.M, h.ED), f.set(h.mx, h.ED), f.set(h.T4, h.mx), f.set(h.u7, h.T4);
+      let A = new Map();
+      A.set(h.M, h.ED), A.set(h.mx, h.ED), A.set(h.T4, h.mx), A.set(h.u7, h.T4);
       var _ = s(9161),
         T = s(73745),
         k = s(30470),
         D = s(74810),
-        N = s(92237),
-        w = s(4940),
-        E = s.n(w),
-        G = s(95034);
-      const M = m.memo(function () {
+        w = s(92237),
+        N = s(4940),
+        E = s.n(N),
+        B = s(95034);
+      const G = m.memo(function () {
         const [e, t] = m.useState(),
           [s, n] = m.useState(!1),
           [o, r] = m.useState(!1),
@@ -127,11 +127,11 @@
                     children:
                       "You have unpublished changes. Click Publish below to publish and make them available to users.",
                   }),
-                (0, a.jsx)(B, { categories: e, onUpdate: d }),
+                (0, a.jsx)(M, { categories: e, onUpdate: d }),
                 (0, a.jsxs)("div", {
                   className: E().ActionButtonCtn,
                   children: [
-                    (0, a.jsx)(j.jn, {
+                    (0, a.jsx)(y.jn, {
                       onClick: () =>
                         (0, b.pg)(
                           (0, a.jsx)(W, {
@@ -145,13 +145,13 @@
                       children: o
                         ? (0, a.jsx)(a.Fragment, { children: "Save" })
                         : (0, a.jsxs)(a.Fragment, {
-                            children: [(0, a.jsx)(v.Jlk, {}), "Saved"],
+                            children: [(0, a.jsx)(S.Jlk, {}), "Saved"],
                           }),
                     }),
-                    (0, a.jsx)(j.$n, {
+                    (0, a.jsx)(y.$n, {
                       onClick: () =>
                         (0, b.pg)(
-                          (0, a.jsx)(Z, { onPublish: () => c(!1) }),
+                          (0, a.jsx)(H, { onPublish: () => c(!1) }),
                           window,
                         ),
                       children: "Publish",
@@ -160,12 +160,12 @@
                 }),
               ],
             })
-          : (0, a.jsx)(A.t, { size: "medium", position: "center" });
+          : (0, a.jsx)(f.t, { size: "medium", position: "center" });
       });
-      function B(e) {
+      function M(e) {
         const { categories: t, onUpdate: s } = e,
           { rgTags: n } = (0, i.DT)(),
-          [o] = (0, G.QD)("edit");
+          [o] = (0, B.QD)("edit");
         if (!t)
           return (0, a.jsx)("div", { children: "No categories defined." });
         const r = (e) => {
@@ -174,7 +174,7 @@
         return (0, a.jsxs)("div", {
           className: E().CategoriesList,
           children: [
-            (0, a.jsx)(S.A, {
+            (0, a.jsx)(v.A, {
               bDisabled: !0,
               items: t,
               onDelete: (e) => {
@@ -192,7 +192,7 @@
                   e.id,
                 ),
             }),
-            (0, a.jsx)(j.$n, {
+            (0, a.jsx)(y.$n, {
               onClick: () => {
                 s((e) => {
                   let s = 0;
@@ -209,7 +209,7 @@
           ],
         });
       }
-      function I(e) {
+      function F(e) {
         const { rgTags: t, replacesTags: s } = e,
           n = (0, m.useMemo)(
             () =>
@@ -263,14 +263,14 @@
               }),
               (0, a.jsx)("div", {
                 className: E().ReplacesTags,
-                children: (0, a.jsx)(I, {
+                children: (0, a.jsx)(F, {
                   rgTags: s,
                   replacesTags: t.replaces_tags,
                 }),
               }),
-              (0, a.jsx)(y.EN, {
+              (0, a.jsx)(j.EN, {
                 active: r,
-                children: (0, a.jsx)(P, {
+                children: (0, a.jsx)(I, {
                   category: t,
                   fnSaveCategory: n,
                   closeModal: c,
@@ -280,7 +280,7 @@
           }),
         });
       }
-      function P(e) {
+      function I(e) {
         const { fnSaveCategory: t, closeModal: s } = e,
           [n, o] = m.useState(e.category),
           r = m.useMemo(
@@ -295,17 +295,17 @@
             (e) => o((t) => ({ ...t, content_descriptors: e })),
             [o],
           );
-        return (0, a.jsxs)(y.eV, {
+        return (0, a.jsxs)(j.eV, {
           title: `Edit Category (ID ${n.id})`,
           bAllowFullSize: !0,
           onCancel: s,
           closeModal: s,
           children: [
-            (0, a.jsx)(j.nB, {
+            (0, a.jsx)(y.nB, {
               children: (0, a.jsxs)("div", {
                 className: E().CategoryEditor,
                 children: [
-                  (0, a.jsx)(j.pd, {
+                  (0, a.jsx)(y.pd, {
                     label: "Handle",
                     tooltip: "This forms the end of the URL. It must be unique",
                     value: n.handle,
@@ -315,7 +315,7 @@
                   (0, a.jsxs)("div", {
                     className: E().CategoryCtn,
                     children: [
-                      (0, a.jsx)(j.pd, {
+                      (0, a.jsx)(y.pd, {
                         label: "Loc Token",
                         tooltip:
                           "Token only needed if we wish to expose this hub to customers",
@@ -324,8 +324,8 @@
                           o((t) => ({ ...t, loc_token: e.target.value })),
                       }),
                       n.loc_token &&
-                        (0, a.jsx)(j.a3, { children: (0, l.we)(n.loc_token) }),
-                      (0, a.jsx)(j.pd, {
+                        (0, a.jsx)(y.a3, { children: (0, l.we)(n.loc_token) }),
+                      (0, a.jsx)(y.pd, {
                         label: "Description Loc Token",
                         tooltip:
                           "A localized token explaining this content hub to customers",
@@ -337,51 +337,51 @@
                           })),
                       }),
                       n.description_loc_token &&
-                        (0, a.jsx)(j.a3, {
+                        (0, a.jsx)(y.a3, {
                           children: (0, l.we)(n.description_loc_token),
                         }),
                     ],
                   }),
-                  (0, a.jsx)(j.Yh, {
+                  (0, a.jsx)(y.Yh, {
                     label: "Use As A Heading ",
                     tooltip:
                       "Only used for establishing headings used on the main store drop-down menu",
                     checked: n.heading,
                     onChange: (e) => o((t) => ({ ...t, heading: e })),
                   }),
-                  (0, a.jsx)(j.Yh, {
+                  (0, a.jsx)(y.Yh, {
                     label: "Exclude from search ",
                     tooltip: "Do not show this category in store search",
                     checked: n.exclude_from_search,
                     onChange: (e) =>
                       o((t) => ({ ...t, exclude_from_search: e })),
                   }),
-                  (0, a.jsx)(j.pd, {
+                  (0, a.jsx)(y.pd, {
                     label: "Search aliases",
                     tooltip: "Comma separated search aliases",
                     value: n.search_alias,
                     onChange: (e) =>
                       o((t) => ({ ...t, search_alias: e.target.value })),
                   }),
-                  (0, a.jsx)(j.m, {
+                  (0, a.jsx)(y.m, {
                     label: "Type",
                     rgOptions: r,
                     selectedOption: n.type,
                     onChange: (e) => o((t) => ({ ...t, type: e.data })),
                   }),
-                  (0, a.jsx)(U, {
+                  (0, a.jsx)(L, {
                     rgContentDescriptors: n.content_descriptors ?? [],
                     setContentDescriptors: i,
                   }),
                   ("tagids" === n.type ||
                     "category" === n.type ||
                     "contenthub" == n.type) &&
-                    (0, a.jsx)(F, { category: n, setCategory: o }),
+                    (0, a.jsx)(P, { category: n, setCategory: o }),
                 ],
               }),
             }),
-            (0, a.jsx)(j.wi, {
-              children: (0, a.jsx)(j.CB, {
+            (0, a.jsx)(y.wi, {
+              children: (0, a.jsx)(y.CB, {
                 onCancel: s,
                 onOK: () => {
                   t(n), s();
@@ -392,10 +392,10 @@
           ],
         });
       }
-      const U = m.memo(function (e) {
+      const L = m.memo(function (e) {
         const { rgContentDescriptors: t, setContentDescriptors: s } = e,
           n = m.useMemo(() => [h.M, h.mx, h.T4, h.u7], []);
-        return (0, a.jsx)(j.mq, {
+        return (0, a.jsx)(y.mq, {
           label: "Content Descriptors",
           children: (0, a.jsx)(g.uh, {
             selectedValue: t,
@@ -428,7 +428,7 @@
           }),
         });
       });
-      function F(e) {
+      function P(e) {
         const { category: t, setCategory: s } = e,
           [n, o] = (0, m.useState)(!1),
           [r, i] = (0, m.useState)(0);
@@ -440,19 +440,19 @@
                 children: (0, a.jsxs)("div", {
                   className: E().Category,
                   children: [
-                    (0, a.jsx)(V, {
+                    (0, a.jsx)(O, {
                       category: t,
                       setCategory: s,
                       list: "must",
                       title: "Must have all of these tags",
                     }),
-                    (0, a.jsx)(V, {
+                    (0, a.jsx)(O, {
                       category: t,
                       setCategory: s,
                       list: "any",
                       title: "Must have one of these tags",
                     }),
-                    (0, a.jsx)(V, {
+                    (0, a.jsx)(O, {
                       category: t,
                       setCategory: s,
                       list: "mustnot",
@@ -467,7 +467,7 @@
               (0, a.jsxs)("div", {
                 className: E().CategoryCtn,
                 children: [
-                  (0, a.jsx)(V, {
+                  (0, a.jsx)(O, {
                     category: t,
                     setCategory: s,
                     list: "replaces_tags",
@@ -483,15 +483,15 @@
             Boolean(n)
               ? (0, a.jsxs)(a.Fragment, {
                   children: [
-                    (0, a.jsx)(j.$n, {
+                    (0, a.jsx)(y.$n, {
                       onClick: () => i(r + 1),
                       children: "Refresh Stats",
                     }),
-                    (0, a.jsx)(L, { category: t }),
+                    (0, a.jsx)(U, { category: t }),
                   ],
                 })
               : (0, a.jsx)(
-                  j.Yh,
+                  y.Yh,
                   {
                     checked: n,
                     onChange: (e) => o(e),
@@ -502,11 +502,11 @@
           ],
         });
       }
-      function L(e) {
+      function U(e) {
         const { category: t } = e,
           s = (0, u.p$)(t.must, t.any, t.mustnot);
         if (!s)
-          return (0, a.jsx)(A.t, {
+          return (0, a.jsx)(f.t, {
             string: (0, l.we)("#Loading"),
             position: "center",
             size: "medium",
@@ -514,7 +514,7 @@
         const n = s.total_games > D.iT && s.total_games <= D.hp;
         return (0, a.jsxs)(a.Fragment, {
           children: [
-            (0, a.jsx)(j.$n, {
+            (0, a.jsx)(y.$n, {
               onClick: () => {
                 const e = [];
                 e.push(["AppID", "Sale Rank"]),
@@ -526,7 +526,7 @@
               },
               children: "Download Top 100 Games",
             }),
-            (0, a.jsx)(j.$n, {
+            (0, a.jsx)(y.$n, {
               onClick: () => {
                 const e = [];
                 e.push(["AppID"]),
@@ -539,22 +539,22 @@
               children: "Download All Games",
             }),
             (0, a.jsxs)("div", {
-              className: N.ThemeRow,
+              className: w.ThemeRow,
               children: [
                 (0, a.jsxs)("div", {
-                  className: N.ThemeDefinitionCtn,
+                  className: w.ThemeDefinitionCtn,
                   children: [
                     "Summary: ",
                     (0, a.jsx)(D.KU, { nTotalGames: s.total_games }),
-                    Boolean(n) && (0, a.jsx)(O, { category: t }),
+                    Boolean(n) && (0, a.jsx)(V, { category: t }),
                   ],
                 }),
                 (0, a.jsxs)("div", {
-                  className: N.TopGamesCtn,
+                  className: w.TopGamesCtn,
                   children: [
                     (0, a.jsx)("div", { children: "Top 10 Games non-F2P:" }),
                     (0, a.jsx)("div", {
-                      className: N.GamesColumn,
+                      className: w.GamesColumn,
                       children: s.top_games
                         ?.slice(0, 10)
                         .map((e) =>
@@ -572,13 +572,13 @@
           ],
         });
       }
-      function O(e) {
+      function V(e) {
         const { category: t } = e,
           s = (0, u.eX)(t.must, t.any, t.mustnot),
           n = (0, u.mg)(t.must, t.any, t.mustnot);
         return (0, a.jsx)(D.ny, { saleSummary: s, topAppSummary: n });
       }
-      const V = m.memo(function (e) {
+      const O = m.memo(function (e) {
         const { category: t, setCategory: s, list: n, title: o } = e,
           { rgTags: r, rgCategories: l } = (0, i.DT)(),
           c = (e) => {
@@ -597,8 +597,8 @@
         return (0, a.jsxs)("div", {
           className: E().TagOrCategoryList,
           children: [
-            (0, a.jsx)(j.JU, { children: o }),
-            (0, a.jsx)(S.A, {
+            (0, a.jsx)(y.JU, { children: o }),
+            (0, a.jsx)(v.A, {
               bDisabled: !0,
               items: t[n] ?? [],
               onDelete: (e) => c((t) => t.filter((t, s) => s != e)),
@@ -607,7 +607,7 @@
                   ? (0, a.jsxs)("div", {
                       className: E().IDSelector,
                       children: [
-                        (0, a.jsx)(j.pd, {
+                        (0, a.jsx)(y.pd, {
                           value: e.id,
                           onChange: (e) =>
                             c((t) =>
@@ -652,7 +652,7 @@
                       })
                     : null,
             }),
-            (0, a.jsx)(j.$n, {
+            (0, a.jsx)(y.$n, {
               onClick: () => c((e) => (e ? [...e, { id: 0 }] : [{ id: 0 }])),
               children: "Add",
             }),
@@ -668,7 +668,7 @@
               e ? r(e.strErrorMsg) : (s(), n && n());
             });
           }, [t, n, s]),
-          (0, a.jsx)(y.o0, {
+          (0, a.jsx)(j.o0, {
             strTitle: "Saving",
             bAlertDialog: !0,
             bDisableBackgroundDismiss: !0,
@@ -676,11 +676,11 @@
             closeModal: n,
             children: Boolean(o)
               ? (0, a.jsxs)("div", { children: ["Error: ", o] })
-              : (0, a.jsx)(A.t, { size: "medium", position: "center" }),
+              : (0, a.jsx)(f.t, { size: "medium", position: "center" }),
           })
         );
       }
-      function Z(e) {
+      function H(e) {
         const { onPublish: t, closeModal: s } = e,
           [n, o] = m.useState(!1),
           [r, l] = m.useState();
@@ -691,7 +691,7 @@
                 e ? l(e.strErrorMsg) : (t(), o(!1), s && s());
               });
           }, [n, s, t]),
-          (0, a.jsx)(y.o0, {
+          (0, a.jsx)(j.o0, {
             strTitle: n ? "Publishing" : "Really Publish?",
             strDescription:
               !n &&
@@ -710,12 +710,12 @@
               (0, a.jsx)(a.Fragment, {
                 children: Boolean(r)
                   ? (0, a.jsxs)("div", { children: ["Error: ", r] })
-                  : (0, a.jsx)(A.t, { size: "medium", position: "center" }),
+                  : (0, a.jsx)(f.t, { size: "medium", position: "center" }),
               }),
           })
         );
       }
-      const H = { ContentHubCategories: () => "/categories/" };
+      const Z = { ContentHubCategories: () => "/categories/" };
       function J(e) {
         return (0, a.jsxs)(o.Kd, {
           basename: (0, d.C)() + "admin/store/contenthub/",
@@ -724,14 +724,71 @@
             (0, a.jsxs)(r.dO, {
               children: [
                 (0, a.jsx)(r.qh, {
-                  path: H.ContentHubCategories(),
-                  component: M,
+                  path: Z.ContentHubCategories(),
+                  component: G,
                 }),
                 (0, a.jsx)(r.qh, { component: n.a }),
               ],
             }),
           ],
         });
+      }
+    },
+    9161: (e, t, s) => {
+      "use strict";
+      s.d(t, { g: () => o });
+      var a = s(40323),
+        n = s.n(a);
+      class o {
+        static ParseCSVFile(e, t) {
+          return new Promise((s, a) => {
+            const o = {
+              header: !0,
+              skipEmptyLines: "greedy",
+              complete: s,
+              error: (e) => a({ errors: [e] }),
+              transformHeader: t,
+            };
+            n().parse(e, o);
+          });
+        }
+        static ReadFile(e) {
+          return new Promise((t, s) => {
+            const a = new FileReader();
+            (a.onload = (e) => t(a.result)), a.readAsText(e);
+          });
+        }
+        static WriteFile(e, t) {
+          let s = document.createElement("a");
+          if (navigator.msSaveBlob) navigator.msSaveBlob(e, t);
+          else {
+            const t = window.URL.createObjectURL(e);
+            s.href = t;
+          }
+          s.setAttribute("download", t), s.click();
+          try {
+            document.removeChild(s);
+          } catch (e) {}
+        }
+        static WriteCSVToFile(e, t, s, a) {
+          const r = a
+              ? n().unparse({ fields: a, data: e }, { header: !0 })
+              : n().unparse(e, { header: !0 }),
+            i = 1 == s ? ["\ufeff" + r] : [r];
+          o.WriteFile(new Blob(i, { type: "text/csv:charset=utf-8;" }), t);
+        }
+        static m_DummyValueForQuestionHack = 0;
+        static WriteXMLToFile(e, t) {
+          const s = () =>
+            this.m_DummyValueForQuestionHack ? "never returned" : "?";
+          let a =
+            "<" + s() + 'xml version="1.0" encoding="UTF-8" ' + s() + ">\n";
+          (a += new XMLSerializer().serializeToString(e)),
+            o.WriteFile(
+              new Blob([a], { type: "application/xml:charset=utf-8;" }),
+              t,
+            );
+        }
       }
     },
     44894: (e, t, s) => {

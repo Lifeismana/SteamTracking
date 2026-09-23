@@ -6,11 +6,11 @@
   {
     57876: (e, t, n) => {
       n.d(t, { Xh: () => u, cU: () => d, tf: () => p, wl: () => _ });
-      var r = n(22837),
-        i = n(71150),
-        s = n(95578),
-        a = n(30894),
-        o = n(16021),
+      var a = n(22837),
+        r = n(71150),
+        o = n(95578),
+        s = n(30894),
+        i = n(16021),
         l = n(62792),
         c = n(78327);
       const u = {
@@ -19,6 +19,7 @@
         include_platforms: !0,
         include_tag_count: 20,
         include_basic_info: !0,
+        include_optin_registration_tags: !0,
         include_trailers: !0,
         include_reviews: !0,
         include_screenshots: !0,
@@ -59,61 +60,61 @@
         }
       }
       const _ = 4;
-      function p(e, t, n, r, i, s) {
-        const a = new Array(),
+      function p(e, t, n, a, r, o) {
+        const s = new Array(),
           c = new Array(),
           u = new Array(),
           d = new Array();
-        if (!e || 0 == e.length) return a;
+        if (!e || 0 == e.length) return s;
         const p = [
           l.by.k_RejectSupportedLanguage,
           l.by.k_RejectAlreadyDisplayed,
           l.by.k_RejectNoTrailer,
         ];
-        for (let s of e) {
-          let e = s.id,
+        for (let o of e) {
+          let e = o.id,
             _ = l.by.k_NotRejected;
-          switch (s.item_type) {
+          switch (o.item_type) {
             case "sub":
-              const i = o.A.Get().GetPackage(e);
-              if (1 !== i?.GetIncludedAppIDs()?.length) {
-                _ = I(e, t, r, !0);
+              const r = i.A.Get().GetPackage(e);
+              if (1 !== r?.GetIncludedAppIDs()?.length) {
+                _ = I(e, t, a, !0);
                 break;
               }
-              e = i.GetIncludedAppIDs()[0];
+              e = r.GetIncludedAppIDs()[0];
             case "app":
-              _ = y(e, t, n, r, !0);
+              _ = g(e, t, n, a, !0);
               break;
             case "bundle":
-              _ = h(e, t, r, !0);
+              _ = h(e, t, a, !0);
           }
           if (
             (_ == l.by.k_NotRejected
-              ? ((s.rejected = l.by.k_NotRejected),
-                a.push({ ...s, priority: 1 }))
+              ? ((o.rejected = l.by.k_NotRejected),
+                s.push({ ...o, priority: 1 }))
               : p.includes(_)
-                ? ((s.rejected = l.by.k_NotRejected), c.push(s))
-                : ((s.rejected = _),
-                  _ == l.by.k_RejectIgnoredGame ? u.push(s) : d.push(s)),
-            a.length > i)
+                ? ((o.rejected = l.by.k_NotRejected), c.push(o))
+                : ((o.rejected = _),
+                  _ == l.by.k_RejectIgnoredGame ? u.push(o) : d.push(o)),
+            s.length > r)
           )
             break;
         }
         return (
-          a.length < i &&
-            (m(a, c, s, 2),
-            a.length < s &&
+          s.length < r &&
+            (m(s, c, o, 2),
+            s.length < o &&
               t.enforce_minimum &&
-              (m(a, u, s, 3), m(a, d, s, _))),
-          a
+              (m(s, u, o, 3), m(s, d, o, _))),
+          s
         );
       }
-      function m(e, t, n, r) {
-        for (let i = 0; e.length < n && i < t.length; ++i)
-          e.push({ ...t[i], priority: r });
+      function m(e, t, n, a) {
+        for (let r = 0; e.length < n && r < t.length; ++r)
+          e.push({ ...t[r], priority: a });
       }
       function f(e, t) {
-        const n = a.Fm.Get();
+        const n = s.Fm.Get();
         if (t.only_current_platform && n.BHasPlatformPreferenceSet()) {
           if (
             !(
@@ -127,30 +128,30 @@
         }
         if (!t.prepurchase && e.BIsComingSoon())
           return l.by.k_RejectNoComingSoon;
-        const r = e.GetPlatforms();
+        const a = e.GetPlatforms();
         return !t.virtual_reality &&
-          r &&
-          r.vr_support &&
-          r.vr_support.vrhmd_only
+          a &&
+          a.vr_support &&
+          a.vr_support.vrhmd_only
           ? l.by.k_RejectNoVR
           : e.GetAllCreatorClanIDs()?.some((e) => n.BIsIgnoringCurator(e))
             ? l.by.k_RejectCreatorClan
             : l.by.k_NotRejected;
       }
-      function g(e, t) {
+      function y(e, t) {
         if (t.localized) {
-          const t = (0, r.sfN)(c.TS.LANGUAGE);
+          const t = (0, a.sfN)(c.TS.LANGUAGE);
           if (!e.GetAllLanguagesWithSomeSupport()?.includes(t))
             return l.by.k_RejectSupportedLanguage;
         }
         return l.by.k_NotRejected;
       }
-      function y(e, t, n, r, c) {
-        const u = o.A.Get().GetApp(e);
+      function g(e, t, n, a, c) {
+        const u = i.A.Get().GetApp(e);
         if (!u) return l.by.k_RejectNotLoaded;
         const d = f(u, t);
         if (d != l.by.k_NotRejected) return d;
-        const _ = a.Fm.Get();
+        const _ = s.Fm.Get();
         if (_.BIsGameIgnored(e)) return l.by.k_RejectIgnoredGame;
         if (_.BExcludeTagIDs(u.GetTagIDs())) return l.by.k_RejectIgnoreGameTags;
         if (_.BExcludesContentDescriptor(u.GetContentDescriptorIDs()))
@@ -158,12 +159,12 @@
         if (!t.early_access && u.BIsEarlyAccess())
           return l.by.k_RejectEarlyAccess;
         const p = u.GetAppType();
-        if (!t.software && p == s.uE.Sv) return l.by.k_RejectSoftware;
+        if (!t.software && p == o.uE.Sv) return l.by.k_RejectSoftware;
         if (t.games_already_in_library && _.BIsGameOwned(e))
           return l.by.k_RejectInLibrary;
         if (t.games_not_in_library && !_.BIsGameOwned(e))
           return l.by.k_RejectNotInLibrary;
-        if (!t.video && [s.uE.Wz, s.uE.gQ, s.uE.ID].includes(p))
+        if (!t.video && [o.uE.Wz, o.uE.gQ, o.uE.ID].includes(p))
           return l.by.k_RejectVideo;
         if (t.has_discount) {
           const e = u.GetBestPurchaseOption();
@@ -171,72 +172,72 @@
         }
         return "adultonly" != n &&
           t.no_ao_content &&
-          (u.HasContentDescriptorID(i.u7) || u.HasContentDescriptorID(i.T4))
+          (u.HasContentDescriptorID(r.u7) || u.HasContentDescriptorID(r.T4))
           ? l.by.k_RejectAO
-          : p == s.uE.ue &&
+          : p == o.uE.ue &&
               t.games_already_in_library &&
               _.BIsGameOwned(u.GetParentAppID() || 0)
             ? l.by.k_RejectInLibrary
             : c
-              ? (p == s.uE.ue && r.BHasAppID(u.GetParentAppID() || 0)) ||
-                r.BHasAppID(e)
+              ? (p == o.uE.ue && a.BHasAppID(u.GetParentAppID() || 0)) ||
+                a.BHasAppID(e)
                 ? l.by.k_RejectAlreadyDisplayed
                 : t.has_trailer && !u.BHasTrailers(!1)
                   ? l.by.k_RejectNoTrailer
-                  : g(u, t)
+                  : y(u, t)
               : l.by.k_NotRejected;
       }
       function G(e, t) {
-        const n = a.Fm.Get();
-        let r = !1;
+        const n = s.Fm.Get();
+        let a = !1;
         for (let t of e) {
           if (n.BIsGameIgnored(t)) return l.by.k_RejectIgnoredGame;
-          n.BIsGameOwned(t) && (r = !0);
+          n.BIsGameOwned(t) && (a = !0);
         }
-        return t.games_not_in_library && r
+        return t.games_not_in_library && a
           ? l.by.k_RejectInLibrary
-          : t.games_not_in_library && !r
+          : t.games_not_in_library && !a
             ? l.by.k_RejectNotInLibrary
             : l.by.k_NotRejected;
       }
-      function I(e, t, n, r) {
-        const i = o.A.Get().GetPackage(e);
-        if (!i) return l.by.k_RejectNotLoaded;
-        const s = f(i, t);
-        if (s != l.by.k_NotRejected) return s;
-        const c = G(i.GetIncludedAppIDs(), t);
+      function I(e, t, n, a) {
+        const r = i.A.Get().GetPackage(e);
+        if (!r) return l.by.k_RejectNotLoaded;
+        const o = f(r, t);
+        if (o != l.by.k_NotRejected) return o;
+        const c = G(r.GetIncludedAppIDs(), t);
         if (c != l.by.k_NotRejected) return c;
-        const u = a.Fm.Get();
+        const u = s.Fm.Get();
         return t.games_already_in_library && u.BOwnsPackage(e)
           ? l.by.k_RejectInLibrary
           : u.BIsPackageIgnored(e)
             ? l.by.k_RejectIgnoredGame
-            : r
+            : a
               ? n.BHasPackageID(e)
                 ? l.by.k_RejectAlreadyDisplayed
-                : g(i, t)
+                : y(r, t)
               : l.by.k_NotRejected;
       }
-      function h(e, t, n, r) {
-        const i = o.A.Get().GetBundle(e);
-        if (!i) return l.by.k_RejectNotLoaded;
-        const s = f(i, t);
-        if (s != l.by.k_NotRejected) return s;
-        const a = G(i.GetIncludedAppIDs(), t);
-        return a != l.by.k_NotRejected
-          ? a
-          : r
+      function h(e, t, n, a) {
+        const r = i.A.Get().GetBundle(e);
+        if (!r) return l.by.k_RejectNotLoaded;
+        const o = f(r, t);
+        if (o != l.by.k_NotRejected) return o;
+        const s = G(r.GetIncludedAppIDs(), t);
+        return s != l.by.k_NotRejected
+          ? s
+          : a
             ? n.BHasBundleID(e)
               ? l.by.k_RejectAlreadyDisplayed
-              : g(i, t)
+              : y(r, t)
             : l.by.k_NotRejected;
       }
     },
     62734: (e, t, n) => {
-      n.d(t, { f: () => s });
-      var r = n(81393);
-      var i = n(78327);
-      class s {
+      n.d(t, { f: () => o });
+      var a = n(81393);
+      var r = n(78327);
+      class o {
         m_HomeView = void 0;
         BHasHomeView() {
           return Boolean(this.m_HomeView);
@@ -248,17 +249,17 @@
         static Get() {
           var e;
           return (
-            s.s_globalSingletonStore ||
+            o.s_globalSingletonStore ||
               ((e = "CHomeViewStore.s_globalSingletonStore"),
-              (0, r.wT)(!0, "Unexpected code running in SSR Server: " + e),
-              (s.s_globalSingletonStore = new s())),
-            s.s_globalSingletonStore
+              (0, a.wT)(!0, "Unexpected code running in SSR Server: " + e),
+              (o.s_globalSingletonStore = new o())),
+            o.s_globalSingletonStore
           );
         }
         constructor() {
-          const e = (0, i.Tc)("home_view_setting", "application_config");
+          const e = (0, r.Tc)("home_view_setting", "application_config");
           this.ValidateHomeViewData(e) && this.SetHomeViewSetting(e);
-          const t = (0, i.Tc)(
+          const t = (0, r.Tc)(
             "home_view_setting_override",
             "application_config",
           );
@@ -296,18 +297,18 @@
     6626: (e, t, n) => {
       n.d(t, {
         F6: () => b,
-        ME: () => D,
+        ME: () => k,
         QV: () => h,
-        RA: () => k,
+        RA: () => D,
         cc: () => L,
-        fq: () => B,
+        fq: () => j,
         m1: () => w,
       });
-      var r = n(34629),
-        i = n(41735),
-        s = n.n(i),
-        a = n(14947),
-        o = n(90626),
+      var a = n(34629),
+        r = n(41735),
+        o = n.n(r),
+        s = n(14947),
+        i = n(90626),
         l = n(22837),
         c = n(37085),
         u = n(17720),
@@ -316,15 +317,15 @@
         p = n(91254),
         m = n(99032),
         f = n(62490),
-        g = n(81393),
-        y = n(68797),
+        y = n(81393),
+        g = n(68797),
         G = n(84933),
         I = n(78327);
       const h = 1;
       function A(e) {
         e.list_jsondata && "string" == typeof e.list_jsondata
           ? (e.list_jsondata = JSON.parse(e.list_jsondata))
-          : ((0, g.wT)(
+          : ((0, y.wT)(
               !e.list_jsondata,
               "Found unexpected ListDetails_t.list_jsondata type: " +
                 typeof e.list_jsondata,
@@ -352,7 +353,7 @@
               (t.localized_flat_link[e.language] = e.localized_string);
           });
       }
-      class k {
+      class D {
         m_mapList = new Map();
         m_mapEventGIDToLists = new Map();
         m_mapListIDToClanAccount = new Map();
@@ -367,27 +368,27 @@
         }
         async LoadListDetails(e, t, n) {
           if (this.m_mapList.has(t)) return this.m_mapList.get(t);
-          const r =
+          const a =
               I.TS.STORE_BASE_URL +
               "curator/" +
               e.GetAccountID() +
               "/admin/ajaxgetlistdetails",
-            i = { listid: t };
+            r = { listid: t };
           try {
-            const a = await s().get(r, { params: i, cancelToken: n?.token });
-            if (a?.data?.success == c.R) {
-              const n = { ...a.data.list_details };
+            const s = await o().get(a, { params: r, cancelToken: n?.token });
+            if (s?.data?.success == c.R) {
+              const n = { ...s.data.list_details };
               return (
-                (0, g.wT)(t == n?.listid, "Wanted" + t + "but got" + n?.listid),
+                (0, y.wT)(t == n?.listid, "Wanted" + t + "but got" + n?.listid),
                 A(n),
-                S(a.data.curation_language, n),
+                S(s.data.curation_language, n),
                 this.m_mapList.set(t, n),
                 this.m_mapListIDToClanAccount.set(t, e.GetAccountID()),
                 n
               );
             }
           } catch (e) {
-            const t = (0, y.H)(e);
+            const t = (0, g.H)(e);
             console.error(
               "CCuratorListStore.LoadListDetails: error on load: " +
                 t.strErrorMsg,
@@ -403,8 +404,8 @@
               0 == _.Fm.Get().GetFollowedCuratorCount())
           )
             return [];
-          const r = I.TS.STORE_BASE_URL + "curators/ajaxgetmycuratorsalelists",
-            i = {
+          const a = I.TS.STORE_BASE_URL + "curators/ajaxgetmycuratorsalelists",
+            r = {
               clan_account_id: e.GetAccountID(),
               clan_event_gid: t,
               origin: self.origin,
@@ -413,8 +414,8 @@
                 : void 0,
             };
           return this.InternalLoadSaleCuratorLists(
+            a,
             r,
-            i,
             "CCuratorListStore.LoadMyFollowedSaleCurationLists",
             e,
             t,
@@ -424,28 +425,28 @@
         async LoadAllSaleCurationLists(e, t, n) {
           if (this.m_mapEventGIDToLists.has(t))
             return this.m_mapEventGIDToLists.get(t);
-          const r = I.TS.STORE_BASE_URL + "curators/ajaxfindcuratorlists",
-            i = {
+          const a = I.TS.STORE_BASE_URL + "curators/ajaxfindcuratorlists",
+            r = {
               clan_account_id: e.GetAccountID(),
               clan_event_gid: t,
               origin: self.origin,
             };
           return this.InternalLoadSaleCuratorLists(
+            a,
             r,
-            i,
             "CCuratorListStore.LoadAllSaleCurationLists",
             e,
             t,
             n,
           );
         }
-        async InternalLoadSaleCuratorLists(e, t, n, r, i, o) {
+        async InternalLoadSaleCuratorLists(e, t, n, a, r, i) {
           try {
-            const n = await s().get(e, { params: t, cancelToken: o?.token });
+            const n = await o().get(e, { params: t, cancelToken: i?.token });
             if (n?.data?.success == c.R) {
               const e = new Array();
               return (
-                (0, a.h5)(() => {
+                (0, s.h5)(() => {
                   n.data.matches &&
                     n.data.matches.forEach((t) => {
                       t.multi_detail_lists.forEach((n) => {
@@ -459,26 +460,26 @@
                           e.push(n);
                       });
                     }),
-                    this.m_mapEventGIDToLists.set(i, e);
+                    this.m_mapEventGIDToLists.set(r, e);
                 }),
                 e
               );
             }
           } catch (e) {
-            const t = (0, y.H)(e);
+            const t = (0, g.H)(e);
             console.error(n + ": error on load: " + t.strErrorMsg, t);
           }
           return [];
         }
         static s_Singleton;
         static Get() {
-          return k.s_Singleton || (k.s_Singleton = new k()), k.s_Singleton;
+          return D.s_Singleton || (D.s_Singleton = new D()), D.s_Singleton;
         }
         constructor() {
-          (0, a.Gn)(this);
+          (0, s.Gn)(this);
           let e = (0, I.Tc)("curatorlistdata", "application_config");
           this.ValidateStoreDefault(e) &&
-            (0, a.h5)(() => {
+            (0, s.h5)(() => {
               e.forEach((e) => {
                 e.multi_detail_lists.forEach((t) => {
                   A(t),
@@ -503,19 +504,19 @@
             : t && Array.isArray(t) && 0 == t.length;
         }
       }
-      function D(e, t) {
+      function k(e, t) {
         const n = (0, G.CH)();
         return (
-          (0, o.useEffect)(() => {
-            if (k.Get().GetListDetails(t) || !e) return;
-            const r = s().CancelToken.source();
+          (0, i.useEffect)(() => {
+            if (D.Get().GetListDetails(t) || !e) return;
+            const a = o().CancelToken.source();
             return (
               (async () => {
-                const i = await k.Get().LoadListDetails(e, t);
-                if (!r.token.reason)
-                  if (i?.apps?.length) {
+                const r = await D.Get().LoadListDetails(e, t);
+                if (!a.token.reason)
+                  if (r?.apps?.length) {
                     const e = [];
-                    for (const t of i.apps) {
+                    for (const t of r.apps) {
                       const n = t?.recommended_app?.appid;
                       n && e.push({ id: n, type: "game" });
                     }
@@ -527,21 +528,21 @@
                       n();
                   } else console.error("Found no list data");
               })(),
-              () => r.cancel("unmounting CuratorList")
+              () => a.cancel("unmounting CuratorList")
             );
           }, [e, t, n]),
-          k.Get().GetListDetails(t)
+          D.Get().GetListDetails(t)
         );
       }
       function w(e) {
         const t = e && d.ac.GetClanInfoByClanAccountID(e),
-          [n, r] = (0, o.useState)(!!t);
+          [n, a] = (0, i.useState)(!!t);
         return (
-          (0, o.useEffect)(() => {
+          (0, i.useEffect)(() => {
             if (n && e) {
               const t = u.b.InitFromClanID(e);
               d.ac.LoadClanInfoForClanSteamID(t).finally(() => {
-                r(!0);
+                a(!0);
               });
             }
           }, [n, e]),
@@ -551,14 +552,14 @@
       function L(e) {
         return Boolean(e?.sale_clan_event_gid) && Boolean(e?.sale_clan_steamid);
       }
-      function B(e) {
+      function j(e) {
         const t = (0, G.CH)(),
           n = L(e) ? e.sale_clan_event_gid : null,
-          r = n && p.O3.GetClanEventModel(n);
+          a = n && p.O3.GetClanEventModel(n);
         return (
-          (0, o.useEffect)(() => {
-            if (r || !L(e)) return;
-            const i = s().CancelToken.source();
+          (0, i.useEffect)(() => {
+            if (a || !L(e)) return;
+            const r = o().CancelToken.source();
             return (
               (async () => {
                 p.O3.Init(),
@@ -567,334 +568,108 @@
                     n,
                     0,
                   ),
-                  i.token.reason || t();
+                  r.token.reason || t();
               })(),
-              () => i.cancel("unmounting CuratorList")
+              () => r.cancel("unmounting CuratorList")
             );
-          }, [e, n, r, t]),
-          r
+          }, [e, n, a, t]),
+          a
         );
       }
-      (0, r.Cg)([a.sH], k.prototype, "m_mapList", void 0);
-    },
-    55263: (e, t, n) => {
-      n.d(t, {
-        G6: () => p,
-        Gg: () => g,
-        Ow: () => f,
-        Sq: () => u,
-        YM: () => h,
-        eR: () => d,
-        ik: () => _,
-        mZ: () => y,
-        t7: () => m,
-        zX: () => I,
-      });
-      var r = n(41735),
-        i = n.n(r),
-        s = n(90626),
-        a = n(37085),
-        o = n(95578),
-        l = n(84933),
-        c = n(16021);
-      const u = 1,
-        d = 2,
-        _ = 3;
-      function p(e, t, n, r) {
-        const o = (0, s.useRef)(void 0),
-          p = (0, s.useRef)(void 0),
-          m = (0, l.CH)();
-        o.current = e;
-        const [f, g] = (0, s.useState)(void 0),
-          {
-            include_assets: y,
-            include_release: G,
-            include_platforms: I,
-            include_all_purchase_options: h,
-            include_screenshots: A,
-            include_trailers: b,
-            include_ratings: S,
-            include_tag_count: k,
-            include_reviews: D,
-            include_basic_info: w,
-            include_supported_languages: L,
-            include_full_description: B,
-            include_included_items: R,
-            include_assets_without_overrides: C,
-            apply_user_filters: j,
-            include_links: v,
-            include_extra_details: E,
-          } = n;
-        if (
-          ((0, s.useEffect)(() => {
-            const n = {
-              include_assets: y,
-              include_release: G,
-              include_platforms: I,
-              include_all_purchase_options: h,
-              include_screenshots: A,
-              include_trailers: b,
-              include_ratings: S,
-              include_tag_count: k,
-              include_reviews: D,
-              include_basic_info: w,
-              include_supported_languages: L,
-              include_full_description: B,
-              include_included_items: R,
-              include_assets_without_overrides: C,
-              apply_user_filters: j,
-              include_links: v,
-              include_extra_details: E,
-            };
-            let s = null;
-            return (
-              !e ||
-                e < 0 ||
-                c.A.Get().BHasStoreItem(e, t, n) ||
-                (void 0 !== f && r && r == p.current) ||
-                (r !== p.current && (g(void 0), (p.current = r)),
-                (s = i().CancelToken.source()),
-                c.A.Get()
-                  .QueueStoreItemRequest(e, t, n)
-                  .then((t) => {
-                    s?.token.reason || o.current !== e || g(t == a.R), m();
-                  })),
-              () => s?.cancel("useStoreItemCache: unmounting")
-            );
-          }, [
-            e,
-            t,
-            r,
-            f,
-            y,
-            G,
-            I,
-            h,
-            A,
-            b,
-            S,
-            k,
-            D,
-            w,
-            L,
-            B,
-            R,
-            C,
-            j,
-            v,
-            E,
-            m,
-          ]),
-          !e)
-        )
-          return [null, d];
-        if (!1 === f) return [void 0, d];
-        if (c.A.Get().BIsStoreItemMissing(e, t)) return [void 0, d];
-        if (!c.A.Get().BHasStoreItem(e, t, n)) return [void 0, u];
-        const H = c.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
-        return H ? [H, _] : [null, d];
-      }
-      function m(e, t, n) {
-        return p(e, o.c6.qI, t, n);
-      }
-      function f(e, t, n) {
-        return p(e, o.c6.xO, t, n);
-      }
-      function g(e, t, n) {
-        return p(e, o.c6.RD, t, n);
-      }
-      function y(e, t, n) {
-        const [r, i] = p(e, t, n);
-        let s;
-        r?.GetStoreItemType() != o.c6.RD ||
-          r.GetAssets()?.GetHeaderURL() ||
-          1 != r?.GetIncludedAppIDs().length ||
-          (s = r.GetIncludedAppIDs()[0]);
-        const [a, l] = m(s, n);
-        return s && a?.BIsVisible() ? [a, l] : [r, i];
-      }
-      function G(e, t, n, r) {
-        const a = (0, l.CH)(),
-          {
-            include_assets: o,
-            include_release: p,
-            include_platforms: m,
-            include_all_purchase_options: f,
-            include_screenshots: g,
-            include_trailers: y,
-            include_ratings: G,
-            include_tag_count: I,
-            include_reviews: h,
-            include_basic_info: A,
-            include_supported_languages: b,
-            include_full_description: S,
-            include_included_items: k,
-            include_assets_without_overrides: D,
-            apply_user_filters: w,
-            include_links: L,
-            include_extra_details: B,
-          } = n;
-        if (
-          ((0, s.useEffect)(() => {
-            if (!e || 0 == e.length) return;
-            const n = {
-                include_assets: o,
-                include_release: p,
-                include_platforms: m,
-                include_all_purchase_options: f,
-                include_screenshots: g,
-                include_trailers: y,
-                include_ratings: G,
-                include_tag_count: I,
-                include_reviews: h,
-                include_basic_info: A,
-                include_supported_languages: b,
-                include_full_description: S,
-                include_included_items: k,
-                include_assets_without_overrides: D,
-                apply_user_filters: w,
-                include_links: L,
-                include_extra_details: B,
-              },
-              r = e.filter(
-                (e) =>
-                  !(
-                    c.A.Get().BHasStoreItem(e, t, n) ||
-                    c.A.Get().BIsStoreItemMissing(e, t)
-                  ),
-              );
-            if (0 == r.length) return;
-            const s = i().CancelToken.source(),
-              l = r.map((e) => c.A.Get().QueueStoreItemRequest(e, t, n));
-            return (
-              Promise.all(l).then(() => {
-                s.token.reason || a();
-              }),
-              () => s.cancel("useStoreItemCacheMultiplePackages: unmounting")
-            );
-          }, [e, t, r, a, o, p, m, f, g, y, G, I, h, A, b, S, k, D, w, L, B]),
-          !e)
-        )
-          return d;
-        if (
-          !e.every(
-            (e) =>
-              c.A.Get().BHasStoreItem(e, t, n) ||
-              c.A.Get().BIsStoreItemMissing(e, t),
-          )
-        )
-          return u;
-        return e.every((e) =>
-          c.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t),
-        )
-          ? _
-          : d;
-      }
-      function I(e, t, n) {
-        return G(e, o.c6.qI, t, n);
-      }
-      function h() {
-        s.useEffect(
-          () => (
-            c.A.Get().SetReturnUnavailableItems(!0),
-            () => c.A.Get().SetReturnUnavailableItems(!1)
-          ),
-          [],
-        );
-      }
+      (0, a.Cg)([s.sH], D.prototype, "m_mapList", void 0);
     },
     99032: (e, t, n) => {
       n.d(t, {
         AX: () => I,
-        H2: () => g,
+        H2: () => y,
         Li: () => G,
         S7: () => p,
         a9: () => h,
-        jy: () => y,
+        jy: () => g,
         nt: () => f,
         sd: () => _,
         tJ: () => m,
       });
-      var r = n(57876),
-        i = n(62792),
-        s = n(81886),
-        a = n(22837),
-        o = n(95578),
+      var a = n(57876),
+        r = n(62792),
+        o = n(81886),
+        s = n(22837),
+        i = n(95578),
         l = n(30894),
         c = n(16021),
         u = n(62734),
         d = n(81393);
       function _(e) {
-        return c.A.Get().BIsStoreItemMissing(e.id, (0, i.SW)(e.type));
+        return c.A.Get().BIsStoreItemMissing(e.id, (0, r.SW)(e.type));
       }
       function p(e, t, n) {
-        const r = new Array();
+        const a = new Array();
         return (
-          e?.forEach((e) => r.push({ id: e, type: "game" })),
-          t?.forEach((e) => r.push({ id: e, type: "sub" })),
-          n?.forEach((e) => r.push({ id: e, type: "bundle" })),
-          r
+          e?.forEach((e) => a.push({ id: e, type: "game" })),
+          t?.forEach((e) => a.push({ id: e, type: "sub" })),
+          n?.forEach((e) => a.push({ id: e, type: "bundle" })),
+          a
         );
       }
       function m(e) {
-        const t = c.A.Get().GetStoreItem(e.id, (0, i.SW)(e.type));
+        const t = c.A.Get().GetStoreItem(e.id, (0, r.SW)(e.type));
         return (t?.GetBestPurchaseOption()?.discount_pct ?? 0) > 0;
       }
       function f(e) {
         if (!u.f.Get().GetHomeView()?.localized) return !0;
-        const t = c.A.Get().GetStoreItem(e.id, (0, i.SW)(e.type));
+        const t = c.A.Get().GetStoreItem(e.id, (0, r.SW)(e.type));
         return (
           !t ||
           l.Fm.Get().BIsAnyLanguageEnabled(t.GetAllLanguagesWithSomeSupport())
         );
       }
-      async function g(e, t, n) {
+      async function y(e, t, n) {
         if (!e || 0 == e.length) return [];
-        const r = e.filter((e) => (0, s.fp)(e.type)).map((e) => e.id),
-          i = e.filter((e) => "sub" === e.type).map((e) => e.id),
-          a = e.filter((e) => "bundle" === e.type).map((e) => e.id);
+        const a = e.filter((e) => (0, o.fp)(e.type)).map((e) => e.id),
+          r = e.filter((e) => "sub" === e.type).map((e) => e.id),
+          s = e.filter((e) => "bundle" === e.type).map((e) => e.id);
         {
-          const e = r.filter((e) => !c.A.Get().BHasApp(e, t)),
-            n = i.filter((e) => !c.A.Get().BHasApp(e, t)),
-            s = a.filter((e) => !c.A.Get().BHasApp(e, t));
-          (e.length > 0 || n.length > 0 || s.length > 0) &&
+          const e = a.filter((e) => !c.A.Get().BHasApp(e, t)),
+            n = r.filter((e) => !c.A.Get().BHasApp(e, t)),
+            o = s.filter((e) => !c.A.Get().BHasApp(e, t));
+          (e.length > 0 || n.length > 0 || o.length > 0) &&
             (await Promise.all([
               c.A.Get().QueueMultipleAppRequests(e, t),
               c.A.Get().QueueMultiplePackageRequests(n, t),
-              c.A.Get().QueueMultipleBundleRequests(s, t),
+              c.A.Get().QueueMultipleBundleRequests(o, t),
             ]));
         }
-        const o = new Set();
-        a?.forEach((e) => {
+        const i = new Set();
+        s?.forEach((e) => {
           const t = c.A.Get().GetBundle(e);
-          t?.GetIncludedAppIDs().forEach((e) => o.add(e));
+          t?.GetIncludedAppIDs().forEach((e) => i.add(e));
         }),
-          i?.forEach((e) => {
+          r?.forEach((e) => {
             const t = c.A.Get().GetPackage(e);
-            t?.GetIncludedAppIDs().forEach((e) => o.add(e));
+            t?.GetIncludedAppIDs().forEach((e) => i.add(e));
           });
-        const l = Array.from(o).filter((e) => !c.A.Get().BHasApp(e, t));
+        const l = Array.from(i).filter((e) => !c.A.Get().BHasApp(e, t));
         if (
           (l.length > 0 && (await c.A.Get().QueueMultipleAppRequests(l, t)),
-          r.forEach((e) => o.add(e)),
+          a.forEach((e) => i.add(e)),
           n)
         ) {
-          const e = Array.from(o)
+          const e = Array.from(i)
             .map((e) => {
               const t = c.A.Get().GetApp(e),
                 n = t?.GetParentAppID();
-              return n ? (o.add(n), n) : null;
+              return n ? (i.add(n), n) : null;
             })
             .filter((e) => null !== e)
             .filter((e) => !c.A.Get().BHasApp(e, t));
           e.length > 0 && (await c.A.Get().QueueMultipleAppRequests(e, t));
         }
-        return Array.from(o).filter((e) => {
+        return Array.from(i).filter((e) => {
           const t = c.A.Get().GetApp(e);
           return t && !t.GetParentAppID();
         });
       }
-      const y = {
+      const g = {
         include_tag_count: 20,
         include_basic_info: !0,
         include_supported_languages: !0,
@@ -904,7 +679,7 @@
         const t = l.Fm.Get();
         if (
           ((0, d.wT)(t.BIsLoaded(), "Dynamic Store not loaded"),
-          e.GetStoreItemType() == o.c6.qI)
+          e.GetStoreItemType() == i.c6.qI)
         ) {
           const n = e.GetParentAppID();
           if (
@@ -923,47 +698,47 @@
           const n = e.GetAllLanguagesWithSomeSupport();
           if (
             n.length > 0 &&
-            !e.BHasSomeLanguageSupport(a.Bhc) &&
+            !e.BHasSomeLanguageSupport(s.Bhc) &&
             !t.BIsAnyLanguageEnabled(n)
           )
             return !0;
         }
         return !1;
       }
-      async function I(e, t, n, s) {
-        const a = [];
-        await g(e, r.Xh, t);
-        for (const r of e) {
-          const e = c.A.Get().GetStoreItem(r.id, (0, i.SW)(r.type));
+      async function I(e, t, n, o) {
+        const s = [];
+        await y(e, a.Xh, t);
+        for (const a of e) {
+          const e = c.A.Get().GetStoreItem(a.id, (0, r.SW)(a.type));
           if (!e) {
             0;
             continue;
           }
-          const o = e
+          const i = e
             .GetIncludedAppIDs()
             .map((e) => c.A.Get().GetApp(e))
             .filter((e) => Boolean(e));
-          if ((o.push(e), t)) {
+          if ((i.push(e), t)) {
             const e = new Set(
-                o.map((e) => e.GetParentAppID()).filter((e) => Boolean(e)),
+                i.map((e) => e.GetParentAppID()).filter((e) => Boolean(e)),
               ),
               t = Array.from(e)
                 .map((e) => c.A.Get().GetApp(e))
                 .filter((e) => Boolean(e));
-            t && o.push(...t);
+            t && i.push(...t);
           }
-          o.some(s || G)
-            ? n && (l.Fm.Get().BIsStoreItemOwned(e) || n.push(r))
-            : a.push(r);
+          i.some(o || G)
+            ? n && (l.Fm.Get().BIsStoreItemOwned(e) || n.push(a))
+            : s.push(a);
         }
-        return a;
+        return s;
       }
-      async function h(e, t, n, r, s, a, o) {
+      async function h(e, t, n, a, o, s, i) {
         let u = await I(
           e,
           t,
-          o,
-          s
+          i,
+          o
             ? (e) =>
                 !e ||
                 l.Fm.Get().BExcludesContentDescriptor(
@@ -974,14 +749,14 @@
         );
         const d = [];
         for (const e of u) {
-          const t = c.A.Get().GetStoreItem(e.id, (0, i.SW)(e.type));
+          const t = c.A.Get().GetStoreItem(e.id, (0, r.SW)(e.type));
           if (!t) continue;
-          const s = t?.GetIncludedAppIDsOrSelf();
+          const o = t?.GetIncludedAppIDsOrSelf();
           let u = !1;
-          n && (u = u || s.every((e) => l.Fm.Get().BIsGameOwned(e))),
-            r && (u = u || s.every((e) => l.Fm.Get().BIsGameWishlisted(e))),
-            a && (u = u || s.every((e) => l.Fm.Get().BIsGameIgnored(e))),
-            u ? o && o.push(e) : d.push(e);
+          n && (u = u || o.every((e) => l.Fm.Get().BIsGameOwned(e))),
+            a && (u = u || o.every((e) => l.Fm.Get().BIsGameWishlisted(e))),
+            s && (u = u || o.every((e) => l.Fm.Get().BIsGameIgnored(e))),
+            u ? i && i.push(e) : d.push(e);
         }
         return d;
       }

@@ -62,6 +62,7 @@
     chunkid: (module) => {
       module.exports = {
         ItemDescription: "_2MixhMbHTxS0qJ2uAefnVy",
+        ItemImageFit: "_2VE_UZqsGp6cddlis2pNxV",
         GameImage: "_3LTPlbh1oIRZyLjujpw83H",
         GameImagePlaceholder: "_27u72fjp-gJgeD5k7NQ1Vf",
       };
@@ -1293,18 +1294,22 @@
           });
         },
         Image: function (_) {
-          const { bAllowAnimatedIcon: _ = !0 } = _,
+          const { bAllowAnimatedIcon: _ = !0, size: _ = "row" } = _,
             _ = _(),
+            _ = "fit" == _,
             _ =
-              `${_._.COMMUNITY_CDN_URL}economy/image/${_.icon_url_large || _.icon_url}/330x192` +
+              `${_._.COMMUNITY_CDN_URL}economy/image/${_.icon_url_large || _.icon_url}/${_[_]}` +
               (_ ? "?allow_animated=1" : "");
           return (0, _.jsxs)(_._, {
-            height: "196px",
+            height: _ ? "100%" : "196px",
+            width: _ ? "100%" : void 0,
+            minHeight: "0",
             align: "center",
-            justify: "start",
+            justify: _ ? "center" : "start",
             position: "relative",
             children: [
               (0, _.jsx)("img", {
+                className: _ ? _.ItemImageFit : void 0,
                 src: _,
                 alt: _.name,
               }),
@@ -1590,6 +1595,10 @@
           }),
         });
       }, _);
+      const _ = {
+        row: "330x192",
+        fit: "512x512",
+      };
       function _(_) {
         const _ = _().appid,
           { data: _ } = (0, _._)({

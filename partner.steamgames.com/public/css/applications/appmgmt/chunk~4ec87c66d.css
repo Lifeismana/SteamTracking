@@ -12328,6 +12328,7 @@ html:not(.touch)
   font-size: var(--font-size, var(--default-font-size));
   line-height: var(--line-height, var(--default-line-height));
   letter-spacing: var(--letter-spacing, var(--default-letter-spacing));
+  font-family: var(--font-family);
 }
 ._1DLGHwAfYnbFVIwbZjO2cn:where(._1FVRWG5uD8VhzoEiOZWrEo),
 ._30P9kUCljAZzX5fl1DHGJe:where(._1FVRWG5uD8VhzoEiOZWrEo) {
@@ -14813,13 +14814,6 @@ p a:hover {
 ._15rIZw2NyMBg4Q2ApraIcz .DialogDropDown {
   flex-grow: 1;
   width: 300px;
-}
-.R-dUfNFnRveUE4hFgt52X {
-  padding-top: 20px;
-  padding-bottom: 10px;
-}
-.R-dUfNFnRveUE4hFgt52X .DialogInputLabelGroup {
-  margin-bottom: unset;
 }
 .eyyqHrjN-07t7Dfn0OFdF {
   display: grid;

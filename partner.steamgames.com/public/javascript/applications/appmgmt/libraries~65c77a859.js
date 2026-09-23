@@ -6,6 +6,13 @@
   {
     45772: () => {},
     74763: () => {},
+    92441: (e, t, n) => {
+      "use strict";
+      function r(e) {
+        return e;
+      }
+      n.d(t, { j: () => r });
+    },
     54806: (e, t, n) => {
       "use strict";
       n.d(t, { E: () => g });
@@ -2578,19 +2585,19 @@
         }
         return n;
       }
-      function _(e) {
+      function j(e) {
         let t = Object.create(null);
         if (e) for (let n in e) t[n] = new U(e[n]);
         return t;
       }
-      class j {
+      class _ {
         constructor(e, t, n) {
           (this.name = e),
             (this.schema = t),
             (this.spec = n),
             (this.markSet = null),
             (this.groups = n.group ? n.group.split(" ") : []),
-            (this.attrs = _(n.attrs)),
+            (this.attrs = j(n.attrs)),
             (this.defaultAttrs = q(this.attrs)),
             (this.contentMatch = null),
             (this.inlineContent = null),
@@ -2677,7 +2684,7 @@
         }
         static compile(e, t) {
           let n = Object.create(null);
-          e.forEach((e, r) => (n[e] = new j(e, t, r)));
+          e.forEach((e, r) => (n[e] = new _(e, t, r)));
           let r = t.spec.topNode || "doc";
           if (!n[r])
             throw new RangeError(
@@ -2709,7 +2716,7 @@
             (this.rank = t),
             (this.schema = n),
             (this.spec = r),
-            (this.attrs = _(r.attrs)),
+            (this.attrs = j(r.attrs)),
             (this.excluded = null);
           let o = q(this.attrs);
           this.instance = o ? new d(this, o) : null;
@@ -2745,7 +2752,7 @@
           for (let n in e) t[n] = e[n];
           (t.nodes = o.from(e.nodes)),
             (t.marks = o.from(e.marks || {})),
-            (this.nodes = j.compile(this.spec.nodes, this)),
+            (this.nodes = _.compile(this.spec.nodes, this)),
             (this.marks = H.compile(this.spec.marks, this));
           let n = Object.create(null);
           for (let e in this.nodes) {
@@ -2789,7 +2796,7 @@
         node(e, t = null, n, r) {
           if ("string" == typeof e) e = this.nodeType(e);
           else {
-            if (!(e instanceof j))
+            if (!(e instanceof _))
               throw new RangeError("Invalid node type: " + e);
             if (e.schema != this)
               throw new RangeError(
@@ -5575,7 +5582,7 @@
           const s = n.selection;
           if (s instanceof C) return J(n, r, i.LN.near(s.$headCell, t));
           if ("horiz" != e && !s.empty) return !1;
-          const l = j(o, e, t);
+          const l = _(o, e, t);
           if (null == l) return !1;
           if ("horiz" == e)
             return J(n, r, i.LN.near(n.doc.resolve(s.head + t), t));
@@ -5601,7 +5608,7 @@
           let s;
           if (i instanceof C) s = i;
           else {
-            const r = j(o, e, t);
+            const r = _(o, e, t);
             if (null == r) return !1;
             s = new C(n.doc.resolve(r));
           }
@@ -5690,7 +5697,7 @@
         }
         return !1;
       }
-      function _(e, t) {
+      function j(e, t) {
         var n;
         if (t.ctrlKey || t.metaKey) return;
         const r = U(e, t.target);
@@ -5737,7 +5744,7 @@
           e.root.addEventListener("dragstart", s),
           e.root.addEventListener("mousemove", l);
       }
-      function j(e, t, n) {
+      function _(e, t, n) {
         if (!(e.state.selection instanceof i.U3)) return null;
         const { $head: r } = e.state.selection;
         for (let o = r.depth - 1; o >= 0; o--) {
@@ -6085,7 +6092,7 @@
           },
           props: {
             decorations: N,
-            handleDOMEvents: { mousedown: _ },
+            handleDOMEvents: { mousedown: j },
             createSelectionBetween: (e) =>
               null != g.getState(e.state) ? e.state.selection : null,
             handleTripleClick: q,
@@ -8090,7 +8097,7 @@
           e.top <= t.bottom + 1
         );
       }
-      function _(e, t, n) {
+      function j(e, t, n) {
         let r = e.childNodes.length;
         if (r && n.top < n.bottom)
           for (
@@ -8109,14 +8116,14 @@
               let e = n.getClientRects();
               for (let r = 0; r < e.length; r++) {
                 let o = e[r];
-                if (W(t, o)) return _(n, t, o);
+                if (W(t, o)) return j(n, t, o);
               }
             }
             if ((i = (i + 1) % r) == o) break;
           }
         return e;
       }
-      function j(e, t) {
+      function _(e, t) {
         let n,
           r = e.dom.ownerDocument,
           o = 0,
@@ -8140,7 +8147,7 @@
         if (!a || !e.dom.contains(1 != a.nodeType ? a.parentNode : a)) {
           let n = e.dom.getBoundingClientRect();
           if (!W(t, n)) return null;
-          if (((a = _(e.dom, t, n)), !a)) return null;
+          if (((a = j(e.dom, t, n)), !a)) return null;
         }
         if (T) for (let e = a; n && e; e = l(e)) e.draggable && (n = void 0);
         if (
@@ -10061,7 +10068,7 @@
                     }
                   }
                 }
-              l ? _e(e, n, r) : o && _e(e, o, i);
+              l ? je(e, n, r) : o && je(e, o, i);
             })(e)
           : (function (e) {
               let t = e.domSelectionRange(),
@@ -10089,14 +10096,14 @@
                     }
                   }
                 }
-              o && _e(e, o, i);
+              o && je(e, o, i);
             })(e);
       }
       function We(e) {
         let t = e.pmViewDesc;
         return t && t.node && t.node.isBlock;
       }
-      function _e(e, t, n) {
+      function je(e, t, n) {
         if (3 != t.nodeType) {
           let e, r;
           (r = (function (e, t) {
@@ -10131,7 +10138,7 @@
           e.state == o && De(e);
         }, 50);
       }
-      function je(e, t) {
+      function _e(e, t) {
         let n = e.state.doc.resolve(t);
         if (!O && !R && n.parent.inlineContent) {
           let r = e.coordsAtPos(t);
@@ -10209,12 +10216,12 @@
         if (13 == n || 27 == n) return !0;
         if (37 == n || (E && 66 == n && "c" == r)) {
           let t =
-            37 == n ? ("ltr" == je(e, e.state.selection.from) ? -1 : 1) : -1;
+            37 == n ? ("ltr" == _e(e, e.state.selection.from) ? -1 : 1) : -1;
           return Je(e, t, r) || qe(e, t);
         }
         if (39 == n || (E && 70 == n && "c" == r)) {
           let t =
-            39 == n ? ("ltr" == je(e, e.state.selection.from) ? 1 : -1) : 1;
+            39 == n ? ("ltr" == _e(e, e.state.selection.from) ? 1 : -1) : 1;
           return Je(e, t, r) || qe(e, t);
         }
         return 38 == n || (E && 80 == n && "c" == r)
@@ -11552,7 +11559,7 @@
                 (o += 3);
             }
           });
-          let i = jt(o ? Ht(t) : t, -n);
+          let i = _t(o ? Ht(t) : t, -n);
           for (let t = 0; t < i.length; t++)
             i[t].type.valid(e, i[t]) || i.splice(t--, 1);
           return new qt(
@@ -11614,7 +11621,7 @@
           }
           if (r) {
             let e = new qt(r.sort(Xt), Lt);
-            return n ? new _t([e, n]) : e;
+            return n ? new jt([e, n]) : e;
           }
           return n || Wt;
         }
@@ -11651,13 +11658,13 @@
       }
       (qt.empty = new qt([], [])), (qt.removeOverlap = Qt);
       const Wt = qt.empty;
-      class _t {
+      class jt {
         constructor(e) {
           this.members = e;
         }
         map(e, t) {
           const n = this.members.map((n) => n.map(e, t, Kt));
-          return _t.from(n);
+          return jt.from(n);
         }
         forChild(e, t) {
           if (t.isLeaf) return qt.empty;
@@ -11665,12 +11672,12 @@
           for (let r = 0; r < this.members.length; r++) {
             let o = this.members[r].forChild(e, t);
             o != Wt &&
-              (o instanceof _t ? (n = n.concat(o.members)) : n.push(o));
+              (o instanceof jt ? (n = n.concat(o.members)) : n.push(o));
           }
-          return _t.from(n);
+          return jt.from(n);
         }
         eq(e) {
-          if (!(e instanceof _t) || e.members.length != this.members.length)
+          if (!(e instanceof jt) || e.members.length != this.members.length)
             return !1;
           for (let t = 0; t < this.members.length; t++)
             if (!this.members[t].eq(e.members[t])) return !1;
@@ -11696,7 +11703,7 @@
             case 1:
               return e[0];
             default:
-              return new _t(
+              return new jt(
                 e.every((e) => e instanceof qt)
                   ? e
                   : e.reduce(
@@ -11707,7 +11714,7 @@
           }
         }
       }
-      function jt(e, t) {
+      function _t(e, t) {
         if (!t || !e.length) return e;
         let n = [];
         for (let r = 0; r < e.length; r++) {
@@ -11743,7 +11750,7 @@
             e != Wt && o.push(s, s + t.nodeSize, e);
           }
         });
-        let s = jt(i ? Ht(e) : e, -n).sort(Xt);
+        let s = _t(i ? Ht(e) : e, -n).sort(Xt);
         for (let e = 0; e < s.length; e++)
           s[e].type.valid(t, s[e]) ||
             (r.onRemove && r.onRemove(s[e].spec), s.splice(e--, 1));
@@ -11787,7 +11794,7 @@
           }),
           e.cursorWrapper &&
             t.push(qt.create(e.state.doc, [e.cursorWrapper.deco])),
-          _t.from(t)
+          jt.from(t)
         );
       }
       const en = {
@@ -12752,7 +12759,7 @@
           this._root = null;
         }
         posAtCoords(e) {
-          return j(this, e);
+          return _(this, e);
         }
         coordsAtPos(e, t = 1) {
           return X(this, e, t);

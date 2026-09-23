@@ -9683,6 +9683,8 @@
     "HardwareDeviceName_Nereid": "محوّل وحدة تحكم Steam المدمج",
     "HardwareUpdateNotification_Title": "تحديث البرنامج الثابت",
     "HardwareUpdateNotification_Body": "تحديث البرنامج الثابت متاح لـ%1$s الخاص بك",
+    "HardwarePromo_FrameHLAlyx_Btn_Redeemed": "المستبدَلة",
+    "HardwarePromo_FrameHLAlyx_Ignore_Btn": "تجاهل إلى الأبد",
     "Email_OptOut_Settings_Section_Title": "إلغاء الاشتراك في البريد الإلكتروني",
     "SteamUI_Dialog_SystemInfo_SavedHardware": "الأجهزة المحفوظة",
     "SteamUI_Dialog_SystemInfo_SavedHardware_Desc": "قبل إدراج مواصفات جهاز الكمبيوتر الخاص بك ضمن المراجعة، سنكتشف التفاصيل الخاصة بك وسنخزنها. لقد اكتشف Steam الأجهزة والبرامج التالية في نظامك:",

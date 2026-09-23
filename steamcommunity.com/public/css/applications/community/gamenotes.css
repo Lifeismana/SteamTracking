@@ -1099,12 +1099,16 @@ html:has(dialog.ycpazsHLq6lCBFmWPCLCZ[open]) {
 }
 ._3ej4mcyhVunlvw3BjUXtel {
   max-height: 90vh;
-  max-width: 90vw;
+  max-width: 800px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   gap: 12px;
   padding: 18px;
   overflow: clip;
+}
+._3ej4mcyhVunlvw3BjUXtel._1oLxPrvbIeJJ1d96fhJvOI {
+  max-width: 90vw;
 }
 ._1w-TUMWBEOX_zsSa-BBhK8 {
   display: flex;
@@ -1119,7 +1123,6 @@ html:has(dialog.ycpazsHLq6lCBFmWPCLCZ[open]) {
   flex-grow: 1;
   color: #fff;
   font-size: 22px;
-  max-width: 800px;
 }
 ._1w-TUMWBEOX_zsSa-BBhK8 .RC4JznqJb34yCm04FKk0I {
   border: none;

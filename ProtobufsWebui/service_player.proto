@@ -157,6 +157,7 @@ message CPlayer_GetFavoriteBadge_Response {
 
 message CPlayer_GetFriendsGameplayInfo_Request {
 	optional uint32 appid = 1;
+	optional bool include_family_licenses = 2;
 }
 
 message CPlayer_GetFriendsGameplayInfo_Response {

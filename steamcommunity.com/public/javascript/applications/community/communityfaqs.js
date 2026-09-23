@@ -1982,7 +1982,7 @@ License: MIT
           ],
         });
       }
-      var X = n(34121),
+      var X = n(76684),
         $ = n(55351),
         ee = n.n($),
         te = n(3063),
@@ -3360,17 +3360,18 @@ License: MIT
               bIsPreview: i,
               elSideBars: s,
               version: o,
+              language: l,
             } = e,
-            l = (0, c.zy)();
+            d = (0, c.zy)();
           return (
             r.useEffect(() => {
               var e, t, n;
               const i =
-                null === (e = null == l ? void 0 : l.hash) || void 0 === e
+                null === (e = null == d ? void 0 : d.hash) || void 0 === e
                   ? void 0
                   : e.substr(
                       "#" ===
-                        (null === (t = null == l ? void 0 : l.hash) ||
+                        (null === (t = null == d ? void 0 : d.hash) ||
                         void 0 === t
                           ? void 0
                           : t.substr(0, 1))
@@ -3381,7 +3382,7 @@ License: MIT
                 (null === (n = document.getElementById(i)) ||
                   void 0 === n ||
                   n.scrollIntoView({ block: "start", behavior: "smooth" }));
-            }, [l]),
+            }, [d]),
             (0, a.jsxs)("div", {
               className: (0, A.A)(at.FAQViewPage, h.TS.LANGUAGE),
               children: [
@@ -3412,6 +3413,7 @@ License: MIT
                                 text: n,
                                 bShowErrorInfo: i,
                                 version: o || "0",
+                                language: l,
                               }),
                             }),
                           ],
@@ -3645,6 +3647,7 @@ License: MIT
                       title: n.GetDraftTitleWithFallback(s, h.TS.EREALM),
                       content: n.GetDraftContentWithFallback(s, h.TS.EREALM),
                       version: "" + n.GetLastTimeLanguageUpdated(s),
+                      language: s,
                     }),
                     (0, a.jsx)(Ke, { draft: n, eLanguage: s }),
                   ],

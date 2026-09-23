@@ -72,6 +72,9 @@
           include_links: e.include_links || t.include_links,
           include_extra_details:
             e.include_extra_details || t.include_extra_details,
+          include_optin_registration_tags:
+            e.include_optin_registration_tags ||
+            t.include_optin_registration_tags,
         };
       }
       async function R(e, t) {

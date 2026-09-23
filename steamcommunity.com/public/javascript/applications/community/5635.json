@@ -105,6 +105,7 @@
     "moderation_sanction_hubbanned": "Avstängd från hubben i %1$s dagar",
     "moderation_sanction_markassuspicious": "Markerad som misstänkt",
     "moderation_sanction_relabelled": "Ommärkt",
+    "moderation_sanction_markedincompatible": "Marked as incompatible",
     "moderation_sanction_tradebanned_forever": "Permanent avstängd från byteshandel",
     "moderation_sanction_tradebanned": "Avstängd från byteshandel i %1$s dagar",
     "moderation_sanction_kickedfromgroup": "Sparkad från grupp",
@@ -133,6 +134,6 @@
     "reportedsubjectlist_header": "Rapporterade ämnen",
     "moderation_already_owner_disputed": "Redan bestridd",
     "moderationstats_alltypes": "Alla ämnestyper",
-    "forumsubjectlist_subjectreportsummary": "%1$s olösta, %1$s bestridda",
+    "forumsubjectlist_subjectreportsummary": "%1$s olösta, %2$s bestridda",
     "empty_no_trailing_comma": ""
 }

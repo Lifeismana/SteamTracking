@@ -6152,6 +6152,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.memo(function (_) {
         const {
@@ -6173,14 +6174,11 @@
                   handleClickOn(_, _, _, _, _, _) {
                     if (_ && (_.ctrlKey || 1 == _.button)) {
                       const _ = _.resolve(_ - _)
-                        .marks()
-                        .find((_) => _.type == _);
+                          .marks()
+                          .find((_) => _.type == _),
+                        _ = _ && (0, _._)(_.attrs.href);
                       if (_)
-                        return (
-                          _.current(_.attrs.href, _.view),
-                          _.preventDefault(),
-                          !0
-                        );
+                        return _.current(_, _.view), _.preventDefault(), !0;
                     }
                     return !1;
                   },
@@ -6411,6 +6409,22 @@
             })
           : null;
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      function _(_) {
+        if (!_) return _;
+        const _ = _.trim(),
+          _ = _.toLowerCase();
+        return __webpack_require__.startsWith("javascript:") ||
+          __webpack_require__.startsWith("data:") ||
+          __webpack_require__.startsWith("vbscript:")
+          ? ""
+          : _;
+      }
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

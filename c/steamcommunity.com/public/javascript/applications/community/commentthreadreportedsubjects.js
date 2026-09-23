@@ -12,7 +12,10 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const _ = (0, _._)(_._, _.commentThreadID),
+        const _ = (0, _._)({
+            subject_type: _._,
+            comment_thread_id: _.commentThreadID,
+          }),
           _ = (0, _.useCommentThread)(
             _.steamid,
             _.eCommentThreadType,

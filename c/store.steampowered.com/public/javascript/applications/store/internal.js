@@ -429,10 +429,11 @@
             variant: _,
             color: _,
             align: _ = "center",
+            icon: _,
             ..._
           } = _,
           _ = "indeterminate" === _,
-          _ = _ ? _ : _,
+          _ = _ ?? (_ ? _ : _),
           _ = () => {
             _ || (_ && __webpack_require__(!!_ || !_));
           },
@@ -2125,6 +2126,7 @@
         include_platforms: !0,
         include_tag_count: 20,
         include_basic_info: !0,
+        include_optin_registration_tags: !0,
         include_trailers: !0,
         include_reviews: !0,
         include_screenshots: !0,
@@ -2400,6 +2402,7 @@
             apply_user_filters: _,
             include_links: _,
             include_extra_details: _,
+            include_optin_registration_tags: _,
           } = _;
         if (
           ((0, _.useEffect)(() => {
@@ -2421,6 +2424,7 @@
               apply_user_filters: _,
               include_links: _,
               include_extra_details: _,
+              include_optin_registration_tags: _,
             };
             let _ = null;
             return (
@@ -2438,6 +2442,7 @@
               () => _?.cancel("useStoreItemCache: unmounting")
             );
           }, [
+            _,
             _,
             _,
             _,
@@ -2509,6 +2514,7 @@
             apply_user_filters: _,
             include_links: _,
             include_extra_details: _,
+            include_optin_registration_tags: _,
           } = _;
         if (
           ((0, _.useEffect)(() => {
@@ -2531,6 +2537,7 @@
                 apply_user_filters: _,
                 include_links: _,
                 include_extra_details: _,
+                include_optin_registration_tags: _,
               },
               _ = _.filter(
                 (_) =>
@@ -2548,7 +2555,30 @@
               }),
               () => _.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]),
+          }, [
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+          ]),
           !_)
         )
           return _;

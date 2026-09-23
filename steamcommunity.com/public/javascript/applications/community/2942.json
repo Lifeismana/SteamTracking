@@ -62,6 +62,7 @@
     "Reservation_OnRegularReserveForModel": "Sie befinden sich in der Reservierungswarteschlange für: %1$s",
     "Reservation_PostShuffle_TAndC": "Es gelten die <1>Allgemeinen Geschäftsbedingungen</1>.",
     "machine_dummy": "dummy",
+    "PriceDisplay_YourPrice": "Ihr Preis:",
     "PriceGrid_NormalPrice": "STANDARD",
     "PriceGrid_RecentPrice": "30-TAGE-TIEF",
     "PriceGrid_CurrentPrice": "AKTUELL",

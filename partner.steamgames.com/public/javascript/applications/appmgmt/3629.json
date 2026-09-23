@@ -62,6 +62,7 @@
     "Reservation_OnRegularReserveForModel": "Estás na fila de reservas de %1$s",
     "Reservation_PostShuffle_TAndC": "Aplicam-se os <1>termos e condições</1>.",
     "machine_dummy": "dummy",
+    "PriceDisplay_YourPrice": "Preço para ti:",
     "PriceGrid_NormalPrice": "NORMALMENTE",
     "PriceGrid_RecentPrice": "+ BAIXO (ÚLT. 30 D)",
     "PriceGrid_CurrentPrice": "AGORA",

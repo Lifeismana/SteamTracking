@@ -899,7 +899,6 @@
         InviteResult: "Fz3D_Ob1SfsM7NlllVW4Q",
         SalePageInfoCtn: "_2FWCaSAjdSHf7w_aN_jPIV",
         AdvertisingAppSection: "_15rIZw2NyMBg4Q2ApraIcz",
-        ChooseInviteTypeContainer: "R-dUfNFnRveUE4hFgt52X",
         PartnerContactRow: "eyyqHrjN-07t7Dfn0OFdF",
       };
     },
@@ -5252,7 +5251,8 @@
           (_[(_.k_NextFestRegisteredWhatNext = 39)] =
             "k_NextFestRegisteredWhatNext"),
           (_[(_.k_NextFestMediaUsageConfirmationTrailer = 40)] =
-            "k_NextFestMediaUsageConfirmationTrailer");
+            "k_NextFestMediaUsageConfirmationTrailer"),
+          (_[(_.k_DemoBuildReviewDeadline = 41)] = "k_DemoBuildReviewDeadline");
       })(_ || (_ = {}));
       const _ = [
         _.k_Custom,
@@ -5261,6 +5261,7 @@
         _.k_DemoPressPreview,
         _.k_DemoReview,
         _.k_DemoLaunch,
+        _.k_DemoBuildReviewDeadline,
         _.k_DemoNotReady,
         _.k_EnterDiscount,
         _.k_EnterDiscountReminder,
@@ -5317,6 +5318,8 @@
             return "Demo Reminder: Get your demo reviewed";
           case _.k_DemoLaunch:
             return "Demo Reminder: Launch your demo";
+          case _.k_DemoBuildReviewDeadline:
+            return "Demo Reminder: Submit your demo build by dateX";
           case _.k_DemoPressPreview:
             return "Press Preview, Reminder to register now";
           case _.k_PressPreviewDetails:
@@ -5504,6 +5507,9 @@
         }
         GetTrailerDemoDeadlineDate() {
           return this.m_email.trailer_demo_deadline_date;
+        }
+        GetBuildReviewDeadlineDate() {
+          return this.m_email.build_review_deadline_date;
         }
         GetDemoTrailerRegLink() {
           return this.m_email.trailer_demo_reg_link;
@@ -5714,6 +5720,12 @@
             ((this.m_email.trailer_demo_deadline_date = _),
             _._.Get().SetDirty(!0));
         }
+        SetBuildReviewDeadlineDate(_) {
+          this.m_email.build_review_deadline_date == _ ||
+            this.m_bReadOnly ||
+            ((this.m_email.build_review_deadline_date = _),
+            _._.Get().SetDirty(!0));
+        }
         SetQASessionLink(_) {
           this.m_email.qasession_link == _ ||
             this.m_bReadOnly ||
@@ -5832,6 +5844,7 @@
         (0, _._)([_._.bound], _.prototype, "SetNextEditionDate", null),
         (0, _._)([_._.bound], _.prototype, "SetQASessionDate", null),
         (0, _._)([_._.bound], _.prototype, "SetTrailerDemoDeadlineDate", null),
+        (0, _._)([_._.bound], _.prototype, "SetBuildReviewDeadlineDate", null),
         (0, _._)([_._.bound], _.prototype, "SetQASessionLink", null),
         (0, _._)([_._.bound], _.prototype, "SetDemoTrailerRegLink", null),
         (0, _._)([_._.bound], _.prototype, "SetRecordedQASessionLink", null),
@@ -7313,8 +7326,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = "section_",
-        _ = "list_",
+      const _ = "list_",
         _ = "option_";
       class _ {
         static s_Editor;
@@ -8344,23 +8356,29 @@
             this.m_model.dynamic_sections.splice(_, 1), this.SetDirty(!0), !0
           );
         }
+        static GenerateUniqueID(_) {
+          const _ = new Set();
+          for (const _ of _.Get().GetDynamicSections()) {
+            _.add(_.unique_id);
+            for (const _ of _.lists || []) {
+              _.add(_.unique_id);
+              for (const _ of _.options || []) _.add(_.unique_id);
+            }
+          }
+          let _;
+          do {
+            _ = _ + Math.floor(1 + 1e5 * Math.random());
+          } while (_.has(_));
+          return _;
+        }
         GenerateUniqueIDForOptInSection() {
-          let _ = Math.floor(1 + 1e5 * Math.random());
-          for (; this.GetDynamicSectionByID(_ + _); )
-            _ = Math.floor(1 + 1e5 * Math.random());
-          return _ + _;
+          return _.GenerateUniqueID("section_");
         }
-        static GenerateUniqueIDForOptionListSection(_) {
-          let _ = Math.floor(1 + 1e5 * Math.random());
-          for (; _ && _.some((_) => _.unique_id === _ + _); )
-            _ = Math.floor(1 + 1e5 * Math.random());
-          return _ + _;
+        static GenerateUniqueIDForOptionListSection() {
+          return _.GenerateUniqueID(_);
         }
-        static GenerateUniqueIDForListItem(_) {
-          let _ = Math.floor(1 + 1e5 * Math.random());
-          for (; _ && _.some((_) => _.unique_id === _ + _); )
-            _ = Math.floor(1 + 1e5 * Math.random());
-          return _ + _;
+        static GenerateUniqueIDForListItem() {
+          return _.GenerateUniqueID(_);
         }
         BIsDirty() {
           return this.m_bDirty;
@@ -9255,9 +9273,7 @@
               (this.m_section.lists[_].options = []);
             const _ = {
               text: {},
-              unique_id: _.GenerateUniqueIDForListItem(
-                this.m_section.lists[_].options,
-              ),
+              unique_id: _.GenerateUniqueIDForListItem(),
             };
             (_.text[_] = _),
               _ && ((_.tooltip = {}), (_.tooltip[_] = _)),
@@ -9338,9 +9354,7 @@
         AddOptionList() {
           const _ = {
             options: [],
-            unique_id: _.GenerateUniqueIDForOptionListSection(
-              this.m_section.lists,
-            ),
+            unique_id: _.GenerateUniqueIDForOptionListSection(),
           };
           this.m_section.lists.push(_), _.Get().SetDirty(!0);
         }
@@ -26288,7 +26302,7 @@
                   }),
                   (0, _.jsx)("p", {
                     children:
-                      "When enablesd, it will allow the partner to enter a primary contact name and email address for this game. It will inform them that we plan to use this information when contacting the press about the event with participating games. You can export the opt-in press contact in manage tab.",
+                      "When enabled, it will allow the partner to enter a primary contact name and email address for this game. It will inform them that we plan to use this information when contacting the press about the event with participating games. You can export the opt-in press contact in manage tab.",
                   }),
                   (0, _.jsx)(_._, {
                     label: "Collect Press Contact Info",
@@ -29860,6 +29874,36 @@
                   ),
                 }));
               break;
+            case _._.k_DemoBuildReviewDeadline:
+              (_ = (0, _._)(
+                "#OptIn_EmailSection_DemoBuildReviewDeadline_Title",
+                (0, _._)(_.GetBuildReviewDeadlineDate() || 0),
+              )),
+                (_ = (0, _.jsxs)(_.Fragment, {
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _().SectionBody,
+                      children: (0, _._)(
+                        "#OptIn_EmailSection_DemoBuildReviewDeadline_Body_1",
+                        _.GetName(),
+                        _,
+                        (0, _.jsx)("a", {
+                          href: _,
+                          children: (0, _._)(
+                            "#OptIn_EmailSection_DemoBuildReviewDeadline_Body_1_Link",
+                          ),
+                        }),
+                      ),
+                    }),
+                    (0, _.jsx)("div", {
+                      className: _().SectionBody,
+                      children: (0, _._)(
+                        "#OptIn_EmailSection_DemoBuildReviewDeadline_Body_2",
+                      ),
+                    }),
+                  ],
+                }));
+              break;
             case _._.k_PressPreviewDetails:
               (_ = (0, _._)("#OptIn_EmailSection_PressPreviewDetails_Title")),
                 (_ = (0, _.jsxs)("div", {
@@ -31959,6 +32003,21 @@
                       bShowTimeZone: !0,
                     }),
                   }),
+                _.bNeedBuildReviewDeadlineDate &&
+                  (0, _.jsx)("div", {
+                    className: _().MetaDataRow,
+                    children: (0, _.jsx)(_._, {
+                      strDescription:
+                        "Deadline to submit the demo build for review",
+                      disabled: _.BIsReadOnly(),
+                      nEarliestTime: 0,
+                      fnGetTimeToUpdate: () =>
+                        _.GetBuildReviewDeadlineDate() || 0,
+                      fnSetTimeToUpdate: _.SetBuildReviewDeadlineDate,
+                      fnIsValidDateTime: () => !0,
+                      bShowTimeZone: !0,
+                    }),
+                  }),
                 _.bNeedQASessionLink &&
                   (0, _.jsxs)("div", {
                     className: _().MetaDataRow,
@@ -32323,6 +32382,9 @@
                 break;
               case _._.k_NextFestRegisteredWhatNext:
                 (_.bNeedPreviewDate = !0), (_.bNeedWikiDocumentation = !0);
+                break;
+              case _._.k_DemoBuildReviewDeadline:
+                _.bNeedBuildReviewDeadlineDate = !0;
                 break;
               case _._.k_MediaPermissionReminder:
                 (_.bNeedDemoTrailerRegLink = !0),
@@ -36411,6 +36473,10 @@
                       (_.GetTrailerDemoDeadlineDate()
                         ? (_ += 1)
                         : _.push("Missing Trailer Demo Deadline Date")),
+                    _.bNeedBuildReviewDeadlineDate &&
+                      (_.GetBuildReviewDeadlineDate()
+                        ? (_ += 1)
+                        : _.push("Missing Demo Build Review Deadline Date")),
                     _.bNeedGenericActionLink &&
                       (_.GetGenericActionLink()
                         ? (_ += 1)
@@ -51393,13 +51459,8 @@
           _ = _.useMemo(() => (0, _._)(_), [_]),
           [_, _] = _.useState(30),
           [_, _] = _.useState(_._),
-          [_, _] = _.useState(_._._),
-          _ =
-            _ === _._._
-              ? "Daily Deal"
-              : _ === _._._
-                ? "Midweek Deal"
-                : "Weekend Deal",
+          _ = _._._,
+          _ = "Daily Deal",
           { fnCreatePromoInvite: _ } = (0, _._)(),
           [_, _] = _.useState(null),
           _ = Date.now() / 1e3,
@@ -51457,10 +51518,6 @@
               },
               onCancel: _,
               children: [
-                (0, _.jsx)(_, {
-                  promoType: _,
-                  setPromoType: _,
-                }),
                 (0, _.jsxs)("div", {
                   className: _.DialogCtn,
                   children: [
@@ -51595,34 +51652,6 @@
               ],
             }),
           ],
-        });
-      }
-      function _(_) {
-        const { promoType: _, setPromoType: _ } = _,
-          _ = [
-            {
-              data: _._._,
-              label: "Daily Deal",
-            },
-            {
-              data: _._._,
-              label: "MidWeek Deal (Mon->Thurs)",
-            },
-            {
-              data: _._._,
-              label: "Weekend Deal (Thurs->Mon)",
-            },
-          ];
-        return (0, _.jsx)("div", {
-          className: _.ChooseInviteTypeContainer,
-          children: (0, _.jsx)(_._, {
-            label: "Promotion Type",
-            rgOptions: _,
-            selectedOption: _,
-            onChange: (_) => __webpack_require__(_.data),
-            tooltip:
-              "The type of self-service promotion to invite the partner to",
-          }),
         });
       }
       function _(_) {
@@ -78231,118 +78260,140 @@
       var _ = __webpack_require__("chunkid");
       _.nuP,
         _.R$d,
-        _.aNN,
-        _.DHU,
-        _.zah,
-        _.Jtk,
-        _.Mhp,
         _.BGM,
+        _.zah,
+        _.Mhp,
+        _.Jtk,
         _.lXI,
         _.mYY,
-        _.mvf,
+        _.bPv,
+        _.Wq7,
         _.Gkz,
         _.FzB,
         _.Sv2,
         _.mvf,
-        _.r7M,
         _.KCN,
-        _.nNq,
         _.Vg1,
+        _.cTj,
+        _.CYA,
         _.DHU,
         _.aNN,
-        _.cTj,
         _.IEJ,
         _.FzB,
-        _.nNq,
-        _.KCN,
-        _.Sv2,
+        _.X$z,
+        _.equ,
+        _.Izv,
+        _.zwR,
         _.LGs,
-        _.mvf,
-        _.Ywc,
-        _.PYD,
         _.UfY,
-        _.lw$,
+        _.PYD,
         _.z3Q,
         _.KCN,
-        _.FzB,
         _.J1r,
-        _.aNN,
-        _.DHU,
+        _.Gxx,
         _.Ftl,
+        _.gEw,
         _.Jtk,
-        _.R$d,
-        _.r7M,
         _.f_e,
         _.dWZ,
-        _.DfI,
+        _.$YD,
         _.t_B,
-        _.KoH,
-        _.mvf,
+        _.W5v,
         _.u7l,
-        _.lw$,
-        _.iZ9,
-        _.PYD,
-        _.FzB,
-        _._,
+        _.KoH,
+        _.jzL,
+        _.vx7,
+        _.dm2,
+        _.R1B,
+        _.IbE,
+        _.UfY,
         _.mG_,
         _.mvf,
-        _.$YD,
         _.JEe,
-        _.Ywc,
-        _.Yr4,
-        _.FzB,
-        _.Sv2,
         _.dxW,
-        _.DfI,
-        _.nNq,
+        _.UEV,
+        _.btm,
         _.nL9,
         _.mvf,
-        _.wIS,
-        _.DfI,
-        _.Ywc,
-        _.$YD,
-        _.FzB,
-        _.Sv2,
-        _.nNq,
-        _.lPO,
-        _.JEe,
+        _.jzL,
+        _.dWZ,
+        _.EEh,
+        _.rNe,
+        _.nPW,
+        _.QA9,
         _.ceg,
         _.nNq,
         _.Ywc,
-        _.rAU,
-        _.FzB,
-        _.mvf,
-        _.dxW,
-        _.Sv2,
         _.Buq,
-        _.KCN,
-        _.Yr4,
-        _.uZq,
+        _.dxW,
         _.rAU,
-        _.LGs,
+        _.uZq,
         _.aWw,
-        _.FzB,
-        _.mvf,
-        _.nNq,
-        _.Ywc,
-        _.UfY,
-        _.lw$,
-        _.u7l,
-        _.LqT,
-        _.t_B,
-        _.lw$,
-        _.PYD,
+        _.Wo$,
+        _.jx3,
+        _.PoK,
+        _.wz4,
         _.LGs,
-        _.DfI,
-        _.nNq,
-        _.rTg,
-        _.J1r,
-        _.u7l,
-        _.KoH,
-        _.IbE,
+        _.rAU,
+        _.LqT,
+        _.gGw,
+        _.t_B,
+        _.kpV,
+        _.cNr,
+        _.vk_,
+        _.PoK,
+        _.G1H,
+        _.MNG,
+        _.z3Q,
+        _.nuP,
+        _.Xkc,
+        _.Gkz,
+        _.IEJ,
+        _.dWZ,
+        _.dBS,
         _.Vov,
+        _.z3Q,
+        _.nuP,
+        _.Xkc,
+        _.Gkz,
+        _.IEJ,
+        _.dWZ,
+        _.ng1,
+        _.qhO,
+        _.BWK,
+        _.nuP,
+        _.z3Q,
+        _.Gkz,
+        _.IEJ,
+        _.Xkc,
+        _.dWZ,
         _.ubQ,
-        _.lYS,
+        _.ZUO,
+        _.Gkz,
+        _.VmN,
+        _.G1H,
+        _.UfY,
+        _.yUQ,
+        _.uZq,
+        _.iZ9,
+        _.dWZ,
+        _.IEJ,
+        _.LGs,
+        _.a5M,
+        _.RsL,
+        _.jzL,
+        _.PoK,
+        _.IEJ,
+        _.uZq,
+        _.zwR,
+        _.MnB,
+        _.hSB,
+        _.gGw,
+        _.LqT,
+        _.kpV,
+        _.uZq,
+        _.eQ$,
+        _.hwI,
         _.GBh;
       function _(_) {
         if (_)
@@ -80295,9 +80346,7 @@
         return !1;
       }
       __webpack_require__("chunkid");
-      __webpack_require__("chunkid"),
-        __webpack_require__("chunkid"),
-        __webpack_require__("chunkid");
+      __webpack_require__("chunkid"), __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -80614,6 +80663,7 @@
             bHidePrice: _,
             bHidePlatforms: _,
             bShowDeckCompatibilityDialog: _,
+            eHardwareCompatibilityDisplay: _,
             bAutoFocus: _,
           } = _,
           _ = (0, _._)({
@@ -80622,6 +80672,7 @@
           }),
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_),
+          [_, _] = (0, _._)(_, _),
           _ = _?.item_type == _._._;
         return (0, _.jsx)(_._, {
           appid: _ ? _._ : void 0,
@@ -80654,8 +80705,9 @@
                             }),
                             Boolean(_ && _?.item_type == _._._ && _) &&
                               (0, _.jsx)(_._, {
+                                eDisplay: _,
+                                storeItemPlatform: _,
                                 className: _.DeckCompatIcon,
-                                category: _?.steam_deck_compat_category,
                               }),
                           ],
                         }),
@@ -80667,6 +80719,7 @@
                         bHidePrice: _,
                         bHideWishlistButton: !0,
                         bShowDeckCompatibilityDialog: _,
+                        eHardwareCompatibilityDisplay: _,
                       }),
                     ],
                   }),
@@ -82011,6 +82064,9 @@
                     {
                       bShowDemoButton:
                         _.show_as_demos || _?.BFilterRequiresFeatureDemo(),
+                      eHardwareCompatibilityDisplay:
+                        _.display_hw_compatibility_details ||
+                        _?.EFilterRequiresHWVerifiedOrPlayable(),
                       bShowDeckCompatibilityDialog:
                         _.show_deck_compability_details ||
                         _?.BFilterRequiresSteamDeckVerifiedOrPlayable(),
@@ -84297,9 +84353,178 @@
       __webpack_require__._(module_exports, {
         _: () => _,
       });
+      var _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      async function _(_, _) {
+        const _ = new URLSearchParams();
+        __webpack_require__.append("page_action", String(_)),
+          __webpack_require__.append("snr", _._.SNR),
+          __webpack_require__.append("uint_data", String(_)),
+          __webpack_require__.append(
+            "str_data",
+            (function () {
+              if (_._.IN_CLIENT) return "steam";
+              const _ = navigator.userAgent;
+              return /iPhone|iPad|iPod/i.test(_) ||
+                (/Macintosh/i.test(_) && /Safari/i.test(_))
+                ? "ios"
+                : /Android/i.test(_)
+                  ? "android"
+                  : "";
+            })(),
+          );
+        try {
+          await fetch(_._.STORE_BASE_URL + "events/ajaxreportnewshubstats/", {
+            method: "POST",
+            body: _,
+          });
+        } catch {}
+      }
+      !(function (_) {
+        (_[(_.k_eDiscussions = 0)] = "k_eDiscussions"),
+          (_[(_.k_eThumbsUp = 1)] = "k_eThumbsUp"),
+          (_[(_.k_eClickThrough = 2)] = "k_eClickThrough"),
+          (_[(_.k_eMuted = 3)] = "k_eMuted"),
+          (_[(_.k_ePlayedVideo = 4)] = "k_ePlayedVideo"),
+          (_[(_.k_eReminder_Opened = 5)] = "k_eReminder_Opened"),
+          (_[(_.k_eReminder_MobilePush = 6)] = "k_eReminder_MobilePush"),
+          (_[(_.k_eReminder_Email = 7)] = "k_eReminder_Email"),
+          (_[(_.k_eReminder_CalendarApple = 8)] = "k_eReminder_CalendarApple"),
+          (_[(_.k_eReminder_CalendarGoogle = 9)] =
+            "k_eReminder_CalendarGoogle"),
+          (_[(_.k_eReminder_CalendarOutlook = 10)] =
+            "k_eReminder_CalendarOutlook"),
+          (_[(_.k_eReminder_EmailUnverified = 11)] =
+            "k_eReminder_EmailUnverified"),
+          (_[(_.k_eReminder_MobilePushMissing = 12)] =
+            "k_eReminder_MobilePushMissing");
+      })(_ || (_ = {}));
+      const _ = {
+        nFutureViewedIndex: 0,
+        nPastViewedIndex: 0,
+        nLastRecordedFilter: 0,
+      };
+      function _(_) {
+        return _.getQueryData(["EventCalendarTrackingProgress"]) ?? _;
+      }
+      function _(_, _) {
+        _.setQueryDefaults(["EventCalendarTrackingProgress"], {
+          staleTime: 1 / 0,
+          gcTime: 1 / 0,
+        }),
+          _.setQueryData(["EventCalendarTrackingProgress"], (_) => ({
+            ...(_ ?? _),
+            ..._,
+          }));
+      }
+      function _(_, _, _) {
+        return clearTimeout(_), setTimeout(_, _);
+      }
+      function _(_) {
+        return Math.max(0, Math.floor(Date.now() / 1e3 - _));
+      }
+      function _() {
+        const _ = (0, _._)(),
+          { mutate: _ } = (0, _._)({
+            mutationFn: async (_) => {
+              switch (_.type) {
+                case "interaction":
+                  (_ = _.interaction), _(_._._, _);
+                  break;
+                case "filter-change":
+                  !(function (_, _) {
+                    const _ = _(_(_).schFilter, 1e3, () => {
+                      _ != _(_).nLastRecordedFilter &&
+                        (_(_, {
+                          nLastRecordedFilter: _,
+                        }),
+                        _(_._._, _));
+                    });
+                    _(_, {
+                      schFilter: _,
+                    });
+                  })(_, _.nFilterBitMask);
+                  break;
+                case "event-viewed":
+                  !(function (_, _, _, _) {
+                    let _,
+                      _,
+                      _ = 0,
+                      _ = 0;
+                    for (const _ of _) {
+                      const _ = _.start_time > _;
+                      if ((_.unique_id == _ && ((_ = _), (_ = _)), _)) _++;
+                      else if (void 0 !== _) break;
+                      _++;
+                    }
+                    if (void 0 === _ || !_) return;
+                    const _ = _(_);
+                    if (_ < _) {
+                      const _ = _ - _;
+                      if (_.nFutureViewedIndex >= _) return;
+                      const _ = _(_.schFuture, 500, () => {
+                        const _ =
+                          Math.min(_, 4095) |
+                          (Math.min(_, 255) << 12) |
+                          (Math.min(_(_), 2047) << 20);
+                        _(_._._, _);
+                      });
+                      return void _(_, {
+                        nFutureViewedIndex: _,
+                        schFuture: _,
+                      });
+                    }
+                    const _ = _ - _;
+                    if (_.nPastViewedIndex >= _) return;
+                    const _ = Math.floor((_ - _.start_time) / 86400),
+                      _ = _(_.schPast, 500, () => {
+                        const _ =
+                          Math.min(_, 4095) |
+                          (Math.min(_, 255) << 12) |
+                          (Math.min(_(_), 2047) << 20);
+                        _(_._._, _);
+                      });
+                    _(_, {
+                      nPastViewedIndex: _,
+                      schPast: _,
+                    });
+                  })(_, _.gidEvent, _.rgItemsInView, _.rtCalendarInit);
+              }
+              var _;
+            },
+          });
+        return _.useMemo(
+          () => ({
+            RecordInteraction: (_) =>
+              _({
+                type: "interaction",
+                interaction: _,
+              }),
+            RecordFilterChange: (_) =>
+              _({
+                type: "filter-change",
+                nFilterBitMask: _,
+              }),
+            RecordEventViewed: (_, _, _) =>
+              _({
+                type: "event-viewed",
+                gidEvent: _,
+                rgItemsInView: _,
+                rtCalendarInit: _,
+              }),
+          }),
+          [_],
+        );
+      }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -84665,7 +84890,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       !(function (_) {
         (_[(_.k_ENotifyFlagNone = 0)] = "k_ENotifyFlagNone"),
@@ -84820,184 +85044,6 @@
           fnHidePanel: _,
         });
       }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      async function _(_, _) {
-        const _ = new URLSearchParams();
-        __webpack_require__.append("page_action", String(_)),
-          __webpack_require__.append("snr", _._.SNR),
-          __webpack_require__.append("uint_data", String(_)),
-          __webpack_require__.append(
-            "str_data",
-            (function () {
-              if (_._.IN_CLIENT) return "steam";
-              const _ = navigator.userAgent;
-              return /iPhone|iPad|iPod/i.test(_) ||
-                (/Macintosh/i.test(_) && /Safari/i.test(_))
-                ? "ios"
-                : /Android/i.test(_)
-                  ? "android"
-                  : "";
-            })(),
-          );
-        try {
-          await fetch(_._.STORE_BASE_URL + "events/ajaxreportnewshubstats/", {
-            method: "POST",
-            body: _,
-          });
-        } catch {}
-      }
-      !(function (_) {
-        (_[(_.k_eDiscussions = 0)] = "k_eDiscussions"),
-          (_[(_.k_eThumbsUp = 1)] = "k_eThumbsUp"),
-          (_[(_.k_eClickThrough = 2)] = "k_eClickThrough"),
-          (_[(_.k_eMuted = 3)] = "k_eMuted"),
-          (_[(_.k_ePlayedVideo = 4)] = "k_ePlayedVideo"),
-          (_[(_.k_eReminder_Opened = 5)] = "k_eReminder_Opened"),
-          (_[(_.k_eReminder_MobilePush = 6)] = "k_eReminder_MobilePush"),
-          (_[(_.k_eReminder_Email = 7)] = "k_eReminder_Email"),
-          (_[(_.k_eReminder_CalendarApple = 8)] = "k_eReminder_CalendarApple"),
-          (_[(_.k_eReminder_CalendarGoogle = 9)] =
-            "k_eReminder_CalendarGoogle"),
-          (_[(_.k_eReminder_CalendarOutlook = 10)] =
-            "k_eReminder_CalendarOutlook"),
-          (_[(_.k_eReminder_EmailUnverified = 11)] =
-            "k_eReminder_EmailUnverified"),
-          (_[(_.k_eReminder_MobilePushMissing = 12)] =
-            "k_eReminder_MobilePushMissing");
-      })(_ || (_ = {}));
-      const _ = {
-        nFutureViewedIndex: 0,
-        nPastViewedIndex: 0,
-        nLastRecordedFilter: 0,
-      };
-      function _(_) {
-        return _.getQueryData(["EventCalendarTrackingProgress"]) ?? _;
-      }
-      function _(_, _) {
-        _.setQueryDefaults(["EventCalendarTrackingProgress"], {
-          staleTime: 1 / 0,
-          gcTime: 1 / 0,
-        }),
-          _.setQueryData(["EventCalendarTrackingProgress"], (_) => ({
-            ...(_ ?? _),
-            ..._,
-          }));
-      }
-      function _(_, _, _) {
-        return clearTimeout(_), setTimeout(_, _);
-      }
-      function _(_) {
-        return Math.max(0, Math.floor(Date.now() / 1e3 - _));
-      }
-      function _() {
-        const _ = (0, _._)(),
-          { mutate: _ } = (0, _._)({
-            mutationFn: async (_) => {
-              switch (_.type) {
-                case "interaction":
-                  (_ = _.interaction), _(_._._, _);
-                  break;
-                case "filter-change":
-                  !(function (_, _) {
-                    const _ = _(_(_).schFilter, 1e3, () => {
-                      _ != _(_).nLastRecordedFilter &&
-                        (_(_, {
-                          nLastRecordedFilter: _,
-                        }),
-                        _(_._._, _));
-                    });
-                    _(_, {
-                      schFilter: _,
-                    });
-                  })(_, _.nFilterBitMask);
-                  break;
-                case "event-viewed":
-                  !(function (_, _, _, _) {
-                    let _,
-                      _,
-                      _ = 0,
-                      _ = 0;
-                    for (const _ of _) {
-                      const _ = _.start_time > _;
-                      if ((_.unique_id == _ && ((_ = _), (_ = _)), _)) _++;
-                      else if (void 0 !== _) break;
-                      _++;
-                    }
-                    if (void 0 === _ || !_) return;
-                    const _ = _(_);
-                    if (_ < _) {
-                      const _ = _ - _;
-                      if (_.nFutureViewedIndex >= _) return;
-                      const _ = _(_.schFuture, 500, () => {
-                        const _ =
-                          Math.min(_, 4095) |
-                          (Math.min(_, 255) << 12) |
-                          (Math.min(_(_), 2047) << 20);
-                        _(_._._, _);
-                      });
-                      return void _(_, {
-                        nFutureViewedIndex: _,
-                        schFuture: _,
-                      });
-                    }
-                    const _ = _ - _;
-                    if (_.nPastViewedIndex >= _) return;
-                    const _ = Math.floor((_ - _.start_time) / 86400),
-                      _ = _(_.schPast, 500, () => {
-                        const _ =
-                          Math.min(_, 4095) |
-                          (Math.min(_, 255) << 12) |
-                          (Math.min(_(_), 2047) << 20);
-                        _(_._._, _);
-                      });
-                    _(_, {
-                      nPastViewedIndex: _,
-                      schPast: _,
-                    });
-                  })(_, _.gidEvent, _.rgItemsInView, _.rtCalendarInit);
-              }
-              var _;
-            },
-          });
-        return _.useMemo(
-          () => ({
-            RecordInteraction: (_) =>
-              _({
-                type: "interaction",
-                interaction: _,
-              }),
-            RecordFilterChange: (_) =>
-              _({
-                type: "filter-change",
-                nFilterBitMask: _,
-              }),
-            RecordEventViewed: (_, _, _) =>
-              _({
-                type: "event-viewed",
-                gidEvent: _,
-                rgItemsInView: _,
-                rtCalendarInit: _,
-              }),
-          }),
-          [_],
-        );
-      }
-      var _ = __webpack_require__("chunkid");
       function _(_) {
         const {
             eventModel: _,
@@ -85014,7 +85060,7 @@
               { data: _ } = (0, _._)(_ ? void 0 : _.clanSteamID.GetAccountID());
             return (_ ? _?.name : _?.group_name) || void 0;
           })(_);
-        return (0, _.jsx)(_._, {
+        return (0, _.jsx)(_, {
           eventModel: _,
           lang: _,
           strHubName: _,
@@ -104543,6 +104589,7 @@
         include_platforms: !0,
         include_tag_count: 20,
         include_basic_info: !0,
+        include_optin_registration_tags: !0,
         include_trailers: !0,
         include_reviews: !0,
         include_screenshots: !0,
@@ -116895,7 +116942,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = new Map([
         [
@@ -116940,6 +116986,7 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -117201,9 +117248,29 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _() {
+        const _ = window;
+        _.g_wapitRefreshEnabled = !1;
+        const _ = "function" == typeof _.g_wapitRefresh;
+        let _;
+        return (
+          !_._.IN_CLIENT &&
+            _ &&
+            (_ = () =>
+              new Promise((_, _) => {
+                _.g_wapitRefresh((_) => {
+                  _(_);
+                }),
+                  window.setTimeout(
+                    () => __webpack_require__("Refresh Timeout"),
+                    1e4,
+                  );
+              })),
+          new _._(_._.WEBAPI_BASE_URL, _.g_wapit, !1, _)
+        );
+      }
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       let _;
       async function _(_) {
@@ -117223,7 +117290,7 @@
           (function () {
             if (!_) {
               const _ = (0, _._)("read_inventory_token", "application_config");
-              _ = _ ? new _._(_._.WEBAPI_BASE_URL, _) : (0, _._)();
+              _ = _ ? new _._(_._.WEBAPI_BASE_URL, _) : _();
             }
             return _.GetServiceTransport();
           })(),
@@ -117280,7 +117347,7 @@
       function _() {
         if (!_) {
           const _ = (0, _._)("loyalty_webapi_token", "application_config");
-          _ = _ ? new _._(_._.WEBAPI_BASE_URL, _) : (0, _._)();
+          _ = _ ? new _._(_._.WEBAPI_BASE_URL, _) : _();
         }
         return _.GetServiceTransport();
       }
@@ -117661,8 +117728,7 @@
             })
           : null;
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         const { event: _ } = _.context,
           _ = (0, _._)(_.args),
@@ -118907,24 +118973,24 @@
                         autocloses: !1,
                       },
                     ],
+                    [
+                      "meetsteamsessiongroup",
+                      {
+                        Constructor: _._,
+                        autocloses: !1,
+                      },
+                    ],
+                    [
+                      "meetsteamscheduleview",
+                      {
+                        Constructor: _._,
+                        autocloses: !1,
+                      },
+                    ],
                   ])),
                 _).entries(),
               ),
               ...Array.from(_.entries()),
-              [
-                "meetsteamsessiongroup",
-                {
-                  Constructor: _._,
-                  autocloses: !1,
-                },
-              ],
-              [
-                "meetsteamscheduleview",
-                {
-                  Constructor: _._,
-                  autocloses: !1,
-                },
-              ],
             ])),
           _
         );
@@ -120488,6 +120554,8 @@
                       bPreferDemoStorePage: _.bPreferDemoStorePage,
                       bShowDeckCompatibilityDialog:
                         _.bShowDeckCompatibilityDialog,
+                      eHardwareCompatibilityDisplay:
+                        _.eHardwareCompatibilityDisplay,
                       bHidePrice: _.bHidePrice,
                       bUseSubscriptionLayout: _.bUseSubscriptionLayout,
                       strExtraParams: _.strExtraParams,
@@ -120902,23 +120970,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = (0, _.createContext)(!1);
-      const _ = Intl.DateTimeFormat().resolvedOptions().timeZone,
-        _ =
-          "document" in globalThis
-            ? document.cookie
-                .split(";")
-                .find((_) => _.trim().startsWith("timezoneName"))
-                ?.split("=")[1]
-            : void 0,
-        _ = _ && decodeURIComponent(_);
-      function _() {
-        return (0, _.useContext)(_) ? _ : (_ ?? _);
-      }
-      "document" in globalThis &&
-        (document.cookie = `timezoneName=${_};expires=${new Date(Date.now() + 31536e6).toUTCString()};path=/;Secure;SameSite=None;`);
-      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_, _) {
         const _ = _ ?? _()._.guess(),
@@ -120964,7 +121018,7 @@
               bOnlyTime: _,
               bOnlyDate: _,
             } = _,
-            _ = _(),
+            _ = (0, _._)(),
             _ = !_ && Boolean(_),
             _ = !_ && Boolean(_),
             _ = _ && _(_, _),
@@ -121038,7 +121092,7 @@
                   ..._.stylesmodule,
                 }
               : _(),
-            _ = _(),
+            _ = (0, _._)(),
             _ = (0, _._)(),
             _ =
               _.bHideEndTime ||
@@ -121142,7 +121196,7 @@
                   ..._.stylesmodule,
                 }
               : _(),
-            _ = _(),
+            _ = (0, _._)(),
             _ = (0, _._)();
           if (null == _ || 0 == _)
             return (0, _.jsxs)("div", {

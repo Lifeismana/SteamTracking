@@ -105,6 +105,7 @@
     "moderation_sanction_hubbanned": "%1$s päivän yhteisökeskuksen porttikielto",
     "moderation_sanction_markassuspicious": "Merkitty epäilyttäväksi",
     "moderation_sanction_relabelled": "Luokiteltu uudelleen",
+    "moderation_sanction_markedincompatible": "Marked as incompatible",
     "moderation_sanction_tradebanned_forever": "Pysyvä vaihtokielto",
     "moderation_sanction_tradebanned": "%1$s päivän vaihtokiellossa",
     "moderation_sanction_kickedfromgroup": "Poistettu ryhmästä",
@@ -133,6 +134,6 @@
     "reportedsubjectlist_header": "Ilmiannetut aiheet",
     "moderation_already_owner_disputed": "Aiemmin kiistautettu",
     "moderationstats_alltypes": "Kaikki aihetyypit",
-    "forumsubjectlist_subjectreportsummary": "%1$s ratkaisematonta, %1$s kiistautettua",
+    "forumsubjectlist_subjectreportsummary": "%1$s ratkaisematonta, %2$s kiistautettua",
     "empty_no_trailing_comma": ""
 }

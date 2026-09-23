@@ -72,30 +72,50 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         var _, _;
-        const _ = (0, _._)(_._, _.topicId),
-          _ = _(_.clanSteamId, _.forumId, _.topicId, _.subjectId),
-          _ = _(_.clanSteamId, _.forumId, _.topicId, _.subjectId),
-          _ = {
-            subject_type: _._,
-            subject_group_id: _.topicId,
-            subject_id: _.subjectId,
-          },
-          _ = (
+        const _ = (
             null !==
               (_ =
-                null === (_ = _.data) || void 0 === _ ? void 0 : _.subjects) &&
-            void 0 !== _
+                null ===
+                  (_ = (0, _._)({
+                    subject_type: _._,
+                    topic: _.topicId,
+                  }).data) || void 0 === _
+                  ? void 0
+                  : _.subjects) && void 0 !== _
               ? _
               : []
-          ).find((_) => _.subject_id === _.subjectId);
+          ).find((_) => {
+            var _;
+            return (
+              (null === (_ = _.coordinates) || void 0 === _
+                ? void 0
+                : _.comment) === _.subjectId
+            );
+          }),
+          _ = _(
+            _.clanSteamId,
+            _.forumId,
+            _.topicId,
+            _.subjectId,
+            null == _ ? void 0 : _.reported_content_id,
+          ),
+          _ = _(
+            _.clanSteamId,
+            _.forumId,
+            _.topicId,
+            _.subjectId,
+            null == _ ? void 0 : _.reported_content_id,
+          );
         return (0, _.jsx)(_._, {
           sanctionMutation: _,
           acquitMutation: _,
-          subjectKey: _,
           subject: _,
+          eSubjectType: _._,
+          gidComment: _.subjectId,
           authorSteamID: _.authorSteamId,
           clanSteamID: _.clanSteamId,
           children: (0, _.jsx)(_, {
@@ -158,7 +178,7 @@
                   }),
                 ],
               }),
-              "0" !== _.subjectId &&
+              _.subjectId !== _._ &&
                 (0, _.jsxs)("tr", {
                   children: [
                     (0, _.jsx)("td", {
@@ -180,7 +200,7 @@
           }),
         });
       }
-      function _(_, _, _, _) {
+      function _(_, _, _, _, _) {
         const _ = (0, _._)(),
           _ = (0, _._)();
         return (0, _._)({
@@ -195,11 +215,11 @@
               throw new Error("Failed to acquit forum comment: " + _.GetEMsg());
           },
           onSuccess: async (_) => {
-            await (0, _._)(_, _._, _, _);
+            await (0, _._)(_, _);
           },
         });
       }
-      function _(_, _, _, _) {
+      function _(_, _, _, _, _) {
         const _ = (0, _._)(),
           _ = (0, _._)();
         return (0, _._)({
@@ -227,7 +247,7 @@
               );
           },
           onSuccess: async (_) => {
-            await (0, _._)(_, _._, _, _);
+            await (0, _._)(_, _);
           },
         });
       }

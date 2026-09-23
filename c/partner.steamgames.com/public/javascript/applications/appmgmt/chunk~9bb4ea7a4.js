@@ -7681,6 +7681,11 @@
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
+                  include_family_licenses: {
+                    _: 2,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
                 },
               }),
             _.sm_m

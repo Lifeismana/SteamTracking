@@ -335,6 +335,7 @@
         InGameHover: "axjdi0dhiB17GHjL5FRCr",
         StoreSalePrepurchaseLabel: "_1Fru-E7WQMr8G_aR2sMg5F",
         SingleLineOriginalPrice: "t7Gt8aeopD7JPlhcNTqGV",
+        YourPriceLabel: "_1stCJEQuG2FqlQr_q9AgR2",
         BaseDiscount: "_3mInDnGL3LlUC7uPs1CfOP",
         StoreSalePriceButton: "_1BejQFnnmkHMi9stswiJzf",
         OuterCapsuleContainer: "_1dKR2IPNQSHs1MAIXBvt_R",
@@ -351,6 +352,7 @@
         MainCapsuleImageContainer: "_1vpxH37o7mJotC0IoqWbqy",
         HeroCapsuleImageContainer: "vnhlb8EFU45PU6qG2GBDW",
         DiscoveryQueueCtn: "_2uX2GFSEk3nkWxRsaBXaeG",
+        NoShadow: "lxQeFs3wUE9dLxZkpEWtt",
         VerticalCapsule: "_3sy8XcvOMnFJv1_Edwpzqv",
         ForceLibrarySizing: "_25KI3ndwISqbgBdtNxpujP",
         CapsuleImage: "_2eQ4mkpf4IzUp1e9NnM2Wr",
@@ -756,15 +758,20 @@
       __webpack_require__._(module_exports, {
         $YD: () => _,
         BGM: () => _,
+        BWK: () => _,
         Buq: () => _,
+        CYA: () => _,
         DHU: () => _,
-        DfI: () => _,
+        EEh: () => _,
         Ftl: () => _,
         FzB: () => _,
+        G1H: () => _,
         GBh: () => _,
         Gkz: () => _,
+        Gxx: () => _,
         IEJ: () => _,
         IbE: () => _,
+        Izv: () => _,
         J1r: () => _,
         JEe: () => _,
         Jtk: () => _,
@@ -773,50 +780,80 @@
         KoH: () => _,
         LGs: () => _,
         LqT: () => _,
+        MNG: () => _,
         Mhp: () => _,
+        MnB: () => _,
         PYD: () => _,
+        PoK: () => _,
+        QA9: () => _,
         R$d: () => _,
+        R1B: () => _,
         RW$: () => _,
+        RsL: () => _,
         Sv2: () => _,
+        UEV: () => _,
         UfY: () => _,
         Vg1: () => _,
+        VmN: () => _,
         Vov: () => _,
-        Yr4: () => _,
+        W5v: () => _,
+        Wo$: () => _,
+        Wq7: () => _,
+        X$z: () => _,
+        Xkc: () => _,
         Ywc: () => _,
         ZBT: () => _,
+        ZUO: () => _,
+        a5M: () => _,
         aNN: () => _,
         aWw: () => _,
+        bPv: () => _,
+        btm: () => _,
+        cNr: () => _,
         cTj: () => _,
         ceg: () => _,
+        dBS: () => _,
         dWZ: () => _,
+        dm2: () => _,
         dxW: () => _,
+        eQ$: () => _,
+        equ: () => _,
         f_e: () => _,
+        gEw: () => _,
         gGw: () => _,
+        hSB: () => _,
+        hwI: () => _,
         iZ9: () => _,
-        lPO: () => _,
+        jx3: () => _,
+        jzL: () => _,
+        kpV: () => _,
         lXI: () => _,
-        lYS: () => _,
-        lw$: () => _,
         mG_: () => _,
         mYY: () => _,
         mvf: () => _,
         nL9: () => _,
         nNq: () => _,
+        nPW: () => _,
+        ng1: () => _,
         nuP: () => _,
-        r7M: () => _,
+        qhO: () => _,
         rAU: () => _,
-        rTg: () => _,
+        rNe: () => _,
         t_B: () => _,
         u7l: () => _,
         uZq: () => _,
         ubQ: () => _,
-        _: () => _,
-        wIS: () => _,
+        vk_: () => _,
+        vx7: () => _,
+        wz4: () => _,
+        yUQ: () => _,
         z3Q: () => _,
         zah: () => _,
+        zwR: () => _,
       });
       const _ = 19,
         _ = 21,
+        _ = 597,
         _ = 9,
         _ = 599,
         _ = 122,
@@ -824,57 +861,90 @@
         _ = 701,
         _ = 699,
         _ = 6650,
+        _ = 3871,
         _ = 12095,
         _ = 1664,
         _ = 3859,
+        _ = 1684,
         _ = 1667,
         _ = 3942,
         _ = 1774,
+        _ = 1695,
+        _ = 3839,
         _ = 1625,
+        _ = 1662,
         _ = 1663,
         _ = 1773,
+        _ = 3834,
         _ = 3799,
+        _ = 1654,
         _ = 1698,
+        _ = 1721,
         _ = 1755,
+        _ = 5716,
+        _ = 4175,
+        _ = 3978,
+        _ = 12472,
+        _ = 10695,
         _ = 4106,
         _ = 4231,
         _ = 1716,
+        _ = 1702,
         _ = 5900,
         _ = 1741,
         _ = 1676,
         _ = 3959,
         _ = 4885,
         _ = 1738,
+        _ = 1687,
+        _ = 4604,
         _ = 4434,
         _ = 9551,
+        _ = 3835,
         _ = 1645,
         _ = 1720,
+        _ = 4172,
         _ = 1666,
+        _ = 4115,
         _ = 1628,
         _ = 4486,
         _ = 5395,
-        _ = 11014,
+        _ = 4328,
+        _ = 5613,
+        _ = 4191,
+        _ = 44868,
+        _ = 6129,
+        _ = 1665,
         _ = 560542,
+        _ = 5154,
         _ = 17305,
         _ = 21725,
         _ = 3813,
-        _ = 5055,
-        _ = 8666,
-        _ = 16689,
-        _ = 24003,
-        _ = 9204,
+        _ = 31579,
+        _ = 4474,
+        _ = 1254546,
+        _ = 18594,
+        _ = 7038,
+        _ = 1746,
+        _ = 5727,
         _ = 791774,
+        _ = 5652,
         _ = 615955,
         _ = 4102,
         _ = 3877,
         _ = 5537,
-        _ = 6506,
         _ = 5379,
         _ = 10235,
+        _ = 220585,
+        _ = 87918,
         _ = 1100687,
-        _ = 42804,
+        _ = 26921,
+        _ = 1100688,
         _ = 9130,
-        _ = 97376;
+        _ = 91114,
+        _ = 723991,
+        _ = 1239876,
+        _ = 23491;
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -3376,6 +3446,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { _: _ } = _,
@@ -3413,6 +3485,7 @@
             bHideBottomHalf: _,
             bHidePrice: _,
             bShowDeckCompatibilityDialog: _,
+            eHardwareCompatibilityDisplay: _,
             onShowDeckCompatibilityDialog: _,
             bUseSubscriptionLayout: _,
             nCreatorAccountID: _,
@@ -3430,7 +3503,8 @@
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_),
           _ = !_ && !_ && !_,
-          _ = _ && _.item_type == _._._;
+          _ = _ && _.item_type == _._._,
+          [_, _] = (0, _._)(_, _);
         return (0, _.jsxs)("div", {
           className: _().BottomShelf,
           style: {
@@ -3523,6 +3597,7 @@
                   Boolean(_ && _) &&
                     (0, _.jsx)(_._, {
                       _: _,
+                      compatibility: _,
                       onShowDialog: _,
                     }),
                   Boolean(_) && _,
@@ -3572,12 +3647,14 @@
             strStoreUrl: _,
             bHideBottomHalf: _,
             bShowDeckCompatibilityDialog: _,
+            eHardwareCompatibilityDisplay: _,
             bShowWishlistButton: _ = !0,
             bShowIgnoreButton: _ = !1,
           } = _,
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_),
-          _ = void 0 === _ && void 0 === _;
+          _ = void 0 === _ && void 0 === _,
+          [_] = (0, _._)(Boolean(_), _);
         return (0, _.jsxs)("div", {
           className: (0, _._)(
             _().GameHoverCapsuleCtn,
@@ -3627,6 +3704,7 @@
             nCreatorAccountID: _,
             nWidthMultiplier: _,
             bShowDeckCompatibilityDialog: _,
+            eHardwareCompatibilityDisplay: _,
             bShowWishlistButton: _ = !0,
             bShowIgnoreButton: _ = !1,
             bShowDescription: _ = !1,
@@ -3647,8 +3725,12 @@
           (_ = {
             appid: _.included_appids[0],
           });
-        const _ = _ || !_ ? void 0 : _,
-          _ = {
+        const _ = "hiding" == (0, _._)(),
+          _ = _ || !_ ? void 0 : _,
+          [, _] = (0, _._)(_, _);
+        let _;
+        _ != _._ && Boolean(_?.appid) && _?.item_type == _._._ && (_ = _.appid);
+        const _ = {
             _: _,
             displayID: _,
             name: _,
@@ -3657,7 +3739,8 @@
             elElementToAppend: _,
             bShowDemoButton: _,
             bShowDeckCompatibilityDialog: _,
-            bHideBottomHalf: "hiding" == (0, _._)(),
+            eHardwareCompatibilityDisplay: _,
+            bHideBottomHalf: _,
             bHidePrice: _,
             bUseSubscriptionLayout: _,
             strSNR: _,
@@ -3665,9 +3748,8 @@
             bShowWishlistButton: _,
             bShowIgnoreButton: _,
             bShowDescription: _,
-            onShowDeckCompatibilityDialog: _ ? _ : void 0,
+            onShowDeckCompatibilityDialog: Boolean(_) ? _ : void 0,
           },
-          _ = _ && _?.item_type == _._._ ? _.appid : void 0,
           _ = (0, _.jsx)(_, {
             ..._,
           }),
@@ -3689,6 +3771,7 @@
               (0, _.jsx)(_._, {
                 nAppID: _,
                 appName: _?.name || _,
+                startingTab: _,
                 active: _,
                 closeModal: _,
               }),
@@ -6863,6 +6946,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { _: _, bSelfPurchaseOption: _ } = _,
@@ -7026,111 +7110,115 @@
           } = _,
           _ = _;
         let _;
-        return (
-          _ &&
-            (_ = _
-              ? _._.Localize("#Discount_ARIA_Label_SpecialPrice", _)
-              : _._.Localize("#Discount_ARIA_Label", _, _, _)),
-          (0, _.jsxs)("div", {
-            className: (0, _._)({
-              [_().StoreSalePriceWidgetContainer]: !0,
-              [_().SingleLineMode]: _,
-              StoreSalePriceWidgetContainer: !0,
-              [_().Discounted]: Boolean(_),
-              Discounted: Boolean(_),
-              [_().PrePurchase]: Boolean(_),
-              [_().NewItem]: Boolean(_),
-              [_().PurchaseOption]: _,
-              [_ ?? ""]: !!_,
-            }),
-            "aria-label": _,
-            children: [
-              Boolean(_ && !_) &&
-                (0, _.jsx)("div", {
-                  className: (0, _._)(_().StoreSalePrepurchaseLabel),
-                  children: (0, _.jsx)("span", {
-                    children: _._.Localize(
-                      "#EventDisplay_CallToAction_Prepurchase_Short",
-                    ),
+        _ &&
+          (_ = _
+            ? _._.Localize("#Discount_ARIA_Label_SpecialPrice", _)
+            : _._.Localize("#Discount_ARIA_Label", _, _, _));
+        const _ = Boolean((_ || _) && !_),
+          _ = _ && Boolean(_),
+          _ = _ && !_ && _;
+        return (0, _.jsxs)("div", {
+          className: (0, _._)({
+            [_().StoreSalePriceWidgetContainer]: !0,
+            [_().SingleLineMode]: _,
+            StoreSalePriceWidgetContainer: !0,
+            [_().Discounted]: Boolean(_),
+            Discounted: Boolean(_),
+            [_().PrePurchase]: Boolean(_),
+            [_().NewItem]: Boolean(_),
+            [_().PurchaseOption]: _,
+            [_ ?? ""]: !!_,
+          }),
+          "aria-label": _,
+          children: [
+            Boolean(_ && !_) &&
+              (0, _.jsx)("div", {
+                className: (0, _._)(_().StoreSalePrepurchaseLabel),
+                children: (0, _.jsx)("span", {
+                  children: _._.Localize(
+                    "#EventDisplay_CallToAction_Prepurchase_Short",
+                  ),
+                }),
+              }),
+            Boolean(!_ && _) &&
+              (0, _.jsx)("div", {
+                className: _().StoreSaleNewItem,
+                children: _._.Localize("#Flag_New"),
+              }),
+            Boolean(_ && !_) &&
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)(_._, {
+                    toolTipContent: _._.Localize("#Sale_Bundle_Discount_ttip"),
+                    children: (0, _.jsx)("span", {
+                      className: (0, _._)(_().BaseDiscount),
+                      children: `-${_}%`,
+                    }),
                   }),
-                }),
-              Boolean(!_ && _) &&
-                (0, _.jsx)("div", {
-                  className: _().StoreSaleNewItem,
-                  children: _._.Localize("#Flag_New"),
-                }),
-              Boolean(_ && !_) &&
-                (0, _.jsxs)(_.Fragment, {
+                  Boolean(_) &&
+                    (0, _.jsxs)(_.Fragment, {
+                      children: [
+                        (0, _.jsx)("span", {
+                          children: " ",
+                        }),
+                        (0, _.jsx)(_._, {
+                          toolTipContent: _._.Localize(
+                            "#Sale_Bundle_Discount_Limited_ttip",
+                          ),
+                          children: (0, _.jsx)("span", {
+                            className: (0, _._)(_().StoreSaleDiscountBox),
+                            children: `-${_}%`,
+                          }),
+                        }),
+                      ],
+                    }),
+                ],
+              }),
+            Boolean(!_ && _ && !_) &&
+              (0, _.jsx)("div", {
+                className: _().StoreSaleDiscountBox,
+                children: `-${_}%`,
+              }),
+            Boolean(_ && _) &&
+              (0, _.jsx)("div", {
+                className: _().DiscountIconCtn,
+                children: (0, _.jsx)(_.XH_, {}),
+              }),
+            _ || _
+              ? (0, _.jsxs)("div", {
+                  className: (0, _._)(_().StoreSaleDiscountedPriceCtn),
                   children: [
-                    (0, _.jsx)(_._, {
-                      toolTipContent: _._.Localize(
-                        "#Sale_Bundle_Discount_ttip",
-                      ),
-                      children: (0, _.jsx)("span", {
-                        className: (0, _._)(_().BaseDiscount),
-                        children: `-${_}%`,
+                    _
+                      ? (0, _.jsx)("div", {
+                          className: (0, _._)({
+                            [_().SingleLineOriginalPrice]: _,
+                            [_().StoreOriginalPrice]: !_,
+                          }),
+                          children: _,
+                        })
+                      : (0, _.jsx)("div", {
+                          className: _().YourPriceLabel,
+                          children: _._.Localize("#PriceDisplay_YourPrice"),
+                        }),
+                    (0, _.jsx)("div", {
+                      className: (0, _._)({
+                        [_().StoreSalePriceBox]: !0,
+                        [_().SingleLineMode]: _,
+                        [_ ?? ""]: !!_,
                       }),
+                      children: _,
                     }),
-                    Boolean(_) &&
-                      (0, _.jsxs)(_.Fragment, {
-                        children: [
-                          (0, _.jsx)("span", {
-                            children: " ",
-                          }),
-                          (0, _.jsx)(_._, {
-                            toolTipContent: _._.Localize(
-                              "#Sale_Bundle_Discount_Limited_ttip",
-                            ),
-                            children: (0, _.jsx)("span", {
-                              className: (0, _._)(_().StoreSaleDiscountBox),
-                              children: `-${_}%`,
-                            }),
-                          }),
-                        ],
-                      }),
                   ],
-                }),
-              Boolean(!_ && _ && !_) &&
-                (0, _.jsx)("div", {
-                  className: _().StoreSaleDiscountBox,
-                  children: `-${_}%`,
-                }),
-              Boolean(_ && _) &&
-                (0, _.jsx)("div", {
-                  className: _().DiscountIconCtn,
-                  children: (0, _.jsx)(_.XH_, {}),
-                }),
-              Boolean((_ || _) && _ && !_)
-                ? (0, _.jsxs)("div", {
-                    className: (0, _._)(_().StoreSaleDiscountedPriceCtn),
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: (0, _._)({
-                          [_().SingleLineOriginalPrice]: _,
-                          [_().StoreOriginalPrice]: !_,
-                        }),
-                        children: _,
-                      }),
-                      (0, _.jsx)("div", {
-                        className: (0, _._)({
-                          [_().StoreSalePriceBox]: !0,
-                          [_().SingleLineMode]: _,
-                          [_ ?? ""]: !!_,
-                        }),
-                        children: _,
-                      }),
-                    ],
-                  })
-                : (0, _.jsx)("div", {
-                    className: (0, _._)({
-                      [_().StoreSalePriceBox]: !0,
-                      [_ ?? ""]: !!_,
-                    }),
-                    children: _,
+                })
+              : (0, _.jsx)("div", {
+                  className: (0, _._)({
+                    [_().StoreSalePriceBox]: !0,
+                    [_ ?? ""]: !!_,
                   }),
-            ],
-          })
-        );
+                  children: _,
+                }),
+          ],
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -13184,6 +13272,76 @@
             ),
           }),
         });
+      };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = _.createContext({
+        AddImpression: () => {
+          console.log("Impression Tracking not enabled");
+        },
+        BIsValid: () => !1,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { appID: _, feature: _, depth: _, children: _ } = _,
+          _ = (0, _._)(_, _),
+          _ = _.useContext(_),
+          [_, _] = _.useState(void 0),
+          _ = _.useCallback(
+            (_) => {
+              _.isIntersecting &&
+                _((_) =>
+                  _?.appID == _ && _?.snr == _
+                    ? _
+                    : {
+                        appID: _,
+                        snr: _,
+                      },
+                );
+            },
+            [_, _],
+          );
+        (0, _.useEffect)(() => {
+          _ && null != _.appID && _.AddImpression(_.appID, _.snr);
+        }, [_, _]);
+        const _ = (0, _._)(_),
+          _ = _ && (!_ || (_.appID != _ && _.snr != _)),
+          _ = (0, _._)(_.props.ref, _ ? _ : void 0);
+        return _.cloneElement(_, {
+          ref: _,
+        });
+      }
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        return _ == _._._ ? "bundle" : _ == _._._ ? "sub" : (_._._, "app");
+      }
+      function _(_, _) {
+        const _ = _ || (Boolean(_) ? _._ : _._);
+        return [Boolean(_), _];
+      }
+      const _ = (_) => {
+        const { appid: _ } = _,
+          _ = (0, _.jsx)("div", {
+            className: "ImpressionTrackedElement",
+            children: _.children,
+          });
+        return _
+          ? (0, _.jsx)(_, {
+              appID: _,
+              children: _,
+            })
+          : _;
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {

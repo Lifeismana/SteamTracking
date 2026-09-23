@@ -105,6 +105,7 @@
     "moderation_sanction_hubbanned": "Di-ban dari hub selama %1$s hari",
     "moderation_sanction_markassuspicious": "Ditandai sebagai mencurigakan",
     "moderation_sanction_relabelled": "Dilabeli Ulang",
+    "moderation_sanction_markedincompatible": "Marked as incompatible",
     "moderation_sanction_tradebanned_forever": "Di-ban dari melakukan pertukaran secara permanen",
     "moderation_sanction_tradebanned": "Di-ban dari melakukan pertukaran selama %1$s hari",
     "moderation_sanction_kickedfromgroup": "Dikeluarkan dari grup",
@@ -133,6 +134,6 @@
     "reportedsubjectlist_header": "Subjek yang dilaporkan",
     "moderation_already_owner_disputed": "Sudah disengketakan",
     "moderationstats_alltypes": "Semua jenis subjek",
-    "forumsubjectlist_subjectreportsummary": "%1$s belum diselesaikan, %1$s disengketakan",
+    "forumsubjectlist_subjectreportsummary": "%1$s belum diselesaikan, %2$s disengketakan",
     "empty_no_trailing_comma": ""
 }

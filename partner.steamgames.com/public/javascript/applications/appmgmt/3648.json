@@ -62,6 +62,7 @@
     "Reservation_OnRegularReserveForModel": "Du er i reservasjonskøen for %1$s",
     "Reservation_PostShuffle_TAndC": "<1>Vilkår og betingelser</1> gjelder.",
     "machine_dummy": "dummy",
+    "PriceDisplay_YourPrice": "Din pris:",
     "PriceGrid_NormalPrice": "NORMALT",
     "PriceGrid_RecentPrice": "BUNNPRIS (30 DAGER)",
     "PriceGrid_CurrentPrice": "NÅ",

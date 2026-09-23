@@ -181,7 +181,7 @@
         var _;
         return (0, _.jsx)("img", {
           className: _.DynamicLink_Preview,
-          src: _.strURL,
+          src: _.strURL || void 0,
           alt: null !== (_ = _.strAlt) && void 0 !== _ ? _ : "",
         });
       }
@@ -236,6 +236,12 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
+      function _(_) {
+        return _.replace(/&lt;/g, "<")
+          .replace(/&gt;/g, ">")
+          .replace(/&quot;/g, '"')
+          .replace(/&amp;/g, "&");
+      }
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
@@ -276,7 +282,11 @@
                         ? void 0
                         : _[0];
                 if (!_) throw new Error(`no metadata for youtube video ${_}`);
-                return _;
+                return {
+                  ..._,
+                  title: _(_.title),
+                  description: _(_.description),
+                };
               },
               enabled: _ && !0,
               staleTime: 36e5,
@@ -309,7 +319,12 @@
                         ? void 0
                         : _[0];
                 if (!_) throw new Error(`no metadata for shared file ${_}`);
-                return _;
+                return {
+                  ..._,
+                  title: _(_.title),
+                  description: _(_.description),
+                  type: _(_.type),
+                };
               },
               enabled: !0,
               staleTime: 36e5,
@@ -3132,6 +3147,7 @@
             apply_user_filters: _,
             include_links: _,
             include_extra_details: _,
+            include_optin_registration_tags: _,
           } = _;
         if (
           ((0, _.useEffect)(() => {
@@ -3153,6 +3169,7 @@
               apply_user_filters: _,
               include_links: _,
               include_extra_details: _,
+              include_optin_registration_tags: _,
             };
             let _ = null;
             return (
@@ -3174,6 +3191,7 @@
                 null == _ ? void 0 : _.cancel("useStoreItemCache: unmounting")
             );
           }, [
+            _,
             _,
             _,
             _,
@@ -3245,6 +3263,7 @@
             apply_user_filters: _,
             include_links: _,
             include_extra_details: _,
+            include_optin_registration_tags: _,
           } = _;
         if (
           ((0, _.useEffect)(() => {
@@ -3267,6 +3286,7 @@
                 apply_user_filters: _,
                 include_links: _,
                 include_extra_details: _,
+                include_optin_registration_tags: _,
               },
               _ = _.filter(
                 (_) =>
@@ -3284,7 +3304,30 @@
               }),
               () => _.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]),
+          }, [
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+          ]),
           !_)
         )
           return _;

@@ -74,6 +74,9 @@
           include_links: _.include_links || _.include_links,
           include_extra_details:
             _.include_extra_details || _.include_extra_details,
+          include_optin_registration_tags:
+            _.include_optin_registration_tags ||
+            _.include_optin_registration_tags,
         };
       }
       async function _(_, _) {

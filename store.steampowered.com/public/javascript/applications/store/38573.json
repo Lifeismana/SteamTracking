@@ -62,6 +62,7 @@
     "Reservation_OnRegularReserveForModel": "Вие сте в опашката за резервации за %1$s",
     "Reservation_PostShuffle_TAndC": "<1>Правилата и условията</1> са приложими.",
     "machine_dummy": "бутафор",
+    "PriceDisplay_YourPrice": "Цената Ви:",
     "PriceGrid_NormalPrice": "НОРМАЛНА",
     "PriceGrid_RecentPrice": "НАЙ-НИСКА ЗА 30 ДНИ",
     "PriceGrid_CurrentPrice": "СЕГА",

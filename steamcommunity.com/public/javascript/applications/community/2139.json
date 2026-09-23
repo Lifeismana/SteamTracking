@@ -105,6 +105,7 @@
     "moderation_sanction_hubbanned": "Наложена забрана от центъра за %1$s дни",
     "moderation_sanction_markassuspicious": "Маркирано като подозрително",
     "moderation_sanction_relabelled": "Преетикетирано",
+    "moderation_sanction_markedincompatible": "Marked as incompatible",
     "moderation_sanction_tradebanned_forever": "Перманентна забрана за търгуване",
     "moderation_sanction_tradebanned": "Забрана за търгуване за %1$s дни",
     "moderation_sanction_kickedfromgroup": "Изритани от група",
@@ -133,6 +134,6 @@
     "reportedsubjectlist_header": "Докладвани теми",
     "moderation_already_owner_disputed": "Вече е оспорено",
     "moderationstats_alltypes": "Всички типове теми",
-    "forumsubjectlist_subjectreportsummary": "%1$s нерешени, %1$s оспорени",
+    "forumsubjectlist_subjectreportsummary": "%1$s нерешени, %2$s оспорени",
     "empty_no_trailing_comma": ""
 }

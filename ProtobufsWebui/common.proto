@@ -3940,6 +3940,13 @@ message CMsgProtoBufHeader {
 	optional fixed64 admin_request_spoofing_steamid = 43;
 	optional bool is_valveds = 44;
 	optional fixed64 trace_tag = 45;
+	optional uint32 wg_msg_trace_flags = 46;
+	optional uint32 wg_msg_trace_instance = 47;
+	optional uint32 wg_msg_trace_gid = 48;
+	optional string wg_msg_trace_token = 49;
+	optional fixed64 wg_msg_trace_steamid = 50;
+	optional string wg_msg_trace_status = 51;
+	optional uint32 trace_flags = 52;
 }
 
 message CMsgProtobufWrapped {
@@ -7375,6 +7382,7 @@ message StoreBrowseItemDataRequest {
 	optional bool include_links = 17;
 	optional bool include_extra_details = 18;
 	optional bool include_best_purchase_option = 19 [default = true];
+	optional bool include_optin_registration_tags = 20;
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
@@ -7446,6 +7454,7 @@ message StoreItem {
 	repeated .StoreItem_PackageGroup package_groups = 74;
 	optional .StoreItem_ExtraDetails extra_details = 75;
 	optional fixed64 gid = 76;
+	repeated .StoreItem_OptInRegistrationTags optin_registration_tags = 77;
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
@@ -7552,6 +7561,10 @@ message StoreItem_ExtraDetails {
 	optional string partner_awards_bbcode = 19;
 	optional .StoreItem_ExtraDetails_EarlyAccess early_access = 20;
 	optional .CSeasonPass season_pass = 21;
+	optional .StoreItem_ExtraDetails_LinksAndInfo links_and_info = 22;
+	optional bool item_store_eligible = 23;
+	optional bool points_shop_eligible = 24;
+	optional string specs_bbcode = 25;
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
@@ -7585,6 +7598,20 @@ message StoreItem_ExtraDetails_EarlyAccess {
 message StoreItem_ExtraDetails_Eula {
 	optional string name = 1;
 	optional string url = 2;
+}
+
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+message StoreItem_ExtraDetails_LinksAndInfo {
+	optional string website = 1;
+	optional string stats_url = 2;
+	optional string online_manual_url = 3;
+	optional string health_warning_url = 4;
+	optional string privacy_policy_url = 5;
+	repeated int32 available_documents = 6 [(.description) = "enum"];
+	repeated uint32 genreids = 7;
+	repeated string manufacturers = 8;
+	optional bool achievements_visible = 9;
+	optional uint32 achievement_count = 10;
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
@@ -7622,6 +7649,12 @@ message StoreItem_Link {
 	optional int32 link_type = 1 [(.description) = "enum"];
 	optional string url = 2;
 	optional string text = 3;
+}
+
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+message StoreItem_OptInRegistrationTags {
+	optional string optin_name = 1;
+	repeated string values = 2;
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
@@ -7708,6 +7741,7 @@ message StoreItem_PurchaseOption {
 	optional int64 price_to_base_discount_on = 53;
 	optional uint32 free_with_master_sub_appid = 54;
 	optional string formatted_lowest_recent_price = 55;
+	optional bool is_free_license = 56;
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist

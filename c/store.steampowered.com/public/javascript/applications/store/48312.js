@@ -68,10 +68,11 @@
             variant: _,
             color: _,
             align: _ = "center",
+            icon: _,
             ..._
           } = _,
           _ = "indeterminate" === _,
-          _ = _ ? _ : _,
+          _ = _ ?? (_ ? _ : _),
           _ = () => {
             _ || (_ && __webpack_require__(!!_ || !_));
           },

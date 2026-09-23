@@ -17,7 +17,7 @@ var CLSTAMP = "steamdb";
           "./friendsui_english.json": [20723, 3016],
           "./friendsui_finnish.json": [80444, 8759],
           "./friendsui_french.json": [79337, 8194],
-          "./friendsui_german.json": [74032, 5480],
+          "./friendsui_german.json": [51651, 5480],
           "./friendsui_greek.json": [74483, 4488],
           "./friendsui_hungarian.json": [35798, 5341],
           "./friendsui_indonesian.json": [88097, 762],
@@ -66,7 +66,7 @@ var CLSTAMP = "steamdb";
           "./friendsui_english.json": [20723, 3016],
           "./friendsui_finnish.json": [80444, 8759],
           "./friendsui_french.json": [79337, 8194],
-          "./friendsui_german.json": [74032, 5480],
+          "./friendsui_german.json": [51651, 5480],
           "./friendsui_greek.json": [74483, 4488],
           "./friendsui_hungarian.json": [35798, 5341],
           "./friendsui_indonesian.json": [88097, 762],
@@ -734,7 +734,9 @@ var CLSTAMP = "steamdb";
               (_[(_.k_EWindowBringToFrontAndForceOS = 1)] =
                 "k_EWindowBringToFrontAndForceOS"),
               (_[(_.k_EWindowBringToFrontWithoutForcingOS = 2)] =
-                "k_EWindowBringToFrontWithoutForcingOS");
+                "k_EWindowBringToFrontWithoutForcingOS"),
+              (_[(_.k_EWindowBringToFrontUsingExistingOSState = 3)] =
+                "k_EWindowBringToFrontUsingExistingOSState");
           })(_ || (_ = {}));
         var _, _;
         !(function (_) {
@@ -2009,6 +2011,7 @@ var CLSTAMP = "steamdb";
           m_fnGetReportingInterval = _;
           m_fnGetReportTags = () => [];
           m_fnGetURL = () => location.href;
+          strDisplayVersion;
           m_bEnabled = !0;
           m_bInitialized = !1;
           constructor(_ = !0) {
@@ -2042,6 +2045,8 @@ var CLSTAMP = "steamdb";
                 (this.m_fnGetReportingInterval = _.fnGetReportingInterval),
               _.fnGetReportTags && (this.m_fnGetReportTags = _.fnGetReportTags),
               _.fnGetURL && (this.m_fnGetURL = _.fnGetURL),
+              _.strDisplayVersion &&
+                (this.strDisplayVersion = _.strDisplayVersion),
               this.m_bEnabled ||
                 (console.error(
                   "Error reporting was initialized after being disabled, possibly dropping errors.",
@@ -2178,6 +2183,7 @@ var CLSTAMP = "steamdb";
                   _.strComponentStack &&
                     (_.strComponentStack = _.strComponentStack),
                   (_.strUrl = this.m_fnGetURL()),
+                  (_.strDisplayVersion = this.strDisplayVersion),
                   this.SendErrorReport(_),
                   _)
                 : null;
@@ -2254,7 +2260,9 @@ var CLSTAMP = "steamdb";
                   _.set_identifier(_.identifier + " " + _.identifierHash),
                   _.set_message(JSON.stringify(_.message)),
                   _.strComponentStack &&
-                    ((_ ??= {}), (_.componentStack = _.strComponentStack)),
+                    ((_ ??= {}),
+                    (_.componentStack = _.strComponentStack),
+                    (_.strDisplayVersion = _.strDisplayVersion)),
                   _ && _.set_context(JSON.stringify(_)),
                   _.strUrl && _.set_url(_.strUrl),
                   _
@@ -2902,17 +2910,17 @@ var CLSTAMP = "steamdb";
       ".js?contenthash=" +
       {
         43: "b98e0f420add57691fc2",
-        200: "1e6fcf9ee57eef82b681",
-        295: "e1e4ac4adb7465da3903",
-        559: "02aecec80d680dd7b005",
+        200: "d8a771456859bf667ae1",
+        295: "bec4c3a3b223c5b535ee",
+        559: "d64775d3383d222f83f1",
         762: "6381bf741535ad65d4e3",
-        815: "e3179825c7f3c271c102",
-        1136: "39052344410e9cdf46c0",
+        815: "f2038e38b471e6580b09",
+        1136: "75ccf7159e306719261c",
         1499: "016609b438b84fcc275a",
-        1864: "84b32657ef3245eae108",
-        2269: "5a1973d58ab9488fe1b4",
-        2532: "a9d9f49d622113e7237a",
-        2889: "46aa5e4dd4fd7c212f55",
+        1864: "bd1079f8716622de751c",
+        2269: "7590c08423165d5e79ea",
+        2532: "b60b5fd23783f79f5e7e",
+        2889: "85bdbfb79e786e669f3e",
         2945: "b1bb49c86e94db92dee9",
         3e3: "1b03996604202ef27322",
         3016: "ca85786390010cceefc4",
@@ -2921,50 +2929,50 @@ var CLSTAMP = "steamdb";
         3485: "08349ebcf15f4d7c2342",
         3723: "a69634b2de1f3fa5dba5",
         3789: "7576118cdc2ea612c555",
-        3800: "716882e1dfa08ffd827b",
-        3907: "979f4bf89461e45cc96a",
+        3800: "ba62105d90f032741297",
+        3907: "b6f328b4173397675976",
         4154: "ab85015c1182c53c2a07",
-        4230: "2216ab783d266b2bae39",
-        4289: "5ef3f3bcc33bf84aeeb8",
+        4230: "74309c0c8176151229d1",
+        4289: "1bc29bf5eaf58b524686",
         4302: "127bac547ebe35debb6e",
-        4419: "63db3f76fc47f0f7b302",
+        4419: "98ebdffd27b8dc7c8c6c",
         4434: "7042d1e1cb05e782371a",
         4488: "ecc72b7e73d0d3a37046",
-        4625: "3a7aa008a558f62445b9",
-        4750: "53f8b1d501de9ef86188",
+        4625: "eaf635cc4b6712cf93b5",
+        4750: "47a0a894ecee25ba51a6",
         4776: "642916fbd7a977b50de9",
         4787: "ef50a874abefeb603b11",
-        4792: "3dd70b6f5dc82c60cbac",
-        4978: "a96b1b8cfa400e5c2b6d",
-        5040: "9d106d8c426fe10ba9cb",
-        5191: "3e138aba157eb1a3048e",
-        5233: "7d9920f1d3e86bf6e146",
+        4792: "c056893ba11cb0d30951",
+        4978: "46f2faa6caa6f2fa8c9c",
+        5040: "bf3ddd7cfe1a44ffafee",
+        5191: "f8cc93f2bb1a394f8a40",
+        5233: "467bd0ef734fa09c948b",
         5341: "d01dc36adbf1ed0dc168",
-        5436: "1fd82a7ac8c5340ccd72",
-        5480: "1b95c668c7ef41788b3c",
-        5777: "25795b0debcb4806f5f4",
+        5436: "c9c4231566ba196ee32b",
+        5480: "aa8842d2e7d72dad67c5",
+        5777: "9525f58d94a99ff3de42",
         6127: "4882c58af191aaf74128",
-        6170: "5fb9650a13022ed3fb07",
+        6170: "cabcfc47be49ddd8c1a7",
         6385: "e5f8cfa9b62ae2ae5efe",
-        6512: "01b7a19fe85aa0f64665",
+        6512: "2b17639fc5883a07dfae",
         6518: "a9d5318be576311fe3cf",
         6609: "fc94f8d39971c6671379",
-        6736: "dca2db9461f3d756058d",
+        6736: "70fa0ebe4088639dc07d",
         6888: "c50f7606409776b647a0",
         6971: "e7f4af03b6ba3a7fa534",
-        7246: "60a97f9c76f512eb4415",
-        7263: "0297fcabe3ea3eb74643",
+        7246: "c2e13c1646bd9f5f31bc",
+        7263: "8b2b2a2b55225de80917",
         7487: "8efea89904c72e8440e5",
         7861: "5edde2f8fc8a9ec95168",
         8194: "7b692387d3a77ce31c7b",
-        8476: "69fc4151e016df48d40c",
+        8476: "7c9530f96cd9029ed605",
         8759: "73a7657685d5198e1a73",
         8766: "0447dd79b31a8fe64ce1",
-        9574: "279815a1985601206775",
-        9668: "dc41ad3d058e40e25dc2",
+        9574: "68032fc3b50cc1f55432",
+        9668: "06e3d924597e1f7207c6",
         9746: "3679c8e2ce76e34b2ccf",
         9808: "51bb932b4ac14b5211d4",
-        9863: "dfaf0bdf05cfe6a1b3a6",
+        9863: "6fddaa4e87ac42e9f088",
       }[_]),
     (_.miniCssF = (_) => {}),
     (_._ = (function () {
@@ -3110,6 +3118,6 @@ var CLSTAMP = "steamdb";
       __webpack_require__.forEach(_.bind(null, 0)),
         (_.push = _.bind(null, _.push.bind(_)));
     })();
-  var _ = _._(void 0, [3987, 9489, 1068], () => _(84876));
+  var _ = _._(void 0, [3987, 9489, 1068], () => _(689));
   _ = _._(_);
 })();

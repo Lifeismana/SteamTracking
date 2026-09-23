@@ -105,6 +105,7 @@
     "moderation_sanction_hubbanned": "Utestengt fra sentralen i %1$s dager",
     "moderation_sanction_markassuspicious": "Markert som mistenkelig",
     "moderation_sanction_relabelled": "Ommerket",
+    "moderation_sanction_markedincompatible": "Marked as incompatible",
     "moderation_sanction_tradebanned_forever": "Permanent utestengt fra byttehandel",
     "moderation_sanction_tradebanned": "Utestengt fra byttehandel i %1$s dager",
     "moderation_sanction_kickedfromgroup": "Kastet ut fra gruppe",
@@ -133,6 +134,6 @@
     "reportedsubjectlist_header": "Rapporterte saker",
     "moderation_already_owner_disputed": "Allerede bestridt",
     "moderationstats_alltypes": "Alle sakstyper",
-    "forumsubjectlist_subjectreportsummary": "%1$s uløst, %1$s bestridt",
+    "forumsubjectlist_subjectreportsummary": "%1$s uløst, %2$s bestridt",
     "empty_no_trailing_comma": ""
 }

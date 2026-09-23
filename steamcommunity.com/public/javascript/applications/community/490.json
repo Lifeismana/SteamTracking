@@ -105,6 +105,7 @@
     "moderation_sanction_hubbanned": "Se aplicó un bloqueo del centro de la comunidad durante %1$s días",
     "moderation_sanction_markassuspicious": "Se marcó como sospechoso",
     "moderation_sanction_relabelled": "Se reetiquetó",
+    "moderation_sanction_markedincompatible": "Marked as incompatible",
     "moderation_sanction_tradebanned_forever": "Se bloquearon los intercambios permanentemente",
     "moderation_sanction_tradebanned": "Se bloquearon los intercambios durante %1$s días",
     "moderation_sanction_kickedfromgroup": "Expulsado del grupo",
@@ -133,6 +134,6 @@
     "reportedsubjectlist_header": "Asuntos denunciados",
     "moderation_already_owner_disputed": "Ya en disputa",
     "moderationstats_alltypes": "Todos los tipos de asuntos",
-    "forumsubjectlist_subjectreportsummary": "%1$s sin resolver, %1$s en disputa",
+    "forumsubjectlist_subjectreportsummary": "%1$s sin resolver, %2$s en disputa",
     "empty_no_trailing_comma": ""
 }

@@ -105,6 +105,7 @@
     "moderation_sanction_hubbanned": "Блокировка в центре сообщества на %1$s дн.",
     "moderation_sanction_markassuspicious": "Помечен как подозрительный",
     "moderation_sanction_relabelled": "Изменена метка",
+    "moderation_sanction_markedincompatible": "Marked as incompatible",
     "moderation_sanction_tradebanned_forever": "Постоянная блокировка в системе обмена",
     "moderation_sanction_tradebanned": "Блокировка в системе обмена на %1$s дн.",
     "moderation_sanction_kickedfromgroup": "Пользователь исключён из группы",
@@ -133,6 +134,6 @@
     "reportedsubjectlist_header": "Жалобы на темы",
     "moderation_already_owner_disputed": "Уже оспорено",
     "moderationstats_alltypes": "Все типы тем",
-    "forumsubjectlist_subjectreportsummary": "Нерассмотренных: %1$s. Оспоренных: %1$s.",
+    "forumsubjectlist_subjectreportsummary": "Нерассмотренных: %1$s. Оспоренных: %2$s.",
     "empty_no_trailing_comma": ""
 }

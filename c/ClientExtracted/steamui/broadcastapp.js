@@ -20,7 +20,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = "10988457",
+          _ = "11024162",
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
           _ = (_, _, _, _) => {
@@ -229,7 +229,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = "10988457",
+          _ = "11024162",
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
           _ = (_, _, _, _) => {
@@ -768,7 +768,7 @@
           return `${_._.STORE_BASE_URL}login?steamtv=1`;
         }
         var _ = __webpack_require__("chunkid"),
-          _ = "10988457",
+          _ = "11024162",
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
           _ = (_, _, _, _) => {
@@ -806,7 +806,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = "10988457";
+          _ = "11024162";
         const _ = _.forwardRef(function (
           {
             steamID: _,
