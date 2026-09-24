@@ -80,7 +80,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
-          _ = "11024162",
+          _ = "steamdb",
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
           _ = (_, _, _, _) => {
@@ -145,7 +145,7 @@
           }
         }
         _([_._], _.prototype, "OnClick", 1);
-        var _ = "11024162",
+        var _ = "steamdb",
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
           _ = (_, _, _, _) => {
@@ -453,7 +453,7 @@
         };
         _ = _([_._], _);
         var _ = __webpack_require__("chunkid"),
-          _ = "11024162",
+          _ = "steamdb",
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
           _ = (_, _, _, _) => {
@@ -875,7 +875,7 @@
           _([_._], _.prototype, "SetVolumeWithCoord", 1),
           (_ = _([_._], _));
         var _ = __webpack_require__("chunkid"),
-          _ = "11024162",
+          _ = "steamdb",
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
           _ = (_, _, _, _) => {
@@ -2302,7 +2302,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
-          _ = "11024162",
+          _ = "steamdb",
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
           _ = (_, _, _, _) => {

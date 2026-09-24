@@ -20,7 +20,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = "11024162";
+          _ = "steamdb";
         const _ = _.memo(function (_) {
           return (0, _.jsxs)(_._, {
             children: [
@@ -37,7 +37,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = "11024162";
+          _ = "steamdb";
         const _ = new _._("ReactQuery").Debug;
         function _() {
           const [_] = _.useState(() => ({
@@ -85,7 +85,7 @@
           );
           (0, _._)(_);
         }
-        var _ = "11024162";
+        var _ = "steamdb";
         function _(_) {
           const _ = (0, _._)();
           return (
@@ -123,7 +123,7 @@
             : null;
         });
         var _ = __webpack_require__("chunkid"),
-          _ = "11024162";
+          _ = "steamdb";
         (0, _._)({
           enforceActions: "never",
         });

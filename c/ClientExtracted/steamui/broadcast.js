@@ -104,7 +104,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = "11024162";
+          _ = "steamdb";
         const _ = (0, _._)((_) => {
           const { appid: _ } = _,
             _ = (0, _._)(),
@@ -189,7 +189,7 @@
           });
         });
         var _ = __webpack_require__("chunkid"),
-          _ = "11024162";
+          _ = "steamdb";
         function _() {
           let _ = window.GetUsabilityTracker;
           if (_) return _();
@@ -213,7 +213,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
-          _ = "11024162";
+          _ = "steamdb";
         const _ = (0, _._)((_) => {
           const { event: _ } = _,
             _ = _.clanSteamID.GetAccountID(),
@@ -289,7 +289,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
-          _ = "11024162";
+          _ = "steamdb";
         function _(_) {
           const { steamid: _, closeModal: _ } = _;
           return (0, _.jsxs)(_._, {
@@ -428,7 +428,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = "11024162",
+          _ = "steamdb",
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
           _ = (_, _, _, _) => {

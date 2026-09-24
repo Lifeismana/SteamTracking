@@ -66,7 +66,7 @@
             _: () => _,
             _: () => _,
           });
-          var _ = "11024162",
+          var _ = "steamdb",
             _ = ((_) => (
               (_[(_.k_ESteamRealmUnknown = 0)] = "k_ESteamRealmUnknown"),
               (_[(_.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
@@ -407,7 +407,7 @@
             zeJ: () => _,
             zlr: () => _,
           });
-          var _ = "11024162";
+          var _ = "steamdb";
           const _ = 1,
             _ = 2,
             _ = 3,
@@ -1900,7 +1900,7 @@
             _: () => _,
             _: () => _,
           });
-          var _ = "11024162";
+          var _ = "steamdb";
           function _(_, _ = 0, _ = Math.random) {
             if (_?.length > 1) {
               let _ = _ > 0 ? Math.min(_, _.length) : _.length;
@@ -2086,7 +2086,7 @@
             _: () => _,
             _: () => _,
           });
-          var _ = "11024162";
+          var _ = "steamdb";
           function _(_, _, ..._) {
             console.assert
               ? _.length == 0
@@ -2114,7 +2114,7 @@
           __webpack_require__._(module_exports, {
             _: () => _,
           });
-          var _ = "11024162";
+          var _ = "steamdb";
           async function _(_, _ = "SHA-256") {
             let _;
             typeof _ == "string" ? (_ = _(_)) : (_ = _);
@@ -2137,7 +2137,7 @@
           __webpack_require__._(module_exports, {
             _: () => _,
           });
-          var _ = "11024162";
+          var _ = "steamdb";
           function _(_, _, _) {
             return {
               get() {
@@ -2222,7 +2222,7 @@
             _: () => _,
             _: () => _,
           });
-          var _ = "11024162";
+          var _ = "steamdb";
           const _ = 1,
             _ = 2,
             _ = 3,
@@ -2362,7 +2362,7 @@
             _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
-            _ = "11024162";
+            _ = "steamdb";
           const _ =
             window.addEventListener ||
             (globalThis && globalThis.addEventListener) ||
@@ -2780,7 +2780,7 @@
             _: () => _,
           });
           var _ = __webpack_require__("chunkid"),
-            _ = "11024162";
+            _ = "steamdb";
           class _ {
             m_vecCallbacks = [];
             Register(_) {
@@ -2825,7 +2825,7 @@
             _: () => _,
             _: () => _,
           });
-          var _ = "11024162";
+          var _ = "steamdb";
           function _(_, _) {
             return (
               (_ = Math.ceil(_)),
@@ -2899,7 +2899,7 @@
             _: () => _,
             _: () => _,
           });
-          var _ = "11024162";
+          var _ = "steamdb";
           async function _(_) {
             try {
               return await _;
@@ -2931,7 +2931,7 @@
             _: () => _,
             _: () => _,
           });
-          var _ = "11024162";
+          var _ = "steamdb";
           const _ = [
               "sc_schinese",
               "schinese",
@@ -3033,14 +3033,14 @@
           var _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
-            _ = "11024162";
+            _ = "steamdb";
           const _ = 0,
             _ = 1,
             _ = 2,
             _ = 3,
             _ = 4,
             _ = 5;
-          var _ = "11024162";
+          var _ = "steamdb";
           function _(_, ..._) {
             return (
               _.length == 0 ||
@@ -3057,7 +3057,7 @@
           var _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
-            _ = "11024162";
+            _ = "steamdb";
           function _(_) {
             const _ = new Map();
             async function _() {
@@ -3227,7 +3227,7 @@
             _: () => _,
             _: () => _,
           });
-          var _ = "11024162";
+          var _ = "steamdb";
           let _;
           _ ??= new Set();
           let _;
@@ -3252,7 +3252,7 @@
             _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
-            _ = "11024162";
+            _ = "steamdb";
           const _ = 8;
           class _ {
             static InitHeaderFromPacket(_) {
@@ -3441,7 +3441,7 @@
           });
           var _ = __webpack_require__("chunkid"),
             _ = __webpack_require__._(_),
-            _ = "11024162";
+            _ = "steamdb";
           const _ = _.BinaryReader.prototype,
             _ = _.BinaryWriter.prototype;
           function _(_) {
@@ -3623,11 +3623,11 @@
           var _ = __webpack_require__("chunkid"),
             _ = __webpack_require__._(_),
             _ = __webpack_require__("chunkid"),
-            _ = "11024162";
+            _ = "steamdb";
           const _ = 0,
             _ = 1,
             _ = 2;
-          var _ = "11024162";
+          var _ = "steamdb";
           function _(_) {
             return "unknown EContentHubDiscountFilterType ( " + _ + " )";
           }
@@ -4034,7 +4034,7 @@
             xpG: () => _,
             y6$: () => _,
           });
-          var _ = "11024162";
+          var _ = "steamdb";
           const _ = 0,
             _ = 1,
             _ = 2,
@@ -5482,7 +5482,7 @@
             _: () => _,
             _: () => _,
           });
-          var _ = "11024162";
+          var _ = "steamdb";
           const _ = 1,
             _ = 2,
             _ = 3,
@@ -5515,7 +5515,7 @@
           var _ = __webpack_require__("chunkid"),
             _ = __webpack_require__._(_),
             _ = __webpack_require__("chunkid"),
-            _ = "11024162";
+            _ = "steamdb";
           const _ = 1,
             _ = 2,
             _ = 3,
@@ -5552,10 +5552,10 @@
             _ = 34,
             _ = 35,
             _ = 36;
-          var _ = "11024162";
+          var _ = "steamdb";
           const _ = 0,
             _ = 1;
-          var _ = "11024162";
+          var _ = "steamdb";
           function _(_) {
             return "unknown EBanContentCheckResult ( " + _ + " )";
           }
@@ -8217,7 +8217,7 @@
             _ = __webpack_require__._(_),
             _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
-            _ = "11024162";
+            _ = "steamdb";
           class _ extends _.Message {
             static ImplementsStaticInterface() {}
             constructor(_ = null) {
@@ -8646,14 +8646,14 @@
             }
           }
           var _ = __webpack_require__("chunkid"),
-            _ = "11024162";
+            _ = "steamdb";
           const _ = 1,
             _ = 2,
             _ = 3,
             _ = 4,
             _ = 5,
             _ = 6;
-          var _ = "11024162";
+          var _ = "steamdb";
           const _ = 1,
             _ = 2,
             _ = 3,
@@ -8661,7 +8661,7 @@
             _ = 5,
             _ = 6,
             _ = 7;
-          var _ = "11024162";
+          var _ = "steamdb";
           function _(_) {
             return "unknown ESteamPipeOperationType ( " + _ + " )";
           }
@@ -11219,7 +11219,7 @@
           var _ = __webpack_require__("chunkid"),
             _ = __webpack_require__._(_),
             _ = __webpack_require__("chunkid"),
-            _ = "11024162";
+            _ = "steamdb";
           class _ extends _.Message {
             static ImplementsStaticInterface() {}
             constructor(_ = null) {
@@ -14245,7 +14245,7 @@
             _ = __webpack_require__._(_),
             _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
-            _ = "11024162";
+            _ = "steamdb";
           class _ extends _.Message {
             static ImplementsStaticInterface() {}
             constructor(_ = null) {
@@ -15718,7 +15718,7 @@
             _ = __webpack_require__._(_),
             _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
-            _ = "11024162";
+            _ = "steamdb";
           class _ extends _.Message {
             static ImplementsStaticInterface() {}
             constructor(_ = null) {
@@ -15801,7 +15801,7 @@
               return "EncryptedAppTicket";
             }
           }
-          var _ = "11024162";
+          var _ = "steamdb";
           class _ extends _.Message {
             static ImplementsStaticInterface() {}
             constructor(_ = null) {
@@ -20055,7 +20055,7 @@
             _ = __webpack_require__._(_),
             _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
-            _ = "11024162";
+            _ = "steamdb";
           class _ extends _.Message {
             static ImplementsStaticInterface() {}
             constructor(_ = null) {
@@ -20190,7 +20190,7 @@
             }
           }
           var _ = __webpack_require__("chunkid"),
-            _ = "11024162";
+            _ = "steamdb";
           const _ = -1,
             _ = 0,
             _ = 1,
@@ -20200,7 +20200,7 @@
             _ = 5,
             _ = 6,
             _ = 7;
-          var _ = "11024162";
+          var _ = "steamdb";
           const _ = 0,
             _ = 1,
             _ = 2,
@@ -20216,7 +20216,7 @@
             _ = 12,
             _ = 13,
             _ = 14;
-          var _ = "11024162";
+          var _ = "steamdb";
           const _ = 0,
             _ = 1,
             _ = 2,
@@ -20227,7 +20227,7 @@
             _ = 7,
             _ = 8,
             _ = 9;
-          var _ = "11024162";
+          var _ = "steamdb";
           const _ = 0,
             _ = 1,
             _ = 2,
@@ -20254,7 +20254,7 @@
             _ = 23,
             _ = 24,
             _ = 25;
-          var _ = "11024162";
+          var _ = "steamdb";
           const _ = 0,
             _ = 1,
             _ = 2,
@@ -20262,14 +20262,14 @@
             _ = 4,
             _ = 5,
             _ = 6;
-          var _ = "11024162";
+          var _ = "steamdb";
           const _ = 0,
             _ = 10,
             _ = 20,
             _ = 30,
             _ = 40,
             _ = 50;
-          var _ = "11024162";
+          var _ = "steamdb";
           function _(_) {
             return "unknown EStoreItemType ( " + _ + " )";
           }
@@ -25922,7 +25922,7 @@
             _: () => _,
             _: () => _,
           });
-          var _ = "11024162";
+          var _ = "steamdb";
           class _ {
             m_nOffset;
             m_nLength;
@@ -26044,7 +26044,7 @@
           });
           var _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
-            _ = "11024162";
+            _ = "steamdb";
           function _(_, _, _, _) {
             _.useEffect(() => {
               const _ = _ && "current" in _ ? _.current : _;
@@ -26392,7 +26392,7 @@
           var _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
-            _ = "11024162";
+            _ = "steamdb";
           function _(_, _) {
             return (_, _, _) => _;
           }
@@ -26725,7 +26725,7 @@
             _: () => _,
           });
           var _ = __webpack_require__("chunkid"),
-            _ = "11024162";
+            _ = "steamdb";
           function _(_, _) {
             _ != null &&
               (typeof _ == "function"
@@ -26784,7 +26784,7 @@
           });
           var _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
-            _ = "11024162";
+            _ = "steamdb";
           const _ = void 0;
           function _(_) {
             return _;
@@ -26805,7 +26805,7 @@
             _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
-            _ = "11024162";
+            _ = "steamdb";
           function _(_) {
             const { queryClient: _ = _, steamUI: _ } = _;
             _.useEffect(() => {
@@ -26856,7 +26856,7 @@
             _: () => _,
           });
           var _ = __webpack_require__("chunkid"),
-            _ = "11024162";
+            _ = "steamdb";
           const _ = (0, _.createContext)(void 0),
             _ = _.Provider;
           function _(_) {
@@ -26896,7 +26896,7 @@
           });
           var _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
-            _ = "11024162";
+            _ = "steamdb";
           const _ = _.createContext(void 0),
             _ = _.Provider,
             _ = () => {
@@ -27025,7 +27025,7 @@
           async function _(_) {
             if (_[_]) return _[_]();
           }
-          var _ = "11024162";
+          var _ = "steamdb";
           const _ = (0, _._)(_);
         },
         chunkid: (module, module_exports, __webpack_require__) => {
@@ -27033,7 +27033,7 @@
           __webpack_require__._(module_exports, {
             _: () => _,
           });
-          var _ = "11024162";
+          var _ = "steamdb";
           class _ {
             async GetObject(_, _) {
               try {
@@ -27055,7 +27055,7 @@
           });
           var _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
-            _ = "11024162";
+            _ = "steamdb";
           function _() {
             return _._.IN_CLIENT && (0, _.DOG)(_._.LAUNCHER_TYPE);
           }
@@ -27068,7 +27068,7 @@
           var _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
-            _ = "11024162";
+            _ = "steamdb";
           class _ {
             m_ulSteamID;
             constructor(_ = 0, _, _, _) {
@@ -27246,7 +27246,7 @@
             _: () => _,
             _: () => _,
           });
-          var _ = "11024162";
+          var _ = "steamdb";
           function _(_, _) {
             return _(_, _) !== null;
           }
@@ -27293,7 +27293,7 @@
             _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
-            _ = "11024162";
+            _ = "steamdb";
           function _(_) {
             return "unknown EMsg ( " + _ + " )";
           }
@@ -27317,7 +27317,7 @@
             _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
-            _ = "11024162",
+            _ = "steamdb",
             _ = Object.defineProperty,
             _ = Object.getOwnPropertyDescriptor,
             _ = (_, _, _, _) => {
@@ -27653,7 +27653,7 @@
             _([_._], _.prototype, "OnDisconnect", 1);
           var _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
-            _ = "11024162",
+            _ = "steamdb",
             _ = Object.defineProperty,
             _ = Object.getOwnPropertyDescriptor,
             _ = (_, _, _, _) => {
@@ -27872,7 +27872,7 @@
             _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
             _ = __webpack_require__._(_),
-            _ = "11024162";
+            _ = "steamdb";
           const _ = 10 * 1e3,
             _ = 3600 * 24 * 7,
             _ = 3600 * 5,
@@ -28187,7 +28187,7 @@
           function _(_) {
             return (_.msPing || 0) + (_.nCMLoad || 0);
           }
-          var _ = "11024162",
+          var _ = "steamdb",
             _ = Object.defineProperty,
             _ = Object.getOwnPropertyDescriptor,
             _ = (_, _, _, _) => {
@@ -28469,7 +28469,7 @@
             }
           }
           _([_._], _.prototype, "DecodeAndDispatchMultiMsg", 1);
-          var _ = "11024162";
+          var _ = "steamdb";
         },
         chunkid: (module, module_exports, __webpack_require__) => {
           "use strict";
@@ -28481,7 +28481,7 @@
             _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
-            _ = "11024162",
+            _ = "steamdb",
             _ = Object.defineProperty,
             _ = Object.getOwnPropertyDescriptor,
             _ = (_, _, _, _) => {
@@ -28693,7 +28693,7 @@
           const _ = "/images/steam_spinner.png";
           var _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
-            _ = "11024162";
+            _ = "steamdb";
           const _ = _.memo(function (_) {
               const {
                 className: _,
@@ -29045,7 +29045,7 @@
           var _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
-            _ = "11024162",
+            _ = "steamdb",
             _ = Object.defineProperty,
             _ = Object.getOwnPropertyDescriptor,
             _ = (_, _, _, _) => {
@@ -29223,7 +29223,7 @@
           __webpack_require__._(module_exports, {
             _: () => _,
           });
-          var _ = "11024162";
+          var _ = "steamdb";
           function _(..._) {
             return _.reduce(
               (_, _) =>
@@ -29255,7 +29255,7 @@
             _: () => _,
             _: () => _,
           });
-          var _ = "11024162";
+          var _ = "steamdb";
           function _(_) {
             if (!_() || !window.document.cookie) return null;
             const _ = document.cookie.match("(^|; )" + _ + "=([^;]*)");
@@ -29318,7 +29318,7 @@
             _: () => _,
           });
           var _ = __webpack_require__("chunkid"),
-            _ = "11024162";
+            _ = "steamdb";
           function _(_) {
             return _ != null && _.focus !== void 0;
           }
@@ -29841,7 +29841,7 @@
             _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
-            _ = "11024162";
+            _ = "steamdb";
           class _ {
             m_mapTokens = new Map();
             m_mapFallbackTokens = new Map();
@@ -30305,7 +30305,7 @@
             _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
-            _ = "11024162";
+            _ = "steamdb";
           const _ = 2147483647;
           var _ = ((_) => (
             (_[(_.None = 0)] = "None"),
@@ -30986,7 +30986,7 @@
             _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
-            _ = "11024162";
+            _ = "steamdb";
           function _() {
             const [_, _] = (0, _.useState)(!1),
               _ = (0, _._)((0, _.useCallback)((_) => _(_.isIntersecting), [])),
@@ -31011,7 +31011,7 @@
               }
             );
           }
-          var _ = "11024162";
+          var _ = "steamdb";
           function _() {
             const [_, _] = _.useState(0),
               _ = _.useCallback(
@@ -31029,7 +31029,7 @@
             };
           }
           var _ = __webpack_require__("chunkid"),
-            _ = "11024162";
+            _ = "steamdb";
           function _(_) {
             return (0, _._)(
               (_) => {
@@ -31066,7 +31066,7 @@
             return (0, _._)(_, _);
           }
           var _ = __webpack_require__("chunkid"),
-            _ = "11024162";
+            _ = "steamdb";
         },
         chunkid: (module, module_exports, __webpack_require__) => {
           "use strict";
@@ -31081,7 +31081,7 @@
             _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
-            _ = "11024162";
+            _ = "steamdb";
           function _(_, _) {
             return (0, _._)(
               (_) => {
@@ -31143,7 +31143,7 @@
             _: () => _,
             _: () => _,
           });
-          var _ = "11024162";
+          var _ = "steamdb";
           const _ = {
             PerYear: 31536e3,
             PerMonth: 2628e3,
@@ -31257,7 +31257,7 @@
             _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
-            _ = "11024162";
+            _ = "steamdb";
           const _ = _.createContext({}),
             _ = (_) => {
               const _ = _.useContext(_);
@@ -31413,7 +31413,7 @@
             _: () => _,
           });
           var _ = __webpack_require__("chunkid"),
-            _ = "11024162";
+            _ = "steamdb";
           const _ = {
               EUNIVERSE: 0,
               LANGUAGE: "english",
@@ -31529,7 +31529,7 @@
           var _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
-            _ = "11024162";
+            _ = "steamdb";
           const _ = "webui_config";
           function _(_, _ = _) {
             return _(_, _, !0);
@@ -31561,7 +31561,7 @@
               }
             else _ && console.error("Missing config element #", _);
           }
-          var _ = "11024162";
+          var _ = "steamdb";
           let _;
           function _() {
             if (!(0, _._)()) return _ || (_ = _()), _;
@@ -31626,7 +31626,7 @@
             _: () => _,
             _: () => _,
           });
-          var _ = "11024162";
+          var _ = "steamdb";
           function _() {
             const _ = navigator.userAgent.match(
               /Valve (?<family>Steam (?:Client|GameOverlay|Tenfoot|ClientUI|Gamepad(?: VR)?(?:\/Steam Deck)?))( \[(?<betaid>[^\]]*)\])?(\/(?<launcher>[A-Za-z0-9_]+))?\/(?<version>[0-9]*)/,
@@ -31723,11 +31723,11 @@
             _: () => _,
             _: () => _,
           });
-          var _ = "11024162";
+          var _ = "steamdb";
           const _ = 0,
             _ = 1,
             _ = 2;
-          var _ = "11024162";
+          var _ = "steamdb";
           const _ = {
             SHOW_CONSOLE: "",
             CLOUD_GAMING_PLATFORM: _,
@@ -31744,7 +31744,7 @@
           var _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
-            _ = "11024162";
+            _ = "steamdb";
           class _ extends _._ {
             async GetString(_) {
               try {
@@ -31788,7 +31788,7 @@
           });
           var _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
-            _ = "11024162",
+            _ = "steamdb",
             _ = Object.defineProperty,
             _ = Object.getOwnPropertyDescriptor,
             _ = (_, _, _, _) => {
@@ -31834,7 +31834,7 @@
             _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
-            _ = "11024162";
+            _ = "steamdb";
           const _ = "steam-dev-configparams";
           function _() {
             let _ = "";
@@ -31879,7 +31879,7 @@
             _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
-            _ = "11024162";
+            _ = "steamdb";
           const _ = !1,
             _ = _.lazy(() =>
               Promise.all([
