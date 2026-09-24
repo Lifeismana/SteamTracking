@@ -4184,6 +4184,8 @@
     "GamePerformanceStats_FrameRateHistogram_Device": "Histogram data is based on framerate reports for %1$s by customers on %2$s who opted-in to providing framerate data.",
     "GamePerformanceStats_FrameRateHistogram_ThisGame_Device": "Histogram data is based on framerate reports for this game by customers on %1$s who opted-in to providing framerate data.",
     "GamePerformanceStats_FrameRateHistogram_Title": "Framerate Distribution",
+    "GamePerformanceStats_Framerate": "Framerate",
+    "GamePerformanceStats_SessionLabel": "% Session",
     "NewToolTitleSuffix_Beta": "BETA",
     "DynamicLinkType_WorkshopItem": "A Workshop Item for %1$s",
     "DynamicLinkType_Screenshot": "A Screenshot of %1$s",

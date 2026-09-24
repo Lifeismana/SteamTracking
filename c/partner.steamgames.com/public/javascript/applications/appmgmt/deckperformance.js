@@ -28,6 +28,9 @@
         FrameRateTabs: "_2WkkV2Wg0u_3QDy9g6Q4yY",
         TabActive: "_78FuQRakVNuz-fNPKM9m_",
         TabInactive: "_2Hr7ssx_b-MrYZee0bQcdh",
+        PerformanceChartContainer: "_3TcebMI4TVQaFZwVSM73Qb",
+        ChartYAxisLabel: "_3qtXuLwNrjcbd9Bgs7FPiR",
+        ChartTooltipContent: "_3X-HHIk8UhHXHZcTg0AfEN",
         HistogramContainer: "_3WBxQEY65qUzlWxin28Vtk",
         Chart: "_1MTZOaNYA30CHWXAvcI8gL",
         ChartBar: "_1Xg8jwpB60j3CS1RAvy12d",
@@ -363,6 +366,27 @@
             contents: null,
           },
         );
+      function _({ active: _, payload: _ }) {
+        if (!_ || !_?.length) return null;
+        const _ = _[0].payload;
+        return (0, _.jsx)("div", {
+          className: _.ChartTooltipContent,
+          children: `${_._.Localize("#GamePerformanceStats_FPS", _.framerate ?? 0)}: ${_.percentage ?? 0}%`,
+        });
+      }
+      function _({ active: _, payload: _ }) {
+        if (!_ || !_?.length) return null;
+        const _ = _[0].payload;
+        return _
+          ? (0, _.jsx)("div", {
+              className: _.ChartTooltipContent,
+              children: `${(0, _._)(_?.date ?? 0)}: ${_._.Localize("#GamePerformanceStats_FPS", _.mean)}`,
+            })
+          : null;
+      }
+      function _(_) {
+        return (0, _._)(_);
+      }
       function _(_) {
         const { appName: _, frameRateData: _, histogramData: _ } = _,
           [_, _] = _.useState(void 0),
@@ -444,44 +468,53 @@
                 _,
                 _,
               )),
-            (_ = (0, _.jsx)(_._, {
+            (_ = (0, _.jsxs)(_._, {
               width: "100%",
               minWidth: 600,
               height: 300,
-              children: (0, _.jsxs)(_._, {
-                margin: {
-                  top: 25,
-                  left: 0,
-                  right: 0,
-                  bottom: 0,
-                },
-                data: _.data,
-                children: [
-                  (0, _.jsx)(_._, {
-                    strokeDasharray: "3 3",
-                    color: "red",
-                  }),
-                  (0, _.jsx)(_._, {
-                    dataKey: "date",
-                    tickFormatter: _,
-                    stroke: "white",
-                  }),
-                  (0, _.jsx)(_._, {
-                    stroke: "white",
-                    domain: [() => 0, (_) => Math.max(_, 100)],
-                  }),
-                  (0, _.jsx)(_._, {
-                    labelFormatter: _,
-                  }),
-                  (0, _.jsx)(_._, {
-                    type: "natural",
-                    dataKey: "mean",
-                    name: "average",
-                    stroke: "#4477EE",
-                  }),
-                  !1,
-                ],
-              }),
+              className: _.PerformanceChartContainer,
+              children: [
+                (0, _.jsx)("div", {
+                  className: _.ChartYAxisLabel,
+                  children: _._.Localize("#GamePerformanceStats_Framerate"),
+                }),
+                (0, _.jsxs)(_._, {
+                  margin: {
+                    top: 25,
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                  },
+                  data: _.data,
+                  children: [
+                    (0, _.jsx)(_._, {
+                      stroke: "#888",
+                      strokeWidth: "0.5",
+                    }),
+                    (0, _.jsx)(_._, {
+                      dataKey: "date",
+                      tickFormatter: _,
+                      stroke: "white",
+                    }),
+                    (0, _.jsx)(_._, {
+                      stroke: "white",
+                      domain: [() => 0, (_) => Math.max(_, 100)],
+                    }),
+                    (0, _.jsx)(_._, {
+                      content: _,
+                      cursor: !1,
+                      isAnimationActive: !1,
+                    }),
+                    (0, _.jsx)(_._, {
+                      type: "natural",
+                      dataKey: "mean",
+                      name: "average",
+                      stroke: "#4477EE",
+                    }),
+                    !1,
+                  ],
+                }),
+              ],
             }));
         }
         let _,
@@ -491,18 +524,13 @@
           });
         const _ = _ ? _.find((_) => _.clusterID == _) : void 0;
         if (_) {
-          const _ = Math.max(..._.rgResults);
-          if (((_ = _ > 0), _)) {
-            let _ = 0,
-              _ = 1;
-            const _ = 200;
-            (_ = (0.9 * _) / _), (_ = _.rgResults.indexOf(_));
+          if (((_ = Math.max(..._.rgResults) > 0), _)) {
             let _ = 0;
             _.rgResults.forEach((_, _) => {
               Math.floor(100 * _) > 0 && (_ = _);
             });
             const _ = _.rgResults.slice(0, _ + 1);
-            (_ = _
+            _ = _
               ? _._.LocalizeReact(
                   "#GamePerformanceStats_FrameRateHistogram_Device",
                   _,
@@ -511,57 +539,66 @@
               : _._.LocalizeReact(
                   "#GamePerformanceStats_FrameRateHistogram_ThisGame_Device",
                   _,
-                )),
-              (_ = (0, _.jsxs)(_.Fragment, {
+                );
+            const _ = [];
+            __webpack_require__.forEach((_, _) => {
+              _.push({
+                framerate: 5 * (_ + 3),
+                percentage: Math.round(100 * _),
+              });
+            }),
+              (_ = (0, _.jsxs)(_._, {
+                width: "100%",
+                minWidth: 600,
+                minHeight: 300,
+                className: _.PerformanceChartContainer,
                 children: [
-                  (0, _.jsx)(_._, {
-                    className: _.Chart,
-                    children: _.map((_, _) =>
-                      (0, _.jsx)(
-                        "div",
-                        {
-                          className: _.ChartBar,
-                          style: {
-                            height: _ * _,
-                            marginTop: _ - _ * _,
-                          },
-                          children: (0, _.jsx)("div", {
-                            className: _.ChartBarLabel,
-                            children:
-                              _ == _ ? `${(100 * _).toFixed(1)}%` : null,
-                          }),
-                        },
-                        `bar_${_}`,
-                      ),
+                  (0, _.jsx)("div", {
+                    className: _.ChartYAxisLabel,
+                    children: _._.Localize(
+                      "#GamePerformanceStats_SessionLabel",
                     ),
                   }),
-                  (0, _.jsx)(_._, {
-                    className: _.Labels,
-                    children: _.map((_, _) => {
-                      const _ = 15 + 5 * _,
-                        _ = _ % 10 == 0;
-                      return (0, _.jsxs)(
-                        "div",
-                        {
-                          className: _.LabelContainer,
-                          children: [
-                            (0, _.jsx)("div", {
-                              className: (0, _._)(_.Tick, !_ && _.TickHidden),
-                              children: "",
-                            }),
-                            (0, _.jsx)(
-                              "div",
-                              {
-                                className: _.Label,
-                                children: _ ? _ : "",
-                              },
-                              `label_${_}`,
-                            ),
-                          ],
+                  (0, _.jsxs)(_._, {
+                    margin: {
+                      top: 35,
+                      left: 0,
+                      right: 0,
+                      bottom: 25,
+                    },
+                    data: _.sort((_, _) => _.framerate - _.framerate),
+                    children: [
+                      (0, _.jsx)(_._, {
+                        stroke: "#888",
+                        strokeWidth: "0.5",
+                        vertical: !1,
+                      }),
+                      (0, _.jsx)(_._, {
+                        dataKey: "framerate",
+                        stroke: "white",
+                        label: {
+                          value: _._.Localize(
+                            "#GamePerformanceStats_Framerate",
+                          ),
+                          position: "bottom",
+                          fill: "white",
                         },
-                        _,
-                      );
-                    }),
+                      }),
+                      (0, _.jsx)(_._, {
+                        stroke: "white",
+                        domain: [() => 0, (_) => Math.max(_, 100)],
+                      }),
+                      (0, _.jsx)(_._, {
+                        content: _,
+                        cursor: !1,
+                        isAnimationActive: !1,
+                      }),
+                      (0, _.jsx)(_._, {
+                        fill: "#1a9fff",
+                        dataKey: "percentage",
+                        name: "",
+                      }),
+                    ],
                   }),
                 ],
               }));
@@ -667,9 +704,6 @@
           onClick: _.onClick,
           children: _.locToken,
         });
-      }
-      function _(_) {
-        return (0, _._)(_);
       }
       function _(_) {
         const { nAgreePercent: _, nGlobalAgreePercent: _ } = _;

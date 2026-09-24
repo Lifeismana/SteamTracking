@@ -1090,6 +1090,10 @@ background: -webkit-linear-gradient( 30deg, rgba(117, 176, 34, 0.7) 5%,rgba(88, 
 	gap: 6px;
 }
 
+.game_area_purchase_game .game_area_purchase_platform img {
+	max-height: 30px;
+}
+
 .game_area_purchase_game h1,
 .game_area_offsite_purchase h1,
 .game_area_purchase_game h2.title.title {

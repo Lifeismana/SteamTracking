@@ -125,8 +125,22 @@
 ._2WkkV2Wg0u_3QDy9g6Q4yY ._78FuQRakVNuz-fNPKM9m_ {
   border-bottom-color: #67c1f5;
 }
-._3WBxQEY65qUzlWxin28Vtk {
-  margin-left: 40px;
+._3TcebMI4TVQaFZwVSM73Qb {
+  position: relative;
+}
+._3TcebMI4TVQaFZwVSM73Qb ._3qtXuLwNrjcbd9Bgs7FPiR {
+  position: absolute;
+  top: 40%;
+  left: -30px;
+  font-size: 16px;
+  transform: rotate(270deg);
+}
+._3X-HHIk8UhHXHZcTg0AfEN {
+  background: #323539;
+  border: 1px solid #67c1f5;
+  color: #fff;
+  padding: 4px 8px;
+  white-space: nowrap;
 }
 ._3WBxQEY65qUzlWxin28Vtk ._1MTZOaNYA30CHWXAvcI8gL {
   display: flex;

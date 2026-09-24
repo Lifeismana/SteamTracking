@@ -30,6 +30,9 @@
         FrameRateTabs: "_2WkkV2Wg0u_3QDy9g6Q4yY",
         TabActive: "_78FuQRakVNuz-fNPKM9m_",
         TabInactive: "_2Hr7ssx_b-MrYZee0bQcdh",
+        PerformanceChartContainer: "_3TcebMI4TVQaFZwVSM73Qb",
+        ChartYAxisLabel: "_3qtXuLwNrjcbd9Bgs7FPiR",
+        ChartTooltipContent: "_3X-HHIk8UhHXHZcTg0AfEN",
         HistogramContainer: "_3WBxQEY65qUzlWxin28Vtk",
         Chart: "_1MTZOaNYA30CHWXAvcI8gL",
         ChartBar: "_1Xg8jwpB60j3CS1RAvy12d",
@@ -130,7 +133,7 @@
     },
     58776: (e, a, t) => {
       "use strict";
-      t.r(a), t.d(a, { HardwarePerformance: () => F, default: () => P });
+      t.r(a), t.d(a, { HardwarePerformance: () => L, default: () => F });
       var r = t(7850),
         i = t(90626),
         s = t(7878),
@@ -140,45 +143,45 @@
         o = t(73077),
         m = t(30230),
         d = t(20283),
-        _ = t(75620),
-        f = t(61141),
-        h = t(58661),
-        p = t(90865),
-        u = t(6083),
+        f = t(75620),
+        h = t(61141),
+        _ = t(58661),
+        u = t(90865),
+        p = t(6083),
         b = t(39832),
         x = t(11577),
         g = t(52038),
         v = t(26408),
         j = t(78686),
         k = t(84811),
-        y = t(76217),
-        S = t(45699);
-      const N = 4;
-      function P(e) {
+        S = t(76217),
+        P = t(45699);
+      const y = 4;
+      function F(e) {
         const { dataprops: a, appId: t } = e;
         return a?.framerate || a?.feedback
           ? (0, r.jsx)(x.m, {
               children: (0, r.jsx)(k.tH, {
-                children: (0, r.jsx)(F, { appId: t, dataprops: a }),
+                children: (0, r.jsx)(L, { appId: t, dataprops: a }),
               }),
             })
           : (0, r.jsx)(r.Fragment, {});
       }
-      function F(e) {
+      function L(e) {
         const { dataprops: a, appName: t, histogramData: i } = e;
         return a?.framerate || a?.feedback?.game_stats
           ? (0, r.jsxs)("div", {
               className: s.PerformanceContainer,
               children: [
                 Boolean(a?.framerate) &&
-                  (0, r.jsx)(G, {
+                  (0, r.jsx)(A, {
                     appId: Number(e.appId),
                     appName: t,
                     histogramData: i,
                     frameRateData: a.framerate,
                   }),
                 Boolean(a?.feedback) &&
-                  (0, r.jsx)(T, {
+                  (0, r.jsx)(N, {
                     appId: Number(e.appId),
                     feedbackData: a.feedback,
                   }),
@@ -186,7 +189,7 @@
             })
           : (0, r.jsx)(r.Fragment, {});
       }
-      function T(e) {
+      function N(e) {
         const { feedbackData: a } = e,
           t = a?.game_stats ? a?.game_stats[0] : void 0;
         if (!t?.daily?.length)
@@ -234,9 +237,9 @@
               name: j.Z.Localize("#GamePerformanceStats_Other"),
             },
           ],
-          f = Number(t.total?.agree) + Number(t.total?.disagree),
-          h = (Number(t.total?.agree) / f) * 100,
-          p = [...t.daily];
+          h = Number(t.total?.agree) + Number(t.total?.disagree),
+          _ = (Number(t.total?.agree) / h) * 100,
+          u = [...t.daily];
         return (0, r.jsxs)("div", {
           className: s.FeedbackContainer,
           children: [
@@ -249,8 +252,8 @@
                     "#GamePerformanceStats_CustomerFeedback",
                   ),
                 }),
-                (0, r.jsx)(R, {
-                  nAgreePercent: h,
+                (0, r.jsx)(D, {
+                  nAgreePercent: _,
                   nGlobalAgreePercent: a.global_agree_percentage
                     ? Math.floor(a.global_agree_percentage)
                     : void 0,
@@ -258,7 +261,7 @@
                 (0, r.jsx)("div", {
                   children: j.Z.Localize(
                     "#GamePerformanceStats_NumberOfReports",
-                    (0, u.D)(f),
+                    (0, p.D)(h),
                     t.daily.length,
                   ),
                 }),
@@ -278,7 +281,7 @@
                     }),
                   ),
                 }),
-                (0, r.jsx)(A, { feedback: t }),
+                (0, r.jsx)(w, { feedback: t }),
               ],
             }),
             (0, r.jsx)(n.u, {
@@ -288,7 +291,7 @@
               className: s.FeedbackChartContainer,
               children: (0, r.jsxs)(c.E, {
                 margin: { top: 25, left: 0, right: 0, bottom: 0 },
-                data: p.sort((e, a) => e.date - a.date),
+                data: u.sort((e, a) => e.date - a.date),
                 children: [
                   (0, r.jsx)(l.W, {
                     dataKey: "date",
@@ -304,7 +307,7 @@
                     (0, r.jsx)(
                       d.y,
                       {
-                        shape: (0, r.jsx)(D, { fill: e.fill }),
+                        shape: (0, r.jsx)(I, { fill: e.fill }),
                         fill: e.fill,
                         dataKey: e.key,
                         stackId: "day",
@@ -313,33 +316,54 @@
                       e.key,
                     ),
                   ),
-                  (0, r.jsx)(_.s, {}),
+                  (0, r.jsx)(f.s, {}),
                 ],
               }),
             }),
           ],
         });
       }
-      const L = new Map([
+      const T = new Map([
           [3, "LCD"],
-          [N, "OLED"],
+          [y, "OLED"],
         ]),
         C = new Array(
-          { name: L.get(N), key: L.get(N), contents: null },
-          { name: L.get(3), key: L.get(3), contents: null },
+          { name: T.get(y), key: T.get(y), contents: null },
+          { name: T.get(3), key: T.get(3), contents: null },
         );
-      function G(e) {
-        const { appName: a, frameRateData: t, histogramData: c } = e,
-          [d, _] = i.useState(void 0),
-          u = i.useMemo(() => {
+      function G({ active: e, payload: a }) {
+        if (!e || !a?.length) return null;
+        const t = a[0].payload;
+        return (0, r.jsx)("div", {
+          className: s.ChartTooltipContent,
+          children: `${j.Z.Localize("#GamePerformanceStats_FPS", t.framerate ?? 0)}: ${t.percentage ?? 0}%`,
+        });
+      }
+      function z({ active: e, payload: a }) {
+        if (!e || !a?.length) return null;
+        const t = a[0].payload;
+        return t
+          ? (0, r.jsx)("div", {
+              className: s.ChartTooltipContent,
+              children: `${(0, b._l)(t?.date ?? 0)}: ${j.Z.Localize("#GamePerformanceStats_FPS", t.mean)}`,
+            })
+          : null;
+      }
+      function Z(e) {
+        return (0, b._l)(e);
+      }
+      function A(e) {
+        const { appName: a, frameRateData: t, histogramData: f } = e,
+          [p, b] = i.useState(void 0),
+          x = i.useMemo(() => {
             let e = [];
             return (
               t?.frame_rate_clusters &&
                 t?.frame_rate_clusters.length > 0 &&
                 t.frame_rate_clusters.forEach((a) => {
-                  if (!a.clusterid || !L.get(a.clusterid)) return;
+                  if (!a.clusterid || !T.get(a.clusterid)) return;
                   let t = {
-                    tab: L.get(a.clusterid),
+                    tab: T.get(a.clusterid),
                     clusterid: a.clusterid ?? 0,
                     mean_frame_rate: a.mean_frame_rate,
                     report_days: a.report_days ?? 0,
@@ -360,12 +384,12 @@
               e
             );
           }, [t]),
-          b = i.useMemo(() => {
-            const e = L.get(N);
-            return u.some((a) => a.tab == e && a.data.length > 0)
+          g = i.useMemo(() => {
+            const e = T.get(y);
+            return x.some((a) => a.tab == e && a.data.length > 0)
               ? e
-              : (u.find((e) => e.data.length > 0)?.tab ?? e);
-          }, [u]);
+              : (x.find((e) => e.data.length > 0)?.tab ?? e);
+          }, [x]);
         if (!t?.frame_rate_clusters?.length)
           return (0, r.jsx)("div", {
             className: s.FrameRateContainer,
@@ -384,133 +408,149 @@
               ],
             }),
           });
-        let x,
-          v = (0, r.jsx)("div", {
+        let v,
+          k = (0, r.jsx)("div", {
             children: j.Z.Localize("#GamePerformanceStats_NoData"),
           });
-        const k = d ?? b,
-          S = [...L.entries()].find(([e, a]) => a === k)[0],
-          P = u.find((e) => e.clusterid == S);
-        if (P) {
-          const e = Number(P.mean_frame_rate ?? 0).toFixed(0),
+        const P = p ?? g,
+          F = [...T.entries()].find(([e, a]) => a === P)[0],
+          L = x.find((e) => e.clusterid == F);
+        if (L) {
+          const e = Number(L.mean_frame_rate ?? 0).toFixed(0),
             t = (0, r.jsx)("span", {
               className: s.FrameRateValue,
               children: j.Z.Localize("#GamePerformanceStats_FPS", e),
             });
-          (x = a
+          (v = a
             ? j.Z.LocalizeReact(
                 "#GamePerformanceStats_AverageFrameRate_Device",
                 a,
-                k,
+                P,
                 t,
               )
             : j.Z.LocalizeReact(
                 "#GamePerformanceStats_AverageFrameRate_ThisGame_Device",
-                k,
+                P,
                 t,
               )),
-            (v = (0, r.jsx)(n.u, {
+            (k = (0, r.jsxs)(n.u, {
               width: "100%",
               minWidth: 600,
               height: 300,
-              children: (0, r.jsxs)(f.X, {
-                margin: { top: 25, left: 0, right: 0, bottom: 0 },
-                data: P.data,
-                children: [
-                  (0, r.jsx)(h.d, { strokeDasharray: "3 3", color: "red" }),
-                  (0, r.jsx)(l.W, {
-                    dataKey: "date",
-                    tickFormatter: Z,
-                    stroke: "white",
-                  }),
-                  (0, r.jsx)(o.h, {
-                    stroke: "white",
-                    domain: [() => 0, (e) => Math.max(e, 100)],
-                  }),
-                  (0, r.jsx)(m.m, { labelFormatter: Z }),
-                  (0, r.jsx)(p.N, {
-                    type: "natural",
-                    dataKey: "mean",
-                    name: "average",
-                    stroke: "#4477EE",
-                  }),
-                  !1,
-                ],
-              }),
+              className: s.PerformanceChartContainer,
+              children: [
+                (0, r.jsx)("div", {
+                  className: s.ChartYAxisLabel,
+                  children: j.Z.Localize("#GamePerformanceStats_Framerate"),
+                }),
+                (0, r.jsxs)(h.X, {
+                  margin: { top: 25, left: 0, right: 0, bottom: 0 },
+                  data: L.data,
+                  children: [
+                    (0, r.jsx)(_.d, { stroke: "#888", strokeWidth: "0.5" }),
+                    (0, r.jsx)(l.W, {
+                      dataKey: "date",
+                      tickFormatter: Z,
+                      stroke: "white",
+                    }),
+                    (0, r.jsx)(o.h, {
+                      stroke: "white",
+                      domain: [() => 0, (e) => Math.max(e, 100)],
+                    }),
+                    (0, r.jsx)(m.m, {
+                      content: z,
+                      cursor: !1,
+                      isAnimationActive: !1,
+                    }),
+                    (0, r.jsx)(u.N, {
+                      type: "natural",
+                      dataKey: "mean",
+                      name: "average",
+                      stroke: "#4477EE",
+                    }),
+                    !1,
+                  ],
+                }),
+              ],
             }));
         }
-        let F,
-          T = !1,
-          G = (0, r.jsx)("div", {
+        let N,
+          A = !1,
+          D = (0, r.jsx)("div", {
             children: j.Z.Localize("#GamePerformanceStats_NoData"),
           });
-        const R = c ? c.find((e) => e.clusterID == S) : void 0;
-        if (R) {
-          const e = Math.max(...R.rgResults);
-          if (((T = e > 0), T)) {
-            let t = 0,
-              n = 1;
-            const c = 200;
-            (n = (0.9 * c) / e), (t = R.rgResults.indexOf(e));
-            let l = 0;
-            R.rgResults.forEach((e, a) => {
-              Math.floor(100 * e) > 0 && (l = a);
+        const w = f ? f.find((e) => e.clusterID == F) : void 0;
+        if (w) {
+          if (((A = Math.max(...w.rgResults) > 0), A)) {
+            let e = 0;
+            w.rgResults.forEach((a, t) => {
+              Math.floor(100 * a) > 0 && (e = t);
             });
-            const o = R.rgResults.slice(0, l + 1);
-            (F = a
+            const t = w.rgResults.slice(0, e + 1);
+            N = a
               ? j.Z.LocalizeReact(
                   "#GamePerformanceStats_FrameRateHistogram_Device",
                   a,
-                  k,
+                  P,
                 )
               : j.Z.LocalizeReact(
                   "#GamePerformanceStats_FrameRateHistogram_ThisGame_Device",
-                  k,
-                )),
-              (G = (0, r.jsxs)(i.Fragment, {
+                  P,
+                );
+            const i = [];
+            t.forEach((e, a) => {
+              i.push({
+                framerate: 5 * (a + 3),
+                percentage: Math.round(100 * e),
+              });
+            }),
+              (D = (0, r.jsxs)(n.u, {
+                width: "100%",
+                minWidth: 600,
+                minHeight: 300,
+                className: s.PerformanceChartContainer,
                 children: [
-                  (0, r.jsx)(y.Z, {
-                    className: s.Chart,
-                    children: o.map((e, a) =>
-                      (0, r.jsx)(
-                        "div",
-                        {
-                          className: s.ChartBar,
-                          style: { height: e * n, marginTop: c - e * n },
-                          children: (0, r.jsx)("div", {
-                            className: s.ChartBarLabel,
-                            children:
-                              t == a ? `${(100 * e).toFixed(1)}%` : null,
-                          }),
-                        },
-                        `bar_${a}`,
-                      ),
+                  (0, r.jsx)("div", {
+                    className: s.ChartYAxisLabel,
+                    children: j.Z.Localize(
+                      "#GamePerformanceStats_SessionLabel",
                     ),
                   }),
-                  (0, r.jsx)(y.Z, {
-                    className: s.Labels,
-                    children: o.map((e, a) => {
-                      const t = 15 + 5 * a,
-                        i = t % 10 == 0;
-                      return (0, r.jsxs)(
-                        "div",
-                        {
-                          className: s.LabelContainer,
-                          children: [
-                            (0, r.jsx)("div", {
-                              className: (0, g.A)(s.Tick, !i && s.TickHidden),
-                              children: "",
-                            }),
-                            (0, r.jsx)(
-                              "div",
-                              { className: s.Label, children: i ? t : "" },
-                              `label_${a}`,
-                            ),
-                          ],
+                  (0, r.jsxs)(c.E, {
+                    margin: { top: 35, left: 0, right: 0, bottom: 25 },
+                    data: i.sort((e, a) => e.framerate - a.framerate),
+                    children: [
+                      (0, r.jsx)(_.d, {
+                        stroke: "#888",
+                        strokeWidth: "0.5",
+                        vertical: !1,
+                      }),
+                      (0, r.jsx)(l.W, {
+                        dataKey: "framerate",
+                        stroke: "white",
+                        label: {
+                          value: j.Z.Localize(
+                            "#GamePerformanceStats_Framerate",
+                          ),
+                          position: "bottom",
+                          fill: "white",
                         },
-                        a,
-                      );
-                    }),
+                      }),
+                      (0, r.jsx)(o.h, {
+                        stroke: "white",
+                        domain: [() => 0, (e) => Math.max(e, 100)],
+                      }),
+                      (0, r.jsx)(m.m, {
+                        content: G,
+                        cursor: !1,
+                        isAnimationActive: !1,
+                      }),
+                      (0, r.jsx)(d.y, {
+                        fill: "#1a9fff",
+                        dataKey: "percentage",
+                        name: "",
+                      }),
+                    ],
                   }),
                 ],
               }));
@@ -534,13 +574,13 @@
                     }),
                   ],
                 }),
-                (0, r.jsx)("div", { children: x }),
-                Boolean(P?.report_days) &&
+                (0, r.jsx)("div", { children: v }),
+                Boolean(L?.report_days) &&
                   (0, r.jsx)("div", {
                     className: s.DescriptionSection,
                     children: j.Z.Localize(
                       "#GamePerformanceStats_FrameRateDataBasedOn",
-                      P?.report_days ?? 0,
+                      L?.report_days ?? 0,
                     ),
                   }),
                 (0, r.jsx)("div", {
@@ -554,24 +594,24 @@
             (0, r.jsxs)("div", {
               className: s.TabContainer,
               children: [
-                (0, r.jsx)(y.Z, {
+                (0, r.jsx)(S.Z, {
                   className: s.FrameRateTabs,
                   children: C.map((e) =>
                     (0, r.jsx)(
-                      z,
+                      R,
                       {
-                        active: e.key === k,
+                        active: e.key === P,
                         locToken: e.name,
-                        onClick: () => _(e.key),
+                        onClick: () => b(e.key),
                       },
                       e.key,
                     ),
                   ),
                 }),
-                v,
+                k,
               ],
             }),
-            T &&
+            A &&
               (0, r.jsxs)(r.Fragment, {
                 children: [
                   (0, r.jsxs)("div", {
@@ -594,29 +634,26 @@
                           }),
                         ],
                       }),
-                      (0, r.jsx)("div", { children: F }),
+                      (0, r.jsx)("div", { children: N }),
                     ],
                   }),
                   (0, r.jsx)("div", {
                     className: s.HistogramContainer,
-                    children: G,
+                    children: D,
                   }),
                 ],
               }),
           ],
         });
       }
-      function z(e) {
-        return (0, r.jsx)(S.Ii, {
+      function R(e) {
+        return (0, r.jsx)(P.Ii, {
           className: e.active ? s.TabActive : s.TabInactive,
           onClick: e.onClick,
           children: e.locToken,
         });
       }
-      function Z(e) {
-        return (0, b._l)(e);
-      }
-      function R(e) {
+      function D(e) {
         const { nAgreePercent: a, nGlobalAgreePercent: t } = e;
         return (0, r.jsxs)("div", {
           className: s.FeedbackAgree,
@@ -659,7 +696,7 @@
           ],
         });
       }
-      function A(e) {
+      function w(e) {
         const { feedback: a } = e;
         let t = new Array(
           {
@@ -722,7 +759,7 @@
           })
         );
       }
-      const D = (e) => {
+      const I = (e) => {
         const { fill: a, x: t, y: i, width: s, height: n } = e;
         return (0, r.jsx)("rect", { x: t, y: i, width: s, height: n, fill: a });
       };

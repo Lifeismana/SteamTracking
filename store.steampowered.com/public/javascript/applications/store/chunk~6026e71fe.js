@@ -37413,7 +37413,9 @@
             a.BHasBroadcastEnabled(),
             R.j.Get().BIsEmbeddedStreamCollapsed(),
           ]);
-        return !r || (i && !s) ? (0, n.jsx)(vo, { ...e }) : null;
+        return !r || (i && !s)
+          ? (0, n.jsx)(qr, { children: (0, n.jsx)(vo, { ...e }) })
+          : null;
       }
       var Co = a(14256),
         wo = a.n(Co),

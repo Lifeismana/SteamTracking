@@ -5,7 +5,7 @@ var _ = {};
   (_.czech = () => _(() => import(`./ruKGEIqR2.js`), [], import.meta.url)),
   (_.danish = () => _(() => import(`./cZre9LjM2.js`), [], import.meta.url)),
   (_.dutch = () => _(() => import(`./B-SNPIRv2.js`), [], import.meta.url)),
-  (_.english = () => _(() => import(`./B1YfCXr7.js`), [], import.meta.url)),
+  (_.english = () => _(() => import(`./Cz3w9u0j.js`), [], import.meta.url)),
   (_.finnish = () => _(() => import(`./C0nK_cxl.js`), [], import.meta.url)),
   (_.french = () => _(() => import(`./DmTwbB-Z.js`), [], import.meta.url)),
   (_.german = () => _(() => import(`./GwRzYE0i.js`), [], import.meta.url)),
