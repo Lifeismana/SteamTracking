@@ -62,7 +62,7 @@
         41196: (le, se, B) => {
           "use strict";
           B.d(se, { TU: () => c, hw: () => s, nA: () => e });
-          var l = "11024162",
+          var l = "11034825",
             c = ((a) => (
               (a[(a.k_ESteamRealmUnknown = 0)] = "k_ESteamRealmUnknown"),
               (a[(a.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
@@ -403,7 +403,7 @@
             zeJ: () => Ei,
             zlr: () => d,
           });
-          var l = "11024162";
+          var l = "11034825";
           const c = 1,
             e = 2,
             s = 3,
@@ -1899,7 +1899,7 @@
             yY: () => U,
             zl: () => r,
           });
-          var l = "11024162";
+          var l = "11034825";
           function c(Y, G = 0, K = Math.random) {
             if (Y?.length > 1) {
               let Z = G > 0 ? Math.min(G, Y.length) : Y.length;
@@ -2073,7 +2073,7 @@
         3493: (le, se, B) => {
           "use strict";
           B.d(se, { wT: () => c, z_: () => s });
-          var l = "11024162";
+          var l = "11034825";
           function c(a, U, ...w) {
             console.assert
               ? w.length == 0
@@ -2099,7 +2099,7 @@
         89317: (le, se, B) => {
           "use strict";
           B.d(se, { C: () => c });
-          var l = "11024162";
+          var l = "11034825";
           async function c(a, U = "SHA-256") {
             let w;
             typeof a == "string" ? (w = s(a)) : (w = a);
@@ -2120,7 +2120,7 @@
         81919: (le, se, B) => {
           "use strict";
           B.d(se, { o: () => c });
-          var l = "11024162";
+          var l = "11034825";
           function c(e, s, a) {
             return {
               get() {
@@ -2203,7 +2203,7 @@
             zL: () => G,
             zi: () => e,
           });
-          var l = "11024162";
+          var l = "11034825";
           const c = 1,
             e = 2,
             s = 3,
@@ -2341,7 +2341,7 @@
             c = B(98237),
             e = B(75959),
             s = B(63696),
-            a = "11024162";
+            a = "11034825";
           const U =
             window.addEventListener ||
             (globalThis && globalThis.addEventListener) ||
@@ -2740,7 +2740,7 @@
           "use strict";
           B.d(se, { l: () => e });
           var l = B(93750),
-            c = "11024162";
+            c = "11034825";
           class e {
             m_vecCallbacks = [];
             Register(a) {
@@ -2785,7 +2785,7 @@
             bT: () => w,
             kf: () => P,
           });
-          var l = "11024162";
+          var l = "11034825";
           function c(p, T) {
             return (
               (p = Math.ceil(p)),
@@ -2856,7 +2856,7 @@
         65733: (le, se, B) => {
           "use strict";
           B.d(se, { x0: () => e, yI: () => s });
-          var l = "11024162";
+          var l = "11034825";
           async function c(a) {
             try {
               return await a;
@@ -2888,7 +2888,7 @@
             ut: () => g,
             yc: () => w,
           });
-          var l = "11024162";
+          var l = "11034825";
           const c = [
               "sc_schinese",
               "schinese",
@@ -2987,14 +2987,14 @@
           var l = B(69766),
             c = B(63696),
             e = B(4726),
-            s = "11024162";
+            s = "11034825";
           const a = 0,
             U = 1,
             w = 2,
             g = 3,
             r = 4,
             I = 5;
-          var P = "11024162";
+          var P = "11034825";
           function p(Q, ...N) {
             return (
               N.length == 0 ||
@@ -3011,7 +3011,7 @@
           var T = B(11224),
             v = B(93330),
             F = B(32758),
-            x = "11024162";
+            x = "11034825";
           function h(Q) {
             const N = new Map();
             async function $() {
@@ -3176,7 +3176,7 @@
         11224: (le, se, B) => {
           "use strict";
           B.d(se, { n: () => a, u: () => s });
-          var l = "11024162";
+          var l = "11034825";
           let c;
           c ??= new Set();
           let e;
@@ -3197,7 +3197,7 @@
             a = B(98089),
             U = B(13820),
             w = B(98890),
-            g = "11024162";
+            g = "11034825";
           const r = 8;
           class I {
             static InitHeaderFromPacket(v) {
@@ -3386,7 +3386,7 @@
           });
           var l = B(58663),
             c = B.n(l),
-            e = "11024162";
+            e = "11034825";
           const s = l.BinaryReader.prototype,
             a = l.BinaryWriter.prototype;
           function U(x) {
@@ -3564,11 +3564,11 @@
           var c = B(58663),
             e = B.n(c),
             s = B(67480),
-            a = "11024162";
+            a = "11034825";
           const U = 0,
             w = 1,
             g = 2;
-          var r = "11024162";
+          var r = "11034825";
           function I(x) {
             return "unknown EContentHubDiscountFilterType ( " + x + " )";
           }
@@ -3957,7 +3957,7 @@
             xpG: () => Ig,
             y6$: () => e,
           });
-          var l = "11024162";
+          var l = "11034825";
           const c = 0,
             e = 1,
             s = 2,
@@ -5293,115 +5293,115 @@
             _p = 9128,
             Gp = 9129,
             Cp = 9130,
-            eh = 9131,
-            rh = 9132,
-            th = 9133,
-            ih = 9134,
-            sh = 9135,
-            nh = 9200,
-            ah = 9200,
-            ch = 9201,
-            oh = 9202,
-            uh = 9203,
-            lh = 9300,
+            e3 = 9131,
+            r3 = 9132,
+            t3 = 9133,
+            i3 = 9134,
+            s3 = 9135,
+            n3 = 9200,
+            a3 = 9200,
+            c3 = 9201,
+            o3 = 9202,
+            u3 = 9203,
+            l3 = 9300,
             Hg = 9330,
             Jg = 9331,
-            dh = 9400,
-            mh = 9406,
-            bh = 9500,
-            gh = 9500,
-            fh = 9501,
-            Bh = 9502,
-            wh = 9503,
-            Mh = 9504,
-            yh = 9505,
-            ph = 9506,
-            hh = 9507,
-            Eh = 9508,
-            kh = 9509,
-            zh = 9510,
-            Sh = 9511,
-            Th = 9512,
-            vh = 9513,
-            Uh = 9514,
-            jh = 9515,
-            Oh = 9516,
-            Wh = 9517,
-            Rh = 9518,
-            qh = 9519,
-            Fh = 9520,
-            xh = 9521,
-            Lh = 9522,
-            Ah = 9523,
-            Ih = 9524,
-            Dh = 9525,
-            Ph = 9526,
-            Vh = 9527,
-            Yh = 9528,
-            Qh = 9529,
-            Kh = 9530,
-            $h = 9531,
-            Xh = 9532,
-            Hh = 9533,
-            Jh = 9534,
-            Zh = 9535,
-            Nh = 9536,
-            _h = 9537,
-            Gh = 9538,
-            Ch = 9539,
-            e3 = 9540,
-            r3 = 9600,
-            t3 = 9600,
-            i3 = 9601,
-            s3 = 9700,
-            n3 = 9700,
-            a3 = 9701,
-            c3 = 9702,
-            o3 = 9704,
-            u3 = 9800,
-            l3 = 9800,
-            d3 = 9801,
+            d3 = 9400,
+            m3 = 9406,
+            b3 = 9500,
+            g3 = 9500,
+            f3 = 9501,
+            B3 = 9502,
+            w3 = 9503,
+            M3 = 9504,
+            y3 = 9505,
+            p3 = 9506,
+            h3 = 9507,
+            E3 = 9508,
+            k3 = 9509,
+            z3 = 9510,
+            S3 = 9511,
+            T3 = 9512,
+            v3 = 9513,
+            U3 = 9514,
+            j3 = 9515,
+            O3 = 9516,
+            W3 = 9517,
+            R3 = 9518,
+            q3 = 9519,
+            F3 = 9520,
+            x3 = 9521,
+            L3 = 9522,
+            A3 = 9523,
+            I3 = 9524,
+            D3 = 9525,
+            P3 = 9526,
+            V3 = 9527,
+            Y3 = 9528,
+            Q3 = 9529,
+            K3 = 9530,
+            $3 = 9531,
+            X3 = 9532,
+            H3 = 9533,
+            J3 = 9534,
+            Z3 = 9535,
+            N3 = 9536,
+            _3 = 9537,
+            G3 = 9538,
+            C3 = 9539,
+            eh = 9540,
+            rh = 9600,
+            th = 9600,
+            ih = 9601,
+            sh = 9700,
+            nh = 9700,
+            ah = 9701,
+            ch = 9702,
+            oh = 9704,
+            uh = 9800,
+            lh = 9800,
+            dh = 9801,
             Zg = 9802,
-            m3 = 9803,
+            mh = 9803,
             Ng = 9804,
-            b3 = 9805,
-            g3 = 9806,
-            f3 = 9807,
-            B3 = 9808,
-            w3 = 9900,
-            M3 = 9900,
-            y3 = 9901,
-            p3 = 9902,
-            h3 = 9903,
-            E3 = 9999,
-            k3 = 1e4,
-            z3 = 1e4,
-            S3 = 10100,
-            T3 = 10100,
-            v3 = 10101,
-            U3 = 10102,
-            j3 = 10103,
-            O3 = 10104,
-            W3 = 10105,
-            R3 = 10106,
-            q3 = 12e3,
-            F3 = 12e3,
-            x3 = 12001,
-            L3 = 12100,
-            A3 = 12100,
-            I3 = 12200,
-            D3 = 12200,
-            P3 = 12201,
-            V3 = 12202,
-            Y3 = 12203,
-            Q3 = 12204,
-            K3 = 12300,
-            $3 = 12301;
+            bh = 9805,
+            gh = 9806,
+            fh = 9807,
+            Bh = 9808,
+            wh = 9900,
+            Mh = 9900,
+            yh = 9901,
+            ph = 9902,
+            hh = 9903,
+            Eh = 9999,
+            kh = 1e4,
+            zh = 1e4,
+            Sh = 10100,
+            Th = 10100,
+            vh = 10101,
+            Uh = 10102,
+            jh = 10103,
+            Oh = 10104,
+            Wh = 10105,
+            Rh = 10106,
+            qh = 12e3,
+            Fh = 12e3,
+            xh = 12001,
+            Lh = 12100,
+            Ah = 12100,
+            Ih = 12200,
+            Dh = 12200,
+            Ph = 12201,
+            Vh = 12202,
+            Yh = 12203,
+            Qh = 12204,
+            Kh = 12300,
+            $h = 12301;
         },
         83882: (le, se, B) => {
           "use strict";
           B.d(se, { T4: () => a, mx: () => c, u7: () => s });
-          var l = "11024162";
+          var l = "11034825";
           const c = 1,
             e = 2,
             s = 3,
@@ -5430,7 +5430,7 @@
           var c = B(58663),
             e = B.n(c),
             s = B(67480),
-            a = "11024162";
+            a = "11034825";
           const U = 1,
             w = 2,
             g = 3,
@@ -5467,10 +5467,10 @@
             R = 34,
             X = 35,
             ee = 36;
-          var oe = "11024162";
+          var oe = "11034825";
           const ue = 0,
             q = 1;
-          var re = "11024162";
+          var re = "11034825";
           function n(ae) {
             return "unknown EBanContentCheckResult ( " + ae + " )";
           }
@@ -8020,7 +8020,7 @@
             s = B.n(e),
             a = B(67480),
             U = B(98237),
-            w = "11024162";
+            w = "11034825";
           class g extends e.Message {
             static ImplementsStaticInterface() {}
             constructor(o = null) {
@@ -8421,14 +8421,14 @@
             }
           }
           var T = B(13820),
-            v = "11024162";
+            v = "11034825";
           const F = 1,
             x = 2,
             h = 3,
             W = 4,
             Q = 5,
             N = 6;
-          var $ = "11024162";
+          var $ = "11034825";
           const V = 1,
             d = 2,
             z = 3,
@@ -8436,7 +8436,7 @@
             ne = 5,
             te = 6,
             be = 7;
-          var Be = "11024162";
+          var Be = "11034825";
           function Y(ie) {
             return "unknown ESteamPipeOperationType ( " + ie + " )";
           }
@@ -10865,7 +10865,7 @@
           var l = B(58663),
             c = B.n(l),
             e = B(67480),
-            s = "11024162";
+            s = "11034825";
           class a extends l.Message {
             static ImplementsStaticInterface() {}
             constructor(n = null) {
@@ -13789,7 +13789,7 @@
             c = B.n(l),
             e = B(67480),
             s = B(13820),
-            a = "11024162";
+            a = "11034825";
           class U extends l.Message {
             static ImplementsStaticInterface() {}
             constructor(d = null) {
@@ -15242,7 +15242,7 @@
             c = B.n(l),
             e = B(67480),
             s = B(13820),
-            a = "11024162";
+            a = "11034825";
           class U extends l.Message {
             static ImplementsStaticInterface() {}
             constructor(i = null) {
@@ -15325,7 +15325,7 @@
               return "EncryptedAppTicket";
             }
           }
-          var w = "11024162";
+          var w = "11034825";
           class g extends l.Message {
             static ImplementsStaticInterface() {}
             constructor(i = null) {
@@ -19452,7 +19452,7 @@
             g = B.n(w),
             r = B(67480),
             I = B(98237),
-            P = "11024162";
+            P = "11034825";
           class p extends w.Message {
             static ImplementsStaticInterface() {}
             constructor(t = null) {
@@ -19580,7 +19580,7 @@
             }
           }
           var v = B(41780),
-            F = "11024162";
+            F = "11034825";
           const x = -1,
             h = 0,
             W = 1,
@@ -19590,7 +19590,7 @@
             V = 5,
             d = 6,
             z = 7;
-          var _ = "11024162";
+          var _ = "11034825";
           const ne = 0,
             te = 1,
             be = 2,
@@ -19606,7 +19606,7 @@
             E = 12,
             R = 13,
             X = 14;
-          var ee = "11024162";
+          var ee = "11034825";
           const oe = 0,
             ue = 1,
             q = 2,
@@ -19617,7 +19617,7 @@
             j = 7,
             D = 8,
             J = 9;
-          var me = "11024162";
+          var me = "11034825";
           const Ee = 0,
             Me = 1,
             fe = 2,
@@ -19644,7 +19644,7 @@
             ae = 23,
             u = 24,
             O = 25;
-          var ge = "11024162";
+          var ge = "11034825";
           const Ae = 0,
             Se = 1,
             Ue = 2,
@@ -19652,14 +19652,14 @@
             Nr = 4,
             _r = 5,
             Cr = 6;
-          var nt = "11024162";
+          var nt = "11034825";
           const xe = 0,
             Gr = 10,
             rt = 20,
             et = 30,
             tt = 40,
             at = 50;
-          var Dt = "11024162";
+          var Dt = "11034825";
           function ct(De) {
             return "unknown EStoreItemType ( " + De + " )";
           }
@@ -24867,7 +24867,7 @@
         98890: (le, se, B) => {
           "use strict";
           B.d(se, { Kx: () => s, pV: () => c, w: () => a });
-          var l = "11024162";
+          var l = "11034825";
           class c {
             m_nOffset;
             m_nLength;
@@ -24989,7 +24989,7 @@
           });
           var l = B(63696),
             c = B(34699),
-            e = "11024162";
+            e = "11034825";
           function s(V, d, z, _) {
             l.useEffect(() => {
               const ne = V && "current" in V ? V.current : V;
@@ -25308,7 +25308,7 @@
           var l = B(63696),
             c = B(65733),
             e = B(54483),
-            s = "11024162";
+            s = "11034825";
           function a(k, E) {
             return (R, X, ee) => ee;
           }
@@ -25625,7 +25625,7 @@
             cZ: () => e,
           });
           var l = B(63696),
-            c = "11024162";
+            c = "11034825";
           function e(r, I) {
             r != null &&
               (typeof r == "function"
@@ -25676,7 +25676,7 @@
           B.d(se, { Ki: () => g, TS: () => U, YJ: () => a, iA: () => w });
           var l = B(30610),
             c = B(76196),
-            e = "11024162";
+            e = "11034825";
           const s = void 0;
           function a(r) {
             return r;
@@ -25694,7 +25694,7 @@
             c = B(3715),
             e = B(38215),
             s = B(41054),
-            a = "11024162";
+            a = "11034825";
           function U(r) {
             const { queryClient: I = g, steamUI: P } = r;
             l.useEffect(() => {
@@ -25728,7 +25728,7 @@
           "use strict";
           B.d(se, { LH: () => U, Rh: () => s });
           var l = B(63696),
-            c = "11024162";
+            c = "11034825";
           const e = (0, l.createContext)(void 0),
             s = e.Provider;
           function a(w) {
@@ -25760,7 +25760,7 @@
           });
           var l = B(63696),
             c = B(3493),
-            e = "11024162";
+            e = "11034825";
           const s = l.createContext(void 0),
             a = s.Provider,
             U = () => {
@@ -25849,13 +25849,13 @@
           async function e(U) {
             if (c[U]) return c[U]();
           }
-          var s = "11024162";
+          var s = "11034825";
           const a = (0, l.l)(e);
         },
         33183: (le, se, B) => {
           "use strict";
           B.d(se, { P: () => c });
-          var l = "11024162";
+          var l = "11034825";
           class c {
             async GetObject(s, a) {
               try {
@@ -25875,7 +25875,7 @@
           B.d(se, { q: () => s });
           var l = B(6739),
             c = B(94601),
-            e = "11024162";
+            e = "11034825";
           function s() {
             return l.TS.IN_CLIENT && (0, c.DOG)(l.TS.LAUNCHER_TYPE);
           }
@@ -25886,7 +25886,7 @@
           var l = B(37976),
             c = B(94601),
             e = B(6739),
-            s = "11024162";
+            s = "11034825";
           class a {
             m_ulSteamID;
             constructor(w = 0, g, r, I) {
@@ -26060,7 +26060,7 @@
         48603: (le, se, B) => {
           "use strict";
           B.d(se, { Dp: () => a, Fj: () => s, L: () => e });
-          var l = "11024162";
+          var l = "11034825";
           function c(g, r) {
             return U(g, r) !== null;
           }
@@ -26104,7 +26104,7 @@
             g = B(89193),
             r = B(94601),
             I = B(1345),
-            P = "11024162";
+            P = "11034825";
           function p(ze) {
             return "unknown EMsg ( " + ze + " )";
           }
@@ -26128,7 +26128,7 @@
             N = B(3493),
             $ = B(6460),
             V = B(24384),
-            d = "11024162",
+            d = "11034825",
             z = Object.defineProperty,
             _ = Object.getOwnPropertyDescriptor,
             ne = (ze, A, ce, ae) => {
@@ -26471,7 +26471,7 @@
             ne([g.XI], Y.prototype, "OnDisconnect", 1);
           var G = B(48603),
             K = B(5415),
-            Z = "11024162",
+            Z = "11034825",
             L = Object.defineProperty,
             H = Object.getOwnPropertyDescriptor,
             C = (ze, A, ce, ae) => {
@@ -26702,7 +26702,7 @@
             R = B(13820),
             X = B(83957),
             ee = B.n(X),
-            oe = "11024162";
+            oe = "11034825";
           const ue = 10 * 1e3,
             q = 3600 * 24 * 7,
             re = 3600 * 5,
@@ -27002,7 +27002,7 @@
           function o(ze) {
             return (ze.msPing || 0) + (ze.nCMLoad || 0);
           }
-          var S = "11024162",
+          var S = "11034825",
             ye = Object.defineProperty,
             Re = Object.getOwnPropertyDescriptor,
             Oe = (ze, A, ce, ae) => {
@@ -27286,7 +27286,7 @@
             }
           }
           Oe([g.XI], je.prototype, "DecodeAndDispatchMultiMsg", 1);
-          var qe = "11024162";
+          var qe = "11034825";
         },
         24384: (le, se, B) => {
           "use strict";
@@ -27296,7 +27296,7 @@
             e = B(89193),
             s = B(1345),
             a = B(32758),
-            U = "11024162",
+            U = "11034825",
             w = Object.defineProperty,
             g = Object.getOwnPropertyDescriptor,
             r = (P, p, T, v) => {
@@ -27497,7 +27497,7 @@
           const U = "/images/steam_spinner.png";
           var w = B(49364),
             g = B(69766),
-            r = "11024162";
+            r = "11034825";
           const I = c.memo(function (F) {
               const {
                 className: x,
@@ -27843,7 +27843,7 @@
           var l = B(93750),
             c = B(81919),
             e = B(43310),
-            s = "11024162",
+            s = "11034825",
             a = Object.defineProperty,
             U = Object.getOwnPropertyDescriptor,
             w = (W, Q, N, $) => {
@@ -28013,7 +28013,7 @@
         8658: (le, se, B) => {
           "use strict";
           B.d(se, { A: () => c });
-          var l = "11024162";
+          var l = "11034825";
           function c(...s) {
             return s.reduce(
               (a, U) =>
@@ -28041,7 +28041,7 @@
         93071: (le, se, B) => {
           "use strict";
           B.d(se, { VY: () => c, kI: () => s, lc: () => e });
-          var l = "11024162";
+          var l = "11034825";
           function c(a) {
             if (!s() || !window.document.cookie) return null;
             const U = document.cookie.match("(^|; )" + a + "=([^;]*)");
@@ -28104,7 +28104,7 @@
             yU: () => X,
           });
           var l = B(48603),
-            c = "11024162";
+            c = "11034825";
           function e(M) {
             return M != null && M.focus !== void 0;
           }
@@ -28631,7 +28631,7 @@
             g = B(6460),
             r = B(9040),
             I = B(65639),
-            P = "11024162";
+            P = "11034825";
           class p {
             m_mapTokens = new Map();
             m_mapFallbackTokens = new Map();
@@ -29099,7 +29099,7 @@
             c = B(7727),
             e = B(5415),
             s = B(9040),
-            a = "11024162";
+            a = "11034825";
           const U = 2147483647;
           var w = ((q) => (
             (q[(q.None = 0)] = "None"),
@@ -29739,7 +29739,7 @@
             c = B(34699),
             e = B(83780),
             s = B(63696),
-            a = "11024162";
+            a = "11034825";
           function U() {
             const [x, h] = (0, s.useState)(!1),
               W = (0, e.BL)((0, s.useCallback)((d) => h(d.isIntersecting), [])),
@@ -29758,7 +29758,7 @@
               { style: W, ref: h }
             );
           }
-          var g = "11024162";
+          var g = "11034825";
           function r() {
             const [x, h] = s.useState(0),
               W = s.useCallback(
@@ -29773,7 +29773,7 @@
             return { strMinHeightStyle: Q, refForResizeObserver: N };
           }
           var I = B(57575),
-            P = "11024162";
+            P = "11034825";
           function p(x) {
             return (0, c.QS)(
               (h) => {
@@ -29810,7 +29810,7 @@
             return (0, c.Ue)(V, z);
           }
           var v = B(81919),
-            F = "11024162";
+            F = "11034825";
         },
         83780: (le, se, B) => {
           "use strict";
@@ -29825,7 +29825,7 @@
             c = B(3493),
             e = B(50789),
             s = B(34699),
-            a = "11024162";
+            a = "11034825";
           function U(p, T) {
             return (0, s.QS)(
               (v) => {
@@ -29887,7 +29887,7 @@
             wi: () => g,
             yS: () => p,
           });
-          var l = "11024162";
+          var l = "11034825";
           const c = {
             PerYear: 31536e3,
             PerMonth: 2628e3,
@@ -30001,7 +30001,7 @@
             a = B(30610),
             U = B(22545),
             w = B(76196),
-            g = "11024162";
+            g = "11034825";
           const r = l.createContext({}),
             I = (L) => {
               const H = l.useContext(r);
@@ -30142,7 +30142,7 @@
           "use strict";
           B.d(se, { GP: () => a, TS: () => e, UF: () => U, iA: () => s });
           var l = B(83882),
-            c = "11024162";
+            c = "11034825";
           const e = {
               EUNIVERSE: 0,
               LANGUAGE: "english",
@@ -30251,7 +30251,7 @@
           var l = B(23365),
             c = B(93071),
             e = B(30610),
-            s = "11024162";
+            s = "11034825";
           const a = "webui_config";
           function U($, V = a) {
             return g($, V, !0);
@@ -30283,7 +30283,7 @@
               }
             else d && console.error("Missing config element #", V);
           }
-          var r = "11024162";
+          var r = "11034825";
           let I;
           function P() {
             if (!(0, c.kI)()) return I || (I = T()), I;
@@ -30345,7 +30345,7 @@
         22545: (le, se, B) => {
           "use strict";
           B.d(se, { $W: () => W, Ae: () => x, MP: () => Q, OO: () => N });
-          var l = "11024162";
+          var l = "11034825";
           function c() {
             const d = navigator.userAgent.match(
               /Valve (?<family>Steam (?:Client|GameOverlay|Tenfoot|ClientUI|Gamepad(?: VR)?(?:\/Steam Deck)?))( \[(?<betaid>[^\]]*)\])?(\/(?<launcher>[A-Za-z0-9_]+))?\/(?<version>[0-9]*)/,
@@ -30439,11 +30439,11 @@
         77680: (le, se, B) => {
           "use strict";
           B.d(se, { w: () => U, r: () => w });
-          var l = "11024162";
+          var l = "11034825";
           const c = 0,
             e = 1,
             s = 2;
-          var a = "11024162";
+          var a = "11034825";
           const U = { SHOW_CONSOLE: "", CLOUD_GAMING_PLATFORM: c };
           function w() {
             return U.CLOUD_GAMING_PLATFORM != c;
@@ -30455,7 +30455,7 @@
           var l = B(33183),
             c = B(3493),
             e = B(51934),
-            s = "11024162";
+            s = "11034825";
           class a extends l.P {
             async GetString(w) {
               try {
@@ -30497,7 +30497,7 @@
           B.d(se, { W: () => g });
           var l = B(94601),
             c = B(81919),
-            e = "11024162",
+            e = "11034825",
             s = Object.defineProperty,
             a = Object.getOwnPropertyDescriptor,
             U = (r, I, P, p) => {
@@ -30541,7 +30541,7 @@
             I = B(94601),
             P = B(41196),
             p = B(77680),
-            T = "11024162";
+            T = "11034825";
           const v = "steam-dev-configparams";
           function F() {
             let L = "";
@@ -30586,7 +30586,7 @@
             N = B(71262),
             $ = B(33113),
             V = B(40618),
-            d = "11024162";
+            d = "11034825";
           const z = !1,
             _ = c.lazy(() =>
               Promise.all([B.e(8732), B.e(9858)]).then(B.bind(B, 69247)),
@@ -30923,10 +30923,10 @@
           1005: "ed0572adc5c83f812480",
           1012: "a0a4c8d311a74eee8739",
           1093: "7f0c4e6c6c2afda765ac",
-          1129: "f1ee5052fecc4433873b",
+          1129: "54ae8933b90d577bb4a2",
           1133: "593f5625576273fa1b02",
           1139: "73f2d4750cc821a7c174",
-          1220: "b3fae40c917c706e04b1",
+          1220: "771bd7e0075b1bc2a554",
           1242: "55e6f32a7f11944582fa",
           1275: "4b46e9a60bae2f002505",
           1325: "96fd0ae9a7f81ec1166d",
@@ -31025,9 +31025,9 @@
           3675: "cea0ad6c26841f88fafb",
           3695: "422d2575980846079b4d",
           3706: "92f0a3c318f58bd99bc6",
-          3714: "2858048d7f2e25536d95",
+          3714: "0f6b14e6fe892dc05014",
           3744: "fb32fdb81df86c28f0ba",
-          3834: "a41e62c36e731fe69096",
+          3834: "d2ac3d34a90850aed764",
           3869: "b11b7577929977617b68",
           3876: "cd47251629b35640f099",
           3899: "9424c09af3c901407feb",
@@ -31127,13 +31127,13 @@
           7376: "7a2e45e83020c0c0fb30",
           7386: "111ecac2d02741fbe78f",
           7442: "7125d7393f938077141d",
-          7462: "4d27eef002e0e7978fd3",
+          7462: "b9533eee874a78403fc8",
           7503: "2a2d5e85bed422733362",
           7533: "3f63ac2de9d528e78ae5",
           7554: "6756389bf696a8af47e4",
           7569: "563e6d56f131a4c0592a",
           7627: "a7e59a6c103703993ff4",
-          7653: "abba13d4a167f11fe708",
+          7653: "3db5339e42b09c7a69b7",
           7656: "945bf4771595c97a5863",
           7696: "d072500369a8b03cb0d7",
           7770: "88b52bd896e94d33eb89",
@@ -31159,7 +31159,7 @@
           8330: "c0a626361de728a5cc7d",
           8346: "94e60215550412cc1e2d",
           8391: "3bd2af3d47ee232194b6",
-          8396: "78865da09eaa73909c88",
+          8396: "88b2ec1d30c00d9a8795",
           8405: "005b00bf889a38e104f2",
           8443: "bf2f5b2f586df7296192",
           8445: "5de060ae1a44b92e1adf",
@@ -31192,7 +31192,7 @@
           9063: "61c4455e89dc3e20982a",
           9108: "b59e341bfc33ea4bb177",
           9120: "4375e538d335c79f4431",
-          9129: "dfb0d207db41a96ab0d2",
+          9129: "e7c1d98cc4db68b75bd1",
           9134: "158a755a5dea49b88f33",
           9171: "9db629040e42fde9bcaa",
           9183: "804e88b886dcd4d7c7f7",
@@ -31209,14 +31209,14 @@
           9536: "54fe371bb681b1740ab9",
           9558: "1b4edaa0c7e601117d5c",
           9637: "99eac8f1c34b77eb9bb6",
-          9672: "46d4f119815218d15429",
+          9672: "ca9fe99f59e32d59b592",
           9711: "58fab6e831c95d285857",
           9737: "f02608b4d2ae113a22a9",
           9740: "79c3453c5ddb8e8784bf",
           9779: "3c977cd462d0b2b1ff74",
           9845: "885501e9a7136c60a48e",
           9853: "3c857eb96c35ff130524",
-          9858: "683bc693b72494713c70",
+          9858: "ac6e1a4887fa3584c67a",
           9861: "e052d59d17fbfa6621fa",
           9862: "6550d69f355bbe69f225",
           9869: "e8990e5cb4274d1ab0d9",

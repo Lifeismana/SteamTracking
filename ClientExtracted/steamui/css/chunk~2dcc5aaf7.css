@@ -87946,8 +87946,7 @@ button.O5IopE9S2tZ4CgKGn9YWh._1JjlCEet0U46IH_bumoD0j:hover {
 }
 ._1OdOFMpy7aHHxuCMugXDJq._2VMPXXql5oP3XDeGTVd9Lk
   ._1B9Kfc0uR6Y8CNJD5LkNw_::before,
-._1OdOFMpy7aHHxuCMugXDJq:hover ._1B9Kfc0uR6Y8CNJD5LkNw_::before,
-._1OdOFMpy7aHHxuCMugXDJq.gpfocus ._1B9Kfc0uR6Y8CNJD5LkNw_::before {
+._1OdOFMpy7aHHxuCMugXDJq:hover ._1B9Kfc0uR6Y8CNJD5LkNw_::before {
   background: #23262e;
   opacity: 0.75;
 }
@@ -224187,10 +224186,13 @@ button._1I26U52L7lJKgLprxrKKp4 svg {
     background-position: 50% 0%;
   }
 }
-@property --percent {
+@property --quickaccesspercent {
   syntax: "<number>";
   inherits: false;
   initial-value: 0;
+}
+._19lJKcDO5Um5eXHvq-CbVd {
+  position: relative;
 }
 ._19lJKcDO5Um5eXHvq-CbVd .l9qPDNlrrCpYKR96RDKnt {
   letter-spacing: 0;
@@ -224325,6 +224327,23 @@ button._1I26U52L7lJKgLprxrKKp4 svg {
   display: flex;
   flex-direction: column;
   gap: 1px;
+  background: #23262e;
+  padding-inline: 12px;
+  padding-block: 12px;
+}
+@media (min-width: 1500px) {
+  ._1VuAUbpluDweknAkVPF7-A {
+    padding-inline: 20px;
+  }
+}
+._1VuAUbpluDweknAkVPF7-A {
+  transition: background-color 0s;
+}
+._1VuAUbpluDweknAkVPF7-A:focus-within {
+  background: #3d4450;
+  color: #fff;
+  animation: _2JjNfdKXkfhXUDPq4oCufd 0.5s cubic-bezier(0.17, 0.45, 0.14, 0.83)
+    forwards;
 }
 ._6aQ4UileSostlwxVduvE7 {
   margin-bottom: 6px;
@@ -224416,7 +224435,7 @@ button._1I26U52L7lJKgLprxrKKp4 svg {
 }
 ._1zQgf4oesrAtd0gCD-0G-e._2K8ZLbaTj__bCK5g2aLUAR {
   --status-color: #1a9fff;
-  --_pct: calc(clamp(0, var(--percent), 100) * 1%);
+  --_pct: calc(clamp(0, var(--quickaccesspercent), 100) * 1%);
   min-inline-size: 0;
   align-self: stretch;
   height: 10px;
@@ -224426,7 +224445,7 @@ button._1I26U52L7lJKgLprxrKKp4 svg {
     var(--status-color) 0 var(--_pct),
     #000 var(--_pct) 100%
   );
-  transition: --percent 200ms linear;
+  transition: --quickaccesspercent 200ms linear;
   border-radius: 9999px;
 }
 ._3S7eOmv2YlAXSuBVEcKDDF {
@@ -224470,8 +224489,10 @@ button._1I26U52L7lJKgLprxrKKp4 svg {
   color: hsla(0, 0%, 100%, 0.65);
   font-size: 0.8em;
   cursor: pointer;
+  outline: none;
 }
-._8FMS-PuUDunZuX46n31T1:hover {
+._8FMS-PuUDunZuX46n31T1:hover,
+._8FMS-PuUDunZuX46n31T1.gpfocus {
   color: #fff;
 }
 ._2Qs5Q22jx5eairHlO3a-JR {
