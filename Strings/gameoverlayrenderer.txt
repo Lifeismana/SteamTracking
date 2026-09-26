@@ -47,7 +47,6 @@ $ORIGIN
 *\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNG6
 ++CCUNGstd::exception
 ----------------------------\n
 /ValveIPCSHM_%d
@@ -243,6 +242,7 @@ GameOverlay_MovieStream_%u
 GameOverlay_ScreenshotStream_%d
 GameOverlay_SerializedWorkQueued_%d
 GameOverlay_VGUIPaintingCompleted_%d
+Gamepad UI: mouse moved, showing hw cursor\n
 Got EndFrame, but still have [%d] bytes remaining in render loop buffer\n
 Got hTexture of non NULL on shared texture draw but new shared tex update has no shared texture.\n
 HasXInput2

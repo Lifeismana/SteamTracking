@@ -1494,8 +1494,8 @@ $ffn
 ---FS:  write %s %llu %p\n
 --alongside-steam
 --disable
+--edit-env-fd=%d
 --enable
---env-fd=%d
 --error
 --forward-fd=%d
 --terminate-when-signaled
@@ -2012,8 +2012,8 @@ $ffn
 01/01/00
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
-0123456789ABCDEF zS
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
+0123456789ABCDEF`yS
 0123456789abcdef
 08bX
 0?0L
@@ -2594,8 +2594,8 @@ $ffn
 22CEC25519PrivateKeyBase
 22CFutureSharedStateBase
 22ISSLConnectionCallback
-23:38:02
-23:38:07
+23:33:01
+23:33:05
 23CActivationCodeItemInfo
 23CClanEventUserNewsTuple
 23CDummyWebSocketCallback
@@ -2803,11 +2803,11 @@ $ffn
 6#6165676;6M6O6S6Y6a6k6m6
 6*Fc7
 6-nn
+604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 6144
 64CK\vH
 65536
 60000000
-604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 666666666666666666666666666666666666666666666666
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
@@ -2905,7 +2905,6 @@ $ffn
 9CUtlQueueIP12CProtoBufMsgI8CMsgSpewEE
 9CUtlQueueIP9CLogEventE
 9CWorkItem
-9Hh%J
 9IGv
 9IMemAlloc
 9IValidate
@@ -2925,7 +2924,6 @@ $ffn
 :':+:1:K:Q:[:c:g:m:y:
 :.JlN
 :5ptI.T(
-:7G7
 :BAD BOOLEAN
 :BAD ENUMERATED
 :BAD INTEGER
@@ -6754,6 +6752,7 @@ Invalid Platform
 Invalid Protocol
 Invalid RSA modulus: %d bytes wide
 Invalid SOS parameters for sequential JPEG
+Invalid SetVarPolicy %d
 Invalid State
 Invalid Steam ID
 Invalid TCP queue work item type %d
@@ -7036,7 +7035,6 @@ LC_NUMERIC
 LC_PAPER
 LC_TELEPHONE
 LC_TIME
-LD_LIBRARY_PATH
 LEGACY_GOST_PKCS12
 LINUX
 LINUX32
@@ -9123,7 +9121,7 @@ Sending of an email failed
 Sending up to %u queued request(s) for %s\n
 Sent message: %s - %u bytes\n
 Sentiment
-Sep 22 2026
+Sep 25 2026
 September
 Serbian
 SerialNumber
@@ -9387,7 +9385,7 @@ StartSteamRTLogger
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Sep 22 2026 23:38:07
+Startup - updater built Sep 25 2026 23:33:05
 State
 StaticFileWriterThread()
 Steam
@@ -11350,6 +11348,7 @@ anyExtendedKeyUsage
 anyPolicy
 app data in handshake
 app_type
+append=
 append_exp
 appid
 appl [ %d ]
@@ -13814,7 +13813,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen
+ggen(
 givenName
 glBegin
 glBindTexture
@@ -17777,8 +17776,8 @@ pchSearch != nullptr
 pchSteam2ID
 pchString != nullptr
 pchTLSServerName == NULL
+pchValue || eSetVarPolicy == k_ESetVarPolicy_Delete
 pchVar
-pchVar && pchValue
 pch[cub - 1] != '\0' && pch[cub] == '\0'
 pclose
 pcubDecodedData
@@ -18012,6 +18011,7 @@ precise_frame_rate
 prediction resistance not supported
 preferredDeliveryMethod
 preloadonly
+prepend=
 prerelease
 presentationAddress
 prev
@@ -18739,6 +18739,7 @@ set-msgExt
 set-policy
 set-policy-root
 set-rootKeyThumb
+set=
 setAttr-Cert
 setAttr-GenCryptgrm
 setAttr-IssCap
@@ -19998,6 +19999,7 @@ unrecognized signature nid
 unregistered scheme
 unsafe legacy renegotiation disabled
 unset
+unset=
 unsetenv
 unsigned
 unsigned __int128

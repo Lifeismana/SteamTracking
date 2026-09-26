@@ -115,7 +115,7 @@ $ORIGIN
 11CTrackItems
 12CStdMemAlloc
 16CAdHocValidation
-23:38:04
+23:33:03
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
 <family %u, %u bytes>
@@ -446,7 +446,7 @@ SDL_SetCurrentThreadPriority
 STEAM_DESKTOP_APP_AFFINITY_LIST
 SecureRandomBytes
 Semaphore name (%s) is longer than POSIX can handle, truncating.
-Sep 22 2026
+Sep 25 2026
 ServerMain
 SetAssertDialogsShown
 SetAssertDumpStack
@@ -737,7 +737,6 @@ Warning: failed to set thread priority: set failed for priority %d\n
 Warning: support for elevated priorities is most likely unavailable, suppressing future warnings\n
 Warning: thread priority outside allowed range %d\n
 WriteMiniDump
-Xq6<
 [ func+child   func ]     Count\n
 [ func+child   func ]  [ func+child   func ]  [ func+child   func ]  Count   Peak\n
 [%s] tgid=%d begin_ctx=%lld

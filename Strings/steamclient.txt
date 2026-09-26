@@ -110,6 +110,7 @@
  !"#$%&'()*+,-./0123
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+ !"#$%&'()*+,-./0123\r
  !BAllIntraProcessMessagesReceived( %d outstanding )
  "iss": "%s"
  $8O[lv
@@ -5464,6 +5465,8 @@ $steammessages_parental_objects.proto"
 +(#\v&dbF:xrJ'$#
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNG=
+++CCUNGb
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 +.CAudio_GetBluetoothAudioPreference_Request
@@ -6000,6 +6003,7 @@ $steammessages_parental_objects.proto"
 --disable-smooth-scrolling
 --disable-winh264
 --disablehighdpi
+--edit-env-fd=%d
 --enable
 --enable-gpu-debugging
 --enable-logging
@@ -6007,7 +6011,6 @@ $steammessages_parental_objects.proto"
 --enable-sandbox-logging
 --enable-smooth-scrolling
 --enable-validation
---env-fd=%d
 --force-device-scale-factor=1
 --force-renderer-accessibility
 --forward-fd=%d
@@ -6542,9 +6545,10 @@ $steammessages_parental_objects.proto"
 ../clientdll/shadercachemanager/shadercachemanager.cpp:2102
 ../clientdll/shadercachemanager/shadercachemanager.cpp:2172
 ../clientdll/shadercachemanager/shadercachemanager.cpp:2226
-../clientdll/shadercachemanager/shadercachemanager.cpp:3822
-../clientdll/shadercachemanager/shadercachemanager.cpp:3950
-../clientdll/shadercachemanager/shadercachemanager.cpp:4233
+../clientdll/shadercachemanager/shadercachemanager.cpp:3820
+../clientdll/shadercachemanager/shadercachemanager.cpp:3948
+../clientdll/shadercachemanager/shadercachemanager.cpp:4231
+../clientdll/shadercachemanager/shadercompilejob.cpp
 ../clientdll/shadercachemanager/shadercontentupdatejob.cpp
 ../clientdll/sitelicenseclient.cpp
 ../clientdll/steamclient.cpp
@@ -6686,6 +6690,7 @@ $steammessages_parental_objects.proto"
 ../common/platformhelpers.cpp
 ../common/processkill.cpp
 ../common/processpipe_posix.cpp
+../common/processworkitem.cpp
 ../common/progressestimator.cpp
 ../common/registry.cpp
 ../common/resourcecache.h
@@ -8299,7 +8304,6 @@ $steammessages_parental_objects.proto"
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
-0123456789ABCDEFP
 0123456789abcdef
 08bX
 0: Auto. 1: Force Controller to be "HandHeld" orientation, like SteamDeck (tilt in pitch by 90 degrees so that "Yaw" is "Through the Screen". 2: Force Controller to be "Standalone" controller like Steam Controller, where "Yaw" is "Through Sticks".
@@ -8805,8 +8809,8 @@ $steammessages_parental_objects.proto"
 10CUtlMemoryIN11CUtlHashMapI10CUtlStringN14CUtlHashMapLRUIS1_7CUtlPtrI5CLockE10CDefEqualsIS1_E11HashFunctorIS1_EE15ElementBucket_tES7_S9_10StringViewE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapI10CUtlStringN14CUtlHashMapLRUIS1_N20COfflineMessageCache13CachedMessageE10CDefEqualsIS1_E11HashFunctorIS1_EE15ElementBucket_tES6_S8_10StringViewE12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapI10CUtlStringN14CUtlHashMapLRUIS1_N20COfflineMessageCache13CachedMessageE10CDefEqualsIS1_E11HashFunctorIS1_EE15ElementBucket_tES6_S8_10StringViewE6Node_tEE
-10CUtlMemoryIN11CUtlHashMapI10CUtlStringS1_27CDefCaselessUtlStringEquals28HashFunctorUtlStringCaseless10StringViewE12HashBucket_tEE
-10CUtlMemoryIN11CUtlHashMapI10CUtlStringS1_27CDefCaselessUtlStringEquals28HashFunctorUtlStringCaseless10StringViewE6Node_tEE
+10CUtlMemoryIN11CUtlHashMapI10CUtlStringN24CChildEnvironmentBuilder10EnvEntry_tE27CDefCaselessUtlStringEquals28HashFunctorUtlStringCaseless10StringViewE12HashBucket_tEE
+10CUtlMemoryIN11CUtlHashMapI10CUtlStringN24CChildEnvironmentBuilder10EnvEntry_tE27CDefCaselessUtlStringEquals28HashFunctorUtlStringCaseless10StringViewE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapI10CUtlStringb10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapI10CUtlStringb10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapI10CUtlStringi10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE12HashBucket_tEE
@@ -9460,7 +9464,7 @@ $steammessages_parental_objects.proto"
 10CUtlVectorIN11CUtlHashMapI10CIPAndPortPN25SteamNetworkingSocketsLib11RelayServerE10CDefEqualsIS1_E11HashFunctorIS1_ES1_E12HashBucket_tE10CUtlMemoryISA_EE
 10CUtlVectorIN11CUtlHashMapI10CUtlStringN14CUtlHashMapLRUIS1_7CUtlPtrI5CLockE10CDefEqualsIS1_E11HashFunctorIS1_EE15ElementBucket_tES7_S9_10StringViewE12HashBucket_tE10CUtlMemoryISE_EE
 10CUtlVectorIN11CUtlHashMapI10CUtlStringN14CUtlHashMapLRUIS1_N20COfflineMessageCache13CachedMessageE10CDefEqualsIS1_E11HashFunctorIS1_EE15ElementBucket_tES6_S8_10StringViewE12HashBucket_tE10CUtlMemoryISD_EE
-10CUtlVectorIN11CUtlHashMapI10CUtlStringS1_27CDefCaselessUtlStringEquals28HashFunctorUtlStringCaseless10StringViewE12HashBucket_tE10CUtlMemoryIS6_EE
+10CUtlVectorIN11CUtlHashMapI10CUtlStringN24CChildEnvironmentBuilder10EnvEntry_tE27CDefCaselessUtlStringEquals28HashFunctorUtlStringCaseless10StringViewE12HashBucket_tE10CUtlMemoryIS8_EE
 10CUtlVectorIN11CUtlHashMapI10CUtlStringb10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE12HashBucket_tE10CUtlMemoryIS8_EE
 10CUtlVectorIN11CUtlHashMapI10CUtlStringi10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE12HashBucket_tE10CUtlMemoryIS8_EE
 10CUtlVectorIN11CUtlHashMapI10CUtlStringj10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE12HashBucket_tE10CUtlMemoryIS8_EE
@@ -9751,7 +9755,7 @@ $steammessages_parental_objects.proto"
 11CUtlHashMapI10CIPAndPortPN25SteamNetworkingSocketsLib11RelayServerE10CDefEqualsIS0_E11HashFunctorIS0_ES0_E
 11CUtlHashMapI10CUtlStringN14CUtlHashMapLRUIS0_7CUtlPtrI5CLockE10CDefEqualsIS0_E11HashFunctorIS0_EE15ElementBucket_tES6_S8_10StringViewE
 11CUtlHashMapI10CUtlStringN14CUtlHashMapLRUIS0_N20COfflineMessageCache13CachedMessageE10CDefEqualsIS0_E11HashFunctorIS0_EE15ElementBucket_tES5_S7_10StringViewE
-11CUtlHashMapI10CUtlStringS0_27CDefCaselessUtlStringEquals28HashFunctorUtlStringCaseless10StringViewE
+11CUtlHashMapI10CUtlStringN24CChildEnvironmentBuilder10EnvEntry_tE27CDefCaselessUtlStringEquals28HashFunctorUtlStringCaseless10StringViewE
 11CUtlHashMapI10CUtlStringb10CDefEqualsIS0_E11HashFunctorIS0_E10StringViewE
 11CUtlHashMapI10CUtlStringi10CDefEqualsIS0_E11HashFunctorIS0_E10StringViewE
 11CUtlHashMapI10CUtlStringj10CDefEqualsIS0_E11HashFunctorIS0_E10StringViewE
@@ -11888,11 +11892,11 @@ $steammessages_parental_objects.proto"
 20.StoreItem.PackageGroup.EPackageGroupDisplayType
 200 Mbps
 2000
+2000000
 200M
 2019
 2048
 20000
-2000000
 208.64.200.0/22
 208.78.164.0/22
 20AccountHardware_Stub
@@ -12882,6 +12886,8 @@ $steammessages_parental_objects.proto"
 26CCloudGaming_TimeRemaining
 26CCommunity_GetApps_Request
 26CCompatRemoteStorageConfig
+26CControllerAPIHideWorkItem
+26CControllerAPIShowWorkItem
 26CControllerAbstractionBase
 26CControllerEResultWorkItem
 26CEconItem_ClassIdentifiers
@@ -16870,7 +16876,7 @@ $steammessages_parental_objects.proto"
 9Econ_Stub
 9GameNotes
 9Gamescope
-9H(2
+9Hh+
 9IClientVR
 9IGv
 9ISteamUGC
@@ -17454,7 +17460,6 @@ AA Compromise
 AACompromise
 ABADF
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
-ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/`
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_
 ABORTED
 ABSENT
@@ -26151,6 +26156,7 @@ Failed to varint decode size of stats blob
 Failed to verify password
 Failed to wait for details for the controller when pairing
 Failed to wait for shared fd client\n
+Failed to wrap process item with launch client
 Failed to write JMP instruction during dongle update!
 Failed to write app state file
 Failed to write app state file "%s" (%u bytes): %s
@@ -28928,6 +28934,7 @@ Invalid SOS parameters for sequential JPEG
 Invalid STEAM_DISPLAY_REFRESH_LIMITS: '%s' - Expected: '<int>,<int>'
 Invalid STEAM_DISPLAY_REFRESH_LIMITS: min greater than max: %d,%d
 Invalid SWARC depot file archive magic, skipping.
+Invalid SetVarPolicy %d
 Invalid Stat type
 Invalid State
 Invalid Steam ID
@@ -30514,6 +30521,7 @@ MutableRawRepeatedField
 MutableRepeatedMessage
 MuteBroadcastChatUser
 MuteUserInGroup
+MxGw
 Myanmar
 N#_4o9
 N*WVe
@@ -31661,6 +31669,7 @@ No space in chunk cache for sPLT
 No speex decoder available, abandoning voice\n
 No staging folder specified
 No subscription
+No support for SetVarPolicy %d for variable %s
 No target folder
 No target sources connected
 No user for interface %d /+/ buf %d %02x %02x %02x %02x, %s
@@ -35064,6 +35073,7 @@ STEAM_GAMESERVER_RATE_LIMIT_200MS
 STEAM_GAMES_RUNNING
 STEAM_GAME_LAUNCH_SHELL
 STEAM_GAME_PIDS
+STEAM_LAUNCH_WRAPPER_SCOPE
 STEAM_MANGOAPP_HORIZONTAL_SUPPORTED
 STEAM_MANGOAPP_PRESETS_SUPPORTED
 STEAM_MULTIPLE_XWAYLANDS
@@ -39096,7 +39106,6 @@ VarData dump: %u bytes\n
 Variants Also Negotiates
 Vary
 Vc0a
-Vc`O
 Vendor
 Verbose
 Verbose computer activity detection.
@@ -44069,6 +44078,7 @@ appcache/slscache
 appcloudsessions
 appdata
 appearance
+append=
 append_exp
 append_strings
 appid
@@ -49169,7 +49179,7 @@ getting staging path
 getuid
 getwc
 gf2m not supported
-ggen
+ggen(
 ghjkl
 gidlist
 gidparentcomment
@@ -54335,7 +54345,6 @@ m_Token
 m_TotalElements != InvalidIndex()
 m_TrackedWorkshopControllerConfigs
 m_Tree
-m_UnsetEnvironmentVariables
 m_UpdateContext
 m_UpdateContext.GetTotalBytesToStage() == 0
 m_UpdateScheduler
@@ -54512,7 +54521,6 @@ m_cbBytesToDownload >= 0
 m_cbMaxEncryptedPayload >= 0
 m_cbSize >= 0
 m_cbTotalSize >= 0
-m_compatToolEnvBlock
 m_configOverride
 m_connection.BCryptKeysValid()
 m_connection.GetSignedCertLocal().has_cert()
@@ -54594,6 +54602,7 @@ m_eUniverse != k_EUniverseInvalid
 m_eUploadResult != k_EBroadcastUploadResultNone
 m_eVideoCodec > 0
 m_eVoiceQuality != VOICECHUNK_SILENT
+m_envChild
 m_errorIndex>=0
 m_fakeIP.m_arPorts[idxPort]
 m_fakeIP.m_eResult == k_EResultBusy
@@ -54829,7 +54838,6 @@ m_mapControllerEnabled
 m_mapCoplayEvents
 m_mapCurrentItemDefPricesByApp
 m_mapCurrentPlayers
-m_mapDeletes
 m_mapDeltaChunks
 m_mapDeltaChunks.Element( i )
 m_mapDependentApps
@@ -54842,7 +54850,6 @@ m_mapDownloadTimersProxyCaches
 m_mapDownloadedUGC
 m_mapEligiblePromoItemDefIDs
 m_mapEncryptedAppTickets
-m_mapEnvironmentVariables
 m_mapEquippedItems
 m_mapEvents
 m_mapEvents[i].m_sHeadline
@@ -58706,8 +58713,8 @@ pchRequestFileName
 pchSSLCertificate && pchSSLPrivateKey
 pchSteam2ID
 pchTLSServerName == NULL
+pchValue || eSetVarPolicy == k_ESetVarPolicy_Delete
 pchVar
-pchVar && pchValue
 pch[cub - 1] != '\0' && pch[cub] == '\0'
 pclose
 pcmag.com
@@ -59161,6 +59168,7 @@ prepare-for-shutdown
 prepare-for-sleep
 preparing-for-shutdown
 preparing-for-sleep
+prepend=
 prerelease
 presence
 presence-in
@@ -60831,6 +60839,7 @@ set-msgExt
 set-policy
 set-policy-root
 set-rootKeyThumb
+set=
 setAttr-Cert
 setAttr-GenCryptgrm
 setAttr-IssCap
@@ -61627,7 +61636,7 @@ stderr
 stdin
 stdout
 steam
-steam Sep 22 2026 23:38:07
+steam Sep 25 2026 23:33:05
 steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
 steam-runtime-launch-client --alongside-steam -- /usr/bin/steamos-polkit-helpers/jupiter-biosupdate
@@ -63779,6 +63788,7 @@ unreliable msgnum offset
 unreliable size lower bits
 unsafe legacy renegotiation disabled
 unset
+unset=
 unsigned
 unsigned __int128
 unsigned char

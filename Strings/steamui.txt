@@ -5259,8 +5259,10 @@ ${LANGUAGE}
 +(#\v&dbF:xrJ'$#
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNGSI
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
+++CCUNGxQ
 +.CAudio_GetBluetoothAudioPreference_Request
 +.CAudio_SetBluetoothAudioPreference_Request
 +.CAuthenticationSupport_RevokeToken_Request
@@ -5728,8 +5730,8 @@ ${LANGUAGE}
 --autofind-off --start-minimized
 --check-for-updates
 --disable
+--edit-env-fd=%d
 --enable
---env-fd=%d
 --error
 --forward-fd=%d
 --prep-by-serial
@@ -5988,6 +5990,7 @@ ${LANGUAGE}
 -pretendeol
 -pretendeol32
 -profilestartup
+-pyrowavestats
 -query
 -query-arg
 -quicklogin
@@ -6131,6 +6134,7 @@ ${LANGUAGE}
 ../common/platformhelpers.cpp
 ../common/processkill.cpp
 ../common/processpipe_posix.cpp
+../common/processworkitem.cpp
 ../common/processworkitem.h
 ../common/progressestimator.cpp
 ../common/registry.cpp
@@ -7725,7 +7729,6 @@ ${LANGUAGE}
 0 Umv
 0"W\n+CCommunity_GetUserPartnerEventNews_Response
 0(`xPH
-0.15
 0.CAccountHardware_GetPersonalizationFile_Request
 0.CAccountHardware_GetSteamDeckComponents_Request
 0.CAccountHardware_SetPersonalizationFile_Request
@@ -7771,16 +7774,16 @@ ${LANGUAGE}
 0000
 00000000
 0000000000000000000000000000000000000000
+0.15
 00003333
+0123456789.
+0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
-0123456789.
-0123456789
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
-0123456789ABCDEFPka
 0123456789abcdef
 03000000de280000fc11000001000000,Steam Controller,a:b0,b:b1,back:b6,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,guide:b8,leftshoulder:b4,leftstick:b9,lefttrigger:a2,leftx:a0,lefty:a1,rightshoulder:b5,rightstick:b10,righttrigger:a5,rightx:a3,righty:a4,start:b7,x:b2,y:b3,
 03000000de280000ff11000001000000
@@ -8000,7 +8003,6 @@ ${LANGUAGE}
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringP10CUtlVectorIN16CCookieContainer11CCookieInfoES_IS5_EEi22CDefCaselessStringLessE6Node_tEiNSA_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringP10IIPCServeri8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
-10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringS2_i8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringji8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringli8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI14CBaseUtlSymbolItEPK9KeyValuesi8CDefLessE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
@@ -8082,6 +8084,8 @@ ${LANGUAGE}
 10CUtlMemoryIN11CUtlHashMapI10CUtlStringN19CSettingsController27ForeignSettingHandlerInfo_tE10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapI10CUtlStringN21CHTMLWindowController20JSRegisteredMethod_tE10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapI10CUtlStringN21CHTMLWindowController20JSRegisteredMethod_tE10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE6Node_tEE
+10CUtlMemoryIN11CUtlHashMapI10CUtlStringN24CChildEnvironmentBuilder10EnvEntry_tE27CDefCaselessUtlStringEquals28HashFunctorUtlStringCaseless10StringViewE12HashBucket_tEE
+10CUtlMemoryIN11CUtlHashMapI10CUtlStringN24CChildEnvironmentBuilder10EnvEntry_tE27CDefCaselessUtlStringEquals28HashFunctorUtlStringCaseless10StringViewE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapI10CUtlStringN24CGameRecordingController21ActiveRecordingData_tE10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapI10CUtlStringN24CGameRecordingController21ActiveRecordingData_tE10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapI10CUtlStringN27CSteamUIMessagingController17ChannelCallback_tE10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE12HashBucket_tEE
@@ -8373,7 +8377,6 @@ ${LANGUAGE}
 10CUtlRBTreeIN7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlRBTreeIN7CUtlMapI10CUtlStringP10CUtlVectorIN16CCookieContainer11CCookieInfoE10CUtlMemoryIS4_EEi22CDefCaselessStringLessE6Node_tEiNSA_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlRBTreeIN7CUtlMapI10CUtlStringP10IIPCServeri8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
-10CUtlRBTreeIN7CUtlMapI10CUtlStringS1_i8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlRBTreeIN7CUtlMapI10CUtlStringji8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlRBTreeIN7CUtlMapI10CUtlStringli8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlRBTreeIN7CUtlMapI14CBaseUtlSymbolItEPK9KeyValuesi8CDefLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
@@ -8476,6 +8479,7 @@ ${LANGUAGE}
 10CUtlVectorIN11CUtlHashMapI10CUtlStringN11CHTMLWindow22JSMethodRegistration_tE10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE12HashBucket_tE10CUtlMemoryISA_EE
 10CUtlVectorIN11CUtlHashMapI10CUtlStringN19CSettingsController27ForeignSettingHandlerInfo_tE10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE12HashBucket_tE10CUtlMemoryISA_EE
 10CUtlVectorIN11CUtlHashMapI10CUtlStringN21CHTMLWindowController20JSRegisteredMethod_tE10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE12HashBucket_tE10CUtlMemoryISA_EE
+10CUtlVectorIN11CUtlHashMapI10CUtlStringN24CChildEnvironmentBuilder10EnvEntry_tE27CDefCaselessUtlStringEquals28HashFunctorUtlStringCaseless10StringViewE12HashBucket_tE10CUtlMemoryIS8_EE
 10CUtlVectorIN11CUtlHashMapI10CUtlStringN24CGameRecordingController21ActiveRecordingData_tE10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE12HashBucket_tE10CUtlMemoryISA_EE
 10CUtlVectorIN11CUtlHashMapI10CUtlStringN27CSteamUIMessagingController17ChannelCallback_tE10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE12HashBucket_tE10CUtlMemoryISA_EE
 10CUtlVectorIN11CUtlHashMapI10CUtlStringP22CGameRecordingClipFile10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE12HashBucket_tE10CUtlMemoryISA_EE
@@ -8715,6 +8719,7 @@ ${LANGUAGE}
 11CUtlHashMapI10CUtlStringN11CHTMLWindow22JSMethodRegistration_tE10CDefEqualsIS0_E11HashFunctorIS0_E10StringViewE
 11CUtlHashMapI10CUtlStringN19CSettingsController27ForeignSettingHandlerInfo_tE10CDefEqualsIS0_E11HashFunctorIS0_E10StringViewE
 11CUtlHashMapI10CUtlStringN21CHTMLWindowController20JSRegisteredMethod_tE10CDefEqualsIS0_E11HashFunctorIS0_E10StringViewE
+11CUtlHashMapI10CUtlStringN24CChildEnvironmentBuilder10EnvEntry_tE27CDefCaselessUtlStringEquals28HashFunctorUtlStringCaseless10StringViewE
 11CUtlHashMapI10CUtlStringN24CGameRecordingController21ActiveRecordingData_tE10CDefEqualsIS0_E11HashFunctorIS0_E10StringViewE
 11CUtlHashMapI10CUtlStringN27CSteamUIMessagingController17ChannelCallback_tE10CDefEqualsIS0_E11HashFunctorIS0_E10StringViewE
 11CUtlHashMapI10CUtlStringP22CGameRecordingClipFile10CDefEqualsIS0_E11HashFunctorIS0_E10StringViewE
@@ -8819,8 +8824,6 @@ ${LANGUAGE}
 11VideoClient
 12 Mbps
 120min
-1536
-15000
 123456789
 127.0.0.1
 127.0.0.1:57343
@@ -9187,6 +9190,8 @@ ${LANGUAGE}
 14StoreItem_Link
 14TwoFactor_Stub
 14VideoClip_Stub
+1536
+15000
 155.133.240.0/23
 1558-AFCM-4577
 15AccountHardware
@@ -10554,6 +10559,7 @@ ${LANGUAGE}
 23SteamNotificationClient
 23StoreItem_IncludedItems
 24 Mbps
+24CChildEnvironmentBuilder
 24CCloud_ShareFile_Request
 24CControllerDeviceSupport
 24CCryptoKeyBase_RawBuffer
@@ -13336,6 +13342,7 @@ ${LANGUAGE}
 6.CSteamOSManager_SetDesktopAsDefaultLoginMode_Response
 6.CTransportValidation_RequestLargeNotification_Request
 60.0
+60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 60CAccountHardware_CompleteSteamControllerRegistration_Request
 60CAuthentication_UpdateAuthSessionWithSteamGuardCode_Response
@@ -13349,7 +13356,6 @@ ${LANGUAGE}
 60CPlayer_GetPurchasedAndUpgradedProfileCustomizations_Request
 60CSteamInputService_ControllerButtonStateChanged_Notification
 6144
-60000000
 61CAccountHardware_CompleteSteamControllerRegistration_Response
 61CEcon_GetInventoryItemsWithDescriptions_Request_FilterOptions
 61CFamilyGroupsClient_NotifyRunningApps_Notification_RunningApp
@@ -13478,7 +13484,6 @@ ${LANGUAGE}
 7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE
 7CUtlMapI10CUtlStringP10CUtlVectorIN16CCookieContainer11CCookieInfoE10CUtlMemoryIS3_EEi22CDefCaselessStringLessE
 7CUtlMapI10CUtlStringP10IIPCServeri8CDefLessE
-7CUtlMapI10CUtlStringS0_i8CDefLessE
 7CUtlMapI10CUtlStringji8CDefLessE
 7CUtlMapI10CUtlStringli8CDefLessE
 7CUtlMapI14CBaseUtlSymbolItEPK9KeyValuesi8CDefLessE
@@ -13826,7 +13831,6 @@ ${LANGUAGE}
 9GameNotes
 9Gamescope
 9GmlF8
-9H(YT
 9IGv
 9Inventory
 9PE,$
@@ -16623,6 +16627,7 @@ CDesktopCapturePipeWire: Failed to start the screen cast session.\n
 CDesktopCapturePipeWire: Failed to start the screen cast session: %s\n
 CDesktopCapturePipeWire: Failed to synchronize DMA buffer: %s\n
 CDesktopCapturePipeWire: Finished obtaining persistent permissions, exiting PipeWire until streaming or recording.
+CDesktopCapturePipeWire: Got a renegotiate format request without a valid stream? If this is before we were started properly, this may be okay.
 CDesktopCapturePipeWire: Opening DRM render node %s\n
 CDesktopCapturePipeWire: PipeWire core error: %s\n
 CDesktopCapturePipeWire: PipeWire stream format changed (size: %dx%d, format %d, stride %d, size %d, dmabuf: %d)\n
@@ -16631,7 +16636,6 @@ CDesktopCapturePipeWire: PipeWire stream state error: %s\n
 CDesktopCapturePipeWire: Start request was rejected. Deleting our session token to allow a clean run next time; try rebooting and see if the permissions dialog shows up.\n
 CDesktopCapturePipeWire: Start signal received.\n
 CDesktopCapturePipeWire: Stopping capture session
-CDesktopCapturePipeWire: Tried to renegotiate format after stream was closed??
 CDesktopCapturePipeWire: Unknown buffer type: %d\n
 CDesktopCapturePipeWire: Unknown pixel format %d\n
 CDesktopCapturePipeWire: Video frame size does not match provided data!\n
@@ -16886,6 +16890,12 @@ CGameStreamVideoStageNVENC
 CGameStreamVideoStageOutput
 CGameStreamVideoStageOutput::ProcessData
 CGameStreamVideoStagePyrowave
+CGameStreamVideoStagePyrowave couldn't duplicate handle: %s
+CGameStreamVideoStagePyrowave: %s() failed: %d
+CGameStreamVideoStagePyrowave: can't convert RGB DMA-BUF to colorspace 0x%x
+CGameStreamVideoStagePyrowave: can't encode DMA-BUF (format 0x%x, modifier 0x%llx, capture %d,%d %dx%d of %dx%d)
+CGameStreamVideoStagePyrowave: device doesn't support DMA-BUF import, using system memory input
+CGameStreamVideoStagePyrowave: fstat() on DMA-BUF failed: %s
 CGameStreamVideoStagePyrowave: pyrowave_create_default_device() failed: %d
 CGameStreamVideoStagePyrowave: pyrowave_encoder_compute_num_critical_packets() failed: %d
 CGameStreamVideoStagePyrowave: pyrowave_encoder_compute_num_packets() failed: %d
@@ -16894,7 +16904,9 @@ CGameStreamVideoStagePyrowave: pyrowave_encoder_encode_cpu_synchronous() failed:
 CGameStreamVideoStagePyrowave: pyrowave_encoder_packetize() failed: %d
 CGameStreamVideoStagePyrowave: pyrowave_image_create() failed: %d (format 0x%x, plane %d, %ux%u)
 CGameStreamVideoStagePyrowave: pyrowave_image_get_image_view() failed: %d
+CGameStreamVideoStagePyrowave: pyrowave_image_get_image_view() failed: %d (plane %d)
 CGameStreamVideoStagePyrowave: pyrowave_sync_object_create() failed: %d
+CGameStreamVideoStagePyrowave: unsupported shared handle type %d (format 0x%x)
 CGameStreamVideoStageQueueThread
 CGameStreamVideoStageQueueThread::ProcessAsync
 CGameStreamVideoStageQueueThread::ProcessAsync - sleep
@@ -19681,6 +19693,7 @@ Couldn't add video channel
 Couldn't create Opus encoder, audio disabled
 Couldn't create WebRTC session
 Couldn't create audio resampler
+Couldn't create cursor surface: %s\n
 Couldn't create libav encoder, audio disabled
 Couldn't create offer\n
 Couldn't create socket: %s\n
@@ -20026,6 +20039,9 @@ DLCAvailableOnStore
 DLCData
 DLCList
 DLOPEN Error:%s\n
+DMA-BUF
+DMA-BUF image without DMA-BUF data
+DMA-BUF shared texture
 DNS:
 DO NOT PARSE: fields may be stripped and missing.\n
 DOCUMENTS
@@ -21831,6 +21847,7 @@ Failed to submit system report
 Failed to take mutex in GetInternal()\n
 Failed to update settings
 Failed to wait for shared fd client\n
+Failed to wrap process item with launch client
 Failed to write clip file to %s
 Failed with texture creation, exiting encode\n
 Failed! http%s://%s%s\n
@@ -24519,6 +24536,7 @@ Invalid Platform
 Invalid Protocol
 Invalid RSA modulus: %d bytes wide
 Invalid SOS parameters for sequential JPEG
+Invalid SetVarPolicy %d
 Invalid State
 Invalid Steam ID
 Invalid SteamID
@@ -25151,7 +25169,6 @@ LC_NUMERIC
 LC_PAPER
 LC_TELEPHONE
 LC_TIME
-LD_LIBRARY_PATH
 LED effect must be started from the main thread
 LED effect must be stopped from the main thread
 LEDManager.GetState#1
@@ -25378,6 +25395,7 @@ Log level to use for full details of any http server request returning != 200
 Log level to use for full details of any http server request returning 200.  This will probably fill up the log if you leave it on.
 Log level to use for one-line access-log-style for each http server request returning 200
 Log level to use for one-line access-log-style for each http server request that returns != 200
+Log pyrowave encoding performance to streaming_log.txt
 Log started.\n
 Log stopped.\n
 LogLevel
@@ -26897,6 +26915,8 @@ NSt7__cxx1110moneypunctIwLb0EEE
 NSt7__cxx1110moneypunctIwLb1EEE
 NSt7__cxx1114collate_bynameIcEE
 NSt7__cxx1114collate_bynameIwEE
+NSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEEE
+NSt7__cxx1115basic_stringbufIwSt11char_traitsIwESaIwEEE
 NSt7__cxx1115messages_bynameIcEE
 NSt7__cxx1115messages_bynameIwEE
 NSt7__cxx1115numpunct_bynameIcEE
@@ -26907,6 +26927,12 @@ NSt7__cxx1117moneypunct_bynameIcLb0EEE
 NSt7__cxx1117moneypunct_bynameIcLb1EEE
 NSt7__cxx1117moneypunct_bynameIwLb0EEE
 NSt7__cxx1117moneypunct_bynameIwLb1EEE
+NSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEE
+NSt7__cxx1118basic_stringstreamIwSt11char_traitsIwESaIwEEE
+NSt7__cxx1119basic_istringstreamIcSt11char_traitsIcESaIcEEE
+NSt7__cxx1119basic_istringstreamIwSt11char_traitsIwESaIwEEE
+NSt7__cxx1119basic_ostringstreamIcSt11char_traitsIcESaIcEEE
+NSt7__cxx1119basic_ostringstreamIwSt11char_traitsIwESaIwEEE
 NSt7__cxx117collateIcEE
 NSt7__cxx117collateIwEE
 NSt7__cxx118messagesIcEE
@@ -26999,7 +27025,7 @@ NV21ToYUV24Row_C
 NVENC
 NVENC - Couldn't create encoding session: %d
 NVENC - Couldn't get encode preset config: %d
-NVENC - Failed to apply initial configuration: %d
+NVENC - Failed to apply initial configuration: %d (%s)
 NVENC - Failed to create input buffer: %d
 NVENC - Failed to create output buffer: %d
 NVENC - Failed to get encoded frame: %d (NVIDIA graphics driver reset?)
@@ -28620,6 +28646,7 @@ PurchaseStatus
 PurchasedCustomization
 PutInternal: Not enough space for put when locked\n
 Pyrowave
+Pyrowave: %s
 Q$By5
 Q/xtJ2
 Q0\nk
@@ -29918,6 +29945,7 @@ STEAM_SCREEN_SCALE
 STEAM_TOUCH_CLICK_MODE
 STEAM_TROPHY
 STEAM_USE_DYNAMIC_VRS
+STEAM_USE_WPASUPPLICANT
 STOP USING,%s
 STORE lib
 STORE routines
@@ -30326,7 +30354,7 @@ Sent ping with MTU %d, increment = %d\n
 SentenceMode
 SentenceModeMenu
 Sentiment
-Sep 22 2026 23:38:10
+Sep 25 2026 23:33:09
 September
 Serbian
 Serial
@@ -37480,6 +37508,7 @@ appcontrollericons%d/
 appdetails/
 appearance
 append
+append=
 append_exp
 append_strings
 appid
@@ -42393,7 +42422,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggenh
+ggen
 ghost_
 gidlist
 gidparentcomment
@@ -49766,7 +49795,6 @@ m_ThreadPool
 m_TotalElements != InvalidIndex()
 m_Tree
 m_UndoTextStream
-m_UnsetEnvironmentVariables
 m_VecArgs
 m_VecArgs[i].m_sName
 m_VecPFrameFunction[iFrameType]
@@ -49922,6 +49950,7 @@ m_eRequestMethod == k_EHTTPMethodGET
 m_eResultLogOn == k_EResultInvalidState
 m_eSessionState == k_ESessionStateIdle
 m_eSignalState != k_EFutureState_Ready
+m_envChild
 m_errorIndex>=0
 m_fds[0] >= 0
 m_fds[1] != k_SOCKET_WRAPPER
@@ -50020,7 +50049,6 @@ m_mapDevices
 m_mapDialogs
 m_mapDownloadItems
 m_mapEntriesInProgress
-m_mapEnvironmentVariables
 m_mapFileTimes
 m_mapFileWatchData
 m_mapFileWatchData.Key( i )
@@ -50073,6 +50101,7 @@ m_mapServiceMethodRequestJobNameDeprecated
 m_mapServiceMethodRequestJobNameDeprecated.Key(i)
 m_mapServiceMethodRequestJobNameToMsgInfo
 m_mapServiceMethodResponseJobNameToMsgInfo
+m_mapSets
 m_mapStatsBucket
 m_mapStatsBucket[iBucket]
 m_mapSyncingApps
@@ -52549,7 +52578,6 @@ pSSLContext
 pSSLContext->BHasCertificate()
 pSSLContext->GetConnectionType() == k_ESSLConnectionType_Server
 pSalt
-pScaled->pitch == pScaled->w * 4
 pScanHandlePendingList != pCompletionData
 pScheme
 pSink
@@ -52786,8 +52814,8 @@ pchQueryString[0] == '?'
 pchSSLCertificate && pchSSLPrivateKey
 pchSteam2ID
 pchTLSServerName == NULL
+pchValue || eSetVarPolicy == k_ESetVarPolicy_Delete
 pchVar
-pchVar && pchValue
 pch[cub - 1] != '\0' && pch[cub] == '\0'
 pclose
 pcmag.com
@@ -53179,6 +53207,7 @@ prepare-for-sleep
 preparing-for-shutdown
 preparing-for-sleep
 prepend
+prepend=
 prerelease
 prerelease-
 presence
@@ -53527,13 +53556,17 @@ pyrowave_create_default_device
 pyrowave_create_device_by_compat
 pyrowave_custom_bitrate
 pyrowave_custom_bitrate_kbps
+pyrowave_device_confirm_interop_support
 pyrowave_device_destroy
+pyrowave_device_report_performance_stats
 pyrowave_device_set_queue_type
 pyrowave_encoder_compute_num_critical_packets
 pyrowave_encoder_compute_num_packets_with_padding
 pyrowave_encoder_create
 pyrowave_encoder_destroy
 pyrowave_encoder_encode_cpu_synchronous
+pyrowave_encoder_encode_gpu_scaled_synchronous
+pyrowave_encoder_encode_gpu_synchronous
 pyrowave_encoder_packetize
 pyrowave_image_create
 pyrowave_image_destroy
@@ -54667,6 +54700,7 @@ set-msgExt
 set-policy
 set-policy-root
 set-rootKeyThumb
+set=
 setAttr-Cert
 setAttr-GenCryptgrm
 setAttr-IssCap
@@ -57557,6 +57591,7 @@ unregister_status_update
 unregistered scheme
 unsafe legacy renegotiation disabled
 unset
+unset=
 unset_look
 unsigned
 unsigned __int128

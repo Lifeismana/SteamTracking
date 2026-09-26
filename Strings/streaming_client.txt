@@ -2478,7 +2478,7 @@ ${FILENAME}
 (/f92
 (0'yX
 (0rt
-(10D^
+(10B^
 (1NE\n
 (3zg
 (6byOTER
@@ -3523,6 +3523,7 @@ ${FILENAME}
 --disable-video
 --display
 --display_index
+--edit-env-fd=%d
 --enable
 --enable-audio
 --enable-av1
@@ -3531,7 +3532,6 @@ ${FILENAME}
 --enable-microphone
 --enable-pyrowave
 --enable-video
---env-fd=%d
 --forward-fd=%d
 --framerate
 --fullscreen
@@ -4478,17 +4478,14 @@ ${FILENAME}
 0+f|D
 0,PQ
 0-AD
+0.06
 0/bu^U
 0/gge
 0000000000000000000000000000000000000000
-0.06
 00\fo
 01%3
 01%6
 01%66754&#"
-0123456789.
-0123456789
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ
@@ -4943,7 +4940,6 @@ ${FILENAME}
 17CUtlPriorityQueueIPN25SteamNetworkingSocketsLib8IThinkerENS0_11ThinkerLessENS0_15ThinkerSetIndexEE
 17CVideoFrameHeader
 17StoreItem_Reviews
-18446744073709551615
 18CControllerOverlay
 18CFrameStatsListMsg
 18CGetCursorImageMsg
@@ -5293,8 +5289,8 @@ ${FILENAME}
 22StoreItem_PackageGroup
 22StoreItem_RelatedItems
 232>
-23:38:02
-23:38:06
+23:33:01
+23:33:04
 23CActivationCodeItemInfo
 23CClanEventUserNewsTuple
 23CECKeyExchangePublicKey
@@ -5359,7 +5355,6 @@ ${FILENAME}
 2675#"
 26754&#"
 2677
-26754.
 26CActivationCodePackageInfo
 26CAuthenticationResponseMsg
 26CFrameStatAccumulatedValue
@@ -5615,7 +5610,6 @@ ${FILENAME}
 3265&
 3265''6654#72
 3265'3
-32654
 32654##
 32654##5
 32654#'
@@ -5640,8 +5634,6 @@ ${FILENAME}
 32654'#
 32654'#536
 32654''3254&##c
-32654.
-32655
 32655&
 32655&&
 326554&"
@@ -5656,7 +5648,6 @@ ${FILENAME}
 3267!5!&&#"
 3267&'^7l
 3267.
-32675
 32675#5!
 32675&&#"
 326754&
@@ -5664,7 +5655,6 @@ ${FILENAME}
 326754&#"
 326754&'c
 32676'!
-32677
 326=
 326B|
 327&
@@ -5673,7 +5663,6 @@ ${FILENAME}
 3275!5!
 3275#5!
 3276
-327675.
 32:B\n
 32CMsgRemoteDeviceStreamingRequest
 32CMsgSteamDatagramP2PRoutes_Route
@@ -5738,7 +5727,6 @@ ${FILENAME}
 35StoreItem_BasicInfo_CreatorHomeLink
 35pI
 36$32
-36632
 36676'!
 3691S-
 36CHIDMessageToRemote_DeviceDisconnect
@@ -6049,10 +6037,9 @@ ${FILENAME}
 45CStoreBrowse_GetPriceStops_Response_PriceStop
 45rq
 46$a
+467&&54632
 467.
 4632
-46632
-467&&54632
 4676654&#"
 46CControllerConfigMsg_ControllerActiveConfigMsg
 46CMsgSteamDatagramConnectionStatsClientToRouter
@@ -6277,11 +6264,6 @@ ${FILENAME}
 52{M
 52|{k
 531lo
-5467.
-5467
-54632
-54663
-532654.
 532>
 536654#!5!
 53CMsgSteamDatagramClientPingSampleReply_POP_AltAddress
@@ -6292,7 +6274,7 @@ ${FILENAME}
 54&#72
 54&'7
 546'2>
-546632
+5467
 5467!
 5467#".
 5467#5!
@@ -6300,14 +6282,12 @@ ${FILENAME}
 5467'
 5467'!
 5467'7
-546753
+5467.
 546;
 54CControllerConfigMsg_ControllerPersonalizationResponse
 54CMsgRemoteDeviceAuthorizationRequest_CKeyEscrow_Ticket
 55$8
 551f
-554663
-5546632
 55467'&
 55CMsgSteamDatagramClientPingSampleReply_LegacyDataCenter
 55Ly
@@ -6514,13 +6494,12 @@ ${FILENAME}
 6654#"
 6654&#"
 6675
-6753
-6786
-666666666666666666666666666666666666666666666666
 67!5!
 675!
+6753
 6754&#"
 67547&55&'7
+6786
 67Zc
 68Jy
 699[
@@ -6708,7 +6687,6 @@ ${FILENAME}
 73MW
 73nL4\v
 74&'3
-74632
 75#5!
 754.
 7524
@@ -6717,7 +6695,6 @@ ${FILENAME}
 76&'3
 7623.
 7664&#"
-76653
 76654&#"
 77!5
 77\nGJ
@@ -6910,6 +6887,29 @@ ${FILENAME}
 8/A0
 807R
 8192
+26754.
+32654
+32654.
+32655
+32675
+32677
+36632
+46632
+54632
+54663
+74632
+76653
+327675.
+532654.
+546632
+546753
+554663
+5546632
+0123456789.
+0123456789
+18446744073709551615
+666666666666666666666666666666666666666666666666
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 81_2;
 82Bz
 82\n:XPH
@@ -7432,6 +7432,7 @@ ${FILENAME}
 :tyo
 :uo1
 :van
+:w9Y
 :w@jby2
 :wI\Uf6
 :wJY
@@ -16136,6 +16137,8 @@ NSt7__cxx1110moneypunctIwLb0EEE
 NSt7__cxx1110moneypunctIwLb1EEE
 NSt7__cxx1114collate_bynameIcEE
 NSt7__cxx1114collate_bynameIwEE
+NSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEEE
+NSt7__cxx1115basic_stringbufIwSt11char_traitsIwESaIwEEE
 NSt7__cxx1115messages_bynameIcEE
 NSt7__cxx1115messages_bynameIwEE
 NSt7__cxx1115numpunct_bynameIcEE
@@ -16146,6 +16149,12 @@ NSt7__cxx1117moneypunct_bynameIcLb0EEE
 NSt7__cxx1117moneypunct_bynameIcLb1EEE
 NSt7__cxx1117moneypunct_bynameIwLb0EEE
 NSt7__cxx1117moneypunct_bynameIwLb1EEE
+NSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEE
+NSt7__cxx1118basic_stringstreamIwSt11char_traitsIwESaIwEEE
+NSt7__cxx1119basic_istringstreamIcSt11char_traitsIcESaIcEEE
+NSt7__cxx1119basic_istringstreamIwSt11char_traitsIwESaIwEEE
+NSt7__cxx1119basic_ostringstreamIcSt11char_traitsIcESaIcEEE
+NSt7__cxx1119basic_ostringstreamIwSt11char_traitsIwESaIwEEE
 NSt7__cxx117collateIcEE
 NSt7__cxx117collateIwEE
 NSt7__cxx118messagesIcEE
@@ -19600,7 +19609,7 @@ Sending NoConnection to %s: { %s }\n
 Sending authorization request with pin %s\n
 Sent ack %u not pending.  %d: %u %u %u %u %u
 Sentiment
-Sep 22 2026
+Sep 25 2026
 September
 Serbian
 Seret
@@ -32487,7 +32496,7 @@ lh\n2Ta
 lhatod r
 lhhl
 liQS
-lib Sep 22 2026 23:38:05
+lib Sep 25 2026 23:33:04
 lib(%lu)
 libEGL.so.1
 libGL.so.1

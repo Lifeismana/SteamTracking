@@ -20,8 +20,6 @@ $ORIGIN
 *NSt6thread11_State_implINS_8_InvokerISt5tupleIJZN26CVulkanAsyncReadbackThread4InitEP10VkDevice_TEUlvE_EEEEEE
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNGA
-++CCUNGV
 ++CCUNGstd::exception
 /dev/random
 /dev/urandom
@@ -212,9 +210,7 @@ g_flPad1
 g_flPad2
 g_flSDRWhiteLevelInNits
 g_sSampler
-g_sSamplerBilinear
 g_sSamplerCursor
-g_sSamplerNearest
 g_tCursor
 g_tTexture
 generic
@@ -230,10 +226,10 @@ half
 hardware
 hidden alias for
 i.nVertexIndex
-i.vTexCoord
 inConstants
 inLayerTex0
 initializer for module
+input.Tex
 ioctl
 java Class for
 java resource
@@ -297,6 +293,8 @@ read
 realloc
 reference temporary #
 reinterpret_cast
+samCursor
+samDiffuse
 sampler0
 secure_getenv
 short
@@ -346,6 +344,8 @@ transaction clone for
 transaction clone for operator delete(void*)
 transaction clone for operator new[](unsigned long)
 true
+txCursor
+txDiffuse
 typeinfo fn for
 typeinfo for
 typeinfo name for

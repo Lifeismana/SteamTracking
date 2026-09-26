@@ -454,8 +454,9 @@ $\n k_SystemAudioPortDirection_Input
 *m_pCurrentProtoBufMsg
 *|\n\fECPUGovernor
 ++CCUNG
-++CCUNG$
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNG?
+++CCUNGd
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 +\n'k_EBrowserFeatureStatus_EnabledReadback
@@ -1699,8 +1700,6 @@ CUIProtoBufMsg::BDeserialize
 CUIProtoBufMsg::SerializeCrossProc
 CUtlBuffer
 CUtlBuffer::GetStringFast: binary buffers only
-CUtlHashMap::RemoveAt - Invalid index
-CUtlHashMap::RemoveAt - couldn't find bucket for item
 CUtlString::ReplaceInternal
 CUtlString::SetValue
 CUtlString::VAppendFormat
@@ -2136,6 +2135,7 @@ Input size too large:
 Integer out of range (
 Interpreting non ascii codepoint %d.
 Invalid FileWriterItem_t
+Invalid SetVarPolicy %d
 Invalid control characters encountered in text.
 Invalid descriptor
 Invalid escape sequence in string literal.
@@ -2197,7 +2197,6 @@ LC_NUMERIC
 LC_PAPER
 LC_TELEPHONE
 LC_TIME
-LD_LIBRARY_PATH
 LOCK_EX
 LOCK_SH
 Label
@@ -3205,6 +3204,7 @@ alpha
 alphasort64
 amharic
 an arena.
+append=
 ar_AE
 arabic
 args
@@ -4153,8 +4153,8 @@ parse
 parsing
 path
 patterns
+pchValue || eSetVarPolicy == k_ESetVarPolicy_Delete
 pchVar
-pchVar && pchValue
 pclose
 persian
 php_class_prefix
@@ -4172,6 +4172,7 @@ post
 postData
 pread64
 preferred_contrast
+prepend=
 print
 printf
 promise_handle
@@ -4272,6 +4273,7 @@ serializing
 server_streaming
 service
 service $0 {\n
+set=
 setlocale
 setmntent
 setvbuf
@@ -4453,6 +4455,7 @@ uninitialized __any_string
 uninterpreted_option
 unknown
 unlink
+unset=
 unsigned
 unsigned __int128
 unsigned char
