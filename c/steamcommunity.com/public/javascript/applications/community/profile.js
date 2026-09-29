@@ -1,5 +1,5 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-  [8138],
+  [58138],
   {
     chunkid: (module) => {
       module.exports = {
@@ -7003,7 +7003,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const [_, _] = (0, _.useState)(!1),
@@ -7217,10 +7216,6 @@
                       (0, _.jsx)(_, {
                         ..._,
                       }),
-                    "ugc-file-content-moderation-report-dialog": (_) =>
-                      (0, _.jsx)(_._, {
-                        ..._,
-                      }),
                     "reporter-cooldown-dialog": (_) =>
                       (0, _.jsx)(_, {
                         ..._,
@@ -7235,6 +7230,8 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -7356,6 +7353,33 @@
               await _.invalidateQueries({
                 queryKey: ["get_claimed"],
               });
+          },
+        });
+      }
+      function _(_) {
+        const _ = (0, _._)(),
+          _ = (0, _._)();
+        return (0, _._)({
+          mutationKey: ["release_subject", ..._],
+          mutationFn: async () => {
+            const _ = _._.Init(_._);
+            for (const _ of _) {
+              const _ = new _._();
+              _.set_reported_content_id(_), _.Body().add_subjects_to_release(_);
+            }
+            const _ = await _._.ReleaseSubjects(_, _);
+            if (!_.BSuccess()) throw new Error("EResult " + _.GetEResult());
+          },
+          onSuccess: async () => {
+            await Promise.all([
+              _.invalidateQueries({
+                queryKey: ["get_claimed"],
+              }),
+              _.invalidateQueries({
+                queryKey: ["get_subject_overview"],
+              }),
+              ..._.map((_) => _(_, _)),
+            ]);
           },
         });
       }
@@ -8031,83 +8055,6 @@
         }
       };
       _ = (0, _._)([_._], _);
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, _, _, _) {
-        let _ = _;
-        _ =
-          "number" == typeof _
-            ? {
-                nDigitsAfterDecimal: _,
-                bUseBinary1K: _ || void 0 === _,
-                bValueIsInBytes: !_,
-                bValueIsRate: _,
-                nMinimumDigitsAfterDecimal: 0,
-              }
-            : {
-                nDigitsAfterDecimal: 2,
-                bUseBinary1K: !0,
-                bValueIsInBytes: !0,
-                bValueIsRate: !1,
-                nMinimumDigitsAfterDecimal: 0,
-                ..._,
-              };
-        const { nNum: _, strPrefix: _ } = (function (_, _) {
-            const _ = _.bUseBinary1K ? 1024 : 1e3,
-              _ = _ * _,
-              _ = _ * _,
-              _ = _ * _;
-            return _ > _
-              ? {
-                  nNum: _ / _,
-                  strPrefix: "Tera",
-                }
-              : _ > _
-                ? {
-                    nNum: _ / _,
-                    strPrefix: "Giga",
-                  }
-                : _ > _
-                  ? {
-                      nNum: _ / _,
-                      strPrefix: "Mega",
-                    }
-                  : _ > _
-                    ? {
-                        nNum: _ / _,
-                        strPrefix: "Kilo",
-                      }
-                    : {
-                        nNum: _,
-                        strPrefix: "",
-                      };
-          })(_, _),
-          _ = `#${_}${_.bValueIsInBytes ? "bytes" : "bits"}${_.bValueIsRate ? "_PerSecond" : ""}`;
-        return _._.Localize(
-          _,
-          _.toLocaleString((0, _._)(), {
-            minimumFractionDigits: _.nMinimumDigitsAfterDecimal,
-            maximumFractionDigits: _.nDigitsAfterDecimal,
-          }),
-        );
-      }
-      function _(_, _ = 0) {
-        let _;
-        return (
-          _ &&
-            (_ = {
-              maximumFractionDigits: _,
-            }),
-          _ ? _.toLocaleString((0, _._)(), _) : "" + _
-        );
-      }
     },
   },
 ]);

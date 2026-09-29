@@ -1,0 +1,36 @@
+@keyframes _8XF7CqAJawk- {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.aqaxm05m7Nk- {
+  box-sizing: border-box;
+  width: 100vw;
+  max-width: none;
+  height: 100vh;
+  max-height: none;
+  padding: var(--spacing-5);
+  color: inherit;
+  background: #000c;
+  border: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  animation: 0.15s ease-out _8XF7CqAJawk-;
+  display: flex;
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+}
+.MaUEyaWhELc- {
+  margin-bottom: var(--spacing-3);
+  text-align: center;
+  color: var(--color-text-body-subtitle);
+  font-size: var(--text-size-4);
+  font-weight: var(--font-weight-medium);
+  flex-shrink: 0;
+}

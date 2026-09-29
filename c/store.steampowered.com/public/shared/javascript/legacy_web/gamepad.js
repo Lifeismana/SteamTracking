@@ -4723,6 +4723,11 @@
                     _: _.readUint32,
                     _: _.writeUint32,
                   },
+                  browserapi_site: {
+                    _: 53,
+                    _: _.readString,
+                    _: _.writeString,
+                  },
                 },
               }),
             _.sm_m
@@ -7342,6 +7347,7 @@
               {
                 ePrivilege: 2,
                 eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: ["all"],
               },
             );
           }),
@@ -13561,18 +13567,26 @@
         }
         DispatchVirtualButtonClick(_, _, _) {
           let _;
-          _ && (_ = this.GetActiveContext() ?? this.FindAnActiveContext()),
-            this.OnButtonDown(
-              _,
-              _ ?? _._.GAMEPAD,
-              -1,
-              void 0,
-              void 0,
-              void 0,
-              _,
-              _,
-              !0,
-            ),
+          if (_) _ = this.GetActiveContext() ?? this.FindAnActiveContext();
+          else if (_ && !(0, _._)(_)) {
+            const _ = this.GetActiveContext() ?? this.FindAnActiveContext(),
+              _ = _?.m_LastActiveNavTree;
+            _ &&
+              !__webpack_require__.GetLastFocusedNode() &&
+              _.Root.Element &&
+              ((_ = _.Root.Element), (_ = _));
+          }
+          this.OnButtonDown(
+            _,
+            _ ?? _._.GAMEPAD,
+            -1,
+            void 0,
+            void 0,
+            void 0,
+            _,
+            _,
+            !0,
+          ),
             this.OnButtonUp(
               _,
               _ ?? _._.GAMEPAD,

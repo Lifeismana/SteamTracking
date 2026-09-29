@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-  [8138],
+  [58138],
   {
     35471: (e) => {
       e.exports = {
@@ -353,7 +353,7 @@
     },
     49043: (e, t, i) => {
       "use strict";
-      i.r(t), i.d(t, { ProfileEditRoutes: () => xr, default: () => Ir });
+      i.r(t), i.d(t, { ProfileEditRoutes: () => Sr, default: () => wr });
       var r = i(7850);
       let a = { ProfileURL: "" };
       var s = i(34629),
@@ -366,8 +366,8 @@
         h = i(75844),
         u = i(90626),
         p = i(61859),
-        v = i(38924),
-        _ = i(10622),
+        _ = i(38924),
+        v = i(10622),
         g = i(52038),
         f = i(12155),
         P = i(70342),
@@ -377,11 +377,11 @@
         const { persona: t, className: i, ...a } = e;
         if (!t) return null;
         if (!t.is_online) return null;
-        const s = t.HasStateFlag(v.R$),
-          o = t.HasStateFlag(v.hs),
+        const s = t.HasStateFlag(_.R$),
+          o = t.HasStateFlag(_.hs),
           n = t.m_eGamingDeviceType == m.LS$,
           l = t.m_eGamingDeviceType == m.ppM,
-          d = !n && !l && !o && t.HasStateFlag(v.sr);
+          d = !n && !l && !o && t.HasStateFlag(_.sr);
         return (0, r.jsxs)(u.Fragment, {
           children: [
             s &&
@@ -390,7 +390,7 @@
                   i,
                   y().PersonaStatusIcon,
                   y().MobilePhoneIcon,
-                  (0, _.rO)(t),
+                  (0, v.rO)(t),
                 ),
                 title: (0, p.we)("#Platform_Hint_Mobile"),
                 ...a,
@@ -402,7 +402,7 @@
                   i,
                   y().PersonaStatusIcon,
                   y().VRIcon,
-                  (0, _.rO)(t),
+                  (0, v.rO)(t),
                 ),
                 title: (0, p.we)("#Platform_Hint_VR"),
                 ...a,
@@ -414,7 +414,7 @@
                   i,
                   y().PersonaStatusIcon,
                   y().BigPictureIcon,
-                  (0, _.rO)(t),
+                  (0, v.rO)(t),
                 ),
                 title: (0, p.we)("#Platform_Hint_BigPicture"),
                 ...a,
@@ -426,7 +426,7 @@
                   i,
                   y().PersonaStatusIcon,
                   y().SteamDeckIcon,
-                  (0, _.rO)(t),
+                  (0, v.rO)(t),
                 ),
                 title: (0, p.we)("#Platform_Hint_SteamDeck"),
                 ...a,
@@ -438,7 +438,7 @@
                   i,
                   y().PersonaStatusIcon,
                   y().SteamDeckIcon,
-                  (0, _.rO)(t),
+                  (0, v.rO)(t),
                 ),
                 title: (0, p.we)("#Platform_Hint_LegionGoS"),
                 ...a,
@@ -748,7 +748,7 @@
             broadcast_description: d,
             broadcast_thumbnail: c,
             mutual_friends: h,
-            in_game_section_additional: v,
+            in_game_section_additional: _,
             bottom_section_additional: f,
             ...P
           } = this.props;
@@ -845,7 +845,7 @@
                             j().miniProfilePlayer,
                             t.online_state,
                             b && j().isAway,
-                            (0, _.rO)(t),
+                            (0, v.rO)(t),
                           ),
                           children: [
                             (0, r.jsx)(H, {
@@ -2189,7 +2189,7 @@
       (0, s.Cg)([l.sH], ue.prototype, "m_ActiveTheme", void 0),
         (0, s.Cg)([l.XI], ue.prototype, "RevertActiveTheme", null);
       var pe = i(85044);
-      async function ve(e, t) {
+      async function _e(e, t) {
         let i;
         if (t instanceof FormData) i = t;
         else {
@@ -2214,7 +2214,7 @@
           };
         }
       }
-      class _e {
+      class ve {
         constructor(e) {
           (this.m_PrimaryGroup = void 0),
             (this.m_bLoaded = !1),
@@ -2271,7 +2271,7 @@
           );
         }
         async CommitPrimaryGroup() {
-          let e = await ve("favoriteclan", {
+          let e = await _e("favoriteclan", {
             primary_group_steamid: this.m_PrimaryGroup
               .GetSteamID()
               .ConvertTo64BitString(),
@@ -2286,10 +2286,10 @@
           this.m_PrimaryGroup = this.m_CommittedPrimaryGroup;
         }
       }
-      (0, s.Cg)([l.sH], _e.prototype, "m_PrimaryGroup", void 0),
-        (0, s.Cg)([l.sH], _e.prototype, "m_bLoaded", void 0),
-        (0, s.Cg)([l.XI], _e.prototype, "SetPrimaryGroup", null),
-        (0, s.Cg)([l.XI], _e.prototype, "RevertPrimaryGroupChanges", null);
+      (0, s.Cg)([l.sH], ve.prototype, "m_PrimaryGroup", void 0),
+        (0, s.Cg)([l.sH], ve.prototype, "m_bLoaded", void 0),
+        (0, s.Cg)([l.XI], ve.prototype, "SetPrimaryGroup", null),
+        (0, s.Cg)([l.XI], ve.prototype, "RevertPrimaryGroupChanges", null);
       class ge {
         constructor(e, t, i) {
           (this.m_steamID = e),
@@ -2408,10 +2408,10 @@
             },
           } = e;
           (this.m_Location = new he(t, i, r, a, s, o)),
-            (this.m_GroupList = new _e(e.PrimaryGroup));
+            (this.m_GroupList = new ve(e.PrimaryGroup));
           const n = new U.b(N.iA.steamid);
           (this.m_MiniProfileData = new R(n.GetAccountID())),
-            (this.m_persona = new _.Z(n)),
+            (this.m_persona = new v.Z(n)),
             (0, l.fm)(() => {
               this.BuildPersonaStateObject();
             }),
@@ -3121,7 +3121,7 @@
             onClick: () => t(e),
             onActivate: () => t(e),
             children: (0, r.jsx)("img", {
-              src: (0, _.tp)(e, i ? "full" : "medium"),
+              src: (0, v.tp)(e, i ? "full" : "medium"),
               loading: "lazy",
             }),
           }),
@@ -3436,7 +3436,7 @@
             ],
           }),
         st = u.lazy(() =>
-          Promise.all([i.e(4922), i.e(5278)]).then(i.bind(i, 66884)),
+          Promise.all([i.e(54922), i.e(25278)]).then(i.bind(i, 66884)),
         ),
         ot = !0;
       let nt = class extends u.Component {
@@ -3473,7 +3473,7 @@
         render() {
           const { Profile: e, ProfileItems: t } = this.props;
           return Se.createPortal(
-            (0, r.jsx)(_t, { Profile: e, ProfileItems: t }),
+            (0, r.jsx)(vt, { Profile: e, ProfileItems: t }),
             document.querySelector(".profile_small_header_avatar"),
           );
         }
@@ -3630,7 +3630,7 @@
                               (0, r.jsxs)("div", {
                                 className: xe.AvatarDialogUploadArea,
                                 children: [
-                                  (0, r.jsx)(vt, {
+                                  (0, r.jsx)(_t, {
                                     OnAvatarSelected: this.OnUploadSelected,
                                     disabled: this.state.bSaving,
                                     strError: this.state.strUploadError,
@@ -3771,7 +3771,7 @@
               (0, r.jsxs)("div", { className: xe.size, children: [t, "px"] }),
             ],
           });
-      function vt(e) {
+      function _t(e) {
         const { OnAvatarSelected: t, disabled: i, strError: a } = e,
           s = u.useRef(void 0),
           o = u.useCallback(() => {
@@ -3800,7 +3800,7 @@
           ],
         });
       }
-      const _t = (0, h.PA)(({ Profile: e, ProfileItems: t }) => {
+      const vt = (0, h.PA)(({ Profile: e, ProfileItems: t }) => {
         const i = ht(
             e.GetCommittedAvatarHash(),
             t.GetCommittedEquippedAvatar(),
@@ -4162,7 +4162,7 @@
               children: t,
             })
           : (0, r.jsx)(r.Fragment, { children: t });
-      var Gt = i(84143);
+      var Gt = i(23310);
       class Et extends u.Component {
         constructor() {
           super(...arguments), (this.state = { bSaving: !1, strHTMLError: "" });
@@ -4172,7 +4172,7 @@
         }
         async CommitChanges(e) {
           this.setState({ bSaving: !0, strHTMLError: "" });
-          let t = await ve("profileSave", new FormData(e));
+          let t = await _e("profileSave", new FormData(e));
           t.strRedirectURL
             ? (window.location.href = `${t.strRedirectURL}/info`)
             : (this.props.Profile.SetBasicInfoChangesComitted(),
@@ -4994,7 +4994,7 @@
                     ],
                   }),
                   (0, r.jsx)("div", { className: "ProfilePrivacyHR" }),
-                  (0, r.jsxs)(vi, {
+                  (0, r.jsxs)(_i, {
                     children: [
                       (0, p.we)("#ProfilePrivacy_Comments"),
                       ":",
@@ -5045,19 +5045,19 @@
               })),
           (0, r.jsxs)(u.Fragment, {
             children: [
-              (0, r.jsxs)(vi, { children: [e.strLabel, ":", t] }),
-              (0, r.jsx)(_i, { children: e.children }),
+              (0, r.jsxs)(_i, { children: [e.strLabel, ":", t] }),
+              (0, r.jsx)(vi, { children: e.children }),
             ],
           })
         );
       }
-      function vi(e) {
+      function _i(e) {
         return (0, r.jsx)("div", {
           className: "ProfilePrivacyHeader",
           children: e.children,
         });
       }
-      function _i(e) {
+      function vi(e) {
         return (0, r.jsx)("div", {
           className: "ProfilePrivacyDesc",
           children: e.children,
@@ -5871,7 +5871,7 @@
       }
       const Ui = ({ root: e, currentPath: t, linksAvailable: i }) => {
           const s = { root: e, currentPath: t },
-            o = xr,
+            o = Sr,
             n = (0, N.Qn)();
           return (0, r.jsxs)(Ee.Z, {
             className: Oi.Navigation,
@@ -6335,7 +6335,7 @@
         }
         async CommitChanges(e) {
           this.setState({ bSaving: !0, strHTMLError: "" });
-          let t = await ve("showcases", new FormData(e));
+          let t = await _e("showcases", new FormData(e));
           t.strHTMLError
             ? this.setState({ strHTMLError: t.strHTMLError })
             : this.setState({ strHTMLError: "" }),
@@ -6419,7 +6419,7 @@
             ProfileTheme: d,
             EmoticonStore: c,
           } = n,
-          h = xr,
+          h = Sr,
           p = {
             ProfileModifierAvailable: () => m.BHasAnyProfileModifiers(),
             BadgesAvailable: () =>
@@ -6512,15 +6512,14 @@
       var cr = i(66008),
         hr = i(30760),
         ur = i(6813),
-        pr = i(53495),
-        vr = i(39832),
+        pr = i(39832),
         _r = i(90182),
-        gr = i(65843),
-        fr = i(99164),
-        Pr = i(29385),
-        yr = i(61739),
-        Cr = i(22797);
-      function Ar(e) {
+        vr = i(65843),
+        gr = i(99164),
+        fr = i(29385),
+        Pr = i(61739),
+        yr = i(22797);
+      function Cr(e) {
         const [t, i] = (0, u.useState)(!1),
           a = (function (e) {
             const t = (0, Ae.KV)();
@@ -6528,9 +6527,9 @@
               queryKey: ["reportercooldown", e],
               queryFn: async () => {
                 var i;
-                const r = Q.w.Init(fr.a9);
+                const r = Q.w.Init(gr.a9);
                 r.Body().set_steamid(e);
-                const a = await fr.fL.GetReporterCooldown(t, r);
+                const a = await gr.fL.GetReporterCooldown(t, r);
                 if (!a.BSuccess()) throw new Error("EResult " + a.GetEResult());
                 return null !== (i = a.Body().rtime_cooldown_ends()) &&
                   void 0 !== i
@@ -6541,15 +6540,15 @@
           })(e.steamid),
           s = (function (e) {
             const t = (0, Ae.KV)(),
-              i = (0, Pr.jE)();
-            return (0, yr.n)({
+              i = (0, fr.jE)();
+            return (0, Pr.n)({
               mutationFn: async (i) => {
-                const r = Q.w.Init(fr.f0);
+                const r = Q.w.Init(gr.f0);
                 r.Body().set_steamid(e),
                   r.Body().set_rtime_cooldown_ends(i.rtCooldownEnds),
                   void 0 !== i.bClearOpenReports &&
                     r.Body().set_acquit_unresolved_reports(i.bClearOpenReports);
-                const a = await fr.fL.UpdateReporterCooldown(t, r);
+                const a = await gr.fL.UpdateReporterCooldown(t, r);
                 if (!a.BSuccess()) throw new Error("EResult " + a.GetEResult());
               },
               onSuccess: async () => {
@@ -6566,7 +6565,7 @@
         let c = "";
         if (a.isSuccess && a.data > 0) {
           const e = Math.floor((a.data - new Date().getTime() / 1e3) / 86400);
-          c = " " + gr.u.Localize("#setcooldown_cooldownsummary", e);
+          c = " " + vr.u.Localize("#setcooldown_cooldownsummary", e);
         }
         return (0, r.jsxs)(r.Fragment, {
           children: [
@@ -6595,41 +6594,41 @@
                     i(!1),
                     m(!1);
                 },
-                strTitle: gr.u.Localize("#setcooldown_dialogtitle"),
-                strDescription: gr.u.Localize("#setcooldown_dialogdescription"),
-                strOKButtonText: gr.u.Localize("#setcooldown_setbutton"),
+                strTitle: vr.u.Localize("#setcooldown_dialogtitle"),
+                strDescription: vr.u.Localize("#setcooldown_dialogdescription"),
+                strOKButtonText: vr.u.Localize("#setcooldown_setbutton"),
                 bOKDisabled: l,
                 children: [
                   a.isLoading &&
                     (0, r.jsxs)("p", {
                       children: [
-                        (0, r.jsx)(Cr.t, { size: "small" }),
+                        (0, r.jsx)(yr.t, { size: "small" }),
                         " ",
-                        gr.u.Localize("#setcooldown_loading"),
+                        vr.u.Localize("#setcooldown_loading"),
                       ],
                     }),
                   a.isError &&
                     (0, r.jsx)("p", {
-                      children: gr.u.Localize("#setcooldown_errorloading"),
+                      children: vr.u.Localize("#setcooldown_errorloading"),
                     }),
                   a.isSuccess &&
                     a.data > 0 &&
                     (0, r.jsx)("p", {
-                      children: gr.u.Localize(
+                      children: vr.u.Localize(
                         "#setcooldown_expireson",
-                        (0, vr.P0)(a.data, !1, ""),
+                        (0, pr.P0)(a.data, !1, ""),
                       ),
                     }),
                   a.isSuccess &&
                     0 === a.data &&
                     (0, r.jsx)("p", {
-                      children: gr.u.Localize("#setcooldown_nocooldown"),
+                      children: vr.u.Localize("#setcooldown_nocooldown"),
                     }),
                   d.isSuccess &&
                     !!d.data &&
                     (0, r.jsx)(r.Fragment, {
                       children: (0, r.jsx)("p", {
-                        children: gr.u.Localize(
+                        children: vr.u.Localize(
                           "#setcooldown_statssummary",
                           d.data.total_acquitted_reports,
                           d.data.total_reports,
@@ -6642,12 +6641,12 @@
                     children: [
                       (0, r.jsxs)("label", {
                         children: [
-                          gr.u.Localize("#setcooldown_newcooldownlabel"),
+                          vr.u.Localize("#setcooldown_newcooldownlabel"),
                           " ",
                           (0, r.jsx)("input", {
                             type: "number",
                             min: "0",
-                            placeholder: gr.u.Localize("#setcooldown_days"),
+                            placeholder: vr.u.Localize("#setcooldown_days"),
                             ref: o,
                           }),
                         ],
@@ -6656,7 +6655,7 @@
                         children: [
                           (0, r.jsx)("input", { type: "checkbox", ref: n }),
                           " ",
-                          gr.u.Localize("#setcooldown_clearopenreports"),
+                          vr.u.Localize("#setcooldown_clearopenreports"),
                         ],
                       }),
                       (0, r.jsx)("button", {
@@ -6664,7 +6663,7 @@
                         onClick: async () => {
                           await s.mutateAsync({ rtCooldownEnds: 0 }), i(!1);
                         },
-                        children: gr.u.Localize("#setcooldown_clearcooldown"),
+                        children: vr.u.Localize("#setcooldown_clearcooldown"),
                       }),
                     ],
                   }),
@@ -6679,13 +6678,13 @@
           ],
         });
       }
-      const Sr = {
+      const Ar = {
           ProfileEdit: () => "edit",
           ProfilePrivacy: () => "edit/settings",
           Games: () => "games",
           ItemCollection: () => "itemcollection",
         },
-        xr = {
+        Sr = {
           Info: () => "/info",
           Avatar: () => "/avatar",
           Background: () => "/background",
@@ -6697,17 +6696,17 @@
           Privacy: () => "/settings",
           Showcases: () => "/showcases",
         };
-      function wr(e) {
+      function xr(e) {
         return (0, r.jsx)("div", {
           children: (0, r.jsx)(hr.Ay, { targetType: cr.Pw.BZ }),
         });
       }
-      function Ir(e) {
+      function wr(e) {
         const t = e.match.path;
         return (0, r.jsxs)(ye.dO, {
           children: [
             (0, r.jsx)(ye.qh, {
-              path: `${t}/${Sr.ProfileEdit()}`,
+              path: `${t}/${Ar.ProfileEdit()}`,
               render: (e) => (0, r.jsx)(dr, { ...e }),
             }),
             (0, r.jsx)(ye.qh, {
@@ -6715,10 +6714,8 @@
               render: (e) =>
                 (0, r.jsx)(ur.X, {
                   config: {
-                    "profile-rewards": () => (0, r.jsx)(wr, { ...e }),
-                    "ugc-file-content-moderation-report-dialog": (e) =>
-                      (0, r.jsx)(pr.Xi, { ...e }),
-                    "reporter-cooldown-dialog": (e) => (0, r.jsx)(Ar, { ...e }),
+                    "profile-rewards": () => (0, r.jsx)(xr, { ...e }),
+                    "reporter-cooldown-dialog": (e) => (0, r.jsx)(Cr, { ...e }),
                   },
                 }),
             }),
@@ -6729,16 +6726,18 @@
     90182: (e, t, i) => {
       "use strict";
       i.d(t, {
-        EC: () => x,
-        KQ: () => S,
+        EC: () => w,
+        KQ: () => x,
         Kt: () => f,
-        Ky: () => _,
+        Ky: () => v,
         N8: () => y,
-        c3: () => w,
+        OI: () => u,
+        YL: () => C,
+        c3: () => I,
         lY: () => P,
         w3: () => g,
-        wy: () => A,
-        y4: () => C,
+        wy: () => S,
+        y4: () => A,
       });
       var r = i(37085),
         a = i(56545),
@@ -6752,12 +6751,12 @@
       const h = "get_reported_content",
         u = (e) => [h, JSON.stringify(e)],
         p = (e) => ["get_reported_content_by_id", e],
-        v = (e) => ["get_reported_content_audit_log", e];
-      async function _(e, t) {
+        _ = (e) => ["get_reported_content_audit_log", e];
+      async function v(e, t) {
         return Promise.all([
           e.invalidateQueries({ queryKey: [h], exact: !1 }),
           e.invalidateQueries({ queryKey: p(t) }),
-          e.invalidateQueries({ queryKey: v(t) }),
+          e.invalidateQueries({ queryKey: _(t) }),
         ]);
       }
       function g(e) {
@@ -6786,7 +6785,7 @@
         return (0, l.I)(
           (function (e, t) {
             return {
-              queryKey: v(t),
+              queryKey: _(t),
               queryFn: async () => {
                 if (!t) return;
                 const i = a.w.Init(o.v5);
@@ -6815,7 +6814,7 @@
           },
           onSuccess: async () => {
             await Promise.all([
-              _(i, e),
+              v(i, e),
               i.invalidateQueries({ queryKey: ["get_claimed"] }),
               i.invalidateQueries({ queryKey: ["get_subject_overview"] }),
             ]);
@@ -6833,12 +6832,35 @@
             if (!r.BSuccess()) throw new Error("EResult " + r.GetEResult());
           },
           onSuccess: async (e, i) => {
-            await _(t, i.reportedContentID),
+            await v(t, i.reportedContentID),
               await t.invalidateQueries({ queryKey: ["get_claimed"] });
           },
         });
       }
-      function C(e, t) {
+      function C(e) {
+        const t = (0, m.jE)(),
+          i = (0, n.KV)();
+        return (0, d.n)({
+          mutationKey: ["release_subject", ...e],
+          mutationFn: async () => {
+            const t = a.w.Init(o.GD);
+            for (const i of e) {
+              const e = new o.F9();
+              e.set_reported_content_id(i), t.Body().add_subjects_to_release(e);
+            }
+            const r = await o.fL.ReleaseSubjects(i, t);
+            if (!r.BSuccess()) throw new Error("EResult " + r.GetEResult());
+          },
+          onSuccess: async () => {
+            await Promise.all([
+              t.invalidateQueries({ queryKey: ["get_claimed"] }),
+              t.invalidateQueries({ queryKey: ["get_subject_overview"] }),
+              ...e.map((e) => v(t, e)),
+            ]);
+          },
+        });
+      }
+      function A(e, t) {
         const i = (0, n.KV)(),
           r = (0, m.jE)();
         return (0, d.n)({
@@ -6849,11 +6871,11 @@
             if (!s.BSuccess()) throw new Error("EResult " + s.GetEResult());
           },
           onSuccess: async () => {
-            await _(r, e);
+            await v(r, e);
           },
         });
       }
-      function A(e, t) {
+      function S(e, t) {
         const i = (0, m.jE)(),
           r = (0, n.KV)();
         return (0, d.n)({
@@ -6865,11 +6887,11 @@
             if (!s.BSuccess()) throw new Error("EResult " + s.GetEResult());
           },
           onSuccess: async () => {
-            await _(i, e);
+            await v(i, e);
           },
         });
       }
-      function S(e) {
+      function x(e) {
         const t = (0, n.KV)();
         return (0, l.I)(
           (function (e, t) {
@@ -6886,7 +6908,7 @@
           })(t, e),
         );
       }
-      function x(e, t, i) {
+      function w(e, t, i) {
         const r = (0, n.KV)(),
           o = (0, m.jE)();
         return (0, d.n)({
@@ -6914,7 +6936,7 @@
           },
         });
       }
-      function w(e, t, i) {
+      function I(e, t, i) {
         const r = (0, n.KV)(),
           o = (0, m.jE)();
         return (0, d.n)({
@@ -7265,7 +7287,7 @@
     },
     1035: (e, t, i) => {
       "use strict";
-      i.d(t, { Ul: () => _, i8: () => g });
+      i.d(t, { Ul: () => v, i8: () => g });
       var r = i(34629),
         a = i(7850),
         s = i(90626),
@@ -7281,8 +7303,8 @@
           "images/applications/community/avatar_default_full.jpg?v=valveisgoodatcaching";
       var u = i(43047),
         p = i.n(u),
-        v = i(81393);
-      const _ = s.memo(function (e) {
+        _ = i(81393);
+      const v = s.memo(function (e) {
         const {
             strAvatarURL: t,
             size: i = "Medium",
@@ -7292,7 +7314,7 @@
             children: m,
             ...u
           } = e,
-          _ = s.useMemo(() => {
+          v = s.useMemo(() => {
             const e = [];
             return (
               t && e.push(t),
@@ -7310,7 +7332,7 @@
                     case "FillArea":
                       return h;
                     default:
-                      return (0, v.z_)(e, `Unhandled size ${e}`), c;
+                      return (0, _.z_)(e, `Unhandled size ${e}`), c;
                   }
                 })(i),
               ),
@@ -7333,7 +7355,7 @@
             }),
             (0, a.jsx)(d.c, {
               className: (0, l.A)(p().avatar, "avatar"),
-              rgSources: _,
+              rgSources: v,
               draggable: !1,
             }),
             m,
@@ -7361,7 +7383,7 @@
                     : ("Large" != t && "X-Large" != t && "FillArea" != t) ||
                       (d = e.avatar_url_full))
                 : s && (d = s),
-            (0, a.jsx)(_, {
+            (0, a.jsx)(v, {
               strAvatarURL: d,
               size: t,
               className: (0, l.A)((0, n.rO)(e), r),
@@ -7474,62 +7496,6 @@
         }
       };
       P = (0, r.Cg)([o.PA], P);
-    },
-    82227: (e, t, i) => {
-      "use strict";
-      i.d(t, { Dq: () => o, dm: () => s });
-      var r = i(3049),
-        a = i(78686);
-      function s(e, t, i, s) {
-        let o = t;
-        o =
-          "number" == typeof o
-            ? {
-                nDigitsAfterDecimal: t,
-                bUseBinary1K: i || void 0 === i,
-                bValueIsInBytes: !s,
-                bValueIsRate: s,
-                nMinimumDigitsAfterDecimal: 0,
-              }
-            : {
-                nDigitsAfterDecimal: 2,
-                bUseBinary1K: !0,
-                bValueIsInBytes: !0,
-                bValueIsRate: !1,
-                nMinimumDigitsAfterDecimal: 0,
-                ...o,
-              };
-        const { nNum: n, strPrefix: l } = (function (e, t) {
-            const i = t.bUseBinary1K ? 1024 : 1e3,
-              r = i * i,
-              a = r * i,
-              s = a * i;
-            return e > s
-              ? { nNum: e / s, strPrefix: "Tera" }
-              : e > a
-                ? { nNum: e / a, strPrefix: "Giga" }
-                : e > r
-                  ? { nNum: e / r, strPrefix: "Mega" }
-                  : e > i
-                    ? { nNum: e / i, strPrefix: "Kilo" }
-                    : { nNum: e, strPrefix: "" };
-          })(e, o),
-          m = `#${l}${o.bValueIsInBytes ? "bytes" : "bits"}${o.bValueIsRate ? "_PerSecond" : ""}`;
-        return a.Z.Localize(
-          m,
-          n.toLocaleString((0, r.J)(), {
-            minimumFractionDigits: o.nMinimumDigitsAfterDecimal,
-            maximumFractionDigits: o.nDigitsAfterDecimal,
-          }),
-        );
-      }
-      function o(e, t = 0) {
-        let i;
-        return (
-          t && (i = { maximumFractionDigits: t }),
-          e ? e.toLocaleString((0, r.J)(), i) : "" + e
-        );
-      }
     },
   },
 ]);

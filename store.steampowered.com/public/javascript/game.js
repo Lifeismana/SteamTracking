@@ -2132,14 +2132,16 @@ function ReparentAppLandingPageForSmallScreens()
 	// place discovery queue below the action buttons
 	fn_reparent( '#nextInDiscoveryQueue', $J('#queueCtn') );
 
-	// place banners and game details into the links and info section
-	fn_reparent( '#bannerAchievements', $J( '#appLinksAndInfo' ) );
-	fn_reparent( '#bannerPointsShop', $J( '#appLinksAndInfo' ) );
-	fn_reparent( '#bannerItemStore', $J( '#appLinksAndInfo' ) );
-	fn_reparent( '#bannerCommunity', $J( '#appLinksAndInfo' ) );
-
-	// on tablet these go into a dropdown
-	fn_reparent( '#appDetailsUnderlinedLinks', bUseGamepadScreenMode ? $J( '#appLinksAndInfo_TabletDropdownContent' ) : $J( '#appLinksAndInfo' ) );
+	// place banners and game details into the links and info section.  Gamepad renders that section in React.
+	if ( !bUseGamepadScreenMode )
+	{
+//		fn_reparent( '#bannerAchievements', $J( '#appLinksAndInfo' ) );
+		fn_reparent( '#bannerPointsShop', $J( '#appLinksAndInfo' ) );
+		fn_reparent( '#bannerItemStore', $J( '#appLinksAndInfo' ) );
+		fn_reparent( '#bannerCommunity', $J( '#appLinksAndInfo' ) );
+		fn_reparent( '#appDetailsUnderlinedLinks', $J( '#appLinksAndInfo' ) );
+		fn_reparent( '#genresAndManufacturer', $J( '#appLinksAndInfo' ) );
+	}
 
 	// place the active review filter list in the review details section
 	fn_reparent( '#reviews_active_filters', $J('.reviews_info_ctn') );
@@ -2147,10 +2149,6 @@ function ReparentAppLandingPageForSmallScreens()
 	// populate the reviews settings popup
 	fn_reparent( '#review_histograms_container', $J( '#reviewSettingsPopupContent' ) );
 	fn_reparent( '#reviews_filter_options', $J( '#reviewSettingsPopupContent' ) );
-
-	// move some of the links and info content to the bottom
-	// testing this - we may need to move this again
-	fn_reparent( '#genresAndManufacturer', $J( '#appLinksAndInfo' ) );
 
 	// the window resize message handler is for layout adjustements that require more logic than reparenting based on screen size
 	var defaultShareFlex = $J('#shareBtn').css('flex-grow');

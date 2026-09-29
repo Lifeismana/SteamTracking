@@ -15,13 +15,13 @@
         FocusRingOnHiddenItem: "focusring_FocusRingOnHiddenItem_2rIZm",
       };
     },
-    27: (e, t, r) => {
+    147: (e, t, r) => {
       "use strict";
       r.d(t, { InitializeGamepadNavigation: () => ln });
       var i,
         n = r(669),
         s = r.n(n),
-        a = r(753),
+        a = r(202),
         o = r(696);
       function l(e) {
         return "object" == typeof e && null !== e && "value" in e;
@@ -95,10 +95,10 @@
         );
       }
       var b = r(629),
-        f = r(339),
-        p = r(340),
-        B = r(87),
-        w = r(950);
+        f = r(667),
+        p = r(284),
+        B = r(359),
+        w = r(238);
       class y {
         m_NavigationController;
         m_postMessage;
@@ -394,8 +394,8 @@
         (0, b.Cg)([f.o], I.prototype, "OnKeyUp", null),
         (0, b.Cg)([f.o], I.prototype, "Reset", null);
       var F,
-        A = r(602),
-        N = r(258);
+        A = r(234),
+        N = r(626);
       class E {
         SyncStore(e) {
           return this.Subscribe(e).Unsubscribe;
@@ -4312,6 +4312,11 @@
                     bw: lt.writeString,
                   },
                   trace_flags: { n: 52, br: ot.readUint32, bw: lt.writeUint32 },
+                  browserapi_site: {
+                    n: 53,
+                    br: ot.readString,
+                    bw: lt.writeString,
+                  },
                 },
               }),
             Rt.sm_m
@@ -6590,7 +6595,11 @@
             return e.SendNotification(
               "ClientMetrics.ReportClientError#1",
               Tr(Gt, t),
-              { ePrivilege: 2, eWebAPIKeyRequirement: 1 },
+              {
+                ePrivilege: 2,
+                eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: ["all"],
+              },
             );
           }),
           (e.ClientBootstrapReport = function (e, t) {
@@ -12186,18 +12195,26 @@
         }
         DispatchVirtualButtonClick(e, t, r) {
           let i;
-          t && (i = this.GetActiveContext() ?? this.FindAnActiveContext()),
-            this.OnButtonDown(
-              e,
-              r ?? a.Vz.GAMEPAD,
-              -1,
-              void 0,
-              void 0,
-              void 0,
-              t,
-              i,
-              !0,
-            ),
+          if (t) i = this.GetActiveContext() ?? this.FindAnActiveContext();
+          else if (r && !(0, a.UE)(r)) {
+            const e = this.GetActiveContext() ?? this.FindAnActiveContext(),
+              r = e?.m_LastActiveNavTree;
+            r &&
+              !r.GetLastFocusedNode() &&
+              r.Root.Element &&
+              ((t = r.Root.Element), (i = e));
+          }
+          this.OnButtonDown(
+            e,
+            r ?? a.Vz.GAMEPAD,
+            -1,
+            void 0,
+            void 0,
+            void 0,
+            t,
+            i,
+            !0,
+          ),
             this.OnButtonUp(
               e,
               r ?? a.Vz.GAMEPAD,
@@ -13199,7 +13216,7 @@
         },
       };
     },
-    340: (e, t, r) => {
+    284: (e, t, r) => {
       "use strict";
       r.d(t, { T: () => i, h: () => n });
       const i = "GamepadInput";
@@ -13212,12 +13229,12 @@
           (e[(e.Full = 4)] = "Full");
       })(n || (n = {}));
     },
-    950: (e, t, r) => {
+    238: (e, t, r) => {
       "use strict";
       r.d(t, { A7: () => a, Vp: () => o, n4: () => l });
       var i = r(629),
-        n = r(339),
-        s = r(340);
+        n = r(667),
+        s = r(284);
       class a {
         PostMessage(e) {}
         RegisterForMessage(e) {}

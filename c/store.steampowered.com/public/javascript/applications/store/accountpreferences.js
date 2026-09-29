@@ -3,22 +3,22 @@
   {
     chunkid: (module) => {
       module.exports = {
+        PopupScreenshotModal: "_39-iZ5ATgVu0Ji6MD3vGTs",
+        PopupScreenshotContainer: "_1yPgn1HBK5eQLrfrG38h1X",
+        PopupScreenshot: "_173h7V5UqdDhN-J2O-AKVt",
+        ButtonCtn: "_3-4JG-Z1QyDXZaEByxvMvS",
+        ButtonIcon: "_15gRxd1hdAQxSunAfg1PZ8",
+        Disabled: "_3Mh6I7hT8HViCO91Q5Iech",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         narrowWidth: "500px",
         avatarHolder: "nibodjvvrm86uCfnnAn4g",
         avatarStatus: "_3xUpb5DWXPFNcHHIcv-9pe",
         avatar: "_3h-QRJGxnVOIExtHD1R0f2",
         avatarFrame: "X_mJE4BYV5StDPwZhSiAu",
         avatarFrameImg: "_3fM0F85j3aWVzr4RJM9-eu",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        PopupScreenshotModal: "yloqxGhIEzvGIwbQbo6KP",
-        PopupScreenshotContainer: "_1wwvw8QMJqug_-ioZdRJTC",
-        PopupScreenshot: "_31XZuVC3l846TjPDScscaS",
-        ButtonCtn: "_3MyspS-H5SnsUnKa3yhdtJ",
-        ButtonIcon: "_1tCO1rmBfntUI0TlpTly1F",
-        Disabled: "_1a_f8VY56CtjgePDRTaC-W",
       };
     },
     chunkid: (module) => {
@@ -445,6 +445,45 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_, _) {
+        return new (_())(
+          async (_) => {
+            const _ = [..._],
+              _ = await _.xtC.GetPlayerLinkDetails(_, {
+                steamids: _,
+              }),
+              _ = new Map();
+            return (
+              _.Body()
+                .accounts()
+                .forEach((_) => {
+                  const _ = _.toObject();
+                  _.set(_.public_data.steamid, _);
+                }),
+              __webpack_require__.map((_) => _.get(_) ?? null)
+            );
+          },
+          {
+            maxBatchSize: 100,
+            cache: !1,
+            ..._,
+          },
+        );
+      }
+      function _(_) {
+        return (0, _._)("PlayerLinkDetails", () => _(_));
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
         _: () => _,
         _: () => _,
       });
@@ -463,6 +502,183 @@
       function _() {
         const _ = _.get();
         return _ ? new Date(1e3 * _) : new Date();
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      function _(_) {
+        return "[object Object]" === Object.prototype.toString.call(_);
+      }
+      function _(..._) {
+        return JSON.stringify(_, (_, _) => {
+          if (
+            (function (_) {
+              if (!_(_)) return !1;
+              const _ = _.constructor;
+              if (void 0 === _) return !0;
+              const _ = _.prototype;
+              return (
+                !!_(_) &&
+                !!Object.prototype.hasOwnProperty.call(_, "isPrototypeOf")
+              );
+            })(_)
+          ) {
+            const _ = {};
+            return (
+              Object.keys(_)
+                .sort()
+                .forEach((_) => {
+                  _[_] = _[_];
+                }),
+              _
+            );
+          }
+          return _;
+        });
+      }
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid");
+      const _ = (0, _.createContext)({
+        instances: {},
+        factories: {},
+      });
+      function _(_, _) {
+        const _ = (0, _.useContext)(_),
+          _ = "string" == typeof _ ? _ : _(..._);
+        let _ = _;
+        for (; _; ) {
+          if (_ in _.instances) return _.instances[_];
+          if (_ in _.factories) break;
+          _ = _.parent;
+        }
+        const _ = (_?.factories[_] ?? _)();
+        return ((_ ?? _).instances[_] = _), _;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      function _() {
+        const [_, _] = _.useState(void 0),
+          _ = _.useCallback(() => _(void 0), []),
+          _ = (0, _.jsx)(_._, {
+            active: void 0 !== _,
+            children: (0, _.jsx)(_, {
+              closeModal: _,
+              rgImageURL: _,
+            }),
+          });
+        return [_, _];
+      }
+      function _(_) {
+        const { closeModal: _, rgImageURL: _ } = _,
+          [_, _] = _.useState(0),
+          _ = _?.length ?? 0,
+          _ = _.useCallback(() => {
+            _(0 == _ ? _ - 1 : _ - 1);
+          }, [_, _]),
+          _ = _.useCallback(() => {
+            _(_ && _ + 1 >= _ ? 0 : _ + 1);
+          }, [_, _, _]);
+        return (0, _.jsxs)(_._, {
+          title: (0, _._)("#SaleTech_Screenshot_Viewer"),
+          bAllowFullSize: !0,
+          bOKDisabled: !0,
+          closeModal: _,
+          bHideCloseIcon: !0,
+          modalClassName: _().PopupScreenshotModal,
+          children: [
+            (0, _.jsx)(_, {
+              index: _,
+              numElements: _?.length || 0,
+              fnForward: _,
+              fnBackwards: _,
+              fnClose: _,
+              bCircular: !0,
+            }),
+            (0, _.jsx)("div", {
+              className: _().PopupScreenshotContainer,
+              children: (0, _.jsx)("img", {
+                className: _().PopupScreenshot,
+                src: _?.[_],
+                alt: "",
+              }),
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const {
+          index: _,
+          numElements: _,
+          fnForward: _,
+          fnBackwards: _,
+          fnClose: _,
+          bCircular: _,
+        } = _;
+        (0, _._)("ArrowLeft", () => _?.(), !0, !0),
+          (0, _._)("Left", () => _?.(), !0, !0),
+          (0, _._)("ArrowRight", () => _?.(), !0, !0),
+          (0, _._)("Right", () => _?.(), !0, !0),
+          (0, _._)("Escape", () => _ && _(), !0, !0),
+          (0, _._)("Esc", () => _ && _(), !0, !0);
+        let _ = _ > 1;
+        return (0, _.jsxs)("div", {
+          className: _().ButtonCtn,
+          children: [
+            _ &&
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)("button", {
+                    type: "button",
+                    className: (0, _._)(
+                      _().ButtonIcon,
+                      0 !== _ || _ ? null : _().Disabled,
+                    ),
+                    onClick: _,
+                    "aria-label": (0, _._)("#Carousel_Prev"),
+                    children: (0, _.jsx)(_.V5W, {
+                      angle: 270,
+                    }),
+                  }),
+                  (0, _.jsx)("button", {
+                    type: "button",
+                    className: (0, _._)(
+                      _().ButtonIcon,
+                      _ !== _ - 1 || _ ? null : _().Disabled,
+                    ),
+                    onClick: _,
+                    "aria-label": (0, _._)("#Carousel_Next"),
+                    children: (0, _.jsx)(_.V5W, {
+                      angle: 90,
+                    }),
+                  }),
+                ],
+              }),
+            (0, _.jsx)("button", {
+              type: "button",
+              className: _().ButtonIcon,
+              onClick: _,
+              "aria-label": (0, _._)("#Button_Close"),
+              children: (0, _.jsx)(_._, {}),
+            }),
+          ],
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -1125,122 +1341,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      function _() {
-        const [_, _] = _.useState(void 0),
-          _ = _.useCallback(() => _(void 0), []),
-          _ = (0, _.jsx)(_._, {
-            active: void 0 !== _,
-            children: (0, _.jsx)(_, {
-              closeModal: _,
-              rgImageURL: _,
-            }),
-          });
-        return [_, _];
-      }
-      function _(_) {
-        const { closeModal: _, rgImageURL: _ } = _,
-          [_, _] = _.useState(0),
-          _ = _?.length ?? 0,
-          _ = _.useCallback(() => {
-            _(0 == _ ? _ - 1 : _ - 1);
-          }, [_, _]),
-          _ = _.useCallback(() => {
-            _(_ && _ + 1 >= _ ? 0 : _ + 1);
-          }, [_, _, _]);
-        return (0, _.jsxs)(_._, {
-          title: (0, _._)("#SaleTech_Screenshot_Viewer"),
-          bAllowFullSize: !0,
-          bOKDisabled: !0,
-          closeModal: _,
-          bHideCloseIcon: !0,
-          modalClassName: _().PopupScreenshotModal,
-          children: [
-            (0, _.jsx)(_, {
-              index: _,
-              numElements: _?.length || 0,
-              fnForward: _,
-              fnBackwards: _,
-              fnClose: _,
-              bCircular: !0,
-            }),
-            (0, _.jsx)("div", {
-              className: _().PopupScreenshotContainer,
-              children: (0, _.jsx)("img", {
-                className: _().PopupScreenshot,
-                src: _?.[_],
-              }),
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const {
-          index: _,
-          numElements: _,
-          fnForward: _,
-          fnBackwards: _,
-          fnClose: _,
-          bCircular: _,
-        } = _;
-        (0, _._)("ArrowLeft", () => _?.(), !0, !0),
-          (0, _._)("Left", () => _?.(), !0, !0),
-          (0, _._)("ArrowRight", () => _?.(), !0, !0),
-          (0, _._)("Right", () => _?.(), !0, !0),
-          (0, _._)("Escape", () => _ && _(), !0, !0),
-          (0, _._)("Esc", () => _ && _(), !0, !0);
-        let _ = _ > 1;
-        return (0, _.jsxs)("div", {
-          className: _().ButtonCtn,
-          children: [
-            _ &&
-              (0, _.jsxs)(_.Fragment, {
-                children: [
-                  (0, _.jsx)("div", {
-                    className: (0, _._)(
-                      _().ButtonIcon,
-                      0 !== _ || _ ? null : _().Disabled,
-                    ),
-                    onClick: _,
-                    children: (0, _.jsx)(_.V5W, {
-                      angle: 270,
-                    }),
-                  }),
-                  (0, _.jsx)("div", {
-                    className: (0, _._)(
-                      _().ButtonIcon,
-                      _ !== _ - 1 || _ ? null : _().Disabled,
-                    ),
-                    onClick: _,
-                    children: (0, _.jsx)(_.V5W, {
-                      angle: 90,
-                    }),
-                  }),
-                ],
-              }),
-            (0, _.jsx)("div", {
-              className: _().ButtonIcon,
-              onClick: _,
-              children: (0, _.jsx)(_._, {}),
-            }),
-          ],
-        });
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -1410,22 +1510,10 @@
             ref: _,
             ..._
           } = _,
-          _ = _.useRef(null),
           [_, _] = _.useState(0),
-          [_, _] = _.useState(0);
-        _.useImperativeHandle(
-          _,
-          () => ({
-            imgRef: _,
-            nSourceIndex: _,
-            nSourceLength: _.length,
-          }),
-          [_, _, _],
-        );
-        const _ = _.useMemo(() => JSON.stringify(_), [_]);
-        _.useEffect(() => {
-          _(0), _((_) => _ + 1);
-        }, [_]);
+          _ = _.useMemo(() => JSON.stringify(_), [_]),
+          [_, _] = _.useState(_);
+        _ != _ && (_(_), _(0));
         const _ = _.useMemo(() => {
             let _ = "";
             return (
@@ -1448,17 +1536,33 @@
               _ >= _.length && _ && _(_), _ < _.length && _(_);
             },
             [_, _, _, _],
-          );
-        return (0, _.jsx)(
-          "img",
-          {
-            ref: _,
-            ..._,
-            src: _,
-            onError: _,
-            alt: _,
-          },
-          _,
+          ),
+          _ = _.useRef(null);
+        return (
+          _.useImperativeHandle(
+            _,
+            () => ({
+              imgRef: _,
+              nSourceIndex: _,
+              nSourceLength: _.length,
+            }),
+            [_, _, _],
+          ),
+          _.useEffect(() => {
+            const _ = _.current;
+            _?.complete && 0 == _.naturalWidth && (_.src = _.src);
+          }, []),
+          (0, _.jsx)(
+            "img",
+            {
+              ref: _,
+              ..._,
+              src: _,
+              onError: _,
+              alt: _,
+            },
+            _,
+          )
         );
       }
     },

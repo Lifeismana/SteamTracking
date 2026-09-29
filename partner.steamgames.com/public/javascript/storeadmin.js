@@ -1015,7 +1015,7 @@ function ShowAddAppsDialog( nPackageId, bPublished, nIncludeAppIDForDepots = 0, 
 		dialog.SetRemoveContentOnDismissal( false );
 		dialog.done( function() {
 			var appIds = Array();
-			var checkboxes = dialog.GetContent().find('input[type="checkbox"]');
+			var checkboxes = dialog.GetContent().find('input[type="checkbox"][name="appids[]"]');
 			for ( var i = 0; i < checkboxes.length; ++i )
 			{
 				var checkbox = checkboxes[i];
@@ -1072,7 +1072,7 @@ function ShowManageDepotsDialog( nPackageId, overrideAppIds, bCreateBetaPkg = fa
 				appIds.push( hiddenInputs[i].value );
 			}
 			var depotIds = Array();
-			var checkboxes = dialog.GetContent().find('input[type="checkbox"]');
+			var checkboxes = dialog.GetContent().find('input[type="checkbox"][name="depotids[]"]');
 			for ( var i = 0; i < checkboxes.length; ++i )
 			{
 				var checkbox = checkboxes[i];

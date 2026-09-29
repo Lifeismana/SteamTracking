@@ -955,9 +955,10 @@
                         children: " ",
                       }),
                       _
-                        ? (0, _.jsx)("div", {
+                        ? (0, _.jsx)(_._, {
+                            focusable: !0,
                             className: _().EventSectionMoreBtn,
-                            onClick: _,
+                            onActivate: _,
                             children: (0, _._)("#EventBrowse_MoreEventsBtn"),
                           })
                         : (0, _.jsx)(_._, {
@@ -1345,6 +1346,7 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -1748,7 +1750,6 @@
         });
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2187,13 +2188,15 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = (0, _._)((_) => {
           const {
               event: _,
               lang: _,
-              partnerEventStore: _,
               emoticonStore: _,
               nOverrideStartTime: _,
               nOverrideEndTime: _,
@@ -2324,7 +2327,6 @@
                             children: [
                               (0, _.jsx)(_._, {
                                 text: _ || "",
-                                partnerEventStore: _,
                                 showErrorInfo: _,
                                 event: _,
                                 languageOverride: _,
@@ -2419,7 +2421,6 @@
                 (0, _.jsx)(_._, {
                   eventModel: _,
                   emoticonStore: _,
-                  partnerEventStore: _,
                 }),
               ],
             }),
@@ -2803,7 +2804,6 @@
             : (0, _.jsx)(_._, {
                 children: (0, _.jsx)(_, {
                   lang: (0, _.sfN)(_._.LANGUAGE),
-                  partnerEventStore: _,
                   event: _,
                   adminPanel:
                     _._.EREALM === _._.k_ESteamRealmChina

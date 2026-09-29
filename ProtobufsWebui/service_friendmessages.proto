@@ -10,6 +10,14 @@ message CFriendMessages_DismissSessionNotice_Notification {
 	optional int32 notice_type = 2 [(.description) = "enum"];
 }
 
+message CFriendMessages_GetPartnerSharedChatGroup_Request {
+	optional fixed64 steamid = 1;
+}
+
+message CFriendMessages_GetPartnerSharedChatGroup_Response {
+	optional uint64 chat_group_id = 1;
+}
+
 message CFriendMessages_GetRecentMessages_Request {
 	optional fixed64 steamid1 = 1;
 	optional fixed64 steamid2 = 2;
@@ -160,6 +168,8 @@ service FriendMessages {
 	rpc DismissSessionNotice (.CFriendMessages_DismissSessionNotice_Notification) returns (.NoResponse);
 	// bConstMethod=true, ePrivilege=1
 	rpc GetActiveMessageSessions (.CFriendsMessages_GetActiveMessageSessions_Request) returns (.CFriendsMessages_GetActiveMessageSessions_Response);
+	// ePrivilege=1
+	rpc GetPartnerSharedChatGroup (.CFriendMessages_GetPartnerSharedChatGroup_Request) returns (.CFriendMessages_GetPartnerSharedChatGroup_Response);
 	// bConstMethod=true, ePrivilege=1
 	rpc GetRecentMessages (.CFriendMessages_GetRecentMessages_Request) returns (.CFriendMessages_GetRecentMessages_Response);
 	// ePrivilege=1

@@ -842,7 +842,7 @@
           }
         };
     },
-    3122: (e, t, n) => {
+    11453: (e, t, n) => {
       "use strict";
       n.r(t), n.d(t, { default: () => ds });
       var a = n(7850),
@@ -900,9 +900,10 @@
                         children: " ",
                       }),
                       s
-                        ? (0, a.jsx)("div", {
+                        ? (0, a.jsx)(b.Z, {
+                            focusable: !0,
                             className: T().EventSectionMoreBtn,
-                            onClick: s,
+                            onActivate: s,
                             children: (0, D.we)("#EventBrowse_MoreEventsBtn"),
                           })
                         : (0, a.jsx)(x.tj, {
@@ -1226,14 +1227,14 @@
         (0, M.Cg)([O.sH], W.prototype, "m_mapSummaryStats", void 0),
         (0, M.Cg)([O.XI], W.prototype, "LazyInit", null);
       const q = new W();
-      var K = n(94333),
-        Y = n(47413),
-        z = n(69776),
+      var K = n(64045),
+        Y = n(50409),
+        z = n(91616),
         J = n(20019),
-        X = n(95578),
+        X = n(8747),
         Q = n(90316),
         Z = n.n(Q),
-        $ = n(41399);
+        $ = n(22623);
       function ee(e) {
         const { appid: t, creatorHome: n } = e;
         return (0, a.jsx)("div", {
@@ -1271,10 +1272,11 @@
         });
       }
       var ne = n(62641),
-        ae = n(48593),
+        ae = n(40672),
         se = n(82227),
-        ie = n(5065);
-      function re(e) {
+        ie = n(66418),
+        re = n(5065);
+      function oe(e) {
         const {
             summary: t,
             bEventIsInModerationQueue: n,
@@ -1302,41 +1304,41 @@
         return c + l == 0
           ? null
           : (0, a.jsxs)("div", {
-              className: (0, A.A)(i ? ie.EventDetailView : ie.DashboardView),
+              className: (0, A.A)(i ? re.EventDetailView : re.DashboardView),
               children: [
                 (0, a.jsxs)("div", {
-                  className: (0, A.A)(ie.HeaderCtn),
+                  className: (0, A.A)(re.HeaderCtn),
                   children: [
                     o,
                     (0, a.jsxs)("div", {
-                      className: ie.TotalsCtn,
+                      className: re.TotalsCtn,
                       children: [
                         (0, a.jsxs)("div", {
-                          className: ie.HeaderStat,
+                          className: re.HeaderStat,
                           children: [
                             (0, a.jsx)("span", {
-                              className: ie.StatDescription,
+                              className: re.StatDescription,
                               children: (0, D.we)(
                                 "#EventDashBoard_SummaryStats_TotalImpressions",
                               ),
                             }),
                             (0, a.jsx)("span", {
-                              className: ie.StatFigure,
+                              className: re.StatFigure,
                               children: (0, se.Dq)(l),
                             }),
                           ],
                         }),
                         (0, a.jsxs)("div", {
-                          className: ie.HeaderStat,
+                          className: re.HeaderStat,
                           children: [
                             (0, a.jsx)("span", {
-                              className: ie.StatDescription,
+                              className: re.StatDescription,
                               children: (0, D.we)(
                                 "#EventDashBoard_SummaryStats_TotalViews",
                               ),
                             }),
                             (0, a.jsx)("span", {
-                              className: ie.StatFigure,
+                              className: re.StatFigure,
                               children: (0, se.Dq)(c),
                             }),
                           ],
@@ -1347,17 +1349,17 @@
                 }),
                 Boolean(s && n) &&
                   (0, a.jsxs)("div", {
-                    className: ie.ModerationWarningCtn,
+                    className: re.ModerationWarningCtn,
                     children: [
                       (0, a.jsx)("div", {
-                        className: ie.ModerationWarning,
+                        className: re.ModerationWarning,
                         children: (0, D.we)(
                           "#EventDashBoard_ModerationQueueWarning",
                         ),
                       }),
                       (0, a.jsx)("a", {
                         href:
-                          P.TS.PARTNER_BASE_URL +
+                          ie.TS.PARTNER_BASE_URL +
                           "doc/marketing/event_tools/moderation",
                         children: (0, D.we)(
                           "#EventDashBoard_Location_ModerationTitle",
@@ -1367,17 +1369,17 @@
                   }),
                 r &&
                   (0, a.jsxs)("div", {
-                    className: (0, A.A)(ie.StatsCtn),
+                    className: (0, A.A)(re.StatsCtn),
                     children: [
                       s &&
                         (0, a.jsxs)("div", {
                           className: (0, A.A)(
-                            ie.StatsLeftSection,
-                            n && ie.DisabledStats,
+                            re.StatsLeftSection,
+                            n && re.DisabledStats,
                           ),
                           children: [
                             (0, a.jsxs)("div", {
-                              className: ie.StatsTitle_ctn,
+                              className: re.StatsTitle_ctn,
                               children: [
                                 (0, a.jsx)("span", {
                                   children: (0, D.we)(
@@ -1385,7 +1387,7 @@
                                   ),
                                 }),
                                 (0, a.jsxs)("span", {
-                                  className: ie.ModerationNote,
+                                  className: re.ModerationNote,
                                   children: [
                                     "( ",
                                     (0, D.we)(
@@ -1397,7 +1399,7 @@
                               ],
                             }),
                             (0, a.jsxs)("div", {
-                              className: ie.StatsTitle,
+                              className: re.StatsTitle,
                               children: [
                                 (0, a.jsx)("span", {
                                   children: (0, D.we)(
@@ -1408,7 +1410,7 @@
                               ],
                             }),
                             (0, a.jsxs)("div", {
-                              className: ie.StatsTitle,
+                              className: re.StatsTitle,
                               children: [
                                 (0, a.jsx)("span", {
                                   children: (0, D.we)(
@@ -1419,7 +1421,7 @@
                               ],
                             }),
                             (0, a.jsxs)("div", {
-                              className: ie.StatsTitle_ctn,
+                              className: re.StatsTitle_ctn,
                               children: [
                                 (0, a.jsx)("span", {
                                   children: (0, D.we)(
@@ -1427,7 +1429,7 @@
                                   ),
                                 }),
                                 (0, a.jsxs)("span", {
-                                  className: ie.ModerationNote,
+                                  className: re.ModerationNote,
                                   children: [
                                     "( ",
                                     (0, D.we)(
@@ -1442,7 +1444,7 @@
                               (0, a.jsxs)(a.Fragment, {
                                 children: [
                                   (0, a.jsxs)("div", {
-                                    className: ie.StatsTitle,
+                                    className: re.StatsTitle,
                                     children: [
                                       (0, a.jsx)("span", {
                                         children: (0, D.we)(
@@ -1455,7 +1457,7 @@
                                     ],
                                   }),
                                   (0, a.jsxs)("div", {
-                                    className: ie.StatsTitle,
+                                    className: re.StatsTitle,
                                     children: [
                                       (0, a.jsx)("span", {
                                         children: (0, D.we)(
@@ -1470,7 +1472,7 @@
                                 ],
                               }),
                             (0, a.jsxs)("div", {
-                              className: ie.StatsTitle,
+                              className: re.StatsTitle,
                               children: [
                                 (0, a.jsx)("span", {
                                   children: (0, D.we)(
@@ -1481,7 +1483,7 @@
                               ],
                             }),
                             (0, a.jsxs)("div", {
-                              className: ie.StatsTitle,
+                              className: re.StatsTitle,
                               children: [
                                 (0, a.jsx)("span", {
                                   children: (0, D.we)(
@@ -1494,10 +1496,10 @@
                           ],
                         }),
                       (0, a.jsxs)("div", {
-                        className: ie.StatsRightSection,
+                        className: re.StatsRightSection,
                         children: [
                           (0, a.jsx)("div", {
-                            className: ie.StatsTitle_ctn,
+                            className: re.StatsTitle_ctn,
                             children: (0, a.jsx)("span", {
                               children: (0, D.we)(
                                 "#EventDashBoard_Location_StoreDetail",
@@ -1505,7 +1507,7 @@
                             }),
                           }),
                           (0, a.jsxs)("div", {
-                            className: ie.StatsTitle,
+                            className: re.StatsTitle,
                             children: [
                               (0, a.jsx)("span", {
                                 children: (0, D.we)(
@@ -1516,7 +1518,7 @@
                             ],
                           }),
                           (0, a.jsxs)("div", {
-                            className: ie.StatsTitle,
+                            className: re.StatsTitle,
                             children: [
                               (0, a.jsx)("span", {
                                 children: (0, D.we)(
@@ -1527,7 +1529,7 @@
                             ],
                           }),
                           (0, a.jsx)("div", {
-                            className: ie.StatsTitle_ctn,
+                            className: re.StatsTitle_ctn,
                             children: (0, a.jsx)("span", {
                               children: (0, D.we)(
                                 "#EventDashBoard_Location_CommunityDetail",
@@ -1535,7 +1537,7 @@
                             }),
                           }),
                           (0, a.jsxs)("div", {
-                            className: ie.StatsTitle,
+                            className: re.StatsTitle,
                             children: [
                               (0, a.jsx)("span", {
                                 children: (0, D.we)(
@@ -1546,7 +1548,7 @@
                             ],
                           }),
                           (0, a.jsxs)("div", {
-                            className: ie.StatsTitle,
+                            className: re.StatsTitle,
                             children: [
                               (0, a.jsx)("span", {
                                 children: (0, D.we)(
@@ -1557,7 +1559,7 @@
                             ],
                           }),
                           (0, a.jsx)("div", {
-                            className: ie.StatsTitle_ctn,
+                            className: re.StatsTitle_ctn,
                             children: (0, a.jsx)("span", {
                               children: (0, D.we)(
                                 "#EventDashBoard_Location_NewsHubDetail",
@@ -1565,7 +1567,7 @@
                             }),
                           }),
                           (0, a.jsxs)("div", {
-                            className: ie.StatsTitle,
+                            className: re.StatsTitle,
                             children: [
                               (0, a.jsx)("span", {
                                 children: (0, D.we)(
@@ -1576,7 +1578,7 @@
                             ],
                           }),
                           (0, a.jsxs)("div", {
-                            className: ie.StatsTitle,
+                            className: re.StatsTitle,
                             children: [
                               (0, a.jsx)("span", {
                                 children: (0, D.we)(
@@ -1593,7 +1595,7 @@
               ],
             });
       }
-      const oe = (0, d.PA)(function (e) {
+      const le = (0, d.PA)(function (e) {
         const { event: t, bIsOGG: n, summary: s } = e,
           i = (0, ae.n)();
         return (0, a.jsxs)(g.tH, {
@@ -1641,7 +1643,7 @@
                 className: Z().EditorStatsCtn,
                 children: [
                   (0, D.we)("#EventDashBoard_SummaryStats_Admin_Title"),
-                  (0, a.jsx)(re, {
+                  (0, a.jsx)(oe, {
                     summary: s,
                     bIsAllowedInLibrary: n,
                     bEventIsInModerationQueue: (0, ne.Dn)(t, i),
@@ -1653,12 +1655,11 @@
           ],
         });
       });
-      var le = n(49802),
-        ce = n(59975),
-        de = n(66418),
+      var ce = n(49802),
+        de = n(59975),
         ue = n(22687),
-        pe = n(14326),
-        me = n(17289),
+        pe = n(88323),
+        me = n(38247),
         he = n(81393),
         _e = n(61336);
       const ve = (0, d.PA)((e) => {
@@ -1687,7 +1688,7 @@
                   (v?.is_ogg ?? Boolean(d))
                     ? (0, a.jsx)(ge, { appid: v?.appid || d })
                     : (0, a.jsx)(Se, { clanSteamID: u }),
-                  (0, a.jsx)(ce.j, {
+                  (0, a.jsx)(de.j, {
                     event: t,
                     className: Z().EventDetailTimeInfo,
                     nOverrideEndTime: i,
@@ -1761,11 +1762,11 @@
         const { clanSteamID: t } = e,
           n = t.GetAccountID(),
           { data: s } = (0, E.TB)(n),
-          { data: i } = (0, le.A5)(n);
+          { data: i } = (0, ce.A5)(n);
         if (!s) return null;
         const r = i
-          ? (0, le.LO)(i, "developer")
-          : de.TS.COMMUNITY_BASE_URL +
+          ? (0, ce.LO)(i, "developer")
+          : ie.TS.COMMUNITY_BASE_URL +
             (s.vanity_url
               ? "groups/" + s.vanity_url
               : "gid/" + t.ConvertTo64BitString());
@@ -1788,15 +1789,15 @@
       }
       var Ce = n(11309),
         xe = n(78842),
-        we = n(93826),
+        we = n(77727),
         Ee = n(60860),
-        be = n(71746),
-        fe = n(69409),
+        be = n(73503),
+        fe = n(58431),
         je = n(64641),
         Ie = n.n(je),
         ye = n(51272),
-        Ne = n(92007),
-        Te = n(18663),
+        Ne = n(67006),
+        Te = n(64259),
         Ae = n(30470),
         De = n(56283),
         Be = n(45737),
@@ -1882,7 +1883,7 @@
       function Ve(e) {
         const { appid: t } = e,
           { data: n } = (0, F.J$)(t ? { appid: t } : void 0);
-        return t && de.iA.logged_in && n?.type == X.uE.Vi
+        return t && ie.iA.logged_in && n?.type == X.uE.Vi
           ? (0, a.jsx)(We, { appid: t })
           : null;
       }
@@ -2007,23 +2008,26 @@
           Promise.all([
             n.e(36597),
             n.e(56589),
-            n.e(29197),
             n.e(70514),
+            n.e(29197),
+            n.e(94781),
             n.e(76226),
             n.e(56347),
-            n.e(94781),
             n.e(29008),
             n.e(23339),
-            n.e(16015),
+            n.e(8198),
             n.e(67165),
             n.e(5289),
             n.e(63089),
-            n.e(1703),
-            n.e(33884),
-            n.e(13524),
+            n.e(60839),
+            n.e(14632),
+            n.e(54409),
             n.e(52389),
-            n.e(79139),
+            n.e(49968),
             n.e(92120),
+            n.e(11095),
+            n.e(14867),
+            n.e(8319),
             n.e(10177),
             n.e(68396),
           ]).then(n.bind(n, 49850)),
@@ -2032,34 +2036,33 @@
           const {
               event: t,
               lang: n,
-              partnerEventStore: s,
-              emoticonStore: i,
-              nOverrideStartTime: r,
-              nOverrideEndTime: o,
-              adminPanel: l,
-              otherEventRow: c,
-              titleBar: d,
+              emoticonStore: s,
+              nOverrideStartTime: i,
+              nOverrideEndTime: r,
+              adminPanel: o,
+              otherEventRow: l,
+              titleBar: c,
             } = e,
-            m = t.appid,
-            h = t.clanSteamID.GetAccountID(),
-            _ = (0, Ee.MU)(),
-            v = (0, ae.n)(),
-            { data: S, isPending: C } = (0, F.J$)(m ? { appid: m } : void 0),
-            { data: w, isPending: b } = (0, E.TB)(h);
+            d = t.appid,
+            m = t.clanSteamID.GetAccountID(),
+            h = (0, Ee.MU)(),
+            _ = (0, ae.n)(),
+            { data: v, isPending: S } = (0, F.J$)(d ? { appid: d } : void 0),
+            { data: C, isPending: w } = (0, E.TB)(m);
           if (
             (u.useEffect(() => {
               window.scrollTo(0, 0);
-            }, [m, h]),
-            !_ && t.GetEventType() == p.ajI)
+            }, [d, m]),
+            !h && t.GetEventType() == p.ajI)
           )
             return (0, a.jsx)(x.OG, {
               eventModel: t,
               route: x.PH.k_eStoreSalePage,
               bPopup: !1,
             });
-          const f = (0, x.Bw)(t, x.PH.k_eStoreNewsHub, "allowRelative"),
-            j = (0, x.Bw)(t, x.PH.k_eStoreUsersNewsHub, "allowRelative");
-          if (!t.bLoaded || b || (m && C))
+          const b = (0, x.Bw)(t, x.PH.k_eStoreNewsHub, "allowRelative"),
+            f = (0, x.Bw)(t, x.PH.k_eStoreUsersNewsHub, "allowRelative");
+          if (!t.bLoaded || w || (d && S))
             return (0, a.jsx)("div", {
               className: Ie().FlexCenter,
               style: { height: "400px" },
@@ -2068,13 +2071,13 @@
                 string: (0, D.we)("#Loading"),
               }),
             });
-          const I = S?.name || w?.group_name;
-          let y = t.GetDescriptionWithFallback(n);
+          const j = v?.name || C?.group_name;
+          let I = t.GetDescriptionWithFallback(n);
           return (0, a.jsx)(qe, {
             event: t,
             lang: n,
-            titleBar: d,
-            banner: (0, a.jsx)(Ce.v, { appId: t.appid, clanId: h }),
+            titleBar: c,
+            banner: (0, a.jsx)(Ce.v, { appId: t.appid, clanId: m }),
             body: (0, a.jsxs)(g.tH, {
               children: [
                 (0, a.jsxs)("div", {
@@ -2082,12 +2085,12 @@
                   children: [
                     (0, a.jsx)(He.r, {
                       crumbs: [
-                        { name: (0, D.we)("#BreadCrumbs_AllEvents"), url: j },
-                        ...(I
+                        { name: (0, D.we)("#BreadCrumbs_AllEvents"), url: f },
+                        ...(j
                           ? [
                               {
-                                name: (0, D.we)("#BreadCrumbs_GameEvents", I),
-                                url: f,
+                                name: (0, D.we)("#BreadCrumbs_GameEvents", j),
+                                url: b,
                               },
                             ]
                           : []),
@@ -2104,15 +2107,15 @@
                       }),
                   ],
                 }),
-                Boolean(t.BEventCanShowBroadcastWidget(_, v)) &&
+                Boolean(t.BEventCanShowBroadcastWidget(h, _)) &&
                   (0, a.jsx)("div", {
                     className: Z().EventBroadcastCtn,
                     children: (0, a.jsx)(u.Suspense, {
                       fallback: null,
                       children: (0, a.jsx)(ze, {
                         event: t,
-                        bIsPreview: _,
-                        accountIDs: _ ? t.jsondata.broadcast_whitelist : void 0,
+                        bIsPreview: h,
+                        accountIDs: h ? t.jsondata.broadcast_whitelist : void 0,
                       }),
                     }),
                   }),
@@ -2128,13 +2131,13 @@
                               (0, a.jsx)(we.EventDisplaySteamAwardNomination, {
                                 event: t,
                                 lang: n,
-                                previewMode: _,
+                                previewMode: h,
                               }),
                             t.BHasTag("steam_award_vote_request") &&
                               (0, a.jsx)(we.WinterSaleSteamAwardVoteWrapper, {
                                 appID: t.appid,
                                 bIsEventActionEnabled:
-                                  t.BIsEventActionEnabled(v),
+                                  t.BIsEventActionEnabled(_),
                                 voteCategories:
                                   t.GetSteamAwardNomineeCategories(),
                               }),
@@ -2148,9 +2151,8 @@
                             ),
                             children: [
                               (0, a.jsx)(z.fh, {
-                                text: y || "",
-                                partnerEventStore: s,
-                                showErrorInfo: _,
+                                text: I || "",
+                                showErrorInfo: h,
                                 event: t,
                                 languageOverride: n,
                               }),
@@ -2215,26 +2217,22 @@
                       children: (0, a.jsx)(ve, {
                         event: t,
                         lang: n,
-                        nOverrideStartTime: r,
-                        nOverrideEndTime: o,
+                        nOverrideStartTime: i,
+                        nOverrideEndTime: r,
                         reminder: (0, a.jsx)(xe.j, { eventModel: t, lang: n }),
                         editorInfo: (0, a.jsx)(Xe, {
                           event: t,
-                          bIsOGG: w?.is_ogg ?? Boolean(m),
+                          bIsOGG: C?.is_ogg ?? Boolean(d),
                         }),
                         meetSteamInfo: (0, a.jsx)(Le, { event: t, lang: n }),
                       }),
                     }),
                   ],
                 }),
-                (0, a.jsx)(Y.F, {
-                  eventModel: t,
-                  emoticonStore: i,
-                  partnerEventStore: s,
-                }),
+                (0, a.jsx)(Y.F, { eventModel: t, emoticonStore: s }),
               ],
             }),
-            postbody: (0, a.jsxs)(g.tH, { children: [l, c] }),
+            postbody: (0, a.jsxs)(g.tH, { children: [o, l] }),
             footer: (0, a.jsx)(ee, {
               appid: t.appid,
               creatorHome: (0, a.jsx)(K.LG, {
@@ -2262,7 +2260,7 @@
         }, [d, o, l]);
         const p = (0, R.q3)(() => d && q.GetStatsFor(o, l));
         return r
-          ? (0, a.jsx)(oe, {
+          ? (0, a.jsx)(le, {
               event: t,
               bIsOGG: n,
               summary: p ? p.m_stats : void 0,
@@ -2582,7 +2580,6 @@
             : (0, a.jsx)(g.tH, {
                 children: (0, a.jsx)(Je, {
                   lang: (0, p.sfN)(P.TS.LANGUAGE),
-                  partnerEventStore: lt,
                   event: o,
                   adminPanel:
                     P.TS.EREALM === m.TU.k_ESteamRealmChina
@@ -2970,7 +2967,7 @@
           },
           `suggestion-${e.suggestion.id}`,
         );
-      var Rt = n(28372),
+      var Rt = n(14011),
         Mt = n(63292),
         Pt = n.n(Mt);
       function Ot(e) {
@@ -5057,7 +5054,7 @@
                 forceParentUpdate: o,
               });
         });
-      var _a = n(96236),
+      var _a = n(43474),
         va = n(17009),
         ga = n.n(va),
         Sa = n(1476),

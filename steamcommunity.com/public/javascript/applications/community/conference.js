@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-  [8521],
+  [68521],
   {
     88619: (e) => {
       e.exports = { BroadcastChatCtn: "_28b1vPJH7sip9Uh_p3OJvD" };
@@ -156,7 +156,7 @@
     },
     67318: (e, n, t) => {
       "use strict";
-      t.r(n), t.d(n, { ConferenceRoutes: () => Sn, default: () => In });
+      t.r(n), t.d(n, { ConferenceRoutes: () => jn, default: () => Sn });
       var a = t(7850),
         o = t(92757),
         s = t(6813),
@@ -333,7 +333,7 @@
         Y = t(7221),
         z = t(4796),
         J = t(46910),
-        X = t(47413),
+        X = t(50409),
         Z = t(88997),
         $ = t(30894),
         ee = t(1059),
@@ -1618,9 +1618,8 @@
         });
       }
       var un = t(44104),
-        mn = t(88527),
-        vn = t(73662);
-      function _n(e) {
+        mn = t(63976);
+      function vn(e) {
         const { conferenceInfo: n, bShowYouTube: t } = e,
           [o, s] = f.useState(!1),
           l = (0, v.P_)(B.Kp.PerMinute) < n.rtStartTime - 30 * B.Kp.PerMinute;
@@ -1668,10 +1667,8 @@
               className: un.MainCol,
               children: [
                 t &&
-                  (0, a.jsx)(mn.A, {
+                  (0, a.jsx)(mn.AX, {
                     videoID: n.youtubeVideoID,
-                    classNameAlign: "",
-                    classNameSize: vn.sizeFull,
                     bAutoPlay: !0,
                     bShowVideoImmediately: !0,
                   }),
@@ -1683,13 +1680,13 @@
                         children: (0, x.we)("#Conference_ChatHidden", 30),
                       }),
                     })
-                  : (0, a.jsx)(hn, { conferenceInfo: n }),
+                  : (0, a.jsx)(_n, { conferenceInfo: n }),
               ],
             }),
           ],
         });
       }
-      function hn(e) {
+      function _n(e) {
         const { conferenceInfo: n } = e,
           [t, o] = f.useState(window.innerWidth > 910),
           [s, l] = f.useState(!0),
@@ -1801,7 +1798,7 @@
           ],
         });
       }
-      function Cn(e) {
+      function hn(e) {
         const { conferenceInfo: n } = e;
         if (!n.faqAboutPage)
           return (0, a.jsx)("div", {
@@ -1815,24 +1812,24 @@
           ],
         });
       }
-      function pn(e) {
+      function Cn(e) {
         const { conferenceInfo: n } = e;
         return (0, a.jsx)(rn, { conferenceInfo: n });
       }
-      var xn = t(61937);
-      function gn(e) {
+      var pn = t(61937);
+      function xn(e) {
         const { strVanity: n } = e,
           t = m.Get().GetConferenceInfo(n);
         return t
           ? (0, a.jsx)(_.tH, {
               children: (0, a.jsx)("div", {
-                className: xn.ConferencePageCtn,
-                children: (0, a.jsx)(fn, { conferenceInfo: t }),
+                className: pn.ConferencePageCtn,
+                children: (0, a.jsx)(gn, { conferenceInfo: t }),
               }),
             })
           : (0, a.jsx)("div", { children: (0, x.we)("#Conference_Invalid") });
       }
-      function fn(e) {
+      function gn(e) {
         const { conferenceInfo: n } = e,
           t = (e) =>
             window.sessionStorage.setItem(
@@ -1847,7 +1844,7 @@
               name: (0, x.we)("#Conference_tab_Home"),
               key: "live",
               contents: (0, a.jsx)(_.tH, {
-                children: (0, a.jsx)(_n, {
+                children: (0, a.jsx)(vn, {
                   bShowYouTube: !!n.youtubeVideoID,
                   conferenceInfo: n,
                 }),
@@ -1859,7 +1856,7 @@
             key: "past",
             contents: (0, a.jsxs)(_.tH, {
               children: [
-                (0, a.jsx)(pn, { conferenceInfo: n }),
+                (0, a.jsx)(Cn, { conferenceInfo: n }),
                 !n.youtubeVideoID &&
                   Boolean(s < n.rtEndTime) &&
                   (0, a.jsx)(A, { conferenceInfo: n }),
@@ -1872,7 +1869,7 @@
             key: "about",
             contents: (0, a.jsxs)(_.tH, {
               children: [
-                (0, a.jsx)(Cn, { conferenceInfo: n }),
+                (0, a.jsx)(hn, { conferenceInfo: n }),
                 !n.youtubeVideoID &&
                   Boolean(s < n.rtEndTime) &&
                   (0, a.jsx)(A, { conferenceInfo: n }),
@@ -1890,21 +1887,21 @@
             onClick: t,
           }),
           (0, a.jsxs)("div", {
-            className: xn.ConferenceContentsCtn,
+            className: pn.ConferenceContentsCtn,
             children: [
               (0, a.jsxs)("div", {
-                className: xn.ConferenceHeaderCtn,
+                className: pn.ConferenceHeaderCtn,
                 children: [
                   (0, a.jsx)(C.c, {
-                    className: xn.LogoImage,
+                    className: pn.LogoImage,
                     rgSources: n.strLocalizedLogos,
                   }),
                   (0, a.jsx)(C.c, {
-                    className: xn.LogoImageMobile,
+                    className: pn.LogoImageMobile,
                     rgSources: n.strLocalizedMobileLogos,
                   }),
                   (0, a.jsx)("div", {
-                    className: xn.ConferenceDateRange,
+                    className: pn.ConferenceDateRange,
                     children: (0, a.jsx)(h.X0, {
                       rtStartDate: n.rtStartTime,
                       rtEndDate: n.rtEndTime,
@@ -1917,28 +1914,28 @@
           })
         );
       }
-      var jn = t(97058);
-      const Sn = {
+      var fn = t(97058);
+      const jn = {
         LandingPage: (e) => `/(conference|steamworksvirtualconference)/${e}`,
       };
-      const In = function (e) {
+      const Sn = function (e) {
         return (0, a.jsxs)(o.dO, {
           children: [
             (0, a.jsx)(o.qh, {
-              path: Sn.LandingPage(":vanity_str"),
+              path: jn.LandingPage(":vanity_str"),
               render: (e) =>
                 (0, a.jsx)(s.X, {
                   config: {
                     "conference-root": () => {
                       const { vanity_str: n } = e.match.params;
-                      return (0, a.jsx)(gn, {
+                      return (0, a.jsx)(xn, {
                         strVanity: n.toLocaleLowerCase(),
                       });
                     },
                   },
                 }),
             }),
-            (0, a.jsx)(o.qh, { component: jn.a }),
+            (0, a.jsx)(o.qh, { component: fn.a }),
           ],
         });
       };

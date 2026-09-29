@@ -311,6 +311,120 @@ function ShowcaseGamePicker( elSlot, eShowcase, purchaseid, level, iSlot, fnOnCh
 	var GameSelector = new CGameSelectorProfileShowcaseGames( $Input[0], null, null, fnOnSelect, rgFilteredGames );
 }
 
+function ShowcaseFilteredGamePicker( elSlot, eShowcase, purchaseid, level, iSlot, fnOnChange, rgGames, fnRowRightHTML )
+{
+	var $DialogContent = $J('<div/>');
+	$DialogContent.append( $J('<div/>', {'class': 'featured_game_dialog_header' }).text( 'Select one of your games to display as a Featured Game on your profile.' ) );
+	var $Input = $J( '<input/>', {type: 'text', value: '', placeholder: 'Type to filter your games' } );
+	$Input.attr( 'size', '45' );
+	$DialogContent.append( $Input );
+	$Input.wrap( $J('<div/>', {'class': 'gray_bevel for_text_input' } ) );
+	var $Count = $J('<div/>', {'class': 'showcase_game_filter_count' } );
+	$DialogContent.append( $Count );
+	var $List = $J('<div/>', {'class': 'showcase_game_filter_list' } );
+	$DialogContent.append( $List );
+
+	var Modal = ShowDialog( 'Select Featured Game', $DialogContent );
+
+	if ( !fnOnChange )
+		fnOnChange = SetShowcaseGame;
+
+	var rgSorted = ( rgGames || [] ).slice().sort( function( a, b ) { return a.name.localeCompare( b.name ); } );
+	CGameSelectorOwnedGames.NormalizeGameNames( rgSorted );
+
+	var $Focus = null;
+	var fnSetFocus = function( $Item )
+	{
+		if ( $Focus )
+			$Focus.removeClass( 'focus' );
+		$Focus = $Item;
+		if ( $Focus )
+		{
+			$Focus.addClass( 'focus' );
+			var elList = $List[0], elItem = $Focus[0];
+			if ( elItem.offsetTop < elList.scrollTop )
+				elList.scrollTop = elItem.offsetTop;
+			else if ( elItem.offsetTop + elItem.offsetHeight > elList.scrollTop + elList.clientHeight )
+				elList.scrollTop = elItem.offsetTop + elItem.offsetHeight - elList.clientHeight;
+		}
+	};
+
+	var fnSelect = function( game )
+	{
+		fnOnChange( elSlot, eShowcase, purchaseid, level, iSlot, game );
+		Modal.Dismiss();
+	};
+
+	var fnRebuild = function()
+	{
+		var strFilter = $Input.val().toLocaleLowerCase();
+		var rgTerms = strFilter.split( ' ' ).filter( function( t ) { return t.length > 0; } );
+
+		$List.empty();
+		$Focus = null;
+		var cShown = 0;
+		for ( var i = 0; i < rgSorted.length; i++ )
+		{
+			var game = rgSorted[i];
+			var bMatch = true;
+			for ( var iTerm = 0; iTerm < rgTerms.length; iTerm++ )
+			{
+				if ( game.name.toLocaleLowerCase().indexOf( rgTerms[iTerm] ) == -1 && game.name_normalized.indexOf( rgTerms[iTerm] ) == -1 )
+				{
+					bMatch = false;
+					break;
+				}
+			}
+			if ( !bMatch )
+				continue;
+
+			var $Item = $J('<div/>', {'class': 'showcase_game_filter_item' } );
+			$Item.append( $J('<div/>', {'class': 'showcase_game_filter_item_name' } ).text( game.name ) );
+			if ( fnRowRightHTML )
+				$Item.append( $J( fnRowRightHTML( game ) ) );
+			$Item.click( fnSelect.bind( null, game ) );
+			$Item.mouseenter( fnSetFocus.bind( null, $Item ) );
+			$Item.data( 'game', game );
+			$List.append( $Item );
+			cShown++;
+		}
+
+		$Count.text( 'Showing %1$s of %2$s games'.replace( '%1$s', v_numberformat( cShown ) ).replace( '%2$s', v_numberformat( rgSorted.length ) ) );
+
+		if ( !cShown )
+			$List.append( $J('<div/>', {'class': 'showcase_game_filter_empty' } ).text( 'No games match that filter.' ) );
+	};
+
+	$Input.on( 'input', fnRebuild );
+	$Input.on( 'keydown', function( event ) {
+		var $Items = $List.children( '.showcase_game_filter_item' );
+		if ( !$Items.length )
+			return;
+
+		if ( event.which == 13 /* enter */ )
+		{
+			var $Target = $Focus || $Items.first();
+			fnSelect( $Target.data( 'game' ) );
+			event.preventDefault();
+		}
+		else if ( event.which == 40 /* down */ )
+		{
+			var $Next = $Focus ? $Focus.next( '.showcase_game_filter_item' ) : $Items.first();
+			fnSetFocus( $Next.length ? $Next : $Items.first() );
+			event.preventDefault();
+		}
+		else if ( event.which == 38 /* up */ )
+		{
+			var $Prev = $Focus ? $Focus.prev( '.showcase_game_filter_item' ) : $Items.last();
+			fnSetFocus( $Prev.length ? $Prev : $Items.last() );
+			event.preventDefault();
+		}
+	} );
+
+	fnRebuild();
+	$Input.focus();
+}
+
 function ShowcaseSalienCustomization()
 {
 	$J.ajax( {
@@ -391,6 +505,34 @@ function FavoriteGameShowcaseOnGameChange( elSlot, eShowcase, purchaseid, level,
 	PreviewShowcaseConfigWithSlotChange( eShowcase, purchaseid, level, iSlot, { appid: game.appid } );
 }
 
+// mirrors GetCompletionistRibbonsHTML in the showcase template
+function AchievementsCompletionistRibbonStackHTML( strClass, cCompleted )
+{
+	var strHTML = '<span class="showcase_completion_ribbon_group ' + strClass + '">';
+	strHTML += '<span class="showcase_completion_ribbon_count">' + v_numberformat( cCompleted ) + '</span>';
+	strHTML += '<span class="showcase_completion_ribbon"></span>';
+	for ( var i = 1; i < Math.min( cCompleted, 3 ); i++ )
+		strHTML += '<span class="showcase_completion_ribbon stacked"></span>';
+	return strHTML + '</span>';
+}
+
+function AchievementsCompletionistRibbonsHTML( game )
+{
+	var strHTML = '<span class="showcase_completion_ribbons">';
+	if ( game.base_groups + game.dlc_groups <= 1 )
+	{
+		strHTML += '<span class="showcase_completion_ribbon_group base"><span class="showcase_completion_ribbon"></span></span>';
+	}
+	else
+	{
+		if ( game.base_groups_completed > 0 )
+			strHTML += AchievementsCompletionistRibbonStackHTML( 'base', game.base_groups_completed );
+		if ( game.dlc_groups_completed > 0 )
+			strHTML += AchievementsCompletionistRibbonStackHTML( 'dlc', game.dlc_groups_completed );
+	}
+	return strHTML + '</span>';
+}
+
 function AchievementsCompletionistGameShowcaseOnGameChange( elSlot, eShowcase, purchaseid, level, iSlot, game )
 {
 	SetShowcaseConfig(
@@ -400,6 +542,18 @@ function AchievementsCompletionistGameShowcaseOnGameChange( elSlot, eShowcase, p
 		$J(elSlot).find('a').attr( 'href', 'https://steamcommunity.com/app/' + game.appid);
 		$J(elSlot).find('.showcase_achievementscompletionist_game_num_achievements').text( game.num_achievements + ' / ' + game.num_achievements + ' Achievements' );
 		$J(elSlot).removeClass( 'openslot' );
+	}).fail( function() {
+		ShowAlertDialog( 'Select Featured Game', 'There was an error saving the featured game configuration.  Please try again later.' );
+	});
+}
+
+// The slot's bottom bar needs the rare achievement count, which only the server has, so re-render the preview.
+function AchievementGroupsCompletionistShowcaseOnGameChange( elSlot, eShowcase, purchaseid, level, iSlot, game )
+{
+	SetShowcaseConfig(
+		eShowcase, purchaseid, iSlot, {appid: game.appid }
+	).done( function() {
+		PreviewShowcaseConfigWithSlotChange( eShowcase, purchaseid, level, iSlot, { appid: game.appid } );
 	}).fail( function() {
 		ShowAlertDialog( 'Select Featured Game', 'There was an error saving the featured game configuration.  Please try again later.' );
 	});

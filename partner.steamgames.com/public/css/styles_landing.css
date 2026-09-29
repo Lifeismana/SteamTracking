@@ -760,6 +760,19 @@ p {
 		color: #fff;
 	}
 
+	.landingTable .landingTable_extraRows {
+		display: table-row-group;
+	}
+
+	.landingTable .landingTable_extraRows.collapsed {
+		display: none;
+	}
+
+	.landingTable_showMore {
+		margin-top: 8px;
+		text-align: center;
+	}
+
 	.landingTable p {
 		margin-left: 0;
 	}

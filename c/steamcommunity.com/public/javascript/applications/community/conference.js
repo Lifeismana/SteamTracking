@@ -1,5 +1,5 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-  [8521],
+  [68521],
   {
     chunkid: (module) => {
       module.exports = {
@@ -1695,7 +1695,6 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { conferenceInfo: _, bShowYouTube: _ } = _,
@@ -1751,8 +1750,6 @@
                 _ &&
                   (0, _.jsx)(_._, {
                     videoID: _.youtubeVideoID,
-                    classNameAlign: "",
-                    classNameSize: _.sizeFull,
                     bAutoPlay: !0,
                     bShowVideoImmediately: !0,
                   }),

@@ -165,7 +165,19 @@
     },
     chunkid: (module) => {
       module.exports = {
+        ModalBackdrop: "b6REwy0BZ4AsRkjoOYX0G",
+        ModalBackdropFadeIn: "_8DUzQVcrZOtL5CZYCFwVn",
+        ModalLabel: "_3NpLlqkTz51SozMPnFxSHi",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         Root: "_2KPA3I9eXE9r251_-GX_iv",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        Reset: "_3A_c3YHYd4YIjA8Y-olnPl",
       };
     },
     chunkid: (module) => {
@@ -1030,7 +1042,6 @@
         PromotionTools: () => "/promotion",
         PricingTools: () => "/pricing",
         DeadlinesAdmin: () => "/deadlines/dashboard",
-        DeckVerified: () => "/apps/deckreview/:appid(\\d+)",
         DeckVerifiedAdmin: () => "/admin/deckverified",
         DeckCompatTestingDashboard: () => "/deckcompattesting/dashboard",
         DeckCompatTestingAppHistory: () =>
@@ -1887,7 +1898,8 @@
       }
       const _ = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
       const _ = ["title", "subtitle", "body", "description", "note"];
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const {
             accentColor: _,
@@ -1902,6 +1914,7 @@
             children: _,
             breakpoints: _,
             variants: _,
+            popoverPresentation: _,
           } = _,
           _ = {
             display: "contents",
@@ -1916,7 +1929,7 @@
           _ && _(_, "success", _),
           _ && _(_, "warning", _),
           _ && _(_, "error", _);
-        const _ = (0, _.jsx)(_._, {
+        let _ = (0, _.jsx)(_._, {
           variants: _,
           children: (0, _.jsx)("div", {
             "data-accent-color": _,
@@ -1932,12 +1945,19 @@
             }),
           }),
         });
-        return _
-          ? (0, _.jsx)(_._, {
-              breakpoints: _,
+        return (
+          _ &&
+            (_ = (0, _.jsx)(_._, {
+              presentation: _,
               children: _,
-            })
-          : _;
+            })),
+          _
+            ? (0, _.jsx)(_._, {
+                breakpoints: _,
+                children: _,
+              })
+            : _
+        );
       }
       function _(_, _, _) {
         if ("string" == typeof _)
@@ -1966,6 +1986,7 @@
           errorTextColor: _ = "text-red",
           breakpoints: _,
           variants: _,
+          popoverPresentation: _,
           children: _,
           zoo: _,
         } = _;
@@ -1995,6 +2016,7 @@
                     warningTextColor: _,
                     errorTextColor: _,
                     variants: _,
+                    popoverPresentation: _,
                     children: [_, !1],
                   }),
                 }),
@@ -2024,61 +2046,21 @@
             ._("chunkid")
             .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
+        _ =
+          (_.lazy(() =>
+            Promise.all([
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+            ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+          ),
+          _.lazy(() =>
+            Promise.all([
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+            ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+          )),
         _ = _.lazy(() =>
           Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -2234,26 +2216,10 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -2288,6 +2254,66 @@
         ),
         _ = _.lazy(() =>
           Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -2418,7 +2444,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
@@ -2432,71 +2457,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -2528,6 +2488,41 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
@@ -2544,10 +2539,20 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
           Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -2807,26 +2812,6 @@
                               }),
                           }),
                           (0, _.jsx)(_._, {
-                            path: _._.DeckVerified(),
-                            render: (_) =>
-                              (0, _.jsx)(_._, {
-                                config: {
-                                  "deck-verified-results": () =>
-                                    (0, _.jsx)(_, {
-                                      results: (0, _._)(
-                                        "deckcompatibility",
-                                        "application_config",
-                                      ),
-                                    }),
-                                  "deck-performance-stats": (_) =>
-                                    (0, _.jsx)(_, {
-                                      appId: _.match.params.appid,
-                                      dataprops: _,
-                                    }),
-                                },
-                              }),
-                          }),
-                          (0, _.jsx)(_._, {
                             path: _._.SDRConnections(),
                             render: (_) =>
                               (0, _.jsx)(_, {
@@ -3029,6 +3014,120 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = (0, _.createContext)("auto");
+      function _(_) {
+        const { presentation: _, children: _ } = _;
+        return (0, _.jsx)(_.Provider, {
+          value: _,
+          children: _,
+        });
+      }
+      function _(_ = "auto") {
+        const _ = (0, _.useContext)(_),
+          _ = (0, _._)();
+        if ("auto" !== _) return _;
+        return "auto" === _ ? (_ ? "modal" : "anchor") : _;
+      }
+      const _ = "80vh",
+        _ = "var( --popover-modal-width, clamp( 280px, 40vw, 480px ) )";
+      function _(_, _) {
+        const { width: _, maxHeight: _, gutter: _ = 0, scroll: _ } = _,
+          _ = "number" == typeof _ ? `${_}px` : `var(--spacing-${_})`;
+        let _;
+        _ =
+          "function" == typeof _
+            ? _({
+                unAvailableHeight: _,
+                gutter: _,
+              })
+            : "number" == typeof _
+              ? `min( ${_}px, ${_} )`
+              : `min( calc( 100vh - 2 * ${_} ), ${_} )`;
+        return {
+          boxSizing: "border-box",
+          width: "content" === _ ? void 0 : _,
+          maxWidth: "90vw",
+          maxHeight: _,
+          minHeight: 0,
+          flexShrink: 1,
+          overflowY: _ ? "auto" : void 0,
+          "--popover-max-height": _,
+        };
+      }
+      function _(_) {
+        _ && _.showPopover && _.showPopover();
+      }
+      function _(_) {
+        const {
+            ref: _,
+            presentation: _,
+            sizing: _,
+            floatingRef: _,
+            floatingProps: _,
+            floatingStyles: _,
+            referenceElement: _,
+            className: _,
+            label: _,
+            children: _,
+          } = _,
+          _ = (0, _.useId)(),
+          _ = (0, _._)([_, "anchor" === _ ? _ : void 0, _]),
+          _ = _
+            ? {
+                className: _,
+              }
+            : {};
+        if ("anchor" === _)
+          return (0, _.cloneElement)(_, {
+            ref: _,
+            style: _,
+            popover: "manual",
+            ..._,
+            ..._,
+          });
+        const _ =
+          _?.ownerDocument?.defaultView?.innerHeight ?? window.innerHeight;
+        return (0, _.jsxs)("div", {
+          popover: "manual",
+          ref: _,
+          className: _()((0, _._)(), _.ModalBackdrop),
+          children: [
+            _ &&
+              (0, _.jsx)("div", {
+                _: _,
+                className: _.ModalLabel,
+                children: _,
+              }),
+            (0, _.cloneElement)(_, {
+              ref: _,
+              style: _(_, _),
+              ..._,
+              ...(_ && !_.props["aria-labelledby"]
+                ? {
+                    "aria-labelledby": _,
+                  }
+                : {}),
+              ..._,
+            }),
+          ],
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -3072,23 +3171,54 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = ["initial", "sm", "md", "lg"],
+      const _ = ["initial", "xs", "sm", "md", "lg"],
         _ = (0, _.createContext)({
+          _: 375,
           _: 768,
           _: 940,
           _: 1240,
           _: "lg",
         });
+      function _(_ = {}) {
+        const _ = (0, _.useContext)(_),
+          _ = _._ ?? _._,
+          _ = _._ ?? _._,
+          _ = _._ ?? _._,
+          _ = _._ ?? _._;
+        return (0, _.useMemo)(
+          () => ({
+            _: _,
+            _: _,
+            _: _,
+            _: _,
+          }),
+          [_, _, _, _],
+        );
+      }
       function _(_) {
-        const { children: _, breakpoints: _ = {} } = _,
-          _ = (0, _.useContext)(_),
-          _ = {
-            _: _._ ?? _._,
-            _: _._ ?? _._,
-            _: _._ ?? _._,
-          },
+        const { _: _, breakpoints: _, children: _ } = _,
+          { _: _, _: _, _: _, _: _ } = _(_),
+          _ = (0, _.useMemo)(
+            () => ({
+              _: _,
+              _: _,
+              _: _,
+              _: _,
+              _: _,
+            }),
+            [_, _, _, _, _],
+          );
+        return (0, _.jsx)(_.Provider, {
+          value: _,
+          children: _,
+        });
+      }
+      function _(_) {
+        const { children: _, breakpoints: _ } = _,
+          _ = _(_),
           _ = (function (_) {
             const _ = (0, _._)(`(min-width: ${_._}px)`),
+              _ = (0, _._)(`(min-width: ${_._}px)`),
               _ = (0, _._)(`(min-width: ${_._}px)`),
               _ = (0, _._)(`(min-width: ${_._}px)`),
               [_, _] = (0, _.useState)(!0);
@@ -3102,22 +3232,15 @@
                     ? "md"
                     : _.viewportWidth.value >= _._
                       ? "sm"
-                      : "initial"
+                      : _.viewportWidth.value >= _._
+                        ? "xs"
+                        : "initial"
                 : "lg";
-            return _ ? "lg" : _ ? "md" : _ ? "sm" : "initial";
-          })(_),
-          { _: _, _: _, _: _ } = _,
-          _ = (0, _.useMemo)(
-            () => ({
-              _: _,
-              _: _,
-              _: _,
-              _: _,
-            }),
-            [_, _, _, _],
-          );
-        return (0, _.jsx)(_.Provider, {
-          value: _,
+            return _ ? "lg" : _ ? "md" : _ ? "sm" : _ ? "xs" : "initial";
+          })(_);
+        return (0, _.jsx)(_, {
+          _: _,
+          breakpoints: _,
           children: _,
         });
       }
@@ -3144,6 +3267,16 @@
         return (0, _.useContext)(_)._;
       }
       _.reduce((_, _, _) => ((_[_] = _), _), {});
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      function _() {
+        return _.Reset;
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -15428,6 +15561,11 @@
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
+                  browserapi_site: {
+                    _: 53,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
                 },
               }),
             _.sm_m
@@ -19263,6 +19401,7 @@
               {
                 ePrivilege: 2,
                 eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: ["all"],
               },
             );
           }),
@@ -25282,7 +25421,6 @@
           _: () => _,
           _: () => _,
           _: () => _,
-          _: () => _,
         });
       var _ = {};
       __webpack_require__._(_),
@@ -25738,7 +25876,6 @@
         _ = 22,
         _ = 23,
         _ = 24,
-        _ = 25,
         _ = 0,
         _ = 1,
         _ = 2,
@@ -26504,7 +26641,7 @@
         constructor(_ = null) {
           super(),
             _.prototype.included_apps || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1, 2, 3], null);
+            _.Message.initialize(this, _, 0, -1, [1, 2, 3, 4], null);
         }
         static sm_m;
         static sm_mbf;
@@ -26528,6 +26665,12 @@
                   },
                   included_bundles: {
                     _: 3,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                  included_creators: {
+                    _: 4,
                     _: _,
                     _: !0,
                     _: !0,
@@ -28730,10 +28873,13 @@
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
-                  specs_bbcode: {
-                    _: 25,
-                    _: _._.readString,
-                    _: _._.writeString,
+                  metacritic: {
+                    _: 26,
+                    _: _,
+                  },
+                  cast_and_crew: {
+                    _: 27,
+                    _: _,
                   },
                 },
               }),
@@ -29336,6 +29482,166 @@
         }
         getClassName() {
           return "StoreItem_ExtraDetails_LinksAndInfo";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.score || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  score: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  url: {
+                    _: 2,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  always_show: {
+                    _: 3,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "StoreItem_ExtraDetails_Metacritic";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.directors || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [1, 2, 3, 4, 5], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  directors: {
+                    _: 1,
+                    _: !0,
+                    _: !0,
+                    _: _._.readString,
+                    _: _._.writeRepeatedString,
+                  },
+                  producers: {
+                    _: 2,
+                    _: !0,
+                    _: !0,
+                    _: _._.readString,
+                    _: _._.writeRepeatedString,
+                  },
+                  writers: {
+                    _: 3,
+                    _: !0,
+                    _: !0,
+                    _: _._.readString,
+                    _: _._.writeRepeatedString,
+                  },
+                  music: {
+                    _: 4,
+                    _: !0,
+                    _: !0,
+                    _: _._.readString,
+                    _: _._.writeRepeatedString,
+                  },
+                  actors: {
+                    _: 5,
+                    _: !0,
+                    _: !0,
+                    _: _._.readString,
+                    _: _._.writeRepeatedString,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "StoreItem_ExtraDetails_CastAndCrew";
         }
       }
       class _ extends _.Message {
@@ -33696,6 +34002,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       function _(_, _) {
         let _ = _?.parentElement;
@@ -33721,6 +34028,13 @@
           _ = _.parentElement;
         }
         return _(_) ? _ : null;
+      }
+      function _(_, _) {
+        let _ = _;
+        for (; _; ) {
+          if (_(_)) return _;
+          _ = _.parentElement;
+        }
       }
       function _(_, _) {
         if (!("ownerDocument" in _)) return !0;
@@ -34071,6 +34385,64 @@
         _: () => _,
         _: () => _,
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        return (0, _._)(
+          (_) => {
+            if (!_) return;
+            const _ = _(_.ownerDocument.defaultView, (_) => {
+              _(_[0]);
+            });
+            return _.observe(_), () => _.unobserve(_);
+          },
+          [_, _],
+        );
+      }
+      function _(_) {
+        return _(
+          _,
+          _.useCallback(
+            (_, _) =>
+              _.ResizeObserver
+                ? new _.ResizeObserver(_)
+                : ((0, _._)(!1, "ResizeObserver is not available"),
+                  {
+                    observe: () => {},
+                    unobserve: () => {},
+                    disconnect: () => {},
+                  }),
+            [],
+          ),
+        );
+      }
+      function _(_, _) {
+        const _ = _.useRef(void 0);
+        return (function (_, _) {
+          return _(
+            _,
+            _.useCallback((_, _) => new _.IntersectionObserver(_, _), [_]),
+          );
+        })((_) => {
+          !_.current && _.isIntersecting && _.onEnter?.(_),
+            _.current && !_.isIntersecting && _.onLeave?.(_),
+            _.onIntersectionChange?.(_),
+            (_.current = _.isIntersecting);
+        }, _);
+      }
+      function _(_, ..._) {
+        const _ = new _.ownerDocument.defaultView.IntersectionObserver(..._);
+        return __webpack_require__.observe(_), _;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
@@ -34319,12 +34691,216 @@
       __webpack_require__._(module_exports, {
         _: () => _,
       });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = _.createContext({
+        enabled: !0,
+      });
+      function _(_) {
+        const {
+            placeholderWidth: _,
+            placeholderHeight: _,
+            holdGamepadFocus: _ = !1,
+            onRender: _,
+            style: _,
+            mode: _ = "JustLoad",
+            children: _,
+            ..._
+          } = _,
+          _ = _.useContext(_),
+          [_, _] = _.useState(() => ({
+            bRenderChildren: !_.enabled,
+            nPrevRenderHeight: 0,
+            nPrevRenderWidth: 0,
+          })),
+          _ = _.useRef(null),
+          _ = "LoadAndUnload" === _ && _.enabled,
+          _ = _.useCallback(
+            (_) => {
+              _((_) => {
+                if (_.bRenderChildren === _ || (_.bRenderChildren && !_))
+                  return _;
+                let _ = 0,
+                  _ = 0;
+                if (_.current) {
+                  const _ = _.current.getBoundingClientRect();
+                  _ && ((_ = _.width), (_ = _.height));
+                }
+                return (
+                  _ && _ && _(),
+                  {
+                    bRenderChildren: _,
+                    nPrevRenderWidth: _,
+                    nPrevRenderHeight: _,
+                  }
+                );
+              });
+            },
+            [_, _],
+          );
+        _.useEffect(() => {
+          _.enabled || _(!0);
+        }, [_.enabled, _]);
+        let _ = _;
+        if (!_.bRenderChildren) {
+          const _ = _.nPrevRenderWidth || _,
+            _ = _.nPrevRenderHeight || _;
+          (void 0 === _ && void 0 === _) ||
+            (_ = {
+              ..._,
+              minHeight: _,
+              minWidth: _,
+            });
+        }
+        const _ = _ ? "repeated" : "once";
+        let _ = (0, _.jsx)(_._, {
+          containerRef: _,
+          style: _,
+          ..._,
+          onVisibilityChange: _,
+          trigger: _,
+          children: _.bRenderChildren && _,
+        });
+        return (
+          _ &&
+            (_ = (0, _.jsx)(_._, {
+              focusableIfEmpty: !0,
+              style: {
+                height: "100%",
+              },
+              children: _,
+            })),
+          _
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ extends _.Component {
+        static GetScrollableClassname() {
+          return "vt-scrollable";
+        }
+        m_observer = null;
+        m_refElement = _.createRef();
+        m_elTracked = null;
+        m_bPreviouslyIntersecting = !1;
+        BTriggerOnce() {
+          return "once" == (this.props.trigger || "once");
+        }
+        GetBoundingClientRect() {
+          return this.m_refElement.current
+            ? this.m_refElement.current.getBoundingClientRect()
+            : null;
+        }
+        DestroyObserver() {
+          this.m_observer &&
+            (this.m_observer.disconnect(),
+            (this.m_observer = null),
+            (this.m_elTracked = null));
+        }
+        componentWillUnmount() {
+          this.DestroyObserver();
+        }
+        componentDidMount() {
+          this.UpdateObserver(null);
+        }
+        componentDidUpdate(_) {
+          this.UpdateObserver(_);
+        }
+        UpdateObserver(_) {
+          if (this.m_bPreviouslyIntersecting && this.BTriggerOnce()) return;
+          this.m_observer &&
+            _ &&
+            (_.rootMargin != this.m_observer.rootMargin ||
+              _.thresholds != this.m_observer.thresholds) &&
+            this.DestroyObserver();
+          let _ = this.m_refElement.current;
+          if (
+            (this.m_observer &&
+              _ != this.m_elTracked &&
+              (this.m_elTracked && this.m_observer.unobserve(this.m_elTracked),
+              (this.m_elTracked = null)),
+            !this.m_observer && _)
+          ) {
+            let _ = {
+              root: this.FindScrollableAncestor(_),
+            };
+            this.props.rootMargin && (_.rootMargin = this.props.rootMargin),
+              this.props.thresholds && (_.threshold = this.props.thresholds),
+              (this.m_observer = (0, _._)(_, this.OnIntersection, _));
+          }
+          this.m_observer &&
+            _ &&
+            _ != this.m_elTracked &&
+            (this.m_observer.observe(_), (this.m_elTracked = _));
+        }
+        FindScrollableAncestor(_) {
+          return (0, _._)(_, (_) => {
+            const _ = this.props.horizontal
+              ? window.getComputedStyle(_).overflowX
+              : window.getComputedStyle(_).overflowY;
+            return (
+              "scroll" == _ ||
+              "auto" == _ ||
+              !!_.classList.contains(_.GetScrollableClassname())
+            );
+          });
+        }
+        HandleRef = (_) => {
+          (0, _._)(this.m_refElement, _),
+            this.props.containerRef && (0, _._)(this.props.containerRef, _);
+        };
+        OnIntersection = (_) => {
+          let _ = !1;
+          for (const _ of _)
+            if (_.isIntersecting) {
+              _ = !0;
+              break;
+            }
+          this.m_bPreviouslyIntersecting != _ &&
+            ((this.m_bPreviouslyIntersecting = _),
+            this.props.onVisibilityChange && this.props.onVisibilityChange(_),
+            _ && this.BTriggerOnce() && this.DestroyObserver());
+        };
+        render() {
+          let {
+            onVisibilityChange: _,
+            rootMargin: _,
+            trigger: _,
+            horizontal: _,
+            containerRef: _,
+            ..._
+          } = this.props;
+          return (0, _.jsx)(_._, {
+            ref: this.HandleRef,
+            ..._,
+            children: this.props.children,
+          });
+        }
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
       var _ = __webpack_require__("chunkid");
       const _ = {};
       (_.arabic = () =>
         __webpack_require__._("chunkid").then(_._.bind(_, 10361, 19))),
         (_.brazilian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 16476, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 94095, 19))),
         (_.bulgarian = () =>
           __webpack_require__._("chunkid").then(_._.bind(_, 9854, 19))),
         (_.czech = () =>
@@ -39806,6 +40382,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -39917,6 +40494,27 @@
           children: (0, _.jsx)(_, {
             ..._,
           }),
+        });
+      }
+      function _(_) {
+        const { label: _, tooltip: _, className: _, children: _ } = _;
+        return (0, _.jsxs)("div", {
+          className: (0, _._)("DialogInputLabelGroup", "_DialogLayout", _),
+          children: [
+            _ &&
+              (0, _.jsxs)(_, {
+                children: [
+                  _,
+                  " ",
+                  _ &&
+                    (0, _.jsx)(_._, {
+                      tooltip: _,
+                    }),
+                  " ",
+                ],
+              }),
+            _,
+          ],
         });
       }
       function _(_) {
@@ -40387,6 +40985,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _._,
         _: () => _._,
         _: () => _._,
         _: () => _._,
@@ -46957,96 +47556,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = _.createContext({
-        enabled: !0,
-      });
-      function _(_) {
-        const {
-            placeholderWidth: _,
-            placeholderHeight: _,
-            holdGamepadFocus: _ = !1,
-            onRender: _,
-            style: _,
-            mode: _ = "JustLoad",
-            children: _,
-            ..._
-          } = _,
-          _ = _.useContext(_),
-          [_, _] = _.useState(() => ({
-            bRenderChildren: !_.enabled,
-            nPrevRenderHeight: 0,
-            nPrevRenderWidth: 0,
-          })),
-          _ = _.useRef(null),
-          _ = "LoadAndUnload" === _ && _.enabled,
-          _ = _.useCallback(
-            (_) => {
-              _((_) => {
-                if (_.bRenderChildren === _ || (_.bRenderChildren && !_))
-                  return _;
-                let _ = 0,
-                  _ = 0;
-                if (_.current) {
-                  const _ = _.current.getBoundingClientRect();
-                  _ && ((_ = _.width), (_ = _.height));
-                }
-                return (
-                  _ && _ && _(),
-                  {
-                    bRenderChildren: _,
-                    nPrevRenderWidth: _,
-                    nPrevRenderHeight: _,
-                  }
-                );
-              });
-            },
-            [_, _],
-          );
-        _.useEffect(() => {
-          _.enabled || _(!0);
-        }, [_.enabled, _]);
-        let _ = _;
-        if (!_.bRenderChildren) {
-          const _ = _.nPrevRenderWidth || _,
-            _ = _.nPrevRenderHeight || _;
-          (void 0 === _ && void 0 === _) ||
-            (_ = {
-              ..._,
-              minHeight: _,
-              minWidth: _,
-            });
-        }
-        const _ = _ ? "repeated" : "once";
-        let _ = (0, _.jsx)(_._, {
-          containerRef: _,
-          style: _,
-          ..._,
-          onVisibilityChange: _,
-          trigger: _,
-          children: _.bRenderChildren && _,
-        });
-        return (
-          _ &&
-            (_ = (0, _.jsx)(_._, {
-              focusableIfEmpty: !0,
-              style: {
-                height: "100%",
-              },
-              children: _,
-            })),
-          _
-        );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
@@ -50804,13 +51313,19 @@
         });
       }
       function _(_) {
-        return (0, _._)()
-          ? (0, _.jsx)(_, {
-              ..._,
-            })
-          : (0, _.jsx)(_, {
-              ..._,
-            });
+        const [_, _] = _.useState(!1);
+        return (
+          _.useEffect(() => {
+            (0, _._)() && __webpack_require__(!0);
+          }, []),
+          _
+            ? (0, _.jsx)(_, {
+                ..._,
+              })
+            : (0, _.jsx)(_, {
+                ..._,
+              })
+        );
       }
       function _(_) {
         const { className: _, ..._ } = _;
@@ -52563,122 +53078,6 @@
           })
         );
       }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ extends _.Component {
-        static GetScrollableClassname() {
-          return "vt-scrollable";
-        }
-        m_observer = null;
-        m_refElement = _.createRef();
-        m_elTracked = null;
-        m_bPreviouslyIntersecting = !1;
-        BTriggerOnce() {
-          return "once" == (this.props.trigger || "once");
-        }
-        GetBoundingClientRect() {
-          return this.m_refElement.current
-            ? this.m_refElement.current.getBoundingClientRect()
-            : null;
-        }
-        DestroyObserver() {
-          this.m_observer &&
-            (this.m_observer.disconnect(),
-            (this.m_observer = null),
-            (this.m_elTracked = null));
-        }
-        componentWillUnmount() {
-          this.DestroyObserver();
-        }
-        componentDidMount() {
-          this.UpdateObserver(null);
-        }
-        componentDidUpdate(_) {
-          this.UpdateObserver(_);
-        }
-        UpdateObserver(_) {
-          if (this.m_bPreviouslyIntersecting && this.BTriggerOnce()) return;
-          this.m_observer &&
-            _ &&
-            (_.rootMargin != this.m_observer.rootMargin ||
-              _.thresholds != this.m_observer.thresholds) &&
-            this.DestroyObserver();
-          let _ = this.m_refElement.current;
-          if (
-            (this.m_observer &&
-              _ != this.m_elTracked &&
-              (this.m_elTracked && this.m_observer.unobserve(this.m_elTracked),
-              (this.m_elTracked = null)),
-            !this.m_observer && _)
-          ) {
-            let _ = {
-              root: this.FindScrollableAncestor(_),
-            };
-            this.props.rootMargin && (_.rootMargin = this.props.rootMargin),
-              this.props.thresholds && (_.threshold = this.props.thresholds),
-              (this.m_observer = (0, _._)(_, this.OnIntersection, _));
-          }
-          this.m_observer &&
-            _ &&
-            _ != this.m_elTracked &&
-            (this.m_observer.observe(_), (this.m_elTracked = _));
-        }
-        FindScrollableAncestor(_) {
-          return _._(_, (_) => {
-            const _ = this.props.horizontal
-              ? window.getComputedStyle(_).overflowX
-              : window.getComputedStyle(_).overflowY;
-            return (
-              "scroll" == _ ||
-              "auto" == _ ||
-              !!_.classList.contains(_.GetScrollableClassname())
-            );
-          });
-        }
-        HandleRef(_) {
-          (0, _._)(this.m_refElement, _),
-            this.props.containerRef && (0, _._)(this.props.containerRef, _);
-        }
-        OnIntersection(_, _) {
-          let _ = !1;
-          for (const _ of _)
-            if (_.isIntersecting) {
-              _ = !0;
-              break;
-            }
-          this.m_bPreviouslyIntersecting != _ &&
-            ((this.m_bPreviouslyIntersecting = _),
-            this.props.onVisibilityChange && this.props.onVisibilityChange(_),
-            _ && this.BTriggerOnce() && this.DestroyObserver());
-        }
-        render() {
-          let {
-            onVisibilityChange: _,
-            rootMargin: _,
-            trigger: _,
-            horizontal: _,
-            containerRef: _,
-            ..._
-          } = this.props;
-          return (0, _.jsx)(_._, {
-            ref: this.HandleRef,
-            ..._,
-            children: this.props.children,
-          });
-        }
-      }
-      (0, _._)([_._], _.prototype, "HandleRef", null),
-        (0, _._)([_._], _.prototype, "OnIntersection", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -54688,7 +55087,6 @@
         _: () => _._,
         _: () => _._,
         _: () => _._,
-        _: () => _._,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -54754,7 +55152,6 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -54796,10 +55193,6 @@
       }
       function _(_, ..._) {
         const _ = new _.ownerDocument.defaultView.ResizeObserver(..._);
-        return __webpack_require__.observe(_), _;
-      }
-      function _(_, ..._) {
-        const _ = new _.ownerDocument.defaultView.IntersectionObserver(..._);
         return __webpack_require__.observe(_), _;
       }
     },
@@ -55116,9 +55509,7 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
-        _: () => _,
         _: () => _._,
-        _: () => _,
         _: () => _._,
         _: () => _,
         _: () => _,
@@ -55130,7 +55521,6 @@
         _: () => _,
         _: () => _,
         _: () => _._,
-        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -55192,15 +55582,6 @@
       }
       function _() {
         return "macos" == _._.PLATFORM;
-      }
-      function _() {
-        return "linux" == _._.PLATFORM;
-      }
-      function _() {
-        return _._.IN_CHROMEOS;
-      }
-      function _() {
-        return _._.IS_STEAMOS;
       }
       function _(_, _) {
         return 0 != _.length && _.startsWith(_);

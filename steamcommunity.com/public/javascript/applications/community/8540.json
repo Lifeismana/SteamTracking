@@ -105,7 +105,7 @@
     "moderation_sanction_hubbanned": "Für %1$s Tage vom Hub ausgeschlossen",
     "moderation_sanction_markassuspicious": "Als verdächtig markiert",
     "moderation_sanction_relabelled": "Umbenannt",
-    "moderation_sanction_markedincompatible": "Marked as incompatible",
+    "moderation_sanction_markedincompatible": "Als inkompatibel markiert",
     "moderation_sanction_tradebanned_forever": "Permanent vom Handel ausgeschlossen",
     "moderation_sanction_tradebanned": "Für %1$s Tage vom Handel ausgeschlossen",
     "moderation_sanction_kickedfromgroup": "Aus Gruppe ausgeschlossen",
@@ -135,5 +135,11 @@
     "moderation_already_owner_disputed": "Bereits angefochten",
     "moderationstats_alltypes": "Alle Themen",
     "forumsubjectlist_subjectreportsummary": "%1$s offene, %2$s angefochtene",
-    "empty_no_trailing_comma": ""
+    "ugcsubjectpanel_error": "Status: Laden des Moderationsverlaufs fehlgeschlagen",
+    "ugcsubjectpanel_status": "Status: %1$s",
+    "ugcsubjectpanel_statuswithreason": "Status: %1$s (%2$s)",
+    "ugcsubjectpanel_release": "Freigeben",
+    "ugcsubjectpanel_dialogtitle": "Moderationstitel",
+    "ugcsubjectpanel_reports": "Meldungen",
+    "ugcsubjectpanel_history": "Verlauf"
 }
