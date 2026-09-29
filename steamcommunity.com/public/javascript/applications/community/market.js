@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-  [7331],
+  [57331],
   {
     89611: (t) => {
       t.exports = {
@@ -192,15 +192,18 @@
           }, []),
           r = (0, z.xA)("wheel", v, { passive: !1 }),
           [o, h] = i.useState(!1);
-        return (0, e.jsxs)(S.A.Root, {
+        return (0, e.jsxs)(S.AM.Root, {
           open: o,
           onOpenChange: h,
           width: a,
           placement: "right",
+          presentation: "anchor",
           interactions: { hover: (t) => ({ ...t, delay: 250 }) },
           children: [
-            (0, e.jsx)(S.A.Anchor, { children: i.cloneElement(c, { ref: r }) }),
-            (0, e.jsx)(S.A.Positioner, {
+            (0, e.jsx)(S.AM.Anchor, {
+              children: i.cloneElement(c, { ref: r }),
+            }),
+            (0, e.jsx)(S.AM.Positioner, {
               children: (0, e.jsx)(s.az, {
                 marginX: "2",
                 children: (0, e.jsx)(k, { ...n, refHover: l }),
@@ -293,38 +296,38 @@
       }
       var O = n(13843);
       const R = {};
-      (R.arabic = () => n.e(9611).then(n.t.bind(n, 11992, 19))),
-        (R.brazilian = () => n.e(2087).then(n.t.bind(n, 92087, 19))),
-        (R.bulgarian = () => n.e(1472).then(n.t.bind(n, 41472, 19))),
-        (R.czech = () => n.e(7430).then(n.t.bind(n, 17430, 19))),
-        (R.danish = () => n.e(7498).then(n.t.bind(n, 37498, 19))),
-        (R.dutch = () => n.e(6847).then(n.t.bind(n, 16847, 19))),
-        (R.english = () => n.e(9474).then(n.t.bind(n, 87093, 19))),
+      (R.arabic = () => n.e(89611).then(n.t.bind(n, 11992, 19))),
+        (R.brazilian = () => n.e(92087).then(n.t.bind(n, 92087, 19))),
+        (R.bulgarian = () => n.e(41472).then(n.t.bind(n, 41472, 19))),
+        (R.czech = () => n.e(17430).then(n.t.bind(n, 17430, 19))),
+        (R.danish = () => n.e(37498).then(n.t.bind(n, 37498, 19))),
+        (R.dutch = () => n.e(16847).then(n.t.bind(n, 16847, 19))),
+        (R.english = () => n.e(87093).then(n.t.bind(n, 87093, 19))),
         (R.finnish = () => n.e(610).then(n.t.bind(n, 610, 19))),
-        (R.french = () => n.e(4731).then(n.t.bind(n, 84731, 19))),
+        (R.french = () => n.e(84731).then(n.t.bind(n, 84731, 19))),
         (R.german = () => n.e(3385).then(n.t.bind(n, 3385, 19))),
         (R.greek = () => n.e(6389).then(n.t.bind(n, 6389, 19))),
-        (R.hungarian = () => n.e(4100).then(n.t.bind(n, 34100, 19))),
-        (R.indonesian = () => n.e(1559).then(n.t.bind(n, 21559, 19))),
-        (R.italian = () => n.e(2965).then(n.t.bind(n, 22965, 19))),
-        (R.japanese = () => n.e(9732).then(n.t.bind(n, 19732, 19))),
-        (R.koreana = () => n.e(6766).then(n.t.bind(n, 76766, 19))),
-        (R.latam = () => n.e(182).then(n.t.bind(n, 40182, 19))),
-        (R.malay = () => n.e(8597).then(n.t.bind(n, 88597, 19))),
+        (R.hungarian = () => n.e(34100).then(n.t.bind(n, 34100, 19))),
+        (R.indonesian = () => n.e(21559).then(n.t.bind(n, 21559, 19))),
+        (R.italian = () => n.e(22965).then(n.t.bind(n, 22965, 19))),
+        (R.japanese = () => n.e(19732).then(n.t.bind(n, 19732, 19))),
+        (R.koreana = () => n.e(76766).then(n.t.bind(n, 76766, 19))),
+        (R.latam = () => n.e(40182).then(n.t.bind(n, 40182, 19))),
+        (R.malay = () => n.e(88597).then(n.t.bind(n, 88597, 19))),
         (R.norwegian = () => n.e(5353).then(n.t.bind(n, 5353, 19))),
-        (R.polish = () => n.e(8926).then(n.t.bind(n, 58926, 19))),
+        (R.polish = () => n.e(58926).then(n.t.bind(n, 58926, 19))),
         (R.portuguese = () => n.e(8374).then(n.t.bind(n, 8374, 19))),
-        (R.romanian = () => n.e(7752).then(n.t.bind(n, 77752, 19))),
-        (R.russian = () => n.e(8128).then(n.t.bind(n, 28128, 19))),
-        (R.sc_schinese = () => n.e(5610).then(n.t.bind(n, 55610, 19))),
-        (R.schinese = () => n.e(2787).then(n.t.bind(n, 62787, 19))),
-        (R.spanish = () => n.e(8549).then(n.t.bind(n, 28549, 19))),
-        (R.swedish = () => n.e(6052).then(n.t.bind(n, 56052, 19))),
+        (R.romanian = () => n.e(77752).then(n.t.bind(n, 77752, 19))),
+        (R.russian = () => n.e(28128).then(n.t.bind(n, 28128, 19))),
+        (R.sc_schinese = () => n.e(55610).then(n.t.bind(n, 55610, 19))),
+        (R.schinese = () => n.e(62787).then(n.t.bind(n, 62787, 19))),
+        (R.spanish = () => n.e(28549).then(n.t.bind(n, 28549, 19))),
+        (R.swedish = () => n.e(56052).then(n.t.bind(n, 56052, 19))),
         (R.tchinese = () => n.e(2352).then(n.t.bind(n, 2352, 19))),
-        (R.thai = () => n.e(9365).then(n.t.bind(n, 19365, 19))),
-        (R.turkish = () => n.e(125).then(n.t.bind(n, 90125, 19))),
-        (R.ukrainian = () => n.e(1071).then(n.t.bind(n, 61071, 19))),
-        (R.vietnamese = () => n.e(1716).then(n.t.bind(n, 61716, 19)));
+        (R.thai = () => n.e(19365).then(n.t.bind(n, 19365, 19))),
+        (R.turkish = () => n.e(90125).then(n.t.bind(n, 90125, 19))),
+        (R.ukrainian = () => n.e(61071).then(n.t.bind(n, 61071, 19))),
+        (R.vietnamese = () => n.e(61716).then(n.t.bind(n, 61716, 19)));
       const Y = (0, O.l)(async function (t) {
           if (R[t]) return R[t]();
         }),
@@ -2421,6 +2424,7 @@
                   ...s.state,
                   width: l,
                   placement: n,
+                  presentation: "anchor",
                   gutter: "4",
                   interactions: { virtualItemFocus: !0, focus: !0 },
                   role: "combobox",
@@ -6786,38 +6790,38 @@
       n.d(c, { K: () => s });
       var e = n(13843);
       const l = {};
-      (l.arabic = () => n.e(4519).then(n.t.bind(n, 94519, 19))),
-        (l.brazilian = () => n.e(1163).then(n.t.bind(n, 61163, 19))),
-        (l.bulgarian = () => n.e(9620).then(n.t.bind(n, 59620, 19))),
-        (l.czech = () => n.e(3394).then(n.t.bind(n, 23394, 19))),
-        (l.danish = () => n.e(6998).then(n.t.bind(n, 46998, 19))),
-        (l.dutch = () => n.e(8187).then(n.t.bind(n, 58187, 19))),
-        (l.english = () => n.e(3145).then(n.t.bind(n, 23145, 19))),
-        (l.finnish = () => n.e(2286).then(n.t.bind(n, 62286, 19))),
-        (l.french = () => n.e(2111).then(n.t.bind(n, 52111, 19))),
-        (l.german = () => n.e(1397).then(n.t.bind(n, 51397, 19))),
-        (l.greek = () => n.e(1697).then(n.t.bind(n, 31697, 19))),
-        (l.hungarian = () => n.e(6424).then(n.t.bind(n, 26424, 19))),
-        (l.indonesian = () => n.e(4275).then(n.t.bind(n, 14275, 19))),
-        (l.italian = () => n.e(5953).then(n.t.bind(n, 68334, 19))),
-        (l.japanese = () => n.e(4648).then(n.t.bind(n, 44648, 19))),
-        (l.koreana = () => n.e(5914).then(n.t.bind(n, 55914, 19))),
+      (l.arabic = () => n.e(94519).then(n.t.bind(n, 94519, 19))),
+        (l.brazilian = () => n.e(61163).then(n.t.bind(n, 61163, 19))),
+        (l.bulgarian = () => n.e(59620).then(n.t.bind(n, 59620, 19))),
+        (l.czech = () => n.e(23394).then(n.t.bind(n, 23394, 19))),
+        (l.danish = () => n.e(46998).then(n.t.bind(n, 46998, 19))),
+        (l.dutch = () => n.e(58187).then(n.t.bind(n, 58187, 19))),
+        (l.english = () => n.e(23145).then(n.t.bind(n, 23145, 19))),
+        (l.finnish = () => n.e(62286).then(n.t.bind(n, 62286, 19))),
+        (l.french = () => n.e(52111).then(n.t.bind(n, 52111, 19))),
+        (l.german = () => n.e(51397).then(n.t.bind(n, 51397, 19))),
+        (l.greek = () => n.e(31697).then(n.t.bind(n, 31697, 19))),
+        (l.hungarian = () => n.e(26424).then(n.t.bind(n, 26424, 19))),
+        (l.indonesian = () => n.e(14275).then(n.t.bind(n, 14275, 19))),
+        (l.italian = () => n.e(45953).then(n.t.bind(n, 68334, 19))),
+        (l.japanese = () => n.e(44648).then(n.t.bind(n, 44648, 19))),
+        (l.koreana = () => n.e(55914).then(n.t.bind(n, 55914, 19))),
         (l.latam = () => n.e(8546).then(n.t.bind(n, 8546, 19))),
-        (l.malay = () => n.e(9993).then(n.t.bind(n, 39993, 19))),
+        (l.malay = () => n.e(39993).then(n.t.bind(n, 39993, 19))),
         (l.norwegian = () => n.e(7949).then(n.t.bind(n, 7949, 19))),
-        (l.polish = () => n.e(762).then(n.t.bind(n, 50762, 19))),
-        (l.portuguese = () => n.e(442).then(n.t.bind(n, 10442, 19))),
-        (l.romanian = () => n.e(1892).then(n.t.bind(n, 81892, 19))),
-        (l.russian = () => n.e(9556).then(n.t.bind(n, 19556, 19))),
-        (l.sc_schinese = () => n.e(8366).then(n.t.bind(n, 18366, 19))),
-        (l.schinese = () => n.e(3783).then(n.t.bind(n, 13783, 19))),
-        (l.spanish = () => n.e(7873).then(n.t.bind(n, 57873, 19))),
+        (l.polish = () => n.e(50762).then(n.t.bind(n, 50762, 19))),
+        (l.portuguese = () => n.e(10442).then(n.t.bind(n, 10442, 19))),
+        (l.romanian = () => n.e(81892).then(n.t.bind(n, 81892, 19))),
+        (l.russian = () => n.e(19556).then(n.t.bind(n, 19556, 19))),
+        (l.sc_schinese = () => n.e(18366).then(n.t.bind(n, 18366, 19))),
+        (l.schinese = () => n.e(13783).then(n.t.bind(n, 13783, 19))),
+        (l.spanish = () => n.e(57873).then(n.t.bind(n, 57873, 19))),
         (l.swedish = () => n.e(1792).then(n.t.bind(n, 79411, 19))),
-        (l.tchinese = () => n.e(6812).then(n.t.bind(n, 46812, 19))),
+        (l.tchinese = () => n.e(46812).then(n.t.bind(n, 46812, 19))),
         (l.thai = () => n.e(3369).then(n.t.bind(n, 3369, 19))),
-        (l.turkish = () => n.e(7505).then(n.t.bind(n, 47505, 19))),
-        (l.ukrainian = () => n.e(4075).then(n.t.bind(n, 94075, 19))),
-        (l.vietnamese = () => n.e(4024).then(n.t.bind(n, 24024, 19)));
+        (l.turkish = () => n.e(47505).then(n.t.bind(n, 47505, 19))),
+        (l.ukrainian = () => n.e(94075).then(n.t.bind(n, 94075, 19))),
+        (l.vietnamese = () => n.e(24024).then(n.t.bind(n, 24024, 19)));
       const s = (0, e.l)(async function (t) {
         if (l[t]) return l[t]();
       });

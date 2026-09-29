@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-  [140],
+  [30140],
   {
     87100: (t) => {
       t.exports = {
@@ -73,7 +73,7 @@
         u = o(56545),
         l = o(60690),
         m = o(58317),
-        j = o(25215);
+        j = o(61544);
       function x(t) {
         var e, o;
         const i = (

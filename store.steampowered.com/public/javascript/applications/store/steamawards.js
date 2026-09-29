@@ -278,23 +278,23 @@
         o = t(46107),
         l = t(32803),
         d = t(66418),
-        c = t(29008),
-        m = t(42834),
-        _ = t(84518),
-        u = t(14987),
-        h = t(39777),
-        g = t(60014),
-        p = t(38535),
-        w = t(65946),
-        A = t(83392),
-        x = t(90626),
-        S = t(62641),
-        v = t(33924),
-        j = t.n(v),
-        N = t(48593),
-        C = t(18654),
-        f = t.n(C),
-        F = t(72860),
+        c = t(79619),
+        m = t(29008),
+        _ = t(42834),
+        u = t(84518),
+        h = t(14987),
+        g = t(39777),
+        p = t(60014),
+        w = t(38535),
+        A = t(65946),
+        x = t(61011),
+        S = t(90626),
+        v = t(62641),
+        j = t(33924),
+        N = t.n(j),
+        C = t(40672),
+        f = t(76532),
+        F = t.n(f),
         y = t(76684),
         I = t(3088),
         T = t(12155),
@@ -307,13 +307,13 @@
             imageURLOverride: t,
             bShowAssociatedApp: r,
             langOverride: c,
-            onClick: _,
-            eEventRount: g,
-            bHidePrices: v,
-            nSummaryMaxLength: C,
+            onClick: m,
+            eEventRount: u,
+            bHidePrices: p,
+            nSummaryMaxLength: j,
           } = e,
-          f = (0, p.Zj)(a.appid),
-          F = (0, N.n)(),
+          f = (0, w.Zj)(a.appid),
+          F = (0, C.n)(),
           T = c || (0, i.sfN)(d.TS.LANGUAGE),
           k =
             (0, o.m0)(
@@ -324,108 +324,108 @@
             ) ?? t,
           Q =
             (0, o.m0)(void 0 !== t ? void 0 : a, "capsule", T, s.wI.full) ?? t,
-          [D, L, R, P] = (0, w.q3)(() => [
+          [D, L, R, P] = (0, A.q3)(() => [
             a.GetNameWithFallback(T) || "",
             a.GetCategoryAsString(),
-            a.GetSummaryWithFallback(T, C),
+            a.GetSummaryWithFallback(T, j),
             a.GetSubTitleWithLanguageFallback(T) || "",
           ]),
-          O = (0, u.$5)(a.appid),
-          { data: V } = (0, h.lv)(O),
+          O = (0, h.$5)(a.appid),
+          { data: V } = (0, g.lv)(O),
           H = [];
         if ((k && H.push(k), Q && Q !== k && H.push(Q), V)) {
-          const e = (0, m.b0)(V, "main_capsule");
+          const e = (0, _.b0)(V, "main_capsule");
           e && H.push(e);
         }
-        const [M, G] = (0, x.useState)(k);
+        const [M, G] = (0, S.useState)(k);
         if (!a)
-          return (0, n.jsx)("div", { className: j().OtherEvents_EventCtn });
+          return (0, n.jsx)("div", { className: N().OtherEvents_EventCtn });
         const W = a ? a.GetStartTimeAndDateUnixSeconds() : 0;
         let U = P;
         return (
           P && (P.length > E || D.length > E) && (U = void 0),
           (0, n.jsxs)("div", {
-            className: j().EventSizer,
+            className: N().EventSizer,
             children: [
               (0, n.jsxs)(l.tj, {
                 className: (0, b.A)(
-                  j().OtherEvents_EventCtn,
+                  N().OtherEvents_EventCtn,
                   "OtherEvents_EventCtn",
-                  j().HoversEnabled,
+                  N().HoversEnabled,
                 ),
                 eventModel: a,
-                route: g || l.PH.k_eView,
-                onClick: _,
+                route: u || l.PH.k_eView,
+                onClick: m,
                 preferredFocus: !0,
                 children: [
                   (0, n.jsxs)("div", {
                     className: (0, b.A)(
-                      j().EventSummaryContainer,
-                      j().HideInWideMode,
+                      N().EventSummaryContainer,
+                      N().HideInWideMode,
                     ),
                     children: [
                       (0, n.jsx)("div", {
-                        className: j().EventSummaryType,
+                        className: N().EventSummaryType,
                         children: L,
                       }),
                       (0, n.jsx)("div", {
-                        className: j().EventSummaryText,
+                        className: N().EventSummaryText,
                         children: R,
                       }),
                     ],
                   }),
                   (0, n.jsx)("div", {
-                    className: j().OtherEvents_BGImage,
+                    className: N().OtherEvents_BGImage,
                     style: {
                       backgroundColor: "#ffffff",
-                      backgroundImage: M ? `url(${(0, S.j3)(M)})` : "none",
+                      backgroundImage: M ? `url(${(0, v.j3)(M)})` : "none",
                     },
                   }),
                   (0, n.jsxs)("div", {
-                    className: j().OtherEvents_ContentCtn,
+                    className: N().OtherEvents_ContentCtn,
                     children: [
                       (0, n.jsx)("div", {
                         className: (0, b.A)(
-                          j().OtherEvents_MainImageCtn,
-                          f && j().MaskImages,
+                          N().OtherEvents_MainImageCtn,
+                          f && N().MaskImages,
                         ),
                         children: (0, n.jsx)(I.c, {
                           rgSources: H,
                           onIncrementalError: (e, a, t) => {
                             t >= H.length && G(void 0), G(H[t + 1]);
                           },
-                          className: j().OtherEvents_MainImage,
+                          className: N().OtherEvents_MainImage,
                           alt: "",
                         }),
                       }),
                       (0, n.jsxs)("div", {
-                        className: j().OtherEvents_TextCtn,
+                        className: N().OtherEvents_TextCtn,
                         children: [
                           (0, n.jsx)("div", {
-                            className: j().OtherEvents_TextTitle,
+                            className: N().OtherEvents_TextTitle,
                             children: D,
                           }),
                           Boolean(U) &&
                             (0, n.jsx)("div", {
-                              className: j().OtherEvents_SubTitle,
+                              className: N().OtherEvents_SubTitle,
                               children: U,
                             }),
-                          (0, n.jsxs)(A.s, {
+                          (0, n.jsxs)(x.s, {
                             direction: "row",
                             gap: "3",
                             align: "center",
                             children: [
                               (0, n.jsx)("div", {
                                 className: (0, b.A)(
-                                  j().EventType,
-                                  j().ShowInWideMode,
+                                  N().EventType,
+                                  N().ShowInWideMode,
                                 ),
                                 children: L,
                               }),
                               Boolean(W > F)
                                 ? (0, n.jsx)("div", {
                                     className: (0, b.A)(
-                                      j().UpcomingCtn,
+                                      N().UpcomingCtn,
                                       "UpcomingCtn",
                                     ),
                                     children: (0, n.jsx)(y.K4, {
@@ -444,8 +444,8 @@
                           }),
                           (0, n.jsx)("div", {
                             className: (0, b.A)(
-                              j().EventSummaryText,
-                              j().ShowInWideMode,
+                              N().EventSummaryText,
+                              N().ShowInWideMode,
                             ),
                             children: R,
                           }),
@@ -456,60 +456,60 @@
                 ],
               }),
               Boolean(r && a.appid) &&
-                (0, n.jsx)(B, { appid: a.appid, bHidePrice: v }),
+                (0, n.jsx)(B, { appid: a.appid, bHidePrice: p }),
             ],
           })
         );
       }
       function B(e) {
         const { appid: a, bHidePrice: t } = e,
-          s = (0, u.$5)(a),
-          { data: i } = (0, h.J$)(s),
-          { data: o } = (0, h.lv)(s),
-          { data: l } = (0, h.Q_)(s),
-          d = (0, g.n9)(),
-          p = (0, k.Qn)();
+          s = (0, h.$5)(a),
+          { data: i } = (0, g.J$)(s),
+          { data: o } = (0, g.lv)(s),
+          { data: l } = (0, g.Q_)(s),
+          d = (0, p.n9)(),
+          w = (0, k.Qn)();
         if (!o || !i) return null;
-        const w = l && l.hide_discount_pct_for_compliance;
-        return (0, n.jsx)(_.A, {
+        const A = l && l.hide_discount_pct_for_compliance;
+        return (0, n.jsx)(u.A, {
           appID: a,
           children: (0, n.jsxs)(r.Z, {
-            className: (0, b.A)(j().AppCapsuleCtn, "AppCapsuleCtn"),
-            ...(0, F.S)(i, d, p, !1),
+            className: (0, b.A)(N().AppCapsuleCtn, "AppCapsuleCtn"),
+            ...(0, c.S)(i, d, w, !1),
             children: [
-              (0, n.jsx)(c.Q, {
+              (0, n.jsx)(m.Q, {
                 id: s,
                 hoverProps: {
                   direction: "overlay",
                   style: { minWidth: "320px" },
                 },
                 children: (0, n.jsx)("img", {
-                  className: (0, b.A)(j().AppCapsuleImage, j().CapsuleShadow),
-                  src: (0, m.b0)(o, "small_capsule"),
+                  className: (0, b.A)(N().AppCapsuleImage, N().CapsuleShadow),
+                  src: (0, _.b0)(o, "small_capsule"),
                   alt: i.name,
                 }),
               }),
               Boolean(!t && !i.is_free) &&
                 (0, n.jsxs)("span", {
                   className: (0, b.A)(
-                    j().AppCapsulePrice,
-                    Boolean(l?.discount_pct) ? f().Discounted : "",
+                    N().AppCapsulePrice,
+                    Boolean(l?.discount_pct) ? F().Discounted : "",
                   ),
                   children: [
-                    Boolean(l?.discount_pct && w) &&
+                    Boolean(l?.discount_pct && A) &&
                       (0, n.jsx)("div", {
-                        className: f().DiscountIconCtn,
+                        className: F().DiscountIconCtn,
                         children: (0, n.jsx)(T.XH_, {}),
                       }),
-                    Boolean(l?.discount_pct && !w) &&
+                    Boolean(l?.discount_pct && !A) &&
                       (0, n.jsx)("span", {
-                        className: f().StoreSaleDiscountBox,
+                        className: F().StoreSaleDiscountBox,
                         children: `-${l?.discount_pct}%`,
                       }),
                     l &&
                       l.final_price_in_cents &&
                       (0, n.jsx)("span", {
-                        className: f().StoreSalePriceBox,
+                        className: F().StoreSalePriceBox,
                         children: l.formatted_final_price,
                       }),
                   ],
@@ -621,83 +621,11 @@
         });
       }
     },
-    82477: (e, a, t) => {
-      "use strict";
-      t.d(a, { Cg: () => h, pZ: () => p, vg: () => g });
-      var n = t(7850),
-        s = t(90626),
-        i = t(738),
-        r = t(61859),
-        o = t(78327),
-        l = t(92120),
-        d = t(51883),
-        c = t(72034),
-        m = t(28240),
-        _ = t(74568);
-      function u(e) {
-        return (0, n.jsx)(i.x_, {
-          onEscKeypress: e.closeModal,
-          bDisableBackgroundDismiss: !0,
-          children: (0, n.jsx)(w, {
-            redirectURL: e.redirectURL,
-            guestOption: e.guestOption,
-          }),
-        });
-      }
-      function h(e) {
-        const { redirectURL: a = window.location.href } = e;
-        return (0, n.jsx)(_.EN, {
-          active: !0,
-          children: (0, n.jsx)(u, { redirectURL: a }),
-        });
-      }
-      function g() {
-        (0, i.pg)(
-          (0, n.jsx)(u, {
-            ownerWin: window,
-            redirectURL: window.location.href,
-          }),
-          window,
-          { strTitle: (0, r.we)("#Login_SignInTitle") },
-        );
-      }
-      function p(e, a) {
-        (0, i.pg)(
-          (0, n.jsx)(u, { ownerWin: window, redirectURL: e, guestOption: a }),
-          window,
-          { strTitle: (0, r.we)("#Login_SignInTitle") },
-        );
-      }
-      function w(e) {
-        const { redirectURL: a, guestOption: t } = e,
-          [i] = (0, s.useState)(
-            new c.D(o.TS.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
-          ),
-          [r, _] = (0, s.useState)(!1);
-        return (0, n.jsx)("div", {
-          children: r
-            ? (0, n.jsx)(l.Fn, {})
-            : (0, n.jsx)(l.YN, {
-                autoFocus: !0,
-                transport: i,
-                platform: d.SS.tS,
-                onComplete: (e) => {
-                  e == m.wI.k_PrimaryDomainFail
-                    ? _(!0)
-                    : window.location.assign(a);
-                },
-                redirectUrl: a,
-                theme: "modal",
-                children: t && (0, n.jsx)(l.Mk, { redirectURL: a }),
-              }),
-        });
-      }
-    },
-    14326: (e, a, t) => {
+    88323: (e, a, t) => {
       "use strict";
       t.d(a, { _: () => N, r: () => j });
       var n = t(7850),
-        s = t(95578),
+        s = t(8747),
         i = t(14987),
         r = t(39777),
         o = t(60014),
@@ -706,7 +634,7 @@
         c = t(79969),
         m = t(90626),
         _ = t(55963),
-        u = t(18654),
+        u = t(76532),
         h = t.n(u),
         g = t(39700),
         p = t(12155),
@@ -800,6 +728,78 @@
           : null;
       }
     },
+    82477: (e, a, t) => {
+      "use strict";
+      t.d(a, { Cg: () => h, pZ: () => p, vg: () => g });
+      var n = t(7850),
+        s = t(90626),
+        i = t(738),
+        r = t(61859),
+        o = t(78327),
+        l = t(92120),
+        d = t(51883),
+        c = t(72034),
+        m = t(28240),
+        _ = t(74568);
+      function u(e) {
+        return (0, n.jsx)(i.x_, {
+          onEscKeypress: e.closeModal,
+          bDisableBackgroundDismiss: !0,
+          children: (0, n.jsx)(w, {
+            redirectURL: e.redirectURL,
+            guestOption: e.guestOption,
+          }),
+        });
+      }
+      function h(e) {
+        const { redirectURL: a = window.location.href } = e;
+        return (0, n.jsx)(_.EN, {
+          active: !0,
+          children: (0, n.jsx)(u, { redirectURL: a }),
+        });
+      }
+      function g() {
+        (0, i.pg)(
+          (0, n.jsx)(u, {
+            ownerWin: window,
+            redirectURL: window.location.href,
+          }),
+          window,
+          { strTitle: (0, r.we)("#Login_SignInTitle") },
+        );
+      }
+      function p(e, a) {
+        (0, i.pg)(
+          (0, n.jsx)(u, { ownerWin: window, redirectURL: e, guestOption: a }),
+          window,
+          { strTitle: (0, r.we)("#Login_SignInTitle") },
+        );
+      }
+      function w(e) {
+        const { redirectURL: a, guestOption: t } = e,
+          [i] = (0, s.useState)(
+            new c.D(o.TS.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
+          ),
+          [r, _] = (0, s.useState)(!1);
+        return (0, n.jsx)("div", {
+          children: r
+            ? (0, n.jsx)(l.Fn, {})
+            : (0, n.jsx)(l.YN, {
+                autoFocus: !0,
+                transport: i,
+                platform: d.SS.tS,
+                onComplete: (e) => {
+                  e == m.wI.k_PrimaryDomainFail
+                    ? _(!0)
+                    : window.location.assign(a);
+                },
+                redirectUrl: a,
+                theme: "modal",
+                children: t && (0, n.jsx)(l.Mk, { redirectURL: a }),
+              }),
+        });
+      }
+    },
     5136: (e, a, t) => {
       "use strict";
       t.r(a), t.d(a, { default: () => ta });
@@ -841,7 +841,7 @@
         P = t(84933),
         O = t(13871),
         V = t(28124),
-        H = t(93826),
+        H = t(77727),
         M = t(14987),
         G = t(39777),
         W = t(42834);
@@ -2047,7 +2047,7 @@
       }
       var Ce = t(4775),
         fe = t.n(Ce),
-        Fe = t(60383),
+        Fe = t(74057),
         ye = t(60014),
         Ie = t(84811),
         Te = t(49419),

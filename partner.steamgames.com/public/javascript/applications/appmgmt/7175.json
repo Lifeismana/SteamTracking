@@ -56,6 +56,5 @@
     "SinglePricingPackage_Intro_2b": "Dacă dorești să introduci un preț în USD personalizat, introdu valoarea în câmpul pentru prețul în USD. Apoi apasă butonul „Convertește prețurile...” și urmează instrucțiunile.",
     "PricingDashboard_Method_SuggestedPrice": "Conversie recomandată:",
     "PricingDashboard_Method_SuggestedPrice_ttip": "Acest preț este recomandat conform metodei de conversie selectate mai sus și a prețului în USD de %1$s.",
-    "dummy": "dummy",
-    "empty_no_trailing_comma": ""
+    "dummy": "dummy"
 }

@@ -1,5 +1,5 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-  [6299],
+  [36299],
   {
     chunkid: (module) => {
       module.exports = {
@@ -280,6 +280,21 @@
         Checked: "_17x-C-paezhBHOimg-XpU5",
         Hide: "_3CFHNxlYvvFQa74bL_-8xT",
         TabSummaryQuestionTooltip: "_1tgeZCdgfdJXAgDgG0ntA9",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        NodeCtn: "qNUjXjV1w8tMaHw1_rcJr",
+        NodeList: "_3oA1_w9Ppr3YdxdzgOSo7j",
+        ParentRow: "_2V4CRH7xZrgHcdPQ4ueyEI",
+        NodeRow: "_38Nqcf28dUzHAt5wRpuQXb",
+        Expandable: "_3HZu0O_yrL05QC9HYUHv-q",
+        NodeType: "_1yYOY7fBFnYtNd-VxKOlsm",
+        NodeValue: "IcplzoI6rwPvuMhpbIzcw",
+        NodeLocToken: "_3996bpu_aGxOrUIoOaR45D",
+        NodeError: "TwdSTurBLQn_CotBzKtlP",
+        SubTagToggle: "_3buUUwtOnJVU26dBMrTbPt",
+        SubTags: "_1nIvfjeIt6ciUV7gMpkcV9",
       };
     },
     chunkid: (module) => {
@@ -632,6 +647,13 @@
     },
     chunkid: (module) => {
       module.exports = {
+        CreatorCarouselCtn: "_1qnKWf93kKH8YgFapmbXoG",
+        CreatorCarouselCrumbs: "_2AiKsp4m6yMqM2eYITyM9P",
+        CreatorCarouselCrumb: "_3YJS96Hy8atWoeFJxFOkKu",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         SingleLineProseMirror: "_3VacujiZBoCbegfnyWifs8",
       };
     },
@@ -823,6 +845,8 @@
         TwoWidthSideInfo: "_2qz5D65VkY796Xw-al9f_a",
         Reason: "_2h0GKAYcXRP10ryZHFn79d",
         StoreSaleItemRelease: "wJ7ZiTc09km2kH4mSsZ9j",
+        FadeIn: "_1xh0S-u1cc7_ADm8OLsN-i",
+        fadeIn: "cEYXuP-T4izqJqayIpH0D",
         BackgroundAnimation: "_2_vb1-Pr1-2Gblfyxj023k",
         "ItemFocusAnim-darkerGrey-nocolor": "op3gqmHyESfHpHgPheRVq",
         "ItemFocusAnim-darkerGrey": "_12l58v9-cJk-169Qesl-e5",
@@ -1758,6 +1782,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       !(function (_) {
         (_.k_ENow = "now"), (_.k_ESpecified = "specified");
@@ -1810,6 +1835,7 @@
             (this.m_endTimeEditChoice = _.k_EDuration),
             (this.m_editDurationType = void 0),
             (this.m_editDurationValue = void 0),
+            (this.m_schPreviewUpdate = new _._()),
             (0, _._)(this),
             (this.m_originalEvent = _),
             this.SetCurrentModel(_.clone(!0)),
@@ -2600,8 +2626,10 @@
             (this.m_curModel.rtime32_last_local_modification =
               Date.now() / 1e3),
             _._.Get().BIsConnected() &&
-              (0, _._)(this).then(() =>
-                _._.Get().UpdatePreview(this.GetEventModel()),
+              this.m_schPreviewUpdate.Schedule(1e3, () =>
+                (0, _._)(this).then(() =>
+                  _._.Get().UpdatePreview(this.GetEventModel()),
+                ),
               );
         }
         GetChangeTypes() {
@@ -6890,7 +6918,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = _.useCallback(
@@ -6909,7 +6936,6 @@
           _ = (0, _._)(_);
         if (_) {
           const _ = _.fnBBComponent(_, {
-            partnerEventStore: _._,
             event: _.GetEventModel(),
           });
           return (0, _.jsx)(_._, {
@@ -6933,7 +6959,10 @@
           onDeleteClick: _,
           children: [
             (0, _.jsx)(_._, {
-              onClick: () => window.open(_),
+              onClick: () => {
+                const _ = (0, _._)(_);
+                _ && window.open(_, "_blank", "noopener");
+              },
               description: (0, _._)("#ContextMenu_OpenLinkInNewWindow"),
               children: (0, _.jsx)(_.YNO, {}),
             }),
@@ -6976,6 +7005,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -7166,7 +7196,8 @@
             toggleImageInlineStyles: _,
           } = _,
           _ = _.useCallback(() => {
-            window.open(_);
+            const _ = (0, _._)(_);
+            _ && window.open(_, "_blank", "noopener");
           }, [_]),
           _ = "inline" === _;
         return (0, _.jsxs)(_._, {
@@ -7479,9 +7510,9 @@
           onSubmit: (_) => {
             _({
               ..._,
-              mp4: _ || void 0,
-              webm: _ || void 0,
-              poster: _ || void 0,
+              mp4: (0, _._)(_) || void 0,
+              webm: (0, _._)(_) || void 0,
+              poster: (0, _._)(_) || void 0,
               autoplay: _,
               controls: _,
             }),
@@ -7817,6 +7848,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -7894,7 +7926,6 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = {
         nodes: {
@@ -11985,38 +12016,119 @@
           ],
         });
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       function _(_) {
+        var _;
         const { tab: _, editModel: _ } = _,
-          [_] = (0, _._)(() => {
-            var _;
-            return [
-              null === (_ = _.tab_tag_filter) || void 0 === _
-                ? void 0
-                : _.tag_class,
-            ];
+          {
+            strTagClass: _,
+            rgNodes: _,
+            strOptIn: _,
+            eEditLanguage: _,
+          } = (0, _._)(() => {
+            var _, _, _;
+            return {
+              strTagClass:
+                null === (_ = _.tab_tag_filter) || void 0 === _
+                  ? void 0
+                  : _.tag_class,
+              rgNodes:
+                null !==
+                  (_ = (0, _._)(
+                    null === (_ = _.tab_tag_filter) || void 0 === _
+                      ? void 0
+                      : _.rgNodes,
+                  )) && void 0 !== _
+                  ? _
+                  : [],
+              strOptIn:
+                _.GetEventModel().jsondata.sale_opt_in_page_name ||
+                _.GetEventModel().jsondata.prune_list_optin_name,
+              eEditLanguage: _.GetCurEditLanguage(),
+            };
           }),
-          _ = (0, _.useCallback)(
+          { data: _ } = (0, _._)((0, _.LgB)(_.GetCurEditLanguage())),
+          _ = _.useMemo(
+            () =>
+              Object.entries(null != _ ? _ : {})
+                .map(([_, _]) => ({
+                  value: Number(_),
+                  label: _,
+                }))
+                .sort((_, _) => _.label.localeCompare(_.label)),
+            [_],
+          ),
+          _ =
+            ((_ = _),
+            (0, _._)({
+              queryKey: ["useOptInAnswers", _],
+              queryFn: async () => {
+                const _ = {
+                  sessionid: (0, _._)(),
+                  optin_name: _,
+                };
+                return (
+                  await _().get(
+                    _._.COMMUNITY_BASE_URL + "saleoptin/ajaxgetoptinanswers",
+                    {
+                      params: _,
+                      withCredentials: !0,
+                    },
+                  )
+                ).data.sections;
+              },
+              enabled: Boolean(_),
+              staleTime: 1 / 0,
+            }));
+        var _;
+        const _ = (0, _.useCallback)(
             (_) => {
-              (_.tab_tag_filter = _
-                ? {
-                    tag_class: _,
-                  }
-                : void 0),
-                __webpack_require__.SetDirty(_._.jsondata_sales);
+              (_.tab_tag_filter =
+                _.length > 0
+                  ? {
+                      rgNodes: _,
+                    }
+                  : void 0),
+                _.SetDirty(_._.jsondata_sales);
             },
             [_, _],
           ),
-          _ = [
-            {
-              data: "",
-              label: (0, _._)("#Sale_Tabs_TagFilter_Class_None"),
-            },
-            ..._._.map((_) => ({
-              data: _.strClass,
-              label: (0, _._)(_.strLocToken),
-            })),
-          ];
+          [_, _] = _.useState(null != _ ? _ : _._[0].strClass),
+          _ = (0, _.useCallback)(() => {
+            const _ = _._.find((_) => _.strClass === _);
+            _(JSON.parse(JSON.stringify(_.rgNodes)));
+          }, [_, _]),
+          _ = _._.map((_) => ({
+            data: _.strClass,
+            label: (0, _._)(_.strLocToken),
+          }));
+        if (!_) return null;
+        const _ = {
+            mapTags: _,
+            rgTagOptions: _,
+            strOptIn: _,
+            rgAnswerSections: _.data,
+            bAnswersLoading: _.isLoading,
+            strAnswersError: _.error ? (0, _._)(_.error).strErrorMsg : void 0,
+            eEditLanguage: _,
+          },
+          _ =
+            null === (_ = _._.find((_) => _.strClass === _)) || void 0 === _
+              ? void 0
+              : _.strLocToken;
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)(_._, {
@@ -12027,26 +12139,518 @@
             (0, _.jsx)(_._, {
               children: (0, _._)("#Sale_Tabs_TagFilter_Desc"),
             }),
+            _
+              ? (0, _.jsx)("div", {
+                  className: _().WarningStyles,
+                  children: (0, _.jsx)(_._, {
+                    children: (0, _._)(
+                      "#Sale_Tabs_TagFilter_BuiltIn",
+                      _ ? (0, _._)(_) : _,
+                    ),
+                  }),
+                })
+              : (0, _.jsx)(_, {
+                  rgNodes: _,
+                  bAllowChildren: !0,
+                  strAddLocToken: "#Sale_Tabs_TagFilter_AddTag",
+                  ctx: _,
+                  fnOnChange: _,
+                }),
             (0, _.jsx)(_._, {
-              label: (0, _._)("#Sale_Tabs_TagFilter_Class"),
-              tooltip: (0, _._)("#Sale_Tabs_TagFilter_Class_ttip"),
+              label: (0, _._)("#Sale_Tabs_TagFilter_Import"),
+              tooltip: (0, _._)("#Sale_Tabs_TagFilter_Import_ttip"),
               rgOptions: _,
-              selectedOption: null != _ ? _ : "",
+              selectedOption: _,
               onChange: (_) => _(_.data),
+            }),
+            (0, _.jsx)(_._, {
+              onClick: _,
+              children: (0, _._)("#Sale_Tabs_TagFilter_Import_Button"),
             }),
           ],
         });
       }
+      function _(_) {
+        return "optin_storetag" === _ || "optin_tag" === _;
+      }
+      function _(_, _) {
+        switch (_) {
+          case "storetag":
+            return {
+              nTagID: 0,
+              rgChildren: _,
+            };
+          case "optin_storetag":
+            return {
+              nOptInTagID: 0,
+              rgChildren: _,
+            };
+          case "optin_tag":
+            return {
+              strOptInTag: "",
+              rgChildren: _,
+            };
+          case "descriptor":
+            return {
+              eContentDescriptor: (0, _._)()[0].data,
+              rgChildren: _,
+            };
+          case "feature":
+            return {
+              strFeature: _()[0].data,
+              rgChildren: _,
+            };
+          case "apptype":
+            return {
+              strAppType: (0, _._)()[0].data,
+              rgChildren: _,
+            };
+        }
+      }
+      function _() {
+        return Object.entries(_._).map(([_, _]) => ({
+          label: (0, _._)(_),
+          data: _,
+        }));
+      }
+      function _(_) {
+        const {
+            rgNodes: _,
+            bAllowChildren: _,
+            strAddLocToken: _,
+            ctx: _,
+            fnOnChange: _,
+          } = _,
+          _ = _.map((_) => (0, _._)(_)),
+          _ = new Set(_.filter((_, _) => _.indexOf(_) !== _)),
+          [_, _] = _.useState([]),
+          _ = (_) => {
+            const _ = _.map((_, _) => Boolean(_[_]));
+            _(_), _(_);
+          },
+          _ = (_) => {
+            _(_.filter((_, _) => _ !== _)), _((_) => _.splice(_, 1));
+          };
+        return (0, _.jsxs)("div", {
+          className: _().NodeList,
+          children: [
+            (0, _.jsx)(_._, {
+              items: _,
+              rowClassName: _ ? _().ParentRow : void 0,
+              onMove: (_, _) => {
+                _(_._([..._], _, _)), _((_) => _._(_, _, _));
+              },
+              onDelete: (_, _) => {
+                _
+                  ? (0, _._)(
+                      (0, _.jsx)(_._, {
+                        strTitle: (0, _._)("#Sale_Tabs_TagFilter_RemoveTag"),
+                        strDescription: (0, _._)(
+                          "#Sale_Tabs_TagFilter_RemoveTag_Desc",
+                        ),
+                        onOK: () => _(_),
+                      }),
+                      (0, _._)(_),
+                    )
+                  : _(_);
+              },
+              render: (_, _) =>
+                (0, _.jsx)(_, {
+                  node: _,
+                  bAllowChildren: _,
+                  bDuplicate: _.has(_[_]),
+                  bExpanded: Boolean(_[_]),
+                  fnSetExpanded: (_) =>
+                    _((_) => {
+                      _[_] = _;
+                    }),
+                  ctx: _,
+                  fnOnChange: (_) =>
+                    ((_, _) => _(_.map((_, _) => (_ === _ ? _ : _))))(_, _),
+                }),
+            }),
+            (0, _.jsx)(_._, {
+              onClick: () => _([..._, _("storetag", _ ? [] : void 0)]),
+              children: (0, _._)(_),
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        var _, _, _, _;
+        const {
+            node: _,
+            bAllowChildren: _,
+            bDuplicate: _,
+            bExpanded: _,
+            fnSetExpanded: _,
+            ctx: _,
+            fnOnChange: _,
+          } = _,
+          {
+            mapTags: _,
+            rgTagOptions: _,
+            strOptIn: _,
+            rgAnswerSections: _,
+            strAnswersError: _,
+          } = _,
+          _ = (function (_) {
+            return void 0 !== _.nTagID
+              ? "storetag"
+              : void 0 !== _.nOptInTagID
+                ? "optin_storetag"
+                : void 0 !== _.strOptInTag
+                  ? "optin_tag"
+                  : void 0 !== _.eContentDescriptor
+                    ? "descriptor"
+                    : void 0 !== _.strFeature
+                      ? "feature"
+                      : "apptype";
+          })(_),
+          _ = null !== (_ = _.nTagID) && void 0 !== _ ? _ : _.nOptInTagID,
+          _ = [
+            {
+              label: (0, _._)("#Sale_Tabs_TagFilter_Node_Type_StoreTag"),
+              data: "storetag",
+            },
+            {
+              label: (0, _._)("#Sale_Tabs_TagFilter_Node_Type_OptInStoreTag"),
+              data: "optin_storetag",
+            },
+            {
+              label: (0, _._)("#Sale_Tabs_TagFilter_Node_Type_OptInTag"),
+              data: "optin_tag",
+            },
+            {
+              label: (0, _._)(
+                "#Sale_Tabs_TagFilter_Node_Type_ContentDescriptor",
+              ),
+              data: "descriptor",
+            },
+            {
+              label: (0, _._)("#Sale_Tabs_TagFilter_Node_Type_Feature"),
+              data: "feature",
+            },
+            {
+              label: (0, _._)("#Sale_Tabs_TagFilter_Node_Type_AppType"),
+              data: "apptype",
+            },
+          ].filter((_) => _ || !_(_.data) || _.data === _);
+        let _;
+        return (
+          _(_) && !_
+            ? (_ = "#Sale_Tabs_TagFilter_Node_Err_NoOptIn")
+            : ("storetag" !== _ && "optin_storetag" !== _) || _[_]
+              ? "optin_tag" === _ && _
+                ? (_ = "#Sale_Tabs_TagFilter_Node_Err_Answers")
+                : "optin_tag" !== _ || _.strOptInTag
+                  ? "optin_tag" === _ &&
+                    _ &&
+                    !_.some((_) => _.answers.some((_) => _._ === _.strOptInTag))
+                    ? (_ = "#Sale_Tabs_TagFilter_Node_Err_UnknownAnswer")
+                    : "optin_tag" !== _ || _._.Get(_.rgLocalizedNames, _.Bhc)
+                      ? _ && (_ = "#Sale_Tabs_TagFilter_Node_Err_Duplicate")
+                      : (_ = "#Sale_Tabs_TagFilter_Node_Err_Name")
+                  : (_ = "#Sale_Tabs_TagFilter_Node_Err_OptInTag")
+              : (_ = "#Sale_Tabs_TagFilter_Node_Err_Tag"),
+          (0, _.jsxs)("div", {
+            className: _().NodeCtn,
+            children: [
+              (0, _.jsxs)("div", {
+                className: (0, _._)(_().NodeRow, _ && _().Expandable),
+                onClick: _
+                  ? (_) => {
+                      const _ = _.target;
+                      _.currentTarget.contains(_) &&
+                        !_.closest(
+                          "button, input, select, textarea, a, label, .react-select-container, .DialogDropDown",
+                        ) &&
+                        _(!_);
+                    }
+                  : void 0,
+                children: [
+                  (0, _.jsx)(_._, {
+                    strClassName: _().NodeType,
+                    rgOptions: _,
+                    selectedOption: _,
+                    onChange: (_) => _(_(_.data, _.rgChildren)),
+                  }),
+                  (0, _.jsx)(_, {
+                    node: _,
+                    eType: _,
+                    ctx: _,
+                    fnOnChange: _,
+                  }),
+                  _ &&
+                    (0, _.jsx)(_._, {
+                      className: _().NodeError,
+                      tooltip: (0, _._)(_, _),
+                      icon: (0, _.jsx)(_.eTF, {
+                        color: "#ffc82c",
+                      }),
+                    }),
+                  _ &&
+                    (0, _.jsxs)("div", {
+                      className: _().SubTagToggle,
+                      children: [
+                        (0, _._)(
+                          "#Sale_Tabs_TagFilter_SubTagCount",
+                          null !==
+                            (_ =
+                              null === (_ = _.rgChildren) || void 0 === _
+                                ? void 0
+                                : _.length) && void 0 !== _
+                            ? _
+                            : 0,
+                        ),
+                        (0, _.jsx)(_._, {
+                          bIsMinimized: !_,
+                          fnToggleMinimize: () => _(!_),
+                        }),
+                      ],
+                    }),
+                ],
+              }),
+              _ &&
+                _ &&
+                (0, _.jsx)("div", {
+                  className: _().SubTags,
+                  children: (0, _.jsx)(_, {
+                    rgNodes:
+                      null !== (_ = _.rgChildren) && void 0 !== _ ? _ : [],
+                    bAllowChildren: !1,
+                    strAddLocToken: "#Sale_Tabs_TagFilter_AddSubTag",
+                    ctx: _,
+                    fnOnChange: (_) =>
+                      _({
+                        ..._,
+                        rgChildren: _,
+                      }),
+                  }),
+                }),
+            ],
+          })
+        );
+      }
+      function _(_) {
+        const { eType: _, ctx: _, ..._ } = _;
+        switch (_) {
+          case "storetag":
+          case "optin_storetag":
+            return (0, _.jsx)(_, {
+              ..._,
+              bOptIn: "optin_storetag" === _,
+              rgTagOptions: _.rgTagOptions,
+            });
+          case "optin_tag":
+            return (0, _.jsx)(_, {
+              ..._,
+              rgAnswerSections: _.rgAnswerSections,
+              bAnswersLoading: _.bAnswersLoading,
+              eEditLanguage: _.eEditLanguage,
+            });
+          case "descriptor":
+            return (0, _.jsx)(_, {
+              ..._,
+            });
+          case "feature":
+            return (0, _.jsx)(_, {
+              ..._,
+            });
+          case "apptype":
+            return (0, _.jsx)(_, {
+              ..._,
+            });
+        }
+      }
+      function _(_) {
+        var _;
+        const { node: _, fnOnChange: _, bOptIn: _, rgTagOptions: _ } = _,
+          _ = _ ? _.nOptInTagID : _.nTagID;
+        return (0, _.jsx)("div", {
+          className: _().NodeValue,
+          children: (0, _.jsx)(_._, {
+            className: "react-select-container",
+            classNamePrefix: "react-select",
+            styles: {
+              option: (_) => ({
+                ..._,
+                color: "#444444",
+              }),
+            },
+            isSearchable: !0,
+            isMulti: !1,
+            placeholder: (0, _._)("#Sale_Tabs_TagFilter_Node_Tag"),
+            value:
+              null !== (_ = _.find((_) => _.value === _)) && void 0 !== _
+                ? _
+                : null,
+            options: _,
+            onChange: (_) =>
+              _(
+                _
+                  ? {
+                      ..._,
+                      nOptInTagID: _.value,
+                    }
+                  : {
+                      ..._,
+                      nTagID: _.value,
+                    },
+              ),
+          }),
+        });
+      }
+      function _(_) {
+        var _;
+        const {
+            node: _,
+            fnOnChange: _,
+            rgAnswerSections: _,
+            bAnswersLoading: _,
+            eEditLanguage: _,
+          } = _,
+          _ = _.useMemo(
+            () =>
+              (null != _ ? _ : []).map((_) => ({
+                label: _.valve_only
+                  ? (0, _._)(
+                      "#Sale_Tabs_TagFilter_Node_OptInSection_ValveOnly",
+                      _.name,
+                    )
+                  : _.name,
+                options: _.answers.map((_) => ({
+                  value: _._,
+                  label: _.text,
+                })),
+              })),
+            [_],
+          );
+        let _ = null;
+        return (
+          _.strOptInTag &&
+            (_ =
+              null !==
+                (_ = _.flatMap((_) => _.options).find(
+                  (_) => _.value === _.strOptInTag,
+                )) && void 0 !== _
+                ? _
+                : {
+                    value: _.strOptInTag,
+                    label: _.strOptInTag,
+                  }),
+          (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)("div", {
+                className: _().NodeValue,
+                children: (0, _.jsx)(_._, {
+                  className: "react-select-container",
+                  classNamePrefix: "react-select",
+                  styles: {
+                    option: (_) => ({
+                      ..._,
+                      color: "#444444",
+                    }),
+                  },
+                  isSearchable: !0,
+                  isMulti: !1,
+                  isDisabled: !_,
+                  isLoading: _,
+                  placeholder: (0, _._)("#Sale_Tabs_TagFilter_Node_OptInTag"),
+                  value: _,
+                  options: _,
+                  onChange: (_) =>
+                    _({
+                      ..._,
+                      strOptInTag: _.value,
+                    }),
+                }),
+              }),
+              (0, _.jsx)("div", {
+                className: _().NodeLocToken,
+                children: (0, _.jsx)(_._, {
+                  placeholder: (0, _._)("#Sale_Tabs_TagFilter_Node_Name"),
+                  value: _._.Get(_.rgLocalizedNames, _),
+                  onChange: (_) => {
+                    var _;
+                    return _({
+                      ..._,
+                      rgLocalizedNames: _._.Set(
+                        [
+                          ...(null !== (_ = _.rgLocalizedNames) && void 0 !== _
+                            ? _
+                            : []),
+                        ],
+                        _,
+                        _.target.value,
+                      ),
+                    });
+                  },
+                }),
+              }),
+            ],
+          })
+        );
+      }
+      function _(_) {
+        const { node: _, fnOnChange: _ } = _;
+        return (0, _.jsx)(_._, {
+          strClassName: _().NodeValue,
+          rgOptions: (0, _._)(),
+          selectedOption: _.eContentDescriptor,
+          onChange: (_) =>
+            __webpack_require__({
+              ..._,
+              eContentDescriptor: _.data,
+            }),
+        });
+      }
+      function _(_) {
+        const { node: _, fnOnChange: _ } = _;
+        return (0, _.jsx)(_._, {
+          strClassName: _().NodeValue,
+          rgOptions: _(),
+          selectedOption: _.strFeature,
+          onChange: (_) =>
+            __webpack_require__({
+              ..._,
+              strFeature: _.data,
+            }),
+        });
+      }
+      function _(_) {
+        const { node: _, fnOnChange: _ } = _;
+        return (0, _.jsx)(_._, {
+          strClassName: _().NodeValue,
+          rgOptions: (0, _._)(),
+          selectedOption: _.strAppType,
+          onChange: (_) =>
+            __webpack_require__({
+              ..._,
+              strAppType: _.data,
+            }),
+        });
+      }
       const _ = (0, _._)((_) => {
+        var _, _;
         const { saleSection: _, editModel: _ } = _;
         _.useEffect(() => {
           _.tabs || ((_.tabs = []), (_.disable_background = !0));
         });
-        const [_, _] = _.useState(null),
+        const [_, _] = _.useState(void 0),
+          _ =
+            null !==
+              (_ =
+                null === (_ = _.tabs) || void 0 === _
+                  ? void 0
+                  : _.find((_) => _.unique_id === _)) && void 0 !== _
+              ? _
+              : null,
           _ = Boolean(_.tabs && _.tabs.length > 0 && !_);
-        return __webpack_require__
-          .GetSaleSections()
-          .reduce((_, _) => _ + ("tabs" === _.section_type ? 1 : 0), 0) > 1
+        return _.GetSaleSections().reduce(
+          (_, _) => _ + ("tabs" === _.section_type ? 1 : 0),
+          0,
+        ) > 1
           ? (0, _.jsx)("div", {
               className: _.TabsMultipleError,
               children: (0, _._)("#Sale_Tabs_MultipleTabSections"),
@@ -12056,7 +12660,7 @@
                 (0, _.jsx)(_, {
                   saleSection: _,
                   editModel: _,
-                  onTabSelected: _,
+                  onTabSelected: (_) => _(null == _ ? void 0 : _.unique_id),
                   selectedTab: _,
                 }),
                 _ &&
@@ -12068,7 +12672,7 @@
                   (0, _.jsx)(_, {
                     tab: _,
                     editModel: _,
-                    editLanguage: __webpack_require__.GetCurEditLanguage(),
+                    editLanguage: _.GetCurEditLanguage(),
                   }),
               ],
             });
@@ -12635,6 +13239,8 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -12669,6 +13275,62 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _() {
+        return [
+          {
+            label: (0, _._)("#Browse_Sale_Mature_Feature"),
+            data: _._,
+          },
+          {
+            label: (0, _._)("#Browse_sale_Violence_Feature"),
+            data: _._,
+          },
+          {
+            label: (0, _._)("#Browse_Sale_Sexual_Feature"),
+            data: _._,
+          },
+          {
+            label: (0, _._)("#Browse_Sale_Gratuitous_Sexual_Feature"),
+            data: _._,
+          },
+          {
+            label: (0, _._)("#Browse_Sale_Adult_Feature"),
+            data: _._,
+          },
+        ];
+      }
+      function _() {
+        return [
+          {
+            label: (0, _._)("#AppTypeLabel_game"),
+            data: "game",
+          },
+          {
+            label: (0, _._)("#AppTypeLabel_software"),
+            data: "software",
+          },
+          {
+            label: (0, _._)("#AppTypeLabel_dlc"),
+            data: "dlc",
+          },
+          {
+            label: (0, _._)("#AppTypeLabel_demo"),
+            data: "demo",
+          },
+          {
+            label: (0, _._)("#AppTypeLabel_music"),
+            data: "music",
+          },
+          {
+            label: (0, _._)("#AppTypeLabel_video"),
+            data: "video",
+          },
+          {
+            label: (0, _._)("#AppTypeLabel_hardware"),
+            data: "hardware",
+          },
+        ];
+      }
       const _ = (0, _._)((_) => {
           const {
               language: _,
@@ -12718,28 +13380,7 @@
                 data: _._.k_EAppType,
               },
             ],
-            _ = [
-              {
-                label: (0, _._)("#Browse_Sale_Mature_Feature"),
-                data: _._,
-              },
-              {
-                label: (0, _._)("#Browse_sale_Violence_Feature"),
-                data: _._,
-              },
-              {
-                label: (0, _._)("#Browse_Sale_Sexual_Feature"),
-                data: _._,
-              },
-              {
-                label: (0, _._)("#Browse_Sale_Gratuitous_Sexual_Feature"),
-                data: _._,
-              },
-              {
-                label: (0, _._)("#Browse_Sale_Adult_Feature"),
-                data: _._,
-              },
-            ],
+            _ = _(),
             _ = [
               {
                 label: (0, _._)("#UserPreference_HideOwnedItems"),
@@ -12754,36 +13395,7 @@
                 data: _._.k_EHideIgnoredItems,
               },
             ],
-            _ = [
-              {
-                label: (0, _._)("#AppTypeLabel_game"),
-                data: "game",
-              },
-              {
-                label: (0, _._)("#AppTypeLabel_software"),
-                data: "software",
-              },
-              {
-                label: (0, _._)("#AppTypeLabel_dlc"),
-                data: "dlc",
-              },
-              {
-                label: (0, _._)("#AppTypeLabel_demo"),
-                data: "demo",
-              },
-              {
-                label: (0, _._)("#AppTypeLabel_music"),
-                data: "music",
-              },
-              {
-                label: (0, _._)("#AppTypeLabel_video"),
-                data: "video",
-              },
-              {
-                label: (0, _._)("#AppTypeLabel_hardware"),
-                data: "hardware",
-              },
-            ];
+            _ = _();
           return (0, _.jsxs)("div", {
             className: (0, _._)(
               _.FilterDisplayCtn,
@@ -16485,8 +17097,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -16770,16 +17382,25 @@
         });
       }
       function _(_) {
+        return "contenthubspecials" === _.section_type
+          ? 10
+          : _.smart_section_type
+            ? 24
+            : void 0;
+      }
+      function _(_) {
         const { editModel: _, saleSection: _ } = _,
-          _ = (0, _._)(() => _.smart_section_max_apps || 24);
+          [_, _] = (0, _._)(() => [_.smart_section_max_apps || "", _(_)]);
         return (0, _.jsx)(_._, {
           type: "number",
           label: (0, _._)("#Sale_SmartSection_MaxApps"),
           tooltip: (0, _._)("#Sale_SmartSection_MaxApps_ttip"),
           min: "0",
+          placeholder: null == _ ? void 0 : _.toString(),
           value: _,
           onChange: (_) => {
-            (_.smart_section_max_apps = Number.parseInt(_.target.value)),
+            const _ = Number.parseInt(_.target.value);
+            (_.smart_section_max_apps = _ > 0 ? _ : void 0),
               _.SetDirty(_._.jsondata_sales);
           },
         });
@@ -28841,48 +29462,7 @@
             }
           : (_) => null;
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            rows: _ = 3,
-            resize: _ = "none",
-            ref: _,
-            value: _,
-            onTextChange: _,
-            onChange: _,
-            disabled: _,
-            variant: _,
-            ..._
-          } = _,
-          _ = (0, _._)("TextArea", _),
-          _ = (0, _._)(),
-          _ = (0, _._)({
-            ..._,
-            className: _()((0, _._)(), (0, _._)()),
-            style: {
-              resize: _,
-            },
-            cursor: "text",
-            disabled: _,
-            variant: _,
-          }),
-          _ = _ ? _._ : "textarea";
-        return (0, _.jsx)(_, {
-          ref: _,
-          ..._,
-          value: _ || "",
-          onChange: (_) => {
-            _ || (_(_.target.value), _ && _(_));
-          },
-          rows: _,
-          readOnly: _,
-          "aria-disabled": _,
-        });
-      }
       function _(_) {
         const { callout: _, fnOnChange: _ } = _,
           [_, _, _] = (0, _._)(() => {
@@ -28954,7 +29534,7 @@
                       strDescription:
                         "Edit and hit ok to update the callout text.",
                       children: [
-                        (0, _.jsx)(_, {
+                        (0, _.jsx)(_._, {
                           placeholder: "Enter Callout",
                           value: _,
                           onTextChange: _,
@@ -30969,15 +31549,24 @@
       const _ = ["grid", "list"];
       function _(_) {
         const { saleSection: _, editModel: _ } = _,
-          _ = (0, _._)(() => {
-            var _, _;
-            return null !==
-              (_ =
-                null === (_ = _.internal_section_data) || void 0 === _
-                  ? void 0
-                  : _.while_supplies_last_layout) && void 0 !== _
-              ? _
-              : "grid";
+          [_, _] = (0, _._)(() => {
+            var _, _, _, _;
+            return [
+              null !==
+                (_ =
+                  null === (_ = _.internal_section_data) || void 0 === _
+                    ? void 0
+                    : _.while_supplies_last_layout) && void 0 !== _
+                ? _
+                : "grid",
+              null !==
+                (_ =
+                  null === (_ = _.internal_section_data) || void 0 === _
+                    ? void 0
+                    : _.while_supplies_last_hide_sold_out) &&
+                void 0 !== _ &&
+                _,
+            ];
           }),
           _ = (0, _.useCallback)(
             (_) => {
@@ -30986,37 +31575,66 @@
                 __webpack_require__.SetDirty(_._.jsondata_sales));
             },
             [_, _.internal_section_data],
+          ),
+          _ = (0, _.useCallback)(
+            (_) => {
+              !!_.internal_section_data.while_supplies_last_hide_sold_out !=
+                _ &&
+                ((_.internal_section_data.while_supplies_last_hide_sold_out =
+                  _),
+                __webpack_require__.SetDirty(_._.jsondata_sales));
+            },
+            [_, _.internal_section_data],
           );
         return (0, _.jsxs)(_._, {
-          align: "center",
+          direction: "column",
           gap: "3",
           children: [
             (0, _.jsxs)(_._, {
+              align: "center",
+              gap: "3",
               children: [
-                (0, _._)("#Sale_WhileSuppliesLastEditor_Layout"),
+                (0, _.jsxs)(_._, {
+                  children: [
+                    (0, _._)("#Sale_WhileSuppliesLastEditor_Layout"),
+                    (0, _.jsx)(_._, {
+                      tooltip: (0, _._)(
+                        "#Sale_WhileSuppliesLastEditor_Layout_ttip",
+                      ),
+                    }),
+                  ],
+                }),
                 (0, _.jsx)(_._, {
-                  tooltip: (0, _._)(
-                    "#Sale_WhileSuppliesLastEditor_Layout_ttip",
-                  ),
+                  selectedValue: _,
+                  options: _,
+                  getOptionLabel: (_) =>
+                    (0, _._)(
+                      "list" == _
+                        ? "#Sale_WhileSuppliesLastEditor_Layout_List"
+                        : "#Sale_WhileSuppliesLastEditor_Layout_Grid",
+                    ),
+                  onSelectionChange: _,
                 }),
               ],
             }),
-            (0, _.jsx)(_._, {
-              selectedValue: _,
-              options: _,
-              getOptionLabel: (_) =>
-                (0, _._)(
-                  "list" == _
-                    ? "#Sale_WhileSuppliesLastEditor_Layout_List"
-                    : "#Sale_WhileSuppliesLastEditor_Layout_Grid",
-                ),
-              onSelectionChange: _,
+            (0, _.jsxs)(_._, {
+              checked: _,
+              onChange: _,
+              children: [
+                (0, _._)("#Sale_WhileSuppliesLastEditor_HideSoldOut"),
+                (0, _.jsx)(_._, {
+                  tooltip: (0, _._)(
+                    "#Sale_WhileSuppliesLastEditor_HideSoldOut_ttip",
+                  ),
+                }),
+              ],
             }),
           ],
         });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -33072,12 +33690,12 @@
               _,
               _,
             ];
-          }, [_, _, _, _]),
+          }, [_, _, _, _, _]),
           _ = _.useMemo(
             () =>
               null == _
                 ? void 0
-                : _.map((_, _) =>
+                : _.map((_) =>
                     (0, _.jsx)(
                       _,
                       {
@@ -33085,6 +33703,9 @@
                         strSearchFilter: _,
                         editModel: _,
                         onRemove: () => {
+                          const _ = _.GetEventModel()
+                            .GetTaggedItems()
+                            .indexOf(_);
                           _ >= 0 &&
                             _ < _.length &&
                             (_.GetEventModel().GetTaggedItems().splice(_, 1),
@@ -36528,6 +37149,87 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            rows: _ = 3,
+            resize: _ = "none",
+            ref: _,
+            value: _,
+            onTextChange: _,
+            onChange: _,
+            disabled: _,
+            variant: _,
+            ..._
+          } = _,
+          _ = (0, _._)("TextArea", _),
+          _ = (0, _._)(),
+          _ = (0, _._)({
+            ..._,
+            className: _()((0, _._)(), (0, _._)()),
+            style: {
+              resize: _,
+            },
+            cursor: "text",
+            disabled: _,
+            variant: _,
+          }),
+          _ = _ ? _._ : "textarea";
+        return (0, _.jsx)(_, {
+          ref: _,
+          ..._,
+          value: _ || "",
+          onChange: (_) => {
+            _ || (_(_.target.value), _ && _(_));
+          },
+          rows: _,
+          readOnly: _,
+          "aria-disabled": _,
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { href: _, children: _, bAllowFocuseableAnchor: _, ..._ } = _;
+        return _._.EREALM === _._.k_ESteamRealmChina
+          ? (0, _.jsx)("div", {
+              ..._,
+              children: _,
+            })
+          : _
+            ? (0, _.jsx)(_._, {
+                href: _,
+                ..._,
+                children: _,
+              })
+            : (0, _.jsx)("a", {
+                href: _,
+                ..._,
+                children: _,
+              });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -36730,6 +37432,145 @@
           ),
           { data: _ } = (0, _._)(_(_, _, _, _));
         return _;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      var _;
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      }),
+        (function (_) {
+          (_.k_MobileCarousel_Disable = "disabled"),
+            (_.k_MobileCarousel_SnapCarousel = "peekaboo"),
+            (_.k_MobileCarousel_PagedCArousel = "paged");
+        })(_ || (_ = {}));
+      const _ = "techspecblock_",
+        _ = "techspec_",
+        _ = "media_";
+      var _, _, _, _, _, _, _;
+      !(function (_) {
+        (_.k_MediaImage = "image"),
+          (_.k_MediaVideo = "video"),
+          (_.k_MediaTrailer = "trailer");
+      })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.k_MediaTitleDesc = 1)] = "k_MediaTitleDesc"),
+            (_[(_.k_TitleMediaDesc = 2)] = "k_TitleMediaDesc"),
+            (_[(_.k_TitleDescMedia = 3)] = "k_TitleDescMedia"),
+            (_[(_.k_HorizontalMediaFirst = 4)] = "k_HorizontalMediaFirst"),
+            (_[(_.k_HorizontalTextFirst = 5)] = "k_HorizontalTextFirst"),
+            (_[(_.k_TitleDescOnly = 6)] = "k_TitleDescOnly"),
+            (_[(_.k_OverlayMedia = 7)] = "k_OverlayMedia"),
+            (_[(_.k_MediaOnly = 8)] = "k_MediaOnly");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_.k_Header1 = "h1"),
+            (_.k_Header2 = "h2"),
+            (_.k_Header3 = "h3"),
+            (_.k_HeaderFullWidth = "fullwidth");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_.k_Left = "left"),
+            (_.k_Center = "center"),
+            (_.k_Right = "right"),
+            (_.k_Top = "top"),
+            (_.k_Bottom = "bottom");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_.k_EDisplayScreenshot = "screenshot"),
+            (_.k_EDisplayMicrotrailer = "microtrailer"),
+            (_.k_EDisplayHoverMicrotrailer = "hover_microtrailer");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_.k_TopLeft = "top_left"),
+            (_.k_TopCenter = "top_center"),
+            (_.k_TopRight = "top_right"),
+            (_.k_LeftCenter = "left_center"),
+            (_.k_Center = "center"),
+            (_.k_RightCenter = "right_center"),
+            (_.k_BottomLeft = "bottom_left"),
+            (_.k_BottomCenter = "bottom_center"),
+            (_.k_BottomRight = "bottom_right");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_.SingleMedia = "SingleMedia"),
+            (_.DoubleMedia = "DoubleMedia"),
+            (_.QuadMedia = "QuadMedia"),
+            (_.MediaLeft = "MediaLeft"),
+            (_.MediaRight = "MediaLeft");
+        })(_ || (_ = {}));
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        return "sub" !== _.type && "bundle" !== _.type;
+      }
+      function _(_, _, _, _) {
+        const _ = [];
+        for (const _ of _)
+          if (
+            (!_ || _.has(_)) &&
+            !__webpack_require__(_) &&
+            (_.push(_), _.length >= _)
+          )
+            break;
+        return _;
+      }
+      function _(_, _, _, _ = new Set()) {
+        for (const _ of _.GetSaleSections())
+          if (
+            (0, _._)(_.section_type) &&
+            (!_ || __webpack_require__.BIncludeSection(_))
+          )
+            for (const _ of _.capsules) _(_) && _.add(_._);
+        for (const _ of null != _ ? _ : []) {
+          const _ = _.capsule;
+          !_(_) ||
+            (_ && !__webpack_require__.BIncludeLinkedCapsule(_)) ||
+            _.add(_._);
+        }
+        return _;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        const _ = _.GetSaleSections().filter(
+          (_) =>
+            (0, _._)(_.section_type) && "personalized_carousel" == (0, _._)(_),
+        );
+        if (0 == _.length)
+          return {
+            nNumSections: 0,
+            nSectionIndex: -1,
+          };
+        const _ = __webpack_require__.findIndex(
+          (_) => _.unique_id == _.unique_id,
+        );
+        return {
+          nNumSections: _.length,
+          nSectionIndex: _,
+        };
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -37992,628 +38833,564 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = [
-        {
-          strClass: "genre",
-          strLocToken: "#Sale_Tabs_TagFilter_Class_Genre",
-          rgNodes: [
-            {
-              nTagID: _.nuP,
-              rgChildren: [
-                {
-                  nTagID: _.R$d,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.BGM,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.zah,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.Mhp,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.Jtk,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.lXI,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.mYY,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.bPv,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.Wq7,
-                  rgChildren: [],
-                },
-              ],
-            },
-            {
-              nTagID: _.Gkz,
-              rgChildren: [
-                {
-                  nTagID: _.FzB,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.Sv2,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.mvf,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.KCN,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.Vg1,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.cTj,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.CYA,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.DHU,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.aNN,
-                  rgChildren: [],
-                },
-              ],
-            },
-            {
-              nTagID: _.IEJ,
-              rgChildren: [
-                {
-                  nTagID: _.FzB,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.X$z,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.equ,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.Izv,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.zwR,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.LGs,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.UfY,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.PYD,
-                  rgChildren: [],
-                },
-              ],
-            },
-            {
-              nTagID: _.z3Q,
-              rgChildren: [
-                {
-                  nTagID: _.KCN,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.J1r,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.Gxx,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.Ftl,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.gEw,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.Jtk,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.f_e,
-                  rgChildren: [],
-                },
-              ],
-            },
-            {
-              nTagID: _.dWZ,
-              rgChildren: [
-                {
-                  nTagID: _.$YD,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.t_B,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.W5v,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.u7l,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.KoH,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.jzL,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.vx7,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.dm2,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.R1B,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.IbE,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.UfY,
-                  rgChildren: [],
-                },
-              ],
-            },
-            {
-              nTagID: _.mG_,
-              rgChildren: [
-                {
-                  nTagID: _.mvf,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.JEe,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.dxW,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.UEV,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.btm,
-                  rgChildren: [],
-                },
-              ],
-            },
-            {
-              nTagID: _.nL9,
-              rgChildren: [
-                {
-                  nTagID: _.mvf,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.jzL,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.dWZ,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.EEh,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.rNe,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.nPW,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.QA9,
-                  rgChildren: [],
-                },
-              ],
-            },
-            {
-              nTagID: _.ceg,
-              rgChildren: [
-                {
-                  nTagID: _.nNq,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.Ywc,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.Buq,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.dxW,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.rAU,
-                  rgChildren: [],
-                },
-              ],
-            },
-            {
-              nTagID: _.uZq,
-              rgChildren: [
-                {
-                  nTagID: _.aWw,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.Wo$,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.jx3,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.PoK,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.wz4,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.LGs,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.rAU,
-                  rgChildren: [],
-                },
-              ],
-            },
-            {
-              nTagID: _.LqT,
-              rgChildren: [
-                {
-                  nTagID: _.gGw,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.t_B,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.kpV,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.cNr,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.vk_,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.PoK,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.G1H,
-                  rgChildren: [],
-                },
-              ],
-            },
-          ],
+          {
+            nOptInTagID: _.nuP,
+            rgChildren: [
+              {
+                nTagID: _.R$d,
+              },
+              {
+                nTagID: _.BGM,
+              },
+              {
+                nTagID: _.zah,
+              },
+              {
+                nTagID: _.Mhp,
+              },
+              {
+                nTagID: _.Jtk,
+              },
+              {
+                nTagID: _.lXI,
+              },
+              {
+                nTagID: _.mYY,
+              },
+              {
+                nTagID: _.bPv,
+              },
+              {
+                nTagID: _.Wq7,
+              },
+            ],
+          },
+          {
+            nOptInTagID: _.Gkz,
+            rgChildren: [
+              {
+                nTagID: _.FzB,
+              },
+              {
+                nTagID: _.Sv2,
+              },
+              {
+                nTagID: _.mvf,
+              },
+              {
+                nTagID: _.KCN,
+              },
+              {
+                nTagID: _.Vg1,
+              },
+              {
+                nTagID: _.cTj,
+              },
+              {
+                nTagID: _.CYA,
+              },
+              {
+                nTagID: _.DHU,
+              },
+              {
+                nTagID: _.aNN,
+              },
+            ],
+          },
+          {
+            nOptInTagID: _.IEJ,
+            rgChildren: [
+              {
+                nTagID: _.FzB,
+              },
+              {
+                nTagID: _.X$z,
+              },
+              {
+                nTagID: _.equ,
+              },
+              {
+                nTagID: _.Izv,
+              },
+              {
+                nTagID: _.zwR,
+              },
+              {
+                nTagID: _.LGs,
+              },
+              {
+                nTagID: _.UfY,
+              },
+              {
+                nTagID: _.PYD,
+              },
+            ],
+          },
+          {
+            nOptInTagID: _.z3Q,
+            rgChildren: [
+              {
+                nTagID: _.KCN,
+              },
+              {
+                nTagID: _.J1r,
+              },
+              {
+                nTagID: _.Gxx,
+              },
+              {
+                nTagID: _.Ftl,
+              },
+              {
+                nTagID: _.gEw,
+              },
+              {
+                nTagID: _.Jtk,
+              },
+              {
+                nTagID: _.f_e,
+              },
+            ],
+          },
+          {
+            nOptInTagID: _.dWZ,
+            rgChildren: [
+              {
+                nTagID: _.$YD,
+              },
+              {
+                nTagID: _.t_B,
+              },
+              {
+                nTagID: _.W5v,
+              },
+              {
+                nTagID: _.u7l,
+              },
+              {
+                nTagID: _.KoH,
+              },
+              {
+                nTagID: _.jzL,
+              },
+              {
+                nTagID: _.vx7,
+              },
+              {
+                nTagID: _.dm2,
+              },
+              {
+                nTagID: _.R1B,
+              },
+              {
+                nTagID: _.IbE,
+              },
+              {
+                nTagID: _.UfY,
+              },
+            ],
+          },
+          {
+            nOptInTagID: _.mG_,
+            rgChildren: [
+              {
+                nTagID: _.mvf,
+              },
+              {
+                nTagID: _.JEe,
+              },
+              {
+                nTagID: _.dxW,
+              },
+              {
+                nTagID: _.UEV,
+              },
+              {
+                nTagID: _.btm,
+              },
+            ],
+          },
+          {
+            nOptInTagID: _.nL9,
+            rgChildren: [
+              {
+                nTagID: _.mvf,
+              },
+              {
+                nTagID: _.jzL,
+              },
+              {
+                nTagID: _.dWZ,
+              },
+              {
+                nTagID: _.EEh,
+              },
+              {
+                nTagID: _.rNe,
+              },
+              {
+                nTagID: _.nPW,
+              },
+              {
+                nTagID: _.QA9,
+              },
+            ],
+          },
+          {
+            nOptInTagID: _.ceg,
+            rgChildren: [
+              {
+                nTagID: _.nNq,
+              },
+              {
+                nTagID: _.Ywc,
+              },
+              {
+                nTagID: _.Buq,
+              },
+              {
+                nTagID: _.dxW,
+              },
+              {
+                nTagID: _.rAU,
+              },
+            ],
+          },
+          {
+            nOptInTagID: _.uZq,
+            rgChildren: [
+              {
+                nTagID: _.aWw,
+              },
+              {
+                nTagID: _.Wo$,
+              },
+              {
+                nTagID: _.jx3,
+              },
+              {
+                nTagID: _.PoK,
+              },
+              {
+                nTagID: _.wz4,
+              },
+              {
+                nTagID: _.LGs,
+              },
+              {
+                nTagID: _.rAU,
+              },
+            ],
+          },
+          {
+            nOptInTagID: _.LqT,
+            rgChildren: [
+              {
+                eContentDescriptor: _._,
+              },
+              {
+                nTagID: _.t_B,
+              },
+              {
+                nTagID: _.kpV,
+              },
+              {
+                nTagID: _.cNr,
+              },
+              {
+                nTagID: _.vk_,
+              },
+              {
+                nTagID: _.PoK,
+              },
+              {
+                nTagID: _.G1H,
+              },
+            ],
+          },
+        ],
+        _ = [
+          {
+            nTagID: _.MNG,
+            rgChildren: [
+              {
+                nTagID: _.z3Q,
+              },
+              {
+                nTagID: _.nuP,
+              },
+              {
+                nTagID: _.Xkc,
+              },
+              {
+                nTagID: _.Gkz,
+              },
+              {
+                nTagID: _.IEJ,
+              },
+              {
+                nTagID: _.dWZ,
+              },
+              {
+                nTagID: _.dBS,
+              },
+            ],
+          },
+          {
+            nTagID: _.Vov,
+            rgChildren: [
+              {
+                nTagID: _.z3Q,
+              },
+              {
+                nTagID: _.nuP,
+              },
+              {
+                nTagID: _.Xkc,
+              },
+              {
+                nTagID: _.Gkz,
+              },
+              {
+                nTagID: _.IEJ,
+              },
+              {
+                nTagID: _.dWZ,
+              },
+              {
+                nTagID: _.ng1,
+              },
+              {
+                nTagID: _.qhO,
+              },
+            ],
+          },
+          {
+            nTagID: _.BWK,
+            rgChildren: [
+              {
+                nTagID: _.nuP,
+              },
+              {
+                nTagID: _.z3Q,
+              },
+              {
+                nTagID: _.Gkz,
+              },
+              {
+                nTagID: _.IEJ,
+              },
+              {
+                nTagID: _.Xkc,
+              },
+              {
+                nTagID: _.dWZ,
+              },
+            ],
+          },
+          {
+            nTagID: _.ubQ,
+            rgChildren: [
+              {
+                nTagID: _.ZUO,
+              },
+              {
+                nTagID: _.Gkz,
+              },
+              {
+                nTagID: _.VmN,
+              },
+              {
+                nTagID: _.G1H,
+              },
+              {
+                nTagID: _.UfY,
+              },
+            ],
+          },
+          {
+            nTagID: _.yUQ,
+            rgChildren: [
+              {
+                nTagID: _.uZq,
+              },
+              {
+                nTagID: _.iZ9,
+              },
+              {
+                nTagID: _.dWZ,
+              },
+              {
+                nTagID: _.IEJ,
+              },
+              {
+                nTagID: _.LGs,
+              },
+              {
+                nTagID: _.a5M,
+              },
+              {
+                nTagID: _.RsL,
+              },
+              {
+                nTagID: _.jzL,
+              },
+            ],
+          },
+          {
+            nTagID: _.PoK,
+            rgChildren: [
+              {
+                nTagID: _.IEJ,
+              },
+              {
+                nTagID: _.uZq,
+              },
+              {
+                nTagID: _.zwR,
+              },
+              {
+                nTagID: _.MnB,
+              },
+              {
+                nTagID: _.hSB,
+              },
+            ],
+          },
+          {
+            eContentDescriptor: _._,
+            rgChildren: [
+              {
+                nTagID: _.LqT,
+              },
+              {
+                nTagID: _.kpV,
+              },
+              {
+                nTagID: _.uZq,
+              },
+              {
+                nTagID: _.eQ$,
+              },
+              {
+                nTagID: _.hwI,
+              },
+            ],
+          },
+        ],
+        _ = [
+          {
+            strOptInTag: "option_58733",
+            rgChildren: [
+              {
+                nTagID: _.CSO,
+              },
+              {
+                nTagID: _.HuG,
+              },
+              {
+                nTagID: _.dpF,
+              },
+              {
+                nTagID: _.QBr,
+              },
+              {
+                nTagID: _.jXd,
+              },
+            ],
+          },
+          {
+            strOptInTag: "option_40066",
+            rgChildren: [
+              {
+                nTagID: _.CSO,
+              },
+              {
+                nTagID: _.HuG,
+              },
+              {
+                nTagID: _.dpF,
+              },
+              {
+                nTagID: _.jXd,
+              },
+            ],
+          },
+          {
+            strAppType: "software",
+          },
+          {
+            strFeature: "vr",
+          },
+          {
+            strFeature: "mac",
+          },
+        ],
+        _ = {
+          linux: "#Platform_Linux",
+          mac: "#Platform_Mac",
+          _: "#Platform_VR",
+          "vr only": "#Sale_Tabs_TagFilter_Feature_VROnly",
+          free: "#Sale_Tabs_TagFilter_Feature_Free",
+          discounted: "#Sale_Tabs_TagFilter_Feature_Discounted",
         },
-        {
-          strClass: "theme",
-          strLocToken: "#Sale_Tabs_TagFilter_Class_Theme",
-          rgNodes: [
-            {
-              nTagID: _.MNG,
-              rgChildren: [
-                {
-                  nTagID: _.z3Q,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.nuP,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.Xkc,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.Gkz,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.IEJ,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.dWZ,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.dBS,
-                  rgChildren: [],
-                },
-              ],
-            },
-            {
-              nTagID: _.Vov,
-              rgChildren: [
-                {
-                  nTagID: _.z3Q,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.nuP,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.Xkc,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.Gkz,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.IEJ,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.dWZ,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.ng1,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.qhO,
-                  rgChildren: [],
-                },
-              ],
-            },
-            {
-              nTagID: _.BWK,
-              rgChildren: [
-                {
-                  nTagID: _.nuP,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.z3Q,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.Gkz,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.IEJ,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.Xkc,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.dWZ,
-                  rgChildren: [],
-                },
-              ],
-            },
-            {
-              nTagID: _.ubQ,
-              rgChildren: [
-                {
-                  nTagID: _.ZUO,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.Gkz,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.VmN,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.G1H,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.UfY,
-                  rgChildren: [],
-                },
-              ],
-            },
-            {
-              nTagID: _.yUQ,
-              rgChildren: [
-                {
-                  nTagID: _.uZq,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.iZ9,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.dWZ,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.IEJ,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.LGs,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.a5M,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.RsL,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.jzL,
-                  rgChildren: [],
-                },
-              ],
-            },
-            {
-              nTagID: _.PoK,
-              rgChildren: [
-                {
-                  nTagID: _.IEJ,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.uZq,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.zwR,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.MnB,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.hSB,
-                  rgChildren: [],
-                },
-              ],
-            },
-            {
-              nTagID: _.gGw,
-              rgChildren: [
-                {
-                  nTagID: _.LqT,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.kpV,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.uZq,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.eQ$,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.hwI,
-                  rgChildren: [],
-                },
-              ],
-            },
-          ],
-        },
-        {
-          strClass: "feature",
-          strLocToken: "#Sale_Tabs_TagFilter_Class_Feature",
-          rgNodes: [
-            {
-              nTagID: _.GBh,
-              rgChildren: [],
-            },
-            {
-              strAppType: "software",
-              strLocToken: "#AppTypeLabel_software",
-              rgChildren: [],
-            },
-            {
-              strFeature: "vr",
-              strLocToken: "#Platform_VR",
-              rgChildren: [],
-            },
-            {
-              strFeature: "mac",
-              strLocToken: "#Platform_Mac",
-              rgChildren: [],
-            },
-          ],
-        },
-      ];
+        _ = [
+          {
+            strClass: "genre",
+            strLocToken: "#Sale_Tabs_TagFilter_Class_Genre",
+            rgNodes: _,
+          },
+          {
+            strClass: "theme",
+            strLocToken: "#Sale_Tabs_TagFilter_Class_Theme",
+            rgNodes: _,
+          },
+          {
+            strClass: "feature",
+            strLocToken: "#Sale_Tabs_TagFilter_Class_Feature",
+            rgNodes: _,
+          },
+        ];
       function _(_) {
         var _, _;
-        return null !==
-          (_ =
-            null ===
-              (_ = _.find(
-                (_) => _.strClass === (null == _ ? void 0 : _.tag_class),
-              )) || void 0 === _
-              ? void 0
-              : _.rgNodes) && void 0 !== _
-          ? _
-          : [];
+        return (null == _ ? void 0 : _.rgNodes)
+          ? _.rgNodes
+          : null !==
+                (_ =
+                  null ===
+                    (_ = _.find(
+                      (_) => _.strClass === (null == _ ? void 0 : _.tag_class),
+                    )) || void 0 === _
+                    ? void 0
+                    : _.rgNodes) && void 0 !== _
+            ? _
+            : [];
       }
       function _(_) {
         return _.nTagID
           ? String(_.nTagID)
-          : _.strFeature
-            ? "feature:" + _.strFeature
-            : "apptype:" + _.strAppType;
+          : _.nOptInTagID || _.strOptInTag
+            ? "optin:" + _(_)
+            : _.eContentDescriptor
+              ? "descriptor:" + _.eContentDescriptor
+              : _.strFeature
+                ? "feature:" + _.strFeature
+                : "apptype:" + _.strAppType;
+      }
+      function _(_) {
+        return _.strFeature
+          ? _[_.strFeature]
+          : _.strAppType
+            ? "#AppTypeLabel_" + _.strAppType
+            : void 0;
       }
       function _(_) {
         if (_)
@@ -38621,122 +39398,63 @@
             ? _.strParentKey + "," + _.strChildKey
             : _.strParentKey;
       }
+      function _(_) {
+        var _;
+        return null !== (_ = _.strOptInTag) && void 0 !== _
+          ? _
+          : String(_.nOptInTagID);
+      }
       function _(_, _) {
-        return _.nTagID && _
-          ? {
+        return _.nOptInTagID || _.strOptInTag
+          ? ((0, _._)(
+              _,
+              "Opt-in registration tag used on a sale without an opt-in",
+            ),
+            {
               type: _._.k_EStoreFilterClauseTypeOptInRegistrationTag,
               optin: _,
-              value: String(_.nTagID),
-            }
+              value: _(_),
+            })
           : _.nTagID
             ? {
                 type: _._.k_EStoreFilterClauseTypeStoreTag,
                 value: _.nTagID,
               }
-            : _.strFeature
+            : _.eContentDescriptor
               ? {
-                  type: _._.k_EStoreFilterClauseTypeFeatureTag,
-                  value: _.strFeature,
+                  type: _._.k_EStoreFilterClauseTypeContentDescriptor,
+                  value: _.eContentDescriptor,
                 }
-              : {
-                  type: _._.k_EStoreFilterClauseTypeAppType,
-                  value: _.strAppType,
-                };
+              : _.strFeature
+                ? {
+                    type: _._.k_EStoreFilterClauseTypeFeatureTag,
+                    value: _.strFeature,
+                  }
+                : {
+                    type: _._.k_EStoreFilterClauseTypeAppType,
+                    value: _.strAppType,
+                  };
       }
       function _(_, _) {
         return _.find((_) => _(_) === _);
       }
-      function _(_, _) {
-        if (_)
-          for (const _ of _) {
-            const _ = _(_.rgNodes, _.strParentKey);
-            if (!_) continue;
-            if (!_.strChildKey) return _(_, _);
-            const _ = _(_.rgChildren, _.strChildKey);
-            if (!_) return;
-            return {
+      function _(_, _, _) {
+        var _;
+        if (!_) return;
+        const _ = _(_(_), _.strParentKey);
+        if (!_) return;
+        if (!_.strChildKey) return _(_, _);
+        const _ = _(
+          null !== (_ = _.rgChildren) && void 0 !== _ ? _ : [],
+          _.strChildKey,
+        );
+        return _
+          ? {
               type: _._.k_EStoreFilterClauseTypeAnd,
-              rgSubexpressions: [_(_, _), _(_)],
-            };
-          }
+              rgSubexpressions: [_(_, _), _(_, _)],
+            }
+          : void 0;
       }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      var _;
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      }),
-        (function (_) {
-          (_.k_MobileCarousel_Disable = "disabled"),
-            (_.k_MobileCarousel_SnapCarousel = "peekaboo"),
-            (_.k_MobileCarousel_PagedCArousel = "paged");
-        })(_ || (_ = {}));
-      const _ = "techspecblock_",
-        _ = "techspec_",
-        _ = "media_";
-      var _, _, _, _, _, _, _;
-      !(function (_) {
-        (_.k_MediaImage = "image"),
-          (_.k_MediaVideo = "video"),
-          (_.k_MediaTrailer = "trailer");
-      })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_MediaTitleDesc = 1)] = "k_MediaTitleDesc"),
-            (_[(_.k_TitleMediaDesc = 2)] = "k_TitleMediaDesc"),
-            (_[(_.k_TitleDescMedia = 3)] = "k_TitleDescMedia"),
-            (_[(_.k_HorizontalMediaFirst = 4)] = "k_HorizontalMediaFirst"),
-            (_[(_.k_HorizontalTextFirst = 5)] = "k_HorizontalTextFirst"),
-            (_[(_.k_TitleDescOnly = 6)] = "k_TitleDescOnly"),
-            (_[(_.k_OverlayMedia = 7)] = "k_OverlayMedia"),
-            (_[(_.k_MediaOnly = 8)] = "k_MediaOnly");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_.k_Header1 = "h1"),
-            (_.k_Header2 = "h2"),
-            (_.k_Header3 = "h3"),
-            (_.k_HeaderFullWidth = "fullwidth");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_.k_Left = "left"),
-            (_.k_Center = "center"),
-            (_.k_Right = "right"),
-            (_.k_Top = "top"),
-            (_.k_Bottom = "bottom");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_.k_EDisplayScreenshot = "screenshot"),
-            (_.k_EDisplayMicrotrailer = "microtrailer"),
-            (_.k_EDisplayHoverMicrotrailer = "hover_microtrailer");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_.k_TopLeft = "top_left"),
-            (_.k_TopCenter = "top_center"),
-            (_.k_TopRight = "top_right"),
-            (_.k_LeftCenter = "left_center"),
-            (_.k_Center = "center"),
-            (_.k_RightCenter = "right_center"),
-            (_.k_BottomLeft = "bottom_left"),
-            (_.k_BottomCenter = "bottom_center"),
-            (_.k_BottomRight = "bottom_right");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_.SingleMedia = "SingleMedia"),
-            (_.DoubleMedia = "DoubleMedia"),
-            (_.QuadMedia = "QuadMedia"),
-            (_.MediaLeft = "MediaLeft"),
-            (_.MediaRight = "MediaLeft");
-        })(_ || (_ = {}));
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -41520,6 +42238,82 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _() {
+        return _.useMemo(
+          () => ({
+            style: {
+              defaultValue: null,
+              fnReadValue: (_) => _.attrs.style || null,
+              fnRenderEditor: (_, _) =>
+                (0, _.jsx)(_, {
+                  value: _,
+                  setValue: _,
+                }),
+            },
+            buttoncolor: {
+              defaultValue: null,
+              fnReadValue: (_) => _.attrs.buttoncolor || null,
+              fnRenderEditor: (_, _) =>
+                (0, _.jsx)(_, {
+                  value: _,
+                  setValue: _,
+                }),
+            },
+          }),
+          [],
+        );
+      }
+      function _(_) {
+        const { value: _, setValue: _ } = _;
+        return (0, _.jsxs)(_._, {
+          label: (0, _._)("#EventEditor_InsertLink_Style"),
+          children: [
+            (0, _.jsx)(_._, {
+              checked: null == _,
+              onChange: (_) => _ && __webpack_require__(null),
+              label: (0, _._)("#EventEditor_InsertLink_Style_Default"),
+            }),
+            (0, _.jsx)(_._, {
+              checked: "pill" == _,
+              onChange: (_) => _ && __webpack_require__("pill"),
+              label: (0, _._)("#EventEditor_InsertLink_Style_Pill"),
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const { value: _, setValue: _ } = _;
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
+              children: (0, _._)("#EventEditor_InsertLink_ButtonColor"),
+            }),
+            (0, _.jsx)("input", {
+              type: "color",
+              value: _ || "#3691fa",
+              onChange: (_) => {
+                var _;
+                return __webpack_require__(
+                  null === (_ = null == _ ? void 0 : _.currentTarget) ||
+                    void 0 === _
+                    ? void 0
+                    : _.value,
+                );
+              },
+            }),
+          ],
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
@@ -41530,15 +42324,11 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -41594,6 +42384,7 @@
                             children: (0, _.jsx)("img", {
                               className: (0, _._)(_().Avatar, "Avatar_Trgt"),
                               src: _,
+                              alt: "",
                             }),
                           }),
                           (0, _.jsxs)("div", {
@@ -41660,6 +42451,7 @@
                         (0, _.jsx)("a", {
                           href: _,
                           target: "_blank",
+                          rel: "noopener noreferrer",
                           className: _().MembersListLink,
                           children: (0, _._)("#ClanMembershipList"),
                         }),
@@ -41671,38 +42463,10 @@
           }),
         });
       }
-      var _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { data: _, isPending: _ } = (0, _._)(
-          _
-            ? {
-                appid: _,
-              }
-            : void 0,
-        );
-        return _.useMemo(() => {
-          if (!_) return [];
-          if (!_) return _ ? void 0 : [];
-          const _ = [],
-            _ = new Set(),
-            _ = [
-              ["developer", (0, _._)(_.developers)],
-              ["publisher", (0, _._)(_.publishers)],
-              ["franchise", (0, _._)(_.franchises)],
-            ];
-          for (const [_, _] of _)
-            for (const _ of _)
-              _.has(_) ||
-                (_.add(_),
-                _.push({
-                  appid: _,
-                  name: "",
-                  clan_account_id: _,
-                  type: _,
-                }));
-          return _;
-        }, [_, _, _]);
-      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       function _(_) {
         const { rgCreators: _, renderCreator: _ } = _,
           [_, _] = _.useState(0);
@@ -41737,6 +42501,76 @@
         });
       }
       function _(_) {
+        var _, _, _;
+        const { creatorID: _, bSmallFormat: _ } = _,
+          { data: _ } = (0, _._)(_.clan_account_id);
+        return _
+          ? (0, _.jsx)(_, {
+              strURL: (0, _._)(_, _.type),
+              strName: null !== (_ = _.name) && void 0 !== _ ? _ : "",
+              strAvatarURL:
+                null !== (_ = _.avatar_url_full_size) && void 0 !== _ ? _ : "",
+              nFollowers: null !== (_ = _.followers) && void 0 !== _ ? _ : 0,
+              strCreatorType: _(_.type),
+              followButton: (0, _.jsx)(_._, {
+                clanAccountID: _.clan_account_id,
+                followType: "creatorhome",
+              }),
+              bSmallFormat: _,
+            })
+          : null;
+      }
+      function _(_) {
+        const { appid: _, bSmallFormat: _, renderCreator: _ } = _,
+          _ = (function (_) {
+            const { data: _, isPending: _ } = (0, _._)(
+              _
+                ? {
+                    appid: _,
+                  }
+                : void 0,
+            );
+            return _.useMemo(() => {
+              if (!_) return [];
+              if (!_) return _ ? void 0 : [];
+              const _ = [],
+                _ = new Set(),
+                _ = [
+                  ["developer", (0, _._)(_.developers)],
+                  ["publisher", (0, _._)(_.publishers)],
+                  ["franchise", (0, _._)(_.franchises)],
+                ];
+              for (const [_, _] of _)
+                for (const _ of _)
+                  _.has(_) ||
+                    (_.add(_),
+                    _.push({
+                      appid: _,
+                      name: "",
+                      clan_account_id: _,
+                      type: _,
+                    }));
+              return _;
+            }, [_, _, _]);
+          })(_);
+        return _
+          ? (0, _.jsx)(_, {
+              rgCreators: _,
+              renderCreator:
+                null != _
+                  ? _
+                  : (_) =>
+                      (0, _.jsx)(_, {
+                        creatorID: _,
+                        bSmallFormat: _,
+                      }),
+            })
+          : (0, _.jsx)("div", {
+              className: _().DevSummaryWidgetCtn,
+              children: (0, _.jsx)(_._, {}),
+            });
+      }
+      function _(_) {
         switch (_) {
           case "publisher":
             return (0, _._)("#CreatorHome_PublishedBy");
@@ -41745,6 +42579,10 @@
         }
         return (0, _._)("#CreatorHome_DevelopedBy");
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const {
             creatorID: _,
@@ -41759,7 +42597,7 @@
           [_] = (0, _._)();
         return _ || (!_ && _)
           ? (0, _.jsx)("div", {
-              className: _.DevSummaryWidgetCtn,
+              className: _().DevSummaryWidgetCtn,
               children: (0, _.jsx)(_._, {
                 string: (0, _._)("#Loading"),
                 size: "medium",
@@ -41794,23 +42632,18 @@
             : null;
       }
       function _(_) {
-        const { appid: _, bSmallFormat: _ } = _,
-          _ = _(_);
-        return _
-          ? (0, _.jsx)(_._, {
-              children: (0, _.jsx)(_, {
-                rgCreators: _,
-                renderCreator: (_) =>
-                  (0, _.jsx)(_, {
-                    creatorID: _,
-                    bSmallFormat: _,
-                  }),
+        const { appid: _, bSmallFormat: _ } = _;
+        return (0, _.jsx)(_._, {
+          children: (0, _.jsx)(_, {
+            appid: _,
+            bSmallFormat: _,
+            renderCreator: (_) =>
+              (0, _.jsx)(_, {
+                creatorID: _,
+                bSmallFormat: _,
               }),
-            })
-          : (0, _.jsx)("div", {
-              className: _.DevSummaryWidgetCtn,
-              children: (0, _.jsx)(_._, {}),
-            });
+          }),
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -42253,7 +43086,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -42285,9 +43117,10 @@
                         children: " ",
                       }),
                       _
-                        ? (0, _.jsx)("div", {
+                        ? (0, _.jsx)(_._, {
+                            focusable: !0,
                             className: _().EventSectionMoreBtn,
-                            onClick: _,
+                            onActivate: _,
                             children: (0, _._)("#EventBrowse_MoreEventsBtn"),
                           })
                         : (0, _.jsx)(_._, {
@@ -42319,6 +43152,7 @@
           : null;
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
         const {
@@ -43393,6 +44227,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -43678,6 +44514,7 @@
           bShowAsCarousel: _,
           bAutoAdvance: _,
           bHideIfTooFewItems: _,
+          strCarouselKey: _,
         } = _;
         if (0 === _.length)
           return {
@@ -43708,29 +44545,33 @@
         const _ = _ && _ <= 1,
           _ = Math.min(_[0], _);
         if (_ && _.length > _)
-          _ = (0, _.jsx)(_._, {
-            ..._,
-            hideArrows: !_,
-            visibleElements: _,
-            className: (0, _._)({
-              SaleSectionCarousel: !0,
-              SaleSectionCarouselPadding: !Boolean(_),
-              ItemCount_4: 4 == _[0],
-              [_.ListOfCreators]:
-                _ &&
-                _.section &&
-                "creator_list_of_lists" == _.section.section_type,
-            }),
-            useTestScrollbar: !0,
-            bLazyRenderChildren: !0,
-            bAutoAdvance: !!_,
-            hidePips: _,
-            padded: !Boolean(_),
-            screenIsWide: _,
-            navKey: _,
-            lazyRenderPlaceholderWidth: _,
-            children: _(_, 0, _.length, _, _(0, _)),
-          });
+          _ = (0, _.createElement)(
+            _._,
+            {
+              ..._,
+              key: _,
+              hideArrows: !_,
+              visibleElements: _,
+              className: (0, _._)({
+                SaleSectionCarousel: !0,
+                SaleSectionCarouselPadding: !Boolean(_),
+                ItemCount_4: 4 == _[0],
+                [_.ListOfCreators]:
+                  _ &&
+                  _.section &&
+                  "creator_list_of_lists" == _.section.section_type,
+              }),
+              useTestScrollbar: !0,
+              bLazyRenderChildren: !0,
+              bAutoAdvance: !!_,
+              hidePips: _,
+              padded: !Boolean(_),
+              screenIsWide: _,
+              navKey: _,
+              lazyRenderPlaceholderWidth: _,
+            },
+            _(_, 0, _.length, _, _(0, _)),
+          );
         else {
           let _ = _(_),
             _ = !0;
@@ -43800,18 +44641,22 @@
                 focusable: !1,
                 children: _,
               })))
-            : (_ = (0, _.jsx)(_._, {
-                ..._,
-                hideArrows: !_,
-                visibleElements: 1,
-                className: "SaleSectionCarousel",
-                useTestScrollbar: !0,
-                bLazyRenderChildren: !0,
-                lazyRenderPlaceholderWidth: _,
-                hidePips: _,
-                screenIsWide: _,
-                children: _,
-              }));
+            : (_ = (0, _.createElement)(
+                _._,
+                {
+                  ..._,
+                  key: _,
+                  hideArrows: !_,
+                  visibleElements: 1,
+                  className: "SaleSectionCarousel",
+                  useTestScrollbar: !0,
+                  bLazyRenderChildren: !0,
+                  lazyRenderPlaceholderWidth: _,
+                  hidePips: _,
+                  screenIsWide: _,
+                },
+                _,
+              ));
         }
         return {
           content: _,
@@ -43862,6 +44707,10 @@
             saleEvent: _,
             language: _,
             activeTab: _,
+          },
+          _ = {
+            ..._,
+            strCarouselKey: (0, _._)(null == _ ? void 0 : _.GetTagSelection()),
           };
         return _(_.unique_id, _, _, _, _, _, (_) => _(_, _), _, _);
       }
@@ -43902,7 +44751,6 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -43913,25 +44761,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_, _) {
-        const _ = _.GetSaleSections().filter(
-          (_) =>
-            (0, _._)(_.section_type) && "personalized_carousel" == (0, _._)(_),
-        );
-        if (!_ || 0 == _.length)
-          return {
-            nNumSections: 0,
-            nSectionIndex: -1,
-          };
-        const _ = __webpack_require__.findIndex(
-          (_) => _.unique_id == _.unique_id,
-        );
-        return {
-          nNumSections: _.length,
-          nSectionIndex: _,
-        };
-      }
       function _(_, _, _) {
         const _ = _ == _._ || _ == _._ || _ == _._,
           _ = () => {
@@ -43953,7 +44784,7 @@
               return "#Sale_TopPlayedOnDeckSection";
             case "personalized_carousel":
               if (_) {
-                const { nSectionIndex: _, nNumSections: _ } = _(_, _);
+                const { nSectionIndex: _, nNumSections: _ } = (0, _._)(_, _);
                 return (0, _._)(
                   "#Sale_PersonalizedCarousel_Section_Editor_title",
                   _ + 1,
@@ -43962,7 +44793,7 @@
               }
               const _ = _._.Get().GetTagNameForSaleSection(_, _);
               if (!_ && _ == _._) {
-                const { nSectionIndex: _, nNumSections: _ } = _(_, _);
+                const { nSectionIndex: _, nNumSections: _ } = (0, _._)(_, _);
                 return (0, _._)(
                   "#Sale_PersonalizedCarousel_Section_Editor_title",
                   _ + 1,
@@ -45793,40 +46624,9 @@
         _: () => _,
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid");
-      function _(_) {
-        return "sub" !== _.type && "bundle" !== _.type;
-      }
-      function _(_, _, _, _) {
-        const _ = [];
-        for (const _ of _)
-          if (_.has(_) && !__webpack_require__(_) && (_.push(_), _.length >= _))
-            break;
-        return _;
-      }
-      function _(_, _, _, _ = new Set()) {
-        for (const _ of _.GetSaleSections())
-          if (
-            (0, _._)(_.section_type) &&
-            (!_ || __webpack_require__.BIncludeSection(_))
-          )
-            for (const _ of _.capsules) _(_) && _.add(_._);
-        for (const _ of null != _ ? _ : []) {
-          const _ = _.capsule;
-          !_(_) ||
-            (_ && !__webpack_require__.BIncludeLinkedCapsule(_)) ||
-            _.add(_._);
-        }
-        return _;
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -45982,13 +46782,12 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = "capsule_index_";
       function _(_) {
-        var _;
+        var _, _;
         const {
             capsule: _,
             bShowParentApp: _,
@@ -46002,6 +46801,24 @@
           } = _,
           _ = (0, _._)(),
           [_, _] = _.useState(!1),
+          [_, _] = _.useState(!1),
+          [_, _] = _.useState(!1),
+          _ = _.useRef(!1);
+        _.useEffect(() => {
+          if (_ && !_.current) {
+            const _ = window.setTimeout(() => {
+              (_.current = !0), _(!0);
+            }, 500);
+            return () => window.clearTimeout(_);
+          }
+          return _(_ || _), () => {};
+        }, [_, _]);
+        const { data: _ } = (0, _._)(),
+          _ = Boolean(
+            null === (_ = null == _ ? void 0 : _.preferences) || void 0 === _
+              ? void 0
+              : _.disable_microtrailers,
+          ),
           _ = (0, _._)(_),
           { data: _ } = (0, _._)(_),
           _ = (0, _._)(
@@ -46019,7 +46836,7 @@
             ..._,
             strExtraParams: _.strExtraParams,
             _: _,
-            bIsHovered: _,
+            bIsHovered: _ && !_,
             bHasParentAppToDisplay: _,
             onlyOneDiscountPct: _,
             bShowEarlyAccessBanner: _,
@@ -46028,10 +46845,12 @@
         return (0, _.jsxs)(_._, {
           className: (0, _._)({
             [_().OuterCapsuleContainer]: !0,
+            [_().TrailerActive]: _ && !_ && _,
             [_ + _]: 0 == _,
           }),
           navEntryPreferPosition: _._.PREFERRED_CHILD,
           navKey: _,
+          onFocusWithin: "library" != _.imageType ? _ : void 0,
           children: [
             (0, _.jsxs)(_._, {
               appid: _.appid,
@@ -46138,6 +46957,7 @@
           } = _,
           _ = (0, _._)(),
           _ = (0, _._)(),
+          _ = (0, _._)(),
           _ = (0, _._)(_),
           { data: _ } = (0, _._)(_);
         if (!_) return null;
@@ -46145,6 +46965,7 @@
             ? void 0
             : (0, _._)((0, _._)(`${(0, _._)(_, _)}${_ ? `?${_}` : ""}`, _, _)),
           _ = _ ? _._ : _._,
+          _ = _ && _,
           _ = !!_;
         return (0, _.jsxs)(_.Fragment, {
           children: [
@@ -46158,12 +46979,15 @@
                   style: {
                     display: "block",
                     cursor: "pointer",
+                    position: _ ? "relative" : void 0,
+                    zIndex: _ ? 4 : void 0,
                   },
                   className: (0, _._)({
                     [_().TwoWidthCapsule]: _,
                   }),
                   preferredFocus: _,
                   focusable: !0,
+                  noFocusRing: _,
                   children: [
                     (0, _.jsx)(_._, {
                       appids: _,
@@ -46179,10 +47003,18 @@
                     (0, _.jsx)(_._, {
                       _: _,
                     }),
-                    (0, _.jsx)(_._, {
-                      _: _,
-                      active: _,
-                      bIsHoverMode: !0,
+                    (0, _.jsx)("div", {
+                      className: (0, _._)({
+                        [_().FadeIn]: _,
+                      }),
+                      children: (0, _.jsx)(_._, {
+                        _: _,
+                        active: _,
+                        bIsHoverMode: !0,
+                        eGrowOnActivate: _
+                          ? _._.k_ETrailerGrowAmount_Implicit
+                          : void 0,
+                      }),
                     }),
                   ],
                 }),
@@ -46265,6 +47097,7 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -46277,6 +47110,19 @@
           (_) => null == _.visibility_index || _.visibility_index == _,
         );
       }
+      function _(_) {
+        const _ = {
+          offset: null,
+        };
+        return (
+          _.GetSaleSections()
+            .filter((_) => (null == _ ? void 0 : _.enable_faceted_browsing))
+            .forEach((_) => {
+              _["facets" + _.unique_id] = null;
+            }),
+          _
+        );
+      }
       class _ {
         constructor(_, _, _ = !0, _, _) {
           (this.m_activeTab = null),
@@ -46284,7 +47130,11 @@
             (this.m_bDefaultTab = !0),
             (this.m_nSaleDay = _),
             (this.m_tagSelection = _),
-            (this.m_tagStoreFilter = (0, _._)(_, _)),
+            (this.m_tagStoreFilter = (0, _._)(
+              _,
+              null == _ ? void 0 : _.tab_tag_filter,
+              _,
+            )),
             _ &&
               ((this.m_activeTab = _),
               (this.m_bDefaultTab = _),
@@ -47020,35 +47870,6 @@
           }, [_, _]),
           _ && !_
         );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { href: _, children: _, bAllowFocuseableAnchor: _, ..._ } = _;
-        return _._.EREALM === _._.k_ESteamRealmChina
-          ? (0, _.jsx)("div", {
-              ..._,
-              children: _,
-            })
-          : _
-            ? (0, _.jsx)(_._, {
-                href: _,
-                ..._,
-                children: _,
-              })
-            : (0, _.jsx)("a", {
-                href: _,
-                ..._,
-                children: _,
-              });
       }
     },
   },

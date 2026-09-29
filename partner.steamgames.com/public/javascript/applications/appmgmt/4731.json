@@ -56,6 +56,5 @@
     "SinglePricingPackage_Intro_2b": "USD非共通価格の場合は、USD価格フィールドに値を入力してください。「価格を換算…」ボタンをクリックして、指示に従ってください。",
     "PricingDashboard_Method_SuggestedPrice": "推奨換算価格：",
     "PricingDashboard_Method_SuggestedPrice_ttip": "この価格は、上で選択した換算方法とUSD価格「%1$s」に基づいて推奨されています。",
-    "dummy": "ダミー",
-    "empty_no_trailing_comma": ""
+    "dummy": "ダミー"
 }

@@ -1130,6 +1130,33 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        return (0, _._)()
+          ? (0, _.jsx)(_.MGO, {
+              ..._,
+            })
+          : (0, _.jsx)(_.Jlk, {
+              ..._,
+            });
+      }
+      function _() {
+        return (0, _.jsx)(_.rfv, {});
+      }
+      function _() {
+        return (0, _._)() ? (0, _.jsx)(_._, {}) : (0, _.jsx)(_.jZW, {});
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1156,6 +1183,129 @@
           })(_),
         );
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid");
+      const _ = [_._, _._, _._, _._, _._];
+      function _(_) {
+        let _ = [];
+        switch (_) {
+          case _._:
+            _.push(_._), _.push(_._);
+          case _._:
+            _.push(_._);
+          case _._:
+            _.push(_._);
+        }
+        return _;
+      }
+      let _ = new Map();
+      function _(_) {
+        let _ = [],
+          _ = _.get(_);
+        return _ && (_.push(_), _.push(..._(_))), _;
+      }
+      function _(_) {
+        return (0, _._)({
+          queryKey: [
+            "examples_for_content_descriptor",
+            null === _ ? null : _.valueOf(),
+          ],
+          queryFn: async () => {
+            if (null === _) return [];
+            const _ = new URLSearchParams();
+            _.append("filter", "examplesforcontentdescriptors"),
+              _.append("ignore_preferences", "1"),
+              _.append("category1", "992,994,998"),
+              _.append("descids", _.valueOf().toString()),
+              _.append("json", "1");
+            return (
+              await _()({
+                url: `${_._.STORE_BASE_URL}search/results/?${_.toString()}`,
+                method: "GET",
+                responseType: "json",
+              })
+            ).data.items;
+          },
+        });
+      }
+      function _(_) {
+        let _ = null;
+        switch (_) {
+          case _._:
+            _ = "#ContentDescriptor_GeneralMatureContent";
+            break;
+          case _._:
+            _ = "#ContentDescriptor_FrequentViolenceOrGore";
+            break;
+          case _._:
+            _ = "#ContentDescriptor_NudityOrSexualContent";
+            break;
+          case _._:
+            _ = "#ContentDescriptor_GratuitousNudityOrSexualContent";
+            break;
+          case _._:
+            _ = "#ContentDescriptor_AdultOnlySexualContent";
+            break;
+          default:
+            throw "Invalid content descriptor.";
+        }
+        return (0, _._)(_);
+      }
+      function _(_, _ = !1) {
+        let _ = "";
+        switch (_) {
+          case _._:
+            _ += (0, _._)(
+              "#ContentDescriptor_GeneralMatureContent_Description",
+            );
+            break;
+          case _._:
+            _ += (0, _._)(
+              "#ContentDescriptor_FrequentViolenceOrGore_Description",
+            );
+            break;
+          case _._:
+            _ += (0, _._)(
+              "#ContentDescriptor_NudityOrSexualContent_Description",
+            );
+            break;
+          case _._:
+            _ += (0, _._)(
+              "#ContentDescriptor_GratuitousNudityOrSexualContent_Description",
+            );
+            break;
+          case _._:
+            _ += (0, _._)(
+              "#ContentDescriptor_AdultOnlySexualContent_Description",
+            );
+            break;
+          default:
+            throw "Invalid content descriptor.";
+        }
+        return (
+          !_ ||
+            (_ !== _._ && _ !== _._) ||
+            (_ += " " + (0, _._)("#ContentDescriptor_Affirm18YearsOld")),
+          _
+        );
+      }
+      _.set(_._, _._), _.set(_._, _._), _.set(_._, _._), _.set(_._, _._);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -1696,6 +1846,7 @@
             hintVirtualizeType: _,
             scrollAlign: _,
             bNativeScrollIntoView: _,
+            bNoOverscanOffscreen: _,
             initialOffset: _,
             onOffsetChange: _,
             ..._
@@ -1703,28 +1854,46 @@
           [_, _] = (0, _.useState)(_ ?? _),
           [_, _] = _.useState(),
           [_, _] = _.useState(),
+          [_, _] = _.useState(),
           _ = _.useRef(null),
           _ = _.useCallback(
             (_) => {
               if (!_) return;
               const _ = (0, _._)(_, "y"),
-                _ = _(_, "window" == _ ? null : _);
-              (0, _.startTransition)(() => {
-                "window" != _ && _(_ || void 0),
-                  _(_),
-                  _ || _(_ ? "element" : "window");
-              });
+                _ = _(_, "window" == _ ? null : _),
+                _ = _?.getBoundingClientRect(),
+                _ = () => {
+                  "window" != _ &&
+                    (_(_ || void 0),
+                    _((_) => {
+                      if (!_) return;
+                      const _ = Math.round(_.width),
+                        _ = Math.round(_.height);
+                      return _?.width == _ && _?.height == _
+                        ? _
+                        : {
+                            width: _,
+                            height: _,
+                          };
+                    })),
+                    _(_),
+                    _ || _(_ ? "element" : "window");
+                };
+              _ ? _() : (0, _.startTransition)(_);
             },
-            [_],
+            [_, _],
           ),
+          _ = _.useRef(_);
+        _.current = _;
+        const _ = _.useCallback(() => {
+            if (!_.current) return;
+            const _ = _(_.current, _.current);
+            (0, _.startTransition)(() => {
+              _(_);
+            });
+          }, []),
           _ =
-            ((_ = (_) => {
-              if (!_.current) return;
-              const _ = _(_.current, _);
-              (0, _.startTransition)(() => {
-                _(_);
-              });
-            }),
+            ((_ = _),
             (0, _._)(
               (_) => {
                 if (!_) return;
@@ -1759,6 +1928,7 @@
             hintVirtualizeType: _,
             scrollAlign: _,
             bNativeScrollIntoView: _,
+            bNoOverscanOffscreen: _,
             initialOffset: _,
             onOffsetChange: _,
           };
@@ -1771,8 +1941,9 @@
               "element" === _ &&
                 (0, _.jsx)(_, {
                   ..._,
-                  nScrollMargin: _ || 0,
+                  nScrollMargin: _,
                   elScrollable: _,
+                  rectScrollable: _,
                 }),
               "window" === _ &&
                 (0, _.jsx)(_, {
@@ -1791,6 +1962,46 @@
             });
         }, [_, _, _]);
       }
+      function _(_, _, _) {
+        if (!_) return "first";
+        const _ = _.options.scrollMargin,
+          _ = _ + _.getTotalSize(),
+          _ = _.scrollOffset ?? 0;
+        return _ > _ + (_.scrollRect ?? _.options.initialRect).height + _
+          ? "first"
+          : _ < _ - _
+            ? "last"
+            : "all";
+      }
+      function _(_, _, _) {
+        const [, _] = (0, _.useState)(0),
+          _ = _.useRef({
+            bPositionKnown: _,
+            nMargin: _,
+            eRowWindow: "all",
+          });
+        (_.current.bPositionKnown = _), (_.current.nMargin = _);
+        const _ = _.useCallback(
+          (_, _) =>
+            _(_, (_, _) => {
+              _(_, _);
+              const {
+                bPositionKnown: _,
+                nMargin: _,
+                eRowWindow: _,
+              } = _.current;
+              _(_, _, _) != _ && _((_) => _ + 1);
+            }),
+          [],
+        );
+        return {
+          observeElementOffset: _ ? _ : _,
+          fnGetRowWindow: (_) => {
+            const _ = _ ? _(_, _, _) : "all";
+            return (_.current.eRowWindow = _), _;
+          },
+        };
+      }
       function _(_) {
         const {
             nScrollMargin: _,
@@ -1802,8 +2013,14 @@
             onOffsetChange: _,
             measureElement: _,
             bDynamic: _,
+            bNoOverscanOffscreen: _,
           } = _,
           _ = ((0, _._)(), _ + _),
+          { observeElementOffset: _, fnGetRowWindow: _ } = _(
+            _,
+            void 0 !== _,
+            _ * _,
+          ),
           _ = (0, _._)({
             count: _,
             scrollMargin: _,
@@ -1825,6 +2042,7 @@
           (0, _.jsx)(_, {
             ..._,
             virtualizer: _,
+            eRowWindow: _(_),
           })
         );
       }
@@ -1833,6 +2051,7 @@
             nRows: _,
             nScrollMargin: _,
             elScrollable: _,
+            rectScrollable: _,
             nItemHeight: _,
             nRowGap: _ = 10,
             overscan: _ = 6,
@@ -1840,12 +2059,18 @@
             onOffsetChange: _,
             measureElement: _,
             bDynamic: _,
+            bNoOverscanOffscreen: _,
           } = _,
           _ = _ + _,
           _ = (0, _._)(),
+          { observeElementOffset: _, fnGetRowWindow: _ } = _(
+            _,
+            void 0 !== _ && void 0 !== _,
+            _ * _,
+          ),
           _ = (0, _._)({
             count: _,
-            scrollMargin: _,
+            scrollMargin: _ ?? 0,
             getScrollElement: () => (
               _ &&
                 _.scrollElement !== _ &&
@@ -1857,7 +2082,7 @@
             measureElement: _,
             overscan: _,
             initialRect: _
-              ? void 0
+              ? _
               : {
                   height: _.viewportHeight?.value ?? 1e3,
                   width: _.viewportWidth?.value ?? 1e3,
@@ -1876,12 +2101,14 @@
           (0, _.jsx)(_, {
             ..._,
             virtualizer: _,
+            eRowWindow: _(_),
           })
         );
       }
       function _(_) {
         const {
             virtualizer: _,
+            eRowWindow: _,
             nRowGap: _,
             renderItem: _,
             bDynamic: _,
@@ -1889,6 +2116,11 @@
             bNativeScrollIntoView: _,
           } = _,
           _ = _.getVirtualItems(),
+          _ =
+            "first" == _
+              ? _.measurementsCache[0]
+              : _.measurementsCache[_.measurementsCache.length - 1],
+          _ = "all" == _ ? _ : _ ? [_] : [],
           _ = _.length ? _[0].start - _.options.scrollMargin : 0,
           _ = Math.max(0, _.getTotalSize());
         return (0, _.jsx)(_._, {
@@ -4089,52 +4321,7 @@
             : -1 != _ && (_.push(_(_, _)), (_ = -1));
         return -1 != _ && (_.push(_(_, 48)), (_ = -1)), _.join(", ");
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      __webpack_require__("chunkid");
-      const _ = [_._, _._, _._, _._, _._];
-      function _(_) {
-        let _ = [];
-        switch (_) {
-          case _._:
-            _.push(_._), _.push(_._);
-          case _._:
-            _.push(_._);
-          case _._:
-            _.push(_._);
-        }
-        return _;
-      }
-      let _ = new Map();
-      function _(_) {
-        let _ = [],
-          _ = _.get(_);
-        return _ && (_.push(_), _.push(..._(_))), _;
-      }
-      function _(_) {
-        let _ = null;
-        switch (_) {
-          case _._:
-            _ = "#ContentDescriptor_GeneralMatureContent";
-            break;
-          case _._:
-            _ = "#ContentDescriptor_FrequentViolenceOrGore";
-            break;
-          case _._:
-            _ = "#ContentDescriptor_NudityOrSexualContent";
-            break;
-          case _._:
-            _ = "#ContentDescriptor_GratuitousNudityOrSexualContent";
-            break;
-          case _._:
-            _ = "#ContentDescriptor_AdultOnlySexualContent";
-            break;
-          default:
-            throw "Invalid content descriptor.";
-        }
-        return (0, _._)(_);
-      }
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         const { steamid: _, settings: _, familyGroup: _ } = _,
           _ = (0, _._)(_, _),
@@ -4382,18 +4569,18 @@
             }),
             (0, _.jsx)(_._, {
               className: _.FilterSection,
-              children: _.map((_) => {
+              children: _._.map((_) => {
                 const _ = _.includes(_),
                   _ = ((_) => (_) => {
                     let _ = [];
                     if (_) {
-                      const _ = [_].concat(_(_));
-                      for (const _ of _)
+                      const _ = [_].concat((0, _._)(_));
+                      for (const _ of _._)
                         (_.includes(_) || _.includes(_)) &&
                           __webpack_require__.push(_);
                     } else {
-                      const _ = [_].concat(_(_));
-                      for (const _ of _)
+                      const _ = [_].concat((0, _._)(_));
+                      for (const _ of _._)
                         _.includes(_) &&
                           !_.includes(_) &&
                           __webpack_require__.push(_);
@@ -4407,7 +4594,7 @@
                     children: [
                       (0, _.jsx)(_._, {
                         className: _.FilterInfo,
-                        children: _(_),
+                        children: (0, _._)(_),
                       }),
                       (0, _.jsx)(_._, {
                         className: _.FilterToggle,
@@ -4895,7 +5082,6 @@
           onChange: _,
         });
       }
-      _.set(_._, _._), _.set(_._, _._), _.set(_._, _._), _.set(_._, _._);
       const _ = {
         [_._]: null,
         [_._]: {
@@ -5527,56 +5713,19 @@
             fnSelectContentDescriptor: _,
           } = _,
           _ = (0, _._)(_);
-        let _ = _(_),
-          _ = (function (_, _ = !1) {
-            let _ = "";
-            switch (_) {
-              case _._:
-                _ += (0, _._)(
-                  "#ContentDescriptor_GeneralMatureContent_Description",
-                );
-                break;
-              case _._:
-                _ += (0, _._)(
-                  "#ContentDescriptor_FrequentViolenceOrGore_Description",
-                );
-                break;
-              case _._:
-                _ += (0, _._)(
-                  "#ContentDescriptor_NudityOrSexualContent_Description",
-                );
-                break;
-              case _._:
-                _ += (0, _._)(
-                  "#ContentDescriptor_GratuitousNudityOrSexualContent_Description",
-                );
-                break;
-              case _._:
-                _ += (0, _._)(
-                  "#ContentDescriptor_AdultOnlySexualContent_Description",
-                );
-                break;
-              default:
-                throw "Invalid content descriptor.";
-            }
-            return (
-              !_ ||
-                (_ !== _._ && _ !== _._) ||
-                (_ += " " + (0, _._)("#ContentDescriptor_Affirm18YearsOld")),
-              _
-            );
-          })(_, !0);
+        let _ = (0, _._)(_),
+          _ = (0, _._)(_, !0);
         const _ = (_, _) => (_) => {
             const _ = !_;
             let _ = _(_);
             if (_) {
-              const _ = [_].concat(_(_));
+              const _ = [_].concat((0, _._)(_));
               for (const _ of _) {
                 -1 !== _.findIndex((_) => _ === _.valueOf()) ||
                   _.push(_.valueOf());
               }
             } else {
-              const _ = [_].concat(_(_));
+              const _ = [_].concat((0, _._)(_));
               for (const _ of _) {
                 const _ = _.findIndex((_) => _ === _.valueOf());
                 -1 !== _ && _.splice(_, 1);
@@ -5661,33 +5810,7 @@
       }
       function _(_) {
         const { eSelectedContentDescriptor: _, fnSelectDescriptor: _ } = _,
-          _ =
-            ((_ = _),
-            (0, _._)({
-              queryKey: [
-                "examples_for_content_descriptor",
-                null === _ ? null : _.valueOf(),
-              ],
-              queryFn: async () => {
-                if (null === _) return [];
-                const _ = new URLSearchParams();
-                return (
-                  _.append("filter", "examplesforcontentdescriptors"),
-                  _.append("ignore_preferences", "1"),
-                  _.append("category1", "992,994,998"),
-                  _.append("descids", _.valueOf().toString()),
-                  _.append("json", "1"),
-                  (
-                    await _()({
-                      url: `${_._.STORE_BASE_URL}search/results/?${_.toString()}`,
-                      method: "GET",
-                      responseType: "json",
-                    })
-                  ).data.items
-                );
-              },
-            }));
-        var _;
+          _ = (0, _._)(_);
         return (0, _.jsx)(_._, {
           active: null !== _,
           children: (0, _.jsxs)(_._, {
@@ -5752,7 +5875,7 @@
                         }),
                       ],
                     }),
-                    _.map((_) =>
+                    _._.map((_) =>
                       (0, _.jsx)(
                         _,
                         {

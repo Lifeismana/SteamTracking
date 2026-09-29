@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-  [9281],
+  [49281],
   {
     55486: (e) => {
       e.exports = {
@@ -892,23 +892,23 @@
         i = n(46107),
         o = n(32803),
         c = n(66418),
-        d = n(94734),
-        g = n(42834),
-        m = n(84518),
-        u = n(14987),
-        p = n(39777),
-        h = n(60014),
-        _ = n(38535),
-        v = n(65946),
-        x = n(83392),
-        I = n(90626),
-        j = n(70078),
-        w = n(33924),
-        f = n.n(w),
-        C = n(48593),
-        A = n(18654),
-        E = n.n(A),
-        S = n(72860),
+        d = n(79619),
+        g = n(94734),
+        m = n(42834),
+        u = n(84518),
+        p = n(14987),
+        h = n(39777),
+        _ = n(60014),
+        v = n(38535),
+        x = n(65946),
+        I = n(83392),
+        j = n(90626),
+        w = n(70078),
+        f = n(33924),
+        C = n.n(f),
+        A = n(40672),
+        E = n(76532),
+        S = n.n(E),
         b = n(76684),
         L = n(3088),
         k = n(12155),
@@ -920,16 +920,16 @@
         const {
             event: s,
             imageURLOverride: d,
-            bShowAssociatedApp: m,
-            langOverride: h,
-            onClick: w,
-            eEventRount: A,
+            bShowAssociatedApp: g,
+            langOverride: u,
+            onClick: _,
+            eEventRount: f,
             bHidePrices: E,
             nSummaryMaxLength: S,
           } = e,
-          k = (0, _.Zj)(s.appid),
-          N = (0, C.n)(),
-          R = h || (0, r.sfN)(c.TS.LANGUAGE),
+          k = (0, v.Zj)(s.appid),
+          N = (0, A.n)(),
+          R = u || (0, r.sfN)(c.TS.LANGUAGE),
           U =
             null !==
               (a = (0, i.m0)(
@@ -950,108 +950,108 @@
               )) && void 0 !== n
               ? n
               : d,
-          [B, M, F, O] = (0, v.q3)(() => [
+          [B, M, F, O] = (0, x.q3)(() => [
             s.GetNameWithFallback(R) || "",
             s.GetCategoryAsString(),
             s.GetSummaryWithFallback(R, S),
             s.GetSubTitleWithLanguageFallback(R) || "",
           ]),
-          P = (0, u.$5)(s.appid),
-          { data: H } = (0, p.lv)(P),
+          P = (0, p.$5)(s.appid),
+          { data: H } = (0, h.lv)(P),
           z = [];
         if ((U && z.push(U), G && G !== U && z.push(G), H)) {
-          const e = (0, g.b0)(H, "main_capsule");
+          const e = (0, m.b0)(H, "main_capsule");
           e && z.push(e);
         }
-        const [V, W] = (0, I.useState)(U);
+        const [V, W] = (0, j.useState)(U);
         if (!s)
-          return (0, t.jsx)("div", { className: f().OtherEvents_EventCtn });
+          return (0, t.jsx)("div", { className: C().OtherEvents_EventCtn });
         const Y = s ? s.GetStartTimeAndDateUnixSeconds() : 0;
         let q = O;
         return (
           O && (O.length > y || B.length > y) && (q = void 0),
           (0, t.jsxs)("div", {
-            className: f().EventSizer,
+            className: C().EventSizer,
             children: [
               (0, t.jsxs)(o.tj, {
                 className: (0, D.A)(
-                  f().OtherEvents_EventCtn,
+                  C().OtherEvents_EventCtn,
                   "OtherEvents_EventCtn",
-                  f().HoversEnabled,
+                  C().HoversEnabled,
                 ),
                 eventModel: s,
-                route: A || o.PH.k_eView,
-                onClick: w,
+                route: f || o.PH.k_eView,
+                onClick: _,
                 preferredFocus: !0,
                 children: [
                   (0, t.jsxs)("div", {
                     className: (0, D.A)(
-                      f().EventSummaryContainer,
-                      f().HideInWideMode,
+                      C().EventSummaryContainer,
+                      C().HideInWideMode,
                     ),
                     children: [
                       (0, t.jsx)("div", {
-                        className: f().EventSummaryType,
+                        className: C().EventSummaryType,
                         children: M,
                       }),
                       (0, t.jsx)("div", {
-                        className: f().EventSummaryText,
+                        className: C().EventSummaryText,
                         children: F,
                       }),
                     ],
                   }),
                   (0, t.jsx)("div", {
-                    className: f().OtherEvents_BGImage,
+                    className: C().OtherEvents_BGImage,
                     style: {
                       backgroundColor: "#ffffff",
-                      backgroundImage: V ? `url(${(0, j.j3)(V)})` : "none",
+                      backgroundImage: V ? `url(${(0, w.j3)(V)})` : "none",
                     },
                   }),
                   (0, t.jsxs)("div", {
-                    className: f().OtherEvents_ContentCtn,
+                    className: C().OtherEvents_ContentCtn,
                     children: [
                       (0, t.jsx)("div", {
                         className: (0, D.A)(
-                          f().OtherEvents_MainImageCtn,
-                          k && f().MaskImages,
+                          C().OtherEvents_MainImageCtn,
+                          k && C().MaskImages,
                         ),
                         children: (0, t.jsx)(L.c, {
                           rgSources: z,
                           onIncrementalError: (e, a, n) => {
                             n >= z.length && W(void 0), W(z[n + 1]);
                           },
-                          className: f().OtherEvents_MainImage,
+                          className: C().OtherEvents_MainImage,
                           alt: "",
                         }),
                       }),
                       (0, t.jsxs)("div", {
-                        className: f().OtherEvents_TextCtn,
+                        className: C().OtherEvents_TextCtn,
                         children: [
                           (0, t.jsx)("div", {
-                            className: f().OtherEvents_TextTitle,
+                            className: C().OtherEvents_TextTitle,
                             children: B,
                           }),
                           Boolean(q) &&
                             (0, t.jsx)("div", {
-                              className: f().OtherEvents_SubTitle,
+                              className: C().OtherEvents_SubTitle,
                               children: q,
                             }),
-                          (0, t.jsxs)(x.s, {
+                          (0, t.jsxs)(I.s, {
                             direction: "row",
                             gap: "3",
                             align: "center",
                             children: [
                               (0, t.jsx)("div", {
                                 className: (0, D.A)(
-                                  f().EventType,
-                                  f().ShowInWideMode,
+                                  C().EventType,
+                                  C().ShowInWideMode,
                                 ),
                                 children: M,
                               }),
                               Boolean(Y > N)
                                 ? (0, t.jsx)("div", {
                                     className: (0, D.A)(
-                                      f().UpcomingCtn,
+                                      C().UpcomingCtn,
                                       "UpcomingCtn",
                                     ),
                                     children: (0, t.jsx)(b.K4, {
@@ -1070,8 +1070,8 @@
                           }),
                           (0, t.jsx)("div", {
                             className: (0, D.A)(
-                              f().EventSummaryText,
-                              f().ShowInWideMode,
+                              C().EventSummaryText,
+                              C().ShowInWideMode,
                             ),
                             children: F,
                           }),
@@ -1081,7 +1081,7 @@
                   }),
                 ],
               }),
-              Boolean(m && s.appid) &&
+              Boolean(g && s.appid) &&
                 (0, t.jsx)(T, { appid: s.appid, bHidePrice: E }),
             ],
           })
@@ -1089,55 +1089,55 @@
       }
       function T(e) {
         const { appid: a, bHidePrice: n } = e,
-          l = (0, u.$5)(a),
-          { data: r } = (0, p.J$)(l),
-          { data: i } = (0, p.lv)(l),
-          { data: o } = (0, p.Q_)(l),
-          c = (0, h.n9)(),
-          _ = (0, N.Qn)();
+          l = (0, p.$5)(a),
+          { data: r } = (0, h.J$)(l),
+          { data: i } = (0, h.lv)(l),
+          { data: o } = (0, h.Q_)(l),
+          c = (0, _.n9)(),
+          v = (0, N.Qn)();
         if (!i || !r) return null;
-        const v = o && o.hide_discount_pct_for_compliance;
-        return (0, t.jsx)(m.A, {
+        const x = o && o.hide_discount_pct_for_compliance;
+        return (0, t.jsx)(u.A, {
           appID: a,
           children: (0, t.jsxs)(s.Z, {
-            className: (0, D.A)(f().AppCapsuleCtn, "AppCapsuleCtn"),
-            ...(0, S.S)(r, c, _, !1),
+            className: (0, D.A)(C().AppCapsuleCtn, "AppCapsuleCtn"),
+            ...(0, d.S)(r, c, v, !1),
             children: [
-              (0, t.jsx)(d.Q, {
+              (0, t.jsx)(g.Q, {
                 id: l,
                 hoverProps: {
                   direction: "overlay",
                   style: { minWidth: "320px" },
                 },
                 children: (0, t.jsx)("img", {
-                  className: (0, D.A)(f().AppCapsuleImage, f().CapsuleShadow),
-                  src: (0, g.b0)(i, "small_capsule"),
+                  className: (0, D.A)(C().AppCapsuleImage, C().CapsuleShadow),
+                  src: (0, m.b0)(i, "small_capsule"),
                   alt: r.name,
                 }),
               }),
               Boolean(!n && !r.is_free) &&
                 (0, t.jsxs)("span", {
                   className: (0, D.A)(
-                    f().AppCapsulePrice,
+                    C().AppCapsulePrice,
                     Boolean(null == o ? void 0 : o.discount_pct)
-                      ? E().Discounted
+                      ? S().Discounted
                       : "",
                   ),
                   children: [
-                    Boolean((null == o ? void 0 : o.discount_pct) && v) &&
+                    Boolean((null == o ? void 0 : o.discount_pct) && x) &&
                       (0, t.jsx)("div", {
-                        className: E().DiscountIconCtn,
+                        className: S().DiscountIconCtn,
                         children: (0, t.jsx)(k.XH_, {}),
                       }),
-                    Boolean((null == o ? void 0 : o.discount_pct) && !v) &&
+                    Boolean((null == o ? void 0 : o.discount_pct) && !x) &&
                       (0, t.jsx)("span", {
-                        className: E().StoreSaleDiscountBox,
+                        className: S().StoreSaleDiscountBox,
                         children: `-${null == o ? void 0 : o.discount_pct}%`,
                       }),
                     o &&
                       o.final_price_in_cents &&
                       (0, t.jsx)("span", {
-                        className: E().StoreSalePriceBox,
+                        className: S().StoreSalePriceBox,
                         children: o.formatted_final_price,
                       }),
                   ],
@@ -1473,7 +1473,7 @@
         g = n(29347),
         m = n(95695),
         u = n.n(m),
-        p = n(96236),
+        p = n(43474),
         h = n(9154),
         _ = n(738),
         v = n(22797),
@@ -2667,7 +2667,6 @@
         let h = d
           ? (0, l.jsx)(U.fh, {
               text: d || "",
-              partnerEventStore: t,
               showErrorInfo: !1,
               event: n,
               languageOverride: g.O.Get().GetCurEditLanguage(),

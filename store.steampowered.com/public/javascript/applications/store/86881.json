@@ -65,6 +65,5 @@
     "PriceDisplay_YourPrice": "Ditt pris:",
     "PriceGrid_NormalPrice": "NORMALPRIS",
     "PriceGrid_RecentPrice": "LÄGSTA (30 DAGAR)",
-    "PriceGrid_CurrentPrice": "NU",
-    "Dummy": "dummy"
+    "PriceGrid_CurrentPrice": "NU"
 }

@@ -1,6 +1,6 @@
 (self.webpackChunkappmgmt_storeadmin =
   self.webpackChunkappmgmt_storeadmin || []).push([
-  [4298],
+  [1917],
   {
     chunkid: (module) => {
       module.exports = {
@@ -578,6 +578,7 @@
               role: "presentation",
             });
           case _._:
+          default:
             return (0, _.jsx)(_.WX$, {
               className: _().CategoryIcon,
               role: "presentation",
@@ -598,6 +599,7 @@
               role: "presentation",
             });
           case _._:
+          default:
             return (0, _.jsx)(_.WX$, {
               className: _().CategoryIcon,
               role: "presentation",
@@ -2647,7 +2649,7 @@
         constructor(_ = null) {
           super(),
             _.prototype.clusterid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
+            _.Message.initialize(this, _, 0, -1, [8], null);
         }
         static sm_m;
         static sm_mbf;
@@ -2681,6 +2683,19 @@
                     _: 7,
                     _: _._.readDouble,
                     _: _._.writeDouble,
+                  },
+                  frame_rate_histogram: {
+                    _: 8,
+                    _: !0,
+                    _: !0,
+                    _: _._.readDouble,
+                    pbr: _._.readPackedDouble,
+                    _: _._.writeRepeatedDouble,
+                  },
+                  histogram_report_count: {
+                    _: 9,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
                   },
                 },
               }),
@@ -2772,11 +2787,16 @@
               blogURL: _.steam_deck_blog_url,
               eHWCompatibiltyDisplay: _._,
             }))),
-          !_.resolved_items?.length && !_.frame_resolved_items?.length)
+          !_.resolved_items?.length &&
+            !_.machine_resolved_items?.length &&
+            !_.frame_resolved_items?.length)
         ) {
           let _ = "",
             _ = null,
-            _ = null;
+            _ = null,
+            _ = (0, _.jsx)(_._, {
+              category: _.resolved_category,
+            });
           return (
             _ == _._
               ? ((_ = _._.Localize(
@@ -2786,6 +2806,9 @@
                   _: _,
                   category: _.machine_resolved_category,
                   appName: _,
+                })),
+                (_ = (0, _.jsx)(_._, {
+                  category: _.machine_resolved_category,
                 })))
               : _ == _._
                 ? ((_ = _._.Localize(
@@ -2796,6 +2819,9 @@
                     category: _.steamos_resolved_category,
                     appName: _,
                   })),
+                  (_ = (0, _.jsx)(_._, {
+                    category: _.steamos_resolved_category,
+                  })),
                   (_ = _))
                 : _ == _._
                   ? ((_ = _._.Localize(
@@ -2805,6 +2831,9 @@
                       _: _,
                       category: _.frame_resolved_category,
                       appName: _,
+                    })),
+                    (_ = (0, _.jsx)(_._, {
+                      category: _.frame_resolved_category,
                     })))
                   : ((_ = _._.Localize(
                       "#SteamDeckVerified_Store_CompatSectionHeader_GamepadUI",
@@ -2831,9 +2860,7 @@
                     }),
                     (0, _.jsx)("div", {
                       className: _().AppTitleCategory,
-                      children: (0, _.jsx)(_._, {
-                        category: _.resolved_category,
-                      }),
+                      children: _,
                     }),
                   ],
                 }),
@@ -3018,7 +3045,7 @@
             appName: _,
           }),
           _ = (0, _.jsx)(_._, {
-            category: _.steamos_resolved_category ?? _._,
+            category: _.steamos_resolved_category,
           }),
           _ = _.steamos_resolved_items && _.steamos_resolved_items?.length > 0;
         return (0, _.jsx)(_, {

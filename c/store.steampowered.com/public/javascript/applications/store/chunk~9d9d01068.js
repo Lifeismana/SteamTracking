@@ -117,6 +117,30 @@
         _: () => _,
         _: () => _,
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      const _ = _._.box(void 0);
+      function _() {
+        return _.get();
+      }
+      function _(_) {
+        (0, _._)(() => _.set(_));
+      }
+      function _() {
+        const _ = _.get();
+        return _ || Math.floor(Date.now() / 1e3);
+      }
+      function _() {
+        const _ = _.get();
+        return _ ? new Date(1e3 * _) : new Date();
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -1866,22 +1890,69 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
       });
-      var _ = __webpack_require__("chunkid");
-      const _ = _._.box(void 0);
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = "100% 0px 100% 0px",
+        _ = "SaleSection_",
+        _ = 940,
+        _ = 1920;
       function _() {
-        return _.get();
+        return window.innerWidth ?? _;
+      }
+      function _() {
+        return _() >= _;
+      }
+      function _() {
+        (0, _._)();
+        const [_, _] = (0, _.useState)(() => _());
+        return (
+          (0, _.useEffect)(() => {
+            const _ = () => {
+              _(_());
+            };
+            return (
+              _(),
+              window.addEventListener("resize", _),
+              () => window.removeEventListener("resize", _)
+            );
+          }, []),
+          _
+        );
+      }
+      function _(_ = _) {
+        return _() >= _;
       }
       function _(_) {
-        (0, _._)(() => _.set(_));
+        const _ = _(),
+          _ = _ >= _,
+          _ = (0, _._)(_);
+        return _
+          ? {
+              nMaxCapsulesPerRow: _.nMaxItemsPerRow,
+              bScreenIsWide: _,
+            }
+          : {
+              nMaxCapsulesPerRow: Math.min(
+                Math.max(Math.floor(_ / _.nItemMinimumWidth), 1),
+                _.nMaxItemsPerRow,
+              ),
+              bScreenIsWide: _,
+            };
       }
-      function _() {
-        const _ = _.get();
-        return _ || Math.floor(Date.now() / 1e3);
-      }
-      function _() {
-        const _ = _.get();
-        return _ ? new Date(1e3 * _) : new Date();
+      function _(_) {
+        const _ = (0, _._)(_);
+        return _()
+          ? _.nMaxItemsPerRow
+          : Math.min(
+              Math.max(Math.floor(window.innerWidth / _.nItemMinimumWidth), 1),
+              _.nMaxItemsPerRow,
+            );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -2336,7 +2407,11 @@
           _.I5b,
           _.LOv,
           _.WNR,
-        ];
+        ],
+        _ = [_._.k_ESteamRealmGlobal],
+        _ = [_._.k_ESteamRealmChina],
+        _ = [_._.k_ESteamRealmGlobal, _._.k_ESteamRealmChina],
+        _ = [];
       class _ {
         constructor() {
           (0, _._)(this);
@@ -3366,15 +3441,14 @@
             : void 0;
         }
         GetIncludedRealmList() {
-          const _ = new Array();
+          const _ = this.BInRealmGlobal(),
+            _ = this.BInRealmChina();
           return (
-            this.BInRealmGlobal() && _.push(_._.k_ESteamRealmGlobal),
-            this.BInRealmChina() && _.push(_._.k_ESteamRealmChina),
             (0, _._)(
-              _.length > 0,
+              _ || _,
               `Event ${this.GID} is currently configured so that no realms are valid for display. Either enable Steam China or Global to address this issue`,
             ),
-            _
+            _ && _ ? _ : _ ? _ : _ ? _ : _
           );
         }
         BIsValidForRealm(_) {
@@ -3497,87 +3571,25 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       __webpack_require__._(module_exports, {
+        _: () => _._,
+        _: () => _,
+        _: () => _._,
+        _: () => _._,
+        _: () => _,
+        _: () => _._,
+        _: () => _._,
         _: () => _,
         _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
+        _: () => _._,
+        _: () => _._,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = "100% 0px 100% 0px",
-        _ = "tab",
-        _ = "SaleSection_",
+      const _ = "tab",
         _ = "exploration";
       var _;
-      !(function (_) {
-        (_.Random = "r"), (_.Personalized = "p");
-      })(_ || (_ = {}));
-      const _ = 940,
-        _ = 1920;
-      function _() {
-        return window.innerWidth ?? _;
-      }
-      function _() {
-        return _() >= _;
-      }
-      function _() {
-        (0, _._)();
-        const [_, _] = (0, _.useState)(() => _());
-        return (
-          (0, _.useEffect)(() => {
-            const _ = () => {
-              _(_());
-            };
-            return (
-              _(),
-              window.addEventListener("resize", _),
-              () => window.removeEventListener("resize", _)
-            );
-          }, []),
-          _
-        );
-      }
-      function _(_ = _) {
-        return _() >= _;
-      }
-      function _(_) {
-        const _ = _(),
-          _ = _ >= _,
-          _ = (0, _._)(_);
-        return _
-          ? {
-              nMaxCapsulesPerRow: _.nMaxItemsPerRow,
-              bScreenIsWide: _,
-            }
-          : {
-              nMaxCapsulesPerRow: Math.min(
-                Math.max(Math.floor(_ / _.nItemMinimumWidth), 1),
-                _.nMaxItemsPerRow,
-              ),
-              bScreenIsWide: _,
-            };
-      }
-      function _(_) {
-        const _ = (0, _._)(_);
-        return _()
-          ? _.nMaxItemsPerRow
-          : Math.min(
-              Math.max(Math.floor(window.innerWidth / _.nItemMinimumWidth), 1),
-              _.nMaxItemsPerRow,
-            );
-      }
       function _(_) {
         switch (_) {
           case _._:
@@ -3604,6 +3616,9 @@
             return;
         }
       }
+      !(function (_) {
+        (_.Random = "r"), (_.Personalized = "p");
+      })(_ || (_ = {}));
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       __webpack_require__._(module_exports, {

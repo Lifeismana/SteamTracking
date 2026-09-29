@@ -10,6 +10,8 @@ message COptInDef {
 	optional uint32 opt_in_id = 7;
 	optional uint32 last_modified_time = 8;
 	optional uint32 last_modifier_accountid = 9;
+	optional bool is_next_fest = 10;
+	optional bool next_fest_out_of_sync = 11;
 }
 
 message CPartnerAppOptInData {

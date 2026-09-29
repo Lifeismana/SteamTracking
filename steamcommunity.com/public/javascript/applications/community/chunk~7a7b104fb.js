@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-  [3256],
+  [53256],
   {
     53120: (e) => {
       e.exports = {
@@ -793,7 +793,7 @@
         s = r(65946),
         a = r(90626),
         n = r(43104),
-        o = r(54728),
+        o = r(61556),
         l = r(17267),
         c = r(94057),
         d = r(92317),
@@ -977,7 +977,7 @@
         l = r(88997),
         c = r(86328),
         d = r(55963),
-        m = r(54728),
+        m = r(61556),
         u = r(16021),
         h = r(73745),
         p = r(6144);
@@ -1260,8 +1260,8 @@
           children: (0, s.jsx)("div", { ref: a, className: "crossfade-img" }),
         });
       }
-      var O = r(41399),
-        W = r(69409),
+      var O = r(22623),
+        W = r(58431),
         D = r(81416),
         q = r(12155),
         U = r(51272),

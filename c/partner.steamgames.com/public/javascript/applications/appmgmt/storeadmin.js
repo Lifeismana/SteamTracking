@@ -4,11 +4,6 @@
   {
     chunkid: (module) => {
       module.exports = {
-        profile_color_preview: "_2VqhO10AlkJOsh7sPoqPcp",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         "duration-app-launch": "800ms",
         ProgressBar: "_2H35Exdt_TEmnht61LT9o",
         ProgressBarComplete: "ch7u6iAsb2ympJBJjGMoi",
@@ -201,38 +196,6 @@
         AppSelectCtn: "_32YZCQQ7Pe-_dwX6LIf3pl",
         DLCDisplayContainer: "_3cg2WBZbQuwOGVBJr4DDWz",
         AddDLCButton: "_2p7IttiJElSQxs_diHKzci",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        EditionPickerHr: "_2N7bWzRE2_6yMlW8HoWwKL",
-        NeedToPublishNotification: "_1YyjMfNhBo6lWsvunbhkmG",
-        EditionsEditorRow: "_1kVAFKlQN-iaGJNQM64lbU",
-        ImageProvided: "_3acPE1-7PEV9Fv1BIkpb1d",
-        PublishReminder: "_2bw5Zr8a6ik4-NIjVgcZSn",
-        TaskDone: "_3cgXyLkVbKXYv6hxcrj0P9",
-        EditionsEditorContents: "WKVcCeIwShQXxr0XjInT9",
-        ErrorList: "_34AP-LqjTCmVO7oQmBRksn",
-        ErrorListItems: "_3OPqG7OUgCU252R-DdB0Qj",
-        EditionsEditorDialogButtons: "zHZhZ_cYU43MhqpRkvAuR",
-        EditionPicker: "N1f8Ye9Eude7K2vJSL7AZ",
-        EditionPickerFilterBox: "WLQyL6JRweNM6PHgWKRaB",
-        HiddenColor: "_1YtkUWpJ0G7lnnX5bj8X7_",
-        ReleasedColor: "_1_2YmmBAHhhpvApS2NQe-r",
-        PrepurchaseColor: "_2o-Djga-h_lkGoTFS-PjlF",
-        BetaColor: "_29O7AlK2wwhmKjrCxAPIRk",
-        EditionsEditorSaveStatus: "_21ABdLhAaZ1KIV7osV-RYV",
-        LocalizedImageSelector: "_1K9mhqXjo6xi6qVHMBwcTQ",
-        Header: "_3oC7Qb8-E-MF_hxZKzOPyQ",
-        UploadedImageOption: "_2F05QhQ_9_rf7qryFDLsh6",
-        ExistsImageOption: "_2DTeKovr7g8Z4rrBjVNTZb",
-        MissingImageOption: "_29pcde0Q7kd7ClgWo9w5NB",
-        ImageDropPane: "_1RWj0soRG2Y-mtoq_nOEe3",
-        DragAndDropDescriptionWithImage: "_3-2d6qJPYFImAjNB825gPq",
-        DragAndDropDescriptionWithoutImage: "_2FAmjUnpcILnVdO29vdLn6",
-        DeleteLink: "D_kqKamsBe39qbMqcuino",
-        ErrorBox: "_20-2lEQLGnc64V46i5khL-",
-        AltTextArea: "_20wBVZiv8PNqku4mQTONkN",
       };
     },
     chunkid: (module) => {
@@ -508,36 +471,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        ReleaseDateInfoCtn: "_2mHXbGuTlraXe_Q1JYKmJZ",
-        GameEditCtn: "_2JigUHOJ_OTCRjbohXgz9q",
-        ReleaseDateContent: "AVZgMOcgNdb95embDq8g1",
-        EditButton: "_1R5w2idIf5H3xZh7C6ObQL",
-        Spacer: "_3TcEpA8cfRVBTd8q_vvFWu",
-        Top: "kNcnUbYODwtyQ3AZp_VUM",
-        Bottom: "_2TBzK4oRpgLv5hHxtojPq5",
-        EditButtonIcon: "_22a0aPwQVuTJx58YZQWYBd",
-        LabelField: "_1olrpCNFeNf7UfruKHLVhY",
-        Label: "M3h38e4KnwYsDvQP72dg0",
-        BigField: "_4jS-jBGyvj3mr8jkJ46Gc",
-        Set: "eEhAf6mE-OR6VCf4eHEkC",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        ReleaseDateModal: "RKE7g5McLhANBdiTzm-ai",
-        ReleaseDateRequestBody: "_32CdqVuKRqrf1SR8Hday6v",
-        Column: "_gUUe9JABsRpGmdkooO11",
-        ColumnLabel: "xebmA68ybtGEgyG_oVMM0",
-        ReleaseColumnFooter: "_3egfk1DBae-OZSZtcwrDDq",
-        ColumnContent: "eZhskcRU_Ejw5kmSBLRTU",
-        BlueNote: "_1iIVgx9LfomTs6Ycj6qYgV",
-        PublishNowWarning: "_2-dra08qCgH_F_0T756AwP",
-        ErrorBox: "_27JIJRbunDgYqS_xDV7Xha",
-        HTMLErrorBoxAppear: "bXT6nAG7o3DqMjoZ_zWJ",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         EditorCtn: "_3qyd9aiwL32kAuGY_Rhzm0",
         HeaderCtn: "_2SsIaBHCvUU5Hyt5uQxA_p",
         Row: "wscFtfHuH_NvN1lnfHM6i",
@@ -565,19 +498,6 @@
         TitlePreviewRow: "_82lvRm6zNUSuia5C-0KVb",
         Shipped: "_1jDNm9kCJcNIl38lakfF51",
         PublishReminder: "_1FnrHyPuXP7yRZRvgoNvLi",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        Results: "_3mK1PrFPrbrn2M-BbAWsmL",
-        LoadingContainer: "K7yNfrxTJs0QuoFtUfy0z",
-        ResultRow: "_1QyQulOsH0dGeFUVgSa9ki",
-        GameName: "_353QhAGCSYbIguu7o4DJgs",
-        Label: "_3MUfh3QKRNr6qY0vEz3p04",
-        AvatarImageCtn: "_3h9l9X-3dBSAhMflfovg2K",
-        AvatarImage: "PBBKP18ULuCWFwYcEIOdW",
-        AppSearchInputContainer: "oxxmBMFO82IJEm1H341Wd",
-        AppSearchDLCCheckbox: "_1aduni8VCqZVqqDxyXb-pY",
       };
     },
     chunkid: (module) => {
@@ -648,84 +568,12 @@
     },
     chunkid: (module) => {
       module.exports = {
-        ArtPreview: "_3793xvP87t1rZYbAQDC1pG",
-        ArtNoArt: "_3WxfzmFYwb-rh8sn5VMFMl",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        StatusLineItemCtn: "V5SWm2fiBKJqCbPn7bpC0",
-        StatusIcon: "_1DFlt9vB8DfZc84ZeQcrgT",
-        StatusIconDone: "K_JWTc7pXC9lechbL_JMT",
-        StatusNotDone: "zl6s26pUkMfMXmoMlJstY",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        OtherEventsCtn: "_9H6b5yfaxlmcnHvkqtwDK",
-        OtherEvents_MainImageCtn: "_2qyLPxO8_nkczRvFiaju8N",
-        OtherEvents: "_16DzRvjcqFcYr0NYcWmTrg",
-        EventSizer: "_2JC5DEuXUeE50kjpb7Eeau",
-        OtherEvents_EventCtn: "_1MwNf8slOG9lOvAeOshmuu",
-        EventSummaryText: "ENbI1gFgvIca6HSKAbfiJ",
-        ShowInWideMode: "RLbLb742gN095uDUITtIB",
-        EventSummaryContainer: "_2GYp44BuZLfKRQdeILTDC3",
-        HideInWideMode: "_3itHivPkrgI7TWENi1yxjI",
-        OtherEvents_ContentCtn: "_22jEpNTfml-w_aRJV-fKDm",
-        HoversEnabled: "_3o6M87A6T172WsUE6MNvdW",
-        OtherEvents_TextTitle: "_2jc1DpJ_WzFtigRh5qDWce",
-        OtherEvents_MainImage: "_3_wKbXvT7_y5YkrtadL0I6",
-        PartnerEventRowCapsule_MainImage: "bC2Zkx7FlANno4SW8FwB-",
-        EventSummaryType: "_11JXznGoylLSEmZXZbgcsq",
-        OtherEvents_BGImage: "_2pPj9UWoWM6h318uBN0-8X",
-        MaskImages: "_1kFdtNfhXozP4yI_qOv2H-",
-        OtherEvents_TextCtn: "_3-EtNa1Nr_737K0kglkT9C",
-        UpcomingCtn: "_2CXrGPtlQh-j3aSa6XsQDI",
-        OtherEvents_SubTitle: "_1Swox5XYdeesack-J7fNLH",
-        EventType: "_2BWwVF5N-3fDuJRblB6gHb",
-        AppCapsuleImage: "_3OzV3h4jW1bkLmB6TqbYmo",
-        CapsuleShadow: "_2rjkJQtvus70aLmbfGoneD",
-        AppCapsuleCtn: "_16au-uWHggl6G731aw_eHt",
-        AppCapsuleImageHover: "IeC3X0McKdGC79BsC3VvM",
-        AppCapsulePrice: "_2-l2M5GPuxKFwV8h1tc_fH",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        "duration-app-launch": "800ms",
-        narrowWidth: "500px",
-        TwoWidthCtn: "_49thIpYeG08pUfNc1x_w9",
-        TwoWidthCapsule: "_78Qv2C95AM2DNCuLD5o8U",
-        TwoWidthSideInfo: "_2qz5D65VkY796Xw-al9f_a",
-        Reason: "_2h0GKAYcXRP10ryZHFn79d",
-        StoreSaleItemRelease: "wJ7ZiTc09km2kH4mSsZ9j",
-        BackgroundAnimation: "_2_vb1-Pr1-2Gblfyxj023k",
-        "ItemFocusAnim-darkerGrey-nocolor": "op3gqmHyESfHpHgPheRVq",
-        "ItemFocusAnim-darkerGrey": "_12l58v9-cJk-169Qesl-e5",
-        "ItemFocusAnim-darkGreySettings": "_2cAK7l3w0qC8uv5uzKjusc",
-        "ItemFocusAnim-darkGrey": "_2uLjKVdzQQCodi_XH5ZPfi",
-        "ItemFocusAnim-grey": "_3Za5duiaOuAcNrQJeEpjxD",
-        "ItemFocusAnim-translucent-white-10": "_3wyVPtc4dD1Msi7wqRvJq3",
-        "ItemFocusAnim-translucent-white-20": "_2v6guEab39IMo3I1kfiwXc",
-        "ItemFocusAnimBorder-darkGrey": "_3SS0MMDROpRbR_hYLVjAcl",
-        "ItemFocusAnim-green": "_3qjU-9ZS6bDpjjMAOYUhGm",
-        focusAnimation: "_3-bYSIZZNIWgiOR__mB2jd",
-        hoverAnimation: "_39oPHCcA4NgTm53rnykAtP",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         SocialMediaRow: "ulorWm3sqhSeSaQPSH7O6",
         SocialMediaType: "ZKHt9TgsGIf59MoROuJuj",
         SocialMediaLink: "_4yVvgRIj7im7egSdbtW_w",
         SocialMediaTooltip: "_2btfW5GjJOR2sOB-k94zp6",
         ValidationError: "_1vWmrCnLJP6y1vJRoWO6Qj",
         AddLinkDropDown: "naYpWkI1nnET_gXJrYEAw",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        SmallAvatar: "_2cuu0nLVc4medg6FpU6PQl",
       };
     },
     chunkid: (module) => {
@@ -761,26 +609,6 @@
         "ItemFocusAnim-green": "_3Hq7gKwAuHvmYuBWXBx8mC",
         focusAnimation: "_1k4kLxHBHs5edlnWmN-Cos",
         hoverAnimation: "_3OZh2Bm4JsNC3bNfskysCA",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        WhitelistCtn: "_1UhmxrINvvaNnHzhCPoill",
-        WhitelistRow: "_28TC1EYm0jlWPjyk89xXCL",
-        WhitelistNumber: "IY3dF3eWXX1OmE8oYcQKp",
-        Disabled: "_2VzE-3UQEHXyAext8t7gLW",
-        Grabbing: "_1vSZ5gJndAOamRhVGni8HG",
-        DragActive: "_31uDZXKZQlYMd8FK9xdaJb",
-        Dropped: "_3bfDVSvzMDkk4s1j0Vw8jI",
-        JumpToSection: "oABTo2lkoYYI5YMYaeq_Q",
-        BeingDragged: "_3y7I4DL9Hua5OhZ4HgcBB5",
-        DragGhost: "_61nYWo98IhSjR8PWtQX9O",
-        Grabbable: "riuelIz655g_IBddWfLQ-",
-        DisabledGrab: "_2K0C_m1AZvB6yeNaEXXjDD",
-        WhitelistAvatar: "_3DGjmH9KW9BAXsEYwH1WpE",
-        ButtonCtn: "_1hSqlvDTyj9P6eWTHXutUt",
-        DragHighlightContainer: "_2jRMC5JVSK6dsktYus9Gjf",
-        DragHighlight: "Y9ryg1Npznt3dpkr7BGp1",
       };
     },
     chunkid: (module) => {
@@ -846,6 +674,47 @@
         ToolTipContainer: "_3PRdiJdKKfTnwLnTfbCkEz",
       };
     },
+    chunkid: (module) => {
+      module.exports = {
+        SectionTitleHeader: "_2g5oNomwd2lv8wL2qlsLVA",
+        SectionTitleButtons: "RGHKm1_KeaBjdzuvisfYN",
+        required_title: "_3yDPZjnsoLc2FkrAH2UOEd",
+      };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      function _() {
+        const _ = (0, _._)({
+          queryKey: ["useValveAccounts"],
+          queryFn: async () => {
+            const _ = `${_._.PARTNER_BASE_URL}actions/ajaxgetadminusers`,
+              _ = await _().get(_);
+            return 200 == _?.status && _.data?.success == _._
+              ? _.data.admins
+              : (console.error("ValveAccounts:", _?.status), []);
+          },
+        });
+        return _.isLoading ? null : _.data;
+      }
+      function _(_) {
+        const _ = _();
+        return _?.find((_) => _._ == _);
+      }
+      function _(_, _) {
+        const _ = _.getQueryData(["useValveAccounts"]);
+        return __webpack_require__?.find((_) => _._ === _);
+      }
+    },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
@@ -867,8 +736,11 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -876,1297 +748,144 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _() {
+        return _._.EUNIVERSE == _._ ? 12 : 1;
+      }
       class _ {
-        m_mapAppIDToPaymentPartners = new Map();
-        m_mapAppIDToPromise = new Map();
-        m_mapPackageIDToPaymentPartners = new Map();
-        m_mapPackageIDToPromise = new Map();
-        m_mapBundleIDToPaymentPartners = new Map();
-        m_mapBundleIDToPromise = new Map();
-        GetInfoForApp(_) {
-          return this.m_mapAppIDToPaymentPartners.get(_);
+        m_mapOptInToPartners = new Map();
+        m_mapPromises = new Map();
+        GetPartnerInfo(_) {
+          return this.m_mapOptInToPartners.get(_);
         }
-        BHasInfoForApp(_) {
-          return this.m_mapAppIDToPaymentPartners.has(_);
+        BHasPartnerInfoLoad(_) {
+          return this.m_mapOptInToPartners.has(_);
         }
-        GetInfoForPackage(_) {
-          return this.m_mapPackageIDToPaymentPartners.get(_);
-        }
-        BHasInfoForPackage(_) {
-          return this.m_mapPackageIDToPaymentPartners.has(_);
-        }
-        GetInfoForBundle(_) {
-          return this.m_mapBundleIDToPaymentPartners.get(_);
-        }
-        BHasInfoForBundle(_) {
-          return this.m_mapBundleIDToPaymentPartners.has(_);
-        }
-        GetInfoForStoreItem(_, _) {
-          switch (_) {
-            case _._._:
-              return this.GetInfoForApp(_);
-            case _._._:
-              return this.GetInfoForPackage(_);
-            case _._._:
-              return this.GetInfoForBundle(_);
-            default:
-              return null;
-          }
-        }
-        BHasInfoForStoreItem(_, _) {
-          switch (_) {
-            case _._._:
-              return this.BHasInfoForApp(_);
-            case _._._:
-              return this.BHasInfoForPackage(_);
-            case _._._:
-              return this.BHasInfoForBundle(_);
-            default:
-              return !1;
-          }
-        }
-        async LoadAppPartnerInfo(_) {
+        async FindPartnerByName(_) {
           return (
-            this.m_mapAppIDToPromise.has(_) ||
-              this.m_mapAppIDToPromise.set(
-                _,
-                this.InternalLoadAppPartnerInfo(_, null, null),
-              ),
-            this.m_mapAppIDToPromise.get(_)
+            this.m_mapPromises.has(_) ||
+              this.m_mapPromises.set(_, this.InternalFindPartnerByName(_)),
+            this.m_mapPromises.get(_)
           );
         }
-        async LoadPackagePartnerInfo(_) {
-          return (
-            this.m_mapPackageIDToPromise.has(_) ||
-              this.m_mapPackageIDToPromise.set(
-                _,
-                this.InternalLoadAppPartnerInfo(null, _, null),
-              ),
-            this.m_mapPackageIDToPromise.get(_)
-          );
-        }
-        async LoadBundlePartnerInfo(_) {
-          return (
-            this.m_mapBundleIDToPromise.has(_) ||
-              this.m_mapBundleIDToPromise.set(
-                _,
-                this.InternalLoadAppPartnerInfo(null, null, _),
-              ),
-            this.m_mapBundleIDToPromise.get(_)
-          );
-        }
-        async LoadStoreItemPartnerInfo(_, _) {
-          switch (_) {
-            case _._._:
-              return this.LoadAppPartnerInfo(_);
-            case _._._:
-              return this.LoadPackagePartnerInfo(_);
-            case _._._:
-              return this.LoadBundlePartnerInfo(_);
-            default:
-              return null;
-          }
-        }
-        async InternalLoadAppPartnerInfo(_, _, _) {
-          let _ = null;
+        async InternalFindPartnerByName(_) {
+          const _ = new Array();
           try {
-            const _ = {
-                appid: _,
-                packageid: _,
-                bundleid: _,
+            const _ = _._.PARTNER_BASE_URL + "pub/ajaxfindpublishers",
+              _ = {
+                sessionid: (0, _._)(),
+                searchtext: _,
+                origin: self.origin,
               },
-              _ = _._.PARTNER_BASE_URL + "promotion/dailydeals/ajaxgetpartner",
               _ = await _().get(_, {
                 params: _,
-                withCredentials: !0,
               });
-            if (200 == _?.status && _.data?.success == _._)
-              return _
-                ? (this.m_mapAppIDToPaymentPartners.set(_, _.data.partnerinfo),
-                  this.m_mapAppIDToPaymentPartners.get(_))
-                : _
-                  ? (this.m_mapPackageIDToPaymentPartners.set(
-                      _,
-                      _.data.partnerinfo,
-                    ),
-                    this.m_mapPackageIDToPaymentPartners.get(_))
-                  : (this.m_mapBundleIDToPaymentPartners.set(
-                      _,
-                      _.data.partnerinfo,
-                    ),
-                    this.m_mapBundleIDToPaymentPartners.get(_));
-            _ = (0, _._)(_);
+            200 == _?.status && _?.data?.success == _._
+              ? _.data.publishers.forEach((_) => {
+                  const _ = {
+                    partnerid: _.publisherid,
+                    name: _.publishername,
+                    partner_url:
+                      _._.PARTNER_BASE_URL + `pub/publisher/${_.publisherid}/`,
+                    contacts: _.contacts,
+                  };
+                  this.m_mapOptInToPartners.set(_.publisherid, _), _.push(_);
+                })
+              : console.log(
+                  `CPartnerInfoStore.FindPartnerByName failed with status ${_?.status} eresult ${_?.data?.success} and msg ${_?.data?.msg}`,
+                );
           } catch (_) {
-            _ = (0, _._)(_);
-          }
-          return (
+            const _ = (0, _._)(_);
             console.error(
-              "CPartnerPaymentStore.LoadAppPartnerInfo failed: " +
-                _?.strErrorMsg,
+              "CPartnerInfoStore.FindPartnerByName failed add: " +
+                _.strErrorMsg,
               _,
-            ),
-            null
+            );
+          }
+          return _;
+        }
+        async LoadPartnerInfo(_) {
+          if (this.m_mapOptInToPartners.has(_))
+            return this.m_mapOptInToPartners.get(_);
+          await this.FindPartnerByName("" + _);
+          return (
+            this.BHasPartnerInfoLoad(_) ||
+              this.m_mapOptInToPartners.set(_, null),
+            this.m_mapOptInToPartners.get(_)
+          );
+        }
+        async LoadMultiplePartnerInfo(_) {
+          if (!_ || 0 == _.length) return [];
+          const _ = _.filter((_) => !this.m_mapOptInToPartners.has(_));
+          return (
+            _.length > 0 && (await this.FindPartnerByName("" + _.join(","))),
+            _.map((_) => this.m_mapOptInToPartners.get(_)).filter(Boolean)
           );
         }
         static s_Singleton;
         static Get() {
           return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
         }
-        constructor() {}
+        constructor() {
+          let _ = JSON.parse(
+            JSON.stringify((0, _._)("partner_info", "application_config")),
+          );
+          this.ValidateStoreDefault(_) &&
+            _.forEach((_) => this.m_mapOptInToPartners.set(_.partnerid, _));
+        }
+        ValidateStoreDefault(_) {
+          const _ = _;
+          return (
+            !!(
+              _ &&
+              Array.isArray(_) &&
+              _.length > 0 &&
+              "object" == typeof _[0]
+            ) &&
+            "number" == typeof _[0].partnerid &&
+            "string" == typeof _[0].name
+          );
+        }
       }
       function _(_) {
-        return _(_, _._._);
-      }
-      function _(_) {
-        return _(_._, (0, _._)(_));
-      }
-      function _(_, _) {
-        const [_, _] = _.useState(() => _.Get().GetInfoForStoreItem(_, _));
-        return (
-          _.useEffect(() => {
-            _
-              ? _.Get().BHasInfoForStoreItem(_, _) && null != _
-                ? _.Get().BHasInfoForStoreItem(_, _) &&
-                  _ != _.Get().GetInfoForStoreItem(_, _) &&
-                  _(_.Get().GetInfoForStoreItem(_, _))
-                : _.Get().LoadStoreItemPartnerInfo(_, _).then(_)
-              : _(null);
-          }, [_, _, _]),
-          _
-        );
-      }
-      function _(_) {
-        const [_, _] = (0, _.useState)(null);
+        const [_, _] = (0, _.useState)(!1);
         return (
           (0, _.useEffect)(() => {
-            if (_?.length > 0) {
-              const _ = _.map((_) =>
-                _.Get().LoadStoreItemPartnerInfo(_, _._._),
-              );
-              Promise.all(_).then(() => {
-                const _ = new Map();
-                _.forEach((_) => {
-                  _.Get().BHasInfoForApp(_) &&
-                    _.set(_, _.Get().GetInfoForApp(_));
-                }),
-                  __webpack_require__(_);
-              });
-            }
-          }, [_]),
+            !_ &&
+              _?.length > 0 &&
+              _.Get()
+                .LoadMultiplePartnerInfo(_)
+                .then(() => __webpack_require__(!0));
+          }, [_, _]),
           _
         );
       }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
       function _(_) {
-        const { rgGameProfileColorDefs: _ } = _,
-          _ = _.map((_) =>
-            (0, _.jsxs)(
-              "div",
-              {
-                className: "form_row_flex",
-                children: [
-                  (0, _.jsxs)("div", {
-                    className: "form_label_flex",
-                    children: ["*", _.strProfileColorLabel],
-                  }),
-                  (0, _.jsx)("div", {
-                    className: "form_data_flex",
-                    children: _(_),
-                  }),
-                ],
-              },
-              _.strProfileColorKey,
-            ),
-          );
-        return (0, _.jsx)("div", {
-          className: _().profile_colors_ctn,
-          children: _,
-        });
+        const [_, _] = _.useState(() => _.Get().GetPartnerInfo(_));
+        return (
+          _.useEffect(() => {
+            !_.Get().BHasPartnerInfoLoad(_) && _ > 0
+              ? _.Get()
+                  .LoadPartnerInfo(_)
+                  .then((_) => __webpack_require__(_))
+              : _.Get().BHasPartnerInfoLoad(_) &&
+                _?.partnerid != _ &&
+                __webpack_require__(_.Get().GetPartnerInfo(_));
+          }, [_, _]),
+          [_]
+        );
+      }
+      function _() {
+        return {
+          fnFindPartnerByName: _.Get().FindPartnerByName,
+        };
       }
       function _(_) {
-        const _ = _.match(/rgba?\s*\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)/i);
-        if (!_) return null;
-        const [, _, _, _] = _;
-        return `${_},${_},${_}`;
+        return _.Get().GetPartnerInfo(_);
       }
       function _(_) {
-        const { strKVPrepend: _, bWriteAsRGBOnly: _ } = _;
-        let [_, _] = _.useState(_.strCurrentColor);
-        const _ = _.useRef(void 0),
-          { openColorPicker: _ } = (0, _._)();
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            (0, _.jsx)("input", {
-              ref: _,
-              type: "text",
-              name: `${_ || "item[profile_colors]"}[${_.strProfileColorKey}]`,
-              onChange: () => {
-                _(_.current.value);
-              },
-              placeholder: _ ? "255,255,255" : "rgba(255, 255, 255, .5)",
-              size: 20,
-              value: _ ? _(_) : _,
-              readOnly: !0,
-            }),
-            (0, _.jsx)("div", {
-              className: _().profile_color_preview,
-              style: {
-                backgroundColor: `${_}`,
-              },
-              onClick: (_) => {
-                _(_, {
-                  color: _,
-                  onChange: _,
-                  disableAlpha: _,
-                });
-              },
-            }),
-          ],
-        });
+        return _.Get().LoadPartnerInfo(_);
       }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        if (!_ || 0 == _.trim().length) return null;
-        try {
-          return JSON.parse(_);
-        } catch {
-          return null;
-        }
-      }
-      function _(_, _) {
-        const _ = new Set();
-        return _.filter((_) => {
-          const _ = _(_);
-          return (
-            !__webpack_require__.has(_) && (__webpack_require__.add(_), !0)
-          );
-        });
-      }
-      function _(..._) {
-        return [...new Set(_.flat())];
-      }
-      function _(_) {
-        const { href: _, children: _ } = _;
-        return _
-          ? (0, _.jsx)("a", {
-              ..._,
-              children: _,
-            })
-          : (0, _.jsx)(_.Fragment, {
-              children: _,
-            });
-      }
-      function _(_, _) {
-        const _ = {
-            sText: (0, _._)(
-              "#Dashboard_UpcomingEvents_AppReleaseState_unavailable",
-            ),
-            sTooltip: (0, _._)(
-              "#Dashboard_UpcomingEvents_AppReleaseState_unavailable_Description",
-            ),
-            bPrereleaseOrReleased: !1,
-          },
-          _ = {
-            sText: (0, _._)(
-              "#Dashboard_UpcomingEvents_AppReleaseState_storepagenotlive",
-            ),
-            sTooltip: void 0,
-            bPrereleaseOrReleased: !1,
-          },
-          _ = {
-            released: {
-              sText: (0, _._)(
-                "#Dashboard_UpcomingEvents_AppReleaseState_released",
-              ),
-              sTooltip: (0, _._)(
-                "#Dashboard_UpcomingEvents_AppReleaseState_released_Description",
-              ),
-              bPrereleaseOrReleased: !0,
-            },
-            prerelease: {
-              sText: (0, _._)(
-                "#Dashboard_UpcomingEvents_AppReleaseState_prerelease",
-              ),
-              sTooltip: (0, _._)(
-                "#Dashboard_UpcomingEvents_AppReleaseState_prerelease_Description",
-              ),
-              bPrereleaseOrReleased: !0,
-            },
-            ownersonly: {
-              sText: (0, _._)(
-                "#Dashboard_UpcomingEvents_AppReleaseState_ownersonly",
-              ),
-              sTooltip: (0, _._)(
-                "#Dashboard_UpcomingEvents_AppReleaseState_ownersonly_Description",
-              ),
-              bPrereleaseOrReleased: !1,
-            },
-            preloadonly: {
-              sText: (0, _._)(
-                "#Dashboard_UpcomingEvents_AppReleaseState_preloadonly",
-              ),
-              sTooltip: (0, _._)(
-                "#Dashboard_UpcomingEvents_AppReleaseState_preloadonly_Description",
-              ),
-              bPrereleaseOrReleased: !1,
-            },
-            disabled: {
-              sText: (0, _._)(
-                "#Dashboard_UpcomingEvents_AppReleaseState_disabled",
-              ),
-              sTooltip: (0, _._)(
-                "#Dashboard_UpcomingEvents_AppReleaseState_disabled_Description",
-              ),
-              bPrereleaseOrReleased: !1,
-            },
-          };
-        let _ = _;
-        return _ in _ ? (_ = _[_]) : _ || (_ = _), _;
-      }
-      function _(_) {
-        if ("seasonalsale" == _.type) {
-          const _ = _.name.toLowerCase();
-          if (_.includes("spring")) return "#dd71d4";
-          if (_.includes("summer")) return "#29c6ec";
-          if (_.includes("autumn")) return "#ac240c";
-          if (_.includes("winter")) return "#01704f";
-        }
-      }
-      function _(_) {
-        let _ = 0;
-        for (let _ = 0; _ < _.length; _++) _ = _.charCodeAt(_) + ((_ << 5) - _);
-        return `hsl(${_ % 360}, ${50 + (_ % 50)}%, ${40 + (_ % 30)}%, 0.25)`;
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { oEditableMessage: _ } = _,
-          [_] = (0, _._)(() => [_.GetStoreItemKey()]);
-        return _ && "app" == _.item_type
-          ? (0, _.jsx)(_, {
-              oEditableMessage: _,
-              idKey: _,
-            })
-          : (0, _.jsx)("div", {
-              className: _.ErrorStylesWithIcon,
-              children:
-                "Error: Major Update does not support anything but targeting app",
-            });
-      }
-      function _(_) {
-        const { oEditableMessage: _, idKey: _ } = _,
-          [_, _] = (0, _._)(() => [
-            _.GetUpdateEventClanAccountID(),
-            _.GetUpdateEventGID(),
-          ]),
-          { data: _ } = (0, _._)(
-            (0, _._)({
-              item_type: (0, _._)(_.item_type),
-              _: _._,
-            }),
-          ),
-          _ = (0, _.useMemo)(() => _._.InitFromClanID(_), [_]),
-          _ = _?.type != _._._ ? _?.related_items?.parent_appid : void 0;
-        return (0, _.jsxs)("div", {
-          children: [
-            (0, _.jsx)(_, {
-              appid: _ || _._,
-              selectedEventGID: _,
-              fnSetUpdateEvent: _.SetUpdateEvent,
-              label: (0, _._)("#EventDropDown_MM_FeaturedEvent"),
-              tooltip: (0, _._)("#EventDropDown_MM_FeaturedEvent_ttip"),
-              strUrlLearnMore:
-                "https://confluence.valve.org/display/SteamBiz/Steam+Promotions+Assets+Guide#SteamPromotionsAssetsGuide-MarketingMessageforUpdates",
-            }),
-            Boolean(_) &&
-              (0, _.jsxs)(_.Fragment, {
-                children: [
-                  (0, _.jsx)("a", {
-                    href: `${_._.COMMUNITY_BASE_URL}gid/${_.ConvertTo64BitString()}/partnerevents/edit/${_}`,
-                    target: "_blank",
-                    children: "open event for edit",
-                  }),
-                  "   ",
-                  (0, _.jsx)(_._, {
-                    toolTipContent:
-                      "Once the event is published, go here to verify it is not awaiting moderation review. Games in the moderator review queue are not visible in the library",
-                    children: (0, _.jsx)("a", {
-                      href: `${_._.STORE_BASE_URL}events_admin/?selectedTags=vo_marketing_message&excludedTags=mod_reviewed&excludedTags=auto_migrated`,
-                      target: "_blank",
-                      children: "open event moderation tool",
-                    }),
-                  }),
-                  (0, _.jsx)("br", {}),
-                  (0, _.jsx)("br", {}),
-                ],
-              }),
-          ],
-        });
-      }
-      function _(_) {
-        const {
-            appid: _,
-            selectedEventGID: _,
-            fnSetUpdateEvent: _,
-            label: _,
-            tooltip: _,
-            strUrlLearnMore: _,
-            bFilterOutDrafts: _,
-          } = _,
-          _ = (0, _._)(),
-          { clanInfo: _, bLoadingClanInfo: _ } = (0, _._)(_),
-          _ = (function (_, _) {
-            const _ = (0, _._)(),
-              _ = (0, _.useMemo)(() => _._.InitFromClanID(_), [_]),
-              _ = (0, _._)({
-                queryKey: ["eventdraftrecent", _, _],
-                queryFn: async () => {
-                  const _ = _._.Init(_._);
-                  return (
-                    _.Body().set_steamid(_.ConvertTo64BitString()),
-                    _ && _.Body().set_rtime_oldest_date(_),
-                    (await _._.GetDraftAndRecentPartnerEventSnippet(_, _))
-                      .Body()
-                      .toObject().snippets
-                  );
-                },
-                enabled: Boolean(_),
-              });
-            return (0, _.useMemo)(
-              () =>
-                _.isLoading || !_.data
-                  ? null
-                  : _.data.sort((_, _) =>
-                      _.hidden && _.hidden
-                        ? _.published && !_.published
-                          ? -1
-                          : _.published && !_.published
-                            ? 1
-                            : (_.rtime32_start_time ?? 0) -
-                              (_.rtime32_start_time ?? 0)
-                        : _.hidden
-                          ? -1
-                          : _.hidden
-                            ? 1
-                            : _.rtime32_start_time - _.rtime32_start_time,
-                    ),
-              [_.data, _.isLoading],
-            );
-          })(_?.clanAccountID, _ - 2592e3),
-          _ = (0, _.useMemo)(
-            () => (_ ? _?.filter((_) => !_.hidden) : _),
-            [_, _],
-          ),
-          _ = (0, _.useMemo)(
-            () =>
-              _
-                ? _.map((_) => {
-                    const _ = _.hidden
-                      ? _.published
-                        ? "#EventDropDown_HiddenPublish"
-                        : "#EventDropDown_Hidden"
-                      : "#EventDropDown_Visible";
-                    return {
-                      label: (0, _._)(
-                        _,
-                        (0, _._)(_.rtime32_start_time),
-                        _.event_name,
-                      ),
-                      data: _,
-                    };
-                  })
-                : [],
-            [_],
-          ),
-          _ = _?.find((_) => _.gid === _);
-        return _ || (!_ && !_?.appid)
-          ? _ && 0 != _.length
-            ? (0, _.jsxs)(_.Fragment, {
-                children: [
-                  Boolean(_) &&
-                    (0, _.jsx)("a", {
-                      href: _,
-                      target: "_blank",
-                      style: {
-                        float: "right",
-                      },
-                      children: (0, _._)(
-                        "#DiscountDashboard_DetailView_BatchDiscount_MaxDiscountDocumentationLink",
-                      ),
-                    }),
-                  (0, _.jsx)(_._, {
-                    label: _,
-                    tooltip: _,
-                    selectedOption: _,
-                    onChange: (_) => _(_.clanAccountID, _.data.gid),
-                    rgOptions: _,
-                  }),
-                ],
-              })
-            : (0, _.jsxs)(_.Fragment, {
-                children: [
-                  (0, _.jsxs)(_._, {
-                    children: [
-                      _,
-                      " ",
-                      (0, _.jsx)(_._, {
-                        tooltip: _,
-                      }),
-                    ],
-                  }),
-                  (0, _.jsx)("div", {
-                    className: (0, _._)(_.ErrorStylesWithIcon, "ErrorCtn"),
-                    children: (0, _._)(
-                      "#EventDropDown_NoEventFound",
-                      (0, _.jsx)("a", {
-                        href: `${_._.COMMUNITY_BASE_URL}ogg/${_}/partnerevents`,
-                        target: "_blank",
-                      }),
-                    ),
-                  }),
-                ],
-              })
-          : (0, _.jsx)(_._, {
-              string: (0, _._)("#Loading"),
-              size: "small",
-              position: "center",
-            });
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = 748,
-        _ = 896;
-      class _ {
-        rgSet = new Set();
-        constructor(_) {
-          for (const _ of _) this.rgSet.add(JSON.stringify(_));
-        }
-        has(_) {
-          const _ = JSON.stringify(_);
-          return this.rgSet.has(_);
-        }
-        add(_) {
-          const _ = JSON.stringify(_);
-          return this.rgSet.add(_), this;
-        }
-        delete(_) {
-          const _ = JSON.stringify(_);
-          return this.rgSet.delete(_);
-        }
-        get size() {
-          return this.rgSet.size;
-        }
-        *[Symbol.iterator]() {
-          for (const _ of this.rgSet) yield JSON.parse(_);
-        }
-      }
-      function _(_) {
-        const [_, _] = (0, _.useState)("closed"),
-          _ = _.rgEditions,
-          [_, _] = (0, _.useState)(new _(_)),
-          _ = new Map();
-        for (const _ of Object.keys(_.rgEditionsComparisonGraphics))
-          _.set(_, _.rgEditionsComparisonGraphics[_]);
-        const [_, _] = (0, _.useState)(() => {
-            const _ = new Map();
-            for (const _ of Object.keys(_.rgEditionsAltText))
-              _.set(_, _.rgEditionsAltText[_]);
-            return _;
-          }),
-          [_, _] = (0, _.useState)(_),
-          _ = Object.keys(_.rgEditionsComparisonGraphics).length > 0,
-          _ = (function (_, _) {
-            return (0, _._)({
-              mutationFn: async (_) => {
-                const {
-                    rgEditionsToSave: _,
-                    rgGraphicsToDelete: _,
-                    mapGraphicsToUpload: _,
-                    mapAltText: _,
-                  } = _,
-                  _ = new FormData();
-                _.append("sessionid", (0, _._)());
-                const _ = Math.max(_.length, _.length);
-                for (let _ = 0; _ < _; _++)
-                  _ >= _.length
-                    ? (_.append(
-                        `app[related_items][editions][${_}][packageid]`,
-                        "",
-                      ),
-                      _.append(
-                        `app[related_items][editions][${_}][bundleid]`,
-                        "",
-                      ))
-                    : _[_].packageid
-                      ? (_.append(
-                          `app[related_items][editions][${_}][packageid]`,
-                          "" + _[_].packageid,
-                        ),
-                        _.append(
-                          `app[related_items][editions][${_}][bundleid]`,
-                          "",
-                        ))
-                      : _[_].bundleid
-                        ? (_.append(
-                            `app[related_items][editions][${_}][packageid]`,
-                            "",
-                          ),
-                          _.append(
-                            `app[related_items][editions][${_}][bundleid]`,
-                            "" + _[_].bundleid,
-                          ))
-                        : console.log(
-                            "Tried to save an edition with neither packageid or bundleid.",
-                          );
-                _.forEach((_, _) => {
-                  _.append(
-                    `edition_comparison|edition_comparision|assets|edition_comparison|image|${_}`,
-                    _,
-                  );
-                });
-                for (const _ of _)
-                  _.append(`app[assets][edition_comparison][image][${_}]`, "");
-                _.forEach((_, _) => {
-                  _.append(
-                    `app[assets][edition_comparison][image_alt_text][${_}]`,
-                    _,
-                  );
-                });
-                const _ = `${_._.PARTNER_BASE_URL}admin/game/quickupdateajax/${_}`;
-                return _().post(_, _);
-              },
-            });
-          })(_.nItemId, _),
-          _ = new Map();
-        for (const _ of _.rgCandidates) _.set(_.nId, _);
-        let _ = null;
-        if (
-          _.size > 0 &&
-          -1 !== _.nBasePackageId &&
-          !_.has({
-            packageid: _.nBasePackageId,
-          })
-        ) {
-          const _ = _.rgCandidates.find((_) => _.nId === _.nBasePackageId);
-          _ = (0, _._)(
-            "#StoreAdmin_EditEditions_MustIncludeCheapestBasePageError",
-            _?.strName,
-            _.nBasePackageId,
-          );
-        }
-        const _ = _.useId();
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            (0, _.jsx)(_._, {
-              active: "editor" === _ || "alert" === _,
-              children: (0, _.jsxs)(_._, {
-                "aria-labelledby": _,
-                closeModal: () => __webpack_require__("closed"),
-                children: [
-                  "editor" === _ &&
-                    (0, _.jsxs)(_.Fragment, {
-                      children: [
-                        (0, _.jsxs)("div", {
-                          className: _.EditionsEditorContents,
-                          children: [
-                            (0, _.jsx)("h2", {
-                              _: _,
-                              children: (0, _._)(
-                                "#StoreAdmin_EditEditions_DialogTitle",
-                              ),
-                            }),
-                            _.isPending && (0, _.jsx)(_._, {}),
-                            !_.isPending &&
-                              (0, _.jsxs)(_.Fragment, {
-                                children: [
-                                  null !== _ &&
-                                    (0, _.jsxs)("div", {
-                                      className: _.ErrorBox,
-                                      children: [
-                                        (0, _.jsx)(_._, {}),
-                                        (0, _.jsx)("div", {
-                                          children: _,
-                                        }),
-                                      ],
-                                    }),
-                                  (0, _.jsx)(_, {
-                                    rgEditions: _,
-                                    rgCandidates: _.rgCandidates,
-                                    setEditions: _,
-                                  }),
-                                  (0, _.jsx)("div", {
-                                    className: _.EditionPickerHr,
-                                  }),
-                                  (0, _.jsx)(_, {
-                                    mapOriginalImages: _,
-                                    mapImages: _,
-                                    setImages: _,
-                                    mapAltText: _,
-                                    setAltText: _,
-                                    bAppHasSteamChinaToolsEnabled:
-                                      _.bAppHasSteamChinaToolsEnabled,
-                                  }),
-                                ],
-                              }),
-                          ],
-                        }),
-                        (0, _.jsxs)("div", {
-                          className: _.EditionsEditorDialogButtons,
-                          children: [
-                            (0, _.jsx)("button", {
-                              className: "btn_green_white_innerfade",
-                              disabled: null !== _,
-                              onClick: async () => {
-                                const _ = new Map();
-                                _.forEach((_, _) => {
-                                  _ instanceof File && _.set(_, _);
-                                });
-                                const _ = [];
-                                _.forEach((_, _) => {
-                                  _.has(_) || _.push(_);
-                                }),
-                                  _.mutate({
-                                    rgEditionsToSave: Array.from(_),
-                                    mapGraphicsToUpload: _,
-                                    mapAltText: _,
-                                    rgGraphicsToDelete: _,
-                                  }),
-                                  __webpack_require__("alert");
-                              },
-                              children: (0, _._)(
-                                "#StoreAdmin_EditEditions_SaveButton",
-                              ),
-                            }),
-                            (0, _.jsx)("button", {
-                              onClick: () => {
-                                _(new _(_)), __webpack_require__("closed");
-                              },
-                              children: (0, _._)(
-                                "#StoreAdmin_EditEditions_CancelButton",
-                              ),
-                            }),
-                          ],
-                        }),
-                        (0, _.jsx)("p", {
-                          className: _.NeedToPublishNotification,
-                          children: (0, _._)(
-                            "#StoreAdmin_EditEditions_NeedToPublishNotice",
-                            (0, _.jsx)("a", {
-                              target: "_blank",
-                              href: `${_._.PARTNER_BASE_URL}admin/game/edit/${_.nItemId}?activetab=tab_publish`,
-                            }),
-                          ),
-                        }),
-                      ],
-                    }),
-                  "alert" === _ &&
-                    (0, _.jsx)(_.Fragment, {
-                      children: (0, _.jsxs)("div", {
-                        className: _.EditionEditorContents,
-                        children: [
-                          (0, _.jsx)("h2", {
-                            children: (0, _._)(
-                              "#StoreAdmin_EditEditions_SavingTitle",
-                            ),
-                          }),
-                          (0, _.jsxs)("div", {
-                            className: _.EditionsEditorSaveStatus,
-                            children: [
-                              _.isPending &&
-                                (0, _.jsxs)(_.Fragment, {
-                                  children: [
-                                    (0, _.jsx)(_._, {}),
-                                    " ",
-                                    (0, _._)("#StoreAdmin_EditEditions_Saving"),
-                                  ],
-                                }),
-                              !_.isPending &&
-                                (0, _.jsx)("span", {
-                                  children: (0, _._)(
-                                    "#StoreAdmin_EditEditions_Saved",
-                                  ),
-                                }),
-                            ],
-                          }),
-                          (0, _.jsx)("span", {
-                            className: _.PublishReminder,
-                            children: (0, _._)(
-                              "#StoreAdmin_EditEditions_NeedToPublishAlert",
-                              (0, _.jsx)("a", {
-                                target: "_blank",
-                                href: `${_._.PARTNER_BASE_URL}admin/game/edit/${_.nItemId}?activetab=tab_publish`,
-                              }),
-                            ),
-                          }),
-                          (0, _.jsx)("div", {
-                            className: _.EditionsEditorDialogButtons,
-                            children: (0, _.jsx)("button", {
-                              onClick: () => {
-                                __webpack_require__("refreshing"),
-                                  window.location.reload();
-                              },
-                              children: (0, _._)("#StoreAdmin_EditEditions_OK"),
-                            }),
-                          }),
-                        ],
-                      }),
-                    }),
-                ],
-              }),
-            }),
-            (_.rgCandidates.length > 1 || _.rgEditions.length > 0) &&
-              (0, _.jsx)(_.Fragment, {
-                children: (0, _.jsxs)("div", {
-                  className: (0, _._)(
-                    _.EditionsEditorRow,
-                    _ && _.ImageProvided,
-                  ),
-                  children: [
-                    "closed" === _ &&
-                      (0, _.jsxs)(_.Fragment, {
-                        children: [
-                          (0, _.jsx)("button", {
-                            className: _.OpenEditorButton,
-                            onClick: () => __webpack_require__("editor"),
-                            children: (0, _._)(
-                              "#StoreAdmin_EditEditions_ManageEditionsButton",
-                            ),
-                          }),
-                          _?.size > 0
-                            ? (0, _.jsx)("span", {
-                                children: (0, _._)(
-                                  "#StoreAdmin_EditEditions_ManageEditionsDescription",
-                                  _.size,
-                                ),
-                              })
-                            : (0, _.jsx)("span", {
-                                children: (0, _._)(
-                                  "#StoreAdmin_EditEditions_GroupEditionsDescription",
-                                ),
-                              }),
-                          (0, _.jsx)("span", {
-                            children: _
-                              ? (0, _.jsx)("span", {
-                                  className: (0, _._)(
-                                    _.TaskDone,
-                                    "icon_check_green",
-                                  ),
-                                  children: (0, _._)(
-                                    "#StoreAdmin_EditEditions_ManageEditions_HasComparisonGraphic",
-                                  ),
-                                })
-                              : (0, _._)(
-                                  "#StoreAdmin_EditEditions_ManageEditions_NoComparisonGraphic",
-                                ),
-                          }),
-                        ],
-                      }),
-                    "refreshing" === _ &&
-                      (0, _.jsx)(_.Fragment, {
-                        children: (0, _.jsx)(_._, {
-                          size: "small",
-                        }),
-                      }),
-                  ],
-                }),
-              }),
-          ],
-        });
-      }
-      const _ = (_) =>
-        "bundle" === _.eType
-          ? {
-              bundleid: _.nId,
-            }
-          : {
-              packageid: _.nId,
-            };
-      function _(_) {
-        const { rgEditions: _, rgCandidates: _, setEditions: _ } = _,
-          _ = new Map();
-        for (const _ of _.rgCandidates) _.set(_.nId, _);
-        const [_, _] = (0, _.useState)(""),
-          _ = __webpack_require__.filter(
-            (_) => -1 !== _.strName.toLowerCase().indexOf(_.toLowerCase()),
-          );
-        return (0, _.jsxs)("div", {
-          className: _.EditionPicker,
-          children: [
-            (0, _.jsx)("p", {
-              children: (0, _._)(
-                "#StoreAdmin_EditEditions_GroupEditionsIntro",
-                (0, _.jsx)("a", {
-                  target: "_blank",
-                  href: `${_._.PARTNER_BASE_URL}doc/store/manageeditions`,
-                }),
-              ),
-            }),
-            (0, _.jsx)("br", {}),
-            (0, _.jsx)("h3", {
-              children: (0, _._)("#StoreAdmin_EditEditions_StepNumber1"),
-            }),
-            (0, _.jsx)("p", {
-              children: (0, _._)(
-                "#StoreAdmin_EditEditions_SelectEditionsDescription",
-              ),
-            }),
-            (0, _.jsx)("div", {
-              className: _.EditionPickerFilterBox,
-              children: (0, _.jsx)("input", {
-                type: "text",
-                placeholder: (0, _._)(
-                  "#StoreAdmin_EditEditions_FilterDescription",
-                ),
-                value: _,
-                onChange: (_) => {
-                  const _ = _.target.value;
-                  _(_);
-                },
-              }),
-            }),
-            (0, _.jsxs)("table", {
-              children: [
-                (0, _.jsx)("thead", {
-                  children: (0, _.jsxs)("tr", {
-                    children: [
-                      (0, _.jsx)("td", {
-                        children: (0, _._)(
-                          "#StoreAdmin_EditEditions_ColumnEdition",
-                        ),
-                      }),
-                      (0, _.jsx)("td", {
-                        children: (0, _._)(
-                          "#StoreAdmin_EditEditions_ColumnPackageTitle",
-                        ),
-                      }),
-                      (0, _.jsx)("td", {
-                        children: (0, _._)(
-                          "#StoreAdmin_EditEditions_ColumnState",
-                        ),
-                      }),
-                      (0, _.jsx)("td", {
-                        children: (0, _._)(
-                          "#StoreAdmin_EditEditions_ColumnPrice",
-                        ),
-                      }),
-                    ],
-                  }),
-                }),
-                (0, _.jsx)("tbody", {
-                  children: _.map((_) => {
-                    const _ = _.has(_(_));
-                    let _ = _.HiddenColor;
-                    return (
-                      "Released" === _.strReleaseState
-                        ? (_ = _.ReleasedColor)
-                        : "Prepurchase" === _.strReleaseState
-                          ? (_ = _.PrepurchaseColor)
-                          : "Beta" === _.strReleaseState && (_ = _.BetaColor),
-                      (0, _.jsxs)(
-                        "tr",
-                        {
-                          className: (0, _._)(_, _.EditionPickerRow),
-                          children: [
-                            (0, _.jsx)("td", {
-                              children: (0, _.jsx)("input", {
-                                type: "checkbox",
-                                onChange:
-                                  ((_ = _.eType),
-                                  (_ = _.nId),
-                                  (_) => {
-                                    const _ = new _(_);
-                                    _.target.checked
-                                      ? __webpack_require__.add(
-                                          "package" === _
-                                            ? {
-                                                packageid: _,
-                                              }
-                                            : {
-                                                bundleid: _,
-                                              },
-                                        )
-                                      : __webpack_require__.delete(
-                                          "package" === _
-                                            ? {
-                                                packageid: _,
-                                              }
-                                            : {
-                                                bundleid: _,
-                                              },
-                                        ),
-                                      _(_);
-                                  }),
-                                checked: _,
-                              }),
-                            }),
-                            (0, _.jsx)("td", {
-                              children: _.strName,
-                            }),
-                            (0, _.jsx)("td", {
-                              children: _.strLocalizedReleaseState,
-                            }),
-                            (0, _.jsx)("td", {
-                              dangerouslySetInnerHTML: {
-                                __html: _.strPricing,
-                              },
-                            }),
-                          ],
-                        },
-                        _.nId,
-                      )
-                    );
-                    var _, _;
-                  }),
-                }),
-              ],
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const {
-            mapOriginalImages: _,
-            mapImages: _,
-            setImages: _,
-            mapAltText: _,
-            setAltText: _,
-            bAppHasSteamChinaToolsEnabled: _,
-          } = _,
-          [_, _] = (0, _.useState)(null),
-          _ = (0, _._)(_.bAppHasSteamChinaToolsEnabled),
-          [_, _] = (0, _.useState)("english"),
-          _ = (0, _.useRef)(null);
-        let _ = null,
-          _ = "missing";
-        if (__webpack_require__.has(_)) {
-          const _ = __webpack_require__.get(_);
-          _ instanceof File
-            ? ((_ = URL.createObjectURL(_)), (_ = "uploaded"))
-            : ((_ = _), (_ = "exists"));
-        }
-        const _ = (_) =>
-          __webpack_require__.has(_) &&
-          __webpack_require__.get(_) instanceof File
-            ? _.UploadedImageOption
-            : __webpack_require__.has(_)
-              ? _.ExistsImageOption
-              : _.MissingImageOption;
-        return (0, _.jsxs)("div", {
-          className: _.LocalizedImageSelector,
-          children: [
-            (0, _.jsx)("h3", {
-              children: (0, _._)("#StoreAdmin_EditEditions_StepNumber2"),
-            }),
-            (0, _.jsx)("p", {
-              children: (0, _._)(
-                "#StoreAdmin_EditEditions_UploadComparisonGraphicsDescription",
-                _,
-                _,
-              ),
-            }),
-            (0, _.jsxs)("div", {
-              className: _.Header,
-              children: [
-                (0, _.jsx)("input", {
-                  type: "file",
-                  ref: _,
-                  onChange: async (_) => {
-                    if (_.target.files && _.target.files[0]) {
-                      const _ = _.target.files[0],
-                        _ = await createImageBitmap(_);
-                      if (_.width !== _ || _.height !== _)
-                        return void _(
-                          (0, _._)(
-                            "#StoreAdmin_EditEditions_ImageSizeError",
-                            _,
-                            _,
-                            _.width,
-                            _.height,
-                          ),
-                        );
-                      const _ = new Map(_);
-                      _.set(_, _), _(_), _(null);
-                    }
-                  },
-                  style: {
-                    display: "none",
-                  },
-                }),
-                (0, _.jsx)("select", {
-                  onChange: (_) => {
-                    _(_.target.value), _(null);
-                  },
-                  className: _(_),
-                  children: (0, _._)(_, (_, _) =>
-                    (0, _.jsx)(
-                      "option",
-                      {
-                        value: _,
-                        className: _(_),
-                        children: _,
-                      },
-                      _,
-                    ),
-                  ),
-                }),
-              ],
-            }),
-            (0, _.jsx)("p", {
-              className: _.ErrorBox,
-              children:
-                null !== _ &&
-                (0, _.jsxs)(_.Fragment, {
-                  children: [(0, _.jsx)(_._, {}), _],
-                }),
-            }),
-            (0, _.jsx)("div", {
-              className: _.ImageDropPane,
-              onClick: () => _.current?.click(),
-              onDragOver: (_) => _.preventDefault(),
-              onDrop: async (_) => {
-                if (
-                  (_.preventDefault(),
-                  _.dataTransfer.files && _.dataTransfer.files[0])
-                ) {
-                  const _ = _.dataTransfer.files[0],
-                    _ = await createImageBitmap(_);
-                  if (_.width !== _ || _.height !== _)
-                    return void _(
-                      (0, _._)(
-                        "#StoreAdmin_EditEditions_ImageSizeError",
-                        _,
-                        _,
-                        _.width,
-                        _.height,
-                      ),
-                    );
-                  const _ = new Map(_);
-                  _.set(_, _), _(_), _(null);
-                }
-              },
-              children: _
-                ? (0, _.jsxs)(_.Fragment, {
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: _.DragAndDropDescriptionWithImage,
-                        children: (0, _._)(
-                          "#StoreAdmin_EditEditions_DragAndDropToReplace",
-                        ),
-                      }),
-                      (0, _.jsx)("img", {
-                        src: _,
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _.DeleteLink,
-                        children: (0, _.jsx)("a", {
-                          onClick: () => {
-                            if (__webpack_require__.has(_)) {
-                              const _ = new Map(_);
-                              _.delete(_), _(_), _(null);
-                            }
-                          },
-                          children: (0, _._)("#StoreAdmin_EditEditions_Delete"),
-                        }),
-                      }),
-                    ],
-                  })
-                : (0, _.jsx)("div", {
-                    className: _.DragAndDropDescriptionWithoutImage,
-                    children: (0, _._)(
-                      "#StoreAdmin_EditEditions_DragAndDropHere",
-                    ),
-                  }),
-            }),
-            (0, _.jsx)("h3", {
-              children: (0, _._)("#StoreAdmin_EditEditions_StepNumber3"),
-            }),
-            (0, _.jsx)("label", {
-              htmlFor: "altTextArea",
-              children: (0, _.jsx)("p", {
-                children: (0, _._)(
-                  "#StoreAdmin_EditEditions_AltTextDescription",
-                ),
-              }),
-            }),
-            (0, _.jsx)("textarea", {
-              _: "altTextArea",
-              className: _.AltTextArea,
-              onChange: (_) => {
-                const _ = new Map(_);
-                _.set(_, _.target.value), _(_);
-              },
-              value: _.get(_) ?? "",
-            }),
-          ],
-        });
-      }
+      (0, _._)([_._], _.prototype, "FindPartnerByName", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -4973,7 +3692,7 @@
                 return [
                   "img",
                   {
-                    src: _,
+                    src: (0, _._)(_),
                     alt: _,
                     title: _,
                     class: (0, _._)(_().Image, {
@@ -5058,7 +3777,7 @@
                     _.push([
                       "source",
                       {
-                        src: _,
+                        src: (0, _._)(_),
                         type: "video/webm",
                       },
                     ]),
@@ -5066,14 +3785,14 @@
                     _.push([
                       "source",
                       {
-                        src: _,
+                        src: (0, _._)(_),
                         type: "video/mp4",
                       },
                     ]),
                   [
                     "video",
                     {
-                      poster: _,
+                      poster: (0, _._)(_),
                       autoPlay: !!_,
                       controls: !!_,
                       loop: !_ && !!_,
@@ -7504,562 +6223,6 @@
         return (0, _.jsx)(_.Provider, {
           value: _,
           children: _.children,
-        });
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = [
-          "date_full",
-          "date_month",
-          "date_quarter",
-          "date_year",
-          "text_comingsoon",
-          "text_tba",
-        ],
-        _ = ["date_full", "date_month", "date_quarter"];
-      function _(_) {
-        const {
-            rtSteamReleaseDate: _,
-            value: _,
-            onChange: _,
-            rgComingSoonOptionOverride: _,
-            bExpandedDisplay: _,
-          } = _,
-          _ = !!_,
-          _ = _.useMemo(
-            () =>
-              (_ || _).map((_) => ({
-                label: (0, _._)(_, _, null, _),
-                data: _,
-              })),
-            [_, _, _],
-          ),
-          _ = _.useCallback(
-            (_) => {
-              _(_.data);
-            },
-            [_],
-          ),
-          _ = _
-            ? (0, _._)("#GameEdit_ComingSoon_SelectAnOption")
-            : (0, _._)("#App_Landing_NoDateSelected");
-        return (0, _.jsx)(_._, {
-          disabled: !_,
-          strDefaultLabel: _,
-          rgOptions: _,
-          selectedOption: _ ? _ : null,
-          onChange: _,
-        });
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { appid: _, onClose: _, onCommit: _ } = _,
-          [_, _] = _.useState(null),
-          {
-            data: _,
-            isLoading: _,
-            isLoadingError: _,
-          } = (function (_) {
-            return (0, _._)({
-              queryKey: ["ReleaseRequest", _],
-              queryFn: async () => {
-                const _ = await _().get(
-                  `${_._.PARTNER_BASE_URL}apprelease/ajaxgetreleaserequest/${_}`,
-                );
-                if ("string" == typeof _.data)
-                  throw "Error loading release status";
-                return {
-                  appid: _,
-                  ..._?.data,
-                };
-              },
-            });
-          })(_),
-          _ = "prerelease" == _?.strReleaseState,
-          _ = _.useCallback(
-            (_, _) => {
-              _._.invalidateQueries({
-                queryKey: ["ReleaseRequest", _],
-              }),
-                _(_, _, _);
-            },
-            [_, _, _],
-          );
-        let _ = (0, _.jsx)(_, {
-          setOnOKButton: _,
-          onCommit: _,
-        });
-        return (
-          _
-            ? (_ = (0, _.jsx)(_, {
-                strError: (0, _._)("#Error_ErrorCommunicatingWithNetwork"),
-              }))
-            : (!_ && _) || (_ = (0, _.jsx)(_._, {})),
-          (0, _.jsx)(_.Provider, {
-            value: _,
-            children: (0, _.jsx)(_, {
-              fnSubmit: _,
-              fnCloseModal: _,
-              children: _,
-            }),
-          })
-        );
-      }
-      const _ = _.createContext(null);
-      function _() {
-        return _.useContext(_);
-      }
-      const _ = _.memo(function (_) {
-        const {
-            appid: _,
-            bCanUpdateComingSoonDate: _,
-            rtReleaseDate: _,
-            strComingSoonDisplay: _,
-          } = _(),
-          { setOnOKButton: _, onCommit: _ } = _,
-          [_, _] = _.useState(_),
-          [_, _] = _.useState(_ || void 0),
-          [_, _] = _.useState("none"),
-          [_, _] = _.useState(),
-          _ = _.useCallback((_) => {
-            _(_), _("none");
-          }, []),
-          _ = _.useCallback(() => {
-            if (_)
-              if (_) {
-                _("submitting"), _(null);
-                (async function (_) {
-                  const {
-                      unAppID: _,
-                      rtReleaseDate: _,
-                      strComingSoonDisplay: _,
-                    } = _,
-                    _ = `${_._.PARTNER_BASE_URL}apprelease/ajaxupdatereleaserequest/${_}`,
-                    _ = new FormData();
-                  _.append("sessionid", (0, _._)()),
-                    _ &&
-                      _.append("release_date", __webpack_require__.toString());
-                  _.append("coming_soon_display", _);
-                  const _ = await _().post(_, _);
-                  if (!_.data || _.data.success != _._)
-                    throw (0, _._)(
-                      "#Error_Description",
-                      _.data?.success,
-                      _.data?.error_message || "unknown",
-                    );
-                })({
-                  unAppID: _,
-                  rtReleaseDate: _ ? _ : null,
-                  strComingSoonDisplay: _,
-                })
-                  .then(() => {
-                    _("refreshing"), _(_, _);
-                  })
-                  .catch((_) => {
-                    _(_);
-                  });
-              } else
-                _((0, _._)("#App_Landing_ReleaseDate_Error_ComingSoonDisplay"));
-            else _((0, _._)("#App_Landing_ReleaseDate_Error_NoDate"));
-          }, [_, _, _, _, _, _]);
-        return (
-          _.useEffect(() => {
-            _("none" == _ ? () => _ : null);
-          }, [_, _, _, _]),
-          (0, _.jsxs)(_.Fragment, {
-            children: [
-              _ &&
-                (0, _.jsx)(_, {
-                  strError: _,
-                }),
-              (0, _.jsx)(_, {}),
-              (0, _.jsxs)(_._, {
-                children: [
-                  (0, _.jsxs)(_, {
-                    label: (0, _._)("#App_Landing_IntendedReleaseDateTitle"),
-                    children: [
-                      (0, _.jsx)(_, {
-                        rtSelectedDate: _,
-                        setSelectedDate: _,
-                      }),
-                      (0, _.jsx)(_, {}),
-                    ],
-                  }),
-                  (0, _.jsxs)(_, {
-                    label: (0, _._)("#App_Landing_PublicDateDisplayTitle"),
-                    children: [
-                      (0, _.jsx)(_._, {
-                        rtSteamReleaseDate: _,
-                        value: _,
-                        onChange: _,
-                      }),
-                      (0, _.jsx)("p", {
-                        children: (0, _._)("#App_Landing_ReleaseDateStorePage"),
-                      }),
-                      (0, _.jsx)("p", {
-                        children: (0, _._)(
-                          "#App_Landing_ReleaseDateStoreListing",
-                        ),
-                      }),
-                    ],
-                  }),
-                ],
-              }),
-              (0, _.jsx)("div", {
-                className: _.ReleaseColumnFooter,
-                children: (0, _._)(
-                  "#App_Landing_NeedHelpWithReleaseDates",
-                  (0, _.jsx)("a", {
-                    target: "_blank",
-                    href: `${_._.PARTNER_BASE_URL}doc/store/coming_soon`,
-                  }),
-                  (0, _.jsx)("a", {
-                    target: "_blank",
-                    href: `${(0, _._)()}wizard/HelpWithPublishing`,
-                  }),
-                ),
-              }),
-              (0, _.jsx)(_, {}),
-            ],
-          })
-        );
-      });
-      function _(_) {
-        const { strError: _ } = _;
-        return (0, _.jsx)("div", {
-          className: _.ErrorBox,
-          children: _,
-        });
-      }
-      function _() {
-        const {
-          bIsComingSoon: _,
-          bIsStorePageReviewed: _,
-          bIsWaitingForBuildReview: _,
-          bIsFirstSelfPublishingApp: _,
-          rtEarliestDate: _,
-          bRequiresReleaseWaitingPeriod: _,
-        } = _();
-        return _ && _
-          ? _
-            ? (0, _.jsx)(_, {
-                children: (0, _._)(
-                  "#App_Landing_Release_EarliestDate_BuildReview",
-                ),
-              })
-            : (0, _.jsx)(_, {
-                children: (0, _._)(
-                  "#App_Landing_Release_EarliestDate",
-                  (0, _._)(_),
-                ),
-              })
-          : _ && _
-            ? (0, _.jsx)(_, {
-                children: (0, _._)(
-                  "#App_Landing_Release_EarliestDate_TwoWeeks30Days",
-                ),
-              })
-            : _
-              ? (0, _.jsx)(_, {
-                  children: (0, _._)(
-                    "#App_Landing_Release_EarliestDate_TwoWeeks",
-                  ),
-                })
-              : null;
-      }
-      function _(_) {
-        const { fnCloseModal: _, fnSubmit: _, children: _ } = _,
-          { bCanUpdateComingSoonDate: _ } = _() || {
-            bCanUpdateComingSoonDate: !0,
-          };
-        return (0, _.jsxs)(_._, {
-          active: !0,
-          className: _.ReleaseDateModal,
-          onDismiss: _,
-          children: [
-            (0, _.jsx)(_._, {
-              children: (0, _._)(
-                _
-                  ? "#App_Landing_Set_Release_Date"
-                  : "#App_Landing_Change_Release_Date",
-              ),
-            }),
-            (0, _.jsx)(_._, {
-              className: _.ReleaseDateRequestBody,
-              children: _,
-            }),
-            (0, _.jsx)(_._, {
-              bOKDisabled: !_,
-              onCancel: _,
-              strCancelText: (0, _._)("#App_Landing_Requested_Date_Cancel"),
-              onOK: _,
-              strOKText: (0, _._)("#App_Landing_Requested_Date_Update"),
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const { label: _, children: _ } = _;
-        return (0, _.jsxs)(_._, {
-          className: _.Column,
-          children: [
-            (0, _.jsxs)("div", {
-              className: _.ColumnLabel,
-              children: [_, ":"],
-            }),
-            (0, _.jsx)("div", {
-              className: _.ColumnContent,
-              children: _,
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const { rtSelectedDate: _, setSelectedDate: _ } = _,
-          { bCanUpdateComingSoonDate: _, rtEarliestDate: _ } = _();
-        return (0, _.jsx)(_.Fragment, {
-          children: (0, _.jsx)(_._, {
-            bWeekdaysOnly: !0,
-            bNoDefaultDate: !0,
-            disabled: !_,
-            nEarliestTime: _,
-            fnGetTimeToUpdate: () => _,
-            fnSetTimeToUpdate: _,
-            className: _.DatePicker,
-            bShowTimeZone: !0,
-            strAlsoShowTimeZone: _._,
-          }),
-        });
-      }
-      function _(_) {
-        const { bCanUpdateComingSoonDate: _, rtReleaseDate: _ } = _();
-        return _
-          ? (0, _.jsxs)(_.Fragment, {
-              children: [
-                (0, _.jsx)("p", {
-                  children: (0, _._)(
-                    "#App_Landing_Set_Release_Date_SetIntended",
-                  ),
-                }),
-                (0, _.jsx)("p", {
-                  children: (0, _._)("#App_Landing_Set_Release_Date_Weekends"),
-                }),
-                (0, _.jsx)("p", {
-                  children: (0, _._)(
-                    "#App_Landing_Set_Release_Date_PacificTime",
-                  ),
-                }),
-              ],
-            })
-          : (0, _.jsx)("p", {
-              children: (0, _._)(
-                (0, _._)(
-                  "#App_Landing_Set_Release_Date_ComingSoonWarning_CantSet_Desc",
-                  (0, _._)(_),
-                ),
-                (0, _.jsx)("a", {
-                  href: `${(0, _._)()}wizard/HelpWithPublishing?issueid=905`,
-                }),
-              ),
-            });
-      }
-      function _(_) {
-        return (0, _.jsx)("span", {
-          className: _.BlueNote,
-          children: _.children,
-        });
-      }
-      function _(_) {
-        const {
-          rtEarliestDate: _,
-          strReleaseState: _,
-          bCanUpdateComingSoonDate: _,
-        } = _();
-        return "prerelease" != _ || _
-          ? null
-          : (0, _.jsx)("div", {
-              className: _.PublishNowWarning,
-              children: (0, _._)(
-                "#App_Landing_Set_Release_Date_ComingSoonWarning_CantSet_Note",
-                (0, _._)(_),
-              ),
-            });
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            bIsGameEdit: _,
-            unAppID: _,
-            rgEarliestAdvancedAccessDate: _,
-          } = _,
-          [_, _] = _.useState(_.rtReleaseDate),
-          [_, _] = _.useState(_.strComingSoonDisplay),
-          [_, _] = _.useState(!1),
-          [_, _] = _.useState(!1),
-          _ = _.useCallback(() => _(!0), []),
-          _ = _.useCallback(() => _(!1), []),
-          _ = _.useCallback((_, _, _) => {
-            _(_), _(_), _(!1), _ && _(!0);
-          }, []);
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            _ &&
-              (0, _.jsx)(_, {
-                appid: _,
-                onClose: _,
-                onCommit: _,
-              }),
-            _ &&
-              (0, _.jsx)(_, {
-                appid: _,
-                bIsGameEdit: _,
-                closeModal: () => _(!1),
-              }),
-            (0, _.jsxs)("div", {
-              className: (0, _._)(_.ReleaseDateInfoCtn, _ && _.GameEditCtn),
-              children: [
-                (0, _.jsxs)("div", {
-                  className: _.ReleaseDateContent,
-                  children: [
-                    (0, _.jsx)(_, {
-                      label: (0, _._)("#App_Landing_SpecifiedReleaseDate"),
-                      children: (0, _.jsx)(_, {
-                        rtReleaseDate: _,
-                      }),
-                    }),
-                    (0, _.jsx)(_, {
-                      label: (0, _._)("#App_Landing_CustomersSeeReleaseDate"),
-                      children: (0, _.jsx)("div", {
-                        className: (0, _._)(_.BigField, _ ? _.Set : _.Unset),
-                        children: _
-                          ? (0, _._)(_, _)
-                          : (0, _._)("#App_Landing_UnsetReleaseDate"),
-                      }),
-                    }),
-                  ],
-                }),
-                (0, _.jsxs)("div", {
-                  className: _.EditButton,
-                  onClick: _,
-                  children: [
-                    (0, _.jsx)("div", {
-                      className: (0, _._)(_.Spacer, _.Top),
-                    }),
-                    (0, _.jsx)("div", {
-                      className: _.EditButtonIcon,
-                      children: (0, _.jsx)(_.ffu, {}),
-                    }),
-                    (0, _.jsx)("div", {
-                      className: (0, _._)(_.Spacer, _.Bottom),
-                    }),
-                  ],
-                }),
-              ],
-            }),
-            1e3 * _ > new Date().getTime() &&
-              (0, _.jsx)(_, {
-                label: (0, _._)("#App_Landing_EarliestAdvancedAccessDate"),
-                children: (0, _.jsx)(_, {
-                  rtReleaseDate: _,
-                }),
-              }),
-          ],
-        });
-      }
-      function _(_) {
-        const { rtReleaseDate: _ } = _;
-        return _
-          ? (0, _.jsxs)(_.Fragment, {
-              children: [
-                (0, _.jsx)("div", {
-                  className: (0, _._)(_.BigField, _.Set),
-                  children: (0, _._)(_),
-                }),
-                (0, _.jsx)("div", {
-                  className: (0, _._)(_.SubField, _.Set),
-                  children: (0, _._)(
-                    _,
-                    {},
-                    {
-                      timeZoneName: "short",
-                    },
-                  ),
-                }),
-              ],
-            })
-          : (0, _.jsx)("div", {
-              className: (0, _._)(_.BigField, _.Unset),
-              children: (0, _._)("#App_Landing_UnsetReleaseDate"),
-            });
-      }
-      function _(_) {
-        return (0, _.jsxs)("div", {
-          className: _.LabelField,
-          children: [
-            (0, _.jsx)("div", {
-              className: _.Label,
-              children: _.label,
-            }),
-            _.children,
-          ],
-        });
-      }
-      function _(_) {
-        const { appid: _, bIsGameEdit: _, closeModal: _ } = _,
-          _ = _.useCallback(() => {
-            _
-              ? (window.TabSelect("tab_publish"), window.scrollTo(0, 0))
-              : (window.location.href =
-                  _._.GameEditByAppID(_.toString()) + "?activetab=tab_publish"),
-              _();
-          }, [_, _, _]);
-        return (0, _.jsx)(_._, {
-          active: !0,
-          children: (0, _.jsx)(_._, {
-            strTitle: (0, _._)("#App_Landing_ReleaseDate_ChangesSaved"),
-            strDescription: (0, _._)("#App_Landing_Release_PublishStorePrompt"),
-            strOKButtonText: (0, _._)("#App_Landing_Release_PrepareToPublish"),
-            onOK: _,
-            strCancelButtonText: (0, _._)("#Button_OK"),
-            closeModal: _,
-          }),
         });
       }
     },
@@ -13466,8 +11629,12 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = 6e3;
+      const _ = 2e3;
       function _(_, _) {
         return `${_}|${_}`;
       }
@@ -13497,6 +11664,15 @@
         }
         return _;
       }
+      function _(_, _, _) {
+        if (null === _ || 0 === _.length) return null;
+        return (
+          _.reduce((_, _) => _ + _(_(_), _, _.nUSDPricepoint), 0) / _.length
+        );
+      }
+      function _(_, _, _) {
+        return 100 * ((_ * _) / _ - 1);
+      }
       function _(_) {
         return _ === _._ ? "None" : (0, _._)(_);
       }
@@ -13512,23 +11688,13 @@
             bNumeric: !1,
           },
           {
-            eColumn: "min",
-            strLabel: "% Difference (Min)",
-            bNumeric: !0,
-          },
-          {
-            eColumn: "max",
-            strLabel: "% Difference (Max)",
-            bNumeric: !0,
-          },
-          {
             eColumn: "minAbove",
-            strLabel: "% Difference Above USD60 (Min)",
+            strLabel: "% Difference Above USD20 (Min)",
             bNumeric: !0,
           },
           {
             eColumn: "maxAbove",
-            strLabel: "% Difference Above USD60 (Max)",
+            strLabel: "% Difference Above USD20 (Max)",
             bNumeric: !0,
           },
           {
@@ -13546,6 +11712,21 @@
             strLabel: "Pricepoints Unchanged",
             bNumeric: !0,
           },
+          {
+            eColumn: "avgDiscountExisting",
+            strLabel: "Avg USD Discount (Existing)",
+            bNumeric: !0,
+          },
+          {
+            eColumn: "avgDiscountStaged",
+            strLabel: "Avg USD Discount (Staged)",
+            bNumeric: !0,
+          },
+          {
+            eColumn: "avgDiscountChange",
+            strLabel: "Avg USD Discount Change",
+            bNumeric: !0,
+          },
         ],
         _ = {
           fontVariantNumeric: "tabular-nums",
@@ -13556,10 +11737,6 @@
             return (0, _._)(_.eCurrencyCode);
           case "region":
             return _(_.eRegionCode);
-          case "min":
-            return _.flMinPercentDiff;
-          case "max":
-            return _.flMaxPercentDiff;
           case "minAbove":
             return _.flMinPercentDiffAbove;
           case "maxAbove":
@@ -13570,6 +11747,12 @@
             return _.nPricepointsDecreasing;
           case "unchanged":
             return _.nPricepointsUnchanged;
+          case "avgDiscountExisting":
+            return _.flAvgUSDDiscountExisting;
+          case "avgDiscountStaged":
+            return _.flAvgUSDDiscountStaged;
+          case "avgDiscountChange":
+            return _.flAvgUSDDiscountChange;
         }
       }
       function _(_, _, _) {
@@ -13645,136 +11828,574 @@
         });
       }
       function _(_) {
-        const { row: _ } = _;
-        return (0, _.jsxs)(_._, {
-          columns: "subgrid",
-          gridColumn: "1 / -1",
-          alignItems: "center",
-          background: "dull-9 10%",
+        const { flPercent: _, bColored: _ } = _;
+        if (null === _)
+          return (0, _.jsx)(_, {
+            textAlign: "end",
+            children: (0, _.jsx)(_._, {
+              contrast: "note",
+              children: "—",
+            }),
+          });
+        const _ = _
+            ? _ < 0
+              ? "text-success"
+              : _ > 0
+                ? "text-error"
+                : "text-body"
+            : "text-body",
+          _ = _ > 0 ? "+" : "";
+        return (0, _.jsx)(_, {
+          textAlign: "end",
+          children: (0, _.jsxs)(_._, {
+            color: _,
+            contrast: _ ? "title" : "body",
+            style: _,
+            children: [_, _.toFixed(1), "%"],
+          }),
+        });
+      }
+      function _(_, _) {
+        if (_ === _._) return 1;
+        const _ = _?.rates[_];
+        return _ || null;
+      }
+      function _(_) {
+        const { nAmount: _, eCurrencyCode: _ } = _;
+        return null === _
+          ? (0, _.jsx)(_, {
+              textAlign: "end",
+              children: (0, _.jsx)(_._, {
+                contrast: "note",
+                children: "—",
+              }),
+            })
+          : (0, _.jsx)(_, {
+              textAlign: "end",
+              children: (0, _.jsx)(_._, {
+                style: _,
+                children: (0, _._)(_, _),
+              }),
+            });
+      }
+      function _(_) {
+        const { nDifference: _, eCurrencyCode: _ } = _;
+        if (null === _)
+          return (0, _.jsx)(_, {
+            textAlign: "end",
+            children: (0, _.jsx)(_._, {
+              contrast: "note",
+              children: "—",
+            }),
+          });
+        const _ = _ < 0 ? "text-error" : _ > 0 ? "text-success" : "text-body",
+          _ = _ > 0 ? "+" : "";
+        return (0, _.jsx)(_, {
+          textAlign: "end",
+          children: (0, _.jsxs)(_._, {
+            color: _,
+            style: _,
+            children: [_, (0, _._)(_, _)],
+          }),
+        });
+      }
+      function _(_) {
+        return new Date(1e3 * _).toISOString().slice(0, 10);
+      }
+      function _(_) {
+        const {
+            row: _,
+            bExpanded: _,
+            OnToggle: _,
+            existingFXRates: _,
+            stagedFXRates: _,
+          } = _,
+          _ = _(_, _.eCurrencyCode),
+          _ = _(_, _.eCurrencyCode);
+        return (0, _.jsxs)(_.Fragment, {
           children: [
-            (0, _.jsx)(_, {
-              children: (0, _.jsx)(_._, {
-                children: (0, _._)(_.eCurrencyCode),
+            (0, _.jsxs)(_._, {
+              columns: "subgrid",
+              gridColumn: "1 / -1",
+              alignItems: "center",
+              background: "dull-9 10%",
+              onClick: _,
+              style: {
+                cursor: "pointer",
+              },
+              children: [
+                (0, _.jsx)(_, {
+                  children: (0, _.jsxs)(_._, {
+                    whiteSpace: "nowrap",
+                    children: [
+                      (0, _.jsx)(_._, {
+                        direction: _ ? "down" : "right",
+                        marginEnd: "1",
+                      }),
+                      (0, _._)(_.eCurrencyCode),
+                    ],
+                  }),
+                }),
+                (0, _.jsx)(_, {
+                  children: (0, _.jsx)(_._, {
+                    children: _(_.eRegionCode),
+                  }),
+                }),
+                (0, _.jsx)(_, {
+                  flPercent: _.flMinPercentDiffAbove,
+                }),
+                (0, _.jsx)(_, {
+                  flPercent: _.flMaxPercentDiffAbove,
+                }),
+                (0, _.jsx)(_, {
+                  nCount: _.nPricepointsIncreasing,
+                }),
+                (0, _.jsx)(_, {
+                  nCount: _.nPricepointsDecreasing,
+                }),
+                (0, _.jsx)(_, {
+                  nCount: _.nPricepointsUnchanged,
+                }),
+                (0, _.jsx)(_, {
+                  flPercent: _.flAvgUSDDiscountExisting,
+                  bColored: !0,
+                }),
+                (0, _.jsx)(_, {
+                  flPercent: _.flAvgUSDDiscountStaged,
+                  bColored: !0,
+                }),
+                (0, _.jsx)(_, {
+                  flPercent: _.flAvgUSDDiscountChange,
+                  bColored: !1,
+                }),
+              ],
+            }),
+            _ &&
+              (0, _.jsx)(_._, {
+                gridColumn: "1 / -1",
+                paddingStart: "6",
+                paddingBottom: "2",
+                children: (0, _.jsxs)(_._, {
+                  columns: "repeat( 12, max-content )",
+                  gap: "1",
+                  children: [
+                    (0, _.jsx)(_, {
+                      textAlign: "end",
+                      children: (0, _.jsx)(_._, {
+                        contrast: "subtitle",
+                        children: "USD Pricepoint",
+                      }),
+                    }),
+                    (0, _.jsx)(_, {
+                      textAlign: "end",
+                      children: (0, _.jsx)(_._, {
+                        contrast: "subtitle",
+                        children: "Existing",
+                      }),
+                    }),
+                    (0, _.jsx)(_, {
+                      textAlign: "end",
+                      children: (0, _.jsx)(_._, {
+                        contrast: "subtitle",
+                        children: "Staged",
+                      }),
+                    }),
+                    (0, _.jsx)(_, {
+                      textAlign: "end",
+                      children: (0, _.jsx)(_._, {
+                        contrast: "subtitle",
+                        children: "Difference",
+                      }),
+                    }),
+                    (0, _.jsx)(_, {
+                      textAlign: "end",
+                      children: (0, _.jsx)(_._, {
+                        contrast: "subtitle",
+                        children: "% Difference",
+                      }),
+                    }),
+                    (0, _.jsx)(_, {
+                      textAlign: "end",
+                      children: (0, _.jsxs)(_._, {
+                        contrast: "subtitle",
+                        whiteSpace: "nowrap",
+                        children: [
+                          "Existing (USD)",
+                          _ &&
+                            (0, _.jsx)(_._, {
+                              small: !0,
+                              tooltip: `USD @ ${_(_.rt_date)}`,
+                            }),
+                        ],
+                      }),
+                    }),
+                    (0, _.jsx)(_, {
+                      textAlign: "end",
+                      children: (0, _.jsxs)(_._, {
+                        contrast: "subtitle",
+                        whiteSpace: "nowrap",
+                        children: [
+                          "Staged (USD)",
+                          _ &&
+                            (0, _.jsx)(_._, {
+                              small: !0,
+                              tooltip: `USD @ ${_(_.rt_date)}`,
+                            }),
+                        ],
+                      }),
+                    }),
+                    (0, _.jsx)(_, {
+                      textAlign: "end",
+                      children: (0, _.jsx)(_._, {
+                        contrast: "subtitle",
+                        children: "Difference (USD)",
+                      }),
+                    }),
+                    (0, _.jsx)(_, {
+                      textAlign: "end",
+                      children: (0, _.jsx)(_._, {
+                        contrast: "subtitle",
+                        children: "% Difference (USD)",
+                      }),
+                    }),
+                    (0, _.jsx)(_, {
+                      textAlign: "end",
+                      children: (0, _.jsx)(_._, {
+                        contrast: "subtitle",
+                        children: "USD Discount (Existing)",
+                      }),
+                    }),
+                    (0, _.jsx)(_, {
+                      textAlign: "end",
+                      children: (0, _.jsx)(_._, {
+                        contrast: "subtitle",
+                        children: "USD Discount (Staged)",
+                      }),
+                    }),
+                    (0, _.jsx)(_, {
+                      textAlign: "end",
+                      children: (0, _.jsx)(_._, {
+                        contrast: "subtitle",
+                        children: "USD Discount Change",
+                      }),
+                    }),
+                    _.rgPricepointDiffs.map((_) => {
+                      const _ =
+                          null === _ ? null : Math.round(_.nExistingAmount * _),
+                        _ = null === _ ? null : Math.round(_.nStagedAmount * _),
+                        _ = null === _ || null === _ ? null : _ - _,
+                        _ = null !== _ && _ ? (_ / _) * 100 : null,
+                        _ =
+                          null === _
+                            ? null
+                            : _(_.nExistingAmount, _, _.nUSDPricepoint),
+                        _ =
+                          null === _
+                            ? null
+                            : _(_.nStagedAmount, _, _.nUSDPricepoint);
+                      return (0, _.jsxs)(
+                        _._,
+                        {
+                          columns: "subgrid",
+                          gridColumn: "1 / -1",
+                          alignItems: "center",
+                          background: "dull-9 10%",
+                          children: [
+                            (0, _.jsx)(_, {
+                              nAmount: _.nUSDPricepoint,
+                              eCurrencyCode: _._,
+                            }),
+                            (0, _.jsx)(_, {
+                              nAmount: _.nExistingAmount,
+                              eCurrencyCode: _.eCurrencyCode,
+                            }),
+                            (0, _.jsx)(_, {
+                              nAmount: _.nStagedAmount,
+                              eCurrencyCode: _.eCurrencyCode,
+                            }),
+                            (0, _.jsx)(_, {
+                              nDifference: _.nStagedAmount - _.nExistingAmount,
+                              eCurrencyCode: _.eCurrencyCode,
+                            }),
+                            (0, _.jsx)(_, {
+                              flPercent: _.flPercentDiff,
+                            }),
+                            (0, _.jsx)(_, {
+                              nAmount: _,
+                              eCurrencyCode: _._,
+                            }),
+                            (0, _.jsx)(_, {
+                              nAmount: _,
+                              eCurrencyCode: _._,
+                            }),
+                            (0, _.jsx)(_, {
+                              nDifference: _,
+                              eCurrencyCode: _._,
+                            }),
+                            (0, _.jsx)(_, {
+                              flPercent: _,
+                            }),
+                            (0, _.jsx)(_, {
+                              flPercent: _,
+                              bColored: !1,
+                            }),
+                            (0, _.jsx)(_, {
+                              flPercent: _,
+                              bColored: !1,
+                            }),
+                            (0, _.jsx)(_, {
+                              flPercent:
+                                null === _ || null === _ ? null : _ - _,
+                              bColored: !1,
+                            }),
+                          ],
+                        },
+                        _.nUSDPricepoint,
+                      );
+                    }),
+                  ],
+                }),
               }),
+          ],
+        });
+      }
+      function _(_) {
+        const { strLabel: _, rgRows: _ } = _;
+        let _ = 0,
+          _ = 0,
+          _ = 0;
+        for (const _ of _)
+          0 !== _.rgPricepointDiffs.length &&
+            (_.nPricepointsIncreasing > _.nPricepointsDecreasing &&
+            _.nPricepointsIncreasing > _.nPricepointsUnchanged
+              ? _++
+              : _.nPricepointsDecreasing > _.nPricepointsIncreasing &&
+                  _.nPricepointsDecreasing > _.nPricepointsUnchanged
+                ? _++
+                : _++);
+        return (0, _.jsxs)(_._, {
+          marginTop: "2",
+          children: [
+            (0, _.jsxs)(_._, {
+              _: "div",
+              children: [_, " increasing: ", _],
             }),
-            (0, _.jsx)(_, {
-              children: (0, _.jsx)(_._, {
-                children: _(_.eRegionCode),
-              }),
+            (0, _.jsxs)(_._, {
+              _: "div",
+              children: [_, " unchanged: ", _],
             }),
-            (0, _.jsx)(_, {
-              flPercent: _.flMinPercentDiff,
-            }),
-            (0, _.jsx)(_, {
-              flPercent: _.flMaxPercentDiff,
-            }),
-            (0, _.jsx)(_, {
-              flPercent: _.flMinPercentDiffAbove,
-            }),
-            (0, _.jsx)(_, {
-              flPercent: _.flMaxPercentDiffAbove,
-            }),
-            (0, _.jsx)(_, {
-              nCount: _.nPricepointsIncreasing,
-            }),
-            (0, _.jsx)(_, {
-              nCount: _.nPricepointsDecreasing,
-            }),
-            (0, _.jsx)(_, {
-              nCount: _.nPricepointsUnchanged,
+            (0, _.jsxs)(_._, {
+              _: "div",
+              children: [_, " decreasing: ", _],
             }),
           ],
         });
       }
       function _(_) {
-        const _ = (0, _.useMemo)(() => {
-            const _ =
-                (0, _._)("existing_price_points", "application_config") ?? [],
-              _ = (0, _._)("staged_price_points", "application_config") ?? [];
-            return (function (_, _) {
-              const _ = [],
-                _ = new Set([..._.keys(), ..._.keys()]);
-              for (const _ of _) {
-                const _ = _.get(_),
-                  _ = _.get(_),
-                  { eCurrencyCode: _, eRegionCode: _ } = _ ?? _,
-                  _ = new Set([
-                    ...(_?.mapAmounts.keys() ?? []),
-                    ...(_?.mapAmounts.keys() ?? []),
-                  ]),
-                  _ = [];
-                let _ = 0;
-                for (const _ of [..._].sort((_, _) => _ - _)) {
-                  const _ = _?.mapAmounts.get(_),
-                    _ = _?.mapAmounts.get(_);
-                  void 0 !== _ && void 0 !== _ && 0 !== _
-                    ? _.push({
-                        nUSDPricepoint: _,
-                        nExistingAmount: _,
-                        nStagedAmount: _,
-                        flPercentDiff: ((_ - _) / _) * 100,
-                      })
-                    : _++;
-                }
-                const _ = _.map((_) => _.flPercentDiff),
-                  _ = _.filter((_) => _.nUSDPricepoint > _).map(
-                    (_) => _.flPercentDiff,
-                  );
-                __webpack_require__.push({
-                  eCurrencyCode: _,
-                  eRegionCode: _,
-                  rgPricepointDiffs: _,
-                  nSkippedPricepoints: _,
-                  flMinPercentDiff: _.length ? Math.min(..._) : null,
-                  flMaxPercentDiff: _.length ? Math.max(..._) : null,
-                  flMinPercentDiffAbove: _.length ? Math.min(..._) : null,
-                  flMaxPercentDiffAbove: _.length ? Math.max(..._) : null,
-                  nPricepointsIncreasing: _.filter(
-                    (_) => _.nStagedAmount > _.nExistingAmount,
-                  ).length,
-                  nPricepointsDecreasing: _.filter(
-                    (_) => _.nStagedAmount < _.nExistingAmount,
-                  ).length,
-                  nPricepointsUnchanged: _.filter(
-                    (_) => _.nStagedAmount === _.nExistingAmount,
-                  ).length,
-                });
-              }
-              return (
-                __webpack_require__.sort((_, _) => {
-                  const _ = _(_.eRegionCode),
-                    _ = _(_.eRegionCode);
-                  return (_.eRegionCode === _._) != (_.eRegionCode === _._)
-                    ? _.eRegionCode === _._
-                      ? -1
-                      : 1
-                    : __webpack_require__.localeCompare(_) ||
-                        (0, _._)(_.eCurrencyCode).localeCompare(
-                          (0, _._)(_.eCurrencyCode),
-                        );
-                }),
-                _
-              );
-            })(_(_, _._._), _(_)).filter(
-              (_) => !(_.eCurrencyCode === _._ && _.eRegionCode === _._),
-            );
-          }, []),
+        const {
+            strTitle: _,
+            rgRows: _,
+            existingFXRates: _,
+            stagedFXRates: _,
+          } = _,
           [_, _] = (0, _.useState)("currency"),
           [_, _] = (0, _.useState)(!0),
           _ = (_) => {
             _(_ !== _ || !_), _(_);
           },
+          [_, _] = (0, _.useState)(null),
+          [_, _] = (0, _.useState)(!1),
           _ = _(
-            _.filter((_) => _.eRegionCode === _._),
+            __webpack_require__.filter((_) => _.eRegionCode === _._),
             _,
             _,
           ),
           _ = _(
-            _.filter((_) => _.eRegionCode !== _._),
+            __webpack_require__.filter((_) => _.eRegionCode !== _._),
             _,
             _,
           ),
-          _ = _.reduce((_, _) => _ + _.nSkippedPricepoints, 0);
+          _ = __webpack_require__.reduce(
+            (_, _) => _ + _.nSkippedPricepoints,
+            0,
+          );
+        return (0, _.jsxs)(_._, {
+          marginTop: "4",
+          children: [
+            (0, _.jsxs)(_._, {
+              align: "center",
+              gap: "4",
+              children: [
+                (0, _.jsx)(_._, {
+                  level: "3",
+                  children: _,
+                }),
+                (0, _.jsx)(_._, {
+                  size: "1",
+                  variant: "outline",
+                  onClick: () => _(!_),
+                  children: _ ? "Hide details" : "Show details",
+                }),
+              ],
+            }),
+            (0, _.jsx)(_, {
+              strLabel: "Currencies",
+              rgRows: _,
+            }),
+            (0, _.jsx)(_, {
+              strLabel: "Regions",
+              rgRows: _,
+            }),
+            _ &&
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsxs)(_._, {
+                    columns: `repeat( ${_.length}, max-content )`,
+                    gap: "1",
+                    alignContent: "center",
+                    marginTop: "3",
+                    children: [
+                      _.map((_) =>
+                        (0, _.jsx)(
+                          _,
+                          {
+                            column: _,
+                            eSortColumn: _,
+                            bAscending: _,
+                            OnClick: _,
+                          },
+                          _.eColumn,
+                        ),
+                      ),
+                      [..._, ..._].map((_) => {
+                        const _ = _(_.eCurrencyCode, _.eRegionCode);
+                        return (0, _.jsx)(
+                          _,
+                          {
+                            row: _,
+                            bExpanded: _ === _,
+                            OnToggle: () => _(_ === _ ? null : _),
+                            existingFXRates: _,
+                            stagedFXRates: _,
+                          },
+                          _,
+                        );
+                      }),
+                    ],
+                  }),
+                  (0, _.jsxs)(_._, {
+                    _: "div",
+                    contrast: "note",
+                    marginTop: "2",
+                    children: [
+                      _,
+                      " currency / pricepoint pairs were priced on only one side and are not included above.",
+                    ],
+                  }),
+                ],
+              }),
+          ],
+        });
+      }
+      const _ = {
+        [_._._]: "PPP",
+        [_._._]: "FX Rate",
+        [_._._]: "Valve-Generated",
+      };
+      function _(_) {
+        const _ = (0, _.useMemo)(
+            () => (0, _._)("staged_fx_rates", "application_config") ?? null,
+            [],
+          ),
+          _ = (0, _.useMemo)(() => {
+            const _ =
+              (0, _._)("existing_price_points", "application_config") ?? [];
+            return (
+              (0, _._)("pricing_methods", "application_config") ?? []
+            ).map((_) => {
+              const _ = _.existing_fx_rates ?? null,
+                _ = (function (_, _, _, _) {
+                  const _ = [],
+                    _ = new Set([..._.keys(), ..._.keys()]);
+                  for (const _ of _) {
+                    const _ = _.get(_),
+                      _ = _.get(_),
+                      { eCurrencyCode: _, eRegionCode: _ } = _ ?? _,
+                      _ = new Set([
+                        ...(_?.mapAmounts.keys() ?? []),
+                        ...(_?.mapAmounts.keys() ?? []),
+                      ]),
+                      _ = [];
+                    let _ = 0;
+                    for (const _ of [..._].sort((_, _) => _ - _)) {
+                      const _ = _?.mapAmounts.get(_),
+                        _ = _?.mapAmounts.get(_);
+                      void 0 !== _ && void 0 !== _ && 0 !== _
+                        ? _.push({
+                            nUSDPricepoint: _,
+                            nExistingAmount: _,
+                            nStagedAmount: _,
+                            flPercentDiff: ((_ - _) / _) * 100,
+                          })
+                        : _++;
+                    }
+                    const _ = _.filter((_) => _.nUSDPricepoint > _).map(
+                        (_) => _.flPercentDiff,
+                      ),
+                      _ = _(_, (_) => _.nExistingAmount, _(_, _)),
+                      _ = _(_, (_) => _.nStagedAmount, _(_, _));
+                    _.push({
+                      eCurrencyCode: _,
+                      eRegionCode: _,
+                      rgPricepointDiffs: _,
+                      nSkippedPricepoints: _,
+                      flMinPercentDiffAbove: _.length ? Math.min(..._) : null,
+                      flMaxPercentDiffAbove: _.length ? Math.max(..._) : null,
+                      nPricepointsIncreasing: _.filter(
+                        (_) => _.nStagedAmount > _.nExistingAmount,
+                      ).length,
+                      nPricepointsDecreasing: _.filter(
+                        (_) => _.nStagedAmount < _.nExistingAmount,
+                      ).length,
+                      nPricepointsUnchanged: _.filter(
+                        (_) => _.nStagedAmount === _.nExistingAmount,
+                      ).length,
+                      flAvgUSDDiscountExisting: _,
+                      flAvgUSDDiscountStaged: _,
+                      flAvgUSDDiscountChange:
+                        null === _ || null === _ ? null : _ - _,
+                    });
+                  }
+                  return (
+                    _.sort((_, _) => {
+                      const _ = _(_.eRegionCode),
+                        _ = _(_.eRegionCode);
+                      return (_.eRegionCode === _._) != (_.eRegionCode === _._)
+                        ? _.eRegionCode === _._
+                          ? -1
+                          : 1
+                        : __webpack_require__.localeCompare(_) ||
+                            (0, _._)(_.eCurrencyCode).localeCompare(
+                              (0, _._)(_.eCurrencyCode),
+                            );
+                    }),
+                    _
+                  );
+                })(
+                  _(_, _.convert_method),
+                  _(_.staged_price_points ?? []),
+                  _,
+                  _,
+                ).filter(
+                  (_) => !(_.eCurrencyCode === _._ && _.eRegionCode === _._),
+                );
+              return {
+                eConvertMethod: _.convert_method,
+                rgRows: _,
+                existingFXRates: _,
+              };
+            });
+          }, [_]);
         return (0, _.jsxs)("div", {
           className: _().AdminPageCtn,
           children: [
@@ -13785,55 +12406,20 @@
             (0, _.jsx)(_._, {
               _: "div",
               children:
-                "Staged PPP package pricing against the live PPP set, per USD pricepoint. Positive means the staged amount is higher.",
+                "Staged package pricing against the live set, per USD pricepoint. Positive means the staged amount is higher.",
             }),
-            (0, _.jsxs)(_._, {
-              columns: `repeat( ${_.length}, max-content )`,
-              gap: "1",
-              alignContent: "center",
-              marginTop: "3",
-              children: [
-                _.map((_) =>
-                  (0, _.jsx)(
-                    _,
-                    {
-                      column: _,
-                      eSortColumn: _,
-                      bAscending: _,
-                      OnClick: _,
-                    },
-                    _.eColumn,
-                  ),
-                ),
-                _.map((_) =>
-                  (0, _.jsx)(
-                    _,
-                    {
-                      row: _,
-                    },
-                    _(_.eCurrencyCode, _.eRegionCode),
-                  ),
-                ),
-                _.map((_) =>
-                  (0, _.jsx)(
-                    _,
-                    {
-                      row: _,
-                    },
-                    _(_.eCurrencyCode, _.eRegionCode),
-                  ),
-                ),
-              ],
-            }),
-            (0, _.jsxs)(_._, {
-              _: "div",
-              contrast: "note",
-              marginTop: "2",
-              children: [
+            __webpack_require__.map((_) =>
+              (0, _.jsx)(
                 _,
-                " currency / pricepoint pairs were priced on only one side and are not included above.",
-              ],
-            }),
+                {
+                  strTitle: _[_.eConvertMethod] ?? "Unknown",
+                  rgRows: _.rgRows,
+                  existingFXRates: _.existingFXRates,
+                  stagedFXRates: _,
+                },
+                _.eConvertMethod,
+              ),
+            ),
           ],
         });
       }
@@ -14883,7 +13469,6 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
@@ -17657,7 +16242,6 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = "usePartnerActiveCreatorClans";
       function _(_, _) {
@@ -18550,8 +17134,6 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = Object.assign(
@@ -20510,42 +19092,10 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
-      });
-      let _ = {
-        GameEdit: (_, _) => `/admin/game/${_}/${_}`,
-        PackageEdit: (_, _) => `/admin/store/${_}/${_}`,
-        BundleEdit: (_, _) => `/bundles/${_}/${_}`,
-        GameEditByAppID: (_) => `/admin/game/editbyappid/${_}`,
-        ReviewPriceProposals: () => "/admin/reviewpricesubmissions/",
-        PackagePricingComparison: () => "/admin/packagepricingcomparison/",
-        PackageLanding: (_) => `/store/packagelanding/${_}`,
-        FrontPageEdit: (_) => `/admin/store/pageclusteredit/frontpage/${_}`,
-        FrontPageSteamChinaEdit: (_) =>
-          `/admin/store/pageclusteredit/frontpage_china/${_}`,
-        ContentHubEditor: (_, _) =>
-          `/admin/store/pageclusteredit/content_hub_${_}/${_}`,
-        StoreAdminCreatorHome: () => "/admin/creatorhome",
-      };
-      const _ = ["edit", "diff", "revert", "prepare", "publish"],
-        _ = [
-          "package",
-          "packagesave",
-          "packagediff",
-          "packagerevert",
-          "packageprepare",
-          "packagepublish",
-        ],
-        _ = ["view", "preparestore", "revertstore", "savestore", "publish"];
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -20558,234 +19108,364 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const {
-            fnSetItemID: _,
-            strLabel: _,
-            itemType: _,
-            fnFilterID: _,
-            className: _,
-            tooltip: _,
-            autoFocus: _,
-            bIncludeRetired: _,
-            bShowDLCToggle: _,
-            bOnlyDLC: _,
-            bRunQueryOnLoad: _,
-            rgParentAppIDs: _,
-          } = _,
-          [_, _] = _.useState(""),
-          [_, _] = _.useState(!1),
-          [_, _] = _.useState(!1),
-          [_] = _.useState(new _._()),
-          [_, _] = _.useState(new Array()),
-          [_, _] = _.useState(new Array()),
-          [_, _] = _.useState(new Array()),
-          _ = _.createRef(),
-          _ = _.createRef();
-        const _ = (0, _.useCallback)(
-            async (_, _) => {
-              _(!0);
-              let _ = {
-                  json: 1,
-                  term: _,
-                  bexcluderetired: !_,
-                },
-                _ = `${_._.PARTNER_BASE_URL}appsearch/suggestapps`;
-              switch (_) {
-                case _._._:
-                  _ = `${_._.PARTNER_BASE_URL}admin/store/suggestpackage`;
-                  break;
-                case _._._:
-                  _ = `${_._.PARTNER_BASE_URL}bundles/suggestbundle`;
-                  break;
-                default:
-                  _ ? (_.includedlc = !0) : !1 === _ && (_.includedlc = !1),
-                    _ &&
-                      ((_.bfilterappids = !0),
-                      (_.rgParentAppIds = JSON.stringify(_)));
-              }
-              const _ = await _().get(_, {
-                params: _,
-                withCredentials: !0,
-              });
-              200 == _?.status && _.data?.success == _._
-                ? _
-                  ? (_(_.data.matches?.filter((_) => _(_._)) || []),
-                    _(
-                      _.data.package_matches?.filter((_) => _(_.packageid)) ||
-                        [],
-                    ),
-                    _(
-                      _.data.bundle_matches?.filter((_) => _(_.bundleid)) || [],
-                    ))
-                  : (_(_.data.matches || []),
-                    _(_.data.package_matches || []),
-                    _(_.data.bundle_matches || []))
-                : (_([]), _([]), _([])),
-                _(!1);
-            },
-            [_, _, _, _, _],
-          ),
+        return _(_, !1);
+      }
+      function _(_, _) {
+        const { onSelectionChange: _, selectedValue: _, ..._ } = _,
+          [_, _] = (0, _.useState)(!1),
           _ = (0, _.useCallback)(
             (_) => {
-              _(_), _(_.current?.value, _);
+              __webpack_require__(_), _ || _(!1);
             },
             [_, _],
           ),
           _ = (0, _.useCallback)(
             (_) => {
-              const _ = _?.target?.value?.toLocaleLowerCase() ?? "";
-              _(_);
-              const _ = _.current?.checked;
-              _.Schedule(1e3, () => _(_, _));
+              _(_ ? [] : null), _?.stopPropagation(), _?.preventDefault();
+            },
+            [_, _],
+          ),
+          _ = (0, _.useCallback)(
+            (_) => {
+              if (_) {
+                const _ = _,
+                  _ = _.indexOf(_);
+                if (-1 !== _) return _(_.slice(0, _).concat(_.slice(_ + 1)));
+                _(_.concat(_));
+              } else _(_);
             },
             [_, _, _],
           );
-        let _;
-        switch (
-          (_.useEffect(() => {
-            _ && _(_);
-          }, []),
-          _)
-        ) {
-          case _._._:
-            _ = (0, _._)("#StoreAdmin_Search_Placeholder_package");
-            break;
-          case _._._:
-            _ = (0, _._)("#StoreAdmin_Search_Placeholder_bundle");
-            break;
-          default:
-            _ = (0, _._)("#StoreAdmin_Search_Placeholder");
-        }
-        const _ = _ && !_ && _ == _._._;
-        return (0, _.jsxs)("div", {
-          className: _,
-          children: [
-            (0, _.jsxs)("div", {
-              className: _.AppSearchInputContainer,
-              children: [
-                (0, _.jsx)(_._, {
-                  type: "text",
-                  ref: _,
-                  className: _.SearchInput,
-                  label: _,
-                  tooltip: _,
-                  placeholder: _,
-                  onChange: _,
-                  value: _,
-                  bAlwaysShowClearAction: _.length > 0,
-                  focusOnMount: _,
-                }),
-                _ &&
-                  (0, _.jsx)(_._, {
-                    ref: _,
-                    checked: _,
-                    onChange: _,
-                    className: _.AppSearchDLCCheckbox,
-                    label: (0, _._)("#StoreAdmin_Search_IncludeDLC"),
-                  }),
-              ],
-            }),
-            (0, _.jsxs)("div", {
-              className: _.Results,
-              children: [
-                _ &&
-                  (0, _.jsx)("div", {
-                    className: _.LoadingContainer,
-                    children: (0, _.jsx)(_._, {
-                      size: "small",
-                    }),
-                  }),
-                Boolean(_?.length > 0) &&
-                  _.map((_) =>
-                    (0, _.jsx)(
-                      _,
-                      {
-                        name: _.match,
-                        _: _._,
-                        is_visible: !0,
-                        type: _._._,
-                        fnSetItemID: () => {
-                          _([]), _(_._, _.itemid);
-                        },
-                      },
-                      _._,
-                    ),
-                  ),
-                Boolean(_?.length > 0) &&
-                  _.map((_) =>
-                    (0, _.jsx)(
-                      _,
-                      {
-                        name: _.name,
-                        _: _.packageid,
-                        type: _._._,
-                        is_visible: _.is_visible,
-                        fnSetItemID: () => {
-                          _([]), _(_.packageid);
-                        },
-                      },
-                      _.packageid,
-                    ),
-                  ),
-                Boolean(_?.length > 0) &&
-                  _.map((_) =>
-                    (0, _.jsx)(
-                      _,
-                      {
-                        name: _.name,
-                        _: _.bundleid,
-                        type: _._._,
-                        is_visible: _.is_visible,
-                        fnSetItemID: () => {
-                          _([]), _(_.bundleid);
-                        },
-                      },
-                      _.bundleid,
-                    ),
-                  ),
-              ],
-            }),
-          ],
-        });
+        return {
+          onSelectionChange: _,
+          onItemSelectionChange: _,
+          onClear: _,
+          bOpen: _,
+          setOpen: _,
+          multiselect: _,
+          selectedValue: _,
+          ..._,
+        };
       }
-      function _(_) {
-        const { name: _, _: _, type: _, is_visible: _, fnSetItemID: _ } = _,
-          [_] = (0, _._)(_, _, {
-            include_assets: !0,
-          });
-        let _ = "#DailyDeals_HeaderArtMissing";
-        switch (_) {
-          case _._._:
-            _ = "#DailyDeals_PackageHeaderArtMissing";
-            break;
-          case _._._:
-            _ = "#DailyDeals_BundleHeaderArtMissing";
-        }
-        return (0, _.jsxs)("div", {
-          className: _.ResultRow,
-          onClick: () => _(),
-          children: [
-            (0, _.jsx)("div", {
-              className: (0, _._)(_.AvatarImageCtn, "AvatarImageCtn"),
-              children: (0, _.jsx)("img", {
-                src: _?.GetAssets()?.GetHeaderURL(),
-                className: _.AvatarImage,
-                alt: (0, _._)(_),
-              }),
+      const _ = {
+        Root: function (_) {
+          const {
+              children: _,
+              state: _,
+              placement: _ = "bottom-end",
+              popoverWidth: _ = "dropdown",
+              popoverMaxHeight: _,
+              popoverPresentation: _,
+              popoverLabel: _,
+              ..._
+            } = _,
+            [_, _] = (0, _.useState)(null),
+            [_, _] = (0, _.useState)(null),
+            _ = (0, _.useMemo)(
+              () =>
+                _.rgOptions.findIndex((_) =>
+                  _.multiselect
+                    ? _.selectedValue.includes(_)
+                    : _ === _.selectedValue,
+                ),
+              [_.selectedValue, _.rgOptions, _.multiselect],
+            ),
+            _ = (0, _.useRef)(null),
+            _ = {
+              ..._,
+              ..._,
+              focusedValue: _,
+              onFocusChange: _,
+              refPopover: _,
+              popoverLabel: _,
+              setOpen: (_) => {
+                _ && _(_.multiselect ? _.selectedValue[0] : _.selectedValue),
+                  __webpack_require__.setOpen(_);
+              },
+              focusedIndex: _,
+              onFocusedIndexChange: _,
+            },
+            _ = (0, _._)({
+              open: _.bOpen,
+              onOpenChange: _.setOpen,
+              width: _,
+              maxHeight: _,
+              placement: _,
+              presentation: _,
+              selectedIndex: _,
+              setSelectedIndex: (_) =>
+                __webpack_require__.onItemSelectionChange(_.rgOptions[_]),
+              activeIndex: _,
+              setActiveIndex: _,
+              gutter: "4",
+              interactions: {
+                click: !0,
+                typeahead: !0,
+              },
+              role: "select",
+              scroll: !0,
+            });
+          return (0, _.jsx)(_.Provider, {
+            value: _,
+            children: (0, _.jsx)(_._.Root, {
+              state: _,
+              children: _,
             }),
-            (0, _.jsxs)("div", {
-              className: _.GameName,
-              children: [
-                Boolean(!_) &&
-                  (0, _.jsxs)("span", {
-                    children: [(0, _._)("#Sale_FeaturingHidden"), " "],
-                  }),
+          });
+        },
+        Option: function (_) {
+          const { value: _, children: _, disabled: _, ..._ } = _,
+            {
+              onItemSelectionChange: _,
+              multiselect: _,
+              selectedValue: _,
+              maxSelected: _,
+            } = _("<SelectTrigger>"),
+            _ = "string" == typeof _ ? _ : void 0;
+          let _ = !1,
+            _ = !1;
+          _
+            ? ((_ = Array.isArray(_) && _.includes(_)),
+              (_ = !!_ && Array.isArray(_) && _.length >= _))
+            : (_ = _ === _);
+          const _ = _ || (_ && !_);
+          return (0, _.jsxs)(_._.Item, {
+            label: _,
+            onSelect: () => _(_),
+            selected: _,
+            disabled: _,
+            ..._,
+            children: [
+              _ &&
+                (0, _.jsxs)(_._, {
+                  gap: "2",
+                  align: "center",
+                  children: [
+                    (0, _.jsx)(_._, {
+                      checked: _,
+                      variant: "dark",
+                    }),
+                    _,
+                  ],
+                }),
+              !_ && _,
+            ],
+          });
+        },
+        Options: function (_) {
+          const { refPopover: _, popoverLabel: _ } = _("<Select.Options>");
+          return (0, _.jsx)(_._.Positioner, {
+            ref: _,
+            label: _,
+            children: _.children,
+          });
+        },
+        Trigger: function (_) {
+          const { children: _, render: _ } = _,
+            {
+              bOpen: _,
+              setOpen: _,
+              selectedValue: _,
+              variant: _,
+              size: _,
+              radius: _,
+              status: _,
+              rgOptions: _,
+              multiselect: _,
+              onClear: _,
+              focusedValue: _,
+              onFocusChange: _,
+              onSelectionChange: _,
+              clearable: _,
+              focusedIndex: _,
+              onItemSelectionChange: _,
+              onFocusedIndexChange: _,
+              refPopover: _,
+              popoverLabel: _,
+              placeholder: _,
+              maxSelected: _,
+              ..._
+            } = _("<SelectTrigger>"),
+            _ = {
+              tabIndex: 0,
+              role: "combobox",
+              onClick: () => _(!_),
+              children: _,
+            },
+            _ = _ ? Array.isArray(_) && _.length > 0 : !!_,
+            _ = _ && _,
+            _ = _
+              ? (0, _.jsx)(_._, {
+                  onClick: _,
+                  cursor: "pointer",
+                  hitSlop: !0,
+                })
+              : (0, _.jsx)(_._, {}),
+            _ = _
+              ? {
+                  onSecondaryButton: _,
+                  actionDescriptionMap: {
+                    [_._.SECONDARY]: _._.Localize("#Clear"),
+                  },
+                }
+              : void 0,
+            _ = (0, _._)("Select", _),
+            _ = (0, _.jsx)(_._, {
+              afterContent: _,
+              variant: _,
+              size: _,
+              radius: _,
+              status: _,
+              hasValue: _,
+              tabIndex: 0,
+              cursor: "pointer",
+              navProps: _,
+              ..._,
+            }),
+            _ = (0, _._)(_, _, _, void 0);
+          return (0, _.jsx)(_._.Anchor, {
+            children: _,
+          });
+        },
+        Value: function (_) {
+          return (0, _.jsx)(_._, {
+            weight: "medium",
+            truncate: !0,
+            contrast: "title",
+            children: _.children,
+          });
+        },
+        Placeholder: function (_) {
+          return (0, _.jsx)(_._, {
+            contrast: "description",
+            truncate: !0,
+            children: _.children,
+          });
+        },
+      };
+      function _(_) {
+        return "string" == typeof _
+          ? _
+          : "number" == typeof _
+            ? _.toString()
+            : (console.error(
+                "Could not use default option labeler on Select option value. Custom labeler requried",
                 _,
-                _ == _._._ ? ` (${_})` : "",
+              ),
+              "");
+      }
+      const _ = Object.assign(function (_) {
+        const {
+            selectedValue: _,
+            onSelectionChange: _,
+            options: _,
+            placeholder: _,
+            getOptionLabel: _ = _,
+            ..._
+          } = _,
+          _ = _({
+            onSelectionChange: _,
+            selectedValue: _,
+            rgOptions: _,
+            placeholder: _,
+          }),
+          _ = null != _,
+          _ = _ ? _(_) : "";
+        return (0, _.jsxs)(_.Root, {
+          state: _,
+          ..._,
+          children: [
+            (0, _.jsxs)(_.Trigger, {
+              children: [
+                _ &&
+                  (0, _.jsx)(_.Value, {
+                    children: _,
+                  }),
+                !_ &&
+                  (0, _.jsx)(_.Placeholder, {
+                    children: _,
+                  }),
               ],
+            }),
+            (0, _.jsx)(_.Options, {
+              children: _.rgOptions.map((_, _) =>
+                (0, _.jsx)(
+                  _.Option,
+                  {
+                    value: _,
+                    children: _(_),
+                  },
+                  _,
+                ),
+              ),
             }),
           ],
         });
+      }, _);
+      const _ = _;
+      const _ = Object.assign(function (_) {
+          const {
+              selectedValue: _,
+              onSelectionChange: _,
+              options: _,
+              placeholder: _,
+              getOptionLabel: _ = _,
+              maxSelected: _,
+              ..._
+            } = _,
+            _ = (function (_) {
+              return _(_, !0);
+            })({
+              onSelectionChange: _,
+              selectedValue: _,
+              rgOptions: _,
+              placeholder: _,
+              maxSelected: _,
+            }),
+            _ = Array.isArray(_) && _.length > 0;
+          let _ = "";
+          if (_) {
+            const _ = _.map((_) => _(_));
+            _ =
+              "ListFormat" in Intl
+                ? new Intl.ListFormat((0, _._)().strISOCode).format(_)
+                : _.join(", ");
+          }
+          return (0, _.jsxs)(_.Root, {
+            state: _,
+            ..._,
+            children: [
+              (0, _.jsxs)(_.Trigger, {
+                children: [
+                  _ &&
+                    (0, _.jsx)(_.Value, {
+                      children: _,
+                    }),
+                  !_ &&
+                    (0, _.jsx)(_.Placeholder, {
+                      children: _,
+                    }),
+                ],
+              }),
+              (0, _.jsx)(_.Options, {
+                children: _.rgOptions.map((_, _) =>
+                  (0, _.jsx)(
+                    _.Option,
+                    {
+                      value: _,
+                      children: _(_),
+                    },
+                    _,
+                  ),
+                ),
+              }),
+            ],
+          });
+        }, _),
+        _ = (0, _.createContext)(null);
+      function _(_) {
+        const _ = (0, _.useContext)(_);
+        return _ || console.error(`${_} must be used within a <Select>!`), _;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -21290,111 +19970,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid");
-      function _(_) {
-        if (_) {
-          if ("appid" in _) return "app";
-          if ("bundleid" in _) return "bundle";
-          if ("packageid" in _) return "sub";
-        }
-      }
-      function _(_) {
-        const {
-            _: _,
-            hoverClassName: _,
-            fnGetIDOverride: _,
-            fnHoverState: _,
-            disableScreenshots: _,
-            children: _,
-          } = _,
-          _ = _.useRef(null),
-          _ = _.useCallback(
-            (_) => {
-              const _ = _(_);
-              _ &&
-                (_ && _(!0),
-                window.GameHover &&
-                  (_.current &&
-                    _ &&
-                    (_.current.dataset.hoverDisableScreenshots = "true"),
-                  window.GameHover(_ ? _() : _.current, _, "global_hover", {
-                    type: _,
-                    _: (0, _._)(_)._,
-                    _: 1,
-                  })));
-            },
-            [_, _, _, _],
-          ),
-          _ = _.useCallback(
-            (_) => {
-              _(_) &&
-                (_ && _.relatedTarget && _(!1),
-                window.HideGameHover &&
-                  window.HideGameHover(_ ? _() : _.current, _, "global_hover"));
-            },
-            [_, _, _],
-          );
-        return (0, _.jsx)("div", {
-          ref: _,
-          className: _,
-          onMouseEnter: _,
-          onMouseLeave: _,
-          onFocus: _,
-          onBlur: _,
-          children: _,
-        });
-      }
-      function _(_) {
-        const {
-            _: _,
-            strExtraParams: _,
-            fnOnClickOverride: _,
-            strOverrideURL: _,
-          } = _,
-          _ = (0, _._)(),
-          _ = (0, _._)(),
-          _ = (0, _._)(
-            _ ||
-              (_ && "creatorid" in _
-                ? (0, _._)(
-                    `${_._.STORE_BASE_URL}curator/${((0, _._))(_)._}${_ ? `?${_}` : ""}`,
-                    _,
-                    _,
-                  )
-                : (0, _._)(
-                    `${_._.STORE_BASE_URL}${_(_)}/${((0, _._))(_)._}${_ ? `?${_}` : ""}`,
-                    _,
-                    _,
-                  )),
-          );
-        return (0, _.jsx)(_, {
-          ..._,
-          children: (0, _.jsx)(_._, {
-            className: _.className,
-            href: _ ? void 0 : _,
-            target: _._.IN_CLIENT || _ ? void 0 : "_blank",
-            rel: "noopener noreferrer",
-            onClick: _,
-            children: _.children,
-          }),
-        });
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -21535,524 +20110,31 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid");
-      function _(_, _) {
-        const _ = (0, _.LgB)(_);
-        return _ ? _[_] : "";
-      }
-      function _(_, _, _) {
-        const _ = (0, _.LgB)(_);
-        return _[_] != _ && ((_[_] = _), !0);
-      }
-      function _(_, _) {
-        const _ = (0, _.LgB)(_);
-        return Boolean(_?.[_]);
-      }
-      function _(_) {
-        if (!_) return 0;
-        let _ = 0;
-        for (let _ = _.Bhc; _ < _.bP9; ++_) {
-          _[(0, _.LgB)(_)] && (_ += 1);
-        }
-        return _;
-      }
-      function _(_) {
-        const _ = new Array();
-        for (let _ = _.Bhc; _ < _.bP9; ++_) {
-          const _ = (0, _.LgB)(_);
-          _[_] && _.push([_, _[_]]);
-        }
-        return _;
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ =
-          (__webpack_require__("chunkid"),
-          __webpack_require__("chunkid"),
-          __webpack_require__("chunkid")),
         _ = __webpack_require__("chunkid");
-      const _ = new WeakSet();
-      function _(_ = _._) {
-        if ("undefined" == typeof window || "undefined" == typeof document)
-          return;
-        if (_.has(_)) return;
-        const _ = (0, _._)("groupvanityinfo", "application_config");
-        (void 0 === _ && "complete" != document.readyState) ||
-          (_.add(_), _(_) && (0, _._)(_, _));
-      }
-      function _(_) {
-        const _ = _;
-        return (
-          !!(
-            _ &&
-            Array.isArray(_) &&
-            _.length > 0 &&
-            "object" == typeof _[0]
-          ) &&
-          "number" == typeof _[0].clanAccountID &&
-          ("number" == typeof _[0].appid || "string" == typeof _[0].vanity_url)
-        );
-      }
-      function _(_) {
-        return "string" == typeof _ ? parseInt(_) : _;
-      }
-      function _(_) {
-        return "string" == typeof _ ? Number.parseInt(_) : _;
-      }
-      const _ = new (class {
-        m_queryClient = _._;
-        m_boxCacheVersion = _._.box(0);
-        m_bWatchingCache = !1;
-        m_bBumpScheduled = !1;
+      class _ {
+        m_steamInterface;
+        GetPromotionTransport() {
+          return this.m_steamInterface;
+        }
+        static s_Singleton;
+        static Get() {
+          return (
+            _.s_Singleton || ((_.s_Singleton = new _()), _.s_Singleton.Init()),
+            _.s_Singleton
+          );
+        }
         Init() {
-          this.LazyInit();
+          const _ = (0, _._)("promotion_operation_token", "application_config");
+          (0, _._)(Boolean(_), "require promotion_operation_token"),
+            (this.m_steamInterface = new _._(_._.WEBAPI_BASE_URL, _));
         }
-        LazyInit() {
-          _(this.m_queryClient),
-            this.m_bWatchingCache ||
-              ((this.m_bWatchingCache = !0),
-              this.m_queryClient.getQueryCache().subscribe((_) => {
-                ("added" != _?.type &&
-                  "updated" != _?.type &&
-                  "removed" != _?.type) ||
-                  ((0, _._)(_.query?.queryKey) &&
-                    this.ScheduleCacheVersionBump());
-              }));
-        }
-        ScheduleCacheVersionBump() {
-          this.m_bBumpScheduled ||
-            ((this.m_bBumpScheduled = !0),
-            queueMicrotask(() => {
-              (this.m_bBumpScheduled = !1),
-                (0, _._)(() =>
-                  this.m_boxCacheVersion.set(this.m_boxCacheVersion.get() + 1),
-                );
-            }));
-        }
-        ReadCache() {
-          return (
-            this.LazyInit(), this.m_boxCacheVersion.get(), this.m_queryClient
-          );
-        }
-        AddGroupVanities(_) {
-          this.LazyInit(), _(_) && (0, _._)(this.m_queryClient, _);
-        }
-        BHasClanInfoLoaded(_) {
-          return (
-            (0, _._)(_.BIsValid(), "Clan SteamID is not valid when ClanInfo"),
-            (0, _._)(
-              _.BIsClanAccount(),
-              "Clan SteamID is not a clan account id when requesting clan info ",
-            ),
-            this.BHasClanInfoLoadedByAccountID(_.GetAccountID())
-          );
-        }
-        BHasClanInfoLoadedByAccountID(_) {
-          return Boolean((0, _._)(_(_), this.ReadCache()));
-        }
-        RegisterClanData(_) {
-          this.LazyInit(), (0, _._)(this.m_queryClient, _);
-        }
-        async LoadOGGClanInfoForAppID(_) {
-          return (
-            this.LazyInit(),
-            (_ = _(_)),
-            (0, _._)(
-              0 != _,
-              "LoadOGGClanInfoForAppID called with appid of zero",
-            ),
-            0 == _ ? null : (0, _._)(_, this.m_queryClient).catch(() => null)
-          );
-        }
-        async LoadOGGClanInfoForIdentifier(_) {
-          return this.LazyInit(), (0, _._)(_, this.m_queryClient, "store");
-        }
-        async LoadOGGClanInfoForGroupVanity(_) {
-          return this.LazyInit(), (0, _._)(_, this.m_queryClient, "group");
-        }
-        async LoadClanInfoForClanSteamID(_) {
-          return this.LoadClanInfoForClanAccountID(_.GetAccountID());
-        }
-        async LoadClanInfoForClanAccountID(_) {
-          return this.LazyInit(), (0, _._)(_(_), this.m_queryClient);
-        }
-        GetOGGClanInfo(_) {
-          const _ = this.ReadCache();
-          return "string" == typeof _ ? (0, _._)(_, _) : (0, _._)(_, _);
-        }
-        GetClanSteamIDForAppID(_) {
-          const _ = (0, _._)(_(_), this.ReadCache());
-          return _ ? _._.InitFromClanID(_.clanAccountID) : void 0;
-        }
-        GetClanVanityForAppID(_) {
-          return (0, _._)(_(_), this.ReadCache())?.vanity_url;
-        }
-        GetClanVanityForClanSteamID(_) {
-          return (0, _._)(_.GetAccountID(), this.ReadCache())?.vanity_url;
-        }
-        HasLoadedClanAccountID(_) {
-          return this.BHasClanInfoLoadedByAccountID(_);
-        }
-        GetClanMemberCount(_) {
-          return (0, _._)(_(_), this.ReadCache())?.member_count ?? 0;
-        }
-        GetClanInfoByClanAccountID(_) {
-          return (
-            (0, _._)(
-              !!_,
-              "Unepxected clanid when requesting information. GetClanInfoByClanAccountID ",
-            ),
-            (0, _._)(_(_), this.ReadCache())
-          );
-        }
-        GetCreatorStoreURL(_) {
-          let _ = _._.GetCreatorHome(_);
-          if (_) return _.GetCreatorHomeURL("developer");
-          let _ = this.GetClanInfoByClanAccountID(_.GetAccountID());
-          return (
-            _._.COMMUNITY_BASE_URL +
-            (_.vanity_url
-              ? "groups/" + _.vanity_url
-              : "gid/" + _.ConvertTo64BitString())
-          );
-        }
-      })();
+      }
       function _() {
-        const _ = (0, _._)();
-        return _(_), _;
-      }
-      function _(_) {
-        _();
-        const { data: _, isPending: _ } = (0, _._)(_ ? _(_) : void 0);
-        return [Boolean(_) && _, _ ?? void 0];
-      }
-      function _(_) {
-        _();
-        const _ = _ ? _(_) : void 0,
-          { data: _, isPending: _ } = (0, _._)(_);
-        return {
-          bLoadingClanInfo: Boolean(_) && _,
-          clanInfo: _ ?? null,
-        };
-      }
-      (0, _._)("g_ClanStore", _);
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { rgAssetURL: _, rgLang: _, bIsImage: _ } = _,
-          [_, _] = (0, _.useState)([]);
-        if (
-          ((0, _.useEffect)(() => {
-            let _ = !1;
-            const _ = _ ? _ : _;
-            return (
-              Promise.all(_.map((_) => __webpack_require__(_))).then((_) => {
-                _ || _(_);
-              }),
-              () => {
-                _ = !0;
-              }
-            );
-          }, [_, _]),
-          !_)
-        )
-          return (0, _.jsx)(_._, {
-            size: "small",
-            string: "Checking Assets...",
-          });
-        const _ = _.map((_, _) => (_ ? -1 : _)).filter((_) => -1 !== _);
-        return 0 === _.length
-          ? (0, _.jsx)(_._, {
-              bDone: !0,
-              name: "Uploaded assets verified",
-              tooltip:
-                "In the background we verified the assets by downloading from the CDN to verify they are present",
-            })
-          : (0, _.jsxs)(_.Fragment, {
-              children: [
-                (0, _.jsx)(_._, {
-                  bDone: !1,
-                  name: `${_.length} Asset(s) uploaded failed to fetch`,
-                }),
-                _.map((_) => ({
-                  url: _[_],
-                  lang: _[_],
-                })).map((_) =>
-                  (0, _.jsx)(
-                    _._,
-                    {
-                      bDone: !1,
-                      name: `${(0, _.LgB)(_.lang)} - Not found`,
-                      tooltip: `${_.url} not downloadable from the CDN`,
-                    },
-                    _.url,
-                  ),
-                ),
-              ],
-            });
-      }
-      function _(_) {
-        return new Promise((_) => {
-          const _ = new Image();
-          (_.onload = () => _(!0)), (_.onerror = () => _(!1)), (_.src = _);
-        });
-      }
-      function _(_) {
-        return new Promise((_) => {
-          const _ = document.createElement("video");
-          (_.preload = "metadata"),
-            (_.onloadedmetadata = () => _(!0)),
-            (_.onerror = () => _(!1)),
-            (_.src = _);
-        });
-      }
-      function _(_) {
-        const {
-            rgAssetLangs: _,
-            initialLang: _,
-            fnGetAssetUrl: _,
-            fnDeletAssetLang: _,
-            imageClassname: _,
-            fnDeleteAllAssets: _,
-            showDeleteAll: _ = !0,
-            bVerifyAssets: _,
-            bVideoAsset: _,
-          } = _,
-          [_, _] = _.useState(_ ?? _._.Get().GetCurEditLanguage() ?? _[0]),
-          [_, _] = _.useState(_(_)),
-          _ = _.useMemo(() => [..._].sort(), [_]);
-        _.useEffect(() => {
-          const _ = _(_);
-          _ ? _(_) : _.length > 0 ? _(_[0]) : _(null);
-        }, [_, _, _]);
-        const _ = (0, _.useMemo)(() => _.map((_) => _(_)), [_, _]);
-        return (0, _.jsxs)("div", {
-          className: _().UploadedImageDisplayCtn,
-          children: [
-            (0, _.jsx)("div", {
-              className: _().UploaderLeftCol,
-              children: (0, _.jsx)(_, {
-                curAssetURL: _,
-                imageClassname: _,
-              }),
-            }),
-            (0, _.jsx)("div", {
-              className: _().UploaderRightCol,
-              children: (0, _.jsxs)("div", {
-                className: _().SectionCtn,
-                children: [
-                  (0, _.jsx)("div", {
-                    className: _().LangCountTitle,
-                    children: (0, _._)("#ImageUpload_LocalizedAssets"),
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _().LangSelectCtn,
-                    children: _.map((_) =>
-                      (0, _.jsx)(
-                        _,
-                        {
-                          language: _,
-                          selectedLanguage: _,
-                          setSelectedLanguage: _,
-                          deleteLanguage: _,
-                        },
-                        _,
-                      ),
-                    ),
-                  }),
-                  _ &&
-                    Boolean(_.length) &&
-                    (0, _.jsx)("a", {
-                      href: "#",
-                      className: _().DeleteAll,
-                      onClick: (_) => {
-                        _ ? _() : _.forEach((_) => _(_)), _.preventDefault();
-                      },
-                      children: (0, _._)("#Button_DeleteAll"),
-                    }),
-                  Boolean(_) &&
-                    (0, _.jsx)(_, {
-                      rgAssetURL: _,
-                      rgLang: _,
-                      bIsImage: !_,
-                    }),
-                ],
-              }),
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const {
-            language: _,
-            selectedLanguage: _,
-            setSelectedLanguage: _,
-            deleteLanguage: _,
-          } = _,
-          _ = (0, _.LgB)(_);
-        return (0, _.jsxs)(
-          "div",
-          {
-            className: _().UploaderImgLang,
-            children: [
-              (0, _.jsx)("a", {
-                href: "#",
-                onClick: (_) => {
-                  _.preventDefault(), _(_);
-                },
-                children:
-                  _ === _
-                    ? (0, _.jsx)("span", {
-                        className: _().LangSelected,
-                        children: "" + _,
-                      })
-                    : (0, _.jsx)("span", {
-                        children: "" + _,
-                      }),
-              }),
-              (0, _.jsx)("a", {
-                href: "#",
-                onClick: (_) => {
-                  _.preventDefault(), _(_);
-                },
-                children: (0, _.jsx)(_._, {}),
-              }),
-            ],
-          },
-          "image" + _,
-        );
-      }
-      function _(_) {
-        const { curAssetURL: _, imageClassname: _ } = _;
-        if (!_)
-          return (0, _.jsx)("div", {
-            className: _().ArtNoArt,
-            children: (0, _._)("#ImageDisplay_NoAssetUploaded"),
-          });
-        const _ = (0, _._)(_);
-        return _._.includes(_)
-          ? (0, _.jsx)(_, {
-              ..._,
-            })
-          : _._.includes(_)
-            ? (0, _.jsx)(_, {
-                className: _ || _().ArtPreview,
-                strTextURL: _,
-              })
-            : (0, _.jsx)("img", {
-                className: _ || _().ArtPreview,
-                src: _,
-              });
-      }
-      function _(_) {
-        const { curAssetURL: _, imageClassname: _ } = _,
-          _ = _.useRef(void 0);
-        return (
-          _.useEffect(() => {
-            _.current && (_.current.load(), _.current.play());
-          }, [_]),
-          (0, _.jsx)("video", {
-            ref: _,
-            className: _ || _().ArtPreview,
-            autoPlay: !0,
-            loop: !0,
-            controls: !0,
-            muted: !0,
-            children: (0, _.jsx)("source", {
-              src: _,
-            }),
-          })
-        );
-      }
-      function _(_) {
-        const { strTextURL: _, className: _ } = _,
-          [_, _] = _.useState("");
-        return (
-          _.useEffect(() => {
-            _()
-              .get(_)
-              .then((_) => {
-                _(_.data);
-              })
-              .catch((_) => {
-                console.error(_);
-              });
-          }, [_]),
-          (0, _.jsx)("textarea", {
-            className: _,
-            value: _,
-            readOnly: !0,
-            rows: 20,
-          })
-        );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { bDone: _, name: _, tooltip: _ } = _;
-        return (0, _.jsxs)("div", {
-          className: _().StatusLineItemCtn,
-          children: [
-            (0, _.jsx)("span", {
-              className: (0, _._)(
-                _().StatusIcon,
-                _ ? _().StatusIconDone : _().StatusNotDone,
-              ),
-              children: _ ? (0, _.jsx)(_.Jlk, {}) : (0, _.jsx)(_._, {}),
-            }),
-            (0, _.jsx)(_._, {
-              toolTipContent: _,
-              children: _,
-            }),
-          ],
-        });
+        return _.Get().GetPromotionTransport().GetServiceTransport();
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -22066,851 +20148,204 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { href: _, children: _, bAllowFocuseableAnchor: _, ..._ } = _;
-        return _._.EREALM === _._.k_ESteamRealmChina
-          ? (0, _.jsx)("div", {
-              ..._,
-              children: _,
-            })
-          : _
-            ? (0, _.jsx)(_._, {
-                href: _,
-                ..._,
-                children: _,
-              })
-            : (0, _.jsx)("a", {
-                href: _,
-                ..._,
-                children: _,
-              });
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-          strURL: _,
-          strName: _,
-          strAvatarURL: _,
-          nFollowers: _,
-          strCreatorType: _,
-          strTagLine: _,
-          strMemberListURL: _,
-          followButton: _,
-          bSmallFormat: _,
-          bMinimalDisplay: _,
-        } = _;
-        return (0, _.jsx)(_._, {
-          feature: "salecreatorhome",
-          children: (0, _.jsxs)(_._, {
-            className: (0, _._)(
-              _().DevSummaryCtn,
-              _ ? _().SmallFormat : _().LargeFormat,
-              _ ? _().MinimalDisplay : "",
-            ),
-            "flow-children": "row",
-            children: [
-              Boolean(_) &&
-                (0, _.jsx)("span", {
-                  className: _().Title,
-                  children: _,
-                }),
-              (0, _.jsxs)("div", {
-                className: _().DevSummaryWidgetCtn,
-                children: [
-                  (0, _.jsx)("div", {
-                    className: _().DevSummaryBackground,
-                    style: {
-                      backgroundImage: `url(${_} )`,
-                    },
-                  }),
-                  (0, _.jsxs)("div", {
-                    className: (0, _._)(_().DevSummaryContent),
-                    children: [
-                      (0, _.jsxs)("div", {
-                        className: _().FlexRowContainer,
-                        children: [
-                          (0, _.jsx)(_, {
-                            href: (0, _._)(_),
-                            className: _().AvatarLink,
-                            bAllowFocuseableAnchor: !0,
-                            children: (0, _.jsx)("img", {
-                              className: (0, _._)(_().Avatar, "Avatar_Trgt"),
-                              src: _,
-                            }),
-                          }),
-                          (0, _.jsxs)("div", {
-                            className: (0, _._)(
-                              _().FlexColumnContainer,
-                              _().CreatorDescCtn,
-                            ),
-                            children: [
-                              (0, _.jsxs)("div", {
-                                className: (0, _._)(
-                                  _().CreatorTitleCtn,
-                                  _().FlexColumnContainer,
-                                ),
-                                children: [
-                                  (0, _.jsx)(_, {
-                                    href: (0, _._)(_),
-                                    className: _().CreatorNameName,
-                                    children: _,
-                                  }),
-                                  Boolean(_) &&
-                                    (0, _.jsx)("div", {
-                                      className: (0, _._)(
-                                        _().FlexColumnContainer,
-                                        _().CreatorTagline,
-                                      ),
-                                      children: _,
-                                    }),
-                                ],
-                              }),
-                              (0, _.jsx)("div", {
-                                className: (0, _._)({
-                                  [_().FlexColumnContainer]: _,
-                                  [_().FlexRowContainer]: !_,
-                                  [_().SocialFollowersCtn]: !0,
-                                }),
-                                children: (0, _.jsxs)("div", {
-                                  className: (0, _._)(_().FollowBtnCtn),
-                                  children: [
-                                    _,
-                                    (0, _.jsxs)("div", {
-                                      className: (0, _._)({
-                                        [_().Followers]: !0,
-                                      }),
-                                      children: [
-                                        (0, _.jsx)("span", {
-                                          children: (0, _._)(
-                                            "#CreatorHome_JustFollowers",
-                                          ),
-                                        }),
-                                        (0, _.jsx)("span", {
-                                          className: _().FollowerCount,
-                                          children: (0, _._)(_),
-                                        }),
-                                      ],
-                                    }),
-                                  ],
-                                }),
-                              }),
-                            ],
-                          }),
-                        ],
-                      }),
-                      Boolean(_) &&
-                        (0, _.jsx)("a", {
-                          href: _,
-                          target: "_blank",
-                          className: _().MembersListLink,
-                          children: (0, _._)("#ClanMembershipList"),
-                        }),
-                    ],
-                  }),
-                ],
-              }),
-            ],
-          }),
-        });
-      }
-      var _ = __webpack_require__("chunkid");
-      function _(_) {
-        switch (_) {
-          case "publisher":
-            return (0, _._)("#CreatorHome_PublishedBy");
-          case "franchise":
-            return (0, _._)("#CreatorHome_InFranchise");
-        }
-        return (0, _._)("#CreatorHome_DevelopedBy");
-      }
-      function _(_) {
-        const {
-            creatorID: _,
-            bShowTagline: _,
-            bHideCreatorType: _,
-            bSmallFormat: _,
-            bHideFollowButton: _,
-            bAddLinkToMemberList: _,
-            bMinimalDisplay: _,
-          } = _,
-          { creatorHome: _, isFetching: _ } = (0, _._)(_.clan_account_id),
-          [_] = (0, _._)();
-        return _ || (!_ && _)
-          ? (0, _.jsx)("div", {
-              className: _.DevSummaryWidgetCtn,
-              children: (0, _.jsx)(_._, {
-                string: (0, _._)("#Loading"),
-                size: "medium",
-                position: "center",
-              }),
-            })
-          : _
-            ? (0, _.jsx)(_._, {
-                children: (0, _.jsx)(_, {
-                  strURL: _.GetCreatorHomeURL(_.type),
-                  strName: _.GetName(),
-                  strAvatarURL: _.GetAvatarURLFullSize(),
-                  nFollowers: _.GetNumFollowers(),
-                  strCreatorType: _ ? void 0 : _(_.type),
-                  strTagLine: _ ? _.GetTagLine() : void 0,
-                  strMemberListURL: _
-                    ? _._.COMMUNITY_BASE_URL +
-                      "gid/" +
-                      _.GetClanSteamID().ConvertTo64BitString() +
-                      "/members/"
-                    : void 0,
-                  followButton: _
-                    ? void 0
-                    : (0, _.jsx)(_._, {
-                        clanAccountID: _.clan_account_id,
-                        creatorID: _,
-                      }),
-                  bSmallFormat: _,
-                  bMinimalDisplay: _,
-                }),
-              })
-            : null;
-      }
-      function _(_) {
-        const { clanInfo: _, bAddLinkToMemberList: _ } = _;
-        if (
-          ((0, _._)(
-            _ && _.clanAccountID,
-            "CuratorHoverContent expect clanInfo, not supplied",
-          ),
-          !_)
-        )
-          return null;
-        const _ = {
-          clan_account_id: _.clanAccountID,
-          name: _.group_name,
-          type: "developer",
-        };
-        return (0, _.jsx)("div", {
-          className: _.CuratorHoverCtn,
-          children: (0, _.jsx)(_, {
-            creatorID: _,
-            bSmallFormat: !0,
-            bShowTagline: !0,
-            bHideCreatorType: !0,
-            bAddLinkToMemberList: _,
-          }),
-        });
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
-      function _(_, _) {
-        let _ = "0000000000000000000000000000000000000000";
-        "string" == typeof _
-          ? (_ = _)
-          : _ &&
-            (_ =
-              (function (_) {
-                if (!_) return "";
-                return (
-                  "function" == typeof _[Symbol.iterator]
-                    ? Array.from(_)
-                    : Object.values(_).filter((_) => "number" == typeof _)
-                )
-                  .map((_) => _.toString(16).padStart(2, "0"))
-                  .join("");
-              })(_) || _);
-        let _ = ".jpg";
-        "0000000000000000000000000000000000000000" === _ && (_ = _),
-          44 == _.length &&
-            ((_ = __webpack_require__.slice(-4)),
-            (_ = __webpack_require__.slice(0, 40)));
-        let _ = _._.AVATAR_BASE_URL;
-        switch (
-          (_ ||
-            ((_ = _._.MEDIA_CDN_COMMUNITY_URL + "images/avatars/"),
-            (_ += __webpack_require__.slice(0, 2) + "/")),
-          (_ += _),
-          _)
-        ) {
-          case "X-Small":
-          case "Small":
-            break;
-          case "Medium":
-          case "MediumLarge":
-            _ += "_medium";
-            break;
-          case "Large":
-          case "X-Large":
-          case "FillArea":
-            _ += "_full";
-        }
-        return (_ += _), _;
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            _: _,
-            bHidePrice: _,
-            bShowInLibraryInsteadOfPrice: _,
-            bHidePlatforms: _,
-            strClassName: _,
-            creatorAccountID: _,
-            bShowName: _,
-            onlyOneDiscountPct: _,
-            bShowAddToCart: _,
-            bShowWishlistButton: _,
-          } = _,
-          _ = (0, _.useRef)(null),
-          [_, _] = (0, _.useState)(!1),
-          { data: _ } = (0, _._)(_);
-        if (
-          ((0, _.useEffect)(() => {
-            _.current && _(_.current.offsetWidth < 370);
-          }, [_]),
-          !_ || !("appid" in _ || "bundleid" in _ || "packageid" in _))
-        )
-          return null;
-        const _ = Boolean(_ && _?.item_type == _._._),
-          _ = Boolean(!_ && !_ && !_ && _ && _);
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            !_ &&
-              (0, _.jsxs)("div", {
-                ref: _,
-                className: (0, _._)(
-                  _().CapsuleBottomBar,
-                  "CapsuleBottomBar",
-                  _,
-                ),
-                children: [
-                  _ &&
-                    (0, _.jsx)(_, {
-                      creatorAccountID: _,
-                      ..._,
-                    }),
-                  _ &&
-                    (0, _.jsx)(_._, {
-                      _: _,
-                      className: (0, _._)(
-                        _().MaxActionButtonWidth,
-                        _().AddToCartButton,
-                      ),
-                    }),
-                  _ &&
-                    "appid" in _ &&
-                    (0, _.jsx)(_._, {
-                      appid: _.appid,
-                      className: (0, _._)(
-                        _().MaxActionButtonWidth,
-                        _().AddToWishlistButton,
-                      ),
-                    }),
-                  !_ &&
-                    (0, _.jsx)(_._, {
-                      _: _,
-                      bMinimizePlatforms: _,
-                      bHideWindows: !0,
-                    }),
-                  !_ &&
-                    (0, _.jsx)("span", {
-                      className: _().BottomBarPriceInfo,
-                      children: (0, _.jsx)(_._, {
-                        _: _,
-                        bShowInLibrary: _,
-                        onlyOneDiscountPct: _,
-                      }),
-                    }),
-                ],
-              }),
-            _ &&
-              (0, _.jsx)(_, {
-                _: _,
-              }),
-          ],
-        });
-      }
-      function _(_) {
-        const { _: _ } = _,
-          { data: _ } = (0, _._)(_);
-        return _?.name
-          ? (0, _.jsx)("div", {
-              className: _().CapsuleName,
-              children: _.name,
-            })
-          : null;
-      }
-      function _(_) {
-        const { creatorAccountID: _, strClassName: _ } = _,
+        const [_, _] = (0, _.useState)(!1),
+          [_] = (0, _.useState)(() => _()),
           _ = (0, _.useMemo)(
             () => ({
-              creatorid: _,
+              country: _._.COUNTRY,
+              language: _._.LANGUAGE,
+              bUsePartnerAPI: !0,
             }),
+            [],
+          );
+        return (
+          (0, _.useEffect)(
+            () => (
+              __webpack_require__(!0),
+              (function (_) {
+                return _._.Initialize(
+                  _.GetServiceTransport(),
+                  _._.is_partner_member,
+                );
+              })(_)
+            ),
             [_],
           ),
-          { data: _ } = (0, _._)(_),
-          { data: _ } = (0, _._)(_);
-        if (!_) return null;
-        const _ = _(_?.clan_avatar, "Medium"),
-          _ = _.name || "";
-        return (0, _.jsxs)("div", {
-          className: (0, _._)(_().BottomCreatorRow, _),
-          children: [
-            (0, _.jsx)("img", {
-              className: (0, _._)(_().CreatorLogo),
-              src: _,
-              alt: _,
-            }),
-            (0, _.jsx)("span", {
-              className: _().CreatorName,
-              children: _,
-            }),
-          ],
-        });
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = "capsule_index_";
-      function _(_) {
-        const {
-            capsule: _,
-            bShowParentApp: _,
-            elElementToAppendToHover: _,
-            index: _,
-            navKey: _,
-            bHideStoreHover: _,
-            onlyOneDiscountPct: _,
-            bPreferDemoStorePage: _,
-            bShowEarlyAccessBanner: _,
-          } = _,
-          _ = (0, _._)(),
-          [_, _] = _.useState(!1),
-          _ = (0, _._)(_),
-          { data: _ } = (0, _._)(_),
-          _ = (0, _._)(_ ? _?.related_items?.parent_appid : void 0),
-          { data: _ } = (0, _._)(_);
-        if (!_ || !_) return null;
-        const _ = !!_ && !!_,
-          _ = (0, _.jsx)(_, {
-            ..._,
-            strExtraParams: _.strExtraParams,
-            _: _,
-            bIsHovered: _,
-            bHasParentAppToDisplay: _,
-            onlyOneDiscountPct: _,
-            bShowEarlyAccessBanner: _,
-            bUsePanel: !_ && !_,
-          });
-        return (0, _.jsxs)(_._, {
-          className: (0, _._)({
-            [_().OuterCapsuleContainer]: !0,
-            [_ + _]: 0 == _,
-          }),
-          navEntryPreferPosition: _._.PREFERRED_CHILD,
-          navKey: _,
-          children: [
-            (0, _.jsxs)(_._, {
-              appid: _.appid,
-              children: [
-                Boolean(_)
-                  ? (0, _.jsx)("div", {
-                      onMouseEnter: () => _(!0),
-                      onMouseLeave: () => _(!1),
-                      children: _,
-                    })
-                  : (0, _.jsx)(_._, {
-                      className: _().CapsuleContainer,
-                      _: _,
-                      elElementToAppend: _.elElementToAppendToHover,
-                      bShowDemoButton: _.bShowDemoButton,
-                      bPreferDemoStorePage: _.bPreferDemoStorePage,
-                      bShowDeckCompatibilityDialog:
-                        _.bShowDeckCompatibilityDialog,
-                      eHardwareCompatibilityDisplay:
-                        _.eHardwareCompatibilityDisplay,
-                      bHidePrice: _.bHidePrice,
-                      bUseSubscriptionLayout: _.bUseSubscriptionLayout,
-                      strExtraParams: _.strExtraParams,
-                      nCreatorAccountID: _.creatorAccountID,
-                      nWidthMultiplier: _.nWidthMultiplier,
-                      bShowIgnoreButton: _.bShowIgnoreButton,
-                      bShowDescription: _.bShowDescriptionInHover,
-                      children: _,
-                    }),
-                Boolean(_) &&
-                  (0, _.jsx)(_.Fragment, {
-                    children: _,
-                  }),
-              ],
-            }),
-            _ &&
-              (0, _.jsx)(_, {
-                strExtraParams: _.strExtraParams,
-                parentID: _,
-                parentStoreItemDefaultInfo: _,
-                childAppType: _.type,
-                bPreferDemoStorePage: Boolean(_),
-              }),
-          ],
-        });
-      }
-      function _(_) {
-        const {
-            strExtraParams: _,
-            parentID: _,
-            parentStoreItemDefaultInfo: _,
-            childAppType: _,
-            bPreferDemoStorePage: _,
-          } = _,
-          _ = (0, _._)(),
-          _ = (0, _._)(),
-          { data: _ } = (0, _._)(_);
-        return _
-          ? (0, _.jsx)(_._, {
-              className: _().CapsuleParentInfo,
-              ...(0, _._)(_, _, _, _, _),
-              children: (0, _.jsxs)(_._, {
-                appid: _.appid,
-                children: [
-                  (0, _.jsx)("div", {
-                    className: _().ParentType,
-                    children: (0, _._)(
-                      _ == _._._
-                        ? "#SalePage_ParentApp_SoundTrack"
-                        : "#SalePage_ParentApp_DLC",
-                    ),
-                  }),
-                  (0, _.jsx)(_._, {
-                    _: _,
-                    strExtraParams: _,
-                    children: (0, _.jsx)("img", {
-                      loading: "lazy",
-                      className: _.AppCapsuleImage,
-                      alt: _.name || "",
-                      src: (0, _._)(_, "small_capsule"),
-                      width: 231,
-                      height: 87,
-                    }),
-                  }),
-                ],
-              }),
-            })
-          : null;
-      }
-      function _(_) {
-        const {
-            _: _,
-            bHideStatusBanners: _,
-            bUsePanel: _,
-            strExtraParams: _,
-            index: _,
-            imageType: _,
-            bHasParentAppToDisplay: _,
-            bIsHovered: _,
-            strDoubleCapsuleMessage: _,
-            bPreferDemoStorePage: _,
-            bShowEarlyAccessBanner: _,
-            bPreferAssetWithoutOverride: _,
-          } = _,
-          _ = (0, _._)(),
-          _ = (0, _._)(),
-          _ = (0, _._)(_),
-          { data: _ } = (0, _._)(_);
-        if (!_) return null;
-        const _ = _
-            ? void 0
-            : (0, _._)((0, _._)(`${(0, _._)(_, _)}${_ ? `?${_}` : ""}`, _, _)),
-          _ = _ ? _._ : _._,
-          _ = !!_;
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            (0, _.jsxs)("div", {
-              className: (0, _._)({
-                [_().TwoWidthCtn]: _,
-              }),
-              children: [
-                (0, _.jsxs)(_, {
-                  href: _,
-                  style: {
-                    display: "block",
-                    cursor: "pointer",
-                  },
-                  className: (0, _._)({
-                    [_().TwoWidthCapsule]: _,
-                  }),
-                  preferredFocus: _,
-                  focusable: !0,
-                  children: [
-                    (0, _.jsx)(_._, {
-                      appids: _,
-                      hide_status_banners: _,
-                      show_early_access: _,
-                    }),
-                    "none" != _ &&
-                      (0, _.jsx)(_._, {
-                        imageType: _,
-                        _: _,
-                        bPreferAssetWithoutOverride: _,
-                      }),
-                    (0, _.jsx)(_._, {
-                      _: _,
-                    }),
-                    (0, _.jsx)(_._, {
-                      _: _,
-                      active: _,
-                      bIsHoverMode: !0,
-                    }),
-                  ],
-                }),
-                _ &&
-                  (0, _.jsx)(_, {
-                    _: _,
-                    strDoubleCapsuleMessage: _,
-                    index: _,
-                  }),
-              ],
-            }),
-            (0, _.jsx)(_, {
-              ..._,
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const { _: _, strDoubleCapsuleMessage: _, index: _ } = _,
-          { data: _ } = (0, _._)(_),
-          { data: _ } = (0, _._)(_);
-        return (0, _.jsxs)("div", {
-          className: (0, _._)(_().TwoWidthSideInfo, "TwoWidthSideInfo"),
-          children: [
-            (0, _.jsx)("div", {
-              className: _().Reason,
-              children: _,
-            }),
-            (0, _.jsx)("div", {
-              className: _().StoreSaleItemRelease,
-              children: (0, _.jsx)("span", {
-                children: _ ? (0, _._)(_) : "",
-              }),
-            }),
-            (0, _.jsx)(_._, {
-              bHideTitle: !0,
-              rgTagIDs: _?.map((_) => _.tagid) || [],
-              instanceNum: _,
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const {
-            _: _,
-            bHidePriceIfOwned: _,
-            bHideStatusBanners: _,
-            bUseSubscriptionLayout: _,
-            elElementToAppendToHover: _,
-            bHidePrice: _,
-            bHidePlatforms: _,
-            creatorAccountID: _,
-            bIsHovered: _,
-            onlyOneDiscountPct: _,
-            strDoubleCapsuleMessage: _,
-          } = _,
-          { data: _ } = (0, _._)(_),
-          { bIsOwned: _ } = (0, _._)(_);
-        if (_ && _ && _.item_type == _._._ && _.appid)
-          return (0, _.jsx)(_._, {
-            appid: _.appid,
-            bIsMuted: _,
-          });
-        if (_) return null;
-        const _ = Boolean(_ && _);
-        return (0, _.jsx)(_, {
-          _: _,
-          bHidePrice: _,
-          bShowInLibraryInsteadOfPrice: _,
-          bHidePlatforms: _,
-          creatorAccountID: _,
-          bShowName: _.bShowName,
-          onlyOneDiscountPct: _,
-          bShowWishlistButton: Boolean(_),
-        });
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { appid: _, className: _, bTextMode: _ } = _,
-          _ = (0, _._)(_),
-          { data: _ } = (0, _._)(_),
-          { data: _ } = (0, _._)(_);
-        return (0, _.jsx)(_, {
-          appid: _,
-          bIsFree: Boolean(_?.is_free),
-          bIsComingSoon: Boolean(_?.is_coming_soon),
-          bTextMode: _,
-          className: _,
-        });
-      }
-      function _(_) {
-        const [_, _] = _.useState(!1),
-          _ = (0, _._)(),
-          {
-            appid: _,
-            bIsFree: _,
-            bIsComingSoon: _,
-            className: _,
-            bTextMode: _,
-          } = _,
-          _ = (0, _._)(_),
-          { bIsOwned: _ } = (0, _._)(_),
-          _ = (0, _._)(_),
-          { mutateAsync: _ } = (0, _._)(_, !_, (0, _._)(_)),
-          { elDialogElement: _, fnShowLogonDialog: _ } = (0, _._)();
-        if (_ || (!_ && _))
-          return _
-            ? (0, _.jsx)(_, {
-                possibleDemoAppID: _,
+          _
+            ? (0, _.createElement)(_._, {
+                context: _,
+                serviceTransportOverride: _.GetServiceTransport(),
+                children: _.children,
               })
-            : null;
-        let _ = null;
-        return (
-          _ && !_
-            ? (_ = (0, _.jsx)(_._, {
-                size: 18,
-              }))
-            : _
-              ? _ && (_ = _ ? (0, _._)("#OnWishlist") : (0, _.jsx)(_.qnF, {}))
-              : (_ = _
-                  ? (0, _._)("#wishlist_add_to_wishlist")
-                  : (0, _.jsx)(_.T4m, {})),
-          (0, _.jsxs)(_.Fragment, {
-            children: [
-              (0, _.jsx)(_._, {
-                toolTipContent: (0, _._)("#AddToWishlist_ttip"),
-                children: (0, _.jsx)("div", {
-                  className: (0, _._)(_().WishList, _),
-                  onClick: async () => {
-                    _._.logged_in
-                      ? _ ||
-                        (__webpack_require__(!0),
-                        await _(),
-                        __webpack_require__(!1))
-                      : _();
-                  },
-                  children: _,
-                }),
-              }),
-              _,
-            ],
-          })
+            : null
         );
       }
       function _(_) {
-        const { possibleDemoAppID: _, className: _ } = _,
-          _ = (0, _._)(_),
-          { data: _ } = (0, _._)(_);
-        return _
-          ? (_.type != _._._ && _.type != _._._) ||
-            !_.related_items?.parent_appid
-            ? null
-            : (0, _.jsx)(_, {
-                parentAppID: _.related_items?.parent_appid,
-                className: _,
-              })
-          : null;
+        const [_] = (0, _.useState)(() => _()),
+          _ = (0, _.useMemo)(
+            () => ({
+              country: _._.COUNTRY,
+              language: _._.LANGUAGE,
+              bUsePartnerAPI: !0,
+              bIncludeUnpublished: _.bIncludeUnpublished,
+            }),
+            [_.bIncludeUnpublished],
+          );
+        return (0, _.createElement)(_._, {
+          context: _,
+          serviceTransportOverride: _.GetServiceTransport(),
+          children: _.children,
+        });
       }
-      function _(_) {
-        const { parentAppID: _, className: _ } = _,
-          _ = (0, _._)(_),
-          { data: _ } = (0, _._)(_),
-          { data: _ } = (0, _._)(_);
-        return _ && _
-          ? (0, _.jsx)(_, {
-              appid: _,
-              bIsComingSoon: Boolean(_.is_coming_soon),
-              bIsFree: Boolean(_.is_free),
-              className: _,
-            })
-          : null;
+      function _() {
+        const _ = (0, _._)("partnerbrowse_webapi_token", "application_config");
+        (0, _._)(Boolean(_), "require partnerbrowse_webapi_token");
+        return new _._(_._.WEBAPI_BASE_URL, _);
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = "nicknames";
+      function _(_) {
+        const _ = (0, _._)(),
+          { data: _, isLoading: _ } = (0, _._)({
+            queryKey: [_],
+            queryFn: async () => {
+              const _ = new Map();
+              if (_._.logged_in) {
+                const _ = _._.Init(_.w_T),
+                  _ = (await _.xtC.GetNicknameList(_, _)).Body().toObject();
+                _?.nicknames &&
+                  _.nicknames.length > 0 &&
+                  _.nicknames.forEach((_) => {
+                    _.set(_.accountid, _.nickname);
+                  });
+              }
+              return _;
+            },
+          });
+        return _ ? __webpack_require__.get(_) : null;
+      }
+      const _ = new (_())(
+          (_) =>
+            (async function (_) {
+              if (!_ || 0 == _.length) return [];
+              const _ =
+                "community" == (0, _._)()
+                  ? _._.COMMUNITY_BASE_URL
+                  : _._.STORE_BASE_URL;
+              if (1 == _.length) {
+                const _ = {
+                    accountid: _[0],
+                    origin: self.origin,
+                  },
+                  _ = await _().get(`${_}actions/ajaxgetavatarpersona`, {
+                    params: _,
+                  });
+                if (
+                  !_ ||
+                  200 != _.status ||
+                  _.data?.success != _._ ||
+                  !_.data?.userinfo
+                )
+                  throw `Load single avatar/persona failed ${((0, _._))(_).strErrorMsg}`;
+                return [_.data.userinfo];
+              }
+              {
+                const _ = {
+                    accountids: _.join(","),
+                    origin: self.origin,
+                  },
+                  _ = await _().get(`${_}actions/ajaxgetmultiavatarpersona`, {
+                    params: _,
+                  });
+                if (
+                  !_ ||
+                  200 != _.status ||
+                  _.data?.success != _._ ||
+                  !_.data?.userinfos
+                )
+                  throw `Load single avatar/persona failed ${((0, _._))(_).strErrorMsg}`;
+                const _ = new Map();
+                return (
+                  _.data.userinfos.forEach((_) =>
+                    _.set(new _._(_.steamid).GetAccountID(), _),
+                  ),
+                  _.map((_) => _.get(_))
+                );
+              }
+            })(_),
+          {
+            cache: !1,
+          },
+        ),
+        _ = "avatarandpersonas";
+      function _(_) {
+        const { data: _, isLoading: _ } = (0, _._)({
+          queryKey: [_, _],
+          queryFn: () => _.load(_),
+        });
+        return [_, _];
+      }
+      function _(_) {
+        const _ = (0, _._)(),
+          { data: _, isLoading: _ } = (0, _._)({
+            queryKey: [_, _],
+            queryFn: async () => {
+              const _ = await _.loadMany(_);
+              return (
+                __webpack_require__.forEach((_) => {
+                  const _ = [_, new _._(_.steamid).GetAccountID()];
+                  _.setQueryData(_, _);
+                }),
+                _
+              );
+            },
+            enabled: _?.length > 0,
+          }),
+          _ = (0, _.useMemo)(() => {
+            const _ = new Array();
+            return (
+              __webpack_require__?.forEach((_) => {
+                _ instanceof Error || _.push(_);
+              }),
+              _
+            );
+          }, [_]);
+        return _ ? null : _;
+      }
+      function _(_) {
+        return _._.getQueryData([_, _]);
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
@@ -22918,44 +20353,163 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            accountID: _,
-            bHideWhenNotAvailable: _,
-            bHideName: _,
-            bLink: _ = !0,
-          } = _,
-          [_] = (0, _._)(_),
-          _ = (0, _._)(_),
-          _ = _.useMemo(() => _._.InitFromAccountID(_), [_]),
-          _ = `${_._.COMMUNITY_BASE_URL}profiles/${_.ConvertTo64BitString()}`,
-          _ = _ ? "a" : "span";
-        return (0, _.jsx)(_.Fragment, {
-          children: Boolean(!_)
-            ? (0, _.jsx)(_.Fragment, {
-                children:
-                  Boolean(!_) &&
-                  (0, _.jsx)("span", {
+      let _ = class extends _.Component {
+        GenerateLanguageOptions() {
+          let _ = [];
+          const {
+            fnFilterLanguage: _,
+            fnLangHasData: _,
+            fnLastUpdateRTime: _,
+            fnIsLangSupported: _,
+          } = this.props;
+          this.props.bAllowUnsetOption &&
+            _.push(
+              (0, _.jsx)(
+                "option",
+                {
+                  value: _.xPp,
+                  children: (0, _._)("#language_selection_none"),
+                },
+                "langpicker_unset",
+              ),
+            );
+          let _ = new Array();
+          const _ = this.props.realms || [_._.k_ESteamRealmGlobal];
+          for (const _ of _._.GetLanguageListForRealms(_)) {
+            if (_ && !_(_)) continue;
+            const _ = (0, _.LgB)(_),
+              _ = (0, _._)("#Language_" + _),
+              _ = !(!_ || !_(_));
+            _.push({
+              eLang: _,
+              sLocName: _,
+              bSupported: _,
+            });
+          }
+          _.sort((_, _) =>
+            _.bSupported != _.bSupported
+              ? _.bSupported
+                ? -1
+                : 1
+              : _.sLocName.localeCompare(_.sLocName),
+          );
+          let _ = !1;
+          for (const _ of _) {
+            _.bSupported != _ &&
+              (_.push(
+                (0, _.jsx)(
+                  "option",
+                  {
+                    className: _().SupportedGroupLabel,
+                    disabled: !0,
+                    children: (0, _._)(
+                      _.bSupported
+                        ? "#LanguageGroup_Supported"
+                        : "#LanguageGroup_Unsupported",
+                    ),
+                  },
+                  _.bSupported ? "SupportedGroup" : "UnsupportedGroup",
+                ),
+              ),
+              (_ = _.bSupported));
+            const _ = _ && __webpack_require__(_.eLang),
+              _ = _ && _(_.eLang);
+            let _ = _.sLocName;
+            _ &&
+              0 !== _ &&
+              ((_ += " "),
+              (_ += (0, _._)(
+                "#Language_Last_Update",
+                (0, _._)(_) +
+                  " @ " +
+                  (0, _._)(_, {
+                    bForce24HourClock: !1,
+                  }),
+              ))),
+              _.push(
+                (0, _.jsx)(
+                  "option",
+                  {
+                    value: _.eLang,
+                    className: (0, _._)(
+                      {
+                        [_().LanguageWithContent]: _,
+                      },
+                      _.bSupported
+                        ? _().SupportedLanguage
+                        : _().UnsupportedLanguage,
+                    ),
                     children: _,
-                  }),
-              })
-            : (0, _.jsxs)(_, {
-                href: _ ? _ : void 0,
-                children: [
-                  (0, _.jsx)("img", {
-                    className: _.SmallAvatar,
-                    src: _.avatar_url,
-                    "data-miniprofile": "s" + _.ConvertTo64BitString(),
-                  }),
-                  Boolean(!_) &&
-                    (0, _.jsx)("span", {
-                      children: _ ? `${_} (${_.persona_name})` : _.persona_name,
-                    }),
-                ],
-              }),
+                  },
+                  "langpicker" + _.eLang + (_ ? "_hasdata" : ""),
+                ),
+              );
+          }
+          return _;
+        }
+        OnLanguageChange(_) {
+          const { fnOnLanguageChanged: _, selectedLang: _ } = this.props;
+          let _ = Number.parseInt(_.currentTarget.value);
+          _ != _ && _ && _(_);
+        }
+        render() {
+          const { selectedLang: _, bDisabled: _, strTooltip: _ } = this.props;
+          let _ = this.GenerateLanguageOptions();
+          return (0, _.jsx)(_._, {
+            toolTipContent: _,
+            children: (0, _.jsx)("select", {
+              value: _,
+              onChange: this.OnLanguageChange,
+              disabled: _,
+              children: _,
+            }),
+          });
+        }
+      };
+      function _(_) {
+        const [_, _] = (0, _._)(() => [
+          _._.Get().GetHasLocalizationContext(),
+          _._.Get().GetCurEditLanguage(),
+        ]);
+        return (0, _.jsx)(_, {
+          selectedLang: _,
+          fnLangHasData: _._.Get().BHasLanguageData,
+          fnOnLanguageChanged: _._.Get().SetCurEditLanguage,
+          bDisabled: !_,
+          strTooltip: _ ? void 0 : (0, _._)("#Localization_EditorNotInFocus"),
         });
       }
+      function _(_) {
+        const { fnLangHasData: _ } = _;
+        _.useEffect(
+          () => (
+            _._.Get().SetHasLocalizationContext(!0),
+            () => _._.Get().SetHasLocalizationContext(!1)
+          ),
+          [],
+        );
+        const _ = (0, _._)(() => {
+          const _ = [];
+          for (let _ = _.Bhc; _ < _.bP9; ++_) _[_] = !(!_ || !_(_));
+          return _;
+        });
+        return (
+          _.useEffect(() => _._.Get().SetHasLanguage(_), [_]),
+          (0, _.jsx)(_.Fragment, {})
+        );
+      }
+      (0, _._)([_._], _.prototype, "OnLanguageChange", null),
+        (_ = (0, _._)([_._], _));
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -23732,308 +21286,91 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ =
-        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAeCAYAAAAo5+5WAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gEEFRg0nBijuQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAw0lEQVRIx+2WMQqDMBSG/xedEnCp3kFzh56gN+iN7SrFLsEDmElwDHGyFNEYlQyF/FPgvXx5fMsL3R9P+CRJEgsAxhjy6We+UClLSFl+H7gMnqGcC3AuvOHMFzrHF86OQI/A062CMYaa5o2zYQiUNMsyGwRcVWWQicOpaNsPooqoIqqIKvYmrusX/dXE4VS4lqkQwnl5HMfND4xzmRbFzeZ5sVrXuscwDHRKhVIdad2vQpXq6JLjJdwH6lSxhAOwP+fdTHcfVDuVWnTzAAAAAElFTkSuQmCC";
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            items: _,
-            render: _,
-            onDelete: _,
-            onEdit: _,
-            onReorder: _,
-            onMove: _,
-            bDisabled: _,
-            rowClassName: _,
-          } = _,
-          [_, _] = _.useState(!1),
-          [_, _] = _.useState(void 0),
-          [_, _] = _.useState(void 0),
-          [_, _] = _.useState(-1),
-          [_, _] = _.useState(void 0),
-          [_, _] = _.useState(0),
-          [_, _] = _.useState(0),
-          [_, _] = _.useState(void 0),
-          [_, _] = _.useState(""),
-          _ = _.useRef(void 0),
-          _ = _.useRef([]),
-          _ = _.useRef([]),
-          _ = _.useMemo(() => _().CancelToken.source(), []),
-          _ = () => {
-            _.current?.firstElementChild &&
-              (_(_.current.firstElementChild.getBoundingClientRect().height),
-              _(_.current.firstElementChild.getBoundingClientRect().width));
-          };
-        _.useEffect(() => {
-          _();
-        }, []),
-          _.useEffect(() => () => _.cancel("ReorderableList unmounting"), [_]);
-        const _ = _.useCallback(
-            (_) => {
-              const _ = _.current[_]?.current;
-              _
-                ? ((_.style.left = _.clientX - _ + "px"),
-                  (_.style.top = _.clientY - _ + "px"))
-                : console.error("update grab element missing element");
-            },
-            [_, _, _],
-          ),
-          _ = _.useCallback(() => {
-            const _ = _.current[_]?.current;
-            _
-              ? ((_.style.position = ""), (_.style.zIndex = ""))
-              : console.error("end element drag missing element"),
-              _(!1),
-              _(-1),
-              _(void 0),
-              _(void 0);
-          }, [_]),
-          _ = (_, _) => {
-            _.token.reason ||
-              (_.current.firstElementChild?.getBoundingClientRect().height >
-                0 &&
-                _ !=
-                  _.current.firstElementChild.getBoundingClientRect().height &&
-                _(),
-              ((_, _) => {
-                const _ = _.current[_]?.current;
-                if (!_)
-                  return void console.error(
-                    "start element grab missing element at index " + _,
-                  );
-                _(!0), _(_), _(void 0), _(_);
-                const _ =
-                  _.clientX - __webpack_require__.getBoundingClientRect().left;
-                _(_);
-                const _ =
-                  _.clientY - __webpack_require__.getBoundingClientRect().top;
-                _(_),
-                  (_.style.position = "fixed"),
-                  (_.style.left = _.clientX - _ + "px"),
-                  (_.style.top = _.clientY - _ + "px"),
-                  (_.style.zIndex = "1");
-              })(_, _),
-              _.preventDefault());
-          },
-          _ = (_, _) => {
-            const _ = _._(_ > _ ? _ - 1 : _, 0, _.length - 1);
-            _ != _ && (_ ? _(_, _) : (0, _._)(_, _, _), _(_), _ && _(_));
-          },
-          _ = _.useCallback(
-            (_) => {
-              if (!_ || _.token.reason) return;
-              const _ = _.clientY;
-              let _;
-              for (let _ = 0; _ < _.current.length; _++) {
-                if (
-                  _ <
-                  (_.current[_].current.getBoundingClientRect().top +
-                    2 * _.current[_].current.getBoundingClientRect().bottom) /
-                    3
-                ) {
-                  _ = _;
-                  break;
-                }
-              }
-              _(_ ?? _.current.length), _(_);
-            },
-            [_, _, _],
-          );
-        (0, _._)(window, "mousemove", _ ? _ : void 0),
-          (0, _._)(
-            window,
-            "mouseup",
-            _
-              ? (_) => {
-                  _ && !_.token.reason && (_(), _(_, _));
-                }
-              : void 0,
-          ),
-          _.useEffect(() => {
-            for (let _ = _.current.length; _ < _.length; _++)
-              _.current.push(_.createRef()), _.current.push(_.createRef());
-          }, [_.length]);
-        const _ = (_) => {
-            _(void 0);
-            const _ = _?.trim(),
-              _ = Number.parseInt(_);
-            if (0 == _.length || isNaN(_)) return;
-            const _ = _ - 1;
-            _ != _ && _(_, _);
-          },
-          [_, _] = _.useState(void 0);
-        return (0, _.jsx)("div", {
-          className: _().WhitelistCtn,
-          ref: _,
-          children: _.map((_, _) =>
-            (0, _.jsxs)(
-              "div",
-              {
-                ref: _.current[_],
-                children: [
-                  _ == _ &&
-                    (0, _.jsx)(_, {
-                      width: _,
-                    }),
-                  (0, _.jsx)("div", {
-                    ref: _.current[_],
-                    className: _().DragGhost,
-                    children:
-                      _ == _ &&
-                      (0, _.jsxs)("div", {
-                        className: (0, _._)(_().WhitelistRow, _),
-                        children: [
-                          (0, _.jsx)("img", {
-                            className: (0, _._)(
-                              _().WhitelistAvatar,
-                              _().Grabbing,
-                            ),
-                            src: _,
-                          }),
-                          (0, _.jsx)("input", {
-                            className: (0, _._)(
-                              _().WhitelistNumber,
-                              _().Disabled,
-                              _().Grabbing,
-                            ),
-                            type: "text",
-                            value: (_ > _ ? _ - 1 : _) + 1,
-                            disabled: !0,
-                          }),
-                          __webpack_require__(_, _),
-                        ],
-                      }),
-                  }),
-                  (0, _.jsxs)("div", {
-                    className: (0, _._)(
-                      _().WhitelistRow,
-                      _,
-                      _ && _().DragActive,
-                      _ == _ && _().BeingDragged,
-                      _ == _ && _().Dropped,
-                    ),
-                    onAnimationEnd: () => _(void 0),
-                    children: [
-                      (0, _.jsx)("img", {
-                        className: (0, _._)(
-                          _().WhitelistAvatar,
-                          _().Grabbable,
-                          _ && _().DisabledGrab,
-                        ),
-                        src: _,
-                        onMouseDown: Boolean(_) ? void 0 : (_) => _(_, _),
-                      }),
-                      (0, _.jsx)("input", {
-                        className: (0, _._)(
-                          _().WhitelistNumber,
-                          _ && _().Disabled,
-                        ),
-                        type: "text",
-                        value: _ == _ ? _ : _ + 1,
-                        disabled: _ || _ == _,
-                        onChange: (_) => _(_.target.value),
-                        onKeyDown: (_) =>
-                          ((_, _) => {
-                            "Enter" === _.key && (_(_), _.currentTarget.blur());
-                          })(_, _),
-                        onFocus: (_) => {
-                          _(_), _(_.target.value);
-                        },
-                        onBlur: () => _(_),
-                      }),
-                      __webpack_require__(_, _),
-                      Boolean(_ != _) &&
-                        Boolean(_ || _) &&
-                        (0, _.jsxs)("div", {
-                          className: _().ButtonCtn,
-                          children: [
-                            Boolean(_) &&
-                              (0, _.jsx)("div", {
-                                className: _().RemoveIcon,
-                                onClick: (_) => _(_, _),
-                                children: (0, _.jsx)(_.ffu, {}),
-                              }),
-                            Boolean(_) &&
-                              (0, _.jsx)("img", {
-                                className: _().RemoveIcon,
-                                src: _._,
-                                onClick: (_) => _(_, _),
-                              }),
-                          ],
-                        }),
-                    ],
-                  }),
-                  _ == _.length &&
-                    _ == _.length - 1 &&
-                    (0, _.jsx)(_, {
-                      width: _,
-                    }),
-                ],
-              },
-              _,
-            ),
-          ),
-        });
-      }
-      function _(_) {
-        const { width: _ } = _;
-        return (0, _.jsx)("div", {
-          className: _().DragHighlightContainer,
-          children: (0, _.jsx)("div", {
-            className: _().DragHighlight,
-            style: {
-              width: _,
-            },
-          }),
-        });
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
-      __webpack_require__("chunkid");
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
-        const { children: _, ..._ } = _,
-          _ = (0, _._)(),
-          _ = _.useMemo(
-            () => ({
-              ..._._.GetDefaultParams(),
-              ..._,
-              ..._,
+        const {
+            title: _,
+            tooltip: _,
+            getMinimized: _,
+            toggleMinimized: _,
+            className: _,
+            children: _,
+            elAdditionalButtons: _,
+          } = _,
+          _ = (0, _._)(() => _());
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsxs)("div", {
+              className: (0, _._)(
+                _,
+                _.SectionTitleHeader,
+                _.required_title,
+                "SectionTitleHeader",
+              ),
+              children: [
+                (0, _.jsxs)("div", {
+                  className: (0, _._)(
+                    _.CollapsableSectionTitle,
+                    "EventEditorTextTitle",
+                  ),
+                  children: [
+                    _,
+                    Boolean(_) &&
+                      (0, _.jsx)(_._, {
+                        tooltip: _,
+                      }),
+                  ],
+                }),
+                (0, _.jsxs)("div", {
+                  className: _.SectionTitleButtons,
+                  children: [
+                    _,
+                    (0, _.jsx)(_, {
+                      bIsMinimized: _,
+                      fnToggleMinimize: _,
+                    }),
+                  ],
+                }),
+              ],
             }),
-            [
-              _,
-              _.domain,
-              _.controller,
-              _.method,
-              _.submethod,
-              _.feature,
-              _.depth,
-            ],
-          );
-        return (0, _.jsx)(_._, {
+            !_ &&
+              (0, _.jsx)(_._, {
+                children: _,
+              }),
+          ],
+        });
+      }
+      function _(_) {
+        const [_, _] = _.useState(Boolean(_.bStartMinimized));
+        return (0, _.jsx)(_, {
           ..._,
-          children: _,
+          getMinimized: () => _,
+          toggleMinimized: () => __webpack_require__(!_),
+          children: _.children,
+        });
+      }
+      function _(_) {
+        const { bIsMinimized: _, fnToggleMinimize: _ } = _,
+          _ = _ ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
+        return (0, _.jsx)(_._, {
+          "data-tooltip-text": (0, _._)(_),
+          onClick: _,
+          children: _.bIsMinimized
+            ? (0, _.jsx)(_.hz4, {})
+            : (0, _.jsx)(_.Xjb, {}),
         });
       }
     },

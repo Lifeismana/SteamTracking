@@ -1871,22 +1871,10 @@
             ref: _,
             ..._
           } = _,
-          _ = _.useRef(null),
           [_, _] = _.useState(0),
-          [_, _] = _.useState(0);
-        _.useImperativeHandle(
-          _,
-          () => ({
-            imgRef: _,
-            nSourceIndex: _,
-            nSourceLength: _.length,
-          }),
-          [_, _, _],
-        );
-        const _ = _.useMemo(() => JSON.stringify(_), [_]);
-        _.useEffect(() => {
-          _(0), _((_) => _ + 1);
-        }, [_]);
+          _ = _.useMemo(() => JSON.stringify(_), [_]),
+          [_, _] = _.useState(_);
+        _ != _ && (_(_), _(0));
         const _ = _.useMemo(() => {
             let _ = "";
             return (
@@ -1909,17 +1897,33 @@
               _ >= _.length && _ && _(_), _ < _.length && _(_);
             },
             [_, _, _, _],
-          );
-        return (0, _.jsx)(
-          "img",
-          {
-            ref: _,
-            ..._,
-            src: _,
-            onError: _,
-            alt: _,
-          },
-          _,
+          ),
+          _ = _.useRef(null);
+        return (
+          _.useImperativeHandle(
+            _,
+            () => ({
+              imgRef: _,
+              nSourceIndex: _,
+              nSourceLength: _.length,
+            }),
+            [_, _, _],
+          ),
+          _.useEffect(() => {
+            const _ = _.current;
+            _?.complete && 0 == _.naturalWidth && (_.src = _.src);
+          }, []),
+          (0, _.jsx)(
+            "img",
+            {
+              ref: _,
+              ..._,
+              src: _,
+              onError: _,
+              alt: _,
+            },
+            _,
+          )
         );
       }
     },

@@ -42,6 +42,28 @@
     },
     chunkid: (module) => {
       module.exports = {
+        Link: "_2UaM2MUAY7gG5jQF-6m9eV",
+        Banner: "_1DZMXccE3UeEnQ5fZ7O00v",
+        Big: "_3dJUAHMUbDY0O45FaJvOT-",
+        Mobile: "_3RIai13_FI7QmOT96zU4W-",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        ReferencedApps: "_1aDVPEAcrxRDEyIXlfcBMG",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        AppSocialLinksCtn: "JlFZxFyO0IOSiYmJt-NlE",
+        AppSocialLinks: "_1SBP3NCWhesT_T7Zncoe_x",
+        AppSocialLinkIcon: "_2p4QK5FnPikdfXUGvhz-rj",
+        AppSocialLinkWithText: "_1pCGa1Dqa9xwEjXFCTbeaB",
+        AppSocialText: "V88BDse5RqlvrzYpxlgFS",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         "duration-app-launch": "800ms",
         AppPartnerEventsPage: "_3CJsgSK-y815Zeoe6bz6dh",
         AppPartnerEventsBanner: "_1HRiMtg_SGUiOa-NXDzZl7",
@@ -281,28 +303,6 @@
         ReadMoreCnt: "_1L8MouFdSBwf8mcqLtAIPu",
       };
     },
-    chunkid: (module) => {
-      module.exports = {
-        ReferencedApps: "_1bfuawEqNMIto67VTkwdbE",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        Link: "-HlDBB290kjpl61uUmRed",
-        Banner: "_2bT8irkKNnA5sxFG3MUXzH",
-        Big: "sGy-bB7uqEt4Hoe7U5iA1",
-        Mobile: "mhii5hgMCQvO2tXOUdWPQ",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        AppSocialLinksCtn: "_1wKUEA0cYqeUELXMe3Tp6T",
-        AppSocialLinks: "YMmXzjieZthpAehitId4M",
-        AppSocialLinkIcon: "OlwlyAPTdpJ7OieZmqzhc",
-        AppSocialLinkWithText: "_3BKcmMK-HSkKmQqRCx9HdA",
-        AppSocialText: "bJf5nxr6o9SG4mWXm7qz-",
-      };
-    },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports),
@@ -533,10 +533,62 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = _.lazy(() =>
+        __webpack_require__
+          ._("chunkid")
+          .then(__webpack_require__.bind(__webpack_require__, "chunkid"))
+          .then((_) => ({
+            default: _.ShareEventDialogBody,
+          })),
+      );
+      function _(_) {
+        const { bActive: _, ..._ } = _;
+        return (0, _.jsx)(_._, {
+          active: _,
+          children: (0, _.jsx)(_.Suspense, {
+            fallback: null,
+            children: (0, _.jsx)(_, {
+              ..._,
+            }),
+          }),
+        });
+      }
+      function _(_) {
+        const { eventModel: _, emoticonStore: _ } = _,
+          [_, _, _] = (0, _._)(),
+          _ = (0, _._)(_);
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsxs)(_._, {
+              focusable: !0,
+              className: (0, _._)(_().Button, _().Icon, _().DiscussionButton),
+              onActivate: _,
+              children: [
+                (0, _.jsx)(_.SYj, {
+                  className: _().ShareIcon,
+                }),
+                (0, _.jsx)("span", {
+                  className: _().DiscussionButtonText,
+                  children: (0, _._)("#Button_Share"),
+                }),
+              ],
+            }),
+            (0, _.jsx)(_, {
+              eventModel: _,
+              strEventLink: _ ?? "",
+              bActive: _,
+              closeModal: _,
+              emoticonStore: _,
+            }),
+          ],
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -995,14 +1047,8 @@
           ],
         });
       }
-      var _ = __webpack_require__("chunkid");
-      const _ = _.lazy(() =>
-        __webpack_require__
-          ._("chunkid")
-          .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-      );
       function _(_) {
-        const { eventModel: _, emoticonStore: _, partnerEventStore: _ } = _,
+        const { eventModel: _, emoticonStore: _ } = _,
           _ = (0, _._)(),
           { myVote: _, Vote: _ } = _(_),
           [, _] = (0, _._)(_.clanSteamID.GetAccountID()),
@@ -1080,53 +1126,13 @@
             (0, _.jsx)(_, {
               eventModel: _,
               emoticonStore: _,
-              partnerEventStore: _,
             }),
-        });
-      }
-      function _(_) {
-        const { eventModel: _, emoticonStore: _, partnerEventStore: _ } = _,
-          [_, _, _] = (0, _._)(),
-          _ = (0, _._)(_),
-          _ = (0, _._)(_);
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            _ &&
-              (0, _.jsx)(_.Suspense, {
-                fallback: null,
-                children: (0, _.jsx)(_._, {
-                  active: !0,
-                  children: (0, _.jsx)(_, {
-                    closeModal: _,
-                    eventLink: _,
-                    sharePageUrls: _,
-                    appid: _.appid,
-                    emoticonStore: _,
-                    partnerEventStore: _,
-                  }),
-                }),
-              }),
-            (0, _.jsxs)(_._, {
-              focusable: !0,
-              className: (0, _._)(_().Button, _().Icon, _().DiscussionButton),
-              onActivate: _,
-              children: [
-                (0, _.jsx)(_.SYj, {
-                  className: _().ShareIcon,
-                }),
-                (0, _.jsx)("span", {
-                  className: _().DiscussionButtonText,
-                  children: (0, _._)("#Button_Share"),
-                }),
-              ],
-            }),
-          ],
         });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = 4147080,
-        _ = "#ee6c5d";
+      const _ = 4147080;
+      const _ = "#ee6c5d";
       function _(_, _, _, _) {
         const _ = (function (_) {
             return _._.EUNIVERSE != _.wLO || (_ >= 1764005400 && _ < 1764612e3);
@@ -1200,7 +1206,6 @@
         };
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1662,21 +1667,86 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
         _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid");
+      let _;
+      function _() {
+        return (
+          _ || (_ = (0, _._)("steam_awards_config", "application_config")), _
+        );
+      }
+      _.createContext(null);
+      function _(_) {
+        const _ = (0, _._)();
+        return (0, _._)({
+          queryKey: [`SteamAwardDefs_${_}`],
+          queryFn: async () => {
+            const _ = _._.Init(_._);
+            __webpack_require__.Body().set_sale_appid(_),
+              __webpack_require__.Body().set_language(_._.LANGUAGE);
+            return (await _._.GetVoteDefinitions(_, _)).Body().toObject();
+          },
+          initialData: () => _()?.definitions,
+          enabled: _ > 0,
+        });
+      }
+      async function _(_) {
+        const _ = _._.Init(_._),
+          _ = await _._.GetUserNominations(_, _);
+        return __webpack_require__.Body().toObject()?.nominations ?? [];
+      }
+      async function _(_, _, _, _) {
+        const _ = _._.Init(_._);
+        _.Body().set_category_id(_),
+          _.Body().set_source(_),
+          _.Body().set_nominated_id(_);
+        const _ = await _._.Nominate(_, _);
+        return (
+          _.BSuccess() ||
+            console.warn(`Failed to nominate app: ${_.GetEResult()}`),
+          [_.GetEResult(), _.Body().toObject()]
+        );
+      }
+      async function _(_, _, _, _) {
+        const _ = _._.Init(_._);
+        _.Body().set_voteid(_),
+          _.Body().set_appid(_),
+          _.Body().set_sale_appid(_);
+        const _ = await _._.SetVote(_, _);
+        return (
+          _.BSuccess() ||
+            console.warn(
+              `Failed to set vote for app (${_}): ${_.GetEResult()}`,
+            ),
+          [_.GetEResult(), _.Body().toObject()]
+        );
+      }
+      async function _(_, _) {
+        const _ = _._.Init(_._);
+        __webpack_require__.Body().set_sale_appid(_);
+        const _ = await _._.GetUserVotes(_, _);
+        return (
+          _.BSuccess() ||
+            console.warn(`Failed to get votes for user: ${_.GetEResult()}`),
+          _.Body().toObject()?.user_votes
+        );
+      }
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = (0, _._)();
         return (0, _.useMemo)(
           () => ({
-            GetMySteamAwardNominations: () => (0, _._)(_),
+            GetMySteamAwardNominations: () => _(_),
             NominateForSteamAward: async (_, _) => {
               if (_) return _._;
-              const [_] = await (0, _._)(_, _, _, _._._);
+              const [_] = await _(_, _, _, _._._);
               return _;
             },
-            GetMySteamAwardVotes: () => (0, _._)(_, _),
+            GetMySteamAwardVotes: () => _(_, _),
             SetSteamAwardVote: async (_, _) => {
               if (_) return _._;
-              const [_] = await (0, _._)(_, _, _, _);
+              const [_] = await _(_, _, _, _);
               return _;
             },
           }),
@@ -1686,7 +1756,7 @@
       const _ = [];
       function _(_, _, _) {
         const _ = _.some(_) || _.some(_),
-          _ = (0, _._)(_ ? _ : void 0);
+          _ = _(_ ? _ : void 0);
         return _
           ? _.data
             ? {
@@ -1761,9 +1831,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1852,6 +1919,8 @@
               ],
             });
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_, _) {
         const [_, _] = (0, _.useState)({}),
           _ = (0, _._)("useEventHeaderData");
@@ -2099,8 +2168,8 @@
             });
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
@@ -2118,22 +2187,30 @@
             appid: _,
           });
         return _ && 0 != _.length
-          ? (0, _.jsxs)(_.Fragment, {
-              children: [
-                (0, _.jsx)("div", {
-                  className: (0, _._)(
-                    _().EventEditorTextTitle,
-                    "EventEditorTextTitle",
-                  ),
-                  children: (0, _._)("#EventDisplay_SocialTitle"),
-                }),
-                (0, _.jsx)(_, {
-                  _: "" + _,
-                  rgSocialMedia: _,
-                }),
-              ],
+          ? (0, _.jsx)(_, {
+              strTitle: (0, _._)("#EventDisplay_SocialTitle"),
+              _: "" + _,
+              rgSocialMedia: _,
             })
           : null;
+      }
+      function _(_) {
+        const { strTitle: _, _: _, rgSocialMedia: _ } = _;
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)("div", {
+              className: (0, _._)(
+                _().EventEditorTextTitle,
+                "EventEditorTextTitle",
+              ),
+              children: _,
+            }),
+            (0, _.jsx)(_, {
+              _: _,
+              rgSocialMedia: _,
+            }),
+          ],
+        });
       }
       const _ = [_._._, _._._, _._._, _._._, _._._, _._._, _._._];
       function _(_) {
@@ -2203,103 +2280,40 @@
           className: _().AppSocialLinkIcon,
         });
       }
+      const _ = {
+        [_._._]: _.agV,
+        [_._._]: _.ZnA,
+        [_._._]: _._,
+        [_._._]: _.ofN,
+        [_._._]: _.Bki,
+        [_._._]: _.$vK,
+        [_._._]: _.$vK,
+        [_._._]: _.$vK,
+        [_._._]: _.OSJ,
+        [_._._]: _.nm_,
+        [_._._]: _.tIO,
+        [_._._]: _.Vt2,
+        [_._._]: _.Vgk,
+        [_._._]: _.VSd,
+        [_._._]: _.ccb,
+        [_._._]: _.rNt,
+        [_._._]: _.g$j,
+        [_._._]: _.BQz,
+        [_._._]: _.jdP,
+        [_._._]: _.bKN,
+        [_._._]: _.sDU,
+        [_._._]: _.MbF,
+        [_._._]: _.emH,
+        [_._._]: _.Yoo,
+      };
       function _(_) {
-        const { linkType: _, ..._ } = _;
-        switch (_) {
-          case _._._:
-            return (0, _.jsx)(_.agV, {
+        const { linkType: _, ..._ } = _,
+          _ = _[_];
+        return _
+          ? (0, _.jsx)(_, {
               ..._,
-            });
-          case _._._:
-            return (0, _.jsx)(_.ZnA, {
-              ..._,
-            });
-          case _._._:
-            return (0, _.jsx)(_._, {
-              ..._,
-            });
-          case _._._:
-            return (0, _.jsx)(_.ofN, {
-              ..._,
-            });
-          case _._._:
-            return (0, _.jsx)(_.Bki, {
-              ..._,
-            });
-          case _._._:
-          case _._._:
-          case _._._:
-            return (0, _.jsx)(_.$vK, {
-              ..._,
-            });
-          case _._._:
-            return (0, _.jsx)(_.OSJ, {
-              ..._,
-            });
-          case _._._:
-            return (0, _.jsx)(_.nm_, {
-              ..._,
-            });
-          case _._._:
-            return (0, _.jsx)(_.tIO, {
-              ..._,
-            });
-          case _._._:
-            return (0, _.jsx)(_.Vt2, {
-              ..._,
-            });
-          case _._._:
-            return (0, _.jsx)(_.Vgk, {
-              ..._,
-            });
-          case _._._:
-            return (0, _.jsx)(_.VSd, {
-              ..._,
-            });
-          case _._._:
-            return (0, _.jsx)(_.ccb, {
-              ..._,
-            });
-          case _._._:
-            return (0, _.jsx)(_.rNt, {
-              ..._,
-            });
-          case _._._:
-            return (0, _.jsx)(_.g$j, {
-              ..._,
-            });
-          case _._._:
-            return (0, _.jsx)(_.BQz, {
-              ..._,
-            });
-          case _._._:
-            return (0, _.jsx)(_.jdP, {
-              ..._,
-            });
-          case _._._:
-            return (0, _.jsx)(_.bKN, {
-              ..._,
-            });
-          case _._._:
-            return (0, _.jsx)(_.sDU, {
-              ..._,
-            });
-          case _._._:
-            return (0, _.jsx)(_.MbF, {
-              ..._,
-            });
-          case _._._:
-            return (0, _.jsx)(_.emH, {
-              ..._,
-            });
-          case _._._:
-            return (0, _.jsx)(_.Yoo, {
-              ..._,
-            });
-          case _._._:
-          case _._._:
-            return "invalid social media type";
-        }
+            })
+          : null;
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2876,7 +2890,6 @@
                       children: [
                         (0, _.jsx)(_._, {
                           text: _,
-                          partnerEventStore: _,
                           event: _,
                         }),
                         (0, _.jsx)("span", {
@@ -2922,7 +2935,6 @@
                 !Boolean(_) &&
                   (0, _.jsx)(_, {
                     eventModel: _,
-                    partnerEventStore: _,
                     emoticonStore: _,
                   }),
               ],
@@ -3792,17 +3804,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { gidEvent: _ } = _,
-          _ = (0, _._)(_);
-        return _
-          ? (0, _.jsx)(_, {
-              event: _,
-              lang: (0, _.sfN)(_._.LANGUAGE),
-              href: (0, _._)((0, _._)(_) ?? ""),
-            })
-          : null;
-      }
-      function _(_) {
         const { event: _, lang: _, href: _ } = _,
           [_, _] = (0, _.useMemo)(() => {
             const _ = _.jsondata.localized_sale_product_banner,
@@ -3832,6 +3833,17 @@
                   className: (0, _._)(_.Banner, _.Mobile),
                 }),
               ],
+            })
+          : null;
+      }
+      function _(_) {
+        const { gidEvent: _ } = _,
+          _ = (0, _._)(_);
+        return _
+          ? (0, _.jsx)(_, {
+              event: _,
+              lang: (0, _.sfN)(_._.LANGUAGE),
+              href: (0, _._)((0, _._)(_) ?? ""),
             })
           : null;
       }

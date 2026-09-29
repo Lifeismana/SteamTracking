@@ -56,6 +56,5 @@
     "SinglePricingPackage_Intro_2b": "Untuk harga USD yang tidak lzaim, taipkan nilai ke dalam medan harga USD. Kemudian klik butang yang ditulis \"Tukar Harga...\" dan ikut arahan.",
     "PricingDashboard_Method_SuggestedPrice": "Penukaran yang dicadangkan:",
     "PricingDashboard_Method_SuggestedPrice_ttip": "Harga ini dicadangkan berdasarkan kaedah penukaran yang dipilih di atas dan harga USD %1$s.",
-    "dummy": "dummy",
-    "empty_no_trailing_comma": ""
+    "dummy": "dummy"
 }

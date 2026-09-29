@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-  [349],
+  [70349],
   {
     85427: (e) => {
       e.exports = {
@@ -121,15 +121,15 @@
         i = s(45699),
         n = s(76217),
         c = s(37788),
-        o = s(84143),
+        o = s(23310),
         l = s(37621),
         a = s(66418),
-        d = s(84518),
-        u = s(60014),
-        m = s(90626),
-        _ = s(24484);
-      var f = s(55263),
-        p = s(25706),
+        d = s(60775),
+        u = s(84518),
+        m = s(60014),
+        _ = s(90626),
+        f = s(24484);
+      var p = s(55263),
         h = s(52038),
         b = s(40594);
       function g({ nPercent: e, indeterminate: t, animate: s, className: i }) {
@@ -194,7 +194,7 @@
             rgCommunityItemDefs: d,
             bViewingOwnProfile: u,
           } = e,
-          _ = (0, m.useMemo)(() => {
+          m = (0, _.useMemo)(() => {
             const e = new Set();
             null == l ||
               l.forEach((t) => {
@@ -263,14 +263,14 @@
                     }),
                   ],
                 }),
-                Array.from(_.keys()).map((e) =>
+                Array.from(m.keys()).map((e) =>
                   (0, r.jsx)(
                     M,
                     {
                       bViewingOwnProfile: u,
                       nAppID: t.appid,
                       itemClass: e,
-                      rgItems: _.get(e),
+                      rgItems: m.get(e),
                       bHideItemStore: !0,
                     },
                     "free_item_class_" + e,
@@ -288,7 +288,7 @@
             nAppID: i,
             bViewingOwnProfile: l,
           } = e,
-          a = (0, m.useMemo)(
+          a = (0, _.useMemo)(
             () => t.filter((e) => e.user_has_item).length,
             [t],
           ),
@@ -386,7 +386,7 @@
           onBlur: () => i.onPointerLeave(),
           focusable: !0,
           className: y().ItemBackground,
-          children: (0, r.jsx)(p.Qc, {
+          children: (0, r.jsx)(d.Qc, {
             appid: t.appid,
             item_image_large: t.item_image_large,
             item_image_small: a,
@@ -401,7 +401,7 @@
       const E = { include_assets: !0 };
       function P(e) {
         const { nAppID: t } = e,
-          [s] = (0, f.t7)(t, E);
+          [s] = (0, p.t7)(t, E);
         return s
           ? (0, r.jsx)(n.Z, {
               className: y().AppHeaderCtn,
@@ -435,17 +435,17 @@
             bViewingOwnProfile: i,
             rgCommunityItemDefs: c,
             rgUserCommunityItems: o,
-            nAppID: f,
+            nAppID: d,
             rgRewardItems: p,
             rgUserItemRewarded: b,
             oRewardDefinition: I,
           } = (function () {
-            const [e, t] = (0, m.useState)(() =>
-              (0, _.Tc)("profile-itemcollection", "itemcollection_config"),
+            const [e, t] = (0, _.useState)(() =>
+              (0, f.Tc)("profile-itemcollection", "itemcollection_config"),
             );
             return e;
           })(),
-          k = (0, m.useMemo)(() => {
+          k = (0, _.useMemo)(() => {
             const e = new Set();
             o.forEach((t) => {
               e.add(`${t.appid}_${t.item_type}`);
@@ -486,7 +486,7 @@
               s
             );
           }, [c, p, o]),
-          v = (0, m.useMemo)(() => {
+          v = (0, _.useMemo)(() => {
             if (k.has(l.sU)) {
               const e = k.get(l.sU).filter((e) => {
                 JSON.parse(e.item_key_values);
@@ -496,7 +496,7 @@
             }
             return null;
           }, [k]),
-          S = (0, m.useMemo)(() => {
+          S = (0, _.useMemo)(() => {
             let e = new Map();
             return (
               c.forEach((t) => {
@@ -505,11 +505,11 @@
               e
             );
           }, [c]),
-          N = (0, m.useMemo)(
+          N = (0, _.useMemo)(
             () => Array.from(k.keys()).sort((e, t) => t - e),
             [k],
           ),
-          [C, L, A] = m.useMemo(() => {
+          [C, L, A] = _.useMemo(() => {
             const e =
                 null == o
                   ? void 0
@@ -524,10 +524,10 @@
               r = t.length || 0;
             return [r ? Math.floor((100 * s) / r) : 0, r, s];
           }, [S, c, o]);
-        return (0, r.jsx)(u.nn, {
+        return (0, r.jsx)(m.nn, {
           feature: "itemcollections",
-          children: (0, r.jsx)(d.A, {
-            appID: f,
+          children: (0, r.jsx)(u.A, {
+            appID: d,
             children: (0, r.jsxs)(n.Z, {
               className: j().ProfileSubPageContainer,
               children: [
@@ -540,21 +540,21 @@
                       muted: !0,
                       autoPlay: !0,
                       loop: !0,
-                      poster: `${a.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${f}/${v.item_image_large}`,
+                      poster: `${a.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${d}/${v.item_image_large}`,
                       children: [
                         (0, r.jsx)("source", {
-                          src: `${a.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${f}/${v.item_movie_webm}`,
+                          src: `${a.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${d}/${v.item_movie_webm}`,
                           type: "video/webm",
                         }),
                         Boolean(!a.TS.IN_CLIENT) &&
                           (0, r.jsx)("source", {
-                            src: `${a.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${f}/${v.item_movie_mp4}`,
+                            src: `${a.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${d}/${v.item_movie_mp4}`,
                             type: "video/mp4",
                           }),
                       ],
                     }),
                   }),
-                (0, r.jsx)(P, { nAppID: f }),
+                (0, r.jsx)(P, { nAppID: d }),
                 (0, r.jsxs)("div", {
                   className: y().PageSection,
                   children: [
@@ -595,7 +595,7 @@
                       (0, r.jsx)(
                         M,
                         {
-                          nAppID: f,
+                          nAppID: d,
                           itemClass: e,
                           rgItems: k.get(e),
                           bViewingOwnProfile: i,
@@ -705,6 +705,120 @@
                 ),
           [r, e, t, s],
         );
+      }
+    },
+    60775: (e, t, s) => {
+      "use strict";
+      s.d(t, { Qc: () => u, Zx: () => _, f8: () => m });
+      var r = s(7850),
+        i = s(65946),
+        n = s(37621),
+        c = s(22797),
+        o = s(61859),
+        l = s(66418),
+        a = s(56330),
+        d = s(20376);
+      function u(e) {
+        const {
+          appid: t,
+          item_image_small: s,
+          item_image_large: i,
+          item_movie_mp4: n,
+          item_movie_webm: c,
+          item_title: o,
+        } = e;
+        if (n && c) {
+          const i = `${l.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${s}`,
+            o = `${l.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${c}`,
+            a = `${l.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${n}`;
+          return (0, r.jsx)(r.Fragment, {
+            children: (0, r.jsxs)("video", {
+              muted: !0,
+              controls: !1,
+              autoPlay: !0,
+              loop: !0,
+              poster: i,
+              playsInline: !0,
+              className: e.videoClassName,
+              children: [
+                (0, r.jsx)("source", { src: o, type: "video/webm" }),
+                Boolean(!l.TS.IN_CLIENT) &&
+                  (0, r.jsx)("source", { src: a, type: "video/mp4" }),
+              ],
+            }),
+          });
+        }
+        {
+          const n = `${l.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${s || i}`;
+          return (0, r.jsx)("img", { className: e.className, src: n, alt: o });
+        }
+      }
+      function m(e) {
+        const { appid: t, community_item_type: s, bForEdit: i } = e,
+          n = (0, d.d2)(t, s, i),
+          l =
+            n && !n.active
+              ? (0, r.jsx)("div", {
+                  className: a.WarningStylesBackground,
+                  children: (0, o.we)(
+                    "#Sale_Section_RewardShelf_ItemInActiveWarning",
+                  ),
+                })
+              : void 0;
+        return n
+          ? (0, r.jsxs)(r.Fragment, { children: [(0, r.jsx)(u, { ...n }), l] })
+          : (0, r.jsx)(c.t, { size: "small", string: (0, o.we)("#Loading") });
+      }
+      function _(e) {
+        var t, s, c, o;
+        const { section: a, rewardDef: u, language: _ } = e,
+          f = (0, d.d2)(
+            null !== (t = u.appid) && void 0 !== t ? t : 0,
+            null !== (s = u.community_item_type) && void 0 !== s ? s : 0,
+          ),
+          [p] = (0, i.q3)(() => {
+            var e;
+            return [
+              Boolean(
+                null === (e = a.rewards) || void 0 === e
+                  ? void 0
+                  : e.show_reward_item_name,
+              ),
+            ];
+          });
+        let h;
+        switch (u.community_class) {
+          case n.xi:
+          case n.xw:
+            h = `${l.TS.COMMUNITY_BASE_URL}my/edit/avatar`;
+            break;
+          case n.u8:
+            h = `${l.TS.COMMUNITY_BASE_URL}my/edit/favoritebadge`;
+            break;
+          case n.sU:
+          case n.jE:
+            h = `${l.TS.COMMUNITY_BASE_URL}my/edit/background`;
+            break;
+          case n.zs:
+            h = `${l.TS.COMMUNITY_BASE_URL}my/edit/miniprofile`;
+            break;
+          case n.Ed:
+            h = `${l.TS.COMMUNITY_BASE_URL}chat`;
+        }
+        return (0, r.jsxs)("a", {
+          href: h,
+          children: [
+            (0, r.jsx)(m, {
+              appid: null !== (c = u.appid) && void 0 !== c ? c : 0,
+              community_item_type:
+                null !== (o = u.community_item_type) && void 0 !== o ? o : 0,
+            }),
+            Boolean(p) &&
+              (0, r.jsx)("span", {
+                children: null == f ? void 0 : f.item_name,
+              }),
+          ],
+        });
       }
     },
     84518: (e, t, s) => {
@@ -1011,120 +1125,6 @@
       }
       function g(e, t, s) {
         return b(e, o.c6.qI, t, s);
-      }
-    },
-    25706: (e, t, s) => {
-      "use strict";
-      s.d(t, { Qc: () => u, Zx: () => _, f8: () => m });
-      var r = s(7850),
-        i = s(65946),
-        n = s(37621),
-        c = s(20376),
-        o = s(22797),
-        l = s(61859),
-        a = s(66418),
-        d = s(56330);
-      function u(e) {
-        const {
-          appid: t,
-          item_image_small: s,
-          item_image_large: i,
-          item_movie_mp4: n,
-          item_movie_webm: c,
-          item_title: o,
-        } = e;
-        if (n && c) {
-          const i = `${a.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${s}`,
-            o = `${a.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${c}`,
-            l = `${a.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${n}`;
-          return (0, r.jsx)(r.Fragment, {
-            children: (0, r.jsxs)("video", {
-              muted: !0,
-              controls: !1,
-              autoPlay: !0,
-              loop: !0,
-              poster: i,
-              playsInline: !0,
-              className: e.videoClassName,
-              children: [
-                (0, r.jsx)("source", { src: o, type: "video/webm" }),
-                Boolean(!a.TS.IN_CLIENT) &&
-                  (0, r.jsx)("source", { src: l, type: "video/mp4" }),
-              ],
-            }),
-          });
-        }
-        {
-          const n = `${a.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${s || i}`;
-          return (0, r.jsx)("img", { className: e.className, src: n, alt: o });
-        }
-      }
-      function m(e) {
-        const { appid: t, community_item_type: s, bForEdit: i } = e,
-          n = (0, c.d2)(t, s, i),
-          a =
-            n && !n.active
-              ? (0, r.jsx)("div", {
-                  className: d.WarningStylesBackground,
-                  children: (0, l.we)(
-                    "#Sale_Section_RewardShelf_ItemInActiveWarning",
-                  ),
-                })
-              : void 0;
-        return n
-          ? (0, r.jsxs)(r.Fragment, { children: [(0, r.jsx)(u, { ...n }), a] })
-          : (0, r.jsx)(o.t, { size: "small", string: (0, l.we)("#Loading") });
-      }
-      function _(e) {
-        var t, s, o, l;
-        const { section: d, rewardDef: u, language: _ } = e,
-          f = (0, c.d2)(
-            null !== (t = u.appid) && void 0 !== t ? t : 0,
-            null !== (s = u.community_item_type) && void 0 !== s ? s : 0,
-          ),
-          [p] = (0, i.q3)(() => {
-            var e;
-            return [
-              Boolean(
-                null === (e = d.rewards) || void 0 === e
-                  ? void 0
-                  : e.show_reward_item_name,
-              ),
-            ];
-          });
-        let h;
-        switch (u.community_class) {
-          case n.xi:
-          case n.xw:
-            h = `${a.TS.COMMUNITY_BASE_URL}my/edit/avatar`;
-            break;
-          case n.u8:
-            h = `${a.TS.COMMUNITY_BASE_URL}my/edit/favoritebadge`;
-            break;
-          case n.sU:
-          case n.jE:
-            h = `${a.TS.COMMUNITY_BASE_URL}my/edit/background`;
-            break;
-          case n.zs:
-            h = `${a.TS.COMMUNITY_BASE_URL}my/edit/miniprofile`;
-            break;
-          case n.Ed:
-            h = `${a.TS.COMMUNITY_BASE_URL}chat`;
-        }
-        return (0, r.jsxs)("a", {
-          href: h,
-          children: [
-            (0, r.jsx)(m, {
-              appid: null !== (o = u.appid) && void 0 !== o ? o : 0,
-              community_item_type:
-                null !== (l = u.community_item_type) && void 0 !== l ? l : 0,
-            }),
-            Boolean(p) &&
-              (0, r.jsx)("span", {
-                children: null == f ? void 0 : f.item_name,
-              }),
-          ],
-        });
       }
     },
     22797: (e, t, s) => {

@@ -56,6 +56,5 @@
     "SinglePricingPackage_Intro_2b": "Untuk harga yang tidak umum dalam USD, masukkan nilai di kolom harga USD. Kemudian, klik tombol yang bertuliskan \"Konversikan Harga...\" dan ikuti petunjuknya.",
     "PricingDashboard_Method_SuggestedPrice": "Konversi yang disarankan:",
     "PricingDashboard_Method_SuggestedPrice_ttip": "Harga ini disarankan berdasarkan metode konversi yang dipilih di atas dan harga USD sebesar %1$s.",
-    "dummy": "dummy",
-    "empty_no_trailing_comma": ""
+    "dummy": "dummy"
 }

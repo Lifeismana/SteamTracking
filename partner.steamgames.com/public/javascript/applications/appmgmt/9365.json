@@ -56,6 +56,5 @@
     "SinglePricingPackage_Intro_2b": "Ange ett värde i USD-prisfältet om du inte vill använda ett vanligt USD-pris. Klicka sedan på knappen Omvandla priser ... och följ instruktionerna.",
     "PricingDashboard_Method_SuggestedPrice": "Föreslagen omvandling:",
     "PricingDashboard_Method_SuggestedPrice_ttip": "Priset föreslås baserat på omvandlingsmetoden vald ovan och ett USD-pris på %1$s.",
-    "dummy": "dummy",
-    "empty_no_trailing_comma": ""
+    "dummy": "dummy"
 }

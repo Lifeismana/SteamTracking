@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-  [6966],
+  [96966],
   {
     9211: (e) => {
       e.exports = { LoginContainer: "_2vAS_iK_bJ7iv_7pRL7Zdk" };

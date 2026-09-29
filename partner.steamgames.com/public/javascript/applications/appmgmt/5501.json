@@ -56,6 +56,5 @@
     "SinglePricingPackage_Intro_2b": "W przypadku nietypowych cen w dolarach amerykańskich wpisz wartość w polu ceny w dolarach amerykańskich. Następnie kliknij przycisk „Konwertuj ceny…” i postępuj zgodnie z instrukcjami.",
     "PricingDashboard_Method_SuggestedPrice": "Sugerowana konwersja:",
     "PricingDashboard_Method_SuggestedPrice_ttip": "Ta cena jest sugerowana na podstawie wybranej powyżej metody konwersji i ceny w dolarach amerykańskich wynoszącej %1$s.",
-    "dummy": "dummy",
-    "empty_no_trailing_comma": ""
+    "dummy": "dummy"
 }

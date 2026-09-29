@@ -309,6 +309,17 @@
         BetaCallout: "_3F09B-c90Mi_ABQSFt8qlI",
       };
     },
+    21895: (e) => {
+      e.exports = {
+        Root: "_1kIuUssJvopWbHik1IKMG6",
+        "Variant-light": "zcrlDqGBY0Lrl7faLFoJI",
+        "Variant-dark": "_3b6kFRuG8ILziz88w8GESp",
+        "Variant-outline": "wlcXkTKJWe-SE0fCwIRwQ",
+        Disabled: "kLcGKsNxkoEqxgok6YzML",
+        Checkbox: "_3babFLLB0YYBf8znrlE7Dt",
+        Icon: "cngAYeP7ZvFo2pT_v3-xO",
+      };
+    },
     82277: (e) => {
       e.exports = {
         FilterBorder: "_3xFYpKNlOZ6xjQ529ZgRbr",
@@ -331,6 +342,32 @@
         "Variant-vibrant": "HpR1uGt2MH6wMkWZz8XTQ",
         Width: "_3sJrbUPuxxtvf7RM9OYpwU",
         MinWidth: "_1SOkb8NGXTctRFJs2fKHh-",
+      };
+    },
+    38878: (e) => {
+      e.exports = {
+        "Variant-basic": "xqG5GdDEeYauX2ots2DLl",
+        "Size-3": "_1K_Ve980-qBq8l1-cZJdw1",
+        "Variant-inset": "_2Z-Zr4UW8-jHrU5olM_rpn",
+        "Variant-inset-focus": "_2RYWJyn7v0tvoY5cR63QuI",
+        Focusable: "_1cd-wdIp5lIWsydAxII-vY",
+        "Variant-inset-glass": "_32JdL4FubsmwHfHXm6OB9I",
+        "Variant-underline": "yV_Aq5WutzzittgbOJ1R-",
+        "Variant-dim": "_2qQgKJgeeqc9lEI-i7HdsM",
+        "Variant-highlight": "EFvA4gLIikUE06LDGCqg5",
+        "Variant-bare": "_3vxqpebgJYIYNTcigTXx21",
+        ControlBox: "_2gL71Yq-HzVI9oOGyWu3jH",
+        Hoverable: "_8JNTStqpIYaMWQJx6g6hK",
+        Clickable: "_1KONo9A0HE0_NOK2F6uvXy",
+        Disabled: "_2I6xXve3oCxh8fra7SWTnq",
+        "Size-1": "_2e1xlPghh48rkP13ydQOPb",
+        "Size-2": "B7HtDxiiORArIRcBR9kVB",
+      };
+    },
+    48093: (e) => {
+      e.exports = {
+        ListBox: "_1PUg8GjnBeN7rBK-dcyQFl",
+        ListBoxOption: "_20oF9tLSfptitLraDOp6X6",
       };
     },
     24089: (e) => {
@@ -357,6 +394,22 @@
         SliderTrack: "_32V6MAuLhIp8s5_OPJxur1",
         SliderRange: "_1S38a0lsWaX1bdlroIEyXQ",
         SliderHandle: "_1VoJsIZhjVss7lO_vZxCFC",
+      };
+    },
+    16619: (e) => {
+      e.exports = {
+        Color: "_2Vc3a-PM4tOhJcD72NEq1U",
+        IconSizeDefault: "_20lX82QaoUw-iHboSsmZBI",
+        "IconSize-1": "_1zRMg9IjPqEIAejKQDDLYW",
+        "IconSize-2": "_3dn_hJnXYKfl38rjqz4y91",
+        "IconSize-3": "_2aoIykgGddbEHeCGgMR79l",
+        "IconSize-4": "_1Ypu_MleveHHMyLy8PVNy",
+        "IconSize-5": "e8vp9esm_uAhUEdfq5zjr",
+        "IconSize-6": "hXAsxCohKrk8qBq6Enfgt",
+        "IconSize-7": "_5TifSVb5dMP2wAaHIDqM_",
+        "IconSize-8": "_32KP-QSJpecoxuWZfWkqmy",
+        "IconSize-9": "_3TcYJ4xwprVIVhcdzwF17m",
+        HitSlop: "_1tiFDvBjIAQRZDbVwz8k2u",
       };
     },
     75180: (e) => {
@@ -511,31 +564,34 @@
       n.a(e, async (e, i) => {
         try {
           n.d(t, {
-            $j: () => D,
-            Bx: () => oe,
-            Er: () => q,
-            F0: () => Z,
-            FK: () => G,
-            FM: () => k,
+            $j: () => R,
+            Bx: () => de,
+            Er: () => X,
+            F0: () => ee,
+            FK: () => P,
+            FM: () => L,
+            GV: () => T,
             J3: () => B,
+            JI: () => D,
             L3: () => y,
-            Q4: () => T,
-            Rz: () => I,
-            SN: () => ce,
-            Xe: () => W,
-            aR: () => E,
-            iF: () => X,
-            kb: () => R,
-            kk: () => P,
+            Q4: () => k,
+            Rz: () => N,
+            SN: () => ue,
+            Wu: () => Y,
+            Xe: () => q,
+            aR: () => b,
+            iF: () => ne,
+            kb: () => G,
+            kk: () => M,
             l7: () => f,
-            mb: () => Q,
+            mb: () => $,
             nf: () => j,
-            q4: () => se,
-            sJ: () => U,
-            ts: () => F,
-            vd: () => O,
+            q4: () => ce,
+            sJ: () => W,
+            ts: () => V,
+            vd: () => U,
             yu: () => r,
-            zG: () => te,
+            zG: () => re,
           });
           var r,
             s = n(37085),
@@ -546,12 +602,12 @@
             d = n.n(l),
             u = n(74761),
             p = n(90626),
-            m = n(68797),
-            h = n(61859),
+            h = n(68797),
+            m = n(61859),
             v = n(78327),
-            _ = n(70760),
-            g = e([_]);
-          (_ = (g.then ? (await g)() : g)[0]),
+            g = n(70760),
+            _ = e([g]);
+          (g = (_.then ? (await _)() : _)[0]),
             (function (e) {
               (e[(e.Client = 0)] = "Client"),
                 (e[(e.GameServer = 1)] = "GameServer"),
@@ -567,15 +623,15 @@
           function w(e) {
             return "ACHIEVEMENTS" !== e[1].type;
           }
-          const E = (0, p.createContext)(null);
+          const b = (0, p.createContext)(null);
           function y() {
-            return (0, p.useContext)(E);
+            return (0, p.useContext)(b);
           }
-          const C = "Stats",
-            b = "StatSchema";
+          const E = "Stats",
+            C = "StatSchema";
           function S(e, t = !1) {
             return (0, a.I)({
-              queryKey: [C, b, e, t],
+              queryKey: [E, C, e, t],
               queryFn: async () => {
                 let n = t ? { version: "live" } : {};
                 const i = `${v.TS.PARTNER_BASE_URL}achievements/ajaxgetstatsschema/${e}`,
@@ -587,44 +643,53 @@
               },
             });
           }
-          function N(e, t = !1) {
+          function I(e, t = !1) {
             const n = S(e, t);
             return n.isLoading ? null : n.data?.schema;
           }
-          function I(e) {
+          function N(e) {
             const t = S(e);
             return t.isLoading ? void 0 : t.data?.limits;
           }
-          function T(e, t = !1) {
-            const n = N(e, t);
+          function T(e) {
+            const t = k(e);
+            return Object.keys(t ?? {}).length + 1;
+          }
+          function D(e) {
+            const t = N(e),
+              n = T(e);
+            return !t || n < t.max_groups;
+          }
+          function k(e, t = !1) {
+            const n = I(e, t);
             return n?.groups;
           }
-          function D(e, t, n = !1) {
-            const i = T(e, n);
+          function R(e, t, n = !1) {
+            const i = k(e, n);
             return i?.[t];
           }
-          function k(e) {
-            const t = T(e);
+          function L(e) {
+            const t = k(e);
             if (!t) return [];
             return Object.keys(t)
               .map((e) => ({
                 groupid: e,
-                sortid: _.auy.number().default(0).parse(t[e].order),
+                sortid: g.auy.number().default(0).parse(t[e].order),
                 ...t[e],
               }))
               .sort((e, t) => e.sortid - t.sortid)
               .map((e) => e);
           }
           function B(e, t = !1) {
-            const n = N(e, t);
+            const n = I(e, t);
             return n?.stats
               ? Object.entries(n.stats)
                   .filter(w)
                   .map(([e, t]) => ({ ...t, statID: e }))
               : void 0;
           }
-          function R(e, t = !1) {
-            const n = N(e, t);
+          function G(e, t = !1) {
+            const n = I(e, t);
             return n?.stats
               ? Object.entries(n.stats)
                   .filter(A)
@@ -637,8 +702,8 @@
                   )
               : void 0;
           }
-          function G(e, t, n = !1) {
-            const i = N(e, n);
+          function P(e, t, n = !1) {
+            const i = I(e, n);
             return i?.stats
               ? Object.entries(i.stats)
                   .filter(A)
@@ -649,10 +714,10 @@
                   )
               : void 0;
           }
-          const L = "AppLanguageList";
-          function F(e) {
+          const O = "AppLanguageList";
+          function V(e) {
             const t = (0, a.I)({
-              queryKey: [C, L, e],
+              queryKey: [E, O, e],
               queryFn: async () => {
                 const t = `${v.TS.PARTNER_BASE_URL}achievements/ajaxgetlanguagelist/${e}`,
                   n = await d().get(t, { withCredentials: !0 });
@@ -663,28 +728,28 @@
             });
             return t.isLoading ? ["english"] : t.data;
           }
-          async function M(e, t) {
+          async function F(e, t) {
             const n = `${v.TS.PARTNER_BASE_URL}achievements/ajaxsetlanguagelist/${e}`,
               i = new FormData();
             return (
               i.append("languages", JSON.stringify(t)),
-              await K("updateLanguageList", n, i),
+              await Q("updateLanguageList", n, i),
               !0
             );
           }
-          function P(e) {
+          function M(e) {
             const t = (0, o.jE)();
             return (0, c.n)({
-              mutationFn: async (t) => await M(e, t),
+              mutationFn: async (t) => await F(e, t),
               onSuccess: async () => {
-                await t.invalidateQueries({ queryKey: [C, L, e] });
+                await t.invalidateQueries({ queryKey: [E, O, e] });
               },
             });
           }
-          const V = "AppLanguageOptionsList";
-          function O(e) {
+          const z = "AppLanguageOptionsList";
+          function U(e) {
             const t = (0, a.I)({
-              queryKey: [C, V, e],
+              queryKey: [E, z, e],
               queryFn: async () => {
                 const t = `${v.TS.PARTNER_BASE_URL}achievements/ajaxgetlanguageoptionslist/${e}`,
                   n = await d().get(t, { withCredentials: !0 });
@@ -697,10 +762,14 @@
             });
             return t.isLoading ? ["english"] : t.data;
           }
-          const z = "AppDLCList";
-          function U(e) {
-            const t = (0, a.I)({
-              queryKey: [C, z, e],
+          const H = "AppDLCList";
+          function W(e) {
+            const t = Y(e);
+            return t.isLoading ? [] : t.data;
+          }
+          function Y(e) {
+            return (0, a.I)({
+              queryKey: [E, H, e],
               queryFn: async () => {
                 const t = `${v.TS.PARTNER_BASE_URL}achievements/ajaxgetdlc/${e}`,
                   n = await d().get(t, { withCredentials: !0 });
@@ -708,12 +777,11 @@
                 throw new Error(`failed to load dlc for app id ${e}`);
               },
             });
-            return t.isLoading ? [] : t.data;
           }
-          const H = "AppInfo";
-          function W(e) {
+          const K = "AppInfo";
+          function q(e) {
             const t = (0, a.I)({
-              queryKey: [C, H, e],
+              queryKey: [E, K, e],
               queryFn: async () => {
                 const t = `${v.TS.PARTNER_BASE_URL}achievements/ajaxgetappinfo/${e}`,
                   n = await d().get(t, { withCredentials: !0 });
@@ -733,33 +801,34 @@
             });
             return t.isLoading ? null : t.data;
           }
-          function Y(e, t) {
-            const { strErrorMsg: n, errorCode: i } = (0, m.H)(t);
+          function J(e, t) {
+            const { strErrorMsg: n, errorCode: i } = (0, h.H)(t);
             console.error(`${e} failed: `, i, n, t);
-            const r = t?.data?.error;
-            return i == s.TE && r
-              ? new Error(r)
+            const r = t,
+              a = r?.response?.data?.error ?? r?.data?.error;
+            return i == s.TE && a
+              ? new Error(a)
               : i == s.VB
                 ? new Error(
-                    (0, h.we)(
+                    (0, m.we)(
                       "#AchievementEditor_Achievement_Edit_ApiName_Error_Duplicate",
                     ),
                   )
                 : new Error(
-                    (0, h.we)("#AchievementEditor_Error_RequestFailed"),
+                    (0, m.we)("#AchievementEditor_Error_RequestFailed"),
                   );
           }
-          async function K(e, t, n) {
+          async function Q(e, t, n) {
             let i;
             try {
               i = await d().post(t, n, { withCredentials: !0 });
             } catch (t) {
-              throw Y(e, t);
+              throw J(e, t);
             }
-            if (i?.data?.success != s.R) throw Y(e, i);
+            if (i?.data?.success != s.R) throw J(e, i);
             return i.data;
           }
-          async function J(e, t, n) {
+          async function Z(e, t, n) {
             const i = `${v.TS.PARTNER_BASE_URL}achievements/ajaxcreateorupdategroup/${e}`,
               r = new FormData();
             r.append("groupid", t),
@@ -771,30 +840,30 @@
                 "1" == n.developeronly ? "true" : "false",
               ),
               r.append("order", n.order ?? "-1");
-            return (await K("addOrUpdateStatGroup", i, r)).groupid;
+            return (await Q("addOrUpdateStatGroup", i, r)).groupid;
           }
-          function Q(e, t) {
+          function $(e, t) {
             const n = (0, o.jE)();
             return (0, c.n)({
-              mutationFn: async (n) => await J(e, t, n),
+              mutationFn: async (n) => await Z(e, t, n),
               onSuccess: async () => {
-                await n.invalidateQueries({ queryKey: [C, b, e, !1] });
+                await n.invalidateQueries({ queryKey: [E, C, e, !1] });
               },
             });
           }
-          function q(e) {
+          function X(e) {
             const t = (0, o.jE)();
             return (0, c.n)({
               mutationFn: async (t) => {
-                for (const n of t) await J(e, n.groupid, n.group);
+                for (const n of t) await Z(e, n.groupid, n.group);
                 return !0;
               },
               onSuccess: async () => {
-                await t.invalidateQueries({ queryKey: [C, b, e, !1] });
+                await t.invalidateQueries({ queryKey: [E, C, e, !1] });
               },
             });
           }
-          function Z(e, t) {
+          function ee(e, t) {
             const n = (0, o.jE)();
             return (0, c.n)({
               mutationFn: async () => {
@@ -803,75 +872,75 @@
                 return (
                   i.append("appid", e.toString()),
                   i.append("groupid", t),
-                  await K("deleteStatGroup", n, i),
+                  await Q("deleteStatGroup", n, i),
                   !0
                 );
               },
               onSuccess: async () => {
-                await n.invalidateQueries({ queryKey: [C, b, e, !1] });
+                await n.invalidateQueries({ queryKey: [E, C, e, !1] });
               },
             });
           }
-          async function $(e, t) {
+          async function te(e, t) {
             const n = new FormData();
             n.append("appid", e.toString()),
               n.append("groupids", JSON.stringify(t));
             const i = `${v.TS.PARTNER_BASE_URL}achievements/ajaxreordergroups/${e}`;
-            return await K("reorderGroups", i, n), !0;
+            return await Q("reorderGroups", i, n), !0;
           }
-          function X(e) {
-            T(e);
+          function ne(e) {
+            k(e);
             const t = (0, o.jE)();
             return (0, c.n)({
-              mutationFn: async (t) => await $(e, t),
+              mutationFn: async (t) => await te(e, t),
               onSuccess: async () => {
-                await t.invalidateQueries({ queryKey: [C, b, e, !1] });
+                await t.invalidateQueries({ queryKey: [E, C, e, !1] });
               },
             });
           }
-          async function ee(e, t, n) {
+          async function ie(e, t, n) {
             const i = new FormData();
             i.append("appid", e.toString()),
               i.append("groupid", (t ?? 0).toString()),
               i.append("names", JSON.stringify(n));
             const r = `${v.TS.PARTNER_BASE_URL}achievements/ajaxmoveachievements/${e}`;
-            return await K("moveAchievementsGroup", r, i), !0;
+            return await Q("moveAchievementsGroup", r, i), !0;
           }
-          function te(e) {
+          function re(e) {
             const t = (0, o.jE)();
             return (0, c.n)({
               mutationFn: async (t) => {
                 const { groupid: n, api_names: i } = t;
-                return await ee(e, n, i);
+                return await ie(e, n, i);
               },
               onSuccess: async () => {
-                await t.invalidateQueries({ queryKey: [C, b, e, !1] });
+                await t.invalidateQueries({ queryKey: [E, C, e, !1] });
               },
             });
           }
           var x;
-          async function ne(e, t, n, i, r) {
+          async function se(e, t, n, i, r) {
             const [s, a, o] = r.match(/data:(image\/\w+);base64,(.*)/),
               c = u.hp.from(o, "base64"),
               l = "image/png" === a ? "png" : "jpg",
               d = `${e.toString()}_${t}_${n}_${i == x.Achieved ? "a" : "g"}.${l}`,
               p = new File([c], d, { type: a }),
-              m = new FormData();
-            m.append("appID", e.toString()),
-              m.append("statID", t),
-              m.append("bit", n),
-              m.append("requestType", i.toString()),
-              m.append("image", p);
-            const h = `${v.TS.PARTNER_BASE_URL}images/uploadachievement`;
-            await K("AchievementImageUpload", h, m);
+              h = new FormData();
+            h.append("appID", e.toString()),
+              h.append("statID", t),
+              h.append("bit", n),
+              h.append("requestType", i.toString()),
+              h.append("image", p);
+            const m = `${v.TS.PARTNER_BASE_URL}images/uploadachievement`;
+            await Q("AchievementImageUpload", m, h);
           }
-          async function ie(e, t, n, i, r) {
-            i && i.startsWith("data:") && (await ne(e, t, n, x.Achieved, i)),
+          async function ae(e, t, n, i, r) {
+            i && i.startsWith("data:") && (await se(e, t, n, x.Achieved, i)),
               r &&
                 r.startsWith("data:") &&
-                (await ne(e, t, n, x.Unachieved, r));
+                (await se(e, t, n, x.Unachieved, r));
           }
-          async function re(e, t) {
+          async function oe(e, t) {
             const {
               statID: n,
               bitID: i,
@@ -881,7 +950,7 @@
             } = t;
             if (!r && n && i)
               return (
-                await ie(e, n, i, a, o), { success: s.R, statid: n, bitid: i }
+                await ae(e, n, i, a, o), { success: s.R, statid: n, bitid: i }
               );
             const c = new FormData();
             n && c.append("statid", n),
@@ -901,20 +970,20 @@
                 r.display.desc &&
                   c.append("displaydesc", JSON.stringify(r.display.desc)));
             const l = `${v.TS.PARTNER_BASE_URL}achievements/ajaxcreateorupdateachievement/${e}`,
-              d = await K("addOrUpdateAchievement", l, c);
-            return await ie(e, d.statid, d.bitid, a, o), d;
+              d = await Q("addOrUpdateAchievement", l, c);
+            return await ae(e, d.statid, d.bitid, a, o), d;
           }
-          function se(e, t, n) {
+          function ce(e, t, n) {
             const i = (0, o.jE)();
             return (0, c.n)({
               mutationFn: async (i) =>
-                await re(e, { statID: t, bitID: n, ...i }),
+                await oe(e, { statID: t, bitID: n, ...i }),
               onSuccess: async () => {
-                await i.invalidateQueries({ queryKey: [C, b, e, !1] });
+                await i.invalidateQueries({ queryKey: [E, C, e, !1] });
               },
             });
           }
-          async function ae(e, t) {
+          async function le(e, t) {
             const { statID: n, bitID: i } = t,
               r = `${v.TS.PARTNER_BASE_URL}achievements/ajaxdeleteachievement/${e}`,
               s = new FormData();
@@ -922,29 +991,29 @@
               s.append("appid", e.toString()),
               s.append("statid", n),
               s.append("bitid", i),
-              await K("deleteAchievement", r, s),
+              await Q("deleteAchievement", r, s),
               !0
             );
           }
-          function oe(e, t, n) {
+          function de(e, t, n) {
             const i = (0, o.jE)();
             return (0, c.n)({
-              mutationFn: async () => await ae(e, { statID: t, bitID: n }),
+              mutationFn: async () => await le(e, { statID: t, bitID: n }),
               onSuccess: async () => {
-                await i.invalidateQueries({ queryKey: [C, b, e, !1] });
+                await i.invalidateQueries({ queryKey: [E, C, e, !1] });
               },
             });
           }
-          function ce(e) {
+          function ue(e) {
             const t = (0, o.jE)();
             return (0, c.n)({
               mutationFn: async (t) => {
-                for (const n of t.addOrUpdate ?? []) await re(e, n);
-                for (const n of t.delete ?? []) await ae(e, n);
+                for (const n of t.addOrUpdate ?? []) await oe(e, n);
+                for (const n of t.delete ?? []) await le(e, n);
                 return !0;
               },
               onSuccess: async () => {
-                await t.invalidateQueries({ queryKey: [C, b, e, !1] });
+                await t.invalidateQueries({ queryKey: [E, C, e, !1] });
               },
             });
           }
@@ -952,8 +1021,8 @@
             (e.Achieved = "achievement"), (e.Unachieved = "achievement_gray");
           })(x || (x = {})),
             i();
-        } catch (le) {
-          i(le);
+        } catch (pe) {
+          i(pe);
         }
       });
     },
@@ -963,7 +1032,7 @@
         try {
           n.d(t, { V: () => T });
           var r = n(7850),
-            s = n(83392),
+            s = n(61011),
             a = n(20187),
             o = n(48474),
             c = n(57757),
@@ -971,25 +1040,25 @@
             d = n(84896),
             u = n(90626),
             p = n(10435),
-            m = n(12155),
-            h = n(52038),
+            h = n(12155),
+            m = n(52038),
             v = n(61859),
-            _ = n(70427),
-            g = n(44752),
+            g = n(70427),
+            _ = n(44752),
             x = n(64563),
             f = n(59330),
             j = n(91661),
             A = n(21261),
             w = n(24369),
-            E = n(33551),
-            y = n.n(E),
-            C = n(61023),
-            b = n(32754),
-            S = e([d, g, x, f, j, A]);
-          function N(e, t, n, i, r) {
-            return (i && e in i) || (n && e in n && B(t[e], n[e], r));
+            b = n(33551),
+            y = n.n(b),
+            E = n(61023),
+            C = n(32754),
+            S = e([d, _, x, f, j, A]);
+          function I(e, t, n, i, r) {
+            return (i && e in i) || (n && e in n && R(t[e], n[e], r));
           }
-          function I() {
+          function N() {
             const {
                 generateUnachievedImages: e,
                 setGenerateUnachievedImages: t,
@@ -998,8 +1067,8 @@
               i = (0, d.kb)(n),
               l = (0, d.FM)(n),
               p = (0, d.ts)(n),
-              [m, h] = (0, u.useState)(!1),
-              _ = "dull-7",
+              [h, m] = (0, u.useState)(!1),
+              g = "dull-7",
               x = "blue-8";
             return (0, r.jsxs)(s.s, {
               direction: "column",
@@ -1010,7 +1079,7 @@
                   gap: "1",
                   padding: "3",
                   marginTop: "3",
-                  background: _,
+                  background: g,
                   children: [
                     (0, r.jsx)(a.EY, {
                       contrast: "title",
@@ -1035,7 +1104,7 @@
                         (0, r.jsxs)(o.$, {
                           color: "dull",
                           onClick: () => {
-                            (0, g.le)(n, i);
+                            (0, _.le)(n, i);
                           },
                           children: [
                             (0, r.jsx)(Z, {}),
@@ -1064,7 +1133,7 @@
                   direction: "column",
                   gap: "1",
                   padding: "3",
-                  background: _,
+                  background: g,
                   children: [
                     (0, r.jsx)(a.EY, {
                       contrast: "title",
@@ -1094,7 +1163,7 @@
                             (0, r.jsxs)(o.$, {
                               color: "dull",
                               onClick: () => {
-                                h(!0);
+                                m(!0);
                               },
                               children: [
                                 (0, r.jsx)($, {}),
@@ -1125,7 +1194,7 @@
                             (0, r.jsxs)(o.$, {
                               color: "dull",
                               onClick: () => {
-                                (0, g.CD)(n, i, p);
+                                (0, _.CD)(n, i, p);
                               },
                               children: [
                                 (0, r.jsx)(Z, {}),
@@ -1163,7 +1232,7 @@
                   direction: "column",
                   gap: "1",
                   padding: "3",
-                  background: _,
+                  background: g,
                   children: [
                     (0, r.jsx)(a.EY, {
                       contrast: "title",
@@ -1188,7 +1257,7 @@
                         (0, r.jsxs)(o.$, {
                           color: "dull",
                           onClick: () => {
-                            (0, g.jF)(n, l, p);
+                            (0, _.jF)(n, l, p);
                           },
                           children: [
                             (0, r.jsx)(Z, {}),
@@ -1217,7 +1286,7 @@
                   direction: "column",
                   gap: "1",
                   padding: "3",
-                  background: _,
+                  background: g,
                   children: [
                     (0, r.jsx)(a.EY, {
                       contrast: "title",
@@ -1257,7 +1326,7 @@
                     }),
                   ],
                 }),
-                m && (0, r.jsx)(f.Jt, { onClose: () => h(!1) }),
+                h && (0, r.jsx)(f.Jt, { onClose: () => m(!1) }),
               ],
             });
           }
@@ -1272,7 +1341,7 @@
           function D(e) {
             const { title: t, description: n, children: i } = e;
             return (0, r.jsxs)("div", {
-              className: _.BulkEditSection,
+              className: g.BulkEditSection,
               children: [
                 (0, r.jsx)("h2", { children: t }),
                 (0, r.jsx)("p", { children: n }),
@@ -1291,32 +1360,32 @@
                 save: c,
                 isSaving: d,
                 saveError: p,
-                saveSucceeded: m,
-                onClose: g,
+                saveSucceeded: h,
+                onClose: _,
               } = (0, j.Mt)(),
-              [x, E] = (0, u.useState)(void 0);
+              [x, b] = (0, u.useState)(void 0);
             return (0, r.jsxs)("div", {
-              className: (0, h.A)(_.Takeover, _.BulkEdit),
+              className: (0, m.A)(g.Takeover, g.BulkEdit),
               children: [
-                m &&
+                h &&
                   (0, r.jsx)(A.TM, {
                     hideCancelButton: !0,
-                    onOk: g,
+                    onOk: _,
                     children: (0, v.we)("#AchievementEditor_Bulk_Save_Confirm"),
                   }),
-                (0, r.jsx)(I, {}),
+                (0, r.jsx)(N, {}),
                 (0, r.jsxs)("div", {
-                  className: _.TakeoverBody,
+                  className: g.TakeoverBody,
                   children: [
                     (0, r.jsx)(w.z, {
-                      className: _.BulkUploadFileDropBox,
+                      className: g.BulkUploadFileDropBox,
                       accept: n,
                       multiple: !0,
                       fileInputRef: i,
                       onUpload: s,
-                      onError: E,
+                      onError: b,
                       children: (0, r.jsx)("div", {
-                        className: _.UploadPlaceholder,
+                        className: g.UploadPlaceholder,
                         children: (0, v.we)(
                           "#AchievementEditor_Bulk_UploadBox",
                         ),
@@ -1324,7 +1393,7 @@
                     }),
                     !!x && (0, r.jsx)(A.r3, { text: x }),
                     (0, r.jsx)("div", {
-                      className: _.ButtonContainer,
+                      className: g.ButtonContainer,
                       children: (0, r.jsx)(o.$, {
                         color: "dull",
                         onClick: a,
@@ -1351,13 +1420,13 @@
                         ),
                         children: [
                           (0, r.jsx)(l.az, {
-                            className: _.LanguageSelect,
+                            className: g.LanguageSelect,
                             background: "dull-7",
                             padding: "2",
                             children: (0, r.jsx)(f.Mq, {}),
                           }),
-                          (0, r.jsx)(F, {}),
-                          (0, r.jsx)(G, {}),
+                          (0, r.jsx)(P, {}),
+                          (0, r.jsx)(B, {}),
                         ],
                       }),
                   ],
@@ -1372,18 +1441,18 @@
               ],
             });
           }
-          function B(e, t, n) {
+          function R(e, t, n) {
             if (!e) return !0;
             const i = (e, t) => (e < t ? -1 : e > t ? 1 : 0),
-              r = (0, g.pC)(e, n).sort((e, t) => i(e.field, t.field)),
-              s = R(t, n).sort((e, t) => i(e.field, t.field));
+              r = (0, _.pC)(e, n).sort((e, t) => i(e.field, t.field)),
+              s = L(t, n).sort((e, t) => i(e.field, t.field));
             return !y()(r, s);
           }
-          function R(e, t) {
+          function L(e, t) {
             const n = t.reduce((e, t) => ((e[t] = ""), e), {});
             return e.map((e) => ({ ...n, ...e }));
           }
-          function G() {
+          function B() {
             const {
                 definitions: e,
                 localization: t,
@@ -1397,30 +1466,30 @@
                 added: l,
                 modified: u,
                 unmodified: p,
-                deleted: m,
+                deleted: h,
               } = e,
               { localization: x } = t ?? {},
               { appID: f } = (0, d.L3)(),
               A = (0, d.ts)(f),
-              w = (e) => N(e, o, x, n, A),
-              E = [...u, ...p.filter(w)],
+              w = (e) => I(e, o, x, n, A),
+              b = [...u, ...p.filter(w)],
               y = p.filter((e) => !w(e));
             return (0, r.jsxs)("div", {
-              className: _.ResultsContainer,
+              className: g.ResultsContainer,
               children: [
                 (0, r.jsx)("h3", {
                   children: (0, v.we)(
                     "#AchievementEditor_Bulk_Pending_Achievements",
                   ),
                 }),
-                (0, r.jsx)(L, {}),
+                (0, r.jsx)(G, {}),
                 (0, r.jsxs)("div", {
-                  className: _.ImportedAchievements,
+                  className: g.ImportedAchievements,
                   children: [
                     l &&
                       !!l.length &&
-                      (0, r.jsx)(V, {
-                        className: (0, h.A)(_.ChangeBorder, _.Added),
+                      (0, r.jsx)(F, {
+                        className: (0, m.A)(g.ChangeBorder, g.Added),
                         title: (0, v.we)(
                           "#AchievementEditor_AchievementCsvImport_Added_Title",
                           l.length,
@@ -1440,23 +1509,23 @@
                           ),
                         ),
                       }),
-                    E &&
-                      !!E.length &&
-                      (0, r.jsx)(V, {
-                        className: (0, h.A)(_.ChangeBorder, _.Modified),
+                    b &&
+                      !!b.length &&
+                      (0, r.jsx)(F, {
+                        className: (0, m.A)(g.ChangeBorder, g.Modified),
                         title: (0, v.we)(
                           "#AchievementEditor_AchievementCsvImport_Modified_Title",
-                          E.length,
+                          b.length,
                         ),
                         description: (0, v.we)(
                           "#AchievementEditor_AchievementCsvImport_Modified_Description",
                         ),
-                        children: E.map((e, t) =>
+                        children: b.map((e, t) =>
                           (0, r.jsx)(
                             U,
                             {
                               achievement: o[e],
-                              data: a?.[e] || (0, g.oK)(o[e]),
+                              data: a?.[e] || (0, _.oK)(o[e]),
                               localization: x?.[e],
                               images: n?.[e],
                             },
@@ -1464,18 +1533,18 @@
                           ),
                         ),
                       }),
-                    m &&
-                      !!m.length &&
-                      (0, r.jsx)(V, {
-                        className: (0, h.A)(_.ChangeBorder, _.Deleted),
+                    h &&
+                      !!h.length &&
+                      (0, r.jsx)(F, {
+                        className: (0, m.A)(g.ChangeBorder, g.Deleted),
                         title: (0, v.we)(
                           "#AchievementEditor_AchievementCsvImport_Removed_Title",
-                          m.length,
+                          h.length,
                         ),
                         description: (0, v.we)(
                           "#AchievementEditor_AchievementCsvImport_Removed_Description",
                         ),
-                        headerChildren: (0, r.jsx)(C.j, {
+                        headerChildren: (0, r.jsx)(E.j, {
                           cursor: "pointer",
                           maxWidth: "max-content",
                           onClick: () => s(!i),
@@ -1489,12 +1558,12 @@
                             ),
                           }),
                         }),
-                        children: m.map((e, t) =>
+                        children: h.map((e, t) =>
                           (0, r.jsx)(
                             U,
                             {
                               achievement: o[e],
-                              data: (0, g.oK)(o[e]),
+                              data: (0, _.oK)(o[e]),
                               localization: x?.[e],
                               images: n?.[e],
                             },
@@ -1504,7 +1573,7 @@
                       }),
                     y &&
                       !!y.length &&
-                      (0, r.jsx)(O, {
+                      (0, r.jsx)(M, {
                         title: (0, v.we)(
                           "#AchievementEditor_AchievementCsvImport_Unmodified_Title",
                           y.length,
@@ -1517,7 +1586,7 @@
                             U,
                             {
                               achievement: o[e],
-                              data: (0, g.oK)(o[e]),
+                              data: (0, _.oK)(o[e]),
                               localization: x?.[e],
                               images: n?.[e],
                             },
@@ -1530,11 +1599,11 @@
               ],
             });
           }
-          function L() {
+          function G() {
             return (0, r.jsxs)("div", {
-              className: _.LegendContainer,
+              className: g.LegendContainer,
               children: [
-                (0, r.jsx)("div", { className: _.LegendChangeIcon }),
+                (0, r.jsx)("div", { className: g.LegendChangeIcon }),
                 (0, r.jsx)("p", {
                   children: (0, v.we)(
                     "#AchievementEditor_AchievementCsvImport_Pending_Legend",
@@ -1543,17 +1612,17 @@
               ],
             });
           }
-          function F() {
+          function P() {
             const { groupLocalization: e } = (0, j.Mt)(),
               { currentLanguage: t } = (0, d.L3)().localization,
               { csv: n, groups: i, modified: a, unmodified: o } = e ?? {};
             if (!n) return null;
             const c = (e) =>
               (0, r.jsxs)("div", {
-                className: _.ImportedGroups,
+                className: g.ImportedGroups,
                 children: [
                   (0, r.jsxs)("div", {
-                    className: _.TableHeader,
+                    className: g.TableHeader,
                     children: [
                       (0, r.jsx)("div", {
                         children: (0, v.we)(
@@ -1568,7 +1637,7 @@
                     ],
                   }),
                   e.map((e) => {
-                    const s = (0, g.NJ)(n[e], i[e]),
+                    const s = (0, _.NJ)(n[e], i[e]),
                       a = (0, f.ZM)(i[e]?.name, t) != (0, f.ZM)(s, t);
                     return (0, r.jsxs)(
                       "div",
@@ -1576,7 +1645,7 @@
                         children: [
                           (0, r.jsx)("div", { children: e }),
                           (0, r.jsx)("div", {
-                            className: (0, h.A)(a && _.ModifiedField),
+                            className: (0, m.A)(a && g.ModifiedField),
                             children: (0, r.jsx)(f.VU, { text: s }),
                           }),
                         ],
@@ -1587,19 +1656,19 @@
                 ],
               });
             return (0, r.jsxs)("div", {
-              className: _.ResultsContainer,
+              className: g.ResultsContainer,
               children: [
                 (0, r.jsx)("h3", {
                   children: (0, v.we)("#AchievementEditor_Bulk_Pending_Groups"),
                 }),
-                (0, r.jsx)(L, {}),
+                (0, r.jsx)(G, {}),
                 (0, r.jsxs)(s.s, {
                   direction: "column",
                   gap: "2",
                   children: [
                     !!a?.length &&
                       (0, r.jsx)(W, {
-                        className: (0, h.A)(_.ChangeBorder, _.Modified),
+                        className: (0, m.A)(g.ChangeBorder, g.Modified),
                         title: (0, v.we)(
                           "#AchievementEditor_AchievementCsvImport_Modified_Title",
                           a.length,
@@ -1626,7 +1695,7 @@
               ],
             });
           }
-          function M(e) {
+          function O(e) {
             const { title: t, description: n, headerChildren: i } = e;
             return (0, r.jsxs)(r.Fragment, {
               children: [
@@ -1636,55 +1705,55 @@
               ],
             });
           }
-          function P(e) {
+          function V(e) {
             const { className: t, children: n } = e;
             return (0, r.jsx)("div", {
-              className: (0, h.A)(_.ImportedAchievementsTableContainer, t),
+              className: (0, m.A)(g.ImportedAchievementsTableContainer, t),
               children: n,
             });
           }
-          function V(e) {
+          function F(e) {
             const { children: t, className: n, ...i } = e;
-            return (0, r.jsxs)(P, {
+            return (0, r.jsxs)(V, {
               ...e,
               children: [
                 (0, r.jsx)("div", {
-                  className: _.ImportedAchievementsTableHeader,
-                  children: (0, r.jsx)(M, { ...i }),
+                  className: g.ImportedAchievementsTableHeader,
+                  children: (0, r.jsx)(O, { ...i }),
                 }),
                 (0, r.jsxs)("div", {
-                  className: _.ImportedAchievementsTable,
+                  className: g.ImportedAchievementsTable,
                   children: [(0, r.jsx)(z, {}), t],
                 }),
               ],
             });
           }
-          function O(e) {
+          function M(e) {
             const { children: t, className: n, ...i } = e,
               [s, a] = (0, u.useState)(!0);
-            return (0, r.jsxs)(P, {
+            return (0, r.jsxs)(V, {
               ...e,
               children: [
                 (0, r.jsxs)("div", {
-                  className: (0, h.A)(
-                    _.ImportedAchievementsTableHeader,
-                    _.CollapsibleAchievementsTableHeader,
+                  className: (0, m.A)(
+                    g.ImportedAchievementsTableHeader,
+                    g.CollapsibleAchievementsTableHeader,
                   ),
                   children: [
-                    (0, r.jsx)("div", { children: (0, r.jsx)(M, { ...i }) }),
+                    (0, r.jsx)("div", { children: (0, r.jsx)(O, { ...i }) }),
                     (0, r.jsx)("div", {
                       children: (0, r.jsx)("div", {
-                        className: _.ExpandButton,
+                        className: g.ExpandButton,
                         onClick: () => a(!s),
-                        children: (0, r.jsx)(m.DK4, { angle: s ? 90 : 0 }),
+                        children: (0, r.jsx)(h.DK4, { angle: s ? 90 : 0 }),
                       }),
                     }),
                   ],
                 }),
                 (0, r.jsxs)("div", {
-                  className: (0, h.A)(
-                    _.ImportedAchievementsTable,
-                    s && _.Collapsed,
+                  className: (0, m.A)(
+                    g.ImportedAchievementsTable,
+                    s && g.Collapsed,
                   ),
                   children: [(0, r.jsx)(z, {}), t],
                 }),
@@ -1693,7 +1762,7 @@
           }
           function z() {
             return (0, r.jsxs)("div", {
-              className: _.TableHeader,
+              className: g.TableHeader,
               children: [
                 (0, r.jsx)("div", {}),
                 (0, r.jsx)("div", {
@@ -1733,37 +1802,37 @@
                 spoiler: l,
                 permission: u,
                 progress_stat_name: p,
-                progress_stat_min: m,
+                progress_stat_min: h,
                 progress_stat_max: j,
               } = n ?? {},
-              A = (0, g.B6)(
+              A = (0, _.B6)(
                 t?.display?.name?.token,
                 i?.find((e) => "name" == e.field),
               ),
-              w = (0, g.B6)(
+              w = (0, _.B6)(
                 t?.display?.desc?.token,
                 i?.find((e) => "description" == e.field),
               ),
-              { localization: E } = (0, d.L3)(),
-              { currentLanguage: y } = E;
-            function C(e, n, i) {
-              return (0, h.A)(
+              { localization: b } = (0, d.L3)(),
+              { currentLanguage: y } = b;
+            function E(e, n, i) {
+              return (0, m.A)(
                 i,
-                e == n && void 0 !== t ? void 0 : _.ModifiedField,
+                e == n && void 0 !== t ? void 0 : g.ModifiedField,
               );
             }
-            const b = "1" == t?.display?.hidden,
+            const C = "1" == t?.display?.hidden,
               S = "1" == t?.archived,
-              N = C(
+              I = E(
                 (0, f.ZM)(t?.display?.name, y),
                 (0, f.ZM)(i ? A : t?.display?.name, y),
               ),
-              I = C(
+              N = E(
                 (0, f.ZM)(t?.display?.desc, y),
                 (0, f.ZM)(i ? w : t?.display?.desc, y),
               );
             return (0, r.jsxs)("div", {
-              className: _.CompactAchievementRow,
+              className: g.CompactAchievementRow,
               children: [
                 (0, r.jsxs)("div", {
                   children: [
@@ -1771,38 +1840,38 @@
                       ? (0, r.jsx)(x.O, {
                           image: s?.achieved?.image,
                           size: 32,
-                          className: _.ModifiedIcon,
+                          className: g.ModifiedIcon,
                         })
                       : (0, r.jsx)(x.T, {
                           achievement: t,
                           size: 32,
-                          className: _.UnmodifiedIcon,
+                          className: g.UnmodifiedIcon,
                         }),
                     s?.unachieved?.image
                       ? (0, r.jsx)(x.O, {
                           image: s?.unachieved?.image,
                           size: 32,
-                          className: _.ModifiedIcon,
+                          className: g.ModifiedIcon,
                         })
                       : (0, r.jsx)(x.T, {
                           achievement: t,
                           achieved: !1,
                           size: 32,
-                          className: _.UnmodifiedIcon,
+                          className: g.UnmodifiedIcon,
                         }),
                   ],
                 }),
                 (0, r.jsxs)("div", {
-                  className: _.NameColumn,
+                  className: g.NameColumn,
                   children: [
                     (0, r.jsx)("div", {
-                      className: N,
+                      className: I,
                       children: (0, r.jsx)(f.VU, {
                         text: i ? A : t?.display?.name,
                       }),
                     }),
                     (0, r.jsx)("div", {
-                      className: I,
+                      className: N,
                       children: (0, r.jsx)(f.VU, {
                         text: i ? w : t?.display?.desc,
                       }),
@@ -1810,28 +1879,28 @@
                   ],
                 }),
                 (0, r.jsxs)("div", {
-                  className: _.ApiColumn,
+                  className: g.ApiColumn,
                   children: [
                     (0, r.jsx)("div", {
-                      className: C(a, t?.name),
+                      className: E(a, t?.name),
                       children: a,
                     }),
                     p &&
                       (0, r.jsxs)("div", {
-                        className: _.ProgressColumn,
+                        className: g.ProgressColumn,
                         children: [
                           (0, r.jsx)("span", {
-                            className: C(p, t?.progress?.value?.operand1),
+                            className: E(p, t?.progress?.value?.operand1),
                             children: p,
                           }),
                           ": ",
                           (0, r.jsx)("span", {
-                            className: C(m.toString(), t?.progress?.min_val),
-                            children: m,
+                            className: E(h.toString(), t?.progress?.min_val),
+                            children: h,
                           }),
                           " - ",
                           (0, r.jsx)("span", {
-                            className: C(j.toString(), t?.progress?.max_val),
+                            className: E(j.toString(), t?.progress?.max_val),
                             children: j,
                           }),
                         ],
@@ -1839,7 +1908,7 @@
                   ],
                 }),
                 (0, r.jsx)("div", {
-                  className: C(o, t?.groupid ?? ""),
+                  className: E(o, t?.groupid ?? ""),
                   children: (0, r.jsx)(H, {
                     groupid: o,
                     oldgroupid: t?.groupid,
@@ -1847,15 +1916,15 @@
                   }),
                 }),
                 (0, r.jsx)("div", {
-                  className: C(u, t?.permission ?? d.yu.Client),
+                  className: E(u, t?.permission ?? d.yu.Client),
                   children: d.yu[u],
                 }),
                 (0, r.jsxs)("div", {
-                  className: _.VisibilityColumn,
+                  className: g.VisibilityColumn,
                   children: [
-                    (l || b) &&
+                    (l || C) &&
                       (0, r.jsx)("div", {
-                        className: C(l, b),
+                        className: E(l, C),
                         children: l
                           ? (0, r.jsxs)(r.Fragment, {
                               children: [
@@ -1878,7 +1947,7 @@
                       }),
                     (c || S) &&
                       (0, r.jsx)("div", {
-                        className: C(c, S),
+                        className: E(c, S),
                         children: c
                           ? (0, r.jsxs)(r.Fragment, {
                               children: [
@@ -1921,8 +1990,8 @@
             if (!c.visible) {
               const e = l?.visible;
               return e
-                ? (0, r.jsxs)(b.he, {
-                    className: _.Warning,
+                ? (0, r.jsxs)(C.he, {
+                    className: g.Warning,
                     toolTipContent: (0, v.we)(
                       "#AchievementEditor_Achievement_Edit_Group_Warn_HidingAchievement",
                     ),
@@ -1931,20 +2000,20 @@
                   })
                 : (0, r.jsxs)(r.Fragment, {
                     children: [
-                      (0, r.jsx)(X, { className: _.UnreleasedText }),
+                      (0, r.jsx)(X, { className: g.UnreleasedText }),
                       u,
                     ],
                   });
             }
             return (i || o != n) && c.hasprogress
-              ? (0, r.jsxs)(b.he, {
-                  className: _.Warning,
+              ? (0, r.jsxs)(C.he, {
+                  className: g.Warning,
                   toolTipContent: (0, v.we)(
                     "#AchievementEditor_Group_CreateAchievement_WarnLiveGroup",
                   ),
                   style: { alignItems: "baseline" },
                   children: [
-                    (0, r.jsx)(A.BA, { className: _.WarningGlobeIcon }),
+                    (0, r.jsx)(A.BA, { className: g.WarningGlobeIcon }),
                     u,
                   ],
                 })
@@ -1961,12 +2030,12 @@
               } = e,
               [d, p] = (0, u.useState)(o);
             return (0, r.jsxs)("div", {
-              className: (0, h.A)(_.ResultsSection, c),
+              className: (0, m.A)(g.ResultsSection, c),
               children: [
                 (0, r.jsxs)("div", {
-                  className: (0, h.A)(
-                    _.ResultsSectionHeader,
-                    o && _.CollapsibleResultsSectionHeader,
+                  className: (0, m.A)(
+                    g.ResultsSectionHeader,
+                    o && g.CollapsibleResultsSectionHeader,
                   ),
                   children: [
                     (0, r.jsxs)("div", {
@@ -1990,15 +2059,15 @@
                     o &&
                       (0, r.jsx)("div", {
                         children: (0, r.jsx)("div", {
-                          className: _.ExpandButton,
+                          className: g.ExpandButton,
                           onClick: () => p(!d),
-                          children: (0, r.jsx)(m.DK4, { angle: d ? 90 : 0 }),
+                          children: (0, r.jsx)(h.DK4, { angle: d ? 90 : 0 }),
                         }),
                       }),
                   ],
                 }),
                 (0, r.jsx)("div", {
-                  className: (0, h.A)(_.ResultsSectionBody, d && _.Collapsed),
+                  className: (0, m.A)(g.ResultsSectionBody, d && g.Collapsed),
                   children: l,
                 }),
               ],
@@ -2023,7 +2092,7 @@
                           "#AchievementEditor_Bulk_Errors_Description",
                         ),
                         children: e.map((e) =>
-                          (0, r.jsx)(Q, { result: e }, e.filename),
+                          (0, r.jsx)(J, { result: e }, e.filename),
                         ),
                       }),
                     t.length > 0 &&
@@ -2040,7 +2109,7 @@
                           (0, r.jsx)(
                             "div",
                             {
-                              className: _.FileSuccessRow,
+                              className: g.FileSuccessRow,
                               children: (0, r.jsx)(K, { result: e }),
                             },
                             e.filename,
@@ -2057,7 +2126,7 @@
               c = t.image?.result?.image ?? i?.[0]?.image,
               d = c
                 ? (0, r.jsx)("div", {
-                    className: _.FileImage,
+                    className: g.FileImage,
                     children: (0, r.jsx)("img", {
                       src: c.image,
                       alt: c.filenameWithoutExtension,
@@ -2066,7 +2135,7 @@
                 : (0, r.jsx)(l.az, {
                     height: "24px",
                     aspectRatio: "1/1",
-                    children: (0, r.jsx)(m.ZHH, {}),
+                    children: (0, r.jsx)(h.ZHH, {}),
                   });
             return (0, r.jsxs)(s.s, {
               direction: "row",
@@ -2096,7 +2165,7 @@
               ],
             });
           }
-          function J(e) {
+          function q(e) {
             const {
               kind: t,
               errors: n,
@@ -2110,7 +2179,7 @@
                       "#AchievementEditor_GroupCsvImport_Header_GroupID",
                     )
                   : (0, v.we)("#AchievementEditor_Achievement_Edit_ApiName");
-              return (0, r.jsx)(q, {
+              return (0, r.jsx)(Q, {
                 keyHeader: e,
                 errorStrings: n,
                 csvErrors: i,
@@ -2123,14 +2192,14 @@
                       n.map((e, t) =>
                         (0, r.jsx)(
                           "div",
-                          { className: _.FileError, children: e },
+                          { className: g.FileError, children: e },
                           t,
                         ),
                       ),
                     s.map((e, t) =>
                       (0, r.jsx)(
                         "div",
-                        { className: _.FileError, children: e.error },
+                        { className: g.FileError, children: e.error },
                         t,
                       ),
                     ),
@@ -2142,29 +2211,29 @@
                     n.map((e, t) =>
                       (0, r.jsx)(
                         "div",
-                        { className: _.FileError, children: e },
+                        { className: g.FileError, children: e },
                         t,
                       ),
                     ),
                 });
           }
-          function Q(e) {
+          function J(e) {
             const { result: t } = e;
             return (0, r.jsxs)("div", {
-              className: _.FileErrorList,
+              className: g.FileErrorList,
               children: [
                 (0, r.jsx)(K, { result: t }),
-                (0, r.jsx)(J, { result: t }),
+                (0, r.jsx)(q, { result: t }),
               ],
             });
           }
-          function q(e) {
+          function Q(e) {
             const { keyHeader: t, errorStrings: n, csvErrors: i } = e;
             return (0, r.jsxs)("div", {
-              className: _.CsvErrorsTable,
+              className: g.CsvErrorsTable,
               children: [
                 (0, r.jsxs)("div", {
-                  className: _.TableHeader,
+                  className: g.TableHeader,
                   children: [
                     (0, r.jsx)("div", {
                       children: (0, v.we)(
@@ -2193,7 +2262,7 @@
                   n.map((e, t) =>
                     (0, r.jsx)(
                       "div",
-                      { className: _.FileError, children: e },
+                      { className: g.FileError, children: e },
                       t,
                     ),
                   ),
@@ -2220,21 +2289,21 @@
           function Z(e) {
             const { className: t } = e;
             return (0, r.jsx)("div", {
-              className: (0, h.A)(_.AchievementDetailIcon, t),
-              children: (0, r.jsx)(m.MwB, {}),
+              className: (0, m.A)(g.AchievementDetailIcon, t),
+              children: (0, r.jsx)(h.MwB, {}),
             });
           }
           function $(e) {
             const { className: t } = e;
             return (0, r.jsx)("div", {
-              className: (0, h.A)(_.AchievementDetailIcon, t),
-              children: (0, r.jsx)(m.f5X, {}),
+              className: (0, m.A)(g.AchievementDetailIcon, t),
+              children: (0, r.jsx)(h.f5X, {}),
             });
           }
           function X(e) {
             const { className: t, hideTitle: n = !1 } = e;
             return (0, r.jsx)("div", {
-              className: (0, h.A)(_.AchievementDetailIcon, t),
+              className: (0, m.A)(g.AchievementDetailIcon, t),
               title: n
                 ? void 0
                 : (0, v.we)("#AchievementEditor_Achievement_Edit_Hidden"),
@@ -2244,7 +2313,7 @@
           function ee(e) {
             const { className: t, hideTitle: n = !1 } = e;
             return (0, r.jsx)("div", {
-              className: (0, h.A)(_.AchievementDetailIcon, t),
+              className: (0, m.A)(g.AchievementDetailIcon, t),
               title: n
                 ? void 0
                 : (0, v.we)("#AchievementEditor_Achievement_Edit_Visible"),
@@ -2254,25 +2323,25 @@
           function te(e) {
             const { className: t, hideTitle: n = !1 } = e;
             return (0, r.jsx)("div", {
-              className: (0, h.A)(_.AchievementDetailIcon, t),
+              className: (0, m.A)(g.AchievementDetailIcon, t),
               title: n
                 ? void 0
                 : (0, v.we)("#AchievementEditor_Achievement_Edit_Archived"),
-              children: (0, r.jsx)(m.c_I, {}),
+              children: (0, r.jsx)(h.c_I, {}),
             });
           }
           function ne(e) {
             const { className: t } = e;
             return (0, r.jsx)("div", {
-              className: (0, h.A)(_.AchievementDetailIcon, t),
-              children: (0, r.jsx)(m.$VH, {}),
+              className: (0, m.A)(g.AchievementDetailIcon, t),
+              children: (0, r.jsx)(h.$VH, {}),
             });
           }
           function ie(e) {
             const { className: t } = e;
             return (0, r.jsx)("div", {
-              className: (0, h.A)(_.AchievementDetailIcon, t),
-              children: (0, r.jsx)(m.eTF, { color: "var(--color-error)" }),
+              className: (0, m.A)(g.AchievementDetailIcon, t),
+              children: (0, r.jsx)(h.eTF, { color: "var(--color-error)" }),
             });
           }
           function re(e, t) {
@@ -2283,7 +2352,7 @@
                 0 != n || (n = e.field.localeCompare(t.field)),
                 n);
           }
-          ([d, g, x, f, j, A] = S.then ? (await S)() : S), i();
+          ([d, _, x, f, j, A] = S.then ? (await S)() : S), i();
         } catch (se) {
           i(se);
         }
@@ -2293,7 +2362,7 @@
       "use strict";
       n.a(e, async (e, i) => {
         try {
-          n.d(t, { FU: () => G, Mt: () => R });
+          n.d(t, { FU: () => B, Mt: () => L });
           var r = n(7850),
             s = n(84896),
             a = n(90626),
@@ -2353,17 +2422,17 @@
             };
           }
           [s, c] = d.then ? (await d)() : d;
-          const m = "_ACHIEVED",
-            h = "_UNACHIEVED";
+          const h = "_ACHIEVED",
+            m = "_UNACHIEVED";
           function v(e) {
             const t = e.toUpperCase(),
-              n = [h, m].find((e) => t.endsWith(e));
+              n = [m, h].find((e) => t.endsWith(e));
             return {
               apiName: n ? e.substring(0, e.length - n.length) : e,
-              isAchieved: n != h,
+              isAchieved: n != m,
             };
           }
-          async function _(e) {
+          async function g(e) {
             const t = (await (0, l.Tc)({ files: [e], forceSquare: !0 }))[0];
             if (!t.success)
               return {
@@ -2394,11 +2463,11 @@
               },
             };
           }
-          const g = [
+          const _ = [
               { accept: ["text/csv"], process: p },
-              { accept: ["image/png", "image/jpeg"], process: _ },
+              { accept: ["image/png", "image/jpeg"], process: g },
             ],
-            x = Array.from(new Set(g.flatMap((e) => e.accept))),
+            x = Array.from(new Set(_.flatMap((e) => e.accept))),
             f = ["definitions", "localization", "grouplocalization"];
           function j(e, t) {
             return t.reduce((e, t) => {
@@ -2434,7 +2503,7 @@
                 }
               : A(t);
           }
-          function E(e, t) {
+          function b(e, t) {
             const n = e.find((e) => e.success && e.localization)?.localization;
             if (!n) return;
             const i = Object.keys(n.localization ?? {})
@@ -2453,7 +2522,7 @@
                   "#AchievementEditor_Localization_Error_NoAchievement",
                 );
           }
-          function C(e, t) {
+          function E(e, t) {
             return e.success && e.localization
               ? Object.keys(e.localization.localization ?? {})
                   .map((e) => ({ apiName: e, message: y(e, t) }))
@@ -2465,7 +2534,7 @@
                   }))
               : [];
           }
-          function b(e) {
+          function C(e) {
             return e.find((e) => e.success && e.groupLocalization)
               ?.groupLocalization;
           }
@@ -2478,7 +2547,7 @@
               ) ?? e
             );
           }
-          function N(e, t) {
+          function I(e, t) {
             if (!e.success || !e.image) return;
             const n = S(e.image.apiName, t);
             return n in t.achievements || n in t.csv
@@ -2493,9 +2562,9 @@
                   e.image.apiName,
                 );
           }
-          function I(e, t, n) {
+          function N(e, t, n) {
             const i = e
-                .filter((e) => e.success && e.image && !N(e, t))
+                .filter((e) => e.success && e.image && !I(e, t))
                 .map((e) => ({ ...e.image, apiName: S(e.image.apiName, t) })),
               r = new Set(i.map((e) => e.apiName));
             return Array.from(r).reduce((e, t) => {
@@ -2517,8 +2586,8 @@
             }, {});
           }
           function T(e, t) {
-            const n = (e) => N(e, t),
-              i = (e) => C(e, t),
+            const n = (e) => I(e, t),
+              i = (e) => E(e, t),
               r = (e) => !!n(e) || i(e).length > 0;
             return {
               errors: [
@@ -2588,61 +2657,61 @@
               };
             });
           }
-          const B = (0, a.createContext)(null);
-          function R() {
-            return (0, a.useContext)(B);
+          const R = (0, a.createContext)(null);
+          function L() {
+            return (0, a.useContext)(R);
           }
-          function G(e) {
+          function B(e) {
             const { onClose: t, setHasChanges: n, children: i } = e,
               { appID: c } = (0, s.L3)(),
               l = (0, s.kb)(c),
               d = (0, a.useMemo)(() => l ?? [], [l]),
               u = (0, s.FM)(c),
               p = (0, s.J3)(c),
-              m = (0, s.vd)(c),
-              h = (0, s.SN)(c),
+              h = (0, s.vd)(c),
+              m = (0, s.SN)(c),
               v = (0, s.Er)(c),
-              [_, f] = (0, a.useState)([]),
+              [g, f] = (0, a.useState)([]),
               [A, y] = (0, a.useState)(!0),
-              [C, S] = (0, a.useState)(!1),
-              [N, R] = (0, a.useState)(!1),
-              G = (0, a.useRef)(void 0),
-              L = (0, a.useMemo)(() => w(_, d), [_, d]),
-              F = (0, a.useMemo)(() => E(_, L), [_, L]),
-              M = (0, a.useMemo)(() => b(_), [_]),
-              P = (0, a.useMemo)(() => I(_, L, A), [_, L, A]),
-              { errors: V, successes: O } = (0, a.useMemo)(
-                () => T(_, L),
-                [_, L],
+              [E, S] = (0, a.useState)(!1),
+              [I, L] = (0, a.useState)(!1),
+              B = (0, a.useRef)(void 0),
+              G = (0, a.useMemo)(() => w(g, d), [g, d]),
+              P = (0, a.useMemo)(() => b(g, G), [g, G]),
+              O = (0, a.useMemo)(() => C(g), [g]),
+              V = (0, a.useMemo)(() => N(g, G, A), [g, G, A]),
+              { errors: F, successes: M } = (0, a.useMemo)(
+                () => T(g, G),
+                [g, G],
               ),
-              z = _.some((e) => e.success);
+              z = g.some((e) => e.success);
             (0, a.useEffect)(() => {
               n(z);
             }, [z, n]);
             const U = {
-              files: _,
-              definitions: L,
-              localization: F,
-              groupLocalization: M,
-              images: P,
-              errors: V,
-              successes: O,
+              files: g,
+              definitions: G,
+              localization: P,
+              groupLocalization: O,
+              images: V,
+              errors: F,
+              successes: M,
               hasData: z,
               generateUnachievedImages: A,
               setGenerateUnachievedImages: y,
-              confirmDelete: C,
+              confirmDelete: E,
               setConfirmDelete: S,
               uploadFiles: async (e) => {
                 const t = [];
                 for (const n of e) {
-                  const e = g.find((e) => e.accept.includes(n.type));
+                  const e = _.find((e) => e.accept.includes(n.type));
                   e
                     ? t.push(
                         await e.process(n, {
                           groups: u,
                           stats: p,
                           achievements: d,
-                          validLanguages: m,
+                          validLanguages: h,
                         }),
                       )
                     : t.push({
@@ -2655,29 +2724,29 @@
                         ],
                       });
                 }
-                f((e) => j(e, t)), G.current && (G.current.value = "");
+                f((e) => j(e, t)), B.current && (B.current.value = "");
               },
               removeFile: (e) => f((t) => t.filter((t) => t.filename != e)),
-              openFilePicker: () => G.current?.click(),
-              fileInputRef: G,
+              openFilePicker: () => B.current?.click(),
+              fileInputRef: B,
               acceptedTypes: x,
               save: async () => {
                 try {
-                  await v.mutateAsync(k(M)),
-                    await h.mutateAsync(D(L, F, P, C)),
-                    R(!0);
+                  await v.mutateAsync(k(O)),
+                    await m.mutateAsync(D(G, P, V, E)),
+                    L(!0);
                 } catch {}
               },
-              isSaving: h.isPending || v.isPending,
-              saveError: v.error?.message ?? h.error?.message,
-              saveSucceeded: N,
+              isSaving: m.isPending || v.isPending,
+              saveError: v.error?.message ?? m.error?.message,
+              saveSucceeded: I,
               onClose: t,
             };
-            return (0, r.jsx)(B, { value: U, children: i });
+            return (0, r.jsx)(R, { value: U, children: i });
           }
           i();
-        } catch (L) {
-          i(L);
+        } catch (G) {
+          i(G);
         }
       });
     },
@@ -2687,17 +2756,17 @@
         try {
           n.d(t, {
             B6: () => w,
-            CD: () => B,
+            CD: () => R,
             EO: () => z,
             JP: () => $,
-            K1: () => _,
-            Lq: () => O,
-            NJ: () => Q,
+            K1: () => g,
+            Lq: () => M,
+            NJ: () => J,
             OB: () => X,
-            Rr: () => V,
-            Wk: () => C,
-            Yc: () => P,
-            f4: () => G,
+            Rr: () => F,
+            Wk: () => E,
+            Yc: () => V,
+            f4: () => B,
             jF: () => ee,
             le: () => k,
             oK: () => j,
@@ -2713,7 +2782,7 @@
             u = n(59330),
             p = e([a, o, d, u]);
           [a, o, d, u] = p.then ? (await p)() : p;
-          const m = a.Ikc({
+          const h = a.Ikc({
               api_name: a.YjP().min(1),
               groupid: a.YjP().optional(),
               permission: a
@@ -2725,18 +2794,18 @@
               progress_stat_min: a.auy.number(),
               progress_stat_max: a.auy.number(),
             }),
-            h = a.Ikc({
+            m = a.Ikc({
               api_name: a.YjP().min(1),
               field: a.euz(["name", "description"]),
             }),
-            v = h.catchall(a.YjP());
-          function _(e) {
+            v = m.catchall(a.YjP());
+          function g(e) {
             return e.reduce((e, t) => ((e[t.name] = t), e), {});
           }
-          function g(e) {
+          function _(e) {
             const { groups: t, stats: n, achievements: i } = e,
               r = new Set(t.map((e) => e.groupid));
-            return m.superRefine((e, t) => {
+            return h.superRefine((e, t) => {
               if (
                 (e.groupid &&
                   !r.has(e.groupid) &&
@@ -2840,7 +2909,7 @@
           function f(e) {
             const { stats: t, achievements: n } = e;
             return a
-              .YOg(g(e))
+              .YOg(_(e))
               .superRefine((e, t) =>
                 x(
                   e,
@@ -2854,7 +2923,7 @@
               .transform((e) => {
                 const t = e.map((e) => e.api_name),
                   i = e.reduce((e, t) => ((e[t.api_name] = t), e), {}),
-                  r = _(n);
+                  r = g(n);
                 let a = {
                   csv: i,
                   achievements: r,
@@ -2898,11 +2967,11 @@
             const { api_name: n, field: i, ...r } = t ?? {};
             return { token: e, ...r };
           }
-          function E(e) {
+          function b(e) {
             return e.reduce((e, t) => ((e[t] = ""), e), {});
           }
           function y(e, t) {
-            const n = E(t);
+            const n = b(t);
             return [
               {
                 api_name: e.name,
@@ -2918,8 +2987,8 @@
               },
             ];
           }
-          async function C(e) {
-            const t = await c.g.ParseCSVFile(e, N);
+          async function E(e) {
+            const t = await c.g.ParseCSVFile(e, I);
             return t.errors && t.errors.length > 0
               ? {
                   fields: void 0,
@@ -2928,7 +2997,7 @@
                 }
               : { fields: t.meta.fields, data: t.data, errors: void 0 };
           }
-          function b() {
+          function C() {
             return {
               api_name: (0, l.we)("#AchievementEditor_Csv_Hint_LocApiName"),
               field: (0, l.we)("#AchievementEditor_Csv_Hint_LocField"),
@@ -2947,13 +3016,13 @@
               ),
             };
           }
-          function N(e) {
+          function I(e) {
             return e.replace(/\s*\(.*$/, "").trim();
           }
-          const I = "EXAMPLE_",
-            T = [`${I}FIRST_WIN`, `${I}HUNDRED_WINS`];
+          const N = "EXAMPLE_",
+            T = [`${N}FIRST_WIN`, `${N}HUNDRED_WINS`];
           function D(e) {
-            const t = E(e),
+            const t = b(e),
               n = [
                 { name: "First Victory", description: "Win your first match." },
                 { name: "100 Wins", description: "Win 100 different matches." },
@@ -2999,7 +3068,7 @@
                 ...e,
                 permission: o.yu[e.permission ?? o.yu.Client],
               })),
-              { fields: r, rows: s } = S(i, Object.keys(m.shape), {
+              { fields: r, rows: s } = S(i, Object.keys(h.shape), {
                 api_name: (0, l.we)("#AchievementEditor_Csv_Hint_ApiName"),
                 groupid: (0, l.we)("#AchievementEditor_Csv_Hint_GroupID"),
                 permission: (0, l.we)(
@@ -3020,7 +3089,7 @@
               });
             c.g.WriteCSVToFile(s, n, !0, r);
           }
-          function B(e, t, n) {
+          function R(e, t, n) {
             const i = `${e}-achievements-localization.csv`,
               r = (t.length > 0 ? t.map((e) => y(e, n)) : D(n)).reduce(
                 (e, t) => (e.push(...t), e),
@@ -3028,12 +3097,12 @@
               ),
               { fields: s, rows: a } = S(
                 r,
-                [...Object.keys(h.shape), ...n],
-                b(),
+                [...Object.keys(m.shape), ...n],
+                C(),
               );
             c.g.WriteCSVToFile(a, i, !0, s);
           }
-          function R(e, t, n) {
+          function L(e, t, n) {
             if (!t) return {};
             const i = t.find((e) => "name" == e.field),
               r = t.find((e) => "description" == e.field),
@@ -3051,7 +3120,7 @@
               );
             return { name: i ? w(s, i) : void 0, desc: r ? w(a, r) : void 0 };
           }
-          function G(e, t, n) {
+          function B(e, t, n) {
             return {
               name: e.api_name,
               groupid: e.groupid,
@@ -3063,7 +3132,7 @@
                 desc: void 0,
                 icon: void 0,
                 icon_gray: void 0,
-                ...R(e?.api_name, t, n),
+                ...L(e?.api_name, t, n),
               },
               progress: e.progress_stat_name
                 ? {
@@ -3074,7 +3143,7 @@
                 : void 0,
             };
           }
-          function L(e, t) {
+          function G(e, t) {
             const n = a.auy.number().safeParse(t.path[0])?.data;
             return void 0 !== n &&
               Number.isInteger(n) &&
@@ -3083,8 +3152,8 @@
               ? n
               : void 0;
           }
-          function F(e, t, n) {
-            const i = L(e, t),
+          function P(e, t, n) {
+            const i = G(e, t),
               r = e.data[i],
               s = t.path.length > 1 ? t.path[1] : n;
             return {
@@ -3095,26 +3164,26 @@
               message: t.message,
             };
           }
-          function M(e, t, n) {
-            const i = (t) => t.path.length > 1 && void 0 !== L(e, t);
+          function O(e, t, n) {
+            const i = (t) => t.path.length > 1 && void 0 !== G(e, t);
             return {
               errors: t?.filter((e) => !i(e)).map((e) => e.message),
-              fieldErrors: t?.filter(i).map((t) => F(e, t, n)),
+              fieldErrors: t?.filter(i).map((t) => P(e, t, n)),
             };
           }
-          function P(e) {
+          function V(e) {
             const t = new Set(e.fields);
-            return Object.keys(m.shape).every((e) => t.has(e));
+            return Object.keys(h.shape).every((e) => t.has(e));
           }
-          function V(e, t, n, i) {
+          function F(e, t, n, i) {
             const r = f({ groups: t, stats: n, achievements: i }).safeParse(
               e.data,
             );
-            return { ...r.data, ...M(e, r.error?.issues, "api_name") };
+            return { ...r.data, ...O(e, r.error?.issues, "api_name") };
           }
-          function O(e) {
+          function M(e) {
             const t = new Set(e.fields);
-            return Object.keys(h.shape).every((e) => t.has(e));
+            return Object.keys(m.shape).every((e) => t.has(e));
           }
           function z(e) {
             const t = a.YOg(v).safeParse(e.data);
@@ -3128,7 +3197,7 @@
                   ),
                   {},
                 ) ?? {},
-              ...M(e, t.error?.issues, "api_name"),
+              ...O(e, t.error?.issues, "api_name"),
             };
           }
           const U = a.Ikc({ groupid: a.YjP().min(1) }),
@@ -3145,14 +3214,14 @@
               .filter((t) => "token" == t || !!e[t])
               .reduce((t, n) => ((t[n] = e[n]), t), {});
           }
-          function J(e, t) {
-            return { groupid: e.groupid, ...E(t), ...A(e.name, t) };
+          function q(e, t) {
+            return { groupid: e.groupid, ...b(t), ...A(e.name, t) };
           }
-          function Q(e, t) {
+          function J(e, t) {
             const { groupid: n, ...i } = e;
             return K({ ...Y(t), ...i });
           }
-          function q(e) {
+          function Q(e) {
             const { groups: t, validLanguages: n } = e,
               i = new Set(t.map((e) => e.groupid));
             return H.superRefine((e, t) => {
@@ -3201,7 +3270,7 @@
           function Z(e) {
             const { groups: t } = e;
             return a
-              .YOg(q(e))
+              .YOg(Q(e))
               .superRefine((e, t) =>
                 x(
                   e,
@@ -3221,7 +3290,7 @@
                     return (
                       (r = n[t]),
                       (a = i[t]),
-                      s()(Q(r, a), K(Y(a)))
+                      s()(J(r, a), K(Y(a)))
                         ? e.unmodified.push(t)
                         : e.modified.push(t),
                       e
@@ -3239,15 +3308,15 @@
           }
           function X(e, t, n) {
             const i = Z({ groups: t, validLanguages: n }).safeParse(e.data);
-            return { ...i.data, ...M(e, i.error?.issues, "groupid") };
+            return { ...i.data, ...O(e, i.error?.issues, "groupid") };
           }
           function ee(e, t, n) {
             const i = `${e}-achievement-groups-localization.csv`,
-              r = t.map((e) => J(e, n)),
+              r = t.map((e) => q(e, n)),
               { fields: s, rows: a } = S(
                 r,
                 [...Object.keys(U.shape), ...n],
-                b(),
+                C(),
               );
             c.g.WriteCSVToFile(a, i, !0, s);
           }
@@ -3261,7 +3330,7 @@
       "use strict";
       n.a(e, async (e, i) => {
         try {
-          n.d(t, { O: () => m, T: () => p });
+          n.d(t, { O: () => h, T: () => p });
           var r = n(7850),
             s = n(70402),
             a = n(12155),
@@ -3283,24 +3352,24 @@
                 achieved: i = !0,
                 showWarningOnEmpty: d = !0,
                 children: p,
-                className: m,
+                className: h,
               } = e,
-              { cdnRoot: h } = (0, o.L3)(),
+              { cdnRoot: m } = (0, o.L3)(),
               v = i ? n?.display?.icon : n?.display?.icon_gray,
-              _ = u[t],
-              g = (0, c.A)(
-                _,
+              g = u[t],
+              _ = (0, c.A)(
+                g,
                 s.AchievementImageContainer,
                 !v && s.AchievementMissingImage,
-                m,
+                h,
               );
             return v
               ? (0, r.jsxs)("div", {
-                  className: g,
-                  children: [(0, r.jsx)("img", { src: h + v }), p],
+                  className: _,
+                  children: [(0, r.jsx)("img", { src: m + v }), p],
                 })
               : (0, r.jsx)("div", {
-                  className: g,
+                  className: _,
                   title: (0, l.we)(
                     "#AchievementEditor_AchievementImage_WarningMissingImage",
                   ),
@@ -3309,7 +3378,7 @@
                   }),
                 });
           }
-          function m(e) {
+          function h(e) {
             const {
                 size: t = 64,
                 image: n,
@@ -3331,8 +3400,8 @@
             });
           }
           i();
-        } catch (h) {
-          i(h);
+        } catch (m) {
+          i(m);
         }
       });
     },
@@ -3340,35 +3409,35 @@
       "use strict";
       n.a(e, async (e, i) => {
         try {
-          n.d(t, { i: () => G, p: () => k });
+          n.d(t, { i: () => B, p: () => k });
           var r = n(7850),
             s = n(48474),
-            a = n(83392),
+            a = n(61011),
             o = n(20187),
             c = n(90534),
             l = n(19997),
             d = n(11967),
             u = n(57757),
             p = n(61023),
-            m = n(70760),
-            h = n(84896),
+            h = n(70760),
+            m = n(84896),
             v = n(90626),
-            _ = n(16676),
-            g = n(9154),
+            g = n(16676),
+            _ = n(9154),
             x = n(12155),
             f = n(52694),
             j = n(32754),
             A = n(52038),
             w = n(61859),
-            E = n(64563),
+            b = n(64563),
             y = n(15008),
-            C = n(59330),
-            b = n(24292),
+            E = n(59330),
+            C = n(24292),
             S = n(21261),
-            N = n(53338),
-            I = n(60668),
+            I = n(53338),
+            N = n(60668),
             T = n(34532),
-            D = e([m, h, E, C, b, S, T]);
+            D = e([h, m, b, E, C, S, T]);
           function k(e) {
             const {
                 achievements: t,
@@ -3457,7 +3526,7 @@
                 }),
                 t.map((e) =>
                   (0, r.jsx)(
-                    B,
+                    R,
                     {
                       achievement: e,
                       compact: n,
@@ -3470,7 +3539,7 @@
               ],
             });
           }
-          function B(e) {
+          function R(e) {
             const {
                 achievement: t,
                 compact: n,
@@ -3481,22 +3550,22 @@
                 t.statID,
                 t.bitID,
               ),
-              { appID: u } = (0, h.L3)(),
-              p = (0, h.$j)(u, t.groupid),
-              m = (0, S.fw)(t.groupid, p),
-              [_, g] = v.useState(!1),
+              { appID: u } = (0, m.L3)(),
+              p = (0, m.$j)(u, t.groupid),
+              h = (0, S.fw)(t.groupid, p),
+              [g, _] = v.useState(!1),
               [x, f] = v.useState(!1),
               A = n ? 32 : 64;
             return (0, r.jsxs)("div", {
               children: [
-                _
-                  ? (0, r.jsx)(L, {
+                g
+                  ? (0, r.jsx)(G, {
                       achievement: t,
                       onSave: () => {
-                        g(!1);
+                        _(!1);
                       },
                       onCancel: () => {
-                        g(!1);
+                        _(!1);
                       },
                     })
                   : (0, r.jsxs)(r.Fragment, {
@@ -3509,13 +3578,13 @@
                         (0, r.jsxs)("div", {
                           className: y.Images,
                           children: [
-                            (0, r.jsx)(E.T, {
+                            (0, r.jsx)(b.T, {
                               achievement: t,
                               achieved: !0,
                               size: A,
                             }),
                             !n &&
-                              (0, r.jsx)(E.T, {
+                              (0, r.jsx)(b.T, {
                                 achievement: t,
                                 achieved: !1,
                                 size: A,
@@ -3528,13 +3597,13 @@
                             (0, r.jsx)(o.EY, {
                               weight: "heavy",
                               contrast: "title",
-                              children: (0, r.jsx)(C.VU, {
+                              children: (0, r.jsx)(E.VU, {
                                 text: t.display?.name,
                               }),
                             }),
                             !n &&
                               (0, r.jsx)(o.EY, {
-                                children: (0, r.jsx)(C.VU, {
+                                children: (0, r.jsx)(E.VU, {
                                   text: t.display?.desc,
                                 }),
                               }),
@@ -3555,7 +3624,7 @@
                         !n &&
                           (0, r.jsx)("div", {
                             className: y.Permission,
-                            children: h.yu[t.permission ?? 0],
+                            children: m.yu[t.permission ?? 0],
                           }),
                         !n &&
                           (0, r.jsxs)("div", {
@@ -3584,7 +3653,7 @@
                                 children: [
                                   (0, r.jsx)(S.lg, {
                                     onClick: () => {
-                                      g(!0);
+                                      _(!0);
                                     },
                                   }),
                                   (0, r.jsx)(S.et, {
@@ -3619,7 +3688,7 @@
                                   toolTipContent: (0, r.jsx)(c.az, {
                                     background: "dull-5",
                                     padding: "2",
-                                    children: (0, r.jsx)(T.or, { ...m }),
+                                    children: (0, r.jsx)(T.or, { ...h }),
                                   }),
                                   direction: "bottom",
                                   style: {
@@ -3627,7 +3696,7 @@
                                     whiteSpace: "nowrap",
                                   },
                                   children: (0, r.jsx)(T.C6, {
-                                    hidden: !m?.visible,
+                                    hidden: !h?.visible,
                                     className: y.GroupVisibility,
                                     omitText: !0,
                                   }),
@@ -3646,7 +3715,7 @@
                       ],
                     }),
                 x &&
-                  (0, r.jsx)(R, {
+                  (0, r.jsx)(L, {
                     achievement: t,
                     hideModal: () => {
                       f(!1);
@@ -3655,28 +3724,28 @@
               ],
             });
           }
-          function R(e) {
+          function L(e) {
             const { achievement: t, hideModal: n } = e,
-              { appID: i } = (0, h.L3)(),
+              { appID: i } = (0, m.L3)(),
               { existingAchievement: s, globalUnlockPercentage: o } = (0, S.YZ)(
                 t.statID,
                 t.bitID,
               ),
               c = s && o > 0,
-              l = (0, h.Bx)(i, t.statID, t.bitID);
-            return (0, r.jsx)(g.EN, {
+              l = (0, m.Bx)(i, t.statID, t.bitID);
+            return (0, r.jsx)(_.EN, {
               active: !0,
-              children: (0, r.jsx)(g.x_, {
+              children: (0, r.jsx)(_.x_, {
                 onEscKeypress: n,
-                children: (0, r.jsxs)(_.U9, {
+                children: (0, r.jsxs)(g.U9, {
                   className: y.AchievementDeleteDialog,
                   children: [
-                    (0, r.jsx)(_.Y9, {
+                    (0, r.jsx)(g.Y9, {
                       children: (0, w.we)(
                         "#AchievementEditor_Achievement_Delete_Dialog_Title",
                       ),
                     }),
-                    (0, r.jsxs)(_.nB, {
+                    (0, r.jsxs)(g.nB, {
                       children: [
                         c &&
                           (0, r.jsxs)(a.s, {
@@ -3695,7 +3764,7 @@
                           className: y.AchievementBox,
                           children: [
                             (0, r.jsx)("div", {
-                              children: (0, r.jsx)(E.T, {
+                              children: (0, r.jsx)(b.T, {
                                 achievement: t,
                                 achieved: !0,
                               }),
@@ -3727,8 +3796,8 @@
                                     }),
                                     (0, r.jsx)("div", {
                                       children:
-                                        (0, C.ZM)(t.display?.name, "english") ??
-                                        (0, C.ZM)(t.display?.name, "token"),
+                                        (0, E.ZM)(t.display?.name, "english") ??
+                                        (0, E.ZM)(t.display?.name, "token"),
                                     }),
                                   ],
                                 }),
@@ -3744,8 +3813,8 @@
                                     }),
                                     (0, r.jsx)("div", {
                                       children:
-                                        (0, C.ZM)(t.display?.desc, "english") ??
-                                        (0, C.ZM)(t.display?.desc, "token"),
+                                        (0, E.ZM)(t.display?.desc, "english") ??
+                                        (0, E.ZM)(t.display?.desc, "token"),
                                     }),
                                   ],
                                 }),
@@ -3755,7 +3824,7 @@
                         }),
                       ],
                     }),
-                    (0, r.jsx)(_.wi, {
+                    (0, r.jsx)(g.wi, {
                       children: (0, r.jsx)(S.Aj, {
                         saveText: (0, w.we)(
                           "#AchievementEditor_Achievement_Delete_Dialog_Delete",
@@ -3772,27 +3841,27 @@
               }),
             });
           }
+          function B(e) {
+            return (0, r.jsx)(P, { bNewAchievement: !0, ...e });
+          }
           function G(e) {
-            return (0, r.jsx)(F, { bNewAchievement: !0, ...e });
+            return (0, r.jsx)(P, { bNewAchievement: !1, ...e });
           }
-          function L(e) {
-            return (0, r.jsx)(F, { bNewAchievement: !1, ...e });
-          }
-          function F(e) {
+          function P(e) {
             const {
                 onSave: t,
                 onCancel: n,
                 bNewAchievement: i,
                 achievement: c,
-                groupid: _,
+                groupid: g,
               } = e,
-              { appID: g, cdnRoot: f } = (0, h.L3)(),
-              A = (0, h.J3)(g) ?? [],
-              E = (0, h.Q4)(g),
+              { appID: _, cdnRoot: f } = (0, m.L3)(),
+              A = (0, m.J3)(_) ?? [],
+              b = (0, m.Q4)(_),
               { globalUnlockPercentage: T } = (0, S.YZ)(c?.statID, c?.bitID),
-              D = (0, h.ts)(g),
-              k = (0, h.kb)(g),
-              B = (0, v.useMemo)(
+              D = (0, m.ts)(_),
+              k = (0, m.kb)(_),
+              R = (0, v.useMemo)(
                 () =>
                   new Set(
                     (k ?? [])
@@ -3803,55 +3872,55 @@
                   ),
                 [k, c?.statID, c?.bitID],
               ),
-              R = (0, v.useMemo)(
+              L = (0, v.useMemo)(
                 () =>
-                  (0, I.Cm)(
-                    m
+                  (0, N.Cm)(
+                    h
                       .YjP()
                       .refine((e) => e.trim().length > 0, {
                         error: (0, w.we)(
                           "#AchievementEditor_Achievement_Edit_ApiName_Error_Required",
                         ),
                       })
-                      .refine((e) => !B.has(e.trim().toUpperCase()), {
+                      .refine((e) => !R.has(e.trim().toUpperCase()), {
                         error: (0, w.we)(
                           "#AchievementEditor_Achievement_Edit_ApiName_Error_Duplicate",
                         ),
                       }),
                   ),
-                [B],
+                [R],
               ),
               {
-                value: G,
-                setValue: L,
-                isValid: F,
-                issues: M,
-              } = (0, I.$q)(c?.name, R, !0),
-              [V, O] = v.useState(c?.permission ?? h.yu.Client),
+                value: B,
+                setValue: G,
+                isValid: P,
+                issues: O,
+              } = (0, N.$q)(c?.name, L, !0),
+              [F, M] = v.useState(c?.permission ?? m.yu.Client),
               [z, U] = v.useState("1" == c?.display?.hidden),
               [H, W] = v.useState("1" == c?.archived),
-              [Y, K] = v.useState(c?.groupid ?? _),
-              [J, Q] = v.useState(c?.display?.name ?? { token: `${G}_NAME` }),
-              [q, Z] = v.useState(c?.display?.desc ?? { token: `${G}_DESC` }),
-              $ = E?.[c?.groupid ?? _],
+              [Y, K] = v.useState(c?.groupid ?? g),
+              [q, J] = v.useState(c?.display?.name ?? { token: `${B}_NAME` }),
+              [Q, Z] = v.useState(c?.display?.desc ?? { token: `${B}_DESC` }),
+              $ = b?.[c?.groupid ?? g],
               X = (0, S.fw)(Y, $),
-              ee = (0, S.fw)(Y, E?.[Y]),
+              ee = (0, S.fw)(Y, b?.[Y]),
               [te, ne] = v.useState(c?.progress ?? void 0),
               ie = te ? A.find((e) => e.name == te.value.operand1) : void 0,
-              re = (0, b.E)(ie),
+              re = (0, C.E)(ie),
               se =
                 !te ||
                 re.validator(
-                  m
-                    .Ikc({ min_val: m.auy.number(), max_val: m.auy.number() })
+                  h
+                    .Ikc({ min_val: h.auy.number(), max_val: h.auy.number() })
                     .safeParse(te).data,
                 ).success,
-              ae = F && se,
+              ae = P && se,
               [oe, ce] = v.useState(
                 c?.display?.icon
                   ? {
                       image: f + c?.display?.icon,
-                      imageType: N.bi,
+                      imageType: I.bi,
                       filenameWithoutExtension: c?.name,
                     }
                   : void 0,
@@ -3861,18 +3930,18 @@
                 c?.display?.icon_gray
                   ? {
                       image: f + c?.display?.icon_gray,
-                      imageType: N.bi,
+                      imageType: I.bi,
                       filenameWithoutExtension: c?.name,
                     }
                   : void 0,
               ),
-              me = async (e) => {
+              he = async (e) => {
                 try {
                   de(void 0),
                     pe({
-                      image: await (0, N.I7)(e),
-                      imageType: N.bi,
-                      filenameWithoutExtension: G,
+                      image: await (0, I.I7)(e),
+                      imageType: I.bi,
+                      filenameWithoutExtension: B,
                     });
                 } catch {
                   de(
@@ -3880,7 +3949,7 @@
                   );
                 }
               },
-              he = (0, h.q4)(g, i ? null : c.statID, i ? null : c.bitID);
+              me = (0, m.q4)(_, i ? null : c.statID, i ? null : c.bitID);
             let ve;
             return (
               i && ee.visible && ee.hasprogress
@@ -3895,7 +3964,7 @@
                         "#AchievementEditor_Achievement_Edit_Group_Warn_HidingAchievement",
                       ),
                     }))
-                  : c?.groupid != _ &&
+                  : c?.groupid != g &&
                     ee.visible &&
                     ee.hasprogress &&
                     (ve = (0, r.jsx)(S.lh, {
@@ -3946,10 +4015,10 @@
                                         ),
                                       }),
                                     }),
-                                    (0, r.jsx)(P, {
+                                    (0, r.jsx)(V, {
                                       icon: oe,
                                       setIcon: async (e) => {
-                                        ce(e), ue || (await me(e.image));
+                                        ce(e), ue || (await he(e.image));
                                       },
                                       achievement: c,
                                     }),
@@ -3969,7 +4038,7 @@
                                         ),
                                       }),
                                     }),
-                                    (0, r.jsx)(P, {
+                                    (0, r.jsx)(V, {
                                       icon: ue,
                                       setIcon: pe,
                                       achievement: c,
@@ -3977,7 +4046,7 @@
                                     !!oe &&
                                       (0, r.jsx)(s.$, {
                                         color: "dull",
-                                        onClick: () => me(oe.image),
+                                        onClick: () => he(oe.image),
                                         children: (0, w.we)(
                                           "#AchievementEditor_Achievement_Edit_Icons_Button_Generate",
                                         ),
@@ -3991,17 +4060,17 @@
                         }),
                         (0, r.jsxs)("div", {
                           children: [
-                            (0, r.jsx)(I.WL, {
+                            (0, r.jsx)(N.WL, {
                               label: (0, w.we)(
                                 "#AchievementEditor_Achievement_Edit_ApiName",
                               ),
                               placeholder: (0, w.we)(
                                 "#AchievementEditor_Achievement_Edit_ApiName_Placeholder",
                               ),
-                              value: G,
-                              isValid: F,
-                              setValue: L,
-                              issues: M,
+                              value: B,
+                              isValid: P,
+                              setValue: G,
+                              issues: O,
                               autoFocus: void 0 === c?.name,
                             }),
                             (0, r.jsxs)("div", {
@@ -4029,22 +4098,22 @@
                                 te
                                   ? (0, r.jsx)(p.j, {
                                       disabled: !0,
-                                      children: h.yu[V ?? h.yu.Client],
+                                      children: m.yu[F ?? m.yu.Client],
                                     })
                                   : (0, r.jsx)(d.l6, {
-                                      options: Object.values(h.yu).filter(
+                                      options: Object.values(m.yu).filter(
                                         (e) => "number" == typeof e,
                                       ),
-                                      getOptionLabel: (e) => h.yu[e],
-                                      selectedValue: V,
+                                      getOptionLabel: (e) => m.yu[e],
+                                      selectedValue: F,
                                       onSelectionChange: (e) => {
-                                        O(e ?? h.yu.Client);
+                                        M(e ?? m.yu.Client);
                                       },
                                     }),
                               ],
                             }),
-                            (0, r.jsx)(b.O, {
-                              appID: g,
+                            (0, r.jsx)(C.O, {
+                              appID: _,
                               progress: te,
                               setProgress: (e) => {
                                 if (e && e.value.operand1) {
@@ -4052,9 +4121,9 @@
                                   const t = A.find(
                                     (t) => t.name == e.value.operand1,
                                   );
-                                  t && O(t.permission);
+                                  t && M(t.permission);
                                 } else
-                                  ne(void 0), O(c?.permission ?? h.yu.Client);
+                                  ne(void 0), M(c?.permission ?? m.yu.Client);
                               },
                               ...re,
                             }),
@@ -4072,10 +4141,10 @@
                                         "#AchievementEditor_Achievement_Edit_DisplayName",
                                       ),
                                     }),
-                                    (0, r.jsx)(C.Mq, { locstring: J }),
+                                    (0, r.jsx)(E.Mq, { locstring: q }),
                                   ],
                                 }),
-                                (0, r.jsx)(C.Pk, { value: J, setValue: Q }),
+                                (0, r.jsx)(E.Pk, { value: q, setValue: J }),
                               ],
                             }),
                             (0, r.jsxs)("div", {
@@ -4088,12 +4157,12 @@
                                         "#AchievementEditor_Achievement_Edit_Description",
                                       ),
                                     }),
-                                    (0, r.jsx)(C.Mq, { locstring: q }),
+                                    (0, r.jsx)(E.Mq, { locstring: Q }),
                                   ],
                                 }),
-                                (0, r.jsx)(C.Pk, {
+                                (0, r.jsx)(E.Pk, {
                                   multiline: !0,
-                                  value: q,
+                                  value: Q,
                                   setValue: Z,
                                 }),
                               ],
@@ -4210,10 +4279,10 @@
                     }),
                     (0, r.jsx)(S.Aj, {
                       saveDisabled: !ae,
-                      pending: he.isPending,
-                      error: he.error?.message,
+                      pending: me.isPending,
+                      error: me.error?.message,
                       onSave: () => {
-                        const e = G.trim(),
+                        const e = B.trim(),
                           n = (0, S.EV)(
                             c?.display?.name?.token,
                             c?.name,
@@ -4226,15 +4295,15 @@
                             "desc",
                             e,
                           ),
-                          r = (0, C.II)(c?.display?.name, D),
-                          s = (0, C.II)(c?.display?.desc, D),
-                          a = (0, C.II)(J, D),
-                          o = (0, C.II)(q, D);
+                          r = (0, E.II)(c?.display?.name, D),
+                          s = (0, E.II)(c?.display?.desc, D),
+                          a = (0, E.II)(q, D),
+                          o = (0, E.II)(Q, D);
                         let l = {
                           ...c,
                           name: e,
                           groupid: Y,
-                          permission: V,
+                          permission: F,
                           archived: H ? "1" : "0",
                           display: {
                             ...c?.display,
@@ -4244,7 +4313,7 @@
                           },
                           progress: te,
                         };
-                        he.mutate(
+                        me.mutate(
                           {
                             achievement: l,
                             icon: oe?.image,
@@ -4264,26 +4333,26 @@
               })
             );
           }
-          [m, h, E, C, b, S, T] = D.then ? (await D)() : D;
-          const M = 256;
-          function P(e) {
+          [h, m, b, E, C, S, T] = D.then ? (await D)() : D;
+          const O = 256;
+          function V(e) {
             const { icon: t, setIcon: n, achievement: i } = e,
               a = (0, v.useRef)(null),
               [c, l] = v.useState(void 0);
             return (0, r.jsxs)(r.Fragment, {
               children: [
-                (0, r.jsx)(N._Q, {
+                (0, r.jsx)(I._Q, {
                   className: y.AchievementUploadBox,
                   onUpload: (e) => {
                     l(void 0), n(e);
                   },
                   onError: l,
                   forceSquare: !0,
-                  maxDimension: M,
+                  maxDimension: O,
                   fileInputRef: a,
                   children: t
-                    ? (0, r.jsx)(E.O, { image: t, size: 128 })
-                    : (0, r.jsx)(E.T, {
+                    ? (0, r.jsx)(b.O, { image: t, size: 128 })
+                    : (0, r.jsx)(b.T, {
                         achievement: i,
                         achieved: !0,
                         size: 128,
@@ -4308,8 +4377,8 @@
             });
           }
           i();
-        } catch (V) {
-          i(V);
+        } catch (F) {
+          i(F);
         }
       });
     },
@@ -4319,7 +4388,7 @@
         try {
           n.r(t), n.d(t, { default: () => S });
           var r = n(7850),
-            s = n(83392),
+            s = n(61011),
             a = n(38256),
             o = n(48474),
             c = n(28491),
@@ -4327,30 +4396,30 @@
             d = n(90626),
             u = n(45737),
             p = n.n(u),
-            m = n(52038),
-            h = n(61859),
+            h = n(52038),
+            m = n(61859),
             v = n(78327),
-            _ = n(30470),
-            g = n(21632),
+            g = n(30470),
+            _ = n(21632),
             x = n(5088),
             f = n(10435),
             j = n(34532),
             A = n(59330),
             w = n(21261),
-            E = n(66418),
+            b = n(66418),
             y = n(32433),
-            C = n(32754),
-            b = e([l, g, j, A, w]);
+            E = n(32754),
+            C = e([l, _, j, A, w]);
           function S(e) {
             const { appId: t } = e,
               n = (0, v.Tc)("icon_cdn_root", "application_config"),
               [i, s] = (0, d.useState)("english"),
               [a, o] = (0, d.useState)(""),
               [c, u] = (0, d.useState)(!1),
-              [p, _] = (0, d.useState)(!1),
+              [p, g] = (0, d.useState)(!1),
               f = (0, y.On)(t),
               { data: A } = (0, y.jw)(t),
-              E =
+              b =
                 ((0, l.vd)(t),
                 {
                   appID: t,
@@ -4360,78 +4429,78 @@
                   existingAchievements: f.data,
                   existingAchievementUnlockPercentages: A,
                 }),
-              [C, b] = (0, d.useState)(!1),
+              [E, C] = (0, d.useState)(!1),
               [S, D] = (0, d.useState)(),
-              [k, B] = (0, d.useState)(!1),
-              [R, G] = (0, d.useState)("main"),
-              L = {
+              [k, R] = (0, d.useState)(!1),
+              [L, B] = (0, d.useState)("main"),
+              G = {
                 main: {
-                  label: (0, h.we)("#AchievementEditor_Tab_ManageAchievements"),
+                  label: (0, m.we)("#AchievementEditor_Tab_ManageAchievements"),
                   render: () =>
                     (0, r.jsx)(j._e, {
                       reordering: c,
                       setReordering: u,
                       creatingNewGroup: p,
-                      setCreatingNewGroup: _,
+                      setCreatingNewGroup: g,
                     }),
                 },
                 bulk: {
-                  label: (0, h.we)("#AchievementEditor_Tab_BulkImportExport"),
+                  label: (0, m.we)("#AchievementEditor_Tab_BulkImportExport"),
                   render: () =>
-                    (0, r.jsx)(g.V, {
-                      onClose: () => G("main"),
-                      setHasChanges: B,
+                    (0, r.jsx)(_.V, {
+                      onClose: () => B("main"),
+                      setHasChanges: R,
                     }),
                 },
               };
             return (0, r.jsxs)(l.aR, {
-              value: E,
+              value: b,
               children: [
                 (0, r.jsxs)("div", {
-                  className: (0, m.A)(
+                  className: (0, h.A)(
                     x.EditorContainer,
                     "noOpinionatedGlobalStyles",
                   ),
                   children: [
                     (0, r.jsx)(T, {}),
-                    (0, r.jsx)(N, {
-                      options: Object.keys(L),
-                      getOptionLabel: (e) => L[e].label,
-                      selectedOption: R,
+                    (0, r.jsx)(I, {
+                      options: Object.keys(G),
+                      getOptionLabel: (e) => G[e].label,
+                      selectedOption: L,
                       onChange: (e) => {
-                        "bulk" == R && k ? (D(e), b(!0)) : G(e);
+                        "bulk" == L && k ? (D(e), C(!0)) : B(e);
                       },
                     }),
-                    "main" == R &&
-                      (0, r.jsx)(I, {
+                    "main" == L &&
+                      (0, r.jsx)(N, {
                         filter: a,
                         setFilter: o,
-                        showFilter: "main" == R,
+                        showFilter: "main" == L,
                         reordering: c,
                         setReordering: u,
-                        showReorder: "main" == R,
+                        showReorder: "main" == L,
                         creatingNewGroup: p,
-                        setCreatingNewGroup: _,
-                        showCreateNewGroup: "main" == R,
+                        setCreatingNewGroup: g,
+                        showCreateNewGroup: "main" == L,
                       }),
-                    L[R].render(),
+                    G[L].render(),
                   ],
                 }),
-                C &&
+                E &&
                   (0, r.jsx)(w.TM, {
-                    onCancel: () => b(!1),
+                    onCancel: () => C(!1),
                     onOk: () => {
-                      b(!1), B(!1), G(S), D(void 0);
+                      C(!1), R(!1), B(S), D(void 0);
                     },
-                    okText: (0, h.we)("#Button_Confirm"),
-                    children: (0, h.we)(
+                    okText: (0, m.we)("#Button_Confirm"),
+                    children: (0, m.we)(
                       "#AchievementEditor_TabBar_BulkUnsavedConfirm",
                     ),
                   }),
               ],
             });
           }
-          function N(e) {
+          function I(e) {
             const {
               options: t,
               getOptionLabel: n,
@@ -4455,7 +4524,7 @@
               ),
             });
           }
-          function I(e) {
+          function N(e) {
             const {
                 filter: t,
                 setFilter: n,
@@ -4464,12 +4533,12 @@
                 setReordering: l,
                 showReorder: u,
                 creatingNewGroup: p,
-                setCreatingNewGroup: m,
+                setCreatingNewGroup: h,
                 showCreateNewGroup: v,
               } = e,
-              _ = (0, A.DG)(),
-              g = Object.values(_).every((e) => e.set == e.total),
-              [j, E] = (0, d.useState)(!1);
+              g = (0, A.DG)(),
+              _ = Object.values(g).every((e) => e.set == e.total),
+              [j, b] = (0, d.useState)(!1);
             return (0, r.jsxs)("div", {
               className: x.Toolbar,
               children: [
@@ -4478,7 +4547,7 @@
                     i &&
                       (0, r.jsx)("div", {
                         children: (0, r.jsx)("h3", {
-                          children: (0, h.we)(
+                          children: (0, m.we)(
                             "#AchievementEditor_Toolbar_Filter_Title",
                           ),
                         }),
@@ -4490,10 +4559,10 @@
                           gap: "1",
                           align: "center",
                           children: [
-                            (0, h.we)("#LanguageTitle"),
-                            !g &&
-                              (0, r.jsx)(C.he, {
-                                toolTipContent: (0, h.we)(
+                            (0, m.we)("#LanguageTitle"),
+                            !_ &&
+                              (0, r.jsx)(E.he, {
+                                toolTipContent: (0, m.we)(
                                   "#AchievementEditor_Toolbar_Localization_WarnIncomplete",
                                 ),
                                 style: { height: "1.2em" },
@@ -4501,13 +4570,13 @@
                                   color: "var(--color-warning)",
                                 }),
                               }),
-                            (0, r.jsx)(C.he, {
-                              toolTipContent: (0, h.we)(
+                            (0, r.jsx)(E.he, {
+                              toolTipContent: (0, m.we)(
                                 "#AchievementEditor_Toolbar_Localization_Edit",
                               ),
                               style: { height: "1.2em" },
                               children: (0, r.jsx)(w.lg, {
-                                onClick: () => E(!0),
+                                onClick: () => b(!0),
                                 className: x.LanguageEditButton,
                               }),
                             }),
@@ -4524,7 +4593,7 @@
                       (0, r.jsx)("div", {
                         children: (0, r.jsx)(a.k, {
                           variant: "inset",
-                          placeholder: (0, h.we)(
+                          placeholder: (0, m.we)(
                             "#AchievementEditor_Toolbar_Filter_Placeholder",
                           ),
                           value: t,
@@ -4540,8 +4609,8 @@
                       children: [
                         v &&
                           !p &&
-                          (0, r.jsx)(C.he, {
-                            toolTipContent: (0, h.we)(
+                          (0, r.jsx)(E.he, {
+                            toolTipContent: (0, m.we)(
                               "#AchievementEditor_Button_CreateNewGroup_Tooltip",
                             ),
                             style: {
@@ -4552,7 +4621,7 @@
                             children: (0, r.jsxs)(o.$, {
                               variant: "vibrant",
                               disabled: c,
-                              onClick: () => m(!0),
+                              onClick: () => h(!0),
                               children: [
                                 (0, r.jsx)(f.OMN, {
                                   width: "14",
@@ -4561,7 +4630,7 @@
                                   className: x.ButtonIcon,
                                 }),
                                 " ",
-                                (0, h.we)(
+                                (0, m.we)(
                                   "#AchievementEditor_Button_CreateNewGroup",
                                 ),
                               ],
@@ -4569,8 +4638,8 @@
                           }),
                         u &&
                           !c &&
-                          (0, r.jsx)(C.he, {
-                            toolTipContent: (0, h.we)(
+                          (0, r.jsx)(E.he, {
+                            toolTipContent: (0, m.we)(
                               "#AchievementEditor_Reorder_Description",
                             ),
                             style: {
@@ -4586,18 +4655,19 @@
                     }),
                   ],
                 }),
-                j && (0, r.jsx)(A.Jt, { onClose: () => E(!1) }),
+                j && (0, r.jsx)(A.Jt, { onClose: () => b(!1) }),
               ],
             });
           }
           function T(e) {
             const { appID: t } = (0, l.L3)(),
-              n = E.iA.steamid,
-              i = `${_.TS.COMMUNITY_BASE_URL}profiles/${n}/achievements/${t}`,
-              s = `${_.TS.PARTNER_BASE_URL}doc/features/achievements`,
+              n = b.iA.steamid,
+              i = `${g.TS.COMMUNITY_BASE_URL}profiles/${n}/achievements/${t}`,
+              s = `${g.TS.PARTNER_BASE_URL}doc/features/achievements`,
               a = `${s}#5`,
               o = (0, l.Rz)(t),
-              d = (0, l.kb)(t)?.length ?? 0;
+              d = (0, l.kb)(t)?.length ?? 0,
+              u = (0, l.GV)(t);
             return (0, r.jsxs)("div", {
               className: x.HeaderContainer,
               children: [
@@ -4608,11 +4678,11 @@
                     children: [
                       (0, r.jsx)("div", {
                         className: p().PageTitle,
-                        children: (0, h.we)("#AchievementEditor_title"),
+                        children: (0, m.we)("#AchievementEditor_title"),
                       }),
                       (0, r.jsx)(c.Y, {
                         href: s,
-                        children: (0, h.we)("#AssetRequest_General_SeeDocs"),
+                        children: (0, m.we)("#AssetRequest_General_SeeDocs"),
                       }),
                     ],
                   }),
@@ -4624,14 +4694,14 @@
                       children: [
                         (0, r.jsxs)("div", {
                           children: [
-                            (0, h.we)(
+                            (0, m.we)(
                               "#AchievementEditor_Description_Title_Overview",
                             ),
                             ":",
                           ],
                         }),
                         (0, r.jsx)("div", {
-                          children: (0, h.we)(
+                          children: (0, m.we)(
                             "#AchievementEditor_Description_Overview",
                           ),
                         }),
@@ -4641,7 +4711,7 @@
                       children: [
                         (0, r.jsxs)("div", {
                           children: [
-                            (0, h.we)(
+                            (0, m.we)(
                               "#AchievementEditor_Description_Title_Requirements",
                             ),
                             ":",
@@ -4649,7 +4719,7 @@
                         }),
                         (0, r.jsx)("div", {
                           className: x.Important,
-                          children: (0, h.oW)(
+                          children: (0, m.oW)(
                             "#AchievementEditor_Description_Requirements",
                             (0, r.jsx)("a", {
                               href: "https://help.steampowered.com/faqs/view/6862-8119-C23E-EA7B",
@@ -4662,14 +4732,14 @@
                       children: [
                         (0, r.jsxs)("div", {
                           children: [
-                            (0, h.we)(
+                            (0, m.we)(
                               "#AchievementEditor_Description_Title_Design",
                             ),
                             ":",
                           ],
                         }),
                         (0, r.jsx)("div", {
-                          children: (0, h.we)(
+                          children: (0, m.we)(
                             "#AchievementEditor_Description_Design",
                           ),
                         }),
@@ -4679,12 +4749,12 @@
                       children: [
                         (0, r.jsxs)("div", {
                           children: [
-                            (0, h.we)("#AchievementEditor_Header_GroupList"),
+                            (0, m.we)("#AchievementEditor_Header_GroupList"),
                             ":",
                           ],
                         }),
                         (0, r.jsx)("div", {
-                          children: (0, h.we)(
+                          children: (0, m.we)(
                             "#AchievementEditor_Description_GroupList",
                           ),
                         }),
@@ -4695,7 +4765,7 @@
                         children: [
                           (0, r.jsxs)("div", {
                             children: [
-                              (0, h.we)(
+                              (0, m.we)(
                                 "#AchievementEditor_Description_Title_Limit",
                               ),
                               ":",
@@ -4703,7 +4773,7 @@
                           }),
                           (0, r.jsxs)("div", {
                             children: [
-                              (0, h.we)(
+                              (0, m.we)(
                                 "#AchievementEditor_Description_Limit",
                                 d,
                                 o.max_achievements,
@@ -4712,8 +4782,8 @@
                                 (0, r.jsxs)(r.Fragment, {
                                   children: [
                                     " ",
-                                    (0, h.uH)(
-                                      (0, h.we)(
+                                    (0, m.uH)(
+                                      (0, m.we)(
                                         "#AchievementEditor_Description_Limit_Unvetted",
                                         o.max_achievements,
                                       ),
@@ -4721,6 +4791,12 @@
                                     ),
                                   ],
                                 }),
+                              " ",
+                              (0, m.we)(
+                                "#AchievementEditor_Description_Limit_Groups",
+                                u,
+                                o.max_groups,
+                              ),
                             ],
                           }),
                         ],
@@ -4729,14 +4805,14 @@
                       children: [
                         (0, r.jsxs)("div", {
                           children: [
-                            (0, h.we)(
+                            (0, m.we)(
                               "#AchievementEditor_Description_Title_Testing",
                             ),
                             ":",
                           ],
                         }),
                         (0, r.jsx)("div", {
-                          children: (0, h.oW)(
+                          children: (0, m.oW)(
                             "#AchievementEditor_Description_Testing",
                             (0, r.jsx)("a", { href: i }),
                           ),
@@ -4747,17 +4823,17 @@
                       children: [
                         (0, r.jsxs)("div", {
                           children: [
-                            (0, h.we)(
+                            (0, m.we)(
                               "#AchievementEditor_Description_Title_Releasing",
                             ),
                             ":",
                           ],
                         }),
                         (0, r.jsx)("div", {
-                          children: (0, h.oW)(
+                          children: (0, m.oW)(
                             "#AchievementEditor_Description_Releasing",
                             (0, r.jsx)("a", {
-                              href: `${_.TS.PARTNER_BASE_URL}admin/game/editbyappid/${t}?activetab=tab_basic#feature_section`,
+                              href: `${g.TS.PARTNER_BASE_URL}admin/game/editbyappid/${t}?activetab=tab_basic#feature_section`,
                             }),
                           ),
                         }),
@@ -4768,7 +4844,7 @@
               ],
             });
           }
-          ([l, g, j, A, w] = b.then ? (await b)() : b), i();
+          ([l, _, j, A, w] = C.then ? (await C)() : C), i();
         } catch (D) {
           i(D);
         }
@@ -4778,30 +4854,30 @@
       "use strict";
       n.a(e, async (e, i) => {
         try {
-          n.d(t, { C6: () => P, _e: () => N, or: () => V });
+          n.d(t, { C6: () => V, _e: () => I, or: () => F });
           var r = n(7850),
             s = n(89558),
-            a = n(48474),
-            o = n(83392),
+            a = n(61011),
+            o = n(48474),
             c = n(20187),
             l = n(90534),
             d = n(57757),
             u = n(11967),
             p = n(46562),
-            m = n(84896),
-            h = n(90626),
+            h = n(84896),
+            m = n(90626),
             v = n(16676),
-            _ = n(10435),
-            g = n(9154),
+            g = n(10435),
+            _ = n(9154),
             x = n(12155),
             f = n(52038),
             j = n(61859),
             A = n(874),
             w = n(97377),
-            E = n(1103),
+            b = n(1103),
             y = n(59330),
-            C = n(21261),
-            b = e([m, w, y, C]);
+            E = n(21261),
+            C = e([h, w, y, E]);
           function S(e, t, n) {
             if (!t) return { included: e, excluded: [] };
             const i = t.replace(/[#-.]|[[-^]|[?|{}]/g, "\\$&"),
@@ -4826,33 +4902,34 @@
               { included: [], excluded: [] },
             );
           }
-          function N(e) {
+          function I(e) {
             const {
                 reordering: t,
                 setReordering: n,
                 creatingNewGroup: i,
                 setCreatingNewGroup: s,
               } = e,
-              { appID: o } = (0, m.L3)(),
-              c = (0, m.kb)(o),
-              l = (0, m.FM)(o);
+              { appID: l } = (0, h.L3)(),
+              d = (0, h.kb)(l),
+              u = (0, h.FM)(l),
+              p = (0, h.JI)(l);
             return t
               ? (0, r.jsx)("div", {
                   children: (0, r.jsxs)("div", {
-                    className: E.GroupList,
+                    className: b.GroupList,
                     children: [
                       (0, r.jsx)("div", {
-                        className: E.GroupReorderDescription,
+                        className: b.GroupReorderDescription,
                         children: (0, j.we)(
                           "#AchievementEditor_Reorder_Description",
                         ),
                       }),
                       (0, r.jsxs)("div", {
-                        className: E.SortDefaultGroup,
+                        className: b.SortDefaultGroup,
                         children: [
                           (0, r.jsx)(D, { groupid: null, group: null }),
                           (0, r.jsx)("div", {
-                            className: E.OverlayContent,
+                            className: b.OverlayContent,
                             children: (0, r.jsx)("h2", {
                               children: (0, j.we)(
                                 "#AchievementEditor_Reorder_NotDefault",
@@ -4861,8 +4938,8 @@
                           }),
                         ],
                       }),
-                      (0, r.jsx)(I, {
-                        groups: l,
+                      (0, r.jsx)(N, {
+                        groups: u,
                         onSave: () => n(!1),
                         onCancel: () => n(!1),
                       }),
@@ -4872,11 +4949,11 @@
               : (0, r.jsxs)("div", {
                   children: [
                     (0, r.jsxs)("div", {
-                      className: E.GroupList,
+                      className: b.GroupList,
                       children: [
-                        !!c && (0, r.jsx)(T, { groupid: null, group: null }),
-                        !!l &&
-                          l.map((e) =>
+                        !!d && (0, r.jsx)(T, { groupid: null, group: null }),
+                        !!u &&
+                          u.map((e) =>
                             (0, r.jsx)(
                               T,
                               { groupid: e.groupid, group: e },
@@ -4899,31 +4976,46 @@
                             "kg_newgroup",
                           )
                         : !t &&
-                          (0, r.jsxs)(a.$, {
-                            variant: "vibrant",
-                            onClick: () => s(!0),
+                          (0, r.jsxs)(a.s, {
+                            direction: "row",
+                            gap: "2",
+                            align: "center",
                             children: [
-                              (0, r.jsx)(_.OMN, {
-                                width: "14",
-                                height: "14",
-                                fill: "currentColor",
-                                className: E.Icon,
+                              (0, r.jsxs)(o.$, {
+                                variant: "vibrant",
+                                disabled: !p,
+                                onClick: () => s(!0),
+                                children: [
+                                  (0, r.jsx)(g.OMN, {
+                                    width: "14",
+                                    height: "14",
+                                    fill: "currentColor",
+                                    className: b.Icon,
+                                  }),
+                                  " ",
+                                  (0, j.we)(
+                                    "#AchievementEditor_Button_CreateNewGroup",
+                                  ),
+                                ],
                               }),
-                              " ",
-                              (0, j.we)(
-                                "#AchievementEditor_Button_CreateNewGroup",
-                              ),
+                              !p &&
+                                (0, r.jsx)(c.EY, {
+                                  contrast: "description",
+                                  children: (0, j.we)(
+                                    "#AchievementEditor_Group_LimitReached",
+                                  ),
+                                }),
                             ],
                           }),
                     }),
                   ],
                 });
           }
-          function I(e) {
+          function N(e) {
             const { groups: t, onSave: n, onCancel: i } = e,
-              { appID: a } = (0, m.L3)(),
-              [o, c] = h.useState(t),
-              l = (0, m.iF)(a);
+              { appID: a } = (0, h.L3)(),
+              [o, c] = m.useState(t),
+              l = (0, h.iF)(a);
             return (0, r.jsxs)(r.Fragment, {
               children: [
                 (0, r.jsx)(s.JY, {
@@ -4941,7 +5033,7 @@
                     direction: "vertical",
                     children: (e) =>
                       (0, r.jsxs)("div", {
-                        className: E.GroupSorter,
+                        className: b.GroupSorter,
                         ...e.droppableProps,
                         ref: e.innerRef,
                         children: [
@@ -4968,7 +5060,7 @@
                       }),
                   }),
                 }),
-                (0, r.jsx)(C.Aj, {
+                (0, r.jsx)(E.Aj, {
                   pending: l.isPending,
                   error: l.error?.message,
                   onSave: () =>
@@ -4989,22 +5081,22 @@
                 onSave: s,
                 onCancel: l,
               } = e,
-              { appID: d, filter: u, localization: p } = (0, m.L3)(),
+              { appID: d, filter: u, localization: p } = (0, h.L3)(),
               { currentLanguage: v } = p,
-              g = (0, m.FK)(d, t),
-              f = (0, C.fw)(t, n),
-              A = (0, C.$P)(),
+              _ = (0, h.FK)(d, t),
+              f = (0, E.fw)(t, n),
+              A = (0, E.$P)(),
               y =
                 f.visible &&
                 Object.values(A ?? {}).some(
                   (e) => (e.globalUnlockPercentage ?? 0) > 0,
                 ),
-              [b, S] = h.useState(i),
-              [N, I] = h.useState(!1),
-              [T, D] = h.useState(!1),
-              [k, R] = h.useState(!1),
-              [F, M] = h.useState(!1),
-              P = T
+              [C, S] = m.useState(i),
+              [I, N] = m.useState(!1),
+              [T, D] = m.useState(!1),
+              [k, L] = m.useState(!1),
+              [P, O] = m.useState(!1),
+              V = T
                 ? void 0
                 : [
                     {
@@ -5017,27 +5109,27 @@
                       key: "delete",
                       label: (0, j.we)("#AchievementEditor_Group_Tools_Delete"),
                       icon: () => (0, r.jsx)(x.X, {}),
-                      action: () => I(!0),
+                      action: () => N(!0),
                     },
                   ].filter((e) =>
                     "edit" == e.key ? !!t : "delete" != e.key || !!t,
                   ),
-              V = async () => {
+              F = async () => {
                 S(!1), s && s();
               },
               U = () => {
                 S(!1), l && l();
               };
-            let H = (0, r.jsx)(a.$, {
+            let H = (0, r.jsx)(o.$, {
               variant: "vibrant",
-              onClick: () => R(!0),
-              children: (0, r.jsxs)(o.s, {
+              onClick: () => L(!0),
+              children: (0, r.jsxs)(a.s, {
                 children: [
-                  (0, r.jsx)(_.OMN, {
+                  (0, r.jsx)(g.OMN, {
                     width: "14",
                     height: "14",
                     fill: "currentColor",
-                    className: E.Icon,
+                    className: b.Icon,
                   }),
                   " ",
                   (0, j.we)("#AchievementEditor_Group_CreateAchievement"),
@@ -5046,17 +5138,17 @@
             });
             return (
               y &&
-                (H = (0, r.jsxs)(o.s, {
+                (H = (0, r.jsxs)(a.s, {
                   direction: "row",
                   gap: "2",
                   align: "center",
                   children: [
                     H,
-                    (0, r.jsxs)(o.s, {
+                    (0, r.jsxs)(a.s, {
                       align: "center",
                       gap: "1",
                       children: [
-                        (0, r.jsx)(C.id, { color: "var(--color-amber-9)" }),
+                        (0, r.jsx)(E.id, { color: "var(--color-amber-9)" }),
                         (0, r.jsxs)(c.EY, {
                           color: "amber-9",
                           children: [
@@ -5070,37 +5162,37 @@
                     }),
                   ],
                 })),
-              b
+              C
                 ? i
-                  ? (0, r.jsx)(O, { onSave: V, onCancel: U })
+                  ? (0, r.jsx)(M, { onSave: F, onCancel: U })
                   : (0, r.jsx)(z, {
                       groupid: t,
                       group: n,
-                      onSave: V,
+                      onSave: F,
                       onCancel: U,
                     })
-                : (0, r.jsxs)(B, {
+                : (0, r.jsxs)(R, {
                     groupid: t,
                     group: n,
-                    actions: P,
-                    collapsed: F,
-                    setCollapsed: M,
+                    actions: V,
+                    collapsed: P,
+                    setCollapsed: O,
                     children: [
-                      !F &&
+                      !P &&
                         (0, r.jsx)("div", {
-                          className: E.AchievementsFullDisplay,
+                          className: b.AchievementsFullDisplay,
                           children: T
-                            ? (0, r.jsx)(L, {
+                            ? (0, r.jsx)(G, {
                                 groupid: t,
-                                achievements: g,
+                                achievements: _,
                                 filter: u,
                                 currentLanguage: v,
                                 onClose: () => D(!1),
                               })
                             : (0, r.jsxs)(r.Fragment, {
                                 children: [
-                                  (0, r.jsx)(G, {
-                                    achievements: g,
+                                  (0, r.jsx)(B, {
+                                    achievements: _,
                                     filter: u,
                                     currentLanguage: v,
                                     setBulkMove: () => D(!0),
@@ -5110,20 +5202,20 @@
                                       ? (0, r.jsx)(w.i, {
                                           achievement: null,
                                           groupid: t,
-                                          onSave: (e) => R(!1),
-                                          onCancel: () => R(!1),
+                                          onSave: (e) => L(!1),
+                                          onCancel: () => L(!1),
                                         })
                                       : H,
                                   }),
                                 ],
                               }),
                         }),
-                      N &&
+                      I &&
                         (0, r.jsx)(K, {
                           groupid: t,
                           group: n,
                           hideModal: () => {
-                            I(!1);
+                            N(!1);
                           },
                         }),
                     ],
@@ -5132,15 +5224,15 @@
           }
           function D(e) {
             const { className: t, ...n } = e;
-            return (0, r.jsx)(B, {
-              className: (0, f.A)(E.CompactGroupContainer, t),
+            return (0, r.jsx)(R, {
+              className: (0, f.A)(b.CompactGroupContainer, t),
               ...n,
             });
           }
           function k(e) {
             return `group-${e}`;
           }
-          function B(e) {
+          function R(e) {
             const {
                 groupid: t,
                 group: n,
@@ -5151,15 +5243,15 @@
                 setCollapsed: c,
                 ...l
               } = e,
-              d = (0, C.fw)(t, n).visible ? E.Released : E.Unreleased;
+              d = (0, E.fw)(t, n).visible ? b.Released : b.Unreleased;
             return (0, r.jsx)("div", {
               id: k(t),
-              className: (0, f.A)(E.Group, a, d),
+              className: (0, f.A)(b.Group, a, d),
               ...l,
               children: (0, r.jsxs)("div", {
-                className: E.GroupDisplay,
+                className: b.GroupDisplay,
                 children: [
-                  (0, r.jsx)(R, {
+                  (0, r.jsx)(L, {
                     groupid: t,
                     group: n,
                     actions: i,
@@ -5171,29 +5263,25 @@
               }),
             });
           }
-          function R(e) {
+          function L(e) {
             const {
                 groupid: t,
                 group: n,
                 actions: i,
                 collapsed: s,
-                setCollapsed: a,
+                setCollapsed: o,
               } = e,
-              { appID: c } = (0, m.L3)(),
-              d = n?.dlcappid,
-              u = (0, m.Xe)(c),
-              p = (0, m.sJ)(c),
-              h = p?.find((e) => d == e.appid);
+              c = (0, E.fw)(t, n);
             return (0, r.jsxs)("div", {
-              className: E.GroupHeader,
+              className: b.GroupHeader,
               children: [
-                (0, r.jsx)(M, { info: h ?? u }),
+                (0, r.jsx)(O, { ...c }),
                 (0, r.jsxs)("div", {
-                  className: E.GroupHeaderContent,
+                  className: b.GroupHeaderContent,
                   children: [
                     !t &&
                       (0, r.jsxs)("div", {
-                        className: E.CoreGroup,
+                        className: b.CoreGroup,
                         children: [
                           (0, r.jsx)("h1", {
                             children: (0, j.we)(
@@ -5208,7 +5296,7 @@
                         ],
                       }),
                     (0, r.jsxs)("div", {
-                      className: E.GroupData,
+                      className: b.GroupData,
                       children: [
                         !!t &&
                           (0, r.jsx)("div", {
@@ -5220,28 +5308,24 @@
                               }),
                             }),
                           }),
-                        (0, r.jsx)(V, {
-                          archived: "1" == n?.archived,
-                          developeronly: "1" == n?.developeronly,
-                          app: h ?? u,
-                        }),
+                        (0, r.jsx)(F, { ...c }),
                       ],
                     }),
                   ],
                 }),
                 (0, r.jsxs)("div", {
-                  className: E.EditButtons,
+                  className: b.EditButtons,
                   children: [
-                    (0, r.jsxs)(o.s, {
+                    (0, r.jsxs)(a.s, {
                       direction: "row",
                       gap: "3",
                       children: [
-                        !!i && i.length > 0 && (0, r.jsx)(F, { actions: i }),
+                        !!i && i.length > 0 && (0, r.jsx)(P, { actions: i }),
                         void 0 !== s &&
-                          a &&
+                          o &&
                           (0, r.jsx)(l.az, {
-                            className: E.CollapseButton,
-                            onClick: () => a(!s),
+                            className: b.CollapseButton,
+                            onClick: () => o(!s),
                             children: (0, r.jsx)(x.F2T, {
                               fill: "currentColor",
                               angle: s ? 0 : -90,
@@ -5251,7 +5335,7 @@
                     }),
                     !!t &&
                       (0, r.jsxs)("div", {
-                        className: E.IDText,
+                        className: b.IDText,
                         children: ["ID: ", t],
                       }),
                   ],
@@ -5259,7 +5343,7 @@
               ],
             });
           }
-          function G(e) {
+          function B(e) {
             const {
                 achievements: t,
                 filter: n,
@@ -5273,7 +5357,7 @@
                   (0, r.jsx)(w.p, { achievements: a.included, setBulkMove: s }),
                 a.excluded.length > 0 &&
                   (0, r.jsxs)("div", {
-                    className: E.FilterFooter,
+                    className: b.FilterFooter,
                     children: [
                       (0, r.jsx)(x.dJT, {}),
                       (0, j.Yp)(
@@ -5284,7 +5368,7 @@
                   }),
                 (!t || 0 == t.length) &&
                   (0, r.jsx)("div", {
-                    className: E.Empty,
+                    className: b.Empty,
                     children: (0, j.we)(
                       "#AchievementEditor_Group_EmptyGroup_Description",
                     ),
@@ -5292,50 +5376,51 @@
               ],
             });
           }
-          function L(e) {
+          function G(e) {
             const {
                 groupid: t,
                 onClose: n,
                 achievements: i,
                 filter: s,
-                currentLanguage: a,
+                currentLanguage: o,
               } = e,
-              { appID: c } = (0, m.L3)(),
-              l = S(i, s, a),
-              [u, p] = (0, h.useState)(void 0),
-              [v, _] = (0, h.useState)([]),
-              g = (0, m.Q4)(c) || {};
-            let f = new Set(v);
-            const A = u === C.Gl,
-              y = U(void 0, void 0, !0),
-              b = g[t],
-              N = g[u],
-              I = (0, C.fw)(t, b);
-            let T,
-              D = (0, C.fw)(u, N);
-            A && (D = y.visibility),
-              I.visible && !D.visible
-                ? (T = (0, r.jsx)(C.lh, {
+              { appID: c } = (0, h.L3)(),
+              l = S(i, s, o),
+              [u, p] = (0, m.useState)(void 0),
+              [v, g] = (0, m.useState)([]),
+              _ = (0, h.Q4)(c) || {},
+              f = (0, h.JI)(c);
+            let A = new Set(v);
+            const y = u === E.Gl,
+              C = U(void 0, void 0, !0),
+              I = _[t],
+              N = _[u],
+              T = (0, E.fw)(t, I);
+            let D,
+              R = (0, E.fw)(u, N);
+            y && (R = C.visibility),
+              T.visible && !R.visible
+                ? (D = (0, r.jsx)(E.lh, {
                     text: (0, j.we)(
                       "#AchievementEditor_Group_MoveAchievements_Warn_HidingAchievements",
                     ),
                   }))
-                : b?.dlcappid != (A ? y.editAppID : N?.dlcappid) &&
-                  D.visible &&
-                  D.hasprogress &&
-                  (T = (0, r.jsx)(C.lh, {
+                : I?.dlcappid != (y ? C.editAppID : N?.dlcappid) &&
+                  R.visible &&
+                  R.hasprogress &&
+                  (D = (0, r.jsx)(E.lh, {
                     text: (0, j.we)(
                       "#AchievementEditor_Group_MoveAchievements_Warn_BreakCompletion",
                     ),
                   }));
-            const [B, R] = h.useState(l.included.length == v.length),
-              G = (0, m.zG)(c),
-              L = (e) => {
+            const [L, B] = m.useState(l.included.length == v.length),
+              G = (0, h.zG)(c),
+              P = (e) => {
                 for (const t of l.included) {
-                  const n = (0, m.nf)(t);
-                  e ? f.add(n) : f.delete(n);
+                  const n = (0, h.nf)(t);
+                  e ? A.add(n) : A.delete(n);
                 }
-                _([...f]), R(e);
+                g([...A]), B(e);
               };
             return (0, r.jsxs)(r.Fragment, {
               children: [
@@ -5346,22 +5431,22 @@
                     editable: !1,
                     headerContentBefore: () =>
                       (0, r.jsx)("div", {
-                        className: E.MoveAchievementCheckbox,
-                        children: (0, r.jsx)(d.S, { checked: B, onChange: L }),
+                        className: b.MoveAchievementCheckbox,
+                        children: (0, r.jsx)(d.S, { checked: L, onChange: P }),
                       }),
                     contentBefore: (e) => {
-                      const t = (0, m.nf)(e);
+                      const t = (0, h.nf)(e);
                       return (0, r.jsx)("div", {
-                        className: E.MoveAchievementCheckbox,
+                        className: b.MoveAchievementCheckbox,
                         children: (0, r.jsx)(d.S, {
-                          checked: f.has(t),
+                          checked: A.has(t),
                           onChange: (e) =>
                             ((e, t) => {
-                              t ? f.add(e) : f.delete(e),
-                                _([...f]),
-                                f.size,
+                              t ? A.add(e) : A.delete(e),
+                                g([...A]),
+                                A.size,
                                 l.included.length,
-                                (f.size == l.included.length) != B && R(!B);
+                                (A.size == l.included.length) != L && B(!L);
                             })(t, e),
                         }),
                       });
@@ -5369,7 +5454,7 @@
                   }),
                 l.excluded.length > 0 &&
                   (0, r.jsxs)("div", {
-                    className: E.FilterFooter,
+                    className: b.FilterFooter,
                     children: [
                       (0, r.jsx)(x.dJT, {}),
                       (0, j.Yp)(
@@ -5380,55 +5465,55 @@
                   }),
                 (!i || 0 == i.length) &&
                   (0, r.jsx)("div", {
-                    className: E.Empty,
+                    className: b.Empty,
                     children: (0, j.we)(
                       "#AchievementEditor_Group_EmptyGroup_Description",
                     ),
                   }),
-                (0, r.jsxs)(o.s, {
-                  direction: A ? "column" : "row",
-                  justify: A ? void 0 : "between",
-                  align: A ? void 0 : "end",
+                (0, r.jsxs)(a.s, {
+                  direction: y ? "column" : "row",
+                  justify: y ? void 0 : "between",
+                  align: y ? void 0 : "end",
                   gap: "1",
-                  className: E.MoveFooter,
+                  className: b.MoveFooter,
                   children: [
-                    (0, r.jsxs)(o.s, {
+                    (0, r.jsxs)(a.s, {
                       direction: "column",
                       gap: "1",
                       children: [
                         (0, j.we)(
                           "#AchievementEditor_Group_MoveAchievements_GroupSelect_Label",
-                          f.size,
+                          A.size,
                         ),
                         ":",
-                        (0, r.jsx)(o.s, {
+                        (0, r.jsx)(a.s, {
                           direction: "column",
                           align: "baseline",
                           gap: "1",
-                          children: (0, r.jsx)(C.yo, {
+                          children: (0, r.jsx)(E.yo, {
                             variant: "inset",
                             selectedValue: u,
-                            filter: (0, C.zy)(t),
+                            filter: (0, E.zy)(t),
                             onSelectionChange: p,
-                            allowCreate: !0,
+                            allowCreate: f,
                           }),
                         }),
-                        A &&
+                        y &&
                           (0, r.jsx)(Y, {
                             bHideSaveCancelButtons: !0,
                             onCancel: () => {},
                             onSave: () => {},
-                            state: y,
+                            state: C,
                           }),
                       ],
                     }),
-                    (0, r.jsxs)(o.s, {
+                    (0, r.jsxs)(a.s, {
                       direction: "row",
                       gap: "1",
                       justify: "end",
                       children: [
-                        T,
-                        (0, r.jsx)(C.VZ, {
+                        D,
+                        (0, r.jsx)(E.VZ, {
                           saveDisabled: 0 == v.length || null == u,
                           saveText: (0, j.we)(
                             "#AchievementEditor_Group_MoveAchievements_MoveButton",
@@ -5436,11 +5521,11 @@
                           onCancel: n,
                           onSave: async () => {
                             try {
-                              const e = A ? await y.save() : u,
+                              const e = y ? await C.save() : u,
                                 t = {
                                   groupid: e,
                                   api_names: i
-                                    .filter((e) => f.has((0, m.nf)(e)))
+                                    .filter((e) => A.has((0, h.nf)(e)))
                                     .map((e) => e.name),
                                 };
                               await G.mutateAsync(t),
@@ -5454,8 +5539,8 @@
                                 n();
                             } catch {}
                           },
-                          pending: G.isPending || y.isPending,
-                          error: G.error?.message ?? y.error,
+                          pending: G.isPending || C.isPending,
+                          error: G.error?.message ?? C.error,
                         }),
                       ],
                     }),
@@ -5464,7 +5549,7 @@
               ],
             });
           }
-          function F(e) {
+          function P(e) {
             const { actions: t } = e,
               n = (0, u.WM)({
                 rgOptions: t.map((e, t) => t),
@@ -5479,13 +5564,13 @@
                 (0, r.jsx)(u.l6.Trigger, {
                   render: (e) =>
                     (0, r.jsxs)("div", {
-                      className: (0, f.A)(E.EditButton),
+                      className: (0, f.A)(b.EditButton),
                       ...e,
                       children: [
                         (0, j.we)("#AchievementEditor_Options"),
                         " ",
                         (0, r.jsx)("div", {
-                          className: (0, f.A)(E.SmallIconButton, E.OptionsSVG),
+                          className: (0, f.A)(b.SmallIconButton, b.OptionsSVG),
                           children: (0, r.jsx)(x.GB9, {}),
                         }),
                       ],
@@ -5498,7 +5583,7 @@
                       {
                         value: t,
                         children: (0, r.jsxs)("div", {
-                          className: E.SelectIconOption,
+                          className: b.SelectIconOption,
                           children: [e?.icon(), e.label],
                         }),
                       },
@@ -5509,39 +5594,40 @@
               ],
             });
           }
-          function M(e) {
-            const { info: t } = e,
-              { image: n, type: i, releasestate: s, name: a } = t || {},
-              o = {
+          function O(e) {
+            const { app: t, baseApp: n } = e,
+              { type: i, releasestate: s, name: a } = t || {},
+              o = t?.image || n?.image,
+              c = {
                 ...t,
                 appid: t?.appid ? parseInt(t.appid) : 0,
                 releasestate: s,
               };
             return (0, r.jsxs)("div", {
-              className: E.AppTile,
+              className: b.AppTile,
               children: [
                 (0, r.jsx)("div", {
-                  className: E.AppTileImage,
-                  children: n
-                    ? (0, r.jsx)("img", { src: n })
+                  className: b.AppTileImage,
+                  children: o
+                    ? (0, r.jsx)("img", { src: o })
                     : (0, r.jsx)("div", { children: a }),
                 }),
-                i && s && (0, r.jsx)(A.b, { app: o }),
+                i && s && (0, r.jsx)(A.b, { app: c }),
               ],
             });
           }
-          function P(e) {
+          function V(e) {
             const { hidden: t, className: n, omitText: i = !1 } = e;
             return (0, r.jsx)("div", {
               className: (0, f.A)(
-                E.GroupVisibilitySummary,
-                t ? E.UnreleasedText : E.ReleasedText,
+                b.GroupVisibilitySummary,
+                t ? b.UnreleasedText : b.ReleasedText,
                 n,
               ),
               children: t
                 ? (0, r.jsxs)(r.Fragment, {
                     children: [
-                      (0, r.jsx)(_.ZyV, {}),
+                      (0, r.jsx)(g.ZyV, {}),
                       !i &&
                         (0, j.we)(
                           "#AchievementEditor_Group_Field_Visibility_Value_Hidden",
@@ -5550,7 +5636,7 @@
                   })
                 : (0, r.jsxs)(r.Fragment, {
                     children: [
-                      (0, r.jsx)(_.rxV, {}),
+                      (0, r.jsx)(g.rxV, {}),
                       !i &&
                         (0, j.we)(
                           "#AchievementEditor_Group_Field_Visibility_Value_Visible",
@@ -5559,27 +5645,35 @@
                   }),
             });
           }
-          function V(e) {
-            const { archived: t = !1, developeronly: n = !1, app: i } = e,
-              s = t || n || !i?.is_released_somewhere,
-              a = (0, f.A)(E.Unreleased, E.Label);
+          function F(e) {
+            const {
+                archived: t,
+                developeronly: n,
+                app: i,
+                baseApp: s,
+                noStorePage: a,
+                notDLCOfApp: o,
+                dlcappid: c,
+              } = e,
+              l = t || n || !i?.is_released_somewhere,
+              d = (0, f.A)(b.Unreleased, b.Label);
             return (0, r.jsxs)("div", {
-              className: E.GroupVisibilityInfo,
+              className: b.GroupVisibilityInfo,
               children: [
                 (0, r.jsx)("div", {
                   className: (0, f.A)(
-                    E.GroupVisibilitySummary,
-                    s ? E.UnreleasedText : E.ReleasedText,
+                    b.GroupVisibilitySummary,
+                    l ? b.UnreleasedText : b.ReleasedText,
                   ),
-                  children: (0, r.jsx)(P, { hidden: s }),
+                  children: (0, r.jsx)(V, { hidden: l }),
                 }),
-                s &&
+                l &&
                   (0, r.jsxs)("div", {
-                    className: E.GroupVisibilityLabels,
+                    className: b.GroupVisibilityLabels,
                     children: [
                       !i?.is_released_somewhere &&
                         (0, r.jsx)("div", {
-                          className: a,
+                          className: d,
                           children: (0, j.PP)(
                             "#AchievementEditor_Group_Field_Restrictions_Value_OwnersReleaseStatus",
                             (0, r.jsx)("strong", { children: i?.name ?? "" }),
@@ -5590,7 +5684,7 @@
                         }),
                       t &&
                         (0, r.jsxs)("div", {
-                          className: a,
+                          className: d,
                           children: [
                             (0, r.jsx)(x.KVe, {}),
                             " ",
@@ -5598,7 +5692,7 @@
                               "#AchievementEditor_Group_Field_IsArchived",
                             ),
                             " ",
-                            (0, r.jsx)(C.NT, {
+                            (0, r.jsx)(E.NT, {
                               helpText:
                                 "#AchievementEditor_Group_Tooltip_Archived",
                             }),
@@ -5606,15 +5700,15 @@
                         }),
                       n &&
                         (0, r.jsxs)("div", {
-                          className: a,
+                          className: d,
                           children: [
-                            (0, r.jsx)(_.bmT, {}),
+                            (0, r.jsx)(g.bmT, {}),
                             " ",
                             (0, j.we)(
                               "#AchievementEditor_Group_Field_DeveloperOnly",
                             ),
                             " ",
-                            (0, r.jsx)(C.NT, {
+                            (0, r.jsx)(E.NT, {
                               helpText:
                                 "#AchievementEditor_Group_Tooltip_DeveloperOnly",
                             }),
@@ -5622,22 +5716,38 @@
                         }),
                     ],
                   }),
+                a &&
+                  (0, r.jsx)(E.lh, {
+                    text: (0, j.we)(
+                      "#AchievementEditor_Group_Warn_NoStorePage",
+                      i?.name ?? "",
+                      s?.name ?? "",
+                    ),
+                  }),
+                o &&
+                  (0, r.jsx)(E.lh, {
+                    text: (0, j.we)(
+                      "#AchievementEditor_Group_Warn_NotDLCOfApp",
+                      c ?? "",
+                      s?.name ?? "",
+                    ),
+                  }),
               ],
             });
           }
-          function O(e) {
+          function M(e) {
             return (0, r.jsx)(H, { bNewGroup: !0, ...e });
           }
           function z(e) {
             return (0, r.jsx)(H, { bNewGroup: !1, ...e });
           }
           function U(e, t, n) {
-            const { appID: i } = (0, m.L3)(),
-              [r, s] = h.useState(t?.name ?? {}),
-              [a, o] = h.useState(t?.dlcappid),
-              [c, l] = h.useState("1" == t?.archived),
-              [d, u] = h.useState(n || "1" == t?.developeronly),
-              p = (0, h.useMemo)(
+            const { appID: i } = (0, h.L3)(),
+              [r, s] = m.useState(t?.name ?? {}),
+              [a, o] = m.useState(t?.dlcappid),
+              [c, l] = m.useState("1" == t?.archived),
+              [d, u] = m.useState(n || "1" == t?.developeronly),
+              p = (0, m.useMemo)(
                 () => ({
                   ...t,
                   name: r,
@@ -5647,9 +5757,9 @@
                 }),
                 [r, a, c, d, t],
               ),
-              v = (0, m.mb)(i, n ? "0" : e),
-              _ = (0, C.fw)(e, p),
-              g = v.isPending;
+              v = (0, h.mb)(i, n ? "0" : e),
+              g = (0, E.fw)(e, p),
+              _ = v.isPending;
             return {
               editGroupName: r,
               setEditGroupName: s,
@@ -5660,7 +5770,7 @@
               editDeveloperOnly: d,
               setEditDeveloperOnly: u,
               isNewGroup: n ?? !1,
-              visibility: _,
+              visibility: g,
               reset: () => {
                 s(t?.name),
                   o(t?.dlcappid),
@@ -5668,16 +5778,16 @@
                   u(n || "1" == t?.developeronly);
               },
               save: async () => await v.mutateAsync(p),
-              isPending: g,
+              isPending: _,
               error: v.error?.message,
             };
           }
           function H(e) {
             const { groupid: t, group: n, bNewGroup: i } = e,
               s = U(t, n, i),
-              a = (0, h.useRef)(null);
+              a = (0, m.useRef)(null);
             return (
-              (0, h.useEffect)(() => {
+              (0, m.useEffect)(() => {
                 a?.current?.scrollIntoView({
                   behavior: "smooth",
                   block: "nearest",
@@ -5688,13 +5798,13 @@
           }
           function W(e) {
             const { value: t, setValue: n } = e,
-              { appID: i } = (0, m.L3)(),
-              s = (0, m.sJ)(i),
-              a = (0, h.useMemo)(
+              { appID: i } = (0, h.L3)(),
+              s = (0, h.sJ)(i),
+              a = (0, m.useMemo)(
                 () => new Map(s.map((e) => [e.appid, e.name])),
                 [s],
               ),
-              o = (0, h.useCallback)(
+              o = (0, m.useCallback)(
                 (e) =>
                   "0" == (e ?? "0")
                     ? `(${i}) ${(0, j.we)("#AchievementEditor_Group_Field_Restrictions_Value_AllPlayers")}`
@@ -5731,47 +5841,47 @@
                 groupid: n,
                 bHideSaveCancelButtons: i,
                 onSave: s,
-                onCancel: a,
+                onCancel: o,
                 ref: c,
               } = e,
-              { appID: u } = (0, m.L3)(),
-              p = (0, h.useRef)(null);
-            (0, h.useEffect)(() => {
+              { appID: u } = (0, h.L3)(),
+              p = (0, m.useRef)(null);
+            (0, m.useEffect)(() => {
               p?.current?.focus();
             }, []);
             const {
                 editGroupName: v,
-                setEditGroupName: _,
-                editAppID: g,
+                setEditGroupName: g,
+                editAppID: _,
                 setEditAppID: x,
                 editIsArchived: A,
                 setEditIsArchived: w,
-                editDeveloperOnly: b,
+                editDeveloperOnly: C,
                 setEditDeveloperOnly: S,
-                isNewGroup: N,
-                visibility: I,
+                isNewGroup: I,
+                visibility: N,
                 isPending: T,
               } = t,
               D = void 0 !== t.editAppID,
-              k = I.visible ? E.Released : E.Unreleased;
+              k = N.visible ? b.Released : b.Unreleased;
             return (0, r.jsxs)("div", {
               ref: c,
-              className: (0, f.A)(E.Group, E.Editing, k),
+              className: (0, f.A)(b.Group, b.Editing, k),
               children: [
                 (0, r.jsx)("div", {
-                  className: (0, f.A)(E.ReleaseStatusBar, k),
+                  className: (0, f.A)(b.ReleaseStatusBar, k),
                 }),
                 (0, r.jsx)("div", {
-                  className: E.GroupDisplay,
+                  className: b.GroupDisplay,
                   children: (0, r.jsx)("div", {
-                    className: E.GroupHeader,
+                    className: b.GroupHeader,
                     children: (0, r.jsxs)("div", {
-                      className: E.GroupHeaderContent,
+                      className: b.GroupHeaderContent,
                       children: [
                         !n &&
-                          !N &&
+                          !I &&
                           (0, r.jsxs)("div", {
-                            className: E.CoreGroup,
+                            className: b.CoreGroup,
                             children: [
                               (0, r.jsx)("h1", {
                                 children: (0, j.we)(
@@ -5786,9 +5896,9 @@
                             ],
                           }),
                         (0, r.jsx)("div", {
-                          children: N
+                          children: I
                             ? (0, r.jsx)("div", {
-                                className: E.EditTitle,
+                                className: b.EditTitle,
                                 children: (0, r.jsx)("h1", {
                                   children: (0, j.we)(
                                     "#AchievementEditor_AchievementsTable_Header_CreateGroup",
@@ -5796,7 +5906,7 @@
                                 }),
                               })
                             : (0, r.jsx)("div", {
-                                className: E.EditTitle,
+                                className: b.EditTitle,
                                 children: (0, r.jsx)("h1", {
                                   children: (0, j.we)(
                                     "#AchievementEditor_Group_Tools_Edit",
@@ -5805,7 +5915,7 @@
                               }),
                         }),
                         (0, r.jsxs)("div", {
-                          className: E.GroupData,
+                          className: b.GroupData,
                           children: [
                             (0, r.jsxs)("div", {
                               children: [
@@ -5827,21 +5937,21 @@
                                         ":",
                                       ],
                                     }),
-                                    (0, r.jsx)(W, { value: g, setValue: x }),
-                                    (0, r.jsx)(M, { info: I.app }),
+                                    (0, r.jsx)(W, { value: _, setValue: x }),
+                                    (0, r.jsx)(O, { ...N }),
                                   ],
                                 }),
                               ],
                             }),
                             (0, r.jsxs)("div", {
-                              className: E.VisibilityColumn,
+                              className: b.VisibilityColumn,
                               children: [
-                                (!!n || N) &&
+                                (!!n || I) &&
                                   (0, r.jsxs)("div", {
                                     children: [
-                                      (0, r.jsxs)(o.s, {
+                                      (0, r.jsxs)(a.s, {
                                         children: [
-                                          (0, r.jsxs)(o.s, {
+                                          (0, r.jsxs)(a.s, {
                                             flexGrow: "1",
                                             children: [
                                               (0, j.we)(
@@ -5851,7 +5961,7 @@
                                             ],
                                           }),
                                           D &&
-                                            (0, r.jsx)(o.s, {
+                                            (0, r.jsx)(a.s, {
                                               children: (0, r.jsx)("p", {
                                                 children: (0, j.we)(
                                                   "#AchievementEditor_Group_Edit_Field_Name_DlcPrefix",
@@ -5876,7 +5986,7 @@
                                           (0, r.jsx)(y.Pk, {
                                             autofocus: !0,
                                             value: v,
-                                            setValue: _,
+                                            setValue: g,
                                           }),
                                         ],
                                       }),
@@ -5896,7 +6006,7 @@
                                         padding: "1",
                                         radius: "sm",
                                         children: (0, r.jsx)(d.S, {
-                                          checked: b,
+                                          checked: C,
                                           onChange: S,
                                           children: (0, j.we)(
                                             "#AchievementEditor_Group_Field_DeveloperOnly",
@@ -5906,7 +6016,7 @@
                                     }),
                                   ],
                                 }),
-                                !N &&
+                                !I &&
                                   (0, r.jsxs)("div", {
                                     children: [
                                       (0, r.jsxs)("div", {
@@ -5935,7 +6045,7 @@
                                     ],
                                   }),
                                 (0, r.jsxs)("div", {
-                                  className: E.VisibilitySection,
+                                  className: b.VisibilitySection,
                                   children: [
                                     (0, r.jsxs)("div", {
                                       children: [
@@ -5946,7 +6056,7 @@
                                       ],
                                     }),
                                     (0, r.jsx)("div", {
-                                      children: (0, r.jsx)(V, { ...I }),
+                                      children: (0, r.jsx)(F, { ...N }),
                                     }),
                                   ],
                                 }),
@@ -5955,14 +6065,14 @@
                           ],
                         }),
                         !i &&
-                          (0, r.jsx)(C.Aj, {
+                          (0, r.jsx)(E.Aj, {
                             onSave: async () => {
                               try {
                                 await t.save(), s && s();
                               } catch {}
                             },
                             onCancel: () => {
-                              t.reset(), a && a();
+                              t.reset(), o && o();
                             },
                             pending: T,
                             error: t.error,
@@ -5976,17 +6086,17 @@
           }
           function K(e) {
             const { groupid: t, group: n, hideModal: i } = e,
-              { appID: s } = (0, m.L3)(),
-              a = (0, m.F0)(s, t),
-              l = (0, m.FK)(s, t),
-              d = (0, C.fw)(t, n),
+              { appID: s } = (0, h.L3)(),
+              o = (0, h.F0)(s, t),
+              l = (0, h.FK)(s, t),
+              d = (0, E.fw)(t, n),
               u = !l || 0 === l.length;
-            return (0, r.jsx)(g.EN, {
+            return (0, r.jsx)(_.EN, {
               active: !0,
-              children: (0, r.jsx)(g.x_, {
+              children: (0, r.jsx)(_.x_, {
                 onEscKeypress: i,
                 children: (0, r.jsxs)(v.U9, {
-                  className: E.GroupDeleteDialog,
+                  className: b.GroupDeleteDialog,
                   children: [
                     (0, r.jsx)(v.Y9, {
                       children: (0, j.we)(
@@ -5996,7 +6106,7 @@
                     (0, r.jsxs)(v.nB, {
                       children: [
                         !u &&
-                          (0, r.jsxs)(o.s, {
+                          (0, r.jsxs)(a.s, {
                             direction: "row",
                             gap: "2",
                             padding: "2",
@@ -6004,7 +6114,7 @@
                             background: "red-7",
                             style: { color: "var(--color-text-light-title)" },
                             children: [
-                              (0, r.jsx)(C.id, {}),
+                              (0, r.jsx)(E.id, {}),
                               (0, r.jsx)(c.EY, {
                                 contrast: "title",
                                 children: (0, j.we)(
@@ -6013,11 +6123,11 @@
                               }),
                             ],
                           }),
-                        (0, r.jsxs)(o.s, {
+                        (0, r.jsxs)(a.s, {
                           direction: "column",
                           gap: "1",
                           padding: "2",
-                          className: E.GroupBox,
+                          className: b.GroupBox,
                           children: [
                             (0, r.jsxs)(c.EY, {
                               children: [
@@ -6028,22 +6138,22 @@
                                 (0, y.ZM)(n?.name, "english") ?? n?.name.token,
                               ],
                             }),
-                            (0, r.jsx)(V, { ...d }),
+                            (0, r.jsx)(F, { ...d }),
                           ],
                         }),
                       ],
                     }),
                     (0, r.jsx)(v.wi, {
-                      children: (0, r.jsx)(C.Aj, {
+                      children: (0, r.jsx)(E.Aj, {
                         saveText: (0, j.we)(
                           "#AchievementEditor_Group_Delete_Dialog_Delete",
                         ),
                         saveColor: "red",
                         saveDisabled: !u,
-                        pending: a.isPending,
-                        error: a.error?.message,
+                        pending: o.isPending,
+                        error: o.error?.message,
                         onCancel: i,
-                        onSave: () => a.mutate(void 0, { onSuccess: i }),
+                        onSave: () => o.mutate(void 0, { onSuccess: i }),
                       }),
                     }),
                   ],
@@ -6051,9 +6161,9 @@
               }),
             });
           }
-          ([m, w, y, C] = b.then ? (await b)() : b), i();
-        } catch (J) {
-          i(J);
+          ([h, w, y, E] = C.then ? (await C)() : C), i();
+        } catch (q) {
+          i(q);
         }
       });
     },
@@ -6062,12 +6172,12 @@
       n.a(e, async (e, i) => {
         try {
           n.d(t, {
-            DG: () => E,
-            II: () => C,
-            Jt: () => I,
+            DG: () => b,
+            II: () => E,
+            Jt: () => N,
             Mq: () => y,
-            Pk: () => b,
-            VU: () => N,
+            Pk: () => C,
+            VU: () => I,
             ZM: () => S,
           });
           var r = n(7850),
@@ -6077,23 +6187,23 @@
             c = n(19997),
             l = n(90534),
             d = n(20187),
-            u = n(83392),
+            u = n(61011),
             p = n(57757),
-            m = n(56456),
-            h = n(84896),
+            h = n(56456),
+            m = n(84896),
             v = n(90626),
-            _ = n(10435),
-            g = n(12155),
+            g = n(10435),
+            _ = n(12155),
             x = n(52038),
             f = n(61859),
             j = n(6629),
             A = n(21261),
-            w = e([h, A]);
-          function E() {
-            const { appID: e } = (0, h.L3)(),
-              t = (0, h.ts)(e),
-              n = (0, h.Q4)(e) || {},
-              i = (0, h.kb)(e) || [];
+            w = e([m, A]);
+          function b() {
+            const { appID: e } = (0, m.L3)(),
+              t = (0, m.ts)(e),
+              n = (0, m.Q4)(e) || {},
+              i = (0, m.kb)(e) || [];
             return [
               ...i.map((e) => e.display?.name),
               ...i.map((e) => e.display?.desc),
@@ -6113,18 +6223,18 @@
           }
           function y(e) {
             const { locstring: t } = e,
-              { appID: n, localization: i } = (0, h.L3)(),
+              { appID: n, localization: i } = (0, m.L3)(),
               { currentLanguage: a, setCurrentLanguage: o } = i,
-              c = (0, h.ts)(n),
+              c = (0, m.ts)(n),
               l = void 0 === t,
-              d = E(),
+              d = b(),
               u = l ? d : {},
               p = (0, s.WM)({
                 rgOptions: c,
                 selectedValue: a,
                 onSelectionChange: o,
               }),
-              m = (e, n = !1) => {
+              h = (e, n = !1) => {
                 const i = l
                     ? u[e].set === u[e].total
                     : (S(t, e)?.length ?? 0) > 0,
@@ -6135,8 +6245,8 @@
                   children: [
                     n &&
                       (i
-                        ? (0, r.jsx)(g.Jlk, { color: "var(--text-color)" })
-                        : (0, r.jsx)(_.eTF, { color: "var(--text-color)" })),
+                        ? (0, r.jsx)(_.Jlk, { color: "var(--text-color)" })
+                        : (0, r.jsx)(g.eTF, { color: "var(--text-color)" })),
                     " ",
                     (0, f.we)(`#Language_${e}`),
                     a,
@@ -6150,12 +6260,12 @@
                 size: "2",
                 state: p,
                 children: [
-                  (0, r.jsx)(s.l6.Trigger, { children: m(a) }),
+                  (0, r.jsx)(s.l6.Trigger, { children: h(a) }),
                   (0, r.jsx)(s.l6.Options, {
                     children: p.rgOptions.map((e) =>
                       (0, r.jsx)(
                         s.l6.Option,
-                        { value: e, children: m(e.toString(), !0) },
+                        { value: e, children: h(e.toString(), !0) },
                         e.toString(),
                       ),
                     ),
@@ -6164,7 +6274,7 @@
               }),
             });
           }
-          function C(e, t) {
+          function E(e, t) {
             return e
               ? "string" == typeof e
                 ? { english: e }
@@ -6176,16 +6286,16 @@
                   )
               : {};
           }
-          function b(e) {
+          function C(e) {
             const {
                 value: t,
                 setValue: n,
                 multiline: i = !1,
                 autofocus: s = !1,
               } = e,
-              { currentLanguage: c } = (0, h.L3)().localization,
-              { appID: l } = (0, h.L3)(),
-              d = C(t, (0, h.ts)(l)),
+              { currentLanguage: c } = (0, m.L3)().localization,
+              { appID: l } = (0, m.L3)(),
+              d = E(t, (0, m.ts)(l)),
               u = (e) => {
                 const t = { ...d, [c]: e };
                 n(t);
@@ -6216,16 +6326,16 @@
                   ? e[t]
                   : void 0;
           }
-          function N(e) {
+          function I(e) {
             const { text: t, missingStringLocToken: n } = e,
-              { currentLanguage: i } = (0, h.L3)().localization,
+              { currentLanguage: i } = (0, m.L3)().localization,
               s = S(t, i);
             return (
               s ||
               (0, r.jsxs)("span", {
                 className: (0, x.A)(j.Missing, j.LocText),
                 children: [
-                  (0, r.jsx)(_.eTF, { color: "var(--text-color)" }),
+                  (0, r.jsx)(g.eTF, { color: "var(--text-color)" }),
                   " ",
                   (0, f.we)(
                     n ?? "#AchievementEditor_Localization_MissingString",
@@ -6235,24 +6345,24 @@
               })
             );
           }
-          function I(e) {
+          function N(e) {
             const { onClose: t } = e,
-              { appID: n } = (0, h.L3)(),
-              i = (0, h.ts)(n),
-              s = (0, h.vd)(n),
-              a = (0, h.kk)(n),
-              [o, _] = (0, v.useState)(new Set(i)),
-              g = s.reduce(
+              { appID: n } = (0, m.L3)(),
+              i = (0, m.ts)(n),
+              s = (0, m.vd)(n),
+              a = (0, m.kk)(n),
+              [o, g] = (0, v.useState)(new Set(i)),
+              _ = s.reduce(
                 (e, t) => ((e[t] = (0, f.we)(`#Language_${t}`)), e),
                 {},
               ),
-              x = [...s].sort((e, t) => g[e].localeCompare(g[t])),
+              x = [...s].sort((e, t) => _[e].localeCompare(_[t])),
               j = (0, v.useCallback)(() => {
                 a.mutate(Array.from(o), { onSuccess: t });
               }, [a, t, o]),
               w = x.slice(0, Math.round(x.length / 2)),
-              E = x.slice(w.length);
-            return (0, r.jsxs)(m.s, {
+              b = x.slice(w.length);
+            return (0, r.jsxs)(h.s, {
               onClose: t,
               strTitle: (0, f.we)("#AchievementEditor_AppLanguageEdit_Title"),
               children: [
@@ -6272,7 +6382,7 @@
                         ),
                       }),
                     }),
-                    [w, E].map((e, t) =>
+                    [w, b].map((e, t) =>
                       (0, r.jsx)(
                         u.s,
                         {
@@ -6286,7 +6396,7 @@
                                 checked: "english" == e || o.has(e),
                                 onChange: (t) =>
                                   ((e, t) => {
-                                    _((n) =>
+                                    g((n) =>
                                       t
                                         ? new Set(Array.from([...n, e]))
                                         : new Set(
@@ -6294,7 +6404,7 @@
                                           ),
                                     );
                                   })(e, t),
-                                children: g[e],
+                                children: _[e],
                               },
                               e,
                             ),
@@ -6314,7 +6424,7 @@
               ],
             });
           }
-          ([h, A] = w.then ? (await w)() : w), i();
+          ([m, A] = w.then ? (await w)() : w), i();
         } catch (T) {
           i(T);
         }
@@ -6324,7 +6434,7 @@
       "use strict";
       n.a(e, async (e, i) => {
         try {
-          n.d(t, { E: () => w, O: () => E });
+          n.d(t, { E: () => w, O: () => b });
           var r = n(7850),
             s = n(46562),
             a = n(38528),
@@ -6334,16 +6444,16 @@
             d = n(84896),
             u = n(90626),
             p = n(61859),
-            m = n(14223),
-            h = n(60668),
+            h = n(14223),
+            m = n(60668),
             v = e([l, d]);
           [l, d] = v.then ? (await v)() : v;
-          const _ = l.YjP().regex(/^-?\d+(?:\.\d*)?$/),
-            g = {
+          const g = l.YjP().regex(/^-?\d+(?:\.\d*)?$/),
+            _ = {
               decode: (e) => Number.parseFloat(e),
               encode: (e) => e.toString(),
             },
-            x = l.rLB(_, l.aig(), g),
+            x = l.rLB(g, l.aig(), _),
             f = l.YjP().regex(l.A$I.nd),
             j = {
               decode: (e) => Number.parseInt(e, 10),
@@ -6354,7 +6464,7 @@
             const t =
                 "INT" == e?.type
                   ? f.transform(j.decode)
-                  : _.transform(g.decode),
+                  : g.transform(_.decode),
               n =
                 "INT" == e?.type
                   ? [0, l.ZSL.zH.int32[1]]
@@ -6362,7 +6472,7 @@
               i = t.default(0).parse(e?.min),
               r = t.default(n[1]).parse(e?.max),
               s = "INT" == e?.type ? l.aig().int() : l.aig(),
-              a = (0, h.Cm)(
+              a = (0, m.Cm)(
                 l
                   .Ikc({ min_val: s.min(i), max_val: s.max(r) })
                   .optional()
@@ -6382,7 +6492,7 @@
               validator: a,
             };
           }
-          function E(e) {
+          function b(e) {
             const {
                 appID: t,
                 progress: n,
@@ -6390,16 +6500,16 @@
                 hasStat: a,
                 hasMin: o,
                 hasMax: c,
-                min: m,
+                min: h,
                 max: v,
-                type: _ = "FLOAT",
-                validator: g,
+                type: g = "FLOAT",
+                validator: _,
               } = e,
               x = (0, u.useId)(),
               f = (0, d.J3)(t) ?? [];
             return (0, r.jsxs)(r.Fragment, {
               children: [
-                (0, r.jsx)(h.ox, {
+                (0, r.jsx)(m.ox, {
                   labelId: x,
                   label: (0, p.we)(
                     "#AchievementEditor_Achievement_Edit_ProgressStat",
@@ -6433,12 +6543,12 @@
                 a &&
                   (0, r.jsx)(y, {
                     showSlider: o && c,
-                    min: m,
+                    min: h,
                     max: v,
-                    integer: "INT" == _,
-                    validator: g,
+                    integer: "INT" == g,
+                    validator: _,
                     value: [
-                      l.auy.number().default(m).parse(n?.min_val),
+                      l.auy.number().default(h).parse(n?.min_val),
                       l.auy.number().default(v).parse(n?.max_val),
                     ],
                     setValue: function (e) {
@@ -6466,24 +6576,24 @@
               d =
                 (a ? l.aig().int() : l.aig(),
                 s({ min_val: o[0], max_val: o[1] }));
-            return (0, r.jsx)(h.qF, {
+            return (0, r.jsx)(m.qF, {
               labelId: c,
               label: (0, p.we)(
                 "#AchievementEditor_Achievement_Edit_ProgressStatRange",
               ),
               isValid: d.success,
               issues: d.success ? void 0 : d.issues?.map((e) => e),
-              children: t ? (0, r.jsx)(C, { ...e }) : (0, r.jsx)(b, { ...e }),
+              children: t ? (0, r.jsx)(E, { ...e }) : (0, r.jsx)(C, { ...e }),
             });
           }
-          function C(e) {
+          function E(e) {
             const { min: t, max: n, integer: i, value: s, setValue: o } = e,
               l = i ? 1 : 0.1,
               d = [c.OQ(s[0], t, n), c.OQ(s[1], t, n)];
             return (0, r.jsxs)("div", {
-              className: m.MinMaxRangeContainer,
+              className: h.MinMaxRangeContainer,
               children: [
-                (0, r.jsx)(b, { ...e }),
+                (0, r.jsx)(C, { ...e }),
                 (0, r.jsx)(a.F, {
                   value: d,
                   onValueChange: o,
@@ -6494,12 +6604,12 @@
               ],
             });
           }
-          function b(e) {
+          function C(e) {
             const { value: t, setValue: n, integer: i } = e;
             return (0, r.jsxs)("div", {
-              className: m.MinMax,
+              className: h.MinMax,
               children: [
-                (0, r.jsx)(h.wI, {
+                (0, r.jsx)(m.wI, {
                   children: (0, r.jsx)(S, {
                     placeholder: (0, p.we)(
                       "#AchievementEditor_Achievement_Edit_Stat_Min_Placeholder",
@@ -6510,7 +6620,7 @@
                   }),
                 }),
                 (0, r.jsx)("span", { children: " - " }),
-                (0, r.jsx)(h.wI, {
+                (0, r.jsx)(m.wI, {
                   children: (0, r.jsx)(S, {
                     placeholder: (0, p.we)(
                       "#AchievementEditor_Achievement_Edit_Stat_Max_Placeholder",
@@ -6537,8 +6647,8 @@
             });
           }
           i();
-        } catch (N) {
-          i(N);
+        } catch (I) {
+          i(I);
         }
       });
     },
@@ -6547,46 +6657,48 @@
       n.a(e, async (e, i) => {
         try {
           n.d(t, {
-            $P: () => z,
-            Aj: () => b,
+            $P: () => H,
+            Aj: () => I,
             BA: () => E,
-            EV: () => P,
-            Gl: () => L,
-            NT: () => D,
-            TM: () => V,
-            VZ: () => w,
-            YZ: () => U,
-            Z7: () => W,
-            et: () => T,
-            fw: () => O,
-            id: () => y,
-            lg: () => I,
-            lh: () => k,
-            mc: () => S,
+            EV: () => M,
+            Gl: () => O,
+            NT: () => R,
+            TM: () => z,
+            VZ: () => y,
+            YZ: () => W,
+            Z7: () => K,
+            et: () => k,
+            fw: () => U,
+            id: () => C,
+            lg: () => D,
+            lh: () => L,
+            mc: () => N,
             r3: () => B,
-            yo: () => F,
-            z0: () => R,
-            zy: () => M,
+            yo: () => V,
+            z0: () => G,
+            zy: () => F,
           });
           var r = n(7850),
             s = n(48474),
             a = n(90534),
-            o = n(83392),
+            o = n(61011),
             c = n(11967),
             l = n(90626),
             d = n(61859),
             u = n(79964),
             p = n(12155),
-            m = n(10435),
-            h = n(52038),
+            h = n(10435),
+            m = n(52038),
             v = n(84896),
-            _ = n(32754),
-            g = n(9154),
+            g = n(32754),
+            _ = n(9154),
             x = n(16676),
             f = n(3049),
-            j = n(59330),
-            A = e([v, j]);
-          function w(e) {
+            j = n(39777),
+            A = n(37085),
+            w = n(59330),
+            b = e([v, w]);
+          function y(e) {
             const {
               saveText: t,
               saveColor: n,
@@ -6596,7 +6708,7 @@
               pending: c,
               error: l,
               saveDisabled: p = !1,
-              hideCancel: m = !1,
+              hideCancel: h = !1,
             } = e;
             return (0, r.jsxs)("div", {
               className: u.SaveCloseButtons,
@@ -6612,7 +6724,7 @@
                     children: t || (0, d.we)("#Button_Save"),
                   }),
                 }),
-                !m &&
+                !h &&
                   (0, r.jsx)(s.$, {
                     color: "dull",
                     onClick: o,
@@ -6627,31 +6739,31 @@
           function E(e) {
             const { className: t } = e;
             return (0, r.jsx)(a.az, {
-              className: (0, h.A)(u.Icon, t),
+              className: (0, m.A)(u.Icon, t),
               children: (0, r.jsx)(p.qzq, {}),
             });
           }
-          function y(e) {
+          function C(e) {
             const { color: t = "currentColor" } = e;
             return (0, r.jsx)(a.az, {
               className: u.Icon,
-              children: (0, r.jsx)(m.eTF, { color: t }),
-            });
-          }
-          function C(e) {
-            const { color: t = "var(--color-unreleased)" } = e;
-            return (0, r.jsx)(a.az, {
-              className: u.Icon,
-              children: (0, r.jsx)(m.ZyV, { color: t }),
-            });
-          }
-          function b(e) {
-            return (0, r.jsx)("div", {
-              className: u.ButtonContainer,
-              children: (0, r.jsx)(w, { ...e }),
+              children: (0, r.jsx)(h.eTF, { color: t }),
             });
           }
           function S(e) {
+            const { color: t = "var(--color-unreleased)" } = e;
+            return (0, r.jsx)(a.az, {
+              className: u.Icon,
+              children: (0, r.jsx)(h.ZyV, { color: t }),
+            });
+          }
+          function I(e) {
+            return (0, r.jsx)("div", {
+              className: u.ButtonContainer,
+              children: (0, r.jsx)(y, { ...e }),
+            });
+          }
+          function N(e) {
             const { onClick: t } = e;
             return (0, r.jsxs)(s.$, {
               color: "dull",
@@ -6660,13 +6772,13 @@
               children: [
                 (0, r.jsx)("div", {
                   className: u.ButtonIcon,
-                  children: (0, r.jsx)(N, { width: "18", height: "18" }),
+                  children: (0, r.jsx)(T, { width: "18", height: "18" }),
                 }),
                 (0, d.we)("#AchievementEditor_ReorderGroups"),
               ],
             });
           }
-          function N(e) {
+          function T(e) {
             return (0, r.jsx)("svg", {
               xmlns: "http://www.w3.org/2000/svg",
               viewBox: "0 0 36 36",
@@ -6678,11 +6790,11 @@
               }),
             });
           }
-          function I(e) {
+          function D(e) {
             const { title: t, onClick: n, className: i } = e;
             return (0, r.jsx)("div", {
               title: t,
-              className: (0, h.A)(u.SmallIconButton, u.EditButton, i),
+              className: (0, m.A)(u.SmallIconButton, u.EditButton, i),
               children: (0, r.jsx)(s.$, {
                 variant: "ghost",
                 icon: !0,
@@ -6691,11 +6803,11 @@
               }),
             });
           }
-          function T(e) {
+          function k(e) {
             const { title: t, onClick: n } = e;
             return (0, r.jsx)("div", {
               title: t,
-              className: (0, h.A)(u.SmallIconButton, u.DeleteButton),
+              className: (0, m.A)(u.SmallIconButton, u.DeleteButton),
               children: (0, r.jsx)(s.$, {
                 variant: "ghost",
                 icon: !0,
@@ -6704,21 +6816,21 @@
               }),
             });
           }
-          function D(e) {
+          function R(e) {
             const { helpText: t } = e;
-            return (0, r.jsx)(_.he, {
+            return (0, r.jsx)(g.he, {
               toolTipContent: t,
               children: (0, r.jsx)(p._VW, {}),
             });
           }
-          function k(e) {
+          function L(e) {
             const { text: t } = e;
             return (0, r.jsxs)(o.s, {
               direction: "row",
               gap: "1",
               align: "center",
               style: { color: "var(--color-warning)" },
-              children: [(0, r.jsx)(y, {}), " ", t],
+              children: [(0, r.jsx)(C, {}), " ", t],
             });
           }
           function B(e) {
@@ -6728,42 +6840,42 @@
               gap: "1",
               align: "center",
               style: { color: "var(--color-error)" },
-              children: [(0, r.jsx)(y, {}), " ", t],
+              children: [(0, r.jsx)(C, {}), " ", t],
             });
           }
-          [v, j] = A.then ? (await A)() : A;
-          const R = "0";
-          function G(e) {
+          [v, w] = b.then ? (await b)() : b;
+          const G = "0";
+          function P(e) {
             const { groupID: t, group: n, showVisibility: i = !1 } = e,
-              { visible: s } = O(t, n),
+              { visible: s } = U(t, n),
               {
                 existingAchievements: a,
                 existingAchievementUnlockPercentages: c,
               } = (0, v.L3)(),
               l =
-                t === R || void 0 === t
+                t === G || void 0 === t
                   ? (0, d.we)(
                       "#AchievementEditor_Group_CoreGameAchievements_Heading",
                     )
-                  : ((0, j.ZM)(n?.name, "english") ?? n?.name?.token),
+                  : ((0, w.ZM)(n?.name, "english") ?? n?.name?.token),
               u = a?.groups.find((e) => e.id.toString() == t),
               p =
                 u?.achievements.some(
                   (e) => (c?.percentages?.[e.internal_key] ?? 0) > 0,
                 ) ?? !1;
-            let m;
+            let h;
             return (
-              i && (s ? p && (m = (0, r.jsx)(E, {})) : (m = (0, r.jsx)(C, {}))),
+              i && (s ? p && (h = (0, r.jsx)(E, {})) : (h = (0, r.jsx)(S, {}))),
               (0, r.jsxs)(o.s, {
                 direction: "row",
                 gap: "1",
                 align: "center",
-                children: [m, l],
+                children: [h, l],
               })
             );
           }
-          const L = "newgroup";
-          function F(e) {
+          const O = "newgroup";
+          function V(e) {
             const {
                 selectedValue: t,
                 onSelectionChange: n,
@@ -6776,33 +6888,33 @@
               } = e,
               { appID: l } = (0, v.L3)(),
               u = (0, v.Q4)(l) || {},
-              p = [R, ...Object.keys(u)],
-              m = void 0 === i ? p : p.filter(i);
-            s && m.splice(0, 0, L);
+              p = [G, ...Object.keys(u)],
+              h = void 0 === i ? p : p.filter(i);
+            s && h.splice(0, 0, O);
             return (0, r.jsx)(c.l6, {
               selectedValue: t,
               variant: a,
               onSelectionChange: n,
-              options: m,
+              options: h,
               placeholder: o,
               getOptionLabel: (e) =>
-                e == L
+                e == O
                   ? (0, d.we)("#AchievementEditor_Group_SelectGroup_Create")
-                  : (0, r.jsx)(G, {
+                  : (0, r.jsx)(P, {
                       groupID: e,
                       group: u[e],
                       showVisibility: !0,
                     }),
             });
           }
-          function M(e) {
-            return (t) => t != e && (!!e || t != R);
+          function F(e) {
+            return (t) => t != e && (!!e || t != G);
           }
-          function P(e, t, n, i) {
+          function M(e, t, n, i) {
             const r = "name" == n ? "NAME" : "DESC";
             return e && e != `${t}_${r}` ? e : `${i}_${r}`;
           }
-          function V(e) {
+          function z(e) {
             const {
               okText: t,
               cancelText: n,
@@ -6812,15 +6924,15 @@
               hideCancelButton: o = !1,
               children: c,
             } = e;
-            return (0, r.jsx)(g.EN, {
+            return (0, r.jsx)(_.EN, {
               active: !0,
-              children: (0, r.jsx)(g.x_, {
+              children: (0, r.jsx)(_.x_, {
                 bHideCloseIcon: !0,
                 children: (0, r.jsxs)(x.U9, {
                   children: [
                     (0, r.jsx)(x.nB, { children: c }),
                     (0, r.jsx)(x.wi, {
-                      children: (0, r.jsx)(b, {
+                      children: (0, r.jsx)(I, {
                         saveText: t ?? (0, d.we)("#Button_OK"),
                         saveColor: a,
                         onSave: i,
@@ -6834,7 +6946,7 @@
               }),
             });
           }
-          function O(e, t) {
+          function U(e, t) {
             const {
                 appID: n,
                 existingAchievements: i,
@@ -6842,25 +6954,31 @@
               } = (0, v.L3)(),
               s = t?.dlcappid,
               a = (0, v.Xe)(n),
-              o = (0, v.sJ)(n),
+              { data: o } = (0, v.Wu)(n),
               c = o?.find((e) => s == e.appid),
-              l = "1" == t?.archived,
-              d = "1" == t?.developeronly,
-              u = (c ?? a)?.is_released_somewhere,
-              p = i?.groups.find((t) => t.id.toString() == (e ?? R));
+              l = !!Number(s),
+              { data: d } = (0, j.J$)(l ? { appid: Number(s) } : void 0),
+              u = "1" == t?.archived,
+              p = "1" == t?.developeronly,
+              h = (c ?? a)?.is_released_somewhere,
+              m = i?.groups.find((t) => t.id.toString() == (e ?? G));
             return {
-              archived: l,
-              developeronly: d,
-              is_released_somewhere: u,
+              archived: u,
+              developeronly: p,
+              is_released_somewhere: h,
               hasprogress:
-                p?.achievements.some(
+                m?.achievements.some(
                   (e) => (r?.percentages?.[e.internal_key] ?? 0) > 0,
                 ) ?? !1,
               app: c ?? a,
-              visible: !l && !d && u,
+              baseApp: a,
+              noStorePage: !!d && d.success != A.R,
+              notDLCOfApp: l && !!o && !c,
+              dlcappid: s,
+              visible: !u && !p && h,
             };
           }
-          function z() {
+          function H() {
             const {
               existingAchievements: e,
               existingAchievementUnlockPercentages: t,
@@ -6885,27 +7003,27 @@
               [e, t],
             );
           }
-          function U(e, t) {
-            const n = z();
+          function W(e, t) {
+            const n = H();
             if (void 0 === n) return {};
             if (void 0 === e || void 0 === t) return {};
-            return n[H(e, t)] ?? {};
+            return n[Y(e, t)] ?? {};
           }
-          function H(e, t) {
+          function Y(e, t) {
             return (
               (("string" == typeof e ? Number.parseInt(e) : e) << 8) |
               ("string" == typeof t ? Number.parseInt(t) : t)
             );
           }
-          function W(e) {
+          function K(e) {
             return ((e ?? 0) / 100).toLocaleString((0, f.J)(), {
               style: "percent",
               maximumFractionDigits: 1,
             });
           }
           i();
-        } catch (Y) {
-          i(Y);
+        } catch (q) {
+          i(q);
         }
       });
     },
@@ -6927,9 +7045,9 @@
             onError: u,
             children: p,
           } = e,
-          [m, h] = (0, r.useState)(!1),
-          [v, _] = (0, r.useState)(!1),
-          g = (e) => {
+          [h, m] = (0, r.useState)(!1),
+          [v, g] = (0, r.useState)(!1),
+          _ = (e) => {
             u &&
               u(
                 !l && e.length > 1
@@ -6940,16 +7058,16 @@
               );
           };
         return (0, i.jsxs)("div", {
-          className: (0, a.A)(s.DragBox, m && s.Dragging, v && s.Invalid, t),
+          className: (0, a.A)(s.DragBox, h && s.Dragging, v && s.Invalid, t),
           onDragEnter: (e) => {
-            e.preventDefault(), h(!0);
+            e.preventDefault(), m(!0);
             const t = [...e.dataTransfer.items];
             if (!l && t.length > 1)
-              return _(!0), void (e.dataTransfer.effectAllowed = "none");
+              return g(!0), void (e.dataTransfer.effectAllowed = "none");
             for (const n of t)
               if (!c.includes(n.type))
                 return (
-                  _(!0),
+                  g(!0),
                   (e.dataTransfer.effectAllowed = "none"),
                   void console.log(n.type)
                 );
@@ -6958,12 +7076,12 @@
             v && (e.dataTransfer.dropEffect = "none"), e.preventDefault();
           },
           onDragLeave: () => {
-            h(!1), _(!1);
+            m(!1), g(!1);
           },
           onDrop: async (e) => {
-            e.preventDefault(), h(!1);
+            e.preventDefault(), m(!1);
             let t = v;
-            _(!1), t ? g(e.dataTransfer.files) : n(e.dataTransfer.files);
+            g(!1), t ? _(e.dataTransfer.files) : n(e.dataTransfer.files);
           },
           children: [
             p,
@@ -6980,7 +7098,7 @@
                   ((t = e.target.files),
                   (!l && t.length > 1) ||
                     !Array.from(t).every((e) => c.includes(e.type)))
-                    ? g(e.target.files)
+                    ? _(e.target.files)
                     : n(e.target.files);
                 },
               }),
@@ -7195,9 +7313,9 @@
         $q: () => d,
         Cm: () => u,
         WL: () => p,
-        ox: () => h,
+        ox: () => m,
         qF: () => v,
-        wI: () => m,
+        wI: () => h,
       });
       var i = n(7850),
         r = n(38256),
@@ -7245,7 +7363,7 @@
           label: t,
           isValid: !u || o,
           issues: c,
-          children: (0, i.jsx)(m, {
+          children: (0, i.jsx)(h, {
             children: (0, i.jsx)(r.k, {
               value: n,
               onTextChange: (e) => {
@@ -7260,14 +7378,14 @@
           }),
         });
       }
-      function m(e) {
+      function h(e) {
         const { children: t } = e;
         return (0, i.jsx)("div", {
           className: l.ValidatedControl,
           children: t,
         });
       }
-      function h(e) {
+      function m(e) {
         const { label: t, description: n, labelId: r, children: a } = e;
         return (0, i.jsxs)("div", {
           children: [
@@ -7292,7 +7410,7 @@
             a ? void 0 : l.Invalid,
           ),
           children: [
-            (0, i.jsx)(h, {
+            (0, i.jsx)(m, {
               label: t,
               description: n,
               labelId: r,
@@ -7448,7 +7566,7 @@
     },
     874: (e, t, n) => {
       "use strict";
-      n.d(t, { b: () => x, a: () => h });
+      n.d(t, { b: () => x, a: () => m });
       var i = n(7850),
         r = n(39777),
         s = n(90626),
@@ -7459,8 +7577,8 @@
         d = n(78327),
         u = n(28325),
         p = n(86770),
-        m = n(59403);
-      function h(e) {
+        h = n(59403);
+      function m(e) {
         const t = s.useMemo(
           () =>
             (function () {
@@ -7468,19 +7586,19 @@
                 t = e ? Object.keys(e).map((t) => e[t]) : [],
                 n = (0, d.Tc)("rgRecentUnreleasedApps", "application_config"),
                 i = n ? Object.keys(n).map((e) => n[e]) : [],
-                r = (0, m.Gx)(t, i);
+                r = (0, h.Gx)(t, i);
               return r.sort((e, t) => e.nOrder - t.nOrder), r;
             })(),
           [],
         );
         return (0, i.jsx)(p.$, {
           title: (0, l.we)("#Dashboard_RecentApps_Title"),
-          headerElement: (0, i.jsx)(_, {}),
+          headerElement: (0, i.jsx)(g, {}),
           children: (0, i.jsxs)("div", {
             className: u.AppTileContainer,
             children: [
               !t.length && (0, i.jsx)(v, {}),
-              t.map((e) => (0, i.jsx)(g, { app: e }, e.appid)),
+              t.map((e) => (0, i.jsx)(_, { app: e }, e.appid)),
             ],
           }),
         });
@@ -7500,7 +7618,7 @@
           ],
         });
       }
-      function _(e) {
+      function g(e) {
         const t = d.TS.PARTNER_BASE_URL + "apps/";
         return (0, i.jsx)("div", {
           className: u.ViewAppsContainer,
@@ -7513,7 +7631,7 @@
           }),
         });
       }
-      function g(e) {
+      function _(e) {
         const { app: t } = e,
           n = t.appid,
           { data: s } = (0, r.lv)({ appid: n }),
@@ -7596,7 +7714,7 @@
       }
       function j(e) {
         const { releaseState: t, hasStoreItem: n } = e,
-          r = (0, m.pc)(t, n);
+          r = (0, h.pc)(t, n);
         return (
           "released" != t &&
           (0, i.jsx)("div", {
@@ -7653,7 +7771,7 @@
     },
     32433: (e, t, n) => {
       "use strict";
-      n.d(t, { On: () => f, jw: () => A });
+      n.d(t, { On: () => j, jw: () => w });
       var i = n(66418),
         r = n(20194),
         s = n(90626);
@@ -7661,47 +7779,55 @@
       const o = s.createContext(void 0);
       o.Provider;
       function c(e) {
-        const { area: t, maxAgeSeconds: n, meta: i, ...c } = e,
-          l = s.useContext(o),
-          d = s.useMemo(
-            () => ({ ...i, [a]: { area: t, maxAgeSeconds: n } }),
-            [i, t, n],
-          );
-        return (0, r.I)({ ...c, meta: d, persister: l?.GetPersister(t) });
+        const { area: t, maxAgeSeconds: n, meta: i, ...a } = e,
+          c = s.useContext(o),
+          d = s.useMemo(() => l(i, t, n), [i, t, n]);
+        return (0, r.I)({ ...a, meta: d, persister: c?.GetPersister(t) });
+      }
+      function l(e, t, n) {
+        return { ...e, [a]: { area: t, maxAgeSeconds: n } };
       }
       Date.now();
-      var l = n(23809),
-        d = n(37085),
-        u = n(76176);
-      const p = 0;
+      var d = n(23809),
+        u = n(37085),
+        p = n(42457);
+      const h = 0;
       function m(e, ...t) {
         return ["achievements", e, ...t];
       }
-      const h = (e) => m(e, "schema");
-      function v(e, t) {
+      const v = (e) => m(e, "schema");
+      function g(e, t) {
         if (void 0 !== t && "" !== t)
           return `${i.TS.BASE_URL_SHARED_CDN}community_assets/images/apps/${e}/${t}`;
       }
       const _ = (e) => m(e, "globalpercentages");
-      function g(e) {
+      function x(e) {
         return {
           ...e,
           groups: e.groups.map((e) =>
-            e.id === p ? { ...e, name: "Base game" } : e,
+            e.id === h ? { ...e, name: "Base game" } : e,
           ),
         };
       }
-      function x(e, t) {
+      function f(e, t) {
         return {
-          queryKey: h(t),
+          queryKey: v(t),
           queryFn: async () => {
             const n = i.TS.LANGUAGE,
               r = (async function (e, t, n) {
-                const i = await u.xtC.GetGameAchievements(e, {
+                const i = await p.xtC.GetGameAchievements(e, {
                   appid: t,
                   language: n,
                 });
-                if (i.GetEResult() !== d.R)
+                if (i.GetEResult() === u.p)
+                  return {
+                    appid: t,
+                    language: n,
+                    groups: [],
+                    schema_hash: 0,
+                    schema_version: 0,
+                  };
+                if (i.GetEResult() !== u.R)
                   throw (
                     (console.error(
                       "Received error from GetGameAchievements",
@@ -7712,8 +7838,8 @@
                     ))
                   );
                 const r = {};
-                (r[p] = {
-                  id: p,
+                (r[h] = {
+                  id: h,
                   archived: !1,
                   developeronly: !1,
                   ispublic: !0,
@@ -7742,7 +7868,7 @@
                     .Body()
                     .toObject()
                     ?.achievements?.forEach((e) => {
-                      const n = e.groupid ?? p;
+                      const n = e.groupid ?? h;
                       r[n].achievements.push({
                         internal_key: e.internal_key ?? 0,
                         api_name: e.internal_name ?? "",
@@ -7750,9 +7876,9 @@
                         description: e.localized_desc,
                         hidden: e.hidden ?? !1,
                         archived: e.archived ?? !1,
-                        icon_achieved: v(t, e.icon),
-                        icon_unachieved: v(t, e.icon_gray),
-                        groupid: e.groupid ?? p,
+                        icon_achieved: g(t, e.icon),
+                        icon_unachieved: g(t, e.icon_gray),
+                        groupid: e.groupid ?? h,
                         min_progress:
                           e.min_progress_int ?? e.min_progress_float,
                         max_progress:
@@ -7772,23 +7898,24 @@
               })(e, t, n);
             return r;
           },
-          select: g,
+          select: x,
           staleTime: 864e5,
           area: "achievements",
         };
       }
-      function f(e) {
-        return c(x((0, l.KV)(), e));
+      function j(e) {
+        return c(f((0, d.KV)(), e));
       }
-      function j(e, t) {
+      function A(e, t) {
         return {
           queryKey: _(t),
           queryFn: async () => {
             const n = (async function (e, t) {
-              const n = await u.xtC.GetGlobalAchievementPercentages(e, {
+              const n = await p.xtC.GetGlobalAchievementPercentages(e, {
                 appid: t,
               });
-              if (n.GetEResult() !== d.R)
+              if (n.GetEResult() === u.p) return { percentages: {} };
+              if (n.GetEResult() !== u.R)
                 throw (
                   (console.error(
                     "Received error from GetGlobalAchievementPercentages",
@@ -7818,13 +7945,13 @@
           area: "achievements",
         };
       }
-      function A(e) {
-        return c(j((0, l.KV)(), e));
+      function w(e) {
+        return c(A((0, d.KV)(), e));
       }
     },
     48474: (e, t, n) => {
       "use strict";
-      n.d(t, { $: () => _, v: () => g });
+      n.d(t, { $: () => g, v: () => _ });
       var i = n(7850),
         r = n(64238),
         s = n.n(r),
@@ -7835,8 +7962,8 @@
         d = n(62463),
         u = n(45699),
         p = n(66922),
-        m = n(78327);
-      function h(e) {
+        h = n(78327);
+      function m(e) {
         e.preventDefault();
       }
       const v = [
@@ -7857,66 +7984,66 @@
             responsive: !0,
           },
         ],
-        _ = function (e) {
+        g = function (e) {
           const {
               variant: t,
               size: n = "2",
               minWidth: r = "fit-content",
               color: o,
               loading: l,
-              children: h,
-              onClick: _,
-              icon: g,
+              children: m,
+              onClick: g,
+              icon: _,
               focusable: x,
               navProps: f,
               ...j
             } = e,
-            A = (0, m.Qn)(),
+            A = (0, h.Qn)(),
             w = l
               ? (0, i.jsx)(d.k, {
                   size: n,
                   color: o,
                   variant: "bright",
-                  children: h,
+                  children: m,
                 })
-              : h,
-            E = l ? void 0 : _,
-            y = x ?? f?.focusable ?? !!E,
-            C = (0, p.f)("Button", t),
-            b = {
+              : m,
+            b = l ? void 0 : g,
+            y = x ?? f?.focusable ?? !!b,
+            E = (0, p.f)("Button", t),
+            C = {
               type: "button",
               ...(0, c.mz)(
                 {
                   ...j,
-                  variant: C,
+                  variant: E,
                   size: n,
                   minWidth: r,
                   color: o,
-                  className: s()(a.Button, g && a.Icon),
-                  onClick: E,
+                  className: s()(a.Button, _ && a.Icon),
+                  onClick: b,
                 },
                 v,
               ),
               children: w,
             };
           return A && (y || f)
-            ? (0, i.jsx)(u.fu, { ...b, ...(f || {}), focusable: y })
-            : (0, i.jsx)("button", { ...b });
+            ? (0, i.jsx)(u.fu, { ...C, ...(f || {}), focusable: y })
+            : (0, i.jsx)("button", { ...C });
         },
-        g = function (e) {
+        _ = function (e) {
           const {
               variant: t,
               size: n = "2",
               minWidth: r = "fit-content",
               disabled: o,
               icon: d,
-              focusable: _,
-              navProps: g,
+              focusable: g,
+              navProps: _,
               ...x
             } = e,
-            f = (0, m.Qn)(),
+            f = (0, h.Qn)(),
             j = (0, p.f)("Button", t),
-            A = o ? h : void 0,
+            A = o ? m : void 0,
             w = (0, c.mz)(
               {
                 onClick: A,
@@ -7929,10 +8056,90 @@
               },
               v,
             );
-          return f && (_ || g)
-            ? (0, i.jsx)(u.Ii, { ...w, ...(g || {}), focusable: _ })
+          return f && (g || _)
+            ? (0, i.jsx)(u.Ii, { ...w, ...(_ || {}), focusable: g })
             : (0, i.jsx)("a", { ...w });
         };
+    },
+    57757: (e, t, n) => {
+      "use strict";
+      n.d(t, { S: () => u });
+      var i = n(7850),
+        r = n(61011),
+        s = n(40704);
+      function a(e) {
+        return (0, i.jsx)(s.I, {
+          ...e,
+          viewBox: 16,
+          children: (0, i.jsx)("path", {
+            d: "M13.8182 1.94629L5.77816 9.98184L2.40483 6.61296L0.835938 8.18184L5.77816 13.1285L15.387 3.51518L13.8182 1.94629Z",
+            fill: "currentColor",
+          }),
+        });
+      }
+      var o = n(21895),
+        c = n(64238),
+        l = n.n(c),
+        d = n(66922);
+      function u(e) {
+        const {
+            checked: t,
+            onChange: n,
+            disabled: s,
+            children: c,
+            ref: u,
+            variant: m,
+            color: v,
+            align: g = "center",
+            icon: _,
+            ...x
+          } = e,
+          f = "indeterminate" === t,
+          j = _ ?? (f ? h : a),
+          A = () => {
+            s || (n && n(!!f || !t));
+          },
+          w = (0, d.f)("Checkbox", m);
+        return (0, i.jsxs)(r.s, {
+          align: g,
+          ref: u,
+          role: "checkbox",
+          "aria-checked": f ? "mixed" : t,
+          "data-state": p(t),
+          className: l()(o.Root, o[`Variant-${w}`], s && o.Disabled),
+          onClick: A,
+          tabIndex: 0,
+          onKeyDown: (e) => {
+            s ||
+              (" " === e.key && (A(), e.preventDefault(), e.stopPropagation()));
+          },
+          cursor: "default",
+          "aria-disabled": s,
+          "data-accent-color": v,
+          ...x,
+          children: [
+            (0, i.jsx)("div", {
+              className: o.Checkbox,
+              children: t && (0, i.jsx)(j, { className: o.Icon }),
+            }),
+            c,
+          ],
+        });
+      }
+      function p(e) {
+        return "indeterminate" === e ? e : e ? "checked" : "unchecked";
+      }
+      function h(e) {
+        return (0, i.jsx)("svg", {
+          viewBox: "0 0 16 16",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: (0, i.jsx)("path", {
+            d: "M14.6663 7.11133H1.33301V9.33355H14.6663V7.11133Z",
+            fill: "currentColor",
+          }),
+        });
+      }
     },
     48906: (e, t, n) => {
       "use strict";
@@ -7952,25 +8159,25 @@
             onKeyDown: u,
             ...p
           } = e,
-          [m, h] = (0, r.useState)(null),
-          v = m ?? (void 0 === t ? "" : o(t)),
-          _ = () => {
-            if (null !== m) {
-              const e = c(m);
-              e !== a && n(e), h(null);
+          [h, m] = (0, r.useState)(null),
+          v = h ?? (void 0 === t ? "" : o(t)),
+          g = () => {
+            if (null !== h) {
+              const e = c(h);
+              e !== a && n(e), m(null);
             }
           };
         return (0, i.jsx)(s.k, {
           value: v,
           onTextChange: (e) => {
             const t = c(e);
-            t !== a && e === o(t) ? (h(null), n(t)) : (l && !l(e, t)) || h(e);
+            t !== a && e === o(t) ? (m(null), n(t)) : (l && !l(e, t)) || m(e);
           },
           onKeyDown: (e) => {
-            "Enter" === e.key && _(), u && u(e);
+            "Enter" === e.key && g(), u && u(e);
           },
           onBlur: (e) => {
-            _(), d && d(e);
+            g(), d && d(e);
           },
           ...p,
         });
@@ -7978,7 +8185,7 @@
     },
     46562: (e, t, n) => {
       "use strict";
-      n.d(t, { G3: () => D });
+      n.d(t, { G3: () => R });
       var i = n(7850),
         r = n(90626),
         s = n(61023),
@@ -7989,16 +8196,18 @@
         d = n(95013),
         u = n(92148),
         p = n(59366),
-        m = n(90534),
-        h = n(80797),
-        v = n(83392),
-        _ = n(52038),
-        g = n(14181),
+        h = n(90534),
+        m = n(80797),
+        v = n(61011),
+        g = n(52038),
+        _ = n(14181),
         x = n(57757),
         f = n(81393),
         j = n(82277),
         A = n(66922),
-        w = n(78327);
+        w = n(78327),
+        b = n(92122),
+        y = n(88006);
       function E(e) {
         const {
             refPopover: t,
@@ -8006,30 +8215,33 @@
             onInputChange: r,
             activeIndex: s,
             popoverPlacement: a,
-            multiselect: o,
-            setActiveIndex: l,
-            setOpen: u,
-            filterPlaceholder: p,
-            onIndexSelected: h,
-            refScrollElement: g,
+            popoverPresentation: o,
+            popoverLabel: l,
+            multiselect: u,
+            setActiveIndex: p,
+            setOpen: m,
+            filterPlaceholder: _,
+            onIndexSelected: x,
+            refScrollElement: f,
           } = B("<Combobox.Options>"),
-          x = a.startsWith("top"),
-          f = (0, i.jsx)(m.az, {
+          A = "anchor" === o && a.startsWith("top"),
+          w = (0, i.jsx)(h.az, {
             overflow: "auto",
-            ref: g,
+            ref: f,
             style: { overscrollBehavior: "contain" },
             children: e.children,
           });
         return (0, i.jsx)(d.k.Positioner, {
           ref: t,
+          label: l,
           children: (0, i.jsxs)(v.s, {
             direction: "column",
             maxHeight: "var(--popover-max-height)",
             children: [
-              x && f,
-              (0, i.jsx)(m.az, {
+              A && w,
+              (0, i.jsx)(h.az, {
                 flexShrink: "0",
-                className: (0, _.A)(j.FilterBorder, x ? j.Top : j.Bottom),
+                className: (0, g.A)(j.FilterBorder, A ? j.Top : j.Bottom),
                 children: (0, i.jsx)(c.k, {
                   margin: "3",
                   variant: "inset",
@@ -8039,8 +8251,8 @@
                   onKeyDown: (e) => {
                     "Enter" === e.key &&
                       null !== s &&
-                      (h(s),
-                      o || (l(null), u(!1)),
+                      (x(s),
+                      u || (p(null), m(!1)),
                       e.preventDefault(),
                       e.stopPropagation());
                   },
@@ -8048,25 +8260,25 @@
                     ("Home" !== e.key && "End" !== e.key) ||
                       e.stopPropagation();
                   },
-                  placeholder: p,
+                  placeholder: _,
                   inputRef: (e) => {
                     e && e.focus({ preventScroll: !0 });
                   },
                   autoComplete: "off",
                 }),
               }),
-              !x && f,
+              !A && w,
             ],
           }),
         });
       }
-      const y = (0, r.createContext)(null);
-      function C(e) {
+      const C = (0, r.createContext)(null);
+      function S(e) {
         const { virtualItem: t, children: n } = e,
-          s = (0, r.useContext)(y);
+          s = (0, r.useContext)(C);
         return (
           (0, f.wT)(s, "Virtual item rendered outside of a virtualizer!"),
-          (0, i.jsx)(m.az, {
+          (0, i.jsx)(h.az, {
             position: "absolute",
             width: "100%",
             style: { top: 0, left: 0, transform: `translateY(${t.start}px)` },
@@ -8076,7 +8288,7 @@
           })
         );
       }
-      function b(e) {
+      function I(e) {
         const { value: t, children: n, disabled: r } = e,
           {
             onItemSelectionChange: s,
@@ -8106,7 +8318,7 @@
           ],
         });
       }
-      function S(e, t) {
+      function N(e, t) {
         if ("string" == typeof t)
           return t.toLocaleLowerCase().includes(e.toLocaleLowerCase());
         try {
@@ -8121,10 +8333,10 @@
           !1
         );
       }
-      function N(e, t) {
+      function T(e, t) {
         const {
             rgOptions: n,
-            filter: i = S,
+            filter: i = N,
             filterPlaceholder: s,
             selectedValue: a,
             onSelectionChange: o,
@@ -8132,15 +8344,15 @@
           } = e,
           [l, d] = (0, r.useState)(""),
           [u, p] = (0, r.useState)(!1),
-          [m, h] = (0, r.useState)(null),
+          [h, m] = (0, r.useState)(null),
           v = (0, r.useMemo)(() => n.filter((e) => i(l, e)), [l, n, i]),
-          _ = "number" == typeof m,
-          g = v.length > 0,
+          g = "number" == typeof h,
+          _ = v.length > 0,
           x = (0, r.useCallback)(
             (e) => {
-              e && !_ && g && h(0), d(e);
+              e && !g && _ && m(0), d(e);
             },
-            [_, g],
+            [g, _],
           ),
           f = (0, r.useCallback)(
             (e) => {
@@ -8168,14 +8380,14 @@
             [j, a, t],
           );
         return {
-          activeIndex: m,
-          setActiveIndex: h,
+          activeIndex: h,
+          setActiveIndex: m,
           rgFilteredOptions: v,
           selectedValue: a,
           onSelectionChange: j,
           onItemSelectionChange: A,
           onClear: (e) => {
-            j(t ? [] : null), e.stopPropagation(), e.preventDefault();
+            j(t ? [] : null), e?.stopPropagation(), e?.preventDefault();
           },
           inputValue: l,
           onInputChange: x,
@@ -8186,7 +8398,7 @@
           maxSelected: c,
         };
       }
-      const I = {
+      const D = {
         Root: function (e) {
           const {
               children: t,
@@ -8194,40 +8406,43 @@
               placement: s = "bottom-end",
               popoverWidth: a = "dropdown",
               popoverMaxHeight: o,
-              ...c
+              popoverPresentation: c,
+              popoverLabel: l,
+              ...u
             } = e,
-            [l, u] = (0, r.useState)(void 0);
-          (0, r.useEffect)(() => u(void 0), [n.bOpen]);
-          const p = (0, w.Qn)(),
-            m = (0, r.useRef)(null),
-            h = (0, r.useRef)(null),
-            v = (0, r.useMemo)(
+            [p, h] = (0, r.useState)(void 0);
+          (0, r.useEffect)(() => h(void 0), [n.bOpen]);
+          const m = (0, w.Qn)(),
+            v = (0, r.useRef)(null),
+            g = (0, r.useRef)(null),
+            _ = (0, r.useMemo)(
               () => n.rgFilteredOptions.findIndex((e) => e === n.selectedValue),
               [n.selectedValue, n.rgFilteredOptions],
             ),
-            _ = (0, d.T)({
+            x = (0, d.T)({
               open: n.bOpen,
               onOpenChange: n.setOpen,
               width: a,
               maxHeight: o,
               placement: s,
+              presentation: c,
               gutter: "4",
               activeIndex: n.activeIndex,
               setActiveIndex: n.setActiveIndex,
-              selectedIndex: v,
+              selectedIndex: _,
               setSelectedIndex: (e) =>
                 n.onItemSelectionChange(n.rgFilteredOptions[e]),
-              interactions: { click: !0, virtualItemFocus: !p },
+              interactions: { click: !0, virtualItemFocus: !m },
               role: "combobox",
               scroll: !1,
             }),
-            g = {
+            f = {
               ...n,
-              ...c,
-              focusedValue: l,
-              onFocusChange: u,
-              refPopover: m,
-              refScrollElement: h,
+              ...u,
+              focusedValue: p,
+              onFocusChange: h,
+              refPopover: v,
+              refScrollElement: g,
               setOpen: (e) => {
                 if (e) {
                   let e = null;
@@ -8236,25 +8451,27 @@
                       ? n.selectedValue[0]
                       : null
                     : n.selectedValue),
-                    u(e),
+                    h(e),
                     n.onInputChange("");
                 }
                 n.setOpen(e);
               },
               onIndexSelected: (e) => {
-                const t = _.elementsRef.current;
+                const t = x.elementsRef.current;
                 if (t && t[e]) {
                   t[e].click();
                 }
               },
-              popoverPlacement: _.floating.placement,
+              popoverPlacement: x.floating.placement,
+              popoverPresentation: x.presentation,
+              popoverLabel: l,
             };
-          return (0, i.jsx)(k.Provider, {
-            value: g,
-            children: (0, i.jsx)(d.k.Root, { state: _, children: t }),
+          return (0, i.jsx)(L.Provider, {
+            value: f,
+            children: (0, i.jsx)(d.k.Root, { state: x, children: t }),
           });
         },
-        Option: b,
+        Option: I,
         Options: E,
         VirtualizedOptions: function (e) {
           const { items: t, renderItem: n, overscan: s = 5, ...a } = e,
@@ -8263,12 +8480,12 @@
               refPopover: c,
               refScrollElement: l,
             } = B("<ComboboxVirtualizedOptions>"),
-            [d, h] = (0, r.useState)(!1),
+            [d, m] = (0, r.useState)(!1),
             v = o && !!c.current && !!l.current;
           (0, r.useEffect)(() => {
-            v !== d && h(v);
+            v !== d && m(v);
           }, [v, d]);
-          const _ = (0, u.Te)({
+          const g = (0, u.Te)({
             count: d ? t.length : Math.min(t.length, 3),
             getScrollElement: () => l.current,
             enabled: o,
@@ -8276,27 +8493,27 @@
             ...a,
           });
           return (0, i.jsx)(E, {
-            children: (0, i.jsx)(y, {
-              value: _,
-              children: (0, i.jsx)(m.az, {
-                height: `${_.getTotalSize()}px`,
+            children: (0, i.jsx)(C, {
+              value: g,
+              children: (0, i.jsx)(h.az, {
+                height: `${g.getTotalSize()}px`,
                 position: "relative",
                 width: "100%",
-                children: _.getVirtualItems().map((e) => n(t[e.index], e, _)),
+                children: g.getVirtualItems().map((e) => n(t[e.index], e, g)),
               }),
             }),
           });
         },
         VirtualizedOption: function (e) {
           const { virtualItem: t, ...n } = e;
-          return (0, i.jsx)(C, {
+          return (0, i.jsx)(S, {
             virtualItem: t,
-            children: (0, i.jsx)(b, { ...n }),
+            children: (0, i.jsx)(I, { ...n }),
           });
         },
         VirtualizedContent: function (e) {
           const { virtualItem: t, children: n } = e;
-          return (0, i.jsx)(C, { virtualItem: t, children: n });
+          return (0, i.jsx)(S, { virtualItem: t, children: n });
         },
         Trigger: function (e) {
           const { children: t, beforeContent: n, render: r } = e,
@@ -8305,50 +8522,57 @@
               setOpen: c,
               inputValue: u,
               onInputChange: p,
-              selectedValue: m,
+              selectedValue: h,
               focusedValue: v,
-              refScrollElement: _,
-              onItemSelectionChange: g,
+              refScrollElement: g,
+              onItemSelectionChange: _,
               activeIndex: x,
               setActiveIndex: f,
               onFocusChange: j,
               rgFilteredOptions: w,
               onSelectionChange: E,
-              multiselect: y,
-              onClear: C,
-              refPopover: b,
-              clearable: S,
-              filterPlaceholder: N,
-              onIndexSelected: I,
-              popoverPlacement: T,
-              maxSelected: D,
-              variant: k,
-              ...R
+              multiselect: C,
+              onClear: S,
+              refPopover: I,
+              clearable: N,
+              filterPlaceholder: T,
+              onIndexSelected: D,
+              popoverPlacement: k,
+              popoverPresentation: R,
+              popoverLabel: L,
+              maxSelected: G,
+              variant: P,
+              ...O
             } = B("<ComboboxTrigger>"),
-            G = { tabIndex: 0, children: t },
-            L = y ? Array.isArray(m) && m.length > 0 : !!m,
-            F =
-              L && S
-                ? (0, i.jsx)(l.g, {
-                    onClick: C,
-                    cursor: "pointer",
-                    hitSlop: !0,
-                  })
-                : (0, i.jsx)(a.V, {}),
-            M = (0, A.f)("Combobox", k),
-            P = (0, i.jsx)(s.j, {
+            V = { tabIndex: 0, children: t },
+            F = C ? Array.isArray(h) && h.length > 0 : !!h,
+            M = F && N,
+            z = M
+              ? (0, i.jsx)(l.g, { onClick: S, cursor: "pointer", hitSlop: !0 })
+              : (0, i.jsx)(a.V, {}),
+            U = M
+              ? {
+                  onSecondaryButton: S,
+                  actionDescriptionMap: {
+                    [y.pR.SECONDARY]: b.T.Localize("#Clear"),
+                  },
+                }
+              : void 0,
+            H = (0, A.f)("Combobox", P),
+            W = (0, i.jsx)(s.j, {
               beforeContent: n,
-              afterContent: F,
-              hasValue: L,
+              afterContent: z,
+              hasValue: F,
               cursor: "pointer",
               tabIndex: 0,
-              variant: M,
-              ...R,
+              variant: H,
+              navProps: U,
+              ...O,
             }),
-            V = (0, h.Q)(r, P, G, void 0);
-          return (0, i.jsx)(d.k.Anchor, { children: V });
+            Y = (0, m.Q)(r, W, V, void 0);
+          return (0, i.jsx)(d.k.Anchor, { children: Y });
         },
-        DefaultOptionFilter: S,
+        DefaultOptionFilter: N,
         Value: function (e) {
           return (0, i.jsx)(o.EY, {
             weight: "medium",
@@ -8365,7 +8589,7 @@
           });
         },
       };
-      function T(e) {
+      function k(e) {
         return e
           ? "string" == typeof e
             ? e
@@ -8378,7 +8602,7 @@
                 "")
           : "";
       }
-      const D = Object.assign(function (e) {
+      const R = Object.assign(function (e) {
         const {
             selectedValue: t,
             onSelectionChange: n,
@@ -8386,40 +8610,40 @@
             filter: a,
             filterPlaceholder: o,
             placeholder: c,
-            getOptionLabel: l = T,
+            getOptionLabel: l = k,
             ...d
           } = e,
           u = (function (e) {
-            return N(e, !1);
+            return T(e, !1);
           })({
             onSelectionChange: n,
             selectedValue: t,
             rgOptions: s,
             filter: (0, r.useCallback)(
-              (e, t) => (a ? a(e, t) : S(e, l(t))),
+              (e, t) => (a ? a(e, t) : N(e, l(t))),
               [a, l],
             ),
             filterPlaceholder: o,
           }),
           p = null != t;
-        return (0, i.jsxs)(D.Root, {
+        return (0, i.jsxs)(R.Root, {
           state: u,
           ...d,
           children: [
-            (0, i.jsxs)(D.Trigger, {
+            (0, i.jsxs)(R.Trigger, {
               children: [
-                p && (0, i.jsx)(D.Value, { children: l(t) }),
-                !p && (0, i.jsx)(D.Placeholder, { children: c }),
+                p && (0, i.jsx)(R.Value, { children: l(t) }),
+                !p && (0, i.jsx)(R.Placeholder, { children: c }),
               ],
             }),
-            (0, i.jsx)(D.Options, {
+            (0, i.jsx)(R.Options, {
               children: u.rgFilteredOptions.map((e) =>
-                (0, i.jsx)(b, { value: e, children: l(e) }, l(e)),
+                (0, i.jsx)(I, { value: e, children: l(e) }, l(e)),
               ),
             }),
           ],
         });
-      }, I);
+      }, D);
       Object.assign(function (e) {
         const {
             selectedValue: t,
@@ -8428,54 +8652,120 @@
             filter: a,
             filterPlaceholder: o,
             placeholder: c,
-            getOptionLabel: l = T,
+            getOptionLabel: l = k,
             maxSelected: d,
             ...u
           } = e,
           p = (function (e) {
-            return N(e, !0);
+            return T(e, !0);
           })({
             onSelectionChange: n,
             selectedValue: t,
             rgOptions: s,
             filter: (0, r.useCallback)(
-              (e, t) => (a ? a(e, t) : S(e, l(t))),
+              (e, t) => (a ? a(e, t) : N(e, l(t))),
               [a, l],
             ),
             filterPlaceholder: o,
             maxSelected: d,
           }),
-          m = Array.isArray(t) && t.length > 0;
-        let h = "";
-        if (m) {
+          h = Array.isArray(t) && t.length > 0;
+        let m = "";
+        if (h) {
           const e = t.map((e) => l(e));
-          h =
+          m =
             "ListFormat" in Intl
-              ? new Intl.ListFormat((0, g.ZO)().strISOCode).format(e)
+              ? new Intl.ListFormat((0, _.ZO)().strISOCode).format(e)
               : e.join(", ");
         }
-        return (0, i.jsxs)(D.Root, {
+        return (0, i.jsxs)(R.Root, {
           state: p,
           ...u,
           children: [
-            (0, i.jsxs)(D.Trigger, {
+            (0, i.jsxs)(R.Trigger, {
               children: [
-                m && (0, i.jsx)(D.Value, { children: h }),
-                !m && (0, i.jsx)(D.Placeholder, { children: c }),
+                h && (0, i.jsx)(R.Value, { children: m }),
+                !h && (0, i.jsx)(R.Placeholder, { children: c }),
               ],
             }),
-            (0, i.jsx)(D.Options, {
+            (0, i.jsx)(R.Options, {
               children: p.rgFilteredOptions.map((e) =>
-                (0, i.jsx)(D.Option, { value: e, children: l(e) }, l(e)),
+                (0, i.jsx)(R.Option, { value: e, children: l(e) }, l(e)),
               ),
             }),
           ],
         });
-      }, I);
-      const k = (0, r.createContext)(null);
+      }, D);
+      const L = (0, r.createContext)(null);
       function B(e) {
-        const t = (0, r.useContext)(k);
+        const t = (0, r.useContext)(L);
         return t || console.error(`${e} must be used within a <Combobox>!`), t;
+      }
+    },
+    61023: (e, t, n) => {
+      "use strict";
+      n.d(t, { j: () => u, w: () => p });
+      var i = n(7850),
+        r = n(64238),
+        s = n.n(r),
+        a = n(38878),
+        o = n(90534),
+        c = n(61011),
+        l = n(75659),
+        d = n(11526);
+      function u(e) {
+        const {
+            children: t,
+            beforeContent: n,
+            afterContent: r,
+            hasValue: s,
+            ...a
+          } = e,
+          l = p(a);
+        return (0, i.jsxs)(c.s, {
+          ...l,
+          align: "center",
+          "data-has-value": !!s,
+          minWidth: "0",
+          children: [
+            n && (0, i.jsx)(c.s, { paddingRight: "2", children: n }),
+            (0, i.jsx)(o.az, { flexGrow: "1", minWidth: "0", children: t }),
+            r && (0, i.jsx)(c.s, { paddingLeft: "2", children: r }),
+          ],
+        });
+      }
+      function p(e) {
+        const {
+            variant: t = "basic",
+            size: n = "2",
+            radius: i,
+            focusable: r = !0,
+            hoverable: o = !0,
+            clickable: c = !0,
+            disabled: u,
+            className: p,
+            status: h,
+            ...m
+          } = e,
+          v = "underline" === t ? "none" : i;
+        return (0, d.mz)(
+          {
+            ...m,
+            radius: v,
+            "data-status": h,
+            className: s()(
+              a.ControlBox,
+              r && !u && a.Focusable,
+              o && !u && a.Hoverable,
+              c && !u && a.Clickable,
+              u && a.Disabled,
+              a[`Variant-${t}`],
+              a[`Size-${n}`],
+              p,
+            ),
+          },
+          l.h,
+        );
       }
     },
     63910: (e, t, n) => {
@@ -8495,7 +8785,7 @@
         a = n(90534),
         o = n(64238),
         c = n.n(o),
-        l = n(83392),
+        l = n(61011),
         d = n(75659),
         u = n(66922);
       function p(e) {
@@ -8525,25 +8815,685 @@
                     inset: "0",
                     justify: "center",
                     align: "center",
-                    children: (0, i.jsx)(m, { size: t, color: o, variant: p }),
+                    children: (0, i.jsx)(h, { size: t, color: o, variant: p }),
                   }),
               ],
             })
-          : (0, i.jsx)(m, { size: t, color: o, variant: p, ...d });
+          : (0, i.jsx)(h, { size: t, color: o, variant: p, ...d });
       }
-      function m(e) {
-        const { className: t, color: n, ...a } = (0, s.mz)(e, h);
+      function h(e) {
+        const { className: t, color: n, ...a } = (0, s.mz)(e, m);
         return (0, i.jsx)("div", {
           "data-accent-color": n,
           className: c()(t, r.Spinner),
           ...a,
         });
       }
-      const h = [
+      const m = [
         ...d.L,
         { prop: "size", responsive: !0, className: (e) => r[`Size-${e}`] },
         { prop: "variant", className: (e) => r[`Variant-${e}`] },
       ];
+    },
+    95013: (e, t, n) => {
+      "use strict";
+      n.d(t, { k: () => b, T: () => w });
+      var i = n(7850),
+        r = n(90626),
+        s = n(73788),
+        a = n(90534),
+        o = n(80797),
+        c = n(48093);
+      const l = Object.assign(
+        function (e) {
+          const { render: t, ...n } = e;
+          return (0, o.Q)(
+            t,
+            (0, i.jsx)(a.az, {
+              radius: "sm",
+              background: "dull-8",
+              className: c.ListBox,
+            }),
+            { role: "listbox", ...n },
+          );
+        },
+        {
+          Option: function (e) {
+            const {
+                selected: t,
+                focused: n,
+                label: r = null,
+                render: s,
+                disabled: l,
+                ...d
+              } = e,
+              u = t ? "true" : "false",
+              p = n ? "true" : void 0;
+            return (0, o.Q)(
+              s,
+              (0, i.jsx)(a.az, {
+                focusable: !0,
+                "data-selected": u,
+                "data-focused": p,
+                "aria-disabled": l,
+                className: c.ListBoxOption,
+                paddingY: "2",
+                paddingX: "3",
+              }),
+              { role: "option", ...d },
+              { selected: t, focused: n, disabled: l },
+            );
+          },
+        },
+      );
+      var d = n(8083),
+        u = n(94621),
+        p = (n(8871), n(45699)),
+        h = n(85585),
+        m = (n(7445), n(81393), n(64238), n(11820), n(78327)),
+        v = n(82321);
+      (0, r.createContext)(null);
+      function g(e, t, n) {
+        const { onOpenChange: i, placement: r } = e,
+          a = "anchor" === n;
+        return (0, s.we)({
+          open: t,
+          onOpenChange: i,
+          middleware: a ? _(e) : [],
+          whileElementsMounted: a ? d.ll : void 0,
+          placement: r && "object" == typeof r ? r.initial : r,
+          strategy: "fixed",
+          platform: {
+            ...d.iD,
+            getOffsetParent: (e) => e?.ownerDocument?.defaultView ?? window,
+          },
+        });
+      }
+      function _(e) {
+        const { gutter: t = 0, placement: n } = e,
+          i = [],
+          r = n && "object" == typeof n;
+        return (
+          r && n.offset
+            ? i.push((0, u.cY)(n.offset))
+            : (r && void 0 !== n.offset) || i.push((0, u.cY)(2)),
+          r && n.flip
+            ? i.push((0, u.UU)(n.flip))
+            : (r && void 0 !== n.flip) || i.push((0, u.UU)()),
+          r && n.shift
+            ? i.push((0, u.BN)(n.shift))
+            : (r && void 0 !== n.shift) || i.push((0, u.BN)()),
+          i.push(
+            (0, u.Ej)({
+              apply: (n) => {
+                const { rects: i, elements: r, availableHeight: s } = n,
+                  a = { boxSizing: "border-box", zIndex: "1" };
+                switch ((e.scroll && (a.overflowY = "auto"), e.width)) {
+                  case "target":
+                    a.width = `${i.reference.width}px`;
+                    break;
+                  case "content":
+                    a.width = `${i.floating.width}px`;
+                    break;
+                  case "dropdown": {
+                    let e = i.reference.width;
+                    i.floating.width > e && e < 200 && (e = i.floating.width),
+                      (a.width = `${e}px`);
+                  }
+                }
+                "function" == typeof e.width &&
+                  (a.width = e.width({
+                    unContentWidth: i.floating.width,
+                    unTargetWidth: i.reference.width,
+                  }));
+                const o =
+                  "number" == typeof t ? `${t}px` : `var(--spacing-${t})`;
+                "function" == typeof e.maxHeight
+                  ? (a.maxHeight = e.maxHeight({
+                      unAvailableHeight: s,
+                      gutter: o,
+                    }))
+                  : "number" == typeof e.maxHeight
+                    ? (a.maxHeight = `min( calc( ${s}px - ${o} ), ${e.maxHeight}px )`)
+                    : (a.maxHeight =
+                        "number" == typeof t
+                          ? s - t + "px"
+                          : `calc( ${s}px - var(--spacing-${t}) )`),
+                  Object.assign(r.floating.style, a),
+                  r.floating.style.setProperty(
+                    "--popover-max-height",
+                    a.maxHeight,
+                  );
+              },
+            }),
+          ),
+          i
+        );
+      }
+      const x = (0, r.createContext)(null);
+      function f(e) {
+        return (0, m.Qn)() ? (0, i.jsx)(j, { ...e }) : (0, i.jsx)(A, { ...e });
+      }
+      function j(e) {
+        const { state: t, children: n } = e,
+          s = r.useRef(void 0);
+        return (
+          (0, p.O7)(s, !0, !0),
+          (0, i.jsx)(h.D6, {
+            navID: "PopoverList",
+            onCancelButton: () => t.floating.context.onOpenChange(!1),
+            modal: !0,
+            navTreeRef: s,
+            children: n,
+          })
+        );
+      }
+      function A(e) {
+        const { state: t, children: n } = e;
+        return (0, i.jsx)(s.s3, {
+          context: t.floating.context,
+          initialFocus: t.initialFocus,
+          returnFocus: !1,
+          children: n,
+        });
+      }
+      function w(e) {
+        const {
+          open: t,
+          activeIndex: n,
+          setActiveIndex: i,
+          selectedIndex: a,
+          setSelectedIndex: o,
+          interactions: c = {},
+          role: l,
+          width: d,
+          maxHeight: u,
+          gutter: p,
+          scroll: h,
+        } = e;
+        let m = t;
+        const _ = (0, v.Pr)(e.presentation),
+          x = g(e, m, _),
+          f = (0, s.kp)(x.context, { enabled: !!c.click }),
+          j = (0, s.iQ)(x.context, { enabled: !!c.focus }),
+          A = (0, s.s9)(x.context),
+          w = (0, r.useRef)([]),
+          b = (0, s.C1)(x.context, {
+            listRef: w,
+            activeIndex: n,
+            selectedIndex: a,
+            onNavigate: i,
+            virtual: !!c.virtualItemFocus,
+            loop: !0,
+            focusItemOnOpen: !1,
+          }),
+          y = (0, r.useRef)([]),
+          E = (0, r.useRef)(!1),
+          C = (0, s.lY)(x.context, {
+            enabled: !!c.typeahead,
+            listRef: y,
+            activeIndex: n,
+            selectedIndex: a,
+            onMatch: m ? i : o,
+            onTypingChange: (e) => (E.current = e),
+          }),
+          S = (0, s.It)(x.context, { role: l }),
+          {
+            getFloatingProps: I,
+            getReferenceProps: N,
+            getItemProps: T,
+          } = (0, s.bv)([S, f, j, A, b, C]);
+        return {
+          floating: x,
+          getFloatingProps: I,
+          getReferenceProps: N,
+          getItemProps: T,
+          open: m,
+          activeIndex: n,
+          selectedIndex: a,
+          setSelectedIndex: o,
+          elementsRef: w,
+          labelsRef: y,
+          typingRef: E,
+          initialFocus: c.virtualItemFocus ? -1 : void 0,
+          presentation: _,
+          sizing: { width: d, maxHeight: u, gutter: p, scroll: h },
+        };
+      }
+      const b = {
+        Root: function (e) {
+          const { children: t, state: n } = e;
+          return (0, i.jsx)(x.Provider, { value: n, children: t });
+        },
+        Anchor: function (e) {
+          const { children: t } = e,
+            n = r.Children.only(t),
+            i = (0, r.useContext)(x),
+            a = (0, s.SV)([i?.floating.refs.setReference, n?.props.ref]);
+          if (!n) return null;
+          if (!i)
+            return (
+              console.error(
+                "<PopoverListAnchor> must be a child of <PopoverListRoot>.",
+              ),
+              null
+            );
+          const { ref: o, ...c } = n.props;
+          return (0, r.cloneElement)(n, { ref: a, ...i.getReferenceProps(c) });
+        },
+        Positioner: function (e) {
+          const { children: t, render: n, ref: a, label: o } = e,
+            c = (0, r.useContext)(x),
+            d = (0, s.SV)([a, c?.floating.refs.setFloating]);
+          return c
+            ? c.open
+              ? (0, i.jsx)(f, {
+                  state: c,
+                  children: (0, i.jsx)(v.HF, {
+                    presentation: c.presentation,
+                    sizing: c.sizing,
+                    floatingRef: d,
+                    floatingProps: c.getFloatingProps(),
+                    floatingStyles: c.floating.floatingStyles,
+                    referenceElement: c.floating.elements.domReference,
+                    label: o,
+                    children: (0, i.jsx)(l, {
+                      render: n,
+                      children: (0, i.jsx)(s.ph, {
+                        elementsRef: c.elementsRef,
+                        labelsRef: c.labelsRef,
+                        children: t,
+                      }),
+                    }),
+                  }),
+                })
+              : null
+            : (console.error(
+                "<PopoverListPositioner> must be a child of <PopoverListRoot>.",
+              ),
+              null);
+        },
+        Item: function (e) {
+          const {
+              children: t,
+              label: n,
+              selected: a,
+              onSelect: o,
+              ref: c,
+              disabled: d,
+              ...u
+            } = e,
+            p = (0, r.useContext)(x),
+            { ref: h, index: m } = (0, s.rm)({ label: n }),
+            v = (0, s.SV)([c, h]);
+          if (!p)
+            return (
+              console.error(
+                "<PopoverListItem> must be a child of <PopoverListRoot>.",
+              ),
+              null
+            );
+          const g = m === p.activeIndex,
+            _ = m === p.selectedIndex || !!a;
+          return (0, i.jsx)(l.Option, {
+            ref: v,
+            selected: _,
+            focused: g,
+            role: "option",
+            tabIndex: 0,
+            ...p.getItemProps({
+              onClick: d ? void 0 : o,
+              onKeyDown: (e) => {
+                d ||
+                  ("Enter" !== e.key &&
+                    (" " !== e.key || p.typingRef.current)) ||
+                  (o(e), e.preventDefault(), e.stopPropagation());
+              },
+              active: g,
+              selected: _,
+              disabled: d,
+              ...u,
+            }),
+            children: t,
+          });
+        },
+      };
+    },
+    11967: (e, t, n) => {
+      "use strict";
+      n.d(t, { WM: () => _, l6: () => A, uh: () => b });
+      var i = n(7850),
+        r = n(90626),
+        s = n(95013),
+        a = n(61023),
+        o = n(89047),
+        c = n(20187),
+        l = n(77914),
+        d = n(80797),
+        u = n(14181),
+        p = n(57757),
+        h = n(61011),
+        m = n(66922),
+        v = n(92122),
+        g = n(88006);
+      function _(e) {
+        return x(e, !1);
+      }
+      function x(e, t) {
+        const { onSelectionChange: n, selectedValue: i, ...s } = e,
+          [a, o] = (0, r.useState)(!1),
+          c = (0, r.useCallback)(
+            (e) => {
+              n(e), t || o(!1);
+            },
+            [n, t],
+          ),
+          l = (0, r.useCallback)(
+            (e) => {
+              c(t ? [] : null), e?.stopPropagation(), e?.preventDefault();
+            },
+            [c, t],
+          ),
+          d = (0, r.useCallback)(
+            (e) => {
+              if (t) {
+                const t = i,
+                  n = t.indexOf(e);
+                if (-1 !== n) return c(t.slice(0, n).concat(t.slice(n + 1)));
+                c(t.concat(e));
+              } else c(e);
+            },
+            [c, i, t],
+          );
+        return {
+          onSelectionChange: c,
+          onItemSelectionChange: d,
+          onClear: l,
+          bOpen: a,
+          setOpen: o,
+          multiselect: t,
+          selectedValue: i,
+          ...s,
+        };
+      }
+      const f = {
+        Root: function (e) {
+          const {
+              children: t,
+              state: n,
+              placement: a = "bottom-end",
+              popoverWidth: o = "dropdown",
+              popoverMaxHeight: c,
+              popoverPresentation: l,
+              popoverLabel: d,
+              ...u
+            } = e,
+            [p, h] = (0, r.useState)(null),
+            [m, v] = (0, r.useState)(null),
+            g = (0, r.useMemo)(
+              () =>
+                n.rgOptions.findIndex((e) =>
+                  n.multiselect
+                    ? n.selectedValue.includes(e)
+                    : e === n.selectedValue,
+                ),
+              [n.selectedValue, n.rgOptions, n.multiselect],
+            ),
+            _ = (0, r.useRef)(null),
+            x = {
+              ...n,
+              ...u,
+              focusedValue: p,
+              onFocusChange: h,
+              refPopover: _,
+              popoverLabel: d,
+              setOpen: (e) => {
+                e && h(n.multiselect ? n.selectedValue[0] : n.selectedValue),
+                  n.setOpen(e);
+              },
+              focusedIndex: m,
+              onFocusedIndexChange: v,
+            },
+            f = (0, s.T)({
+              open: n.bOpen,
+              onOpenChange: n.setOpen,
+              width: o,
+              maxHeight: c,
+              placement: a,
+              presentation: l,
+              selectedIndex: g,
+              setSelectedIndex: (e) => n.onItemSelectionChange(n.rgOptions[e]),
+              activeIndex: m,
+              setActiveIndex: v,
+              gutter: "4",
+              interactions: { click: !0, typeahead: !0 },
+              role: "select",
+              scroll: !0,
+            });
+          return (0, i.jsx)(y.Provider, {
+            value: x,
+            children: (0, i.jsx)(s.k.Root, { state: f, children: t }),
+          });
+        },
+        Option: function (e) {
+          const { value: t, children: n, disabled: r, ...a } = e,
+            {
+              onItemSelectionChange: o,
+              multiselect: c,
+              selectedValue: l,
+              maxSelected: d,
+            } = E("<SelectTrigger>"),
+            u = "string" == typeof t ? t : void 0;
+          let m = !1,
+            v = !1;
+          c
+            ? ((m = Array.isArray(l) && l.includes(t)),
+              (v = !!d && Array.isArray(l) && l.length >= d))
+            : (m = t === l);
+          const g = r || (v && !m);
+          return (0, i.jsxs)(s.k.Item, {
+            label: u,
+            onSelect: () => o(t),
+            selected: m,
+            disabled: g,
+            ...a,
+            children: [
+              c &&
+                (0, i.jsxs)(h.s, {
+                  gap: "2",
+                  align: "center",
+                  children: [
+                    (0, i.jsx)(p.S, { checked: m, variant: "dark" }),
+                    n,
+                  ],
+                }),
+              !c && n,
+            ],
+          });
+        },
+        Options: function (e) {
+          const { refPopover: t, popoverLabel: n } = E("<Select.Options>");
+          return (0, i.jsx)(s.k.Positioner, {
+            ref: t,
+            label: n,
+            children: e.children,
+          });
+        },
+        Trigger: function (e) {
+          const { children: t, render: n } = e,
+            {
+              bOpen: r,
+              setOpen: c,
+              selectedValue: u,
+              variant: p,
+              size: h,
+              radius: _,
+              status: x,
+              rgOptions: f,
+              multiselect: j,
+              onClear: A,
+              focusedValue: w,
+              onFocusChange: b,
+              onSelectionChange: y,
+              clearable: C,
+              focusedIndex: S,
+              onItemSelectionChange: I,
+              onFocusedIndexChange: N,
+              refPopover: T,
+              popoverLabel: D,
+              placeholder: k,
+              maxSelected: R,
+              ...L
+            } = E("<SelectTrigger>"),
+            B = {
+              tabIndex: 0,
+              role: "combobox",
+              onClick: () => c(!r),
+              children: t,
+            },
+            G = j ? Array.isArray(u) && u.length > 0 : !!u,
+            P = G && C,
+            O = P
+              ? (0, i.jsx)(l.g, { onClick: A, cursor: "pointer", hitSlop: !0 })
+              : (0, i.jsx)(o.V, {}),
+            V = P
+              ? {
+                  onSecondaryButton: A,
+                  actionDescriptionMap: {
+                    [g.pR.SECONDARY]: v.T.Localize("#Clear"),
+                  },
+                }
+              : void 0,
+            F = (0, m.f)("Select", p),
+            M = (0, i.jsx)(a.j, {
+              afterContent: O,
+              variant: F,
+              size: h,
+              radius: _,
+              status: x,
+              hasValue: G,
+              tabIndex: 0,
+              cursor: "pointer",
+              navProps: V,
+              ...L,
+            }),
+            z = (0, d.Q)(n, M, B, void 0);
+          return (0, i.jsx)(s.k.Anchor, { children: z });
+        },
+        Value: function (e) {
+          return (0, i.jsx)(c.EY, {
+            weight: "medium",
+            truncate: !0,
+            contrast: "title",
+            children: e.children,
+          });
+        },
+        Placeholder: function (e) {
+          return (0, i.jsx)(c.EY, {
+            contrast: "description",
+            truncate: !0,
+            children: e.children,
+          });
+        },
+      };
+      function j(e) {
+        return "string" == typeof e
+          ? e
+          : "number" == typeof e
+            ? e.toString()
+            : (console.error(
+                "Could not use default option labeler on Select option value. Custom labeler requried",
+                e,
+              ),
+              "");
+      }
+      const A = Object.assign(function (e) {
+        const {
+            selectedValue: t,
+            onSelectionChange: n,
+            options: r,
+            placeholder: s,
+            getOptionLabel: a = j,
+            ...o
+          } = e,
+          c = _({
+            onSelectionChange: n,
+            selectedValue: t,
+            rgOptions: r,
+            placeholder: s,
+          }),
+          l = null != t,
+          d = l ? a(t) : "";
+        return (0, i.jsxs)(A.Root, {
+          state: c,
+          ...o,
+          children: [
+            (0, i.jsxs)(A.Trigger, {
+              children: [
+                l && (0, i.jsx)(A.Value, { children: d }),
+                !l && (0, i.jsx)(A.Placeholder, { children: s }),
+              ],
+            }),
+            (0, i.jsx)(A.Options, {
+              children: c.rgOptions.map((e, t) =>
+                (0, i.jsx)(A.Option, { value: e, children: a(e) }, t),
+              ),
+            }),
+          ],
+        });
+      }, f);
+      const w = f;
+      const b = Object.assign(function (e) {
+          const {
+              selectedValue: t,
+              onSelectionChange: n,
+              options: r,
+              placeholder: s,
+              getOptionLabel: a = j,
+              maxSelected: o,
+              ...c
+            } = e,
+            l = (function (e) {
+              return x(e, !0);
+            })({
+              onSelectionChange: n,
+              selectedValue: t,
+              rgOptions: r,
+              placeholder: s,
+              maxSelected: o,
+            }),
+            d = Array.isArray(t) && t.length > 0;
+          let p = "";
+          if (d) {
+            const e = t.map((e) => a(e));
+            p =
+              "ListFormat" in Intl
+                ? new Intl.ListFormat((0, u.ZO)().strISOCode).format(e)
+                : e.join(", ");
+          }
+          return (0, i.jsxs)(b.Root, {
+            state: l,
+            ...c,
+            children: [
+              (0, i.jsxs)(b.Trigger, {
+                children: [
+                  d && (0, i.jsx)(b.Value, { children: p }),
+                  !d && (0, i.jsx)(b.Placeholder, { children: s }),
+                ],
+              }),
+              (0, i.jsx)(b.Options, {
+                children: l.rgOptions.map((e, t) =>
+                  (0, i.jsx)(b.Option, { value: e, children: a(e) }, t),
+                ),
+              }),
+            ],
+          });
+        }, w),
+        y = (0, r.createContext)(null);
+      function E(e) {
+        const t = (0, r.useContext)(y);
+        return t || console.error(`${e} must be used within a <Select>!`), t;
+      }
     },
     38528: (e, t, n) => {
       "use strict";
@@ -8573,20 +9523,20 @@
             onValueSettled: d,
             value: c,
             children: [
-              (0, i.jsx)(m, { children: (0, i.jsx)(h, { start: a, end: t }) }),
+              (0, i.jsx)(h, { children: (0, i.jsx)(m, { start: a, end: t }) }),
               (0, i.jsx)(v, {}),
             ],
           });
         },
-        { Root: u, Track: m, Range: h, Handle: v },
+        { Root: u, Track: h, Range: m, Handle: v },
       );
       function l(e) {
         const { value: t } = e;
         return (0, i.jsxs)(u, {
           ...e,
           children: [
-            (0, i.jsx)(m, {
-              children: (0, i.jsx)(h, { start: t[0], end: t[1] }),
+            (0, i.jsx)(h, {
+              children: (0, i.jsx)(m, { start: t[0], end: t[1] }),
             }),
             (0, i.jsx)(v, {}),
             (0, i.jsx)(v, {}),
@@ -8601,8 +9551,8 @@
             max: c,
             onValueChange: l,
             value: u,
-            step: m = 1,
-            onValueSettled: h,
+            step: h = 1,
+            onValueSettled: m,
           } = e,
           v = (0, r.useRef)(null),
           x = (0, r.useRef)(null),
@@ -8621,7 +9571,7 @@
                   "number" != typeof u)
                 ) {
                   const t = v.current.getBoundingClientRect(),
-                    n = _(e.clientX - t.left, [0, t.width], [a, c]);
+                    n = g(e.clientX - t.left, [0, t.width], [a, c]);
                   x.current = { activeValueIndex: p(u, n), bMoved: !1 };
                 } else x.current = { activeValueIndex: 0, bMoved: !1 };
                 A(!0);
@@ -8631,7 +9581,7 @@
               const t = e.target;
               t.hasPointerCapture(e.pointerId) &&
                 (t.releasePointerCapture(e.pointerId),
-                h && x.current?.bMoved && h(u),
+                m && x.current?.bMoved && m(u),
                 A(!1));
             },
             onPointerMove: (e) => {
@@ -8641,11 +9591,11 @@
                 x.current
               ) {
                 const t = v.current.getBoundingClientRect(),
-                  n = g({
-                    value: _(e.clientX - t.left, [0, t.width], [a, c]),
+                  n = _({
+                    value: g(e.clientX - t.left, [0, t.width], [a, c]),
                     min: a,
                     max: c,
-                    step: m,
+                    step: h,
                   }),
                   i = [...u];
                 (i[x.current.activeValueIndex] = n),
@@ -8658,11 +9608,11 @@
             onClick: (e) => {
               if (!v.current || x.current?.bMoved) return;
               const t = v.current.getBoundingClientRect(),
-                n = _(e.clientX - t.left, [0, t.width], [a, c]),
-                i = g({ value: n, min: a, max: c, step: m }),
+                n = g(e.clientX - t.left, [0, t.width], [a, c]),
+                i = _({ value: n, min: a, max: c, step: h }),
                 r = p(u, n),
                 s = [...u];
-              (s[r] = i), l(s), h && h(s);
+              (s[r] = i), l(s), m && m(s);
             },
             children: (0, i.jsx)("div", { className: o.Inner, children: t }),
           }),
@@ -8678,7 +9628,7 @@
         }
         return n;
       }
-      function m(e) {
+      function h(e) {
         const { render: t, ...n } = e;
         return (0, c.Q)(
           t,
@@ -8687,18 +9637,18 @@
           void 0,
         );
       }
-      function h(e) {
+      function m(e) {
         const { start: t, end: n, render: a } = e,
           l = (0, r.useContext)(d);
         (0, s.wT)(l, "SliderRange must be used within a SliderRoot!");
         const { min: u, max: p } = l,
-          m = x(t, u, p),
-          h = 100 - x(n, u, p);
+          h = x(t, u, p),
+          m = 100 - x(n, u, p);
         return (0, c.Q)(
           a,
           (0, i.jsx)("div", {
             className: o.SliderRange,
-            style: { "--pct-left": `${m}%`, "--pct-right": `${h}%` },
+            style: { "--pct-left": `${h}%`, "--pct-right": `${m}%` },
           }),
           {},
           void 0,
@@ -8713,19 +9663,19 @@
             max: l,
             handles: u,
             value: p,
-            step: m = 1,
-            onValueChange: h,
+            step: h = 1,
+            onValueChange: m,
             onValueSettled: v,
           } = n,
-          [_, f] = (0, r.useState)(null),
+          [g, f] = (0, r.useState)(null),
           [j, A] = (0, r.useState)(-1);
         (0, r.useEffect)(
-          () => (_ ? (u.add(_), A(u.size - 1), () => u.delete(_)) : () => {}),
-          [_, u],
+          () => (g ? (u.add(g), A(u.size - 1), () => u.delete(g)) : () => {}),
+          [g, u],
         );
         const w = j > -1,
-          E = { "--handle-pct": `${x(w ? p[j] : a, a, l)}%` };
-        w || (E.display = "none");
+          b = { "--handle-pct": `${x(w ? p[j] : a, a, l)}%` };
+        w || (b.display = "none");
         const y = {
           ref: f,
           role: "slider",
@@ -8740,11 +9690,11 @@
               case "ArrowLeft":
               case "ArrowDown": {
                 const t = "ArrowRight" === e.key || "ArrowUp" === e.key,
-                  n = m * (t ? 1 : -1),
-                  i = g({ value: p[j] + n, min: a, max: l, step: m }),
+                  n = h * (t ? 1 : -1),
+                  i = _({ value: p[j] + n, min: a, max: l, step: h }),
                   r = [...p];
                 (r[j] = i),
-                  h(r),
+                  m(r),
                   v && v(r),
                   e.preventDefault(),
                   e.stopPropagation();
@@ -8754,10 +9704,10 @@
               case "PageDown": {
                 const t = "PageUp" === e.key,
                   n = Math.round((l - a) / 10) * (t ? 1 : -1),
-                  i = g({ value: p[j] + n, min: a, max: l, step: m }),
+                  i = _({ value: p[j] + n, min: a, max: l, step: h }),
                   r = [...p];
                 (r[j] = i),
-                  h(r),
+                  m(r),
                   v && v(r),
                   e.preventDefault(),
                   e.stopPropagation();
@@ -8768,17 +9718,17 @@
         };
         return (0, c.Q)(
           t,
-          (0, i.jsx)("span", { className: o.SliderHandle, style: E }),
+          (0, i.jsx)("span", { className: o.SliderHandle, style: b }),
           y,
           { value: p[j], bDragActive: n.bDragActive },
         );
       }
-      function _(e, t, n) {
+      function g(e, t, n) {
         if (t[0] === t[1] || n[0] === n[1]) return n[0];
         const i = ((n[1] - n[0]) / (t[1] - t[0])) * (e - t[0]) + n[0];
         return a.OQ(i, n[0], n[1]);
       }
-      function g(e) {
+      function _(e) {
         const { value: t, min: n, max: i, step: r } = e,
           s = Math.round((t - n) / r) / (1 / r);
         return a.OQ(s + n, n, i);
@@ -8805,16 +9755,16 @@
             resize: n = "none",
             ref: o,
             value: p,
-            onTextChange: m,
-            onChange: h,
+            onTextChange: h,
+            onChange: m,
             disabled: v,
-            variant: _,
-            ...g
+            variant: g,
+            ..._
           } = e,
-          x = (0, l.f)("TextArea", _),
+          x = (0, l.f)("TextArea", g),
           f = (0, u.Qn)(),
           j = (0, a.w)({
-            ...g,
+            ..._,
             className: c()((0, r.T)(), (0, s.F)()),
             style: { resize: n },
             cursor: "text",
@@ -8827,7 +9777,7 @@
           ...j,
           value: p || "",
           onChange: (e) => {
-            v || (m(e.target.value), h && h(e));
+            v || (h(e.target.value), m && m(e));
           },
           rows: t,
           readOnly: v,
@@ -8837,7 +9787,7 @@
     },
     38256: (e, t, n) => {
       "use strict";
-      n.d(t, { k: () => _ });
+      n.d(t, { k: () => x });
       var i = n(7850),
         r = n(90626),
         s = n(64238),
@@ -8848,70 +9798,169 @@
         d = n(61023),
         u = n(77914),
         p = n(8871),
-        m = n(45699),
-        h = n(66922),
-        v = n(78327);
-      function _(e) {
+        h = n(45699),
+        m = n(66922),
+        v = n(78327),
+        g = n(92122),
+        _ = n(88006);
+      function x(e) {
         const { extracted: t, remaining: n } = (0, l.A4)(e),
           {
             value: s,
-            onTextChange: _,
-            onTextClear: g,
-            clearable: x,
-            onChange: f,
-            radius: j,
-            variant: A,
-            size: w,
+            onTextChange: x,
+            onTextClear: f,
+            clearable: j,
+            onChange: A,
+            radius: w,
+            variant: b,
+            size: y,
             beforeContent: E,
-            afterContent: y,
-            inputRef: C,
-            ref: b,
-            disabled: S,
-            gamepadFocusable: N = !0,
-            status: I,
-            ...T
+            afterContent: C,
+            inputRef: S,
+            ref: I,
+            disabled: N,
+            gamepadFocusable: T = !0,
+            status: D,
+            ...k
           } = n,
-          D = (0, v.Qn)(),
-          k =
-            s && x
-              ? (0, i.jsx)(u.g, {
-                  onClick: () => {
-                    _(""), g && g();
-                  },
-                  cursor: "pointer",
-                  hitSlop: !0,
-                })
-              : y,
-          B = {
-            ...t,
-            variant: (0, h.f)("TextInput", A),
-            size: w,
-            radius: j,
-            status: I,
-            beforeContent: E,
-            afterContent: k,
-            ref: b,
-            disabled: S,
+          R = (0, v.Qn)(),
+          L = () => {
+            x(""), f && f();
           },
-          R = (0, r.useRef)(null),
-          G = N && D ? m.BA : "input";
+          B = !!s && j,
+          G = B
+            ? (0, i.jsx)(u.g, { onClick: L, cursor: "pointer", hitSlop: !0 })
+            : C,
+          P = {
+            ...t,
+            variant: (0, m.f)("TextInput", b),
+            size: y,
+            radius: w,
+            status: D,
+            beforeContent: E,
+            afterContent: G,
+            ref: I,
+            disabled: N,
+          },
+          O = (0, r.useRef)(null),
+          V = T && R,
+          F = V ? h.BA : "input",
+          M =
+            V && B && !N
+              ? {
+                  onSecondaryButton: L,
+                  actionDescriptionMap: {
+                    [_.pR.SECONDARY]: g.T.Localize("#Clear"),
+                  },
+                }
+              : {};
         return (0, i.jsx)(d.j, {
           cursor: "text",
-          ...B,
+          ...P,
           onClick: (e) => {
-            R.current && e.target !== R.current && R.current.focus();
+            O.current && e.target !== O.current && O.current.focus();
           },
-          children: (0, i.jsx)(G, {
-            ref: (0, p.Ue)(C, R),
+          children: (0, i.jsx)(F, {
+            ref: (0, p.Ue)(S, O),
             type: "text",
-            "aria-disabled": S,
-            readOnly: S,
+            "aria-disabled": N,
+            readOnly: N,
             className: a()((0, o.T)(), (0, c.F)()),
             value: s || "",
             onChange: (e) => {
-              S || (_(e.target.value), f && f(e));
+              N || (x(e.target.value), A && A(e));
             },
-            ...T,
+            ...M,
+            ...k,
+          }),
+        });
+      }
+    },
+    40704: (e, t, n) => {
+      "use strict";
+      n.d(t, { I: () => o });
+      var i = n(7850),
+        r = n(11526),
+        s = n(75659),
+        a = n(16619);
+      function o(e) {
+        return (0, i.jsx)("svg", { ...d(e) });
+      }
+      const c = [
+        ...s.L,
+        { prop: "size", responsive: !0, className: (e) => a[`IconSize-${e}`] },
+        {
+          prop: "color",
+          className: a.Color,
+          cssProperty: (e) => ["--icon-color", l(e)],
+        },
+        {
+          prop: "hitSlop",
+          className: a.HitSlop,
+          cssProperty: (e) => [
+            "--hit-slop-custom",
+            "string" == typeof e ? e : "",
+          ],
+        },
+        s.h.find(({ prop: e }) => "cursor" === e),
+      ];
+      function l(e) {
+        return e && "#" !== e[0] ? (0, r.w7)(e) : e;
+      }
+      function d(e) {
+        const { viewBox: t, ...n } = e,
+          i = { className: n.size ? void 0 : a.IconSizeDefault, ...n };
+        return (
+          t &&
+            (i.viewBox = (function (e) {
+              return e
+                ? "number" == typeof e
+                  ? `0 0 ${e} ${e}`
+                  : "string" == typeof e
+                    ? e
+                    : `0 0 ${e.width} ${e.height}`
+                : void 0;
+            })(t)),
+          (0, r.mz)(i, c)
+        );
+      }
+    },
+    89047: (e, t, n) => {
+      "use strict";
+      n.d(t, { V: () => a });
+      var i = n(7850),
+        r = n(40704);
+      const s = {
+        up: "rotate( 180, 10, 10 )",
+        left: "rotate( 90, 10, 10 )",
+        right: "rotate( 270, 10, 10 )",
+      };
+      function a(e) {
+        const { direction: t = "down" } = e,
+          n = s[t];
+        return (0, i.jsx)(r.I, {
+          ...e,
+          viewBox: 20,
+          children: (0, i.jsx)("path", {
+            transform: n,
+            d: "M5.14541 6.89977L10.0063 12.2027L14.8671 6.89977C15.3557 6.36674 16.145 6.36674 16.6336 6.89977C17.1221 7.4328 17.1221 8.29385 16.6336 8.82688L10.8832 15.1002C10.3946 15.6333 9.60537 15.6333 9.11678 15.1002L3.36644 8.82688C2.87785 8.29385 2.87785 7.4328 3.36644 6.89977C3.85503 6.38041 4.65682 6.36674 5.14541 6.89977Z",
+            fill: "currentColor",
+          }),
+        });
+      }
+    },
+    77914: (e, t, n) => {
+      "use strict";
+      n.d(t, { g: () => s });
+      var i = n(7850),
+        r = n(40704);
+      function s(e) {
+        return (0, i.jsx)(r.I, {
+          ...e,
+          viewBox: 12,
+          children: (0, i.jsx)("path", {
+            d: "M10.7068 2.46964L9.53012 1.29297L6.00012 4.81964L2.47012 1.29297L1.29346 2.46964L4.82012 5.99964L1.29346 9.52964L2.47012 10.7063L6.00012 7.17964L9.53012 10.7063L10.7068 9.52964L7.18012 5.99964L10.7068 2.46964Z",
+            fill: "currentColor",
           }),
         });
       }
@@ -8929,18 +9978,18 @@
         d = n(78327);
       function u(e) {
         const { as: t = "div", ref: n, focusable: s, navProps: o, ...u } = e,
-          m = (0, d.Qn)(),
-          h = (0, c.mz)({ ...u, className: a()(l.Grid, e.className) }, p),
+          h = (0, d.Qn)(),
+          m = (0, c.mz)({ ...u, className: a()(l.Grid, e.className) }, p),
           v = s ?? o?.focusable ?? !!u.onClick,
-          _ = (0, i.jsx)(t, { ref: n, ...h });
-        return m
+          g = (0, i.jsx)(t, { ref: n, ...m });
+        return h
           ? (0, i.jsx)(r.J, {
               "flow-children": "grid",
               ...(o || {}),
               focusable: v,
-              children: _,
+              children: g,
             })
-          : _;
+          : g;
       }
       const p = [
         ...o.h,
@@ -9036,6 +10085,47 @@
         },
       ];
     },
+    92122: (e, t, n) => {
+      "use strict";
+      n.d(t, { T: () => s });
+      var i = n(13843);
+      const r = {};
+      (r.arabic = () => n.e(7608).then(n.t.bind(n, 47608, 19))),
+        (r.brazilian = () => n.e(9930).then(n.t.bind(n, 29930, 19))),
+        (r.bulgarian = () => n.e(8465).then(n.t.bind(n, 48465, 19))),
+        (r.czech = () => n.e(4027).then(n.t.bind(n, 14027, 19))),
+        (r.danish = () => n.e(9661).then(n.t.bind(n, 19661, 19))),
+        (r.dutch = () => n.e(4654).then(n.t.bind(n, 94654, 19))),
+        (r.english = () => n.e(3996).then(n.t.bind(n, 83996, 19))),
+        (r.finnish = () => n.e(7759).then(n.t.bind(n, 47759, 19))),
+        (r.french = () => n.e(7140).then(n.t.bind(n, 37140, 19))),
+        (r.german = () => n.e(5165).then(n.t.bind(n, 75165, 19))),
+        (r.greek = () => n.e(1744).then(n.t.bind(n, 71744, 19))),
+        (r.hungarian = () => n.e(9845).then(n.t.bind(n, 59845, 19))),
+        (r.indonesian = () => n.e(308).then(n.t.bind(n, 30308, 19))),
+        (r.italian = () => n.e(1380).then(n.t.bind(n, 51380, 19))),
+        (r.japanese = () => n.e(787).then(n.t.bind(n, 787, 19))),
+        (r.koreana = () => n.e(6691).then(n.t.bind(n, 36691, 19))),
+        (r.latam = () => n.e(1579).then(n.t.bind(n, 21579, 19))),
+        (r.malay = () => n.e(9162).then(n.t.bind(n, 83924, 19))),
+        (r.norwegian = () => n.e(7284).then(n.t.bind(n, 97284, 19))),
+        (r.polish = () => n.e(4373).then(n.t.bind(n, 44373, 19))),
+        (r.portuguese = () => n.e(2561).then(n.t.bind(n, 32561, 19))),
+        (r.romanian = () => n.e(7423).then(n.t.bind(n, 17423, 19))),
+        (r.russian = () => n.e(2757).then(n.t.bind(n, 52757, 19))),
+        (r.sc_schinese = () => n.e(175).then(n.t.bind(n, 52556, 19))),
+        (r.schinese = () => n.e(6128).then(n.t.bind(n, 6128, 19))),
+        (r.spanish = () => n.e(1052).then(n.t.bind(n, 41052, 19))),
+        (r.swedish = () => n.e(5773).then(n.t.bind(n, 95773, 19))),
+        (r.tchinese = () => n.e(6563).then(n.t.bind(n, 66563, 19))),
+        (r.thai = () => n.e(5178).then(n.t.bind(n, 75178, 19))),
+        (r.turkish = () => n.e(4028).then(n.t.bind(n, 14028, 19))),
+        (r.ukrainian = () => n.e(778).then(n.t.bind(n, 90778, 19))),
+        (r.vietnamese = () => n.e(1291).then(n.t.bind(n, 1291, 19)));
+      const s = (0, i.l)(async function (e) {
+        if (r[e]) return r[e]();
+      });
+    },
     28491: (e, t, n) => {
       "use strict";
       n.d(t, { W: () => p, Y: () => d });
@@ -9050,10 +10140,10 @@
         const { underline: t = "auto", focusable: n, navProps: s, ...c } = e,
           d = (0, l.Qn)(),
           p = n ?? s?.focusable ?? !!c.href,
-          m = (0, a.mz)({ ...c, underline: t, className: r.TextLink }, u);
+          h = (0, a.mz)({ ...c, underline: t, className: r.TextLink }, u);
         return d && (p || s)
-          ? (0, i.jsx)(o.Ii, { ...m, ...(s || {}), focusable: p })
-          : (0, i.jsx)("a", { ...m });
+          ? (0, i.jsx)(o.Ii, { ...h, ...(s || {}), focusable: p })
+          : (0, i.jsx)("a", { ...h });
       }
       const u = [
         ...s.Ae,
@@ -9063,7 +10153,7 @@
         const { underline: t = "auto", focusable: n, navProps: s, ...o } = e,
           d = (0, l.Qn)(),
           p = n ?? s?.focusable ?? !!o.onClick,
-          m = (0, i.jsx)("span", {
+          h = (0, i.jsx)("span", {
             role: "button",
             ...(0, a.mz)(
               { ...o, underline: t, className: r.TextLinkButton },
@@ -9071,8 +10161,16 @@
             ),
           });
         return d && (p || s)
-          ? (0, i.jsx)(c.J, { ...(s || {}), focusable: p, children: m })
-          : m;
+          ? (0, i.jsx)(c.J, { ...(s || {}), focusable: p, children: h })
+          : h;
+      }
+    },
+    14181: (e, t, n) => {
+      "use strict";
+      n.d(t, { ZO: () => r });
+      var i = n(13843);
+      function r() {
+        return (0, i.A)().languages[0];
       }
     },
     56456: (e, t, n) => {
@@ -9088,13 +10186,13 @@
         d = n(7445),
         u = n(90626),
         p = n(78327),
-        m = n(88208);
-      const h = Object.assign(
+        h = n(88208);
+      const m = Object.assign(
         function (e) {
           const { children: t, className: n, ...r } = e;
-          return (0, i.jsx)(h.Root, {
+          return (0, i.jsx)(m.Root, {
             ...r,
-            children: (0, i.jsx)(h.Content, { className: n, children: t }),
+            children: (0, i.jsx)(m.Content, { className: n, children: t }),
           });
         },
         {
@@ -9108,7 +10206,7 @@
                 ...c
               } = e,
               [l, p] = u.useState(!1),
-              h = u.useCallback((e) => {
+              m = u.useCallback((e) => {
                 e &&
                   (e.showModal(),
                   e.ownerDocument.defaultView &&
@@ -9117,7 +10215,7 @@
                         e.ownerDocument.defaultView.innerHeight,
                     ));
               }, []),
-              _ = u.useCallback(
+              g = u.useCallback(
                 (e) => {
                   e.target == e.currentTarget && t("backdropclick");
                 },
@@ -9127,10 +10225,10 @@
               navID: r ?? "ModalDialog",
               onClose: t,
               children: (0, i.jsx)("dialog", {
-                ref: h,
-                className: a()(m.ModalDialog, !o && l && m.PreventScroll, n),
+                ref: m,
+                className: a()(h.ModalDialog, !o && l && h.PreventScroll, n),
                 onClose: () => t("onclose"),
-                onClick: _,
+                onClick: g,
                 ...c,
                 children: (0, i.jsx)(d.q, { children: s }),
               }),
@@ -9139,7 +10237,7 @@
           Content: function (e) {
             const { className: t, children: n } = e;
             return (0, i.jsx)("div", {
-              className: a()(m.ModalDialogContent, t),
+              className: a()(h.ModalDialogContent, t),
               onClick: (e) => e.stopPropagation(),
               children: n,
             });
@@ -9161,8 +10259,8 @@
             })
           : (0, i.jsx)(i.Fragment, { children: r });
       }
-      var _ = n(83217),
-        g = n.n(_);
+      var g = n(83217),
+        _ = n.n(g);
       function x(e) {
         const {
           onClose: t,
@@ -9173,31 +10271,31 @@
           wideMode: d,
           ...u
         } = e;
-        return (0, i.jsx)(h, {
+        return (0, i.jsx)(m, {
           onClose: t,
           navID: s ?? "SimpleModalDialog",
           ...u,
           children: (0, i.jsxs)("div", {
-            className: a()(n, g().SimpleModalDialog, d && g().WideMode),
+            className: a()(n, _().SimpleModalDialog, d && _().WideMode),
             children: [
               " ",
               (0, i.jsxs)(r.Z, {
-                className: g().SimpleModalDialogHeader,
+                className: _().SimpleModalDialogHeader,
                 children: [
                   l &&
                     (0, i.jsx)("h2", {
-                      className: g().SimpleModalDialogTitle,
+                      className: _().SimpleModalDialogTitle,
                       children: l,
                     }),
                   (0, i.jsx)("button", {
                     onClick: (e) => (t("xclick"), e.preventDefault(), !1),
-                    className: g().XButton,
+                    className: _().XButton,
                     children: (0, i.jsx)(o.tmm, {}),
                   }),
                 ],
               }),
               (0, i.jsx)("div", {
-                className: g().SimpleModalContentCtn,
+                className: _().SimpleModalContentCtn,
                 children: c,
               }),
             ],

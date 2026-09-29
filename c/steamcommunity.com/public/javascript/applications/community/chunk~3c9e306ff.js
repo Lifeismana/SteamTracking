@@ -1,5 +1,5 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-  [5329],
+  [15329],
   {
     chunkid: (module) => {
       module.exports = {
@@ -1560,6 +1560,8 @@
           this.m_bMuteOnAutoplayBlocked = _;
         }
         async PlayMPD(_, _, _, _) {
+          if (this.m_bClosing)
+            return void (0, _._)(!1, "PlayMPD called on a closed CDASHPlayer");
           (_ = Array.isArray(_) ? _ : [_]),
             this.m_stats.StartingPlayback(),
             (this.m_strCDNAuthURLParameters = _ || "");
@@ -1901,9 +1903,10 @@
           }
         }
         CloseWithError(_, ..._) {
-          this.DispatchEvent("valve-downloadfailed", _),
+          this.m_bClosing ||
+            (this.DispatchEvent("valve-downloadfailed", _),
             this.Close(),
-            (0, _._)(..._);
+            (0, _._)(..._));
         }
         BCreateLoaders() {
           _(this.m_mpd);
@@ -4903,83 +4906,6 @@
               __webpack_require__.cancel(_ ? `${_}: unmounting` : "unmounting");
           }, [_]),
           _.current
-        );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, _, _, _) {
-        let _ = _;
-        _ =
-          "number" == typeof _
-            ? {
-                nDigitsAfterDecimal: _,
-                bUseBinary1K: _ || void 0 === _,
-                bValueIsInBytes: !_,
-                bValueIsRate: _,
-                nMinimumDigitsAfterDecimal: 0,
-              }
-            : {
-                nDigitsAfterDecimal: 2,
-                bUseBinary1K: !0,
-                bValueIsInBytes: !0,
-                bValueIsRate: !1,
-                nMinimumDigitsAfterDecimal: 0,
-                ..._,
-              };
-        const { nNum: _, strPrefix: _ } = (function (_, _) {
-            const _ = _.bUseBinary1K ? 1024 : 1e3,
-              _ = _ * _,
-              _ = _ * _,
-              _ = _ * _;
-            return _ > _
-              ? {
-                  nNum: _ / _,
-                  strPrefix: "Tera",
-                }
-              : _ > _
-                ? {
-                    nNum: _ / _,
-                    strPrefix: "Giga",
-                  }
-                : _ > _
-                  ? {
-                      nNum: _ / _,
-                      strPrefix: "Mega",
-                    }
-                  : _ > _
-                    ? {
-                        nNum: _ / _,
-                        strPrefix: "Kilo",
-                      }
-                    : {
-                        nNum: _,
-                        strPrefix: "",
-                      };
-          })(_, _),
-          _ = `#${_}${_.bValueIsInBytes ? "bytes" : "bits"}${_.bValueIsRate ? "_PerSecond" : ""}`;
-        return _._.Localize(
-          _,
-          _.toLocaleString((0, _._)(), {
-            minimumFractionDigits: _.nMinimumDigitsAfterDecimal,
-            maximumFractionDigits: _.nDigitsAfterDecimal,
-          }),
-        );
-      }
-      function _(_, _ = 0) {
-        let _;
-        return (
-          _ &&
-            (_ = {
-              maximumFractionDigits: _,
-            }),
-          _ ? _.toLocaleString((0, _._)(), _) : "" + _
         );
       }
     },

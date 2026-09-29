@@ -87,48 +87,51 @@
       }
       function R(e) {
         const { season_pass: s } = e;
-        return s && s.milestones && 0 != s.milestones.length
-          ? (0, t.jsx)(j.Ay, {
-              feature: "seasonpassproductpage",
-              children: (0, t.jsxs)("div", {
-                className:
-                  "game_area_description overflow_allowed season_pass_area",
-                children: [
-                  (0, t.jsx)("h2", {
-                    children: (0, f.we)("#SeasonPass_Header"),
-                  }),
-                  (0, t.jsx)("p", {
-                    children: (0, f.oW)("#SeasonPass_Incomplete_Desc"),
-                  }),
-                  (0, t.jsx)("p", {
-                    children: (0, f.oW)(
-                      "#SeasonPass_Incomplete_Desc2",
-                      (0, t.jsx)("a", {
-                        href: `${i.TS.STORE_BASE_URL}account/notificationsettings`,
-                      }),
-                    ),
-                  }),
-                  s.milestones
-                    .sort((e, s) =>
-                      e.shipped && s.shipped
-                        ? (e.rtime_complete ?? 0) - (s.rtime_complete ?? 0)
-                        : e.shipped
-                          ? -1
-                          : s.shipped
-                            ? 1
-                            : k(e) - k(s),
-                    )
-                    .map((e) =>
-                      (0, t.jsx)(
-                        w,
-                        { baseGameAppID: s.appid, milestone: e },
-                        "ms_" + e.milestone_id,
+        if (!s || !s.milestones || 0 == s.milestones.length) return null;
+        const n = s.milestones.every((e) => Boolean(e.shipped));
+        return (0, t.jsx)(j.Ay, {
+          feature: "seasonpassproductpage",
+          children: (0, t.jsxs)("div", {
+            className:
+              "game_area_description overflow_allowed season_pass_area",
+            children: [
+              (0, t.jsx)("h2", { children: (0, f.we)("#SeasonPass_Header") }),
+              !n &&
+                (0, t.jsxs)(t.Fragment, {
+                  children: [
+                    (0, t.jsx)("p", {
+                      children: (0, f.oW)("#SeasonPass_Incomplete_Desc"),
+                    }),
+                    (0, t.jsx)("p", {
+                      children: (0, f.oW)(
+                        "#SeasonPass_Incomplete_Desc2",
+                        (0, t.jsx)("a", {
+                          href: `${i.TS.STORE_BASE_URL}account/notificationsettings`,
+                        }),
                       ),
-                    ),
-                ],
-              }),
-            })
-          : null;
+                    }),
+                  ],
+                }),
+              s.milestones
+                .sort((e, s) =>
+                  e.shipped && s.shipped
+                    ? (e.rtime_complete ?? 0) - (s.rtime_complete ?? 0)
+                    : e.shipped
+                      ? -1
+                      : s.shipped
+                        ? 1
+                        : k(e) - k(s),
+                )
+                .map((e) =>
+                  (0, t.jsx)(
+                    w,
+                    { baseGameAppID: s.appid, milestone: e },
+                    "ms_" + e.milestone_id,
+                  ),
+                ),
+            ],
+          }),
+        });
       }
       function k(e) {
         const s = e.dates ?? [];
@@ -172,7 +175,7 @@
               children: [
                 (0, t.jsx)(v.n, { text: a }),
                 Boolean(s.shipped) &&
-                  (0, t.jsx)(B, { milestone: s, baseGameAppID: n }),
+                  (0, t.jsx)(L, { milestone: s, baseGameAppID: n }),
               ],
             }),
           ],
@@ -222,8 +225,8 @@
           ),
         });
       }
-      const L = {};
-      function B(e) {
+      const B = {};
+      function L(e) {
         const { milestone: s, baseGameAppID: n } = e;
         return (0, t.jsxs)(t.Fragment, {
           children: [
@@ -243,7 +246,7 @@
       }
       function T(e) {
         const { milestone: s } = e,
-          [n] = (0, l.t7)(s.appid, L);
+          [n] = (0, l.t7)(s.appid, B);
         return (0, t.jsx)("a", {
           href: n?.GetStorePageURL() || `${i.TS.STORE_BASE_URL}app/${s.appid}`,
           children: (0, f.we)("#SeasonPass_ShowStore"),

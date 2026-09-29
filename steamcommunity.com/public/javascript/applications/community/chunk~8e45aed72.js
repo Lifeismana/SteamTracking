@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-  [8453],
+  [98453],
   {
     16516: (e) => {
       e.exports = {
@@ -2400,10 +2400,10 @@
         u = r(52967),
         c = r(42780),
         d = r(59952),
-        g = r(87540),
+        g = r(26514),
         B = r(16516),
         _ = r.n(B),
-        f = r(74410),
+        f = r(63976),
         p = r(17267);
       const y = new Map([
           ...Array.from(d.W4.entries()),
@@ -2753,7 +2753,7 @@
           return (
             this.m_summary.visible_in_global_realm &&
               e.push(d.TU.k_ESteamRealmGlobal),
-            this.m_summary.visible_in_global_realm &&
+            this.m_summary.visible_in_china_realm &&
               e.push(d.TU.k_ESteamRealmChina),
             0 == e.length && e.push(d.TU.k_ESteamRealmGlobal),
             (0, g.wT)(

@@ -231,13 +231,13 @@
     7910: (e) => {
       e.exports = { WebPinnedNotification: "_34nLZDNirxRHssbsjB_dJf" };
     },
-    3648: (e, t, r) => {
+    4618: (e, t, r) => {
       "use strict";
       r.r(t),
         r.d(t, {
-          GreenEnvelope: () => Ll,
-          default: () => ec,
-          useSteamNotifications: () => Dl,
+          GreenEnvelope: () => kl,
+          default: () => rc,
+          useSteamNotifications: () => Hl,
         });
       var i = r(7850),
         n = r(2837);
@@ -2678,7 +2678,7 @@
               "Parental.GetParentalSettings#1",
               (0, d.I8)(T, t, r),
               j,
-              { bConstMethod: !0, ePrivilege: 1 },
+              { bConstMethod: !0, ePrivilege: 1, rgBrowserAPISites: ["all"] },
             );
           }),
           (e.GetSignedParentalSettings = function (e, t, r) {
@@ -12825,6 +12825,7 @@
                     br: B.qM.readUint32,
                     bw: B.gp.writeUint32,
                   },
+                  coordinates: { n: 14, c: pn },
                 },
               }),
             Gi.sm_m
@@ -14157,7 +14158,7 @@
         constructor(e = null) {
           super(),
             cn.prototype.subject_type || B.Sg(cn.M()),
-            _.Message.initialize(this, e, 0, -1, void 0, null);
+            _.Message.initialize(this, e, 0, -1, [3], null);
         }
         static sm_m;
         static sm_mbf;
@@ -14173,6 +14174,7 @@
                     br: B.qM.readEnum,
                     bw: B.gp.writeEnum,
                   },
+                  filters: { n: 3, c: pn, r: !0, q: !0 },
                 },
               }),
             cn.sm_m
@@ -14545,6 +14547,11 @@
                     n: 13,
                     br: B.qM.readUint64String,
                     bw: B.gp.writeUint64String,
+                  },
+                  ugc_content_type: {
+                    n: 14,
+                    br: B.qM.readUint32,
+                    bw: B.gp.writeUint32,
                   },
                 },
               }),
@@ -24021,8 +24028,10 @@
         },
         [Le]: Nl,
       };
-      var Pl = r(6011);
-      class Gl extends l.Component {
+      var Pl = r(4104),
+        Gl = r(8871),
+        El = r(236);
+      class Ll extends l.Component {
         static GetScrollableClassname() {
           return "vt-scrollable";
         }
@@ -24071,7 +24080,7 @@
             let e = { root: this.FindScrollableAncestor(t) };
             this.props.rootMargin && (e.rootMargin = this.props.rootMargin),
               this.props.thresholds && (e.threshold = this.props.thresholds),
-              (this.m_observer = (0, ul.md)(t, this.OnIntersection, e));
+              (this.m_observer = (0, El.md)(t, this.OnIntersection, e));
           }
           this.m_observer &&
             t &&
@@ -24079,33 +24088,33 @@
             (this.m_observer.observe(t), (this.m_elTracked = t));
         }
         FindScrollableAncestor(e) {
-          return Pl.Kf(e, (e) => {
+          return (0, Pl.Kf)(e, (e) => {
             const t = this.props.horizontal
               ? window.getComputedStyle(e).overflowX
               : window.getComputedStyle(e).overflowY;
             return (
               "scroll" == t ||
               "auto" == t ||
-              !!e.classList.contains(Gl.GetScrollableClassname())
+              !!e.classList.contains(Ll.GetScrollableClassname())
             );
           });
         }
-        HandleRef(e) {
-          (0, ul.cZ)(this.m_refElement, e),
-            this.props.containerRef && (0, ul.cZ)(this.props.containerRef, e);
-        }
-        OnIntersection(e, t) {
-          let r = !1;
-          for (const t of e)
-            if (t.isIntersecting) {
-              r = !0;
+        HandleRef = (e) => {
+          (0, Gl.cZ)(this.m_refElement, e),
+            this.props.containerRef && (0, Gl.cZ)(this.props.containerRef, e);
+        };
+        OnIntersection = (e) => {
+          let t = !1;
+          for (const r of e)
+            if (r.isIntersecting) {
+              t = !0;
               break;
             }
-          this.m_bPreviouslyIntersecting != r &&
-            ((this.m_bPreviouslyIntersecting = r),
-            this.props.onVisibilityChange && this.props.onVisibilityChange(r),
-            r && this.BTriggerOnce() && this.DestroyObserver());
-        }
+          this.m_bPreviouslyIntersecting != t &&
+            ((this.m_bPreviouslyIntersecting = t),
+            this.props.onVisibilityChange && this.props.onVisibilityChange(t),
+            t && this.BTriggerOnce() && this.DestroyObserver());
+        };
         render() {
           let {
             onVisibilityChange: e,
@@ -24122,17 +24131,15 @@
           });
         }
       }
-      (0, Be.Cg)([ul.oI], Gl.prototype, "HandleRef", null),
-        (0, Be.Cg)([ul.oI], Gl.prototype, "OnIntersection", null);
-      const El = new Zn(),
-        Ll = (0, fa.Nr)(function (e) {
+      const Dl = new Zn(),
+        kl = (0, fa.Nr)(function (e) {
           const { bResponsiveHeader: t, notifications: r } = e;
           l.useEffect(() => {
-            r && !El.m_bLoaded && El.ProcessNewNotificationPayload(r);
+            r && !Dl.m_bLoaded && Dl.ProcessNewNotificationPayload(r);
           }, [r]);
           const a = (0, g.KV)();
           (0, l.useEffect)(() => {
-            El.setTransport(a),
+            Dl.setTransport(a),
               (window.RefreshSteamNotifications = () =>
                 (async function (e) {
                   let t = null;
@@ -24174,41 +24181,41 @@
                       !1,
                     );
                   } catch (e) {}
-                  t && El.ProcessNewNotificationPayload(t);
+                  t && Dl.ProcessNewNotificationPayload(t);
                 })(a));
           }, [a]);
-          const s = Dl();
+          const s = Hl();
           return t
             ? (0, i.jsxs)(i.Fragment, {
-                children: [(0, i.jsx)(Xl, {}), (0, i.jsx)(Kl, {})],
+                children: [(0, i.jsx)(ec, {}), (0, i.jsx)(Yl, {})],
               })
-            : (0, i.jsx)(Hl, { nTotalUnviewed: s.nUnviewed });
+            : (0, i.jsx)(Ql, { nTotalUnviewed: s.nUnviewed });
         });
-      function Dl() {
+      function Hl() {
         return (0, o.q3)(() => ({
-          notifications: El.m_rgNotificationRollups,
-          summary: El.m_summary,
-          loaded: El.m_bLoaded,
-          nUnviewed: El.m_nUnviewed,
+          notifications: Dl.m_rgNotificationRollups,
+          summary: Dl.m_summary,
+          loaded: Dl.m_bLoaded,
+          nUnviewed: Dl.m_nUnviewed,
         }));
       }
-      function kl() {
-        const e = Dl(),
+      function $l() {
+        const e = Hl(),
           t = (0, c.LH)(),
           { data: r } = ue(t),
           i = ge(),
           n = r?.settings;
         return e.notifications.filter((e) => !da(e.type, n, i) && !pa(e.item));
       }
-      function Hl(e) {
+      function Ql(e) {
         const { nTotalUnviewed: t } = e,
           r = l.useRef(null),
-          n = kl(),
+          n = $l(),
           [a, s] = l.useState(wa().AnimateBell);
         l.useEffect(() => {
           r.current ||
             ((r.current = (0, pe.lX)(
-              (0, i.jsx)($l, { popupRef: r }),
+              (0, i.jsx)(Kl, { popupRef: r }),
               document.getElementById("green_envelope_menu_root"),
               {
                 bPreferPopLeft: !0,
@@ -24227,7 +24234,7 @@
           },
           [r],
         );
-        return (0, i.jsx)(Gl, {
+        return (0, i.jsx)(Ll, {
           trigger: "repeated",
           onVisibilityChange: o,
           children: (0, i.jsx)("button", {
@@ -24235,7 +24242,7 @@
               if (!r.current?.visible) {
                 r.current?.Show();
                 -1 != n.findIndex((e) => !e.item.viewed) &&
-                  El.MarkAllItemsViewed();
+                  Dl.MarkAllItemsViewed();
               }
             },
             id: "green_envelope_menu_root",
@@ -24251,7 +24258,7 @@
           }),
         });
       }
-      const $l = (e) => {
+      const Kl = (e) => {
           const { popupRef: t } = e,
             r = l.useRef(null),
             [n, a] = l.useState(!1);
@@ -24266,20 +24273,20 @@
             className: wa().NotificationsMenu,
             onClick: () => t?.current?.Hide(),
             children: [
-              (0, i.jsx)(Ql, {}),
+              (0, i.jsx)(Vl, {}),
               (0, i.jsxs)("div", {
                 className: (0, ba.A)(wa().NotificationsMenuScrollable, s),
                 ref: r,
                 children: [
+                  (0, i.jsx)(ec, {}),
                   (0, i.jsx)(Xl, {}),
-                  (0, i.jsx)(Yl, {}),
-                  (0, i.jsx)(Zl, {}),
+                  (0, i.jsx)(tc, {}),
                 ],
               }),
             ],
           });
         },
-        Ql = () => {
+        Vl = () => {
           const e = `${Wt.TS.COMMUNITY_BASE_URL}profiles/${Wt.iA.steamid}/notifications`;
           return (0, i.jsxs)("div", {
             className: (0, ba.A)(wa().NotificationHeader),
@@ -24298,7 +24305,7 @@
             ],
           });
         },
-        Kl = () => {
+        Yl = () => {
           const e = `${Wt.TS.COMMUNITY_BASE_URL}profiles/${Wt.iA.steamid}/notifications`;
           return (0, i.jsx)("div", {
             className: (0, ba.A)(
@@ -24314,15 +24321,15 @@
             }),
           });
         };
-      function Vl(e, t, r) {
+      function Jl(e, t, r) {
         t.read ||
           (r && 0 != r.button && 1 != r.button) ||
           !t.notification_id ||
-          El.MarkItemRead(t.notification_id),
+          Dl.MarkItemRead(t.notification_id),
           e();
       }
-      function Yl() {
-        const e = kl();
+      function Xl() {
+        const e = $l();
         return 0 == e.length
           ? null
           : (0, i.jsx)("div", {
@@ -24332,7 +24339,7 @@
                   Cl,
                   {
                     rollup: e,
-                    onNotificationClick: Vl,
+                    onNotificationClick: Jl,
                     uimode: n.yrU,
                     location: n.B3I,
                   },
@@ -24341,7 +24348,7 @@
               ),
             });
       }
-      const Jl = [
+      const Zl = [
         {
           fnUrl: () =>
             `${Wt.TS.COMMUNITY_BASE_URL}profiles/${Wt.iA.steamid}/inventory/#pending_gifts`,
@@ -24410,10 +24417,10 @@
           strLocToken: "#Notification_FamilyInvitePinned_Body",
         },
       ];
-      function Xl() {
-        const e = Dl();
+      function ec() {
+        const e = Hl();
         return (0, i.jsx)(i.Fragment, {
-          children: Jl.map((t) =>
+          children: Zl.map((t) =>
             (0, i.jsx)(
               xl,
               {
@@ -24428,7 +24435,7 @@
           ),
         });
       }
-      function Zl() {
+      function tc() {
         return (0, i.jsxs)("div", {
           className: wa().EmptyNotificationsCtn,
           children: [
@@ -24443,7 +24450,7 @@
           ],
         });
       }
-      const ec = Ll;
+      const rc = kl;
     },
   },
 ]);

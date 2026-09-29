@@ -1,5 +1,5 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-  [349],
+  [70349],
   {
     chunkid: (module) => {
       module.exports = {
@@ -130,9 +130,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _({ nPercent: _, indeterminate: _, animate: _, className: _ }) {
@@ -751,6 +751,144 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+          appid: _,
+          item_image_small: _,
+          item_image_large: _,
+          item_movie_mp4: _,
+          item_movie_webm: _,
+          item_title: _,
+        } = _;
+        if (_ && _) {
+          const _ = `${_._.MEDIA_CDN_COMMUNITY_URL}images/items/${_}/${_}`,
+            _ = `${_._.MEDIA_CDN_COMMUNITY_URL}images/items/${_}/${_}`,
+            _ = `${_._.MEDIA_CDN_COMMUNITY_URL}images/items/${_}/${_}`;
+          return (0, _.jsx)(_.Fragment, {
+            children: (0, _.jsxs)("video", {
+              muted: !0,
+              controls: !1,
+              autoPlay: !0,
+              loop: !0,
+              poster: _,
+              playsInline: !0,
+              className: _.videoClassName,
+              children: [
+                (0, _.jsx)("source", {
+                  src: _,
+                  type: "video/webm",
+                }),
+                Boolean(!_._.IN_CLIENT) &&
+                  (0, _.jsx)("source", {
+                    src: _,
+                    type: "video/mp4",
+                  }),
+              ],
+            }),
+          });
+        }
+        {
+          const _ = `${_._.MEDIA_CDN_COMMUNITY_URL}images/items/${_}/${_ || _}`;
+          return (0, _.jsx)("img", {
+            className: _.className,
+            src: _,
+            alt: _,
+          });
+        }
+      }
+      function _(_) {
+        const { appid: _, community_item_type: _, bForEdit: _ } = _,
+          _ = (0, _._)(_, _, _),
+          _ =
+            _ && !_.active
+              ? (0, _.jsx)("div", {
+                  className: _.WarningStylesBackground,
+                  children: (0, _._)(
+                    "#Sale_Section_RewardShelf_ItemInActiveWarning",
+                  ),
+                })
+              : void 0;
+        return _
+          ? (0, _.jsxs)(_.Fragment, {
+              children: [
+                (0, _.jsx)(_, {
+                  ..._,
+                }),
+                _,
+              ],
+            })
+          : (0, _.jsx)(_._, {
+              size: "small",
+              string: (0, _._)("#Loading"),
+            });
+      }
+      function _(_) {
+        var _, _, _, _;
+        const { section: _, rewardDef: _, language: _ } = _,
+          _ = (0, _._)(
+            null !== (_ = _.appid) && void 0 !== _ ? _ : 0,
+            null !== (_ = _.community_item_type) && void 0 !== _ ? _ : 0,
+          ),
+          [_] = (0, _._)(() => {
+            var _;
+            return [
+              Boolean(
+                null === (_ = _.rewards) || void 0 === _
+                  ? void 0
+                  : _.show_reward_item_name,
+              ),
+            ];
+          });
+        let _;
+        switch (_.community_class) {
+          case _._:
+          case _._:
+            _ = `${_._.COMMUNITY_BASE_URL}my/edit/avatar`;
+            break;
+          case _._:
+            _ = `${_._.COMMUNITY_BASE_URL}my/edit/favoritebadge`;
+            break;
+          case _._:
+          case _._:
+            _ = `${_._.COMMUNITY_BASE_URL}my/edit/background`;
+            break;
+          case _._:
+            _ = `${_._.COMMUNITY_BASE_URL}my/edit/miniprofile`;
+            break;
+          case _._:
+            _ = `${_._.COMMUNITY_BASE_URL}chat`;
+        }
+        return (0, _.jsxs)("a", {
+          href: _,
+          children: [
+            (0, _.jsx)(_, {
+              appid: null !== (_ = _.appid) && void 0 !== _ ? _ : 0,
+              community_item_type:
+                null !== (_ = _.community_item_type) && void 0 !== _ ? _ : 0,
+            }),
+            Boolean(_) &&
+              (0, _.jsx)("span", {
+                children: null == _ ? void 0 : _.item_name,
+              }),
+          ],
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1062,144 +1200,6 @@
       }
       function _(_, _, _) {
         return _(_, _._._, _, _);
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-          appid: _,
-          item_image_small: _,
-          item_image_large: _,
-          item_movie_mp4: _,
-          item_movie_webm: _,
-          item_title: _,
-        } = _;
-        if (_ && _) {
-          const _ = `${_._.MEDIA_CDN_COMMUNITY_URL}images/items/${_}/${_}`,
-            _ = `${_._.MEDIA_CDN_COMMUNITY_URL}images/items/${_}/${_}`,
-            _ = `${_._.MEDIA_CDN_COMMUNITY_URL}images/items/${_}/${_}`;
-          return (0, _.jsx)(_.Fragment, {
-            children: (0, _.jsxs)("video", {
-              muted: !0,
-              controls: !1,
-              autoPlay: !0,
-              loop: !0,
-              poster: _,
-              playsInline: !0,
-              className: _.videoClassName,
-              children: [
-                (0, _.jsx)("source", {
-                  src: _,
-                  type: "video/webm",
-                }),
-                Boolean(!_._.IN_CLIENT) &&
-                  (0, _.jsx)("source", {
-                    src: _,
-                    type: "video/mp4",
-                  }),
-              ],
-            }),
-          });
-        }
-        {
-          const _ = `${_._.MEDIA_CDN_COMMUNITY_URL}images/items/${_}/${_ || _}`;
-          return (0, _.jsx)("img", {
-            className: _.className,
-            src: _,
-            alt: _,
-          });
-        }
-      }
-      function _(_) {
-        const { appid: _, community_item_type: _, bForEdit: _ } = _,
-          _ = (0, _._)(_, _, _),
-          _ =
-            _ && !_.active
-              ? (0, _.jsx)("div", {
-                  className: _.WarningStylesBackground,
-                  children: (0, _._)(
-                    "#Sale_Section_RewardShelf_ItemInActiveWarning",
-                  ),
-                })
-              : void 0;
-        return _
-          ? (0, _.jsxs)(_.Fragment, {
-              children: [
-                (0, _.jsx)(_, {
-                  ..._,
-                }),
-                _,
-              ],
-            })
-          : (0, _.jsx)(_._, {
-              size: "small",
-              string: (0, _._)("#Loading"),
-            });
-      }
-      function _(_) {
-        var _, _, _, _;
-        const { section: _, rewardDef: _, language: _ } = _,
-          _ = (0, _._)(
-            null !== (_ = _.appid) && void 0 !== _ ? _ : 0,
-            null !== (_ = _.community_item_type) && void 0 !== _ ? _ : 0,
-          ),
-          [_] = (0, _._)(() => {
-            var _;
-            return [
-              Boolean(
-                null === (_ = _.rewards) || void 0 === _
-                  ? void 0
-                  : _.show_reward_item_name,
-              ),
-            ];
-          });
-        let _;
-        switch (_.community_class) {
-          case _._:
-          case _._:
-            _ = `${_._.COMMUNITY_BASE_URL}my/edit/avatar`;
-            break;
-          case _._:
-            _ = `${_._.COMMUNITY_BASE_URL}my/edit/favoritebadge`;
-            break;
-          case _._:
-          case _._:
-            _ = `${_._.COMMUNITY_BASE_URL}my/edit/background`;
-            break;
-          case _._:
-            _ = `${_._.COMMUNITY_BASE_URL}my/edit/miniprofile`;
-            break;
-          case _._:
-            _ = `${_._.COMMUNITY_BASE_URL}chat`;
-        }
-        return (0, _.jsxs)("a", {
-          href: _,
-          children: [
-            (0, _.jsx)(_, {
-              appid: null !== (_ = _.appid) && void 0 !== _ ? _ : 0,
-              community_item_type:
-                null !== (_ = _.community_item_type) && void 0 !== _ ? _ : 0,
-            }),
-            Boolean(_) &&
-              (0, _.jsx)("span", {
-                children: null == _ ? void 0 : _.item_name,
-              }),
-          ],
-        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

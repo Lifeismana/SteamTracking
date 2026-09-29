@@ -56,6 +56,5 @@
     "SinglePricingPackage_Intro_2b": "Pokud chcete použít méně častou cenu v USD, zadejte ji do příslušného pole, klikněte na tlačítko „Převést ceny...“ a postupujte podle pokynů.",
     "PricingDashboard_Method_SuggestedPrice": "Navrhovaná cena:",
     "PricingDashboard_Method_SuggestedPrice_ttip": "Tato cena je navržena na základě metody převodu vybrané výše a ceny %1$s USD.",
-    "dummy": "dummy",
-    "empty_no_trailing_comma": ""
+    "dummy": "dummy"
 }

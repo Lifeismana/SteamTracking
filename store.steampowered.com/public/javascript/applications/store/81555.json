@@ -65,6 +65,5 @@
     "PriceDisplay_YourPrice": "Prețul tău:",
     "PriceGrid_NormalPrice": "ÎN MOD NORMAL",
     "PriceGrid_RecentPrice": "MINIM (30 ZILE)",
-    "PriceGrid_CurrentPrice": "ACUM",
-    "Dummy": "dummy"
+    "PriceGrid_CurrentPrice": "ACUM"
 }

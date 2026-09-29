@@ -56,6 +56,5 @@
     "SinglePricingPackage_Intro_2b": "개별 미국 달러 가격의 경우, 미국 달러 가격 필드에 값을 입력하세요. 그런 다음 '가격 변환...' 버튼을 클릭하고 안내에 따라 진행하세요.",
     "PricingDashboard_Method_SuggestedPrice": "권장 변환 가격:",
     "PricingDashboard_Method_SuggestedPrice_ttip": "이 가격은 위에서 선택한 변환 방법과 미국 달러 가격(%1$s)을 기준으로 권장하는 가격입니다.",
-    "dummy": "테스트용",
-    "empty_no_trailing_comma": ""
+    "dummy": "테스트용"
 }

@@ -56,6 +56,5 @@
     "SinglePricingPackage_Intro_2b": "สำหรับราคาดอลลาร์สหรัฐที่พบได้ไม่บ่อย โปรดกรอกค่าลงในช่องข้อมูลราคาดอลลาร์สหรัฐ จากนั้นคลิกปุ่มที่มีข้อความ \"แปลงราคา...\" และทำตามคำแนะนำ",
     "PricingDashboard_Method_SuggestedPrice": "การแปลงสกุลเงินที่แนะนำ:",
     "PricingDashboard_Method_SuggestedPrice_ttip": "ราคานี้ได้รับการแนะนำตามวิธีแปลงที่เลือกไว้ด้านบนและราคาดอลลาร์สหรัฐที่ %1$s",
-    "dummy": "dummy",
-    "empty_no_trailing_comma": ""
+    "dummy": "dummy"
 }

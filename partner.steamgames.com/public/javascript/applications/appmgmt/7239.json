@@ -56,6 +56,5 @@
     "SinglePricingPackage_Intro_2b": "Jos et halua käyttää normaalia Yhdysvaltain dollarihintaa, syötä haluamasi hinta Yhdysvaltain dollarihinnan kenttään. Klikkaa sitten hintojen muuntopainiketta ja noudata ohjeita.",
     "PricingDashboard_Method_SuggestedPrice": "Ehdotettu muunnos:",
     "PricingDashboard_Method_SuggestedPrice_ttip": "Hintasuositus perustuu valittuun muunnosmenetelmään ja Yhdysvaltain dollarihintaan %1$s .",
-    "dummy": "testiteksti",
-    "empty_no_trailing_comma": ""
+    "dummy": "testiteksti"
 }

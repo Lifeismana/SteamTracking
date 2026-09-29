@@ -3,6 +3,15 @@
   {
     chunkid: (module) => {
       module.exports = {
+        AppSocialLinksCtn: "JlFZxFyO0IOSiYmJt-NlE",
+        AppSocialLinks: "_1SBP3NCWhesT_T7Zncoe_x",
+        AppSocialLinkIcon: "_2p4QK5FnPikdfXUGvhz-rj",
+        AppSocialLinkWithText: "_1pCGa1Dqa9xwEjXFCTbeaB",
+        AppSocialText: "V88BDse5RqlvrzYpxlgFS",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         "duration-app-launch": "800ms",
         narrowWidth: "500px",
         PartnerEventFont: "LK4bXmKAknKopK864hJFM",
@@ -129,15 +138,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        AppSocialLinksCtn: "_1wKUEA0cYqeUELXMe3Tp6T",
-        AppSocialLinks: "YMmXzjieZthpAehitId4M",
-        AppSocialLinkIcon: "OlwlyAPTdpJ7OieZmqzhc",
-        AppSocialLinkWithText: "_3BKcmMK-HSkKmQqRCx9HdA",
-        AppSocialText: "bJf5nxr6o9SG4mWXm7qz-",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         Ctn: "_2ZSkHhlXwxpsIInroemxBn",
       };
     },
@@ -148,65 +148,14 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        switch (_) {
-          case "discord_server":
-            return _._._;
-          case "youtube":
-            return _._._;
-          case "facebook":
-            return _._._;
-          case "twitter":
-            return _._._;
-          case "twitch":
-            return _._._;
-          case "reddit":
-            return _._._;
-          case "instagram":
-            return _._._;
-          case "tumblr":
-            return _._._;
-          case "qq":
-            return _._._;
-          case "qqlink":
-            return _._._;
-          case "qqchannel":
-            return _._._;
-          case "bilibili":
-            return _._._;
-          case "weibo":
-            return _._._;
-          case "wechat":
-            return _._._;
-          case "tieba":
-            return _._._;
-          case "tiktok":
-            return _._._;
-          case "douyin":
-            return _._._;
-          case "bluesky":
-            return _._._;
-          case "mastodon":
-            return _._._;
-          case "threads":
-            return _._._;
-          case "vk":
-            return _._._;
-          case "telegram":
-            return _._._;
-          case "linkedin":
-            return _._._;
-          case "rednote":
-            return _._._;
-        }
-        return _._._;
-      }
-      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
@@ -215,8 +164,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const { appid: _ } = _;
         return (0, _.jsx)("div", {
@@ -232,20 +181,10 @@
             appid: _,
           });
         return _ && 0 != _.length
-          ? (0, _.jsxs)(_.Fragment, {
-              children: [
-                (0, _.jsx)("div", {
-                  className: (0, _._)(
-                    _().EventEditorTextTitle,
-                    "EventEditorTextTitle",
-                  ),
-                  children: (0, _._)("#EventDisplay_SocialTitle"),
-                }),
-                (0, _.jsx)(_, {
-                  _: "" + _,
-                  rgSocialMedia: _,
-                }),
-              ],
+          ? (0, _.jsx)(_, {
+              strTitle: (0, _._)("#EventDisplay_SocialTitle"),
+              _: "" + _,
+              rgSocialMedia: _,
             })
           : null;
       }
@@ -254,15 +193,16 @@
           () =>
             _
               ? _.map((_) => {
-                  const _ = {
-                    link_type: _(_.type),
-                  };
-                  return (
-                    _.link_type == _._._ || _.link_type == _._._
-                      ? (_.text = _.link)
-                      : (_.url = _.link),
-                    _
-                  );
+                  const _ = (0, _._)(_.type);
+                  return _ == _._._ || _ == _._._
+                    ? {
+                        link_type: _,
+                        text: _.link,
+                      }
+                    : {
+                        link_type: _,
+                        url: _.link,
+                      };
                 })
               : [],
           [_],
@@ -271,25 +211,33 @@
       function _(_) {
         const { gidClanEvent: _, rgSocial: _, bIsCreatorHomeEvent: _ } = _,
           _ = _(_);
-        return _ && 0 != _.length
-          ? (0, _.jsxs)(_.Fragment, {
-              children: [
-                (0, _.jsx)("div", {
-                  className: (0, _._)(
-                    _().EventEditorTextTitle,
-                    "EventEditorTextTitle",
-                  ),
-                  children: _
-                    ? (0, _._)("#EventDisplay_Sale_SocialTitle_Dev")
-                    : (0, _._)("#EventDisplay_Sale_SocialTitle"),
-                }),
-                (0, _.jsx)(_, {
-                  _: _,
-                  rgSocialMedia: _,
-                }),
-              ],
-            })
-          : null;
+        if (0 == _.length) return null;
+        const _ = _
+          ? (0, _._)("#EventDisplay_Sale_SocialTitle_Dev")
+          : (0, _._)("#EventDisplay_Sale_SocialTitle");
+        return (0, _.jsx)(_, {
+          strTitle: _,
+          _: _,
+          rgSocialMedia: _,
+        });
+      }
+      function _(_) {
+        const { strTitle: _, _: _, rgSocialMedia: _ } = _;
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)("div", {
+              className: (0, _._)(
+                _().EventEditorTextTitle,
+                "EventEditorTextTitle",
+              ),
+              children: _,
+            }),
+            (0, _.jsx)(_, {
+              _: _,
+              rgSocialMedia: _,
+            }),
+          ],
+        });
       }
       const _ = [_._._, _._._, _._._, _._._, _._._, _._._, _._._];
       function _(_) {
@@ -359,103 +307,81 @@
           className: _().AppSocialLinkIcon,
         });
       }
+      const _ = {
+        [_._._]: _.agV,
+        [_._._]: _.ZnA,
+        [_._._]: _._,
+        [_._._]: _.ofN,
+        [_._._]: _.Bki,
+        [_._._]: _.$vK,
+        [_._._]: _.$vK,
+        [_._._]: _.$vK,
+        [_._._]: _.OSJ,
+        [_._._]: _.nm_,
+        [_._._]: _.tIO,
+        [_._._]: _.Vt2,
+        [_._._]: _.Vgk,
+        [_._._]: _.VSd,
+        [_._._]: _.ccb,
+        [_._._]: _.rNt,
+        [_._._]: _.g$j,
+        [_._._]: _.BQz,
+        [_._._]: _.jdP,
+        [_._._]: _.bKN,
+        [_._._]: _.sDU,
+        [_._._]: _.MbF,
+        [_._._]: _.emH,
+        [_._._]: _.Yoo,
+      };
       function _(_) {
-        const { linkType: _, ..._ } = _;
-        switch (_) {
-          case _._._:
-            return (0, _.jsx)(_.agV, {
+        const { linkType: _, ..._ } = _,
+          _ = _[_];
+        return _
+          ? (0, _.jsx)(_, {
               ..._,
-            });
-          case _._._:
-            return (0, _.jsx)(_.ZnA, {
-              ..._,
-            });
-          case _._._:
-            return (0, _.jsx)(_._, {
-              ..._,
-            });
-          case _._._:
-            return (0, _.jsx)(_.ofN, {
-              ..._,
-            });
-          case _._._:
-            return (0, _.jsx)(_.Bki, {
-              ..._,
-            });
-          case _._._:
-          case _._._:
-          case _._._:
-            return (0, _.jsx)(_.$vK, {
-              ..._,
-            });
-          case _._._:
-            return (0, _.jsx)(_.OSJ, {
-              ..._,
-            });
-          case _._._:
-            return (0, _.jsx)(_.nm_, {
-              ..._,
-            });
-          case _._._:
-            return (0, _.jsx)(_.tIO, {
-              ..._,
-            });
-          case _._._:
-            return (0, _.jsx)(_.Vt2, {
-              ..._,
-            });
-          case _._._:
-            return (0, _.jsx)(_.Vgk, {
-              ..._,
-            });
-          case _._._:
-            return (0, _.jsx)(_.VSd, {
-              ..._,
-            });
-          case _._._:
-            return (0, _.jsx)(_.ccb, {
-              ..._,
-            });
-          case _._._:
-            return (0, _.jsx)(_.rNt, {
-              ..._,
-            });
-          case _._._:
-            return (0, _.jsx)(_.g$j, {
-              ..._,
-            });
-          case _._._:
-            return (0, _.jsx)(_.BQz, {
-              ..._,
-            });
-          case _._._:
-            return (0, _.jsx)(_.jdP, {
-              ..._,
-            });
-          case _._._:
-            return (0, _.jsx)(_.bKN, {
-              ..._,
-            });
-          case _._._:
-            return (0, _.jsx)(_.sDU, {
-              ..._,
-            });
-          case _._._:
-            return (0, _.jsx)(_.MbF, {
-              ..._,
-            });
-          case _._._:
-            return (0, _.jsx)(_.emH, {
-              ..._,
-            });
-          case _._._:
-            return (0, _.jsx)(_.Yoo, {
-              ..._,
-            });
-          case _._._:
-          case _._._:
-            return "invalid social media type";
-        }
+            })
+          : null;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      const _ = {
+        discord_server: _._._,
+        youtube: _._._,
+        facebook: _._._,
+        twitter: _._._,
+        twitch: _._._,
+        reddit: _._._,
+        instagram: _._._,
+        tumblr: _._._,
+        _: _._._,
+        qqlink: _._._,
+        qqchannel: _._._,
+        bilibili: _._._,
+        weibo: _._._,
+        wechat: _._._,
+        tieba: _._._,
+        tiktok: _._._,
+        douyin: _._._,
+        bluesky: _._._,
+        mastodon: _._._,
+        threads: _._._,
+        _: _._._,
+        telegram: _._._,
+        linkedin: _._._,
+        rednote: _._._,
+      };
+      function _(_) {
+        return _[_] ?? _._._;
+      }
+      const _ = new Map(Object.entries(_).map(([_, _]) => [_, _]));
+      function _(_) {
+        return _.get(_);
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -471,13 +397,13 @@
       function _(_) {
         const { clanAccountID: _, items: _ } = _,
           _ = (0, _._)(_);
-        return _
-          ? (0, _.jsx)(_._, {
+        return 0 == _.length
+          ? null
+          : (0, _.jsx)(_._, {
               _: "social_" + _,
               rgSocialMedia: _,
               className: _().Ctn,
-            })
-          : null;
+            });
       }
     },
   },

@@ -74,6 +74,7 @@
         StatusItemBoxText: "_2MTf_HzUX_pOLW_hVcWMvy",
         OptInGamesToolTipContainer: "_2wZAa6sQ5jUKKtGlmQZa-W",
         OptInGamesToolTipRegistered: "_2UcamIrl4fDV8Y3QluKc0x",
+        OptInTodoColumn: "_2-Q_jkGsQoCOHrkWPn4Q9z",
         AssetRequestDateLabel: "sWDKwjiyTGn96CJ0ZdvTx",
         AssetRequestDate: "_2ln4ptn8kLvItsyKLaJ540",
         RecapItemContainer: "_3vV4PdOkt6H3Yw2tTOMxXv",
@@ -2071,6 +2072,9 @@
                     tooltip: _,
                     hidden: !_,
                   }),
+                  (0, _.jsx)(_, {
+                    optIn: _,
+                  }),
                 ],
               }),
             (0, _.jsxs)(_._, {
@@ -2111,6 +2115,78 @@
           ],
         });
         var _, _;
+      }
+      function _(_) {
+        const { optIn: _ } = _,
+          _ = _(),
+          _ =
+            _.rgRegisteredApps?.filter(
+              (_) => !1 === _.demo_build_review_requested,
+            ) ?? [];
+        if (!_.length) return null;
+        const _ = _.description.definition,
+          _ =
+            1e3 * (_.event_start_date ?? _.description.start_date) -
+              __webpack_require__.getTime() <
+            14 * _._.PerDay * 1e3,
+          _ = new Intl.DateTimeFormat(navigator.language, {
+            month: "short",
+            day: "numeric",
+          }),
+          _ =
+            _.rtime_nextfest_press_preview_submit &&
+            _.format(1e3 * _.rtime_nextfest_press_preview_submit),
+          _ =
+            _.rtime_nextfest_all_items_submit &&
+            _.format(1e3 * _.rtime_nextfest_all_items_submit);
+        let _;
+        return (
+          _ && _
+            ? (_ = (0, _._)(
+                "#Dashboard_UpcomingEvents_Events_OptIn_DemoBuildReview_Deadlines_Both",
+                _,
+                _,
+              ))
+            : _
+              ? (_ = (0, _._)(
+                  "#Dashboard_UpcomingEvents_Events_OptIn_DemoBuildReview_Deadline_PressPreview",
+                  _,
+                ))
+              : _ &&
+                (_ = (0, _._)(
+                  "#Dashboard_UpcomingEvents_Events_OptIn_DemoBuildReview_Deadline_AllItems",
+                  _,
+                )),
+          (0, _.jsx)("div", {
+            className: _.OptInTodoColumn,
+            children: _.map((_) =>
+              (0, _.jsx)(
+                _._,
+                {
+                  complete: !1,
+                  urgent: _,
+                  label: (0, _._)(
+                    _.demo_appid
+                      ? "#Dashboard_UpcomingEvents_Events_OptIn_DemoBuildReview_NotSubmitted"
+                      : "#Dashboard_UpcomingEvents_Events_OptIn_DemoBuildReview_NoDemo",
+                    _.app_name,
+                  ),
+                  status: _,
+                  tooltip: (0, _._)(
+                    "#Dashboard_UpcomingEvents_Events_OptIn_DemoBuildReview_Tooltip",
+                  ),
+                  actionStatus: (0, _._)(
+                    _.demo_appid
+                      ? "#Dashboard_UpcomingEvents_Events_OptIn_Button_SubmitBuild"
+                      : "#Dashboard_UpcomingEvents_Events_OptIn_Button_CreateDemo",
+                  ),
+                  actionUrl: `${_._.PARTNER_BASE_URL}apps/demo/${_.appid}`,
+                },
+                _.appid,
+              ),
+            ),
+          })
+        );
       }
       function _(_) {
         const { text: _, count: _, tooltip: _, hidden: _ } = _;

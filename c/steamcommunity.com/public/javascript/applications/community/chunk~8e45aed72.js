@@ -1,5 +1,5 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-  [8453],
+  [98453],
   {
     chunkid: (module) => {
       module.exports = {
@@ -2914,7 +2914,7 @@
           return (
             this.m_summary.visible_in_global_realm &&
               _.push(_._.k_ESteamRealmGlobal),
-            this.m_summary.visible_in_global_realm &&
+            this.m_summary.visible_in_china_realm &&
               _.push(_._.k_ESteamRealmChina),
             0 == _.length && _.push(_._.k_ESteamRealmGlobal),
             (0, _._)(

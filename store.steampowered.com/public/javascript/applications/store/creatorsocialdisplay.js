@@ -3,6 +3,15 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [41402],
   {
+    19890: (e) => {
+      e.exports = {
+        AppSocialLinksCtn: "JlFZxFyO0IOSiYmJt-NlE",
+        AppSocialLinks: "_1SBP3NCWhesT_T7Zncoe_x",
+        AppSocialLinkIcon: "_2p4QK5FnPikdfXUGvhz-rj",
+        AppSocialLinkWithText: "_1pCGa1Dqa9xwEjXFCTbeaB",
+        AppSocialText: "V88BDse5RqlvrzYpxlgFS",
+      };
+    },
     95695: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
@@ -129,283 +138,237 @@
         hoverAnimation: "_9UqiMHhWNZyuE_A0XwG9N",
       };
     },
-    12443: (e) => {
-      e.exports = {
-        AppSocialLinksCtn: "_1wKUEA0cYqeUELXMe3Tp6T",
-        AppSocialLinks: "YMmXzjieZthpAehitId4M",
-        AppSocialLinkIcon: "OlwlyAPTdpJ7OieZmqzhc",
-        AppSocialLinkWithText: "_3BKcmMK-HSkKmQqRCx9HdA",
-        AppSocialText: "bJf5nxr6o9SG4mWXm7qz-",
-      };
-    },
     28194: (e) => {
       e.exports = { Ctn: "_2ZSkHhlXwxpsIInroemxBn" };
     },
-    18663: (e, t, n) => {
+    64259: (e, t, n) => {
       "use strict";
-      n.d(t, { D1: () => B, lS: () => S, lz: () => b, nK: () => v });
-      var r = n(7850),
-        a = n(2160),
-        i = n(95578),
-        o = n(90626);
-      function s(e) {
-        switch (e) {
-          case "discord_server":
-            return i.jL.Eb;
-          case "youtube":
-            return i.jL.lQ;
-          case "facebook":
-            return i.jL.GO;
-          case "twitter":
-            return i.jL.jG;
-          case "twitch":
-            return i.jL.F7;
-          case "reddit":
-            return i.jL.uw;
-          case "instagram":
-            return i.jL.sP;
-          case "tumblr":
-            return i.jL.u5;
-          case "qq":
-            return i.jL.EK;
-          case "qqlink":
-            return i.jL.M0;
-          case "qqchannel":
-            return i.jL.$3;
-          case "bilibili":
-            return i.jL.Ow;
-          case "weibo":
-            return i.jL.Ib;
-          case "wechat":
-            return i.jL.Or;
-          case "tieba":
-            return i.jL.db;
-          case "tiktok":
-            return i.jL.Yu;
-          case "douyin":
-            return i.jL.qe;
-          case "bluesky":
-            return i.jL.H5;
-          case "mastodon":
-            return i.jL.Xm;
-          case "threads":
-            return i.jL.DB;
-          case "vk":
-            return i.jL.a$;
-          case "telegram":
-            return i.jL.JN;
-          case "linkedin":
-            return i.jL.EM;
-          case "rednote":
-            return i.jL.Lk;
-        }
-        return i.jL.I0;
-      }
-      var l = n(39777),
+      n.d(t, {
+        D1: () => g,
+        Nk: () => x,
+        k6: () => A,
+        lS: () => v,
+        lz: () => b,
+      });
+      var i = n(7850),
+        o = n(2160),
+        l = n(8747),
+        r = n(66418),
+        a = n(39777),
+        s = n(90626),
         c = n(95695),
-        u = n.n(c),
-        _ = n(12155),
-        d = n(52038),
-        j = n(61859),
-        p = n(61336),
-        m = n(66418),
-        L = n(32754),
-        x = n(12443),
-        E = n.n(x);
-      function S(e) {
+        _ = n.n(c),
+        u = n(12155),
+        d = n(32754),
+        p = n(52038),
+        L = n(61859),
+        m = n(61336),
+        j = n(19890),
+        S = n.n(j),
+        k = n(99382);
+      function v(e) {
         const { appid: t } = e;
-        return (0, r.jsx)("div", {
-          className: E().AppSocialLinksCtn,
-          children: (0, r.jsx)(k, { appid: t }),
+        return (0, i.jsx)("div", {
+          className: S().AppSocialLinksCtn,
+          children: (0, i.jsx)(E, { appid: t }),
         });
       }
-      function k(e) {
+      function E(e) {
         const { appid: t } = e,
-          { data: n } = (0, l.bg)({ appid: t });
+          { data: n } = (0, a.bg)({ appid: t });
         return n && 0 != n.length
-          ? (0, r.jsxs)(r.Fragment, {
-              children: [
-                (0, r.jsx)("div", {
-                  className: (0, d.A)(
-                    u().EventEditorTextTitle,
-                    "EventEditorTextTitle",
-                  ),
-                  children: (0, j.we)("#EventDisplay_SocialTitle"),
-                }),
-                (0, r.jsx)(B, { id: "" + t, rgSocialMedia: n }),
-              ],
+          ? (0, i.jsx)(C, {
+              strTitle: (0, L.we)("#EventDisplay_SocialTitle"),
+              id: "" + t,
+              rgSocialMedia: n,
             })
           : null;
       }
-      function v(e) {
-        return (0, o.useMemo)(
+      function x(e) {
+        return (0, s.useMemo)(
           () =>
             e
               ? e.map((e) => {
-                  const t = { link_type: s(e.type) };
-                  return (
-                    t.link_type == i.jL.EK || t.link_type == i.jL.Or
-                      ? (t.text = e.link)
-                      : (t.url = e.link),
-                    t
-                  );
+                  const t = (0, k.v)(e.type);
+                  return t == l.jL.EK || t == l.jL.Or
+                    ? { link_type: t, text: e.link }
+                    : { link_type: t, url: e.link };
                 })
               : [],
           [e],
         );
       }
       function b(e) {
-        const { gidClanEvent: t, rgSocial: n, bIsCreatorHomeEvent: a } = e,
-          i = v(n);
-        return i && 0 != i.length
-          ? (0, r.jsxs)(r.Fragment, {
-              children: [
-                (0, r.jsx)("div", {
-                  className: (0, d.A)(
-                    u().EventEditorTextTitle,
-                    "EventEditorTextTitle",
-                  ),
-                  children: a
-                    ? (0, j.we)("#EventDisplay_Sale_SocialTitle_Dev")
-                    : (0, j.we)("#EventDisplay_Sale_SocialTitle"),
-                }),
-                (0, r.jsx)(B, { id: t, rgSocialMedia: i }),
-              ],
-            })
-          : null;
+        const { gidClanEvent: t, rgSocial: n, bIsCreatorHomeEvent: o } = e,
+          l = x(n);
+        if (0 == l.length) return null;
+        const r = o
+          ? (0, L.we)("#EventDisplay_Sale_SocialTitle_Dev")
+          : (0, L.we)("#EventDisplay_Sale_SocialTitle");
+        return (0, i.jsx)(C, { strTitle: r, id: t, rgSocialMedia: l });
       }
-      const C = [i.jL.EK, i.jL.$3, i.jL.M0, i.jL.Ow, i.jL.Ib, i.jL.qe, i.jL.Lk];
-      function B(e) {
-        const { id: t, rgSocialMedia: n, className: o } = e,
-          s = m.TS.EREALM === a.TU.k_ESteamRealmChina;
-        return (0, r.jsx)("div", {
-          className: (0, d.A)(E().AppSocialLinks, o),
+      function C(e) {
+        const { strTitle: t, id: n, rgSocialMedia: o } = e;
+        return (0, i.jsxs)(i.Fragment, {
+          children: [
+            (0, i.jsx)("div", {
+              className: (0, p.A)(
+                _().EventEditorTextTitle,
+                "EventEditorTextTitle",
+              ),
+              children: t,
+            }),
+            (0, i.jsx)(g, { id: n, rgSocialMedia: o }),
+          ],
+        });
+      }
+      const B = [l.jL.EK, l.jL.$3, l.jL.M0, l.jL.Ow, l.jL.Ib, l.jL.qe, l.jL.Lk];
+      function g(e) {
+        const { id: t, rgSocialMedia: n, className: a } = e,
+          s = r.TS.EREALM === o.TU.k_ESteamRealmChina;
+        return (0, i.jsx)("div", {
+          className: (0, p.A)(S().AppSocialLinks, a),
           children: n
-            .filter((e) => !s || C.includes(e.link_type || i.jL.I0))
+            .filter((e) => !s || B.includes(e.link_type || l.jL.I0))
             .map((e) =>
               e.url
-                ? (0, r.jsx)(
-                    h,
+                ? (0, i.jsx)(
+                    I,
                     { social: e },
                     "app_social_link_" + t + "_" + e.link_type,
                   )
-                : (0, r.jsx)(
-                    I,
+                : (0, i.jsx)(
+                    T,
                     { social: e },
                     "app_social_text_" + t + "_" + e.link_type + "_" + e.text,
                   ),
             ),
         });
       }
-      function h(e) {
+      function I(e) {
         const { social: t } = e;
         return t.url
-          ? (0, r.jsx)("a", {
-              href: (0, p.NT)(t.url, !0),
-              target: m.TS.IN_CLIENT ? void 0 : "_blank",
+          ? (0, i.jsx)("a", {
+              href: (0, m.NT)(t.url, !0),
+              target: r.TS.IN_CLIENT ? void 0 : "_blank",
               rel: "noopener noreferrer",
-              children: (0, r.jsx)(L.he, {
+              children: (0, i.jsx)(d.he, {
                 toolTipContent: t.url,
-                children: (0, r.jsx)(A, { social: t }),
+                children: (0, i.jsx)(h, { social: t }),
               }),
             })
           : null;
       }
-      function I(e) {
+      function T(e) {
         const { social: t } = e;
-        return (0, r.jsxs)("div", {
-          className: E().AppSocialLinkWithText,
+        return (0, i.jsxs)("div", {
+          className: S().AppSocialLinkWithText,
           children: [
-            (0, r.jsx)(L.he, {
+            (0, i.jsx)(d.he, {
               toolTipContent: t.text,
-              children: (0, r.jsx)(A, { social: t }),
+              children: (0, i.jsx)(h, { social: t }),
             }),
-            (0, r.jsx)("div", {
-              className: E().AppSocialText,
+            (0, i.jsx)("div", {
+              className: S().AppSocialText,
               children: t.text,
             }),
           ],
         });
       }
-      function A(e) {
+      function h(e) {
         const { social: t } = e;
-        return (0, r.jsx)(T, {
-          linkType: t.link_type || i.jL.I0,
-          className: E().AppSocialLinkIcon,
+        return (0, i.jsx)(A, {
+          linkType: t.link_type || l.jL.I0,
+          className: S().AppSocialLinkIcon,
         });
       }
-      function T(e) {
-        const { linkType: t, ...n } = e;
-        switch (t) {
-          case i.jL.lQ:
-            return (0, r.jsx)(_.agV, { ...n });
-          case i.jL.GO:
-            return (0, r.jsx)(_.ZnA, { ...n });
-          case i.jL.jG:
-            return (0, r.jsx)(_.oy, { ...n });
-          case i.jL.F7:
-            return (0, r.jsx)(_.ofN, { ...n });
-          case i.jL.Eb:
-            return (0, r.jsx)(_.Bki, { ...n });
-          case i.jL.EK:
-          case i.jL.M0:
-          case i.jL.$3:
-            return (0, r.jsx)(_.$vK, { ...n });
-          case i.jL.a$:
-            return (0, r.jsx)(_.OSJ, { ...n });
-          case i.jL.Ow:
-            return (0, r.jsx)(_.nm_, { ...n });
-          case i.jL.Ib:
-            return (0, r.jsx)(_.tIO, { ...n });
-          case i.jL.uw:
-            return (0, r.jsx)(_.Vt2, { ...n });
-          case i.jL.sP:
-            return (0, r.jsx)(_.Vgk, { ...n });
-          case i.jL.u5:
-            return (0, r.jsx)(_.VSd, { ...n });
-          case i.jL.db:
-            return (0, r.jsx)(_.ccb, { ...n });
-          case i.jL.Yu:
-            return (0, r.jsx)(_.rNt, { ...n });
-          case i.jL.JN:
-            return (0, r.jsx)(_.g$j, { ...n });
-          case i.jL.EM:
-            return (0, r.jsx)(_.BQz, { ...n });
-          case i.jL.Or:
-            return (0, r.jsx)(_.jdP, { ...n });
-          case i.jL.qe:
-            return (0, r.jsx)(_.bKN, { ...n });
-          case i.jL.H5:
-            return (0, r.jsx)(_.sDU, { ...n });
-          case i.jL.Xm:
-            return (0, r.jsx)(_.MbF, { ...n });
-          case i.jL.DB:
-            return (0, r.jsx)(_.emH, { ...n });
-          case i.jL.Lk:
-            return (0, r.jsx)(_.Yoo, { ...n });
-          case i.jL.wu:
-          case i.jL.I0:
-            return "invalid social media type";
-        }
+      const f = {
+        [l.jL.lQ]: u.agV,
+        [l.jL.GO]: u.ZnA,
+        [l.jL.jG]: u.oy,
+        [l.jL.F7]: u.ofN,
+        [l.jL.Eb]: u.Bki,
+        [l.jL.EK]: u.$vK,
+        [l.jL.M0]: u.$vK,
+        [l.jL.$3]: u.$vK,
+        [l.jL.a$]: u.OSJ,
+        [l.jL.Ow]: u.nm_,
+        [l.jL.Ib]: u.tIO,
+        [l.jL.uw]: u.Vt2,
+        [l.jL.sP]: u.Vgk,
+        [l.jL.u5]: u.VSd,
+        [l.jL.db]: u.ccb,
+        [l.jL.Yu]: u.rNt,
+        [l.jL.JN]: u.g$j,
+        [l.jL.EM]: u.BQz,
+        [l.jL.Or]: u.jdP,
+        [l.jL.qe]: u.bKN,
+        [l.jL.H5]: u.sDU,
+        [l.jL.Xm]: u.MbF,
+        [l.jL.DB]: u.emH,
+        [l.jL.Lk]: u.Yoo,
+      };
+      function A(e) {
+        const { linkType: t, ...n } = e,
+          o = f[t];
+        return o ? (0, i.jsx)(o, { ...n }) : null;
+      }
+    },
+    99382: (e, t, n) => {
+      "use strict";
+      n.d(t, { X: () => a, v: () => l });
+      var i = n(8747);
+      const o = {
+        discord_server: i.jL.Eb,
+        youtube: i.jL.lQ,
+        facebook: i.jL.GO,
+        twitter: i.jL.jG,
+        twitch: i.jL.F7,
+        reddit: i.jL.uw,
+        instagram: i.jL.sP,
+        tumblr: i.jL.u5,
+        qq: i.jL.EK,
+        qqlink: i.jL.M0,
+        qqchannel: i.jL.$3,
+        bilibili: i.jL.Ow,
+        weibo: i.jL.Ib,
+        wechat: i.jL.Or,
+        tieba: i.jL.db,
+        tiktok: i.jL.Yu,
+        douyin: i.jL.qe,
+        bluesky: i.jL.H5,
+        mastodon: i.jL.Xm,
+        threads: i.jL.DB,
+        vk: i.jL.a$,
+        telegram: i.jL.JN,
+        linkedin: i.jL.EM,
+        rednote: i.jL.Lk,
+      };
+      function l(e) {
+        return o[e] ?? i.jL.I0;
+      }
+      const r = new Map(Object.entries(o).map(([e, t]) => [t, e]));
+      function a(e) {
+        return r.get(e);
       }
     },
     44899: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => s });
-      var r = n(7850),
-        a = n(18663),
-        i = n(28194),
-        o = n.n(i);
-      function s(e) {
+      n.r(t), n.d(t, { default: () => a });
+      var i = n(7850),
+        o = n(64259),
+        l = n(28194),
+        r = n.n(l);
+      function a(e) {
         const { clanAccountID: t, items: n } = e,
-          i = (0, a.nK)(n);
-        return i
-          ? (0, r.jsx)(a.D1, {
+          l = (0, o.Nk)(n);
+        return 0 == l.length
+          ? null
+          : (0, i.jsx)(o.D1, {
               id: "social_" + t,
-              rgSocialMedia: i,
-              className: o().Ctn,
-            })
-          : null;
+              rgSocialMedia: l,
+              className: r().Ctn,
+            });
       }
     },
   },

@@ -56,6 +56,5 @@
     "SinglePricingPackage_Intro_2b": "For USD-priser, som ikke er fælles, kan du indtaste en værdi i USD-prisfeltet. Klik derefter på knappen \"Omregn priser...\", og følg instruktionerne.",
     "PricingDashboard_Method_SuggestedPrice": "Foreslået omregning:",
     "PricingDashboard_Method_SuggestedPrice_ttip": "Denne pris er foreslået baseret på den valgte omregningsmetode ovenfor og en USD-pris på %1$s.",
-    "dummy": "dummy",
-    "empty_no_trailing_comma": ""
+    "dummy": "dummy"
 }

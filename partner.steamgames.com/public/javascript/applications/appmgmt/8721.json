@@ -65,6 +65,5 @@
     "PriceDisplay_YourPrice": "Din pris:",
     "PriceGrid_NormalPrice": "NORMALT",
     "PriceGrid_RecentPrice": "BUNDPRIS (30 DAGE)",
-    "PriceGrid_CurrentPrice": "NU",
-    "Dummy": "dummy"
+    "PriceGrid_CurrentPrice": "NU"
 }

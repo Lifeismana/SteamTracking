@@ -56,6 +56,5 @@
     "SinglePricingPackage_Intro_2b": "Pour les prix en USD moins courants, saisissez une valeur dans le champ du prix en USD. Cliquez ensuite sur le bouton « Convertir les prix… », puis suivez les instructions.",
     "PricingDashboard_Method_SuggestedPrice": "Conversion suggérée :",
     "PricingDashboard_Method_SuggestedPrice_ttip": "Ce prix vous est recommandé sur la base de la méthode sélectionnée et du prix en USD de %1$s.",
-    "dummy": "dummy",
-    "empty_no_trailing_comma": ""
+    "dummy": "dummy"
 }

@@ -241,17 +241,46 @@ message CPlayer_GetGameBadgeLevels_Response_Badge {
 	optional uint32 border_color = 3;
 }
 
+message CPlayer_GetGamesWithAchievementProgress_Request {
+	optional uint64 steamid = 1;
+	optional bool skip_unvetted_apps = 2 [default = false];
+	optional string language = 3;
+	optional bool include_groups_without_progress = 4 [default = false];
+}
+
+message CPlayer_GetGamesWithAchievementProgress_Response {
+	repeated .CPlayer_GetGamesWithAchievementProgress_Response_GroupProgress groups = 1;
+}
+
+message CPlayer_GetGamesWithAchievementProgress_Response_GroupProgress {
+	optional uint32 appid = 1;
+	optional uint32 groupid = 2;
+	optional uint32 dlcappid = 3;
+	optional string localized_name = 4;
+	optional uint32 completion_achievements = 5;
+	optional uint32 completed_achievements = 6;
+	optional bool is_achievable = 7;
+	optional bool is_completed = 8;
+	optional fixed32 time_completed = 9;
+}
+
 message CPlayer_GetGlobalAchievementPercentages_Request {
 	optional uint32 appid = 1;
 }
 
 message CPlayer_GetGlobalAchievementPercentages_Response {
 	repeated .CPlayer_GetGlobalAchievementPercentages_Response_Achievement achievements = 1;
+	repeated .CPlayer_GetGlobalAchievementPercentages_Response_Group groups = 2;
 }
 
 message CPlayer_GetGlobalAchievementPercentages_Response_Achievement {
 	optional uint32 internal_key = 1;
 	optional float player_percent_unlocked = 2;
+}
+
+message CPlayer_GetGlobalAchievementPercentages_Response_Group {
+	optional uint32 groupid = 1;
+	optional float player_percent_completed = 2;
 }
 
 message CPlayer_GetLastPlayedTimes_Request {
@@ -946,6 +975,8 @@ service Player {
 	rpc GetGameAchievements (.CPlayer_GetGameAchievements_Request) returns (.CPlayer_GetGameAchievements_Response);
 	// bConstMethod=true, ePrivilege=1
 	rpc GetGameBadgeLevels (.CPlayer_GetGameBadgeLevels_Request) returns (.CPlayer_GetGameBadgeLevels_Response);
+	// bConstMethod=true, ePrivilege=2, rgBrowserAPISites=ArrayExpression
+	rpc GetGamesWithAchievementProgress (.CPlayer_GetGamesWithAchievementProgress_Request) returns (.CPlayer_GetGamesWithAchievementProgress_Response);
 	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1
 	rpc GetGlobalAchievementPercentages (.CPlayer_GetGlobalAchievementPercentages_Request) returns (.CPlayer_GetGlobalAchievementPercentages_Response);
 	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1

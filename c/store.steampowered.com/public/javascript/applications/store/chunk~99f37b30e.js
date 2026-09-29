@@ -5198,6 +5198,16 @@
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
+                  fest_page_views: {
+                    _: 10,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  fest_period_page_views: {
+                    _: 11,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
                 },
               }),
             _.sm_m

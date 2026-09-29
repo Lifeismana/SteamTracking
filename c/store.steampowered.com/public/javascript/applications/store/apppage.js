@@ -3,6 +3,32 @@
   {
     chunkid: (module) => {
       module.exports = {
+        "duration-app-launch": "800ms",
+        Icon: "M5YgSyrfvCXXY_XYhYzcl",
+        AchievementIconWrapper: "_1DmdUWkRKPlUYGtbBrrRtx",
+        RareAchievementIconGlowContainerRoot: "_1R1QQtfmrxNkfIGlKSdDqG",
+        RareAchievementIconGlowContainer: "kt0NXHlg2kFjVkiN_2eEL",
+        rotate: "_1ovVdJrqKKpglnX8FYej3J",
+        RareAchievementNoAnimation: "_1mSBKtmFFZvwBLtxBOMwak",
+        RareAchievementIconGlow: "_3vFmYitX2pXuOenxR0blk8",
+        IconGlow: "_2BCoqu4wd4ehkJkelVhjb3",
+        HiddenLabel: "_1smYxH70zcX0D3CUQDwF3o",
+        BackgroundAnimation: "_2XvhZ8yFczR-W7gwjaWoPT",
+        "ItemFocusAnim-darkerGrey-nocolor": "NK0YaI2_mwagRH7-tm_GE",
+        "ItemFocusAnim-darkerGrey": "_1HU-Kl32lDEq7yT3ba8R5G",
+        "ItemFocusAnim-darkGreySettings": "_3PM-EU4OtOaw12xVeiCzRL",
+        "ItemFocusAnim-darkGrey": "_1EXXhQ3MOk6cW2xYESY_2i",
+        "ItemFocusAnim-grey": "_2V88aGECYldq8tqX286rzp",
+        "ItemFocusAnim-translucent-white-10": "_9lQAMImHGe5qClr8AL2Vc",
+        "ItemFocusAnim-translucent-white-20": "_3I_vGf7ujHONdHYkGitG6t",
+        "ItemFocusAnimBorder-darkGrey": "YU4V8GFJ50LIlOS68c6Wc",
+        "ItemFocusAnim-green": "_1qBrpfK0gqYyjGTNuC0FHo",
+        focusAnimation: "_1vLld9YwBtNMfxoDxGo2Z4",
+        hoverAnimation: "_3JxsbmkLDkwKiYvrnnqOtd",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         Root: "_1kIuUssJvopWbHik1IKMG6",
         "Variant-light": "zcrlDqGBY0Lrl7faLFoJI",
         "Variant-dark": "_3b6kFRuG8ILziz88w8GESp",
@@ -86,7 +112,6 @@
         Title: "g6OWaWhTs7-jMnb_ipVdD",
         Banned: "_2OBX7mi9MwO3wh8vz69RW_",
         RequiredAge: "_3ixbRnhEXoSAFMMOxMR7kP",
-        Details: "Y503si5sH_nBgmRuYVYth",
         Icon: "_3NX32L22YZdobMQdeHDTRz",
         DescriptorText: "_3x1L_MQDZD6RKFHPJQDmCN",
         AllAges: "_2VePhLetNEJD1gctFnUgIC",
@@ -378,6 +403,15 @@
     },
     chunkid: (module) => {
       module.exports = {
+        LinksAndInfo: "_3TuBg7_-ESlXR8VdekZAh6",
+        MoreLinks: "_38qMxU84U3MdKhwOyNRvBh",
+        LinkRow: "_3Fsj47byOWjgdvPZrMt79B",
+        SocialIcon: "_2MvdxngdrJtnwX501aUgFu",
+        ExternalIcon: "_2WUly4aWb_9foEZI0ARnK1",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         narrowWidth: "500px",
         TrackListContainer: "_1B94J6blto63JooX8xE8x2",
         DiscTabs: "_1f6LeASDnCawGhXbVgpGbN",
@@ -539,6 +573,9 @@
         ActivateLabel: "Ywd6FXH3HxWEfSO_4XhD",
         ShowLink: "_1VS2woF-3sJBcdv8ku8V7m",
         FooterLink: "_149N2e_DXzh0C1cZl4mai1",
+        ResponsiveLink: "V1oPnW4SHTQZyfLtIOACA",
+        Text: "_1VPalkyDcngLWmtdDU2UOT",
+        Arrow: "_2UhU5Y9TVx7gCVaf863aKB",
       };
     },
     chunkid: (module) => {
@@ -864,7 +901,7 @@
       function _(_) {
         return (0, _.jsx)(_._, {
           ..._,
-          viewBoxSize: 16,
+          viewBox: 16,
           children: (0, _.jsx)("path", {
             _: "M13.8182 1.94629L5.77816 9.98184L2.40483 6.61296L0.835938 8.18184L5.77816 13.1285L15.387 3.51518L13.8182 1.94629Z",
             fill: "currentColor",
@@ -958,6 +995,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _.createContext)(null);
       function _(_) {
@@ -978,7 +1016,7 @@
         );
         const _ = _.useRef(void 0);
         return (
-          (0, _._)(_, !!_.current, !1),
+          (0, _._)(_, !0, !0),
           (0, _.jsx)(_._, {
             navID: "Popover",
             onCancelButton: () => _.floating.context.onOpenChange(!1),
@@ -1010,6 +1048,22 @@
             children: _,
           })
         );
+      }
+      function _(_, _, _) {
+        const { onOpenChange: _, placement: _ } = _,
+          _ = "anchor" === _;
+        return (0, _._)({
+          open: _,
+          onOpenChange: _,
+          middleware: _ ? _(_) : [],
+          whileElementsMounted: _ ? _._ : void 0,
+          placement: _ && "object" == typeof _ ? _.initial : _,
+          strategy: "fixed",
+          platform: {
+            ..._._,
+            getOffsetParent: (_) => _?.ownerDocument?.defaultView ?? window,
+          },
+        });
       }
       function _(_) {
         const { gutter: _ = 0, placement: _ } = _,
@@ -1081,39 +1135,39 @@
             _ = (function (_) {
               const {
                 open: _,
-                onOpenChange: _,
-                placement: _,
                 interactions: _ = {},
+                width: _,
+                maxHeight: _,
+                gutter: _,
+                scroll: _,
               } = _;
               let _ = _;
               0;
-              const _ = (0, _._)({
-                  open: _,
-                  onOpenChange: _,
-                  middleware: _(_),
-                  whileElementsMounted: _._,
-                  placement: _ && "object" == typeof _ ? _.initial : _,
-                  strategy: "fixed",
-                  platform: {
-                    ..._._,
-                    getOffsetParent: (_) =>
-                      _?.ownerDocument?.defaultView ?? window,
-                  },
-                }),
+              const _ = (0, _._)(_.presentation),
+                _ = _(_, _, _),
                 _ = {
                   enabled: !!_.click,
                 },
-                _ = "function" == typeof _.click ? _.click(_) : _,
+                _ =
+                  "function" == typeof _.click
+                    ? __webpack_require__.click(_)
+                    : _,
                 _ = (0, _._)(_.context, _),
                 _ = {
                   enabled: !!_.focus,
                 },
-                _ = "function" == typeof _.focus ? _.focus(_) : _,
+                _ =
+                  "function" == typeof _.focus
+                    ? __webpack_require__.focus(_)
+                    : _,
                 _ = (0, _._)(_.context, _),
                 _ = {
                   handleClose: (0, _._)(),
                 },
-                _ = "function" == typeof _.hover ? _.hover(_) : _,
+                _ =
+                  "function" == typeof _.hover
+                    ? __webpack_require__.hover(_)
+                    : _,
                 _ = (0, _._)(_.context, {
                   enabled: !!_.hover,
                   ..._,
@@ -1130,6 +1184,13 @@
                 getFloatingProps: _,
                 getReferenceProps: _,
                 open: _,
+                presentation: _,
+                sizing: {
+                  width: _,
+                  maxHeight: _,
+                  gutter: _,
+                  scroll: _,
+                },
               };
             })(_);
           return (0, _.jsx)(_.Provider, {
@@ -1154,13 +1215,9 @@
             : null;
         },
         Positioner: function (_) {
-          const { children: _, className: _, ref: _ } = _,
+          const { children: _, className: _, ref: _, label: _ } = _,
             _ = (0, _.useContext)(_),
-            _ = (0, _._)([
-              _,
-              _?.floating.refs.setFloating,
-              (_) => _?.showPopover?.(),
-            ]);
+            _ = (0, _._)([_, _?.floating.refs.setFloating]);
           if (!_)
             return (
               console.error(
@@ -1171,20 +1228,23 @@
           if (!_.open) return null;
           let _ = _.Children.only(_),
             _ = _.Fragment;
-          _.type == _.FocusManager &&
-            ((_ = _.Children.only(_.props.children)), (_ = _));
-          const _ = (0, _.cloneElement)(_, {
-            ref: _,
-            style: {
-              ..._.floating.floatingStyles,
-            },
-            className: _()((0, _._)(), _),
-            popover: "manual",
-            ..._.getFloatingProps(),
-          });
-          return (0, _.jsx)(_, {
-            children: _,
-          });
+          return (
+            _.type == _.FocusManager &&
+              ((_ = _.Children.only(_.props.children)), (_ = _)),
+            (0, _.jsx)(_, {
+              children: (0, _.jsx)(_._, {
+                presentation: _.presentation,
+                sizing: _.sizing,
+                floatingRef: _,
+                floatingProps: _.getFloatingProps(),
+                floatingStyles: _.floating.floatingStyles,
+                referenceElement: _.floating.elements.domReference,
+                className: _()((0, _._)(), _),
+                label: _,
+                children: _,
+              }),
+            })
+          );
         },
         FocusManager: _,
       };
@@ -1199,17 +1259,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { viewBoxSize: _ = 20, ..._ } = _,
-          _ = _.size ? void 0 : _.IconSizeDefault;
         return (0, _.jsx)("svg", {
-          viewBox: `0 0 ${_} ${_}`,
-          ...(0, _._)(
-            {
-              className: _,
-              ..._,
-            },
-            _,
-          ),
+          ..._(_),
         });
       }
       const _ = [
@@ -1222,7 +1273,7 @@
         {
           prop: "color",
           className: _.Color,
-          cssProperty: (_) => ["--icon-color", (0, _._)(_)],
+          cssProperty: (_) => ["--icon-color", _(_)],
         },
         {
           prop: "hitSlop",
@@ -1234,6 +1285,29 @@
         },
         _._.find(({ prop: _ }) => "cursor" === _),
       ];
+      function _(_) {
+        return _ && "#" !== _[0] ? (0, _._)(_) : _;
+      }
+      function _(_) {
+        const { viewBox: _, ..._ } = _,
+          _ = {
+            className: _.size ? void 0 : _.IconSizeDefault,
+            ..._,
+          };
+        return (
+          _ &&
+            (_.viewBox = (function (_) {
+              return _
+                ? "number" == typeof _
+                  ? `0 0 ${_} ${_}`
+                  : "string" == typeof _
+                    ? _
+                    : `0 0 ${_.width} ${_.height}`
+                : void 0;
+            })(_)),
+          (0, _._)(_, _)
+        );
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -1252,6 +1326,7 @@
           _ = _[_];
         return (0, _.jsx)(_._, {
           ..._,
+          viewBox: 20,
           children: (0, _.jsx)("path", {
             transform: _,
             _: "M5.14541 6.89977L10.0063 12.2027L14.8671 6.89977C15.3557 6.36674 16.145 6.36674 16.6336 6.89977C17.1221 7.4328 17.1221 8.29385 16.6336 8.82688L10.8832 15.1002C10.3946 15.6333 9.60537 15.6333 9.11678 15.1002L3.36644 8.82688C2.87785 8.29385 2.87785 7.4328 3.36644 6.89977C3.85503 6.38041 4.65682 6.36674 5.14541 6.89977Z",
@@ -4164,8 +4239,77 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = new Map([
+      const _ = {};
+      (_.arabic = () =>
+        __webpack_require__._("chunkid").then(_._.bind(_, 70667, 19))),
+        (_.brazilian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 58167, 19))),
+        (_.bulgarian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 75936, 19))),
+        (_.czech = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 67478, 19))),
+        (_.danish = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 77178, 19))),
+        (_.dutch = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 62063, 19))),
+        (_.english = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 91253, 19))),
+        (_.finnish = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 66690, 19))),
+        (_.french = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 32763, 19))),
+        (_.german = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 82937, 19))),
+        (_.greek = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 36501, 19))),
+        (_.hungarian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 41812, 19))),
+        (_.indonesian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 35383, 19))),
+        (_.italian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 48149, 19))),
+        (_.japanese = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 89876, 19))),
+        (_.koreana = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 21470, 19))),
+        (_.latam = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 69206, 19))),
+        (_.malay = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 74357, 19))),
+        (_.norwegian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 94025, 19))),
+        (_.polish = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 92494, 19))),
+        (_.portuguese = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 1481, 19))),
+        (_.romanian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 48824, 19))),
+        (_.russian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 50208, 19))),
+        (_.sc_schinese = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 63354, 19))),
+        (_.schinese = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 63875, 19))),
+        (_.spanish = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 34053, 19))),
+        (_.swedish = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 38804, 19))),
+        (_.tchinese = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 48688, 19))),
+        (_.thai = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 79173, 19))),
+        (_.turkish = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 75629, 19))),
+        (_.ukrainian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 22319, 19))),
+        (_.vietnamese = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 33844, 19)));
+      const _ = (0, _._)(async function (_) {
+          if (_[_]) return _[_]();
+        }),
+        _ = new Map([
           [
             2379780,
             {
@@ -4755,7 +4899,7 @@
                     (0, _.jsx)("div", {
                       className: _().DeckLogo,
                     }),
-                    (0, _._)("#DeckTopPlayedAppBanner_Title"),
+                    _.Localize("#DeckTopPlayedAppBanner_Title"),
                   ],
                 }),
                 (0, _.jsx)("a", {
@@ -4766,11 +4910,11 @@
                     children: [
                       (0, _.jsx)("div", {
                         className: _().BannerHeader,
-                        children: (0, _._)("#DeckTopPlayedAppBanner_Header"),
+                        children: _.Localize("#DeckTopPlayedAppBanner_Header"),
                       }),
                       (0, _.jsx)("div", {
                         className: _().BannerGameText,
-                        children: (0, _._)(
+                        children: _.LocalizeReact(
                           "#DeckTopPlayedAppBanner_GameText",
                           (0, _.jsx)("span", {
                             children: _,
@@ -4789,8 +4933,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { appid: _ } = _,
@@ -7444,75 +7588,6 @@
           children: [_.children, _],
         });
       }
-      var _ = __webpack_require__("chunkid");
-      const _ = {};
-      (_.arabic = () =>
-        __webpack_require__._("chunkid").then(_._.bind(_, 70667, 19))),
-        (_.brazilian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 58167, 19))),
-        (_.bulgarian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 75936, 19))),
-        (_.czech = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 67478, 19))),
-        (_.danish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 77178, 19))),
-        (_.dutch = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 62063, 19))),
-        (_.english = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 91253, 19))),
-        (_.finnish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 66690, 19))),
-        (_.french = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 32763, 19))),
-        (_.german = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 82937, 19))),
-        (_.greek = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 36501, 19))),
-        (_.hungarian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 41812, 19))),
-        (_.indonesian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 35383, 19))),
-        (_.italian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 48149, 19))),
-        (_.japanese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 89876, 19))),
-        (_.koreana = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 21470, 19))),
-        (_.latam = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 69206, 19))),
-        (_.malay = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 74357, 19))),
-        (_.norwegian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 94025, 19))),
-        (_.polish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 92494, 19))),
-        (_.portuguese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 1481, 19))),
-        (_.romanian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 48824, 19))),
-        (_.russian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 50208, 19))),
-        (_.sc_schinese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 63354, 19))),
-        (_.schinese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 63875, 19))),
-        (_.spanish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 34053, 19))),
-        (_.swedish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 38804, 19))),
-        (_.tchinese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 48688, 19))),
-        (_.thai = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 79173, 19))),
-        (_.turkish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 75629, 19))),
-        (_.ukrainian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 22319, 19))),
-        (_.vietnamese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 33844, 19)));
-      const _ = (0, _._)(async function (_) {
-        if (_[_]) return _[_]();
-      });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
@@ -9811,6 +9886,7 @@
           __webpack_require__._("chunkid"),
           __webpack_require__._("chunkid"),
           __webpack_require__._("chunkid"),
+          __webpack_require__._("chunkid"),
         ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
       );
       function _(_) {
@@ -10871,7 +10947,13 @@
           }),
           { data: _ } = (0, _._)({
             appid: _,
-          });
+          }),
+          { data: _ } = (0, _._)({
+            appid: _,
+          }),
+          _ = _?.links_and_info?.manufacturers?.map((_) => ({
+            name: _,
+          }));
         return _
           ? (0, _.jsxs)(_._, {
               className: (0, _._)(_().SummaryBarSection, _().GameInfo),
@@ -10893,6 +10975,11 @@
                         strType: "publisher",
                         rgCreators: _.publishers,
                         mapCreatorLinks: _,
+                      }),
+                      (0, _.jsx)(_, {
+                        label: "#AppPage_SummaryBar_Manufacturer",
+                        strType: "manufacturer",
+                        rgCreators: _,
                       }),
                       _?.steam_release_date &&
                         (0, _.jsxs)("tr", {
@@ -10926,8 +11013,10 @@
       }
       function _(_) {
         const { creator: _, strType: _, mapCreatorLinks: _ } = _,
-          _ = (0, _._)(_.get(_.name)),
-          _ = (0, _._)(_._.STORE_BASE_URL + `search/?${_}=${_.name}`),
+          _ = (0, _._)(_?.get(_.name)),
+          _ = (0, _._)(
+            _._.STORE_BASE_URL + `search/?${_}=${encodeURIComponent(_.name)}`,
+          ),
           _ = _ || _;
         return (0, _.jsx)(_._, {
           href: _,
@@ -13947,6 +14036,12 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
+        if (!_ || !/^https?:/.test(_)) return;
+        if (!(0, _._)(_)) return _;
+        const _ = (0, _._)(_);
+        return _._.IN_CLIENT ? "steam://openurl_external/" + _ : _;
+      }
+      function _(_) {
         const { curator: _, recommendation: _ } = _,
           _ = _(_.link_url),
           _ = _(_.link_url),
@@ -14193,12 +14288,6 @@
             }),
           }),
         });
-      }
-      function _(_) {
-        if (!_ || !/^https?:/.test(_)) return;
-        if (!(0, _._)(_)) return _;
-        const _ = (0, _._)(_);
-        return _._.IN_CLIENT ? "steam://openurl_external/" + _ : _;
       }
       function _(_) {
         if (!_) return;
@@ -15613,6 +15702,11 @@
         [2, "#GameRating_ContentCategoryDescriptor_61"],
         [4, "#GameRating_ContentCategoryDescriptor_62"],
         [3, "#GameRating_ContentCategoryDescriptor_63"],
+      ]);
+      new Map([
+        ["in-game purchases", 1],
+        ["in-game purchases (includes random items)", 2],
+        ["users interact", 4],
       ]);
       new Map([
         [60, "#GameRating_ContentCategoryDescriptor_60"],
@@ -19772,43 +19866,86 @@
             linkType: _ = "overlay",
             children: _,
           } = _,
+          _ = (0, _._)()
+            ? (0, _.jsx)(_._, {
+                contrast: "title",
+                size: "2",
+                weight: "heavy",
+                style: {
+                  letterSpacing: "0.5px",
+                },
+                children: _,
+              })
+            : (0, _.jsx)(_._, {
+                contrast: "body",
+                size: "2",
+                weight: "regular",
+                children: _,
+              }),
           _ = "footer" == _ && _().FooterLink;
-        return (0, _.jsxs)(_._, {
-          className: (0, _._)(_().ShopLink, _),
-          "flow-children": "column",
-          focusClassName: _().ShowLink,
-          focusable: !0,
-          href: _,
+        return (0, _.jsxs)(_.Fragment, {
           children: [
-            (0, _.jsx)(_._, {
-              size: "2",
-              contrast: "title",
-              weight: "heavy",
-              style: {
-                letterSpacing: "0.5px",
-              },
-              children: _,
-            }),
-            (0, _.jsx)(_._, {
-              direction: "row",
-              gap: "1",
-              className: _().Items,
-              children: _,
-            }),
-            (0, _.jsx)("div", {
-              className: _().ActivateLabel,
-              children: (0, _.jsx)(_._, {
-                background: "blue-8",
-                padding: "2",
-                radius: "sm",
-                children: (0, _.jsx)(_._, {
-                  size: "2",
-                  contrast: "title",
+            (0, _.jsxs)(_._, {
+              className: (0, _._)(_().ShopLink, _),
+              "flow-children": "column",
+              focusClassName: _().ShowLink,
+              focusable: !0,
+              href: _,
+              children: [
+                _,
+                (0, _.jsx)(_._, {
+                  direction: "row",
+                  gap: "1",
+                  className: _().Items,
                   children: _,
                 }),
-              }),
+                (0, _.jsx)("div", {
+                  className: _().ActivateLabel,
+                  children: (0, _.jsx)(_._, {
+                    background: "blue-8",
+                    padding: "2",
+                    radius: "sm",
+                    children: (0, _.jsx)(_._, {
+                      size: "2",
+                      contrast: "title",
+                      children: _,
+                    }),
+                  }),
+                }),
+              ],
+            }),
+            (0, _.jsx)(_, {
+              title: _,
+              link_text: _,
+              url: _,
             }),
           ],
+        });
+      }
+      function _(_) {
+        const { title: _, link_text: _, url: _ } = _;
+        return (0, _.jsx)(_._, {
+          href: _,
+          className: _().ResponsiveLink,
+          children: (0, _.jsxs)(_._, {
+            direction: "row",
+            background: "blue-3",
+            padding: "2",
+            children: [
+              (0, _.jsxs)(_._, {
+                contrast: "subtitle",
+                className: _().Text,
+                children: [_, " - ", _],
+              }),
+              (0, _.jsx)(_._, {
+                contrast: "subtitle",
+                className: _().Arrow,
+                children: (0, _.jsx)(_.cLJ, {
+                  direction: "right",
+                }),
+              }),
+            ],
+          }),
         });
       }
       function _(_, _) {
@@ -19896,6 +20033,548 @@
             : null
         );
       }
+      const _ = "steamQueryPersist";
+      const _ = _.createContext(void 0);
+      _.Provider;
+      function _(_, _, _) {
+        return {
+          ..._,
+          [_]: {
+            area: _,
+            maxAgeSeconds: _,
+          },
+        };
+      }
+      Date.now();
+      var _ = __webpack_require__("chunkid");
+      const _ = 0;
+      function _(_, ..._) {
+        return ["achievements", _, ..._];
+      }
+      const _ = (_) => _(_, "schema");
+      function _(_, _) {
+        if (void 0 !== _ && "" !== _)
+          return `${_._.BASE_URL_SHARED_CDN}community_assets/images/apps/${_}/${_}`;
+      }
+      function _(_) {
+        return {
+          ..._,
+          groups: _.groups.map((_) =>
+            _._ === _
+              ? {
+                  ..._,
+                  name: "Base game",
+                }
+              : _,
+          ),
+        };
+      }
+      function _(_, _) {
+        return {
+          queryKey: _(_),
+          queryFn: async () => {
+            const _ = _._.LANGUAGE,
+              _ = (async function (_, _, _) {
+                const _ = await _.xtC.GetGameAchievements(_, {
+                  appid: _,
+                  language: _,
+                });
+                if (_.GetEResult() === _._)
+                  return {
+                    appid: _,
+                    language: _,
+                    groups: [],
+                    schema_hash: 0,
+                    schema_version: 0,
+                  };
+                if (_.GetEResult() !== _._)
+                  throw (
+                    (console.error(
+                      "Received error from GetGameAchievements",
+                      _.GetEResult(),
+                    ),
+                    new Error(
+                      `Error from GetGameAchievements: ${_.GetEResult()}`,
+                    ))
+                  );
+                const _ = {};
+                (_[_] = {
+                  _: _,
+                  archived: !1,
+                  developeronly: !1,
+                  ispublic: !0,
+                  dlcappid: 0,
+                  order: -1,
+                  achievements: [],
+                }),
+                  _.Body().groups().toString(),
+                  _.Body()
+                    .groups()
+                    .forEach((_) => {
+                      const _ = _.groupid();
+                      _[_] = {
+                        _: _,
+                        name: _.localized_name(),
+                        archived: _.archived() ?? !1,
+                        ispublic: _.ispublic() ?? !0,
+                        developeronly: _.developeronly() ?? !1,
+                        dlcappid: _.dlcappid() ?? 0,
+                        order: _.order() ?? 0,
+                        achievements: [],
+                      };
+                    }),
+                  _.Body()
+                    .toObject()
+                    ?.achievements?.forEach((_) => {
+                      const _ = _.groupid ?? _;
+                      _[_].achievements.push({
+                        internal_key: _.internal_key ?? 0,
+                        api_name: _.internal_name ?? "",
+                        name: _.localized_name,
+                        description: _.localized_desc,
+                        hidden: _.hidden ?? !1,
+                        archived: _.archived ?? !1,
+                        icon_achieved: _(_, _.icon),
+                        icon_unachieved: _(_, _.icon_gray),
+                        groupid: _.groupid ?? _,
+                        min_progress:
+                          _.min_progress_int ?? _.min_progress_float,
+                        max_progress:
+                          _.max_progress_int ?? _.max_progress_float,
+                      });
+                    });
+                const _ = Object.values(_)
+                  .filter((_) => _.achievements.length > 0)
+                  .sort((_, _) => _.order - _.order);
+                return {
+                  appid: _,
+                  language: _,
+                  groups: _,
+                  schema_hash: _.Body()?.schema_hash() ?? 0,
+                  schema_version: _.Body()?.schema_version() ?? 0,
+                };
+              })(_, _, _);
+            return _;
+          },
+          select: _,
+          staleTime: 864e5,
+          area: "achievements",
+        };
+      }
+      function _(_) {
+        return (function (_) {
+          const { area: _, maxAgeSeconds: _, meta: _, ..._ } = _,
+            _ = _.useContext(_),
+            _ = _.useMemo(() => _(_, _, _), [_, _, _]);
+          return (0, _._)({
+            ..._,
+            meta: _,
+            persister: _?.GetPersister(_),
+          });
+        })(_((0, _._)(), _));
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      const _ = 10;
+      function _(_) {
+        const {
+            imgURL: _,
+            glow: _,
+            pauseAnimation: _,
+            hidden: _,
+            alt: _,
+            className: _,
+            size: _,
+            ..._
+          } = _,
+          [_, _] = _.useState(!1),
+          _ = _.useCallback((_) => {
+            _ &&
+              (_.complete
+                ? _(!0)
+                : (_.onload = () => {
+                    _(!0);
+                  }));
+          }, []),
+          _ = _ && (_ || _),
+          _ = (function (_) {
+            if (void 0 !== _)
+              return {
+                "--icon-size": "fill" == _ ? "100%" : `${_}px`,
+              };
+          })(_);
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(
+            _().AchievementIconWrapper,
+            _,
+            _ && _().RareAchievementNoAnimation,
+          ),
+          style: _,
+          ..._,
+          children: [
+            _ &&
+              (0, _.jsx)("div", {
+                className: _().RareAchievementIconGlowContainerRoot,
+                children: (0, _.jsx)("div", {
+                  className: _().RareAchievementIconGlowContainer,
+                  children: (0, _.jsx)("div", {
+                    className: _().RareAchievementIconGlow,
+                  }),
+                }),
+              }),
+            _
+              ? (0, _.jsx)("div", {
+                  className: (0, _._)(_().HiddenLabel, _ && _().IconGlow),
+                  children: "?",
+                })
+              : (0, _.jsx)("img", {
+                  ref: _,
+                  className: (0, _._)(_().Icon, _ && _().IconGlow),
+                  src: "" == _ ? void 0 : _,
+                  loading: "lazy",
+                  alt: _,
+                  title: _,
+                }),
+          ],
+        });
+      }
+      function _(_) {
+        const {
+            achievement: _,
+            globalUnlockPercentage: _,
+            unlocked: _,
+            forceVisible: _ = !1,
+            hidden: _,
+            ..._
+          } = _,
+          _ = _ ?? (!_ && !_ && _.hidden),
+          _ = (_ ? _.icon_achieved : _.icon_unachieved) ?? "",
+          _ = _ && void 0 !== (_ = _) && _ <= _;
+        var _;
+        const _ = _ ? "Hidden Achievement" : (_.name ?? " ");
+        return (0, _.jsx)(_, {
+          hidden: _,
+          imgURL: _,
+          glow: _,
+          alt: _,
+          ..._,
+        });
+      }
+      function _(_) {
+        const { appid: _, iconCount: _ = 5 } = _;
+        _.use(_.Ready());
+        const _ = (function (_) {
+            const { data: _ } = _(_);
+            if (!_) return;
+            const _ = _.groups
+              .flatMap((_) => _.achievements)
+              .filter((_) => !_.archived);
+            return _?.length ? _ : void 0;
+          })(_),
+          _ = (0, _._)();
+        if (!_) return null;
+        const _ = _.filter((_) => !_.hidden).slice(0, _),
+          _ = Array(_ - _.length).fill(void 0),
+          _ = `${_._.COMMUNITY_BASE_URL}stats/${_}/achievements`;
+        return (0, _.jsxs)(_, {
+          title: _.Localize(
+            _
+              ? "#AppPage_Achievements_Header"
+              : "#AppPage_Achievements_Header_Desktop",
+          ),
+          linkType: "footer",
+          link_text: _.Localize("#AppPage_Achievements_ViewAll", _.length),
+          url: _,
+          children: [
+            _.map((_, _) => (0, _.jsx)(_._, {}, _)),
+            _.map((_, _) =>
+              (0, _.jsx)(
+                _,
+                {
+                  achievement: _,
+                  unlocked: !0,
+                  size: "fill",
+                },
+                _.api_name,
+              ),
+            ),
+          ],
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      const _ = 30,
+        _ = [
+          {
+            eType: _._._,
+            strPath: "quickref",
+            strLabel: "#AppPage_LinksAndInfo_QuickRef",
+          },
+          {
+            eType: _._._,
+            strPath: "manual",
+            strLabel: "#AppPage_LinksAndInfo_Manual",
+          },
+          {
+            eType: _._._,
+            strPath: "warranty",
+            strLabel: "#AppPage_LinksAndInfo_Warranty",
+          },
+        ];
+      function _(_) {
+        const { appid: _ } = _,
+          { data: _ } = (0, _._)({
+            appid: _,
+          }),
+          { data: _ } = (0, _._)({
+            appid: _,
+          }),
+          { data: _ } = (0, _._)({
+            appid: _,
+          }),
+          { data: _ } = (0, _._)({
+            appid: _,
+          }),
+          _ = (0, _._)(_);
+        if ((_.use(_.Ready()), !_)) return null;
+        const _ = _._.EREALM === _._.k_ESteamRealmChina;
+        return (0, _.jsxs)(_._, {
+          className: _().LinksAndInfo,
+          children: [
+            (0, _.jsx)(_, {
+              text: _.Localize("#AppPage_LinksAndInfo_Header"),
+            }),
+            (0, _.jsx)(_, {
+              url: `${_._.COMMUNITY_BASE_URL}app/${_}`,
+              label: "#AppPage_LinksAndInfo_CommunityHub",
+            }),
+            (!_ || _(_)) &&
+              (0, _.jsx)(_, {
+                children: (0, _.jsx)(_, {
+                  appid: _,
+                  steamworksAppID: _,
+                  app: _,
+                  bSteamChina: _,
+                  links: _?.links_and_info,
+                  rgSocialLinks: _,
+                  bRequiresShipping: !!_?.purchase_options?.some(
+                    (_) => _.requires_shipping,
+                  ),
+                }),
+              }),
+          ],
+        });
+      }
+      function _(_) {
+        const [_, _] = _.useState(!1),
+          _ = _.useCallback(() => __webpack_require__((_) => !_), []);
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsxs)(_._, {
+              className: "responsive_banner_link",
+              onActivate: _,
+              "aria-expanded": _,
+              children: [
+                (0, _.jsx)("div", {
+                  className: "responsive_banner_link_title",
+                  children: _.Localize("#AppPage_LinksAndInfo_MoreLinks"),
+                }),
+                (0, _.jsx)("div", {
+                  className: _ ? "expand_section expanded" : "expand_section",
+                }),
+              ],
+            }),
+            _ &&
+              (0, _.jsx)("div", {
+                className: _().MoreLinks,
+                children: _.children,
+              }),
+          ],
+        });
+      }
+      function _(_) {
+        return _.type != _._._ && _.type != _._._ && _.type != _._._;
+      }
+      function _(_) {
+        const {
+            appid: _,
+            steamworksAppID: _,
+            app: _,
+            bSteamChina: _,
+            links: _,
+            rgSocialLinks: _,
+            bRequiresShipping: _,
+          } = _,
+          _ = !!_.categories?.feature_categoryids?.includes(_);
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            !_ &&
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  _ &&
+                    (0, _.jsx)(_, {
+                      url: `${_._.STORE_BASE_URL}hardware_order_terms`,
+                      label: "#AppPage_LinksAndInfo_HardwareOrderTerms",
+                      bStoreNav: !0,
+                    }),
+                  (0, _.jsx)(_, {
+                    url: _?.website,
+                    label: _.Localize("#AppPage_LinksAndInfo_Website"),
+                  }),
+                  _?.map((_) =>
+                    (0, _.jsx)(
+                      _,
+                      {
+                        social: _,
+                      },
+                      `${_.link_type}_${_.url ?? _.text}`,
+                    ),
+                  ),
+                  _.filter((_) =>
+                    _?.available_documents?.includes(_.eType),
+                  ).map((_) =>
+                    (0, _.jsx)(
+                      _,
+                      {
+                        url: `${_._.STORE_BASE_URL}${_.strPath}/${_}`,
+                        label: _.strLabel,
+                      },
+                      _.eType,
+                    ),
+                  ),
+                  (0, _.jsx)(_, {
+                    url: _?.online_manual_url,
+                    label: _.Localize("#AppPage_LinksAndInfo_Manual"),
+                  }),
+                  (0, _.jsx)(_, {
+                    url: _?.health_warning_url,
+                    label: _.Localize("#AppPage_LinksAndInfo_HealthWarning"),
+                  }),
+                  (0, _.jsx)(_, {
+                    url: _?.privacy_policy_url,
+                    label: _.Localize("#AppPage_LinksAndInfo_PrivacyPolicy"),
+                  }),
+                  (0, _.jsx)(_, {
+                    url: _?.stats_url,
+                    label: _.Localize("#AppPage_LinksAndInfo_Stats"),
+                  }),
+                ],
+              }),
+            _(_) &&
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)(_, {
+                    url: `${_._.STORE_BASE_URL}newshub/?appids=${_}`,
+                    label: "#AppPage_LinksAndInfo_UpdateHistory",
+                    bStoreNav: !0,
+                  }),
+                  (0, _.jsx)(_, {
+                    url: `${_._.STORE_BASE_URL}newshub/app/${_}`,
+                    label: "#AppPage_LinksAndInfo_News",
+                    bStoreNav: !0,
+                  }),
+                ],
+              }),
+            !_ &&
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  _ &&
+                    (0, _.jsx)(_, {
+                      url: `${_._.COMMUNITY_BASE_URL}app/${_}/workshop/`,
+                      label: "#AppPage_LinksAndInfo_Workshop",
+                    }),
+                  _.name &&
+                    (0, _.jsx)(_, {
+                      url: `${_._.COMMUNITY_BASE_URL}actions/Search?T=ClanAccount&K=${encodeURIComponent(_.name)}`,
+                      label: "#AppPage_LinksAndInfo_CommunityGroups",
+                    }),
+                ],
+              }),
+          ],
+        });
+      }
+      function _(_) {
+        const { url: _, label: _, bStoreNav: _ } = _,
+          _ = (0, _._)(_ ? _ : void 0);
+        return (0, _.jsx)(_._, {
+          className: _().LinkRow,
+          href: _ || _,
+          children: (0, _.jsx)(_._, {
+            color: "blue-8",
+            children: _.Localize(_),
+          }),
+        });
+      }
+      function _(_) {
+        const { url: _, label: _ } = _;
+        return (0, _.jsxs)(_._, {
+          className: _().LinkRow,
+          href: _._.IN_CLIENT ? `steam://openurl_external/${_}` : _,
+          target: _._.IN_CLIENT ? void 0 : "_blank",
+          children: [
+            (0, _.jsx)(_._, {
+              color: "blue-8",
+              children: _.Localize(_),
+            }),
+            (0, _.jsx)(_, {}),
+          ],
+        });
+      }
+      function _(_) {
+        const { url: _, label: _, children: _ } = _,
+          _ = _(_);
+        return _
+          ? (0, _.jsxs)(_._, {
+              className: _().LinkRow,
+              href: _,
+              target: _._.IN_CLIENT ? void 0 : "_blank",
+              rel: "noopener noreferrer",
+              children: [
+                _,
+                (0, _.jsx)(_._, {
+                  color: "blue-8",
+                  children: _,
+                }),
+                (0, _.jsx)(_, {}),
+              ],
+            })
+          : null;
+      }
+      function _(_) {
+        const { social: _ } = _,
+          _ = _.link_type ?? _._._,
+          _ = (0, _._)(_);
+        if (!_) return null;
+        const _ = (0, _._)(`#StoreAdmin_SocialMedia_Type_${_}`),
+          _ = (0, _.jsx)(_._, {
+            linkType: _,
+            className: _().SocialIcon,
+          });
+        return _.url
+          ? (0, _.jsx)(_, {
+              url: _.url,
+              label: _,
+              children: _,
+            })
+          : (0, _.jsxs)("div", {
+              className: _().LinkRow,
+              children: [
+                _,
+                (0, _.jsx)(_._, {
+                  contrast: "body",
+                  children: `${_} ${_.text ?? ""}`,
+                }),
+              ],
+            });
+      }
+      function _() {
+        return (0, _.jsx)("span", {
+          className: _().ExternalIcon,
+          children: (0, _.jsx)(_.GrD, {}),
+        });
+      }
       const _ = _.lazy(() =>
           __webpack_require__
             ._("chunkid")
@@ -19940,6 +20619,29 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
@@ -19947,25 +20649,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -20195,6 +20878,10 @@
                         (0, _.jsx)(_, {
                           appid: _,
                         }),
+                      achievements: () =>
+                        (0, _.jsx)(_, {
+                          appid: _,
+                        }),
                       "early-access": (_) =>
                         (0, _.jsx)(_, {
                           ..._,
@@ -20219,6 +20906,10 @@
                       "item-shop-items": (_) =>
                         (0, _.jsx)(_, {
                           ..._,
+                        }),
+                      "links-and-info": () =>
+                        (0, _.jsx)(_, {
+                          appid: _,
                         }),
                       "write-review": (_) =>
                         (0, _.jsx)(_._, {

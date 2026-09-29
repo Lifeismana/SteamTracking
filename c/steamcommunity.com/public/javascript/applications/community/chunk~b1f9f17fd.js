@@ -1,5 +1,5 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-  [8780],
+  [18780],
   {
     chunkid: (module) => {
       module.exports = {
@@ -398,6 +398,25 @@
       module.exports = {
         PresenterDisclaimer: "_3t5Ysy42auAhLs-ZV5jwdF",
         PresenterLabel: "_2FnM_Y63_Jnu_t6cnt-4se",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        "duration-app-launch": "800ms",
+        ShowContentsContainer: "_2x2AVOEhNG0VTutCmj92Ae",
+        ShowContentsButton: "_2_XaQn0OkqO-ANKJtzRmLZ",
+        BackgroundAnimation: "_2kFixnelgYVyRKFCYQoRWp",
+        "ItemFocusAnim-darkerGrey-nocolor": "_13KcN3vD9NXCXy237qwaLG",
+        "ItemFocusAnim-darkerGrey": "_3Lgimh2v4u-nRDyxxqBT3A",
+        "ItemFocusAnim-darkGreySettings": "_2VPOJmNqgetdyDpFE4bllq",
+        "ItemFocusAnim-darkGrey": "_3Lvlegmwn9YEoWyzBwD8sr",
+        "ItemFocusAnim-grey": "_2q1zpV3mttH-R5gqHwT1mC",
+        "ItemFocusAnim-translucent-white-10": "_2tuGihqMFSxlr-sQRkqM06",
+        "ItemFocusAnim-translucent-white-20": "m_Qke_AWkwjhp-iRPUqGQ",
+        "ItemFocusAnimBorder-darkGrey": "VWIRjrZbRoG1gl1Id-htG",
+        "ItemFocusAnim-green": "_2TgNqvDWm-J8Y0c1YifrWP",
+        focusAnimation: "_21lEBZV29mPW7bFIzaMfnE",
+        hoverAnimation: "hQdw7eDYdBDGDfOEBkhrw",
       };
     },
     chunkid: (module) => {
@@ -1136,22 +1155,7 @@
     },
     chunkid: (module) => {
       module.exports = {
-        "duration-app-launch": "800ms",
-        ShowContentsContainer: "_2ESKkqmk68QMRArbxaUwm0",
-        ShowContentsButton: "_2cY4Vl4F1_9jlRxk7Su9uw",
         FacetedBrowseLoadThrobber: "_3kblyvbuC2GWHjgm4gwPPT",
-        BackgroundAnimation: "_8_3_M592XNR4DsMQ_Sdvz",
-        "ItemFocusAnim-darkerGrey-nocolor": "_2_jIt9nCSopNXe4_3NeR6a",
-        "ItemFocusAnim-darkerGrey": "_3p60BZKcebqjGnIjRBOlMw",
-        "ItemFocusAnim-darkGreySettings": "_2ZQrCJY7WBczlOmmZQHMzx",
-        "ItemFocusAnim-darkGrey": "_2M-BLV3qJBFtW7L-6M49jP",
-        "ItemFocusAnim-grey": "ff_f9PCg5owcTXqjoWDE7",
-        "ItemFocusAnim-translucent-white-10": "_2yA2_SkK8J5R_DLYh4o7Cy",
-        "ItemFocusAnim-translucent-white-20": "_1hbJ6ar05WlYC_VkhYGe4W",
-        "ItemFocusAnimBorder-darkGrey": "WT1rRBPwio3oFb6s6LDsW",
-        "ItemFocusAnim-green": "_10HGEchOTBE0XcfPSkrezF",
-        focusAnimation: "_3YWhd9jRYsHjWDuQaE7JBN",
-        hoverAnimation: "_1OrvHNH7Ss0WQg2sYl_B",
       };
     },
     chunkid: (module) => {
@@ -1367,14 +1371,6 @@
         "ItemFocusAnim-green": "_9Yi6ypdec-i3VQdbEymXf",
         focusAnimation: "_2B9CW0BXjgIa25yu0TTLhm",
         hoverAnimation: "_1_pkHhIaxtcT3D7Zykg6Jz",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        Container: "_2vGr9KsApU0s59_ZsZVxXY",
-        SmallAvatar: "_3V8w8CrYHVYB0voJ3gp87x",
-        ShareDescription: "_3CqiH5i7kc5lXyEb0TGl2C",
-        ShareLink: "_1WTiWXO3q8jMnJc_cPKJbE",
       };
     },
     chunkid: (module) => {
@@ -2897,6 +2893,37 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ =
+          (__webpack_require__("chunkid"),
+          __webpack_require__("chunkid"),
+          __webpack_require__("chunkid")),
+        _ = __webpack_require__("chunkid");
+      _.GPz._;
+      function _(_) {
+        return ["StoreSales.GetVoteDefinitions", null != _ ? _ : 0];
+      }
+      function _(_) {
+        return (0, _._)(
+          (function (_, _) {
+            return {
+              queryKey: _(_),
+              queryFn: async () => {
+                const _ = await _._.GetVoteDefinitions(_, {
+                  sale_appid: _,
+                  language: (0, _._)().strLanguage,
+                });
+                return __webpack_require__.BSuccess()
+                  ? __webpack_require__.Body().toObject()
+                  : null;
+              },
+              enabled: Boolean(_),
+              staleTime: 1 / 0,
+            };
+          })((0, _._)(), _),
+        );
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3000,7 +3027,7 @@
         _ = (_) => {
           var _;
           const _ = _._.GetEditModel(),
-            _ = (0, _._)(_._);
+            _ = _(_._);
           if (!_) return null;
           let _ = _()("2025-11-06T10:00:00-08:00").unix(),
             _ = _()("2025-11-24T10:00:00-08:00").unix();
@@ -3036,7 +3063,7 @@
         };
       function _() {
         var _, _;
-        const _ = (0, _._)(_._),
+        const _ = _(_._),
           _ = _._.GetEditModel(),
           _ = (0, _._)(() => _.GetSteamAwardCategory()),
           _ = (0, _._)(() => _.GetAppReleaseDate()),
@@ -3223,7 +3250,7 @@
         _ = (0, _._)((_) => {
           const _ = _._.GetEditModel(),
             _ = _.GetAppID(),
-            _ = (0, _._)(_._);
+            _ = _(_._);
           if (!(null == _ ? void 0 : _.data)) return null;
           let _ = [];
           return (
@@ -5065,7 +5092,6 @@
               (0, _.jsx)(_._, {
                 event: _,
                 lang: (0, _.sfN)(_._.LANGUAGE),
-                partnerEventStore: _._,
                 emoticonStore: _,
                 adminPanel: (0, _.jsx)(_._, {
                   eventModel: _,
@@ -5666,7 +5692,6 @@
                     lang: _,
                     nOverrideStartTime: _.nOverrideStartTime,
                     nOverrideEndTime: _.nOverrideEndTime,
-                    partnerEventStore: _._,
                     emoticonStore: _,
                     adminPanel: (0, _.jsx)(_._, {
                       eventModel: _,
@@ -7399,6 +7424,357 @@
             [_, _],
           );
         return [_, _];
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            summary: _,
+            bEventIsInModerationQueue: _,
+            bIsAllowedInLibrary: _,
+            bCompact: _,
+            bExpanded: _,
+            header: _,
+          } = _,
+          {
+            total_showm: _ = 0,
+            total_read: _ = 0,
+            library_overview_shown: _ = 0,
+            library_overview_read: _ = 0,
+            app_details_spotlight_shown: _ = 0,
+            app_details_spotlight_read: _ = 0,
+            app_details_activity_shown: _ = 0,
+            app_details_activity_read: _ = 0,
+            store_app_page_shown: _ = 0,
+            store_app_page_read: _ = 0,
+            community_hub_shown: _ = 0,
+            community_hub_read: _ = 0,
+            news_hub_shown: _ = 0,
+            news_hub_read: _ = 0,
+          } = _;
+        return _ + _ == 0
+          ? null
+          : (0, _.jsxs)("div", {
+              className: (0, _._)(_ ? _.EventDetailView : _.DashboardView),
+              children: [
+                (0, _.jsxs)("div", {
+                  className: (0, _._)(_.HeaderCtn),
+                  children: [
+                    _,
+                    (0, _.jsxs)("div", {
+                      className: _.TotalsCtn,
+                      children: [
+                        (0, _.jsxs)("div", {
+                          className: _.HeaderStat,
+                          children: [
+                            (0, _.jsx)("span", {
+                              className: _.StatDescription,
+                              children: (0, _._)(
+                                "#EventDashBoard_SummaryStats_TotalImpressions",
+                              ),
+                            }),
+                            (0, _.jsx)("span", {
+                              className: _.StatFigure,
+                              children: (0, _._)(_),
+                            }),
+                          ],
+                        }),
+                        (0, _.jsxs)("div", {
+                          className: _.HeaderStat,
+                          children: [
+                            (0, _.jsx)("span", {
+                              className: _.StatDescription,
+                              children: (0, _._)(
+                                "#EventDashBoard_SummaryStats_TotalViews",
+                              ),
+                            }),
+                            (0, _.jsx)("span", {
+                              className: _.StatFigure,
+                              children: (0, _._)(_),
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+                Boolean(_ && _) &&
+                  (0, _.jsxs)("div", {
+                    className: _.ModerationWarningCtn,
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _.ModerationWarning,
+                        children: (0, _._)(
+                          "#EventDashBoard_ModerationQueueWarning",
+                        ),
+                      }),
+                      (0, _.jsx)("a", {
+                        href:
+                          _._.PARTNER_BASE_URL +
+                          "doc/marketing/event_tools/moderation",
+                        children: (0, _._)(
+                          "#EventDashBoard_Location_ModerationTitle",
+                        ),
+                      }),
+                    ],
+                  }),
+                _ &&
+                  (0, _.jsxs)("div", {
+                    className: (0, _._)(_.StatsCtn),
+                    children: [
+                      _ &&
+                        (0, _.jsxs)("div", {
+                          className: (0, _._)(
+                            _.StatsLeftSection,
+                            _ && _.DisabledStats,
+                          ),
+                          children: [
+                            (0, _.jsxs)("div", {
+                              className: _.StatsTitle_ctn,
+                              children: [
+                                (0, _.jsx)("span", {
+                                  children: (0, _._)(
+                                    "#EventDashBoard_Location_LibraryHome",
+                                  ),
+                                }),
+                                (0, _.jsxs)("span", {
+                                  className: _.ModerationNote,
+                                  children: [
+                                    "( ",
+                                    (0, _._)(
+                                      "#EventDashBoard_Location_WaitingModeraion",
+                                    ),
+                                    " )",
+                                  ],
+                                }),
+                              ],
+                            }),
+                            (0, _.jsxs)("div", {
+                              className: _.StatsTitle,
+                              children: [
+                                (0, _.jsx)("span", {
+                                  children: (0, _._)(
+                                    "#EventDashBoard_Summary_LibraryHome_Shown",
+                                  ),
+                                }),
+                                (0, _.jsx)("span", {
+                                  children: (0, _._)(_),
+                                }),
+                              ],
+                            }),
+                            (0, _.jsxs)("div", {
+                              className: _.StatsTitle,
+                              children: [
+                                (0, _.jsx)("span", {
+                                  children: (0, _._)(
+                                    "#EventDashBoard_Summary_LibraryHome_Read",
+                                  ),
+                                }),
+                                (0, _.jsx)("span", {
+                                  children: (0, _._)(_),
+                                }),
+                              ],
+                            }),
+                            (0, _.jsxs)("div", {
+                              className: _.StatsTitle_ctn,
+                              children: [
+                                (0, _.jsx)("span", {
+                                  children: (0, _._)(
+                                    "#EventDashBoard_Location_LibraryDetail",
+                                  ),
+                                }),
+                                (0, _.jsxs)("span", {
+                                  className: _.ModerationNote,
+                                  children: [
+                                    "( ",
+                                    (0, _._)(
+                                      "#EventDashBoard_Location_WaitingModeraion",
+                                    ),
+                                    " )",
+                                  ],
+                                }),
+                              ],
+                            }),
+                            _ > 0 &&
+                              (0, _.jsxs)(_.Fragment, {
+                                children: [
+                                  (0, _.jsxs)("div", {
+                                    className: _.StatsTitle,
+                                    children: [
+                                      (0, _.jsx)("span", {
+                                        children: (0, _._)(
+                                          "#EventDashBoard_Summary_AppDetailSpotlight_Shown",
+                                        ),
+                                      }),
+                                      (0, _.jsx)("span", {
+                                        children: (0, _._)(_),
+                                      }),
+                                    ],
+                                  }),
+                                  (0, _.jsxs)("div", {
+                                    className: _.StatsTitle,
+                                    children: [
+                                      (0, _.jsx)("span", {
+                                        children: (0, _._)(
+                                          "#EventDashBoard_Summary_AppDetailSpotlight_Read",
+                                        ),
+                                      }),
+                                      (0, _.jsx)("span", {
+                                        children: (0, _._)(_),
+                                      }),
+                                    ],
+                                  }),
+                                ],
+                              }),
+                            (0, _.jsxs)("div", {
+                              className: _.StatsTitle,
+                              children: [
+                                (0, _.jsx)("span", {
+                                  children: (0, _._)(
+                                    "#EventDashBoard_Summary_AppDetailActivity_Shown",
+                                  ),
+                                }),
+                                (0, _.jsx)("span", {
+                                  children: (0, _._)(_),
+                                }),
+                              ],
+                            }),
+                            (0, _.jsxs)("div", {
+                              className: _.StatsTitle,
+                              children: [
+                                (0, _.jsx)("span", {
+                                  children: (0, _._)(
+                                    "#EventDashBoard_Summary_AppDetailActivity_Read",
+                                  ),
+                                }),
+                                (0, _.jsx)("span", {
+                                  children: (0, _._)(_),
+                                }),
+                              ],
+                            }),
+                          ],
+                        }),
+                      (0, _.jsxs)("div", {
+                        className: _.StatsRightSection,
+                        children: [
+                          (0, _.jsx)("div", {
+                            className: _.StatsTitle_ctn,
+                            children: (0, _.jsx)("span", {
+                              children: (0, _._)(
+                                "#EventDashBoard_Location_StoreDetail",
+                              ),
+                            }),
+                          }),
+                          (0, _.jsxs)("div", {
+                            className: _.StatsTitle,
+                            children: [
+                              (0, _.jsx)("span", {
+                                children: (0, _._)(
+                                  "#EventDashBoard_Summary_StoreAppPage_Shown",
+                                ),
+                              }),
+                              (0, _.jsx)("span", {
+                                children: (0, _._)(_),
+                              }),
+                            ],
+                          }),
+                          (0, _.jsxs)("div", {
+                            className: _.StatsTitle,
+                            children: [
+                              (0, _.jsx)("span", {
+                                children: (0, _._)(
+                                  "#EventDashBoard_Summary_StoreAppPage_Read",
+                                ),
+                              }),
+                              (0, _.jsx)("span", {
+                                children: (0, _._)(_),
+                              }),
+                            ],
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _.StatsTitle_ctn,
+                            children: (0, _.jsx)("span", {
+                              children: (0, _._)(
+                                "#EventDashBoard_Location_CommunityDetail",
+                              ),
+                            }),
+                          }),
+                          (0, _.jsxs)("div", {
+                            className: _.StatsTitle,
+                            children: [
+                              (0, _.jsx)("span", {
+                                children: (0, _._)(
+                                  "#EventDashBoard_Summary_Community_Shown",
+                                ),
+                              }),
+                              (0, _.jsx)("span", {
+                                children: (0, _._)(_),
+                              }),
+                            ],
+                          }),
+                          (0, _.jsxs)("div", {
+                            className: _.StatsTitle,
+                            children: [
+                              (0, _.jsx)("span", {
+                                children: (0, _._)(
+                                  "#EventDashBoard_Summary_Community_Read",
+                                ),
+                              }),
+                              (0, _.jsx)("span", {
+                                children: (0, _._)(_),
+                              }),
+                            ],
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _.StatsTitle_ctn,
+                            children: (0, _.jsx)("span", {
+                              children: (0, _._)(
+                                "#EventDashBoard_Location_NewsHubDetail",
+                              ),
+                            }),
+                          }),
+                          (0, _.jsxs)("div", {
+                            className: _.StatsTitle,
+                            children: [
+                              (0, _.jsx)("span", {
+                                children: (0, _._)(
+                                  "#EventDashBoard_Summary_NewsHub_Shown",
+                                ),
+                              }),
+                              (0, _.jsx)("span", {
+                                children: (0, _._)(_),
+                              }),
+                            ],
+                          }),
+                          (0, _.jsxs)("div", {
+                            className: _.StatsTitle,
+                            children: [
+                              (0, _.jsx)("span", {
+                                children: (0, _._)(
+                                  "#EventDashBoard_Summary_NewsHub_Read",
+                                ),
+                              }),
+                              (0, _.jsx)("span", {
+                                children: (0, _._)(_),
+                              }),
+                            ],
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+              ],
+            });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -16183,6 +16559,16 @@
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
+                  fest_page_views: {
+                    _: 10,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  fest_period_page_views: {
+                    _: 11,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
                 },
               }),
             _.sm_m
@@ -17311,87 +17697,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = (_) => {
-        const _ = _.createRef(),
-          [_, _] = _.useState(""),
-          _ = _.createRef(),
-          _ = () => {
-            var _;
-            const _ =
-              null === (_ = _.current) || void 0 === _
-                ? void 0
-                : _.ownerDocument.defaultView;
-            _.current &&
-              _ &&
-              _.navigator.clipboard
-                .writeText(_.current.value)
-                .then((_) => {
-                  _((0, _._)("#EventDisplay_Share_CopiedToClipboard"));
-                })
-                .catch((_) => {
-                  _((0, _._)("#EventDisplay_Share_FailedToCopyToClipboard")),
-                    console.error("Failed to copy link to clipboard:", _);
-                });
-          };
-        return (0, _.jsxs)("div", {
-          children: [
-            (0, _.jsxs)("div", {
-              className: (0, _._)(_().FlexRowContainer, _().linkField),
-              onClick: _,
-              children: [
-                (0, _.jsx)("span", {
-                  className: _().LinkInputLabel,
-                  children: (0, _._)(
-                    _.labelOverride
-                      ? _.labelOverride
-                      : "#EventDisplay_Share_Link",
-                  ),
-                }),
-                (0, _.jsx)("input", {
-                  className: _().LinkInput,
-                  ref: _,
-                  value: _.eventLink,
-                  readOnly: !0,
-                }),
-                document.queryCommandSupported("copy") &&
-                  (0, _.jsx)(_._, {
-                    className: (0, _._)(_().Button, _().Icon, _().LinkButton),
-                    onActivate: _,
-                    children: (0, _.jsx)(_._, {
-                      toolTipContent: (0, _._)("#ToolTip_CopyLinkToClipboard"),
-                      children: (0, _.jsx)("img", {
-                        className: _().ClipboardIcon,
-                        src: _._,
-                      }),
-                    }),
-                  }),
-              ],
-            }),
-            (0, _.jsx)("div", {
-              ref: _,
-              className: _().ClipboardText,
-              children: _,
-            }),
-          ],
-        });
-      };
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
@@ -18035,7 +18340,6 @@
           const {
               event: _,
               lang: _,
-              partnerEventStore: _,
               emoticonStore: _,
               nOverrideStartTime: _,
               nOverrideEndTime: _,
@@ -18174,7 +18478,6 @@
                             children: [
                               (0, _.jsx)(_._, {
                                 text: _ || "",
-                                partnerEventStore: _,
                                 showErrorInfo: _,
                                 event: _,
                                 languageOverride: _,
@@ -18273,7 +18576,6 @@
                 (0, _.jsx)(_._, {
                   eventModel: _,
                   emoticonStore: _,
-                  partnerEventStore: _,
                 }),
               ],
             }),
@@ -18313,357 +18615,6 @@
               summary: _ ? _.m_stats : void 0,
             })
           : null;
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            summary: _,
-            bEventIsInModerationQueue: _,
-            bIsAllowedInLibrary: _,
-            bCompact: _,
-            bExpanded: _,
-            header: _,
-          } = _,
-          {
-            total_showm: _ = 0,
-            total_read: _ = 0,
-            library_overview_shown: _ = 0,
-            library_overview_read: _ = 0,
-            app_details_spotlight_shown: _ = 0,
-            app_details_spotlight_read: _ = 0,
-            app_details_activity_shown: _ = 0,
-            app_details_activity_read: _ = 0,
-            store_app_page_shown: _ = 0,
-            store_app_page_read: _ = 0,
-            community_hub_shown: _ = 0,
-            community_hub_read: _ = 0,
-            news_hub_shown: _ = 0,
-            news_hub_read: _ = 0,
-          } = _;
-        return _ + _ == 0
-          ? null
-          : (0, _.jsxs)("div", {
-              className: (0, _._)(_ ? _.EventDetailView : _.DashboardView),
-              children: [
-                (0, _.jsxs)("div", {
-                  className: (0, _._)(_.HeaderCtn),
-                  children: [
-                    _,
-                    (0, _.jsxs)("div", {
-                      className: _.TotalsCtn,
-                      children: [
-                        (0, _.jsxs)("div", {
-                          className: _.HeaderStat,
-                          children: [
-                            (0, _.jsx)("span", {
-                              className: _.StatDescription,
-                              children: (0, _._)(
-                                "#EventDashBoard_SummaryStats_TotalImpressions",
-                              ),
-                            }),
-                            (0, _.jsx)("span", {
-                              className: _.StatFigure,
-                              children: (0, _._)(_),
-                            }),
-                          ],
-                        }),
-                        (0, _.jsxs)("div", {
-                          className: _.HeaderStat,
-                          children: [
-                            (0, _.jsx)("span", {
-                              className: _.StatDescription,
-                              children: (0, _._)(
-                                "#EventDashBoard_SummaryStats_TotalViews",
-                              ),
-                            }),
-                            (0, _.jsx)("span", {
-                              className: _.StatFigure,
-                              children: (0, _._)(_),
-                            }),
-                          ],
-                        }),
-                      ],
-                    }),
-                  ],
-                }),
-                Boolean(_ && _) &&
-                  (0, _.jsxs)("div", {
-                    className: _.ModerationWarningCtn,
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: _.ModerationWarning,
-                        children: (0, _._)(
-                          "#EventDashBoard_ModerationQueueWarning",
-                        ),
-                      }),
-                      (0, _.jsx)("a", {
-                        href:
-                          _._.PARTNER_BASE_URL +
-                          "doc/marketing/event_tools/moderation",
-                        children: (0, _._)(
-                          "#EventDashBoard_Location_ModerationTitle",
-                        ),
-                      }),
-                    ],
-                  }),
-                _ &&
-                  (0, _.jsxs)("div", {
-                    className: (0, _._)(_.StatsCtn),
-                    children: [
-                      _ &&
-                        (0, _.jsxs)("div", {
-                          className: (0, _._)(
-                            _.StatsLeftSection,
-                            _ && _.DisabledStats,
-                          ),
-                          children: [
-                            (0, _.jsxs)("div", {
-                              className: _.StatsTitle_ctn,
-                              children: [
-                                (0, _.jsx)("span", {
-                                  children: (0, _._)(
-                                    "#EventDashBoard_Location_LibraryHome",
-                                  ),
-                                }),
-                                (0, _.jsxs)("span", {
-                                  className: _.ModerationNote,
-                                  children: [
-                                    "( ",
-                                    (0, _._)(
-                                      "#EventDashBoard_Location_WaitingModeraion",
-                                    ),
-                                    " )",
-                                  ],
-                                }),
-                              ],
-                            }),
-                            (0, _.jsxs)("div", {
-                              className: _.StatsTitle,
-                              children: [
-                                (0, _.jsx)("span", {
-                                  children: (0, _._)(
-                                    "#EventDashBoard_Summary_LibraryHome_Shown",
-                                  ),
-                                }),
-                                (0, _.jsx)("span", {
-                                  children: (0, _._)(_),
-                                }),
-                              ],
-                            }),
-                            (0, _.jsxs)("div", {
-                              className: _.StatsTitle,
-                              children: [
-                                (0, _.jsx)("span", {
-                                  children: (0, _._)(
-                                    "#EventDashBoard_Summary_LibraryHome_Read",
-                                  ),
-                                }),
-                                (0, _.jsx)("span", {
-                                  children: (0, _._)(_),
-                                }),
-                              ],
-                            }),
-                            (0, _.jsxs)("div", {
-                              className: _.StatsTitle_ctn,
-                              children: [
-                                (0, _.jsx)("span", {
-                                  children: (0, _._)(
-                                    "#EventDashBoard_Location_LibraryDetail",
-                                  ),
-                                }),
-                                (0, _.jsxs)("span", {
-                                  className: _.ModerationNote,
-                                  children: [
-                                    "( ",
-                                    (0, _._)(
-                                      "#EventDashBoard_Location_WaitingModeraion",
-                                    ),
-                                    " )",
-                                  ],
-                                }),
-                              ],
-                            }),
-                            _ > 0 &&
-                              (0, _.jsxs)(_.Fragment, {
-                                children: [
-                                  (0, _.jsxs)("div", {
-                                    className: _.StatsTitle,
-                                    children: [
-                                      (0, _.jsx)("span", {
-                                        children: (0, _._)(
-                                          "#EventDashBoard_Summary_AppDetailSpotlight_Shown",
-                                        ),
-                                      }),
-                                      (0, _.jsx)("span", {
-                                        children: (0, _._)(_),
-                                      }),
-                                    ],
-                                  }),
-                                  (0, _.jsxs)("div", {
-                                    className: _.StatsTitle,
-                                    children: [
-                                      (0, _.jsx)("span", {
-                                        children: (0, _._)(
-                                          "#EventDashBoard_Summary_AppDetailSpotlight_Read",
-                                        ),
-                                      }),
-                                      (0, _.jsx)("span", {
-                                        children: (0, _._)(_),
-                                      }),
-                                    ],
-                                  }),
-                                ],
-                              }),
-                            (0, _.jsxs)("div", {
-                              className: _.StatsTitle,
-                              children: [
-                                (0, _.jsx)("span", {
-                                  children: (0, _._)(
-                                    "#EventDashBoard_Summary_AppDetailActivity_Shown",
-                                  ),
-                                }),
-                                (0, _.jsx)("span", {
-                                  children: (0, _._)(_),
-                                }),
-                              ],
-                            }),
-                            (0, _.jsxs)("div", {
-                              className: _.StatsTitle,
-                              children: [
-                                (0, _.jsx)("span", {
-                                  children: (0, _._)(
-                                    "#EventDashBoard_Summary_AppDetailActivity_Read",
-                                  ),
-                                }),
-                                (0, _.jsx)("span", {
-                                  children: (0, _._)(_),
-                                }),
-                              ],
-                            }),
-                          ],
-                        }),
-                      (0, _.jsxs)("div", {
-                        className: _.StatsRightSection,
-                        children: [
-                          (0, _.jsx)("div", {
-                            className: _.StatsTitle_ctn,
-                            children: (0, _.jsx)("span", {
-                              children: (0, _._)(
-                                "#EventDashBoard_Location_StoreDetail",
-                              ),
-                            }),
-                          }),
-                          (0, _.jsxs)("div", {
-                            className: _.StatsTitle,
-                            children: [
-                              (0, _.jsx)("span", {
-                                children: (0, _._)(
-                                  "#EventDashBoard_Summary_StoreAppPage_Shown",
-                                ),
-                              }),
-                              (0, _.jsx)("span", {
-                                children: (0, _._)(_),
-                              }),
-                            ],
-                          }),
-                          (0, _.jsxs)("div", {
-                            className: _.StatsTitle,
-                            children: [
-                              (0, _.jsx)("span", {
-                                children: (0, _._)(
-                                  "#EventDashBoard_Summary_StoreAppPage_Read",
-                                ),
-                              }),
-                              (0, _.jsx)("span", {
-                                children: (0, _._)(_),
-                              }),
-                            ],
-                          }),
-                          (0, _.jsx)("div", {
-                            className: _.StatsTitle_ctn,
-                            children: (0, _.jsx)("span", {
-                              children: (0, _._)(
-                                "#EventDashBoard_Location_CommunityDetail",
-                              ),
-                            }),
-                          }),
-                          (0, _.jsxs)("div", {
-                            className: _.StatsTitle,
-                            children: [
-                              (0, _.jsx)("span", {
-                                children: (0, _._)(
-                                  "#EventDashBoard_Summary_Community_Shown",
-                                ),
-                              }),
-                              (0, _.jsx)("span", {
-                                children: (0, _._)(_),
-                              }),
-                            ],
-                          }),
-                          (0, _.jsxs)("div", {
-                            className: _.StatsTitle,
-                            children: [
-                              (0, _.jsx)("span", {
-                                children: (0, _._)(
-                                  "#EventDashBoard_Summary_Community_Read",
-                                ),
-                              }),
-                              (0, _.jsx)("span", {
-                                children: (0, _._)(_),
-                              }),
-                            ],
-                          }),
-                          (0, _.jsx)("div", {
-                            className: _.StatsTitle_ctn,
-                            children: (0, _.jsx)("span", {
-                              children: (0, _._)(
-                                "#EventDashBoard_Location_NewsHubDetail",
-                              ),
-                            }),
-                          }),
-                          (0, _.jsxs)("div", {
-                            className: _.StatsTitle,
-                            children: [
-                              (0, _.jsx)("span", {
-                                children: (0, _._)(
-                                  "#EventDashBoard_Summary_NewsHub_Shown",
-                                ),
-                              }),
-                              (0, _.jsx)("span", {
-                                children: (0, _._)(_),
-                              }),
-                            ],
-                          }),
-                          (0, _.jsxs)("div", {
-                            className: _.StatsTitle,
-                            children: [
-                              (0, _.jsx)("span", {
-                                children: (0, _._)(
-                                  "#EventDashBoard_Summary_NewsHub_Read",
-                                ),
-                              }),
-                              (0, _.jsx)("span", {
-                                children: (0, _._)(_),
-                              }),
-                            ],
-                          }),
-                        ],
-                      }),
-                    ],
-                  }),
-              ],
-            });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -27574,7 +27525,6 @@
       (0, _._)([_._], _.prototype, "m_mapMasterAppToBenefitApps", void 0);
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         static Get() {
@@ -27626,7 +27576,8 @@
           placeholderData: (_) => _,
         };
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         return "frame_compatibility" === (0, _._)(_) ? "frame" : "deck";
       }
@@ -28662,12 +28613,31 @@
           _ = _(_, _, _, _, [..._]);
         } else _ = _(_, _, _, _, [..._.capsules]);
         if (_.signal.aborted) return _;
-        (_ = (0, _._)(_, _, _, _)),
+        if (
+          ((_ = (0, _._)(_, _, _, _)),
           _ && (_ = _(_)),
           _.BUsesContentHubForItemSource() ||
             _.enable_faceted_browsing ||
             (_ = _.filter((_) => _ && _.ShouldShowCapsule(_))),
-          (_ = _._ ? (0, _._)(_, _) : _);
+          (_ = _._ ? (0, _._)(_, _) : _),
+          (null == _ ? void 0 : _.GetTagSelection()) &&
+            (0, _._)(_) > 0 &&
+            !(0, _._)(_) &&
+            !_.enable_faceted_browsing &&
+            !_.BUsesContentHubForItemSource())
+        ) {
+          const _ = {
+              nTabUniqueID: _.GetActiveTabUniqueID(),
+              strTabFilter: _.GetStoreFilter(),
+              facetFilter: _,
+            },
+            _ = await _.Get().GetSaleGamesByFlavor(_, _, "all", _, 1e4);
+          if (_.signal.aborted) return _;
+          const _ = new Set(_.appids);
+          _ = _.filter(
+            (_) => "sub" == _.type || "bundle" == _.type || _.has(_._),
+          );
+        }
         let _ = !1;
         {
           let _ = _.length;
@@ -29922,6 +29892,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
@@ -31200,13 +31171,16 @@
             });
       }
       function _(_) {
-        var _, _, _;
+        var _, _, _, _;
         const { section: _ } = _,
           _ =
             "list" ==
             (null === (_ = _.internal_section_data) || void 0 === _
               ? void 0
-              : _.while_supplies_last_layout);
+              : _.while_supplies_last_layout),
+          _ = !!(null === (_ = _.internal_section_data) || void 0 === _
+            ? void 0
+            : _.while_supplies_last_hide_sold_out);
         return (0, _.jsx)(_, {
           ..._,
           children: (0, _.jsx)("div", {
@@ -31229,6 +31203,7 @@
                           ..._,
                           supplyInfo: _,
                           bVerticalLayout: !_,
+                          bHideSoldOut: _,
                         }),
                       },
                       "supply" + _.unique_id,
@@ -31239,7 +31214,13 @@
       }
       function _(_) {
         var _;
-        const { supplyInfo: _, language: _, event: _, bVerticalLayout: _ } = _,
+        const {
+            supplyInfo: _,
+            language: _,
+            event: _,
+            bVerticalLayout: _,
+            bHideSoldOut: _,
+          } = _,
           { data: _ } = (0, _._)(_.supply_package),
           _ = (0, _._)(_.supply_package),
           _ =
@@ -31248,39 +31229,41 @@
               : "",
           _ = (0, _._)("#EventEmail_Button_BuyNow");
         return _
-          ? (function (_, _) {
-              return (
-                !_.use_package_description && !_(_.localized_supply_desc, _)
-              );
-            })(_, _)
-            ? (0, _.jsx)(_, {
-                _: _,
-                hardwareDetail: _,
-                strBuyLabel: _,
-                strBuyClassName: "WhileSupplyLastAddToCart",
-              })
-            : (0, _.jsxs)("div", {
-                className: _(_),
-                children: [
-                  (0, _.jsx)(_, {
-                    _: _,
-                    bUsePackageDescription: _.use_package_description,
-                    bVerticalLayout: _,
-                    strDescription: _,
-                    event: _,
-                    language: _,
-                  }),
-                  (0, _.jsx)(_._, {
-                    hardwareDetail: _,
-                    strLabel: _,
-                    className: "WhileSupplyLastAddToCart",
-                  }),
-                  !!_.inventory_available &&
+          ? _ && !_.inventory_available
+            ? null
+            : (function (_, _) {
+                  return (
+                    !_.use_package_description && !_(_.localized_supply_desc, _)
+                  );
+                })(_, _)
+              ? (0, _.jsx)(_, {
+                  _: _,
+                  hardwareDetail: _,
+                  strBuyLabel: _,
+                  strBuyClassName: "WhileSupplyLastAddToCart",
+                })
+              : (0, _.jsxs)("div", {
+                  className: _(_),
+                  children: [
+                    (0, _.jsx)(_, {
+                      _: _,
+                      bUsePackageDescription: _.use_package_description,
+                      bVerticalLayout: _,
+                      strDescription: _,
+                      event: _,
+                      language: _,
+                    }),
                     (0, _.jsx)(_._, {
                       hardwareDetail: _,
+                      strLabel: _,
+                      className: "WhileSupplyLastAddToCart",
                     }),
-                ],
-              })
+                    !!_.inventory_available &&
+                      (0, _.jsx)(_._, {
+                        hardwareDetail: _,
+                      }),
+                  ],
+                })
           : (0, _.jsx)(_._, {
               string: (0, _._)("#Loading"),
               position: "center",
@@ -31617,24 +31600,9 @@
       function _(_) {
         return (0, _.jsx)(_._, {
           children: (0, _.jsx)(_, {
-            trailerPlayer: _,
+            trailerPlayer: _._,
             children: _.children,
           }),
-        });
-      }
-      function _(_) {
-        const { appid: _, trailerBaseID: _, bShowModal: _, hideModal: _ } = _,
-          _ = _.useMemo(
-            () => ({
-              appid: _,
-            }),
-            [_],
-          );
-        return (0, _.jsx)(_._, {
-          _: _,
-          trailerBaseID: _,
-          bShowModal: _,
-          hideModal: _,
         });
       }
       const _ = _.Fragment;
@@ -32067,7 +32035,6 @@
                 }),
                 (0, _.jsx)(_._, {
                   text: _,
-                  partnerEventStore: _._,
                   showErrorInfo: _,
                   event: _,
                   languageOverride: _,
@@ -32187,7 +32154,6 @@
                 }),
                 (0, _.jsx)(_._, {
                   text: _,
-                  partnerEventStore: _._,
                   showErrorInfo: _,
                   event: _,
                   languageOverride: _,
@@ -32248,7 +32214,6 @@
                 }),
                 (0, _.jsx)(_._, {
                   text: _,
-                  partnerEventStore: _._,
                   showErrorInfo: _,
                   event: _,
                   languageOverride: _,
@@ -32401,7 +32366,6 @@
                   className: _.description,
                   children: (0, _.jsx)(_._, {
                     text: _,
-                    partnerEventStore: _._,
                     showErrorInfo: _,
                     event: _,
                     languageOverride: _,
@@ -32434,7 +32398,6 @@
                   className: _.description2,
                   children: (0, _.jsx)(_._, {
                     text: _,
-                    partnerEventStore: _._,
                     showErrorInfo: _,
                     event: _,
                     languageOverride: _,
@@ -32483,7 +32446,6 @@
               },
               children: (0, _.jsx)(_._, {
                 text: _,
-                partnerEventStore: _._,
                 showErrorInfo: _,
                 event: _,
                 languageOverride: _,
@@ -32713,7 +32675,6 @@
                   className: _.description,
                   children: (0, _.jsx)(_._, {
                     text: _,
-                    partnerEventStore: _._,
                     showErrorInfo: _,
                     event: _,
                     languageOverride: _,
@@ -32760,7 +32721,6 @@
                   className: _.description2,
                   children: (0, _.jsx)(_._, {
                     text: _,
-                    partnerEventStore: _._,
                     showErrorInfo: _,
                     event: _,
                     languageOverride: _,
@@ -32827,7 +32787,6 @@
               className: (0, _._)("questions"),
               children: (0, _.jsx)(_._, {
                 text: _,
-                partnerEventStore: _._,
                 showErrorInfo: _,
                 event: _,
                 languageOverride: _,
@@ -33031,7 +32990,6 @@
               className: (0, _._)(_.answerCtn, "answers"),
               children: (0, _.jsx)(_._, {
                 text: _,
-                partnerEventStore: _._,
                 showErrorInfo: _,
                 event: _,
                 languageOverride: _,
@@ -33398,7 +33356,6 @@
                           _.localized_reward_description[_] ||
                           _.localized_reward_description[_] ||
                           "",
-                        partnerEventStore: _._,
                         showErrorInfo: _,
                         event: _,
                         languageOverride: _,
@@ -33412,6 +33369,132 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const {
+            section: _,
+            nRowsWithNext: _,
+            nCapsules: _,
+            rgRowSizes: _,
+            bLoading: _,
+            onShowMore: _,
+          } = _,
+          _ = _(_, _, _) < _;
+        return (0, _.jsx)("div", {
+          className: (0, _._)(
+            _().ShowContentsContainer,
+            "ShowContentsContainer",
+          ),
+          children: _
+            ? (0, _.jsx)(_._, {
+                size: "small",
+                string: (0, _._)("#Loading"),
+              })
+            : !_ &&
+              _.cap_section_content &&
+              (0, _.jsx)(_._, {
+                onClick: _,
+                className: (0, _._)(
+                  _().ShowContentsButton,
+                  "ShowContentsButton",
+                ),
+                children: (0, _._)("#Sale_ShowMore"),
+              }),
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            event: _,
+            section: _,
+            language: _,
+            bInGamepadUI: _,
+            placeholderHeight: _,
+            nHiddenCapsules: _,
+            children: _,
+          } = _,
+          [_, _] = _.useState(void 0),
+          { bShowSeeMoreHint: _, panelProps: _ } = (0, _._)(_);
+        return (0, _.jsxs)(_._, {
+          placeholderHeight: _,
+          className: (0, _._)({
+            [_().SaleSection]: !0,
+            [_().CarouselDisplay]: (0, _._)(_),
+            [_().DisabledBackground]: _.disable_background,
+            [_().SaleSectionCtn]: !0,
+            SaleSectionForCustomCSS: !0,
+            [_.sale_section_classname || ""]: !!_.sale_section_classname,
+            [_().Blur]: "coverBlur" == _.background_repeat,
+          }),
+          rootMargin: _._,
+          holdGamepadFocus: _,
+          ..._,
+          children: [
+            (0, _.jsx)("div", {
+              className: (0, _._)(
+                _().BackgroundImage,
+                "coverBlur" == _.background_repeat ? _().Blur : "",
+              ),
+              style: (0, _._)(_, _, _),
+            }),
+            (0, _.jsxs)("div", {
+              className: _().SaleSectionTitleCtn,
+              children: [
+                (0, _.jsx)(_._, {
+                  section: _,
+                  event: _,
+                  language: _,
+                  nHiddenCapsules: _,
+                  bShowSeeMoreHint: _,
+                  bUseGamepadLinkHint: !0,
+                  onLinkResolved: (_) => _(null != _ ? _ : void 0),
+                }),
+                (0, _.jsx)(_, {
+                  event: _,
+                  section: _,
+                }),
+              ],
+            }),
+            _,
+            (0, _.jsx)(_._, {
+              section: _,
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const { event: _, section: _ } = _,
+          _ = _.useMemo(
+            () =>
+              "events" == _.section_type
+                ? (0, _._)("ch_newshub", "application_config")
+                : void 0,
+            [_.section_type],
+          );
+        if (_.hide_view_all_events_link) return null;
+        let _ = null;
+        if ("events" == _.section_type) {
+          if (!_) return null;
+          if (!_.BUsesContentHubForItemSource()) return null;
+          if (!(0, _._)(_)) return null;
+          _ = _._.STORE_BASE_URL + "news/" + _;
+        } else
+          "sale_events" == _.section_type
+            ? (_ = _._.STORE_BASE_URL + "news/collection/sales/")
+            : "calendar" == _.section_type &&
+              (_ = _._.STORE_BASE_URL + "personalcalendar");
+        if (!_) return null;
+        const _ = _;
+        return (0, _.jsx)("div", {
+          className: _().EventSectionViewAllCtn,
+          children: (0, _.jsx)(_._, {
+            onClick: (_) => (0, _._)(_, _),
+            children: (0, _._)("#EventBrowse_AllEventsBtn"),
+          }),
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)(function (_) {
@@ -34012,130 +34095,6 @@
                 ],
               });
       });
-      function _(_) {
-        const {
-            section: _,
-            nRowsWithNext: _,
-            nCapsules: _,
-            rgRowSizes: _,
-            bLoading: _,
-            onShowMore: _,
-          } = _,
-          _ = _(_, _, _) < _;
-        return (0, _.jsx)("div", {
-          className: (0, _._)(
-            _().ShowContentsContainer,
-            "ShowContentsContainer",
-          ),
-          children: _
-            ? (0, _.jsx)(_._, {
-                size: "small",
-                string: (0, _._)("#Loading"),
-              })
-            : !_ &&
-              _.cap_section_content &&
-              (0, _.jsx)(_._, {
-                onClick: _,
-                className: (0, _._)(
-                  _().ShowContentsButton,
-                  "ShowContentsButton",
-                ),
-                children: (0, _._)("#Sale_ShowMore"),
-              }),
-        });
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            event: _,
-            section: _,
-            language: _,
-            bInGamepadUI: _,
-            placeholderHeight: _,
-            nHiddenCapsules: _,
-            children: _,
-          } = _,
-          [_, _] = _.useState(void 0),
-          { bShowSeeMoreHint: _, panelProps: _ } = (0, _._)(_);
-        return (0, _.jsxs)(_._, {
-          placeholderHeight: _,
-          className: (0, _._)({
-            [_().SaleSection]: !0,
-            [_().CarouselDisplay]: (0, _._)(_),
-            [_().DisabledBackground]: _.disable_background,
-            [_().SaleSectionCtn]: !0,
-            SaleSectionForCustomCSS: !0,
-            [_.sale_section_classname || ""]: !!_.sale_section_classname,
-            [_().Blur]: "coverBlur" == _.background_repeat,
-          }),
-          rootMargin: _._,
-          holdGamepadFocus: _,
-          ..._,
-          children: [
-            (0, _.jsx)("div", {
-              className: (0, _._)(
-                _().BackgroundImage,
-                "coverBlur" == _.background_repeat ? _().Blur : "",
-              ),
-              style: (0, _._)(_, _, _),
-            }),
-            (0, _.jsxs)("div", {
-              className: _().SaleSectionTitleCtn,
-              children: [
-                (0, _.jsx)(_._, {
-                  section: _,
-                  event: _,
-                  language: _,
-                  nHiddenCapsules: _,
-                  bShowSeeMoreHint: _,
-                  bUseGamepadLinkHint: !0,
-                  onLinkResolved: (_) => _(null != _ ? _ : void 0),
-                }),
-                (0, _.jsx)(_, {
-                  event: _,
-                  section: _,
-                }),
-              ],
-            }),
-            _,
-            (0, _.jsx)(_._, {
-              section: _,
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const { event: _, section: _ } = _,
-          _ = _.useMemo(
-            () =>
-              "events" == _.section_type
-                ? (0, _._)("ch_newshub", "application_config")
-                : void 0,
-            [_.section_type],
-          );
-        if (_.hide_view_all_events_link) return null;
-        let _ = null;
-        if ("events" == _.section_type) {
-          if (!_) return null;
-          if (!_.BUsesContentHubForItemSource()) return null;
-          if (!(0, _._)(_)) return null;
-          _ = _._.STORE_BASE_URL + "news/" + _;
-        } else
-          "sale_events" == _.section_type
-            ? (_ = _._.STORE_BASE_URL + "news/collection/sales/")
-            : "calendar" == _.section_type &&
-              (_ = _._.STORE_BASE_URL + "personalcalendar");
-        if (!_) return null;
-        const _ = _;
-        return (0, _.jsx)("div", {
-          className: _().EventSectionViewAllCtn,
-          children: (0, _.jsx)(_._, {
-            onClick: (_) => (0, _._)(_, _),
-            children: (0, _._)("#EventBrowse_AllEventsBtn"),
-          }),
-        });
-      }
       function _(_, _, _) {
         const [_] = (0, _.useState)(
             (function (_, _, _) {
@@ -36079,80 +36038,139 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      _._, _._, _._, _._, _._;
+      let _ = new Map();
+      _.set(_._, _._), _.set(_._, _._), _.set(_._, _._), _.set(_._, _._);
+      var _ = __webpack_require__("chunkid");
       function _(_) {
-        var _;
-        const { tab: _, language: _, selection: _, setSelection: _ } = _,
+        const {
+            event: _,
+            tab: _,
+            language: _,
+            fnBIsNodeShown: _,
+            selection: _,
+            setSelection: _,
+          } = _,
           _ = (0, _._)(),
           { data: _ } = (0, _._)((0, _.LgB)(_)),
-          _ = _.useMemo(() => (0, _._)(_.tab_tag_filter), [_.tab_tag_filter]),
+          {
+            rgNodes: _,
+            selectedNode: _,
+            rgChildren: _,
+          } = (0, _._)(() => {
+            var _, _;
+            const _ = (0, _._)(_.tab_tag_filter).filter(_),
+              _ = _.find(
+                (_) => (0, _._)(_) === (null == _ ? void 0 : _.strParentKey),
+              );
+            return {
+              rgNodes: _,
+              selectedNode: _,
+              rgChildren:
+                null !==
+                  (_ =
+                    null === (_ = null == _ ? void 0 : _.rgChildren) ||
+                    void 0 === _
+                      ? void 0
+                      : _.filter(_)) && void 0 !== _
+                  ? _
+                  : [],
+            };
+          }),
           _ = _.useCallback(
             (_) => {
-              _ && _(_), (0, _._)(_, "offset", void 0);
+              _ && _(_), (0, _._)(_, (0, _._)(_));
             },
-            [_, _],
+            [_, _, _],
           );
-        if (!_ || 0 === _.length) return null;
-        const _ = _.find(
-          (_) => (0, _._)(_) === (null == _ ? void 0 : _.strParentKey),
-        );
-        return (0, _.jsxs)(_._, {
-          className: _.TabTagFilterCtn,
-          children: [
-            (0, _.jsxs)("div", {
-              className: _.TabTagFilterRow,
+        return _ && 0 !== _.length
+          ? (0, _.jsxs)(_._, {
+              className: _.TabTagFilterCtn,
               children: [
-                (0, _.jsx)(_, {
-                  strName: (0, _._)("#Sale_Tabs_TagFilter_All"),
-                  bSelected: !_,
-                  fnOnClick: () => _(void 0),
+                (0, _.jsxs)("div", {
+                  className: _.TabTagFilterRow,
+                  children: [
+                    (0, _.jsx)(_, {
+                      strName: (0, _._)("#Sale_Tabs_TagFilter_All"),
+                      bSelected: !_,
+                      fnOnClick: () => _(void 0),
+                    }),
+                    _.map((_) =>
+                      (0, _.jsx)(
+                        _,
+                        {
+                          strName: _(_, _, _),
+                          bSelected: _ === _,
+                          fnOnClick: () =>
+                            _({
+                              strParentKey: (0, _._)(_),
+                            }),
+                        },
+                        "tagfilterparent_" + (0, _._)(_),
+                      ),
+                    ),
+                  ],
                 }),
-                _.map((_) =>
-                  (0, _.jsx)(
-                    _,
-                    {
-                      strName: _(_, _),
-                      bSelected: _ === _,
-                      fnOnClick: () =>
-                        _({
-                          strParentKey: (0, _._)(_),
-                        }),
-                    },
-                    "tagfilterparent_" + (0, _._)(_),
-                  ),
-                ),
+                _.length > 0 &&
+                  (0, _.jsx)("div", {
+                    className: (0, _._)(_.TabTagFilterRow, _.Secondary),
+                    children: _.map((_) => {
+                      const _ = (0, _._)(_),
+                        _ = _ === (null == _ ? void 0 : _.strChildKey);
+                      return (0, _.jsx)(
+                        _,
+                        {
+                          strName: _(_, _, _),
+                          bSelected: _,
+                          fnOnClick: () =>
+                            _({
+                              strParentKey: _.strParentKey,
+                              strChildKey: _ ? void 0 : _,
+                            }),
+                        },
+                        "tagfilterchild_" + _,
+                      );
+                    }),
+                  }),
               ],
-            }),
-            (null !== (_ = null == _ ? void 0 : _.rgChildren.length) &&
-            void 0 !== _
-              ? _
-              : 0) > 0 &&
-              (0, _.jsx)("div", {
-                className: (0, _._)(_.TabTagFilterRow, _.Secondary),
-                children: _.rgChildren.map((_) => {
-                  const _ = (0, _._)(_),
-                    _ = _ === (null == _ ? void 0 : _.strChildKey);
-                  return (0, _.jsx)(
-                    _,
-                    {
-                      strName: _(_, _),
-                      bSelected: _,
-                      fnOnClick: () =>
-                        _({
-                          strParentKey: _.strParentKey,
-                          strChildKey: _ ? void 0 : _,
-                        }),
-                    },
-                    "tagfilterchild_" + _,
-                  );
-                }),
-              }),
-          ],
-        });
+            })
+          : null;
       }
-      function _(_, _) {
-        return _.nTagID ? _[_.nTagID] : (0, _._)(_.strLocToken);
+      function _(_, _, _) {
+        var _;
+        if (_.nTagID || _.nOptInTagID) return _[_.nTagID || _.nOptInTagID];
+        if (_.eContentDescriptor)
+          return (function (_) {
+            let _ = null;
+            switch (_) {
+              case _._:
+                _ = "#ContentDescriptor_GeneralMatureContent";
+                break;
+              case _._:
+                _ = "#ContentDescriptor_FrequentViolenceOrGore";
+                break;
+              case _._:
+                _ = "#ContentDescriptor_NudityOrSexualContent";
+                break;
+              case _._:
+                _ = "#ContentDescriptor_GratuitousNudityOrSexualContent";
+                break;
+              case _._:
+                _ = "#ContentDescriptor_AdultOnlySexualContent";
+                break;
+              default:
+                throw "Invalid content descriptor.";
+            }
+            return (0, _._)(_);
+          })(_.eContentDescriptor);
+        const _ = (0, _._)(_);
+        return _
+          ? (0, _._)(_)
+          : null !== (_ = _._.GetWithFallback(_.rgLocalizedNames, _)) &&
+              void 0 !== _
+            ? _
+            : "";
       }
       function _(_) {
         const { strName: _, bSelected: _, fnOnClick: _ } = _;
@@ -36171,6 +36189,7 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (_) => {
         const {
@@ -36293,6 +36312,14 @@
           })
         );
       }
+      function _(_, _, _) {
+        return (
+          _._.logged_in &&
+          !(0, _._)() &&
+          !_ &&
+          !__webpack_require__.BExcludesContentDescriptor(_)
+        );
+      }
       function _(_, _, _, _) {
         const _ = (0, _._)(() =>
           null == _
@@ -36322,11 +36349,7 @@
                   )
                     return !1;
                   return !(
-                    _._.BFilterRequiresFeatureAdultOnly(_) &&
-                    (!_._.logged_in ||
-                      (0, _._)() ||
-                      _ ||
-                      _.BExcludesContentDescriptor([_._]))
+                    _._.BFilterRequiresFeatureAdultOnly(_) && !_([_._], _, _)
                   );
                 })(_, _, _, _),
               ),
@@ -36453,8 +36476,11 @@
               }),
             _ &&
               (0, _.jsx)(_, {
+                event: _,
                 tab: _,
                 language: _,
+                fnBIsNodeShown: (_) =>
+                  _ || !_.eContentDescriptor || _([_.eContentDescriptor], _, _),
                 selection: _,
                 setSelection: _,
               }),
@@ -36528,16 +36554,8 @@
                     _.current.getBoundingClientRect().top + window.scrollY;
                   window.scrollY > _ && window.scrollTo(0, _);
                 }
-                const _ = _.GetSaleSections()
-                    .filter((_) =>
-                      null == _ ? void 0 : _.enable_faceted_browsing,
-                    )
-                    .map((_) => _.unique_id),
-                  _ = {};
+                const _ = (0, _._)(_);
                 (_[_._] = String(_.unique_id)),
-                  _.forEach((_) => {
-                    (_["facets" + _] = null), (_.offset = null);
-                  }),
                   _ && _(void 0),
                   _(_.unique_id, _);
               }
@@ -36684,7 +36702,6 @@
               className: (0, _._)(_().SaleSectionContainer, "SaleTextCtn"),
               children: (0, _.jsx)(_._, {
                 text: __webpack_require__.GetDescriptionWithFallback(_),
-                partnerEventStore: _._,
                 showErrorInfo: _,
                 event: _,
                 languageOverride: _,
@@ -36702,7 +36719,9 @@
           ]);
         return !_ || (_ && !_)
           ? (0, _.jsx)(_, {
-              ..._,
+              children: (0, _.jsx)(_, {
+                ..._,
+              }),
             })
           : null;
       }
@@ -36712,199 +36731,22 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = "l";
       function _(_) {
-        const { eventModel: _, bActive: _, closeModal: _ } = _;
-        return (0, _.jsx)(_._, {
-          active: _,
-          children: (0, _.jsx)(_._, {
-            children: (0, _.jsx)(_, {
-              eventModel: _,
-              closeModal: _,
-            }),
-          }),
-        });
-      }
-      function _(_) {
-        const { eventModel: _, closeModal: _ } = _,
-          _ = (0, _._)(_),
-          _ = (0, _._)(_),
-          [_, _] = _.useState(() => (0, _.sfN)(_._.LANGUAGE)),
-          [_, _] = _.useState(!1),
-          { elDialogElement: _, fnShowLogonDialog: _ } = (0, _._)(),
-          _ = (0, _._)(),
-          _ = _.useMemo(() => {
-            if (!_) return "";
-            const _ = new URL(_);
-            return _.searchParams.set(_, (0, _.LgB)(_)), _.href;
-          }, [_, _]),
-          _ = _._.EREALM === _._.k_ESteamRealmChina;
-        return _
-          ? (0, _.jsx)(_._, {
-              eventLink: null != _ ? _ : "",
-              appid: _.appid,
-              emoticonStore: _,
-              closeModal: _,
-            })
-          : (0, _.jsxs)(_._, {
-              strDescription: "",
-              strTitle: (0, _._)("#Button_Share"),
-              onCancel: _,
-              onOK: _,
-              bAlertDialog: !0,
-              modalClassName: "EventDisplay_Share_Dialog",
-              children: [
-                (0, _.jsxs)("div", {
-                  className: (0, _._)(
-                    _().FlexColumnContainer,
-                    _().share_controls_ctn,
-                  ),
-                  children: [
-                    !_ &&
-                      (0, _.jsxs)(_.Fragment, {
-                        children: [
-                          (0, _.jsxs)("div", {
-                            className: _().ShareLanguagePicker,
-                            children: [
-                              (0, _.jsx)("div", {
-                                className: _().LanguageLabel,
-                                children: (0, _._)(
-                                  "#EventDisplay_Share_LanguageLabel",
-                                ),
-                              }),
-                              (0, _.jsx)("div", {
-                                children: (0, _.jsx)(_._, {
-                                  selectedLang: _,
-                                  fnOnLanguageChanged: _,
-                                }),
-                              }),
-                            ],
-                          }),
-                          (0, _.jsxs)("div", {
-                            className: (0, _._)(
-                              _().FlexRowContainer,
-                              _().ShareButtonContainer,
-                            ),
-                            style: {
-                              flexWrap: "wrap",
-                            },
-                            children: [
-                              (0, _.jsx)(_._, {
-                                toolTipContent: (0, _._)(
-                                  "#EventDisplay_Share_OnSteam",
-                                ),
-                                children: (0, _.jsxs)(_._, {
-                                  onClick: () => {
-                                    _._.logged_in ? _(!0) : _();
-                                  },
-                                  className: (0, _._)(
-                                    _().Button,
-                                    _().ShareBtn,
-                                    _().ShareSteamBtn,
-                                  ),
-                                  children: [
-                                    (0, _.jsx)("img", {
-                                      className: _().SteamIcon,
-                                      src: _._,
-                                      alt: (0, _._)(
-                                        "#EventDisplay_Share_OnSteam",
-                                      ),
-                                    }),
-                                    (0, _.jsx)("span", {
-                                      style: {
-                                        whiteSpace: "nowrap",
-                                      },
-                                      children: (0, _._)(
-                                        "#EventDisplay_Share_OnMyStatus",
-                                      ),
-                                    }),
-                                  ],
-                                }),
-                              }),
-                              (0, _.jsx)(_._, {
-                                toolTipContent: (0, _._)(
-                                  "#EventDisplay_Share_OnFaceBook",
-                                ),
-                                children: (0, _.jsx)(_._, {
-                                  href: _.strFacebookUrl,
-                                  className: _().ShareBtn,
-                                  children: (0, _.jsx)("img", {
-                                    className: (0, _._)(_().Button),
-                                    src: _._,
-                                    alt: (0, _._)(
-                                      "#EventDisplay_Share_OnFaceBook",
-                                    ),
-                                  }),
-                                }),
-                              }),
-                              (0, _.jsx)(_._, {
-                                toolTipContent: (0, _._)(
-                                  "#EventDisplay_Share_OnTwitter",
-                                ),
-                                children: (0, _.jsx)(_._, {
-                                  href: _.strTwitterUrl,
-                                  className: _().ShareBtn,
-                                  children: (0, _.jsx)("img", {
-                                    className: (0, _._)(_().Button),
-                                    src: _._,
-                                    alt: (0, _._)(
-                                      "#EventDisplay_Share_OnTwitter",
-                                    ),
-                                  }),
-                                }),
-                              }),
-                              (0, _.jsx)(_._, {
-                                toolTipContent: (0, _._)(
-                                  "#EventDisplay_Share_OnReddit",
-                                ),
-                                children: (0, _.jsx)(_._, {
-                                  href: _.strRedditUrl,
-                                  className: _().ShareBtn,
-                                  children: (0, _.jsx)("img", {
-                                    className: (0, _._)(_().Button),
-                                    src: _._,
-                                    alt: (0, _._)(
-                                      "#EventDisplay_Share_OnReddit",
-                                    ),
-                                  }),
-                                }),
-                              }),
-                            ],
-                          }),
-                          (0, _.jsx)("div", {
-                            className: _().Divider,
-                          }),
-                        ],
-                      }),
-                    (0, _.jsx)(_._, {
-                      eventLink: _,
-                    }),
-                  ],
-                }),
-                _,
-              ],
-            });
-      }
-      function _(_) {
+        var _;
         const { eventModel: _, titleOverride: _ } = _,
           [_, _, _] = (0, _._)(),
+          _ = null !== (_ = (0, _._)(_)) && void 0 !== _ ? _ : "",
           _ = (0, _._)(() => ({
             gidClanEvent: _.GID,
             rgSocialShare: _.jsondata.sale_social_media_items,
           })),
           { gidClanEvent: _, rgSocialShare: _ } = _,
           _ = Boolean(null == _ ? void 0 : _.length);
-        return _.BHasTag("contenthub")
+        return __webpack_require__.BHasTag("contenthub")
           ? null
           : (0, _.jsxs)(_.Fragment, {
               children: [
@@ -36944,8 +36786,9 @@
                       bIsCreatorHomeEvent: !0,
                     }),
                 }),
-                (0, _.jsx)(_, {
+                (0, _.jsx)(_._, {
                   eventModel: _,
+                  strEventLink: _,
                   bActive: _,
                   closeModal: _,
                 }),
@@ -37037,7 +36880,6 @@
             _ &&
               (0, _.jsx)(_._, {
                 text: _,
-                partnerEventStore: _._,
                 showErrorInfo: _,
                 event: _,
                 languageOverride: _,
@@ -37211,6 +37053,7 @@
       }
       (0, _._)([_._], _.prototype, "m_gidClanEventSelected", void 0);
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -37422,9 +37265,8 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
           const _ = (0, _.sfN)(_._.LANGUAGE),
@@ -41328,7 +41170,6 @@
                       _.localized_media_desc[_] ||
                       _.localized_media_desc[_] ||
                       "",
-                    partnerEventStore: _._,
                     showErrorInfo: _,
                     languageOverride: _,
                   }),
@@ -41797,7 +41638,8 @@
         );
       }
       const _ = /^\/+sharedfiles\/filedetails/i;
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const [_, _] = _.useState(!1);
         return _
@@ -48504,7 +48346,9 @@
               getNextPageParam: (_) => _.cursor,
               placeholderData: (_) => _,
               retry: (_, _) =>
-                _ instanceof _ ? _.eResult != _._ && _ < 3 : _ < 3,
+                _ instanceof _
+                  ? _.eResult != _._ && _.eResult != _._ && _ < 3
+                  : _ < 3,
             });
           })(_, _, _),
           _ =
@@ -49354,7 +49198,6 @@
                   className: _().description,
                   children: (0, _.jsx)(_._, {
                     text: _,
-                    partnerEventStore: _._,
                     showErrorInfo: _,
                     event: _,
                     languageOverride: _,
@@ -50758,228 +50601,8 @@
       __webpack_require__._(module_exports, {
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      const _ = (0, _._)((_) => {
-        const { appid: _, eventLink: _ } = _,
-          _ = _.useRef(null),
-          { data: _ } = (0, _._)(_._.steamid),
-          [_, _] = _.useState(""),
-          [_, _] = _.useState(!1),
-          [_, _] = _.useState(""),
-          [_, _] = _.useState(!1);
-        _.useEffect(
-          () => () => {
-            var _;
-            null === (_ = _.current) ||
-              void 0 === _ ||
-              _.call(_, "ShareEventOnFriendsActivityFeed: unmounting");
-          },
-          [],
-        );
-        const _ = null == _ ? void 0 : _.avatar_url,
-          _ = _._.InitFromAccountID(_._.accountid),
-          _ = async () => {
-            var _, _;
-            _.current &&
-              _.current("ShareEventOnFriendsActivityFeed: cancel previous...");
-            const _ = _().CancelToken.source();
-            (_.current = _.cancel), _(!0);
-            let _ = _;
-            0 != _.trim().length && (_ += "\n\n"), (_ += _);
-            const _ =
-              _._.COMMUNITY_BASE_URL +
-              "profiles/" +
-              _.ConvertTo64BitString() +
-              "/ajaxpostuserstatus";
-            try {
-              if (_._.IN_STEAMUI) {
-                let _ = _._.Init(_.kVt);
-                _.Body().set_appid(_), _.Body().set_status_text(_);
-                let _ = await _.xtC.PostStatusToFriends(
-                  _._.CMInterface.GetServiceTransport(),
-                  _,
-                );
-                if (__webpack_require__.GetEResult() != _._) {
-                  const _ =
-                    (0, _._)("#EventDisplay_Share_Failure") +
-                    "\n\n" +
-                    __webpack_require__.GetEResult();
-                  return (
-                    console.error(_, !_.token.reason),
-                    void (_.token.reason || _(_))
-                  );
-                }
-              } else {
-                const _ = new FormData();
-                __webpack_require__.append("appid", "" + _),
-                  __webpack_require__.append("status_text", _),
-                  __webpack_require__.append("sessionid", (0, _._)());
-                const _ = await _().post(_, _, {
-                  withCredentials: !0,
-                });
-                if (
-                  200 != _.status ||
-                  (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
-                    ? void 0
-                    : _.success) != _._
-                ) {
-                  const _ =
-                    (0, _._)("#EventDisplay_Share_Failure") +
-                    "\n\n" +
-                    (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
-                      ? void 0
-                      : _.message);
-                  return console.error(_), void (_.token.reason || _(_));
-                }
-              }
-              _.token.reason ||
-                (_(!0), _((0, _._)("#EventDisplay_Share_Success")));
-            } catch (_) {
-              const _ = (0, _._)(_),
-                _ =
-                  (0, _._)("#EventDisplay_Share_Failure") +
-                  "\n\n" +
-                  _.strErrorMsg;
-              _.token.reason || _(_), console.error(_);
-            }
-          };
-        return _
-          ? (0, _.jsx)(_._, {
-              strDescription: "",
-              strTitle: (0, _._)("#Button_Share"),
-              onCancel: _.closeModal,
-              onOK: _.closeModal,
-              bAlertDialog: !0,
-              children: (0, _.jsxs)("div", {
-                className: _().FlexColumnContainer,
-                children: [
-                  (0, _.jsx)("div", {
-                    children: (0, _._)(
-                      "#EventDisplay_Share_OnMyStatus_Details",
-                    ),
-                  }),
-                  (0, _.jsxs)("div", {
-                    className: _().Container,
-                    children: [
-                      0 == (null == _ ? void 0 : _.length)
-                        ? (0, _.jsx)(_._, {
-                            position: "center",
-                          })
-                        : (0, _.jsx)("div", {
-                            children: _,
-                          }),
-                      Boolean(_) &&
-                        (0, _.jsx)("a", {
-                          href:
-                            _._.COMMUNITY_BASE_URL +
-                            "profiles/" +
-                            _.ConvertTo64BitString() +
-                            "/home",
-                          target: _._.IN_CLIENT ? void 0 : "_blank",
-                          children: (0, _._)(
-                            "#EventDisplay_Share_OpenActivityFeed",
-                          ),
-                        }),
-                    ],
-                  }),
-                ],
-              }),
-            })
-          : (0, _.jsx)(_._, {
-              strDescription: "",
-              strTitle: (0, _._)("#Button_Share"),
-              onCancel: _.closeModal,
-              onOK: _,
-              strOKButtonText: (0, _._)("#Button_Post"),
-              children: (0, _.jsxs)("div", {
-                className: _().FlexColumnContainer,
-                children: [
-                  (0, _.jsx)("div", {
-                    children: (0, _._)(
-                      "#EventDisplay_Share_OnMyStatus_Details",
-                    ),
-                  }),
-                  (0, _.jsxs)("div", {
-                    className: (0, _._)(_().Container, _().FlexColumnContainer),
-                    children: [
-                      (0, _.jsxs)("div", {
-                        children: [
-                          (0, _.jsx)("img", {
-                            className: _().SmallAvatar,
-                            src: _,
-                            "data-miniprofile": "s" + _._.steamid,
-                          }),
-                          (0, _.jsx)("div", {
-                            className: (0, _._)(_().FlexColumnContainer),
-                            children: (0, _.jsx)(_._, {
-                              strPlaceholder: (0, _._)(
-                                "#EventDisplay_Share_OnMyStatus_Placeholder",
-                              ),
-                              fnGetCurText: () => _,
-                              fnOnTextChange: (_) => _(_.currentTarget.value),
-                              fnSetText: _,
-                              emoticonStore: _.emoticonStore,
-                              bSupportHTMLImport: !1,
-                              showFormatHelp: "UserStatusPublished",
-                              limitBBCode: _._,
-                              classNameForTextArea: _().ShareDescription,
-                              bEmbeddedInDialog: !0,
-                            }),
-                          }),
-                        ],
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _().ShareLink,
-                        children: (0, _.jsx)(_._, {
-                          text: _,
-                          partnerEventStore: _.partnerEventStore,
-                        }),
-                      }),
-                    ],
-                  }),
-                ],
-              }),
-            });
-      });
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
       const _ =
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MEFERTQyQ0E1Q0EyMTFFNTgwMzNBQUE0RTk3QjgyMDkiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MEFERTQyQ0I1Q0EyMTFFNTgwMzNBQUE0RTk3QjgyMDkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowQURFNDJDODVDQTIxMUU1ODAzM0FBQTRFOTdCODIwOSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDowQURFNDJDOTVDQTIxMUU1ODAzM0FBQTRFOTdCODIwOSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Prxq/1gAAAGJSURBVHjaYvz//z/DQAImhgEG9HTASiDeiiEKigI64Pj/CLAJiBlhcvSwXPc/JjgLxIIgeUYaJ0JBIL4NxMJY5B4BcTitHXAeiA3wyL+kZSJcQMByEEimVbxn/ScM8mmVCK2IsHwhTD2104AwNHFx4VFzAYgNaVUQ7SFg+Q8gdqZVSTifiEQHsvwdvpKQGYiDyIj3HCLiPRubXnSBBVDFE2iV6PA5IAlN0woiLJcG4h8ELD+PzwwYwxiH5sNALIzHgNsELH8DxEKEHCAGxB/xGPIEiNWwaF5PRNDrEQpFEHGZCIO+ArEjksZKIvTEE5OGQEQyEP/7TxwAJThDItRNIjYRwxgGQPz2P3XAEVKyMHJRLAvEu4FYnYLC6D3UnK/ktAkfA7EeEB+kwAEOpFiOr024mIygjyWn9sQn2UOC5VPJrb4JKcglwvLDlLQfiFHkDcR/cVj+CIjZaO0AfNlUidIWFCmKZYD4GpLlgdRowpHaJGMH4v1AfBGIM6nRiqF1v2Dw944BAgwAsWqnpJAiSOIAAAAASUVORK5CYII=";
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      const _ =
-        "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHdpZHRoPSIxNDAwcHgiIGhlaWdodD0iMTQwOXB4IiB2aWV3Qm94PSIwIDAgMTQwMCAxNDA5IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxNDAwIDE0MDkiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNNjk4LjE5NSwxMC4xMjVjLTM2NC4zNDcsMC02NjIuODM4LDI4MC45MzgtNjkxLjIwNiw2MzcuOTY5TDM3OC43NCw4MDEuNzk3CgljMzEuNTAyLTIxLjUzOSw2OS41NTUtMzQuMTMzLDExMC40OTUtMzQuMTMzYzMuNjY5LDAsNy4zMTUsMC4wOSwxMC45MzksMC4zMTNsMTY1LjMzLTIzOS42MzdjMC0xLjEzNy0wLjAyOS0yLjI1LTAuMDI5LTMuMzk1CgljMC0xNDQuMjI3LDExNy4zMzUtMjYxLjU3NCwyNjEuNTgyLTI2MS41NzRjMTQ0LjIzMywwLDI2MS41ODMsMTE3LjM0OCwyNjEuNTgzLDI2MS41NzRjMCwxNDQuMjQ2LTExNy4zNSwyNjEuNTk4LTI2MS41ODMsMjYxLjU5OAoJYy0xLjk5LDAtMy45NS0wLjA0Ny01LjkyNi0wLjA5TDY4NS4zNDEsOTU0LjY4OGMwLjExOSwzLjA3NCwwLjIzLDYuMTkxLDAuMjMsOS4yOTdjMCwxMDguMjczLTg4LjA3NiwxOTYuMzUyLTE5Ni4zMzYsMTk2LjM1MgoJYy05NS4wNDEsMC0xNzQuNDk0LTY3Ljg0OC0xOTIuNDk2LTE1Ny42NzZMMzAuODcyLDg5Mi43NTRjODIuMzIsMjkxLjEzNywzNDkuODA3LDUwNC41ODIsNjY3LjMyMyw1MDQuNTgyCgljMzgzLjA2MiwwLDY5My41OTgtMzEwLjU1MSw2OTMuNTk4LTY5My42MTNDMTM5MS43OTMsMzIwLjY2NCwxMDgxLjI1NywxMC4xMjUsNjk4LjE5NSwxMC4xMjUiLz4KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTQ0MS42NDgsMTA2Mi41NjNsLTg1LjIwMi0zNS4yMDNjMTUuMTA1LDMxLjQ0NSw0MS4yMyw1Ny43NjIsNzUuOTExLDcyLjIxNQoJYzc0Ljk2MSwzMS4yNSwxNjEuNDEtNC4zMzYsMTkyLjY2Ny03OS4zNTljMTUuMTEyLTM2LjMxMywxNS4yMjQtNzYuMzU1LDAuMjIzLTExMi43NDJjLTE0Ljk3OS0zNi4zOTEtNDMuMjUtNjQuNzczLTc5LjU3Mi03OS45MjIKCWMtMzYuMDQ3LTE1LjAwNC03NC42NTYtMTQuNDM4LTEwOC41ODctMS42MzdsODguMDA5LDM2LjM5MWM1NS4zMDQsMjMuMDUxLDgxLjQ0NCw4Ni41NTksNTguNDA4LDE0MS44NTUKCUM1NjAuNDc2LDEwNTkuNDU3LDQ5Ni45NDQsMTA4NS42MTMsNDQxLjY0OCwxMDYyLjU2MyIvPgo8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMTEwMS4zNTMsNTI0Ljk2MWMwLTk2LjExMy03OC4xODQtMTc0LjMxMy0xNzQuMjk1LTE3NC4zMTNjLTk2LjA5NiwwLTE3NC4yOTQsNzguMTk5LTE3NC4yOTQsMTc0LjMxMwoJYzAsOTYuMTAyLDc4LjE5OCwxNzQuMjc3LDE3NC4yOTQsMTc0LjI3N0MxMDIzLjE2OSw2OTkuMjM4LDExMDEuMzUzLDYyMS4wNjMsMTEwMS4zNTMsNTI0Ljk2MSBNNzk2LjQxNSw1MjQuNjU2CgljMC03Mi4zMjQsNTguNjM4LTEzMC45MTgsMTMwLjk0LTEzMC45MThjNzIuMzE2LDAsMTMwLjkyNSw1OC41OTQsMTMwLjkyNSwxMzAuOTE4YzAsNzIuMzE2LTU4LjYwOCwxMzAuOTE4LTEzMC45MjUsMTMwLjkxOAoJQzg1NS4wNTMsNjU1LjU3NCw3OTYuNDE1LDU5Ni45NzMsNzk2LjQxNSw1MjQuNjU2Ii8+Cjwvc3ZnPgo=";
     },
   },
 ]);

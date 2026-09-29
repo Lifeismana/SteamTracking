@@ -2881,6 +2881,7 @@
               {
                 bConstMethod: !0,
                 ePrivilege: 1,
+                rgBrowserAPISites: ["all"],
               },
             );
           }),
@@ -13980,6 +13981,10 @@
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
+                  coordinates: {
+                    _: 14,
+                    _: _,
+                  },
                 },
               }),
             _.sm_m
@@ -15376,7 +15381,7 @@
         constructor(_ = null) {
           super(),
             _.prototype.subject_type || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
+            _.Message.initialize(this, _, 0, -1, [3], null);
         }
         static sm_m;
         static sm_mbf;
@@ -15395,6 +15400,12 @@
                     _: 2,
                     _: _._.readEnum,
                     _: _._.writeEnum,
+                  },
+                  filters: {
+                    _: 3,
+                    _: _,
+                    _: !0,
+                    _: !0,
                   },
                 },
               }),
@@ -15797,6 +15808,11 @@
                     _: 13,
                     _: _._.readUint64String,
                     _: _._.writeUint64String,
+                  },
+                  ugc_content_type: {
+                    _: 14,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
                   },
                 },
               }),
@@ -26129,7 +26145,9 @@
         },
         [_]: _,
       };
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       class _ extends _.Component {
         static GetScrollableClassname() {
           return "vt-scrollable";
@@ -26189,7 +26207,7 @@
             (this.m_observer.observe(_), (this.m_elTracked = _));
         }
         FindScrollableAncestor(_) {
-          return _._(_, (_) => {
+          return (0, _._)(_, (_) => {
             const _ = this.props.horizontal
               ? window.getComputedStyle(_).overflowX
               : window.getComputedStyle(_).overflowY;
@@ -26200,11 +26218,11 @@
             );
           });
         }
-        HandleRef(_) {
+        HandleRef = (_) => {
           (0, _._)(this.m_refElement, _),
             this.props.containerRef && (0, _._)(this.props.containerRef, _);
-        }
-        OnIntersection(_, _) {
+        };
+        OnIntersection = (_) => {
           let _ = !1;
           for (const _ of _)
             if (_.isIntersecting) {
@@ -26215,7 +26233,7 @@
             ((this.m_bPreviouslyIntersecting = _),
             this.props.onVisibilityChange && this.props.onVisibilityChange(_),
             _ && this.BTriggerOnce() && this.DestroyObserver());
-        }
+        };
         render() {
           let {
             onVisibilityChange: _,
@@ -26232,8 +26250,6 @@
           });
         }
       }
-      (0, _._)([_._], _.prototype, "HandleRef", null),
-        (0, _._)([_._], _.prototype, "OnIntersection", null);
       const _ = new _(),
         _ = (0, _._)(function (_) {
           const { bResponsiveHeader: _, notifications: _ } = _;

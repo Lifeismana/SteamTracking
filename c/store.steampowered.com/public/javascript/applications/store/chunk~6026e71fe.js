@@ -1,5 +1,5 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
-  [19388, 23191],
+  [19388],
   {
     chunkid: (module) => {
       module.exports = {
@@ -96,6 +96,13 @@
       module.exports = {
         BBCodeContent: "_3QloCWvWesFo3QI7yfd8sL",
         Community: "_3cl9mzgp8WIVuj1VCw9yi0",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        CreatorCarouselCtn: "_1qnKWf93kKH8YgFapmbXoG",
+        CreatorCarouselCrumbs: "_2AiKsp4m6yMqM2eYITyM9P",
+        CreatorCarouselCrumb: "_3YJS96Hy8atWoeFJxFOkKu",
       };
     },
     chunkid: (module) => {
@@ -435,6 +442,25 @@
     chunkid: (module) => {
       module.exports = {
         "duration-app-launch": "800ms",
+        ShowContentsContainer: "_2x2AVOEhNG0VTutCmj92Ae",
+        ShowContentsButton: "_2_XaQn0OkqO-ANKJtzRmLZ",
+        BackgroundAnimation: "_2kFixnelgYVyRKFCYQoRWp",
+        "ItemFocusAnim-darkerGrey-nocolor": "_13KcN3vD9NXCXy237qwaLG",
+        "ItemFocusAnim-darkerGrey": "_3Lgimh2v4u-nRDyxxqBT3A",
+        "ItemFocusAnim-darkGreySettings": "_2VPOJmNqgetdyDpFE4bllq",
+        "ItemFocusAnim-darkGrey": "_3Lvlegmwn9YEoWyzBwD8sr",
+        "ItemFocusAnim-grey": "_2q1zpV3mttH-R5gqHwT1mC",
+        "ItemFocusAnim-translucent-white-10": "_2tuGihqMFSxlr-sQRkqM06",
+        "ItemFocusAnim-translucent-white-20": "m_Qke_AWkwjhp-iRPUqGQ",
+        "ItemFocusAnimBorder-darkGrey": "VWIRjrZbRoG1gl1Id-htG",
+        "ItemFocusAnim-green": "_2TgNqvDWm-J8Y0c1YifrWP",
+        focusAnimation: "_21lEBZV29mPW7bFIzaMfnE",
+        hoverAnimation: "hQdw7eDYdBDGDfOEBkhrw",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        "duration-app-launch": "800ms",
         storeMenuResponsiveModeWidth: "730px",
         SuppressScrollOnBody: "CnyoUreRJIClNp1eHmLJd",
         JumpListOuterCtn: "_1qM3MD9Kxqxlpfh2enyaRn",
@@ -616,92 +642,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        "duration-app-launch": "800ms",
-        Picker: "tid_OE5NJWCCVJQP1PfRc",
-        Tabs: "_1yVkTX9Mo_7qb2sxWhM0Cr",
-        Tab: "_2CJ0LpiSgVs2JuTlwbzBM",
-        Focus: "_1xH5si_KorJpS4ST2Geksh",
-        TabContent: "_1mROo5bpUJSg8D8ILx7qpw",
-        Active: "_1ddEQAfz6GuVRSEqk-d0r",
-        Content: "dUQIH8Qg80N6kjB8UQO0P",
-        ItemList: "_2OWGRbhpXNcuR3oih9IGrX",
-        Item: "_1SFqyFzFrpPOEAKCrq2kKZ",
-        SectionedPageTitle: "ZmsElITvVzU-7a2HXKBZI",
-        SectionTitle: "_3WuFl419BivPeLqeVIC939",
-        FilterInputContainer: "EuFePPYFGrcf99uLXmBYN",
-        FilterInput: "_2l4z-U60lABvd9XWArGjAf",
-        AddonPickerMessage: "_2wUk7QR9TZiiKB4bX_9EgD",
-        BackgroundAnimation: "NB2T8xbO5KSdw1jQWC0aq",
-        "ItemFocusAnim-darkerGrey-nocolor": "_1tzknOYTl338bweAg8VM66",
-        "ItemFocusAnim-darkerGrey": "_321Bw1yIABWsLJup9W__Gb",
-        "ItemFocusAnim-darkGreySettings": "BSoZ5uHW-lcSEjyeNZol4",
-        "ItemFocusAnim-darkGrey": "_3Xhw1BWpHpkagZqxZOv8kb",
-        "ItemFocusAnim-grey": "_2OnCF3hKjr89wU_tfFaWX2",
-        "ItemFocusAnim-translucent-white-10": "_2uQtLVYFAkVIQ8Mzm6C5K3",
-        "ItemFocusAnim-translucent-white-20": "_2vYgLWggR0AEuxE9DPEEk2",
-        "ItemFocusAnimBorder-darkGrey": "PgPnyLUdsSEfTVdlxX2a9",
-        "ItemFocusAnim-green": "_26b32AeDG8ENv_LcSS6SPE",
-        focusAnimation: "NrCY5qgGbXyh_LeVWegvW",
-        hoverAnimation: "ECWcgkTWpWeZLs6-rszlL",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        DragTarget: "_2sUvh2ZpsDAw1xNqgRBELg",
-        DragOnTopOfMe: "_1mvpIyLL0-Pd4QMIoRXHtu",
-        DescriptionCtn: "_3DQEBNkYGY3hyLFAjhtq7V",
-        EventEditorLinkInput: "_25nbuIEmk-BBWxsSvWGG1n",
-        DefaultEditor: "NENu2K19GJmLf1Asga-WF",
-        ImportHTMLCtn: "_3sVZHF23hli8ijIwtMs8oU",
-        ImportHTMLTextArea: "DHbRFUDVAeXGluFH-smoE",
-        ImportHTMLConvertButtons: "lnyZaHhcGtBzDU0SMlFd1",
-        ImportHTMLCheckBoxLine: "_3R3FNRLSeiOwBgELGjSPbz",
-        OptionRow: "_2Y3MLEmGvWMI8BoNZgCllJ",
-        TextEditorToolBarContainer: "_2bOpQtX5QAuQxfGhEJ_iYg",
-        EmoteOuter: "_1x3UOXJkizqKhkssRfFjSS",
-        YouTubeInput: "_3WXTC22teDkm8BMc01ZTLA",
-        YouTubePreviewInsertOption: "_6ocliVvrdQxHPu-upv6-s",
-        DropDownScroll: "P0-tbY3743fHY8SAzfF6b",
-        InsertSpeakerCtn: "_2f-6Yv5h7xjUcZCrepnQhg",
-        TitleGroup: "_1ddLhT39tQNuR4ljq6Nfg5",
-        AssociateRowCtn: "_2HeY5m9J-kxRVzGn8dAwv5",
-        PhotoCtn: "_2-f4CX_EyXfhRUmPdIey4w",
-        AboutCtn: "_3hF9cNUOsfV0BkzEaWn7FM",
-        PreviewCtn: "_VCRyh7nyN-2xDV6yH6Sg",
-        BBCodeEditorInputStyles: "F506h2OVFDcZeXFtyqthY",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        BBCode_Toggle: "_3dX8-PpYvSNsGv4k5lvP-R",
-        Active: "_2vTzhbuJFb9_vHvquo2L-L",
-        BBCode: "_1pH9CKzm5VpicOgzyWpsy_",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        Image: "_1po_jxHTSix3Li3w5ZnMBB",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        narrowWidth: "500px",
-        chatEntryControls: "_3Ule3rolhZJiBN4yNNtk1s",
-        chatTextarea: "_113iuw_HlE_qSgt9cGWCSv",
-        chatEntryActionsGroup: "_2WfNoLBdfKwyutA6ho4aSH",
-        chatEntryActionsContainer: "W0OhkJtz8zMUW8Mhu0BMO",
-        minHeightZero: "_2zeehYTQ2oNY7TvjqGC_gL",
-        chatSubmitButton: "RVIs84dAE6wHcjH9tkinc",
-        EmbedButton: "_3zOBeq5W4cNK3lRz_7aroW",
-        EmoticonPickerButton: "Aupswi7-c-w3XwNO5cp2i",
-        disabled: "jaQN2IyN4P8LZXJ6P11qy",
-        Inactive: "_3G-I9qj7vqOe6SOFG27ohD",
-        AudioLines: "IWabakUFeIH_d5rhBZ6dG",
-        Active: "_37tPtXtV-sv9XgDHjS2cnj",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         fullscreen_bg: "-M0lUK3jDRg7ZCRU0lGVq",
         fullscreen_bg__video: "_31ex5tVRKlb9Ulfz9g_Wfk",
         fullscreen_bg__video_mobile: "_3JzFbExRmNiGvVbuTWzqjg",
@@ -787,22 +727,6 @@
         "ItemFocusAnim-green": "_3qYt1gEp_NOp7orHzuhMRy",
         focusAnimation: "_28wf-kwSrDfb45NfKvqlpv",
         hoverAnimation: "_3JOMRUypZE2OLVliYMSUZI",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        Emoticon_Toggle: "Y5J3nttqNZsLax6MbnH-L",
-        Active: "YCbwLzK9cJ7QissjKq11n",
-        Emoticon: "_2o57_fRPxv5_x6BkjL_cgc",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        ImagesOuterContainer: "_3A8RGZO2pwg1yKDAdFqp9r",
-        Hilight: "_1v_zQLXgFsvon1SwxrWjE-",
-        ImageContainer: "_2ti3yMwzfkGoiW68FuNjTG",
-        Image: "y902_9A0Wj5bTshbt4xRb",
-        ImageFilename: "_2jzLZXXxgDMMcA9X0QDSdg",
       };
     },
     chunkid: (module) => {
@@ -1282,22 +1206,7 @@
     },
     chunkid: (module) => {
       module.exports = {
-        "duration-app-launch": "800ms",
-        ShowContentsContainer: "_2ESKkqmk68QMRArbxaUwm0",
-        ShowContentsButton: "_2cY4Vl4F1_9jlRxk7Su9uw",
         FacetedBrowseLoadThrobber: "_3kblyvbuC2GWHjgm4gwPPT",
-        BackgroundAnimation: "_8_3_M592XNR4DsMQ_Sdvz",
-        "ItemFocusAnim-darkerGrey-nocolor": "_2_jIt9nCSopNXe4_3NeR6a",
-        "ItemFocusAnim-darkerGrey": "_3p60BZKcebqjGnIjRBOlMw",
-        "ItemFocusAnim-darkGreySettings": "_2ZQrCJY7WBczlOmmZQHMzx",
-        "ItemFocusAnim-darkGrey": "_2M-BLV3qJBFtW7L-6M49jP",
-        "ItemFocusAnim-grey": "ff_f9PCg5owcTXqjoWDE7",
-        "ItemFocusAnim-translucent-white-10": "_2yA2_SkK8J5R_DLYh4o7Cy",
-        "ItemFocusAnim-translucent-white-20": "_1hbJ6ar05WlYC_VkhYGe4W",
-        "ItemFocusAnimBorder-darkGrey": "WT1rRBPwio3oFb6s6LDsW",
-        "ItemFocusAnim-green": "_10HGEchOTBE0XcfPSkrezF",
-        focusAnimation: "_3YWhd9jRYsHjWDuQaE7JBN",
-        hoverAnimation: "_1OrvHNH7Ss0WQg2sYl_B",
       };
     },
     chunkid: (module) => {
@@ -1517,14 +1426,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        Container: "_2vGr9KsApU0s59_ZsZVxXY",
-        SmallAvatar: "_3V8w8CrYHVYB0voJ3gp87x",
-        ShareDescription: "_3CqiH5i7kc5lXyEb0TGl2C",
-        ShareLink: "_1WTiWXO3q8jMnJc_cPKJbE",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         SaleSection: "_1hygy8PioSBXKpLfNlqr0c",
         BookmarkCtn: "_2ctPj8-ESncO4KhFnJbjT",
         BookmarkTriangle: "_3uC1zbTIuwj8vsg0jddUy4",
@@ -1690,38 +1591,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        LinkRegionDragBox: "Rtlc-BB1aJFRIM1lH4zN1",
-        EdgeDown: "i9zrHPy0-LgZONeZE4fgG",
-        LinkRegionGridBox: "_1Ob4AvWwUMx67yR7owjqse",
-        LinkRegionEdge: "_2stP4WlwIxd0-9GjYyI7vF",
-        TopLeft: "Clgi---P85XXv25yLZwB0",
-        Top: "_2Z9VyBAzofV3JvK__dECbX",
-        TopRight: "_2-8DbI8PAEkk6i_0CoUeKM",
-        Left: "_3ZwUw4ojIRguwHHAcn2Y4y",
-        Middle: "_1HecozzoSZfUZSci9dLkxN",
-        LinkRegionDelete: "_3Hb3w5_ECwPKcEr5QSAsNk",
-        LinkRegionSettings: "VazMl4niFnodlVJhHIGlL",
-        Right: "_3h5fKwHq9Uj2VGs8qxxtLl",
-        BottomLeft: "_2CQe0cOBOLqq6y6KAUXqH3",
-        Bottom: "sIHlK9sN2255-irERXD_V",
-        BottomRight: "_3lnwjSWK9Gh1dFkD46NTpP",
-        topleft: "_3W096h6Ka6U7sOZVa9lXQo",
-        top: "_1iRW1Msfh60zHqD-xe4EAk",
-        topright: "_1Yrl7AkNVVGwbM2vyL8yY1",
-        left: "_2iBrmAEyXuaKAeZ-g-4CPF",
-        right: "_15t6A4l27DY4KRL1aAUTTS",
-        bottomleft: "_3SdBcnCBApw0fQ886qgsUx",
-        bottom: "_2kzZ9Ilwo92sEI9LXTtZjN",
-        bottomright: "_2AKXkFPsIBpG-HeeN58Rti",
-        middle: "_1CS75ZrrDXna6xatw5ZvPR",
-        LinkRegionButtonContainer: "_1ZJ42NPmBFvIcOai51ZKv3",
-        DialogButton: "nN2Q1qGmO2BGMhVnIVMce",
-        LinkRegionInfo: "_3TiV7d40PX30wy8UghFCaJ",
-        LinkText: "_2TAc2iPcWUHTtwlg7urHv8",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         "duration-app-launch": "800ms",
         GrantAwardModal: "_2ilpH-HpvuSm6s5MWX5bA-",
         Header: "_2_vbZB-J_M1GH9js-PXnEj",
@@ -1794,26 +1663,6 @@
     chunkid: (module) => {
       module.exports = {
         UnstyledButton: "_1hcJa9ylImmFKuHsfilos",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        WhitelistCtn: "_1UhmxrINvvaNnHzhCPoill",
-        WhitelistRow: "_28TC1EYm0jlWPjyk89xXCL",
-        WhitelistNumber: "IY3dF3eWXX1OmE8oYcQKp",
-        Disabled: "_2VzE-3UQEHXyAext8t7gLW",
-        Grabbing: "_1vSZ5gJndAOamRhVGni8HG",
-        DragActive: "_31uDZXKZQlYMd8FK9xdaJb",
-        Dropped: "_3bfDVSvzMDkk4s1j0Vw8jI",
-        JumpToSection: "oABTo2lkoYYI5YMYaeq_Q",
-        BeingDragged: "_3y7I4DL9Hua5OhZ4HgcBB5",
-        DragGhost: "_61nYWo98IhSjR8PWtQX9O",
-        Grabbable: "riuelIz655g_IBddWfLQ-",
-        DisabledGrab: "_2K0C_m1AZvB6yeNaEXXjDD",
-        WhitelistAvatar: "_3DGjmH9KW9BAXsEYwH1WpE",
-        ButtonCtn: "_1hSqlvDTyj9P6eWTHXutUt",
-        DragHighlightContainer: "_2jRMC5JVSK6dsktYus9Gjf",
-        DragHighlight: "Y9ryg1Npznt3dpkr7BGp1",
       };
     },
     chunkid: (module) => {
@@ -1951,27 +1800,6 @@
         "ItemFocusAnim-green": "_3mF4OtweD7vY2bcN6piLTq",
         focusAnimation: "rpa_zF1YXxbH3-m1-AI6Q",
         hoverAnimation: "_2WTZTfL3dbXnfZM3Ly10Jo",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        narrowWidth: "500px",
-        mentionDialogPosition: "_3isL0ZmZcmPqrXDdNiNSsm",
-        mentionDialog: "_1QU3cLCGXCmYTUvjYiqqz6",
-        mentionSearchText: "_1xVcZo7UqD1Idiz3hcGoHg",
-        suggestOption: "vquL9mspYzz2tBtxrzqw9",
-        mentionSearchOption: "_3O0sMruBIaruOmKJLJre-J",
-        manyMatches: "_1cweL4uxVeoeKoymO9IuaT",
-        selected: "boNOGnexLhWO9Nd0e6-0A",
-        nickname: "_2dKJqMZUnKQIInZReBkcRI",
-        mentionSearchMatch: "_2_0t_pDYqkDefMC0gDZV8G",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        CropImage: "_3qfqTaQ35U6AO3FNeijcFV",
-        CropPreviewGroup: "_1RI-QM2ZjK9MaVjeCLE_LF",
-        CropPreviewLabel: "_3_zyLDUyxZNyexfX3kNOPv",
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -2125,6 +1953,7 @@
           ..._,
           align: "center",
           "data-has-value": !!_,
+          minWidth: "0",
           children: [
             _ &&
               (0, _.jsx)(_._, {
@@ -3125,6 +2954,35 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { href: _, children: _, bAllowFocuseableAnchor: _, ..._ } = _;
+        return _._.EREALM === _._.k_ESteamRealmChina
+          ? (0, _.jsx)("div", {
+              ..._,
+              children: _,
+            })
+          : _
+            ? (0, _.jsx)(_._, {
+                href: _,
+                ..._,
+                children: _,
+              })
+            : (0, _.jsx)("a", {
+                href: _,
+                ..._,
+                children: _,
+              });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
@@ -3146,11 +3004,11 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -6305,7 +6163,9 @@
           getNextPageParam: (_) => _.cursor,
           placeholderData: (_) => _,
           retry: (_, _) =>
-            _ instanceof _._ ? _.eResult != _._ && _ < 3 : _ < 3,
+            _ instanceof _._
+              ? _.eResult != _._ && _.eResult != _._ && _ < 3
+              : _ < 3,
         });
       }
       function _(_) {
@@ -14379,6 +14239,68 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        return "sub" !== _.type && "bundle" !== _.type;
+      }
+      function _(_, _, _, _) {
+        const _ = [];
+        for (const _ of _)
+          if (
+            (!_ || _.has(_)) &&
+            !__webpack_require__(_) &&
+            (_.push(_), _.length >= _)
+          )
+            break;
+        return _;
+      }
+      function _(_, _, _, _ = new Set()) {
+        for (const _ of _.GetSaleSections())
+          if (
+            (0, _._)(_.section_type) &&
+            (!_ || __webpack_require__.BIncludeSection(_))
+          )
+            for (const _ of _.capsules) _(_) && _.add(_._);
+        for (const _ of _ ?? []) {
+          const _ = _.capsule;
+          !_(_) ||
+            (_ && !__webpack_require__.BIncludeLinkedCapsule(_)) ||
+            _.add(_._);
+        }
+        return _;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        const _ = _.GetSaleSections().filter(
+          (_) =>
+            (0, _._)(_.section_type) && "personalized_carousel" == (0, _._)(_),
+        );
+        if (0 == _.length)
+          return {
+            nNumSections: 0,
+            nSectionIndex: -1,
+          };
+        const _ = __webpack_require__.findIndex(
+          (_) => _.unique_id == _.unique_id,
+        );
+        return {
+          nNumSections: _.length,
+          nSectionIndex: _,
+        };
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid");
@@ -15823,87 +15745,6 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      _._.CHAT_BASE_URL, _._.CHAT_BASE_URL;
-      class _ {
-        bValid = !1;
-        stream = {
-          0: "#Broadcast_EnglishMain",
-        };
-        name = "";
-        appName = "";
-        appID = 0;
-        link = "";
-        linkName = "";
-        tabIcon = "";
-        offlineImage = "";
-        gidEvent = "";
-        constructor(_) {
-          (0, _._)(this), this.init(_);
-        }
-        init(_) {
-          (this.bValid = _.bValid),
-            (this.stream = _.stream),
-            (this.name = _.name),
-            (this.appName = _.appName ?? ""),
-            (this.appID = _.appID),
-            (this.link = _.link),
-            (this.linkName = _.linkName),
-            (this.tabIcon = _.tabIcon ?? ""),
-            (this.offlineImage = _.offlineImage),
-            (this.gidEvent = _.gidEvent ?? "");
-        }
-      }
-      (0, _._)([_._], _.prototype, "bValid", void 0),
-        (0, _._)([_._], _.prototype, "stream", void 0),
-        (0, _._)([_._], _.prototype, "name", void 0),
-        (0, _._)([_._], _.prototype, "appName", void 0),
-        (0, _._)([_._], _.prototype, "appID", void 0),
-        (0, _._)([_._], _.prototype, "link", void 0),
-        (0, _._)([_._], _.prototype, "linkName", void 0),
-        (0, _._)([_._], _.prototype, "tabIcon", void 0),
-        (0, _._)([_._], _.prototype, "offlineImage", void 0),
-        (0, _._)([_._], _.prototype, "gidEvent", void 0);
-      let _ = new _({
-        bValid: !1,
-        stream: {
-          0: "#Broadcast_EnglishMain",
-        },
-        name: "",
-        appName: "",
-        appID: 0,
-        link: "",
-        linkName: "",
-        tabIcon: "",
-        offlineImage: "",
-      });
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      var _, _;
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      }),
-        (function (_) {
-          (_[(_.Hover = 0)] = "Hover"),
-            (_[(_.ClickPopup = 1)] = "ClickPopup"),
-            (_[(_.ClickSurroundingRegion = 2)] = "ClickSurroundingRegion");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.Chat = 0)] = "Chat"),
-            (_[(_.Notification = 1)] = "Notification"),
-            (_[(_.Error = 2)] = "Error");
-        })(_ || (_ = {}));
-      class _ {}
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
       const _ = (_) => null != _;
       function _(_, _) {
         const [_, _] = _.useState(
@@ -15951,405 +15792,6 @@
         static Get() {
           return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
         }
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid");
-      function _(_) {
-        return Array.isArray(_) ? _[0] : _;
-      }
-      function _(_) {
-        const _ = Array.isArray(_) ? _ : [_];
-        return Math.min(..._);
-      }
-      function _(_, _) {
-        return void 0 === _ ? _(_) : Array.isArray(_) ? _[_] : _;
-      }
-      const _ = [_._._, _._._, _._._, _._._],
-        _ = [_._._, _._._, _._._],
-        _ = [_._._, _._._],
-        _ = [_._._, _._._],
-        _ = (_._._, _._._, [_._._, _._._, _._._, _._._, _._._, _._._]),
-        _ = {
-          capsule: {
-            width: 800,
-            height: 450,
-            rgAcceptableTypes: _,
-          },
-          marketingmessage_art_2_eventcapsule: {
-            width: 800,
-            height: 450,
-            rgAcceptableTypes: _,
-          },
-          marketingmessage_art_eventcapsule: {
-            width: 800,
-            height: 450,
-            rgAcceptableTypes: _,
-          },
-          spotlight: {
-            width: 2108,
-            height: 460,
-            rgAcceptableTypes: _,
-          },
-          localized_store_app_spotlight: {
-            width: 1200,
-            height: 260,
-            rgAcceptableTypes: _,
-          },
-          localized_store_app_spotlight_mobile: {
-            width: 500,
-            height: 160,
-            rgAcceptableTypes: _,
-          },
-          localized_title_image: {
-            width: 1920,
-            height: 622,
-            rgAcceptableTypes: _,
-          },
-          background: {
-            width: 1920,
-            height: 622,
-            rgAcceptableTypes: _,
-          },
-          hero: {
-            width: 0,
-            height: 0,
-            bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: _,
-          },
-          email_full: {
-            width: 800,
-            height: 300,
-            rgAcceptableTypes: _,
-          },
-          email_centered: {
-            width: 644,
-            height: 300,
-            rgAcceptableTypes: _,
-          },
-          broadcast_left: {
-            width: [199, 155],
-            height: [433, 337],
-            rgAcceptableTypes: _,
-          },
-          broadcast_right: {
-            width: [199, 155],
-            height: [433, 337],
-            rgAcceptableTypes: _,
-          },
-          sale_header: {
-            width: 0,
-            height: 0,
-            bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: _,
-          },
-          sale_overlay: {
-            width: 0,
-            height: 0,
-            bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: _,
-          },
-          localized_image_group: {
-            width: 0,
-            height: 0,
-            bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: _,
-          },
-          localized_background_art: {
-            width: 0,
-            height: 0,
-            bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: _,
-          },
-          sale_section_background: {
-            width: 0,
-            height: 0,
-            bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: _,
-          },
-          sale_section_title: {
-            width: 0,
-            height: 0,
-            bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: _,
-          },
-          link_capsule: {
-            width: 0,
-            height: 0,
-            bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: _,
-          },
-          product_banner: {
-            width: [1200, 1100],
-            height: [175, 160],
-            rgAcceptableTypes: _,
-          },
-          product_mobile_banner: {
-            width: 500,
-            height: 160,
-            rgAcceptableTypes: _,
-          },
-          product_banner_override: {
-            width: [1200, 1100],
-            height: [175, 160],
-            rgAcceptableTypes: _,
-          },
-          product_mobile_banner_override: {
-            width: 500,
-            height: 160,
-            rgAcceptableTypes: _,
-          },
-          schedule_track_art: {
-            width: 196,
-            height: 92,
-            rgAcceptableTypes: _,
-          },
-          tab_bar_background: {
-            width: 1500,
-            height: 100,
-            rgAcceptableTypes: _,
-          },
-          sale_logo: {
-            width: [1200, 940],
-            height: [460, 460],
-            rgAcceptableTypes: _,
-          },
-          bestofyear_banner: {
-            width: 1100,
-            height: 160,
-            rgAcceptableTypes: _,
-          },
-          bestofyear_banner_mobile: {
-            width: 500,
-            height: 160,
-            rgAcceptableTypes: _,
-          },
-          localized_marketing_message: {
-            width: 570,
-            height: 600,
-            rgAcceptableTypes: _,
-          },
-          localized_optin_banner: {
-            width: 1e3,
-            height: 150,
-            rgAcceptableTypes: _,
-          },
-          localized_marketingmessage_webm: {
-            width: 570,
-            height: 600,
-            rgAcceptableTypes: [_._._],
-          },
-          localized_marketingmessage_mp4: {
-            width: 570,
-            height: 600,
-            rgAcceptableTypes: [_._._],
-          },
-          localized_partnerevent_webm: {
-            width: 800,
-            height: 450,
-            rgAcceptableTypes: [_._._],
-          },
-          localized_partnerevent_mp4: {
-            width: 800,
-            height: 450,
-            rgAcceptableTypes: [_._._],
-          },
-          localized_subtitles: {
-            width: 0,
-            height: 0,
-            bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: [_._._, _._._],
-          },
-          localized_marketingmessage_poster: {
-            width: 528,
-            height: 297,
-            rgAcceptableTypes: [_._._, _._._],
-          },
-          localized_marketingmessage_background: {
-            width: 570,
-            height: 600,
-            rgAcceptableTypes: _,
-          },
-          localized_email_image: {
-            width: 0,
-            height: 0,
-            bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: _,
-          },
-          template_asset: {
-            width: 0,
-            height: 0,
-            bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: _,
-          },
-          user_poll_background: {
-            width: 0,
-            height: 0,
-            bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: _,
-          },
-          sale_store_capsule_header: {
-            width: 920,
-            height: 430,
-            rgAcceptableTypes: _,
-          },
-          sale_store_capsule_small: {
-            width: 462,
-            height: 174,
-            rgAcceptableTypes: _,
-          },
-          sale_store_capsule_main: {
-            width: 1232,
-            height: 706,
-            rgAcceptableTypes: _,
-          },
-          sale_store_capsule_vertical: {
-            width: 748,
-            height: 896,
-            rgAcceptableTypes: _,
-          },
-          spotlight_art: {
-            width: 306,
-            height: 260,
-            rgAcceptableTypes: _,
-          },
-          spotlight_art_hero: {
-            width: 748,
-            height: 896,
-            rgAcceptableTypes: _,
-          },
-          old_spotlight_art: {
-            width: 306,
-            height: 350,
-            rgAcceptableTypes: _,
-          },
-          marketingmessage_art: {
-            width: 570,
-            height: 600,
-            rgAcceptableTypes: _,
-          },
-          marketingmessage_art_2: {
-            width: 570,
-            height: 600,
-            rgAcceptableTypes: _,
-          },
-          takeover_art: {
-            width: 1850,
-            height: 450,
-            rgAcceptableTypes: _,
-          },
-          takeover_webm_art: {
-            width: 1850,
-            height: 450,
-            rgAcceptableTypes: [_._._],
-          },
-          takeover_mp4_art: {
-            width: 1850,
-            height: 450,
-            rgAcceptableTypes: [_._._],
-          },
-          takeover_mobile_art: {
-            width: 500,
-            height: 350,
-            rgAcceptableTypes: _,
-          },
-          takeover_webm_mobile_art: {
-            width: 500,
-            height: 350,
-            rgAcceptableTypes: [_._._],
-          },
-          takeover_mp4_mobile_art: {
-            width: 500,
-            height: 350,
-            rgAcceptableTypes: [_._._],
-          },
-          takeunder_art: {
-            width: 1200,
-            height: 190,
-            rgAcceptableTypes: _,
-          },
-          takeunder_mobile_art: {
-            width: 500,
-            height: 160,
-            rgAcceptableTypes: _,
-          },
-          app_header_capsule: {
-            width: 920,
-            height: 430,
-            rgAcceptableTypes: _,
-          },
-          app_main_capsule: {
-            width: 1232,
-            height: 706,
-            rgAcceptableTypes: _,
-          },
-        };
-      function _(_, _, _, _) {
-        let _ = null;
-        if (Array.isArray(_)) {
-          if (
-            ((_ = __webpack_require__
-              .map((_, _) => (_ === _ ? _ : void 0))
-              .filter((_) => void 0 !== _)),
-            _.length <= 0)
-          )
-            return !1;
-        } else if (_ !== _) return !1;
-        if (Array.isArray(_)) {
-          const _ = _.map((_, _) => (_ === _ ? _ : void 0)).filter(
-            (_) => void 0 !== _,
-          );
-          if (_.length <= 0) return !1;
-          if (_?.length && !_.some((_) => _.includes(_))) return !1;
-        } else if (_ !== _) return !1;
-        return !0;
-      }
-      function _(_, _, _, _) {
-        const _ = _[_];
-        return (
-          !!_ &&
-          (_.bDisableEnforceDimensions ? !!_ : _(_, _, _.width, _.height))
-        );
-      }
-      function _(_, _, _) {
-        const _ = _[_];
-        if (!_) return !1;
-        if (_.bDisableEnforceDimensions) return !0;
-        if (Array.isArray(_.width)) {
-          if (_.width.filter((_) => _ < _).length == _.width.length) return !1;
-        } else if (_ < _.width) return !1;
-        if (Array.isArray(_.height)) {
-          if (_.height.filter((_) => _ < _).length == _.height.length)
-            return !1;
-        } else if (_ < _.height) return !1;
-        return !0;
-      }
-      function _(_) {
-        const _ = _[_];
-        return (
-          _.rgAcceptableTypes.includes(_._._) ||
-          _.rgAcceptableTypes.includes(_._._)
-        );
-      }
-      function _(_, _) {
-        return _.filter((_) => _(_, _));
-      }
-      function _(_, _) {
-        return _[_].rgAcceptableTypes.includes(_);
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -16540,618 +15982,553 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = [
-        {
-          strClass: "genre",
-          strLocToken: "#Sale_Tabs_TagFilter_Class_Genre",
-          rgNodes: [
-            {
-              nTagID: _.nuP,
-              rgChildren: [
-                {
-                  nTagID: _.R$d,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.BGM,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.zah,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.Mhp,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.Jtk,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.lXI,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.mYY,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.bPv,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.Wq7,
-                  rgChildren: [],
-                },
-              ],
-            },
-            {
-              nTagID: _.Gkz,
-              rgChildren: [
-                {
-                  nTagID: _.FzB,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.Sv2,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.mvf,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.KCN,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.Vg1,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.cTj,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.CYA,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.DHU,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.aNN,
-                  rgChildren: [],
-                },
-              ],
-            },
-            {
-              nTagID: _.IEJ,
-              rgChildren: [
-                {
-                  nTagID: _.FzB,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.X$z,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.equ,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.Izv,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.zwR,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.LGs,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.UfY,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.PYD,
-                  rgChildren: [],
-                },
-              ],
-            },
-            {
-              nTagID: _.z3Q,
-              rgChildren: [
-                {
-                  nTagID: _.KCN,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.J1r,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.Gxx,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.Ftl,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.gEw,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.Jtk,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.f_e,
-                  rgChildren: [],
-                },
-              ],
-            },
-            {
-              nTagID: _.dWZ,
-              rgChildren: [
-                {
-                  nTagID: _.$YD,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.t_B,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.W5v,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.u7l,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.KoH,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.jzL,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.vx7,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.dm2,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.R1B,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.IbE,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.UfY,
-                  rgChildren: [],
-                },
-              ],
-            },
-            {
-              nTagID: _.mG_,
-              rgChildren: [
-                {
-                  nTagID: _.mvf,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.JEe,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.dxW,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.UEV,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.btm,
-                  rgChildren: [],
-                },
-              ],
-            },
-            {
-              nTagID: _.nL9,
-              rgChildren: [
-                {
-                  nTagID: _.mvf,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.jzL,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.dWZ,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.EEh,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.rNe,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.nPW,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.QA9,
-                  rgChildren: [],
-                },
-              ],
-            },
-            {
-              nTagID: _.ceg,
-              rgChildren: [
-                {
-                  nTagID: _.nNq,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.Ywc,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.Buq,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.dxW,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.rAU,
-                  rgChildren: [],
-                },
-              ],
-            },
-            {
-              nTagID: _.uZq,
-              rgChildren: [
-                {
-                  nTagID: _.aWw,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.Wo$,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.jx3,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.PoK,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.wz4,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.LGs,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.rAU,
-                  rgChildren: [],
-                },
-              ],
-            },
-            {
-              nTagID: _.LqT,
-              rgChildren: [
-                {
-                  nTagID: _.gGw,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.t_B,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.kpV,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.cNr,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.vk_,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.PoK,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.G1H,
-                  rgChildren: [],
-                },
-              ],
-            },
-          ],
+          {
+            nOptInTagID: _.nuP,
+            rgChildren: [
+              {
+                nTagID: _.R$d,
+              },
+              {
+                nTagID: _.BGM,
+              },
+              {
+                nTagID: _.zah,
+              },
+              {
+                nTagID: _.Mhp,
+              },
+              {
+                nTagID: _.Jtk,
+              },
+              {
+                nTagID: _.lXI,
+              },
+              {
+                nTagID: _.mYY,
+              },
+              {
+                nTagID: _.bPv,
+              },
+              {
+                nTagID: _.Wq7,
+              },
+            ],
+          },
+          {
+            nOptInTagID: _.Gkz,
+            rgChildren: [
+              {
+                nTagID: _.FzB,
+              },
+              {
+                nTagID: _.Sv2,
+              },
+              {
+                nTagID: _.mvf,
+              },
+              {
+                nTagID: _.KCN,
+              },
+              {
+                nTagID: _.Vg1,
+              },
+              {
+                nTagID: _.cTj,
+              },
+              {
+                nTagID: _.CYA,
+              },
+              {
+                nTagID: _.DHU,
+              },
+              {
+                nTagID: _.aNN,
+              },
+            ],
+          },
+          {
+            nOptInTagID: _.IEJ,
+            rgChildren: [
+              {
+                nTagID: _.FzB,
+              },
+              {
+                nTagID: _.X$z,
+              },
+              {
+                nTagID: _.equ,
+              },
+              {
+                nTagID: _.Izv,
+              },
+              {
+                nTagID: _.zwR,
+              },
+              {
+                nTagID: _.LGs,
+              },
+              {
+                nTagID: _.UfY,
+              },
+              {
+                nTagID: _.PYD,
+              },
+            ],
+          },
+          {
+            nOptInTagID: _.z3Q,
+            rgChildren: [
+              {
+                nTagID: _.KCN,
+              },
+              {
+                nTagID: _.J1r,
+              },
+              {
+                nTagID: _.Gxx,
+              },
+              {
+                nTagID: _.Ftl,
+              },
+              {
+                nTagID: _.gEw,
+              },
+              {
+                nTagID: _.Jtk,
+              },
+              {
+                nTagID: _.f_e,
+              },
+            ],
+          },
+          {
+            nOptInTagID: _.dWZ,
+            rgChildren: [
+              {
+                nTagID: _.$YD,
+              },
+              {
+                nTagID: _.t_B,
+              },
+              {
+                nTagID: _.W5v,
+              },
+              {
+                nTagID: _.u7l,
+              },
+              {
+                nTagID: _.KoH,
+              },
+              {
+                nTagID: _.jzL,
+              },
+              {
+                nTagID: _.vx7,
+              },
+              {
+                nTagID: _.dm2,
+              },
+              {
+                nTagID: _.R1B,
+              },
+              {
+                nTagID: _.IbE,
+              },
+              {
+                nTagID: _.UfY,
+              },
+            ],
+          },
+          {
+            nOptInTagID: _.mG_,
+            rgChildren: [
+              {
+                nTagID: _.mvf,
+              },
+              {
+                nTagID: _.JEe,
+              },
+              {
+                nTagID: _.dxW,
+              },
+              {
+                nTagID: _.UEV,
+              },
+              {
+                nTagID: _.btm,
+              },
+            ],
+          },
+          {
+            nOptInTagID: _.nL9,
+            rgChildren: [
+              {
+                nTagID: _.mvf,
+              },
+              {
+                nTagID: _.jzL,
+              },
+              {
+                nTagID: _.dWZ,
+              },
+              {
+                nTagID: _.EEh,
+              },
+              {
+                nTagID: _.rNe,
+              },
+              {
+                nTagID: _.nPW,
+              },
+              {
+                nTagID: _.QA9,
+              },
+            ],
+          },
+          {
+            nOptInTagID: _.ceg,
+            rgChildren: [
+              {
+                nTagID: _.nNq,
+              },
+              {
+                nTagID: _.Ywc,
+              },
+              {
+                nTagID: _.Buq,
+              },
+              {
+                nTagID: _.dxW,
+              },
+              {
+                nTagID: _.rAU,
+              },
+            ],
+          },
+          {
+            nOptInTagID: _.uZq,
+            rgChildren: [
+              {
+                nTagID: _.aWw,
+              },
+              {
+                nTagID: _.Wo$,
+              },
+              {
+                nTagID: _.jx3,
+              },
+              {
+                nTagID: _.PoK,
+              },
+              {
+                nTagID: _.wz4,
+              },
+              {
+                nTagID: _.LGs,
+              },
+              {
+                nTagID: _.rAU,
+              },
+            ],
+          },
+          {
+            nOptInTagID: _.LqT,
+            rgChildren: [
+              {
+                eContentDescriptor: _._,
+              },
+              {
+                nTagID: _.t_B,
+              },
+              {
+                nTagID: _.kpV,
+              },
+              {
+                nTagID: _.cNr,
+              },
+              {
+                nTagID: _.vk_,
+              },
+              {
+                nTagID: _.PoK,
+              },
+              {
+                nTagID: _.G1H,
+              },
+            ],
+          },
+        ],
+        _ = [
+          {
+            nTagID: _.MNG,
+            rgChildren: [
+              {
+                nTagID: _.z3Q,
+              },
+              {
+                nTagID: _.nuP,
+              },
+              {
+                nTagID: _.Xkc,
+              },
+              {
+                nTagID: _.Gkz,
+              },
+              {
+                nTagID: _.IEJ,
+              },
+              {
+                nTagID: _.dWZ,
+              },
+              {
+                nTagID: _.dBS,
+              },
+            ],
+          },
+          {
+            nTagID: _.Vov,
+            rgChildren: [
+              {
+                nTagID: _.z3Q,
+              },
+              {
+                nTagID: _.nuP,
+              },
+              {
+                nTagID: _.Xkc,
+              },
+              {
+                nTagID: _.Gkz,
+              },
+              {
+                nTagID: _.IEJ,
+              },
+              {
+                nTagID: _.dWZ,
+              },
+              {
+                nTagID: _.ng1,
+              },
+              {
+                nTagID: _.qhO,
+              },
+            ],
+          },
+          {
+            nTagID: _.BWK,
+            rgChildren: [
+              {
+                nTagID: _.nuP,
+              },
+              {
+                nTagID: _.z3Q,
+              },
+              {
+                nTagID: _.Gkz,
+              },
+              {
+                nTagID: _.IEJ,
+              },
+              {
+                nTagID: _.Xkc,
+              },
+              {
+                nTagID: _.dWZ,
+              },
+            ],
+          },
+          {
+            nTagID: _.ubQ,
+            rgChildren: [
+              {
+                nTagID: _.ZUO,
+              },
+              {
+                nTagID: _.Gkz,
+              },
+              {
+                nTagID: _.VmN,
+              },
+              {
+                nTagID: _.G1H,
+              },
+              {
+                nTagID: _.UfY,
+              },
+            ],
+          },
+          {
+            nTagID: _.yUQ,
+            rgChildren: [
+              {
+                nTagID: _.uZq,
+              },
+              {
+                nTagID: _.iZ9,
+              },
+              {
+                nTagID: _.dWZ,
+              },
+              {
+                nTagID: _.IEJ,
+              },
+              {
+                nTagID: _.LGs,
+              },
+              {
+                nTagID: _.a5M,
+              },
+              {
+                nTagID: _.RsL,
+              },
+              {
+                nTagID: _.jzL,
+              },
+            ],
+          },
+          {
+            nTagID: _.PoK,
+            rgChildren: [
+              {
+                nTagID: _.IEJ,
+              },
+              {
+                nTagID: _.uZq,
+              },
+              {
+                nTagID: _.zwR,
+              },
+              {
+                nTagID: _.MnB,
+              },
+              {
+                nTagID: _.hSB,
+              },
+            ],
+          },
+          {
+            eContentDescriptor: _._,
+            rgChildren: [
+              {
+                nTagID: _.LqT,
+              },
+              {
+                nTagID: _.kpV,
+              },
+              {
+                nTagID: _.uZq,
+              },
+              {
+                nTagID: _.eQ$,
+              },
+              {
+                nTagID: _.hwI,
+              },
+            ],
+          },
+        ],
+        _ = [
+          {
+            strOptInTag: "option_58733",
+            rgChildren: [
+              {
+                nTagID: _.CSO,
+              },
+              {
+                nTagID: _.HuG,
+              },
+              {
+                nTagID: _.dpF,
+              },
+              {
+                nTagID: _.QBr,
+              },
+              {
+                nTagID: _.jXd,
+              },
+            ],
+          },
+          {
+            strOptInTag: "option_40066",
+            rgChildren: [
+              {
+                nTagID: _.CSO,
+              },
+              {
+                nTagID: _.HuG,
+              },
+              {
+                nTagID: _.dpF,
+              },
+              {
+                nTagID: _.jXd,
+              },
+            ],
+          },
+          {
+            strAppType: "software",
+          },
+          {
+            strFeature: "vr",
+          },
+          {
+            strFeature: "mac",
+          },
+        ],
+        _ = {
+          linux: "#Platform_Linux",
+          mac: "#Platform_Mac",
+          _: "#Platform_VR",
+          "vr only": "#Sale_Tabs_TagFilter_Feature_VROnly",
+          free: "#Sale_Tabs_TagFilter_Feature_Free",
+          discounted: "#Sale_Tabs_TagFilter_Feature_Discounted",
         },
-        {
-          strClass: "theme",
-          strLocToken: "#Sale_Tabs_TagFilter_Class_Theme",
-          rgNodes: [
-            {
-              nTagID: _.MNG,
-              rgChildren: [
-                {
-                  nTagID: _.z3Q,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.nuP,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.Xkc,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.Gkz,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.IEJ,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.dWZ,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.dBS,
-                  rgChildren: [],
-                },
-              ],
-            },
-            {
-              nTagID: _.Vov,
-              rgChildren: [
-                {
-                  nTagID: _.z3Q,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.nuP,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.Xkc,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.Gkz,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.IEJ,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.dWZ,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.ng1,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.qhO,
-                  rgChildren: [],
-                },
-              ],
-            },
-            {
-              nTagID: _.BWK,
-              rgChildren: [
-                {
-                  nTagID: _.nuP,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.z3Q,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.Gkz,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.IEJ,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.Xkc,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.dWZ,
-                  rgChildren: [],
-                },
-              ],
-            },
-            {
-              nTagID: _.ubQ,
-              rgChildren: [
-                {
-                  nTagID: _.ZUO,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.Gkz,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.VmN,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.G1H,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.UfY,
-                  rgChildren: [],
-                },
-              ],
-            },
-            {
-              nTagID: _.yUQ,
-              rgChildren: [
-                {
-                  nTagID: _.uZq,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.iZ9,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.dWZ,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.IEJ,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.LGs,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.a5M,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.RsL,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.jzL,
-                  rgChildren: [],
-                },
-              ],
-            },
-            {
-              nTagID: _.PoK,
-              rgChildren: [
-                {
-                  nTagID: _.IEJ,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.uZq,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.zwR,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.MnB,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.hSB,
-                  rgChildren: [],
-                },
-              ],
-            },
-            {
-              nTagID: _.gGw,
-              rgChildren: [
-                {
-                  nTagID: _.LqT,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.kpV,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.uZq,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.eQ$,
-                  rgChildren: [],
-                },
-                {
-                  nTagID: _.hwI,
-                  rgChildren: [],
-                },
-              ],
-            },
-          ],
-        },
-        {
-          strClass: "feature",
-          strLocToken: "#Sale_Tabs_TagFilter_Class_Feature",
-          rgNodes: [
-            {
-              nTagID: _.GBh,
-              rgChildren: [],
-            },
-            {
-              strAppType: "software",
-              strLocToken: "#AppTypeLabel_software",
-              rgChildren: [],
-            },
-            {
-              strFeature: "vr",
-              strLocToken: "#Platform_VR",
-              rgChildren: [],
-            },
-            {
-              strFeature: "mac",
-              strLocToken: "#Platform_Mac",
-              rgChildren: [],
-            },
-          ],
-        },
-      ];
+        _ = [
+          {
+            strClass: "genre",
+            strLocToken: "#Sale_Tabs_TagFilter_Class_Genre",
+            rgNodes: _,
+          },
+          {
+            strClass: "theme",
+            strLocToken: "#Sale_Tabs_TagFilter_Class_Theme",
+            rgNodes: _,
+          },
+          {
+            strClass: "feature",
+            strLocToken: "#Sale_Tabs_TagFilter_Class_Feature",
+            rgNodes: _,
+          },
+        ];
       function _(_) {
-        return _.find((_) => _.strClass === _?.tag_class)?.rgNodes ?? [];
+        return _?.rgNodes
+          ? _.rgNodes
+          : (_.find((_) => _.strClass === _?.tag_class)?.rgNodes ?? []);
       }
       function _(_) {
         return _.nTagID
           ? String(_.nTagID)
-          : _.strFeature
-            ? "feature:" + _.strFeature
-            : "apptype:" + _.strAppType;
+          : _.nOptInTagID || _.strOptInTag
+            ? "optin:" + _(_)
+            : _.eContentDescriptor
+              ? "descriptor:" + _.eContentDescriptor
+              : _.strFeature
+                ? "feature:" + _.strFeature
+                : "apptype:" + _.strAppType;
+      }
+      function _(_) {
+        return _.strFeature
+          ? _[_.strFeature]
+          : _.strAppType
+            ? "#AppTypeLabel_" + _.strAppType
+            : void 0;
       }
       function _(_) {
         if (_)
@@ -17159,44 +16536,55 @@
             ? _.strParentKey + "," + _.strChildKey
             : _.strParentKey;
       }
+      function _(_) {
+        return _.strOptInTag ?? String(_.nOptInTagID);
+      }
       function _(_, _) {
-        return _.nTagID && _
-          ? {
+        return _.nOptInTagID || _.strOptInTag
+          ? ((0, _._)(
+              _,
+              "Opt-in registration tag used on a sale without an opt-in",
+            ),
+            {
               type: _._.k_EStoreFilterClauseTypeOptInRegistrationTag,
               optin: _,
-              value: String(_.nTagID),
-            }
+              value: _(_),
+            })
           : _.nTagID
             ? {
                 type: _._.k_EStoreFilterClauseTypeStoreTag,
                 value: _.nTagID,
               }
-            : _.strFeature
+            : _.eContentDescriptor
               ? {
-                  type: _._.k_EStoreFilterClauseTypeFeatureTag,
-                  value: _.strFeature,
+                  type: _._.k_EStoreFilterClauseTypeContentDescriptor,
+                  value: _.eContentDescriptor,
                 }
-              : {
-                  type: _._.k_EStoreFilterClauseTypeAppType,
-                  value: _.strAppType,
-                };
+              : _.strFeature
+                ? {
+                    type: _._.k_EStoreFilterClauseTypeFeatureTag,
+                    value: _.strFeature,
+                  }
+                : {
+                    type: _._.k_EStoreFilterClauseTypeAppType,
+                    value: _.strAppType,
+                  };
       }
       function _(_, _) {
         return _.find((_) => _(_) === _);
       }
-      function _(_, _) {
-        if (_)
-          for (const _ of _) {
-            const _ = _(_.rgNodes, _.strParentKey);
-            if (!_) continue;
-            if (!_.strChildKey) return _(_, _);
-            const _ = _(_.rgChildren, _.strChildKey);
-            if (!_) return;
-            return {
+      function _(_, _, _) {
+        if (!_) return;
+        const _ = _(_(_), _.strParentKey);
+        if (!_) return;
+        if (!_.strChildKey) return _(_, _);
+        const _ = _(_.rgChildren ?? [], _.strChildKey);
+        return _
+          ? {
               type: _._.k_EStoreFilterClauseTypeAnd,
-              rgSubexpressions: [_(_, _), _(_)],
-            };
-          }
+              rgSubexpressions: [_(_, _), _(_, _)],
+            }
+          : void 0;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -17214,3255 +16602,6 @@
         include_screenshots: !0,
         include_reviews: !0,
       };
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        return Boolean(_ && _.thumbnail_http_address);
-      }
-      function _(_, _) {
-        if (_ || _) {
-          const _ = _ || _;
-          return Boolean(_ && _.Get().BIsAppStreaming(_));
-        }
-        return !1;
-      }
-      class _ {
-        constructor() {
-          (0, _._)(this);
-        }
-        static s_GlobalStore;
-        m_inFlightRequests = new Map();
-        m_lookupKeyToEmbedStreamDef = new Map();
-        m_lookupStreams = new Map();
-        m_playReadyStream = new Map();
-        m_bMapHasStartedVideo = new Map();
-        m_mapBroadcastChecked = new Map();
-        m_pageChatStatus = "hide";
-        m_streamChatStatus = "hide";
-        m_bUserChatExpanded = void 0;
-        m_bUserPreferenceHideBroadcastByDefault = void 0;
-        m_bCollapsed = void 0;
-        m_setStreamChangedListeners = new Set();
-        m_bUseFakeData = !1;
-        m_onLoadContextCall = new Map();
-        BHasStreams(_) {
-          const _ = this.GetStreams(_);
-          return Boolean(_ && _.length > 0);
-        }
-        AddCallbackOnNewContext(_, _, _) {
-          this.m_onLoadContextCall.set(this.GetStreamsLookupKeyFromDef(_), {
-            name: _,
-            fnCallback: _,
-          });
-        }
-        ClearCallbackOnNewContext(_) {
-          this.m_onLoadContextCall.set(
-            this.GetStreamsLookupKeyFromDef(_),
-            null,
-          );
-        }
-        GetPlayReadyStream(_) {
-          let _ = this.GetStreamsLookupKeyFromDef(_);
-          return this.m_playReadyStream.get(_);
-        }
-        BIsEmbeddedBroadcastHiddenByDefaultUserSettings() {
-          return Boolean(this.m_bUserPreferenceHideBroadcastByDefault);
-        }
-        BIsEmbeddedStreamCollapsed() {
-          return Boolean(this.m_bCollapsed);
-        }
-        SetEmbeddedStreamCollapsed(_) {
-          this.m_bCollapsed != _ && (this.m_bCollapsed = _);
-        }
-        GetConcurrentStreams(_) {
-          const _ = this.GetStreams(_);
-          return _ ? _.filter((_) => _(_)).length : 0;
-        }
-        GetChatVisibility() {
-          return "remove" === this.m_pageChatStatus ||
-            "remove" === this.m_streamChatStatus
-            ? "remove"
-            : void 0 !== this.m_bUserChatExpanded
-              ? this.m_bUserChatExpanded
-                ? "show"
-                : "hide"
-              : "show" === this.m_pageChatStatus
-                ? "show"
-                : "hide" === this.m_pageChatStatus ||
-                    "hide" === this.m_streamChatStatus
-                  ? "hide"
-                  : "show";
-        }
-        ToggleChatVisibility() {
-          const _ = this.GetChatVisibility();
-          "remove" !== _ && (this.m_bUserChatExpanded = "hide" === _);
-        }
-        DebugDumpContextAndAvailableContext(_) {
-          console.log("Requested context", this.GetStreamsLookupKeyFromDef(_)),
-            console.log("Available context count: ", this.m_lookupStreams.size),
-            this.m_lookupStreams.forEach((_, _) => {
-              console.log(_, _.length);
-            });
-        }
-        GetStreams(_) {
-          const _ = this.GetStreamsLookupKeyFromDef(_);
-          return this.m_lookupStreams.get(_);
-        }
-        GetBroadcastURL(_) {
-          let _ = null;
-          return (
-            (_ = _.steamid
-              ? new _._(_.steamid)
-              : _._.InitFromAccountID(_.accountid)),
-            _._.COMMUNITY_BASE_URL +
-              "broadcast/watch/" +
-              _.ConvertTo64BitString()
-          );
-        }
-        BIsAppStreaming(_) {
-          let _ = !1;
-          return (
-            this.m_lookupStreams.forEach((_) => {
-              _ ||
-                (_ =
-                  Boolean(_) &&
-                  __webpack_require__.some(
-                    (_) =>
-                      _._.GetOrCreateBroadcastInfo(_.steamid).m_nAppID === _,
-                  ));
-            }),
-            _
-          );
-        }
-        GetStreamsForAppID(_) {
-          const _ = new Array();
-          return (
-            this.m_lookupStreams.forEach((_) => {
-              __webpack_require__?.forEach((_) => {
-                _._.GetOrCreateBroadcastInfo(_.steamid).m_nAppID === _ &&
-                  _.push(_);
-              });
-            }),
-            _
-          );
-        }
-        AddStreamChangedListener(_) {
-          this.m_setStreamChangedListeners.add(_);
-        }
-        RemoveStreamChangedListener(_) {
-          this.m_setStreamChangedListeners.delete(_);
-        }
-        async LoadBIsEmbeddedBroadcastHidden(_) {
-          if (void 0 === this.m_bUserPreferenceHideBroadcastByDefault) {
-            let _ = (0, _._)("broadcastuser", "application_config");
-            if (!_)
-              try {
-                let _ =
-                    _._.STORE_BASE_URL +
-                    "broadcast/ajaxgetuserbroadcastpreferences",
-                  _ = await _().get(_, {
-                    params: {},
-                    cancelToken: _.token,
-                  });
-                _ = _.data;
-              } catch (_) {
-                console.log(
-                  "LoadBIsEmbeddedBroadcastHidden: " + (0, _._)(_).strErrorMsg,
-                ),
-                  (_ = {
-                    bHideStoreBroadcast: !1,
-                  });
-              }
-            (0, _._)(() => {
-              (this.m_bUserPreferenceHideBroadcastByDefault =
-                _.bHideStoreBroadcast),
-                (this.m_bCollapsed = _.bHideStoreBroadcast);
-            });
-          }
-          return this.m_bUserPreferenceHideBroadcastByDefault;
-        }
-        async SetupEmbeddableVOD(_, _) {
-          (this.m_bUseFakeData = !1),
-            (this.m_streamChatStatus = "remove"),
-            await _._.Get().QueueAppRequest(_.nAppIDVOD, {
-              include_assets: !0,
-              include_trailers: !0,
-            });
-          const _ = _._.Get().GetApp(_.nAppIDVOD),
-            _ = new _._();
-          if (
-            ((_.accountid = 0),
-            (_.nAppIDVOD = _.nAppIDVOD),
-            (_.default_selection_priority = _._.k_ePrimary),
-            (_.current_selection_priority = _._.k_ePrimary),
-            (_.thumbnail_http_address =
-              __webpack_require__?.GetAssets().GetHeaderURL() || ""),
-            (_.title = __webpack_require__?.GetName() || ""),
-            this.GetStreams(_).unshift(_),
-            _)
-          ) {
-            const _ = this.GetStreamsLookupKeyFromDef(_);
-            this.m_playReadyStream.set(_, _);
-          }
-        }
-        async HintLoadEmbeddablePreviewStreams(_) {
-          let _ = null,
-            _ = {
-              eventid: _.event ? _.event.GID : void 0,
-              previewAccounts: Boolean(_.bIsPreview && _.accountIDs)
-                ? _.accountIDs.slice().sort().join(",")
-                : void 0,
-            };
-          try {
-            return (
-              (_ = await _().get(
-                _._.STORE_BASE_URL + "broadcast/ajaxgetstreamersforpreview",
-                {
-                  params: _,
-                },
-              )),
-              this.HandleHintLoadBroadcastResponse(_, _.data)
-            );
-          } catch (_) {
-            let _ = (0, _._)(_);
-            console.error(
-              "HintLoadEmbeddablePreviewStreams hit error loading: " +
-                _.strErrorMsg,
-              _,
-            );
-          }
-          return [];
-        }
-        async HintLoadEmbeddableStreams(_) {
-          let _ = this.MapEmbeddableStreamToRequest(_),
-            _ = this.GetStreamsLookupKeyFromParam(_);
-          if (!this.m_inFlightRequests.has(_)) {
-            this.m_lookupKeyToEmbedStreamDef.set(_, _);
-            const _ = this.InternalHintLoadEmbeddableStreams(_, _);
-            this.m_inFlightRequests.set(_, _);
-          }
-          return this.m_inFlightRequests.get(_);
-        }
-        async InternalHintLoadEmbeddableStreams(_, _) {
-          let _ = (0, _._)(
-            "broadcast_available_for_page",
-            "application_config",
-          );
-          if ((0, _._)(_)) return this.HandleHintLoadBroadcastResponse(_, _);
-          try {
-            let _ = null;
-            return (
-              (_ = await _().get(
-                _._.STORE_BASE_URL + "broadcast/ajaxgetstreamersforpage",
-                {
-                  params: _,
-                },
-              )),
-              this.HandleHintLoadBroadcastResponse(_, _.data)
-            );
-          } catch (_) {
-            let _ = (0, _._)(_);
-            console.error(
-              "HintLoadEmbeddableStreams hit error loading: " + _.strErrorMsg,
-              _,
-            );
-          }
-          return [];
-        }
-        async HandleHintLoadBroadcastResponse(_, _) {
-          (this.m_bUseFakeData = !1),
-            _.bIsPreview &&
-              (_?.filtered?.length > 0
-                ? this.ExtractBroadcastPrioritiesFromPartnerEventForPreview(
-                    _.event,
-                    _.filtered,
-                  )
-                : ((_ = {
-                    filtered: [{}],
-                    success: 1,
-                    total_count: 1,
-                    err_msg: "",
-                    broadcast_chat_visibility: "hide",
-                  }),
-                  (this.m_bUseFakeData = !0))),
-            _.broadcast_chat_visibility &&
-              (this.m_pageChatStatus = _.broadcast_chat_visibility);
-          const _ = new Array();
-          (0, _._)(() => {
-            _.filtered.forEach((_) => {
-              if (!_.steamid) {
-                const _ = _._.InitFromAccountID(_.accountid);
-                _.steamid = _.ConvertTo64BitString();
-              }
-              const _ = _._.GetOrCreateBroadcastInfo(_.steamid),
-                _ = _.appid ? Number(_.appid) : _._;
-              (_.m_nAppID = _),
-                (_.m_strAppId = "" + _),
-                void 0 === _.current_selection_priority &&
-                  (_.current_selection_priority = _.default_selection_priority),
-                _ != _._ && __webpack_require__.push(_);
-            });
-          });
-          const _ = this.GetStreamsLookupKeyFromDef(_);
-          if (
-            (this.m_lookupStreams.set(_, _.filtered),
-            this.m_onLoadContextCall.has(_))
-          ) {
-            const _ = this.m_onLoadContextCall.get(_);
-            _ && _.fnCallback();
-          }
-          const _ = this.GetStreams(_);
-          return await this.AutoStartVideoStream(_, _), _;
-        }
-        ExtractBroadcastPrioritiesFromPartnerEventForPreview(_, _) {
-          const _ = Array.from(_.jsondata.broadcast_whitelist ?? []),
-            _ = Array.from(_.jsondata.broadcast_priority ?? []),
-            _ = new Map();
-          for (let _ = 0; _ < _.length && !(_ >= _.length); _++)
-            _.set(_[_], (0, _._)(_[_]));
-          _.forEach((_) => {
-            const _ = Number(_.accountid);
-            _.has(_) && (_.current_selection_priority = _.get(_));
-          });
-        }
-        async AutoStartVideoStream(_, _) {
-          let _ = this.GetStreamsLookupKeyFromDef(_);
-          if (this.m_bMapHasStartedVideo.get(_)) return null;
-          if (this.m_bUseFakeData) {
-            if (!this.m_playReadyStream.get(_)) {
-              const _ = {
-                accountid: 0,
-                thumbnail_http_address: "",
-                default_selection_priority: _._.k_eGeneral,
-                current_selection_priority: _._.k_eGeneral,
-              };
-              this.m_playReadyStream.set(_, _);
-            }
-            return this.m_playReadyStream;
-          }
-          return this.PlayFromAvailableStreams(_, _);
-        }
-        async PlayFromAvailableStreams(_, _, _ = !1) {
-          const _ = new Set();
-          for (;;) {
-            const _ = _.filter((_) => !(_.has(_) || (_ && _.nAppIDVOD))),
-              _ = this.GetAutoStartStream(_);
-            if (!_) return null;
-            if (await this.AttemptToPlayStream(_, _)) return _;
-            _.add(_);
-          }
-        }
-        async AttemptToPlayStream(_, _) {
-          let _ = this.GetStreamsLookupKeyFromDef(_);
-          if (
-            (this.m_bMapHasStartedVideo.set(_, !0),
-            this.m_mapBroadcastChecked.has(_.accountid) ||
-              this.m_mapBroadcastChecked.set(
-                _.accountid,
-                this.InternalAttemptToPlayStream(_, _),
-              ),
-            _.nAppIDVOD)
-          )
-            this.m_playReadyStream.set(_, _);
-          else {
-            const _ = await this.m_mapBroadcastChecked.get(_.accountid);
-            if (_?.success != _._) return null;
-            (_.steamid = _.steamid),
-              this.m_playReadyStream.set(_, _),
-              this.GetConcurrentStreams(_) > 1
-                ? (this.m_streamChatStatus = "hide")
-                : (this.m_streamChatStatus = _.broadcast_chat_visibility),
-              this.m_setStreamChangedListeners.forEach((_) => _(_));
-            _(_._.GetOrCreateBroadcastInfo(_.steamid).m_nAppID, _._._, _.snr);
-          }
-          return _;
-        }
-        async InternalAttemptToPlayStream(_, _) {
-          this.GetStreamsLookupKeyFromDef(_);
-          let _ = null;
-          try {
-            const _ = _._.STORE_BASE_URL + "broadcast/ajaxcheckbroadcast";
-            let _ = {
-              broadcastaccountid: _.accountid,
-              viewer_token: _._.GetViewerToken(),
-              origin: self.origin,
-            };
-            return (
-              (_ = await _().get(_, {
-                params: _,
-              })),
-              _.data
-            );
-          } catch (_) {
-            let _ = (0, _._)(_);
-            console.error("Broadcast.AttemptToPlayStream: " + _.strErrorMsg, _);
-          }
-          return null;
-        }
-        GetAutoStartStream(_) {
-          if (!_) return null;
-          const _ = _.filter((_) => _(_)),
-            _ = _.reduce((_, _) => Math.max(_, _(_)), 0),
-            _ = _.filter((_) => _(_) === _);
-          if (0 === _.length) return null;
-          return _[Math.floor(Math.random() * _.length)];
-        }
-        MapEmbeddableStreamToRequest(_) {
-          return {
-            appid: _.appid,
-            promotionName: _.bIsPreview ? "preview" : _.promotionName,
-            clanid: _.clanid
-              ? _.clanid
-              : _.event
-                ? _.event.clanSteamID.GetAccountID()
-                : void 0,
-            listid: _.listid,
-            subid: _.subid,
-            bundleid: _.bundleid,
-            eventid: _.event ? _.event.GID : void 0,
-            previewAccounts: Boolean(_.bIsPreview && _.accountIDs)
-              ? _.accountIDs.slice().sort().join(",")
-              : void 0,
-            test: false,
-            _: _._.COUNTRY,
-            _: _._.LANGUAGE,
-            hubtype: _.event?.GetContentHubType(),
-            hubcategory: _.event?.GetContentHubCategory(),
-            hubtagid: _.event?.GetContentHubTag(),
-            tabuniqueid: _.tabuniqueid,
-            tabfilter: _.tabfilter,
-            rt_now_override_test: _._.BHasTimeOverride()
-              ? _._.GetTimeNowWithOverride()
-              : void 0,
-          };
-        }
-        GetStreamsLookupKeyFromDef(_) {
-          return this.GetStreamsLookupKeyFromParam(
-            this.MapEmbeddableStreamToRequest(_),
-          );
-        }
-        GetStreamsLookupKeyFromParam(_) {
-          return JSON.stringify(_);
-        }
-        static Get() {
-          return (
-            _.s_GlobalStore ||
-              ((_.s_GlobalStore = new _()), _.s_GlobalStore.Init()),
-            _.s_GlobalStore
-          );
-        }
-        Init() {}
-      }
-      function _(_) {
-        return _.current_selection_priority || _._.k_eGeneral;
-      }
-      function _(_) {
-        _.sort((_, _) =>
-          _(_) != _(_)
-            ? _(_) - _(_)
-            : _.viewer_count != _.viewer_count
-              ? _.viewer_count - _.viewer_count
-              : _.accountid - _.accountid,
-        );
-      }
-      async function _(_, _, _) {
-        if (_ > 0 && 7 != _ && _) {
-          let _ = new URLSearchParams();
-          _.append("page_action", "" + _),
-            _.append("snr", _),
-            _().post(
-              _._.STORE_BASE_URL + "ajaxreportproductaction/" + _ + "/",
-              _,
-            );
-        }
-      }
-      (0, _._)([_._], _.prototype, "m_lookupStreams", void 0),
-        (0, _._)([_._], _.prototype, "m_playReadyStream", void 0),
-        (0, _._)([_._], _.prototype, "m_pageChatStatus", void 0),
-        (0, _._)([_._], _.prototype, "m_streamChatStatus", void 0),
-        (0, _._)([_._], _.prototype, "m_bUserChatExpanded", void 0),
-        (0, _._)(
-          [_._],
-          _.prototype,
-          "m_bUserPreferenceHideBroadcastByDefault",
-          void 0,
-        ),
-        (0, _._)([_._], _.prototype, "m_bCollapsed", void 0),
-        (0, _._)([_._], _.prototype, "HintLoadEmbeddablePreviewStreams", null),
-        (0, _._)([_._], _.prototype, "AttemptToPlayStream", null);
-      const _ = new _._();
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ {
-        constructor() {
-          (0, _._)(this);
-        }
-        m_mapBroadcasterSteamIDToEvents = new Map();
-        m_mapBroadcasterSteamIDData = new Map();
-        static GetBBCodeParam(_, _, _ = "") {
-          const _ = new RegExp(`\\W${_}\\W*=\\W*\\"(.*?)\\"`, "gmi").exec(_);
-          return _ ? _[1] : _;
-        }
-        static ParseCalendarEventPresentersFromText(_) {
-          const _ = /\[\W*speaker(\W[\s\S]*?)\]([\s\S]*?)\[\W*\/speaker\W*\]/gi,
-            _ = new Array();
-          for (;;) {
-            const _ = _.exec(_);
-            if (null === _) break;
-            const _ = _[1],
-              _ = _[2],
-              _ = _.GetBBCodeParam(_, "steamid"),
-              _ = {
-                steamID: _ ? new _._(_) : void 0,
-                name: _.GetBBCodeParam(_, "name"),
-                title: _.GetBBCodeParam(_, "title"),
-                company: _.GetBBCodeParam(_, "company"),
-                photo: _.GetBBCodeParam(_, "photo"),
-                bio: _,
-              };
-            __webpack_require__.push(_);
-          }
-          return _;
-        }
-        static ParseEventModelPresenters(_, _) {
-          const _ = _.GetDescriptionWithFallback(_);
-          return _.ParseCalendarEventPresentersFromText(_);
-        }
-        static ParseEventAppReferencesFromText(_) {
-          const _ = /\/\/store\.steampowered\.com\/app\/(\d+)/gi,
-            _ = new Set();
-          for (;;) {
-            const _ = _.exec(_);
-            if (null === _) break;
-            const _ = _[1];
-            __webpack_require__.add(Number(_));
-          }
-          return _;
-        }
-        static ParseEventModelAppReferences(_, _) {
-          const _ = _.GetDescriptionWithFallback(_),
-            _ = _.ParseEventAppReferencesFromText(_);
-          if (_.jsondata?.referenced_appids)
-            for (const _ of _.jsondata.referenced_appids) _.add(_);
-          return _;
-        }
-        async BuildBroadcasterSteamIDToActiveEventMap(_) {
-          const _ = _._.GetTimeNowWithOverride(),
-            _ = _.GetCalendarItemsInTimeRange(_ - 3600, _);
-          for (const _ of _.rgCalendarItems)
-            _._.QueueLoadPartnerEvent(_.clanid, _.unique_id);
-          const _ = _.rgCalendarItems.map((_) =>
-              _._.LoadPartnerEventFromClanEventGIDAndClanSteamID(
-                _._.InitFromClanID(_.clanid),
-                _.unique_id,
-                0,
-              ),
-            ),
-            _ = await Promise.all(_),
-            _ = new Map();
-          for (const _ of _)
-            if (_ && !(_.endTime && _.endTime < _))
-              for (const _ of _.GetBroadcastWhitelistAsSteamIDs())
-                _.has(_) ? _.get(_).push(_) : _.set(_, [_]);
-          return _;
-        }
-        IsBroadcasterAlreadyBound(_, _) {
-          const _ = this.m_mapBroadcasterSteamIDToEvents.get(_),
-            _ = _ ? _.length : 0;
-          if ((_ ? _.length : 0) != _) return !1;
-          for (let _ = 0; _ < _; _++) if (_[_] != _[_].GID) return !1;
-          return !0;
-        }
-        static BuildSteamIDToPresenterMapFromEventList(_, _) {
-          let _ = new Map();
-          for (const _ of _) {
-            if (!_) continue;
-            const _ = _.ParseEventModelPresenters(_, _);
-            for (const _ of _)
-              _.steamID &&
-                __webpack_require__.set(_.steamID.ConvertTo64BitString(), _);
-          }
-          return _;
-        }
-        RemoveCachedDataIfNotInMap(_) {
-          const _ = new Array();
-          this.m_mapBroadcasterSteamIDToEvents.forEach((_, _) => {
-            _.has(_) || _.push(_);
-          }),
-            _.forEach((_) => {
-              this.m_mapBroadcasterSteamIDData.delete(_),
-                this.m_mapBroadcasterSteamIDToEvents.delete(_);
-            });
-        }
-        static BuildAppIDRefsForEventList(_, _) {
-          const _ = new Set();
-          for (const _ of _) {
-            _.ParseEventModelAppReferences(_, _).forEach((_) =>
-              __webpack_require__.add(_),
-            );
-          }
-          return Array.from(_);
-        }
-        UpdateCachedDataFromEvents(_, _) {
-          _.forEach((_, _) => {
-            if (this.IsBroadcasterAlreadyBound(_, _)) return;
-            const _ = {
-              m_mapPresenters: _.BuildSteamIDToPresenterMapFromEventList(_, _),
-              m_rgAppIDs: _.BuildAppIDRefsForEventList(_, _),
-            };
-            this.m_mapBroadcasterSteamIDData.set(_, _),
-              this.m_mapBroadcasterSteamIDToEvents.set(
-                _,
-                _.map((_) => _.GID),
-              );
-          });
-        }
-        async SynchronizeEventsWithBroadcasts(_, _) {
-          const _ = await this.BuildBroadcasterSteamIDToActiveEventMap(_);
-          this.RemoveCachedDataIfNotInMap(_),
-            this.UpdateCachedDataFromEvents(_, _);
-        }
-        GetPresenterMapForBroadcasterSteamID(_) {
-          return this.m_mapBroadcasterSteamIDData.get(_)?.m_mapPresenters;
-        }
-        GetAppIDListForBroadcasterSteamID(_) {
-          return this.m_mapBroadcasterSteamIDData.get(_)?.m_rgAppIDs;
-        }
-      }
-      (0, _._)([_._], _.prototype, "m_mapBroadcasterSteamIDData", void 0);
-      const _ = new _();
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, _, _) {
-        return [_, _, _];
-      }
-      class _ extends Error {}
-      class _ extends _._ {
-        m_appid;
-        constructor(_) {
-          super(), (this.m_appid = _ || 0);
-        }
-        GetAppID() {
-          return this.m_appid;
-        }
-        parseColor(_) {
-          if ("string" != typeof _ || !_.match(/^#[0-9a-fA-F]{6}$/))
-            throw new _("expected color string");
-          return [
-            parseInt(_.substring(1, 3), 16),
-            parseInt(_.substring(3, 5), 16),
-            parseInt(_.substring(5, 7), 16),
-          ];
-        }
-        parseString(_) {
-          if ("string" == typeof _) return _;
-          throw new _("expected string");
-        }
-        parseNumber(_) {
-          if ("number" == typeof _) return _;
-          throw new _("expected number");
-        }
-        parseDate(_) {
-          if ("number" == typeof _) return new Date(_);
-          throw new _("expected timestamp");
-        }
-        parseArray(_, _) {
-          let _ = [];
-          if ("object" != typeof _ || !Array.isArray(_))
-            throw new _("expected array");
-          let _ = _.length;
-          for (let _ = 0; _ < _; ++_)
-            try {
-              __webpack_require__.push(_(_[_]));
-            } catch (_) {
-              throw ((_.message += "\n...while parsing array element " + _), _);
-            }
-          return _;
-        }
-        parseDict(_, _) {
-          let _ = new Map();
-          if ("object" != typeof _ || Array.isArray(_))
-            throw new _("expected object");
-          for (let _ in _)
-            try {
-              __webpack_require__.set(_, _(_[_]));
-            } catch (_) {
-              throw (
-                ((_.message += "\n...while parsing dictionary element " + _), _)
-              );
-            }
-          return _;
-        }
-        parseBracket(_) {
-          let _ = {
-            name: this.parseString(_.name),
-            start: this.parseDate(_.start),
-            color: [255, 0, 255],
-          };
-          return (
-            "params" in _ &&
-              (_.params = this.parseDict(
-                _.params,
-                this.parseString.bind(this),
-              )),
-            "end" in _ && (_.end = this.parseDate(_.end)),
-            "color" in _ && (_.color = this.parseColor(_.color)),
-            _
-          );
-        }
-        parseMarker(_) {
-          let _ = {
-            time: this.parseDate(_.time),
-            color: [0, 255, 255],
-          };
-          return (
-            "name" in _ && (_.name = this.parseString(_.name)),
-            "params" in _ &&
-              (_.params = this.parseDict(
-                _.params,
-                this.parseString.bind(this),
-              )),
-            "color" in _ && (_.color = this.parseColor(_.color)),
-            _
-          );
-        }
-        parseSoundTrack(_) {
-          let _ = {};
-          return (
-            "song_title" in _ &&
-              (_.song_title = this.parseString(_.song_title)),
-            "appid" in _ && (_.appid = this.parseNumber(_.appid)),
-            "song_index" in _ &&
-              (_.song_index = this.parseNumber(_.song_index)),
-            _
-          );
-        }
-        parseBroadcastGameData(_) {
-          let _ = {
-            appid: 0,
-            brackets: [],
-            markers: [],
-          };
-          return (
-            "appid" in _ && (_.appid = this.parseNumber(_.appid)),
-            "brackets" in _ &&
-              (_.brackets = this.parseArray(
-                _.brackets,
-                this.parseBracket.bind(this),
-              )),
-            "markers" in _ &&
-              (_.markers = this.parseArray(
-                _.markers,
-                this.parseMarker.bind(this),
-              )),
-            "soundtrack" in _ &&
-              (_.soundtrack = this.parseSoundTrack(_.soundtrack)),
-            _
-          );
-        }
-        convertTime(_, _) {
-          return _ - _ / 1e3;
-        }
-        UpdateMarkers(_, _) {
-          let _ = [],
-            _ = [];
-          for (const _ of _)
-            _.persistent
-              ? (_.length > 0 &&
-                  (_[_.length - 1].nTimeEnd = this.convertTime(_.Timestamp, _)),
-                _.name.length > 0 &&
-                  _.push({
-                    strTemplateName: _.name,
-                    nTimeStart: this.convertTime(_.Timestamp, _),
-                    nTimeEnd: -1,
-                    color: _(_.color_r, _.color_g, _.color_b),
-                  }))
-              : __webpack_require__.push({
-                  strTemplateName: _.name,
-                  nTime: this.convertTime(_.Timestamp, _),
-                  color: _(_.color_r, _.color_g, _.color_b),
-                });
-          return {
-            rgMarkers: _,
-            rgSegments: _,
-          };
-        }
-        UpdateRegions(_) {
-          let _ = [];
-          for (const _ of _)
-            _.push({
-              strTemplateName: _.name,
-              min: {
-                _: _.min_x,
-                _: _.min_y,
-              },
-              max: {
-                _: _.max_x,
-                _: _.max_y,
-              },
-              behavior: _.behavior,
-            });
-          return _;
-        }
-        UpdateSoundtrack(_, _) {}
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ {
-        m_elVideo;
-        m_peerConnection = null;
-        m_strBroadcastSteamID = "";
-        m_ulWebRTCSessionID = "";
-        m_schCandidateTimer = new _._();
-        m_nHostCandidateGeneration = 0;
-        m_nCandidateUpdateIntervalMS = 0;
-        m_listeners = new _._();
-        m_bFirstPlay = !0;
-        m_bStatsViewVisible = !1;
-        m_schCaptureDisplayStatsTrigger = new _._();
-        m_stats = new _._();
-        constructor(_) {
-          (0, _._)(this), (this.m_elVideo = _);
-        }
-        async PlayMPD(_, _, _) {}
-        async PlayWebRTC(_, _, _, _, _) {
-          (this.m_strBroadcastSteamID = _),
-            (this.m_ulWebRTCSessionID = _),
-            (this.m_nHostCandidateGeneration = 0),
-            this.m_listeners.AddEventListener(
-              this.m_elVideo,
-              "pause",
-              this.OnVideoPause,
-            ),
-            this.m_listeners.AddEventListener(
-              this.m_elVideo,
-              "resize",
-              this.OnVideoResize,
-            );
-          const _ = new RTCPeerConnection({
-            iceServers: [
-              {
-                urls: ["stun:" + _],
-              },
-              {
-                urls: ["turn:" + _],
-                username: _,
-                credential: _,
-              },
-            ],
-            iceTransportPolicy: "relay",
-          });
-          (this.m_peerConnection = _),
-            (_.oniceconnectionstatechange = ((_) => {
-              this.m_peerConnection &&
-                (console.log(
-                  "BroadcastWebRTC: ICE connection state changed to " +
-                    this.m_peerConnection.iceConnectionState,
-                ),
-                "failed" === this.m_peerConnection.iceConnectionState
-                  ? this.OnWebRTCConnectionFailed()
-                  : "disconnected" ===
-                      this.m_peerConnection.iceConnectionState &&
-                    this.OnWebRTCConnectionRetry());
-            }).bind(this)),
-            (_.onicecandidate = ((_) => {
-              if (_.candidate) {
-                const _ = new FormData();
-                _.append("broadcaststeamid", this.m_strBroadcastSteamID),
-                  _.append("webrtc_session_id", this.m_ulWebRTCSessionID),
-                  _.append("sdp_mid", String(_.candidate.sdpMid)),
-                  _.append(
-                    "sdp_mline_index",
-                    String(_.candidate.sdpMLineIndex),
-                  ),
-                  _.append("candidate", _.candidate.candidate),
-                  _()
-                    .post(
-                      `${_._.CHAT_BASE_URL}broadcast/addbroadcastwebrtccandidate`,
-                      _,
-                    )
-                    .then((_) => {
-                      const _ = _.data;
-                      (_.success && _.success == _._) ||
-                        console.log(
-                          "Failed to add a WebRTC session ICE candidate: " +
-                            String(_.success),
-                        );
-                    })
-                    .catch((_) =>
-                      console.log(
-                        "Failed to add a WebRTC session ICE candidate" + _,
-                      ),
-                    );
-              }
-            }).bind(this)),
-            (_.ontrack = ((_) => {
-              "video" === _.track.kind &&
-                ((this.m_elVideo.src = ""),
-                (this.m_elVideo.srcObject = _.streams[0]),
-                this.Play());
-            }).bind(this)),
-            _.setRemoteDescription({
-              type: "offer",
-              sdp: _,
-            }).then(async () => {
-              await _.setLocalDescription(await _.createAnswer());
-              const _ = new FormData();
-              _.append("broadcaststeamid", this.m_strBroadcastSteamID),
-                _.append("webrtc_session_id", this.m_ulWebRTCSessionID),
-                _.append("answer", _.localDescription?.sdp ?? "");
-              try {
-                await _()
-                  .post(
-                    `${_._.CHAT_BASE_URL}broadcast/setbroadcastwebrtcanswer`,
-                    _,
-                  )
-                  .then((_) => {
-                    const _ = _.data;
-                    if (!_.success || _.success != _._)
-                      throw new Error(String(_.success));
-                  });
-              } catch (_) {
-                return (
-                  console.log("Failed to set the WebRTC session answer: " + _),
-                  void this.OnWebRTCConnectionRetry()
-                );
-              }
-              (this.m_nCandidateUpdateIntervalMS = 250),
-                this.m_schCandidateTimer.Schedule(
-                  this.m_nCandidateUpdateIntervalMS,
-                  () => this.GetHostCandidates(),
-                );
-            });
-        }
-        async GetHostCandidates() {
-          const _ = new FormData();
-          _.append("broadcaststeamid", this.m_strBroadcastSteamID),
-            _.append("webrtc_session_id", this.m_ulWebRTCSessionID),
-            _.append(
-              "candidate_generation",
-              String(this.m_nHostCandidateGeneration),
-            );
-          try {
-            await _()
-              .post(
-                `${_._.CHAT_BASE_URL}broadcast/getbroadcastwebrtccandidates`,
-                _,
-              )
-              .then((_) => {
-                const _ = _.data,
-                  _ = _.data,
-                  _ = this.m_peerConnection;
-                if (!_.success || _.success != _._)
-                  throw new Error(String(_.success));
-                _ && _.candidate_generation > this.m_nHostCandidateGeneration
-                  ? (_.candidates.forEach((_) => {
-                      const _ = new RTCIceCandidate({
-                        sdpMid: _.sdp_mid,
-                        sdpMLineIndex: _.sdp_mline_index,
-                        candidate: _.candidate,
-                      });
-                      _.addIceCandidate(_).catch((_) => console.error(_));
-                    }),
-                    (this.m_nHostCandidateGeneration = _.candidate_generation))
-                  : this.m_nHostCandidateGeneration > 0 &&
-                    (this.m_nCandidateUpdateIntervalMS *= 2);
-              });
-          } catch (_) {
-            return (
-              console.log("Failed to get WebRTC session ICE candidates" + _),
-              void this.OnWebRTCConnectionRetry()
-            );
-          }
-          this.m_schCandidateTimer.Schedule(
-            this.m_nCandidateUpdateIntervalMS,
-            () => this.GetHostCandidates(),
-          );
-        }
-        DispatchEvent(_, _ = null) {
-          let _ = new CustomEvent(_, {
-            cancelable: !0,
-            bubbles: !0,
-            detail: _,
-          });
-          this.m_elVideo.dispatchEvent(_);
-        }
-        OnWebRTCConnectionRetry() {
-          this.DispatchEvent("valve-webrtcretry");
-        }
-        OnWebRTCConnectionFailed() {
-          this.DispatchEvent("valve-webrtcfailed");
-        }
-        Close() {
-          this.m_listeners.Unregister(),
-            this.m_schCandidateTimer.Cancel(),
-            this.m_schCaptureDisplayStatsTrigger.Cancel(),
-            this.m_peerConnection &&
-              (this.m_peerConnection.close(), (this.m_peerConnection = null)),
-            this.m_elVideo.pause(),
-            (this.m_elVideo.srcObject = null),
-            this.m_stats.GetFPSMonitor().Close(),
-            (this.m_bFirstPlay = !0);
-        }
-        IsBuffering() {
-          return !1;
-        }
-        GetCurrentPlayTime() {
-          return 0;
-        }
-        GetLiveContentStartTime() {
-          return new Date(0);
-        }
-        GetAvailableVideoStartTime() {
-          return 0;
-        }
-        GetBufferedLiveEdgeTime() {
-          return 0;
-        }
-        IsPaused() {
-          return this.m_elVideo.paused;
-        }
-        async Play() {
-          const _ = this.m_bFirstPlay;
-          this.m_bFirstPlay = !1;
-          let _ = !1;
-          const _ = () => {
-            (_ = !0),
-              this.m_stats
-                .GetFPSMonitor()
-                .StartTracking(() =>
-                  this.m_stats.ExtractFrameInfo(this.m_elVideo),
-                );
-          };
-          try {
-            await this.m_elVideo.play(), __webpack_require__();
-          } catch (_) {
-            _.name;
-          }
-          !_ && _ && this.DispatchEvent("valve-userinputneeded");
-        }
-        Pause() {
-          this.m_elVideo.pause();
-        }
-        CanSeek() {
-          return !1;
-        }
-        SeekAndPlay(_) {
-          return this.Play(), 0;
-        }
-        Seek(_) {
-          return 0;
-        }
-        JumpTime(_) {
-          return 0;
-        }
-        IsMuted() {
-          return this.m_elVideo.muted;
-        }
-        SetMuted(_) {
-          this.m_elVideo.muted = _;
-        }
-        SetVolume(_) {
-          (_ = _._(_, 0, 1)), (this.m_elVideo.volume = _);
-        }
-        GetVolume() {
-          return this.m_elVideo.volume;
-        }
-        GetDASHPlayerStats() {
-          return this.m_stats;
-        }
-        SetStatsViewIsVisible(_) {
-          _ && !this.m_bStatsViewVisible
-            ? (this.CaptureStatsForDisplay(),
-              this.m_schCaptureDisplayStatsTrigger.Schedule(
-                250,
-                this.CaptureStatsForDisplay,
-              ))
-            : !_ &&
-              this.m_bStatsViewVisible &&
-              this.m_schCaptureDisplayStatsTrigger.Cancel(),
-            (this.m_bStatsViewVisible = _);
-        }
-        CaptureStatsForDisplay() {
-          this.m_stats.SetHTMLVideoPlayerDisplay(
-            this.m_elVideo.videoWidth,
-            this.m_elVideo.videoHeight,
-            this.m_elVideo.clientWidth,
-            this.m_elVideo.clientHeight,
-          ),
-            this.m_schCaptureDisplayStatsTrigger.Schedule(
-              250,
-              this.CaptureStatsForDisplay,
-            );
-        }
-        OnVideoPause(_) {
-          this.m_stats.GetFPSMonitor().Close();
-        }
-        OnVideoResize(_) {
-          this.m_stats.GetFPSMonitor().SetWindowResized();
-        }
-        GetVideoRepresentations() {
-          let _ = [];
-          return (
-            _.push({
-              _: _._,
-              displayName: "Auto",
-              selected: !0,
-            }),
-            _
-          );
-        }
-        SetVideoRepresentation(_) {}
-        IsLiveContent() {
-          return !0;
-        }
-        BHasTimedText() {
-          return !1;
-        }
-      }
-      (0, _._)([_._], _.prototype, "PlayWebRTC", null),
-        (0, _._)([_._.bound], _.prototype, "CaptureStatsForDisplay", null),
-        (0, _._)([_._], _.prototype, "OnVideoPause", null),
-        (0, _._)([_._], _.prototype, "OnVideoResize", null);
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = 7;
-      var _, _;
-      !(function (_) {
-        (_[(_.None = 0)] = "None"),
-          (_[(_.Unlocking = 1)] = "Unlocking"),
-          (_[(_.Loading = 2)] = "Loading"),
-          (_[(_.Ready = 3)] = "Ready"),
-          (_[(_.Error = 4)] = "Error");
-      })(_ || (_ = {}));
-      class _ {
-        m_rtUnlockTime = 0;
-        m_schUnlockTimeout = new _._();
-        m_broadcast;
-        m_video;
-        UnlockH264(_, _) {
-          this.BCanUnlockH264()
-            ? (_.SetState(_.Unlocking, ""),
-              console.log("Unlocking H.264 for broadcast video playback"),
-              this.RequestUnlockH264(),
-              (this.m_broadcast = _),
-              (this.m_video = _),
-              (this.m_rtUnlockTime = Date.now()),
-              this.m_schUnlockTimeout.Schedule(100, () =>
-                this.CheckUnlockState(),
-              ))
-            : _.SetState(_.Error, (0, _._)("#BroadcastWatch_MinBrowser"));
-        }
-        BCanUnlockH264() {
-          return (0, _._)("RemotePlay.UnlockH264")
-            ? (console.log("Client supports direct H.264 unlock"), !0)
-            : (0, _._)("BrowserView.PostMessageToParent")
-              ? (console.log("Client supports browserview H.264 unlock"), !0)
-              : (console.log("Client does not support H.264 unlock"), !1);
-        }
-        RequestUnlockH264() {
-          (0, _._)("RemotePlay.UnlockH264")
-            ? (console.log("Requesting direct H.264 unlock"),
-              SteamClient.RemotePlay.UnlockH264())
-            : (0, _._)("BrowserView.PostMessageToParent")
-              ? (console.log("Requesting browserview unlock"),
-                SteamClient.BrowserView.PostMessageToParent(
-                  "UnlockH264Request",
-                  "CUnlockH264Helper",
-                ))
-              : console.log(
-                  "Failed to request H.264 unlock: no method supported",
-                );
-        }
-        CheckUnlockState() {
-          if (this.m_broadcast.m_eWatchState != _.Unlocking) return;
-          if ((0, _._)() || (0, _._)())
-            return (
-              console.log("Unlocking H.264 successful"),
-              this.m_broadcast.SetState(_.None, ""),
-              void this.m_video.Restart()
-            );
-          Date.now() - this.m_rtUnlockTime > 6e3
-            ? (console.log(
-                "Unlocking H.264 timed out (Steam client or servers offline?)",
-              ),
-              this.m_broadcast.SetState(
-                _.Error,
-                (0, _._)("#BroadcastWatch_MinBrowser"),
-              ))
-            : this.m_schUnlockTimeout.Schedule(100, () =>
-                this.CheckUnlockState(),
-              );
-        }
-      }
-      class _ {
-        constructor() {
-          (0, _._)(this);
-        }
-        m_steamIDBroadcast = "";
-        m_ulBroadcastID = "";
-        m_ulViewerToken = "";
-        m_strCDNAuthUrlParameters = void 0;
-        m_bWebRTC = !1;
-        m_data;
-        m_eWatchState = _.None;
-        m_strStateDescription = "";
-        m_rgVideos = [];
-        m_schManifestTimeout = new _._();
-        m_schHeartbeatTimeout = new _._();
-        SetState(_, _ = "") {
-          (this.m_eWatchState = _),
-            (this.m_strStateDescription = _),
-            _ == _.Error && console.log(this.m_strStateDescription);
-        }
-      }
-      (0, _._)([_._], _.prototype, "m_ulBroadcastID", void 0),
-        (0, _._)([_._], _.prototype, "m_eWatchState", void 0),
-        (0, _._)([_._], _.prototype, "m_strStateDescription", void 0),
-        (0, _._)([_._], _.prototype, "SetState", null);
-      class _ {
-        m_steamIDBroadcast = "";
-        m_bInitialized = !1;
-        m_strTitle = "";
-        m_strAppId = "" + _;
-        m_nAppID = _;
-        m_strAppTitle = "";
-        m_strThumbnailUrl = "";
-        m_nViewerCount = 0;
-        m_bIsOnline = !1;
-        m_schUpdateTimeout = new _._();
-        m_nRefCount = 0;
-        constructor(_) {
-          (0, _._)(this), (this.m_steamIDBroadcast = _);
-        }
-      }
-      (0, _._)([_._], _.prototype, "m_bInitialized", void 0),
-        (0, _._)([_._], _.prototype, "m_strTitle", void 0),
-        (0, _._)([_._], _.prototype, "m_strAppId", void 0),
-        (0, _._)([_._], _.prototype, "m_nAppID", void 0),
-        (0, _._)([_._], _.prototype, "m_strAppTitle", void 0),
-        (0, _._)([_._], _.prototype, "m_strThumbnailUrl", void 0),
-        (0, _._)([_._], _.prototype, "m_nViewerCount", void 0),
-        (0, _._)([_._], _.prototype, "m_bIsOnline", void 0);
-      class _ {
-        constructor() {
-          (0, _._)(this);
-        }
-        m_eWatchState = _.None;
-        m_strStateDescription = "";
-        m_rgVideos = [];
-        SetState(_, _ = "") {
-          (this.m_eWatchState = _),
-            (this.m_strStateDescription = _),
-            _ == _.Error && console.log(this.m_strStateDescription);
-        }
-      }
-      (0, _._)([_._], _.prototype, "m_eWatchState", void 0),
-        (0, _._)([_._], _.prototype, "m_strStateDescription", void 0),
-        (0, _._)([_._], _.prototype, "SetState", null);
-      class _ extends _ {
-        m_clipID;
-        m_data;
-      }
-      class _ extends _ {
-        m_nAppIDVOD;
-        m_manifestURL;
-      }
-      class _ {
-        m_mapBroadcasts = new Map();
-        m_mapClips = new Map();
-        m_mapVODs = new Map();
-        m_activeVideo = null;
-        m_broadcastSettings = {
-          nVolume: 1,
-          bMuted: !1,
-          ulViewerToken: "0",
-        };
-        m_schSaveSettings = new _._();
-        m_broadcastInfos = {};
-        constructor() {
-          (0, _._)(this), this.LoadBroadcastSettings();
-        }
-        GetBroadcastState(_) {
-          if (_.IsBroadcastClip()) {
-            let _ = this.m_mapClips.get(_.GetBroadcastClipID());
-            return _ ? _.m_eWatchState : _.None;
-          }
-          if (_.IsBroadcastVOD()) {
-            const _ = this.m_mapVODs.get(_.GetBroadcastAppIDVOD());
-            return _ ? _.m_eWatchState : _.None;
-          }
-          {
-            let _ = this.m_mapBroadcasts.get(_.GetBroadcastSteamID());
-            return _ ? _.m_eWatchState : _.None;
-          }
-        }
-        GetBroadcastStateDescription(_) {
-          if (_.IsBroadcastClip()) {
-            let _ = this.m_mapClips.get(_.GetBroadcastClipID());
-            return _ ? _.m_strStateDescription : "";
-          }
-          if (_.IsBroadcastVOD()) {
-            const _ = this.m_mapVODs.get(_.GetBroadcastAppIDVOD());
-            return _ ? _.m_strStateDescription : "";
-          }
-          {
-            let _ = this.m_mapBroadcasts.get(_.GetBroadcastSteamID());
-            return _ ? _.m_strStateDescription : "";
-          }
-        }
-        CreateBroadcastVideo(_, _, _, _) {
-          let _ = this.GetOrCreateBroadcast(_),
-            { nVolume: _, bMuted: _ } = this.m_broadcastSettings,
-            _ = new _(_, _, _, _);
-          if (
-            (_.SetBroadcastSteamID(_),
-            _.m_rgVideos.push(_),
-            (_.m_bWebRTC = _),
-            !(0, _._)() && !(0, _._)())
-          ) {
-            return new _().UnlockH264(_, _), _;
-          }
-          return _;
-        }
-        CreateClipVideo(_, _, _) {
-          let _ = this.GetOrCreateClip(_),
-            { nVolume: _, bMuted: _ } = this.m_broadcastSettings,
-            _ = new _(_, _, _, _);
-          if (
-            (_.SetBroadcastClipID(_),
-            _.m_rgVideos.push(_),
-            !(0, _._)() && !(0, _._)())
-          ) {
-            return new _().UnlockH264(_, _), _;
-          }
-          return _;
-        }
-        CreateVODVideo(_, _, _) {
-          let _ = this.GetOrCreateVOD(_),
-            { nVolume: _, bMuted: _ } = this.m_broadcastSettings,
-            _ = new _(_, _, _, _);
-          if (
-            (_.SetBroadcastAppIDVOD(_),
-            _.m_rgVideos.push(_),
-            !(0, _._)() && !(0, _._)())
-          ) {
-            return new _().UnlockH264(_, _), _;
-          }
-          return _;
-        }
-        StartVideo(_) {
-          if (_.IsBroadcastClip()) {
-            console.log(`Starting clip for ${_.GetBroadcastClipID()}`);
-            let _ = this.m_mapClips.get(_.GetBroadcastClipID());
-            if (!_) return;
-            this.SetActiveVideo(_),
-              _.m_eWatchState == _.None
-                ? this.GetClipManifest(_, _.GetWatchLocation())
-                : _.m_eWatchState == _.Ready && _.StartClip(_);
-          } else if (_.IsBroadcastVOD()) {
-            console.log(`Starting VOD for ${_.GetBroadcastAppIDVOD()}`);
-            let _ = this.m_mapVODs.get(_.GetBroadcastAppIDVOD());
-            if (!_) return;
-            this.SetActiveVideo(_),
-              _.m_eWatchState == _.None
-                ? this.GetVODManifest(_, _.GetWatchLocation())
-                : _.m_eWatchState == _.Ready && _.StartVOD(_);
-          } else {
-            let _ = this.m_mapBroadcasts.get(_.GetBroadcastSteamID());
-            if (!_) return;
-            this.SetActiveVideo(_),
-              _.m_eWatchState == _.None
-                ? this.GetBroadcastManifest(_, _.GetWatchLocation())
-                : _.m_eWatchState == _.Ready && _.StartBroadcast(_);
-          }
-        }
-        SetActiveVideo(_) {
-          this.m_mapBroadcasts.forEach((_) => {
-            for (let _ of _.m_rgVideos)
-              _ != _ && __webpack_require__.StopPlaybackTillUserInput();
-          }),
-            this.m_mapClips.forEach((_) => {
-              for (let _ of _.m_rgVideos)
-                _ != _ && __webpack_require__.StopPlaybackTillUserInput();
-            }),
-            (this.m_activeVideo = _);
-        }
-        PauseAllVideo() {
-          this.m_mapBroadcasts.forEach((_) => {
-            for (let _ of _.m_rgVideos) _.StopPlaybackTillUserInput();
-          });
-        }
-        async StopVideo(_) {
-          let _ = _.GetBroadcastSteamID(),
-            _ = this.m_mapBroadcasts.get(_);
-          _.Stop(),
-            _ &&
-              (_.m_ulBroadcastID &&
-                (async function (_, _, _) {
-                  if (!_) return;
-                  let _ = new FormData();
-                  _.append("steamid", _),
-                    _.append("broadcastid", _),
-                    _.append("viewertoken", _);
-                  try {
-                    await _().post(
-                      _._.CHAT_BASE_URL + "broadcast/stopwatching",
-                      _,
-                    );
-                  } catch {}
-                })(
-                  _,
-                  _.m_ulBroadcastID,
-                  this.m_broadcastSettings.ulViewerToken,
-                ),
-              _._(_.m_rgVideos, (_) => _ == _),
-              this.RemoveBroadcastIfUnused(_));
-        }
-        StartInfo(_) {
-          const _ = this.GetOrCreateBroadcastInfo(_);
-          return (
-            _.m_nRefCount++,
-            (_.m_bInitialized && _.m_schUpdateTimeout.IsScheduled()) ||
-              this.LoadBroadcastInfo(_),
-            _
-          );
-        }
-        StopInfo(_) {
-          _.m_nRefCount--;
-        }
-        GetOrCreateBroadcastInfo(_) {
-          if (!_) {
-            return new _("");
-          }
-          if (!this.m_broadcastInfos[_]) {
-            const _ = (0, _._)(new _(_));
-            this.m_broadcastInfos[_] = _;
-          }
-          return this.m_broadcastInfos[_];
-        }
-        GetOrCreateBroadcast(_) {
-          let _ = this.m_mapBroadcasts.get(_);
-          return (
-            _ ||
-            ((_ = new _()),
-            (_.m_steamIDBroadcast = _),
-            (_.m_eWatchState = _.None),
-            this.m_mapBroadcasts.set(_, _),
-            _)
-          );
-        }
-        GetBroadcast(_) {
-          return this.m_mapBroadcasts.get(_);
-        }
-        GetBroadcastClip(_) {
-          return this.m_mapClips.get(_);
-        }
-        GetBroadcastVOD(_) {
-          return this.m_mapVODs.get(_);
-        }
-        RemoveBroadcastIfUnused(_) {
-          _.m_rgVideos.length ||
-            (_.m_schHeartbeatTimeout.Cancel(),
-            _.m_schManifestTimeout.Cancel(),
-            this.m_mapBroadcasts.delete(_.m_steamIDBroadcast));
-        }
-        GetOrCreateClip(_) {
-          let _ = this.m_mapClips.get(_);
-          return (
-            _ ||
-            ((_ = new _()),
-            (_.m_clipID = _),
-            (_.m_eWatchState = _.None),
-            this.m_mapClips.set(_, _),
-            _)
-          );
-        }
-        GetOrCreateVOD(_) {
-          let _ = this.m_mapVODs.get(_);
-          return (
-            _ ||
-            ((_ = new _()),
-            (_.m_nAppIDVOD = _),
-            (_.m_eWatchState = _.None),
-            this.m_mapVODs.set(_, _),
-            _)
-          );
-        }
-        async LoadBroadcastInfo(_) {
-          let _ = "0",
-            _ = this.m_mapBroadcasts.get(_.m_steamIDBroadcast);
-          if ((_ && (_ = _.m_ulBroadcastID), 0 == _.m_nRefCount)) return;
-          const _ = {
-            steamid: _.m_steamIDBroadcast,
-            broadcastid: _,
-            location:
-              _ &&
-              _.m_rgVideos &&
-              _.m_rgVideos[0] &&
-              _.m_rgVideos[0].GetWatchLocation(),
-          };
-          try {
-            const _ = await _().get(
-              `${_._.CHAT_BASE_URL}broadcast/getbroadcastinfo/`,
-              {
-                params: _,
-              },
-            );
-            if (!_ || !_.data || !_.data.success || _.data.success != _._)
-              return void (_.m_bInitialized = !0);
-            const _ = _.data;
-            (0, _._)(() => {
-              (_.m_bInitialized = !0),
-                (_.m_strTitle = _.title),
-                (_.m_strAppId = _.appid),
-                (_.m_nAppID = Number.parseInt(_.appid)),
-                (_.m_strAppTitle = _.app_title),
-                (_.m_strThumbnailUrl = _.thumbnail_url),
-                (_.m_nViewerCount = _.viewer_count),
-                (_.m_bIsOnline = _.is_online),
-                !_.m_strTitle &&
-                  _._ &&
-                  ((_.m_strTitle = _._.name),
-                  (_.m_strAppTitle = _._.appName || _._.name));
-              const _ = _.update_interval;
-              _ &&
-                "number" == typeof _ &&
-                _.m_schUpdateTimeout.Schedule(1e3 * _, () =>
-                  this.LoadBroadcastInfo(_),
-                );
-            });
-          } catch (_) {
-            console.error(_);
-          }
-        }
-        DelayedGetBroadcastManifest(_, _, _ = Date.now()) {
-          _.m_schManifestTimeout.Schedule(5e3, () =>
-            this.GetBroadcastManifest(_, _, _),
-          );
-        }
-        async GetBroadcastManifest(_, _, _ = Date.now()) {
-          _.SetState(_.Loading, "");
-          let _ = {
-              steamid: _.m_steamIDBroadcast,
-              broadcastid: 0,
-              viewertoken: this.m_broadcastSettings.ulViewerToken,
-              watchlocation: _,
-              sessionid: (0, _._)(),
-              is_webrtc: _.m_bWebRTC,
-            },
-            _ = null;
-          try {
-            _ = await _().get(
-              _._.CHAT_BASE_URL + "broadcast/getbroadcastmpd/",
-              {
-                params: _,
-                withCredentials: !0,
-              },
-            );
-          } catch (_) {
-            let _ = (0, _._)(_);
-            console.error(
-              "Failed to get broadcast manifest!" + _.strErrorMsg,
-              _,
-            );
-          }
-          if (!_ || 200 != _.status)
-            return void _.SetState(
-              _.Error,
-              (0, _._)("#BroadcastWatch_RequestFailed"),
-            );
-          let _ = _.data;
-          _.viewertoken && this.SetViewerToken(_.viewertoken);
-          let _ = _.success;
-          if ("ready" == _)
-            _.SetState(_.Ready),
-              (_.m_ulBroadcastID = _.broadcastid),
-              (_.m_ulViewerToken = this.m_broadcastSettings.ulViewerToken),
-              (_.m_strCDNAuthUrlParameters = _.cdn_auth_url_parameters),
-              (_.m_bWebRTC = _.is_webrtc),
-              (_.m_data = _),
-              this.LoadBroadcast(_),
-              setTimeout(() => {
-                _.m_schHeartbeatTimeout.Schedule(
-                  1e3 * _.m_data.heartbeat_interval,
-                  () => this.HeartbeatBroadcast(_),
-                );
-              }, 3e4 * Math.random());
-          else if ("waiting" == _) {
-            _.SetState(
-              _.Loading,
-              (0, _._)("#BroadcastWatch_WaitingForResponse"),
-            );
-            let _ = Date.now() - _;
-            if (_ > 6e4)
-              return void _.SetState(
-                _.Error,
-                (0, _._)("#BroadcastWatch_NotAvailable"),
-              );
-            let _ = _ > 3e4 ? _.retry : 5e3;
-            _.m_schManifestTimeout.Schedule(_, () =>
-              this.GetBroadcastManifest(_, _, _),
-            );
-          } else
-            "waiting_for_start" == _
-              ? (_.SetState(
-                  _.Loading,
-                  (0, _._)("#BroadcastWatch_WaitingForStart"),
-                ),
-                _.m_schManifestTimeout.Schedule(_.retry, () =>
-                  this.GetBroadcastManifest(_, _, _),
-                ))
-              : "waiting_for_reconnect" == _
-                ? (_.SetState(
-                    _.Loading,
-                    (0, _._)("#BroadcastWatch_WaitingForReconnect"),
-                  ),
-                  _.m_schManifestTimeout.Schedule(_.retry, () =>
-                    this.GetBroadcastManifest(_, _, _),
-                  ))
-                : "end" == _
-                  ? _.SetState(
-                      _.Error,
-                      (0, _._)("#BroadcastWatch_NotAvailable"),
-                    )
-                  : "too_many_broadcasts" == _
-                    ? _.SetState(
-                        _.Error,
-                        (0, _._)("#BroadcastWatch_TooManyBroadcasts"),
-                      )
-                    : "system_not_supported" == _
-                      ? _.SetState(
-                          _.Error,
-                          (0, _._)("#BroadcastWatch_SystemNotSupported"),
-                        )
-                      : "user_restricted" == _
-                        ? _.SetState(
-                            _.Error,
-                            (0, _._)("#BroadcastWatch_UserRestricted"),
-                          )
-                        : "poor_upload_quality" == _
-                          ? _.SetState(
-                              _.Error,
-                              (0, _._)("#BroadcastWatch_PoorUploadQuality"),
-                            )
-                          : "request_failed" == _
-                            ? _.SetState(
-                                _.Error,
-                                (0, _._)("#BroadcastWatch_RequestFailed"),
-                              )
-                            : "too_many_viewers" == _
-                              ? _.SetState(
-                                  _.Error,
-                                  (0, _._)("#BroadcastWatch_TooManyViewers"),
-                                )
-                              : _.SetState(
-                                  _.Error,
-                                  (0, _._)("#BroadcastWatch_NotAvailable"),
-                                );
-        }
-        async GetClipManifest(_, _) {
-          _.SetState(_.Loading, "");
-          let _ = {
-              clipid: _.m_clipID,
-              watchlocation: _,
-              sessionid: (0, _._)(),
-            },
-            _ = null;
-          try {
-            _ = await _().get(_._.CHAT_BASE_URL + "broadcast/getclipdetails", {
-              params: _,
-              withCredentials: !0,
-            });
-          } catch (_) {
-            console.error(_), console.log("Failed to get clip manifest!");
-          }
-          if (!_ || 200 != _.status)
-            return void _.SetState(
-              _.Error,
-              (0, _._)("#BroadcastWatch_RequestFailed"),
-            );
-          let _ = _.data;
-          _.success == _._
-            ? (_.SetState(_.Ready), (_.m_data = _), this.LoadClip(_))
-            : _.SetState(_.Error, (0, _._)("#BroadcastWatch_RequestFailed"));
-        }
-        async GetVODManifest(_, _) {
-          _.SetState(_.Loading, "");
-          let _ = await _._.fetchQuery((0, _._)(_.m_nAppIDVOD)).catch((_) => {
-            console.error(
-              "BroadcastWatchStore:GetVODManifest: Failed to load VOD " +
-                _.m_nAppIDVOD,
-              _,
-            );
-          });
-          _
-            ? (_.SetState(_.Ready),
-              (_.m_manifestURL = _.video_url),
-              this.LoadVOD(_))
-            : _.SetState(_.Error, (0, _._)("#BroadcastWatch_RequestFailed"));
-        }
-        async HeartbeatBroadcast(_) {
-          let _ = new FormData();
-          _.append("steamid", _.m_steamIDBroadcast),
-            _.append("broadcastid", _.m_ulBroadcastID),
-            _.append("viewertoken", this.m_broadcastSettings.ulViewerToken),
-            _().post(_._.CHAT_BASE_URL + "broadcast/heartbeat/", _),
-            _.m_schHeartbeatTimeout.Schedule(
-              1e3 * _.m_data.heartbeat_interval,
-              () => this.HeartbeatBroadcast(_),
-            );
-        }
-        LoadBroadcast(_) {
-          const _ = this.m_activeVideo;
-          _ &&
-            _.m_rgVideos.findIndex((_) => _ == _) >= 0 &&
-            _.StartBroadcast(_);
-        }
-        LoadClip(_) {
-          const _ = this.m_activeVideo;
-          _ && _.m_rgVideos.findIndex((_) => _ == _) >= 0 && _.StartClip(_);
-        }
-        LoadVOD(_) {
-          const _ = this.m_activeVideo;
-          _ && _.m_rgVideos.findIndex((_) => _ == _) >= 0 && _.StartVOD(_);
-        }
-        BroadcastDownloadFailed(_, _ = !0, _ = _._.Invalid) {
-          _.Stop();
-          let _ = this.m_mapBroadcasts.get(_.GetBroadcastSteamID());
-          _ &&
-            _.m_eWatchState != _.Loading &&
-            (_.m_bWebRTC && _ && (_.m_bWebRTC = !1),
-            _ == _._.StreamGone
-              ? this.DelayedGetBroadcastManifest(_, _.GetWatchLocation())
-              : this.GetBroadcastManifest(_, _.GetWatchLocation()));
-        }
-        UserInputClickVideo(_) {
-          if (
-            this.m_activeVideo != _ &&
-            (this.PauseAllVideo(),
-            (this.m_activeVideo = _),
-            !_.IsBroadcastClip() && !_.IsBroadcastVOD())
-          ) {
-            let _ = this.m_mapBroadcasts.get(_.GetBroadcastSteamID());
-            _ && this.GetBroadcastManifest(_, _.GetWatchLocation());
-          }
-          _.UserInputClick();
-        }
-        LoadBroadcastSettings() {
-          if (!window.localStorage) return;
-          let _ = window.localStorage.getItem("broadcastSettings");
-          if (!_) return;
-          let _ = JSON.parse(_);
-          if (!_) return;
-          Object.assign(this.m_broadcastSettings, _);
-          let _ = this.m_broadcastSettings;
-          (_.bMuted = !!_.bMuted),
-            (_.nVolume = _._(_.nVolume, 0, 1)),
-            "string" != typeof _.ulViewerToken && (_.ulViewerToken = "0");
-        }
-        SaveBroadcastSettings() {
-          window.localStorage &&
-            this.m_schSaveSettings.Schedule(1e3, () => {
-              try {
-                window.localStorage.setItem(
-                  "broadcastSettings",
-                  JSON.stringify(this.m_broadcastSettings),
-                );
-              } catch (_) {}
-            });
-        }
-        SetViewerToken(_) {
-          this.m_broadcastSettings.ulViewerToken != _ &&
-            ((this.m_broadcastSettings.ulViewerToken = _),
-            this.SaveBroadcastSettings());
-        }
-        GetViewerToken() {
-          return this.m_broadcastSettings.ulViewerToken;
-        }
-        SaveVolumeChange(_, _) {
-          (this.m_broadcastSettings.nVolume == _ &&
-            this.m_broadcastSettings.bMuted == _) ||
-            ((this.m_broadcastSettings.nVolume = _),
-            (this.m_broadcastSettings.bMuted = _),
-            this.SaveBroadcastSettings());
-        }
-      }
-      (0, _._)([_._], _.prototype, "m_mapBroadcasts", void 0),
-        (function (_) {
-          (_[(_.Timeline = 1)] = "Timeline"), (_[(_.Minimap = 2)] = "Minimap");
-        })(_ || (_ = {}));
-      class _ {
-        m_elVideo;
-        m_player = null;
-        m_listeners = new _._();
-        m_gameDataParser = null;
-        m_eWatchLocation = _._._;
-        m_bStartWithSubtitles = !1;
-        m_steamIDBroadcast = "";
-        m_BroadcastInfo = null;
-        m_broadcastClipID = "";
-        m_nBroadcastAppIDVOD = 0;
-        m_bPaused = !1;
-        m_nPlaybackTime = 0;
-        m_bBuffering = !1;
-        m_bOnLiveEdge = !1;
-        m_nVolume = 0;
-        m_bMuted = !1;
-        m_bUserInputNeeded = !1;
-        m_bIsReplay = !1;
-        m_nTimelineDuration = 1800;
-        m_nVideoStartPos = 0;
-        m_nVideoEndPos = 0;
-        m_editorStartTime = 0;
-        m_editorEndTime = 0;
-        m_rgMarkers = _._.array();
-        m_rgSegments = _._.array();
-        m_rgRegions = _._.array();
-        m_fnOnVideoEnd;
-        m_videoEndingTimer;
-        constructor(_, _, _, _) {
-          (0, _._)(this),
-            (this.m_elVideo = _),
-            (this.m_nVolume = _),
-            (this.m_bMuted = _),
-            (this.m_eWatchLocation = _);
-        }
-        SetBroadcastSteamID(_) {
-          this.m_steamIDBroadcast = _;
-        }
-        GetBroadcastSteamID() {
-          return this.m_steamIDBroadcast;
-        }
-        GetWatchLocation() {
-          return this.m_eWatchLocation;
-        }
-        IsPaused() {
-          return this.m_bPaused;
-        }
-        GetPlaybackTime() {
-          return this.m_nPlaybackTime;
-        }
-        SetStatsViewIsVisible(_) {
-          this.m_player && this.m_player.SetStatsViewIsVisible(_);
-        }
-        GetDASHPlayerStats() {
-          return this.m_player?.GetDASHPlayerStats();
-        }
-        BHasDASHStats() {
-          return null != this.m_player;
-        }
-        IsTimelineMapActive() {
-          return !1;
-        }
-        CanSeek() {
-          return this.m_player?.CanSeek() ?? !1;
-        }
-        IsBuffering() {
-          return this.m_bBuffering;
-        }
-        IsOnLiveEdge() {
-          return this.m_bOnLiveEdge;
-        }
-        GetVideoAvailableStartTime() {
-          return this.m_nVideoStartPos;
-        }
-        GetVolume() {
-          return this.m_nVolume;
-        }
-        GetUserInputNeeded() {
-          return this.m_bUserInputNeeded;
-        }
-        IsReplay() {
-          return this.m_bIsReplay;
-        }
-        IsBroadcastClip() {
-          return Boolean(this.m_broadcastClipID);
-        }
-        SetBroadcastClipID(_) {
-          this.m_broadcastClipID = _;
-        }
-        GetBroadcastClipID() {
-          return this.m_broadcastClipID;
-        }
-        IsBroadcastVOD() {
-          return Boolean(this.m_nBroadcastAppIDVOD);
-        }
-        SetBroadcastAppIDVOD(_) {
-          this.m_nBroadcastAppIDVOD = _;
-        }
-        GetBroadcastAppIDVOD() {
-          return this.m_nBroadcastAppIDVOD;
-        }
-        GetVideoRepresentations() {
-          return this.m_player ? this.m_player.GetVideoRepresentations() : [];
-        }
-        SetVideoRepresentation(_) {
-          this.m_player?.SetVideoRepresentation(_);
-        }
-        GetBroadcastInfo() {
-          return this.m_BroadcastInfo;
-        }
-        BHasTimedText() {
-          return this.m_player?.BHasTimedText() ?? !1;
-        }
-        BHasPlayer() {
-          return Boolean(this.m_player);
-        }
-        ListSubtitles() {
-          return this.m_elVideo.textTracks;
-        }
-        GetSubtitles() {
-          for (let _ = 0; _ < this.m_elVideo.textTracks.length; _++) {
-            const _ = this.m_elVideo.textTracks[_];
-            if ("showing" === _.mode) return _;
-          }
-          return null;
-        }
-        SetSubtitles(_) {
-          let _ = _ ? _._[_] : _.xPp;
-          this.m_player.SetSubtitles(_);
-        }
-        SetStartWithSubtitles(_) {
-          this.m_bStartWithSubtitles = _;
-        }
-        GetBroadcastState() {
-          return _.GetBroadcastState(this);
-        }
-        GetBroadcastStateDescription() {
-          return _.GetBroadcastStateDescription(this);
-        }
-        SetOnVideoCallback(_) {
-          this.m_fnOnVideoEnd = _;
-        }
-        InitPlayer() {
-          (0, _._)(!this.m_player, "Initialized twice?"),
-            this.m_listeners.AddEventListener(
-              this.m_elVideo,
-              "playing",
-              this.OnVideoPlaying,
-            ),
-            this.m_listeners.AddEventListener(
-              this.m_elVideo,
-              "pause",
-              this.OnVideoPause,
-            ),
-            this.m_listeners.AddEventListener(
-              this.m_elVideo,
-              "timeupdate",
-              this.OnVideoTimeUpdate,
-            ),
-            this.m_listeners.AddEventListener(
-              this.m_elVideo,
-              "volumechange",
-              this.OnVolumeUpdated,
-            ),
-            this.m_listeners.AddEventListener(
-              this.m_elVideo,
-              "valve-bufferupdate",
-              this.OnVideoTimeUpdate,
-            ),
-            this.m_listeners.AddEventListener(
-              this.m_elVideo,
-              "valve-gamedataupdate",
-              this.OnGameDataUpdate,
-            ),
-            this.m_listeners.AddEventListener(
-              this.m_elVideo,
-              "valve-downloadfailed",
-              this.OnDownloadFailed,
-            ),
-            this.m_listeners.AddEventListener(
-              this.m_elVideo,
-              "valve-webrtcretry",
-              this.OnWebRTCRetry,
-            ),
-            this.m_listeners.AddEventListener(
-              this.m_elVideo,
-              "valve-webrtcfailed",
-              this.OnWebRTCFailed,
-            ),
-            this.m_listeners.AddEventListener(
-              this.m_elVideo,
-              "valve-userinputneeded",
-              this.OnUserInputNeeded,
-            ),
-            (this.m_bPaused = !1),
-            (this.m_nPlaybackTime = 0),
-            (this.m_bBuffering = !1),
-            (this.m_nTimelineDuration = 1800),
-            (this.m_nVideoStartPos = 0),
-            (this.m_nVideoEndPos = 0),
-            this.m_rgMarkers.clear(),
-            this.m_rgSegments.clear(),
-            (this.m_bUserInputNeeded = !1),
-            (this.m_bIsReplay = !1);
-        }
-        Restart() {
-          this.IsMuted() ||
-            this.IsPaused() ||
-            this.GetUserInputNeeded() ||
-            this.Play();
-        }
-        StartBroadcast(_) {
-          if ((this.InitPlayer(), _.m_data.url)) {
-            let _ = new _._(this.m_elVideo);
-            _.SetAlwaysStartWithSubtitles(this.m_bStartWithSubtitles),
-              (this.m_player = _),
-              _.PlayMPD(
-                _.m_data.url,
-                _.m_data.hls_url,
-                void 0,
-                _.m_strCDNAuthUrlParameters,
-              );
-          } else {
-            let _ = new _(this.m_elVideo);
-            (this.m_player = _),
-              _.PlayWebRTC(
-                this.m_steamIDBroadcast,
-                _.m_ulViewerToken,
-                _.m_data.webrtc_session_id,
-                _.m_data.webrtc_turn_server,
-                _.m_data.webrtc_offer_sdp,
-              );
-          }
-          this.SetVolume(this.m_nVolume),
-            this.m_player?.SetMuted(this.m_bMuted);
-          let _ = this.m_player?.GetDASHPlayerStats();
-          _ &&
-            _.SetBroadcasterAndViewerInfo(
-              this.m_steamIDBroadcast,
-              _._.steamid,
-              _.m_ulBroadcastID,
-              _.m_ulViewerToken,
-            ),
-            (this.m_BroadcastInfo = _.StartInfo(this.m_steamIDBroadcast));
-        }
-        StartClip(_) {
-          this.InitPlayer();
-          let _ = new _._(this.m_elVideo);
-          _.SetAlwaysStartWithSubtitles(this.m_bStartWithSubtitles),
-            (this.m_player = _),
-            _.PlayMPD(_.m_data.clip_url),
-            this.SetVolume(this.m_nVolume),
-            this.m_player?.SetMuted(this.m_bMuted);
-        }
-        StartVOD(_) {
-          this.InitPlayer();
-          let _ = new _._(this.m_elVideo);
-          _.SetAlwaysStartWithSubtitles(this.m_bStartWithSubtitles),
-            (this.m_player = _),
-            _._.logged_in &&
-              _.m_nAppIDVOD &&
-              _.SetBookmarkAdapter(new _._(_.m_nAppIDVOD)),
-            _.m_manifestURL && _.PlayMPD(_.m_manifestURL),
-            this.SetVolume(this.m_nVolume),
-            this.m_player?.SetMuted(this.m_bMuted);
-        }
-        Stop() {
-          this.m_listeners.Unregister(),
-            this.m_BroadcastInfo &&
-              (_.StopInfo(this.m_BroadcastInfo), (this.m_BroadcastInfo = null)),
-            (this.m_gameDataParser = null),
-            this.m_player && (this.m_player.Close(), (this.m_player = null));
-        }
-        TogglePlayPause() {
-          !this.m_player || this.m_player.IsPaused()
-            ? this.Play()
-            : this.Pause();
-        }
-        Play() {
-          const _ = this.GetBroadcastState();
-          if (_ == _.None || this.IsBroadcastClip()) _.StartVideo(this);
-          else if (_ == _.Ready)
-            if ((_.SetActiveVideo(this), this.m_player)) this.m_player.Play();
-            else if (this.IsBroadcastVOD()) {
-              const _ = _.GetBroadcastVOD(this.m_nBroadcastAppIDVOD);
-              _ && this.StartVOD(_);
-            } else {
-              const _ = _.GetBroadcast(this.m_steamIDBroadcast);
-              _ && this.StartBroadcast(_);
-            }
-        }
-        Pause() {
-          console.log(
-            "Pause ",
-            this.m_steamIDBroadcast,
-            this.m_nBroadcastAppIDVOD,
-            this.m_broadcastClipID,
-          ),
-            this.m_player && this.m_player.Pause();
-        }
-        JumpTime(_) {
-          this.m_player?.JumpTime(_);
-        }
-        Seek(_) {
-          this.m_player?.Seek(_);
-        }
-        SeekAndPlay(_) {
-          this.m_player?.SeekAndPlay(_);
-        }
-        JumpToLiveEdge() {
-          const _ = this.m_player;
-          _ &&
-            (_.IsLiveContent()
-              ? this.SeekAndPlay(_.GetBufferedLiveEdgeTime())
-              : this.SeekAndPlay(_.GetAvailableVideoStartTime()));
-        }
-        SetVolume(_) {
-          this.m_player &&
-            (this.m_player.SetVolume(_),
-            (this.m_nVolume = this.m_player.GetVolume())),
-            _.SaveVolumeChange(_, this.m_bMuted);
-        }
-        SetMute(_) {
-          this.m_player && this.m_player.SetMuted(_),
-            (this.m_bMuted = _),
-            _.SaveVolumeChange(this.m_nVolume, _);
-        }
-        IsMuted() {
-          return this.m_bMuted;
-        }
-        OnVideoPlaying() {
-          (this.m_bPaused = !1),
-            0 === this.m_editorStartTime &&
-              0 === this.m_editorEndTime &&
-              ((this.m_editorStartTime = this.GetVideoAvailableStartTime()),
-              (this.m_editorEndTime =
-                this.GetVideoAvailableStartTime() +
-                this.GetTimelineDuration()));
-        }
-        OnVideoPause() {
-          this.m_bPaused = !0;
-        }
-        OnVideoTimeUpdate() {
-          window.clearTimeout(this.m_videoEndingTimer);
-          const _ = this.m_player;
-          if (_)
-            if (this.IsBroadcastClip())
-              (this.m_nPlaybackTime = _.GetCurrentPlayTime()),
-                (this.m_nVideoStartPos = _.GetAvailableVideoStartTime()),
-                (this.m_nVideoEndPos = _.GetBufferedLiveEdgeTime()),
-                (this.m_nTimelineDuration =
-                  this.m_nVideoEndPos - this.m_nVideoStartPos),
-                (this.m_bOnLiveEdge = !1),
-                (this.m_bBuffering = _.IsBuffering());
-            else {
-              if (
-                ((this.m_nPlaybackTime = _.GetCurrentPlayTime()),
-                (this.m_nVideoStartPos = _.GetAvailableVideoStartTime()),
-                (this.m_nVideoEndPos = Math.max(
-                  _.GetBufferedLiveEdgeTime(),
-                  this.m_nPlaybackTime,
-                )),
-                this.IsBroadcastVOD())
-              ) {
-                this.m_nTimelineDuration = this.m_nVideoEndPos;
-                const _ = this.m_fnOnVideoEnd;
-                if (_ && this.m_nVideoEndPos - this.m_nPlaybackTime < _._) {
-                  const _ = 400;
-                  this.m_videoEndingTimer = window.setTimeout(() => {
-                    _();
-                  }, _);
-                }
-              }
-              (this.m_bBuffering = _.IsBuffering()),
-                (this.m_bOnLiveEdge =
-                  this.m_nVideoEndPos - this.m_nPlaybackTime < _._),
-                _.IsPaused() && (this.m_bOnLiveEdge = !1);
-            }
-        }
-        OnVolumeUpdated() {
-          const _ = this.m_player;
-          _ &&
-            ((this.m_nVolume = _.GetVolume()), (this.m_bMuted = _.IsMuted()));
-        }
-        OnGameDataUpdate(_) {
-          let _ = _.detail;
-          if (!_ || "object" != typeof _.gamedata) return;
-          (this.m_gameDataParser &&
-            this.m_gameDataParser.GetAppID() == _.gamedata.__appid) ||
-            (this.m_gameDataParser = new _(_.gamedata.__appid));
-          const _ = this.m_player?.GetLiveContentStartTime().getTime() ?? 0;
-          if ("timelinemarkers" in _.gamedata) {
-            const _ = this.m_gameDataParser.UpdateMarkers(
-              _.gamedata.__timelinemarkers,
-              _,
-            );
-            _ &&
-              (this.m_rgMarkers.replace(_.rgMarkers || []),
-              this.m_rgSegments.replace(_.rgSegments || []));
-            const _ = this.m_gameDataParser.UpdateRegions(_.gamedata.__regions);
-            _ && this.m_rgRegions.replace(_);
-          } else
-            "soundtrack" in _.gamedata &&
-              this.m_gameDataParser.UpdateSoundtrack(
-                this.m_steamIDBroadcast,
-                _.gamedata.soundtrack,
-              );
-        }
-        OnDownloadFailed(_) {
-          let _ = _.detail || _._.Invalid;
-          _.BroadcastDownloadFailed(this, !0, _);
-        }
-        OnWebRTCRetry() {
-          _.BroadcastDownloadFailed(this, !1);
-        }
-        OnWebRTCFailed() {
-          _.BroadcastDownloadFailed(this, !0);
-        }
-        OnUserInputNeeded() {
-          this.m_bUserInputNeeded = !0;
-        }
-        UserInputClick() {
-          (this.m_bUserInputNeeded = !1),
-            this.m_player ? this.JumpToLiveEdge() : this.Play();
-        }
-        StopPlaybackTillUserInput() {
-          this.Stop(), this.OnUserInputNeeded();
-        }
-        GetTimelineStartPos() {
-          return this.m_nVideoEndPos - this.m_nTimelineDuration;
-        }
-        GetTimelineDuration() {
-          return this.m_nTimelineDuration;
-        }
-        GetTimeAtMousePosition(_, _, _, _) {
-          let _ = _._(_, _.left, _.right, _, _);
-          return Math.floor(_ + 0.5);
-        }
-        GetPercentOffsetFromTime(_, _) {
-          let _ = 0,
-            _ = 0;
-          return (
-            _ == _.Timeline
-              ? ((_ = this.m_nVideoEndPos), (_ = _ - this.m_nTimelineDuration))
-              : ((_ = 0), (_ = 0)),
-            _._(_, _, _, 0, 100)
-          );
-        }
-        GetTimelineMarkers() {
-          return this.m_rgMarkers;
-        }
-        GetTimelineSegments() {
-          return this.m_rgSegments;
-        }
-        GetGameDataRegions() {
-          return this.m_rgRegions;
-        }
-        BHasMarkersOrSegments() {
-          return this.has_segments || this.has_markers;
-        }
-        get has_markers() {
-          return this.m_rgMarkers.length > 0;
-        }
-        get has_segments() {
-          return this.m_rgSegments.length > 0;
-        }
-      }
-      (0, _._)([_._], _.prototype, "m_player", void 0),
-        (0, _._)([_._], _.prototype, "m_bPaused", void 0),
-        (0, _._)([_._], _.prototype, "m_nPlaybackTime", void 0),
-        (0, _._)([_._], _.prototype, "m_bBuffering", void 0),
-        (0, _._)([_._], _.prototype, "m_bOnLiveEdge", void 0),
-        (0, _._)([_._], _.prototype, "m_nVolume", void 0),
-        (0, _._)([_._], _.prototype, "m_bMuted", void 0),
-        (0, _._)([_._], _.prototype, "m_bUserInputNeeded", void 0),
-        (0, _._)([_._], _.prototype, "m_bIsReplay", void 0),
-        (0, _._)([_._], _.prototype, "m_nTimelineDuration", void 0),
-        (0, _._)([_._], _.prototype, "m_nVideoStartPos", void 0),
-        (0, _._)([_._], _.prototype, "m_nVideoEndPos", void 0),
-        (0, _._)([_._], _.prototype, "m_editorStartTime", void 0),
-        (0, _._)([_._], _.prototype, "m_editorEndTime", void 0),
-        (0, _._)([_._.bound], _.prototype, "StartBroadcast", null),
-        (0, _._)([_._.bound], _.prototype, "StartClip", null),
-        (0, _._)([_._.bound], _.prototype, "StartVOD", null),
-        (0, _._)([_._], _.prototype, "OnVideoPlaying", null),
-        (0, _._)([_._], _.prototype, "OnVideoPause", null),
-        (0, _._)([_._.bound], _.prototype, "OnVideoTimeUpdate", null),
-        (0, _._)([_._], _.prototype, "OnVolumeUpdated", null),
-        (0, _._)([_._.bound], _.prototype, "OnGameDataUpdate", null),
-        (0, _._)([_._], _.prototype, "OnDownloadFailed", null),
-        (0, _._)([_._], _.prototype, "OnWebRTCRetry", null),
-        (0, _._)([_._], _.prototype, "OnWebRTCFailed", null),
-        (0, _._)([_._], _.prototype, "OnUserInputNeeded", null);
-      const _ = new _();
-      window.uiBroadcastWatchStore = _;
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        return "waiting" == _ || "uploading" == _ || "processing" == _;
-      }
-      class _ {
-        m_originalSize = {
-          width: 0,
-          height: 0,
-        };
-        m_originalDataUrl = "";
-        dataUrl = void 0;
-        width = 0;
-        height = 0;
-        status = "pending";
-        message = "";
-        language = void 0;
-        file;
-        filename;
-        uploadTime;
-        fileType;
-        constructor(_, _, _, _, _) {
-          (0, _._)(this),
-            (this.file = _),
-            (this.filename = _),
-            (this.fileType = (0, _._)(_) ?? _._._),
-            (this.language = _),
-            (this.uploadTime = Date.now()),
-            (this.status = "pending"),
-            (this.m_originalSize = _),
-            (this.height = _.height),
-            (this.width = _.width),
-            (this.m_originalDataUrl = _),
-            (this.dataUrl = _);
-        }
-        ResetImage() {
-          (this.height = this.m_originalSize.height),
-            (this.width = this.m_originalSize.width),
-            (this.dataUrl = this.m_originalDataUrl);
-        }
-        GetImageOptionLabel() {}
-      }
-      (0, _._)([_._], _.prototype, "dataUrl", void 0),
-        (0, _._)([_._], _.prototype, "width", void 0),
-        (0, _._)([_._], _.prototype, "height", void 0),
-        (0, _._)([_._], _.prototype, "status", void 0),
-        (0, _._)([_._.ref], _.prototype, "message", void 0),
-        (0, _._)([_._], _.prototype, "language", void 0);
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, _, _) {
-        const _ = (0, _._)(_.width, _),
-          _ = (0, _._)(_.height, _);
-        return {
-          sKey: `${_}_${_}x${_}`,
-          width: _,
-          height: _,
-          bEnforceDimensions: !_.bDisableEnforceDimensions,
-          artworkType: _,
-          bHiddenFromDropdown: "hero" === _,
-          bDeprecated: (_ ?? 0) >= 1,
-          fnGetLabelText() {
-            return "spotlight" == this.artworkType
-              ? (0, _._)("#EventEditor_ArtworkType_store_spotlight")
-              : (0, _._)("#EventEditor_ArtworkType_" + this.artworkType);
-          },
-        };
-      }
-      class _ extends _._ {
-        m_filesToUpload = _._.array();
-        m_filesCompleted = _._.array();
-        m_clanImagesV2;
-        m_clanSteamID;
-        m_rgImageOptions;
-        m_localizedImageGroupPrimaryImage;
-        m_lastError = void 0;
-        constructor(_, _, _, _) {
-          var _;
-          super(),
-            (0, _._)(this),
-            (this.m_clanSteamID = _),
-            (this.m_rgImageOptions =
-              ((_ = _),
-              _?.flatMap((_) => {
-                const _ = _._[_];
-                if (
-                  ((0, _._)(Boolean(_), `Artwork Type not in Map ${_}`),
-                  "number" == typeof _.width && "number" == typeof _.height)
-                )
-                  return [_(_, _)];
-                {
-                  let _ = Math.max(
-                    Array.isArray(_.width) ? _.width.length : 1,
-                    Array.isArray(_.height) ? _.height.length : 1,
-                  );
-                  return Array.from(
-                    {
-                      length: _,
-                    },
-                    (_, _) => _(_, _, _),
-                  );
-                }
-              }))),
-            (this.m_localizedImageGroupPrimaryImage = _),
-            (this.m_clanImagesV2 = _ ?? !1);
-        }
-        GetClanSteamID() {
-          return this.m_clanSteamID;
-        }
-        async AddImage(_, _ = _.Bhc) {
-          const { language: _ } = (0, _._)(_.name, _);
-          return this.AddImageForLanguage(_, _);
-        }
-        async AddImageForLanguage(_, _) {
-          if (!((0, _._)(_.type) || (_._.is_support && (0, _._)(_.type))))
-            return !1;
-          const _ = await (0, _._)(_, (0, _._)(_.type));
-          if (!_) return !1;
-          const _ = new _._(
-            _,
-            _.name,
-            _,
-            this.m_rgImageOptions,
-            _.src,
-            (0, _._)(_),
-            _,
-            this.m_localizedImageGroupPrimaryImage,
-          );
-          return (this.m_filesToUpload = [...this.m_filesToUpload, _]), !0;
-        }
-        async AddExistingClanImage(_, _ = _.Bhc) {
-          const _ = _._.GetHashAndExt(_);
-          if (!_) return !1;
-          const _ = _._.GenerateEditableURLFromHashAndExt(
-              this.m_clanSteamID,
-              _,
-            ),
-            _ = await _()({
-              url: _,
-              method: "GET",
-              responseType: "blob",
-            }),
-            _ = (0, _._)(_.data, _.file_name);
-          return await this.AddImage(_, _);
-        }
-        DeleteUploadImageByIndex(_) {
-          this.m_filesToUpload.splice(_, 1),
-            (this.m_filesToUpload = [...this.m_filesToUpload]);
-        }
-        DeleteUploadImage(_) {
-          let _ = this.m_filesToUpload.findIndex(
-            (_) => _.file == _.file && _.uploadTime == _.uploadTime,
-          );
-          _ >= 0 && this.DeleteUploadImageByIndex(_);
-        }
-        ClearImages() {
-          this.m_filesToUpload = _._.array();
-        }
-        GetFilesUploaded() {
-          return this.m_filesCompleted;
-        }
-        GetLastErrorFile() {
-          return this.m_lastError;
-        }
-        GetCompletedFiles() {
-          return this.m_filesCompleted.length;
-        }
-        GetTotalFiles() {
-          return this.m_filesToUpload.length;
-        }
-        GetFilesToUpload() {
-          return this.m_filesToUpload.map((_) => _.file);
-        }
-        GetUploadImages() {
-          return this.m_filesToUpload;
-        }
-        BHasError() {
-          return null != this.m_lastError;
-        }
-        BAllDone() {
-          return (
-            this.m_filesCompleted.length > 0 &&
-            this.m_filesCompleted.length == this.m_filesToUpload.length
-          );
-        }
-        BIsFileCompleted(_) {
-          return -1 != this.m_filesCompleted.indexOf(_);
-        }
-        RetryAllFailedUploads() {
-          this.CancelAllUploads(), this.UploadAllImages();
-        }
-        async handleUploadRefresh(_) {
-          await _._.LoadClanImages(this.m_clanSteamID, !0, _);
-        }
-        BGetUploadsAreInSerial() {
-          return !1;
-        }
-        async UploadSingleImage(_, _, _, _) {
-          const _ = _.file,
-            _ = _.GetCurrentImageOption(),
-            _ = _.GetResizeDimension(),
-            _ = new FormData();
-          _.append("clanimage", _, _),
-            _.append("sessionid", (0, _._)()),
-            this.m_clanImagesV2 && _.append("clan_images_v2", "1"),
-            _?.artworkType && _.append("arttype", _.artworkType),
-            _ &&
-              _.length > 0 &&
-              _.append(
-                "resize",
-                _.map((_) => _.width + "x" + _.height).join(","),
-              );
-          let _ = "/uploadimage/";
-          const _ = this.m_localizedImageGroupPrimaryImage;
-          _ &&
-            ((_ = "/ajaxuploadlocalizedimage/"),
-            _.append("origimagehash", _.image_hash),
-            _.thumbnail_hash && _.append("thumbhash", _.thumbnail_hash),
-            _.append("extension", "" + _.file_type),
-            _.append("language", "" + _));
-          const _ = _.split(".").pop()?.toLocaleLowerCase();
-          ("webm" != _ && "mp4" != _) ||
-            (_.append("video_width", "" + _.width),
-            _.append("video_height", "" + _.height));
-          let _,
-            _ =
-              _._.COMMUNITY_BASE_URL +
-              "/gid/" +
-              this.m_clanSteamID.ConvertTo64BitString() +
-              _,
-            _ = {
-              cancelToken: _,
-              withCredentials: !0,
-              headers: {
-                "Content-Type": "multipart/form-data",
-              },
-            },
-            _ = !0;
-          try {
-            (_ = await _().post(_, _, _)), this.m_filesCompleted.push(_);
-          } catch (_) {
-            (_ = !1),
-              (this.m_lastError = {
-                file: _,
-                status: _.response ? _.response.status : 500,
-                message: (0, _._)(_).strErrorMsg,
-              }),
-              (_ = _.response);
-          }
-          return (
-            _ || (await this.handleUploadRefresh(_)),
-            {
-              bSuccess: _,
-              result: _.data,
-            }
-          );
-        }
-      }
-      (0, _._)([_._], _.prototype, "m_filesToUpload", void 0),
-        (0, _._)([_._], _.prototype, "m_filesCompleted", void 0),
-        (0, _._)([_._], _.prototype, "m_lastError", void 0),
-        (0, _._)([_._], _.prototype, "AddImage", null),
-        (0, _._)([_._], _.prototype, "AddExistingClanImage", null),
-        (0, _._)([_._], _.prototype, "DeleteUploadImageByIndex", null),
-        (0, _._)([_._], _.prototype, "DeleteUploadImage", null),
-        (0, _._)([_._], _.prototype, "ClearImages", null);
-      class _ extends _ {
-        constructor(_, _, _) {
-          super(_, _, _, !1);
-        }
-      }
-      async function _(_, _, _, _, _) {
-        let _ =
-            _._.COMMUNITY_BASE_URL +
-            "/gid/" +
-            _.ConvertTo64BitString() +
-            "/resizeimage/",
-          _ = new FormData();
-        return (
-          _.append("imagehash", _),
-          _.append("extension", _),
-          _.append("resize", _.map((_) => _.width + "x" + _.height).join(",")),
-          _.append("sessionid", (0, _._)()),
-          (
-            await _().post(_, _, {
-              cancelToken: _,
-            })
-          ).data.count
-        );
-      }
-      function _(_, _, _) {
-        const _ = (0, _._)(_ instanceof Array ? _ : [_]),
-          _ = _.ConvertTo64BitString();
-        return _.useMemo(() => new _(_, _, _), [_, _]);
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = 960,
-        _ = 311,
-        _ = 480,
-        _ = 156;
-      class _ extends _._ {
-        m_rgImageOptions;
-        m_currentImageOption = void 0;
-        m_currentImageOptionKey = void 0;
-        constructor(_, _, _, _, _, _) {
-          super(_, _, _, _, _), (0, _._)(this), (this.m_rgImageOptions = _);
-        }
-        IsValidAssetType(_, _) {
-          let _ = 0,
-            _ = 0,
-            _ = !1,
-            _ =
-              !this.m_rgImageOptions ||
-              0 === this.m_rgImageOptions.length ||
-              this.m_rgImageOptions.some(
-                (_) => _.sKey == this.GetCurrentImageOption()?.sKey,
-              );
-          if (_) (_ = _.width), (_ = _.height), (_ = !0);
-          else if (this.GetCurrentImageOption()) {
-            const _ = _._[this.GetCurrentImageOption().artworkType];
-            _ &&
-              ((_ = _.width),
-              (_ = _.height),
-              (_ = !_.bDisableEnforceDimensions));
-          }
-          const _ = this.width >= (0, _._)(_) && this.height >= (0, _._)(_),
-            _ = _ ? (0, _._)(this.width, this.height, _, _) : _,
-            _ = _ && _ != this.fileType,
-            _ =
-              !!(this.m_rgImageOptions && this.m_rgImageOptions.length > 0) &&
-              0 ==
-                (0, _._)(
-                  this.fileType,
-                  this.m_rgImageOptions?.map((_) => _.artworkType) || [],
-                ).length,
-            _ = Boolean((0, _._)(this.fileType));
-          let _,
-            _ = "",
-            _ = !1;
-          return (
-            _
-              ? _
-                ? (_ = (0, _._)("#ImageUpload_InvalidFileType"))
-                : _
-                  ? (_ = (0, _._)(
-                      "#ImageUpload_InvalidFormat",
-                      (0, _._)(_) ?? "",
-                    ))
-                  : _ || _
-                    ? _
-                      ? !_ && _
-                        ? ((_ = (0, _._)(
-                            "#ImageUpload_InvalidDimensions",
-                            (0, _._)(_),
-                            (0, _._)(_),
-                          )),
-                          (_ = !0))
-                        : ((Array.isArray(_) && this.width != (0, _._)(_)) ||
-                            (Array.isArray(_) && this.height != (0, _._)(_))) &&
-                          ((_ = _ ?? []),
-                          _.push(
-                            (0, _._)(
-                              "#ImageUpload_PreferredDimension",
-                              (0, _._)(_),
-                              (0, _._)(_),
-                            ),
-                          ))
-                      : (_ = (0, _._)(
-                          "#ImageUpload_TooSmall",
-                          (0, _._)(_),
-                          (0, _._)(_),
-                        ))
-                    : (_ = (0, _._)(
-                        "#ImageUpload_InvalidResolution",
-                        (0, _._)(_),
-                        (0, _._)(_),
-                      ))
-              : (_ = (0, _._)("#ImageUpload_InvalidFormatSelected")),
-            {
-              error: _,
-              warnings: _,
-              needsCrop: _,
-              match: this.GetCurrentImageOption(),
-            }
-          );
-        }
-        BSupportsLanguages() {
-          return !0;
-        }
-        ComputeDefaultImageOption() {
-          if (!this.m_rgImageOptions || 0 == this.m_rgImageOptions.length)
-            return;
-          const _ = (0, _._)(
-            this.fileType,
-            this.m_rgImageOptions?.map((_) => _.artworkType),
-          );
-          let _ = _(this.width, this.height, _, !1);
-          if ((void 0 === _ && (_ = _(this.width, this.height, _, !0)), _)) {
-            const _ = this.m_rgImageOptions.find(
-              (_) =>
-                _.artworkType == _ &&
-                (!_.bEnforceDimensions ||
-                  (_.width == this.width && _.height == this.height)),
-            );
-            if (_) return _;
-          }
-          return this.m_rgImageOptions[0];
-        }
-        get ImageOptions() {
-          return this.m_rgImageOptions;
-        }
-        GetCurrentImageOptionKey() {
-          return this.m_currentImageOptionKey;
-        }
-        GetCurrentImageOption() {
-          return this.m_currentImageOption ?? this.ComputeDefaultImageOption();
-        }
-        SetCurrentImageOption(_) {
-          (this.m_currentImageOption = _),
-            (this.m_currentImageOptionKey = _?.sKey);
-        }
-      }
-      (0, _._)([_._], _.prototype, "m_currentImageOption", void 0),
-        (0, _._)([_._], _.prototype, "m_currentImageOptionKey", void 0);
-      class _ extends _ {
-        bCropped = !1;
-        localizedImageGroupPrimaryImage;
-        media;
-        constructor(_, _, _, _, _, _, _, _) {
-          super(_, _, _, _, _, _),
-            (0, _._)(this),
-            (this.media = _),
-            (this.localizedImageGroupPrimaryImage = _);
-        }
-        IsValidAssetType(_, _) {
-          return (
-            (_ = _ ?? this.localizedImageGroupPrimaryImage?.file_type),
-            super.IsValidAssetType(_, _)
-          );
-        }
-        GetCanvasImageSource() {
-          return this.media;
-        }
-        BIsOriginalMinimumDimensions(_) {
-          return (0, _._)(
-            this.media?.width ?? 0,
-            this.media?.height ?? 0,
-            _.artworkType,
-          );
-        }
-        FileTypeMatchesImageTypes(_) {
-          return (0, _._)(this.fileType, _.artworkType);
-        }
-        BIsVideo() {
-          return _._.includes(this.fileType);
-        }
-        GetResizeDimension() {
-          return _(this.GetCurrentImageOption()?.artworkType);
-        }
-      }
-      function _(_) {
-        return "background" === _
-          ? [
-              {
-                width: _,
-                height: _,
-              },
-              {
-                width: _,
-                height: _,
-              },
-            ]
-          : "capsule" === _ || "spotlight" === _
-            ? [
-                {
-                  width: (0, _._)(_._[_].width) / 2,
-                  height: (0, _._)(_._[_].height) / 2,
-                },
-              ]
-            : void 0;
-      }
-      function _(_, _, _, _ = !1) {
-        if (_)
-          for (let _ of _) {
-            if (_ ? (0, _._)(_, _, _) : (0, _._)(_, _, _)) return _;
-          }
-      }
-      (0, _._)([_._], _.prototype, "bCropped", void 0);
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      class _ {}
-      function _(_, _, _) {
-        const _ = _.filter((_) => {
-          const _ = _.IsValidAssetType(_, _);
-          return "pending" === _.status && !_.error && !_.needsCrop;
-        });
-        return (
-          _.forEach((_) => {
-            (_.status = "waiting"), (_.message = "");
-          }),
-          _
-        );
-      }
-      async function _(_, _, _, _, _, _) {
-        const _ = _(_, _, _),
-          _ = [];
-        let _ = 0;
-        const _ = Array.from(
-          {
-            length: Math.floor(_),
-          },
-          () =>
-            (async () => {
-              for (; _ < _.length; ) {
-                const _ = _++,
-                  _ = _[_];
-                _.status = "uploading";
-                const _ = await __webpack_require__(
-                  _,
-                  _.filename,
-                  _.language ?? _.xPp,
-                  _,
-                );
-                (_.status = _.bSuccess ? "success" : "failed"),
-                  (_.message =
-                    !_.bSuccess && _.elErrorMessage ? _.elErrorMessage : ""),
-                  (_[_] = {
-                    image: _,
-                    uploadResult: _,
-                  });
-              }
-            })(),
-        );
-        return (
-          await Promise.all(_),
-          _.map((_) => ({
-            bSuccess: _.uploadResult.bSuccess,
-            image: _.image,
-            uploadResult: _.uploadResult.result,
-          }))
-        );
-      }
-      class _ extends _ {
-        m_cancel = void 0;
-        async UploadAllImages(_, _) {
-          this.m_cancel = _().CancelToken.source();
-          const _ = this.BGetUploadsAreInSerial() ? 1 : 4;
-          let _;
-          const _ = this.UploadSingleImage.bind(this);
-          return (
-            (_ =
-              _ > 1
-                ? await _(
-                    this.GetUploadImages(),
-                    _,
-                    _,
-                    _,
-                    _,
-                    this.m_cancel.token,
-                  )
-                : await (async function (_, _, _, _, _) {
-                    const _ = _(_, _, _),
-                      _ = [];
-                    for (const _ of _) {
-                      _.status = "uploading";
-                      const _ = await _(_, _.filename, _.language ?? _.xPp, _);
-                      (_.status = _.bSuccess ? "success" : "failed"),
-                        (_.message =
-                          !_.bSuccess && _.elErrorMessage
-                            ? _.elErrorMessage
-                            : ""),
-                        _.push({
-                          bSuccess: _.bSuccess,
-                          image: _,
-                          uploadResult: _.result,
-                        });
-                    }
-                    return _;
-                  })(this.GetUploadImages(), _, _, _, this.m_cancel.token)),
-            _
-          );
-        }
-        CancelAllUploads() {
-          this.m_cancel?.cancel((0, _._)("#ImageUpload_CancelRequest"));
-        }
-      }
-      function _(_, _, _) {
-        if (((null != _ && null != _) || (_ = _), !_ || 0 === _.length))
-          return _;
-        for (const _ of _) if (_._.IsELanguageValidInRealm(_, _)) return _;
-        for (const _ of _) if (_._.IsELanguageValidInRealm(_, _)) return _;
-        return __webpack_require__.includes(_._.k_ESteamRealmGlobal)
-          ? _.Bhc
-          : _.ZLm;
-      }
-      function _(_, _ = _.Bhc) {
-        let _ = _.lastIndexOf(".");
-        -1 != _ && (_ = _.slice(0, _).toLowerCase());
-        let _ = null,
-          _ = 0;
-        _.endsWith("korean") && ((_ = _.Pn1), (_ = 6));
-        for (let _ = _.Bhc; _ < _.bP9; ++_) {
-          const _ = (0, _.wwZ)(_);
-          if (_.length <= _) continue;
-          if (_.endsWith(_) && _.length > _.length + 2) {
-            const _ = _[_.length - _.length - 1];
-            /\p{Alphabetic}|\p{Number}/u.test(_) || ((_ = _), (_ = _.length));
-          }
-          const _ = (0, _.LgB)(_);
-          _.length <= _ || (_.endsWith(_) && ((_ = _), (_ = _.length)));
-        }
-        return {
-          language: _ ?? _,
-          baseFilename:
-            _ > 0
-              ? ((_ = _.substring(0, _.length - _)), _.replace(/[\s_-]+$/g, ""))
-              : _,
-        };
-        var _;
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ {
-        constructor() {
-          (0, _._)(this);
-        }
-        m_mapClanToImages = new Map();
-        m_mapClanImageLoadPromises = new Map();
-        m_imageListChangeCallback = new Map();
-        m_mapClanImageLoadState = new Map();
-        m_mapImageIDToResolution = new Map();
-        BHasImageResolution(_) {
-          return this.m_mapImageIDToResolution.has(_.imageid);
-        }
-        GetImageResolution(_) {
-          return this.m_mapImageIDToResolution.get(_.imageid);
-        }
-        SetImageResolution(_, _) {
-          this.m_mapImageIDToResolution.set(_.imageid, _);
-        }
-        GetImageListCallbackForClanAccountIDInternal(_) {
-          return (
-            this.m_imageListChangeCallback.has(_) ||
-              this.m_imageListChangeCallback.set(_, new _._()),
-            this.m_imageListChangeCallback.get(_)
-          );
-        }
-        GetImageListCallbackForClanAccountID(_) {
-          return this.GetImageListCallbackForClanAccountIDInternal(_);
-        }
-        m_vecClanImageDragListener = new Array();
-        AddClanImageDragListener(_) {
-          -1 == this.m_vecClanImageDragListener.indexOf(_) &&
-            this.m_vecClanImageDragListener.push(_);
-        }
-        RemoveClanImageDragListener(_) {
-          let _ = this.m_vecClanImageDragListener.indexOf(_);
-          -1 != _ && this.m_vecClanImageDragListener.splice(_, 1);
-        }
-        GetClanImageDragListener() {
-          return this.m_vecClanImageDragListener;
-        }
-        BHasLoadedClanImages(_) {
-          return this.m_mapClanToImages.has(_.GetAccountID());
-        }
-        async LoadClanImages(_, _, _) {
-          const _ = _.GetAccountID();
-          if (_ || !this.m_mapClanImageLoadPromises.has(_)) {
-            const _ = this.InternalLoadClanImages(_, _, _);
-            this.m_mapClanImageLoadPromises.set(_, _);
-          }
-          return this.m_mapClanImageLoadPromises.get(_);
-        }
-        async InternalLoadClanImages(_, _, _) {
-          let _ = _.GetAccountID();
-          if (
-            ((0, _._)(_ && 0 != _, "ClanSteamID missing:" + _),
-            _ && (!this.m_mapClanToImages.has(_) || _))
-          ) {
-            let _,
-              _ = {};
-            const _ =
-              _._.COMMUNITY_BASE_URL +
-              "/gid/" +
-              _.ConvertTo64BitString() +
-              "/getimages/";
-            if (
-              ((_ = await _().get(_, {
-                params: _,
-                withCredentials: !0,
-                cancelToken: _,
-              })),
-              _)
-            ) {
-              for (let _ of _.data.images) _.clanAccountID = _;
-              (0, _._)(() => {
-                this.m_mapClanImageLoadState.set(_, {
-                  loaded: !0,
-                }),
-                  this.m_mapClanToImages.set(_, _.data.images),
-                  this.GetImageListCallbackForClanAccountIDInternal(_).Dispatch(
-                    _.data.images,
-                  );
-              });
-            }
-          }
-          return this.m_mapClanToImages.get(_);
-        }
-        GetLoadState(_) {
-          return this.m_mapClanImageLoadState.get(_.GetAccountID());
-        }
-        GetClanImages(_) {
-          return this.GetClanImagesByAccount(_.GetAccountID());
-        }
-        GetClanImagesByAccount(_) {
-          let _ = this.m_mapClanToImages.get(_);
-          return _ || new Array();
-        }
-        GetFilteredClanImages(_, _) {
-          let _ = _.GetClanImages(_);
-          return this.GetFilteredClanImagesList(_, _);
-        }
-        GetFilteredClanImagesList(_, _) {
-          if (_ && _.trim().length > 0) {
-            _ = _.trim().toLowerCase();
-            let _ = new Array();
-            for (let _ of _)
-              _.file_name &&
-                _.file_name.toLowerCase().indexOf(_) >= 0 &&
-                __webpack_require__.push(_);
-            return _;
-          }
-          return _;
-        }
-        GetClanImageByID(_, _) {
-          let _ = _.GetAccountID(),
-            _ = this.m_mapClanToImages.get(_);
-          return _ ? _.find((_) => _.imageid == _) : void 0;
-        }
-        GetClanImageByURL(_, _) {
-          let _ = _.GetAccountID(),
-            _ = this.m_mapClanToImages.get(_);
-          return _ ? _.find((_) => _.thumb_url == _ || _.url == _) : void 0;
-        }
-        GetClanImageByFile(_, _) {
-          let _ = _.GetAccountID(),
-            _ = this.m_mapClanToImages.get(_);
-          return _ ? _.find((_) => _.file_name == _.name) : void 0;
-        }
-        GetClanImageByImageHash(_, _) {
-          let _ = _.GetAccountID(),
-            _ = this.m_mapClanToImages.get(_);
-          return _ ? _.find((_) => _.image_hash == _) : void 0;
-        }
-        async DeleteClanImageByID(_, _) {
-          let _ = {
-              sessionid: (0, _._)(),
-              imageid: _,
-            },
-            _ = _.GetAccountID(),
-            _ = await _().get(
-              _._.COMMUNITY_BASE_URL +
-                "/gid/" +
-                _.ConvertTo64BitString() +
-                "/deleteimage/",
-              {
-                params: _,
-              },
-            );
-          if (!_ || 200 != _.status || _.data.success != _._) return _.data;
-          let _ = this.m_mapClanToImages.get(_);
-          if (_) {
-            let _ = _.findIndex((_, _, _) => _.imageid == _);
-            _ >= 0 &&
-              (_.splice(_, 1),
-              this.GetImageListCallbackForClanAccountIDInternal(_).Dispatch([
-                ..._,
-              ]));
-          }
-          return _.data;
-        }
-        async DeleteClanImage(_, _) {
-          return this.DeleteClanImageByID(_, _.imageid);
-        }
-      }
-      (0, _._)([_._], _.prototype, "m_mapClanToImages", void 0),
-        (0, _._)([_._], _.prototype, "m_mapClanImageLoadState", void 0);
-      const _ = new _();
-      function _(_) {
-        const [_, _] = (0, _.useState)(_.GetClanImagesByAccount(_));
-        return (0, _._)(_.GetImageListCallbackForClanAccountID(_), _), _;
-      }
-      function _(_) {
-        const _ = _._.InitFromClanID(_),
-          _ = (0, _._)("useLoadClanImages"),
-          [_, _] = (0, _.useState)(() => _.BHasLoadedClanImages(_));
-        return (
-          (0, _.useEffect)(() => {
-            const _ = _._.InitFromClanID(_);
-            return (
-              _.BHasLoadedClanImages(_) ||
-                _.LoadClanImages(_, !1, _.token).then(() => _(!0)),
-              () => __webpack_require__.cancel()
-            );
-          }, [_, _]),
-          _
-        );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid");
-      function _(_) {
-        return (
-          _.indexOf("?") > 0 && (_ = _.split("?")[0]),
-          _.endsWith(".jpg") || _.endsWith(".jpeg")
-            ? _._._
-            : _.endsWith(".png")
-              ? _._._
-              : _.endsWith(".gif")
-                ? _._._
-                : _.endsWith(".mp4")
-                  ? _._._
-                  : _.endsWith(".webm")
-                    ? _._._
-                    : _.endsWith(".vtt")
-                      ? _._._
-                      : _.endsWith(".srt")
-                        ? _._._
-                        : _.endsWith(".webp")
-                          ? _._._
-                          : void 0
-        );
-      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -21478,74 +17617,6 @@
         return "string" == typeof _ && _.length > 0 ? _ : "";
       }
       (0, _._)([_._], _.prototype, "m_mapDiscoveryQueues", void 0);
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ {
-        m_eCurLang = (0, _.sfN)(_._.LANGUAGE);
-        m_rgHasData = (0, _._)([], _.bP9, !1);
-        m_bHasLocalizationContext = !1;
-        m_callback = new _._();
-        GetCallback() {
-          return this.m_callback;
-        }
-        GetCurEditLanguage() {
-          return this.m_eCurLang;
-        }
-        SetCurEditLanguage(_) {
-          return (
-            this.m_eCurLang != _ &&
-            ((this.m_eCurLang = _), this.GetCallback().Dispatch(_), !0)
-          );
-        }
-        SetHasLanguage(_) {
-          _.forEach((_, _) => {
-            this.m_rgHasData[_] != _ && (this.m_rgHasData[_] = _);
-          });
-        }
-        BHasLanguageData(_) {
-          return this.m_rgHasData[_];
-        }
-        GetHasLocalizationContext() {
-          return this.m_bHasLocalizationContext;
-        }
-        SetHasLocalizationContext(_) {
-          _ != this.m_bHasLocalizationContext &&
-            (this.m_bHasLocalizationContext = _);
-        }
-        static s_globalSingletonStore;
-        static Get() {
-          return (
-            _.s_globalSingletonStore || (_.s_globalSingletonStore = new _()),
-            _.s_globalSingletonStore
-          );
-        }
-        constructor() {
-          (0, _._)(this);
-        }
-      }
-      function _() {
-        return (0, _._)(() => _.Get().GetCurEditLanguage());
-      }
-      (0, _._)([_._], _.prototype, "m_eCurLang", void 0),
-        (0, _._)([_._], _.prototype, "m_rgHasData", void 0),
-        (0, _._)([_._], _.prototype, "m_bHasLocalizationContext", void 0),
-        (0, _._)([_._], _.prototype, "GetCurEditLanguage", null),
-        (0, _._)([_._], _.prototype, "SetCurEditLanguage", null),
-        (0, _._)([_._.bound], _.prototype, "SetHasLanguage", null),
-        (0, _._)([_._], _.prototype, "BHasLanguageData", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -24630,1382 +20701,9 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = 1576780700;
-      let _ = class extends _.Component {
-        OnEmoticonClick(_) {
-          const {
-              emoticonStore: _,
-              strFlairGroupID: _,
-              SetUIDisplayPref: _,
-              contextOptions: _,
-              bShowChatAddons: _,
-            } = this.props,
-            {
-              roomEffectSettings: _,
-              onRoomEffectSelected: _,
-              onStickerSelected: _,
-            } = this.props;
-          let _ = null;
-          if (
-            ((_ =
-              _ && _ && _ && _
-                ? (0, _.jsx)(_._, {
-                    emoticonStore: this.props.emoticonStore,
-                    strFlairGroupID: this.props.strFlairGroupID,
-                    onEmoticonSelected: (_) =>
-                      this.props.OnEmoticonSelected(_, !1),
-                    roomEffectSettings: _,
-                    onRoomEffectSelected: _,
-                    onStickerSelected: _,
-                  })
-                : _ && _.flair_list && _.GetFlairListByGroupID(_)?.length > 0
-                  ? (0, _.jsx)(_._, {
-                      emoticonStore: this.props.emoticonStore,
-                      strFlairGroupID: this.props.strFlairGroupID,
-                      OnSelected: this.props.OnEmoticonSelected,
-                    })
-                  : (0, _.jsx)(_._, {
-                      emoticonStore: this.props.emoticonStore,
-                      strFlairGroupID: this.props.strFlairGroupID,
-                      OnSelected: this.props.OnEmoticonSelected,
-                    })),
-            (0, _._)(
-              _,
-              _,
-              _ || {
-                bOverlapHorizontal: !0,
-                bPreferPopLeft: !0,
-                bPreferPopTop: !0,
-              },
-            ),
-            this.BHaveUnseenEmoticons() && _)
-          ) {
-            let _ = this.GetNewestIndicatorTime();
-            (!_ || _ < _) && (_ = _), _("rtLastAckedNewEmoticons", _);
-          }
-        }
-        GetNewestIndicatorTime() {
-          let _ = this.props.emoticonStore,
-            _ = Number.MIN_SAFE_INTEGER,
-            _ = _.GetTimeReceivedNewestEmoticon();
-          _ && (_ = _);
-          let _ = _.GetTimeReceivedForStickerOrEffect();
-          return (_ = Math.max(_, _)), _ > Number.MIN_SAFE_INTEGER ? _ : void 0;
-        }
-        BHaveUnseenEmoticons() {
-          const { rtLastAckedNewEmoticons: _ } = this.props;
-          let _ = this.GetNewestIndicatorTime();
-          return !_ || _ < _ || (_ && (!_ || _ < _));
-        }
-        render() {
-          const { disabled: _, className: _, ttip: _, useImg: _ } = this.props;
-          let _ = [_],
-            _ = !1;
-          return (
-            _ ? _.push("disabled") : this.BHaveUnseenEmoticons() && (_ = !0),
-            _ && _.push("ttip"),
-            _
-              ? (0, _.jsx)(_._, {
-                  onClick: this.OnEmoticonClick,
-                  onOKActionDescription: (0, _._)("#ChatEntryButton_Emoticon"),
-                  focusable: !0,
-                  children: (0, _.jsx)(_._, {
-                    toolTipContent: _,
-                    children: (0, _.jsx)("img", {
-                      src: this.props.useImg,
-                      className: (0, _._)(..._),
-                      title:
-                        this.props.title ||
-                        (0, _._)("#ChatEntryButton_Emoticon"),
-                    }),
-                  }),
-                })
-              : (_.push(_().chatSubmitButton, _().EmoticonPickerButton),
-                (0, _.jsx)(_._, {
-                  className: (0, _._)(..._),
-                  onOKActionDescription: (0, _._)("#ChatEntryButton_Emoticon"),
-                  type: "button",
-                  onClick: this.OnEmoticonClick,
-                  title:
-                    this.props.title || (0, _._)("#ChatEntryButton_Emoticon"),
-                  disabled: _,
-                  children: (0, _.jsxs)(_._, {
-                    toolTipContent: _,
-                    children: [
-                      this.props.buttonIcon || (0, _.jsx)(_._, {}),
-                      _ && (0, _.jsx)(_._, {}),
-                    ],
-                  }),
-                }))
-          );
-        }
-      };
-      (0, _._)([_._], _.prototype, "OnEmoticonClick", null),
-        (_ = (0, _._)([_._], _));
-      const _ = _;
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, _, _ = !1) {
-        return `${_}economy/sticker${_ ? "static" : ""}/${encodeURIComponent(_)}`;
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ extends _.Component {
-        constructor(_) {
-          super(_),
-            (this.state = {
-              activeIndex: _.initialActiveIndex || 0,
-            });
-        }
-        render() {
-          const { config: _ } = this.props,
-            { activeIndex: _ } = this.state,
-            _ = _[_],
-            _ = _ ? __webpack_require__.renderContent() : null,
-            _ = _.length > 1,
-            _ = _
-              ? ({ detail: { button: _ } }) => {
-                  _ === _._.BUMPER_LEFT
-                    ? this.setState({
-                        activeIndex: Math.max(0, this.state.activeIndex - 1),
-                      })
-                    : _ === _._.BUMPER_RIGHT &&
-                      this.setState({
-                        activeIndex: Math.min(
-                          _.length - 1,
-                          this.state.activeIndex + 1,
-                        ),
-                      });
-                }
-              : void 0;
-          return (0, _.jsxs)(_._, {
-            className: _.Picker,
-            onButtonDown: _,
-            children: [
-              _ &&
-                (0, _.jsx)(_, {
-                  children: this.RenderTabs(),
-                }),
-              _,
-            ],
-          });
-        }
-        RenderTabs() {
-          return this.props.config.map(({ renderTab: _ }, _) => {
-            const _ = this.state.activeIndex === _;
-            return (0, _.jsx)(
-              _,
-              {
-                active: _,
-                onClick: () =>
-                  this.setState({
-                    activeIndex: _,
-                  }),
-                children: _(_),
-              },
-              _,
-            );
-          });
-        }
-      }
-      function _(_) {
-        return (0, _.jsx)(_._, {
-          className: _.Tabs,
-          "flow-children": "row",
-          children: _.children,
-        });
-      }
-      function _(_) {
-        return (0, _.jsx)("div", {
-          className: _.Content,
-          children: _.children,
-        });
-      }
-      function _(_) {
-        const { active: _, children: _, onClick: _ } = _;
-        return (0, _.jsx)(_._, {
-          className: (0, _._)(_.Tab, _ && _.Active),
-          focusClassName: _.Focus,
-          onActivate: _,
-          children: (0, _.jsx)("div", {
-            className: (0, _._)(_.TabContent, _ && _.Active),
-            children: _,
-          }),
-        });
-      }
-      function _(_) {
-        const {
-          items: _,
-          renderItem: _,
-          onItemSelect: _,
-          keyExtractor: _,
-          renderEmpty: _,
-        } = _;
-        let _ = _.map((_, _) =>
-          (0, _.jsx)(
-            _._,
-            {
-              className: _.Item,
-              onActivate: () => _(_[_]),
-              autoFocus: 0 === _,
-              focusClassName: _.Focus,
-              children: __webpack_require__(_[_]),
-            },
-            _(_),
-          ),
-        );
-        return (
-          0 === _.length && _ && (_ = _()),
-          (0, _.jsx)(_._, {
-            "flow-children": "grid",
-            className: _.ItemList,
-            children: _,
-          })
-        );
-      }
-      function _(_) {
-        const { title: _, onFilterChange: _, filter: _, onSubmit: _, ..._ } = _;
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            (0, _.jsx)(_, {
-              children: (0, _.jsx)(_, {
-                title: _,
-                children: (0, _.jsx)(_, {
-                  ..._,
-                }),
-              }),
-            }),
-            (0, _.jsx)(_, {
-              value: _,
-              onChange: _,
-              onSubmit: _,
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const { onFilterChange: _, filter: _, sections: _, title: _ } = _;
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            (0, _.jsxs)(_, {
-              children: [
-                _ &&
-                  (0, _.jsx)("div", {
-                    className: _.SectionedPageTitle,
-                    children: _,
-                  }),
-                _.map(({ title: _, ..._ }) =>
-                  (0, _.jsx)(
-                    _,
-                    {
-                      title: _,
-                      children: (0, _.jsx)(_, {
-                        ..._,
-                      }),
-                    },
-                    _,
-                  ),
-                ),
-              ],
-            }),
-            (0, _.jsx)(_, {
-              value: _,
-              onChange: _,
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        return (0, _.jsxs)("div", {
-          className: _.Section,
-          children: [
-            (0, _.jsx)("div", {
-              className: _.SectionTitle,
-              children: _.title,
-            }),
-            (0, _.jsx)("div", {
-              className: _.SectionContent,
-              children: _.children,
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const { value: _, onChange: _, onSubmit: _ } = _;
-        return (0, _.jsx)("div", {
-          className: _.FilterInputContainer,
-          children: (0, _.jsx)(_._, {
-            type: "text",
-            placeholder: (0, _._)("#AddonPicker_Search"),
-            className: _.FilterInput,
-            value: _,
-            onChange: (_) => __webpack_require__(_.target.value),
-            onSubmit: _,
-          }),
-        });
-      }
-      function _(_) {
-        const { className: _, ..._ } = _;
-        return (0, _.jsx)("div", {
-          className: (0, _._)(_, _.AddonPickerMessage),
-          ..._,
-        });
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        return _.recent_emoticons;
-      }
-      function _(_) {
-        return _.recent_stickers;
-      }
-      function _(_) {
-        return _(_).length + _(_).length > 0;
-      }
-      const _ = (0, _._)((_) => {
-        const {
-          emoticonStore: _,
-          roomEffectSettings: _,
-          strFlairGroupID: _,
-          onEmoticonSelected: _,
-          onRoomEffectSelected: _,
-          onStickerSelected: _,
-        } = _;
-        !(function (_) {
-          const [_, _] = (0, _.useState)(_.is_initialized);
-          (0, _.useEffect)(() => {
-            if (!_.is_initialized) {
-              _.UpdateEmoticonList();
-              const _ = (0, _._)(
-                () => _.is_initialized,
-                () => __webpack_require__(_.is_initialized),
-              );
-              return () => _();
-            }
-            return () => {};
-          }, [_]);
-        })(_);
-        const _ = [];
-        return (
-          _(_) &&
-            _.push({
-              renderTab: (_) =>
-                (0, _.jsx)("span", {
-                  title: (0, _._)("#AddonPicker_RecentlyUsed"),
-                  className: (0, _._)(
-                    _().PickerTab,
-                    _().Clock,
-                    _ && _().ActiveTab,
-                  ),
-                  children: (0, _.jsx)(_, {}),
-                }),
-              renderContent: () =>
-                (0, _.jsx)(_, {
-                  store: _,
-                  onEmoticonSelect: (_) => _(_.name),
-                  onStickerSelect: (_) => _(_.name),
-                  flairGroupID: _,
-                }),
-            }),
-          (0, _.jsx)(_._, {
-            children: (0, _.jsx)(_, {
-              config: [
-                ..._,
-                {
-                  renderTab: (_) =>
-                    (0, _.jsx)("span", {
-                      title: (0, _._)("#AddonPicker_Emoticons"),
-                      className: (0, _._)(_().PickerTab, _ && _().ActiveTab),
-                      children: (0, _.jsx)(_, {}),
-                    }),
-                  renderContent: () =>
-                    (0, _.jsx)(_, {
-                      store: _,
-                      onItemSelect: (_) => _(_.name),
-                      flairGroupID: _,
-                    }),
-                },
-                {
-                  renderTab: (_) =>
-                    (0, _.jsx)("span", {
-                      title: (0, _._)("#AddonPicker_Stickers"),
-                      className: (0, _._)(_().PickerTab, _ && _().ActiveTab),
-                      children: (0, _.jsx)(_, {}),
-                    }),
-                  renderContent: () =>
-                    (0, _.jsx)(_, {
-                      store: _,
-                      onItemSelect: (_) => _(_.name),
-                    }),
-                },
-                {
-                  renderTab: (_) =>
-                    (0, _.jsx)("span", {
-                      title: (0, _._)("#AddonPicker_RoomEffects"),
-                      className: (0, _._)(_().PickerTab, _ && _().ActiveTab),
-                      children: (0, _.jsx)(_, {}),
-                    }),
-                  renderContent: () =>
-                    (0, _.jsx)(_, {
-                      store: _,
-                      effectSettings: _,
-                      onItemSelect: (_) => _(_.name),
-                    }),
-                },
-              ],
-            }),
-          })
-        );
-      });
-      let _ = class extends _.Component {
-        m_disposeEmoticonStore;
-        constructor(_) {
-          super(_),
-            (this.state = {
-              strSearchText: "",
-            });
-          let _ = this.props.emoticonStore;
-          _.is_initialized ||
-            (_.UpdateEmoticonList(),
-            (this.m_disposeEmoticonStore = (0, _._)(
-              () => _.is_initialized,
-              () => this.forceUpdate(),
-            )));
-        }
-        componentWillUnmount() {
-          this.m_disposeEmoticonStore && this.m_disposeEmoticonStore();
-        }
-        render() {
-          const {
-              emoticonStore: _,
-              onEmoticonSelected: _,
-              onStickerSelected: _,
-              strFlairGroupID: _,
-            } = this.props,
-            _ = [];
-          return (
-            _(_) &&
-              _.push({
-                renderTab: (_) =>
-                  (0, _.jsx)("span", {
-                    title: (0, _._)("#AddonPicker_RecentlyUsed"),
-                    className: (0, _._)(
-                      _().PickerTab,
-                      _().Clock,
-                      _ && _().ActiveTab,
-                    ),
-                    children: (0, _.jsx)(_, {}),
-                  }),
-                renderContent: () =>
-                  (0, _.jsx)(_, {
-                    store: _,
-                    onEmoticonSelect: (_) => _(_.name),
-                    onStickerSelect: (_) => __webpack_require__(_.name),
-                    flairGroupID: _,
-                  }),
-              }),
-            (0, _.jsx)(_._, {
-              children: (0, _.jsx)(_, {
-                config: [
-                  ..._,
-                  {
-                    renderTab: (_) =>
-                      (0, _.jsx)("span", {
-                        title: (0, _._)("#AddonPicker_Emoticons"),
-                        className: (0, _._)(_().PickerTab, _ && _().ActiveTab),
-                        children: (0, _.jsx)(_, {}),
-                      }),
-                    renderContent: () =>
-                      (0, _.jsx)(_, {
-                        store: _,
-                        onItemSelect: (_) => _(_.name),
-                        flairGroupID: _,
-                      }),
-                  },
-                  {
-                    renderTab: (_) =>
-                      (0, _.jsx)("span", {
-                        title: (0, _._)("#AddonPicker_Stickers"),
-                        className: (0, _._)(_().PickerTab, _ && _().ActiveTab),
-                        children: (0, _.jsx)(_, {}),
-                      }),
-                    renderContent: () =>
-                      (0, _.jsx)(_, {
-                        store: _,
-                        onItemSelect: (_) => __webpack_require__(_.name),
-                      }),
-                  },
-                ],
-              }),
-            })
-          );
-        }
-      };
-      _ = (0, _._)([_._], _);
-      class _ extends _.Component {
-        m_disposeEmoticonStore;
-        constructor(_) {
-          super(_),
-            (this.state = {
-              strSearchText: "",
-            });
-          let _ = this.props.emoticonStore;
-          _.is_initialized ||
-            (_.UpdateEmoticonList(),
-            (this.m_disposeEmoticonStore = (0, _._)(
-              () => _.is_initialized,
-              () => this.forceUpdate(),
-            )));
-        }
-        componentWillUnmount() {
-          this.m_disposeEmoticonStore && this.m_disposeEmoticonStore();
-        }
-        render() {
-          return (0, _.jsx)(_._, {
-            children: (0, _.jsx)(_, {
-              config: [
-                {
-                  renderTab: () =>
-                    (0, _.jsx)("span", {
-                      title: (0, _._)("#AddonPicker_Emoticons"),
-                      className: _().PickerTab,
-                      children: (0, _.jsx)(_, {}),
-                    }),
-                  renderContent: () =>
-                    (0, _.jsx)(_, {
-                      store: this.props.emoticonStore,
-                      onItemSelect: (_) => this.props.OnSelected(_.name, !1),
-                      flairGroupID: this.props.strFlairGroupID,
-                    }),
-                },
-              ],
-            }),
-          });
-        }
-      }
-      class _ extends _.Component {
-        m_disposeEmoticonStore;
-        constructor(_) {
-          super(_),
-            (this.state = {
-              strSearchText: "",
-            });
-          let _ = this.props.emoticonStore;
-          _.is_initialized ||
-            (_.UpdateEmoticonList(),
-            (this.m_disposeEmoticonStore = (0, _._)(
-              () => _.is_initialized,
-              () => this.forceUpdate(),
-            )));
-        }
-        componentWillUnmount() {
-          this.m_disposeEmoticonStore && this.m_disposeEmoticonStore();
-        }
-        render() {
-          return (0, _.jsx)(_._, {
-            children: (0, _.jsx)(_, {
-              config: [
-                {
-                  renderTab: () =>
-                    (0, _.jsx)("span", {
-                      title: (0, _._)("#AddonPicker_Emoticons"),
-                      className: _().PickerTab,
-                      children: (0, _.jsx)(_, {}),
-                    }),
-                  renderContent: () =>
-                    (0, _.jsx)(_, {
-                      store: this.props.emoticonStore,
-                      onItemSelect: (_) => this.props.OnSelected(_.name, !1),
-                      flairGroupID: this.props.strFlairGroupID,
-                    }),
-                },
-              ],
-            }),
-          });
-        }
-      }
-      class _ extends _.Component {
-        state = {
-          filter: "",
-        };
-        render() {
-          const {
-              store: _,
-              onEmoticonSelect: _,
-              onStickerSelect: _,
-            } = this.props,
-            { filter: _ } = this.state,
-            _ = [];
-          return (
-            _(_) &&
-              _.push({
-                title: (0, _._)("#AddonPicker_RecentEmoticons"),
-                items: _._.FilterEmoticons(_(_), _),
-                onItemSelect: _,
-                renderItem: (_) =>
-                  (0, _.jsx)(_, {
-                    emoticon: _,
-                  }),
-                keyExtractor: (_) => _.name,
-                renderEmpty: () =>
-                  (0, _.jsx)(_, {
-                    children: _
-                      ? (0, _._)("#AddonPicker_NoResults")
-                      : (0, _._)(
-                          "#AddonPicker_NoRecent",
-                          (0, _._)("#AddonPicker_Emoticons"),
-                        ),
-                  }),
-              }),
-            _(_).length &&
-              _.push({
-                title: (0, _._)("#AddonPicker_RecentStickers"),
-                items: _._.FilterStickers(_(_), _),
-                onItemSelect: _,
-                renderItem: (_) =>
-                  (0, _.jsx)(_, {
-                    sticker: _,
-                  }),
-                keyExtractor: ({ name: _ }) => _,
-                renderEmpty: () =>
-                  (0, _.jsx)(_, {
-                    children: _
-                      ? (0, _._)("#AddonPicker_NoResults")
-                      : (0, _._)(
-                          "#AddonPicker_NoRecent",
-                          (0, _._)("#AddonPicker_Stickers"),
-                        ),
-                  }),
-              }),
-            (0, _.jsx)(_, {
-              onFilterChange: (_) =>
-                this.setState({
-                  filter: _,
-                }),
-              filter: _,
-              sections: _,
-            })
-          );
-        }
-      }
-      class _ extends _.Component {
-        state = {
-          filter: "",
-        };
-        render() {
-          const { store: _, onItemSelect: _, flairGroupID: _ } = this.props,
-            { filter: _ } = this.state,
-            _ = !_ && _ ? _.GetFlairListByGroupID(_) : _.emoticon_list,
-            _ = _._.FilterEmoticons(_, _).slice(0, 1e3);
-          return (0, _.jsx)(_, {
-            title: (0, _._)("#AddonPicker_Emoticons"),
-            items: _,
-            onItemSelect: _,
-            renderItem: (_) =>
-              (0, _.jsx)(_, {
-                emoticon: _,
-              }),
-            keyExtractor: (_) => _.name,
-            onFilterChange: (_) =>
-              this.setState({
-                filter: _,
-              }),
-            filter: _,
-            onSubmit: () => _(_[0]),
-            renderEmpty: () =>
-              _
-                ? (0, _.jsx)(_, {
-                    children: (0, _._)("#AddonPicker_NoResults"),
-                  })
-                : (0, _.jsx)(_, {}),
-          });
-        }
-      }
-      function _() {
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            (0, _.jsx)(_, {
-              children: (0, _._)(
-                "#AddonPicker_NoneOwned",
-                (0, _._)("#AddonPicker_Emoticons"),
-              ),
-            }),
-            (0, _.jsx)(_, {
-              children: (0, _._)(
-                "#AddonPicker_AcquireAtPointsShopOrMarket",
-                (0, _.jsx)(_._, {
-                  href: `${_._.STORE_BASE_URL}points/shop/c/emoticons`,
-                  children: (0, _._)("#AddonPicker_AcquireAtPointsShop_Link"),
-                }),
-                (0, _.jsx)(_._, {
-                  href: `${_._.COMMUNITY_BASE_URL}market`,
-                  children: (0, _._)(
-                    "#AddonPicker_AcquireAtPointsShopOrMarket_Link",
-                  ),
-                }),
-              ),
-            }),
-          ],
-        });
-      }
-      class _ extends _.Component {
-        state = {
-          filter: "",
-        };
-        render() {
-          const { store: _, onItemSelect: _ } = this.props,
-            { filter: _ } = this.state,
-            _ = _._.FilterStickers(_.GetStickerList(), _);
-          return (0, _.jsx)(_, {
-            title: (0, _._)("#EmoticonPicker_StickerHeading"),
-            items: _,
-            onItemSelect: _,
-            renderItem: (_) =>
-              (0, _.jsx)(_, {
-                sticker: _,
-              }),
-            keyExtractor: ({ name: _ }) => _,
-            onFilterChange: (_) =>
-              this.setState({
-                filter: _,
-              }),
-            filter: _,
-            onSubmit: () => _(_[0]),
-            renderEmpty: () =>
-              _
-                ? (0, _.jsx)(_, {
-                    children: (0, _._)("#AddonPicker_NoResults"),
-                  })
-                : (0, _.jsxs)(_.Fragment, {
-                    children: [
-                      (0, _.jsx)(_, {
-                        children: (0, _._)(
-                          "#AddonPicker_NoneOwned",
-                          (0, _._)("#AddonPicker_Stickers"),
-                        ),
-                      }),
-                      (0, _.jsx)(_, {
-                        children: (0, _._)(
-                          "#AddonPicker_AcquireAtPointsShop",
-                          (0, _.jsx)(_._, {
-                            href: `${_._.STORE_BASE_URL}points/shop/c/stickers`,
-                            children: (0, _._)(
-                              "#AddonPicker_AcquireAtPointsShop_Link",
-                            ),
-                          }),
-                        ),
-                      }),
-                    ],
-                  }),
-          });
-        }
-      }
-      class _ extends _.Component {
-        state = {
-          filter: "",
-        };
-        render() {
-          const { store: _, effectSettings: _, onItemSelect: _ } = this.props,
-            { filter: _ } = this.state,
-            _ = _.GetEffectList().filter(({ name: _ }) => _.indexOf(_) > -1);
-          return (0, _.jsx)(_, {
-            title: (0, _._)("#EmoticonPicker_EffectHeading"),
-            items: _,
-            onItemSelect: _,
-            renderItem: (_) =>
-              (0, _.jsx)(_, {
-                effect: _,
-                roomEffectSettings: _,
-              }),
-            keyExtractor: ({ name: _ }) => _,
-            onFilterChange: (_) =>
-              this.setState({
-                filter: _,
-              }),
-            filter: _,
-            onSubmit: () => __webpack_require__(_[0]),
-            renderEmpty: () =>
-              _
-                ? (0, _.jsx)(_, {
-                    children: (0, _._)("#AddonPicker_NoResults"),
-                  })
-                : (0, _.jsxs)(_.Fragment, {
-                    children: [
-                      (0, _.jsx)(_, {
-                        children: (0, _._)(
-                          "#AddonPicker_NoneOwned",
-                          (0, _._)("#AddonPicker_RoomEffects"),
-                        ),
-                      }),
-                      (0, _.jsx)(_, {
-                        children: (0, _._)(
-                          "#AddonPicker_AcquireAtPointsShop",
-                          (0, _.jsx)(_._, {
-                            href: `${_._.STORE_BASE_URL}points/shop/c/chateffects`,
-                            children: (0, _._)(
-                              "#AddonPicker_AcquireAtPointsShop_Link",
-                            ),
-                          }),
-                        ),
-                      }),
-                    ],
-                  }),
-          });
-        }
-      }
-      let _ = class extends _.Component {
-        state = {
-          filter: "",
-        };
-        render() {
-          const { store: _, onItemSelect: _, flairGroupID: _ } = this.props,
-            { filter: _ } = this.state,
-            _ = [];
-          return (
-            _(_).length &&
-              _.push({
-                title: (0, _._)("#AddonPicker_RecentEmoticons"),
-                items: _._.FilterEmoticons(_(_), _),
-                onItemSelect: _,
-                renderItem: (_) =>
-                  (0, _.jsx)(_, {
-                    emoticon: _,
-                  }),
-                keyExtractor: (_) => _.name,
-                renderEmpty: () =>
-                  (0, _.jsx)(_, {
-                    children: _
-                      ? (0, _._)("#AddonPicker_NoResults")
-                      : (0, _._)(
-                          "#AddonPicker_NoRecent",
-                          (0, _._)("#AddonPicker_Emoticons"),
-                        ),
-                  }),
-              }),
-            (0, _.jsx)(_, {
-              onFilterChange: (_) =>
-                this.setState({
-                  filter: _,
-                }),
-              filter: _,
-              sections: [
-                ..._,
-                {
-                  title: (0, _._)("#AddonPicker_AllEmoticons"),
-                  items: _._.FilterStickers(_.emoticon_list, _).slice(0, 1e3),
-                  onItemSelect: _,
-                  renderItem: (_) =>
-                    (0, _.jsx)(_, {
-                      emoticon: _,
-                    }),
-                  keyExtractor: (_) => _.name,
-                  renderEmpty: () =>
-                    _
-                      ? (0, _.jsx)(_, {
-                          children: (0, _._)("#AddonPicker_NoResults"),
-                        })
-                      : (0, _.jsx)(_, {}),
-                },
-              ],
-            })
-          );
-        }
-      };
-      _ = (0, _._)([_._], _);
-      let _ = class extends _.Component {
-        state = {
-          filter: "",
-        };
-        render() {
-          const { store: _, onItemSelect: _, flairGroupID: _ } = this.props,
-            { filter: _ } = this.state;
-          return (0, _.jsx)(_, {
-            onFilterChange: (_) =>
-              this.setState({
-                filter: _,
-              }),
-            filter: _,
-            sections: [
-              {
-                title: (0, _._)("#ChatEntryButton_Flair"),
-                items: _._.FilterStickers(_.GetFlairListByGroupID(_), _),
-                onItemSelect: _,
-                renderItem: (_) =>
-                  (0, _.jsx)(_, {
-                    emoticon: _,
-                  }),
-                keyExtractor: (_) => _.name,
-                renderEmpty: () =>
-                  _
-                    ? (0, _.jsx)(_, {
-                        children: (0, _._)("#AddonPicker_NoResults"),
-                      })
-                    : (0, _.jsx)(_, {}),
-              },
-            ],
-          });
-        }
-      };
-      _ = (0, _._)([_._], _);
-      const _ = (_) => {
-        const { emoticon: _, large: _ } = _,
-          _ = !_.last_used && _.time_received;
-        return (0, _.jsxs)("div", {
-          className: _().EmoticonItem,
-          children: [
-            (0, _.jsx)(_._, {
-              emoticon: _.name,
-              large: _,
-            }),
-            _ && (0, _.jsx)(_, {}),
-          ],
-        });
-      };
-      class _ extends _.Component {
-        state = {
-          showHover: !1,
-        };
-        m_ref = _.createRef();
-        render() {
-          const { sticker: _, className: _, ..._ } = this.props,
-            _ = _(_._.COMMUNITY_CDN_URL, _.name);
-          return (0, _.jsxs)("div", {
-            ref: this.m_ref,
-            className: (0, _._)(_, _().StickerButton),
-            onMouseOver: () =>
-              this.setState({
-                showHover: !0,
-              }),
-            onFocus: () =>
-              this.setState({
-                showHover: !0,
-              }),
-            onMouseLeave: () =>
-              this.setState({
-                showHover: !1,
-              }),
-            onBlur: () =>
-              this.setState({
-                showHover: !1,
-              }),
-            ..._,
-            children: [
-              (0, _.jsx)("img", {
-                style: {
-                  width: "100%",
-                },
-                src: _,
-              }),
-              this.state.showHover &&
-                this.m_ref.current &&
-                (0, _.jsx)(_, {
-                  target: this.m_ref.current,
-                  sticker: _,
-                }),
-            ],
-          });
-        }
-      }
-      const _ = (0, _._)((_) => {
-        const {
-            target: _,
-            sticker: { name: _, appid: _ },
-          } = _,
-          [_] = (0, _._)(_, {});
-        return (0, _.jsx)(_._, {
-          target: _,
-          title: _,
-          subtitle: _?.GetName(),
-          children: (0, _.jsx)("img", {
-            src: _(_._.COMMUNITY_CDN_URL, _),
-            className: _().StickerHoverSticker,
-          }),
-        });
-      });
-      class _ extends _.Component {
-        state = {
-          showHover: !1,
-        };
-        m_ref = _.createRef();
-        render() {
-          const {
-              effect: _,
-              roomEffectSettings: _,
-              className: _,
-              ..._
-            } = this.props,
-            _ = _[_.name];
-          return (0, _.jsxs)("div", {
-            ref: this.m_ref,
-            onMouseOver: () =>
-              this.setState({
-                showHover: !0,
-              }),
-            onFocus: () =>
-              this.setState({
-                showHover: !0,
-              }),
-            onMouseLeave: () =>
-              this.setState({
-                showHover: !1,
-              }),
-            onBlur: () =>
-              this.setState({
-                showHover: !1,
-              }),
-            className: (0, _._)(_, _().EffectButton),
-            ..._,
-            children: [
-              _.renderEffectIcon(),
-              this.state.showHover &&
-                this.m_ref.current &&
-                (0, _.jsx)(_, {
-                  target: this.m_ref.current,
-                  effect: _,
-                  roomEffectSettings: _,
-                }),
-            ],
-          });
-        }
-      }
-      const _ = (0, _._)((_) => {
-        const {
-            target: _,
-            effect: { name: _, appid: _ },
-            roomEffectSettings: _,
-          } = _,
-          _ = _[_],
-          [_] = (0, _._)(_, {});
-        return (0, _.jsx)(_._, {
-          target: _,
-          title: _,
-          subtitle: _?.GetName(),
-          children: (0, _.jsx)("div", {
-            className: _().EffectHoverEffect,
-            children: _.renderEffectIcon(),
-          }),
-        });
-      });
-      function _() {
-        return (0, _.jsx)("div", {
-          className: _().NewEmoticonIndicator,
-          children: (0, _.jsx)("div", {
-            className: _().NewEmoticonCircle,
-          }),
-        });
-      }
-      function _(_) {
-        return (0, _.jsxs)("svg", {
-          xmlns: "http://www.w3.org/2000/svg",
-          viewBox: "0 0 36 36",
-          fill: "none",
-          ..._,
-          children: [
-            (0, _.jsx)("path", {
-              fill: "currentColor",
-              _: "M8 4C5.79086 4 4 5.79086 4 8V27C4 29.2091 5.79086 31 8 31H13V20C13 16.134 16.134 13 20 13H31V8C31 5.79086 29.2091 4 27 4H8Z",
-            }),
-            (0, _.jsx)("path", {
-              fill: "currentColor",
-              _: "M16 20C16 17.7909 17.7909 16 20 16H31L16 31V20Z",
-            }),
-            (0, _.jsx)("path", {
-              fill: "currentColor",
-              _: "M29 24.0625V25C29 25.2671 28.9738 25.5282 28.9239 25.7806L30.8858 26.1688C30.9609 25.7892 31 25.3982 31 25V24.0625H29Z",
-            }),
-            (0, _.jsx)("path", {
-              fill: "currentColor",
-              _: "M28.3263 27.2225C28.0342 27.6587 27.6587 28.0342 27.2225 28.3263L28.3351 29.9882C28.9885 29.5507 29.5507 28.9885 29.9882 28.3351L28.3263 27.2225Z",
-            }),
-            (0, _.jsx)("path", {
-              fill: "currentColor",
-              _: "M21 29H22.1875V31H19L21 29Z",
-            }),
-            (0, _.jsx)("path", {
-              fill: "currentColor",
-              _: "M24.0625 29H25C25.2671 29 25.5282 28.9738 25.7806 28.9239L26.1688 30.8858C25.7892 30.9609 25.3982 31 25 31H24.0625V29Z",
-            }),
-            (0, _.jsx)("path", {
-              fill: "currentColor",
-              _: "M29 22.1875V21L31 19V22.1875H29Z",
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        return (0, _.jsx)("svg", {
-          xmlns: "http://www.w3.org/2000/svg",
-          viewBox: "0 0 36 36",
-          fill: "none",
-          ..._,
-          children: (0, _.jsx)("path", {
-            fill: "currentColor",
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            _: "M18 3C15.0333 3 12.1332 3.87973 9.66645 5.52796C7.19972 7.17618 5.27713 9.51886 4.14181 12.2597C3.0065 15.0006 2.70945 18.0166 3.28823 20.9264C3.86701 23.8361 5.29562 26.5088 7.3934 28.6066C9.49119 30.7044 12.1639 32.133 15.0737 32.7118C17.9834 33.2906 20.9994 32.9935 23.7403 31.8582C26.4811 30.7229 28.8238 28.8003 30.472 26.3336C32.1203 23.8668 33 20.9667 33 18C33 16.0302 32.612 14.0796 31.8582 12.2597C31.1044 10.4399 29.9995 8.78628 28.6066 7.3934C27.2137 6.00052 25.5601 4.89563 23.7403 4.14181C21.9204 3.38799 19.9698 3 18 3ZM9.00001 15C9.00001 14.4067 9.17595 13.8266 9.5056 13.3333C9.83524 12.8399 10.3038 12.4554 10.852 12.2284C11.4001 12.0013 12.0033 11.9419 12.5853 12.0576C13.1672 12.1734 13.7018 12.4591 14.1213 12.8787C14.5409 13.2982 14.8266 13.8328 14.9424 14.4147C15.0581 14.9967 14.9987 15.5999 14.7716 16.1481C14.5446 16.6962 14.1601 17.1648 13.6667 17.4944C13.1734 17.8241 12.5934 18 12 18C11.2044 18 10.4413 17.6839 9.87869 17.1213C9.31608 16.5587 9.00001 15.7956 9.00001 15ZM24 18C23.4067 18 22.8266 17.8241 22.3333 17.4944C21.8399 17.1648 21.4554 16.6962 21.2284 16.1481C21.0013 15.5999 20.9419 14.9967 21.0576 14.4147C21.1734 13.8328 21.4591 13.2982 21.8787 12.8787C22.2982 12.4591 22.8328 12.1734 23.4147 12.0576C23.9967 11.9419 24.5999 12.0013 25.1481 12.2284C25.6962 12.4554 26.1648 12.8399 26.4944 13.3333C26.8241 13.8266 27 14.4067 27 15C27 15.7956 26.6839 16.5587 26.1213 17.1213C25.5587 17.6839 24.7957 18 24 18ZM26.3149 23.6788C26.7672 22.8295 27 21.9193 27 21H18H9C9 21.9193 9.23279 22.8295 9.68508 23.6788C10.1374 24.5281 10.8003 25.2997 11.636 25.9497C12.4718 26.5998 13.4639 27.1154 14.5558 27.4672C15.6478 27.8189 16.8181 28 18 28C19.1819 28 20.3522 27.8189 21.4442 27.4672C22.5361 27.1154 23.5282 26.5998 24.364 25.9497C25.1997 25.2997 25.8626 24.5281 26.3149 23.6788Z",
-          }),
-        });
-      }
-      function _(_) {
-        return (0, _.jsxs)("svg", {
-          xmlns: "http://www.w3.org/2000/svg",
-          viewBox: "0 0 36 36",
-          fill: "none",
-          ..._,
-          children: [
-            (0, _.jsx)("path", {
-              fill: "currentColor",
-              _: "M14.7163 7.6875L17.2476 15.5344C17.564 16.6102 18.4499 17.4328 19.5257 17.8125L27.3726 20.3438L19.5257 22.875C18.4499 23.1914 17.6273 24.0773 17.2476 25.1531L14.7163 33L12.1851 25.1531C11.8687 24.0773 10.9827 23.2547 9.90696 22.875L2.06009 20.3438L9.90696 17.8125C10.9827 17.4961 11.8054 16.6102 12.1851 15.5344L14.7163 7.6875Z",
-            }),
-            (0, _.jsx)("path", {
-              fill: "currentColor",
-              _: "M24.488 3L25.7861 7.06499C25.9591 7.63321 26.3918 8.07031 26.9543 8.24514L30.9784 9.55643L26.9543 10.8677C26.3918 11.0426 25.9591 11.4796 25.7861 12.0479L24.488 16.1129L23.1899 12.0479C23.0168 11.4796 22.5841 11.0426 22.0216 10.8677L17.9976 9.55643L22.0216 8.24514C22.5841 8.07031 23.0168 7.63321 23.1899 7.06499L24.488 3Z",
-            }),
-            (0, _.jsx)("path", {
-              fill: "currentColor",
-              _: "M8.11778 3.9375L8.76682 5.99185C8.85336 6.25411 9.0697 6.47265 9.32932 6.56007L11.363 7.21571L9.32932 7.87136C9.0697 7.95878 8.85336 8.17732 8.76682 8.43958L8.11778 10.4939L7.46874 8.43958C7.3822 8.17732 7.16586 7.95878 6.90624 7.87136L4.87259 7.21571L6.90624 6.56007C7.16586 6.47265 7.3822 6.25411 7.46874 5.99185L8.11778 3.9375Z",
-            }),
-            (0, _.jsx)("path", {
-              fill: "currentColor",
-              _: "M30.6178 12.375L31.2668 14.4293C31.3534 14.6916 31.5697 14.9102 31.8293 14.9976L33.863 15.6532L31.8293 16.3089C31.5697 16.3963 31.3534 16.6148 31.2668 16.8771L30.6178 18.9314L29.9687 16.8771C29.8822 16.6148 29.6659 16.3963 29.4062 16.3089L27.3726 15.6532L29.4062 14.9976C29.6659 14.9102 29.8822 14.6916 29.9687 14.4293L30.6178 12.375Z",
-            }),
-            (0, _.jsx)("path", {
-              fill: "currentColor",
-              _: "M25.9303 24.5625L26.5793 26.6168C26.6659 26.8791 26.8822 27.0977 27.1418 27.1851L29.1755 27.8407L27.1418 28.4964C26.8822 28.5838 26.6659 28.8023 26.5793 29.0646L25.9303 31.1189L25.2812 29.0646C25.1947 28.8023 24.9784 28.5838 24.7187 28.4964L22.6851 27.8407L24.7187 27.1851C24.9784 27.0977 25.1947 26.8791 25.2812 26.6168L25.9303 24.5625Z",
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const { className: _, ..._ } = _;
-        return (0, _.jsx)("svg", {
-          className: (0, _._)("SVGIcon_Button SVGIcon_Clock", _),
-          version: "1.1",
-          _: "0px",
-          _: "0px",
-          width: "20px",
-          height: "20px",
-          viewBox: "0 0 24 24",
-          ..._,
-          children: (0, _.jsx)("path", {
-            _: "M15.999 15c-.15 0-.303-.034-.446-.105l-4-2A1.001 1.001 0 0111 12V5a1 1 0 012 0v6.382l3.447 1.724A1 1 0 0115.999 15zM12 24C5.383 24 0 18.617 0 12S5.383 0 12 0s12 5.383 12 12-5.383 12-12 12zm0-22C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2z",
-          }),
-        });
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = (_) => {
-          const { clanSteamID: _, fnImageSelectCallBack: _ } = _,
-            [_, _] = (0, _.useState)(""),
-            _ = (0, _._)(_.clanSteamID.GetAccountID()),
-            _ = () => _.closeModal && _.closeModal(),
-            _ = _._.GetFilteredClanImages(_, _),
-            _ = (_) => {
-              __webpack_require__(_), _();
-            };
-          return (0, _.jsx)(_._, {
-            children: (0, _.jsx)(_._, {
-              onEscKeypress: _,
-              children: (0, _.jsxs)(_._, {
-                children: [
-                  (0, _.jsx)(_._, {
-                    children: (0, _._)("#ClanImageChooser_Title"),
-                  }),
-                  (0, _.jsx)(_._, {
-                    children: (0, _.jsxs)(_._, {
-                      children: [
-                        (0, _.jsx)("p", {
-                          children: (0, _._)("#ClanImageChooser_Desc"),
-                        }),
-                        (0, _.jsx)(_._, {
-                          placeholder: (0, _._)("#ClanImageChooser_Search"),
-                          value: _,
-                          onChange: (_) => _(_.currentTarget.value),
-                        }),
-                        (0, _.jsx)("div", {
-                          className: _.ImagesOuterContainer,
-                          children: _
-                            ? (0, _.jsx)(_._, {
-                                size: "medium",
-                                string: (0, _._)("#Loading"),
-                              })
-                            : Boolean(_.length > 0)
-                              ? _.map((_) =>
-                                  (0, _.jsx)(
-                                    _,
-                                    {
-                                      clanImage: _,
-                                      searchStringHilight: _,
-                                      fnImageClick: _,
-                                    },
-                                    "ci" + _.image_hash,
-                                  ),
-                                )
-                              : Boolean(0 == _.trim().length)
-                                ? (0, _.jsx)("div", {
-                                    children: (0, _._)(
-                                      "#ClanImageChooser_None",
-                                    ),
-                                  })
-                                : (0, _.jsx)("div", {
-                                    children: (0, _._)(
-                                      "#EventCalendar_GameSearch_NoneFound",
-                                    ),
-                                  }),
-                        }),
-                      ],
-                    }),
-                  }),
-                  (0, _.jsx)(_._, {
-                    children: (0, _.jsx)(_._, {
-                      onClick: _,
-                      children: (0, _._)("#Button_Cancel"),
-                    }),
-                  }),
-                ],
-              }),
-            }),
-          });
-        },
-        _ = (_) => {
-          const { clanImage: _, searchStringHilight: _, fnImageClick: _ } = _;
-          let _ = _.file_name ? _.file_name : "",
-            _ = _(_, _, String(_.imageid), _.Hilight);
-          return (0, _.jsxs)("div", {
-            className: _.ImageContainer,
-            children: [
-              (0, _.jsx)("div", {
-                className: _.Image,
-                style: {
-                  backgroundImage: `url( '${_.thumb_url}' )`,
-                },
-                onDoubleClick: () => _(_),
-              }),
-              (0, _.jsx)("div", {
-                className: _.ImageFilename,
-                title: _,
-                children: _,
-              }),
-            ],
-          });
-        };
-      function _(_, _, _, _) {
-        let _ = [];
-        if (_.length > 0) {
-          let _ = _.toLocaleLowerCase();
-          for (let _ = 0; _ < _.length; ) {
-            let _ = _.indexOf(_, _);
-            if (_ < 0) {
-              _.push(
-                (0, _.jsx)(
-                  "span",
-                  {
-                    children: _.substring(_),
-                  },
-                  _ + "_" + String(_),
-                ),
-              );
-              break;
-            }
-            _ < _ &&
-              _.push(
-                (0, _.jsx)(
-                  "span",
-                  {
-                    children: _.substring(_, _),
-                  },
-                  _ + "_" + String(_),
-                ),
-              ),
-              _.push(
-                (0, _.jsx)(
-                  "span",
-                  {
-                    className: _,
-                    children: _.substr(_, _.length),
-                  },
-                  _ + "_" + String(_),
-                ),
-              ),
-              (_ = _ + _.length);
-          }
-        } else
-          _.push(
-            (0, _.jsx)(
-              "span",
-              {
-                children: _,
-              },
-              _ + "_null",
-            ),
-          );
-        return _;
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -26017,6 +20715,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -26072,6 +20771,7 @@
                             children: (0, _.jsx)("img", {
                               className: (0, _._)(_().Avatar, "Avatar_Trgt"),
                               src: _,
+                              alt: "",
                             }),
                           }),
                           (0, _.jsxs)("div", {
@@ -26138,6 +20838,7 @@
                         (0, _.jsx)("a", {
                           href: _,
                           target: "_blank",
+                          rel: "noopener noreferrer",
                           className: _().MembersListLink,
                           children: (0, _._)("#ClanMembershipList"),
                         }),
@@ -26149,38 +20850,10 @@
           }),
         });
       }
-      var _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { data: _, isPending: _ } = (0, _._)(
-          _
-            ? {
-                appid: _,
-              }
-            : void 0,
-        );
-        return _.useMemo(() => {
-          if (!_) return [];
-          if (!_) return _ ? void 0 : [];
-          const _ = [],
-            _ = new Set(),
-            _ = [
-              ["developer", (0, _._)(_.developers)],
-              ["publisher", (0, _._)(_.publishers)],
-              ["franchise", (0, _._)(_.franchises)],
-            ];
-          for (const [_, _] of _)
-            for (const _ of _)
-              _.has(_) ||
-                (_.add(_),
-                _.push({
-                  appid: _,
-                  name: "",
-                  clan_account_id: _,
-                  type: _,
-                }));
-          return _;
-        }, [_, _, _]);
-      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       function _(_) {
         const { rgCreators: _, renderCreator: _ } = _,
           [_, _] = _.useState(0);
@@ -26215,6 +20888,73 @@
         });
       }
       function _(_) {
+        const { creatorID: _, bSmallFormat: _ } = _,
+          { data: _ } = (0, _._)(_.clan_account_id);
+        return _
+          ? (0, _.jsx)(_, {
+              strURL: (0, _._)(_, _.type),
+              strName: _.name ?? "",
+              strAvatarURL: _.avatar_url_full_size ?? "",
+              nFollowers: _.followers ?? 0,
+              strCreatorType: _(_.type),
+              followButton: (0, _.jsx)(_._, {
+                clanAccountID: _.clan_account_id,
+                followType: "creatorhome",
+              }),
+              bSmallFormat: _,
+            })
+          : null;
+      }
+      function _(_) {
+        const { appid: _, bSmallFormat: _, renderCreator: _ } = _,
+          _ = (function (_) {
+            const { data: _, isPending: _ } = (0, _._)(
+              _
+                ? {
+                    appid: _,
+                  }
+                : void 0,
+            );
+            return _.useMemo(() => {
+              if (!_) return [];
+              if (!_) return _ ? void 0 : [];
+              const _ = [],
+                _ = new Set(),
+                _ = [
+                  ["developer", (0, _._)(_.developers)],
+                  ["publisher", (0, _._)(_.publishers)],
+                  ["franchise", (0, _._)(_.franchises)],
+                ];
+              for (const [_, _] of _)
+                for (const _ of _)
+                  _.has(_) ||
+                    (_.add(_),
+                    _.push({
+                      appid: _,
+                      name: "",
+                      clan_account_id: _,
+                      type: _,
+                    }));
+              return _;
+            }, [_, _, _]);
+          })(_);
+        return _
+          ? (0, _.jsx)(_, {
+              rgCreators: _,
+              renderCreator:
+                _ ??
+                ((_) =>
+                  (0, _.jsx)(_, {
+                    creatorID: _,
+                    bSmallFormat: _,
+                  })),
+            })
+          : (0, _.jsx)("div", {
+              className: _().DevSummaryWidgetCtn,
+              children: (0, _.jsx)(_._, {}),
+            });
+      }
+      function _(_) {
         switch (_) {
           case "publisher":
             return (0, _._)("#CreatorHome_PublishedBy");
@@ -26223,6 +20963,10 @@
         }
         return (0, _._)("#CreatorHome_DevelopedBy");
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const {
             creatorID: _,
@@ -26237,7 +20981,7 @@
           [_] = (0, _._)();
         return _ || (!_ && _)
           ? (0, _.jsx)("div", {
-              className: _.DevSummaryWidgetCtn,
+              className: _().DevSummaryWidgetCtn,
               children: (0, _.jsx)(_._, {
                 string: (0, _._)("#Loading"),
                 size: "medium",
@@ -26272,23 +21016,18 @@
             : null;
       }
       function _(_) {
-        const { appid: _, bSmallFormat: _ } = _,
-          _ = _(_);
-        return _
-          ? (0, _.jsx)(_._, {
-              children: (0, _.jsx)(_, {
-                rgCreators: _,
-                renderCreator: (_) =>
-                  (0, _.jsx)(_, {
-                    creatorID: _,
-                    bSmallFormat: _,
-                  }),
+        const { appid: _, bSmallFormat: _ } = _;
+        return (0, _.jsx)(_._, {
+          children: (0, _.jsx)(_, {
+            appid: _,
+            bSmallFormat: _,
+            renderCreator: (_) =>
+              (0, _.jsx)(_, {
+                creatorID: _,
+                bSmallFormat: _,
               }),
-            })
-          : (0, _.jsx)("div", {
-              className: _.DevSummaryWidgetCtn,
-              children: (0, _.jsx)(_._, {}),
-            });
+          }),
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -26577,217 +21316,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      let _ = class extends _.Component {
-        GenerateLanguageOptions() {
-          let _ = [];
-          const {
-            fnFilterLanguage: _,
-            fnLangHasData: _,
-            fnLastUpdateRTime: _,
-            fnIsLangSupported: _,
-          } = this.props;
-          this.props.bAllowUnsetOption &&
-            _.push(
-              (0, _.jsx)(
-                "option",
-                {
-                  value: _.xPp,
-                  children: (0, _._)("#language_selection_none"),
-                },
-                "langpicker_unset",
-              ),
-            );
-          let _ = new Array();
-          const _ = this.props.realms || [_._.k_ESteamRealmGlobal];
-          for (const _ of _._.GetLanguageListForRealms(_)) {
-            if (_ && !_(_)) continue;
-            const _ = (0, _.LgB)(_),
-              _ = (0, _._)("#Language_" + _),
-              _ = !(!_ || !_(_));
-            _.push({
-              eLang: _,
-              sLocName: _,
-              bSupported: _,
-            });
-          }
-          _.sort((_, _) =>
-            _.bSupported != _.bSupported
-              ? _.bSupported
-                ? -1
-                : 1
-              : _.sLocName.localeCompare(_.sLocName),
-          );
-          let _ = !1;
-          for (const _ of _) {
-            _.bSupported != _ &&
-              (_.push(
-                (0, _.jsx)(
-                  "option",
-                  {
-                    className: _().SupportedGroupLabel,
-                    disabled: !0,
-                    children: (0, _._)(
-                      _.bSupported
-                        ? "#LanguageGroup_Supported"
-                        : "#LanguageGroup_Unsupported",
-                    ),
-                  },
-                  _.bSupported ? "SupportedGroup" : "UnsupportedGroup",
-                ),
-              ),
-              (_ = _.bSupported));
-            const _ = _ && __webpack_require__(_.eLang),
-              _ = _ && _(_.eLang);
-            let _ = _.sLocName;
-            _ &&
-              0 !== _ &&
-              ((_ += " "),
-              (_ += (0, _._)(
-                "#Language_Last_Update",
-                (0, _._)(_) +
-                  " @ " +
-                  (0, _._)(_, {
-                    bForce24HourClock: !1,
-                  }),
-              ))),
-              _.push(
-                (0, _.jsx)(
-                  "option",
-                  {
-                    value: _.eLang,
-                    className: (0, _._)(
-                      {
-                        [_().LanguageWithContent]: _,
-                      },
-                      _.bSupported
-                        ? _().SupportedLanguage
-                        : _().UnsupportedLanguage,
-                    ),
-                    children: _,
-                  },
-                  "langpicker" + _.eLang + (_ ? "_hasdata" : ""),
-                ),
-              );
-          }
-          return _;
-        }
-        OnLanguageChange(_) {
-          const { fnOnLanguageChanged: _, selectedLang: _ } = this.props;
-          let _ = Number.parseInt(_.currentTarget.value);
-          _ != _ && _ && _(_);
-        }
-        render() {
-          const { selectedLang: _, bDisabled: _, strTooltip: _ } = this.props;
-          let _ = this.GenerateLanguageOptions();
-          return (0, _.jsx)(_._, {
-            toolTipContent: _,
-            children: (0, _.jsx)("select", {
-              value: _,
-              onChange: this.OnLanguageChange,
-              disabled: _,
-              children: _,
-            }),
-          });
-        }
-      };
-      (0, _._)([_._], _.prototype, "OnLanguageChange", null),
-        (_ = (0, _._)([_._], _));
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = (_) => {
-        const _ = _.createRef(),
-          [_, _] = _.useState(""),
-          _ = _.createRef(),
-          _ = () => {
-            const _ = _.current?.ownerDocument.defaultView;
-            _.current &&
-              _ &&
-              _.navigator.clipboard
-                .writeText(_.current.value)
-                .then((_) => {
-                  _((0, _._)("#EventDisplay_Share_CopiedToClipboard"));
-                })
-                .catch((_) => {
-                  _((0, _._)("#EventDisplay_Share_FailedToCopyToClipboard")),
-                    console.error("Failed to copy link to clipboard:", _);
-                });
-          };
-        return (0, _.jsxs)("div", {
-          children: [
-            (0, _.jsxs)("div", {
-              className: (0, _._)(_().FlexRowContainer, _().linkField),
-              onClick: _,
-              children: [
-                (0, _.jsx)("span", {
-                  className: _().LinkInputLabel,
-                  children: (0, _._)(
-                    _.labelOverride
-                      ? _.labelOverride
-                      : "#EventDisplay_Share_Link",
-                  ),
-                }),
-                (0, _.jsx)("input", {
-                  className: _().LinkInput,
-                  ref: _,
-                  value: _.eventLink,
-                  readOnly: !0,
-                }),
-                document.queryCommandSupported("copy") &&
-                  (0, _.jsx)(_._, {
-                    className: (0, _._)(_().Button, _().Icon, _().LinkButton),
-                    onActivate: _,
-                    children: (0, _.jsx)(_._, {
-                      toolTipContent: (0, _._)("#ToolTip_CopyLinkToClipboard"),
-                      children: (0, _.jsx)("img", {
-                        className: _().ClipboardIcon,
-                        src: _._,
-                      }),
-                    }),
-                  }),
-              ],
-            }),
-            (0, _.jsx)("div", {
-              ref: _,
-              className: _().ClipboardText,
-              children: _,
-            }),
-          ],
-        });
-      };
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -26798,6 +21326,9 @@
         _ = __webpack_require__("chunkid");
       const _ = _.lazy(() =>
           Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -27107,6 +21638,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -27383,6 +21916,7 @@
           bShowAsCarousel: _,
           bAutoAdvance: _,
           bHideIfTooFewItems: _,
+          strCarouselKey: _,
         } = _;
         if (0 === _.length)
           return {
@@ -27413,29 +21947,33 @@
         const _ = _ && _ <= 1,
           _ = Math.min(_[0], _);
         if (_ && _.length > _)
-          _ = (0, _.jsx)(_._, {
-            ..._,
-            hideArrows: !_,
-            visibleElements: _,
-            className: (0, _._)({
-              SaleSectionCarousel: !0,
-              SaleSectionCarouselPadding: !Boolean(_),
-              ItemCount_4: 4 == _[0],
-              [_.ListOfCreators]:
-                _ &&
-                _.section &&
-                "creator_list_of_lists" == _.section.section_type,
-            }),
-            useTestScrollbar: !0,
-            bLazyRenderChildren: !0,
-            bAutoAdvance: !!_,
-            hidePips: _,
-            padded: !Boolean(_),
-            screenIsWide: _,
-            navKey: _,
-            lazyRenderPlaceholderWidth: _,
-            children: _(_, 0, _.length, _, _(0, _)),
-          });
+          _ = (0, _.createElement)(
+            _._,
+            {
+              ..._,
+              key: _,
+              hideArrows: !_,
+              visibleElements: _,
+              className: (0, _._)({
+                SaleSectionCarousel: !0,
+                SaleSectionCarouselPadding: !Boolean(_),
+                ItemCount_4: 4 == _[0],
+                [_.ListOfCreators]:
+                  _ &&
+                  _.section &&
+                  "creator_list_of_lists" == _.section.section_type,
+              }),
+              useTestScrollbar: !0,
+              bLazyRenderChildren: !0,
+              bAutoAdvance: !!_,
+              hidePips: _,
+              padded: !Boolean(_),
+              screenIsWide: _,
+              navKey: _,
+              lazyRenderPlaceholderWidth: _,
+            },
+            _(_, 0, _.length, _, _(0, _)),
+          );
         else {
           let _ = _(_),
             _ = !0;
@@ -27505,18 +22043,22 @@
                 focusable: !1,
                 children: _,
               })))
-            : (_ = (0, _.jsx)(_._, {
-                ..._,
-                hideArrows: !_,
-                visibleElements: 1,
-                className: "SaleSectionCarousel",
-                useTestScrollbar: !0,
-                bLazyRenderChildren: !0,
-                lazyRenderPlaceholderWidth: _,
-                hidePips: _,
-                screenIsWide: _,
-                children: _,
-              }));
+            : (_ = (0, _.createElement)(
+                _._,
+                {
+                  ..._,
+                  key: _,
+                  hideArrows: !_,
+                  visibleElements: 1,
+                  className: "SaleSectionCarousel",
+                  useTestScrollbar: !0,
+                  bLazyRenderChildren: !0,
+                  lazyRenderPlaceholderWidth: _,
+                  hidePips: _,
+                  screenIsWide: _,
+                },
+                _,
+              ));
         }
         return {
           content: _,
@@ -27561,6 +22103,10 @@
             saleEvent: _,
             language: _,
             activeTab: _,
+          },
+          _ = {
+            ..._,
+            strCarouselKey: (0, _._)(_?.GetTagSelection()),
           };
         return _(_.unique_id, _, _, _, _, _, (_) => _(_, _), _, _);
       }
@@ -27995,7 +22541,6 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -28006,25 +22551,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_, _) {
-        const _ = _.GetSaleSections().filter(
-          (_) =>
-            (0, _._)(_.section_type) && "personalized_carousel" == (0, _._)(_),
-        );
-        if (!_ || 0 == _.length)
-          return {
-            nNumSections: 0,
-            nSectionIndex: -1,
-          };
-        const _ = __webpack_require__.findIndex(
-          (_) => _.unique_id == _.unique_id,
-        );
-        return {
-          nNumSections: _.length,
-          nSectionIndex: _,
-        };
-      }
       function _(_, _, _) {
         const _ = (function (_, _, _) {
           const _ = _ == _._ || _ == _._ || _ == _._,
@@ -28047,7 +22575,7 @@
                 return "#Sale_TopPlayedOnDeckSection";
               case "personalized_carousel":
                 if (_) {
-                  const { nSectionIndex: _, nNumSections: _ } = _(_, _);
+                  const { nSectionIndex: _, nNumSections: _ } = (0, _._)(_, _);
                   return (0, _._)(
                     "#Sale_PersonalizedCarousel_Section_Editor_title",
                     _ + 1,
@@ -28056,7 +22584,7 @@
                 }
                 const _ = _._.Get().GetTagNameForSaleSection(_, _);
                 if (!_ && _ == _._) {
-                  const { nSectionIndex: _, nNumSections: _ } = _(_, _);
+                  const { nSectionIndex: _, nNumSections: _ } = (0, _._)(_, _);
                   return (0, _._)(
                     "#Sale_PersonalizedCarousel_Section_Editor_title",
                     _ + 1,
@@ -29227,39 +23755,6 @@
             }),
           ],
         });
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid");
-      function _(_) {
-        return "sub" !== _.type && "bundle" !== _.type;
-      }
-      function _(_, _, _, _) {
-        const _ = [];
-        for (const _ of _)
-          if (_.has(_) && !__webpack_require__(_) && (_.push(_), _.length >= _))
-            break;
-        return _;
-      }
-      function _(_, _, _, _ = new Set()) {
-        for (const _ of _.GetSaleSections())
-          if (
-            (0, _._)(_.section_type) &&
-            (!_ || __webpack_require__.BIncludeSection(_))
-          )
-            for (const _ of _.capsules) _(_) && _.add(_._);
-        for (const _ of _ ?? []) {
-          const _ = _.capsule;
-          !_(_) ||
-            (_ && !__webpack_require__.BIncludeLinkedCapsule(_)) ||
-            _.add(_._);
-        }
-        return _;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -33539,12 +28034,31 @@
           _ = _(_, _, _, _, [..._]);
         } else _ = _(_, _, _, _, [..._.capsules]);
         if (_.signal.aborted) return _;
-        (_ = (0, _._)(_, _, _, _)),
+        if (
+          ((_ = (0, _._)(_, _, _, _)),
           _ && (_ = _(_)),
           _.BUsesContentHubForItemSource() ||
             _.enable_faceted_browsing ||
             (_ = _.filter((_) => _ && _.ShouldShowCapsule(_))),
-          (_ = _._ ? (0, _._)(_, _) : _);
+          (_ = _._ ? (0, _._)(_, _) : _),
+          _?.GetTagSelection() &&
+            (0, _._)(_) > 0 &&
+            !(0, _._)(_) &&
+            !_.enable_faceted_browsing &&
+            !_.BUsesContentHubForItemSource())
+        ) {
+          const _ = {
+              nTabUniqueID: _.GetActiveTabUniqueID(),
+              strTabFilter: _.GetStoreFilter(),
+              facetFilter: _,
+            },
+            _ = await _.Get().GetSaleGamesByFlavor(_, _, "all", _, 1e4);
+          if (_.signal.aborted) return _;
+          const _ = new Set(_.appids);
+          _ = _.filter(
+            (_) => "sub" == _.type || "bundle" == _.type || _.has(_._),
+          );
+        }
         let _ = !1;
         {
           let _ = _.length;
@@ -34610,6 +29124,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
@@ -35921,7 +30436,8 @@
       }
       function _(_) {
         const { section: _ } = _,
-          _ = "list" == _.internal_section_data?.while_supplies_last_layout;
+          _ = "list" == _.internal_section_data?.while_supplies_last_layout,
+          _ = !!_.internal_section_data?.while_supplies_last_hide_sold_out;
         return (0, _.jsx)(_, {
           ..._,
           children: (0, _.jsx)("div", {
@@ -35938,6 +30454,7 @@
                       ..._,
                       supplyInfo: _,
                       bVerticalLayout: !_,
+                      bHideSoldOut: _,
                     }),
                   },
                   "supply" + _.unique_id,
@@ -35947,45 +30464,53 @@
         });
       }
       function _(_) {
-        const { supplyInfo: _, language: _, event: _, bVerticalLayout: _ } = _,
+        const {
+            supplyInfo: _,
+            language: _,
+            event: _,
+            bVerticalLayout: _,
+            bHideSoldOut: _,
+          } = _,
           { data: _ } = (0, _._)(_.supply_package),
           _ = (0, _._)(_.supply_package),
           _ = _(_.localized_supply_desc, _) ?? "",
           _ = (0, _._)("#EventEmail_Button_BuyNow");
         return _
-          ? (function (_, _) {
-              return (
-                !_.use_package_description && !_(_.localized_supply_desc, _)
-              );
-            })(_, _)
-            ? (0, _.jsx)(_, {
-                _: _,
-                hardwareDetail: _,
-                strBuyLabel: _,
-                strBuyClassName: "WhileSupplyLastAddToCart",
-              })
-            : (0, _.jsxs)("div", {
-                className: _(_),
-                children: [
-                  (0, _.jsx)(_, {
-                    _: _,
-                    bUsePackageDescription: _.use_package_description,
-                    bVerticalLayout: _,
-                    strDescription: _,
-                    event: _,
-                    language: _,
-                  }),
-                  (0, _.jsx)(_._, {
-                    hardwareDetail: _,
-                    strLabel: _,
-                    className: "WhileSupplyLastAddToCart",
-                  }),
-                  !!_.inventory_available &&
+          ? _ && !_.inventory_available
+            ? null
+            : (function (_, _) {
+                  return (
+                    !_.use_package_description && !_(_.localized_supply_desc, _)
+                  );
+                })(_, _)
+              ? (0, _.jsx)(_, {
+                  _: _,
+                  hardwareDetail: _,
+                  strBuyLabel: _,
+                  strBuyClassName: "WhileSupplyLastAddToCart",
+                })
+              : (0, _.jsxs)("div", {
+                  className: _(_),
+                  children: [
+                    (0, _.jsx)(_, {
+                      _: _,
+                      bUsePackageDescription: _.use_package_description,
+                      bVerticalLayout: _,
+                      strDescription: _,
+                      event: _,
+                      language: _,
+                    }),
                     (0, _.jsx)(_._, {
                       hardwareDetail: _,
+                      strLabel: _,
+                      className: "WhileSupplyLastAddToCart",
                     }),
-                ],
-              })
+                    !!_.inventory_available &&
+                      (0, _.jsx)(_._, {
+                        hardwareDetail: _,
+                      }),
+                  ],
+                })
           : (0, _.jsx)(_._, {
               string: (0, _._)("#Loading"),
               position: "center",
@@ -36365,24 +30890,9 @@
       function _(_) {
         return (0, _.jsx)(_._, {
           children: (0, _.jsx)(_, {
-            trailerPlayer: _,
+            trailerPlayer: _._,
             children: _.children,
           }),
-        });
-      }
-      function _(_) {
-        const { appid: _, trailerBaseID: _, bShowModal: _, hideModal: _ } = _,
-          _ = _.useMemo(
-            () => ({
-              appid: _,
-            }),
-            [_],
-          );
-        return (0, _.jsx)(_._, {
-          _: _,
-          trailerBaseID: _,
-          bShowModal: _,
-          hideModal: _,
         });
       }
       const _ = _.Fragment;
@@ -36784,7 +31294,6 @@
                 }),
                 (0, _.jsx)(_._, {
                   text: _,
-                  partnerEventStore: _._,
                   showErrorInfo: _,
                   event: _,
                   languageOverride: _,
@@ -36904,7 +31413,6 @@
                 }),
                 (0, _.jsx)(_._, {
                   text: _,
-                  partnerEventStore: _._,
                   showErrorInfo: _,
                   event: _,
                   languageOverride: _,
@@ -36965,7 +31473,6 @@
                 }),
                 (0, _.jsx)(_._, {
                   text: _,
-                  partnerEventStore: _._,
                   showErrorInfo: _,
                   event: _,
                   languageOverride: _,
@@ -37091,7 +31598,6 @@
                   className: _.description,
                   children: (0, _.jsx)(_._, {
                     text: _,
-                    partnerEventStore: _._,
                     showErrorInfo: _,
                     event: _,
                     languageOverride: _,
@@ -37124,7 +31630,6 @@
                   className: _.description2,
                   children: (0, _.jsx)(_._, {
                     text: _,
-                    partnerEventStore: _._,
                     showErrorInfo: _,
                     event: _,
                     languageOverride: _,
@@ -37167,7 +31672,6 @@
               },
               children: (0, _.jsx)(_._, {
                 text: _,
-                partnerEventStore: _._,
                 showErrorInfo: _,
                 event: _,
                 languageOverride: _,
@@ -37323,7 +31827,6 @@
                   className: _.description,
                   children: (0, _.jsx)(_._, {
                     text: _,
-                    partnerEventStore: _._,
                     showErrorInfo: _,
                     event: _,
                     languageOverride: _,
@@ -37363,7 +31866,6 @@
                   className: _.description2,
                   children: (0, _.jsx)(_._, {
                     text: _,
-                    partnerEventStore: _._,
                     showErrorInfo: _,
                     event: _,
                     languageOverride: _,
@@ -37427,7 +31929,6 @@
               className: (0, _._)("questions"),
               children: (0, _.jsx)(_._, {
                 text: _,
-                partnerEventStore: _._,
                 showErrorInfo: _,
                 event: _,
                 languageOverride: _,
@@ -37605,7 +32106,6 @@
               className: (0, _._)(_.answerCtn, "answers"),
               children: (0, _.jsx)(_._, {
                 text: _,
-                partnerEventStore: _._,
                 showErrorInfo: _,
                 event: _,
                 languageOverride: _,
@@ -37939,7 +32439,6 @@
                           _.localized_reward_description[_] ||
                           _.localized_reward_description[_] ||
                           "",
-                        partnerEventStore: _._,
                         showErrorInfo: _,
                         event: _,
                         languageOverride: _,
@@ -37953,6 +32452,133 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const {
+            section: _,
+            nRowsWithNext: _,
+            nCapsules: _,
+            rgRowSizes: _,
+            bLoading: _,
+            onShowMore: _,
+          } = _,
+          _ = _(_, _, _) < _;
+        return (0, _.jsx)("div", {
+          className: (0, _._)(
+            _().ShowContentsContainer,
+            "ShowContentsContainer",
+          ),
+          children: _
+            ? (0, _.jsx)(_._, {
+                size: "small",
+                string: (0, _._)("#Loading"),
+              })
+            : !_ &&
+              _.cap_section_content &&
+              (0, _.jsx)(_._, {
+                onClick: _,
+                className: (0, _._)(
+                  _().ShowContentsButton,
+                  "ShowContentsButton",
+                ),
+                children: (0, _._)("#Sale_ShowMore"),
+              }),
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            event: _,
+            section: _,
+            language: _,
+            bInGamepadUI: _,
+            placeholderHeight: _,
+            nHiddenCapsules: _,
+            children: _,
+          } = _,
+          [_, _] = _.useState(void 0),
+          { bShowSeeMoreHint: _, panelProps: _ } = (0, _._)(_);
+        return (0, _.jsxs)(_._, {
+          placeholderHeight: _,
+          className: (0, _._)({
+            [_().SaleSection]: !0,
+            [_().CarouselDisplay]: (0, _._)(_),
+            [_().DisabledBackground]: _.disable_background,
+            [_().SaleSectionCtn]: !0,
+            SaleSectionForCustomCSS: !0,
+            [_.sale_section_classname || ""]: !!_.sale_section_classname,
+            [_().Blur]: "coverBlur" == _.background_repeat,
+          }),
+          rootMargin: _._,
+          holdGamepadFocus: _,
+          ..._,
+          children: [
+            (0, _.jsx)("div", {
+              className: (0, _._)(
+                _().BackgroundImage,
+                "coverBlur" == _.background_repeat ? _().Blur : "",
+              ),
+              style: (0, _._)(_, _, _),
+            }),
+            (0, _.jsxs)("div", {
+              className: _().SaleSectionTitleCtn,
+              children: [
+                (0, _.jsx)(_._, {
+                  section: _,
+                  event: _,
+                  language: _,
+                  nHiddenCapsules: _,
+                  bShowSeeMoreHint: _,
+                  bUseGamepadLinkHint: !0,
+                  onLinkResolved: (_) => _(_ ?? void 0),
+                }),
+                (0, _.jsx)(_, {
+                  event: _,
+                  section: _,
+                }),
+              ],
+            }),
+            _,
+            (0, _.jsx)(_._, {
+              section: _,
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const { event: _, section: _ } = _,
+          _ = _.useMemo(
+            () =>
+              "events" == _.section_type
+                ? (0, _._)("ch_newshub", "application_config")
+                : void 0,
+            [_.section_type],
+          );
+        if (_.hide_view_all_events_link) return null;
+        let _ = null;
+        if ("events" == _.section_type) {
+          if (!_) return null;
+          if (!_.BUsesContentHubForItemSource()) return null;
+          if (!(0, _._)(_)) return null;
+          _ = _._.STORE_BASE_URL + "news/" + _;
+        } else
+          "sale_events" == _.section_type
+            ? (_ = _._.STORE_BASE_URL + "news/collection/sales/")
+            : "calendar" == _.section_type &&
+              (_ = _._.STORE_BASE_URL + "personalcalendar");
+        if (!_) return null;
+        const _ = _;
+        return (0, _.jsx)("div", {
+          className: _().EventSectionViewAllCtn,
+          children: (0, _.jsx)(_._, {
+            onClick: (_) => (0, _._)(_, _),
+            children: (0, _._)("#EventBrowse_AllEventsBtn"),
+          }),
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -38505,131 +33131,6 @@
                 ],
               });
       });
-      function _(_) {
-        const {
-            section: _,
-            nRowsWithNext: _,
-            nCapsules: _,
-            rgRowSizes: _,
-            bLoading: _,
-            onShowMore: _,
-          } = _,
-          _ = _(_, _, _) < _;
-        return (0, _.jsx)("div", {
-          className: (0, _._)(
-            _().ShowContentsContainer,
-            "ShowContentsContainer",
-          ),
-          children: _
-            ? (0, _.jsx)(_._, {
-                size: "small",
-                string: (0, _._)("#Loading"),
-              })
-            : !_ &&
-              _.cap_section_content &&
-              (0, _.jsx)(_._, {
-                onClick: _,
-                className: (0, _._)(
-                  _().ShowContentsButton,
-                  "ShowContentsButton",
-                ),
-                children: (0, _._)("#Sale_ShowMore"),
-              }),
-        });
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            event: _,
-            section: _,
-            language: _,
-            bInGamepadUI: _,
-            placeholderHeight: _,
-            nHiddenCapsules: _,
-            children: _,
-          } = _,
-          [_, _] = _.useState(void 0),
-          { bShowSeeMoreHint: _, panelProps: _ } = (0, _._)(_);
-        return (0, _.jsxs)(_._, {
-          placeholderHeight: _,
-          className: (0, _._)({
-            [_().SaleSection]: !0,
-            [_().CarouselDisplay]: (0, _._)(_),
-            [_().DisabledBackground]: _.disable_background,
-            [_().SaleSectionCtn]: !0,
-            SaleSectionForCustomCSS: !0,
-            [_.sale_section_classname || ""]: !!_.sale_section_classname,
-            [_().Blur]: "coverBlur" == _.background_repeat,
-          }),
-          rootMargin: _._,
-          holdGamepadFocus: _,
-          ..._,
-          children: [
-            (0, _.jsx)("div", {
-              className: (0, _._)(
-                _().BackgroundImage,
-                "coverBlur" == _.background_repeat ? _().Blur : "",
-              ),
-              style: (0, _._)(_, _, _),
-            }),
-            (0, _.jsxs)("div", {
-              className: _().SaleSectionTitleCtn,
-              children: [
-                (0, _.jsx)(_._, {
-                  section: _,
-                  event: _,
-                  language: _,
-                  nHiddenCapsules: _,
-                  bShowSeeMoreHint: _,
-                  bUseGamepadLinkHint: !0,
-                  onLinkResolved: (_) => _(_ ?? void 0),
-                }),
-                (0, _.jsx)(_, {
-                  event: _,
-                  section: _,
-                }),
-              ],
-            }),
-            _,
-            (0, _.jsx)(_._, {
-              section: _,
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const { event: _, section: _ } = _,
-          _ = _.useMemo(
-            () =>
-              "events" == _.section_type
-                ? (0, _._)("ch_newshub", "application_config")
-                : void 0,
-            [_.section_type],
-          );
-        if (_.hide_view_all_events_link) return null;
-        let _ = null;
-        if ("events" == _.section_type) {
-          if (!_) return null;
-          if (!_.BUsesContentHubForItemSource()) return null;
-          if (!(0, _._)(_)) return null;
-          _ = _._.STORE_BASE_URL + "news/" + _;
-        } else
-          "sale_events" == _.section_type
-            ? (_ = _._.STORE_BASE_URL + "news/collection/sales/")
-            : "calendar" == _.section_type &&
-              (_ = _._.STORE_BASE_URL + "personalcalendar");
-        if (!_) return null;
-        const _ = _;
-        return (0, _.jsx)("div", {
-          className: _().EventSectionViewAllCtn,
-          children: (0, _.jsx)(_._, {
-            onClick: (_) => (0, _._)(_, _),
-            children: (0, _._)("#EventBrowse_AllEventsBtn"),
-          }),
-        });
-      }
       function _(_, _, _) {
         const [_] = (0, _.useState)(
             (function (_, _, _) {
@@ -40322,73 +34823,98 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { tab: _, language: _, selection: _, setSelection: _ } = _,
+        const {
+            event: _,
+            tab: _,
+            language: _,
+            fnBIsNodeShown: _,
+            selection: _,
+            setSelection: _,
+          } = _,
           _ = (0, _._)(),
           { data: _ } = (0, _._)((0, _.LgB)(_)),
-          _ = _.useMemo(() => (0, _._)(_.tab_tag_filter), [_.tab_tag_filter]),
+          {
+            rgNodes: _,
+            selectedNode: _,
+            rgChildren: _,
+          } = (0, _._)(() => {
+            const _ = (0, _._)(_.tab_tag_filter).filter(_),
+              _ = _.find((_) => (0, _._)(_) === _?.strParentKey);
+            return {
+              rgNodes: _,
+              selectedNode: _,
+              rgChildren: _?.rgChildren?.filter(_) ?? [],
+            };
+          }),
           _ = _.useCallback(
             (_) => {
-              _ && _(_), (0, _._)(_, "offset", void 0);
+              _ && _(_), (0, _._)(_, (0, _._)(_));
             },
-            [_, _],
+            [_, _, _],
           );
-        if (!_ || 0 === _.length) return null;
-        const _ = _.find((_) => (0, _._)(_) === _?.strParentKey);
-        return (0, _.jsxs)(_._, {
-          className: _.TabTagFilterCtn,
-          children: [
-            (0, _.jsxs)("div", {
-              className: _.TabTagFilterRow,
+        return _ && 0 !== _.length
+          ? (0, _.jsxs)(_._, {
+              className: _.TabTagFilterCtn,
               children: [
-                (0, _.jsx)(_, {
-                  strName: (0, _._)("#Sale_Tabs_TagFilter_All"),
-                  bSelected: !_,
-                  fnOnClick: () => _(void 0),
+                (0, _.jsxs)("div", {
+                  className: _.TabTagFilterRow,
+                  children: [
+                    (0, _.jsx)(_, {
+                      strName: (0, _._)("#Sale_Tabs_TagFilter_All"),
+                      bSelected: !_,
+                      fnOnClick: () => _(void 0),
+                    }),
+                    _.map((_) =>
+                      (0, _.jsx)(
+                        _,
+                        {
+                          strName: _(_, _, _),
+                          bSelected: _ === _,
+                          fnOnClick: () =>
+                            _({
+                              strParentKey: (0, _._)(_),
+                            }),
+                        },
+                        "tagfilterparent_" + (0, _._)(_),
+                      ),
+                    ),
+                  ],
                 }),
-                _.map((_) =>
-                  (0, _.jsx)(
-                    _,
-                    {
-                      strName: _(_, _),
-                      bSelected: _ === _,
-                      fnOnClick: () =>
-                        _({
-                          strParentKey: (0, _._)(_),
-                        }),
-                    },
-                    "tagfilterparent_" + (0, _._)(_),
-                  ),
-                ),
+                _.length > 0 &&
+                  (0, _.jsx)("div", {
+                    className: (0, _._)(_.TabTagFilterRow, _.Secondary),
+                    children: _.map((_) => {
+                      const _ = (0, _._)(_),
+                        _ = _ === _?.strChildKey;
+                      return (0, _.jsx)(
+                        _,
+                        {
+                          strName: _(_, _, _),
+                          bSelected: _,
+                          fnOnClick: () =>
+                            _({
+                              strParentKey: _.strParentKey,
+                              strChildKey: _ ? void 0 : _,
+                            }),
+                        },
+                        "tagfilterchild_" + _,
+                      );
+                    }),
+                  }),
               ],
-            }),
-            (_?.rgChildren.length ?? 0) > 0 &&
-              (0, _.jsx)("div", {
-                className: (0, _._)(_.TabTagFilterRow, _.Secondary),
-                children: _.rgChildren.map((_) => {
-                  const _ = (0, _._)(_),
-                    _ = _ === _?.strChildKey;
-                  return (0, _.jsx)(
-                    _,
-                    {
-                      strName: _(_, _),
-                      bSelected: _,
-                      fnOnClick: () =>
-                        _({
-                          strParentKey: _.strParentKey,
-                          strChildKey: _ ? void 0 : _,
-                        }),
-                    },
-                    "tagfilterchild_" + _,
-                  );
-                }),
-              }),
-          ],
-        });
+            })
+          : null;
       }
-      function _(_, _) {
-        return _.nTagID ? _[_.nTagID] : (0, _._)(_.strLocToken);
+      function _(_, _, _) {
+        if (_.nTagID || _.nOptInTagID) return _[_.nTagID || _.nOptInTagID];
+        if (_.eContentDescriptor) return (0, _._)(_.eContentDescriptor);
+        const _ = (0, _._)(_);
+        return _
+          ? (0, _._)(_)
+          : (_._.GetWithFallback(_.rgLocalizedNames, _) ?? "");
       }
       function _(_) {
         const { strName: _, bSelected: _, fnOnClick: _ } = _;
@@ -40407,6 +34933,7 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (_) => {
         const {
@@ -40527,6 +35054,14 @@
           })
         );
       }
+      function _(_, _, _) {
+        return (
+          _._.logged_in &&
+          !(0, _._)() &&
+          !_ &&
+          !__webpack_require__.BExcludesContentDescriptor(_)
+        );
+      }
       function _(_, _, _, _) {
         const _ = (0, _._)(() =>
           _?.filter((_) =>
@@ -40551,11 +35086,7 @@
               )
                 return !1;
               return !(
-                _._.BFilterRequiresFeatureAdultOnly(_) &&
-                (!_._.logged_in ||
-                  (0, _._)() ||
-                  _ ||
-                  _.BExcludesContentDescriptor([_._]))
+                _._.BFilterRequiresFeatureAdultOnly(_) && !_([_._], _, _)
               );
             })(_, _, _, _),
           ),
@@ -40669,8 +35200,11 @@
               }),
             _ &&
               (0, _.jsx)(_, {
+                event: _,
                 tab: _,
                 language: _,
+                fnBIsNodeShown: (_) =>
+                  _ || !_.eContentDescriptor || _([_.eContentDescriptor], _, _),
                 selection: _,
                 setSelection: _,
               }),
@@ -40741,14 +35275,8 @@
                     _.current.getBoundingClientRect().top + window.scrollY;
                   window.scrollY > _ && window.scrollTo(0, _);
                 }
-                const _ = _.GetSaleSections()
-                    .filter((_) => _?.enable_faceted_browsing)
-                    .map((_) => _.unique_id),
-                  _ = {};
+                const _ = (0, _._)(_);
                 (_[_._] = String(_.unique_id)),
-                  _.forEach((_) => {
-                    (_["facets" + _] = null), (_.offset = null);
-                  }),
                   _ && _(void 0),
                   _(_.unique_id, _);
               }
@@ -40891,7 +35419,6 @@
               className: (0, _._)(_().SaleSectionContainer, "SaleTextCtn"),
               children: (0, _.jsx)(_._, {
                 text: __webpack_require__.GetDescriptionWithFallback(_),
-                partnerEventStore: _._,
                 showErrorInfo: _,
                 event: _,
                 languageOverride: _,
@@ -40921,192 +35448,14 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = "l";
-      function _(_) {
-        const { eventModel: _, bActive: _, closeModal: _ } = _;
-        return (0, _.jsx)(_._, {
-          active: _,
-          children: (0, _.jsx)(_._, {
-            children: (0, _.jsx)(_, {
-              eventModel: _,
-              closeModal: _,
-            }),
-          }),
-        });
-      }
-      function _(_) {
-        const { eventModel: _, closeModal: _ } = _,
-          _ = (0, _._)(_),
-          _ = (0, _._)(_),
-          [_, _] = _.useState(() => (0, _.sfN)(_._.LANGUAGE)),
-          [_, _] = _.useState(!1),
-          { elDialogElement: _, fnShowLogonDialog: _ } = (0, _._)(),
-          _ = (0, _._)(),
-          _ = _.useMemo(() => {
-            if (!_) return "";
-            const _ = new URL(_);
-            return _.searchParams.set(_, (0, _.LgB)(_)), _.href;
-          }, [_, _]),
-          _ = _._.EREALM === _._.k_ESteamRealmChina;
-        return _
-          ? (0, _.jsx)(_._, {
-              eventLink: _ ?? "",
-              appid: _.appid,
-              emoticonStore: _,
-              closeModal: _,
-            })
-          : (0, _.jsxs)(_._, {
-              strDescription: "",
-              strTitle: (0, _._)("#Button_Share"),
-              onCancel: _,
-              onOK: _,
-              bAlertDialog: !0,
-              modalClassName: "EventDisplay_Share_Dialog",
-              children: [
-                (0, _.jsxs)("div", {
-                  className: (0, _._)(
-                    _().FlexColumnContainer,
-                    _().share_controls_ctn,
-                  ),
-                  children: [
-                    !_ &&
-                      (0, _.jsxs)(_.Fragment, {
-                        children: [
-                          (0, _.jsxs)("div", {
-                            className: _().ShareLanguagePicker,
-                            children: [
-                              (0, _.jsx)("div", {
-                                className: _().LanguageLabel,
-                                children: (0, _._)(
-                                  "#EventDisplay_Share_LanguageLabel",
-                                ),
-                              }),
-                              (0, _.jsx)("div", {
-                                children: (0, _.jsx)(_._, {
-                                  selectedLang: _,
-                                  fnOnLanguageChanged: _,
-                                }),
-                              }),
-                            ],
-                          }),
-                          (0, _.jsxs)("div", {
-                            className: (0, _._)(
-                              _().FlexRowContainer,
-                              _().ShareButtonContainer,
-                            ),
-                            style: {
-                              flexWrap: "wrap",
-                            },
-                            children: [
-                              (0, _.jsx)(_._, {
-                                toolTipContent: (0, _._)(
-                                  "#EventDisplay_Share_OnSteam",
-                                ),
-                                children: (0, _.jsxs)(_._, {
-                                  onClick: () => {
-                                    _._.logged_in ? _(!0) : _();
-                                  },
-                                  className: (0, _._)(
-                                    _().Button,
-                                    _().ShareBtn,
-                                    _().ShareSteamBtn,
-                                  ),
-                                  children: [
-                                    (0, _.jsx)("img", {
-                                      className: _().SteamIcon,
-                                      src: _._,
-                                      alt: (0, _._)(
-                                        "#EventDisplay_Share_OnSteam",
-                                      ),
-                                    }),
-                                    (0, _.jsx)("span", {
-                                      style: {
-                                        whiteSpace: "nowrap",
-                                      },
-                                      children: (0, _._)(
-                                        "#EventDisplay_Share_OnMyStatus",
-                                      ),
-                                    }),
-                                  ],
-                                }),
-                              }),
-                              (0, _.jsx)(_._, {
-                                toolTipContent: (0, _._)(
-                                  "#EventDisplay_Share_OnFaceBook",
-                                ),
-                                children: (0, _.jsx)(_._, {
-                                  href: _.strFacebookUrl,
-                                  className: _().ShareBtn,
-                                  children: (0, _.jsx)("img", {
-                                    className: (0, _._)(_().Button),
-                                    src: _._,
-                                    alt: (0, _._)(
-                                      "#EventDisplay_Share_OnFaceBook",
-                                    ),
-                                  }),
-                                }),
-                              }),
-                              (0, _.jsx)(_._, {
-                                toolTipContent: (0, _._)(
-                                  "#EventDisplay_Share_OnTwitter",
-                                ),
-                                children: (0, _.jsx)(_._, {
-                                  href: _.strTwitterUrl,
-                                  className: _().ShareBtn,
-                                  children: (0, _.jsx)("img", {
-                                    className: (0, _._)(_().Button),
-                                    src: _._,
-                                    alt: (0, _._)(
-                                      "#EventDisplay_Share_OnTwitter",
-                                    ),
-                                  }),
-                                }),
-                              }),
-                              (0, _.jsx)(_._, {
-                                toolTipContent: (0, _._)(
-                                  "#EventDisplay_Share_OnReddit",
-                                ),
-                                children: (0, _.jsx)(_._, {
-                                  href: _.strRedditUrl,
-                                  className: _().ShareBtn,
-                                  children: (0, _.jsx)("img", {
-                                    className: (0, _._)(_().Button),
-                                    src: _._,
-                                    alt: (0, _._)(
-                                      "#EventDisplay_Share_OnReddit",
-                                    ),
-                                  }),
-                                }),
-                              }),
-                            ],
-                          }),
-                          (0, _.jsx)("div", {
-                            className: _().Divider,
-                          }),
-                        ],
-                      }),
-                    (0, _.jsx)(_._, {
-                      eventLink: _,
-                    }),
-                  ],
-                }),
-                _,
-              ],
-            });
-      }
       function _(_) {
         const { eventModel: _, titleOverride: _ } = _,
           [_, _, _] = (0, _._)(),
+          _ = (0, _._)(_) ?? "",
           _ = (0, _._)(() => ({
             gidClanEvent: _.GID,
             rgSocialShare: _.jsondata.sale_social_media_items,
@@ -41151,8 +35500,9 @@
                       bIsCreatorHomeEvent: !0,
                     }),
                 }),
-                (0, _.jsx)(_, {
+                (0, _.jsx)(_._, {
                   eventModel: _,
+                  strEventLink: _,
                   bActive: _,
                   closeModal: _,
                 }),
@@ -41236,7 +35586,6 @@
             _ &&
               (0, _.jsx)(_._, {
                 text: _,
-                partnerEventStore: _._,
                 showErrorInfo: _,
                 event: _,
                 languageOverride: _,
@@ -41411,6 +35760,7 @@
       }
       (0, _._)([_._], _.prototype, "m_gidClanEventSelected", void 0);
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -41623,9 +35973,8 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
           const _ = (0, _.sfN)(_._.LANGUAGE),
@@ -44995,7 +39344,6 @@
                       _.localized_media_desc[_] ||
                       _.localized_media_desc[_] ||
                       "",
-                    partnerEventStore: _._,
                     showErrorInfo: _,
                     languageOverride: _,
                   }),
@@ -45620,7 +39968,6 @@
                   className: _().description,
                   children: (0, _.jsx)(_._, {
                     text: _,
-                    partnerEventStore: _._,
                     showErrorInfo: _,
                     event: _,
                     languageOverride: _,
@@ -46790,6 +41137,7 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -46802,6 +41150,19 @@
           (_) => null == _.visibility_index || _.visibility_index == _,
         );
       }
+      function _(_) {
+        const _ = {
+          offset: null,
+        };
+        return (
+          _.GetSaleSections()
+            .filter((_) => _?.enable_faceted_browsing)
+            .forEach((_) => {
+              _["facets" + _.unique_id] = null;
+            }),
+          _
+        );
+      }
       class _ {
         m_activeTab = null;
         m_capsuleFilter = null;
@@ -46812,7 +41173,7 @@
         constructor(_, _, _ = !0, _, _) {
           (this.m_nSaleDay = _),
             (this.m_tagSelection = _),
-            (this.m_tagStoreFilter = (0, _._)(_, _)),
+            (this.m_tagStoreFilter = (0, _._)(_, _?.tab_tag_filter, _)),
             _ &&
               ((this.m_activeTab = _),
               (this.m_bDefaultTab = _),
@@ -47006,2331 +41367,6 @@
             : "";
         }
       }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      class _ extends _.Component {
-        m_strLastSearch;
-        m_rgCurrentMatches = [];
-        m_mapMatchByKey = new Map();
-        containerRef = _.createRef();
-        constructor(_) {
-          super(_),
-            (this.m_hMobxSearchDisposer = (0, _._)(async () => {
-              await this.UpdateSearchResults(this.props.strSearch),
-                this.forceUpdate();
-            })),
-            (this.state = {
-              selectedIndex: void 0,
-            });
-        }
-        OnKeyDown(_) {
-          this.BHandleKeyPress(_.keyCode) && _.preventDefault();
-        }
-        BHandleKeyPress(_) {
-          switch (_) {
-            case _._:
-              this.SetSelectedIndexDelta(-1);
-              break;
-            case _._:
-              this.SetSelectedIndexDelta(1);
-              break;
-            case _._:
-              this.SetSelectedIndex(0);
-              break;
-            case _._:
-              this.SetSelectedIndexDelta(-this.GetPageSize());
-              break;
-            case _._:
-              this.SetSelectedIndex(-1);
-              break;
-            case _._:
-              this.SetSelectedIndexDelta(this.GetPageSize());
-              break;
-            case _._:
-            case _._:
-              if (void 0 === this.state.selectedIndex)
-                return (
-                  this.props.onSuggestionSelected(this.props.strSearch), !1
-                );
-              this.ChooseSuggestion(
-                this.m_rgCurrentMatches[this.state.selectedIndex],
-              );
-              break;
-            case _._:
-              this.props.onSuggestionSelected(this.props.strSearch);
-              break;
-            default:
-              return !1;
-          }
-          return !0;
-        }
-        GetPageSize() {
-          let _ = this.containerRef.current,
-            _ = _ && _.firstElementChild,
-            _ = this.m_rgCurrentMatches.length;
-          if (
-            (_ > this.getMaxMatches() && (_ = this.getMaxMatches()), _ && _)
-          ) {
-            let _ = _.scrollHeight / _,
-              _ = _.clientHeight / _;
-            return Math.max(1, Math.floor(_));
-          }
-          return 5;
-        }
-        ChooseSuggestion(_) {
-          this.props.onSuggestionSelected(
-            this.props.strSearch,
-            _ ? this.getSelection(_) : void 0,
-          );
-        }
-        SetSelectedIndexDelta(_) {
-          void 0 !== this.state.selectedIndex
-            ? this.SetSelectedIndex(this.state.selectedIndex + _)
-            : this.SetSelectedIndex(1 === _ ? 0 : _);
-        }
-        SetSelectedIndex(_) {
-          if (!this.m_rgCurrentMatches.length) return;
-          let _ = this.m_rgCurrentMatches.length;
-          _ > this.getMaxMatches() && (_ = this.getMaxMatches()),
-            (_ %= _) < 0 && (_ += _),
-            this.setState({
-              selectedIndex: _,
-            });
-        }
-        FindKeyIndex(_) {
-          if (!this.m_mapMatchByKey.size && this.m_rgCurrentMatches.length)
-            for (let _ = 0; _ < this.m_rgCurrentMatches.length; _++)
-              this.m_mapMatchByKey.set(
-                this.getKey(this.m_rgCurrentMatches[_]),
-                _,
-              );
-          return this.m_mapMatchByKey.get(_);
-        }
-        OnClickSuggestion(_) {
-          let _ = this.FindKeyIndex(_);
-          void 0 !== _ && this.ChooseSuggestion(this.m_rgCurrentMatches[_]);
-        }
-        OnMouseOverSuggestion(_) {
-          let _ = this.FindKeyIndex(_);
-          void 0 !== _ && this.SetSelectedIndex(_);
-        }
-        BindSelectedElement(_) {
-          if (!_) return;
-          let _ = this.containerRef.current,
-            _ = _.containerRef.current,
-            _ = _ && _.firstElementChild;
-          _ &&
-            _ &&
-            (_.scrollTop + _.clientHeight < _.offsetTop ||
-              _.offsetTop < _.scrollTop) &&
-            __webpack_require__.scrollIntoView();
-        }
-        async UpdateSearchResults(_) {
-          (this.m_rgCurrentMatches = await this.performSearch(_)),
-            (this.m_strLastSearch = _),
-            this.m_mapMatchByKey.clear(),
-            this.m_rgCurrentMatches.length
-              ? this.state && void 0 !== this.state.selectedIndex
-                ? this.state.selectedIndex >= this.m_rgCurrentMatches.length &&
-                  this.setState({
-                    selectedIndex: 0,
-                  })
-                : (void 0 ===
-                    this.props.nMinimumSearchLengthBeforeAutoSelection ||
-                    _.length >=
-                      this.props.nMinimumSearchLengthBeforeAutoSelection) &&
-                  this.setState({
-                    selectedIndex: 0,
-                  })
-              : this.state &&
-                void 0 !== this.state.selectedIndex &&
-                this.setState({
-                  selectedIndex: void 0,
-                });
-        }
-        m_hMobxSearchDisposer;
-        componentWillUnmount() {
-          this.m_hMobxSearchDisposer &&
-            (this.m_hMobxSearchDisposer(),
-            (this.m_hMobxSearchDisposer = void 0));
-        }
-        async componentDidUpdate(_) {
-          this.m_strLastSearch != this.props.strSearch &&
-            (await this.UpdateSearchResults(this.props.strSearch),
-            this.forceUpdate());
-        }
-        render() {
-          let _ = [];
-          if (this.m_rgCurrentMatches.length) {
-            let _ = this.getMaxMatches();
-            for (
-              let _ = 0;
-              _ < Math.min(_, this.m_rgCurrentMatches.length);
-              _++
-            ) {
-              let _ = this.m_rgCurrentMatches[_],
-                _ = this.getKey(_),
-                _ = _ === this.state.selectedIndex;
-              _.push(
-                (0, _.jsx)(
-                  _,
-                  {
-                    matchKey: _,
-                    fnOnClick: this.OnClickSuggestion,
-                    fnOnMouseOver: this.OnMouseOverSuggestion,
-                    bIsSelected: _,
-                    ref: _ ? this.BindSelectedElement : void 0,
-                    children: this.renderMatch(_),
-                  },
-                  _,
-                ),
-              );
-            }
-            this.m_rgCurrentMatches.length > _ &&
-              _.push(
-                this.renderTooManyMatchesMessage(
-                  this.m_rgCurrentMatches.length - _,
-                ),
-              );
-          } else {
-            let _ = this.renderNoMatchMessage();
-            if (!_) return null;
-            _.push(_);
-          }
-          return (0, _.jsx)("div", {
-            className: _().mentionDialogPosition,
-            ref: this.containerRef,
-            children: (0, _.jsxs)("div", {
-              className: _().mentionDialog,
-              tabIndex: 0,
-              onKeyDown: this.OnKeyDown,
-              children: [this.renderHeader(), _],
-            }),
-          });
-        }
-      }
-      (0, _._)([_._], _.prototype, "OnKeyDown", null),
-        (0, _._)([_._], _.prototype, "OnClickSuggestion", null),
-        (0, _._)([_._], _.prototype, "OnMouseOverSuggestion", null),
-        (0, _._)([_._], _.prototype, "BindSelectedElement", null);
-      class _ extends _.PureComponent {
-        containerRef = _.createRef();
-        OnMouseOver(_) {
-          this.props.fnOnMouseOver(this.props.matchKey);
-        }
-        OnClick(_) {
-          this.props.fnOnClick(this.props.matchKey);
-        }
-        render() {
-          return (0, _.jsx)("div", {
-            className: (0, _._)(
-              _().suggestOption,
-              _().mentionSearchOption,
-              this.props.bIsSelected ? _().selected : "",
-            ),
-            onMouseEnter: this.OnMouseOver,
-            onClick: this.OnClick,
-            ref: this.containerRef,
-            children: this.props.children,
-          });
-        }
-      }
-      (0, _._)([_._], _.prototype, "OnMouseOver", null),
-        (0, _._)([_._], _.prototype, "OnClick", null);
-      const _ = _;
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      const _ = class extends _ {
-        performSearch(_) {
-          return this.props.emoticonStore.SearchEmoticons(_, 10, !1);
-        }
-        getSelection(_) {
-          return _.name;
-        }
-        getKey(_) {
-          return _.name;
-        }
-        renderMatch(_) {
-          return (0, _.jsxs)("div", {
-            className: (0, _._)(
-              _().EmoticonSuggestion,
-              _.recent ? "Recent" : "",
-            ),
-            children: [
-              (0, _.jsxs)("div", {
-                className: _().Emoticon,
-                children: [
-                  (0, _.jsx)(_._, {
-                    emoticon: _.name,
-                  }),
-                  _.new && (0, _.jsx)(_._, {}),
-                ],
-              }),
-              ":",
-              _.name,
-              ":",
-            ],
-          });
-        }
-        renderNoMatchMessage() {
-          return null;
-        }
-        renderTooManyMatchesMessage(_) {
-          return null;
-        }
-        renderHeader() {
-          return null;
-        }
-        getMaxMatches() {
-          return Number.MAX_VALUE;
-        }
-      };
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      class _ extends _ {
-        performSearch(_) {
-          let _ = Array();
-          return (
-            this.props.supportBBCodes.forEach((_) => {
-              __webpack_require__.indexOf(_) >= 0 &&
-                _.push({
-                  name: _,
-                });
-            }),
-            _
-          );
-        }
-        getSelection(_) {
-          return "[" + _.name + "][/" + _.name + "]";
-        }
-        getKey(_) {
-          return _.name;
-        }
-        renderMatch(_) {
-          return (0, _.jsxs)(
-            "div",
-            {
-              className: (0, _._)(_().BBCodeSuggestion),
-              children: [
-                (0, _.jsx)("div", {
-                  className: _().BBCode,
-                  children: _.name,
-                }),
-                "[",
-                _.name,
-                "]...[/",
-                _.name,
-                "]",
-              ],
-            },
-            _.name,
-          );
-        }
-        renderNoMatchMessage() {
-          return (0, _.jsx)(
-            "div",
-            {
-              className: (0, _._)(_().mentionSearchOption, _().noMatches),
-              children: (0, _._)("#Bbcode_No_Match"),
-            },
-            "nomatches",
-          );
-        }
-        renderTooManyMatchesMessage(_) {
-          return null;
-        }
-        renderHeader() {
-          return null;
-        }
-        getMaxMatches() {
-          return Number.MAX_VALUE;
-        }
-      }
-      class _ extends _.Component {
-        descTextAreaRef = _.createRef();
-        m_MentionDialog;
-        m_bDisabled = !0;
-        m_iMentionSearchStartOffset;
-        m_iMentionSearchCancelledOffset;
-        constructor(_) {
-          super(_),
-            (this.state = {
-              mentionSearch: void 0,
-              activeSuggestSearchType: void 0,
-            });
-        }
-        BindMentionDialog(_) {
-          this.m_MentionDialog = _ ?? void 0;
-        }
-        OnKeyDown(_) {
-          this.state.activeSuggestSearchType &&
-          this.m_MentionDialog &&
-          !_.shiftKey &&
-          !_.ctrlKey &&
-          this.m_MentionDialog.BHandleKeyPress(_.keyCode)
-            ? _.preventDefault()
-            : (_.keyCode != _._ && _.keyCode != _._) ||
-              (this.m_iMentionSearchCancelledOffset = void 0);
-        }
-        FindMatchOpener(_, _, _) {
-          for (let _ = _ - 1; _ >= 0; _--) {
-            if (_[_] == _) return _;
-            if (" " == _[_] || "\n" == _[_]) break;
-          }
-        }
-        ReplaceSuggestedText(_, _) {
-          const _ = this.descTextAreaRef.current;
-          if (!_) return;
-          let _ = _.selectionStart,
-            _ = _.value,
-            _ = this.FindMatchOpener(_, _, _);
-          if (
-            (void 0 === _ && "@" == _ && (_ = this.FindMatchOpener("＠", _, _)),
-            void 0 !== _)
-          ) {
-            let _ = _.substr(0, _);
-            (_ += _), (_ >= _.length || " " != _[_]) && (_ += " ");
-            let _ = _.length;
-            (_ += _.substr(_)),
-              (_.value = _),
-              (_.selectionStart = _.selectionEnd = _),
-              this.props.fnSetText(_),
-              this.FocusTextInput();
-          }
-        }
-        OnFocus(_) {
-          this.UpdateAutoSearchState();
-        }
-        OnKeyPress(_) {
-          this.UpdateAutoSearchState();
-        }
-        OnClick(_) {
-          this.UpdateAutoSearchState();
-        }
-        ClearMentionSearchState() {
-          (this.m_iMentionSearchStartOffset = void 0),
-            this.state.activeSuggestSearchType &&
-              this.setState({
-                activeSuggestSearchType: void 0,
-                mentionSearch: void 0,
-              });
-        }
-        OnEmoticonSuggestionSelected(_, _) {
-          if (!_)
-            return (
-              (this.m_iMentionSearchCancelledOffset =
-                this.m_iMentionSearchStartOffset),
-              void this.ClearMentionSearchState()
-            );
-          this.ReplaceSuggestedText(":", ":" + _ + ":"),
-            this.ClearMentionSearchState();
-        }
-        OnBBCodeSuggestionSelected(_, _) {
-          if (!_)
-            return (
-              (this.m_iMentionSearchCancelledOffset =
-                this.m_iMentionSearchStartOffset),
-              void this.ClearMentionSearchState()
-            );
-          this.ReplaceSuggestedText("[", _), this.ClearMentionSearchState();
-        }
-        FocusTextInput() {
-          this.descTextAreaRef.current && this.descTextAreaRef.current.focus();
-        }
-        UpdateAutoSearchState() {
-          let _ = this.descTextAreaRef.current;
-          if (!_ || this.m_bDisabled) return;
-          if (_.selectionStart != _.selectionEnd || !_.selectionStart)
-            return void this.ClearMentionSearchState();
-          let _,
-            _,
-            _ = _.selectionStart,
-            _ = _.value;
-          for (let _ = _ - 1; _ >= 0; _--) {
-            let _ = _ > 0 ? _[_ - 1] : void 0;
-            if (this.props.emoticonStore && ":" == _[_] && _.length > 2) {
-              (_ && " " != _ && "\n" != _ && ":" != _) ||
-                ((_ = _), (_ = "Emoticon"));
-              break;
-            }
-            if ("[" == _[_] && (_ + 1 > _.length || "/" != _[_ + 1])) {
-              (_ && " " != _ && "\n" != _ && "]" != _) ||
-                ((_ = _), (_ = "BBCode"));
-              break;
-            }
-            if (" " == _[_] || "\n" == _[_]) break;
-          }
-          if (void 0 === _ || _ === this.m_iMentionSearchCancelledOffset)
-            return void this.ClearMentionSearchState();
-          let _ = _.substr(_ + 1, _ - _ - 1);
-          (this.m_iMentionSearchStartOffset = _),
-            this.setState({
-              activeSuggestSearchType: _,
-              mentionSearch: _,
-            });
-        }
-        GetTextAreaRef() {
-          return this.descTextAreaRef;
-        }
-        GetTextAreaCurrent() {
-          return this.descTextAreaRef.current;
-        }
-        render() {
-          let _,
-            {
-              emoticonStore: _,
-              supportBBCodes: _,
-              fnSetText: _,
-              ..._
-            } = this.props;
-          switch (this.state.activeSuggestSearchType) {
-            case "Emoticon":
-              _ &&
-                (_ = (0, _.jsx)(_, {
-                  emoticonStore: _,
-                  strSearch: this.state.mentionSearch,
-                  nMinimumSearchLengthBeforeAutoSelection: 2,
-                  onSuggestionSelected: this.OnEmoticonSuggestionSelected,
-                  ref: this.BindMentionDialog,
-                }));
-              break;
-            case "BBCode":
-              _ = (0, _.jsx)(_, {
-                supportBBCodes: _,
-                strSearch: this.state.mentionSearch,
-                nMinimumSearchLengthBeforeAutoSelection: 2,
-                onSuggestionSelected: this.OnBBCodeSuggestionSelected,
-                ref: this.BindMentionDialog,
-              });
-          }
-          return (0, _.jsxs)(_.Fragment, {
-            children: [
-              _,
-              (0, _.jsx)("textarea", {
-                ..._,
-                ref: this.descTextAreaRef,
-                onKeyDown: this.OnKeyDown,
-                onKeyUp: this.OnKeyPress,
-                onFocus: this.OnFocus,
-                onClick: this.OnClick,
-              }),
-            ],
-          });
-        }
-      }
-      (0, _._)([_._], _.prototype, "BindMentionDialog", null),
-        (0, _._)([_._], _.prototype, "OnKeyDown", null),
-        (0, _._)([_._], _.prototype, "OnFocus", null),
-        (0, _._)([_._], _.prototype, "OnKeyPress", null),
-        (0, _._)([_._], _.prototype, "OnClick", null),
-        (0, _._)([_._], _.prototype, "OnEmoticonSuggestionSelected", null),
-        (0, _._)([_._], _.prototype, "OnBBCodeSuggestionSelected", null),
-        (0, _._)([_._], _.prototype, "FocusTextInput", null),
-        (0, _._)([_._], _.prototype, "GetTextAreaRef", null),
-        (0, _._)([_._], _.prototype, "GetTextAreaCurrent", null);
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = (0, _._)((_) => {
-        const {
-            clanSteamID: _,
-            inputClanImage: _,
-            nWidth: _,
-            nHeight: _,
-            setImage: _,
-          } = _,
-          _ = _.useMemo(
-            () => ({
-              width: _,
-              height: _,
-            }),
-            [_, _],
-          ),
-          [_, _] = _.useState(void 0),
-          [_, _] = _.useState(Boolean(_)),
-          [_, _] = _.useState(!1),
-          _ = (0, _._)(_, "dummy"),
-          _ = _.useCallback(
-            async (_) => {
-              if (
-                (_.ClearImages(),
-                _ && (_(!0), await _.AddExistingClanImage(_, _.Bhc)))
-              ) {
-                _(_);
-                const _ = _.GetUploadImages()[0].IsValidAssetType(_);
-                0 != _.error.length ||
-                  _.needsCrop ||
-                  (_ && _.image_hash == _.image_hash) ||
-                  _(_);
-              }
-              _(!1);
-            },
-            [_, _, _, _],
-          );
-        _.useEffect(() => {
-          _(_);
-        }, [_, _]);
-        let _,
-          _ = "",
-          _ = !1;
-        if (_ && _.GetFilesToUpload().length > 0) {
-          _ = _.GetUploadImages()[0];
-          const _ = _.IsValidAssetType(_);
-          (_ = _.error), (_ = _.needsCrop);
-        }
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            _
-              ? (0, _.jsx)(_._, {
-                  size: "medium",
-                  string: (0, _._)("#Loading"),
-                })
-              : _ &&
-                (0, _.jsx)("div", {
-                  className: _.Image,
-                  style: {
-                    backgroundImage: `url( '${_ ? _.dataUrl : _.url}' )`,
-                    height: `${_}px`,
-                    width: `${_}px`,
-                  },
-                }),
-            Boolean(_) &&
-              (0, _.jsx)("p", {
-                children: _,
-              }),
-            _ &&
-              (0, _.jsx)(_._, {
-                onClick: (_) => {
-                  const _ = (0, _._)(_) ?? window;
-                  let _ = _.GetUploadImages()[0];
-                  (0, _._)(
-                    (0, _.jsx)(_._, {
-                      ownerWin: _,
-                      uploadFile: _,
-                      forceResolution: {
-                        width: _,
-                        height: _,
-                      },
-                      fileType: _._._,
-                    }),
-                    _,
-                  );
-                },
-                children: (0, _._)("#BBCode_ResizeImage"),
-              }),
-            _ &&
-              _.bCropped &&
-              (0, _.jsxs)(_.Fragment, {
-                children: [
-                  (0, _.jsx)("div", {
-                    children: (0, _._)(
-                      "#ClanImagePickAndResize_UploadStatus",
-                      _.status,
-                    ),
-                  }),
-                  _
-                    ? (0, _.jsx)(_._, {
-                        string: (0, _._)("#Uploading"),
-                        size: "small",
-                      })
-                    : (0, _.jsx)(_._, {
-                        onClick: async () => {
-                          _(!0);
-                          try {
-                            const _ = await _.UploadAllImages(_),
-                              _ = Object.values(_);
-                            if (_ && _.length > 0) {
-                              (0, _._)(
-                                1 == _.length,
-                                "ClanImagePickForCertainSize expected size 1, got " +
-                                  _.length,
-                              );
-                              const _ = _[0].bSuccess
-                                  ? _[0].uploadResult
-                                  : void 0,
-                                _ = _._.GetHashAndExt(_ ?? null),
-                                _ = _._.GetThumbHashAndExt(_ ?? null);
-                              if (
-                                _?.image_hash &&
-                                void 0 !== _.file_type &&
-                                _ &&
-                                _
-                              ) {
-                                const _ = _._.GenerateURLFromHashAndExt(_, _),
-                                  _ = _._.GenerateURLFromHashAndExt(_, _),
-                                  _ = {
-                                    imageid: -11231412,
-                                    image_hash: _.image_hash,
-                                    thumbnail_hash: _.thumbnail_hash,
-                                    file_type: _.file_type,
-                                    file_name: _.file_name,
-                                    clanAccountID: _.GetAccountID(),
-                                    url: _,
-                                    thumb_url: _,
-                                    uploaded_time: Date.now() / 1e3,
-                                  };
-                                _(_), _(_);
-                              }
-                            }
-                          } finally {
-                            _(!1);
-                          }
-                        },
-                        children: (0, _._)(
-                          "#ClanImagePickAndResize_UploadImage",
-                        ),
-                      }),
-                ],
-              }),
-            (0, _.jsx)(_._, {
-              onClick: (_) => {
-                const _ = new _._(_._.CLANSTEAMID);
-                (0, _._)(
-                  (0, _.jsx)(_._, {
-                    clanSteamID: _,
-                    fnImageSelectCallBack: (_) => _(_),
-                  }),
-                  (0, _._)(_) ?? window,
-                );
-              },
-              children: (0, _._)("#BBCode_ChooseImage", _, _),
-            }),
-          ],
-        });
-      });
-      var _,
-        _ = __webpack_require__("chunkid");
-      let _ = class extends _.Component {
-        static {
-          _ = this;
-        }
-        m_cancelSignal = _().CancelToken.source();
-        static s_formattingHelp = new Map();
-        constructor(_) {
-          super(_),
-            (this.state = {
-              formattingHelp: {
-                __html: _.s_formattingHelp.get(_.formatType) ?? "",
-              },
-            });
-        }
-        componentDidMount() {
-          this.AjaxGetFormattingHelp().catch((_) => {
-            this.setState((0, _._)(_));
-          });
-        }
-        componentWillUnmount() {
-          this.m_cancelSignal.cancel(
-            "FormattingHelpWidget component unmounted",
-          );
-        }
-        static GetHelpURL(_, _) {
-          return (
-            _._.COMMUNITY_BASE_URL +
-            "comment/" +
-            _ +
-            "/formattinghelp" +
-            (_ ? "?ajax=1" : "")
-          );
-        }
-        async AjaxGetFormattingHelp() {
-          if ("" == this.state.formattingHelp.__html) {
-            let _,
-              _ = {
-                sessionid: (0, _._)(),
-              };
-            (_ = await _().get(_.GetHelpURL(this.props.formatType, !0), {
-              params: _,
-              cancelToken: this.m_cancelSignal.token,
-            })),
-              _.s_formattingHelp.set(this.props.formatType, _.data),
-              this.setState({
-                formattingHelp: {
-                  __html: _.data,
-                },
-              });
-          }
-        }
-        render() {
-          return this.state.strErrorMsg
-            ? (0, _.jsxs)("div", {
-                children: [
-                  this.state.strErrorMsg,
-                  (0, _.jsx)("br", {}),
-                  this.state.errorCode,
-                ],
-              })
-            : "" == this.state.formattingHelp.__html
-              ? (0, _.jsx)(_._, {})
-              : (0, _.jsx)(_._, {
-                  strTitle: (0, _._)("#EventEditor_FormattingHelp_GetHelpLink"),
-                  strDescription: "",
-                  closeModal: this.props.closeModal,
-                  onOK: this.props.closeModal,
-                  onCancel: this.props.closeModal,
-                  bAlertDialog: !0,
-                  className: "ModernBBStyles",
-                  children: (0, _.jsx)("div", {
-                    dangerouslySetInnerHTML: this.state.formattingHelp,
-                  }),
-                });
-        }
-      };
-      _ = _ = (0, _._)([_._], _);
-      var _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      let _ = class extends _.Component {
-        descAutoTextAreaRef = _.createRef();
-        constructor(_) {
-          super(_),
-            (this.state = {
-              bShowDragTarget: !1,
-            });
-        }
-        componentDidMount() {
-          _._.AddClanImageDragListener(this.ClanImageDragListener);
-        }
-        componentWillUnmount() {
-          _._.RemoveClanImageDragListener(this.ClanImageDragListener);
-        }
-        ClanImageDragListener(_, _) {
-          this.state.bShowDragTarget != _ &&
-            this.setState({
-              bShowDragTarget: _,
-            });
-        }
-        onFocus(_) {
-          _ && _.target.select();
-        }
-        InsertText(_) {
-          _.replaceSelection(this.GetTextAreaRef()?.current, _);
-        }
-        OnTextAreaDropListener(_) {
-          if (
-            (_.preventDefault(),
-            _.stopPropagation(),
-            _.dataTransfer.items && _.dataTransfer.items[0])
-          ) {
-            let _ = _.dataTransfer.getData("text");
-            if (_ && _.length > 0)
-              for (let _ of [_._.GetBaseURL(), _._.GetBaseURLV2()])
-                if (_.startsWith(_)) {
-                  let _ = "[img]" + _._ + "/" + _.substr(_.length) + "[/img]";
-                  _.replaceSelection(this.GetTextAreaRef()?.current, _);
-                  break;
-                }
-          }
-        }
-        GetTextAreaRef() {
-          return this.descAutoTextAreaRef.current?.GetTextAreaRef();
-        }
-        render() {
-          return (0, _.jsxs)(_.Fragment, {
-            children: [
-              (0, _.jsx)(_, {
-                pathToImages:
-                  _._.COMMUNITY_CDN_URL + "public/images/sharedfiles/guides/",
-                fnTextareaRef: this.GetTextAreaRef,
-                emoticonStore: this.props.emoticonStore,
-                supportBBCodes: this.props.limitBBCode
-                  ? this.props.limitBBCode
-                  : _._,
-                bSupportHTMLImport: this.props.bSupportHTMLImport,
-                showFormatHelp: this.props.showFormatHelp,
-                bEmbeddedInDialog: this.props.bEmbeddedInDialog,
-                clanSteamID: this.props.clanSteamID,
-              }),
-              (0, _.jsx)("div", {
-                className: (0, _._)(
-                  _().DescriptionCtn,
-                  _().BBCodeEditorInputStyles,
-                  this.state.bShowDragTarget ? _().DragTarget : "",
-                  this.props.className ? this.props.className : "",
-                ),
-                children: (0, _.jsx)(_, {
-                  cols: 90,
-                  rows: this.props.nOverridesRows || 22,
-                  maxLength: 64e3,
-                  className: (0, _._)(
-                    _().DefaultEditor,
-                    this.props.classNameForTextArea
-                      ? this.props.classNameForTextArea
-                      : "",
-                  ),
-                  placeholder: this.props.strPlaceholder,
-                  ref: this.descAutoTextAreaRef,
-                  value: this.props.fnGetCurText(),
-                  onChange: this.props.fnOnTextChange,
-                  onDrop: this.OnTextAreaDropListener,
-                  emoticonStore: this.props.emoticonStore,
-                  fnSetText: this.props.fnSetText,
-                  supportBBCodes: this.props.limitBBCode
-                    ? this.props.limitBBCode
-                    : _._,
-                }),
-              }),
-            ],
-          });
-        }
-      };
-      (0, _._)([_._], _.prototype, "ClanImageDragListener", null),
-        (0, _._)([_._], _.prototype, "onFocus", null),
-        (0, _._)([_._], _.prototype, "OnTextAreaDropListener", null),
-        (0, _._)([_._], _.prototype, "GetTextAreaRef", null),
-        (_ = (0, _._)([_._], _));
-      class _ {
-        static BIsFireFox() {
-          return Boolean(
-            new RegExp(/Firefox\/([0-9\.]+)(?:\s|$)/i).exec(
-              navigator.userAgent,
-            ),
-          );
-        }
-        static replaceSelection(_, _) {
-          if (!_) return;
-          let _ = _.selectionStart;
-          _.focus(),
-            _.InsertTextAtSelect(_, _),
-            _.setSelectionRange(_, _ + _.length);
-        }
-        static getSelectedString(_) {
-          return _
-            ? _.value.substr(
-                _.selectionStart,
-                _.selectionEnd - _.selectionStart,
-              )
-            : "";
-        }
-        static wrapBBCode(_, _, _) {
-          if (!_) return;
-          let _ = _.getSelectedString(_),
-            _ = "";
-          (_ =
-            0 == _.indexOf(_) && _.lastIndexOf(_) == _.length - _.length
-              ? _.substr(_.length, _.length - _.length - _.length)
-              : _ + _ + _),
-            _.replaceSelection(_, _);
-        }
-        static append(_, _) {
-          _ &&
-            (_.focus(),
-            _.setSelectionRange(_.value.length, _.value.length),
-            _.InsertTextAtSelect(_, _));
-        }
-        static ClearTextArea(_) {
-          if (_) {
-            _.focus();
-            const _ = 0,
-              _ = _.value.length;
-            if (_ !== _) {
-              _.setRangeText
-                ? _.setRangeText("", _, _, "preserve")
-                : (_.value = "");
-              const _ = new Event("input", {
-                bubbles: !0,
-              });
-              _.dispatchEvent(_);
-            }
-            _.focus();
-          }
-        }
-        static overwrite(_, _) {
-          _ && (_.ClearTextArea(_), _.InsertTextAtSelect(_, _));
-        }
-        static InsertTextAtSelect(_, _) {
-          const _ = _.selectionStart,
-            _ = _.selectionEnd;
-          if (null !== _ && null !== _) {
-            _.setRangeText
-              ? _.setRangeText(_, _, _, "preserve")
-              : (_.value = _.value.slice(0, _) + _ + _.value.slice(_));
-            const _ = new Event("input", {
-              bubbles: !0,
-            });
-            _.dispatchEvent(_),
-              (_.selectionStart = _.selectionEnd = _ + _.length);
-          }
-          _.focus();
-        }
-      }
-      let _ = class extends _.Component {
-        m_linkPopupRef = _.createRef();
-        onBold() {
-          _.wrapBBCode("[b]", "[/b]", this.props.fnTextareaRef()?.current);
-        }
-        onItalics() {
-          _.wrapBBCode("[i]", "[/i]", this.props.fnTextareaRef()?.current);
-        }
-        onUnderline() {
-          _.wrapBBCode("[u]", "[/u]", this.props.fnTextareaRef()?.current);
-        }
-        onStrikeThrough() {
-          _.wrapBBCode(
-            "[strike]",
-            "[/strike]",
-            this.props.fnTextareaRef()?.current,
-          );
-        }
-        onHeader() {
-          _.wrapBBCode("[h1]", "[/h1]", this.props.fnTextareaRef()?.current);
-        }
-        onHeader2() {
-          _.wrapBBCode("[h2]", "[/h2]", this.props.fnTextareaRef()?.current);
-        }
-        onHeader3() {
-          _.wrapBBCode("[h3]", "[/h3]", this.props.fnTextareaRef()?.current);
-        }
-        onUnorderedList() {
-          this.handleList("list");
-        }
-        onOrderedList() {
-          this.handleList("olist");
-        }
-        handleList(_) {
-          let _ = this.props.fnTextareaRef()?.current;
-          if (!_) return;
-          let _ = "[" + _ + "]\n",
-            _ = "[/" + _ + "]";
-          if (_.selectionStart == _.selectionEnd)
-            _.wrapBBCode(_ + "[*]", "\n" + _, _);
-          else {
-            let _ =
-              _ +
-              _.getSelectedString(_)
-                .split("\n")
-                .map((_) => (_.match(/\*+\s/) ? "[*]" : "[*] ") + _)
-                .join("\n") +
-              "\n" +
-              _;
-            _.replaceSelection(_, _);
-          }
-        }
-        OnAddLink(_) {
-          const _ = this.props.fnTextareaRef();
-          _ &&
-            (0, _._)(
-              (0, _.jsx)(_, {
-                textareaRef: _,
-              }),
-              (0, _._)(_) ?? window,
-            );
-        }
-        ShowHelpDialog(_) {
-          this.props.showFormatHelp &&
-            (0, _._)(
-              (0, _.jsx)(_, {
-                formatType: this.props.showFormatHelp,
-              }),
-              (0, _._)(_) ?? window,
-            );
-        }
-        OnConvertHTMLToBBCodeDialog(_) {
-          const _ = this.props.fnTextareaRef();
-          if (!_) return;
-          const _ = (0, _._)(_) ?? window;
-          (0, _._)(
-            (0, _.jsx)(_, {
-              ownerWindow: _,
-              textareaRef: _,
-            }),
-            _,
-          );
-        }
-        OnOpenYoutubeDialog(_) {
-          const _ = this.props.fnTextareaRef();
-          if (!_) return;
-          let _ = _._.IMG_URL + "applications/community/";
-          (0, _._)(
-            (0, _.jsx)(_, {
-              textareaRef: _,
-              pathToImages: _,
-            }),
-            (0, _._)(_) ?? window,
-          );
-        }
-        OnOpenImageDialog(_) {
-          const _ = this.props.fnTextareaRef();
-          _ &&
-            (0, _._)(
-              (0, _.jsx)(_, {
-                textareaRef: _,
-              }),
-              (0, _._)(_) ?? window,
-            );
-        }
-        OnOpenSpeakerDialog(_) {
-          const _ = this.props.fnTextareaRef(),
-            _ = this.props.clanSteamID;
-          _ &&
-            _ &&
-            (0, _._)(
-              (0, _.jsx)(_, {
-                clanSteamID: _,
-                textareaRef: _,
-              }),
-              (0, _._)(_) ?? window,
-            );
-        }
-        OnEmoticonSelected(_, _ = !1) {
-          let _ = `ː${_}ː`;
-          _.replaceSelection(this.props.fnTextareaRef()?.current, _),
-            this.props.fnTextareaRef()?.current?.focus();
-        }
-        BSupports(_) {
-          return this.props.supportBBCodes.findIndex((_) => _ == _) >= 0;
-        }
-        render() {
-          const {
-            showFormatHelp: _,
-            bEmbeddedInDialog: _,
-            bSupportHTMLImport: _,
-            pathToImages: _,
-          } = this.props;
-          let _;
-          return (
-            _ &&
-              (_ = _
-                ? (0, _.jsx)("span", {
-                    className: (0, _._)("ttip", _().ActionGetHelp),
-                    children: (0, _.jsx)(_._, {
-                      toolTipContent: (0, _._)(
-                        "#EventEditor_FormattingHelp_GetHelpLink",
-                      ),
-                      children: (0, _.jsxs)("a", {
-                        href: _.GetHelpURL(_, !1),
-                        target: _._.IN_CLIENT ? void 0 : "_blank",
-                        children: [
-                          (0, _.jsx)("img", {
-                            src: _ + "/action_help.png",
-                          }),
-                          " ",
-                          (0, _._)("#EventEditor_FormattingHelp_GetHelpLink"),
-                        ],
-                      }),
-                    }),
-                  })
-                : (0, _.jsx)("span", {
-                    onClick: this.ShowHelpDialog,
-                    className: (0, _._)("ttip", _().ActionGetHelp),
-                    children: (0, _.jsxs)(_._, {
-                      toolTipContent: (0, _._)(
-                        "#EventEditor_FormattingHelp_GetHelpLink",
-                      ),
-                      children: [
-                        (0, _.jsx)("img", {
-                          src: _ + "/action_help.png",
-                        }),
-                        " ",
-                        (0, _._)("#EventEditor_FormattingHelp_GetHelpLink"),
-                      ],
-                    }),
-                  })),
-            (0, _.jsxs)("div", {
-              className: _().TextEditorToolBarContainer,
-              children: [
-                this.BSupports("b") &&
-                  (0, _.jsx)(_, {
-                    onClick: this.onBold,
-                    tooltip: (0, _._)("#Editor_Bold"),
-                    imgURL: this.props.pathToImages + "/format_bold.png",
-                  }),
-                this.BSupports("u") &&
-                  (0, _.jsx)(_, {
-                    onClick: this.onUnderline,
-                    tooltip: (0, _._)("#Editor_Underline"),
-                    imgURL: this.props.pathToImages + "/format_underline.png",
-                  }),
-                this.BSupports("i") &&
-                  (0, _.jsx)(_, {
-                    onClick: this.onItalics,
-                    tooltip: (0, _._)("#Editor_Italics"),
-                    imgURL: this.props.pathToImages + "/format_italic.png",
-                  }),
-                this.BSupports("strike") &&
-                  (0, _.jsx)(_, {
-                    onClick: this.onStrikeThrough,
-                    tooltip: (0, _._)("#Editor_StrikeThrough"),
-                    imgURL: this.props.pathToImages + "/format_strike.png",
-                  }),
-                Boolean(this.BSupports("url") && !_) &&
-                  (0, _.jsx)(_, {
-                    onClick: this.OnAddLink,
-                    tooltip: (0, _._)("#Editor_Link"),
-                    imgURL: this.props.pathToImages + "/format_link.png",
-                  }),
-                this.BSupports("list") &&
-                  (0, _.jsx)(_, {
-                    onClick: this.onUnorderedList,
-                    tooltip: (0, _._)("#Editor_Unordered"),
-                    imgURL: this.props.pathToImages + "/format_bullet.png",
-                  }),
-                this.BSupports("olist") &&
-                  (0, _.jsx)(_, {
-                    onClick: this.onOrderedList,
-                    tooltip: (0, _._)("#Editor_Ordered"),
-                    imgURL: this.props.pathToImages + "/format_numbered.png",
-                  }),
-                this.BSupports("h1") &&
-                  (0, _.jsx)(_, {
-                    onClick: this.onHeader,
-                    tooltip: (0, _._)("#Editor_Header"),
-                    imgURL: this.props.pathToImages + "/format_header1.png",
-                  }),
-                this.BSupports("h2") &&
-                  (0, _.jsx)(_, {
-                    onClick: this.onHeader2,
-                    tooltip: (0, _._)("#Editor_Header2"),
-                    imgURL: this.props.pathToImages + "/format_header2.png",
-                  }),
-                this.BSupports("h3") &&
-                  (0, _.jsx)(_, {
-                    onClick: this.onHeader3,
-                    tooltip: (0, _._)("#Editor_Header3"),
-                    imgURL: this.props.pathToImages + "/format_header3.png",
-                  }),
-                this.BSupports("previewyoutube") &&
-                  (0, _.jsx)(_, {
-                    onClick: this.OnOpenYoutubeDialog,
-                    tooltip: (0, _._)("#EventEditor_InsertYouTube"),
-                    imgURL:
-                      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkYyNjlFOEM1MjJEMzExRTJCNTVBQkZGOUQyOTI0ODU5IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkYyNjlFOEM2MjJEMzExRTJCNTVBQkZGOUQyOTI0ODU5Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RjI2OUU4QzMyMkQzMTFFMkI1NUFCRkY5RDI5MjQ4NTkiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RjI2OUU4QzQyMkQzMTFFMkI1NUFCRkY5RDI5MjQ4NTkiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4IrEPeAAABJ0lEQVR42mL8//8/AzmABUScEOZJI1HfLBaoppmk2sh4Ql/r/69HD0jSxCanwMD07eVzhl9ADgz/ZmJikMjOY2CUlEIRR8YgPYzbBLhQQoeJl4/B7uY9hv9//jC8XLWc4UFfD8OPZ08xbGX6CSSQ8XdgKH/79o3h+69fDHwBwQy6ew8ySOYXMfxiZERRx/ILPTqA/K9fv8K5f4EG3Pn5i+EfSB2SWpaf6G6A2vgP6NSrWzYz3J8zk0Hk9SsGVka0ePzLxs7w9ydC+3+gpn29PQzv9uxiEHz7mkEY6ESQPb+QHMbMwcHAwiotw/Dj3h2E6L+/DIyrljKIgCMLGMoMmCmLQ0qagdnh66fn/xgYfP+B9BCJv79/lw5KcrPISKqzGMlN5AABBgBSmY83jVsiQAAAAABJRU5ErkJggg==",
-                  }),
-                (0, _.jsx)("span", {
-                  className: "ttip",
-                  children:
-                    this.props.emoticonStore &&
-                    (0, _.jsx)(_._, {
-                      toolTipContent: (0, _._)("#Editor_Emoticon"),
-                      children: (0, _.jsx)(_._, {
-                        title: " ",
-                        className: (0, _._)(_().EmoteOuter),
-                        disabled: !1,
-                        OnEmoticonSelected: this.OnEmoticonSelected,
-                        rtLastAckedNewEmoticons: Number.MAX_VALUE,
-                        emoticonStore: this.props.emoticonStore,
-                        useImg: this.props.pathToImages + "/format_emote.png",
-                        contextOptions: {
-                          bOverlapHorizontal: !0,
-                          bDisablePopTop: !0,
-                        },
-                      }),
-                    }),
-                }),
-                Boolean(this.BSupports("img") && !_) &&
-                  (0, _.jsx)(_, {
-                    onClick: this.OnOpenImageDialog,
-                    tooltip: (0, _._)("#EventEditor_InsertImage"),
-                    imgURL: this.props.pathToImages + "/insert_img.png",
-                  }),
-                Boolean(
-                  _._.is_support &&
-                    this.props.clanSteamID &&
-                    this.BSupports("speaker"),
-                ) &&
-                  (0, _.jsx)(_, {
-                    onClick: this.OnOpenSpeakerDialog,
-                    tooltip: (0, _._)("#EventEditor_AddSpeaker"),
-                    imgURL: this.props.pathToImages + "/insert_img.png",
-                  }),
-                Boolean(_ && !_) &&
-                  (0, _.jsx)(_, {
-                    onClick: this.OnConvertHTMLToBBCodeDialog,
-                    className: _().ActionImportHTML,
-                    tooltip: (0, _._)("#EventEditor_ImportFromHTML_ttip"),
-                    children: (0, _._)("#EventEditor_ImportHTML"),
-                  }),
-                _,
-              ],
-            })
-          );
-        }
-      };
-      function _(_) {
-        return (0, _.jsx)("span", {
-          onClick: _.onClick,
-          className: _.className,
-          children: (0, _.jsxs)(_._, {
-            toolTipContent: _.tooltip,
-            className: "ttip",
-            children: [
-              Boolean(_.imgURL) &&
-                (0, _.jsx)("img", {
-                  src: _.imgURL,
-                }),
-              _.children,
-            ],
-          }),
-        });
-      }
-      (0, _._)([_._], _.prototype, "onBold", null),
-        (0, _._)([_._], _.prototype, "onItalics", null),
-        (0, _._)([_._], _.prototype, "onUnderline", null),
-        (0, _._)([_._], _.prototype, "onStrikeThrough", null),
-        (0, _._)([_._], _.prototype, "onHeader", null),
-        (0, _._)([_._], _.prototype, "onHeader2", null),
-        (0, _._)([_._], _.prototype, "onHeader3", null),
-        (0, _._)([_._], _.prototype, "onUnorderedList", null),
-        (0, _._)([_._], _.prototype, "onOrderedList", null),
-        (0, _._)([_._], _.prototype, "OnAddLink", null),
-        (0, _._)([_._], _.prototype, "ShowHelpDialog", null),
-        (0, _._)([_._], _.prototype, "OnConvertHTMLToBBCodeDialog", null),
-        (0, _._)([_._], _.prototype, "OnOpenYoutubeDialog", null),
-        (0, _._)([_._], _.prototype, "OnOpenImageDialog", null),
-        (0, _._)([_._], _.prototype, "OnOpenSpeakerDialog", null),
-        (0, _._)([_._], _.prototype, "OnEmoticonSelected", null),
-        (_ = (0, _._)([_._], _));
-      let _ = class extends _.Component {
-        state = {
-          youtubeInput: "",
-          alignment: _._.left,
-        };
-        OnYoutubeInsertLink() {
-          const _ =
-            this.state.youtubeInput && (0, _._)(this.state.youtubeInput);
-          if (_) {
-            if (this.state.alignment == _._.summary) {
-              const _ =
-                "https://www.youtube.com/watch?v=" +
-                _.strVideoID +
-                (_.nStartSeconds ? "&t=" + _.nStartSeconds : "");
-              _.wrapBBCode(_, "", this.props.textareaRef.current);
-            } else {
-              let _ =
-                "[previewyoutube=" +
-                _.strVideoID +
-                ";" +
-                this.state.alignment +
-                "]";
-              _.wrapBBCode(
-                _,
-                "[/previewyoutube]",
-                this.props.textareaRef.current,
-              );
-            }
-            this.setState({
-              youtubeInput: "",
-              alignment: _._.left,
-            });
-          } else alert((0, _._)("#EventEditor_InsertYouTube_NoURL"));
-        }
-        OnUrlChange(_) {
-          this.state.youtubeInput != _.target.value &&
-            this.setState({
-              youtubeInput: _.target.value,
-            });
-        }
-        OnLeftSelected() {
-          this.setState({
-            alignment: _._.left,
-          });
-        }
-        OnRightSelected() {
-          this.setState({
-            alignment: _._.right,
-          });
-        }
-        OnFullSelected() {
-          this.setState({
-            alignment: _._.full,
-          });
-        }
-        OnSummarySelected() {
-          this.setState({
-            alignment: _._.summary,
-          });
-        }
-        OnOuterDivClickPassDown(_) {}
-        render() {
-          return (0, _.jsx)(_._, {
-            strTitle: (0, _._)("#EventEditor_InsertYouTube"),
-            strDescription: "",
-            closeModal: this.props.closeModal,
-            onCancel: this.props.closeModal,
-            onOK: this.OnYoutubeInsertLink,
-            strOKButtonText: (0, _._)("#EventEditor_InsertYouTube"),
-            className: _().BBCodeEditorInputStyles,
-            children: (0, _.jsxs)("div", {
-              className: _().YouTubeInput,
-              children: [
-                (0, _.jsx)("div", {
-                  className: "DialogInputLabelGroup",
-                  children: (0, _.jsxs)("label", {
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: "DialogLabel",
-                        children: (0, _._)("#EventEditor_InsertYouTube_URL"),
-                      }),
-                      (0, _.jsx)("div", {
-                        className: "DialogInput_Wrapper",
-                        children: (0, _.jsx)("input", {
-                          className: "DialogInput DialogTextInputBase",
-                          ref: (_) => {
-                            _?.focus();
-                          },
-                          type: "text",
-                          value: this.state.youtubeInput,
-                          onChange: this.OnUrlChange,
-                          placeholder: (0, _._)(
-                            "#EventEditor_InsertYouTube_Placholder",
-                          ),
-                        }),
-                      }),
-                    ],
-                  }),
-                }),
-                (0, _.jsxs)("div", {
-                  className: "DialogInputLabelGroup",
-                  children: [
-                    (0, _.jsx)("div", {
-                      className: "DialogLabel",
-                      children: (0, _._)("#EventEditor_InsertYouTube_Position"),
-                    }),
-                    (0, _.jsxs)("div", {
-                      className: _().YouTubePreviewInsertOption,
-                      onClick: this.OnOuterDivClickPassDown,
-                      children: [
-                        (0, _.jsx)("input", {
-                          type: "radio",
-                          name: "YouTubePreviewInsertType",
-                          _: _._.left,
-                          value: _._.left,
-                          checked: this.state.alignment == _._.left,
-                          onChange: this.OnLeftSelected,
-                        }),
-                        (0, _.jsx)("label", {
-                          htmlFor: _._.left,
-                          children: (0, _.jsx)("span", {
-                            children: (0, _._)(
-                              "#EventEditor_InsertYouTube_Left",
-                            ),
-                          }),
-                        }),
-                      ],
-                    }),
-                    (0, _.jsxs)("div", {
-                      className: _().YouTubePreviewInsertOption,
-                      onClick: this.OnOuterDivClickPassDown,
-                      children: [
-                        (0, _.jsx)("input", {
-                          type: "radio",
-                          name: "YouTubePreviewInsertType",
-                          _: _._.right,
-                          value: _._.right,
-                          checked: this.state.alignment == _._.right,
-                          onChange: this.OnRightSelected,
-                        }),
-                        (0, _.jsx)("label", {
-                          htmlFor: _._.right,
-                          children: (0, _.jsx)("span", {
-                            children: (0, _._)(
-                              "#EventEditor_InsertYouTube_Right",
-                            ),
-                          }),
-                        }),
-                      ],
-                    }),
-                    (0, _.jsxs)("div", {
-                      className: _().YouTubePreviewInsertOption,
-                      onClick: this.OnOuterDivClickPassDown,
-                      children: [
-                        (0, _.jsx)("input", {
-                          type: "radio",
-                          name: "YouTubePreviewInsertType",
-                          _: _._.full,
-                          value: _._.full,
-                          checked: this.state.alignment == _._.full,
-                          onChange: this.OnFullSelected,
-                        }),
-                        (0, _.jsx)("label", {
-                          htmlFor: _._.full,
-                          children: (0, _.jsx)("span", {
-                            children: (0, _._)(
-                              "#EventEditor_InsertYouTube_Full",
-                            ),
-                          }),
-                        }),
-                      ],
-                    }),
-                    (0, _.jsxs)("div", {
-                      className: _().YouTubePreviewInsertOption,
-                      onClick: this.OnOuterDivClickPassDown,
-                      children: [
-                        (0, _.jsx)("input", {
-                          type: "radio",
-                          name: "YouTubePreviewInsertType",
-                          _: _._.summary,
-                          value: _._.summary,
-                          checked: this.state.alignment == _._.summary,
-                          onChange: this.OnSummarySelected,
-                        }),
-                        (0, _.jsx)("label", {
-                          htmlFor: _._.summary,
-                          children: (0, _.jsx)("span", {
-                            children: (0, _._)(
-                              "#EventEditor_InsertYouTube_Summary",
-                            ),
-                          }),
-                        }),
-                      ],
-                    }),
-                  ],
-                }),
-              ],
-            }),
-          });
-        }
-      };
-      (0, _._)([_._], _.prototype, "OnYoutubeInsertLink", null),
-        (0, _._)([_._], _.prototype, "OnUrlChange", null),
-        (0, _._)([_._], _.prototype, "OnLeftSelected", null),
-        (0, _._)([_._], _.prototype, "OnRightSelected", null),
-        (0, _._)([_._], _.prototype, "OnFullSelected", null),
-        (0, _._)([_._], _.prototype, "OnSummarySelected", null),
-        (0, _._)([_._], _.prototype, "OnOuterDivClickPassDown", null),
-        (_ = (0, _._)([_._], _));
-      let _ = class extends _.Component {
-        static {
-          _ = this;
-        }
-        state = {
-          textToDisplay: "",
-          strURL: "",
-        };
-        static m_regExp = new RegExp(/\[url=([^\]]*)\]([^\[\]]+)\[\/url\]/i);
-        LoadFromTextArea() {
-          const { textareaRef: _ } = this.props;
-          if (_ && _.current) {
-            let _ = _.getSelectedString(_.current),
-              _ = _.m_regExp.exec(_);
-            _
-              ? this.setState({
-                  strURL: _[1],
-                  textToDisplay: _[2],
-                })
-              : this.setState({
-                  textToDisplay: _,
-                });
-          }
-        }
-        componentDidMount() {
-          this.LoadFromTextArea();
-        }
-        onLinkTitleUpdate(_) {
-          this.setState({
-            textToDisplay: _.target.value,
-          });
-        }
-        onLinkURLUpdate(_) {
-          this.setState({
-            strURL: _.target.value,
-          });
-        }
-        onInsertLink() {
-          const { strURL: _, textToDisplay: _ } = this.state;
-          let _ = "[url=" + _ + "]" + _ + "[/url]";
-          _.replaceSelection(this.props.textareaRef.current, _);
-        }
-        render() {
-          return (0, _.jsx)(_._, {
-            strTitle: (0, _._)("#Editor_Link"),
-            strDescription: "",
-            closeModal: this.props.closeModal,
-            onOK: this.onInsertLink,
-            onCancel: this.props.closeModal,
-            strOKButtonText: (0, _._)("#EventEditor_InsertLinkURL"),
-            className: _().BBCodeEditorInputStyles,
-            children: (0, _.jsxs)("div", {
-              className: _().EventEditorLinkInput,
-              children: [
-                (0, _.jsx)("div", {
-                  className: "DialogInputLabelGroup",
-                  children: (0, _.jsxs)("label", {
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: "DialogLabel",
-                        children: (0, _._)("#EventEditor_LinkDescription"),
-                      }),
-                      (0, _.jsx)("div", {
-                        className: "DialogInput_Wrapper",
-                        children: (0, _.jsx)("input", {
-                          type: "text",
-                          onChange: this.onLinkTitleUpdate,
-                          value: this.state.textToDisplay,
-                          className: "DialogInput DialogTextInputBase",
-                        }),
-                      }),
-                    ],
-                  }),
-                }),
-                (0, _.jsx)("div", {
-                  className: "DialogInputLabelGroup",
-                  children: (0, _.jsxs)("label", {
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: "DialogLabel",
-                        children: (0, _._)("#EventEditor_LinkURL"),
-                      }),
-                      (0, _.jsx)("div", {
-                        className: "DialogInput_Wrapper",
-                        children: (0, _.jsx)("input", {
-                          type: "text",
-                          onChange: this.onLinkURLUpdate,
-                          value: this.state.strURL,
-                          className: "DialogInput DialogTextInputBase",
-                        }),
-                      }),
-                    ],
-                  }),
-                }),
-              ],
-            }),
-          });
-        }
-      };
-      (0, _._)([_._], _.prototype, "onLinkTitleUpdate", null),
-        (0, _._)([_._], _.prototype, "onLinkURLUpdate", null),
-        (0, _._)([_._], _.prototype, "onInsertLink", null),
-        (_ = _ = (0, _._)([_._], _));
-      let _ = class extends _.Component {
-        refFirstInput = _.createRef();
-        state = {
-          imgURL: "",
-          anchorURL: "",
-        };
-        componentDidMount() {
-          this.refFirstInput.current?.focus();
-        }
-        OnImageInsert() {
-          const { anchorURL: _, imgURL: _ } = this.state;
-          let _ = "",
-            _ = "";
-          _ && _.length > 0 && ((_ += "[url=" + _ + "]"), (_ = "[/url]" + _)),
-            (_ += "[img]" + _),
-            (_ = "[/img]" + _),
-            _.wrapBBCode(_, _, this.props.textareaRef.current);
-        }
-        OnImageURLChange(_) {
-          this.state.imgURL != _.target.value &&
-            this.setState({
-              imgURL: _.target.value,
-            });
-        }
-        OnAnchorURLChange(_) {
-          this.state.anchorURL != _.target.value &&
-            this.setState({
-              anchorURL: _.target.value,
-            });
-        }
-        render() {
-          const { imgURL: _, anchorURL: _ } = this.state;
-          return (0, _.jsx)(_._, {
-            strTitle: (0, _._)("#EventEditor_InsertImage_Title"),
-            strDescription: "",
-            closeModal: this.props.closeModal,
-            onCancel: this.props.closeModal,
-            onOK: this.OnImageInsert,
-            strOKButtonText: (0, _._)("#EventEditor_InsertImage_Title"),
-            className: _().BBCodeEditorInputStyles,
-            children: (0, _.jsxs)("div", {
-              className: _().EventEditorLinkInput,
-              children: [
-                (0, _.jsx)("p", {
-                  children: (0, _._)("#EventEditor_InsertImage_Desc"),
-                }),
-                (0, _.jsx)("div", {
-                  className: "DialogInputLabelGroup",
-                  children: (0, _.jsxs)("label", {
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: "DialogLabel",
-                        children: (0, _._)("#EventEditor_InsertImage_URL"),
-                      }),
-                      (0, _.jsx)("div", {
-                        className: "DialogInput_Wrapper",
-                        children: (0, _.jsx)("input", {
-                          className: "DialogInput DialogTextInputBase",
-                          type: "text",
-                          value: _,
-                          onChange: this.OnImageURLChange,
-                          placeholder: (0, _._)(
-                            "#EventEditor_InsertImage_Placeholder",
-                          ),
-                          ref: this.refFirstInput,
-                        }),
-                      }),
-                    ],
-                  }),
-                }),
-                (0, _.jsx)("div", {
-                  className: "DialogInputLabelGroup",
-                  children: (0, _.jsxs)("label", {
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: "DialogLabel",
-                        children: (0, _._)("#EventEditor_InsertImage_Anchor"),
-                      }),
-                      (0, _.jsx)("div", {
-                        className: "DialogInput_Wrapper",
-                        children: (0, _.jsx)("input", {
-                          className: "DialogInput DialogTextInputBase",
-                          type: "text",
-                          value: _,
-                          onChange: this.OnAnchorURLChange,
-                          placeholder: (0, _._)(
-                            "#EventEditor_InsertImage_Placeholder",
-                          ),
-                        }),
-                      }),
-                    ],
-                  }),
-                }),
-              ],
-            }),
-          });
-        }
-      };
-      (0, _._)([_._], _.prototype, "OnImageInsert", null),
-        (0, _._)([_._], _.prototype, "OnImageURLChange", null),
-        (0, _._)([_._], _.prototype, "OnAnchorURLChange", null),
-        (_ = (0, _._)([_._], _));
-      const _ = (_) => {
-        const [_, _] = _.useState(""),
-          [_, _] = _.useState(""),
-          [_, _] = _.useState(""),
-          [_, _] = _.useState(""),
-          [_, _] = _.useState(void 0),
-          [_, _] = _.useState(void 0),
-          { data: _ } = (0, _._)(),
-          { isLoading: _, data: _ } = (0, _._)(_?.GetAccountID()),
-          _ = 0 != _.trim().length && 0 != _.trim().length;
-        return (0, _.jsx)(_._, {
-          strTitle: (0, _._)("#EventEditor_AddSpeaker"),
-          strDescription: (0, _._)("#EventEditor_AddSpeaker_Desc"),
-          closeModal: _.closeModal,
-          onCancel: _.closeModal,
-          bOKDisabled: !_,
-          onOK: () => {
-            let _ = `[speaker name="${_.trim()}"`;
-            if (
-              (_.trim().length > 0 && (_ += ` title="${_}"`),
-              _.trim().length > 0 && (_ += ` company="${_}"`),
-              _)
-            ) {
-              _ += ` photo="${_._ + "/" + _.clanAccountID + "/" + _._.GetHashAndExt(_)}"`;
-            }
-            _ && (_ += ` steamid="${_.ConvertTo64BitString()}"`),
-              (_ += `]${_}[/speaker]`),
-              _.replaceSelection(_.textareaRef.current, _);
-          },
-          className: _().BBCodeEditorInputStyles,
-          children: (0, _.jsxs)("div", {
-            className: _().InsertSpeakerCtn,
-            children: [
-              (0, _.jsx)(_._, {
-                type: "text",
-                label: (0, _._)("#EventEditor_AddSpeaker_Name"),
-                value: _,
-                onChange: (_) => __webpack_require__(_.target.value),
-                focusOnMount: !0,
-              }),
-              (0, _.jsxs)("div", {
-                className: _().TitleGroup,
-                children: [
-                  (0, _.jsx)(_._, {
-                    type: "text",
-                    label: (0, _._)("#EventEditor_AddSpeaker_Title"),
-                    value: _,
-                    onChange: (_) => _(_.target.value),
-                  }),
-                  (0, _.jsx)(_._, {
-                    type: "text",
-                    label: (0, _._)("#EventEditor_AddSpeaker_Company"),
-                    value: _,
-                    onChange: (_) => _(_.target.value),
-                  }),
-                ],
-              }),
-              (0, _.jsx)(_._, {
-                toolTipContent: (0, _._)(
-                  "#EventEditor_AssociateSteamAccount_ttip",
-                ),
-                children: (0, _.jsxs)("div", {
-                  className: "DialogLabel",
-                  children: [
-                    (0, _._)("#EventEditor_AssociateSteamAccount"),
-                    " (?)",
-                  ],
-                }),
-              }),
-              (0, _.jsxs)("div", {
-                children: [
-                  _ &&
-                    (0, _.jsx)(_._, {
-                      string: (0, _._)("#Loading"),
-                      size: "small",
-                    }),
-                  _ &&
-                    _ &&
-                    (0, _.jsxs)("a", {
-                      href:
-                        _._.COMMUNITY_BASE_URL +
-                        "profiles/" +
-                        _.ConvertTo64BitString(),
-                      target: "_blank",
-                      children: [
-                        _
-                          ? (0, _.jsx)("img", {
-                              style: {
-                                marginRight: "8px",
-                              },
-                              src: _.avatar_url,
-                            })
-                          : null,
-                        _ ? _.m_strPlayerName : null,
-                      ],
-                    }),
-                  (0, _.jsxs)("div", {
-                    className: _().AssociateRowCtn,
-                    children: [
-                      (0, _.jsx)(_._, {
-                        onClick: () => _(new _._(_._.steamid)),
-                        children: (0, _._)("#EventEditor_SteamAccount_addme"),
-                      }),
-                      (0, _.jsx)(_._, {
-                        onClick: (_) =>
-                          (0, _._)(
-                            (0, _.jsx)(_, {
-                              friends: _ ?? [],
-                              setSteamID: _,
-                            }),
-                            _,
-                          ),
-                        children: (0, _._)(
-                          "#EventEditor_SteamAccount_addfriend",
-                        ),
-                      }),
-                      (0, _.jsx)(_._, {
-                        onClick: () => _(void 0),
-                        children: (0, _._)("#EventEditor_SteamAccount_clear"),
-                      }),
-                    ],
-                  }),
-                ],
-              }),
-              (0, _.jsxs)("div", {
-                className: _().PhotoCtn,
-                children: [
-                  (0, _.jsx)("div", {
-                    className: "DialogLabel",
-                    children: (0, _._)("#EventEditor_ChoosePhoto"),
-                  }),
-                  (0, _.jsx)(_, {
-                    clanSteamID: _.clanSteamID,
-                    inputClanImage: _,
-                    setImage: _,
-                    nWidth: 184,
-                    nHeight: 184,
-                  }),
-                ],
-              }),
-              (0, _.jsxs)("div", {
-                className: _().AboutCtn,
-                children: [
-                  (0, _.jsx)("div", {
-                    className: "DialogLabel",
-                    children: (0, _._)("#EventEditor_AddSpeaker_About"),
-                  }),
-                  (0, _.jsx)(_._, {
-                    value: _,
-                    onChange: (_) => _(_.target.value),
-                    rows: 8,
-                    cols: 80,
-                    nMinHeight: 40,
-                    placeholder: (0, _._)(
-                      "#EventEditor_AddSpeaker_About_Placeholder",
-                    ),
-                  }),
-                ],
-              }),
-              (0, _.jsxs)("div", {
-                className: _().PreviewCtn,
-                children: [
-                  (0, _.jsx)("div", {
-                    className: "DialogLabel",
-                    children: (0, _._)("#Button_Preview"),
-                  }),
-                  (0, _.jsx)(_._, {
-                    company: _,
-                    name: _,
-                    title: _,
-                    bioString: _,
-                    photo: _ ? _.url : void 0,
-                  }),
-                ],
-              }),
-            ],
-          }),
-        });
-      };
-      function _(_) {
-        const { friends: _, setSteamID: _ } = _;
-        return (0, _.jsx)("div", {
-          className: _().DropDownScroll,
-          children: _.map((_) =>
-            (0, _.jsx)(
-              _,
-              {
-                steamid: _,
-                setSteamID: _,
-              },
-              _,
-            ),
-          ),
-        });
-      }
-      function _(_) {
-        const { steamid: _, setSteamID: _ } = _,
-          { data: _ } = (0, _._)(_);
-        return (0, _.jsx)(_._, {
-          onSelected: () => __webpack_require__(new _._(_)),
-          children: (0, _.jsxs)("div", {
-            style: {
-              display: "flex",
-              alignItems: "center",
-            },
-            children: [
-              _ &&
-                (0, _.jsx)("img", {
-                  className: _().WhitelistAvatar,
-                  src: _.avatar_url,
-                }),
-              _?.m_strPlayerName,
-            ],
-          }),
-        });
-      }
-      let _ = class extends _.Component {
-        m_isMounted = !1;
-        m_bAppend = !1;
-        constructor(_) {
-          super(_),
-            (this.state = {
-              bPreserveNewLines: !1,
-              strHTMLData: "",
-            });
-        }
-        componentDidMount() {
-          this.m_isMounted = !0;
-        }
-        componentWillUnmount() {
-          this.m_isMounted = !1;
-        }
-        OnConvertAndOverriteHTML() {
-          (this.m_bAppend = !1), this.ConvertBBCode();
-        }
-        OnConvertAndAppendHTML() {
-          (this.m_bAppend = !0), this.ConvertBBCode();
-        }
-        async ConvertHtmlToBBCode(_, _) {
-          let _ = new URLSearchParams();
-          __webpack_require__.append("content", _),
-            __webpack_require__.append("preserve_newlines", _ ? "1" : "0");
-          return (
-            await _().post(
-              _._.COMMUNITY_BASE_URL + "/actions/ConvertHTMLToBBCode",
-              _,
-            )
-          ).data.content;
-        }
-        ConvertBBCode() {
-          this.setState({
-            bConverting: !0,
-          }),
-            this.ConvertHtmlToBBCode(
-              this.state.strHTMLData,
-              this.state.bPreserveNewLines,
-            )
-              .then((_) => {
-                this.m_isMounted &&
-                  (this.m_bAppend
-                    ? _.append(_, this.props.textareaRef.current)
-                    : _.overwrite(_, this.props.textareaRef.current),
-                  this.setState({
-                    bConverting: !1,
-                    bFinishedConverting: !0,
-                  }));
-              })
-              .catch((_) => {
-                (0, _._)(
-                  (0, _.jsx)(_._, {
-                    strTitle: (0, _._)("#EventEditor_ConvertHTML_Error"),
-                    strDescription: (0, _._)(
-                      "#EventEditor_ConvertHTML_Error_Desc",
-                      _.response && _.response.data ? _.response.data.msg : _,
-                    ),
-                    bAlertDialog: !0,
-                    bDestructiveWarning: !0,
-                  }),
-                  this.props.ownerWindow,
-                  {
-                    strTitle: (0, _._)("#EventEditor_ConvertHTML_Error"),
-                  },
-                );
-              });
-        }
-        OnCheckboxChange(_) {
-          let _ = _.target.checked;
-          _ != this.state.bPreserveNewLines &&
-            this.setState({
-              bPreserveNewLines: _,
-            });
-        }
-        OnTextAreaChange(_) {
-          this.setState({
-            strHTMLData: _.currentTarget.value,
-          });
-        }
-        render() {
-          const { closeModal: _ } = this.props;
-          return this.state.bConverting
-            ? (0, _.jsx)(_._, {
-                strTitle: (0, _._)("#EventEditor_ImportFromHTML"),
-                strDescription: (0, _._)(
-                  "#EventEditor_ImportFromHTML_ConversionInProgress",
-                ),
-                closeModal: _,
-                bAlertDialog: !0,
-                onOK: _,
-                onCancel: _,
-                children: (0, _.jsx)(_._, {}),
-              })
-            : this.state.bFinishedConverting
-              ? (0, _.jsx)(_._, {
-                  strTitle: (0, _._)("#EventEditor_ImportFromHTML"),
-                  strDescription: (0, _._)(
-                    "#EventEditor_ImportFromHTML_ConvertFinished",
-                  ),
-                  closeModal: _,
-                  bAlertDialog: !0,
-                  onOK: _,
-                  onCancel: _,
-                })
-              : (0, _.jsx)(_._, {
-                  title: (0, _._)("#EventEditor_ImportFromHTML"),
-                  onOK: this.OnConvertAndOverriteHTML,
-                  onCancel: _,
-                  className: _().BBCodeEditorInputStyles,
-                  children: (0, _.jsxs)(_._, {
-                    children: [
-                      (0, _.jsx)(_._, {
-                        children: (0, _.jsxs)("div", {
-                          className: (0, _._)(
-                            _().FlexColumnContainer,
-                            _().ImportHTMLCtn,
-                          ),
-                          children: [
-                            (0, _.jsx)("div", {
-                              className: _().FlexColumnContainer,
-                              children: (0, _._)(
-                                "#EventEditor_ImportFromHTML_ConvertDescription",
-                                (0, _.jsx)("a", {
-                                  target: _._.IN_CLIENT ? void 0 : "_blank",
-                                  href: "https://partner.steamgames.com/doc/marketing/event_tools/import",
-                                  children: (0, _._)(
-                                    "#EventEditor_ImportFromHTML_ConvertLearn",
-                                  ),
-                                }),
-                              ),
-                            }),
-                            (0, _.jsx)("textarea", {
-                              value: this.state.strHTMLData,
-                              placeholder: (0, _._)(
-                                "#EventEditor_ImportFromHTML_Instruction",
-                              ),
-                              className: _().ImportHTMLTextArea,
-                              onChange: this.OnTextAreaChange,
-                              ref: (_) => {
-                                _?.focus();
-                              },
-                            }),
-                            (0, _.jsxs)("div", {
-                              className: _().ImportHTMLCheckBoxLine,
-                              children: [
-                                (0, _.jsx)("input", {
-                                  _: "ImportFromHTMLNewLines",
-                                  type: "checkbox",
-                                  checked: this.state.bPreserveNewLines,
-                                  onChange: this.OnCheckboxChange,
-                                }),
-                                (0, _.jsxs)("label", {
-                                  htmlFor: "ImportFromHTMLNewLines",
-                                  children: [
-                                    (0, _._)(
-                                      "#EventEditor_ImportFromHTML_PreserveNewlines",
-                                    ),
-                                    (0, _.jsx)(_._, {
-                                      tooltip: (0, _._)(
-                                        "#EventEditor_ImportFromHTML_PreserveNewlines_Hint",
-                                      ),
-                                    }),
-                                  ],
-                                }),
-                              ],
-                            }),
-                            (0, _.jsx)("div", {
-                              children: (0, _._)(
-                                "#EventEditor_ImportFromHTML_ConvertToBBCode",
-                              ),
-                            }),
-                          ],
-                        }),
-                      }),
-                      (0, _.jsx)(_._, {
-                        children: (0, _.jsx)(_._, {
-                          onCancel: () => _?.(),
-                          strOKText: (0, _._)("#Button_Overwrite"),
-                          onUpdate: this.OnConvertAndAppendHTML,
-                          strUpdateText: (0, _._)("#Button_Append"),
-                        }),
-                      }),
-                    ],
-                  }),
-                });
-        }
-      };
-      (0, _._)([_._], _.prototype, "OnConvertAndOverriteHTML", null),
-        (0, _._)([_._], _.prototype, "OnConvertAndAppendHTML", null),
-        (0, _._)([_._], _.prototype, "OnCheckboxChange", null),
-        (0, _._)([_._], _.prototype, "OnTextAreaChange", null),
-        (_ = (0, _._)([_._], _));
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      const _ = (0, _._)((_) => {
-        const { appid: _, eventLink: _ } = _,
-          _ = _.useRef(null),
-          { data: _ } = (0, _._)(_._.steamid),
-          [_, _] = _.useState(""),
-          [_, _] = _.useState(!1),
-          [_, _] = _.useState(""),
-          [_, _] = _.useState(!1);
-        _.useEffect(
-          () => () => {
-            _.current?.("ShareEventOnFriendsActivityFeed: unmounting");
-          },
-          [],
-        );
-        const _ = _?.avatar_url,
-          _ = _._.InitFromAccountID(_._.accountid),
-          _ = async () => {
-            _.current &&
-              _.current("ShareEventOnFriendsActivityFeed: cancel previous...");
-            const _ = _().CancelToken.source();
-            (_.current = _.cancel), _(!0);
-            let _ = _;
-            0 != _.trim().length && (_ += "\n\n"), (_ += _);
-            const _ =
-              _._.COMMUNITY_BASE_URL +
-              "profiles/" +
-              _.ConvertTo64BitString() +
-              "/ajaxpostuserstatus";
-            try {
-              if (_._.IN_STEAMUI) {
-                let _ = _._.Init(_.kVt);
-                __webpack_require__.Body().set_appid(_),
-                  __webpack_require__.Body().set_status_text(_);
-                let _ = await _.xtC.PostStatusToFriends(
-                  _._.CMInterface.GetServiceTransport(),
-                  _,
-                );
-                if (_.GetEResult() != _._) {
-                  const _ =
-                    (0, _._)("#EventDisplay_Share_Failure") +
-                    "\n\n" +
-                    _.GetEResult();
-                  return (
-                    console.error(_, !_.token.reason),
-                    void (_.token.reason || _(_))
-                  );
-                }
-              } else {
-                const _ = new FormData();
-                __webpack_require__.append("appid", "" + _),
-                  __webpack_require__.append("status_text", _),
-                  __webpack_require__.append("sessionid", (0, _._)());
-                const _ = await _().post(_, _, {
-                  withCredentials: !0,
-                });
-                if (200 != _.status || _?.data?.success != _._) {
-                  const _ =
-                    (0, _._)("#EventDisplay_Share_Failure") +
-                    "\n\n" +
-                    _?.data?.message;
-                  return console.error(_), void (_.token.reason || _(_));
-                }
-              }
-              _.token.reason ||
-                (_(!0), _((0, _._)("#EventDisplay_Share_Success")));
-            } catch (_) {
-              const _ = (0, _._)(_),
-                _ =
-                  (0, _._)("#EventDisplay_Share_Failure") +
-                  "\n\n" +
-                  _.strErrorMsg;
-              _.token.reason || _(_), console.error(_);
-            }
-          };
-        return _
-          ? (0, _.jsx)(_._, {
-              strDescription: "",
-              strTitle: (0, _._)("#Button_Share"),
-              onCancel: _.closeModal,
-              onOK: _.closeModal,
-              bAlertDialog: !0,
-              children: (0, _.jsxs)("div", {
-                className: _().FlexColumnContainer,
-                children: [
-                  (0, _.jsx)("div", {
-                    children: (0, _._)(
-                      "#EventDisplay_Share_OnMyStatus_Details",
-                    ),
-                  }),
-                  (0, _.jsxs)("div", {
-                    className: _().Container,
-                    children: [
-                      0 == _?.length
-                        ? (0, _.jsx)(_._, {
-                            position: "center",
-                          })
-                        : (0, _.jsx)("div", {
-                            children: _,
-                          }),
-                      Boolean(_) &&
-                        (0, _.jsx)("a", {
-                          href:
-                            _._.COMMUNITY_BASE_URL +
-                            "profiles/" +
-                            _.ConvertTo64BitString() +
-                            "/home",
-                          target: _._.IN_CLIENT ? void 0 : "_blank",
-                          children: (0, _._)(
-                            "#EventDisplay_Share_OpenActivityFeed",
-                          ),
-                        }),
-                    ],
-                  }),
-                ],
-              }),
-            })
-          : (0, _.jsx)(_._, {
-              strDescription: "",
-              strTitle: (0, _._)("#Button_Share"),
-              onCancel: _.closeModal,
-              onOK: _,
-              strOKButtonText: (0, _._)("#Button_Post"),
-              children: (0, _.jsxs)("div", {
-                className: _().FlexColumnContainer,
-                children: [
-                  (0, _.jsx)("div", {
-                    children: (0, _._)(
-                      "#EventDisplay_Share_OnMyStatus_Details",
-                    ),
-                  }),
-                  (0, _.jsxs)("div", {
-                    className: (0, _._)(_().Container, _().FlexColumnContainer),
-                    children: [
-                      (0, _.jsxs)("div", {
-                        children: [
-                          (0, _.jsx)("img", {
-                            className: _().SmallAvatar,
-                            src: _,
-                            "data-miniprofile": "s" + _._.steamid,
-                          }),
-                          (0, _.jsx)("div", {
-                            className: (0, _._)(_().FlexColumnContainer),
-                            children: (0, _.jsx)(_, {
-                              strPlaceholder: (0, _._)(
-                                "#EventDisplay_Share_OnMyStatus_Placeholder",
-                              ),
-                              fnGetCurText: () => _,
-                              fnOnTextChange: (_) => _(_.currentTarget.value),
-                              fnSetText: _,
-                              emoticonStore: _.emoticonStore,
-                              bSupportHTMLImport: !1,
-                              showFormatHelp: "UserStatusPublished",
-                              limitBBCode: _._,
-                              classNameForTextArea: _().ShareDescription,
-                              bEmbeddedInDialog: !0,
-                            }),
-                          }),
-                        ],
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _().ShareLink,
-                        children: (0, _.jsx)(_._, {
-                          text: _,
-                          partnerEventStore: _.partnerEventStore,
-                        }),
-                      }),
-                    ],
-                  }),
-                ],
-              }),
-            });
-      });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -49942,493 +41978,6 @@
         (0, _._)([_._], _.prototype, "MoveRight", null),
         (0, _._)([_._], _.prototype, "OnGamepadButtonDown", null),
         (0, _._)([_._], _.prototype, "OnGamepadDirection", null);
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      !(function (_) {
-        (_.topleft = "topleft"),
-          (_.top = "top"),
-          (_.topright = "topright"),
-          (_.left = "left"),
-          (_.middle = "middle"),
-          (_.right = "right"),
-          (_.bottomleft = "bottomleft"),
-          (_.bottom = "bottom"),
-          (_.bottomright = "bottomright");
-      })(_ || (_ = {}));
-      let _ = class extends _.Component {
-        m_rectLinkRegion;
-        m_elLinkRegionBox;
-        m_nLocalOffsetXPct;
-        m_nLocalOffsetYPct;
-        m_fnMouseUp = null;
-        m_fnMouseMove = null;
-        m_listeners = new _._();
-        m_strDescription = "";
-        m_aspectRatio = 1;
-        componentWillUnmount() {
-          this.m_listeners.Unregister();
-        }
-        constructor(_) {
-          super(_),
-            (this.state = {
-              curLeftPosPct: this.props.xPosPct,
-              curTopPosPct: this.props.yPosPct,
-              curRightPosPct: 100 - (this.props.widthPct + this.props.xPosPct),
-              curBottomPosPct:
-                100 - (this.props.yPosPct + this.props.heightPct),
-              curWidthPct: this.props.widthPct,
-              curHeightPct: this.props.heightPct,
-              EdgeDown: void 0,
-              text_link_url: this.props.link_url,
-              text_link_description: this.props.link_description,
-              bEditingLink: !1,
-              valid_link: this.validateUrl(this.props.link_url),
-            }),
-            (this.m_strDescription = this.props.link_description ?? ""),
-            (this.m_aspectRatio =
-              this.props.heightPct > 0 && this.props.widthPct > 0
-                ? this.props.widthPct / this.props.heightPct
-                : 1);
-        }
-        LinkRegionBoxRef(_) {
-          this.m_elLinkRegionBox = _;
-        }
-        OnMouseDown(_, _) {
-          this.m_elLinkRegionBox?.parentElement &&
-            this.m_elLinkRegionBox.ownerDocument.defaultView &&
-            ((this.m_fnMouseUp = (_) => {
-              this.OnMouseUp(_, _);
-            }),
-            (this.m_fnMouseMove = (_) => {
-              this.OnMouseMove(_, _);
-            }),
-            this.setState({
-              EdgeDown: _,
-            }),
-            (this.m_rectLinkRegion =
-              this.m_elLinkRegionBox.parentElement.getBoundingClientRect()),
-            (this.m_nLocalOffsetXPct =
-              ((_.clientX - this.m_rectLinkRegion.left) /
-                (this.m_rectLinkRegion.right - this.m_rectLinkRegion.left)) *
-                100 -
-              this.state.curLeftPosPct),
-            (this.m_nLocalOffsetYPct =
-              ((_.clientY - this.m_rectLinkRegion.top) /
-                (this.m_rectLinkRegion.bottom - this.m_rectLinkRegion.top)) *
-                100 -
-              this.state.curTopPosPct),
-            this.m_listeners.AddEventListener(
-              this.m_elLinkRegionBox.ownerDocument.defaultView,
-              "mousemove",
-              this.m_fnMouseMove,
-            ),
-            this.m_listeners.AddEventListener(
-              this.m_elLinkRegionBox.ownerDocument.defaultView,
-              "mouseup",
-              this.m_fnMouseUp,
-            )),
-            _.preventDefault(),
-            _.stopPropagation();
-        }
-        OnMouseMove(_, _) {
-          if (void 0 !== this.state.EdgeDown) {
-            switch ((_.shiftKey && this.m_fnMouseUp(), _)) {
-              case _.left:
-                this.UpdateState({
-                  curLeftPosPct: this.CalcLeftEdge(_.clientX),
-                });
-                break;
-              case _.right:
-                this.UpdateState({
-                  curRightPosPct: this.CalcRightEdge(_.clientX),
-                });
-                break;
-              case _.top:
-                this.UpdateState({
-                  curTopPosPct: this.CalcTopEdge(_.clientY),
-                });
-                break;
-              case _.bottom:
-                this.UpdateState({
-                  curBottomPosPct: this.CalcBottomEdge(_.clientY),
-                });
-                break;
-              case _.topleft:
-                this.UpdateState({
-                  curTopPosPct: this.CalcBottomEdge(_.clientY),
-                  curLeftPosPct: this.CalcLeftEdge(_.clientX),
-                });
-                break;
-              case _.topright:
-                this.UpdateState({
-                  curTopPosPct: this.CalcTopEdge(_.clientY),
-                  curRightPosPct: this.CalcRightEdge(_.clientX),
-                });
-                break;
-              case _.bottomleft:
-                this.UpdateState({
-                  curLeftPosPct: this.CalcLeftEdge(_.clientX),
-                  curBottomPosPct: this.CalcBottomEdge(_.clientY),
-                });
-                break;
-              case _.bottomright:
-                this.UpdateState({
-                  curRightPosPct: this.CalcRightEdge(_.clientX),
-                  curBottomPosPct: this.CalcBottomEdge(_.clientY),
-                });
-                break;
-              case _.middle: {
-                const _ = (0, _._)(
-                    this.CalcLeftEdge(_.clientX),
-                    0,
-                    100 - this.state.curWidthPct,
-                  ),
-                  _ = 100 - (_ + this.state.curWidthPct),
-                  _ = (0, _._)(
-                    this.CalcTopEdge(_.clientY),
-                    0,
-                    100 - this.state.curHeightPct,
-                  ),
-                  _ = {
-                    curLeftPosPct: _,
-                    curRightPosPct: _,
-                    curTopPosPct: _,
-                    curBottomPosPct: 100 - (_ + this.state.curHeightPct),
-                  };
-                this.setState(_);
-                break;
-              }
-            }
-            _.preventDefault(), _.stopPropagation();
-          }
-        }
-        IsValidPct(_) {
-          return _ >= 0 && _ <= 100;
-        }
-        UpdateState(_) {
-          let _ =
-              void 0 !== _.curTopPosPct
-                ? _.curTopPosPct
-                : this.state.curTopPosPct,
-            _ =
-              void 0 !== _.curBottomPosPct
-                ? _.curBottomPosPct
-                : this.state.curBottomPosPct,
-            _ =
-              void 0 !== _.curLeftPosPct
-                ? _.curLeftPosPct
-                : this.state.curLeftPosPct,
-            _ =
-              void 0 !== _.curRightPosPct
-                ? _.curRightPosPct
-                : this.state.curRightPosPct,
-            _ = (0, _._)(
-              100 - _ - _,
-              this.props.widthMinPct || 0,
-              this.props.widthMaxPct || 100,
-            ),
-            _ = (0, _._)(
-              100 - _ - _,
-              this.props.heightMinPct || 0,
-              this.props.heightMaxPct || 100,
-            );
-          this.props.bLockAspectRatio &&
-            (void 0 !== _.curLeftPosPct || void 0 !== _.curRightPosPct
-              ? (_ = _ / this.m_aspectRatio)
-              : (_ = _ * this.m_aspectRatio)),
-            void 0 !== _.curLeftPosPct
-              ? (_ = 100 - _ - _)
-              : (_ = 100 - (_ + _)),
-            void 0 !== _.curTopPosPct ? (_ = 100 - _ - _) : (_ = 100 - (_ + _));
-          const _ = 100 - _ - _,
-            _ = 100 - _ - _;
-          this.IsValidPct(_) &&
-            this.IsValidPct(_) &&
-            this.IsValidPct(_) &&
-            this.IsValidPct(_) &&
-            this.IsValidPct(_) &&
-            this.IsValidPct(_) &&
-            this.setState({
-              curLeftPosPct: _,
-              curRightPosPct: _,
-              curTopPosPct: _,
-              curBottomPosPct: _,
-            });
-        }
-        GetXPercent(_) {
-          return this.m_rectLinkRegion
-            ? ((_ - this.m_rectLinkRegion.left) /
-                (this.m_rectLinkRegion.right - this.m_rectLinkRegion.left)) *
-                100 -
-                (this.m_nLocalOffsetXPct ?? 0)
-            : 0;
-        }
-        GetYPercent(_) {
-          return this.m_rectLinkRegion
-            ? ((_ - this.m_rectLinkRegion.top) /
-                (this.m_rectLinkRegion.bottom - this.m_rectLinkRegion.top)) *
-                100 -
-                (this.m_nLocalOffsetYPct ?? 0)
-            : 0;
-        }
-        CalcLeftEdge(_) {
-          return (0, _._)(this.GetXPercent(_), 0, 100);
-        }
-        CalcRightEdge(_) {
-          return (0, _._)(
-            100 - (this.GetXPercent(_) + this.state.curWidthPct),
-            0,
-            100,
-          );
-        }
-        CalcTopEdge(_) {
-          return (0, _._)(this.GetYPercent(_), 0, 100);
-        }
-        CalcBottomEdge(_) {
-          return (0, _._)(
-            100 - (this.GetYPercent(_) + this.state.curHeightPct),
-            0,
-            100,
-          );
-        }
-        OnMouseUp(_, _) {
-          this.setState({
-            curWidthPct:
-              100 - this.state.curRightPosPct - this.state.curLeftPosPct,
-          }),
-            this.setState({
-              curHeightPct:
-                100 - this.state.curBottomPosPct - this.state.curTopPosPct,
-            }),
-            this.setState({
-              EdgeDown: void 0,
-            }),
-            this.props.updateFn(this.props.index, {
-              xPosPct: this.state.curLeftPosPct,
-              yPosPct: this.state.curTopPosPct,
-              widthPct: this.state.curWidthPct,
-              heightPct: this.state.curHeightPct,
-              link_url: this.state.text_link_url,
-              link_description: this.state.text_link_description,
-            }),
-            this.m_listeners.Unregister();
-        }
-        async HandleDelete() {
-          this.props.deleteFn && this.props.deleteFn(this.props.index);
-        }
-        OnSetLinkURLChange(_) {
-          this.setState({
-            text_link_url: _.target.value,
-            valid_link: this.validateUrl(_.target.value),
-          });
-        }
-        OnSetLinkDescriptionChange(_) {
-          this.setState({
-            text_link_description: _.target.value,
-          });
-        }
-        validateUrl(_) {
-          return (
-            null != _ &&
-            /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/i.test(
-              _,
-            )
-          );
-        }
-        OnSaveLink() {
-          (this.m_strDescription = this.state.text_link_description ?? ""),
-            this.setState({
-              bEditingLink: !this.state.bEditingLink,
-            }),
-            this.props.updateFn(this.props.index, {
-              xPosPct: this.state.curLeftPosPct,
-              yPosPct: this.state.curTopPosPct,
-              widthPct: this.state.curWidthPct,
-              heightPct: this.state.curHeightPct,
-              link_url: this.state.text_link_url,
-              link_description: this.state.text_link_description,
-            });
-        }
-        OnEditLink() {
-          this.setState({
-            bEditingLink: !this.state.bEditingLink,
-          });
-        }
-        render() {
-          let _ = {
-              left: this.state.curLeftPosPct + "%",
-              top: this.state.curTopPosPct + "%",
-              right: this.state.curRightPosPct + "%",
-              bottom: this.state.curBottomPosPct + "%",
-            },
-            _ = _().LinkRegionDragBox;
-          return (
-            null != this.state.EdgeDown &&
-              (_ += ` ${_().EdgeDown} ` + _()[this.state.EdgeDown]),
-            (0, _.jsxs)("div", {
-              className: _,
-              style: _,
-              ref: this.LinkRegionBoxRef,
-              draggable: !1,
-              children: [
-                (0, _.jsxs)("div", {
-                  className: _().LinkRegionGridBox,
-                  children: [
-                    (0, _.jsx)("div", {
-                      className: `${_().LinkRegionEdge} ${_().TopLeft}`,
-                      onMouseDown: (_) => {
-                        this.OnMouseDown(_, _.topleft);
-                      },
-                      draggable: !1,
-                    }),
-                    (0, _.jsx)("div", {
-                      className: `${_().LinkRegionEdge} ${_().Top}`,
-                      onMouseDown: (_) => {
-                        this.OnMouseDown(_, _.top);
-                      },
-                    }),
-                    (0, _.jsx)("div", {
-                      className: `${_().LinkRegionEdge} ${_().TopRight}`,
-                      onMouseDown: (_) => {
-                        this.OnMouseDown(_, _.topright);
-                      },
-                      draggable: !1,
-                    }),
-                    (0, _.jsx)("div", {
-                      className: `${_().LinkRegionEdge} ${_().Left}`,
-                      onMouseDown: (_) => {
-                        this.OnMouseDown(_, _.left);
-                      },
-                      draggable: !1,
-                    }),
-                    (0, _.jsxs)("div", {
-                      className: `${_().LinkRegionEdge} ${_().Middle}`,
-                      onMouseDown: (_) => {
-                        this.OnMouseDown(_, _.middle);
-                      },
-                      draggable: !1,
-                      children: [
-                        this.props.deleteFn &&
-                          (0, _.jsx)("div", {
-                            className: _().LinkRegionDelete,
-                            onClick: this.HandleDelete,
-                            children: (0, _.jsx)(_.sED, {}),
-                          }),
-                        !this.props.bDisableLink &&
-                          (0, _.jsx)("div", {
-                            className: _().LinkRegionSettings,
-                            onClick: this.OnEditLink,
-                            children: (0, _.jsx)(_.xv8, {}),
-                          }),
-                        (0, _.jsxs)("div", {
-                          className: _().LinkText,
-                          children: [" ", this.m_strDescription, " "],
-                        }),
-                      ],
-                    }),
-                    (0, _.jsx)("div", {
-                      className: `${_().LinkRegionEdge} ${_().Right}`,
-                      onMouseDown: (_) => {
-                        this.OnMouseDown(_, _.right);
-                      },
-                      draggable: !1,
-                    }),
-                    (0, _.jsx)("div", {
-                      className: `${_().LinkRegionEdge} ${_().BottomLeft}`,
-                      onMouseDown: (_) => {
-                        this.OnMouseDown(_, _.bottomleft);
-                      },
-                      draggable: !1,
-                    }),
-                    (0, _.jsx)("div", {
-                      className: `${_().LinkRegionEdge} ${_().Bottom}`,
-                      onMouseDown: (_) => {
-                        this.OnMouseDown(_, _.bottom);
-                      },
-                      draggable: !1,
-                    }),
-                    (0, _.jsx)("div", {
-                      className: `${_().LinkRegionEdge} ${_().BottomRight}`,
-                      onMouseDown: (_) => {
-                        this.OnMouseDown(_, _.bottomright);
-                      },
-                      draggable: !1,
-                    }),
-                  ],
-                }),
-                this.state.bEditingLink &&
-                  (0, _.jsxs)("div", {
-                    className: _().LinkRegionInfo,
-                    children: [
-                      (0, _.jsx)(_._, {
-                        className: _().LinkRegionInput,
-                        type: "text",
-                        name: "link_url",
-                        value: this.state.text_link_url,
-                        label: (0, _._)("#SteamTV_LinkURL"),
-                        placeholder: "https://www.example.com",
-                        onChange: this.OnSetLinkURLChange,
-                        mustBeURL: !0,
-                      }),
-                      (0, _.jsx)(_._, {
-                        className: _().LinkRegionInput,
-                        type: "text",
-                        name: "link_description",
-                        value: this.state.text_link_description,
-                        label: (0, _._)("#SteamTV_LinkDescription"),
-                        placeholder: (0, _._)(
-                          "#SteamTV_LinkDescription_Placeholder",
-                        ),
-                        onChange: this.OnSetLinkDescriptionChange,
-                      }),
-                      (0, _.jsxs)("div", {
-                        className: _().LinkRegionButtonContainer,
-                        children: [
-                          (0, _.jsxs)(_._, {
-                            disabled: !this.state.valid_link,
-                            onClick: this.OnSaveLink,
-                            children: [" ", (0, _._)("#Button_OK"), " "],
-                          }),
-                          (0, _.jsxs)(_._, {
-                            onClick: this.OnEditLink,
-                            children: [" ", (0, _._)("#Button_Cancel")],
-                          }),
-                        ],
-                      }),
-                    ],
-                  }),
-              ],
-            })
-          );
-        }
-      };
-      (0, _._)([_._], _.prototype, "LinkRegionBoxRef", null),
-        (0, _._)([_._], _.prototype, "OnMouseDown", null),
-        (0, _._)([_._], _.prototype, "OnMouseMove", null),
-        (0, _._)([_._], _.prototype, "OnMouseUp", null),
-        (0, _._)([_._], _.prototype, "HandleDelete", null),
-        (0, _._)([_._], _.prototype, "OnSetLinkURLChange", null),
-        (0, _._)([_._], _.prototype, "OnSetLinkDescriptionChange", null),
-        (0, _._)([_._], _.prototype, "OnSaveLink", null),
-        (0, _._)([_._], _.prototype, "OnEditLink", null),
-        (_ = (0, _._)([_._], _));
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -51812,243 +43361,124 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { href: _, children: _, bAllowFocuseableAnchor: _, ..._ } = _;
-        return _._.EREALM === _._.k_ESteamRealmChina
-          ? (0, _.jsx)("div", {
-              ..._,
-              children: _,
-            })
-          : _
-            ? (0, _.jsx)(_._, {
-                href: _,
-                ..._,
-                children: _,
-              })
-            : (0, _.jsx)("a", {
-                href: _,
-                ..._,
-                children: _,
-              });
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
         _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      class _ extends _.Component {
-        state = {
-          region: {
-            xPosPct: 0,
-            yPosPct: 0,
-            widthPct: (this.GetDestWidth() / this.props.uploadFile.width) * 100,
-            heightPct:
-              (this.GetDestHeight() / this.props.uploadFile.height) * 100,
-          },
-        };
-        async OnCrop() {
-          const _ = this.props.uploadFile.GetCanvasImageSource();
-          _ &&
-            (await (async function (_, _, _, _, _, _, _, _, _) {
-              return new Promise((_, _) => {
-                const _ = _(_);
-                if (!_) return void _("Invalid format provided");
-                const _ = document.createElement("canvas");
-                (_.width = _), (_.height = _);
-                const _ = 0,
-                  _ = 0,
-                  _ = _.getContext("2d");
-                _?.drawImage(_, _, _, _, _, _, _, _, _),
-                  _.toBlob((_) => {
-                    const _ = _.toDataURL(_);
-                    _ !== _._._ &&
-                    __webpack_require__.startsWith("data:image/png")
-                      ? _("Unable to encode into the requested file format")
-                      : _
-                        ? ((_.file = (0, _._)(_, _.filename)),
-                          (_.width = _),
-                          (_.height = _),
-                          (_.dataUrl = _),
-                          (_.uploadTime = Date.now()),
-                          (_.bCropped = !0),
-                          _())
-                        : _("Unable to apply crop into image");
-                  });
-              });
-            })(
-              this.props.uploadFile,
-              _,
-              (this.state.region.xPosPct / 100) * this.props.uploadFile.width,
-              (this.state.region.yPosPct / 100) * this.props.uploadFile.height,
-              (this.state.region.widthPct / 100) * this.props.uploadFile.width,
-              (this.state.region.heightPct / 100) *
-                this.props.uploadFile.height,
-              this.GetDestWidth(),
-              this.GetDestHeight(),
-              this.props.fileType,
-            )),
-            this.props.closeModal?.();
-        }
-        UpdateCrop(_, _) {
-          this.setState({
-            region: _,
-          });
-        }
-        GetDestWidth() {
-          const { uploadFile: _, forceResolution: _ } = this.props;
-          if (_) return _.width;
-          const _ = _.GetCurrentImageOption();
-          if (!_) return 0;
-          const _ = _._[_.artworkType].width;
-          return _ ? (0, _._)(_) : 0;
-        }
-        GetDestHeight() {
-          const { uploadFile: _, forceResolution: _ } = this.props;
-          if (_) return _.width;
-          const _ = _.GetCurrentImageOption();
-          if (!_) return 0;
-          const _ = _._[_.artworkType].height;
-          return _ ? (0, _._)(_) : 0;
-        }
-        GetLargestBoxThatFits(_, _, _, _) {
-          let _ = _,
-            _ = (_ * _) / Math.max(_, 1);
-          return (
-            _ > _ && ((_ = _), (_ = (_ * _) / Math.max(_, 1))),
-            {
-              width: _,
-              height: _,
-            }
-          );
-        }
-        GetPreviewWindowStyle() {
-          const { region: _ } = this.state,
-            _ = this.GetLargestBoxThatFits(
-              this.GetDestWidth(),
-              this.GetDestHeight(),
-              500,
-              150,
-            ),
-            _ = _.width,
-            _ = _.height,
-            _ = 1 / Math.max(_.widthPct / 100, 1e-4),
-            _ = 1 / Math.max(_.heightPct / 100, 1e-4),
-            _ = (this.props.uploadFile.width * _.xPosPct) / 100,
-            _ = (this.props.uploadFile.height * _.yPosPct) / 100;
-          return {
-            width: _,
-            height: _,
-            backgroundPosition: `${-_ * ((_ * _) / this.props.uploadFile.width)}px ${-_ * ((_ * _) / this.props.uploadFile.height)}px`,
-            backgroundSize: `${100 * _}% ${100 * _}%`,
-            backgroundImage: `url(${this.props.uploadFile.dataUrl})`,
-          };
-        }
-        render() {
-          const _ = (this.GetDestWidth() / this.props.uploadFile.width) * 100,
-            _ = (this.GetDestHeight() / this.props.uploadFile.height) * 100,
-            _ = this.GetLargestBoxThatFits(
-              this.props.uploadFile.width,
-              this.props.uploadFile.height,
-              800,
-              500,
-            );
-          return (0, _.jsx)(_._, {
-            onEscKeypress: this.props.closeModal,
-            bDisableBackgroundDismiss: !0,
-            children: (0, _.jsxs)("div", {
-              className: (0, _._)("DialogContent", "_DialogCenterVertically"),
-              children: [
-                (0, _.jsx)(_._, {
-                  children: (0, _._)(
-                    "#ImageUpload_CropModalTitleDims",
-                    this.GetDestWidth(),
-                    this.GetDestHeight(),
-                  ),
-                }),
-                (0, _.jsx)("div", {
-                  className: (0, _._)("DialogBodyText"),
-                  children: (0, _._)("#ImageUpload_CropModalDescription"),
-                }),
-                (0, _.jsxs)("div", {
-                  className: _.CropImage,
-                  style: {
-                    width: _.width,
-                    height: _.height,
-                  },
-                  children: [
-                    (0, _.jsx)("img", {
-                      style: {
-                        maxWidth: "100%",
-                        maxHeight: "100%",
-                        objectFit: "contain",
-                      },
-                      src: this.props.uploadFile.dataUrl,
-                    }),
-                    (0, _.jsx)(_._, {
-                      bLockAspectRatio: !0,
-                      bDisableLink: !0,
-                      index: 0,
-                      updateFn: this.UpdateCrop,
-                      xPosPct: 0,
-                      yPosPct: 0,
-                      widthMinPct: _,
-                      heightMinPct: _,
-                      widthPct: _,
-                      heightPct: _,
-                    }),
-                  ],
-                }),
-                (0, _.jsxs)("div", {
-                  className: _.CropPreviewGroup,
-                  children: [
-                    (0, _.jsx)("div", {
-                      className: _.CropPreviewLabel,
-                      children: (0, _._)("#ImageUpload_CropPreview"),
-                    }),
-                    (0, _.jsx)("div", {
-                      style: this.GetPreviewWindowStyle(),
-                    }),
-                  ],
-                }),
-                (0, _.jsx)(_._, {
-                  onClick: this.OnCrop,
-                  children: (0, _._)("#ImageUpload_CropAndContinue"),
-                }),
-              ],
-            }),
-          });
-        }
-      }
+      __webpack_require__("chunkid");
+      const _ = [_._, _._, _._, _._, _._];
       function _(_) {
+        let _ = [];
         switch (_) {
-          case _._._:
-            return "image/png";
-          case _._._:
-            return "image/jpeg";
+          case _._:
+            _.push(_._), _.push(_._);
+          case _._:
+            _.push(_._);
+          case _._:
+            _.push(_._);
         }
+        return _;
       }
-      (0, _._)([_._], _.prototype, "OnCrop", null),
-        (0, _._)([_._], _.prototype, "UpdateCrop", null);
+      let _ = new Map();
+      function _(_) {
+        let _ = [],
+          _ = _.get(_);
+        return _ && (_.push(_), _.push(..._(_))), _;
+      }
+      function _(_) {
+        return (0, _._)({
+          queryKey: [
+            "examples_for_content_descriptor",
+            null === _ ? null : _.valueOf(),
+          ],
+          queryFn: async () => {
+            if (null === _) return [];
+            const _ = new URLSearchParams();
+            _.append("filter", "examplesforcontentdescriptors"),
+              _.append("ignore_preferences", "1"),
+              _.append("category1", "992,994,998"),
+              _.append("descids", _.valueOf().toString()),
+              _.append("json", "1");
+            return (
+              await _()({
+                url: `${_._.STORE_BASE_URL}search/results/?${_.toString()}`,
+                method: "GET",
+                responseType: "json",
+              })
+            ).data.items;
+          },
+        });
+      }
+      function _(_) {
+        let _ = null;
+        switch (_) {
+          case _._:
+            _ = "#ContentDescriptor_GeneralMatureContent";
+            break;
+          case _._:
+            _ = "#ContentDescriptor_FrequentViolenceOrGore";
+            break;
+          case _._:
+            _ = "#ContentDescriptor_NudityOrSexualContent";
+            break;
+          case _._:
+            _ = "#ContentDescriptor_GratuitousNudityOrSexualContent";
+            break;
+          case _._:
+            _ = "#ContentDescriptor_AdultOnlySexualContent";
+            break;
+          default:
+            throw "Invalid content descriptor.";
+        }
+        return (0, _._)(_);
+      }
+      function _(_, _ = !1) {
+        let _ = "";
+        switch (_) {
+          case _._:
+            _ += (0, _._)(
+              "#ContentDescriptor_GeneralMatureContent_Description",
+            );
+            break;
+          case _._:
+            _ += (0, _._)(
+              "#ContentDescriptor_FrequentViolenceOrGore_Description",
+            );
+            break;
+          case _._:
+            _ += (0, _._)(
+              "#ContentDescriptor_NudityOrSexualContent_Description",
+            );
+            break;
+          case _._:
+            _ += (0, _._)(
+              "#ContentDescriptor_GratuitousNudityOrSexualContent_Description",
+            );
+            break;
+          case _._:
+            _ += (0, _._)(
+              "#ContentDescriptor_AdultOnlySexualContent_Description",
+            );
+            break;
+          default:
+            throw "Invalid content descriptor.";
+        }
+        return (
+          !_ ||
+            (_ !== _._ && _ !== _._) ||
+            (_ += " " + (0, _._)("#ContentDescriptor_Affirm18YearsOld")),
+          _
+        );
+      }
+      _.set(_._, _._), _.set(_._, _._), _.set(_._, _._), _.set(_._, _._);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -52615,47 +44045,6 @@
               ],
             }),
         ];
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      const _ =
-        "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHdpZHRoPSIxNDAwcHgiIGhlaWdodD0iMTQwOXB4IiB2aWV3Qm94PSIwIDE4MDEuNSAxNDAwIDE0MDkiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAxODAxLjUgMTQwMCAxNDA5IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBhdGggaWQ9Imljb25tb25zdHItbGluay0xXzFfIiBmaWxsPSIjRkZGRkZGIiBkPSJNMzYyLjM1MywyMzEwLjU4OGMxNDguMjM1LTE0OC4yMzUsMzg3LjA2LTE0OC4yMzUsNTI3LjA2LDAKCWMxNi40NzEsMTYuNDcxLDMyLjk0MSw0MS4xNzcsNDkuNDExLDU3LjY0N0w4MDcuMDU5LDI1MDBjLTQxLjE3Ni04Mi4zNTMtMTMxLjc2NS0xMzEuNzY1LTIyMi4zNTMtMTE1LjI5NAoJYy00MS4xNzcsOC4yMzUtNzQuMTE4LDI0LjcwNi05OC44MjMsNDkuNDExbC0yNDcuMDU5LDI0Ny4wNmMtNzQuMTE4LDc0LjExNy03NC4xMTgsMTk3LjY0NiwwLDI4MAoJYzc0LjExOCw3NC4xMTcsMTk3LjY0Nyw3NC4xMTcsMjgwLDBsMCwwbDc0LjExOC03NC4xMThjNzQuMTE3LDI0LjcwNiwxNDguMjM1LDQxLjE3NywyMjIuMzUzLDMyLjk0MWwtMTcyLjk0LDE3Mi45NDEKCWMtMTQ4LjIzNSwxNDguMjM1LTM4Ny4wNiwxNDguMjM1LTUyNy4wNiwwcy0xNDguMjM1LTM4Ny4wNTksMC01MjcuMDU5QzEwNy4wNTksMjU1Ny42NDcsMzYyLjM1MywyMzEwLjU4OCwzNjIuMzUzLDIzMTAuNTg4egoJIE03NTcuNjQ2LDE5MDcuMDU5TDU5Mi45NDEsMjA4MGM3NC4xMTctOC4yMzUsMTQ4LjIzNSw4LjIzNSwyMTQuMTE3LDMyLjk0MWw3NC4xMTgtNzQuMTE4Yzc0LjExNy03NC4xMTcsMTk3LjY0Ni03NC4xMTcsMjgwLDAKCWM4Mi4zNTMsNzQuMTE4LDc0LjExNywxOTcuNjQ3LDAsMjgwbC0yNTUuMjk0LDI0Ny4wNmMtNzQuMTE4LDc0LjExNy0xOTcuNjQ3LDc0LjExNy0yODAsMAoJYy04LjIzNS0xNi40NzEtMjQuNzA2LTQxLjE3Ny0zMi45NDEtNjUuODgzbC0xMzEuNzY1LDEzMS43NjVjMTYuNDcxLDI0LjcwNiwzMi45NCw0MS4xNzcsNDkuNDExLDU3LjY0NwoJYzE0OC4yMzUsMTQ4LjIzNSwzODcuMDU5LDE0OC4yMzUsNTI3LjA2LDBsMCwwbDI0Ny4wNTktMjQ3LjA2YzE0OC4yMzUtMTQ4LjIzNSwxNDguMjM1LTM4Ny4wNTksMC01MjcuMDU5CglTOTA1Ljg4MywxNzY3LjA1OSw3NTcuNjQ2LDE5MDcuMDU5TDc1Ny42NDYsMTkwNy4wNTlMNzU3LjY0NiwxOTA3LjA1OXoiLz4KPC9zdmc+Cg==";
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      const _ =
-        "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHdpZHRoPSIxNDAwcHgiIGhlaWdodD0iMTQwOXB4IiB2aWV3Qm94PSIwIDAgMTQwMCAxNDA5IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxNDAwIDE0MDkiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNNjk4LjE5NSwxMC4xMjVjLTM2NC4zNDcsMC02NjIuODM4LDI4MC45MzgtNjkxLjIwNiw2MzcuOTY5TDM3OC43NCw4MDEuNzk3CgljMzEuNTAyLTIxLjUzOSw2OS41NTUtMzQuMTMzLDExMC40OTUtMzQuMTMzYzMuNjY5LDAsNy4zMTUsMC4wOSwxMC45MzksMC4zMTNsMTY1LjMzLTIzOS42MzdjMC0xLjEzNy0wLjAyOS0yLjI1LTAuMDI5LTMuMzk1CgljMC0xNDQuMjI3LDExNy4zMzUtMjYxLjU3NCwyNjEuNTgyLTI2MS41NzRjMTQ0LjIzMywwLDI2MS41ODMsMTE3LjM0OCwyNjEuNTgzLDI2MS41NzRjMCwxNDQuMjQ2LTExNy4zNSwyNjEuNTk4LTI2MS41ODMsMjYxLjU5OAoJYy0xLjk5LDAtMy45NS0wLjA0Ny01LjkyNi0wLjA5TDY4NS4zNDEsOTU0LjY4OGMwLjExOSwzLjA3NCwwLjIzLDYuMTkxLDAuMjMsOS4yOTdjMCwxMDguMjczLTg4LjA3NiwxOTYuMzUyLTE5Ni4zMzYsMTk2LjM1MgoJYy05NS4wNDEsMC0xNzQuNDk0LTY3Ljg0OC0xOTIuNDk2LTE1Ny42NzZMMzAuODcyLDg5Mi43NTRjODIuMzIsMjkxLjEzNywzNDkuODA3LDUwNC41ODIsNjY3LjMyMyw1MDQuNTgyCgljMzgzLjA2MiwwLDY5My41OTgtMzEwLjU1MSw2OTMuNTk4LTY5My42MTNDMTM5MS43OTMsMzIwLjY2NCwxMDgxLjI1NywxMC4xMjUsNjk4LjE5NSwxMC4xMjUiLz4KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTQ0MS42NDgsMTA2Mi41NjNsLTg1LjIwMi0zNS4yMDNjMTUuMTA1LDMxLjQ0NSw0MS4yMyw1Ny43NjIsNzUuOTExLDcyLjIxNQoJYzc0Ljk2MSwzMS4yNSwxNjEuNDEtNC4zMzYsMTkyLjY2Ny03OS4zNTljMTUuMTEyLTM2LjMxMywxNS4yMjQtNzYuMzU1LDAuMjIzLTExMi43NDJjLTE0Ljk3OS0zNi4zOTEtNDMuMjUtNjQuNzczLTc5LjU3Mi03OS45MjIKCWMtMzYuMDQ3LTE1LjAwNC03NC42NTYtMTQuNDM4LTEwOC41ODctMS42MzdsODguMDA5LDM2LjM5MWM1NS4zMDQsMjMuMDUxLDgxLjQ0NCw4Ni41NTksNTguNDA4LDE0MS44NTUKCUM1NjAuNDc2LDEwNTkuNDU3LDQ5Ni45NDQsMTA4NS42MTMsNDQxLjY0OCwxMDYyLjU2MyIvPgo8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMTEwMS4zNTMsNTI0Ljk2MWMwLTk2LjExMy03OC4xODQtMTc0LjMxMy0xNzQuMjk1LTE3NC4zMTNjLTk2LjA5NiwwLTE3NC4yOTQsNzguMTk5LTE3NC4yOTQsMTc0LjMxMwoJYzAsOTYuMTAyLDc4LjE5OCwxNzQuMjc3LDE3NC4yOTQsMTc0LjI3N0MxMDIzLjE2OSw2OTkuMjM4LDExMDEuMzUzLDYyMS4wNjMsMTEwMS4zNTMsNTI0Ljk2MSBNNzk2LjQxNSw1MjQuNjU2CgljMC03Mi4zMjQsNTguNjM4LTEzMC45MTgsMTMwLjk0LTEzMC45MThjNzIuMzE2LDAsMTMwLjkyNSw1OC41OTQsMTMwLjkyNSwxMzAuOTE4YzAsNzIuMzE2LTU4LjYwOCwxMzAuOTE4LTEzMC45MjUsMTMwLjkxOAoJQzg1NS4wNTMsNjU1LjU3NCw3OTYuNDE1LDU5Ni45NzMsNzk2LjQxNSw1MjQuNjU2Ii8+Cjwvc3ZnPgo=";
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      const _ =
-        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAc9JREFUeNrsmz1Lw1AUhnP8qB+Qkk0pItbVxcX/IM6Cky7iFH+Jk79BwclBB3+AszgUwdVNBxFaCw1E7fW9cAep5pa0NiT3vgdeLjRJm/Ocm/NRiCilAp9tKvDcCIAACIAAsiyEzqAepCqqnvEhzHJSLGVQX7jvSKDPoYO8ADS9BUcAJNBiXgCudUjCJEgABPDLZip2v12obwIXur4DdBK+MeVrHaqJSB2KzKqT2izUgLZd2wH30CF8bFnTusgnlhdUsjmXAFxBe3Au9TEJ3hXpfNkA9M22T4v80TIBuIbzDz73ARe+9wG31pqo1DSWGNqBlgcO16oO4A3b/3XIOafQ8b9PSCWZBh8BYMMSfd3wvEPzrk6DH0OON8Z0vvLDkHAaJAACIICJJJeCy+Aa1Pnj8y+Uwa6lDOpA1S3fewSdjJJIi26EOnC0nTtKInpQalsALfn+CDQJgAA8BYDnP8IS+bwDmuNcXHQVWDURG7QUmf7ZEmV9nysZh7dcGIdbALBpAaD7h6dJDFRshQmAAAiAAAiAAAiAAAiAAAiAAAiAAAjgpyUO+ZmMAuDSIQCZvtj+E4zNuhtU98WJxDgfZ50gfHOUSZAACIAAPLZvAQYAZ32YkpymkAcAAAAASUVORK5CYII=";
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      const _ =
-        __webpack_require__._ +
-        "images/applications/store/reddit_large.png?v=valveisgoodatcaching";
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      const _ =
-        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABApJREFUeNrsm2tIFUEUx2evRl5ISnugZuULIwoVtIykIIkgowdmERERUh9CqQ/Rh+gFCX4oKCIjyi8VQtETsoLoARViJEokRYlako9Iy4JKfLX9hz2CwXrv7t6ZvbvcPfDjwr3uzJ7/npk5c3ZUVFVlkWw+FuHmCeAJ4AngCeAJ4AkQwRbtgnucBzJALPgNPoJ28FdI6zwTdCDp4DToUvWtF1SDHIPtFUz0m5GLp9noeAw4BYZV43YFxOm05QNF4DmosirADNABMm1wPgE0qdasHWSAKJALKkAr/TYIUq0KcIAa4Y0lS3Q+HjSroVk/+Knz/eFAfQe7sfpxDckU4bYqx2opKsb6UcwIMElnLPLhsECw8xskOc9F9RPFoIaGyX/9B8oDknSWybmgHhQJXOaOSlg634AP4AH4Dm6Bh6DVzDKYE0ThSoqSUJ5+lmqPVUx0D4EioDeIygdBA8gL4UmtsiGROhcoygIJ8AUMBGk8G7wC1SDRws1lSXb+OCjngW5FgFHw0kAnCthF6ekZkGLiBhMlOT4ENoNjoW6GrpvoNAbsBW3gLtgKpgS5ZkCSAD3gpojdYA34ZmGHuQ5cpWtrSZilJNJ46w/3TksxUBbfDS4K6m+ElqdO0A3mg2WSlsFsUQLwMX4DbHLRNr/eqLCBhkAm2EgC7ABPXCRAr9E/DFQQ8YM7FK61FAUJYKELBGgTIUA3fSaDPS6rdBkWIFgm+M6lpb4mUUXRey50fhA0ihLgLBh2mQANlAkKEaCTNhNusvuiEyE/7QmyXCJAhqhJcHy+vtZMo2G0RrP3afTNEB8KBeCpwwUwnbIrJo/I8KxwJzgCUh3mfD/lLH9kRAC3eLCIabW1FWA/bTudYufNOm82AuJAF02KzIFPPw38MHuhz2Qnlxw69iutOG9lDuDDoAVMd5Dzb0EuZYBMZgRw4zV2XuoadYjz/BV5qVXnrQjA7THY7pAU+STTqtKWTQnhpCjPCy6D9DA5/wIUMq3MFhYBxtJkXncvY9pJDrusAywBX0NtSBF0VthHe4Xl9FnK5J0/6qPoaxF146Imo9dUQFkj2flCUc6LFIDvwK7RBDlbYtjzCGsW2Wiop8TyafxvA1ESx3wdKGHa+0oWTgGmgsVgNVjPtBcbMo1PUCdo8yVl2dUTYBY4BOYw7VxeLGWAKbTbUmya6d8z7aVrnVyJ9Q8ORINy0KPab31gn4DDF4YItgz66SmU2RDun0AVuAB+2ZVQGM0DeNivBFtAMZgpcBvLi5j8LfQjJur4q+REiM/2eSRIPiU+aQZzhc+UL/DS9TOmFVtHWBhNVCY4mWmnypJo2IwdjBikp8xTVl5XHGIOM8X7t7kIN08ATwBPAE8ATwBPgAi2fwIMABJGc33swO3GAAAAAElFTkSuQmCC";
     },
   },
 ]);

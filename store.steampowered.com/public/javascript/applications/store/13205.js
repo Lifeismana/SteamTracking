@@ -23,7 +23,7 @@
       a.r(t), a.d(t, { CartErrorModal: () => R, default: () => G });
       var n = a(7850),
         r = a(98682),
-        i = a(83392),
+        i = a(61011),
         o = a(20187),
         s = a(56347),
         l = a(82861),

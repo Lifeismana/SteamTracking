@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-  [5329],
+  [15329],
   {
     56330: (e) => {
       e.exports = {
@@ -53,8 +53,8 @@
         _ = i(14771),
         g = i(78327),
         p = i(36064),
-        c = i(81952),
-        C = i(61336);
+        C = i(81952),
+        c = i(61336);
       function S(e, t) {
         let i = e.getElementsByTagName("MPD");
         return i && 1 == i.length ? i[0] : null;
@@ -132,7 +132,7 @@
         ));
       }
       function b(e) {
-        return (0, C.DZ)(e);
+        return (0, c.DZ)(e);
       }
       function x(e, t) {
         let i = e;
@@ -1503,7 +1503,7 @@
             (this.m_schCaptureDisplayStatsTrigger = new h.LU()),
             (this.m_videoRepSelected = null),
             (this.m_rgCaptions = null),
-            (this.m_stats = new c._L()),
+            (this.m_stats = new C._L()),
             (this.m_bClosing = !1),
             (this.m_hlsTimeOffset = 0),
             (this.m_bUserPlayChoice = !0),
@@ -1545,6 +1545,8 @@
           this.m_bMuteOnAutoplayBlocked = e;
         }
         async PlayMPD(e, t, i, n) {
+          if (this.m_bClosing)
+            return void (0, d.wT)(!1, "PlayMPD called on a closed CDASHPlayer");
           (e = Array.isArray(e) ? e : [e]),
             this.m_stats.StartingPlayback(),
             (this.m_strCDNAuthURLParameters = n || "");
@@ -1688,7 +1690,7 @@
           for (let i of e) {
             const e = document.createElement("track");
             (e.kind = "captions"),
-              (e.label = Y(i.m_strLanguageBCP47)),
+              (e.label = J(i.m_strLanguageBCP47)),
               (e.srclang = i.m_strLanguageBCP47),
               (e.src = i.m_strURL),
               (!this.m_bAlwaysStartWithSubtitles && t == l.Bhc) ||
@@ -1770,7 +1772,7 @@
             (this.m_videoRepSelected = null),
             (this.m_rgCaptions = null),
             this.m_stats && this.m_stats.GetFPSMonitor().Close(),
-            (this.m_stats = new c._L()),
+            (this.m_stats = new C._L()),
             (this.m_bFirstPlay = !0),
             (this.m_bPlaybackStarted = !1),
             (this.m_bPlaybackEnded = !1),
@@ -1884,9 +1886,10 @@
           }
         }
         CloseWithError(e, ...t) {
-          this.DispatchEvent("valve-downloadfailed", e),
+          this.m_bClosing ||
+            (this.DispatchEvent("valve-downloadfailed", e),
             this.Close(),
-            (0, p.q_)(...t);
+            (0, p.q_)(...t));
         }
         BCreateLoaders() {
           $(this.m_mpd);
@@ -2334,7 +2337,7 @@
             (t = e), (0, p.q_)("Failed to play video", e);
           }
           let i = this.BHasTimedText() || this.m_bMuteOnAutoplayBlocked;
-          if (J(t) && !this.m_elVideo.muted && i) {
+          if (Y(t) && !this.m_elVideo.muted && i) {
             (0, p.q_)("Trying to play again, this time muted with subtitles"),
               (t = void 0),
               (this.m_elVideo.muted = !0),
@@ -2345,7 +2348,7 @@
               (t = e), (0, p.q_)("Failed to play video when muted", e);
             }
           }
-          e && J(t) && this.DispatchEvent("valve-userinputneeded");
+          e && Y(t) && this.DispatchEvent("valve-userinputneeded");
         }
         OnVideoBufferProgress() {
           if (!this.IsBuffering()) return;
@@ -2784,10 +2787,10 @@
         } catch (e) {}
         return t;
       }
-      function J(e) {
+      function Y(e) {
         return !!e && e instanceof Error && "NotAllowedError" == e.name;
       }
-      function Y(e) {
+      function J(e) {
         return e in m.bi ? (0, m.we)("#Language_" + (0, l.LgB)(m.bi[e])) : "";
       }
       (0, s.Cg)([a.sH], z.prototype, "m_nTimedText", void 0),
@@ -2907,7 +2910,7 @@
     },
     81952: (e, t, i) => {
       "use strict";
-      i.d(t, { _L: () => c });
+      i.d(t, { _L: () => C });
       var n = i(34629),
         s = i(14947),
         r = i(41735),
@@ -2972,7 +2975,7 @@
             (this.segment3_time = 0);
         }
       }
-      class c {
+      class C {
         constructor() {
           (this.m_steamIDBroadcast = ""),
             (this.m_steamIDViewer = ""),
@@ -2983,8 +2986,8 @@
             (this.m_strStatsLink = ""),
             (this.m_strStalledLink = ""),
             (this.m_strEventLogLink = ""),
-            (this.m_allTimeSnapshot = new C(0)),
-            (this.m_rgSnapShots = new Array(new C(0))),
+            (this.m_allTimeSnapshot = new c(0)),
+            (this.m_rgSnapShots = new Array(new c(0))),
             (this.m_bAtLeastOneUserRepresentation = !1),
             (this.m_videoResolution = 0),
             (this.m_audioRate = 0),
@@ -3450,7 +3453,7 @@
         }
         CreateNewEmptySnapshot(e) {
           this.m_rgSnapShots.length >= 5 && this.m_rgSnapShots.shift(),
-            this.m_rgSnapShots.push(new C(e));
+            this.m_rgSnapShots.push(new c(e));
         }
         GatherCommonStats(e, t, i, n) {
           (e.steamid = this.m_steamIDViewer),
@@ -3469,33 +3472,33 @@
             (e.broadcast_origin = this.m_strBroadcastOrigin);
         }
       }
-      (0, n.Cg)([s.sH], c.prototype, "m_allTimeSnapshot", void 0),
-        (0, n.Cg)([s.sH], c.prototype, "m_strBufferingVideoResolution", void 0),
-        (0, n.Cg)([s.sH], c.prototype, "m_strPlaybackVideoResolution", void 0),
-        (0, n.Cg)([s.sH], c.prototype, "m_strHtmlVideoDisplay", void 0),
-        (0, n.Cg)([s.sH], c.prototype, "m_nBandwidthRequired", void 0),
-        (0, n.Cg)([s.sH], c.prototype, "m_nCurBandwidthVideo", void 0),
-        (0, n.Cg)([s.sH], c.prototype, "m_nAudioBufferedMS", void 0),
-        (0, n.Cg)([s.sH], c.prototype, "m_nVideoBufferedMS", void 0),
-        (0, n.Cg)([s.sH], c.prototype, "m_nActiveDownloads", void 0),
-        (0, n.Cg)([s.sH], c.prototype, "m_nVideoDownloadProgress", void 0),
-        (0, n.Cg)([s.sH], c.prototype, "m_videoBufferedRanges", void 0),
-        (0, n.Cg)([s.sH], c.prototype, "m_audioBufferedRanges", void 0),
-        (0, n.Cg)([s.sH], c.prototype, "m_nPlaybackRate", void 0),
-        (0, n.Cg)([s.XI], c.prototype, "SetVideoPlaybackResolution", null),
-        (0, n.Cg)([s.XI], c.prototype, "SetRepresentation", null),
-        (0, n.Cg)([s.XI], c.prototype, "SetCurrentVideoBandwidth", null),
+      (0, n.Cg)([s.sH], C.prototype, "m_allTimeSnapshot", void 0),
+        (0, n.Cg)([s.sH], C.prototype, "m_strBufferingVideoResolution", void 0),
+        (0, n.Cg)([s.sH], C.prototype, "m_strPlaybackVideoResolution", void 0),
+        (0, n.Cg)([s.sH], C.prototype, "m_strHtmlVideoDisplay", void 0),
+        (0, n.Cg)([s.sH], C.prototype, "m_nBandwidthRequired", void 0),
+        (0, n.Cg)([s.sH], C.prototype, "m_nCurBandwidthVideo", void 0),
+        (0, n.Cg)([s.sH], C.prototype, "m_nAudioBufferedMS", void 0),
+        (0, n.Cg)([s.sH], C.prototype, "m_nVideoBufferedMS", void 0),
+        (0, n.Cg)([s.sH], C.prototype, "m_nActiveDownloads", void 0),
+        (0, n.Cg)([s.sH], C.prototype, "m_nVideoDownloadProgress", void 0),
+        (0, n.Cg)([s.sH], C.prototype, "m_videoBufferedRanges", void 0),
+        (0, n.Cg)([s.sH], C.prototype, "m_audioBufferedRanges", void 0),
+        (0, n.Cg)([s.sH], C.prototype, "m_nPlaybackRate", void 0),
+        (0, n.Cg)([s.XI], C.prototype, "SetVideoPlaybackResolution", null),
+        (0, n.Cg)([s.XI], C.prototype, "SetRepresentation", null),
+        (0, n.Cg)([s.XI], C.prototype, "SetCurrentVideoBandwidth", null),
         (0, n.Cg)(
           [s.XI],
-          c.prototype,
+          C.prototype,
           "CaptureFrequentlyUpdatingInformation",
           null,
         ),
-        (0, n.Cg)([s.XI], c.prototype, "LogDownload", null),
-        (0, n.Cg)([s.XI], c.prototype, "LogSegmentDownloadFailure", null),
-        (0, n.Cg)([s.XI], c.prototype, "LogFrameInfo", null),
-        (0, n.Cg)([s.XI], c.prototype, "LogBufferDuration", null);
-      class C {
+        (0, n.Cg)([s.XI], C.prototype, "LogDownload", null),
+        (0, n.Cg)([s.XI], C.prototype, "LogSegmentDownloadFailure", null),
+        (0, n.Cg)([s.XI], C.prototype, "LogFrameInfo", null),
+        (0, n.Cg)([s.XI], C.prototype, "LogBufferDuration", null);
+      class c {
         constructor(e) {
           (this.m_timeMS = Date.now()),
             (this.m_nBytesReceived = 0),
@@ -3557,16 +3560,16 @@
             (this.m_nEntries += 1);
         }
       }
-      (0, n.Cg)([s.sH], C.prototype, "m_nBytesReceived", void 0),
-        (0, n.Cg)([s.sH], C.prototype, "m_nFailedSegments", void 0),
-        (0, n.Cg)([s.sH], C.prototype, "m_nStallEvents", void 0),
-        (0, n.Cg)([s.sH], C.prototype, "m_nSegmentDownloadTimeMaxMS", void 0),
-        (0, n.Cg)([s.sH], C.prototype, "m_nSegmentDownloadTimeMinMS", void 0),
-        (0, n.Cg)([s.sH], C.prototype, "m_nBandwidthMin", void 0),
-        (0, n.Cg)([s.sH], C.prototype, "m_nBandwidthMax", void 0),
-        (0, n.Cg)([s.sH], C.prototype, "m_nFramesDecoded", void 0),
-        (0, n.Cg)([s.sH], C.prototype, "m_nFramesDropped", void 0),
-        (0, n.Cg)([s.XI], C.prototype, "SegmentReceived", null);
+      (0, n.Cg)([s.sH], c.prototype, "m_nBytesReceived", void 0),
+        (0, n.Cg)([s.sH], c.prototype, "m_nFailedSegments", void 0),
+        (0, n.Cg)([s.sH], c.prototype, "m_nStallEvents", void 0),
+        (0, n.Cg)([s.sH], c.prototype, "m_nSegmentDownloadTimeMaxMS", void 0),
+        (0, n.Cg)([s.sH], c.prototype, "m_nSegmentDownloadTimeMinMS", void 0),
+        (0, n.Cg)([s.sH], c.prototype, "m_nBandwidthMin", void 0),
+        (0, n.Cg)([s.sH], c.prototype, "m_nBandwidthMax", void 0),
+        (0, n.Cg)([s.sH], c.prototype, "m_nFramesDecoded", void 0),
+        (0, n.Cg)([s.sH], c.prototype, "m_nFramesDropped", void 0),
+        (0, n.Cg)([s.XI], c.prototype, "SegmentReceived", null);
       class S {
         constructor() {
           (this.bDropReading = !1), (this.nTotalDecodedFrames = 0);
@@ -3731,7 +3734,7 @@
           [h, m] = (0, s.useState)(null),
           [u, f] = (0, s.useState)(null),
           [_, g] = (0, s.useState)(null),
-          [p, c] = (0, s.useState)(null);
+          [p, C] = (0, s.useState)(null);
         return {
           bLoading: t,
           bError: n,
@@ -3748,7 +3751,7 @@
           fnSetStrSuccess: m,
           fnSetElSuccess: g,
           fnSetElError: f,
-          fnSetThrobber: c,
+          fnSetThrobber: C,
         };
       }
       function m(e, t) {
@@ -3769,7 +3772,7 @@
             strSuccess: _,
             elSuccess: g,
             elError: p,
-            strThrobber: c,
+            strThrobber: C,
           } = i;
         return m || f || p
           ? (0, n.jsxs)(r.o0, {
@@ -3802,7 +3805,7 @@
                 bProgressDialog: !0,
                 closeModal: () => {},
                 children: (0, n.jsx)(l.t, {
-                  string: d || c || (0, a.we)("#Loading"),
+                  string: d || C || (0, a.we)("#Loading"),
                   size: "medium",
                   position: "center",
                 }),
@@ -3814,7 +3817,7 @@
       i.d(t, {
         AY: () => m,
         B1: () => R,
-        E$: () => Y,
+        E$: () => J,
         FE: () => b,
         FW: () => q,
         Hs: () => W,
@@ -3831,7 +3834,7 @@
         OY: () => p,
         O_: () => $,
         Od: () => X,
-        Oe: () => c,
+        Oe: () => C,
         Oi: () => l,
         QY: () => _,
         R2: () => d,
@@ -3845,7 +3848,7 @@
         YJ: () => k,
         Z3: () => w,
         ai: () => s,
-        bL: () => C,
+        bL: () => c,
         eT: () => r,
         ff: () => M,
         gD: () => o,
@@ -3864,7 +3867,7 @@
         ry: () => v,
         t4: () => N,
         tS: () => te,
-        ud: () => J,
+        ud: () => Y,
         wN: () => oe,
         xA: () => se,
         y$: () => h,
@@ -4111,7 +4114,7 @@
           ],
         });
       }
-      function c(e) {
+      function C(e) {
         return (0, n.jsx)("svg", {
           width: "36",
           height: "36",
@@ -4125,7 +4128,7 @@
           }),
         });
       }
-      function C(e) {
+      function c(e) {
         return (0, n.jsx)("svg", {
           width: "36",
           height: "36",
@@ -4626,7 +4629,7 @@
           }),
         });
       }
-      function J(e) {
+      function Y(e) {
         return (0, n.jsx)("svg", {
           className: "SVGIcon_Button",
           width: "36",
@@ -4641,7 +4644,7 @@
           }),
         });
       }
-      function Y(e) {
+      function J(e) {
         return (0, n.jsx)("svg", {
           className: "SVGIcon_Button",
           width: "36",
@@ -4847,62 +4850,6 @@
             return () => i.cancel(e ? `${e}: unmounting` : "unmounting");
           }, [e]),
           t.current
-        );
-      }
-    },
-    82227: (e, t, i) => {
-      "use strict";
-      i.d(t, { Dq: () => o, dm: () => r });
-      var n = i(3049),
-        s = i(78686);
-      function r(e, t, i, r) {
-        let o = t;
-        o =
-          "number" == typeof o
-            ? {
-                nDigitsAfterDecimal: t,
-                bUseBinary1K: i || void 0 === i,
-                bValueIsInBytes: !r,
-                bValueIsRate: r,
-                nMinimumDigitsAfterDecimal: 0,
-              }
-            : {
-                nDigitsAfterDecimal: 2,
-                bUseBinary1K: !0,
-                bValueIsInBytes: !0,
-                bValueIsRate: !1,
-                nMinimumDigitsAfterDecimal: 0,
-                ...o,
-              };
-        const { nNum: a, strPrefix: l } = (function (e, t) {
-            const i = t.bUseBinary1K ? 1024 : 1e3,
-              n = i * i,
-              s = n * i,
-              r = s * i;
-            return e > r
-              ? { nNum: e / r, strPrefix: "Tera" }
-              : e > s
-                ? { nNum: e / s, strPrefix: "Giga" }
-                : e > n
-                  ? { nNum: e / n, strPrefix: "Mega" }
-                  : e > i
-                    ? { nNum: e / i, strPrefix: "Kilo" }
-                    : { nNum: e, strPrefix: "" };
-          })(e, o),
-          d = `#${l}${o.bValueIsInBytes ? "bytes" : "bits"}${o.bValueIsRate ? "_PerSecond" : ""}`;
-        return s.Z.Localize(
-          d,
-          a.toLocaleString((0, n.J)(), {
-            minimumFractionDigits: o.nMinimumDigitsAfterDecimal,
-            maximumFractionDigits: o.nDigitsAfterDecimal,
-          }),
-        );
-      }
-      function o(e, t = 0) {
-        let i;
-        return (
-          t && (i = { maximumFractionDigits: t }),
-          e ? e.toLocaleString((0, n.J)(), i) : "" + e
         );
       }
     },

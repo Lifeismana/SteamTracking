@@ -1662,45 +1662,45 @@
             ref: a,
             ...l
           } = e,
-          c = n.useRef(null),
-          [d, h] = n.useState(0),
-          [p, g] = n.useState(0);
-        n.useImperativeHandle(
-          a,
-          () => ({ imgRef: c, nSourceIndex: d, nSourceLength: t.length }),
-          [c, d, t],
-        );
-        const m = n.useMemo(() => JSON.stringify(t), [t]);
-        n.useEffect(() => {
-          h(0), g((e) => e + 1);
-        }, [m]);
-        const u = n.useMemo(() => {
+          [c, d] = n.useState(0),
+          h = n.useMemo(() => JSON.stringify(t), [t]),
+          [p, g] = n.useState(h);
+        p != h && (g(h), d(0));
+        const m = n.useMemo(() => {
             let o = "";
             return (
-              t && t.length > d && (o = t[d]),
+              t && t.length > c && (o = t[c]),
               o ||
                 (console.warn(
                   "MultiSourceImage created with no image src",
                   e,
-                  d,
+                  c,
                 ),
                 (o =
                   "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=")),
               o
             );
-          }, [t, d, e]),
-          L = n.useCallback(
+          }, [t, c, e]),
+          u = n.useCallback(
             (e) => {
-              o?.(e, t[d], d);
-              const s = d + 1;
-              s >= t.length && i && i(e), s < t.length && h(s);
+              o?.(e, t[c], c);
+              const s = c + 1;
+              s >= t.length && i && i(e), s < t.length && d(s);
             },
-            [d, i, o, t],
-          );
-        return (0, s.jsx)(
-          "img",
-          { ref: c, ...l, src: u, onError: L, alt: r },
-          p,
+            [c, i, o, t],
+          ),
+          L = n.useRef(null);
+        return (
+          n.useImperativeHandle(
+            a,
+            () => ({ imgRef: L, nSourceIndex: c, nSourceLength: t.length }),
+            [L, c, t],
+          ),
+          n.useEffect(() => {
+            const e = L.current;
+            e?.complete && 0 == e.naturalWidth && (e.src = e.src);
+          }, []),
+          (0, s.jsx)("img", { ref: L, ...l, src: m, onError: u, alt: r }, p)
         );
       }
     },

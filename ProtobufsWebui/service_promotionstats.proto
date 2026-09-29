@@ -18,6 +18,8 @@ message CPromotionStats_GetOptInDemoStats_Response_PerAppStats {
 	optional uint32 wishlist_count = 6;
 	optional uint32 player_wishlist_count = 7;
 	optional uint32 rt_last_update_time = 9;
+	optional uint32 fest_page_views = 10;
+	optional uint32 fest_period_page_views = 11;
 }
 
 service PromotionStats {

@@ -56,6 +56,5 @@
     "SinglePricingPackage_Intro_2b": "Для нестандартних цін у доларах США введіть значення у відповідне поле, натисніть кнопку «Конвертувати ціни…» й виконуйте подальші інструкції.",
     "PricingDashboard_Method_SuggestedPrice": "Рекомендована конвертована ціна:",
     "PricingDashboard_Method_SuggestedPrice_ttip": "Ціна рекомендована на основі вибраного вище методу конвертації та ціни в доларах США (%1$s).",
-    "dummy": "dummy",
-    "empty_no_trailing_comma": ""
+    "dummy": "dummy"
 }

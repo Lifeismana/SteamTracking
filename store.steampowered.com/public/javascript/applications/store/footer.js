@@ -82,7 +82,7 @@
     },
     49560: (e, t, n) => {
       "use strict";
-      n.d(t, { A: () => j, p: () => v });
+      n.d(t, { AM: () => w, Pr: () => j });
       var s = n(7850),
         r = n(90626),
         o = n(73788),
@@ -92,25 +92,26 @@
         a = n(45699),
         h = n(85585),
         C = n(7445),
-        p = n(81393),
-        d = n(64238),
-        u = n.n(d),
+        d = n(81393),
+        p = n(64238),
+        u = n.n(p),
         f = n(11820),
-        x = n(78327);
-      const g = (0, r.createContext)(null);
-      function m(e) {
-        return (0, x.Qn)() ? (0, s.jsx)(H, { ...e }) : (0, s.jsx)(_, { ...e });
-      }
+        x = n(78327),
+        g = n(82321);
+      const m = (0, r.createContext)(null);
       function H(e) {
+        return (0, x.Qn)() ? (0, s.jsx)(_, { ...e }) : (0, s.jsx)(v, { ...e });
+      }
+      function _(e) {
         const { children: t } = e,
-          n = (0, r.useContext)(g);
-        (0, p.wT)(
+          n = (0, r.useContext)(m);
+        (0, d.wT)(
           !!n,
           "<Popover.Positioner> must be a child of <Popover.Root>.",
         );
         const o = r.useRef(void 0);
         return (
-          (0, a.O7)(o, !!o.current, !1),
+          (0, a.O7)(o, !0, !0),
           (0, s.jsx)(h.D6, {
             navID: "Popover",
             onCancelButton: () => n.floating.context.onOpenChange(!1),
@@ -123,11 +124,11 @@
           })
         );
       }
-      function _(e) {
+      function v(e) {
         const { children: t } = e,
-          n = (0, r.useContext)(g);
+          n = (0, r.useContext)(m);
         return (
-          (0, p.wT)(
+          (0, d.wT)(
             !!n,
             "<Popover.Positioner> must be a child of <Popover.Root>.",
           ),
@@ -139,7 +140,23 @@
           })
         );
       }
-      function v(e) {
+      function j(e, t, n) {
+        const { onOpenChange: s, placement: r } = e,
+          c = "anchor" === n;
+        return (0, o.we)({
+          open: t,
+          onOpenChange: s,
+          middleware: c ? L(e) : [],
+          whileElementsMounted: c ? i.ll : void 0,
+          placement: r && "object" == typeof r ? r.initial : r,
+          strategy: "fixed",
+          platform: {
+            ...i.iD,
+            getOffsetParent: (e) => e?.ownerDocument?.defaultView ?? window,
+          },
+        });
+      }
+      function L(e) {
         const { gutter: t = 0, placement: n } = e,
           s = [],
           r = n && "object" == typeof n;
@@ -200,60 +217,53 @@
           s
         );
       }
-      const j = {
+      const w = {
         Root: function (e) {
           const { children: t, ...n } = e,
             r = (function (e) {
               const {
                 open: t,
-                onOpenChange: n,
-                placement: s,
-                interactions: r = {},
+                interactions: n = {},
+                width: s,
+                maxHeight: r,
+                gutter: i,
+                scroll: c,
               } = e;
-              let c = t;
+              let l = t;
               0;
-              const l = (0, o.we)({
-                  open: c,
-                  onOpenChange: n,
-                  middleware: v(e),
-                  whileElementsMounted: i.ll,
-                  placement: s && "object" == typeof s ? s.initial : s,
-                  strategy: "fixed",
-                  platform: {
-                    ...i.iD,
-                    getOffsetParent: (e) =>
-                      e?.ownerDocument?.defaultView ?? window,
-                  },
-                }),
-                a = { enabled: !!r.click },
-                h = "function" == typeof r.click ? r.click(a) : a,
-                C = (0, o.kp)(l.context, h),
-                p = { enabled: !!r.focus },
-                d = "function" == typeof r.focus ? r.focus(p) : p,
-                u = (0, o.iQ)(l.context, d),
-                f = { handleClose: (0, o.iB)() },
-                x = "function" == typeof r.hover ? r.hover(f) : f,
-                g = (0, o.Mk)(l.context, { enabled: !!r.hover, ...x }),
-                m = (0, o.s9)(l.context),
-                { getFloatingProps: H, getReferenceProps: _ } = (0, o.bv)([
-                  C,
-                  u,
-                  g,
-                  m,
+              const a = (0, g.Pr)(e.presentation),
+                h = j(e, l, a),
+                C = { enabled: !!n.click },
+                d = "function" == typeof n.click ? n.click(C) : C,
+                p = (0, o.kp)(h.context, d),
+                u = { enabled: !!n.focus },
+                f = "function" == typeof n.focus ? n.focus(u) : u,
+                x = (0, o.iQ)(h.context, f),
+                m = { handleClose: (0, o.iB)() },
+                H = "function" == typeof n.hover ? n.hover(m) : m,
+                _ = (0, o.Mk)(h.context, { enabled: !!n.hover, ...H }),
+                v = (0, o.s9)(h.context),
+                { getFloatingProps: L, getReferenceProps: w } = (0, o.bv)([
+                  p,
+                  x,
+                  _,
+                  v,
                 ]);
               return {
-                floating: l,
-                getFloatingProps: H,
-                getReferenceProps: _,
-                open: c,
+                floating: h,
+                getFloatingProps: L,
+                getReferenceProps: w,
+                open: l,
+                presentation: a,
+                sizing: { width: s, maxHeight: r, gutter: i, scroll: c },
               };
             })(n);
-          return (0, s.jsx)(g.Provider, { value: r, children: t });
+          return (0, s.jsx)(m.Provider, { value: r, children: t });
         },
         Anchor: function (e) {
           const { children: t } = e,
             n = r.Children.only(t),
-            s = (0, r.useContext)(g);
+            s = (0, r.useContext)(m);
           return n
             ? s
               ? (0, r.cloneElement)(n, {
@@ -267,35 +277,38 @@
             : null;
         },
         Positioner: function (e) {
-          const { children: t, className: n, ref: i } = e,
-            c = (0, r.useContext)(g),
-            l = (0, o.SV)([
-              i,
-              c?.floating.refs.setFloating,
-              (e) => e?.showPopover?.(),
-            ]);
-          if (!c)
+          const { children: t, className: n, ref: i, label: c } = e,
+            l = (0, r.useContext)(m),
+            a = (0, o.SV)([i, l?.floating.refs.setFloating]);
+          if (!l)
             return (
               console.error(
                 "<Popover.Positioner> must be a child of <Popover.Root>.",
               ),
               null
             );
-          if (!c.open) return null;
-          let a = r.Children.only(t),
-            h = r.Fragment;
-          a.type == j.FocusManager &&
-            ((a = r.Children.only(a.props.children)), (h = m));
-          const C = (0, r.cloneElement)(a, {
-            ref: l,
-            style: { ...c.floating.floatingStyles },
-            className: u()((0, f.T)(), n),
-            popover: "manual",
-            ...c.getFloatingProps(),
-          });
-          return (0, s.jsx)(h, { children: C });
+          if (!l.open) return null;
+          let h = r.Children.only(t),
+            C = r.Fragment;
+          return (
+            h.type == w.FocusManager &&
+              ((h = r.Children.only(h.props.children)), (C = H)),
+            (0, s.jsx)(C, {
+              children: (0, s.jsx)(g.HF, {
+                presentation: l.presentation,
+                sizing: l.sizing,
+                floatingRef: a,
+                floatingProps: l.getFloatingProps(),
+                floatingStyles: l.floating.floatingStyles,
+                referenceElement: l.floating.elements.domReference,
+                className: u()((0, f.T)(), n),
+                label: c,
+                children: h,
+              }),
+            })
+          );
         },
-        FocusManager: m,
+        FocusManager: H,
       };
     },
     19997: (e, t, n) => {
@@ -311,11 +324,11 @@
         h = n(78327);
       function C(e) {
         const { as: t = "div", ref: n, focusable: o, navProps: c, ...C } = e,
-          d = (0, h.Qn)(),
-          u = (0, l.mz)({ ...C, className: i()(a.Grid, e.className) }, p),
+          p = (0, h.Qn)(),
+          u = (0, l.mz)({ ...C, className: i()(a.Grid, e.className) }, d),
           f = o ?? c?.focusable ?? !!C.onClick,
           x = (0, s.jsx)(t, { ref: n, ...u });
-        return d
+        return p
           ? (0, s.jsx)(r.J, {
               "flow-children": "grid",
               ...(c || {}),
@@ -324,7 +337,7 @@
             })
           : x;
       }
-      const p = [
+      const d = [
         ...c.h,
         {
           prop: "display",
@@ -420,7 +433,7 @@
     },
     59805: (e, t, n) => {
       "use strict";
-      n.d(t, { D: () => d });
+      n.d(t, { D: () => p });
       var s = n(7850),
         r = n(39049),
         o = n(75659),
@@ -430,8 +443,8 @@
       const a = l.createContext({ depth: 0 });
       var h = n(11820),
         C = n(64238),
-        p = n.n(C);
-      function d(e) {
+        d = n.n(C);
+      function p(e) {
         const { level: t = "auto", className: n, color: o } = e,
           i = (function (e, t) {
             if ("auto" === e && 0 === t) return "h1";
@@ -449,7 +462,7 @@
             return "h" + n;
           })(t, (0, l.useContext)(a).depth);
         return (0, s.jsx)(i, {
-          ...(0, c.mz)({ ...e, className: p()((0, h.T)(), r.Heading, n) }, u),
+          ...(0, c.mz)({ ...e, className: d()((0, h.T)(), r.Heading, n) }, u),
         });
       }
       const u = [
@@ -464,7 +477,7 @@
     },
     20187: (e, t, n) => {
       "use strict";
-      n.d(t, { Ae: () => p, EY: () => h, U6: () => C });
+      n.d(t, { Ae: () => d, EY: () => h, U6: () => C });
       var s = n(7850),
         r = n(55348),
         o = n(11526),
@@ -477,7 +490,7 @@
           c = t;
         return (0, s.jsx)(c, {
           ref: n,
-          ...(0, o.mz)({ ...i, className: l()(a.Text, r) }, p),
+          ...(0, o.mz)({ ...i, className: l()(a.Text, r) }, d),
         });
       }
       const C = [
@@ -522,7 +535,7 @@
             cssProperty: "--white-space",
           },
         ],
-        p = [
+        d = [
           ...C,
           ...i.L,
           {
@@ -534,7 +547,7 @@
     },
     28491: (e, t, n) => {
       "use strict";
-      n.d(t, { W: () => p, Y: () => h });
+      n.d(t, { W: () => d, Y: () => h });
       var s = n(7850),
         r = n(50122),
         o = n(20187),
@@ -545,37 +558,37 @@
       function h(e) {
         const { underline: t = "auto", focusable: n, navProps: o, ...l } = e,
           h = (0, a.Qn)(),
-          p = n ?? o?.focusable ?? !!l.href,
-          d = (0, i.mz)({ ...l, underline: t, className: r.TextLink }, C);
-        return h && (p || o)
-          ? (0, s.jsx)(c.Ii, { ...d, ...(o || {}), focusable: p })
-          : (0, s.jsx)("a", { ...d });
+          d = n ?? o?.focusable ?? !!l.href,
+          p = (0, i.mz)({ ...l, underline: t, className: r.TextLink }, C);
+        return h && (d || o)
+          ? (0, s.jsx)(c.Ii, { ...p, ...(o || {}), focusable: d })
+          : (0, s.jsx)("a", { ...p });
       }
       const C = [
         ...o.Ae,
         { prop: "underline", className: (e) => r[`Underline-${e}`] },
       ];
-      function p(e) {
+      function d(e) {
         const { underline: t = "auto", focusable: n, navProps: o, ...c } = e,
           h = (0, a.Qn)(),
-          p = n ?? o?.focusable ?? !!c.onClick,
-          d = (0, s.jsx)("span", {
+          d = n ?? o?.focusable ?? !!c.onClick,
+          p = (0, s.jsx)("span", {
             role: "button",
             ...(0, i.mz)(
               { ...c, underline: t, className: r.TextLinkButton },
               C,
             ),
           });
-        return h && (p || o)
-          ? (0, s.jsx)(l.J, { ...(o || {}), focusable: p, children: d })
-          : d;
+        return h && (d || o)
+          ? (0, s.jsx)(l.J, { ...(o || {}), focusable: d, children: p })
+          : p;
       }
     },
     21423: (e, t, n) => {
       "use strict";
       n.r(t), n.d(t, { GlobalFooter: () => $ });
       var s = n(7850),
-        r = n(83392),
+        r = n(61011),
         o = n(59805),
         i = n(28491),
         c = n(10430),
@@ -583,8 +596,8 @@
         a = n(56347),
         h = n(44167),
         C = n(19997),
-        p = n(2160),
-        d = n(66973),
+        d = n(2160),
+        p = n(66973),
         u = n(91933),
         f = n(38861);
       function x() {
@@ -611,7 +624,7 @@
             popoverProps: i,
           } = e,
           [c, l] = (0, j.useState)(!1);
-        return (0, s.jsxs)(V.A.Root, {
+        return (0, s.jsxs)(V.AM.Root, {
           open: c,
           onOpenChange: l,
           interactions: {
@@ -620,18 +633,19 @@
               return o && (t = { ...t, handleClose: null }), t;
             },
           },
+          presentation: "anchor",
           ...i,
           children: [
-            (0, s.jsx)(V.A.Anchor, { children: t }),
-            (0, s.jsx)(V.A.Positioner, {
+            (0, s.jsx)(V.AM.Anchor, { children: t }),
+            (0, s.jsx)(V.AM.Positioner, {
               children: (0, s.jsx)(w.az, { children: n }),
             }),
           ],
         });
       }
       var S = n(60859),
-        z = n.n(S);
-      function M() {
+        M = n.n(S);
+      function z() {
         return (0, s.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           width: "142",
@@ -669,7 +683,7 @@
           ],
         });
       }
-      function y() {
+      function R() {
         return (0, s.jsxs)("svg", {
           width: "98",
           height: "34",
@@ -689,7 +703,7 @@
           ],
         });
       }
-      function R() {
+      function y() {
         return (0, s.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           width: "100",
@@ -733,9 +747,9 @@
         return "initial" === t || "sm" === t
           ? null
           : (0, s.jsx)("footer", {
-              className: v()(z().SteamChinaFooter, e.className),
+              className: v()(M().SteamChinaFooter, e.className),
               children: (0, s.jsxs)(w.az, {
-                className: z().FooterContent,
+                className: M().FooterContent,
                 children: [
                   (0, s.jsxs)(r.s, {
                     align: "center",
@@ -743,10 +757,10 @@
                     children: [
                       (0, s.jsx)(T, {
                         href: m.TS.STORE_BASE_URL,
-                        children: (0, s.jsx)(M, {}),
+                        children: (0, s.jsx)(z, {}),
                       }),
                       (0, s.jsxs)(w.az, {
-                        className: z().NavLinks,
+                        className: M().NavLinks,
                         children: [
                           (0, s.jsx)(T, {
                             href: "https://about.steamchina.com/upgrade_announcement.html",
@@ -807,11 +821,11 @@
                         children: [
                           (0, s.jsx)(T, {
                             href: "https://www.wanmei.com/",
-                            children: (0, s.jsx)(y, {}),
+                            children: (0, s.jsx)(R, {}),
                           }),
                           (0, s.jsx)(T, {
                             href: "https://www.valvesoftware.com",
-                            children: (0, s.jsx)(R, {}),
+                            children: (0, s.jsx)(y, {}),
                           }),
                         ],
                       }),
@@ -1112,7 +1126,7 @@
               as: "p",
               size: "1",
               className: L.LegalNotice,
-              children: (0, d.A)(
+              children: (0, p.A)(
                 P.Localize("#footer_legal_notice", new Date().getFullYear()),
               ),
             }),
@@ -1296,7 +1310,7 @@
       }
       function $(e) {
         if ((0, Z.Qn)()) return null;
-        const t = (0, p.nA)(m.TS.EREALM)
+        const t = (0, d.nA)(m.TS.EREALM)
           ? (0, s.jsx)(E, { ...e })
           : (0, s.jsx)(X, { ...e });
         return (0, s.jsx)(H.nn, {

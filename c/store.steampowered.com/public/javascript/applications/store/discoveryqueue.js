@@ -343,6 +343,45 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_, _) {
+        return new (_())(
+          async (_) => {
+            const _ = [..._],
+              _ = await _.xtC.GetPlayerLinkDetails(_, {
+                steamids: _,
+              }),
+              _ = new Map();
+            return (
+              _.Body()
+                .accounts()
+                .forEach((_) => {
+                  const _ = _.toObject();
+                  _.set(_.public_data.steamid, _);
+                }),
+              __webpack_require__.map((_) => _.get(_) ?? null)
+            );
+          },
+          {
+            maxBatchSize: 100,
+            cache: !1,
+            ..._,
+          },
+        );
+      }
+      function _(_) {
+        return (0, _._)("PlayerLinkDetails", () => _(_));
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
         _: () => _,
         _: () => _,
       });
@@ -2410,6 +2449,164 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
+      function _(_) {
+        return "[object Object]" === Object.prototype.toString.call(_);
+      }
+      function _(..._) {
+        return JSON.stringify(_, (_, _) => {
+          if (
+            (function (_) {
+              if (!_(_)) return !1;
+              const _ = _.constructor;
+              if (void 0 === _) return !0;
+              const _ = _.prototype;
+              return (
+                !!_(_) &&
+                !!Object.prototype.hasOwnProperty.call(_, "isPrototypeOf")
+              );
+            })(_)
+          ) {
+            const _ = {};
+            return (
+              Object.keys(_)
+                .sort()
+                .forEach((_) => {
+                  _[_] = _[_];
+                }),
+              _
+            );
+          }
+          return _;
+        });
+      }
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid");
+      const _ = (0, _.createContext)({
+        instances: {},
+        factories: {},
+      });
+      function _(_, _) {
+        const _ = (0, _.useContext)(_),
+          _ = "string" == typeof _ ? _ : _(..._);
+        let _ = _;
+        for (; _; ) {
+          if (_ in _.instances) return _.instances[_];
+          if (_ in _.factories) break;
+          _ = _.parent;
+        }
+        const _ = (_?.factories[_] ?? _)();
+        return ((_ ?? _).instances[_] = _), _;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = _.createContext({
+        enabled: !0,
+      });
+      function _(_) {
+        const { enabled: _, children: _ } = _,
+          _ = _.useMemo(
+            () => ({
+              enabled: _,
+            }),
+            [_],
+          );
+        return (0, _.jsx)(_.Provider, {
+          value: _,
+          children: _,
+        });
+      }
+      function _(_) {
+        const {
+            placeholderWidth: _,
+            placeholderHeight: _,
+            holdGamepadFocus: _ = !1,
+            onRender: _,
+            style: _,
+            mode: _ = "JustLoad",
+            children: _,
+            ..._
+          } = _,
+          _ = _.useContext(_),
+          [_, _] = _.useState(() => ({
+            bRenderChildren: !_.enabled,
+            nPrevRenderHeight: 0,
+            nPrevRenderWidth: 0,
+          })),
+          _ = _.useRef(null),
+          _ = "LoadAndUnload" === _ && _.enabled,
+          _ = _.useCallback(
+            (_) => {
+              _((_) => {
+                if (_.bRenderChildren === _ || (_.bRenderChildren && !_))
+                  return _;
+                let _ = 0,
+                  _ = 0;
+                if (_.current) {
+                  const _ = _.current.getBoundingClientRect();
+                  _ && ((_ = _.width), (_ = _.height));
+                }
+                return (
+                  _ && _ && _(),
+                  {
+                    bRenderChildren: _,
+                    nPrevRenderWidth: _,
+                    nPrevRenderHeight: _,
+                  }
+                );
+              });
+            },
+            [_, _],
+          );
+        _.useEffect(() => {
+          _.enabled || _(!0);
+        }, [_.enabled, _]);
+        let _ = _;
+        if (!_.bRenderChildren) {
+          const _ = _.nPrevRenderWidth || _,
+            _ = _.nPrevRenderHeight || _;
+          (void 0 === _ && void 0 === _) ||
+            (_ = {
+              ..._,
+              minHeight: _,
+              minWidth: _,
+            });
+        }
+        const _ = _ ? "repeated" : "once";
+        let _ = (0, _.jsx)(_._, {
+          containerRef: _,
+          style: _,
+          ..._,
+          onVisibilityChange: _,
+          trigger: _,
+          children: _.bRenderChildren && _,
+        });
+        return (
+          _ &&
+            (_ = (0, _.jsx)(_._, {
+              focusableIfEmpty: !0,
+              style: {
+                height: "100%",
+              },
+              children: _,
+            })),
+          _
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
       __webpack_require__._(module_exports),
         __webpack_require__._(module_exports, {
           default: () => _,
@@ -3225,10 +3422,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ =
-          (__webpack_require__("chunkid"),
-          __webpack_require__("chunkid"),
-          __webpack_require__("chunkid")),
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
         _ = __webpack_require__("chunkid");
       const _ = new WeakSet();
       function _(_ = _._) {
@@ -3776,14 +3970,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = () => (_._.EUNIVERSE === _._ ? 2581 : 45267781);
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
       });
@@ -3791,98 +3977,20 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = _.createContext({
-        enabled: !0,
-      });
       function _(_) {
-        const { enabled: _, children: _ } = _,
-          _ = _.useMemo(
-            () => ({
-              enabled: _,
-            }),
-            [_],
-          );
-        return (0, _.jsx)(_.Provider, {
-          value: _,
-          children: _,
-        });
-      }
-      function _(_) {
-        const {
-            placeholderWidth: _,
-            placeholderHeight: _,
-            holdGamepadFocus: _ = !1,
-            onRender: _,
-            style: _,
-            mode: _ = "JustLoad",
-            children: _,
-            ..._
-          } = _,
-          _ = _.useContext(_),
-          [_, _] = _.useState(() => ({
-            bRenderChildren: !_.enabled,
-            nPrevRenderHeight: 0,
-            nPrevRenderWidth: 0,
-          })),
-          _ = _.useRef(null),
-          _ = "LoadAndUnload" === _ && _.enabled,
-          _ = _.useCallback(
-            (_) => {
-              _((_) => {
-                if (_.bRenderChildren === _ || (_.bRenderChildren && !_))
-                  return _;
-                let _ = 0,
-                  _ = 0;
-                if (_.current) {
-                  const _ = _.current.getBoundingClientRect();
-                  _ && ((_ = _.width), (_ = _.height));
-                }
-                return (
-                  _ && _ && _(),
-                  {
-                    bRenderChildren: _,
-                    nPrevRenderWidth: _,
-                    nPrevRenderHeight: _,
-                  }
-                );
-              });
-            },
-            [_, _],
-          );
-        _.useEffect(() => {
-          _.enabled || _(!0);
-        }, [_.enabled, _]);
-        let _ = _;
-        if (!_.bRenderChildren) {
-          const _ = _.nPrevRenderWidth || _,
-            _ = _.nPrevRenderHeight || _;
-          (void 0 === _ && void 0 === _) ||
-            (_ = {
+        return (0, _._)()
+          ? (0, _.jsx)(_.MGO, {
               ..._,
-              minHeight: _,
-              minWidth: _,
+            })
+          : (0, _.jsx)(_.Jlk, {
+              ..._,
             });
-        }
-        const _ = _ ? "repeated" : "once";
-        let _ = (0, _.jsx)(_._, {
-          containerRef: _,
-          style: _,
-          ..._,
-          onVisibilityChange: _,
-          trigger: _,
-          children: _.bRenderChildren && _,
-        });
-        return (
-          _ &&
-            (_ = (0, _.jsx)(_._, {
-              focusableIfEmpty: !0,
-              style: {
-                height: "100%",
-              },
-              children: _,
-            })),
-          _
-        );
+      }
+      function _() {
+        return (0, _.jsx)(_.rfv, {});
+      }
+      function _() {
+        return (0, _._)() ? (0, _.jsx)(_._, {}) : (0, _.jsx)(_.jZW, {});
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

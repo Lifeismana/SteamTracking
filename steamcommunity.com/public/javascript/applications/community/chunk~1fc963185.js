@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-  [864],
+  [20864],
   {
     55351: (e) => {
       e.exports = {
@@ -336,7 +336,7 @@
       "document" in globalThis &&
         (document.cookie = `timezoneName=${l};expires=${new Date(Date.now() + 31536e6).toUTCString()};path=/;Secure;SameSite=None;`);
     },
-    83085: (e, s, t) => {
+    97743: (e, s, t) => {
       "use strict";
       t.d(s, { Gw: () => r, Lk: () => o, ai: () => l, mm: () => a });
       var n = t(14947);
@@ -356,12 +356,24 @@
         return e ? new Date(1e3 * e) : new Date();
       }
     },
+    40672: (e, s, t) => {
+      "use strict";
+      t.d(s, { n: () => l });
+      t(7850);
+      var n = t(90626),
+        i = t(97743);
+      const a = n.createContext(void 0);
+      function l() {
+        var e;
+        return null !== (e = n.useContext(a)) && void 0 !== e ? e : (0, i.Gw)();
+      }
+    },
     44165: (e, s, t) => {
       "use strict";
       t.d(s, { HD: () => r, P_: () => o, f1: () => j, sB: () => u });
       t(19367);
       var n = t(90626),
-        i = t(83085),
+        i = t(97743),
         a = t(4434),
         l = t(63340);
       const r = new (class {
@@ -425,18 +437,6 @@
       }
       function j() {
         return n.useMemo(() => u(), []);
-      }
-    },
-    48593: (e, s, t) => {
-      "use strict";
-      t.d(s, { n: () => l });
-      t(7850);
-      var n = t(90626),
-        i = t(83085);
-      const a = n.createContext(void 0);
-      function l() {
-        var e;
-        return null !== (e = n.useContext(a)) && void 0 !== e ? e : (0, i.Gw)();
       }
     },
     95034: (e, s, t) => {
@@ -538,7 +538,7 @@
         d = t(55351),
         m = t.n(d),
         u = t(44165),
-        j = t(48593),
+        j = t(40672),
         h = t(25086),
         v = t(87937),
         g = t.n(v);

@@ -56,6 +56,5 @@
     "SinglePricingPackage_Intro_2b": "Với giá USD không phổ biến, nhập một giá trị vào trường USD. Nhấp vào nút 'Chuyển đổi giá...' rồi làm theo hướng dẫn.",
     "PricingDashboard_Method_SuggestedPrice": "Chuyển đổi khuyến nghị:",
     "PricingDashboard_Method_SuggestedPrice_ttip": "Giá này được khuyến nghị dựa trên phương thức chuyển đổi chọn bên trên và giá theo USD là %1$s.",
-    "dummy": "dummy",
-    "empty_no_trailing_comma": ""
+    "dummy": "dummy"
 }

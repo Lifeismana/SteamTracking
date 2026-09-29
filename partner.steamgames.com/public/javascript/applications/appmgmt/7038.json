@@ -65,6 +65,5 @@
     "PriceDisplay_YourPrice": "Ваша ціна:",
     "PriceGrid_NormalPrice": "ЗВИЧАЙНА",
     "PriceGrid_RecentPrice": "МІН. ЗА 30 ДНІВ",
-    "PriceGrid_CurrentPrice": "ПОТОЧНА",
-    "Dummy": "dummy"
+    "PriceGrid_CurrentPrice": "ПОТОЧНА"
 }

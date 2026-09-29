@@ -1262,7 +1262,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 }
 ._2Vfzito2cEHtvOnl6hWD2t {
   background:
-    url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_adventurer_banner.png?v=2")
+    url(../../../images/applications/store/deck_adventurer_banner.png?v=valveisgoodatcaching)
     center no-repeat,
     linear-gradient(
       90deg,
@@ -1283,7 +1283,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 @media screen and (max-width: 500px) {
   ._2Vfzito2cEHtvOnl6hWD2t {
     background:
-      url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_adventurer_banner_mobile.png?v=1")
+      url(../../../images/applications/store/deck_adventurer_banner_mobile.png?v=valveisgoodatcaching)
       center / contain no-repeat,
       #3e3274;
     background-position: top;
@@ -1291,7 +1291,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 }
 ._1ms_oh1o4LBbEJqlW8N4RN {
   background:
-    url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_anime_banner.png?v=2")
+    url(../../../images/applications/store/deck_anime_banner.png?v=valveisgoodatcaching)
     center no-repeat,
     #f8aba5;
   background-position: top;
@@ -1306,7 +1306,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 @media screen and (max-width: 500px) {
   ._1ms_oh1o4LBbEJqlW8N4RN {
     background:
-      url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_anime_banner_mobile.png?v=1")
+      url(../../../images/applications/store/deck_anime_banner_mobile.png?v=valveisgoodatcaching)
       center / contain no-repeat,
       #f8aba5;
     background-position: top;
@@ -1314,7 +1314,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 }
 ._2ba_EyebFU2kLncHcEzoDD {
   background:
-    url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_apocalypse_banner.png?v=2")
+    url(../../../images/applications/store/deck_apocalypse_banner.png?v=valveisgoodatcaching)
     center no-repeat,
     linear-gradient(90deg, #ff8031 54.5%, #de3748 78.5%);
   background-position: top;
@@ -1329,7 +1329,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 @media screen and (max-width: 500px) {
   ._2ba_EyebFU2kLncHcEzoDD {
     background:
-      url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_apocalypse_banner_mobile.png?v=1")
+      url(../../../images/applications/store/deck_apocalypse_banner_mobile.png?v=valveisgoodatcaching)
       center / contain no-repeat,
       #ff8031;
     background-position: top;
@@ -1337,7 +1337,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 }
 .W2X9qKmJY1fAkIM7GsolJ {
   background:
-    url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_astronaut_banner.png?v=2")
+    url(../../../images/applications/store/deck_astronaut_banner.png?v=valveisgoodatcaching)
     center no-repeat,
     #fff;
   background-position: top;
@@ -1352,7 +1352,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 @media screen and (max-width: 500px) {
   .W2X9qKmJY1fAkIM7GsolJ {
     background:
-      url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_astronaut_banner_mobile.png?v=1")
+      url(../../../images/applications/store/deck_astronaut_banner_mobile.png?v=valveisgoodatcaching)
       center / contain no-repeat,
       #fff;
     background-position: top;
@@ -1360,7 +1360,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 }
 ._2_LFdeCE0gMxtEUKki5NqO {
   background:
-    url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_beach_banner.png?v=2")
+    url(../../../images/applications/store/deck_beach_banner.png?v=valveisgoodatcaching)
     center no-repeat,
     linear-gradient(90deg, #f1d1d4 46.5%, #eaeceb 79%);
   background-position: top;
@@ -1375,7 +1375,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 @media screen and (max-width: 500px) {
   ._2_LFdeCE0gMxtEUKki5NqO {
     background:
-      url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_beach_banner_mobile.png?v=1")
+      url(../../../images/applications/store/deck_beach_banner_mobile.png?v=valveisgoodatcaching)
       center / contain no-repeat,
       #f1d1d4;
     background-position: top;
@@ -1383,7 +1383,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 }
 ._1oByLIlDSo2XnZICLfSwvI {
   background:
-    url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_bed_banner.png?v=2")
+    url(../../../images/applications/store/deck_bed_banner.png?v=valveisgoodatcaching)
     center no-repeat,
     #fef1e9;
   background-position: top;
@@ -1398,7 +1398,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 @media screen and (max-width: 500px) {
   ._1oByLIlDSo2XnZICLfSwvI {
     background:
-      url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_bed_banner_mobile.png?v=1")
+      url(../../../images/applications/store/deck_bed_banner_mobile.png?v=valveisgoodatcaching)
       center / contain no-repeat,
       #fef1e9;
     background-position: top;
@@ -1406,7 +1406,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 }
 .OB7zhBm37vzrd_8riRWex {
   background:
-    url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_bus_banner.png?v=2")
+    url(../../../images/applications/store/deck_bus_banner.png?v=valveisgoodatcaching)
     center no-repeat,
     linear-gradient(90deg, #115352 32.5%, #017f7e 57.5%);
   background-position: top;
@@ -1421,7 +1421,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 @media screen and (max-width: 500px) {
   .OB7zhBm37vzrd_8riRWex {
     background:
-      url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_bus_banner_mobile.png?v=1")
+      url(../../../images/applications/store/deck_bus_banner_mobile.png?v=valveisgoodatcaching)
       center / contain no-repeat,
       #017f7e;
     background-position: top;
@@ -1429,7 +1429,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 }
 ._2rd1Qm-OWFA2YmwiW-AghQ {
   background:
-    url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_busstop_banner.png?v=3")
+    url(../../../images/applications/store/deck_busstop_banner.png?v=valveisgoodatcaching)
     center no-repeat,
     linear-gradient(90deg, #abe2ba 75.5%, #fcf2b7 100%);
   background-position: top;
@@ -1444,7 +1444,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 @media screen and (max-width: 500px) {
   ._2rd1Qm-OWFA2YmwiW-AghQ {
     background:
-      url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_busstop_banner_mobile.png?v=1")
+      url(../../../images/applications/store/deck_busstop_banner_mobile.png?v=valveisgoodatcaching)
       center / contain no-repeat,
       #abe2ba;
     background-position: top;
@@ -1452,7 +1452,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 }
 .fWKU1FqjXbYwqp1oB_xBs {
   background:
-    url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_campfire_banner.png?v=2")
+    url(../../../images/applications/store/deck_campfire_banner.png?v=valveisgoodatcaching)
     center no-repeat,
     #18183e;
   background-position: top;
@@ -1467,7 +1467,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 @media screen and (max-width: 500px) {
   .fWKU1FqjXbYwqp1oB_xBs {
     background:
-      url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_campfire_banner_mobile.png?v=1")
+      url(../../../images/applications/store/deck_campfire_banner_mobile.png?v=valveisgoodatcaching)
       center / contain no-repeat,
       #171128;
     background-position: top;
@@ -1475,7 +1475,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 }
 .GeAKpVY8Ba6-QT7tznVks {
   background:
-    url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_car_banner.png?v=2")
+    url(../../../images/applications/store/deck_car_banner.png?v=valveisgoodatcaching)
     center no-repeat,
     #01346d;
   background-position: top;
@@ -1490,7 +1490,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 @media screen and (max-width: 500px) {
   .GeAKpVY8Ba6-QT7tznVks {
     background:
-      url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_car_banner_mobile.png?v=1")
+      url(../../../images/applications/store/deck_car_banner_mobile.png?v=valveisgoodatcaching)
       center / contain no-repeat,
       #01346d;
     background-position: top;
@@ -1498,7 +1498,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 }
 ._2QdugEdfMAb6V79yJPUR9L {
   background:
-    url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_city_banner.png?v=2")
+    url(../../../images/applications/store/deck_city_banner.png?v=valveisgoodatcaching)
     center no-repeat,
     #2f294d;
   background-position: top;
@@ -1513,7 +1513,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 @media screen and (max-width: 500px) {
   ._2QdugEdfMAb6V79yJPUR9L {
     background:
-      url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_city_banner_mobile.png?v=1")
+      url(../../../images/applications/store/deck_city_banner_mobile.png?v=valveisgoodatcaching)
       center / contain no-repeat,
       #2f294d;
     background-position: top;
@@ -1521,7 +1521,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 }
 ._1g6v39jh2MnE5vuJnDagye {
   background:
-    url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_family_banner.png?v=2")
+    url(../../../images/applications/store/deck_family_banner.png?v=valveisgoodatcaching)
     center no-repeat,
     #e5e59b;
   background-position: top;
@@ -1536,7 +1536,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 @media screen and (max-width: 500px) {
   ._1g6v39jh2MnE5vuJnDagye {
     background:
-      url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_family_banner_mobile.png?v=1")
+      url(../../../images/applications/store/deck_family_banner_mobile.png?v=valveisgoodatcaching)
       center / contain no-repeat,
       #e5e59b;
     background-position: top;
@@ -1544,7 +1544,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 }
 ._3HFHolp6BQ7uMIedbyxc7D {
   background:
-    url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_farmer_banner.png?v=2")
+    url(../../../images/applications/store/deck_farmer_banner.png?v=valveisgoodatcaching)
     center no-repeat,
     #c5b730;
   background-position: top;
@@ -1559,7 +1559,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 @media screen and (max-width: 500px) {
   ._3HFHolp6BQ7uMIedbyxc7D {
     background:
-      url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_farmer_banner_mobile.png?v=1")
+      url(../../../images/applications/store/deck_farmer_banner_mobile.png?v=valveisgoodatcaching)
       center / contain no-repeat,
       #c5b730;
     background-position: top;
@@ -1567,7 +1567,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 }
 ._2O7EV4jX-WO2knwBjeJz_D {
   background:
-    url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_knight_banner.png?v=2")
+    url(../../../images/applications/store/deck_knight_banner.png?v=valveisgoodatcaching)
     center no-repeat,
     #161a3d;
   background-position: top;
@@ -1582,7 +1582,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 @media screen and (max-width: 500px) {
   ._2O7EV4jX-WO2knwBjeJz_D {
     background:
-      url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_knight_banner_mobile.png?v=1")
+      url(../../../images/applications/store/deck_knight_banner_mobile.png?v=valveisgoodatcaching)
       center / contain no-repeat,
       #161a3d;
     background-position: top;
@@ -1590,7 +1590,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 }
 ._13chpvw7DnNOsWqu92qK7_ {
   background:
-    url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_miner_banner.png?v=2")
+    url(../../../images/applications/store/deck_miner_banner.png?v=valveisgoodatcaching)
     center no-repeat,
     #3d4a90;
   background-position: top;
@@ -1605,7 +1605,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 @media screen and (max-width: 500px) {
   ._13chpvw7DnNOsWqu92qK7_ {
     background:
-      url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_miner_banner_mobile.png?v=1")
+      url(../../../images/applications/store/deck_miner_banner_mobile.png?v=valveisgoodatcaching)
       center / contain no-repeat,
       #3d4a90;
     background-position: top;
@@ -1613,7 +1613,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 }
 ._3M4GVoRT9lg9yBm6y1dCSi {
   background:
-    url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_porch_banner.png?v=2")
+    url(../../../images/applications/store/deck_porch_banner.png?v=valveisgoodatcaching)
     center no-repeat,
     #fea190;
   background-position: top;
@@ -1628,7 +1628,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 @media screen and (max-width: 500px) {
   ._3M4GVoRT9lg9yBm6y1dCSi {
     background:
-      url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_porch_banner_mobile.png?v=1")
+      url(../../../images/applications/store/deck_porch_banner_mobile.png?v=valveisgoodatcaching)
       center / contain no-repeat,
       #fea190;
     background-position: top;
@@ -1636,7 +1636,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 }
 ._2RASj4ZnI-VHE5mRp8zKoB {
   background:
-    url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_robot_banner.png?v=2")
+    url(../../../images/applications/store/deck_robot_banner.png?v=valveisgoodatcaching)
     center no-repeat,
     #2b2227;
   background-position: top;
@@ -1651,7 +1651,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 @media screen and (max-width: 500px) {
   ._2RASj4ZnI-VHE5mRp8zKoB {
     background:
-      url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_robot_banner_mobile.png?v=1")
+      url(../../../images/applications/store/deck_robot_banner_mobile.png?v=valveisgoodatcaching)
       center / contain no-repeat,
       #2b2227;
     background-position: top;
@@ -1659,7 +1659,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 }
 ._2HvlKfWJXw_ynFe07XKdY8 {
   background:
-    url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_superhero_banner.png?v=2")
+    url(../../../images/applications/store/deck_superhero_banner.png?v=valveisgoodatcaching)
     center no-repeat,
     #3279ad;
   background-position: top;
@@ -1674,7 +1674,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 @media screen and (max-width: 500px) {
   ._2HvlKfWJXw_ynFe07XKdY8 {
     background:
-      url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_superhero_banner_mobile.png?v=1")
+      url(../../../images/applications/store/deck_superhero_banner_mobile.png?v=valveisgoodatcaching)
       center / contain no-repeat,
       #3279ad;
     background-position: top;
@@ -1682,7 +1682,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 }
 ._1CL5Wdh_nHnOYZvnjVA8YD {
   background:
-    url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_woodsman_banner.png?v=2")
+    url(../../../images/applications/store/deck_woodsman_banner.png?v=valveisgoodatcaching)
     center no-repeat,
     #1d3132;
   background-position: top;
@@ -1697,7 +1697,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 @media screen and (max-width: 500px) {
   ._1CL5Wdh_nHnOYZvnjVA8YD {
     background:
-      url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_woodsman_banner_mobile.png?v=1")
+      url(../../../images/applications/store/deck_woodsman_banner_mobile.png?v=valveisgoodatcaching)
       center / contain no-repeat,
       #1d3132;
     background-position: top;
@@ -1705,7 +1705,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 }
 ._3Ox405Kuu5XWIbPA9UvtBS {
   background:
-    url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_zombies_banner.png?v=2")
+    url(../../../images/applications/store/deck_zombies_banner.png?v=valveisgoodatcaching)
     center no-repeat,
     #220445;
   background-position: top;
@@ -1720,7 +1720,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 @media screen and (max-width: 500px) {
   ._3Ox405Kuu5XWIbPA9UvtBS {
     background:
-      url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_zombies_banner_mobile.png?v=1")
+      url(../../../images/applications/store/deck_zombies_banner_mobile.png?v=valveisgoodatcaching)
       center / contain no-repeat,
       #220445;
     background-position: top;
@@ -4726,6 +4726,10 @@ a._2xmH7agKi37v9kwFHi093S {
   color: var(--gpStoreLightGrey, #7c8ea3);
   font-size: 12px;
 }
+.dIVKtZR3FPk--WsTHPpCg p {
+  margin: 0;
+  padding: 0;
+}
 .g6OWaWhTs7-jMnb_ipVdD {
   font: var(
     --gpText-HeadingSmall,
@@ -4744,11 +4748,12 @@ a._2xmH7agKi37v9kwFHi093S {
 ._3ixbRnhEXoSAFMMOxMR7kP {
   text-transform: uppercase;
 }
-.Y503si5sH_nBgmRuYVYth {
-  margin-top: 6px;
-}
 ._3NX32L22YZdobMQdeHDTRz a {
   display: block;
+}
+._3NX32L22YZdobMQdeHDTRz img {
+  max-height: 90px;
+  max-width: 80px;
 }
 ._3x1L_MQDZD6RKFHPJQDmCN {
   white-space: pre-line;
@@ -5081,6 +5086,11 @@ textarea._1vE-LsK6l_D_5yjbywZV1p {
   display: block;
   position: relative;
 }
+@media screen and (max-width: 500px) {
+  html.responsive.responsive .lqD2vDqW515szC9Dt3o8c {
+    display: none;
+  }
+}
 .lqD2vDqW515szC9Dt3o8c .pge6cRE3xuT4D-kvcijJs {
   transition: opacity 0.2s ease-in-out;
 }
@@ -5134,6 +5144,39 @@ textarea._1vE-LsK6l_D_5yjbywZV1p {
 ._149N2e_DXzh0C1cZl4mai1._1VS2woF-3sJBcdv8ku8V7m .pge6cRE3xuT4D-kvcijJs {
   opacity: 1;
 }
+.DesktopUI .lqD2vDqW515szC9Dt3o8c {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.5) 5%,
+    rgba(0, 0, 0, 0.65) 95%
+  );
+  padding: 16px;
+  margin-bottom: 8px;
+}
+@media screen and (max-width: 500px) {
+  html.responsive.responsive .DesktopUI .lqD2vDqW515szC9Dt3o8c a {
+    display: flex;
+    flex-direction: column;
+  }
+  html.responsive.responsive .DesktopUI .lqD2vDqW515szC9Dt3o8c a div {
+    display: inline;
+  }
+}
+.V1oPnW4SHTQZyfLtIOACA {
+  display: none;
+}
+@media screen and (max-width: 500px) {
+  html.responsive.responsive .V1oPnW4SHTQZyfLtIOACA {
+    display: block;
+  }
+}
+.V1oPnW4SHTQZyfLtIOACA ._1VPalkyDcngLWmtdDU2UOT {
+  flex-grow: 1;
+}
+.V1oPnW4SHTQZyfLtIOACA ._2UhU5Y9TVx7gCVaf863aKB {
+  flex-grow: 0;
+  width: 16px;
+}
 ._2YfN55cMXVU9OD0d3_LoX3 {
   display: flex;
   flex-direction: column;
@@ -5155,4 +5198,278 @@ textarea._1vE-LsK6l_D_5yjbywZV1p {
   font: var(--gpText-BodySmall);
   font-weight: 400;
   color: var(--gpStoreLightGrey);
+}
+@keyframes _2XvhZ8yFczR-W7gwjaWoPT {
+  from {
+    background-position: 0 100%;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+@keyframes NK0YaI2_mwagRH7-tm_GE {
+  from {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
+}
+@keyframes _1HU-Kl32lDEq7yT3ba8R5G {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes _3PM-EU4OtOaw12xVeiCzRL {
+  from {
+    background: #23262e;
+    color: #8b929a;
+  }
+  to {
+    background: #383a41;
+    color: #fff;
+  }
+}
+@keyframes _1EXXhQ3MOk6cW2xYESY_2i {
+  from {
+    background: hsla(0, 0%, 100%, 0.25);
+    color: #8b929a;
+  }
+  to {
+    background: hsla(0, 0%, 100%, 0.15);
+    color: #fff;
+  }
+}
+@keyframes _2V88aGECYldq8tqX286rzp {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes _9lQAMImHGe5qClr8AL2Vc {
+  from {
+    background: hsla(0, 0%, 100%, 0.3);
+    color: #fff;
+  }
+  to {
+    background: hsla(0, 0%, 100%, 0.1);
+    color: #fff;
+  }
+}
+@keyframes _3I_vGf7ujHONdHYkGitG6t {
+  from {
+    background: hsla(0, 0%, 100%, 0.5);
+    color: #fff;
+  }
+  to {
+    background: hsla(0, 0%, 100%, 0.2);
+    color: #fff;
+  }
+}
+@keyframes YU4V8GFJ50LIlOS68c6Wc {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes _1qBrpfK0gqYyjGTNuC0FHo {
+  from {
+    background: #c9ffc9;
+    color: #8b929a;
+  }
+  to {
+    background: #59bf40;
+    color: #fff;
+  }
+}
+@keyframes _1vLld9YwBtNMfxoDxGo2Z4 {
+  0% {
+    background-position: 0% 0%;
+    opacity: 1;
+  }
+  100% {
+    background-position: -180% 0%;
+    opacity: 0.8;
+  }
+}
+@keyframes _3JxsbmkLDkwKiYvrnnqOtd {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+.M5YgSyrfvCXXY_XYhYzcl {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  position: relative;
+  transition: transform 0.1s ease-in-out;
+  vertical-align: top;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3333333333);
+}
+.M5YgSyrfvCXXY_XYhYzcl:after {
+  background: linear-gradient(to right, #3b414a 0%, #2c3138 95%);
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+}
+._1DmdUWkRKPlUYGtbBrrRtx {
+  display: inline-block;
+  position: relative;
+  width: var(--icon-size, 48px);
+  height: var(--icon-size, 48px);
+  max-height: 100%;
+  max-width: 100%;
+  contain: size;
+  aspect-ratio: 1 / 1;
+}
+.BasicUI ._1DmdUWkRKPlUYGtbBrrRtx {
+  width: var(--icon-size, 64px);
+  height: var(--icon-size, 64px);
+}
+._1R1QQtfmrxNkfIGlKSdDqG,
+.kt0NXHlg2kFjVkiN_2eEL {
+  position: absolute;
+  top: -20%;
+  right: -20%;
+  bottom: -20%;
+  left: -20%;
+  -webkit-mask-image: url(../../../images/applications/store/square_mask.png?v=valveisgoodatcaching);
+  mask-image: url(../../../images/applications/store/square_mask.png?v=valveisgoodatcaching);
+  -webkit-mask-repeat: repeat;
+  mask-repeat: repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  overflow: hidden;
+}
+.kt0NXHlg2kFjVkiN_2eEL {
+  animation-name: _1ovVdJrqKKpglnX8FYej3J;
+  animation-duration: 18s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+  animation-play-state: running;
+  -webkit-mask-image: url(../../../images/applications/store/star_mask.png?v=valveisgoodatcaching);
+  mask-image: url(../../../images/applications/store/star_mask.png?v=valveisgoodatcaching);
+}
+.LowPerfMode .kt0NXHlg2kFjVkiN_2eEL {
+  animation-duration: 0s;
+}
+._1mSBKtmFFZvwBLtxBOMwak .kt0NXHlg2kFjVkiN_2eEL {
+  animation-play-state: paused;
+}
+._3vFmYitX2pXuOenxR0blk8 {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  bottom: -10px;
+  left: -10px;
+  animation-name: _1ovVdJrqKKpglnX8FYej3J;
+  animation-duration: 6s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  mix-blend-mode: overlay;
+}
+.LowPerfMode ._3vFmYitX2pXuOenxR0blk8 {
+  animation-duration: 0s;
+}
+._3vFmYitX2pXuOenxR0blk8 {
+  background: repeating-conic-gradient(
+    rgba(255, 217, 0, 0.178) 0%,
+    rgba(255, 184, 78, 0) 6%,
+    rgba(255, 217, 0, 0.178) 10%,
+    rgb(255, 184, 78) 26%,
+    rgba(255, 217, 0, 0.178) 35%,
+    rgb(255, 184, 78) 40%,
+    rgba(255, 217, 0, 0.178) 60%,
+    rgb(255, 184, 78) 82%,
+    rgba(255, 217, 0, 0.178) 100%
+  );
+  overflow: hidden;
+}
+._1mSBKtmFFZvwBLtxBOMwak ._3vFmYitX2pXuOenxR0blk8 {
+  animation-play-state: paused;
+}
+@keyframes _1ovVdJrqKKpglnX8FYej3J {
+  to {
+    transform: rotate(1turn);
+  }
+}
+._2BCoqu4wd4ehkJkelVhjb3 {
+  box-shadow:
+    0px 0px 2px 1px rgba(255, 184, 78, 0.6),
+    0px 0px 16px 1px rgba(255, 184, 78, 0.4);
+}
+._1smYxH70zcX0D3CUQDwF3o {
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  font-size: 32px;
+  color: #cacbcd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3333333333);
+  background: linear-gradient(to right, #3b414a 0%, #2c3138 95%);
+}
+.BasicUI ._1smYxH70zcX0D3CUQDwF3o {
+  background: rgba(172, 178, 201, 0.1411764706);
+}
+._3TuBg7_-ESlXR8VdekZAh6 {
+  padding-top: 8px;
+}
+._38qMxU84U3MdKhwOyNRvBh ._3Fsj47byOWjgdvPZrMt79B {
+  padding-left: 24px;
+}
+._3Fsj47byOWjgdvPZrMt79B {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-bottom: 1px solid var(--gpBackground-LightSoft);
+}
+._3Fsj47byOWjgdvPZrMt79B:hover,
+._3Fsj47byOWjgdvPZrMt79B.gpfocus {
+  background-color: var(--gpBackground-LightSoft);
+  border-bottom-color: rgba(0, 0, 0, 0);
+}
+._2MvdxngdrJtnwX501aUgFu {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  fill: #fff;
+}
+._2WUly4aWb_9foEZI0ARnK1 {
+  display: flex;
+  width: 12px;
+  height: 12px;
+  fill: currentColor;
+  color: var(--gpColor-Blue);
+}
+._2WUly4aWb_9foEZI0ARnK1 svg {
+  width: 100%;
+  height: 100%;
 }

@@ -1,5 +1,5 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-  [1574],
+  [21574],
   {
     chunkid: (module) => {
       module.exports = {
@@ -31,6 +31,36 @@
         "HeadingSize-7": "Ena8Nl7MJg7YAYsWql_jo",
         "HeadingSize-8": "jyf9-rlT4iFrHQOAVn298",
         "HeadingSize-9": "_3L0vs4_Y96AtsR3P5GUkUa",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        Text: "f6hU22EA7Z8peFWZVBJU",
+        Truncate: "_2tXpWMxzSX3lf_9_EFUzmJ",
+        "TextSize-1": "NUSSU36hkPXb7VdM8HFef",
+        "TextSize-2": "_1HTEiDPVrmM0RUnp3DzkXW",
+        "TextSize-3": "_1maNP9UvDekHzld1kwwQnw",
+        "TextSize-4": "mGlMCg85s0ULA8kYCZzMB",
+        "TextSize-5": "_2MGI1O3WXMHKcWkSFCf6Bz",
+        "TextSize-6": "_3kpvs1OYmjREjAE9RONmZm",
+        "TextSize-7": "_3RzzHMo4NUK3RIl__o-aYU",
+        "TextSize-8": "_3KRhxZU1kR1ArBuZyY_ib3",
+        "TextSize-9": "_3O17p9mMWHcy_sU-_IPM6R",
+        TextWeight: "_3KfHV-wUo5sKXQAsJZO5Uw",
+        TextAlign: "_310d_LkZp2K-i9ZY8r2B_c",
+        LineClamp: "_3z4FSJhGOOHIOqRI6ZqJ_H",
+        WhiteSpace: "FYJ4NYxpWeIha0N1-jUcm",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        TextLink: "_1DLGHwAfYnbFVIwbZjO2cn",
+        TextLinkButton: "_30P9kUCljAZzX5fl1DHGJe",
+        Truncate: "_1FVRWG5uD8VhzoEiOZWrEo",
+        "Underline-always": "_3ASRyX4FTT_eMM5S5yrkwK",
+        "Underline-never": "_1gsOIvG4APXjSra-_55rdz",
+        "Underline-auto": "_2OgYmw12nDHXtyT9za9yzL",
+        "Underline-hover": "_3RITvcDUZq-hpnXRpiayfs",
       };
     },
     chunkid: (module) => {
@@ -67,6 +97,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _.createContext)(null);
       function _(_) {
@@ -87,7 +118,7 @@
         );
         const _ = _.useRef(void 0);
         return (
-          (0, _._)(_, !!_.current, !1),
+          (0, _._)(_, !0, !0),
           (0, _.jsx)(_._, {
             navID: "Popover",
             onCancelButton: () => _.floating.context.onOpenChange(!1),
@@ -119,6 +150,32 @@
             children: _,
           })
         );
+      }
+      function _(_, _, _) {
+        const { onOpenChange: _, placement: _ } = _,
+          _ = "anchor" === _;
+        return (0, _._)({
+          open: _,
+          onOpenChange: _,
+          middleware: _ ? _(_) : [],
+          whileElementsMounted: _ ? _._ : void 0,
+          placement: _ && "object" == typeof _ ? _.initial : _,
+          strategy: "fixed",
+          platform: {
+            ..._._,
+            getOffsetParent: (_) => {
+              var _, _;
+              return null !==
+                (_ =
+                  null === (_ = null == _ ? void 0 : _.ownerDocument) ||
+                  void 0 === _
+                    ? void 0
+                    : _.defaultView) && void 0 !== _
+                ? _
+                : window;
+            },
+          },
+        });
       }
       function _(_) {
         const { gutter: _ = 0, placement: _ } = _,
@@ -190,48 +247,39 @@
             _ = (function (_) {
               const {
                 open: _,
-                onOpenChange: _,
-                placement: _,
                 interactions: _ = {},
+                width: _,
+                maxHeight: _,
+                gutter: _,
+                scroll: _,
               } = _;
               let _ = _;
               0;
-              const _ = (0, _._)({
-                  open: _,
-                  onOpenChange: _,
-                  middleware: _(_),
-                  whileElementsMounted: _._,
-                  placement: _ && "object" == typeof _ ? _.initial : _,
-                  strategy: "fixed",
-                  platform: {
-                    ..._._,
-                    getOffsetParent: (_) => {
-                      var _, _;
-                      return null !==
-                        (_ =
-                          null === (_ = null == _ ? void 0 : _.ownerDocument) ||
-                          void 0 === _
-                            ? void 0
-                            : _.defaultView) && void 0 !== _
-                        ? _
-                        : window;
-                    },
-                  },
-                }),
+              const _ = (0, _._)(_.presentation),
+                _ = _(_, _, _),
                 _ = {
                   enabled: !!_.click,
                 },
-                _ = "function" == typeof _.click ? _.click(_) : _,
+                _ =
+                  "function" == typeof _.click
+                    ? __webpack_require__.click(_)
+                    : _,
                 _ = (0, _._)(_.context, _),
                 _ = {
                   enabled: !!_.focus,
                 },
-                _ = "function" == typeof _.focus ? _.focus(_) : _,
+                _ =
+                  "function" == typeof _.focus
+                    ? __webpack_require__.focus(_)
+                    : _,
                 _ = (0, _._)(_.context, _),
                 _ = {
                   handleClose: (0, _._)(),
                 },
-                _ = "function" == typeof _.hover ? _.hover(_) : _,
+                _ =
+                  "function" == typeof _.hover
+                    ? __webpack_require__.hover(_)
+                    : _,
                 _ = (0, _._)(_.context, {
                   enabled: !!_.hover,
                   ..._,
@@ -248,6 +296,13 @@
                 getFloatingProps: _,
                 getReferenceProps: _,
                 open: _,
+                presentation: _,
+                sizing: {
+                  width: _,
+                  maxHeight: _,
+                  gutter: _,
+                  scroll: _,
+                },
               };
             })(_);
           return (0, _.jsx)(_.Provider, {
@@ -272,19 +327,9 @@
             : null;
         },
         Positioner: function (_) {
-          const { children: _, className: _, ref: _ } = _,
+          const { children: _, className: _, ref: _, label: _ } = _,
             _ = (0, _.useContext)(_),
-            _ = (0, _._)([
-              _,
-              null == _ ? void 0 : _.floating.refs.setFloating,
-              (_) => {
-                var _;
-                return null === (_ = null == _ ? void 0 : _.showPopover) ||
-                  void 0 === _
-                  ? void 0
-                  : _.call(_);
-              },
-            ]);
+            _ = (0, _._)([_, null == _ ? void 0 : _.floating.refs.setFloating]);
           if (!_)
             return (
               console.error(
@@ -295,20 +340,23 @@
           if (!_.open) return null;
           let _ = _.Children.only(_),
             _ = _.Fragment;
-          _.type == _.FocusManager &&
-            ((_ = _.Children.only(_.props.children)), (_ = _));
-          const _ = (0, _.cloneElement)(_, {
-            ref: _,
-            style: {
-              ..._.floating.floatingStyles,
-            },
-            className: _()((0, _._)(), _),
-            popover: "manual",
-            ..._.getFloatingProps(),
-          });
-          return (0, _.jsx)(_, {
-            children: _,
-          });
+          return (
+            _.type == _.FocusManager &&
+              ((_ = _.Children.only(_.props.children)), (_ = _)),
+            (0, _.jsx)(_, {
+              children: (0, _.jsx)(_._, {
+                presentation: _.presentation,
+                sizing: _.sizing,
+                floatingRef: _,
+                floatingProps: _.getFloatingProps(),
+                floatingStyles: _.floating.floatingStyles,
+                referenceElement: _.floating.elements.domReference,
+                className: _()((0, _._)(), _),
+                label: _,
+                children: _,
+              }),
+            })
+          );
         },
         FocusManager: _,
       };
@@ -505,6 +553,181 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { _: _ = "span", ref: _, className: _, ..._ } = _,
+          _ = _;
+        return (0, _.jsx)(_, {
+          ref: _,
+          ...(0, _._)(
+            {
+              ..._,
+              className: _()(_.Text, _),
+            },
+            _,
+          ),
+        });
+      }
+      const _ = [
+          {
+            prop: "weight",
+            responsive: !0,
+            className: _.TextWeight,
+            cssProperty: (_) => ["--text-weight", `var(--font-weight-${_})`],
+          },
+          {
+            prop: "align",
+            responsive: !0,
+            className: _.TextAlign,
+            cssProperty: "--text-align",
+          },
+          {
+            prop: "color",
+            responsive: !0,
+            cssProperty: (_, _, _) => {
+              var _;
+              return [
+                "--text-color",
+                (0, _._)(
+                  _,
+                  null !== (_ = (0, _._)(_.contrast, _)) && void 0 !== _
+                    ? _
+                    : "body",
+                ),
+              ];
+            },
+          },
+          {
+            prop: "contrast",
+            responsive: !0,
+            cssProperty: (_, _, _) => {
+              var _;
+              return [
+                "--text-color",
+                (0, _._)(
+                  null !== (_ = (0, _._)(_.color, _)) && void 0 !== _
+                    ? _
+                    : "text-body",
+                  _,
+                ),
+              ];
+            },
+          },
+          {
+            prop: "truncate",
+            className: _.Truncate,
+          },
+          {
+            prop: "lineClamp",
+            responsive: !0,
+            className: _.LineClamp,
+            cssProperty: "--line-clamp",
+          },
+          {
+            prop: "whiteSpace",
+            className: _.WhiteSpace,
+            cssProperty: "--white-space",
+          },
+        ],
+        _ = [
+          ..._,
+          ..._._,
+          {
+            prop: "size",
+            responsive: !0,
+            className: (_) => _[`TextSize-${_}`],
+          },
+        ];
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        var _;
+        const { underline: _ = "auto", focusable: _, navProps: _, ..._ } = _,
+          _ = (0, _._)(),
+          _ =
+            null !== (_ = null != _ ? _ : null == _ ? void 0 : _.focusable) &&
+            void 0 !== _
+              ? _
+              : !!_.href,
+          _ = (0, _._)(
+            {
+              ..._,
+              underline: _,
+              className: _.TextLink,
+            },
+            _,
+          );
+        return _ && (_ || _)
+          ? (0, _.jsx)(_._, {
+              ..._,
+              ...(_ || {}),
+              focusable: _,
+            })
+          : (0, _.jsx)("a", {
+              ..._,
+            });
+      }
+      const _ = [
+        ..._._,
+        {
+          prop: "underline",
+          className: (_) => _[`Underline-${_}`],
+        },
+      ];
+      function _(_) {
+        var _;
+        const { underline: _ = "auto", focusable: _, navProps: _, ..._ } = _,
+          _ = (0, _._)(),
+          _ =
+            null !== (_ = null != _ ? _ : null == _ ? void 0 : _.focusable) &&
+            void 0 !== _
+              ? _
+              : !!_.onClick,
+          _ = (0, _.jsx)("span", {
+            role: "button",
+            ...(0, _._)(
+              {
+                ..._,
+                underline: _,
+                className: _.TextLinkButton,
+              },
+              _,
+            ),
+          });
+        return _ && (_ || _)
+          ? (0, _.jsx)(_._, {
+              ...(_ || {}),
+              focusable: _,
+              children: _,
+            })
+          : _;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
       __webpack_require__._(module_exports),
         __webpack_require__._(module_exports, {
           GlobalFooter: () => _,
@@ -568,6 +791,7 @@
               );
             },
           },
+          presentation: "anchor",
           ..._,
           children: [
             (0, _.jsx)(_._.Anchor, {

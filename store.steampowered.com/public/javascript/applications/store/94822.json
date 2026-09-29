@@ -114,7 +114,7 @@
     "ReviewFilters_DateRangeExcludeHistogram": "Exclude intervalul specificat (selectează pe graficul de mai sus)",
     "ReviewFilters_DateRangeViewOnly": "Vezi doar perioada",
     "ReviewFilters_DateRangeExclude": "Exclude perioada",
-    "ReviewFilters_Playtime": "Joc",
+    "ReviewFilters_Playtime": "Timpul petrecut în joc",
     "ReviewFilters_PlaytimeExplanation": "Filtrează recenziile în funcție de timpul petrecut de recenzor în joc până la momentul scrierii acestora:",
     "ReviewFilters_PlaytimePresetNone": "Niciun minim",
     "ReviewFilters_PlaytimePreset": "Peste o oră",

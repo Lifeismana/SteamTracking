@@ -65,6 +65,5 @@
     "PriceDisplay_YourPrice": "您的价格：",
     "PriceGrid_NormalPrice": "正常价格",
     "PriceGrid_RecentPrice": "30 天最低价格",
-    "PriceGrid_CurrentPrice": "当前价格",
-    "Dummy": "dummy"
+    "PriceGrid_CurrentPrice": "当前价格"
 }

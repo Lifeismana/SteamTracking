@@ -105,7 +105,7 @@
     "moderation_sanction_hubbanned": "Blokada centrum na %1$s dni",
     "moderation_sanction_markassuspicious": "Oznaczono jako podejrzane",
     "moderation_sanction_relabelled": "Opatrzono nowym oznaczeniem",
-    "moderation_sanction_markedincompatible": "Marked as incompatible",
+    "moderation_sanction_markedincompatible": "Oznaczony jako niezgodny",
     "moderation_sanction_tradebanned_forever": "Trwała blokada handlu",
     "moderation_sanction_tradebanned": "Blokada handlu na %1$s dni",
     "moderation_sanction_kickedfromgroup": "Wyrzucenie z grupy",
@@ -135,5 +135,11 @@
     "moderation_already_owner_disputed": "Już utworzono spór",
     "moderationstats_alltypes": "Wszystkie typy tematów",
     "forumsubjectlist_subjectreportsummary": "Nierozstrzygnięte: %1$s. Zakwestionowane: %2$s.",
-    "empty_no_trailing_comma": ""
+    "ugcsubjectpanel_error": "Status: nie udało się wczytać historii moderacji",
+    "ugcsubjectpanel_status": "Status: %1$s",
+    "ugcsubjectpanel_statuswithreason": "Status: %1$s (%2$s)",
+    "ugcsubjectpanel_release": "Premiera",
+    "ugcsubjectpanel_dialogtitle": "Przedmiot moderacji",
+    "ugcsubjectpanel_reports": "Zgłoszenia",
+    "ugcsubjectpanel_history": "Historia"
 }

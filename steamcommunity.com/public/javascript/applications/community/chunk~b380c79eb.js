@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-  [9769],
+  [49769],
   {
     21895: (e) => {
       e.exports = {
@@ -120,22 +120,22 @@
             children: u,
             ref: p,
             variant: f,
-            color: x,
-            align: g = "center",
+            color: g,
+            align: x = "center",
             icon: m,
             ...v
           } = e,
-          C = "indeterminate" === t,
-          b = null != m ? m : C ? h : i.i,
+          b = "indeterminate" === t,
+          C = null != m ? m : b ? h : i.i,
           j = () => {
-            s || (n && n(!!C || !t));
+            s || (n && n(!!b || !t));
           },
           I = (0, a.f)("Checkbox", f);
         return (0, o.jsxs)(r.s, {
-          align: g,
+          align: x,
           ref: p,
           role: "checkbox",
-          "aria-checked": C ? "mixed" : t,
+          "aria-checked": b ? "mixed" : t,
           "data-state": d(t),
           className: c()(l.Root, l[`Variant-${I}`], s && l.Disabled),
           onClick: j,
@@ -146,12 +146,12 @@
           },
           cursor: "default",
           "aria-disabled": s,
-          "data-accent-color": x,
+          "data-accent-color": g,
           ...v,
           children: [
             (0, o.jsx)("div", {
               className: l.Checkbox,
-              children: t && (0, o.jsx)(b, { className: l.Icon }),
+              children: t && (0, o.jsx)(C, { className: l.Icon }),
             }),
             u,
           ],
@@ -191,24 +191,24 @@
             ...h
           } = e,
           [p, f] = (0, r.useState)(null),
-          x = null != p ? p : void 0 === t ? "" : s(t),
-          g = () => {
+          g = null != p ? p : void 0 === t ? "" : s(t),
+          x = () => {
             if (null !== p) {
               const e = c(p);
               e !== l && n(e), f(null);
             }
           };
         return (0, o.jsx)(i.k, {
-          value: x,
+          value: g,
           onTextChange: (e) => {
             const t = c(e);
             t !== l && e === s(t) ? (f(null), n(t)) : (a && !a(e, t)) || f(e);
           },
           onKeyDown: (e) => {
-            "Enter" === e.key && g(), d && d(e);
+            "Enter" === e.key && x(), d && d(e);
           },
           onBlur: (e) => {
-            g(), u && u(e);
+            x(), u && u(e);
           },
           ...h,
         });
@@ -216,7 +216,7 @@
     },
     46562: (e, t, n) => {
       "use strict";
-      n.d(t, { Bp: () => P, EC: () => F, G3: () => R, PT: () => _ });
+      n.d(t, { Bp: () => V, EC: () => N, G3: () => _, PT: () => A });
       var o = n(7850),
         r = n(90626),
         i = n(61023),
@@ -229,45 +229,50 @@
         h = n(59366),
         p = n(90534),
         f = n(80797),
-        x = n(83392),
-        g = n(52038),
+        g = n(83392),
+        x = n(52038),
         m = n(14181),
         v = n(52908),
-        C = n(81393),
-        b = n(82277),
+        b = n(81393),
+        C = n(82277),
         j = n(66922),
-        I = n(78327);
-      function S(e) {
+        I = n(78327),
+        S = n(92122),
+        P = n(88006);
+      function y(e) {
         const {
             refPopover: t,
             inputValue: n,
             onInputChange: r,
             activeIndex: i,
             popoverPlacement: l,
-            multiselect: s,
-            setActiveIndex: a,
-            setOpen: d,
-            filterPlaceholder: h,
-            onIndexSelected: f,
-            refScrollElement: m,
-          } = A("<Combobox.Options>"),
-          v = l.startsWith("top"),
-          C = (0, o.jsx)(p.az, {
+            popoverPresentation: s,
+            popoverLabel: a,
+            multiselect: d,
+            setActiveIndex: h,
+            setOpen: f,
+            filterPlaceholder: m,
+            onIndexSelected: v,
+            refScrollElement: b,
+          } = T("<Combobox.Options>"),
+          j = "anchor" === s && l.startsWith("top"),
+          I = (0, o.jsx)(p.az, {
             overflow: "auto",
-            ref: m,
+            ref: b,
             style: { overscrollBehavior: "contain" },
             children: e.children,
           });
         return (0, o.jsx)(u.k.Positioner, {
           ref: t,
-          children: (0, o.jsxs)(x.s, {
+          label: a,
+          children: (0, o.jsxs)(g.s, {
             direction: "column",
             maxHeight: "var(--popover-max-height)",
             children: [
-              v && C,
+              j && I,
               (0, o.jsx)(p.az, {
                 flexShrink: "0",
-                className: (0, g.A)(b.FilterBorder, v ? b.Top : b.Bottom),
+                className: (0, x.A)(C.FilterBorder, j ? C.Top : C.Bottom),
                 children: (0, o.jsx)(c.k, {
                   margin: "3",
                   variant: "inset",
@@ -277,8 +282,8 @@
                   onKeyDown: (e) => {
                     "Enter" === e.key &&
                       null !== i &&
-                      (f(i),
-                      s || (a(null), d(!1)),
+                      (v(i),
+                      d || (h(null), f(!1)),
                       e.preventDefault(),
                       e.stopPropagation());
                   },
@@ -286,24 +291,24 @@
                     ("Home" !== e.key && "End" !== e.key) ||
                       e.stopPropagation();
                   },
-                  placeholder: h,
+                  placeholder: m,
                   inputRef: (e) => {
                     e && e.focus({ preventScroll: !0 });
                   },
                   autoComplete: "off",
                 }),
               }),
-              !v && C,
+              !j && I,
             ],
           }),
         });
       }
       const O = (0, r.createContext)(null);
-      function w(e) {
+      function k(e) {
         const { virtualItem: t, children: n } = e,
           i = (0, r.useContext)(O);
         return (
-          (0, C.wT)(i, "Virtual item rendered outside of a virtualizer!"),
+          (0, b.wT)(i, "Virtual item rendered outside of a virtualizer!"),
           (0, o.jsx)(p.az, {
             position: "absolute",
             width: "100%",
@@ -314,14 +319,14 @@
           })
         );
       }
-      function y(e) {
+      function w(e) {
         const { value: t, children: n, disabled: r } = e,
           {
             onItemSelectionChange: i,
             selectedValue: l,
             multiselect: s,
             maxSelected: c,
-          } = A("<ComboboxTrigger>");
+          } = T("<ComboboxTrigger>");
         let a = !1,
           d = !1;
         s
@@ -335,7 +340,7 @@
           disabled: h,
           children: [
             s &&
-              (0, o.jsxs)(x.s, {
+              (0, o.jsxs)(g.s, {
                 gap: "2",
                 align: "center",
                 children: [(0, o.jsx)(v.S, { checked: a, variant: "dark" }), n],
@@ -344,7 +349,7 @@
           ],
         });
       }
-      function k(e, t) {
+      function L(e, t) {
         if ("string" == typeof t)
           return t.toLocaleLowerCase().includes(e.toLocaleLowerCase());
         try {
@@ -359,13 +364,13 @@
           !1
         );
       }
-      function P(e) {
-        return V(e, !1);
+      function V(e) {
+        return R(e, !1);
       }
-      function V(e, t) {
+      function R(e, t) {
         const {
             rgOptions: n,
-            filter: o = k,
+            filter: o = L,
             filterPlaceholder: i,
             selectedValue: l,
             onSelectionChange: s,
@@ -374,26 +379,26 @@
           [a, u] = (0, r.useState)(""),
           [d, h] = (0, r.useState)(!1),
           [p, f] = (0, r.useState)(null),
-          x = (0, r.useMemo)(() => n.filter((e) => o(a, e)), [a, n, o]),
-          g = "number" == typeof p,
-          m = x.length > 0,
+          g = (0, r.useMemo)(() => n.filter((e) => o(a, e)), [a, n, o]),
+          x = "number" == typeof p,
+          m = g.length > 0,
           v = (0, r.useCallback)(
             (e) => {
-              e && !g && m && f(0), u(e);
+              e && !x && m && f(0), u(e);
             },
-            [g, m],
+            [x, m],
           ),
-          C = (0, r.useCallback)(
+          b = (0, r.useCallback)(
             (e) => {
               e || v(""), h(e);
             },
             [v],
           ),
-          b = (0, r.useCallback)(
+          C = (0, r.useCallback)(
             (e) => {
-              s(e), t || C(!1);
+              s(e), t || b(!1);
             },
-            [t, s, C],
+            [t, s, b],
           ),
           j = (0, r.useCallback)(
             (e) => {
@@ -401,33 +406,35 @@
                 if (l) {
                   const t = l,
                     n = t.indexOf(e);
-                  if (-1 !== n) return b(t.slice(0, n).concat(t.slice(n + 1)));
-                  b(t.concat(e));
-                } else b([e]);
-              else b(e);
+                  if (-1 !== n) return C(t.slice(0, n).concat(t.slice(n + 1)));
+                  C(t.concat(e));
+                } else C([e]);
+              else C(e);
             },
-            [b, l, t],
+            [C, l, t],
           );
         return {
           activeIndex: p,
           setActiveIndex: f,
-          rgFilteredOptions: x,
+          rgFilteredOptions: g,
           selectedValue: l,
-          onSelectionChange: b,
+          onSelectionChange: C,
           onItemSelectionChange: j,
           onClear: (e) => {
-            b(t ? [] : null), e.stopPropagation(), e.preventDefault();
+            C(t ? [] : null),
+              null == e || e.stopPropagation(),
+              null == e || e.preventDefault();
           },
           inputValue: a,
           onInputChange: v,
           bOpen: d,
-          setOpen: C,
+          setOpen: b,
           filterPlaceholder: i,
           multiselect: t,
           maxSelected: c,
         };
       }
-      const L = {
+      const z = {
         Root: function (e) {
           const {
               children: t,
@@ -435,40 +442,43 @@
               placement: i = "bottom-end",
               popoverWidth: l = "dropdown",
               popoverMaxHeight: s,
-              ...c
+              popoverPresentation: c,
+              popoverLabel: a,
+              ...d
             } = e,
-            [a, d] = (0, r.useState)(void 0);
-          (0, r.useEffect)(() => d(void 0), [n.bOpen]);
-          const h = (0, I.Qn)(),
-            p = (0, r.useRef)(null),
-            f = (0, r.useRef)(null),
-            x = (0, r.useMemo)(
+            [h, p] = (0, r.useState)(void 0);
+          (0, r.useEffect)(() => p(void 0), [n.bOpen]);
+          const f = (0, I.Qn)(),
+            g = (0, r.useRef)(null),
+            x = (0, r.useRef)(null),
+            m = (0, r.useMemo)(
               () => n.rgFilteredOptions.findIndex((e) => e === n.selectedValue),
               [n.selectedValue, n.rgFilteredOptions],
             ),
-            g = (0, u.T)({
+            v = (0, u.T)({
               open: n.bOpen,
               onOpenChange: n.setOpen,
               width: l,
               maxHeight: s,
               placement: i,
+              presentation: c,
               gutter: "4",
               activeIndex: n.activeIndex,
               setActiveIndex: n.setActiveIndex,
-              selectedIndex: x,
+              selectedIndex: m,
               setSelectedIndex: (e) =>
                 n.onItemSelectionChange(n.rgFilteredOptions[e]),
-              interactions: { click: !0, virtualItemFocus: !h },
+              interactions: { click: !0, virtualItemFocus: !f },
               role: "combobox",
               scroll: !1,
             }),
-            m = {
+            b = {
               ...n,
-              ...c,
-              focusedValue: a,
-              onFocusChange: d,
-              refPopover: p,
-              refScrollElement: f,
+              ...d,
+              focusedValue: h,
+              onFocusChange: p,
+              refPopover: g,
+              refScrollElement: x,
               setOpen: (e) => {
                 if (e) {
                   let e = null;
@@ -477,67 +487,69 @@
                       ? n.selectedValue[0]
                       : null
                     : n.selectedValue),
-                    d(e),
+                    p(e),
                     n.onInputChange("");
                 }
                 n.setOpen(e);
               },
               onIndexSelected: (e) => {
-                const t = g.elementsRef.current;
+                const t = v.elementsRef.current;
                 if (t && t[e]) {
                   t[e].click();
                 }
               },
-              popoverPlacement: g.floating.placement,
+              popoverPlacement: v.floating.placement,
+              popoverPresentation: v.presentation,
+              popoverLabel: a,
             };
-          return (0, o.jsx)(N.Provider, {
-            value: m,
-            children: (0, o.jsx)(u.k.Root, { state: g, children: t }),
+          return (0, o.jsx)(H.Provider, {
+            value: b,
+            children: (0, o.jsx)(u.k.Root, { state: v, children: t }),
           });
         },
-        Option: y,
-        Options: S,
+        Option: w,
+        Options: y,
         VirtualizedOptions: function (e) {
           const { items: t, renderItem: n, overscan: i = 5, ...l } = e,
             {
               bOpen: s,
               refPopover: c,
               refScrollElement: a,
-            } = A("<ComboboxVirtualizedOptions>"),
+            } = T("<ComboboxVirtualizedOptions>"),
             [u, f] = (0, r.useState)(!1),
-            x = s && !!c.current && !!a.current;
+            g = s && !!c.current && !!a.current;
           (0, r.useEffect)(() => {
-            x !== u && f(x);
-          }, [x, u]);
-          const g = (0, d.Te)({
+            g !== u && f(g);
+          }, [g, u]);
+          const x = (0, d.Te)({
             count: u ? t.length : Math.min(t.length, 3),
             getScrollElement: () => a.current,
             enabled: s,
             measureElement: h.ZO,
             ...l,
           });
-          return (0, o.jsx)(S, {
+          return (0, o.jsx)(y, {
             children: (0, o.jsx)(O, {
-              value: g,
+              value: x,
               children: (0, o.jsx)(p.az, {
-                height: `${g.getTotalSize()}px`,
+                height: `${x.getTotalSize()}px`,
                 position: "relative",
                 width: "100%",
-                children: g.getVirtualItems().map((e) => n(t[e.index], e, g)),
+                children: x.getVirtualItems().map((e) => n(t[e.index], e, x)),
               }),
             }),
           });
         },
         VirtualizedOption: function (e) {
           const { virtualItem: t, ...n } = e;
-          return (0, o.jsx)(w, {
+          return (0, o.jsx)(k, {
             virtualItem: t,
-            children: (0, o.jsx)(y, { ...n }),
+            children: (0, o.jsx)(w, { ...n }),
           });
         },
         VirtualizedContent: function (e) {
           const { virtualItem: t, children: n } = e;
-          return (0, o.jsx)(w, { virtualItem: t, children: n });
+          return (0, o.jsx)(k, { virtualItem: t, children: n });
         },
         Trigger: function (e) {
           const { children: t, beforeContent: n, render: r } = e,
@@ -547,49 +559,56 @@
               inputValue: d,
               onInputChange: h,
               selectedValue: p,
-              focusedValue: x,
-              refScrollElement: g,
+              focusedValue: g,
+              refScrollElement: x,
               onItemSelectionChange: m,
               activeIndex: v,
-              setActiveIndex: C,
-              onFocusChange: b,
+              setActiveIndex: b,
+              onFocusChange: C,
               rgFilteredOptions: I,
-              onSelectionChange: S,
+              onSelectionChange: y,
               multiselect: O,
-              onClear: w,
-              refPopover: y,
-              clearable: k,
-              filterPlaceholder: P,
-              onIndexSelected: V,
-              popoverPlacement: L,
-              maxSelected: z,
-              variant: R,
-              ...F
-            } = A("<ComboboxTrigger>"),
-            _ = { tabIndex: 0, children: t },
-            N = O ? Array.isArray(p) && p.length > 0 : !!p,
-            H =
-              N && k
-                ? (0, o.jsx)(a.g, {
-                    onClick: w,
-                    cursor: "pointer",
-                    hitSlop: !0,
-                  })
-                : (0, o.jsx)(l.V, {}),
-            T = (0, j.f)("Combobox", R),
-            E = (0, o.jsx)(i.j, {
+              onClear: k,
+              refPopover: w,
+              clearable: L,
+              filterPlaceholder: V,
+              onIndexSelected: R,
+              popoverPlacement: z,
+              popoverPresentation: F,
+              popoverLabel: _,
+              maxSelected: N,
+              variant: A,
+              ...H
+            } = T("<ComboboxTrigger>"),
+            D = { tabIndex: 0, children: t },
+            E = O ? Array.isArray(p) && p.length > 0 : !!p,
+            B = E && L,
+            M = B
+              ? (0, o.jsx)(a.g, { onClick: k, cursor: "pointer", hitSlop: !0 })
+              : (0, o.jsx)(l.V, {}),
+            Y = B
+              ? {
+                  onSecondaryButton: k,
+                  actionDescriptionMap: {
+                    [P.pR.SECONDARY]: S.T.Localize("#Clear"),
+                  },
+                }
+              : void 0,
+            W = (0, j.f)("Combobox", A),
+            q = (0, o.jsx)(i.j, {
               beforeContent: n,
-              afterContent: H,
-              hasValue: N,
+              afterContent: M,
+              hasValue: E,
               cursor: "pointer",
               tabIndex: 0,
-              variant: T,
-              ...F,
+              variant: W,
+              navProps: Y,
+              ...H,
             }),
-            D = (0, f.Q)(r, E, _, void 0);
-          return (0, o.jsx)(u.k.Anchor, { children: D });
+            U = (0, f.Q)(r, q, D, void 0);
+          return (0, o.jsx)(u.k.Anchor, { children: U });
         },
-        DefaultOptionFilter: k,
+        DefaultOptionFilter: L,
         Value: function (e) {
           return (0, o.jsx)(s.EY, {
             weight: "medium",
@@ -606,7 +625,7 @@
           });
         },
       };
-      function z(e) {
+      function F(e) {
         return e
           ? "string" == typeof e
             ? e
@@ -619,7 +638,7 @@
                 "")
           : "";
       }
-      const R = Object.assign(function (e) {
+      const _ = Object.assign(function (e) {
         const {
             selectedValue: t,
             onSelectionChange: n,
@@ -627,42 +646,42 @@
             filter: l,
             filterPlaceholder: s,
             placeholder: c,
-            getOptionLabel: a = z,
+            getOptionLabel: a = F,
             ...u
           } = e,
-          d = P({
+          d = V({
             onSelectionChange: n,
             selectedValue: t,
             rgOptions: i,
             filter: (0, r.useCallback)(
-              (e, t) => (l ? l(e, t) : k(e, a(t))),
+              (e, t) => (l ? l(e, t) : L(e, a(t))),
               [l, a],
             ),
             filterPlaceholder: s,
           }),
           h = null != t;
-        return (0, o.jsxs)(R.Root, {
+        return (0, o.jsxs)(_.Root, {
           state: d,
           ...u,
           children: [
-            (0, o.jsxs)(R.Trigger, {
+            (0, o.jsxs)(_.Trigger, {
               children: [
-                h && (0, o.jsx)(R.Value, { children: a(t) }),
-                !h && (0, o.jsx)(R.Placeholder, { children: c }),
+                h && (0, o.jsx)(_.Value, { children: a(t) }),
+                !h && (0, o.jsx)(_.Placeholder, { children: c }),
               ],
             }),
-            (0, o.jsx)(R.Options, {
+            (0, o.jsx)(_.Options, {
               children: d.rgFilteredOptions.map((e) =>
-                (0, o.jsx)(y, { value: e, children: a(e) }, a(e)),
+                (0, o.jsx)(w, { value: e, children: a(e) }, a(e)),
               ),
             }),
           ],
         });
-      }, L);
-      function F(e) {
-        return V(e, !0);
+      }, z);
+      function N(e) {
+        return R(e, !0);
       }
-      const _ = Object.assign(function (e) {
+      const A = Object.assign(function (e) {
           const {
               selectedValue: t,
               onSelectionChange: n,
@@ -670,16 +689,16 @@
               filter: l,
               filterPlaceholder: s,
               placeholder: c,
-              getOptionLabel: a = z,
+              getOptionLabel: a = F,
               maxSelected: u,
               ...d
             } = e,
-            h = F({
+            h = N({
               onSelectionChange: n,
               selectedValue: t,
               rgOptions: i,
               filter: (0, r.useCallback)(
-                (e, t) => (l ? l(e, t) : k(e, a(t))),
+                (e, t) => (l ? l(e, t) : L(e, a(t))),
                 [l, a],
               ),
               filterPlaceholder: s,
@@ -694,27 +713,27 @@
                 ? new Intl.ListFormat((0, m.ZO)().strISOCode).format(e)
                 : e.join(", ");
           }
-          return (0, o.jsxs)(R.Root, {
+          return (0, o.jsxs)(_.Root, {
             state: h,
             ...d,
             children: [
-              (0, o.jsxs)(R.Trigger, {
+              (0, o.jsxs)(_.Trigger, {
                 children: [
-                  p && (0, o.jsx)(R.Value, { children: f }),
-                  !p && (0, o.jsx)(R.Placeholder, { children: c }),
+                  p && (0, o.jsx)(_.Value, { children: f }),
+                  !p && (0, o.jsx)(_.Placeholder, { children: c }),
                 ],
               }),
-              (0, o.jsx)(R.Options, {
+              (0, o.jsx)(_.Options, {
                 children: h.rgFilteredOptions.map((e) =>
-                  (0, o.jsx)(R.Option, { value: e, children: a(e) }, a(e)),
+                  (0, o.jsx)(_.Option, { value: e, children: a(e) }, a(e)),
                 ),
               }),
             ],
           });
-        }, L),
-        N = (0, r.createContext)(null);
-      function A(e) {
-        const t = (0, r.useContext)(N);
+        }, z),
+        H = (0, r.createContext)(null);
+      function T(e) {
+        const t = (0, r.useContext)(H);
         return t || console.error(`${e} must be used within a <Combobox>!`), t;
       }
     },
@@ -742,6 +761,7 @@
           ...a,
           align: "center",
           "data-has-value": !!i,
+          minWidth: "0",
           children: [
             n && (0, o.jsx)(c.s, { paddingRight: "2", children: n }),
             (0, o.jsx)(s.az, { flexGrow: "1", minWidth: "0", children: t }),
@@ -762,11 +782,11 @@
             status: p,
             ...f
           } = e,
-          x = "underline" === t ? "none" : o;
+          g = "underline" === t ? "none" : o;
         return (0, u.mz)(
           {
             ...f,
-            radius: x,
+            radius: g,
             "data-status": p,
             className: i()(
               l.ControlBox,
@@ -793,7 +813,7 @@
     },
     49560: (e, t, n) => {
       "use strict";
-      n.d(t, { A: () => I, p: () => j });
+      n.d(t, { AM: () => P, Pr: () => I });
       var o = n(7850),
         r = n(90626),
         i = n(73788),
@@ -806,22 +826,23 @@
         h = n(81393),
         p = n(64238),
         f = n.n(p),
-        x = n(11820),
-        g = n(78327);
-      const m = (0, r.createContext)(null);
-      function v(e) {
-        return (0, g.Qn)() ? (0, o.jsx)(C, { ...e }) : (0, o.jsx)(b, { ...e });
+        g = n(11820),
+        x = n(78327),
+        m = n(82321);
+      const v = (0, r.createContext)(null);
+      function b(e) {
+        return (0, x.Qn)() ? (0, o.jsx)(C, { ...e }) : (0, o.jsx)(j, { ...e });
       }
       function C(e) {
         const { children: t } = e,
-          n = (0, r.useContext)(m);
+          n = (0, r.useContext)(v);
         (0, h.wT)(
           !!n,
           "<Popover.Positioner> must be a child of <Popover.Root>.",
         );
         const i = r.useRef(void 0);
         return (
-          (0, a.O7)(i, !!i.current, !1),
+          (0, a.O7)(i, !0, !0),
           (0, o.jsx)(u.D6, {
             navID: "Popover",
             onCancelButton: () => n.floating.context.onOpenChange(!1),
@@ -834,9 +855,9 @@
           })
         );
       }
-      function b(e) {
+      function j(e) {
         const { children: t } = e,
-          n = (0, r.useContext)(m);
+          n = (0, r.useContext)(v);
         return (
           (0, h.wT)(
             !!n,
@@ -850,7 +871,33 @@
           })
         );
       }
-      function j(e) {
+      function I(e, t, n) {
+        const { onOpenChange: o, placement: r } = e,
+          s = "anchor" === n;
+        return (0, i.we)({
+          open: t,
+          onOpenChange: o,
+          middleware: s ? S(e) : [],
+          whileElementsMounted: s ? l.ll : void 0,
+          placement: r && "object" == typeof r ? r.initial : r,
+          strategy: "fixed",
+          platform: {
+            ...l.iD,
+            getOffsetParent: (e) => {
+              var t, n;
+              return null !==
+                (n =
+                  null === (t = null == e ? void 0 : e.ownerDocument) ||
+                  void 0 === t
+                    ? void 0
+                    : t.defaultView) && void 0 !== n
+                ? n
+                : window;
+            },
+          },
+        });
+      }
+      function S(e) {
         const { gutter: t = 0, placement: n } = e,
           o = [],
           r = n && "object" == typeof n;
@@ -911,69 +958,53 @@
           o
         );
       }
-      const I = {
+      const P = {
         Root: function (e) {
           const { children: t, ...n } = e,
             r = (function (e) {
               const {
                 open: t,
-                onOpenChange: n,
-                placement: o,
-                interactions: r = {},
+                interactions: n = {},
+                width: o,
+                maxHeight: r,
+                gutter: l,
+                scroll: s,
               } = e;
-              let s = t;
+              let c = t;
               0;
-              const c = (0, i.we)({
-                  open: s,
-                  onOpenChange: n,
-                  middleware: j(e),
-                  whileElementsMounted: l.ll,
-                  placement: o && "object" == typeof o ? o.initial : o,
-                  strategy: "fixed",
-                  platform: {
-                    ...l.iD,
-                    getOffsetParent: (e) => {
-                      var t, n;
-                      return null !==
-                        (n =
-                          null === (t = null == e ? void 0 : e.ownerDocument) ||
-                          void 0 === t
-                            ? void 0
-                            : t.defaultView) && void 0 !== n
-                        ? n
-                        : window;
-                    },
-                  },
-                }),
-                a = { enabled: !!r.click },
-                u = "function" == typeof r.click ? r.click(a) : a,
-                d = (0, i.kp)(c.context, u),
-                h = { enabled: !!r.focus },
-                p = "function" == typeof r.focus ? r.focus(h) : h,
-                f = (0, i.iQ)(c.context, p),
-                x = { handleClose: (0, i.iB)() },
-                g = "function" == typeof r.hover ? r.hover(x) : x,
-                m = (0, i.Mk)(c.context, { enabled: !!r.hover, ...g }),
-                v = (0, i.s9)(c.context),
-                { getFloatingProps: C, getReferenceProps: b } = (0, i.bv)([
-                  d,
-                  f,
-                  m,
-                  v,
+              const a = (0, m.Pr)(e.presentation),
+                u = I(e, c, a),
+                d = { enabled: !!n.click },
+                h = "function" == typeof n.click ? n.click(d) : d,
+                p = (0, i.kp)(u.context, h),
+                f = { enabled: !!n.focus },
+                g = "function" == typeof n.focus ? n.focus(f) : f,
+                x = (0, i.iQ)(u.context, g),
+                v = { handleClose: (0, i.iB)() },
+                b = "function" == typeof n.hover ? n.hover(v) : v,
+                C = (0, i.Mk)(u.context, { enabled: !!n.hover, ...b }),
+                j = (0, i.s9)(u.context),
+                { getFloatingProps: S, getReferenceProps: P } = (0, i.bv)([
+                  p,
+                  x,
+                  C,
+                  j,
                 ]);
               return {
-                floating: c,
-                getFloatingProps: C,
-                getReferenceProps: b,
-                open: s,
+                floating: u,
+                getFloatingProps: S,
+                getReferenceProps: P,
+                open: c,
+                presentation: a,
+                sizing: { width: o, maxHeight: r, gutter: l, scroll: s },
               };
             })(n);
-          return (0, o.jsx)(m.Provider, { value: r, children: t });
+          return (0, o.jsx)(v.Provider, { value: r, children: t });
         },
         Anchor: function (e) {
           const { children: t } = e,
             n = r.Children.only(t),
-            o = (0, r.useContext)(m);
+            o = (0, r.useContext)(v);
           return n
             ? o
               ? (0, r.cloneElement)(n, {
@@ -987,62 +1018,61 @@
             : null;
         },
         Positioner: function (e) {
-          const { children: t, className: n, ref: l } = e,
-            s = (0, r.useContext)(m),
-            c = (0, i.SV)([
+          const { children: t, className: n, ref: l, label: s } = e,
+            c = (0, r.useContext)(v),
+            a = (0, i.SV)([
               l,
-              null == s ? void 0 : s.floating.refs.setFloating,
-              (e) => {
-                var t;
-                return null === (t = null == e ? void 0 : e.showPopover) ||
-                  void 0 === t
-                  ? void 0
-                  : t.call(e);
-              },
+              null == c ? void 0 : c.floating.refs.setFloating,
             ]);
-          if (!s)
+          if (!c)
             return (
               console.error(
                 "<Popover.Positioner> must be a child of <Popover.Root>.",
               ),
               null
             );
-          if (!s.open) return null;
-          let a = r.Children.only(t),
-            u = r.Fragment;
-          a.type == I.FocusManager &&
-            ((a = r.Children.only(a.props.children)), (u = v));
-          const d = (0, r.cloneElement)(a, {
-            ref: c,
-            style: { ...s.floating.floatingStyles },
-            className: f()((0, x.T)(), n),
-            popover: "manual",
-            ...s.getFloatingProps(),
-          });
-          return (0, o.jsx)(u, { children: d });
+          if (!c.open) return null;
+          let u = r.Children.only(t),
+            d = r.Fragment;
+          return (
+            u.type == P.FocusManager &&
+              ((u = r.Children.only(u.props.children)), (d = b)),
+            (0, o.jsx)(d, {
+              children: (0, o.jsx)(m.HF, {
+                presentation: c.presentation,
+                sizing: c.sizing,
+                floatingRef: a,
+                floatingProps: c.getFloatingProps(),
+                floatingStyles: c.floating.floatingStyles,
+                referenceElement: c.floating.elements.domReference,
+                className: f()((0, g.T)(), n),
+                label: s,
+                children: u,
+              }),
+            })
+          );
         },
-        FocusManager: v,
+        FocusManager: b,
       };
     },
     25671: (e, t, n) => {
       "use strict";
-      n.d(t, { k: () => b, T: () => C });
+      n.d(t, { k: () => C, T: () => b });
       var o = n(7850),
         r = n(90626),
         i = n(73788),
-        l = n(8083),
-        s = n(90534),
-        c = n(80797),
-        a = n(48093);
-      const u = Object.assign(
+        l = n(90534),
+        s = n(80797),
+        c = n(48093);
+      const a = Object.assign(
         function (e) {
           const { render: t, ...n } = e;
-          return (0, c.Q)(
+          return (0, s.Q)(
             t,
-            (0, o.jsx)(s.az, {
+            (0, o.jsx)(l.az, {
               radius: "sm",
               background: "dull-8",
-              className: a.ListBox,
+              className: c.ListBox,
             }),
             { role: "listbox", ...n },
           );
@@ -1054,41 +1084,42 @@
                 focused: n,
                 label: r = null,
                 render: i,
-                disabled: l,
+                disabled: a,
                 ...u
               } = e,
               d = t ? "true" : "false",
               h = n ? "true" : void 0;
-            return (0, c.Q)(
+            return (0, s.Q)(
               i,
-              (0, o.jsx)(s.az, {
+              (0, o.jsx)(l.az, {
                 focusable: !0,
                 "data-selected": d,
                 "data-focused": h,
-                "aria-disabled": l,
-                className: a.ListBoxOption,
+                "aria-disabled": a,
+                className: c.ListBoxOption,
                 paddingY: "2",
                 paddingX: "3",
               }),
               { role: "option", ...u },
-              { selected: t, focused: n, disabled: l },
+              { selected: t, focused: n, disabled: a },
             );
           },
         },
       );
-      var d = n(49560),
+      var u = n(49560),
+        d = n(82321),
         h = n(45699),
         p = n(85585),
         f = n(78327);
-      const x = (0, r.createContext)(null);
-      function g(e) {
+      const g = (0, r.createContext)(null);
+      function x(e) {
         return (0, f.Qn)() ? (0, o.jsx)(m, { ...e }) : (0, o.jsx)(v, { ...e });
       }
       function m(e) {
         const { state: t, children: n } = e,
           i = r.useRef(void 0);
         return (
-          (0, h.O7)(i, !!i.current, !1),
+          (0, h.O7)(i, !0, !0),
           (0, o.jsx)(p.D6, {
             navID: "PopoverList",
             onCancelButton: () => t.floating.context.onOpenChange(!1),
@@ -1107,94 +1138,78 @@
           children: n,
         });
       }
-      function C(e) {
+      function b(e) {
         const {
           open: t,
-          onOpenChange: n,
-          activeIndex: o,
-          setActiveIndex: s,
-          selectedIndex: c,
-          setSelectedIndex: a,
-          interactions: u = {},
-          role: h,
-          placement: p,
+          activeIndex: n,
+          setActiveIndex: o,
+          selectedIndex: l,
+          setSelectedIndex: s,
+          interactions: c = {},
+          role: a,
+          width: h,
+          maxHeight: p,
+          gutter: f,
+          scroll: g,
         } = e;
-        let f = t;
-        const x = (0, i.we)({
-            open: f,
-            onOpenChange: n,
-            middleware: (0, d.p)(e),
-            whileElementsMounted: l.ll,
-            placement: p && "object" == typeof p ? p.initial : p,
-            strategy: "fixed",
-            platform: {
-              ...l.iD,
-              getOffsetParent: (e) => {
-                var t, n;
-                return null !==
-                  (n =
-                    null === (t = null == e ? void 0 : e.ownerDocument) ||
-                    void 0 === t
-                      ? void 0
-                      : t.defaultView) && void 0 !== n
-                  ? n
-                  : window;
-              },
-            },
-          }),
-          g = (0, i.kp)(x.context, { enabled: !!u.click }),
-          m = (0, i.iQ)(x.context, { enabled: !!u.focus }),
-          v = (0, i.s9)(x.context),
-          C = (0, r.useRef)([]),
-          b = (0, i.C1)(x.context, {
-            listRef: C,
-            activeIndex: o,
-            selectedIndex: c,
-            onNavigate: s,
-            virtual: !!u.virtualItemFocus,
+        let x = t;
+        const m = (0, d.Pr)(e.presentation),
+          v = (0, u.Pr)(e, x, m),
+          b = (0, i.kp)(v.context, { enabled: !!c.click }),
+          C = (0, i.iQ)(v.context, { enabled: !!c.focus }),
+          j = (0, i.s9)(v.context),
+          I = (0, r.useRef)([]),
+          S = (0, i.C1)(v.context, {
+            listRef: I,
+            activeIndex: n,
+            selectedIndex: l,
+            onNavigate: o,
+            virtual: !!c.virtualItemFocus,
             loop: !0,
             focusItemOnOpen: !1,
           }),
-          j = (0, r.useRef)([]),
-          I = (0, r.useRef)(!1),
-          S = (0, i.lY)(x.context, {
-            enabled: !!u.typeahead,
-            listRef: j,
-            activeIndex: o,
-            selectedIndex: c,
-            onMatch: f ? s : a,
-            onTypingChange: (e) => (I.current = e),
+          P = (0, r.useRef)([]),
+          y = (0, r.useRef)(!1),
+          O = (0, i.lY)(v.context, {
+            enabled: !!c.typeahead,
+            listRef: P,
+            activeIndex: n,
+            selectedIndex: l,
+            onMatch: x ? o : s,
+            onTypingChange: (e) => (y.current = e),
           }),
-          O = (0, i.It)(x.context, { role: h }),
+          k = (0, i.It)(v.context, { role: a }),
           {
             getFloatingProps: w,
-            getReferenceProps: y,
-            getItemProps: k,
-          } = (0, i.bv)([O, g, m, v, b, S]);
+            getReferenceProps: L,
+            getItemProps: V,
+          } = (0, i.bv)([k, b, C, j, S, O]);
         return {
-          floating: x,
+          floating: v,
           getFloatingProps: w,
-          getReferenceProps: y,
-          getItemProps: k,
-          open: f,
-          activeIndex: o,
-          selectedIndex: c,
-          setSelectedIndex: a,
-          elementsRef: C,
-          labelsRef: j,
-          typingRef: I,
-          initialFocus: u.virtualItemFocus ? -1 : void 0,
+          getReferenceProps: L,
+          getItemProps: V,
+          open: x,
+          activeIndex: n,
+          selectedIndex: l,
+          setSelectedIndex: s,
+          elementsRef: I,
+          labelsRef: P,
+          typingRef: y,
+          initialFocus: c.virtualItemFocus ? -1 : void 0,
+          presentation: m,
+          sizing: { width: h, maxHeight: p, gutter: f, scroll: g },
         };
       }
-      const b = {
+      const C = {
         Root: function (e) {
           const { children: t, state: n } = e;
-          return (0, o.jsx)(x.Provider, { value: n, children: t });
+          return (0, o.jsx)(g.Provider, { value: n, children: t });
         },
         Anchor: function (e) {
           const { children: t } = e,
             n = r.Children.only(t),
-            o = (0, r.useContext)(x),
+            o = (0, r.useContext)(g),
             l = (0, i.SV)([
               null == o ? void 0 : o.floating.refs.setReference,
               null == n ? void 0 : n.props.ref,
@@ -1211,32 +1226,31 @@
           return (0, r.cloneElement)(n, { ref: l, ...o.getReferenceProps(c) });
         },
         Positioner: function (e) {
-          const { children: t, render: n, ref: l } = e,
-            s = (0, r.useContext)(x),
-            c = (0, i.SV)([
+          const { children: t, render: n, ref: l, label: s } = e,
+            c = (0, r.useContext)(g),
+            u = (0, i.SV)([
               l,
-              null == s ? void 0 : s.floating.refs.setFloating,
-              (e) => {
-                var t;
-                return null === (t = null == e ? void 0 : e.showPopover) ||
-                  void 0 === t
-                  ? void 0
-                  : t.call(e);
-              },
+              null == c ? void 0 : c.floating.refs.setFloating,
             ]);
-          return s
-            ? s.open
-              ? (0, o.jsx)(g, {
-                  state: s,
-                  children: (0, o.jsx)(u, {
-                    ref: c,
-                    style: s.floating.floatingStyles,
-                    ...s.getFloatingProps({ popover: "manual" }),
-                    render: n,
-                    children: (0, o.jsx)(i.ph, {
-                      elementsRef: s.elementsRef,
-                      labelsRef: s.labelsRef,
-                      children: t,
+          return c
+            ? c.open
+              ? (0, o.jsx)(x, {
+                  state: c,
+                  children: (0, o.jsx)(d.HF, {
+                    presentation: c.presentation,
+                    sizing: c.sizing,
+                    floatingRef: u,
+                    floatingProps: c.getFloatingProps(),
+                    floatingStyles: c.floating.floatingStyles,
+                    referenceElement: c.floating.elements.domReference,
+                    label: s,
+                    children: (0, o.jsx)(a, {
+                      render: n,
+                      children: (0, o.jsx)(i.ph, {
+                        elementsRef: c.elementsRef,
+                        labelsRef: c.labelsRef,
+                        children: t,
+                      }),
                     }),
                   }),
                 })
@@ -1253,12 +1267,12 @@
               selected: l,
               onSelect: s,
               ref: c,
-              disabled: a,
+              disabled: u,
               ...d
             } = e,
-            h = (0, r.useContext)(x),
+            h = (0, r.useContext)(g),
             { ref: p, index: f } = (0, i.rm)({ label: n }),
-            g = (0, i.SV)([c, p]);
+            x = (0, i.SV)([c, p]);
           if (!h)
             return (
               console.error(
@@ -1268,23 +1282,23 @@
             );
           const m = f === h.activeIndex,
             v = f === h.selectedIndex || !!l;
-          return (0, o.jsx)(u.Option, {
-            ref: g,
+          return (0, o.jsx)(a.Option, {
+            ref: x,
             selected: v,
             focused: m,
             role: "option",
             tabIndex: 0,
             ...h.getItemProps({
-              onClick: a ? void 0 : s,
+              onClick: u ? void 0 : s,
               onKeyDown: (e) => {
-                a ||
+                u ||
                   ("Enter" !== e.key &&
                     (" " !== e.key || h.typingRef.current)) ||
                   (s(e), e.preventDefault(), e.stopPropagation());
               },
               active: m,
               selected: v,
-              disabled: a,
+              disabled: u,
               ...d,
             }),
             children: t,
@@ -1315,14 +1329,14 @@
           ),
         });
       }
-      function x(e) {
+      function g(e) {
         const { radius: t } = e;
         return (0, o.jsx)(l.az, {
           className: u.IndicatorPosition,
           children: (0, o.jsx)("div", { className: u.Indicator }),
         });
       }
-      function g(e, t) {
+      function x(e, t) {
         const n = e.compareDocumentPosition(t);
         return n & Node.DOCUMENT_POSITION_FOLLOWING
           ? -1
@@ -1343,19 +1357,19 @@
           !l)
         )
           return null;
-        const { value: x, onValueChange: g, radius: m, size: v } = l,
-          C = t === x,
-          b = void 0 === n ? t : n;
+        const { value: g, onValueChange: x, radius: m, size: v } = l,
+          b = t === g,
+          C = void 0 === n ? t : n;
         return (0, o.jsx)(d.s, {
           justify: "center",
           align: "center",
           ref: c,
           onClick: (e) => {
-            e.stopPropagation(), e.preventDefault(), C || i || g(t);
+            e.stopPropagation(), e.preventDefault(), b || i || x(t);
           },
-          "data-selected": C ? "true" : "false",
+          "data-selected": b ? "true" : "false",
           className: a()(u.Item, v && u[`Size-${v}`], i ? u.disabled : ""),
-          children: b,
+          children: C,
         });
       }),
         (f.Root = function (e) {
@@ -1368,18 +1382,18 @@
               value: m,
               onValueChange: v,
             } = e,
-            [C, b] = (0, r.useState)({}),
-            j = (0, r.useCallback)((e, t) => b((n) => ({ ...n, [t]: e })), []),
+            [b, C] = (0, r.useState)({}),
+            j = (0, r.useCallback)((e, t) => C((n) => ({ ...n, [t]: e })), []),
             I = (0, r.useCallback)(
               (e, t) =>
-                b((n) => {
+                C((n) => {
                   const o = { ...n };
                   return o[t] === e && delete o[t], o;
                 }),
               [],
             ),
             S = (0, h.f)("SegmentedControl", t),
-            O = (0, r.useMemo)(
+            P = (0, r.useMemo)(
               () => ({
                 value: m,
                 onValueChange: v,
@@ -1412,11 +1426,11 @@
                   t = -1;
               }
               if (t) {
-                const n = Array.from(Object.values(C)).sort(g);
+                const n = Array.from(Object.values(b)).sort(x);
                 let o;
                 if (null === m) o = t > 0 ? 0 : n.length - 1;
                 else {
-                  const e = C[m],
+                  const e = b[m],
                     r = n.findIndex((t) => t === e);
                   (0, s.wT)(
                     "number" == typeof r,
@@ -1425,18 +1439,18 @@
                     (o = r + t);
                 }
                 const r = n[o < 0 ? n.length + o : o % n.length],
-                  i = Object.keys(C).find((e) => C[e] === r);
+                  i = Object.keys(b).find((e) => b[e] === r);
                 "string" != typeof i
                   ? console.error("Could not find next segmeneted value")
                   : (v(i), e.stopPropagation(), e.preventDefault());
               }
             },
             children: (0, o.jsx)(p.Provider, {
-              value: O,
+              value: P,
               children: (0, o.jsxs)(l.az, {
                 className: u.SegmentedControl,
                 style: { "--outer-radius": `var(--radius-${n})` },
-                children: [f, null !== m && (0, o.jsx)(x, { radius: n })],
+                children: [f, null !== m && (0, o.jsx)(g, { radius: n })],
               }),
             }),
           });
@@ -1444,7 +1458,7 @@
     },
     11967: (e, t, n) => {
       "use strict";
-      n.d(t, { DL: () => b, WM: () => x, l6: () => C, uh: () => I });
+      n.d(t, { DL: () => I, WM: () => m, l6: () => j, uh: () => P });
       var o = n(7850),
         r = n(90626),
         i = n(25671),
@@ -1456,11 +1470,13 @@
         d = n(14181),
         h = n(52908),
         p = n(83392),
-        f = n(66922);
-      function x(e) {
-        return g(e, !1);
+        f = n(66922),
+        g = n(92122),
+        x = n(88006);
+      function m(e) {
+        return v(e, !1);
       }
-      function g(e, t) {
+      function v(e, t) {
         const { onSelectionChange: n, selectedValue: o, ...i } = e,
           [l, s] = (0, r.useState)(!1),
           c = (0, r.useCallback)(
@@ -1471,7 +1487,9 @@
           ),
           a = (0, r.useCallback)(
             (e) => {
-              c(t ? [] : null), e.stopPropagation(), e.preventDefault();
+              c(t ? [] : null),
+                null == e || e.stopPropagation(),
+                null == e || e.preventDefault();
             },
             [c, t],
           ),
@@ -1497,7 +1515,7 @@
           ...i,
         };
       }
-      const m = {
+      const b = {
         Root: function (e) {
           const {
               children: t,
@@ -1505,11 +1523,13 @@
               placement: l = "bottom-end",
               popoverWidth: s = "dropdown",
               popoverMaxHeight: c,
-              ...a
+              popoverPresentation: a,
+              popoverLabel: u,
+              ...d
             } = e,
-            [u, d] = (0, r.useState)(null),
             [h, p] = (0, r.useState)(null),
-            f = (0, r.useMemo)(
+            [f, g] = (0, r.useState)(null),
+            x = (0, r.useMemo)(
               () =>
                 n.rgOptions.findIndex((e) =>
                   n.multiselect
@@ -1518,38 +1538,40 @@
                 ),
               [n.selectedValue, n.rgOptions, n.multiselect],
             ),
-            x = (0, r.useRef)(null),
-            g = {
+            m = (0, r.useRef)(null),
+            v = {
               ...n,
-              ...a,
-              focusedValue: u,
-              onFocusChange: d,
-              refPopover: x,
+              ...d,
+              focusedValue: h,
+              onFocusChange: p,
+              refPopover: m,
+              popoverLabel: u,
               setOpen: (e) => {
-                e && d(n.multiselect ? n.selectedValue[0] : n.selectedValue),
+                e && p(n.multiselect ? n.selectedValue[0] : n.selectedValue),
                   n.setOpen(e);
               },
-              focusedIndex: h,
-              onFocusedIndexChange: p,
+              focusedIndex: f,
+              onFocusedIndexChange: g,
             },
-            m = (0, i.T)({
+            b = (0, i.T)({
               open: n.bOpen,
               onOpenChange: n.setOpen,
               width: s,
               maxHeight: c,
               placement: l,
-              selectedIndex: f,
+              presentation: a,
+              selectedIndex: x,
               setSelectedIndex: (e) => n.onItemSelectionChange(n.rgOptions[e]),
-              activeIndex: h,
-              setActiveIndex: p,
+              activeIndex: f,
+              setActiveIndex: g,
               gutter: "4",
               interactions: { click: !0, typeahead: !0 },
               role: "select",
               scroll: !0,
             });
-          return (0, o.jsx)(S.Provider, {
-            value: g,
-            children: (0, o.jsx)(i.k.Root, { state: m, children: t }),
+          return (0, o.jsx)(y.Provider, {
+            value: v,
+            children: (0, o.jsx)(i.k.Root, { state: b, children: t }),
           });
         },
         Option: function (e) {
@@ -1562,17 +1584,17 @@
             } = O("<SelectTrigger>"),
             d = "string" == typeof t ? t : void 0;
           let f = !1,
-            x = !1;
+            g = !1;
           c
             ? ((f = Array.isArray(a) && a.includes(t)),
-              (x = !!u && Array.isArray(a) && a.length >= u))
+              (g = !!u && Array.isArray(a) && a.length >= u))
             : (f = t === a);
-          const g = r || (x && !f);
+          const x = r || (g && !f);
           return (0, o.jsxs)(i.k.Item, {
             label: d,
             onSelect: () => s(t),
             selected: f,
-            disabled: g,
+            disabled: x,
             ...l,
             children: [
               c &&
@@ -1589,8 +1611,12 @@
           });
         },
         Options: function (e) {
-          const { refPopover: t } = O("<Select.Options>");
-          return (0, o.jsx)(i.k.Positioner, { ref: t, children: e.children });
+          const { refPopover: t, popoverLabel: n } = O("<Select.Options>");
+          return (0, o.jsx)(i.k.Positioner, {
+            ref: t,
+            label: n,
+            children: e.children,
+          });
         },
         Trigger: function (e) {
           const { children: t, render: n } = e,
@@ -1600,52 +1626,58 @@
               selectedValue: d,
               variant: h,
               size: p,
-              radius: x,
-              status: g,
-              rgOptions: m,
-              multiselect: v,
-              onClear: C,
-              focusedValue: b,
-              onFocusChange: j,
-              onSelectionChange: I,
-              clearable: S,
-              focusedIndex: w,
-              onItemSelectionChange: y,
-              onFocusedIndexChange: k,
-              refPopover: P,
-              placeholder: V,
-              maxSelected: L,
-              ...z
+              radius: m,
+              status: v,
+              rgOptions: b,
+              multiselect: C,
+              onClear: j,
+              focusedValue: I,
+              onFocusChange: S,
+              onSelectionChange: P,
+              clearable: y,
+              focusedIndex: k,
+              onItemSelectionChange: w,
+              onFocusedIndexChange: L,
+              refPopover: V,
+              popoverLabel: R,
+              placeholder: z,
+              maxSelected: F,
+              ..._
             } = O("<SelectTrigger>"),
-            R = {
+            N = {
               tabIndex: 0,
               role: "combobox",
               onClick: () => c(!r),
               children: t,
             },
-            F = v ? Array.isArray(d) && d.length > 0 : !!d,
-            _ =
-              F && S
-                ? (0, o.jsx)(a.g, {
-                    onClick: C,
-                    cursor: "pointer",
-                    hitSlop: !0,
-                  })
-                : (0, o.jsx)(s.V, {}),
-            N = (0, f.f)("Select", h),
-            A = (0, o.jsx)(l.j, {
-              afterContent: _,
-              variant: N,
+            A = C ? Array.isArray(d) && d.length > 0 : !!d,
+            H = A && y,
+            T = H
+              ? (0, o.jsx)(a.g, { onClick: j, cursor: "pointer", hitSlop: !0 })
+              : (0, o.jsx)(s.V, {}),
+            D = H
+              ? {
+                  onSecondaryButton: j,
+                  actionDescriptionMap: {
+                    [x.pR.SECONDARY]: g.T.Localize("#Clear"),
+                  },
+                }
+              : void 0,
+            E = (0, f.f)("Select", h),
+            B = (0, o.jsx)(l.j, {
+              afterContent: T,
+              variant: E,
               size: p,
-              radius: x,
-              status: g,
-              hasValue: F,
+              radius: m,
+              status: v,
+              hasValue: A,
               tabIndex: 0,
               cursor: "pointer",
-              ...z,
+              navProps: D,
+              ..._,
             }),
-            H = (0, u.Q)(n, A, R, void 0);
-          return (0, o.jsx)(i.k.Anchor, { children: H });
+            M = (0, u.Q)(n, B, N, void 0);
+          return (0, o.jsx)(i.k.Anchor, { children: M });
         },
         Value: function (e) {
           return (0, o.jsx)(c.EY, {
@@ -1663,7 +1695,7 @@
           });
         },
       };
-      function v(e) {
+      function C(e) {
         return "string" == typeof e
           ? e
           : "number" == typeof e
@@ -1674,16 +1706,16 @@
               ),
               "");
       }
-      const C = Object.assign(function (e) {
+      const j = Object.assign(function (e) {
         const {
             selectedValue: t,
             onSelectionChange: n,
             options: r,
             placeholder: i,
-            getOptionLabel: l = v,
+            getOptionLabel: l = C,
             ...s
           } = e,
-          c = x({
+          c = m({
             onSelectionChange: n,
             selectedValue: t,
             rgOptions: r,
@@ -1691,39 +1723,39 @@
           }),
           a = null != t,
           u = a ? l(t) : "";
-        return (0, o.jsxs)(C.Root, {
+        return (0, o.jsxs)(j.Root, {
           state: c,
           ...s,
           children: [
-            (0, o.jsxs)(C.Trigger, {
+            (0, o.jsxs)(j.Trigger, {
               children: [
-                a && (0, o.jsx)(C.Value, { children: u }),
-                !a && (0, o.jsx)(C.Placeholder, { children: i }),
+                a && (0, o.jsx)(j.Value, { children: u }),
+                !a && (0, o.jsx)(j.Placeholder, { children: i }),
               ],
             }),
-            (0, o.jsx)(C.Options, {
+            (0, o.jsx)(j.Options, {
               children: c.rgOptions.map((e, t) =>
-                (0, o.jsx)(C.Option, { value: e, children: l(e) }, t),
+                (0, o.jsx)(j.Option, { value: e, children: l(e) }, t),
               ),
             }),
           ],
         });
-      }, m);
-      function b(e) {
-        return g(e, !0);
+      }, b);
+      function I(e) {
+        return v(e, !0);
       }
-      const j = m;
-      const I = Object.assign(function (e) {
+      const S = b;
+      const P = Object.assign(function (e) {
           const {
               selectedValue: t,
               onSelectionChange: n,
               options: r,
               placeholder: i,
-              getOptionLabel: l = v,
+              getOptionLabel: l = C,
               maxSelected: s,
               ...c
             } = e,
-            a = b({
+            a = I({
               onSelectionChange: n,
               selectedValue: t,
               rgOptions: r,
@@ -1739,33 +1771,33 @@
                 ? new Intl.ListFormat((0, d.ZO)().strISOCode).format(e)
                 : e.join(", ");
           }
-          return (0, o.jsxs)(I.Root, {
+          return (0, o.jsxs)(P.Root, {
             state: a,
             ...c,
             children: [
-              (0, o.jsxs)(I.Trigger, {
+              (0, o.jsxs)(P.Trigger, {
                 children: [
-                  u && (0, o.jsx)(I.Value, { children: h }),
-                  !u && (0, o.jsx)(I.Placeholder, { children: i }),
+                  u && (0, o.jsx)(P.Value, { children: h }),
+                  !u && (0, o.jsx)(P.Placeholder, { children: i }),
                 ],
               }),
-              (0, o.jsx)(I.Options, {
+              (0, o.jsx)(P.Options, {
                 children: a.rgOptions.map((e, t) =>
-                  (0, o.jsx)(I.Option, { value: e, children: l(e) }, t),
+                  (0, o.jsx)(P.Option, { value: e, children: l(e) }, t),
                 ),
               }),
             ],
           });
-        }, j),
-        S = (0, r.createContext)(null);
+        }, S),
+        y = (0, r.createContext)(null);
       function O(e) {
-        const t = (0, r.useContext)(S);
+        const t = (0, r.useContext)(y);
         return t || console.error(`${e} must be used within a <Select>!`), t;
       }
     },
     38256: (e, t, n) => {
       "use strict";
-      n.d(t, { k: () => g });
+      n.d(t, { k: () => v });
       var o = n(7850),
         r = n(90626),
         i = n(64238),
@@ -1778,68 +1810,78 @@
         h = n(8871),
         p = n(45699),
         f = n(66922),
-        x = n(78327);
-      function g(e) {
+        g = n(78327),
+        x = n(92122),
+        m = n(88006);
+      function v(e) {
         const { extracted: t, remaining: n } = (0, a.A4)(e),
           {
             value: i,
-            onTextChange: g,
-            onTextClear: m,
-            clearable: v,
-            onChange: C,
-            radius: b,
-            variant: j,
-            size: I,
-            beforeContent: S,
+            onTextChange: v,
+            onTextClear: b,
+            clearable: C,
+            onChange: j,
+            radius: I,
+            variant: S,
+            size: P,
+            beforeContent: y,
             afterContent: O,
-            inputRef: w,
-            ref: y,
-            disabled: k,
-            gamepadFocusable: P = !0,
-            status: V,
-            ...L
+            inputRef: k,
+            ref: w,
+            disabled: L,
+            gamepadFocusable: V = !0,
+            status: R,
+            ...z
           } = n,
-          z = (0, x.Qn)(),
-          R =
-            i && v
-              ? (0, o.jsx)(d.g, {
-                  onClick: () => {
-                    g(""), m && m();
-                  },
-                  cursor: "pointer",
-                  hitSlop: !0,
-                })
-              : O,
-          F = {
-            ...t,
-            variant: (0, f.f)("TextInput", j),
-            size: I,
-            radius: b,
-            status: V,
-            beforeContent: S,
-            afterContent: R,
-            ref: y,
-            disabled: k,
+          F = (0, g.Qn)(),
+          _ = () => {
+            v(""), b && b();
           },
-          _ = (0, r.useRef)(null),
-          N = P && z ? p.BA : "input";
+          N = !!i && C,
+          A = N
+            ? (0, o.jsx)(d.g, { onClick: _, cursor: "pointer", hitSlop: !0 })
+            : O,
+          H = {
+            ...t,
+            variant: (0, f.f)("TextInput", S),
+            size: P,
+            radius: I,
+            status: R,
+            beforeContent: y,
+            afterContent: A,
+            ref: w,
+            disabled: L,
+          },
+          T = (0, r.useRef)(null),
+          D = V && F,
+          E = D ? p.BA : "input",
+          B =
+            D && N && !L
+              ? {
+                  onSecondaryButton: _,
+                  actionDescriptionMap: {
+                    [m.pR.SECONDARY]: x.T.Localize("#Clear"),
+                  },
+                }
+              : {};
         return (0, o.jsx)(u.j, {
           cursor: "text",
-          ...F,
+          ...H,
           onClick: (e) => {
-            _.current && e.target !== _.current && _.current.focus();
+            T.current && e.target !== T.current && T.current.focus();
           },
-          children: (0, o.jsx)(N, {
-            ref: (0, h.Ue)(w, _),
+          children: (0, o.jsx)(E, {
+            ref: (0, h.Ue)(k, T),
             type: "text",
-            "aria-disabled": k,
-            readOnly: k,
+            "aria-disabled": L,
+            readOnly: L,
             className: l()((0, s.T)(), (0, c.F)()),
             value: i || "",
             onChange: (e) => {
-              k || (g(e.target.value), C && C(e));
+              L || (v(e.target.value), j && j(e));
             },
-            ...L,
+            ...B,
+            ...z,
           }),
         });
       }
@@ -1852,12 +1894,7 @@
         i = n(75659),
         l = n(16619);
       function s(e) {
-        const { viewBoxSize: t = 20, ...n } = e,
-          i = n.size ? void 0 : l.IconSizeDefault;
-        return (0, o.jsx)("svg", {
-          viewBox: `0 0 ${t} ${t}`,
-          ...(0, r.mz)({ className: i, ...n }, c),
-        });
+        return (0, o.jsx)("svg", { ...u(e) });
       }
       const c = [
         ...i.L,
@@ -1865,7 +1902,7 @@
         {
           prop: "color",
           className: l.Color,
-          cssProperty: (e) => ["--icon-color", (0, r.w7)(e)],
+          cssProperty: (e) => ["--icon-color", a(e)],
         },
         {
           prop: "hitSlop",
@@ -1877,6 +1914,26 @@
         },
         i.h.find(({ prop: e }) => "cursor" === e),
       ];
+      function a(e) {
+        return e && "#" !== e[0] ? (0, r.w7)(e) : e;
+      }
+      function u(e) {
+        const { viewBox: t, ...n } = e,
+          o = { className: n.size ? void 0 : l.IconSizeDefault, ...n };
+        return (
+          t &&
+            (o.viewBox = (function (e) {
+              return e
+                ? "number" == typeof e
+                  ? `0 0 ${e} ${e}`
+                  : "string" == typeof e
+                    ? e
+                    : `0 0 ${e.width} ${e.height}`
+                : void 0;
+            })(t)),
+          (0, r.mz)(o, c)
+        );
+      }
     },
     20422: (e, t, n) => {
       "use strict";
@@ -1886,7 +1943,7 @@
       function i(e) {
         return (0, o.jsx)(r.I, {
           ...e,
-          viewBoxSize: 16,
+          viewBox: 16,
           children: (0, o.jsx)("path", {
             d: "M13.8182 1.94629L5.77816 9.98184L2.40483 6.61296L0.835938 8.18184L5.77816 13.1285L15.387 3.51518L13.8182 1.94629Z",
             fill: "currentColor",
@@ -1909,6 +1966,7 @@
           n = i[t];
         return (0, o.jsx)(r.I, {
           ...e,
+          viewBox: 20,
           children: (0, o.jsx)("path", {
             transform: n,
             d: "M5.14541 6.89977L10.0063 12.2027L14.8671 6.89977C15.3557 6.36674 16.145 6.36674 16.6336 6.89977C17.1221 7.4328 17.1221 8.29385 16.6336 8.82688L10.8832 15.1002C10.3946 15.6333 9.60537 15.6333 9.11678 15.1002L3.36644 8.82688C2.87785 8.29385 2.87785 7.4328 3.36644 6.89977C3.85503 6.38041 4.65682 6.36674 5.14541 6.89977Z",
@@ -1925,13 +1983,54 @@
       function i(e) {
         return (0, o.jsx)(r.I, {
           ...e,
-          viewBoxSize: 12,
+          viewBox: 12,
           children: (0, o.jsx)("path", {
             d: "M10.7068 2.46964L9.53012 1.29297L6.00012 4.81964L2.47012 1.29297L1.29346 2.46964L4.82012 5.99964L1.29346 9.52964L2.47012 10.7063L6.00012 7.17964L9.53012 10.7063L10.7068 9.52964L7.18012 5.99964L10.7068 2.46964Z",
             fill: "currentColor",
           }),
         });
       }
+    },
+    92122: (e, t, n) => {
+      "use strict";
+      n.d(t, { T: () => i });
+      var o = n(13843);
+      const r = {};
+      (r.arabic = () => n.e(47608).then(n.t.bind(n, 47608, 19))),
+        (r.brazilian = () => n.e(29930).then(n.t.bind(n, 29930, 19))),
+        (r.bulgarian = () => n.e(48465).then(n.t.bind(n, 48465, 19))),
+        (r.czech = () => n.e(14027).then(n.t.bind(n, 14027, 19))),
+        (r.danish = () => n.e(19661).then(n.t.bind(n, 19661, 19))),
+        (r.dutch = () => n.e(94654).then(n.t.bind(n, 94654, 19))),
+        (r.english = () => n.e(83996).then(n.t.bind(n, 83996, 19))),
+        (r.finnish = () => n.e(47759).then(n.t.bind(n, 47759, 19))),
+        (r.french = () => n.e(37140).then(n.t.bind(n, 37140, 19))),
+        (r.german = () => n.e(81194).then(n.t.bind(n, 81194, 19))),
+        (r.greek = () => n.e(71744).then(n.t.bind(n, 71744, 19))),
+        (r.hungarian = () => n.e(59845).then(n.t.bind(n, 59845, 19))),
+        (r.indonesian = () => n.e(30308).then(n.t.bind(n, 30308, 19))),
+        (r.italian = () => n.e(51380).then(n.t.bind(n, 51380, 19))),
+        (r.japanese = () => n.e(787).then(n.t.bind(n, 787, 19))),
+        (r.koreana = () => n.e(36691).then(n.t.bind(n, 36691, 19))),
+        (r.latam = () => n.e(21579).then(n.t.bind(n, 21579, 19))),
+        (r.malay = () => n.e(83924).then(n.t.bind(n, 83924, 19))),
+        (r.norwegian = () => n.e(97284).then(n.t.bind(n, 97284, 19))),
+        (r.polish = () => n.e(44373).then(n.t.bind(n, 44373, 19))),
+        (r.portuguese = () => n.e(32561).then(n.t.bind(n, 32561, 19))),
+        (r.romanian = () => n.e(17423).then(n.t.bind(n, 17423, 19))),
+        (r.russian = () => n.e(52757).then(n.t.bind(n, 52757, 19))),
+        (r.sc_schinese = () => n.e(30175).then(n.t.bind(n, 52556, 19))),
+        (r.schinese = () => n.e(6128).then(n.t.bind(n, 6128, 19))),
+        (r.spanish = () => n.e(41052).then(n.t.bind(n, 41052, 19))),
+        (r.swedish = () => n.e(95773).then(n.t.bind(n, 95773, 19))),
+        (r.tchinese = () => n.e(66563).then(n.t.bind(n, 66563, 19))),
+        (r.thai = () => n.e(75178).then(n.t.bind(n, 75178, 19))),
+        (r.turkish = () => n.e(14028).then(n.t.bind(n, 14028, 19))),
+        (r.ukrainian = () => n.e(90778).then(n.t.bind(n, 90778, 19))),
+        (r.vietnamese = () => n.e(1291).then(n.t.bind(n, 1291, 19)));
+      const i = (0, o.l)(async function (e) {
+        if (r[e]) return r[e]();
+      });
     },
     80797: (e, t, n) => {
       "use strict";

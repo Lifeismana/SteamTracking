@@ -56,6 +56,5 @@
     "SinglePricingPackage_Intro_2b": "Standart dışı USD fiyatları için USD fiyat alanına bir değer girin. Ardından \"Fiyatları Dönüştür...\" butonuna tıklayın ve talimatları takip edin.",
     "PricingDashboard_Method_SuggestedPrice": "Önerilen dönüştürme:",
     "PricingDashboard_Method_SuggestedPrice_ttip": "Bu fiyat, yukarıda seçilen dönüştürme yöntemine ve %1$s tutarındaki USD fiyatına göre önerilmiştir.",
-    "dummy": "dummy",
-    "empty_no_trailing_comma": ""
+    "dummy": "dummy"
 }

@@ -4881,6 +4881,16 @@
                     br: y.qM.readUint32,
                     bw: y.gp.writeUint32,
                   },
+                  fest_page_views: {
+                    n: 10,
+                    br: y.qM.readUint32,
+                    bw: y.gp.writeUint32,
+                  },
+                  fest_period_page_views: {
+                    n: 11,
+                    br: y.qM.readUint32,
+                    bw: y.gp.writeUint32,
+                  },
                 },
               }),
             Ne.sm_m

@@ -56,6 +56,5 @@
     "SinglePricingPackage_Intro_2b": "若為不常見的美元定價，則直接在美元價格欄位內填入數值。接著點擊「轉換價格…」按鈕並依步驟進行。",
     "PricingDashboard_Method_SuggestedPrice": "轉換後建議定價：",
     "PricingDashboard_Method_SuggestedPrice_ttip": "此定價是根據上方所選的轉換方式和 %1$s 的美元定價所建議的。",
-    "dummy": "dummy",
-    "empty_no_trailing_comma": ""
+    "dummy": "dummy"
 }

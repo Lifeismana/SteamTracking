@@ -334,11 +334,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        Reset: "_3A_c3YHYd4YIjA8Y-olnPl",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         GlobalFooter: "_291ttHtxyu5obiKzor2G9G",
         LegalNotice: "_1y5BgqyS1zWfS5kYC34pV9",
         LogoLinks: "_12bkgGAkxHc79lKMb7rK88",
@@ -938,9 +933,6 @@
         depth: 0,
       });
       var _ = __webpack_require__("chunkid");
-      function _() {
-        return _.Reset;
-      }
       function _(_) {
         const { level: _ = "auto", className: _, color: _ } = _,
           _ = (function (_, _) {
@@ -962,7 +954,7 @@
           ..._(
             {
               ..._,
-              className: _()(_(), _.Heading, _),
+              className: _()((0, _._)(), _.Heading, _),
             },
             _,
           ),
@@ -1017,7 +1009,7 @@
           _ = _(
             {
               ..._,
-              className: _()(_.Box, _(), _.className),
+              className: _()(_.Box, (0, _._)(), _.className),
             },
             _,
           ),
@@ -1200,7 +1192,7 @@
                 variant: (0, _._)("Button", _),
                 size: _,
                 minWidth: _,
-                className: _()(_.Button, _ && _.Icon, _()),
+                className: _()(_.Button, _ && _.Icon, (0, _._)()),
               },
               _,
             );
@@ -1379,6 +1371,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _.createContext)(null);
       function _(_) {
@@ -1399,7 +1392,7 @@
         );
         const _ = _.useRef(void 0);
         return (
-          (0, _._)(_, !!_.current, !1),
+          (0, _._)(_, !0, !0),
           (0, _.jsx)(_._, {
             navID: "Popover",
             onCancelButton: () => _.floating.context.onOpenChange(!1),
@@ -1502,39 +1495,55 @@
             _ = (function (_) {
               const {
                 open: _,
-                onOpenChange: _,
-                placement: _,
                 interactions: _ = {},
+                width: _,
+                maxHeight: _,
+                gutter: _,
+                scroll: _,
               } = _;
               let _ = _;
               0;
-              const _ = (0, _._)({
-                  open: _,
-                  onOpenChange: _,
-                  middleware: _(_),
-                  whileElementsMounted: _._,
-                  placement: _ && "object" == typeof _ ? _.initial : _,
-                  strategy: "fixed",
-                  platform: {
-                    ..._._,
-                    getOffsetParent: (_) =>
-                      _?.ownerDocument?.defaultView ?? window,
-                  },
-                }),
+              const _ = (0, _._)(_.presentation),
+                _ = (function (_, _, _) {
+                  const { onOpenChange: _, placement: _ } = _,
+                    _ = "anchor" === _;
+                  return (0, _._)({
+                    open: _,
+                    onOpenChange: _,
+                    middleware: _ ? _(_) : [],
+                    whileElementsMounted: _ ? _._ : void 0,
+                    placement: _ && "object" == typeof _ ? _.initial : _,
+                    strategy: "fixed",
+                    platform: {
+                      ..._._,
+                      getOffsetParent: (_) =>
+                        _?.ownerDocument?.defaultView ?? window,
+                    },
+                  });
+                })(_, _, _),
                 _ = {
                   enabled: !!_.click,
                 },
-                _ = "function" == typeof _.click ? _.click(_) : _,
+                _ =
+                  "function" == typeof _.click
+                    ? __webpack_require__.click(_)
+                    : _,
                 _ = (0, _._)(_.context, _),
                 _ = {
                   enabled: !!_.focus,
                 },
-                _ = "function" == typeof _.focus ? _.focus(_) : _,
+                _ =
+                  "function" == typeof _.focus
+                    ? __webpack_require__.focus(_)
+                    : _,
                 _ = (0, _._)(_.context, _),
                 _ = {
                   handleClose: (0, _._)(),
                 },
-                _ = "function" == typeof _.hover ? _.hover(_) : _,
+                _ =
+                  "function" == typeof _.hover
+                    ? __webpack_require__.hover(_)
+                    : _,
                 _ = (0, _._)(_.context, {
                   enabled: !!_.hover,
                   ..._,
@@ -1551,6 +1560,13 @@
                 getFloatingProps: _,
                 getReferenceProps: _,
                 open: _,
+                presentation: _,
+                sizing: {
+                  width: _,
+                  maxHeight: _,
+                  gutter: _,
+                  scroll: _,
+                },
               };
             })(_);
           return (0, _.jsx)(_.Provider, {
@@ -1575,13 +1591,9 @@
             : null;
         },
         Positioner: function (_) {
-          const { children: _, className: _, ref: _ } = _,
+          const { children: _, className: _, ref: _, label: _ } = _,
             _ = (0, _.useContext)(_),
-            _ = (0, _._)([
-              _,
-              _?.floating.refs.setFloating,
-              (_) => _?.showPopover?.(),
-            ]);
+            _ = (0, _._)([_, _?.floating.refs.setFloating]);
           if (!_)
             return (
               console.error(
@@ -1592,20 +1604,23 @@
           if (!_.open) return null;
           let _ = _.Children.only(_),
             _ = _.Fragment;
-          _.type == _.FocusManager &&
-            ((_ = _.Children.only(_.props.children)), (_ = _));
-          const _ = (0, _.cloneElement)(_, {
-            ref: _,
-            style: {
-              ..._.floating.floatingStyles,
-            },
-            className: _()(_(), _),
-            popover: "manual",
-            ..._.getFloatingProps(),
-          });
-          return (0, _.jsx)(_, {
-            children: _,
-          });
+          return (
+            _.type == _.FocusManager &&
+              ((_ = _.Children.only(_.props.children)), (_ = _)),
+            (0, _.jsx)(_, {
+              children: (0, _.jsx)(_._, {
+                presentation: _.presentation,
+                sizing: _.sizing,
+                floatingRef: _,
+                floatingProps: _.getFloatingProps(),
+                floatingStyles: _.floating.floatingStyles,
+                referenceElement: _.floating.elements.domReference,
+                className: _()((0, _._)(), _),
+                label: _,
+                children: _,
+              }),
+            })
+          );
         },
         FocusManager: _,
       };
@@ -1641,6 +1656,7 @@
               );
             },
           },
+          presentation: "anchor",
           ..._,
           children: [
             (0, _.jsx)(_.Anchor, {

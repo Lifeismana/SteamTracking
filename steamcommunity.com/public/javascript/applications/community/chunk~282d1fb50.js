@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-  [7062],
+  [97062],
   {
     30253: (e) => {
       e.exports = {
@@ -67,7 +67,7 @@
         r.d(t, {
           ReportedSubjectList: () => k,
           default: () => v,
-          useCommentThread: () => N,
+          useCommentThread: () => w,
         });
       var o = r(7850),
         s = r(90182),
@@ -88,7 +88,7 @@
         j = r(52038);
       function v(e) {
         const t = (0, s.w3)({ subject_type: a.lN, topic: e.gidTopic }),
-          r = N(e.clanSteamID, l.Bv, e.gidForum, e.gidTopic);
+          r = w(e.clanSteamID, l.Bv, e.gidForum, e.gidTopic);
         return (0, o.jsx)(k, {
           subjectType: a.lN,
           subjectGroupQuery: t,
@@ -316,7 +316,7 @@
           ],
         });
       }
-      function N(e, t, r, o) {
+      function w(e, t, r, o) {
         const s = (0, m.KV)();
         return (0, f.I)({
           queryKey: ["comment_thread", e, t, r, o],
@@ -336,16 +336,18 @@
     90182: (e, t, r) => {
       "use strict";
       r.d(t, {
-        EC: () => S,
-        KQ: () => g,
+        EC: () => w,
+        KQ: () => S,
         Kt: () => y,
         Ky: () => h,
         N8: () => v,
+        OI: () => m,
+        YL: () => k,
         c3: () => N,
         lY: () => j,
         w3: () => p,
-        wy: () => x,
-        y4: () => k,
+        wy: () => g,
+        y4: () => x,
       });
       var o = r(37085),
         s = r(56545),
@@ -445,7 +447,30 @@
           },
         });
       }
-      function k(e, t) {
+      function k(e) {
+        const t = (0, l.jE)(),
+          r = (0, i.KV)();
+        return (0, d.n)({
+          mutationKey: ["release_subject", ...e],
+          mutationFn: async () => {
+            const t = s.w.Init(n.GD);
+            for (const r of e) {
+              const e = new n.F9();
+              e.set_reported_content_id(r), t.Body().add_subjects_to_release(e);
+            }
+            const o = await n.fL.ReleaseSubjects(r, t);
+            if (!o.BSuccess()) throw new Error("EResult " + o.GetEResult());
+          },
+          onSuccess: async () => {
+            await Promise.all([
+              t.invalidateQueries({ queryKey: ["get_claimed"] }),
+              t.invalidateQueries({ queryKey: ["get_subject_overview"] }),
+              ...e.map((e) => h(t, e)),
+            ]);
+          },
+        });
+      }
+      function x(e, t) {
         const r = (0, i.KV)(),
           o = (0, l.jE)();
         return (0, d.n)({
@@ -460,7 +485,7 @@
           },
         });
       }
-      function x(e, t) {
+      function g(e, t) {
         const r = (0, l.jE)(),
           o = (0, i.KV)();
         return (0, d.n)({
@@ -476,7 +501,7 @@
           },
         });
       }
-      function g(e) {
+      function S(e) {
         const t = (0, i.KV)();
         return (0, a.I)(
           (function (e, t) {
@@ -493,7 +518,7 @@
           })(t, e),
         );
       }
-      function S(e, t, r) {
+      function w(e, t, r) {
         const o = (0, i.KV)(),
           n = (0, l.jE)();
         return (0, d.n)({

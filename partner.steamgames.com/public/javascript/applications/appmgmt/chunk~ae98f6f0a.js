@@ -61,6 +61,63 @@
         RightPanel: "_1QYBs5PGw6PClZRx9WNL6z",
       };
     },
+    69273: (e, t, a) => {
+      "use strict";
+      a.d(t, { Pm: () => u, d$: () => p, tB: () => d });
+      var r = a(7850),
+        n = a(45699),
+        s = a(66418),
+        o = a(15759),
+        i = a(55963),
+        l = a(32754),
+        m = a(61336);
+      function c(e, t) {
+        return (0, o.p)(
+          e,
+          (function (e) {
+            const t = e?.jsondata?.read_more_link;
+            if (!t) return;
+            const a = (0, m.wm)(t).toLocaleLowerCase();
+            return a ? [a] : void 0;
+          })(t),
+        );
+      }
+      function d(e, t) {
+        if (!e) return "";
+        if (!(0, o.p)(e)) return (0, m.NT)(e);
+        const a = c(e, t) ? (0, o.E)(e) : e;
+        return (s.TS.IN_CLIENT ? "steam://openurl_external/" : "") + a;
+      }
+      function u(e, t, a) {
+        const n = e.toLowerCase().startsWith("http") ? e : "http://" + e;
+        return (0, r.jsx)(p, { url: n, event: t, children: a || e });
+      }
+      const p = (e) => {
+        const { url: t, event: a, className: s, style: c } = e;
+        let u = (0, i.OZ)(t);
+        u = d(u, a);
+        const p = (0, o.p)(u) ? "noopener nofollow" : void 0,
+          h =
+            "string" == typeof e.children &&
+            e.children.length > 0 &&
+            t &&
+            !t.startsWith("steam://")
+              ? (0, m.Qz)(t)
+              : void 0;
+        return (0, r.jsx)(l.Gq, {
+          toolTipContent: h,
+          direction: "top",
+          children: (0, r.jsx)(n.Ii, {
+            className: s,
+            href: u,
+            rel: p,
+            id: e.id,
+            style: c,
+            children: e.children,
+          }),
+        });
+      };
+    },
     27939: (e, t, a) => {
       "use strict";
       a.d(t, {
@@ -295,110 +352,46 @@
         return s.A.AddNavParamToURL(t, n, o);
       }
     },
-    6866: (e, t, a) => {
-      "use strict";
-      a.d(t, { Pm: () => u, d$: () => p, tB: () => d });
-      var r = a(7850),
-        n = a(15759),
-        s = a(55963),
-        o = a(32754),
-        i = a(61336),
-        l = a(78327),
-        m = a(45699);
-      function c(e, t) {
-        return (0, n.p)(
-          e,
-          (function (e) {
-            if (!e) return;
-            let t = e?.jsondata?.read_more_link
-              ? (0, i.wm)(e.jsondata.read_more_link).toLocaleLowerCase()
-              : void 0;
-            return t ? [t] : void 0;
-          })(t),
-        );
-      }
-      function d(e, t) {
-        return e
-          ? (e = (0, n.p)(e)
-              ? c(e, t)
-                ? (l.TS.IN_CLIENT ? "steam://openurl_external/" : "") +
-                  (0, n.E)(e)
-                : (l.TS.IN_CLIENT ? "steam://openurl_external/" : "") + e
-              : (0, i.NT)(e))
-          : "";
-      }
-      function u(e, t, a) {
-        let n = e;
-        return (
-          n.toLowerCase().startsWith("http") || (n = "http://" + n),
-          (0, r.jsx)(p, { url: n, event: t, children: a || e })
-        );
-      }
-      const p = (e) => {
-        const { url: t, event: a, className: l, style: c } = e;
-        let u,
-          p = (0, s.OZ)(t);
-        (p = d(p, a)), (0, n.p)(p) && (u = "noopener nofollow");
-        const h =
-          "string" == typeof e.children &&
-          e.children.length > 0 &&
-          t &&
-          !t.startsWith("steam://")
-            ? (0, i.Qz)(t)
-            : void 0;
-        return (0, r.jsx)(o.Gq, {
-          toolTipContent: h,
-          direction: "top",
-          children: (0, r.jsx)(m.Ii, {
-            className: l,
-            href: p,
-            rel: u,
-            id: e.id,
-            style: c,
-            children: e.children,
-          }),
-        });
-      };
-    },
     55963: (e, t, a) => {
       "use strict";
       a.d(t, {
-        Ay: () => b,
-        It: () => p,
-        L3: () => h,
-        OZ: () => d,
-        k2: () => c,
-        wJ: () => u,
+        Ay: () => g,
+        It: () => h,
+        L3: () => b,
+        OZ: () => u,
+        k2: () => d,
+        wJ: () => p,
       });
       var r = a(60014),
         n = a(3578),
         s = a(81393),
         o = a(61336),
         i = a(30470),
-        l = a(90626),
-        m = a(26205);
-      function c(e, t = "", a = null) {
-        return b.InstrumentLink(e, t, a);
+        l = a(66418),
+        m = a(90626),
+        c = a(26205);
+      function d(e, t = "", a = null) {
+        return g.InstrumentLink(e, t, a);
       }
-      function d(e, t, a) {
+      function u(e, t, a) {
         const n = (0, r.n9)();
-        return l.useMemo(() => {
+        return m.useMemo(() => {
           const s = (0, o.wm)(e).toLowerCase(),
-            l = (0, o.wm)(i.TS.COMMUNITY_BASE_URL).toLowerCase(),
-            m = (0, o.wm)(i.TS.STORE_BASE_URL).toLowerCase();
-          return s === l || s === m ? (0, r.bV)(n, e, t, a) : e;
+            i = (0, o.wm)(l.TS.COMMUNITY_BASE_URL).toLowerCase(),
+            m = (0, o.wm)(l.TS.STORE_BASE_URL).toLowerCase();
+          return s === i || s === m ? (0, r.bV)(n, e, t, a) : e;
         }, [n, e, t, a]);
       }
-      function u(e, t, a = null) {
-        const r = h(t, a),
+      function p(e, t, a = null) {
+        const r = b(t, a),
           s = t ? n.A.GetCuratorClanIDParam(t) : null;
         return n.A.AddNavParamToURL(e, r, s);
       }
-      function p(e, t, a, r = null) {
-        const n = u(e, t, r);
+      function h(e, t, a, r = null) {
+        const n = p(e, t, r);
         if (a && Object.keys(a).length > 0)
           try {
-            const e = new URL((0, m.S)(n)),
+            const e = new URL((0, c.S)(n)),
               t = new URLSearchParams(e.search);
             return (
               Object.entries(a).forEach(([e, a]) => {
@@ -411,32 +404,32 @@
           }
         return n;
       }
-      function h(e, t = null) {
-        return e?.domain ? b.GetLinkParam(e, t) : i.TS.SNR;
+      function b(e, t = null) {
+        return e?.domain ? g.GetLinkParam(e, t) : i.TS.SNR;
       }
-      class b {
+      class g {
         static sm_strDomain;
         static sm_strController;
         static sm_strMethod;
         static sm_strSubmethod;
         static sm_strComputedLinkPrefix;
         static SetNavEventParams(e, t, a = null, r = null) {
-          (b.sm_strDomain = e),
-            (b.sm_strController = t),
-            (b.sm_strMethod = a),
-            (b.sm_strSubmethod = r),
-            (b.sm_strComputedLinkPrefix = null);
+          (g.sm_strDomain = e),
+            (g.sm_strController = t),
+            (g.sm_strMethod = a),
+            (g.sm_strSubmethod = r),
+            (g.sm_strComputedLinkPrefix = null);
         }
         static GetDefaultParams() {
-          let e = { domain: b.sm_strDomain, controller: b.sm_strController };
+          let e = { domain: g.sm_strDomain, controller: g.sm_strController };
           return (
-            b.sm_strMethod && (e.method = b.sm_strMethod),
-            b.sm_strSubmethod && (e.submethod = b.sm_strSubmethod),
+            g.sm_strMethod && (e.method = g.sm_strMethod),
+            g.sm_strSubmethod && (e.submethod = g.sm_strSubmethod),
             e
           );
         }
         static InstrumentLink(e, t, a = null) {
-          const r = b.GetLinkParam(t, a),
+          const r = g.GetLinkParam(t, a),
             s = "string" != typeof t ? n.A.GetCuratorClanIDParam(t) : null;
           return n.A.AddNavParamToURL(e, r, s);
         }
@@ -446,19 +439,19 @@
             if (e.domain) return n.A.GetSNRLinkParam(e, t);
             a = e.feature || "";
           }
-          if (!b.sm_strComputedLinkPrefix && !b.ComputeStaticLinkPrefix())
+          if (!g.sm_strComputedLinkPrefix && !g.ComputeStaticLinkPrefix())
             return null;
-          r = b.sm_strComputedLinkPrefix;
+          r = g.sm_strComputedLinkPrefix;
           let s = n.A.EncodeEventComponent(a);
           return s && ((r += "_" + s), t && (r += "_" + t)), r;
         }
         static ComputeStaticLinkPrefix() {
-          return b.sm_strDomain
-            ? ((b.sm_strComputedLinkPrefix = n.A.ComputeLinkPrefix(
-                b.sm_strDomain,
-                b.sm_strController,
-                b.sm_strMethod,
-                b.sm_strSubmethod,
+          return g.sm_strDomain
+            ? ((g.sm_strComputedLinkPrefix = n.A.ComputeLinkPrefix(
+                g.sm_strDomain,
+                g.sm_strController,
+                g.sm_strMethod,
+                g.sm_strSubmethod,
               )),
               !0)
             : ((0, s.wT)(

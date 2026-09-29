@@ -56,6 +56,5 @@
     "SinglePricingPackage_Intro_2b": "如果想采用不常用的美元价格，请在美元价格字段中输入一个值， 然后点击“转换价格…”按钮并按照说明进行操作。",
     "PricingDashboard_Method_SuggestedPrice": "建议转换价格：",
     "PricingDashboard_Method_SuggestedPrice_ttip": "此价格是基于上面选择的转换方法和 %1$s 的美元价格而生成的。",
-    "dummy": "dummy",
-    "empty_no_trailing_comma": ""
+    "dummy": "dummy"
 }

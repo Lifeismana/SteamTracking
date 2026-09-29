@@ -1,5 +1,5 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-  [9118],
+  [79118],
   {
     chunkid: (module) => {
       module.exports = {
@@ -69,6 +69,16 @@
     },
     chunkid: (module) => {
       module.exports = {
+        PreviewYouTubeVideo: "uT9FPw-RIxscziWGUKvsY",
+        sizeThumb: "_34JfgvTZH0JwSWKnwpT5tf",
+        sizeFull: "_2i-wrmaduZQDwFtlSpRG5b",
+        PlaceholderImg: "wJ2r7A6UK2WbDVoNBgd36",
+        floatLeft: "_3uqwDPu50ujydI4AiMemeN",
+        floatRight: "_29hzTH-jljX8p2qXboZbXW",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         "duration-app-launch": "800ms",
         Picker: "tid_OE5NJWCCVJQP1PfRc",
         Tabs: "_1yVkTX9Mo_7qb2sxWhM0Cr",
@@ -96,16 +106,6 @@
         "ItemFocusAnim-green": "_26b32AeDG8ENv_LcSS6SPE",
         focusAnimation: "NrCY5qgGbXyh_LeVWegvW",
         hoverAnimation: "ECWcgkTWpWeZLs6-rszlL",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        PreviewYouTubeVideo: "rUASsQgg0rvqoACIDRygZ",
-        sizeThumb: "_3dy3KtMG10uNhU2HRfwx3A",
-        sizeFull: "_14CxWorQ1RNkZvdhXYWAh-",
-        PlaceholderImg: "LILNdsmSgG52f0MP1f2O3",
-        floatLeft: "_2OWxr5tZIjB4gTfA3vE2Gc",
-        floatRight: "om0Rs75g2ScLGnDWC76IQ",
       };
     },
     chunkid: (module) => {
@@ -155,6 +155,93 @@
         Clock: "_16xcLj__xBHmc9xDYmADhW",
         EmoticonItem: "P1aWuK_DhstDh-M08okCK",
       };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        return (0, _._)(
+          _,
+          (function (_) {
+            var _;
+            const _ =
+              null === (_ = null == _ ? void 0 : _.jsondata) || void 0 === _
+                ? void 0
+                : _.read_more_link;
+            if (!_) return;
+            const _ = (0, _._)(_).toLocaleLowerCase();
+            return _ ? [_] : void 0;
+          })(_),
+        );
+      }
+      function _(_, _) {
+        if (!_) return "";
+        if (!(0, _._)(_)) return (0, _._)(_);
+        const _ = _(_, _) ? (0, _._)(_) : _;
+        return (_._.IN_CLIENT ? "steam://openurl_external/" : "") + _;
+      }
+      function _(_, _, _) {
+        const _ = _.toLowerCase().startsWith("http") ? _ : "http://" + _;
+        return (0, _.jsx)(_, {
+          url: _,
+          event: _,
+          children: _ || _,
+        });
+      }
+      const _ = (_) => {
+        const { url: _, event: _, className: _, style: _ } = _;
+        let _ = (0, _._)(_);
+        _ = _(_, _);
+        const _ = (0, _._)(_) ? "noopener nofollow" : void 0,
+          _ =
+            "string" == typeof _.children &&
+            _.children.length > 0 &&
+            _ &&
+            !_.startsWith("steam://")
+              ? (0, _._)(_)
+              : void 0;
+        return (0, _.jsx)(_._, {
+          toolTipContent: _,
+          direction: "top",
+          children: (0, _.jsx)(_._, {
+            className: _,
+            href: _,
+            rel: _,
+            _: _._,
+            style: _,
+            children: _.children,
+          }),
+        });
+      };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      function _(_) {
+        if (!_) return _;
+        const _ = _.trim(),
+          _ = _.replace(/^[\u0000-\u0020]+/, "")
+            .replace(/[\t\n\r]/g, "")
+            .toLowerCase();
+        return __webpack_require__.startsWith("javascript:") ||
+          __webpack_require__.startsWith("data:") ||
+          __webpack_require__.startsWith("vbscript:")
+          ? ""
+          : _;
+      }
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -333,6 +420,144 @@
           })(_),
         );
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        return _ == _.full
+          ? _().sizeFull
+          : (0, _._)(
+              _().sizeThumb,
+              _ == _.left ? _().floatLeft : _().floatRight,
+            );
+      }
+      function _(_) {
+        var _, _, _;
+        const {
+            videoID: _,
+            bShowVideoImmediately: _,
+            bAutoPlay: _,
+            nStartSeconds: _,
+            align: _ = _.full,
+          } = _,
+          [_, _] = (0, _.useState)(!_),
+          { data: _, isSuccess: _ } = (0, _._)(_, _);
+        if (_) {
+          const _ =
+              null !== (_ = null == _ ? void 0 : _.title) && void 0 !== _
+                ? _
+                : (0, _._)("#Loading"),
+            _ =
+              null !== (_ = null == _ ? void 0 : _.views) && void 0 !== _
+                ? _
+                : "0",
+            _ =
+              null !== (_ = null == _ ? void 0 : _.description) && void 0 !== _
+                ? _
+                : "",
+            _ = () => _(!1),
+            _ = (_) => {
+              ("Enter" != _.key && " " != _.key) || (_.preventDefault(), _());
+            };
+          return (0, _.jsxs)("div", {
+            className: _._.Box,
+            role: "button",
+            tabIndex: 0,
+            onClick: _,
+            onKeyDown: _,
+            children: [
+              (0, _.jsx)(_._, {
+                strURL: "https://img.youtube.com/vi/" + _ + "/0.jpg",
+              }),
+              (0, _.jsxs)(_._, {
+                children: [
+                  (0, _.jsx)(_._, {
+                    children: (0, _._)("#EventEditor_YouTubeVideoTitle", _),
+                  }),
+                  (0, _.jsx)(_._, {
+                    children: (0, _._)(
+                      "#EventEditor_YouTubeVideoViews",
+                      (0, _._)(Number(_)),
+                    ),
+                  }),
+                  (0, _.jsxs)(_._, {
+                    children: [
+                      _ && _,
+                      !_ &&
+                        (0, _.jsx)(_._, {
+                          size: "medium",
+                        }),
+                    ],
+                  }),
+                ],
+              }),
+            ],
+          });
+        }
+        return (0, _.jsx)(_._, {
+          video: _,
+          children: (0, _.jsxs)("div", {
+            className: (0, _._)(_().PreviewYouTubeVideo, _(_)),
+            _: _,
+            children: [
+              (0, _.jsx)("img", {
+                className: _().PlaceholderImg,
+                alt: "",
+                src:
+                  _._.COMMUNITY_CDN_URL +
+                  "public/shared/images/responsive/youtube_16x9_placeholder.gif",
+              }),
+              (0, _.jsx)(_._, {
+                video: _,
+                autoplay: null != _ && _,
+                startSeconds: _,
+                controls: !0,
+                playsInline: !0,
+                autopause: !0,
+                showFullscreenBtn: !0,
+              }),
+            ],
+          }),
+        });
+      }
+      function _(_, _) {
+        if (_._.EREALM === _._.k_ESteamRealmChina) return null;
+        const _ = (0, _._)(_);
+        return void 0 !== (null == _ ? void 0 : _.strVideoID)
+          ? (0, _.jsx)(_, {
+              videoID: _.strVideoID,
+              nStartSeconds: _.nStartSeconds,
+              bShowVideoImmediately: !1,
+            })
+          : (0, _._)(_, null == _ ? void 0 : _.event);
+      }
+      !(function (_) {
+        (_.left = "leftthumb"),
+          (_.right = "rightthumb"),
+          (_.full = "full"),
+          (_.summary = "summary");
+      })(_ || (_ = {}));
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -2140,6 +2365,212 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ {
+        constructor() {
+          (this.m_bUserHasVolumePreference = !1),
+            (this.m_flVolumePreference = 0);
+        }
+        BUserHasVolumePreference() {
+          return this.m_bUserHasVolumePreference;
+        }
+        SetVolumePreference(_) {
+          (this.m_flVolumePreference = _),
+            (this.m_bUserHasVolumePreference = !0);
+        }
+        GetVolumePreference() {
+          return this.m_flVolumePreference;
+        }
+        BVolumePreferenceMuted() {
+          return this.m_flVolumePreference < 0.001;
+        }
+        static Get() {
+          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
+        }
+      }
+      const _ = (0, _.forwardRef)(function (_, _) {
+        const {
+            video: _,
+            bAutoPlay: _,
+            bControls: _,
+            bLoop: _,
+            bMuted: _,
+            className: _,
+            mediaScale: _,
+            flAspectRatio: _,
+            onClick: _,
+            altText: _,
+          } = _,
+          _ = (0, _.useMemo)(() => {
+            var _;
+            return Boolean(
+              null === (_ = _.rgVideoTracks) || void 0 === _
+                ? void 0
+                : _.some(
+                    (_) => "subtitles" == _.sKind || "captions" == _.sKind,
+                  ),
+            );
+          }, [_.rgVideoTracks]),
+          [_, _] = _.useState(!1),
+          _ = (function () {
+            const _ = window.location.href,
+              _ = [
+                _._.STORE_BASE_URL,
+                _._.COMMUNITY_BASE_URL,
+                _._.PARTNER_BASE_URL,
+                _._.HELP_BASE_URL,
+                _._.STATS_BASE_URL,
+                _._.STORE_CHECKOUT_BASE_URL,
+              ].find((_) => _ && _.startsWith(_));
+            if (_) return _;
+            try {
+              return new URL(_).origin + "/";
+            } catch {
+              return "unknown";
+            }
+          })();
+        if (!_.rgVideoSources || !_.rgVideoSources.length) return null;
+        const _ = (function (_) {
+          return !(
+            (!(0, _._)(_.sPoster) && !(0, _._)(_.sPoster)) ||
+            (_.rgVideoSources &&
+              _.rgVideoSources.some((_) => !(0, _._)(_.sURL))) ||
+            (_.rgVideoTracks && _.rgVideoTracks.some((_) => !(0, _._)(_.sURL)))
+          );
+        })(_);
+        let _;
+        (!_ || (_ && _._.EUNIVERSE == _.wLO)) && (_ = "anonymous");
+        const _ = _ || (_ && _.Get().BVolumePreferenceMuted()),
+          _ = _.sPoster ? _(_.sPoster, _) : "";
+        return (0, _.jsxs)("video", {
+          width: "100%",
+          height: "auto",
+          autoPlay: _,
+          muted: _,
+          playsInline: !0,
+          controls: _,
+          poster: _,
+          loop: _,
+          crossOrigin: _,
+          onVolumeChange: (_) => {
+            const _ = _.target,
+              _ = _.muted ? 0 : _.volume;
+            _ && _.Get().SetVolumePreference(_);
+          },
+          onPlay: (_) => {
+            const _ = _.target,
+              _ = 0 == _.currentTime,
+              _ = _.Get().BUserHasVolumePreference();
+            if ((_(!0), _))
+              if (_ || _)
+                _ &&
+                  ((_.volume = _.Get().GetVolumePreference()),
+                  (_.muted = _.Get().BVolumePreferenceMuted()));
+              else {
+                const _ = _.muted ? 0 : _.volume;
+                _.Get().SetVolumePreference(_);
+              }
+          },
+          ref: _,
+          className: _,
+          onClick: _,
+          "aria-label": _,
+          style: {
+            width: _ && _ >= 1 && _ < 100 ? `${_}%` : void 0,
+            aspectRatio: _ || void 0,
+          },
+          children: [
+            (0, _.jsx)(_, {
+              rgVideoSources: _.rgVideoSources,
+              strCacheBreakOrigin: _,
+            }),
+            (0, _.jsx)(_, {
+              rgVideoTracks: _.rgVideoTracks,
+              strCacheBreakOrigin: _,
+            }),
+          ],
+        });
+      });
+      function _(_, _) {
+        if (_) {
+          if ((0, _._)(_)) return _;
+          try {
+            const _ = new URL(_);
+            return (
+              (_.search = (_.search ? _.search + "&" : "?") + "origin=" + _),
+              __webpack_require__.toString()
+            );
+          } catch {
+            return _;
+          }
+        }
+      }
+      function _(_) {
+        const { rgVideoSources: _, strCacheBreakOrigin: _ } = _;
+        return _.filter((_) => Boolean(_.sURL)).map((_) =>
+          (0, _.jsx)(
+            "source",
+            {
+              src: _(_.sURL, _),
+              type: _.sFormat,
+            },
+            _.sURL,
+          ),
+        );
+      }
+      function _(_) {
+        const { rgVideoTracks: _, strCacheBreakOrigin: _ } = _;
+        return _
+          ? _.map((_, _) =>
+              (0, _.jsx)(
+                _,
+                {
+                  track: _,
+                  rgVideoTracks: _,
+                  strCacheBreakOrigin: _,
+                },
+                _,
+              ),
+            )
+          : null;
+      }
+      function _(_) {
+        const { track: _, rgVideoTracks: _, strCacheBreakOrigin: _ } = _;
+        let _ = _.eLanguage;
+        if (_._.EREALM == _._.k_ESteamRealmChina)
+          if (_._.IsELanguageValidInRealm(_, _._.k_ESteamRealmChina))
+            _ = _._.GetELanguageFallback(_);
+          else {
+            if (_ !== _.NFp) return null;
+            if (
+              __webpack_require__.find(
+                (_) => _._.GetELanguageFallback(_.eLanguage) === _,
+              )
+            )
+              return null;
+          }
+        else if (!_._.IsELanguageValidInRealm(_, _._.k_ESteamRealmGlobal))
+          return null;
+        return (0, _.jsx)("track", {
+          src: _(_.sURL, _),
+          kind: _.sKind,
+          default: _.bDefault,
+          srcLang: (0, _.wwZ)(_),
+          label: (0, _._)(_),
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -2155,8 +2586,8 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3381,14 +3812,10 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-        _: () => _,
-        _: () => _,
+        _: () => _._,
         _: () => _,
       });
-      var _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3399,12 +3826,6 @@
         return _._.EREALM === _._.k_ESteamRealmChina;
       }
       function _(_) {
-        return {
-          sizeStr: _ == _.full ? _.sizeFull : _.sizeThumb,
-          alignStr: _ == _.full ? "" : _ == _.left ? _.floatLeft : _.floatRight,
-        };
-      }
-      function _(_) {
         if (_()) return null;
         let _ = (0, _._)(_.args);
         if (_) {
@@ -3412,11 +3833,9 @@
           if (2 == _.length) {
             let _ = _[0],
               _ = _[1].toLocaleLowerCase();
-            const { sizeStr: _, alignStr: _ } = _(_);
             return (0, _.jsx)(_._, {
               videoID: _,
-              classNameAlign: _,
-              classNameSize: _,
+              align: _,
               bShowVideoImmediately: !0,
             });
           }
@@ -3424,136 +3843,15 @@
         return (0, _.jsx)(_.Fragment, {});
       }
       function _(_) {
-        if (_()) return null;
-        const _ = (0, _._)(_);
-        return void 0 !== (null == _ ? void 0 : _.strVideoID)
-          ? (0, _.jsx)(_._, {
-              videoID: _.strVideoID,
-              nStartSeconds: _.nStartSeconds,
-              classNameAlign: "",
-              classNameSize: _.sizeFull,
-              bShowVideoImmediately: !1,
-            })
-          : _;
-      }
-      function _(_) {
         if (_() || "CN" == _._.COUNTRY.toLocaleUpperCase()) return (0, _._)(_);
         const _ = (0, _._)(_.args, "youtubeid"),
           _ = (0, _._)(_.args, "size"),
-          _ = (0, _._)(_.args, "seconds"),
-          { sizeStr: _, alignStr: _ } = _(_);
+          _ = (0, _._)(_.args, "seconds");
         return (0, _.jsx)(_._, {
           videoID: _,
           nStartSeconds: _ ? Number.parseInt(_) : void 0,
-          classNameAlign: _,
-          classNameSize: _,
+          align: _,
           bShowVideoImmediately: !0,
-        });
-      }
-      !(function (_) {
-        (_.left = "leftthumb"),
-          (_.right = "rightthumb"),
-          (_.full = "full"),
-          (_.summary = "summary");
-      })(_ || (_ = {}));
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        var _, _, _;
-        const {
-            videoID: _,
-            bShowVideoImmediately: _,
-            bAutoPlay: _,
-            nStartSeconds: _,
-            classNameSize: _,
-            classNameAlign: _,
-          } = _,
-          [_, _] = (0, _.useState)(!_),
-          { data: _, isSuccess: _ } = (0, _._)(_, _);
-        if (_) {
-          const _ =
-              null !== (_ = null == _ ? void 0 : _.title) && void 0 !== _
-                ? _
-                : (0, _._)("#Loading"),
-            _ =
-              null !== (_ = null == _ ? void 0 : _.views) && void 0 !== _
-                ? _
-                : "0",
-            _ =
-              null !== (_ = null == _ ? void 0 : _.description) && void 0 !== _
-                ? _
-                : "";
-          return (0, _.jsxs)("div", {
-            className: _._.Box,
-            onClick: () => _(!1),
-            children: [
-              (0, _.jsx)(_._, {
-                strURL: "https://img.youtube.com/vi/" + _ + "/0.jpg",
-              }),
-              (0, _.jsxs)(_._, {
-                children: [
-                  (0, _.jsx)(_._, {
-                    children: (0, _._)("#EventEditor_YouTubeVideoTitle", _),
-                  }),
-                  (0, _.jsx)(_._, {
-                    children: (0, _._)(
-                      "#EventEditor_YouTubeVideoViews",
-                      (0, _._)(Number(_)),
-                    ),
-                  }),
-                  (0, _.jsxs)(_._, {
-                    children: [
-                      _ && _,
-                      !_ &&
-                        (0, _.jsx)(_._, {
-                          size: "medium",
-                        }),
-                    ],
-                  }),
-                ],
-              }),
-            ],
-          });
-        }
-        return (0, _.jsx)(_._, {
-          video: _,
-          children: (0, _.jsxs)("div", {
-            className: (0, _._)(_().PreviewYouTubeVideo, _, _),
-            _: _,
-            children: [
-              (0, _.jsx)("img", {
-                className: _().PlaceholderImg,
-                src:
-                  _._.COMMUNITY_CDN_URL +
-                  "public/shared/images/responsive/youtube_16x9_placeholder.gif",
-              }),
-              (0, _.jsx)(_._, {
-                video: _,
-                autoplay: null != _ && _,
-                startSeconds: _,
-                controls: !0,
-                playsInline: !0,
-                autopause: !0,
-                showFullscreenBtn: !0,
-              }),
-            ],
-          }),
         });
       }
     },
@@ -4925,221 +5223,6 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
-      function _(_) {
-        if (!_) return _;
-        const _ = _.trim(),
-          _ = _.toLowerCase();
-        return __webpack_require__.startsWith("javascript:") ||
-          __webpack_require__.startsWith("data:") ||
-          __webpack_require__.startsWith("vbscript:")
-          ? ""
-          : _;
-      }
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ {
-        constructor() {
-          (this.m_bUserHasVolumePreference = !1),
-            (this.m_flVolumePreference = 0);
-        }
-        BUserHasVolumePreference() {
-          return this.m_bUserHasVolumePreference;
-        }
-        SetVolumePreference(_) {
-          (this.m_flVolumePreference = _),
-            (this.m_bUserHasVolumePreference = !0);
-        }
-        GetVolumePreference() {
-          return this.m_flVolumePreference;
-        }
-        BVolumePreferenceMuted() {
-          return this.m_flVolumePreference < 0.001;
-        }
-        static Get() {
-          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
-        }
-      }
-      (0, _._)([_._], _.prototype, "BUserHasVolumePreference", null),
-        (0, _._)([_._], _.prototype, "SetVolumePreference", null);
-      const _ = (0, _.forwardRef)(function (_, _) {
-          const {
-              video: _,
-              bAutoPlay: _,
-              bControls: _,
-              bLoop: _,
-              bMuted: _,
-              className: _,
-              mediaScale: _,
-              flAspectRatio: _,
-              onClick: _,
-              altText: _,
-            } = _,
-            _ = (0, _.useMemo)(() => {
-              var _;
-              return Boolean(
-                null === (_ = _.rgVideoTracks) || void 0 === _
-                  ? void 0
-                  : _.some(
-                      (_) => "subtitles" == _.sKind || "captions" == _.sKind,
-                    ),
-              );
-            }, [_.rgVideoTracks]),
-            [_, _] = _.useState(!1),
-            _ = _();
-          if (!_.rgVideoSources || !_.rgVideoSources.length) return null;
-          const _ = (function (_) {
-            return !(
-              (!(0, _._)(_.sPoster) && !(0, _._)(_.sPoster)) ||
-              (_.rgVideoSources &&
-                _.rgVideoSources.some((_) => !(0, _._)(_.sURL))) ||
-              (_.rgVideoTracks &&
-                _.rgVideoTracks.some((_) => !(0, _._)(_.sURL)))
-            );
-          })(_);
-          let _;
-          (!_ || (_ && _._.EUNIVERSE == _.wLO)) && (_ = "anonymous");
-          const _ = _ || (_ && _.Get().BVolumePreferenceMuted()),
-            _ = _.sPoster ? _(_.sPoster, _) : "";
-          return (0, _.jsxs)("video", {
-            width: "100%",
-            height: "auto",
-            autoPlay: _,
-            muted: _,
-            playsInline: !0,
-            controls: _,
-            poster: _,
-            loop: _,
-            crossOrigin: _,
-            onVolumeChange: (_) => {
-              const _ = _.target,
-                _ = _.muted ? 0 : _.volume;
-              _ && _.Get().SetVolumePreference(_);
-            },
-            onPlay: (_) => {
-              const _ = _.target,
-                _ = 0 == _.currentTime,
-                _ = _.Get().BUserHasVolumePreference();
-              if ((_(!0), _))
-                if (_ || _)
-                  _ &&
-                    ((_.volume = _.Get().GetVolumePreference()),
-                    (_.muted = _.Get().BVolumePreferenceMuted()));
-                else {
-                  const _ = _.muted ? 0 : _.volume;
-                  _.Get().SetVolumePreference(_);
-                }
-            },
-            ref: _,
-            className: _,
-            onClick: _,
-            "aria-label": _,
-            style: {
-              width: _ && _ >= 1 && _ < 100 ? `${_}%` : void 0,
-              aspectRatio: _ || void 0,
-            },
-            children: [
-              (0, _.jsx)(_, {
-                rgVideoSources: _.rgVideoSources,
-              }),
-              (0, _.jsx)(_, {
-                rgVideoTracks: _.rgVideoTracks,
-              }),
-            ],
-          });
-        }),
-        _ = _.createContext(void 0);
-      function _() {
-        return _.useContext(_) || (0, _._)();
-      }
-      function _(_, _) {
-        if (_) {
-          if ((0, _._)(_)) return _;
-          try {
-            const _ = new URL(_);
-            return (
-              (_.search = (_.search ? _.search + "&" : "?") + "origin=" + _),
-              __webpack_require__.toString()
-            );
-          } catch {
-            return _;
-          }
-        }
-      }
-      function _(_) {
-        const { rgVideoSources: _ } = _,
-          _ = _();
-        return _.filter((_) => Boolean(_.sURL)).map((_) =>
-          (0, _.jsx)(
-            "source",
-            {
-              src: _(_.sURL, _),
-              type: _.sFormat,
-            },
-            _.sURL,
-          ),
-        );
-      }
-      function _(_) {
-        const { rgVideoTracks: _ } = _;
-        return _
-          ? _.map((_, _) =>
-              (0, _.jsx)(
-                _,
-                {
-                  track: _,
-                  rgVideoTracks: _,
-                },
-                _,
-              ),
-            )
-          : null;
-      }
-      function _(_) {
-        const { track: _, rgVideoTracks: _ } = _,
-          _ = _();
-        let _ = _.eLanguage;
-        if (_._.EREALM == _._.k_ESteamRealmChina)
-          if (_._.IsELanguageValidInRealm(_, _._.k_ESteamRealmChina))
-            _ = _._.GetELanguageFallback(_);
-          else {
-            if (_ !== _.NFp) return null;
-            if (
-              __webpack_require__.find(
-                (_) => _._.GetELanguageFallback(_.eLanguage) === _,
-              )
-            )
-              return null;
-          }
-        else if (!_._.IsELanguageValidInRealm(_, _._.k_ESteamRealmGlobal))
-          return null;
-        return (0, _.jsx)("track", {
-          src: _(_.sURL, _),
-          kind: _.sKind,
-          default: _.bDefault,
-          srcLang: (0, _.wwZ)(_),
-          label: (0, _._)(_),
-        });
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
@@ -5171,22 +5254,10 @@
             ref: _,
             ..._
           } = _,
-          _ = _.useRef(null),
           [_, _] = _.useState(0),
-          [_, _] = _.useState(0);
-        _.useImperativeHandle(
-          _,
-          () => ({
-            imgRef: _,
-            nSourceIndex: _,
-            nSourceLength: _.length,
-          }),
-          [_, _, _],
-        );
-        const _ = _.useMemo(() => JSON.stringify(_), [_]);
-        _.useEffect(() => {
-          _(0), _((_) => _ + 1);
-        }, [_]);
+          _ = _.useMemo(() => JSON.stringify(_), [_]),
+          [_, _] = _.useState(_);
+        _ != _ && (_(_), _(0));
         const _ = _.useMemo(() => {
             let _ = "";
             return (
@@ -5209,17 +5280,35 @@
               _ >= _.length && _ && _(_), _ < _.length && _(_);
             },
             [_, _, _, _],
-          );
-        return (0, _.jsx)(
-          "img",
-          {
-            ref: _,
-            ..._,
-            src: _,
-            onError: _,
-            alt: _,
-          },
-          _,
+          ),
+          _ = _.useRef(null);
+        return (
+          _.useImperativeHandle(
+            _,
+            () => ({
+              imgRef: _,
+              nSourceIndex: _,
+              nSourceLength: _.length,
+            }),
+            [_, _, _],
+          ),
+          _.useEffect(() => {
+            const _ = _.current;
+            (null == _ ? void 0 : _.complete) &&
+              0 == _.naturalWidth &&
+              (_.src = _.src);
+          }, []),
+          (0, _.jsx)(
+            "img",
+            {
+              ref: _,
+              ..._,
+              src: _,
+              onError: _,
+              alt: _,
+            },
+            _,
+          )
         );
       }
     },
@@ -5524,6 +5613,83 @@
         (0, _._)([_._], _.prototype, "OnError", null),
         (0, _._)([_._], _.prototype, "OnPlayerLeftView", null),
         (0, _._)([_._], _.prototype, "PlayVideo", null);
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _, _, _) {
+        let _ = _;
+        _ =
+          "number" == typeof _
+            ? {
+                nDigitsAfterDecimal: _,
+                bUseBinary1K: _ || void 0 === _,
+                bValueIsInBytes: !_,
+                bValueIsRate: _,
+                nMinimumDigitsAfterDecimal: 0,
+              }
+            : {
+                nDigitsAfterDecimal: 2,
+                bUseBinary1K: !0,
+                bValueIsInBytes: !0,
+                bValueIsRate: !1,
+                nMinimumDigitsAfterDecimal: 0,
+                ..._,
+              };
+        const { nNum: _, strPrefix: _ } = (function (_, _) {
+            const _ = _.bUseBinary1K ? 1024 : 1e3,
+              _ = _ * _,
+              _ = _ * _,
+              _ = _ * _;
+            return _ > _
+              ? {
+                  nNum: _ / _,
+                  strPrefix: "Tera",
+                }
+              : _ > _
+                ? {
+                    nNum: _ / _,
+                    strPrefix: "Giga",
+                  }
+                : _ > _
+                  ? {
+                      nNum: _ / _,
+                      strPrefix: "Mega",
+                    }
+                  : _ > _
+                    ? {
+                        nNum: _ / _,
+                        strPrefix: "Kilo",
+                      }
+                    : {
+                        nNum: _,
+                        strPrefix: "",
+                      };
+          })(_, _),
+          _ = `#${_}${_.bValueIsInBytes ? "bytes" : "bits"}${_.bValueIsRate ? "_PerSecond" : ""}`;
+        return _._.Localize(
+          _,
+          _.toLocaleString((0, _._)(), {
+            minimumFractionDigits: _.nMinimumDigitsAfterDecimal,
+            maximumFractionDigits: _.nDigitsAfterDecimal,
+          }),
+        );
+      }
+      function _(_, _ = 0) {
+        let _;
+        return (
+          _ &&
+            (_ = {
+              maximumFractionDigits: _,
+            }),
+          _ ? _.toLocaleString((0, _._)(), _) : "" + _
+        );
+      }
     },
   },
 ]);

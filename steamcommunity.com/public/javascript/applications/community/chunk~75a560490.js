@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-  [2959],
+  [52959],
   {
     19332: (e) => {
       e.exports = { Main: "_1Zn_5pvuMbqr57ws1eJKe" };
@@ -110,7 +110,7 @@
     },
     46067: (e, t, n) => {
       "use strict";
-      n.d(t, { dP: () => N, v0: () => F, Zr: () => L });
+      n.d(t, { dP: () => M, v0: () => H, Zr: () => R });
       var s,
         i = n(34629),
         a = n(41735),
@@ -118,21 +118,21 @@
         o = n(14947),
         l = n(19367),
         d = n.n(l),
-        c = n(37085),
-        m = n(47822),
-        u = n(91397),
-        p = n(41838),
+        m = n(37085),
+        c = n(47822),
+        p = n(91397),
+        u = n(41838),
         h = n(49783),
-        g = n(17720),
-        _ = n(91254),
-        C = n(16021),
-        A = n(99032),
-        I = n(81393),
-        E = n(68797),
-        v = n(6419),
-        w = n(61859),
-        y = n(78327),
-        S = n(30894),
+        _ = n(17720),
+        g = n(91254),
+        A = n(16021),
+        C = n(99032),
+        v = n(81393),
+        S = n(68797),
+        I = n(6419),
+        E = n(61859),
+        w = n(78327),
+        y = n(30894),
         k = n(46910);
       !(function (e) {
         (e.Default = "default"),
@@ -146,9 +146,9 @@
           (e.Dev_AssociatedPress = "associated_press");
       })(s || (s = {}));
       new Map();
-      var D = n(44165),
-        f = n(1059);
-      function B(e, t, n, s) {
+      var f = n(44165),
+        B = n(1059);
+      function G(e, t, n, s) {
         return {
           strId: "section-" + t,
           strSectionLabel: t,
@@ -159,7 +159,7 @@
           nTopOffset: 0,
         };
       }
-      class M {
+      class D {
         constructor(e, t) {
           (this.m_nForwardStuckCount = 0),
             (this.m_nBackwardStuckCount = 0),
@@ -178,7 +178,7 @@
             (0, o.Gn)(this),
             (this.m_key = e),
             (this.m_visibilityStore = new k.vJ(t)),
-            S.Fm.Get().HintLoad();
+            y.Fm.Get().HintLoad();
         }
         GetNumEventsLoaded() {
           return this.m_mapCalendarEventsByGid.size;
@@ -194,7 +194,7 @@
         BIsShowingFeaturedFeed() {
           return Boolean(
             this.GetCollectionID() === s.Featured ||
-              (this.BIsGlobalCalendar() && !y.iA.accountid),
+              (this.BIsGlobalCalendar() && !w.iA.accountid),
           );
         }
         BIsSingleSourceCalendar() {
@@ -224,10 +224,10 @@
           if (!this.BIsSingleSourceCalendar()) return !1;
           if (this.BIsSingleAppCalendar()) {
             const e = this.GetSingleAppID();
-            return void 0 !== e && f.S.Get().BIsMutedAppID(e);
+            return void 0 !== e && B.S.Get().BIsMutedAppID(e);
           }
           const e = this.GetSingleGroupID();
-          return void 0 !== e && f.S.Get().BIsMutedClanID(e);
+          return void 0 !== e && B.S.Get().BIsMutedClanID(e);
         }
         BIsSingleGroupCalendar() {
           return Boolean(
@@ -291,7 +291,7 @@
           const n = this.m_currentView.get();
           n && n.dispose();
           const s = this.BIsSingleSourceMuted(),
-            i = new G(
+            i = new F(
               () => this.m_rgSortedCalendarEvents,
               this.LoadAdditionalEvents,
               this.BHitEventHorizon,
@@ -344,7 +344,7 @@
         GetStoreInitializationTimestamp() {
           return (
             this.m_dtInitTime ||
-              (this.m_dtInitTime = D.HD.GetTimeNowWithOverrideAsDate()),
+              (this.m_dtInitTime = f.HD.GetTimeNowWithOverrideAsDate()),
             this.m_dtInitTime
           );
         }
@@ -352,15 +352,15 @@
           const e = this.GetStoreInitializationTimestamp(),
             t = [],
             n = e.getTime() / 1e3;
-          t.push(B(n, (0, w.we)("#EventCalendar_FutureEventsHeader"), n));
+          t.push(G(n, (0, E.we)("#EventCalendar_FutureEventsHeader"), n));
           const s = new Date(e);
           s.setHours(0, 0, 0, 1);
           let i = s.getTime() / 1e3;
-          t.push(B(n, (0, w.we)("#Time_Today"), i, n)),
+          t.push(G(n, (0, E.we)("#Time_Today"), i, n)),
             s.setDate(s.getDate() - 1);
           let a = i;
           (i = s.getTime() / 1e3),
-            t.push(B(n, (0, w.we)("#Time_Yesterday"), i, a));
+            t.push(G(n, (0, E.we)("#Time_Yesterday"), i, a));
           const r =
               this.m_rgSortedCalendarEvents[
                 this.m_rgSortedCalendarEvents.length - 1
@@ -371,23 +371,23 @@
             s.setDate(s.getDate() - 1),
               (a = i),
               (i = s.getTime() / 1e3),
-              t.push(B(n, (0, w.cc)(s), i, a)),
+              t.push(G(n, (0, E.cc)(s), i, a)),
               (l = o > i);
           const d = new Date(s);
-          let c = i;
+          let m = i;
           for (; d.getMonth() == e.getMonth() && 1 != d.getDate() && !l; ) {
             d.setDate(d.getDate() - 7);
             const e = d.getTime() / 1e3;
-            t.push(B(n, (0, w.lQ)(c - 1), e, c)), (l = o > e), (c = e);
+            t.push(G(n, (0, E.lQ)(m - 1), e, m)), (l = o > e), (m = e);
           }
-          const m = new Date(e);
-          m.setHours(0, 0, 0, 1), m.setDate(1);
-          let u = c;
+          const c = new Date(e);
+          c.setHours(0, 0, 0, 1), c.setDate(1);
+          let p = m;
           for (let s = 1; !l; s++) {
-            const i = new Date(m);
+            const i = new Date(c);
             i.setMonth(e.getMonth() - s, 1);
             const a = i.getTime() / 1e3;
-            t.push(B(n, (0, w.lQ)(a), a, u)), (l = o > a), (u = a);
+            t.push(G(n, (0, E.lQ)(a), a, p)), (l = o > a), (p = a);
           }
           this.m_rgCalendarSections.length > t.length
             ? this.m_rgCalendarSections.splice(
@@ -410,9 +410,9 @@
           a.setHours(24, 0, 0, 0);
           let r = a.getTime() / 1e3;
           t.push(
-            B(
+            G(
               i,
-              (0, w.we)(
+              (0, E.we)(
                 this.m_key.bSectionByDay ? "#Time_UpNext" : "#Time_Today",
               ),
               i,
@@ -423,55 +423,55 @@
             l = r;
           a.setDate(a.getDate() + 1),
             (r = a.getTime() / 1e3),
-            o || t.push(B(i, (0, w.we)("#Time_Tomorrow"), l, r)),
+            o || t.push(G(i, (0, E.we)("#Time_Tomorrow"), l, r)),
             (o = n <= r);
-          const c = 6 - d()(e).weekday();
-          for (let e = 2; e <= c && !o; e++) {
+          const m = 6 - d()(e).weekday();
+          for (let e = 2; e <= m && !o; e++) {
             l = r;
-            const e = (0, w.cc)(a);
+            const e = (0, E.cc)(a);
             a.setDate(a.getDate() + 1),
               (r = a.getTime() / 1e3),
-              t.push(B(i, e, l, r)),
+              t.push(G(i, e, l, r)),
               (o = n <= r);
           }
           if (this.m_key.bSectionByDay)
             for (; !o; ) {
               l = r;
-              const e = (0, w.$w)(a);
+              const e = (0, E.$w)(a);
               a.setDate(a.getDate() + 1),
                 (r = a.getTime() / 1e3),
-                t.push(B(i, e, l, r)),
+                t.push(G(i, e, l, r)),
                 (o = n <= r);
             }
           else {
             const s = new Date(a);
             let l = r;
-            const c = d()(e).daysInMonth();
-            if (s.getMonth() == e.getMonth() && s.getDate() != c && !o) {
+            const m = d()(e).daysInMonth();
+            if (s.getMonth() == e.getMonth() && s.getDate() != m && !o) {
               s.setDate(s.getDate() + 7);
               const e = s.getTime() / 1e3;
-              t.push(B(i, (0, w.we)("#EventCalendar_NextWeek"), l, e)),
+              t.push(G(i, (0, E.we)("#EventCalendar_NextWeek"), l, e)),
                 (o = n <= e),
                 (l = e);
             }
-            const m = new Date(e);
-            let u;
+            const c = new Date(e);
+            let p;
             if (
-              (m.setMonth(m.getMonth() + 1),
-              m.setDate(1),
-              m.setHours(0, 0, 0, 0),
-              s < m && !o)
+              (c.setMonth(c.getMonth() + 1),
+              c.setDate(1),
+              c.setHours(0, 0, 0, 0),
+              s < c && !o)
             ) {
-              const e = m.getTime() / 1e3;
-              t.push(B(i, (0, w.we)("#EventCalendar_LaterThisMonth"), l, e)),
+              const e = c.getTime() / 1e3;
+              t.push(G(i, (0, E.we)("#EventCalendar_LaterThisMonth"), l, e)),
                 (o = n <= e),
-                (u = e);
-            } else u = l;
+                (p = e);
+            } else p = l;
             for (let s = 2; !o; s++) {
-              const a = new Date(m);
+              const a = new Date(c);
               a.setMonth(e.getMonth() + s);
               const r = a.getTime() / 1e3;
-              t.push(B(i, (0, w.lQ)(u), u, r)), (o = n <= r), (u = r);
+              t.push(G(i, (0, E.lQ)(p), p, r)), (o = n <= r), (p = r);
             }
           }
           this.m_rgFutureSections.length > t.length
@@ -484,7 +484,7 @@
                 .forEach((e) => this.m_rgFutureSections.push(e));
         }
         async RegisterCalendarEventsAndModels(e) {
-          await S.Fm.Get().HintLoad(),
+          await y.Fm.Get().HintLoad(),
             (0, o.h5)(() => {
               var t, n, s, i, a, r;
               this.RegisterCalendarApps(
@@ -496,7 +496,7 @@
                 this.RegisterCalendarEvents(
                   null !== (s = e.documents) && void 0 !== s ? s : [],
                 ),
-                _.O3.RegisterClanEvents(
+                g.O3.RegisterClanEvents(
                   null !== (i = e.events) && void 0 !== i ? i : [],
                 ),
                 this.RegisterReadEvents(
@@ -520,7 +520,7 @@
           if (e)
             for (const t of e) {
               if (this.m_mapCalendarAppsByID.has(t.appid)) continue;
-              const e = new m.dF();
+              const e = new c.dF();
               (e.appid = t.appid),
                 (e.source = t.source),
                 (e.playtime = t.playtime),
@@ -535,7 +535,7 @@
           if (e)
             for (const t of e)
               if (!this.m_mapCalendarClansByID.has(t.clanid)) {
-                const e = new m.w2();
+                const e = new c.w2();
                 (e.clanid = t.clanid),
                   (e.source = t.source),
                   this.m_mapCalendarClansByID.set(t.clanid, e),
@@ -544,11 +544,11 @@
               }
         }
         RegisterReadEvents(e) {
-          e && (0, u.No)(e);
+          e && (0, p.No)(e);
         }
         RegisterEventVotes(e) {
           e &&
-            (0, p.mc)(
+            (0, u.mc)(
               e.map((e) => ({
                 gidAnnouncement: e.id,
                 vote: void 0 === e.vote ? null : e.vote ? "up" : "down",
@@ -601,7 +601,7 @@
             : this.m_backwardRequestInFlight;
         }
         SetRequestInFlight(e, t) {
-          (0, I.wT)(
+          (0, v.wT)(
             !t || !this.GetRequestInFlight(e),
             "Already have a request in flight for",
             e,
@@ -612,27 +612,27 @@
         }
         async LoadAdditionalEvents(e, t) {
           var n, s, i;
-          if (this.BHitEventHorizon(e)) return c.R;
+          if (this.BHitEventHorizon(e)) return m.R;
           let a = this.GetRequestInFlight(e);
           if (a) return a;
           const o =
-              y.TS.STORE_BASE_URL + "events/ajaxgetusereventcalendarrange/",
+              w.TS.STORE_BASE_URL + "events/ajaxgetusereventcalendarrange/",
             l =
               "forward" === e
                 ? this.m_nForwardStuckCount
                 : this.m_nBackwardStuckCount,
             d = l >= 3 ? 1 : 0,
-            m = 250 + 50 * (l < 3 ? l : 0),
-            u = D.HD.GetTimeNowWithOverride(),
-            p =
-              null !== (n = this.GetTimeEdgeForDirection(e, u)) && void 0 !== n
+            c = 250 + 50 * (l < 3 ? l : 0),
+            p = f.HD.GetTimeNowWithOverride(),
+            u =
+              null !== (n = this.GetTimeEdgeForDirection(e, p)) && void 0 !== n
                 ? n
-                : u,
+                : p,
             h = {
               minTime: 0,
               maxTime: 0,
               ascending: !0,
-              maxResults: m,
+              maxResults: c,
               populateEvents: 15,
               appTypes: this.m_visibilityStore.GetGameSources().join(","),
               eventTypes: Array.from(
@@ -662,8 +662,8 @@
                 : void 0,
             };
           "forward" === e
-            ? ((h.minTime = Math.floor(p + d)), (h.ascending = !0))
-            : ((h.maxTime = Math.floor(p - d)), (h.ascending = !1));
+            ? ((h.minTime = Math.floor(u + d)), (h.ascending = !0))
+            : ((h.maxTime = Math.floor(u - d)), (h.ascending = !1));
           return (
             (a = r()
               .get(o, {
@@ -672,10 +672,10 @@
                 withCredentials: !0,
               })
               .then(async (n) => {
-                if ((this.SetRequestInFlight(e, null), n.data.success == c.R)) {
+                if ((this.SetRequestInFlight(e, null), n.data.success == m.R)) {
                   if (
                     (await this.RegisterCalendarEventsAndModels(n.data),
-                    this.UpdateStuckCounters(e, p))
+                    this.UpdateStuckCounters(e, u))
                   )
                     return this.LoadAdditionalEvents(e, t);
                 } else
@@ -686,7 +686,7 @@
               })
               .catch((t) => {
                 this.SetRequestInFlight(e, null);
-                let n = (0, E.H)(t);
+                let n = (0, S.H)(t);
                 return (
                   console.error(
                     "LoadAdditionalEvents hit error " + n.strErrorMsg,
@@ -695,7 +695,7 @@
                   "forward" == e
                     ? (this.m_bFinishedSearchingForward = !0)
                     : (this.m_bFinishedSearchingBackward = !0),
-                  c.zi
+                  m.zi
                 );
               })),
             this.SetRequestInFlight(e, a),
@@ -705,7 +705,7 @@
         BInternalInsertCalendarEventItem(e) {
           if (!e.unique_id)
             return (
-              (0, I.wT)(
+              (0, v.wT)(
                 !1,
                 "Attmpted to register a calendar event item with an invalid unique id!",
               ),
@@ -716,7 +716,7 @@
             n = this.m_mapCalendarClansByID.get(e.clanid);
           if (!t && !n)
             return console.log("No AppInfo or ClanInfo For: ", e), !1;
-          const s = new m.NK();
+          const s = new c.NK();
           return (
             (s.clanid = e.clanid),
             (s.unique_id = e.unique_id),
@@ -744,9 +744,9 @@
           const n = e.appInfo ? e.appid : void 0,
             s = e.clanInfo ? e.clanInfo.clanid : void 0;
           null != n || null != s
-            ? (await f.S.Get().UpdateCommunicationSetting(t, n, s),
+            ? (await B.S.Get().UpdateCommunicationSetting(t, n, s),
               (0, h.EG)(h.Eg.k_eMuted))
-            : (0, I.wT)(
+            : (0, v.wT)(
                 !1,
                 "Both clan id and account id are missing, cannot change communication status",
               );
@@ -758,30 +758,30 @@
           return Array.from(this.m_mapCalendarAppsByID.keys());
         }
       }
-      (0, i.Cg)([o.sH], M.prototype, "m_mapCalendarAppsByID", void 0),
-        (0, i.Cg)([o.sH], M.prototype, "m_mapCalendarClansByID", void 0),
-        (0, i.Cg)([o.sH], M.prototype, "m_mapCalendarEventsByGid", void 0),
-        (0, i.Cg)([o.sH], M.prototype, "m_rgSortedCalendarEvents", void 0),
-        (0, i.Cg)([o.sH], M.prototype, "m_bFinishedSearchingForward", void 0),
-        (0, i.Cg)([o.sH], M.prototype, "m_bFinishedSearchingBackward", void 0),
-        (0, i.Cg)([o.sH], M.prototype, "m_rgCalendarSections", void 0),
-        (0, i.Cg)([o.sH], M.prototype, "m_rgFutureSections", void 0),
-        (0, i.Cg)([o.sH], M.prototype, "m_collectionMetaData", void 0),
-        (0, i.Cg)([o.XI], M.prototype, "InitCalendarSections", null),
-        (0, i.Cg)([o.XI], M.prototype, "InitFutureCalendarSections", null),
-        (0, i.Cg)([o.XI], M.prototype, "RegisterCalendarEventsAndModels", null),
-        (0, i.Cg)([o.XI], M.prototype, "RegisterCalendarApps", null),
-        (0, i.Cg)([o.XI], M.prototype, "RegisterCalendarClans", null),
-        (0, i.Cg)([o.XI], M.prototype, "RegisterCalendarEvents", null),
-        (0, i.Cg)([v.o], M.prototype, "BHitEventHorizon", null),
-        (0, i.Cg)([o.XI.bound], M.prototype, "LoadAdditionalEvents", null),
+      (0, i.Cg)([o.sH], D.prototype, "m_mapCalendarAppsByID", void 0),
+        (0, i.Cg)([o.sH], D.prototype, "m_mapCalendarClansByID", void 0),
+        (0, i.Cg)([o.sH], D.prototype, "m_mapCalendarEventsByGid", void 0),
+        (0, i.Cg)([o.sH], D.prototype, "m_rgSortedCalendarEvents", void 0),
+        (0, i.Cg)([o.sH], D.prototype, "m_bFinishedSearchingForward", void 0),
+        (0, i.Cg)([o.sH], D.prototype, "m_bFinishedSearchingBackward", void 0),
+        (0, i.Cg)([o.sH], D.prototype, "m_rgCalendarSections", void 0),
+        (0, i.Cg)([o.sH], D.prototype, "m_rgFutureSections", void 0),
+        (0, i.Cg)([o.sH], D.prototype, "m_collectionMetaData", void 0),
+        (0, i.Cg)([o.XI], D.prototype, "InitCalendarSections", null),
+        (0, i.Cg)([o.XI], D.prototype, "InitFutureCalendarSections", null),
+        (0, i.Cg)([o.XI], D.prototype, "RegisterCalendarEventsAndModels", null),
+        (0, i.Cg)([o.XI], D.prototype, "RegisterCalendarApps", null),
+        (0, i.Cg)([o.XI], D.prototype, "RegisterCalendarClans", null),
+        (0, i.Cg)([o.XI], D.prototype, "RegisterCalendarEvents", null),
+        (0, i.Cg)([I.o], D.prototype, "BHitEventHorizon", null),
+        (0, i.Cg)([o.XI.bound], D.prototype, "LoadAdditionalEvents", null),
         (0, i.Cg)(
           [o.XI],
-          M.prototype,
+          D.prototype,
           "UpdateEventBlockFromCalendarEvent",
           null,
         );
-      class G {
+      class F {
         constructor(e, t, n, s, i, a) {
           (this.m_rgLoadedEventsBox = o.sH.box([])),
             (this.m_lastLoadLatch = null),
@@ -800,8 +800,8 @@
                 ).sort();
                 if (
                   ((this.m_lastLoadLatch = e),
-                  await C.A.Get().QueueMultipleAppRequests(t, {
-                    ...A.jy,
+                  await A.A.Get().QueueMultipleAppRequests(t, {
+                    ...C.jy,
                     include_assets: !0,
                   }),
                   this.m_lastLoadLatch != e)
@@ -825,19 +825,19 @@
             if (e.appid) {
               if (
                 !this.m_bAllowMutedAndIgnoredSources &&
-                (f.S.Get().BIsMutedAppID(e.appid) ||
-                  S.Fm.Get().BIsGameIgnored(e.appid))
+                (B.S.Get().BIsMutedAppID(e.appid) ||
+                  y.Fm.Get().BIsGameIgnored(e.appid))
               )
                 return !1;
               if (
                 !this.m_bSkipStorePreferenceCheck &&
-                (0, A.Li)(C.A.Get().GetApp(e.appid))
+                (0, C.Li)(A.A.Get().GetApp(e.appid))
               )
                 return !1;
             } else if (
               !this.m_bAllowMutedAndIgnoredSources &&
-              (f.S.Get().BIsMutedClanID(e.clanid) ||
-                S.Fm.Get().BIsIgnoringCurator(g.b.InitFromClanID(e.clanid)))
+              (B.S.Get().BIsMutedClanID(e.clanid) ||
+                y.Fm.Get().BIsIgnoringCurator(_.b.InitFromClanID(e.clanid)))
             )
               return !1;
             return !0;
@@ -890,7 +890,7 @@
         }
         GetActiveEventsAt(e) {
           return this.filteredAndCheckedEvents
-            .map((e) => _.O3.GetClanEventModel(e.unique_id))
+            .map((e) => g.O3.GetClanEventModel(e.unique_id))
             .filter((t) => {
               if (!t || void 0 === t.startTime) return !1;
               const n = t.endTime || t.startTime + 3600;
@@ -898,11 +898,11 @@
             });
         }
       }
-      (0, i.Cg)([o.EW.struct], G.prototype, "viewFilteredEvents", null),
-        (0, i.Cg)([o.EW.struct], G.prototype, "filteredAndCheckedEvents", null);
-      const T = o.sH.box(null),
-        b = new Map();
-      function L(e, t) {
+      (0, i.Cg)([o.EW.struct], F.prototype, "viewFilteredEvents", null),
+        (0, i.Cg)([o.EW.struct], F.prototype, "filteredAndCheckedEvents", null);
+      const b = o.sH.box(null),
+        T = new Map();
+      function R(e, t) {
         let n = "";
         return (
           e.appids &&
@@ -926,22 +926,22 @@
               e.category_or_language +
               "_" +
               e.tag_name),
-          T.get() !== n && (T.set(n), b.has(n) || b.set(n, new M(e, t))),
+          b.get() !== n && (b.set(n), T.has(n) || T.set(n, new D(e, t))),
           n
         );
       }
-      function F() {
-        let e = T.get();
-        return null == e && (e = L({})), b.get(e);
+      function H() {
+        let e = b.get();
+        return null == e && (e = R({})), T.get(e);
       }
-      function N() {
-        return null !== T.get();
+      function M() {
+        return null !== b.get();
       }
-      window.g_EventCalendarMap = b;
+      window.g_EventCalendarMap = T;
     },
     46910: (e, t, n) => {
       "use strict";
-      n.d(t, { FD: () => s, vJ: () => v });
+      n.d(t, { FD: () => s, vJ: () => I });
       var s,
         i = n(34629),
         a = n(14947),
@@ -949,10 +949,10 @@
         o = n(47822),
         l = n(81393),
         d = n(78327),
-        c = n(49783),
-        m = n(7860),
-        u = n(44165),
-        p = n(50140);
+        m = n(49783),
+        c = n(7860),
+        p = n(44165),
+        u = n(50140);
       !(function (e) {
         (e.k_ERecent = "recent"),
           (e.k_ELibrary = "library"),
@@ -971,9 +971,9 @@
           s.k_ESteam,
           s.k_ECurator,
         ],
-        g = [...h, s.k_EFeatured],
-        _ = [s.k_EFeatured];
-      var C;
+        _ = [...h, s.k_EFeatured],
+        g = [s.k_EFeatured];
+      var A;
       !(function (e) {
         (e.k_ENews = "news"),
           (e.k_EEvents = "events"),
@@ -981,27 +981,27 @@
           (e.k_EUpdates = "updates"),
           (e.k_EReleases = "releases"),
           (e.k_ESales = "sales");
-      })(C || (C = {}));
-      const A = [
-          C.k_ENews,
-          C.k_EEvents,
-          C.k_EStreaming,
-          C.k_EUpdates,
-          C.k_EReleases,
-          C.k_ESales,
+      })(A || (A = {}));
+      const C = [
+          A.k_ENews,
+          A.k_EEvents,
+          A.k_EStreaming,
+          A.k_EUpdates,
+          A.k_EReleases,
+          A.k_ESales,
         ],
-        I = new Map([
-          [C.k_ENews, [r.uYK]],
-          [C.k_EEvents, [r.L0X, r.I5b, r.zA, r.y6, r.hGl, r.WNR, r.pIh, r.izQ]],
-          [C.k_EStreaming, [r.KDJ]],
-          [C.k_EUpdates, [r.Fwr, r.u0, r.zeJ]],
-          [C.k_EReleases, [r.yhO, r.Aqr, r.DEQ, r.f4X, r.zcX]],
-          [C.k_ESales, [r.HRy, r.C$4, r.LOv, r.HFK]],
+        v = new Map([
+          [A.k_ENews, [r.uYK]],
+          [A.k_EEvents, [r.L0X, r.I5b, r.zA, r.y6, r.hGl, r.WNR, r.pIh, r.izQ]],
+          [A.k_EStreaming, [r.KDJ]],
+          [A.k_EUpdates, [r.Fwr, r.u0, r.zeJ]],
+          [A.k_EReleases, [r.yhO, r.Aqr, r.DEQ, r.f4X, r.zcX]],
+          [A.k_ESales, [r.HRy, r.C$4, r.LOv, r.HFK]],
         ]);
-      function E(e) {
+      function S(e) {
         return new Map(e.map((e) => [e, !0]));
       }
-      class v {
+      class I {
         constructor(e) {
           (this.m_mapEventTypeGroupsAllowed = new Map()),
             (this.m_mapGameSources = new Map()),
@@ -1037,7 +1037,7 @@
           var e;
           const t = new Set();
           for (const n of Array.from(this.m_mapEventTypeGroupsAllowed.keys()))
-            null === (e = I.get(n)) ||
+            null === (e = v.get(n)) ||
               void 0 === e ||
               e.forEach((e) => t.add(e));
           return t;
@@ -1045,17 +1045,17 @@
         MapClanEventTypeToGroup(e) {
           let t;
           return (
-            I.forEach((n, s) => {
+            v.forEach((n, s) => {
               -1 !== n.indexOf(e) && (t = s);
             }),
-            t || C.k_EEvents
+            t || A.k_EEvents
           );
         }
         InitDefaultCheckboxes(e, t, n) {
           (this.m_bInitializedForUpdatesOnly = t),
-            (this.m_mapEventTypeGroupsAllowed = E(t ? [C.k_EUpdates] : A));
-          const i = (0, d.Y2)() ? g : h;
-          (this.m_mapGameSources = E(e ? i : _)),
+            (this.m_mapEventTypeGroupsAllowed = S(t ? [A.k_EUpdates] : C));
+          const i = (0, d.Y2)() ? _ : h;
+          (this.m_mapGameSources = S(e ? i : g)),
             n && this.m_mapGameSources.set(s.k_EFeatured, !0);
         }
         Init(e, t, n, s, i) {
@@ -1067,8 +1067,8 @@
             if (e.rgEventTypeGroupsAllowed && e.rgGameSources) {
               const { rgEventTypeGroupsAllowed: t, rgGameSources: n } = e;
               return (
-                (this.m_mapEventTypeGroupsAllowed = E(t)),
-                (this.m_mapGameSources = E(n)),
+                (this.m_mapEventTypeGroupsAllowed = S(t)),
+                (this.m_mapGameSources = S(n)),
                 void (
                   void 0 !== e.bCuratorUnhideOnFollowDismissed &&
                   (this.m_bCuratorUnhideOnFollowDialogDismissed =
@@ -1101,13 +1101,13 @@
             this.BIsGameSourceAllowed(s.k_ESteam) && (e |= 16),
             this.BIsGameSourceAllowed(s.k_EFeatured) && (e |= 32),
             this.BIsGameSourceAllowed(s.k_ERecent) && (e |= 64),
-            this.BIsEventTypeGroupAllowed(C.k_ENews) && (e |= 1024),
-            this.BIsEventTypeGroupAllowed(C.k_EEvents) && (e |= 2048),
-            this.BIsEventTypeGroupAllowed(C.k_EStreaming) && (e |= 4096),
-            this.BIsEventTypeGroupAllowed(C.k_EUpdates) && (e |= 8192),
-            this.BIsEventTypeGroupAllowed(C.k_EReleases) && (e |= 16384),
-            this.BIsEventTypeGroupAllowed(C.k_ESales) && (e |= 32768),
-            (0, c.m4)(m.L, e);
+            this.BIsEventTypeGroupAllowed(A.k_ENews) && (e |= 1024),
+            this.BIsEventTypeGroupAllowed(A.k_EEvents) && (e |= 2048),
+            this.BIsEventTypeGroupAllowed(A.k_EStreaming) && (e |= 4096),
+            this.BIsEventTypeGroupAllowed(A.k_EUpdates) && (e |= 8192),
+            this.BIsEventTypeGroupAllowed(A.k_EReleases) && (e |= 16384),
+            this.BIsEventTypeGroupAllowed(A.k_ESales) && (e |= 32768),
+            (0, m.m4)(c.L, e);
         }
         BCuratorUnhideOnFollowDialogDismissed() {
           return this.m_bCuratorUnhideOnFollowDialogDismissed;
@@ -1121,8 +1121,8 @@
         }
         BIsGameSourceAllowed(e) {
           return (
-            !(e === s.k_EFollowing && !(0, p.xU)()) &&
-            !(e === s.k_ECurator && !(0, p.Us)()) &&
+            !(e === s.k_EFollowing && !(0, u.xU)()) &&
+            !(e === s.k_ECurator && !(0, u.Us)()) &&
             this.m_mapGameSources.has(e)
           );
         }
@@ -1158,13 +1158,13 @@
               e.appInfo &&
                 e.appInfo.last_played &&
                 e.appInfo.last_played + 15552e3 >=
-                  u.HD.GetTimeNowWithOverride(),
+                  p.HD.GetTimeNowWithOverride(),
             );
           return (
             !!(
               this.enabledEventTypeSet.has(e.event_type) ||
               (this.m_bInitializedForUpdatesOnly &&
-                this.BIsEventTypeGroupAllowed(C.k_EUpdates) &&
+                this.BIsEventTypeGroupAllowed(A.k_EUpdates) &&
                 e.event_type == r.uYK &&
                 e.start_time < 1599202800)
             ) &&
@@ -1197,10 +1197,10 @@
           );
         }
         BAreAnyEventsFiltered(e) {
-          const t = (0, d.Y2)() ? g : h;
+          const t = (0, d.Y2)() ? _ : h;
           return (
-            (e ? t : _).some((e) => !this.BIsGameSourceAllowed(e)) ||
-            A.some((e) => !this.BIsEventTypeGroupAllowed(e))
+            (e ? t : g).some((e) => !this.BIsGameSourceAllowed(e)) ||
+            C.some((e) => !this.BIsEventTypeGroupAllowed(e))
           );
         }
         BIsClanVisible(e) {
@@ -1220,28 +1220,28 @@
             : this.m_mapHiddenApps.has(e) || this.m_mapHiddenApps.set(e, !0);
         }
       }
-      (0, i.Cg)([a.sH], v.prototype, "m_mapEventTypeGroupsAllowed", void 0),
-        (0, i.Cg)([a.sH], v.prototype, "m_mapGameSources", void 0),
+      (0, i.Cg)([a.sH], I.prototype, "m_mapEventTypeGroupsAllowed", void 0),
+        (0, i.Cg)([a.sH], I.prototype, "m_mapGameSources", void 0),
         (0, i.Cg)(
           [a.sH],
-          v.prototype,
+          I.prototype,
           "m_bCuratorUnhideOnFollowDialogDismissed",
           void 0,
         ),
-        (0, i.Cg)([a.sH], v.prototype, "m_mapHiddenApps", void 0),
-        (0, i.Cg)([a.sH], v.prototype, "m_mapHiddenClans", void 0),
+        (0, i.Cg)([a.sH], I.prototype, "m_mapHiddenApps", void 0),
+        (0, i.Cg)([a.sH], I.prototype, "m_mapHiddenClans", void 0),
         (0, i.Cg)(
           [(0, a.EW)({ keepAlive: !0, equals: a.m3.structural })],
-          v.prototype,
+          I.prototype,
           "enabledEventTypeSet",
           null,
         ),
-        (0, i.Cg)([a.XI], v.prototype, "SetEventTypeGroupAllowed", null),
-        (0, i.Cg)([a.XI], v.prototype, "SetGameSourceAllowed", null);
+        (0, i.Cg)([a.XI], I.prototype, "SetEventTypeGroupAllowed", null),
+        (0, i.Cg)([a.XI], I.prototype, "SetGameSourceAllowed", null);
     },
     1059: (e, t, n) => {
       "use strict";
-      n.d(t, { S: () => m });
+      n.d(t, { S: () => c });
       var s = n(34629),
         i = n(41735),
         a = n.n(i),
@@ -1249,8 +1249,8 @@
         o = n(37085),
         l = n(81393),
         d = n(68797),
-        c = n(78327);
-      class m {
+        m = n(78327);
+      class c {
         constructor() {
           (this.m_mapBlockedAppIds = new Map()),
             (this.m_mapBlockedClanIds = new Map()),
@@ -1258,17 +1258,17 @@
         }
         static Get() {
           return (
-            m.s_globalSingletonStore ||
-              ((m.s_globalSingletonStore = new m()),
-              m.s_globalSingletonStore.Init()),
-            m.s_globalSingletonStore
+            c.s_globalSingletonStore ||
+              ((c.s_globalSingletonStore = new c()),
+              c.s_globalSingletonStore.Init()),
+            c.s_globalSingletonStore
           );
         }
         GetMutedSourceCount() {
           return this.m_mapBlockedAppIds.size + this.m_mapBlockedClanIds.size;
         }
         Init() {
-          const e = (0, c.Tc)("mutedcomminfo", "application_config");
+          const e = (0, m.Tc)("mutedcomminfo", "application_config");
           this.ValidateStoreDefault(e) &&
             (e.appids &&
               e.appids.forEach((e) => this.m_mapBlockedAppIds.set(e, !0)),
@@ -1295,10 +1295,10 @@
           return this.m_mapBlockedClanIds.has(e);
         }
         async UpdateCommunicationSetting(e, t, n) {
-          const s = c.TS.STORE_BASE_URL + "account/optoutappcommunication/",
+          const s = m.TS.STORE_BASE_URL + "account/optoutappcommunication/",
             i = new FormData();
           if (
-            (i.append("sessionid", (0, c.KC)()),
+            (i.append("sessionid", (0, m.KC)()),
             i.append("allowCommunication", e ? "1" : "0"),
             t)
           ) {
@@ -1342,12 +1342,12 @@
           }
         }
       }
-      (0, s.Cg)([r.sH], m.prototype, "m_mapBlockedAppIds", void 0),
-        (0, s.Cg)([r.sH], m.prototype, "m_mapBlockedClanIds", void 0);
+      (0, s.Cg)([r.sH], c.prototype, "m_mapBlockedAppIds", void 0),
+        (0, s.Cg)([r.sH], c.prototype, "m_mapBlockedClanIds", void 0);
     },
     81301: (e, t, n) => {
       "use strict";
-      n.d(t, { Y: () => g });
+      n.d(t, { Y: () => _ });
       var s = n(34629),
         i = n(7850),
         a = n(75844),
@@ -1355,14 +1355,14 @@
         o = n(73964),
         l = n(91254),
         d = n(65606),
-        c = n(55294),
-        m = n(738),
-        u = n(73745),
-        p = n(19332);
+        m = n(55294),
+        c = n(738),
+        p = n(73745),
+        u = n(19332);
       function h(e) {
         const { event: t, closeModal: n } = e,
           s = (0, d.LJ)();
-        return (0, i.jsx)(c.AD, {
+        return (0, i.jsx)(m.AD, {
           initialEvent: t,
           bShowOnlyInitialEvent: !0,
           partnerEventStore: l.O3,
@@ -1371,10 +1371,10 @@
           closeModal: n,
         });
       }
-      function g(e, t) {
-        (0, m.pg)((0, i.jsx)(h, { event: e }), t);
+      function _(e, t) {
+        (0, c.pg)((0, i.jsx)(h, { event: e }), t);
       }
-      let _ = class extends r.Component {
+      let g = class extends r.Component {
         constructor() {
           super(...arguments), (this.m_refFocus = r.createRef());
         }
@@ -1398,12 +1398,12 @@
           const { event: e, langOverride: t, isPreview: n } = this.props;
           return (0, i.jsx)("div", {
             ref: this.m_refFocus,
-            className: p.Main,
+            className: u.Main,
             onClick: this.OnBackgroundClick,
             children: (0, i.jsx)(d.sU, {
               children: (s) =>
                 (0, i.jsx)(
-                  c.He,
+                  m.He,
                   {
                     event: e,
                     emoticonStore: s,
@@ -1418,13 +1418,13 @@
           });
         }
       };
-      (0, s.Cg)([u.oI], _.prototype, "escFunction", null),
-        (0, s.Cg)([u.oI], _.prototype, "OnBackgroundClick", null),
-        (_ = (0, s.Cg)([a.PA], _));
+      (0, s.Cg)([p.oI], g.prototype, "escFunction", null),
+        (0, s.Cg)([p.oI], g.prototype, "OnBackgroundClick", null),
+        (g = (0, s.Cg)([a.PA], g));
     },
     74976: (e, t, n) => {
       "use strict";
-      n.d(t, { C: () => u });
+      n.d(t, { C: () => p });
       var s = n(7850),
         i = n(6144),
         a = n(87652),
@@ -1432,12 +1432,12 @@
         o = n(43261),
         l = n(46067),
         d = n(23338);
-      class c {
+      class m {
         constructor() {
           (this.m_bHasBeenTracked = !1), (this.m_fnSubmit = null);
         }
       }
-      const m = new (class {
+      const c = new (class {
           constructor() {
             (this.m_nImpressionDelayMS = 500), (this.m_mapEvents = new Map());
           }
@@ -1449,7 +1449,7 @@
           StartTracking(e, t, n) {
             if (e.bOldAnnouncement) return;
             let s = this.m_mapEvents.get(e.GID);
-            s || ((s = new c()), this.m_mapEvents.set(e.GID, s)),
+            s || ((s = new m()), this.m_mapEvents.set(e.GID, s)),
               s.m_bHasBeenTracked ||
                 s.m_fnSubmit ||
                 ((s.m_fnSubmit = new i.LU()),
@@ -1478,37 +1478,24 @@
               (s.m_fnSubmit = null));
           }
         })(),
-        u = (e) => {
+        p = (e) => {
           const { event: t } = e,
             n = (0, a.Y)(),
             i = (0, r.fm)();
-          if (m.ShouldTrack(t)) {
+          if (c.ShouldTrack(t)) {
             const a = () =>
-                m.StartTracking(t, e.recordNewsHubStats ? i : void 0, n),
-              r = () => m.StopTracking(t);
+                c.StartTracking(t, e.recordNewsHubStats ? i : void 0, n),
+              r = () => c.StopTracking(t);
             return (0, s.jsx)(d.Y, { onEnter: a, onLeave: r });
           }
           return null;
         };
-    },
-    96715: (e, t, n) => {
-      "use strict";
-      n.d(t, { A: () => s });
-      const s =
-        "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHdpZHRoPSIxNDAwcHgiIGhlaWdodD0iMTQwOXB4IiB2aWV3Qm94PSIwIDE4MDEuNSAxNDAwIDE0MDkiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAxODAxLjUgMTQwMCAxNDA5IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBhdGggaWQ9Imljb25tb25zdHItbGluay0xXzFfIiBmaWxsPSIjRkZGRkZGIiBkPSJNMzYyLjM1MywyMzEwLjU4OGMxNDguMjM1LTE0OC4yMzUsMzg3LjA2LTE0OC4yMzUsNTI3LjA2LDAKCWMxNi40NzEsMTYuNDcxLDMyLjk0MSw0MS4xNzcsNDkuNDExLDU3LjY0N0w4MDcuMDU5LDI1MDBjLTQxLjE3Ni04Mi4zNTMtMTMxLjc2NS0xMzEuNzY1LTIyMi4zNTMtMTE1LjI5NAoJYy00MS4xNzcsOC4yMzUtNzQuMTE4LDI0LjcwNi05OC44MjMsNDkuNDExbC0yNDcuMDU5LDI0Ny4wNmMtNzQuMTE4LDc0LjExNy03NC4xMTgsMTk3LjY0NiwwLDI4MAoJYzc0LjExOCw3NC4xMTcsMTk3LjY0Nyw3NC4xMTcsMjgwLDBsMCwwbDc0LjExOC03NC4xMThjNzQuMTE3LDI0LjcwNiwxNDguMjM1LDQxLjE3NywyMjIuMzUzLDMyLjk0MWwtMTcyLjk0LDE3Mi45NDEKCWMtMTQ4LjIzNSwxNDguMjM1LTM4Ny4wNiwxNDguMjM1LTUyNy4wNiwwcy0xNDguMjM1LTM4Ny4wNTksMC01MjcuMDU5QzEwNy4wNTksMjU1Ny42NDcsMzYyLjM1MywyMzEwLjU4OCwzNjIuMzUzLDIzMTAuNTg4egoJIE03NTcuNjQ2LDE5MDcuMDU5TDU5Mi45NDEsMjA4MGM3NC4xMTctOC4yMzUsMTQ4LjIzNSw4LjIzNSwyMTQuMTE3LDMyLjk0MWw3NC4xMTgtNzQuMTE4Yzc0LjExNy03NC4xMTcsMTk3LjY0Ni03NC4xMTcsMjgwLDAKCWM4Mi4zNTMsNzQuMTE4LDc0LjExNywxOTcuNjQ3LDAsMjgwbC0yNTUuMjk0LDI0Ny4wNmMtNzQuMTE4LDc0LjExNy0xOTcuNjQ3LDc0LjExNy0yODAsMAoJYy04LjIzNS0xNi40NzEtMjQuNzA2LTQxLjE3Ny0zMi45NDEtNjUuODgzbC0xMzEuNzY1LDEzMS43NjVjMTYuNDcxLDI0LjcwNiwzMi45NCw0MS4xNzcsNDkuNDExLDU3LjY0NwoJYzE0OC4yMzUsMTQ4LjIzNSwzODcuMDU5LDE0OC4yMzUsNTI3LjA2LDBsMCwwbDI0Ny4wNTktMjQ3LjA2YzE0OC4yMzUtMTQ4LjIzNSwxNDguMjM1LTM4Ny4wNTksMC01MjcuMDU5CglTOTA1Ljg4MywxNzY3LjA1OSw3NTcuNjQ2LDE5MDcuMDU5TDc1Ny42NDYsMTkwNy4wNTlMNzU3LjY0NiwxOTA3LjA1OXoiLz4KPC9zdmc+Cg==";
     },
     10886: (e, t, n) => {
       "use strict";
       n.d(t, { A: () => s });
       const s =
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAc9JREFUeNrsmz1Lw1AUhnP8qB+Qkk0pItbVxcX/IM6Cky7iFH+Jk79BwclBB3+AszgUwdVNBxFaCw1E7fW9cAep5pa0NiT3vgdeLjRJm/Ocm/NRiCilAp9tKvDcCIAACIAAsiyEzqAepCqqnvEhzHJSLGVQX7jvSKDPoYO8ADS9BUcAJNBiXgCudUjCJEgABPDLZip2v12obwIXur4DdBK+MeVrHaqJSB2KzKqT2izUgLZd2wH30CF8bFnTusgnlhdUsjmXAFxBe3Au9TEJ3hXpfNkA9M22T4v80TIBuIbzDz73ARe+9wG31pqo1DSWGNqBlgcO16oO4A3b/3XIOafQ8b9PSCWZBh8BYMMSfd3wvEPzrk6DH0OON8Z0vvLDkHAaJAACIICJJJeCy+Aa1Pnj8y+Uwa6lDOpA1S3fewSdjJJIi26EOnC0nTtKInpQalsALfn+CDQJgAA8BYDnP8IS+bwDmuNcXHQVWDURG7QUmf7ZEmV9nysZh7dcGIdbALBpAaD7h6dJDFRshQmAAAiAAAiAAAiAAAiAAAiAAAiAAAjgpyUO+ZmMAuDSIQCZvtj+E4zNuhtU98WJxDgfZ50gfHOUSZAACIAAPLZvAQYAZ32YkpymkAcAAAAASUVORK5CYII=";
-    },
-    19654: (e, t, n) => {
-      "use strict";
-      n.d(t, { A: () => s });
-      const s =
-        n.p +
-        "images/applications/community/reddit_large.png?v=valveisgoodatcaching";
     },
     3209: (e, t, n) => {
       "use strict";

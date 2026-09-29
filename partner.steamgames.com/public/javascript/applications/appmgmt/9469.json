@@ -56,6 +56,5 @@
     "SinglePricingPackage_Intro_2b": "Nem gyakori USD árak esetén írj be egy értéket az USD ár mezőbe. Ezután kattints az „Árak átváltása...” gombra, és kövesd az utasításokat.",
     "PricingDashboard_Method_SuggestedPrice": "Javasolt átváltás:",
     "PricingDashboard_Method_SuggestedPrice_ttip": "Ez az ár a fent kiválasztott átváltási módszer és a(z) %1$s USD ár alapján lett javasolva.",
-    "dummy": "üres",
-    "empty_no_trailing_comma": ""
+    "dummy": "üres"
 }

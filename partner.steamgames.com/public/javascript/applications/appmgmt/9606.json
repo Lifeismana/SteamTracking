@@ -56,6 +56,5 @@
     "SinglePricingPackage_Intro_2b": "Typ voor niet-standaard USD-prijzen een waarde in het veld voor de USD-prijs. Klik vervolgens op de knop 'Prijzen omrekenen ...' en volg de instructies.",
     "PricingDashboard_Method_SuggestedPrice": "Voorgestelde omrekening:",
     "PricingDashboard_Method_SuggestedPrice_ttip": "Deze prijs wordt voorgesteld op basis van de hierboven geselecteerde omrekenmethode en een prijs in USD van %1$s.",
-    "dummy": "dummy",
-    "empty_no_trailing_comma": ""
+    "dummy": "dummy"
 }

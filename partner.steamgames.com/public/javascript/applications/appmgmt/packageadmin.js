@@ -57,7 +57,7 @@
       let a = { PriceEdit: (e) => `/packages/pricing/${e}` };
       var s = i(97058),
         o = i(32801),
-        d = i(83392),
+        d = i(61011),
         l = i(20187),
         g = i(48474),
         h = i(16666),

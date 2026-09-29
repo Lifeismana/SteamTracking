@@ -65,6 +65,5 @@
     "PriceDisplay_YourPrice": "Tu precio:",
     "PriceGrid_NormalPrice": "NORMALMENTE",
     "PriceGrid_RecentPrice": "MÁS BAJO EN 30 DÍAS",
-    "PriceGrid_CurrentPrice": "ACTUAL",
-    "Dummy": "dummy"
+    "PriceGrid_CurrentPrice": "ACTUAL"
 }

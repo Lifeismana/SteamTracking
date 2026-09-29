@@ -81,6 +81,15 @@
     },
     chunkid: (module) => {
       module.exports = {
+        ImagesOuterContainer: "_3A8RGZO2pwg1yKDAdFqp9r",
+        Hilight: "_1v_zQLXgFsvon1SwxrWjE-",
+        ImageContainer: "_2ti3yMwzfkGoiW68FuNjTG",
+        Image: "y902_9A0Wj5bTshbt4xRb",
+        ImageFilename: "_2jzLZXXxgDMMcA9X0QDSdg",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         ColorCtn: "Sf6uEgb-RsQVL8-DaDtRl",
       };
     },
@@ -506,7 +515,7 @@
       function _(_) {
         return (0, _.jsx)(_._, {
           ..._,
-          viewBoxSize: 16,
+          viewBox: 16,
           children: (0, _.jsx)("path", {
             _: "M13.8182 1.94629L5.77816 9.98184L2.40483 6.61296L0.835938 8.18184L5.77816 13.1285L15.387 3.51518L13.8182 1.94629Z",
             fill: "currentColor",
@@ -591,17 +600,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { viewBoxSize: _ = 20, ..._ } = _,
-          _ = _.size ? void 0 : _.IconSizeDefault;
         return (0, _.jsx)("svg", {
-          viewBox: `0 0 ${_} ${_}`,
-          ...(0, _._)(
-            {
-              className: _,
-              ..._,
-            },
-            _,
-          ),
+          ..._(_),
         });
       }
       const _ = [
@@ -614,7 +614,7 @@
         {
           prop: "color",
           className: _.Color,
-          cssProperty: (_) => ["--icon-color", (0, _._)(_)],
+          cssProperty: (_) => ["--icon-color", _(_)],
         },
         {
           prop: "hitSlop",
@@ -626,6 +626,97 @@
         },
         _._.find(({ prop: _ }) => "cursor" === _),
       ];
+      function _(_) {
+        return _ && "#" !== _[0] ? (0, _._)(_) : _;
+      }
+      function _(_) {
+        const { viewBox: _, ..._ } = _,
+          _ = {
+            className: _.size ? void 0 : _.IconSizeDefault,
+            ..._,
+          };
+        return (
+          _ &&
+            (_.viewBox = (function (_) {
+              return _
+                ? "number" == typeof _
+                  ? `0 0 ${_} ${_}`
+                  : "string" == typeof _
+                    ? _
+                    : `0 0 ${_.width} ${_.height}`
+                : void 0;
+            })(_)),
+          (0, _._)(_, _)
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ {
+        m_eCurLang = (0, _.sfN)(_._.LANGUAGE);
+        m_rgHasData = (0, _._)([], _.bP9, !1);
+        m_bHasLocalizationContext = !1;
+        m_callback = new _._();
+        GetCallback() {
+          return this.m_callback;
+        }
+        GetCurEditLanguage() {
+          return this.m_eCurLang;
+        }
+        SetCurEditLanguage(_) {
+          return (
+            this.m_eCurLang != _ &&
+            ((this.m_eCurLang = _), this.GetCallback().Dispatch(_), !0)
+          );
+        }
+        SetHasLanguage(_) {
+          _.forEach((_, _) => {
+            this.m_rgHasData[_] != _ && (this.m_rgHasData[_] = _);
+          });
+        }
+        BHasLanguageData(_) {
+          return this.m_rgHasData[_];
+        }
+        GetHasLocalizationContext() {
+          return this.m_bHasLocalizationContext;
+        }
+        SetHasLocalizationContext(_) {
+          _ != this.m_bHasLocalizationContext &&
+            (this.m_bHasLocalizationContext = _);
+        }
+        static s_globalSingletonStore;
+        static Get() {
+          return (
+            _.s_globalSingletonStore || (_.s_globalSingletonStore = new _()),
+            _.s_globalSingletonStore
+          );
+        }
+        constructor() {
+          (0, _._)(this);
+        }
+      }
+      function _() {
+        return (0, _._)(() => _.Get().GetCurEditLanguage());
+      }
+      (0, _._)([_._], _.prototype, "m_eCurLang", void 0),
+        (0, _._)([_._], _.prototype, "m_rgHasData", void 0),
+        (0, _._)([_._], _.prototype, "m_bHasLocalizationContext", void 0),
+        (0, _._)([_._], _.prototype, "GetCurEditLanguage", null),
+        (0, _._)([_._], _.prototype, "SetCurEditLanguage", null),
+        (0, _._)([_._.bound], _.prototype, "SetHasLanguage", null),
+        (0, _._)([_._], _.prototype, "BHasLanguageData", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -636,15 +727,16 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_, _, _) {
+      function _(_, _, _, _) {
         const _ = new _._();
         return (
           (_.type = _),
-          (_.clanSteamID = _._.InitFromClanID(_)),
+          (_.clanSteamID = new _._(_, _._.EUNIVERSE, _.P3F, 0)),
           (_.GID = "fakeevent_" + _++),
           (_.visibility_state = _._.k_EEventStateUnlisted),
-          (_.visibilityStartTime = (0, _._)() - 1),
+          (_.visibilityStartTime = _ - 1),
           (_.jsondata.bSaleEnabled = !0),
           (_.jsondata.sale_vanity_id_valve_approved_for_sale_subpath = !0),
           (_.jsondata.sale_vanity_id = _),
@@ -702,6 +794,303 @@
           ],
         };
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = (_) => {
+          const { clanSteamID: _, fnImageSelectCallBack: _ } = _,
+            [_, _] = (0, _.useState)(""),
+            _ = (0, _._)(_.clanSteamID.GetAccountID()),
+            _ = () => _.closeModal && _.closeModal(),
+            _ = _._.GetFilteredClanImages(_, _),
+            _ = (_) => {
+              __webpack_require__(_), _();
+            };
+          return (0, _.jsx)(_._, {
+            children: (0, _.jsx)(_._, {
+              onEscKeypress: _,
+              children: (0, _.jsxs)(_._, {
+                children: [
+                  (0, _.jsx)(_._, {
+                    children: (0, _._)("#ClanImageChooser_Title"),
+                  }),
+                  (0, _.jsx)(_._, {
+                    children: (0, _.jsxs)(_._, {
+                      children: [
+                        (0, _.jsx)("p", {
+                          children: (0, _._)("#ClanImageChooser_Desc"),
+                        }),
+                        (0, _.jsx)(_._, {
+                          placeholder: (0, _._)("#ClanImageChooser_Search"),
+                          value: _,
+                          onChange: (_) => _(_.currentTarget.value),
+                        }),
+                        (0, _.jsx)("div", {
+                          className: _.ImagesOuterContainer,
+                          children: _
+                            ? (0, _.jsx)(_._, {
+                                size: "medium",
+                                string: (0, _._)("#Loading"),
+                              })
+                            : Boolean(_.length > 0)
+                              ? _.map((_) =>
+                                  (0, _.jsx)(
+                                    _,
+                                    {
+                                      clanImage: _,
+                                      searchStringHilight: _,
+                                      fnImageClick: _,
+                                    },
+                                    "ci" + _.image_hash,
+                                  ),
+                                )
+                              : Boolean(0 == _.trim().length)
+                                ? (0, _.jsx)("div", {
+                                    children: (0, _._)(
+                                      "#ClanImageChooser_None",
+                                    ),
+                                  })
+                                : (0, _.jsx)("div", {
+                                    children: (0, _._)(
+                                      "#EventCalendar_GameSearch_NoneFound",
+                                    ),
+                                  }),
+                        }),
+                      ],
+                    }),
+                  }),
+                  (0, _.jsx)(_._, {
+                    children: (0, _.jsx)(_._, {
+                      onClick: _,
+                      children: (0, _._)("#Button_Cancel"),
+                    }),
+                  }),
+                ],
+              }),
+            }),
+          });
+        },
+        _ = (_) => {
+          const { clanImage: _, searchStringHilight: _, fnImageClick: _ } = _;
+          let _ = _.file_name ? _.file_name : "",
+            _ = _(_, _, String(_.imageid), _.Hilight);
+          return (0, _.jsxs)("div", {
+            className: _.ImageContainer,
+            children: [
+              (0, _.jsx)("div", {
+                className: _.Image,
+                style: {
+                  backgroundImage: `url( '${_.thumb_url}' )`,
+                },
+                onDoubleClick: () => _(_),
+              }),
+              (0, _.jsx)("div", {
+                className: _.ImageFilename,
+                title: _,
+                children: _,
+              }),
+            ],
+          });
+        };
+      function _(_, _, _, _) {
+        let _ = [];
+        if (_.length > 0) {
+          let _ = _.toLocaleLowerCase();
+          for (let _ = 0; _ < _.length; ) {
+            let _ = _.indexOf(_, _);
+            if (_ < 0) {
+              _.push(
+                (0, _.jsx)(
+                  "span",
+                  {
+                    children: _.substring(_),
+                  },
+                  _ + "_" + String(_),
+                ),
+              );
+              break;
+            }
+            _ < _ &&
+              _.push(
+                (0, _.jsx)(
+                  "span",
+                  {
+                    children: _.substring(_, _),
+                  },
+                  _ + "_" + String(_),
+                ),
+              ),
+              _.push(
+                (0, _.jsx)(
+                  "span",
+                  {
+                    className: _,
+                    children: _.substr(_, _.length),
+                  },
+                  _ + "_" + String(_),
+                ),
+              ),
+              (_ = _ + _.length);
+          }
+        } else
+          _.push(
+            (0, _.jsx)(
+              "span",
+              {
+                children: _,
+              },
+              _ + "_null",
+            ),
+          );
+        return _;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      let _ = class extends _.Component {
+        GenerateLanguageOptions() {
+          let _ = [];
+          const {
+            fnFilterLanguage: _,
+            fnLangHasData: _,
+            fnLastUpdateRTime: _,
+            fnIsLangSupported: _,
+          } = this.props;
+          this.props.bAllowUnsetOption &&
+            _.push(
+              (0, _.jsx)(
+                "option",
+                {
+                  value: _.xPp,
+                  children: (0, _._)("#language_selection_none"),
+                },
+                "langpicker_unset",
+              ),
+            );
+          let _ = new Array();
+          const _ = this.props.realms || [_._.k_ESteamRealmGlobal];
+          for (const _ of _._.GetLanguageListForRealms(_)) {
+            if (_ && !_(_)) continue;
+            const _ = (0, _.LgB)(_),
+              _ = (0, _._)("#Language_" + _),
+              _ = !(!_ || !_(_));
+            _.push({
+              eLang: _,
+              sLocName: _,
+              bSupported: _,
+            });
+          }
+          _.sort((_, _) =>
+            _.bSupported != _.bSupported
+              ? _.bSupported
+                ? -1
+                : 1
+              : _.sLocName.localeCompare(_.sLocName),
+          );
+          let _ = !1;
+          for (const _ of _) {
+            _.bSupported != _ &&
+              (_.push(
+                (0, _.jsx)(
+                  "option",
+                  {
+                    className: _().SupportedGroupLabel,
+                    disabled: !0,
+                    children: (0, _._)(
+                      _.bSupported
+                        ? "#LanguageGroup_Supported"
+                        : "#LanguageGroup_Unsupported",
+                    ),
+                  },
+                  _.bSupported ? "SupportedGroup" : "UnsupportedGroup",
+                ),
+              ),
+              (_ = _.bSupported));
+            const _ = _ && __webpack_require__(_.eLang),
+              _ = _ && _(_.eLang);
+            let _ = _.sLocName;
+            _ &&
+              0 !== _ &&
+              ((_ += " "),
+              (_ += (0, _._)(
+                "#Language_Last_Update",
+                (0, _._)(_) +
+                  " @ " +
+                  (0, _._)(_, {
+                    bForce24HourClock: !1,
+                  }),
+              ))),
+              _.push(
+                (0, _.jsx)(
+                  "option",
+                  {
+                    value: _.eLang,
+                    className: (0, _._)(
+                      {
+                        [_().LanguageWithContent]: _,
+                      },
+                      _.bSupported
+                        ? _().SupportedLanguage
+                        : _().UnsupportedLanguage,
+                    ),
+                    children: _,
+                  },
+                  "langpicker" + _.eLang + (_ ? "_hasdata" : ""),
+                ),
+              );
+          }
+          return _;
+        }
+        OnLanguageChange(_) {
+          const { fnOnLanguageChanged: _, selectedLang: _ } = this.props;
+          let _ = Number.parseInt(_.currentTarget.value);
+          _ != _ && _ && _(_);
+        }
+        render() {
+          const { selectedLang: _, bDisabled: _, strTooltip: _ } = this.props;
+          let _ = this.GenerateLanguageOptions();
+          return (0, _.jsx)(_._, {
+            toolTipContent: _,
+            children: (0, _.jsx)("select", {
+              value: _,
+              onChange: this.OnLanguageChange,
+              disabled: _,
+              children: _,
+            }),
+          });
+        }
+      };
+      (0, _._)([_._], _.prototype, "OnLanguageChange", null),
+        (_ = (0, _._)([_._], _));
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -3166,7 +3555,6 @@
         let _ = _
           ? (0, _.jsx)(_._, {
               text: _ || "",
-              partnerEventStore: _,
               showErrorInfo: !1,
               event: _,
               languageOverride: _._.Get().GetCurEditLanguage(),
@@ -6731,7 +7119,7 @@
           queryFn: () => {
             try {
               return (function (_, _, _, _, _) {
-                const _ = (0, _._)(_._, _.DRF, _),
+                const _ = (0, _._)(_._, _.DRF, _, (0, _._)()),
                   _ = !1,
                   _ = [..._, ..._],
                   _ = new Set(_);
@@ -7596,7 +7984,7 @@
           queryFn: () => {
             try {
               return (function (_, _, _) {
-                const _ = (0, _._)(_._, _.DRF, "" + _),
+                const _ = (0, _._)(_._, _.DRF, "" + _, (0, _._)()),
                   _ = !0,
                   _ = {
                     ...(0, _._)("tabs", ""),

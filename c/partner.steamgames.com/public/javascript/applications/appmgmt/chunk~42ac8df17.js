@@ -4,6 +4,182 @@
   {
     chunkid: (module) => {
       module.exports = {
+        DevSummaryCtn: "_34fexyvsk4ZCS1pkTxhzel",
+        LargeFormat: "_1Gpg0Ssqz-6tv_-RNy2RNp",
+        CreatorDescCtn: "_1RKG_vMqjYBgcXZH6CoS3U",
+        SmallFormat: "_2uzyd3CZPlDXNcII3Zl5MV",
+        MinimalDisplay: "_266wPb9e0vcATAZmthTQaq",
+        DevSummaryWidgetCtn: "_3-CiOktJBVfuAsdgT4OW_f",
+        DevSummaryContent: "_2jbedard-PdnyO3XpMLNPg",
+        DevSummaryBackground: "_3F7LyeepqJvGpcXjroux4j",
+        AvatarLink: "Y9lYkfS_6GRwnSuFBgyQz",
+        Avatar: "_3x-VF5_m6i66QQrJJ-WgoN",
+        CreatorTitleCtn: "_141X0qDDTpudXQuTa1cYJG",
+        CreatorNameName: "_3F6BGfg9HSsjiOFeHmiuOZ",
+        CreatorTagline: "_3RKG3sfzCT1ven1_L1lBW1",
+        Title: "AW22-NNnUJaOiqzrVG1AX",
+        Followers: "_3NzMkIJWeFg7rV--RVOM_g",
+        FollowerCount: "B_sn9jeeUYTEEio2U3kqO",
+        SocialFollowersCtn: "_1e-4cFtf9LKQ3rhJWKcr2h",
+        FollowBtnCtn: "_1C9_c4mNpE6FRz-3PWv9sd",
+        FollowButton: "nDye27oueac7bocDYPZ0V",
+        FollowBtnText: "EZqO5MdZoyMOQJ38Sj0iH",
+        SocialContainer: "_258mBlkhbYBiZXTs4qrAP1",
+        SocialImg: "_1sKMwuRIbbgs9Z7qLAlsib",
+        SocialLink: "_3FZ-m-aObV2XxGykp5A1pt",
+        CuratorHoverCtn: "_3GV3_URzwPB-8VZj0tMins",
+        MembersListLink: "YN9wF_mOsT6piqNqvyyNz",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        "duration-app-launch": "800ms",
+        narrowWidth: "500px",
+        headerCapsuleImgWidth: "460",
+        headerCapsuleImgHeight: "215",
+        mainCapsuleImgWidth: "616",
+        mainCapsuleImgHeight: "353",
+        libraryAssetImgWidth: "300",
+        libraryAssetImgHeight: "450",
+        heroCapsuleImgWidth: "374",
+        heroCapsuleImgHeight: "448",
+        StoreSaleWidgetContainer: "t75Je5tr-0U-BmJ9zl5ia",
+        LibraryAssetExpandedDisplay: "_39Jz5Qi6nhOd7XvaNnbSoR",
+        SaleItemDefaultCapsuleDisplay: "_2kFm1akTi_PvgXVMGuiGXo",
+        BundleContentPreview: "_4fgFjJosEpAnm3TuEhO4q",
+        PreviewCtn: "_3y21gqoSEnLQ-LQl97kRb8",
+        MarketingMessage: "_3IdTKNXhXzkVoep4-5yZuN",
+        StoreSaleWidgetRight: "_3aTPAkD_nC4hFYjSSUGdIx",
+        StoreSaleWidgetHalfLeft: "_2OmLxbQ8PCPJL9p8YRyEKP",
+        StoreSaleWidgetTitle: "w75CJy5_YgzbJm91xnOQK",
+        StoreSaleWidgetLibraryAssetExtendedTop: "_3R3jAV3aZuBYZUeAW1nD7h",
+        StoreSaleWidgetLeft: "_1ERk_jpTDmAx8rJn5bJNLR",
+        StoreSaleDiscountBox: "_1kSDZm0Cg9anUkTfWFtwdN",
+        PurchaseOption: "z_iiAWZceRwDjLt3ZisRU",
+        StoreSaleWidgetImage: "x_kq8V9RpcQ0NN1peDKg7",
+        CapsuleMicroTrailer: "_1ZsPp8DWmkC4OPKARDotIS",
+        CapsulePlatform: "_3vk4H4zJk_wDD6oaJrsjuj",
+        StoreSaleWidgetContents: "_1nfJPebnVfFpujoINIrTwx",
+        StoreMetaDataCtn: "_28XzNZpa2zm6dfU_Hl1aoF",
+        StoreSaleItemRelease: "dY0SjUwvxyZTq7knLEKEc",
+        StoreSaleItemDev: "_3B7TyRytxk7VNgUkEksk_g",
+        StoreSaleItemReview: "_2ZlC6bcWXRrbEH_H3ikW_v",
+        TitleCtn: "_2hY5KQtdBm61wdeNXehgrm",
+        StoreSaleWidgetCrossCenterRight: "_3oOCqm5QnRABrDXfNWZCiV",
+        CapsuleBottomBar: "_1_ehE8jTqsTDnx5E7Sqjy7",
+        PlayNowButton: "_14BfXA3_1WV39l7v3kD_s_",
+        AddToLibraryButton: "_1ByCcqMjsaSpyZw0HZlDyi",
+        StoreActionWidgetContainer: "_1KKmxZOJSplMIyYiT9qVp9",
+        StoreSalePriceWidgetContainer: "_1so1AGD_m_uIBFDEc1ImOu",
+        StoreSaleWidgetBgTint: "_1RmkMAMYEGZOaFv3k49gfc",
+        LibraryFallbackAssetImageContainer: "_2qZSepj4cX-WLkospQs0Ep",
+        FallbackBackground: "-V2UzXJLqza_XoSPI7wz6",
+        SaleTagBlockCtn: "_1hS3ayvVLxIJlkxUDEBACP",
+        StoreSaleWidgetCenter: "_1kHYilvb5rc5aw0OmhmfNw",
+        StoreSaleLibraryAssetWidgetRight: "_101xD6rIYm8X_jp483Kshs",
+        StoreSaleWidgetReleaseAndTags: "_1N4IfOUIwuiYhgqyiJ_ilZ",
+        Bundle: "_292AerR2EXt-7RVrZp7E8K",
+        WidgetReleaseDateAndPlatformCtn: "_1OUpla9y9ki3n--MdoUpSs",
+        SaleItemBrowserRow: "_3_-EEQpFNke34pzfmip5yh",
+        StoreSaleWidgetRelease: "_3MahqhNDkJzVX6vf3ysCbc",
+        StoreSaleWidgetTags: "_38RGrHCxetbJdFlekFhXMJ",
+        AppTag: "_38998HcikvEZtZcJXwppxS",
+        StoreSaleWidgetShortDesc: "_2VdeXQqeuqu2i4yjprISF-",
+        LargeText: "x5UGgerCCNFPP0IR7S-PC",
+        TagTitle: "_1Tifv9nWMUHpqL-5PdjhNO",
+        TagBox: "_3vCIFKfpJCOL-zsUEUiAtt",
+        Tag: "_22IRYeqPYSxG2vqNmALNsh",
+        Categories: "UUvYZ6JvzIAlcFDV4wF7j",
+        SaleItemFullCapsuleDisplay: "_1b7dbi80Ody0jI0vYb_7bG",
+        Category: "_23oBdrL9Cnh9x11yw8hmaN",
+        CategoryIcon: "_2guay37SfoNrroBIe0UbYH",
+        ReviewScores: "_3uIw-iqrc6AKEcMLki94nj",
+        StoreSaleBroadcastWidgetRight: "_1xIPeza3-7471L4fvQRWBQ",
+        StoreSalePriceActionWidgetContainer: "_20HgIIui8JHLBf62qfz5Gr",
+        Action: "_3-6Yf-FWOYdz69902FtDwy",
+        Discounted: "w775QgXXCtmtG8yzEp-2u",
+        WishList: "_2mKhatcQBAj0oKWP1V_tFV",
+        StoreSalePriceBox: "kauOU9QnW8Fs0QpxzTBph",
+        SingleLineMode: "_1Ph5iLt6Bh7woGXf5RnIPB",
+        StoreSaleDiscountedPriceCtn: "_2KBGD_hHRCfMXm-DDYRbQX",
+        StoreSaleNewItem: "kT9bBl6aBZQ-0xiRlMWzc",
+        StoreOriginalPrice: "_1odBXcjq8-Q8SFXViJa7c6",
+        PrePurchase: "_1QuRa-ebvBejdSjmUkqX5v",
+        NewItem: "_1ScAL4Y0dGHeXycrpJYkAC",
+        PurchaseOptionDetails: "t7tIxWgiQRt2p2A979EUU",
+        InGameHover: "_yRMvMttBTHiO3_SMH6Or",
+        StoreSalePrepurchaseLabel: "_2mG_q95stW67uyZmLXcO8y",
+        SingleLineOriginalPrice: "_1jRZOgPPLTjiXtsrX_iB1O",
+        YourPriceLabel: "_1RGKRbbcPP2ImptkZ3LP6P",
+        BaseDiscount: "_3BJdajInVqrAsGwPFUAshC",
+        StoreSalePriceButton: "_PS7WNXgzr2qOl4HOjEIp",
+        OuterCapsuleContainer: "_1omVjlZWALGX34pum8v7SF",
+        BottomBarPriceInfo: "_2ogs95OHz8bo5FTfppAZiJ",
+        TrailerActive: "_13__6f3T57ykYT09Z7etmf",
+        CapsuleContainer: "_1kCTkXxE8CbUnnhSjsL-Kb",
+        Linked: "_2uiBcpls1KbtGPBEPSQyrA",
+        EventRow: "_3Ld-x7gljlKqiGE3WBsENh",
+        BottomCreatorRow: "_3HMU8TsxAklmNPNyGoeAZU",
+        CreatorLogo: "V0GgcGqSWSpKmV8RTzFU0",
+        CreatorName: "dxHZGdYWTxGXbxaQiceKZ",
+        AddToCartButton: "_1LJo1FYFdLFJE1u-PJcyxN",
+        AddToWishlistButton: "_1kZYzTTdH8XUXsYP9lgb-h",
+        HeaderCapsuleImageContainer: "_1W35jfl6uiYKf7Iwt3NNEz",
+        MainCapsuleImageContainer: "_3ghuGooDVCn0gUuocEnV8B",
+        HeroCapsuleImageContainer: "S9g2oScKWNbE4BrExvI19",
+        DiscoveryQueueCtn: "_1PaQQXx0817RqTxahOzbZT",
+        NoShadow: "_3xAYvMZ9m_TYNbwjyDr3d4",
+        VerticalCapsule: "IR8muj8HL9MD7GoRBp7LZ",
+        ForceLibrarySizing: "_1hSAcJwcSL1bbi-w5C5fjv",
+        CapsuleImage: "_2xiNqpMzhZh4tVcBPD6z1W",
+        LinkCapsuleImage: "_1AFjCLdN5rlqKicNNN4qJR",
+        CapsuleParentInfo: "ZsrUviKbsm6zNlc92WYd9",
+        ParentType: "-oMlD-aBQ0XixJxkc0cy5",
+        Banner: "_2qnY9VZwgA2qx1ydmUlsUm",
+        Blue: "_1f8WQvpQv-I5pqCmscp6iV",
+        EarlyAccessGradient: "_1Y1oAEI6qR7aE22ePmy-8S",
+        LinesImg: "_10MiXmZw9nyJIMVqHTS3FH",
+        CapsuleDecorators: "_1Ss9w5OINDsfSBbOR7VWp9",
+        BundleContentsCtnTransition: "_1O1d5Wj6hmDvM1KQDSEWBh",
+        Expanding: "_2B71vqrTAumZWP2eCwqPfY",
+        Expanded: "_1UxAPCy6v0_Fm-iAXFJMog",
+        Collapsing: "_2TTiL0BkOdhiWpE6m0k6j9",
+        BundleContentsCtn: "_2Fqilki7o63IJqfaEIIBpa",
+        BundleContentsTitle: "_3TirrWSdMt2tPeAOOY3D_-",
+        BundleShowButton: "_2W1zHZrECwIsSOb8OillGT",
+        ShowContentsButton: "_3h99aa2siCkcjDn4G8vKQY",
+        ShowContentsSection: "_4wRhe4a4sFJolBfzgS3Oi",
+        BundleContentItem: "OhPohJ5GY4yteVD6yWZA-",
+        StoreSaleWidgetOuterContainer: "_1YNtl1bfteFkaCFYHhtUMf",
+        ContentsCount: "PQWG8XlLSUl9LC-7e3cPB",
+        PreviewItem: "_3vQHsd2T2R-6xZB6sWSPRc",
+        DeckCompatIcon: "_2nXaXW4Ps268qjxYMblw3e",
+        BundleTag: "-D5ypo5W6aLJPMR1_L0y_",
+        PreviewImg: "_3Z8MJxQ_Ji953C5R6oQdgY",
+        DemoLayoutPopup: "tDBuR3ivkJbl0t9E_ssXD",
+        FreeWeekendBar: "_3zm9xR6YDSxfquPOjhHoRc",
+        FreeWeekendLabel: "_2Mqx0PhPACBhZxd70rTNo_",
+        RecommendationReason: "_19AVGu5eqFoeoiqvydT0Tv",
+        LocalizationSpan: "_8ZbRxdp7AJCWfdcbMmcye",
+        CapsuleName: "_16nzXvpmoPX2AHcWtWHQsU",
+        DiscountIconCtn: "_12oL_Na-4ZnfDriQ80BEBc",
+        MaxActionButtonWidth: "_1AiAr0lqTfJuoAry1CmxyW",
+        BackgroundAnimation: "_1CIMWCeT1o82vKuoVFS0Or",
+        "ItemFocusAnim-darkerGrey-nocolor": "QmvtbjNkXhoFsHYRkJ8pk",
+        "ItemFocusAnim-darkerGrey": "_2muPTTrVake-UfXJizQg6g",
+        "ItemFocusAnim-darkGreySettings": "_15cm3kzIBv3fn2fxYuqTJR",
+        "ItemFocusAnim-darkGrey": "_3WidOXfqJtMrQ7t9WsTNx",
+        "ItemFocusAnim-grey": "_3TjvvuiDzTihqHMxswC7z_",
+        "ItemFocusAnim-translucent-white-10": "_3u6erDX_vfSreCNiukX2S",
+        "ItemFocusAnim-translucent-white-20": "_1pBe5-hUwVCsRu0ZWAS7NK",
+        "ItemFocusAnimBorder-darkGrey": "_11_f57sto7UJFfYAgmuQ8_",
+        "ItemFocusAnim-green": "_1pwlLApsSR1PWl1ys4T9Ka",
+        focusAnimation: "XOkNr-sTpt-rrz1iaVQv4",
+        hoverAnimation: "_2A0UXZtbRj2Hc7vKFjV9xl",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         "duration-app-launch": "800ms",
         GameHoverCapsuleCtn: "_1isLDN8xbFyCDG5jtMO7J3",
         Loading: "_6exjsiWCk6IgWiQenqfQH",
@@ -96,6 +272,13 @@
     },
     chunkid: (module) => {
       module.exports = {
+        AddToCartAnchorCtn: "_2qDFksxM_Q3AG6L1u8NwZU",
+        Action: "ttu4ikNa3-0XD2V-s6GcO",
+        ActionOutOfStock: "_1PlPor5x810Tggmt8VYmNm",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         DemoButton: "_28CiBI8NLjLb6f6rlg_Ymg",
         DisabledButton: "_2vOGUa8HwoudpQtMOK5Nqw",
       };
@@ -139,45 +322,6 @@
         ActionText: "_2s5NsgqEDdI6nKvz-9YFa4",
         Footer: "_3OKQsxzgQZkt2GtKz9679g",
         Logo: "_2AEA_k1tEcjAtTL7-Bnitk",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        AddToCartAnchorCtn: "_2ZqO4e00c6-Fr4hJvTJsAu",
-        Action: "yoe6d_43t3I6-mjbZGkLs",
-        ActionOutOfStock: "_3XwnF5hpyOwvxFT_v7PMhS",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        DevSummaryCtn: "_1k0S-tUF_ENycLJ7PWqbzS",
-        LargeFormat: "_1090TwnnSh07Rya_5ss37E",
-        CreatorDescCtn: "_3nKoQbWM1xYxsCfDoImGQ-",
-        SmallFormat: "_18tLexJfL4tGNabZ9Ywvlm",
-        MinimalDisplay: "ROZPQ29NfT-_S-vY5rMJp",
-        DevSummaryWidgetCtn: "A2B2VZqisd8LEU7zknWqk",
-        DevSummaryContent: "_23xa4AVp7kYtbslOOB8xly",
-        DevSummaryBackground: "_1TsqAyLSPMv7JrgVI6Jpnv",
-        AvatarLink: "_1N0rYLgFmHTfQng24QRoEh",
-        Avatar: "_3JepbxeEa0I4l8TnG9DeT5",
-        CreatorTitleCtn: "_2T8Ub04W0G2L6_3692y23L",
-        CreatorNameName: "_8196lUGpYeVntSAwJq-64",
-        CreatorTagline: "NX5WeT2qHbZGaVykMxMA2",
-        Title: "_37vyVYzsOKNDlPWnQ5zcMF",
-        Followers: "_2ZpFi_vScMetinFMtGp2WE",
-        FollowerCount: "_3cARehxbzcQp_dC3sKo3QH",
-        SocialFollowersCtn: "BT3Bjo-dSXZV11Cqy_Awo",
-        FollowBtnCtn: "_2artmqqQS2Rl8YMsi1nV-U",
-        FollowButton: "_1HwWXjF06mJ9sG_9KXlgA-",
-        FollowBtnText: "_1a5djsChaeoZViyFSGNom5",
-        SocialContainer: "_1o1Ds-OdAZcjo18bw9QiEH",
-        SocialImg: "_2v_K1-p6KHigjcjV3HlHsV",
-        SocialLink: "_3eCVbMRawBIqtu1HpE7qJR",
-        CuratorHoverCtn: "_30j_Rriv37jV9sEvTdi8Kw",
-        MembersListLink: "_3DO0NUX-db2kVZWScbJetR",
-        CreatorCarouselCtn: "_11Cu9S1VPnTs2MtOD6DUWN",
-        CreatorCarouselCrumbs: "_2EheiN3i0vJ-6LTaCsey78",
-        CreatorCarouselCrumb: "_3CIQhWZfRLsRxOmCy1obyV",
       };
     },
     chunkid: (module) => {
@@ -254,152 +398,6 @@
         "ItemFocusAnim-green": "_30VQHyiQ7SgMZgv2Q9RwMo",
         focusAnimation: "_1bLCgV4sZsGIHim8xs3go9",
         hoverAnimation: "_3--MfPAMg27VUuOckksz2m",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        "duration-app-launch": "800ms",
-        narrowWidth: "500px",
-        headerCapsuleImgWidth: "460",
-        headerCapsuleImgHeight: "215",
-        mainCapsuleImgWidth: "616",
-        mainCapsuleImgHeight: "353",
-        libraryAssetImgWidth: "300",
-        libraryAssetImgHeight: "450",
-        heroCapsuleImgWidth: "374",
-        heroCapsuleImgHeight: "448",
-        StoreSaleWidgetContainer: "_2hhNOdcC6yLwL_rugP3YLf",
-        LibraryAssetExpandedDisplay: "PZY_7wH_NY7OgzH9MBiB8",
-        SaleItemDefaultCapsuleDisplay: "_37iggltdgh0RtNIECJCfOj",
-        BundleContentPreview: "jQ5GanUKBEe7hhgCh6b5z",
-        PreviewCtn: "_1NM531LjOd5QmDktUetCOm",
-        MarketingMessage: "_3_q87LhuWitbYSEHOVKYlM",
-        StoreSaleWidgetRight: "v9uRg57bwOaPsvAnkXESO",
-        StoreSaleWidgetHalfLeft: "_111nfdz8Xyg7lDjTWv_OmK",
-        StoreSaleWidgetTitle: "_2ekpT6PjwtcFaT4jLQehUK",
-        StoreSaleWidgetLibraryAssetExtendedTop: "_1uLNByMlXsYSmrGPWyDNhE",
-        StoreSaleWidgetLeft: "_3DkfNrtTOLjNYd3yZliMzy",
-        StoreSaleDiscountBox: "cnkoFkzVCby40gJ0jGGS4",
-        PurchaseOption: "_2R_C2rCrJEg8G8_d7-QQKn",
-        StoreSaleWidgetImage: "yvqq8z2k4i7-Mzx-JHeNC",
-        CapsuleMicroTrailer: "_1M7n5f3gWCHv1wN1smoxWg",
-        CapsulePlatform: "_2bCf9u4rlC8De687HY6wnh",
-        StoreSaleWidgetContents: "AgwfelHhJjcEq6ZQ9ohVr",
-        StoreMetaDataCtn: "_2W2g30XYcaT1E3_IWsyVMK",
-        StoreSaleItemRelease: "vCEpeeiHJkcIDdtTkRfjT",
-        StoreSaleItemDev: "_3tIbO7JWeYXTD8fDol5_-f",
-        StoreSaleItemReview: "Kx5NfQxifS6Xw2JxtcV31",
-        TitleCtn: "_3rrH9dPdtHVRMzAEw82AId",
-        StoreSaleWidgetCrossCenterRight: "oW0H1sBVE8K8u0qbq_Tm5",
-        CapsuleBottomBar: "_3lmdEmwrmqe-kicNCZ9v-I",
-        PlayNowButton: "_38ePadMVKPpN2BnpideoQw",
-        AddToLibraryButton: "_1DrDh5P3SNgRdVAaUyel3G",
-        StoreActionWidgetContainer: "kW6m4Sjqacp5hykrj5LEo",
-        StoreSalePriceWidgetContainer: "_2s-O5T3qJJYR2AUq4b9jIN",
-        StoreSaleWidgetBgTint: "MvLJDXjfbme8Uw3OERaCb",
-        LibraryFallbackAssetImageContainer: "_1APLSpJeTPfN76xzyzVSfx",
-        FallbackBackground: "_3chRZTd1smybX8C-swWcAm",
-        SaleTagBlockCtn: "_1ZqQL1ugqx5VZZK7e7nZuc",
-        StoreSaleWidgetCenter: "_2asUTzZuAkj9cDRKsLvwRE",
-        StoreSaleLibraryAssetWidgetRight: "_1gLxXYZKQJSLc5MKYXEesv",
-        StoreSaleWidgetReleaseAndTags: "_3wryhCRrTuMULeq_YjNk-s",
-        Bundle: "_2GbhLyknhFLhpEOlbBXC3z",
-        WidgetReleaseDateAndPlatformCtn: "_3a6HRK-P6LK0-pxRKXYgyP",
-        SaleItemBrowserRow: "gASJ2lL_xmVNuZkWGvrWg",
-        StoreSaleWidgetRelease: "_1qvTFgmehUzbdYM9cw0eS7",
-        StoreSaleWidgetTags: "_2bkP-3b7dvr0a_qPdZEfHY",
-        AppTag: "_3FJnZuxmPA_MjxsF8BQQ5L",
-        StoreSaleWidgetShortDesc: "_3AsE5JhqLAiICKUYvZLpap",
-        LargeText: "_3FqDALHzNLR5fMMZTeBw8Z",
-        TagTitle: "v1i4WK3tk4FpXSJ5wC60U",
-        TagBox: "_1lqaDGTzuprpWRYk4_2JrN",
-        Tag: "_33yqka47vWurNqhnhLJb_m",
-        Categories: "_2hr4JZMbG9l2GKALFD0dO7",
-        SaleItemFullCapsuleDisplay: "_2sVvRzH7oPUUIVDDVO0MJj",
-        Category: "_2lQNYB6g6C7aiw0GDPe9fq",
-        CategoryIcon: "_2RJxWCkjuP3H-i8oLU5W2Q",
-        ReviewScores: "_3MxPBWjpjU_Gm8SIgi5g8A",
-        StoreSaleBroadcastWidgetRight: "_9VjYX3CYMn2y-wWpAn00Y",
-        StoreSalePriceActionWidgetContainer: "_1JuIpzMtS7-xZrnUmEQ4my",
-        Action: "_2zssEuiPfY5YdQlnihDfVD",
-        Discounted: "_1g0B-RjwkUV0_MDURgy3Bi",
-        WishList: "_1djkdp7OAd0mF3a90RKf27",
-        StoreSalePriceBox: "_3j4dI1yA7cRfCvK8h406OB",
-        SingleLineMode: "_1ZlGJxv-xQaABSvaVvMlNq",
-        StoreSaleDiscountedPriceCtn: "_3NhLu7mTdty7JufpSpz6Re",
-        StoreSaleNewItem: "_2_KY_e11FV0ftXR2_7TMmP",
-        StoreOriginalPrice: "_3fFFsvII7Y2KXNLDk_krOW",
-        PrePurchase: "_2f7BMv_bJMTrHmaOF8B3Ws",
-        NewItem: "_2xCT1pUf2c9TICHoMcQE0d",
-        PurchaseOptionDetails: "_17_ynHC8fq9_LghcLrJYmW",
-        InGameHover: "axjdi0dhiB17GHjL5FRCr",
-        StoreSalePrepurchaseLabel: "_1Fru-E7WQMr8G_aR2sMg5F",
-        SingleLineOriginalPrice: "t7Gt8aeopD7JPlhcNTqGV",
-        YourPriceLabel: "_1stCJEQuG2FqlQr_q9AgR2",
-        BaseDiscount: "_3mInDnGL3LlUC7uPs1CfOP",
-        StoreSalePriceButton: "_1BejQFnnmkHMi9stswiJzf",
-        OuterCapsuleContainer: "_1dKR2IPNQSHs1MAIXBvt_R",
-        BottomBarPriceInfo: "_1X3j2g29SBtsrFMgNiKi_Y",
-        CapsuleContainer: "_22AcxR1RBDH6i-gjKRHYk0",
-        Linked: "_3b7bzOQeDc139QX27AIMtM",
-        EventRow: "_1UMFnczt69Ka8nOWKMzKJR",
-        BottomCreatorRow: "_1JrUubE3c7FdJsMxYYxbt",
-        CreatorLogo: "_3Krfug3wchu0qwGYQbbsHL",
-        CreatorName: "Fmi-agZ0W7_4TkZ7CNquC",
-        AddToCartButton: "_2iWMRE6knpPZLgHWASy5BH",
-        AddToWishlistButton: "_2YfaLBUZmFkJ3NpkieGzS3",
-        HeaderCapsuleImageContainer: "_2oW_y7Mm3ihf1XQ0C1VWhx",
-        MainCapsuleImageContainer: "_1vpxH37o7mJotC0IoqWbqy",
-        HeroCapsuleImageContainer: "vnhlb8EFU45PU6qG2GBDW",
-        DiscoveryQueueCtn: "_2uX2GFSEk3nkWxRsaBXaeG",
-        NoShadow: "lxQeFs3wUE9dLxZkpEWtt",
-        VerticalCapsule: "_3sy8XcvOMnFJv1_Edwpzqv",
-        ForceLibrarySizing: "_25KI3ndwISqbgBdtNxpujP",
-        CapsuleImage: "_2eQ4mkpf4IzUp1e9NnM2Wr",
-        LinkCapsuleImage: "_2xO8H8kHMGocbbjupWJ7Nt",
-        CapsuleParentInfo: "_2erfWpFrn1tZTPEbq97SuW",
-        ParentType: "_3FCPPT5eoSXF0nNcICVdP6",
-        Banner: "_2gxv9cF-4n9wq4yxruOTNl",
-        Blue: "_2o-5t6bgEJxfbWVSmxT88V",
-        EarlyAccessGradient: "_2Hl_ERfCdYklXHAYAqvd4R",
-        LinesImg: "_3LecBjgbnwvS6bCFqxs6SC",
-        CapsuleDecorators: "_1xNQcxU9_OtQ-_PrMbviS4",
-        BundleContentsCtnTransition: "_24KNcWMI5Yvb_AnPAb23Fm",
-        Expanding: "_38KIqxQJ2UZxWKjh4XFZrh",
-        Expanded: "hPc1lu4wYeTfpyzGPwPIa",
-        Collapsing: "_2NmI1RTJL46CD1bmy9p7U7",
-        BundleContentsCtn: "_34acuCI4lsvrR8ezmi7K1E",
-        BundleContentsTitle: "hhdk89lN3EL3ieRxGPbyl",
-        BundleShowButton: "_2Vu78ZkZCgLm-FV4KStixO",
-        ShowContentsButton: "-VlK4AN84fDgapWwCDax2",
-        ShowContentsSection: "fsPeLo8K4uDXedwKw4_sG",
-        BundleContentItem: "_2sdNOCzaF2AIAuenP19tA6",
-        StoreSaleWidgetOuterContainer: "_1_P15GG6AKyF_NMX2j4-Mu",
-        ContentsCount: "_353LzpA83V-kiAWaKcQAFg",
-        PreviewItem: "_2yhQb4aKtskchqwmpCVbMq",
-        DeckCompatIcon: "_1Nju8xukRGXgeu2mN0nVjT",
-        BundleTag: "_1qR-LifiFC4bCiow5xRIy0",
-        PreviewImg: "_1jx70oYOJWzNj7A5gNRxhg",
-        DemoLayoutPopup: "_2tmp27YgSoUCJSBJA4t5yt",
-        FreeWeekendBar: "_2SCofLY66uBY_jjrTzNjBN",
-        FreeWeekendLabel: "_21B6LWEBK8rKCmK8COTVRq",
-        RecommendationReason: "_3Q_taCjMHNZqbKEr1-r2GQ",
-        LocalizationSpan: "_3bCSmg_cQ3aTa3waFLT6o7",
-        CapsuleName: "_31P1R5vTMyJ5RwWAfVoKYG",
-        DiscountIconCtn: "_3Qt9S4lxTBuJqoY2PidC5h",
-        MaxActionButtonWidth: "_3GOwBXz8cR_9njnfMGlp7b",
-        BackgroundAnimation: "_1k6sq680iiVKySIMXNcHkL",
-        "ItemFocusAnim-darkerGrey-nocolor": "_34Tp7N_mW2y7TOcBFxCQVo",
-        "ItemFocusAnim-darkerGrey": "WQW1YbFeZjtPKckWVFjzB",
-        "ItemFocusAnim-darkGreySettings": "_2hTOwEn75PZ0XqJLLH6Yzc",
-        "ItemFocusAnim-darkGrey": "_3T33tEqMtzz3ijG8DkMXYZ",
-        "ItemFocusAnim-grey": "_1VqQfVz7N0T1g4AHmuCQu8",
-        "ItemFocusAnim-translucent-white-10": "jiBNibpWxZkJeyBzbrB5j",
-        "ItemFocusAnim-translucent-white-20": "_1y2_IkearpG-2NoiPwZu0U",
-        "ItemFocusAnimBorder-darkGrey": "_1LiqE1tXtbXey4AKzgFJfX",
-        "ItemFocusAnim-green": "_34pf2FqL7CWP6V9VNzPEIS",
-        focusAnimation: "_1wLvhANps-c7yKLact-7v8",
-        hoverAnimation: "_2FuCM99jbjgMa0JFZoisSA",
       };
     },
     chunkid: (module) => {
@@ -756,19 +754,698 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      const _ = {};
+      (_.arabic = () =>
+        __webpack_require__._("chunkid").then(_._.bind(_, 6696, 19))),
+        (_.brazilian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 58906, 19))),
+        (_.bulgarian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 53473, 19))),
+        (_.czech = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 83899, 19))),
+        (_.danish = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 84925, 19))),
+        (_.dutch = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 69902, 19))),
+        (_.english = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 80716, 19))),
+        (_.finnish = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 81663, 19))),
+        (_.french = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 48484, 19))),
+        (_.german = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 66810, 19))),
+        (_.greek = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 13744, 19))),
+        (_.hungarian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 62101, 19))),
+        (_.indonesian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 68948, 19))),
+        (_.italian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 2916, 19))),
+        (_.japanese = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 40195, 19))),
+        (_.koreana = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 84259, 19))),
+        (_.latam = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 24475, 19))),
+        (_.malay = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 60580, 19))),
+        (_.norwegian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 36884, 19))),
+        (_.polish = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 15269, 19))),
+        (_.portuguese = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 96865, 19))),
+        (_.romanian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 71391, 19))),
+        (_.russian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 64933, 19))),
+        (_.sc_schinese = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 27503, 19))),
+        (_.schinese = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 44768, 19))),
+        (_.spanish = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 20876, 19))),
+        (_.swedish = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 75181, 19))),
+        (_.tchinese = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 89779, 19))),
+        (_.thai = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 98970, 19))),
+        (_.turkish = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 87996, 19))),
+        (_.ukrainian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 47306, 19))),
+        (_.vietnamese = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 72539, 19)));
+      const _ = (0, __webpack_require__("chunkid")._)(async function (_) {
+        if (_[_]) return _[_]();
+      });
+      var _,
+        _ = __webpack_require__("chunkid");
+      function _(_, _, _) {
+        let _;
+        _ =
+          void 0 === _ || !0 === _ || !1 === _
+            ? {
+                weekday: _ ? "long" : "short",
+                year: _ ? void 0 : "numeric",
+              }
+            : _;
+        let _ = new Date(1e3 * _);
+        const _ = {
+          weekday: "short",
+          month: "long",
+          day: "numeric",
+          year: "numeric",
+          ..._,
+        };
+        return _.toLocaleDateString((0, _._)(), _);
+      }
+      function _(_, _) {
+        const _ = {
+          year: "numeric",
+          month: "short",
+          day: "numeric",
+          ..._,
+        };
+        return new Date(1e3 * _).toLocaleDateString((0, _._)(), _);
+      }
+      function _(_, _, _) {
+        const _ = new Date(1e3 * _),
+          _ = (0, _._)(),
+          _ = {
+            ...(_?.bForce24HourClock ||
+            (function (_) {
+              const _ = new Date();
+              return (
+                _.setHours(15),
+                _.toLocaleTimeString(_, {
+                  hour: "numeric",
+                }) ==
+                  _.toLocaleTimeString(_, {
+                    hour: "numeric",
+                    hour12: !1,
+                  })
+              );
+            })(_[0])
+              ? {
+                  hour: "numeric",
+                  minute: "2-digit",
+                  hourCycle: "h23",
+                }
+              : {
+                  hour: "numeric",
+                  minute: "2-digit",
+                }),
+            ..._,
+          };
+        return _.toLocaleTimeString(_, _);
+      }
+      function _(_) {
+        return _.toLocaleDateString((0, _._)(), {
+          month: "long",
+          year: "numeric",
+        });
+      }
+      function _(_) {
+        const _ = Math.floor(_ / _._.PerYear),
+          _ = Math.floor(_ / _._.PerMonth),
+          _ = Math.floor((_ % _._.PerMonth) / _._.PerDay),
+          _ = Math.floor((_ % _._.PerDay) / _._.PerHour),
+          _ = Math.floor((_ % _._.PerHour) / _._.PerMinute);
+        return (
+          (_ %= _._.PerMinute),
+          _ > 0
+            ? _.Localize("#TimeRemaining_MoreThanOneYear")
+            : _ > 0
+              ? _.Localize("#TimeRemaining_MonthsDays", _, _)
+              : _ > 0
+                ? _.Localize(
+                    "#TimeRemaining_DaysHoursMinutes",
+                    _,
+                    _.toString().padStart(2, "0"),
+                    _.toString().padStart(2, "0"),
+                  )
+                : _ > 0
+                  ? _.Localize(
+                      "#TimeRemaining_HoursMinutesSeconds",
+                      _.toString().padStart(2, "0"),
+                      _.toString().padStart(2, "0"),
+                      _.toString().padStart(2, "0"),
+                    )
+                  : _.Localize(
+                      "#TimeRemaining_MinutesSeconds",
+                      _.toString().padStart(2, "0"),
+                      _.toString().padStart(2, "0"),
+                    )
+        );
+      }
+      !(function (_) {
+        (_[(_.None = 0)] = "None"),
+          (_[(_.Ago = 1)] = "Ago"),
+          (_[(_.Remaining = 2)] = "Remaining");
+      })(_ || (_ = {}));
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      const _ = {
+        PerYear: 31536e3,
+        PerMonth: 2628e3,
+        PerWeek: 604800,
+        PerDay: 86400,
+        PerHour: 3600,
+        PerMinute: 60,
+      };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _() {
+        (0, _._)();
+        const _ = _._.accountid;
+        return (0, _._)(
+          (function (_, _) {
+            return {
+              queryKey: _(_),
+              queryFn: async () => {
+                if (!_) return new Set();
+                const _ = await (async function (_, _) {
+                  const _ = (0, _._)(_._.STORE_BASE_URL, _, _._.country_code),
+                    _ = await fetch(_);
+                  return (await _.json()).rgFollowedApps || [];
+                })(0, _);
+                return new Set(_);
+              },
+              staleTime: 6e5,
+            };
+          })(0, _),
+        );
+      }
+      function _(_) {
+        return ["AccountFollowApps", _ ?? 0];
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _, _) {
+        const _ = (function () {
+            const _ = (0, _._)(),
+              _ = _._.accountid;
+            return (_, _) => {
+              _.setQueryData(_(_), (_) => {
+                if (!_) return;
+                const _ = new Set(_);
+                if (_) for (const _ of _) _.delete(_);
+                if (_) for (const _ of _) _.add(_);
+                return _;
+              });
+            };
+          })(),
+          _ = _._.accountid;
+        return (0, _._)({
+          mutationKey: ["useUpdateAppFollow", _, _, _],
+          mutationFn: async () => {
+            if (null == _) return;
+            const _ = _._.STORE_BASE_URL + "explore/followgame",
+              _ = new FormData();
+            _.append("appid", "" + _),
+              _.append("sessionid", (0, _._)()),
+              _ || _.append("unfollow", "1"),
+              _ && _.append("snr", _);
+            const _ = await fetch(_, {
+              method: "POST",
+              body: _,
+              credentials: "include",
+            });
+            if (!_._)
+              throw new Error(
+                `Follow App ${_ ? "add" : "remove"} of appid ${_} failed (${_.status})`,
+              );
+          },
+          onMutate: () => {
+            null != _ && _(_ ? [_] : void 0, _ ? void 0 : [_]);
+          },
+          onError: () => {
+            null != _ && _(_ ? void 0 : [_], _ ? [_] : void 0);
+          },
+          onSuccess: () => {
+            (0, _._)();
+          },
+        });
+      }
+      var _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _() {
+        (0, _._)();
+        const _ = _._.accountid;
+        return (0, _._)(
+          (function (_, _) {
+            return {
+              queryKey: _(_),
+              queryFn: async () => {
+                const _ = new Map();
+                if (_)
+                  try {
+                    (
+                      await (async function (_, _) {
+                        const _ = (0, _._)(
+                            _._.STORE_BASE_URL,
+                            _,
+                            _._.country_code,
+                          ),
+                          _ = await fetch(_),
+                          _ = await _.json(),
+                          _ = new Set();
+                        _.rgCreatorsIgnored?.forEach((_) => _.add(_)),
+                          _.rgCreatorsFollowed?.forEach((_) => _.add(_));
+                        const _ = new Set();
+                        return (
+                          _.rgCreatorsIgnored?.forEach((_) => _.add(_)),
+                          [
+                            ...(_.rgCuratorsIgnored ?? []),
+                            ...(_.rgCurators
+                              ? Object.values(_.rgCurators ?? {}).map(
+                                  (_) => _.clanid,
+                                )
+                              : []),
+                          ].map((_) => {
+                            const _ = _.has(_);
+                            return {
+                              clanid: _,
+                              ignored: _,
+                              followed: !_,
+                              is_creator: _.has(_),
+                            };
+                          })
+                        );
+                      })(0, _)
+                    ).forEach((_) => _.set(_.clanid, _));
+                  } catch (_) {
+                    console.error("GetCuratorAffinityQuery", _);
+                  }
+                return _;
+              },
+              enabled: !!_,
+            };
+          })(0, _),
+        );
+      }
+      function _(_) {
+        return ["CuratorAffinityQueryKey", _ ?? 0];
+      }
+      function _(_, _) {
+        const _ = (function () {
+            const _ = (0, _._)(),
+              _ = _._.accountid;
+            return (_, _, _, _) => {
+              _.setQueryData(_(_), (_) => {
+                if (!_) return;
+                const _ = new Map(_);
+                return (
+                  __webpack_require__?.forEach((_) => {
+                    _.has(_.clanAccountID)
+                      ? (_.get(_.clanAccountID).followed = !0)
+                      : _.set(_.clanAccountID, {
+                          clanid: _.clanAccountID,
+                          followed: !0,
+                          ignored: !1,
+                          is_creator: !1,
+                        });
+                  }),
+                  _?.forEach((_) => {
+                    _.has(_.clanAccountID)
+                      ? (_.get(_.clanAccountID).ignored = !0)
+                      : _.set(_.clanAccountID, {
+                          clanid: _.clanAccountID,
+                          followed: !1,
+                          ignored: !0,
+                          is_creator: !1,
+                        });
+                  }),
+                  _?.forEach((_) => _.delete(_.clanAccountID)),
+                  _?.forEach((_) => {
+                    let _ = _.get(_.clanAccountID);
+                    _ && (_.is_creator = !0);
+                  }),
+                  _
+                );
+              });
+            };
+          })(),
+          _ = _._.accountid;
+        return (0, _._)({
+          mutationKey: ["useUpdateCuratorAffinity", _, _, _],
+          mutationFn: async () => {
+            if (null == _) return !1;
+            const _ = _ == _.k_ECuratorFollow || _ == _.k_ECuratorUnfollow,
+              _ = _ == _.k_ECuratorFollow || _ == _.k_ECuratorIgnore,
+              _ = `${_._.STORE_BASE_URL}curators/${_ ? "ajaxfollow/" : "ajaxignore/"}`,
+              _ = new FormData();
+            _.append("clanid", "" + _),
+              _.append("sessionid", (0, _._)()),
+              _.append(_ ? "follow" : "ignore", _ ? "1" : "0");
+            const _ = await fetch(_, {
+                method: "POST",
+                body: _,
+                credentials: "include",
+              }),
+              _ = await _.json();
+            if (!_._)
+              throw new Error(
+                `Curator Affinity: ${_ ? "Follow" : "Ignore"} Currator ${_ ? "add" : "remove"} failed (${_.status} / ${_.msg})`,
+              );
+            return _.is_creator;
+          },
+          onMutate: () => {
+            if (null != _) {
+              const _ = _ == _.k_ECuratorUnfollow || _ == _.k_ECuratorUnignore;
+              __webpack_require__(
+                _ == _.k_ECuratorFollow
+                  ? [
+                      {
+                        clanAccountID: _,
+                      },
+                    ]
+                  : void 0,
+                _ == _.k_ECuratorIgnore
+                  ? [
+                      {
+                        clanAccountID: _,
+                      },
+                    ]
+                  : void 0,
+                _
+                  ? [
+                      {
+                        clanAccountID: _,
+                      },
+                    ]
+                  : void 0,
+              );
+            }
+          },
+          onError: (_) => {
+            if (null != _) {
+              const _ = _ == _.k_ECuratorFollow || _ == _.k_ECuratorIgnore;
+              __webpack_require__(
+                _ == _.k_ECuratorUnfollow
+                  ? [
+                      {
+                        clanAccountID: _,
+                      },
+                    ]
+                  : void 0,
+                _ == _.k_ECuratorUnignore
+                  ? [
+                      {
+                        clanAccountID: _,
+                      },
+                    ]
+                  : void 0,
+                _
+                  ? [
+                      {
+                        clanAccountID: _,
+                      },
+                    ]
+                  : void 0,
+                _
+                  ? [
+                      {
+                        clanAccountID: _,
+                        is_creator: !0,
+                      },
+                    ]
+                  : void 0,
+              );
+            }
+          },
+          onSuccess: (_) => {
+            _ &&
+              _ &&
+              __webpack_require__(void 0, void 0, void 0, [
+                {
+                  clanAccountID: _,
+                  is_creator: !0,
+                },
+              ]),
+              (0, _._)();
+          },
+        });
+      }
+      !(function (_) {
+        (_[(_.k_ECuratorFollow = 1)] = "k_ECuratorFollow"),
+          (_[(_.k_ECuratorUnfollow = 2)] = "k_ECuratorUnfollow"),
+          (_[(_.k_ECuratorIgnore = 3)] = "k_ECuratorIgnore"),
+          (_[(_.k_ECuratorUnignore = 4)] = "k_ECuratorUnignore");
+      })(_ || (_ = {}));
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      const _ = (_) => {
+        const {
+            className: _,
+            bIgnored: _,
+            bApplyingFollowing: _,
+            bFollowing: _,
+            onFollowClick: _,
+            followType: _,
+          } = _,
+          { elDialogElement: _, fnShowLogonDialog: _ } = (0, _._)();
+        if (_._.EREALM == _._.k_ESteamRealmChina) return null;
+        let _ = null;
+        switch (_) {
+          case "app":
+            _ = (0, _._)("#text_store_follow_desc");
+            break;
+          case "creatorhome":
+            _ = (0, _._)("#CreatorHome_Follow_tooltip");
+            break;
+          case "steamcurator":
+            _ = (0, _._)("#steam_curator_follow_ttip");
+            break;
+          case "group":
+            _ = (0, _._)("#steam_group_follow_ttip");
+        }
+        return _
+          ? (0, _.jsxs)(_.Fragment, {
+              children: [
+                (0, _.jsx)(_._, {
+                  toolTipContent: _ || _ ? void 0 : _,
+                  children: (0, _.jsxs)(_._, {
+                    className: (0, _._)(
+                      _().Button,
+                      _().FollowButton,
+                      "FollowButton",
+                      _,
+                      _ ? "Followed" : "",
+                    ),
+                    onClick: () => {
+                      _._.logged_in ? _() : _();
+                    },
+                    children: [
+                      _ &&
+                        (0, _.jsx)(_._, {
+                          size: 15,
+                        }),
+                      !_ && (_ || _) && (0, _.jsx)(_.Jlk, {}),
+                      (0, _.jsx)("div", {
+                        className: (0, _._)(_().FollowBtnText, "FollowBtnText"),
+                        children:
+                          !_ &&
+                          (_
+                            ? (0, _._)("#Button_Followed")
+                            : _
+                              ? (0, _._)("#Button_Ignored")
+                              : (0, _._)("#Button_Follow")),
+                      }),
+                    ],
+                  }),
+                }),
+                _,
+              ],
+            })
+          : (console.error("CommonFollowButton unexpected type", _), null);
+      };
+      function _(_) {
+        const {
+            followType: _,
+            fnSuccessCallback: _,
+            clanAccountID: _,
+            className: _,
+          } = _,
+          [_, _] = _.useState(!1),
+          { data: _ } = (0, _._)(_ ? void 0 : _),
+          _ = (function (_) {
+            const { data: _ } = _();
+            return void 0 === _ || null == _
+              ? void 0
+              : Boolean(_.get(_)?.followed);
+          })(_),
+          _ = (function (_) {
+            const { data: _ } = _();
+            return void 0 === _ || null == _
+              ? void 0
+              : Boolean(_.get(_)?.ignored);
+          })(_),
+          { mutateAsync: _ } = _(
+            _,
+            _ ? _.k_ECuratorUnfollow : _.k_ECuratorFollow,
+          ),
+          [_, _, _] = (0, _._)(),
+          _ = _.useCallback(async () => {
+            null != _ && (_(!0), await _(), _(!1), __webpack_require__?.(_));
+          }, [_, _, _]);
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_, {
+              className: _,
+              bIgnored: Boolean(_),
+              bFollowing: Boolean(_),
+              bApplyingFollowing: _,
+              onFollowClick: () => {
+                _._.is_limited ? _() : _();
+              },
+              followType:
+                _ ?? (_?.is_creator_home ? "creatorhome" : "steamcurator"),
+            }),
+            (0, _.jsx)(_._, {
+              active: _,
+              children: (0, _.jsx)(_._, {
+                closeModal: _,
+              }),
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const { appid: _, className: _ } = _,
+          [_, _] = _.useState(!1),
+          _ = (function (_) {
+            const { data: _ } = _();
+            return void 0 === _ || null == _ ? void 0 : _.has(_);
+          })(_),
+          _ = (0, _._)(_),
+          _ = (0, _._)(),
+          _ = _._.GetSNRLinkParam(_),
+          { mutateAsync: _ } = _(_, !_, _),
+          _ = _.useCallback(async () => {
+            _(!0), await _(), _(!1);
+          }, [_]);
+        return (0, _.jsx)(_, {
+          className: _,
+          bIgnored: Boolean(_),
+          bFollowing: Boolean(_),
+          bApplyingFollowing: _,
+          onFollowClick: _,
+          followType: "app",
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = (_) => {
+        let _ = _._.HELP_BASE_URL + "wizard/HelpWithLimitedAccount";
+        return (0, _.jsx)(_._, {
+          strTitle: (0, _._)("#Informational_Message"),
+          onCancel: _.closeModal,
+          onOK: _.closeModal,
+          bAlertDialog: !0,
+          children: (0, _.jsx)("div", {
+            children: (0, _._)(
+              _.strTokenOverride || "#User_LimitedAccount",
+              (0, _.jsx)("a", {
+                href: _,
+                target: _._.IN_CLIENT ? void 0 : "_blank",
+                rel: "noopener noreferrer",
+                children: (0, _._)("#User_LimitedAccount_UrlInfo"),
+              }),
+            ),
+          }),
+        });
+      };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
         $YD: () => _,
         BGM: () => _,
         BWK: () => _,
         Buq: () => _,
+        CSO: () => _,
         CYA: () => _,
         DHU: () => _,
         EEh: () => _,
         Ftl: () => _,
         FzB: () => _,
         G1H: () => _,
-        GBh: () => _,
         Gkz: () => _,
         Gxx: () => _,
+        HuG: () => _,
         IEJ: () => _,
         IbE: () => _,
         Izv: () => _,
@@ -786,6 +1463,7 @@
         PYD: () => _,
         PoK: () => _,
         QA9: () => _,
+        QBr: () => _,
         R$d: () => _,
         R1B: () => _,
         RW$: () => _,
@@ -815,6 +1493,7 @@
         dBS: () => _,
         dWZ: () => _,
         dm2: () => _,
+        dpF: () => _,
         dxW: () => _,
         eQ$: () => _,
         equ: () => _,
@@ -824,6 +1503,7 @@
         hSB: () => _,
         hwI: () => _,
         iZ9: () => _,
+        jXd: () => _,
         jx3: () => _,
         jzL: () => _,
         kpV: () => _,
@@ -859,12 +1539,12 @@
         _ = 122,
         _ = 113,
         _ = 701,
+        _ = 128,
         _ = 699,
         _ = 6650,
         _ = 3871,
         _ = 12095,
         _ = 1664,
-        _ = 3859,
         _ = 1684,
         _ = 1667,
         _ = 3942,
@@ -872,6 +1552,7 @@
         _ = 1695,
         _ = 3839,
         _ = 1625,
+        _ = 1685,
         _ = 1662,
         _ = 1663,
         _ = 1773,
@@ -895,6 +1576,7 @@
         _ = 1676,
         _ = 3959,
         _ = 4885,
+        _ = 1775,
         _ = 1738,
         _ = 1687,
         _ = 4604,
@@ -913,6 +1595,7 @@
         _ = 5613,
         _ = 4191,
         _ = 44868,
+        _ = 6730,
         _ = 6129,
         _ = 1665,
         _ = 560542,
@@ -942,6 +1625,7 @@
         _ = 1100688,
         _ = 9130,
         _ = 91114,
+        _ = 7178,
         _ = 723991,
         _ = 1239876,
         _ = 23491;
@@ -3037,6 +3721,76 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = _.createContext({
+        AddImpression: () => {
+          console.log("Impression Tracking not enabled");
+        },
+        BIsValid: () => !1,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { appID: _, feature: _, depth: _, children: _ } = _,
+          _ = (0, _._)(_, _),
+          _ = _.useContext(_),
+          [_, _] = _.useState(void 0),
+          _ = _.useCallback(
+            (_) => {
+              _.isIntersecting &&
+                _((_) =>
+                  _?.appID == _ && _?.snr == _
+                    ? _
+                    : {
+                        appID: _,
+                        snr: _,
+                      },
+                );
+            },
+            [_, _],
+          );
+        (0, _.useEffect)(() => {
+          _ && null != _.appID && _.AddImpression(_.appID, _.snr);
+        }, [_, _]);
+        const _ = (0, _._)(_),
+          _ = _ && (!_ || (_.appID != _ && _.snr != _)),
+          _ = (0, _._)(_.props.ref, _ ? _ : void 0);
+        return _.cloneElement(_, {
+          ref: _,
+        });
+      }
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        return _ == _._._ ? "bundle" : _ == _._._ ? "sub" : (_._._, "app");
+      }
+      function _(_, _) {
+        const _ = _ || (Boolean(_) ? _._ : _._);
+        return [Boolean(_), _];
+      }
+      const _ = (_) => {
+        const { appid: _ } = _,
+          _ = (0, _.jsx)("div", {
+            className: "ImpressionTrackedElement",
+            children: _.children,
+          });
+        return _
+          ? (0, _.jsx)(_, {
+              appID: _,
+              children: _,
+            })
+          : _;
+      };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -4162,4608 +4916,6 @@
       window.SetHoverPresentation = function (_) {
         window.sessionStorage.setItem(_, _);
       };
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = -700,
-        _ = -600,
-        _ = -599,
-        _ = -598,
-        _ = -597,
-        _ = -596,
-        _ = -595,
-        _ = -594,
-        _ = -593,
-        _ = -592,
-        _ = -591,
-        _ = -590,
-        _ = -589,
-        _ = -588,
-        _ = -587,
-        _ = -586,
-        _ = -585,
-        _ = -584,
-        _ = -583,
-        _ = -582,
-        _ = -581,
-        _ = -580,
-        _ = -579,
-        _ = -578,
-        _ = -577,
-        _ = -576,
-        _ = -575,
-        _ = -574,
-        _ = -573,
-        _ = -572,
-        _ = -571,
-        _ = -500,
-        _ = -499,
-        _ = -498,
-        _ = -497,
-        _ = -496,
-        _ = -300,
-        _ = -203,
-        _ = -202,
-        _ = -201,
-        _ = -200,
-        _ = -199,
-        _ = -198,
-        _ = -197,
-        _ = -196,
-        _ = -195,
-        _ = -194,
-        _ = -193,
-        _ = -192,
-        _ = -191,
-        _ = -190,
-        _ = -189,
-        _ = -188,
-        _ = -187,
-        _ = -186,
-        _ = -185,
-        _ = -184,
-        _ = -183,
-        _ = -182,
-        _ = -102,
-        _ = -101,
-        _ = -100,
-        _ = -99,
-        _ = -95,
-        _ = -94,
-        _ = -93,
-        _ = -92,
-        _ = -90,
-        _ = -89,
-        _ = -88,
-        _ = -87,
-        _ = -86,
-        _ = -85,
-        _ = -84,
-        _ = -83,
-        _ = -82,
-        _ = -81,
-        _ = -80,
-        _ = -79,
-        _ = -75,
-        _ = -74,
-        _ = -70,
-        _ = -69,
-        _ = -68,
-        _ = -67,
-        _ = 0,
-        _ = 1,
-        _ = 2,
-        _ = 3,
-        _ = 4,
-        _ = 5,
-        _ = 6,
-        _ = 7,
-        _ = 8,
-        _ = 9,
-        _ = 10,
-        _ = 11,
-        _ = 12,
-        _ = 13,
-        _ = 14,
-        _ = 15,
-        _ = 16,
-        _ = 17,
-        _ = 18,
-        _ = 19,
-        _ = 20;
-      var _;
-      !(function (_) {
-        (_[(_.k_EPlatformTypeUnknown = 0)] = "k_EPlatformTypeUnknown"),
-          (_[(_.k_EPlatformTypeWin32 = 1)] = "k_EPlatformTypeWin32"),
-          (_[(_.k_EPlatformTypeWin64 = 2)] = "k_EPlatformTypeWin64"),
-          (_[(_.k_EPlatformTypeLinux64 = 3)] = "k_EPlatformTypeLinux64"),
-          (_[(_.k_EPlatformTypeOSX = 4)] = "k_EPlatformTypeOSX"),
-          (_[(_.k_EPlatformTypePS3 = 5)] = "k_EPlatformTypePS3"),
-          (_[(_.k_EPlatformTypeLinux32 = 6)] = "k_EPlatformTypeLinux32"),
-          (_[(_.k_EPlatformTypeAndroid32 = 7)] = "k_EPlatformTypeAndroid32"),
-          (_[(_.k_EPlatformTypeAndroid64 = 8)] = "k_EPlatformTypeAndroid64"),
-          (_[(_.k_EPlatformTypeIOS32 = 9)] = "k_EPlatformTypeIOS32"),
-          (_[(_.k_EPlatformTypeIOS64 = 10)] = "k_EPlatformTypeIOS64"),
-          (_[(_.k_EPlatformTypeTVOS = 11)] = "k_EPlatformTypeTVOS"),
-          (_[(_.k_EPlatformTypeEmbeddedClient = 12)] =
-            "k_EPlatformTypeEmbeddedClient"),
-          (_[(_.k_EPlatformTypeBrowser = 13)] = "k_EPlatformTypeBrowser"),
-          (_[(_.k_EPlatformTypeMax = 14)] = "k_EPlatformTypeMax");
-      })(_ || (_ = {}));
-      var _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.client_instanceid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  client_instanceid: {
-                    _: 1,
-                    _: _._.readUint64String,
-                    _: _._.writeUint64String,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CClientComm_GetClientLogonInfo_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.protocol_version || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  protocol_version: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  _: {
-                    _: 2,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  machine_name: {
-                    _: 3,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CClientComm_GetClientLogonInfo_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _
-            ? {
-                $jspbMessageInstance: _,
-              }
-            : {};
-        }
-        static fromObject(_) {
-          return new _();
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _;
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {}
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CClientComm_GetAllClientLogonInfo_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.sessions || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  sessions: {
-                    _: 1,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                  refetch_interval_sec: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CClientComm_GetAllClientLogonInfo_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.client_instanceid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  client_instanceid: {
-                    _: 1,
-                    _: _._.readUint64String,
-                    _: _._.writeUint64String,
-                  },
-                  protocol_version: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  os_name: {
-                    _: 3,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  machine_name: {
-                    _: 4,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  os_type: {
-                    _: 5,
-                    _: _._.readInt32,
-                    _: _._.writeInt32,
-                  },
-                  device_type: {
-                    _: 6,
-                    _: _._.readInt32,
-                    _: _._.writeInt32,
-                  },
-                  realm: {
-                    _: 7,
-                    _: _._.readInt32,
-                    _: _._.writeInt32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CClientComm_GetAllClientLogonInfo_Response_Session";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.client_instanceid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  client_instanceid: {
-                    _: 1,
-                    _: _._.readUint64String,
-                    _: _._.writeUint64String,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CClientComm_GetClientInfo_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.package_version || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [7, 10], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  package_version: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  _: {
-                    _: 2,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  machine_name: {
-                    _: 3,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  ip_public: {
-                    _: 4,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  ip_private: {
-                    _: 5,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  bytes_available: {
-                    _: 6,
-                    _: _._.readUint64String,
-                    _: _._.writeUint64String,
-                  },
-                  running_games: {
-                    _: 7,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                  protocol_version: {
-                    _: 8,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  clientcomm_version: {
-                    _: 9,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  local_users: {
-                    _: 10,
-                    _: !0,
-                    _: !0,
-                    _: _._.readUint32,
-                    pbr: _._.readPackedUint32,
-                    _: _._.writeRepeatedUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CClientComm_ClientData";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.appid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  appid: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  extra_info: {
-                    _: 2,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  time_running_sec: {
-                    _: 3,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CClientComm_ClientData_RunningGames";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.client_info || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  client_info: {
-                    _: 1,
-                    _: _,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CClientComm_GetClientInfo_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.fields || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [6], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  fields: {
-                    _: 1,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  filters: {
-                    _: 2,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  client_instanceid: {
-                    _: 3,
-                    _: _._.readUint64String,
-                    _: _._.writeUint64String,
-                  },
-                  include_client_info: {
-                    _: 4,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                  language: {
-                    _: 5,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  filter_appids: {
-                    _: 6,
-                    _: !0,
-                    _: !0,
-                    _: _._.readUint32,
-                    pbr: _._.readPackedUint32,
-                    _: _._.writeRepeatedUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CClientComm_GetClientAppList_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.bytes_available || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [2], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  bytes_available: {
-                    _: 1,
-                    _: _._.readUint64String,
-                    _: _._.writeUint64String,
-                  },
-                  apps: {
-                    _: 2,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                  client_info: {
-                    _: 3,
-                    _: _,
-                  },
-                  refetch_interval_sec_full: {
-                    _: 4,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  refetch_interval_sec_changing: {
-                    _: 5,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  refetch_interval_sec_updating: {
-                    _: 6,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CClientComm_GetClientAppList_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.appid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [17], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  appid: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  app: {
-                    _: 2,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  category: {
-                    _: 3,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  app_type: {
-                    _: 4,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  num_downloading: {
-                    _: 8,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  bytes_download_rate: {
-                    _: 11,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  bytes_downloaded: {
-                    _: 12,
-                    _: _._.readUint64String,
-                    _: _._.writeUint64String,
-                  },
-                  bytes_to_download: {
-                    _: 13,
-                    _: _._.readUint64String,
-                    _: _._.writeUint64String,
-                  },
-                  dlcs: {
-                    _: 17,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                  favorite: {
-                    _: 18,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                  auto_update: {
-                    _: 19,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                  installed: {
-                    _: 20,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                  download_paused: {
-                    _: 21,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                  changing: {
-                    _: 22,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                  available_on_platform: {
-                    _: 23,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                  bytes_staged: {
-                    _: 24,
-                    _: _._.readUint64String,
-                    _: _._.writeUint64String,
-                  },
-                  bytes_to_stage: {
-                    _: 25,
-                    _: _._.readUint64String,
-                    _: _._.writeUint64String,
-                  },
-                  bytes_required: {
-                    _: 26,
-                    _: _._.readUint64String,
-                    _: _._.writeUint64String,
-                  },
-                  source_buildid: {
-                    _: 27,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  target_buildid: {
-                    _: 28,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  estimated_seconds_remaining: {
-                    _: 29,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  queue_position: {
-                    _: 30,
-                    _: -1,
-                    _: _._.readInt32,
-                    _: _._.writeInt32,
-                  },
-                  uninstalling: {
-                    _: 31,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                  rt_time_scheduled: {
-                    _: 32,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  running: {
-                    _: 33,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                  update_percentage: {
-                    _: 34,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CClientComm_GetClientAppList_Response_AppData";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.appid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  appid: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  app: {
-                    _: 2,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  installed: {
-                    _: 3,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CClientComm_GetClientAppList_Response_AppData_DLCData";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.appid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  appid: {
-                    _: 1,
-                    _: !0,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  client_instanceid: {
-                    _: 2,
-                    _: _._.readUint64String,
-                    _: _._.writeUint64String,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CClientComm_InstallClientApp_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _
-            ? {
-                $jspbMessageInstance: _,
-              }
-            : {};
-        }
-        static fromObject(_) {
-          return new _();
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _;
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {}
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CClientComm_InstallClientApp_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.appid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  appid: {
-                    _: 1,
-                    _: !0,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  client_instanceid: {
-                    _: 2,
-                    _: _._.readUint64String,
-                    _: _._.writeUint64String,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CClientComm_UninstallClientApp_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _
-            ? {
-                $jspbMessageInstance: _,
-              }
-            : {};
-        }
-        static fromObject(_) {
-          return new _();
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _;
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {}
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CClientComm_UninstallClientApp_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.appid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  appid: {
-                    _: 1,
-                    _: !0,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  action: {
-                    _: 2,
-                    _: !0,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  client_instanceid: {
-                    _: 3,
-                    _: _._.readUint64String,
-                    _: _._.writeUint64String,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CClientComm_SetClientAppUpdateState_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.client_instanceid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  client_instanceid: {
-                    _: 1,
-                    _: _._.readUint64String,
-                    _: _._.writeUint64String,
-                  },
-                  appid: {
-                    _: 2,
-                    _: !0,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  query_params: {
-                    _: 3,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CClientComm_LaunchClientApp_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _
-            ? {
-                $jspbMessageInstance: _,
-              }
-            : {};
-        }
-        static fromObject(_) {
-          return new _();
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _;
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {}
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CClientComm_LaunchClientApp_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _
-            ? {
-                $jspbMessageInstance: _,
-              }
-            : {};
-        }
-        static fromObject(_) {
-          return new _();
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _;
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {}
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CClientComm_SetClientAppUpdateState_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.client_instanceid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  client_instanceid: {
-                    _: 1,
-                    _: _._.readUint64String,
-                    _: _._.writeUint64String,
-                  },
-                  enable: {
-                    _: 2,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CClientComm_EnableOrDisableDownloads_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _
-            ? {
-                $jspbMessageInstance: _,
-              }
-            : {};
-        }
-        static fromObject(_) {
-          return new _();
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _;
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {}
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CClientComm_EnableOrDisableDownloads_Response";
-        }
-      }
-      !(function (_) {
-        (_.GetClientLogonInfo = function (_, _, _) {
-          return _.SendMsg(
-            "ClientComm.GetClientLogonInfo#1",
-            (0, _._)(_, _, _),
-            _,
-            {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            },
-          );
-        }),
-          (_.GetAllClientLogonInfo = function (_, _, _) {
-            return _.SendMsg(
-              "ClientComm.GetAllClientLogonInfo#1",
-              (0, _._)(_, _, _),
-              _,
-              {
-                bConstMethod: !0,
-                ePrivilege: 1,
-              },
-            );
-          }),
-          (_.GetClientInfo = function (_, _, _) {
-            return _.SendMsg(
-              "ClientComm.GetClientInfo#1",
-              (0, _._)(_, _, _),
-              _,
-              {
-                bConstMethod: !0,
-                ePrivilege: 1,
-              },
-            );
-          }),
-          (_.GetClientAppList = function (_, _, _) {
-            return _.SendMsg(
-              "ClientComm.GetClientAppList#1",
-              (0, _._)(_, _, _),
-              _,
-              {
-                bConstMethod: !0,
-                ePrivilege: 1,
-              },
-            );
-          }),
-          (_.InstallClientApp = function (_, _, _) {
-            return _.SendMsg(
-              "ClientComm.InstallClientApp#1",
-              (0, _._)(_, _, _),
-              _,
-              {
-                ePrivilege: 1,
-              },
-            );
-          }),
-          (_.UninstallClientApp = function (_, _, _) {
-            return _.SendMsg(
-              "ClientComm.UninstallClientApp#1",
-              (0, _._)(_, _, _),
-              _,
-              {
-                ePrivilege: 1,
-              },
-            );
-          }),
-          (_.LaunchClientApp = function (_, _, _) {
-            return _.SendMsg(
-              "ClientComm.LaunchClientApp#1",
-              (0, _._)(_, _, _),
-              _,
-              {
-                ePrivilege: 1,
-              },
-            );
-          }),
-          (_.SetClientAppUpdateState = function (_, _, _) {
-            return _.SendMsg(
-              "ClientComm.SetClientAppUpdateState#1",
-              (0, _._)(_, _, _),
-              _,
-              {
-                ePrivilege: 1,
-              },
-            );
-          }),
-          (_.EnableOrDisableDownloads = function (_, _, _) {
-            return _.SendMsg(
-              "ClientComm.EnableOrDisableDownloads#1",
-              (0, _._)(_, _, _),
-              _,
-              {
-                ePrivilege: 1,
-              },
-            );
-          });
-      })(_ || (_ = {}));
-      const _ = "RemoteDownload_OnlineClient",
-        _ = "RemoteDownload_ClientAppList",
-        _ = "RemoteDownload_ClientAppData";
-      class _ extends Error {
-        constructor(_, _) {
-          super(_), (this.result = _);
-        }
-        result;
-      }
-      function _() {
-        const _ = (0, _._)(),
-          _ = (0, _._)();
-        return (0, _._)({
-          queryKey: [_, _],
-          queryFn: async () => {
-            const _ = _._.Init(_),
-              _ = await _.GetAllClientLogonInfo(_, _);
-            if (__webpack_require__.GetEResult() !== _._)
-              throw (
-                (console.error(
-                  "Received error from GetAllClientLogonInfo",
-                  __webpack_require__.GetEResult(),
-                  __webpack_require__.Hdr().transport_error(),
-                ),
-                new Error(
-                  `Error from GetAllClientLogonInfo: ${__webpack_require__.GetEResult()}`,
-                ))
-              );
-            const _ = [];
-            for (const _ of __webpack_require__.Body().sessions())
-              _.device_type() !== _.eSB && _.push(_.toObject());
-            return {
-              sessions: _,
-              refetchInterval:
-                __webpack_require__.Body().refetch_interval_sec() || 300,
-            };
-          },
-          staleTime: 3e5,
-          refetchInterval: (_) => 1e3 * (_.state.data?.refetchInterval || 300),
-        });
-      }
-      class _ {
-        constructor(_) {
-          Object.assign(this, _.toObject()),
-            (this.bytes_to_download = parseInt(_.bytes_to_download() ?? "0")),
-            (this.bytes_downloaded = parseInt(_.bytes_downloaded() ?? "0")),
-            (this.bytes_staged = parseInt(_.bytes_staged() ?? "0")),
-            (this.bytes_to_stage = parseInt(_.bytes_to_stage() ?? "0")),
-            (this.bytes_required = parseInt(_.bytes_required() ?? "0"));
-        }
-        appid;
-        app;
-        category;
-        app_type;
-        num_downloading;
-        bytes_download_rate;
-        bytes_downloaded;
-        bytes_to_download;
-        favorite;
-        auto_update;
-        installed;
-        download_paused;
-        changing;
-        available_on_platform;
-        bytes_staged;
-        bytes_to_stage;
-        bytes_required;
-        source_buildid;
-        target_buildid;
-        estimated_seconds_remaining;
-        queue_position;
-        uninstalling;
-        rt_time_scheduled;
-        update_percentage;
-        BIsDownloading() {
-          return void 0 !== this.num_downloading && this.num_downloading > 0;
-        }
-        SetDownloading() {
-          (this.num_downloading = 1), (this.download_paused = !1);
-        }
-        SetPaused(_) {
-          (this.download_paused = _), (this.num_downloading = _ ? 0 : 1);
-        }
-        BIsAtTopOfQueue() {
-          return 0 === this.queue_position;
-        }
-        BIsPaused() {
-          return (
-            !!this.download_paused &&
-            (this.bytes_downloaded < this.bytes_to_download ||
-              this.bytes_staged < this.bytes_to_stage ||
-              -1 != this.queue_position)
-          );
-        }
-        BHasPendingUpdate() {
-          return (
-            !this.BIsDownloading() &&
-            !this.download_paused &&
-            (this.bytes_downloaded < this.bytes_to_download ||
-              this.bytes_staged < this.bytes_to_stage)
-          );
-        }
-        GetPercentComplete() {
-          return this.update_percentage
-            ? this.update_percentage
-            : this.bytes_to_download
-              ? Math.floor(
-                  (100 * this.bytes_downloaded) / this.bytes_to_download,
-                )
-              : 0;
-        }
-      }
-      async function _(_, _, _) {
-        const _ = _.client_instanceid,
-          _ = _._.Init(_);
-        _.Body().set_fields("games"),
-          _.Body().set_filters(_),
-          _.Body().set_client_instanceid(_),
-          _.Body().set_include_client_info(!0);
-        const _ = await _.GetClientAppList(_, _);
-        if (_.GetEResult() !== _._)
-          throw (
-            (console.error(
-              "Received error from GetClientAppList",
-              _.GetEResult(),
-              _.Hdr().transport_error(),
-            ),
-            new _(
-              `Error from GetClientAppList: ${_.GetEResult()}`,
-              _.GetEResult(),
-            ))
-          );
-        const _ = new Map();
-        for (const _ of _.Body().apps()) {
-          const _ = new _(_);
-          _.set(_.appid(), _);
-        }
-        return {
-          session: _,
-          mapApps: _,
-          clientInfo: _.Body().client_info()?.toObject(),
-          refetchIntervals: {
-            full: _.Body().refetch_interval_sec_full() || 3600,
-            changing: _.Body().refetch_interval_sec_changing() || 60,
-            updating: _.Body().refetch_interval_sec_updating() || 10,
-          },
-        };
-      }
-      function _(_, _, _) {
-        return [_, _, _, _];
-      }
-      function _(_, _ = !0) {
-        const _ = _(),
-          _ = (0, _._)(),
-          _ = (0, _._)(),
-          _ = (_) => {
-            _ &&
-              ((_.result != _._ && _.result != _._) ||
-                __webpack_require__.refetch());
-          },
-          _ = (0, _._)({
-            queries: (_.data?.sessions || []).map((_) => ({
-              queryKey: _(_, _.client_instanceid, "none"),
-              queryFn: async () => _(_, _, "none"),
-              staletime: 36e5,
-              refetchInterval: (_) =>
-                1e3 * (_.state.data?.refetchIntervals.full || 3600),
-              enabled: _.isSuccess && !_.isFetching,
-              onError: _,
-              retry: _,
-            })),
-          }),
-          _ = (0, _.useCallback)(
-            (_) => {
-              if (!_) return _;
-              const _ = new Map(
-                Array.from(_?.mapApps.entries() ?? []).filter(_),
-              );
-              return {
-                ..._,
-                mapApps: _,
-              };
-            },
-            [_],
-          ),
-          _ = (0, _._)(),
-          _ = (0, _._)({
-            queries: (_.data?.sessions || []).map((_, _) => ({
-              queryKey: _(_, _.client_instanceid, "changing"),
-              queryFn: async () =>
-                (async function (_, _, _, _) {
-                  if (!_) return;
-                  const _ = await _(_, _, _);
-                  for (const [_, _] of _.mapApps) _.mapApps.set(_, _);
-                  return {
-                    ..._,
-                    mapApps: _.mapApps,
-                  };
-                })(_, _, "changing", _[_].data),
-              enabled: _[_].isSuccess && !_[_].isFetching,
-              staletime: 1e4,
-              select: _,
-              refetchInterval: (_) => {
-                const _ = _.state.data;
-                if (!_) return 6e4;
-                let _ = !1;
-                for (const _ of _.mapApps.values())
-                  if (_.BIsDownloading() || _.uninstalling) {
-                    _ = !0;
-                    break;
-                  }
-                const _ = _.refetchIntervals;
-                return 1e3 * (_ ? _.updating : _.changing);
-              },
-              onError: _,
-              retry: _,
-            })),
-          });
-        return {
-          rgQueries: _.map((_, _) =>
-            _[_].isError && !_[_].isFetching ? _[_] : _,
-          ),
-          refetch: () => {
-            for (const _ of _.data?.sessions || []) {
-              const _ = _(_, _.client_instanceid, "changing");
-              _.removeQueries({
-                queryKey: _,
-              });
-            }
-            for (const _ of _) _.refetch();
-          },
-        };
-      }
-      function _(_, _) {
-        return [_, _, _];
-      }
-      function _(_, _ = !0) {
-        const _ = (0, _._)(),
-          { rgQueries: _ } = _(void 0, _);
-        return (0, _._)({
-          queryKey: _(_, _),
-          queryFn: () => {
-            const _ = new Map();
-            for (const _ of _)
-              if (_.isSuccess) {
-                const _ = _.data?.session?.client_instanceid,
-                  _ = _.data?.mapApps,
-                  _ = _?.get(_);
-                _ &&
-                  _.set(_, {
-                    session: _.data.session,
-                    app: _,
-                    clientInfo: _.data.clientInfo,
-                  });
-              }
-            return _;
-          },
-          enabled: _.reduce((_, _) => _ && _.isSuccess && !_.isFetching, !0),
-          staleTime: 0,
-          gcTime: 0,
-        });
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      const _ = {
-        bFitToWindow: !0,
-        bOverlapHorizontal: !0,
-        bMatchWidth: !1,
-        bShiftToFitWindow: !0,
-        bDisablePopTop: !0,
-      };
-      function _(_) {
-        const { setRemoteClientID: _, rgSessions: _ } = _,
-          _ = (0, _.useCallback)(
-            (_) => {
-              _?.length &&
-                (0, _._)(
-                  (0, _.jsx)(_, {
-                    sessions: _,
-                    setRemoteDownloadClientId: _,
-                  }),
-                  _,
-                  _,
-                );
-            },
-            [_, _],
-          );
-        return _?.length
-          ? (0, _.jsx)("button", {
-              onClick: _,
-              className: _().ClientSelectDropdown,
-              children: (0, _.jsx)(_, {}),
-            })
-          : null;
-      }
-      function _({ sessions: _, setRemoteDownloadClientId: _ }) {
-        return (0, _.jsx)("ul", {
-          className: _().ClientListDropdownMenu,
-          children: _.map((_) =>
-            (0, _.jsx)(
-              _._,
-              {
-                onSelected: () => {
-                  _(_.client_instanceid);
-                },
-                children: (0, _._)(
-                  "#GamesList_Client_Indicator",
-                  _(_.device_type) ?? "",
-                  _.machine_name,
-                ),
-              },
-              _.client_instanceid,
-            ),
-          ),
-        });
-      }
-      function _(_) {
-        switch (_) {
-          case _.g0U:
-            return (0, _._)("#Library_DeviceType_PC");
-          case _.LS$:
-            return (0, _._)("#Library_DeviceType_SteamDeck");
-          case _.bOm:
-            return (0, _._)("#Library_DeviceType_SteamMachine");
-          case _.jYC:
-            return (0, _._)("#Library_DeviceType_SteamFrame");
-          default:
-            return;
-        }
-      }
-      function _(_) {
-        return (0, _.jsx)("svg", {
-          xmlns: "http://www.w3.org/2000/svg",
-          viewBox: "0 0 13 8",
-          fill: "none",
-          ..._,
-          children: (0, _.jsx)("path", {
-            fill: "currentColor",
-            _: "M12.6128 1.7121C12.7616 1.56087 12.8428 1.3684 12.8428 1.14155C12.8428 0.687862 12.491 0.323534 12.0446 0.323534C11.8214 0.323534 11.6184 0.419772 11.4628 0.577877L6.83601 5.38975L2.22271 0.577877C2.06712 0.419772 1.85743 0.323534 1.64097 0.323534C1.19452 0.323534 0.842773 0.687862 0.842773 1.14155C0.842773 1.3684 0.923946 1.56087 1.07276 1.71211L6.21369 7.06016C6.38956 7.25264 6.60602 7.342 6.84277 7.34888C7.07953 7.34888 7.28246 7.25264 7.4651 7.06016L12.6128 1.7121Z",
-          }),
-        });
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_) {
-        const { appid: _ } = _,
-          _ = (0, _._)(_),
-          { data: _ } = (0, _._)(_),
-          [_, _, _] = (0, _._)(!1),
-          { mutateAsync: _ } = (0, _._)({
-            appid: _,
-          }),
-          [_, _] = (0, _.useState)(!1),
-          _ = (0, _._)(_);
-        return _
-          ? _
-            ? null
-            : (0, _.jsxs)(_.Fragment, {
-                children: [
-                  (0, _.jsxs)(_._, {
-                    onClick: async () => {
-                      try {
-                        _(!0), await _(), (0, _._)(), _(!1), _();
-                      } catch (_) {
-                        _(!1),
-                          console.error(
-                            "Error AddToLibraryActionWithRemoteInstall",
-                            _,
-                          );
-                      }
-                    },
-                    children: [
-                      _ &&
-                        (0, _.jsx)(_._, {
-                          size: "small",
-                        }),
-                      (0, _._)("#Sale_AddToLibrary_NoPlus"),
-                    ],
-                  }),
-                  (0, _.jsx)(_._, {
-                    children: (0, _.jsx)(_._, {
-                      active: _,
-                      children: (0, _.jsx)(_._, {
-                        strTitle: (0, _._)("#Sale_AddedToLibrary"),
-                        strDescription: (0, _._)(
-                          "#Sale_AddToLibrary_DialogDesc",
-                          (0, _.jsx)("span", {
-                            className: _().GameName,
-                            children: _.name || "",
-                          }),
-                        ),
-                        closeModal: _,
-                        bAlertDialog: !0,
-                        children: (0, _.jsx)(_, {
-                          _: _,
-                        }),
-                      }),
-                    }),
-                  }),
-                ],
-              })
-          : null;
-      }
-      function _(_) {
-        const { _: _ } = _,
-          _ = _(),
-          [_, _] = (0, _.useState)(0),
-          [_, _] = (0, _.useState)(!1),
-          { data: _ } = (0, _._)(_);
-        if (!_ || !("appid" in _)) return null;
-        if (_._.IN_CLIENT || !_) return null;
-        const _ = _.data?.sessions?.filter((_) => {
-          switch (_.device_type) {
-            default:
-            case _.g0U:
-              {
-                if (!_.os_type) return !1;
-                const _ = (function (_) {
-                  switch (_) {
-                    case _:
-                      return "Windows";
-                    case _:
-                      return "Windows 3.11";
-                    case _:
-                      return "Windows 95";
-                    case _:
-                      return "Windows 98";
-                    case _:
-                      return "Windows ME";
-                    case _:
-                      return "Windows NT";
-                    case _:
-                      return "Windows 2000";
-                    case _:
-                      return "Windows XP";
-                    case _:
-                      return "Windows 2003";
-                    case _:
-                      return "Windows Vista";
-                    case _:
-                      return "Windows 7";
-                    case _:
-                      return "Windows 2008";
-                    case _:
-                      return "Windows 2012";
-                    case _:
-                      return "Windows 2012 R2";
-                    case _:
-                      return "Windows 8";
-                    case _:
-                      return "Windows 8.1";
-                    case _:
-                      return "Windows 10";
-                    case _:
-                      return "Windows 2016";
-                    case _:
-                      return "Windows 2019";
-                    case _:
-                      return "Windows 2022";
-                    case _:
-                      return "Windows 11";
-                    case _:
-                      return "Mac OS";
-                    case _:
-                      return "MacOS 10.4";
-                    case _:
-                      return "MacOS 10.5";
-                    case _:
-                      return "MacOS 10.5.8";
-                    case _:
-                      return "MacOS 10.6";
-                    case _:
-                      return "MacOS 10.6.3";
-                    case _:
-                      return "MacOS 10.6.4 with Apple's Snow Leopard Graphics Update";
-                    case _:
-                      return "MacOS 10.6.7";
-                    case _:
-                      return "MacOS 10.7";
-                    case _:
-                      return "MacOS 10.8";
-                    case _:
-                      return "MacOS 10.9";
-                    case _:
-                      return "MacOS 10.10";
-                    case _:
-                      return "MacOS 10.11";
-                    case _:
-                      return "MacOS 10.12";
-                    case _:
-                      return "MacOS 10.13";
-                    case _:
-                      return "MacOS 10.14";
-                    case _:
-                      return "MacOS 10.15";
-                    case _:
-                      return "MacOS 11 (as 10.16)";
-                    case _:
-                      return "MacOS 12 (as 10.17)";
-                    case _:
-                      return "MacOS 13 (as 10.18)";
-                    case _:
-                      return "MacOS 11";
-                    case _:
-                      return "MacOS 11.1";
-                    case _:
-                      return "MacOS 12";
-                    case _:
-                      return "MacOS 13";
-                    case _:
-                      return "MacOS 14";
-                    case _:
-                      return "MacOS 15";
-                    case _:
-                      return "Linux";
-                    case _:
-                      return "Linux 2.2";
-                    case _:
-                      return "Linux 2.4";
-                    case _:
-                      return "Linux 2.6";
-                    case _:
-                      return "Linux 3.2";
-                    case _:
-                      return "Linux 3.5";
-                    case _:
-                      return "Linux 3.6";
-                    case _:
-                      return "Linux 3.10";
-                    case _:
-                      return "Linux 3.16";
-                    case _:
-                      return "Linux 3.18";
-                    case _:
-                      return "Linux 3.x";
-                    case _:
-                      return "Linux 4.1";
-                    case _:
-                      return "Linux 4.4";
-                    case _:
-                      return "Linux 4.9";
-                    case _:
-                      return "Linux 4.14";
-                    case _:
-                      return "Linux 4.19";
-                    case _:
-                      return "Linux 4.x";
-                    case _:
-                      return "Linux 5.x";
-                    case _:
-                      return "Linux 5.4";
-                    case _:
-                      return "Linux 6.x";
-                    case _:
-                      return "Linux 7.x";
-                    case _:
-                      return "Linux 5.10";
-                    case _:
-                      return "PS3";
-                    case _:
-                      return "Web Client";
-                    case _:
-                      return "Android";
-                    case _:
-                      return "Android 6.x";
-                    case _:
-                      return "Android 7.x";
-                    case _:
-                      return "Android 8.x";
-                    case _:
-                      return "Android 9.x";
-                    case _:
-                      return "iOS";
-                    case _:
-                      return "iOS 1";
-                    case _:
-                      return "iOS 2";
-                    case _:
-                      return "iOS 3";
-                    case _:
-                      return "iOS 4";
-                    case _:
-                      return "iOS 5";
-                    case _:
-                      return "iOS 6";
-                    case _:
-                      return "iOS 6.1";
-                    case _:
-                      return "iOS 7";
-                    case _:
-                      return "iOS 7.1";
-                    case _:
-                      return "iOS 8";
-                    case _:
-                      return "iOS 8.1";
-                    case _:
-                      return "iOS 8.2";
-                    case _:
-                      return "iOS 8.3";
-                    case _:
-                      return "iOS 8.4";
-                    case _:
-                      return "iOS 9";
-                    case _:
-                      return "iOS 9.1";
-                    case _:
-                      return "iOS 9.2";
-                    case _:
-                      return "iOS 9_.3";
-                    case _:
-                      return "iOS 10";
-                    case _:
-                      return "iOS 10.1";
-                    case _:
-                      return "iOS 10.2";
-                    case _:
-                      return "iOS 10.3";
-                    case _:
-                      return "iOS 11";
-                    case _:
-                      return "iOS 11.1";
-                    case _:
-                      return "iOS 11.2";
-                    case _:
-                      return "iOS 11.3";
-                    case _:
-                      return "iOS 11.4";
-                    case _:
-                      return "iOS 12";
-                    case _:
-                      return "iOS 12.1";
-                    default:
-                      return "Unknown";
-                  }
-                })(_.os_type);
-                if (_.windows && _.includes("Windows")) return !0;
-                if (_.mac && _.includes("Mac")) return !0;
-                if (_.steamos_linux && _.includes("Linux")) return !0;
-              }
-              break;
-            case _.LS$:
-              return _.windows || _.steamos_linux;
-          }
-          return !1;
-        });
-        if (_ && _?.length > 0) {
-          const _ = _[_];
-          return (0, _.jsx)("div", {
-            className: _().RemoteOptions,
-            children: Boolean(_)
-              ? (0, _.jsx)(_, {
-                  session: _,
-                })
-              : (0, _.jsxs)(_.Fragment, {
-                  children: [
-                    (0, _.jsx)(_, {
-                      rgAcceptableSession: _,
-                      session: _,
-                      setSessionIndex: _,
-                    }),
-                    (0, _.jsx)("div", {
-                      className: _().ActionRow,
-                      children: (0, _.jsx)(_, {
-                        appid: _.appid,
-                        session: _,
-                        setRemoteDownloadRequested: _,
-                      }),
-                    }),
-                  ],
-                }),
-          });
-        }
-        return null;
-      }
-      function _(_) {
-        const { rgAcceptableSession: _, session: _, setSessionIndex: _ } = _;
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            (0, _.jsx)("div", {
-              children: (0, _._)("#Sale_AddToLibrary_RemoteDownload"),
-            }),
-            (0, _.jsxs)("div", {
-              className: _().ClientSelector,
-              children: [
-                (0, _.jsx)("span", {
-                  className: _().ClientName,
-                  children: _.machine_name,
-                }),
-                (0, _.jsx)(_, {
-                  rgSessions: _,
-                  setRemoteClientID: (_) => {
-                    const _ = _.findIndex((_) => _.client_instanceid === _);
-                    _ >= 0 && _(_);
-                  },
-                }),
-              ],
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const { session: _ } = _;
-        return (0, _.jsxs)("div", {
-          className: _().DownloadStartedCtn,
-          children: [
-            (0, _._)("#Sale_AddToLibrary_DownloadStarted"),
-            (0, _.jsx)("br", {}),
-            (0, _.jsx)("a", {
-              href: `${_._.COMMUNITY_BASE_URL}my/games?tab=all&clientid=${_.client_instanceid}`,
-              children: (0, _._)("#Sale_AddToLibrary_SeeDownloadProgress"),
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const { appid: _, session: _, setRemoteDownloadRequested: _ } = _,
-          _ = (function (_, _, _) {
-            const _ = (0, _._)(),
-              _ = _(_),
-              _ = (0, _._)(),
-              _ = (0, _._)();
-            return (0, _._)({
-              mutationFn: async () => {
-                const _ = _._.Init(_);
-                __webpack_require__.Body().set_appid(_),
-                  __webpack_require__.Body().set_client_instanceid(_);
-                const _ = await _.InstallClientApp(_, _);
-                if (_.GetEResult() != _._)
-                  throw (
-                    (console.error(
-                      "Received error from InstallClientApp",
-                      _.GetEResult(),
-                    ),
-                    new Error(`Error from InstallClientApp: ${_.GetEResult()}`))
-                  );
-                const _ = _?.data;
-                _ && _.get(_) && _.get(_).app.SetDownloading(),
-                  _.setQueryData(_(_, _), _),
-                  _.refetch();
-              },
-              onSuccess: _,
-            });
-          })(_, _.client_instanceid);
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            (0, _.jsxs)(_._, {
-              onClick: () => {
-                _.mutateAsync(), _(!0);
-              },
-              children: [
-                (0, _.jsx)(_.f5X, {}),
-                (0, _._)("#Button_StartDownload"),
-              ],
-            }),
-            (0, _.jsx)("div", {
-              className: _().LearnMoreCtn,
-              children: (0, _.jsx)("a", {
-                href: "https://help.steampowered.com/faqs/view/1025-BD94-12FC-3409",
-                className: _().InlineLink,
-                children: (0, _._)("#Button_Learn"),
-              }),
-            }),
-          ],
-        });
-      }
-      var _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { _: _, className: _ } = _,
-          { data: _ } = (0, _._)(_);
-        if (!_) return null;
-        const _ =
-            _.related_items?.demo_appid && _.related_items.demo_appid
-              ? _.related_items.demo_appid
-              : [],
-          _ = _.length > 0,
-          _ = _ || _.type === _._._,
-          _ = _
-            ? _._.Localize("#Sale_InstallDemo_ttip", _.name || "")
-            : _
-              ? _._.Localize("#Sale_CannotInstallDemo_ttip", _.name || "")
-              : _._.Localize("#Loading");
-        if ((0, _._)()) {
-          if (_ && _) {
-            const _ = _.type === _._._ ? _.appid : _[0];
-            return (0, _.jsx)("div", {
-              className: _,
-              children: (0, _.jsx)(_, {
-                appid: _,
-              }),
-            });
-          }
-          return null;
-        }
-        return !_ && _ && _.is_free
-          ? (0, _.jsx)(_._, {
-              _: _,
-              className: _,
-            })
-          : (0, _.jsx)(_._, {
-              toolTipContent: _,
-              onClick: (_) => {
-                _.preventDefault(),
-                  _.stopPropagation(),
-                  _ && (0, _._)(_.type === _._._ ? _.appid : _[0], _.name);
-              },
-              className: (0, _._)(_, _().DemoButton, !_ && _().DisabledButton),
-              children: _
-                ? _._.Localize("#Sale_InstallDemo")
-                : _._.Localize("#Sale_DemoNotFound"),
-            });
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            _: _,
-            strClassName: _,
-            bMinimizePlatforms: _,
-            bHideWindows: _,
-          } = _,
-          { data: _ } = (0, _._)(_);
-        if (!_) return null;
-        if (_) {
-          let _ = _
-            ? null
-            : _?.windows &&
-              (0, _.jsx)("span", {
-                title: _._.Localize("#Platform_Windows"),
-                children: (0, _.jsx)(_.Xz0, {
-                  "aria-label": _._.Localize("#Platform_Windows"),
-                }),
-              });
-          return (
-            ((0, _._)() || (0, _._)() || (0, _._)()) && _?.steamos_linux
-              ? (_ = (0, _.jsx)("span", {
-                  title: _._.Localize("#Platform_Linux"),
-                  children: (0, _.jsx)(_.Qte, {
-                    "aria-label": _._.Localize("#Platform_Linux"),
-                  }),
-                }))
-              : (0, _._)() && _?.mac
-                ? (_ = (0, _.jsx)("span", {
-                    title: _._.Localize("#Platform_Mac"),
-                    children: (0, _.jsx)(_.kPc, {
-                      "aria-label": _._.Localize("#Platform_Mac"),
-                    }),
-                  }))
-                : _.vr_support?.vrhmd &&
-                  (_ = (0, _.jsx)("span", {
-                    title: _._.Localize("#Platform_VR"),
-                    children: (0, _.jsx)(_._, {
-                      "aria-label": _._.Localize("#Platform_VR"),
-                    }),
-                  })),
-            _
-              ? (0, _.jsx)("span", {
-                  className: (0, _._)(_().CapsulePlatform, _),
-                  children: _,
-                })
-              : null
-          );
-        }
-        return (0, _.jsxs)("span", {
-          className: (0, _._)(_().CapsulePlatform, _),
-          children: [
-            !_ &&
-              _.windows &&
-              (0, _.jsx)("span", {
-                title: _._.Localize("#Platform_Windows"),
-                children: (0, _.jsx)(_.Xz0, {
-                  "aria-label": _._.Localize("#Platform_Windows"),
-                }),
-              }),
-            _.mac &&
-              (0, _.jsx)("span", {
-                title: _._.Localize("#Platform_Mac"),
-                children: (0, _.jsx)(_.kPc, {
-                  "aria-label": _._.Localize("#Platform_Mac"),
-                }),
-              }),
-            _.steamos_linux &&
-              (0, _.jsx)("span", {
-                title: _._.Localize("#Platform_Linux"),
-                children: (0, _.jsx)(_.Qte, {
-                  "aria-label": _._.Localize("#Platform_Linux"),
-                }),
-              }),
-            _.vr_support?.vrhmd &&
-              (0, _.jsx)("span", {
-                title: _._.Localize("#Platform_VR"),
-                children: (0, _.jsx)(_._, {
-                  "aria-label": _._.Localize("#Platform_VR"),
-                }),
-              }),
-          ],
-        });
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { _: _, bSelfPurchaseOption: _ } = _,
-          { data: _ } = (0, _._)(_),
-          { data: _ } = (0, _._)(_);
-        if (!_) return null;
-        const _ = _ && _.item_type == _._._ ? _.self_purchase_option : _;
-        return (0, _.jsx)(_, {
-          purchaseOption: _,
-          ..._,
-        });
-      }
-      function _(_) {
-        const {
-            bSingleLineMode: _,
-            onlyOneDiscountPct: _,
-            _: _,
-            purchaseOption: _,
-            bHidePrePurchase: _,
-            bHideReleaseDate: _,
-            bHideIfDemo: _,
-            bPurchaseOptionDisplay: _,
-            strContainerClassName: _,
-            strDiscountAndPriceClassName: _,
-            strPriceFormattedClassName: _,
-            bPreferWholeNumbers: _,
-            bSelfPurchaseOption: _,
-            bHideNewTag: _,
-          } = _,
-          _ = _._.NOW,
-          { data: _ } = (0, _._)(_),
-          { data: _ } = (0, _._)(_);
-        if (!_) return null;
-        const _ = _,
-          _ = !_ && (0, _._)(_, _),
-          _ = (0, _._)({
-            [_().StoreSalePriceWidgetContainer]: !0,
-            [_().SingleLineMode]: _,
-            StoreSalePriceWidgetContainer: !0,
-            [_().NewItem]: _,
-            [_().PurchaseOption]: _,
-            [_ ?? ""]: !!_,
-          });
-        if (_.bShowInLibrary)
-          return (0, _.jsx)("div", {
-            className: _,
-            children: (0, _.jsx)("div", {
-              className: _().StoreSalePriceBox,
-              children: _._.Localize("#EventDisplay_CallToAction_InLibrary"),
-            }),
-          });
-        if (_ && _.is_coming_soon && (!_ || !_.packageid)) {
-          if (_) return null;
-          const _ =
-            _.coming_soon_display &&
-            ["text_comingsoon", "text_tba"].includes(_.coming_soon_display)
-              ? (0, _._)(_)
-              : _._.Localize(
-                  "#EventDisplay_CallToAction_ComingSoon_Date",
-                  (0, _._)(_),
-                );
-          return (0, _.jsx)("div", {
-            className: _,
-            children: (0, _.jsx)("div", {
-              className: _().StoreSalePriceBox,
-              children: _,
-            }),
-          });
-        }
-        if (_.is_free) {
-          if (!_.is_free_temporarily)
-            return _.item_type == _._._ && _.type == _._._
-              ? _
-                ? null
-                : (0, _.jsxs)("div", {
-                    className: _,
-                    children: [
-                      _ &&
-                        (0, _.jsx)("div", {
-                          className: _().StoreSaleNewItem,
-                          children: _._.Localize("#Flag_New"),
-                        }),
-                      (0, _.jsx)("div", {
-                        className: _().StoreSalePriceBox,
-                        children: _._.Localize(
-                          "#EventDisplay_CallToAction_FreeDemo",
-                        ),
-                      }),
-                    ],
-                  })
-              : (0, _.jsxs)("div", {
-                  className: _,
-                  children: [
-                    _ &&
-                      (0, _.jsx)("div", {
-                        className: _().StoreSaleNewItem,
-                        children: _._.Localize("#Flag_New"),
-                      }),
-                    (0, _.jsx)("div", {
-                      className: _().StoreSalePriceBox,
-                      children: _._.Localize(
-                        "#EventDisplay_CallToAction_FreeToPlay",
-                      ),
-                    }),
-                  ],
-                });
-          if (_ && _.is_free_to_keep && !_.formatted_original_price)
-            return (0, _.jsx)("div", {
-              className: _,
-              children: (0, _.jsx)("div", {
-                className: _().StoreSalePriceBox,
-                children: _._.Localize("#EventDisplay_CallToAction_Free"),
-              }),
-            });
-        }
-        if (!_ || !_.formatted_final_price) return null;
-        let _ = _.discount_pct || 0,
-          _ = _ || _.item_type != _._._ ? 0 : _.bundle_discount_pct || 0,
-          _ = _.formatted_final_price;
-        if (_) {
-          const _ = (0, _._)(_._.country_code.toUpperCase()),
-            _ = {
-              ...(0, _._)(_),
-              bWholeUnitsOnly: !0,
-            };
-          _ = (0, _._)(Number.parseInt(_.final_price_in_cents || "0"), _);
-        }
-        const _ = (0, _._)(_, _);
-        return (0, _.jsx)(_, {
-          bSingleLineMode: Boolean(_),
-          nBaseDiscountPercentage: _,
-          nDiscountPercentage: _,
-          bIsPrePurchase: _,
-          strBestPurchaseOriginalPriceFormatted:
-            _.formatted_original_price || "",
-          strBestPurchasePriceFormatted: _,
-          bHideDiscountPercentForCompliance: Boolean(
-            _.hide_discount_pct_for_compliance,
-          ),
-          bShowNewFlag: _,
-          bHidePrePurchase: Boolean(_),
-          strDiscountAndPriceClassName: _,
-          strPriceFormattedClassName: _,
-          bPurchaseOptionDisplay: _,
-        });
-      }
-      function _(_) {
-        const {
-            bSingleLineMode: _,
-            nDiscountPercentage: _,
-            bIsPrePurchase: _,
-            nBaseDiscountPercentage: _,
-            strBestPurchaseOriginalPriceFormatted: _,
-            strBestPurchasePriceFormatted: _,
-            bHideDiscountPercentForCompliance: _,
-            bShowNewFlag: _,
-            bHidePrePurchase: _,
-            strDiscountAndPriceClassName: _,
-            strPriceFormattedClassName: _,
-            bPurchaseOptionDisplay: _,
-          } = _,
-          _ = _;
-        let _;
-        _ &&
-          (_ = _
-            ? _._.Localize("#Discount_ARIA_Label_SpecialPrice", _)
-            : _._.Localize("#Discount_ARIA_Label", _, _, _));
-        const _ = Boolean((_ || _) && !_),
-          _ = _ && Boolean(_),
-          _ = _ && !_ && _;
-        return (0, _.jsxs)("div", {
-          className: (0, _._)({
-            [_().StoreSalePriceWidgetContainer]: !0,
-            [_().SingleLineMode]: _,
-            StoreSalePriceWidgetContainer: !0,
-            [_().Discounted]: Boolean(_),
-            Discounted: Boolean(_),
-            [_().PrePurchase]: Boolean(_),
-            [_().NewItem]: Boolean(_),
-            [_().PurchaseOption]: _,
-            [_ ?? ""]: !!_,
-          }),
-          "aria-label": _,
-          children: [
-            Boolean(_ && !_) &&
-              (0, _.jsx)("div", {
-                className: (0, _._)(_().StoreSalePrepurchaseLabel),
-                children: (0, _.jsx)("span", {
-                  children: _._.Localize(
-                    "#EventDisplay_CallToAction_Prepurchase_Short",
-                  ),
-                }),
-              }),
-            Boolean(!_ && _) &&
-              (0, _.jsx)("div", {
-                className: _().StoreSaleNewItem,
-                children: _._.Localize("#Flag_New"),
-              }),
-            Boolean(_ && !_) &&
-              (0, _.jsxs)(_.Fragment, {
-                children: [
-                  (0, _.jsx)(_._, {
-                    toolTipContent: _._.Localize("#Sale_Bundle_Discount_ttip"),
-                    children: (0, _.jsx)("span", {
-                      className: (0, _._)(_().BaseDiscount),
-                      children: `-${_}%`,
-                    }),
-                  }),
-                  Boolean(_) &&
-                    (0, _.jsxs)(_.Fragment, {
-                      children: [
-                        (0, _.jsx)("span", {
-                          children: " ",
-                        }),
-                        (0, _.jsx)(_._, {
-                          toolTipContent: _._.Localize(
-                            "#Sale_Bundle_Discount_Limited_ttip",
-                          ),
-                          children: (0, _.jsx)("span", {
-                            className: (0, _._)(_().StoreSaleDiscountBox),
-                            children: `-${_}%`,
-                          }),
-                        }),
-                      ],
-                    }),
-                ],
-              }),
-            Boolean(!_ && _ && !_) &&
-              (0, _.jsx)("div", {
-                className: _().StoreSaleDiscountBox,
-                children: `-${_}%`,
-              }),
-            Boolean(_ && _) &&
-              (0, _.jsx)("div", {
-                className: _().DiscountIconCtn,
-                children: (0, _.jsx)(_.XH_, {}),
-              }),
-            _ || _
-              ? (0, _.jsxs)("div", {
-                  className: (0, _._)(_().StoreSaleDiscountedPriceCtn),
-                  children: [
-                    _
-                      ? (0, _.jsx)("div", {
-                          className: (0, _._)({
-                            [_().SingleLineOriginalPrice]: _,
-                            [_().StoreOriginalPrice]: !_,
-                          }),
-                          children: _,
-                        })
-                      : (0, _.jsx)("div", {
-                          className: _().YourPriceLabel,
-                          children: _._.Localize("#PriceDisplay_YourPrice"),
-                        }),
-                    (0, _.jsx)("div", {
-                      className: (0, _._)({
-                        [_().StoreSalePriceBox]: !0,
-                        [_().SingleLineMode]: _,
-                        [_ ?? ""]: !!_,
-                      }),
-                      children: _,
-                    }),
-                  ],
-                })
-              : (0, _.jsx)("div", {
-                  className: (0, _._)({
-                    [_().StoreSalePriceBox]: !0,
-                    [_ ?? ""]: !!_,
-                  }),
-                  children: _,
-                }),
-          ],
-        });
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-          rgTagIDs: _,
-          bShowEvenIfNoTags: _,
-          bHideTitle: _,
-          bLargeText: _,
-          bNoStoreLinks: _,
-        } = _;
-        return _?.length > 0 || _
-          ? (0, _.jsxs)("div", {
-              className: (0, _._)(
-                _().SaleTagBlockCtn,
-                _ ? _().LargeText : "",
-                "SaleTagBlockCtn",
-              ),
-              children: [
-                Boolean(!_) &&
-                  (0, _.jsx)("div", {
-                    className: (0, _._)(_().TagTitle, "WidgetTagTitle"),
-                    children: _._.Localize("#GameHover_Tags"),
-                  }),
-                Boolean(_?.length > 0)
-                  ? (0, _.jsx)("div", {
-                      className: (0, _._)(_().TagBox, "TagBox"),
-                      children: _.map((_) =>
-                        (0, _.jsx)(
-                          _,
-                          {
-                            tagid: _,
-                            bNoStoreLinks: _,
-                          },
-                          _,
-                        ),
-                      ),
-                    })
-                  : (0, _.jsx)("div", {
-                      children: _._.Localize("#Broadcast_None"),
-                    }),
-              ],
-            })
-          : null;
-      }
-      function _(_) {
-        const { tagid: _, className: _ } = _,
-          _ = (0, _._)(_, _._.LANGUAGE);
-        if (!_) return null;
-        const _ = (0, _.wwZ)((0, _.sfN)(_._.LANGUAGE)),
-          _ = `${_._.STORE_BASE_URL}tags/${_}/${_}`;
-        return (0, _.jsx)(_._, {
-          url: _,
-          className: (0, _._)(_().Tag, "WidgetTag", _),
-          children: _,
-        });
-      }
-      function _(_) {
-        const { tagid: _, className: _, bNoStoreLinks: _ } = _,
-          _ = (0, _.wwZ)((0, _.sfN)(_._.LANGUAGE)),
-          _ = (0, _._)(_, _._.LANGUAGE),
-          _ = `${_._.STORE_BASE_URL}tags/${_}/${_}`;
-        return _
-          ? _
-            ? (0, _.jsx)("div", {
-                className: (0, _._)(_().Tag, "WidgetTag", _),
-                children: _,
-              })
-            : (0, _.jsx)(_._, {
-                url: _,
-                className: (0, _._)(_().Tag, "WidgetTag", _),
-                children: _,
-              })
-          : null;
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { appid: _, bIsMuted: _ } = _,
-          _ = (0, _._)(_),
-          _ = (0, _._)(_),
-          { data: _ } = (0, _._)(_),
-          { mutate: _ } = (0, _._)(_),
-          _ = (_) => {
-            _.preventDefault(), _ ? (0, _._)(_, _?.name) : _();
-          },
-          _ = (0, _._)(
-            _().CapsuleBottomBar,
-            _ && _().Muted,
-            _ ? _().PlayNowButton : _().AddToLibraryButton,
-          );
-        return (0, _.jsx)("div", {
-          role: "button",
-          tabIndex: 0,
-          onClick: _,
-          className: _,
-          onKeyDown: (_) => {
-            ("Enter" !== _.key && " " !== _.key) || (_.preventDefault(), _(_));
-          },
-          children: (0, _._)(_ ? "#Sale_PlayNow" : "#Sale_AddToLibrary"),
-        });
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, _) {
-        const _ = (0, _._)(),
-          _ = (0, _._)(),
-          _ = (0, _._)((0, _._)(_, _));
-        return {
-          snr: (0, _._)(_),
-          strStoreURL: (0, _._)(_, _, _),
-        };
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
-      function _(_) {
-        const {
-            className: _,
-            url: _,
-            style: _,
-            children: _,
-            bSkipForcingStoreLink: _,
-            bOpenInline: _,
-            bFocusable: _ = !0,
-          } = _,
-          _ = _
-            ? _
-            : _
-              ? (function (_, _) {
-                  try {
-                    const _ = new URL(_),
-                      _ = new URL(_);
-                    return (
-                      _.href.replace(/\/$/, "") + _.pathname + _.search + _.hash
-                    );
-                  } catch (_) {
-                    return "";
-                  }
-                })(_, _._.STORE_BASE_URL)
-              : void 0,
-          _ = (0, _._)(_);
-        return _
-          ? (0, _.jsx)(_._, {
-              href: _,
-              target: _._.IN_CLIENT || _ ? void 0 : "_blank",
-              className: _,
-              style: _,
-              rel: "noopener noreferrer",
-              focusable: _,
-              children: _,
-            })
-          : (0, _.jsx)("span", {
-              style: _,
-              className: _,
-              children: _,
-            });
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid");
-      const _ = (0, _.createContext)(void 0);
-      _.Provider;
-      function _() {
-        const _ = (0, _.useContext)(_);
-        if (!_)
-          throw new Error(
-            "called useActiveAccount outside of ActiveAccountProvider",
-          );
-        return _.useActiveAccount();
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { children: _, ..._ } = _;
-        return (0, _.jsx)(_._, {
-          className: _.GreenButton,
-          type: "button",
-          ..._,
-          children: (0, _.jsx)("span", {
-            children: _,
-          }),
-        });
-      }
-      function _(_) {
-        const { children: _, ..._ } = _;
-        return (0, _.jsx)(_._, {
-          className: _.BlueButton,
-          type: "button",
-          ..._,
-          children: (0, _.jsx)("span", {
-            children: _,
-          }),
-        });
-      }
-      function _(_) {
-        const { children: _, ..._ } = _;
-        return (0, _.jsx)(_._, {
-          className: _.GreyButton,
-          type: "button",
-          ..._,
-          children: (0, _.jsx)("span", {
-            children: _,
-          }),
-        });
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, _) {
-        if (_[_]) {
-          if ("community_icon" == _) {
-            const _ = _.asset_url_format
-              .replace(/^steam\//, "images/")
-              .replace("${FILENAME}", `${_[_]}.jpg`)
-              .replace(/\?.*$/, "");
-            return `${_._.MEDIA_CDN_COMMUNITY_URL}${_}`;
-          }
-          if ("string" == typeof _[_]) {
-            const _ = _.asset_url_format.replace("${FILENAME}", _[_]);
-            return `${_._.STORE_ITEM_BASE_URL}${_}`;
-          }
-        }
-      }
-      function _(_, _ = "full") {
-        let _ = "";
-        switch (_) {
-          case "thumb":
-            _ = ".116x65";
-            break;
-          case "600x338":
-            _ = ".600x338";
-            break;
-          case "1920x1080":
-            _ = ".1920x1080";
-            break;
-          case "full":
-            _ = "";
-            break;
-          default:
-            (0, _._)(_, `Invalid size: ${_}`);
-        }
-        return (
-          _._.STORE_ITEM_BASE_URL +
-          _.filename.replace(/\.([^.]+)(\?.*)?$/, `${_}.$1$2`)
-        );
-      }
-      function _(_) {
-        const { data: _ } = (0, _._)(_),
-          _ = (0, _._)();
-        if (_)
-          return [
-            ...(_.all_ages_screenshots || []),
-            ...(!_ && _.mature_content_screenshots
-              ? _.mature_content_screenshots
-              : []),
-          ].sort((_, _) => _.ordinal - _.ordinal);
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_) {
-        const { _: _, active: _, bIsHoverMode: _, eGrowOnActivate: _ } = _,
-          { data: _ } = (0, _._)(_),
-          _ = _.useRef(0),
-          _ = _.useRef(null);
-        _.useLayoutEffect(() => {
-          _ && _.current && (_.current.currentTime = _.current);
-        }, [_]);
-        const _ = (0, _._)(_ ? _ : void 0);
-        if ((_ && _._.IN_MOBILE) || !_) return null;
-        if (!_ || !_.visible || !_) return null;
-        const _ = _.filter((_) => _.microtrailer && _.microtrailer.length > 0);
-        if (0 === _.length)
-          return _ &&
-            _.related_items?.parent_appid &&
-            (_.type == _._._ || _.type == _._._)
-            ? (0, _.jsx)(_, {
-                ..._,
-                _: {
-                  appid: _.related_items.parent_appid,
-                },
-              })
-            : null;
-        let _;
-        switch (_) {
-          case _.k_ETrailerGrowAmount_Implicit:
-            _ = _().GrowOnHoverImplicit;
-            break;
-          case _.k_ETrailerGrowAmount_Medium:
-            _ = _().GrowOnHoverMedium;
-        }
-        const _ = _[0];
-        return (0, _.jsx)("video", {
-          className: _()(_().CapsuleMicroTrailer, _),
-          loop: !0,
-          muted: !0,
-          controls: !1,
-          autoPlay: !0,
-          ref: _,
-          playsInline: !0,
-          onTimeUpdate: (_) => {
-            _.current = _.currentTarget.currentTime;
-          },
-          children: (0, _.jsx)(_, {
-            trailer: _,
-          }),
-        });
-      }
-      function _(_) {
-        const { trailer: _ } = _;
-        return _ && _.microtrailer
-          ? (0, _.jsx)(_.Fragment, {
-              children: _.microtrailer?.map((_) =>
-                _._.IN_CLIENT && "video/mp4" == _.type
-                  ? null
-                  : (0, _.jsx)(
-                      "source",
-                      {
-                        src: (0, _._)(_, _.filename || ""),
-                        type: _.type,
-                      },
-                      _.filename,
-                    ),
-              ),
-            })
-          : null;
-      }
-      !(function (_) {
-        (_[(_.k_ETrailerGrowAmount_None = 0)] = "k_ETrailerGrowAmount_None"),
-          (_[(_.k_ETrailerGrowAmount_Implicit = 1)] =
-            "k_ETrailerGrowAmount_Implicit"),
-          (_[(_.k_ETrailerGrowAmount_Medium = 2)] =
-            "k_ETrailerGrowAmount_Medium");
-      })(_ || (_ = {}));
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      function _(_) {
-        return (
-          !!_ &&
-          Boolean(
-            _.related_items &&
-              _.related_items.standalone_demo_appid &&
-              _.related_items.standalone_demo_appid.length > 0 &&
-              _.related_items.standalone_demo_appid[0],
-          )
-        );
-      }
-      function _(_) {
-        return _ && _.related_items?.standalone_demo_appid
-          ? _.related_items?.standalone_demo_appid
-          : [];
-      }
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        if (!_) return "";
-        if (_ && _.is_coming_soon) {
-          if (_.coming_soon_display) return (0, _._)(_);
-          if (_.custom_release_date_message)
-            return _.custom_release_date_message;
-          const _ = _.steam_release_date;
-          return _
-            ? _.is_abridged_release_date
-              ? (0, _._)(new Date(1e3 * _))
-              : (0, _._)(_)
-            : "";
-        }
-        let _ = _.steam_release_date;
-        return _ || (_ = _.original_release_date), _ ? (0, _._)(_) : "";
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid");
-      function _(_, _ = !1) {
-        if (_.is_coming_soon && !_) return 0;
-        let _ = _.steam_release_date;
-        return _ || (_ = _.original_release_date), _;
-      }
-      const _ = 7;
-      function _(_, _) {
-        if (!_) return !1;
-        const _ = _(_);
-        return !!_ && !_.is_coming_soon && _ + _ * _._.PerDay > _;
-      }
-      function _(_, _) {
-        return Boolean(_ && _.is_coming_soon && _ && _.packageid);
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, _ = !1) {
-        if (_)
-          return _ && (0, _._)(_)
-            ? `${_._.STORE_BASE_URL}app/${((0, _._))(_)[0]}`
-            : `${_._.STORE_BASE_URL}${_.store_url_path}`;
-      }
-      function _() {
-        window.location.href = `${_._.STORE_BASE_URL}login/?redir=${encodeURIComponent(window.location.href)}`;
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const _ = (0, _._)(),
-          _ = (0, _._)();
-        return (0, _._)(_(_.GetAnonymousServiceTransport(), _, _));
-      }
-      function _(_, _, _) {
-        return {
-          queryKey: ["LocalizedTagNames", _],
-          queryFn: async () => {
-            const _ = `LocalizedTagNames2_${_}`,
-              _ = await _.GetObject(_),
-              _ = _._.Init(_._);
-            _.Body().set_language(_),
-              _?.version_hash && _.Body().set_have_version_hash(_.version_hash);
-            const _ = await _._.GetTagList(_, _);
-            let _;
-            if (_.GetEResult() == _._)
-              (_ = _.Body().toObject()), _ && _.StoreObject(_, _);
-            else if (_.GetEResult() == _._) _ = _ || void 0;
-            else {
-              if (!_) throw _.GetErrorMessage();
-              console.warn(
-                "Couldn't load updated tag localization, will continue with what we have from storage.",
-              ),
-                (_ = _);
-            }
-            const _ = {};
-            return (
-              (_?.tags || []).forEach(({ tagid: _, name: _ }) => (_[_] = _)), _
-            );
-          },
-          staleTime: 36e5,
-        };
-      }
-      function _(_, _) {
-        const { data: _ } = _(_);
-        return _ && _[_];
-      }
-      _.RW$, _.ZBT, _.gGw;
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { data: _ } = (0, _._)(_);
-        return (0, _.useMemo)(
-          () =>
-            _
-              ? _.item_type == _._._
-                ? [_.appid]
-                : _.included_appids || []
-              : [],
-          [_],
-        );
-      }
-      function _(_) {
-        const { data: _ } = (0, _._)(_);
-        return (0, _.useMemo)(() => {
-          if (_ && _.related_items && _.related_items.parent_appid)
-            return {
-              appid: _.related_items.parent_appid,
-            };
-        }, [_]);
-      }
-      function _(_) {
-        return (0, _.useMemo)(
-          () =>
-            _
-              ? {
-                  appid: _,
-                }
-              : void 0,
-          [_],
-        );
-      }
-      function _(_) {
-        return (0, _.useMemo)(
-          () =>
-            _
-              ? {
-                  packageid: _,
-                }
-              : void 0,
-          [_],
-        );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _() {
-        (0, _._)();
-        const _ = _._.accountid;
-        return (0, _._)(
-          (function (_, _) {
-            return {
-              queryKey: _(_),
-              queryFn: async () => {
-                if (!_) return new Set();
-                const _ = await (async function (_, _) {
-                  const _ = (0, _._)(_._.STORE_BASE_URL, _, _._.country_code),
-                    _ = await fetch(_),
-                    _ = await _.json();
-                  return Object.keys(_.rgIgnoredApps).map(Number) || [];
-                })(0, _);
-                return new Set(_);
-              },
-              staleTime: 6e5,
-            };
-          })(0, _),
-        );
-      }
-      function _(_) {
-        const { data: _ } = _();
-        return void 0 === _ || null == _ ? void 0 : _.has(_);
-      }
-      function _() {
-        const _ = (0, _._)(),
-          _ = _._.accountid;
-        return (_, _) => {
-          _.setQueryData(_(_), (_) => {
-            if (!_) return;
-            const _ = new Set(_);
-            if (_) for (const _ of _) _.delete(_);
-            if (_) for (const _ of _) _.add(_);
-            return _;
-          });
-        };
-      }
-      function _(_) {
-        return ["AccountIgnoreApps", _ ?? 0];
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const _ = (0, _._)(),
-          _ = (0, _._)();
-        return (0, _._)({
-          mutationFn: () =>
-            (async function (_, _) {
-              const _ = _._.Init(_._);
-              __webpack_require__.Body().set_item_id(_._.fromObject(_));
-              const _ = await _._.AddFreeLicense(_, _);
-              return [_.GetEResult(), _.Body().toObject()];
-            })(_, _),
-          onSuccess(_) {
-            const [
-              _,
-              {
-                packageids_added: _,
-                appids_added: _,
-                purchase_result_detail: _,
-              },
-            ] = _;
-            _ && __webpack_require__(_);
-          },
-        });
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      async function _(_, _) {
-        const _ = (0, _._)(_._.STORE_BASE_URL, _, _._.country_code),
-          _ = await fetch(_);
-        return (await _.json()).rgOwnedApps || [];
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _() {
-        (0, _._)();
-        const _ = _._.accountid;
-        return (0, _._)(
-          (function (_, _) {
-            return {
-              queryKey: _(_),
-              queryFn: async () => {
-                if (!_) return new Set();
-                const _ = await _(0, _);
-                return new Set(_);
-              },
-              staleTime: 6e5,
-            };
-          })(0, _),
-        );
-      }
-      function _(_, _, _) {
-        return {
-          queryKey: ["AccountOwnsApp", _, _],
-          queryFn: async () => {
-            if (!_) return !1;
-            const _ = await (async function (_, _, _) {
-              return (await _(0, _)).includes(_);
-            })(0, _, _);
-            return _;
-          },
-          staleTime: 6e5,
-        };
-      }
-      function _(_) {
-        (0, _._)();
-        const _ = _._.accountid,
-          { data: _ } = (0, _._)(_(0, _, _));
-        return void 0 === _ ? void 0 : _;
-      }
-      function _(_) {
-        const _ = (0, _._)(),
-          _ = _._.accountid;
-        return _.useCallback(
-          (_) => {
-            _.setQueryData(_(_), (_) =>
-              _ ? new Set([..._.values(), ..._]) : _ ? new Set(_) : void 0,
-            );
-          },
-          [_, _, _],
-        );
-      }
-      function _(_) {
-        return ["AccountOwnedApps", _ ?? 0];
-      }
-      function _(_) {
-        const { data: _ } = (0, _._)(_ && "appid" in _ ? void 0 : _),
-          { data: _ } = _();
-        let _;
-        return (
-          _ && "appid" in _ ? (_ = [_.appid]) : _ && (_ = _.included_appids),
-          void 0 === _ || void 0 === _ || 0 == _.length
-            ? {
-                bIsOwned: void 0,
-                unAppID: void 0,
-              }
-            : {
-                bIsOwned: !_.some((_) => !__webpack_require__.has(_)),
-                unAppID: _[0],
-              }
-        );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      const _ = "unUserdataVersion";
-      function _(_, _, _) {
-        const _ = Number.parseInt(window.localStorage.getItem(_) || "0");
-        let _ = `${_}dynamicstore/userdata/?id=${_}&cc=${_}&origin=${self.origin}`;
-        return _ && (_ += `&v=${_}`), _;
-      }
-      function _() {
-        window.localStorage.setItem(
-          _,
-          (
-            Number.parseInt(window.localStorage.getItem(_) || "0") + 1
-          ).toString(),
-        );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, _, _) {
-        const _ = (0, _._)(),
-          _ = _._.accountid;
-        return (0, _._)({
-          mutationKey: ["useUpdateWishlist", _, _, _],
-          mutationFn: async () => {
-            if (null == _) return;
-            const _ =
-                _._.STORE_BASE_URL +
-                "api/" +
-                (_ ? "addtowishlist" : "removefromwishlist"),
-              _ = new FormData();
-            _.append("appid", "" + _),
-              _.append("sessionid", (0, _._)()),
-              _ && _.append("snr", _);
-            const _ = await fetch(_, {
-              method: "POST",
-              body: _,
-              credentials: "include",
-            });
-            if (!_._)
-              throw new Error(
-                `Wishlist ${_ ? "add" : "remove"} of appid ${_} failed (${_.status})`,
-              );
-          },
-          onMutate: () => {
-            null != _ && _(_ ? [_] : void 0, _ ? void 0 : [_]);
-          },
-          onError: () => {
-            null != _ && _(_ ? void 0 : [_], _ ? [_] : void 0);
-          },
-          onSuccess: () => {
-            (0, _._)();
-          },
-        });
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _() {
-        (0, _._)();
-        const _ = _._.accountid;
-        return (0, _._)(
-          (function (_, _) {
-            return {
-              queryKey: _(_),
-              queryFn: async () => {
-                if (!_) return new Set();
-                const _ = await (async function (_, _) {
-                  const _ = (0, _._)(_._.STORE_BASE_URL, _, _._.country_code),
-                    _ = await fetch(_);
-                  return (await _.json()).rgWishlist || [];
-                })(0, _);
-                return new Set(_);
-              },
-              staleTime: 6e5,
-            };
-          })(0, _),
-        );
-      }
-      function _(_) {
-        const { data: _ } = _();
-        return void 0 === _ || null == _ ? void 0 : _.has(_);
-      }
-      function _() {
-        const _ = (0, _._)(),
-          _ = _._.accountid;
-        return (_, _) => {
-          _.setQueryData(_(_), (_) => {
-            if (!_) return;
-            const _ = new Set(_);
-            if (_) for (const _ of _) _.delete(_);
-            if (_) for (const _ of _) _.add(_);
-            return _;
-          });
-        };
-      }
-      function _(_) {
-        return ["AccountWishlistApps", _ ?? 0];
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      async function _(_, _) {
-        const _ = "steam://run/" + _;
-        _._.IN_CLIENT
-          ? (console.log(`Running game ${_} locally.`),
-            (window.location.href = _))
-          : (console.log(
-              `Cannot identify local client. Prompting user to launch ${_}.`,
-            ),
-            _(_, _, _));
-      }
-      async function _(_, _, _) {
-        console.log("prompting for", _);
-        const _ = _._.STORE_BASE_URL + "about/";
-        (0, _._)(
-          (0, _.jsx)(_, {
-            appid: _,
-            strGameName: _ || "",
-            strOnOKUrl: _,
-            strDownloadSteamUrl: _,
-          }),
-          window,
-        );
-      }
-      const _ = (_) => {
-        const _ = () => _.closeModal && _.closeModal();
-        return (0, _.jsx)(_._, {
-          onEscKeypress: _,
-          className: _().GotSteamDialog,
-          children: (0, _.jsxs)(_._, {
-            children: [
-              (0, _.jsxs)(_._, {
-                children: [" ", (0, _._)("#GotSteam_Title"), " "],
-              }),
-              (0, _.jsxs)(_._, {
-                children: [
-                  (0, _.jsx)(_._, {
-                    children: (0, _._)(
-                      "#GotSteam_PromptWithDownloadLink",
-                      (0, _.jsx)("a", {
-                        href: _.strDownloadSteamUrl,
-                        className: _().DownloadSteamUrl,
-                        children: (0, _._)("#GotSteam_DownloadLinkText"),
-                      }),
-                      (0, _.jsx)("span", {
-                        className: _().GameName,
-                        children: _.strGameName,
-                      }),
-                    ),
-                  }),
-                  (0, _.jsxs)("div", {
-                    className: _().Buttons,
-                    children: [
-                      (0, _.jsxs)("a", {
-                        href: _.strOnOKUrl,
-                        onClick: _,
-                        className: (0, _._)(_().Button, _().LeftButton),
-                        children: [
-                          (0, _.jsxs)("div", {
-                            className: _().AnswerText,
-                            children: [" ", (0, _._)("#GotSteam_Yes"), " "],
-                          }),
-                          (0, _.jsxs)("div", {
-                            className: _().ActionText,
-                            children: [
-                              " ",
-                              (0, _._)("#GotSteam_Yes_Play"),
-                              " ",
-                            ],
-                          }),
-                        ],
-                      }),
-                      (0, _.jsxs)("a", {
-                        href: _.strDownloadSteamUrl,
-                        onClick: _,
-                        className: _().Button,
-                        children: [
-                          (0, _.jsxs)("div", {
-                            className: _().AnswerText,
-                            children: [" ", (0, _._)("#GotSteam_No"), " "],
-                          }),
-                          (0, _.jsxs)("div", {
-                            className: _().ActionText,
-                            children: [
-                              " ",
-                              (0, _._)("#GotSteam_No_Download"),
-                              " ",
-                            ],
-                          }),
-                        ],
-                      }),
-                    ],
-                  }),
-                  (0, _.jsxs)("div", {
-                    className: _().Footer,
-                    children: [
-                      (0, _.jsx)(_.Qte, {
-                        className: _().Logo,
-                      }),
-                      (0, _._)("#GotSteam_Blurb"),
-                    ],
-                  }),
-                ],
-              }),
-            ],
-          }),
-        });
-      };
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      !(function (_) {
-        (_[(_.AnyController = 0)] = "AnyController"),
-          (_[(_.XboxController = 1)] = "XboxController"),
-          (_[(_.Ps3Controller = 2)] = "Ps3Controller"),
-          (_[(_.Ps4Controller = 3)] = "Ps4Controller"),
-          (_[(_.Ps5Controller = 4)] = "Ps5Controller"),
-          (_[(_.SwitchController = 5)] = "SwitchController"),
-          (_[(_.SteamController = 6)] = "SteamController"),
-          (_[(_.SteamDeckNeptune = 7)] = "SteamDeckNeptune"),
-          (_[(_.SteamDeckGalileo = 8)] = "SteamDeckGalileo"),
-          (_[(_.Switch2Controller = 9)] = "Switch2Controller"),
-          (_[(_.SteamControllerTriton = 10)] = "SteamControllerTriton");
-      })(_ || (_ = {}));
-      const _ = {
-        any_controller: _.AnyController,
-        xbox_controller: _.XboxController,
-        ps3_controller: _.Ps3Controller,
-        ps4_controller: _.Ps4Controller,
-        ps5_controller: _.Ps5Controller,
-        switch_controller: _.SwitchController,
-        steam_controller: _.SteamController,
-        steam_deck_neptune: _.SteamDeckNeptune,
-        steam_deck_galileo: _.SteamDeckGalileo,
-        switch2_controller: _.Switch2Controller,
-        steam_controller_triton: _.SteamControllerTriton,
-      };
-      function _() {
-        const _ = [..._._.excluded_content_descriptors];
-        return {
-          bLoaded: !1,
-          setWishlist: new Set(),
-          rgWishlistInOrder: [],
-          setOwnedApps: new Set(),
-          setOwnedPackages: new Set(),
-          setExcludedTagIDs: new Set(),
-          rgExcludedTagIDsSorted: [],
-          setExcludedContentDescriptors: new Set(_),
-          rgExcludedContentDescriptors: _,
-          setRecommendedApps: new Set(),
-          rgRecommendedAppsInOrder: [],
-          mapIgnoredApps: new Map(),
-          mapIgnoredPackages: new Map(),
-          setCuratorsFollowed: new Set(),
-          rgCuratorsFollowed: [],
-          setCuratorsIgnored: new Set(),
-          mapRecommendingCuratorsForApp: new Map(),
-          setPreferredPlatforms: new Set(),
-          setHardwareUsed: new Set(),
-          rgRecommendedTags: [],
-          ePrimaryLanguage: _.xPp,
-          setSecondaryLanguages: new Set(),
-          bShowFilteredUserReviewScores: !0,
-          bAllowAppImpressions: !1,
-        };
-      }
-      let _;
-      function _() {
-        return Boolean((0, _._)("wants_mature_content"));
-      }
-      function _(_) {
-        const _ = new Map();
-        for (const [_, _] of Object.entries(_)) {
-          const _ = Number(_);
-          _ && _.set(_, Number(_));
-        }
-        return _;
-      }
-      const _ = "dynamicuserdata";
-      function _(_) {
-        return [_, _];
-      }
-      async function _(_) {
-        try {
-          const _ = await fetch(
-            (0, _._)(_._.STORE_BASE_URL, _, _._.country_code),
-            {
-              credentials: "include",
-            },
-          );
-          if (!_._) throw new Error(`Server returned ${_.status}`);
-          return (function (_) {
-            const _ = _();
-            if (
-              ((_.bLoaded = !0),
-              _.rgCurators &&
-                ((_.rgCuratorsFollowed = Object.keys(_.rgCurators).map(Number)),
-                (_.setCuratorsFollowed = new Set(_.rgCuratorsFollowed))),
-              _.rgCuratorsIgnored &&
-                (_.setCuratorsIgnored = new Set(
-                  _.rgCuratorsIgnored.map(Number),
-                )),
-              _.rgWishlist &&
-                ((_.rgWishlistInOrder = _.rgWishlist.map(Number)),
-                (_.setWishlist = new Set(_.rgWishlistInOrder))),
-              _.rgOwnedApps &&
-                (_.setOwnedApps = new Set(_.rgOwnedApps.map(Number))),
-              _.rgOwnedPackages &&
-                (_.setOwnedPackages = new Set(_.rgOwnedPackages.map(Number))),
-              _.rgIgnoredApps && (_.mapIgnoredApps = _(_.rgIgnoredApps)),
-              _.rgIgnoredPackages &&
-                (_.mapIgnoredPackages = _(_.rgIgnoredPackages)),
-              _.rgExcludedTags &&
-                ((_.setExcludedTagIDs = new Set(
-                  _.rgExcludedTags.map((_) => Number(_.tagid)),
-                )),
-                (_.rgExcludedTagIDsSorted = Array.from(
-                  _.setExcludedTagIDs,
-                ).sort())),
-              _()
-                ? ((_.setExcludedContentDescriptors = new Set()),
-                  (_.rgExcludedContentDescriptors = []))
-                : _.rgExcludedContentDescriptorIDs &&
-                  ((_.rgExcludedContentDescriptors =
-                    _.rgExcludedContentDescriptorIDs.map((_) => Number(_))),
-                  (_.setExcludedContentDescriptors = new Set(
-                    _.rgExcludedContentDescriptors,
-                  ))),
-              _.rgRecommendedApps &&
-                ((_.rgRecommendedAppsInOrder = _.rgRecommendedApps.map(Number)),
-                (_.setRecommendedApps = new Set(_.rgRecommendedAppsInOrder))),
-              _.rgPreferredPlatforms &&
-                (_.setPreferredPlatforms = new Set(_.rgPreferredPlatforms)),
-              _.bAllowAppImpressions &&
-                (_.bAllowAppImpressions = _.bAllowAppImpressions),
-              (_.bShowFilteredUserReviewScores =
-                !!_.bShowFilteredUserReviewScores),
-              void 0 !== _.rgPrimaryLanguage &&
-                (_.ePrimaryLanguage = _.rgPrimaryLanguage),
-              _.rgSecondaryLanguages &&
-                (_.setSecondaryLanguages = new Set(_.rgSecondaryLanguages)),
-              _.rgRecommendedTags &&
-                (_.rgRecommendedTags = _.rgRecommendedTags.map((_) => _.tagid)),
-              _.rgCurations)
-            )
-              for (const _ of Object.keys(_.rgCurations)) {
-                const _ = [];
-                for (const _ of Object.keys(_.rgCurations[_]))
-                  _.rgCurations[_][_] === _._._ && _.push(Number(_));
-                _.mapRecommendingCuratorsForApp.set(Number(_), _);
-              }
-            if (_.rgHardwareUsed)
-              for (const _ of _.rgHardwareUsed) {
-                const _ = _[_];
-                void 0 !== _ && _.setHardwareUsed.add(_);
-              }
-            return _;
-          })(await _.json());
-        } catch (_) {
-          return (
-            console.warn("LoadDynamicUserData", _),
-            (0, _._)().ReportError(new Error(`LoadDynamicUserData ${_}`), {
-              bIncludeMessageInIdentifier: !0,
-            }),
-            _()
-          );
-        }
-      }
-      function _() {
-        const _ = _._.accountid;
-        return {
-          queryKey: _(_),
-          queryFn: () => _(_),
-          staleTime: 1 / 0,
-          gcTime: 1 / 0,
-          retry: !1,
-          enabled: !0,
-        };
-      }
-      function _(_) {
-        return _.getQueryData(_(_._.accountid)) ?? (_ ??= _());
-      }
-      function _(_, _) {
-        _.setQueryData(_(_._.accountid), (_) => {
-          if (!_) return;
-          const _ = _(_);
-          return _
-            ? {
-                ..._,
-                ..._,
-              }
-            : _;
-        });
-      }
-      class _ {
-        m_queryClient = _._;
-        m_boxCacheVersion = _._.box(0);
-        m_bInitialized = !1;
-        m_boxAjaxInFlight = _._.box(!1);
-        LazyInit() {
-          this.m_bInitialized ||
-            ((this.m_bInitialized = !0),
-            this.m_queryClient.getQueryCache().subscribe((_) => {
-              var _;
-              ("added" != _?.type &&
-                "updated" != _?.type &&
-                "removed" != _?.type) ||
-                ((_ = _.query?.queryKey),
-                _?.[0] == _ &&
-                  (0, _._)(() =>
-                    this.m_boxCacheVersion.set(
-                      this.m_boxCacheVersion.get() + 1,
-                    ),
-                  ));
-            }));
-        }
-        ReadData() {
-          return (
-            this.LazyInit(), this.m_boxCacheVersion.get(), _(this.m_queryClient)
-          );
-        }
-        BIsLoaded() {
-          return this.ReadData().bLoaded;
-        }
-        GetWishlistGamesInUserOrder() {
-          return this.ReadData().rgWishlistInOrder;
-        }
-        GetRecommendedGamesInIRPriorityOrder() {
-          return this.ReadData().rgRecommendedAppsInOrder;
-        }
-        GetFollowedCuratorCount() {
-          return this.ReadData().setCuratorsFollowed.size;
-        }
-        GetFollowedCuratorsAccountID() {
-          return this.ReadData().rgCuratorsFollowed;
-        }
-        BIsFollowingCurator(_) {
-          return this.ReadData().setCuratorsFollowed.has(_(_));
-        }
-        BIsIgnoringCurator(_) {
-          return this.ReadData().setCuratorsIgnored.has(_(_));
-        }
-        get ExcludedContentDescriptor() {
-          return this.ReadData().rgExcludedContentDescriptors;
-        }
-        BExcludeTagIDs(_) {
-          const _ = this.ReadData().setExcludedTagIDs;
-          return _.some((_) => _.has(_));
-        }
-        GetExcludedTagsSortedByID() {
-          return this.ReadData().rgExcludedTagIDsSorted;
-        }
-        BExcludesContentDescriptor(_) {
-          const _ = this.ReadData().setExcludedContentDescriptors;
-          return _.some((_) => _.has(_));
-        }
-        BIncludesContentDescriptor(_) {
-          return !this.ReadData().setExcludedContentDescriptors.has(_);
-        }
-        BIsGameWishlisted(_) {
-          return this.ReadData().setWishlist.has(Number(_));
-        }
-        BIsGameRecommended(_) {
-          return this.ReadData().setRecommendedApps.has(Number(_));
-        }
-        BIsGameIgnored(_) {
-          return Boolean(_) && this.ReadData().mapIgnoredApps.has(Number(_));
-        }
-        BIsPackageIgnored(_) {
-          return (
-            Boolean(_) && this.ReadData().mapIgnoredPackages.has(Number(_))
-          );
-        }
-        BIsGameOwned(_) {
-          return !!_ && this.ReadData().setOwnedApps.has(Number(_));
-        }
-        BIsStoreItemOwned(_) {
-          switch (_.GetStoreItemType()) {
-            case _._._:
-              if (this.BIsGameOwned(_.GetAppID())) return !0;
-              break;
-            case _._._:
-            case _._._:
-              if (_.GetIncludedAppIDs().every((_) => this.BIsGameOwned(_)))
-                return !0;
-          }
-          return !1;
-        }
-        BOwnsApp(_) {
-          return Boolean(_) && this.ReadData().setOwnedApps.has(Number(_));
-        }
-        BOwnsPackage(_) {
-          return this.ReadData().setOwnedPackages.has(Number(_));
-        }
-        BHasUsedHardware(_) {
-          return this.ReadData().setHardwareUsed.has(_);
-        }
-        BShowFilteredUserReviewScores() {
-          return this.ReadData().bShowFilteredUserReviewScores;
-        }
-        BAppImpressionsAllowed() {
-          return this.ReadData().bAllowAppImpressions;
-        }
-        GetPrimaryLanguage() {
-          return this.ReadData().ePrimaryLanguage;
-        }
-        GetSecondaryLanguages() {
-          return this.ReadData().setSecondaryLanguages;
-        }
-        BIsAnyLanguageEnabled(_) {
-          const { ePrimaryLanguage: _, setSecondaryLanguages: _ } =
-            this.ReadData();
-          return (
-            null == _ ||
-            _ <= _.xPp || _.bP9 <= _ ||
-            _.some((_) => _ === _ || __webpack_require__.has(_))
-          );
-        }
-        GetRecommendedTags() {
-          return this.ReadData().rgRecommendedTags;
-        }
-        BIsAjaxInFlight() {
-          return this.m_boxAjaxInFlight.get();
-        }
-        BIsAppRecommendedBySomeCurator(_) {
-          return this.ReadData().mapRecommendingCuratorsForApp.has(Number(_));
-        }
-        GetRecommendingCuratorsForApp(_) {
-          return this.ReadData().mapRecommendingCuratorsForApp.get(Number(_));
-        }
-        BHasPlatformPreferenceSet() {
-          const _ = this.ReadData().setPreferredPlatforms.size;
-          return _ > 0 && _ < 3;
-        }
-        BIsPreferredPlatform(_) {
-          return this.ReadData().setPreferredPlatforms.has(_);
-        }
-        async HintLoad() {
-          return (
-            this.LazyInit(),
-            await (async function (_) {
-              return _.fetchQuery(_());
-            })(this.m_queryClient),
-            this
-          );
-        }
-        async UpdateFollowOrIgnoreCurator(_, _, _) {
-          this.LazyInit();
-          let _ =
-            _._.STORE_BASE_URL +
-            "curators/" +
-            (_ ? "ajaxfollow/" : "ajaxignore/");
-          const _ = _.GetAccountID(),
-            _ = new FormData();
-          _.append("clanid", "" + _),
-            _.append("sessionid", (0, _._)()),
-            _.append(_ ? "follow" : "ignore", _ ? "1" : "0");
-          let _ = await _().post(_, _, {
-            withCredentials: !0,
-          });
-          return (
-            _ &&
-              200 == _.status &&
-              (this.InvalidateCache(),
-              _(this.m_queryClient, (_) => {
-                const _ = new Set(
-                  _ ? _.setCuratorsFollowed : _.setCuratorsIgnored,
-                );
-                return (
-                  _ ? _.add(_) : _.delete(_),
-                  _
-                    ? {
-                        setCuratorsFollowed: _,
-                        rgCuratorsFollowed: Array.from(_),
-                      }
-                    : {
-                        setCuratorsIgnored: _,
-                      }
-                );
-              })),
-            _.data
-          );
-        }
-        async UpdateAppIgnore(_, _, _, _ = _._._) {
-          this.LazyInit();
-          let _ = _._.STORE_BASE_URL + "recommended/ignorerecommendation";
-          const _ = new FormData();
-          _.append("sessionid", (0, _._)()),
-            _.append("appid", "" + _),
-            _.append("remove", _ ? "0" : "1"),
-            _.append("snr", _),
-            _.append("ignore_reason", "" + _);
-          try {
-            (0, _._)(() => this.m_boxAjaxInFlight.set(!0));
-            let _ = await _().post(_, _, {
-              withCredentials: !0,
-            });
-            return (
-              _ &&
-                200 == _.status &&
-                (this.InvalidateCache(),
-                _(this.m_queryClient, (_) => {
-                  const _ = new Map(_.mapIgnoredApps);
-                  return (
-                    _ ? _.set(Number(_), _) : _.delete(Number(_)),
-                    {
-                      mapIgnoredApps: _,
-                    }
-                  );
-                })),
-              _.data
-            );
-          } catch (_) {
-            let _ = (0, _._)(_);
-            console.error("UpdateAppIgnore", _.strErrorMsg, _);
-          } finally {
-            (0, _._)(() => this.m_boxAjaxInFlight.set(!1));
-          }
-          return {
-            success: _._,
-          };
-        }
-        async AddToCart(_, _, _, _, _, _, _) {
-          if (
-            void 0 !== window.g_bUseNewCartAPI &&
-            window.g_bUseNewCartAPI &&
-            "function" == typeof window.AddItemToCart
-          ) {
-            let _;
-            return (
-              _ && (_ = _._.ParseSNR(_)), window.AddItemToCart(_, _, _), !0
-            );
-          }
-          const _ = new FormData();
-          _.append("action", "add_to_cart"),
-            _ ? _.append("bundleid", _.toString()) : _.append("subid", "" + _),
-            _ && _.append("snr", _),
-            _.append("sessionid", (0, _._)()),
-            _.append("quantity", "1");
-          const _ = (0, _._)(_);
-          _.preventDefault();
-          try {
-            await _().post(_, _, {
-              withCredentials: !0,
-            }),
-              this.InvalidateCache(),
-              _?.fnSetURL ? _.fnSetURL(_) : (_.location.href = _);
-          } catch (_) {
-            return console.log("HandleOnAddToCart", _), !1;
-          }
-          return !0;
-        }
-        InvalidateCache() {
-          (0, _._)();
-        }
-        static s_globalSingletonStore;
-        static Get() {
-          return (
-            _.s_globalSingletonStore || (_.s_globalSingletonStore = new _()),
-            _.s_globalSingletonStore
-          );
-        }
-        static BConfirmedAdultContentAgeGate() {
-          return _();
-        }
-        constructor() {}
-      }
-      function _(_) {
-        return "object" == typeof _ && "GetAccountID" in _
-          ? _.GetAccountID()
-          : Number(_);
-      }
-      function _() {
-        const { isPending: _ } = (0, _._)(_());
-        return [_, _.Get()];
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { children: _, ..._ } = _,
-          _ = _.useRef(null);
-        return (0, _.jsx)(_._, {
-          nodeRef: _,
-          ..._,
-          children: _.children(_),
-        });
-      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -12800,7 +8952,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -12810,6 +8961,3916 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = -700,
+        _ = -600,
+        _ = -599,
+        _ = -598,
+        _ = -597,
+        _ = -596,
+        _ = -595,
+        _ = -594,
+        _ = -593,
+        _ = -592,
+        _ = -591,
+        _ = -590,
+        _ = -589,
+        _ = -588,
+        _ = -587,
+        _ = -586,
+        _ = -585,
+        _ = -584,
+        _ = -583,
+        _ = -582,
+        _ = -581,
+        _ = -580,
+        _ = -579,
+        _ = -578,
+        _ = -577,
+        _ = -576,
+        _ = -575,
+        _ = -574,
+        _ = -573,
+        _ = -572,
+        _ = -571,
+        _ = -500,
+        _ = -499,
+        _ = -498,
+        _ = -497,
+        _ = -496,
+        _ = -300,
+        _ = -203,
+        _ = -202,
+        _ = -201,
+        _ = -200,
+        _ = -199,
+        _ = -198,
+        _ = -197,
+        _ = -196,
+        _ = -195,
+        _ = -194,
+        _ = -193,
+        _ = -192,
+        _ = -191,
+        _ = -190,
+        _ = -189,
+        _ = -188,
+        _ = -187,
+        _ = -186,
+        _ = -185,
+        _ = -184,
+        _ = -183,
+        _ = -182,
+        _ = -102,
+        _ = -101,
+        _ = -100,
+        _ = -99,
+        _ = -95,
+        _ = -94,
+        _ = -93,
+        _ = -92,
+        _ = -90,
+        _ = -89,
+        _ = -88,
+        _ = -87,
+        _ = -86,
+        _ = -85,
+        _ = -84,
+        _ = -83,
+        _ = -82,
+        _ = -81,
+        _ = -80,
+        _ = -79,
+        _ = -75,
+        _ = -74,
+        _ = -70,
+        _ = -69,
+        _ = -68,
+        _ = -67,
+        _ = 0,
+        _ = 1,
+        _ = 2,
+        _ = 3,
+        _ = 4,
+        _ = 5,
+        _ = 6,
+        _ = 7,
+        _ = 8,
+        _ = 9,
+        _ = 10,
+        _ = 11,
+        _ = 12,
+        _ = 13,
+        _ = 14,
+        _ = 15,
+        _ = 16,
+        _ = 17,
+        _ = 18,
+        _ = 19,
+        _ = 20;
+      var _;
+      !(function (_) {
+        (_[(_.k_EPlatformTypeUnknown = 0)] = "k_EPlatformTypeUnknown"),
+          (_[(_.k_EPlatformTypeWin32 = 1)] = "k_EPlatformTypeWin32"),
+          (_[(_.k_EPlatformTypeWin64 = 2)] = "k_EPlatformTypeWin64"),
+          (_[(_.k_EPlatformTypeLinux64 = 3)] = "k_EPlatformTypeLinux64"),
+          (_[(_.k_EPlatformTypeOSX = 4)] = "k_EPlatformTypeOSX"),
+          (_[(_.k_EPlatformTypePS3 = 5)] = "k_EPlatformTypePS3"),
+          (_[(_.k_EPlatformTypeLinux32 = 6)] = "k_EPlatformTypeLinux32"),
+          (_[(_.k_EPlatformTypeAndroid32 = 7)] = "k_EPlatformTypeAndroid32"),
+          (_[(_.k_EPlatformTypeAndroid64 = 8)] = "k_EPlatformTypeAndroid64"),
+          (_[(_.k_EPlatformTypeIOS32 = 9)] = "k_EPlatformTypeIOS32"),
+          (_[(_.k_EPlatformTypeIOS64 = 10)] = "k_EPlatformTypeIOS64"),
+          (_[(_.k_EPlatformTypeTVOS = 11)] = "k_EPlatformTypeTVOS"),
+          (_[(_.k_EPlatformTypeEmbeddedClient = 12)] =
+            "k_EPlatformTypeEmbeddedClient"),
+          (_[(_.k_EPlatformTypeBrowser = 13)] = "k_EPlatformTypeBrowser"),
+          (_[(_.k_EPlatformTypeMax = 14)] = "k_EPlatformTypeMax");
+      })(_ || (_ = {}));
+      var _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.client_instanceid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  client_instanceid: {
+                    _: 1,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CClientComm_GetClientLogonInfo_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.protocol_version || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  protocol_version: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  _: {
+                    _: 2,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  machine_name: {
+                    _: 3,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CClientComm_GetClientLogonInfo_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _
+            ? {
+                $jspbMessageInstance: _,
+              }
+            : {};
+        }
+        static fromObject(_) {
+          return new _();
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _;
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {}
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CClientComm_GetAllClientLogonInfo_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.sessions || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [1], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  sessions: {
+                    _: 1,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                  refetch_interval_sec: {
+                    _: 2,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CClientComm_GetAllClientLogonInfo_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.client_instanceid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  client_instanceid: {
+                    _: 1,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  protocol_version: {
+                    _: 2,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  os_name: {
+                    _: 3,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  machine_name: {
+                    _: 4,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  os_type: {
+                    _: 5,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
+                  },
+                  device_type: {
+                    _: 6,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
+                  },
+                  realm: {
+                    _: 7,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CClientComm_GetAllClientLogonInfo_Response_Session";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.client_instanceid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  client_instanceid: {
+                    _: 1,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CClientComm_GetClientInfo_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.package_version || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [7, 10], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  package_version: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  _: {
+                    _: 2,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  machine_name: {
+                    _: 3,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  ip_public: {
+                    _: 4,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  ip_private: {
+                    _: 5,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  bytes_available: {
+                    _: 6,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  running_games: {
+                    _: 7,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                  protocol_version: {
+                    _: 8,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  clientcomm_version: {
+                    _: 9,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  local_users: {
+                    _: 10,
+                    _: !0,
+                    _: !0,
+                    _: _._.readUint32,
+                    pbr: _._.readPackedUint32,
+                    _: _._.writeRepeatedUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CClientComm_ClientData";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.appid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  appid: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  extra_info: {
+                    _: 2,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  time_running_sec: {
+                    _: 3,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CClientComm_ClientData_RunningGames";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.client_info || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  client_info: {
+                    _: 1,
+                    _: _,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CClientComm_GetClientInfo_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.fields || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [6], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  fields: {
+                    _: 1,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  filters: {
+                    _: 2,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  client_instanceid: {
+                    _: 3,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  include_client_info: {
+                    _: 4,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  language: {
+                    _: 5,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  filter_appids: {
+                    _: 6,
+                    _: !0,
+                    _: !0,
+                    _: _._.readUint32,
+                    pbr: _._.readPackedUint32,
+                    _: _._.writeRepeatedUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CClientComm_GetClientAppList_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.bytes_available || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [2], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  bytes_available: {
+                    _: 1,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  apps: {
+                    _: 2,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                  client_info: {
+                    _: 3,
+                    _: _,
+                  },
+                  refetch_interval_sec_full: {
+                    _: 4,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  refetch_interval_sec_changing: {
+                    _: 5,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  refetch_interval_sec_updating: {
+                    _: 6,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CClientComm_GetClientAppList_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.appid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [17], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  appid: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  app: {
+                    _: 2,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  category: {
+                    _: 3,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  app_type: {
+                    _: 4,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  num_downloading: {
+                    _: 8,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  bytes_download_rate: {
+                    _: 11,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  bytes_downloaded: {
+                    _: 12,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  bytes_to_download: {
+                    _: 13,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  dlcs: {
+                    _: 17,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                  favorite: {
+                    _: 18,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  auto_update: {
+                    _: 19,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  installed: {
+                    _: 20,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  download_paused: {
+                    _: 21,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  changing: {
+                    _: 22,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  available_on_platform: {
+                    _: 23,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  bytes_staged: {
+                    _: 24,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  bytes_to_stage: {
+                    _: 25,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  bytes_required: {
+                    _: 26,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  source_buildid: {
+                    _: 27,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  target_buildid: {
+                    _: 28,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  estimated_seconds_remaining: {
+                    _: 29,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  queue_position: {
+                    _: 30,
+                    _: -1,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
+                  },
+                  uninstalling: {
+                    _: 31,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  rt_time_scheduled: {
+                    _: 32,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  running: {
+                    _: 33,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  update_percentage: {
+                    _: 34,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CClientComm_GetClientAppList_Response_AppData";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.appid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  appid: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  app: {
+                    _: 2,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  installed: {
+                    _: 3,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CClientComm_GetClientAppList_Response_AppData_DLCData";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.appid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  appid: {
+                    _: 1,
+                    _: !0,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  client_instanceid: {
+                    _: 2,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CClientComm_InstallClientApp_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _
+            ? {
+                $jspbMessageInstance: _,
+              }
+            : {};
+        }
+        static fromObject(_) {
+          return new _();
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _;
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {}
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CClientComm_InstallClientApp_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.appid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  appid: {
+                    _: 1,
+                    _: !0,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  client_instanceid: {
+                    _: 2,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CClientComm_UninstallClientApp_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _
+            ? {
+                $jspbMessageInstance: _,
+              }
+            : {};
+        }
+        static fromObject(_) {
+          return new _();
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _;
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {}
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CClientComm_UninstallClientApp_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.appid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  appid: {
+                    _: 1,
+                    _: !0,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  action: {
+                    _: 2,
+                    _: !0,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  client_instanceid: {
+                    _: 3,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CClientComm_SetClientAppUpdateState_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.client_instanceid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  client_instanceid: {
+                    _: 1,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  appid: {
+                    _: 2,
+                    _: !0,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  query_params: {
+                    _: 3,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CClientComm_LaunchClientApp_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _
+            ? {
+                $jspbMessageInstance: _,
+              }
+            : {};
+        }
+        static fromObject(_) {
+          return new _();
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _;
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {}
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CClientComm_LaunchClientApp_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _
+            ? {
+                $jspbMessageInstance: _,
+              }
+            : {};
+        }
+        static fromObject(_) {
+          return new _();
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _;
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {}
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CClientComm_SetClientAppUpdateState_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.client_instanceid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  client_instanceid: {
+                    _: 1,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  enable: {
+                    _: 2,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CClientComm_EnableOrDisableDownloads_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _
+            ? {
+                $jspbMessageInstance: _,
+              }
+            : {};
+        }
+        static fromObject(_) {
+          return new _();
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _;
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {}
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CClientComm_EnableOrDisableDownloads_Response";
+        }
+      }
+      !(function (_) {
+        (_.GetClientLogonInfo = function (_, _, _) {
+          return _.SendMsg(
+            "ClientComm.GetClientLogonInfo#1",
+            (0, _._)(_, _, _),
+            _,
+            {
+              bConstMethod: !0,
+              ePrivilege: 1,
+            },
+          );
+        }),
+          (_.GetAllClientLogonInfo = function (_, _, _) {
+            return _.SendMsg(
+              "ClientComm.GetAllClientLogonInfo#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
+          }),
+          (_.GetClientInfo = function (_, _, _) {
+            return _.SendMsg(
+              "ClientComm.GetClientInfo#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
+          }),
+          (_.GetClientAppList = function (_, _, _) {
+            return _.SendMsg(
+              "ClientComm.GetClientAppList#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
+          }),
+          (_.InstallClientApp = function (_, _, _) {
+            return _.SendMsg(
+              "ClientComm.InstallClientApp#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
+          }),
+          (_.UninstallClientApp = function (_, _, _) {
+            return _.SendMsg(
+              "ClientComm.UninstallClientApp#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
+          }),
+          (_.LaunchClientApp = function (_, _, _) {
+            return _.SendMsg(
+              "ClientComm.LaunchClientApp#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
+          }),
+          (_.SetClientAppUpdateState = function (_, _, _) {
+            return _.SendMsg(
+              "ClientComm.SetClientAppUpdateState#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
+          }),
+          (_.EnableOrDisableDownloads = function (_, _, _) {
+            return _.SendMsg(
+              "ClientComm.EnableOrDisableDownloads#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
+          });
+      })(_ || (_ = {}));
+      const _ = "RemoteDownload_OnlineClient",
+        _ = "RemoteDownload_ClientAppList",
+        _ = "RemoteDownload_ClientAppData";
+      class _ extends Error {
+        constructor(_, _) {
+          super(_), (this.result = _);
+        }
+        result;
+      }
+      function _() {
+        const _ = (0, _._)(),
+          _ = (0, _._)();
+        return (0, _._)({
+          queryKey: [_, _],
+          queryFn: async () => {
+            const _ = _._.Init(_),
+              _ = await _.GetAllClientLogonInfo(_, _);
+            if (__webpack_require__.GetEResult() !== _._)
+              throw (
+                (console.error(
+                  "Received error from GetAllClientLogonInfo",
+                  __webpack_require__.GetEResult(),
+                  __webpack_require__.Hdr().transport_error(),
+                ),
+                new Error(
+                  `Error from GetAllClientLogonInfo: ${__webpack_require__.GetEResult()}`,
+                ))
+              );
+            const _ = [];
+            for (const _ of __webpack_require__.Body().sessions())
+              _.device_type() !== _.eSB && _.push(_.toObject());
+            return {
+              sessions: _,
+              refetchInterval:
+                __webpack_require__.Body().refetch_interval_sec() || 300,
+            };
+          },
+          staleTime: 3e5,
+          refetchInterval: (_) => 1e3 * (_.state.data?.refetchInterval || 300),
+        });
+      }
+      class _ {
+        constructor(_) {
+          Object.assign(this, _.toObject()),
+            (this.bytes_to_download = parseInt(_.bytes_to_download() ?? "0")),
+            (this.bytes_downloaded = parseInt(_.bytes_downloaded() ?? "0")),
+            (this.bytes_staged = parseInt(_.bytes_staged() ?? "0")),
+            (this.bytes_to_stage = parseInt(_.bytes_to_stage() ?? "0")),
+            (this.bytes_required = parseInt(_.bytes_required() ?? "0"));
+        }
+        appid;
+        app;
+        category;
+        app_type;
+        num_downloading;
+        bytes_download_rate;
+        bytes_downloaded;
+        bytes_to_download;
+        favorite;
+        auto_update;
+        installed;
+        download_paused;
+        changing;
+        available_on_platform;
+        bytes_staged;
+        bytes_to_stage;
+        bytes_required;
+        source_buildid;
+        target_buildid;
+        estimated_seconds_remaining;
+        queue_position;
+        uninstalling;
+        rt_time_scheduled;
+        update_percentage;
+        BIsDownloading() {
+          return void 0 !== this.num_downloading && this.num_downloading > 0;
+        }
+        SetDownloading() {
+          (this.num_downloading = 1), (this.download_paused = !1);
+        }
+        SetPaused(_) {
+          (this.download_paused = _), (this.num_downloading = _ ? 0 : 1);
+        }
+        BIsAtTopOfQueue() {
+          return 0 === this.queue_position;
+        }
+        BIsPaused() {
+          return (
+            !!this.download_paused &&
+            (this.bytes_downloaded < this.bytes_to_download ||
+              this.bytes_staged < this.bytes_to_stage ||
+              -1 != this.queue_position)
+          );
+        }
+        BHasPendingUpdate() {
+          return (
+            !this.BIsDownloading() &&
+            !this.download_paused &&
+            (this.bytes_downloaded < this.bytes_to_download ||
+              this.bytes_staged < this.bytes_to_stage)
+          );
+        }
+        GetPercentComplete() {
+          return this.update_percentage
+            ? this.update_percentage
+            : this.bytes_to_download
+              ? Math.floor(
+                  (100 * this.bytes_downloaded) / this.bytes_to_download,
+                )
+              : 0;
+        }
+      }
+      async function _(_, _, _) {
+        const _ = _.client_instanceid,
+          _ = _._.Init(_);
+        _.Body().set_fields("games"),
+          _.Body().set_filters(_),
+          _.Body().set_client_instanceid(_),
+          _.Body().set_include_client_info(!0);
+        const _ = await _.GetClientAppList(_, _);
+        if (_.GetEResult() !== _._)
+          throw (
+            (console.error(
+              "Received error from GetClientAppList",
+              _.GetEResult(),
+              _.Hdr().transport_error(),
+            ),
+            new _(
+              `Error from GetClientAppList: ${_.GetEResult()}`,
+              _.GetEResult(),
+            ))
+          );
+        const _ = new Map();
+        for (const _ of _.Body().apps()) {
+          const _ = new _(_);
+          _.set(_.appid(), _);
+        }
+        return {
+          session: _,
+          mapApps: _,
+          clientInfo: _.Body().client_info()?.toObject(),
+          refetchIntervals: {
+            full: _.Body().refetch_interval_sec_full() || 3600,
+            changing: _.Body().refetch_interval_sec_changing() || 60,
+            updating: _.Body().refetch_interval_sec_updating() || 10,
+          },
+        };
+      }
+      function _(_, _, _) {
+        return [_, _, _, _];
+      }
+      function _(_, _ = !0) {
+        const _ = _(),
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = (_) => {
+            _ &&
+              ((_.result != _._ && _.result != _._) ||
+                __webpack_require__.refetch());
+          },
+          _ = (0, _._)({
+            queries: (_.data?.sessions || []).map((_) => ({
+              queryKey: _(_, _.client_instanceid, "none"),
+              queryFn: async () => _(_, _, "none"),
+              staletime: 36e5,
+              refetchInterval: (_) =>
+                1e3 * (_.state.data?.refetchIntervals.full || 3600),
+              enabled: _.isSuccess && !_.isFetching,
+              onError: _,
+              retry: _,
+            })),
+          }),
+          _ = (0, _.useCallback)(
+            (_) => {
+              if (!_) return _;
+              const _ = new Map(
+                Array.from(_?.mapApps.entries() ?? []).filter(_),
+              );
+              return {
+                ..._,
+                mapApps: _,
+              };
+            },
+            [_],
+          ),
+          _ = (0, _._)(),
+          _ = (0, _._)({
+            queries: (_.data?.sessions || []).map((_, _) => ({
+              queryKey: _(_, _.client_instanceid, "changing"),
+              queryFn: async () =>
+                (async function (_, _, _, _) {
+                  if (!_) return;
+                  const _ = await _(_, _, _);
+                  for (const [_, _] of _.mapApps) _.mapApps.set(_, _);
+                  return {
+                    ..._,
+                    mapApps: _.mapApps,
+                  };
+                })(_, _, "changing", _[_].data),
+              enabled: _[_].isSuccess && !_[_].isFetching,
+              staletime: 1e4,
+              select: _,
+              refetchInterval: (_) => {
+                const _ = _.state.data;
+                if (!_) return 6e4;
+                let _ = !1;
+                for (const _ of _.mapApps.values())
+                  if (_.BIsDownloading() || _.uninstalling) {
+                    _ = !0;
+                    break;
+                  }
+                const _ = _.refetchIntervals;
+                return 1e3 * (_ ? _.updating : _.changing);
+              },
+              onError: _,
+              retry: _,
+            })),
+          });
+        return {
+          rgQueries: _.map((_, _) =>
+            _[_].isError && !_[_].isFetching ? _[_] : _,
+          ),
+          refetch: () => {
+            for (const _ of _.data?.sessions || []) {
+              const _ = _(_, _.client_instanceid, "changing");
+              _.removeQueries({
+                queryKey: _,
+              });
+            }
+            for (const _ of _) _.refetch();
+          },
+        };
+      }
+      function _(_, _) {
+        return [_, _, _];
+      }
+      function _(_, _ = !0) {
+        const _ = (0, _._)(),
+          { rgQueries: _ } = _(void 0, _);
+        return (0, _._)({
+          queryKey: _(_, _),
+          queryFn: () => {
+            const _ = new Map();
+            for (const _ of _)
+              if (_.isSuccess) {
+                const _ = _.data?.session?.client_instanceid,
+                  _ = _.data?.mapApps,
+                  _ = _?.get(_);
+                _ &&
+                  _.set(_, {
+                    session: _.data.session,
+                    app: _,
+                    clientInfo: _.data.clientInfo,
+                  });
+              }
+            return _;
+          },
+          enabled: _.reduce((_, _) => _ && _.isSuccess && !_.isFetching, !0),
+          staleTime: 0,
+          gcTime: 0,
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      const _ = {
+        bFitToWindow: !0,
+        bOverlapHorizontal: !0,
+        bMatchWidth: !1,
+        bShiftToFitWindow: !0,
+        bDisablePopTop: !0,
+      };
+      function _(_) {
+        const { setRemoteClientID: _, rgSessions: _ } = _,
+          _ = (0, _.useCallback)(
+            (_) => {
+              _?.length &&
+                (0, _._)(
+                  (0, _.jsx)(_, {
+                    sessions: _,
+                    setRemoteDownloadClientId: _,
+                  }),
+                  _,
+                  _,
+                );
+            },
+            [_, _],
+          );
+        return _?.length
+          ? (0, _.jsx)("button", {
+              onClick: _,
+              className: _().ClientSelectDropdown,
+              children: (0, _.jsx)(_, {}),
+            })
+          : null;
+      }
+      function _({ sessions: _, setRemoteDownloadClientId: _ }) {
+        return (0, _.jsx)("ul", {
+          className: _().ClientListDropdownMenu,
+          children: _.map((_) =>
+            (0, _.jsx)(
+              _._,
+              {
+                onSelected: () => {
+                  _(_.client_instanceid);
+                },
+                children: (0, _._)(
+                  "#GamesList_Client_Indicator",
+                  _(_.device_type) ?? "",
+                  _.machine_name,
+                ),
+              },
+              _.client_instanceid,
+            ),
+          ),
+        });
+      }
+      function _(_) {
+        switch (_) {
+          case _.g0U:
+            return (0, _._)("#Library_DeviceType_PC");
+          case _.LS$:
+            return (0, _._)("#Library_DeviceType_SteamDeck");
+          case _.bOm:
+            return (0, _._)("#Library_DeviceType_SteamMachine");
+          case _.jYC:
+            return (0, _._)("#Library_DeviceType_SteamFrame");
+          default:
+            return;
+        }
+      }
+      function _(_) {
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 13 8",
+          fill: "none",
+          ..._,
+          children: (0, _.jsx)("path", {
+            fill: "currentColor",
+            _: "M12.6128 1.7121C12.7616 1.56087 12.8428 1.3684 12.8428 1.14155C12.8428 0.687862 12.491 0.323534 12.0446 0.323534C11.8214 0.323534 11.6184 0.419772 11.4628 0.577877L6.83601 5.38975L2.22271 0.577877C2.06712 0.419772 1.85743 0.323534 1.64097 0.323534C1.19452 0.323534 0.842773 0.687862 0.842773 1.14155C0.842773 1.3684 0.923946 1.56087 1.07276 1.71211L6.21369 7.06016C6.38956 7.25264 6.60602 7.342 6.84277 7.34888C7.07953 7.34888 7.28246 7.25264 7.4651 7.06016L12.6128 1.7121Z",
+          }),
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const { appid: _ } = _,
+          _ = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          [_, _, _] = (0, _._)(!1),
+          { mutateAsync: _ } = (0, _._)({
+            appid: _,
+          }),
+          [_, _] = (0, _.useState)(!1),
+          _ = (0, _._)(_);
+        return _
+          ? _
+            ? null
+            : (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsxs)(_._, {
+                    onClick: async () => {
+                      try {
+                        _(!0), await _(), (0, _._)(), _(!1), _();
+                      } catch (_) {
+                        _(!1),
+                          console.error(
+                            "Error AddToLibraryActionWithRemoteInstall",
+                            _,
+                          );
+                      }
+                    },
+                    children: [
+                      _ &&
+                        (0, _.jsx)(_._, {
+                          size: "small",
+                        }),
+                      (0, _._)("#Sale_AddToLibrary_NoPlus"),
+                    ],
+                  }),
+                  (0, _.jsx)(_._, {
+                    children: (0, _.jsx)(_._, {
+                      active: _,
+                      children: (0, _.jsx)(_._, {
+                        strTitle: (0, _._)("#Sale_AddedToLibrary"),
+                        strDescription: (0, _._)(
+                          "#Sale_AddToLibrary_DialogDesc",
+                          (0, _.jsx)("span", {
+                            className: _().GameName,
+                            children: _.name || "",
+                          }),
+                        ),
+                        closeModal: _,
+                        bAlertDialog: !0,
+                        children: (0, _.jsx)(_, {
+                          _: _,
+                        }),
+                      }),
+                    }),
+                  }),
+                ],
+              })
+          : null;
+      }
+      function _(_) {
+        const { _: _ } = _,
+          _ = _(),
+          [_, _] = (0, _.useState)(0),
+          [_, _] = (0, _.useState)(!1),
+          { data: _ } = (0, _._)(_);
+        if (!_ || !("appid" in _)) return null;
+        if (_._.IN_CLIENT || !_) return null;
+        const _ = _.data?.sessions?.filter((_) => {
+          switch (_.device_type) {
+            default:
+            case _.g0U:
+              {
+                if (!_.os_type) return !1;
+                const _ = (function (_) {
+                  switch (_) {
+                    case _:
+                      return "Windows";
+                    case _:
+                      return "Windows 3.11";
+                    case _:
+                      return "Windows 95";
+                    case _:
+                      return "Windows 98";
+                    case _:
+                      return "Windows ME";
+                    case _:
+                      return "Windows NT";
+                    case _:
+                      return "Windows 2000";
+                    case _:
+                      return "Windows XP";
+                    case _:
+                      return "Windows 2003";
+                    case _:
+                      return "Windows Vista";
+                    case _:
+                      return "Windows 7";
+                    case _:
+                      return "Windows 2008";
+                    case _:
+                      return "Windows 2012";
+                    case _:
+                      return "Windows 2012 R2";
+                    case _:
+                      return "Windows 8";
+                    case _:
+                      return "Windows 8.1";
+                    case _:
+                      return "Windows 10";
+                    case _:
+                      return "Windows 2016";
+                    case _:
+                      return "Windows 2019";
+                    case _:
+                      return "Windows 2022";
+                    case _:
+                      return "Windows 11";
+                    case _:
+                      return "Mac OS";
+                    case _:
+                      return "MacOS 10.4";
+                    case _:
+                      return "MacOS 10.5";
+                    case _:
+                      return "MacOS 10.5.8";
+                    case _:
+                      return "MacOS 10.6";
+                    case _:
+                      return "MacOS 10.6.3";
+                    case _:
+                      return "MacOS 10.6.4 with Apple's Snow Leopard Graphics Update";
+                    case _:
+                      return "MacOS 10.6.7";
+                    case _:
+                      return "MacOS 10.7";
+                    case _:
+                      return "MacOS 10.8";
+                    case _:
+                      return "MacOS 10.9";
+                    case _:
+                      return "MacOS 10.10";
+                    case _:
+                      return "MacOS 10.11";
+                    case _:
+                      return "MacOS 10.12";
+                    case _:
+                      return "MacOS 10.13";
+                    case _:
+                      return "MacOS 10.14";
+                    case _:
+                      return "MacOS 10.15";
+                    case _:
+                      return "MacOS 11 (as 10.16)";
+                    case _:
+                      return "MacOS 12 (as 10.17)";
+                    case _:
+                      return "MacOS 13 (as 10.18)";
+                    case _:
+                      return "MacOS 11";
+                    case _:
+                      return "MacOS 11.1";
+                    case _:
+                      return "MacOS 12";
+                    case _:
+                      return "MacOS 13";
+                    case _:
+                      return "MacOS 14";
+                    case _:
+                      return "MacOS 15";
+                    case _:
+                      return "Linux";
+                    case _:
+                      return "Linux 2.2";
+                    case _:
+                      return "Linux 2.4";
+                    case _:
+                      return "Linux 2.6";
+                    case _:
+                      return "Linux 3.2";
+                    case _:
+                      return "Linux 3.5";
+                    case _:
+                      return "Linux 3.6";
+                    case _:
+                      return "Linux 3.10";
+                    case _:
+                      return "Linux 3.16";
+                    case _:
+                      return "Linux 3.18";
+                    case _:
+                      return "Linux 3.x";
+                    case _:
+                      return "Linux 4.1";
+                    case _:
+                      return "Linux 4.4";
+                    case _:
+                      return "Linux 4.9";
+                    case _:
+                      return "Linux 4.14";
+                    case _:
+                      return "Linux 4.19";
+                    case _:
+                      return "Linux 4.x";
+                    case _:
+                      return "Linux 5.x";
+                    case _:
+                      return "Linux 5.4";
+                    case _:
+                      return "Linux 6.x";
+                    case _:
+                      return "Linux 7.x";
+                    case _:
+                      return "Linux 5.10";
+                    case _:
+                      return "PS3";
+                    case _:
+                      return "Web Client";
+                    case _:
+                      return "Android";
+                    case _:
+                      return "Android 6.x";
+                    case _:
+                      return "Android 7.x";
+                    case _:
+                      return "Android 8.x";
+                    case _:
+                      return "Android 9.x";
+                    case _:
+                      return "iOS";
+                    case _:
+                      return "iOS 1";
+                    case _:
+                      return "iOS 2";
+                    case _:
+                      return "iOS 3";
+                    case _:
+                      return "iOS 4";
+                    case _:
+                      return "iOS 5";
+                    case _:
+                      return "iOS 6";
+                    case _:
+                      return "iOS 6.1";
+                    case _:
+                      return "iOS 7";
+                    case _:
+                      return "iOS 7.1";
+                    case _:
+                      return "iOS 8";
+                    case _:
+                      return "iOS 8.1";
+                    case _:
+                      return "iOS 8.2";
+                    case _:
+                      return "iOS 8.3";
+                    case _:
+                      return "iOS 8.4";
+                    case _:
+                      return "iOS 9";
+                    case _:
+                      return "iOS 9.1";
+                    case _:
+                      return "iOS 9.2";
+                    case _:
+                      return "iOS 9_.3";
+                    case _:
+                      return "iOS 10";
+                    case _:
+                      return "iOS 10.1";
+                    case _:
+                      return "iOS 10.2";
+                    case _:
+                      return "iOS 10.3";
+                    case _:
+                      return "iOS 11";
+                    case _:
+                      return "iOS 11.1";
+                    case _:
+                      return "iOS 11.2";
+                    case _:
+                      return "iOS 11.3";
+                    case _:
+                      return "iOS 11.4";
+                    case _:
+                      return "iOS 12";
+                    case _:
+                      return "iOS 12.1";
+                    default:
+                      return "Unknown";
+                  }
+                })(_.os_type);
+                if (_.windows && _.includes("Windows")) return !0;
+                if (_.mac && _.includes("Mac")) return !0;
+                if (_.steamos_linux && _.includes("Linux")) return !0;
+              }
+              break;
+            case _.LS$:
+              return _.windows || _.steamos_linux;
+          }
+          return !1;
+        });
+        if (_ && _?.length > 0) {
+          const _ = _[_];
+          return (0, _.jsx)("div", {
+            className: _().RemoteOptions,
+            children: Boolean(_)
+              ? (0, _.jsx)(_, {
+                  session: _,
+                })
+              : (0, _.jsxs)(_.Fragment, {
+                  children: [
+                    (0, _.jsx)(_, {
+                      rgAcceptableSession: _,
+                      session: _,
+                      setSessionIndex: _,
+                    }),
+                    (0, _.jsx)("div", {
+                      className: _().ActionRow,
+                      children: (0, _.jsx)(_, {
+                        appid: _.appid,
+                        session: _,
+                        setRemoteDownloadRequested: _,
+                      }),
+                    }),
+                  ],
+                }),
+          });
+        }
+        return null;
+      }
+      function _(_) {
+        const { rgAcceptableSession: _, session: _, setSessionIndex: _ } = _;
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)("div", {
+              children: (0, _._)("#Sale_AddToLibrary_RemoteDownload"),
+            }),
+            (0, _.jsxs)("div", {
+              className: _().ClientSelector,
+              children: [
+                (0, _.jsx)("span", {
+                  className: _().ClientName,
+                  children: _.machine_name,
+                }),
+                (0, _.jsx)(_, {
+                  rgSessions: _,
+                  setRemoteClientID: (_) => {
+                    const _ = _.findIndex((_) => _.client_instanceid === _);
+                    _ >= 0 && _(_);
+                  },
+                }),
+              ],
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const { session: _ } = _;
+        return (0, _.jsxs)("div", {
+          className: _().DownloadStartedCtn,
+          children: [
+            (0, _._)("#Sale_AddToLibrary_DownloadStarted"),
+            (0, _.jsx)("br", {}),
+            (0, _.jsx)("a", {
+              href: `${_._.COMMUNITY_BASE_URL}my/games?tab=all&clientid=${_.client_instanceid}`,
+              children: (0, _._)("#Sale_AddToLibrary_SeeDownloadProgress"),
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const { appid: _, session: _, setRemoteDownloadRequested: _ } = _,
+          _ = (function (_, _, _) {
+            const _ = (0, _._)(),
+              _ = _(_),
+              _ = (0, _._)(),
+              _ = (0, _._)();
+            return (0, _._)({
+              mutationFn: async () => {
+                const _ = _._.Init(_);
+                __webpack_require__.Body().set_appid(_),
+                  __webpack_require__.Body().set_client_instanceid(_);
+                const _ = await _.InstallClientApp(_, _);
+                if (_.GetEResult() != _._)
+                  throw (
+                    (console.error(
+                      "Received error from InstallClientApp",
+                      _.GetEResult(),
+                    ),
+                    new Error(`Error from InstallClientApp: ${_.GetEResult()}`))
+                  );
+                const _ = _?.data;
+                _ && _.get(_) && _.get(_).app.SetDownloading(),
+                  _.setQueryData(_(_, _), _),
+                  _.refetch();
+              },
+              onSuccess: _,
+            });
+          })(_, _.client_instanceid);
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsxs)(_._, {
+              onClick: () => {
+                _.mutateAsync(), _(!0);
+              },
+              children: [
+                (0, _.jsx)(_.f5X, {}),
+                (0, _._)("#Button_StartDownload"),
+              ],
+            }),
+            (0, _.jsx)("div", {
+              className: _().LearnMoreCtn,
+              children: (0, _.jsx)("a", {
+                href: "https://help.steampowered.com/faqs/view/1025-BD94-12FC-3409",
+                className: _().InlineLink,
+                children: (0, _._)("#Button_Learn"),
+              }),
+            }),
+          ],
+        });
+      }
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { _: _, className: _ } = _,
+          { data: _ } = (0, _._)(_);
+        if (!_) return null;
+        const _ =
+            _.related_items?.demo_appid && _.related_items.demo_appid
+              ? _.related_items.demo_appid
+              : [],
+          _ = _.length > 0,
+          _ = _ || _.type === _._._,
+          _ = _
+            ? _._.Localize("#Sale_InstallDemo_ttip", _.name || "")
+            : _
+              ? _._.Localize("#Sale_CannotInstallDemo_ttip", _.name || "")
+              : _._.Localize("#Loading");
+        if ((0, _._)()) {
+          if (_ && _) {
+            const _ = _.type === _._._ ? _.appid : _[0];
+            return (0, _.jsx)("div", {
+              className: _,
+              children: (0, _.jsx)(_, {
+                appid: _,
+              }),
+            });
+          }
+          return null;
+        }
+        return !_ && _ && _.is_free
+          ? (0, _.jsx)(_._, {
+              _: _,
+              className: _,
+            })
+          : (0, _.jsx)(_._, {
+              toolTipContent: _,
+              onClick: (_) => {
+                _.preventDefault(),
+                  _.stopPropagation(),
+                  _ && (0, _._)(_.type === _._._ ? _.appid : _[0], _.name);
+              },
+              className: (0, _._)(_, _().DemoButton, !_ && _().DisabledButton),
+              children: _
+                ? _._.Localize("#Sale_InstallDemo")
+                : _._.Localize("#Sale_DemoNotFound"),
+            });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            _: _,
+            strClassName: _,
+            bMinimizePlatforms: _,
+            bHideWindows: _,
+          } = _,
+          { data: _ } = (0, _._)(_);
+        if (!_) return null;
+        if (_) {
+          let _ = _
+            ? null
+            : _?.windows &&
+              (0, _.jsx)("span", {
+                title: _._.Localize("#Platform_Windows"),
+                children: (0, _.jsx)(_.Xz0, {
+                  "aria-label": _._.Localize("#Platform_Windows"),
+                }),
+              });
+          return (
+            "linux" === _._.PLATFORM && _?.steamos_linux
+              ? (_ = (0, _.jsx)("span", {
+                  title: _._.Localize("#Platform_Linux"),
+                  children: (0, _.jsx)(_.Qte, {
+                    "aria-label": _._.Localize("#Platform_Linux"),
+                  }),
+                }))
+              : "macos" === _._.PLATFORM && _?.mac
+                ? (_ = (0, _.jsx)("span", {
+                    title: _._.Localize("#Platform_Mac"),
+                    children: (0, _.jsx)(_.kPc, {
+                      "aria-label": _._.Localize("#Platform_Mac"),
+                    }),
+                  }))
+                : _.vr_support?.vrhmd &&
+                  (_ = (0, _.jsx)("span", {
+                    title: _._.Localize("#Platform_VR"),
+                    children: (0, _.jsx)(_._, {
+                      "aria-label": _._.Localize("#Platform_VR"),
+                    }),
+                  })),
+            _
+              ? (0, _.jsx)("span", {
+                  className: (0, _._)(_().CapsulePlatform, _),
+                  children: _,
+                })
+              : null
+          );
+        }
+        return (0, _.jsxs)("span", {
+          className: (0, _._)(_().CapsulePlatform, _),
+          children: [
+            !_ &&
+              _.windows &&
+              (0, _.jsx)("span", {
+                title: _._.Localize("#Platform_Windows"),
+                children: (0, _.jsx)(_.Xz0, {
+                  "aria-label": _._.Localize("#Platform_Windows"),
+                }),
+              }),
+            _.mac &&
+              (0, _.jsx)("span", {
+                title: _._.Localize("#Platform_Mac"),
+                children: (0, _.jsx)(_.kPc, {
+                  "aria-label": _._.Localize("#Platform_Mac"),
+                }),
+              }),
+            _.steamos_linux &&
+              (0, _.jsx)("span", {
+                title: _._.Localize("#Platform_Linux"),
+                children: (0, _.jsx)(_.Qte, {
+                  "aria-label": _._.Localize("#Platform_Linux"),
+                }),
+              }),
+            _.vr_support?.vrhmd &&
+              (0, _.jsx)("span", {
+                title: _._.Localize("#Platform_VR"),
+                children: (0, _.jsx)(_._, {
+                  "aria-label": _._.Localize("#Platform_VR"),
+                }),
+              }),
+          ],
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { _: _, bSelfPurchaseOption: _ } = _,
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_);
+        if (!_) return null;
+        const _ = _ && _.item_type == _._._ ? _.self_purchase_option : _;
+        return (0, _.jsx)(_, {
+          purchaseOption: _,
+          ..._,
+        });
+      }
+      function _(_) {
+        const {
+            bSingleLineMode: _,
+            onlyOneDiscountPct: _,
+            _: _,
+            purchaseOption: _,
+            bHidePrePurchase: _,
+            bHideReleaseDate: _,
+            bHideIfDemo: _,
+            bPurchaseOptionDisplay: _,
+            strContainerClassName: _,
+            strDiscountAndPriceClassName: _,
+            strPriceFormattedClassName: _,
+            bPreferWholeNumbers: _,
+            bSelfPurchaseOption: _,
+            bHideNewTag: _,
+          } = _,
+          _ = _._.NOW,
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_);
+        if (!_) return null;
+        const _ = _,
+          _ = !_ && (0, _._)(_, _),
+          _ = (0, _._)({
+            [_().StoreSalePriceWidgetContainer]: !0,
+            [_().SingleLineMode]: _,
+            StoreSalePriceWidgetContainer: !0,
+            [_().NewItem]: _,
+            [_().PurchaseOption]: _,
+            [_ ?? ""]: !!_,
+          });
+        if (_.bShowInLibrary)
+          return (0, _.jsx)("div", {
+            className: _,
+            children: (0, _.jsx)("div", {
+              className: _().StoreSalePriceBox,
+              children: _._.Localize("#EventDisplay_CallToAction_InLibrary"),
+            }),
+          });
+        if (_ && _.is_coming_soon && (!_ || !_.packageid)) {
+          if (_) return null;
+          const _ =
+            _.coming_soon_display &&
+            ["text_comingsoon", "text_tba"].includes(_.coming_soon_display)
+              ? (0, _._)(_)
+              : _._.Localize(
+                  "#EventDisplay_CallToAction_ComingSoon_Date",
+                  (0, _._)(_),
+                );
+          return (0, _.jsx)("div", {
+            className: _,
+            children: (0, _.jsx)("div", {
+              className: _().StoreSalePriceBox,
+              children: _,
+            }),
+          });
+        }
+        if (_.is_free) {
+          if (!_.is_free_temporarily)
+            return _.item_type == _._._ && _.type == _._._
+              ? _
+                ? null
+                : (0, _.jsxs)("div", {
+                    className: _,
+                    children: [
+                      _ &&
+                        (0, _.jsx)("div", {
+                          className: _().StoreSaleNewItem,
+                          children: _._.Localize("#Flag_New"),
+                        }),
+                      (0, _.jsx)("div", {
+                        className: _().StoreSalePriceBox,
+                        children: _._.Localize(
+                          "#EventDisplay_CallToAction_FreeDemo",
+                        ),
+                      }),
+                    ],
+                  })
+              : (0, _.jsxs)("div", {
+                  className: _,
+                  children: [
+                    _ &&
+                      (0, _.jsx)("div", {
+                        className: _().StoreSaleNewItem,
+                        children: _._.Localize("#Flag_New"),
+                      }),
+                    (0, _.jsx)("div", {
+                      className: _().StoreSalePriceBox,
+                      children: _._.Localize(
+                        "#EventDisplay_CallToAction_FreeToPlay",
+                      ),
+                    }),
+                  ],
+                });
+          if (_ && _.is_free_to_keep && !_.formatted_original_price)
+            return (0, _.jsx)("div", {
+              className: _,
+              children: (0, _.jsx)("div", {
+                className: _().StoreSalePriceBox,
+                children: _._.Localize("#EventDisplay_CallToAction_Free"),
+              }),
+            });
+        }
+        if (!_ || !_.formatted_final_price) return null;
+        let _ = _.discount_pct || 0,
+          _ = _ || _.item_type != _._._ ? 0 : _.bundle_discount_pct || 0,
+          _ = _.formatted_final_price;
+        if (_) {
+          const _ = (0, _._)(_._.country_code.toUpperCase()),
+            _ = {
+              ...(0, _._)(_),
+              bWholeUnitsOnly: !0,
+            };
+          _ = (0, _._)(Number.parseInt(_.final_price_in_cents || "0"), _);
+        }
+        const _ = (0, _._)(_, _);
+        return (0, _.jsx)(_, {
+          bSingleLineMode: Boolean(_),
+          nBaseDiscountPercentage: _,
+          nDiscountPercentage: _,
+          bIsPrePurchase: _,
+          strBestPurchaseOriginalPriceFormatted:
+            _.formatted_original_price || "",
+          strBestPurchasePriceFormatted: _,
+          bHideDiscountPercentForCompliance: Boolean(
+            _.hide_discount_pct_for_compliance,
+          ),
+          bShowNewFlag: _,
+          bHidePrePurchase: Boolean(_),
+          strDiscountAndPriceClassName: _,
+          strPriceFormattedClassName: _,
+          bPurchaseOptionDisplay: _,
+        });
+      }
+      function _(_) {
+        const {
+            bSingleLineMode: _,
+            nDiscountPercentage: _,
+            bIsPrePurchase: _,
+            nBaseDiscountPercentage: _,
+            strBestPurchaseOriginalPriceFormatted: _,
+            strBestPurchasePriceFormatted: _,
+            bHideDiscountPercentForCompliance: _,
+            bShowNewFlag: _,
+            bHidePrePurchase: _,
+            strDiscountAndPriceClassName: _,
+            strPriceFormattedClassName: _,
+            bPurchaseOptionDisplay: _,
+          } = _,
+          _ = _;
+        let _;
+        _ &&
+          (_ = _
+            ? _._.Localize("#Discount_ARIA_Label_SpecialPrice", _)
+            : _._.Localize("#Discount_ARIA_Label", _, _, _));
+        const _ = Boolean((_ || _) && !_),
+          _ = _ && Boolean(_),
+          _ = _ && !_ && _;
+        return (0, _.jsxs)("div", {
+          className: (0, _._)({
+            [_().StoreSalePriceWidgetContainer]: !0,
+            [_().SingleLineMode]: _,
+            StoreSalePriceWidgetContainer: !0,
+            [_().Discounted]: Boolean(_),
+            Discounted: Boolean(_),
+            [_().PrePurchase]: Boolean(_),
+            [_().NewItem]: Boolean(_),
+            [_().PurchaseOption]: _,
+            [_ ?? ""]: !!_,
+          }),
+          "aria-label": _,
+          children: [
+            Boolean(_ && !_) &&
+              (0, _.jsx)("div", {
+                className: (0, _._)(_().StoreSalePrepurchaseLabel),
+                children: (0, _.jsx)("span", {
+                  children: _._.Localize(
+                    "#EventDisplay_CallToAction_Prepurchase_Short",
+                  ),
+                }),
+              }),
+            Boolean(!_ && _) &&
+              (0, _.jsx)("div", {
+                className: _().StoreSaleNewItem,
+                children: _._.Localize("#Flag_New"),
+              }),
+            Boolean(_ && !_) &&
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)(_._, {
+                    toolTipContent: _._.Localize("#Sale_Bundle_Discount_ttip"),
+                    children: (0, _.jsx)("span", {
+                      className: (0, _._)(_().BaseDiscount),
+                      children: `-${_}%`,
+                    }),
+                  }),
+                  Boolean(_) &&
+                    (0, _.jsxs)(_.Fragment, {
+                      children: [
+                        (0, _.jsx)("span", {
+                          children: " ",
+                        }),
+                        (0, _.jsx)(_._, {
+                          toolTipContent: _._.Localize(
+                            "#Sale_Bundle_Discount_Limited_ttip",
+                          ),
+                          children: (0, _.jsx)("span", {
+                            className: (0, _._)(_().StoreSaleDiscountBox),
+                            children: `-${_}%`,
+                          }),
+                        }),
+                      ],
+                    }),
+                ],
+              }),
+            Boolean(!_ && _ && !_) &&
+              (0, _.jsx)("div", {
+                className: _().StoreSaleDiscountBox,
+                children: `-${_}%`,
+              }),
+            Boolean(_ && _) &&
+              (0, _.jsx)("div", {
+                className: _().DiscountIconCtn,
+                children: (0, _.jsx)(_.XH_, {}),
+              }),
+            _ || _
+              ? (0, _.jsxs)("div", {
+                  className: (0, _._)(_().StoreSaleDiscountedPriceCtn),
+                  children: [
+                    _
+                      ? (0, _.jsx)("div", {
+                          className: (0, _._)({
+                            [_().SingleLineOriginalPrice]: _,
+                            [_().StoreOriginalPrice]: !_,
+                          }),
+                          children: _,
+                        })
+                      : (0, _.jsx)("div", {
+                          className: _().YourPriceLabel,
+                          children: _._.Localize("#PriceDisplay_YourPrice"),
+                        }),
+                    (0, _.jsx)("div", {
+                      className: (0, _._)({
+                        [_().StoreSalePriceBox]: !0,
+                        [_().SingleLineMode]: _,
+                        [_ ?? ""]: !!_,
+                      }),
+                      children: _,
+                    }),
+                  ],
+                })
+              : (0, _.jsx)("div", {
+                  className: (0, _._)({
+                    [_().StoreSalePriceBox]: !0,
+                    [_ ?? ""]: !!_,
+                  }),
+                  children: _,
+                }),
+          ],
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+          rgTagIDs: _,
+          bShowEvenIfNoTags: _,
+          bHideTitle: _,
+          bLargeText: _,
+          bNoStoreLinks: _,
+        } = _;
+        return _?.length > 0 || _
+          ? (0, _.jsxs)("div", {
+              className: (0, _._)(
+                _().SaleTagBlockCtn,
+                _ ? _().LargeText : "",
+                "SaleTagBlockCtn",
+              ),
+              children: [
+                Boolean(!_) &&
+                  (0, _.jsx)("div", {
+                    className: (0, _._)(_().TagTitle, "WidgetTagTitle"),
+                    children: _._.Localize("#GameHover_Tags"),
+                  }),
+                Boolean(_?.length > 0)
+                  ? (0, _.jsx)("div", {
+                      className: (0, _._)(_().TagBox, "TagBox"),
+                      children: _.map((_) =>
+                        (0, _.jsx)(
+                          _,
+                          {
+                            tagid: _,
+                            bNoStoreLinks: _,
+                          },
+                          _,
+                        ),
+                      ),
+                    })
+                  : (0, _.jsx)("div", {
+                      children: _._.Localize("#Broadcast_None"),
+                    }),
+              ],
+            })
+          : null;
+      }
+      function _(_) {
+        const { tagid: _, className: _ } = _,
+          _ = (0, _._)(_, _._.LANGUAGE);
+        if (!_) return null;
+        const _ = (0, _.wwZ)((0, _.sfN)(_._.LANGUAGE)),
+          _ = `${_._.STORE_BASE_URL}tags/${_}/${_}`;
+        return (0, _.jsx)(_._, {
+          url: _,
+          className: (0, _._)(_().Tag, "WidgetTag", _),
+          children: _,
+        });
+      }
+      function _(_) {
+        const { tagid: _, className: _, bNoStoreLinks: _ } = _,
+          _ = (0, _.wwZ)((0, _.sfN)(_._.LANGUAGE)),
+          _ = (0, _._)(_, _._.LANGUAGE),
+          _ = `${_._.STORE_BASE_URL}tags/${_}/${_}`;
+        return _
+          ? _
+            ? (0, _.jsx)("div", {
+                className: (0, _._)(_().Tag, "WidgetTag", _),
+                children: _,
+              })
+            : (0, _.jsx)(_._, {
+                url: _,
+                className: (0, _._)(_().Tag, "WidgetTag", _),
+                children: _,
+              })
+          : null;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { appid: _, bIsMuted: _ } = _,
+          _ = (0, _._)(_),
+          _ = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          { mutate: _ } = (0, _._)(_),
+          _ = (_) => {
+            _.preventDefault(), _ ? (0, _._)(_, _?.name) : _();
+          },
+          _ = (0, _._)(
+            _().CapsuleBottomBar,
+            _ && _().Muted,
+            _ ? _().PlayNowButton : _().AddToLibraryButton,
+          );
+        return (0, _.jsx)("div", {
+          role: "button",
+          tabIndex: 0,
+          onClick: _,
+          className: _,
+          onKeyDown: (_) => {
+            ("Enter" !== _.key && " " !== _.key) || (_.preventDefault(), _(_));
+          },
+          children: (0, _._)(_ ? "#Sale_PlayNow" : "#Sale_AddToLibrary"),
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        const _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = (0, _._)((0, _._)(_, _));
+        return {
+          snr: (0, _._)(_),
+          strStoreURL: (0, _._)(_, _, _),
+        };
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
+      function _(_) {
+        const {
+            className: _,
+            url: _,
+            style: _,
+            children: _,
+            bSkipForcingStoreLink: _,
+            bOpenInline: _,
+            bFocusable: _ = !0,
+          } = _,
+          _ = _
+            ? _
+            : _
+              ? (function (_, _) {
+                  try {
+                    const _ = new URL(_),
+                      _ = new URL(_);
+                    return (
+                      _.href.replace(/\/$/, "") + _.pathname + _.search + _.hash
+                    );
+                  } catch (_) {
+                    return "";
+                  }
+                })(_, _._.STORE_BASE_URL)
+              : void 0,
+          _ = (0, _._)(_);
+        return _
+          ? (0, _.jsx)(_._, {
+              href: _,
+              target: _._.IN_CLIENT || _ ? void 0 : "_blank",
+              className: _,
+              style: _,
+              rel: "noopener noreferrer",
+              focusable: _,
+              children: _,
+            })
+          : (0, _.jsx)("span", {
+              style: _,
+              className: _,
+              children: _,
+            });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      const _ = (0, _.createContext)(void 0);
+      _.Provider;
+      function _() {
+        const _ = (0, _.useContext)(_);
+        if (!_)
+          throw new Error(
+            "called useActiveAccount outside of ActiveAccountProvider",
+          );
+        return _.useActiveAccount();
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { children: _, ..._ } = _;
+        return (0, _.jsx)(_._, {
+          className: _.GreenButton,
+          type: "button",
+          ..._,
+          children: (0, _.jsx)("span", {
+            children: _,
+          }),
+        });
+      }
+      function _(_) {
+        const { children: _, ..._ } = _;
+        return (0, _.jsx)(_._, {
+          className: _.BlueButton,
+          type: "button",
+          ..._,
+          children: (0, _.jsx)("span", {
+            children: _,
+          }),
+        });
+      }
+      function _(_) {
+        const { children: _, ..._ } = _;
+        return (0, _.jsx)(_._, {
+          className: _.GreyButton,
+          type: "button",
+          ..._,
+          children: (0, _.jsx)("span", {
+            children: _,
+          }),
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        if (_[_]) {
+          if ("community_icon" == _) {
+            const _ = _.asset_url_format
+              .replace(/^steam\//, "images/")
+              .replace("${FILENAME}", `${_[_]}.jpg`)
+              .replace(/\?.*$/, "");
+            return `${_._.MEDIA_CDN_COMMUNITY_URL}${_}`;
+          }
+          if ("string" == typeof _[_]) {
+            const _ = _.asset_url_format.replace("${FILENAME}", _[_]);
+            return `${_._.STORE_ITEM_BASE_URL}${_}`;
+          }
+        }
+      }
+      function _(_, _ = "full") {
+        let _ = "";
+        switch (_) {
+          case "thumb":
+            _ = ".116x65";
+            break;
+          case "600x338":
+            _ = ".600x338";
+            break;
+          case "1920x1080":
+            _ = ".1920x1080";
+            break;
+          case "full":
+            _ = "";
+            break;
+          default:
+            (0, _._)(_, `Invalid size: ${_}`);
+        }
+        return (
+          _._.STORE_ITEM_BASE_URL +
+          _.filename.replace(/\.([^.]+)(\?.*)?$/, `${_}.$1$2`)
+        );
+      }
+      function _(_) {
+        const { data: _ } = (0, _._)(_),
+          _ = (0, _._)();
+        if (_)
+          return [
+            ...(_.all_ages_screenshots || []),
+            ...(!_ && _.mature_content_screenshots
+              ? _.mature_content_screenshots
+              : []),
+          ].sort((_, _) => _.ordinal - _.ordinal);
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const { _: _, active: _, bIsHoverMode: _, eGrowOnActivate: _ } = _,
+          { data: _ } = (0, _._)(_),
+          _ = _.useRef(0),
+          _ = _.useRef(null);
+        _.useLayoutEffect(() => {
+          _ && _.current && (_.current.currentTime = _.current);
+        }, [_]);
+        const _ = (0, _._)(_ ? _ : void 0);
+        if ((_ && _._.IN_MOBILE) || !_) return null;
+        if (!_ || !_.visible || !_) return null;
+        const _ = _.filter((_) => _.microtrailer && _.microtrailer.length > 0);
+        if (0 === _.length)
+          return _ &&
+            _.related_items?.parent_appid &&
+            (_.type == _._._ || _.type == _._._)
+            ? (0, _.jsx)(_, {
+                ..._,
+                _: {
+                  appid: _.related_items.parent_appid,
+                },
+              })
+            : null;
+        let _;
+        switch (_) {
+          case _.k_ETrailerGrowAmount_Implicit:
+            _ = _().GrowOnHoverImplicit;
+            break;
+          case _.k_ETrailerGrowAmount_Medium:
+            _ = _().GrowOnHoverMedium;
+        }
+        const _ = _[0];
+        return (0, _.jsx)("video", {
+          className: _()(_().CapsuleMicroTrailer, _),
+          loop: !0,
+          muted: !0,
+          controls: !1,
+          autoPlay: !0,
+          ref: _,
+          playsInline: !0,
+          onTimeUpdate: (_) => {
+            _.current = _.currentTarget.currentTime;
+          },
+          children: (0, _.jsx)(_, {
+            trailer: _,
+          }),
+        });
+      }
+      function _(_) {
+        const { trailer: _ } = _;
+        return _ && _.microtrailer
+          ? (0, _.jsx)(_.Fragment, {
+              children: _.microtrailer?.map((_) =>
+                _._.IN_CLIENT && "video/mp4" == _.type
+                  ? null
+                  : (0, _.jsx)(
+                      "source",
+                      {
+                        src: (0, _._)(_, _.filename || ""),
+                        type: _.type,
+                      },
+                      _.filename,
+                    ),
+              ),
+            })
+          : null;
+      }
+      !(function (_) {
+        (_[(_.k_ETrailerGrowAmount_None = 0)] = "k_ETrailerGrowAmount_None"),
+          (_[(_.k_ETrailerGrowAmount_Implicit = 1)] =
+            "k_ETrailerGrowAmount_Implicit"),
+          (_[(_.k_ETrailerGrowAmount_Medium = 2)] =
+            "k_ETrailerGrowAmount_Medium");
+      })(_ || (_ = {}));
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      function _(_) {
+        return (
+          !!_ &&
+          Boolean(
+            _.related_items &&
+              _.related_items.standalone_demo_appid &&
+              _.related_items.standalone_demo_appid.length > 0 &&
+              _.related_items.standalone_demo_appid[0],
+          )
+        );
+      }
+      function _(_) {
+        return _ && _.related_items?.standalone_demo_appid
+          ? _.related_items?.standalone_demo_appid
+          : [];
+      }
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        if (!_) return "";
+        if (_ && _.is_coming_soon) {
+          if (_.coming_soon_display) return (0, _._)(_);
+          if (_.custom_release_date_message)
+            return _.custom_release_date_message;
+          const _ = _.steam_release_date;
+          return _
+            ? _.is_abridged_release_date
+              ? (0, _._)(new Date(1e3 * _))
+              : (0, _._)(_)
+            : "";
+        }
+        let _ = _.steam_release_date;
+        return _ || (_ = _.original_release_date), _ ? (0, _._)(_) : "";
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      function _(_, _ = !1) {
+        if (_.is_coming_soon && !_) return 0;
+        let _ = _.steam_release_date;
+        return _ || (_ = _.original_release_date), _;
+      }
+      const _ = 7;
+      function _(_, _) {
+        if (!_) return !1;
+        const _ = _(_);
+        return !!_ && !_.is_coming_soon && _ + _ * _._.PerDay > _;
+      }
+      function _(_, _) {
+        return Boolean(_ && _.is_coming_soon && _ && _.packageid);
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _ = !1) {
+        if (_)
+          return _ && (0, _._)(_)
+            ? `${_._.STORE_BASE_URL}app/${((0, _._))(_)[0]}`
+            : `${_._.STORE_BASE_URL}${_.store_url_path}`;
+      }
+      function _() {
+        window.location.href = `${_._.STORE_BASE_URL}login/?redir=${encodeURIComponent(window.location.href)}`;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const _ = (0, _._)(),
+          _ = (0, _._)();
+        return (0, _._)(_(_.GetAnonymousServiceTransport(), _, _));
+      }
+      function _(_, _, _) {
+        return {
+          queryKey: ["LocalizedTagNames", _],
+          queryFn: async () => {
+            const _ = `LocalizedTagNames2_${_}`,
+              _ = await _.GetObject(_),
+              _ = _._.Init(_._);
+            _.Body().set_language(_),
+              _?.version_hash && _.Body().set_have_version_hash(_.version_hash);
+            const _ = await _._.GetTagList(_, _);
+            let _;
+            if (_.GetEResult() == _._)
+              (_ = _.Body().toObject()), _ && _.StoreObject(_, _);
+            else if (_.GetEResult() == _._) _ = _ || void 0;
+            else {
+              if (!_) throw _.GetErrorMessage();
+              console.warn(
+                "Couldn't load updated tag localization, will continue with what we have from storage.",
+              ),
+                (_ = _);
+            }
+            const _ = {};
+            return (
+              (_?.tags || []).forEach(({ tagid: _, name: _ }) => (_[_] = _)), _
+            );
+          },
+          staleTime: 36e5,
+        };
+      }
+      function _(_, _) {
+        const { data: _ } = _(_);
+        return _ && _[_];
+      }
+      _.RW$, _.ZBT, _.gGw;
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { data: _ } = (0, _._)(_);
+        return (0, _.useMemo)(
+          () =>
+            _
+              ? _.item_type == _._._
+                ? [_.appid]
+                : _.included_appids || []
+              : [],
+          [_],
+        );
+      }
+      function _(_) {
+        const { data: _ } = (0, _._)(_);
+        return (0, _.useMemo)(() => {
+          if (_ && _.related_items && _.related_items.parent_appid)
+            return {
+              appid: _.related_items.parent_appid,
+            };
+        }, [_]);
+      }
+      function _(_) {
+        return (0, _.useMemo)(
+          () =>
+            _
+              ? {
+                  appid: _,
+                }
+              : void 0,
+          [_],
+        );
+      }
+      function _(_) {
+        return (0, _.useMemo)(
+          () =>
+            _
+              ? {
+                  packageid: _,
+                }
+              : void 0,
+          [_],
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _() {
+        (0, _._)();
+        const _ = _._.accountid;
+        return (0, _._)(
+          (function (_, _) {
+            return {
+              queryKey: _(_),
+              queryFn: async () => {
+                if (!_) return new Set();
+                const _ = await (async function (_, _) {
+                  const _ = (0, _._)(_._.STORE_BASE_URL, _, _._.country_code),
+                    _ = await fetch(_),
+                    _ = await _.json();
+                  return Object.keys(_.rgIgnoredApps).map(Number) || [];
+                })(0, _);
+                return new Set(_);
+              },
+              staleTime: 6e5,
+            };
+          })(0, _),
+        );
+      }
+      function _(_) {
+        const { data: _ } = _();
+        return void 0 === _ || null == _ ? void 0 : _.has(_);
+      }
+      function _() {
+        const _ = (0, _._)(),
+          _ = _._.accountid;
+        return (_, _) => {
+          _.setQueryData(_(_), (_) => {
+            if (!_) return;
+            const _ = new Set(_);
+            if (_) for (const _ of _) _.delete(_);
+            if (_) for (const _ of _) _.add(_);
+            return _;
+          });
+        };
+      }
+      function _(_) {
+        return ["AccountIgnoreApps", _ ?? 0];
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const _ = (0, _._)(),
+          _ = (0, _._)();
+        return (0, _._)({
+          mutationFn: () =>
+            (async function (_, _) {
+              const _ = _._.Init(_._);
+              __webpack_require__.Body().set_item_id(_._.fromObject(_));
+              const _ = await _._.AddFreeLicense(_, _);
+              return [_.GetEResult(), _.Body().toObject()];
+            })(_, _),
+          onSuccess(_) {
+            const [
+              _,
+              {
+                packageids_added: _,
+                appids_added: _,
+                purchase_result_detail: _,
+              },
+            ] = _;
+            _ && __webpack_require__(_);
+          },
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      async function _(_, _) {
+        const _ = (0, _._)(_._.STORE_BASE_URL, _, _._.country_code),
+          _ = await fetch(_);
+        return (await _.json()).rgOwnedApps || [];
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _() {
+        (0, _._)();
+        const _ = _._.accountid;
+        return (0, _._)(
+          (function (_, _) {
+            return {
+              queryKey: _(_),
+              queryFn: async () => {
+                if (!_) return new Set();
+                const _ = await _(0, _);
+                return new Set(_);
+              },
+              staleTime: 6e5,
+            };
+          })(0, _),
+        );
+      }
+      function _(_, _, _) {
+        return {
+          queryKey: ["AccountOwnsApp", _, _],
+          queryFn: async () => {
+            if (!_) return !1;
+            const _ = await (async function (_, _, _) {
+              return (await _(0, _)).includes(_);
+            })(0, _, _);
+            return _;
+          },
+          staleTime: 6e5,
+        };
+      }
+      function _(_) {
+        (0, _._)();
+        const _ = _._.accountid,
+          { data: _ } = (0, _._)(_(0, _, _));
+        return void 0 === _ ? void 0 : _;
+      }
+      function _(_) {
+        const _ = (0, _._)(),
+          _ = _._.accountid;
+        return _.useCallback(
+          (_) => {
+            _.setQueryData(_(_), (_) =>
+              _ ? new Set([..._.values(), ..._]) : _ ? new Set(_) : void 0,
+            );
+          },
+          [_, _, _],
+        );
+      }
+      function _(_) {
+        return ["AccountOwnedApps", _ ?? 0];
+      }
+      function _(_) {
+        const { data: _ } = (0, _._)(_ && "appid" in _ ? void 0 : _),
+          { data: _ } = _();
+        let _;
+        return (
+          _ && "appid" in _ ? (_ = [_.appid]) : _ && (_ = _.included_appids),
+          void 0 === _ || void 0 === _ || 0 == _.length
+            ? {
+                bIsOwned: void 0,
+                unAppID: void 0,
+              }
+            : {
+                bIsOwned: !_.some((_) => !__webpack_require__.has(_)),
+                unAppID: _[0],
+              }
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      const _ = "unUserdataVersion";
+      function _(_, _, _) {
+        const _ = Number.parseInt(window.localStorage.getItem(_) || "0");
+        let _ = `${_}dynamicstore/userdata/?id=${_}&cc=${_}&origin=${self.origin}`;
+        return _ && (_ += `&v=${_}`), _;
+      }
+      function _() {
+        window.localStorage.setItem(
+          _,
+          (
+            Number.parseInt(window.localStorage.getItem(_) || "0") + 1
+          ).toString(),
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _, _) {
+        const _ = (0, _._)(),
+          _ = _._.accountid;
+        return (0, _._)({
+          mutationKey: ["useUpdateWishlist", _, _, _],
+          mutationFn: async () => {
+            if (null == _) return;
+            const _ =
+                _._.STORE_BASE_URL +
+                "api/" +
+                (_ ? "addtowishlist" : "removefromwishlist"),
+              _ = new FormData();
+            _.append("appid", "" + _),
+              _.append("sessionid", (0, _._)()),
+              _ && _.append("snr", _);
+            const _ = await fetch(_, {
+              method: "POST",
+              body: _,
+              credentials: "include",
+            });
+            if (!_._)
+              throw new Error(
+                `Wishlist ${_ ? "add" : "remove"} of appid ${_} failed (${_.status})`,
+              );
+          },
+          onMutate: () => {
+            null != _ && _(_ ? [_] : void 0, _ ? void 0 : [_]);
+          },
+          onError: () => {
+            null != _ && _(_ ? void 0 : [_], _ ? [_] : void 0);
+          },
+          onSuccess: () => {
+            (0, _._)();
+          },
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -12827,7 +12888,7 @@
                 const _ = await (async function (_, _) {
                   const _ = (0, _._)(_._.STORE_BASE_URL, _, _._.country_code),
                     _ = await fetch(_);
-                  return (await _.json()).rgFollowedApps || [];
+                  return (await _.json()).rgWishlist || [];
                 })(0, _);
                 return new Set(_);
               },
@@ -12837,412 +12898,24 @@
         );
       }
       function _(_) {
-        return ["AccountFollowApps", _ ?? 0];
+        const { data: _ } = _();
+        return void 0 === _ || null == _ ? void 0 : _.has(_);
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, _, _) {
-        const _ = (function () {
-            const _ = (0, _._)(),
-              _ = _._.accountid;
-            return (_, _) => {
-              _.setQueryData(_(_), (_) => {
-                if (!_) return;
-                const _ = new Set(_);
-                if (_) for (const _ of _) _.delete(_);
-                if (_) for (const _ of _) _.add(_);
-                return _;
-              });
-            };
-          })(),
-          _ = _._.accountid;
-        return (0, _._)({
-          mutationKey: ["useUpdateAppFollow", _, _, _],
-          mutationFn: async () => {
-            if (null == _) return;
-            const _ = _._.STORE_BASE_URL + "explore/followgame",
-              _ = new FormData();
-            _.append("appid", "" + _),
-              _.append("sessionid", (0, _._)()),
-              _ || _.append("unfollow", "1"),
-              _ && _.append("snr", _);
-            const _ = await fetch(_, {
-              method: "POST",
-              body: _,
-              credentials: "include",
-            });
-            if (!_._)
-              throw new Error(
-                `Follow App ${_ ? "add" : "remove"} of appid ${_} failed (${_.status})`,
-              );
-          },
-          onMutate: () => {
-            null != _ && _(_ ? [_] : void 0, _ ? void 0 : [_]);
-          },
-          onError: () => {
-            null != _ && _(_ ? void 0 : [_], _ ? [_] : void 0);
-          },
-          onSuccess: () => {
-            (0, _._)();
-          },
-        });
-      }
-      var _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
       function _() {
-        (0, _._)();
-        const _ = _._.accountid;
-        return (0, _._)(
-          (function (_, _) {
-            return {
-              queryKey: _(_),
-              queryFn: async () => {
-                const _ = new Map();
-                if (_)
-                  try {
-                    (
-                      await (async function (_, _) {
-                        const _ = (0, _._)(
-                            _._.STORE_BASE_URL,
-                            _,
-                            _._.country_code,
-                          ),
-                          _ = await fetch(_),
-                          _ = await _.json(),
-                          _ = new Set();
-                        _.rgCreatorsIgnored?.forEach((_) => _.add(_)),
-                          _.rgCreatorsFollowed?.forEach((_) => _.add(_));
-                        const _ = new Set();
-                        return (
-                          _.rgCreatorsIgnored?.forEach((_) => _.add(_)),
-                          [
-                            ...(_.rgCuratorsIgnored ?? []),
-                            ...(_.rgCurators
-                              ? Object.values(_.rgCurators ?? {}).map(
-                                  (_) => _.clanid,
-                                )
-                              : []),
-                          ].map((_) => {
-                            const _ = _.has(_);
-                            return {
-                              clanid: _,
-                              ignored: _,
-                              followed: !_,
-                              is_creator: _.has(_),
-                            };
-                          })
-                        );
-                      })(0, _)
-                    ).forEach((_) => _.set(_.clanid, _));
-                  } catch (_) {
-                    console.error("GetCuratorAffinityQuery", _);
-                  }
-                return _;
-              },
-              enabled: !!_,
-            };
-          })(0, _),
-        );
-      }
-      function _(_) {
-        return ["CuratorAffinityQueryKey", _ ?? 0];
-      }
-      function _(_, _) {
-        const _ = (function () {
-            const _ = (0, _._)(),
-              _ = _._.accountid;
-            return (_, _, _, _) => {
-              _.setQueryData(_(_), (_) => {
-                if (!_) return;
-                const _ = new Map(_);
-                return (
-                  __webpack_require__?.forEach((_) => {
-                    _.has(_.clanAccountID)
-                      ? (_.get(_.clanAccountID).followed = !0)
-                      : _.set(_.clanAccountID, {
-                          clanid: _.clanAccountID,
-                          followed: !0,
-                          ignored: !1,
-                          is_creator: !1,
-                        });
-                  }),
-                  _?.forEach((_) => {
-                    _.has(_.clanAccountID)
-                      ? (_.get(_.clanAccountID).ignored = !0)
-                      : _.set(_.clanAccountID, {
-                          clanid: _.clanAccountID,
-                          followed: !1,
-                          ignored: !0,
-                          is_creator: !1,
-                        });
-                  }),
-                  _?.forEach((_) => _.delete(_.clanAccountID)),
-                  _?.forEach((_) => {
-                    let _ = _.get(_.clanAccountID);
-                    _ && (_.is_creator = !0);
-                  }),
-                  _
-                );
-              });
-            };
-          })(),
+        const _ = (0, _._)(),
           _ = _._.accountid;
-        return (0, _._)({
-          mutationKey: ["useUpdateCuratorAffinity", _, _, _],
-          mutationFn: async () => {
-            if (null == _) return !1;
-            const _ = _ == _.k_ECuratorFollow || _ == _.k_ECuratorUnfollow,
-              _ = _ == _.k_ECuratorFollow || _ == _.k_ECuratorIgnore,
-              _ = `${_._.STORE_BASE_URL}curators/${_ ? "ajaxfollow/" : "ajaxignore/"}`,
-              _ = new FormData();
-            _.append("clanid", "" + _),
-              _.append("sessionid", (0, _._)()),
-              _.append(_ ? "follow" : "ignore", _ ? "1" : "0");
-            const _ = await fetch(_, {
-                method: "POST",
-                body: _,
-                credentials: "include",
-              }),
-              _ = await _.json();
-            if (!_._)
-              throw new Error(
-                `Curator Affinity: ${_ ? "Follow" : "Ignore"} Currator ${_ ? "add" : "remove"} failed (${_.status} / ${_.msg})`,
-              );
-            return _.is_creator;
-          },
-          onMutate: () => {
-            if (null != _) {
-              const _ = _ == _.k_ECuratorUnfollow || _ == _.k_ECuratorUnignore;
-              __webpack_require__(
-                _ == _.k_ECuratorFollow
-                  ? [
-                      {
-                        clanAccountID: _,
-                      },
-                    ]
-                  : void 0,
-                _ == _.k_ECuratorIgnore
-                  ? [
-                      {
-                        clanAccountID: _,
-                      },
-                    ]
-                  : void 0,
-                _
-                  ? [
-                      {
-                        clanAccountID: _,
-                      },
-                    ]
-                  : void 0,
-              );
-            }
-          },
-          onError: (_) => {
-            if (null != _) {
-              const _ = _ == _.k_ECuratorFollow || _ == _.k_ECuratorIgnore;
-              __webpack_require__(
-                _ == _.k_ECuratorUnfollow
-                  ? [
-                      {
-                        clanAccountID: _,
-                      },
-                    ]
-                  : void 0,
-                _ == _.k_ECuratorUnignore
-                  ? [
-                      {
-                        clanAccountID: _,
-                      },
-                    ]
-                  : void 0,
-                _
-                  ? [
-                      {
-                        clanAccountID: _,
-                      },
-                    ]
-                  : void 0,
-                _
-                  ? [
-                      {
-                        clanAccountID: _,
-                        is_creator: !0,
-                      },
-                    ]
-                  : void 0,
-              );
-            }
-          },
-          onSuccess: (_) => {
-            _ &&
-              _ &&
-              __webpack_require__(void 0, void 0, void 0, [
-                {
-                  clanAccountID: _,
-                  is_creator: !0,
-                },
-              ]),
-              (0, _._)();
-          },
-        });
-      }
-      !(function (_) {
-        (_[(_.k_ECuratorFollow = 1)] = "k_ECuratorFollow"),
-          (_[(_.k_ECuratorUnfollow = 2)] = "k_ECuratorUnfollow"),
-          (_[(_.k_ECuratorIgnore = 3)] = "k_ECuratorIgnore"),
-          (_[(_.k_ECuratorUnignore = 4)] = "k_ECuratorUnignore");
-      })(_ || (_ = {}));
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = (_) => {
-        const {
-            className: _,
-            bIgnored: _,
-            bApplyingFollowing: _,
-            bFollowing: _,
-            onFollowClick: _,
-            followType: _,
-          } = _,
-          { elDialogElement: _, fnShowLogonDialog: _ } = (0, _._)();
-        if (_._.EREALM == _._.k_ESteamRealmChina) return null;
-        let _ = null;
-        switch (_) {
-          case "app":
-            _ = (0, _._)("#text_store_follow_desc");
-            break;
-          case "creatorhome":
-            _ = (0, _._)("#CreatorHome_Follow_tooltip");
-            break;
-          case "steamcurator":
-            _ = (0, _._)("#steam_curator_follow_ttip");
-            break;
-          case "group":
-            _ = (0, _._)("#steam_group_follow_ttip");
-        }
-        return _
-          ? (0, _.jsxs)(_.Fragment, {
-              children: [
-                (0, _.jsx)(_._, {
-                  toolTipContent: _ || _ ? void 0 : _,
-                  children: (0, _.jsxs)(_._, {
-                    className: (0, _._)(
-                      _.Button,
-                      _.FollowButton,
-                      "FollowButton",
-                      _,
-                      _ ? "Followed" : "",
-                    ),
-                    onClick: () => {
-                      _._.logged_in ? _() : _();
-                    },
-                    children: [
-                      _ &&
-                        (0, _.jsx)(_._, {
-                          size: 15,
-                        }),
-                      !_ && (_ || _) && (0, _.jsx)(_.Jlk, {}),
-                      (0, _.jsx)("div", {
-                        className: (0, _._)(_.FollowBtnText, "FollowBtnText"),
-                        children:
-                          !_ &&
-                          (_
-                            ? (0, _._)("#Button_Followed")
-                            : _
-                              ? (0, _._)("#Button_Ignored")
-                              : (0, _._)("#Button_Follow")),
-                      }),
-                    ],
-                  }),
-                }),
-                _,
-              ],
-            })
-          : (console.error("CommonFollowButton unexpected type", _), null);
-      };
-      function _(_) {
-        const {
-            followType: _,
-            fnSuccessCallback: _,
-            clanAccountID: _,
-            className: _,
-          } = _,
-          [_, _] = _.useState(!1),
-          { data: _ } = (0, _._)(_ ? void 0 : _),
-          _ = (function (_) {
-            const { data: _ } = _();
-            return void 0 === _ || null == _
-              ? void 0
-              : Boolean(_.get(_)?.followed);
-          })(_),
-          _ = (function (_) {
-            const { data: _ } = _();
-            return void 0 === _ || null == _
-              ? void 0
-              : Boolean(_.get(_)?.ignored);
-          })(_),
-          { mutateAsync: _ } = _(
-            _,
-            _ ? _.k_ECuratorUnfollow : _.k_ECuratorFollow,
-          ),
-          [_, _, _] = (0, _._)(),
-          _ = _.useCallback(async () => {
-            null != _ && (_(!0), await _(), _(!1), _ && __webpack_require__(_));
-          }, [_, _, _]);
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            (0, _.jsx)(_, {
-              className: _,
-              bIgnored: Boolean(_),
-              bFollowing: Boolean(_),
-              bApplyingFollowing: _,
-              onFollowClick: () => {
-                _._.is_limited ? _() : _();
-              },
-              followType:
-                _ ?? (_?.is_creator_home ? "creatorhome" : "steamcurator"),
-            }),
-            (0, _.jsx)(_._, {
-              active: _,
-              children: (0, _.jsx)(_._, {
-                closeModal: _,
-              }),
-            }),
-          ],
-        });
+        return (_, _) => {
+          _.setQueryData(_(_), (_) => {
+            if (!_) return;
+            const _ = new Set(_);
+            if (_) for (const _ of _) _.delete(_);
+            if (_) for (const _ of _) _.add(_);
+            return _;
+          });
+        };
       }
       function _(_) {
-        const { appid: _, className: _ } = _,
-          [_, _] = _.useState(!1),
-          _ = (function (_) {
-            const { data: _ } = _();
-            return void 0 === _ || null == _ ? void 0 : _.has(_);
-          })(_),
-          _ = (0, _._)(_),
-          _ = (0, _._)(),
-          _ = _._.GetSNRLinkParam(_),
-          { mutateAsync: _ } = _(_, !_, _),
-          _ = _.useCallback(async () => {
-            const { appid: _ } = _;
-            _(!0), await _(), _(!1);
-          }, [_, _]);
-        return (0, _.jsx)(_, {
-          className: _,
-          bIgnored: Boolean(_),
-          bFollowing: Boolean(_),
-          bApplyingFollowing: _,
-          onFollowClick: _,
-          followType: "app",
-        });
+        return ["AccountWishlistApps", _ ?? 0];
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -13253,23 +12926,117 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = (_) => {
-        let _ = _._.HELP_BASE_URL + "wizard/HelpWithLimitedAccount";
-        return (0, _.jsx)(_._, {
-          strTitle: (0, _._)("#Informational_Message"),
-          onCancel: _.closeModal,
-          onOK: _.closeModal,
-          bAlertDialog: !0,
-          children: (0, _.jsx)("div", {
-            children: (0, _._)(
-              _.strTokenOverride || "#User_LimitedAccount",
-              (0, _.jsx)("a", {
-                href: _,
-                target: _._.IN_CLIENT ? void 0 : "_blank",
-                children: (0, _._)("#User_LimitedAccount_UrlInfo"),
-              }),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      async function _(_, _) {
+        const _ = "steam://run/" + _;
+        _._.IN_CLIENT
+          ? (console.log(`Running game ${_} locally.`),
+            (window.location.href = _))
+          : (console.log(
+              `Cannot identify local client. Prompting user to launch ${_}.`,
             ),
+            _(_, _, _));
+      }
+      async function _(_, _, _) {
+        console.log("prompting for", _);
+        const _ = _._.STORE_BASE_URL + "about/";
+        (0, _._)(
+          (0, _.jsx)(_, {
+            appid: _,
+            strGameName: _ || "",
+            strOnOKUrl: _,
+            strDownloadSteamUrl: _,
+          }),
+          window,
+        );
+      }
+      const _ = (_) => {
+        const _ = () => _.closeModal && _.closeModal();
+        return (0, _.jsx)(_._, {
+          onEscKeypress: _,
+          className: _().GotSteamDialog,
+          children: (0, _.jsxs)(_._, {
+            children: [
+              (0, _.jsxs)(_._, {
+                children: [" ", (0, _._)("#GotSteam_Title"), " "],
+              }),
+              (0, _.jsxs)(_._, {
+                children: [
+                  (0, _.jsx)(_._, {
+                    children: (0, _._)(
+                      "#GotSteam_PromptWithDownloadLink",
+                      (0, _.jsx)("a", {
+                        href: _.strDownloadSteamUrl,
+                        className: _().DownloadSteamUrl,
+                        children: (0, _._)("#GotSteam_DownloadLinkText"),
+                      }),
+                      (0, _.jsx)("span", {
+                        className: _().GameName,
+                        children: _.strGameName,
+                      }),
+                    ),
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: _().Buttons,
+                    children: [
+                      (0, _.jsxs)("a", {
+                        href: _.strOnOKUrl,
+                        onClick: _,
+                        className: (0, _._)(_().Button, _().LeftButton),
+                        children: [
+                          (0, _.jsxs)("div", {
+                            className: _().AnswerText,
+                            children: [" ", (0, _._)("#GotSteam_Yes"), " "],
+                          }),
+                          (0, _.jsxs)("div", {
+                            className: _().ActionText,
+                            children: [
+                              " ",
+                              (0, _._)("#GotSteam_Yes_Play"),
+                              " ",
+                            ],
+                          }),
+                        ],
+                      }),
+                      (0, _.jsxs)("a", {
+                        href: _.strDownloadSteamUrl,
+                        onClick: _,
+                        className: _().Button,
+                        children: [
+                          (0, _.jsxs)("div", {
+                            className: _().AnswerText,
+                            children: [" ", (0, _._)("#GotSteam_No"), " "],
+                          }),
+                          (0, _.jsxs)("div", {
+                            className: _().ActionText,
+                            children: [
+                              " ",
+                              (0, _._)("#GotSteam_No_Download"),
+                              " ",
+                            ],
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: _().Footer,
+                    children: [
+                      (0, _.jsx)(_.Qte, {
+                        className: _().Logo,
+                      }),
+                      (0, _._)("#GotSteam_Blurb"),
+                    ],
+                  }),
+                ],
+              }),
+            ],
           }),
         });
       };
@@ -13279,70 +13046,509 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+      });
+      var _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      !(function (_) {
+        (_[(_.AnyController = 0)] = "AnyController"),
+          (_[(_.XboxController = 1)] = "XboxController"),
+          (_[(_.Ps3Controller = 2)] = "Ps3Controller"),
+          (_[(_.Ps4Controller = 3)] = "Ps4Controller"),
+          (_[(_.Ps5Controller = 4)] = "Ps5Controller"),
+          (_[(_.SwitchController = 5)] = "SwitchController"),
+          (_[(_.SteamController = 6)] = "SteamController"),
+          (_[(_.SteamDeckNeptune = 7)] = "SteamDeckNeptune"),
+          (_[(_.SteamDeckGalileo = 8)] = "SteamDeckGalileo"),
+          (_[(_.Switch2Controller = 9)] = "Switch2Controller"),
+          (_[(_.SteamControllerTriton = 10)] = "SteamControllerTriton");
+      })(_ || (_ = {}));
+      const _ = {
+        any_controller: _.AnyController,
+        xbox_controller: _.XboxController,
+        ps3_controller: _.Ps3Controller,
+        ps4_controller: _.Ps4Controller,
+        ps5_controller: _.Ps5Controller,
+        switch_controller: _.SwitchController,
+        steam_controller: _.SteamController,
+        steam_deck_neptune: _.SteamDeckNeptune,
+        steam_deck_galileo: _.SteamDeckGalileo,
+        switch2_controller: _.Switch2Controller,
+        steam_controller_triton: _.SteamControllerTriton,
+      };
+      function _() {
+        const _ = [..._._.excluded_content_descriptors];
+        return {
+          bLoaded: !1,
+          setWishlist: new Set(),
+          rgWishlistInOrder: [],
+          setOwnedApps: new Set(),
+          setOwnedPackages: new Set(),
+          setExcludedTagIDs: new Set(),
+          rgExcludedTagIDsSorted: [],
+          setExcludedContentDescriptors: new Set(_),
+          rgExcludedContentDescriptors: _,
+          setRecommendedApps: new Set(),
+          rgRecommendedAppsInOrder: [],
+          mapIgnoredApps: new Map(),
+          mapIgnoredPackages: new Map(),
+          setCuratorsFollowed: new Set(),
+          rgCuratorsFollowed: [],
+          setCuratorsIgnored: new Set(),
+          mapRecommendingCuratorsForApp: new Map(),
+          setPreferredPlatforms: new Set(),
+          setHardwareUsed: new Set(),
+          rgRecommendedTags: [],
+          ePrimaryLanguage: _.xPp,
+          setSecondaryLanguages: new Set(),
+          bShowFilteredUserReviewScores: !0,
+          bAllowAppImpressions: !1,
+        };
+      }
+      let _;
+      function _() {
+        return Boolean((0, _._)("wants_mature_content"));
+      }
+      function _(_) {
+        const _ = new Map();
+        for (const [_, _] of Object.entries(_)) {
+          const _ = Number(_);
+          _ && _.set(_, Number(_));
+        }
+        return _;
+      }
+      const _ = "dynamicuserdata";
+      function _(_) {
+        return [_, _];
+      }
+      async function _(_) {
+        try {
+          const _ = await fetch(
+            (0, _._)(_._.STORE_BASE_URL, _, _._.country_code),
+            {
+              credentials: "include",
+            },
+          );
+          if (!_._) throw new Error(`Server returned ${_.status}`);
+          return (function (_) {
+            const _ = _();
+            if (
+              ((_.bLoaded = !0),
+              _.rgCurators &&
+                ((_.rgCuratorsFollowed = Object.keys(_.rgCurators).map(Number)),
+                (_.setCuratorsFollowed = new Set(_.rgCuratorsFollowed))),
+              _.rgCuratorsIgnored &&
+                (_.setCuratorsIgnored = new Set(
+                  _.rgCuratorsIgnored.map(Number),
+                )),
+              _.rgWishlist &&
+                ((_.rgWishlistInOrder = _.rgWishlist.map(Number)),
+                (_.setWishlist = new Set(_.rgWishlistInOrder))),
+              _.rgOwnedApps &&
+                (_.setOwnedApps = new Set(_.rgOwnedApps.map(Number))),
+              _.rgOwnedPackages &&
+                (_.setOwnedPackages = new Set(_.rgOwnedPackages.map(Number))),
+              _.rgIgnoredApps && (_.mapIgnoredApps = _(_.rgIgnoredApps)),
+              _.rgIgnoredPackages &&
+                (_.mapIgnoredPackages = _(_.rgIgnoredPackages)),
+              _.rgExcludedTags &&
+                ((_.setExcludedTagIDs = new Set(
+                  _.rgExcludedTags.map((_) => Number(_.tagid)),
+                )),
+                (_.rgExcludedTagIDsSorted = Array.from(
+                  _.setExcludedTagIDs,
+                ).sort())),
+              _()
+                ? ((_.setExcludedContentDescriptors = new Set()),
+                  (_.rgExcludedContentDescriptors = []))
+                : _.rgExcludedContentDescriptorIDs &&
+                  ((_.rgExcludedContentDescriptors =
+                    _.rgExcludedContentDescriptorIDs.map((_) => Number(_))),
+                  (_.setExcludedContentDescriptors = new Set(
+                    _.rgExcludedContentDescriptors,
+                  ))),
+              _.rgRecommendedApps &&
+                ((_.rgRecommendedAppsInOrder = _.rgRecommendedApps.map(Number)),
+                (_.setRecommendedApps = new Set(_.rgRecommendedAppsInOrder))),
+              _.rgPreferredPlatforms &&
+                (_.setPreferredPlatforms = new Set(_.rgPreferredPlatforms)),
+              _.bAllowAppImpressions &&
+                (_.bAllowAppImpressions = _.bAllowAppImpressions),
+              (_.bShowFilteredUserReviewScores =
+                !!_.bShowFilteredUserReviewScores),
+              void 0 !== _.rgPrimaryLanguage &&
+                (_.ePrimaryLanguage = _.rgPrimaryLanguage),
+              _.rgSecondaryLanguages &&
+                (_.setSecondaryLanguages = new Set(_.rgSecondaryLanguages)),
+              _.rgRecommendedTags &&
+                (_.rgRecommendedTags = _.rgRecommendedTags.map((_) => _.tagid)),
+              _.rgCurations)
+            )
+              for (const _ of Object.keys(_.rgCurations)) {
+                const _ = [];
+                for (const _ of Object.keys(_.rgCurations[_]))
+                  _.rgCurations[_][_] === _._._ && _.push(Number(_));
+                _.mapRecommendingCuratorsForApp.set(Number(_), _);
+              }
+            if (_.rgHardwareUsed)
+              for (const _ of _.rgHardwareUsed) {
+                const _ = _[_];
+                void 0 !== _ && _.setHardwareUsed.add(_);
+              }
+            return _;
+          })(await _.json());
+        } catch (_) {
+          return (
+            console.warn("LoadDynamicUserData", _),
+            (0, _._)().ReportError(new Error(`LoadDynamicUserData ${_}`), {
+              bIncludeMessageInIdentifier: !0,
+            }),
+            _()
+          );
+        }
+      }
+      function _() {
+        const _ = _._.accountid;
+        return {
+          queryKey: _(_),
+          queryFn: () => _(_),
+          staleTime: 1 / 0,
+          gcTime: 1 / 0,
+          retry: !1,
+          enabled: !0,
+        };
+      }
+      function _(_) {
+        return _.getQueryData(_(_._.accountid)) ?? (_ ??= _());
+      }
+      function _(_, _) {
+        _.setQueryData(_(_._.accountid), (_) => {
+          if (!_) return;
+          const _ = _(_);
+          return _
+            ? {
+                ..._,
+                ..._,
+              }
+            : _;
+        });
+      }
+      class _ {
+        m_queryClient = _._;
+        m_boxCacheVersion = _._.box(0);
+        m_bInitialized = !1;
+        m_boxAjaxInFlight = _._.box(!1);
+        LazyInit() {
+          this.m_bInitialized ||
+            ((this.m_bInitialized = !0),
+            this.m_queryClient.getQueryCache().subscribe((_) => {
+              var _;
+              ("added" != _?.type &&
+                "updated" != _?.type &&
+                "removed" != _?.type) ||
+                ((_ = _.query?.queryKey),
+                _?.[0] == _ &&
+                  (0, _._)(() =>
+                    this.m_boxCacheVersion.set(
+                      this.m_boxCacheVersion.get() + 1,
+                    ),
+                  ));
+            }));
+        }
+        ReadData() {
+          return (
+            this.LazyInit(), this.m_boxCacheVersion.get(), _(this.m_queryClient)
+          );
+        }
+        BIsLoaded() {
+          return this.ReadData().bLoaded;
+        }
+        GetWishlistGamesInUserOrder() {
+          return this.ReadData().rgWishlistInOrder;
+        }
+        GetRecommendedGamesInIRPriorityOrder() {
+          return this.ReadData().rgRecommendedAppsInOrder;
+        }
+        GetFollowedCuratorCount() {
+          return this.ReadData().setCuratorsFollowed.size;
+        }
+        GetFollowedCuratorsAccountID() {
+          return this.ReadData().rgCuratorsFollowed;
+        }
+        BIsFollowingCurator(_) {
+          return this.ReadData().setCuratorsFollowed.has(_(_));
+        }
+        BIsIgnoringCurator(_) {
+          return this.ReadData().setCuratorsIgnored.has(_(_));
+        }
+        get ExcludedContentDescriptor() {
+          return this.ReadData().rgExcludedContentDescriptors;
+        }
+        BExcludeTagIDs(_) {
+          const _ = this.ReadData().setExcludedTagIDs;
+          return _.some((_) => _.has(_));
+        }
+        GetExcludedTagsSortedByID() {
+          return this.ReadData().rgExcludedTagIDsSorted;
+        }
+        BExcludesContentDescriptor(_) {
+          const _ = this.ReadData().setExcludedContentDescriptors;
+          return _.some((_) => _.has(_));
+        }
+        BIncludesContentDescriptor(_) {
+          return !this.ReadData().setExcludedContentDescriptors.has(_);
+        }
+        BIsGameWishlisted(_) {
+          return this.ReadData().setWishlist.has(Number(_));
+        }
+        BIsGameRecommended(_) {
+          return this.ReadData().setRecommendedApps.has(Number(_));
+        }
+        BIsGameIgnored(_) {
+          return Boolean(_) && this.ReadData().mapIgnoredApps.has(Number(_));
+        }
+        BIsPackageIgnored(_) {
+          return (
+            Boolean(_) && this.ReadData().mapIgnoredPackages.has(Number(_))
+          );
+        }
+        BIsGameOwned(_) {
+          return !!_ && this.ReadData().setOwnedApps.has(Number(_));
+        }
+        BIsStoreItemOwned(_) {
+          switch (_.GetStoreItemType()) {
+            case _._._:
+              if (this.BIsGameOwned(_.GetAppID())) return !0;
+              break;
+            case _._._:
+            case _._._:
+              if (_.GetIncludedAppIDs().every((_) => this.BIsGameOwned(_)))
+                return !0;
+          }
+          return !1;
+        }
+        BOwnsApp(_) {
+          return Boolean(_) && this.ReadData().setOwnedApps.has(Number(_));
+        }
+        BOwnsPackage(_) {
+          return this.ReadData().setOwnedPackages.has(Number(_));
+        }
+        BHasUsedHardware(_) {
+          return this.ReadData().setHardwareUsed.has(_);
+        }
+        BShowFilteredUserReviewScores() {
+          return this.ReadData().bShowFilteredUserReviewScores;
+        }
+        BAppImpressionsAllowed() {
+          return this.ReadData().bAllowAppImpressions;
+        }
+        GetPrimaryLanguage() {
+          return this.ReadData().ePrimaryLanguage;
+        }
+        GetSecondaryLanguages() {
+          return this.ReadData().setSecondaryLanguages;
+        }
+        BIsAnyLanguageEnabled(_) {
+          const { ePrimaryLanguage: _, setSecondaryLanguages: _ } =
+            this.ReadData();
+          return (
+            null == _ ||
+            _ <= _.xPp || _.bP9 <= _ ||
+            _.some((_) => _ === _ || __webpack_require__.has(_))
+          );
+        }
+        GetRecommendedTags() {
+          return this.ReadData().rgRecommendedTags;
+        }
+        BIsAjaxInFlight() {
+          return this.m_boxAjaxInFlight.get();
+        }
+        BIsAppRecommendedBySomeCurator(_) {
+          return this.ReadData().mapRecommendingCuratorsForApp.has(Number(_));
+        }
+        GetRecommendingCuratorsForApp(_) {
+          return this.ReadData().mapRecommendingCuratorsForApp.get(Number(_));
+        }
+        BHasPlatformPreferenceSet() {
+          const _ = this.ReadData().setPreferredPlatforms.size;
+          return _ > 0 && _ < 3;
+        }
+        BIsPreferredPlatform(_) {
+          return this.ReadData().setPreferredPlatforms.has(_);
+        }
+        async HintLoad() {
+          return (
+            this.LazyInit(),
+            await (async function (_) {
+              return _.fetchQuery(_());
+            })(this.m_queryClient),
+            this
+          );
+        }
+        async UpdateFollowOrIgnoreCurator(_, _, _) {
+          this.LazyInit();
+          let _ =
+            _._.STORE_BASE_URL +
+            "curators/" +
+            (_ ? "ajaxfollow/" : "ajaxignore/");
+          const _ = _.GetAccountID(),
+            _ = new FormData();
+          _.append("clanid", "" + _),
+            _.append("sessionid", (0, _._)()),
+            _.append(_ ? "follow" : "ignore", _ ? "1" : "0");
+          let _ = await _().post(_, _, {
+            withCredentials: !0,
+          });
+          return (
+            _ &&
+              200 == _.status &&
+              (this.InvalidateCache(),
+              _(this.m_queryClient, (_) => {
+                const _ = new Set(
+                  _ ? _.setCuratorsFollowed : _.setCuratorsIgnored,
+                );
+                return (
+                  _ ? _.add(_) : _.delete(_),
+                  _
+                    ? {
+                        setCuratorsFollowed: _,
+                        rgCuratorsFollowed: Array.from(_),
+                      }
+                    : {
+                        setCuratorsIgnored: _,
+                      }
+                );
+              })),
+            _.data
+          );
+        }
+        async UpdateAppIgnore(_, _, _, _ = _._._) {
+          this.LazyInit();
+          let _ = _._.STORE_BASE_URL + "recommended/ignorerecommendation";
+          const _ = new FormData();
+          _.append("sessionid", (0, _._)()),
+            _.append("appid", "" + _),
+            _.append("remove", _ ? "0" : "1"),
+            _.append("snr", _),
+            _.append("ignore_reason", "" + _);
+          try {
+            (0, _._)(() => this.m_boxAjaxInFlight.set(!0));
+            let _ = await _().post(_, _, {
+              withCredentials: !0,
+            });
+            return (
+              _ &&
+                200 == _.status &&
+                (this.InvalidateCache(),
+                _(this.m_queryClient, (_) => {
+                  const _ = new Map(_.mapIgnoredApps);
+                  return (
+                    _ ? _.set(Number(_), _) : _.delete(Number(_)),
+                    {
+                      mapIgnoredApps: _,
+                    }
+                  );
+                })),
+              _.data
+            );
+          } catch (_) {
+            let _ = (0, _._)(_);
+            console.error("UpdateAppIgnore", _.strErrorMsg, _);
+          } finally {
+            (0, _._)(() => this.m_boxAjaxInFlight.set(!1));
+          }
+          return {
+            success: _._,
+          };
+        }
+        async AddToCart(_, _, _, _, _, _, _) {
+          if (
+            void 0 !== window.g_bUseNewCartAPI &&
+            window.g_bUseNewCartAPI &&
+            "function" == typeof window.AddItemToCart
+          ) {
+            let _;
+            return (
+              _ && (_ = _._.ParseSNR(_)), window.AddItemToCart(_, _, _), !0
+            );
+          }
+          const _ = new FormData();
+          _.append("action", "add_to_cart"),
+            _ ? _.append("bundleid", _.toString()) : _.append("subid", "" + _),
+            _ && _.append("snr", _),
+            _.append("sessionid", (0, _._)()),
+            _.append("quantity", "1");
+          const _ = (0, _._)(_);
+          _.preventDefault();
+          try {
+            await _().post(_, _, {
+              withCredentials: !0,
+            }),
+              this.InvalidateCache(),
+              _?.fnSetURL ? _.fnSetURL(_) : (_.location.href = _);
+          } catch (_) {
+            return console.log("HandleOnAddToCart", _), !1;
+          }
+          return !0;
+        }
+        InvalidateCache() {
+          (0, _._)();
+        }
+        static s_globalSingletonStore;
+        static Get() {
+          return (
+            _.s_globalSingletonStore || (_.s_globalSingletonStore = new _()),
+            _.s_globalSingletonStore
+          );
+        }
+        static BConfirmedAdultContentAgeGate() {
+          return _();
+        }
+        constructor() {}
+      }
+      function _(_) {
+        return "object" == typeof _ && "GetAccountID" in _
+          ? _.GetAccountID()
+          : Number(_);
+      }
+      function _() {
+        const { isPending: _ } = (0, _._)(_());
+        return [_, _.Get()];
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = _.createContext({
-        AddImpression: () => {
-          console.log("Impression Tracking not enabled");
-        },
-        BIsValid: () => !1,
-      });
-      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { appID: _, feature: _, depth: _, children: _ } = _,
-          _ = (0, _._)(_, _),
-          _ = _.useContext(_),
-          [_, _] = _.useState(void 0),
-          _ = _.useCallback(
-            (_) => {
-              _.isIntersecting &&
-                _((_) =>
-                  _?.appID == _ && _?.snr == _
-                    ? _
-                    : {
-                        appID: _,
-                        snr: _,
-                      },
-                );
-            },
-            [_, _],
-          );
-        (0, _.useEffect)(() => {
-          _ && null != _.appID && _.AddImpression(_.appID, _.snr);
-        }, [_, _]);
-        const _ = (0, _._)(_),
-          _ = _ && (!_ || (_.appID != _ && _.snr != _)),
-          _ = (0, _._)(_.props.ref, _ ? _ : void 0);
-        return _.cloneElement(_, {
-          ref: _,
+        const { children: _, ..._ } = _,
+          _ = _.useRef(null);
+        return (0, _.jsx)(_._, {
+          nodeRef: _,
+          ..._,
+          children: _.children(_),
         });
       }
-      var _ = __webpack_require__("chunkid");
-      function _(_) {
-        return _ == _._._ ? "bundle" : _ == _._._ ? "sub" : (_._._, "app");
-      }
-      function _(_, _) {
-        const _ = _ || (Boolean(_) ? _._ : _._);
-        return [Boolean(_), _];
-      }
-      const _ = (_) => {
-        const { appid: _ } = _,
-          _ = (0, _.jsx)("div", {
-            className: "ImpressionTrackedElement",
-            children: _.children,
-          });
-        return _
-          ? (0, _.jsx)(_, {
-              appID: _,
-              children: _,
-            })
-          : _;
-      };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -13414,93 +13620,6 @@
           ),
           window.innerWidth < parseInt(_().strMaxMobileWidth)
         );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, _, _, _) {
-        let _ = _;
-        _ =
-          "number" == typeof _
-            ? {
-                nDigitsAfterDecimal: _,
-                bUseBinary1K: _ || void 0 === _,
-                bValueIsInBytes: !_,
-                bValueIsRate: _,
-                nMinimumDigitsAfterDecimal: 0,
-              }
-            : {
-                nDigitsAfterDecimal: 2,
-                bUseBinary1K: !0,
-                bValueIsInBytes: !0,
-                bValueIsRate: !1,
-                nMinimumDigitsAfterDecimal: 0,
-                ..._,
-              };
-        const { nNum: _, strPrefix: _ } = (function (_, _) {
-            const _ = _.bUseBinary1K ? 1024 : 1e3,
-              _ = _ * _,
-              _ = _ * _,
-              _ = _ * _;
-            return _ > _
-              ? {
-                  nNum: _ / _,
-                  strPrefix: "Tera",
-                }
-              : _ > _
-                ? {
-                    nNum: _ / _,
-                    strPrefix: "Giga",
-                  }
-                : _ > _
-                  ? {
-                      nNum: _ / _,
-                      strPrefix: "Mega",
-                    }
-                  : _ > _
-                    ? {
-                        nNum: _ / _,
-                        strPrefix: "Kilo",
-                      }
-                    : {
-                        nNum: _,
-                        strPrefix: "",
-                      };
-          })(_, _),
-          _ = `#${_}${_.bValueIsInBytes ? "bytes" : "bits"}${_.bValueIsRate ? "_PerSecond" : ""}`;
-        return _._.Localize(
-          _,
-          _.toLocaleString((0, _._)(), {
-            minimumFractionDigits: _.nMinimumDigitsAfterDecimal,
-            maximumFractionDigits: _.nDigitsAfterDecimal,
-          }),
-        );
-      }
-      function _(_, _ = 0) {
-        let _;
-        return (
-          _ &&
-            (_ = {
-              maximumFractionDigits: _,
-            }),
-          _ ? _.toLocaleString((0, _._)(), _) : "" + _
-        );
-      }
-      function _(_) {
-        return _ > 1e9
-          ? Math.trunc(_ / 1e9).toString() + "B"
-          : _ > 1e6
-            ? Math.trunc(_ / 1e6).toString() + "M"
-            : _ > 1e3
-              ? Math.trunc(_ / 1e3).toString() + "K"
-              : _.toString();
       }
     },
   },

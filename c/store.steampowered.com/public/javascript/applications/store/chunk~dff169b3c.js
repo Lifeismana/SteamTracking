@@ -4181,6 +4181,10 @@
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
+                  coordinates: {
+                    _: 14,
+                    _: _,
+                  },
                 },
               }),
             _.sm_m
@@ -5577,7 +5581,7 @@
         constructor(_ = null) {
           super(),
             _.prototype.subject_type || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
+            _.Message.initialize(this, _, 0, -1, [3], null);
         }
         static sm_m;
         static sm_mbf;
@@ -5596,6 +5600,12 @@
                     _: 2,
                     _: _._.readEnum,
                     _: _._.writeEnum,
+                  },
+                  filters: {
+                    _: 3,
+                    _: _,
+                    _: !0,
+                    _: !0,
                   },
                 },
               }),
@@ -5998,6 +6008,11 @@
                     _: 13,
                     _: _._.readUint64String,
                     _: _._.writeUint64String,
+                  },
+                  ugc_content_type: {
+                    _: 14,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
                   },
                 },
               }),

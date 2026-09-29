@@ -3,6 +3,182 @@
   {
     chunkid: (module) => {
       module.exports = {
+        DevSummaryCtn: "_34fexyvsk4ZCS1pkTxhzel",
+        LargeFormat: "_1Gpg0Ssqz-6tv_-RNy2RNp",
+        CreatorDescCtn: "_1RKG_vMqjYBgcXZH6CoS3U",
+        SmallFormat: "_2uzyd3CZPlDXNcII3Zl5MV",
+        MinimalDisplay: "_266wPb9e0vcATAZmthTQaq",
+        DevSummaryWidgetCtn: "_3-CiOktJBVfuAsdgT4OW_f",
+        DevSummaryContent: "_2jbedard-PdnyO3XpMLNPg",
+        DevSummaryBackground: "_3F7LyeepqJvGpcXjroux4j",
+        AvatarLink: "Y9lYkfS_6GRwnSuFBgyQz",
+        Avatar: "_3x-VF5_m6i66QQrJJ-WgoN",
+        CreatorTitleCtn: "_141X0qDDTpudXQuTa1cYJG",
+        CreatorNameName: "_3F6BGfg9HSsjiOFeHmiuOZ",
+        CreatorTagline: "_3RKG3sfzCT1ven1_L1lBW1",
+        Title: "AW22-NNnUJaOiqzrVG1AX",
+        Followers: "_3NzMkIJWeFg7rV--RVOM_g",
+        FollowerCount: "B_sn9jeeUYTEEio2U3kqO",
+        SocialFollowersCtn: "_1e-4cFtf9LKQ3rhJWKcr2h",
+        FollowBtnCtn: "_1C9_c4mNpE6FRz-3PWv9sd",
+        FollowButton: "nDye27oueac7bocDYPZ0V",
+        FollowBtnText: "EZqO5MdZoyMOQJ38Sj0iH",
+        SocialContainer: "_258mBlkhbYBiZXTs4qrAP1",
+        SocialImg: "_1sKMwuRIbbgs9Z7qLAlsib",
+        SocialLink: "_3FZ-m-aObV2XxGykp5A1pt",
+        CuratorHoverCtn: "_3GV3_URzwPB-8VZj0tMins",
+        MembersListLink: "YN9wF_mOsT6piqNqvyyNz",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        "duration-app-launch": "800ms",
+        narrowWidth: "500px",
+        headerCapsuleImgWidth: "460",
+        headerCapsuleImgHeight: "215",
+        mainCapsuleImgWidth: "616",
+        mainCapsuleImgHeight: "353",
+        libraryAssetImgWidth: "300",
+        libraryAssetImgHeight: "450",
+        heroCapsuleImgWidth: "374",
+        heroCapsuleImgHeight: "448",
+        StoreSaleWidgetContainer: "t75Je5tr-0U-BmJ9zl5ia",
+        LibraryAssetExpandedDisplay: "_39Jz5Qi6nhOd7XvaNnbSoR",
+        SaleItemDefaultCapsuleDisplay: "_2kFm1akTi_PvgXVMGuiGXo",
+        BundleContentPreview: "_4fgFjJosEpAnm3TuEhO4q",
+        PreviewCtn: "_3y21gqoSEnLQ-LQl97kRb8",
+        MarketingMessage: "_3IdTKNXhXzkVoep4-5yZuN",
+        StoreSaleWidgetRight: "_3aTPAkD_nC4hFYjSSUGdIx",
+        StoreSaleWidgetHalfLeft: "_2OmLxbQ8PCPJL9p8YRyEKP",
+        StoreSaleWidgetTitle: "w75CJy5_YgzbJm91xnOQK",
+        StoreSaleWidgetLibraryAssetExtendedTop: "_3R3jAV3aZuBYZUeAW1nD7h",
+        StoreSaleWidgetLeft: "_1ERk_jpTDmAx8rJn5bJNLR",
+        StoreSaleDiscountBox: "_1kSDZm0Cg9anUkTfWFtwdN",
+        PurchaseOption: "z_iiAWZceRwDjLt3ZisRU",
+        StoreSaleWidgetImage: "x_kq8V9RpcQ0NN1peDKg7",
+        CapsuleMicroTrailer: "_1ZsPp8DWmkC4OPKARDotIS",
+        CapsulePlatform: "_3vk4H4zJk_wDD6oaJrsjuj",
+        StoreSaleWidgetContents: "_1nfJPebnVfFpujoINIrTwx",
+        StoreMetaDataCtn: "_28XzNZpa2zm6dfU_Hl1aoF",
+        StoreSaleItemRelease: "dY0SjUwvxyZTq7knLEKEc",
+        StoreSaleItemDev: "_3B7TyRytxk7VNgUkEksk_g",
+        StoreSaleItemReview: "_2ZlC6bcWXRrbEH_H3ikW_v",
+        TitleCtn: "_2hY5KQtdBm61wdeNXehgrm",
+        StoreSaleWidgetCrossCenterRight: "_3oOCqm5QnRABrDXfNWZCiV",
+        CapsuleBottomBar: "_1_ehE8jTqsTDnx5E7Sqjy7",
+        PlayNowButton: "_14BfXA3_1WV39l7v3kD_s_",
+        AddToLibraryButton: "_1ByCcqMjsaSpyZw0HZlDyi",
+        StoreActionWidgetContainer: "_1KKmxZOJSplMIyYiT9qVp9",
+        StoreSalePriceWidgetContainer: "_1so1AGD_m_uIBFDEc1ImOu",
+        StoreSaleWidgetBgTint: "_1RmkMAMYEGZOaFv3k49gfc",
+        LibraryFallbackAssetImageContainer: "_2qZSepj4cX-WLkospQs0Ep",
+        FallbackBackground: "-V2UzXJLqza_XoSPI7wz6",
+        SaleTagBlockCtn: "_1hS3ayvVLxIJlkxUDEBACP",
+        StoreSaleWidgetCenter: "_1kHYilvb5rc5aw0OmhmfNw",
+        StoreSaleLibraryAssetWidgetRight: "_101xD6rIYm8X_jp483Kshs",
+        StoreSaleWidgetReleaseAndTags: "_1N4IfOUIwuiYhgqyiJ_ilZ",
+        Bundle: "_292AerR2EXt-7RVrZp7E8K",
+        WidgetReleaseDateAndPlatformCtn: "_1OUpla9y9ki3n--MdoUpSs",
+        SaleItemBrowserRow: "_3_-EEQpFNke34pzfmip5yh",
+        StoreSaleWidgetRelease: "_3MahqhNDkJzVX6vf3ysCbc",
+        StoreSaleWidgetTags: "_38RGrHCxetbJdFlekFhXMJ",
+        AppTag: "_38998HcikvEZtZcJXwppxS",
+        StoreSaleWidgetShortDesc: "_2VdeXQqeuqu2i4yjprISF-",
+        LargeText: "x5UGgerCCNFPP0IR7S-PC",
+        TagTitle: "_1Tifv9nWMUHpqL-5PdjhNO",
+        TagBox: "_3vCIFKfpJCOL-zsUEUiAtt",
+        Tag: "_22IRYeqPYSxG2vqNmALNsh",
+        Categories: "UUvYZ6JvzIAlcFDV4wF7j",
+        SaleItemFullCapsuleDisplay: "_1b7dbi80Ody0jI0vYb_7bG",
+        Category: "_23oBdrL9Cnh9x11yw8hmaN",
+        CategoryIcon: "_2guay37SfoNrroBIe0UbYH",
+        ReviewScores: "_3uIw-iqrc6AKEcMLki94nj",
+        StoreSaleBroadcastWidgetRight: "_1xIPeza3-7471L4fvQRWBQ",
+        StoreSalePriceActionWidgetContainer: "_20HgIIui8JHLBf62qfz5Gr",
+        Action: "_3-6Yf-FWOYdz69902FtDwy",
+        Discounted: "w775QgXXCtmtG8yzEp-2u",
+        WishList: "_2mKhatcQBAj0oKWP1V_tFV",
+        StoreSalePriceBox: "kauOU9QnW8Fs0QpxzTBph",
+        SingleLineMode: "_1Ph5iLt6Bh7woGXf5RnIPB",
+        StoreSaleDiscountedPriceCtn: "_2KBGD_hHRCfMXm-DDYRbQX",
+        StoreSaleNewItem: "kT9bBl6aBZQ-0xiRlMWzc",
+        StoreOriginalPrice: "_1odBXcjq8-Q8SFXViJa7c6",
+        PrePurchase: "_1QuRa-ebvBejdSjmUkqX5v",
+        NewItem: "_1ScAL4Y0dGHeXycrpJYkAC",
+        PurchaseOptionDetails: "t7tIxWgiQRt2p2A979EUU",
+        InGameHover: "_yRMvMttBTHiO3_SMH6Or",
+        StoreSalePrepurchaseLabel: "_2mG_q95stW67uyZmLXcO8y",
+        SingleLineOriginalPrice: "_1jRZOgPPLTjiXtsrX_iB1O",
+        YourPriceLabel: "_1RGKRbbcPP2ImptkZ3LP6P",
+        BaseDiscount: "_3BJdajInVqrAsGwPFUAshC",
+        StoreSalePriceButton: "_PS7WNXgzr2qOl4HOjEIp",
+        OuterCapsuleContainer: "_1omVjlZWALGX34pum8v7SF",
+        BottomBarPriceInfo: "_2ogs95OHz8bo5FTfppAZiJ",
+        TrailerActive: "_13__6f3T57ykYT09Z7etmf",
+        CapsuleContainer: "_1kCTkXxE8CbUnnhSjsL-Kb",
+        Linked: "_2uiBcpls1KbtGPBEPSQyrA",
+        EventRow: "_3Ld-x7gljlKqiGE3WBsENh",
+        BottomCreatorRow: "_3HMU8TsxAklmNPNyGoeAZU",
+        CreatorLogo: "V0GgcGqSWSpKmV8RTzFU0",
+        CreatorName: "dxHZGdYWTxGXbxaQiceKZ",
+        AddToCartButton: "_1LJo1FYFdLFJE1u-PJcyxN",
+        AddToWishlistButton: "_1kZYzTTdH8XUXsYP9lgb-h",
+        HeaderCapsuleImageContainer: "_1W35jfl6uiYKf7Iwt3NNEz",
+        MainCapsuleImageContainer: "_3ghuGooDVCn0gUuocEnV8B",
+        HeroCapsuleImageContainer: "S9g2oScKWNbE4BrExvI19",
+        DiscoveryQueueCtn: "_1PaQQXx0817RqTxahOzbZT",
+        NoShadow: "_3xAYvMZ9m_TYNbwjyDr3d4",
+        VerticalCapsule: "IR8muj8HL9MD7GoRBp7LZ",
+        ForceLibrarySizing: "_1hSAcJwcSL1bbi-w5C5fjv",
+        CapsuleImage: "_2xiNqpMzhZh4tVcBPD6z1W",
+        LinkCapsuleImage: "_1AFjCLdN5rlqKicNNN4qJR",
+        CapsuleParentInfo: "ZsrUviKbsm6zNlc92WYd9",
+        ParentType: "-oMlD-aBQ0XixJxkc0cy5",
+        Banner: "_2qnY9VZwgA2qx1ydmUlsUm",
+        Blue: "_1f8WQvpQv-I5pqCmscp6iV",
+        EarlyAccessGradient: "_1Y1oAEI6qR7aE22ePmy-8S",
+        LinesImg: "_10MiXmZw9nyJIMVqHTS3FH",
+        CapsuleDecorators: "_1Ss9w5OINDsfSBbOR7VWp9",
+        BundleContentsCtnTransition: "_1O1d5Wj6hmDvM1KQDSEWBh",
+        Expanding: "_2B71vqrTAumZWP2eCwqPfY",
+        Expanded: "_1UxAPCy6v0_Fm-iAXFJMog",
+        Collapsing: "_2TTiL0BkOdhiWpE6m0k6j9",
+        BundleContentsCtn: "_2Fqilki7o63IJqfaEIIBpa",
+        BundleContentsTitle: "_3TirrWSdMt2tPeAOOY3D_-",
+        BundleShowButton: "_2W1zHZrECwIsSOb8OillGT",
+        ShowContentsButton: "_3h99aa2siCkcjDn4G8vKQY",
+        ShowContentsSection: "_4wRhe4a4sFJolBfzgS3Oi",
+        BundleContentItem: "OhPohJ5GY4yteVD6yWZA-",
+        StoreSaleWidgetOuterContainer: "_1YNtl1bfteFkaCFYHhtUMf",
+        ContentsCount: "PQWG8XlLSUl9LC-7e3cPB",
+        PreviewItem: "_3vQHsd2T2R-6xZB6sWSPRc",
+        DeckCompatIcon: "_2nXaXW4Ps268qjxYMblw3e",
+        BundleTag: "-D5ypo5W6aLJPMR1_L0y_",
+        PreviewImg: "_3Z8MJxQ_Ji953C5R6oQdgY",
+        DemoLayoutPopup: "tDBuR3ivkJbl0t9E_ssXD",
+        FreeWeekendBar: "_3zm9xR6YDSxfquPOjhHoRc",
+        FreeWeekendLabel: "_2Mqx0PhPACBhZxd70rTNo_",
+        RecommendationReason: "_19AVGu5eqFoeoiqvydT0Tv",
+        LocalizationSpan: "_8ZbRxdp7AJCWfdcbMmcye",
+        CapsuleName: "_16nzXvpmoPX2AHcWtWHQsU",
+        DiscountIconCtn: "_12oL_Na-4ZnfDriQ80BEBc",
+        MaxActionButtonWidth: "_1AiAr0lqTfJuoAry1CmxyW",
+        BackgroundAnimation: "_1CIMWCeT1o82vKuoVFS0Or",
+        "ItemFocusAnim-darkerGrey-nocolor": "QmvtbjNkXhoFsHYRkJ8pk",
+        "ItemFocusAnim-darkerGrey": "_2muPTTrVake-UfXJizQg6g",
+        "ItemFocusAnim-darkGreySettings": "_15cm3kzIBv3fn2fxYuqTJR",
+        "ItemFocusAnim-darkGrey": "_3WidOXfqJtMrQ7t9WsTNx",
+        "ItemFocusAnim-grey": "_3TjvvuiDzTihqHMxswC7z_",
+        "ItemFocusAnim-translucent-white-10": "_3u6erDX_vfSreCNiukX2S",
+        "ItemFocusAnim-translucent-white-20": "_1pBe5-hUwVCsRu0ZWAS7NK",
+        "ItemFocusAnimBorder-darkGrey": "_11_f57sto7UJFfYAgmuQ8_",
+        "ItemFocusAnim-green": "_1pwlLApsSR1PWl1ys4T9Ka",
+        focusAnimation: "XOkNr-sTpt-rrz1iaVQv4",
+        hoverAnimation: "_2A0UXZtbRj2Hc7vKFjV9xl",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         "duration-app-launch": "800ms",
         GameHoverCapsuleCtn: "_1isLDN8xbFyCDG5jtMO7J3",
         Loading: "_6exjsiWCk6IgWiQenqfQH",
@@ -91,6 +267,13 @@
         HoverContentTransition: "_14fzjUJx__1_iVvRQOFvNZ",
         Opening: "_1-VyPy3KZSzyBfUxYeZGHQ",
         Open: "_2lBsXkkcijYbtJ_ml1-6nE",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        AddToCartAnchorCtn: "_2qDFksxM_Q3AG6L1u8NwZU",
+        Action: "ttu4ikNa3-0XD2V-s6GcO",
+        ActionOutOfStock: "_1PlPor5x810Tggmt8VYmNm",
       };
     },
     chunkid: (module) => {
@@ -199,45 +382,6 @@
         "ItemFocusAnim-green": "_1ZB1uzf3hgyFkekpi0xZg5",
         focusAnimation: "WewegkENW7QZMuoX3r_v8",
         hoverAnimation: "NCIvCtzfGkBvu5KDz_CE1",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        AddToCartAnchorCtn: "_2ZqO4e00c6-Fr4hJvTJsAu",
-        Action: "yoe6d_43t3I6-mjbZGkLs",
-        ActionOutOfStock: "_3XwnF5hpyOwvxFT_v7PMhS",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        DevSummaryCtn: "_1k0S-tUF_ENycLJ7PWqbzS",
-        LargeFormat: "_1090TwnnSh07Rya_5ss37E",
-        CreatorDescCtn: "_3nKoQbWM1xYxsCfDoImGQ-",
-        SmallFormat: "_18tLexJfL4tGNabZ9Ywvlm",
-        MinimalDisplay: "ROZPQ29NfT-_S-vY5rMJp",
-        DevSummaryWidgetCtn: "A2B2VZqisd8LEU7zknWqk",
-        DevSummaryContent: "_23xa4AVp7kYtbslOOB8xly",
-        DevSummaryBackground: "_1TsqAyLSPMv7JrgVI6Jpnv",
-        AvatarLink: "_1N0rYLgFmHTfQng24QRoEh",
-        Avatar: "_3JepbxeEa0I4l8TnG9DeT5",
-        CreatorTitleCtn: "_2T8Ub04W0G2L6_3692y23L",
-        CreatorNameName: "_8196lUGpYeVntSAwJq-64",
-        CreatorTagline: "NX5WeT2qHbZGaVykMxMA2",
-        Title: "_37vyVYzsOKNDlPWnQ5zcMF",
-        Followers: "_2ZpFi_vScMetinFMtGp2WE",
-        FollowerCount: "_3cARehxbzcQp_dC3sKo3QH",
-        SocialFollowersCtn: "BT3Bjo-dSXZV11Cqy_Awo",
-        FollowBtnCtn: "_2artmqqQS2Rl8YMsi1nV-U",
-        FollowButton: "_1HwWXjF06mJ9sG_9KXlgA-",
-        FollowBtnText: "_1a5djsChaeoZViyFSGNom5",
-        SocialContainer: "_1o1Ds-OdAZcjo18bw9QiEH",
-        SocialImg: "_2v_K1-p6KHigjcjV3HlHsV",
-        SocialLink: "_3eCVbMRawBIqtu1HpE7qJR",
-        CuratorHoverCtn: "_30j_Rriv37jV9sEvTdi8Kw",
-        MembersListLink: "_3DO0NUX-db2kVZWScbJetR",
-        CreatorCarouselCtn: "_11Cu9S1VPnTs2MtOD6DUWN",
-        CreatorCarouselCrumbs: "_2EheiN3i0vJ-6LTaCsey78",
-        CreatorCarouselCrumb: "_3CIQhWZfRLsRxOmCy1obyV",
       };
     },
     chunkid: (module) => {
@@ -444,152 +588,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        "duration-app-launch": "800ms",
-        narrowWidth: "500px",
-        headerCapsuleImgWidth: "460",
-        headerCapsuleImgHeight: "215",
-        mainCapsuleImgWidth: "616",
-        mainCapsuleImgHeight: "353",
-        libraryAssetImgWidth: "300",
-        libraryAssetImgHeight: "450",
-        heroCapsuleImgWidth: "374",
-        heroCapsuleImgHeight: "448",
-        StoreSaleWidgetContainer: "_2hhNOdcC6yLwL_rugP3YLf",
-        LibraryAssetExpandedDisplay: "PZY_7wH_NY7OgzH9MBiB8",
-        SaleItemDefaultCapsuleDisplay: "_37iggltdgh0RtNIECJCfOj",
-        BundleContentPreview: "jQ5GanUKBEe7hhgCh6b5z",
-        PreviewCtn: "_1NM531LjOd5QmDktUetCOm",
-        MarketingMessage: "_3_q87LhuWitbYSEHOVKYlM",
-        StoreSaleWidgetRight: "v9uRg57bwOaPsvAnkXESO",
-        StoreSaleWidgetHalfLeft: "_111nfdz8Xyg7lDjTWv_OmK",
-        StoreSaleWidgetTitle: "_2ekpT6PjwtcFaT4jLQehUK",
-        StoreSaleWidgetLibraryAssetExtendedTop: "_1uLNByMlXsYSmrGPWyDNhE",
-        StoreSaleWidgetLeft: "_3DkfNrtTOLjNYd3yZliMzy",
-        StoreSaleDiscountBox: "cnkoFkzVCby40gJ0jGGS4",
-        PurchaseOption: "_2R_C2rCrJEg8G8_d7-QQKn",
-        StoreSaleWidgetImage: "yvqq8z2k4i7-Mzx-JHeNC",
-        CapsuleMicroTrailer: "_1M7n5f3gWCHv1wN1smoxWg",
-        CapsulePlatform: "_2bCf9u4rlC8De687HY6wnh",
-        StoreSaleWidgetContents: "AgwfelHhJjcEq6ZQ9ohVr",
-        StoreMetaDataCtn: "_2W2g30XYcaT1E3_IWsyVMK",
-        StoreSaleItemRelease: "vCEpeeiHJkcIDdtTkRfjT",
-        StoreSaleItemDev: "_3tIbO7JWeYXTD8fDol5_-f",
-        StoreSaleItemReview: "Kx5NfQxifS6Xw2JxtcV31",
-        TitleCtn: "_3rrH9dPdtHVRMzAEw82AId",
-        StoreSaleWidgetCrossCenterRight: "oW0H1sBVE8K8u0qbq_Tm5",
-        CapsuleBottomBar: "_3lmdEmwrmqe-kicNCZ9v-I",
-        PlayNowButton: "_38ePadMVKPpN2BnpideoQw",
-        AddToLibraryButton: "_1DrDh5P3SNgRdVAaUyel3G",
-        StoreActionWidgetContainer: "kW6m4Sjqacp5hykrj5LEo",
-        StoreSalePriceWidgetContainer: "_2s-O5T3qJJYR2AUq4b9jIN",
-        StoreSaleWidgetBgTint: "MvLJDXjfbme8Uw3OERaCb",
-        LibraryFallbackAssetImageContainer: "_1APLSpJeTPfN76xzyzVSfx",
-        FallbackBackground: "_3chRZTd1smybX8C-swWcAm",
-        SaleTagBlockCtn: "_1ZqQL1ugqx5VZZK7e7nZuc",
-        StoreSaleWidgetCenter: "_2asUTzZuAkj9cDRKsLvwRE",
-        StoreSaleLibraryAssetWidgetRight: "_1gLxXYZKQJSLc5MKYXEesv",
-        StoreSaleWidgetReleaseAndTags: "_3wryhCRrTuMULeq_YjNk-s",
-        Bundle: "_2GbhLyknhFLhpEOlbBXC3z",
-        WidgetReleaseDateAndPlatformCtn: "_3a6HRK-P6LK0-pxRKXYgyP",
-        SaleItemBrowserRow: "gASJ2lL_xmVNuZkWGvrWg",
-        StoreSaleWidgetRelease: "_1qvTFgmehUzbdYM9cw0eS7",
-        StoreSaleWidgetTags: "_2bkP-3b7dvr0a_qPdZEfHY",
-        AppTag: "_3FJnZuxmPA_MjxsF8BQQ5L",
-        StoreSaleWidgetShortDesc: "_3AsE5JhqLAiICKUYvZLpap",
-        LargeText: "_3FqDALHzNLR5fMMZTeBw8Z",
-        TagTitle: "v1i4WK3tk4FpXSJ5wC60U",
-        TagBox: "_1lqaDGTzuprpWRYk4_2JrN",
-        Tag: "_33yqka47vWurNqhnhLJb_m",
-        Categories: "_2hr4JZMbG9l2GKALFD0dO7",
-        SaleItemFullCapsuleDisplay: "_2sVvRzH7oPUUIVDDVO0MJj",
-        Category: "_2lQNYB6g6C7aiw0GDPe9fq",
-        CategoryIcon: "_2RJxWCkjuP3H-i8oLU5W2Q",
-        ReviewScores: "_3MxPBWjpjU_Gm8SIgi5g8A",
-        StoreSaleBroadcastWidgetRight: "_9VjYX3CYMn2y-wWpAn00Y",
-        StoreSalePriceActionWidgetContainer: "_1JuIpzMtS7-xZrnUmEQ4my",
-        Action: "_2zssEuiPfY5YdQlnihDfVD",
-        Discounted: "_1g0B-RjwkUV0_MDURgy3Bi",
-        WishList: "_1djkdp7OAd0mF3a90RKf27",
-        StoreSalePriceBox: "_3j4dI1yA7cRfCvK8h406OB",
-        SingleLineMode: "_1ZlGJxv-xQaABSvaVvMlNq",
-        StoreSaleDiscountedPriceCtn: "_3NhLu7mTdty7JufpSpz6Re",
-        StoreSaleNewItem: "_2_KY_e11FV0ftXR2_7TMmP",
-        StoreOriginalPrice: "_3fFFsvII7Y2KXNLDk_krOW",
-        PrePurchase: "_2f7BMv_bJMTrHmaOF8B3Ws",
-        NewItem: "_2xCT1pUf2c9TICHoMcQE0d",
-        PurchaseOptionDetails: "_17_ynHC8fq9_LghcLrJYmW",
-        InGameHover: "axjdi0dhiB17GHjL5FRCr",
-        StoreSalePrepurchaseLabel: "_1Fru-E7WQMr8G_aR2sMg5F",
-        SingleLineOriginalPrice: "t7Gt8aeopD7JPlhcNTqGV",
-        YourPriceLabel: "_1stCJEQuG2FqlQr_q9AgR2",
-        BaseDiscount: "_3mInDnGL3LlUC7uPs1CfOP",
-        StoreSalePriceButton: "_1BejQFnnmkHMi9stswiJzf",
-        OuterCapsuleContainer: "_1dKR2IPNQSHs1MAIXBvt_R",
-        BottomBarPriceInfo: "_1X3j2g29SBtsrFMgNiKi_Y",
-        CapsuleContainer: "_22AcxR1RBDH6i-gjKRHYk0",
-        Linked: "_3b7bzOQeDc139QX27AIMtM",
-        EventRow: "_1UMFnczt69Ka8nOWKMzKJR",
-        BottomCreatorRow: "_1JrUubE3c7FdJsMxYYxbt",
-        CreatorLogo: "_3Krfug3wchu0qwGYQbbsHL",
-        CreatorName: "Fmi-agZ0W7_4TkZ7CNquC",
-        AddToCartButton: "_2iWMRE6knpPZLgHWASy5BH",
-        AddToWishlistButton: "_2YfaLBUZmFkJ3NpkieGzS3",
-        HeaderCapsuleImageContainer: "_2oW_y7Mm3ihf1XQ0C1VWhx",
-        MainCapsuleImageContainer: "_1vpxH37o7mJotC0IoqWbqy",
-        HeroCapsuleImageContainer: "vnhlb8EFU45PU6qG2GBDW",
-        DiscoveryQueueCtn: "_2uX2GFSEk3nkWxRsaBXaeG",
-        NoShadow: "lxQeFs3wUE9dLxZkpEWtt",
-        VerticalCapsule: "_3sy8XcvOMnFJv1_Edwpzqv",
-        ForceLibrarySizing: "_25KI3ndwISqbgBdtNxpujP",
-        CapsuleImage: "_2eQ4mkpf4IzUp1e9NnM2Wr",
-        LinkCapsuleImage: "_2xO8H8kHMGocbbjupWJ7Nt",
-        CapsuleParentInfo: "_2erfWpFrn1tZTPEbq97SuW",
-        ParentType: "_3FCPPT5eoSXF0nNcICVdP6",
-        Banner: "_2gxv9cF-4n9wq4yxruOTNl",
-        Blue: "_2o-5t6bgEJxfbWVSmxT88V",
-        EarlyAccessGradient: "_2Hl_ERfCdYklXHAYAqvd4R",
-        LinesImg: "_3LecBjgbnwvS6bCFqxs6SC",
-        CapsuleDecorators: "_1xNQcxU9_OtQ-_PrMbviS4",
-        BundleContentsCtnTransition: "_24KNcWMI5Yvb_AnPAb23Fm",
-        Expanding: "_38KIqxQJ2UZxWKjh4XFZrh",
-        Expanded: "hPc1lu4wYeTfpyzGPwPIa",
-        Collapsing: "_2NmI1RTJL46CD1bmy9p7U7",
-        BundleContentsCtn: "_34acuCI4lsvrR8ezmi7K1E",
-        BundleContentsTitle: "hhdk89lN3EL3ieRxGPbyl",
-        BundleShowButton: "_2Vu78ZkZCgLm-FV4KStixO",
-        ShowContentsButton: "-VlK4AN84fDgapWwCDax2",
-        ShowContentsSection: "fsPeLo8K4uDXedwKw4_sG",
-        BundleContentItem: "_2sdNOCzaF2AIAuenP19tA6",
-        StoreSaleWidgetOuterContainer: "_1_P15GG6AKyF_NMX2j4-Mu",
-        ContentsCount: "_353LzpA83V-kiAWaKcQAFg",
-        PreviewItem: "_2yhQb4aKtskchqwmpCVbMq",
-        DeckCompatIcon: "_1Nju8xukRGXgeu2mN0nVjT",
-        BundleTag: "_1qR-LifiFC4bCiow5xRIy0",
-        PreviewImg: "_1jx70oYOJWzNj7A5gNRxhg",
-        DemoLayoutPopup: "_2tmp27YgSoUCJSBJA4t5yt",
-        FreeWeekendBar: "_2SCofLY66uBY_jjrTzNjBN",
-        FreeWeekendLabel: "_21B6LWEBK8rKCmK8COTVRq",
-        RecommendationReason: "_3Q_taCjMHNZqbKEr1-r2GQ",
-        LocalizationSpan: "_3bCSmg_cQ3aTa3waFLT6o7",
-        CapsuleName: "_31P1R5vTMyJ5RwWAfVoKYG",
-        DiscountIconCtn: "_3Qt9S4lxTBuJqoY2PidC5h",
-        MaxActionButtonWidth: "_3GOwBXz8cR_9njnfMGlp7b",
-        BackgroundAnimation: "_1k6sq680iiVKySIMXNcHkL",
-        "ItemFocusAnim-darkerGrey-nocolor": "_34Tp7N_mW2y7TOcBFxCQVo",
-        "ItemFocusAnim-darkerGrey": "WQW1YbFeZjtPKckWVFjzB",
-        "ItemFocusAnim-darkGreySettings": "_2hTOwEn75PZ0XqJLLH6Yzc",
-        "ItemFocusAnim-darkGrey": "_3T33tEqMtzz3ijG8DkMXYZ",
-        "ItemFocusAnim-grey": "_1VqQfVz7N0T1g4AHmuCQu8",
-        "ItemFocusAnim-translucent-white-10": "jiBNibpWxZkJeyBzbrB5j",
-        "ItemFocusAnim-translucent-white-20": "_1y2_IkearpG-2NoiPwZu0U",
-        "ItemFocusAnimBorder-darkGrey": "_1LiqE1tXtbXey4AKzgFJfX",
-        "ItemFocusAnim-green": "_34pf2FqL7CWP6V9VNzPEIS",
-        focusAnimation: "_1wLvhANps-c7yKLact-7v8",
-        hoverAnimation: "_2FuCM99jbjgMa0JFZoisSA",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         Dark: "_2UAf_T9P3-2l5Rr-IlNksx",
         Background: "yjs9mmsKYDARPUPSoBFw3",
         Foreground: "JgT6ZW65muFgrXnrRrXyD",
@@ -634,6 +632,71 @@
         StatusCaution: "E9t9jUT0k_0xGdy7HbJfd",
         StatusInfo: "_38gm-PDPbi6lw1-aiH81HR",
         StatusIncomplete: "ZGxYVjsUSjHLRHIWkx4-L",
+      };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        return (0, _._)(
+          _,
+          (function (_) {
+            const _ = _?.jsondata?.read_more_link;
+            if (!_) return;
+            const _ = (0, _._)(_).toLocaleLowerCase();
+            return _ ? [_] : void 0;
+          })(_),
+        );
+      }
+      function _(_, _) {
+        if (!_) return "";
+        if (!(0, _._)(_)) return (0, _._)(_);
+        const _ = _(_, _) ? (0, _._)(_) : _;
+        return (_._.IN_CLIENT ? "steam://openurl_external/" : "") + _;
+      }
+      function _(_, _, _) {
+        const _ = _.toLowerCase().startsWith("http") ? _ : "http://" + _;
+        return (0, _.jsx)(_, {
+          url: _,
+          event: _,
+          children: _ || _,
+        });
+      }
+      const _ = (_) => {
+        const { url: _, event: _, className: _, style: _ } = _;
+        let _ = (0, _._)(_);
+        _ = _(_, _);
+        const _ = (0, _._)(_) ? "noopener nofollow" : void 0,
+          _ =
+            "string" == typeof _.children &&
+            _.children.length > 0 &&
+            _ &&
+            !_.startsWith("steam://")
+              ? (0, _._)(_)
+              : void 0;
+        return (0, _.jsx)(_._, {
+          toolTipContent: _,
+          direction: "top",
+          children: (0, _.jsx)(_._, {
+            className: _,
+            href: _,
+            rel: _,
+            _: _._,
+            style: _,
+            children: _.children,
+          }),
+        });
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -2091,6 +2154,336 @@
         _: () => _,
         _: () => _,
       });
+      var _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      !(function (_) {
+        (_[(_.k_ECuratorFollow = 1)] = "k_ECuratorFollow"),
+          (_[(_.k_ECuratorUnfollow = 2)] = "k_ECuratorUnfollow"),
+          (_[(_.k_ECuratorIgnore = 3)] = "k_ECuratorIgnore"),
+          (_[(_.k_ECuratorUnignore = 4)] = "k_ECuratorUnignore");
+      })(_ || (_ = {}));
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      const _ = (_) => {
+        const {
+            className: _,
+            bIgnored: _,
+            bApplyingFollowing: _,
+            bFollowing: _,
+            onFollowClick: _,
+            followType: _,
+          } = _,
+          { elDialogElement: _, fnShowLogonDialog: _ } = (0, _._)();
+        if (!(0, _._)()) return null;
+        let _ = null;
+        switch (_) {
+          case "app":
+            _ = (0, _._)("#text_store_follow_desc");
+            break;
+          case "creatorhome":
+            _ = (0, _._)("#CreatorHome_Follow_tooltip");
+            break;
+          case "steamcurator":
+            _ = (0, _._)("#steam_curator_follow_ttip");
+            break;
+          case "group":
+            _ = (0, _._)("#steam_group_follow_ttip");
+        }
+        return _
+          ? (0, _.jsxs)(_.Fragment, {
+              children: [
+                (0, _.jsx)(_._, {
+                  toolTipContent: _ || _ ? void 0 : _,
+                  children: (0, _.jsxs)(_._, {
+                    className: (0, _._)(
+                      _().Button,
+                      _().FollowButton,
+                      "FollowButton",
+                      _,
+                      _ ? "Followed" : "",
+                    ),
+                    onClick: () => {
+                      _._.logged_in ? _() : _();
+                    },
+                    children: [
+                      _ &&
+                        (0, _.jsx)(_._, {
+                          size: 15,
+                        }),
+                      !_ && (_ || _) && (0, _.jsx)(_.Jlk, {}),
+                      (0, _.jsx)("div", {
+                        className: (0, _._)(_().FollowBtnText, "FollowBtnText"),
+                        children:
+                          !_ &&
+                          (_
+                            ? (0, _._)("#Button_Followed")
+                            : _
+                              ? (0, _._)("#Button_Ignored")
+                              : (0, _._)("#Button_Follow")),
+                      }),
+                    ],
+                  }),
+                }),
+                _,
+              ],
+            })
+          : (console.error("CommonFollowButton unexpected type", _), null);
+      };
+      function _(_) {
+        const {
+            followType: _,
+            fnSuccessCallback: _,
+            clanAccountID: _,
+            className: _,
+          } = _,
+          [_, _] = _.useState(!1),
+          { data: _ } = (0, _._)(_ ? void 0 : _),
+          _ = (0, _._)(_),
+          _ = (0, _._)(_),
+          { mutateAsync: _ } = (function (_, _) {
+            const _ = (0, _._)(),
+              _ = _._.accountid;
+            return (0, _._)({
+              mutationKey: ["useUpdateCuratorAffinity", _, _, _],
+              mutationFn: async () => {
+                if (null == _) return !1;
+                const _ = _ == _.k_ECuratorFollow || _ == _.k_ECuratorUnfollow,
+                  _ = _ == _.k_ECuratorFollow || _ == _.k_ECuratorIgnore,
+                  _ = `${_._.STORE_BASE_URL}curators/${_ ? "ajaxfollow/" : "ajaxignore/"}`,
+                  _ = new FormData();
+                _.append("clanid", "" + _),
+                  _.append("sessionid", (0, _._)()),
+                  _.append(_ ? "follow" : "ignore", _ ? "1" : "0");
+                const _ = await fetch(_, {
+                    method: "POST",
+                    body: _,
+                    credentials: "include",
+                  }),
+                  _ = await _.json();
+                if (!_._)
+                  throw new Error(
+                    `Curator Affinity: ${_ ? "Follow" : "Ignore"} Currator ${_ ? "add" : "remove"} failed (${_.status} / ${_.msg})`,
+                  );
+                return _.is_creator;
+              },
+              onMutate: () => {
+                if (null != _) {
+                  const _ =
+                    _ == _.k_ECuratorUnfollow || _ == _.k_ECuratorUnignore;
+                  __webpack_require__(
+                    _ == _.k_ECuratorFollow
+                      ? [
+                          {
+                            clanAccountID: _,
+                          },
+                        ]
+                      : void 0,
+                    _ == _.k_ECuratorIgnore
+                      ? [
+                          {
+                            clanAccountID: _,
+                          },
+                        ]
+                      : void 0,
+                    _
+                      ? [
+                          {
+                            clanAccountID: _,
+                          },
+                        ]
+                      : void 0,
+                  );
+                }
+              },
+              onError: (_) => {
+                if (null != _) {
+                  const _ = _ == _.k_ECuratorFollow || _ == _.k_ECuratorIgnore;
+                  __webpack_require__(
+                    _ == _.k_ECuratorUnfollow
+                      ? [
+                          {
+                            clanAccountID: _,
+                          },
+                        ]
+                      : void 0,
+                    _ == _.k_ECuratorUnignore
+                      ? [
+                          {
+                            clanAccountID: _,
+                          },
+                        ]
+                      : void 0,
+                    _
+                      ? [
+                          {
+                            clanAccountID: _,
+                          },
+                        ]
+                      : void 0,
+                    _
+                      ? [
+                          {
+                            clanAccountID: _,
+                            is_creator: !0,
+                          },
+                        ]
+                      : void 0,
+                  );
+                }
+              },
+              onSuccess: (_) => {
+                _ &&
+                  _ &&
+                  __webpack_require__(void 0, void 0, void 0, [
+                    {
+                      clanAccountID: _,
+                      is_creator: !0,
+                    },
+                  ]),
+                  (0, _._)();
+              },
+            });
+          })(_, _ ? _.k_ECuratorUnfollow : _.k_ECuratorFollow),
+          [_, _, _] = (0, _._)(),
+          _ = _.useCallback(async () => {
+            null != _ && (_(!0), await _(), _(!1), __webpack_require__?.(_));
+          }, [_, _, _]);
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_, {
+              className: _,
+              bIgnored: Boolean(_),
+              bFollowing: Boolean(_),
+              bApplyingFollowing: _,
+              onFollowClick: () => {
+                _._.is_limited ? _() : _();
+              },
+              followType:
+                _ ?? (_?.is_creator_home ? "creatorhome" : "steamcurator"),
+            }),
+            (0, _.jsx)(_._, {
+              active: _,
+              children: (0, _.jsx)(_._, {
+                closeModal: _,
+              }),
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const { appid: _, className: _ } = _,
+          [_, _] = _.useState(!1),
+          _ = (0, _._)(_),
+          _ = (0, _._)(_),
+          _ = (0, _._)(),
+          _ = _._.GetSNRLinkParam(_),
+          { mutateAsync: _ } = (0, _._)(_, !_, _),
+          _ = _.useCallback(async () => {
+            _(!0), await _(), _(!1);
+          }, [_]);
+        return (0, _.jsx)(_, {
+          className: _,
+          bIgnored: Boolean(_),
+          bFollowing: Boolean(_),
+          bApplyingFollowing: _,
+          onFollowClick: _,
+          followType: "app",
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = (_) => {
+        let _ = _._.HELP_BASE_URL + "wizard/HelpWithLimitedAccount";
+        return (0, _.jsx)(_._, {
+          strTitle: (0, _._)("#Informational_Message"),
+          onCancel: _.closeModal,
+          onOK: _.closeModal,
+          bAlertDialog: !0,
+          children: (0, _.jsx)("div", {
+            children: (0, _._)(
+              _.strTokenOverride || "#User_LimitedAccount",
+              (0, _.jsx)("a", {
+                href: _,
+                target: _._.IN_CLIENT ? void 0 : "_blank",
+                rel: "noopener noreferrer",
+                children: (0, _._)("#User_LimitedAccount_UrlInfo"),
+              }),
+            ),
+          }),
+        });
+      };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        return _ == _._._ ? "bundle" : _ == _._._ ? "sub" : (_._._, "app");
+      }
+      function _(_, _) {
+        const _ = _ || (Boolean(_) ? _._ : _._);
+        return [Boolean(_), _];
+      }
+      const _ = (_) => {
+        const { appid: _ } = _,
+          _ = (0, _.jsx)("div", {
+            className: "ImpressionTrackedElement",
+            children: _.children,
+          });
+        return _
+          ? (0, _.jsx)(_._, {
+              appID: _,
+              children: _,
+            })
+          : _;
+      };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3261,6 +3654,354 @@
       __webpack_require__._(module_exports, {
         _: () => _,
       });
+      var _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.packageid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  packageid: {
+                    _: 1,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
+                  },
+                  country_code: {
+                    _: 2,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CPhysicalGoods_CheckInventoryAvailableByPackage_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.inventory_available || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  inventory_available: {
+                    _: 1,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  high_pending_orders: {
+                    _: 2,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CPhysicalGoods_CheckInventoryAvailableByPackage_Response";
+        }
+      }
+      !(function (_) {
+        _.CheckInventoryAvailableByPackage = function (_, _, _) {
+          return _.SendMsg(
+            "PhysicalGoods.CheckInventoryAvailableByPackage#1",
+            (0, _._)(_, _, _),
+            _,
+            {
+              bConstMethod: !0,
+              ePrivilege: 0,
+              eWebAPIKeyRequirement: 1,
+            },
+          );
+        };
+      })(_ || (_ = {}));
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = {
+        high_pending_orders: !1,
+        inventory_available: !0,
+      };
+      function _(_) {
+        const _ = (0, _._)(),
+          { data: _ } = (0, _._)(_),
+          _ = (0, _._)({
+            queryKey: [
+              _?._ || _._,
+              _?.type || "invalid",
+              _?.item_type || "invalid",
+            ],
+            queryFn: () =>
+              (async function (_, _) {
+                if (!_ || _.item_type !== _._._ || _.type !== _._._) return _;
+                const _ = _._.Init(_);
+                __webpack_require__.Body().set_packageid(_._ || 0),
+                  __webpack_require__.Body().set_country_code(_._.country_code);
+                const _ = await _.CheckInventoryAvailableByPackage(_, _);
+                if (_.GetEResult() !== _._)
+                  throw (
+                    (console.error(
+                      "Received error from FetchPhysicalGoodsStock",
+                      _.GetEResult(),
+                    ),
+                    new Error(
+                      `Error from FetchPhysicalGoodsStock: ${_.GetEResult()}`,
+                    ))
+                  );
+                return _.Body().toObject();
+              })(_, _),
+            enabled: Boolean(_ && _.type === _._._),
+          });
+        return _.isLoading ? null : _.data;
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { _: _, className: _ } = _,
+          _ = (0, _._)(),
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          _ = _(_),
+          { bIsOwned: _ } = (0, _._)(_),
+          _ = (0, _._)(_),
+          _ = (0, _.useCallback)(() => {
+            if (_) {
+              let _ = _.appid;
+              _.related_items?.parent_appid &&
+                _.type != _._._ &&
+                (_ = _.related_items.parent_appid),
+                (0, _._)(window, `steam://run/${_}`);
+            }
+          }, [_]);
+        if (!_ || !_ || !_ || _.type == _._._) return null;
+        const _ =
+          _.is_free ||
+          (null != _.final_price_in_cents && "0" == _.final_price_in_cents) ||
+          (_.discount_pct && _.discount_pct >= 100);
+        if (_.item_type == _._._)
+          if (_.type == _._._) {
+            if (!_)
+              return (0, _.jsx)(_._, {
+                size: "small",
+                position: "center",
+              });
+            if (!_.inventory_available)
+              return (0, _.jsx)("div", {
+                className: (0, _._)(_().ActionOutOfStock, _),
+                children: (0, _.jsxs)("span", {
+                  children: [" ", _._.Localize("#Sale_ReserveExhausted")],
+                }),
+              });
+          } else if (_ && _.included_appids && _.included_appids.length > 1)
+            return null;
+        if (_.item_type == _._._) {
+          if (_.is_coming_soon && !_.packageid) return null;
+          if (_ && _.type === _._._) return null;
+          if (!_ && _.is_free_to_keep) {
+            if (_._.IN_CLIENT || "store" != (0, _._)()) {
+              const _ = `${_._.IN_CLIENT ? "steam://openurl/" : ""}${_}`;
+              return (0, _.jsx)("div", {
+                onClick: (_) => (0, _._)(_, _),
+                className: (0, _._)(_().Action, _),
+                children: (0, _.jsx)("span", {
+                  children: _._.Localize(
+                    "#EventDisplay_CallToAction_VisitStore",
+                  ),
+                }),
+              });
+            }
+            {
+              const _ = (0, _._)(
+                `${_._.STORE_BASE_URL}freelicense/addfreelicense`,
+                _,
+              );
+              return (0, _.jsxs)("form", {
+                action: _,
+                method: "POST",
+                children: [
+                  (0, _.jsx)("input", {
+                    type: "hidden",
+                    name: "subid",
+                    value: _.packageid,
+                  }),
+                  (0, _.jsx)("input", {
+                    type: "hidden",
+                    name: "sessionid",
+                    value: (0, _._)(),
+                  }),
+                  (0, _.jsx)("button", {
+                    className: (0, _._)(_().Action, _),
+                    type: "submit",
+                    children: _._.Localize(
+                      "#EventDisplay_CallToAction_AddToAccount",
+                    ),
+                  }),
+                ],
+              });
+            }
+          }
+          if ((_ || _) && !_.is_coming_soon) {
+            let _ = _._.Localize("#EventDisplay_CallToAction_PlayNowForFree");
+            return (
+              _
+                ? (_ = _._.Localize("#EventDisplay_CallToAction_PlayNow"))
+                : _.is_free_temporarily &&
+                  (_ = _._.Localize("#EventDisplay_CallToAction_AddToAccount")),
+              (0, _.jsx)("div", {
+                className: (0, _._)(_().Action, _),
+                onClick: _,
+                children: (0, _.jsx)("span", {
+                  children: _,
+                }),
+              })
+            );
+          }
+          if ("" == _.formatted_final_price)
+            return (0, _.jsx)("a", {
+              href: _,
+              className: (0, _._)(_().Action, _),
+              children: _._.Localize("#EventDisplay_CallToAction_VisitStore"),
+            });
+        }
+        return (0, _.jsx)(_, {
+          className: _,
+          storeItemBestPurchaseOption: _,
+          storeItemDefaultData: _,
+        });
+      }
+      function _(_) {
+        const {
+            className: _,
+            storeItemBestPurchaseOption: _,
+            storeItemDefaultData: _,
+          } = _,
+          _ = (0, _._)(),
+          { mutate: _ } = (0, _._)(
+            _?.packageid,
+            _?.bundleid,
+            !1,
+            void 0,
+            _.feature,
+          );
+        return (0, _.jsx)("div", {
+          className: (0, _._)(_().Action, _),
+          onClick: () => _(),
+          children: (0, _.jsx)("span", {
+            children: _._.Localize("#Store_AddToCart"),
+          }),
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3629,14 +4370,14 @@
                 }),
               });
           return (
-            ((0, _._)() || (0, _._)() || (0, _._)()) && _?.steamos_linux
+            "linux" === _._.PLATFORM && _?.steamos_linux
               ? (_ = (0, _.jsx)("span", {
                   title: _._.Localize("#Platform_Linux"),
                   children: (0, _.jsx)(_.Qte, {
                     "aria-label": _._.Localize("#Platform_Linux"),
                   }),
                 }))
-              : (0, _._)() && _?.mac
+              : "macos" === _._.PLATFORM && _?.mac
                 ? (_ = (0, _.jsx)("span", {
                     title: _._.Localize("#Platform_Mac"),
                     children: (0, _.jsx)(_.kPc, {
@@ -5100,79 +5841,6 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, _) {
-        return (0, _._)(
-          _,
-          (function (_) {
-            if (!_) return;
-            let _ = _?.jsondata?.read_more_link
-              ? (0, _._)(_.jsondata.read_more_link).toLocaleLowerCase()
-              : void 0;
-            return _ ? [_] : void 0;
-          })(_),
-        );
-      }
-      function _(_, _) {
-        return _
-          ? (_ = (0, _._)(_)
-              ? _(_, _)
-                ? (_._.IN_CLIENT ? "steam://openurl_external/" : "") +
-                  (0, _._)(_)
-                : (_._.IN_CLIENT ? "steam://openurl_external/" : "") + _
-              : (0, _._)(_))
-          : "";
-      }
-      function _(_, _, _) {
-        let _ = _;
-        return (
-          _.toLowerCase().startsWith("http") || (_ = "http://" + _),
-          (0, _.jsx)(_, {
-            url: _,
-            event: _,
-            children: _ || _,
-          })
-        );
-      }
-      const _ = (_) => {
-        const { url: _, event: _, className: _, style: _ } = _;
-        let _,
-          _ = (0, _._)(_);
-        (_ = _(_, _)), (0, _._)(_) && (_ = "noopener nofollow");
-        const _ =
-          "string" == typeof _.children &&
-          _.children.length > 0 &&
-          _ &&
-          !_.startsWith("steam://")
-            ? (0, _._)(_)
-            : void 0;
-        return (0, _.jsx)(_._, {
-          toolTipContent: _,
-          direction: "top",
-          children: (0, _.jsx)(_._, {
-            className: _,
-            href: _,
-            rel: _,
-            _: _._,
-            style: _,
-            children: _.children,
-          }),
-        });
-      };
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -5846,6 +6514,7 @@
               role: "presentation",
             });
           case _._:
+          default:
             return (0, _.jsx)(_.WX$, {
               className: _().CategoryIcon,
               role: "presentation",
@@ -5866,6 +6535,7 @@
               role: "presentation",
             });
           case _._:
+          default:
             return (0, _.jsx)(_.WX$, {
               className: _().CategoryIcon,
               role: "presentation",
@@ -6111,682 +6781,6 @@
             return "#SteamOSCompatibility_Category_Unknown";
         }
       }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.packageid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  packageid: {
-                    _: 1,
-                    _: _._.readInt32,
-                    _: _._.writeInt32,
-                  },
-                  country_code: {
-                    _: 2,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CPhysicalGoods_CheckInventoryAvailableByPackage_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.inventory_available || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  inventory_available: {
-                    _: 1,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                  high_pending_orders: {
-                    _: 2,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CPhysicalGoods_CheckInventoryAvailableByPackage_Response";
-        }
-      }
-      !(function (_) {
-        _.CheckInventoryAvailableByPackage = function (_, _, _) {
-          return _.SendMsg(
-            "PhysicalGoods.CheckInventoryAvailableByPackage#1",
-            (0, _._)(_, _, _),
-            _,
-            {
-              bConstMethod: !0,
-              ePrivilege: 0,
-              eWebAPIKeyRequirement: 1,
-            },
-          );
-        };
-      })(_ || (_ = {}));
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = {
-        high_pending_orders: !1,
-        inventory_available: !0,
-      };
-      function _(_) {
-        const _ = (0, _._)(),
-          { data: _ } = (0, _._)(_),
-          _ = (0, _._)({
-            queryKey: [
-              _?._ || _._,
-              _?.type || "invalid",
-              _?.item_type || "invalid",
-            ],
-            queryFn: () =>
-              (async function (_, _) {
-                if (!_ || _.item_type !== _._._ || _.type !== _._._) return _;
-                const _ = _._.Init(_);
-                __webpack_require__.Body().set_packageid(_._ || 0),
-                  __webpack_require__.Body().set_country_code(_._.country_code);
-                const _ = await _.CheckInventoryAvailableByPackage(_, _);
-                if (_.GetEResult() !== _._)
-                  throw (
-                    (console.error(
-                      "Received error from FetchPhysicalGoodsStock",
-                      _.GetEResult(),
-                    ),
-                    new Error(
-                      `Error from FetchPhysicalGoodsStock: ${_.GetEResult()}`,
-                    ))
-                  );
-                return _.Body().toObject();
-              })(_, _),
-            enabled: Boolean(_ && _.type === _._._),
-          });
-        return _.isLoading ? null : _.data;
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { _: _, className: _ } = _,
-          _ = (0, _._)(),
-          { data: _ } = (0, _._)(_),
-          { data: _ } = (0, _._)(_),
-          { data: _ } = (0, _._)(_),
-          _ = _(_),
-          { bIsOwned: _ } = (0, _._)(_),
-          _ = (0, _._)(_),
-          _ = (0, _.useCallback)(() => {
-            if (_) {
-              let _ = _.appid;
-              _.related_items?.parent_appid &&
-                _.type != _._._ &&
-                (_ = _.related_items.parent_appid),
-                (0, _._)(window, `steam://run/${_}`);
-            }
-          }, [_]);
-        if (!_ || !_ || !_ || _.type == _._._) return null;
-        const _ =
-          _.is_free ||
-          (null != _.final_price_in_cents && "0" == _.final_price_in_cents) ||
-          (_.discount_pct && _.discount_pct >= 100);
-        if (_.item_type == _._._)
-          if (_.type == _._._) {
-            if (!_)
-              return (0, _.jsx)(_._, {
-                size: "small",
-                position: "center",
-              });
-            if (!_.inventory_available)
-              return (0, _.jsx)("div", {
-                className: (0, _._)(_().ActionOutOfStock, _),
-                children: (0, _.jsxs)("span", {
-                  children: [" ", _._.Localize("#Sale_ReserveExhausted")],
-                }),
-              });
-          } else if (_ && _.included_appids && _.included_appids.length > 1)
-            return null;
-        if (_.item_type == _._._) {
-          if (_.is_coming_soon && !_.packageid) return null;
-          if (_ && _.type === _._._) return null;
-          if (!_ && _.is_free_to_keep) {
-            if (_._.IN_CLIENT || "store" != (0, _._)()) {
-              const _ = `${_._.IN_CLIENT ? "steam://openurl/" : ""}${_}`;
-              return (0, _.jsx)("div", {
-                onClick: (_) => (0, _._)(_, _),
-                className: (0, _._)(_().Action, _),
-                children: (0, _.jsx)("span", {
-                  children: _._.Localize(
-                    "#EventDisplay_CallToAction_VisitStore",
-                  ),
-                }),
-              });
-            }
-            {
-              const _ = (0, _._)(
-                `${_._.STORE_BASE_URL}freelicense/addfreelicense`,
-                _,
-              );
-              return (0, _.jsxs)("form", {
-                action: _,
-                method: "POST",
-                children: [
-                  (0, _.jsx)("input", {
-                    type: "hidden",
-                    name: "subid",
-                    value: _.packageid,
-                  }),
-                  (0, _.jsx)("input", {
-                    type: "hidden",
-                    name: "sessionid",
-                    value: (0, _._)(),
-                  }),
-                  (0, _.jsx)("button", {
-                    className: (0, _._)(_().Action, _),
-                    type: "submit",
-                    children: _._.Localize(
-                      "#EventDisplay_CallToAction_AddToAccount",
-                    ),
-                  }),
-                ],
-              });
-            }
-          }
-          if ((_ || _) && !_.is_coming_soon) {
-            let _ = _._.Localize("#EventDisplay_CallToAction_PlayNowForFree");
-            return (
-              _
-                ? (_ = _._.Localize("#EventDisplay_CallToAction_PlayNow"))
-                : _.is_free_temporarily &&
-                  (_ = _._.Localize("#EventDisplay_CallToAction_AddToAccount")),
-              (0, _.jsx)("div", {
-                className: (0, _._)(_().Action, _),
-                onClick: _,
-                children: (0, _.jsx)("span", {
-                  children: _,
-                }),
-              })
-            );
-          }
-          if ("" == _.formatted_final_price)
-            return (0, _.jsx)("a", {
-              href: _,
-              className: (0, _._)(_().Action, _),
-              children: _._.Localize("#EventDisplay_CallToAction_VisitStore"),
-            });
-        }
-        return (0, _.jsx)(_, {
-          className: _,
-          storeItemBestPurchaseOption: _,
-          storeItemDefaultData: _,
-        });
-      }
-      function _(_) {
-        const {
-            className: _,
-            storeItemBestPurchaseOption: _,
-            storeItemDefaultData: _,
-          } = _,
-          _ = (0, _._)(),
-          { mutate: _ } = (0, _._)(
-            _?.packageid,
-            _?.bundleid,
-            !1,
-            void 0,
-            _.feature,
-          );
-        return (0, _.jsx)("div", {
-          className: (0, _._)(_().Action, _),
-          onClick: () => _(),
-          children: (0, _.jsx)("span", {
-            children: _._.Localize("#Store_AddToCart"),
-          }),
-        });
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      !(function (_) {
-        (_[(_.k_ECuratorFollow = 1)] = "k_ECuratorFollow"),
-          (_[(_.k_ECuratorUnfollow = 2)] = "k_ECuratorUnfollow"),
-          (_[(_.k_ECuratorIgnore = 3)] = "k_ECuratorIgnore"),
-          (_[(_.k_ECuratorUnignore = 4)] = "k_ECuratorUnignore");
-      })(_ || (_ = {}));
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = (_) => {
-        const {
-            className: _,
-            bIgnored: _,
-            bApplyingFollowing: _,
-            bFollowing: _,
-            onFollowClick: _,
-            followType: _,
-          } = _,
-          { elDialogElement: _, fnShowLogonDialog: _ } = (0, _._)();
-        if (!(0, _._)()) return null;
-        let _ = null;
-        switch (_) {
-          case "app":
-            _ = (0, _._)("#text_store_follow_desc");
-            break;
-          case "creatorhome":
-            _ = (0, _._)("#CreatorHome_Follow_tooltip");
-            break;
-          case "steamcurator":
-            _ = (0, _._)("#steam_curator_follow_ttip");
-            break;
-          case "group":
-            _ = (0, _._)("#steam_group_follow_ttip");
-        }
-        return _
-          ? (0, _.jsxs)(_.Fragment, {
-              children: [
-                (0, _.jsx)(_._, {
-                  toolTipContent: _ || _ ? void 0 : _,
-                  children: (0, _.jsxs)(_._, {
-                    className: (0, _._)(
-                      _.Button,
-                      _.FollowButton,
-                      "FollowButton",
-                      _,
-                      _ ? "Followed" : "",
-                    ),
-                    onClick: () => {
-                      _._.logged_in ? _() : _();
-                    },
-                    children: [
-                      _ &&
-                        (0, _.jsx)(_._, {
-                          size: 15,
-                        }),
-                      !_ && (_ || _) && (0, _.jsx)(_.Jlk, {}),
-                      (0, _.jsx)("div", {
-                        className: (0, _._)(_.FollowBtnText, "FollowBtnText"),
-                        children:
-                          !_ &&
-                          (_
-                            ? (0, _._)("#Button_Followed")
-                            : _
-                              ? (0, _._)("#Button_Ignored")
-                              : (0, _._)("#Button_Follow")),
-                      }),
-                    ],
-                  }),
-                }),
-                _,
-              ],
-            })
-          : (console.error("CommonFollowButton unexpected type", _), null);
-      };
-      function _(_) {
-        const {
-            followType: _,
-            fnSuccessCallback: _,
-            clanAccountID: _,
-            className: _,
-          } = _,
-          [_, _] = _.useState(!1),
-          { data: _ } = (0, _._)(_ ? void 0 : _),
-          _ = (0, _._)(_),
-          _ = (0, _._)(_),
-          { mutateAsync: _ } = (function (_, _) {
-            const _ = (0, _._)(),
-              _ = _._.accountid;
-            return (0, _._)({
-              mutationKey: ["useUpdateCuratorAffinity", _, _, _],
-              mutationFn: async () => {
-                if (null == _) return !1;
-                const _ = _ == _.k_ECuratorFollow || _ == _.k_ECuratorUnfollow,
-                  _ = _ == _.k_ECuratorFollow || _ == _.k_ECuratorIgnore,
-                  _ = `${_._.STORE_BASE_URL}curators/${_ ? "ajaxfollow/" : "ajaxignore/"}`,
-                  _ = new FormData();
-                _.append("clanid", "" + _),
-                  _.append("sessionid", (0, _._)()),
-                  _.append(_ ? "follow" : "ignore", _ ? "1" : "0");
-                const _ = await fetch(_, {
-                    method: "POST",
-                    body: _,
-                    credentials: "include",
-                  }),
-                  _ = await _.json();
-                if (!_._)
-                  throw new Error(
-                    `Curator Affinity: ${_ ? "Follow" : "Ignore"} Currator ${_ ? "add" : "remove"} failed (${_.status} / ${_.msg})`,
-                  );
-                return _.is_creator;
-              },
-              onMutate: () => {
-                if (null != _) {
-                  const _ =
-                    _ == _.k_ECuratorUnfollow || _ == _.k_ECuratorUnignore;
-                  __webpack_require__(
-                    _ == _.k_ECuratorFollow
-                      ? [
-                          {
-                            clanAccountID: _,
-                          },
-                        ]
-                      : void 0,
-                    _ == _.k_ECuratorIgnore
-                      ? [
-                          {
-                            clanAccountID: _,
-                          },
-                        ]
-                      : void 0,
-                    _
-                      ? [
-                          {
-                            clanAccountID: _,
-                          },
-                        ]
-                      : void 0,
-                  );
-                }
-              },
-              onError: (_) => {
-                if (null != _) {
-                  const _ = _ == _.k_ECuratorFollow || _ == _.k_ECuratorIgnore;
-                  __webpack_require__(
-                    _ == _.k_ECuratorUnfollow
-                      ? [
-                          {
-                            clanAccountID: _,
-                          },
-                        ]
-                      : void 0,
-                    _ == _.k_ECuratorUnignore
-                      ? [
-                          {
-                            clanAccountID: _,
-                          },
-                        ]
-                      : void 0,
-                    _
-                      ? [
-                          {
-                            clanAccountID: _,
-                          },
-                        ]
-                      : void 0,
-                    _
-                      ? [
-                          {
-                            clanAccountID: _,
-                            is_creator: !0,
-                          },
-                        ]
-                      : void 0,
-                  );
-                }
-              },
-              onSuccess: (_) => {
-                _ &&
-                  _ &&
-                  __webpack_require__(void 0, void 0, void 0, [
-                    {
-                      clanAccountID: _,
-                      is_creator: !0,
-                    },
-                  ]),
-                  (0, _._)();
-              },
-            });
-          })(_, _ ? _.k_ECuratorUnfollow : _.k_ECuratorFollow),
-          [_, _, _] = (0, _._)(),
-          _ = _.useCallback(async () => {
-            null != _ && (_(!0), await _(), _(!1), _ && __webpack_require__(_));
-          }, [_, _, _]);
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            (0, _.jsx)(_, {
-              className: _,
-              bIgnored: Boolean(_),
-              bFollowing: Boolean(_),
-              bApplyingFollowing: _,
-              onFollowClick: () => {
-                _._.is_limited ? _() : _();
-              },
-              followType:
-                _ ?? (_?.is_creator_home ? "creatorhome" : "steamcurator"),
-            }),
-            (0, _.jsx)(_._, {
-              active: _,
-              children: (0, _.jsx)(_._, {
-                closeModal: _,
-              }),
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const { appid: _, className: _ } = _,
-          [_, _] = _.useState(!1),
-          _ = (0, _._)(_),
-          _ = (0, _._)(_),
-          _ = (0, _._)(),
-          _ = _._.GetSNRLinkParam(_),
-          { mutateAsync: _ } = (0, _._)(_, !_, _),
-          _ = _.useCallback(async () => {
-            const { appid: _ } = _;
-            _(!0), await _(), _(!1);
-          }, [_, _]);
-        return (0, _.jsx)(_, {
-          className: _,
-          bIgnored: Boolean(_),
-          bFollowing: Boolean(_),
-          bApplyingFollowing: _,
-          onFollowClick: _,
-          followType: "app",
-        });
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = (_) => {
-        let _ = _._.HELP_BASE_URL + "wizard/HelpWithLimitedAccount";
-        return (0, _.jsx)(_._, {
-          strTitle: (0, _._)("#Informational_Message"),
-          onCancel: _.closeModal,
-          onOK: _.closeModal,
-          bAlertDialog: !0,
-          children: (0, _.jsx)("div", {
-            children: (0, _._)(
-              _.strTokenOverride || "#User_LimitedAccount",
-              (0, _.jsx)("a", {
-                href: _,
-                target: _._.IN_CLIENT ? void 0 : "_blank",
-                children: (0, _._)("#User_LimitedAccount_UrlInfo"),
-              }),
-            ),
-          }),
-        });
-      };
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        return _ == _._._ ? "bundle" : _ == _._._ ? "sub" : (_._._, "app");
-      }
-      function _(_, _) {
-        const _ = _ || (Boolean(_) ? _._ : _._);
-        return [Boolean(_), _];
-      }
-      const _ = (_) => {
-        const { appid: _ } = _,
-          _ = (0, _.jsx)("div", {
-            className: "ImpressionTrackedElement",
-            children: _.children,
-          });
-        return _
-          ? (0, _.jsx)(_._, {
-              appID: _,
-              children: _,
-            })
-          : _;
-      };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -8400,7 +8394,7 @@
         constructor(_ = null) {
           super(),
             _.prototype.clusterid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
+            _.Message.initialize(this, _, 0, -1, [8], null);
         }
         static sm_m;
         static sm_mbf;
@@ -8434,6 +8428,19 @@
                     _: 7,
                     _: _._.readDouble,
                     _: _._.writeDouble,
+                  },
+                  frame_rate_histogram: {
+                    _: 8,
+                    _: !0,
+                    _: !0,
+                    _: _._.readDouble,
+                    pbr: _._.readPackedDouble,
+                    _: _._.writeRepeatedDouble,
+                  },
+                  histogram_report_count: {
+                    _: 9,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
                   },
                 },
               }),
@@ -8525,11 +8532,16 @@
               blogURL: _.steam_deck_blog_url,
               eHWCompatibiltyDisplay: _._,
             }))),
-          !_.resolved_items?.length && !_.frame_resolved_items?.length)
+          !_.resolved_items?.length &&
+            !_.machine_resolved_items?.length &&
+            !_.frame_resolved_items?.length)
         ) {
           let _ = "",
             _ = null,
-            _ = null;
+            _ = null,
+            _ = (0, _.jsx)(_._, {
+              category: _.resolved_category,
+            });
           return (
             _ == _._
               ? ((_ = _._.Localize(
@@ -8539,6 +8551,9 @@
                   _: _,
                   category: _.machine_resolved_category,
                   appName: _,
+                })),
+                (_ = (0, _.jsx)(_._, {
+                  category: _.machine_resolved_category,
                 })))
               : _ == _._
                 ? ((_ = _._.Localize(
@@ -8549,6 +8564,9 @@
                     category: _.steamos_resolved_category,
                     appName: _,
                   })),
+                  (_ = (0, _.jsx)(_._, {
+                    category: _.steamos_resolved_category,
+                  })),
                   (_ = _))
                 : _ == _._
                   ? ((_ = _._.Localize(
@@ -8558,6 +8576,9 @@
                       _: _,
                       category: _.frame_resolved_category,
                       appName: _,
+                    })),
+                    (_ = (0, _.jsx)(_._, {
+                      category: _.frame_resolved_category,
                     })))
                   : ((_ = _._.Localize(
                       "#SteamDeckVerified_Store_CompatSectionHeader_GamepadUI",
@@ -8584,9 +8605,7 @@
                     }),
                     (0, _.jsx)("div", {
                       className: _().AppTitleCategory,
-                      children: (0, _.jsx)(_._, {
-                        category: _.resolved_category,
-                      }),
+                      children: _,
                     }),
                   ],
                 }),
@@ -8771,7 +8790,7 @@
             appName: _,
           }),
           _ = (0, _.jsx)(_._, {
-            category: _.steamos_resolved_category ?? _._,
+            category: _.steamos_resolved_category,
           }),
           _ = _.steamos_resolved_items && _.steamos_resolved_items?.length > 0;
         return (0, _.jsx)(_, {

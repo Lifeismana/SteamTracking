@@ -1,5 +1,5 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-  [7634],
+  [27634],
   {
     chunkid: (module) => {
       module.exports = {

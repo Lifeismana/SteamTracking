@@ -56,6 +56,5 @@
     "SinglePricingPackage_Intro_2b": "Hvis du ikke vil bruke en vanlig pris i USD, kan du skrive inn en verdi i prisfeltet for USD. Trykk deretter på knappen «Konverter priser …» og følg anvisningene.",
     "PricingDashboard_Method_SuggestedPrice": "Foreslått konvertering:",
     "PricingDashboard_Method_SuggestedPrice_ttip": "Denne prisen foreslås på bakgrunn av konverteringsmetoden valgt ovenfor, og en pris i USD på %1$s.",
-    "dummy": "dummy",
-    "empty_no_trailing_comma": ""
+    "dummy": "dummy"
 }

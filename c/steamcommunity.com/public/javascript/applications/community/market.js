@@ -1,5 +1,5 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-  [7331],
+  [57331],
   {
     chunkid: (module) => {
       module.exports = {
@@ -212,6 +212,7 @@
           onOpenChange: _,
           width: _,
           placement: "right",
+          presentation: "anchor",
           interactions: {
             hover: (_) => ({
               ..._,
@@ -2823,6 +2824,7 @@
                   ..._.state,
                   width: _,
                   placement: _,
+                  presentation: "anchor",
                   gutter: "4",
                   interactions: {
                     virtualItemFocus: !0,

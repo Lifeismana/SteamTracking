@@ -332,9 +332,6 @@
         "Underline-hover": "_3RITvcDUZq-hpnXRpiayfs",
       };
     },
-    1239: (e) => {
-      e.exports = { Reset: "_3A_c3YHYd4YIjA8Y-olnPl" };
-    },
     4840: (e) => {
       e.exports = {
         GlobalFooter: "_291ttHtxyu5obiKzor2G9G",
@@ -350,9 +347,9 @@
         NavLinks: "_2hZemvW0chMhSn36Vr0RF9",
       };
     },
-    3403: (e, s, r) => {
+    5227: (e, s, r) => {
       "use strict";
-      r.r(s), r.d(s, { GlobalFooter: () => Ye });
+      r.r(s), r.d(s, { GlobalFooter: () => Qe });
       var t = r(7850),
         n = r(8871),
         o = r(626),
@@ -860,11 +857,8 @@
           },
         ];
       const R = o.createContext({ depth: 0 });
-      var T = r(1239);
-      function k() {
-        return T.Reset;
-      }
-      function A(e) {
+      var T = r(1820);
+      function k(e) {
         const { level: s = "auto", className: r, color: n } = e,
           i = (function (e, s) {
             if ("auto" === e && 0 === s) return "h1";
@@ -882,10 +876,10 @@
             return "h" + r;
           })(s, (0, o.useContext)(R).depth);
         return (0, t.jsx)(i, {
-          ...f({ ...e, className: h()(k(), V.Heading, r) }, E),
+          ...f({ ...e, className: h()((0, T.T)(), V.Heading, r) }, A),
         });
       }
-      const E = [
+      const A = [
         ...P,
         ...H,
         {
@@ -894,37 +888,37 @@
           className: (e) => V[`HeadingSize-${e}`],
         },
       ];
-      var Z = r(122),
-        U = r(5699);
-      function B(e) {
+      var E = r(122),
+        Z = r(5699);
+      function U(e) {
         const { underline: s = "auto", focusable: r, navProps: n, ...o } = e,
           i = (0, w.Qn)(),
           a = r ?? n?.focusable ?? !!o.href,
-          c = f({ ...o, underline: s, className: Z.TextLink }, F);
+          c = f({ ...o, underline: s, className: E.TextLink }, B);
         return i && (a || n)
-          ? (0, t.jsx)(U.Ii, { ...c, ...(n || {}), focusable: a })
+          ? (0, t.jsx)(Z.Ii, { ...c, ...(n || {}), focusable: a })
           : (0, t.jsx)("a", { ...c });
       }
-      const F = [
+      const B = [
         ...M,
-        { prop: "underline", className: (e) => Z[`Underline-${e}`] },
+        { prop: "underline", className: (e) => E[`Underline-${e}`] },
       ];
-      var W = r(9041),
-        O = r(3406),
-        I = r(4041);
-      function G(e) {
+      var F = r(9041),
+        W = r(3406),
+        O = r(4041);
+      function I(e) {
         const { as: s = "div", focusable: r, navProps: n, ref: o, ...i } = e,
           a = (0, w.Qn)(),
-          c = f({ ...i, className: h()(I.Box, k(), e.className) }, D),
+          c = f({ ...i, className: h()(O.Box, (0, T.T)(), e.className) }, G),
           p = r ?? n?.focusable ?? !!i.onClick,
           d = (0, t.jsx)(s, { ref: o, ...c });
         return a && (p || n)
           ? (0, t.jsx)(l, { ...(n || {}), focusable: p, children: d })
           : d;
       }
-      const D = j;
-      var K = r(6922);
-      function Y(e) {
+      const G = j;
+      var D = r(6922);
+      function K(e) {
         const {
             size: s = "3",
             loading: r = !0,
@@ -933,16 +927,16 @@
             variant: i,
             ...a
           } = e,
-          c = (0, K.f)("LoadingSpinner", i);
+          c = (0, D.f)("LoadingSpinner", i);
         return n || !r
-          ? (0, t.jsxs)(G, {
+          ? (0, t.jsxs)(I, {
               position: "relative",
               ...a,
               width: "fit-content",
               children: [
                 (0, t.jsx)("div", {
                   "data-visibility": !r,
-                  className: O.ChildContainer,
+                  className: W.ChildContainer,
                   children: n,
                 }),
                 r &&
@@ -958,40 +952,40 @@
           : (0, t.jsx)(Q, { size: s, color: o, variant: c, ...a });
       }
       function Q(e) {
-        const { className: s, color: r, ...n } = f(e, q);
+        const { className: s, color: r, ...n } = f(e, Y);
         return (0, t.jsx)("div", {
           "data-accent-color": r,
-          className: h()(s, O.Spinner),
+          className: h()(s, W.Spinner),
           ...n,
         });
       }
-      const q = [
+      const Y = [
         ...H,
-        { prop: "size", responsive: !0, className: (e) => O[`Size-${e}`] },
-        { prop: "variant", className: (e) => O[`Variant-${e}`] },
+        { prop: "size", responsive: !0, className: (e) => W[`Size-${e}`] },
+        { prop: "variant", className: (e) => W[`Variant-${e}`] },
       ];
-      function J(e) {
+      function q(e) {
         e.preventDefault();
       }
-      const X = [
+      const J = [
           ...H,
-          { prop: "size", responsive: !0, className: (e) => W[`Size-${e}`] },
-          { prop: "variant", className: (e) => W[`Variant-${e}`] },
+          { prop: "size", responsive: !0, className: (e) => F[`Size-${e}`] },
+          { prop: "variant", className: (e) => F[`Variant-${e}`] },
           { prop: "color", dataProperty: (e) => ["accent-color", `${e}`] },
           {
             prop: "width",
-            className: W.Width,
+            className: F.Width,
             cssProperty: "--width",
             responsive: !0,
           },
           {
             prop: "minWidth",
-            className: W.MinWidth,
+            className: F.MinWidth,
             cssProperty: "--min-width",
             responsive: !0,
           },
         ],
-        $ = function (e) {
+        X = function (e) {
           const {
               variant: s,
               size: r = "2",
@@ -1007,7 +1001,7 @@
             } = e,
             m = (0, w.Qn)(),
             _ = i
-              ? (0, t.jsx)(Y, {
+              ? (0, t.jsx)(K, {
                   size: r,
                   color: o,
                   variant: "bright",
@@ -1021,22 +1015,22 @@
               ...f(
                 {
                   ...C,
-                  variant: (0, K.f)("Button", s),
+                  variant: (0, D.f)("Button", s),
                   size: r,
                   minWidth: n,
                   color: o,
-                  className: h()(W.Button, l && W.Icon),
+                  className: h()(F.Button, l && F.Icon),
                   onClick: u,
                 },
-                X,
+                J,
               ),
               children: _,
             };
           return m && (x || d)
-            ? (0, t.jsx)(U.fu, { ...g, ...(d || {}), focusable: x })
+            ? (0, t.jsx)(Z.fu, { ...g, ...(d || {}), focusable: x })
             : (0, t.jsx)("button", { ...g });
         },
-        ee = function (e) {
+        $ = function (e) {
           const {
               variant: s,
               size: r = "2",
@@ -1050,26 +1044,26 @@
             p = (0, w.Qn)(),
             d = f(
               {
-                onClick: o ? J : void 0,
+                onClick: o ? q : void 0,
                 "aria-disabled": o,
                 ...l,
-                variant: (0, K.f)("Button", s),
+                variant: (0, D.f)("Button", s),
                 size: r,
                 minWidth: n,
-                className: h()(W.Button, i && W.Icon, k()),
+                className: h()(F.Button, i && F.Icon, (0, T.T)()),
               },
-              X,
+              J,
             );
           return p && (a || c)
-            ? (0, t.jsx)(U.Ii, { ...d, ...(c || {}), focusable: a })
+            ? (0, t.jsx)(Z.Ii, { ...d, ...(c || {}), focusable: a })
             : (0, t.jsx)("a", { ...d });
         };
-      var se = r(4167),
-        re = r(5180);
-      function te(e) {
+      var ee = r(4167),
+        se = r(5180);
+      function re(e) {
         const { as: s = "div", ref: r, focusable: n, navProps: o, ...i } = e,
           a = (0, w.Qn)(),
-          c = f({ ...i, className: h()(re.Grid, e.className) }, ne),
+          c = f({ ...i, className: h()(se.Grid, e.className) }, te),
           p = n ?? o?.focusable ?? !!i.onClick,
           d = (0, t.jsx)(s, { ref: r, ...c });
         return a
@@ -1081,101 +1075,101 @@
             })
           : d;
       }
-      const ne = [
+      const te = [
         ...j,
         {
           prop: "display",
           responsive: !0,
-          className: re.Display,
+          className: se.Display,
           cssProperty: "--grid-display",
         },
         {
           prop: "columns",
           responsive: !0,
-          className: re.Columns,
+          className: se.Columns,
           cssProperty: "--grid-columns",
         },
         {
           prop: "rows",
           responsive: !0,
-          className: re.Rows,
+          className: se.Rows,
           cssProperty: "--grid-rows",
         },
         {
           prop: "autoColumns",
           responsive: !0,
-          className: re.AutoColumns,
+          className: se.AutoColumns,
           cssProperty: "--grid-auto-columns",
         },
         {
           prop: "autoRows",
           responsive: !0,
-          className: re.AutoRows,
+          className: se.AutoRows,
           cssProperty: "--grid-auto-rows",
         },
         {
           prop: "autoFlow",
           responsive: !0,
-          className: re.AutoFlow,
+          className: se.AutoFlow,
           cssProperty: "--grid-auto-flow",
         },
         {
           prop: "areas",
           responsive: !0,
-          className: re.Areas,
+          className: se.Areas,
           cssProperty: "--grid-areas",
         },
         {
           prop: "flow",
           responsive: !0,
-          className: re.Flow,
+          className: se.Flow,
           cssProperty: "--grid-flow",
         },
         {
           prop: "alignContent",
           responsive: !0,
-          className: re.AlignContent,
+          className: se.AlignContent,
           cssProperty: "--grid-align-content",
         },
         {
           prop: "justifyContent",
           responsive: !0,
-          className: re.JustifyContent,
+          className: se.JustifyContent,
           cssProperty: "--grid-justify-content",
         },
         {
           prop: "alignItems",
           responsive: !0,
-          className: re.AlignItems,
+          className: se.AlignItems,
           cssProperty: "--grid-align-items",
         },
         {
           prop: "justifyItems",
           responsive: !0,
-          className: re.JustifyItems,
+          className: se.JustifyItems,
           cssProperty: "--grid-justify-items",
         },
         {
           prop: "gap",
           responsive: !0,
-          className: re.Gap,
+          className: se.Gap,
           cssProperty: (e) => ["--grid-gap", `var(--spacing-${e})`],
         },
         {
           prop: "gapX",
           responsive: !0,
-          className: re.Gap,
+          className: se.Gap,
           cssProperty: (e) => ["--grid-gap-x", `var(--spacing-${e})`],
         },
         {
           prop: "gapY",
           responsive: !0,
-          className: re.Gap,
+          className: se.Gap,
           cssProperty: (e) => ["--grid-gap-y", `var(--spacing-${e})`],
         },
       ];
-      var oe = r(2160);
-      function ie(e, s = ["b", "i", "br"]) {
+      var ne = r(2160);
+      function oe(e, s = ["b", "i", "br"]) {
         const r = s.join("|"),
           t = [],
           n = new RegExp(
@@ -1198,29 +1192,30 @@
           const e = i.groups.tagname,
             r = i.groups.contents || "";
           let c = null;
-          r && (c = ie(r, s));
+          r && (c = oe(r, s));
           const l = o.createElement(e, {}, c);
           t.push(l);
         }
         return t.push(e.slice(a)), o.createElement(o.Fragment, null, ...t);
       }
-      var ae = r(1933),
-        ce = r(8861);
+      var ie = r(1933),
+        ae = r(8861);
+      function ce() {
+        return "desktop" === (0, ie.j_)(ae.k1);
+      }
       function le() {
-        return "desktop" === (0, ae.j_)(ce.k1);
+        ce() && (0, ie.Y1)(ae.k1), "location" in window && location.reload();
       }
-      function pe() {
-        le() && (0, ae.Y1)(ce.k1), "location" in window && location.reload();
-      }
-      var he = r(6418),
-        de = r(14),
-        Ce = r(4840),
-        me = r(3788),
-        _e = r(8889),
-        fe = r(4621),
-        ue = r(5585),
-        xe = r(7445),
-        ge = r(1393);
+      var pe = r(6418),
+        he = r(14),
+        de = r(4840),
+        Ce = r(3788),
+        me = r(8889),
+        _e = r(4621),
+        fe = r(5585),
+        ue = r(7445),
+        xe = r(1393),
+        ge = r(2321);
       const ve = (0, o.createContext)(null);
       function He(e) {
         return (0, w.Qn)()
@@ -1230,21 +1225,21 @@
       function je(e) {
         const { children: s } = e,
           r = (0, o.useContext)(ve);
-        (0, ge.wT)(
+        (0, xe.wT)(
           !!r,
           "<Popover.Positioner> must be a child of <Popover.Root>.",
         );
         const n = o.useRef(void 0);
         return (
-          (0, U.O7)(n, !!n.current, !1),
-          (0, t.jsx)(ue.D6, {
+          (0, Z.O7)(n, !0, !0),
+          (0, t.jsx)(fe.D6, {
             navID: "Popover",
             onCancelButton: () => r.floating.context.onOpenChange(!1),
             modal: !0,
             navTreeRef: n,
             children: (0, t.jsx)("div", {
               style: { display: "contents" },
-              children: (0, t.jsx)(xe.q, { children: s }),
+              children: (0, t.jsx)(ue.q, { children: s }),
             }),
           })
         );
@@ -1253,11 +1248,11 @@
         const { children: s } = e,
           r = (0, o.useContext)(ve);
         return (
-          (0, ge.wT)(
+          (0, xe.wT)(
             !!r,
             "<Popover.Positioner> must be a child of <Popover.Root>.",
           ),
-          (0, t.jsx)(me.s3, {
+          (0, t.jsx)(Ce.s3, {
             context: r.floating.context,
             initialFocus: -1,
             returnFocus: !1,
@@ -1271,16 +1266,16 @@
           n = r && "object" == typeof r;
         return (
           n && r.offset
-            ? t.push((0, fe.cY)(r.offset))
-            : (n && void 0 !== r.offset) || t.push((0, fe.cY)(2)),
+            ? t.push((0, _e.cY)(r.offset))
+            : (n && void 0 !== r.offset) || t.push((0, _e.cY)(2)),
           n && r.flip
-            ? t.push((0, fe.UU)(r.flip))
-            : (n && void 0 !== r.flip) || t.push((0, fe.UU)()),
+            ? t.push((0, _e.UU)(r.flip))
+            : (n && void 0 !== r.flip) || t.push((0, _e.UU)()),
           n && r.shift
-            ? t.push((0, fe.BN)(r.shift))
-            : (n && void 0 !== r.shift) || t.push((0, fe.BN)()),
+            ? t.push((0, _e.BN)(r.shift))
+            : (n && void 0 !== r.shift) || t.push((0, _e.BN)()),
           t.push(
-            (0, fe.Ej)({
+            (0, _e.Ej)({
               apply: (r) => {
                 const { rects: t, elements: n, availableHeight: o } = r,
                   i = { boxSizing: "border-box", zIndex: "1" };
@@ -1332,46 +1327,55 @@
             n = (function (e) {
               const {
                 open: s,
-                onOpenChange: r,
-                placement: t,
-                interactions: n = {},
+                interactions: r = {},
+                width: t,
+                maxHeight: n,
+                gutter: o,
+                scroll: i,
               } = e;
-              let o = s;
+              let a = s;
               0;
-              const i = (0, me.we)({
-                  open: o,
-                  onOpenChange: r,
-                  middleware: we(e),
-                  whileElementsMounted: _e.ll,
-                  placement: t && "object" == typeof t ? t.initial : t,
-                  strategy: "fixed",
-                  platform: {
-                    ..._e.iD,
-                    getOffsetParent: (e) =>
-                      e?.ownerDocument?.defaultView ?? window,
-                  },
-                }),
-                a = { enabled: !!n.click },
-                c = "function" == typeof n.click ? n.click(a) : a,
-                l = (0, me.kp)(i.context, c),
-                p = { enabled: !!n.focus },
-                h = "function" == typeof n.focus ? n.focus(p) : p,
-                d = (0, me.iQ)(i.context, h),
-                C = { handleClose: (0, me.iB)() },
-                m = "function" == typeof n.hover ? n.hover(C) : C,
-                _ = (0, me.Mk)(i.context, { enabled: !!n.hover, ...m }),
-                f = (0, me.s9)(i.context),
-                { getFloatingProps: u, getReferenceProps: x } = (0, me.bv)([
-                  l,
+              const c = (0, ge.Pr)(e.presentation),
+                l = (function (e, s, r) {
+                  const { onOpenChange: t, placement: n } = e,
+                    o = "anchor" === r;
+                  return (0, Ce.we)({
+                    open: s,
+                    onOpenChange: t,
+                    middleware: o ? we(e) : [],
+                    whileElementsMounted: o ? me.ll : void 0,
+                    placement: n && "object" == typeof n ? n.initial : n,
+                    strategy: "fixed",
+                    platform: {
+                      ...me.iD,
+                      getOffsetParent: (e) =>
+                        e?.ownerDocument?.defaultView ?? window,
+                    },
+                  });
+                })(e, a, c),
+                p = { enabled: !!r.click },
+                h = "function" == typeof r.click ? r.click(p) : p,
+                d = (0, Ce.kp)(l.context, h),
+                C = { enabled: !!r.focus },
+                m = "function" == typeof r.focus ? r.focus(C) : C,
+                _ = (0, Ce.iQ)(l.context, m),
+                f = { handleClose: (0, Ce.iB)() },
+                u = "function" == typeof r.hover ? r.hover(f) : f,
+                x = (0, Ce.Mk)(l.context, { enabled: !!r.hover, ...u }),
+                g = (0, Ce.s9)(l.context),
+                { getFloatingProps: v, getReferenceProps: H } = (0, Ce.bv)([
                   d,
                   _,
-                  f,
+                  x,
+                  g,
                 ]);
               return {
-                floating: i,
-                getFloatingProps: u,
-                getReferenceProps: x,
-                open: o,
+                floating: l,
+                getFloatingProps: v,
+                getReferenceProps: H,
+                open: a,
+                presentation: c,
+                sizing: { width: t, maxHeight: n, gutter: o, scroll: i },
               };
             })(r);
           return (0, t.jsx)(ve.Provider, { value: n, children: s });
@@ -1393,33 +1397,36 @@
             : null;
         },
         Positioner: function (e) {
-          const { children: s, className: r, ref: n } = e,
-            i = (0, o.useContext)(ve),
-            a = (0, me.SV)([
-              n,
-              i?.floating.refs.setFloating,
-              (e) => e?.showPopover?.(),
-            ]);
-          if (!i)
+          const { children: s, className: r, ref: n, label: i } = e,
+            a = (0, o.useContext)(ve),
+            c = (0, Ce.SV)([n, a?.floating.refs.setFloating]);
+          if (!a)
             return (
               console.error(
                 "<Popover.Positioner> must be a child of <Popover.Root>.",
               ),
               null
             );
-          if (!i.open) return null;
-          let c = o.Children.only(s),
-            l = o.Fragment;
-          c.type == be.FocusManager &&
-            ((c = o.Children.only(c.props.children)), (l = He));
-          const p = (0, o.cloneElement)(c, {
-            ref: a,
-            style: { ...i.floating.floatingStyles },
-            className: h()(k(), r),
-            popover: "manual",
-            ...i.getFloatingProps(),
-          });
-          return (0, t.jsx)(l, { children: p });
+          if (!a.open) return null;
+          let l = o.Children.only(s),
+            p = o.Fragment;
+          return (
+            l.type == be.FocusManager &&
+              ((l = o.Children.only(l.props.children)), (p = He)),
+            (0, t.jsx)(p, {
+              children: (0, t.jsx)(ge.HF, {
+                presentation: a.presentation,
+                sizing: a.sizing,
+                floatingRef: c,
+                floatingProps: a.getFloatingProps(),
+                floatingStyles: a.floating.floatingStyles,
+                referenceElement: a.floating.elements.domReference,
+                className: h()((0, T.T)(), r),
+                label: i,
+                children: l,
+              }),
+            })
+          );
         },
         FocusManager: He,
       };
@@ -1442,11 +1449,12 @@
               return i && (s = { ...s, handleClose: null }), s;
             },
           },
+          presentation: "anchor",
           ...a,
           children: [
             (0, t.jsx)(be.Anchor, { children: s }),
             (0, t.jsx)(be.Positioner, {
-              children: (0, t.jsx)(G, { children: r }),
+              children: (0, t.jsx)(I, { children: r }),
             }),
           ],
         });
@@ -1538,10 +1546,10 @@
       }
       function Me(e) {
         let { href: s, ...r } = e;
-        const n = (0, de.n9)();
+        const n = (0, he.n9)();
         return (
-          s?.startsWith(he.TS.STORE_BASE_URL) && (s = (0, de.bV)(n, s)),
-          (0, t.jsx)(B, {
+          s?.startsWith(pe.TS.STORE_BASE_URL) && (s = (0, he.bV)(n, s)),
+          (0, t.jsx)(U, {
             href: s,
             color: "dull-11",
             target: "_blank",
@@ -1556,7 +1564,7 @@
           ? null
           : (0, t.jsx)("footer", {
               className: h()(Ve().SteamChinaFooter, e.className),
-              children: (0, t.jsxs)(G, {
+              children: (0, t.jsxs)(I, {
                 className: Ve().FooterContent,
                 children: [
                   (0, t.jsxs)(b, {
@@ -1564,10 +1572,10 @@
                     justify: "between",
                     children: [
                       (0, t.jsx)(Me, {
-                        href: he.TS.STORE_BASE_URL,
+                        href: pe.TS.STORE_BASE_URL,
                         children: (0, t.jsx)(Ne, {}),
                       }),
-                      (0, t.jsxs)(G, {
+                      (0, t.jsxs)(I, {
                         className: Ve().NavLinks,
                         children: [
                           (0, t.jsx)(Me, {
@@ -1576,27 +1584,27 @@
                           }),
                           "  |  ",
                           (0, t.jsx)(Me, {
-                            href: he.TS.STORE_BASE_URL + "about",
+                            href: pe.TS.STORE_BASE_URL + "about",
                             children: "关于蒸汽平台",
                           }),
                           "  |  ",
                           (0, t.jsx)(Me, {
-                            href: he.TS.STORE_BASE_URL + "steam_refunds",
+                            href: pe.TS.STORE_BASE_URL + "steam_refunds",
                             children: "退款政策",
                           }),
                           "  |  ",
                           (0, t.jsx)(Me, {
-                            href: he.TS.STORE_BASE_URL + "subscriber_agreement",
+                            href: pe.TS.STORE_BASE_URL + "subscriber_agreement",
                             children: "软件许可服务协议",
                           }),
                           "  |  ",
                           (0, t.jsx)(Me, {
-                            href: he.TS.STORE_BASE_URL + "privacy_agreement",
+                            href: pe.TS.STORE_BASE_URL + "privacy_agreement",
                             children: "个人信息保护政策",
                           }),
                           "  |  ",
                           (0, t.jsx)(Me, {
-                            href: he.TS.STORE_BASE_URL + "data_outbound",
+                            href: pe.TS.STORE_BASE_URL + "data_outbound",
                             children: "个人信息出境告知书",
                           }),
                           "  |  ",
@@ -1644,7 +1652,7 @@
                             hoverContent: (0, t.jsx)("img", {
                               alt: "",
                               src:
-                                he.TS.STORE_CDN_URL +
+                                pe.TS.STORE_CDN_URL +
                                 "public/shared/images/footer/Weibo-QR.png?v=2",
                             }),
                             children: (0, t.jsxs)(b, {
@@ -1653,7 +1661,7 @@
                                 (0, t.jsx)("img", {
                                   alt: "微博",
                                   src:
-                                    he.TS.STORE_CDN_URL +
+                                    pe.TS.STORE_CDN_URL +
                                     "public/shared/images/footer/weibo_logo.svg?v=1",
                                 }),
                                 (0, t.jsx)(z, { children: "微博" }),
@@ -1664,7 +1672,7 @@
                             hoverContent: (0, t.jsx)("img", {
                               alt: "",
                               src:
-                                he.TS.STORE_CDN_URL +
+                                pe.TS.STORE_CDN_URL +
                                 "public/shared/images/footer/WeChat-QR.png?v=2",
                             }),
                             children: (0, t.jsxs)(b, {
@@ -1673,7 +1681,7 @@
                                 (0, t.jsx)("img", {
                                   alt: "微信",
                                   src:
-                                    he.TS.STORE_CDN_URL +
+                                    pe.TS.STORE_CDN_URL +
                                     "public/shared/images/footer/wechat_logo.svg?v=1",
                                 }),
                                 (0, t.jsx)(z, { children: "微信" }),
@@ -1689,7 +1697,7 @@
                     justify: "between",
                     marginTop: "5",
                     children: [
-                      (0, t.jsxs)(G, {
+                      (0, t.jsxs)(I, {
                         children: [
                           "© ",
                           new Date().getFullYear(),
@@ -1698,7 +1706,7 @@
                           "所有商标均属于其在美国或其他国家的拥有者。",
                         ],
                       }),
-                      (0, t.jsxs)(G, {
+                      (0, t.jsxs)(I, {
                         children: [
                           "© 完美世界征奇(上海)多媒体科技有限公司 版权所有。",
                           (0, t.jsx)("br", {}),
@@ -1885,20 +1893,20 @@
         return (0, t.jsx)(b, { direction: "column", gap: "4", ...e });
       }
       function Ie(e) {
-        return (0, t.jsx)(A, {
+        return (0, t.jsx)(k, {
           level: "3",
           color: "dull-12",
           weight: "heavy",
-          className: Ce.LinkColumnHeading,
+          className: de.LinkColumnHeading,
           ...e,
         });
       }
       function Ge(e) {
         let { href: s, ...r } = e;
-        const n = (0, de.n9)();
+        const n = (0, he.n9)();
         return (
-          s?.startsWith(he.TS.STORE_BASE_URL) && (s = (0, de.bV)(n, s)),
-          (0, t.jsx)(B, {
+          s?.startsWith(pe.TS.STORE_BASE_URL) && (s = (0, he.bV)(n, s)),
+          (0, t.jsx)(U, {
             href: s,
             color: "dull-11",
             target: "_blank",
@@ -1920,7 +1928,7 @@
               align: "center",
               children: [
                 (0, t.jsx)(Ge, {
-                  href: he.TS.STORE_BASE_URL,
+                  href: pe.TS.STORE_BASE_URL,
                   children: (0, t.jsx)(Ee, {}),
                 }),
                 (0, t.jsx)(Ge, {
@@ -1932,15 +1940,15 @@
             (0, t.jsx)(z, {
               as: "p",
               size: "1",
-              className: Ce.LegalNotice,
-              children: ie(
+              className: de.LegalNotice,
+              children: oe(
                 Ae.Localize("#footer_legal_notice", new Date().getFullYear()),
               ),
             }),
             (0, t.jsxs)(b, {
               gap: "6",
               align: "center",
-              className: Ce.LogoLinks,
+              className: de.LogoLinks,
               children: [
                 (0, t.jsx)(Ge, {
                   href: "https://www.youtube.com/@Steam",
@@ -1964,15 +1972,15 @@
               gap: "5",
               children: [
                 "initial" === e &&
-                  !he.TS.IN_MOBILE_WEBVIEW &&
-                  (0, t.jsx)(ee, {
-                    href: he.TS.STORE_BASE_URL + "mobile/",
+                  !pe.TS.IN_MOBILE_WEBVIEW &&
+                  (0, t.jsx)($, {
+                    href: pe.TS.STORE_BASE_URL + "mobile/",
                     children: Ae.Localize("#footer_link_get_mobile_apps"),
                   }),
-                le() &&
-                  (0, t.jsx)($, {
+                ce() &&
+                  (0, t.jsx)(X, {
                     color: "dull",
-                    onClick: pe,
+                    onClick: le,
                     children: Ae.Localize("#footer_view_mobile_website"),
                   }),
               ],
@@ -1983,9 +1991,9 @@
       function Ke(e) {
         return (
           (0, o.use)(Ae.Ready()),
-          (0, t.jsx)(se.N, {
+          (0, t.jsx)(ee.N, {
             breakpoints: { sm: 700 },
-            children: (0, t.jsxs)(te, {
+            children: (0, t.jsxs)(re, {
               as: "footer",
               areas: {
                 initial: '"steam valve" "legal more" "main main"',
@@ -1997,7 +2005,7 @@
                 sm: "min-content min-content max-content max-content",
                 md: "fit-content(400px) max-content max-content max-content max-content",
               },
-              className: h()(Ce.GlobalFooter, e.className),
+              className: h()(de.GlobalFooter, e.className),
               justifyContent: { initial: "start", sm: "start", md: "center" },
               gap: { initial: "6", sm: "9" },
               padding: "7",
@@ -2013,23 +2021,23 @@
                       children: Ae.Localize("#footer_link_header_steam"),
                     }),
                     (0, t.jsx)(Ge, {
-                      href: he.TS.STORE_BASE_URL + "about/",
+                      href: pe.TS.STORE_BASE_URL + "about/",
                       children: Ae.Localize("#footer_link_about_steam"),
                     }),
                     (0, t.jsx)(Ge, {
-                      href: he.TS.STORE_BASE_URL + "subscriber_agreement/",
+                      href: pe.TS.STORE_BASE_URL + "subscriber_agreement/",
                       children: Ae.Localize("#footer_link_steam_ssa"),
                     }),
                     (0, t.jsx)(Ge, {
-                      href: he.TS.PARTNER_BASE_URL,
+                      href: pe.TS.PARTNER_BASE_URL,
                       children: Ae.Localize("#footer_link_steamworks"),
                     }),
                     (0, t.jsx)(Ge, {
-                      href: he.TS.PARTNER_BASE_URL + "steamdirect",
+                      href: pe.TS.PARTNER_BASE_URL + "steamdirect",
                       children: Ae.Localize("#footer_link_steam_distribution"),
                     }),
                     (0, t.jsx)(Ge, {
-                      href: he.TS.STORE_BASE_URL + "digitalgiftcards/",
+                      href: pe.TS.STORE_BASE_URL + "digitalgiftcards/",
                       children: Ae.Localize("#footer_link_gift_cards"),
                     }),
                   ],
@@ -2049,11 +2057,11 @@
                       children: Ae.Localize("#footer_link_jobs"),
                     }),
                     (0, t.jsx)(Ge, {
-                      href: he.TS.STORE_BASE_URL + "hardware/",
+                      href: pe.TS.STORE_BASE_URL + "hardware/",
                       children: Ae.Localize("#footer_link_hardware"),
                     }),
                     (0, t.jsx)(Ge, {
-                      href: he.TS.STORE_BASE_URL + "hardware_recycling/",
+                      href: pe.TS.STORE_BASE_URL + "hardware_recycling/",
                       children: Ae.Localize("#footer_link_recycling"),
                     }),
                   ],
@@ -2065,7 +2073,7 @@
                       children: Ae.Localize("#footer_link_header_legal"),
                     }),
                     (0, t.jsx)(Ge, {
-                      href: he.TS.STORE_BASE_URL + "privacy_agreement/",
+                      href: pe.TS.STORE_BASE_URL + "privacy_agreement/",
                       children: Ae.Localize("#footer_link_privacy"),
                     }),
                     (0, t.jsx)(Ge, {
@@ -2073,17 +2081,17 @@
                       children: Ae.Localize("#footer_link_accessibility"),
                     }),
                     (0, t.jsx)(Ge, {
-                      href: he.TS.STORE_BASE_URL + "legal/",
+                      href: pe.TS.STORE_BASE_URL + "legal/",
                       children: Ae.Localize(
                         "#footer_link_notices_and_policies",
                       ),
                     }),
                     (0, t.jsx)(Ge, {
-                      href: he.TS.STORE_BASE_URL + "account/cookiepreferences/",
+                      href: pe.TS.STORE_BASE_URL + "account/cookiepreferences/",
                       children: Ae.Localize("#footer_link_cookies"),
                     }),
                     (0, t.jsx)(Ge, {
-                      href: he.TS.STORE_BASE_URL + "steam_refunds/",
+                      href: pe.TS.STORE_BASE_URL + "steam_refunds/",
                       children: Ae.Localize("#footer_link_refunds"),
                     }),
                   ],
@@ -2095,19 +2103,19 @@
                       children: Ae.Localize("#footer_link_header_more"),
                     }),
                     (0, t.jsx)(Ge, {
-                      href: he.TS.STORE_BASE_URL + "about/",
+                      href: pe.TS.STORE_BASE_URL + "about/",
                       children: Ae.Localize("#footer_link_get_steam"),
                     }),
                     (0, t.jsx)(Ge, {
-                      href: he.TS.STORE_BASE_URL + "mobile/",
+                      href: pe.TS.STORE_BASE_URL + "mobile/",
                       children: Ae.Localize("#footer_link_get_mobile_apps"),
                     }),
                     (0, t.jsx)(Ge, {
-                      href: he.TS.HELP_BASE_URL,
+                      href: pe.TS.HELP_BASE_URL,
                       children: Ae.Localize("#footer_link_get_support"),
                     }),
                     (0, t.jsx)(Ge, {
-                      href: he.TS.STORE_BASE_URL + "account/",
+                      href: pe.TS.STORE_BASE_URL + "account/",
                       children: Ae.Localize("#footer_link_my_account"),
                     }),
                   ],
@@ -2117,12 +2125,12 @@
           })
         );
       }
-      function Ye(e) {
+      function Qe(e) {
         if ((0, w.Qn)()) return null;
-        const s = (0, oe.nA)(he.TS.EREALM)
+        const s = (0, ne.nA)(pe.TS.EREALM)
           ? (0, t.jsx)(Re, { ...e })
           : (0, t.jsx)(Ke, { ...e });
-        return (0, t.jsx)(de.nn, {
+        return (0, t.jsx)(he.nn, {
           controller: "footer",
           method: "footer",
           children: s,

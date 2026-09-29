@@ -47,7 +47,7 @@
       function _(_) {
         return (0, _.jsx)(_._, {
           ..._,
-          viewBoxSize: 16,
+          viewBox: 16,
           children: (0, _.jsx)("path", {
             _: "M13.8182 1.94629L5.77816 9.98184L2.40483 6.61296L0.835938 8.18184L5.77816 13.1285L15.387 3.51518L13.8182 1.94629Z",
             fill: "currentColor",
@@ -132,17 +132,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { viewBoxSize: _ = 20, ..._ } = _,
-          _ = _.size ? void 0 : _.IconSizeDefault;
         return (0, _.jsx)("svg", {
-          viewBox: `0 0 ${_} ${_}`,
-          ...(0, _._)(
-            {
-              className: _,
-              ..._,
-            },
-            _,
-          ),
+          ..._(_),
         });
       }
       const _ = [
@@ -155,7 +146,7 @@
         {
           prop: "color",
           className: _.Color,
-          cssProperty: (_) => ["--icon-color", (0, _._)(_)],
+          cssProperty: (_) => ["--icon-color", _(_)],
         },
         {
           prop: "hitSlop",
@@ -167,6 +158,29 @@
         },
         _._.find(({ prop: _ }) => "cursor" === _),
       ];
+      function _(_) {
+        return _ && "#" !== _[0] ? (0, _._)(_) : _;
+      }
+      function _(_) {
+        const { viewBox: _, ..._ } = _,
+          _ = {
+            className: _.size ? void 0 : _.IconSizeDefault,
+            ..._,
+          };
+        return (
+          _ &&
+            (_.viewBox = (function (_) {
+              return _
+                ? "number" == typeof _
+                  ? `0 0 ${_} ${_}`
+                  : "string" == typeof _
+                    ? _
+                    : `0 0 ${_.width} ${_.height}`
+                : void 0;
+            })(_)),
+          (0, _._)(_, _)
+        );
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

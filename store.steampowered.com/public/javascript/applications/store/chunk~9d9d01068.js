@@ -108,6 +108,25 @@
         return e.replace(new RegExp(i, "gi"), r);
       }
     },
+    97743: (e, t, r) => {
+      r.d(t, { Gw: () => o, Lk: () => l, ai: () => n, mm: () => s });
+      var i = r(14947);
+      const a = i.sH.box(void 0);
+      function s() {
+        return a.get();
+      }
+      function n(e) {
+        (0, i.h5)(() => a.set(e));
+      }
+      function o() {
+        const e = a.get();
+        return e || Math.floor(Date.now() / 1e3);
+      }
+      function l() {
+        const e = a.get();
+        return e ? new Date(1e3 * e) : new Date();
+      }
+    },
     75682: (e, t, r) => {
       r.d(t, {
         $N: () => U,
@@ -502,76 +521,12 @@
           return "CStore_GetVoteDefinitions_Request";
         }
       }
-      class M extends n.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            M.prototype.votes || l.Sg(M.M()),
-            n.Message.initialize(this, e, 0, -1, [1, 2], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            M.sm_m ||
-              (M.sm_m = {
-                proto: M,
-                fields: {
-                  votes: { n: 1, c: B, r: !0, q: !0 },
-                  labor_of_love_winners: {
-                    n: 2,
-                    r: !0,
-                    q: !0,
-                    br: l.qM.readUint32,
-                    pbr: l.qM.readPackedUint32,
-                    bw: l.gp.writeRepeatedUint32,
-                  },
-                },
-              }),
-            M.sm_m
-          );
-        }
-        static MBF() {
-          return M.sm_mbf || (M.sm_mbf = l.w0(M.M())), M.sm_mbf;
-        }
-        toObject(e = !1) {
-          return M.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return l.BT(M.M(), e, t);
-        }
-        static fromObject(e) {
-          return l.Uq(M.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (o().BinaryReader)(e),
-            r = new M();
-          return M.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return l.zj(M.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (o().BinaryWriter)();
-          return M.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          l.i0(M.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (o().BinaryWriter)();
-          return M.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CStore_GetVoteDefinitions_Response";
-        }
-      }
       class T extends n.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            T.prototype.voteid || l.Sg(T.M()),
-            n.Message.initialize(this, e, 0, -1, void 0, null);
+            T.prototype.votes || l.Sg(T.M()),
+            n.Message.initialize(this, e, 0, -1, [1, 2], null);
         }
         static sm_m;
         static sm_mbf;
@@ -581,12 +536,14 @@
               (T.sm_m = {
                 proto: T,
                 fields: {
-                  voteid: { n: 1, br: l.qM.readUint32, bw: l.gp.writeUint32 },
-                  appid: { n: 2, br: l.qM.readUint32, bw: l.gp.writeUint32 },
-                  communityitemid: {
-                    n: 3,
-                    br: l.qM.readUint64String,
-                    bw: l.gp.writeUint64String,
+                  votes: { n: 1, c: B, r: !0, q: !0 },
+                  labor_of_love_winners: {
+                    n: 2,
+                    r: !0,
+                    q: !0,
+                    br: l.qM.readUint32,
+                    pbr: l.qM.readPackedUint32,
+                    bw: l.gp.writeRepeatedUint32,
                   },
                 },
               }),
@@ -623,6 +580,68 @@
         serializeBase64String() {
           var e = new (o().BinaryWriter)();
           return T.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CStore_GetVoteDefinitions_Response";
+        }
+      }
+      class M extends n.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            M.prototype.voteid || l.Sg(M.M()),
+            n.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            M.sm_m ||
+              (M.sm_m = {
+                proto: M,
+                fields: {
+                  voteid: { n: 1, br: l.qM.readUint32, bw: l.gp.writeUint32 },
+                  appid: { n: 2, br: l.qM.readUint32, bw: l.gp.writeUint32 },
+                  communityitemid: {
+                    n: 3,
+                    br: l.qM.readUint64String,
+                    bw: l.gp.writeUint64String,
+                  },
+                },
+              }),
+            M.sm_m
+          );
+        }
+        static MBF() {
+          return M.sm_mbf || (M.sm_mbf = l.w0(M.M())), M.sm_mbf;
+        }
+        toObject(e = !1) {
+          return M.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return l.BT(M.M(), e, t);
+        }
+        static fromObject(e) {
+          return l.Uq(M.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (o().BinaryReader)(e),
+            r = new M();
+          return M.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return l.zj(M.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (o().BinaryWriter)();
+          return M.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          l.i0(M.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (o().BinaryWriter)();
+          return M.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "SteamAwardsUserVote";
@@ -702,7 +721,7 @@
             I.sm_m ||
               (I.sm_m = {
                 proto: I,
-                fields: { user_votes: { n: 1, c: T, r: !0, q: !0 } },
+                fields: { user_votes: { n: 1, c: M, r: !0, q: !0 } },
               }),
             I.sm_m
           );
@@ -818,7 +837,7 @@
             R.sm_m ||
               (R.sm_m = {
                 proto: R,
-                fields: { user_votes: { n: 1, c: T, r: !0, q: !0 } },
+                fields: { user_votes: { n: 1, c: M, r: !0, q: !0 } },
               }),
             R.sm_m
           );
@@ -1618,7 +1637,7 @@
           return e.SendMsg(
             "StoreSales.GetVoteDefinitions#1",
             (0, c.I8)(v, t, r),
-            M,
+            T,
             { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
           );
         }),
@@ -1679,23 +1698,72 @@
             });
         })(N || (N = {}));
     },
-    83085: (e, t, r) => {
-      r.d(t, { Gw: () => o, Lk: () => l, ai: () => n, mm: () => s });
-      var i = r(14947);
-      const a = i.sH.box(void 0);
-      function s() {
-        return a.get();
+    70628: (e, t, r) => {
+      r.d(t, {
+        $m: () => n,
+        ML: () => u,
+        Sn: () => g,
+        Wn: () => l,
+        a4: () => _,
+        f_: () => p,
+        mj: () => o,
+        rp: () => d,
+      });
+      var i = r(9646),
+        a = r(90626),
+        s = r(62641);
+      const n = "100% 0px 100% 0px",
+        o = "SaleSection_",
+        l = 940,
+        c = 1920;
+      function m() {
+        return window.innerWidth ?? c;
       }
-      function n(e) {
-        (0, i.h5)(() => a.set(e));
+      function d() {
+        return m() >= l;
       }
-      function o() {
-        const e = a.get();
-        return e || Math.floor(Date.now() / 1e3);
+      function u() {
+        (0, i.d)();
+        const [e, t] = (0, a.useState)(() => m());
+        return (
+          (0, a.useEffect)(() => {
+            const e = () => {
+              t(m());
+            };
+            return (
+              e(),
+              window.addEventListener("resize", e),
+              () => window.removeEventListener("resize", e)
+            );
+          }, []),
+          e
+        );
       }
-      function l() {
-        const e = a.get();
-        return e ? new Date(1e3 * e) : new Date();
+      function _(e = l) {
+        return u() >= e;
+      }
+      function p(e) {
+        const t = u(),
+          r = t >= l,
+          i = (0, s._B)(e);
+        return r
+          ? { nMaxCapsulesPerRow: i.nMaxItemsPerRow, bScreenIsWide: r }
+          : {
+              nMaxCapsulesPerRow: Math.min(
+                Math.max(Math.floor(t / i.nItemMinimumWidth), 1),
+                i.nMaxItemsPerRow,
+              ),
+              bScreenIsWide: r,
+            };
+      }
+      function g(e) {
+        const t = (0, s._B)(e);
+        return d()
+          ? t.nMaxItemsPerRow
+          : Math.min(
+              Math.max(Math.floor(window.innerWidth / t.nItemMinimumWidth), 1),
+              t.nMaxItemsPerRow,
+            );
       }
     },
     62641: (e, t, r) => {
@@ -1722,7 +1790,7 @@
         Zf: () => x,
         jR: () => N,
         Ac: () => me,
-        lh: () => _e,
+        lh: () => be,
         Hc: () => se,
         UR: () => ee,
         mz: () => X,
@@ -1732,7 +1800,7 @@
         Pm: () => Z,
         qR: () => J,
         _B: () => D,
-        j3: () => pe,
+        j3: () => ye,
         Yw: () => W,
         zK: () => E,
         DU: () => G,
@@ -1757,7 +1825,7 @@
         d = r(17267),
         u = r(7221),
         _ = r(27939),
-        p = r(83085),
+        p = r(97743),
         g = r(81393),
         h = r(61859),
         b = r(25489),
@@ -1785,8 +1853,8 @@
       );
       const w = 99999;
       var v = r(75933),
-        M = r(66418);
-      const T = [
+        T = r(66418);
+      const M = [
         n.u0,
         n.zeJ,
         n.Fa4,
@@ -1805,7 +1873,7 @@
       ];
       function z(e) {
         return (
-          T.some((t) => t == e.GetEventType()) &&
+          M.some((t) => t == e.GetEventType()) &&
           !e.BHasTag("steam_award_nomination_request") &&
           !e.BHasTag("curator")
         );
@@ -2141,8 +2209,12 @@
           n.I5b,
           n.LOv,
           n.WNR,
-        ];
-      class _e {
+        ],
+        _e = [s.TU.k_ESteamRealmGlobal],
+        pe = [s.TU.k_ESteamRealmChina],
+        ge = [s.TU.k_ESteamRealmGlobal, s.TU.k_ESteamRealmChina],
+        he = [];
+      class be {
         constructor() {
           (0, l.Gn)(this);
         }
@@ -2196,7 +2268,7 @@
           return !this.bOldAnnouncement && Boolean(this.GID);
         }
         static FromJSON(e) {
-          let t = new _e(),
+          let t = new be(),
             r = JSON.parse(e);
           return (
             Object.assign(t, r),
@@ -2219,7 +2291,7 @@
           );
         }
         static FromCClanEventData(e, t) {
-          let r = new _e();
+          let r = new be();
           (r.GID = e.gid),
             (r.clanSteamID = new m.b(e.clan_steamid)),
             r.name.set(t, e.event_name ?? ""),
@@ -2284,7 +2356,7 @@
           );
         }
         clone(e = !1) {
-          let t = new _e();
+          let t = new be();
           if (
             ((t.GID = this.GID),
             (t.AnnouncementGID = this.AnnouncementGID),
@@ -2506,18 +2578,18 @@
         GetForumTopicURL(e) {
           return this.BHasForumTopicGID()
             ? this.appid
-              ? M.TS.COMMUNITY_BASE_URL +
+              ? T.TS.COMMUNITY_BASE_URL +
                 "app/" +
                 this.appid +
                 "/eventcomments/" +
                 this.forumTopicGID
               : e
-                ? M.TS.COMMUNITY_BASE_URL +
+                ? T.TS.COMMUNITY_BASE_URL +
                   "groups/" +
                   e +
                   "/eventcomments/" +
                   this.forumTopicGID
-                : M.TS.COMMUNITY_BASE_URL +
+                : T.TS.COMMUNITY_BASE_URL +
                   "gid/" +
                   this.clanSteamID.ConvertTo64BitString() +
                   "/eventcomments/" +
@@ -2532,7 +2604,7 @@
         GetLegacyAnnouncementCommentsURL() {
           const e = this.clanSteamIDOriginal ?? this.clanSteamID;
           return this.BHasAnnouncementGID() && e && e.BIsValid()
-            ? M.TS.COMMUNITY_BASE_URL +
+            ? T.TS.COMMUNITY_BASE_URL +
                 "gid/" +
                 e.ConvertTo64BitString() +
                 "/announcements/old_detail/" +
@@ -2667,13 +2739,13 @@
         GetSubTitleWithSummaryFallback(e) {
           return (
             h.NT.GetWithFallback(this.jsondata?.localized_subtitle, e) ||
-            _e.GenerateSummaryFromText(this.GetDescriptionWithFallback(e))
+            be.GenerateSummaryFromText(this.GetDescriptionWithFallback(e))
           );
         }
         GetSummaryWithFallback(e, t) {
           return (
             h.NT.GetWithFallback(this.jsondata?.localized_summary, e) ||
-            _e.GenerateSummaryFromText(this.GetDescriptionWithFallback(e), t)
+            be.GenerateSummaryFromText(this.GetDescriptionWithFallback(e), t)
           );
         }
         GetSummary(e) {
@@ -2806,12 +2878,12 @@
           if (!this.jsondata.bSaleEnabled) return null;
           if (this.jsondata.sale_update_landing_page_vanity_id)
             return (
-              M.TS.STORE_BASE_URL +
+              T.TS.STORE_BASE_URL +
               `app${this.appid}/landing/${this.jsondata.sale_update_landing_page_vanity_id}`
             );
           if (!Boolean(this.jsondata.sale_vanity_id))
             return (
-              M.TS.STORE_BASE_URL +
+              T.TS.STORE_BASE_URL +
               "newshub/" +
               (this.appid
                 ? "app/" + this.appid
@@ -2823,27 +2895,27 @@
             const e = this.jsondata.source_content_hub;
             return e
               ? "string" == typeof e
-                ? M.TS.STORE_BASE_URL + "category/" + e
+                ? T.TS.STORE_BASE_URL + "category/" + e
                 : "category" == e.type
-                  ? M.TS.STORE_BASE_URL + "category/" + e.category
+                  ? T.TS.STORE_BASE_URL + "category/" + e.category
                   : "tags" == e.type
-                    ? M.TS.STORE_BASE_URL +
+                    ? T.TS.STORE_BASE_URL +
                       "tags/" +
                       ((0, h.l4)() || "en") +
                       "/" +
                       e.tagid
                     : "freetoplay" == e.type
-                      ? M.TS.STORE_BASE_URL + "genre/Free%20to%20Play/"
+                      ? T.TS.STORE_BASE_URL + "genre/Free%20to%20Play/"
                       : "earlyaccess" == e.type
-                        ? M.TS.STORE_BASE_URL + "genre/Early%20Access/"
-                        : M.TS.STORE_BASE_URL + e.type
-              : M.TS.STORE_BASE_URL + "sale/" + this.jsondata.sale_vanity_id;
+                        ? T.TS.STORE_BASE_URL + "genre/Early%20Access/"
+                        : T.TS.STORE_BASE_URL + e.type
+              : T.TS.STORE_BASE_URL + "sale/" + this.jsondata.sale_vanity_id;
           }
           return this.jsondata.sale_vanity_id_valve_approved_for_sale_subpath
-            ? M.TS.STORE_BASE_URL + "sale/" + this.jsondata.sale_vanity_id
+            ? T.TS.STORE_BASE_URL + "sale/" + this.jsondata.sale_vanity_id
             : e
               ? e + "sale/" + this.jsondata.sale_vanity_id
-              : M.TS.STORE_BASE_URL +
+              : T.TS.STORE_BASE_URL +
                 "curator/" +
                 this.clanSteamID.GetAccountID() +
                 "/sale/" +
@@ -2962,14 +3034,14 @@
             ),
             this.jsondata.bOptimizedForSize,
             this.jsondata.tagged_items?.forEach((e) => {
-              _e.AccumulateCapsuleListIDs([e.capsule], r, i, t);
+              be.AccumulateCapsuleListIDs([e.capsule], r, i, t);
             }),
             this.jsondata.sale_sections.forEach((e) => {
               if (Q(e.section_type))
-                _e.AccumulateCapsuleListIDs(e.capsules, r, i, t);
+                be.AccumulateCapsuleListIDs(e.capsules, r, i, t);
               else if ("tabs" === e.section_type && e.tabs)
                 for (const a of e.tabs)
-                  _e.AccumulateCapsuleListIDs(a.capsules, r, i, t);
+                  be.AccumulateCapsuleListIDs(a.capsules, r, i, t);
             }),
             i
           );
@@ -3163,15 +3235,14 @@
             : void 0;
         }
         GetIncludedRealmList() {
-          const e = new Array();
+          const e = this.BInRealmGlobal(),
+            t = this.BInRealmChina();
           return (
-            this.BInRealmGlobal() && e.push(s.TU.k_ESteamRealmGlobal),
-            this.BInRealmChina() && e.push(s.TU.k_ESteamRealmChina),
             (0, g.wT)(
-              e.length > 0,
+              e || t,
               `Event ${this.GID} is currently configured so that no realms are valid for display. Either enable Steam China or Global to address this issue`,
             ),
-            e
+            e && t ? ge : e ? _e : t ? pe : he
           );
         }
         BIsValidForRealm(e) {
@@ -3187,7 +3258,7 @@
           );
         }
         BShowNextFestHeader(e) {
-          return e && M.iA.is_valve_email
+          return e && T.iA.is_valve_email
             ? this.BIsNextFest(!1)
             : this.BIsNextFest(!0) &&
                 !!this.startTime &&
@@ -3244,161 +3315,105 @@
           };
         }
       }
-      function pe(e) {
+      function ye(e) {
         if (e) return e?.replace(/[()]/g, "\\$&");
       }
-      (0, i.Cg)([l.sH], _e.prototype, "GID", void 0),
-        (0, i.Cg)([l.sH], _e.prototype, "AnnouncementGID", void 0),
-        (0, i.Cg)([l.sH], _e.prototype, "forumTopicGID", void 0),
-        (0, i.Cg)([l.sH], _e.prototype, "type", void 0),
-        (0, i.Cg)([l.sH], _e.prototype, "appid", void 0),
-        (0, i.Cg)([l.sH], _e.prototype, "name", void 0),
-        (0, i.Cg)([l.sH], _e.prototype, "description", void 0),
-        (0, i.Cg)([l.sH], _e.prototype, "timestamp_loc_updated", void 0),
-        (0, i.Cg)([l.sH], _e.prototype, "startTime", void 0),
-        (0, i.Cg)([l.sH], _e.prototype, "endTime", void 0),
-        (0, i.Cg)([l.sH], _e.prototype, "visibilityStartTime", void 0),
-        (0, i.Cg)([l.sH], _e.prototype, "visibilityEndTime", void 0),
-        (0, i.Cg)([l.sH], _e.prototype, "m_nBuildID", void 0),
-        (0, i.Cg)([l.sH], _e.prototype, "m_strBuildBranch", void 0),
-        (0, i.Cg)([l.sH], _e.prototype, "postTime", void 0),
-        (0, i.Cg)([l.sH], _e.prototype, "visibility_state", void 0),
-        (0, i.Cg)([l.sH], _e.prototype, "broadcaster", void 0),
-        (0, i.Cg)([l.sH], _e.prototype, "jsondata", void 0),
-        (0, i.Cg)([l.sH], _e.prototype, "nCommentCount", void 0),
-        (0, i.Cg)([l.sH], _e.prototype, "nVotesUp", void 0),
-        (0, i.Cg)([l.sH], _e.prototype, "nVotesDown", void 0),
-        (0, i.Cg)([l.sH], _e.prototype, "bOldAnnouncement", void 0),
-        (0, i.Cg)([l.sH], _e.prototype, "announcementClanSteamID", void 0),
-        (0, i.Cg)([l.sH], _e.prototype, "loadedAllLanguages", void 0),
-        (0, i.Cg)([l.sH], _e.prototype, "bLoaded", void 0),
-        (0, i.Cg)([l.sH], _e.prototype, "deleteInProgress", void 0),
-        (0, i.Cg)([l.sH], _e.prototype, "vecTags", void 0),
-        (0, i.Cg)([l.sH], _e.prototype, "last_update_steamid", void 0),
-        (0, i.Cg)([l.sH], _e.prototype, "rtime32_last_modified", void 0),
+      (0, i.Cg)([l.sH], be.prototype, "GID", void 0),
+        (0, i.Cg)([l.sH], be.prototype, "AnnouncementGID", void 0),
+        (0, i.Cg)([l.sH], be.prototype, "forumTopicGID", void 0),
+        (0, i.Cg)([l.sH], be.prototype, "type", void 0),
+        (0, i.Cg)([l.sH], be.prototype, "appid", void 0),
+        (0, i.Cg)([l.sH], be.prototype, "name", void 0),
+        (0, i.Cg)([l.sH], be.prototype, "description", void 0),
+        (0, i.Cg)([l.sH], be.prototype, "timestamp_loc_updated", void 0),
+        (0, i.Cg)([l.sH], be.prototype, "startTime", void 0),
+        (0, i.Cg)([l.sH], be.prototype, "endTime", void 0),
+        (0, i.Cg)([l.sH], be.prototype, "visibilityStartTime", void 0),
+        (0, i.Cg)([l.sH], be.prototype, "visibilityEndTime", void 0),
+        (0, i.Cg)([l.sH], be.prototype, "m_nBuildID", void 0),
+        (0, i.Cg)([l.sH], be.prototype, "m_strBuildBranch", void 0),
+        (0, i.Cg)([l.sH], be.prototype, "postTime", void 0),
+        (0, i.Cg)([l.sH], be.prototype, "visibility_state", void 0),
+        (0, i.Cg)([l.sH], be.prototype, "broadcaster", void 0),
+        (0, i.Cg)([l.sH], be.prototype, "jsondata", void 0),
+        (0, i.Cg)([l.sH], be.prototype, "nCommentCount", void 0),
+        (0, i.Cg)([l.sH], be.prototype, "nVotesUp", void 0),
+        (0, i.Cg)([l.sH], be.prototype, "nVotesDown", void 0),
+        (0, i.Cg)([l.sH], be.prototype, "bOldAnnouncement", void 0),
+        (0, i.Cg)([l.sH], be.prototype, "announcementClanSteamID", void 0),
+        (0, i.Cg)([l.sH], be.prototype, "loadedAllLanguages", void 0),
+        (0, i.Cg)([l.sH], be.prototype, "bLoaded", void 0),
+        (0, i.Cg)([l.sH], be.prototype, "deleteInProgress", void 0),
+        (0, i.Cg)([l.sH], be.prototype, "vecTags", void 0),
+        (0, i.Cg)([l.sH], be.prototype, "last_update_steamid", void 0),
+        (0, i.Cg)([l.sH], be.prototype, "rtime32_last_modified", void 0),
         (0, i.Cg)(
           [l.sH],
-          _e.prototype,
+          be.prototype,
           "rtime32_last_solr_search_col_updated",
           void 0,
         ),
         (0, i.Cg)(
           [l.sH],
-          _e.prototype,
+          be.prototype,
           "rtime32_last_local_modification",
           void 0,
         ),
-        (0, i.Cg)([l.sH], _e.prototype, "rtime32_moderator_reviewed", void 0),
-        (0, i.Cg)([l.sH], _e.prototype, "video_preview_type", void 0),
-        (0, i.Cg)([l.sH], _e.prototype, "video_preview_id", void 0),
-        (0, i.Cg)([l.sH], _e.prototype, "m_overrideCurrentDay", void 0);
+        (0, i.Cg)([l.sH], be.prototype, "rtime32_moderator_reviewed", void 0),
+        (0, i.Cg)([l.sH], be.prototype, "video_preview_type", void 0),
+        (0, i.Cg)([l.sH], be.prototype, "video_preview_id", void 0),
+        (0, i.Cg)([l.sH], be.prototype, "m_overrideCurrentDay", void 0);
     },
     75933: (e, t, r) => {
       r.d(t, {
-        $m: () => l,
-        ML: () => b,
-        QS: () => d,
-        Sn: () => f,
-        Wn: () => _,
-        ZI: () => w,
-        a4: () => y,
-        f_: () => B,
-        jD: () => c,
-        jn: () => S,
-        mj: () => m,
-        rp: () => h,
-        sQ: () => u,
+        $m: () => s.$m,
+        QS: () => o,
+        Sn: () => s.Sn,
+        Wn: () => s.Wn,
+        ZI: () => m,
+        a4: () => s.a4,
+        f_: () => s.f_,
+        jD: () => n,
+        jn: () => c,
+        mj: () => s.mj,
+        rp: () => s.rp,
+        sQ: () => l,
       });
-      var i = r(9646),
-        a = r(22837),
-        s = r(62641),
-        n = r(90626),
-        o = r(24864);
-      const l = "100% 0px 100% 0px",
-        c = "tab",
-        m = "SaleSection_",
-        d = "exploration";
-      var u;
+      var i = r(22837),
+        a = r(24864),
+        s = r(70628);
+      const n = "tab",
+        o = "exploration";
+      var l;
+      function c(e) {
+        switch (e) {
+          case a.Oh:
+            return i.mv5;
+          case a._X:
+            return i.KH9;
+          case a.HD:
+            return i.hmR;
+          case a.rb:
+            return i.R2g;
+          default:
+            return;
+        }
+      }
+      function m(e) {
+        switch (e) {
+          case i.mv5:
+            return a.Oh;
+          case i.KH9:
+            return a._X;
+          case i.hmR:
+            return a.HD;
+          default:
+            return;
+        }
+      }
       !(function (e) {
         (e.Random = "r"), (e.Personalized = "p");
-      })(u || (u = {}));
-      const _ = 940,
-        p = 1920;
-      function g() {
-        return window.innerWidth ?? p;
-      }
-      function h() {
-        return g() >= _;
-      }
-      function b() {
-        (0, i.d)();
-        const [e, t] = (0, n.useState)(() => g());
-        return (
-          (0, n.useEffect)(() => {
-            const e = () => {
-              t(g());
-            };
-            return (
-              e(),
-              window.addEventListener("resize", e),
-              () => window.removeEventListener("resize", e)
-            );
-          }, []),
-          e
-        );
-      }
-      function y(e = _) {
-        return b() >= e;
-      }
-      function B(e) {
-        const t = b(),
-          r = t >= _,
-          i = (0, s._B)(e);
-        return r
-          ? { nMaxCapsulesPerRow: i.nMaxItemsPerRow, bScreenIsWide: r }
-          : {
-              nMaxCapsulesPerRow: Math.min(
-                Math.max(Math.floor(t / i.nItemMinimumWidth), 1),
-                i.nMaxItemsPerRow,
-              ),
-              bScreenIsWide: r,
-            };
-      }
-      function f(e) {
-        const t = (0, s._B)(e);
-        return h()
-          ? t.nMaxItemsPerRow
-          : Math.min(
-              Math.max(Math.floor(window.innerWidth / t.nItemMinimumWidth), 1),
-              t.nMaxItemsPerRow,
-            );
-      }
-      function S(e) {
-        switch (e) {
-          case o.Oh:
-            return a.mv5;
-          case o._X:
-            return a.KH9;
-          case o.HD:
-            return a.hmR;
-          case o.rb:
-            return a.R2g;
-          default:
-            return;
-        }
-      }
-      function w(e) {
-        switch (e) {
-          case a.mv5:
-            return o.Oh;
-          case a.KH9:
-            return o._X;
-          case a.hmR:
-            return o.HD;
-          default:
-            return;
-        }
-      }
+      })(l || (l = {}));
     },
     27543: (e, t, r) => {
       r.d(t, { JS: () => s, rG: () => n });

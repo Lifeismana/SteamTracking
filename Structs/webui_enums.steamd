@@ -10,6 +10,8 @@ enum by
 	by_player = 1;
 	by_wishlist = 2;
 	by_play_wish = 3;
+	by_fest_page_views = 4;
+	by_fest_period_page_views = 5;
 }
 
 enum ConfigPage
@@ -504,6 +506,7 @@ enum EMarketingMessageFlags
 	k_EMarketingMessageFlagsPlatformWindows = 2;
 	k_EMarketingMessageFlagsPlatformMac = 4;
 	k_EMarketingMessageFlagsPlatformLinux = 8;
+	k_EMarketingMessageFlagsAutomated = 16;
 	k_EMarketingMessageFlagsPlatformRestrictions = 14;
 }
 
@@ -2384,6 +2387,23 @@ enum UnnamedEnum57bf92e3de997183
 	MID = 4;
 }
 
+enum UnnamedEnum58b833d239519037
+{
+	k_RegistrationConfirmation = 0;
+	k_Reminder = 1;
+	k_Invite = 2;
+	k_Followup = 3;
+	k_Starting = 4;
+	k_InviteReminder = 5;
+	k_Update = 6;
+	k_PermissionRequest = 7;
+	k_MediaUsageNotification = 8;
+	k_GeneralCommunication = 9;
+	k_SteamAwardFinalists = 10;
+	k_MediaUsageConfirmation = 11;
+	k_RemovedIneligible = 12;
+}
+
 enum UnnamedEnum59717e0405bef96b
 {
 	VALID = 0;
@@ -3164,22 +3184,6 @@ enum UnnamedEnumacc9a67b80433cd5
 {
 	TheaterFast = 0;
 	TheaterSlow = 1;
-}
-
-enum UnnamedEnumad5f244ec47c479c
-{
-	k_RegistrationConfirmation = 0;
-	k_Reminder = 1;
-	k_Invite = 2;
-	k_Followup = 3;
-	k_Starting = 4;
-	k_InviteReminder = 5;
-	k_Update = 6;
-	k_PermissionRequest = 7;
-	k_MediaUsageNotification = 8;
-	k_GeneralCommunication = 9;
-	k_SteamAwardFinalists = 10;
-	k_MediaUsageConfirmation = 11;
 }
 
 enum UnnamedEnumad6b0ba9e64c3c66

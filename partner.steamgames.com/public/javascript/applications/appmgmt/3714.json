@@ -56,6 +56,5 @@
     "SinglePricingPackage_Intro_2b": "Für nicht gängige US-Dollarpreise: Geben Sie einen Wert im Feld für US-Dollarpreise ein. Klicken Sie anschließend auf die Schaltfläche „Preise umrechnen …“ und folgen Sie der Anleitung.",
     "PricingDashboard_Method_SuggestedPrice": "Empfohlene Umrechnung:",
     "PricingDashboard_Method_SuggestedPrice_ttip": "Diese Preisempfehlung basiert auf der ausgewählten Umrechnungsmethode und dem angegebenen US-Dollarpreis von %1$s.",
-    "dummy": "dummy",
-    "empty_no_trailing_comma": ""
+    "dummy": "dummy"
 }

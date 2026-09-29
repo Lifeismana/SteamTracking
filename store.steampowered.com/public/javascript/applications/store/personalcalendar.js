@@ -347,6 +347,201 @@
             (e.k_ESquareCrumb = "square");
         })(s || (s = {}));
     },
+    43474: (e, r, t) => {
+      "use strict";
+      t.d(r, { K: () => c, _: () => o });
+      var n = t(7850),
+        s = t(90626),
+        l = t(74057),
+        a = t(76217);
+      const i = s.createContext({ enabled: !0 });
+      function o(e) {
+        const { enabled: r, children: t } = e,
+          l = s.useMemo(() => ({ enabled: r }), [r]);
+        return (0, n.jsx)(i.Provider, { value: l, children: t });
+      }
+      function c(e) {
+        const {
+            placeholderWidth: r,
+            placeholderHeight: t,
+            holdGamepadFocus: o = !1,
+            onRender: c,
+            style: d,
+            mode: u = "JustLoad",
+            children: h,
+            ...m
+          } = e,
+          p = s.useContext(i),
+          [f, _] = s.useState(() => ({
+            bRenderChildren: !p.enabled,
+            nPrevRenderHeight: 0,
+            nPrevRenderWidth: 0,
+          })),
+          g = s.useRef(null),
+          b = "LoadAndUnload" === u && p.enabled,
+          v = s.useCallback(
+            (e) => {
+              _((r) => {
+                if (r.bRenderChildren === e || (r.bRenderChildren && !b))
+                  return r;
+                let t = 0,
+                  n = 0;
+                if (g.current) {
+                  const e = g.current.getBoundingClientRect();
+                  e && ((t = e.width), (n = e.height));
+                }
+                return (
+                  e && c && c(),
+                  {
+                    bRenderChildren: e,
+                    nPrevRenderWidth: t,
+                    nPrevRenderHeight: n,
+                  }
+                );
+              });
+            },
+            [b, c],
+          );
+        s.useEffect(() => {
+          p.enabled || v(!0);
+        }, [p.enabled, v]);
+        let S = d;
+        if (!f.bRenderChildren) {
+          const e = f.nPrevRenderWidth || r,
+            n = f.nPrevRenderHeight || t;
+          (void 0 === n && void 0 === e) ||
+            (S = { ...d, minHeight: n, minWidth: e });
+        }
+        const A = b ? "repeated" : "once";
+        let x = (0, n.jsx)(l.J, {
+          containerRef: g,
+          style: S,
+          ...m,
+          onVisibilityChange: v,
+          trigger: A,
+          children: f.bRenderChildren && h,
+        });
+        return (
+          o &&
+            (x = (0, n.jsx)(a.Z, {
+              focusableIfEmpty: !0,
+              style: { height: "100%" },
+              children: x,
+            })),
+          x
+        );
+      }
+    },
+    74057: (e, r, t) => {
+      "use strict";
+      t.d(r, { J: () => c });
+      var n = t(7850),
+        s = t(76217),
+        l = t(90626),
+        a = t(94104),
+        i = t(8871),
+        o = t(40236);
+      class c extends l.Component {
+        static GetScrollableClassname() {
+          return "vt-scrollable";
+        }
+        m_observer = null;
+        m_refElement = l.createRef();
+        m_elTracked = null;
+        m_bPreviouslyIntersecting = !1;
+        BTriggerOnce() {
+          return "once" == (this.props.trigger || "once");
+        }
+        GetBoundingClientRect() {
+          return this.m_refElement.current
+            ? this.m_refElement.current.getBoundingClientRect()
+            : null;
+        }
+        DestroyObserver() {
+          this.m_observer &&
+            (this.m_observer.disconnect(),
+            (this.m_observer = null),
+            (this.m_elTracked = null));
+        }
+        componentWillUnmount() {
+          this.DestroyObserver();
+        }
+        componentDidMount() {
+          this.UpdateObserver(null);
+        }
+        componentDidUpdate(e) {
+          this.UpdateObserver(e);
+        }
+        UpdateObserver(e) {
+          if (this.m_bPreviouslyIntersecting && this.BTriggerOnce()) return;
+          this.m_observer &&
+            e &&
+            (e.rootMargin != this.m_observer.rootMargin ||
+              e.thresholds != this.m_observer.thresholds) &&
+            this.DestroyObserver();
+          let r = this.m_refElement.current;
+          if (
+            (this.m_observer &&
+              r != this.m_elTracked &&
+              (this.m_elTracked && this.m_observer.unobserve(this.m_elTracked),
+              (this.m_elTracked = null)),
+            !this.m_observer && r)
+          ) {
+            let e = { root: this.FindScrollableAncestor(r) };
+            this.props.rootMargin && (e.rootMargin = this.props.rootMargin),
+              this.props.thresholds && (e.threshold = this.props.thresholds),
+              (this.m_observer = (0, o.md)(r, this.OnIntersection, e));
+          }
+          this.m_observer &&
+            r &&
+            r != this.m_elTracked &&
+            (this.m_observer.observe(r), (this.m_elTracked = r));
+        }
+        FindScrollableAncestor(e) {
+          return (0, a.Kf)(e, (e) => {
+            const r = this.props.horizontal
+              ? window.getComputedStyle(e).overflowX
+              : window.getComputedStyle(e).overflowY;
+            return (
+              "scroll" == r ||
+              "auto" == r ||
+              !!e.classList.contains(c.GetScrollableClassname())
+            );
+          });
+        }
+        HandleRef = (e) => {
+          (0, i.cZ)(this.m_refElement, e),
+            this.props.containerRef && (0, i.cZ)(this.props.containerRef, e);
+        };
+        OnIntersection = (e) => {
+          let r = !1;
+          for (const t of e)
+            if (t.isIntersecting) {
+              r = !0;
+              break;
+            }
+          this.m_bPreviouslyIntersecting != r &&
+            ((this.m_bPreviouslyIntersecting = r),
+            this.props.onVisibilityChange && this.props.onVisibilityChange(r),
+            r && this.BTriggerOnce() && this.DestroyObserver());
+        };
+        render() {
+          let {
+            onVisibilityChange: e,
+            rootMargin: r,
+            trigger: t,
+            horizontal: l,
+            containerRef: a,
+            ...i
+          } = this.props;
+          return (0, n.jsx)(s.Z, {
+            ref: this.HandleRef,
+            ...i,
+            children: this.props.children,
+          });
+        }
+      }
+    },
     19122: (e, r, t) => {
       "use strict";
       t.d(r, { i: () => c, o: () => d });
@@ -387,7 +582,7 @@
       t.d(r, { C0: () => n, Ck: () => f, mj: () => p });
       var n,
         s = t(7850),
-        l = t(95578),
+        l = t(8747),
         a = t(66418),
         i = t(39777),
         o = t(64238),
@@ -485,18 +680,18 @@
         b = t(70310),
         v = t(64466),
         S = t(43568),
-        A = t(96236),
+        A = t(43474),
         x = t(49411),
-        C = t(52038),
-        w = t(84933),
+        w = t(52038),
+        C = t(84933),
         y = t(78327),
         I = t(30470),
         j = t(42834),
         N = t(19122),
         E = t(80696),
         T = t(84518),
-        R = t(66139),
-        D = t(4554);
+        D = t(66139),
+        R = t(4554);
       const k = {
         name: "personalcalendarPrefs",
         options: { path: "/personalcalendar", secure: !0, maxAge: 31536e6 },
@@ -512,16 +707,16 @@
           p = (0, x.w)(),
           v = (0, y.Qn)(),
           A = new Date().getDay(),
-          C = 13 + A,
-          w = 22 - A,
-          I = (0, b.GZ)(0, C, w),
-          j = (0, b.Gd)(C, w, !0, !0).flat(),
+          w = 13 + A,
+          C = 22 - A,
+          I = (0, b.GZ)(0, w, C),
+          j = (0, b.Gd)(w, C, !0, !0).flat(),
           E = (0, g.It)(`${d.TS.STORE_BASE_URL}personalcalendar`, h, p),
           { bShowSeeMoreHint: T, panelProps: F } = (0, N.i)(E),
-          H = D.d.Localize("#PersonalCalendar_Explore"),
+          H = R.d.Localize("#PersonalCalendar_Explore"),
           L = f.useCallback(() => l?.(E), [l, E]);
         if (!I.data)
-          return (0, n.jsx)(a.Z, { className: R.PersonalCalendarWidget });
+          return (0, n.jsx)(a.Z, { className: D.PersonalCalendarWidget });
         let P = I.data.arrAppInfos;
         return (
           c &&
@@ -540,32 +735,32 @@
               }
             }))),
           (0, n.jsxs)(a.Z, {
-            className: R.PersonalCalendarWidget,
+            className: D.PersonalCalendarWidget,
             navEntryPreferPosition: i.iU.PREFERRED_CHILD,
             ...F,
             onOptionsButton: l ? L : F.onOptionsButton,
             onOptionsActionDescription: H,
             children: [
               (0, n.jsxs)("div", {
-                className: R.TitleSection,
+                className: D.TitleSection,
                 children: [
                   (0, n.jsxs)("div", {
-                    className: R.TitleSectionLeft,
+                    className: D.TitleSectionLeft,
                     children: [
                       (0, n.jsxs)("div", {
-                        className: R.Title,
+                        className: D.Title,
                         children: [
                           r &&
                             (0, n.jsx)("span", {
-                              className: R.NewBadge,
-                              children: D.d.Localize("#NewBadge"),
+                              className: D.NewBadge,
+                              children: R.d.Localize("#NewBadge"),
                             }),
-                          D.d.Localize("#PersonalCalendar_Title"),
+                          R.d.Localize("#PersonalCalendar_Title"),
                         ],
                       }),
                       (0, n.jsx)("div", {
-                        className: R.Subtitle,
-                        children: D.d.Localize("#PersonalCalendar_Subtitle"),
+                        className: D.Subtitle,
+                        children: R.d.Localize("#PersonalCalendar_Subtitle"),
                       }),
                     ],
                   }),
@@ -609,7 +804,7 @@
             href: r,
             className: "btn_small btn_medium btnv6_white_transparent",
             children: (0, n.jsx)("span", {
-              children: D.d.Localize("#PersonalCalendar_Explore"),
+              children: R.d.Localize("#PersonalCalendar_Explore"),
             }),
           }),
         });
@@ -631,7 +826,7 @@
             v.getDate() === S.getDate() &&
             v.getMonth() === S.getMonth() &&
             v.getFullYear() === S.getFullYear(),
-          w = v > S,
+          C = v > S,
           I = v.toLocaleDateString((0, o.J)(), { weekday: "short" }),
           j = v.toLocaleString((0, o.J)(), {
             day: "numeric",
@@ -661,29 +856,29 @@
             }
           }, [s, G]),
           (0, n.jsxs)(a.Z, {
-            className: (0, C.A)(
-              R.PersonalCalendarWidgetDay,
-              A && R.TodayCtn,
-              w && R.FutureCtn,
-              k && R.EmptyDayCtn,
+            className: (0, w.A)(
+              D.PersonalCalendarWidgetDay,
+              A && D.TodayCtn,
+              C && D.FutureCtn,
+              k && D.EmptyDayCtn,
             ),
             "flow-children": "column",
             children: [
               (0, n.jsxs)("div", {
-                className: R.DayTitle,
+                className: D.DayTitle,
                 children: [
                   !A &&
-                    (0, n.jsx)("div", { className: R.DayOfWeek, children: I }),
-                  !A && (0, n.jsx)("div", { className: R.Date, children: j }),
+                    (0, n.jsx)("div", { className: D.DayOfWeek, children: I }),
+                  !A && (0, n.jsx)("div", { className: D.Date, children: j }),
                   A &&
                     (0, n.jsx)("div", {
-                      className: R.Today,
-                      children: D.d.Localize("#Time_Today"),
+                      className: D.Today,
+                      children: R.d.Localize("#Time_Today"),
                     }),
                 ],
               }),
               (0, n.jsx)(a.Z, {
-                className: R.DayAppContainer,
+                className: D.DayAppContainer,
                 "flow-children": "column",
                 navEntryPreferPosition: i.iU.MAINTAIN_Y,
                 preferredFocus: s && !M,
@@ -696,9 +891,9 @@
                     ),
                     k &&
                       (0, n.jsx)("div", {
-                        className: R.EmptyDay,
+                        className: D.EmptyDay,
                         children: (0, c.i)(
-                          D.d.Localize("#PersonalCalendar_EmptyDay"),
+                          R.d.Localize("#PersonalCalendar_EmptyDay"),
                           (0, n.jsx)("a", { href: b }),
                         ),
                       }),
@@ -709,8 +904,8 @@
                 T > 0 &&
                 (0, n.jsx)(l.Ii, {
                   href: b,
-                  className: R.MoreGames,
-                  children: D.d.Localize("#PersonalCalendar_More", T),
+                  className: D.MoreGames,
+                  children: R.d.Localize("#PersonalCalendar_More", T),
                 }),
             ],
           })
@@ -728,7 +923,7 @@
           S = (0, v.l)(g, b ? "main_capsule" : "hero_capsule"),
           { data: A } = (0, p.lI)(),
           x = A?.preferences?.disable_microtrailers,
-          w = l || o;
+          C = l || o;
         return (
           f.useEffect(() => {
             if (
@@ -750,23 +945,23 @@
               onGamepadBlur: () => c(!1),
               children: (0, n.jsx)(u.u, {
                 id: { appid: e.nAppID },
-                hoverClassName: R.StoreAppHover,
+                hoverClassName: D.StoreAppHover,
                 disableScreenshots: !0,
                 children: (0, n.jsx)(T.A, {
                   appID: e.nAppID,
                   children: (0, n.jsxs)(a.Z, {
                     ref: d,
-                    className: (0, C.A)(R.StoreAppCapsule, l && R.Hovered),
+                    className: (0, w.A)(D.StoreAppCapsule, l && D.Hovered),
                     onMouseOver: () => i(!0),
                     onMouseOut: () => i(!1),
                     children: [
                       (0, n.jsx)("img", {
-                        className: R.Image,
+                        className: D.Image,
                         src: S,
                         alt: "",
                       }),
                       x &&
-                        w &&
+                        C &&
                         (0, n.jsx)(L, {
                           id: { appid: e.nAppID },
                           nIntervalMS: 1e3,
@@ -774,7 +969,7 @@
                       !x &&
                         (0, n.jsx)(E.mj, {
                           id: { appid: e.nAppID },
-                          active: w,
+                          active: C,
                           bIsHoverMode: !0,
                         }),
                     ],
@@ -789,17 +984,17 @@
         const r = (0, j.DT)(e.id) ?? [],
           [t, s] = f.useState(0);
         return (
-          (0, w.$$)(() => {
+          (0, C.$$)(() => {
             r.length > 0 && s((t + 1) % r.length);
           }, e.nIntervalMS),
           r?.length && -1 != t
             ? (0, n.jsx)("div", {
-                className: R.ScreenshotCycler,
+                className: D.ScreenshotCycler,
                 children: r.map((e, r) =>
                   (0, n.jsx)(
                     "img",
                     {
-                      className: (0, C.A)(R.Screenshot, r == t && R.Active),
+                      className: (0, w.A)(D.Screenshot, r == t && D.Active),
                       src:
                         I.TS.BASE_URL_SHARED_CDN +
                         "/store_item_assets/" +
@@ -964,9 +1159,9 @@
             const e = (0, h.VY)(m);
             return !e || "true" === e?.toLowerCase();
           }, []),
-          [x, C] = s.useState(A),
-          w = void 0 !== l ? l : S,
-          [y, I] = s.useState(w),
+          [x, w] = s.useState(A),
+          C = void 0 !== l ? l : S,
+          [y, I] = s.useState(C),
           j = void 0 !== f,
           N = (function (e) {
             switch (e) {
@@ -978,26 +1173,26 @@
             }
             return;
           })(f),
-          E = p && x && !j && w > 0 && y > 0;
+          E = p && x && !j && C > 0 && y > 0;
         (0, d.$$)(
           () => {
             const e = y - 30;
-            e <= 0 ? (u(), I(w)) : I(Math.max(e, 0));
+            e <= 0 ? (u(), I(C)) : I(Math.max(e, 0));
           },
           30,
-          [w],
+          [C],
           E,
         );
         const T = s.useCallback(
           (e) => {
-            (0, h.lc)(m, String(e), 3650), C(e), I(w);
+            (0, h.lc)(m, String(e), 3650), w(e), I(C);
           },
-          [w],
+          [C],
         );
         return (
           s.useEffect(() => {
-            I(w);
-          }, [t, w]),
+            I(C);
+          }, [t, C]),
           (0, n.jsxs)("div", {
             className: r,
             children: [
@@ -1015,7 +1210,7 @@
                   (0, n.jsx)("div", {
                     className: a().AutoAdvanceBar,
                     style: {
-                      "--auto-advance-ratio": 100 - (y / w) * 100 + "%",
+                      "--auto-advance-ratio": 100 - (y / C) * 100 + "%",
                     },
                   }),
                 ],
@@ -1055,7 +1250,7 @@
     },
     43568: (e, r, t) => {
       "use strict";
-      t.d(r, { F: () => w });
+      t.d(r, { F: () => C });
       var n = t(7850),
         s = t(7445),
         l = t(76217),
@@ -1067,7 +1262,7 @@
         u = t(79613),
         h = t(82728),
         m = t(47444),
-        p = t(96236),
+        p = t(43474),
         f = t(11279);
       function _(e) {
         const {
@@ -1145,7 +1340,7 @@
             })
           : S;
       }
-      var b = t(60383),
+      var b = t(74057),
         v = t(64238),
         S = t.n(v),
         A = t(66407);
@@ -1226,12 +1421,12 @@
           });
         }
       }
-      const C = (0, a.Yw)(x, (e) => ({
+      const w = (0, a.Yw)(x, (e) => ({
         currentSlide: e.currentSlide,
         totalSlides: e.totalSlides,
         visibleSlides: e.visibleSlides,
       }));
-      function w(e) {
+      function C(e) {
         const { bForceSimpleCarousel: r, screenIsWide: t, children: s } = e,
           l = (0, d.Qn)();
         return (!t && !l) || r
@@ -1248,17 +1443,17 @@
         if (!b || !v) return null;
         const A = v < b,
           x = e.hideArrows || !A,
-          w = !A || e.hidePips,
+          C = !A || e.hidePips,
           y = !!e.bAutoAdvance && A && !r;
         let j;
         t && !(0, u.$W)() ? (j = h.af) : c ? (j = h.OE) : f && (j = h.iD);
         let T = 4 / 3,
-          R = !0;
-        e.slideAspectRatio && ((T = e.slideAspectRatio), (R = !1));
-        const D = `items_in_row_${e.visibleElements}`;
+          D = !0;
+        e.slideAspectRatio && ((T = e.slideAspectRatio), (D = !1));
+        const R = `items_in_row_${e.visibleElements}`;
         return (0, n.jsx)(l.Z, {
           "flow-children": "row",
-          className: (0, o.A)(m.carouselBody, e.className, D),
+          className: (0, o.A)(m.carouselBody, e.className, R),
           navKey: e.navKey,
           ref: _,
           onMouseEnter: () => s(!0),
@@ -1270,7 +1465,7 @@
             naturalSlideHeight: 100,
             step: e.visibleElements,
             infinite: !e.disableEdgeWrap,
-            isIntrinsicHeight: R,
+            isIntrinsicHeight: D,
             dragEnabled: !1,
             touchEnabled: !1,
             lockOnWindowScroll: !0,
@@ -1307,9 +1502,9 @@
                   );
                 }),
               }),
-              !w &&
+              !C &&
                 (e.useTestScrollbar
-                  ? (0, n.jsx)(C, { showArrows: x, carouselStore: null })
+                  ? (0, n.jsx)(w, { showArrows: x, carouselStore: null })
                   : (0, n.jsx)("div", {
                       className: S()({
                         [m.breadcrumbContainer]: !0,
@@ -1467,203 +1662,6 @@
           ],
         });
       }
-    },
-    96236: (e, r, t) => {
-      "use strict";
-      t.d(r, { K: () => c, _: () => o });
-      var n = t(7850),
-        s = t(90626),
-        l = t(60383),
-        a = t(76217);
-      const i = s.createContext({ enabled: !0 });
-      function o(e) {
-        const { enabled: r, children: t } = e,
-          l = s.useMemo(() => ({ enabled: r }), [r]);
-        return (0, n.jsx)(i.Provider, { value: l, children: t });
-      }
-      function c(e) {
-        const {
-            placeholderWidth: r,
-            placeholderHeight: t,
-            holdGamepadFocus: o = !1,
-            onRender: c,
-            style: d,
-            mode: u = "JustLoad",
-            children: h,
-            ...m
-          } = e,
-          p = s.useContext(i),
-          [f, _] = s.useState(() => ({
-            bRenderChildren: !p.enabled,
-            nPrevRenderHeight: 0,
-            nPrevRenderWidth: 0,
-          })),
-          g = s.useRef(null),
-          b = "LoadAndUnload" === u && p.enabled,
-          v = s.useCallback(
-            (e) => {
-              _((r) => {
-                if (r.bRenderChildren === e || (r.bRenderChildren && !b))
-                  return r;
-                let t = 0,
-                  n = 0;
-                if (g.current) {
-                  const e = g.current.getBoundingClientRect();
-                  e && ((t = e.width), (n = e.height));
-                }
-                return (
-                  e && c && c(),
-                  {
-                    bRenderChildren: e,
-                    nPrevRenderWidth: t,
-                    nPrevRenderHeight: n,
-                  }
-                );
-              });
-            },
-            [b, c],
-          );
-        s.useEffect(() => {
-          p.enabled || v(!0);
-        }, [p.enabled, v]);
-        let S = d;
-        if (!f.bRenderChildren) {
-          const e = f.nPrevRenderWidth || r,
-            n = f.nPrevRenderHeight || t;
-          (void 0 === n && void 0 === e) ||
-            (S = { ...d, minHeight: n, minWidth: e });
-        }
-        const A = b ? "repeated" : "once";
-        let x = (0, n.jsx)(l.J, {
-          containerRef: g,
-          style: S,
-          ...m,
-          onVisibilityChange: v,
-          trigger: A,
-          children: f.bRenderChildren && h,
-        });
-        return (
-          o &&
-            (x = (0, n.jsx)(a.Z, {
-              focusableIfEmpty: !0,
-              style: { height: "100%" },
-              children: x,
-            })),
-          x
-        );
-      }
-    },
-    60383: (e, r, t) => {
-      "use strict";
-      t.d(r, { J: () => c });
-      var n = t(34629),
-        s = t(7850),
-        l = t(76217),
-        a = t(90626),
-        i = t(56011),
-        o = t(84933);
-      class c extends a.Component {
-        static GetScrollableClassname() {
-          return "vt-scrollable";
-        }
-        m_observer = null;
-        m_refElement = a.createRef();
-        m_elTracked = null;
-        m_bPreviouslyIntersecting = !1;
-        BTriggerOnce() {
-          return "once" == (this.props.trigger || "once");
-        }
-        GetBoundingClientRect() {
-          return this.m_refElement.current
-            ? this.m_refElement.current.getBoundingClientRect()
-            : null;
-        }
-        DestroyObserver() {
-          this.m_observer &&
-            (this.m_observer.disconnect(),
-            (this.m_observer = null),
-            (this.m_elTracked = null));
-        }
-        componentWillUnmount() {
-          this.DestroyObserver();
-        }
-        componentDidMount() {
-          this.UpdateObserver(null);
-        }
-        componentDidUpdate(e) {
-          this.UpdateObserver(e);
-        }
-        UpdateObserver(e) {
-          if (this.m_bPreviouslyIntersecting && this.BTriggerOnce()) return;
-          this.m_observer &&
-            e &&
-            (e.rootMargin != this.m_observer.rootMargin ||
-              e.thresholds != this.m_observer.thresholds) &&
-            this.DestroyObserver();
-          let r = this.m_refElement.current;
-          if (
-            (this.m_observer &&
-              r != this.m_elTracked &&
-              (this.m_elTracked && this.m_observer.unobserve(this.m_elTracked),
-              (this.m_elTracked = null)),
-            !this.m_observer && r)
-          ) {
-            let e = { root: this.FindScrollableAncestor(r) };
-            this.props.rootMargin && (e.rootMargin = this.props.rootMargin),
-              this.props.thresholds && (e.threshold = this.props.thresholds),
-              (this.m_observer = (0, o.md)(r, this.OnIntersection, e));
-          }
-          this.m_observer &&
-            r &&
-            r != this.m_elTracked &&
-            (this.m_observer.observe(r), (this.m_elTracked = r));
-        }
-        FindScrollableAncestor(e) {
-          return i.Kf(e, (e) => {
-            const r = this.props.horizontal
-              ? window.getComputedStyle(e).overflowX
-              : window.getComputedStyle(e).overflowY;
-            return (
-              "scroll" == r ||
-              "auto" == r ||
-              !!e.classList.contains(c.GetScrollableClassname())
-            );
-          });
-        }
-        HandleRef(e) {
-          (0, o.cZ)(this.m_refElement, e),
-            this.props.containerRef && (0, o.cZ)(this.props.containerRef, e);
-        }
-        OnIntersection(e, r) {
-          let t = !1;
-          for (const r of e)
-            if (r.isIntersecting) {
-              t = !0;
-              break;
-            }
-          this.m_bPreviouslyIntersecting != t &&
-            ((this.m_bPreviouslyIntersecting = t),
-            this.props.onVisibilityChange && this.props.onVisibilityChange(t),
-            t && this.BTriggerOnce() && this.DestroyObserver());
-        }
-        render() {
-          let {
-            onVisibilityChange: e,
-            rootMargin: r,
-            trigger: t,
-            horizontal: n,
-            containerRef: a,
-            ...i
-          } = this.props;
-          return (0, s.jsx)(l.Z, {
-            ref: this.HandleRef,
-            ...i,
-            children: this.props.children,
-          });
-        }
-      }
-      (0, n.Cg)([o.oI], c.prototype, "HandleRef", null),
-        (0, n.Cg)([o.oI], c.prototype, "OnIntersection", null);
     },
   },
 ]);

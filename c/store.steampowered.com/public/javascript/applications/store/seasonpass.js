@@ -96,51 +96,56 @@
       }
       function _(_) {
         const { season_pass: _ } = _;
-        return _ && _.milestones && 0 != _.milestones.length
-          ? (0, _.jsx)(_._, {
-              feature: "seasonpassproductpage",
-              children: (0, _.jsxs)("div", {
-                className:
-                  "game_area_description overflow_allowed season_pass_area",
-                children: [
-                  (0, _.jsx)("h2", {
-                    children: (0, _._)("#SeasonPass_Header"),
-                  }),
-                  (0, _.jsx)("p", {
-                    children: (0, _._)("#SeasonPass_Incomplete_Desc"),
-                  }),
-                  (0, _.jsx)("p", {
-                    children: (0, _._)(
-                      "#SeasonPass_Incomplete_Desc2",
-                      (0, _.jsx)("a", {
-                        href: `${_._.STORE_BASE_URL}account/notificationsettings`,
-                      }),
-                    ),
-                  }),
-                  _.milestones
-                    .sort((_, _) =>
-                      _.shipped && _.shipped
-                        ? (_.rtime_complete ?? 0) - (_.rtime_complete ?? 0)
-                        : _.shipped
-                          ? -1
-                          : _.shipped
-                            ? 1
-                            : _(_) - _(_),
-                    )
-                    .map((_) =>
-                      (0, _.jsx)(
-                        _,
-                        {
-                          baseGameAppID: _.appid,
-                          milestone: _,
-                        },
-                        "ms_" + _.milestone_id,
-                      ),
-                    ),
-                ],
+        if (!_ || !_.milestones || 0 == _.milestones.length) return null;
+        const _ = _.milestones.every((_) => Boolean(_.shipped));
+        return (0, _.jsx)(_._, {
+          feature: "seasonpassproductpage",
+          children: (0, _.jsxs)("div", {
+            className:
+              "game_area_description overflow_allowed season_pass_area",
+            children: [
+              (0, _.jsx)("h2", {
+                children: (0, _._)("#SeasonPass_Header"),
               }),
-            })
-          : null;
+              !_ &&
+                (0, _.jsxs)(_.Fragment, {
+                  children: [
+                    (0, _.jsx)("p", {
+                      children: (0, _._)("#SeasonPass_Incomplete_Desc"),
+                    }),
+                    (0, _.jsx)("p", {
+                      children: (0, _._)(
+                        "#SeasonPass_Incomplete_Desc2",
+                        (0, _.jsx)("a", {
+                          href: `${_._.STORE_BASE_URL}account/notificationsettings`,
+                        }),
+                      ),
+                    }),
+                  ],
+                }),
+              _.milestones
+                .sort((_, _) =>
+                  _.shipped && _.shipped
+                    ? (_.rtime_complete ?? 0) - (_.rtime_complete ?? 0)
+                    : _.shipped
+                      ? -1
+                      : _.shipped
+                        ? 1
+                        : _(_) - _(_),
+                )
+                .map((_) =>
+                  (0, _.jsx)(
+                    _,
+                    {
+                      baseGameAppID: _.appid,
+                      milestone: _,
+                    },
+                    "ms_" + _.milestone_id,
+                  ),
+                ),
+            ],
+          }),
+        });
       }
       function _(_) {
         const _ = _.dates ?? [];
