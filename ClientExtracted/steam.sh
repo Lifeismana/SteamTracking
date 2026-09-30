@@ -111,6 +111,10 @@ if has_beta_optin; then
 			# Reference: https://github.com/ValveSoftware/steam-for-linux/issues/13597
 			unset STEAM_RUNTIME
 
+			# STEAM_RUNTIME_LIBRARY_PATH may be set if we are currently switching from
+			# Scout to SteamRT3
+			unset STEAM_RUNTIME_LIBRARY_PATH
+
 			create_legacy_entry_points
 			"$STEAMROOT/steamrt64/steam" "$@"
 			STATUS=$?

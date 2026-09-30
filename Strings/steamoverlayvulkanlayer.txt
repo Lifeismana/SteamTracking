@@ -23,13 +23,18 @@ $ORIGIN
 ++CCUNGstd::exception
 /dev/random
 /dev/urandom
+/tmp/steam_shared_fd_uid%u_rpid%u
 0123456789
 17CPooledBufferData
 18CVulkanSharedImage
+24CVulkanSharedPlanarImage
 26CVulkanAsyncReadbackThread
 27CVulkanSharedResourceDevice
 @data
 @entryPointOutput
+@entryPointOutput.U
+@entryPointOutput.V
+@entryPointOutput.Y
 @entryPointOutput.vPositionPs
 @entryPointOutput.vTexCoord
 CLcx
@@ -43,6 +48,7 @@ GLIBC_2.2.5
 GLIBC_2.25
 GLIBC_2.3
 GLIBC_2.3.2
+GLIBC_2.30
 GLIBC_2.4
 GLSL.std.450
 GL_ARB_separate_shader_objects
@@ -87,19 +93,24 @@ TLS wrapper function for
 Ucoeff
 Uoffset
 VK_KHR_bind_memory2
+VK_KHR_external_memory_fd
+VK_KHR_external_semaphore_fd
 VK_KHR_get_memory_requirements2
 VK_KHR_maintenance1
 VK_KHR_maintenance2
 VK_KHR_sampler_ycbcr_conversion
+VK_KHR_timeline_semaphore
 VTT for
 Vcoeff
 Voffset
 VulkanSteamOverlayBeginRendering
 VulkanSteamOverlayDeleteTexture(int)
 VulkanSteamOverlayDestroySwapChain
+VulkanSteamOverlayDrawTexturedQuad
 VulkanSteamOverlayDrawTexturedRect
 VulkanSteamOverlayPresent
 VulkanSteamOverlayProcessCapturedFrame
+VulkanSteamOverlayProcessSharedPlanarFrame
 VulkanSteamOverlaySetWindowType
 VulkanSteamOverlayStartCaptureFrame
 VulkanSteamOverlayStopRendering
@@ -133,6 +144,7 @@ __tls_get_addr
 abort
 alignof
 allocator
+asctime_r
 auto
 auto:
 bCompositeCursor
@@ -166,6 +178,7 @@ char
 char16_t
 char32_t
 char8_t
+clock_gettime
 close
 co_await
 color
@@ -173,9 +186,12 @@ colorX
 colorY
 color_in
 compositeDesc
+connect
 const_cast
 construction vtable for
 covariant return thunk to
+ctime_r
+daylight
 decimal128
 decimal32
 decimal64
@@ -194,6 +210,7 @@ dynamic_cast
 eInputType
 eOutputType
 false
+fcntl
 flCursorOffsetX
 flCursorOffsetY
 flCursorScaleX
@@ -217,10 +234,16 @@ generic
 get_nprocs
 getentropy
 getenv
+geteuid
+getpid
+getsockopt
+gettimeofday
+getuid
 gl_Position
 glibcxx.eh_pool
 global constructors keyed to
 global destructors keyed to
+gmtime_r
 guard variable for
 half
 hardware
@@ -237,6 +260,7 @@ ld-linux-x86-64.so.2
 libc.so.6
 libdl.so.2
 libpthread.so.0
+localtime_r
 long
 long double
 long long
@@ -266,6 +290,7 @@ outImage
 outWidth
 param
 pthread_cond_broadcast
+pthread_cond_clockwait
 pthread_cond_destroy
 pthread_cond_signal
 pthread_cond_wait
@@ -291,16 +316,20 @@ rdrnd
 rdseed
 read
 realloc
+recv
 reference temporary #
 reinterpret_cast
 samCursor
 samDiffuse
 sampler0
 secure_getenv
+sendmsg
 short
 signed char
 sizeof
 sizeof...
+snprintf
+socket
 sprintf
 static_cast
 std::allocator
@@ -340,6 +369,8 @@ terminate called recursively\n
 terminate called without an active exception\n
 this
 throw
+timegm
+timezone
 transaction clone for
 transaction clone for operator delete(void*)
 transaction clone for operator new[](unsigned long)

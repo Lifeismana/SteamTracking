@@ -683,7 +683,9 @@
             (_[(_.k_EWindowBringToFrontAndForceOS = 1)] =
               "k_EWindowBringToFrontAndForceOS"),
             (_[(_.k_EWindowBringToFrontWithoutForcingOS = 2)] =
-              "k_EWindowBringToFrontWithoutForcingOS");
+              "k_EWindowBringToFrontWithoutForcingOS"),
+            (_[(_.k_EWindowBringToFrontUsingExistingOSState = 3)] =
+              "k_EWindowBringToFrontUsingExistingOSState");
         })(_ || (_ = {}));
       var _;
       !(function (_) {

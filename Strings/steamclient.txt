@@ -2528,6 +2528,7 @@ $steammessages_parental_objects.proto"
 %s/%s/gameserver/ugc/%s/
 %s/%s/steam-runtime-system-info-%lu.txt
 %s/%s/virtualgamepadinfo.txt
+%s/%s:%s/%s
 %s/%s_%u.acf
 %s/%sresource/filter_%s_%s.txt.gz
 %s/../%s%s/%sdriverquery
@@ -2744,7 +2745,6 @@ $steammessages_parental_objects.proto"
 %s:%d: OpenSSL internal error: %s\n
 %s:%d: invalid %s id %u for "%s" of type '%s' in '%s'
 %s:%dx%d@%d %u
-%s:%s/%s:%s/%s
 %s://%s/%s%s
 %s:443
 %s='%s', which isn't a valid IPv%d address
@@ -5464,6 +5464,8 @@ $steammessages_parental_objects.proto"
 +(#\v&dbF:xrJ'$#
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNG=
+++CCUNGb
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 +.CAudio_GetBluetoothAudioPreference_Request
@@ -6561,9 +6563,9 @@ $steammessages_parental_objects.proto"
 ../clientdll/systemdockmanager_linux.cpp:562
 ../clientdll/systemmanager.cpp
 ../clientdll/systemmanager.cpp:2554
-../clientdll/systemmanager.cpp:2886
-../clientdll/systemmanager.cpp:4430
-../clientdll/systemmanager.cpp:5025
+../clientdll/systemmanager.cpp:2887
+../clientdll/systemmanager.cpp:4431
+../clientdll/systemmanager.cpp:5026
 ../clientdll/systemperfmanager.cpp
 ../clientdll/systemperfmanager_linux.cpp
 ../clientdll/systemperfmanager_linux.cpp:1185
@@ -7903,6 +7905,7 @@ $steammessages_parental_objects.proto"
 /OTN
 /P8i
 /R?jjU?
+/ScreenSaver
 /Steam.dll
 /Steam3PosixRegistryManager
 /SteamApps
@@ -8038,6 +8041,7 @@ $steammessages_parental_objects.proto"
 /music
 /name
 /nvidiav1/GLCache/%s/%s
+/org/freedesktop/DBus
 /org/freedesktop/ScreenSaver
 /org/freedesktop/login1
 /pfx/drive_c/ProgramData
@@ -8292,16 +8296,15 @@ $steammessages_parental_objects.proto"
 0000000000000000000000000000000000000000
 00000001
 00003333
-00:00:00
-01/01/00
 0123456789.
 0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
+00:00:00
 00|000
+01/01/00
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
-0123456789ABCDEFP
 0123456789abcdef
 08bX
 0: Auto. 1: Force Controller to be "HandHeld" orientation, like SteamDeck (tilt in pitch by 90 degrees so that "Yaw" is "Through the Screen". 2: Force Controller to be "Standalone" controller like Steam Controller, where "Yaw" is "Through Sticks".
@@ -11890,11 +11893,11 @@ $steammessages_parental_objects.proto"
 20.StoreItem.PackageGroup.EPackageGroupDisplayType
 200 Mbps
 2000
+20000
+2000000
 200M
 2019
 2048
-20000
-2000000
 208.64.200.0/22
 208.78.164.0/22
 20AccountHardware_Stub
@@ -16267,7 +16270,6 @@ $steammessages_parental_objects.proto"
 6.CSteamOSManager_RefreshScreenReaderAutoLocale_Request
 6.CSteamOSManager_SetDesktopAsDefaultLoginMode_Response
 6.CTransportValidation_RequestLargeNotification_Request
-60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 60CAccountHardware_CompleteSteamControllerRegistration_Request
 60CAuthentication_UpdateAuthSessionWithSteamGuardCode_Response
@@ -16283,6 +16285,7 @@ $steammessages_parental_objects.proto"
 60CSiteLicenseClientJob_SiteManagerClient_ExpectIncomingClient
 60CSteamInputService_ControllerButtonStateChanged_Notification
 6144
+60000000
 61CAccountHardware_CompleteSteamControllerRegistration_Response
 61CEcon_GetInventoryItemsWithDescriptions_Request_FilterOptions
 61CFamilyGroupsClient_NotifyRunningApps_Notification_RunningApp
@@ -22027,6 +22030,7 @@ CSystemManager::m_pWorkThreadPool
 CSystemManagerApplyUpdateJob
 CSystemManagerApplyUpdateJob: applied
 CSystemManagerApplyUpdateJob: client restart required
+CSystemManagerApplyUpdateJob: ignoring OS update request on platform without OS updates
 CSystemManagerApplyUpdateJob: starting
 CSystemManagerApplyUpdateJob: system restart required
 CSystemManagerCheckForUpdateJob
@@ -27123,6 +27127,7 @@ GetConnectionRealTimeStatus
 GetConnectionType( hConnection ) == eConnectionType
 GetConnectionType() != k_EConnectionTypeUDP
 GetConnectionType() == k_ESSLConnectionType_Client || GetConnectionType() == k_EDTLSConnectionType_Client
+GetConnectionUnixProcessID
 GetConnectionUserData
 GetConnectivity
 GetConnectivityTestState
@@ -29633,6 +29638,7 @@ L SoZU`
 L*NBQJ]zr
 L+5d
 L8-\rHO
+L>p\nJ
 L?333?
 LABEL
 LABEL_OPTIONAL
@@ -40705,6 +40711,12 @@ Zulu
 [num threads]
 [packed = true] can only be specified for repeated primitive fields.
 [reset] Dump the histogram of protobuf message body sizes parsed, and how many were parsed on a worker thread
+[screensaver dbus] could not acquire %s, another screensaver service owns it
+[screensaver dbus] failed to connect to the session bus: %s
+[screensaver dbus] failed to create skeleton for %s
+[screensaver dbus] failed to export %s: %s
+[screensaver dbus] lost %s
+[screensaver dbus] now owning %s
 [uCu
 [ucS
 [unknown]
@@ -48744,6 +48756,11 @@ g_async_initable_new_finish
 g_async_result_get_source_object
 g_bLocalGIDInitComplete || g_GIDCurrent.UsSysID() != 0
 g_bSimulateUDPForLocalHostToLocalHostCnx
+g_bus_get_sync
+g_bus_own_name_on_connection
+g_bus_unown_name
+g_bus_unwatch_name
+g_bus_watch_name_on_connection
 g_bytes_get_data
 g_bytes_new
 g_bytes_unref
@@ -48754,6 +48771,7 @@ g_cclosure_marshal_generic
 g_datalist_clear
 g_datalist_get_data
 g_datalist_id_set_data_full
+g_dbus_connection_call_sync
 g_dbus_connection_emit_signal
 g_dbus_connection_get_type
 g_dbus_error_quark
@@ -48762,13 +48780,16 @@ g_dbus_gvariant_to_gvalue
 g_dbus_interface_get_info
 g_dbus_interface_info_lookup_property
 g_dbus_interface_info_lookup_signal
+g_dbus_interface_skeleton_export
 g_dbus_interface_skeleton_get_connection
 g_dbus_interface_skeleton_get_connections
 g_dbus_interface_skeleton_get_object_path
 g_dbus_interface_skeleton_get_type
+g_dbus_interface_skeleton_unexport
 g_dbus_message_get_unix_fd_list
 g_dbus_method_invocation_get_message
 g_dbus_method_invocation_get_method_info
+g_dbus_method_invocation_get_sender
 g_dbus_method_invocation_get_type
 g_dbus_method_invocation_return_error
 g_dbus_method_invocation_return_value
@@ -49176,7 +49197,7 @@ getting staging path
 getuid
 getwc
 gf2m not supported
-ggen
+ggenh
 ghjkl
 gidlist
 gidparentcomment
@@ -49528,6 +49549,7 @@ hQueue != -1
 hR}S
 hSteamPipe == m_hSteamPipeCurrent
 hU&qx
+hWza
 h\44Q
 h\f90
 h\n\tTokenList
@@ -50006,6 +50028,7 @@ http://jabber.org/protocol/chatstates
 http://jabber.org/protocol/disco#info
 http://jabber.org/protocol/disco#items
 http://jabber.org/protocol/nick
+http://localhost:27100
 http://musicbrainz.org
 http://steamconnecttest.com/
 http://steamconnecttest.com/204
@@ -50518,6 +50541,7 @@ identity_remote
 identity_secret
 identity_string
 identity_verification
+idle inhibited by another app
 idle-action
 idle-action-usec
 idle-hint
@@ -57879,6 +57903,7 @@ org.bluez.Media1
 org.bluez.MediaControl1
 org.bluez.NetworkServer1
 org.bluez.ProfileManager1
+org.freedesktop.DBus
 org.freedesktop.DBus.Deprecated
 org.freedesktop.DBus.Introspectable
 org.freedesktop.DBus.Method.NoReply
@@ -57946,6 +57971,7 @@ oriType
 oriValue
 orig_session != NULL
 orig_session->HasAttr(buzz::QN_TYPE)
+origin
 origin_SteamFrame_DPad_Touch
 origin_SteamFrame_LeftGrip_Click
 origin_SteamFrame_LeftGrip_Pull
@@ -61633,7 +61659,7 @@ stderr
 stdin
 stdout
 steam
-steam Sep 27 2026 21:21:25
+steam Sep 29 2026 22:18:11
 steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
 steam-runtime-launch-client --alongside-steam -- /usr/bin/steamos-polkit-helpers/jupiter-biosupdate

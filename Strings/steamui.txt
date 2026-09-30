@@ -300,7 +300,6 @@
 !"Couldn't initialize software encoder"
 !"Don't poll on UDP sockets dude"
 !"Emptying callback queue because client didn't process them in a timely manner"
-!"FIXME need handle type"
 !"Fatal Error: Could not get IFileSystem interface from 'bin/FileSystem_Steam.dll"
 !"Fatal Error: Could not load module 'bin/FileSystem_Steam.dll'"
 !"Fatal Error: Could not load module 'bin/vgui2_s.dll'"
@@ -2295,7 +2294,6 @@ ${LANGUAGE}
 %s: display was not open yet, good\n
 %s: drive: 0x%x
 %s: enabled = %d
-%s: encoding from %s
 %s: extended CEC enable control: %d
 %s: extended CEC suspend TV: %d
 %s: extended CEC suspend device: %d
@@ -2503,6 +2501,7 @@ ${LANGUAGE}
 &8Yv
 &ARCH=%s
 &CLOUD_GAMING_PLATFORM=%u
+&FORCED_DISPLAY_MODE=steammachine
 &GameRecording\BackgroundTimeResolution
 &IY6
 &Lj&6lZ6?~A?
@@ -5259,10 +5258,10 @@ ${LANGUAGE}
 +(#\v&dbF:xrJ'$#
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNGS:
+++CCUNGSp
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
-++CCUNGxB
+++CCUNGxx
 +.CAudio_GetBluetoothAudioPreference_Request
 +.CAudio_SetBluetoothAudioPreference_Request
 +.CAuthenticationSupport_RevokeToken_Request
@@ -7649,6 +7648,7 @@ ${LANGUAGE}
 /tmp/hkkillfile
 /tmp/jupiter-wifi-trace.dat
 /tmp/specifycompattoolfile
+/tmp/steam_shared_fd_uid%u_rpid%u
 /u%d-Shm_%x
 /u%d-ValveIPCSharedObj-Steam
 /ubuntu12_32/steam-runtime/amd64/usr/bin/steam-runtime-launch-client
@@ -7776,11 +7776,11 @@ ${LANGUAGE}
 00000000
 0000000000000000000000000000000000000000
 00003333
-00:00:00
-01/01/00
 0123456789.
 0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
+00:00:00
+01/01/00
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -10795,6 +10795,7 @@ ${LANGUAGE}
 27CGameBroadcastRecordSession
 27CGameNotifications_Variable
 27CGameRecordingTimelineEvent
+27CGameStreamSharedFDReceiver
 27CGamescope_GetState_Request
 27CGetConfigInfoWorkerPromise
 27CHTTPServerClientConnection
@@ -13068,7 +13069,6 @@ ${LANGUAGE}
 51CSteamInputService_SteamDonglesChanged_Notification
 51CSteamOSManager_IsTelemetryHelperAvailable_Response
 51CTransportValidation_TriggerSyntheticEvents_Request
-524288
 52CAccountHardware_RegisterValveIndexComponent_Request
 52CAccountHardware_UpdateControllerUsageReport_Request
 52CAuthenticationSupport_MarkTokenCompromised_Response
@@ -13342,7 +13342,6 @@ ${LANGUAGE}
 6.CSteamOSManager_SetDesktopAsDefaultLoginMode_Response
 6.CTransportValidation_RequestLargeNotification_Request
 60.0
-60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 60CAccountHardware_CompleteSteamControllerRegistration_Request
 60CAuthentication_UpdateAuthSessionWithSteamGuardCode_Response
@@ -13384,10 +13383,8 @@ ${LANGUAGE}
 64CMarketingMessages_DoesUserHavePendingMarketingMessages_Response
 64CMarketingMessages_GetMarketingMessagesViewerRangeStats_Response
 64CSteamInputService_WaitInitialControllerStateEnumerated_Response
-65536
 659D-A19E-018A-81A6
 65CChatRoom_SetUserChatGroupPreferences_Request_ChatRoomPreferences
-666666666666666666666666666666666666666666666666
 66CAuthentication_NotifyRiskQuizResults_Notification_RiskQuizResults
 66CChatRoom_SetUserChatGroupPreferences_Request_ChatGroupPreferences
 66CPlayer_GetRecentPlaytimeSessionsForChild_Response_PlaytimeSession
@@ -13605,6 +13602,10 @@ ${LANGUAGE}
 8000
 80CChatUsability_ClientUsabilityMetrics_Notification_UIState_CategoryCollapseState
 8192
+65536
+524288
+60000000
+666666666666666666666666666666666666666666666666
 82\n:XPH
 83CPlayer_GetPurchasedAndUpgradedProfileCustomizations_Response_UpgradedCustomization
 83L3
@@ -16858,6 +16859,9 @@ CGameStreamManager::OnVRHeadsetStreamingEnabledChanged
 CGameStreamManager::OnVRModeChanged
 CGameStreamManager::OnVRVRLinkActiveChanged
 CGameStreamSession::Init failed
+CGameStreamSharedFDReceiver: couldn't listen on %s: %s
+CGameStreamSharedFDReceiver: couldn't start the receiving thread
+CGameStreamSharedFDReceiver: unexpected message from a producer (%d bytes, magic 0x%x)
 CGameStreamSystemLinux: Couldn't convert icon image: %s\n
 CGameStreamSystemLinux: Couldn't create ARGB surface: %s\n
 CGameStreamSystemLinux: Couldn't create icon surface: %s\n
@@ -16894,19 +16898,29 @@ CGameStreamVideoStagePyrowave couldn't duplicate handle: %s
 CGameStreamVideoStagePyrowave: %s() failed: %d
 CGameStreamVideoStagePyrowave: can't convert RGB DMA-BUF to colorspace 0x%x
 CGameStreamVideoStagePyrowave: can't encode DMA-BUF (format 0x%x, modifier 0x%llx, capture %d,%d %dx%d of %dx%d)
+CGameStreamVideoStagePyrowave: created device on adapter %s with normal priority
+CGameStreamVideoStagePyrowave: created device on adapter %s with real-time priority
+CGameStreamVideoStagePyrowave: descriptor 0x%llx isn't a semaphore
 CGameStreamVideoStagePyrowave: device doesn't support DMA-BUF import, using system memory input
 CGameStreamVideoStagePyrowave: fstat() on DMA-BUF failed: %s
-CGameStreamVideoStagePyrowave: pyrowave_create_default_device() failed: %d
+CGameStreamVideoStagePyrowave: image 0x%llx (plane %d) is format %d %ux%u, expected format %d %ux%u
+CGameStreamVideoStagePyrowave: never received the descriptor for image 0x%llx (plane %d)
+CGameStreamVideoStagePyrowave: never received the descriptor for semaphore 0x%llx
+CGameStreamVideoStagePyrowave: not using shared Vulkan images: %s
+CGameStreamVideoStagePyrowave: pyrowave_create_device_by_compat2() failed: %d
+CGameStreamVideoStagePyrowave: pyrowave_create_device_by_compat2() on adapter %s failed: %d, retrying with default device
 CGameStreamVideoStagePyrowave: pyrowave_encoder_compute_num_critical_packets() failed: %d
 CGameStreamVideoStagePyrowave: pyrowave_encoder_compute_num_packets() failed: %d
 CGameStreamVideoStagePyrowave: pyrowave_encoder_create() failed: %d
 CGameStreamVideoStagePyrowave: pyrowave_encoder_encode_cpu_synchronous() failed: %d
+CGameStreamVideoStagePyrowave: pyrowave_encoder_encode_gpu_synchronous() failed: %d
 CGameStreamVideoStagePyrowave: pyrowave_encoder_packetize() failed: %d
 CGameStreamVideoStagePyrowave: pyrowave_image_create() failed: %d (format 0x%x, plane %d, %ux%u)
 CGameStreamVideoStagePyrowave: pyrowave_image_get_image_view() failed: %d
 CGameStreamVideoStagePyrowave: pyrowave_image_get_image_view() failed: %d (plane %d)
 CGameStreamVideoStagePyrowave: pyrowave_sync_object_create() failed: %d
 CGameStreamVideoStagePyrowave: unsupported shared handle type %d (format 0x%x)
+CGameStreamVideoStagePyrowave: unsupported shared semaphore handle type %d
 CGameStreamVideoStageQueueThread
 CGameStreamVideoStageQueueThread::ProcessAsync
 CGameStreamVideoStageQueueThread::ProcessAsync - sleep
@@ -19190,7 +19204,7 @@ ChangeAppQueuePlacement
 ChangeDownloadIndex
 ChangeNumOpenSlots
 ChangePassphrase
-Changing adapter [old=%llu][new=%llu]\n
+Changing adapter [old=%s][new=%s]\n
 Changing record audio process: stopped
 Changing record audio processes. Associated window: %p. pids:
 Changing record window: %p (%llu)
@@ -19858,10 +19872,6 @@ Cyrillic
 Czech
 D#D)D;D?DEDKDQDSDYDeDoD
 D)7Z
-D3D11
-D3D11 shared texture
-D3D12
-D3D12 shared texture
 D4tp
 D4y\t
 D96K
@@ -20039,9 +20049,7 @@ DLCAvailableOnStore
 DLCData
 DLCList
 DLOPEN Error:%s\n
-DMA-BUF
 DMA-BUF image without DMA-BUF data
-DMA-BUF shared texture
 DNS:
 DO NOT PARSE: fields may be stripped and missing.\n
 DOCUMENTS
@@ -20108,6 +20116,7 @@ DTLSv1.2
 DTLSv1_listen
 DVCS
 DWCHV
+DW` F
 DXDeviceID
 DXVendorID
 DXVideoCardVersion
@@ -24062,8 +24071,6 @@ INVALID_SOCKET != m_hSocket
 INVALID_SOCKET == m_hSocket
 IOCP Thread
 IOCP Thread %u
-IOSurface
-IOSurface shared texture
 IOTYPE_ACCEPT == pCompletionData->type
 IOTYPE_RECV should never be posted back to main thread
 IOTYPE_SEND/UNBUFERREDSEND
@@ -27042,7 +27049,7 @@ NVENC - Sending EOS failed: %d
 NVENC - Submitting frame for encoding failed: %d
 NVENC - Unable to get current CUDA context
 NVENC - Unable to set current CUDA context
-NVENC - [codec=%s][device=%d][input=%s][bufferFormat=0x%x][%dx%d][colorspace=%d][gop=%d][frameIntervalP=%d]
+NVENC - [codec=%s][device=%d][nt=%d][bufferFormat=0x%x][%dx%d][colorspace=%d][gop=%d][frameIntervalP=%d]
 NVENC - codec %s isn't supported
 NVENC - couldn't check device %d capability: %d
 NVENC - couldn't create context: %d
@@ -28440,6 +28447,7 @@ Plat_OutputDebugStringRaw
 Plat_RelativeTickFrequency
 Plat_RelativeTicks
 Plat_ShouldUseSteamDeckClientBranch
+Plat_TickAddMicroSec
 Plat_TickDiffMicroSec
 Plat_TickDiffMilliSec
 Plat_USTime
@@ -30354,7 +30362,7 @@ Sent ping with MTU %d, increment = %d\n
 SentenceMode
 SentenceModeMenu
 Sentiment
-Sep 27 2026 21:21:28
+Sep 29 2026 22:18:14
 September
 Serbian
 Serial
@@ -30690,6 +30698,7 @@ SharedConnection.SendMsgAndAwaitBinaryResponse
 SharedConnection.SendMsgAndAwaitResponse
 SharedConnection.SubscribeToClientServiceMethod
 SharedConnection.SubscribeToEMsg
+SharedFDReceiver
 SharedJSContext
 SharedJSContext.GetDesiredSteamUIWindows#1
 Shavian
@@ -32726,6 +32735,7 @@ UI.GetDesiredSteamUIWindows
 UI.GetOSEndOfLifeInfo
 UI.GetUIMode
 UI.NotifyAppInitialized
+UI.NotifyMainWindowShown
 UI.RegisterDesiredSteamUIWindowsChanged
 UI.RegisterForClientConVar
 UI.RegisterForErrorCondition
@@ -33536,8 +33546,6 @@ Vote
 VoteData
 Vql4
 Vu?N\t?8Ws?vGr?
-Vulkan
-Vulkan shared texture
 W%0Qv4AV
 W)N0
 WARNING
@@ -39564,6 +39572,7 @@ could not set engine
 could not set time
 could not unload the shared library
 couldn't create encoding pipeline, throwing out frame\n
+couldn't import the frame's images and semaphores
 count
 count >= 0
 count_searching
@@ -40173,7 +40182,6 @@ decimal64
 decipherOnly
 deckDerivedProperties
 deck_convention_
-declined
 decltype (
 decltype(auto)
 decltype(nullptr)
@@ -53551,14 +53559,13 @@ pwrd_telecom
 pwrd_unicom
 pwrite64
 py_generic_services
-pyrowave_create_default_device
-pyrowave_create_device_by_compat
+pyrowave_create_device_by_compat2
 pyrowave_custom_bitrate
 pyrowave_custom_bitrate_kbps
 pyrowave_device_confirm_interop_support
 pyrowave_device_destroy
+pyrowave_device_get_global_priority
 pyrowave_device_report_performance_stats
-pyrowave_device_set_queue_type
 pyrowave_encoder_compute_num_critical_packets
 pyrowave_encoder_compute_num_packets_with_padding
 pyrowave_encoder_create
@@ -53573,6 +53580,7 @@ pyrowave_image_get_image_view
 pyrowave_quality_modifier
 pyrowave_sync_object_create
 pyrowave_sync_object_destroy
+pyrowave_sync_object_get_semaphore
 pyrowave_yuv444
 python3 "%s/devkit-utils/steamos-set-steam-client" --client %s
 pzKD)
@@ -54949,7 +54957,6 @@ shortname
 should retry
 should_hide_hint
 should_suppress_discount_pct
-show-main-window
 showDownArrow
 show_above_purchase
 show_advanced_update_channels
@@ -56276,7 +56283,6 @@ sysreqs
 system
 system lib
 system library
-system memory
 system.HeadsetView
 system\EnableGameOverlay
 system\EnableUISounds
@@ -57522,7 +57528,6 @@ unknown header flags set
 unknown hostname
 unknown id
 unknown info type
-unknown input
 unknown interlace type
 unknown key exchange type
 unknown key type
@@ -57657,7 +57662,6 @@ unsupported status type
 unsupported type
 unsupported version
 unsupported zlib version
-unusable shared texture
 unused
 unverified
 unwrap error
@@ -58653,6 +58657,7 @@ z~rvjnbfZ^RVJNBF
 {A7Dd
 {GCOKWS_[
 {OYK
+{PUP
 {\n"version": %u,\n"gameids" : [\n
 {\n\t"file_format_version" : "1.0.0",\n\t"layer" : {\n\t\t"name": "%s",\n\t\t"type": "GLOBAL",\n\t\t"library_path": "%s/%s",\n\t\t"api_version": "1.3.207",\n\t\t"implementation_version": "1",\n\t\t"description": "%s",\n\t\t"disable_environment": { "DISABLE_%s": "1" },\n\t\t"enable_environment": { "ENABLE_%s": "1" }%s\n\t}\n}\n
 {cKS

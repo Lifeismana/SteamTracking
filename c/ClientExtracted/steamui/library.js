@@ -1814,6 +1814,8 @@
                 "k_EWindowBringToFrontAndForceOS"),
               (_[(_.k_EWindowBringToFrontWithoutForcingOS = 2)] =
                 "k_EWindowBringToFrontWithoutForcingOS"),
+              (_[(_.k_EWindowBringToFrontUsingExistingOSState = 3)] =
+                "k_EWindowBringToFrontUsingExistingOSState"),
               _
             ))(_ || {});
           const _ = 0,
@@ -31832,9 +31834,6 @@
         },
         chunkid: (module, module_exports, __webpack_require__) => {
           "use strict";
-          __webpack_require__._(module_exports, {
-            _: () => _,
-          });
           var _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
@@ -31899,26 +31898,7 @@
                 __webpack_require__._("chunkid"),
                 __webpack_require__._("chunkid"),
               ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-            ),
-            _ = _.lazy(() =>
-              Promise.all([
-                __webpack_require__._("chunkid"),
-                __webpack_require__._("chunkid"),
-                __webpack_require__._("chunkid"),
-              ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-            ),
-            _ = "is-first-client-load";
-          function _() {
-            let _ = !0;
-            sessionStorage.getItem(_) &&
-              _._.CLIENT_SESSION > 0 &&
-              Date.now() / 1e3 > _._.CLIENT_SESSION + 30 &&
-              (_ = !1),
-              sessionStorage.setItem(_, _ ? "true" : "false");
-          }
-          function _() {
-            return sessionStorage.getItem(_) !== "false";
-          }
+            );
           function _() {
             return jsxs("div", {
               className: classnames(styles.Container, styles.PreloadThrobber),
@@ -31945,7 +31925,7 @@
             });
           }
           function _() {
-            (window._ = new _._()), _(), (_._.IN_STEAMUI = !0), _();
+            (window._ = new _._()), _(), (_._.IN_STEAMUI = !0);
             const _ = document.getElementById("root");
             _.createRoot(_).render(
               (0, _.jsx)(_, {
@@ -32203,11 +32183,11 @@
           8545: "localization/steampops_brazilian-json",
           8674: "localization/shared_french-json",
           8699: "localization/friendsui_danish-json",
-          8732: "libraries/libraries~2dcc5aaf7",
           8830: "localization/steamui_tchinese-json",
           8872: "localization/shared_greek-json",
           9053: "localization/shared_hungarian-json",
           9063: "localization/steampops_english-json",
+          9068: "libraries/libraries~e8c5e5be4",
           9129: "awardicon",
           9134: "localization/steampops_polish-json",
           9171: "localization/steamui_thai-json",
@@ -32217,7 +32197,6 @@
           9462: "localization/friendsui_dutch-json",
           9672: "discoveryqueue",
           9711: "localization/steampops_norwegian-json",
-          9858: "chunk~2dcc5aaf7",
           9869: "localization/shared_vietnamese-json",
           9887: "localization/steamui_german-json",
         }[_] || _) +
@@ -32255,10 +32234,10 @@
           1005: "98e28afc2db5993f4962",
           1012: "c3a236d78c5dedff82f8",
           1093: "345b42d4294c7c49a295",
-          1129: "24a0b2c8682d1cbba9d9",
+          1129: "ed19b917d38ed18abe94",
           1133: "d89ddca0a5767ca842c2",
           1139: "1e5dc97c3cf66f83b334",
-          1220: "11802b0638a1862aa93f",
+          1220: "ff24a35ffb13e00b9de4",
           1242: "c2b6d48c4a04cdb8a477",
           1275: "c43e67d0340511fc04e4",
           1325: "b547eaa65761c29b64a1",
@@ -32317,7 +32296,7 @@
           2640: "14949988e5a1d5b46885",
           2646: "83491d7abed83a8c9b6a",
           2662: "351fc7754f71f1cc0685",
-          2664: "b426537b1204c784113a",
+          2664: "7c1511e4218787dcf222",
           2742: "54d4b6900c85fa185142",
           2752: "6cb71a4714f52abd77ac",
           2761: "30d83da0633f8ffee22f",
@@ -32348,7 +32327,7 @@
           3356: "afcd1189413004edef84",
           3366: "1ec9b62b64c486f35f8b",
           3473: "94ad56127886b2b0e7dc",
-          3569: "328ab53289bb00b1477b",
+          3569: "a16d9bdcd23854ec29e3",
           3583: "e43edc0ea1d97c2fbc71",
           3585: "65cd2386404e99a7fdb0",
           3589: "a731c3c599a53f5cd3a0",
@@ -32357,9 +32336,9 @@
           3675: "a1c7bc52f5058ba5ba05",
           3695: "a960106da5dfe25daade",
           3706: "2981a5b26c56041f9fde",
-          3714: "0d78a92fdc7be2e222bc",
+          3714: "19d07490d0c52cf7b6d1",
           3744: "55f6de16858471640eef",
-          3834: "98f80fa625b74f8b65b7",
+          3834: "002c0b4ea1473ba16577",
           3869: "e1d6d5dccf5de0fad5dc",
           3876: "9dfd09b2c570bab56e1a",
           3899: "ebdc2584dce2a6b71514",
@@ -32459,13 +32438,13 @@
           7376: "c791f71e47a5d6202720",
           7386: "fd69132e1e127e9c94c9",
           7442: "dedfb635c8696a5a8041",
-          7462: "8384b9ed39b472b350ad",
+          7462: "91c4926aafb573937f64",
           7503: "daa9b22f32c67068a3cf",
           7533: "da594422fa33693bb84c",
           7554: "606581027d06f59a75f5",
           7569: "ac27ae8f525ea46d28a3",
           7627: "aaacbde436dff08a1fae",
-          7653: "1e6c0f3e0978656de2a0",
+          7653: "42796490ef88661ae957",
           7656: "1fd35ecff3f759635bfc",
           7696: "b054594061efe54879fc",
           7770: "c3ece28180ca8300458f",
@@ -32491,7 +32470,7 @@
           8330: "8258c260fdc929389bce",
           8346: "2a822e156b71646dd690",
           8391: "acaf9dd4a4dd5f9f6058",
-          8396: "1b74f32fd8cc31d33c05",
+          8396: "25e09623668637a11e6b",
           8405: "8ca27ad6585dea861a79",
           8443: "701ea90b425ffed773bb",
           8445: "467520e1f7030933fed4",
@@ -32509,7 +32488,6 @@
           8674: "5b5937a7dc27e68bb804",
           8699: "b639843d745278022bf3",
           8700: "3d44a2367c840c678721",
-          8732: "35f9b096bd9f091f98c7",
           8780: "88b573de2e1b9cbcdade",
           8830: "b134de0655cebdc34531",
           8839: "79755f3084afab4875eb",
@@ -32522,9 +32500,10 @@
           8970: "908e0a190a3136f29c84",
           9053: "fb669aadba67ea877743",
           9063: "9a1c83f6430002bc834c",
+          9068: "de8f612e303dea5387d0",
           9108: "b59da46df8fe1ee0fdd4",
           9120: "230d59ee4a99c1fd0767",
-          9129: "b2a67e10be8c4f7ab59e",
+          9129: "20c98d6d6e575e955723",
           9134: "c1af76f97d2d64be2eb8",
           9171: "d60c3602aef9675eed4c",
           9183: "c51e2acedd52d19b4627",
@@ -32541,14 +32520,13 @@
           9536: "d536cb9c41c87028c4be",
           9558: "090cfff1220fd9d6b3c8",
           9637: "add7222c524fa2f61d7f",
-          9672: "6f7a5565b8e05617a8da",
+          9672: "3e9add6c528138123d11",
           9711: "a2038e4475447c2e7fe4",
           9737: "26dfe37c0ed905ec631e",
           9740: "482d50af4698816e67a8",
           9779: "85f53fcf9d3cdaca9526",
           9845: "f940ada275e531985e05",
           9853: "bef5043a96ecf6f198bb",
-          9858: "cf49944f7c0ce61441d2",
           9861: "f4520f3619ee1fc26465",
           9862: "8b857e11db69fb1b4103",
           9869: "dae3e307f836aaf1c03a",
@@ -32559,13 +32537,13 @@
         "css/" +
         ({
           1220: "gamenotes",
+          3714: "sp",
           3834: "chunk~1a96cdf59",
           7462: "gamerecording",
           7653: "broadcastapp",
           8396: "broadcast",
           9129: "awardicon",
           9672: "discoveryqueue",
-          9858: "chunk~2dcc5aaf7",
         }[_] || _) +
         ".css"),
       (_._ = (function () {
@@ -32716,13 +32694,13 @@
             var _ = {
               1129: 1,
               1220: 1,
+              3714: 1,
               3834: 1,
               7462: 1,
               7653: 1,
               8396: 1,
               9129: 1,
               9672: 1,
-              9858: 1,
             };
             _[_]
               ? _.push(_[_])

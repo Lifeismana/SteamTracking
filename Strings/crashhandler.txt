@@ -362,8 +362,8 @@ $ORIGIN
 19CUtlNoEscConversion
 20CUniformRandomStream
 20IUniformRandomStream
-21:21:20
 21CUtlCStringConversion
+22:18:06
 24CDirWatcherPollingThread
 31CAdHocValidation_SimpleCallback
 64 >= identifier_length
@@ -633,7 +633,7 @@ Seeking to a position which is not sector aligned will break unbuffered io
 Semaphore name (%s) is longer than POSIX can handle, truncating.
 SendCrashReport
 SendExistingMinidump
-Sep 27 2026
+Sep 29 2026
 SetAppID
 SetComment
 SetSteamID
@@ -1530,7 +1530,6 @@ write
 write %s failed, errno = %d\n
 www.steampowered.com
 x86_64
-xK!4
 xlocale
 xmemory
 {%0.8X-%0.4X-%0.4X-%0.2X%0.2X-%0.2X%0.2X%0.2X%0.2X%0.2X%0.2X}

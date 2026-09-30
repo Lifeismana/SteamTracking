@@ -28,8 +28,10 @@
 #version 150\nin vec4 Color;\nin vec2 TexCoord;\nout vec4 FragColor;\nuniform sampler2D Texture;\nvoid main(void)\n{\n\tFragColor = Color * texture(Texture, TexCoord);\n}\n
 #version 150\nuniform bool bFlipRendering;\nuniform int srcWidth;\nuniform int srcHeight;\nout vec2 textCoord;\nconst vec2 screenAlignedQuad[4] = vec2[]\n(\n\tvec2(-1.0,  1.0),\n\tvec2( 1.0,  1.0),\n\tvec2(-1.0, -1.0),\n\tvec2( 1.0, -1.0)\n);\nconst vec2 textureCoords[4] = vec2[]\n(\n\tvec2( 0.0,  0.0),\n\tvec2( 1.0,  0.0),\n\tvec2( 0.0,  1.0),\n\tvec2( 1.0,  1.0)\n);\nvoid main()\n{\n   gl_Position = vec4( screenAlignedQuad[ gl_VertexID ], 0.0, 1.0);\n   if ( bFlipRendering )\n       gl_Position.y = -gl_Position.y;\n   textCoord = vec2( textureCoords[ gl_VertexID ].x * srcWidth, textureCoords[ gl_VertexID ].y * srcHeight );\n}
 $ORIGIN
+%02x
 %\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v
 %a %b %d %H:%M:%S %Y UTC
+%llu
 %s: %d, %d, %d
 %s: '%s', '%s'
 %s: __pos (which is %zu) > this->size() (which is %zu)
@@ -47,7 +49,8 @@ $ORIGIN
 *\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNG6
+++CCUNG1
+++CCUNGV
 ++CCUNGstd::exception
 ----------------------------\n
 /ValveIPCSHM_%d
@@ -115,6 +118,7 @@ Corrupt render stream: k_EDeleteCursor\n
 Corrupt render stream: k_EDeleteTexture\n
 Corrupt render stream: k_EDrawAndUpdateSharedTexture\n
 Corrupt render stream: k_EDrawChromePaintBufferRect\n
+Corrupt render stream: k_EDrawTexturedQuad\n
 Corrupt render stream: k_EDrawTexturedRect\n
 Corrupt render stream: k_EIMECommand\n
 Corrupt render stream: k_ELoadTexture 3\n
@@ -229,6 +233,7 @@ Game Delayed OpenGL NV12
 Game Delayed OpenGL RGB
 Game OpenGL NV12
 Game OpenGL RGB
+Game Vulkan shared %s %s
 Game process locale is '%s'\n
 GameID = %llu, AppID = %u, OverlayGameID = %llu, PID: %u, tid %u Executable: %s\n
 GameOverlayRender_PIDStream
@@ -247,8 +252,12 @@ Gamepad UI: mouse moved, showing hw cursor\n
 Got EndFrame, but still have [%d] bytes remaining in render loop buffer\n
 Got hTexture of non NULL on shared texture draw but new shared tex update has no shared texture.\n
 HasXInput2
+I0FL
+I444
+I4FL
 IPC error: LockMgrMutex failed to acquire SysMgrMutex\n
 IPC: recovering abandoned mutex %p\n
+IYUV
 IgnoreChildProcesses
 Installed overlay error handler for process %d\n
 Invalid socket name parameters for shared fd\n
@@ -402,6 +411,7 @@ Timed out waiting for mutex in PutInternal()\n
 Track %p win 0x%lx (parent 0x%lx), cursor 0x%lx (valid %d), events 0x%x, top %d\n
 Track GLX win 0x%lx for X window 0x%lx\n
 Track win 0x%lx cursor 0x%lx\n
+UNKNOWN
 USER
 UUUU
 Unable to write to video stream: dst not aligned!\n
@@ -427,8 +437,10 @@ Video memory stream reader destroyed with frame lock!\n
 Video memory stream writer destroyed with frame lock!\n
 Video stream full!\n
 Video stream full.. couldn't get buffer!\n
+VulkanSteamOverlayDestroySwapChain
 VulkanSteamOverlayPresent
 VulkanSteamOverlayProcessCapturedFrame
+VulkanSteamOverlayProcessSharedPlanarFrame
 VulkanSteamOverlaySetWindowType
 Waiting for shared fd client failed\n
 Waiting on shared FD for texture %d: peer is too far ahead and sending FD for texture %d.\n
