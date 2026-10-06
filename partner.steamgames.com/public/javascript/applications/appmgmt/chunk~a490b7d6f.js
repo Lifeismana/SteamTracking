@@ -3049,11 +3049,7 @@
               "MarketingMessages.GetPastMarketingMessages#1",
               (0, w.I8)(D, p, a),
               R,
-              {
-                bConstMethod: !0,
-                ePrivilege: 4,
-                rgBrowserAPISites: ["partner"],
-              },
+              { bConstMethod: !0, ePrivilege: 4 },
             );
           }
           T.GetPastMarketingMessages = i;
@@ -3132,7 +3128,7 @@
               "MarketingMessages.CreateMarketingMessage#1",
               (0, w.I8)(F, p, a),
               tr,
-              { ePrivilege: 4, rgBrowserAPISites: ["partner"] },
+              { ePrivilege: 4 },
             );
           }
           T.CreateMarketingMessage = zt;
@@ -3141,7 +3137,7 @@
               "MarketingMessages.UpdateMarketingMessage#1",
               (0, w.I8)(K, p, a),
               zr,
-              { ePrivilege: 5, rgBrowserAPISites: ["partner"] },
+              { ePrivilege: 5 },
             );
           }
           T.UpdateMarketingMessage = Ot;
@@ -3150,7 +3146,7 @@
               "MarketingMessages.DeleteMarketingMessage#1",
               (0, w.I8)($, p, a),
               Or,
-              { ePrivilege: 4, rgBrowserAPISites: ["partner"] },
+              { ePrivilege: 4 },
             );
           }
           T.DeleteMarketingMessage = St;
@@ -3159,7 +3155,7 @@
               "MarketingMessages.FindMarketingMessages#1",
               (0, w.I8)(N, p, a),
               rr,
-              { ePrivilege: 5, rgBrowserAPISites: ["partner"] },
+              { ePrivilege: 5 },
             );
           }
           T.FindMarketingMessages = Wt;
@@ -3168,7 +3164,7 @@
               "MarketingMessages.GetMarketingMessageViewerStats#1",
               (0, w.I8)(Q, p, a),
               ir,
-              { ePrivilege: 4, rgBrowserAPISites: ["partner"] },
+              { ePrivilege: 4 },
             );
           }
           T.GetMarketingMessageViewerStats = jt;
@@ -3177,7 +3173,7 @@
               "MarketingMessages.GetMarketingMessagesViewerRangeStats#1",
               (0, w.I8)(J, p, a),
               lr,
-              { ePrivilege: 4, rgBrowserAPISites: ["partner"] },
+              { ePrivilege: 4 },
             );
           }
           T.GetMarketingMessagesViewerRangeStats = Et;
@@ -3186,7 +3182,7 @@
               "MarketingMessages.GetMarketingMessageClickedStats#1",
               (0, w.I8)(Z, p, a),
               mr,
-              { ePrivilege: 4, rgBrowserAPISites: ["partner"] },
+              { ePrivilege: 4 },
             );
           }
           T.GetMarketingMessageClickedStats = At;
@@ -3204,12 +3200,7 @@
               "MarketingMessages.PublishPartnerMessage#1",
               (0, w.I8)(H, p, a),
               Sr,
-              {
-                bConstMethod: !0,
-                ePrivilege: 1,
-                eWebAPIKeyRequirement: 2,
-                rgBrowserAPISites: ["partner"],
-              },
+              { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
           }
           T.PublishPartnerMessage = vt;
@@ -3218,12 +3209,7 @@
               "MarketingMessages.GetPartnerMessagePreview#1",
               (0, w.I8)(V, p, a),
               ur,
-              {
-                bConstMethod: !0,
-                ePrivilege: 1,
-                eWebAPIKeyRequirement: 2,
-                rgBrowserAPISites: ["partner"],
-              },
+              { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
           }
           T.GetPartnerMessagePreview = Dt;

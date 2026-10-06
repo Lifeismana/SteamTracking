@@ -3252,7 +3252,6 @@
               {
                 bConstMethod: !0,
                 ePrivilege: 4,
-                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -3357,7 +3356,6 @@
               _,
               {
                 ePrivilege: 4,
-                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -3369,7 +3367,6 @@
               _,
               {
                 ePrivilege: 5,
-                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -3381,7 +3378,6 @@
               _,
               {
                 ePrivilege: 4,
-                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -3393,7 +3389,6 @@
               _,
               {
                 ePrivilege: 5,
-                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -3405,7 +3400,6 @@
               _,
               {
                 ePrivilege: 4,
-                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -3417,7 +3411,6 @@
               _,
               {
                 ePrivilege: 4,
-                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -3429,7 +3422,6 @@
               _,
               {
                 ePrivilege: 4,
-                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -3456,7 +3448,6 @@
                 bConstMethod: !0,
                 ePrivilege: 1,
                 eWebAPIKeyRequirement: 2,
-                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -3470,7 +3461,6 @@
                 bConstMethod: !0,
                 ePrivilege: 1,
                 eWebAPIKeyRequirement: 2,
-                rgBrowserAPISites: ["partner"],
               },
             );
           }

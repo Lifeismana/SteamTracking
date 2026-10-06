@@ -29751,7 +29751,6 @@
               {
                 bConstMethod: !0,
                 ePrivilege: 1,
-                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -29764,7 +29763,6 @@
               {
                 bConstMethod: !0,
                 ePrivilege: 1,
-                rgBrowserAPISites: ["partner"],
               },
             );
           }
