@@ -247,7 +247,7 @@
     "Market_AppUnplayedAndUnvetted": "Chystáte se otevřít položku pocházející z nové hry, kterou jste nikdy předtím nehráli. Buďte proto obzvláště opatrní, abyste nekoupili zajíce v pytli.",
     "Market_AppUnplayedAndUnvetted_Dismiss": "Jsem si toho vědom a chci pokračovat na položku",
     "Home_GamePicker_Label": "Filtrovat podle hry",
-    "Home_GamePicker_ViewAll": "Zobrazit všechny hry",
+    "Home_GamePicker_ViewAll": "Zobrazit všechny hry...",
     "Economy_Market_TopLevelReason_AccountLocked": "Váš účet je momentálně uzamčen.",
     "Economy_Market_TopLevelTooltip_AccountLocked": "Pro více informací o uzamčení svého účtu klikněte po přihlášení do klienta služby Steam na červené pole v pravém horním rohu. Případné další dotazy směřujte na podporu služby Steam.",
     "Economy_Market_HeaderTip_AccountLocked": "Váš účet je momentálně uzamčen. Pro více informací o uzamčení svého účtu klikněte po přihlášení do klienta služby Steam na červené pole v pravém horním rohu.",

@@ -1,10 +1,12 @@
 "use strict";
-(self.webpackChunkappmgmt_storeadmin =
-  self.webpackChunkappmgmt_storeadmin || []).push([
-  [3913],
-  {
-    chunkid: (module) => {
-      module.exports = {};
+(() => {
+  (self.webpackChunkappmgmt_storeadmin =
+    self.webpackChunkappmgmt_storeadmin || []).push([
+    [3913],
+    {
+      chunkid: (module) => {
+        module.exports = {};
+      },
     },
-  },
-]);
+  ]);
+})();

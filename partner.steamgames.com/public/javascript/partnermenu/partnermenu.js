@@ -36,7 +36,7 @@
     __toESM = (t, n, r) => (
       (r = t == null ? {} : __create(__getProtoOf(t))),
       __copyProps(
-        n || !t || !t.__esModule
+        n || !t || !t.__esModule || !__hasOwnProp.call(t, `default`)
           ? __defProp(r, `default`, { value: t, enumerable: !0 })
           : r,
         t,
@@ -64,7 +64,7 @@
   }
   function FindAndRemoveWhere(t, n) {
     let r = t.findIndex(n);
-    return r >= 0 ? (t.splice(r, 1), !0) : !1;
+    return r >= 0 && (t.splice(r, 1), !0);
   }
   var init_arrayutils = __esmMin(() => {});
   function GetComplexObjectConstructor(t) {
@@ -719,7 +719,7 @@
         }),
         (goog.typeOf = function (t) {
           var n = typeof t;
-          if (n == `object`)
+          if (n == `object`) {
             if (t) {
               if (t instanceof Array) return `array`;
               if (t instanceof Object) return n;
@@ -741,7 +741,7 @@
               )
                 return `function`;
             } else return `null`;
-          else if (n == `function` && t.call === void 0) return `object`;
+          } else if (n == `function` && t.call === void 0) return `object`;
           return n;
         }),
         (goog.isArray = function (t) {
@@ -811,10 +811,11 @@
         }),
         (goog.bind = function (t, n, r) {
           return (
-            Function.prototype.bind &&
-            Function.prototype.bind.toString().indexOf(`native code`) != -1
-              ? (goog.bind = goog.bindNative_)
-              : (goog.bind = goog.bindJs_),
+            (goog.bind =
+              Function.prototype.bind &&
+              Function.prototype.bind.toString().indexOf(`native code`) != -1
+                ? goog.bindNative_
+                : goog.bindJs_),
             goog.bind.apply(null, arguments)
           );
         }),
@@ -2640,7 +2641,7 @@
         (goog.array.removeLast = function (t, n) {
           return (
             (n = goog.array.lastIndexOf(t, n)),
-            0 <= n ? (goog.array.removeAt(t, n), !0) : !1
+            0 <= n && (goog.array.removeAt(t, n), !0)
           );
         }),
         (goog.array.removeAt = function (t, n) {
@@ -2652,7 +2653,7 @@
         (goog.array.removeIf = function (t, n, r) {
           return (
             (n = goog.array.findIndex(t, n, r)),
-            0 <= n ? (goog.array.removeAt(t, n), !0) : !1
+            0 <= n && (goog.array.removeAt(t, n), !0)
           );
         }),
         (goog.array.removeAllIf = function (t, n, r) {
@@ -2811,7 +2812,7 @@
         (goog.array.binaryInsert = function (t, n, r) {
           return (
             (r = goog.array.binarySearch(t, n, r)),
-            0 > r ? (goog.array.insertAt(t, n, -(r + 1)), !0) : !1
+            0 > r && (goog.array.insertAt(t, n, -(r + 1)), !0)
           );
         }),
         (goog.array.binaryRemove = function (t, n, r) {
@@ -3094,8 +3095,7 @@
             } catch {
               return `<object could not be stringified>`;
             }
-          else
-            return t === void 0 ? `undefined` : t === null ? `null` : typeof t;
+          return t === void 0 ? `undefined` : t === null ? `null` : typeof t;
         }),
         (goog.dom.asserts.getWindow_ = function (t) {
           try {
@@ -4918,8 +4918,8 @@
           if (n && n[1]) return n[1];
           n = ``;
           var r = /MSIE +([\d\.]+)/.exec(t);
-          if (r && r[1])
-            if (((t = /Trident\/(\d.\d)/.exec(t)), r[1] == `7.0`))
+          if (r && r[1]) {
+            if (((t = /Trident\/(\d.\d)/.exec(t)), r[1] == `7.0`)) {
               if (t && t[1])
                 switch (t[1]) {
                   case `4.0`:
@@ -4935,7 +4935,8 @@
                     n = `11.0`;
                 }
               else n = `7.0`;
-            else n = r[1];
+            } else n = r[1];
+          }
           return n;
         }),
         (goog.html.SafeHtml = function () {
@@ -5187,7 +5188,7 @@
         }),
         (goog.html.SafeHtml.getAttrNameAndValue_ = function (t, n, r) {
           if (r instanceof goog.string.Const) r = goog.string.Const.unwrap(r);
-          else if (n.toLowerCase() == `style`)
+          else if (n.toLowerCase() == `style`) {
             if (goog.html.SafeHtml.SUPPORT_STYLE_ATTRIBUTE)
               r = goog.html.SafeHtml.getStyleValue_(r);
             else
@@ -5196,7 +5197,7 @@
                   ? `Attribute "style" not supported.`
                   : ``,
               );
-          else {
+          } else {
             if (/^on/i.test(n))
               throw Error(
                 goog.html.SafeHtml.ENABLE_ERROR_MESSAGES
@@ -5207,7 +5208,7 @@
                       `" given.`
                   : ``,
               );
-            if (n.toLowerCase() in goog.html.SafeHtml.URL_ATTRIBUTES_)
+            if (n.toLowerCase() in goog.html.SafeHtml.URL_ATTRIBUTES_) {
               if (r instanceof goog.html.TrustedResourceUrl)
                 r = goog.html.TrustedResourceUrl.unwrap(r);
               else if (r instanceof goog.html.SafeUrl)
@@ -5226,6 +5227,7 @@
                         `" given.`
                     : ``,
                 );
+            }
           }
           return (
             r.implementsGoogStringTypedString && (r = r.getTypedStringValue()),
@@ -8439,7 +8441,7 @@
             else if (2048 > i)
               this.buffer_.push((i >> 6) | 192),
                 this.buffer_.push((i & 63) | 128);
-            else if (65536 > i)
+            else if (65536 > i) {
               if (55296 <= i && 56319 >= i && r + 1 < t.length) {
                 var o = t.charCodeAt(r + 1);
                 56320 <= o &&
@@ -8454,6 +8456,7 @@
                 this.buffer_.push((i >> 12) | 224),
                   this.buffer_.push(((i >> 6) & 63) | 128),
                   this.buffer_.push((i & 63) | 128);
+            }
           }
           return this.buffer_.length - n;
         }),
@@ -8585,7 +8588,7 @@
           return new jspb.arith.Int64(this.lo, this.hi);
         }),
         (jspb.arith.Int64.prototype.toString = function () {
-          var t = (this.hi & 2147483648) != 0,
+          var t = !!(this.hi & 2147483648),
             n = new jspb.arith.UInt64(this.lo, this.hi);
           return (
             t && (n = new jspb.arith.UInt64(0, 0).sub(n)),
@@ -10191,8 +10194,8 @@
                 `Message extension present that was generated without binary serialization support`,
               );
             var u = i.call(t, l);
-            if (u != null)
-              if (l.isMessageType())
+            if (u != null) {
+              if (l.isMessageType()) {
                 if (s.binaryMessageSerializeFn)
                   s.binaryWriterFn.call(
                     n,
@@ -10204,7 +10207,8 @@
                   throw Error(
                     `Message extension present holding submessage without binary support enabled, and message is being serialized to binary format`,
                   );
-              else s.binaryWriterFn.call(n, l.fieldIndex, u);
+              } else s.binaryWriterFn.call(n, l.fieldIndex, u);
+            }
           }
         }),
         goog.exportProperty(
@@ -10936,7 +10940,7 @@
       s = {};
     for (let t in o) {
       let { n: i, c: l, r: u, d: p, q: m } = o[t];
-      if (l)
+      if (l) {
         if (u)
           s[t] = import_google_protobuf$10.Message.toObjectList(
             import_google_protobuf$10.Message.getRepeatedWrapperField(r, l, i),
@@ -10952,7 +10956,7 @@
           );
           o && (s[t] = l.toObject(n, o));
         }
-      else {
+      } else {
         let n = import_google_protobuf$10.Message.getFieldWithDefault(
           r,
           i,
@@ -10998,7 +11002,7 @@
     let { fields: i } = t;
     for (let t in i) {
       let { n: o, c: s, r: l, d: u, q: p, bw: m } = i[t];
-      if (s)
+      if (s) {
         if (l) {
           let t = import_google_protobuf$10.Message.getRepeatedWrapperField(
             n,
@@ -11016,7 +11020,7 @@
           );
           t && r.writeMessage(o, t, s.serializeBinaryToWriter);
         }
-      else if (m) {
+      } else if (m) {
         let t = import_google_protobuf$10.Message.getField(n, o);
         t !== void 0 && m.call(r, o, t);
       } else
@@ -11924,7 +11928,7 @@
                 ((this.m_header = new CMsgProtoBufHeader(null)),
                 (this.m_bValid = !0),
                 n)
-              )
+              ) {
                 if (
                   ((this.m_netPacket = n),
                   this.m_netPacket.SeekGetHead(),
@@ -11949,7 +11953,7 @@
                       (this.m_bValid = !1);
                   }
                 } else this.m_bValid = !1;
-              else
+              } else
                 t && (this.m_eMsg = t),
                   s && r
                     ? (this.m_body = r.fromObject(s))
@@ -15956,7 +15960,7 @@
     }
   }
   function GetDefaultReportingInterval() {
-    return 1e3 * 10;
+    return 1e4;
   }
   var import_react$5,
     addEventListener,
@@ -16028,7 +16032,7 @@
           }),
           (g_unCollectionTimer = window.setTimeout(() => {
             (g_rgPreInitQueue = []), (g_onReportableError = () => {});
-          }, 30 * 1e3));
+          }, 3e4));
       }
       (g_defaultErrorReportOptions = {
         cCallsitesToIgnore: 0,
@@ -16079,7 +16083,7 @@
               window.setTimeout(() => {
                 this.m_bInitialized ||
                   ((this.m_bEnabled = !1), (this.m_rgErrorQueue = []));
-              }, 30 * 1e3);
+              }, 3e4);
           }
           Init(t, n, r, i = {}) {
             (this.m_bInitialized = !0),
@@ -16724,10 +16728,7 @@
             }, this.gcTime));
       }
       updateGcTime(t) {
-        this.gcTime = Math.max(
-          this.gcTime || 0,
-          t ?? (isServer ? 1 / 0 : 300 * 1e3),
-        );
+        this.gcTime = Math.max(this.gcTime || 0, t ?? (isServer ? 1 / 0 : 3e5));
       }
       clearGcTimeout() {
         this.#e &&= (clearTimeout(this.#e), void 0);
@@ -17447,8 +17448,8 @@
             }
             return u;
           };
-        n.options.persister
-          ? (n.fetchFn = () =>
+        n.fetchFn = n.options.persister
+          ? () =>
               n.options.persister?.(
                 m,
                 {
@@ -17457,8 +17458,8 @@
                   signal: n.signal,
                 },
                 r,
-              ))
-          : (n.fetchFn = m);
+              )
+          : m;
       },
     };
   }
@@ -17882,12 +17883,10 @@
       #v(t) {
         this.#x(),
           (this.#p = t),
-          !(
-            isServer ||
-            resolveEnabled(this.options.enabled, this.#t) === !1 ||
-            !isValidTimeout(this.#p) ||
-            this.#p === 0
-          ) &&
+          !isServer &&
+            resolveEnabled(this.options.enabled, this.#t) !== !1 &&
+            isValidTimeout(this.#p) &&
+            this.#p !== 0 &&
             (this.#f = setInterval(() => {
               (this.options.refetchIntervalInBackground ||
                 focusManager.isFocused()) &&
@@ -17922,7 +17921,7 @@
             n._optimisticResults === `isRestoring` && (m.fetchStatus = `idle`);
         }
         let { error: _, errorUpdatedAt: v, status: y } = m;
-        if (n.select && m.data !== void 0)
+        if (n.select && m.data !== void 0) {
           if (o && m.data === s?.data && n.select === this.#c) g = this.#l;
           else
             try {
@@ -17934,7 +17933,7 @@
             } catch (t) {
               this.#s = t;
             }
-        else g = m.data;
+        } else g = m.data;
         if (n.placeholderData !== void 0 && g === void 0 && y === `pending`) {
           let t;
           if (o?.isPlaceholderData && n.placeholderData === l?.placeholderData)
@@ -18010,7 +18009,6 @@
               break;
             case `rejected`:
               (E.status !== `error` || E.error !== o.reason) && i();
-              break;
           }
         }
         return E;
@@ -18072,7 +18070,7 @@
     return (
       resolveEnabled(n.enabled, t) !== !1 &&
       t.state.data === void 0 &&
-      !(t.state.status === `error` && n.retryOnMount === !1)
+      (t.state.status !== `error` || n.retryOnMount !== !1)
     );
   }
   function shouldFetchOnMount(t, n) {
@@ -18156,7 +18154,7 @@
             let i = n.map((t) => t.observer),
               o = i.map((t) => t.getCurrentResult()),
               s = i.some((n, r) => n !== t[r]);
-            (t.length === i.length && !s) ||
+            (t.length !== i.length || s) &&
               ((this.#i = i),
               (this.#t = o),
               this.hasListeners() &&
@@ -18530,12 +18528,13 @@
         }
       }
       function D(t) {
-        if (((x = !1), E(t), !y))
+        if (((x = !1), E(t), !y)) {
           if (r(p) !== null) (y = !0), O || ((O = !0), ie());
           else {
             var n = r(m);
             n !== null && se(D, n.startTime - t);
           }
+        }
       }
       var O = !1,
         k = -1,
@@ -18839,7 +18838,7 @@
           }
         }),
         (t.preinitModule = function (t, n) {
-          if (typeof t == `string`)
+          if (typeof t == `string`) {
             if (typeof n == `object` && n) {
               if (n.as == null || n.as === `script`) {
                 var r = p(n.as, n.crossOrigin);
@@ -18851,6 +18850,7 @@
                 });
               }
             } else n ?? o.d.M(t);
+          }
         }),
         (t.preload = function (t, n) {
           if (
@@ -18879,7 +18879,7 @@
           }
         }),
         (t.preloadModule = function (t, n) {
-          if (typeof t == `string`)
+          if (typeof t == `string`) {
             if (n) {
               var r = p(n.as, n.crossOrigin);
               o.d.m(t, {
@@ -18890,6 +18890,7 @@
                   typeof n.integrity == `string` ? n.integrity : void 0,
               });
             } else o.d.m(t);
+          }
         }),
         (t.requestFormReset = function (t) {
           o.d.r(t);
@@ -18908,10 +18909,8 @@
     require_react_dom = __commonJSMin((t, n) => {
       function r() {
         if (
-          !(
-            typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ > `u` ||
-            typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE != `function`
-          )
+          typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ < `u` &&
+          typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE == `function`
         )
           try {
             __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE(r);
@@ -19535,7 +19534,7 @@
               : ((Tt[t] = !0), !1);
       }
       function Ot(t, n, r) {
-        if (Dt(n))
+        if (Dt(n)) {
           if (r === null) t.removeAttribute(n);
           else {
             switch (typeof r) {
@@ -19553,6 +19552,7 @@
             }
             t.setAttribute(n, `` + r);
           }
+        }
       }
       function kt(t, n, r) {
         if (r === null) t.removeAttribute(n);
@@ -19831,7 +19831,7 @@ Error generating stack: ` +
         return (
           t && (i = zt(t) ? (t.checked ? `true` : `false`) : t.value),
           (t = i),
-          t === r ? !1 : (n.setValue(t), !0)
+          t !== r && (n.setValue(t), !0)
         );
       }
       function Ut(t) {
@@ -20205,12 +20205,11 @@ Error generating stack: ` +
           case `onMouseEnter`:
             (i = !i.disabled) ||
               ((t = t.type),
-              (i = !(
-                t === `button` ||
-                t === `input` ||
-                t === `select` ||
-                t === `textarea`
-              ))),
+              (i =
+                t !== `button` &&
+                t !== `input` &&
+                t !== `select` &&
+                t !== `textarea`)),
               (t = !i);
             break a;
           default:
@@ -20220,11 +20219,10 @@ Error generating stack: ` +
         if (r && typeof r != `function`) throw Error(o(231, n, typeof r));
         return r;
       }
-      var hn = !(
-          typeof window > `u` ||
-          window.document === void 0 ||
-          window.document.createElement === void 0
-        ),
+      var hn =
+          typeof window < `u` &&
+          window.document !== void 0 &&
+          window.document.createElement !== void 0,
         gn = !1;
       if (hn)
         try {
@@ -21249,8 +21247,7 @@ Error generating stack: ` +
             ((r = n === 5) &&
               ((r = t.type),
               (r =
-                !(r !== `form` && r !== `button`) ||
-                Pd(t.type, t.memoizedProps))),
+                r === `form` || r === `button` || Pd(t.type, t.memoizedProps))),
             (r = !r)),
           r && P && Vi(t),
           Ui(t),
@@ -21262,7 +21259,7 @@ Error generating stack: ` +
             throw Error(o(317));
           a: {
             for (t = t.nextSibling, n = 0; t; ) {
-              if (t.nodeType === 8)
+              if (t.nodeType === 8) {
                 if (((r = t.data), r === `/$`)) {
                   if (n === 0) {
                     P = Yd(t.nextSibling);
@@ -21270,6 +21267,7 @@ Error generating stack: ` +
                   }
                   n--;
                 } else (r !== `$` && r !== `$!` && r !== `$?`) || n++;
+              }
               t = t.nextSibling;
             }
             P = null;
@@ -23167,8 +23165,8 @@ Error generating stack: ` +
                       }
                       r(t, i);
                       break;
-                    } else n(t, i);
-                    i = i.sibling;
+                    }
+                    n(t, i), (i = i.sibling);
                   }
                   l.type === x
                     ? ((p = xi(l.props.children, t.mode, p, l.key)),
@@ -23183,7 +23181,7 @@ Error generating stack: ` +
               case y:
                 a: {
                   for (m = l.key; i !== null; ) {
-                    if (i.key === m)
+                    if (i.key === m) {
                       if (
                         i.tag === 4 &&
                         i.stateNode.containerInfo === l.containerInfo &&
@@ -23194,12 +23192,11 @@ Error generating stack: ` +
                           (p.return = t),
                           (t = p);
                         break a;
-                      } else {
-                        r(t, i);
-                        break;
                       }
-                    else n(t, i);
-                    i = i.sibling;
+                      r(t, i);
+                      break;
+                    }
+                    n(t, i), (i = i.sibling);
                   }
                   (p = Ci(l, t.mode, p)), (p.return = t), (t = p);
                 }
@@ -23619,10 +23616,11 @@ Error generating stack: ` +
       function lc(t, n, r, i, o) {
         if (t !== null) {
           var s = t.memoizedProps;
-          if (Ar(s, i) && t.ref === n.ref)
+          if (Ar(s, i) && t.ref === n.ref) {
             if (((ac = !1), (n.pendingProps = i = s), Oc(t, o)))
               t.flags & 131072 && (ac = !0);
             else return (n.lanes = t.lanes), Dc(t, n, o);
+          }
         }
         return pc(t, n, r, i, o);
       }
@@ -23849,7 +23847,7 @@ Error generating stack: ` +
         return (
           (s = i),
           fc(t, n),
-          (i = (n.flags & 128) != 0),
+          (i = !!(n.flags & 128)),
           s || i
             ? ((s = n.stateNode),
               (r =
@@ -23885,16 +23883,14 @@ Error generating stack: ` +
       function bc(t, n, r) {
         var i = n.pendingProps,
           s = !1,
-          l = (n.flags & 128) != 0,
+          l = !!(n.flags & 128),
           u;
         if (
           ((u = l) ||
             (u =
-              t !== null && t.memoizedState === null
-                ? !1
-                : (V.current & 2) != 0),
+              t !== null && t.memoizedState === null ? !1 : !!(V.current & 2)),
           u && ((s = !0), (n.flags &= -129)),
-          (u = (n.flags & 32) != 0),
+          (u = !!(n.flags & 32)),
           (n.flags &= -33),
           t === null)
         ) {
@@ -24183,10 +24179,11 @@ Error generating stack: ` +
           (t !== null && (n.dependencies = t.dependencies),
           (zl |= n.lanes),
           (r & n.childLanes) === 0)
-        )
+        ) {
           if (t !== null) {
             if ((na(t, n, r, !1), (r & n.childLanes) === 0)) return null;
           } else return null;
+        }
         if (t !== null && n.child !== t.child) throw Error(o(153));
         if (n.child !== null) {
           for (
@@ -24201,9 +24198,9 @@ Error generating stack: ` +
         return n.child;
       }
       function Oc(t, n) {
-        return (t.lanes & n) === 0
-          ? ((t = t.dependencies), !!(t !== null && ra(t)))
-          : !0;
+        return (
+          (t.lanes & n) !== 0 || ((t = t.dependencies), !!(t !== null && ra(t)))
+        );
       }
       function kc(t, n, r) {
         switch (n.tag) {
@@ -24233,7 +24230,7 @@ Error generating stack: ` +
             Rs(n);
             break;
           case 19:
-            var o = (t.flags & 128) != 0;
+            var o = !!(t.flags & 128);
             if (
               ((i = (r & n.childLanes) !== 0),
               (i ||= (na(t, n, r, !1), (r & n.childLanes) !== 0)),
@@ -24260,13 +24257,13 @@ Error generating stack: ` +
         return Dc(t, n, r);
       }
       function Ac(t, n, r) {
-        if (t !== null)
+        if (t !== null) {
           if (t.memoizedProps !== n.pendingProps) ac = !0;
           else {
             if (!Oc(t, r) && !(n.flags & 128)) return (ac = !1), kc(t, n, r);
             ac = !!(t.flags & 131072);
           }
-        else (ac = !1), F && n.flags & 1048576 && Pi(n, Di, n.index);
+        } else (ac = !1), F && n.flags & 1048576 && Pi(n, Di, n.index);
         switch (((n.lanes = 0), n.tag)) {
           case 16:
             a: {
@@ -24282,7 +24279,8 @@ Error generating stack: ` +
                   if (((s = i.$$typeof), s === D)) {
                     (n.tag = 11), (n = sc(null, n, i, t, r));
                     break a;
-                  } else if (s === ee) {
+                  }
+                  if (s === ee) {
                     (n.tag = 14), (n = cc(null, n, i, t, r));
                     break a;
                   }
@@ -24310,7 +24308,7 @@ Error generating stack: ` +
                 Wa(),
                 (i = u.element),
                 l.isDehydrated)
-              )
+              ) {
                 if (
                   ((l = { element: i, isDehydrated: !1, cache: u.cache }),
                   (n.updateQueue.baseState = l),
@@ -24319,30 +24317,30 @@ Error generating stack: ` +
                 ) {
                   n = gc(t, n, i, r);
                   break a;
-                } else if (i !== s) {
+                }
+                if (i !== s) {
                   (s = ii(Error(o(424)), n)), qi(s), (n = gc(t, n, i, r));
                   break a;
-                } else {
-                  switch (((t = n.stateNode.containerInfo), t.nodeType)) {
-                    case 9:
-                      t = t.body;
-                      break;
-                    default:
-                      t = t.nodeName === `HTML` ? t.ownerDocument.body : t;
-                  }
-                  for (
-                    P = Yd(t.firstChild),
-                      Li = n,
-                      F = !0,
-                      Ri = null,
-                      zi = !0,
-                      r = Fs(n, null, i, r),
-                      n.child = r;
-                    r;
-                  )
-                    (r.flags = (r.flags & -3) | 4096), (r = r.sibling);
                 }
-              else {
+                switch (((t = n.stateNode.containerInfo), t.nodeType)) {
+                  case 9:
+                    t = t.body;
+                    break;
+                  default:
+                    t = t.nodeName === `HTML` ? t.ownerDocument.body : t;
+                }
+                for (
+                  P = Yd(t.firstChild),
+                    Li = n,
+                    F = !0,
+                    Ri = null,
+                    zi = !0,
+                    r = Fs(n, null, i, r),
+                    n.child = r;
+                  r;
+                )
+                  (r.flags = (r.flags & -3) | 4096), (r = r.sibling);
+              } else {
                 if ((Gi(), i === s)) {
                   n = Dc(t, n, r);
                   break a;
@@ -24832,7 +24830,7 @@ Error generating stack: ` +
             return Qi(n.type), H(n), null;
           case 19:
             if ((M(V), (s = n.memoizedState), s === null)) return H(n), null;
-            if (((i = (n.flags & 128) != 0), (l = s.rendering), l === null))
+            if (((i = !!(n.flags & 128)), (l = s.rendering), l === null)) {
               if (i) Pc(s, !1);
               else {
                 if (X !== 0 || (t !== null && t.flags & 128))
@@ -24858,8 +24856,8 @@ Error generating stack: ` +
                   Ee() > Jl &&
                   ((n.flags |= 128), (i = !0), Pc(s, !1), (n.lanes = 4194304));
               }
-            else {
-              if (!i)
+            } else {
+              if (!i) {
                 if (((t = Hs(l)), t !== null)) {
                   if (
                     ((n.flags |= 128),
@@ -24881,6 +24879,7 @@ Error generating stack: ` +
                     (i = !0),
                     Pc(s, !1),
                     (n.lanes = 4194304));
+              }
               s.isBackwards
                 ? ((l.sibling = n.child), (n.child = l))
                 : ((t = s.last),
@@ -25122,7 +25121,7 @@ Error generating stack: ` +
       function Uc(t, n) {
         var r = t.ref,
           i = t.refCleanup;
-        if (r !== null)
+        if (r !== null) {
           if (typeof i == `function`)
             try {
               i();
@@ -25140,6 +25139,7 @@ Error generating stack: ` +
               Z(t, n, r);
             }
           else r.current = null;
+        }
       }
       function Wc(t) {
         var n = t.type,
@@ -25385,7 +25385,7 @@ Error generating stack: ` +
             hl(t, r), i & 4 && Rc(5, r);
             break;
           case 1:
-            if ((hl(t, r), i & 4))
+            if ((hl(t, r), i & 4)) {
               if (((t = r.stateNode), n === null))
                 try {
                   t.componentDidMount();
@@ -25405,6 +25405,7 @@ Error generating stack: ` +
                   Z(r, r.return, t);
                 }
               }
+            }
             i & 64 && Bc(r), i & 512 && Hc(r, r.return);
             break;
           case 3:
@@ -25448,9 +25449,7 @@ Error generating stack: ` +
               (n = (n !== null && n.memoizedState !== null) || U), (o = Zc);
               var s = U;
               (Zc = i),
-                (U = n) && !s
-                  ? _l(t, r, (r.subtreeFlags & 8772) != 0)
-                  : hl(t, r),
+                (U = n) && !s ? _l(t, r, !!(r.subtreeFlags & 8772)) : hl(t, r),
                 (Zc = o),
                 (U = s);
             }
@@ -25517,7 +25516,7 @@ Error generating stack: ` +
               (W = i),
               (il = o),
               W !== null)
-            )
+            ) {
               if (il)
                 try {
                   (W.nodeType === 9
@@ -25535,6 +25534,7 @@ Error generating stack: ` +
                 } catch (t) {
                   Z(r, n, t);
                 }
+            }
             break;
           case 18:
             W !== null &&
@@ -25694,8 +25694,8 @@ Error generating stack: ` +
               i & 4)
             ) {
               var l = r === null ? null : r.memoizedState;
-              if (((i = t.memoizedState), r === null))
-                if (i === null)
+              if (((i = t.memoizedState), r === null)) {
+                if (i === null) {
                   if (t.stateNode === null) {
                     a: {
                       (i = t.type),
@@ -25783,8 +25783,8 @@ Error generating stack: ` +
                     }
                     t.stateNode = i;
                   } else kf(s, t.type, t.stateNode);
-                else t.stateNode = Cf(s, i, t.memoizedProps);
-              else
+                } else t.stateNode = Cf(s, i, t.memoizedProps);
+              } else
                 l === i
                   ? i === null &&
                     t.stateNode !== null &&
@@ -26053,7 +26053,7 @@ Error generating stack: ` +
         }
       }
       function _l(t, n, r) {
-        for (r &&= (n.subtreeFlags & 8772) != 0, n = n.child; n !== null; ) {
+        for (r &&= !!(n.subtreeFlags & 8772), n = n.child; n !== null; ) {
           var i = n.alternate,
             o = t,
             s = n,
@@ -26188,7 +26188,7 @@ Error generating stack: ` +
                 ? s._visibility & 2
                   ? bl(t, n, r, i)
                   : ((s._visibility |= 2),
-                    Sl(t, n, r, i, (n.subtreeFlags & 10256) != 0))
+                    Sl(t, n, r, i, !!(n.subtreeFlags & 10256)))
                 : s._visibility & 2
                   ? bl(t, n, r, i)
                   : Cl(t, n),
@@ -26202,7 +26202,7 @@ Error generating stack: ` +
         }
       }
       function Sl(t, n, r, i, o) {
-        for (o &&= (n.subtreeFlags & 10256) != 0, n = n.child; n !== null; ) {
+        for (o &&= !!(n.subtreeFlags & 10256), n = n.child; n !== null; ) {
           var s = t,
             l = n,
             u = r,
@@ -26461,96 +26461,78 @@ Error generating stack: ` +
       }
       function lu(t, n, r) {
         if (G & 6) throw Error(o(327));
-        var i =
-            (!r && (n & 124) == 0 && (n & t.expiredLanes) === 0) || Ke(t, n),
+        var i = (!r && !(n & 124) && (n & t.expiredLanes) === 0) || Ke(t, n),
           s = i ? Su(t, n) : bu(t, n, !0),
           l = i;
         do {
           if (s === 0) {
             Il && !i && fu(t, n, 0, !1);
             break;
-          } else {
-            if (((r = t.current.alternate), l && !du(r))) {
-              (s = bu(t, n, !1)), (l = !1);
-              continue;
-            }
-            if (s === 2) {
-              if (((l = n), t.errorRecoveryDisabledLanes & l)) var u = 0;
-              else
-                (u = t.pendingLanes & -536870913),
-                  (u = u === 0 ? (u & 536870912 ? 536870912 : 0) : u);
-              if (u !== 0) {
-                n = u;
-                a: {
-                  var p = t;
-                  s = Wl;
-                  var m = p.current.memoizedState.isDehydrated;
-                  if (
-                    (m && (hu(p, u).flags |= 256), (u = bu(p, u, !1)), u !== 2)
-                  ) {
-                    if (Ll && !m) {
-                      (p.errorRecoveryDisabledLanes |= l), (Bl |= l), (s = 4);
-                      break a;
-                    }
-                    (l = Gl),
-                      (Gl = s),
-                      l !== null &&
-                        (Gl === null ? (Gl = l) : Gl.push.apply(Gl, l));
+          }
+          if (((r = t.current.alternate), l && !du(r))) {
+            (s = bu(t, n, !1)), (l = !1);
+            continue;
+          }
+          if (s === 2) {
+            if (((l = n), t.errorRecoveryDisabledLanes & l)) var u = 0;
+            else
+              (u = t.pendingLanes & -536870913),
+                (u = u === 0 ? (u & 536870912 ? 536870912 : 0) : u);
+            if (u !== 0) {
+              n = u;
+              a: {
+                var p = t;
+                s = Wl;
+                var m = p.current.memoizedState.isDehydrated;
+                if (
+                  (m && (hu(p, u).flags |= 256), (u = bu(p, u, !1)), u !== 2)
+                ) {
+                  if (Ll && !m) {
+                    (p.errorRecoveryDisabledLanes |= l), (Bl |= l), (s = 4);
+                    break a;
                   }
-                  s = u;
+                  (l = Gl),
+                    (Gl = s),
+                    l !== null &&
+                      (Gl === null ? (Gl = l) : Gl.push.apply(Gl, l));
                 }
-                if (((l = !1), s !== 2)) continue;
+                s = u;
               }
+              if (((l = !1), s !== 2)) continue;
             }
-            if (s === 1) {
-              hu(t, 0), fu(t, n, 0, !0);
-              break;
-            }
-            a: {
-              switch (((i = t), (l = s), l)) {
-                case 0:
-                case 1:
-                  throw Error(o(345));
-                case 4:
-                  if ((n & 4194048) !== n) break;
-                case 6:
-                  fu(i, n, Hl, !Fl);
-                  break a;
-                case 2:
-                  Gl = null;
-                  break;
-                case 3:
-                case 5:
-                  break;
-                default:
-                  throw Error(o(329));
-              }
-              if ((n & 62914560) === n && ((s = ql + 300 - Ee()), 10 < s)) {
-                if ((fu(i, n, Hl, !Fl), Ge(i, 0, !0) !== 0)) break a;
-                i.timeoutHandle = Ld(
-                  uu.bind(
-                    null,
-                    i,
-                    r,
-                    Gl,
-                    Yl,
-                    Kl,
-                    n,
-                    Hl,
-                    Bl,
-                    Ul,
-                    Fl,
-                    l,
-                    2,
-                    -0,
-                    0,
-                  ),
-                  s,
-                );
+          }
+          if (s === 1) {
+            hu(t, 0), fu(t, n, 0, !0);
+            break;
+          }
+          a: {
+            switch (((i = t), (l = s), l)) {
+              case 0:
+              case 1:
+                throw Error(o(345));
+              case 4:
+                if ((n & 4194048) !== n) break;
+              case 6:
+                fu(i, n, Hl, !Fl);
                 break a;
-              }
-              uu(i, r, Gl, Yl, Kl, n, Hl, Bl, Ul, Fl, l, 0, -0, 0);
+              case 2:
+                Gl = null;
+                break;
+              case 3:
+              case 5:
+                break;
+              default:
+                throw Error(o(329));
             }
+            if ((n & 62914560) === n && ((s = ql + 300 - Ee()), 10 < s)) {
+              if ((fu(i, n, Hl, !Fl), Ge(i, 0, !0) !== 0)) break a;
+              i.timeoutHandle = Ld(
+                uu.bind(null, i, r, Gl, Yl, Kl, n, Hl, Bl, Ul, Fl, l, 2, -0, 0),
+                s,
+              );
+              break a;
+            }
+            uu(i, r, Gl, Yl, Kl, n, Hl, Bl, Ul, Fl, l, 0, -0, 0);
           }
           break;
         } while (1);
@@ -26938,7 +26920,7 @@ Error generating stack: ` +
                   return Fu(!0), null;
                 }))
               : ((t.callbackNode = null), (t.callbackPriority = 0)),
-            (i = (n.flags & 13878) != 0),
+            (i = !!(n.flags & 13878)),
             n.subtreeFlags & 13878 || i)
           ) {
             (i = A.T), (A.T = null), (s = j.p), (j.p = 2), (u = G), (G |= 4);
@@ -26956,7 +26938,7 @@ Error generating stack: ` +
           Zl = 0;
           var t = Ql,
             n = $l,
-            r = (n.flags & 13878) != 0;
+            r = !!(n.flags & 13878);
           if (n.subtreeFlags & 13878 || r) {
             (r = A.T), (A.T = null);
             var i = j.p;
@@ -27041,7 +27023,7 @@ Error generating stack: ` +
           Zl = 0;
           var t = Ql,
             n = $l,
-            r = (n.flags & 8772) != 0;
+            r = !!(n.flags & 8772);
           if (n.subtreeFlags & 8772 || r) {
             (r = A.T), (A.T = null);
             var i = j.p;
@@ -27155,7 +27137,8 @@ Error generating stack: ` +
             if (n.tag === 3) {
               Iu(n, t, r);
               break;
-            } else if (n.tag === 1) {
+            }
+            if (n.tag === 1) {
               var i = n.stateNode;
               if (
                 typeof n.type.getDerivedStateFromError == `function` ||
@@ -27243,7 +27226,7 @@ Error generating stack: ` +
           qu = !0;
           do
             for (var r = !1, i = Uu; i !== null; ) {
-              if (!n)
+              if (!n) {
                 if (t !== 0) {
                   var o = i.pendingLanes;
                   if (o === 0) var s = 0;
@@ -27263,6 +27246,7 @@ Error generating stack: ` +
                       i.cancelPendingCommit !== null || i.timeoutHandle !== -1,
                     )),
                     !(s & 3) || Ke(i, s) || ((r = !0), td(i, s));
+              }
               i = i.next;
             }
           while (r);
@@ -27510,7 +27494,7 @@ Error generating stack: ` +
             .concat(ld),
         );
       function dd(t, n) {
-        n = (n & 4) != 0;
+        n = !!(n & 4);
         for (var r = 0; r < t.length; r++) {
           var i = t[r],
             o = i.event;
@@ -27714,7 +27698,7 @@ Error generating stack: ` +
                 case `beforetoggle`:
                   m = Xn;
               }
-              var g = (n & 4) != 0,
+              var g = !!(n & 4),
                 _ = !g && (t === `scroll` || t === `scrollend`),
                 v = g ? (p === null ? null : p + `Capture`) : p;
               g = [];
@@ -27815,13 +27799,13 @@ Error generating stack: ` +
                 m === `select` || (m === `input` && p.type === `file`))
               )
                 var C = gr;
-              else if (ur(p))
+              else if (ur(p)) {
                 if (_r) C = Dr;
                 else {
                   C = Tr;
                   var w = wr;
                 }
-              else
+              } else
                 (m = p.nodeName),
                   !m ||
                   m.toLowerCase() !== `input` ||
@@ -28021,8 +28005,9 @@ Error generating stack: ` +
                 `javascript:throw new Error('A React form was unexpectedly submitted. If you called form.submit() manually, consider using form.requestSubmit() instead. If you\\'re trying to use event.stopPropagation() in a submit event handler, consider also calling event.preventDefault().')`,
               );
               break;
-            } else
-              typeof l == `function` &&
+            }
+            if (
+              (typeof l == `function` &&
                 (r === `formAction`
                   ? (n !== `input` && $(t, n, `name`, s.name, s, null),
                     $(t, n, `formEncType`, s.formEncType, s, null),
@@ -28030,8 +28015,9 @@ Error generating stack: ` +
                     $(t, n, `formTarget`, s.formTarget, s, null))
                   : ($(t, n, `encType`, s.encType, s, null),
                     $(t, n, `method`, s.method, s, null),
-                    $(t, n, `target`, s.target, s, null)));
-            if (i == null || typeof i == `symbol` || typeof i == `boolean`) {
+                    $(t, n, `target`, s.target, s, null))),
+              i == null || typeof i == `symbol` || typeof i == `boolean`)
+            ) {
               t.removeAttribute(r);
               break;
             }
@@ -28722,9 +28708,7 @@ Error generating stack: ` +
       function Id() {
         var t = window.event;
         return t && t.type === `popstate`
-          ? t === Fd
-            ? !1
-            : ((Fd = t), !0)
+          ? t !== Fd && ((Fd = t), !0)
           : ((Fd = null), !1);
       }
       var Ld = typeof setTimeout == `function` ? setTimeout : void 0,
@@ -28752,7 +28736,7 @@ Error generating stack: ` +
           o = 0;
         do {
           var s = r.nextSibling;
-          if ((t.removeChild(r), s && s.nodeType === 8))
+          if ((t.removeChild(r), s && s.nodeType === 8)) {
             if (((r = s.data), r === `/$`)) {
               if (0 < i && 8 > i) {
                 r = i;
@@ -28780,7 +28764,7 @@ Error generating stack: ` +
               r === `$` || r === `$?` || r === `$!`
                 ? o++
                 : (i = r.charCodeAt(0) - 48);
-          else i = 0;
+          } else i = 0;
           r = s;
         } while (r);
         bp(n);
@@ -28809,12 +28793,12 @@ Error generating stack: ` +
           var o = r;
           if (t.nodeName.toLowerCase() !== n.toLowerCase()) {
             if (!i && (t.nodeName !== `INPUT` || t.type !== `hidden`)) break;
-          } else if (!i)
+          } else if (!i) {
             if (n === `input` && t.type === `hidden`) {
               var s = o.name == null ? null : `` + o.name;
               if (o.type === `hidden` && t.getAttribute(`name`) === s) return t;
             } else return t;
-          else if (!t[pt])
+          } else if (!t[pt])
             switch (n) {
               case `meta`:
                 if (!t.hasAttribute(`itemprop`)) break;
@@ -30089,10 +30073,8 @@ Error generating stack: ` +
     require_client = __commonJSMin((t, n) => {
       function r() {
         if (
-          !(
-            typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ > `u` ||
-            typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE != `function`
-          )
+          typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ < `u` &&
+          typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE == `function`
         )
           try {
             __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE(r);
@@ -37188,6 +37170,7 @@ Error generating stack: ` +
     StoreItem_ExtraDetails_Metacritic,
     StoreItem_ExtraDetails_CastAndCrew,
     StoreItem_OptInRegistrationTags,
+    StoreItem_PurchaseNote,
     StoreBrowseItemDataRequest,
     StoreBrowseContext,
     StoreItemID,
@@ -37312,6 +37295,11 @@ Error generating stack: ` +
                     pbr: ReaderProto.readPackedEnum,
                     bw: WriterProto.writeRepeatedEnum,
                   },
+                  content_survey_notes: {
+                    n: 13,
+                    br: ReaderProto.readString,
+                    bw: WriterProto.writeString,
+                  },
                   image_url: {
                     n: 20,
                     br: ReaderProto.readString,
@@ -37374,7 +37362,7 @@ Error generating stack: ` +
                 n,
                 0,
                 -1,
-                [11, 12, 20, 21, 25, 41, 52, 71, 74, 77],
+                [11, 12, 20, 21, 25, 41, 52, 71, 74, 77, 78],
                 null,
               );
           }
@@ -37562,6 +37550,12 @@ Error generating stack: ` +
                   optin_registration_tags: {
                     n: 77,
                     c: StoreItem_OptInRegistrationTags,
+                    r: !0,
+                    q: !0,
+                  },
+                  purchase_notes: {
+                    n: 78,
+                    c: StoreItem_PurchaseNote,
                     r: !0,
                     q: !0,
                   },
@@ -38621,6 +38615,11 @@ Error generating stack: ` +
                     br: ReaderProto.readUint32,
                     bw: WriterProto.writeUint32,
                   },
+                  creator_home_background: {
+                    n: 22,
+                    br: ReaderProto.readString,
+                    bw: WriterProto.writeString,
+                  },
                 },
               }),
               t.sm_m
@@ -38934,6 +38933,11 @@ Error generating stack: ` +
                   },
                   vrhmd_only: {
                     n: 2,
+                    br: ReaderProto.readBool,
+                    bw: WriterProto.writeBool,
+                  },
+                  show_optional_vr_mode_notice: {
+                    n: 3,
                     br: ReaderProto.readBool,
                     bw: WriterProto.writeBool,
                   },
@@ -41309,6 +41313,86 @@ Error generating stack: ` +
             return `StoreItem_OptInRegistrationTags`;
           }
         }),
+        (StoreItem_PurchaseNote = class t extends (
+          import_google_protobuf$1.Message
+        ) {
+          static ImplementsStaticInterface() {}
+          constructor(n = null) {
+            super(),
+              t.prototype.type || AddAccessors(t.M()),
+              import_google_protobuf$1.Message.initialize(
+                this,
+                n,
+                0,
+                -1,
+                void 0,
+                null,
+              );
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              (t.sm_m ||= {
+                proto: t,
+                fields: {
+                  type: {
+                    n: 1,
+                    br: ReaderProto.readEnum,
+                    bw: WriterProto.writeEnum,
+                  },
+                  highlighted: {
+                    n: 2,
+                    br: ReaderProto.readBool,
+                    bw: WriterProto.writeBool,
+                  },
+                  text_bbcode: {
+                    n: 3,
+                    br: ReaderProto.readString,
+                    bw: WriterProto.writeString,
+                  },
+                },
+              }),
+              t.sm_m
+            );
+          }
+          static MBF() {
+            return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+          }
+          toObject(n = !1) {
+            return t.toObject(n, this);
+          }
+          static toObject(n, r) {
+            return ToObject(t.M(), n, r);
+          }
+          static fromObject(n) {
+            return FromObject(t.M(), n);
+          }
+          static deserializeBinary(n) {
+            let r = new import_google_protobuf$1.BinaryReader(n),
+              i = new t();
+            return t.deserializeBinaryFromReader(i, r);
+          }
+          static deserializeBinaryFromReader(n, r) {
+            return DeserializeBinary(t.MBF(), n, r);
+          }
+          serializeBinary() {
+            var n = new import_google_protobuf$1.BinaryWriter();
+            return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+          }
+          static serializeBinaryToWriter(n, r) {
+            SerializeBinary(t.M(), n, r);
+          }
+          serializeBase64String() {
+            var n = new import_google_protobuf$1.BinaryWriter();
+            return (
+              t.serializeBinaryToWriter(this, n), n.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return `StoreItem_PurchaseNote`;
+          }
+        }),
         (StoreBrowseItemDataRequest = class t extends (
           import_google_protobuf$1.Message
         ) {
@@ -43585,7 +43669,12 @@ Error generating stack: ` +
                 r,
               ),
               CStoreBrowse_GetItems_Response,
-              { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 1 },
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+                eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: [`partner`],
+              },
             );
           }
           t.GetItems = n;
@@ -43650,7 +43739,12 @@ Error generating stack: ` +
                 r,
               ),
               CStoreBrowse_GetDLCForAppsSolr_Response,
-              { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
+              {
+                bConstMethod: !0,
+                ePrivilege: 0,
+                eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: [`partner`],
+              },
             );
           }
           t.GetDLCForAppsSolr = l;
@@ -44591,6 +44685,28 @@ Error generating stack: ` +
     init_locready = __esmMin(() => {
       locLoadPromises ??= new Set();
     });
+  function GetAppTypeLocKeyVariant(t, n, r) {
+    switch (n) {
+      case 6:
+        return t + `_Software`;
+      case 7:
+        return t + `_Video`;
+    }
+    let i = k_mapOptionalAppTypeSuffixes[n];
+    return i && r(t + i) ? t + i : t;
+  }
+  var k_mapOptionalAppTypeSuffixes,
+    init_apptypelockey = __esmMin(() => {
+      init_steammessages_storebrowse_pb(),
+        (k_mapOptionalAppTypeSuffixes = {
+          5: `_Guide`,
+          10: `_Hardware`,
+          4: `_DLC`,
+          11: `_Music`,
+          8: `_Series`,
+          1: `_Demo`,
+        });
+    });
   function CreateProjectLocalization(t) {
     let n = new Map();
     async function r() {
@@ -44657,6 +44773,19 @@ Error generating stack: ` +
       let r = CurrentLocalizationSettings().languages;
       return ReplaceArgumentsInString(l(t, r), ...n);
     }
+    function p(t) {
+      let r = CurrentLocalizationSettings().languages,
+        i = [
+          ...r.map((t) => t.strLanguage),
+          GetFallbackForLanguage(r[0].strLanguage),
+        ];
+      for (let r of i) {
+        if (!r) continue;
+        let i = n.get(r);
+        if (i && i.has(t)) return !0;
+      }
+      return !1;
+    }
     return {
       Localize(t, ...n) {
         return u(t, ...n);
@@ -44682,26 +44811,7 @@ Error generating stack: ` +
         return u(n === 1 || n === `1` ? t : t + `_Plural`, n, ...r);
       },
       GetAppTypeLocKey(t, n) {
-        switch (n) {
-          case 5:
-            return t + `_Guide`;
-          case 10:
-            return t + `_Hardware`;
-          case 4:
-            return t + `_DLC`;
-          case 11:
-            return t + `_Music`;
-          case 8:
-            return t + `_Series`;
-          case 1:
-            return t + `_Demo`;
-          case 6:
-            return t + `_Software`;
-          case 7:
-            return t + `_Video`;
-          default:
-            return t;
-        }
+        return GetAppTypeLocKeyVariant(t, n, p);
       },
       GetAppTypePluralLocKey(t, n) {
         switch (n) {
@@ -44722,19 +44832,7 @@ Error generating stack: ` +
       IsReady() {
         return o;
       },
-      HasKey(t) {
-        let r = CurrentLocalizationSettings().languages,
-          i = [
-            ...r.map((t) => t.strLanguage),
-            GetFallbackForLanguage(r[0].strLanguage),
-          ];
-        for (let r of i) {
-          if (!r) continue;
-          let i = n.get(r);
-          if (i && i.has(t)) return !0;
-        }
-        return !1;
-      },
+      HasKey: p,
     };
   }
   function CurrentLocalizationSettings() {
@@ -44759,6 +44857,7 @@ Error generating stack: ` +
         init_replacelocarguments(),
         init_locready(),
         init_steammessages_storebrowse_pb(),
+        init_apptypelockey(),
         init_src$2();
     }),
     require_classnames = __commonJSMin((t, n) => {
@@ -44870,8 +44969,8 @@ Error generating stack: ` +
     let n = t.popoverTargetElement;
     if (!(n instanceof HTMLElement)) return;
     let r = getPopoverVisibilityState(n);
-    (t.popoverTargetAction === `show` && r === `showing`) ||
-      (t.popoverTargetAction === `hide` && r === `hidden`) ||
+    (t.popoverTargetAction !== `show` || r !== `showing`) &&
+      (t.popoverTargetAction !== `hide` || r !== `hidden`) &&
       (r === `showing`
         ? hidePopover(n, !0, !0)
         : checkPopoverValidity(n, !1) &&
@@ -46521,7 +46620,7 @@ Error generating stack: ` +
       "store-partner-events": 2103,
       "steamtv-partner-events": 2104,
       "community-partner-events": 2105,
-      "partnerweb-partner-events": 2106,
+      "partner-partner-events": 2106,
       "store-calendar-partner-events": 2107,
       events,
       subscriptions,
@@ -46815,7 +46914,7 @@ Error generating stack: ` +
     }, t);
   }
   function MergeRefs(...t) {
-    if (!(!t || t.length === 0))
+    if (t && t.length !== 0)
       return t.length === 1
         ? t[0]
         : (n) =>
@@ -47344,7 +47443,6 @@ Error generating stack: ` +
           break;
         case 3:
           console.clogerror ? console.clogerror(3, ...p) : console.error(...p);
-          break;
       }
   }
   (window.DebugLogEnable = (...t) =>
@@ -47921,7 +48019,6 @@ Error generating stack: ` +
             t = function (t) {
               return 0.5 - Math.cos(t * Math.PI) / 2;
             };
-            break;
         }
         (this.m_bActive = !0),
           (this.m_fnBoundAnimationFunc = this.OnInterval.bind(this, t)),
@@ -48957,7 +49054,6 @@ Error generating stack: ` +
             break;
           case EGamepadButton.DIR_LEFT:
             s && (l = s(t.detail, this));
-            break;
         }
         return l;
       }
@@ -49532,7 +49628,7 @@ Error generating stack: ` +
     let l = useVirtualKeyboardReference(s.current),
       u = import_react$3.useCallback(
         (t) => {
-          if (!(!document.hasFocus() && document.activeElement == o.current)) {
+          if (document.hasFocus() || document.activeElement != o.current) {
             if (t.currentTarget != o.current) {
               console.warn(
                 `keyboard got blur event, but it's not the active element`,
@@ -49540,7 +49636,8 @@ Error generating stack: ` +
               return;
             }
             t.detail.focusedNode?.Element != o.current &&
-              ((!l.BIsActive() && !l.bInVR) || l.DelayHideVirtualKeyboard());
+              (l.BIsActive() || l.bInVR) &&
+              l.DelayHideVirtualKeyboard();
           }
         },
         [l],
@@ -49863,8 +49960,7 @@ Error generating stack: ` +
         };
       }, [o, s, i]),
       import_react$3.useLayoutEffect(() => {
-        if (!(!s || !n))
-          return setRef(n, s.CreateHandle()), () => setRef(n, null);
+        if (s && n) return setRef(n, s.CreateHandle()), () => setRef(n, null);
       }, [s, n]),
       { ref: i, node: s }
     );
@@ -50162,8 +50258,8 @@ Error generating stack: ` +
     PanelDetails = FocusableElement(`details`, { bFocusableByDefault: !1 });
   init_src$1(), init_config_client(), init_rendercontext();
   var TopFrameNavigationContext = import_react$3.createContext(!1);
-  function useOnClick(t, n, r) {
-    return (0, import_react$3.useMemo)(() => r, [t, n, r]);
+  function useOnClick(t, n, r, i) {
+    return (0, import_react$3.useMemo)(() => i, [t, n, r, i]);
   }
   function CreateSteamClientURL(t) {
     let n = `steam://`;
@@ -50197,7 +50293,7 @@ Error generating stack: ` +
           t = r.pathname + r.search + r.hash;
         }
         return r === !1 ||
-          g?.routes.some((n) => t.match(new RegExp(n.regex, `i`)))
+          g?.routes.some((n) => t.split(/[?#]/, 1)[0].match(n.regex))
           ? { bIsExternal: !1, targetRoute: t }
           : { bIsExternal: !0, targetRoute: t };
       }, [r, i, m, g?.routes, v]);
@@ -50206,7 +50302,7 @@ Error generating stack: ` +
           (Config.IN_CLIENT
             ? (x = CreateSteamClientURL(`openurl/${m}`))
             : ((p.target ??= `_blank`), (p.rel ??= `noreferrer noopener`)));
-      let S = useOnClick(x, y, o);
+      let S = useOnClick(x, y, r === !1, o);
       return (0, import_jsx_runtime$1.jsx)(l && _ ? FocusableAnchor : `a`, {
         ref: u,
         href: m,
@@ -68364,15 +68460,13 @@ Error generating stack: ` +
     });
   }
   var header_menu_hamburger_default = `data:image/png;base64,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`,
-    logo_steamworks_default =
-      `` +
-      new URL(
-        `B9IALK1_.svg`,
-        (document.currentScript &&
-          document.currentScript.tagName.toUpperCase() === `SCRIPT` &&
-          document.currentScript.src) ||
-          document.baseURI,
-      ).href,
+    logo_steamworks_default = new URL(
+      `B9IALK1_.svg`,
+      (document.currentScript &&
+        document.currentScript.tagName.toUpperCase() === `SCRIPT` &&
+        document.currentScript.src) ||
+        document.baseURI,
+    ).href,
     avatar_default_default = `data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gOTAK/9sAQwADAgIDAgIDAwMDBAMDBAUIBQUEBAUKBwcGCAwKDAwLCgsLDQ4SEA0OEQ4LCxAWEBETFBUVFQwPFxgWFBgSFBUU/9sAQwEDBAQFBAUJBQUJFA0LDRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQU/8AAEQgAIAAgAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A/P4mW5nmllmeSR3LMzMSSc1a07R73V72KzsILi9u5TiOC2RpJHPoFGSarQ/ef6n+de4fAn9oaL4D+DfGX9i6Uf8AhO9XSKDT9eZY3WxiDZcBGByTkn0JCZBxQB41qeiX+iXslnqNtdWF3H9+3uo2jkX6q2CKpgy208MsUzxyI4ZWViCDmvsr9rrUdT1j9nb4T6h8RBbH4qXUs0zMsSxXJ04hivnKoAU5MPGBg7uM7q+NpvvJ9R/OgAh+8/1P867T4POI/iz4Mc6U+u7NZtG/suPbuu8TKfKG4hct93njnmuKIltp5opYXjkRyrKykEHNWbDVbvSr63vbKaezvLeRZYbi3ZkkidTlWVhyCCMgjpQB6l+1F411nx58dPFWpa5a3mnXaXP2ZNOvXVpLKNBhYflJUY5PB5JJ6k15LN95PqP51a1PWr7WtQnvtRuLm/vrhzJNc3TtJLIx6lmbJJ9zVQCW5nhiiheSR3CqqqSSc0Af/9k=`,
     avatar_default_full_default = `data:image/jpeg;base64,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`,
     avatar_default_medium_default = `data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gODAK/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsICMmJykqKRkfLTAtKDAlKCko/9sAQwEHBwcKCAoTCgoTKBoWGigoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgo/8AAEQgAQABAAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A8Inmk8+T94/3j/EfWmedJ/z0f/vo0T/6+T/eP86ZQA/zpP8Ano//AH0aPOk/56P/AN9GmVo6Loeq65M0Wj6ddXrr94QRF9v1I6fjQBR86T/no/8A30aPOk/56P8A99GtHW/Dus6GV/tjS7yyD8K00RVW+h6GsugB/nSf89H/AO+jT4JpPPj/AHj/AHh/EfWoafB/r4/94fzoAJ/9fJ/vH+dMp8/+vk/3j/OmUAXdE099W1mw06Jgsl3PHApPYswUH9a+qPF3iHSPhF4S0+003TxK0hMcEAbZvIA3SO2OvIz6k18nW88ttcRz28jxTRMHSRGKsrA5BBHQg1b1TWdT1fy/7V1G8vfLzs+0TNJtz1xknHQUAfUXw+8c6Z8UdN1HS9V0xIpUTM1s7eYkiE43KcAgg/lxg180+NtEHhzxZqmkqxdLWcojHqUPK598EV9CfBbwpF4G8J3fiLxA4trm5hEsnmceRCOQD/tHqR9B1r568a63/wAJH4r1TVghRLqYuinqE6KD74AoAxafB/r4/wDeH86ZT4P9fH/vD+dABP8A6+T/AHj/ADplPn/18n+8f50ygArt/gtpltq/xK0e2vYxJArPMUYZDFEZhn2yBXEV0/w203VNX8YWdloOoHTtQkWQx3IZl2gISeV55AI/GgD1H9pvxPdi/s/DcDGOz8pbqfHWRizBQfYbc/U+1eD12PxW0fWtE8Tpa+I9UOqXpt0cTl2bCEthctz1B/OuOoAKfB/r4/8AeH86ZT4P9fH/ALw/nQAT/wCvk/3j/OmVNPDJ58n7t/vH+E+tM8mT/nm//fJoAZV7Q9Xv9C1KLUNJuGtryMEJIoBIyCD1BHQmqnkyf883/wC+TR5Mn/PN/wDvk0AaHiHXtT8RX4vdau2u7oIIxIygHaCSBwB6msyn+TJ/zzf/AL5NHkyf883/AO+TQAynwf6+P/eH86PJk/55v/3yafBDJ58f7t/vD+E+tAH/2Q==`;
@@ -68425,7 +68519,6 @@ Error generating stack: ` +
       case `X-Large`:
       case `FillArea`:
         o += `_full`;
-        break;
     }
     return (o += i), o;
   }

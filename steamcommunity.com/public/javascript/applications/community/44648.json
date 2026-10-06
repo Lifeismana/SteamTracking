@@ -247,7 +247,7 @@
     "Market_AppUnplayedAndUnvetted": "Steam上でプレイしたことのない新しいゲームのアイテムを表示しようとしています。このアイテムの使用には注意してください。",
     "Market_AppUnplayedAndUnvetted_Dismiss": "それでも表示する場合にはこちらをクリックしてください",
     "Home_GamePicker_Label": "ゲーム名で絞り込み",
-    "Home_GamePicker_ViewAll": "すべてのゲームを見る",
+    "Home_GamePicker_ViewAll": "すべてのゲームを表示...",
     "Economy_Market_TopLevelReason_AccountLocked": "ご利用のアカウントは現在ロックされています。",
     "Economy_Market_TopLevelTooltip_AccountLocked": "このロックに関する情報は、Steamクライアントにログインし、右上にある赤いバーをクリックしてご覧ください。追加情報については、Steamサポートにご連絡ください。",
     "Economy_Market_HeaderTip_AccountLocked": "ご利用のアカウントは現在ロックされています。このロックに関する情報は、Steamクライアントにログインし、右上にある赤いバーをクリックしてご確認ください。",

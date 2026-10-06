@@ -1,0 +1,10 @@
+{
+    "language": "tchinese",
+    "PartnerOptIn_SeasonalSale_Spring": "%1$s 春季特賣",
+    "PartnerOptIn_SeasonalSale_Summer": "%1$s 夏日特賣",
+    "PartnerOptIn_SeasonalSale_Autumn": "%1$s 秋季特賣",
+    "PartnerOptIn_SeasonalSale_Winter": "%1$s 冬季特賣",
+    "PartnerOptIn_DeepestDiscount_AskAgain_Choose": "選擇一個特賣…",
+    "PartnerOptIn_DeepestDiscount_AskAgain_Never": "不要再詢問我",
+    "PartnerOptIn_DiscountIntent_Title": "折扣意願"
+}

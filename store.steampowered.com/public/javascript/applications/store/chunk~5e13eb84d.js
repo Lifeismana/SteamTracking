@@ -1,935 +1,972 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-(self.webpackChunkstore = self.webpackChunkstore || []).push([
-  [54409],
-  {
-    38081: (e) => {
-      e.exports = {
-        WishlistButtonNotTop: "_1l9DUAcf-usX0U1ouPwOjD",
-        FollowGameButtonNotTop: "_2b03GmrQ6fQLOqbsKO2GA7",
-      };
-    },
-    66532: (e) => {
-      e.exports = {
-        GhostCtn: "_1ubg0tXv_umwQZUB_0jDRE",
-        PlaceholderCap: "_27gySE3vmqZlMXfuF632TP",
-        GhostShine: "_2l86dzSdcXulUY9WKa1Tbu",
-        PlaceholderBox: "_1XmpFdzcYugE4Z9e7kEWU0",
-        ShineCtn: "_2u3dr06IR8IZdxdklGi4vo",
-        PlaceholderVideo: "R5EqV-ifmaPOB3fyPBfhh",
-        CapsuleRow3: "_3kupXecbdHHKoQG8YCt4dL",
-        CapsuleRow4: "_33YZ_jDH_m_qIiXgOfMT76",
-        CapsuleRowSuperCapsule: "_3TP7KmXA-L05uPNVUFbGFa",
-        ItemBrowserCapsule: "_2RfEi9dkz-umKdhACj0xcl",
-        CapsuleRow23: "_3OEHujsE68pdk2YnrZVRMp",
-        CapRow: "_1R1HR9bMl_hU40P6h6Y51n",
-        Caps2: "_3NP9CpCeX-sy6hyPmlh2M5",
-        Caps3: "ch0xp_kjApA24ePv-4mUf",
-        CapsuleRow234: "_30kicHKjKoSXe0rh5mMDIU",
-        Caps4: "_3F43q6uNP6clXtkdnaOhn4",
-        SpotlightsRow: "_2qbLh__etckJ_mcn5XLyzG",
-        DailyDealsColumn: "_6o5HjMAgOX8KNp4cVQ33l",
-        EventRow: "_1_ztuzDN3PaSMNH4DQqoFS",
-        PlaceholderGroupImage: "ntVbFRmkoOazIFG2xnLEL",
-        DetailsPlaceholder: "lvNWfRKbNHxMhmhmkTxSa",
-        PlaceholderTitle: "_2KAn_rPFaW6MLKtxBBFrgi",
-        PlaceholderSubtitle: "_2PqXIU5kSbk1S4OHMrtpEG",
-        PlaceholderButtons: "_2Svpv7NgQYtnnih1Al0nKv",
-        TrailerCarouselRow: "_3aEDS0V4oHI2X845GlY4AQ",
-        VideoPlaceholder: "_1J4w1c1LMOidazCqHBu9c2",
-        ItemDescPlaceholer: "_1chbn_ZYr2_kVufM3llMqe",
-        AutoAdvanceBar: "XWmc4IL9WuoHRfkxKtkwf",
-        ExpandedItemRow: "_3QSW80jNmiGxWlCRe8GPvp",
-        CapsulePlaceholder: "woZ8x3k0HeLNHeEH2wYmd",
-        ItemDefPlaceholder: "_25qfK6y2ESK-sTYHvmIyiC",
-        MainCapRow: "_3uwmHkHfnqzkO3kjD2dsfX",
-        PlaceholderRelease: "lZpOQjeL8nSaqqVQSej0d",
-        PlaceholderReviews: "_1wTzeBKjOcMG6cUtzXqF3D",
-        PlaceholderTags: "_3pJA7V23G6n6uIbJSzFLFO",
-      };
-    },
-    81886: (e, a, s) => {
-      "use strict";
-      s.d(a, { fp: () => i, vm: () => d });
-      var l = s(8747);
-      function i(e) {
-        return (
-          !!e &&
-          ("game" === e ||
-            "dlc" === e ||
-            "software" === e ||
-            "music" === e ||
-            "application" === e ||
-            "demo" === e ||
-            "hardware" === e ||
-            "mod" === e ||
-            "video" == e ||
-            "beta" === e ||
-            "advertising" === e)
-        );
-      }
-      function d(e) {
-        return (
-          null != e &&
-          (e == l.uE.HT ||
-            e == l.uE._i ||
-            e == l.uE.Sv ||
-            e == l.uE.Ov ||
-            e == l.uE.ue ||
-            e == l.uE.Hk ||
-            e == l.uE.RA ||
-            e == l.uE.Wz ||
-            e == l.uE.Vi ||
-            e == l.uE.pl)
-        );
-      }
-    },
-    85862: (e, a, s) => {
-      "use strict";
-      s.d(a, { w: () => C });
-      var l = s(7850),
-        i = s(81886),
-        d = s(8747),
-        t = s(39777),
-        r = s(58918),
-        c = s(54906),
-        o = s(6181),
-        n = s(76532),
-        h = s.n(n),
-        p = s(26408),
-        m = s(52038),
-        u = s(61859),
-        x = s(91675),
-        j = s(55509),
-        _ = s(3740),
-        v = s(48123);
-      function C(e) {
-        const {
-            id: a,
-            bShowDemoButton: s,
-            bShowPurchaseOptionsButton: n,
-            fnOnPurchaseOptionsClick: C,
-            bHidePrice: P,
-            bShowDeckCompatibilityDialog: f,
-            eHardwareCompatibilityDisplay: S,
-            className: w,
-            bShowCartButton: g,
-          } = e,
-          { data: b } = (0, t.J$)(a),
-          { data: R } = (0, t.by)(a),
-          { data: A } = (0, t.Q_)(a),
-          { bIsOwned: y } = (0, r.ZJ)(a),
-          [B, D] = (0, v.zG)(f, S);
-        if (!b) return null;
-        const E =
-            (b.type === d.uE.ue && !R?.is_coming_soon) ||
-            (b.related_items?.demo_appid &&
-              b.related_items?.demo_appid.length > 0),
-          k = (0, i.vm)(b.type),
-          O = s && k && E;
-        let W = null;
-        if (!y && A?.is_free_to_keep && A?.free_to_keep_ends) {
-          const e = A.free_to_keep_ends,
-            a = (0, u.we)(
-              "#Sale_default_label_Free_Promo_Description_Short",
-              (0, u.$z)(e) + " @ " + (0, x.KC)(e, { bForce24HourClock: !1 }),
-            );
-          W = (0, l.jsxs)("div", {
-            className: h().PurchaseOptionDetails,
+(() => {
+  (self.webpackChunkstore = self.webpackChunkstore || []).push([
+    [54409],
+    {
+      92025: (O, y, a) => {
+        "use strict";
+        a.d(y, { fp: () => s, vm: () => R });
+        var e = a(78192);
+        const E = null;
+        function o(t) {
+          return E.includes(t);
+        }
+        function A(t) {
+          return o(t) ? t : void 0;
+        }
+        function s(t) {
+          return t
+            ? t === "game" ||
+                t === "dlc" ||
+                t === "software" ||
+                t === "music" ||
+                t === "application" ||
+                t === "demo" ||
+                t === "hardware" ||
+                t === "mod" ||
+                t == "video" ||
+                t === "beta" ||
+                t === "advertising"
+            : !1;
+        }
+        function R(t) {
+          return t == null
+            ? !1
+            : t == e.uE.HT ||
+                t == e.uE._i ||
+                t == e.uE.Sv ||
+                t == e.uE.Ov ||
+                t == e.uE.ue ||
+                t == e.uE.Hk ||
+                t == e.uE.RA ||
+                t == e.uE.Wz ||
+                t == e.uE.Vi ||
+                t == e.uE.pl;
+        }
+        function h(t) {
+          return t === "music" || t === "dlc";
+        }
+      },
+      4705: (O, y, a) => {
+        "use strict";
+        a.d(y, { w: () => K });
+        var e = a(7850),
+          E = a(92025),
+          o = a(78192),
+          A = a(40358),
+          s = a(24179),
+          R = a(41944),
+          h = a(63803),
+          t = a(76532),
+          u = a.n(t),
+          v = a(11243),
+          L = a(36707),
+          I = a(18210),
+          H = a(92264),
+          B = a(27284),
+          C = a(48357),
+          b = a(6698);
+        function K(_) {
+          const {
+              id: P,
+              bShowDemoButton: T,
+              bShowPurchaseOptionsButton: S,
+              fnOnPurchaseOptionsClick: w,
+              bHidePrice: U,
+              bShowDeckCompatibilityDialog: V,
+              eHardwareCompatibilityDisplay: Y,
+              className: G,
+              bShowCartButton: J,
+            } = _,
+            { data: f } = (0, A.J$)(P),
+            { data: $ } = (0, A.by)(P),
+            { data: F } = (0, A.Q_)(P),
+            { bIsOwned: k } = (0, s.ZJ)(P),
+            [q, ee] = (0, b.zG)(V, Y);
+          if (!f) return null;
+          const se =
+              (f.type === o.uE.ue && !$?.is_coming_soon) ||
+              (f.related_items?.demo_appid &&
+                f.related_items?.demo_appid.length > 0),
+            ae = (0, E.vm)(f.type),
+            te = T && ae && se;
+          let Q = null;
+          if (!k && F?.is_free_to_keep && F?.free_to_keep_ends) {
+            const X = F.free_to_keep_ends,
+              le = (0, I.we)(
+                "#Sale_default_label_Free_Promo_Description_Short",
+                (0, I.$z)(X) + " @ " + (0, H.KC)(X, { bForce24HourClock: !1 }),
+              );
+            Q = (0, e.jsxs)("div", {
+              className: u().PurchaseOptionDetails,
+              children: [
+                le,
+                (0, e.jsx)(v.o, {
+                  tooltip: (0, I.we)(
+                    "#Sale_default_Tooltip_Free_Promo_Limitation",
+                  ),
+                }),
+              ],
+            });
+          }
+          return (0, e.jsxs)("div", {
+            className: (0, L.A)(u().StoreActionWidgetContainer, G),
             children: [
-              a,
-              (0, l.jsx)(p.o, {
-                tooltip: (0, u.we)(
-                  "#Sale_default_Tooltip_Free_Promo_Limitation",
-                ),
+              Q,
+              (0, e.jsxs)("div", {
+                className: u().StoreSalePriceActionWidgetContainer,
+                children: [
+                  !!te && (0, e.jsx)(B.j, { id: P, className: u().Action }),
+                  !U &&
+                    f.type !== o.uE.ue &&
+                    (0, e.jsxs)(e.Fragment, {
+                      children: [
+                        !!(S && !f.is_free) &&
+                          (0, e.jsx)(l, { fnOnPurchaseOptionsClick: w }),
+                        !!(J && !f.is_free) &&
+                          (0, e.jsx)(h.h, { id: P, className: "CartBtn" }),
+                      ],
+                    }),
+                  !U && (0, e.jsx)(C.NF, { id: P }),
+                  q && (0, e.jsx)(R.Pj, { id: P, compatibility: ee }),
+                ],
               }),
             ],
           });
         }
-        return (0, l.jsxs)("div", {
-          className: (0, m.A)(h().StoreActionWidgetContainer, w),
-          children: [
-            W,
-            (0, l.jsxs)("div", {
-              className: h().StoreSalePriceActionWidgetContainer,
-              children: [
-                Boolean(O) && (0, l.jsx)(j.j, { id: a, className: h().Action }),
-                Boolean(!P) &&
-                  b.type !== d.uE.ue &&
-                  (0, l.jsxs)(l.Fragment, {
-                    children: [
-                      Boolean(n && !b.is_free) &&
-                        (0, l.jsx)(N, { fnOnPurchaseOptionsClick: C }),
-                      Boolean(g && !b.is_free) &&
-                        (0, l.jsx)(o.h, { id: a, className: "CartBtn" }),
-                    ],
-                  }),
-                Boolean(!P) && (0, l.jsx)(_.NF, { id: a }),
-                B && (0, l.jsx)(c.Pj, { id: a, compatibility: D }),
-              ],
-            }),
-          ],
-        });
-      }
-      function N(e) {
-        return (0, l.jsx)("div", {
-          className: h().Action,
-          onClick: e.fnOnPurchaseOptionsClick,
-          children: (0, l.jsx)("span", {
-            children: (0, u.we)(
-              "#EventDisplay_CallToAction_ShowPurchaseOptions_Button",
-            ),
-          }),
-        });
-      }
-    },
-    22623: (e, a, s) => {
-      "use strict";
-      s.d(a, { p: () => Y });
-      var l = s(7850),
-        i = s(45699),
-        d = s(76217),
-        t = s(23310),
-        r = s(8747),
-        c = s(80696),
-        o = s(62349),
-        n = s(5309),
-        h = s(30020),
-        p = s(39777),
-        m = s(14987),
-        u = s(52541),
-        x = s(60014),
-        j = s(58918),
-        _ = s(90626),
-        v = s(93341),
-        C = s(76532),
-        N = s.n(C),
-        P = s(38081),
-        f = s.n(P),
-        S = s(54492),
-        w = s(52038),
-        g = s(61859),
-        b = s(78327),
-        R = s(24267),
-        A = s(94636),
-        y = s(29008),
-        B = s(76682),
-        D = s(78686),
-        E = s(42834);
-      const k = 6;
-      function O(e) {
-        const { id: a, bHideInLibraryApps: s } = e,
-          { data: i } = (0, p.J$)(a),
-          d = i?.item_type == r.c6.xO,
-          { data: t } = (0, j.$Y)(),
-          c = _.useMemo(() => {
-            if (i)
-              return i.item_type === r.c6.RD || i.item_type === r.c6.xO
-                ? (i.included_appids || [])
-                    .filter((e) => !d || !s || !t?.has(e))
-                    .map((e) => ({ appid: e }))
-                : (console.error(
-                    "ContentsPreviewList unexpected store item type:",
-                    i.item_type,
-                  ),
-                  null);
-          }, [i, s, d, t]);
-        if (!c || 0 == c.length) return null;
-        const o = c.length;
-        let n = D.Z.LocalizePlural("#Sale_ContentPreview", o);
-        if (d && i) {
-          const e = i.included_appids?.length || 0;
-          e != o &&
-            (n = D.Z.Localize("#Sale_Bundle_CompletePartialSet", e - o, e));
-        }
-        return (0, l.jsxs)("div", {
-          className: N().BundleContentPreview,
-          children: [
-            (0, l.jsxs)("div", {
-              className: N().ContentsCount,
-              children: [
-                d &&
-                  (0, l.jsx)("span", {
-                    className: N().BundleTag,
-                    children: D.Z.Localize("#AppType_bundle"),
-                  }),
-                n,
-              ],
-            }),
-            (0, l.jsx)("div", {
-              className: N().PreviewCtn,
-              children: c
-                .slice(0, k)
-                .map((e) => (0, l.jsx)(W, { id: e }, `preview${(0, u.ER)(e)}`)),
-            }),
-          ],
-        });
-      }
-      function W(e) {
-        const { id: a } = e,
-          { data: s } = (0, p.f2)(a),
-          { data: i } = (0, p.U2)(a);
-        if (!s || !i) return null;
-        const d = (0, E.b0)(s, "small_capsule");
-        return (0, l.jsx)(y.Q, {
-          id: a,
-          className: N().PreviewItem,
-          hoverProps: { direction: "right", style: { minWidth: "350px" } },
-          children: (0, l.jsx)("img", {
-            src: d,
-            className: N().PreviewImg,
-            loading: "lazy",
-            alt: i.name || "",
-          }),
-        });
-      }
-      var H = s(96006),
-        I = s(3740),
-        T = s(94191),
-        L = s(71381),
-        M = s(9006),
-        F = s(75233),
-        z = s(90421);
-      function G(e) {
-        const { id: a } = e;
-        return a ? (0, l.jsx)(Q, { id: a }) : null;
-      }
-      function Q(e) {
-        const { id: a } = e,
-          s = (function (e) {
-            const [a, s] = (0, _.useState)(void 0),
-              { data: l } = (0, p.J$)(e),
-              { data: i } = (0, p.xz)(e),
-              d = (0, F.jE)(),
-              t = (0, M.eG)();
-            return (
-              (0, _.useEffect)(() => {
-                if (l)
-                  if (i && i.length > 0) s(i);
-                  else if (l.related_items?.parent_appid) {
-                    const e = { appid: l.related_items?.parent_appid };
-                    (async () => {
-                      const a = await d.fetchQuery((0, p.Ec)(t, e));
-                      a && a.length > 0 && s(a);
-                    })();
-                  }
-              }, [t, d, l, i]),
-              a
-            );
-          })(a);
-        return s
-          ? (0, l.jsx)("div", {
-              className: N().StoreSaleWidgetTags,
-              children: s
-                .slice(0, 10)
-                .map((e) =>
-                  (0, l.jsx)(
-                    z.p,
-                    { tagid: e.tagid, className: N().AppTag },
-                    "tag_" + e.tagid,
-                  ),
-                ),
-            })
-          : null;
-      }
-      var U = s(12424),
-        q = s(51078),
-        K = s(78588),
-        X = s(85862),
-        Z = s(79619),
-        V = s(48123);
-      function Y(e) {
-        const {
-            id: a,
-            type: s,
-            bShowDemoButton: n,
-            bPreferDemoStorePage: C,
-            bHidePrice: P,
-            bUseSubscriptionLayout: g,
-            bHidePlatforms: y,
-            bHideContainedApps: D,
-            bAllowTwoLinesForHeader: E,
-            bShowReviewSummary: k,
-            bShowDeckCompatibilityDialog: W,
-            eHardwareCompatibilityDisplay: M,
-            bAutoFocus: F,
-            fnOnClickOverride: z,
-            bIsMarketingMessage: Q,
-            bPreferAssetWithoutOverride: Y,
-          } = e,
-          ae = (0, B.zl)(a, s),
-          [se, le] = (0, _.useState)(!1),
-          ie = (0, x.n9)(),
-          { data: de, isPending: te } = (0, p.U2)(ae),
-          { data: re } = (0, p.Q_)(ae),
-          { data: ce } = (0, p.by)(ae),
-          { data: oe } = (0, j.$Y)(),
-          ne = (0, m._Z)(ae),
-          he = (0, _.useRef)(null),
-          [pe, me] = (0, _.useState)(!1),
-          ue = (0, b.Qn)();
-        (0, _.useEffect)(() => {
-          he.current && me(he.current.offsetWidth < 370);
-        }, [he]);
-        const xe = (0, _.useMemo)(
-            () => (C && de && (0, o.J)(de) ? { appid: (0, o.S)(de)[0] } : ae),
-            [C, ae, de],
-          ),
-          { strStoreURL: je, snr: _e } = (0, q.x)(de, C);
-        if (!de)
-          return te
-            ? (0, l.jsx)(L.h, { capsules_per_row: [1], is_item_browser: !0 })
-            : null;
-        const ve = de.included_appids?.length || 0,
-          Ce = de.included_appids?.filter((e) => oe?.has(e))?.length || 0,
-          Ne = de.item_type == r.c6.xO && Boolean(re?.must_purchase_as_set),
-          Pe = Boolean(!D && ve > 1),
-          fe = de.item_type == r.c6.RD && 1 == ve,
-          Se = de.item_type == r.c6.qI || fe,
-          we = fe && de.appid,
-          ge = de.name || "",
-          be = (0, h.Nq)(ce, re),
-          Re = ue || !ce?.is_coming_soon || be,
-          [Ae, ye] = (0, V.zG)(W, M);
-        return (0, l.jsxs)(d.Z, {
-          className: (0, w.A)({
-            [N().StoreSaleWidgetOuterContainer]: !0,
-            [N().AllowTwoLineHeader]: E,
-            StoreSaleWidgetOuterContainer: !0,
-          }),
-          "flow-children": "grid",
-          navEntryPreferPosition: t.iU.PREFERRED_CHILD,
-          autoFocus: F,
-          navKey: "preview_widget_" + (0, u.ER)(ae),
-          children: [
-            (0, l.jsx)(V.oj, {
-              appid: Se && "appid" in ae ? ae.appid : void 0,
-              children: (0, l.jsxs)(i.ml, {
-                onClick: Q ? z : void 0,
-                className: (0, w.A)({
-                  [N().StoreSaleWidgetContainer]: !0,
-                  [N().SaleItemDefaultCapsuleDisplay]: !0,
-                  [N().MarketingMessage]: Q,
-                }),
-                ...(0, Z.S)(de, ie, ue, Boolean(C), void 0, z),
-                preferredFocus: Pe,
-                children: [
-                  (0, l.jsx)("div", {
-                    className: (0, w.A)(N().StoreSaleWidgetHalfLeft),
-                    children: (0, l.jsx)(J, {
-                      id: xe,
-                      strURL: je,
-                      children: (0, l.jsxs)("div", {
-                        className: N().StoreSaleWidgetImage,
-                        children: [
-                          (0, l.jsx)(T.V, { appids: ne }),
-                          (0, l.jsx)(K.a, {
-                            id: ae,
-                            imageType: "header",
-                            bPreferAssetWithoutOverride: Y,
-                          }),
-                          (0, l.jsx)(S.J, { id: ae }),
-                          (0, l.jsx)(c.mj, {
-                            id: ae,
-                            active: ae && se,
-                            bIsHoverMode: !0,
-                            eGrowOnActivate: c.C0.k_ETrailerGrowAmount_Medium,
-                          }),
-                        ],
-                      }),
-                    }),
-                  }),
-                  (0, l.jsxs)("div", {
-                    className: (0, w.A)({
-                      [N().StoreSaleWidgetRight]: !0,
-                      [N().Bundle]: Pe,
-                    }),
-                    children: [
-                      Boolean(Se && !z) &&
-                        (0, l.jsx)(A.E, {
-                          id: ae,
-                          classOverride: (0, w.A)(
-                            f().WishlistButtonNotTop,
-                            "WishlistButton",
-                          ),
-                          snr: _e,
-                        }),
-                      (0, l.jsx)("div", {
-                        className: N().TitleCtn,
-                        children: (0, l.jsx)("a", {
-                          href: z ? void 0 : je,
-                          target: b.TS.IN_CLIENT ? void 0 : "_blank",
-                          onClick: z,
-                          children: (0, l.jsx)("div", {
-                            className: (0, w.A)(
-                              N().StoreSaleWidgetTitle,
-                              "StoreSaleWidgetTitle",
-                            ),
-                            children: ge,
-                          }),
-                        }),
-                      }),
-                      !Pe && (0, l.jsx)(G, { id: ae }),
-                      (0, l.jsxs)("div", {
-                        className: N().WidgetReleaseDateAndPlatformCtn,
-                        ref: he,
-                        children: [
-                          Se && (0, l.jsx)($, { id: ae }),
-                          !Pe &&
-                            !y &&
-                            ae &&
-                            (0, l.jsxs)(l.Fragment, {
-                              children: [
-                                (0, l.jsx)(H.Q, {
-                                  id: ae,
-                                  bMinimizePlatforms: pe,
-                                  bHideWindows: pe,
-                                }),
-                                Boolean(Ae && de.item_type == r.c6.qI) &&
-                                  (0, l.jsx)(v.oc, {
-                                    eHWCompat: ye,
-                                    className: N().DeckCompatIcon,
-                                    id: ae,
-                                  }),
-                              ],
-                            }),
-                        ],
-                      }),
-                      !Pe &&
-                        k &&
-                        ae &&
-                        (0, l.jsx)("div", {
-                          className: N().ReviewScores,
-                          children: (0, l.jsx)(R.J, { id: ae }),
-                        }),
-                      Pe &&
-                        ae &&
-                        (0, l.jsx)(O, {
-                          id: ae,
-                          bHideInLibraryApps:
-                            !Ne && de.item_type == r.c6.xO && Ce < ve,
-                        }),
-                      Boolean(Se) && (0, l.jsx)(ee, { id: ae }),
-                      Boolean(!z)
-                        ? (0, l.jsx)(l.Fragment, {
-                            children:
-                              g && Se && we
-                                ? (0, l.jsx)(U.E, {
-                                    appid: we,
-                                    bIsMuted: Boolean(se),
-                                  })
-                                : (0, l.jsx)(X.w, {
-                                    id: ae,
-                                    bShowDemoButton: n,
-                                    bHidePrice: P,
-                                    bHideWishlistButton: Re,
-                                    eHardwareCompatibilityDisplay: ye,
-                                  }),
-                          })
-                        : (0, l.jsx)("div", {
-                            className: N().StoreActionWidgetContainer,
-                            children: (0, l.jsx)("div", {
-                              className:
-                                N().StoreSalePriceActionWidgetContainer,
-                              children: (0, l.jsx)(I.NF, { id: ae }),
-                            }),
-                          }),
-                      (0, l.jsx)("div", {
-                        className: N().StoreSaleWidgetBgTint,
-                        children: (0, l.jsx)(K.a, {
-                          id: ae,
-                          bPreferAssetWithoutOverride: Y,
-                          imageType: "header",
-                        }),
-                      }),
-                    ],
-                  }),
-                ],
-              }),
-            }),
-            Boolean(e.strReason && e.strReason.length > 0) &&
-              (0, l.jsx)("div", {
-                className: N().RecommendationReason,
-                children: e.strReason,
-              }),
-          ],
-        });
-      }
-      function J(e) {
-        const { id: a, strURL: s, children: i } = e;
-        return "appid" in a
-          ? (0, l.jsxs)(y.Q, { id: a, children: [i, " "] })
-          : (0, l.jsx)("a", { href: s, children: i });
-      }
-      function $(e) {
-        const { id: a } = e,
-          { data: s } = (0, p.by)(a);
-        return s
-          ? (0, l.jsx)("div", {
-              className: N().StoreSaleWidgetRelease,
-              children: (0, n.CC)(s),
-            })
-          : null;
-      }
-      function ee(e) {
-        const { id: a } = e,
-          { data: s } = (0, p.U2)(a),
-          { data: i } = (0, p.Q_)(a),
-          { data: d } = (0, p.wl)(a),
-          { data: t } = (0, j.$Y)();
-        if (!(s && d && d.short_description && t)) return null;
-        const c = i?.discount_pct || 0,
-          o = s.included_appids?.length || 0,
-          n = s.included_appids?.filter((e) => t?.has(e))?.length || 0;
-        let h = d.short_description;
-        const m = s.item_type == r.c6.RD && 1 == o,
-          u = s.item_type == r.c6.xO && Boolean(i?.must_purchase_as_set);
-        return (
-          (s.item_type == r.c6.xO || (s.item_type == r.c6.RD && !m)) &&
-            (h =
-              !u && n > 0 && n < o
-                ? (0, g.we)("#Sale_Bundle_CompletePartialSet", n, o)
-                : c > 0
-                  ? (0, g.we)("#Sale_BundleSave_WithDiscount", c, o)
-                  : (0, g.we)("#Sale_BundleSave", o)),
-          (0, l.jsx)("div", {
-            className: (0, w.A)(
-              N().StoreSaleWidgetShortDesc,
-              "StoreSaleWidgetShortDesc",
-            ),
-            children: Boolean(h.startsWith("#") && -1 == h.indexOf(" "))
-              ? (0, l.jsx)("span", {
-                  className: N().LocalizationSpan,
-                  children: (0, g.oW)(
-                    h,
-                    (0, l.jsx)("i", {}),
-                    (0, l.jsx)("i", {}),
-                    (0, l.jsx)("i", {}),
-                    (0, l.jsx)("i", {}),
-                  ),
-                })
-              : h,
-          })
-        );
-      }
-    },
-    71381: (e, a, s) => {
-      "use strict";
-      s.d(a, { h: () => c });
-      var l = s(7850),
-        i = s(76217),
-        d = s(52038),
-        t = s(66532),
-        r = s.n(t);
-      function c(e) {
-        const {
-          capsules_per_row: a,
-          is_generic: s,
-          is_generic_trailer: t,
-          is_event_dash_row: c,
-          is_trailer_carousel: n,
-          is_spotlights: h,
-          is_item_browser: p,
-          is_maincap: m,
-          is_expanded_maincap: u,
-          is_expanded_display: x,
-          show_auto_advance_bar: j,
-        } = e;
-        if (!a) return null;
-        if (s)
-          return (0, l.jsx)(o, {
-            children: (0, l.jsx)("div", {
-              className: r().PlaceholderBox,
-              children: (0, l.jsx)("div", { className: r().ShineCtn }),
-            }),
-          });
-        if (t)
-          return (0, l.jsx)(o, {
-            children: (0, l.jsx)("div", {
-              className: r().PlaceholderVideo,
-              children: (0, l.jsx)("div", { className: r().ShineCtn }),
-            }),
-          });
-        if (n)
-          return (0, l.jsxs)(o, {
-            children: [
-              (0, l.jsxs)("div", {
-                className: r().TrailerCarouselRow,
-                children: [
-                  (0, l.jsx)("div", {
-                    className: r().VideoPlaceholder,
-                    children: (0, l.jsx)("div", { className: r().ShineCtn }),
-                  }),
-                  (0, l.jsx)("div", {
-                    className: r().ItemDescPlaceholer,
-                    children: (0, l.jsx)("div", { className: r().ShineCtn }),
-                  }),
-                ],
-              }),
-              j &&
-                (0, l.jsx)("div", {
-                  className: r().AutoAdvanceBar,
-                  children: (0, l.jsx)("div", { className: r().ShineCtn }),
-                }),
-            ],
-          });
-        if (c)
-          return (0, l.jsx)(o, {
-            children: (0, l.jsxs)("div", {
-              className: r().EventRow,
-              children: [
-                (0, l.jsx)("div", {
-                  className: (0, d.A)(
-                    r().PlaceholderGroupImage,
-                    r().PlaceholderCap,
-                  ),
-                }),
-                (0, l.jsxs)("div", {
-                  className: (0, d.A)(r().DetailsPlaceholder),
-                  children: [
-                    (0, l.jsx)("div", {
-                      className: (0, d.A)(
-                        r().PlaceholderTitle,
-                        r().PlaceholderCap,
-                      ),
-                    }),
-                    (0, l.jsx)("div", {
-                      className: (0, d.A)(
-                        r().PlaceholderSubtitle,
-                        r().PlaceholderCap,
-                      ),
-                    }),
-                    (0, l.jsx)("div", {
-                      className: (0, d.A)(
-                        r().PlaceholderButtons,
-                        r().PlaceholderCap,
-                      ),
-                    }),
-                  ],
-                }),
-              ],
-            }),
-          });
-        if (h)
-          return (0, l.jsx)(o, {
-            children: (0, l.jsxs)("div", {
-              className: r().SpotlightsRow,
-              children: [
-                (0, l.jsx)("div", { className: r().PlaceholderCap }),
-                (0, l.jsx)("div", { className: r().PlaceholderCap }),
-                (0, l.jsxs)("div", {
-                  className: r().DailyDealsColumn,
-                  children: [
-                    (0, l.jsx)("div", { className: r().PlaceholderCap }),
-                    (0, l.jsx)("div", { className: r().PlaceholderCap }),
-                  ],
-                }),
-              ],
-            }),
-          });
-        if (m)
-          return (0, l.jsx)(o, {
-            children: (0, l.jsxs)("div", {
-              className: (0, d.A)({
-                [r().MainCapRow]: !0,
-                [r().MainCapRowExpanded]: u,
-              }),
-              children: [
-                (0, l.jsx)("div", { className: r().PlaceholderCap }),
-                (0, l.jsxs)("div", {
-                  className: (0, d.A)(r().DetailsPlaceholder),
-                  children: [
-                    (0, l.jsx)("div", {
-                      className: (0, d.A)(
-                        r().PlaceholderTitle,
-                        r().PlaceholderCap,
-                      ),
-                    }),
-                    (0, l.jsx)("div", {
-                      className: (0, d.A)(
-                        r().PlaceholderSubtitle,
-                        r().PlaceholderCap,
-                      ),
-                    }),
-                    (0, l.jsx)("div", {
-                      className: (0, d.A)(
-                        r().PlaceholderRelease,
-                        r().PlaceholderCap,
-                      ),
-                    }),
-                    (0, l.jsx)("div", {
-                      className: (0, d.A)(
-                        r().PlaceholderReviews,
-                        r().PlaceholderCap,
-                      ),
-                    }),
-                    (0, l.jsx)("div", {
-                      className: (0, d.A)(
-                        r().PlaceholderTags,
-                        r().PlaceholderCap,
-                      ),
-                    }),
-                  ],
-                }),
-              ],
-            }),
-          });
-        if (x)
-          return (0, l.jsx)(o, {
-            children: (0, l.jsxs)("div", {
-              className: r().ExpandedItemRow,
-              children: [
-                (0, l.jsx)("div", {
-                  className: (0, d.A)(
-                    r().CapsulePlaceholder,
-                    r().PlaceholderCap,
-                  ),
-                }),
-                (0, l.jsx)("div", {
-                  className: (0, d.A)(
-                    r().ItemDefPlaceholder,
-                    r().PlaceholderCap,
-                  ),
-                }),
-              ],
-            }),
-          });
-        if (p) {
-          const e = [];
-          for (let s = 0; s < a[0]; s++)
-            e.push(
-              (0, l.jsx)(
-                i.Z,
-                {
-                  className: r().ItemBrowserCapsule,
-                  focusable: !0,
-                  children: (0, l.jsx)("div", {
-                    className: r().PlaceholderCap,
-                  }),
-                },
-                "item_browse_ghost_" + s,
+        function l(_) {
+          return (0, e.jsx)("div", {
+            className: u().Action,
+            onClick: _.fnOnPurchaseOptionsClick,
+            children: (0, e.jsx)("span", {
+              children: (0, I.we)(
+                "#EventDisplay_CallToAction_ShowPurchaseOptions_Button",
               ),
-            );
-          return (0, l.jsx)(o, { children: e });
+            }),
+          });
         }
-        return 1 == a?.length
-          ? 1 == a[0]
-            ? (0, l.jsx)(o, {
-                children: (0, l.jsx)("div", {
-                  className: r().CapsuleRowSuperCapsule,
-                  children: (0, l.jsx)("div", {
-                    className: r().PlaceholderCap,
-                  }),
-                }),
+      },
+      61431: (O, y, a) => {
+        "use strict";
+        a.d(y, { p: () => Oe });
+        var e = a(7850),
+          E = a(24660),
+          o = a(19298),
+          A = a(20169),
+          s = a(78192),
+          R = a(87249),
+          h = a(83784),
+          t = a(3348),
+          u = a(81055),
+          v = a(40358),
+          L = a(29522),
+          I = a(68094),
+          H = a(72865),
+          B = a(24179),
+          C = a(90626),
+          b = a(21690),
+          K = a(76532),
+          l = a.n(K),
+          _ = a(38081),
+          P = a.n(_),
+          T = a(96155),
+          S = a(36707),
+          w = a(18210),
+          U = a(3166),
+          V = a(80104),
+          Y = a(44267),
+          G = a(80702),
+          J = a(88743),
+          f = a(39905),
+          $ = a(21721);
+        const F = 6;
+        function k(m) {
+          const { id: d, bHideInLibraryApps: r } = m,
+            { data: i } = (0, v.J$)(d),
+            p = i?.item_type == s.c6.xO,
+            { data: N } = (0, B.$Y)(),
+            g = C.useMemo(() => {
+              if (i)
+                return i.item_type === s.c6.RD || i.item_type === s.c6.xO
+                  ? (i.included_appids || [])
+                      .filter((c) => !p || !r || !N?.has(c))
+                      .map((c) => ({ appid: c }))
+                  : (console.error(
+                      "ContentsPreviewList unexpected store item type:",
+                      i.item_type,
+                    ),
+                    null);
+            }, [i, r, p, N]);
+          if (!g || g.length == 0) return null;
+          const j = g.length;
+          let D = f.Z.LocalizePlural("#Sale_ContentPreview", j);
+          if (p && i) {
+            const c = i.included_appids?.length || 0;
+            c != j &&
+              (D = f.Z.Localize("#Sale_Bundle_CompletePartialSet", c - j, c));
+          }
+          return (0, e.jsxs)("div", {
+            className: l().BundleContentPreview,
+            children: [
+              (0, e.jsxs)("div", {
+                className: l().ContentsCount,
+                children: [
+                  p &&
+                    (0, e.jsx)("span", {
+                      className: l().BundleTag,
+                      children: f.Z.Localize("#AppType_bundle"),
+                    }),
+                  D,
+                ],
+              }),
+              (0, e.jsx)("div", {
+                className: l().PreviewCtn,
+                children: g
+                  .slice(0, F)
+                  .map((c) =>
+                    (0, e.jsx)(q, { id: c }, `preview${(0, I.ER)(c)}`),
+                  ),
+              }),
+            ],
+          });
+        }
+        function q(m) {
+          const { id: d } = m,
+            { data: r } = (0, v.f2)(d),
+            { data: i } = (0, v.U2)(d);
+          if (!r || !i) return null;
+          const p = (0, $.b0)(r, "small_capsule");
+          return (0, e.jsx)(G.Q, {
+            id: d,
+            className: l().PreviewItem,
+            hoverProps: { direction: "right", style: { minWidth: "350px" } },
+            children: (0, e.jsx)("img", {
+              src: p,
+              className: l().PreviewImg,
+              loading: "lazy",
+              alt: i.name || "",
+            }),
+          });
+        }
+        var ee = a(29245),
+          se = a(48357),
+          ae = a(46727),
+          te = a(96378),
+          Q = a(5827),
+          X = a(75233),
+          le = a(41188);
+        function Ne(m) {
+          const [d, r] = (0, C.useState)(void 0),
+            { data: i } = (0, v.J$)(m),
+            { data: p } = (0, v.xz)(m),
+            N = (0, X.jE)(),
+            g = (0, Q.eG)();
+          return (
+            (0, C.useEffect)(() => {
+              if (i) {
+                if (p && p.length > 0) r(p);
+                else if (i.related_items?.parent_appid) {
+                  const j = { appid: i.related_items?.parent_appid };
+                  (async () => {
+                    const c = await N.fetchQuery((0, v.Ec)(g, j));
+                    c && c.length > 0 && r(c);
+                  })();
+                }
+              }
+            }, [g, N, i, p]),
+            d
+          );
+        }
+        function Ie(m) {
+          const { id: d } = m;
+          return d ? (0, e.jsx)(Se, { id: d }) : null;
+        }
+        function Se(m) {
+          const { id: d } = m,
+            r = Ne(d);
+          return r
+            ? (0, e.jsx)("div", {
+                className: l().StoreSaleWidgetTags,
+                children: r
+                  .slice(0, 10)
+                  .map((i) =>
+                    (0, e.jsx)(
+                      le.p,
+                      { tagid: i.tagid, className: l().AppTag },
+                      "tag_" + i.tagid,
+                    ),
+                  ),
               })
-            : 4 == a[0]
-              ? (0, l.jsx)(o, {
-                  children: (0, l.jsxs)("div", {
-                    className: r().CapsuleRow4,
-                    children: [
-                      (0, l.jsx)("div", { className: r().PlaceholderCap }),
-                      (0, l.jsx)("div", { className: r().PlaceholderCap }),
-                      (0, l.jsx)("div", { className: r().PlaceholderCap }),
-                      (0, l.jsx)("div", { className: r().PlaceholderCap }),
-                    ],
+            : null;
+        }
+        var De = a(77459),
+          Ee = a(16179),
+          de = a(84607),
+          Ae = a(4705),
+          Re = a(86298),
+          ce = a(6698);
+        function Oe(m) {
+          const {
+              id: d,
+              type: r,
+              bShowDemoButton: i,
+              bPreferDemoStorePage: p,
+              bHidePrice: N,
+              bUseSubscriptionLayout: g,
+              bHidePlatforms: j,
+              bHideContainedApps: D,
+              bAllowTwoLinesForHeader: c,
+              bShowReviewSummary: oe,
+              bShowDeckCompatibilityDialog: ie,
+              eHardwareCompatibilityDisplay: ne,
+              bAutoFocus: Te,
+              fnOnClickOverride: M,
+              bIsMarketingMessage: me,
+              bPreferAssetWithoutOverride: he,
+            } = m,
+            n = (0, J.zl)(d, r),
+            [pe, Ve] = (0, C.useState)(!1),
+            we = (0, H.n9)(),
+            { data: x, isPending: Me } = (0, v.U2)(n),
+            { data: ve } = (0, v.Q_)(n),
+            { data: ue } = (0, v.by)(n),
+            { data: We } = (0, B.$Y)(),
+            Le = (0, L._Z)(n),
+            Z = (0, C.useRef)(null),
+            [xe, He] = (0, C.useState)(!1),
+            Pe = (0, U.Qn)();
+          (0, C.useEffect)(() => {
+            Z.current && He(Z.current.offsetWidth < 370);
+          }, [Z]);
+          const be = (0, C.useMemo)(
+              () => (p && x && (0, h.J)(x) ? { appid: (0, h.S)(x)[0] } : n),
+              [p, n, x],
+            ),
+            { strStoreURL: je, snr: Ke } = (0, Ee.x)(x, p);
+          if (!x)
+            return Me
+              ? (0, e.jsx)(te.h, { capsules_per_row: [1], is_item_browser: !0 })
+              : null;
+          const re = x.included_appids?.length || 0,
+            Ue = x.included_appids?.filter((Ze) => We?.has(Ze))?.length || 0,
+            Fe = x.item_type == s.c6.xO && !!ve?.must_purchase_as_set,
+            W = !D && re > 1,
+            Ce = x.item_type == s.c6.RD && re == 1,
+            z = x.item_type == s.c6.qI || Ce,
+            fe = Ce && x.appid,
+            ze = x.name || "",
+            Ge = (0, u.Nq)(ue, ve),
+            Qe = Pe || !ue?.is_coming_soon || Ge,
+            [Xe, ge] = (0, ce.zG)(ie, ne);
+          return (0, e.jsxs)(o.Z, {
+            className: (0, S.A)({
+              [l().StoreSaleWidgetOuterContainer]: !0,
+              [l().AllowTwoLineHeader]: c,
+              StoreSaleWidgetOuterContainer: !0,
+            }),
+            "flow-children": "grid",
+            navEntryPreferPosition: A.iU.PREFERRED_CHILD,
+            autoFocus: Te,
+            navKey: "preview_widget_" + (0, I.ER)(n),
+            children: [
+              (0, e.jsx)(ce.oj, {
+                appid: z && "appid" in n ? n.appid : void 0,
+                children: (0, e.jsxs)(E.ml, {
+                  onClick: me ? M : void 0,
+                  className: (0, S.A)({
+                    [l().StoreSaleWidgetContainer]: !0,
+                    [l().SaleItemDefaultCapsuleDisplay]: !0,
+                    [l().MarketingMessage]: me,
                   }),
-                })
-              : (0, l.jsx)(o, {
-                  children: (0, l.jsxs)("div", {
-                    className: r().CapsuleRow3,
-                    children: [
-                      (0, l.jsx)("div", { className: r().PlaceholderCap }),
-                      (0, l.jsx)("div", { className: r().PlaceholderCap }),
-                      (0, l.jsx)("div", { className: r().PlaceholderCap }),
-                    ],
-                  }),
-                })
-          : 2 == a?.length
-            ? 3 == a[0] && 3 == a[1]
-              ? (0, l.jsx)(o, {
-                  children: (0, l.jsxs)("div", {
-                    className: r().CapsuleRow23,
-                    children: [
-                      (0, l.jsxs)("div", {
-                        className: (0, d.A)(r().CapRow, r().Caps3),
-                        children: [
-                          (0, l.jsx)("div", { className: r().PlaceholderCap }),
-                          (0, l.jsx)("div", { className: r().PlaceholderCap }),
-                          (0, l.jsx)("div", { className: r().PlaceholderCap }),
-                        ],
-                      }),
-                      (0, l.jsxs)("div", {
-                        className: (0, d.A)(r().CapRow, r().Caps3),
-                        children: [
-                          (0, l.jsx)("div", { className: r().PlaceholderCap }),
-                          (0, l.jsx)("div", { className: r().PlaceholderCap }),
-                          (0, l.jsx)("div", { className: r().PlaceholderCap }),
-                        ],
-                      }),
-                    ],
-                  }),
-                })
-              : (0, l.jsx)(o, {
-                  children: (0, l.jsxs)("div", {
-                    className: r().CapsuleRow23,
-                    children: [
-                      (0, l.jsxs)("div", {
-                        className: (0, d.A)(r().CapRow, r().Caps2),
-                        children: [
-                          (0, l.jsx)("div", { className: r().PlaceholderCap }),
-                          (0, l.jsx)("div", { className: r().PlaceholderCap }),
-                        ],
-                      }),
-                      (0, l.jsxs)("div", {
-                        className: (0, d.A)(r().CapRow, r().Caps3),
-                        children: [
-                          (0, l.jsx)("div", { className: r().PlaceholderCap }),
-                          (0, l.jsx)("div", { className: r().PlaceholderCap }),
-                          (0, l.jsx)("div", { className: r().PlaceholderCap }),
-                        ],
-                      }),
-                    ],
-                  }),
-                })
-            : (0, l.jsx)(o, {
-                children: (0, l.jsxs)("div", {
-                  className: r().CapsuleRow234,
+                  ...(0, Re.S)(x, we, Pe, !!p, void 0, M),
+                  preferredFocus: W,
                   children: [
-                    (0, l.jsxs)("div", {
-                      className: (0, d.A)(r().CapRow, r().Caps2),
-                      children: [
-                        (0, l.jsx)("div", { className: r().PlaceholderCap }),
-                        (0, l.jsx)("div", { className: r().PlaceholderCap }),
-                      ],
+                    (0, e.jsx)("div", {
+                      className: (0, S.A)(l().StoreSaleWidgetHalfLeft),
+                      children: (0, e.jsx)(ye, {
+                        id: be,
+                        strURL: je,
+                        children: (0, e.jsxs)("div", {
+                          className: l().StoreSaleWidgetImage,
+                          children: [
+                            (0, e.jsx)(ae.V, { appids: Le }),
+                            (0, e.jsx)(de.a, {
+                              id: n,
+                              imageType: "header",
+                              bPreferAssetWithoutOverride: he,
+                            }),
+                            (0, e.jsx)(T.J, { id: n }),
+                            (0, e.jsx)(R.mj, {
+                              id: n,
+                              active: n && pe,
+                              bIsHoverMode: !0,
+                              eGrowOnActivate: R.C0.k_ETrailerGrowAmount_Medium,
+                            }),
+                          ],
+                        }),
+                      }),
                     }),
-                    (0, l.jsxs)("div", {
-                      className: (0, d.A)(r().CapRow, r().Caps3),
+                    (0, e.jsxs)("div", {
+                      className: (0, S.A)({
+                        [l().StoreSaleWidgetRight]: !0,
+                        [l().Bundle]: W,
+                      }),
                       children: [
-                        (0, l.jsx)("div", { className: r().PlaceholderCap }),
-                        (0, l.jsx)("div", { className: r().PlaceholderCap }),
-                        (0, l.jsx)("div", { className: r().PlaceholderCap }),
-                      ],
-                    }),
-                    (0, l.jsxs)("div", {
-                      className: (0, d.A)(r().CapRow, r().Caps4),
-                      children: [
-                        (0, l.jsx)("div", { className: r().PlaceholderCap }),
-                        (0, l.jsx)("div", { className: r().PlaceholderCap }),
-                        (0, l.jsx)("div", { className: r().PlaceholderCap }),
-                        (0, l.jsx)("div", { className: r().PlaceholderCap }),
+                        !!(z && !M) &&
+                          (0, e.jsx)(Y.E, {
+                            id: n,
+                            classOverride: (0, S.A)(
+                              P().WishlistButtonNotTop,
+                              "WishlistButton",
+                            ),
+                            snr: Ke,
+                          }),
+                        (0, e.jsx)("div", {
+                          className: l().TitleCtn,
+                          children: (0, e.jsx)("a", {
+                            href: M ? void 0 : je,
+                            target: U.TS.IN_CLIENT ? void 0 : "_blank",
+                            onClick: M,
+                            children: (0, e.jsx)("div", {
+                              className: (0, S.A)(
+                                l().StoreSaleWidgetTitle,
+                                "StoreSaleWidgetTitle",
+                              ),
+                              children: ze,
+                            }),
+                          }),
+                        }),
+                        !W && (0, e.jsx)(Ie, { id: n }),
+                        (0, e.jsxs)("div", {
+                          className: l().WidgetReleaseDateAndPlatformCtn,
+                          ref: Z,
+                          children: [
+                            z && (0, e.jsx)(Be, { id: n }),
+                            !W &&
+                              !j &&
+                              n &&
+                              (0, e.jsxs)(e.Fragment, {
+                                children: [
+                                  (0, e.jsx)(ee.Q, {
+                                    id: n,
+                                    bMinimizePlatforms: xe,
+                                    bHideWindows: xe,
+                                  }),
+                                  !!(Xe && x.item_type == s.c6.qI) &&
+                                    (0, e.jsx)(b.oc, {
+                                      eHWCompat: ge,
+                                      className: l().DeckCompatIcon,
+                                      id: n,
+                                    }),
+                                ],
+                              }),
+                          ],
+                        }),
+                        !W &&
+                          oe &&
+                          n &&
+                          (0, e.jsx)("div", {
+                            className: l().ReviewScores,
+                            children: (0, e.jsx)(V.J, { id: n }),
+                          }),
+                        W &&
+                          n &&
+                          (0, e.jsx)(k, {
+                            id: n,
+                            bHideInLibraryApps:
+                              !Fe && x.item_type == s.c6.xO && Ue < re,
+                          }),
+                        !!z && (0, e.jsx)(_e, { id: n }),
+                        M
+                          ? (0, e.jsx)("div", {
+                              className: l().StoreActionWidgetContainer,
+                              children: (0, e.jsx)("div", {
+                                className:
+                                  l().StoreSalePriceActionWidgetContainer,
+                                children: (0, e.jsx)(se.NF, { id: n }),
+                              }),
+                            })
+                          : (0, e.jsx)(e.Fragment, {
+                              children:
+                                g && z && fe
+                                  ? (0, e.jsx)(De.E, {
+                                      appid: fe,
+                                      bIsMuted: !!pe,
+                                    })
+                                  : (0, e.jsx)(Ae.w, {
+                                      id: n,
+                                      bShowDemoButton: i,
+                                      bHidePrice: N,
+                                      bHideWishlistButton: Qe,
+                                      eHardwareCompatibilityDisplay: ge,
+                                    }),
+                            }),
+                        (0, e.jsx)("div", {
+                          className: l().StoreSaleWidgetBgTint,
+                          children: (0, e.jsx)(de.a, {
+                            id: n,
+                            bPreferAssetWithoutOverride: he,
+                            imageType: "header",
+                          }),
+                        }),
                       ],
                     }),
                   ],
                 }),
-              });
-      }
-      function o(e) {
-        return (0, l.jsx)(i.Z, {
-          className: r().GhostCtn,
-          focusableIfEmpty: !0,
-          children: e.children,
-        });
-      }
+              }),
+              !!(m.strReason && m.strReason.length > 0) &&
+                (0, e.jsx)("div", {
+                  className: l().RecommendationReason,
+                  children: m.strReason,
+                }),
+            ],
+          });
+        }
+        function ye(m) {
+          const { id: d, strURL: r, children: i } = m;
+          return "appid" in d
+            ? (0, e.jsxs)(G.Q, { id: d, children: [i, " "] })
+            : (0, e.jsx)("a", { href: r, children: i });
+        }
+        function Be(m) {
+          const { id: d } = m,
+            { data: r } = (0, v.by)(d);
+          return r
+            ? (0, e.jsx)("div", {
+                className: l().StoreSaleWidgetRelease,
+                children: (0, t.CC)(r),
+              })
+            : null;
+        }
+        function _e(m) {
+          const { id: d } = m,
+            { data: r } = (0, v.U2)(d),
+            { data: i } = (0, v.Q_)(d),
+            { data: p } = (0, v.wl)(d),
+            { data: N } = (0, B.$Y)();
+          if (!r || !p || !p.short_description || !N) return null;
+          const g = i?.discount_pct || 0,
+            j = r.included_appids?.length || 0,
+            D = r.included_appids?.filter((ne) => N?.has(ne))?.length || 0;
+          let c = p.short_description;
+          const oe = r.item_type == s.c6.RD && j == 1,
+            ie = r.item_type == s.c6.xO && !!i?.must_purchase_as_set;
+          return (
+            (r.item_type == s.c6.xO || (r.item_type == s.c6.RD && !oe)) &&
+              (!ie && D > 0 && D < j
+                ? (c = (0, w.we)("#Sale_Bundle_CompletePartialSet", D, j))
+                : (c =
+                    g > 0
+                      ? (0, w.we)("#Sale_BundleSave_WithDiscount", g, j)
+                      : (0, w.we)("#Sale_BundleSave", j))),
+            (0, e.jsx)("div", {
+              className: (0, S.A)(
+                l().StoreSaleWidgetShortDesc,
+                "StoreSaleWidgetShortDesc",
+              ),
+              children:
+                c.startsWith("#") && c.indexOf(" ") == -1
+                  ? (0, e.jsx)("span", {
+                      className: l().LocalizationSpan,
+                      children: (0, w.oW)(
+                        c,
+                        (0, e.jsx)("i", {}),
+                        (0, e.jsx)("i", {}),
+                        (0, e.jsx)("i", {}),
+                        (0, e.jsx)("i", {}),
+                      ),
+                    })
+                  : c,
+            })
+          );
+        }
+      },
+      96378: (O, y, a) => {
+        "use strict";
+        a.d(y, { h: () => R });
+        var e = a(7850),
+          E = a(19298),
+          o = a(36707),
+          A = a(66532),
+          s = a.n(A);
+        function R(t) {
+          const {
+            capsules_per_row: u,
+            is_generic: v,
+            is_generic_trailer: L,
+            is_event_dash_row: I,
+            is_trailer_carousel: H,
+            is_spotlights: B,
+            is_item_browser: C,
+            is_maincap: b,
+            is_expanded_maincap: K,
+            is_expanded_display: l,
+            show_auto_advance_bar: _,
+          } = t;
+          if (!u) return null;
+          if (v)
+            return (0, e.jsx)(h, {
+              children: (0, e.jsx)("div", {
+                className: s().PlaceholderBox,
+                children: (0, e.jsx)("div", { className: s().ShineCtn }),
+              }),
+            });
+          if (L)
+            return (0, e.jsx)(h, {
+              children: (0, e.jsx)("div", {
+                className: s().PlaceholderVideo,
+                children: (0, e.jsx)("div", { className: s().ShineCtn }),
+              }),
+            });
+          if (H)
+            return (0, e.jsxs)(h, {
+              children: [
+                (0, e.jsxs)("div", {
+                  className: s().TrailerCarouselRow,
+                  children: [
+                    (0, e.jsx)("div", {
+                      className: s().VideoPlaceholder,
+                      children: (0, e.jsx)("div", { className: s().ShineCtn }),
+                    }),
+                    (0, e.jsx)("div", {
+                      className: s().ItemDescPlaceholer,
+                      children: (0, e.jsx)("div", { className: s().ShineCtn }),
+                    }),
+                  ],
+                }),
+                _ &&
+                  (0, e.jsx)("div", {
+                    className: s().AutoAdvanceBar,
+                    children: (0, e.jsx)("div", { className: s().ShineCtn }),
+                  }),
+              ],
+            });
+          if (I)
+            return (0, e.jsx)(h, {
+              children: (0, e.jsxs)("div", {
+                className: s().EventRow,
+                children: [
+                  (0, e.jsx)("div", {
+                    className: (0, o.A)(
+                      s().PlaceholderGroupImage,
+                      s().PlaceholderCap,
+                    ),
+                  }),
+                  (0, e.jsxs)("div", {
+                    className: (0, o.A)(s().DetailsPlaceholder),
+                    children: [
+                      (0, e.jsx)("div", {
+                        className: (0, o.A)(
+                          s().PlaceholderTitle,
+                          s().PlaceholderCap,
+                        ),
+                      }),
+                      (0, e.jsx)("div", {
+                        className: (0, o.A)(
+                          s().PlaceholderSubtitle,
+                          s().PlaceholderCap,
+                        ),
+                      }),
+                      (0, e.jsx)("div", {
+                        className: (0, o.A)(
+                          s().PlaceholderButtons,
+                          s().PlaceholderCap,
+                        ),
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+            });
+          if (B)
+            return (0, e.jsx)(h, {
+              children: (0, e.jsxs)("div", {
+                className: s().SpotlightsRow,
+                children: [
+                  (0, e.jsx)("div", { className: s().PlaceholderCap }),
+                  (0, e.jsx)("div", { className: s().PlaceholderCap }),
+                  (0, e.jsxs)("div", {
+                    className: s().DailyDealsColumn,
+                    children: [
+                      (0, e.jsx)("div", { className: s().PlaceholderCap }),
+                      (0, e.jsx)("div", { className: s().PlaceholderCap }),
+                    ],
+                  }),
+                ],
+              }),
+            });
+          if (b)
+            return (0, e.jsx)(h, {
+              children: (0, e.jsxs)("div", {
+                className: (0, o.A)({
+                  [s().MainCapRow]: !0,
+                  [s().MainCapRowExpanded]: K,
+                }),
+                children: [
+                  (0, e.jsx)("div", { className: s().PlaceholderCap }),
+                  (0, e.jsxs)("div", {
+                    className: (0, o.A)(s().DetailsPlaceholder),
+                    children: [
+                      (0, e.jsx)("div", {
+                        className: (0, o.A)(
+                          s().PlaceholderTitle,
+                          s().PlaceholderCap,
+                        ),
+                      }),
+                      (0, e.jsx)("div", {
+                        className: (0, o.A)(
+                          s().PlaceholderSubtitle,
+                          s().PlaceholderCap,
+                        ),
+                      }),
+                      (0, e.jsx)("div", {
+                        className: (0, o.A)(
+                          s().PlaceholderRelease,
+                          s().PlaceholderCap,
+                        ),
+                      }),
+                      (0, e.jsx)("div", {
+                        className: (0, o.A)(
+                          s().PlaceholderReviews,
+                          s().PlaceholderCap,
+                        ),
+                      }),
+                      (0, e.jsx)("div", {
+                        className: (0, o.A)(
+                          s().PlaceholderTags,
+                          s().PlaceholderCap,
+                        ),
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+            });
+          if (l)
+            return (0, e.jsx)(h, {
+              children: (0, e.jsxs)("div", {
+                className: s().ExpandedItemRow,
+                children: [
+                  (0, e.jsx)("div", {
+                    className: (0, o.A)(
+                      s().CapsulePlaceholder,
+                      s().PlaceholderCap,
+                    ),
+                  }),
+                  (0, e.jsx)("div", {
+                    className: (0, o.A)(
+                      s().ItemDefPlaceholder,
+                      s().PlaceholderCap,
+                    ),
+                  }),
+                ],
+              }),
+            });
+          if (C) {
+            const P = [];
+            for (let T = 0; T < u[0]; T++)
+              P.push(
+                (0, e.jsx)(
+                  E.Z,
+                  {
+                    className: s().ItemBrowserCapsule,
+                    focusable: !0,
+                    children: (0, e.jsx)("div", {
+                      className: s().PlaceholderCap,
+                    }),
+                  },
+                  "item_browse_ghost_" + T,
+                ),
+              );
+            return (0, e.jsx)(h, { children: P });
+          }
+          return u?.length == 1
+            ? u[0] == 1
+              ? (0, e.jsx)(h, {
+                  children: (0, e.jsx)("div", {
+                    className: s().CapsuleRowSuperCapsule,
+                    children: (0, e.jsx)("div", {
+                      className: s().PlaceholderCap,
+                    }),
+                  }),
+                })
+              : u[0] == 4
+                ? (0, e.jsx)(h, {
+                    children: (0, e.jsxs)("div", {
+                      className: s().CapsuleRow4,
+                      children: [
+                        (0, e.jsx)("div", { className: s().PlaceholderCap }),
+                        (0, e.jsx)("div", { className: s().PlaceholderCap }),
+                        (0, e.jsx)("div", { className: s().PlaceholderCap }),
+                        (0, e.jsx)("div", { className: s().PlaceholderCap }),
+                      ],
+                    }),
+                  })
+                : (0, e.jsx)(h, {
+                    children: (0, e.jsxs)("div", {
+                      className: s().CapsuleRow3,
+                      children: [
+                        (0, e.jsx)("div", { className: s().PlaceholderCap }),
+                        (0, e.jsx)("div", { className: s().PlaceholderCap }),
+                        (0, e.jsx)("div", { className: s().PlaceholderCap }),
+                      ],
+                    }),
+                  })
+            : u?.length == 2
+              ? u[0] == 3 && u[1] == 3
+                ? (0, e.jsx)(h, {
+                    children: (0, e.jsxs)("div", {
+                      className: s().CapsuleRow23,
+                      children: [
+                        (0, e.jsxs)("div", {
+                          className: (0, o.A)(s().CapRow, s().Caps3),
+                          children: [
+                            (0, e.jsx)("div", {
+                              className: s().PlaceholderCap,
+                            }),
+                            (0, e.jsx)("div", {
+                              className: s().PlaceholderCap,
+                            }),
+                            (0, e.jsx)("div", {
+                              className: s().PlaceholderCap,
+                            }),
+                          ],
+                        }),
+                        (0, e.jsxs)("div", {
+                          className: (0, o.A)(s().CapRow, s().Caps3),
+                          children: [
+                            (0, e.jsx)("div", {
+                              className: s().PlaceholderCap,
+                            }),
+                            (0, e.jsx)("div", {
+                              className: s().PlaceholderCap,
+                            }),
+                            (0, e.jsx)("div", {
+                              className: s().PlaceholderCap,
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
+                  })
+                : (0, e.jsx)(h, {
+                    children: (0, e.jsxs)("div", {
+                      className: s().CapsuleRow23,
+                      children: [
+                        (0, e.jsxs)("div", {
+                          className: (0, o.A)(s().CapRow, s().Caps2),
+                          children: [
+                            (0, e.jsx)("div", {
+                              className: s().PlaceholderCap,
+                            }),
+                            (0, e.jsx)("div", {
+                              className: s().PlaceholderCap,
+                            }),
+                          ],
+                        }),
+                        (0, e.jsxs)("div", {
+                          className: (0, o.A)(s().CapRow, s().Caps3),
+                          children: [
+                            (0, e.jsx)("div", {
+                              className: s().PlaceholderCap,
+                            }),
+                            (0, e.jsx)("div", {
+                              className: s().PlaceholderCap,
+                            }),
+                            (0, e.jsx)("div", {
+                              className: s().PlaceholderCap,
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
+                  })
+              : (0, e.jsx)(h, {
+                  children: (0, e.jsxs)("div", {
+                    className: s().CapsuleRow234,
+                    children: [
+                      (0, e.jsxs)("div", {
+                        className: (0, o.A)(s().CapRow, s().Caps2),
+                        children: [
+                          (0, e.jsx)("div", { className: s().PlaceholderCap }),
+                          (0, e.jsx)("div", { className: s().PlaceholderCap }),
+                        ],
+                      }),
+                      (0, e.jsxs)("div", {
+                        className: (0, o.A)(s().CapRow, s().Caps3),
+                        children: [
+                          (0, e.jsx)("div", { className: s().PlaceholderCap }),
+                          (0, e.jsx)("div", { className: s().PlaceholderCap }),
+                          (0, e.jsx)("div", { className: s().PlaceholderCap }),
+                        ],
+                      }),
+                      (0, e.jsxs)("div", {
+                        className: (0, o.A)(s().CapRow, s().Caps4),
+                        children: [
+                          (0, e.jsx)("div", { className: s().PlaceholderCap }),
+                          (0, e.jsx)("div", { className: s().PlaceholderCap }),
+                          (0, e.jsx)("div", { className: s().PlaceholderCap }),
+                          (0, e.jsx)("div", { className: s().PlaceholderCap }),
+                        ],
+                      }),
+                    ],
+                  }),
+                });
+        }
+        function h(t) {
+          return (0, e.jsx)(E.Z, {
+            className: s().GhostCtn,
+            focusableIfEmpty: !0,
+            children: t.children,
+          });
+        }
+      },
+      38081: (O) => {
+        O.exports = {
+          WishlistButtonNotTop: "_1l9DUAcf-usX0U1ouPwOjD",
+          FollowGameButtonNotTop: "_2b03GmrQ6fQLOqbsKO2GA7",
+        };
+      },
+      66532: (O) => {
+        O.exports = {
+          GhostCtn: "_1ubg0tXv_umwQZUB_0jDRE",
+          PlaceholderCap: "_27gySE3vmqZlMXfuF632TP",
+          GhostShine: "_2l86dzSdcXulUY9WKa1Tbu",
+          PlaceholderBox: "_1XmpFdzcYugE4Z9e7kEWU0",
+          ShineCtn: "_2u3dr06IR8IZdxdklGi4vo",
+          PlaceholderVideo: "R5EqV-ifmaPOB3fyPBfhh",
+          CapsuleRow3: "_3kupXecbdHHKoQG8YCt4dL",
+          CapsuleRow4: "_33YZ_jDH_m_qIiXgOfMT76",
+          CapsuleRowSuperCapsule: "_3TP7KmXA-L05uPNVUFbGFa",
+          ItemBrowserCapsule: "_2RfEi9dkz-umKdhACj0xcl",
+          CapsuleRow23: "_3OEHujsE68pdk2YnrZVRMp",
+          CapRow: "_1R1HR9bMl_hU40P6h6Y51n",
+          Caps2: "_3NP9CpCeX-sy6hyPmlh2M5",
+          Caps3: "ch0xp_kjApA24ePv-4mUf",
+          CapsuleRow234: "_30kicHKjKoSXe0rh5mMDIU",
+          Caps4: "_3F43q6uNP6clXtkdnaOhn4",
+          SpotlightsRow: "_2qbLh__etckJ_mcn5XLyzG",
+          DailyDealsColumn: "_6o5HjMAgOX8KNp4cVQ33l",
+          EventRow: "_1_ztuzDN3PaSMNH4DQqoFS",
+          PlaceholderGroupImage: "ntVbFRmkoOazIFG2xnLEL",
+          DetailsPlaceholder: "lvNWfRKbNHxMhmhmkTxSa",
+          PlaceholderTitle: "_2KAn_rPFaW6MLKtxBBFrgi",
+          PlaceholderSubtitle: "_2PqXIU5kSbk1S4OHMrtpEG",
+          PlaceholderButtons: "_2Svpv7NgQYtnnih1Al0nKv",
+          TrailerCarouselRow: "_3aEDS0V4oHI2X845GlY4AQ",
+          VideoPlaceholder: "_1J4w1c1LMOidazCqHBu9c2",
+          ItemDescPlaceholer: "_1chbn_ZYr2_kVufM3llMqe",
+          AutoAdvanceBar: "XWmc4IL9WuoHRfkxKtkwf",
+          ExpandedItemRow: "_3QSW80jNmiGxWlCRe8GPvp",
+          CapsulePlaceholder: "woZ8x3k0HeLNHeEH2wYmd",
+          ItemDefPlaceholder: "_25qfK6y2ESK-sTYHvmIyiC",
+          MainCapRow: "_3uwmHkHfnqzkO3kjD2dsfX",
+          PlaceholderRelease: "lZpOQjeL8nSaqqVQSej0d",
+          PlaceholderReviews: "_1wTzeBKjOcMG6cUtzXqF3D",
+          PlaceholderTags: "_3pJA7V23G6n6uIbJSzFLFO",
+        };
+      },
     },
-  },
-]);
+  ]);
+})();

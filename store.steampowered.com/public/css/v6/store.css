@@ -1112,6 +1112,14 @@ body.v6 .store_nav .popup_block_new .popup_body.search_v2 {
 	position: relative;
     display: flex;
 }
+.discount_block .discount_aria_label {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip-path: inset(50%);
+	white-space: nowrap;
+}
 .discount_block .discount_prices {
     display: flex;
     background: #344654;

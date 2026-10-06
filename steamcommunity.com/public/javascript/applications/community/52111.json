@@ -247,7 +247,7 @@
     "Market_AppUnplayedAndUnvetted": "Vous essayez de visualiser un item d'un nouveau jeu sur Steam auquel vous n'avez jamais joué. Soyez prudent avec cet item.",
     "Market_AppUnplayedAndUnvetted_Dismiss": "Ignorer l'avertissement et afficher l'item",
     "Home_GamePicker_Label": "Filtrer par jeu ",
-    "Home_GamePicker_ViewAll": "Afficher tous les jeux",
+    "Home_GamePicker_ViewAll": "Afficher tous les jeux…",
     "Economy_Market_TopLevelReason_AccountLocked": "Votre compte est actuellement verrouillé.",
     "Economy_Market_TopLevelTooltip_AccountLocked": "Les informations concernant ce blocage peuvent être trouvées en cliquant sur la barre rouge affichée dans le coin supérieur droit lorsque vous êtes connecté au client Steam. Pour plus d'informations, veuillez contacter le Support Steam.",
     "Economy_Market_HeaderTip_AccountLocked": "Votre compte est actuellement bloqué. Pour plus d'informations sur cette restriction, cliquez sur la barre rouge affichée dans le coin supérieur droit lorsque vous êtes connecté au client Steam.",

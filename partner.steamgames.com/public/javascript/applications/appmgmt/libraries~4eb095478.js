@@ -1,4601 +1,5209 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 "use strict";
-(self.webpackChunkappmgmt_storeadmin =
-  self.webpackChunkappmgmt_storeadmin || []).push([
-  [1784],
-  {
-    121: (e, r, n) => {
-      n.d(r, { JY: () => fi, sx: () => Ji, gL: () => Zi });
-      var t = n(90626),
-        i = n(42891),
-        o = n(58584),
-        a = n(3998),
-        l = t.createContext(null);
-      var u = function (e) {
+(() => {
+  (self.webpackChunkappmgmt_storeadmin =
+    self.webpackChunkappmgmt_storeadmin || []).push([
+    [81784],
+    {
+      121: (Er, tr, P) => {
+        P.d(tr, { JY: () => Os, sx: () => Du, gL: () => ca });
+        var D = P(90626),
+          de = P(42891),
+          A = P(58584),
+          X = P(3998),
+          te = D.createContext(null);
+        const xe = null;
+        function fe(e) {
           e();
-        },
-        c = function () {
-          return u;
-        };
-      var s = {
-        notify: function () {},
-        get: function () {
-          return [];
-        },
-      };
-      function d(e, r) {
-        var n,
-          t = s;
-        function i() {
-          a.onStateChange && a.onStateChange();
         }
-        function o() {
-          n ||
-            ((n = r ? r.addNestedSub(i) : e.subscribe(i)),
-            (t = (function () {
-              var e = c(),
-                r = null,
-                n = null;
-              return {
-                clear: function () {
-                  (r = null), (n = null);
-                },
-                notify: function () {
-                  e(function () {
-                    for (var e = r; e; ) e.callback(), (e = e.next);
-                  });
-                },
-                get: function () {
-                  for (var e = [], n = r; n; ) e.push(n), (n = n.next);
-                  return e;
-                },
-                subscribe: function (e) {
-                  var t = !0,
-                    i = (n = { callback: e, next: null, prev: n });
-                  return (
-                    i.prev ? (i.prev.next = i) : (r = i),
-                    function () {
-                      t &&
-                        null !== r &&
-                        ((t = !1),
-                        i.next ? (i.next.prev = i.prev) : (n = i.prev),
-                        i.prev ? (i.prev.next = i.next) : (r = i.next));
-                    }
-                  );
-                },
-              };
-            })()));
-        }
-        var a = {
-          addNestedSub: function (e) {
-            return o(), t.subscribe(e);
+        var ne = fe,
+          pe = function (r) {
+            return (ne = r);
           },
-          notifyNestedSubs: function () {
-            t.notify();
-          },
-          handleChangeWrapper: i,
-          isSubscribed: function () {
-            return Boolean(n);
-          },
-          trySubscribe: o,
-          tryUnsubscribe: function () {
-            n && (n(), (n = void 0), t.clear(), (t = s));
-          },
-          getListeners: function () {
-            return t;
-          },
-        };
-        return a;
-      }
-      var p =
-        "undefined" != typeof window &&
-        void 0 !== window.document &&
-        void 0 !== window.document.createElement
-          ? t.useLayoutEffect
-          : t.useEffect;
-      const f = function (e) {
-        var r = e.store,
-          n = e.context,
-          i = e.children,
-          o = (0, t.useMemo)(
-            function () {
-              var e = d(r);
-              return { store: r, subscription: e };
+          Oe = function () {
+            return ne;
+          };
+        function ve() {
+          var e = Oe(),
+            r = null,
+            t = null;
+          return {
+            clear: function () {
+              (r = null), (t = null);
             },
-            [r],
-          ),
-          a = (0, t.useMemo)(
-            function () {
-              return r.getState();
+            notify: function () {
+              e(function () {
+                for (var a = r; a; ) a.callback(), (a = a.next);
+              });
             },
-            [r],
-          );
-        p(
-          function () {
-            var e = o.subscription;
-            return (
-              (e.onStateChange = e.notifyNestedSubs),
-              e.trySubscribe(),
-              a !== r.getState() && e.notifyNestedSubs(),
-              function () {
-                e.tryUnsubscribe(), (e.onStateChange = null);
-              }
-            );
-          },
-          [o, a],
-        );
-        var u = n || l;
-        return t.createElement(u.Provider, { value: o }, i);
-      };
-      var g = n(81115),
-        v = n(904),
-        m = n.n(v),
-        b = n(44019),
-        h = [
-          "getDisplayName",
-          "methodName",
-          "renderCountProp",
-          "shouldHandleStateChanges",
-          "storeKey",
-          "withRef",
-          "forwardRef",
-          "context",
-        ],
-        y = ["reactReduxForwardedRef"],
-        I = [],
-        D = [null, null];
-      function x(e, r) {
-        var n = e[1];
-        return [r.payload, n + 1];
-      }
-      function E(e, r, n) {
-        p(function () {
-          return e.apply(void 0, r);
-        }, n);
-      }
-      function w(e, r, n, t, i, o, a) {
-        (e.current = t),
-          (r.current = i),
-          (n.current = !1),
-          o.current && ((o.current = null), a());
-      }
-      function A(e, r, n, t, i, o, a, l, u, c) {
-        if (e) {
-          var s = !1,
-            d = null,
-            p = function () {
-              if (!s) {
-                var e,
-                  n,
-                  p = r.getState();
-                try {
-                  e = t(p, i.current);
-                } catch (e) {
-                  (n = e), (d = e);
+            get: function () {
+              for (var a = [], i = r; i; ) a.push(i), (i = i.next);
+              return a;
+            },
+            subscribe: function (a) {
+              var i = !0,
+                o = (t = { callback: a, next: null, prev: t });
+              return (
+                o.prev ? (o.prev.next = o) : (r = o),
+                function () {
+                  !i ||
+                    r === null ||
+                    ((i = !1),
+                    o.next ? (o.next.prev = o.prev) : (t = o.prev),
+                    o.prev ? (o.prev.next = o.next) : (r = o.next));
                 }
-                n || (d = null),
-                  e === o.current
-                    ? a.current || u()
-                    : ((o.current = e),
-                      (l.current = e),
-                      (a.current = !0),
-                      c({ type: "STORE_UPDATED", payload: { error: n } }));
-              }
-            };
-          (n.onStateChange = p), n.trySubscribe(), p();
-          return function () {
-            if (((s = !0), n.tryUnsubscribe(), (n.onStateChange = null), d))
-              throw d;
+              );
+            },
           };
         }
-      }
-      var C = function () {
-        return [null, 0];
-      };
-      function S(e, r) {
-        void 0 === r && (r = {});
-        var n = r,
-          i = n.getDisplayName,
-          a =
-            void 0 === i
-              ? function (e) {
-                  return "ConnectAdvanced(" + e + ")";
-                }
-              : i,
-          u = n.methodName,
-          c = void 0 === u ? "connectAdvanced" : u,
-          s = n.renderCountProp,
-          p = void 0 === s ? void 0 : s,
-          f = n.shouldHandleStateChanges,
-          v = void 0 === f || f,
-          S = n.storeKey,
-          P = void 0 === S ? "store" : S,
-          N = (n.withRef, n.forwardRef),
-          R = void 0 !== N && N,
-          B = n.context,
-          O = void 0 === B ? l : B,
-          T = (0, g.A)(n, h),
-          L = O;
-        return function (r) {
-          var n = r.displayName || r.name || "Component",
-            i = a(n),
-            l = (0, o.A)({}, T, {
-              getDisplayName: a,
-              methodName: c,
-              renderCountProp: p,
-              shouldHandleStateChanges: v,
-              storeKey: P,
-              displayName: i,
-              wrappedComponentName: n,
-              WrappedComponent: r,
-            }),
-            u = T.pure;
-          var s = u
-            ? t.useMemo
-            : function (e) {
-                return e();
-              };
-          function f(n) {
-            var i = (0, t.useMemo)(
-                function () {
-                  var e = n.reactReduxForwardedRef,
-                    r = (0, g.A)(n, y);
-                  return [n.context, e, r];
-                },
-                [n],
-              ),
-              a = i[0],
-              u = i[1],
-              c = i[2],
-              p = (0, t.useMemo)(
-                function () {
-                  return a &&
-                    a.Consumer &&
-                    (0, b.isContextConsumer)(t.createElement(a.Consumer, null))
-                    ? a
-                    : L;
-                },
-                [a, L],
-              ),
-              f = (0, t.useContext)(p),
-              m =
-                Boolean(n.store) &&
-                Boolean(n.store.getState) &&
-                Boolean(n.store.dispatch);
-            Boolean(f) && Boolean(f.store);
-            var h = m ? n.store : f.store,
-              S = (0, t.useMemo)(
-                function () {
-                  return (function (r) {
-                    return e(r.dispatch, l);
-                  })(h);
-                },
-                [h],
-              ),
-              P = (0, t.useMemo)(
-                function () {
-                  if (!v) return D;
-                  var e = d(h, m ? null : f.subscription),
-                    r = e.notifyNestedSubs.bind(e);
-                  return [e, r];
-                },
-                [h, m, f],
-              ),
-              N = P[0],
-              R = P[1],
-              B = (0, t.useMemo)(
-                function () {
-                  return m ? f : (0, o.A)({}, f, { subscription: N });
-                },
-                [m, f, N],
-              ),
-              O = (0, t.useReducer)(x, I, C),
-              T = O[0][0],
-              G = O[1];
-            if (T && T.error) throw T.error;
-            var M = (0, t.useRef)(),
-              _ = (0, t.useRef)(c),
-              F = (0, t.useRef)(),
-              k = (0, t.useRef)(!1),
-              W = s(
-                function () {
-                  return F.current && c === _.current
-                    ? F.current
-                    : S(h.getState(), c);
-                },
-                [h, T, c],
-              );
-            E(w, [_, M, k, c, W, F, R]),
-              E(A, [v, h, N, S, _, M, k, F, R, G], [h, N, S]);
-            var U = (0, t.useMemo)(
-              function () {
-                return t.createElement(r, (0, o.A)({}, W, { ref: u }));
-              },
-              [u, r, W],
-            );
-            return (0, t.useMemo)(
-              function () {
-                return v ? t.createElement(p.Provider, { value: B }, U) : U;
-              },
-              [p, U, B],
-            );
-          }
-          var h = u ? t.memo(f) : f;
-          if (
-            ((h.WrappedComponent = r), (h.displayName = f.displayName = i), R)
-          ) {
-            var S = t.forwardRef(function (e, r) {
-              return t.createElement(
-                h,
-                (0, o.A)({}, e, { reactReduxForwardedRef: r }),
-              );
-            });
-            return (S.displayName = i), (S.WrappedComponent = r), m()(S, r);
-          }
-          return m()(h, r);
+        var ae = {
+          notify: function () {},
+          get: function () {
+            return [];
+          },
         };
-      }
-      function P(e, r) {
-        return e === r
-          ? 0 !== e || 0 !== r || 1 / e == 1 / r
-          : e != e && r != r;
-      }
-      function N(e, r) {
-        if (P(e, r)) return !0;
-        if (
-          "object" != typeof e ||
-          null === e ||
-          "object" != typeof r ||
-          null === r
-        )
-          return !1;
-        var n = Object.keys(e),
-          t = Object.keys(r);
-        if (n.length !== t.length) return !1;
-        for (var i = 0; i < n.length; i++)
+        function Te(e, r) {
+          var t,
+            n = ae;
+          function a(c) {
+            return s(), n.subscribe(c);
+          }
+          function i() {
+            n.notify();
+          }
+          function o() {
+            d.onStateChange && d.onStateChange();
+          }
+          function l() {
+            return !!t;
+          }
+          function s() {
+            t || ((t = r ? r.addNestedSub(o) : e.subscribe(o)), (n = ve()));
+          }
+          function f() {
+            t && (t(), (t = void 0), n.clear(), (n = ae));
+          }
+          var d = {
+            addNestedSub: a,
+            notifyNestedSubs: i,
+            handleChangeWrapper: o,
+            isSubscribed: l,
+            trySubscribe: s,
+            tryUnsubscribe: f,
+            getListeners: function () {
+              return n;
+            },
+          };
+          return d;
+        }
+        var Ne =
+          typeof window < "u" &&
+          typeof window.document < "u" &&
+          typeof window.document.createElement < "u"
+            ? D.useLayoutEffect
+            : D.useEffect;
+        function nr(e) {
+          var r = e.store,
+            t = e.context,
+            n = e.children,
+            a = (0, D.useMemo)(
+              function () {
+                var l = Te(r);
+                return { store: r, subscription: l };
+              },
+              [r],
+            ),
+            i = (0, D.useMemo)(
+              function () {
+                return r.getState();
+              },
+              [r],
+            );
+          Ne(
+            function () {
+              var l = a.subscription;
+              return (
+                (l.onStateChange = l.notifyNestedSubs),
+                l.trySubscribe(),
+                i !== r.getState() && l.notifyNestedSubs(),
+                function () {
+                  l.tryUnsubscribe(), (l.onStateChange = null);
+                }
+              );
+            },
+            [a, i],
+          );
+          var o = t || te;
+          return D.createElement(o.Provider, { value: a }, n);
+        }
+        const ar = nr;
+        var ge = P(81115),
+          F = P(904),
+          V = P.n(F),
+          Pr = P(44019),
+          Rr = [
+            "getDisplayName",
+            "methodName",
+            "renderCountProp",
+            "shouldHandleStateChanges",
+            "storeKey",
+            "withRef",
+            "forwardRef",
+            "context",
+          ],
+          Br = ["reactReduxForwardedRef"],
+          Or = [],
+          Tr = [null, null],
+          Et = function (r) {
+            try {
+              return JSON.stringify(r);
+            } catch {
+              return String(r);
+            }
+          };
+        function Nr(e, r) {
+          var t = e[1];
+          return [r.payload, t + 1];
+        }
+        function ir(e, r, t) {
+          Ne(function () {
+            return e.apply(void 0, r);
+          }, t);
+        }
+        function Mr(e, r, t, n, a, i, o) {
+          (e.current = n),
+            (r.current = a),
+            (t.current = !1),
+            i.current && ((i.current = null), o());
+        }
+        function Lr(e, r, t, n, a, i, o, l, s, f) {
+          if (e) {
+            var d = !1,
+              c = null,
+              u = function () {
+                if (!d) {
+                  var g = r.getState(),
+                    b,
+                    y;
+                  try {
+                    b = n(g, a.current);
+                  } catch (I) {
+                    (y = I), (c = I);
+                  }
+                  y || (c = null),
+                    b === i.current
+                      ? o.current || s()
+                      : ((i.current = b),
+                        (l.current = b),
+                        (o.current = !0),
+                        f({ type: "STORE_UPDATED", payload: { error: y } }));
+                }
+              };
+            (t.onStateChange = u), t.trySubscribe(), u();
+            var p = function () {
+              if (((d = !0), t.tryUnsubscribe(), (t.onStateChange = null), c))
+                throw c;
+            };
+            return p;
+          }
+        }
+        var C = function () {
+          return [null, 0];
+        };
+        function Me(e, r) {
+          r === void 0 && (r = {});
+          var t = r,
+            n = t.getDisplayName,
+            a =
+              n === void 0
+                ? function (E) {
+                    return "ConnectAdvanced(" + E + ")";
+                  }
+                : n,
+            i = t.methodName,
+            o = i === void 0 ? "connectAdvanced" : i,
+            l = t.renderCountProp,
+            s = l === void 0 ? void 0 : l,
+            f = t.shouldHandleStateChanges,
+            d = f === void 0 ? !0 : f,
+            c = t.storeKey,
+            u = c === void 0 ? "store" : c,
+            p = t.withRef,
+            v = p === void 0 ? !1 : p,
+            g = t.forwardRef,
+            b = g === void 0 ? !1 : g,
+            y = t.context,
+            I = y === void 0 ? te : y,
+            S = (0, ge.A)(t, Rr);
+          if (0) var x;
+          var w = I;
+          return function (R) {
+            var N = R.displayName || R.name || "Component",
+              B = a(N),
+              T = (0, A.A)({}, S, {
+                getDisplayName: a,
+                methodName: o,
+                renderCountProp: s,
+                shouldHandleStateChanges: d,
+                storeKey: u,
+                displayName: B,
+                wrappedComponentName: N,
+                WrappedComponent: R,
+              }),
+              L = S.pure;
+            function O(U) {
+              return e(U.dispatch, T);
+            }
+            var J = L
+              ? D.useMemo
+              : function (U) {
+                  return U();
+                };
+            function Q(U) {
+              var ue = (0, D.useMemo)(
+                  function () {
+                    var rr = U.reactReduxForwardedRef,
+                      At = (0, ge.A)(U, Br);
+                    return [U.context, rr, At];
+                  },
+                  [U],
+                ),
+                _ = ue[0],
+                _e = ue[1],
+                De = ue[2],
+                ce = (0, D.useMemo)(
+                  function () {
+                    return _ &&
+                      _.Consumer &&
+                      (0, Pr.isContextConsumer)(
+                        D.createElement(_.Consumer, null),
+                      )
+                      ? _
+                      : w;
+                  },
+                  [_, w],
+                ),
+                ee = (0, D.useContext)(ce),
+                Ie = !!U.store && !!U.store.getState && !!U.store.dispatch,
+                Ir = !!ee && !!ee.store,
+                re = Ie ? U.store : ee.store,
+                er = (0, D.useMemo)(
+                  function () {
+                    return O(re);
+                  },
+                  [re],
+                ),
+                xr = (0, D.useMemo)(
+                  function () {
+                    if (!d) return Tr;
+                    var rr = Te(re, Ie ? null : ee.subscription),
+                      At = rr.notifyNestedSubs.bind(rr);
+                    return [rr, At];
+                  },
+                  [re, Ie, ee],
+                ),
+                Be = xr[0],
+                Sr = xr[1],
+                Cr = (0, D.useMemo)(
+                  function () {
+                    return Ie ? ee : (0, A.A)({}, ee, { subscription: Be });
+                  },
+                  [Ie, ee, Be],
+                ),
+                da = (0, D.useReducer)(Nr, Or, C),
+                Au = da[0],
+                wr = Au[0],
+                Eu = da[1];
+              if (wr && wr.error) throw wr.error;
+              var fa = (0, D.useRef)(),
+                St = (0, D.useRef)(De),
+                Ar = (0, D.useRef)(),
+                pa = (0, D.useRef)(!1),
+                Ct = J(
+                  function () {
+                    return Ar.current && De === St.current
+                      ? Ar.current
+                      : er(re.getState(), De);
+                  },
+                  [re, wr, De],
+                );
+              ir(Mr, [St, fa, pa, De, Ct, Ar, Sr]),
+                ir(Lr, [d, re, Be, er, St, fa, pa, Ar, Sr, Eu], [re, Be, er]);
+              var wt = (0, D.useMemo)(
+                  function () {
+                    return D.createElement(R, (0, A.A)({}, Ct, { ref: _e }));
+                  },
+                  [_e, R, Ct],
+                ),
+                Pu = (0, D.useMemo)(
+                  function () {
+                    return d
+                      ? D.createElement(ce.Provider, { value: Cr }, wt)
+                      : wt;
+                  },
+                  [ce, wt, Cr],
+                );
+              return Pu;
+            }
+            var j = L ? D.memo(Q) : Q;
+            if (
+              ((j.WrappedComponent = R), (j.displayName = Q.displayName = B), b)
+            ) {
+              var Z = D.forwardRef(function (ue, _) {
+                return D.createElement(
+                  j,
+                  (0, A.A)({}, ue, { reactReduxForwardedRef: _ }),
+                );
+              });
+              return (Z.displayName = B), (Z.WrappedComponent = R), V()(Z, R);
+            }
+            return V()(j, R);
+          };
+        }
+        function Pt(e, r) {
+          return e === r
+            ? e !== 0 || r !== 0 || 1 / e === 1 / r
+            : e !== e && r !== r;
+        }
+        function Fr(e, r) {
+          if (Pt(e, r)) return !0;
           if (
-            !Object.prototype.hasOwnProperty.call(r, n[i]) ||
-            !P(e[n[i]], r[n[i]])
+            typeof e != "object" ||
+            e === null ||
+            typeof r != "object" ||
+            r === null
           )
             return !1;
-        return !0;
-      }
-      function R(e) {
-        return function (r, n) {
-          var t = e(r, n);
-          function i() {
-            return t;
-          }
-          return (i.dependsOnOwnProps = !1), i;
-        };
-      }
-      function B(e) {
-        return null !== e.dependsOnOwnProps && void 0 !== e.dependsOnOwnProps
-          ? Boolean(e.dependsOnOwnProps)
-          : 1 !== e.length;
-      }
-      function O(e, r) {
-        return function (r, n) {
-          n.displayName;
-          var t = function (e, r) {
-            return t.dependsOnOwnProps ? t.mapToProps(e, r) : t.mapToProps(e);
+          var t = Object.keys(e),
+            n = Object.keys(r);
+          if (t.length !== n.length) return !1;
+          for (var a = 0; a < t.length; a++)
+            if (
+              !Object.prototype.hasOwnProperty.call(r, t[a]) ||
+              !Pt(e[t[a]], r[t[a]])
+            )
+              return !1;
+          return !0;
+        }
+        function va(e, r) {
+          var t = {},
+            n = function (o) {
+              var l = e[o];
+              typeof l == "function" &&
+                (t[o] = function () {
+                  return r(l.apply(void 0, arguments));
+                });
+            };
+          for (var a in e) n(a);
+          return t;
+        }
+        function Gr(e) {
+          return function (t, n) {
+            var a = e(t, n);
+            function i() {
+              return a;
+            }
+            return (i.dependsOnOwnProps = !1), i;
           };
-          return (
-            (t.dependsOnOwnProps = !0),
-            (t.mapToProps = function (r, n) {
-              (t.mapToProps = e), (t.dependsOnOwnProps = B(e));
-              var i = t(r, n);
-              return (
-                "function" == typeof i &&
-                  ((t.mapToProps = i),
-                  (t.dependsOnOwnProps = B(i)),
-                  (i = t(r, n))),
-                i
-              );
-            }),
-            t
-          );
-        };
-      }
-      const T = [
-        function (e) {
-          return "function" == typeof e ? O(e) : void 0;
-        },
-        function (e) {
+        }
+        function Rt(e) {
+          return e.dependsOnOwnProps !== null && e.dependsOnOwnProps !== void 0
+            ? !!e.dependsOnOwnProps
+            : e.length !== 1;
+        }
+        function Bt(e, r) {
+          return function (n, a) {
+            var i = a.displayName,
+              o = function (s, f) {
+                return o.dependsOnOwnProps
+                  ? o.mapToProps(s, f)
+                  : o.mapToProps(s);
+              };
+            return (
+              (o.dependsOnOwnProps = !0),
+              (o.mapToProps = function (s, f) {
+                (o.mapToProps = e), (o.dependsOnOwnProps = Rt(e));
+                var d = o(s, f);
+                return (
+                  typeof d == "function" &&
+                    ((o.mapToProps = d),
+                    (o.dependsOnOwnProps = Rt(d)),
+                    (d = o(s, f))),
+                  d
+                );
+              }),
+              o
+            );
+          };
+        }
+        function ga(e) {
+          return typeof e == "function" ? Bt(e, "mapDispatchToProps") : void 0;
+        }
+        function ma(e) {
           return e
             ? void 0
-            : R(function (e) {
-                return { dispatch: e };
+            : Gr(function (r) {
+                return { dispatch: r };
               });
-        },
-        function (e) {
-          return e && "object" == typeof e
-            ? R(function (r) {
-                return (function (e, r) {
-                  var n = {},
-                    t = function (t) {
-                      var i = e[t];
-                      "function" == typeof i &&
-                        (n[t] = function () {
-                          return r(i.apply(void 0, arguments));
-                        });
-                    };
-                  for (var i in e) t(i);
-                  return n;
-                })(e, r);
+        }
+        function ba(e) {
+          return e && typeof e == "object"
+            ? Gr(function (r) {
+                return va(e, r);
               })
             : void 0;
-        },
-      ];
-      const L = [
-        function (e) {
-          return "function" == typeof e ? O(e) : void 0;
-        },
-        function (e) {
+        }
+        const ha = [ga, ma, ba];
+        function ya(e) {
+          return typeof e == "function" ? Bt(e, "mapStateToProps") : void 0;
+        }
+        function Da(e) {
           return e
             ? void 0
-            : R(function () {
+            : Gr(function () {
                 return {};
               });
-        },
-      ];
-      function G(e, r, n) {
-        return (0, o.A)({}, n, e, r);
-      }
-      const M = [
-        function (e) {
-          return "function" == typeof e
-            ? (function (e) {
-                return function (r, n) {
-                  n.displayName;
-                  var t,
-                    i = n.pure,
-                    o = n.areMergedPropsEqual,
-                    a = !1;
-                  return function (r, n, l) {
-                    var u = e(r, n, l);
-                    return (
-                      a ? (i && o(u, t)) || (t = u) : ((a = !0), (t = u)), t
-                    );
-                  };
-                };
-              })(e)
-            : void 0;
-        },
-        function (e) {
+        }
+        const Ia = [ya, Da];
+        function xa(e, r, t) {
+          return (0, A.A)({}, t, e, r);
+        }
+        function Sa(e) {
+          return function (t, n) {
+            var a = n.displayName,
+              i = n.pure,
+              o = n.areMergedPropsEqual,
+              l = !1,
+              s;
+            return function (d, c, u) {
+              var p = e(d, c, u);
+              return l ? (!i || !o(p, s)) && (s = p) : ((l = !0), (s = p)), s;
+            };
+          };
+        }
+        function Ca(e) {
+          return typeof e == "function" ? Sa(e) : void 0;
+        }
+        function wa(e) {
           return e
             ? void 0
             : function () {
-                return G;
+                return xa;
               };
-        },
-      ];
-      var _ = [
-        "initMapStateToProps",
-        "initMapDispatchToProps",
-        "initMergeProps",
-      ];
-      function F(e, r, n, t) {
-        return function (i, o) {
-          return n(e(i, o), r(t, o), o);
-        };
-      }
-      function k(e, r, n, t, i) {
-        var o,
-          a,
-          l,
-          u,
-          c,
-          s = i.areStatesEqual,
-          d = i.areOwnPropsEqual,
-          p = i.areStatePropsEqual,
-          f = !1;
-        function g(i, f) {
-          var g,
-            v,
-            m = !d(f, a),
-            b = !s(i, o, f, a);
-          return (
-            (o = i),
-            (a = f),
-            m && b
-              ? ((l = e(o, a)),
-                r.dependsOnOwnProps && (u = r(t, a)),
-                (c = n(l, u, a)))
-              : m
-                ? (e.dependsOnOwnProps && (l = e(o, a)),
-                  r.dependsOnOwnProps && (u = r(t, a)),
-                  (c = n(l, u, a)))
-                : b
-                  ? ((g = e(o, a)),
-                    (v = !p(g, l)),
-                    (l = g),
-                    v && (c = n(l, u, a)),
-                    c)
-                  : c
-          );
         }
-        return function (i, s) {
-          return f
-            ? g(i, s)
-            : ((l = e((o = i), (a = s))),
-              (u = r(t, a)),
-              (c = n(l, u, a)),
-              (f = !0),
-              c);
-        };
-      }
-      function W(e, r) {
-        var n = r.initMapStateToProps,
-          t = r.initMapDispatchToProps,
-          i = r.initMergeProps,
-          o = (0, g.A)(r, _),
-          a = n(e, o),
-          l = t(e, o),
-          u = i(e, o);
-        return (o.pure ? k : F)(a, l, u, e, o);
-      }
-      var U = [
-        "pure",
-        "areStatesEqual",
-        "areOwnPropsEqual",
-        "areStatePropsEqual",
-        "areMergedPropsEqual",
-      ];
-      function H(e, r, n) {
-        for (var t = r.length - 1; t >= 0; t--) {
-          var i = r[t](e);
-          if (i) return i;
-        }
-        return function (r, t) {
-          throw new Error(
-            "Invalid value of type " +
-              typeof e +
-              " for " +
-              n +
-              " argument when connecting component " +
-              t.wrappedComponentName +
-              ".",
-          );
-        };
-      }
-      function j(e, r) {
-        return e === r;
-      }
-      function q(e) {
-        var r = void 0 === e ? {} : e,
-          n = r.connectHOC,
-          t = void 0 === n ? S : n,
-          i = r.mapStateToPropsFactories,
-          a = void 0 === i ? L : i,
-          l = r.mapDispatchToPropsFactories,
-          u = void 0 === l ? T : l,
-          c = r.mergePropsFactories,
-          s = void 0 === c ? M : c,
-          d = r.selectorFactory,
-          p = void 0 === d ? W : d;
-        return function (e, r, n, i) {
-          void 0 === i && (i = {});
-          var l = i,
-            c = l.pure,
-            d = void 0 === c || c,
-            f = l.areStatesEqual,
-            v = void 0 === f ? j : f,
-            m = l.areOwnPropsEqual,
-            b = void 0 === m ? N : m,
-            h = l.areStatePropsEqual,
-            y = void 0 === h ? N : h,
-            I = l.areMergedPropsEqual,
-            D = void 0 === I ? N : I,
-            x = (0, g.A)(l, U),
-            E = H(e, a, "mapStateToProps"),
-            w = H(r, u, "mapDispatchToProps"),
-            A = H(n, s, "mergeProps");
-          return t(
-            p,
-            (0, o.A)(
-              {
-                methodName: "connect",
-                getDisplayName: function (e) {
-                  return "Connect(" + e + ")";
-                },
-                shouldHandleStateChanges: Boolean(e),
-                initMapStateToProps: E,
-                initMapDispatchToProps: w,
-                initMergeProps: A,
-                pure: d,
-                areStatesEqual: v,
-                areOwnPropsEqual: b,
-                areStatePropsEqual: y,
-                areMergedPropsEqual: D,
-              },
-              x,
-            ),
-          );
-        };
-      }
-      const V = q();
-      var K,
-        z = n(72739);
-      (K = z.unstable_batchedUpdates), (u = K);
-      var Y = n(46311),
-        J = n(48046),
-        X =
-          Number.isNaN ||
-          function (e) {
-            return "number" == typeof e && e != e;
+        const Aa = [Ca, wa];
+        var Ea = [
+          "initMapStateToProps",
+          "initMapDispatchToProps",
+          "initMergeProps",
+        ];
+        function Pa(e, r, t, n) {
+          return function (i, o) {
+            return t(e(i, o), r(n, o), o);
           };
-      function $(e, r) {
-        return e === r || !(!X(e) || !X(r));
-      }
-      function Q(e, r) {
-        if (e.length !== r.length) return !1;
-        for (var n = 0; n < e.length; n++) if (!$(e[n], r[n])) return !1;
-        return !0;
-      }
-      const Z = function (e, r) {
-        var n;
-        void 0 === r && (r = Q);
-        var t,
-          i = [],
-          o = !1;
-        return function () {
-          for (var a = [], l = 0; l < arguments.length; l++)
-            a[l] = arguments[l];
-          return (
-            (o && n === this && r(a, i)) ||
-              ((t = e.apply(this, a)), (o = !0), (n = this), (i = a)),
-            t
-          );
-        };
-      };
-      var ee = n(18651);
-      function re(e, r) {}
-      re.bind(null, "warn"), re.bind(null, "error");
-      function ne() {}
-      function te(e, r, n) {
-        var t = r.map(function (r) {
-          var t = (function (e, r) {
-            return (0, o.A)({}, e, {}, r);
-          })(n, r.options);
-          return (
-            e.addEventListener(r.eventName, r.fn, t),
-            function () {
-              e.removeEventListener(r.eventName, r.fn, t);
-            }
-          );
-        });
-        return function () {
-          t.forEach(function (e) {
-            e();
-          });
-        };
-      }
-      var ie = !0,
-        oe = "Invariant failed";
-      function ae(e) {
-        this.message = e;
-      }
-      function le(e, r) {
-        if (!e) throw new ae(ie ? oe : oe + ": " + (r || ""));
-      }
-      ae.prototype.toString = function () {
-        return this.message;
-      };
-      var ue = (function (e) {
-          function r() {
-            for (
-              var r, n = arguments.length, t = new Array(n), i = 0;
-              i < n;
-              i++
-            )
-              t[i] = arguments[i];
+        }
+        function Ra(e, r, t, n, a) {
+          var i = a.areStatesEqual,
+            o = a.areOwnPropsEqual,
+            l = a.areStatePropsEqual,
+            s = !1,
+            f,
+            d,
+            c,
+            u,
+            p;
+          function v(S, x) {
             return (
-              ((r = e.call.apply(e, [this].concat(t)) || this).callbacks =
-                null),
-              (r.unbind = ne),
-              (r.onWindowError = function (e) {
-                var n = r.getCallbacks();
-                n.isDragging() && n.tryAbort(),
-                  e.error instanceof ae && e.preventDefault();
+              (f = S),
+              (d = x),
+              (c = e(f, d)),
+              (u = r(n, d)),
+              (p = t(c, u, d)),
+              (s = !0),
+              p
+            );
+          }
+          function g() {
+            return (
+              (c = e(f, d)),
+              r.dependsOnOwnProps && (u = r(n, d)),
+              (p = t(c, u, d)),
+              p
+            );
+          }
+          function b() {
+            return (
+              e.dependsOnOwnProps && (c = e(f, d)),
+              r.dependsOnOwnProps && (u = r(n, d)),
+              (p = t(c, u, d)),
+              p
+            );
+          }
+          function y() {
+            var S = e(f, d),
+              x = !l(S, c);
+            return (c = S), x && (p = t(c, u, d)), p;
+          }
+          function I(S, x) {
+            var w = !o(x, d),
+              E = !i(S, f, x, d);
+            return (f = S), (d = x), w && E ? g() : w ? b() : E ? y() : p;
+          }
+          return function (x, w) {
+            return s ? I(x, w) : v(x, w);
+          };
+        }
+        function Ba(e, r) {
+          var t = r.initMapStateToProps,
+            n = r.initMapDispatchToProps,
+            a = r.initMergeProps,
+            i = (0, ge.A)(r, Ea),
+            o = t(e, i),
+            l = n(e, i),
+            s = a(e, i),
+            f = i.pure ? Ra : Pa;
+          return f(o, l, s, e, i);
+        }
+        var Oa = [
+          "pure",
+          "areStatesEqual",
+          "areOwnPropsEqual",
+          "areStatePropsEqual",
+          "areMergedPropsEqual",
+        ];
+        function Wr(e, r, t) {
+          for (var n = r.length - 1; n >= 0; n--) {
+            var a = r[n](e);
+            if (a) return a;
+          }
+          return function (i, o) {
+            throw new Error(
+              "Invalid value of type " +
+                typeof e +
+                " for " +
+                t +
+                " argument when connecting component " +
+                o.wrappedComponentName +
+                ".",
+            );
+          };
+        }
+        function Ta(e, r) {
+          return e === r;
+        }
+        function Na(e) {
+          var r = e === void 0 ? {} : e,
+            t = r.connectHOC,
+            n = t === void 0 ? Me : t,
+            a = r.mapStateToPropsFactories,
+            i = a === void 0 ? Ia : a,
+            o = r.mapDispatchToPropsFactories,
+            l = o === void 0 ? ha : o,
+            s = r.mergePropsFactories,
+            f = s === void 0 ? Aa : s,
+            d = r.selectorFactory,
+            c = d === void 0 ? Ba : d;
+          return function (p, v, g, b) {
+            b === void 0 && (b = {});
+            var y = b,
+              I = y.pure,
+              S = I === void 0 ? !0 : I,
+              x = y.areStatesEqual,
+              w = x === void 0 ? Ta : x,
+              E = y.areOwnPropsEqual,
+              R = E === void 0 ? Fr : E,
+              N = y.areStatePropsEqual,
+              B = N === void 0 ? Fr : N,
+              T = y.areMergedPropsEqual,
+              L = T === void 0 ? Fr : T,
+              O = (0, ge.A)(y, Oa),
+              J = Wr(p, i, "mapStateToProps"),
+              Q = Wr(v, l, "mapDispatchToProps"),
+              j = Wr(g, f, "mergeProps");
+            return n(
+              c,
+              (0, A.A)(
+                {
+                  methodName: "connect",
+                  getDisplayName: function (U) {
+                    return "Connect(" + U + ")";
+                  },
+                  shouldHandleStateChanges: !!p,
+                  initMapStateToProps: J,
+                  initMapDispatchToProps: Q,
+                  initMergeProps: j,
+                  pure: S,
+                  areStatesEqual: w,
+                  areOwnPropsEqual: R,
+                  areStatePropsEqual: B,
+                  areMergedPropsEqual: L,
+                },
+                O,
+              ),
+            );
+          };
+        }
+        const Ot = Na();
+        function Ru() {
+          var e = useContext(ReactReduxContext);
+          return e;
+        }
+        function Bu(e) {
+          e === void 0 && (e = ReactReduxContext);
+          var r =
+            e === ReactReduxContext
+              ? useDefaultReduxContext
+              : function () {
+                  return useContext(e);
+                };
+          return function () {
+            var n = r(),
+              a = n.store;
+            return a;
+          };
+        }
+        var Ou = null;
+        function Tu(e) {
+          e === void 0 && (e = ReactReduxContext);
+          var r =
+            e === ReactReduxContext ? useDefaultStore : createStoreHook(e);
+          return function () {
+            var n = r();
+            return n.dispatch;
+          };
+        }
+        var Nu = null,
+          Ma = function (r, t) {
+            return r === t;
+          };
+        function La(e, r, t, n) {
+          var a = useReducer(function (v) {
+              return v + 1;
+            }, 0),
+            i = a[1],
+            o = useMemo(
+              function () {
+                return createSubscription(t, n);
+              },
+              [t, n],
+            ),
+            l = useRef(),
+            s = useRef(),
+            f = useRef(),
+            d = useRef(),
+            c = t.getState(),
+            u;
+          try {
+            if (e !== s.current || c !== f.current || l.current) {
+              var p = e(c);
+              d.current === void 0 || !r(p, d.current)
+                ? (u = p)
+                : (u = d.current);
+            } else u = d.current;
+          } catch (v) {
+            throw (
+              (l.current &&
+                (v.message +=
+                  `
+The error may be correlated with this previous error:
+` +
+                  l.current.stack +
+                  `
+
+`),
+              v)
+            );
+          }
+          return (
+            useIsomorphicLayoutEffect(function () {
+              (s.current = e),
+                (f.current = c),
+                (d.current = u),
+                (l.current = void 0);
+            }),
+            useIsomorphicLayoutEffect(
+              function () {
+                function v() {
+                  try {
+                    var g = t.getState();
+                    if (g === f.current) return;
+                    var b = s.current(g);
+                    if (r(b, d.current)) return;
+                    (d.current = b), (f.current = g);
+                  } catch (y) {
+                    l.current = y;
+                  }
+                  i();
+                }
+                return (
+                  (o.onStateChange = v),
+                  o.trySubscribe(),
+                  v(),
+                  function () {
+                    return o.tryUnsubscribe();
+                  }
+                );
+              },
+              [t, o],
+            ),
+            u
+          );
+        }
+        function Mu(e) {
+          e === void 0 && (e = ReactReduxContext);
+          var r =
+            e === ReactReduxContext
+              ? useDefaultReduxContext
+              : function () {
+                  return useContext(e);
+                };
+          return function (n, a) {
+            a === void 0 && (a = Ma);
+            var i = r(),
+              o = i.store,
+              l = i.subscription,
+              s = La(n, a, o, l);
+            return useDebugValue(s), s;
+          };
+        }
+        var Lu = null,
+          Tt = P(72739);
+        pe(Tt.unstable_batchedUpdates);
+        var h = P(46311),
+          M = P(48046),
+          Nt =
+            Number.isNaN ||
+            function (r) {
+              return typeof r == "number" && r !== r;
+            };
+        function Fa(e, r) {
+          return !!(e === r || (Nt(e) && Nt(r)));
+        }
+        function Ga(e, r) {
+          if (e.length !== r.length) return !1;
+          for (var t = 0; t < e.length; t++) if (!Fa(e[t], r[t])) return !1;
+          return !0;
+        }
+        function Wa(e, r) {
+          r === void 0 && (r = Ga);
+          var t,
+            n = [],
+            a,
+            i = !1;
+          function o() {
+            for (var l = [], s = 0; s < arguments.length; s++)
+              l[s] = arguments[s];
+            return (
+              (i && t === this && r(l, n)) ||
+                ((a = e.apply(this, l)), (i = !0), (t = this), (n = l)),
+              a
+            );
+          }
+          return o;
+        }
+        const G = Wa;
+        var Le = P(18651),
+          ka = !0,
+          Ua = /[ \t]{2,}/g,
+          Ha = /^[ \t]*/gm,
+          Mt = function (r) {
+            return r.replace(Ua, " ").replace(Ha, "").trim();
+          },
+          Va = function (r) {
+            return Mt(
+              `
+  %creact-beautiful-dnd
+
+  %c` +
+                Mt(r) +
+                `
+
+  %c\u{1F477}\u200D This is a development only message. It will be removed in production builds.
+`,
+            );
+          },
+          qa = function (r) {
+            return [
+              Va(r),
+              "color: #00C584; font-size: 1.2em; font-weight: bold;",
+              "line-height: 1.5",
+              "color: #723874;",
+            ];
+          },
+          $a = "__react-beautiful-dnd-disable-dev-warnings";
+        function Lt(e, r) {
+          var t;
+          ka ||
+            (typeof window < "u" && window[$a]) ||
+            (t = console)[e].apply(t, qa(r));
+        }
+        var Fu = Lt.bind(null, "warn"),
+          za = Lt.bind(null, "error");
+        function ie() {}
+        function ja(e, r) {
+          return (0, A.A)({}, e, {}, r);
+        }
+        function K(e, r, t) {
+          var n = r.map(function (a) {
+            var i = ja(t, a.options);
+            return (
+              e.addEventListener(a.eventName, a.fn, i),
+              function () {
+                e.removeEventListener(a.eventName, a.fn, i);
+              }
+            );
+          });
+          return function () {
+            n.forEach(function (i) {
+              i();
+            });
+          };
+        }
+        var Ka = !0,
+          Ft = "Invariant failed";
+        function Fe(e) {
+          this.message = e;
+        }
+        Fe.prototype.toString = function () {
+          return this.message;
+        };
+        function m(e, r) {
+          if (!e) throw Ka ? new Fe(Ft) : new Fe(Ft + ": " + (r || ""));
+        }
+        var Ya = (function (e) {
+            (0, de.A)(r, e);
+            function r() {
+              for (
+                var n, a = arguments.length, i = new Array(a), o = 0;
+                o < a;
+                o++
+              )
+                i[o] = arguments[o];
+              return (
+                (n = e.call.apply(e, [this].concat(i)) || this),
+                (n.callbacks = null),
+                (n.unbind = ie),
+                (n.onWindowError = function (l) {
+                  var s = n.getCallbacks();
+                  s.isDragging() && s.tryAbort();
+                  var f = l.error;
+                  f instanceof Fe && l.preventDefault();
+                }),
+                (n.getCallbacks = function () {
+                  if (!n.callbacks)
+                    throw new Error(
+                      "Unable to find AppCallbacks in <ErrorBoundary/>",
+                    );
+                  return n.callbacks;
+                }),
+                (n.setCallbacks = function (l) {
+                  n.callbacks = l;
+                }),
+                n
+              );
+            }
+            var t = r.prototype;
+            return (
+              (t.componentDidMount = function () {
+                this.unbind = K(window, [
+                  { eventName: "error", fn: this.onWindowError },
+                ]);
               }),
-              (r.getCallbacks = function () {
-                if (!r.callbacks)
-                  throw new Error(
-                    "Unable to find AppCallbacks in <ErrorBoundary/>",
-                  );
-                return r.callbacks;
+              (t.componentDidCatch = function (a) {
+                if (a instanceof Fe) {
+                  this.setState({});
+                  return;
+                }
+                throw a;
               }),
-              (r.setCallbacks = function (e) {
-                r.callbacks = e;
+              (t.componentWillUnmount = function () {
+                this.unbind();
+              }),
+              (t.render = function () {
+                return this.props.children(this.setCallbacks);
               }),
               r
             );
-          }
-          (0, i.A)(r, e);
-          var n = r.prototype;
-          return (
-            (n.componentDidMount = function () {
-              this.unbind = te(window, [
-                { eventName: "error", fn: this.onWindowError },
-              ]);
-            }),
-            (n.componentDidCatch = function (e) {
-              if (!(e instanceof ae)) throw e;
-              this.setState({});
-            }),
-            (n.componentWillUnmount = function () {
-              this.unbind();
-            }),
-            (n.render = function () {
-              return this.props.children(this.setCallbacks);
-            }),
-            r
-          );
-        })(t.Component),
-        ce = function (e) {
-          return e + 1;
-        },
-        se = function (e, r) {
-          var n = e.droppableId === r.droppableId,
-            t = ce(e.index),
-            i = ce(r.index);
-          return n
-            ? "\n      You have moved the item from position " +
-                t +
-                "\n      to position " +
-                i +
-                "\n    "
-            : "\n    You have moved the item from position " +
-                t +
-                "\n    in list " +
-                e.droppableId +
-                "\n    to list " +
-                r.droppableId +
-                "\n    in position " +
-                i +
-                "\n  ";
-        },
-        de = function (e, r, n) {
-          return r.droppableId === n.droppableId
-            ? "\n      The item " +
-                e +
-                "\n      has been combined with " +
-                n.draggableId
-            : "\n      The item " +
-                e +
-                "\n      in list " +
-                r.droppableId +
-                "\n      has been combined with " +
-                n.draggableId +
-                "\n      in list " +
-                n.droppableId +
-                "\n    ";
-        },
-        pe = function (e) {
-          return (
-            "\n  The item has returned to its starting position\n  of " +
-            ce(e.index) +
-            "\n"
-          );
-        },
-        fe = {
-          dragHandleUsageInstructions:
-            "\n  Press space bar to start a drag.\n  When dragging you can use the arrow keys to move the item around and escape to cancel.\n  Some screen readers may require you to be in focus mode or to use your pass through key\n",
-          onDragStart: function (e) {
+          })(D.Component),
+          Ja = `
+  Press space bar to start a drag.
+  When dragging you can use the arrow keys to move the item around and escape to cancel.
+  Some screen readers may require you to be in focus mode or to use your pass through key
+`,
+          or = function (r) {
+            return r + 1;
+          },
+          Xa = function (r) {
             return (
-              "\n  You have lifted an item in position " +
-              ce(e.source.index) +
-              "\n"
+              `
+  You have lifted an item in position ` +
+              or(r.source.index) +
+              `
+`
             );
           },
-          onDragUpdate: function (e) {
-            var r = e.destination;
-            if (r) return se(e.source, r);
-            var n = e.combine;
+          Gt = function (r, t) {
+            var n = r.droppableId === t.droppableId,
+              a = or(r.index),
+              i = or(t.index);
             return n
-              ? de(e.draggableId, e.source, n)
+              ? `
+      You have moved the item from position ` +
+                  a +
+                  `
+      to position ` +
+                  i +
+                  `
+    `
+              : `
+    You have moved the item from position ` +
+                  a +
+                  `
+    in list ` +
+                  r.droppableId +
+                  `
+    to list ` +
+                  t.droppableId +
+                  `
+    in position ` +
+                  i +
+                  `
+  `;
+          },
+          Wt = function (r, t, n) {
+            var a = t.droppableId === n.droppableId;
+            return a
+              ? `
+      The item ` +
+                  r +
+                  `
+      has been combined with ` +
+                  n.draggableId
+              : `
+      The item ` +
+                  r +
+                  `
+      in list ` +
+                  t.droppableId +
+                  `
+      has been combined with ` +
+                  n.draggableId +
+                  `
+      in list ` +
+                  n.droppableId +
+                  `
+    `;
+          },
+          Qa = function (r) {
+            var t = r.destination;
+            if (t) return Gt(r.source, t);
+            var n = r.combine;
+            return n
+              ? Wt(r.draggableId, r.source, n)
               : "You are over an area that cannot be dropped on";
           },
-          onDragEnd: function (e) {
-            if ("CANCEL" === e.reason)
+          kt = function (r) {
+            return (
+              `
+  The item has returned to its starting position
+  of ` +
+              or(r.index) +
+              `
+`
+            );
+          },
+          Za = function (r) {
+            if (r.reason === "CANCEL")
               return (
-                "\n      Movement cancelled.\n      " + pe(e.source) + "\n    "
+                `
+      Movement cancelled.
+      ` +
+                kt(r.source) +
+                `
+    `
               );
-            var r = e.destination,
-              n = e.combine;
-            return r
-              ? "\n      You have dropped the item.\n      " +
-                  se(e.source, r) +
-                  "\n    "
+            var t = r.destination,
+              n = r.combine;
+            return t
+              ? `
+      You have dropped the item.
+      ` +
+                  Gt(r.source, t) +
+                  `
+    `
               : n
-                ? "\n      You have dropped the item.\n      " +
-                  de(e.draggableId, e.source, n) +
-                  "\n    "
-                : "\n    The item has been dropped while not over a drop area.\n    " +
-                  pe(e.source) +
-                  "\n  ";
+                ? `
+      You have dropped the item.
+      ` +
+                  Wt(r.draggableId, r.source, n) +
+                  `
+    `
+                : `
+    The item has been dropped while not over a drop area.
+    ` +
+                  kt(r.source) +
+                  `
+  `;
           },
-        },
-        ge = { x: 0, y: 0 },
-        ve = function (e, r) {
-          return { x: e.x + r.x, y: e.y + r.y };
-        },
-        me = function (e, r) {
-          return { x: e.x - r.x, y: e.y - r.y };
-        },
-        be = function (e, r) {
-          return e.x === r.x && e.y === r.y;
-        },
-        he = function (e) {
-          return { x: 0 !== e.x ? -e.x : 0, y: 0 !== e.y ? -e.y : 0 };
-        },
-        ye = function (e, r, n) {
-          var t;
-          return (
-            void 0 === n && (n = 0),
-            ((t = {})[e] = r),
-            (t["x" === e ? "y" : "x"] = n),
-            t
-          );
-        },
-        Ie = function (e, r) {
-          return Math.sqrt(Math.pow(r.x - e.x, 2) + Math.pow(r.y - e.y, 2));
-        },
-        De = function (e, r) {
-          return Math.min.apply(
-            Math,
-            r.map(function (r) {
-              return Ie(e, r);
-            }),
-          );
-        },
-        xe = function (e) {
-          return function (r) {
-            return { x: e(r.x), y: e(r.y) };
-          };
-        },
-        Ee = function (e, r) {
-          return {
-            top: e.top + r.y,
-            left: e.left + r.x,
-            bottom: e.bottom + r.y,
-            right: e.right + r.x,
-          };
-        },
-        we = function (e) {
-          return [
-            { x: e.left, y: e.top },
-            { x: e.right, y: e.top },
-            { x: e.left, y: e.bottom },
-            { x: e.right, y: e.bottom },
-          ];
-        },
-        Ae = function (e, r) {
-          return r && r.shouldClipSubject
-            ? (function (e, r) {
-                var n = (0, J.l)({
-                  top: Math.max(r.top, e.top),
-                  right: Math.min(r.right, e.right),
-                  bottom: Math.min(r.bottom, e.bottom),
-                  left: Math.max(r.left, e.left),
-                });
-                return n.width <= 0 || n.height <= 0 ? null : n;
-              })(r.pageMarginBox, e)
-            : (0, J.l)(e);
-        },
-        Ce = function (e) {
-          var r = e.page,
-            n = e.withPlaceholder,
-            t = e.axis,
-            i = e.frame,
-            a = (function (e, r) {
-              return r ? Ee(e, r.scroll.diff.displacement) : e;
-            })(r.marginBox, i),
-            l = (function (e, r, n) {
-              var t;
-              return n && n.increasedBy
-                ? (0, o.A)(
-                    {},
-                    e,
-                    (((t = {})[r.end] = e[r.end] + n.increasedBy[r.line]), t),
-                  )
-                : e;
-            })(a, t, n);
-          return { page: r, withPlaceholder: n, active: Ae(l, i) };
-        },
-        Se = function (e, r) {
-          e.frame || le(!1);
-          var n = e.frame,
-            t = me(r, n.scroll.initial),
-            i = he(t),
-            a = (0, o.A)({}, n, {
-              scroll: {
-                initial: n.scroll.initial,
-                current: r,
-                diff: { value: t, displacement: i },
-                max: n.scroll.max,
-              },
-            }),
-            l = Ce({
-              page: e.subject.page,
-              withPlaceholder: e.subject.withPlaceholder,
-              axis: e.axis,
-              frame: a,
-            });
-          return (0, o.A)({}, e, { frame: a, subject: l });
-        };
-      function Pe(e) {
-        return Object.values
-          ? Object.values(e)
-          : Object.keys(e).map(function (r) {
-              return e[r];
-            });
-      }
-      function Ne(e, r) {
-        if (e.findIndex) return e.findIndex(r);
-        for (var n = 0; n < e.length; n++) if (r(e[n])) return n;
-        return -1;
-      }
-      function Re(e, r) {
-        if (e.find) return e.find(r);
-        var n = Ne(e, r);
-        return -1 !== n ? e[n] : void 0;
-      }
-      var Be = Z(function (e) {
-          return e.reduce(function (e, r) {
-            return (e[r.descriptor.id] = r), e;
-          }, {});
-        }),
-        Oe = Z(function (e) {
-          return e.reduce(function (e, r) {
-            return (e[r.descriptor.id] = r), e;
-          }, {});
-        }),
-        Te = Z(function (e) {
-          return Pe(e);
-        }),
-        Le = Z(function (e) {
-          return Pe(e);
-        }),
-        Ge = Z(function (e, r) {
-          var n = Le(r)
-            .filter(function (r) {
-              return e === r.descriptor.droppableId;
-            })
-            .sort(function (e, r) {
-              return e.descriptor.index - r.descriptor.index;
-            });
-          return n;
-        });
-      function Me(e) {
-        return e.at && "REORDER" === e.at.type ? e.at.destination : null;
-      }
-      function _e(e) {
-        return e.at && "COMBINE" === e.at.type ? e.at.combine : null;
-      }
-      var Fe = Z(function (e, r) {
-          return r.filter(function (r) {
-            return r.descriptor.id !== e.descriptor.id;
-          });
-        }),
-        ke = function (e, r) {
-          return e.descriptor.droppableId === r.descriptor.id;
-        },
-        We = { point: ge, value: 0 },
-        Ue = { invisible: {}, visible: {}, all: [] },
-        He = { displaced: Ue, displacedBy: We, at: null },
-        je = function (e, r) {
-          return function (n) {
-            return e <= n && n <= r;
-          };
-        },
-        qe = function (e) {
-          var r = je(e.top, e.bottom),
-            n = je(e.left, e.right);
-          return function (t) {
-            if (r(t.top) && r(t.bottom) && n(t.left) && n(t.right)) return !0;
-            var i = r(t.top) || r(t.bottom),
-              o = n(t.left) || n(t.right);
-            if (i && o) return !0;
-            var a = t.top < e.top && t.bottom > e.bottom,
-              l = t.left < e.left && t.right > e.right;
-            return !(!a || !l) || (a && o) || (l && i);
-          };
-        },
-        Ve = function (e) {
-          var r = je(e.top, e.bottom),
-            n = je(e.left, e.right);
-          return function (e) {
-            return r(e.top) && r(e.bottom) && n(e.left) && n(e.right);
-          };
-        },
-        Ke = {
-          direction: "vertical",
-          line: "y",
-          crossAxisLine: "x",
-          start: "top",
-          end: "bottom",
-          size: "height",
-          crossAxisStart: "left",
-          crossAxisEnd: "right",
-          crossAxisSize: "width",
-        },
-        ze = {
-          direction: "horizontal",
-          line: "x",
-          crossAxisLine: "y",
-          start: "left",
-          end: "right",
-          size: "width",
-          crossAxisStart: "top",
-          crossAxisEnd: "bottom",
-          crossAxisSize: "height",
-        },
-        Ye = function (e) {
-          var r = e.target,
-            n = e.destination,
-            t = e.viewport,
-            i = e.withDroppableDisplacement,
-            o = e.isVisibleThroughFrameFn,
-            a = i
-              ? (function (e, r) {
-                  var n = r.frame ? r.frame.scroll.diff.displacement : ge;
-                  return Ee(e, n);
-                })(r, n)
-              : r;
-          return (
-            (function (e, r, n) {
-              return !!r.subject.active && n(r.subject.active)(e);
-            })(a, n, o) &&
-            (function (e, r, n) {
-              return n(r)(e);
-            })(a, t, o)
-          );
-        },
-        Je = function (e) {
-          return Ye((0, o.A)({}, e, { isVisibleThroughFrameFn: qe }));
-        },
-        Xe = function (e) {
-          return Ye((0, o.A)({}, e, { isVisibleThroughFrameFn: Ve }));
-        };
-      function $e(e) {
-        var r = e.afterDragging,
-          n = e.destination,
-          t = e.displacedBy,
-          i = e.viewport,
-          o = e.forceShouldAnimate,
-          a = e.last;
-        return r.reduce(
-          function (e, r) {
-            var l = (function (e, r) {
-                var n = e.page.marginBox,
-                  t = { top: r.point.y, right: 0, bottom: 0, left: r.point.x };
-                return (0, J.l)((0, J.fT)(n, t));
-              })(r, t),
-              u = r.descriptor.id;
-            if (
-              (e.all.push(u),
-              !Je({
-                target: l,
-                destination: n,
-                viewport: i,
-                withDroppableDisplacement: !0,
-              }))
-            )
-              return (e.invisible[r.descriptor.id] = !0), e;
-            var c = (function (e, r, n) {
-                if ("boolean" == typeof n) return n;
-                if (!r) return !0;
-                var t = r.invisible,
-                  i = r.visible;
-                if (t[e]) return !1;
-                var o = i[e];
-                return !o || o.shouldAnimate;
-              })(u, a, o),
-              s = { draggableId: u, shouldAnimate: c };
-            return (e.visible[u] = s), e;
+          lr = {
+            dragHandleUsageInstructions: Ja,
+            onDragStart: Xa,
+            onDragUpdate: Qa,
+            onDragEnd: Za,
           },
-          { all: [], visible: {}, invisible: {} },
-        );
-      }
-      function Qe(e) {
-        var r = e.insideDestination,
-          n = e.inHomeList,
-          t = e.displacedBy,
-          i = e.destination,
-          o = (function (e, r) {
-            if (!e.length) return 0;
-            var n = e[e.length - 1].descriptor.index;
-            return r.inHomeList ? n : n + 1;
-          })(r, { inHomeList: n });
-        return {
-          displaced: Ue,
-          displacedBy: t,
-          at: {
-            type: "REORDER",
-            destination: { droppableId: i.descriptor.id, index: o },
+          W = { x: 0, y: 0 },
+          k = function (r, t) {
+            return { x: r.x + t.x, y: r.y + t.y };
           },
-        };
-      }
-      function Ze(e) {
-        var r = e.draggable,
-          n = e.insideDestination,
-          t = e.destination,
-          i = e.viewport,
-          o = e.displacedBy,
-          a = e.last,
-          l = e.index,
-          u = e.forceShouldAnimate,
-          c = ke(r, t);
-        if (null == l)
-          return Qe({
-            insideDestination: n,
-            inHomeList: c,
-            displacedBy: o,
-            destination: t,
-          });
-        var s = Re(n, function (e) {
-          return e.descriptor.index === l;
-        });
-        if (!s)
-          return Qe({
-            insideDestination: n,
-            inHomeList: c,
-            displacedBy: o,
-            destination: t,
-          });
-        var d = Fe(r, n),
-          p = n.indexOf(s);
-        return {
-          displaced: $e({
-            afterDragging: d.slice(p),
-            destination: t,
-            displacedBy: o,
-            last: a,
-            viewport: i.frame,
-            forceShouldAnimate: u,
-          }),
-          displacedBy: o,
-          at: {
-            type: "REORDER",
-            destination: { droppableId: t.descriptor.id, index: l },
+          q = function (r, t) {
+            return { x: r.x - t.x, y: r.y - t.y };
           },
-        };
-      }
-      function er(e, r) {
-        return Boolean(r.effected[e]);
-      }
-      var rr = function (e) {
-          var r = e.isMovingForward,
-            n = e.isInHomeList,
-            t = e.draggable,
-            i = e.draggables,
-            o = e.destination,
-            a = e.insideDestination,
-            l = e.previousImpact,
-            u = e.viewport,
-            c = e.afterCritical,
-            s = l.at;
-          if ((s || le(!1), "REORDER" === s.type)) {
-            var d = (function (e) {
-              var r = e.isMovingForward,
-                n = e.isInHomeList,
-                t = e.insideDestination,
-                i = e.location;
-              if (!t.length) return null;
-              var o = i.index,
-                a = r ? o + 1 : o - 1,
-                l = t[0].descriptor.index,
-                u = t[t.length - 1].descriptor.index;
-              return a < l || a > (n ? u : u + 1) ? null : a;
-            })({
-              isMovingForward: r,
-              isInHomeList: n,
-              location: s.destination,
-              insideDestination: a,
-            });
-            return null == d
-              ? null
-              : Ze({
-                  draggable: t,
-                  insideDestination: a,
-                  destination: o,
-                  viewport: u,
-                  last: l.displaced,
-                  displacedBy: l.displacedBy,
-                  index: d,
-                });
-          }
-          var p = (function (e) {
-            var r = e.isMovingForward,
-              n = e.destination,
-              t = e.draggables,
-              i = e.combine,
-              o = e.afterCritical;
-            if (!n.isCombineEnabled) return null;
-            var a = i.draggableId,
-              l = t[a].descriptor.index;
-            return er(a, o) ? (r ? l : l - 1) : r ? l + 1 : l;
-          })({
-            isMovingForward: r,
-            destination: o,
-            displaced: l.displaced,
-            draggables: i,
-            combine: s.combine,
-            afterCritical: c,
-          });
-          return null == p
-            ? null
-            : Ze({
-                draggable: t,
-                insideDestination: a,
-                destination: o,
-                viewport: u,
-                last: l.displaced,
-                displacedBy: l.displacedBy,
-                index: p,
-              });
-        },
-        nr = function (e) {
-          var r = e.afterCritical,
-            n = e.impact,
-            t = e.draggables,
-            i = _e(n);
-          i || le(!1);
-          var o = i.draggableId,
-            a = t[o].page.borderBox.center,
-            l = (function (e) {
-              var r = e.displaced,
-                n = e.afterCritical,
-                t = e.combineWith,
-                i = e.displacedBy,
-                o = Boolean(r.visible[t] || r.invisible[t]);
-              return er(t, n) ? (o ? ge : he(i.point)) : o ? i.point : ge;
-            })({
-              displaced: n.displaced,
-              afterCritical: r,
-              combineWith: o,
-              displacedBy: n.displacedBy,
-            });
-          return ve(a, l);
-        },
-        tr = function (e, r) {
-          return r.margin[e.start] + r.borderBox[e.size] / 2;
-        },
-        ir = function (e, r, n) {
-          return (
-            r[e.crossAxisStart] +
-            n.margin[e.crossAxisStart] +
-            n.borderBox[e.crossAxisSize] / 2
-          );
-        },
-        or = function (e) {
-          var r = e.axis,
-            n = e.moveRelativeTo,
-            t = e.isMoving;
-          return ye(
-            r.line,
-            n.marginBox[r.end] + tr(r, t),
-            ir(r, n.marginBox, t),
-          );
-        },
-        ar = function (e) {
-          var r = e.axis,
-            n = e.moveRelativeTo,
-            t = e.isMoving;
-          return ye(
-            r.line,
-            n.marginBox[r.start] -
-              (function (e, r) {
-                return r.margin[e.end] + r.borderBox[e.size] / 2;
-              })(r, t),
-            ir(r, n.marginBox, t),
-          );
-        },
-        lr = function (e) {
-          var r = e.impact,
-            n = e.draggable,
-            t = e.draggables,
-            i = e.droppable,
-            o = e.afterCritical,
-            a = Ge(i.descriptor.id, t),
-            l = n.page,
-            u = i.axis;
-          if (!a.length)
-            return (function (e) {
-              var r = e.axis,
-                n = e.moveInto,
-                t = e.isMoving;
-              return ye(
-                r.line,
-                n.contentBox[r.start] + tr(r, t),
-                ir(r, n.contentBox, t),
-              );
-            })({ axis: u, moveInto: i.page, isMoving: l });
-          var c = r.displaced,
-            s = r.displacedBy,
-            d = c.all[0];
-          if (d) {
-            var p = t[d];
-            if (er(d, o))
-              return ar({ axis: u, moveRelativeTo: p.page, isMoving: l });
-            var f = (0, J.cY)(p.page, s.point);
-            return ar({ axis: u, moveRelativeTo: f, isMoving: l });
-          }
-          var g = a[a.length - 1];
-          if (g.descriptor.id === n.descriptor.id) return l.borderBox.center;
-          if (er(g.descriptor.id, o)) {
-            var v = (0, J.cY)(g.page, he(o.displacedBy.point));
-            return or({ axis: u, moveRelativeTo: v, isMoving: l });
-          }
-          return or({ axis: u, moveRelativeTo: g.page, isMoving: l });
-        },
-        ur = function (e, r) {
-          var n = e.frame;
-          return n ? ve(r, n.scroll.diff.displacement) : r;
-        },
-        cr = function (e) {
-          var r = (function (e) {
-              var r = e.impact,
-                n = e.draggable,
-                t = e.droppable,
-                i = e.draggables,
-                o = e.afterCritical,
-                a = n.page.borderBox.center,
-                l = r.at;
-              return t && l
-                ? "REORDER" === l.type
-                  ? lr({
-                      impact: r,
-                      draggable: n,
-                      draggables: i,
-                      droppable: t,
-                      afterCritical: o,
-                    })
-                  : nr({ impact: r, draggables: i, afterCritical: o })
-                : a;
-            })(e),
-            n = e.droppable;
-          return n ? ur(n, r) : r;
-        },
-        sr = function (e, r) {
-          var n = me(r, e.scroll.initial),
-            t = he(n);
-          return {
-            frame: (0, J.l)({
-              top: r.y,
-              bottom: r.y + e.frame.height,
-              left: r.x,
-              right: r.x + e.frame.width,
-            }),
-            scroll: {
-              initial: e.scroll.initial,
-              max: e.scroll.max,
-              current: r,
-              diff: { value: n, displacement: t },
-            },
-          };
-        };
-      function dr(e, r) {
-        return e.map(function (e) {
-          return r[e];
-        });
-      }
-      var pr = function (e) {
-          var r = e.pageBorderBoxCenter,
-            n = e.draggable,
-            t = (function (e, r) {
-              return ve(e.scroll.diff.displacement, r);
-            })(e.viewport, r),
-            i = me(t, n.page.borderBox.center);
-          return ve(n.client.borderBox.center, i);
-        },
-        fr = function (e) {
-          var r = e.draggable,
-            n = e.destination,
-            t = e.newPageBorderBoxCenter,
-            i = e.viewport,
-            a = e.withDroppableDisplacement,
-            l = e.onlyOnMainAxis,
-            u = void 0 !== l && l,
-            c = me(t, r.page.borderBox.center),
-            s = {
-              target: Ee(r.page.borderBox, c),
-              destination: n,
-              withDroppableDisplacement: a,
-              viewport: i,
-            };
-          return u
-            ? (function (e) {
-                return Ye(
-                  (0, o.A)({}, e, {
-                    isVisibleThroughFrameFn:
-                      ((r = e.destination.axis),
-                      function (e) {
-                        var n = je(e.top, e.bottom),
-                          t = je(e.left, e.right);
-                        return function (e) {
-                          return r === Ke
-                            ? n(e.top) && n(e.bottom)
-                            : t(e.left) && t(e.right);
-                        };
-                      }),
-                  }),
-                );
-                var r;
-              })(s)
-            : Xe(s);
-        },
-        gr = function (e) {
-          var r = e.isMovingForward,
-            n = e.draggable,
-            t = e.destination,
-            i = e.draggables,
-            a = e.previousImpact,
-            l = e.viewport,
-            u = e.previousPageBorderBoxCenter,
-            c = e.previousClientSelection,
-            s = e.afterCritical;
-          if (!t.isEnabled) return null;
-          var d = Ge(t.descriptor.id, i),
-            p = ke(n, t),
-            f =
-              (function (e) {
-                var r = e.isMovingForward,
-                  n = e.draggable,
-                  t = e.destination,
-                  i = e.insideDestination,
-                  a = e.previousImpact;
-                if (!t.isCombineEnabled) return null;
-                if (!Me(a)) return null;
-                function l(e) {
-                  var r = {
-                    type: "COMBINE",
-                    combine: { draggableId: e, droppableId: t.descriptor.id },
-                  };
-                  return (0, o.A)({}, a, { at: r });
-                }
-                var u = a.displaced.all,
-                  c = u.length ? u[0] : null;
-                if (r) return c ? l(c) : null;
-                var s = Fe(n, i);
-                if (!c)
-                  return s.length ? l(s[s.length - 1].descriptor.id) : null;
-                var d = Ne(s, function (e) {
-                  return e.descriptor.id === c;
-                });
-                -1 === d && le(!1);
-                var p = d - 1;
-                return p < 0 ? null : l(s[p].descriptor.id);
-              })({
-                isMovingForward: r,
-                draggable: n,
-                destination: t,
-                insideDestination: d,
-                previousImpact: a,
-              }) ||
-              rr({
-                isMovingForward: r,
-                isInHomeList: p,
-                draggable: n,
-                draggables: i,
-                destination: t,
-                insideDestination: d,
-                previousImpact: a,
-                viewport: l,
-                afterCritical: s,
-              });
-          if (!f) return null;
-          var g = cr({
-            impact: f,
-            draggable: n,
-            droppable: t,
-            draggables: i,
-            afterCritical: s,
-          });
-          if (
-            fr({
-              draggable: n,
-              destination: t,
-              newPageBorderBoxCenter: g,
-              viewport: l.frame,
-              withDroppableDisplacement: !1,
-              onlyOnMainAxis: !0,
-            })
-          )
-            return {
-              clientSelection: pr({
-                pageBorderBoxCenter: g,
-                draggable: n,
-                viewport: l,
+          oe = function (r, t) {
+            return r.x === t.x && r.y === t.y;
+          },
+          Se = function (r) {
+            return { x: r.x !== 0 ? -r.x : 0, y: r.y !== 0 ? -r.y : 0 };
+          },
+          me = function (r, t, n) {
+            var a;
+            return (
+              n === void 0 && (n = 0),
+              (a = {}),
+              (a[r] = t),
+              (a[r === "x" ? "y" : "x"] = n),
+              a
+            );
+          },
+          Ge = function (r, t) {
+            return Math.sqrt(Math.pow(t.x - r.x, 2) + Math.pow(t.y - r.y, 2));
+          },
+          Ut = function (r, t) {
+            return Math.min.apply(
+              Math,
+              t.map(function (n) {
+                return Ge(r, n);
               }),
-              impact: f,
-              scrollJumpRequest: null,
+            );
+          },
+          Ht = function (r) {
+            return function (t) {
+              return { x: r(t.x), y: r(t.y) };
             };
-          var v = me(g, u),
-            m = (function (e) {
-              var r = e.impact,
-                n = e.viewport,
-                t = e.destination,
-                i = e.draggables,
-                a = e.maxScrollChange,
-                l = sr(n, ve(n.scroll.current, a)),
-                u = t.frame ? Se(t, ve(t.frame.scroll.current, a)) : t,
-                c = r.displaced,
-                s = $e({
-                  afterDragging: dr(c.all, i),
-                  destination: t,
-                  displacedBy: r.displacedBy,
-                  viewport: l.frame,
-                  last: c,
-                  forceShouldAnimate: !1,
-                }),
-                d = $e({
-                  afterDragging: dr(c.all, i),
-                  destination: u,
-                  displacedBy: r.displacedBy,
-                  viewport: n.frame,
-                  last: c,
-                  forceShouldAnimate: !1,
-                }),
-                p = {},
-                f = {},
-                g = [c, s, d];
-              return (
-                c.all.forEach(function (e) {
-                  var r = (function (e, r) {
-                    for (var n = 0; n < r.length; n++) {
-                      var t = r[n].visible[e];
-                      if (t) return t;
-                    }
-                    return null;
-                  })(e, g);
-                  r ? (f[e] = r) : (p[e] = !0);
-                }),
-                (0, o.A)({}, r, {
-                  displaced: { all: c.all, invisible: p, visible: f },
-                })
+          },
+          _a = function (e, r) {
+            var t = (0, M.l)({
+              top: Math.max(r.top, e.top),
+              right: Math.min(r.right, e.right),
+              bottom: Math.min(r.bottom, e.bottom),
+              left: Math.max(r.left, e.left),
+            });
+            return t.width <= 0 || t.height <= 0 ? null : t;
+          },
+          We = function (r, t) {
+            return {
+              top: r.top + t.y,
+              left: r.left + t.x,
+              bottom: r.bottom + t.y,
+              right: r.right + t.x,
+            };
+          },
+          Vt = function (r) {
+            return [
+              { x: r.left, y: r.top },
+              { x: r.right, y: r.top },
+              { x: r.left, y: r.bottom },
+              { x: r.right, y: r.bottom },
+            ];
+          },
+          ei = { top: 0, right: 0, bottom: 0, left: 0 },
+          ri = function (r, t) {
+            return t ? We(r, t.scroll.diff.displacement) : r;
+          },
+          ti = function (r, t, n) {
+            if (n && n.increasedBy) {
+              var a;
+              return (0, A.A)(
+                {},
+                r,
+                ((a = {}), (a[t.end] = r[t.end] + n.increasedBy[t.line]), a),
               );
-            })({
-              impact: f,
-              viewport: l,
-              destination: t,
-              draggables: i,
-              maxScrollChange: v,
-            });
-          return { clientSelection: c, impact: m, scrollJumpRequest: v };
-        },
-        vr = function (e) {
-          var r = e.subject.active;
-          return r || le(!1), r;
-        },
-        mr = function (e, r) {
-          var n = e.page.borderBox.center;
-          return er(e.descriptor.id, r) ? me(n, r.displacedBy.point) : n;
-        },
-        br = function (e, r) {
-          var n = e.page.borderBox;
-          return er(e.descriptor.id, r) ? Ee(n, he(r.displacedBy.point)) : n;
-        },
-        hr = Z(function (e, r) {
-          var n = r[e.line];
-          return { value: n, point: ye(e.line, n) };
-        }),
-        yr = function (e, r) {
-          return (0, o.A)({}, e, {
-            scroll: (0, o.A)({}, e.scroll, { max: r }),
-          });
-        },
-        Ir = function (e, r, n) {
-          var t = e.frame;
-          ke(r, e) && le(!1), e.subject.withPlaceholder && le(!1);
-          var i = hr(e.axis, r.displaceBy).point,
-            a = (function (e, r, n) {
-              var t = e.axis;
-              if ("virtual" === e.descriptor.mode) return ye(t.line, r[t.line]);
-              var i = e.subject.page.contentBox[t.size],
-                o =
-                  Ge(e.descriptor.id, n).reduce(function (e, r) {
-                    return e + r.client.marginBox[t.size];
-                  }, 0) +
-                  r[t.line] -
-                  i;
-              return o <= 0 ? null : ye(t.line, o);
-            })(e, i, n),
-            l = {
-              placeholderSize: i,
-              increasedBy: a,
-              oldFrameMaxScroll: e.frame ? e.frame.scroll.max : null,
-            };
-          if (!t) {
-            var u = Ce({
-              page: e.subject.page,
-              withPlaceholder: l,
-              axis: e.axis,
-              frame: e.frame,
-            });
-            return (0, o.A)({}, e, { subject: u });
-          }
-          var c = a ? ve(t.scroll.max, a) : t.scroll.max,
-            s = yr(t, c),
-            d = Ce({
-              page: e.subject.page,
-              withPlaceholder: l,
-              axis: e.axis,
-              frame: s,
-            });
-          return (0, o.A)({}, e, { subject: d, frame: s });
-        },
-        Dr = function (e) {
-          var r = e.isMovingForward,
-            n = e.previousPageBorderBoxCenter,
-            t = e.draggable,
-            i = e.isOver,
-            o = e.draggables,
-            a = e.droppables,
-            l = e.viewport,
-            u = e.afterCritical,
-            c = (function (e) {
-              var r = e.isMovingForward,
-                n = e.pageBorderBoxCenter,
-                t = e.source,
-                i = e.droppables,
-                o = e.viewport,
-                a = t.subject.active;
-              if (!a) return null;
-              var l = t.axis,
-                u = je(a[l.start], a[l.end]),
-                c = Te(i)
-                  .filter(function (e) {
-                    return e !== t;
-                  })
-                  .filter(function (e) {
-                    return e.isEnabled;
-                  })
-                  .filter(function (e) {
-                    return Boolean(e.subject.active);
-                  })
-                  .filter(function (e) {
-                    return qe(o.frame)(vr(e));
-                  })
-                  .filter(function (e) {
-                    var n = vr(e);
-                    return r
-                      ? a[l.crossAxisEnd] < n[l.crossAxisEnd]
-                      : n[l.crossAxisStart] < a[l.crossAxisStart];
-                  })
-                  .filter(function (e) {
-                    var r = vr(e),
-                      n = je(r[l.start], r[l.end]);
-                    return (
-                      u(r[l.start]) ||
-                      u(r[l.end]) ||
-                      n(a[l.start]) ||
-                      n(a[l.end])
-                    );
-                  })
-                  .sort(function (e, n) {
-                    var t = vr(e)[l.crossAxisStart],
-                      i = vr(n)[l.crossAxisStart];
-                    return r ? t - i : i - t;
-                  })
-                  .filter(function (e, r, n) {
-                    return (
-                      vr(e)[l.crossAxisStart] === vr(n[0])[l.crossAxisStart]
-                    );
-                  });
-              if (!c.length) return null;
-              if (1 === c.length) return c[0];
-              var s = c.filter(function (e) {
-                return je(vr(e)[l.start], vr(e)[l.end])(n[l.line]);
-              });
-              return 1 === s.length
-                ? s[0]
-                : s.length > 1
-                  ? s.sort(function (e, r) {
-                      return vr(e)[l.start] - vr(r)[l.start];
-                    })[0]
-                  : c.sort(function (e, r) {
-                      var t = De(n, we(vr(e))),
-                        i = De(n, we(vr(r)));
-                      return t !== i ? t - i : vr(e)[l.start] - vr(r)[l.start];
-                    })[0];
-            })({
-              isMovingForward: r,
-              pageBorderBoxCenter: n,
-              source: i,
-              droppables: a,
-              viewport: l,
-            });
-          if (!c) return null;
-          var s = Ge(c.descriptor.id, o),
-            d = (function (e) {
-              var r = e.pageBorderBoxCenter,
-                n = e.viewport,
-                t = e.destination,
-                i = e.insideDestination,
-                o = e.afterCritical,
-                a = i
-                  .filter(function (e) {
-                    return Xe({
-                      target: br(e, o),
-                      destination: t,
-                      viewport: n.frame,
-                      withDroppableDisplacement: !0,
-                    });
-                  })
-                  .sort(function (e, n) {
-                    var i = Ie(r, ur(t, mr(e, o))),
-                      a = Ie(r, ur(t, mr(n, o)));
-                    return i < a
-                      ? -1
-                      : a < i
-                        ? 1
-                        : e.descriptor.index - n.descriptor.index;
-                  });
-              return a[0] || null;
-            })({
-              pageBorderBoxCenter: n,
-              viewport: l,
-              destination: c,
-              insideDestination: s,
-              afterCritical: u,
-            }),
-            p = (function (e) {
-              var r = e.previousPageBorderBoxCenter,
-                n = e.moveRelativeTo,
-                t = e.insideDestination,
-                i = e.draggable,
-                o = e.draggables,
-                a = e.destination,
-                l = e.viewport,
-                u = e.afterCritical;
-              if (!n) {
-                if (t.length) return null;
-                var c = {
-                    displaced: Ue,
-                    displacedBy: We,
-                    at: {
-                      type: "REORDER",
-                      destination: { droppableId: a.descriptor.id, index: 0 },
-                    },
-                  },
-                  s = cr({
-                    impact: c,
-                    draggable: i,
-                    droppable: a,
-                    draggables: o,
-                    afterCritical: u,
-                  }),
-                  d = ke(i, a) ? a : Ir(a, i, o);
-                return fr({
-                  draggable: i,
-                  destination: d,
-                  newPageBorderBoxCenter: s,
-                  viewport: l.frame,
-                  withDroppableDisplacement: !1,
-                  onlyOnMainAxis: !0,
-                })
-                  ? c
-                  : null;
-              }
-              var p,
-                f = Boolean(
-                  r[a.axis.line] <= n.page.borderBox.center[a.axis.line],
-                ),
-                g =
-                  ((p = n.descriptor.index),
-                  n.descriptor.id === i.descriptor.id || f ? p : p + 1),
-                v = hr(a.axis, i.displaceBy);
-              return Ze({
-                draggable: i,
-                insideDestination: t,
-                destination: a,
-                viewport: l,
-                displacedBy: v,
-                last: Ue,
-                index: g,
-              });
-            })({
-              previousPageBorderBoxCenter: n,
-              destination: c,
-              draggable: t,
-              draggables: o,
-              moveRelativeTo: d,
-              insideDestination: s,
-              viewport: l,
-              afterCritical: u,
-            });
-          if (!p) return null;
-          var f = cr({
-            impact: p,
-            draggable: t,
-            droppable: c,
-            draggables: o,
-            afterCritical: u,
-          });
-          return {
-            clientSelection: pr({
-              pageBorderBoxCenter: f,
-              draggable: t,
-              viewport: l,
-            }),
-            impact: p,
-            scrollJumpRequest: null,
+            }
+            return r;
+          },
+          ni = function (r, t) {
+            return t && t.shouldClipSubject
+              ? _a(t.pageMarginBox, r)
+              : (0, M.l)(r);
+          },
+          Ce = function (e) {
+            var r = e.page,
+              t = e.withPlaceholder,
+              n = e.axis,
+              a = e.frame,
+              i = ri(r.marginBox, a),
+              o = ti(i, n, t),
+              l = ni(o, a);
+            return { page: r, withPlaceholder: t, active: l };
+          },
+          kr = function (e, r) {
+            e.frame || m(!1);
+            var t = e.frame,
+              n = q(r, t.scroll.initial),
+              a = Se(n),
+              i = (0, A.A)({}, t, {
+                scroll: {
+                  initial: t.scroll.initial,
+                  current: r,
+                  diff: { value: n, displacement: a },
+                  max: t.scroll.max,
+                },
+              }),
+              o = Ce({
+                page: e.subject.page,
+                withPlaceholder: e.subject.withPlaceholder,
+                axis: e.axis,
+                frame: i,
+              }),
+              l = (0, A.A)({}, e, { frame: i, subject: o });
+            return l;
           };
-        },
-        xr = function (e) {
-          var r = e.at;
-          return r
-            ? "REORDER" === r.type
-              ? r.destination.droppableId
-              : r.combine.droppableId
-            : null;
-        },
-        Er = function (e) {
-          var r = e.state,
-            n = e.type,
-            t = (function (e, r) {
-              var n = xr(e);
-              return n ? r[n] : null;
-            })(r.impact, r.dimensions.droppables),
-            i = Boolean(t),
-            o = r.dimensions.droppables[r.critical.droppable.id],
-            a = t || o,
-            l = a.axis.direction,
-            u =
-              ("vertical" === l && ("MOVE_UP" === n || "MOVE_DOWN" === n)) ||
-              ("horizontal" === l && ("MOVE_LEFT" === n || "MOVE_RIGHT" === n));
-          if (u && !i) return null;
-          var c = "MOVE_DOWN" === n || "MOVE_RIGHT" === n,
-            s = r.dimensions.draggables[r.critical.draggable.id],
-            d = r.current.page.borderBoxCenter,
-            p = r.dimensions,
-            f = p.draggables,
-            g = p.droppables;
-          return u
-            ? gr({
-                isMovingForward: c,
-                previousPageBorderBoxCenter: d,
-                draggable: s,
-                destination: a,
-                draggables: f,
-                viewport: r.viewport,
-                previousClientSelection: r.current.client.selection,
-                previousImpact: r.impact,
-                afterCritical: r.afterCritical,
-              })
-            : Dr({
-                isMovingForward: c,
-                previousPageBorderBoxCenter: d,
-                draggable: s,
-                isOver: a,
-                draggables: f,
-                droppables: g,
-                viewport: r.viewport,
-                afterCritical: r.afterCritical,
+        function ai(e) {
+          return Number.isInteger
+            ? Number.isInteger(e)
+            : typeof e == "number" && isFinite(e) && Math.floor(e) === e;
+        }
+        function sr(e) {
+          return Object.values
+            ? Object.values(e)
+            : Object.keys(e).map(function (r) {
+                return e[r];
               });
-        };
-      function wr(e) {
-        return "DRAGGING" === e.phase || "COLLECTING" === e.phase;
-      }
-      function Ar(e) {
-        var r = je(e.top, e.bottom),
-          n = je(e.left, e.right);
-        return function (e) {
-          return r(e.y) && n(e.x);
-        };
-      }
-      function Cr(e) {
-        var r = e.pageBorderBox,
-          n = e.draggable,
-          t = e.droppables,
-          i = Te(t).filter(function (e) {
-            if (!e.isEnabled) return !1;
-            var n,
-              t,
-              i = e.subject.active;
-            if (!i) return !1;
-            if (
-              ((t = i),
-              !(
-                (n = r).left < t.right &&
-                n.right > t.left &&
-                n.top < t.bottom &&
-                n.bottom > t.top
-              ))
-            )
-              return !1;
-            if (Ar(i)(r.center)) return !0;
-            var o = e.axis,
-              a = i.center[o.crossAxisLine],
-              l = r[o.crossAxisStart],
-              u = r[o.crossAxisEnd],
-              c = je(i[o.crossAxisStart], i[o.crossAxisEnd]),
-              s = c(l),
-              d = c(u);
-            return (!s && !d) || (s ? l < a : u > a);
+        }
+        function Ur(e, r) {
+          if (e.findIndex) return e.findIndex(r);
+          for (var t = 0; t < e.length; t++) if (r(e[t])) return t;
+          return -1;
+        }
+        function be(e, r) {
+          if (e.find) return e.find(r);
+          var t = Ur(e, r);
+          if (t !== -1) return e[t];
+        }
+        function ii(e) {
+          return Array.prototype.slice.call(e);
+        }
+        var qt = G(function (e) {
+            return e.reduce(function (r, t) {
+              return (r[t.descriptor.id] = t), r;
+            }, {});
+          }),
+          $t = G(function (e) {
+            return e.reduce(function (r, t) {
+              return (r[t.descriptor.id] = t), r;
+            }, {});
+          }),
+          ur = G(function (e) {
+            return sr(e);
+          }),
+          oi = G(function (e) {
+            return sr(e);
+          }),
+          we = G(function (e, r) {
+            var t = oi(r)
+              .filter(function (n) {
+                return e === n.descriptor.droppableId;
+              })
+              .sort(function (n, a) {
+                return n.descriptor.index - a.descriptor.index;
+              });
+            return t;
           });
-        return i.length
-          ? 1 === i.length
-            ? i[0].descriptor.id
-            : (function (e) {
-                var r = e.pageBorderBox,
-                  n = e.draggable,
-                  t = e.candidates,
-                  i = n.page.borderBox.center,
-                  o = t
-                    .map(function (e) {
-                      var n = e.axis,
-                        t = ye(
-                          e.axis.line,
-                          r.center[n.line],
-                          e.page.borderBox.center[n.crossAxisLine],
-                        );
-                      return { id: e.descriptor.id, distance: Ie(i, t) };
-                    })
-                    .sort(function (e, r) {
-                      return r.distance - e.distance;
-                    });
-                return o[0] ? o[0].id : null;
-              })({ pageBorderBox: r, draggable: n, candidates: i })
-          : null;
-      }
-      var Sr = function (e, r) {
-        return (0, J.l)(Ee(e, r));
-      };
-      function Pr(e) {
-        var r = e.displaced,
-          n = e.id;
-        return Boolean(r.visible[n] || r.invisible[n]);
-      }
-      var Nr = function (e) {
-          var r = e.pageOffset,
-            n = e.draggable,
-            t = e.draggables,
-            i = e.droppables,
-            o = e.previousImpact,
+        function Hr(e) {
+          return e.at && e.at.type === "REORDER" ? e.at.destination : null;
+        }
+        function cr(e) {
+          return e.at && e.at.type === "COMBINE" ? e.at.combine : null;
+        }
+        var dr = G(function (e, r) {
+            return r.filter(function (t) {
+              return t.descriptor.id !== e.descriptor.id;
+            });
+          }),
+          li = function (e) {
+            var r = e.isMovingForward,
+              t = e.draggable,
+              n = e.destination,
+              a = e.insideDestination,
+              i = e.previousImpact;
+            if (!n.isCombineEnabled) return null;
+            var o = Hr(i);
+            if (!o) return null;
+            function l(g) {
+              var b = {
+                type: "COMBINE",
+                combine: { draggableId: g, droppableId: n.descriptor.id },
+              };
+              return (0, A.A)({}, i, { at: b });
+            }
+            var s = i.displaced.all,
+              f = s.length ? s[0] : null;
+            if (r) return f ? l(f) : null;
+            var d = dr(t, a);
+            if (!f) {
+              if (!d.length) return null;
+              var c = d[d.length - 1];
+              return l(c.descriptor.id);
+            }
+            var u = Ur(d, function (g) {
+              return g.descriptor.id === f;
+            });
+            u === -1 && m(!1);
+            var p = u - 1;
+            if (p < 0) return null;
+            var v = d[p];
+            return l(v.descriptor.id);
+          },
+          Ae = function (e, r) {
+            return e.descriptor.droppableId === r.descriptor.id;
+          },
+          zt = { point: W, value: 0 },
+          ke = { invisible: {}, visible: {}, all: [] },
+          si = { displaced: ke, displacedBy: zt, at: null },
+          Y = function (e, r) {
+            return function (t) {
+              return e <= t && t <= r;
+            };
+          },
+          jt = function (e) {
+            var r = Y(e.top, e.bottom),
+              t = Y(e.left, e.right);
+            return function (n) {
+              var a = r(n.top) && r(n.bottom) && t(n.left) && t(n.right);
+              if (a) return !0;
+              var i = r(n.top) || r(n.bottom),
+                o = t(n.left) || t(n.right),
+                l = i && o;
+              if (l) return !0;
+              var s = n.top < e.top && n.bottom > e.bottom,
+                f = n.left < e.left && n.right > e.right,
+                d = s && f;
+              if (d) return !0;
+              var c = (s && o) || (f && i);
+              return c;
+            };
+          },
+          ui = function (e) {
+            var r = Y(e.top, e.bottom),
+              t = Y(e.left, e.right);
+            return function (n) {
+              var a = r(n.top) && r(n.bottom) && t(n.left) && t(n.right);
+              return a;
+            };
+          },
+          Vr = {
+            direction: "vertical",
+            line: "y",
+            crossAxisLine: "x",
+            start: "top",
+            end: "bottom",
+            size: "height",
+            crossAxisStart: "left",
+            crossAxisEnd: "right",
+            crossAxisSize: "width",
+          },
+          Kt = {
+            direction: "horizontal",
+            line: "x",
+            crossAxisLine: "y",
+            start: "left",
+            end: "right",
+            size: "width",
+            crossAxisStart: "top",
+            crossAxisEnd: "bottom",
+            crossAxisSize: "height",
+          },
+          ci = function (e) {
+            return function (r) {
+              var t = Y(r.top, r.bottom),
+                n = Y(r.left, r.right);
+              return function (a) {
+                return e === Vr
+                  ? t(a.top) && t(a.bottom)
+                  : n(a.left) && n(a.right);
+              };
+            };
+          },
+          di = function (r, t) {
+            var n = t.frame ? t.frame.scroll.diff.displacement : W;
+            return We(r, n);
+          },
+          fi = function (r, t, n) {
+            return t.subject.active ? n(t.subject.active)(r) : !1;
+          },
+          pi = function (r, t, n) {
+            return n(t)(r);
+          },
+          qr = function (r) {
+            var t = r.target,
+              n = r.destination,
+              a = r.viewport,
+              i = r.withDroppableDisplacement,
+              o = r.isVisibleThroughFrameFn,
+              l = i ? di(t, n) : t;
+            return fi(l, n, o) && pi(l, a, o);
+          },
+          vi = function (r) {
+            return qr((0, A.A)({}, r, { isVisibleThroughFrameFn: jt }));
+          },
+          Yt = function (r) {
+            return qr((0, A.A)({}, r, { isVisibleThroughFrameFn: ui }));
+          },
+          gi = function (r) {
+            return qr(
+              (0, A.A)({}, r, {
+                isVisibleThroughFrameFn: ci(r.destination.axis),
+              }),
+            );
+          },
+          mi = function (r, t, n) {
+            if (typeof n == "boolean") return n;
+            if (!t) return !0;
+            var a = t.invisible,
+              i = t.visible;
+            if (a[r]) return !1;
+            var o = i[r];
+            return o ? o.shouldAnimate : !0;
+          };
+        function bi(e, r) {
+          var t = e.page.marginBox,
+            n = { top: r.point.y, right: 0, bottom: 0, left: r.point.x };
+          return (0, M.l)((0, M.fT)(t, n));
+        }
+        function Ue(e) {
+          var r = e.afterDragging,
+            t = e.destination,
+            n = e.displacedBy,
             a = e.viewport,
-            l = e.afterCritical,
-            u = Sr(n.page.borderBox, r),
-            c = Cr({ pageBorderBox: u, draggable: n, droppables: i });
-          if (!c) return He;
-          var s = i[c],
-            d = Ge(s.descriptor.id, t),
-            p = (function (e, r) {
-              var n = e.frame;
-              return n ? Sr(r, n.scroll.diff.value) : r;
-            })(s, u);
-          return (
-            (function (e) {
-              var r = e.draggable,
-                n = e.pageBorderBoxWithDroppableScroll,
-                t = e.previousImpact,
-                i = e.destination,
-                o = e.insideDestination,
-                a = e.afterCritical;
-              if (!i.isCombineEnabled) return null;
-              var l = i.axis,
-                u = hr(i.axis, r.displaceBy),
-                c = u.value,
-                s = n[l.start],
-                d = n[l.end],
-                p = Re(Fe(r, o), function (e) {
-                  var r = e.descriptor.id,
-                    n = e.page.borderBox,
-                    i = n[l.size] / 4,
-                    o = er(r, a),
-                    u = Pr({ displaced: t.displaced, id: r });
-                  return o
-                    ? u
-                      ? d > n[l.start] + i && d < n[l.end] - i
-                      : s > n[l.start] - c + i && s < n[l.end] - c - i
-                    : u
-                      ? d > n[l.start] + c + i && d < n[l.end] + c - i
-                      : s > n[l.start] + i && s < n[l.end] - i;
-                });
-              return p
-                ? {
-                    displacedBy: u,
-                    displaced: t.displaced,
-                    at: {
-                      type: "COMBINE",
-                      combine: {
-                        draggableId: p.descriptor.id,
-                        droppableId: i.descriptor.id,
-                      },
-                    },
-                  }
-                : null;
-            })({
-              pageBorderBoxWithDroppableScroll: p,
-              draggable: n,
-              previousImpact: o,
-              destination: s,
-              insideDestination: d,
-              afterCritical: l,
-            }) ||
-            (function (e) {
-              var r = e.pageBorderBoxWithDroppableScroll,
-                n = e.draggable,
-                t = e.destination,
-                i = e.insideDestination,
-                o = e.last,
-                a = e.viewport,
-                l = e.afterCritical,
-                u = t.axis,
-                c = hr(t.axis, n.displaceBy),
-                s = c.value,
-                d = r[u.start],
-                p = r[u.end],
-                f = (function (e) {
-                  var r = e.draggable,
-                    n = e.closest,
-                    t = e.inHomeList;
-                  return n
-                    ? t && n.descriptor.index > r.descriptor.index
-                      ? n.descriptor.index - 1
-                      : n.descriptor.index
-                    : null;
-                })({
-                  draggable: n,
-                  closest: Re(Fe(n, i), function (e) {
-                    var r = e.descriptor.id,
-                      n = e.page.borderBox.center[u.line],
-                      t = er(r, l),
-                      i = Pr({ displaced: o, id: r });
-                    return t
-                      ? i
-                        ? p <= n
-                        : d < n - s
-                      : i
-                        ? p <= n + s
-                        : d < n;
-                  }),
-                  inHomeList: ke(n, t),
-                });
-              return Ze({
-                draggable: n,
-                insideDestination: i,
+            i = e.forceShouldAnimate,
+            o = e.last;
+          return r.reduce(
+            function (s, f) {
+              var d = bi(f, n),
+                c = f.descriptor.id;
+              s.all.push(c);
+              var u = vi({
+                target: d,
                 destination: t,
                 viewport: a,
-                last: o,
-                displacedBy: c,
-                index: f,
+                withDroppableDisplacement: !0,
               });
-            })({
-              pageBorderBoxWithDroppableScroll: p,
-              draggable: n,
-              destination: s,
-              insideDestination: d,
-              last: o.displaced,
-              viewport: a,
-              afterCritical: l,
-            })
+              if (!u) return (s.invisible[f.descriptor.id] = !0), s;
+              var p = mi(c, o, i),
+                v = { draggableId: c, shouldAnimate: p };
+              return (s.visible[c] = v), s;
+            },
+            { all: [], visible: {}, invisible: {} },
           );
-        },
-        Rr = function (e, r) {
-          var n;
-          return (0, o.A)({}, e, (((n = {})[r.descriptor.id] = r), n));
-        },
-        Br = function (e) {
-          var r = e.previousImpact,
-            n = e.impact,
-            t = e.droppables,
-            i = xr(r),
-            a = xr(n);
-          if (!i) return t;
-          if (i === a) return t;
-          var l = t[i];
-          if (!l.subject.withPlaceholder) return t;
-          var u = (function (e) {
-            var r = e.subject.withPlaceholder;
-            r || le(!1);
-            var n = e.frame;
+        }
+        function hi(e, r) {
+          if (!e.length) return 0;
+          var t = e[e.length - 1].descriptor.index;
+          return r.inHomeList ? t : t + 1;
+        }
+        function Jt(e) {
+          var r = e.insideDestination,
+            t = e.inHomeList,
+            n = e.displacedBy,
+            a = e.destination,
+            i = hi(r, { inHomeList: t });
+          return {
+            displaced: ke,
+            displacedBy: n,
+            at: {
+              type: "REORDER",
+              destination: { droppableId: a.descriptor.id, index: i },
+            },
+          };
+        }
+        function fr(e) {
+          var r = e.draggable,
+            t = e.insideDestination,
+            n = e.destination,
+            a = e.viewport,
+            i = e.displacedBy,
+            o = e.last,
+            l = e.index,
+            s = e.forceShouldAnimate,
+            f = Ae(r, n);
+          if (l == null)
+            return Jt({
+              insideDestination: t,
+              inHomeList: f,
+              displacedBy: i,
+              destination: n,
+            });
+          var d = be(t, function (g) {
+            return g.descriptor.index === l;
+          });
+          if (!d)
+            return Jt({
+              insideDestination: t,
+              inHomeList: f,
+              displacedBy: i,
+              destination: n,
+            });
+          var c = dr(r, t),
+            u = t.indexOf(d),
+            p = c.slice(u),
+            v = Ue({
+              afterDragging: p,
+              destination: n,
+              displacedBy: i,
+              last: o,
+              viewport: a.frame,
+              forceShouldAnimate: s,
+            });
+          return {
+            displaced: v,
+            displacedBy: i,
+            at: {
+              type: "REORDER",
+              destination: { droppableId: n.descriptor.id, index: l },
+            },
+          };
+        }
+        function le(e, r) {
+          return !!r.effected[e];
+        }
+        var yi = function (e) {
+            var r = e.isMovingForward,
+              t = e.destination,
+              n = e.draggables,
+              a = e.combine,
+              i = e.afterCritical;
+            if (!t.isCombineEnabled) return null;
+            var o = a.draggableId,
+              l = n[o],
+              s = l.descriptor.index,
+              f = le(o, i);
+            return f ? (r ? s : s - 1) : r ? s + 1 : s;
+          },
+          Di = function (e) {
+            var r = e.isMovingForward,
+              t = e.isInHomeList,
+              n = e.insideDestination,
+              a = e.location;
+            if (!n.length) return null;
+            var i = a.index,
+              o = r ? i + 1 : i - 1,
+              l = n[0].descriptor.index,
+              s = n[n.length - 1].descriptor.index,
+              f = t ? s : s + 1;
+            return o < l || o > f ? null : o;
+          },
+          Ii = function (e) {
+            var r = e.isMovingForward,
+              t = e.isInHomeList,
+              n = e.draggable,
+              a = e.draggables,
+              i = e.destination,
+              o = e.insideDestination,
+              l = e.previousImpact,
+              s = e.viewport,
+              f = e.afterCritical,
+              d = l.at;
+            if ((d || m(!1), d.type === "REORDER")) {
+              var c = Di({
+                isMovingForward: r,
+                isInHomeList: t,
+                location: d.destination,
+                insideDestination: o,
+              });
+              return c == null
+                ? null
+                : fr({
+                    draggable: n,
+                    insideDestination: o,
+                    destination: i,
+                    viewport: s,
+                    last: l.displaced,
+                    displacedBy: l.displacedBy,
+                    index: c,
+                  });
+            }
+            var u = yi({
+              isMovingForward: r,
+              destination: i,
+              displaced: l.displaced,
+              draggables: a,
+              combine: d.combine,
+              afterCritical: f,
+            });
+            return u == null
+              ? null
+              : fr({
+                  draggable: n,
+                  insideDestination: o,
+                  destination: i,
+                  viewport: s,
+                  last: l.displaced,
+                  displacedBy: l.displacedBy,
+                  index: u,
+                });
+          },
+          xi = function (e) {
+            var r = e.displaced,
+              t = e.afterCritical,
+              n = e.combineWith,
+              a = e.displacedBy,
+              i = !!(r.visible[n] || r.invisible[n]);
+            return le(n, t) ? (i ? W : Se(a.point)) : i ? a.point : W;
+          },
+          Si = function (e) {
+            var r = e.afterCritical,
+              t = e.impact,
+              n = e.draggables,
+              a = cr(t);
+            a || m(!1);
+            var i = a.draggableId,
+              o = n[i].page.borderBox.center,
+              l = xi({
+                displaced: t.displaced,
+                afterCritical: r,
+                combineWith: i,
+                displacedBy: t.displacedBy,
+              });
+            return k(o, l);
+          },
+          Xt = function (r, t) {
+            return t.margin[r.start] + t.borderBox[r.size] / 2;
+          },
+          Ci = function (r, t) {
+            return t.margin[r.end] + t.borderBox[r.size] / 2;
+          },
+          $r = function (r, t, n) {
+            return (
+              t[r.crossAxisStart] +
+              n.margin[r.crossAxisStart] +
+              n.borderBox[r.crossAxisSize] / 2
+            );
+          },
+          Qt = function (r) {
+            var t = r.axis,
+              n = r.moveRelativeTo,
+              a = r.isMoving;
+            return me(
+              t.line,
+              n.marginBox[t.end] + Xt(t, a),
+              $r(t, n.marginBox, a),
+            );
+          },
+          Zt = function (r) {
+            var t = r.axis,
+              n = r.moveRelativeTo,
+              a = r.isMoving;
+            return me(
+              t.line,
+              n.marginBox[t.start] - Ci(t, a),
+              $r(t, n.marginBox, a),
+            );
+          },
+          wi = function (r) {
+            var t = r.axis,
+              n = r.moveInto,
+              a = r.isMoving;
+            return me(
+              t.line,
+              n.contentBox[t.start] + Xt(t, a),
+              $r(t, n.contentBox, a),
+            );
+          },
+          Ai = function (e) {
+            var r = e.impact,
+              t = e.draggable,
+              n = e.draggables,
+              a = e.droppable,
+              i = e.afterCritical,
+              o = we(a.descriptor.id, n),
+              l = t.page,
+              s = a.axis;
+            if (!o.length)
+              return wi({ axis: s, moveInto: a.page, isMoving: l });
+            var f = r.displaced,
+              d = r.displacedBy,
+              c = f.all[0];
+            if (c) {
+              var u = n[c];
+              if (le(c, i))
+                return Zt({ axis: s, moveRelativeTo: u.page, isMoving: l });
+              var p = (0, M.cY)(u.page, d.point);
+              return Zt({ axis: s, moveRelativeTo: p, isMoving: l });
+            }
+            var v = o[o.length - 1];
+            if (v.descriptor.id === t.descriptor.id) return l.borderBox.center;
+            if (le(v.descriptor.id, i)) {
+              var g = (0, M.cY)(v.page, Se(i.displacedBy.point));
+              return Qt({ axis: s, moveRelativeTo: g, isMoving: l });
+            }
+            return Qt({ axis: s, moveRelativeTo: v.page, isMoving: l });
+          },
+          zr = function (e, r) {
+            var t = e.frame;
+            return t ? k(r, t.scroll.diff.displacement) : r;
+          },
+          Ei = function (r) {
+            var t = r.impact,
+              n = r.draggable,
+              a = r.droppable,
+              i = r.draggables,
+              o = r.afterCritical,
+              l = n.page.borderBox.center,
+              s = t.at;
+            return !a || !s
+              ? l
+              : s.type === "REORDER"
+                ? Ai({
+                    impact: t,
+                    draggable: n,
+                    draggables: i,
+                    droppable: a,
+                    afterCritical: o,
+                  })
+                : Si({ impact: t, draggables: i, afterCritical: o });
+          },
+          pr = function (e) {
+            var r = Ei(e),
+              t = e.droppable,
+              n = t ? zr(t, r) : r;
+            return n;
+          },
+          _t = function (e, r) {
+            var t = q(r, e.scroll.initial),
+              n = Se(t),
+              a = (0, M.l)({
+                top: r.y,
+                bottom: r.y + e.frame.height,
+                left: r.x,
+                right: r.x + e.frame.width,
+              }),
+              i = {
+                frame: a,
+                scroll: {
+                  initial: e.scroll.initial,
+                  max: e.scroll.max,
+                  current: r,
+                  diff: { value: t, displacement: n },
+                },
+              };
+            return i;
+          };
+        function en(e, r) {
+          return e.map(function (t) {
+            return r[t];
+          });
+        }
+        function Pi(e, r) {
+          for (var t = 0; t < r.length; t++) {
+            var n = r[t].visible[e];
+            if (n) return n;
+          }
+          return null;
+        }
+        var Ri = function (e) {
+            var r = e.impact,
+              t = e.viewport,
+              n = e.destination,
+              a = e.draggables,
+              i = e.maxScrollChange,
+              o = _t(t, k(t.scroll.current, i)),
+              l = n.frame ? kr(n, k(n.frame.scroll.current, i)) : n,
+              s = r.displaced,
+              f = Ue({
+                afterDragging: en(s.all, a),
+                destination: n,
+                displacedBy: r.displacedBy,
+                viewport: o.frame,
+                last: s,
+                forceShouldAnimate: !1,
+              }),
+              d = Ue({
+                afterDragging: en(s.all, a),
+                destination: l,
+                displacedBy: r.displacedBy,
+                viewport: t.frame,
+                last: s,
+                forceShouldAnimate: !1,
+              }),
+              c = {},
+              u = {},
+              p = [s, f, d];
+            s.all.forEach(function (g) {
+              var b = Pi(g, p);
+              if (b) {
+                u[g] = b;
+                return;
+              }
+              c[g] = !0;
+            });
+            var v = (0, A.A)({}, r, {
+              displaced: { all: s.all, invisible: c, visible: u },
+            });
+            return v;
+          },
+          Bi = function (e, r) {
+            return k(e.scroll.diff.displacement, r);
+          },
+          jr = function (e) {
+            var r = e.pageBorderBoxCenter,
+              t = e.draggable,
+              n = e.viewport,
+              a = Bi(n, r),
+              i = q(a, t.page.borderBox.center);
+            return k(t.client.borderBox.center, i);
+          },
+          rn = function (e) {
+            var r = e.draggable,
+              t = e.destination,
+              n = e.newPageBorderBoxCenter,
+              a = e.viewport,
+              i = e.withDroppableDisplacement,
+              o = e.onlyOnMainAxis,
+              l = o === void 0 ? !1 : o,
+              s = q(n, r.page.borderBox.center),
+              f = We(r.page.borderBox, s),
+              d = {
+                target: f,
+                destination: t,
+                withDroppableDisplacement: i,
+                viewport: a,
+              };
+            return l ? gi(d) : Yt(d);
+          },
+          Oi = function (e) {
+            var r = e.isMovingForward,
+              t = e.draggable,
+              n = e.destination,
+              a = e.draggables,
+              i = e.previousImpact,
+              o = e.viewport,
+              l = e.previousPageBorderBoxCenter,
+              s = e.previousClientSelection,
+              f = e.afterCritical;
+            if (!n.isEnabled) return null;
+            var d = we(n.descriptor.id, a),
+              c = Ae(t, n),
+              u =
+                li({
+                  isMovingForward: r,
+                  draggable: t,
+                  destination: n,
+                  insideDestination: d,
+                  previousImpact: i,
+                }) ||
+                Ii({
+                  isMovingForward: r,
+                  isInHomeList: c,
+                  draggable: t,
+                  draggables: a,
+                  destination: n,
+                  insideDestination: d,
+                  previousImpact: i,
+                  viewport: o,
+                  afterCritical: f,
+                });
+            if (!u) return null;
+            var p = pr({
+                impact: u,
+                draggable: t,
+                droppable: n,
+                draggables: a,
+                afterCritical: f,
+              }),
+              v = rn({
+                draggable: t,
+                destination: n,
+                newPageBorderBoxCenter: p,
+                viewport: o.frame,
+                withDroppableDisplacement: !1,
+                onlyOnMainAxis: !0,
+              });
+            if (v) {
+              var g = jr({ pageBorderBoxCenter: p, draggable: t, viewport: o });
+              return { clientSelection: g, impact: u, scrollJumpRequest: null };
+            }
+            var b = q(p, l),
+              y = Ri({
+                impact: u,
+                viewport: o,
+                destination: n,
+                draggables: a,
+                maxScrollChange: b,
+              });
+            return { clientSelection: s, impact: y, scrollJumpRequest: b };
+          },
+          H = function (r) {
+            var t = r.subject.active;
+            return t || m(!1), t;
+          },
+          Ti = function (e) {
+            var r = e.isMovingForward,
+              t = e.pageBorderBoxCenter,
+              n = e.source,
+              a = e.droppables,
+              i = e.viewport,
+              o = n.subject.active;
+            if (!o) return null;
+            var l = n.axis,
+              s = Y(o[l.start], o[l.end]),
+              f = ur(a)
+                .filter(function (c) {
+                  return c !== n;
+                })
+                .filter(function (c) {
+                  return c.isEnabled;
+                })
+                .filter(function (c) {
+                  return !!c.subject.active;
+                })
+                .filter(function (c) {
+                  return jt(i.frame)(H(c));
+                })
+                .filter(function (c) {
+                  var u = H(c);
+                  return r
+                    ? o[l.crossAxisEnd] < u[l.crossAxisEnd]
+                    : u[l.crossAxisStart] < o[l.crossAxisStart];
+                })
+                .filter(function (c) {
+                  var u = H(c),
+                    p = Y(u[l.start], u[l.end]);
+                  return (
+                    s(u[l.start]) || s(u[l.end]) || p(o[l.start]) || p(o[l.end])
+                  );
+                })
+                .sort(function (c, u) {
+                  var p = H(c)[l.crossAxisStart],
+                    v = H(u)[l.crossAxisStart];
+                  return r ? p - v : v - p;
+                })
+                .filter(function (c, u, p) {
+                  return H(c)[l.crossAxisStart] === H(p[0])[l.crossAxisStart];
+                });
+            if (!f.length) return null;
+            if (f.length === 1) return f[0];
+            var d = f.filter(function (c) {
+              var u = Y(H(c)[l.start], H(c)[l.end]);
+              return u(t[l.line]);
+            });
+            return d.length === 1
+              ? d[0]
+              : d.length > 1
+                ? d.sort(function (c, u) {
+                    return H(c)[l.start] - H(u)[l.start];
+                  })[0]
+                : f.sort(function (c, u) {
+                    var p = Ut(t, Vt(H(c))),
+                      v = Ut(t, Vt(H(u)));
+                    return p !== v ? p - v : H(c)[l.start] - H(u)[l.start];
+                  })[0];
+          },
+          tn = function (r, t) {
+            var n = r.page.borderBox.center;
+            return le(r.descriptor.id, t) ? q(n, t.displacedBy.point) : n;
+          },
+          Ni = function (r, t) {
+            var n = r.page.borderBox;
+            return le(r.descriptor.id, t) ? We(n, Se(t.displacedBy.point)) : n;
+          },
+          Mi = function (e) {
+            var r = e.pageBorderBoxCenter,
+              t = e.viewport,
+              n = e.destination,
+              a = e.insideDestination,
+              i = e.afterCritical,
+              o = a
+                .filter(function (l) {
+                  return Yt({
+                    target: Ni(l, i),
+                    destination: n,
+                    viewport: t.frame,
+                    withDroppableDisplacement: !0,
+                  });
+                })
+                .sort(function (l, s) {
+                  var f = Ge(r, zr(n, tn(l, i))),
+                    d = Ge(r, zr(n, tn(s, i)));
+                  return f < d
+                    ? -1
+                    : d < f
+                      ? 1
+                      : l.descriptor.index - s.descriptor.index;
+                });
+            return o[0] || null;
+          },
+          He = G(function (r, t) {
+            var n = t[r.line];
+            return { value: n, point: me(r.line, n) };
+          }),
+          Li = function (r, t, n) {
+            var a = r.axis;
+            if (r.descriptor.mode === "virtual") return me(a.line, t[a.line]);
+            var i = r.subject.page.contentBox[a.size],
+              o = we(r.descriptor.id, n),
+              l = o.reduce(function (d, c) {
+                return d + c.client.marginBox[a.size];
+              }, 0),
+              s = l + t[a.line],
+              f = s - i;
+            return f <= 0 ? null : me(a.line, f);
+          },
+          nn = function (r, t) {
+            return (0, A.A)({}, r, {
+              scroll: (0, A.A)({}, r.scroll, { max: t }),
+            });
+          },
+          an = function (r, t, n) {
+            var a = r.frame;
+            Ae(t, r) && m(!1), r.subject.withPlaceholder && m(!1);
+            var i = He(r.axis, t.displaceBy).point,
+              o = Li(r, i, n),
+              l = {
+                placeholderSize: i,
+                increasedBy: o,
+                oldFrameMaxScroll: r.frame ? r.frame.scroll.max : null,
+              };
+            if (!a) {
+              var s = Ce({
+                page: r.subject.page,
+                withPlaceholder: l,
+                axis: r.axis,
+                frame: r.frame,
+              });
+              return (0, A.A)({}, r, { subject: s });
+            }
+            var f = o ? k(a.scroll.max, o) : a.scroll.max,
+              d = nn(a, f),
+              c = Ce({
+                page: r.subject.page,
+                withPlaceholder: l,
+                axis: r.axis,
+                frame: d,
+              });
+            return (0, A.A)({}, r, { subject: c, frame: d });
+          },
+          Fi = function (r) {
+            var t = r.subject.withPlaceholder;
+            t || m(!1);
+            var n = r.frame;
             if (!n) {
-              var t = Ce({
-                page: e.subject.page,
-                axis: e.axis,
+              var a = Ce({
+                page: r.subject.page,
+                axis: r.axis,
                 frame: null,
                 withPlaceholder: null,
               });
-              return (0, o.A)({}, e, { subject: t });
+              return (0, A.A)({}, r, { subject: a });
             }
-            var i = r.oldFrameMaxScroll;
-            i || le(!1);
-            var a = yr(n, i),
+            var i = t.oldFrameMaxScroll;
+            i || m(!1);
+            var o = nn(n, i),
               l = Ce({
-                page: e.subject.page,
-                axis: e.axis,
-                frame: a,
+                page: r.subject.page,
+                axis: r.axis,
+                frame: o,
                 withPlaceholder: null,
               });
-            return (0, o.A)({}, e, { subject: l, frame: a });
-          })(l);
-          return Rr(t, u);
-        },
-        Or = function (e) {
-          var r = e.state,
-            n = e.clientSelection,
-            t = e.dimensions,
-            i = e.viewport,
-            a = e.impact,
-            l = e.scrollJumpRequest,
-            u = i || r.viewport,
-            c = t || r.dimensions,
-            s = n || r.current.client.selection,
-            d = me(s, r.initial.client.selection),
-            p = {
-              offset: d,
-              selection: s,
-              borderBoxCenter: ve(r.initial.client.borderBoxCenter, d),
-            },
-            f = {
-              selection: ve(p.selection, u.scroll.current),
-              borderBoxCenter: ve(p.borderBoxCenter, u.scroll.current),
-              offset: ve(p.offset, u.scroll.diff.value),
-            },
-            g = { client: p, page: f };
-          if ("COLLECTING" === r.phase)
-            return (0, o.A)({ phase: "COLLECTING" }, r, {
-              dimensions: c,
-              viewport: u,
-              current: g,
-            });
-          var v = c.draggables[r.critical.draggable.id],
-            m =
-              a ||
-              Nr({
-                pageOffset: f.offset,
-                draggable: v,
-                draggables: c.draggables,
-                droppables: c.droppables,
-                previousImpact: r.impact,
-                viewport: u,
-                afterCritical: r.afterCritical,
-              }),
-            b = (function (e) {
-              var r = e.draggable,
-                n = e.draggables,
-                t = e.droppables,
-                i = e.previousImpact,
-                o = e.impact,
-                a = Br({ previousImpact: i, impact: o, droppables: t }),
-                l = xr(o);
-              if (!l) return a;
-              var u = t[l];
-              if (ke(r, u)) return a;
-              if (u.subject.withPlaceholder) return a;
-              var c = Ir(u, r, n);
-              return Rr(a, c);
-            })({
-              draggable: v,
-              impact: m,
-              previousImpact: r.impact,
-              draggables: c.draggables,
-              droppables: c.droppables,
-            });
-          return (0, o.A)({}, r, {
-            current: g,
-            dimensions: { draggables: c.draggables, droppables: b },
-            impact: m,
-            viewport: u,
-            scrollJumpRequest: l || null,
-            forceShouldAnimate: !l && null,
-          });
-        };
-      var Tr = function (e) {
-          var r = e.impact,
-            n = e.viewport,
-            t = e.draggables,
-            i = e.destination,
-            a = e.forceShouldAnimate,
-            l = r.displaced,
-            u = (function (e, r) {
-              return e.map(function (e) {
-                return r[e];
-              });
-            })(l.all, t),
-            c = $e({
-              afterDragging: u,
-              destination: i,
-              displacedBy: r.displacedBy,
-              viewport: n.frame,
-              forceShouldAnimate: a,
-              last: l,
-            });
-          return (0, o.A)({}, r, { displaced: c });
-        },
-        Lr = function (e) {
-          var r = e.impact,
-            n = e.draggable,
-            t = e.droppable,
-            i = e.draggables,
-            o = e.viewport,
-            a = e.afterCritical,
-            l = cr({
-              impact: r,
-              draggable: n,
-              draggables: i,
-              droppable: t,
-              afterCritical: a,
-            });
-          return pr({ pageBorderBoxCenter: l, draggable: n, viewport: o });
-        },
-        Gr = function (e) {
-          var r = e.state,
-            n = e.dimensions,
-            t = e.viewport;
-          "SNAP" !== r.movementMode && le(!1);
-          var i = r.impact,
-            o = t || r.viewport,
-            a = n || r.dimensions,
-            l = a.draggables,
-            u = a.droppables,
-            c = l[r.critical.draggable.id],
-            s = xr(i);
-          s || le(!1);
-          var d = u[s],
-            p = Tr({ impact: i, viewport: o, destination: d, draggables: l }),
-            f = Lr({
-              impact: p,
-              draggable: c,
-              droppable: d,
-              draggables: l,
-              viewport: o,
-              afterCritical: r.afterCritical,
-            });
-          return Or({
-            impact: p,
-            clientSelection: f,
-            state: r,
-            dimensions: a,
-            viewport: o,
-          });
-        },
-        Mr = function (e) {
-          var r = e.draggable,
-            n = e.home,
-            t = e.draggables,
-            i = e.viewport,
-            o = hr(n.axis, r.displaceBy),
-            a = Ge(n.descriptor.id, t),
-            l = a.indexOf(r);
-          -1 === l && le(!1);
-          var u,
-            c = a.slice(l + 1),
-            s = c.reduce(function (e, r) {
-              return (e[r.descriptor.id] = !0), e;
-            }, {}),
-            d = {
-              inVirtualList: "virtual" === n.descriptor.mode,
-              displacedBy: o,
-              effected: s,
-            };
-          return {
-            impact: {
-              displaced: $e({
-                afterDragging: c,
-                destination: n,
-                displacedBy: o,
-                last: null,
-                viewport: i.frame,
-                forceShouldAnimate: !1,
-              }),
-              displacedBy: o,
-              at: {
-                type: "REORDER",
-                destination:
-                  ((u = r.descriptor),
-                  { index: u.index, droppableId: u.droppableId }),
-              },
-            },
-            afterCritical: d,
-          };
-        },
-        _r = function (e) {
-          0;
-        },
-        Fr = function (e) {
-          0;
-        },
-        kr = function (e) {
-          var r = e.additions,
-            n = e.updatedDroppables,
-            t = e.viewport,
-            i = t.scroll.diff.value;
-          return r.map(function (e) {
-            var r = e.descriptor.droppableId,
-              a = (function (e) {
-                var r = e.frame;
-                return r || le(!1), r;
-              })(n[r]),
-              l = a.scroll.diff.value,
-              u = (function (e) {
-                var r = e.draggable,
-                  n = e.offset,
-                  t = e.initialWindowScroll,
-                  i = (0, J.cY)(r.client, n),
-                  a = (0, J.SQ)(i, t);
-                return (0, o.A)({}, r, {
-                  placeholder: (0, o.A)({}, r.placeholder, { client: i }),
-                  client: i,
-                  page: a,
+            return (0, A.A)({}, r, { subject: l, frame: o });
+          },
+          Gi = function (e) {
+            var r = e.previousPageBorderBoxCenter,
+              t = e.moveRelativeTo,
+              n = e.insideDestination,
+              a = e.draggable,
+              i = e.draggables,
+              o = e.destination,
+              l = e.viewport,
+              s = e.afterCritical;
+            if (!t) {
+              if (n.length) return null;
+              var f = {
+                  displaced: ke,
+                  displacedBy: zt,
+                  at: {
+                    type: "REORDER",
+                    destination: { droppableId: o.descriptor.id, index: 0 },
+                  },
+                },
+                d = pr({
+                  impact: f,
+                  draggable: a,
+                  droppable: o,
+                  draggables: i,
+                  afterCritical: s,
+                }),
+                c = Ae(a, o) ? o : an(o, a, i),
+                u = rn({
+                  draggable: a,
+                  destination: c,
+                  newPageBorderBoxCenter: d,
+                  viewport: l.frame,
+                  withDroppableDisplacement: !1,
+                  onlyOnMainAxis: !0,
                 });
-              })({
-                draggable: e,
-                offset: ve(i, l),
-                initialWindowScroll: t.scroll.initial,
+              return u ? f : null;
+            }
+            var p = r[o.axis.line] <= t.page.borderBox.center[o.axis.line],
+              v = (function () {
+                var b = t.descriptor.index;
+                return t.descriptor.id === a.descriptor.id || p ? b : b + 1;
+              })(),
+              g = He(o.axis, a.displaceBy);
+            return fr({
+              draggable: a,
+              insideDestination: n,
+              destination: o,
+              viewport: l,
+              displacedBy: g,
+              last: ke,
+              index: v,
+            });
+          },
+          Wi = function (e) {
+            var r = e.isMovingForward,
+              t = e.previousPageBorderBoxCenter,
+              n = e.draggable,
+              a = e.isOver,
+              i = e.draggables,
+              o = e.droppables,
+              l = e.viewport,
+              s = e.afterCritical,
+              f = Ti({
+                isMovingForward: r,
+                pageBorderBoxCenter: t,
+                source: a,
+                droppables: o,
+                viewport: l,
               });
-            return u;
-          });
-        },
-        Wr = function (e) {
-          return "SNAP" === e.movementMode;
-        },
-        Ur = function (e, r, n) {
-          var t = (function (e, r) {
-            return {
-              draggables: e.draggables,
-              droppables: Rr(e.droppables, r),
-            };
-          })(e.dimensions, r);
-          return !Wr(e) || n
-            ? Or({ state: e, dimensions: t })
-            : Gr({ state: e, dimensions: t });
-        };
-      function Hr(e) {
-        return e.isDragging && "SNAP" === e.movementMode
-          ? (0, o.A)({ phase: "DRAGGING" }, e, { scrollJumpRequest: null })
-          : e;
-      }
-      var jr = { phase: "IDLE", completed: null, shouldFlush: !1 },
-        qr = function (e, r) {
-          if ((void 0 === e && (e = jr), "FLUSH" === r.type))
-            return (0, o.A)({}, jr, { shouldFlush: !0 });
-          if ("INITIAL_PUBLISH" === r.type) {
-            "IDLE" !== e.phase && le(!1);
-            var n = r.payload,
-              t = n.critical,
-              i = n.clientSelection,
-              a = n.viewport,
-              l = n.dimensions,
-              u = n.movementMode,
-              c = l.draggables[t.draggable.id],
-              s = l.droppables[t.droppable.id],
-              d = {
-                selection: i,
-                borderBoxCenter: c.client.borderBox.center,
-                offset: ge,
-              },
-              p = {
-                client: d,
-                page: {
-                  selection: ve(d.selection, a.scroll.initial),
-                  borderBoxCenter: ve(d.selection, a.scroll.initial),
-                  offset: ve(d.selection, a.scroll.diff.value),
+            if (!f) return null;
+            var d = we(f.descriptor.id, i),
+              c = Mi({
+                pageBorderBoxCenter: t,
+                viewport: l,
+                destination: f,
+                insideDestination: d,
+                afterCritical: s,
+              }),
+              u = Gi({
+                previousPageBorderBoxCenter: t,
+                destination: f,
+                draggable: n,
+                draggables: i,
+                moveRelativeTo: c,
+                insideDestination: d,
+                viewport: l,
+                afterCritical: s,
+              });
+            if (!u) return null;
+            var p = pr({
+                impact: u,
+                draggable: n,
+                droppable: f,
+                draggables: i,
+                afterCritical: s,
+              }),
+              v = jr({ pageBorderBoxCenter: p, draggable: n, viewport: l });
+            return { clientSelection: v, impact: u, scrollJumpRequest: null };
+          },
+          $ = function (e) {
+            var r = e.at;
+            return r
+              ? r.type === "REORDER"
+                ? r.destination.droppableId
+                : r.combine.droppableId
+              : null;
+          },
+          ki = function (r, t) {
+            var n = $(r);
+            return n ? t[n] : null;
+          },
+          Ui = function (e) {
+            var r = e.state,
+              t = e.type,
+              n = ki(r.impact, r.dimensions.droppables),
+              a = !!n,
+              i = r.dimensions.droppables[r.critical.droppable.id],
+              o = n || i,
+              l = o.axis.direction,
+              s =
+                (l === "vertical" && (t === "MOVE_UP" || t === "MOVE_DOWN")) ||
+                (l === "horizontal" &&
+                  (t === "MOVE_LEFT" || t === "MOVE_RIGHT"));
+            if (s && !a) return null;
+            var f = t === "MOVE_DOWN" || t === "MOVE_RIGHT",
+              d = r.dimensions.draggables[r.critical.draggable.id],
+              c = r.current.page.borderBoxCenter,
+              u = r.dimensions,
+              p = u.draggables,
+              v = u.droppables;
+            return s
+              ? Oi({
+                  isMovingForward: f,
+                  previousPageBorderBoxCenter: c,
+                  draggable: d,
+                  destination: o,
+                  draggables: p,
+                  viewport: r.viewport,
+                  previousClientSelection: r.current.client.selection,
+                  previousImpact: r.impact,
+                  afterCritical: r.afterCritical,
+                })
+              : Wi({
+                  isMovingForward: f,
+                  previousPageBorderBoxCenter: c,
+                  draggable: d,
+                  isOver: o,
+                  draggables: p,
+                  droppables: v,
+                  viewport: r.viewport,
+                  afterCritical: r.afterCritical,
+                });
+          };
+        function he(e) {
+          return e.phase === "DRAGGING" || e.phase === "COLLECTING";
+        }
+        function on(e) {
+          var r = Y(e.top, e.bottom),
+            t = Y(e.left, e.right);
+          return function (a) {
+            return r(a.y) && t(a.x);
+          };
+        }
+        function Hi(e, r) {
+          return (
+            e.left < r.right &&
+            e.right > r.left &&
+            e.top < r.bottom &&
+            e.bottom > r.top
+          );
+        }
+        function Vi(e) {
+          var r = e.pageBorderBox,
+            t = e.draggable,
+            n = e.candidates,
+            a = t.page.borderBox.center,
+            i = n
+              .map(function (o) {
+                var l = o.axis,
+                  s = me(
+                    o.axis.line,
+                    r.center[l.line],
+                    o.page.borderBox.center[l.crossAxisLine],
+                  );
+                return { id: o.descriptor.id, distance: Ge(a, s) };
+              })
+              .sort(function (o, l) {
+                return l.distance - o.distance;
+              });
+          return i[0] ? i[0].id : null;
+        }
+        function qi(e) {
+          var r = e.pageBorderBox,
+            t = e.draggable,
+            n = e.droppables,
+            a = ur(n).filter(function (i) {
+              if (!i.isEnabled) return !1;
+              var o = i.subject.active;
+              if (!o || !Hi(r, o)) return !1;
+              if (on(o)(r.center)) return !0;
+              var l = i.axis,
+                s = o.center[l.crossAxisLine],
+                f = r[l.crossAxisStart],
+                d = r[l.crossAxisEnd],
+                c = Y(o[l.crossAxisStart], o[l.crossAxisEnd]),
+                u = c(f),
+                p = c(d);
+              return !u && !p ? !0 : u ? f < s : d > s;
+            });
+          return a.length
+            ? a.length === 1
+              ? a[0].descriptor.id
+              : Vi({ pageBorderBox: r, draggable: t, candidates: a })
+            : null;
+        }
+        var ln = function (r, t) {
+            return (0, M.l)(We(r, t));
+          },
+          $i = function (e, r) {
+            var t = e.frame;
+            return t ? ln(r, t.scroll.diff.value) : r;
+          };
+        function sn(e) {
+          var r = e.displaced,
+            t = e.id;
+          return !!(r.visible[t] || r.invisible[t]);
+        }
+        function zi(e) {
+          var r = e.draggable,
+            t = e.closest,
+            n = e.inHomeList;
+          return t
+            ? n && t.descriptor.index > r.descriptor.index
+              ? t.descriptor.index - 1
+              : t.descriptor.index
+            : null;
+        }
+        var ji = function (e) {
+            var r = e.pageBorderBoxWithDroppableScroll,
+              t = e.draggable,
+              n = e.destination,
+              a = e.insideDestination,
+              i = e.last,
+              o = e.viewport,
+              l = e.afterCritical,
+              s = n.axis,
+              f = He(n.axis, t.displaceBy),
+              d = f.value,
+              c = r[s.start],
+              u = r[s.end],
+              p = dr(t, a),
+              v = be(p, function (b) {
+                var y = b.descriptor.id,
+                  I = b.page.borderBox.center[s.line],
+                  S = le(y, l),
+                  x = sn({ displaced: i, id: y });
+                return S ? (x ? u <= I : c < I - d) : x ? u <= I + d : c < I;
+              }),
+              g = zi({ draggable: t, closest: v, inHomeList: Ae(t, n) });
+            return fr({
+              draggable: t,
+              insideDestination: a,
+              destination: n,
+              viewport: o,
+              last: i,
+              displacedBy: f,
+              index: g,
+            });
+          },
+          Ki = 4,
+          Yi = function (e) {
+            var r = e.draggable,
+              t = e.pageBorderBoxWithDroppableScroll,
+              n = e.previousImpact,
+              a = e.destination,
+              i = e.insideDestination,
+              o = e.afterCritical;
+            if (!a.isCombineEnabled) return null;
+            var l = a.axis,
+              s = He(a.axis, r.displaceBy),
+              f = s.value,
+              d = t[l.start],
+              c = t[l.end],
+              u = dr(r, i),
+              p = be(u, function (g) {
+                var b = g.descriptor.id,
+                  y = g.page.borderBox,
+                  I = y[l.size],
+                  S = I / Ki,
+                  x = le(b, o),
+                  w = sn({ displaced: n.displaced, id: b });
+                return x
+                  ? w
+                    ? c > y[l.start] + S && c < y[l.end] - S
+                    : d > y[l.start] - f + S && d < y[l.end] - f - S
+                  : w
+                    ? c > y[l.start] + f + S && c < y[l.end] + f - S
+                    : d > y[l.start] + S && d < y[l.end] - S;
+              });
+            if (!p) return null;
+            var v = {
+              displacedBy: s,
+              displaced: n.displaced,
+              at: {
+                type: "COMBINE",
+                combine: {
+                  draggableId: p.descriptor.id,
+                  droppableId: a.descriptor.id,
                 },
               },
-              f = Te(l.droppables).every(function (e) {
-                return !e.isFixedOnPage;
-              }),
-              g = Mr({
-                draggable: c,
-                home: s,
-                draggables: l.draggables,
-                viewport: a,
-              }),
-              v = g.impact;
-            return {
-              phase: "DRAGGING",
-              isDragging: !0,
-              critical: t,
-              movementMode: u,
-              dimensions: l,
-              initial: p,
-              current: p,
-              isWindowScrollAllowed: f,
-              impact: v,
-              afterCritical: g.afterCritical,
-              onLiftImpact: v,
-              viewport: a,
-              scrollJumpRequest: null,
-              forceShouldAnimate: null,
             };
-          }
-          if ("COLLECTION_STARTING" === r.type)
-            return "COLLECTING" === e.phase || "DROP_PENDING" === e.phase
-              ? e
-              : ("DRAGGING" !== e.phase && le(!1),
-                (0, o.A)({ phase: "COLLECTING" }, e, { phase: "COLLECTING" }));
-          if ("PUBLISH_WHILE_DRAGGING" === r.type)
+            return v;
+          },
+          un = function (e) {
+            var r = e.pageOffset,
+              t = e.draggable,
+              n = e.draggables,
+              a = e.droppables,
+              i = e.previousImpact,
+              o = e.viewport,
+              l = e.afterCritical,
+              s = ln(t.page.borderBox, r),
+              f = qi({ pageBorderBox: s, draggable: t, droppables: a });
+            if (!f) return si;
+            var d = a[f],
+              c = we(d.descriptor.id, n),
+              u = $i(d, s);
             return (
-              "COLLECTING" !== e.phase && "DROP_PENDING" !== e.phase && le(!1),
-              (function (e) {
-                var r = e.state,
-                  n = e.published;
-                _r();
-                var t = n.modified.map(function (e) {
-                    var n = r.dimensions.droppables[e.droppableId];
-                    return Se(n, e.scroll);
-                  }),
-                  i = (0, o.A)({}, r.dimensions.droppables, {}, Be(t)),
-                  a = Oe(
-                    kr({
-                      additions: n.additions,
-                      updatedDroppables: i,
-                      viewport: r.viewport,
-                    }),
-                  ),
-                  l = (0, o.A)({}, r.dimensions.draggables, {}, a);
-                n.removals.forEach(function (e) {
-                  delete l[e];
-                });
-                var u = { droppables: i, draggables: l },
-                  c = xr(r.impact),
-                  s = c ? u.droppables[c] : null,
-                  d = u.draggables[r.critical.draggable.id],
-                  p = u.droppables[r.critical.droppable.id],
-                  f = Mr({
-                    draggable: d,
-                    home: p,
-                    draggables: l,
-                    viewport: r.viewport,
-                  }),
-                  g = f.impact,
-                  v = f.afterCritical,
-                  m = s && s.isCombineEnabled ? r.impact : g,
-                  b = Nr({
-                    pageOffset: r.current.page.offset,
-                    draggable: u.draggables[r.critical.draggable.id],
-                    draggables: u.draggables,
-                    droppables: u.droppables,
-                    previousImpact: m,
-                    viewport: r.viewport,
-                    afterCritical: v,
-                  });
-                Fr();
-                var h = (0, o.A)({ phase: "DRAGGING" }, r, {
-                  phase: "DRAGGING",
-                  impact: b,
-                  onLiftImpact: g,
-                  dimensions: u,
-                  afterCritical: v,
-                  forceShouldAnimate: !1,
-                });
-                return "COLLECTING" === r.phase
-                  ? h
-                  : (0, o.A)({ phase: "DROP_PENDING" }, h, {
-                      phase: "DROP_PENDING",
-                      reason: r.reason,
-                      isWaiting: !1,
-                    });
-              })({ state: e, published: r.payload })
-            );
-          if ("MOVE" === r.type) {
-            if ("DROP_PENDING" === e.phase) return e;
-            wr(e) || le(!1);
-            var m = r.payload.client;
-            return be(m, e.current.client.selection)
-              ? e
-              : Or({
-                  state: e,
-                  clientSelection: m,
-                  impact: Wr(e) ? e.impact : null,
-                });
-          }
-          if ("UPDATE_DROPPABLE_SCROLL" === r.type) {
-            if ("DROP_PENDING" === e.phase) return Hr(e);
-            if ("COLLECTING" === e.phase) return Hr(e);
-            wr(e) || le(!1);
-            var b = r.payload,
-              h = b.id,
-              y = b.newScroll,
-              I = e.dimensions.droppables[h];
-            if (!I) return e;
-            var D = Se(I, y);
-            return Ur(e, D, !1);
-          }
-          if ("UPDATE_DROPPABLE_IS_ENABLED" === r.type) {
-            if ("DROP_PENDING" === e.phase) return e;
-            wr(e) || le(!1);
-            var x = r.payload,
-              E = x.id,
-              w = x.isEnabled,
-              A = e.dimensions.droppables[E];
-            A || le(!1), A.isEnabled === w && le(!1);
-            var C = (0, o.A)({}, A, { isEnabled: w });
-            return Ur(e, C, !0);
-          }
-          if ("UPDATE_DROPPABLE_IS_COMBINE_ENABLED" === r.type) {
-            if ("DROP_PENDING" === e.phase) return e;
-            wr(e) || le(!1);
-            var S = r.payload,
-              P = S.id,
-              N = S.isCombineEnabled,
-              R = e.dimensions.droppables[P];
-            R || le(!1), R.isCombineEnabled === N && le(!1);
-            var B = (0, o.A)({}, R, { isCombineEnabled: N });
-            return Ur(e, B, !0);
-          }
-          if ("MOVE_BY_WINDOW_SCROLL" === r.type) {
-            if ("DROP_PENDING" === e.phase || "DROP_ANIMATING" === e.phase)
-              return e;
-            wr(e) || le(!1), e.isWindowScrollAllowed || le(!1);
-            var O = r.payload.newScroll;
-            if (be(e.viewport.scroll.current, O)) return Hr(e);
-            var T = sr(e.viewport, O);
-            return Wr(e)
-              ? Gr({ state: e, viewport: T })
-              : Or({ state: e, viewport: T });
-          }
-          if ("UPDATE_VIEWPORT_MAX_SCROLL" === r.type) {
-            if (!wr(e)) return e;
-            var L = r.payload.maxScroll;
-            if (be(L, e.viewport.scroll.max)) return e;
-            var G = (0, o.A)({}, e.viewport, {
-              scroll: (0, o.A)({}, e.viewport.scroll, { max: L }),
-            });
-            return (0, o.A)({ phase: "DRAGGING" }, e, { viewport: G });
-          }
-          if (
-            "MOVE_UP" === r.type ||
-            "MOVE_DOWN" === r.type ||
-            "MOVE_LEFT" === r.type ||
-            "MOVE_RIGHT" === r.type
-          ) {
-            if ("COLLECTING" === e.phase || "DROP_PENDING" === e.phase)
-              return e;
-            "DRAGGING" !== e.phase && le(!1);
-            var M = Er({ state: e, type: r.type });
-            return M
-              ? Or({
-                  state: e,
-                  impact: M.impact,
-                  clientSelection: M.clientSelection,
-                  scrollJumpRequest: M.scrollJumpRequest,
-                })
-              : e;
-          }
-          if ("DROP_PENDING" === r.type) {
-            var _ = r.payload.reason;
-            return (
-              "COLLECTING" !== e.phase && le(!1),
-              (0, o.A)({ phase: "DROP_PENDING" }, e, {
-                phase: "DROP_PENDING",
-                isWaiting: !0,
-                reason: _,
+              Yi({
+                pageBorderBoxWithDroppableScroll: u,
+                draggable: t,
+                previousImpact: i,
+                destination: d,
+                insideDestination: c,
+                afterCritical: l,
+              }) ||
+              ji({
+                pageBorderBoxWithDroppableScroll: u,
+                draggable: t,
+                destination: d,
+                insideDestination: c,
+                last: i.displaced,
+                viewport: o,
+                afterCritical: l,
               })
             );
-          }
-          if ("DROP_ANIMATE" === r.type) {
-            var F = r.payload,
-              k = F.completed,
-              W = F.dropDuration,
-              U = F.newHomeClientOffset;
-            return (
-              "DRAGGING" !== e.phase && "DROP_PENDING" !== e.phase && le(!1),
-              {
-                phase: "DROP_ANIMATING",
-                completed: k,
-                dropDuration: W,
-                newHomeClientOffset: U,
-                dimensions: e.dimensions,
-              }
-            );
-          }
-          return "DROP_COMPLETE" === r.type
-            ? { phase: "IDLE", completed: r.payload.completed, shouldFlush: !1 }
-            : e;
-        },
-        Vr = function (e) {
-          return { type: "LIFT", payload: e };
-        },
-        Kr = function (e) {
-          return { type: "PUBLISH_WHILE_DRAGGING", payload: e };
-        },
-        zr = function () {
-          return { type: "COLLECTION_STARTING", payload: null };
-        },
-        Yr = function (e) {
-          return { type: "UPDATE_DROPPABLE_SCROLL", payload: e };
-        },
-        Jr = function (e) {
-          return { type: "UPDATE_DROPPABLE_IS_ENABLED", payload: e };
-        },
-        Xr = function (e) {
-          return { type: "UPDATE_DROPPABLE_IS_COMBINE_ENABLED", payload: e };
-        },
-        $r = function (e) {
-          return { type: "MOVE", payload: e };
-        },
-        Qr = function () {
-          return { type: "MOVE_UP", payload: null };
-        },
-        Zr = function () {
-          return { type: "MOVE_DOWN", payload: null };
-        },
-        en = function () {
-          return { type: "MOVE_RIGHT", payload: null };
-        },
-        rn = function () {
-          return { type: "MOVE_LEFT", payload: null };
-        },
-        nn = function () {
-          return { type: "FLUSH", payload: null };
-        },
-        tn = function (e) {
-          return { type: "DROP_COMPLETE", payload: e };
-        },
-        on = function (e) {
-          return { type: "DROP", payload: e };
-        },
-        an = function () {
-          return { type: "DROP_ANIMATION_FINISHED", payload: null };
-        };
-      var ln = "cubic-bezier(.2,1,.1,1)",
-        un = { drop: 0, combining: 0.7 },
-        cn = { drop: 0.75 },
-        sn = 0.2 + "s " + "cubic-bezier(0.2, 0, 0, 1)",
-        dn = {
-          fluid: "opacity " + sn,
-          snap: "transform " + sn + ", opacity " + sn,
-          drop: function (e) {
-            var r = e + "s " + ln;
-            return "transform " + r + ", opacity " + r;
           },
-          outOfTheWay: "transform " + sn,
-          placeholder: "height " + sn + ", width " + sn + ", margin " + sn,
-        },
-        pn = function (e) {
-          return be(e, ge) ? null : "translate(" + e.x + "px, " + e.y + "px)";
-        },
-        fn = pn,
-        gn = function (e, r) {
-          var n = pn(e);
-          return n ? (r ? n + " scale(" + cn.drop + ")" : n) : null;
-        },
-        vn = 0.33,
-        mn = 0.55,
-        bn = mn - vn,
-        hn = function (e) {
-          var r = e.getState,
-            n = e.dispatch;
-          return function (e) {
-            return function (t) {
-              if ("DROP" === t.type) {
-                var i = r(),
-                  a = t.payload.reason;
-                if ("COLLECTING" !== i.phase) {
-                  if ("IDLE" !== i.phase) {
-                    "DROP_PENDING" === i.phase && i.isWaiting && le(!1),
-                      "DRAGGING" !== i.phase &&
-                        "DROP_PENDING" !== i.phase &&
-                        le(!1);
-                    var l = i.critical,
-                      u = i.dimensions,
-                      c = u.draggables[i.critical.draggable.id],
-                      s = (function (e) {
-                        var r = e.draggables,
-                          n = e.reason,
-                          t = e.lastImpact,
-                          i = e.home,
-                          a = e.viewport,
-                          l = e.onLiftImpact;
-                        return t.at && "DROP" === n
-                          ? "REORDER" === t.at.type
-                            ? { impact: t, didDropInsideDroppable: !0 }
-                            : {
-                                impact: (0, o.A)({}, t, { displaced: Ue }),
-                                didDropInsideDroppable: !0,
-                              }
-                          : {
-                              impact: Tr({
-                                draggables: r,
-                                impact: l,
-                                destination: i,
-                                viewport: a,
-                                forceShouldAnimate: !0,
-                              }),
-                              didDropInsideDroppable: !1,
-                            };
-                      })({
-                        reason: a,
-                        lastImpact: i.impact,
-                        afterCritical: i.afterCritical,
-                        onLiftImpact: i.onLiftImpact,
-                        home: i.dimensions.droppables[i.critical.droppable.id],
-                        viewport: i.viewport,
-                        draggables: i.dimensions.draggables,
-                      }),
-                      d = s.impact,
-                      p = s.didDropInsideDroppable,
-                      f = p ? Me(d) : null,
-                      g = p ? _e(d) : null,
-                      v = {
-                        index: l.draggable.index,
-                        droppableId: l.droppable.id,
-                      },
-                      m = {
-                        draggableId: c.descriptor.id,
-                        type: c.descriptor.type,
-                        source: v,
-                        reason: a,
-                        mode: i.movementMode,
-                        destination: f,
-                        combine: g,
-                      },
-                      b = (function (e) {
-                        var r = e.impact,
-                          n = e.draggable,
-                          t = e.dimensions,
-                          i = e.viewport,
-                          o = e.afterCritical,
-                          a = t.draggables,
-                          l = t.droppables,
-                          u = xr(r),
-                          c = u ? l[u] : null,
-                          s = l[n.descriptor.droppableId],
-                          d = Lr({
-                            impact: r,
-                            draggable: n,
-                            draggables: a,
-                            afterCritical: o,
-                            droppable: c || s,
-                            viewport: i,
-                          });
-                        return me(d, n.client.borderBox.center);
-                      })({
-                        impact: d,
-                        draggable: c,
-                        dimensions: u,
-                        viewport: i.viewport,
-                        afterCritical: i.afterCritical,
-                      }),
-                      h = {
-                        critical: i.critical,
-                        afterCritical: i.afterCritical,
-                        result: m,
-                        impact: d,
-                      };
-                    if (!be(i.current.client.offset, b) || Boolean(m.combine)) {
-                      var y = (function (e) {
-                        var r = e.current,
-                          n = e.destination,
-                          t = e.reason,
-                          i = Ie(r, n);
-                        if (i <= 0) return vn;
-                        if (i >= 1500) return mn;
-                        var o = vn + bn * (i / 1500);
-                        return Number(
-                          ("CANCEL" === t ? 0.6 * o : o).toFixed(2),
-                        );
-                      })({
-                        current: i.current.client.offset,
-                        destination: b,
-                        reason: a,
-                      });
-                      n(
-                        (function (e) {
-                          return { type: "DROP_ANIMATE", payload: e };
-                        })({
-                          newHomeClientOffset: b,
-                          dropDuration: y,
-                          completed: h,
-                        }),
-                      );
-                    } else n(tn({ completed: h }));
-                  }
-                } else
-                  n(
-                    (function (e) {
-                      return { type: "DROP_PENDING", payload: e };
-                    })({ reason: a }),
-                  );
-              } else e(t);
-            };
-          };
-        },
-        yn = function (e) {
-          return { x: e.pageXOffset, y: e.pageYOffset };
-        };
-      function In(e) {
-        var r = e.onWindowScroll;
-        var n = (0, ee.A)(function () {
-            r(yn());
-          }),
-          t = (function (e) {
-            return {
-              eventName: "scroll",
-              options: { passive: !0, capture: !1 },
-              fn: function (r) {
-                (r.target !== window && r.target !== window.document) || e();
+          Kr = function (e, r) {
+            var t;
+            return (0, A.A)({}, e, ((t = {}), (t[r.descriptor.id] = r), t));
+          },
+          Ji = function (r) {
+            var t = r.previousImpact,
+              n = r.impact,
+              a = r.droppables,
+              i = $(t),
+              o = $(n);
+            if (!i || i === o) return a;
+            var l = a[i];
+            if (!l.subject.withPlaceholder) return a;
+            var s = Fi(l);
+            return Kr(a, s);
+          },
+          Xi = function (e) {
+            var r = e.draggable,
+              t = e.draggables,
+              n = e.droppables,
+              a = e.previousImpact,
+              i = e.impact,
+              o = Ji({ previousImpact: a, impact: i, droppables: n }),
+              l = $(i);
+            if (!l) return o;
+            var s = n[l];
+            if (Ae(r, s) || s.subject.withPlaceholder) return o;
+            var f = an(s, r, t);
+            return Kr(o, f);
+          },
+          Ve = function (e) {
+            var r = e.state,
+              t = e.clientSelection,
+              n = e.dimensions,
+              a = e.viewport,
+              i = e.impact,
+              o = e.scrollJumpRequest,
+              l = a || r.viewport,
+              s = n || r.dimensions,
+              f = t || r.current.client.selection,
+              d = q(f, r.initial.client.selection),
+              c = {
+                offset: d,
+                selection: f,
+                borderBoxCenter: k(r.initial.client.borderBoxCenter, d),
               },
-            };
-          })(n),
-          i = ne;
-        function o() {
-          return i !== ne;
-        }
-        return {
-          start: function () {
-            o() && le(!1), (i = te(window, [t]));
-          },
-          stop: function () {
-            o() || le(!1), n.cancel(), i(), (i = ne);
-          },
-          isActive: o,
-        };
-      }
-      var Dn = function (e) {
-          var r = In({
-            onWindowScroll: function (r) {
-              e.dispatch({
-                type: "MOVE_BY_WINDOW_SCROLL",
-                payload: { newScroll: r },
+              u = {
+                selection: k(c.selection, l.scroll.current),
+                borderBoxCenter: k(c.borderBoxCenter, l.scroll.current),
+                offset: k(c.offset, l.scroll.diff.value),
+              },
+              p = { client: c, page: u };
+            if (r.phase === "COLLECTING")
+              return (0, A.A)({ phase: "COLLECTING" }, r, {
+                dimensions: s,
+                viewport: l,
+                current: p,
               });
-            },
+            var v = s.draggables[r.critical.draggable.id],
+              g =
+                i ||
+                un({
+                  pageOffset: u.offset,
+                  draggable: v,
+                  draggables: s.draggables,
+                  droppables: s.droppables,
+                  previousImpact: r.impact,
+                  viewport: l,
+                  afterCritical: r.afterCritical,
+                }),
+              b = Xi({
+                draggable: v,
+                impact: g,
+                previousImpact: r.impact,
+                draggables: s.draggables,
+                droppables: s.droppables,
+              }),
+              y = (0, A.A)({}, r, {
+                current: p,
+                dimensions: { draggables: s.draggables, droppables: b },
+                impact: g,
+                viewport: l,
+                scrollJumpRequest: o || null,
+                forceShouldAnimate: o ? !1 : null,
+              });
+            return y;
+          };
+        function Qi(e, r) {
+          return e.map(function (t) {
+            return r[t];
           });
-          return function (e) {
-            return function (n) {
-              r.isActive() || "INITIAL_PUBLISH" !== n.type || r.start(),
-                r.isActive() &&
-                  (function (e) {
-                    return (
-                      "DROP_COMPLETE" === e.type ||
-                      "DROP_ANIMATE" === e.type ||
-                      "FLUSH" === e.type
-                    );
-                  })(n) &&
-                  r.stop(),
-                e(n);
-            };
-          };
-        },
-        xn = function () {
-          var e = [];
-          return {
-            add: function (r) {
-              var n = setTimeout(function () {
-                  return (function (r) {
-                    var n = Ne(e, function (e) {
-                      return e.timerId === r;
-                    });
-                    -1 === n && le(!1), e.splice(n, 1)[0].callback();
-                  })(n);
-                }),
-                t = { timerId: n, callback: r };
-              e.push(t);
-            },
-            flush: function () {
-              if (e.length) {
-                var r = [].concat(e);
-                (e.length = 0),
-                  r.forEach(function (e) {
-                    clearTimeout(e.timerId), e.callback();
-                  });
-              }
-            },
-          };
-        },
-        En = function (e, r) {
-          _r(), r(), Fr();
-        },
-        wn = function (e, r) {
-          return {
-            draggableId: e.draggable.id,
-            type: e.droppable.type,
-            source: { droppableId: e.droppable.id, index: e.draggable.index },
-            mode: r,
-          };
-        },
-        An = function (e, r, n, t) {
-          if (e) {
-            var i = (function (e) {
-              var r = !1,
-                n = !1,
-                t = setTimeout(function () {
-                  n = !0;
-                }),
-                i = function (i) {
-                  r || n || ((r = !0), e(i), clearTimeout(t));
-                };
-              return (
-                (i.wasCalled = function () {
-                  return r;
-                }),
-                i
-              );
-            })(n);
-            e(r, { announce: i }), i.wasCalled() || n(t(r));
-          } else n(t(r));
-        },
-        Cn = function (e, r) {
-          var n = (function (e, r) {
-            var n = xn(),
-              t = null,
-              i = function (n) {
-                t || le(!1),
-                  (t = null),
-                  En(0, function () {
-                    return An(e().onDragEnd, n, r, fe.onDragEnd);
-                  });
+        }
+        var cn = function (e) {
+            var r = e.impact,
+              t = e.viewport,
+              n = e.draggables,
+              a = e.destination,
+              i = e.forceShouldAnimate,
+              o = r.displaced,
+              l = Qi(o.all, n),
+              s = Ue({
+                afterDragging: l,
+                destination: a,
+                displacedBy: r.displacedBy,
+                viewport: t.frame,
+                forceShouldAnimate: i,
+                last: o,
+              });
+            return (0, A.A)({}, r, { displaced: s });
+          },
+          dn = function (e) {
+            var r = e.impact,
+              t = e.draggable,
+              n = e.droppable,
+              a = e.draggables,
+              i = e.viewport,
+              o = e.afterCritical,
+              l = pr({
+                impact: r,
+                draggable: t,
+                draggables: a,
+                droppable: n,
+                afterCritical: o,
+              });
+            return jr({ pageBorderBoxCenter: l, draggable: t, viewport: i });
+          },
+          fn = function (e) {
+            var r = e.state,
+              t = e.dimensions,
+              n = e.viewport;
+            r.movementMode !== "SNAP" && m(!1);
+            var a = r.impact,
+              i = n || r.viewport,
+              o = t || r.dimensions,
+              l = o.draggables,
+              s = o.droppables,
+              f = l[r.critical.draggable.id],
+              d = $(a);
+            d || m(!1);
+            var c = s[d],
+              u = cn({ impact: a, viewport: i, destination: c, draggables: l }),
+              p = dn({
+                impact: u,
+                draggable: f,
+                droppable: c,
+                draggables: l,
+                viewport: i,
+                afterCritical: r.afterCritical,
+              });
+            return Ve({
+              impact: u,
+              clientSelection: p,
+              state: r,
+              dimensions: o,
+              viewport: i,
+            });
+          },
+          Zi = function (e) {
+            return { index: e.index, droppableId: e.droppableId };
+          },
+          pn = function (e) {
+            var r = e.draggable,
+              t = e.home,
+              n = e.draggables,
+              a = e.viewport,
+              i = He(t.axis, r.displaceBy),
+              o = we(t.descriptor.id, n),
+              l = o.indexOf(r);
+            l === -1 && m(!1);
+            var s = o.slice(l + 1),
+              f = s.reduce(function (p, v) {
+                return (p[v.descriptor.id] = !0), p;
+              }, {}),
+              d = {
+                inVirtualList: t.descriptor.mode === "virtual",
+                displacedBy: i,
+                effected: f,
+              },
+              c = Ue({
+                afterDragging: s,
+                destination: t,
+                displacedBy: i,
+                last: null,
+                viewport: a.frame,
+                forceShouldAnimate: !1,
+              }),
+              u = {
+                displaced: c,
+                displacedBy: i,
+                at: { type: "REORDER", destination: Zi(r.descriptor) },
               };
+            return { impact: u, afterCritical: d };
+          },
+          _i = function (e, r) {
             return {
-              beforeCapture: function (r, n) {
-                t && le(!1),
-                  En(0, function () {
-                    var t = e().onBeforeCapture;
-                    t && t({ draggableId: r, mode: n });
+              draggables: e.draggables,
+              droppables: Kr(e.droppables, r),
+            };
+          },
+          qe = function (r) {},
+          $e = function (r) {},
+          eo = function (e) {
+            var r = e.draggable,
+              t = e.offset,
+              n = e.initialWindowScroll,
+              a = (0, M.cY)(r.client, t),
+              i = (0, M.SQ)(a, n),
+              o = (0, A.A)({}, r, {
+                placeholder: (0, A.A)({}, r.placeholder, { client: a }),
+                client: a,
+                page: i,
+              });
+            return o;
+          },
+          ro = function (e) {
+            var r = e.frame;
+            return r || m(!1), r;
+          },
+          to = function (e) {
+            var r = e.additions,
+              t = e.updatedDroppables,
+              n = e.viewport,
+              a = n.scroll.diff.value;
+            return r.map(function (i) {
+              var o = i.descriptor.droppableId,
+                l = t[o],
+                s = ro(l),
+                f = s.scroll.diff.value,
+                d = k(a, f),
+                c = eo({
+                  draggable: i,
+                  offset: d,
+                  initialWindowScroll: n.scroll.initial,
+                });
+              return c;
+            });
+          },
+          no = function (e) {
+            var r = e.state,
+              t = e.published;
+            qe();
+            var n = t.modified.map(function (S) {
+                var x = r.dimensions.droppables[S.droppableId],
+                  w = kr(x, S.scroll);
+                return w;
+              }),
+              a = (0, A.A)({}, r.dimensions.droppables, {}, qt(n)),
+              i = $t(
+                to({
+                  additions: t.additions,
+                  updatedDroppables: a,
+                  viewport: r.viewport,
+                }),
+              ),
+              o = (0, A.A)({}, r.dimensions.draggables, {}, i);
+            t.removals.forEach(function (S) {
+              delete o[S];
+            });
+            var l = { droppables: a, draggables: o },
+              s = $(r.impact),
+              f = s ? l.droppables[s] : null,
+              d = l.draggables[r.critical.draggable.id],
+              c = l.droppables[r.critical.droppable.id],
+              u = pn({
+                draggable: d,
+                home: c,
+                draggables: o,
+                viewport: r.viewport,
+              }),
+              p = u.impact,
+              v = u.afterCritical,
+              g = f && f.isCombineEnabled ? r.impact : p,
+              b = un({
+                pageOffset: r.current.page.offset,
+                draggable: l.draggables[r.critical.draggable.id],
+                draggables: l.draggables,
+                droppables: l.droppables,
+                previousImpact: g,
+                viewport: r.viewport,
+                afterCritical: v,
+              });
+            $e();
+            var y = (0, A.A)({ phase: "DRAGGING" }, r, {
+              phase: "DRAGGING",
+              impact: b,
+              onLiftImpact: p,
+              dimensions: l,
+              afterCritical: v,
+              forceShouldAnimate: !1,
+            });
+            if (r.phase === "COLLECTING") return y;
+            var I = (0, A.A)({ phase: "DROP_PENDING" }, y, {
+              phase: "DROP_PENDING",
+              reason: r.reason,
+              isWaiting: !1,
+            });
+            return I;
+          },
+          Yr = function (r) {
+            return r.movementMode === "SNAP";
+          },
+          Jr = function (r, t, n) {
+            var a = _i(r.dimensions, t);
+            return !Yr(r) || n
+              ? Ve({ state: r, dimensions: a })
+              : fn({ state: r, dimensions: a });
+          };
+        function Xr(e) {
+          return e.isDragging && e.movementMode === "SNAP"
+            ? (0, A.A)({ phase: "DRAGGING" }, e, { scrollJumpRequest: null })
+            : e;
+        }
+        var vn = { phase: "IDLE", completed: null, shouldFlush: !1 },
+          ao = function (e, r) {
+            if ((e === void 0 && (e = vn), r.type === "FLUSH"))
+              return (0, A.A)({}, vn, { shouldFlush: !0 });
+            if (r.type === "INITIAL_PUBLISH") {
+              e.phase !== "IDLE" && m(!1);
+              var t = r.payload,
+                n = t.critical,
+                a = t.clientSelection,
+                i = t.viewport,
+                o = t.dimensions,
+                l = t.movementMode,
+                s = o.draggables[n.draggable.id],
+                f = o.droppables[n.droppable.id],
+                d = {
+                  selection: a,
+                  borderBoxCenter: s.client.borderBox.center,
+                  offset: W,
+                },
+                c = {
+                  client: d,
+                  page: {
+                    selection: k(d.selection, i.scroll.initial),
+                    borderBoxCenter: k(d.selection, i.scroll.initial),
+                    offset: k(d.selection, i.scroll.diff.value),
+                  },
+                },
+                u = ur(o.droppables).every(function (Cr) {
+                  return !Cr.isFixedOnPage;
+                }),
+                p = pn({
+                  draggable: s,
+                  home: f,
+                  draggables: o.draggables,
+                  viewport: i,
+                }),
+                v = p.impact,
+                g = p.afterCritical,
+                b = {
+                  phase: "DRAGGING",
+                  isDragging: !0,
+                  critical: n,
+                  movementMode: l,
+                  dimensions: o,
+                  initial: c,
+                  current: c,
+                  isWindowScrollAllowed: u,
+                  impact: v,
+                  afterCritical: g,
+                  onLiftImpact: v,
+                  viewport: i,
+                  scrollJumpRequest: null,
+                  forceShouldAnimate: null,
+                };
+              return b;
+            }
+            if (r.type === "COLLECTION_STARTING") {
+              if (e.phase === "COLLECTING" || e.phase === "DROP_PENDING")
+                return e;
+              e.phase !== "DRAGGING" && m(!1);
+              var y = (0, A.A)({ phase: "COLLECTING" }, e, {
+                phase: "COLLECTING",
+              });
+              return y;
+            }
+            if (r.type === "PUBLISH_WHILE_DRAGGING")
+              return (
+                e.phase === "COLLECTING" || e.phase === "DROP_PENDING" || m(!1),
+                no({ state: e, published: r.payload })
+              );
+            if (r.type === "MOVE") {
+              if (e.phase === "DROP_PENDING") return e;
+              he(e) || m(!1);
+              var I = r.payload.client;
+              return oe(I, e.current.client.selection)
+                ? e
+                : Ve({
+                    state: e,
+                    clientSelection: I,
+                    impact: Yr(e) ? e.impact : null,
+                  });
+            }
+            if (r.type === "UPDATE_DROPPABLE_SCROLL") {
+              if (e.phase === "DROP_PENDING" || e.phase === "COLLECTING")
+                return Xr(e);
+              he(e) || m(!1);
+              var S = r.payload,
+                x = S.id,
+                w = S.newScroll,
+                E = e.dimensions.droppables[x];
+              if (!E) return e;
+              var R = kr(E, w);
+              return Jr(e, R, !1);
+            }
+            if (r.type === "UPDATE_DROPPABLE_IS_ENABLED") {
+              if (e.phase === "DROP_PENDING") return e;
+              he(e) || m(!1);
+              var N = r.payload,
+                B = N.id,
+                T = N.isEnabled,
+                L = e.dimensions.droppables[B];
+              L || m(!1), L.isEnabled === T && m(!1);
+              var O = (0, A.A)({}, L, { isEnabled: T });
+              return Jr(e, O, !0);
+            }
+            if (r.type === "UPDATE_DROPPABLE_IS_COMBINE_ENABLED") {
+              if (e.phase === "DROP_PENDING") return e;
+              he(e) || m(!1);
+              var J = r.payload,
+                Q = J.id,
+                j = J.isCombineEnabled,
+                Z = e.dimensions.droppables[Q];
+              Z || m(!1), Z.isCombineEnabled === j && m(!1);
+              var U = (0, A.A)({}, Z, { isCombineEnabled: j });
+              return Jr(e, U, !0);
+            }
+            if (r.type === "MOVE_BY_WINDOW_SCROLL") {
+              if (e.phase === "DROP_PENDING" || e.phase === "DROP_ANIMATING")
+                return e;
+              he(e) || m(!1), e.isWindowScrollAllowed || m(!1);
+              var ue = r.payload.newScroll;
+              if (oe(e.viewport.scroll.current, ue)) return Xr(e);
+              var _ = _t(e.viewport, ue);
+              return Yr(e)
+                ? fn({ state: e, viewport: _ })
+                : Ve({ state: e, viewport: _ });
+            }
+            if (r.type === "UPDATE_VIEWPORT_MAX_SCROLL") {
+              if (!he(e)) return e;
+              var _e = r.payload.maxScroll;
+              if (oe(_e, e.viewport.scroll.max)) return e;
+              var De = (0, A.A)({}, e.viewport, {
+                scroll: (0, A.A)({}, e.viewport.scroll, { max: _e }),
+              });
+              return (0, A.A)({ phase: "DRAGGING" }, e, { viewport: De });
+            }
+            if (
+              r.type === "MOVE_UP" ||
+              r.type === "MOVE_DOWN" ||
+              r.type === "MOVE_LEFT" ||
+              r.type === "MOVE_RIGHT"
+            ) {
+              if (e.phase === "COLLECTING" || e.phase === "DROP_PENDING")
+                return e;
+              e.phase !== "DRAGGING" && m(!1);
+              var ce = Ui({ state: e, type: r.type });
+              return ce
+                ? Ve({
+                    state: e,
+                    impact: ce.impact,
+                    clientSelection: ce.clientSelection,
+                    scrollJumpRequest: ce.scrollJumpRequest,
+                  })
+                : e;
+            }
+            if (r.type === "DROP_PENDING") {
+              var ee = r.payload.reason;
+              e.phase !== "COLLECTING" && m(!1);
+              var Ie = (0, A.A)({ phase: "DROP_PENDING" }, e, {
+                phase: "DROP_PENDING",
+                isWaiting: !0,
+                reason: ee,
+              });
+              return Ie;
+            }
+            if (r.type === "DROP_ANIMATE") {
+              var Ir = r.payload,
+                re = Ir.completed,
+                er = Ir.dropDuration,
+                xr = Ir.newHomeClientOffset;
+              e.phase === "DRAGGING" || e.phase === "DROP_PENDING" || m(!1);
+              var Be = {
+                phase: "DROP_ANIMATING",
+                completed: re,
+                dropDuration: er,
+                newHomeClientOffset: xr,
+                dimensions: e.dimensions,
+              };
+              return Be;
+            }
+            if (r.type === "DROP_COMPLETE") {
+              var Sr = r.payload.completed;
+              return { phase: "IDLE", completed: Sr, shouldFlush: !1 };
+            }
+            return e;
+          },
+          io = function (r) {
+            return { type: "BEFORE_INITIAL_CAPTURE", payload: r };
+          },
+          oo = function (r) {
+            return { type: "LIFT", payload: r };
+          },
+          lo = function (r) {
+            return { type: "INITIAL_PUBLISH", payload: r };
+          },
+          so = function (r) {
+            return { type: "PUBLISH_WHILE_DRAGGING", payload: r };
+          },
+          uo = function () {
+            return { type: "COLLECTION_STARTING", payload: null };
+          },
+          co = function (r) {
+            return { type: "UPDATE_DROPPABLE_SCROLL", payload: r };
+          },
+          fo = function (r) {
+            return { type: "UPDATE_DROPPABLE_IS_ENABLED", payload: r };
+          },
+          po = function (r) {
+            return { type: "UPDATE_DROPPABLE_IS_COMBINE_ENABLED", payload: r };
+          },
+          gn = function (r) {
+            return { type: "MOVE", payload: r };
+          },
+          vo = function (r) {
+            return { type: "MOVE_BY_WINDOW_SCROLL", payload: r };
+          },
+          go = function (r) {
+            return { type: "UPDATE_VIEWPORT_MAX_SCROLL", payload: r };
+          },
+          mo = function () {
+            return { type: "MOVE_UP", payload: null };
+          },
+          bo = function () {
+            return { type: "MOVE_DOWN", payload: null };
+          },
+          ho = function () {
+            return { type: "MOVE_RIGHT", payload: null };
+          },
+          yo = function () {
+            return { type: "MOVE_LEFT", payload: null };
+          },
+          Qr = function () {
+            return { type: "FLUSH", payload: null };
+          },
+          Do = function (r) {
+            return { type: "DROP_ANIMATE", payload: r };
+          },
+          Zr = function (r) {
+            return { type: "DROP_COMPLETE", payload: r };
+          },
+          mn = function (r) {
+            return { type: "DROP", payload: r };
+          },
+          Io = function (r) {
+            return { type: "DROP_PENDING", payload: r };
+          },
+          bn = function () {
+            return { type: "DROP_ANIMATION_FINISHED", payload: null };
+          };
+        function Gu(e) {
+          if (!(e.length <= 1)) {
+            for (
+              var r = e.map(function (l) {
+                  return l.descriptor.index;
+                }),
+                t = {},
+                n = 1;
+              n < r.length;
+              n++
+            ) {
+              var a = r[n],
+                i = r[n - 1];
+              a !== i + 1 && (t[a] = !0);
+            }
+            if (Object.keys(t).length)
+              var o = r
+                .map(function (l) {
+                  var s = !!t[l];
+                  return s ? "[\u{1F525}" + l + "]" : "" + l;
+                })
+                .join(", ");
+          }
+        }
+        function xo(e, r) {
+          if (0) var t;
+        }
+        var So = function (e) {
+            return function (r) {
+              var t = r.getState,
+                n = r.dispatch;
+              return function (a) {
+                return function (i) {
+                  if (i.type !== "LIFT") {
+                    a(i);
+                    return;
+                  }
+                  var o = i.payload,
+                    l = o.id,
+                    s = o.clientSelection,
+                    f = o.movementMode,
+                    d = t();
+                  d.phase === "DROP_ANIMATING" &&
+                    n(Zr({ completed: d.completed })),
+                    t().phase !== "IDLE" && m(!1),
+                    n(Qr()),
+                    n(io({ draggableId: l, movementMode: f }));
+                  var c = { shouldPublishImmediately: f === "SNAP" },
+                    u = { draggableId: l, scrollOptions: c },
+                    p = e.startPublishing(u),
+                    v = p.critical,
+                    g = p.dimensions,
+                    b = p.viewport;
+                  xo(v, g),
+                    n(
+                      lo({
+                        critical: v,
+                        dimensions: g,
+                        clientSelection: s,
+                        movementMode: f,
+                        viewport: b,
+                      }),
+                    );
+                };
+              };
+            };
+          },
+          Co = function (e) {
+            return function () {
+              return function (r) {
+                return function (t) {
+                  t.type === "INITIAL_PUBLISH" && e.dragging(),
+                    t.type === "DROP_ANIMATE" &&
+                      e.dropping(t.payload.completed.result.reason),
+                    (t.type === "FLUSH" || t.type === "DROP_COMPLETE") &&
+                      e.resting(),
+                    r(t);
+                };
+              };
+            };
+          },
+          _r = {
+            outOfTheWay: "cubic-bezier(0.2, 0, 0, 1)",
+            drop: "cubic-bezier(.2,1,.1,1)",
+          },
+          ze = { opacity: { drop: 0, combining: 0.7 }, scale: { drop: 0.75 } },
+          et = { outOfTheWay: 0.2, minDropTime: 0.33, maxDropTime: 0.55 },
+          ye = et.outOfTheWay + "s " + _r.outOfTheWay,
+          je = {
+            fluid: "opacity " + ye,
+            snap: "transform " + ye + ", opacity " + ye,
+            drop: function (r) {
+              var t = r + "s " + _r.drop;
+              return "transform " + t + ", opacity " + t;
+            },
+            outOfTheWay: "transform " + ye,
+            placeholder: "height " + ye + ", width " + ye + ", margin " + ye,
+          },
+          hn = function (r) {
+            return oe(r, W) ? null : "translate(" + r.x + "px, " + r.y + "px)";
+          },
+          rt = {
+            moveTo: hn,
+            drop: function (r, t) {
+              var n = hn(r);
+              return n ? (t ? n + " scale(" + ze.scale.drop + ")" : n) : null;
+            },
+          },
+          tt = et.minDropTime,
+          yn = et.maxDropTime,
+          wo = yn - tt,
+          Dn = 1500,
+          Ao = 0.6,
+          Eo = function (e) {
+            var r = e.current,
+              t = e.destination,
+              n = e.reason,
+              a = Ge(r, t);
+            if (a <= 0) return tt;
+            if (a >= Dn) return yn;
+            var i = a / Dn,
+              o = tt + wo * i,
+              l = n === "CANCEL" ? o * Ao : o;
+            return Number(l.toFixed(2));
+          },
+          Po = function (e) {
+            var r = e.impact,
+              t = e.draggable,
+              n = e.dimensions,
+              a = e.viewport,
+              i = e.afterCritical,
+              o = n.draggables,
+              l = n.droppables,
+              s = $(r),
+              f = s ? l[s] : null,
+              d = l[t.descriptor.droppableId],
+              c = dn({
+                impact: r,
+                draggable: t,
+                draggables: o,
+                afterCritical: i,
+                droppable: f || d,
+                viewport: a,
+              }),
+              u = q(c, t.client.borderBox.center);
+            return u;
+          },
+          Ro = function (e) {
+            var r = e.draggables,
+              t = e.reason,
+              n = e.lastImpact,
+              a = e.home,
+              i = e.viewport,
+              o = e.onLiftImpact;
+            if (!n.at || t !== "DROP") {
+              var l = cn({
+                draggables: r,
+                impact: o,
+                destination: a,
+                viewport: i,
+                forceShouldAnimate: !0,
+              });
+              return { impact: l, didDropInsideDroppable: !1 };
+            }
+            if (n.at.type === "REORDER")
+              return { impact: n, didDropInsideDroppable: !0 };
+            var s = (0, A.A)({}, n, { displaced: ke });
+            return { impact: s, didDropInsideDroppable: !0 };
+          },
+          Bo = function (e) {
+            var r = e.getState,
+              t = e.dispatch;
+            return function (n) {
+              return function (a) {
+                if (a.type !== "DROP") {
+                  n(a);
+                  return;
+                }
+                var i = r(),
+                  o = a.payload.reason;
+                if (i.phase === "COLLECTING") {
+                  t(Io({ reason: o }));
+                  return;
+                }
+                if (i.phase !== "IDLE") {
+                  var l = i.phase === "DROP_PENDING" && i.isWaiting;
+                  l && m(!1),
+                    i.phase === "DRAGGING" ||
+                      i.phase === "DROP_PENDING" ||
+                      m(!1);
+                  var s = i.critical,
+                    f = i.dimensions,
+                    d = f.draggables[i.critical.draggable.id],
+                    c = Ro({
+                      reason: o,
+                      lastImpact: i.impact,
+                      afterCritical: i.afterCritical,
+                      onLiftImpact: i.onLiftImpact,
+                      home: i.dimensions.droppables[i.critical.droppable.id],
+                      viewport: i.viewport,
+                      draggables: i.dimensions.draggables,
+                    }),
+                    u = c.impact,
+                    p = c.didDropInsideDroppable,
+                    v = p ? Hr(u) : null,
+                    g = p ? cr(u) : null,
+                    b = {
+                      index: s.draggable.index,
+                      droppableId: s.droppable.id,
+                    },
+                    y = {
+                      draggableId: d.descriptor.id,
+                      type: d.descriptor.type,
+                      source: b,
+                      reason: o,
+                      mode: i.movementMode,
+                      destination: v,
+                      combine: g,
+                    },
+                    I = Po({
+                      impact: u,
+                      draggable: d,
+                      dimensions: f,
+                      viewport: i.viewport,
+                      afterCritical: i.afterCritical,
+                    }),
+                    S = {
+                      critical: i.critical,
+                      afterCritical: i.afterCritical,
+                      result: y,
+                      impact: u,
+                    },
+                    x = !oe(i.current.client.offset, I) || !!y.combine;
+                  if (!x) {
+                    t(Zr({ completed: S }));
+                    return;
+                  }
+                  var w = Eo({
+                      current: i.current.client.offset,
+                      destination: I,
+                      reason: o,
+                    }),
+                    E = {
+                      newHomeClientOffset: I,
+                      dropDuration: w,
+                      completed: S,
+                    };
+                  t(Do(E));
+                }
+              };
+            };
+          },
+          In = function (e) {
+            return { x: e.pageXOffset, y: e.pageYOffset };
+          };
+        function Oo(e) {
+          return {
+            eventName: "scroll",
+            options: { passive: !0, capture: !1 },
+            fn: function (t) {
+              (t.target !== window && t.target !== window.document) || e();
+            },
+          };
+        }
+        function To(e) {
+          var r = e.onWindowScroll;
+          function t() {
+            r(In());
+          }
+          var n = (0, Le.A)(t),
+            a = Oo(n),
+            i = ie;
+          function o() {
+            return i !== ie;
+          }
+          function l() {
+            o() && m(!1), (i = K(window, [a]));
+          }
+          function s() {
+            o() || m(!1), n.cancel(), i(), (i = ie);
+          }
+          return { start: l, stop: s, isActive: o };
+        }
+        var No = function (r) {
+            return (
+              r.type === "DROP_COMPLETE" ||
+              r.type === "DROP_ANIMATE" ||
+              r.type === "FLUSH"
+            );
+          },
+          Mo = function (e) {
+            var r = To({
+              onWindowScroll: function (n) {
+                e.dispatch(vo({ newScroll: n }));
+              },
+            });
+            return function (t) {
+              return function (n) {
+                !r.isActive() && n.type === "INITIAL_PUBLISH" && r.start(),
+                  r.isActive() && No(n) && r.stop(),
+                  t(n);
+              };
+            };
+          },
+          Lo = function (e) {
+            var r = !1,
+              t = !1,
+              n = setTimeout(function () {
+                t = !0;
+              }),
+              a = function (o) {
+                r || t || ((r = !0), e(o), clearTimeout(n));
+              };
+            return (
+              (a.wasCalled = function () {
+                return r;
+              }),
+              a
+            );
+          },
+          Fo = function () {
+            var e = [],
+              r = function (i) {
+                var o = Ur(e, function (f) {
+                  return f.timerId === i;
+                });
+                o === -1 && m(!1);
+                var l = e.splice(o, 1),
+                  s = l[0];
+                s.callback();
+              },
+              t = function (i) {
+                var o = setTimeout(function () {
+                    return r(o);
+                  }),
+                  l = { timerId: o, callback: i };
+                e.push(l);
+              },
+              n = function () {
+                if (e.length) {
+                  var i = [].concat(e);
+                  (e.length = 0),
+                    i.forEach(function (o) {
+                      clearTimeout(o.timerId), o.callback();
+                    });
+                }
+              };
+            return { add: t, flush: n };
+          },
+          Go = function (r, t) {
+            return r == null && t == null
+              ? !0
+              : r == null || t == null
+                ? !1
+                : r.droppableId === t.droppableId && r.index === t.index;
+          },
+          Wo = function (r, t) {
+            return r == null && t == null
+              ? !0
+              : r == null || t == null
+                ? !1
+                : r.draggableId === t.draggableId &&
+                  r.droppableId === t.droppableId;
+          },
+          ko = function (r, t) {
+            if (r === t) return !0;
+            var n =
+                r.draggable.id === t.draggable.id &&
+                r.draggable.droppableId === t.draggable.droppableId &&
+                r.draggable.type === t.draggable.type &&
+                r.draggable.index === t.draggable.index,
+              a =
+                r.droppable.id === t.droppable.id &&
+                r.droppable.type === t.droppable.type;
+            return n && a;
+          },
+          Ke = function (r, t) {
+            qe(), t(), $e();
+          },
+          vr = function (r, t) {
+            return {
+              draggableId: r.draggable.id,
+              type: r.droppable.type,
+              source: { droppableId: r.droppable.id, index: r.draggable.index },
+              mode: t,
+            };
+          },
+          nt = function (r, t, n, a) {
+            if (!r) {
+              n(a(t));
+              return;
+            }
+            var i = Lo(n),
+              o = { announce: i };
+            r(t, o), i.wasCalled() || n(a(t));
+          },
+          Uo = function (e, r) {
+            var t = Fo(),
+              n = null,
+              a = function (u, p) {
+                n && m(!1),
+                  Ke("onBeforeCapture", function () {
+                    var v = e().onBeforeCapture;
+                    if (v) {
+                      var g = { draggableId: u, mode: p };
+                      v(g);
+                    }
                   });
               },
-              beforeStart: function (r, n) {
-                t && le(!1),
-                  En(0, function () {
-                    var t = e().onBeforeDragStart;
-                    t && t(wn(r, n));
+              i = function (u, p) {
+                n && m(!1),
+                  Ke("onBeforeDragStart", function () {
+                    var v = e().onBeforeDragStart;
+                    v && v(vr(u, p));
                   });
               },
-              start: function (i, o) {
-                t && le(!1);
-                var a = wn(i, o);
-                (t = {
-                  mode: o,
-                  lastCritical: i,
-                  lastLocation: a.source,
+              o = function (u, p) {
+                n && m(!1);
+                var v = vr(u, p);
+                (n = {
+                  mode: p,
+                  lastCritical: u,
+                  lastLocation: v.source,
                   lastCombine: null,
                 }),
-                  n.add(function () {
-                    En(0, function () {
-                      return An(e().onDragStart, a, r, fe.onDragStart);
+                  t.add(function () {
+                    Ke("onDragStart", function () {
+                      return nt(e().onDragStart, v, r, lr.onDragStart);
                     });
                   });
               },
-              update: function (i, a) {
-                var l = Me(a),
-                  u = _e(a);
-                t || le(!1);
-                var c = !(function (e, r) {
-                  if (e === r) return !0;
-                  var n =
-                      e.draggable.id === r.draggable.id &&
-                      e.draggable.droppableId === r.draggable.droppableId &&
-                      e.draggable.type === r.draggable.type &&
-                      e.draggable.index === r.draggable.index,
-                    t =
-                      e.droppable.id === r.droppable.id &&
-                      e.droppable.type === r.droppable.type;
-                  return n && t;
-                })(i, t.lastCritical);
-                c && (t.lastCritical = i);
-                var s,
-                  d,
-                  p =
-                    ((d = l),
-                    !(
-                      (null == (s = t.lastLocation) && null == d) ||
-                      (null != s &&
-                        null != d &&
-                        s.droppableId === d.droppableId &&
-                        s.index === d.index)
-                    ));
-                p && (t.lastLocation = l);
-                var f = !(function (e, r) {
-                  return (
-                    (null == e && null == r) ||
-                    (null != e &&
-                      null != r &&
-                      e.draggableId === r.draggableId &&
-                      e.droppableId === r.droppableId)
-                  );
-                })(t.lastCombine, u);
-                if ((f && (t.lastCombine = u), c || p || f)) {
-                  var g = (0, o.A)({}, wn(i, t.mode), {
-                    combine: u,
-                    destination: l,
+              l = function (u, p) {
+                var v = Hr(p),
+                  g = cr(p);
+                n || m(!1);
+                var b = !ko(u, n.lastCritical);
+                b && (n.lastCritical = u);
+                var y = !Go(n.lastLocation, v);
+                y && (n.lastLocation = v);
+                var I = !Wo(n.lastCombine, g);
+                if ((I && (n.lastCombine = g), !(!b && !y && !I))) {
+                  var S = (0, A.A)({}, vr(u, n.mode), {
+                    combine: g,
+                    destination: v,
                   });
-                  n.add(function () {
-                    En(0, function () {
-                      return An(e().onDragUpdate, g, r, fe.onDragUpdate);
+                  t.add(function () {
+                    Ke("onDragUpdate", function () {
+                      return nt(e().onDragUpdate, S, r, lr.onDragUpdate);
                     });
                   });
                 }
               },
-              flush: function () {
-                t || le(!1), n.flush();
+              s = function () {
+                n || m(!1), t.flush();
               },
-              drop: i,
-              abort: function () {
-                if (t) {
-                  var e = (0, o.A)({}, wn(t.lastCritical, t.mode), {
+              f = function (u) {
+                n || m(!1),
+                  (n = null),
+                  Ke("onDragEnd", function () {
+                    return nt(e().onDragEnd, u, r, lr.onDragEnd);
+                  });
+              },
+              d = function () {
+                if (n) {
+                  var u = (0, A.A)({}, vr(n.lastCritical, n.mode), {
                     combine: null,
                     destination: null,
                     reason: "CANCEL",
                   });
-                  i(e);
+                  f(u);
                 }
-              },
+              };
+            return {
+              beforeCapture: a,
+              beforeStart: i,
+              start: o,
+              update: l,
+              flush: s,
+              drop: f,
+              abort: d,
             };
-          })(e, r);
-          return function (e) {
-            return function (r) {
-              return function (t) {
-                if ("BEFORE_INITIAL_CAPTURE" !== t.type) {
-                  if ("INITIAL_PUBLISH" === t.type) {
-                    var i = t.payload.critical;
-                    return (
-                      n.beforeStart(i, t.payload.movementMode),
-                      r(t),
-                      void n.start(i, t.payload.movementMode)
+          },
+          Ho = function (e, r) {
+            var t = Uo(e, r);
+            return function (n) {
+              return function (a) {
+                return function (i) {
+                  if (i.type === "BEFORE_INITIAL_CAPTURE") {
+                    t.beforeCapture(
+                      i.payload.draggableId,
+                      i.payload.movementMode,
                     );
+                    return;
                   }
-                  if ("DROP_COMPLETE" === t.type) {
-                    var o = t.payload.completed.result;
-                    return n.flush(), r(t), void n.drop(o);
+                  if (i.type === "INITIAL_PUBLISH") {
+                    var o = i.payload.critical;
+                    t.beforeStart(o, i.payload.movementMode),
+                      a(i),
+                      t.start(o, i.payload.movementMode);
+                    return;
                   }
-                  if ((r(t), "FLUSH" !== t.type)) {
-                    var a = e.getState();
-                    "DRAGGING" === a.phase && n.update(a.critical, a.impact);
-                  } else n.abort();
-                } else
-                  n.beforeCapture(
-                    t.payload.draggableId,
-                    t.payload.movementMode,
-                  );
+                  if (i.type === "DROP_COMPLETE") {
+                    var l = i.payload.completed.result;
+                    t.flush(), a(i), t.drop(l);
+                    return;
+                  }
+                  if ((a(i), i.type === "FLUSH")) {
+                    t.abort();
+                    return;
+                  }
+                  var s = n.getState();
+                  s.phase === "DRAGGING" && t.update(s.critical, s.impact);
+                };
               };
             };
-          };
-        },
-        Sn = function (e) {
-          return function (r) {
-            return function (n) {
-              if ("DROP_ANIMATION_FINISHED" === n.type) {
-                var t = e.getState();
-                "DROP_ANIMATING" !== t.phase && le(!1),
-                  e.dispatch(tn({ completed: t.completed }));
-              } else r(n);
+          },
+          Vo = function (e) {
+            return function (r) {
+              return function (t) {
+                if (t.type !== "DROP_ANIMATION_FINISHED") {
+                  r(t);
+                  return;
+                }
+                var n = e.getState();
+                n.phase !== "DROP_ANIMATING" && m(!1),
+                  e.dispatch(Zr({ completed: n.completed }));
+              };
             };
-          };
-        },
-        Pn = function (e) {
-          var r = null,
-            n = null;
-          return function (t) {
-            return function (i) {
-              if (
-                (("FLUSH" !== i.type &&
-                  "DROP_COMPLETE" !== i.type &&
-                  "DROP_ANIMATION_FINISHED" !== i.type) ||
-                  (n && (cancelAnimationFrame(n), (n = null)),
-                  r && (r(), (r = null))),
-                t(i),
-                "DROP_ANIMATE" === i.type)
-              ) {
-                var o = {
-                  eventName: "scroll",
-                  options: { capture: !0, passive: !1, once: !0 },
-                  fn: function () {
-                    "DROP_ANIMATING" === e.getState().phase &&
-                      e.dispatch({
-                        type: "DROP_ANIMATION_FINISHED",
-                        payload: null,
-                      });
-                  },
+          },
+          qo = function (e) {
+            var r = null,
+              t = null;
+            function n() {
+              t && (cancelAnimationFrame(t), (t = null)),
+                r && (r(), (r = null));
+            }
+            return function (a) {
+              return function (i) {
+                if (
+                  ((i.type === "FLUSH" ||
+                    i.type === "DROP_COMPLETE" ||
+                    i.type === "DROP_ANIMATION_FINISHED") &&
+                    n(),
+                  a(i),
+                  i.type === "DROP_ANIMATE")
+                ) {
+                  var o = {
+                    eventName: "scroll",
+                    options: { capture: !0, passive: !1, once: !0 },
+                    fn: function () {
+                      var s = e.getState();
+                      s.phase === "DROP_ANIMATING" && e.dispatch(bn());
+                    },
+                  };
+                  t = requestAnimationFrame(function () {
+                    (t = null), (r = K(window, [o]));
+                  });
+                }
+              };
+            };
+          },
+          $o = function (e) {
+            return function () {
+              return function (r) {
+                return function (t) {
+                  (t.type === "DROP_COMPLETE" ||
+                    t.type === "FLUSH" ||
+                    t.type === "DROP_ANIMATE") &&
+                    e.stopPublishing(),
+                    r(t);
                 };
-                n = requestAnimationFrame(function () {
-                  (n = null), (r = te(window, [o]));
-                });
-              }
+              };
             };
-          };
-        },
-        Nn = function (e) {
-          return function (r) {
-            return function (n) {
-              if ((r(n), "PUBLISH_WHILE_DRAGGING" === n.type)) {
-                var t = e.getState();
-                "DROP_PENDING" === t.phase &&
-                  (t.isWaiting || e.dispatch(on({ reason: t.reason })));
-              }
+          },
+          zo = function (e) {
+            var r = !1;
+            return function () {
+              return function (t) {
+                return function (n) {
+                  if (n.type === "INITIAL_PUBLISH") {
+                    (r = !0),
+                      e.tryRecordFocus(n.payload.critical.draggable.id),
+                      t(n),
+                      e.tryRestoreFocusRecorded();
+                    return;
+                  }
+                  if ((t(n), !!r)) {
+                    if (n.type === "FLUSH") {
+                      (r = !1), e.tryRestoreFocusRecorded();
+                      return;
+                    }
+                    if (n.type === "DROP_COMPLETE") {
+                      r = !1;
+                      var a = n.payload.completed.result;
+                      a.combine &&
+                        e.tryShiftRecord(a.draggableId, a.combine.draggableId),
+                        e.tryRestoreFocusRecorded();
+                    }
+                  }
+                };
+              };
             };
-          };
-        },
-        Rn = a.Zz,
-        Bn = function (e) {
-          var r,
-            n = e.dimensionMarshal,
-            t = e.focusMarshal,
-            i = e.styleMarshal,
-            o = e.getResponders,
-            l = e.announce,
-            u = e.autoScroller;
-          return (0, a.y$)(
-            qr,
-            Rn(
-              (0, a.Tw)(
-                ((r = i),
-                function () {
-                  return function (e) {
-                    return function (n) {
-                      "INITIAL_PUBLISH" === n.type && r.dragging(),
-                        "DROP_ANIMATE" === n.type &&
-                          r.dropping(n.payload.completed.result.reason),
-                        ("FLUSH" !== n.type && "DROP_COMPLETE" !== n.type) ||
-                          r.resting(),
-                        e(n);
-                    };
-                  };
-                }),
-                (function (e) {
-                  return function () {
-                    return function (r) {
-                      return function (n) {
-                        ("DROP_COMPLETE" !== n.type &&
-                          "FLUSH" !== n.type &&
-                          "DROP_ANIMATE" !== n.type) ||
-                          e.stopPublishing(),
-                          r(n);
-                      };
-                    };
-                  };
-                })(n),
-                (function (e) {
-                  return function (r) {
-                    var n = r.getState,
-                      t = r.dispatch;
-                    return function (r) {
-                      return function (i) {
-                        if ("LIFT" === i.type) {
-                          var o = i.payload,
-                            a = o.id,
-                            l = o.clientSelection,
-                            u = o.movementMode,
-                            c = n();
-                          "DROP_ANIMATING" === c.phase &&
-                            t(tn({ completed: c.completed })),
-                            "IDLE" !== n().phase && le(!1),
-                            t(nn()),
-                            t({
-                              type: "BEFORE_INITIAL_CAPTURE",
-                              payload: { draggableId: a, movementMode: u },
-                            });
-                          var s = {
-                              draggableId: a,
-                              scrollOptions: {
-                                shouldPublishImmediately: "SNAP" === u,
-                              },
-                            },
-                            d = e.startPublishing(s),
-                            p = d.critical,
-                            f = d.dimensions,
-                            g = d.viewport;
-                          t({
-                            type: "INITIAL_PUBLISH",
-                            payload: {
-                              critical: p,
-                              dimensions: f,
-                              clientSelection: l,
-                              movementMode: u,
-                              viewport: g,
-                            },
-                          });
-                        } else r(i);
-                      };
-                    };
-                  };
-                })(n),
-                hn,
-                Sn,
-                Pn,
-                Nn,
-                (function (e) {
-                  return function (r) {
-                    return function (n) {
-                      return function (t) {
-                        if (
-                          (function (e) {
-                            return (
-                              "DROP_COMPLETE" === e.type ||
-                              "DROP_ANIMATE" === e.type ||
-                              "FLUSH" === e.type
-                            );
-                          })(t)
-                        )
-                          return e.stop(), void n(t);
-                        if ("INITIAL_PUBLISH" === t.type) {
-                          n(t);
-                          var i = r.getState();
-                          return (
-                            "DRAGGING" !== i.phase && le(!1), void e.start(i)
-                          );
-                        }
-                        n(t), e.scroll(r.getState());
-                      };
-                    };
-                  };
-                })(u),
-                Dn,
-                (function (e) {
-                  var r = !1;
-                  return function () {
-                    return function (n) {
-                      return function (t) {
-                        if ("INITIAL_PUBLISH" === t.type)
-                          return (
-                            (r = !0),
-                            e.tryRecordFocus(t.payload.critical.draggable.id),
-                            n(t),
-                            void e.tryRestoreFocusRecorded()
-                          );
-                        if ((n(t), r)) {
-                          if ("FLUSH" === t.type)
-                            return (r = !1), void e.tryRestoreFocusRecorded();
-                          if ("DROP_COMPLETE" === t.type) {
-                            r = !1;
-                            var i = t.payload.completed.result;
-                            i.combine &&
-                              e.tryShiftRecord(
-                                i.draggableId,
-                                i.combine.draggableId,
-                              ),
-                              e.tryRestoreFocusRecorded();
-                          }
-                        }
-                      };
-                    };
-                  };
-                })(t),
-                Cn(o, l),
+          },
+          jo = function (r) {
+            return (
+              r.type === "DROP_COMPLETE" ||
+              r.type === "DROP_ANIMATE" ||
+              r.type === "FLUSH"
+            );
+          },
+          Ko = function (e) {
+            return function (r) {
+              return function (t) {
+                return function (n) {
+                  if (jo(n)) {
+                    e.stop(), t(n);
+                    return;
+                  }
+                  if (n.type === "INITIAL_PUBLISH") {
+                    t(n);
+                    var a = r.getState();
+                    a.phase !== "DRAGGING" && m(!1), e.start(a);
+                    return;
+                  }
+                  t(n), e.scroll(r.getState());
+                };
+              };
+            };
+          },
+          Yo = function (e) {
+            return function (r) {
+              return function (t) {
+                if ((r(t), t.type === "PUBLISH_WHILE_DRAGGING")) {
+                  var n = e.getState();
+                  n.phase === "DROP_PENDING" &&
+                    (n.isWaiting || e.dispatch(mn({ reason: n.reason })));
+                }
+              };
+            };
+          },
+          Jo = X.Zz,
+          Xo = function (e) {
+            var r = e.dimensionMarshal,
+              t = e.focusMarshal,
+              n = e.styleMarshal,
+              a = e.getResponders,
+              i = e.announce,
+              o = e.autoScroller;
+            return (0, X.y$)(
+              ao,
+              Jo(
+                (0, X.Tw)(
+                  Co(n),
+                  $o(r),
+                  So(r),
+                  Bo,
+                  Vo,
+                  qo,
+                  Yo,
+                  Ko(o),
+                  Mo,
+                  zo(t),
+                  Ho(a, i),
+                ),
               ),
-            ),
-          );
-        };
-      var On = function (e) {
-          var r = e.scrollHeight,
-            n = e.scrollWidth,
-            t = e.height,
-            i = e.width,
-            o = me({ x: n, y: r }, { x: i, y: t });
-          return { x: Math.max(0, o.x), y: Math.max(0, o.y) };
-        },
-        Tn = function (e) {
-          var r = e.document.documentElement;
-          return r || le(!1), r;
-        },
-        Ln = function (e) {
-          var r = Tn(e);
-          return On({
-            scrollHeight: r.scrollHeight,
-            scrollWidth: r.scrollWidth,
-            width: r.clientWidth,
-            height: r.clientHeight,
-          });
-        },
-        Gn = function (e) {
-          var r = e.windowToUse,
-            n = e.critical,
-            t = e.scrollOptions,
-            i = e.registry;
-          _r();
-          var o = (function (e) {
-              var r = yn(e),
-                n = Ln(e),
-                t = r.y,
-                i = r.x,
-                o = Tn(e),
-                a = i + o.clientWidth,
-                l = t + o.clientHeight;
-              return {
-                frame: (0, J.l)({ top: t, left: i, right: a, bottom: l }),
+            );
+          },
+          at = function () {
+            return { additions: {}, removals: {}, modified: {} };
+          };
+        function Qo(e) {
+          var r = e.registry,
+            t = e.callbacks,
+            n = at(),
+            a = null,
+            i = function () {
+              a ||
+                (t.collectionStarting(),
+                (a = requestAnimationFrame(function () {
+                  (a = null), qe();
+                  var d = n,
+                    c = d.additions,
+                    u = d.removals,
+                    p = d.modified,
+                    v = Object.keys(c)
+                      .map(function (y) {
+                        return r.draggable.getById(y).getDimension(W);
+                      })
+                      .sort(function (y, I) {
+                        return y.descriptor.index - I.descriptor.index;
+                      }),
+                    g = Object.keys(p).map(function (y) {
+                      var I = r.droppable.getById(y),
+                        S = I.callbacks.getScrollWhileDragging();
+                      return { droppableId: y, scroll: S };
+                    }),
+                    b = { additions: v, removals: Object.keys(u), modified: g };
+                  (n = at()), $e(), t.publish(b);
+                })));
+            },
+            o = function (d) {
+              var c = d.descriptor.id;
+              (n.additions[c] = d),
+                (n.modified[d.descriptor.droppableId] = !0),
+                n.removals[c] && delete n.removals[c],
+                i();
+            },
+            l = function (d) {
+              var c = d.descriptor;
+              (n.removals[c.id] = !0),
+                (n.modified[c.droppableId] = !0),
+                n.additions[c.id] && delete n.additions[c.id],
+                i();
+            },
+            s = function () {
+              a && (cancelAnimationFrame(a), (a = null), (n = at()));
+            };
+          return { add: o, remove: l, stop: s };
+        }
+        var xn = function (e) {
+            var r = e.scrollHeight,
+              t = e.scrollWidth,
+              n = e.height,
+              a = e.width,
+              i = q({ x: t, y: r }, { x: a, y: n }),
+              o = { x: Math.max(0, i.x), y: Math.max(0, i.y) };
+            return o;
+          },
+          Sn = function (e) {
+            var r = e.document.documentElement;
+            return r || m(!1), r;
+          },
+          Cn = function (e) {
+            var r = Sn(e),
+              t = xn({
+                scrollHeight: r.scrollHeight,
+                scrollWidth: r.scrollWidth,
+                width: r.clientWidth,
+                height: r.clientHeight,
+              });
+            return t;
+          },
+          Zo = function (e) {
+            var r = In(e),
+              t = Cn(e),
+              n = r.y,
+              a = r.x,
+              i = Sn(e),
+              o = i.clientWidth,
+              l = i.clientHeight,
+              s = a + o,
+              f = n + l,
+              d = (0, M.l)({ top: n, left: a, right: s, bottom: f }),
+              c = {
+                frame: d,
                 scroll: {
                   initial: r,
                   current: r,
-                  max: n,
-                  diff: { value: ge, displacement: ge },
+                  max: t,
+                  diff: { value: W, displacement: W },
                 },
               };
-            })(r),
-            a = o.scroll.current,
-            l = n.droppable,
-            u = i.droppable.getAllByType(l.type).map(function (e) {
-              return e.callbacks.getDimensionAndWatchScroll(a, t);
-            }),
-            c = i.draggable.getAllByType(n.draggable.type).map(function (e) {
-              return e.getDimension(a);
-            }),
-            s = { draggables: Oe(c), droppables: Be(u) };
-          return Fr(), { dimensions: s, critical: n, viewport: o };
-        };
-      function Mn(e, r, n) {
-        return (
-          n.descriptor.id !== r.id &&
-          n.descriptor.type === r.type &&
-          "virtual" ===
-            e.droppable.getById(n.descriptor.droppableId).descriptor.mode
-        );
-      }
-      var _n,
-        Fn,
-        kn = function (e, r, n) {
-          var t = null,
-            i = (function (e) {
-              var r = e.registry,
-                n = e.callbacks,
-                t = { additions: {}, removals: {}, modified: {} },
-                i = null,
-                o = function () {
-                  i ||
-                    (n.collectionStarting(),
-                    (i = requestAnimationFrame(function () {
-                      (i = null), _r();
-                      var e = t,
-                        o = e.additions,
-                        a = e.removals,
-                        l = e.modified,
-                        u = Object.keys(o)
-                          .map(function (e) {
-                            return r.draggable.getById(e).getDimension(ge);
-                          })
-                          .sort(function (e, r) {
-                            return e.descriptor.index - r.descriptor.index;
-                          }),
-                        c = Object.keys(l).map(function (e) {
-                          return {
-                            droppableId: e,
-                            scroll: r.droppable
-                              .getById(e)
-                              .callbacks.getScrollWhileDragging(),
-                          };
-                        }),
-                        s = {
-                          additions: u,
-                          removals: Object.keys(a),
-                          modified: c,
-                        };
-                      (t = { additions: {}, removals: {}, modified: {} }),
-                        Fr(),
-                        n.publish(s);
-                    })));
-                };
-              return {
-                add: function (e) {
-                  var r = e.descriptor.id;
-                  (t.additions[r] = e),
-                    (t.modified[e.descriptor.droppableId] = !0),
-                    t.removals[r] && delete t.removals[r],
-                    o();
+            return c;
+          },
+          _o = function (e) {
+            var r = e.windowToUse,
+              t = e.critical,
+              n = e.scrollOptions,
+              a = e.registry;
+            qe();
+            var i = Zo(r),
+              o = i.scroll.current,
+              l = t.droppable,
+              s = a.droppable.getAllByType(l.type).map(function (u) {
+                return u.callbacks.getDimensionAndWatchScroll(o, n);
+              }),
+              f = a.draggable.getAllByType(t.draggable.type).map(function (u) {
+                return u.getDimension(o);
+              }),
+              d = { draggables: $t(f), droppables: qt(s) };
+            $e();
+            var c = { dimensions: d, critical: t, viewport: i };
+            return c;
+          };
+        function wn(e, r, t) {
+          if (t.descriptor.id === r.id || t.descriptor.type !== r.type)
+            return !1;
+          var n = e.droppable.getById(t.descriptor.droppableId);
+          return n.descriptor.mode === "virtual";
+        }
+        var rl = function (e, r, t) {
+            var n = null,
+              a = Qo({
+                callbacks: {
+                  publish: t.publishWhileDragging,
+                  collectionStarting: t.collectionStarting,
                 },
-                remove: function (e) {
-                  var r = e.descriptor;
-                  (t.removals[r.id] = !0),
-                    (t.modified[r.droppableId] = !0),
-                    t.additions[r.id] && delete t.additions[r.id],
-                    o();
-                },
-                stop: function () {
-                  i &&
-                    (cancelAnimationFrame(i),
-                    (i = null),
-                    (t = { additions: {}, removals: {}, modified: {} }));
-                },
-              };
-            })({
-              callbacks: {
-                publish: n.publishWhileDragging,
-                collectionStarting: n.collectionStarting,
+                registry: r,
+              }),
+              i = function (v, g) {
+                r.droppable.exists(v) || m(!1),
+                  n && t.updateDroppableIsEnabled({ id: v, isEnabled: g });
               },
-              registry: r,
-            }),
-            o = function (e) {
-              t || le(!1);
-              var n = t.critical.draggable;
-              "ADDITION" === e.type && Mn(r, n, e.value) && i.add(e.value),
-                "REMOVAL" === e.type && Mn(r, n, e.value) && i.remove(e.value);
-            },
-            a = {
-              updateDroppableIsEnabled: function (e, i) {
-                r.droppable.exists(e) || le(!1),
-                  t && n.updateDroppableIsEnabled({ id: e, isEnabled: i });
-              },
-              updateDroppableIsCombineEnabled: function (e, i) {
-                t &&
-                  (r.droppable.exists(e) || le(!1),
-                  n.updateDroppableIsCombineEnabled({
-                    id: e,
-                    isCombineEnabled: i,
+              o = function (v, g) {
+                n &&
+                  (r.droppable.exists(v) || m(!1),
+                  t.updateDroppableIsCombineEnabled({
+                    id: v,
+                    isCombineEnabled: g,
                   }));
               },
-              scrollDroppable: function (e, n) {
-                t && r.droppable.getById(e).callbacks.scroll(n);
+              l = function (v, g) {
+                n &&
+                  (r.droppable.exists(v) || m(!1),
+                  t.updateDroppableScroll({ id: v, newScroll: g }));
               },
-              updateDroppableScroll: function (e, i) {
-                t &&
-                  (r.droppable.exists(e) || le(!1),
-                  n.updateDroppableScroll({ id: e, newScroll: i }));
+              s = function (v, g) {
+                n && r.droppable.getById(v).callbacks.scroll(g);
               },
-              startPublishing: function (n) {
-                t && le(!1);
-                var i = r.draggable.getById(n.draggableId),
-                  a = r.droppable.getById(i.descriptor.droppableId),
-                  l = { draggable: i.descriptor, droppable: a.descriptor },
-                  u = r.subscribe(o);
+              f = function () {
+                if (n) {
+                  a.stop();
+                  var v = n.critical.droppable;
+                  r.droppable.getAllByType(v.type).forEach(function (g) {
+                    return g.callbacks.dragStopped();
+                  }),
+                    n.unsubscribe(),
+                    (n = null);
+                }
+              },
+              d = function (v) {
+                n || m(!1);
+                var g = n.critical.draggable;
+                v.type === "ADDITION" && wn(r, g, v.value) && a.add(v.value),
+                  v.type === "REMOVAL" &&
+                    wn(r, g, v.value) &&
+                    a.remove(v.value);
+              },
+              c = function (v) {
+                n && m(!1);
+                var g = r.draggable.getById(v.draggableId),
+                  b = r.droppable.getById(g.descriptor.droppableId),
+                  y = { draggable: g.descriptor, droppable: b.descriptor },
+                  I = r.subscribe(d);
                 return (
-                  (t = { critical: l, unsubscribe: u }),
-                  Gn({
+                  (n = { critical: y, unsubscribe: I }),
+                  _o({
                     windowToUse: e,
-                    critical: l,
+                    critical: y,
                     registry: r,
-                    scrollOptions: n.scrollOptions,
+                    scrollOptions: v.scrollOptions,
                   })
                 );
               },
-              stopPublishing: function () {
-                if (t) {
-                  i.stop();
-                  var e = t.critical.droppable;
-                  r.droppable.getAllByType(e.type).forEach(function (e) {
-                    return e.callbacks.dragStopped();
-                  }),
-                    t.unsubscribe(),
-                    (t = null);
-                }
-              },
-            };
-          return a;
-        },
-        Wn = function (e, r) {
-          return (
-            "IDLE" === e.phase ||
-            ("DROP_ANIMATING" === e.phase &&
-              e.completed.result.draggableId !== r &&
-              "DROP" === e.completed.result.reason)
-          );
-        },
-        Un = function (e) {
-          window.scrollBy(e.x, e.y);
-        },
-        Hn = Z(function (e) {
-          return Te(e).filter(function (e) {
-            return !!e.isEnabled && !!e.frame;
-          });
-        }),
-        jn = function (e) {
-          var r = e.center,
-            n = e.destination,
-            t = e.droppables;
-          if (n) {
-            var i = t[n];
-            return i.frame ? i : null;
-          }
-          var o = (function (e, r) {
-            var n = Re(Hn(r), function (r) {
-              return r.frame || le(!1), Ar(r.frame.pageMarginBox)(e);
+              u = {
+                updateDroppableIsEnabled: i,
+                updateDroppableIsCombineEnabled: o,
+                scrollDroppable: s,
+                updateDroppableScroll: l,
+                startPublishing: c,
+                stopPublishing: f,
+              };
+            return u;
+          },
+          An = function (e, r) {
+            return e.phase === "IDLE"
+              ? !0
+              : e.phase !== "DROP_ANIMATING" ||
+                  e.completed.result.draggableId === r
+                ? !1
+                : e.completed.result.reason === "DROP";
+          },
+          tl = function (e) {
+            window.scrollBy(e.x, e.y);
+          },
+          nl = G(function (e) {
+            return ur(e).filter(function (r) {
+              return !(!r.isEnabled || !r.frame);
+            });
+          }),
+          al = function (r, t) {
+            var n = be(nl(t), function (a) {
+              return a.frame || m(!1), on(a.frame.pageMarginBox)(r);
             });
             return n;
-          })(r, t);
-          return o;
-        },
-        qn = 0.25,
-        Vn = 0.05,
-        Kn = 28,
-        zn = function (e) {
-          return Math.pow(e, 2);
-        },
-        Yn = { stopDampeningAt: 1200, accelerateAt: 360 },
-        Jn = function (e) {
-          var r = e.startOfRange,
-            n = e.endOfRange,
-            t = e.current,
-            i = n - r;
-          return 0 === i ? 0 : (t - r) / i;
-        },
-        Xn = Yn.accelerateAt,
-        $n = Yn.stopDampeningAt,
-        Qn = function (e) {
-          var r = e.distanceToEdge,
-            n = e.thresholds,
-            t = e.dragStartTime,
-            i = e.shouldUseTimeDampening,
-            o = (function (e, r) {
-              if (e > r.startScrollingFrom) return 0;
-              if (e <= r.maxScrollValueAt) return Kn;
-              if (e === r.startScrollingFrom) return 1;
-              var n = Jn({
-                  startOfRange: r.maxScrollValueAt,
-                  endOfRange: r.startScrollingFrom,
-                  current: e,
-                }),
-                t = Kn * zn(1 - n);
-              return Math.ceil(t);
-            })(r, n);
-          return 0 === o
-            ? 0
-            : i
-              ? Math.max(
-                  (function (e, r) {
-                    var n = r,
-                      t = $n,
-                      i = Date.now() - n;
-                    if (i >= $n) return e;
-                    if (i < Xn) return 1;
-                    var o = Jn({ startOfRange: Xn, endOfRange: t, current: i }),
-                      a = e * zn(o);
-                    return Math.ceil(a);
-                  })(o, t),
-                  1,
-                )
-              : o;
-        },
-        Zn = function (e) {
-          var r = e.container,
-            n = e.distanceToEdges,
-            t = e.dragStartTime,
-            i = e.axis,
-            o = e.shouldUseTimeDampening,
-            a = (function (e, r) {
-              return {
-                startScrollingFrom: e[r.size] * qn,
-                maxScrollValueAt: e[r.size] * Vn,
-              };
-            })(r, i);
-          return n[i.end] < n[i.start]
-            ? Qn({
-                distanceToEdge: n[i.end],
-                thresholds: a,
-                dragStartTime: t,
-                shouldUseTimeDampening: o,
-              })
-            : -1 *
-                Qn({
-                  distanceToEdge: n[i.start],
-                  thresholds: a,
-                  dragStartTime: t,
-                  shouldUseTimeDampening: o,
-                });
-        },
-        et = xe(function (e) {
-          return 0 === e ? 0 : e;
-        }),
-        rt = function (e) {
-          var r = e.dragStartTime,
-            n = e.container,
-            t = e.subject,
-            i = e.center,
-            o = e.shouldUseTimeDampening,
-            a = {
-              top: i.y - n.top,
-              right: n.right - i.x,
-              bottom: n.bottom - i.y,
-              left: i.x - n.left,
+          },
+          il = function (e) {
+            var r = e.center,
+              t = e.destination,
+              n = e.droppables;
+            if (t) {
+              var a = n[t];
+              return a.frame ? a : null;
+            }
+            var i = al(r, n);
+            return i;
+          },
+          se = {
+            startFromPercentage: 0.25,
+            maxScrollAtPercentage: 0.05,
+            maxPixelScroll: 28,
+            ease: function (r) {
+              return Math.pow(r, 2);
             },
-            l = Zn({
-              container: n,
-              distanceToEdges: a,
-              dragStartTime: r,
-              axis: Ke,
-              shouldUseTimeDampening: o,
-            }),
-            u = Zn({
-              container: n,
-              distanceToEdges: a,
-              dragStartTime: r,
-              axis: ze,
-              shouldUseTimeDampening: o,
-            }),
-            c = et({ x: u, y: l });
-          if (be(c, ge)) return null;
-          var s = (function (e) {
+            durationDampening: { stopDampeningAt: 1200, accelerateAt: 360 },
+          },
+          ol = function (e, r) {
+            var t = e[r.size] * se.startFromPercentage,
+              n = e[r.size] * se.maxScrollAtPercentage,
+              a = { startScrollingFrom: t, maxScrollValueAt: n };
+            return a;
+          },
+          En = function (e) {
+            var r = e.startOfRange,
+              t = e.endOfRange,
+              n = e.current,
+              a = t - r;
+            if (a === 0) return 0;
+            var i = n - r,
+              o = i / a;
+            return o;
+          },
+          it = 1,
+          ll = function (e, r) {
+            if (e > r.startScrollingFrom) return 0;
+            if (e <= r.maxScrollValueAt) return se.maxPixelScroll;
+            if (e === r.startScrollingFrom) return it;
+            var t = En({
+                startOfRange: r.maxScrollValueAt,
+                endOfRange: r.startScrollingFrom,
+                current: e,
+              }),
+              n = 1 - t,
+              a = se.maxPixelScroll * se.ease(n);
+            return Math.ceil(a);
+          },
+          Pn = se.durationDampening.accelerateAt,
+          Rn = se.durationDampening.stopDampeningAt,
+          sl = function (e, r) {
+            var t = r,
+              n = Rn,
+              a = Date.now(),
+              i = a - t;
+            if (i >= Rn) return e;
+            if (i < Pn) return it;
+            var o = En({ startOfRange: Pn, endOfRange: n, current: i }),
+              l = e * se.ease(o);
+            return Math.ceil(l);
+          },
+          Bn = function (e) {
+            var r = e.distanceToEdge,
+              t = e.thresholds,
+              n = e.dragStartTime,
+              a = e.shouldUseTimeDampening,
+              i = ll(r, t);
+            return i === 0 ? 0 : a ? Math.max(sl(i, n), it) : i;
+          },
+          On = function (e) {
             var r = e.container,
-              n = e.subject,
-              t = e.proposedScroll,
-              i = n.height > r.height,
-              o = n.width > r.width;
-            return o || i
-              ? o && i
+              t = e.distanceToEdges,
+              n = e.dragStartTime,
+              a = e.axis,
+              i = e.shouldUseTimeDampening,
+              o = ol(r, a),
+              l = t[a.end] < t[a.start];
+            return l
+              ? Bn({
+                  distanceToEdge: t[a.end],
+                  thresholds: o,
+                  dragStartTime: n,
+                  shouldUseTimeDampening: i,
+                })
+              : -1 *
+                  Bn({
+                    distanceToEdge: t[a.start],
+                    thresholds: o,
+                    dragStartTime: n,
+                    shouldUseTimeDampening: i,
+                  });
+          },
+          ul = function (e) {
+            var r = e.container,
+              t = e.subject,
+              n = e.proposedScroll,
+              a = t.height > r.height,
+              i = t.width > r.width;
+            return !i && !a
+              ? n
+              : i && a
                 ? null
-                : { x: o ? 0 : t.x, y: i ? 0 : t.y }
-              : t;
-          })({ container: n, subject: t, proposedScroll: c });
-          return s ? (be(s, ge) ? null : s) : null;
-        },
-        nt = xe(function (e) {
-          return 0 === e ? 0 : e > 0 ? 1 : -1;
-        }),
-        tt =
-          ((_n = function (e, r) {
-            return e < 0 ? e : e > r ? e - r : 0;
+                : { x: i ? 0 : n.x, y: a ? 0 : n.y };
+          },
+          cl = Ht(function (e) {
+            return e === 0 ? 0 : e;
           }),
-          function (e) {
-            var r = e.current,
-              n = e.max,
-              t = e.change,
-              i = ve(r, t),
-              o = { x: _n(i.x, n.x), y: _n(i.y, n.y) };
-            return be(o, ge) ? null : o;
+          Tn = function (e) {
+            var r = e.dragStartTime,
+              t = e.container,
+              n = e.subject,
+              a = e.center,
+              i = e.shouldUseTimeDampening,
+              o = {
+                top: a.y - t.top,
+                right: t.right - a.x,
+                bottom: t.bottom - a.y,
+                left: a.x - t.left,
+              },
+              l = On({
+                container: t,
+                distanceToEdges: o,
+                dragStartTime: r,
+                axis: Vr,
+                shouldUseTimeDampening: i,
+              }),
+              s = On({
+                container: t,
+                distanceToEdges: o,
+                dragStartTime: r,
+                axis: Kt,
+                shouldUseTimeDampening: i,
+              }),
+              f = cl({ x: s, y: l });
+            if (oe(f, W)) return null;
+            var d = ul({ container: t, subject: n, proposedScroll: f });
+            return d ? (oe(d, W) ? null : d) : null;
+          },
+          dl = Ht(function (e) {
+            return e === 0 ? 0 : e > 0 ? 1 : -1;
           }),
-        it = function (e) {
-          var r = e.max,
-            n = e.current,
-            t = e.change,
-            i = { x: Math.max(n.x, r.x), y: Math.max(n.y, r.y) },
-            o = nt(t),
-            a = tt({ max: i, current: n, change: o });
-          return !a || (0 !== o.x && 0 === a.x) || (0 !== o.y && 0 === a.y);
-        },
-        ot = function (e, r) {
-          return it({
-            current: e.scroll.current,
-            max: e.scroll.max,
-            change: r,
-          });
-        },
-        at = function (e, r) {
-          var n = e.frame;
-          return (
-            !!n &&
-            it({ current: n.scroll.current, max: n.scroll.max, change: r })
-          );
-        },
-        lt = function (e) {
-          var r = e.state,
-            n = e.dragStartTime,
-            t = e.shouldUseTimeDampening,
-            i = e.scrollWindow,
-            o = e.scrollDroppable,
-            a = r.current.page.borderBoxCenter,
-            l = r.dimensions.draggables[r.critical.draggable.id].page.marginBox;
-          if (r.isWindowScrollAllowed) {
-            var u = (function (e) {
-              var r = e.viewport,
-                n = e.subject,
-                t = e.center,
-                i = e.dragStartTime,
-                o = e.shouldUseTimeDampening,
-                a = rt({
-                  dragStartTime: i,
-                  container: r.frame,
-                  subject: n,
-                  center: t,
-                  shouldUseTimeDampening: o,
-                });
-              return a && ot(r, a) ? a : null;
-            })({
-              dragStartTime: n,
-              viewport: r.viewport,
-              subject: l,
-              center: a,
-              shouldUseTimeDampening: t,
-            });
-            if (u) return void i(u);
-          }
-          var c = jn({
-            center: a,
-            destination: xr(r.impact),
-            droppables: r.dimensions.droppables,
-          });
-          if (c) {
-            var s = (function (e) {
-              var r = e.droppable,
-                n = e.subject,
-                t = e.center,
-                i = e.dragStartTime,
-                o = e.shouldUseTimeDampening,
-                a = r.frame;
-              if (!a) return null;
-              var l = rt({
-                dragStartTime: i,
-                container: a.pageMarginBox,
-                subject: n,
-                center: t,
-                shouldUseTimeDampening: o,
-              });
-              return l && at(r, l) ? l : null;
-            })({
-              dragStartTime: n,
-              droppable: c,
-              subject: l,
-              center: a,
-              shouldUseTimeDampening: t,
-            });
-            s && o(c.descriptor.id, s);
-          }
-        },
-        ut = function (e) {
-          var r = e.move,
-            n = e.scrollDroppable,
-            t = e.scrollWindow,
-            i = function (e, r) {
-              if (!at(e, r)) return r;
-              var t = (function (e, r) {
-                var n = e.frame;
-                return n && at(e, r)
-                  ? tt({
-                      current: n.scroll.current,
-                      max: n.scroll.max,
-                      change: r,
-                    })
-                  : null;
-              })(e, r);
-              if (!t) return n(e.descriptor.id, r), null;
-              var i = me(r, t);
-              return n(e.descriptor.id, i), me(r, i);
-            },
-            o = function (e, r, n) {
-              if (!e) return n;
-              if (!ot(r, n)) return n;
-              var i = (function (e, r) {
-                if (!ot(e, r)) return null;
-                var n = e.scroll.max,
-                  t = e.scroll.current;
-                return tt({ current: t, max: n, change: r });
-              })(r, n);
-              if (!i) return t(n), null;
-              var o = me(n, i);
-              return t(o), me(n, o);
+          ot = (function () {
+            var e = function (t, n) {
+              return t < 0 ? t : t > n ? t - n : 0;
             };
-          return function (e) {
-            var n = e.scrollJumpRequest;
-            if (n) {
-              var t = xr(e.impact);
-              t || le(!1);
-              var a = i(e.dimensions.droppables[t], n);
-              if (a) {
-                var l = e.viewport,
-                  u = o(e.isWindowScrollAllowed, l, a);
-                u &&
-                  (function (e, n) {
-                    var t = ve(e.current.client.selection, n);
-                    r({ client: t });
-                  })(e, u);
+            return function (r) {
+              var t = r.current,
+                n = r.max,
+                a = r.change,
+                i = k(t, a),
+                o = { x: e(i.x, n.x), y: e(i.y, n.y) };
+              return oe(o, W) ? null : o;
+            };
+          })(),
+          Nn = function (r) {
+            var t = r.max,
+              n = r.current,
+              a = r.change,
+              i = { x: Math.max(n.x, t.x), y: Math.max(n.y, t.y) },
+              o = dl(a),
+              l = ot({ max: i, current: n, change: o });
+            return !l || (o.x !== 0 && l.x === 0) || (o.y !== 0 && l.y === 0);
+          },
+          lt = function (r, t) {
+            return Nn({
+              current: r.scroll.current,
+              max: r.scroll.max,
+              change: t,
+            });
+          },
+          fl = function (r, t) {
+            if (!lt(r, t)) return null;
+            var n = r.scroll.max,
+              a = r.scroll.current;
+            return ot({ current: a, max: n, change: t });
+          },
+          st = function (r, t) {
+            var n = r.frame;
+            return n
+              ? Nn({ current: n.scroll.current, max: n.scroll.max, change: t })
+              : !1;
+          },
+          pl = function (r, t) {
+            var n = r.frame;
+            return !n || !st(r, t)
+              ? null
+              : ot({ current: n.scroll.current, max: n.scroll.max, change: t });
+          },
+          vl = function (e) {
+            var r = e.viewport,
+              t = e.subject,
+              n = e.center,
+              a = e.dragStartTime,
+              i = e.shouldUseTimeDampening,
+              o = Tn({
+                dragStartTime: a,
+                container: r.frame,
+                subject: t,
+                center: n,
+                shouldUseTimeDampening: i,
+              });
+            return o && lt(r, o) ? o : null;
+          },
+          gl = function (e) {
+            var r = e.droppable,
+              t = e.subject,
+              n = e.center,
+              a = e.dragStartTime,
+              i = e.shouldUseTimeDampening,
+              o = r.frame;
+            if (!o) return null;
+            var l = Tn({
+              dragStartTime: a,
+              container: o.pageMarginBox,
+              subject: t,
+              center: n,
+              shouldUseTimeDampening: i,
+            });
+            return l && st(r, l) ? l : null;
+          },
+          Mn = function (e) {
+            var r = e.state,
+              t = e.dragStartTime,
+              n = e.shouldUseTimeDampening,
+              a = e.scrollWindow,
+              i = e.scrollDroppable,
+              o = r.current.page.borderBoxCenter,
+              l = r.dimensions.draggables[r.critical.draggable.id],
+              s = l.page.marginBox;
+            if (r.isWindowScrollAllowed) {
+              var f = r.viewport,
+                d = vl({
+                  dragStartTime: t,
+                  viewport: f,
+                  subject: s,
+                  center: o,
+                  shouldUseTimeDampening: n,
+                });
+              if (d) {
+                a(d);
+                return;
               }
             }
-          };
-        },
-        ct = function (e) {
-          var r = e.scrollDroppable,
-            n = e.scrollWindow,
-            t = e.move,
-            i = (function (e) {
-              var r = e.scrollWindow,
-                n = e.scrollDroppable,
-                t = (0, ee.A)(r),
-                i = (0, ee.A)(n),
-                o = null,
-                a = function (e) {
-                  o || le(!1);
-                  var r = o,
-                    n = r.shouldUseTimeDampening,
-                    a = r.dragStartTime;
-                  lt({
-                    state: e,
-                    scrollWindow: t,
-                    scrollDroppable: i,
-                    dragStartTime: a,
-                    shouldUseTimeDampening: n,
-                  });
-                };
-              return {
-                start: function (e) {
-                  _r(), o && le(!1);
-                  var r = Date.now(),
-                    n = !1,
-                    t = function () {
-                      n = !0;
-                    };
-                  lt({
-                    state: e,
-                    dragStartTime: 0,
-                    shouldUseTimeDampening: !1,
-                    scrollWindow: t,
-                    scrollDroppable: t,
-                  }),
-                    (o = { dragStartTime: r, shouldUseTimeDampening: n }),
-                    Fr(),
-                    n && a(e);
-                },
-                stop: function () {
-                  o && (t.cancel(), i.cancel(), (o = null));
-                },
-                scroll: a,
+            var c = il({
+              center: o,
+              destination: $(r.impact),
+              droppables: r.dimensions.droppables,
+            });
+            if (c) {
+              var u = gl({
+                dragStartTime: t,
+                droppable: c,
+                subject: s,
+                center: o,
+                shouldUseTimeDampening: n,
+              });
+              u && i(c.descriptor.id, u);
+            }
+          },
+          ml = function (e) {
+            var r = e.scrollWindow,
+              t = e.scrollDroppable,
+              n = (0, Le.A)(r),
+              a = (0, Le.A)(t),
+              i = null,
+              o = function (d) {
+                i || m(!1);
+                var c = i,
+                  u = c.shouldUseTimeDampening,
+                  p = c.dragStartTime;
+                Mn({
+                  state: d,
+                  scrollWindow: n,
+                  scrollDroppable: a,
+                  dragStartTime: p,
+                  shouldUseTimeDampening: u,
+                });
+              },
+              l = function (d) {
+                qe(), i && m(!1);
+                var c = Date.now(),
+                  u = !1,
+                  p = function () {
+                    u = !0;
+                  };
+                Mn({
+                  state: d,
+                  dragStartTime: 0,
+                  shouldUseTimeDampening: !1,
+                  scrollWindow: p,
+                  scrollDroppable: p,
+                }),
+                  (i = { dragStartTime: c, shouldUseTimeDampening: u }),
+                  $e(),
+                  u && o(d);
+              },
+              s = function () {
+                i && (n.cancel(), a.cancel(), (i = null));
               };
-            })({ scrollWindow: n, scrollDroppable: r }),
-            o = ut({ move: t, scrollWindow: n, scrollDroppable: r });
-          return {
-            scroll: function (e) {
-              "DRAGGING" === e.phase &&
-                ("FLUID" !== e.movementMode
-                  ? e.scrollJumpRequest && o(e)
-                  : i.scroll(e));
-            },
-            start: i.start,
-            stop: i.stop,
-          };
-        },
-        st = "data-rbd",
-        dt = {
-          base: (Fn = st + "-drag-handle"),
-          draggableId: Fn + "-draggable-id",
-          contextId: Fn + "-context-id",
-        },
-        pt = (function () {
-          var e = st + "-draggable";
-          return { base: e, contextId: e + "-context-id", id: e + "-id" };
-        })(),
-        ft = (function () {
-          var e = st + "-droppable";
-          return { base: e, contextId: e + "-context-id", id: e + "-id" };
-        })(),
-        gt = { contextId: st + "-scroll-container-context-id" },
-        vt = function (e, r) {
-          return e
-            .map(function (e) {
-              var n = e.styles[r];
-              return n ? e.selector + " { " + n + " }" : "";
-            })
-            .join(" ");
-        },
-        mt = function (e) {
-          var r,
-            n,
-            t,
-            i =
-              ((r = e),
-              function (e) {
-                return "[" + e + '="' + r + '"]';
-              }),
-            o =
-              ((n = "\n      cursor: -webkit-grab;\n      cursor: grab;\n    "),
-              {
-                selector: i(dt.contextId),
-                styles: {
-                  always:
-                    "\n          -webkit-touch-callout: none;\n          -webkit-tap-highlight-color: rgba(0,0,0,0);\n          touch-action: manipulation;\n        ",
-                  resting: n,
-                  dragging: "pointer-events: none;",
-                  dropAnimating: n,
-                },
-              }),
-            a = [
-              ((t = "\n      transition: " + dn.outOfTheWay + ";\n    "),
-              {
-                selector: i(pt.contextId),
-                styles: { dragging: t, dropAnimating: t, userCancel: t },
-              }),
-              o,
-              {
-                selector: i(ft.contextId),
+            return { start: l, stop: s, scroll: o };
+          },
+          bl = function (e) {
+            var r = e.move,
+              t = e.scrollDroppable,
+              n = e.scrollWindow,
+              a = function (f, d) {
+                var c = k(f.current.client.selection, d);
+                r({ client: c });
+              },
+              i = function (f, d) {
+                if (!st(f, d)) return d;
+                var c = pl(f, d);
+                if (!c) return t(f.descriptor.id, d), null;
+                var u = q(d, c);
+                t(f.descriptor.id, u);
+                var p = q(d, u);
+                return p;
+              },
+              o = function (f, d, c) {
+                if (!f || !lt(d, c)) return c;
+                var u = fl(d, c);
+                if (!u) return n(c), null;
+                var p = q(c, u);
+                n(p);
+                var v = q(c, p);
+                return v;
+              },
+              l = function (f) {
+                var d = f.scrollJumpRequest;
+                if (d) {
+                  var c = $(f.impact);
+                  c || m(!1);
+                  var u = i(f.dimensions.droppables[c], d);
+                  if (u) {
+                    var p = f.viewport,
+                      v = o(f.isWindowScrollAllowed, p, u);
+                    v && a(f, v);
+                  }
+                }
+              };
+            return l;
+          },
+          hl = function (e) {
+            var r = e.scrollDroppable,
+              t = e.scrollWindow,
+              n = e.move,
+              a = ml({ scrollWindow: t, scrollDroppable: r }),
+              i = bl({ move: n, scrollWindow: t, scrollDroppable: r }),
+              o = function (f) {
+                if (f.phase === "DRAGGING") {
+                  if (f.movementMode === "FLUID") {
+                    a.scroll(f);
+                    return;
+                  }
+                  f.scrollJumpRequest && i(f);
+                }
+              },
+              l = { scroll: o, start: a.start, stop: a.stop };
+            return l;
+          },
+          Ee = "data-rbd",
+          Pe = (function () {
+            var e = Ee + "-drag-handle";
+            return {
+              base: e,
+              draggableId: e + "-draggable-id",
+              contextId: e + "-context-id",
+            };
+          })(),
+          ut = (function () {
+            var e = Ee + "-draggable";
+            return { base: e, contextId: e + "-context-id", id: e + "-id" };
+          })(),
+          yl = (function () {
+            var e = Ee + "-droppable";
+            return { base: e, contextId: e + "-context-id", id: e + "-id" };
+          })(),
+          Ln = { contextId: Ee + "-scroll-container-context-id" },
+          Dl = function (r) {
+            return function (t) {
+              return "[" + t + '="' + r + '"]';
+            };
+          },
+          Ye = function (r, t) {
+            return r
+              .map(function (n) {
+                var a = n.styles[t];
+                return a ? n.selector + " { " + a + " }" : "";
+              })
+              .join(" ");
+          },
+          Il = "pointer-events: none;",
+          xl = function (e) {
+            var r = Dl(e),
+              t = (function () {
+                var l = `
+      cursor: -webkit-grab;
+      cursor: grab;
+    `;
+                return {
+                  selector: r(Pe.contextId),
+                  styles: {
+                    always: `
+          -webkit-touch-callout: none;
+          -webkit-tap-highlight-color: rgba(0,0,0,0);
+          touch-action: manipulation;
+        `,
+                    resting: l,
+                    dragging: Il,
+                    dropAnimating: l,
+                  },
+                };
+              })(),
+              n = (function () {
+                var l =
+                  `
+      transition: ` +
+                  je.outOfTheWay +
+                  `;
+    `;
+                return {
+                  selector: r(ut.contextId),
+                  styles: { dragging: l, dropAnimating: l, userCancel: l },
+                };
+              })(),
+              a = {
+                selector: r(yl.contextId),
                 styles: { always: "overflow-anchor: none;" },
               },
-              {
+              i = {
                 selector: "body, :host",
                 styles: {
-                  dragging:
-                    "\n        cursor: grabbing;\n        cursor: -webkit-grabbing;\n        user-select: none;\n        -webkit-user-select: none;\n        -moz-user-select: none;\n        -ms-user-select: none;\n        overflow-anchor: none;\n      ",
+                  dragging: `
+        cursor: grabbing;
+        cursor: -webkit-grabbing;
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        overflow-anchor: none;
+      `,
                 },
               },
-            ];
-          return {
-            always: vt(a, "always"),
-            resting: vt(a, "resting"),
-            dragging: vt(a, "dragging"),
-            dropAnimating: vt(a, "dropAnimating"),
-            userCancel: vt(a, "userCancel"),
-          };
-        },
-        bt =
-          "undefined" != typeof window &&
-          void 0 !== window.document &&
-          void 0 !== window.document.createElement
-            ? t.useLayoutEffect
-            : t.useEffect,
-        ht = function (e) {
-          var r = e || document.querySelector("head");
-          return r || le(!1), r;
-        },
-        yt = function (e) {
-          var r = document.createElement("style");
-          return e && r.setAttribute("nonce", e), (r.type = "text/css"), r;
-        };
-      function It(e) {
-        return (e.composedPath && e.composedPath()[0]) || e.target;
-      }
-      function Dt(e, r, n) {
-        var t,
-          i = e && e.getRootNode(),
-          o = i && i.querySelectorAll ? i : document,
-          a = Re(
-            ((t = o.querySelectorAll(r)), Array.prototype.slice.call(t)),
-            n,
-          );
-        return !a && o.host ? Dt(o.host, r, n) : a;
-      }
-      var xt = function (e) {
-        return e && e.ownerDocument ? e.ownerDocument.defaultView : window;
-      };
-      function Et(e) {
-        return e instanceof xt(e).HTMLElement;
-      }
-      function wt(e, r, n) {
-        var t = Dt(n, "[" + dt.contextId + '="' + e + '"]', function (e) {
-          return e.getAttribute(dt.draggableId) === r;
-        });
-        return t && Et(t) ? t : null;
-      }
-      function At() {
-        var e = { draggables: {}, droppables: {} },
-          r = [];
-        function n(e) {
-          r.length &&
-            r.forEach(function (r) {
-              return r(e);
-            });
-        }
-        function t(r) {
-          return e.draggables[r] || null;
-        }
-        function i(r) {
-          return e.droppables[r] || null;
-        }
-        return {
-          draggable: {
-            register: function (r) {
-              (e.draggables[r.descriptor.id] = r),
-                n({ type: "ADDITION", value: r });
-            },
-            update: function (r, n) {
-              var t = e.draggables[n.descriptor.id];
-              t &&
-                t.uniqueId === r.uniqueId &&
-                (delete e.draggables[n.descriptor.id],
-                (e.draggables[r.descriptor.id] = r));
-            },
-            unregister: function (r) {
-              var i = r.descriptor.id,
-                o = t(i);
-              o &&
-                r.uniqueId === o.uniqueId &&
-                (delete e.draggables[i], n({ type: "REMOVAL", value: r }));
-            },
-            getById: function (e) {
-              var r = t(e);
-              return r || le(!1), r;
-            },
-            findById: t,
-            exists: function (e) {
-              return Boolean(t(e));
-            },
-            getAllByType: function (r) {
-              return Pe(e.draggables).filter(function (e) {
-                return e.descriptor.type === r;
-              });
-            },
-          },
-          droppable: {
-            register: function (r) {
-              e.droppables[r.descriptor.id] = r;
-            },
-            unregister: function (r) {
-              var n = i(r.descriptor.id);
-              n &&
-                r.uniqueId === n.uniqueId &&
-                delete e.droppables[r.descriptor.id];
-            },
-            getById: function (e) {
-              var r = i(e);
-              return r || le(!1), r;
-            },
-            findById: i,
-            exists: function (e) {
-              return Boolean(i(e));
-            },
-            getAllByType: function (r) {
-              return Pe(e.droppables).filter(function (e) {
-                return e.descriptor.type === r;
-              });
-            },
-          },
-          subscribe: function (e) {
-            return (
-              r.push(e),
-              function () {
-                var n = r.indexOf(e);
-                -1 !== n && r.splice(n, 1);
-              }
-            );
-          },
-          clean: function () {
-            (e.draggables = {}), (e.droppables = {}), (r.length = 0);
-          },
-        };
-      }
-      var Ct = t.createContext(null),
-        St = function () {
-          var e = document.body;
-          return e || le(!1), e;
-        },
-        Pt = {
-          position: "absolute",
-          width: "1px",
-          height: "1px",
-          margin: "-1px",
-          border: "0",
-          padding: "0",
-          overflow: "hidden",
-          clip: "rect(0 0 0 0)",
-          "clip-path": "inset(100%)",
-        },
-        Nt = function (e) {
-          return "rbd-announcement-" + e;
-        };
-      var Rt = 0,
-        Bt = { separator: "::" };
-      function Ot(e, r) {
-        return (
-          void 0 === r && (r = Bt),
-          (0, Y.Kr)(
-            function () {
-              return "" + e + r.separator + Rt++;
-            },
-            [r.separator, e],
-          )
-        );
-      }
-      var Tt = t.createContext(null);
-      function Lt(e) {
-        0;
-      }
-      function Gt(e, r) {
-        Lt();
-      }
-      function Mt(e) {
-        var r = (0, t.useRef)(e);
-        return (
-          (0, t.useEffect)(function () {
-            r.current = e;
-          }),
-          r
-        );
-      }
-      var _t,
-        Ft = (((_t = {})[13] = !0), (_t[9] = !0), _t),
-        kt = function (e) {
-          Ft[e.keyCode] && e.preventDefault();
-        },
-        Wt = (function () {
-          var e = "visibilitychange";
-          return "undefined" == typeof document
-            ? e
-            : Re([e, "ms" + e, "webkit" + e, "moz" + e, "o" + e], function (e) {
-                return "on" + e in document;
-              }) || e;
-        })();
-      var Ut,
-        Ht = { type: "IDLE" };
-      function jt(e) {
-        var r = e.cancel,
-          n = e.completed,
-          t = e.getPhase,
-          i = e.setPhase;
-        return [
-          {
-            eventName: "mousemove",
-            fn: function (e) {
-              var r = e.button,
-                n = e.clientX,
-                o = e.clientY;
-              if (0 === r) {
-                var a = { x: n, y: o },
-                  l = t();
-                if ("DRAGGING" === l.type)
-                  return e.preventDefault(), void l.actions.move(a);
-                "PENDING" !== l.type && le(!1);
-                var u = l.point;
-                if (
-                  ((c = u),
-                  (s = a),
-                  Math.abs(s.x - c.x) >= 5 || Math.abs(s.y - c.y) >= 5)
-                ) {
-                  var c, s;
-                  e.preventDefault();
-                  var d = l.actions.fluidLift(a);
-                  i({ type: "DRAGGING", actions: d });
-                }
-              }
-            },
-          },
-          {
-            eventName: "mouseup",
-            fn: function (e) {
-              var i = t();
-              "DRAGGING" === i.type
-                ? (e.preventDefault(),
-                  i.actions.drop({ shouldBlockNextClick: !0 }),
-                  n())
-                : r();
-            },
-          },
-          {
-            eventName: "mousedown",
-            fn: function (e) {
-              "DRAGGING" === t().type && e.preventDefault(), r();
-            },
-          },
-          {
-            eventName: "keydown",
-            fn: function (e) {
-              if ("PENDING" !== t().type)
-                return 27 === e.keyCode
-                  ? (e.preventDefault(), void r())
-                  : void kt(e);
-              r();
-            },
-          },
-          { eventName: "resize", fn: r },
-          {
-            eventName: "scroll",
-            options: { passive: !0, capture: !1 },
-            fn: function () {
-              "PENDING" === t().type && r();
-            },
-          },
-          {
-            eventName: "webkitmouseforcedown",
-            fn: function (e) {
-              var n = t();
-              "IDLE" === n.type && le(!1),
-                n.actions.shouldRespectForcePress() ? r() : e.preventDefault();
-            },
-          },
-          { eventName: Wt, fn: r },
-        ];
-      }
-      function qt() {}
-      var Vt =
-        (((Ut = {})[34] = !0), (Ut[33] = !0), (Ut[36] = !0), (Ut[35] = !0), Ut);
-      function Kt(e, r) {
-        function n() {
-          r(), e.cancel();
-        }
-        return [
-          {
-            eventName: "keydown",
-            fn: function (t) {
-              return 27 === t.keyCode
-                ? (t.preventDefault(), void n())
-                : 32 === t.keyCode
-                  ? (t.preventDefault(), r(), void e.drop())
-                  : 40 === t.keyCode
-                    ? (t.preventDefault(), void e.moveDown())
-                    : 38 === t.keyCode
-                      ? (t.preventDefault(), void e.moveUp())
-                      : 39 === t.keyCode
-                        ? (t.preventDefault(), void e.moveRight())
-                        : 37 === t.keyCode
-                          ? (t.preventDefault(), void e.moveLeft())
-                          : void (Vt[t.keyCode] ? t.preventDefault() : kt(t));
-            },
-          },
-          { eventName: "mousedown", fn: n },
-          { eventName: "mouseup", fn: n },
-          { eventName: "click", fn: n },
-          { eventName: "touchstart", fn: n },
-          { eventName: "resize", fn: n },
-          { eventName: "wheel", fn: n, options: { passive: !0 } },
-          { eventName: Wt, fn: n },
-        ];
-      }
-      var zt = { type: "IDLE" };
-      var Yt = {
-        input: !0,
-        button: !0,
-        textarea: !0,
-        select: !0,
-        option: !0,
-        optgroup: !0,
-        video: !0,
-        audio: !0,
-      };
-      function Jt(e, r) {
-        if (null == r) return !1;
-        if (Boolean(Yt[r.tagName.toLowerCase()])) return !0;
-        var n = r.getAttribute("contenteditable");
-        return "true" === n || "" === n || (r !== e && Jt(e, r.parentElement));
-      }
-      function Xt(e, r) {
-        var n = It(r);
-        return !!Et(n) && Jt(e, n);
-      }
-      var $t = function (e) {
-        return (0, J.l)(e.getBoundingClientRect()).center;
-      };
-      var Qt = (function () {
-        var e = "matches";
-        return "undefined" == typeof document
-          ? e
-          : Re([e, "msMatchesSelector", "webkitMatchesSelector"], function (e) {
-              return e in Element.prototype;
-            }) || e;
-      })();
-      function Zt(e, r) {
-        return null == e ? null : e[Qt](r) ? e : Zt(e.parentElement, r);
-      }
-      function ei(e, r) {
-        return e.closest ? e.closest(r) : Zt(e, r);
-      }
-      function ri(e, r) {
-        if (!e || e === document || e === window) return null;
-        var n = ei(e, r);
-        return n || ri(e.getRootNode().host, r);
-      }
-      function ni(e, r) {
-        var n = It(r);
-        if (
-          !(function (e) {
-            return e instanceof xt(e).Element;
-          })(n)
-        )
-          return null;
-        var t = (function (e) {
-            return "[" + dt.contextId + '="' + e + '"]';
-          })(e),
-          i = ri(n, t);
-        return i && Et(i) ? i : null;
-      }
-      function ti(e) {
-        e.preventDefault();
-      }
-      function ii(e) {
-        var r = e.expected,
-          n = e.phase,
-          t = e.isLockActive;
-        e.shouldWarn;
-        return !!t() && r === n;
-      }
-      function oi(e) {
-        var r = e.lockAPI,
-          n = e.store,
-          t = e.registry,
-          i = e.draggableId;
-        if (r.isClaimed()) return !1;
-        var o = t.draggable.findById(i);
-        return !!o && !!o.options.isEnabled && !!Wn(n.getState(), i);
-      }
-      function ai(e) {
-        var r = e.lockAPI,
-          n = e.contextId,
-          t = e.store,
-          i = e.registry,
-          a = e.draggableId,
-          l = e.forceSensorStop,
-          u = e.sourceEvent;
-        if (!oi({ lockAPI: r, store: t, registry: i, draggableId: a }))
-          return null;
-        var c,
-          s,
-          d = i.draggable.getById(a),
-          p = (function (e, r, n) {
-            var t = Dt(n, "[" + pt.contextId + '="' + e + '"]', function (e) {
-              return e.getAttribute(pt.id) === r;
-            });
-            return t && Et(t) ? t : null;
-          })(
-            n,
-            d.descriptor.id,
-            ((s = (c = u) && c.composedPath && c.composedPath()[0]) &&
-              s.getRootNode()) ||
-              document,
-          );
-        if (!p) return null;
-        if (u && !d.options.canDragInteractiveElements && Xt(p, u)) return null;
-        var f = r.claim(l || ne),
-          g = "PRE_DRAG";
-        function v() {
-          return d.options.shouldRespectForcePress;
-        }
-        function m() {
-          return r.isActive(f);
-        }
-        var b = function (e, r) {
-          ii({ expected: e, phase: g, isLockActive: m, shouldWarn: !0 }) &&
-            t.dispatch(r());
-        }.bind(null, "DRAGGING");
-        function h(e) {
-          function n() {
-            r.release(), (g = "COMPLETED");
-          }
-          function i(r, i) {
-            if (
-              (void 0 === i && (i = { shouldBlockNextClick: !1 }),
-              e.cleanup(),
-              i.shouldBlockNextClick)
-            ) {
-              var o = te(window, [
-                {
-                  eventName: "click",
-                  fn: ti,
-                  options: { once: !0, passive: !1, capture: !0 },
-                },
-              ]);
-              setTimeout(o);
-            }
-            n(), t.dispatch(on({ reason: r }));
-          }
-          return (
-            "PRE_DRAG" !== g && (n(), "PRE_DRAG" !== g && le(!1)),
-            t.dispatch(Vr(e.liftActionArgs)),
-            (g = "DRAGGING"),
-            (0, o.A)(
-              {
-                isActive: function () {
-                  return ii({
-                    expected: "DRAGGING",
-                    phase: g,
-                    isLockActive: m,
-                    shouldWarn: !1,
-                  });
-                },
-                shouldRespectForcePress: v,
-                drop: function (e) {
-                  return i("DROP", e);
-                },
-                cancel: function (e) {
-                  return i("CANCEL", e);
-                },
-              },
-              e.actions,
-            )
-          );
-        }
-        return {
-          isActive: function () {
-            return ii({
-              expected: "PRE_DRAG",
-              phase: g,
-              isLockActive: m,
-              shouldWarn: !1,
-            });
-          },
-          shouldRespectForcePress: v,
-          fluidLift: function (e) {
-            var r = (0, ee.A)(function (e) {
-                b(function () {
-                  return $r({ client: e });
-                });
-              }),
-              n = h({
-                liftActionArgs: {
-                  id: a,
-                  clientSelection: e,
-                  movementMode: "FLUID",
-                },
-                cleanup: function () {
-                  return r.cancel();
-                },
-                actions: { move: r },
-              });
-            return (0, o.A)({}, n, { move: r });
-          },
-          snapLift: function () {
-            var e = {
-              moveUp: function () {
-                return b(Qr);
-              },
-              moveRight: function () {
-                return b(en);
-              },
-              moveDown: function () {
-                return b(Zr);
-              },
-              moveLeft: function () {
-                return b(rn);
-              },
+              o = [n, t, a, i];
+            return {
+              always: Ye(o, "always"),
+              resting: Ye(o, "resting"),
+              dragging: Ye(o, "dragging"),
+              dropAnimating: Ye(o, "dropAnimating"),
+              userCancel: Ye(o, "userCancel"),
             };
-            return h({
-              liftActionArgs: {
-                id: a,
-                clientSelection: $t(p),
-                movementMode: "SNAP",
-              },
-              cleanup: ne,
-              actions: e,
-            });
           },
-          abort: function () {
-            ii({
-              expected: "PRE_DRAG",
-              phase: g,
-              isLockActive: m,
-              shouldWarn: !0,
-            }) && r.release();
+          z =
+            typeof window < "u" &&
+            typeof window.document < "u" &&
+            typeof window.document.createElement < "u"
+              ? D.useLayoutEffect
+              : D.useEffect,
+          Sl = function (r) {
+            var t = r || document.querySelector("head");
+            return t || m(!1), t;
           },
-        };
-      }
-      var li = [
-        function (e) {
-          var r = (0, t.useRef)(Ht),
-            n = (0, t.useRef)(ne),
-            i = (0, Y.Kr)(
+          Fn = function (r) {
+            var t = document.createElement("style");
+            return r && t.setAttribute("nonce", r), (t.type = "text/css"), t;
+          };
+        function Cl(e, r, t) {
+          var n = (0, h.Kr)(
               function () {
-                return {
-                  eventName: "mousedown",
-                  fn: function (r) {
-                    if (
-                      !r.defaultPrevented &&
-                      0 === r.button &&
-                      !(r.ctrlKey || r.metaKey || r.shiftKey || r.altKey)
-                    ) {
-                      var t = e.findClosestDraggableId(r);
-                      if (t) {
-                        var i = e.tryGetLock(t, l, { sourceEvent: r });
-                        if (i) {
-                          r.preventDefault();
-                          var o = { x: r.clientX, y: r.clientY };
-                          n.current(), s(i, o);
-                        }
-                      }
-                    }
-                  },
-                };
+                return xl(e);
               },
               [e],
             ),
-            o = (0, Y.Kr)(
-              function () {
-                return {
-                  eventName: "webkitmouseforcewillbegin",
-                  fn: function (r) {
-                    if (!r.defaultPrevented) {
-                      var n = e.findClosestDraggableId(r);
-                      if (n) {
-                        var t = e.findOptionsForDraggable(n);
-                        t &&
-                          (t.shouldRespectForcePress ||
-                            (e.canGetLock(n) && r.preventDefault()));
-                      }
-                    }
-                  },
-                };
-              },
-              [e],
+            a = (0, D.useRef)(null),
+            i = (0, D.useRef)(null),
+            o = (0, h.hb)(
+              G(function (u) {
+                var p = i.current;
+                p || m(!1), (p.textContent = u);
+              }),
+              [],
             ),
-            a = (0, Y.hb)(
-              function () {
-                n.current = te(e.getWindow(), [o, i], {
-                  passive: !1,
-                  capture: !0,
-                });
-              },
-              [e, o, i],
-            ),
-            l = (0, Y.hb)(
-              function () {
-                "IDLE" !== r.current.type &&
-                  ((r.current = Ht), n.current(), a());
-              },
-              [a],
-            ),
-            u = (0, Y.hb)(
-              function () {
-                var e = r.current;
-                l(),
-                  "DRAGGING" === e.type &&
-                    e.actions.cancel({ shouldBlockNextClick: !0 }),
-                  "PENDING" === e.type && e.actions.abort();
-              },
-              [l],
-            ),
-            c = (0, Y.hb)(
-              function () {
-                var t = jt({
-                  cancel: u,
-                  completed: l,
-                  getPhase: function () {
-                    return r.current;
-                  },
-                  setPhase: function (e) {
-                    r.current = e;
-                  },
-                });
-                n.current = te(e.getWindow(), t, { capture: !0, passive: !1 });
-              },
-              [e, u, l],
-            ),
-            s = (0, Y.hb)(
-              function (e, n) {
-                "IDLE" !== r.current.type && le(!1),
-                  (r.current = { type: "PENDING", point: n, actions: e }),
-                  c();
-              },
-              [c],
-            );
-          bt(
+            l = (0, h.hb)(function (u) {
+              var p = a.current;
+              p || m(!1), (p.textContent = u);
+            }, []);
+          z(
             function () {
+              (!a.current && !i.current) || m(!1);
+              var u = Fn(r),
+                p = Fn(r);
+              (a.current = u),
+                (i.current = p),
+                u.setAttribute(Ee + "-always", e),
+                p.setAttribute(Ee + "-dynamic", e);
+              var v = Sl(t);
               return (
-                a(),
+                v.appendChild(u),
+                v.appendChild(p),
+                l(n.always),
+                o(n.resting),
                 function () {
-                  n.current();
+                  var g = function (y) {
+                    var I = y.current;
+                    I || m(!1), v.removeChild(I), (y.current = null);
+                  };
+                  g(a), g(i);
                 }
               );
             },
-            [a],
+            [r, l, o, n.always, n.resting, e, t],
           );
-        },
-        function (e) {
-          var r = (0, t.useRef)(qt),
-            n = (0, Y.Kr)(
+          var s = (0, h.hb)(
+              function () {
+                return o(n.dragging);
+              },
+              [o, n.dragging],
+            ),
+            f = (0, h.hb)(
+              function (u) {
+                if (u === "DROP") {
+                  o(n.dropAnimating);
+                  return;
+                }
+                o(n.userCancel);
+              },
+              [o, n.dropAnimating, n.userCancel],
+            ),
+            d = (0, h.hb)(
+              function () {
+                i.current && o(n.resting);
+              },
+              [o, n.resting],
+            ),
+            c = (0, h.Kr)(
+              function () {
+                return { dragging: s, dropping: f, resting: d };
+              },
+              [s, f, d],
+            );
+          return c;
+        }
+        function Gn(e) {
+          var r = e.composedPath && e.composedPath()[0];
+          return r || e.target;
+        }
+        function wl(e) {
+          var r = e && e.composedPath && e.composedPath()[0],
+            t = r && r.getRootNode();
+          return t || document;
+        }
+        function ct(e, r, t) {
+          var n = e && e.getRootNode(),
+            a = n && n.querySelectorAll ? n : document,
+            i = ii(a.querySelectorAll(r)),
+            o = be(i, t);
+          return !o && a.host ? ct(a.host, r, t) : o;
+        }
+        var Wn = function (e) {
+          return e && e.ownerDocument ? e.ownerDocument.defaultView : window;
+        };
+        function Je(e) {
+          return e instanceof Wn(e).HTMLElement;
+        }
+        function kn(e, r, t) {
+          var n = "[" + Pe.contextId + '="' + e + '"]',
+            a = ct(t, n, function (i) {
+              return i.getAttribute(Pe.draggableId) === r;
+            });
+          return !a || !Je(a) ? null : a;
+        }
+        function Al(e) {
+          var r = (0, D.useRef)({}),
+            t = (0, D.useRef)(null),
+            n = (0, D.useRef)(null),
+            a = (0, D.useRef)(!1),
+            i = (0, h.hb)(function (u, p) {
+              var v = { id: u, focus: p };
+              return (
+                (r.current[u] = v),
+                function () {
+                  var b = r.current,
+                    y = b[u];
+                  y !== v && delete b[u];
+                }
+              );
+            }, []),
+            o = (0, h.hb)(
+              function (u) {
+                var p = kn(e, u);
+                p && p !== document.activeElement && p.focus();
+              },
+              [e],
+            ),
+            l = (0, h.hb)(function (u, p) {
+              t.current === u && (t.current = p);
+            }, []),
+            s = (0, h.hb)(
+              function () {
+                n.current ||
+                  (a.current &&
+                    (n.current = requestAnimationFrame(function () {
+                      n.current = null;
+                      var u = t.current;
+                      u && o(u);
+                    })));
+              },
+              [o],
+            ),
+            f = (0, h.hb)(function (u) {
+              t.current = null;
+              var p = document.activeElement;
+              p && p.getAttribute(Pe.draggableId) === u && (t.current = u);
+            }, []);
+          z(function () {
+            return (
+              (a.current = !0),
+              function () {
+                a.current = !1;
+                var u = n.current;
+                u && cancelAnimationFrame(u);
+              }
+            );
+          }, []);
+          var d = (0, h.Kr)(
+            function () {
+              return {
+                register: i,
+                tryRecordFocus: f,
+                tryRestoreFocusRecorded: s,
+                tryShiftRecord: l,
+              };
+            },
+            [i, f, s, l],
+          );
+          return d;
+        }
+        function El() {
+          var e = { draggables: {}, droppables: {} },
+            r = [];
+          function t(c) {
+            return (
+              r.push(c),
+              function () {
+                var p = r.indexOf(c);
+                p !== -1 && r.splice(p, 1);
+              }
+            );
+          }
+          function n(c) {
+            r.length &&
+              r.forEach(function (u) {
+                return u(c);
+              });
+          }
+          function a(c) {
+            return e.draggables[c] || null;
+          }
+          function i(c) {
+            var u = a(c);
+            return u || m(!1), u;
+          }
+          var o = {
+            register: function (u) {
+              (e.draggables[u.descriptor.id] = u),
+                n({ type: "ADDITION", value: u });
+            },
+            update: function (u, p) {
+              var v = e.draggables[p.descriptor.id];
+              v &&
+                v.uniqueId === u.uniqueId &&
+                (delete e.draggables[p.descriptor.id],
+                (e.draggables[u.descriptor.id] = u));
+            },
+            unregister: function (u) {
+              var p = u.descriptor.id,
+                v = a(p);
+              v &&
+                u.uniqueId === v.uniqueId &&
+                (delete e.draggables[p], n({ type: "REMOVAL", value: u }));
+            },
+            getById: i,
+            findById: a,
+            exists: function (u) {
+              return !!a(u);
+            },
+            getAllByType: function (u) {
+              return sr(e.draggables).filter(function (p) {
+                return p.descriptor.type === u;
+              });
+            },
+          };
+          function l(c) {
+            return e.droppables[c] || null;
+          }
+          function s(c) {
+            var u = l(c);
+            return u || m(!1), u;
+          }
+          var f = {
+            register: function (u) {
+              e.droppables[u.descriptor.id] = u;
+            },
+            unregister: function (u) {
+              var p = l(u.descriptor.id);
+              p &&
+                u.uniqueId === p.uniqueId &&
+                delete e.droppables[u.descriptor.id];
+            },
+            getById: s,
+            findById: l,
+            exists: function (u) {
+              return !!l(u);
+            },
+            getAllByType: function (u) {
+              return sr(e.droppables).filter(function (p) {
+                return p.descriptor.type === u;
+              });
+            },
+          };
+          function d() {
+            (e.draggables = {}), (e.droppables = {}), (r.length = 0);
+          }
+          return { draggable: o, droppable: f, subscribe: t, clean: d };
+        }
+        function Pl() {
+          var e = (0, h.Kr)(El, []);
+          return (
+            (0, D.useEffect)(
+              function () {
+                return function () {
+                  requestAnimationFrame(e.clean);
+                };
+              },
+              [e],
+            ),
+            e
+          );
+        }
+        var dt = D.createContext(null),
+          Xe = function () {
+            var e = document.body;
+            return e || m(!1), e;
+          },
+          Rl = {
+            position: "absolute",
+            width: "1px",
+            height: "1px",
+            margin: "-1px",
+            border: "0",
+            padding: "0",
+            overflow: "hidden",
+            clip: "rect(0 0 0 0)",
+            "clip-path": "inset(100%)",
+          },
+          Bl = function (r) {
+            return "rbd-announcement-" + r;
+          };
+        function Ol(e) {
+          var r = (0, h.Kr)(
+              function () {
+                return Bl(e);
+              },
+              [e],
+            ),
+            t = (0, D.useRef)(null);
+          (0, D.useEffect)(
+            function () {
+              var i = document.createElement("div");
+              return (
+                (t.current = i),
+                (i.id = r),
+                i.setAttribute("aria-live", "assertive"),
+                i.setAttribute("aria-atomic", "true"),
+                (0, A.A)(i.style, Rl),
+                Xe().appendChild(i),
+                function () {
+                  setTimeout(function () {
+                    var s = Xe();
+                    s.contains(i) && s.removeChild(i),
+                      i === t.current && (t.current = null);
+                  });
+                }
+              );
+            },
+            [r],
+          );
+          var n = (0, h.hb)(function (a) {
+            var i = t.current;
+            if (i) {
+              i.textContent = a;
+              return;
+            }
+          }, []);
+          return n;
+        }
+        var Un = 0,
+          Tl = { separator: "::" };
+        function Nl() {
+          Un = 0;
+        }
+        function ft(e, r) {
+          return (
+            r === void 0 && (r = Tl),
+            (0, h.Kr)(
+              function () {
+                return "" + e + r.separator + Un++;
+              },
+              [r.separator, e],
+            )
+          );
+        }
+        function Ml(e) {
+          var r = e.contextId,
+            t = e.uniqueId;
+          return "rbd-hidden-text-" + r + "-" + t;
+        }
+        function Ll(e) {
+          var r = e.contextId,
+            t = e.text,
+            n = ft("hidden-text", { separator: "-" }),
+            a = (0, h.Kr)(
+              function () {
+                return Ml({ contextId: r, uniqueId: n });
+              },
+              [n, r],
+            );
+          return (
+            (0, D.useEffect)(
+              function () {
+                var o = document.createElement("div");
+                return (
+                  (o.id = a),
+                  (o.textContent = t),
+                  (o.style.display = "none"),
+                  Xe().appendChild(o),
+                  function () {
+                    var s = Xe();
+                    s.contains(o) && s.removeChild(o);
+                  }
+                );
+              },
+              [a, t],
+            ),
+            a
+          );
+        }
+        var gr = D.createContext(null),
+          Fl = {
+            react: "^16.8.5 || ^17.0.0 || ^18.0.0",
+            "react-dom": "^16.8.5 || ^17.0.0 || ^18.0.0",
+          },
+          Gl = /(\d+)\.(\d+)\.(\d+)/,
+          Hn = function (r) {
+            var t = Gl.exec(r);
+            t == null && m(!1);
+            var n = Number(t[1]),
+              a = Number(t[2]),
+              i = Number(t[3]);
+            return { major: n, minor: a, patch: i, raw: r };
+          },
+          Wl = function (r, t) {
+            return t.major > r.major
+              ? !0
+              : t.major < r.major
+                ? !1
+                : t.minor > r.minor
+                  ? !0
+                  : t.minor < r.minor
+                    ? !1
+                    : t.patch >= r.patch;
+          },
+          kl = function (e, r) {
+            var t = Hn(e),
+              n = Hn(r);
+            Wl(t, n);
+          },
+          Wu = `
+  We expect a html5 doctype: <!doctype html>
+  This is to ensure consistent browser layout and measurement
+
+  More information: https://github.com/atlassian/react-beautiful-dnd/blob/master/docs/guides/doctype.md
+`,
+          Ul = function (e) {
+            var r = e.doctype;
+            r && (r.name.toLowerCase(), r.publicId);
+          };
+        function ku(e) {}
+        function Qe(e, r) {}
+        function Hl() {
+          Qe(function () {
+            kl(Fl.react, D.version), Ul(document);
+          }, []);
+        }
+        function pt(e) {
+          var r = (0, D.useRef)(e);
+          return (
+            (0, D.useEffect)(function () {
+              r.current = e;
+            }),
+            r
+          );
+        }
+        function Vl() {
+          var e = null;
+          function r() {
+            return !!e;
+          }
+          function t(o) {
+            return o === e;
+          }
+          function n(o) {
+            e && m(!1);
+            var l = { abandon: o };
+            return (e = l), l;
+          }
+          function a() {
+            e || m(!1), (e = null);
+          }
+          function i() {
+            e && (e.abandon(), a());
+          }
+          return {
+            isClaimed: r,
+            isActive: t,
+            claim: n,
+            release: a,
+            tryAbandon: i,
+          };
+        }
+        var ql = 9,
+          $l = 13,
+          vt = 27,
+          Vn = 32,
+          zl = 33,
+          jl = 34,
+          Kl = 35,
+          Yl = 36,
+          Jl = 37,
+          Xl = 38,
+          Ql = 39,
+          Zl = 40,
+          mr,
+          _l = ((mr = {}), (mr[$l] = !0), (mr[ql] = !0), mr),
+          qn = function (e) {
+            _l[e.keyCode] && e.preventDefault();
+          },
+          br = (function () {
+            var e = "visibilitychange";
+            if (typeof document > "u") return e;
+            var r = [e, "ms" + e, "webkit" + e, "moz" + e, "o" + e],
+              t = be(r, function (n) {
+                return "on" + n in document;
+              });
+            return t || e;
+          })(),
+          $n = 0,
+          zn = 5;
+        function es(e, r) {
+          return Math.abs(r.x - e.x) >= zn || Math.abs(r.y - e.y) >= zn;
+        }
+        var jn = { type: "IDLE" };
+        function rs(e) {
+          var r = e.cancel,
+            t = e.completed,
+            n = e.getPhase,
+            a = e.setPhase;
+          return [
+            {
+              eventName: "mousemove",
+              fn: function (o) {
+                var l = o.button,
+                  s = o.clientX,
+                  f = o.clientY;
+                if (l === $n) {
+                  var d = { x: s, y: f },
+                    c = n();
+                  if (c.type === "DRAGGING") {
+                    o.preventDefault(), c.actions.move(d);
+                    return;
+                  }
+                  c.type !== "PENDING" && m(!1);
+                  var u = c.point;
+                  if (es(u, d)) {
+                    o.preventDefault();
+                    var p = c.actions.fluidLift(d);
+                    a({ type: "DRAGGING", actions: p });
+                  }
+                }
+              },
+            },
+            {
+              eventName: "mouseup",
+              fn: function (o) {
+                var l = n();
+                if (l.type !== "DRAGGING") {
+                  r();
+                  return;
+                }
+                o.preventDefault(),
+                  l.actions.drop({ shouldBlockNextClick: !0 }),
+                  t();
+              },
+            },
+            {
+              eventName: "mousedown",
+              fn: function (o) {
+                n().type === "DRAGGING" && o.preventDefault(), r();
+              },
+            },
+            {
+              eventName: "keydown",
+              fn: function (o) {
+                var l = n();
+                if (l.type === "PENDING") {
+                  r();
+                  return;
+                }
+                if (o.keyCode === vt) {
+                  o.preventDefault(), r();
+                  return;
+                }
+                qn(o);
+              },
+            },
+            { eventName: "resize", fn: r },
+            {
+              eventName: "scroll",
+              options: { passive: !0, capture: !1 },
+              fn: function () {
+                n().type === "PENDING" && r();
+              },
+            },
+            {
+              eventName: "webkitmouseforcedown",
+              fn: function (o) {
+                var l = n();
+                if (
+                  (l.type === "IDLE" && m(!1),
+                  l.actions.shouldRespectForcePress())
+                ) {
+                  r();
+                  return;
+                }
+                o.preventDefault();
+              },
+            },
+            { eventName: br, fn: r },
+          ];
+        }
+        function ts(e) {
+          var r = (0, D.useRef)(jn),
+            t = (0, D.useRef)(ie),
+            n = (0, h.Kr)(
               function () {
                 return {
-                  eventName: "keydown",
-                  fn: function (n) {
-                    if (!n.defaultPrevented && 32 === n.keyCode) {
-                      var t = e.findClosestDraggableId(n);
-                      if (t) {
-                        var o = e.tryGetLock(t, u, { sourceEvent: n });
-                        if (o) {
-                          n.preventDefault();
-                          var a = !0,
-                            l = o.snapLift();
-                          r.current(),
-                            (r.current = te(e.getWindow(), Kt(l, u), {
-                              capture: !0,
-                              passive: !1,
-                            }));
+                  eventName: "mousedown",
+                  fn: function (c) {
+                    if (
+                      !c.defaultPrevented &&
+                      c.button === $n &&
+                      !(c.ctrlKey || c.metaKey || c.shiftKey || c.altKey)
+                    ) {
+                      var u = e.findClosestDraggableId(c);
+                      if (u) {
+                        var p = e.tryGetLock(u, o, { sourceEvent: c });
+                        if (p) {
+                          c.preventDefault();
+                          var v = { x: c.clientX, y: c.clientY };
+                          t.current(), f(p, v);
                         }
                       }
-                    }
-                    function u() {
-                      a || le(!1), (a = !1), r.current(), i();
                     }
                   },
                 };
               },
               [e],
             ),
-            i = (0, Y.hb)(
+            a = (0, h.Kr)(
               function () {
-                r.current = te(e.getWindow(), [n], {
-                  passive: !1,
-                  capture: !0,
-                });
+                return {
+                  eventName: "webkitmouseforcewillbegin",
+                  fn: function (c) {
+                    if (!c.defaultPrevented) {
+                      var u = e.findClosestDraggableId(c);
+                      if (u) {
+                        var p = e.findOptionsForDraggable(u);
+                        p &&
+                          (p.shouldRespectForcePress ||
+                            (e.canGetLock(u) && c.preventDefault()));
+                      }
+                    }
+                  },
+                };
               },
-              [e, n],
+              [e],
+            ),
+            i = (0, h.hb)(
+              function () {
+                var c = { passive: !1, capture: !0 };
+                t.current = K(e.getWindow(), [a, n], c);
+              },
+              [e, a, n],
+            ),
+            o = (0, h.hb)(
+              function () {
+                var d = r.current;
+                d.type !== "IDLE" && ((r.current = jn), t.current(), i());
+              },
+              [i],
+            ),
+            l = (0, h.hb)(
+              function () {
+                var d = r.current;
+                o(),
+                  d.type === "DRAGGING" &&
+                    d.actions.cancel({ shouldBlockNextClick: !0 }),
+                  d.type === "PENDING" && d.actions.abort();
+              },
+              [o],
+            ),
+            s = (0, h.hb)(
+              function () {
+                var c = { capture: !0, passive: !1 },
+                  u = rs({
+                    cancel: l,
+                    completed: o,
+                    getPhase: function () {
+                      return r.current;
+                    },
+                    setPhase: function (v) {
+                      r.current = v;
+                    },
+                  });
+                t.current = K(e.getWindow(), u, c);
+              },
+              [e, l, o],
+            ),
+            f = (0, h.hb)(
+              function (c, u) {
+                r.current.type !== "IDLE" && m(!1),
+                  (r.current = { type: "PENDING", point: u, actions: c }),
+                  s();
+              },
+              [s],
             );
-          bt(
+          z(
             function () {
               return (
                 i(),
                 function () {
-                  r.current();
+                  t.current();
                 }
               );
             },
             [i],
           );
-        },
-        function (e) {
-          var r = (0, t.useRef)(zt),
-            n = (0, t.useRef)(ne),
-            i = (0, Y.hb)(function () {
+        }
+        var Re;
+        function ns() {}
+        var as =
+          ((Re = {}),
+          (Re[jl] = !0),
+          (Re[zl] = !0),
+          (Re[Yl] = !0),
+          (Re[Kl] = !0),
+          Re);
+        function is(e, r) {
+          function t() {
+            r(), e.cancel();
+          }
+          function n() {
+            r(), e.drop();
+          }
+          return [
+            {
+              eventName: "keydown",
+              fn: function (i) {
+                if (i.keyCode === vt) {
+                  i.preventDefault(), t();
+                  return;
+                }
+                if (i.keyCode === Vn) {
+                  i.preventDefault(), n();
+                  return;
+                }
+                if (i.keyCode === Zl) {
+                  i.preventDefault(), e.moveDown();
+                  return;
+                }
+                if (i.keyCode === Xl) {
+                  i.preventDefault(), e.moveUp();
+                  return;
+                }
+                if (i.keyCode === Ql) {
+                  i.preventDefault(), e.moveRight();
+                  return;
+                }
+                if (i.keyCode === Jl) {
+                  i.preventDefault(), e.moveLeft();
+                  return;
+                }
+                if (as[i.keyCode]) {
+                  i.preventDefault();
+                  return;
+                }
+                qn(i);
+              },
+            },
+            { eventName: "mousedown", fn: t },
+            { eventName: "mouseup", fn: t },
+            { eventName: "click", fn: t },
+            { eventName: "touchstart", fn: t },
+            { eventName: "resize", fn: t },
+            { eventName: "wheel", fn: t, options: { passive: !0 } },
+            { eventName: br, fn: t },
+          ];
+        }
+        function os(e) {
+          var r = (0, D.useRef)(ns),
+            t = (0, h.Kr)(
+              function () {
+                return {
+                  eventName: "keydown",
+                  fn: function (i) {
+                    if (i.defaultPrevented || i.keyCode !== Vn) return;
+                    var o = e.findClosestDraggableId(i);
+                    if (!o) return;
+                    var l = e.tryGetLock(o, d, { sourceEvent: i });
+                    if (!l) return;
+                    i.preventDefault();
+                    var s = !0,
+                      f = l.snapLift();
+                    r.current();
+                    function d() {
+                      s || m(!1), (s = !1), r.current(), n();
+                    }
+                    r.current = K(e.getWindow(), is(f, d), {
+                      capture: !0,
+                      passive: !1,
+                    });
+                  },
+                };
+              },
+              [e],
+            ),
+            n = (0, h.hb)(
+              function () {
+                var i = { passive: !1, capture: !0 };
+                r.current = K(e.getWindow(), [t], i);
+              },
+              [e, t],
+            );
+          z(
+            function () {
+              return (
+                n(),
+                function () {
+                  r.current();
+                }
+              );
+            },
+            [n],
+          );
+        }
+        var gt = { type: "IDLE" },
+          ls = 120,
+          ss = 0.15;
+        function us(e) {
+          var r = e.cancel,
+            t = e.getPhase;
+          return [
+            { eventName: "orientationchange", fn: r },
+            { eventName: "resize", fn: r },
+            {
+              eventName: "contextmenu",
+              fn: function (a) {
+                a.preventDefault();
+              },
+            },
+            {
+              eventName: "keydown",
+              fn: function (a) {
+                if (t().type !== "DRAGGING") {
+                  r();
+                  return;
+                }
+                a.keyCode === vt && a.preventDefault(), r();
+              },
+            },
+            { eventName: br, fn: r },
+          ];
+        }
+        function cs(e) {
+          var r = e.cancel,
+            t = e.completed,
+            n = e.getPhase;
+          return [
+            {
+              eventName: "touchmove",
+              options: { capture: !1 },
+              fn: function (i) {
+                var o = n();
+                if (o.type !== "DRAGGING") {
+                  r();
+                  return;
+                }
+                o.hasMoved = !0;
+                var l = i.touches[0],
+                  s = l.clientX,
+                  f = l.clientY,
+                  d = { x: s, y: f };
+                i.preventDefault(), o.actions.move(d);
+              },
+            },
+            {
+              eventName: "touchend",
+              fn: function (i) {
+                var o = n();
+                if (o.type !== "DRAGGING") {
+                  r();
+                  return;
+                }
+                i.preventDefault(),
+                  o.actions.drop({ shouldBlockNextClick: !0 }),
+                  t();
+              },
+            },
+            {
+              eventName: "touchcancel",
+              fn: function (i) {
+                if (n().type !== "DRAGGING") {
+                  r();
+                  return;
+                }
+                i.preventDefault(), r();
+              },
+            },
+            {
+              eventName: "touchforcechange",
+              fn: function (i) {
+                var o = n();
+                o.type === "IDLE" && m(!1);
+                var l = i.touches[0];
+                if (l) {
+                  var s = l.force >= ss;
+                  if (s) {
+                    var f = o.actions.shouldRespectForcePress();
+                    if (o.type === "PENDING") {
+                      f && r();
+                      return;
+                    }
+                    if (f) {
+                      if (o.hasMoved) {
+                        i.preventDefault();
+                        return;
+                      }
+                      r();
+                      return;
+                    }
+                    i.preventDefault();
+                  }
+                }
+              },
+            },
+            { eventName: br, fn: r },
+          ];
+        }
+        function ds(e) {
+          var r = (0, D.useRef)(gt),
+            t = (0, D.useRef)(ie),
+            n = (0, h.hb)(function () {
               return r.current;
             }, []),
-            o = (0, Y.hb)(function (e) {
-              r.current = e;
+            a = (0, h.hb)(function (p) {
+              r.current = p;
             }, []),
-            a = (0, Y.Kr)(
+            i = (0, h.Kr)(
               function () {
                 return {
                   eventName: "touchstart",
-                  fn: function (r) {
-                    if (!r.defaultPrevented) {
-                      var t = e.findClosestDraggableId(r);
-                      if (t) {
-                        var i = e.tryGetLock(t, u, { sourceEvent: r });
-                        if (i) {
-                          var o = r.touches[0],
-                            a = { x: o.clientX, y: o.clientY };
-                          n.current(), p(i, a);
+                  fn: function (p) {
+                    if (!p.defaultPrevented) {
+                      var v = e.findClosestDraggableId(p);
+                      if (v) {
+                        var g = e.tryGetLock(v, l, { sourceEvent: p });
+                        if (g) {
+                          var b = p.touches[0],
+                            y = b.clientX,
+                            I = b.clientY,
+                            S = { x: y, y: I };
+                          t.current(), c(g, S);
                         }
                       }
                     }
@@ -4604,1589 +5212,1708 @@
               },
               [e],
             ),
-            l = (0, Y.hb)(
+            o = (0, h.hb)(
               function () {
-                n.current = te(e.getWindow(), [a], {
-                  capture: !0,
-                  passive: !1,
-                });
+                var p = { capture: !0, passive: !1 };
+                t.current = K(e.getWindow(), [i], p);
               },
-              [e, a],
+              [e, i],
             ),
-            u = (0, Y.hb)(
+            l = (0, h.hb)(
               function () {
-                var e = r.current;
-                "IDLE" !== e.type &&
-                  ("PENDING" === e.type && clearTimeout(e.longPressTimerId),
-                  o(zt),
-                  n.current(),
-                  l());
+                var u = r.current;
+                u.type !== "IDLE" &&
+                  (u.type === "PENDING" && clearTimeout(u.longPressTimerId),
+                  a(gt),
+                  t.current(),
+                  o());
               },
-              [l, o],
+              [o, a],
             ),
-            c = (0, Y.hb)(
+            s = (0, h.hb)(
               function () {
-                var e = r.current;
-                u(),
-                  "DRAGGING" === e.type &&
-                    e.actions.cancel({ shouldBlockNextClick: !0 }),
-                  "PENDING" === e.type && e.actions.abort();
+                var u = r.current;
+                l(),
+                  u.type === "DRAGGING" &&
+                    u.actions.cancel({ shouldBlockNextClick: !0 }),
+                  u.type === "PENDING" && u.actions.abort();
               },
-              [u],
+              [l],
             ),
-            s = (0, Y.hb)(
+            f = (0, h.hb)(
               function () {
-                var r = { capture: !0, passive: !1 },
-                  t = { cancel: c, completed: u, getPhase: i },
-                  o = te(
-                    e.getWindow(),
-                    (function (e) {
-                      var r = e.cancel,
-                        n = e.completed,
-                        t = e.getPhase;
-                      return [
-                        {
-                          eventName: "touchmove",
-                          options: { capture: !1 },
-                          fn: function (e) {
-                            var n = t();
-                            if ("DRAGGING" === n.type) {
-                              n.hasMoved = !0;
-                              var i = e.touches[0],
-                                o = { x: i.clientX, y: i.clientY };
-                              e.preventDefault(), n.actions.move(o);
-                            } else r();
-                          },
-                        },
-                        {
-                          eventName: "touchend",
-                          fn: function (e) {
-                            var i = t();
-                            "DRAGGING" === i.type
-                              ? (e.preventDefault(),
-                                i.actions.drop({ shouldBlockNextClick: !0 }),
-                                n())
-                              : r();
-                          },
-                        },
-                        {
-                          eventName: "touchcancel",
-                          fn: function (e) {
-                            "DRAGGING" === t().type
-                              ? (e.preventDefault(), r())
-                              : r();
-                          },
-                        },
-                        {
-                          eventName: "touchforcechange",
-                          fn: function (e) {
-                            var n = t();
-                            "IDLE" === n.type && le(!1);
-                            var i = e.touches[0];
-                            if (i && i.force >= 0.15) {
-                              var o = n.actions.shouldRespectForcePress();
-                              if ("PENDING" !== n.type)
-                                return o
-                                  ? n.hasMoved
-                                    ? void e.preventDefault()
-                                    : void r()
-                                  : void e.preventDefault();
-                              o && r();
-                            }
-                          },
-                        },
-                        { eventName: Wt, fn: r },
-                      ];
-                    })(t),
-                    r,
-                  ),
-                  a = te(
-                    e.getWindow(),
-                    (function (e) {
-                      var r = e.cancel,
-                        n = e.getPhase;
-                      return [
-                        { eventName: "orientationchange", fn: r },
-                        { eventName: "resize", fn: r },
-                        {
-                          eventName: "contextmenu",
-                          fn: function (e) {
-                            e.preventDefault();
-                          },
-                        },
-                        {
-                          eventName: "keydown",
-                          fn: function (e) {
-                            "DRAGGING" === n().type
-                              ? (27 === e.keyCode && e.preventDefault(), r())
-                              : r();
-                          },
-                        },
-                        { eventName: Wt, fn: r },
-                      ];
-                    })(t),
-                    r,
-                  );
-                n.current = function () {
-                  o(), a();
+                var p = { capture: !0, passive: !1 },
+                  v = { cancel: s, completed: l, getPhase: n },
+                  g = K(e.getWindow(), cs(v), p),
+                  b = K(e.getWindow(), us(v), p);
+                t.current = function () {
+                  g(), b();
                 };
               },
-              [e, c, i, u],
+              [e, s, n, l],
             ),
-            d = (0, Y.hb)(
+            d = (0, h.hb)(
               function () {
-                var e = i();
-                "PENDING" !== e.type && le(!1);
-                var r = e.actions.fluidLift(e.point);
-                o({ type: "DRAGGING", actions: r, hasMoved: !1 });
+                var p = n();
+                p.type !== "PENDING" && m(!1);
+                var v = p.actions.fluidLift(p.point);
+                a({ type: "DRAGGING", actions: v, hasMoved: !1 });
               },
-              [i, o],
+              [n, a],
             ),
-            p = (0, Y.hb)(
-              function (e, r) {
-                "IDLE" !== i().type && le(!1);
-                var n = setTimeout(d, 120);
-                o({
+            c = (0, h.hb)(
+              function (p, v) {
+                n().type !== "IDLE" && m(!1);
+                var g = setTimeout(d, ls);
+                a({
                   type: "PENDING",
-                  point: r,
-                  actions: e,
-                  longPressTimerId: n,
+                  point: v,
+                  actions: p,
+                  longPressTimerId: g,
                 }),
-                  s();
+                  f();
               },
-              [s, i, o, d],
+              [f, n, a, d],
             );
-          bt(
+          z(
             function () {
               return (
-                l(),
+                o(),
                 function () {
-                  n.current();
-                  var e = i();
-                  "PENDING" === e.type &&
-                    (clearTimeout(e.longPressTimerId), o(zt));
+                  t.current();
+                  var v = n();
+                  v.type === "PENDING" &&
+                    (clearTimeout(v.longPressTimerId), a(gt));
                 }
               );
             },
-            [i, l, o],
+            [n, o, a],
           ),
-            bt(
+            z(
               function () {
-                return te(e.getWindow(), [
+                var p = K(e.getWindow(), [
                   {
                     eventName: "touchmove",
                     fn: function () {},
                     options: { capture: !1, passive: !1 },
                   },
                 ]);
+                return p;
               },
               [e],
             );
-        },
-      ];
-      function ui(e) {
-        var r = e.contextId,
-          n = e.store,
-          i = e.registry,
-          o = e.customSensors,
-          a = e.enableDefaultSensors,
-          l = e.windowToUse,
-          u = [].concat(a ? li : [], o || []),
-          c = (0, t.useState)(function () {
-            return (function () {
-              var e = null;
-              function r() {
-                e || le(!1), (e = null);
-              }
-              return {
-                isClaimed: function () {
-                  return Boolean(e);
-                },
-                isActive: function (r) {
-                  return r === e;
-                },
-                claim: function (r) {
-                  e && le(!1);
-                  var n = { abandon: r };
-                  return (e = n), n;
-                },
-                release: r,
-                tryAbandon: function () {
-                  e && (e.abandon(), r());
-                },
-              };
-            })();
-          })[0],
-          s = (0, Y.hb)(
-            function (e, r) {
-              e.isDragging && !r.isDragging && c.tryAbandon();
-            },
-            [c],
-          );
-        bt(
-          function () {
-            var e = n.getState();
-            return n.subscribe(function () {
-              var r = n.getState();
-              s(e, r), (e = r);
-            });
-          },
-          [c, n, s],
-        ),
-          bt(
-            function () {
-              return c.tryAbandon;
-            },
-            [c.tryAbandon],
-          );
-        var d = (0, Y.hb)(
-            function (e) {
-              return oi({ lockAPI: c, registry: i, store: n, draggableId: e });
-            },
-            [c, i, n],
-          ),
-          p = (0, Y.hb)(
-            function (e, t, o) {
-              return ai({
-                lockAPI: c,
-                registry: i,
-                contextId: r,
-                store: n,
-                draggableId: e,
-                forceSensorStop: t,
-                sourceEvent: o && o.sourceEvent ? o.sourceEvent : null,
-              });
-            },
-            [r, c, i, n],
-          ),
-          f = (0, Y.hb)(
-            function (e) {
-              return (function (e, r) {
-                var n = ni(e, r);
-                return n ? n.getAttribute(dt.draggableId) : null;
-              })(r, e);
-            },
-            [r],
-          ),
-          g = (0, Y.hb)(
-            function (e) {
-              var r = i.draggable.findById(e);
-              return r ? r.options : null;
-            },
-            [i.draggable],
-          ),
-          v = (0, Y.hb)(
-            function () {
-              c.isClaimed() &&
-                (c.tryAbandon(),
-                "IDLE" !== n.getState().phase && n.dispatch(nn()));
-            },
-            [c, n],
-          ),
-          m = (0, Y.hb)(c.isClaimed, [c]),
-          b = (0, Y.hb)(
-            function () {
-              return l;
-            },
-            [l],
-          ),
-          h = (0, Y.Kr)(
-            function () {
-              return {
-                canGetLock: d,
-                tryGetLock: p,
-                findClosestDraggableId: f,
-                findOptionsForDraggable: g,
-                tryReleaseLock: v,
-                isLockClaimed: m,
-                getWindow: b,
-              };
-            },
-            [d, p, f, g, v, m, b],
-          );
-        Lt();
-        for (var y = 0; y < u.length; y++) u[y](h);
-      }
-      var ci = function (e) {
-        return {
-          onBeforeCapture: e.onBeforeCapture,
-          onBeforeDragStart: e.onBeforeDragStart,
-          onDragStart: e.onDragStart,
-          onDragEnd: e.onDragEnd,
-          onDragUpdate: e.onDragUpdate,
+        }
+        function fs(e) {}
+        var ps = {
+          input: !0,
+          button: !0,
+          textarea: !0,
+          select: !0,
+          option: !0,
+          optgroup: !0,
+          video: !0,
+          audio: !0,
         };
-      };
-      function si(e) {
-        return e.current || le(!1), e.current;
-      }
-      function di(e) {
-        var r = e.contextId,
-          n = e.setCallbacks,
-          i = e.sensors,
-          l = e.nonce,
-          u = e.dragHandleUsageInstructions,
-          c = (0, t.useRef)(null),
-          [s, d] = t.useState(),
-          p = t.useMemo(
-            function () {
-              return s ? s.ownerDocument.defaultView : window;
-            },
-            [s],
-          );
-        Gt();
-        var g = Mt(e),
-          v = (0, Y.hb)(
-            function () {
-              return ci(g.current);
-            },
-            [g],
-          ),
-          m = (function (e) {
-            var r = (0, Y.Kr)(
-                function () {
-                  return Nt(e);
+        function Kn(e, r) {
+          if (r == null) return !1;
+          var t = !!ps[r.tagName.toLowerCase()];
+          if (t) return !0;
+          var n = r.getAttribute("contenteditable");
+          return n === "true" || n === ""
+            ? !0
+            : r === e
+              ? !1
+              : Kn(e, r.parentElement);
+        }
+        function vs(e, r) {
+          var t = Gn(r);
+          return Je(t) ? Kn(e, t) : !1;
+        }
+        var gs = function (e) {
+          return (0, M.l)(e.getBoundingClientRect()).center;
+        };
+        function ms(e) {
+          return e instanceof Wn(e).Element;
+        }
+        var bs = (function () {
+          var e = "matches";
+          if (typeof document > "u") return e;
+          var r = [e, "msMatchesSelector", "webkitMatchesSelector"],
+            t = be(r, function (n) {
+              return n in Element.prototype;
+            });
+          return t || e;
+        })();
+        function Yn(e, r) {
+          return e == null ? null : e[bs](r) ? e : Yn(e.parentElement, r);
+        }
+        function hs(e, r) {
+          return e.closest ? e.closest(r) : Yn(e, r);
+        }
+        function Jn(e, r) {
+          if (!e || e === document || e === window) return null;
+          var t = hs(e, r);
+          if (t) return t;
+          var n = e.getRootNode();
+          return Jn(n.host, r);
+        }
+        function ys(e) {
+          return "[" + Pe.contextId + '="' + e + '"]';
+        }
+        function Ds(e, r) {
+          var t = Gn(r);
+          if (!ms(t)) return null;
+          var n = ys(e),
+            a = Jn(t, n);
+          return !a || !Je(a) ? null : a;
+        }
+        function Is(e, r) {
+          var t = Ds(e, r);
+          return t ? t.getAttribute(Pe.draggableId) : null;
+        }
+        function xs(e, r, t) {
+          var n = "[" + ut.contextId + '="' + e + '"]',
+            a = ct(t, n, function (i) {
+              return i.getAttribute(ut.id) === r;
+            });
+          return !a || !Je(a) ? null : a;
+        }
+        function Ss(e) {
+          e.preventDefault();
+        }
+        function hr(e) {
+          var r = e.expected,
+            t = e.phase,
+            n = e.isLockActive,
+            a = e.shouldWarn;
+          return !(!n() || r !== t);
+        }
+        function Xn(e) {
+          var r = e.lockAPI,
+            t = e.store,
+            n = e.registry,
+            a = e.draggableId;
+          if (r.isClaimed()) return !1;
+          var i = n.draggable.findById(a);
+          return !(!i || !i.options.isEnabled || !An(t.getState(), a));
+        }
+        function Cs(e) {
+          var r = e.lockAPI,
+            t = e.contextId,
+            n = e.store,
+            a = e.registry,
+            i = e.draggableId,
+            o = e.forceSensorStop,
+            l = e.sourceEvent,
+            s = Xn({ lockAPI: r, store: n, registry: a, draggableId: i });
+          if (!s) return null;
+          var f = a.draggable.getById(i),
+            d = xs(t, f.descriptor.id, wl(l));
+          if (!d || (l && !f.options.canDragInteractiveElements && vs(d, l)))
+            return null;
+          var c = r.claim(o || ie),
+            u = "PRE_DRAG";
+          function p() {
+            return f.options.shouldRespectForcePress;
+          }
+          function v() {
+            return r.isActive(c);
+          }
+          function g(E, R) {
+            hr({ expected: E, phase: u, isLockActive: v, shouldWarn: !0 }) &&
+              n.dispatch(R());
+          }
+          var b = g.bind(null, "DRAGGING");
+          function y(E) {
+            function R() {
+              r.release(), (u = "COMPLETED");
+            }
+            u !== "PRE_DRAG" && (R(), u !== "PRE_DRAG" && m(!1)),
+              n.dispatch(oo(E.liftActionArgs)),
+              (u = "DRAGGING");
+            function N(B, T) {
+              if (
+                (T === void 0 && (T = { shouldBlockNextClick: !1 }),
+                E.cleanup(),
+                T.shouldBlockNextClick)
+              ) {
+                var L = K(window, [
+                  {
+                    eventName: "click",
+                    fn: Ss,
+                    options: { once: !0, passive: !1, capture: !0 },
+                  },
+                ]);
+                setTimeout(L);
+              }
+              R(), n.dispatch(mn({ reason: B }));
+            }
+            return (0, A.A)(
+              {
+                isActive: function () {
+                  return hr({
+                    expected: "DRAGGING",
+                    phase: u,
+                    isLockActive: v,
+                    shouldWarn: !1,
+                  });
                 },
-                [e],
-              ),
-              n = (0, t.useRef)(null);
-            return (
-              (0, t.useEffect)(
-                function () {
-                  var e = document.createElement("div");
-                  return (
-                    (n.current = e),
-                    (e.id = r),
-                    e.setAttribute("aria-live", "assertive"),
-                    e.setAttribute("aria-atomic", "true"),
-                    (0, o.A)(e.style, Pt),
-                    St().appendChild(e),
-                    function () {
-                      setTimeout(function () {
-                        var r = St();
-                        r.contains(e) && r.removeChild(e),
-                          e === n.current && (n.current = null);
-                      });
-                    }
-                  );
+                shouldRespectForcePress: p,
+                drop: function (T) {
+                  return N("DROP", T);
                 },
-                [r],
-              ),
-              (0, Y.hb)(function (e) {
-                var r = n.current;
-                r && (r.textContent = e);
-              }, [])
-            );
-          })(r),
-          b = (function (e) {
-            var r = e.contextId,
-              n = e.text,
-              i = Ot("hidden-text", { separator: "-" }),
-              o = (0, Y.Kr)(
-                function () {
-                  return (
-                    "rbd-hidden-text-" +
-                    (e = { contextId: r, uniqueId: i }).contextId +
-                    "-" +
-                    e.uniqueId
-                  );
-                  var e;
+                cancel: function (T) {
+                  return N("CANCEL", T);
                 },
-                [i, r],
-              );
-            return (
-              (0, t.useEffect)(
-                function () {
-                  var e = document.createElement("div");
-                  return (
-                    (e.id = o),
-                    (e.textContent = n),
-                    (e.style.display = "none"),
-                    St().appendChild(e),
-                    function () {
-                      var r = St();
-                      r.contains(e) && r.removeChild(e);
-                    }
-                  );
-                },
-                [o, n],
-              ),
-              o
-            );
-          })({ contextId: r, text: u }),
-          h = (function (e, r, n) {
-            var i = (0, Y.Kr)(
-                function () {
-                  return mt(e);
-                },
-                [e],
-              ),
-              o = (0, t.useRef)(null),
-              a = (0, t.useRef)(null),
-              l = (0, Y.hb)(
-                Z(function (e) {
-                  var r = a.current;
-                  r || le(!1), (r.textContent = e);
-                }),
-                [],
-              ),
-              u = (0, Y.hb)(function (e) {
-                var r = o.current;
-                r || le(!1), (r.textContent = e);
-              }, []);
-            bt(
-              function () {
-                (o.current || a.current) && le(!1);
-                var t = yt(r),
-                  c = yt(r);
-                (o.current = t),
-                  (a.current = c),
-                  t.setAttribute(st + "-always", e),
-                  c.setAttribute(st + "-dynamic", e);
-                var s = ht(n);
-                return (
-                  s.appendChild(t),
-                  s.appendChild(c),
-                  u(i.always),
-                  l(i.resting),
-                  function () {
-                    var e = function (e) {
-                      var r = e.current;
-                      r || le(!1), s.removeChild(r), (e.current = null);
-                    };
-                    e(o), e(a);
-                  }
-                );
               },
-              [r, u, l, i.always, i.resting, e, n],
+              E.actions,
             );
-            var c = (0, Y.hb)(
-                function () {
-                  return l(i.dragging);
+          }
+          function I(E) {
+            var R = (0, Le.A)(function (B) {
+                b(function () {
+                  return gn({ client: B });
+                });
+              }),
+              N = y({
+                liftActionArgs: {
+                  id: i,
+                  clientSelection: E,
+                  movementMode: "FLUID",
                 },
-                [l, i.dragging],
-              ),
-              s = (0, Y.hb)(
-                function (e) {
-                  l("DROP" !== e ? i.userCancel : i.dropAnimating);
+                cleanup: function () {
+                  return R.cancel();
                 },
-                [l, i.dropAnimating, i.userCancel],
-              ),
-              d = (0, Y.hb)(
-                function () {
-                  a.current && l(i.resting);
-                },
-                [l, i.resting],
-              );
-            return (0, Y.Kr)(
-              function () {
-                return { dragging: c, dropping: s, resting: d };
+                actions: { move: R },
+              });
+            return (0, A.A)({}, N, { move: R });
+          }
+          function S() {
+            var E = {
+              moveUp: function () {
+                return b(mo);
               },
-              [c, s, d],
-            );
-          })(r, l, e.stylesInsertionPoint),
-          y = (0, Y.hb)(function (e) {
-            si(c).dispatch(e);
-          }, []),
-          I = (0, Y.Kr)(
-            function () {
-              return (0, a.zH)(
-                {
-                  publishWhileDragging: Kr,
-                  updateDroppableScroll: Yr,
-                  updateDroppableIsEnabled: Jr,
-                  updateDroppableIsCombineEnabled: Xr,
-                  collectionStarting: zr,
-                },
-                y,
-              );
-            },
-            [y],
-          ),
-          D = (function () {
-            var e = (0, Y.Kr)(At, []);
-            return (
-              (0, t.useEffect)(
-                function () {
-                  return function () {
-                    requestAnimationFrame(e.clean);
-                  };
-                },
-                [e],
-              ),
-              e
-            );
-          })(),
-          x = (0, Y.Kr)(
-            function () {
-              return kn(p, D, I);
-            },
-            [p, D, I],
-          ),
-          E = (0, Y.Kr)(
-            function () {
-              return ct(
-                (0, o.A)(
-                  { scrollWindow: Un, scrollDroppable: x.scrollDroppable },
-                  (0, a.zH)({ move: $r }, y),
-                ),
-              );
-            },
-            [x.scrollDroppable, y],
-          ),
-          w = (function (e) {
-            var r = (0, t.useRef)({}),
-              n = (0, t.useRef)(null),
-              i = (0, t.useRef)(null),
-              o = (0, t.useRef)(!1),
-              a = (0, Y.hb)(function (e, n) {
-                var t = { id: e, focus: n };
-                return (
-                  (r.current[e] = t),
-                  function () {
-                    var n = r.current;
-                    n[e] !== t && delete n[e];
-                  }
-                );
-              }, []),
-              l = (0, Y.hb)(
-                function (r) {
-                  var n = wt(e, r);
-                  n && n !== document.activeElement && n.focus();
-                },
-                [e],
-              ),
-              u = (0, Y.hb)(function (e, r) {
-                n.current === e && (n.current = r);
-              }, []),
-              c = (0, Y.hb)(
-                function () {
-                  i.current ||
-                    (o.current &&
-                      (i.current = requestAnimationFrame(function () {
-                        i.current = null;
-                        var e = n.current;
-                        e && l(e);
-                      })));
-                },
-                [l],
-              ),
-              s = (0, Y.hb)(function (e) {
-                n.current = null;
-                var r = document.activeElement;
-                r && r.getAttribute(dt.draggableId) === e && (n.current = e);
-              }, []);
-            return (
-              bt(function () {
-                return (
-                  (o.current = !0),
-                  function () {
-                    o.current = !1;
-                    var e = i.current;
-                    e && cancelAnimationFrame(e);
-                  }
-                );
-              }, []),
-              (0, Y.Kr)(
-                function () {
-                  return {
-                    register: a,
-                    tryRecordFocus: s,
-                    tryRestoreFocusRecorded: c,
-                    tryShiftRecord: u,
-                  };
-                },
-                [a, s, c, u],
-              )
-            );
-          })(r),
-          A = (0, Y.Kr)(
-            function () {
-              return Bn({
-                announce: m,
-                autoScroller: E,
-                dimensionMarshal: x,
-                focusMarshal: w,
-                getResponders: v,
-                styleMarshal: h,
+              moveRight: function () {
+                return b(ho);
+              },
+              moveDown: function () {
+                return b(bo);
+              },
+              moveLeft: function () {
+                return b(yo);
+              },
+            };
+            return y({
+              liftActionArgs: {
+                id: i,
+                clientSelection: gs(d),
+                movementMode: "SNAP",
+              },
+              cleanup: ie,
+              actions: E,
+            });
+          }
+          function x() {
+            var E = hr({
+              expected: "PRE_DRAG",
+              phase: u,
+              isLockActive: v,
+              shouldWarn: !0,
+            });
+            E && r.release();
+          }
+          var w = {
+            isActive: function () {
+              return hr({
+                expected: "PRE_DRAG",
+                phase: u,
+                isLockActive: v,
+                shouldWarn: !1,
               });
             },
-            [m, E, x, w, v, h],
-          );
-        s && (c.current = A);
-        var C = (0, Y.hb)(function () {
-            var e = si(c);
-            "IDLE" !== e.getState().phase && e.dispatch(nn());
-          }, []),
-          S = (0, Y.hb)(function () {
-            var e = si(c).getState();
-            return e.isDragging || "DROP_ANIMATING" === e.phase;
-          }, []);
-        n(
-          (0, Y.Kr)(
-            function () {
-              return { isDragging: S, tryAbort: C };
-            },
-            [S, C],
-          ),
-        );
-        var P = (0, Y.hb)(function (e) {
-            return Wn(si(c).getState(), e);
-          }, []),
-          N = (0, Y.hb)(function () {
-            return wr(si(c).getState());
-          }, []),
-          R = (0, Y.Kr)(
-            function () {
-              return {
-                marshal: x,
-                focus: w,
-                contextId: r,
-                canLift: P,
-                isMovementAllowed: N,
-                dragHandleUsageInstructionsId: b,
-                registry: D,
-              };
-            },
-            [r, x, b, w, P, N, D],
-          );
-        return (
-          ui({
-            contextId: r,
-            store: A,
-            registry: D,
-            customSensors: i,
-            enableDefaultSensors: !1 !== e.enableDefaultSensors,
-            windowToUse: p,
-          }),
-          (0, t.useEffect)(
-            function () {
-              return C;
-            },
-            [C],
-          ),
-          t.createElement(
-            Tt.Provider,
-            { value: R },
-            t.createElement("div", { ref: d }),
-            s && t.createElement(f, { context: Ct, store: A }, e.children),
-          )
-        );
-      }
-      var pi = 0;
-      function fi(e) {
-        var r = (0, Y.Kr)(function () {
-            return "" + pi++;
-          }, []),
-          n = e.dragHandleUsageInstructions || fe.dragHandleUsageInstructions;
-        return t.createElement(ue, null, function (i) {
-          return t.createElement(
-            di,
-            {
-              nonce: e.nonce,
-              contextId: r,
-              setCallbacks: i,
-              dragHandleUsageInstructions: n,
-              enableDefaultSensors: e.enableDefaultSensors,
-              sensors: e.sensors,
-              onBeforeCapture: e.onBeforeCapture,
-              onBeforeDragStart: e.onBeforeDragStart,
-              onDragStart: e.onDragStart,
-              onDragUpdate: e.onDragUpdate,
-              onDragEnd: e.onDragEnd,
-              stylesInsertionPoint: e.stylesInsertionPoint,
-            },
-            e.children,
-          );
-        });
-      }
-      var gi = function (e) {
-          return function (r) {
-            return e === r;
+            shouldRespectForcePress: p,
+            fluidLift: I,
+            snapLift: S,
+            abort: x,
           };
-        },
-        vi = gi("scroll"),
-        mi = gi("auto"),
-        bi =
-          (gi("visible"),
-          function (e, r) {
-            return r(e.overflowX) || r(e.overflowY);
-          }),
-        hi = function (e) {
-          var r = e.ownerDocument.defaultView.getComputedStyle(e),
-            n = { overflowX: r.overflowX, overflowY: r.overflowY };
-          return bi(n, vi) || bi(n, mi);
-        },
-        yi = function e(r) {
-          return null == r ||
-            r === document.body ||
-            r === document.documentElement
-            ? null
-            : hi(r)
-              ? r
-              : e(r.parentElement);
-        },
-        Ii = function (e) {
-          return { x: e.scrollLeft, y: e.scrollTop };
-        },
-        Di = function e(r) {
+          return w;
+        }
+        var ws = [ts, os, ds];
+        function As(e) {
+          var r = e.contextId,
+            t = e.store,
+            n = e.registry,
+            a = e.customSensors,
+            i = e.enableDefaultSensors,
+            o = e.windowToUse,
+            l = [].concat(i ? ws : [], a || []),
+            s = (0, D.useState)(function () {
+              return Vl();
+            })[0],
+            f = (0, h.hb)(
+              function (x, w) {
+                x.isDragging && !w.isDragging && s.tryAbandon();
+              },
+              [s],
+            );
+          z(
+            function () {
+              var x = t.getState(),
+                w = t.subscribe(function () {
+                  var E = t.getState();
+                  f(x, E), (x = E);
+                });
+              return w;
+            },
+            [s, t, f],
+          ),
+            z(
+              function () {
+                return s.tryAbandon;
+              },
+              [s.tryAbandon],
+            );
+          var d = (0, h.hb)(
+              function (S) {
+                return Xn({
+                  lockAPI: s,
+                  registry: n,
+                  store: t,
+                  draggableId: S,
+                });
+              },
+              [s, n, t],
+            ),
+            c = (0, h.hb)(
+              function (S, x, w) {
+                return Cs({
+                  lockAPI: s,
+                  registry: n,
+                  contextId: r,
+                  store: t,
+                  draggableId: S,
+                  forceSensorStop: x,
+                  sourceEvent: w && w.sourceEvent ? w.sourceEvent : null,
+                });
+              },
+              [r, s, n, t],
+            ),
+            u = (0, h.hb)(
+              function (S) {
+                return Is(r, S);
+              },
+              [r],
+            ),
+            p = (0, h.hb)(
+              function (S) {
+                var x = n.draggable.findById(S);
+                return x ? x.options : null;
+              },
+              [n.draggable],
+            ),
+            v = (0, h.hb)(
+              function () {
+                s.isClaimed() &&
+                  (s.tryAbandon(),
+                  t.getState().phase !== "IDLE" && t.dispatch(Qr()));
+              },
+              [s, t],
+            ),
+            g = (0, h.hb)(s.isClaimed, [s]),
+            b = (0, h.hb)(
+              function () {
+                return o;
+              },
+              [o],
+            ),
+            y = (0, h.Kr)(
+              function () {
+                return {
+                  canGetLock: d,
+                  tryGetLock: c,
+                  findClosestDraggableId: u,
+                  findOptionsForDraggable: p,
+                  tryReleaseLock: v,
+                  isLockClaimed: g,
+                  getWindow: b,
+                };
+              },
+              [d, c, u, p, v, g, b],
+            );
+          fs(l);
+          for (var I = 0; I < l.length; I++) l[I](y);
+        }
+        var Es = function (r) {
+          return {
+            onBeforeCapture: r.onBeforeCapture,
+            onBeforeDragStart: r.onBeforeDragStart,
+            onDragStart: r.onDragStart,
+            onDragEnd: r.onDragEnd,
+            onDragUpdate: r.onDragUpdate,
+          };
+        };
+        function Ze(e) {
+          return e.current || m(!1), e.current;
+        }
+        function Ps(e) {
+          var r = e.contextId,
+            t = e.setCallbacks,
+            n = e.sensors,
+            a = e.nonce,
+            i = e.dragHandleUsageInstructions,
+            o = (0, D.useRef)(null),
+            [l, s] = D.useState(),
+            f = D.useMemo(
+              function () {
+                return l ? l.ownerDocument.defaultView : window;
+              },
+              [l],
+            );
+          Hl();
+          var d = pt(e),
+            c = (0, h.hb)(
+              function () {
+                return Es(d.current);
+              },
+              [d],
+            ),
+            u = Ol(r),
+            p = Ll({ contextId: r, text: i }),
+            v = Cl(r, a, e.stylesInsertionPoint),
+            g = (0, h.hb)(function (O) {
+              Ze(o).dispatch(O);
+            }, []),
+            b = (0, h.Kr)(
+              function () {
+                return (0, X.zH)(
+                  {
+                    publishWhileDragging: so,
+                    updateDroppableScroll: co,
+                    updateDroppableIsEnabled: fo,
+                    updateDroppableIsCombineEnabled: po,
+                    collectionStarting: uo,
+                  },
+                  g,
+                );
+              },
+              [g],
+            ),
+            y = Pl(),
+            I = (0, h.Kr)(
+              function () {
+                return rl(f, y, b);
+              },
+              [f, y, b],
+            ),
+            S = (0, h.Kr)(
+              function () {
+                return hl(
+                  (0, A.A)(
+                    { scrollWindow: tl, scrollDroppable: I.scrollDroppable },
+                    (0, X.zH)({ move: gn }, g),
+                  ),
+                );
+              },
+              [I.scrollDroppable, g],
+            ),
+            x = Al(r),
+            w = (0, h.Kr)(
+              function () {
+                return Xo({
+                  announce: u,
+                  autoScroller: S,
+                  dimensionMarshal: I,
+                  focusMarshal: x,
+                  getResponders: c,
+                  styleMarshal: v,
+                });
+              },
+              [u, S, I, x, c, v],
+            );
+          l && (o.current = w);
+          var E = (0, h.hb)(function () {
+              var O = Ze(o),
+                J = O.getState();
+              J.phase !== "IDLE" && O.dispatch(Qr());
+            }, []),
+            R = (0, h.hb)(function () {
+              var O = Ze(o).getState();
+              return O.isDragging || O.phase === "DROP_ANIMATING";
+            }, []),
+            N = (0, h.Kr)(
+              function () {
+                return { isDragging: R, tryAbort: E };
+              },
+              [R, E],
+            );
+          t(N);
+          var B = (0, h.hb)(function (O) {
+              return An(Ze(o).getState(), O);
+            }, []),
+            T = (0, h.hb)(function () {
+              return he(Ze(o).getState());
+            }, []),
+            L = (0, h.Kr)(
+              function () {
+                return {
+                  marshal: I,
+                  focus: x,
+                  contextId: r,
+                  canLift: B,
+                  isMovementAllowed: T,
+                  dragHandleUsageInstructionsId: p,
+                  registry: y,
+                };
+              },
+              [r, I, p, x, B, T, y],
+            );
           return (
-            !!r &&
-            ("fixed" ===
-              r.ownerDocument.defaultView.getComputedStyle(r).position ||
-              e(r.parentElement))
+            As({
+              contextId: r,
+              store: w,
+              registry: y,
+              customSensors: n,
+              enableDefaultSensors: e.enableDefaultSensors !== !1,
+              windowToUse: f,
+            }),
+            (0, D.useEffect)(
+              function () {
+                return E;
+              },
+              [E],
+            ),
+            D.createElement(
+              gr.Provider,
+              { value: L },
+              D.createElement("div", { ref: s }),
+              l && D.createElement(ar, { context: dt, store: w }, e.children),
+            )
           );
-        },
-        xi = function (e) {
-          var r = e.ref,
-            n = e.descriptor,
-            t = e.env,
-            i = e.windowScroll,
-            o = e.direction,
-            a = e.isDropDisabled,
-            l = e.isCombineEnabled,
-            u = e.shouldClipSubject,
-            c = t.closestScrollable,
-            s = (function (e, r) {
-              var n = (0, J.YH)(e);
-              if (!r) return n;
-              if (e !== r) return n;
-              var t = n.paddingBox.top - r.scrollTop,
-                i = n.paddingBox.left - r.scrollLeft,
-                o = t + r.scrollHeight,
-                a = { top: t, right: i + r.scrollWidth, bottom: o, left: i },
-                l = (0, J.fT)(a, n.border);
-              return (0, J.ge)({
-                borderBox: l,
+        }
+        var Qn = 0;
+        function Rs() {
+          Qn = 0;
+        }
+        function Bs() {
+          return (0, h.Kr)(function () {
+            return "" + Qn++;
+          }, []);
+        }
+        function Uu() {
+          Rs(), Nl();
+        }
+        function Os(e) {
+          var r = Bs(),
+            t = e.dragHandleUsageInstructions || lr.dragHandleUsageInstructions;
+          return D.createElement(Ya, null, function (n) {
+            return D.createElement(
+              Ps,
+              {
+                nonce: e.nonce,
+                contextId: r,
+                setCallbacks: n,
+                dragHandleUsageInstructions: t,
+                enableDefaultSensors: e.enableDefaultSensors,
+                sensors: e.sensors,
+                onBeforeCapture: e.onBeforeCapture,
+                onBeforeDragStart: e.onBeforeDragStart,
+                onDragStart: e.onDragStart,
+                onDragUpdate: e.onDragUpdate,
+                onDragEnd: e.onDragEnd,
+                stylesInsertionPoint: e.stylesInsertionPoint,
+              },
+              e.children,
+            );
+          });
+        }
+        var mt = function (r) {
+            return function (t) {
+              return r === t;
+            };
+          },
+          Ts = mt("scroll"),
+          Ns = mt("auto"),
+          Ms = mt("visible"),
+          Zn = function (r, t) {
+            return t(r.overflowX) || t(r.overflowY);
+          },
+          Ls = function (r, t) {
+            return t(r.overflowX) && t(r.overflowY);
+          },
+          _n = function (r) {
+            var t = r.ownerDocument.defaultView.getComputedStyle(r),
+              n = { overflowX: t.overflowX, overflowY: t.overflowY };
+            return Zn(n, Ts) || Zn(n, Ns);
+          },
+          Fs = function () {
+            return !1;
+            var r, t, n, a;
+          },
+          ea = function e(r) {
+            return r == null
+              ? null
+              : r === document.body
+                ? Fs()
+                  ? r
+                  : null
+                : r === document.documentElement
+                  ? null
+                  : _n(r)
+                    ? r
+                    : e(r.parentElement);
+          },
+          Hu = function (e) {
+            if (e) var r = ea(e.parentElement);
+          },
+          bt = function (e) {
+            return { x: e.scrollLeft, y: e.scrollTop };
+          },
+          Gs = function e(r) {
+            if (!r) return !1;
+            var t = r.ownerDocument.defaultView.getComputedStyle(r);
+            return t.position === "fixed" ? !0 : e(r.parentElement);
+          },
+          Ws = function (e) {
+            var r = ea(e),
+              t = Gs(e);
+            return { closestScrollable: r, isFixedOnPage: t };
+          },
+          ks = function (e) {
+            var r = e.descriptor,
+              t = e.isEnabled,
+              n = e.isCombineEnabled,
+              a = e.isFixedOnPage,
+              i = e.direction,
+              o = e.client,
+              l = e.page,
+              s = e.closest,
+              f = (function () {
+                if (!s) return null;
+                var p = s.scrollSize,
+                  v = s.client,
+                  g = xn({
+                    scrollHeight: p.scrollHeight,
+                    scrollWidth: p.scrollWidth,
+                    height: v.paddingBox.height,
+                    width: v.paddingBox.width,
+                  });
+                return {
+                  pageMarginBox: s.page.marginBox,
+                  frameClient: v,
+                  scrollSize: p,
+                  shouldClipSubject: s.shouldClipSubject,
+                  scroll: {
+                    initial: s.scroll,
+                    current: s.scroll,
+                    max: g,
+                    diff: { value: W, displacement: W },
+                  },
+                };
+              })(),
+              d = i === "vertical" ? Vr : Kt,
+              c = Ce({ page: l, withPlaceholder: null, axis: d, frame: f }),
+              u = {
+                descriptor: r,
+                isCombineEnabled: n,
+                isFixedOnPage: a,
+                axis: d,
+                isEnabled: t,
+                client: o,
+                page: l,
+                frame: f,
+                subject: c,
+              };
+            return u;
+          },
+          Us = function (r, t) {
+            var n = (0, M.YH)(r);
+            if (!t || r !== t) return n;
+            var a = n.paddingBox.top - t.scrollTop,
+              i = n.paddingBox.left - t.scrollLeft,
+              o = a + t.scrollHeight,
+              l = i + t.scrollWidth,
+              s = { top: a, right: l, bottom: o, left: i },
+              f = (0, M.fT)(s, n.border),
+              d = (0, M.ge)({
+                borderBox: f,
                 margin: n.margin,
                 border: n.border,
                 padding: n.padding,
               });
-            })(r, c),
-            d = (0, J.SQ)(s, i),
-            p = (function () {
-              if (!c) return null;
-              var e = (0, J.YH)(c),
-                r = {
-                  scrollHeight: c.scrollHeight,
-                  scrollWidth: c.scrollWidth,
-                };
-              return {
-                client: e,
-                page: (0, J.SQ)(e, i),
-                scroll: Ii(c),
-                scrollSize: r,
-                shouldClipSubject: u,
-              };
-            })(),
-            f = (function (e) {
-              var r = e.descriptor,
-                n = e.isEnabled,
-                t = e.isCombineEnabled,
-                i = e.isFixedOnPage,
-                o = e.direction,
-                a = e.client,
-                l = e.page,
-                u = e.closest,
-                c = (function () {
-                  if (!u) return null;
-                  var e = u.scrollSize,
-                    r = u.client,
-                    n = On({
-                      scrollHeight: e.scrollHeight,
-                      scrollWidth: e.scrollWidth,
-                      height: r.paddingBox.height,
-                      width: r.paddingBox.width,
-                    });
-                  return {
-                    pageMarginBox: u.page.marginBox,
-                    frameClient: r,
-                    scrollSize: e,
-                    shouldClipSubject: u.shouldClipSubject,
-                    scroll: {
-                      initial: u.scroll,
-                      current: u.scroll,
-                      max: n,
-                      diff: { value: ge, displacement: ge },
-                    },
+            return d;
+          },
+          Hs = function (e) {
+            var r = e.ref,
+              t = e.descriptor,
+              n = e.env,
+              a = e.windowScroll,
+              i = e.direction,
+              o = e.isDropDisabled,
+              l = e.isCombineEnabled,
+              s = e.shouldClipSubject,
+              f = n.closestScrollable,
+              d = Us(r, f),
+              c = (0, M.SQ)(d, a),
+              u = (function () {
+                if (!f) return null;
+                var v = (0, M.YH)(f),
+                  g = {
+                    scrollHeight: f.scrollHeight,
+                    scrollWidth: f.scrollWidth,
                   };
-                })(),
-                s = "vertical" === o ? Ke : ze;
-              return {
-                descriptor: r,
-                isCombineEnabled: t,
-                isFixedOnPage: i,
-                axis: s,
-                isEnabled: n,
-                client: a,
-                page: l,
-                frame: c,
-                subject: Ce({
-                  page: l,
-                  withPlaceholder: null,
-                  axis: s,
-                  frame: c,
-                }),
-              };
-            })({
-              descriptor: n,
-              isEnabled: !a,
-              isCombineEnabled: l,
-              isFixedOnPage: t.isFixedOnPage,
-              direction: o,
-              client: s,
-              page: d,
-              closest: p,
-            });
-          return f;
-        },
-        Ei = { passive: !1 },
-        wi = { passive: !0 },
-        Ai = function (e) {
-          return e.shouldPublishImmediately ? Ei : wi;
-        };
-      function Ci(e) {
-        var r = (0, t.useContext)(e);
-        return r || le(!1), r;
-      }
-      var Si = function (e) {
-        return (e && e.env.closestScrollable) || null;
-      };
-      function Pi(e) {
-        var r = (0, t.useRef)(null),
-          n = Ci(Tt),
-          i = Ot("droppable"),
-          o = n.registry,
-          a = n.marshal,
-          l = Mt(e),
-          u = (0, Y.Kr)(
-            function () {
-              return { id: e.droppableId, type: e.type, mode: e.mode };
-            },
-            [e.droppableId, e.mode, e.type],
-          ),
-          c = (0, t.useRef)(u),
-          s = (0, Y.Kr)(
-            function () {
-              return Z(function (e, n) {
-                r.current || le(!1);
-                var t = { x: e, y: n };
-                a.updateDroppableScroll(u.id, t);
+                return {
+                  client: v,
+                  page: (0, M.SQ)(v, a),
+                  scroll: bt(f),
+                  scrollSize: g,
+                  shouldClipSubject: s,
+                };
+              })(),
+              p = ks({
+                descriptor: t,
+                isEnabled: !o,
+                isCombineEnabled: l,
+                isFixedOnPage: n.isFixedOnPage,
+                direction: i,
+                client: d,
+                page: c,
+                closest: u,
               });
-            },
-            [u.id, a],
-          ),
-          d = (0, Y.hb)(function () {
-            var e = r.current;
-            return e && e.env.closestScrollable
-              ? Ii(e.env.closestScrollable)
-              : ge;
-          }, []),
-          p = (0, Y.hb)(
+            return p;
+          },
+          Vs = { passive: !1 },
+          qs = { passive: !0 },
+          ra = function (e) {
+            return e.shouldPublishImmediately ? Vs : qs;
+          };
+        function yr(e) {
+          var r = (0, D.useContext)(e);
+          return r || m(!1), r;
+        }
+        var Dr = function (r) {
+          return (r && r.env.closestScrollable) || null;
+        };
+        function $s(e) {
+          var r = (0, D.useRef)(null),
+            t = yr(gr),
+            n = ft("droppable"),
+            a = t.registry,
+            i = t.marshal,
+            o = pt(e),
+            l = (0, h.Kr)(
+              function () {
+                return { id: e.droppableId, type: e.type, mode: e.mode };
+              },
+              [e.droppableId, e.mode, e.type],
+            ),
+            s = (0, D.useRef)(l),
+            f = (0, h.Kr)(
+              function () {
+                return G(function (x, w) {
+                  r.current || m(!1);
+                  var E = { x, y: w };
+                  i.updateDroppableScroll(l.id, E);
+                });
+              },
+              [l.id, i],
+            ),
+            d = (0, h.hb)(function () {
+              var x = r.current;
+              return !x || !x.env.closestScrollable
+                ? W
+                : bt(x.env.closestScrollable);
+            }, []),
+            c = (0, h.hb)(
+              function () {
+                var x = d();
+                f(x.x, x.y);
+              },
+              [d, f],
+            ),
+            u = (0, h.Kr)(
+              function () {
+                return (0, Le.A)(c);
+              },
+              [c],
+            ),
+            p = (0, h.hb)(
+              function () {
+                var x = r.current,
+                  w = Dr(x);
+                (x && w) || m(!1);
+                var E = x.scrollOptions;
+                if (E.shouldPublishImmediately) {
+                  c();
+                  return;
+                }
+                u();
+              },
+              [u, c],
+            ),
+            v = (0, h.hb)(
+              function (x, w) {
+                r.current && m(!1);
+                var E = o.current,
+                  R = E.getDroppableRef();
+                R || m(!1);
+                var N = Ws(R),
+                  B = { ref: R, descriptor: l, env: N, scrollOptions: w };
+                r.current = B;
+                var T = Hs({
+                    ref: R,
+                    descriptor: l,
+                    env: N,
+                    windowScroll: x,
+                    direction: E.direction,
+                    isDropDisabled: E.isDropDisabled,
+                    isCombineEnabled: E.isCombineEnabled,
+                    shouldClipSubject: !E.ignoreContainerClipping,
+                  }),
+                  L = N.closestScrollable;
+                return (
+                  L &&
+                    (L.setAttribute(Ln.contextId, t.contextId),
+                    L.addEventListener("scroll", p, ra(B.scrollOptions))),
+                  T
+                );
+              },
+              [t.contextId, l, p, o],
+            ),
+            g = (0, h.hb)(function () {
+              var x = r.current,
+                w = Dr(x);
+              return (x && w) || m(!1), bt(w);
+            }, []),
+            b = (0, h.hb)(
+              function () {
+                var x = r.current;
+                x || m(!1);
+                var w = Dr(x);
+                (r.current = null),
+                  w &&
+                    (u.cancel(),
+                    w.removeAttribute(Ln.contextId),
+                    w.removeEventListener("scroll", p, ra(x.scrollOptions)));
+              },
+              [p, u],
+            ),
+            y = (0, h.hb)(function (x) {
+              var w = r.current;
+              w || m(!1);
+              var E = Dr(w);
+              E || m(!1), (E.scrollTop += x.y), (E.scrollLeft += x.x);
+            }, []),
+            I = (0, h.Kr)(
+              function () {
+                return {
+                  getDimensionAndWatchScroll: v,
+                  getScrollWhileDragging: g,
+                  dragStopped: b,
+                  scroll: y,
+                };
+              },
+              [b, v, g, y],
+            ),
+            S = (0, h.Kr)(
+              function () {
+                return { uniqueId: n, descriptor: l, callbacks: I };
+              },
+              [I, l, n],
+            );
+          z(
             function () {
-              var e = d();
-              s(e.x, e.y);
-            },
-            [d, s],
-          ),
-          f = (0, Y.Kr)(
-            function () {
-              return (0, ee.A)(p);
-            },
-            [p],
-          ),
-          g = (0, Y.hb)(
-            function () {
-              var e = r.current,
-                n = Si(e);
-              (e && n) || le(!1),
-                e.scrollOptions.shouldPublishImmediately ? p() : f();
-            },
-            [f, p],
-          ),
-          v = (0, Y.hb)(
-            function (e, t) {
-              r.current && le(!1);
-              var i = l.current,
-                o = i.getDroppableRef();
-              o || le(!1);
-              var a = (function (e) {
-                  return { closestScrollable: yi(e), isFixedOnPage: Di(e) };
-                })(o),
-                c = { ref: o, descriptor: u, env: a, scrollOptions: t };
-              r.current = c;
-              var s = xi({
-                  ref: o,
-                  descriptor: u,
-                  env: a,
-                  windowScroll: e,
-                  direction: i.direction,
-                  isDropDisabled: i.isDropDisabled,
-                  isCombineEnabled: i.isCombineEnabled,
-                  shouldClipSubject: !i.ignoreContainerClipping,
-                }),
-                d = a.closestScrollable;
               return (
-                d &&
-                  (d.setAttribute(gt.contextId, n.contextId),
-                  d.addEventListener("scroll", g, Ai(c.scrollOptions))),
-                s
+                (s.current = S.descriptor),
+                a.droppable.register(S),
+                function () {
+                  r.current && b(), a.droppable.unregister(S);
+                }
               );
             },
-            [n.contextId, u, g, l],
+            [I, l, b, S, i, a.droppable],
           ),
-          m = (0, Y.hb)(function () {
-            var e = r.current,
-              n = Si(e);
-            return (e && n) || le(!1), Ii(n);
-          }, []),
-          b = (0, Y.hb)(
-            function () {
-              var e = r.current;
-              e || le(!1);
-              var n = Si(e);
-              (r.current = null),
-                n &&
-                  (f.cancel(),
-                  n.removeAttribute(gt.contextId),
-                  n.removeEventListener("scroll", g, Ai(e.scrollOptions)));
-            },
-            [g, f],
-          ),
-          h = (0, Y.hb)(function (e) {
-            var n = r.current;
-            n || le(!1);
-            var t = Si(n);
-            t || le(!1), (t.scrollTop += e.y), (t.scrollLeft += e.x);
-          }, []),
-          y = (0, Y.Kr)(
-            function () {
-              return {
-                getDimensionAndWatchScroll: v,
-                getScrollWhileDragging: m,
-                dragStopped: b,
-                scroll: h,
-              };
-            },
-            [b, v, m, h],
-          ),
-          I = (0, Y.Kr)(
-            function () {
-              return { uniqueId: i, descriptor: u, callbacks: y };
-            },
-            [y, u, i],
-          );
-        bt(
-          function () {
-            return (
-              (c.current = I.descriptor),
-              o.droppable.register(I),
+            z(
               function () {
-                r.current && b(), o.droppable.unregister(I);
-              }
+                r.current &&
+                  i.updateDroppableIsEnabled(s.current.id, !e.isDropDisabled);
+              },
+              [e.isDropDisabled, i],
+            ),
+            z(
+              function () {
+                r.current &&
+                  i.updateDroppableIsCombineEnabled(
+                    s.current.id,
+                    e.isCombineEnabled,
+                  );
+              },
+              [e.isCombineEnabled, i],
             );
+        }
+        function ht() {}
+        var ta = { width: 0, height: 0, margin: ei },
+          zs = function (r) {
+            var t = r.isAnimatingOpenOnMount,
+              n = r.placeholder,
+              a = r.animate;
+            return t || a === "close"
+              ? ta
+              : {
+                  height: n.client.borderBox.height,
+                  width: n.client.borderBox.width,
+                  margin: n.client.margin,
+                };
           },
-          [y, u, b, I, a, o.droppable],
-        ),
-          bt(
-            function () {
-              r.current &&
-                a.updateDroppableIsEnabled(c.current.id, !e.isDropDisabled);
-            },
-            [e.isDropDisabled, a],
-          ),
-          bt(
-            function () {
-              r.current &&
-                a.updateDroppableIsCombineEnabled(
-                  c.current.id,
-                  e.isCombineEnabled,
-                );
-            },
-            [e.isCombineEnabled, a],
-          );
-      }
-      function Ni() {}
-      var Ri = {
-          width: 0,
-          height: 0,
-          margin: { top: 0, right: 0, bottom: 0, left: 0 },
-        },
-        Bi = function (e) {
-          var r = e.isAnimatingOpenOnMount,
-            n = e.placeholder,
-            t = e.animate,
-            i = (function (e) {
-              var r = e.isAnimatingOpenOnMount,
-                n = e.placeholder,
-                t = e.animate;
-              return r || "close" === t
-                ? Ri
-                : {
-                    height: n.client.borderBox.height,
-                    width: n.client.borderBox.width,
-                    margin: n.client.margin,
-                  };
-            })({ isAnimatingOpenOnMount: r, placeholder: n, animate: t });
-          return {
-            display: n.display,
-            boxSizing: "border-box",
-            width: i.width,
-            height: i.height,
-            marginTop: i.margin.top,
-            marginRight: i.margin.right,
-            marginBottom: i.margin.bottom,
-            marginLeft: i.margin.left,
-            flexShrink: "0",
-            flexGrow: "0",
-            pointerEvents: "none",
-            transition: "none" !== t ? dn.placeholder : null,
+          js = function (r) {
+            var t = r.isAnimatingOpenOnMount,
+              n = r.placeholder,
+              a = r.animate,
+              i = zs({ isAnimatingOpenOnMount: t, placeholder: n, animate: a });
+            return {
+              display: n.display,
+              boxSizing: "border-box",
+              width: i.width,
+              height: i.height,
+              marginTop: i.margin.top,
+              marginRight: i.margin.right,
+              marginBottom: i.margin.bottom,
+              marginLeft: i.margin.left,
+              flexShrink: "0",
+              flexGrow: "0",
+              pointerEvents: "none",
+              transition: a !== "none" ? je.placeholder : null,
+            };
           };
-        };
-      var Oi = t.memo(function (e) {
-          var r = (0, t.useRef)(null),
-            n = (0, Y.hb)(function () {
+        function Ks(e) {
+          var r = (0, D.useRef)(null),
+            t = (0, h.hb)(function () {
               r.current && (clearTimeout(r.current), (r.current = null));
             }, []),
-            i = e.animate,
-            o = e.onTransitionEnd,
-            a = e.onClose,
-            l = e.contextId,
-            u = (0, t.useState)("open" === e.animate),
-            c = u[0],
-            s = u[1];
-          (0, t.useEffect)(
+            n = e.animate,
+            a = e.onTransitionEnd,
+            i = e.onClose,
+            o = e.contextId,
+            l = (0, D.useState)(e.animate === "open"),
+            s = l[0],
+            f = l[1];
+          (0, D.useEffect)(
             function () {
-              return c
-                ? "open" !== i
-                  ? (n(), s(!1), Ni)
+              return s
+                ? n !== "open"
+                  ? (t(), f(!1), ht)
                   : r.current
-                    ? Ni
+                    ? ht
                     : ((r.current = setTimeout(function () {
-                        (r.current = null), s(!1);
+                        (r.current = null), f(!1);
                       })),
-                      n)
-                : Ni;
+                      t)
+                : ht;
             },
-            [i, c, n],
+            [n, s, t],
           );
-          var d = (0, Y.hb)(
-              function (e) {
-                "height" === e.propertyName && (o(), "close" === i && a());
+          var d = (0, h.hb)(
+              function (u) {
+                u.propertyName === "height" && (a(), n === "close" && i());
               },
-              [i, a, o],
+              [n, i, a],
             ),
-            p = Bi({
-              isAnimatingOpenOnMount: c,
+            c = js({
+              isAnimatingOpenOnMount: s,
               animate: e.animate,
               placeholder: e.placeholder,
             });
-          return t.createElement(e.placeholder.tagName, {
-            style: p,
-            "data-rbd-placeholder-context-id": l,
+          return D.createElement(e.placeholder.tagName, {
+            style: c,
+            "data-rbd-placeholder-context-id": o,
             onTransitionEnd: d,
             ref: e.innerRef,
           });
-        }),
-        Ti = t.createContext(null);
-      var Li = (function (e) {
-          function r() {
-            for (
-              var r, n = arguments.length, t = new Array(n), i = 0;
-              i < n;
-              i++
-            )
-              t[i] = arguments[i];
+        }
+        var Ys = D.memo(Ks),
+          yt = D.createContext(null);
+        function na(e) {
+          (e && Je(e)) || m(!1);
+        }
+        function Dt(e) {
+          return typeof e == "boolean";
+        }
+        function It(e, r) {
+          r.forEach(function (t) {
+            return t(e);
+          });
+        }
+        var Js = [
+            function (r) {
+              var t = r.props;
+              t.droppableId || m(!1), typeof t.droppableId != "string" && m(!1);
+            },
+            function (r) {
+              var t = r.props;
+              Dt(t.isDropDisabled) || m(!1),
+                Dt(t.isCombineEnabled) || m(!1),
+                Dt(t.ignoreContainerClipping) || m(!1);
+            },
+            function (r) {
+              var t = r.getDroppableRef;
+              na(t());
+            },
+          ],
+          Xs = [
+            function (r) {
+              var t = r.props,
+                n = r.getPlaceholderRef;
+              if (t.placeholder) var a = n();
+            },
+          ],
+          Qs = [
+            function (r) {
+              var t = r.props;
+              t.renderClone || m(!1);
+            },
+            function (r) {
+              var t = r.getPlaceholderRef;
+              t() && m(!1);
+            },
+          ];
+        function Zs(e) {
+          Qe(function () {
+            It(e, Js),
+              e.props.mode === "standard" && It(e, Xs),
+              e.props.mode === "virtual" && It(e, Qs);
+          });
+        }
+        var _s = (function (e) {
+            (0, de.A)(r, e);
+            function r() {
+              for (
+                var n, a = arguments.length, i = new Array(a), o = 0;
+                o < a;
+                o++
+              )
+                i[o] = arguments[o];
+              return (
+                (n = e.call.apply(e, [this].concat(i)) || this),
+                (n.state = {
+                  isVisible: !!n.props.on,
+                  data: n.props.on,
+                  animate:
+                    n.props.shouldAnimate && n.props.on ? "open" : "none",
+                }),
+                (n.onClose = function () {
+                  n.state.animate === "close" && n.setState({ isVisible: !1 });
+                }),
+                n
+              );
+            }
+            r.getDerivedStateFromProps = function (a, i) {
+              return a.shouldAnimate
+                ? a.on
+                  ? { isVisible: !0, data: a.on, animate: "open" }
+                  : i.isVisible
+                    ? { isVisible: !0, data: i.data, animate: "close" }
+                    : { isVisible: !1, animate: "close", data: null }
+                : { isVisible: !!a.on, data: a.on, animate: "none" };
+            };
+            var t = r.prototype;
             return (
-              ((r = e.call.apply(e, [this].concat(t)) || this).state = {
-                isVisible: Boolean(r.props.on),
-                data: r.props.on,
-                animate: r.props.shouldAnimate && r.props.on ? "open" : "none",
-              }),
-              (r.onClose = function () {
-                "close" === r.state.animate && r.setState({ isVisible: !1 });
+              (t.render = function () {
+                if (!this.state.isVisible) return null;
+                var a = {
+                  onClose: this.onClose,
+                  data: this.state.data,
+                  animate: this.state.animate,
+                };
+                return this.props.children(a);
               }),
               r
             );
-          }
-          return (
-            (0, i.A)(r, e),
-            (r.getDerivedStateFromProps = function (e, r) {
-              return e.shouldAnimate
-                ? e.on
-                  ? { isVisible: !0, data: e.on, animate: "open" }
-                  : r.isVisible
-                    ? { isVisible: !0, data: r.data, animate: "close" }
-                    : { isVisible: !1, animate: "close", data: null }
-                : { isVisible: Boolean(e.on), data: e.on, animate: "none" };
-            }),
-            (r.prototype.render = function () {
-              if (!this.state.isVisible) return null;
-              var e = {
-                onClose: this.onClose,
-                data: this.state.data,
-                animate: this.state.animate,
-              };
-              return this.props.children(e);
-            }),
-            r
-          );
-        })(t.PureComponent),
-        Gi = 5e3,
-        Mi = 4500,
-        _i = function (e, r) {
-          return r ? dn.drop(r.duration) : e ? dn.snap : dn.fluid;
-        },
-        Fi = function (e, r) {
-          return e ? (r ? un.drop : un.combining) : null;
-        };
-      function ki(e) {
-        return "DRAGGING" === e.type
-          ? ((t = (n = e).dimension.client),
-            (i = n.offset),
-            (o = n.combineWith),
-            (a = n.dropping),
-            (l = Boolean(o)),
-            (u = (function (e) {
-              return null != e.forceShouldAnimate
-                ? e.forceShouldAnimate
-                : "SNAP" === e.mode;
-            })(n)),
-            (c = Boolean(a)),
-            (s = c ? gn(i, l) : fn(i)),
-            {
+          })(D.PureComponent),
+          aa = { dragging: 5e3, dropAnimating: 4500 },
+          eu = function (r, t) {
+            return t ? je.drop(t.duration) : r ? je.snap : je.fluid;
+          },
+          ru = function (r, t) {
+            return r ? (t ? ze.opacity.drop : ze.opacity.combining) : null;
+          },
+          tu = function (r) {
+            return r.forceShouldAnimate != null
+              ? r.forceShouldAnimate
+              : r.mode === "SNAP";
+          };
+        function nu(e) {
+          var r = e.dimension,
+            t = r.client,
+            n = e.offset,
+            a = e.combineWith,
+            i = e.dropping,
+            o = !!a,
+            l = tu(e),
+            s = !!i,
+            f = s ? rt.drop(n, o) : rt.moveTo(n),
+            d = {
               position: "fixed",
               top: t.marginBox.top,
               left: t.marginBox.left,
               boxSizing: "border-box",
               width: t.borderBox.width,
               height: t.borderBox.height,
-              transition: _i(u, a),
-              transform: s,
-              opacity: Fi(l, c),
-              zIndex: c ? Mi : Gi,
+              transition: eu(l, i),
+              transform: f,
+              opacity: ru(o, s),
+              zIndex: s ? aa.dropAnimating : aa.dragging,
               pointerEvents: "none",
-            })
-          : {
-              transform: fn((r = e).offset),
-              transition: r.shouldAnimateDisplacement ? null : "none",
             };
-        var r, n, t, i, o, a, l, u, c, s;
-      }
-      function Wi(e) {
-        var r = Ot("draggable"),
-          n = e.descriptor,
-          i = e.registry,
-          o = e.getDraggableRef,
-          a = e.canDragInteractiveElements,
-          l = e.shouldRespectForcePress,
-          u = e.isEnabled,
-          c = (0, Y.Kr)(
-            function () {
-              return {
-                canDragInteractiveElements: a,
-                shouldRespectForcePress: l,
-                isEnabled: u,
-              };
+          return d;
+        }
+        function au(e) {
+          return {
+            transform: rt.moveTo(e.offset),
+            transition: e.shouldAnimateDisplacement ? null : "none",
+          };
+        }
+        function iu(e) {
+          return e.type === "DRAGGING" ? nu(e) : au(e);
+        }
+        function ou(e, r, t) {
+          t === void 0 && (t = W);
+          var n = window.getComputedStyle(r),
+            a = r.getBoundingClientRect(),
+            i = (0, M.a)(a, n),
+            o = (0, M.SQ)(i, t),
+            l = {
+              client: i,
+              tagName: r.tagName.toLowerCase(),
+              display: n.display,
             },
-            [a, u, l],
-          ),
-          s = (0, Y.hb)(
-            function (e) {
-              var r = o();
+            s = { x: i.marginBox.width, y: i.marginBox.height },
+            f = {
+              descriptor: e,
+              placeholder: l,
+              displaceBy: s,
+              client: i,
+              page: o,
+            };
+          return f;
+        }
+        function lu(e) {
+          var r = ft("draggable"),
+            t = e.descriptor,
+            n = e.registry,
+            a = e.getDraggableRef,
+            i = e.canDragInteractiveElements,
+            o = e.shouldRespectForcePress,
+            l = e.isEnabled,
+            s = (0, h.Kr)(
+              function () {
+                return {
+                  canDragInteractiveElements: i,
+                  shouldRespectForcePress: o,
+                  isEnabled: l,
+                };
+              },
+              [i, l, o],
+            ),
+            f = (0, h.hb)(
+              function (p) {
+                var v = a();
+                return v || m(!1), ou(t, v, p);
+              },
+              [t, a],
+            ),
+            d = (0, h.Kr)(
+              function () {
+                return {
+                  uniqueId: r,
+                  descriptor: t,
+                  options: s,
+                  getDimension: f,
+                };
+              },
+              [t, f, s, r],
+            ),
+            c = (0, D.useRef)(d),
+            u = (0, D.useRef)(!0);
+          z(
+            function () {
               return (
-                r || le(!1),
-                (function (e, r, n) {
-                  void 0 === n && (n = ge);
-                  var t = window.getComputedStyle(r),
-                    i = r.getBoundingClientRect(),
-                    o = (0, J.a)(i, t),
-                    a = (0, J.SQ)(o, n);
-                  return {
-                    descriptor: e,
-                    placeholder: {
-                      client: o,
-                      tagName: r.tagName.toLowerCase(),
-                      display: t.display,
-                    },
-                    displaceBy: { x: o.marginBox.width, y: o.marginBox.height },
-                    client: o,
-                    page: a,
-                  };
-                })(n, r, e)
+                n.draggable.register(c.current),
+                function () {
+                  return n.draggable.unregister(c.current);
+                }
               );
             },
-            [n, o],
+            [n.draggable],
           ),
-          d = (0, Y.Kr)(
-            function () {
-              return {
-                uniqueId: r,
-                descriptor: n,
-                options: c,
-                getDimension: s,
-              };
-            },
-            [n, s, c, r],
-          ),
-          p = (0, t.useRef)(d),
-          f = (0, t.useRef)(!0);
-        bt(
-          function () {
-            return (
-              i.draggable.register(p.current),
+            z(
               function () {
-                return i.draggable.unregister(p.current);
-              }
+                if (u.current) {
+                  u.current = !1;
+                  return;
+                }
+                var p = c.current;
+                (c.current = d), n.draggable.update(d, p);
+              },
+              [d, n.draggable],
             );
-          },
-          [i.draggable],
-        ),
-          bt(
-            function () {
-              if (f.current) f.current = !1;
-              else {
-                var e = p.current;
-                (p.current = d), i.draggable.update(d, e);
-              }
-            },
-            [d, i.draggable],
-          );
-      }
-      function Ui(e, r, n) {
-        Gt();
-      }
-      function Hi(e) {
-        e.preventDefault();
-      }
-      var ji = function (e, r) {
-          return e === r;
-        },
-        qi = function (e) {
-          var r = e.combine,
-            n = e.destination;
-          return n ? n.droppableId : r ? r.droppableId : null;
-        };
-      function Vi(e) {
-        return {
-          isDragging: !1,
-          isDropAnimating: !1,
-          isClone: !1,
-          dropAnimation: null,
-          mode: null,
-          draggingOver: null,
-          combineTargetFor: e,
-          combineWith: null,
-        };
-      }
-      var Ki = {
-        mapped: {
-          type: "SECONDARY",
-          offset: ge,
-          combineTargetFor: null,
-          shouldAnimateDisplacement: !0,
-          snapshot: Vi(null),
-        },
-      };
-      var zi = V(
-        function () {
-          var e,
-            r,
-            n,
-            t =
-              ((e = Z(function (e, r) {
-                return { x: e, y: r };
-              })),
-              (r = Z(function (e, r, n, t, i) {
+        }
+        function su(e, r, t) {
+          Qe(function () {
+            function n(i) {
+              return "Draggable[id: " + i + "]: ";
+            }
+            var a = e.draggableId;
+            a || m(!1),
+              typeof a != "string" && m(!1),
+              ai(e.index) || m(!1),
+              e.mapped.type !== "DRAGGING" &&
+                (na(t()), e.isEnabled && (kn(r, a, t()) || m(!1)));
+          });
+        }
+        function uu(e) {}
+        function cu(e) {
+          e.preventDefault();
+        }
+        function du(e) {
+          var r = (0, D.useRef)(null),
+            t = (0, h.hb)(function (B) {
+              r.current = B;
+            }, []),
+            n = (0, h.hb)(function () {
+              return r.current;
+            }, []),
+            a = yr(gr),
+            i = a.contextId,
+            o = a.dragHandleUsageInstructionsId,
+            l = a.registry,
+            s = yr(yt),
+            f = s.type,
+            d = s.droppableId,
+            c = (0, h.Kr)(
+              function () {
                 return {
-                  isDragging: !0,
-                  isClone: r,
-                  isDropAnimating: Boolean(i),
-                  dropAnimation: i,
-                  mode: e,
-                  draggingOver: n,
-                  combineWith: t,
-                  combineTargetFor: null,
+                  id: e.draggableId,
+                  index: e.index,
+                  type: f,
+                  droppableId: d,
                 };
-              })),
-              (n = Z(function (e, n, t, i, o, a, l) {
+              },
+              [e.draggableId, e.index, f, d],
+            ),
+            u = e.children,
+            p = e.draggableId,
+            v = e.isEnabled,
+            g = e.shouldRespectForcePress,
+            b = e.canDragInteractiveElements,
+            y = e.isClone,
+            I = e.mapped,
+            S = e.dropAnimationFinished;
+          if ((su(e, i, n), uu(y), !y)) {
+            var x = (0, h.Kr)(
+              function () {
+                return {
+                  descriptor: c,
+                  registry: l,
+                  getDraggableRef: n,
+                  canDragInteractiveElements: b,
+                  shouldRespectForcePress: g,
+                  isEnabled: v,
+                };
+              },
+              [c, l, n, b, g, v],
+            );
+            lu(x);
+          }
+          var w = (0, h.Kr)(
+              function () {
+                return v
+                  ? {
+                      tabIndex: 0,
+                      role: "button",
+                      "aria-describedby": o,
+                      "data-rbd-drag-handle-draggable-id": p,
+                      "data-rbd-drag-handle-context-id": i,
+                      draggable: !1,
+                      onDragStart: cu,
+                    }
+                  : null;
+              },
+              [i, o, p, v],
+            ),
+            E = (0, h.hb)(
+              function (B) {
+                I.type === "DRAGGING" &&
+                  I.dropping &&
+                  B.propertyName === "transform" &&
+                  S();
+              },
+              [S, I],
+            ),
+            R = (0, h.Kr)(
+              function () {
+                var B = iu(I),
+                  T = I.type === "DRAGGING" && I.dropping ? E : null,
+                  L = {
+                    innerRef: t,
+                    draggableProps: {
+                      "data-rbd-draggable-context-id": i,
+                      "data-rbd-draggable-id": p,
+                      style: B,
+                      onTransitionEnd: T,
+                    },
+                    dragHandleProps: w,
+                  };
+                return L;
+              },
+              [i, w, p, I, E, t],
+            ),
+            N = (0, h.Kr)(
+              function () {
+                return {
+                  draggableId: c.id,
+                  type: c.type,
+                  source: { index: c.index, droppableId: c.droppableId },
+                };
+              },
+              [c.droppableId, c.id, c.index, c.type],
+            );
+          return u(R, I.snapshot, N);
+        }
+        var ia = function (e, r) {
+            return e === r;
+          },
+          oa = function (e) {
+            var r = e.combine,
+              t = e.destination;
+            return t ? t.droppableId : r ? r.droppableId : null;
+          },
+          fu = function (r) {
+            return r.combine ? r.combine.draggableId : null;
+          },
+          pu = function (r) {
+            return r.at && r.at.type === "COMBINE"
+              ? r.at.combine.draggableId
+              : null;
+          };
+        function vu() {
+          var e = G(function (a, i) {
+              return { x: a, y: i };
+            }),
+            r = G(function (a, i, o, l, s) {
+              return {
+                isDragging: !0,
+                isClone: i,
+                isDropAnimating: !!s,
+                dropAnimation: s,
+                mode: a,
+                draggingOver: o,
+                combineWith: l,
+                combineTargetFor: null,
+              };
+            }),
+            t = G(function (a, i, o, l, s, f, d) {
+              return {
+                mapped: {
+                  type: "DRAGGING",
+                  dropping: null,
+                  draggingOver: s,
+                  combineWith: f,
+                  mode: i,
+                  offset: a,
+                  dimension: o,
+                  forceShouldAnimate: d,
+                  snapshot: r(i, l, s, f, null),
+                },
+              };
+            }),
+            n = function (i, o) {
+              if (i.isDragging) {
+                if (i.critical.draggable.id !== o.draggableId) return null;
+                var l = i.current.client.offset,
+                  s = i.dimensions.draggables[o.draggableId],
+                  f = $(i.impact),
+                  d = pu(i.impact),
+                  c = i.forceShouldAnimate;
+                return t(e(l.x, l.y), i.movementMode, s, o.isClone, f, d, c);
+              }
+              if (i.phase === "DROP_ANIMATING") {
+                var u = i.completed;
+                if (u.result.draggableId !== o.draggableId) return null;
+                var p = o.isClone,
+                  v = i.dimensions.draggables[o.draggableId],
+                  g = u.result,
+                  b = g.mode,
+                  y = oa(g),
+                  I = fu(g),
+                  S = i.dropDuration,
+                  x = {
+                    duration: S,
+                    curve: _r.drop,
+                    moveTo: i.newHomeClientOffset,
+                    opacity: I ? ze.opacity.drop : null,
+                    scale: I ? ze.scale.drop : null,
+                  };
                 return {
                   mapped: {
                     type: "DRAGGING",
-                    dropping: null,
-                    draggingOver: o,
-                    combineWith: a,
-                    mode: n,
-                    offset: e,
-                    dimension: t,
-                    forceShouldAnimate: l,
-                    snapshot: r(n, i, o, a, null),
+                    offset: i.newHomeClientOffset,
+                    dimension: v,
+                    dropping: x,
+                    draggingOver: y,
+                    combineWith: I,
+                    mode: b,
+                    forceShouldAnimate: null,
+                    snapshot: r(b, p, y, I, x),
                   },
                 };
-              })),
-              function (t, i) {
-                if (t.isDragging) {
-                  if (t.critical.draggable.id !== i.draggableId) return null;
-                  var o = t.current.client.offset,
-                    a = t.dimensions.draggables[i.draggableId],
-                    l = xr(t.impact),
-                    u =
-                      (s = t.impact).at && "COMBINE" === s.at.type
-                        ? s.at.combine.draggableId
-                        : null,
-                    c = t.forceShouldAnimate;
-                  return n(e(o.x, o.y), t.movementMode, a, i.isClone, l, u, c);
-                }
-                var s;
-                if ("DROP_ANIMATING" === t.phase) {
-                  var d = t.completed;
-                  if (d.result.draggableId !== i.draggableId) return null;
-                  var p = i.isClone,
-                    f = t.dimensions.draggables[i.draggableId],
-                    g = d.result,
-                    v = g.mode,
-                    m = qi(g),
-                    b = (function (e) {
-                      return e.combine ? e.combine.draggableId : null;
-                    })(g),
-                    h = {
-                      duration: t.dropDuration,
-                      curve: ln,
-                      moveTo: t.newHomeClientOffset,
-                      opacity: b ? un.drop : null,
-                      scale: b ? cn.drop : null,
-                    };
-                  return {
-                    mapped: {
-                      type: "DRAGGING",
-                      offset: t.newHomeClientOffset,
-                      dimension: f,
-                      dropping: h,
-                      draggingOver: m,
-                      combineWith: b,
-                      mode: v,
-                      forceShouldAnimate: null,
-                      snapshot: r(v, p, m, b, h),
-                    },
-                  };
-                }
-                return null;
-              }),
-            i = (function () {
-              var e = Z(function (e, r) {
-                  return { x: e, y: r };
-                }),
-                r = Z(Vi),
-                n = Z(function (e, n, t) {
-                  return (
-                    void 0 === n && (n = null),
-                    {
-                      mapped: {
-                        type: "SECONDARY",
-                        offset: e,
-                        combineTargetFor: n,
-                        shouldAnimateDisplacement: t,
-                        snapshot: r(n),
-                      },
-                    }
-                  );
-                }),
-                t = function (e) {
-                  return e ? n(ge, e, !0) : null;
-                },
-                i = function (r, i, o, a) {
-                  var l = o.displaced.visible[r],
-                    u = Boolean(a.inVirtualList && a.effected[r]),
-                    c = _e(o),
-                    s = c && c.draggableId === r ? i : null;
-                  if (!l) {
-                    if (!u) return t(s);
-                    if (o.displaced.invisible[r]) return null;
-                    var d = he(a.displacedBy.point),
-                      p = e(d.x, d.y);
-                    return n(p, s, !0);
-                  }
-                  if (u) return t(s);
-                  var f = o.displacedBy.point,
-                    g = e(f.x, f.y);
-                  return n(g, s, l.shouldAnimate);
-                };
-              return function (e, r) {
-                if (e.isDragging)
-                  return e.critical.draggable.id === r.draggableId
-                    ? null
-                    : i(
-                        r.draggableId,
-                        e.critical.draggable.id,
-                        e.impact,
-                        e.afterCritical,
-                      );
-                if ("DROP_ANIMATING" === e.phase) {
-                  var n = e.completed;
-                  return n.result.draggableId === r.draggableId
-                    ? null
-                    : i(
-                        r.draggableId,
-                        n.result.draggableId,
-                        n.impact,
-                        n.afterCritical,
-                      );
-                }
-                return null;
-              };
-            })();
-          return function (e, r) {
-            return t(e, r) || i(e, r) || Ki;
-          };
-        },
-        { dropAnimationFinished: an },
-        null,
-        { context: Ct, pure: !0, areStatePropsEqual: ji },
-      )(function (e) {
-        var r = (0, t.useRef)(null),
-          n = (0, Y.hb)(function (e) {
-            r.current = e;
-          }, []),
-          i = (0, Y.hb)(function () {
-            return r.current;
-          }, []),
-          o = Ci(Tt),
-          a = o.contextId,
-          l = o.dragHandleUsageInstructionsId,
-          u = o.registry,
-          c = Ci(Ti),
-          s = c.type,
-          d = c.droppableId,
-          p = (0, Y.Kr)(
-            function () {
-              return {
-                id: e.draggableId,
-                index: e.index,
-                type: s,
-                droppableId: d,
-              };
-            },
-            [e.draggableId, e.index, s, d],
-          ),
-          f = e.children,
-          g = e.draggableId,
-          v = e.isEnabled,
-          m = e.shouldRespectForcePress,
-          b = e.canDragInteractiveElements,
-          h = e.isClone,
-          y = e.mapped,
-          I = e.dropAnimationFinished;
-        Ui(),
-          Lt(),
-          h ||
-            Wi(
-              (0, Y.Kr)(
-                function () {
-                  return {
-                    descriptor: p,
-                    registry: u,
-                    getDraggableRef: i,
-                    canDragInteractiveElements: b,
-                    shouldRespectForcePress: m,
-                    isEnabled: v,
-                  };
-                },
-                [p, u, i, b, m, v],
-              ),
-            );
-        var D = (0, Y.Kr)(
-            function () {
-              return v
-                ? {
-                    tabIndex: 0,
-                    role: "button",
-                    "aria-describedby": l,
-                    "data-rbd-drag-handle-draggable-id": g,
-                    "data-rbd-drag-handle-context-id": a,
-                    draggable: !1,
-                    onDragStart: Hi,
-                  }
-                : null;
-            },
-            [a, l, g, v],
-          ),
-          x = (0, Y.hb)(
-            function (e) {
-              "DRAGGING" === y.type &&
-                y.dropping &&
-                "transform" === e.propertyName &&
-                I();
-            },
-            [I, y],
-          ),
-          E = (0, Y.Kr)(
-            function () {
-              var e = ki(y),
-                r = "DRAGGING" === y.type && y.dropping ? x : null;
-              return {
-                innerRef: n,
-                draggableProps: {
-                  "data-rbd-draggable-context-id": a,
-                  "data-rbd-draggable-id": g,
-                  style: e,
-                  onTransitionEnd: r,
-                },
-                dragHandleProps: D,
-              };
-            },
-            [a, D, g, y, x, n],
-          ),
-          w = (0, Y.Kr)(
-            function () {
-              return {
-                draggableId: p.id,
-                type: p.type,
-                source: { index: p.index, droppableId: p.droppableId },
-              };
-            },
-            [p.droppableId, p.id, p.index, p.type],
-          );
-        return f(E, y.snapshot, w);
-      });
-      function Yi(e) {
-        return Ci(Ti).isUsingCloneFor !== e.draggableId || e.isClone
-          ? t.createElement(zi, e)
-          : null;
-      }
-      function Ji(e) {
-        var r = "boolean" != typeof e.isDragDisabled || !e.isDragDisabled,
-          n = Boolean(e.disableInteractiveElementBlocking),
-          i = Boolean(e.shouldRespectForcePress);
-        return t.createElement(
-          Yi,
-          (0, o.A)({}, e, {
+              }
+              return null;
+            };
+          return n;
+        }
+        function la(e) {
+          return {
+            isDragging: !1,
+            isDropAnimating: !1,
             isClone: !1,
-            isEnabled: r,
-            canDragInteractiveElements: n,
-            shouldRespectForcePress: i,
-          }),
-        );
-      }
-      var Xi = function (e, r) {
-          return e === r.droppable.type;
-        },
-        $i = function (e, r) {
-          return r.draggables[e.draggable.id];
-        };
-      var Qi = {
-          mode: "standard",
-          type: "DEFAULT",
-          direction: "vertical",
-          isDropDisabled: !1,
-          isCombineEnabled: !1,
-          ignoreContainerClipping: !1,
-          renderClone: null,
-          getContainerForClone: function () {
-            return document.body || le(!1), document.body;
+            dropAnimation: null,
+            mode: null,
+            draggingOver: null,
+            combineTargetFor: e,
+            combineWith: null,
+          };
+        }
+        var gu = {
+          mapped: {
+            type: "SECONDARY",
+            offset: W,
+            combineTargetFor: null,
+            shouldAnimateDisplacement: !0,
+            snapshot: la(null),
           },
-        },
-        Zi = V(
-          function () {
-            var e = {
+        };
+        function mu() {
+          var e = G(function (o, l) {
+              return { x: o, y: l };
+            }),
+            r = G(la),
+            t = G(function (o, l, s) {
+              return (
+                l === void 0 && (l = null),
+                {
+                  mapped: {
+                    type: "SECONDARY",
+                    offset: o,
+                    combineTargetFor: l,
+                    shouldAnimateDisplacement: s,
+                    snapshot: r(l),
+                  },
+                }
+              );
+            }),
+            n = function (l) {
+              return l ? t(W, l, !0) : null;
+            },
+            a = function (l, s, f, d) {
+              var c = f.displaced.visible[l],
+                u = !!(d.inVirtualList && d.effected[l]),
+                p = cr(f),
+                v = p && p.draggableId === l ? s : null;
+              if (!c) {
+                if (!u) return n(v);
+                if (f.displaced.invisible[l]) return null;
+                var g = Se(d.displacedBy.point),
+                  b = e(g.x, g.y);
+                return t(b, v, !0);
+              }
+              if (u) return n(v);
+              var y = f.displacedBy.point,
+                I = e(y.x, y.y);
+              return t(I, v, c.shouldAnimate);
+            },
+            i = function (l, s) {
+              if (l.isDragging)
+                return l.critical.draggable.id === s.draggableId
+                  ? null
+                  : a(
+                      s.draggableId,
+                      l.critical.draggable.id,
+                      l.impact,
+                      l.afterCritical,
+                    );
+              if (l.phase === "DROP_ANIMATING") {
+                var f = l.completed;
+                return f.result.draggableId === s.draggableId
+                  ? null
+                  : a(
+                      s.draggableId,
+                      f.result.draggableId,
+                      f.impact,
+                      f.afterCritical,
+                    );
+              }
+              return null;
+            };
+          return i;
+        }
+        var bu = function () {
+            var r = vu(),
+              t = mu(),
+              n = function (i, o) {
+                return r(i, o) || t(i, o) || gu;
+              };
+            return n;
+          },
+          hu = { dropAnimationFinished: bn },
+          yu = Ot(bu, hu, null, {
+            context: dt,
+            pure: !0,
+            areStatePropsEqual: ia,
+          })(du);
+        function sa(e) {
+          var r = yr(yt),
+            t = r.isUsingCloneFor;
+          return t === e.draggableId && !e.isClone
+            ? null
+            : D.createElement(yu, e);
+        }
+        function Du(e) {
+          var r = typeof e.isDragDisabled == "boolean" ? !e.isDragDisabled : !0,
+            t = !!e.disableInteractiveElementBlocking,
+            n = !!e.shouldRespectForcePress;
+          return D.createElement(
+            sa,
+            (0, A.A)({}, e, {
+              isClone: !1,
+              isEnabled: r,
+              canDragInteractiveElements: t,
+              shouldRespectForcePress: n,
+            }),
+          );
+        }
+        function Iu(e) {
+          var r = (0, D.useContext)(gr);
+          r || m(!1);
+          var t = r.contextId,
+            n = r.isMovementAllowed,
+            a = (0, D.useRef)(null),
+            i = (0, D.useRef)(null),
+            o = e.children,
+            l = e.droppableId,
+            s = e.type,
+            f = e.mode,
+            d = e.direction,
+            c = e.ignoreContainerClipping,
+            u = e.isDropDisabled,
+            p = e.isCombineEnabled,
+            v = e.snapshot,
+            g = e.useClone,
+            b = e.updateViewportMaxScroll,
+            y = e.getContainerForClone,
+            I = (0, h.hb)(function () {
+              return a.current;
+            }, []),
+            S = (0, h.hb)(function (O) {
+              a.current = O;
+            }, []),
+            x = (0, h.hb)(function () {
+              return i.current;
+            }, []),
+            w = (0, h.hb)(function (O) {
+              i.current = O;
+            }, []);
+          Zs({ props: e, getDroppableRef: I, getPlaceholderRef: x });
+          var E = (0, h.hb)(
+            function () {
+              if (n()) {
+                var O;
+                b({
+                  maxScroll: Cn(
+                    ((O = a.current) == null
+                      ? void 0
+                      : O.ownerDocument.defaultView) || window,
+                  ),
+                });
+              }
+            },
+            [n, b],
+          );
+          $s({
+            droppableId: l,
+            type: s,
+            mode: f,
+            direction: d,
+            isDropDisabled: u,
+            isCombineEnabled: p,
+            ignoreContainerClipping: c,
+            getDroppableRef: I,
+          });
+          var R = D.createElement(
+              _s,
+              { on: e.placeholder, shouldAnimate: e.shouldAnimatePlaceholder },
+              function (O) {
+                var J = O.onClose,
+                  Q = O.data,
+                  j = O.animate;
+                return D.createElement(Ys, {
+                  placeholder: Q,
+                  onClose: J,
+                  innerRef: w,
+                  animate: j,
+                  contextId: t,
+                  onTransitionEnd: E,
+                });
+              },
+            ),
+            N = (0, h.Kr)(
+              function () {
+                return {
+                  innerRef: S,
+                  placeholder: R,
+                  droppableProps: {
+                    "data-rbd-droppable-id": l,
+                    "data-rbd-droppable-context-id": t,
+                  },
+                };
+              },
+              [t, l, R, S],
+            ),
+            B = g ? g.dragging.draggableId : null,
+            T = (0, h.Kr)(
+              function () {
+                return { droppableId: l, type: s, isUsingCloneFor: B };
+              },
+              [l, B, s],
+            );
+          function L() {
+            if (!g) return null;
+            var O = g.dragging,
+              J = g.render,
+              Q = D.createElement(
+                sa,
+                {
+                  draggableId: O.draggableId,
+                  index: O.source.index,
+                  isClone: !0,
+                  isEnabled: !0,
+                  shouldRespectForcePress: !1,
+                  canDragInteractiveElements: !0,
+                },
+                function (j, Z) {
+                  return J(j, Z, O);
+                },
+              );
+            return Tt.createPortal(Q, y());
+          }
+          return D.createElement(yt.Provider, { value: T }, o(N, v), L());
+        }
+        var xt = function (r, t) {
+            return r === t.droppable.type;
+          },
+          ua = function (r, t) {
+            return t.draggables[r.draggable.id];
+          },
+          xu = function () {
+            var r = {
                 placeholder: null,
                 shouldAnimatePlaceholder: !0,
                 snapshot: {
@@ -6197,284 +6924,261 @@
                 },
                 useClone: null,
               },
-              r = (0, o.A)({}, e, { shouldAnimatePlaceholder: !1 }),
-              n = Z(function (e) {
+              t = (0, A.A)({}, r, { shouldAnimatePlaceholder: !1 }),
+              n = G(function (o) {
                 return {
-                  draggableId: e.id,
-                  type: e.type,
-                  source: { index: e.index, droppableId: e.droppableId },
+                  draggableId: o.id,
+                  type: o.type,
+                  source: { index: o.index, droppableId: o.droppableId },
                 };
               }),
-              t = Z(function (t, i, o, a, l, u) {
-                var c = l.descriptor.id;
-                if (l.descriptor.droppableId === t) {
-                  var s = u ? { render: u, dragging: n(l.descriptor) } : null,
-                    d = {
-                      isDraggingOver: o,
-                      draggingOverWith: o ? c : null,
-                      draggingFromThisWith: c,
+              a = G(function (o, l, s, f, d, c) {
+                var u = d.descriptor.id,
+                  p = d.descriptor.droppableId === o;
+                if (p) {
+                  var v = c ? { render: c, dragging: n(d.descriptor) } : null,
+                    g = {
+                      isDraggingOver: s,
+                      draggingOverWith: s ? u : null,
+                      draggingFromThisWith: u,
                       isUsingPlaceholder: !0,
                     };
                   return {
-                    placeholder: l.placeholder,
+                    placeholder: d.placeholder,
                     shouldAnimatePlaceholder: !1,
-                    snapshot: d,
-                    useClone: s,
+                    snapshot: g,
+                    useClone: v,
                   };
                 }
-                if (!i) return r;
-                if (!a) return e;
-                var p = {
-                  isDraggingOver: o,
-                  draggingOverWith: c,
+                if (!l) return t;
+                if (!f) return r;
+                var b = {
+                  isDraggingOver: s,
+                  draggingOverWith: u,
                   draggingFromThisWith: null,
                   isUsingPlaceholder: !0,
                 };
                 return {
-                  placeholder: l.placeholder,
+                  placeholder: d.placeholder,
                   shouldAnimatePlaceholder: !0,
-                  snapshot: p,
+                  snapshot: b,
                   useClone: null,
                 };
-              });
-            return function (n, i) {
-              var o = i.droppableId,
-                a = i.type,
-                l = !i.isDropDisabled,
-                u = i.renderClone;
-              if (n.isDragging) {
-                var c = n.critical;
-                if (!Xi(a, c)) return r;
-                var s = $i(c, n.dimensions),
-                  d = xr(n.impact) === o;
-                return t(o, l, d, d, s, u);
-              }
-              if ("DROP_ANIMATING" === n.phase) {
-                var p = n.completed;
-                if (!Xi(a, p.critical)) return r;
-                var f = $i(p.critical, n.dimensions);
-                return t(o, l, qi(p.result) === o, xr(p.impact) === o, f, u);
-              }
-              if ("IDLE" === n.phase && n.completed && !n.shouldFlush) {
-                var g = n.completed;
-                if (!Xi(a, g.critical)) return r;
-                var v = xr(g.impact) === o,
-                  m = Boolean(g.impact.at && "COMBINE" === g.impact.at.type),
-                  b = g.critical.droppable.id === o;
-                return v ? (m ? e : r) : b ? e : r;
-              }
-              return r;
-            };
+              }),
+              i = function (l, s) {
+                var f = s.droppableId,
+                  d = s.type,
+                  c = !s.isDropDisabled,
+                  u = s.renderClone;
+                if (l.isDragging) {
+                  var p = l.critical;
+                  if (!xt(d, p)) return t;
+                  var v = ua(p, l.dimensions),
+                    g = $(l.impact) === f;
+                  return a(f, c, g, g, v, u);
+                }
+                if (l.phase === "DROP_ANIMATING") {
+                  var b = l.completed;
+                  if (!xt(d, b.critical)) return t;
+                  var y = ua(b.critical, l.dimensions);
+                  return a(f, c, oa(b.result) === f, $(b.impact) === f, y, u);
+                }
+                if (l.phase === "IDLE" && l.completed && !l.shouldFlush) {
+                  var I = l.completed;
+                  if (!xt(d, I.critical)) return t;
+                  var S = $(I.impact) === f,
+                    x = !!(I.impact.at && I.impact.at.type === "COMBINE"),
+                    w = I.critical.droppable.id === f;
+                  return S ? (x ? r : t) : w ? r : t;
+                }
+                return t;
+              };
+            return i;
           },
-          {
-            updateViewportMaxScroll: function (e) {
-              return { type: "UPDATE_VIEWPORT_MAX_SCROLL", payload: e };
-            },
+          Su = { updateViewportMaxScroll: go };
+        function Cu() {
+          return document.body || m(!1), document.body;
+        }
+        var wu = {
+            mode: "standard",
+            type: "DEFAULT",
+            direction: "vertical",
+            isDropDisabled: !1,
+            isCombineEnabled: !1,
+            ignoreContainerClipping: !1,
+            renderClone: null,
+            getContainerForClone: Cu,
           },
-          null,
-          { context: Ct, pure: !0, areStatePropsEqual: ji },
-        )(function (e) {
-          var r = (0, t.useContext)(Tt);
-          r || le(!1);
-          var n = r.contextId,
-            i = r.isMovementAllowed,
-            o = (0, t.useRef)(null),
-            a = (0, t.useRef)(null),
-            l = e.children,
-            u = e.droppableId,
-            c = e.type,
-            s = e.mode,
-            d = e.direction,
-            p = e.ignoreContainerClipping,
-            f = e.isDropDisabled,
-            g = e.isCombineEnabled,
-            v = e.snapshot,
-            m = e.useClone,
-            b = e.updateViewportMaxScroll,
-            h = e.getContainerForClone,
-            y = (0, Y.hb)(function () {
-              return o.current;
-            }, []),
-            I = (0, Y.hb)(function (e) {
-              o.current = e;
-            }, []),
-            D =
-              ((0, Y.hb)(function () {
-                return a.current;
-              }, []),
-              (0, Y.hb)(function (e) {
-                a.current = e;
-              }, []));
-          Gt();
-          var x = (0, Y.hb)(
-            function () {
-              var e;
-              i() &&
-                b({
-                  maxScroll: Ln(
-                    (null == (e = o.current)
-                      ? void 0
-                      : e.ownerDocument.defaultView) || window,
-                  ),
-                });
-            },
-            [i, b],
-          );
-          Pi({
-            droppableId: u,
-            type: c,
-            mode: s,
-            direction: d,
-            isDropDisabled: f,
-            isCombineEnabled: g,
-            ignoreContainerClipping: p,
-            getDroppableRef: y,
-          });
-          var E = t.createElement(
-              Li,
-              { on: e.placeholder, shouldAnimate: e.shouldAnimatePlaceholder },
-              function (e) {
-                var r = e.onClose,
-                  i = e.data,
-                  o = e.animate;
-                return t.createElement(Oi, {
-                  placeholder: i,
-                  onClose: r,
-                  innerRef: D,
-                  animate: o,
-                  contextId: n,
-                  onTransitionEnd: x,
-                });
-              },
-            ),
-            w = (0, Y.Kr)(
-              function () {
-                return {
-                  innerRef: I,
-                  placeholder: E,
-                  droppableProps: {
-                    "data-rbd-droppable-id": u,
-                    "data-rbd-droppable-context-id": n,
-                  },
-                };
-              },
-              [n, u, E, I],
-            ),
-            A = m ? m.dragging.draggableId : null,
-            C = (0, Y.Kr)(
-              function () {
-                return { droppableId: u, type: c, isUsingCloneFor: A };
-              },
-              [u, A, c],
-            );
-          return t.createElement(
-            Ti.Provider,
-            { value: C },
-            l(w, v),
-            (function () {
-              if (!m) return null;
-              var e = m.dragging,
-                r = m.render,
-                n = t.createElement(
-                  Yi,
-                  {
-                    draggableId: e.draggableId,
-                    index: e.source.index,
-                    isClone: !0,
-                    isEnabled: !0,
-                    shouldRespectForcePress: !1,
-                    canDragInteractiveElements: !0,
-                  },
-                  function (n, t) {
-                    return r(n, t, e);
-                  },
-                );
-              return z.createPortal(n, h());
-            })(),
-          );
-        });
-      Zi.defaultProps = Qi;
-    },
-    59671: (e, r) => {
-      var n = 60103,
-        t = 60106,
-        i = 60107,
-        o = 60108,
-        a = 60114,
-        l = 60109,
-        u = 60110,
-        c = 60112,
-        s = 60113,
-        d = 60120,
-        p = 60115,
-        f = 60116,
-        g = 60121,
-        v = 60122,
-        m = 60117,
-        b = 60129,
-        h = 60131;
-      /** @license React v17.0.2
-       * react-is.production.min.js
-       *
-       * Copyright (c) Facebook, Inc. and its affiliates.
-       *
-       * This source code is licensed under the MIT license found in the
-       * LICENSE file in the root directory of this source tree.
-       */ if ("function" == typeof Symbol && Symbol.for) {
-        var y = Symbol.for;
-        (n = y("react.element")),
-          (t = y("react.portal")),
-          (i = y("react.fragment")),
-          (o = y("react.strict_mode")),
-          (a = y("react.profiler")),
-          (l = y("react.provider")),
-          (u = y("react.context")),
-          (c = y("react.forward_ref")),
-          (s = y("react.suspense")),
-          (d = y("react.suspense_list")),
-          (p = y("react.memo")),
-          (f = y("react.lazy")),
-          (g = y("react.block")),
-          (v = y("react.server.block")),
-          (m = y("react.fundamental")),
-          (b = y("react.debug_trace_mode")),
-          (h = y("react.legacy_hidden"));
-      }
-      function I(e) {
-        if ("object" == typeof e && null !== e) {
-          var r = e.$$typeof;
-          switch (r) {
-            case n:
-              switch ((e = e.type)) {
-                case i:
-                case a:
-                case o:
-                case s:
-                case d:
-                  return e;
-                default:
-                  switch ((e = e && e.$$typeof)) {
-                    case u:
-                    case c:
-                    case f:
-                    case p:
-                    case l:
-                      return e;
-                    default:
-                      return r;
-                  }
-              }
-            case t:
-              return r;
+          ca = Ot(xu, Su, null, {
+            context: dt,
+            pure: !0,
+            areStatePropsEqual: ia,
+          })(Iu);
+        ca.defaultProps = wu;
+      },
+      59671: (Er, tr) => {
+        var P; /** @license React v17.0.2
+         * react-is.production.min.js
+         *
+         * Copyright (c) Facebook, Inc. and its affiliates.
+         *
+         * This source code is licensed under the MIT license found in the
+         * LICENSE file in the root directory of this source tree.
+         */
+        var D = 60103,
+          de = 60106,
+          A = 60107,
+          X = 60108,
+          te = 60114,
+          xe = 60109,
+          fe = 60110,
+          ne = 60112,
+          pe = 60113,
+          Oe = 60120,
+          ve = 60115,
+          ae = 60116,
+          Te = 60121,
+          Ne = 60122,
+          nr = 60117,
+          ar = 60129,
+          ge = 60131;
+        if (typeof Symbol == "function" && Symbol.for) {
+          var F = Symbol.for;
+          (D = F("react.element")),
+            (de = F("react.portal")),
+            (A = F("react.fragment")),
+            (X = F("react.strict_mode")),
+            (te = F("react.profiler")),
+            (xe = F("react.provider")),
+            (fe = F("react.context")),
+            (ne = F("react.forward_ref")),
+            (pe = F("react.suspense")),
+            (Oe = F("react.suspense_list")),
+            (ve = F("react.memo")),
+            (ae = F("react.lazy")),
+            (Te = F("react.block")),
+            (Ne = F("react.server.block")),
+            (nr = F("react.fundamental")),
+            (ar = F("react.debug_trace_mode")),
+            (ge = F("react.legacy_hidden"));
+        }
+        function V(C) {
+          if (typeof C == "object" && C !== null) {
+            var Me = C.$$typeof;
+            switch (Me) {
+              case D:
+                switch (((C = C.type), C)) {
+                  case A:
+                  case te:
+                  case X:
+                  case pe:
+                  case Oe:
+                    return C;
+                  default:
+                    switch (((C = C && C.$$typeof), C)) {
+                      case fe:
+                      case ne:
+                      case ae:
+                      case ve:
+                      case xe:
+                        return C;
+                      default:
+                        return Me;
+                    }
+                }
+              case de:
+                return Me;
+            }
           }
         }
-      }
-      r.isContextConsumer = function (e) {
-        return I(e) === u;
-      };
+        var Pr = xe,
+          Rr = D,
+          Br = ne,
+          Or = A,
+          Tr = ae,
+          Et = ve,
+          Nr = de,
+          ir = te,
+          Mr = X,
+          Lr = pe;
+        (P = fe),
+          (P = Pr),
+          (P = Rr),
+          (P = Br),
+          (P = Or),
+          (P = Tr),
+          (P = Et),
+          (P = Nr),
+          (P = ir),
+          (P = Mr),
+          (P = Lr),
+          (P = function () {
+            return !1;
+          }),
+          (P = function () {
+            return !1;
+          }),
+          (tr.isContextConsumer = function (C) {
+            return V(C) === fe;
+          }),
+          (P = function (C) {
+            return V(C) === xe;
+          }),
+          (P = function (C) {
+            return typeof C == "object" && C !== null && C.$$typeof === D;
+          }),
+          (P = function (C) {
+            return V(C) === ne;
+          }),
+          (P = function (C) {
+            return V(C) === A;
+          }),
+          (P = function (C) {
+            return V(C) === ae;
+          }),
+          (P = function (C) {
+            return V(C) === ve;
+          }),
+          (P = function (C) {
+            return V(C) === de;
+          }),
+          (P = function (C) {
+            return V(C) === te;
+          }),
+          (P = function (C) {
+            return V(C) === X;
+          }),
+          (P = function (C) {
+            return V(C) === pe;
+          }),
+          (P = function (C) {
+            return (
+              typeof C == "string" ||
+              typeof C == "function" ||
+              C === A ||
+              C === te ||
+              C === ar ||
+              C === X ||
+              C === pe ||
+              C === Oe ||
+              C === ge ||
+              (typeof C == "object" &&
+                C !== null &&
+                (C.$$typeof === ae ||
+                  C.$$typeof === ve ||
+                  C.$$typeof === xe ||
+                  C.$$typeof === fe ||
+                  C.$$typeof === ne ||
+                  C.$$typeof === nr ||
+                  C.$$typeof === Te ||
+                  C[0] === Ne))
+            );
+          }),
+          (P = V);
+      },
+      44019: (Er, tr, P) => {
+        Er.exports = P(59671);
+      },
     },
-    44019: (e, r, n) => {
-      e.exports = n(59671);
-    },
-  },
-]);
+  ]);
+})();

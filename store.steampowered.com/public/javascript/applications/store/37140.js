@@ -1,11 +1,13 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 "use strict";
-(self.webpackChunkstore = self.webpackChunkstore || []).push([
-  [37140],
-  {
-    37140: (e) => {
-      e.exports = { dummy: "dummy" };
+(() => {
+  (self.webpackChunkstore = self.webpackChunkstore || []).push([
+    [37140],
+    {
+      37140: (e) => {
+        e.exports = { Clear: "Effacer" };
+      },
     },
-  },
-]);
+  ]);
+})();

@@ -281,34 +281,6 @@ html.responsive
   padding: 14px;
   box-sizing: border-box;
 }
-._3ICxVDu3-Bkx9aqyLehGGP .fRZmXDVszenGo5WnHprTJ {
-  text-align: left;
-  font-size: 17px;
-  color: hsla(0, 0%, 100%, 0.6392156863);
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-.BasicUI ._3ICxVDu3-Bkx9aqyLehGGP .fRZmXDVszenGo5WnHprTJ {
-  font-size: 12px;
-  font-weight: 400;
-}
-._3ICxVDu3-Bkx9aqyLehGGP ._3ceduHPK-lBiZ5fsmCstLP {
-  text-align: left;
-  font-size: 28px;
-  color: #fff;
-  font-weight: 600;
-  margin-bottom: 6px;
-  line-height: 1.2;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-.BasicUI ._3ICxVDu3-Bkx9aqyLehGGP ._3ceduHPK-lBiZ5fsmCstLP {
-  font-size: 16px;
-  font-weight: 400;
-}
 ._3ICxVDu3-Bkx9aqyLehGGP .zDfA0bzAjCUkfaQx_KvS7 {
   cursor: pointer;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.6666666667);
@@ -647,6 +619,11 @@ A:active {
   transition-duration: 0.25s;
   transition-timing-function: ease-out;
 }
+@media screen and (min-height: 541px) {
+  .BasicUI ._3R5wv6ya3QU6VH7qq2819z:not(._1M-oJo6Qwi_taE9-LcUQXw) img {
+    width: 400px;
+  }
+}
 ._3R5wv6ya3QU6VH7qq2819z video {
   width: 100%;
   height: 100%;
@@ -661,6 +638,42 @@ A:active {
 ._1YhdlZrF81fOxpD5J2tD7o img {
   height: 100%;
   width: 100%;
+}
+._1kBtSqsFkkixOn9MlYuuTa {
+  text-align: left;
+  font-size: 17px;
+  color: hsla(0, 0%, 100%, 0.6392156863);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.BasicUI ._1kBtSqsFkkixOn9MlYuuTa {
+  font-size: 12px;
+  font-weight: 400;
+}
+._2WtqvOJO09bKKgVvJYV_7q {
+  text-align: left;
+  font-size: 28px;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 6px;
+  line-height: 1.2;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.BasicUI ._2WtqvOJO09bKKgVvJYV_7q {
+  font-size: 16px;
+  font-weight: 400;
+}
+._2WtqvOJO09bKKgVvJYV_7q.M0i1HNwFwWUb2fshnV5cu {
+  font-size: 20px;
+  -webkit-line-clamp: 3;
+}
+.BasicUI ._2WtqvOJO09bKKgVvJYV_7q.M0i1HNwFwWUb2fshnV5cu {
+  font-size: 16px;
+  -webkit-line-clamp: 2;
 }
 ._6Tfttc004NhLDjbTDS9PC {
   display: flex;

@@ -1,2123 +1,2131 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-(self.webpackChunkstore = self.webpackChunkstore || []).push([
-  [11095],
-  {
-    33645: (e) => {
-      e.exports = {
-        Bold: "_3cln317VYhwhE1fSeMCG48",
-        Italic: "_3TPGDj4kc0QGKvO8FJmGz8",
-        Paragraph: "_3lnqGBzYap-Z2T81XBiBUU",
-        TemplateMediaTitle: "_DE_6XhnSqABczbJ55rNJ",
-        Question: "_2Hj1tfDjpLvBVTHTqAVcYB",
-        Answer: "syKgzmlrcUIJHIBfWsn4h",
-        Header1: "_2LYsFAwy8wdRJQTNJOUcsT",
-        Header2: "_6-VR2WCBCDupCcUN5INQM",
-        Header3: "_1sGnlGwCeaGUp63h4Lx-pU",
-        Header4: "_3VHY5vmO07MFpoOgTB9eOi",
-        Header5: "_1Vk-9-C_y-lBA5ucPl6t8X",
-        CenterSpan: "zCnp-VELUMybbfxOD-ze9",
-        SmallText: "WBzrd438Bd8Z3J-j_iglW",
-        Underline: "GrhFWtBdrSZP611s1UqqT",
-        Strike: "_3pK7sh9FYdigMXxcUVI4DY",
-        Spoiler: "_3kRr4bh8twnlt_7wcEFZr3",
-        Revealed: "_3g1-8c9NBcNDwW4-6x1pM6",
-        SpoilerText: "_3r66KOH_Vckmfps3XUOVrY",
-        DisabledMouseEvents: "_1O62-3Y03GsnA0709QyJ_O",
-        BlockQuote: "_3MQ0Cuf_h-nZ81xIubg8rh",
-        QuoteAuthor: "_1MzmaZcQPMRfrTHs3k0fIZ",
-        PullQuote: "_2kA0eAmv8ifh0zphoq4ntM",
-        Code: "_2ODaX8lO7DKLKke76c2Wya",
-        CodeBlock: "_1I3OP84ayrCIMuBrCrkosi",
-        List: "_3Y-LRoi5aeZ9-3ujWjXuG3",
-        OrderedList: "DojPxwyYpx3hwuPIaJPCq",
-        ListItem: "_1iXxYKOlzzXiVr02E7n2Fe",
-        HR: "-xPK0REpludHjRG8xQfih",
-        Table: "_2CAsiFd9UHbUOqzd0e7ioe",
-        NoBorder: "_1rO4D9vLxJRWz9sW4-ahSY",
-        TableRow: "_3FJk0y6E6I8nSYfCIqGP8",
-        TableCell: "_3rLIt0O8F7iG6B2RmC3cYa",
-        EqualCells: "_1CtoyG6UPAlYp7PCGLXx8L",
-        ExpandSectionBlock: "_2cmZMzZlRrszDBF97Di0cD",
-        ExpandSectionHeader: "uAvfe31kBh5TZrse069d1",
-        EmbedArrow: "_3tVf4GSoWxEOZrxL_PQ4iA",
-        ExpandSectionBody: "_33CTl_a7XYxFIng-fm4A5K",
-        ExpandSection_WithTitle: "_1dfVJUq9KmDOuhyOZ7lcXv",
-        LinkButton: "_3TN0uESBGJ-kUDPWWX2YWz",
-        Image: "_3K0NuxYUYncdQ-cNK7udMn",
-        Image_Inline: "XEMe7ReBSARw5XHcLR6kF",
-        PreservedUnsupportedTag: "_3YMzBRWJTOo7eai1uFGV7i",
-        Tag: "_3SEDw4GZynd3ZmTQWlyOcS",
-        CalendarEventContainer: "S-ElBHomDkV0L3K4XChxt",
-        CalendarEventLink: "_106tp5gLWBvoekGEC8HXQ",
-      };
-    },
-    11748: (e) => {
-      e.exports = {
-        DynamicLinkBox: "_3OFDUxRty2ooEGGBg8vLNM",
-        DynamicLink_Preview: "_4x92ciMecfHsd6LXEp3zX",
-        DynamicLink_Author: "_2CrHQnyBFUGqFf-6TbIsUA",
-        DynamicLink_Description: "_1iv64lWG6UxhSX400UsU1S",
-        DynamicLink_YouTubeEmbed: "_3Jd9PKMuBGuSbDBCsV03Oo",
-        DynamicLink_StoreWidget: "uvn7ESAm1Jwm-SOwZmBWO",
-        DynamicLink_Content: "_29vvBvtM17Ec_19L9VJZdk",
-        DynamicLink_Name: "_25KAQjQwrv2EL8tnlLeTB7",
-        DynamicLink_YoutubeViews: "_3ZgvwxMMqbe_8wVfRiQ9kq",
-        Dynamiclink_Content: "_3UUlLNsS9oZt2zNHM5T76z",
-        DynamicLink_URL: "_9135FDWNKXjIolFAo7Gub",
-        DynamicLink_AuthorName: "_6R7Q24Jlkhs_t0fYUHxQx",
-        DynamicLink_Date: "_15wEuEj-SyCZ4J4hJqtmgD",
-      };
-    },
-    31587: (e) => {
-      e.exports = {
-        PreviewYouTubeVideo: "uT9FPw-RIxscziWGUKvsY",
-        sizeThumb: "_34JfgvTZH0JwSWKnwpT5tf",
-        sizeFull: "_2i-wrmaduZQDwFtlSpRG5b",
-        PlaceholderImg: "wJ2r7A6UK2WbDVoNBgd36",
-        floatLeft: "_3uqwDPu50ujydI4AiMemeN",
-        floatRight: "_29hzTH-jljX8p2qXboZbXW",
-      };
-    },
-    42060: (e) => {
-      e.exports = {
-        NewEmoticonIndicator: "_5BtHMjT9usALaSWHGugdV",
-        NewEmoticonCircle: "u5Kx6dkUppvb-1qV4IIuy",
-        EmoticonSelector: "_21dGPKyxoQJmk8T757A5tl",
-        emoticon: "_1ZQW1wV5cNj3sDpibfbUqs",
-        large: "_20l1z3ShpHQ9njRDYgy1I5",
-        EmoticonSelector_Emoticons: "_1zMG_TAAO7uJ9DZvsPLfay",
-        EmoticonSelector_Separator: "_2ETbIGwtl6SLfkb48DDgvG",
-        EmoticonSelector_SeparatorBackground: "_3vIdbqkcpvxxyyRioKoQkz",
-        EmoticonSelector_Controls: "_2ncH4xow85UXkBM0hcrY8l",
-        EmoticonSelector_Item: "iSEjD9v1iZNJNbGHtDLZx",
-        EmoticonSelector_Item_New: "_1C2S6Gne45ErVlr3yX0YuG",
-        EffectHeading: "_1G4cTIWNmmp8hn-0UODGqo",
-        StickerHeading: "_2o2L-YGgH5cNuwJW9nU9dm",
-        GetFestive: "EOLiaNBZK-eUBTeiD-P4c",
-        TopDivider: "xf7hAWPD4WwXxsyXYxFFo",
-        BottomDivider: "_1gjpUnY8RyS8HpizGQvyFI",
-        StickerButton: "_2fYj8pHe3bHHxWj4FucFvj",
-        EffectButton: "_22MJpsSm-Ur5FU5WpYQKzn",
-        EmoticonHover: "W_hPU2JmhTx3oUqDN9ADo",
-        Info: "_29D_0UxbftoceIAKZktndo",
-        Name: "_3zUR2KWg7TNWOQx2nDFyoh",
-        AppName: "_2JWWOJGZuX70xQcA2QaBg",
-        StickerHoverSticker: "_1HdRqbOgpBfEQzQ2py5nq5",
-        EffectHoverEffect: "_1GZ-ESK0dV6oJBDhsU3RiH",
-        PickerTab: "VrrpBsQE4GFseDy3cTw1Q",
-        Clock: "_16xcLj__xBHmc9xDYmADhW",
-        EmoticonItem: "P1aWuK_DhstDh-M08okCK",
-      };
-    },
-    3246: (e) => {
-      e.exports = {
-        SpeakerOuter: "_3rRqPJdGrYx9YMtQMciIFY",
-        Speaker: "_3F7-FkJu8-JstT7SouP8XJ",
-        SpeakerPopup: "_3y7kVhhGmtbSgbZdte0EuV",
-        SpeakerInfoOuter: "_1NC9nn23Pdd7FtZW6zM7he",
-        SpeakerInfoInner: "_1bMpEcCbkVkKo1Oc02WFoJ",
-        SpeakerTitle: "_2Vo0lUG19xIopljkxhtSod",
-        SpeakerBio: "_2yP7s2N28D9PFHs9yUr3jD",
-        SpeakerHover: "_16UyHpAXG98qQsfN8mBk3x",
-      };
-    },
-    42780: (e, t, n) => {
-      "use strict";
-      n.d(t, { K0: () => i, OJ: () => a, R8: () => s });
-      var r = n(81393),
-        o = n(90626);
-      class s {
-        reactNodes = [];
-        AppendText(e, t = !1) {
-          e.length &&
-            (t
-              ? this.reactNodes.push(
-                  o.createElement(
-                    "span",
-                    {
-                      "data-copytext": "",
-                      "data-copystyle": "merge-adjacent",
-                      "bbcode-text": e,
-                    },
-                    e,
-                  ),
-                )
-              : this.reactNodes.push(e));
-        }
-        AppendNode(e) {
-          this.reactNodes.push(e);
-        }
-        GetElements() {
-          return this.reactNodes;
-        }
-      }
-      class i {
-        m_decoratedAccumulator;
-        constructor(e) {
-          (0, r.wT)(e, "decorated accumulator cannot be null"),
-            (this.m_decoratedAccumulator = e);
-        }
-        AppendText(e, t = !1) {
-          this.m_decoratedAccumulator.AppendText(e, t);
-        }
-        AppendNode(e) {
-          this.m_decoratedAccumulator.AppendNode(e);
-        }
-        GetElements() {
-          return this.m_decoratedAccumulator.GetElements();
-        }
-      }
-      class a extends i {
-        constructor(e) {
-          super(e);
-        }
-        AppendText(e) {
-          let t = e;
-          const n = [];
-          for (let e = t.indexOf("\n"); -1 !== e; e = t.indexOf("\n"))
-            n.push(t.substr(0, e)),
-              n.push(o.createElement("br")),
-              (t = t.substr(e + 1));
-          t.length && n.push(t),
-            n.forEach((e) => {
-              super.AppendNode(e);
-            });
-        }
-      }
-    },
-    99376: (e, t, n) => {
-      "use strict";
-      n.d(t, { B: () => c });
-      var r = n(22837),
-        o = n(90626),
-        s = n(42780);
-      class i {
-        m_fnAccumulatorFactory;
-        m_dictComponents;
-        constructor(e, t) {
-          e instanceof Map
-            ? (this.m_dictComponents = e)
-            : (this.m_dictComponents = new Map(Object.entries(e))),
-            (this.m_fnAccumulatorFactory = t);
-        }
-        Parse(e, t, n = !0) {
-          const r = (function (e, t) {
-            const n = [];
-            let r = { type: 0, text: "" },
-              o = !1,
-              s = !1,
-              i = !1;
-            for (let c = 0; c < e.length; c++) {
-              const d = e[c];
-              switch (r.type) {
-                case 0:
-                  "[" == d
-                    ? ((r.type = 2), (s = !0))
-                    : ((r.type = 1), "\\" == d && t ? (o = !o) : (r.text += d));
-                  break;
-                case 2:
-                case 3:
-                  if ("/" == d && s) (r.type = 3), (r.text = ""), (s = !1);
-                  else if ("[" != d || o)
-                    if ("]" != d || o)
-                      "\\" == d && t
-                        ? ((r.text += d), (o = !o), (s = !1))
-                        : ((r.text += d), (o = !1), (s = !1));
-                    else {
-                      const e =
-                          2 == r.type &&
-                          "noparse" == r.text?.toLocaleLowerCase(),
-                        t =
-                          3 == r.type &&
-                          "noparse" == r.text?.toLocaleLowerCase();
-                      s || (i && !t)
-                        ? ((r = l(r)), (r.text += d))
-                        : e
-                          ? (i = !0)
-                          : t && (i = !1),
-                        (r = a(n, r)),
-                        (s = !1);
-                    }
-                  else (r = a(n, l(r), 2)), (s = !0);
-                  break;
-                case 1:
-                  "[" != d || o
-                    ? "\\" == d && t
-                      ? (o && (r.text += d), (o = !o))
-                      : ((r.text += d), (o = !1))
-                    : ((r = a(n, r, 2)), (s = !0));
-              }
-            }
-            0 != r.type &&
-              (2 == r.type || 3 == r.type
-                ? n.push(l(r))
-                : n.push({ type: r.type, text: r.text ?? "" }));
-            return n;
-          })(e || "", n);
-          return this.Parse_BuildElements(r, t);
-        }
-        Parse_BuildElements(e, t) {
-          let n = this.m_fnAccumulatorFactory(void 0);
-          const r = [],
-            o = () => (r.length < 1 ? void 0 : r[r.length - 1]),
-            s = this.m_dictComponents,
-            i = (e) => !(!e.tag || !s.get(e.tag)?.autocloses);
-          let a = !1,
-            l = !0;
-          const c = (e, r) => {
-            let o = r.text.toLowerCase();
-            if (e && e.node.tag === o && s.get(e.node.tag)) {
-              const r = s.get(e.node.tag),
-                o = {
-                  tagname: e.node.tag,
-                  args: e.node.args,
-                  rawargs: e.node.rawargs,
-                },
-                i = t(r.Constructor, o, ...n.GetElements());
-              (n = e.accumulator),
-                Array.isArray(i)
-                  ? i.forEach((e) => n.AppendNode(e))
-                  : n.AppendNode(i),
-                (a = !!r.skipFollowingNewline),
-                (l = e.bWrapTextForCopying);
-            } else if (e) {
-              const t = e.accumulator;
-              t.AppendText("[" + e.node.text + "]", !1),
-                n.GetElements().forEach((e) => t.AppendNode(e)),
-                t.AppendText("[/" + r.text + "]", !1),
-                (n = t),
-                (l = e.bWrapTextForCopying);
-            }
-          };
-          for (
-            e.forEach((e, t) => {
-              if (1 == e.type) {
-                const t = a ? e.text.replace(/^[\t\r ]*\n/g, "") : e.text;
-                n.AppendText(t, l), (a = !1);
-              } else if (2 == e.type) {
-                const t = s.get(e.tag);
-                if (t) {
-                  const i = o();
-                  if (void 0 !== i) {
-                    const t = s.get(i.node.tag);
-                    t &&
-                      t.autocloses &&
-                      e.tag === i.node.tag &&
-                      c(r.pop(), i.node);
-                  }
-                  r.push({ accumulator: n, node: e, bWrapTextForCopying: l }),
-                    (n = this.m_fnAccumulatorFactory(e)),
-                    (a = !!t.skipInternalNewline),
-                    (l = t.allowWrapTextForCopying ?? !1);
-                } else n.AppendText("[" + e.text + "]", 0 == r.length);
-              } else if (3 == e.type) {
-                let t = e.text.toLowerCase();
-                for (; o() && o().node.tag !== t && i(o().node); ) {
-                  const e = r.pop();
-                  c(e, e.node);
-                }
-                if (o()?.node.tag == t) {
-                  const t = r.pop();
-                  c(t, e);
-                } else n.AppendText("[/" + e.text + "]", 0 == r.length);
-              }
-            });
-            r.length > 0;
-          ) {
-            const e = r.pop();
-            c(e, e.node);
-          }
-          return n.GetElements();
-        }
-      }
-      function a(e, t, n = 0) {
-        const { type: r, text: o = "" } = t;
-        if (2 == r) {
-          let t = o.indexOf("=");
-          const n = o.indexOf(" ");
-          let s, i;
-          -1 != n && (-1 == t || n < t) && (t = n);
-          let a = "";
-          t > 0
-            ? ((s = o.substr(0, t).toLocaleLowerCase()),
-              (a = o.substr(t)),
-              (i = (function (e) {
-                if (!e || e.length < 1) return {};
-                const t = {};
-                let n = "",
-                  r = "",
-                  o = 0,
-                  s = 0;
-                "=" == e[0] && (o = 2);
-                let i = !1;
-                for (s++; s < e.length; s++) {
-                  const a = e[s];
-                  let l = !0,
-                    c = !1;
-                  switch (o) {
-                    case 0:
-                      if ("=" == a) return {};
-                      if (" " == a) continue;
-                      o = 1;
-                      break;
-                    case 1:
-                      ("=" != a && " " != a) ||
-                        i ||
-                        (" " == a ? ((o = 0), (c = !0)) : (o = 2), (l = !1));
-                      break;
-                    case 2:
-                      " " == a
-                        ? ((o = 0), (l = !1), (c = !0))
-                        : '"' == a
-                          ? ((o = 4), (l = !1))
-                          : (o = 3);
-                      break;
-                    case 3:
-                    case 4:
-                      ((" " == a && 4 != o && !i) ||
-                        ('"' == a && 4 == o && !i)) &&
-                        ((o = 0), (l = !1), (c = !0));
-                  }
-                  if (l)
-                    if ("\\" != a || i)
-                      if (((i = !1), 1 == o)) n += a;
-                      else {
-                        if (3 != o && 4 != o)
-                          throw new Error(
-                            "Not expecting to accumulate buffer in state " + o,
-                          );
-                        r += a;
-                      }
-                    else i = !0;
-                  c && ((t[n] = r), (n = ""), (r = ""));
-                }
-                0 != o && (t[n] = r);
-                return t;
-              })(a)))
-            : ((i = {}), (s = o.toLocaleLowerCase())),
-            e.push({ type: r, text: o, tag: s, args: i, rawargs: a });
-        } else 0 != r && e.push({ type: r, text: o });
-        return { type: n, text: "" };
-      }
-      function l(e) {
-        let t = "";
-        return (
-          3 == e.type ? (t = "[/") : 2 == e.type && (t = "["),
-          { type: 1, text: t + (e.text ?? "") }
-        );
-      }
-      class c extends i {
-        m_renderingLanguage;
-        constructor(e, t, n) {
-          super(e, t ?? (() => new s.R8())),
-            (this.m_renderingLanguage =
-              "string" == typeof n ? (0, r.sfN)(n) : n);
-        }
-        UpdateOverrideLanguage(e) {
-          this.m_renderingLanguage = e;
-        }
-        ParseBBCode(e, t, n = !0) {
-          let r = 0;
-          const s = this.Parse(
-            e,
-            (e, n, ...s) =>
-              o.createElement(
-                e,
-                {
-                  ...n,
-                  context: t,
-                  language: this.m_renderingLanguage,
-                  key: "bbnode_" + r++,
-                },
-                ...s,
-              ),
-            n,
-          );
-          return s.length > 1
-            ? o.createElement(o.Fragment, null, ...s)
-            : 1 == s.length
-              ? s[0]
-              : null;
-        }
-      }
-    },
-    49841: (e, t, n) => {
-      "use strict";
-      function r(e) {
-        if (!e) return e;
-        const t = e.trim(),
-          n = t
-            .replace(/^[\u0000-\u0020]+/, "")
-            .replace(/[\t\n\r]/g, "")
-            .toLowerCase();
-        return n.startsWith("javascript:") ||
-          n.startsWith("data:") ||
-          n.startsWith("vbscript:")
-          ? ""
-          : t;
-      }
-      n.d(t, { J: () => r });
-    },
-    77429: (e, t, n) => {
-      "use strict";
-      n.d(t, {
-        AT: () => u,
-        J7: () => a,
-        KN: () => i,
-        MG: () => p,
-        Yd: () => h,
-        bv: () => l,
-        gg: () => s,
-        mZ: () => d,
-        s4: () => m,
-        zN: () => c,
-      });
-      var r = n(7850),
-        o = n(11748);
-      const s = {
-        Box: o.DynamicLinkBox,
-        Preview: o.DynamicLink_Preview,
-        Type: o.DynamicLink_Type,
-      };
-      function i(e) {
-        return (0, r.jsx)("img", {
-          className: o.DynamicLink_Preview,
-          src: e.strURL || void 0,
-          alt: e.strAlt ?? "",
-        });
-      }
-      function a(e) {
-        return (0, r.jsx)("div", {
-          className: o.DynamicLink_Content,
-          children: e.children,
-        });
-      }
-      function l(e) {
-        return (0, r.jsx)("div", {
-          className: o.DynamicLink_Name,
-          children: e.children,
-        });
-      }
-      function c(e) {
-        return (0, r.jsx)("div", {
-          className: o.DynamicLink_Author,
-          children: e.children,
-        });
-      }
-      function d(e) {
-        return (0, r.jsx)("span", {
-          className: o.DynamicLink_AuthorName,
-          children: e.children,
-        });
-      }
-      function u(e) {
-        return (0, r.jsx)("div", {
-          className: o.DynamicLink_Description,
-          children: e.children,
-        });
-      }
-      function p(e) {
-        return (0, r.jsx)("span", {
-          className: o.DynamicLink_Date,
-          children: e.children,
-        });
-      }
-      function h(e) {
-        return (0, r.jsx)("div", {
-          className: o.DynamicLink_YoutubeViews,
-          children: e.children,
-        });
-      }
-      function m(e) {
-        return (0, r.jsx)("div", {
-          className: o.Dynamiclink_Content,
-          children: e.children,
-        });
-      }
-    },
-    31995: (e, t, n) => {
-      "use strict";
-      function r(e) {
-        return e
-          .replace(/&lt;/g, "<")
-          .replace(/&gt;/g, ">")
-          .replace(/&quot;/g, '"')
-          .replace(/&amp;/g, "&");
-      }
-      n.d(t, { oK: () => u, F8: () => c });
-      var o = n(66418),
-        s = n(80902);
-      const i = "events/ajaxgetdynamiceventmetadata";
-      async function a(e) {
-        const t =
-            o.TS.STORE_BASE_URL + i + "?" + new URLSearchParams(e).toString(),
-          n = await fetch(t, { credentials: "include" });
-        if (!n.ok) throw new Error(`${t} answered ${n.status}`);
-        return await n.json();
-      }
-      function l(e) {
-        return ["DynamicEventMetadata", "youtube", e];
-      }
-      function c(e, t = !0) {
-        return (0, s.I)(
-          (function (e, t = !0) {
-            return {
-              queryKey: l(e),
-              queryFn: async () => {
-                const t = await a({ youtubevideoids: e }),
-                  n = t.youtube?.find((t) => t.videoid == e) ?? t.youtube?.[0];
-                if (!n) throw new Error(`no metadata for youtube video ${e}`);
-                return {
-                  ...n,
-                  title: r(n.title),
-                  description: r(n.description),
-                };
-              },
-              enabled: t && !0,
-              staleTime: 36e5,
-              retry: !1,
-            };
-          })(e, t),
-        );
-      }
-      function d(e) {
-        return ["DynamicEventMetadata", "sharedfile", e];
-      }
-      function u(e) {
-        return (0, s.I)(
-          (function (e) {
-            return {
-              queryKey: d(e),
-              queryFn: async () => {
-                const t = await a({ sharedfileids: e }),
-                  n =
-                    t.sharedfiles?.find((t) => t.sharedfileid == e) ??
-                    t.sharedfiles?.[0];
-                if (!n) throw new Error(`no metadata for shared file ${e}`);
-                return {
-                  ...n,
-                  title: r(n.title),
-                  description: r(n.description),
-                  type: r(n.type),
-                };
-              },
-              enabled: !0,
-              staleTime: 36e5,
-              retry: !1,
-            };
-          })(e),
-        );
-      }
-    },
-    63976: (e, t, n) => {
-      "use strict";
-      n.d(t, { AX: () => S, V2: () => r, j6: () => v });
-      var r,
-        o = n(7850),
-        s = n(77429),
-        i = n(69273),
-        a = n(2160),
-        l = n(66418),
-        c = n(90626),
-        d = n(70995),
-        u = n(22797),
-        p = n(48211),
-        h = n(52038),
-        m = n(61859),
-        g = n(82227),
-        f = n(31995),
-        x = n(31587),
-        _ = n.n(x);
-      function y(e) {
-        return e == r.full
-          ? _().sizeFull
-          : (0, h.A)(
-              _().sizeThumb,
-              e == r.left ? _().floatLeft : _().floatRight,
-            );
-      }
-      function S(e) {
-        const {
-            videoID: t,
-            bShowVideoImmediately: n,
-            bAutoPlay: i,
-            nStartSeconds: a,
-            align: d = r.full,
-          } = e,
-          [x, S] = (0, c.useState)(!n),
-          { data: v, isSuccess: C } = (0, f.F8)(t, x);
-        if (x) {
-          const e = v?.title ?? (0, m.we)("#Loading"),
-            n = v?.views ?? "0",
-            r = v?.description ?? "",
-            i = () => S(!1),
-            a = (e) => {
-              ("Enter" != e.key && " " != e.key) || (e.preventDefault(), i());
-            };
-          return (0, o.jsxs)("div", {
-            className: s.gg.Box,
-            role: "button",
-            tabIndex: 0,
-            onClick: i,
-            onKeyDown: a,
-            children: [
-              (0, o.jsx)(s.KN, {
-                strURL: "https://img.youtube.com/vi/" + t + "/0.jpg",
-              }),
-              (0, o.jsxs)(s.J7, {
-                children: [
-                  (0, o.jsx)(s.bv, {
-                    children: (0, m.we)("#EventEditor_YouTubeVideoTitle", e),
-                  }),
-                  (0, o.jsx)(s.Yd, {
-                    children: (0, m.we)(
-                      "#EventEditor_YouTubeVideoViews",
-                      (0, g.Dq)(Number(n)),
+(() => {
+  (self.webpackChunkstore = self.webpackChunkstore || []).push([
+    [11095],
+    {
+      7487: (w, j, n) => {
+        "use strict";
+        n.d(j, { K0: () => a, OJ: () => M, R8: () => U });
+        var e = n(71742),
+          m = n(90626);
+        class U {
+          reactNodes = [];
+          AppendText(h, b = !1) {
+            h.length &&
+              (b
+                ? this.reactNodes.push(
+                    m.createElement(
+                      "span",
+                      {
+                        "data-copytext": "",
+                        "data-copystyle": "merge-adjacent",
+                        "bbcode-text": h,
+                      },
+                      h,
                     ),
-                  }),
-                  (0, o.jsxs)(s.s4, {
-                    children: [
-                      C && r,
-                      !C && (0, o.jsx)(u.t, { size: "medium" }),
-                    ],
-                  }),
-                ],
-              }),
-            ],
+                  )
+                : this.reactNodes.push(h));
+          }
+          AppendNode(h) {
+            this.reactNodes.push(h);
+          }
+          GetElements() {
+            return this.reactNodes;
+          }
+        }
+        class a {
+          m_decoratedAccumulator;
+          constructor(h) {
+            (0, e.wT)(h, "decorated accumulator cannot be null"),
+              (this.m_decoratedAccumulator = h);
+          }
+          AppendText(h, b = !1) {
+            this.m_decoratedAccumulator.AppendText(h, b);
+          }
+          AppendNode(h) {
+            this.m_decoratedAccumulator.AppendNode(h);
+          }
+          GetElements() {
+            return this.m_decoratedAccumulator.GetElements();
+          }
+        }
+        class M extends a {
+          constructor(h) {
+            super(h);
+          }
+          AppendText(h) {
+            let b = h;
+            const L = [];
+            for (
+              let v = b.indexOf(`
+`);
+              v !== -1;
+              v = b.indexOf(`
+`)
+            )
+              L.push(b.substr(0, v)),
+                L.push(m.createElement("br")),
+                (b = b.substr(v + 1));
+            b.length && L.push(b),
+              L.forEach((v) => {
+                super.AppendNode(v);
+              });
+          }
+        }
+      },
+      33770: (w, j, n) => {
+        "use strict";
+        n.d(j, { B: () => A });
+        var e = n(99412),
+          m = n(90626),
+          U = n(7487);
+        const a = 0,
+          M = 1,
+          T = 2,
+          h = 3;
+        class b {
+          m_fnAccumulatorFactory;
+          m_dictComponents;
+          constructor(r, t) {
+            r instanceof Map
+              ? (this.m_dictComponents = r)
+              : (this.m_dictComponents = new Map(Object.entries(r))),
+              (this.m_fnAccumulatorFactory = t);
+          }
+          Parse(r, t, o = !0) {
+            const _ = E(r || "", o);
+            return this.Parse_BuildElements(_, t);
+          }
+          Parse_BuildElements(r, t) {
+            let o = this.m_fnAccumulatorFactory(void 0);
+            const _ = [],
+              d = () => (_.length < 1 ? void 0 : _[_.length - 1]),
+              f = this.m_dictComponents,
+              B = (x) => !!(x.tag && f.get(x.tag)?.autocloses);
+            let l = !1,
+              O = !0;
+            const C = (x, F) => {
+              let W = F.text.toLowerCase();
+              if (x && x.node.tag === W && f.get(x.node.tag)) {
+                const I = f.get(x.node.tag),
+                  K = {
+                    tagname: x.node.tag,
+                    args: x.node.args,
+                    rawargs: x.node.rawargs,
+                  },
+                  V = t(I.Constructor, K, ...o.GetElements());
+                (o = x.accumulator),
+                  Array.isArray(V)
+                    ? V.forEach((Z) => o.AppendNode(Z))
+                    : o.AppendNode(V),
+                  (l = !!I.skipFollowingNewline),
+                  (O = x.bWrapTextForCopying);
+              } else if (x) {
+                const I = x.accumulator;
+                I.AppendText("[" + x.node.text + "]", !1),
+                  o.GetElements().forEach((K) => I.AppendNode(K)),
+                  I.AppendText("[/" + F.text + "]", !1),
+                  (o = I),
+                  (O = x.bWrapTextForCopying);
+              }
+            };
+            for (
+              r.forEach((x, F) => {
+                if (x.type == M) {
+                  const W = l ? x.text.replace(/^[\t\r ]*\n/g, "") : x.text;
+                  o.AppendText(W, O), (l = !1);
+                } else if (x.type == T) {
+                  const W = f.get(x.tag);
+                  if (!W) o.AppendText("[" + x.text + "]", _.length == 0);
+                  else {
+                    const I = d();
+                    if (I !== void 0) {
+                      const K = f.get(I.node.tag);
+                      K &&
+                        K.autocloses &&
+                        x.tag === I.node.tag &&
+                        C(_.pop(), I.node);
+                    }
+                    _.push({ accumulator: o, node: x, bWrapTextForCopying: O }),
+                      (o = this.m_fnAccumulatorFactory(x)),
+                      (l = !!W.skipInternalNewline),
+                      (O = W.allowWrapTextForCopying ?? !1);
+                  }
+                } else if (x.type == h) {
+                  let W = x.text.toLowerCase();
+                  for (; d() && d().node.tag !== W && B(d().node); ) {
+                    const I = _.pop();
+                    C(I, I.node);
+                  }
+                  if (d()?.node.tag == W) {
+                    const I = _.pop();
+                    C(I, x);
+                  } else o.AppendText("[/" + x.text + "]", _.length == 0);
+                }
+              });
+              _.length > 0;
+            ) {
+              const x = _.pop();
+              C(x, x.node);
+            }
+            return o.GetElements();
+          }
+        }
+        function L(u, r, t = !1) {
+          let o = "[" + u;
+          r?.[""] && (o += `=${t ? "" + r[""] : v("" + r[""])}`);
+          for (const _ in r) _ !== "" && (o += ` ${D(_)}=${v("" + r[_])}`);
+          return (o += "]"), o;
+        }
+        function v(u) {
+          return `"${u.replace(/(\\|"|\])/g, "\\$1")}"`;
+        }
+        function D(u) {
+          return u.replace(/(\\| |\])/g, "\\$1");
+        }
+        function g(u) {
+          return `[/${u}]`;
+        }
+        function p(u) {
+          return u.replace(/(\\|\[)/g, "\\$1");
+        }
+        function i(u, r, t = a) {
+          const { type: o, text: _ = "" } = r;
+          if (o == T) {
+            let d = _.indexOf("=");
+            const f = _.indexOf(" ");
+            f != -1 && (d == -1 || f < d) && (d = f);
+            let B,
+              l,
+              O = "";
+            d > 0
+              ? ((B = _.substr(0, d).toLocaleLowerCase()),
+                (O = _.substr(d)),
+                (l = y(O)))
+              : ((l = {}), (B = _.toLocaleLowerCase())),
+              u.push({ type: o, text: _, tag: B, args: l, rawargs: O });
+          } else o != a && u.push({ type: o, text: _ });
+          return { type: t, text: "" };
+        }
+        function P(u) {
+          let r = "";
+          return (
+            u.type == h ? (r = "[/") : u.type == T && (r = "["),
+            { type: M, text: r + (u.text ?? "") }
+          );
+        }
+        function E(u, r) {
+          const t = [];
+          let o = { type: a, text: "" },
+            _ = !1,
+            d = !1,
+            f = !1;
+          for (let B = 0; B < u.length; B++) {
+            const l = u[B];
+            switch (o.type) {
+              case a:
+                l == "["
+                  ? ((o.type = T), (d = !0))
+                  : ((o.type = M), l == "\\" && r ? (_ = !_) : (o.text += l));
+                break;
+              case T:
+              case h:
+                if (l == "/" && d) (o.type = h), (o.text = ""), (d = !1);
+                else if (l == "[" && !_) (o = i(t, P(o), T)), (d = !0);
+                else if (l == "]" && !_) {
+                  const O =
+                      o.type == T && o.text?.toLocaleLowerCase() == "noparse",
+                    C = o.type == h && o.text?.toLocaleLowerCase() == "noparse";
+                  d || (f && !C)
+                    ? ((o = P(o)), (o.text += l))
+                    : O
+                      ? (f = !0)
+                      : C && (f = !1),
+                    (o = i(t, o)),
+                    (d = !1);
+                } else
+                  l == "\\" && r
+                    ? ((o.text += l), (_ = !_), (d = !1))
+                    : ((o.text += l), (_ = !1), (d = !1));
+                break;
+              case M:
+                l == "[" && !_
+                  ? ((o = i(t, o, T)), (d = !0))
+                  : l == "\\" && r
+                    ? (_ && (o.text += l), (_ = !_))
+                    : ((o.text += l), (_ = !1));
+                break;
+            }
+          }
+          return (
+            o.type != a &&
+              (o.type == T || o.type == h
+                ? t.push(P(o))
+                : t.push({ type: o.type, text: o.text ?? "" })),
+            t
+          );
+        }
+        function y(u) {
+          if (!u || u.length < 1) return {};
+          const r = {};
+          let t = "",
+            o = "",
+            _;
+          ((l) => {
+            (l[(l.PRE_NAME = 0)] = "PRE_NAME"),
+              (l[(l.IN_NAME = 1)] = "IN_NAME"),
+              (l[(l.POST_NAME = 2)] = "POST_NAME"),
+              (l[(l.IN_VALUE = 3)] = "IN_VALUE"),
+              (l[(l.IN_QUOTED_VALUE = 4)] = "IN_QUOTED_VALUE");
+          })(_ || (_ = {}));
+          let d = 0,
+            f = 0;
+          u[0] == "=" && (d = 2);
+          let B = !1;
+          for (f++; f < u.length; f++) {
+            const l = u[f];
+            let O = !0,
+              C = !1;
+            switch (d) {
+              case 0:
+                if (l == "=") return {};
+                if (l == " ") continue;
+                d = 1;
+                break;
+              case 1:
+                (l == "=" || l == " ") &&
+                  !B &&
+                  (l == " " ? ((d = 0), (C = !0)) : (d = 2), (O = !1));
+                break;
+              case 2:
+                l == " "
+                  ? ((d = 0), (O = !1), (C = !0))
+                  : l == '"'
+                    ? ((d = 4), (O = !1))
+                    : (d = 3);
+                break;
+              case 3:
+              case 4:
+                ((l == " " && d != 4 && !B) || (l == '"' && d == 4 && !B)) &&
+                  ((d = 0), (O = !1), (C = !0));
+                break;
+            }
+            if (O)
+              if (l == "\\" && !B) B = !0;
+              else if (((B = !1), d == 1)) t += l;
+              else if (d == 3 || d == 4) o += l;
+              else
+                throw new Error(
+                  "Not expecting to accumulate buffer in state " + d,
+                );
+            C && ((r[t] = o), (t = ""), (o = ""));
+          }
+          return d != 0 && (r[t] = o), r;
+        }
+        class A extends b {
+          m_renderingLanguage;
+          constructor(r, t, o) {
+            super(r, t ?? (() => new U.R8())),
+              (this.m_renderingLanguage =
+                typeof o == "string" ? (0, e.sfN)(o) : o);
+          }
+          UpdateOverrideLanguage(r) {
+            this.m_renderingLanguage = r;
+          }
+          ParseBBCode(r, t, o = !0) {
+            let _ = 0;
+            const d = this.Parse(
+              r,
+              (f, B, ...l) =>
+                m.createElement(
+                  f,
+                  {
+                    ...B,
+                    context: t,
+                    language: this.m_renderingLanguage,
+                    key: `bbnode_${_++}`,
+                  },
+                  ...l,
+                ),
+              o,
+            );
+            return d.length > 1
+              ? m.createElement(m.Fragment, null, ...d)
+              : d.length == 1
+                ? d[0]
+                : null;
+          }
+        }
+      },
+      29950: (w, j, n) => {
+        "use strict";
+        n.d(j, { J: () => e });
+        function e(m) {
+          if (!m) return m;
+          const U = m.trim(),
+            a = U.replace(/^[\u0000-\u0020]+/, "")
+              .replace(/[\t\n\r]/g, "")
+              .toLowerCase();
+          return a.startsWith("javascript:") ||
+            a.startsWith("data:") ||
+            a.startsWith("vbscript:")
+            ? ""
+            : U;
+        }
+      },
+      72080: (w, j, n) => {
+        "use strict";
+        n.d(j, {
+          AT: () => v,
+          J7: () => T,
+          KN: () => M,
+          MG: () => D,
+          Yd: () => g,
+          bv: () => h,
+          gg: () => a,
+          mZ: () => L,
+          s4: () => p,
+          zN: () => b,
+        });
+        var e = n(7850),
+          m = n(11748),
+          U = n.n(m);
+        const a = {
+          Box: m.DynamicLinkBox,
+          Preview: m.DynamicLink_Preview,
+          Type: m.DynamicLink_Type,
+        };
+        function M(i) {
+          return (0, e.jsx)("img", {
+            className: m.DynamicLink_Preview,
+            src: i.strURL || void 0,
+            alt: i.strAlt ?? "",
           });
         }
-        return (0, o.jsx)(p.gZ, {
-          video: t,
-          children: (0, o.jsxs)("div", {
-            className: (0, h.A)(_().PreviewYouTubeVideo, y(d)),
-            id: t,
-            children: [
-              (0, o.jsx)("img", {
-                className: _().PlaceholderImg,
-                alt: "",
-                src:
-                  l.TS.COMMUNITY_CDN_URL +
-                  "public/shared/images/responsive/youtube_16x9_placeholder.gif",
-              }),
-              (0, o.jsx)(p.fm, {
-                video: t,
-                autoplay: i ?? !1,
-                startSeconds: a,
-                controls: !0,
-                playsInline: !0,
-                autopause: !0,
-                showFullscreenBtn: !0,
-              }),
-            ],
-          }),
-        });
-      }
-      function v(e, t) {
-        if (l.TS.EREALM === a.TU.k_ESteamRealmChina) return null;
-        const n = (0, d.XU)(e);
-        return void 0 !== n?.strVideoID
-          ? (0, o.jsx)(S, {
-              videoID: n.strVideoID,
-              nStartSeconds: n.nStartSeconds,
-              bShowVideoImmediately: !1,
-            })
-          : (0, i.Pm)(e, t?.event);
-      }
-      !(function (e) {
-        (e.left = "leftthumb"),
-          (e.right = "rightthumb"),
-          (e.full = "full"),
-          (e.summary = "summary");
-      })(r || (r = {}));
-    },
-    43474: (e, t, n) => {
-      "use strict";
-      n.d(t, { K: () => c, _: () => l });
-      var r = n(7850),
-        o = n(90626),
-        s = n(74057),
-        i = n(76217);
-      const a = o.createContext({ enabled: !0 });
-      function l(e) {
-        const { enabled: t, children: n } = e,
-          s = o.useMemo(() => ({ enabled: t }), [t]);
-        return (0, r.jsx)(a.Provider, { value: s, children: n });
-      }
-      function c(e) {
-        const {
-            placeholderWidth: t,
-            placeholderHeight: n,
-            holdGamepadFocus: l = !1,
-            onRender: c,
-            style: d,
-            mode: u = "JustLoad",
-            children: p,
-            ...h
-          } = e,
-          m = o.useContext(a),
-          [g, f] = o.useState(() => ({
-            bRenderChildren: !m.enabled,
-            nPrevRenderHeight: 0,
-            nPrevRenderWidth: 0,
-          })),
-          x = o.useRef(null),
-          _ = "LoadAndUnload" === u && m.enabled,
-          y = o.useCallback(
-            (e) => {
-              f((t) => {
-                if (t.bRenderChildren === e || (t.bRenderChildren && !_))
-                  return t;
-                let n = 0,
-                  r = 0;
-                if (x.current) {
-                  const e = x.current.getBoundingClientRect();
-                  e && ((n = e.width), (r = e.height));
-                }
-                return (
-                  e && c && c(),
-                  {
-                    bRenderChildren: e,
-                    nPrevRenderWidth: n,
-                    nPrevRenderHeight: r,
-                  }
-                );
-              });
-            },
-            [_, c],
-          );
-        o.useEffect(() => {
-          m.enabled || y(!0);
-        }, [m.enabled, y]);
-        let S = d;
-        if (!g.bRenderChildren) {
-          const e = g.nPrevRenderWidth || t,
-            r = g.nPrevRenderHeight || n;
-          (void 0 === r && void 0 === e) ||
-            (S = { ...d, minHeight: r, minWidth: e });
+        function T(i) {
+          return (0, e.jsx)("div", {
+            className: m.DynamicLink_Content,
+            children: i.children,
+          });
         }
-        const v = _ ? "repeated" : "once";
-        let C = (0, r.jsx)(s.J, {
-          containerRef: x,
-          style: S,
-          ...h,
-          onVisibilityChange: y,
-          trigger: v,
-          children: g.bRenderChildren && p,
-        });
-        return (
-          l &&
-            (C = (0, r.jsx)(i.Z, {
-              focusableIfEmpty: !0,
-              style: { height: "100%" },
-              children: C,
-            })),
-          C
-        );
-      }
-    },
-    48244: (e, t, n) => {
-      "use strict";
-      n.d(t, { L: () => u });
-      var r = n(7850),
-        o = n(90626),
-        s = n(22837),
-        i = n(2160),
-        a = n(61859),
-        l = n(61336),
-        c = n(66418);
-      class d {
-        m_bUserHasVolumePreference = !1;
-        m_flVolumePreference = 0;
-        BUserHasVolumePreference() {
-          return this.m_bUserHasVolumePreference;
+        function h(i) {
+          return (0, e.jsx)("div", {
+            className: m.DynamicLink_Name,
+            children: i.children,
+          });
         }
-        SetVolumePreference(e) {
-          (this.m_flVolumePreference = e),
-            (this.m_bUserHasVolumePreference = !0);
+        function b(i) {
+          return (0, e.jsx)("div", {
+            className: m.DynamicLink_Author,
+            children: i.children,
+          });
         }
-        GetVolumePreference() {
-          return this.m_flVolumePreference;
+        function L(i) {
+          return (0, e.jsx)("span", {
+            className: m.DynamicLink_AuthorName,
+            children: i.children,
+          });
         }
-        BVolumePreferenceMuted() {
-          return this.m_flVolumePreference < 0.001;
+        function v(i) {
+          return (0, e.jsx)("div", {
+            className: m.DynamicLink_Description,
+            children: i.children,
+          });
         }
-        static s_Singleton;
-        static Get() {
-          return d.s_Singleton || (d.s_Singleton = new d()), d.s_Singleton;
+        function D(i) {
+          return (0, e.jsx)("span", {
+            className: m.DynamicLink_Date,
+            children: i.children,
+          });
         }
-      }
-      const u = (0, o.forwardRef)(function (e, t) {
-        const {
-            video: n,
-            bAutoPlay: i,
-            bControls: a,
-            bLoop: u,
-            bMuted: g,
-            className: f,
-            mediaScale: x,
-            flAspectRatio: _,
-            onClick: y,
-            altText: S,
-          } = e,
-          v = (0, o.useMemo)(
-            () =>
-              Boolean(
-                n.rgVideoTracks?.some(
-                  (e) => "subtitles" == e.sKind || "captions" == e.sKind,
-                ),
-              ),
-            [n.rgVideoTracks],
-          ),
-          [C, w] = o.useState(!1),
-          b = (function () {
-            const e = window.location.href,
-              t = [
-                c.TS.STORE_BASE_URL,
-                c.TS.COMMUNITY_BASE_URL,
-                c.TS.PARTNER_BASE_URL,
-                c.TS.HELP_BASE_URL,
-                c.TS.STATS_BASE_URL,
-                c.TS.STORE_CHECKOUT_BASE_URL,
-              ].find((t) => t && e.startsWith(t));
-            if (t) return t;
-            try {
-              return new URL(e).origin + "/";
-            } catch {
-              return "unknown";
-            }
-          })();
-        if (!n.rgVideoSources || !n.rgVideoSources.length) return null;
-        const E = (function (e) {
-          return !(
-            (!(0, l._1)(e.sPoster) && !(0, l.ZF)(e.sPoster)) ||
-            (e.rgVideoSources &&
-              e.rgVideoSources.some((e) => !(0, l.ZF)(e.sURL))) ||
-            (e.rgVideoTracks && e.rgVideoTracks.some((e) => !(0, l.ZF)(e.sURL)))
-          );
-        })(n);
-        let N;
-        (!E || (v && c.TS.EUNIVERSE == s.wLO)) && (N = "anonymous");
-        const k = g || (i && d.Get().BVolumePreferenceMuted()),
-          j = n.sPoster ? p(n.sPoster, b) : "";
-        return (0, r.jsxs)("video", {
-          width: "100%",
-          height: "auto",
-          autoPlay: i,
-          muted: k,
-          playsInline: !0,
-          controls: a,
-          poster: j,
-          loop: u,
-          crossOrigin: N,
-          onVolumeChange: (e) => {
-            const t = e.target,
-              n = t.muted ? 0 : t.volume;
-            C && d.Get().SetVolumePreference(n);
-          },
-          onPlay: (e) => {
-            const t = e.target,
-              n = 0 == t.currentTime,
-              r = d.Get().BUserHasVolumePreference();
-            if ((w(!0), n))
-              if (r || i)
-                r &&
-                  ((t.volume = d.Get().GetVolumePreference()),
-                  (t.muted = d.Get().BVolumePreferenceMuted()));
-              else {
-                const e = t.muted ? 0 : t.volume;
-                d.Get().SetVolumePreference(e);
-              }
-          },
-          ref: t,
-          className: f,
-          onClick: y,
-          "aria-label": S,
-          style: {
-            width: x && x >= 1 && x < 100 ? `${x}%` : void 0,
-            aspectRatio: _ || void 0,
-          },
-          children: [
-            (0, r.jsx)(h, {
-              rgVideoSources: n.rgVideoSources,
-              strCacheBreakOrigin: b,
-            }),
-            (0, r.jsx)(m, {
-              rgVideoTracks: n.rgVideoTracks,
-              strCacheBreakOrigin: b,
-            }),
-          ],
-        });
-      });
-      function p(e, t) {
-        if (e) {
-          if ((0, l._1)(e)) return e;
-          try {
-            const n = new URL(e);
-            return (
-              (n.search = (n.search ? n.search + "&" : "?") + "origin=" + t),
-              n.toString()
-            );
-          } catch {
-            return e;
-          }
+        function g(i) {
+          return (0, e.jsx)("div", {
+            className: m.DynamicLink_YoutubeViews,
+            children: i.children,
+          });
         }
-      }
-      function h(e) {
-        const { rgVideoSources: t, strCacheBreakOrigin: n } = e;
-        return t
-          .filter((e) => Boolean(e.sURL))
-          .map((e) =>
-            (0, r.jsx)(
-              "source",
-              { src: p(e.sURL, n), type: e.sFormat },
-              e.sURL,
-            ),
-          );
-      }
-      function m(e) {
-        const { rgVideoTracks: t, strCacheBreakOrigin: n } = e;
-        return t
-          ? t.map((e, o) =>
-              (0, r.jsx)(
-                g,
-                { track: e, rgVideoTracks: t, strCacheBreakOrigin: n },
-                o,
-              ),
-            )
-          : null;
-      }
-      function g(e) {
-        const { track: t, rgVideoTracks: n, strCacheBreakOrigin: o } = e;
-        let l = t.eLanguage;
-        if (c.TS.EREALM == i.TU.k_ESteamRealmChina)
-          if (a.A0.IsELanguageValidInRealm(l, i.TU.k_ESteamRealmChina))
-            l = a.A0.GetELanguageFallback(l);
-          else {
-            if (l !== s.NFp) return null;
-            if (n.find((e) => a.A0.GetELanguageFallback(e.eLanguage) === l))
-              return null;
-          }
-        else if (!a.A0.IsELanguageValidInRealm(l, i.TU.k_ESteamRealmGlobal))
-          return null;
-        return (0, r.jsx)("track", {
-          src: p(t.sURL, o),
-          kind: t.sKind,
-          default: t.bDefault,
-          srcLang: (0, s.wwZ)(l),
-          label: (0, a.uD)(l),
-        });
-      }
-    },
-    59952: (e, t, n) => {
-      "use strict";
-      n.d(t, {
-        B8: () => A,
-        It: () => b,
-        Pk: () => L,
-        Sz: () => k,
-        Tu: () => w,
-        W4: () => v,
-        ZS: () => j,
-        Zb: () => N,
-        _J: () => B,
-        ck: () => U,
-        d$: () => T,
-        j$: () => C,
-      });
-      var r = n(7850),
-        o = n(49841),
-        s = n(33645),
-        i = n.n(s),
-        a = n(45699),
-        l = n(76217),
-        c = n(71944),
-        d = n(90626),
-        u = n(15759),
-        p = n(55963),
-        h = n(74410),
-        m = n(12155),
-        g = n(32754),
-        f = n(52038),
-        x = n(61859),
-        _ = n(61336),
-        y = n(30470),
-        S = n(84958);
-      const v = new Map([
-        [
-          "b",
-          {
-            Constructor: function (e) {
-              return (0, r.jsx)("b", {
-                className: i().Bold,
-                children: e.children,
-              });
+        function p(i) {
+          return (0, e.jsx)("div", {
+            className: m.Dynamiclink_Content,
+            children: i.children,
+          });
+        }
+      },
+      374: (w, j, n) => {
+        "use strict";
+        n.d(j, { oK: () => D, F8: () => b });
+        function e(g) {
+          return g
+            .replace(/&lt;/g, "<")
+            .replace(/&gt;/g, ">")
+            .replace(/&quot;/g, '"')
+            .replace(/&amp;/g, "&");
+        }
+        var m = n(72609),
+          U = n(80902);
+        const a = "events/ajaxgetdynamiceventmetadata";
+        async function M(g) {
+          const p =
+              m.TS.STORE_BASE_URL + a + "?" + new URLSearchParams(g).toString(),
+            i = await fetch(p, { credentials: "include" });
+          if (!i.ok) throw new Error(`${p} answered ${i.status}`);
+          return await i.json();
+        }
+        function T(g) {
+          return ["DynamicEventMetadata", "youtube", g];
+        }
+        function h(g, p = !0) {
+          return {
+            queryKey: T(g),
+            queryFn: async () => {
+              const i = await M({ youtubevideoids: g }),
+                P = i.youtube?.find((E) => E.videoid == g) ?? i.youtube?.[0];
+              if (!P) throw new Error(`no metadata for youtube video ${g}`);
+              return { ...P, title: e(P.title), description: e(P.description) };
             },
-            autocloses: !1,
-          },
-        ],
-        [
-          "i",
-          {
-            Constructor: function (e) {
-              return (0, r.jsx)("i", {
-                className: (0, f.A)(i().Italic, "BB_Italic"),
-                children: e.children,
-              });
-            },
-            autocloses: !1,
-          },
-        ],
-        ["h1", { Constructor: N, autocloses: !1, skipFollowingNewline: !0 }],
-        ["h2", { Constructor: k, autocloses: !1, skipFollowingNewline: !0 }],
-        ["h3", { Constructor: j, autocloses: !1, skipFollowingNewline: !0 }],
-        [
-          "h4",
-          {
-            Constructor: function (e) {
-              return E("h4", e, (0, f.A)(i().Header4, "BB_Header4"));
-            },
-            autocloses: !1,
-            skipFollowingNewline: !0,
-          },
-        ],
-        [
-          "h5",
-          {
-            Constructor: function (e) {
-              return E("h5", e, (0, f.A)(i().Header5, "BB_Header5"));
-            },
-            autocloses: !1,
-            skipFollowingNewline: !0,
-          },
-        ],
-        [
-          "center",
-          {
-            Constructor: function (e) {
-              let t = C(e.args, "id");
-              t &&
-                "string" == typeof t &&
-                t.length > 0 &&
-                "#" === t[0] &&
-                (t = t.substring(1));
-              return (0, r.jsx)("span", {
-                id: t || void 0,
-                className: (0, f.A)(i().CenterSpan, "BB_Center"),
-                children: e.children,
-              });
-            },
-            autocloses: !1,
-          },
-        ],
-        [
-          "smalltext",
-          {
-            Constructor: function (e) {
-              return E("div", e, (0, f.A)(i().SmallText, "BB_SmallText"));
-            },
-            autocloses: !1,
-            skipFollowingNewline: !0,
-          },
-        ],
-        [
-          "u",
-          {
-            Constructor: function (e) {
-              return (0, r.jsx)("u", {
-                className: i().Underline,
-                children: e.children,
-              });
-            },
-            autocloses: !1,
-          },
-        ],
-        [
-          "strike",
-          {
-            Constructor: function (e) {
-              return (0, r.jsx)("s", {
-                className: i().Strike,
-                children: e.children,
-              });
-            },
-            autocloses: !1,
-          },
-        ],
-        [
-          "spoiler",
-          {
-            Constructor: function (e) {
-              let [t, n] = d.useState(!1),
-                o = d.useCallback(() => {
-                  n(!t);
-                }, [t]);
-              return (0, r.jsx)(l.Z, {
-                className: (0, f.A)(i().Spoiler, t && i().Revealed),
-                focusable: !0,
-                onActivate: o,
-                onOKActionDescription: (0, x.we)(
-                  t ? "#Bbcode_Spoiler_Hide" : "#Bbcode_Spoiler_Show",
-                ),
-                children: (0, r.jsx)("span", {
-                  className: i().SpoilerText,
-                  children: e.children,
-                }),
-              });
-            },
-            autocloses: !1,
-          },
-        ],
-        [
-          "hr",
-          {
-            Constructor: function (e) {
-              return (0, r.jsx)("hr", { className: i().HR });
-            },
-            autocloses: !1,
-          },
-        ],
-        [
-          "noparse",
-          {
-            Constructor: function (e) {
-              return e.children;
-            },
-            autocloses: !1,
-          },
-        ],
-        [
-          "url",
-          {
-            Constructor: function (e) {
-              let t = (0, o.J)(C(e.args));
-              if (!t) {
-                const n = e.children;
-                "string" == typeof n && (0, _.DZ)(n) && (t = (0, o.J)(n));
-              }
-              const n =
-                  "button" == C(e.args, "style") ? i().LinkButton : void 0,
-                s = n && C(e.args, "buttoncolor");
-              let a = C(e.args, "id");
-              a &&
-                "string" == typeof a &&
-                a.length > 0 &&
-                "#" === a[0] &&
-                (a = a.substring(1));
-              if (void 0 === t && !a) return e.children || "";
-              if (
-                void 0 === t ||
-                ("string" == typeof t && t.length > 0 && "#" == t[0])
-              )
-                return (0, r.jsx)("a", {
-                  href: t ?? null,
-                  id: a,
-                  children: e.children,
-                });
-              return (0, r.jsx)(T, {
-                className: n,
-                href: t,
-                id: a,
-                style: { backgroundColor: s },
-                children: e.children,
-              });
-            },
-            autocloses: !1,
-          },
-        ],
-        ["quote", { Constructor: L, autocloses: !1 }],
-        [
-          "pullquote",
-          {
-            Constructor: function (e) {
-              return (0, r.jsx)("div", {
-                className: i().PullQuote,
-                children: e.children,
-              });
-            },
-            autocloses: !1,
-          },
-        ],
-        [
-          "code",
-          {
-            Constructor: function (e) {
-              return (0, r.jsx)("code", {
-                className: i().CodeBlock,
-                children: e.children,
-              });
-            },
-            autocloses: !1,
-          },
-        ],
-        [
-          "c",
-          {
-            Constructor: function (e) {
-              return (0, r.jsx)("code", {
-                className: i().Code,
-                children: e.children,
-              });
-            },
-            autocloses: !1,
-          },
-        ],
-        ["list", { Constructor: A, autocloses: !1, skipInternalNewline: !0 }],
-        ["olist", { Constructor: B, autocloses: !1, skipInternalNewline: !0 }],
-        ["*", { Constructor: U, autocloses: !0, skipInternalNewline: !0 }],
-        [
-          "table",
-          {
-            Constructor: function (e) {
-              const t = C(e.args, "noborder"),
-                n = C(e.args, "equalcells"),
-                o = C(e.args, "colwidth");
-              return (0, r.jsxs)("table", {
-                className: (0, f.A)(
-                  i().Table,
-                  "BB_Table",
-                  t && i().NoBorder,
-                  n && i().EqualCells,
-                ),
-                children: [
-                  o &&
-                    (0, r.jsx)("colgroup", {
-                      children: o
-                        .split(",")
-                        .map((e, t) => (0, r.jsx)(D, { width: e }, t)),
-                    }),
-                  (0, r.jsx)("tbody", { children: e.children }),
-                ],
-              });
-            },
-            autocloses: !1,
-            skipInternalNewline: !0,
-          },
-        ],
-        [
-          "tr",
-          {
-            Constructor: function (e) {
-              return (0, r.jsx)("tr", {
-                className: (0, f.A)(i().TableRow, "BB_TableRow"),
-                children: e.children,
-              });
-            },
-            autocloses: !1,
-            skipInternalNewline: !0,
-            skipFollowingNewline: !0,
-          },
-        ],
-        [
-          "th",
-          {
-            Constructor: function (e) {
-              return R("th", e);
-            },
-            autocloses: !1,
-            skipInternalNewline: !0,
-            skipFollowingNewline: !0,
-          },
-        ],
-        [
-          "td",
-          {
-            Constructor: function (e) {
-              return R("td", e);
-            },
-            autocloses: !1,
-            skipInternalNewline: !0,
-            skipFollowingNewline: !0,
-          },
-        ],
-        [
-          "expand",
-          {
-            Constructor: function (e) {
-              const t = Boolean(C(e.args, "expanded")),
-                [n, o] = d.useState(t),
-                s = C(e.args, "title"),
-                a = C(e.args, "collapsed_str"),
-                l = C(e.args, "expanded_str"),
-                c = (function (e, t, n, r) {
-                  switch (e) {
-                    case "details":
-                      return {
-                        collapsed: "#Bbcode_Expand_Details_Collapsed",
-                        expanded: "#Bbcode_Expand_Details_Expanded",
-                        style: i().ExpandSection_Details,
-                      };
-                    case "spoiler":
-                      return {
-                        collapsed: "#Bbcode_Expand_Spoiler_Collapsed",
-                        expanded: "#Bbcode_Expand_Spoiler_Expanded",
-                        style: i().ExpandSection_Spoiler,
-                      };
-                    case "title":
-                      return {
-                        collapsed:
-                          t || n || "#Bbcode_Expand_ShowMore_Collapsed",
-                        expanded: t || r || "#Bbcode_Expand_ShowMore_Expanded",
-                        style: i().ExpandSection_WithTitle,
-                      };
-                    default:
-                      return {
-                        collapsed: "#Bbcode_Expand_ShowMore_Collapsed",
-                        expanded: "#Bbcode_Expand_ShowMore_Expanded",
-                        style: i().ExpandSection_ShowMore,
-                      };
-                  }
-                })(C(e.args, "type"), s, a, l);
-              return (0, r.jsxs)("div", {
-                className: (0, f.A)({
-                  [i().ExpandSectionBlock]: !0,
-                  [c.style ?? ""]: null != c.style,
-                  [i().ExpandSectionExpanded]: n,
-                  [i().ExpandSectionCollapsed]: !n,
-                  BBCodeExpanded: n,
-                  BBCodeCollapsed: !n,
-                }),
-                children: [
-                  (0, r.jsxs)("div", {
-                    className: i().ExpandSectionHeader,
-                    onClick: () => o(!n),
-                    children: [
-                      (0, x.we)(n ? c.expanded : c.collapsed),
-                      (0, r.jsx)("div", {
-                        className: i().EmbedArrow,
-                        children: (0, r.jsx)(m.DK4, { angle: n ? 180 : 0 }),
-                      }),
-                    ],
-                  }),
-                  n &&
-                    (0, r.jsx)("div", {
-                      className: i().ExpandSectionBody,
-                      children: e.children,
-                    }),
-                ],
-              });
-            },
-            autocloses: !1,
-            skipInternalNewline: !0,
-            allowWrapTextForCopying: !0,
-          },
-        ],
-        [
-          "calendarevent",
-          {
-            Constructor: function (e) {
-              const t = C(e.args, "title"),
-                n = C(e.args, "start") ?? C(e.args, "datetime"),
-                o = C(e.args, "end") ?? C(e.args, "datetime"),
-                s = C(e.args, "body") ?? null,
-                a = C(e.args, "location") ?? null,
-                l = C(e.args, "id") ?? "",
-                d = new Date(n),
-                u = d.getUTCFullYear(),
-                p = ("0" + (d.getUTCMonth() + 1)).slice(-2),
-                h = ("0" + d.getUTCDate()).slice(-2),
-                m = ("0" + d.getUTCHours()).slice(-2),
-                g = ("0" + d.getUTCMinutes()).slice(-2),
-                x = `${u}${p}${h}T${m}${g}00Z`,
-                _ = new Date(o),
-                y = _.getUTCFullYear(),
-                S = ("0" + (_.getUTCMonth() + 1)).slice(-2),
-                v = ("0" + _.getUTCDate()).slice(-2),
-                w = ("0" + _.getUTCHours()).slice(-2),
-                b = ("0" + _.getUTCMinutes()).slice(-2),
-                E = `${y}${S}${v}T${w}${b}00Z`;
-              let N;
-              try {
-                let e = "BEGIN:VCALENDAR\r\n";
-                (e += "VERSION:2.0\r\n"),
-                  (e += "BEGIN:VEVENT\r\n"),
-                  (e += `DTSTART:${x}\r\n`),
-                  (e += `DTEND:${E}\r\n`),
-                  (e += `SUMMARY:${t.replace("\n", "\\n")}\r\n`),
-                  s && (e += `DESCRIPTION:${s.replace("\n", "\\n")}\r\n`),
-                  a && (e += `LOCATION:${a.replace("\n", "\\n")}\r\n`),
-                  (e += "END:VEVENT\r\n"),
-                  (e += "END:VCALENDAR\r\n"),
-                  (N = `data:text/calendar;charset=utf-8;base64,${c.iI(new TextEncoder().encode(e))}`);
-              } catch (e) {
-                console.error(e);
-              }
-              let k =
-                "https://calendar.google.com/calendar/render?action=TEMPLATE";
-              (k += `&text=${encodeURI(t)}`),
-                (k += `&details=${encodeURI(s)}`),
-                (k += `&dates=${encodeURI(x + "/" + E)}`);
-              const j = (e) => {
-                if ("ReactNativeWebView" in window) {
-                  const n = window.ReactNativeWebView,
-                    r = {
-                      event_name: "addcalendarevent",
-                      tsStart: d.getTime(),
-                      tsEnd: _.getTime(),
-                      strTitle: t,
-                      strNotes: s,
-                      strLocation: a,
-                    };
-                  n.postMessage(JSON.stringify(r)), e.preventDefault();
-                }
+            enabled: p && !0,
+            staleTime: 3600 * 1e3,
+            retry: !1,
+          };
+        }
+        function b(g, p = !0) {
+          return (0, U.I)(h(g, p));
+        }
+        function L(g) {
+          return ["DynamicEventMetadata", "sharedfile", g];
+        }
+        function v(g) {
+          return {
+            queryKey: L(g),
+            queryFn: async () => {
+              const p = await M({ sharedfileids: g }),
+                i =
+                  p.sharedfiles?.find((P) => P.sharedfileid == g) ??
+                  p.sharedfiles?.[0];
+              if (!i) throw new Error(`no metadata for shared file ${g}`);
+              return {
+                ...i,
+                title: e(i.title),
+                description: e(i.description),
+                type: e(i.type),
               };
-              return (0, r.jsxs)("div", {
-                className: (0, f.A)(
-                  "SaleSectionCalendarEventContainer",
-                  i().CalendarEventContainer,
-                ),
-                id: l,
-                children: [
-                  N &&
-                    (0, r.jsx)("a", {
-                      className: (0, f.A)(
-                        "SaleSectionCalendarEventLink",
-                        i().CalendarEventLink,
-                      ),
-                      href: N,
-                      onClick: j,
-                      download: "calendar.ics",
-                      children: "Apple",
-                    }),
-                  (0, r.jsx)("a", {
-                    className: (0, f.A)(
-                      "SaleSectionCalendarEventLink",
-                      i().CalendarEventLink,
-                    ),
-                    href: k,
-                    children: "Google",
-                  }),
-                  N &&
-                    (0, r.jsx)("a", {
-                      className: (0, f.A)(
-                        "SaleSectionCalendarEventLink",
-                        i().CalendarEventLink,
-                      ),
-                      href: N,
-                      onClick: j,
-                      download: "calendar.ics",
-                      children: "Outlook",
-                    }),
-                ],
-              });
             },
-            autocloses: !0,
-          },
-        ],
-        [
-          "doclink",
-          {
-            Constructor: function (e) {
-              const t = C(e.args),
-                n = "button" == C(e.args, "style") ? i().LinkButton : void 0,
-                o = n && C(e.args, "buttoncolor");
-              return (0, r.jsx)(T, {
-                className: n,
-                style: { backgroundColor: o },
-                href: `${y.TS.PARTNER_BASE_URL}doc/${t}`,
-                children: e.children,
-              });
-            },
-            autocloses: !1,
-          },
-        ],
-        [
-          "color",
-          {
-            Constructor: function (e) {
-              const t = C(e.args);
-              return (0, r.jsx)("span", {
-                style: { color: t },
-                children: e.children,
-              });
-            },
-            autocloses: !1,
-          },
-        ],
-        [
-          "bgcolor",
-          {
-            Constructor: function (e) {
-              const t = C(e.args);
-              return (0, r.jsx)("span", {
-                style: { backgroundColor: t },
-                children: e.children,
-              });
-            },
-            autocloses: !1,
-          },
-        ],
-        [
-          "p",
-          {
-            Constructor: function (e) {
-              return (0, r.jsxs)("p", {
-                className: i().Paragraph,
-                children: [e.children, (0, r.jsx)("wbr", {})],
-              });
-            },
-            autocloses: !1,
-            skipFollowingNewline: !0,
-          },
-        ],
-      ]);
-      new Map([
-        ["looping_media", { Constructor: S.$A, autocloses: !1 }],
-        ["video", { Constructor: S.UT, autocloses: !1 }],
-        ["youtubeorvideo", { Constructor: h.Eo, autocloses: !1 }],
-        ["previewyoutube", { Constructor: h.gH, autocloses: !1 }],
-      ]);
-      function C(e, t) {
-        return void 0 === t ? e[""] : e[t];
-      }
-      function w(e, t) {
-        return (n) => e({ ...n, className: t });
-      }
-      function b(e) {
-        return (0, r.jsxs)("div", {
-          className: i().Paragraph,
-          role: "paragraph",
-          children: [e.children, (0, r.jsx)("wbr", {})],
-        });
-      }
-      function E(e, t, n) {
-        let o = C(t.args, "id");
-        return (
-          o || (o = C(t.args)),
-          o &&
-            "string" == typeof o &&
-            o.length > 0 &&
-            "#" === o[0] &&
-            (o = o.substring(1)),
-          (0, r.jsx)(e, {
-            id: o || void 0,
-            className: (0, f.A)(n, t.className),
-            children: t.children,
-          })
-        );
-      }
-      function N(e) {
-        return E("h1", e, (0, f.A)(i().Header1, "BB_Header1"));
-      }
-      function k(e) {
-        return E("h2", e, (0, f.A)(i().Header2, "BB_Header2"));
-      }
-      function j(e) {
-        return E("h3", e, (0, f.A)(i().Header3, "BB_Header3"));
-      }
-      const T = (e) => {
-        const { href: t, ...n } = e;
-        let o,
-          s = (0, p.OZ)(t ?? "");
-        (0, u.p)(s)
-          ? ((s =
-              (y.TS.IN_CLIENT ? "steam://openurl_external/" : "") +
-              (0, u.E)(s)),
-            (o = "noopener nofollow"))
-          : (s = (0, _.NT)(s));
-        const i =
-          "string" == typeof e.children &&
-          e.children.length > 0 &&
-          t &&
-          !t.startsWith("steam://")
-            ? (0, _.Qz)(t)
-            : void 0;
-        return (0, r.jsx)(g.Gq, {
-          toolTipContent: i,
-          direction: "top",
-          children: (0, r.jsx)(a.Ii, {
-            ...n,
-            href: s,
-            rel: o,
-            children: e.children,
-          }),
-        });
-      };
-      function L(e) {
-        const t = C(e.args, "author");
-        return (0, r.jsxs)("blockquote", {
-          className: (0, f.A)(i().BlockQuote, e.className),
-          children: [
-            !!t &&
-              (0, r.jsxs)("div", {
-                className: i().QuoteAuthor,
-                children: [
-                  (0, x.we)("#Bbcode_Originally_Posted_By") + " ",
-                  " ",
-                  (0, r.jsx)("b", { children: t + ":" }),
-                ],
-              }),
-            e.children,
-          ],
-        });
-      }
-      function A(e) {
-        return (0, r.jsx)("ul", {
-          className: (0, f.A)(i().List, "bullets"),
-          children: e.children,
-        });
-      }
-      function B(e) {
-        return (0, r.jsx)("ol", {
-          className: i().OrderedList,
-          children: e.children,
-        });
-      }
-      function U(e) {
-        let t = C(e.args, "id");
-        return (
-          t &&
-            "string" == typeof t &&
-            t.length > 0 &&
-            "#" === t[0] &&
-            (t = t.substring(1)),
-          (0, r.jsx)("li", {
-            className: i().ListItem,
-            id: t || void 0,
-            children: e.children,
-          })
-        );
-      }
-      function D(e) {
-        const { width: t } = e;
-        let n;
-        return (
-          t && parseInt(t) > 0 && (n = { width: `${t}px` }),
-          (0, r.jsx)("col", { style: n })
-        );
-      }
-      function R(e, t) {
-        const n = C(t.args, "width"),
-          o = C(t.args, "colspan"),
-          s = C(t.args, "rowspan"),
-          a = {};
-        return (
-          o && parseInt(o) > 1 && (a.colSpan = parseInt(o)),
-          s && parseInt(s) > 1 && (a.rowSpan = parseInt(s)),
-          (0, r.jsx)(e, {
-            className: (0, f.A)(i().TableCell, "td" == e && "BB_TableData"),
-            ...a,
-            style: n ? { width: n } : void 0,
-            children: t.children,
-          })
-        );
-      }
-    },
-    84958: (e, t, n) => {
-      "use strict";
-      n.d(t, { $A: () => d, UT: () => u, g4: () => c });
-      var r = n(7850),
-        o = n(22837),
-        s = n(48244),
-        i = n(61336),
-        a = n(30470),
-        l = n(59952);
-      function c(e) {
-        let t = (0, l.j$)(e, "poster");
-        t && (t = (0, i.L$)(t));
-        const n = new Array();
-        {
-          const t = (0, l.j$)(e, "mp4");
-          t && n.push({ sURL: (0, i.L$)(t), sFormat: "video/mp4" });
-          const r = (0, l.j$)(e, "webm");
-          r && n.push({ sURL: (0, i.L$)(r), sFormat: "video/webm" });
+            enabled: !0,
+            staleTime: 3600 * 1e3,
+            retry: !1,
+          };
         }
-        const r = (0, o.sfN)(a.TS.LANGUAGE),
-          s = r != o.Bhc,
-          c = new Array();
-        for (let t = o.Bhc; t < o.bP9; t++) {
-          const n = (0, l.j$)(e, "sub_" + (0, o.wwZ)(t));
-          n &&
-            c.push({
-              sURL: (0, i.L$)(n),
-              eLanguage: t,
-              sKind: "subtitles",
-              bDefault: s && t == r,
-            });
-          const a = (0, l.j$)(e, "cap_" + (0, o.wwZ)(t));
-          a &&
-            c.push({
-              sURL: (0, i.L$)(a),
-              eLanguage: t,
-              sKind: "captions",
-              bDefault: s && t == r,
-            });
+        function D(g) {
+          return (0, U.I)(v(g));
         }
-        return { sPoster: t, rgVideoSources: n, rgVideoTracks: c };
-      }
-      function d(e) {
-        const t = c(e.args);
-        return (0, r.jsx)(s.L, {
-          video: t,
-          bAutoPlay: !0,
-          bControls: !1,
-          bLoop: !0,
-        });
-      }
-      function u(e) {
-        const t = c(e.args),
-          n = e.children ? e.children.toString() : void 0;
-        n &&
-          n.startsWith("http") &&
-          t.rgVideoSources.push({ sURL: (0, i.L$)(n), sFormat: "video/webm" });
-        const o = (0, l.j$)(e.args, "autoplay"),
-          a = "0" !== o && "off" !== o && "false" !== o,
-          d = (0, l.j$)(e.args, "controls"),
-          u = "0" !== d && "off" !== d && "false" !== d,
-          p = (0, l.j$)(e.args, "loop"),
-          h = "0" !== d && "off" !== d && "false" !== d;
-        return (0, r.jsx)(s.L, {
-          video: t,
-          bAutoPlay: a,
-          bControls: u,
-          bLoop: p ? h : a,
-        });
-      }
-    },
-    23649: (e, t, n) => {
-      "use strict";
-      n.d(t, { h: () => d });
-      var r = n(7850),
-        o = n(99376),
-        s = n(90626),
-        i = n(59952),
-        a = n(42780),
-        l = n(66418);
-      function c(e) {
-        return new a.OJ(new a.R8());
-      }
-      function d(e) {
-        const { text: t, languageOverride: n } = e,
-          [a] = (0, s.useState)(
-            new o.B(
-              new Map([...Array.from(i.W4.entries())]),
-              c,
-              n ?? l.TS.LANGUAGE,
-            ),
-          );
-        return (0, r.jsx)(r.Fragment, { children: a.ParseBBCode(t, {}) });
-      }
-    },
-    74410: (e, t, n) => {
-      "use strict";
-      n.d(t, { Eo: () => p, V2: () => a.V2, gH: () => u });
-      var r = n(7850),
-        o = n(90626),
-        s = n(59952),
-        i = n(84958),
-        a = n(63976),
-        l = n(2160),
-        c = n(66418);
-      function d() {
-        return c.TS.EREALM === l.TU.k_ESteamRealmChina;
-      }
-      function u(e) {
-        if (d()) return null;
-        let t = (0, s.j$)(e.args);
-        if (t) {
-          let e = t.split(";");
-          if (2 == e.length) {
-            let t = e[0],
-              n = e[1].toLocaleLowerCase();
-            return (0, r.jsx)(a.AX, {
+      },
+      43597: (w, j, n) => {
+        "use strict";
+        n.d(j, { AX: () => A, V2: () => E, j6: () => u });
+        var e = n(7850),
+          m = n(72080),
+          U = n(86722),
+          a = n(32093),
+          M = n(72609),
+          T = n(90626),
+          h = n(43458),
+          b = n(85599),
+          L = n(32608),
+          v = n(36707),
+          D = n(18210),
+          g = n(19730),
+          p = n(374),
+          i = n(31587),
+          P = n.n(i),
+          E = ((r) => (
+            (r.left = "leftthumb"),
+            (r.right = "rightthumb"),
+            (r.full = "full"),
+            (r.summary = "summary"),
+            r
+          ))(E || {});
+        function y(r) {
+          return r == "full"
+            ? P().sizeFull
+            : (0, v.A)(
+                P().sizeThumb,
+                r == "leftthumb" ? P().floatLeft : P().floatRight,
+              );
+        }
+        function A(r) {
+          const {
               videoID: t,
-              align: n,
-              bShowVideoImmediately: !0,
-            });
-          }
-        }
-        return (0, r.jsx)(o.Fragment, {});
-      }
-      function p(e) {
-        if (d() || "CN" == c.TS.COUNTRY.toLocaleUpperCase())
-          return (0, i.UT)(e);
-        const t = (0, s.j$)(e.args, "youtubeid"),
-          n = (0, s.j$)(e.args, "size"),
-          o = (0, s.j$)(e.args, "seconds");
-        return (0, r.jsx)(a.AX, {
-          videoID: t,
-          nStartSeconds: o ? Number.parseInt(o) : void 0,
-          align: n,
-          bShowVideoImmediately: !0,
-        });
-      }
-    },
-    81962: (e, t, n) => {
-      "use strict";
-      n.d(t, { n: () => m, c: () => f });
-      var r = n(7850),
-        o = n(90626),
-        s = n(6336),
-        i = n(15318);
-      function a(e) {
-        const { text: t = "", style: n, children: s } = e;
-        if (null == t) return (0, r.jsx)(o.Fragment, { children: s });
-        let i;
-        if (
-          ((i =
-            t instanceof Array
-              ? t
-                  .map((e) => (e ? e.toString() : ""))
-                  .filter((e) => e.length > 0)
-                  .join("\n")
-              : t.toString()),
-          1 == o.Children.count(s))
-        ) {
-          let e = o.Children.only(s);
-          return o.cloneElement(e, { "data-copystyle": n, "data-copytext": i });
-        }
-        return (
-          console.log(
-            `Error: CopyableText must be the parent of exactly one child:\n\tcopystyle=${n} copytext=${i}`,
-          ),
-          (0, r.jsx)(o.Fragment, { children: s })
-        );
-      }
-      var l = n(52038),
-        c = n(42060),
-        d = n.n(c),
-        u = n(86927),
-        p = n(80902),
-        h = n(66418);
-      function m(e) {
-        const { emoticon: t, large: n } = e,
-          [s, c] = (0, u.OP)(),
-          [p, h] = o.useState(null),
-          m = `:${t}:`,
-          f = (0, i.G)(t, n);
-        return (0, r.jsxs)(r.Fragment, {
-          children: [
-            (0, r.jsx)(a, {
-              text: m,
-              style: "merge-adjacent",
-              children: (0, r.jsx)("img", {
-                ...c,
-                src: f,
-                className: (0, l.A)(d().emoticon, n ? d().large : void 0),
-                "data-emoticon": t,
-                alt: t,
-                ref: h,
-              }),
-            }),
-            s && p && (0, r.jsx)(g, { target: p, emoticon: t }),
-          ],
-        });
-      }
-      function g(e) {
-        const { target: t, emoticon: n } = e,
-          { data: o } = (function (e) {
-            return (0, p.I)({
-              queryKey: ["EmoticonHover", e],
-              queryFn: async () => {
-                const t = `${h.TS.COMMUNITY_CDN_URL}economy/emoticonhoverjson/${encodeURIComponent(e)}?l=${encodeURIComponent(h.TS.LANGUAGE)}&origin=${self.origin}`,
-                  n = await fetch(t);
-                if (200 != n.status)
-                  throw `Error fetching emoticon: ${n.status} ${n.statusText}`;
-                return await n.json();
-              },
-            });
-          })(n);
-        return (0, r.jsx)(f, {
-          target: t,
-          title: `:${n}:`,
-          subtitle: o && o.app_name ? o.app_name : void 0,
-          children: (0, r.jsx)(m, { emoticon: n, large: !0 }),
-        });
-      }
-      const f = ({ target: e, title: t, subtitle: n, children: o }) =>
-        (0, r.jsxs)(s.g, {
-          target: e,
-          style: { zIndex: 1700 },
-          className: d().EmoticonHover,
-          children: [
-            o,
-            (0, r.jsxs)("div", {
-              className: d().Info,
+              bShowVideoImmediately: o,
+              bAutoPlay: _,
+              nStartSeconds: d,
+              align: f = "full",
+            } = r,
+            [B, l] = (0, T.useState)(!o),
+            { data: O, isSuccess: C } = (0, p.F8)(t, B);
+          if (B) {
+            const x = O?.title ?? (0, D.we)("#Loading"),
+              F = O?.views ?? "0",
+              W = O?.description ?? "",
+              I = () => l(!1),
+              K = (V) => {
+                (V.key == "Enter" || V.key == " ") && (V.preventDefault(), I());
+              };
+            return (0, e.jsxs)("div", {
+              className: m.gg.Box,
+              role: "button",
+              tabIndex: 0,
+              onClick: I,
+              onKeyDown: K,
               children: [
-                (0, r.jsx)("div", {
-                  className: d().Name,
-                  children: t || (0, r.jsx)("span", { children: " " }),
+                (0, e.jsx)(m.KN, {
+                  strURL: "https://img.youtube.com/vi/" + t + "/0.jpg",
                 }),
-                (0, r.jsx)("div", {
-                  className: d().AppName,
-                  children: n || (0, r.jsx)("span", { children: " " }),
-                }),
-              ],
-            }),
-          ],
-        });
-    },
-    48079: (e, t, n) => {
-      "use strict";
-      n.d(t, { $k: () => x, S8: () => y, fI: () => _ });
-      var r = n(34629),
-        o = n(7850),
-        s = n(75844),
-        i = n(90626),
-        a = n(17267),
-        l = n(22837),
-        c = n(49771),
-        d = n(6336),
-        u = n(42327),
-        p = n(84933),
-        h = n(66418),
-        m = n(23649),
-        g = n(3246),
-        f = n.n(g);
-      const x = (0, s.PA)((e) => {
-        const t = (0, a.z5)(e.photo, (0, l.sfN)(h.TS.LANGUAGE)),
-          n = t ? ("string" == typeof t ? t : t[1]) : void 0,
-          r = Boolean(e.title),
-          s = Boolean(e.company);
-        return (0, o.jsxs)("div", {
-          className: f().SpeakerPopup,
-          onMouseLeave: e.fnClose,
-          children: [
-            (0, o.jsxs)("div", {
-              className: f().SpeakerInfoOuter,
-              children: [
-                e.photo && (0, o.jsx)("img", { src: n }),
-                (0, o.jsxs)("div", {
-                  className: f().SpeakerInfoInner,
+                (0, e.jsxs)(m.J7, {
                   children: [
-                    (0, o.jsx)("div", { children: e.name }),
-                    (r || s) &&
-                      (0, o.jsxs)("div", {
-                        children: [
-                          r &&
-                            (0, o.jsx)("span", {
-                              className: f().SpeakerTitle,
-                              children: e.title,
-                            }),
-                          r && s && (0, o.jsx)("span", { children: ", " }),
-                          s && (0, o.jsx)("span", { children: e.company }),
-                        ],
-                      }),
+                    (0, e.jsx)(m.bv, {
+                      children: (0, D.we)("#EventEditor_YouTubeVideoTitle", x),
+                    }),
+                    (0, e.jsx)(m.Yd, {
+                      children: (0, D.we)(
+                        "#EventEditor_YouTubeVideoViews",
+                        (0, g.Dq)(Number(F)),
+                      ),
+                    }),
+                    (0, e.jsxs)(m.s4, {
+                      children: [
+                        C && W,
+                        !C && (0, e.jsx)(b.t, { size: "medium" }),
+                      ],
+                    }),
                   ],
                 }),
               ],
-            }),
-            e.bio &&
-              (0, o.jsxs)("div", {
-                className: f().SpeakerBio,
+            });
+          } else
+            return (0, e.jsx)(L.gZ, {
+              video: t,
+              children: (0, e.jsxs)("div", {
+                className: (0, v.A)(P().PreviewYouTubeVideo, y(f)),
+                id: t,
                 children: [
-                  e.bio,
-                  e.bioString && (0, o.jsx)(m.h, { text: e.bioString }),
-                ],
-              }),
-          ],
-        });
-      });
-      class _ extends i.Component {
-        static sm_embeddedElements = new c.MX(
-          "presenter-hover-source-elements",
-        );
-        m_refAnchor = i.createRef();
-        m_fnHidePopup = null;
-        m_nScrollPosAtHoverStart = 0;
-        ClosePopup() {
-          (0, u.p)() ||
-            (this.m_fnHidePopup &&
-              (this.m_fnHidePopup(),
-              (this.m_fnHidePopup = null),
-              window.removeEventListener("scroll", this.OnScroll)));
-        }
-        componentWillUnmount() {
-          this.ClosePopup();
-        }
-        OnScroll() {
-          Math.abs(window.scrollY - this.m_nScrollPosAtHoverStart) > 50 &&
-            this.ClosePopup();
-        }
-        OnHover(e) {
-          const t = this.m_refAnchor.current;
-          if (!t) return;
-          const n = {
-              direction: "right",
-              bEnablePointerEvents: !0,
-              style: { maxWidth: 640, minHeight: t.clientHeight },
-              target: t,
-            },
-            r = "presenter-hover-" + Math.floor(1e8 * Math.random());
-          (this.m_fnHidePopup = () =>
-            _.sm_embeddedElements.HideElement(t.ownerDocument, r)),
-            window.addEventListener("scroll", this.OnScroll),
-            (this.m_nScrollPosAtHoverStart = window.scrollY);
-          _.sm_embeddedElements.ShowElementDelayed(
-            t.ownerDocument,
-            150,
-            (0, o.jsx)(d.g, {
-              ...n,
-              children: (0, o.jsx)(x, { ...this.props, fnClose: this.OnLeave }),
-            }),
-            r,
-          );
-        }
-        OnLeave(e) {
-          this.ClosePopup();
-        }
-        render() {
-          return (0, o.jsx)("div", {
-            className: f().SpeakerHover,
-            ref: this.m_refAnchor,
-            onMouseEnter: this.OnHover,
-            onFocus: this.OnHover,
-            onMouseLeave: this.OnLeave,
-            onBlur: this.OnLeave,
-            children: this.props.children,
-          });
-        }
-      }
-      function y(e) {
-        const {
-            photo: t,
-            name: n,
-            title: r,
-            company: s,
-            hidePhotoInCompactView: i,
-          } = e,
-          c = (0, a.z5)(t, (0, l.sfN)(h.TS.LANGUAGE)),
-          d = c && !i ? ("string" == typeof c ? c : c[1]) : null,
-          u = Boolean(r),
-          p = Boolean(s);
-        return (0, o.jsx)("div", {
-          className: f().SpeakerOuter,
-          children: (0, o.jsx)(_, {
-            ...e,
-            children: (0, o.jsx)("div", {
-              className: f().Speaker,
-              children: (0, o.jsxs)("div", {
-                className: f().SpeakerInfoOuter,
-                children: [
-                  !!d && (0, o.jsx)("img", { src: d }),
-                  (0, o.jsxs)("div", {
-                    className: f().SpeakerInfoInner,
-                    children: [
-                      (0, o.jsx)("div", { children: n }),
-                      (u || p) &&
-                        (0, o.jsxs)("div", {
-                          children: [
-                            u &&
-                              (0, o.jsx)("span", {
-                                className: f().SpeakerTitle,
-                                children: r,
-                              }),
-                            u && p && (0, o.jsx)("span", { children: ", " }),
-                            p && (0, o.jsx)("span", { children: s }),
-                          ],
-                        }),
-                    ],
+                  (0, e.jsx)("img", {
+                    className: P().PlaceholderImg,
+                    alt: "",
+                    src:
+                      M.TS.COMMUNITY_CDN_URL +
+                      "public/shared/images/responsive/youtube_16x9_placeholder.gif",
+                  }),
+                  (0, e.jsx)(L.fm, {
+                    video: t,
+                    autoplay: _ ?? !1,
+                    startSeconds: d,
+                    controls: !0,
+                    playsInline: !0,
+                    autopause: !0,
+                    showFullscreenBtn: !0,
                   }),
                 ],
               }),
-            }),
-          }),
+            });
+        }
+        function u(r, t) {
+          if (M.TS.EREALM === a.TU.k_ESteamRealmChina) return null;
+          const o = (0, h.XU)(r);
+          return o?.strVideoID !== void 0
+            ? (0, e.jsx)(A, {
+                videoID: o.strVideoID,
+                nStartSeconds: o.nStartSeconds,
+                bShowVideoImmediately: !1,
+              })
+            : (0, U.Pm)(r, t?.event);
+        }
+      },
+      72243: (w, j, n) => {
+        "use strict";
+        n.d(j, { L: () => v });
+        var e = n(7850),
+          m = n(90626),
+          U = n(99412),
+          a = n(32093),
+          M = n(18210),
+          T = n(53113),
+          h = n(72609);
+        function b(E) {
+          return !(
+            (!(0, T._1)(E.sPoster) && !(0, T.ZF)(E.sPoster)) ||
+            (E.rgVideoSources &&
+              E.rgVideoSources.some((y) => !(0, T.ZF)(y.sURL))) ||
+            (E.rgVideoTracks && E.rgVideoTracks.some((y) => !(0, T.ZF)(y.sURL)))
+          );
+        }
+        class L {
+          m_bUserHasVolumePreference = !1;
+          m_flVolumePreference = 0;
+          BUserHasVolumePreference() {
+            return this.m_bUserHasVolumePreference;
+          }
+          SetVolumePreference(y) {
+            (this.m_flVolumePreference = y),
+              (this.m_bUserHasVolumePreference = !0);
+          }
+          GetVolumePreference() {
+            return this.m_flVolumePreference;
+          }
+          BVolumePreferenceMuted() {
+            return this.m_flVolumePreference < 0.001;
+          }
+          static s_Singleton;
+          static Get() {
+            return L.s_Singleton || (L.s_Singleton = new L()), L.s_Singleton;
+          }
+        }
+        const v = (0, m.forwardRef)(function (y, A) {
+          const {
+              video: u,
+              bAutoPlay: r,
+              bControls: t,
+              bLoop: o,
+              bMuted: _,
+              className: d,
+              mediaScale: f,
+              flAspectRatio: B,
+              onClick: l,
+              altText: O,
+            } = y,
+            C = (0, m.useMemo)(
+              () =>
+                !!u.rgVideoTracks?.some(
+                  (Q) => Q.sKind == "subtitles" || Q.sKind == "captions",
+                ),
+              [u.rgVideoTracks],
+            ),
+            [x, F] = m.useState(!1),
+            W = D();
+          if (!u.rgVideoSources || !u.rgVideoSources.length) return null;
+          const I = b(u);
+          let K;
+          (!I || (C && h.TS.EUNIVERSE == U.wLO)) && (K = "anonymous");
+          const V = _ || (r && L.Get().BVolumePreferenceMuted()),
+            Z = u.sPoster ? g(u.sPoster, W) : "",
+            q = (Q) => {
+              const G = Q.target,
+                z = G.muted ? 0 : G.volume;
+              x && L.Get().SetVolumePreference(z);
+            },
+            ne = (Q) => {
+              const G = Q.target,
+                z = G.currentTime == 0,
+                ee = L.Get().BUserHasVolumePreference();
+              if ((F(!0), !!z))
+                if (!ee && !r) {
+                  const J = G.muted ? 0 : G.volume;
+                  L.Get().SetVolumePreference(J);
+                } else
+                  ee &&
+                    ((G.volume = L.Get().GetVolumePreference()),
+                    (G.muted = L.Get().BVolumePreferenceMuted()));
+            };
+          return (0, e.jsxs)("video", {
+            width: "100%",
+            height: "auto",
+            autoPlay: r,
+            muted: V,
+            playsInline: !0,
+            controls: t,
+            poster: Z,
+            loop: o,
+            crossOrigin: K,
+            onVolumeChange: q,
+            onPlay: ne,
+            ref: A,
+            className: d,
+            onClick: l,
+            "aria-label": O,
+            style: {
+              width: f && f >= 1 && f < 100 ? `${f}%` : void 0,
+              aspectRatio: B || void 0,
+            },
+            children: [
+              (0, e.jsx)(p, {
+                rgVideoSources: u.rgVideoSources,
+                strCacheBreakOrigin: W,
+              }),
+              (0, e.jsx)(i, {
+                rgVideoTracks: u.rgVideoTracks,
+                strCacheBreakOrigin: W,
+              }),
+            ],
+          });
         });
-      }
-      (0, r.Cg)([p.oI], _.prototype, "ClosePopup", null),
-        (0, r.Cg)([p.oI], _.prototype, "OnScroll", null),
-        (0, r.Cg)([p.oI], _.prototype, "OnHover", null),
-        (0, r.Cg)([p.oI], _.prototype, "OnLeave", null);
+        function D() {
+          const E = window.location.href,
+            A = [
+              h.TS.STORE_BASE_URL,
+              h.TS.COMMUNITY_BASE_URL,
+              h.TS.PARTNER_BASE_URL,
+              h.TS.HELP_BASE_URL,
+              h.TS.STATS_BASE_URL,
+              h.TS.STORE_CHECKOUT_BASE_URL,
+            ].find((u) => u && E.startsWith(u));
+          if (A) return A;
+          try {
+            return new URL(E).origin + "/";
+          } catch {
+            return "unknown";
+          }
+        }
+        function g(E, y) {
+          if (E) {
+            if ((0, T._1)(E)) return E;
+            try {
+              const A = new URL(E);
+              return (
+                (A.search = (A.search ? A.search + "&" : "?") + "origin=" + y),
+                A.toString()
+              );
+            } catch {
+              return E;
+            }
+          }
+        }
+        function p(E) {
+          const { rgVideoSources: y, strCacheBreakOrigin: A } = E;
+          return y
+            .filter((u) => !!u.sURL)
+            .map((u) =>
+              (0, e.jsx)(
+                "source",
+                { src: g(u.sURL, A), type: u.sFormat },
+                u.sURL,
+              ),
+            );
+        }
+        function i(E) {
+          const { rgVideoTracks: y, strCacheBreakOrigin: A } = E;
+          return y
+            ? y.map((u, r) =>
+                (0, e.jsx)(
+                  P,
+                  { track: u, rgVideoTracks: y, strCacheBreakOrigin: A },
+                  r,
+                ),
+              )
+            : null;
+        }
+        function P(E) {
+          const { track: y, rgVideoTracks: A, strCacheBreakOrigin: u } = E;
+          let r = y.eLanguage;
+          if (h.TS.EREALM == a.TU.k_ESteamRealmChina)
+            if (M.A0.IsELanguageValidInRealm(r, a.TU.k_ESteamRealmChina))
+              r = M.A0.GetELanguageFallback(r);
+            else if (r === U.NFp) {
+              if (A.find((t) => M.A0.GetELanguageFallback(t.eLanguage) === r))
+                return null;
+            } else return null;
+          else if (!M.A0.IsELanguageValidInRealm(r, a.TU.k_ESteamRealmGlobal))
+            return null;
+          return (0, e.jsx)("track", {
+            src: g(y.sURL, u),
+            kind: y.sKind,
+            default: y.bDefault,
+            srcLang: (0, U.wwZ)(r),
+            label: (0, M.uD)(r),
+          });
+        }
+      },
+      70187: (w, j, n) => {
+        "use strict";
+        n.d(j, {
+          B8: () => $,
+          It: () => O,
+          Pk: () => re,
+          Sz: () => F,
+          Tu: () => o,
+          W4: () => u,
+          ZS: () => W,
+          Zb: () => x,
+          _J: () => ie,
+          ck: () => ce,
+          d$: () => J,
+          j$: () => t,
+        });
+        var e = n(7850),
+          m = n(29950),
+          U = n(33645),
+          a = n.n(U),
+          M = n(24660),
+          T = n(19298),
+          h = n(71944),
+          b = n(90626),
+          L = n(43434),
+          v = n(83482),
+          D = n(1917),
+          g = n(36118),
+          p = n(71421),
+          i = n(36707),
+          P = n(18210),
+          E = n(53113),
+          y = n(98609),
+          A = n(68941);
+        const u = new Map([
+            ["b", { Constructor: _, autocloses: !1 }],
+            ["i", { Constructor: d, autocloses: !1 }],
+            [
+              "h1",
+              { Constructor: x, autocloses: !1, skipFollowingNewline: !0 },
+            ],
+            [
+              "h2",
+              { Constructor: F, autocloses: !1, skipFollowingNewline: !0 },
+            ],
+            [
+              "h3",
+              { Constructor: W, autocloses: !1, skipFollowingNewline: !0 },
+            ],
+            [
+              "h4",
+              { Constructor: I, autocloses: !1, skipFollowingNewline: !0 },
+            ],
+            [
+              "h5",
+              { Constructor: K, autocloses: !1, skipFollowingNewline: !0 },
+            ],
+            ["center", { Constructor: V, autocloses: !1 }],
+            [
+              "smalltext",
+              { Constructor: Z, autocloses: !1, skipFollowingNewline: !0 },
+            ],
+            ["u", { Constructor: f, autocloses: !1 }],
+            ["strike", { Constructor: B, autocloses: !1 }],
+            ["spoiler", { Constructor: q, autocloses: !1 }],
+            ["hr", { Constructor: ne, autocloses: !1 }],
+            ["noparse", { Constructor: ge, autocloses: !1 }],
+            ["url", { Constructor: z, autocloses: !1 }],
+            ["quote", { Constructor: re, autocloses: !1 }],
+            ["pullquote", { Constructor: ae, autocloses: !1 }],
+            ["code", { Constructor: X, autocloses: !1 }],
+            ["c", { Constructor: le, autocloses: !1 }],
+            [
+              "list",
+              { Constructor: $, autocloses: !1, skipInternalNewline: !0 },
+            ],
+            [
+              "olist",
+              { Constructor: ie, autocloses: !1, skipInternalNewline: !0 },
+            ],
+            ["*", { Constructor: ce, autocloses: !0, skipInternalNewline: !0 }],
+            [
+              "table",
+              { Constructor: pe, autocloses: !1, skipInternalNewline: !0 },
+            ],
+            [
+              "tr",
+              {
+                Constructor: xe,
+                autocloses: !1,
+                skipInternalNewline: !0,
+                skipFollowingNewline: !0,
+              },
+            ],
+            [
+              "th",
+              {
+                Constructor: ve,
+                autocloses: !1,
+                skipInternalNewline: !0,
+                skipFollowingNewline: !0,
+              },
+            ],
+            [
+              "td",
+              {
+                Constructor: Te,
+                autocloses: !1,
+                skipInternalNewline: !0,
+                skipFollowingNewline: !0,
+              },
+            ],
+            [
+              "expand",
+              {
+                Constructor: Pe,
+                autocloses: !1,
+                skipInternalNewline: !0,
+                allowWrapTextForCopying: !0,
+              },
+            ],
+            ["calendarevent", { Constructor: ye, autocloses: !0 }],
+            ["doclink", { Constructor: ee, autocloses: !1 }],
+            ["color", { Constructor: Q, autocloses: !1 }],
+            ["bgcolor", { Constructor: G, autocloses: !1 }],
+            ["p", { Constructor: l, autocloses: !1, skipFollowingNewline: !0 }],
+          ]),
+          r = new Map([
+            ["looping_media", { Constructor: A.$A, autocloses: !1 }],
+            ["video", { Constructor: A.UT, autocloses: !1 }],
+            ["youtubeorvideo", { Constructor: D.Eo, autocloses: !1 }],
+            ["previewyoutube", { Constructor: D.gH, autocloses: !1 }],
+          ]);
+        function t(s, c) {
+          return c === void 0 ? s[""] : s[c];
+        }
+        function o(s, c) {
+          return (N) => s({ ...N, className: c });
+        }
+        function _(s) {
+          return (0, e.jsx)("b", { className: a().Bold, children: s.children });
+        }
+        function d(s) {
+          return (0, e.jsx)("i", {
+            className: (0, i.A)(a().Italic, "BB_Italic"),
+            children: s.children,
+          });
+        }
+        function f(s) {
+          return (0, e.jsx)("u", {
+            className: a().Underline,
+            children: s.children,
+          });
+        }
+        function B(s) {
+          return (0, e.jsx)("s", {
+            className: a().Strike,
+            children: s.children,
+          });
+        }
+        function l(s) {
+          return (0, e.jsxs)("p", {
+            className: a().Paragraph,
+            children: [s.children, (0, e.jsx)("wbr", {})],
+          });
+        }
+        function O(s) {
+          return (0, e.jsxs)("div", {
+            className: a().Paragraph,
+            role: "paragraph",
+            children: [s.children, (0, e.jsx)("wbr", {})],
+          });
+        }
+        function C(s, c, N) {
+          let S = t(c.args, "id");
+          return (
+            S || (S = t(c.args)),
+            S &&
+              typeof S == "string" &&
+              S.length > 0 &&
+              S[0] === "#" &&
+              (S = S.substring(1)),
+            (0, e.jsx)(s, {
+              id: S || void 0,
+              className: (0, i.A)(N, c.className),
+              children: c.children,
+            })
+          );
+        }
+        function x(s) {
+          return C("h1", s, (0, i.A)(a().Header1, "BB_Header1"));
+        }
+        function F(s) {
+          return C("h2", s, (0, i.A)(a().Header2, "BB_Header2"));
+        }
+        function W(s) {
+          return C("h3", s, (0, i.A)(a().Header3, "BB_Header3"));
+        }
+        function I(s) {
+          return C("h4", s, (0, i.A)(a().Header4, "BB_Header4"));
+        }
+        function K(s) {
+          return C("h5", s, (0, i.A)(a().Header5, "BB_Header5"));
+        }
+        function V(s) {
+          let c = t(s.args, "id");
+          return (
+            c &&
+              typeof c == "string" &&
+              c.length > 0 &&
+              c[0] === "#" &&
+              (c = c.substring(1)),
+            (0, e.jsx)("span", {
+              id: c || void 0,
+              className: (0, i.A)(a().CenterSpan, "BB_Center"),
+              children: s.children,
+            })
+          );
+        }
+        function Z(s) {
+          return C("div", s, (0, i.A)(a().SmallText, "BB_SmallText"));
+        }
+        function q(s) {
+          let [c, N] = b.useState(!1),
+            S = b.useCallback(() => {
+              N(!c);
+            }, [c]);
+          return (0, e.jsx)(T.Z, {
+            className: (0, i.A)(a().Spoiler, c && a().Revealed),
+            focusable: !0,
+            onActivate: S,
+            onOKActionDescription: (0, P.we)(
+              c ? "#Bbcode_Spoiler_Hide" : "#Bbcode_Spoiler_Show",
+            ),
+            children: (0, e.jsx)("span", {
+              className: a().SpoilerText,
+              children: s.children,
+            }),
+          });
+        }
+        function ne(s) {
+          return (0, e.jsx)("hr", { className: a().HR });
+        }
+        function Q(s) {
+          const c = t(s.args);
+          return (0, e.jsx)("span", {
+            style: { color: c },
+            children: s.children,
+          });
+        }
+        function G(s) {
+          const c = t(s.args);
+          return (0, e.jsx)("span", {
+            style: { backgroundColor: c },
+            children: s.children,
+          });
+        }
+        function z(s) {
+          let c = (0, m.J)(t(s.args));
+          if (!c) {
+            const k = s.children;
+            typeof k == "string" && (0, E.DZ)(k) && (c = (0, m.J)(k));
+          }
+          const N = t(s.args, "style") == "button" ? a().LinkButton : void 0,
+            S = N && t(s.args, "buttoncolor");
+          let R = t(s.args, "id");
+          return (
+            R &&
+              typeof R == "string" &&
+              R.length > 0 &&
+              R[0] === "#" &&
+              (R = R.substring(1)),
+            c === void 0 && !R
+              ? s.children || ""
+              : c === void 0 ||
+                  (typeof c == "string" && c.length > 0 && c[0] == "#")
+                ? (0, e.jsx)("a", {
+                    href: c ?? null,
+                    id: R,
+                    children: s.children,
+                  })
+                : (0, e.jsx)(J, {
+                    className: N,
+                    href: c,
+                    id: R,
+                    style: { backgroundColor: S },
+                    children: s.children,
+                  })
+          );
+        }
+        function ee(s) {
+          const c = t(s.args),
+            N = t(s.args, "style") == "button" ? a().LinkButton : void 0,
+            S = N && t(s.args, "buttoncolor");
+          return (0, e.jsx)(J, {
+            className: N,
+            style: { backgroundColor: S },
+            href: `${y.TS.PARTNER_BASE_URL}doc/${c}`,
+            children: s.children,
+          });
+        }
+        const J = (s) => {
+          const { href: c, ...N } = s;
+          let S = (0, v.OZ)(c ?? ""),
+            R;
+          (0, L.p)(S)
+            ? ((S =
+                (y.TS.IN_CLIENT ? "steam://openurl_external/" : "") +
+                (0, L.E)(S)),
+              (R = "noopener nofollow"))
+            : (S = (0, E.NT)(S));
+          const k =
+            typeof s.children == "string" &&
+            s.children.length > 0 &&
+            c &&
+            !c.startsWith("steam://")
+              ? (0, E.Qz)(c)
+              : void 0;
+          return (0, e.jsx)(p.Gq, {
+            toolTipContent: k,
+            direction: "top",
+            children: (0, e.jsx)(M.Ii, {
+              ...N,
+              href: S,
+              rel: R,
+              children: s.children,
+            }),
+          });
+        };
+        function oe(s) {
+          return jsx("a", {
+            className: styles.DisabledMouseEvents,
+            href: t(s.args),
+            children: s.children,
+          });
+        }
+        function re(s) {
+          const c = t(s.args, "author");
+          return (0, e.jsxs)("blockquote", {
+            className: (0, i.A)(a().BlockQuote, s.className),
+            children: [
+              !!c &&
+                (0, e.jsxs)("div", {
+                  className: a().QuoteAuthor,
+                  children: [
+                    (0, P.we)("#Bbcode_Originally_Posted_By") + " ",
+                    " ",
+                    (0, e.jsx)("b", { children: c + ":" }),
+                  ],
+                }),
+              s.children,
+            ],
+          });
+        }
+        function ae(s) {
+          return (0, e.jsx)("div", {
+            className: a().PullQuote,
+            children: s.children,
+          });
+        }
+        function X(s) {
+          return (0, e.jsx)("code", {
+            className: a().CodeBlock,
+            children: s.children,
+          });
+        }
+        function le(s) {
+          return (0, e.jsx)("code", {
+            className: a().Code,
+            children: s.children,
+          });
+        }
+        function $(s) {
+          return (0, e.jsx)("ul", {
+            className: (0, i.A)(a().List, "bullets"),
+            children: s.children,
+          });
+        }
+        function ie(s) {
+          return (0, e.jsx)("ol", {
+            className: a().OrderedList,
+            children: s.children,
+          });
+        }
+        function ce(s) {
+          let c = t(s.args, "id");
+          return (
+            c &&
+              typeof c == "string" &&
+              c.length > 0 &&
+              c[0] === "#" &&
+              (c = c.substring(1)),
+            (0, e.jsx)("li", {
+              className: a().ListItem,
+              id: c || void 0,
+              children: s.children,
+            })
+          );
+        }
+        function ge(s) {
+          return s.children;
+        }
+        function pe(s) {
+          const c = t(s.args, "noborder"),
+            N = t(s.args, "equalcells"),
+            S = t(s.args, "colwidth");
+          return (0, e.jsxs)("table", {
+            className: (0, i.A)(
+              a().Table,
+              "BB_Table",
+              c && a().NoBorder,
+              N && a().EqualCells,
+            ),
+            children: [
+              S &&
+                (0, e.jsx)("colgroup", {
+                  children: S.split(",").map((R, k) =>
+                    (0, e.jsx)(Ce, { width: R }, k),
+                  ),
+                }),
+              (0, e.jsx)("tbody", { children: s.children }),
+            ],
+          });
+        }
+        function Ce(s) {
+          const { width: c } = s;
+          let N;
+          return (
+            c && parseInt(c) > 0 && (N = { width: `${c}px` }),
+            (0, e.jsx)("col", { style: N })
+          );
+        }
+        function xe(s) {
+          return (0, e.jsx)("tr", {
+            className: (0, i.A)(a().TableRow, "BB_TableRow"),
+            children: s.children,
+          });
+        }
+        function me(s, c) {
+          const N = t(c.args, "width"),
+            S = t(c.args, "colspan"),
+            R = t(c.args, "rowspan"),
+            k = {};
+          return (
+            S && parseInt(S) > 1 && (k.colSpan = parseInt(S)),
+            R && parseInt(R) > 1 && (k.rowSpan = parseInt(R)),
+            (0, e.jsx)(s, {
+              className: (0, i.A)(a().TableCell, s == "td" && "BB_TableData"),
+              ...k,
+              style: N ? { width: N } : void 0,
+              children: c.children,
+            })
+          );
+        }
+        function ve(s) {
+          return me("th", s);
+        }
+        function Te(s) {
+          return me("td", s);
+        }
+        function De(s, c, N, S) {
+          switch (s) {
+            case "details":
+              return {
+                collapsed: "#Bbcode_Expand_Details_Collapsed",
+                expanded: "#Bbcode_Expand_Details_Expanded",
+                style: a().ExpandSection_Details,
+              };
+            case "spoiler":
+              return {
+                collapsed: "#Bbcode_Expand_Spoiler_Collapsed",
+                expanded: "#Bbcode_Expand_Spoiler_Expanded",
+                style: a().ExpandSection_Spoiler,
+              };
+            case "title":
+              return {
+                collapsed: c || N || "#Bbcode_Expand_ShowMore_Collapsed",
+                expanded: c || S || "#Bbcode_Expand_ShowMore_Expanded",
+                style: a().ExpandSection_WithTitle,
+              };
+            default:
+            case "showmore":
+              return {
+                collapsed: "#Bbcode_Expand_ShowMore_Collapsed",
+                expanded: "#Bbcode_Expand_ShowMore_Expanded",
+                style: a().ExpandSection_ShowMore,
+              };
+          }
+        }
+        function Pe(s) {
+          const c = !!t(s.args, "expanded"),
+            [N, S] = b.useState(c),
+            R = t(s.args, "title"),
+            k = t(s.args, "collapsed_str"),
+            ue = t(s.args, "expanded_str"),
+            Y = De(t(s.args, "type"), R, k, ue);
+          return (0, e.jsxs)("div", {
+            className: (0, i.A)({
+              [a().ExpandSectionBlock]: !0,
+              [Y.style ?? ""]: Y.style != null,
+              [a().ExpandSectionExpanded]: N,
+              [a().ExpandSectionCollapsed]: !N,
+              BBCodeExpanded: N,
+              BBCodeCollapsed: !N,
+            }),
+            children: [
+              (0, e.jsxs)("div", {
+                className: a().ExpandSectionHeader,
+                onClick: () => S(!N),
+                children: [
+                  (0, P.we)(N ? Y.expanded : Y.collapsed),
+                  (0, e.jsx)("div", {
+                    className: a().EmbedArrow,
+                    children: (0, e.jsx)(g.DK4, { angle: N ? 180 : 0 }),
+                  }),
+                ],
+              }),
+              N &&
+                (0, e.jsx)("div", {
+                  className: a().ExpandSectionBody,
+                  children: s.children,
+                }),
+            ],
+          });
+        }
+        function ye(s) {
+          const c = t(s.args, "title"),
+            N = t(s.args, "start") ?? t(s.args, "datetime"),
+            S = t(s.args, "end") ?? t(s.args, "datetime"),
+            R = t(s.args, "body") ?? null,
+            k = t(s.args, "location") ?? null,
+            ue = t(s.args, "id") ?? "",
+            Y = new Date(N),
+            Le = Y.getUTCFullYear(),
+            Be = ("0" + (Y.getUTCMonth() + 1)).slice(-2),
+            Oe = ("0" + Y.getUTCDate()).slice(-2),
+            Ae = ("0" + Y.getUTCHours()).slice(-2),
+            Me = ("0" + Y.getUTCMinutes()).slice(-2),
+            fe = `${Le}${Be}${Oe}T${Ae}${Me}00Z`,
+            te = new Date(S),
+            Se = te.getUTCFullYear(),
+            be = ("0" + (te.getUTCMonth() + 1)).slice(-2),
+            Ne = ("0" + te.getUTCDate()).slice(-2),
+            Ue = ("0" + te.getUTCHours()).slice(-2),
+            Ie = ("0" + te.getUTCMinutes()).slice(-2),
+            he = `${Se}${be}${Ne}T${Ue}${Ie}00Z`;
+          let se;
+          try {
+            let H = `BEGIN:VCALENDAR\r
+`;
+            (H += `VERSION:2.0\r
+`),
+              (H += `BEGIN:VEVENT\r
+`),
+              (H += `DTSTART:${fe}\r
+`),
+              (H += `DTEND:${he}\r
+`),
+              (H += `SUMMARY:${c.replace(
+                `
+`,
+                "\\n",
+              )}\r
+`),
+              R &&
+                (H += `DESCRIPTION:${R.replace(
+                  `
+`,
+                  "\\n",
+                )}\r
+`),
+              k &&
+                (H += `LOCATION:${k.replace(
+                  `
+`,
+                  "\\n",
+                )}\r
+`),
+              (H += `END:VEVENT\r
+`),
+              (H += `END:VCALENDAR\r
+`),
+              (se = `data:text/calendar;charset=utf-8;base64,${h.iI(new TextEncoder().encode(H))}`);
+          } catch (H) {
+            console.error(H);
+          }
+          let de =
+            "https://calendar.google.com/calendar/render?action=TEMPLATE";
+          (de += `&text=${encodeURI(c)}`),
+            (de += `&details=${encodeURI(R)}`),
+            (de += `&dates=${encodeURI(fe + "/" + he)}`);
+          const Ee = (H) => {
+            if ("ReactNativeWebView" in window) {
+              const je = window.ReactNativeWebView,
+                Re = {
+                  event_name: "addcalendarevent",
+                  tsStart: Y.getTime(),
+                  tsEnd: te.getTime(),
+                  strTitle: c,
+                  strNotes: R,
+                  strLocation: k,
+                };
+              je.postMessage(JSON.stringify(Re)), H.preventDefault();
+            }
+          };
+          return (0, e.jsxs)("div", {
+            className: (0, i.A)(
+              "SaleSectionCalendarEventContainer",
+              a().CalendarEventContainer,
+            ),
+            id: ue,
+            children: [
+              se &&
+                (0, e.jsx)("a", {
+                  className: (0, i.A)(
+                    "SaleSectionCalendarEventLink",
+                    a().CalendarEventLink,
+                  ),
+                  href: se,
+                  onClick: Ee,
+                  download: "calendar.ics",
+                  children: "Apple",
+                }),
+              (0, e.jsx)("a", {
+                className: (0, i.A)(
+                  "SaleSectionCalendarEventLink",
+                  a().CalendarEventLink,
+                ),
+                href: de,
+                children: "Google",
+              }),
+              se &&
+                (0, e.jsx)("a", {
+                  className: (0, i.A)(
+                    "SaleSectionCalendarEventLink",
+                    a().CalendarEventLink,
+                  ),
+                  href: se,
+                  onClick: Ee,
+                  download: "calendar.ics",
+                  children: "Outlook",
+                }),
+            ],
+          });
+        }
+      },
+      68941: (w, j, n) => {
+        "use strict";
+        n.d(j, { $A: () => b, UT: () => L, g4: () => h });
+        var e = n(7850),
+          m = n(99412),
+          U = n(72243),
+          a = n(53113),
+          M = n(98609),
+          T = n(70187);
+        function h(v) {
+          let D = (0, T.j$)(v, "poster");
+          D && (D = (0, a.L$)(D));
+          const g = new Array();
+          {
+            const E = (0, T.j$)(v, "mp4");
+            E && g.push({ sURL: (0, a.L$)(E), sFormat: "video/mp4" });
+            const y = (0, T.j$)(v, "webm");
+            y && g.push({ sURL: (0, a.L$)(y), sFormat: "video/webm" });
+          }
+          const p = (0, m.sfN)(M.TS.LANGUAGE),
+            i = p != m.Bhc,
+            P = new Array();
+          for (let E = m.Bhc; E < m.bP9; E++) {
+            const y = (0, T.j$)(v, "sub_" + (0, m.wwZ)(E));
+            y &&
+              P.push({
+                sURL: (0, a.L$)(y),
+                eLanguage: E,
+                sKind: "subtitles",
+                bDefault: i && E == p,
+              });
+            const A = (0, T.j$)(v, "cap_" + (0, m.wwZ)(E));
+            A &&
+              P.push({
+                sURL: (0, a.L$)(A),
+                eLanguage: E,
+                sKind: "captions",
+                bDefault: i && E == p,
+              });
+          }
+          return { sPoster: D, rgVideoSources: g, rgVideoTracks: P };
+        }
+        function b(v) {
+          const D = h(v.args);
+          return (0, e.jsx)(U.L, {
+            video: D,
+            bAutoPlay: !0,
+            bControls: !1,
+            bLoop: !0,
+          });
+        }
+        function L(v) {
+          const D = h(v.args),
+            g = v.children ? v.children.toString() : void 0;
+          g &&
+            g.startsWith("http") &&
+            D.rgVideoSources.push({
+              sURL: (0, a.L$)(g),
+              sFormat: "video/webm",
+            });
+          const p = (0, T.j$)(v.args, "autoplay"),
+            i = p !== "0" && p !== "off" && p !== "false",
+            P = (0, T.j$)(v.args, "controls"),
+            E = P !== "0" && P !== "off" && P !== "false",
+            y = (0, T.j$)(v.args, "loop"),
+            A = P !== "0" && P !== "off" && P !== "false";
+          return (0, e.jsx)(U.L, {
+            video: D,
+            bAutoPlay: i,
+            bControls: E,
+            bLoop: y ? A : i,
+          });
+        }
+      },
+      43828: (w, j, n) => {
+        "use strict";
+        n.d(j, { h: () => L });
+        var e = n(7850),
+          m = n(33770),
+          U = n(90626),
+          a = n(70187),
+          M = n(7487),
+          T = n(72609);
+        function h(v) {
+          return new M.OJ(new M.R8());
+        }
+        function b() {
+          return new Map([...Array.from(a.W4.entries())]);
+        }
+        function L(v) {
+          const { text: D, languageOverride: g } = v,
+            [p] = (0, U.useState)(new m.B(b(), h, g ?? T.TS.LANGUAGE));
+          return (0, e.jsx)(e.Fragment, { children: p.ParseBBCode(D, {}) });
+        }
+      },
+      1917: (w, j, n) => {
+        "use strict";
+        n.d(j, { Eo: () => v, V2: () => M.V2, gH: () => L });
+        var e = n(7850),
+          m = n(90626),
+          U = n(70187),
+          a = n(68941),
+          M = n(43597),
+          T = n(32093),
+          h = n(72609);
+        function b() {
+          return h.TS.EREALM === T.TU.k_ESteamRealmChina;
+        }
+        function L(D) {
+          if (b()) return null;
+          let g = (0, U.j$)(D.args);
+          if (g) {
+            let p = g.split(";");
+            if (p.length == 2) {
+              let i = p[0],
+                P = p[1].toLocaleLowerCase();
+              return (0, e.jsx)(M.AX, {
+                videoID: i,
+                align: P,
+                bShowVideoImmediately: !0,
+              });
+            }
+          }
+          return (0, e.jsx)(m.Fragment, {});
+        }
+        function v(D) {
+          if (b() || h.TS.COUNTRY.toLocaleUpperCase() == "CN")
+            return (0, a.UT)(D);
+          const g = (0, U.j$)(D.args, "youtubeid"),
+            p = (0, U.j$)(D.args, "size"),
+            i = (0, U.j$)(D.args, "seconds");
+          return (0, e.jsx)(M.AX, {
+            videoID: g,
+            nStartSeconds: i ? Number.parseInt(i) : void 0,
+            align: p,
+            bShowVideoImmediately: !0,
+          });
+        }
+      },
+      96197: (w, j, n) => {
+        "use strict";
+        n.d(j, { n: () => P, c: () => A });
+        var e = n(7850),
+          m = n(90626),
+          U = n(561),
+          a = n(21227);
+        function M(u) {
+          const { text: r = "", style: t, children: o } = u;
+          if (r == null) return (0, e.jsx)(m.Fragment, { children: o });
+          let _;
+          if (
+            (r instanceof Array
+              ? (_ = r
+                  .map((d) => (d ? d.toString() : ""))
+                  .filter((d) => d.length > 0)
+                  .join(`
+`))
+              : (_ = r.toString()),
+            m.Children.count(o) == 1)
+          ) {
+            let d = m.Children.only(o);
+            return m.cloneElement(d, {
+              "data-copystyle": t,
+              "data-copytext": _,
+            });
+          } else
+            return (
+              console.log(`Error: CopyableText must be the parent of exactly one child:
+	copystyle=${t} copytext=${_}`),
+              (0, e.jsx)(m.Fragment, { children: o })
+            );
+        }
+        function T(u) {
+          let r = u.cloneContents(),
+            t = "",
+            o = "",
+            _ = !1,
+            f = (
+              r.querySelector("[data-activechat=true]") || r
+            ).querySelectorAll("[data-copytext]"),
+            B = Array.from(f).map(
+              (l) => l.getAttribute("data-copystyle") || "msg",
+            );
+          for (let l = 0; l < f.length; ++l) {
+            let O = f[l],
+              C = B[l];
+            if (l + 1 < f.length && DOMUtils.BIsParent(O, f[l + 1])) continue;
+            let x = O.tagName.toLowerCase(),
+              F = C.includes("block"),
+              W = C.includes("timestamp"),
+              I = C.includes("server"),
+              K = C.includes("invite"),
+              V = C.includes("emote"),
+              Z = C.includes("no-prefix"),
+              q = C.includes("no-suffix"),
+              ne = C.includes("allow-embedded-newlines"),
+              Q = C.includes("block-continue"),
+              G = C.includes("merge-adjacent"),
+              z = C.includes("force-display"),
+              ee = C.includes("prepend-innertext"),
+              J = C.includes("append-innertext"),
+              oe = C.includes("prepend-newline"),
+              re = C.includes("append-newline"),
+              ae = C.includes("speaker");
+            if (!z) {
+              let ie = x.match(/img|iframe/) != null,
+                ce = O.querySelector("img,iframe") != null;
+              if (!O.innerText && !ie && !ce) continue;
+            }
+            G &&
+              (l > 0 && B[l - 1].includes("merge-adjacent") && (Z = !0),
+              l + 1 < B.length &&
+                B[l + 1].includes("merge-adjacent") &&
+                (q = !0)),
+              ae && (_ = !0);
+            let X = "",
+              le = `
+`;
+            !W && !ae && !I && !K && !V
+              ? (_ && (X += "	"),
+                o.includes("msg") && F && (oe = !0),
+                o.includes("block") && !Q && (oe = !0))
+              : (t.length != 0 &&
+                  (X += `
+`),
+                (I || K) && (X += "		"));
+            let $ = O.getAttribute("data-copytext") ?? "";
+            $.length == 0
+              ? ($ = O.innerText)
+              : ee && O.innerText.length > 0
+                ? ($ = `${O.innerText}${
+                    C.includes("-with-newline")
+                      ? `
+`
+                      : " "
+                  }${$}`)
+                : J &&
+                  O.innerText.length > 0 &&
+                  ($ += `${
+                    C.includes("-with-newline")
+                      ? `
+`
+                      : " "
+                  }${O.innerText}`),
+              $.length != 0 &&
+                (oe &&
+                  (t += `
+`),
+                Z || (t += X),
+                (t += ne ? $ : $.replace(/\n/g, le + X)),
+                q || (t += le),
+                re &&
+                  (t += `
+`)),
+              (o = C);
+          }
+          if (t.length != 0) return t;
+        }
+        function h(u) {
+          const r = T(u);
+          r != null && DOMUtils.CopyTextToClipboard(r);
+        }
+        function b(u) {
+          const r = document.createRange();
+          r.selectNode(u), h(r);
+        }
+        var L = n(36707),
+          v = n(42060),
+          D = n.n(v),
+          g = n(86048),
+          p = n(80902),
+          i = n(72609);
+        function P(u) {
+          const { emoticon: r, large: t } = u,
+            [o, _] = (0, g.OP)(),
+            [d, f] = m.useState(null),
+            B = `:${r}:`,
+            l = (0, a.G)(r, t);
+          return (0, e.jsxs)(e.Fragment, {
+            children: [
+              (0, e.jsx)(M, {
+                text: B,
+                style: "merge-adjacent",
+                children: (0, e.jsx)("img", {
+                  ..._,
+                  src: l,
+                  className: (0, L.A)(D().emoticon, t ? D().large : void 0),
+                  "data-emoticon": r,
+                  alt: r,
+                  ref: f,
+                }),
+              }),
+              o && d && (0, e.jsx)(E, { target: d, emoticon: r }),
+            ],
+          });
+        }
+        function E(u) {
+          const { target: r, emoticon: t } = u,
+            { data: o } = y(t);
+          return (0, e.jsx)(A, {
+            target: r,
+            title: `:${t}:`,
+            subtitle: o && o.app_name ? o.app_name : void 0,
+            children: (0, e.jsx)(P, { emoticon: t, large: !0 }),
+          });
+        }
+        function y(u) {
+          return (0, p.I)({
+            queryKey: ["EmoticonHover", u],
+            queryFn: async () => {
+              const r = `${i.TS.COMMUNITY_CDN_URL}economy/emoticonhoverjson/${encodeURIComponent(u)}?l=${encodeURIComponent(i.TS.LANGUAGE)}&origin=${self.origin}`,
+                t = await fetch(r);
+              if (t.status != 200)
+                throw `Error fetching emoticon: ${t.status} ${t.statusText}`;
+              return await t.json();
+            },
+          });
+        }
+        const A = ({ target: u, title: r, subtitle: t, children: o }) =>
+          (0, e.jsxs)(U.g, {
+            target: u,
+            style: { zIndex: 1700 },
+            className: D().EmoticonHover,
+            children: [
+              o,
+              (0, e.jsxs)("div", {
+                className: D().Info,
+                children: [
+                  (0, e.jsx)("div", {
+                    className: D().Name,
+                    children: r || (0, e.jsx)("span", { children: "\xA0" }),
+                  }),
+                  (0, e.jsx)("div", {
+                    className: D().AppName,
+                    children: t || (0, e.jsx)("span", { children: "\xA0" }),
+                  }),
+                ],
+              }),
+            ],
+          });
+      },
+      34736: (w, j, n) => {
+        "use strict";
+        n.d(j, { $k: () => y, S8: () => r, fI: () => u });
+        var e = n(7850),
+          m = n(75844),
+          U = n(90626),
+          a = n(29630),
+          M = n(99412),
+          T = n(1960),
+          h = n(561),
+          b = n(67344),
+          L = n(30096),
+          v = n(72609),
+          D = n(43828),
+          g = n(3246),
+          p = n.n(g),
+          i = Object.defineProperty,
+          P = Object.getOwnPropertyDescriptor,
+          E = (t, o, _, d) => {
+            for (
+              var f = d > 1 ? void 0 : d ? P(o, _) : o, B = t.length - 1, l;
+              B >= 0;
+              B--
+            )
+              (l = t[B]) && (f = (d ? l(o, _, f) : l(f)) || f);
+            return d && f && i(o, _, f), f;
+          };
+        const y = (0, m.PA)((t) => {
+            const o = (0, a.z5)(t.photo, (0, M.sfN)(v.TS.LANGUAGE)),
+              _ = o ? (typeof o == "string" ? o : o[1]) : void 0,
+              d = !!t.title,
+              f = !!t.company;
+            return (0, e.jsxs)("div", {
+              className: p().SpeakerPopup,
+              onMouseLeave: t.fnClose,
+              children: [
+                (0, e.jsxs)("div", {
+                  className: p().SpeakerInfoOuter,
+                  children: [
+                    t.photo && (0, e.jsx)("img", { src: _ }),
+                    (0, e.jsxs)("div", {
+                      className: p().SpeakerInfoInner,
+                      children: [
+                        (0, e.jsx)("div", { children: t.name }),
+                        (d || f) &&
+                          (0, e.jsxs)("div", {
+                            children: [
+                              d &&
+                                (0, e.jsx)("span", {
+                                  className: p().SpeakerTitle,
+                                  children: t.title,
+                                }),
+                              d && f && (0, e.jsx)("span", { children: ", " }),
+                              f && (0, e.jsx)("span", { children: t.company }),
+                            ],
+                          }),
+                      ],
+                    }),
+                  ],
+                }),
+                t.bio &&
+                  (0, e.jsxs)("div", {
+                    className: p().SpeakerBio,
+                    children: [
+                      t.bio,
+                      t.bioString && (0, e.jsx)(D.h, { text: t.bioString }),
+                    ],
+                  }),
+              ],
+            });
+          }),
+          A = class _e extends U.Component {
+            static sm_embeddedElements = new T.MX(
+              "presenter-hover-source-elements",
+            );
+            m_refAnchor = U.createRef();
+            m_fnHidePopup = null;
+            m_nScrollPosAtHoverStart = 0;
+            ClosePopup() {
+              (0, b.p)() ||
+                (this.m_fnHidePopup &&
+                  (this.m_fnHidePopup(),
+                  (this.m_fnHidePopup = null),
+                  window.removeEventListener("scroll", this.OnScroll)));
+            }
+            componentWillUnmount() {
+              this.ClosePopup();
+            }
+            OnScroll() {
+              Math.abs(window.scrollY - this.m_nScrollPosAtHoverStart) > 50 &&
+                this.ClosePopup();
+            }
+            OnHover(o) {
+              const _ = this.m_refAnchor.current;
+              if (!_) return;
+              const d = {
+                  direction: "right",
+                  bEnablePointerEvents: !0,
+                  style: { maxWidth: 640, minHeight: _.clientHeight },
+                  target: _,
+                },
+                f = "presenter-hover-" + Math.floor(Math.random() * 1e8);
+              (this.m_fnHidePopup = () =>
+                _e.sm_embeddedElements.HideElement(_.ownerDocument, f)),
+                window.addEventListener("scroll", this.OnScroll),
+                (this.m_nScrollPosAtHoverStart = window.scrollY),
+                _e.sm_embeddedElements.ShowElementDelayed(
+                  _.ownerDocument,
+                  150,
+                  (0, e.jsx)(h.g, {
+                    ...d,
+                    children: (0, e.jsx)(y, {
+                      ...this.props,
+                      fnClose: this.OnLeave,
+                    }),
+                  }),
+                  f,
+                );
+            }
+            OnLeave(o) {
+              this.ClosePopup();
+            }
+            render() {
+              return (0, e.jsx)("div", {
+                className: p().SpeakerHover,
+                ref: this.m_refAnchor,
+                onMouseEnter: this.OnHover,
+                onFocus: this.OnHover,
+                onMouseLeave: this.OnLeave,
+                onBlur: this.OnLeave,
+                children: this.props.children,
+              });
+            }
+          };
+        E([L.oI], A.prototype, "ClosePopup", 1),
+          E([L.oI], A.prototype, "OnScroll", 1),
+          E([L.oI], A.prototype, "OnHover", 1),
+          E([L.oI], A.prototype, "OnLeave", 1);
+        let u = A;
+        function r(t) {
+          const {
+              photo: o,
+              name: _,
+              title: d,
+              company: f,
+              hidePhotoInCompactView: B,
+            } = t,
+            l = (0, a.z5)(o, (0, M.sfN)(v.TS.LANGUAGE)),
+            O = l && !B ? (typeof l == "string" ? l : l[1]) : null,
+            C = !!d,
+            x = !!f;
+          return (0, e.jsx)("div", {
+            className: p().SpeakerOuter,
+            children: (0, e.jsx)(u, {
+              ...t,
+              children: (0, e.jsx)("div", {
+                className: p().Speaker,
+                children: (0, e.jsxs)("div", {
+                  className: p().SpeakerInfoOuter,
+                  children: [
+                    !!O && (0, e.jsx)("img", { src: O }),
+                    (0, e.jsxs)("div", {
+                      className: p().SpeakerInfoInner,
+                      children: [
+                        (0, e.jsx)("div", { children: _ }),
+                        (C || x) &&
+                          (0, e.jsxs)("div", {
+                            children: [
+                              C &&
+                                (0, e.jsx)("span", {
+                                  className: p().SpeakerTitle,
+                                  children: d,
+                                }),
+                              C && x && (0, e.jsx)("span", { children: ", " }),
+                              x && (0, e.jsx)("span", { children: f }),
+                            ],
+                          }),
+                      ],
+                    }),
+                  ],
+                }),
+              }),
+            }),
+          });
+        }
+      },
+      33645: (w) => {
+        w.exports = {
+          Bold: "_3cln317VYhwhE1fSeMCG48",
+          Italic: "_3TPGDj4kc0QGKvO8FJmGz8",
+          Paragraph: "_3lnqGBzYap-Z2T81XBiBUU",
+          TemplateMediaTitle: "_DE_6XhnSqABczbJ55rNJ",
+          Question: "_2Hj1tfDjpLvBVTHTqAVcYB",
+          Answer: "syKgzmlrcUIJHIBfWsn4h",
+          Header1: "_2LYsFAwy8wdRJQTNJOUcsT",
+          Header2: "_6-VR2WCBCDupCcUN5INQM",
+          Header3: "_1sGnlGwCeaGUp63h4Lx-pU",
+          Header4: "_3VHY5vmO07MFpoOgTB9eOi",
+          Header5: "_1Vk-9-C_y-lBA5ucPl6t8X",
+          CenterSpan: "zCnp-VELUMybbfxOD-ze9",
+          SmallText: "WBzrd438Bd8Z3J-j_iglW",
+          Underline: "GrhFWtBdrSZP611s1UqqT",
+          Strike: "_3pK7sh9FYdigMXxcUVI4DY",
+          Spoiler: "_3kRr4bh8twnlt_7wcEFZr3",
+          Revealed: "_3g1-8c9NBcNDwW4-6x1pM6",
+          SpoilerText: "_3r66KOH_Vckmfps3XUOVrY",
+          DisabledMouseEvents: "_1O62-3Y03GsnA0709QyJ_O",
+          BlockQuote: "_3MQ0Cuf_h-nZ81xIubg8rh",
+          QuoteAuthor: "_1MzmaZcQPMRfrTHs3k0fIZ",
+          PullQuote: "_2kA0eAmv8ifh0zphoq4ntM",
+          Code: "_2ODaX8lO7DKLKke76c2Wya",
+          CodeBlock: "_1I3OP84ayrCIMuBrCrkosi",
+          List: "_3Y-LRoi5aeZ9-3ujWjXuG3",
+          OrderedList: "DojPxwyYpx3hwuPIaJPCq",
+          ListItem: "_1iXxYKOlzzXiVr02E7n2Fe",
+          HR: "-xPK0REpludHjRG8xQfih",
+          Table: "_2CAsiFd9UHbUOqzd0e7ioe",
+          NoBorder: "_1rO4D9vLxJRWz9sW4-ahSY",
+          TableRow: "_3FJk0y6E6I8nSYfCIqGP8",
+          TableCell: "_3rLIt0O8F7iG6B2RmC3cYa",
+          EqualCells: "_1CtoyG6UPAlYp7PCGLXx8L",
+          ExpandSectionBlock: "_2cmZMzZlRrszDBF97Di0cD",
+          ExpandSectionHeader: "uAvfe31kBh5TZrse069d1",
+          EmbedArrow: "_3tVf4GSoWxEOZrxL_PQ4iA",
+          ExpandSectionBody: "_33CTl_a7XYxFIng-fm4A5K",
+          ExpandSection_WithTitle: "_1dfVJUq9KmDOuhyOZ7lcXv",
+          LinkButton: "_3TN0uESBGJ-kUDPWWX2YWz",
+          Image: "_3K0NuxYUYncdQ-cNK7udMn",
+          Image_Inline: "XEMe7ReBSARw5XHcLR6kF",
+          PreservedUnsupportedTag: "_3YMzBRWJTOo7eai1uFGV7i",
+          Tag: "_3SEDw4GZynd3ZmTQWlyOcS",
+          CalendarEventContainer: "S-ElBHomDkV0L3K4XChxt",
+          CalendarEventLink: "_106tp5gLWBvoekGEC8HXQ",
+        };
+      },
+      11748: (w) => {
+        w.exports = {
+          DynamicLinkBox: "_3OFDUxRty2ooEGGBg8vLNM",
+          DynamicLink_Preview: "_4x92ciMecfHsd6LXEp3zX",
+          DynamicLink_Author: "_2CrHQnyBFUGqFf-6TbIsUA",
+          DynamicLink_Description: "_1iv64lWG6UxhSX400UsU1S",
+          DynamicLink_YouTubeEmbed: "_3Jd9PKMuBGuSbDBCsV03Oo",
+          DynamicLink_StoreWidget: "uvn7ESAm1Jwm-SOwZmBWO",
+          DynamicLink_Content: "_29vvBvtM17Ec_19L9VJZdk",
+          DynamicLink_Name: "_25KAQjQwrv2EL8tnlLeTB7",
+          DynamicLink_YoutubeViews: "_3ZgvwxMMqbe_8wVfRiQ9kq",
+          Dynamiclink_Content: "_3UUlLNsS9oZt2zNHM5T76z",
+          DynamicLink_URL: "_9135FDWNKXjIolFAo7Gub",
+          DynamicLink_AuthorName: "_6R7Q24Jlkhs_t0fYUHxQx",
+          DynamicLink_Date: "_15wEuEj-SyCZ4J4hJqtmgD",
+        };
+      },
+      31587: (w) => {
+        w.exports = {
+          PreviewYouTubeVideo: "uT9FPw-RIxscziWGUKvsY",
+          sizeThumb: "_34JfgvTZH0JwSWKnwpT5tf",
+          sizeFull: "_2i-wrmaduZQDwFtlSpRG5b",
+          PlaceholderImg: "wJ2r7A6UK2WbDVoNBgd36",
+          floatLeft: "_3uqwDPu50ujydI4AiMemeN",
+          floatRight: "_29hzTH-jljX8p2qXboZbXW",
+        };
+      },
+      42060: (w) => {
+        w.exports = {
+          NewEmoticonIndicator: "_5BtHMjT9usALaSWHGugdV",
+          NewEmoticonCircle: "u5Kx6dkUppvb-1qV4IIuy",
+          EmoticonSelector: "_21dGPKyxoQJmk8T757A5tl",
+          emoticon: "_1ZQW1wV5cNj3sDpibfbUqs",
+          large: "_20l1z3ShpHQ9njRDYgy1I5",
+          EmoticonSelector_Emoticons: "_1zMG_TAAO7uJ9DZvsPLfay",
+          EmoticonSelector_Separator: "_2ETbIGwtl6SLfkb48DDgvG",
+          EmoticonSelector_SeparatorBackground: "_3vIdbqkcpvxxyyRioKoQkz",
+          EmoticonSelector_Controls: "_2ncH4xow85UXkBM0hcrY8l",
+          EmoticonSelector_Item: "iSEjD9v1iZNJNbGHtDLZx",
+          EmoticonSelector_Item_New: "_1C2S6Gne45ErVlr3yX0YuG",
+          EffectHeading: "_1G4cTIWNmmp8hn-0UODGqo",
+          StickerHeading: "_2o2L-YGgH5cNuwJW9nU9dm",
+          GetFestive: "EOLiaNBZK-eUBTeiD-P4c",
+          TopDivider: "xf7hAWPD4WwXxsyXYxFFo",
+          BottomDivider: "_1gjpUnY8RyS8HpizGQvyFI",
+          StickerButton: "_2fYj8pHe3bHHxWj4FucFvj",
+          EffectButton: "_22MJpsSm-Ur5FU5WpYQKzn",
+          EmoticonHover: "W_hPU2JmhTx3oUqDN9ADo",
+          Info: "_29D_0UxbftoceIAKZktndo",
+          Name: "_3zUR2KWg7TNWOQx2nDFyoh",
+          AppName: "_2JWWOJGZuX70xQcA2QaBg",
+          StickerHoverSticker: "_1HdRqbOgpBfEQzQ2py5nq5",
+          EffectHoverEffect: "_1GZ-ESK0dV6oJBDhsU3RiH",
+          PickerTab: "VrrpBsQE4GFseDy3cTw1Q",
+          Clock: "_16xcLj__xBHmc9xDYmADhW",
+          EmoticonItem: "P1aWuK_DhstDh-M08okCK",
+        };
+      },
+      3246: (w) => {
+        w.exports = {
+          SpeakerOuter: "_3rRqPJdGrYx9YMtQMciIFY",
+          Speaker: "_3F7-FkJu8-JstT7SouP8XJ",
+          SpeakerPopup: "_3y7kVhhGmtbSgbZdte0EuV",
+          SpeakerInfoOuter: "_1NC9nn23Pdd7FtZW6zM7he",
+          SpeakerInfoInner: "_1bMpEcCbkVkKo1Oc02WFoJ",
+          SpeakerTitle: "_2Vo0lUG19xIopljkxhtSod",
+          SpeakerBio: "_2yP7s2N28D9PFHs9yUr3jD",
+          SpeakerHover: "_16UyHpAXG98qQsfN8mBk3x",
+        };
+      },
     },
-  },
-]);
+  ]);
+})();

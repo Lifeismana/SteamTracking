@@ -1,0 +1,14 @@
+{
+    "language": "russian",
+    "PartnerOptIn_SeasonalSale_Spring": "Весенняя распродажа %1$s года",
+    "PartnerOptIn_SeasonalSale_Summer": "Летняя распродажа %1$s года",
+    "PartnerOptIn_SeasonalSale_Autumn": "Осенняя распродажа %1$s года",
+    "PartnerOptIn_SeasonalSale_Winter": "Зимняя распродажа %1$s года",
+    "PartnerOptIn_DeepestDiscount_Title": "%1$s: самая крупная скидка",
+    "PartnerOptIn_DeepestDiscount_Desc": "Мы планируем представить на мероприятии %1$s небольшую подборку игр со скидками от %2$s% до %3$s%. Во время распродажи эти игры будут показаны с баннером и в карусели на главной странице, а также на курируемой странице распродажи.",
+    "PartnerOptIn_DeepestDiscount_Note_Minimum": "Все участвующие игры будут продаваться со скидкой %1$s% или больше.",
+    "PartnerOptIn_DeepestDiscount_Note_Deadline": "Если хотите принять участие, установите скидку до %1$s.",
+    "PartnerOptIn_DeepestDiscount_Note_RestOfSale": "То, будете ли вы участвовать в данной акции, не влияет на остальную часть распродажи. Ваша игра всё равно может быть представлена в других разделах магазина.",
+    "PartnerOptIn_DeepestDiscount_Note_NotBinding": "Предоставление такой скидки для этой акции не означает, что вы должны делать это и для будущих.",
+    "PartnerOptIn_Collect_Dialog_Title": "Возможность повысить видимость"
+}

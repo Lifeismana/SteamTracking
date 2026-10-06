@@ -263,6 +263,13 @@ function SubmitQuickMessageUpdate( rgFields )
 	updateForm.submit();
 }
 
+function DeleteGraphicalAssets( strTitle, strDescription, rgFields )
+{
+	ShowConfirmDialog( strTitle, strDescription, 'Delete' ).done( function() {
+		SubmitQuickMessageUpdate( rgFields );
+	} );
+}
+
 // Submits an "ArraySwap" update, used by game admin to reorder entries in the keyvalue map
 function ArraySwap( path, src, target )
 {

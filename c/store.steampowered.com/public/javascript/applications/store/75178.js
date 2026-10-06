@@ -1,11 +1,13 @@
 "use strict";
-(self.webpackChunkstore = self.webpackChunkstore || []).push([
-  [75178],
-  {
-    chunkid: (module) => {
-      module.exports = {
-        dummy: "dummy",
-      };
+(() => {
+  (self.webpackChunkstore = self.webpackChunkstore || []).push([
+    [75178],
+    {
+      chunkid: (module) => {
+        module.exports = {
+          Clear: "\u0E25\u0E49\u0E32\u0E07",
+        };
+      },
     },
-  },
-]);
+  ]);
+})();

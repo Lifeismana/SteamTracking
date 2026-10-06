@@ -54,7 +54,7 @@
     __toESM = (_, _, _) => (
       (_ = _ == null ? {} : __create(__getProtoOf(_))),
       __copyProps(
-        _ || !_ || !_.__esModule
+        _ || !_ || !_.__esModule || !__hasOwnProp.call(_, `default`)
           ? __defProp(_, `default`, {
               value: _,
               enumerable: !0,
@@ -85,7 +85,7 @@
   }
   function FindAndRemoveWhere(_, _) {
     let _ = _.findIndex(_);
-    return _ >= 0 ? (_.splice(_, 1), !0) : !1;
+    return _ >= 0 && (_.splice(_, 1), !0);
   }
   var init_arrayutils = __esmMin(() => {});
   function GetComplexObjectConstructor(_) {
@@ -754,7 +754,7 @@
         }),
         (goog.typeOf = function (_) {
           var _ = typeof _;
-          if (_ == `object`)
+          if (_ == `object`) {
             if (_) {
               if (_ instanceof Array) return `array`;
               if (_ instanceof Object) return _;
@@ -776,7 +776,7 @@
               )
                 return `function`;
             } else return `null`;
-          else if (_ == `function` && _.call === void 0) return `object`;
+          } else if (_ == `function` && _.call === void 0) return `object`;
           return _;
         }),
         (goog.isArray = function (_) {
@@ -846,10 +846,11 @@
         }),
         (goog.bind = function (_, _, _) {
           return (
-            Function.prototype.bind &&
-            Function.prototype.bind.toString().indexOf(`native code`) != -1
-              ? (goog.bind = goog.bindNative_)
-              : (goog.bind = goog.bindJs_),
+            (goog.bind =
+              Function.prototype.bind &&
+              Function.prototype.bind.toString().indexOf(`native code`) != -1
+                ? goog.bindNative_
+                : goog.bindJs_),
             goog.bind.apply(null, arguments)
           );
         }),
@@ -2686,7 +2687,7 @@
         (goog.array.removeLast = function (_, _) {
           return (
             (_ = goog.array.lastIndexOf(_, _)),
-            0 <= _ ? (goog.array.removeAt(_, _), !0) : !1
+            0 <= _ && (goog.array.removeAt(_, _), !0)
           );
         }),
         (goog.array.removeAt = function (_, _) {
@@ -2698,7 +2699,7 @@
         (goog.array.removeIf = function (_, _, _) {
           return (
             (_ = goog.array.findIndex(_, _, _)),
-            0 <= _ ? (goog.array.removeAt(_, _), !0) : !1
+            0 <= _ && (goog.array.removeAt(_, _), !0)
           );
         }),
         (goog.array.removeAllIf = function (_, _, _) {
@@ -2860,7 +2861,7 @@
         (goog.array.binaryInsert = function (_, _, _) {
           return (
             (_ = goog.array.binarySearch(_, _, _)),
-            0 > _ ? (goog.array.insertAt(_, _, -(_ + 1)), !0) : !1
+            0 > _ && (goog.array.insertAt(_, _, -(_ + 1)), !0)
           );
         }),
         (goog.array.binaryRemove = function (_, _, _) {
@@ -3143,8 +3144,7 @@
             } catch {
               return `<object could not be stringified>`;
             }
-          else
-            return _ === void 0 ? `undefined` : _ === null ? `null` : typeof _;
+          return _ === void 0 ? `undefined` : _ === null ? `null` : typeof _;
         }),
         (goog.dom.asserts.getWindow_ = function (_) {
           try {
@@ -4974,8 +4974,8 @@
           if (_ && _[1]) return _[1];
           _ = ``;
           var _ = /MSIE +([\d\.]+)/.exec(_);
-          if (_ && _[1])
-            if (((_ = /Trident\/(\d.\d)/.exec(_)), _[1] == `7.0`))
+          if (_ && _[1]) {
+            if (((_ = /Trident\/(\d.\d)/.exec(_)), _[1] == `7.0`)) {
               if (_ && _[1])
                 switch (_[1]) {
                   case `4.0`:
@@ -4991,7 +4991,8 @@
                     _ = `11.0`;
                 }
               else _ = `7.0`;
-            else _ = _[1];
+            } else _ = _[1];
+          }
           return _;
         }),
         (goog.html.SafeHtml = function () {
@@ -5264,7 +5265,7 @@
         }),
         (goog.html.SafeHtml.getAttrNameAndValue_ = function (_, _, _) {
           if (_ instanceof goog.string.Const) _ = goog.string.Const.unwrap(_);
-          else if (_.toLowerCase() == `style`)
+          else if (_.toLowerCase() == `style`) {
             if (goog.html.SafeHtml.SUPPORT_STYLE_ATTRIBUTE)
               _ = goog.html.SafeHtml.getStyleValue_(_);
             else
@@ -5273,7 +5274,7 @@
                   ? `Attribute "style" not supported.`
                   : ``,
               );
-          else {
+          } else {
             if (/^on/i.test(_))
               throw Error(
                 goog.html.SafeHtml.ENABLE_ERROR_MESSAGES
@@ -5284,7 +5285,7 @@
                       `" given.`
                   : ``,
               );
-            if (_.toLowerCase() in goog.html.SafeHtml.URL_ATTRIBUTES_)
+            if (_.toLowerCase() in goog.html.SafeHtml.URL_ATTRIBUTES_) {
               if (_ instanceof goog.html.TrustedResourceUrl)
                 _ = goog.html.TrustedResourceUrl.unwrap(_);
               else if (_ instanceof goog.html.SafeUrl)
@@ -5303,6 +5304,7 @@
                         `" given.`
                     : ``,
                 );
+            }
           }
           return (
             _.implementsGoogStringTypedString && (_ = _.getTypedStringValue()),
@@ -8526,7 +8528,7 @@
             else if (2048 > _)
               this.buffer_.push((_ >> 6) | 192),
                 this.buffer_.push((_ & 63) | 128);
-            else if (65536 > _)
+            else if (65536 > _) {
               if (55296 <= _ && 56319 >= _ && _ + 1 < _.length) {
                 var _ = _.charCodeAt(_ + 1);
                 56320 <= _ &&
@@ -8541,6 +8543,7 @@
                 this.buffer_.push((_ >> 12) | 224),
                   this.buffer_.push(((_ >> 6) & 63) | 128),
                   this.buffer_.push((_ & 63) | 128);
+            }
           }
           return this.buffer_.length - _;
         }),
@@ -8670,7 +8673,7 @@
           return new jspb.arith.Int64(this._, this._);
         }),
         (jspb.arith.Int64.prototype.toString = function () {
-          var _ = (this._ & 2147483648) != 0,
+          var _ = !!(this._ & 2147483648),
             _ = new jspb.arith.UInt64(this._, this._);
           return (
             _ && (_ = new jspb.arith.UInt64(0, 0).sub(_)),
@@ -10282,8 +10285,8 @@
                 `Message extension present that was generated without binary serialization support`,
               );
             var _ = _.call(_, _);
-            if (_ != null)
-              if (_.isMessageType())
+            if (_ != null) {
+              if (_.isMessageType()) {
                 if (_.binaryMessageSerializeFn)
                   _.binaryWriterFn.call(
                     _,
@@ -10295,7 +10298,8 @@
                   throw Error(
                     `Message extension present holding submessage without binary support enabled, and message is being serialized to binary format`,
                   );
-              else _.binaryWriterFn.call(_, _.fieldIndex, _);
+              } else _.binaryWriterFn.call(_, _.fieldIndex, _);
+            }
           }
         }),
         goog.exportProperty(
@@ -11029,7 +11033,7 @@
       _ = {};
     for (let _ in _) {
       let { _: _, _: _, _: _, _: _, _: _ } = _[_];
-      if (_)
+      if (_) {
         if (_)
           _[_] = import_google_protobuf$10.Message.toObjectList(
             import_google_protobuf$10.Message.getRepeatedWrapperField(_, _, _),
@@ -11045,7 +11049,7 @@
           );
           _ && (_[_] = _.toObject(_, _));
         }
-      else {
+      } else {
         let _ = import_google_protobuf$10.Message.getFieldWithDefault(
           _,
           _,
@@ -11091,7 +11095,7 @@
     let { fields: _ } = _;
     for (let _ in _) {
       let { _: _, _: _, _: _, _: _, _: _, _: _ } = _[_];
-      if (_)
+      if (_) {
         if (_) {
           let _ = import_google_protobuf$10.Message.getRepeatedWrapperField(
             _,
@@ -11109,7 +11113,7 @@
           );
           _ && _.writeMessage(_, _, _.serializeBinaryToWriter);
         }
-      else if (_) {
+      } else if (_) {
         let _ = import_google_protobuf$10.Message.getField(_, _);
         _ !== void 0 && _.call(_, _, _);
       } else
@@ -12020,7 +12024,7 @@
                 ((this.m_header = new CMsgProtoBufHeader(null)),
                 (this.m_bValid = !0),
                 _)
-              )
+              ) {
                 if (
                   ((this.m_netPacket = _),
                   this.m_netPacket.SeekGetHead(),
@@ -12045,7 +12049,7 @@
                       (this.m_bValid = !1);
                   }
                 } else this.m_bValid = !1;
-              else
+              } else
                 _ && (this.m_eMsg = _),
                   _ && _
                     ? (this.m_body = _.fromObject(_))
@@ -16114,7 +16118,7 @@
     }
   }
   function GetDefaultReportingInterval() {
-    return 1e3 * 10;
+    return 1e4;
   }
   var import_react$5,
     addEventListener,
@@ -16186,7 +16190,7 @@
           }),
           (g_unCollectionTimer = window.setTimeout(() => {
             (g_rgPreInitQueue = []), (g_onReportableError = () => {});
-          }, 30 * 1e3));
+          }, 3e4));
       }
       (g_defaultErrorReportOptions = {
         cCallsitesToIgnore: 0,
@@ -16237,7 +16241,7 @@
               window.setTimeout(() => {
                 this.m_bInitialized ||
                   ((this.m_bEnabled = !1), (this.m_rgErrorQueue = []));
-              }, 30 * 1e3);
+              }, 3e4);
           }
           Init(_, _, _, _ = {}) {
             (this.m_bInitialized = !0),
@@ -16896,10 +16900,7 @@
             }, this.gcTime));
       }
       updateGcTime(_) {
-        this.gcTime = Math.max(
-          this.gcTime || 0,
-          _ ?? (isServer ? 1 / 0 : 300 * 1e3),
-        );
+        this.gcTime = Math.max(this.gcTime || 0, _ ?? (isServer ? 1 / 0 : 3e5));
       }
       clearGcTimeout() {
         this.#e &&= (clearTimeout(this.#e), void 0);
@@ -17737,8 +17738,8 @@
             }
             return _;
           };
-        _.options.persister
-          ? (_.fetchFn = () =>
+        _.fetchFn = _.options.persister
+          ? () =>
               _.options.persister?.(
                 _,
                 {
@@ -17747,8 +17748,8 @@
                   signal: _.signal,
                 },
                 _,
-              ))
-          : (_.fetchFn = _);
+              )
+          : _;
       },
     };
   }
@@ -18212,12 +18213,10 @@
       #v(_) {
         this.#x(),
           (this.#p = _),
-          !(
-            isServer ||
-            resolveEnabled(this.options.enabled, this.#t) === !1 ||
-            !isValidTimeout(this.#p) ||
-            this.#p === 0
-          ) &&
+          !isServer &&
+            resolveEnabled(this.options.enabled, this.#t) !== !1 &&
+            isValidTimeout(this.#p) &&
+            this.#p !== 0 &&
             (this.#f = setInterval(() => {
               (this.options.refetchIntervalInBackground ||
                 focusManager.isFocused()) &&
@@ -18258,7 +18257,7 @@
             _._optimisticResults === `isRestoring` && (_.fetchStatus = `idle`);
         }
         let { error: _, errorUpdatedAt: _, status: _ } = _;
-        if (_.select && _.data !== void 0)
+        if (_.select && _.data !== void 0) {
           if (_ && _.data === _?.data && _.select === this.#c) _ = this.#l;
           else
             try {
@@ -18270,7 +18269,7 @@
             } catch (_) {
               this.#s = _;
             }
-        else _ = _.data;
+        } else _ = _.data;
         if (_.placeholderData !== void 0 && _ === void 0 && _ === `pending`) {
           let _;
           if (_?.isPlaceholderData && _.placeholderData === _?.placeholderData)
@@ -18346,7 +18345,6 @@
               break;
             case `rejected`:
               (_.status !== `error` || _.error !== _.reason) && _();
-              break;
           }
         }
         return _;
@@ -18412,7 +18410,7 @@
     return (
       resolveEnabled(_.enabled, _) !== !1 &&
       _.state.data === void 0 &&
-      !(_.state.status === `error` && _.retryOnMount === !1)
+      (_.state.status !== `error` || _.retryOnMount !== !1)
     );
   }
   function shouldFetchOnMount(_, _) {
@@ -18496,7 +18494,7 @@
             let _ = _.map((_) => _.observer),
               _ = _.map((_) => _.getCurrentResult()),
               _ = _.some((_, _) => _ !== _[_]);
-            (_.length === _.length && !_) ||
+            (_.length !== _.length || _) &&
               ((this.#i = _),
               (this.#t = _),
               this.hasListeners() &&
@@ -18889,12 +18887,13 @@
         }
       }
       function _(_) {
-        if (((_ = !1), _(_), !_))
+        if (((_ = !1), _(_), !_)) {
           if (_(_) !== null) (_ = !0), _ || ((_ = !0), _());
           else {
             var _ = _(_);
             _ !== null && _(_, _.startTime - _);
           }
+        }
       }
       var _ = !1,
         _ = -1,
@@ -19202,7 +19201,7 @@
           }
         }),
         (_.preinitModule = function (_, _) {
-          if (typeof _ == `string`)
+          if (typeof _ == `string`) {
             if (typeof _ == `object` && _) {
               if (_._ == null || _._ === `script`) {
                 var _ = _(_._, _.crossOrigin);
@@ -19214,6 +19213,7 @@
                 });
               }
             } else _ ?? _._._(_);
+          }
         }),
         (_.preload = function (_, _) {
           if (
@@ -19242,7 +19242,7 @@
           }
         }),
         (_.preloadModule = function (_, _) {
-          if (typeof _ == `string`)
+          if (typeof _ == `string`) {
             if (_) {
               var _ = _(_._, _.crossOrigin);
               _._._(_, {
@@ -19252,6 +19252,7 @@
                   typeof _.integrity == `string` ? _.integrity : void 0,
               });
             } else _._._(_);
+          }
         }),
         (_.requestFormReset = function (_) {
           _._._(_);
@@ -19270,10 +19271,8 @@
     require_react_dom = __commonJSMin((_, _) => {
       function _() {
         if (
-          !(
-            typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ > `u` ||
-            typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE != `function`
-          )
+          typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ < `u` &&
+          typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE == `function`
         )
           try {
             __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE(_);
@@ -19907,7 +19906,7 @@
               : ((_[_] = !0), !1);
       }
       function _(_, _, _) {
-        if (_(_))
+        if (_(_)) {
           if (_ === null) _.removeAttribute(_);
           else {
             switch (typeof _) {
@@ -19925,6 +19924,7 @@
             }
             _.setAttribute(_, `` + _);
           }
+        }
       }
       function _(_, _, _) {
         if (_ === null) _.removeAttribute(_);
@@ -20205,7 +20205,7 @@ Error generating stack: ` +
         return (
           _ && (_ = _(_) ? (_.checked ? `true` : `false`) : _.value),
           (_ = _),
-          _ === _ ? !1 : (_.setValue(_), !0)
+          _ !== _ && (_.setValue(_), !0)
         );
       }
       function _(_) {
@@ -20579,12 +20579,11 @@ Error generating stack: ` +
           case `onMouseEnter`:
             (_ = !_.disabled) ||
               ((_ = _.type),
-              (_ = !(
-                _ === `button` ||
-                _ === `input` ||
-                _ === `select` ||
-                _ === `textarea`
-              ))),
+              (_ =
+                _ !== `button` &&
+                _ !== `input` &&
+                _ !== `select` &&
+                _ !== `textarea`)),
               (_ = !_);
             break _;
           default:
@@ -20594,11 +20593,10 @@ Error generating stack: ` +
         if (_ && typeof _ != `function`) throw Error(_(231, _, typeof _));
         return _;
       }
-      var _ = !(
-          typeof window > `u` ||
-          window.document === void 0 ||
-          window.document.createElement === void 0
-        ),
+      var _ =
+          typeof window < `u` &&
+          window.document !== void 0 &&
+          window.document.createElement !== void 0,
         _ = !1;
       if (_)
         try {
@@ -21678,8 +21676,7 @@ Error generating stack: ` +
             ((_ = _ === 5) &&
               ((_ = _.type),
               (_ =
-                !(_ !== `form` && _ !== `button`) ||
-                _(_.type, _.memoizedProps))),
+                _ === `form` || _ === `button` || _(_.type, _.memoizedProps))),
             (_ = !_)),
           _ && _ && _(_),
           _(_),
@@ -21691,7 +21688,7 @@ Error generating stack: ` +
             throw Error(_(317));
           _: {
             for (_ = _.nextSibling, _ = 0; _; ) {
-              if (_.nodeType === 8)
+              if (_.nodeType === 8) {
                 if (((_ = _.data), _ === `/$`)) {
                   if (_ === 0) {
                     _ = _(_.nextSibling);
@@ -21699,6 +21696,7 @@ Error generating stack: ` +
                   }
                   _--;
                 } else (_ !== `$` && _ !== `$!` && _ !== `$?`) || _++;
+              }
               _ = _.nextSibling;
             }
             _ = null;
@@ -23659,8 +23657,8 @@ Error generating stack: ` +
                       }
                       _(_, _);
                       break;
-                    } else _(_, _);
-                    _ = _.sibling;
+                    }
+                    _(_, _), (_ = _.sibling);
                   }
                   _.type === _
                     ? ((_ = _(_.props.children, _.mode, _, _.key)),
@@ -23675,7 +23673,7 @@ Error generating stack: ` +
               case _:
                 _: {
                   for (_ = _.key; _ !== null; ) {
-                    if (_.key === _)
+                    if (_.key === _) {
                       if (
                         _.tag === 4 &&
                         _.stateNode.containerInfo === _.containerInfo &&
@@ -23686,12 +23684,11 @@ Error generating stack: ` +
                           (_.return = _),
                           (_ = _);
                         break _;
-                      } else {
-                        _(_, _);
-                        break;
                       }
-                    else _(_, _);
-                    _ = _.sibling;
+                      _(_, _);
+                      break;
+                    }
+                    _(_, _), (_ = _.sibling);
                   }
                   (_ = _(_, _.mode, _)), (_.return = _), (_ = _);
                 }
@@ -24123,10 +24120,11 @@ Error generating stack: ` +
       function _(_, _, _, _, _) {
         if (_ !== null) {
           var _ = _.memoizedProps;
-          if (_(_, _) && _.ref === _.ref)
+          if (_(_, _) && _.ref === _.ref) {
             if (((_ = !1), (_.pendingProps = _ = _), _(_, _)))
               _.flags & 131072 && (_ = !0);
             else return (_.lanes = _.lanes), _(_, _, _);
+          }
         }
         return _(_, _, _, _, _);
       }
@@ -24364,7 +24362,7 @@ Error generating stack: ` +
         return (
           (_ = _),
           _(_, _),
-          (_ = (_.flags & 128) != 0),
+          (_ = !!(_.flags & 128)),
           _ || _
             ? ((_ = _.stateNode),
               (_ =
@@ -24403,16 +24401,14 @@ Error generating stack: ` +
       function _(_, _, _) {
         var _ = _.pendingProps,
           _ = !1,
-          _ = (_.flags & 128) != 0,
+          _ = !!(_.flags & 128),
           _;
         if (
           ((_ = _) ||
             (_ =
-              _ !== null && _.memoizedState === null
-                ? !1
-                : (_.current & 2) != 0),
+              _ !== null && _.memoizedState === null ? !1 : !!(_.current & 2)),
           _ && ((_ = !0), (_.flags &= -129)),
-          (_ = (_.flags & 32) != 0),
+          (_ = !!(_.flags & 32)),
           (_.flags &= -33),
           _ === null)
         ) {
@@ -24743,10 +24739,11 @@ Error generating stack: ` +
           (_ !== null && (_.dependencies = _.dependencies),
           (_ |= _.lanes),
           (_ & _.childLanes) === 0)
-        )
+        ) {
           if (_ !== null) {
             if ((_(_, _, _, !1), (_ & _.childLanes) === 0)) return null;
           } else return null;
+        }
         if (_ !== null && _.child !== _.child) throw Error(_(153));
         if (_.child !== null) {
           for (
@@ -24761,9 +24758,9 @@ Error generating stack: ` +
         return _.child;
       }
       function _(_, _) {
-        return (_.lanes & _) === 0
-          ? ((_ = _.dependencies), !!(_ !== null && _(_)))
-          : !0;
+        return (
+          (_.lanes & _) !== 0 || ((_ = _.dependencies), !!(_ !== null && _(_)))
+        );
       }
       function _(_, _, _) {
         switch (_.tag) {
@@ -24793,7 +24790,7 @@ Error generating stack: ` +
             _(_);
             break;
           case 19:
-            var _ = (_.flags & 128) != 0;
+            var _ = !!(_.flags & 128);
             if (
               ((_ = (_ & _.childLanes) !== 0),
               (_ ||= (_(_, _, _, !1), (_ & _.childLanes) !== 0)),
@@ -24820,13 +24817,13 @@ Error generating stack: ` +
         return _(_, _, _);
       }
       function _(_, _, _) {
-        if (_ !== null)
+        if (_ !== null) {
           if (_.memoizedProps !== _.pendingProps) _ = !0;
           else {
             if (!_(_, _) && !(_.flags & 128)) return (_ = !1), _(_, _, _);
             _ = !!(_.flags & 131072);
           }
-        else (_ = !1), _ && _.flags & 1048576 && _(_, _, _.index);
+        } else (_ = !1), _ && _.flags & 1048576 && _(_, _, _.index);
         switch (((_.lanes = 0), _.tag)) {
           case 16:
             _: {
@@ -24842,7 +24839,8 @@ Error generating stack: ` +
                   if (((_ = _.$$typeof), _ === _)) {
                     (_.tag = 11), (_ = _(null, _, _, _, _));
                     break _;
-                  } else if (_ === _) {
+                  }
+                  if (_ === _) {
                     (_.tag = 14), (_ = _(null, _, _, _, _));
                     break _;
                   }
@@ -24870,7 +24868,7 @@ Error generating stack: ` +
                 _(),
                 (_ = _.element),
                 _.isDehydrated)
-              )
+              ) {
                 if (
                   ((_ = {
                     element: _,
@@ -24883,30 +24881,30 @@ Error generating stack: ` +
                 ) {
                   _ = _(_, _, _, _);
                   break _;
-                } else if (_ !== _) {
+                }
+                if (_ !== _) {
                   (_ = _(Error(_(424)), _)), _(_), (_ = _(_, _, _, _));
                   break _;
-                } else {
-                  switch (((_ = _.stateNode.containerInfo), _.nodeType)) {
-                    case 9:
-                      _ = _.body;
-                      break;
-                    default:
-                      _ = _.nodeName === `HTML` ? _.ownerDocument.body : _;
-                  }
-                  for (
-                    _ = _(_.firstChild),
-                      _ = _,
-                      _ = !0,
-                      _ = null,
-                      _ = !0,
-                      _ = _(_, null, _, _),
-                      _.child = _;
-                    _;
-                  )
-                    (_.flags = (_.flags & -3) | 4096), (_ = _.sibling);
                 }
-              else {
+                switch (((_ = _.stateNode.containerInfo), _.nodeType)) {
+                  case 9:
+                    _ = _.body;
+                    break;
+                  default:
+                    _ = _.nodeName === `HTML` ? _.ownerDocument.body : _;
+                }
+                for (
+                  _ = _(_.firstChild),
+                    _ = _,
+                    _ = !0,
+                    _ = null,
+                    _ = !0,
+                    _ = _(_, null, _, _),
+                    _.child = _;
+                  _;
+                )
+                  (_.flags = (_.flags & -3) | 4096), (_ = _.sibling);
+              } else {
                 if ((_(), _ === _)) {
                   _ = _(_, _, _);
                   break _;
@@ -25402,7 +25400,7 @@ Error generating stack: ` +
             return _(_.type), _(_), null;
           case 19:
             if ((_(_), (_ = _.memoizedState), _ === null)) return _(_), null;
-            if (((_ = (_.flags & 128) != 0), (_ = _.rendering), _ === null))
+            if (((_ = !!(_.flags & 128)), (_ = _.rendering), _ === null)) {
               if (_) _(_, !1);
               else {
                 if (_ !== 0 || (_ !== null && _.flags & 128))
@@ -25428,8 +25426,8 @@ Error generating stack: ` +
                   _() > _ &&
                   ((_.flags |= 128), (_ = !0), _(_, !1), (_.lanes = 4194304));
               }
-            else {
-              if (!_)
+            } else {
+              if (!_) {
                 if (((_ = _(_)), _ !== null)) {
                   if (
                     ((_.flags |= 128),
@@ -25448,6 +25446,7 @@ Error generating stack: ` +
                   2 * _() - _.renderingStartTime > _ &&
                     _ !== 536870912 &&
                     ((_.flags |= 128), (_ = !0), _(_, !1), (_.lanes = 4194304));
+              }
               _.isBackwards
                 ? ((_.sibling = _.child), (_.child = _))
                 : ((_ = _.last),
@@ -25687,7 +25686,7 @@ Error generating stack: ` +
       function _(_, _) {
         var _ = _.ref,
           _ = _.refCleanup;
-        if (_ !== null)
+        if (_ !== null) {
           if (typeof _ == `function`)
             try {
               _();
@@ -25705,6 +25704,7 @@ Error generating stack: ` +
               _(_, _, _);
             }
           else _.current = null;
+        }
       }
       function _(_) {
         var _ = _.type,
@@ -25967,7 +25967,7 @@ Error generating stack: ` +
             _(_, _), _ & 4 && _(5, _);
             break;
           case 1:
-            if ((_(_, _), _ & 4))
+            if ((_(_, _), _ & 4)) {
               if (((_ = _.stateNode), _ === null))
                 try {
                   _.componentDidMount();
@@ -25987,6 +25987,7 @@ Error generating stack: ` +
                   _(_, _.return, _);
                 }
               }
+            }
             _ & 64 && _(_), _ & 512 && _(_, _.return);
             break;
           case 3:
@@ -26030,7 +26031,7 @@ Error generating stack: ` +
               (_ = (_ !== null && _.memoizedState !== null) || _), (_ = _);
               var _ = _;
               (_ = _),
-                (_ = _) && !_ ? _(_, _, (_.subtreeFlags & 8772) != 0) : _(_, _),
+                (_ = _) && !_ ? _(_, _, !!(_.subtreeFlags & 8772)) : _(_, _),
                 (_ = _),
                 (_ = _);
             }
@@ -26097,7 +26098,7 @@ Error generating stack: ` +
               (_ = _),
               (_ = _),
               _ !== null)
-            )
+            ) {
               if (_)
                 try {
                   (_.nodeType === 9
@@ -26115,6 +26116,7 @@ Error generating stack: ` +
                 } catch (_) {
                   _(_, _, _);
                 }
+            }
             break;
           case 18:
             _ !== null &&
@@ -26274,8 +26276,8 @@ Error generating stack: ` +
               _ & 4)
             ) {
               var _ = _ === null ? null : _.memoizedState;
-              if (((_ = _.memoizedState), _ === null))
-                if (_ === null)
+              if (((_ = _.memoizedState), _ === null)) {
+                if (_ === null) {
                   if (_.stateNode === null) {
                     _: {
                       (_ = _.type),
@@ -26363,8 +26365,8 @@ Error generating stack: ` +
                     }
                     _.stateNode = _;
                   } else _(_, _.type, _.stateNode);
-                else _.stateNode = _(_, _, _.memoizedProps);
-              else
+                } else _.stateNode = _(_, _, _.memoizedProps);
+              } else
                 _ === _
                   ? _ === null &&
                     _.stateNode !== null &&
@@ -26628,7 +26630,7 @@ Error generating stack: ` +
         }
       }
       function _(_, _, _) {
-        for (_ &&= (_.subtreeFlags & 8772) != 0, _ = _.child; _ !== null; ) {
+        for (_ &&= !!(_.subtreeFlags & 8772), _ = _.child; _ !== null; ) {
           var _ = _.alternate,
             _ = _,
             _ = _,
@@ -26763,7 +26765,7 @@ Error generating stack: ` +
                 ? _._visibility & 2
                   ? _(_, _, _, _)
                   : ((_._visibility |= 2),
-                    _(_, _, _, _, (_.subtreeFlags & 10256) != 0))
+                    _(_, _, _, _, !!(_.subtreeFlags & 10256)))
                 : _._visibility & 2
                   ? _(_, _, _, _)
                   : _(_, _),
@@ -26777,7 +26779,7 @@ Error generating stack: ` +
         }
       }
       function _(_, _, _, _, _) {
-        for (_ &&= (_.subtreeFlags & 10256) != 0, _ = _.child; _ !== null; ) {
+        for (_ &&= !!(_.subtreeFlags & 10256), _ = _.child; _ !== null; ) {
           var _ = _,
             _ = _,
             _ = _,
@@ -27036,78 +27038,75 @@ Error generating stack: ` +
       }
       function _(_, _, _) {
         if (_ & 6) throw Error(_(327));
-        var _ = (!_ && (_ & 124) == 0 && (_ & _.expiredLanes) === 0) || _(_, _),
+        var _ = (!_ && !(_ & 124) && (_ & _.expiredLanes) === 0) || _(_, _),
           _ = _ ? _(_, _) : _(_, _, !0),
           _ = _;
         do {
           if (_ === 0) {
             _ && !_ && _(_, _, 0, !1);
             break;
-          } else {
-            if (((_ = _.current.alternate), _ && !_(_))) {
-              (_ = _(_, _, !1)), (_ = !1);
-              continue;
-            }
-            if (_ === 2) {
-              if (((_ = _), _.errorRecoveryDisabledLanes & _)) var _ = 0;
-              else
-                (_ = _.pendingLanes & -536870913),
-                  (_ = _ === 0 ? (_ & 536870912 ? 536870912 : 0) : _);
-              if (_ !== 0) {
+          }
+          if (((_ = _.current.alternate), _ && !_(_))) {
+            (_ = _(_, _, !1)), (_ = !1);
+            continue;
+          }
+          if (_ === 2) {
+            if (((_ = _), _.errorRecoveryDisabledLanes & _)) var _ = 0;
+            else
+              (_ = _.pendingLanes & -536870913),
+                (_ = _ === 0 ? (_ & 536870912 ? 536870912 : 0) : _);
+            if (_ !== 0) {
+              _ = _;
+              _: {
+                var _ = _;
                 _ = _;
-                _: {
-                  var _ = _;
-                  _ = _;
-                  var _ = _.current.memoizedState.isDehydrated;
-                  if (
-                    (_ && (_(_, _).flags |= 256), (_ = _(_, _, !1)), _ !== 2)
-                  ) {
-                    if (_ && !_) {
-                      (_.errorRecoveryDisabledLanes |= _), (_ |= _), (_ = 4);
-                      break _;
-                    }
-                    (_ = _),
-                      (_ = _),
-                      _ !== null && (_ === null ? (_ = _) : _.push.apply(_, _));
+                var _ = _.current.memoizedState.isDehydrated;
+                if ((_ && (_(_, _).flags |= 256), (_ = _(_, _, !1)), _ !== 2)) {
+                  if (_ && !_) {
+                    (_.errorRecoveryDisabledLanes |= _), (_ |= _), (_ = 4);
+                    break _;
                   }
-                  _ = _;
+                  (_ = _),
+                    (_ = _),
+                    _ !== null && (_ === null ? (_ = _) : _.push.apply(_, _));
                 }
-                if (((_ = !1), _ !== 2)) continue;
+                _ = _;
               }
+              if (((_ = !1), _ !== 2)) continue;
             }
-            if (_ === 1) {
-              _(_, 0), _(_, _, 0, !0);
-              break;
-            }
-            _: {
-              switch (((_ = _), (_ = _), _)) {
-                case 0:
-                case 1:
-                  throw Error(_(345));
-                case 4:
-                  if ((_ & 4194048) !== _) break;
-                case 6:
-                  _(_, _, _, !_);
-                  break _;
-                case 2:
-                  _ = null;
-                  break;
-                case 3:
-                case 5:
-                  break;
-                default:
-                  throw Error(_(329));
-              }
-              if ((_ & 62914560) === _ && ((_ = _ + 300 - _()), 10 < _)) {
-                if ((_(_, _, _, !_), _(_, 0, !0) !== 0)) break _;
-                _.timeoutHandle = _(
-                  _.bind(null, _, _, _, _, _, _, _, _, _, _, _, 2, -0, 0),
-                  _,
-                );
+          }
+          if (_ === 1) {
+            _(_, 0), _(_, _, 0, !0);
+            break;
+          }
+          _: {
+            switch (((_ = _), (_ = _), _)) {
+              case 0:
+              case 1:
+                throw Error(_(345));
+              case 4:
+                if ((_ & 4194048) !== _) break;
+              case 6:
+                _(_, _, _, !_);
                 break _;
-              }
-              _(_, _, _, _, _, _, _, _, _, _, _, 0, -0, 0);
+              case 2:
+                _ = null;
+                break;
+              case 3:
+              case 5:
+                break;
+              default:
+                throw Error(_(329));
             }
+            if ((_ & 62914560) === _ && ((_ = _ + 300 - _()), 10 < _)) {
+              if ((_(_, _, _, !_), _(_, 0, !0) !== 0)) break _;
+              _.timeoutHandle = _(
+                _.bind(null, _, _, _, _, _, _, _, _, _, _, _, 2, -0, 0),
+                _,
+              );
+              break _;
+            }
+            _(_, _, _, _, _, _, _, _, _, _, _, 0, -0, 0);
           }
           break;
         } while (1);
@@ -27499,7 +27498,7 @@ Error generating stack: ` +
                   return _(!0), null;
                 }))
               : ((_.callbackNode = null), (_.callbackPriority = 0)),
-            (_ = (_.flags & 13878) != 0),
+            (_ = !!(_.flags & 13878)),
             _.subtreeFlags & 13878 || _)
           ) {
             (_ = _._), (_._ = null), (_ = _._), (_._ = 2), (_ = _), (_ |= 4);
@@ -27517,7 +27516,7 @@ Error generating stack: ` +
           _ = 0;
           var _ = _,
             _ = _,
-            _ = (_.flags & 13878) != 0;
+            _ = !!(_.flags & 13878);
           if (_.subtreeFlags & 13878 || _) {
             (_ = _._), (_._ = null);
             var _ = _._;
@@ -27602,7 +27601,7 @@ Error generating stack: ` +
           _ = 0;
           var _ = _,
             _ = _,
-            _ = (_.flags & 8772) != 0;
+            _ = !!(_.flags & 8772);
           if (_.subtreeFlags & 8772 || _) {
             (_ = _._), (_._ = null);
             var _ = _._;
@@ -27712,7 +27711,8 @@ Error generating stack: ` +
             if (_.tag === 3) {
               _(_, _, _);
               break;
-            } else if (_.tag === 1) {
+            }
+            if (_.tag === 1) {
               var _ = _.stateNode;
               if (
                 typeof _.type.getDerivedStateFromError == `function` ||
@@ -27800,7 +27800,7 @@ Error generating stack: ` +
           _ = !0;
           do
             for (var _ = !1, _ = _; _ !== null; ) {
-              if (!_)
+              if (!_) {
                 if (_ !== 0) {
                   var _ = _.pendingLanes;
                   if (_ === 0) var _ = 0;
@@ -27820,6 +27820,7 @@ Error generating stack: ` +
                       _.cancelPendingCommit !== null || _.timeoutHandle !== -1,
                     )),
                     !(_ & 3) || _(_, _) || ((_ = !0), _(_, _));
+              }
               _ = _.next;
             }
           while (_);
@@ -28077,7 +28078,7 @@ Error generating stack: ` +
             .concat(_),
         );
       function _(_, _) {
-        _ = (_ & 4) != 0;
+        _ = !!(_ & 4);
         for (var _ = 0; _ < _.length; _++) {
           var _ = _[_],
             _ = _.event;
@@ -28285,7 +28286,7 @@ Error generating stack: ` +
                 case `beforetoggle`:
                   _ = _;
               }
-              var _ = (_ & 4) != 0,
+              var _ = !!(_ & 4),
                 _ = !_ && (_ === `scroll` || _ === `scrollend`),
                 _ = _ ? (_ === null ? null : _ + `Capture`) : _;
               _ = [];
@@ -28389,13 +28390,13 @@ Error generating stack: ` +
                 _ === `select` || (_ === `input` && _.type === `file`))
               )
                 var _ = _;
-              else if (_(_))
+              else if (_(_)) {
                 if (_) _ = _;
                 else {
                   _ = _;
                   var _ = _;
                 }
-              else
+              } else
                 (_ = _.nodeName),
                   !_ ||
                   _.toLowerCase() !== `input` ||
@@ -28609,8 +28610,9 @@ Error generating stack: ` +
                 `javascript:throw new Error('A React form was unexpectedly submitted. If you called form.submit() manually, consider using form.requestSubmit() instead. If you\\'re trying to use event.stopPropagation() in a submit event handler, consider also calling event.preventDefault().')`,
               );
               break;
-            } else
-              typeof _ == `function` &&
+            }
+            if (
+              (typeof _ == `function` &&
                 (_ === `formAction`
                   ? (_ !== `input` && _(_, _, `name`, _.name, _, null),
                     _(_, _, `formEncType`, _.formEncType, _, null),
@@ -28618,8 +28620,9 @@ Error generating stack: ` +
                     _(_, _, `formTarget`, _.formTarget, _, null))
                   : (_(_, _, `encType`, _.encType, _, null),
                     _(_, _, `method`, _.method, _, null),
-                    _(_, _, `target`, _.target, _, null)));
-            if (_ == null || typeof _ == `symbol` || typeof _ == `boolean`) {
+                    _(_, _, `target`, _.target, _, null))),
+              _ == null || typeof _ == `symbol` || typeof _ == `boolean`)
+            ) {
               _.removeAttribute(_);
               break;
             }
@@ -29310,9 +29313,7 @@ Error generating stack: ` +
       function _() {
         var _ = window.event;
         return _ && _.type === `popstate`
-          ? _ === _
-            ? !1
-            : ((_ = _), !0)
+          ? _ !== _ && ((_ = _), !0)
           : ((_ = null), !1);
       }
       var _ = typeof setTimeout == `function` ? setTimeout : void 0,
@@ -29340,7 +29341,7 @@ Error generating stack: ` +
           _ = 0;
         do {
           var _ = _.nextSibling;
-          if ((_.removeChild(_), _ && _.nodeType === 8))
+          if ((_.removeChild(_), _ && _.nodeType === 8)) {
             if (((_ = _.data), _ === `/$`)) {
               if (0 < _ && 8 > _) {
                 _ = _;
@@ -29366,7 +29367,7 @@ Error generating stack: ` +
               _ === `$` || _ === `$?` || _ === `$!`
                 ? _++
                 : (_ = _.charCodeAt(0) - 48);
-          else _ = 0;
+          } else _ = 0;
           _ = _;
         } while (_);
         _(_);
@@ -29395,12 +29396,12 @@ Error generating stack: ` +
           var _ = _;
           if (_.nodeName.toLowerCase() !== _.toLowerCase()) {
             if (!_ && (_.nodeName !== `INPUT` || _.type !== `hidden`)) break;
-          } else if (!_)
+          } else if (!_) {
             if (_ === `input` && _.type === `hidden`) {
               var _ = _.name == null ? null : `` + _.name;
               if (_.type === `hidden` && _.getAttribute(`name`) === _) return _;
             } else return _;
-          else if (!_[_])
+          } else if (!_[_])
             switch (_) {
               case `meta`:
                 if (!_.hasAttribute(`itemprop`)) break;
@@ -30763,10 +30764,8 @@ Error generating stack: ` +
     require_client = __commonJSMin((_, _) => {
       function _() {
         if (
-          !(
-            typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ > `u` ||
-            typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE != `function`
-          )
+          typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ < `u` &&
+          typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE == `function`
         )
           try {
             __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE(_);
@@ -38190,6 +38189,7 @@ Error generating stack: ` +
     StoreItem_ExtraDetails_Metacritic,
     StoreItem_ExtraDetails_CastAndCrew,
     StoreItem_OptInRegistrationTags,
+    StoreItem_PurchaseNote,
     StoreBrowseItemDataRequest,
     StoreBrowseContext,
     StoreItemID,
@@ -38314,6 +38314,11 @@ Error generating stack: ` +
                     pbr: ReaderProto.readPackedEnum,
                     _: WriterProto.writeRepeatedEnum,
                   },
+                  content_survey_notes: {
+                    _: 13,
+                    _: ReaderProto.readString,
+                    _: WriterProto.writeString,
+                  },
                   image_url: {
                     _: 20,
                     _: ReaderProto.readString,
@@ -38376,7 +38381,7 @@ Error generating stack: ` +
                 _,
                 0,
                 -1,
-                [11, 12, 20, 21, 25, 41, 52, 71, 74, 77],
+                [11, 12, 20, 21, 25, 41, 52, 71, 74, 77, 78],
                 null,
               );
           }
@@ -38625,6 +38630,12 @@ Error generating stack: ` +
                   optin_registration_tags: {
                     _: 77,
                     _: StoreItem_OptInRegistrationTags,
+                    _: !0,
+                    _: !0,
+                  },
+                  purchase_notes: {
+                    _: 78,
+                    _: StoreItem_PurchaseNote,
                     _: !0,
                     _: !0,
                   },
@@ -39722,6 +39733,11 @@ Error generating stack: ` +
                     _: ReaderProto.readUint32,
                     _: WriterProto.writeUint32,
                   },
+                  creator_home_background: {
+                    _: 22,
+                    _: ReaderProto.readString,
+                    _: WriterProto.writeString,
+                  },
                 },
               }),
               _.sm_m
@@ -40038,6 +40054,11 @@ Error generating stack: ` +
                   },
                   vrhmd_only: {
                     _: 2,
+                    _: ReaderProto.readBool,
+                    _: WriterProto.writeBool,
+                  },
+                  show_optional_vr_mode_notice: {
+                    _: 3,
                     _: ReaderProto.readBool,
                     _: WriterProto.writeBool,
                   },
@@ -42432,6 +42453,86 @@ Error generating stack: ` +
             return `StoreItem_OptInRegistrationTags`;
           }
         }),
+        (StoreItem_PurchaseNote = class _ extends (
+          import_google_protobuf$1.Message
+        ) {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.type || AddAccessors(_._()),
+              import_google_protobuf$1.Message.initialize(
+                this,
+                _,
+                0,
+                -1,
+                void 0,
+                null,
+              );
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              (_.sm_m ||= {
+                proto: _,
+                fields: {
+                  type: {
+                    _: 1,
+                    _: ReaderProto.readEnum,
+                    _: WriterProto.writeEnum,
+                  },
+                  highlighted: {
+                    _: 2,
+                    _: ReaderProto.readBool,
+                    _: WriterProto.writeBool,
+                  },
+                  text_bbcode: {
+                    _: 3,
+                    _: ReaderProto.readString,
+                    _: WriterProto.writeString,
+                  },
+                },
+              }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return ToObject(_._(), _, _);
+          }
+          static fromObject(_) {
+            return FromObject(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new import_google_protobuf$1.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return DeserializeBinary(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new import_google_protobuf$1.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            SerializeBinary(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new import_google_protobuf$1.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return `StoreItem_PurchaseNote`;
+          }
+        }),
         (StoreBrowseItemDataRequest = class _ extends (
           import_google_protobuf$1.Message
         ) {
@@ -44761,6 +44862,7 @@ Error generating stack: ` +
                 bConstMethod: !0,
                 ePrivilege: 1,
                 eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: [`partner`],
               },
             );
           }
@@ -44845,6 +44947,7 @@ Error generating stack: ` +
                 bConstMethod: !0,
                 ePrivilege: 0,
                 eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: [`partner`],
               },
             );
           }
@@ -45822,6 +45925,28 @@ Error generating stack: ` +
     init_locready = __esmMin(() => {
       locLoadPromises ??= new Set();
     });
+  function GetAppTypeLocKeyVariant(_, _, _) {
+    switch (_) {
+      case 6:
+        return _ + `_Software`;
+      case 7:
+        return _ + `_Video`;
+    }
+    let _ = k_mapOptionalAppTypeSuffixes[_];
+    return _ && _(_ + _) ? _ + _ : _;
+  }
+  var k_mapOptionalAppTypeSuffixes,
+    init_apptypelockey = __esmMin(() => {
+      init_steammessages_storebrowse_pb(),
+        (k_mapOptionalAppTypeSuffixes = {
+          5: `_Guide`,
+          10: `_Hardware`,
+          4: `_DLC`,
+          11: `_Music`,
+          8: `_Series`,
+          1: `_Demo`,
+        });
+    });
   function CreateProjectLocalization(_) {
     let _ = new Map();
     async function _() {
@@ -45888,6 +46013,19 @@ Error generating stack: ` +
       let _ = CurrentLocalizationSettings().languages;
       return ReplaceArgumentsInString(_(_, _), ..._);
     }
+    function _(_) {
+      let _ = CurrentLocalizationSettings().languages,
+        _ = [
+          ..._.map((_) => _.strLanguage),
+          GetFallbackForLanguage(_[0].strLanguage),
+        ];
+      for (let _ of _) {
+        if (!_) continue;
+        let _ = _.get(_);
+        if (_ && _.has(_)) return !0;
+      }
+      return !1;
+    }
     return {
       Localize(_, ..._) {
         return _(_, ..._);
@@ -45913,26 +46051,7 @@ Error generating stack: ` +
         return _(_ === 1 || _ === `1` ? _ : _ + `_Plural`, _, ..._);
       },
       GetAppTypeLocKey(_, _) {
-        switch (_) {
-          case 5:
-            return _ + `_Guide`;
-          case 10:
-            return _ + `_Hardware`;
-          case 4:
-            return _ + `_DLC`;
-          case 11:
-            return _ + `_Music`;
-          case 8:
-            return _ + `_Series`;
-          case 1:
-            return _ + `_Demo`;
-          case 6:
-            return _ + `_Software`;
-          case 7:
-            return _ + `_Video`;
-          default:
-            return _;
-        }
+        return GetAppTypeLocKeyVariant(_, _, _);
       },
       GetAppTypePluralLocKey(_, _) {
         switch (_) {
@@ -45953,19 +46072,7 @@ Error generating stack: ` +
       IsReady() {
         return _;
       },
-      HasKey(_) {
-        let _ = CurrentLocalizationSettings().languages,
-          _ = [
-            ..._.map((_) => _.strLanguage),
-            GetFallbackForLanguage(_[0].strLanguage),
-          ];
-        for (let _ of _) {
-          if (!_) continue;
-          let _ = _.get(_);
-          if (_ && _.has(_)) return !0;
-        }
-        return !1;
-      },
+      HasKey: _,
     };
   }
   function CurrentLocalizationSettings() {
@@ -45990,6 +46097,7 @@ Error generating stack: ` +
         init_replacelocarguments(),
         init_locready(),
         init_steammessages_storebrowse_pb(),
+        init_apptypelockey(),
         init_src$2();
     }),
     require_classnames = __commonJSMin((_, _) => {
@@ -46101,8 +46209,8 @@ Error generating stack: ` +
     let _ = _.popoverTargetElement;
     if (!(_ instanceof HTMLElement)) return;
     let _ = getPopoverVisibilityState(_);
-    (_.popoverTargetAction === `show` && _ === `showing`) ||
-      (_.popoverTargetAction === `hide` && _ === `hidden`) ||
+    (_.popoverTargetAction !== `show` || _ !== `showing`) &&
+      (_.popoverTargetAction !== `hide` || _ !== `hidden`) &&
       (_ === `showing`
         ? hidePopover(_, !0, !0)
         : checkPopoverValidity(_, !1) &&
@@ -47763,7 +47871,7 @@ Error generating stack: ` +
       "store-partner-events": 2103,
       "steamtv-partner-events": 2104,
       "community-partner-events": 2105,
-      "partnerweb-partner-events": 2106,
+      "partner-partner-events": 2106,
       "store-calendar-partner-events": 2107,
       events,
       subscriptions,
@@ -48060,7 +48168,7 @@ Error generating stack: ` +
     }, _);
   }
   function MergeRefs(..._) {
-    if (!(!_ || _.length === 0))
+    if (_ && _.length !== 0)
       return _.length === 1
         ? _[0]
         : (_) =>
@@ -48593,7 +48701,6 @@ Error generating stack: ` +
           break;
         case 3:
           console.clogerror ? console.clogerror(3, ..._) : console.error(..._);
-          break;
       }
   }
   (window.DebugLogEnable = (..._) =>
@@ -49221,7 +49328,6 @@ Error generating stack: ` +
             _ = function (_) {
               return 0.5 - Math.cos(_ * Math._) / 2;
             };
-            break;
         }
         (this.m_bActive = !0),
           (this.m_fnBoundAnimationFunc = this.OnInterval.bind(this, _)),
@@ -50321,7 +50427,6 @@ Error generating stack: ` +
             break;
           case EGamepadButton.DIR_LEFT:
             _ && (_ = _(_.detail, this));
-            break;
         }
         return _;
       }
@@ -50921,7 +51026,7 @@ Error generating stack: ` +
     let _ = useVirtualKeyboardReference(_.current),
       _ = import_react$3.useCallback(
         (_) => {
-          if (!(!document.hasFocus() && document.activeElement == _.current)) {
+          if (document.hasFocus() || document.activeElement != _.current) {
             if (_.currentTarget != _.current) {
               console.warn(
                 `keyboard got blur event, but it's not the active element`,
@@ -50929,7 +51034,8 @@ Error generating stack: ` +
               return;
             }
             _.detail.focusedNode?.Element != _.current &&
-              ((!_.BIsActive() && !_.bInVR) || _.DelayHideVirtualKeyboard());
+              (_.BIsActive() || _.bInVR) &&
+              _.DelayHideVirtualKeyboard();
           }
         },
         [_],
@@ -51264,8 +51370,7 @@ Error generating stack: ` +
         };
       }, [_, _, _]),
       import_react$3.useLayoutEffect(() => {
-        if (!(!_ || !_))
-          return setRef(_, _.CreateHandle()), () => setRef(_, null);
+        if (_ && _) return setRef(_, _.CreateHandle()), () => setRef(_, null);
       }, [_, _]),
       {
         ref: _,
@@ -51590,8 +51695,8 @@ Error generating stack: ` +
     });
   init_src$1(), init_config_client(), init_rendercontext();
   var TopFrameNavigationContext = import_react$3.createContext(!1);
-  function useOnClick(_, _, _) {
-    return (0, import_react$3.useMemo)(() => _, [_, _, _]);
+  function useOnClick(_, _, _, _) {
+    return (0, import_react$3.useMemo)(() => _, [_, _, _, _]);
   }
   function CreateSteamClientURL(_) {
     let _ = `steam://`;
@@ -51642,7 +51747,7 @@ Error generating stack: ` +
           _ = _.pathname + _.search + _.hash;
         }
         return _ === !1 ||
-          _?.routes.some((_) => _.match(new RegExp(_.regex, `i`)))
+          _?.routes.some((_) => _.split(/[?#]/, 1)[0].match(_.regex))
           ? {
               bIsExternal: !1,
               targetRoute: _,
@@ -51657,7 +51762,7 @@ Error generating stack: ` +
           (Config.IN_CLIENT
             ? (_ = CreateSteamClientURL(`openurl/${_}`))
             : ((_.target ??= `_blank`), (_.rel ??= `noreferrer noopener`)));
-      let _ = useOnClick(_, _, _);
+      let _ = useOnClick(_, _, _ === !1, _);
       return (0, import_jsx_runtime$1.jsx)(_ && _ ? FocusableAnchor : `a`, {
         ref: _,
         href: _,
@@ -69820,15 +69925,13 @@ Error generating stack: ` +
     });
   }
   var header_menu_hamburger_default = `data:image/png;base64,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`,
-    logo_steamworks_default =
-      `` +
-      new URL(
-        `B9IALK1_.svg`,
-        (document.currentScript &&
-          document.currentScript.tagName.toUpperCase() === `SCRIPT` &&
-          document.currentScript.src) ||
-          document.baseURI,
-      ).href,
+    logo_steamworks_default = new URL(
+      `B9IALK1_.svg`,
+      (document.currentScript &&
+        document.currentScript.tagName.toUpperCase() === `SCRIPT` &&
+        document.currentScript.src) ||
+        document.baseURI,
+    ).href,
     avatar_default_default = `data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gOTAK/9sAQwADAgIDAgIDAwMDBAMDBAUIBQUEBAUKBwcGCAwKDAwLCgsLDQ4SEA0OEQ4LCxAWEBETFBUVFQwPFxgWFBgSFBUU/9sAQwEDBAQFBAUJBQUJFA0LDRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQU/8AAEQgAIAAgAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A/P4mW5nmllmeSR3LMzMSSc1a07R73V72KzsILi9u5TiOC2RpJHPoFGSarQ/ef6n+de4fAn9oaL4D+DfGX9i6Uf8AhO9XSKDT9eZY3WxiDZcBGByTkn0JCZBxQB41qeiX+iXslnqNtdWF3H9+3uo2jkX6q2CKpgy208MsUzxyI4ZWViCDmvsr9rrUdT1j9nb4T6h8RBbH4qXUs0zMsSxXJ04hivnKoAU5MPGBg7uM7q+NpvvJ9R/OgAh+8/1P867T4POI/iz4Mc6U+u7NZtG/suPbuu8TKfKG4hct93njnmuKIltp5opYXjkRyrKykEHNWbDVbvSr63vbKaezvLeRZYbi3ZkkidTlWVhyCCMgjpQB6l+1F411nx58dPFWpa5a3mnXaXP2ZNOvXVpLKNBhYflJUY5PB5JJ6k15LN95PqP51a1PWr7WtQnvtRuLm/vrhzJNc3TtJLIx6lmbJJ9zVQCW5nhiiheSR3CqqqSSc0Af/9k=`,
     avatar_default_full_default = `data:image/jpeg;base64,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`,
     avatar_default_medium_default = `data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gODAK/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsICMmJykqKRkfLTAtKDAlKCko/9sAQwEHBwcKCAoTCgoTKBoWGigoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgo/8AAEQgAQABAAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A8Inmk8+T94/3j/EfWmedJ/z0f/vo0T/6+T/eP86ZQA/zpP8Ano//AH0aPOk/56P/AN9GmVo6Loeq65M0Wj6ddXrr94QRF9v1I6fjQBR86T/no/8A30aPOk/56P8A99GtHW/Dus6GV/tjS7yyD8K00RVW+h6GsugB/nSf89H/AO+jT4JpPPj/AHj/AHh/EfWoafB/r4/94fzoAJ/9fJ/vH+dMp8/+vk/3j/OmUAXdE099W1mw06Jgsl3PHApPYswUH9a+qPF3iHSPhF4S0+003TxK0hMcEAbZvIA3SO2OvIz6k18nW88ttcRz28jxTRMHSRGKsrA5BBHQg1b1TWdT1fy/7V1G8vfLzs+0TNJtz1xknHQUAfUXw+8c6Z8UdN1HS9V0xIpUTM1s7eYkiE43KcAgg/lxg180+NtEHhzxZqmkqxdLWcojHqUPK598EV9CfBbwpF4G8J3fiLxA4trm5hEsnmceRCOQD/tHqR9B1r568a63/wAJH4r1TVghRLqYuinqE6KD74AoAxafB/r4/wDeH86ZT4P9fH/vD+dABP8A6+T/AHj/ADplPn/18n+8f50ygArt/gtpltq/xK0e2vYxJArPMUYZDFEZhn2yBXEV0/w203VNX8YWdloOoHTtQkWQx3IZl2gISeV55AI/GgD1H9pvxPdi/s/DcDGOz8pbqfHWRizBQfYbc/U+1eD12PxW0fWtE8Tpa+I9UOqXpt0cTl2bCEthctz1B/OuOoAKfB/r4/8AeH86ZT4P9fH/ALw/nQAT/wCvk/3j/OmVNPDJ58n7t/vH+E+tM8mT/nm//fJoAZV7Q9Xv9C1KLUNJuGtryMEJIoBIyCD1BHQmqnkyf883/wC+TR5Mn/PN/wDvk0AaHiHXtT8RX4vdau2u7oIIxIygHaCSBwB6msyn+TJ/zzf/AL5NHkyf883/AO+TQAynwf6+P/eH86PJk/55v/3yafBDJ58f7t/vD+E+tAH/2Q==`;
@@ -69881,7 +69984,6 @@ Error generating stack: ` +
       case `X-Large`:
       case `FillArea`:
         _ += `_full`;
-        break;
     }
     return (_ += _), _;
   }

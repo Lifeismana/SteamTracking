@@ -1014,6 +1014,14 @@ var CLSTAMP = "steamdb";
         _ ??= new Set();
         let _ = null;
         var _ = __webpack_require__("chunkid");
+        const _ = {
+          [_._._]: "_Guide",
+          [_._._]: "_Hardware",
+          [_._._]: "_DLC",
+          [_._._]: "_Music",
+          [_._._]: "_Series",
+          [_._._]: "_Demo",
+        };
         function _() {
           if (((_ = _.LANGUAGE), !_.has(_)))
             throw `unknown language ${_.LANGUAGE}`;
@@ -1152,6 +1160,19 @@ var CLSTAMP = "steamdb";
           function _(_, ..._) {
             return _(_(_, _().languages), ..._);
           }
+          function _(_) {
+            const _ = _().languages,
+              _ = [
+                ...__webpack_require__.map((_) => _.strLanguage),
+                _(_[0].strLanguage),
+              ];
+            for (const _ of _) {
+              if (!_) continue;
+              const _ = _.get(_);
+              if (_ && _.has(_)) return !0;
+            }
+            return !1;
+          }
           return (
             __webpack_require__
               .then(() => (_ = !0))
@@ -1185,28 +1206,17 @@ var CLSTAMP = "steamdb";
                 1 === _ || "1" === _
                   ? _(_, _, ..._)
                   : _(_ + "_Plural", _, ..._),
-              GetAppTypeLocKey(_, _) {
-                switch (_) {
-                  case _._._:
-                    return _ + "_Guide";
-                  case _._._:
-                    return _ + "_Hardware";
-                  case _._._:
-                    return _ + "_DLC";
-                  case _._._:
-                    return _ + "_Music";
-                  case _._._:
-                    return _ + "_Series";
-                  case _._._:
-                    return _ + "_Demo";
-                  case _._._:
-                    return _ + "_Software";
-                  case _._._:
-                    return _ + "_Video";
-                  default:
-                    return _;
-                }
-              },
+              GetAppTypeLocKey: (_, _) =>
+                (function (_, _, _) {
+                  switch (_) {
+                    case _._._:
+                      return _ + "_Software";
+                    case _._._:
+                      return _ + "_Video";
+                  }
+                  const _ = _[_];
+                  return _ && __webpack_require__(_ + _) ? _ + _ : _;
+                })(_, _, _),
               GetAppTypePluralLocKey(_, _) {
                 switch (_) {
                   case _._._:
@@ -1220,19 +1230,7 @@ var CLSTAMP = "steamdb";
               LocalizeInSpecificLang: (_, _, ..._) => _(_(_, [_]), ..._),
               Ready: () => _,
               IsReady: () => _,
-              HasKey(_) {
-                const _ = _().languages,
-                  _ = [
-                    ...__webpack_require__.map((_) => _.strLanguage),
-                    _(_[0].strLanguage),
-                  ];
-                for (const _ of _) {
-                  if (!_) continue;
-                  const _ = _.get(_);
-                  if (_ && _.has(_)) return !0;
-                }
-                return !1;
-              },
+              HasKey: _,
             }
           );
         })(async function (_) {
@@ -2910,69 +2908,69 @@ var CLSTAMP = "steamdb";
       ".js?contenthash=" +
       {
         43: "b98e0f420add57691fc2",
-        200: "4d3951c8f2a611a9dd03",
-        295: "ea67db98ef73a3e4ca6d",
-        559: "c8344ea4b6c25b8b632b",
-        762: "6381bf741535ad65d4e3",
-        815: "3d813a2cbea67ea28f34",
-        1136: "6f40557b0cf12824d8f8",
-        1499: "016609b438b84fcc275a",
-        1864: "73a5a77ee6bfe7d5dec5",
-        2269: "75af9beb3d986379ebd7",
+        200: "0655ee5407a940eee720",
+        295: "410a4726c1d22681c08d",
+        559: "890bab2eddd94135560a",
+        762: "1a71c2380738fb49d933",
+        815: "92513be8b6a53a1f7bc1",
+        1136: "c5551e4af5cf38a6c5d9",
+        1499: "09bea9a8d3fa9b6a327c",
+        1864: "ed5d5dcdf7ac7663f357",
+        2269: "5a19508ea203f2abd48f",
         2532: "edc9af68dd8ed98e4677",
-        2889: "a042f569577e2e81a45f",
-        2945: "b1bb49c86e94db92dee9",
-        3e3: "1b03996604202ef27322",
+        2889: "144700763cda731154a2",
+        2945: "2c589d89be73c95b1cfb",
+        3e3: "23de2c2177882a6d4d8b",
         3016: "f89712012c8d6eb6aa18",
-        3232: "1a94beba451ca9e76187",
+        3232: "a2b395c8b1312464290f",
         3415: "0066838ec4cb331afcbf",
-        3485: "08349ebcf15f4d7c2342",
+        3485: "447095c8c3a3825edcaa",
         3723: "a69634b2de1f3fa5dba5",
-        3789: "7576118cdc2ea612c555",
-        3800: "fd8a1a47dccc61aee609",
-        3907: "9d85d4d8cfeeb40d411a",
-        4154: "ab85015c1182c53c2a07",
-        4230: "37d16962fe7baf6db2f2",
-        4289: "383549752090bb5d012c",
-        4302: "127bac547ebe35debb6e",
-        4419: "5f7560a81b538bf53333",
-        4434: "7042d1e1cb05e782371a",
-        4488: "ecc72b7e73d0d3a37046",
-        4625: "ce7b5ae271b19cb8c77b",
-        4750: "14095a23a9cd95586fa1",
-        4776: "642916fbd7a977b50de9",
-        4787: "ef50a874abefeb603b11",
-        4792: "5d3286722d39e3dfa07a",
-        4978: "17987d65a5084115f0f9",
-        5040: "773a82330d5987084dab",
-        5191: "9c79cc8ef4998151c5fd",
-        5233: "8510df822122a6d06f29",
-        5341: "d01dc36adbf1ed0dc168",
-        5436: "001c806234158e12fb23",
-        5480: "aa8842d2e7d72dad67c5",
-        5777: "322bf4f911865c3bc47b",
-        6127: "4882c58af191aaf74128",
-        6170: "46661dff8ad6ee73a3fa",
-        6385: "e5f8cfa9b62ae2ae5efe",
-        6512: "da3f78161440a0737664",
-        6518: "a9d5318be576311fe3cf",
-        6609: "fc94f8d39971c6671379",
-        6736: "6026d422fe6c34bc6aae",
-        6888: "c50f7606409776b647a0",
-        6971: "e7f4af03b6ba3a7fa534",
-        7246: "ddca1124dcf2794f4425",
-        7263: "e4d9c35cad71a3d2e7f2",
+        3789: "d8631a0a3fc251d38dfb",
+        3800: "18a93d9c8a67cd5b37e1",
+        3907: "25507afd500da3c3f2f8",
+        4154: "91573ee32f988aef5441",
+        4230: "4a752d1f42a167c60b6b",
+        4289: "017883d4c3c91b8980ad",
+        4302: "8039108d581b4e85ba60",
+        4419: "c4f2b0b18cb8cd04b262",
+        4434: "f630585a768f94279b22",
+        4488: "eac4cc139cd6ac731e60",
+        4625: "08fe68a65ded6fd301fc",
+        4750: "24e4ca1f254467d588cf",
+        4776: "f38dfa6ffa46b34d7cf8",
+        4787: "a239a31ed2a0881c02a4",
+        4792: "211e5410eb00e87b57c6",
+        4978: "e12551352d72b620632d",
+        5040: "504695afe4a67b66e55d",
+        5191: "3ac5a82179c46922513a",
+        5233: "2f92edd12c256db2b4eb",
+        5341: "c85978bd33a350fe40f8",
+        5436: "93808aa73bdec7559bb6",
+        5480: "e203c5b184def975c722",
+        5777: "d7938fee5102af682ab0",
+        6127: "4508c5786d4961728036",
+        6170: "9603ed96e11b8d7d322c",
+        6385: "72b324aa319263bbf2aa",
+        6512: "3e6bf5541e45de2c2916",
+        6518: "db32ab28eeb38d05c46f",
+        6609: "a70215f475d630cda433",
+        6736: "508229bfaab2c3ad0600",
+        6888: "4bee95312b92fc339846",
+        6971: "6aab8298a9f6c2e7e640",
+        7246: "192095cb3169052a5a9d",
+        7263: "87c245653d96b85f0c8f",
         7487: "b3bc1a3055196336a2c5",
-        7861: "5edde2f8fc8a9ec95168",
-        8194: "7b692387d3a77ce31c7b",
-        8476: "8fc657b0302f6ce7904c",
-        8759: "73a7657685d5198e1a73",
-        8766: "0447dd79b31a8fe64ce1",
-        9574: "55dab2172eb507e52587",
-        9668: "763288a574a7d2edcb77",
-        9746: "3679c8e2ce76e34b2ccf",
-        9808: "51bb932b4ac14b5211d4",
-        9863: "2e66103077dae4952097",
+        7861: "03f3ef9871b74f85b7c9",
+        8194: "19389dd5e3a338fa8335",
+        8476: "142bdea68b8c07d60cc1",
+        8759: "f3a857d0e075f6a5df25",
+        8766: "ff4a8662d1695c71999f",
+        9574: "0fcb07da3d3536b4ee16",
+        9668: "602f85c19159060b5268",
+        9746: "b5af6dc570b5c0da3440",
+        9808: "c4bf22d40fb8ca9ba7f6",
+        9863: "30abe4e210c01e2471fc",
       }[_]),
     (_.miniCssF = (_) => {}),
     (_._ = (function () {
@@ -3118,6 +3116,6 @@ var CLSTAMP = "steamdb";
       __webpack_require__.forEach(_.bind(null, 0)),
         (_.push = _.bind(null, _.push.bind(_)));
     })();
-  var _ = _._(void 0, [3987, 9489, 1068], () => _(3767));
+  var _ = _._(void 0, [3987, 9489, 1068], () => _(5639));
   _ = _._(_);
 })();
